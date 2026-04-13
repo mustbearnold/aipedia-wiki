@@ -1,11 +1,20 @@
 #!/bin/bash
 # Copies wiki markdown into Astro content collections.
-# Run before `astro build` or `astro dev`.
+# If the wiki directory doesn't exist (e.g., on Cloudflare Pages),
+# skip copying — content is already committed in src/content/.
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 PROJECT_DIR="$(dirname "$SCRIPT_DIR")"
 WIKI_DIR="$(dirname "$PROJECT_DIR")/wikis/ai-tools/pages"
 CONTENT_DIR="$PROJECT_DIR/src/content"
+
+# Check if wiki source exists
+if [ ! -d "$WIKI_DIR" ]; then
+  echo "Wiki directory not found at $WIKI_DIR — using committed content."
+  TOTAL=$(find "$CONTENT_DIR" -name "*.md" | wc -l)
+  echo "Found $TOTAL existing markdown files in src/content/."
+  exit 0
+fi
 
 echo "Copying wiki content from $WIKI_DIR..."
 
