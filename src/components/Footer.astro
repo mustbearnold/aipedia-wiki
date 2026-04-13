@@ -1,0 +1,41 @@
+---
+const categories = [
+  { label: 'AI Voice', href: '/categories/ai-voice/' },
+  { label: 'AI Video', href: '/categories/ai-video/' },
+  { label: 'AI Coding', href: '/categories/ai-coding/' },
+  { label: 'AI Image', href: '/categories/ai-image/' },
+  { label: 'AI Writing', href: '/categories/ai-writing/' },
+  { label: 'AI Automation', href: '/categories/ai-automation/' },
+  { label: 'AI SEO', href: '/categories/ai-seo/' },
+  { label: 'AI Design', href: '/categories/ai-design/' },
+  { label: 'AI Search', href: '/categories/ai-search/' },
+  { label: 'AI Notes', href: '/categories/ai-notes/' },
+];
+---
+
+<footer class="border-t border-[var(--border)] mt-20">
+  <div class="max-w-6xl mx-auto px-4 py-12">
+    <!-- Category links grid -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
+      {categories.map((cat) => (
+        <a
+          href={cat.href}
+          class="text-sm text-[var(--text-secondary)] hover:text-[var(--text-primary)] no-underline transition-colors"
+        >
+          {cat.label}
+        </a>
+      ))}
+    </div>
+
+    <!-- Affiliate disclosure -->
+    <p class="text-xs text-[var(--text-muted)] mb-4">
+      Some links on this site are affiliate links. We may earn a commission at no extra cost to you.
+      Our reviews and scores are never influenced by affiliate partnerships.
+    </p>
+
+    <!-- Copyright -->
+    <p class="text-xs text-[var(--text-muted)]">
+      &copy; 2026 aipedia.wiki
+    </p>
+  </div>
+</footer>

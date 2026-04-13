@@ -1,0 +1,319 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ToolCard from '../components/ToolCard.astro';
+
+const allTools = await getCollection('tools');
+const trends = await getCollection('trends');
+const comparisons = await getCollection('comparisons');
+const categories = await getCollection('categories');
+
+// Sort ALL tools by overall score (avg of 4 scores), descending
+const scoredTools = allTools
+  .map(tool => {
+    const s = tool.data.scores ?? { utility: 0, value: 0, moat: 0, longevity: 0 };
+    const avg = ((s.utility ?? 0) + (s.value ?? 0) + (s.moat ?? 0) + (s.longevity ?? 0)) / 4;
+    return { tool, score: Math.round(avg * 10) / 10 };
+  })
+  .sort((a, b) => b.score - a.score);
+
+const categoryEmojiMap: Record<string, string> = {
+  'ai-voice': '\uD83D\uDD0A',
+  'ai-video': '\uD83C\uDFAC',
+  'ai-coding': '\uD83D\uDCBB',
+  'ai-automation': '\u26A1',
+  'ai-seo': '\uD83D\uDCC8',
+  'ai-design': '\uD83C\uDFA8',
+  'ai-writing': '\u270D\uFE0F',
+  'ai-image': '\uD83D\uDDBC',
+  'ai-search': '\uD83D\uDD0D',
+  'ai-notes': '\uD83D\uDCDD',
+};
+
+const categoryLabelMap: Record<string, { emoji: string; label: string }> = {
+  'ai-voice': { emoji: '\uD83D\uDD0A', label: 'AI Voice' },
+  'ai-video': { emoji: '\uD83C\uDFAC', label: 'AI Video' },
+  'ai-coding': { emoji: '\uD83D\uDCBB', label: 'AI Coding' },
+  'ai-automation': { emoji: '\u26A1', label: 'AI Automation' },
+  'ai-seo': { emoji: '\uD83D\uDCC8', label: 'AI SEO' },
+  'ai-design': { emoji: '\uD83C\uDFA8', label: 'AI Design' },
+  'ai-writing': { emoji: '\u270D\uFE0F', label: 'AI Writing' },
+  'ai-image': { emoji: '\uD83D\uDDBC', label: 'AI Image' },
+  'ai-search': { emoji: '\uD83D\uDD0D', label: 'AI Search' },
+  'ai-notes': { emoji: '\uD83D\uDCDD', label: 'AI Notes' },
+};
+
+const impactColors: Record<string, string> = {
+  high: 'bg-[rgba(239,68,68,0.1)] text-red-400 border-[rgba(239,68,68,0.2)]',
+  medium: 'bg-[rgba(251,191,36,0.1)] text-[var(--accent-warning)] border-[rgba(251,191,36,0.2)]',
+  low: 'bg-[rgba(96,165,250,0.1)] text-blue-400 border-[rgba(96,165,250,0.2)]',
+};
+---
+
+<BaseLayout title="aipedia.wiki — The AI Tools Encyclopedia" description="Comprehensive, honest encyclopedia of every AI tool. Reviews, scores, comparisons, and guides.">
+
+  <!-- Hero -->
+  <section class="text-center py-16 md:py-24">
+    <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-4">
+      The AI Tools <span class="bg-gradient-to-r from-[#a78bfa] to-[#60a5fa] bg-clip-text text-transparent">Encyclopedia</span>
+    </h1>
+    <p class="text-[var(--text-muted)] mb-8">
+      {allTools.length} tools &middot; {categories.length} categories &middot; Honest reviews &middot; Updated April 2026
+    </p>
+
+    <!-- Search bar placeholder -->
+    <div class="max-w-xl mx-auto">
+      <div class="flex items-center gap-3 bg-[var(--bg-card)] border border-[var(--border)] rounded-xl px-4 py-3 text-sm text-[var(--text-muted)]">
+        <svg class="w-4 h-4 shrink-0 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
+        <span>Search tools, categories, comparisons...</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Category Pills (filter buttons) -->
+  <section class="flex items-center justify-center gap-2 flex-wrap mb-4">
+    <button
+      type="button"
+      data-filter="all"
+      class="category-pill active inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium transition-colors cursor-pointer bg-[rgba(167,139,250,0.15)] border border-[rgba(167,139,250,0.3)] text-[var(--accent-primary)]"
+    >All</button>
+    {categories.map(cat => {
+      const slug = cat.data.slug || cat.id.replace(/\.md$/, '').replace(/\\/g, '/');
+      const info = categoryLabelMap[slug] ?? { emoji: '\uD83D\uDD27', label: slug };
+      return (
+        <button
+          type="button"
+          data-filter={slug}
+          class="category-pill inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium transition-colors cursor-pointer bg-[var(--bg-card)] border border-[var(--border)] text-[var(--text-secondary)]"
+        >
+          <span>{info.emoji}</span>
+          <span>{info.label}</span>
+        </button>
+      );
+    })}
+  </section>
+
+  <!-- Filter count + category link -->
+  <div class="flex items-center justify-between mb-6">
+    <p id="filter-count" class="text-xs text-[var(--text-muted)]">Showing {scoredTools.length} tools</p>
+    <a id="category-link" href="#" class="text-xs text-[var(--accent-primary)] no-underline hover:underline hidden">View all in category &rarr;</a>
+  </div>
+
+  <!-- All Tools (filterable) -->
+  <section class="mb-16">
+    <h2 class="text-xl font-bold text-[var(--text-primary)] mb-6">All Tools</h2>
+    <div id="tools-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+      {scoredTools.map(({ tool, score }) => {
+        const cat = tool.data.category ?? '';
+        return (
+          <div class="tool-card-wrapper" data-category={cat} style="transition: opacity 0.2s ease;">
+            <ToolCard
+              title={tool.data.title}
+              slug={tool.data.slug || tool.id.replace(/\.md$/, '').replace(/\\/g, '/')}
+              category={cat}
+              score={score}
+              priceRange={tool.data.price_range ?? 'Free'}
+              emoji={categoryEmojiMap[cat] ?? '\uD83D\uDD27'}
+            />
+          </div>
+        );
+      })}
+    </div>
+  </section>
+
+  <!-- Trending -->
+  <section class="mb-16">
+    <h2 class="text-xl font-bold text-[var(--text-primary)] mb-6">Trending</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+      {trends.map(trend => {
+        const slug = trend.data.slug || trend.id.replace(/\.md$/, '').replace(/\\/g, '/');
+        const impact = trend.data.impact ?? 'medium';
+        const impactClass = impactColors[impact] ?? impactColors.medium;
+        return (
+          <a
+            href={`/trends/${slug}/`}
+            class="block bg-[var(--bg-card)] border border-[var(--border)] rounded-xl p-4 hover:bg-[var(--bg-card-hover)] hover:border-[rgba(255,255,255,0.1)] transition-all no-underline group"
+          >
+            <div class="flex items-center gap-2 mb-2">
+              <span class={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium border ${impactClass}`}>
+                {impact.charAt(0).toUpperCase() + impact.slice(1)}
+              </span>
+            </div>
+            <h3 class="text-sm font-semibold text-[var(--text-primary)] mb-1 group-hover:text-[var(--text-primary)]">
+              {trend.data.title}
+            </h3>
+            {trend.data.description && (
+              <p class="text-xs text-[var(--text-muted)] line-clamp-2 m-0">{trend.data.description}</p>
+            )}
+          </a>
+        );
+      })}
+    </div>
+  </section>
+
+  <!-- What's New -->
+  <section class="mb-16">
+    <h2 class="text-xl font-bold text-[var(--text-primary)] mb-6">What's New</h2>
+    <div class="space-y-2">
+      <!-- Shutdown: red accent -->
+      <a href="/dead/sora/" class="flex items-center gap-4 bg-[var(--bg-card)] border border-[var(--border)] rounded-xl px-4 py-3 hover:bg-[var(--bg-card-hover)] hover:border-[rgba(255,255,255,0.1)] transition-all no-underline group">
+        <span class="shrink-0 text-xs text-[var(--text-muted)] w-24">Apr 13, 2026</span>
+        <span class="flex-1 text-sm text-[var(--text-secondary)] group-hover:text-[var(--text-primary)] transition-colors">
+          <span class="inline-block w-2 h-2 rounded-full bg-red-400 mr-2 align-middle"></span>
+          Sora 2 shut down. OpenAI discontinued its AI video generator.
+        </span>
+        <span class="text-[var(--text-muted)] group-hover:text-red-400 transition-colors shrink-0">&rarr;</span>
+      </a>
+      <!-- New tool: green accent -->
+      <a href="/tools/seedance/" class="flex items-center gap-4 bg-[var(--bg-card)] border border-[var(--border)] rounded-xl px-4 py-3 hover:bg-[var(--bg-card-hover)] hover:border-[rgba(255,255,255,0.1)] transition-all no-underline group">
+        <span class="shrink-0 text-xs text-[var(--text-muted)] w-24">Apr 13, 2026</span>
+        <span class="flex-1 text-sm text-[var(--text-secondary)] group-hover:text-[var(--text-primary)] transition-colors">
+          <span class="inline-block w-2 h-2 rounded-full bg-green-400 mr-2 align-middle"></span>
+          Seedance 2.0 added. ByteDance's new AI video generator with free tier.
+        </span>
+        <span class="text-[var(--text-muted)] group-hover:text-green-400 transition-colors shrink-0">&rarr;</span>
+      </a>
+      <!-- New tool: green accent -->
+      <a href="/tools/fish-audio/" class="flex items-center gap-4 bg-[var(--bg-card)] border border-[var(--border)] rounded-xl px-4 py-3 hover:bg-[var(--bg-card-hover)] hover:border-[rgba(255,255,255,0.1)] transition-all no-underline group">
+        <span class="shrink-0 text-xs text-[var(--text-muted)] w-24">Apr 13, 2026</span>
+        <span class="flex-1 text-sm text-[var(--text-secondary)] group-hover:text-[var(--text-primary)] transition-colors">
+          <span class="inline-block w-2 h-2 rounded-full bg-green-400 mr-2 align-middle"></span>
+          Fish Audio S2 added. Open-source TTS challenging ElevenLabs.
+        </span>
+        <span class="text-[var(--text-muted)] group-hover:text-green-400 transition-colors shrink-0">&rarr;</span>
+      </a>
+      <!-- Milestone: purple accent -->
+      <a href="/categories/ai-coding/" class="flex items-center gap-4 bg-[var(--bg-card)] border border-[var(--border)] rounded-xl px-4 py-3 hover:bg-[var(--bg-card-hover)] hover:border-[rgba(255,255,255,0.1)] transition-all no-underline group">
+        <span class="shrink-0 text-xs text-[var(--text-muted)] w-24">Apr 13, 2026</span>
+        <span class="flex-1 text-sm text-[var(--text-secondary)] group-hover:text-[var(--text-primary)] transition-colors">
+          <span class="inline-block w-2 h-2 rounded-full bg-purple-400 mr-2 align-middle"></span>
+          38 tool reviews live. Complete coverage across 10 AI categories.
+        </span>
+        <span class="text-[var(--text-muted)] group-hover:text-purple-400 transition-colors shrink-0">&rarr;</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Best Of Guides -->
+  <section class="mb-16">
+    <h2 class="text-xl font-bold text-[var(--text-primary)] mb-6">Best Of</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+      <a href="/guides/best-ai-voice-youtube/" class="block rounded-xl p-[1px] bg-gradient-to-br from-[#a78bfa] to-[#60a5fa] hover:from-[#c4b5fd] hover:to-[#93c5fd] transition-all no-underline group">
+        <div class="bg-[var(--bg-card)] rounded-[11px] p-4 h-full">
+          <h3 class="text-sm font-semibold text-[var(--text-primary)] mb-1">Best AI Voice for YouTube</h3>
+          <p class="text-xs text-[var(--text-muted)] m-0">Top picks compared and ranked</p>
+        </div>
+      </a>
+      <a href="/guides/best-ai-coding-assistant/" class="block rounded-xl p-[1px] bg-gradient-to-br from-[#34d399] to-[#60a5fa] hover:from-[#6ee7b7] hover:to-[#93c5fd] transition-all no-underline group">
+        <div class="bg-[var(--bg-card)] rounded-[11px] p-4 h-full">
+          <h3 class="text-sm font-semibold text-[var(--text-primary)] mb-1">Best AI Coding Assistant</h3>
+          <p class="text-xs text-[var(--text-muted)] m-0">Top picks compared and ranked</p>
+        </div>
+      </a>
+      <a href="/guides/best-ai-video-generator/" class="block rounded-xl p-[1px] bg-gradient-to-br from-[#f472b6] to-[#a78bfa] hover:from-[#f9a8d4] hover:to-[#c4b5fd] transition-all no-underline group">
+        <div class="bg-[var(--bg-card)] rounded-[11px] p-4 h-full">
+          <h3 class="text-sm font-semibold text-[var(--text-primary)] mb-1">Best AI Video Generator</h3>
+          <p class="text-xs text-[var(--text-muted)] m-0">Top picks compared and ranked</p>
+        </div>
+      </a>
+      <a href="/guides/best-ai-automation-platform/" class="block rounded-xl p-[1px] bg-gradient-to-br from-[#fbbf24] to-[#f472b6] hover:from-[#fcd34d] hover:to-[#f9a8d4] transition-all no-underline group">
+        <div class="bg-[var(--bg-card)] rounded-[11px] p-4 h-full">
+          <h3 class="text-sm font-semibold text-[var(--text-primary)] mb-1">Best Automation Platform</h3>
+          <p class="text-xs text-[var(--text-muted)] m-0">Top picks compared and ranked</p>
+        </div>
+      </a>
+      <a href="/guides/best-ai-seo-tool/" class="block rounded-xl p-[1px] bg-gradient-to-br from-[#60a5fa] to-[#34d399] hover:from-[#93c5fd] hover:to-[#6ee7b7] transition-all no-underline group">
+        <div class="bg-[var(--bg-card)] rounded-[11px] p-4 h-full">
+          <h3 class="text-sm font-semibold text-[var(--text-primary)] mb-1">Best AI SEO Tool</h3>
+          <p class="text-xs text-[var(--text-muted)] m-0">Top picks compared and ranked</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Comparisons -->
+  <section class="mb-16">
+    <h2 class="text-xl font-bold text-[var(--text-primary)] mb-6">Comparisons</h2>
+    <div class="space-y-1">
+      {comparisons.map(comp => {
+        const slug = comp.data.slug || comp.id.replace(/\.md$/, '').replace(/\\/g, '/');
+        return (
+          <a
+            href={`/compare/${slug}/`}
+            class="flex items-center justify-between px-4 py-3 rounded-lg hover:bg-[var(--bg-card)] transition-colors no-underline group"
+          >
+            <span class="text-sm text-[var(--text-secondary)] group-hover:text-[var(--text-primary)] transition-colors">
+              {comp.data.title}
+            </span>
+            <span class="text-[var(--text-muted)] group-hover:text-[var(--accent-primary)] transition-colors">
+              &rarr;
+            </span>
+          </a>
+        );
+      })}
+    </div>
+  </section>
+
+  <script>
+    const pills = document.querySelectorAll<HTMLButtonElement>('.category-pill');
+    const cards = document.querySelectorAll<HTMLElement>('.tool-card-wrapper');
+    const countEl = document.getElementById('filter-count');
+    const linkEl = document.getElementById('category-link') as HTMLAnchorElement | null;
+    let activeFilter = 'all';
+
+    const activeCls = 'bg-[rgba(167,139,250,0.15)] border-[rgba(167,139,250,0.3)] text-[var(--accent-primary)]';
+    const inactiveCls = 'bg-[var(--bg-card)] border-[var(--border)] text-[var(--text-secondary)]';
+    const activeClasses = activeCls.split(' ');
+    const inactiveClasses = inactiveCls.split(' ');
+
+    function setFilter(filter: string) {
+      activeFilter = filter;
+      let visible = 0;
+
+      cards.forEach(card => {
+        const cat = card.getAttribute('data-category') ?? '';
+        const show = filter === 'all' || cat === filter;
+        if (show) {
+          card.style.opacity = '1';
+          card.style.display = '';
+          visible++;
+        } else {
+          card.style.opacity = '0';
+          setTimeout(() => { card.style.display = 'none'; }, 200);
+        }
+      });
+
+      pills.forEach(pill => {
+        const f = pill.getAttribute('data-filter') ?? '';
+        const isActive = f === filter;
+        if (isActive) {
+          pill.classList.remove(...inactiveClasses);
+          pill.classList.add(...activeClasses, 'active');
+        } else {
+          pill.classList.remove(...activeClasses, 'active');
+          pill.classList.add(...inactiveClasses);
+        }
+      });
+
+      if (countEl) countEl.textContent = `Showing ${visible} tools`;
+
+      if (linkEl) {
+        if (filter !== 'all') {
+          linkEl.href = `/categories/${filter}/`;
+          linkEl.classList.remove('hidden');
+        } else {
+          linkEl.classList.add('hidden');
+        }
+      }
+    }
+
+    pills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        const filter = pill.getAttribute('data-filter') ?? 'all';
+        setFilter(filter === activeFilter ? 'all' : filter);
+      });
+    });
+  </script>
+</BaseLayout>

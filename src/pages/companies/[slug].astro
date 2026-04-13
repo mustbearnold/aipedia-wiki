@@ -1,0 +1,36 @@
+---
+import { getCollection, render } from 'astro:content';
+import ArticleLayout from '../../layouts/ArticleLayout.astro';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('companies');
+  return entries.map(entry => ({
+    params: { slug: entry.data.slug || entry.id.replace(/\.md$/, '').replace(/\\/g, '/') },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+
+const typeColors: Record<string, string> = {
+  startup: 'green',
+  bigtech: 'blue',
+  acquired: 'yellow',
+  dead: 'red',
+};
+
+const companyType = entry.data.company_type ?? 'startup';
+const badgeColor = typeColors[companyType] ?? 'gray';
+const badgeText = companyType.charAt(0).toUpperCase() + companyType.slice(1);
+---
+
+<ArticleLayout
+  title={entry.data.title}
+  seoTitle={entry.data.seo_title}
+  description={entry.data.meta_description ?? ''}
+  breadcrumbs={[{ label: 'Companies', href: '/companies/' }, { label: entry.data.title }]}
+  badge={{ text: badgeText, color: badgeColor }}
+>
+  <Content />
+</ArticleLayout>

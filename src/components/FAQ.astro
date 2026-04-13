@@ -1,0 +1,40 @@
+<div class="faq-container">
+  <slot />
+</div>
+
+<script>
+  document.querySelectorAll('.faq-container').forEach((container) => {
+    const paragraphs = container.querySelectorAll('p');
+    paragraphs.forEach((p, i) => {
+      const strong = p.querySelector('strong');
+      if (strong && paragraphs[i + 1] && !paragraphs[i + 1].querySelector('strong')) {
+        const answer = paragraphs[i + 1] as HTMLElement;
+        // Style as question
+        p.style.cursor = 'pointer';
+        p.style.userSelect = 'none';
+        p.classList.add('faq-question');
+        // Hide answer initially
+        answer.style.display = 'none';
+        answer.classList.add('faq-answer');
+        // Toggle on click
+        p.addEventListener('click', () => {
+          const isHidden = answer.style.display === 'none';
+          answer.style.display = isHidden ? 'block' : 'none';
+        });
+      }
+    });
+  });
+</script>
+
+<style>
+  .faq-question {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .faq-question:hover {
+    color: var(--text-primary);
+  }
+  .faq-answer {
+    padding: 0.5rem 0 1rem;
+  }
+</style>

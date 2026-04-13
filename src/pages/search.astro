@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Search — aipedia.wiki" description="Search across AI tools, comparisons, categories, and more.">
+  <link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
+  <div class="max-w-2xl mx-auto py-8">
+    <h1 class="text-2xl font-bold tracking-tight mb-6">Search</h1>
+    <div id="search"></div>
+  </div>
+  <script is:inline src="/pagefind/pagefind-ui.js"></script>
+  <script is:inline>
+    window.addEventListener('DOMContentLoaded', () => {
+      new PagefindUI({
+        element: '#search',
+        showSubResults: true,
+        showImages: false,
+      });
+    });
+  </script>
+  <style is:global>
+    .pagefind-ui__search-input {
+      background: var(--bg-card) !important;
+      border: 1px solid var(--border) !important;
+      color: var(--text-primary) !important;
+      border-radius: 10px !important;
+      padding: 12px 16px !important;
+    }
+    .pagefind-ui__result {
+      border-color: var(--border) !important;
+      padding: 12px 0 !important;
+    }
+    .pagefind-ui__result-link {
+      color: var(--accent-primary) !important;
+    }
+    .pagefind-ui__result-excerpt {
+      color: var(--text-secondary) !important;
+    }
+    .pagefind-ui__message {
+      color: var(--text-muted) !important;
+    }
+  </style>
+</BaseLayout>

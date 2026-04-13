@@ -1,0 +1,58 @@
+---
+interface Props {
+  title: string;
+  slug: string;
+  category: string;
+  score: number;
+  priceRange: string;
+  emoji?: string;
+}
+
+const { title, slug, category, score, priceRange, emoji = '🔧' } = Astro.props;
+
+const categoryGradients: Record<string, string> = {
+  'ai-voice': 'linear-gradient(135deg, #6366f1, #818cf8)',
+  'ai-video': 'linear-gradient(135deg, #f97316, #ef4444)',
+  'ai-coding': 'linear-gradient(135deg, #22c55e, #16a34a)',
+  'ai-automation': 'linear-gradient(135deg, #3b82f6, #2563eb)',
+  'ai-seo': 'linear-gradient(135deg, #a78bfa, #7c3aed)',
+  'ai-design': 'linear-gradient(135deg, #ec4899, #f472b6)',
+  'ai-writing': 'linear-gradient(135deg, #60a5fa, #3b82f6)',
+  'ai-image': 'linear-gradient(135deg, #f59e0b, #d97706)',
+  'ai-search': 'linear-gradient(135deg, #14b8a6, #0d9488)',
+  'ai-notes': 'linear-gradient(135deg, #6b7280, #9ca3af)',
+};
+
+const gradient = categoryGradients[category] ?? 'linear-gradient(135deg, #a78bfa, #60a5fa)';
+const categoryLabel = category.replace('ai-', 'AI ').replace(/\b\w/g, (c) => c.toUpperCase());
+---
+
+<a
+  href={`/tools/${slug}/`}
+  class="block bg-[var(--bg-card)] border border-[var(--border)] rounded-xl p-4 hover:bg-[var(--bg-card-hover)] hover:border-[rgba(255,255,255,0.1)] transition-all no-underline group"
+>
+  <div class="flex items-start gap-3">
+    <!-- Emoji icon with gradient bg -->
+    <div
+      class="w-7 h-7 rounded-lg flex items-center justify-center text-sm shrink-0"
+      style={`background: ${gradient};`}
+    >
+      {emoji}
+    </div>
+    <div class="min-w-0 flex-1">
+      <div class="flex items-center justify-between gap-2 mb-1">
+        <h3 class="text-sm font-semibold text-[var(--text-primary)] truncate group-hover:text-[var(--text-primary)]">
+          {title}
+        </h3>
+        <span class="text-sm font-bold bg-gradient-to-r from-[#a78bfa] to-[#60a5fa] bg-clip-text text-transparent shrink-0">
+          {score}
+        </span>
+      </div>
+      <div class="flex items-center gap-2 text-xs text-[var(--text-muted)]">
+        <span>{categoryLabel}</span>
+        <span>&middot;</span>
+        <span>{priceRange}</span>
+      </div>
+    </div>
+  </div>
+</a>

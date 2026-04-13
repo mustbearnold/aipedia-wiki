@@ -1,0 +1,176 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import ScoreBadge from '../components/ScoreBadge.astro';
+import ScoreGrid from '../components/ScoreGrid.astro';
+import FreshnessBadge from '../components/FreshnessBadge.astro';
+import AffiliateCTA from '../components/AffiliateCTA.astro';
+import BreadcrumbLD from '../components/seo/BreadcrumbLD.astro';
+import SoftwareApplicationLD from '../components/seo/SoftwareApplicationLD.astro';
+
+interface Props {
+  frontmatter: Record<string, any>;
+}
+
+const { frontmatter } = Astro.props;
+
+const scores = frontmatter.scores ?? { utility: 0, value: 0, moat: 0, longevity: 0 };
+const overallScore = Math.round(((scores.utility ?? 0) + (scores.value ?? 0) + (scores.moat ?? 0) + (scores.longevity ?? 0)) / 4 * 10) / 10;
+
+const categoryMap: Record<string, { emoji: string; label: string }> = {
+  'ai-voice': { emoji: '\u{1F399}\uFE0F', label: 'AI Voice' },
+  'ai-video': { emoji: '\u{1F3AC}', label: 'AI Video' },
+  'ai-coding': { emoji: '\u{1F4BB}', label: 'AI Coding' },
+  'ai-image': { emoji: '\u{1F3A8}', label: 'AI Image' },
+  'ai-writing': { emoji: '\u270D\uFE0F', label: 'AI Writing' },
+  'ai-automation': { emoji: '\u26A1', label: 'AI Automation' },
+  'ai-seo': { emoji: '\u{1F4C8}', label: 'AI SEO' },
+  'ai-design': { emoji: '\u{1F58C}\uFE0F', label: 'AI Design' },
+  'ai-search': { emoji: '\u{1F50D}', label: 'AI Search' },
+  'ai-notes': { emoji: '\u{1F4DD}', label: 'AI Notes' },
+};
+
+const catSlug = frontmatter.category ?? '';
+const catInfo = categoryMap[catSlug] ?? { emoji: '\u{1F527}', label: catSlug };
+
+const affiliate = frontmatter.affiliate ?? {};
+const hasProgram = affiliate?.has_program ?? false;
+const tags = frontmatter.tags ?? [];
+
+const siteBase = Astro.site?.href ?? 'https://aipedia.wiki';
+const toolSlug = frontmatter.slug ?? '';
+
+const breadcrumbItems = [
+  { label: catInfo.label, href: `/categories/${catSlug}/` },
+  { label: frontmatter.title },
+];
+
+const breadcrumbLdItems = [
+  { name: 'Home', url: `${siteBase}` },
+  { name: catInfo.label, url: `${siteBase}categories/${catSlug}/` },
+  { name: frontmatter.title, url: `${siteBase}tools/${toolSlug}/` },
+];
+---
+
+<BaseLayout
+  title={frontmatter.seo_title ?? frontmatter.title}
+  description={frontmatter.meta_description ?? frontmatter.tagline ?? ''}
+>
+  <BreadcrumbLD items={breadcrumbLdItems} />
+  <SoftwareApplicationLD
+    name={frontmatter.title}
+    url={frontmatter.url ?? ''}
+    category={catInfo.label}
+    priceRange={frontmatter.price_range ?? 'Free'}
+    score={overallScore}
+  />
+
+  <Breadcrumb items={breadcrumbItems} />
+
+  <!-- Mobile compact summary (visible below lg) -->
+  <div class="lg:hidden flex items-center gap-3 mb-6 flex-wrap">
+    <ScoreBadge score={overallScore} />
+    <AffiliateCTA
+      title={frontmatter.title}
+      url={affiliate?.link ?? frontmatter.url ?? '#'}
+      hasProgram={hasProgram}
+      commission={affiliate?.commission}
+    />
+    {frontmatter.price_range && (
+      <span class="text-xs text-[var(--text-muted)] bg-[var(--bg-card)] border border-[var(--border)] rounded-lg px-3 py-1.5">
+        {frontmatter.price_range}
+      </span>
+    )}
+  </div>
+
+  <!-- Two-column grid -->
+  <div class="lg:grid lg:grid-cols-[1fr_280px] lg:gap-8">
+    <!-- Left column: main content -->
+    <div>
+      <!-- Hero -->
+      <div class="flex items-start gap-4 mb-5">
+        <div class="w-14 h-14 rounded-xl flex items-center justify-center text-2xl shrink-0" style="background: linear-gradient(135deg, rgba(167,139,250,0.2), rgba(96,165,250,0.2));">
+          {catInfo.emoji}
+        </div>
+        <div>
+          <div class="flex items-center gap-3 flex-wrap">
+            <h1 class="text-2xl font-bold leading-tight m-0">{frontmatter.title}</h1>
+            {frontmatter.status === 'active' && (
+              <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-[rgba(74,222,128,0.1)] text-[var(--accent-success)] border border-[rgba(74,222,128,0.2)]">
+                Active
+              </span>
+            )}
+          </div>
+          <div class="flex items-center gap-3 mt-1 text-sm text-[var(--text-muted)]">
+            {frontmatter.company && <span>{frontmatter.company}</span>}
+            {frontmatter.last_verified && (
+              <FreshnessBadge lastVerified={String(frontmatter.last_verified)} />
+            )}
+          </div>
+        </div>
+      </div>
+
+      <!-- Tag chips -->
+      <div class="flex items-center gap-2 flex-wrap mb-6">
+        <a href={`/categories/${catSlug}/`} class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-[rgba(167,139,250,0.15)] border border-[rgba(167,139,250,0.3)] text-[var(--accent-primary)] no-underline hover:no-underline">
+          {catInfo.emoji} {catInfo.label}
+        </a>
+        {hasProgram && (
+          <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-[rgba(251,191,36,0.1)] border border-[rgba(251,191,36,0.2)] text-[var(--accent-warning)]">
+            Affiliate
+          </span>
+        )}
+        {tags.slice(0, 4).map((tag: string) => (
+          <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-[var(--bg-card)] border border-[var(--border)] text-[var(--text-muted)]">
+            {tag}
+          </span>
+        ))}
+      </div>
+
+      <!-- Markdown content -->
+      <article class="prose prose-invert prose-sm max-w-none wiki-prose">
+        <slot />
+      </article>
+    </div>
+
+    <!-- Right column: sidebar (desktop only) -->
+    <aside class="hidden lg:block">
+      <div class="sticky top-20 space-y-4">
+        <div class="flex justify-center">
+          <ScoreBadge score={overallScore} />
+        </div>
+
+        <ScoreGrid
+          utility={scores.utility ?? 0}
+          value={scores.value ?? 0}
+          moat={scores.moat ?? 0}
+          longevity={scores.longevity ?? 0}
+        />
+
+        <AffiliateCTA
+          title={frontmatter.title}
+          url={affiliate?.link ?? frontmatter.url ?? '#'}
+          hasProgram={hasProgram}
+          commission={affiliate?.commission}
+        />
+
+        {(frontmatter.price_range || frontmatter.pricing_model) && (
+          <div class="bg-[var(--bg-card)] border border-[var(--border)] rounded-xl p-4">
+            {frontmatter.price_range && (
+              <div class="mb-2">
+                <div class="text-xs text-[var(--text-muted)] mb-1">Price Range</div>
+                <div class="text-sm font-medium text-[var(--text-primary)]">{frontmatter.price_range}</div>
+              </div>
+            )}
+            {frontmatter.pricing_model && (
+              <div>
+                <div class="text-xs text-[var(--text-muted)] mb-1">Model</div>
+                <div class="text-sm font-medium text-[var(--text-primary)] capitalize">{frontmatter.pricing_model}</div>
+              </div>
+            )}
+          </div>
+        )}
+      </div>
+    </aside>
+  </div>
+</BaseLayout>

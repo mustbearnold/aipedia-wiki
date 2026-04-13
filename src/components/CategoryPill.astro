@@ -1,0 +1,35 @@
+---
+interface Props {
+  category: string;
+  active?: boolean;
+}
+
+const { category, active = false } = Astro.props;
+
+const categoryMap: Record<string, { emoji: string; label: string }> = {
+  'ai-voice': { emoji: '🎙️', label: 'AI Voice' },
+  'ai-video': { emoji: '🎬', label: 'AI Video' },
+  'ai-coding': { emoji: '💻', label: 'AI Coding' },
+  'ai-image': { emoji: '🎨', label: 'AI Image' },
+  'ai-writing': { emoji: '✍️', label: 'AI Writing' },
+  'ai-automation': { emoji: '⚡', label: 'AI Automation' },
+  'ai-seo': { emoji: '📈', label: 'AI SEO' },
+  'ai-design': { emoji: '🖌️', label: 'AI Design' },
+  'ai-search': { emoji: '🔍', label: 'AI Search' },
+  'ai-notes': { emoji: '📝', label: 'AI Notes' },
+};
+
+const info = categoryMap[category] ?? { emoji: '🔧', label: category };
+---
+
+<span
+  class:list={[
+    'inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium transition-colors',
+    active
+      ? 'bg-[rgba(167,139,250,0.15)] border border-[rgba(167,139,250,0.3)] text-[var(--accent-primary)]'
+      : 'bg-[var(--bg-card)] border border-[var(--border)] text-[var(--text-secondary)]',
+  ]}
+>
+  <span>{info.emoji}</span>
+  <span>{info.label}</span>
+</span>

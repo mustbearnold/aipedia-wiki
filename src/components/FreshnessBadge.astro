@@ -1,0 +1,30 @@
+---
+interface Props {
+  lastVerified: string;
+}
+
+const { lastVerified } = Astro.props;
+
+const verifiedDate = new Date(lastVerified);
+const now = new Date();
+const daysSince = Math.floor((now.getTime() - verifiedDate.getTime()) / (1000 * 60 * 60 * 24));
+
+let color: string;
+if (daysSince < 30) {
+  color = 'var(--accent-success)';
+} else if (daysSince <= 60) {
+  color = 'var(--accent-warning)';
+} else {
+  color = 'var(--accent-danger)';
+}
+
+const formatted = verifiedDate.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+---
+
+<span
+  class="inline-flex items-center gap-1 text-xs font-medium"
+  style={`color: ${color};`}
+>
+  <span>&#10003;</span>
+  <span>Verified {formatted}</span>
+</span>

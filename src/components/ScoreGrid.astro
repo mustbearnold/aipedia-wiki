@@ -1,0 +1,26 @@
+---
+interface Props {
+  utility: number;
+  value: number;
+  moat: number;
+  longevity: number;
+}
+
+const { utility, value, moat, longevity } = Astro.props;
+
+const scores = [
+  { label: 'Utility', value: utility },
+  { label: 'Value', value: value },
+  { label: 'Moat', value: moat },
+  { label: 'Longevity', value: longevity },
+];
+---
+
+<div class="grid grid-cols-2 gap-2">
+  {scores.map((s) => (
+    <div class="bg-[var(--bg-card)] border border-[var(--border)] rounded-lg p-3 text-center">
+      <div class="text-lg font-bold text-[var(--text-primary)]">{s.value}</div>
+      <div class="text-xs text-[var(--text-muted)]">{s.label}</div>
+    </div>
+  ))}
+</div>

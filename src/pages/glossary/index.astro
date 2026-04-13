@@ -1,0 +1,18 @@
+---
+import { getCollection, render } from 'astro:content';
+import ArticleLayout from '../../layouts/ArticleLayout.astro';
+
+const entries = await getCollection('glossary');
+const entry = entries[0];
+const { Content } = await render(entry);
+const title = entry.data.title ?? 'AI Glossary';
+---
+
+<ArticleLayout
+  title={title}
+  seoTitle={`${title} | aipedia.wiki`}
+  description="Complete glossary of AI terminology, concepts, and acronyms."
+  breadcrumbs={[{ label: title }]}
+>
+  <Content />
+</ArticleLayout>

@@ -1,0 +1,59 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import BreadcrumbLD from '../components/seo/BreadcrumbLD.astro';
+
+interface Props {
+  title: string;
+  seoTitle?: string;
+  description?: string;
+  breadcrumbs?: Array<{ label: string; href?: string }>;
+  badge?: { text: string; color: string };
+}
+
+const { title, seoTitle, description = '', breadcrumbs, badge } = Astro.props;
+
+const siteBase = Astro.site?.href ?? 'https://aipedia.wiki';
+
+const badgeColors: Record<string, string> = {
+  red: 'bg-[rgba(239,68,68,0.1)] text-red-400 border-[rgba(239,68,68,0.2)]',
+  green: 'bg-[rgba(74,222,128,0.1)] text-[var(--accent-success)] border-[rgba(74,222,128,0.2)]',
+  yellow: 'bg-[rgba(251,191,36,0.1)] text-[var(--accent-warning)] border-[rgba(251,191,36,0.2)]',
+  blue: 'bg-[rgba(96,165,250,0.1)] text-blue-400 border-[rgba(96,165,250,0.2)]',
+  purple: 'bg-[rgba(167,139,250,0.1)] text-[var(--accent-primary)] border-[rgba(167,139,250,0.2)]',
+  gray: 'bg-[rgba(156,163,175,0.1)] text-gray-400 border-[rgba(156,163,175,0.2)]',
+};
+
+const badgeClass = badge ? (badgeColors[badge.color] ?? badgeColors.gray) : '';
+
+// Build breadcrumb LD items from breadcrumbs prop
+const breadcrumbLdItems = breadcrumbs
+  ? [
+      { name: 'Home', url: siteBase },
+      ...breadcrumbs.map((b) => ({
+        name: b.label,
+        url: b.href ? `${siteBase}${b.href.replace(/^\//, '')}` : `${siteBase}${Astro.url.pathname.replace(/^\//, '')}`,
+      })),
+    ]
+  : undefined;
+---
+
+<BaseLayout title={seoTitle ?? title} description={description}>
+  {breadcrumbLdItems && <BreadcrumbLD items={breadcrumbLdItems} />}
+  {breadcrumbs && <Breadcrumb items={breadcrumbs} />}
+
+  <div class="max-w-3xl mx-auto">
+    <div class="flex items-center gap-3 flex-wrap mb-6">
+      <h1 class="text-2xl font-bold leading-tight m-0">{title}</h1>
+      {badge && (
+        <span class={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium border ${badgeClass}`}>
+          {badge.text}
+        </span>
+      )}
+    </div>
+
+    <article class="prose prose-invert prose-sm max-w-none wiki-prose">
+      <slot />
+    </article>
+  </div>
+</BaseLayout>

@@ -1,0 +1,33 @@
+---
+interface Props {
+  name: string;
+  url: string;
+  category: string;
+  priceRange: string;
+  score: number;
+}
+
+const { name, url, category, priceRange, score } = Astro.props;
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name,
+  url,
+  applicationCategory: category,
+  offers: {
+    '@type': 'AggregateOffer',
+    priceCurrency: 'USD',
+    price: priceRange,
+  },
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: score,
+    bestRating: 10,
+    worstRating: 0,
+    ratingCount: 1,
+  },
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
