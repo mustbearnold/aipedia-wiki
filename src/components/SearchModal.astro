@@ -507,8 +507,8 @@ const categoryEmoji: Record<string, string> = {
   });
 
   document.addEventListener('click', (e) => {
-    // Search triggers
-    const trigger = e.target.closest('#search-trigger, #homepage-search-bar');
+    // Search triggers (desktop nav, mobile nav, homepage bar)
+    const trigger = e.target.closest('#search-trigger, #search-trigger-mobile, #homepage-search-bar');
     if (trigger) { e.preventDefault(); openModal(trigger); return; }
     // Backdrop → close
     if (e.target.id === 'search-backdrop') { closeModal(); return; }
