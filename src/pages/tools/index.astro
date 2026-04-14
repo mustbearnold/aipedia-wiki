@@ -1,0 +1,57 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ToolCard from '../../components/ToolCard.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import { getCollection } from 'astro:content';
+
+const allTools = await getCollection('tools');
+
+const scoredTools = allTools
+  .filter(t => t.data.status !== 'dead')
+  .map(tool => {
+    const s = tool.data.scores ?? { utility: 0, value: 0, moat: 0, longevity: 0 };
+    const avg = ((s.utility ?? 0) + (s.value ?? 0) + (s.moat ?? 0) + (s.longevity ?? 0)) / 4;
+    return { tool, score: Math.round(avg * 10) / 10 };
+  })
+  .sort((a, b) => b.score - a.score);
+
+const categoryEmojiMap: Record<string, string> = {
+  'ai-chatbots': '\uD83D\uDCAC', 'ai-voice': '\uD83D\uDD0A', 'ai-video': '\uD83C\uDFAC',
+  'ai-coding': '\uD83D\uDCBB', 'ai-automation': '\u26A1', 'ai-seo': '\uD83D\uDCC8',
+  'ai-design': '\uD83C\uDFA8', 'ai-writing': '\u270D\uFE0F', 'ai-image': '\uD83D\uDDBC',
+  'ai-search': '\uD83D\uDD0D', 'ai-notes': '\uD83D\uDCDD', 'ai-music': '\uD83C\uDFB5',
+  'ai-presentation': '\uD83D\uDCCA', 'ai-research': '\uD83D\uDD2C',
+};
+---
+
+<BaseLayout
+  title="All AI Tools — Complete A-Z Index — aipedia.wiki"
+  description={`Complete index of all ${scoredTools.length} AI tools reviewed on aipedia.wiki. Sorted by editorial score across 14 categories.`}
+>
+  <Breadcrumb items={[{ label: 'All Tools' }]} />
+
+  <section class="mb-10 pt-2">
+    <h1 class="text-3xl sm:text-4xl font-bold mb-3 leading-tight">
+      Every AI Tool <span class="bg-gradient-to-r from-[#a78bfa] to-[#60a5fa] bg-clip-text text-transparent">We've Reviewed</span>
+    </h1>
+    <p class="text-[var(--text-secondary)] text-sm sm:text-base max-w-2xl leading-relaxed">
+      All {scoredTools.length} tools sorted by our editorial score. Each review covers what the tool does, who it's for, verified pricing, honest strengths and limitations, and clear alternatives.
+    </p>
+  </section>
+
+  <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mb-16">
+    {scoredTools.map(({ tool, score }) => {
+      const cat = tool.data.category ?? '';
+      return (
+        <ToolCard
+          title={tool.data.title}
+          slug={tool.data.slug || tool.id.replace(/\.md$/, '').replace(/\\/g, '/')}
+          category={cat}
+          score={score}
+          priceRange={tool.data.price_range ?? 'Free'}
+          emoji={categoryEmojiMap[cat] ?? '\uD83D\uDD27'}
+        />
+      );
+    })}
+  </section>
+</BaseLayout>

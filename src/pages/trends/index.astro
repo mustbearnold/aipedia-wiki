@@ -1,0 +1,58 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import { getCollection } from 'astro:content';
+
+const allTrends = await getCollection('trends');
+
+const sorted = allTrends
+  .map(t => ({
+    slug: t.data.slug || t.id.replace(/\.md$/, ''),
+    title: t.data.title,
+    description: t.data.description || t.data.meta_description || '',
+    timeframe: t.data.timeframe || '',
+    impact: t.data.impact || 'medium',
+    lastUpdated: t.data.last_updated,
+  }))
+  .sort((a, b) => (b.lastUpdated || '').localeCompare(a.lastUpdated || ''));
+
+const impactColors: Record<string, string> = {
+  high:   'bg-[rgba(239,68,68,0.1)] text-red-400 border-[rgba(239,68,68,0.25)]',
+  medium: 'bg-[rgba(251,191,36,0.1)] text-[var(--accent-warning)] border-[rgba(251,191,36,0.25)]',
+  low:    'bg-[rgba(96,165,250,0.1)] text-blue-400 border-[rgba(96,165,250,0.25)]',
+};
+---
+
+<BaseLayout
+  title="Trending in AI Tools — What's Changing Now — aipedia.wiki"
+  description="Editorial analysis of major shifts in the AI tools landscape. Model launches, market consolidations, pricing wars, and category emergences."
+>
+  <Breadcrumb items={[{ label: 'Trending' }]} />
+
+  <section class="mb-10 pt-2">
+    <h1 class="text-3xl sm:text-4xl font-bold mb-3 leading-tight">
+      What's <span class="bg-gradient-to-r from-[#a78bfa] to-[#60a5fa] bg-clip-text text-transparent">Changing Now</span>
+    </h1>
+    <p class="text-[var(--text-secondary)] text-sm sm:text-base max-w-2xl leading-relaxed">
+      Editorial analysis of the shifts reshaping the AI tools landscape — new model classes, category consolidations, pricing wars, and the tools being left behind.
+    </p>
+  </section>
+
+  <section class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-16">
+    {sorted.map(t => (
+      <a
+        href={`/trends/${t.slug}/`}
+        class="group block p-5 rounded-xl border border-[var(--border)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] hover:border-[rgba(167,139,250,0.3)] transition-all no-underline"
+      >
+        <div class="flex items-start gap-3 mb-3">
+          <span class={`inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-medium uppercase tracking-wider border ${impactColors[t.impact] || impactColors.medium}`}>
+            {t.impact} impact
+          </span>
+        </div>
+        <h3 class="font-semibold text-[var(--text-primary)] text-base mb-2 group-hover:text-[var(--accent-primary)] transition-colors">{t.title}</h3>
+        {t.description && <p class="text-sm text-[var(--text-secondary)] leading-relaxed mb-3 line-clamp-2">{t.description}</p>}
+        {t.timeframe && <p class="text-xs text-[var(--text-muted)] line-clamp-1">{t.timeframe}</p>}
+      </a>
+    ))}
+  </section>
+</BaseLayout>
