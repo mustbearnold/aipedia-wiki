@@ -34,10 +34,10 @@
       ],
       "last_verified": "2026-04-13T00:00:00.000Z",
       "source_file": "category",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     },
     "ai-automation_n8n_ranked_1": {
       "type": "ranking_in_category",
@@ -70,10 +70,10 @@
       ],
       "last_verified": "2026-04-13T00:00:00.000Z",
       "source_file": "category",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     },
     "ai-automation_zapier_ranked_3": {
       "type": "ranking_in_category",
@@ -106,10 +106,10 @@
       ],
       "last_verified": "2026-04-13T00:00:00.000Z",
       "source_file": "category",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     },
     "ai-chatbots_chatgpt_ranked_2": {
       "type": "ranking_in_category",
@@ -139,10 +139,10 @@
       ],
       "last_verified": "2026-04-14T00:00:00.000Z",
       "source_file": "category",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     },
     "ai-chatbots_claude_ranked_1": {
       "type": "ranking_in_category",
@@ -172,10 +172,10 @@
       ],
       "last_verified": "2026-04-14T00:00:00.000Z",
       "source_file": "category",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     },
     "ai-chatbots_gemini_ranked_3": {
       "type": "ranking_in_category",
@@ -205,10 +205,10 @@
       ],
       "last_verified": "2026-04-14T00:00:00.000Z",
       "source_file": "category",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     },
     "ai-coding_claude-code_ranked_2": {
       "type": "ranking_in_category",
@@ -241,10 +241,10 @@
       ],
       "last_verified": "2026-04-13T00:00:00.000Z",
       "source_file": "category",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     },
     "ai-coding_cursor_ranked_1": {
       "type": "ranking_in_category",
@@ -277,10 +277,10 @@
       ],
       "last_verified": "2026-04-13T00:00:00.000Z",
       "source_file": "category",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     },
     "ai-coding_github-copilot_ranked_3": {
       "type": "ranking_in_category",
@@ -313,10 +313,10 @@
       ],
       "last_verified": "2026-04-13T00:00:00.000Z",
       "source_file": "category",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     },
     "ai-design_canva-ai_ranked_1": {
       "type": "ranking_in_category",
@@ -349,10 +349,10 @@
       ],
       "last_verified": "2026-04-13T00:00:00.000Z",
       "source_file": "category",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     },
     "ai-design_figma-ai_ranked_2": {
       "type": "ranking_in_category",
@@ -385,10 +385,10 @@
       ],
       "last_verified": "2026-04-13T00:00:00.000Z",
       "source_file": "category",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     },
     "ai-design_google-stitch_ranked_3": {
       "type": "ranking_in_category",
@@ -421,10 +421,10 @@
       ],
       "last_verified": "2026-04-13T00:00:00.000Z",
       "source_file": "category",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     },
     "ai-image_dall-e-3-openai_ranked_3": {
       "type": "ranking_in_category",
@@ -457,10 +457,10 @@
       ],
       "last_verified": "2026-04-13T00:00:00.000Z",
       "source_file": "category",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     },
     "ai-image_flux-black-forest-labs_ranked_2": {
       "type": "ranking_in_category",
@@ -493,10 +493,10 @@
       ],
       "last_verified": "2026-04-13T00:00:00.000Z",
       "source_file": "category",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     },
     "ai-image_midjourney_ranked_1": {
       "type": "ranking_in_category",
@@ -529,10 +529,10 @@
       ],
       "last_verified": "2026-04-13T00:00:00.000Z",
       "source_file": "category",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     },
     "ai-music_muberttoolsmubertmd_ranked_3": {
       "type": "ranking_in_category",
@@ -556,10 +556,10 @@
       ],
       "last_verified": "2026-04-13T00:00:00.000Z",
       "source_file": "category",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     },
     "ai-music_sunotoolssunomd_ranked_1": {
       "type": "ranking_in_category",
@@ -583,10 +583,10 @@
       ],
       "last_verified": "2026-04-13T00:00:00.000Z",
       "source_file": "category",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     },
     "ai-music_udiotoolsudiomd_ranked_2": {
       "type": "ranking_in_category",
@@ -610,10 +610,10 @@
       ],
       "last_verified": "2026-04-13T00:00:00.000Z",
       "source_file": "category",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     },
     "ai-notes_mem_ranked_3": {
       "type": "ranking_in_category",
@@ -646,10 +646,10 @@
       ],
       "last_verified": "2026-04-13T00:00:00.000Z",
       "source_file": "category",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     },
     "ai-notes_notion-ai_ranked_1": {
       "type": "ranking_in_category",
@@ -682,10 +682,10 @@
       ],
       "last_verified": "2026-04-13T00:00:00.000Z",
       "source_file": "category",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     },
     "ai-notes_obsidian_ranked_2": {
       "type": "ranking_in_category",
@@ -718,10 +718,10 @@
       ],
       "last_verified": "2026-04-13T00:00:00.000Z",
       "source_file": "category",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     },
     "ai-presentation_beautifulai_ranked_2": {
       "type": "ranking_in_category",
@@ -754,10 +754,10 @@
       ],
       "last_verified": "2026-04-14T00:00:00.000Z",
       "source_file": "category",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     },
     "ai-presentation_gamma_ranked_1": {
       "type": "ranking_in_category",
@@ -790,10 +790,10 @@
       ],
       "last_verified": "2026-04-14T00:00:00.000Z",
       "source_file": "category",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     },
     "ai-presentation_tome_ranked_3": {
       "type": "ranking_in_category",
@@ -826,10 +826,10 @@
       ],
       "last_verified": "2026-04-14T00:00:00.000Z",
       "source_file": "category",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     },
     "ai-research_consensus_ranked_2": {
       "type": "ranking_in_category",
@@ -859,10 +859,10 @@
       ],
       "last_verified": "2026-04-14T00:00:00.000Z",
       "source_file": "category",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     },
     "ai-research_elicit_ranked_1": {
       "type": "ranking_in_category",
@@ -892,10 +892,10 @@
       ],
       "last_verified": "2026-04-14T00:00:00.000Z",
       "source_file": "category",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     },
     "ai-research_scite_ranked_3": {
       "type": "ranking_in_category",
@@ -925,10 +925,10 @@
       ],
       "last_verified": "2026-04-14T00:00:00.000Z",
       "source_file": "category",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     },
     "ai-search_gemini-deep-research_ranked_3": {
       "type": "ranking_in_category",
@@ -961,10 +961,10 @@
       ],
       "last_verified": "2026-04-13T00:00:00.000Z",
       "source_file": "category",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     },
     "ai-search_google-ai-overviews_ranked_2": {
       "type": "ranking_in_category",
@@ -997,10 +997,10 @@
       ],
       "last_verified": "2026-04-13T00:00:00.000Z",
       "source_file": "category",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     },
     "ai-search_perplexity_ranked_1": {
       "type": "ranking_in_category",
@@ -1033,10 +1033,10 @@
       ],
       "last_verified": "2026-04-13T00:00:00.000Z",
       "source_file": "category",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     },
     "ai-seo_ahrefs_ranked_3": {
       "type": "ranking_in_category",
@@ -1063,10 +1063,10 @@
       ],
       "last_verified": "2026-04-13T00:00:00.000Z",
       "source_file": "category",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     },
     "ai-seo_semrush_ranked_2": {
       "type": "ranking_in_category",
@@ -1093,10 +1093,10 @@
       ],
       "last_verified": "2026-04-13T00:00:00.000Z",
       "source_file": "category",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     },
     "ai-seo_surfer-seo_ranked_1": {
       "type": "ranking_in_category",
@@ -1123,10 +1123,10 @@
       ],
       "last_verified": "2026-04-13T00:00:00.000Z",
       "source_file": "category",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     },
     "ai-video_kling-30_ranked_1": {
       "type": "ranking_in_category",
@@ -1159,10 +1159,10 @@
       ],
       "last_verified": "2026-04-13T00:00:00.000Z",
       "source_file": "category",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     },
     "ai-video_runway-gen-45_ranked_2": {
       "type": "ranking_in_category",
@@ -1195,10 +1195,10 @@
       ],
       "last_verified": "2026-04-13T00:00:00.000Z",
       "source_file": "category",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     },
     "ai-video_seedance-20-bytedance_ranked_3": {
       "type": "ranking_in_category",
@@ -1231,10 +1231,10 @@
       ],
       "last_verified": "2026-04-13T00:00:00.000Z",
       "source_file": "category",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     },
     "ai-voice_elevenlabs_ranked_1": {
       "type": "ranking_in_category",
@@ -1267,10 +1267,10 @@
       ],
       "last_verified": "2026-04-13T00:00:00.000Z",
       "source_file": "category",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     },
     "ai-voice_lovo-ai_ranked_3": {
       "type": "ranking_in_category",
@@ -1303,10 +1303,10 @@
       ],
       "last_verified": "2026-04-13T00:00:00.000Z",
       "source_file": "category",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     },
     "ai-voice_murf-ai_ranked_2": {
       "type": "ranking_in_category",
@@ -1339,10 +1339,10 @@
       ],
       "last_verified": "2026-04-13T00:00:00.000Z",
       "source_file": "category",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     },
     "ai-writing_chatgpt-openai_ranked_2": {
       "type": "ranking_in_category",
@@ -1375,10 +1375,10 @@
       ],
       "last_verified": "2026-04-13T00:00:00.000Z",
       "source_file": "category",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     },
     "ai-writing_claude-anthropic_ranked_1": {
       "type": "ranking_in_category",
@@ -1411,10 +1411,10 @@
       ],
       "last_verified": "2026-04-13T00:00:00.000Z",
       "source_file": "category",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     },
     "ai-writing_gemini-google_ranked_3": {
       "type": "ranking_in_category",
@@ -1447,10 +1447,10 @@
       ],
       "last_verified": "2026-04-13T00:00:00.000Z",
       "source_file": "category",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     },
     "best-ai-automation-platform_make_ranked_3": {
       "type": "ranking_in_category",
@@ -1480,10 +1480,10 @@
       ],
       "last_verified": "2026-04-13T00:00:00.000Z",
       "source_file": "best_of",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     },
     "best-ai-automation-platform_n8n_ranked_1": {
       "type": "ranking_in_category",
@@ -1513,10 +1513,10 @@
       ],
       "last_verified": "2026-04-13T00:00:00.000Z",
       "source_file": "best_of",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     },
     "best-ai-automation-platform_zapier_ranked_2": {
       "type": "ranking_in_category",
@@ -1546,10 +1546,10 @@
       ],
       "last_verified": "2026-04-13T00:00:00.000Z",
       "source_file": "best_of",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     },
     "best-ai-coding-assistant_claude-code_ranked_2": {
       "type": "ranking_in_category",
@@ -1579,10 +1579,10 @@
       ],
       "last_verified": "2026-04-13T00:00:00.000Z",
       "source_file": "best_of",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     },
     "best-ai-coding-assistant_cursor_ranked_1": {
       "type": "ranking_in_category",
@@ -1612,10 +1612,10 @@
       ],
       "last_verified": "2026-04-13T00:00:00.000Z",
       "source_file": "best_of",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     },
     "best-ai-coding-assistant_github-copilot_ranked_3": {
       "type": "ranking_in_category",
@@ -1645,10 +1645,10 @@
       ],
       "last_verified": "2026-04-13T00:00:00.000Z",
       "source_file": "best_of",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     },
     "best-ai-music-generator_mubert_ranked_3": {
       "type": "ranking_in_category",
@@ -1672,10 +1672,10 @@
       ],
       "last_verified": "2026-04-13T00:00:00.000Z",
       "source_file": "best_of",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     },
     "best-ai-music-generator_suno_ranked_1": {
       "type": "ranking_in_category",
@@ -1699,10 +1699,10 @@
       ],
       "last_verified": "2026-04-13T00:00:00.000Z",
       "source_file": "best_of",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     },
     "best-ai-music-generator_udio_ranked_2": {
       "type": "ranking_in_category",
@@ -1726,10 +1726,10 @@
       ],
       "last_verified": "2026-04-13T00:00:00.000Z",
       "source_file": "best_of",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     },
     "best-ai-seo-tool_ahrefs_ranked_3": {
       "type": "ranking_in_category",
@@ -1756,10 +1756,10 @@
       ],
       "last_verified": "2026-04-13T00:00:00.000Z",
       "source_file": "best_of",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     },
     "best-ai-seo-tool_semrush_ranked_2": {
       "type": "ranking_in_category",
@@ -1786,10 +1786,10 @@
       ],
       "last_verified": "2026-04-13T00:00:00.000Z",
       "source_file": "best_of",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     },
     "best-ai-seo-tool_surfer-seo_ranked_1": {
       "type": "ranking_in_category",
@@ -1816,10 +1816,10 @@
       ],
       "last_verified": "2026-04-13T00:00:00.000Z",
       "source_file": "best_of",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     },
     "best-ai-video-generator_kling_ranked_1": {
       "type": "ranking_in_category",
@@ -1849,10 +1849,10 @@
       ],
       "last_verified": "2026-04-13T00:00:00.000Z",
       "source_file": "best_of",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     },
     "best-ai-video-generator_runway_ranked_3": {
       "type": "ranking_in_category",
@@ -1882,10 +1882,10 @@
       ],
       "last_verified": "2026-04-13T00:00:00.000Z",
       "source_file": "best_of",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     },
     "best-ai-video-generator_seedance_ranked_2": {
       "type": "ranking_in_category",
@@ -1915,10 +1915,10 @@
       ],
       "last_verified": "2026-04-13T00:00:00.000Z",
       "source_file": "best_of",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     },
     "best-ai-voice-youtube_elevenlabs_ranked_1": {
       "type": "ranking_in_category",
@@ -1948,10 +1948,10 @@
       ],
       "last_verified": "2026-04-13T00:00:00.000Z",
       "source_file": "best_of",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     },
     "best-ai-voice-youtube_fish-audio_ranked_2": {
       "type": "ranking_in_category",
@@ -1981,10 +1981,10 @@
       ],
       "last_verified": "2026-04-13T00:00:00.000Z",
       "source_file": "best_of",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     },
     "best-ai-voice-youtube_voxtral_ranked_3": {
       "type": "ranking_in_category",
@@ -2014,10 +2014,10 @@
       ],
       "last_verified": "2026-04-13T00:00:00.000Z",
       "source_file": "best_of",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     },
     "comparison_chatgpt-vs-claude_tiered": {
       "type": "tier_classification",
@@ -2036,10 +2036,10 @@
       ],
       "last_verified": "2026-04-14T00:00:00.000Z",
       "source_file": "comparison",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     },
     "comparison_cursor-vs-claude-code-vs-copilot_tiered": {
       "type": "tier_classification",
@@ -2061,10 +2061,10 @@
       ],
       "last_verified": "2026-04-13T00:00:00.000Z",
       "source_file": "comparison",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     },
     "comparison_cursor-vs-windsurf_tiered": {
       "type": "tier_classification",
@@ -2083,10 +2083,10 @@
       ],
       "last_verified": "2026-04-14T00:00:00.000Z",
       "source_file": "comparison",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     },
     "comparison_elevenlabs-vs-fish-audio_tiered": {
       "type": "tier_classification",
@@ -2105,10 +2105,10 @@
       ],
       "last_verified": "2026-04-13T00:00:00.000Z",
       "source_file": "comparison",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     },
     "comparison_elevenlabs-vs-murf_elevenlabs_beats_murf": {
       "type": "better_than",
@@ -2126,10 +2126,10 @@
       ],
       "last_verified": "2026-04-14T00:00:00.000Z",
       "source_file": "comparison",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     },
     "comparison_heygen-vs-synthesia_heygen_beats_synthesia": {
       "type": "better_than",
@@ -2147,10 +2147,10 @@
       ],
       "last_verified": "2026-04-14T00:00:00.000Z",
       "source_file": "comparison",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     },
     "comparison_kling-vs-seedance-vs-runway_kling_beats_runway": {
       "type": "better_than",
@@ -2168,10 +2168,10 @@
       ],
       "last_verified": "2026-04-13T00:00:00.000Z",
       "source_file": "comparison",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     },
     "comparison_kling-vs-seedance-vs-runway_kling_beats_seedance": {
       "type": "better_than",
@@ -2189,10 +2189,10 @@
       ],
       "last_verified": "2026-04-13T00:00:00.000Z",
       "source_file": "comparison",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     },
     "comparison_lovable-vs-bolt-vs-v0_lovable_beats_bolt-new": {
       "type": "better_than",
@@ -2210,10 +2210,10 @@
       ],
       "last_verified": "2026-04-13T00:00:00.000Z",
       "source_file": "comparison",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     },
     "comparison_lovable-vs-bolt-vs-v0_lovable_beats_v0": {
       "type": "better_than",
@@ -2231,10 +2231,10 @@
       ],
       "last_verified": "2026-04-13T00:00:00.000Z",
       "source_file": "comparison",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     },
     "comparison_midjourney-vs-flux_tiered": {
       "type": "tier_classification",
@@ -2253,10 +2253,10 @@
       ],
       "last_verified": "2026-04-14T00:00:00.000Z",
       "source_file": "comparison",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     },
     "comparison_n8n-vs-make-vs-zapier_tiered": {
       "type": "tier_classification",
@@ -2278,10 +2278,10 @@
       ],
       "last_verified": "2026-04-13T00:00:00.000Z",
       "source_file": "comparison",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     },
     "comparison_notion-ai-vs-obsidian_tiered": {
       "type": "tier_classification",
@@ -2300,10 +2300,10 @@
       ],
       "last_verified": "2026-04-14T00:00:00.000Z",
       "source_file": "comparison",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     },
     "comparison_perplexity-vs-chatgpt_tiered": {
       "type": "tier_classification",
@@ -2322,10 +2322,10 @@
       ],
       "last_verified": "2026-04-14T00:00:00.000Z",
       "source_file": "comparison",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     },
     "comparison_suno-vs-udio_tiered": {
       "type": "tier_classification",
@@ -2344,10 +2344,10 @@
       ],
       "last_verified": "2026-04-14T00:00:00.000Z",
       "source_file": "comparison",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     },
     "comparison_surfer-vs-semrush-vs-ahrefs_tiered": {
       "type": "tier_classification",
@@ -2369,10 +2369,10 @@
       ],
       "last_verified": "2026-04-13T00:00:00.000Z",
       "source_file": "comparison",
-      "confidence": 0.75,
-      "evidence_strength": 2,
+      "source_chain": [],
       "challenges_withstood": 0,
-      "source_chain": []
+      "confidence": 0.75,
+      "evidence_strength": 2
     }
   },
   "archived_claims": {

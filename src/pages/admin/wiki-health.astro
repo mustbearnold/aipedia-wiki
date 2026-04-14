@@ -6,17 +6,15 @@
  */
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
-// Vite/Astro resolve these at build time — no fs path gymnastics needed.
-// If the files are missing (e.g. fresh checkout without running the audit),
-// the imports fall through to `null` via the ?? chain below.
+// Use import.meta.glob so Vite/Rollup doesn't fail the build when these
+// generated files are absent. They populate locally via `npm run wiki:refresh`.
 let registry: ToolRegistry | null = null;
 let queue: StaleQueue | null = null;
-try {
-  registry = (await import('../../data/_meta/tools-registry.json')).default as ToolRegistry;
-} catch { /* no-op — dashboard degrades gracefully */ }
-try {
-  queue = (await import('../../data/_meta/stale-queue.json')).default as StaleQueue;
-} catch { /* no-op */ }
+const metaFiles = import.meta.glob('../../data/_meta/*.json', { eager: true }) as Record<string, { default: any }>;
+for (const [path, mod] of Object.entries(metaFiles)) {
+  if (path.endsWith('tools-registry.json')) registry = mod.default as ToolRegistry;
+  if (path.endsWith('stale-queue.json'))    queue = mod.default as StaleQueue;
+}
 
 type ToolRegistry = {
   tools: Record<string, {
