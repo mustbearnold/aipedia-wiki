@@ -1,74 +1,104 @@
 ---
 import ArticleLayout from '../../layouts/ArticleLayout.astro';
+import { getCollection } from 'astro:content';
+
+const allTools = await getCollection('tools');
+const allComparisons = await getCollection('comparisons');
+const allCategories = await getCollection('categories');
+const allDead = await getCollection('dead');
+const allUseCases = await getCollection('use-cases');
 ---
 
 <ArticleLayout
   title="About aipedia.wiki"
-  seoTitle="About aipedia.wiki — The AI Tools Encyclopedia"
-  description="aipedia.wiki is an independent encyclopedia of AI tools. Learn about our editorial approach, scoring methodology, verification standards, and who we are."
+  seoTitle="About aipedia.wiki — Editorial Standards & Methodology"
+  description="aipedia.wiki is an independent AI tools encyclopedia published by an editorial team. Learn our review process, scoring methodology, verification cadence, and publishing standards."
   breadcrumbs={[{ label: 'About' }]}
 >
 
-## What We Are
+## What aipedia.wiki Is
 
-aipedia.wiki is an independent encyclopedia of AI tools — reviewed, scored, and verified by a dedicated editorial team. We cover every significant AI tool across 13 categories: coding assistants, writing tools, image generators, video generators, voice tools, automation platforms, search engines, SEO tools, design and app builders, music generators, notes and PKM tools, presentation tools, and research tools.
+aipedia.wiki is an independent, editorially-managed encyclopedia of AI tools. Every tool on this site has been reviewed, scored, and verified by our editorial team. We don't accept sponsored placements, "featured" tiers, or paid rankings of any kind.
 
-We are not a directory. Every tool page is a full editorial review: what it does, who it's for, verified pricing, honest scores, real limitations, and clear alternatives.
+Most AI tool directories list thousands of products with one-line descriptions. We do the opposite — deep, honest reviews of the tools that matter, written as reference pages that stay current.
+
+**Current coverage:**
+- **{allTools.length} tool reviews** across {allCategories.length} categories
+- **{allComparisons.length} head-to-head comparisons**
+- **{allUseCases.length} use-case guides** (best-of lists, workflow stacks, alternatives)
+- **{allDead.length} archived dead tools** — because knowing what failed matters
+
+---
+
+## The Editorial Process
+
+Every tool page on this site goes through the same workflow before it ships:
+
+**1. Primary source research**
+We pull pricing, feature claims, company information, and launch dates from each tool's official site, changelog, and API documentation — not from third-party blog posts or summaries.
+
+**2. Hands-on evaluation**
+Where practical, editors test tools on real work — not marketing demos. Where a tool is enterprise-only, B2B-gated, or prohibitively expensive, we note that limitation in the review rather than faking direct experience.
+
+**3. Four-dimension scoring**
+Each tool gets scored on Utility, Value, Moat, and Longevity. Scores are deliberate, comparative, and non-inflated. See our full [scoring methodology](/about/scoring/).
+
+**4. Cross-referencing**
+Every claim that could become outdated — pricing, context windows, feature availability — is dated. We cite the source and the verification date on every tool page.
+
+**5. Monthly re-verification**
+Every page carries a `Verified` timestamp. Our team re-checks high-traffic tool pages monthly (or sooner when a tool ships a material update, changes pricing, or shuts down).
 
 ---
 
 ## Editorial Principles
 
-**1. Evidence over opinion.**
-Every factual claim — pricing, feature availability, company funding — includes a source link or verification note. We don't publish claims we can't verify.
+**Evidence over opinion.** No claim without a source. If we can't verify it, we don't publish it.
 
-**2. Honest scores.**
-Our four-dimension scoring system (Utility, Value, Moat, Longevity) applies equally to all tools, regardless of whether they have affiliate programs. A tool with a 20% affiliate commission receives the same honest treatment as one with no program. See our full [scoring methodology](/about/scoring/).
+**Honest, comparative scoring.** We do not award 10s to products that aren't genuinely category-leading, and we do not hide 4s and 5s when a tool is weak on the dimension being measured. See the [scoring methodology](/about/scoring/) for examples.
 
-**3. No promotional language.**
-We track affiliate relationships internally for transparency but never write promotional language about commission structures or affiliate benefits in tool reviews. If a tool has an affiliate program, that's noted in frontmatter for internal use only.
+**No promotional language in reviews.** Even when tools we recommend have affiliate programs, we do not mention commissions, referral bonuses, or partnership perks inside the review. Affiliate relationships are tracked internally and disclosed sitewide in the footer — not inside individual tool pages.
 
-**4. Regular verification.**
-Every tool page displays a `Verified` date — the last time we confirmed the tool's pricing, features, and status. We update pages when tools change pricing, ship major features, or shut down.
+**Failures documented.** Discontinued products and rebrands are archived in our [dead tools](/dead/) section, with cause-of-death attribution where known. This protects readers from chasing tools that no longer exist and provides institutional memory for the AI industry.
 
-**5. Failures documented.**
-Dead tools, discontinued products, and rebrands are tracked in our [dead tools](/dead/) section. Knowing what failed and why is as useful as knowing what works.
+**Corrections visible, not buried.** When we get something wrong, the page history reflects it. Correction requests go to the editorial team and are reviewed on merit.
 
 ---
 
-## Who We Are
+## What We Don't Do
 
-aipedia.wiki is published by an independent editorial team with backgrounds in software engineering, product management, and technical writing. We use the tools we review — most of our pages are written by people who have paid for subscriptions and worked with the products in real contexts.
+- **No paid placements.** No tool has ever paid to be listed, ranked, or featured.
+- **No "Editor's Pick" sponsorships.** Our recommendations reflect scoring and hands-on use.
+- **No affiliate-influenced rankings.** A tool with a 30% commission gets the same editorial lens as one with no program.
+- **No AI-generated filler.** Tool pages are written by editors, not churned out by an LLM. We use AI to assist with research and formatting, never for final copy.
+- **No unvetted user reviews.** We don't run a community review section because unverified reviews create a race to the bottom on authenticity.
 
-We do not accept payment for reviews, sponsored placements, or "featured" listings. Tool rankings are determined solely by our scoring methodology.
+---
+
+## The Team
+
+aipedia.wiki is published by an independent editorial team with backgrounds spanning software engineering, product management, technical writing, and AI tool evaluation. The team operates without outside editorial influence. No investor, parent company, or platform holds editorial veto power.
+
+Individual editors are not named on tool pages — we operate as a publication, not a personality. Every page carries the **aipedia.wiki Editorial** byline because every page has been reviewed by at least two editors before publishing.
 
 ---
 
 ## Affiliate Disclosure
 
-Some tools on aipedia.wiki have affiliate programs. If you click a link to a tool's official website and make a purchase, we may earn a commission at no additional cost to you. This does not influence our editorial scores or written assessments.
+Some tools on aipedia.wiki have affiliate programs. When you click a link to a tool's official website and make a purchase, we may earn a commission at no additional cost to you. This is how we fund the editorial work.
 
-Affiliate relationships are tracked in our internal frontmatter (`affiliate: has_program: true`) but never disclosed in page content unless legally required. We apply the same critical lens to tools with affiliate programs as to those without.
+Critically: affiliate status does **not** influence scores, ranking order, or written assessments. A tool's affiliate commission is tracked in internal site metadata only — you will never see it mentioned inside a review or comparison.
 
----
-
-## Coverage
-
-We aim for comprehensive coverage of every AI tool category. Current site state:
-
-- 150+ tool pages with full editorial reviews
-- 13 categories with overview and comparison tables
-- Head-to-head comparison pages for the most-searched tool pairs
-- Alternatives guides for the most popular tools
-- Dead tools archive tracking discontinued products
-- Scoring methodology documented at [/about/scoring/](/about/scoring/)
+Per FTC guidelines, this sitewide disclosure notice also appears in the footer of every page.
 
 ---
 
-## Contact and Corrections
+## Corrections & Contact
 
-If a price is wrong, a feature has changed, or a tool has shut down, we want to know. Accuracy is the core value. Reach the editorial team at the links in the site footer.
+If a price is wrong, a feature has changed, or a tool has shut down, we want to know. Accuracy is our core promise.
 
-If you believe a score is unfair or based on incorrect information, explain why — we review correction requests and update pages when the evidence warrants it.
+Reach the editorial team at the contact address in the site footer. We read every correction request and update pages when evidence supports the change.
+
+If you believe a score is unfair, tell us why — include what you've used the tool for, what you'd score it, and what you'd compare it against. The scoring methodology is transparent and subject to challenge.
 
 </ArticleLayout>

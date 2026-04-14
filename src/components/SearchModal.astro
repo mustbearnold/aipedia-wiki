@@ -1,0 +1,528 @@
+---
+import { getCollection } from 'astro:content';
+
+const allTools = await getCollection('tools');
+const toolsIndex = allTools
+  .filter(t => t.data.type === 'tool' && t.data.status !== 'dead')
+  .map(t => ({
+    slug: t.slug,
+    title: t.data.title ?? '',
+    tagline: t.data.tagline ?? '',
+    category: t.data.category ?? '',
+    price: t.data.price_range ?? '',
+    url: `/tools/${t.slug}/`,
+  }))
+  .sort((a, b) => a.title.localeCompare(b.title));
+
+const categoryEmoji: Record<string, string> = {
+  'ai-chatbots': '💬',
+  'ai-coding': '💻', 'ai-writing': '✍️', 'ai-image': '🎨',
+  'ai-video': '🎬', 'ai-voice': '🎙️', 'ai-notes': '📝',
+  'ai-search': '🔍', 'ai-seo': '📈', 'ai-automation': '⚡',
+  'ai-design': '🖌️', 'ai-music': '🎵', 'ai-presentation': '📊',
+  'ai-research': '🔬',
+};
+---
+
+<style is:global>
+  #search-modal {
+    display: none; /* toggled via .is-visible class, not inline style */
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+    pointer-events: none;
+  }
+  #search-modal.is-visible { display: flex; }
+  #search-modal.is-open    { pointer-events: all; }
+
+  /* Backdrop: near-solid dark, no blur needed — the modal box is solid so it won't be affected */
+  #search-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(8, 6, 14, 0.88);
+    opacity: 0;
+    transition: opacity 220ms ease;
+  }
+  #search-modal.is-open #search-backdrop {
+    opacity: 1;
+  }
+  /* Light theme */
+  html.light #search-backdrop {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  #search-box {
+    position: relative;
+    width: 100%;
+    max-width: 560px;
+    background: #1a1625; /* solid so the backdrop doesn't bleed through */
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: 0 24px 48px rgba(0,0,0,0.5);
+    overflow: hidden;
+    will-change: transform, opacity;
+  }
+  /* Light theme override */
+  html.light #search-box { background: #ffffff; }
+  #search-box-inner { will-change: transform; }
+
+  .s-tabs {
+    display: flex;
+    gap: 4px;
+    padding: 8px 10px;
+    border-bottom: 1px solid var(--border);
+    background: color-mix(in srgb, var(--bg-base) 40%, transparent);
+  }
+  .s-tab {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 12px;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    color: var(--text-muted);
+    background: transparent;
+    border: none;
+    border-radius: 6px;
+    transition: color 120ms ease, background 120ms ease;
+    font-family: inherit;
+    line-height: 1.4;
+  }
+  .s-tab:hover {
+    color: var(--text-primary);
+    background: var(--bg-card-hover);
+  }
+  .s-tab.active {
+    color: var(--text-primary);
+    background: rgba(167, 139, 250, 0.18);
+    box-shadow: inset 0 0 0 1px rgba(167, 139, 250, 0.25);
+  }
+  .s-tab .s-count {
+    font-size: 10px;
+    font-weight: 600;
+    padding: 1px 6px;
+    border-radius: 4px;
+    background: rgba(255,255,255,0.06);
+    color: var(--text-muted);
+  }
+  .s-tab.active .s-count {
+    background: rgba(167,139,250,0.2);
+    color: var(--accent-primary);
+  }
+
+  /* Section label for default state */
+  .s-section {
+    padding: 10px 12px 4px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    opacity: 0.6;
+  }
+
+  #search-results {
+    max-height: 52vh;
+    overflow-y: auto;
+    padding: 6px;
+    /* Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: rgba(167, 139, 250, 0.3) transparent;
+  }
+  /* WebKit (Chrome / Edge / Safari) */
+  #search-results::-webkit-scrollbar {
+    width: 8px;
+  }
+  #search-results::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  #search-results::-webkit-scrollbar-thumb {
+    background: rgba(167, 139, 250, 0.25);
+    border-radius: 4px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+  }
+  #search-results::-webkit-scrollbar-thumb:hover {
+    background: rgba(167, 139, 250, 0.45);
+    background-clip: padding-box;
+    border: 2px solid transparent;
+  }
+
+  #search-results .s-result {
+    display: flex !important;
+    align-items: center;
+    gap: 12px;
+    padding: 9px 12px;
+    border-radius: 10px;
+    text-decoration: none !important;
+    color: inherit;
+    transition: background 100ms;
+    margin: 0 !important;
+  }
+  #search-results .s-result:hover { background: var(--bg-card-hover); }
+  #search-results .s-icon {
+    width: 34px; height: 34px; border-radius: 8px;
+    display: flex !important; align-items: center; justify-content: center;
+    font-size: 16px; flex-shrink: 0;
+    background: linear-gradient(135deg, rgba(167,139,250,0.18), rgba(96,165,250,0.18));
+    border: 1px solid rgba(167,139,250,0.15);
+  }
+  #search-results .s-text { flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; gap: 1px; }
+  #search-results .s-name {
+    font-size: 13px; font-weight: 600; color: var(--text-primary);
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis; line-height: 1.3;
+  }
+  #search-results .s-sub {
+    font-size: 11px; color: var(--text-muted); line-height: 1.35;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  #search-results .s-price {
+    font-size: 10px; font-weight: 500; color: var(--text-muted); flex-shrink: 0;
+    padding: 3px 7px; border-radius: 5px;
+    background: var(--bg-card-hover); border: 1px solid var(--border);
+    white-space: nowrap;
+  }
+
+  /* General search (pagefind) results */
+  #search-results .g-result {
+    display: flex !important; flex-direction: column; gap: 2px;
+    padding: 10px 12px; border-radius: 10px;
+    text-decoration: none !important; color: inherit;
+    transition: background 100ms; margin: 0 !important;
+  }
+  #search-results .g-result:hover { background: var(--bg-card-hover); }
+  #search-results .g-title { font-size: 13px; font-weight: 600; color: var(--text-primary); }
+  #search-results .g-excerpt { font-size: 11px; color: var(--text-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; line-height: 1.4; }
+  #search-results mark {
+    background: rgba(167,139,250,0.25); color: var(--accent-primary);
+    border-radius: 3px; padding: 0 2px;
+  }
+
+  .s-hint { font-size: 12px; color: var(--text-muted); text-align: center; padding: 20px 12px; }
+</style>
+
+<div id="search-modal" role="dialog" aria-modal="true" aria-label="Search">
+  <div id="search-backdrop"></div>
+  <div id="search-box">
+    <div id="search-box-inner">
+      <!-- Input -->
+      <div style="display:flex;align-items:center;gap:10px;padding:13px 16px;border-bottom:1px solid var(--border);">
+        <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="flex-shrink:0;opacity:0.4;">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+        </svg>
+        <input id="search-input" type="text" placeholder="Search tools..."
+          autocomplete="off" spellcheck="false"
+          style="flex:1;background:transparent;color:var(--text-primary);font-size:14px;outline:none;border:none;font-family:inherit;" />
+        <kbd style="font-size:11px;color:var(--text-muted);border:1px solid var(--border);border-radius:5px;padding:2px 6px;font-family:inherit;opacity:0.6;">Esc</kbd>
+      </div>
+      <!-- Tabs -->
+      <div class="s-tabs">
+        <button class="s-tab active" data-tab="tools">Tools <span class="s-count">{toolsIndex.length}</span></button>
+        <button class="s-tab" data-tab="general">All Pages</button>
+      </div>
+      <!-- Results -->
+      <div id="search-results"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Embed tools data at build time -->
+<script define:vars={{ toolsIndex, categoryEmoji }}>
+(function () {
+  // Data is fresh every run — always overwrite. But listeners must only bind once.
+  window.__aipediaSearchData = { TOOLS: toolsIndex, EMOJI: categoryEmoji };
+
+  // If we've already initialised on this document, bail out (prevents duplicate listeners
+  // across Astro view transitions, which was causing the search to stop opening).
+  if (window.__aipediaSearchInit) return;
+  window.__aipediaSearchInit = true;
+
+  const TOOLS = toolsIndex;
+  const EMOJI = categoryEmoji;
+  let pagefind = null;
+  let activeTab = 'tools';
+  let debounceTimer;
+
+  // Lazy element getters — never cache. Always fetch fresh to survive view transitions.
+  const $ = (id) => document.getElementById(id);
+  function els() {
+    return {
+      modal:    $('search-modal'),
+      backdrop: $('search-backdrop'),
+      box:      $('search-box'),
+      inner:    $('search-box-inner'),
+      input:    $('search-input'),
+      results:  $('search-results'),
+    };
+  }
+
+  // Tab clicks (delegated on document so new tab buttons are always handled)
+  document.addEventListener('click', (e) => {
+    const tab = e.target.closest('.s-tab');
+    if (!tab || !tab.dataset.tab) return;
+    if (!$('search-modal')?.classList.contains('is-visible')) return;
+    activeTab = tab.dataset.tab;
+    document.querySelectorAll('.s-tab').forEach(t => t.classList.toggle('active', t === tab));
+    const { input } = els();
+    if (input) {
+      input.placeholder = activeTab === 'tools' ? 'Search tools...' : 'Search all pages...';
+      const q = input.value.trim();
+      if (q) runSearch(q);
+      else showHint();
+    }
+  });
+
+  // ── Open / Close ──────────────────────────────────────────────
+  function openModal(triggerEl) {
+    const { modal, box, inner, input } = els();
+    if (!modal || !box || !inner || !input) return; // no search in DOM
+
+    // Hard reset — clears any orphaned state from previous close or transition
+    modal.classList.remove('is-open');
+    box.style.transition = 'none';
+    box.style.transform  = '';
+    box.style.opacity    = '';
+    box.style.borderRadius = '';
+    inner.style.transition = 'none';
+    inner.style.transform  = '';
+
+    const tr = triggerEl ? triggerEl.getBoundingClientRect() : null;
+    const vw = window.innerWidth;
+    const vh = window.innerHeight;
+    const finalW = Math.min(560, vw - 32);
+
+    modal.classList.add('is-visible');
+    document.body.style.overflow = 'hidden';
+
+    if (tr) {
+      const dx = (tr.left + tr.width / 2) - vw / 2;
+      const dy = (tr.top  + tr.height / 2) - vh / 2;
+      const sx = tr.width / finalW;
+      const sy = tr.height / 50;
+
+      box.style.transition   = 'none';
+      box.style.opacity      = '0.5';
+      box.style.borderRadius = (tr.height / 2) + 'px';
+      box.style.transform    = `translate(${dx}px,${dy}px) scale(${sx},${sy})`;
+      inner.style.transition = 'none';
+      inner.style.transform  = `scale(${1/sx},${1/sy})`;
+      box.offsetHeight;
+      const ease = 'cubic-bezier(0.22,1,0.36,1)';
+      box.style.transition  = `transform 300ms ${ease}, opacity 200ms ease, border-radius 300ms ${ease}`;
+      box.style.transform   = 'translate(0,0) scale(1)';
+      box.style.opacity     = '1';
+      box.style.borderRadius= '14px';
+      inner.style.transition= `transform 300ms ${ease}`;
+      inner.style.transform = 'scale(1,1)';
+    } else {
+      box.style.transition = 'none';
+      box.style.opacity    = '0';
+      box.style.transform  = 'scale(0.95)';
+      box.offsetHeight;
+      box.style.transition = 'transform 260ms cubic-bezier(0.22,1,0.36,1), opacity 200ms ease';
+      box.style.transform  = 'scale(1)';
+      box.style.opacity    = '1';
+    }
+
+    requestAnimationFrame(() => requestAnimationFrame(() => modal.classList.add('is-open')));
+    setTimeout(() => input.focus(), 50);
+    showHint();
+  }
+
+  function closeModal() {
+    const { modal, box, inner, input } = els();
+    if (!modal) return;
+    if (box) {
+      box.style.transition = 'transform 180ms ease, opacity 140ms ease';
+      box.style.transform  = 'scale(0.97)';
+      box.style.opacity    = '0';
+    }
+    modal.classList.remove('is-open');
+    setTimeout(() => {
+      modal.classList.remove('is-visible');
+      document.body.style.overflow = '';
+      if (box) {
+        box.style.transition = box.style.transform = box.style.opacity = '';
+        box.style.borderRadius = '';
+      }
+      if (inner) { inner.style.transform = inner.style.transition = ''; }
+      if (input) { input.value = ''; }
+      showHint();
+    }, 200);
+  }
+
+  // Curated "popular" tool slugs — shown as default state
+  const FEATURED = ['claude','chatgpt','cursor','midjourney','elevenlabs','perplexity','n8n','lovable'];
+
+  function showHint() {
+    const { results, input } = els();
+    if (!results) return;
+    if (activeTab === 'tools') {
+      const featured = FEATURED
+        .map(slug => TOOLS.find(t => t.slug === slug))
+        .filter(Boolean);
+      results.innerHTML = `
+        <div class="s-section">Popular tools</div>
+        ${featured.map(t => `
+          <a class="s-result" href="${t.url}">
+            <div class="s-icon">${EMOJI[t.category] || '🔧'}</div>
+            <div class="s-text">
+              <div class="s-name">${esc(t.title)}</div>
+              <div class="s-sub">${esc(t.tagline)}</div>
+            </div>
+            ${t.price ? `<div class="s-price">${esc(t.price)}</div>` : ''}
+          </a>`).join('')}
+      `;
+    } else {
+      results.innerHTML = `
+        <div class="s-section">Try searching for</div>
+        <div style="padding:4px 12px 14px; display:flex; flex-wrap:wrap; gap:6px;">
+          ${['best AI for coding','voice cloning','solo founder stack','cursor vs windsurf','cheapest TTS','AI presentation'].map(q => `
+            <button class="s-suggestion" data-q="${esc(q)}" style="background:var(--bg-card-hover);border:1px solid var(--border);border-radius:14px;padding:4px 10px;font-size:11px;color:var(--text-secondary);cursor:pointer;font-family:inherit;">${esc(q)}</button>
+          `).join('')}
+        </div>`;
+      results.querySelectorAll('.s-suggestion').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const { input: freshInput } = els();
+          if (freshInput) {
+            freshInput.value = btn.dataset.q;
+            freshInput.focus();
+          }
+          searchGeneral(btn.dataset.q);
+        });
+      });
+    }
+  }
+
+  // ── Tool search (instant, client-side) ────────────────────────
+  function searchTools(q) {
+    const { results } = els();
+    if (!results) return;
+    const lq = q.toLowerCase();
+    const hits = TOOLS.filter(t =>
+      t.title.toLowerCase().includes(lq) ||
+      t.tagline.toLowerCase().includes(lq) ||
+      t.category.toLowerCase().includes(lq)
+    ).slice(0, 10);
+
+    if (!hits.length) {
+      results.innerHTML = `<p class="s-hint">No tools matching "${esc(q)}"</p>`;
+      return;
+    }
+    results.innerHTML = hits.map(t => `
+      <a class="s-result" href="${t.url}">
+        <div class="s-icon">${EMOJI[t.category] || '🔧'}</div>
+        <div class="s-text">
+          <div class="s-name">${highlight(t.title, q)}</div>
+          <div class="s-sub">${highlight(t.tagline, q)}</div>
+        </div>
+        ${t.price ? `<div class="s-price">${esc(t.price)}</div>` : ''}
+      </a>`).join('');
+  }
+
+  // ── General search (Pagefind) ─────────────────────────────────
+  async function initPagefind() {
+    if (pagefind) return;
+    try {
+      pagefind = await import('/pagefind/pagefind.js');
+      await pagefind.options({ excerptLength: 20 });
+    } catch(e) {
+      pagefind = null;
+    }
+  }
+
+  async function searchGeneral(q) {
+    const { results } = els();
+    if (!results) return;
+    if (!pagefind) {
+      await initPagefind();
+      if (!pagefind) {
+        results.innerHTML = '<p class="s-hint">Full-text search unavailable in dev mode.</p>';
+        return;
+      }
+    }
+    const res = await pagefind.search(q);
+    const top = res.results.slice(0, 8);
+    if (!top.length) { results.innerHTML = `<p class="s-hint">No results for "${esc(q)}"</p>`; return; }
+    const data = await Promise.all(top.map(r => r.data()));
+    results.innerHTML = data.map(d => `
+      <a class="g-result" href="${d.url}">
+        <span class="g-title">${esc(d.meta?.title || d.url)}</span>
+        ${d.excerpt ? `<span class="g-excerpt">${safeExcerpt(d.excerpt)}</span>` : ''}
+      </a>`).join('');
+  }
+
+  function runSearch(q) {
+    if (activeTab === 'tools') searchTools(q);
+    else searchGeneral(q);
+  }
+
+  // ── Helpers ───────────────────────────────────────────────────
+  function esc(s) {
+    return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+  function safeExcerpt(s) {
+    return esc(s).replace(/&lt;mark&gt;/g,'<mark>').replace(/&lt;\/mark&gt;/g,'</mark>');
+  }
+  function highlight(text, q) {
+    const safe = esc(text);
+    const re = new RegExp('(' + q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&') + ')', 'gi');
+    return safe.replace(re, '<mark>$1</mark>');
+  }
+
+  // ── Events (all delegated on document so they survive DOM swaps) ──
+  document.addEventListener('input', (e) => {
+    if (e.target.id !== 'search-input') return;
+    clearTimeout(debounceTimer);
+    const q = e.target.value.trim();
+    if (!q) { showHint(); return; }
+    if (activeTab === 'tools') searchTools(q);
+    else { debounceTimer = setTimeout(() => searchGeneral(q), 200); }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    const isInput = e.target.id === 'search-input';
+    if (isInput && e.key === 'Escape') { e.stopPropagation(); closeModal(); return; }
+    if (isInput && e.key === 'Enter') {
+      const { results } = els();
+      const a = results?.querySelector('a');
+      if (a) a.click();
+      return;
+    }
+    if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+      e.preventDefault();
+      const m = $('search-modal');
+      m?.classList.contains('is-visible') ? closeModal() : openModal(null);
+    }
+    if (e.key === 'Escape') {
+      const m = $('search-modal');
+      if (m?.classList.contains('is-visible')) closeModal();
+    }
+  });
+
+  document.addEventListener('click', (e) => {
+    // Search triggers
+    const trigger = e.target.closest('#search-trigger, #homepage-search-bar');
+    if (trigger) { e.preventDefault(); openModal(trigger); return; }
+    // Backdrop → close
+    if (e.target.id === 'search-backdrop') { closeModal(); return; }
+  });
+
+  // Close immediately when navigating between pages
+  document.addEventListener('astro:before-preparation', () => {
+    const m = $('search-modal');
+    if (m?.classList.contains('is-visible')) {
+      m.classList.remove('is-visible', 'is-open');
+      document.body.style.overflow = '';
+      const i = $('search-input');
+      if (i) i.value = '';
+    }
+  });
+})();
+</script>

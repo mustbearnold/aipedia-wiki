@@ -14,11 +14,11 @@ last_updated: 2026-04-13
 last_verified: 2026-04-13
 update_frequency: monthly
 affiliate:
-  has_program: true
-  commission: "up to 30% recurring"
-  cookie_days: 60
-  network: direct
-  link: https://ahrefs.com/affiliates
+  has_program: false
+  commission: null
+  cookie_days: null
+  network: null
+  link: null
 scores:
   utility: 9
   value: 7

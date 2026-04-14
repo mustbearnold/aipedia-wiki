@@ -1,0 +1,85 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+
+const allComparisons = await getCollection('comparisons');
+
+const categoryEmojiMap: Record<string, string> = {
+  'ai-chatbots': '\uD83D\uDCAC',
+  'ai-voice': '\uD83D\uDD0A', 'ai-video': '\uD83C\uDFAC', 'ai-coding': '\uD83D\uDCBB',
+  'ai-automation': '\u26A1', 'ai-seo': '\uD83D\uDCC8', 'ai-design': '\uD83C\uDFA8',
+  'ai-writing': '\u270D\uFE0F', 'ai-image': '\uD83D\uDDBC', 'ai-search': '\uD83D\uDD0D',
+  'ai-notes': '\uD83D\uDCDD', 'ai-music': '\uD83C\uDFB5',
+  'ai-presentation': '\uD83D\uDCCA', 'ai-research': '\uD83D\uDD2C',
+};
+
+const categoryLabels: Record<string, string> = {
+  'ai-chatbots': 'AI Chatbots',
+  'ai-voice': 'AI Voice', 'ai-video': 'AI Video', 'ai-coding': 'AI Coding',
+  'ai-automation': 'AI Automation', 'ai-seo': 'AI SEO', 'ai-design': 'AI Design',
+  'ai-writing': 'AI Writing', 'ai-image': 'AI Image', 'ai-search': 'AI Search',
+  'ai-notes': 'AI Notes', 'ai-music': 'AI Music',
+  'ai-presentation': 'AI Presentation', 'ai-research': 'AI Research',
+};
+
+// Group comparisons by category
+const byCategory: Record<string, typeof allComparisons> = {};
+for (const c of allComparisons) {
+  const cat = c.data.category || 'other';
+  if (!byCategory[cat]) byCategory[cat] = [];
+  byCategory[cat].push(c);
+}
+
+// Sort categories by how many comparisons they have
+const categoriesOrdered = Object.keys(byCategory).sort((a, b) => byCategory[b].length - byCategory[a].length);
+---
+
+<BaseLayout
+  title="Compare AI Tools — Head-to-Head Reviews"
+  description={`${allComparisons.length} editorial head-to-head comparisons between the most-searched AI tool pairs. ChatGPT vs Claude, Cursor vs Windsurf, Midjourney vs Flux, and more.`}
+>
+  <Breadcrumb items={[{ label: 'Compare' }]} />
+
+  <section class="mb-10 pt-2">
+    <h1 class="text-3xl sm:text-4xl font-bold mb-3 leading-tight">
+      Compare <span class="bg-gradient-to-r from-[#a78bfa] to-[#60a5fa] bg-clip-text text-transparent">AI Tools Head-to-Head</span>
+    </h1>
+    <p class="text-[var(--text-secondary)] text-sm sm:text-base max-w-2xl leading-relaxed">
+      {allComparisons.length} editorial comparisons of the most-searched AI tool pairs. Honest verdicts, scoring breakdowns, and clear recommendations based on use case.
+    </p>
+  </section>
+
+  {categoriesOrdered.map((cat) => (
+    <section class="mb-10">
+      <div class="flex items-center gap-2 mb-4">
+        <span class="text-xl">{categoryEmojiMap[cat] || '🔧'}</span>
+        <h2 class="text-lg font-semibold text-[var(--text-primary)]">{categoryLabels[cat] || cat}</h2>
+        <span class="text-xs text-[var(--text-muted)]">({byCategory[cat].length})</span>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        {byCategory[cat].map((c) => {
+          const slug = c.data.slug || c.id.replace(/\.md$/, '');
+          const tools = c.data.tools || [];
+          const toolsStr = Array.isArray(tools) ? tools.join(' vs ').replace(/-/g, ' ') : '';
+          return (
+            <a
+              href={`/compare/${slug}/`}
+              class="group p-4 rounded-xl border border-[var(--border)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] hover:border-[rgba(167,139,250,0.3)] transition-all no-underline"
+            >
+              <div class="flex items-start justify-between gap-3">
+                <div class="min-w-0 flex-1">
+                  <h3 class="font-semibold text-[var(--text-primary)] text-sm mb-1 truncate">{c.data.title}</h3>
+                  {toolsStr && <p class="text-xs text-[var(--text-muted)] truncate capitalize">{toolsStr}</p>}
+                </div>
+                <svg class="w-4 h-4 text-[var(--text-muted)] group-hover:text-[var(--accent-primary)] group-hover:translate-x-0.5 transition-all shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </div>
+            </a>
+          );
+        })}
+      </div>
+    </section>
+  ))}
+</BaseLayout>

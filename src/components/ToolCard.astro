@@ -1,4 +1,6 @@
 ---
+import ScoreTier from './ScoreTier.astro';
+
 interface Props {
   title: string;
   slug: string;
@@ -11,6 +13,7 @@ interface Props {
 const { title, slug, category, score, priceRange, emoji = '🔧' } = Astro.props;
 
 const categoryGradients: Record<string, string> = {
+  'ai-chatbots': 'linear-gradient(135deg, #8b5cf6, #06b6d4)',
   'ai-voice': 'linear-gradient(135deg, #6366f1, #818cf8)',
   'ai-video': 'linear-gradient(135deg, #f97316, #ef4444)',
   'ai-coding': 'linear-gradient(135deg, #22c55e, #16a34a)',
@@ -48,11 +51,12 @@ const categoryLabel = category.replace('ai-', 'AI ').replace(/\b\w/g, (c) => c.t
           {score}
         </span>
       </div>
-      <div class="flex items-center gap-2 text-xs text-[var(--text-muted)]">
-        <span>{categoryLabel}</span>
-        <span>&middot;</span>
-        <span>{priceRange}</span>
+      <div class="flex items-center gap-2 text-xs text-[var(--text-muted)] min-w-0 mb-2">
+        <span class="whitespace-nowrap shrink-0">{categoryLabel}</span>
+        <span class="shrink-0">&middot;</span>
+        <span class="truncate">{priceRange}</span>
       </div>
+      <ScoreTier score={score} size="sm" />
     </div>
   </div>
 </a>

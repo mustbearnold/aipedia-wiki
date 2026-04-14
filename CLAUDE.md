@@ -47,6 +47,7 @@ MOAW - Mother of All Wiki's/
 1. Edit files in `wikis/ai-tools/pages/`
 2. Run `bash scripts/copy-content.sh` from the `aipedia-wiki/` directory to sync to `src/content/`
 3. The running dev server picks up changes automatically (no restart needed)
+4. After edits that change rankings, pricing, or tool status: `npm run wiki:refresh` regenerates the truth-maintenance layer at `wikis/_meta/`. Full system docs: `wikis/_meta/README.md`. Live dashboard: `/admin/wiki-health/`.
 
 ### Starting the dev server
 ```bash

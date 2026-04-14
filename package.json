@@ -7,11 +7,18 @@
   },
   "scripts": {
     "dev": "bash scripts/copy-content.sh && astro dev",
-    "build": "bash scripts/copy-content.sh && astro build && npx pagefind --site dist",
+    "build": "bash scripts/copy-content.sh && astro build && npx pagefind --site dist && cp -r dist/pagefind public/pagefind",
     "preview": "npm run build && wrangler dev",
     "astro": "astro",
     "generate-types": "wrangler types",
-    "deploy": "npm run build && wrangler deploy"
+    "deploy": "npm run build && wrangler deploy",
+    "wiki:audit": "bash ../wikis/_meta/run.sh full",
+    "wiki:refresh": "bash ../wikis/_meta/run.sh refresh",
+    "wiki:sync": "bash ../wikis/_meta/run.sh sync",
+    "wiki:extract": "bash ../wikis/_meta/run.sh extract",
+    "wiki:signals": "bash ../wikis/_meta/run.sh signals",
+    "wiki:stale": "bash ../wikis/_meta/run.sh report",
+    "wiki:check": "bash ../wikis/_meta/run.sh check"
   },
   "dependencies": {
     "@astrojs/cloudflare": "^13.1.9",

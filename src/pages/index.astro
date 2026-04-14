@@ -18,6 +18,7 @@ const scoredTools = allTools
   .sort((a, b) => b.score - a.score);
 
 const categoryEmojiMap: Record<string, string> = {
+  'ai-chatbots': '\uD83D\uDCAC',
   'ai-voice': '\uD83D\uDD0A',
   'ai-video': '\uD83C\uDFAC',
   'ai-coding': '\uD83D\uDCBB',
@@ -34,6 +35,7 @@ const categoryEmojiMap: Record<string, string> = {
 };
 
 const categoryLabelMap: Record<string, { emoji: string; label: string }> = {
+  'ai-chatbots': { emoji: '\uD83D\uDCAC', label: 'AI Chatbots' },
   'ai-voice': { emoji: '\uD83D\uDD0A', label: 'AI Voice' },
   'ai-video': { emoji: '\uD83C\uDFAC', label: 'AI Video' },
   'ai-coding': { emoji: '\uD83D\uDCBB', label: 'AI Coding' },
@@ -70,8 +72,8 @@ const impactColors: Record<string, string> = {
     <!-- Search bar -->
     <div class="max-w-xl mx-auto">
       <button
+        id="homepage-search-bar"
         type="button"
-        onclick="window.location.href='/search/'"
         class="w-full flex items-center gap-3 bg-[var(--bg-card)] border border-[var(--border)] rounded-xl px-4 py-3 text-sm text-[var(--text-muted)] hover:bg-[var(--bg-card-hover)] hover:border-[var(--accent-primary)] transition-colors cursor-pointer text-left"
       >
         <svg class="w-4 h-4 shrink-0 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -106,20 +108,36 @@ const impactColors: Record<string, string> = {
     })}
   </section>
 
-  <!-- Filter count + category link -->
-  <div class="flex items-center justify-between mb-6">
-    <p id="filter-count" class="text-xs text-[var(--text-muted)]">Showing {scoredTools.length} tools</p>
-    <a id="category-link" href="#" class="text-xs text-[var(--accent-primary)] no-underline hover:underline hidden">View all in category &rarr;</a>
+  <!-- Filter count + page size + category link -->
+  <div class="flex items-center justify-between mb-6 gap-3 flex-wrap">
+    <p id="filter-count" class="text-xs text-[var(--text-muted)]">Showing {Math.min(30, scoredTools.length)} of {scoredTools.length} tools</p>
+    <div class="flex items-center gap-3">
+      <div class="flex items-center gap-1.5">
+        <span class="text-xs text-[var(--text-muted)] hidden sm:inline">Show</span>
+        <div class="flex items-center gap-0.5 bg-[var(--bg-card)] border border-[var(--border)] rounded-lg p-0.5">
+          <button data-pagesize="30"  class="page-size-btn px-2.5 py-1 text-xs rounded-md font-medium transition-colors" style="background: rgba(167,139,250,0.15); color: var(--accent-primary);">30</button>
+          <button data-pagesize="60"  class="page-size-btn px-2.5 py-1 text-xs rounded-md font-medium text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors">60</button>
+          <button data-pagesize="120" class="page-size-btn px-2.5 py-1 text-xs rounded-md font-medium text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors">120</button>
+          <button data-pagesize="all" class="page-size-btn px-2.5 py-1 text-xs rounded-md font-medium text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors">All</button>
+        </div>
+      </div>
+      <a id="category-link" href="#" class="text-xs text-[var(--accent-primary)] no-underline hover:underline hidden">View all &rarr;</a>
+    </div>
   </div>
 
   <!-- All Tools (filterable) -->
-  <section class="mb-16">
+  <section class="mb-10">
     <h2 class="text-xl font-bold text-[var(--text-primary)] mb-6">All Tools</h2>
     <div id="tools-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-      {scoredTools.map(({ tool, score }) => {
+      {scoredTools.map(({ tool, score }, idx) => {
         const cat = tool.data.category ?? '';
         return (
-          <div class="tool-card-wrapper" data-category={cat} style="transition: opacity 0.2s ease;">
+          <div
+            class="tool-card-wrapper"
+            data-category={cat}
+            data-index={idx}
+            style={`transition: opacity 0.2s ease; ${idx >= 30 ? 'display:none;' : ''}`}
+          >
             <ToolCard
               title={tool.data.title}
               slug={tool.data.slug || tool.id.replace(/\.md$/, '').replace(/\\/g, '/')}
@@ -308,63 +326,130 @@ const impactColors: Record<string, string> = {
   </section>
 
   <script>
-    const pills = document.querySelectorAll<HTMLButtonElement>('.category-pill');
-    const cards = document.querySelectorAll<HTMLElement>('.tool-card-wrapper');
-    const countEl = document.getElementById('filter-count');
-    const linkEl = document.getElementById('category-link') as HTMLAnchorElement | null;
-    let activeFilter = 'all';
+    function initCategoryFilter() {
+      const pills = document.querySelectorAll<HTMLButtonElement>('.category-pill');
+      const cards = document.querySelectorAll<HTMLElement>('.tool-card-wrapper');
+      const countEl = document.getElementById('filter-count');
+      const linkEl = document.getElementById('category-link') as HTMLAnchorElement | null;
+      const pageSizeBtns = document.querySelectorAll<HTMLButtonElement>('.page-size-btn');
+      if (!pills.length || !cards.length) return; // not on homepage
 
-    const activeCls = 'bg-[rgba(167,139,250,0.15)] border-[rgba(167,139,250,0.3)] text-[var(--accent-primary)]';
-    const inactiveCls = 'bg-[var(--bg-card)] border-[var(--border)] text-[var(--text-secondary)]';
-    const activeClasses = activeCls.split(' ');
-    const inactiveClasses = inactiveCls.split(' ');
+      let activeFilter = 'all';
+      // Load saved page size from localStorage, default to 30
+      let pageSize: number | 'all' = (() => {
+        const saved = localStorage.getItem('homepage-page-size');
+        if (saved === 'all') return 'all';
+        const n = parseInt(saved || '30', 10);
+        return isNaN(n) ? 30 : n;
+      })();
 
-    function setFilter(filter: string) {
-      activeFilter = filter;
-      let visible = 0;
+      const activeClasses = 'bg-[rgba(167,139,250,0.15)] border-[rgba(167,139,250,0.3)] text-[var(--accent-primary)]'.split(' ');
+      const inactiveClasses = 'bg-[var(--bg-card)] border-[var(--border)] text-[var(--text-secondary)]'.split(' ');
 
-      cards.forEach(card => {
-        const cat = card.getAttribute('data-category') ?? '';
-        const show = filter === 'all' || cat === filter;
-        if (show) {
-          card.style.opacity = '1';
-          card.style.display = '';
-          visible++;
-        } else {
-          card.style.opacity = '0';
-          setTimeout(() => { card.style.display = 'none'; }, 200);
-        }
+      function updatePageSizeButtons() {
+        pageSizeBtns.forEach(btn => {
+          const val = btn.getAttribute('data-pagesize');
+          const isActive = val === String(pageSize);
+          if (isActive) {
+            btn.style.background = 'rgba(167,139,250,0.15)';
+            btn.style.color = 'var(--accent-primary)';
+          } else {
+            btn.style.background = '';
+            btn.style.color = '';
+          }
+        });
+      }
+      updatePageSizeButtons();
+
+      pageSizeBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const val = btn.getAttribute('data-pagesize') || '30';
+          pageSize = val === 'all' ? 'all' : parseInt(val, 10);
+          localStorage.setItem('homepage-page-size', val);
+          updatePageSizeButtons();
+          setFilter(activeFilter);
+        });
       });
 
-      pills.forEach(pill => {
-        const f = pill.getAttribute('data-filter') ?? '';
-        const isActive = f === filter;
-        if (isActive) {
-          pill.classList.remove(...inactiveClasses);
-          pill.classList.add(...activeClasses, 'active');
-        } else {
-          pill.classList.remove(...activeClasses, 'active');
-          pill.classList.add(...inactiveClasses);
+      function setFilter(filter: string) {
+        activeFilter = filter;
+        let visible = 0;
+        let shownInView = 0;
+        const limit = pageSize === 'all' ? Infinity : pageSize;
+
+        const toHide: HTMLElement[] = [];
+        const toShow: HTMLElement[] = [];
+
+        cards.forEach(card => {
+          const cat = card.getAttribute('data-category') ?? '';
+          const matchesFilter = filter === 'all' || cat === filter;
+          const withinLimit = matchesFilter && shownInView < limit;
+          if (matchesFilter) visible++;
+          if (withinLimit) shownInView++;
+
+          const isShowing = card.style.display !== 'none';
+          if (withinLimit) {
+            if (!isShowing) toShow.push(card);
+          } else if (isShowing) {
+            toHide.push(card);
+          }
+        });
+
+        // Phase 1: fade out items that are leaving (150ms)
+        toHide.forEach(c => { c.style.opacity = '0'; });
+
+        // Phase 2 (after fade): snap layout — hidden items collapse, new items pre-placed invisible
+        setTimeout(() => {
+          toHide.forEach(c => { c.style.display = 'none'; });
+          toShow.forEach(c => {
+            c.style.opacity = '0';
+            c.style.display = '';
+          });
+          // Phase 3: next frame, fade new items in
+          requestAnimationFrame(() => {
+            toShow.forEach(c => { c.style.opacity = '1'; });
+          });
+        }, 160);
+
+        pills.forEach(pill => {
+          const f = pill.getAttribute('data-filter') ?? '';
+          const isActive = f === filter;
+          if (isActive) {
+            pill.classList.remove(...inactiveClasses);
+            pill.classList.add(...activeClasses, 'active');
+          } else {
+            pill.classList.remove(...activeClasses, 'active');
+            pill.classList.add(...inactiveClasses);
+          }
+        });
+
+        if (countEl) {
+          const shown = Math.min(visible, limit === Infinity ? visible : limit);
+          countEl.textContent = shown < visible
+            ? `Showing ${shown} of ${visible} tools`
+            : `Showing ${visible} tool${visible !== 1 ? 's' : ''}`;
         }
-      });
 
-      if (countEl) countEl.textContent = `Showing ${visible} tools`;
-
-      if (linkEl) {
-        if (filter !== 'all') {
-          linkEl.href = `/categories/${filter}/`;
-          linkEl.classList.remove('hidden');
-        } else {
-          linkEl.classList.add('hidden');
+        if (linkEl) {
+          if (filter !== 'all') {
+            linkEl.href = `/categories/${filter}/`;
+            linkEl.classList.remove('hidden');
+          } else {
+            linkEl.classList.add('hidden');
+          }
         }
       }
+
+      pills.forEach(pill => {
+        pill.addEventListener('click', () => {
+          const filter = pill.getAttribute('data-filter') ?? 'all';
+          setFilter(filter === activeFilter ? 'all' : filter);
+        });
+      });
     }
 
-    pills.forEach(pill => {
-      pill.addEventListener('click', () => {
-        const filter = pill.getAttribute('data-filter') ?? 'all';
-        setFilter(filter === activeFilter ? 'all' : filter);
-      });
-    });
+    initCategoryFilter();
+    // Re-initialise after every view transition (the homepage DOM gets re-rendered)
+    document.addEventListener('astro:page-load', initCategoryFilter);
   </script>
 </BaseLayout>

@@ -3,7 +3,7 @@ type: category
 slug: ai-writing
 title: AI Writing & Content Tools
 description: AI-powered writing assistants for long-form content, copywriting, and text generation. Claude, ChatGPT, Gemini, Jasper, Copy.ai, Grammarly, Writesonic.
-tool_count: 12
+tool_count: 9
 seo_title: "Best AI Writing Tools (2026) — aipedia.wiki"
 meta_description: "Claude, ChatGPT, and Gemini dominate AI writing in 2026. Compare 7 tools for long-form content, copywriting, and marketing. Updated April 2026."
 author: "aipedia.wiki Editorial"

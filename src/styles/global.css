@@ -1,5 +1,33 @@
 @import 'tailwindcss';
 
+/* Reserve scrollbar space always — prevents layout jut when modals lock body scroll */
+html {
+  scrollbar-gutter: stable;
+}
+
+/* ─── View Transitions (longer + cleaner than Astro defaults) ─── */
+@view-transition {
+  navigation: auto;
+}
+
+/* Old page fades out slightly before new page fades in — hides layout-settling flash */
+::view-transition-old(root) {
+  animation: cc-fade-out 220ms cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+::view-transition-new(root) {
+  animation: cc-fade-in 320ms cubic-bezier(0.22, 1, 0.36, 1) 120ms both;
+}
+
+
+@keyframes cc-fade-out {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+@keyframes cc-fade-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
 @layer base {
   :root {
     --bg-base: #0a0a0f;
@@ -17,13 +45,13 @@
   }
 
   .light {
-    --bg-base: #ffffff;
-    --bg-card: #f8fafc;
-    --bg-card-hover: #f1f5f9;
-    --border: #e2e8f0;
-    --text-primary: #0f172a;
-    --text-secondary: #475569;
-    --text-muted: #94a3b8;
+    --bg-base: #f7f6f3;        /* warm paper tone instead of pure white */
+    --bg-card: #ffffff;        /* cards "pop" against the page */
+    --bg-card-hover: #f1efeb;  /* subtle warm hover */
+    --border: #e3dfd8;         /* warm greige border */
+    --text-primary: #1a1a1f;
+    --text-secondary: #4a4a55;
+    --text-muted: #8a8a95;
   }
 
   body {

@@ -34,3 +34,16 @@ cp "$WIKI_DIR"/glossary/*.md "$CONTENT_DIR/glossary/" 2>/dev/null
 
 TOTAL=$(find "$CONTENT_DIR" -name "*.md" | wc -l)
 echo "Copied $TOTAL markdown files."
+
+# Copy truth-maintenance data so admin dashboards can render them at build time.
+META_SRC="$(dirname "$PROJECT_DIR")/wikis/_meta"
+META_DEST="$PROJECT_DIR/src/data/_meta"
+if [ -d "$META_SRC" ]; then
+  mkdir -p "$META_DEST"
+  for f in tools-registry.json claim-graph.json stale-queue.json signals.jsonl; do
+    if [ -f "$META_SRC/$f" ]; then
+      cp "$META_SRC/$f" "$META_DEST/$f"
+    fi
+  done
+  echo "Copied truth-maintenance data to src/data/_meta/."
+fi

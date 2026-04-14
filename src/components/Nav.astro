@@ -7,32 +7,27 @@ import ThemeToggle from './ThemeToggle.astro';
     <!-- Left: Logo -->
     <a href="/" class="inline-flex items-center gap-1.5 no-underline hover:no-underline">
       <span class="text-xl leading-none">&#129504;</span>
-      <span class="font-semibold bg-gradient-to-r from-[#a78bfa] to-[#60a5fa] bg-clip-text text-transparent">aipedia</span>
-      <span class="font-semibold text-[var(--text-muted)]">.wiki</span>
+      <span class="font-semibold bg-gradient-to-r from-[#a78bfa] to-[#60a5fa] bg-clip-text text-transparent">aipedia.wiki</span>
     </a>
 
     <!-- Right: Links + Search + Theme -->
     <div class="flex items-center gap-4">
       <a href="/categories/" class="hidden sm:inline text-sm text-[var(--text-secondary)] hover:text-[var(--text-primary)] no-underline transition-colors">Explore</a>
       <a href="/compare/" class="hidden sm:inline text-sm text-[var(--text-secondary)] hover:text-[var(--text-primary)] no-underline transition-colors">Compare</a>
-      <a href="/trending/" class="hidden sm:inline text-sm text-[var(--text-secondary)] hover:text-[var(--text-primary)] no-underline transition-colors">Trending</a>
+      <a href="/stack-builder/" class="hidden md:inline-flex items-center gap-1 text-sm text-[var(--accent-primary)] hover:opacity-80 no-underline transition-opacity font-medium">
+        <span>Stack Builder</span>
+        <span class="text-[9px] px-1.5 py-0.5 rounded bg-[rgba(167,139,250,0.15)] border border-[rgba(167,139,250,0.3)] uppercase tracking-wider">New</span>
+      </a>
+      <a href="/trending/" class="hidden lg:inline text-sm text-[var(--text-secondary)] hover:text-[var(--text-primary)] no-underline transition-colors">Trending</a>
       <button
         id="search-trigger"
         type="button"
         class="hidden sm:inline-flex items-center gap-1.5 text-sm text-[var(--text-muted)] bg-[var(--bg-card)] border border-[var(--border)] rounded-lg px-3 py-1.5 hover:bg-[var(--bg-card-hover)] transition-colors cursor-pointer"
-        onclick="window.location.href='/search/'"
+        onclick=""
       >
         <span class="text-xs">&#8984;K</span>
         <span>Search</span>
       </button>
-      <script is:inline>
-        document.addEventListener('keydown', function(e) {
-          if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
-            e.preventDefault();
-            window.location.href = '/search/';
-          }
-        });
-      </script>
       <ThemeToggle />
     </div>
   </div>

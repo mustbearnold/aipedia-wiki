@@ -3,27 +3,29 @@
 </div>
 
 <script>
-  document.querySelectorAll('.faq-container').forEach((container) => {
-    const paragraphs = container.querySelectorAll('p');
-    paragraphs.forEach((p, i) => {
-      const strong = p.querySelector('strong');
-      if (strong && paragraphs[i + 1] && !paragraphs[i + 1].querySelector('strong')) {
-        const answer = paragraphs[i + 1] as HTMLElement;
-        // Style as question
-        p.style.cursor = 'pointer';
-        p.style.userSelect = 'none';
-        p.classList.add('faq-question');
-        // Hide answer initially
-        answer.style.display = 'none';
-        answer.classList.add('faq-answer');
-        // Toggle on click
-        p.addEventListener('click', () => {
-          const isHidden = answer.style.display === 'none';
-          answer.style.display = isHidden ? 'block' : 'none';
-        });
-      }
+  function initFAQs() {
+    document.querySelectorAll('.faq-container').forEach((container) => {
+      if ((container as HTMLElement).dataset.faqInit === '1') return;
+      (container as HTMLElement).dataset.faqInit = '1';
+      const paragraphs = container.querySelectorAll('p');
+      paragraphs.forEach((p, i) => {
+        const strong = p.querySelector('strong');
+        if (strong && paragraphs[i + 1] && !paragraphs[i + 1].querySelector('strong')) {
+          const answer = paragraphs[i + 1] as HTMLElement;
+          p.style.cursor = 'pointer';
+          p.style.userSelect = 'none';
+          p.classList.add('faq-question');
+          answer.style.display = 'none';
+          answer.classList.add('faq-answer');
+          p.addEventListener('click', () => {
+            answer.style.display = answer.style.display === 'none' ? 'block' : 'none';
+          });
+        }
+      });
     });
-  });
+  }
+  initFAQs();
+  document.addEventListener('astro:page-load', initFAQs);
 </script>
 
 <style>

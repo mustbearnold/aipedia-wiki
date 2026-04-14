@@ -1,0 +1,317 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const allTools = await getCollection('tools');
+
+// Build stack recommendations: role → category → tool slug (with budget tier)
+// Picks are editorial — not algorithmic. These are what the editorial team actually recommends.
+
+const STACKS: Record<string, Record<string, { budget: string[]; standard: string[]; premium: string[] }>> = {
+  'solo-founder': {
+    'Product & Coding':    { budget: ['lovable'],         standard: ['cursor','lovable'],       premium: ['cursor','claude-code','lovable'] },
+    'Writing & Content':   { budget: ['chatgpt'],         standard: ['claude'],                 premium: ['claude','chatgpt'] },
+    'Automation':          { budget: ['n8n'],             standard: ['n8n'],                    premium: ['n8n','zapier'] },
+    'Research':            { budget: ['perplexity'],      standard: ['perplexity'],             premium: ['perplexity','notebooklm'] },
+    'Customer Support':    { budget: [],                  standard: ['intercom'],               premium: ['intercom'] },
+    'Notes & Wiki':        { budget: ['obsidian'],        standard: ['notion-ai'],              premium: ['notion-ai','obsidian'] },
+    'Presentations':       { budget: [],                  standard: ['gamma'],                  premium: ['gamma'] },
+  },
+  'content-creator': {
+    'Research':            { budget: ['chatgpt'],         standard: ['perplexity'],             premium: ['perplexity'] },
+    'Script Writing':      { budget: ['chatgpt'],         standard: ['claude'],                 premium: ['claude','sudowrite'] },
+    'Voiceover':           { budget: [],                  standard: ['elevenlabs'],             premium: ['elevenlabs','heygen'] },
+    'B-roll Video':        { budget: ['pika'],            standard: ['runway'],                 premium: ['runway','kling'] },
+    'Editing':             { budget: [],                  standard: ['descript'],               premium: ['descript'] },
+    'Thumbnails & Design': { budget: ['canva'],           standard: ['canva','midjourney'],     premium: ['midjourney','canva'] },
+    'Music':               { budget: ['suno'],            standard: ['suno'],                   premium: ['suno','udio'] },
+  },
+  'developer': {
+    'IDE Assistant':       { budget: ['github-copilot'],  standard: ['cursor'],                 premium: ['cursor','claude-code'] },
+    'Agentic Coding':      { budget: ['aider'],           standard: ['claude-code'],            premium: ['claude-code','devin'] },
+    'Architecture':        { budget: ['claude'],          standard: ['claude'],                 premium: ['claude'] },
+    'Code Review':         { budget: [],                  standard: ['cody'],                   premium: ['cody','continue'] },
+    'Docs & Notes':        { budget: ['obsidian'],        standard: ['obsidian'],               premium: ['obsidian','notion-ai'] },
+    'Research':            { budget: ['perplexity'],      standard: ['perplexity'],             premium: ['perplexity','phind'] },
+  },
+  'marketer': {
+    'Writing':             { budget: ['copy-ai'],         standard: ['jasper'],                 premium: ['claude','jasper'] },
+    'SEO':                 { budget: [],                  standard: ['surfer-seo'],             premium: ['surfer-seo','semrush'] },
+    'Research':            { budget: ['perplexity'],      standard: ['perplexity'],             premium: ['perplexity'] },
+    'Ads & Social':        { budget: ['canva'],           standard: ['canva'],                  premium: ['canva','adobe-firefly'] },
+    'Video Content':       { budget: [],                  standard: ['heygen'],                 premium: ['heygen','synthesia'] },
+    'Cold Outreach':       { budget: [],                  standard: ['instantly'],              premium: ['instantly','apollo','clay'] },
+    'CRM Automation':      { budget: ['n8n'],             standard: ['n8n'],                    premium: ['n8n','zapier'] },
+  },
+  'student': {
+    'Research Writing':    { budget: ['chatgpt'],         standard: ['claude'],                 premium: ['claude'] },
+    'Literature Review':   { budget: ['semantic-scholar'],standard: ['elicit'],                 premium: ['elicit','consensus'] },
+    'Note-Taking':         { budget: ['obsidian'],        standard: ['notion-ai'],              premium: ['notion-ai','notebooklm'] },
+    'Audio / Lectures':    { budget: [],                  standard: ['otter-ai'],               premium: ['otter-ai','fireflies'] },
+    'Grammar & Polish':    { budget: ['quillbot'],        standard: ['grammarly'],              premium: ['grammarly'] },
+    'Study Summarisation': { budget: ['chatgpt'],         standard: ['notebooklm'],             premium: ['notebooklm','claude'] },
+  },
+  'designer': {
+    'Image Generation':    { budget: ['stable-diffusion'],standard: ['midjourney'],             premium: ['midjourney','flux'] },
+    'UI / UX':             { budget: ['figma'],           standard: ['figma','v0'],             premium: ['figma','v0','lovable'] },
+    'Prototyping':         { budget: ['bolt'],            standard: ['bolt','lovable'],         premium: ['lovable','v0'] },
+    'Mood & Ideation':     { budget: ['leonardo'],        standard: ['midjourney','ideogram'],  premium: ['midjourney','ideogram','flux'] },
+    'Stock & Brand':       { budget: ['freepik'],         standard: ['canva','adobe-firefly'],  premium: ['adobe-firefly','canva'] },
+    'Presentations':       { budget: [],                  standard: ['gamma'],                  premium: ['gamma','beautiful-ai'] },
+  },
+};
+
+// Build a lookup: slug → tool data
+const toolLookup = new Map(allTools.map(t => [t.data.slug || t.id.replace(/\.md$/, ''), t]));
+
+// Resolve stacks into full tool objects (server-side)
+const resolvedStacks: Record<string, Record<string, Record<string, any[]>>> = {};
+for (const [role, cats] of Object.entries(STACKS)) {
+  resolvedStacks[role] = {};
+  for (const [catName, budgets] of Object.entries(cats)) {
+    resolvedStacks[role][catName] = {};
+    for (const [tier, slugs] of Object.entries(budgets)) {
+      resolvedStacks[role][catName][tier] = (slugs as string[])
+        .map(s => toolLookup.get(s))
+        .filter(Boolean)
+        .map((t: any) => ({
+          slug: t.data.slug || t.id.replace(/\.md$/, ''),
+          title: t.data.title,
+          tagline: t.data.tagline,
+          category: t.data.category,
+          price: t.data.price_range,
+          url: `/tools/${t.data.slug || t.id.replace(/\.md$/, '')}/`,
+        }));
+    }
+  }
+}
+
+const roles = [
+  { id: 'solo-founder',    label: 'Solo Founder',     emoji: '🚀', desc: 'Building and running a startup alone' },
+  { id: 'content-creator', label: 'Content Creator',  emoji: '🎬', desc: 'YouTube, TikTok, podcasts, social' },
+  { id: 'developer',       label: 'Developer',        emoji: '💻', desc: 'Software engineer shipping code daily' },
+  { id: 'marketer',        label: 'Marketer',         emoji: '📈', desc: 'B2B or B2C growth & demand gen' },
+  { id: 'student',         label: 'Student / Researcher', emoji: '🎓', desc: 'Academic work, papers, thesis' },
+  { id: 'designer',        label: 'Designer',         emoji: '🎨', desc: 'Product, brand, or UI/UX design' },
+];
+
+const budgets = [
+  { id: 'budget',   label: 'Budget',   price: '$0-50/mo',   desc: 'Free tiers and cheap essentials' },
+  { id: 'standard', label: 'Standard', price: '$50-150/mo', desc: 'The practical working stack' },
+  { id: 'premium',  label: 'Premium',  price: '$150-500/mo',desc: 'Everything, no compromises' },
+];
+
+const categoryEmoji: Record<string, string> = {
+  'ai-chatbots': '💬',
+  'ai-coding': '💻', 'ai-writing': '✍️', 'ai-image': '🎨',
+  'ai-video': '🎬', 'ai-voice': '🎙️', 'ai-notes': '📝',
+  'ai-search': '🔍', 'ai-seo': '📈', 'ai-automation': '⚡',
+  'ai-design': '🖌️', 'ai-music': '🎵', 'ai-presentation': '📊',
+  'ai-research': '🔬',
+};
+---
+
+<BaseLayout
+  title="AI Stack Builder — Find Your Perfect AI Tool Stack"
+  description="Pick your role and budget. Get a curated AI tool stack recommended by the aipedia.wiki editorial team. Covers product, content, code, marketing, and research."
+>
+
+  <section class="mb-10 pt-6">
+    <h1 class="text-3xl sm:text-4xl font-bold mb-3 leading-tight">
+      Build Your AI Stack
+    </h1>
+    <p class="text-[var(--text-secondary)] text-sm sm:text-base max-w-2xl leading-relaxed">
+      Tell us your role and budget. We'll assemble the exact stack the editorial team would recommend — across writing, coding, design, research, and operations. Picks are hand-curated, not algorithmic.
+    </p>
+  </section>
+
+  <!-- Step 1: Role -->
+  <section class="mb-8">
+    <div class="flex items-baseline gap-3 mb-4">
+      <span class="text-xs font-semibold uppercase tracking-wider text-[var(--accent-primary)]">Step 1</span>
+      <h2 class="text-lg font-semibold">Pick your role</h2>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-3" id="role-grid">
+      {roles.map(r => (
+        <button
+          type="button"
+          data-role={r.id}
+          class="sb-role-btn text-left p-4 rounded-xl border border-[var(--border)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] hover:border-[rgba(167,139,250,0.4)] transition-all cursor-pointer"
+        >
+          <div class="text-2xl mb-2">{r.emoji}</div>
+          <div class="font-semibold text-sm text-[var(--text-primary)]">{r.label}</div>
+          <div class="text-xs text-[var(--text-muted)] mt-0.5">{r.desc}</div>
+        </button>
+      ))}
+    </div>
+  </section>
+
+  <!-- Step 2: Budget -->
+  <section class="mb-10">
+    <div class="flex items-baseline gap-3 mb-4">
+      <span class="text-xs font-semibold uppercase tracking-wider text-[var(--accent-primary)]">Step 2</span>
+      <h2 class="text-lg font-semibold">Pick your budget</h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-3" id="budget-grid">
+      {budgets.map(b => (
+        <button
+          type="button"
+          data-budget={b.id}
+          class="sb-budget-btn text-left p-4 rounded-xl border border-[var(--border)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] hover:border-[rgba(167,139,250,0.4)] transition-all cursor-pointer"
+        >
+          <div class="flex items-center justify-between mb-1">
+            <span class="font-semibold text-sm text-[var(--text-primary)]">{b.label}</span>
+            <span class="text-xs font-medium text-[var(--accent-primary)]">{b.price}</span>
+          </div>
+          <div class="text-xs text-[var(--text-muted)]">{b.desc}</div>
+        </button>
+      ))}
+    </div>
+  </section>
+
+  <!-- Results -->
+  <section id="stack-output" style="display:none" class="mb-16">
+    <div class="flex items-baseline gap-3 mb-4 flex-wrap">
+      <h2 class="text-2xl font-bold">Your Recommended Stack</h2>
+      <button id="sb-reset" class="text-xs text-[var(--text-muted)] hover:text-[var(--accent-primary)] underline cursor-pointer bg-transparent border-none">Reset</button>
+    </div>
+    <p id="sb-summary" class="text-sm text-[var(--text-secondary)] mb-6"></p>
+    <div id="sb-categories" class="space-y-6"></div>
+
+    <!-- Stack price summary -->
+    <div id="sb-total" class="mt-8 p-5 rounded-xl border border-[var(--border)] bg-[var(--bg-card)]"></div>
+  </section>
+
+  <!-- Placeholder before selection -->
+  <section id="stack-placeholder" class="mb-16 p-8 rounded-xl border border-dashed border-[var(--border)] text-center">
+    <div class="text-4xl mb-3">✨</div>
+    <p class="text-sm text-[var(--text-muted)]">
+      Pick a role and budget above. Your stack appears here.
+    </p>
+  </section>
+
+  <!-- Disclaimer -->
+  <section class="mb-10 text-xs text-[var(--text-muted)] border-t border-[var(--border)] pt-6">
+    <p class="leading-relaxed">
+      <strong class="text-[var(--text-secondary)]">How these picks are made:</strong>
+      Recommendations are curated by the aipedia.wiki editorial team based on our {allTools.length} tool reviews and hands-on use. Rankings use the same <a href="/about/scoring/" class="text-[var(--accent-primary)] no-underline hover:underline">scoring methodology</a> as the individual tool pages. Affiliate relationships do not influence placement. If you'd swap one pick for another, <a href="/about/#corrections--contact" class="text-[var(--accent-primary)] no-underline hover:underline">tell us why</a>.
+    </p>
+  </section>
+
+  <script define:vars={{ resolvedStacks, categoryEmoji }}>
+  (function () {
+    let selectedRole = null;
+    let selectedBudget = null;
+    const output = document.getElementById('stack-output');
+    const placeholder = document.getElementById('stack-placeholder');
+    const summary = document.getElementById('sb-summary');
+    const catsEl  = document.getElementById('sb-categories');
+    const totalEl = document.getElementById('sb-total');
+
+    function onRole(btn) {
+      selectedRole = btn.dataset.role;
+      document.querySelectorAll('.sb-role-btn').forEach(b => {
+        const active = b === btn;
+        b.style.borderColor = active ? 'var(--accent-primary)' : '';
+        b.style.background  = active ? 'rgba(167,139,250,0.08)' : '';
+      });
+      maybeRender();
+    }
+    function onBudget(btn) {
+      selectedBudget = btn.dataset.budget;
+      document.querySelectorAll('.sb-budget-btn').forEach(b => {
+        const active = b === btn;
+        b.style.borderColor = active ? 'var(--accent-primary)' : '';
+        b.style.background  = active ? 'rgba(167,139,250,0.08)' : '';
+      });
+      maybeRender();
+    }
+
+    document.querySelectorAll('.sb-role-btn').forEach(b => b.addEventListener('click', () => onRole(b)));
+    document.querySelectorAll('.sb-budget-btn').forEach(b => b.addEventListener('click', () => onBudget(b)));
+
+    document.getElementById('sb-reset')?.addEventListener('click', () => {
+      selectedRole = null; selectedBudget = null;
+      document.querySelectorAll('.sb-role-btn, .sb-budget-btn').forEach(b => {
+        b.style.borderColor = ''; b.style.background = '';
+      });
+      output.style.display = 'none';
+      placeholder.style.display = '';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    function parsePrice(p) {
+      // naive extraction: first dollar number found
+      if (!p) return 0;
+      const m = String(p).match(/\$(\d+(?:\.\d+)?)/);
+      return m ? parseFloat(m[1]) : 0;
+    }
+
+    function maybeRender() {
+      if (!selectedRole || !selectedBudget) return;
+      const stack = resolvedStacks[selectedRole];
+      if (!stack) return;
+
+      placeholder.style.display = 'none';
+      output.style.display = '';
+
+      const roleLabel = document.querySelector(`.sb-role-btn[data-role="${selectedRole}"] .font-semibold`).textContent;
+      const budgetLabel = document.querySelector(`.sb-budget-btn[data-budget="${selectedBudget}"] .font-semibold`).textContent;
+      summary.textContent = `For a ${roleLabel.toLowerCase()} on a ${budgetLabel.toLowerCase()} budget.`;
+
+      let html = '';
+      let totalLow = 0, totalHigh = 0, toolCount = 0;
+
+      for (const [catName, tiers] of Object.entries(stack)) {
+        const picks = tiers[selectedBudget] || [];
+        if (!picks.length) continue;
+        toolCount += picks.length;
+
+        html += `
+          <div class="p-4 rounded-xl border border-[var(--border)] bg-[var(--bg-card)]">
+            <h3 class="text-sm font-semibold text-[var(--text-primary)] mb-3 uppercase tracking-wider">${catName}</h3>
+            <div class="grid gap-2">
+              ${picks.map(t => {
+                const lowP = parsePrice(t.price);
+                totalLow += lowP;
+                // try to get a high price too
+                const hm = String(t.price || '').match(/\$(\d+(?:\.\d+)?)[^\d]*\$?(\d+(?:\.\d+)?)/);
+                const highP = hm ? parseFloat(hm[2]) : lowP;
+                totalHigh += highP;
+                return `
+                  <a href="${t.url}" class="flex items-center gap-3 p-3 rounded-lg hover:bg-[var(--bg-card-hover)] transition-colors no-underline">
+                    <div class="w-9 h-9 rounded-lg flex items-center justify-center text-base flex-shrink-0" style="background:linear-gradient(135deg,rgba(167,139,250,0.15),rgba(96,165,250,0.15));">
+                      ${categoryEmoji[t.category] || '🔧'}
+                    </div>
+                    <div class="flex-1 min-w-0">
+                      <div class="text-sm font-semibold text-[var(--text-primary)] truncate">${t.title}</div>
+                      <div class="text-xs text-[var(--text-muted)] truncate">${t.tagline || ''}</div>
+                    </div>
+                    <div class="text-xs text-[var(--text-muted)] flex-shrink-0 whitespace-nowrap">${t.price || 'Free'}</div>
+                  </a>`;
+              }).join('')}
+            </div>
+          </div>`;
+      }
+
+      catsEl.innerHTML = html || '<p class="text-sm text-[var(--text-muted)]">No recommendations for this combination yet.</p>';
+
+      totalEl.innerHTML = `
+        <div class="flex items-center justify-between gap-4 flex-wrap">
+          <div>
+            <div class="text-xs text-[var(--text-muted)] uppercase tracking-wider mb-1">Estimated stack cost</div>
+            <div class="text-2xl font-bold bg-gradient-to-r from-[#a78bfa] to-[#60a5fa] bg-clip-text text-transparent">
+              $${Math.round(totalLow)}${totalHigh > totalLow ? ` – $${Math.round(totalHigh)}` : ''} <span class="text-sm font-normal text-[var(--text-muted)]">/month</span>
+            </div>
+          </div>
+          <div class="text-sm text-[var(--text-secondary)]">
+            ${toolCount} tool${toolCount !== 1 ? 's' : ''} across ${Object.keys(stack).filter(c => (stack[c][selectedBudget] || []).length).length} categories
+          </div>
+        </div>`;
+
+      // Smooth scroll to results
+      setTimeout(() => output.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100);
+    }
+  })();
+  </script>
+</BaseLayout>

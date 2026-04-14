@@ -3,8 +3,8 @@ type: tool
 slug: chatgpt
 title: ChatGPT
 tagline: The most widely used AI assistant, with browsing, image generation, code execution, and plugin ecosystem.
-category: ai-writing
-secondary_categories: [ai-search]
+category: ai-chatbots
+secondary_categories: [ai-writing, ai-search]
 company: openai
 url: https://chatgpt.com
 pricing_model: freemium

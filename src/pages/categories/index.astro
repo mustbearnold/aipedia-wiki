@@ -1,0 +1,97 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+
+const allCategories = await getCollection('categories');
+const allTools = await getCollection('tools');
+
+const categoryEmojiMap: Record<string, string> = {
+  'ai-chatbots': '\uD83D\uDCAC',
+  'ai-voice': '\uD83D\uDD0A', 'ai-video': '\uD83C\uDFAC', 'ai-coding': '\uD83D\uDCBB',
+  'ai-automation': '\u26A1', 'ai-seo': '\uD83D\uDCC8', 'ai-design': '\uD83C\uDFA8',
+  'ai-writing': '\u270D\uFE0F', 'ai-image': '\uD83D\uDDBC', 'ai-search': '\uD83D\uDD0D',
+  'ai-notes': '\uD83D\uDCDD', 'ai-music': '\uD83C\uDFB5',
+  'ai-presentation': '\uD83D\uDCCA', 'ai-research': '\uD83D\uDD2C',
+};
+
+const categoryGradients: Record<string, string> = {
+  'ai-chatbots': 'linear-gradient(135deg, #8b5cf6, #06b6d4)',
+  'ai-voice': 'linear-gradient(135deg, #6366f1, #818cf8)',
+  'ai-video': 'linear-gradient(135deg, #f97316, #ef4444)',
+  'ai-coding': 'linear-gradient(135deg, #22c55e, #16a34a)',
+  'ai-automation': 'linear-gradient(135deg, #3b82f6, #2563eb)',
+  'ai-seo': 'linear-gradient(135deg, #a78bfa, #7c3aed)',
+  'ai-design': 'linear-gradient(135deg, #ec4899, #f472b6)',
+  'ai-writing': 'linear-gradient(135deg, #60a5fa, #3b82f6)',
+  'ai-image': 'linear-gradient(135deg, #f59e0b, #d97706)',
+  'ai-search': 'linear-gradient(135deg, #14b8a6, #0d9488)',
+  'ai-notes': 'linear-gradient(135deg, #6b7280, #9ca3af)',
+  'ai-music': 'linear-gradient(135deg, #d946ef, #c026d3)',
+  'ai-presentation': 'linear-gradient(135deg, #f43f5e, #be123c)',
+  'ai-research': 'linear-gradient(135deg, #06b6d4, #0891b2)',
+};
+
+// Count tools per category from the actual collection
+const toolCountBySlug: Record<string, number> = {};
+for (const t of allTools) {
+  const cat = t.data.category;
+  if (cat) toolCountBySlug[cat] = (toolCountBySlug[cat] || 0) + 1;
+}
+
+// Sort categories by tool count (biggest first)
+const sorted = allCategories
+  .map(c => ({
+    slug: c.data.slug,
+    title: c.data.title,
+    description: c.data.description,
+    toolCount: toolCountBySlug[c.data.slug] || 0,
+    emoji: categoryEmojiMap[c.data.slug] || '🔧',
+    gradient: categoryGradients[c.data.slug] || 'linear-gradient(135deg, #a78bfa, #60a5fa)',
+  }))
+  .sort((a, b) => b.toolCount - a.toolCount);
+---
+
+<BaseLayout
+  title="Explore AI Tool Categories — aipedia.wiki"
+  description={`Browse all ${allCategories.length} AI tool categories: coding assistants, writing tools, image generators, video tools, voice synthesis, automation, and more. ${allTools.length} tools reviewed.`}
+>
+  <Breadcrumb items={[{ label: 'Explore' }]} />
+
+  <section class="mb-10 pt-2">
+    <h1 class="text-3xl sm:text-4xl font-bold mb-3 leading-tight">
+      Explore <span class="bg-gradient-to-r from-[#a78bfa] to-[#60a5fa] bg-clip-text text-transparent">{allCategories.length} Categories</span>
+    </h1>
+    <p class="text-[var(--text-secondary)] text-sm sm:text-base max-w-2xl leading-relaxed">
+      {allTools.length} AI tools reviewed across {allCategories.length} categories. Click a category to see our top picks, category leaders, and editorial comparison tables.
+    </p>
+  </section>
+
+  <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-16">
+    {sorted.map((c) => (
+      <a
+        href={`/categories/${c.slug}/`}
+        class="group relative block p-5 rounded-xl border border-[var(--border)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] hover:border-[rgba(167,139,250,0.3)] transition-all no-underline overflow-hidden"
+      >
+        <!-- Gradient accent -->
+        <div class="absolute inset-0 opacity-0 group-hover:opacity-5 transition-opacity" style={`background: ${c.gradient};`}></div>
+
+        <div class="flex items-start gap-3 relative">
+          <div
+            class="w-11 h-11 rounded-lg flex items-center justify-center text-xl flex-shrink-0 shadow-lg"
+            style={`background: ${c.gradient};`}
+          >
+            {c.emoji}
+          </div>
+          <div class="flex-1 min-w-0">
+            <div class="flex items-center justify-between mb-1">
+              <h3 class="font-semibold text-[var(--text-primary)] text-sm">{c.title}</h3>
+              <span class="text-xs text-[var(--text-muted)] shrink-0">{c.toolCount} {c.toolCount === 1 ? 'tool' : 'tools'}</span>
+            </div>
+            <p class="text-xs text-[var(--text-secondary)] leading-relaxed line-clamp-2">{c.description}</p>
+          </div>
+        </div>
+      </a>
+    ))}
+  </section>
+</BaseLayout>

@@ -3,7 +3,8 @@ type: tool
 slug: grok
 title: Grok
 tagline: xAI's AI assistant with real-time X (Twitter) data access and fewer content restrictions.
-category: ai-search
+category: ai-chatbots
+secondary_categories: [ai-search]
 company: xAI
 url: https://x.ai
 pricing_model: freemium

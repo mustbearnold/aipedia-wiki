@@ -3,8 +3,8 @@ type: tool
 slug: gemini
 title: Gemini
 tagline: Google's multimodal AI assistant with deep ecosystem integration, long context, and Deep Research mode.
-category: ai-writing
-secondary_categories: [ai-search]
+category: ai-chatbots
+secondary_categories: [ai-writing, ai-search]
 company: google
 url: https://gemini.google.com
 pricing_model: freemium

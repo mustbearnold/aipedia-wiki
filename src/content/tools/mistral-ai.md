@@ -3,7 +3,8 @@ type: tool
 slug: mistral-ai
 title: Mistral AI
 tagline: European open-source LLM provider with models from ultra-fast Mistral 7B to frontier-competitive Mistral Large.
-category: ai-search
+category: ai-chatbots
+secondary_categories: [ai-search]
 company: Mistral AI (Paris, France)
 url: https://mistral.ai
 pricing_model: freemium
