@@ -2,16 +2,18 @@
 type: tool
 slug: reflect
 title: Reflect
-tagline: Networked note-taking app with AI writing assistance and end-to-end encrypted sync.
+tagline: >-
+  Networked note-taking app with AI writing assistance and end-to-end encrypted
+  sync.
 category: ai-notes
 company: Reflect (reflect.app)
-url: https://reflect.app
+url: 'https://reflect.app'
 pricing_model: paid
-price_range: "$10/month"
+price_range: $15/month
 status: active
 launched: 2022-03
-last_updated: 2026-04-14
-last_verified: 2026-04-14
+last_updated: 2026-04-14T00:00:00.000Z
+last_verified: '2026-04-14'
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -24,10 +26,18 @@ scores:
   value: 6
   moat: 6
   longevity: 7
-tags: [notes, pkm, networked-notes, backlinks, ai-writing, encrypted]
-seo_title: "Reflect Notes: AI Note-Taking App Review & Pricing (2026)"
-meta_description: "Reflect is a networked note-taking app with AI writing assistance and end-to-end encryption. No free tier — $10/month. Honest review April 2026."
-author: "aipedia.wiki Editorial"
+tags:
+  - notes
+  - pkm
+  - networked-notes
+  - backlinks
+  - ai-writing
+  - encrypted
+seo_title: 'Reflect Notes: AI Note-Taking App Review & Pricing (2026)'
+meta_description: >-
+  Reflect is a networked note-taking app with AI writing assistance and
+  end-to-end encryption. No free tier — $10/month. Honest review April 2026.
+author: aipedia.wiki Editorial
 ---
 
 # Reflect

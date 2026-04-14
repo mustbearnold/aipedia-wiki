@@ -2,20 +2,22 @@
 type: tool
 slug: lovo
 title: LOVO (Genny)
-tagline: AI voice generator with 500+ voices, video editor, and screen recorder in one platform.
+tagline: >-
+  AI voice generator with 500+ voices, video editor, and screen recorder in one
+  platform.
 category: ai-voice
 company: LOVO AI
-url: https://lovo.ai
+url: 'https://lovo.ai'
 pricing_model: freemium
-price_range: "$0-$48/month"
+price_range: $0-$75/month
 status: active
 launched: 2019-01
-last_updated: 2026-04-14
-last_verified: 2026-04-14
+last_updated: 2026-04-14T00:00:00.000Z
+last_verified: '2026-04-14'
 update_frequency: monthly
 affiliate:
   has_program: true
-  commission: "15%"
+  commission: 15%
   cookie_days: 30
   network: null
   link: null
@@ -24,10 +26,20 @@ scores:
   value: 7
   moat: 6
   longevity: 7
-tags: [tts, text-to-speech, voice-generator, ai-voice, video-editor, e-learning, voiceover]
-seo_title: "LOVO (Genny): Features, Pricing & Review (2026)"
-meta_description: "LOVO (Genny) is an AI voice generator with 500+ voices and a built-in video editor. Plans from free to $48/month. Honest review with pricing verified April 2026."
-author: "aipedia.wiki Editorial"
+tags:
+  - tts
+  - text-to-speech
+  - voice-generator
+  - ai-voice
+  - video-editor
+  - e-learning
+  - voiceover
+seo_title: 'LOVO (Genny): Features, Pricing & Review (2026)'
+meta_description: >-
+  LOVO (Genny) is an AI voice generator with 500+ voices and a built-in video
+  editor. Plans from free to $48/month. Honest review with pricing verified
+  April 2026.
+author: aipedia.wiki Editorial
 ---
 
 # LOVO (Genny)

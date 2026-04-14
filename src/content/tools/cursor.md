@@ -7,7 +7,7 @@ category: ai-coding
 company: anysphere
 url: https://cursor.com
 pricing_model: freemium
-price_range: "$0-$40/month"
+price_range: "$0-$200/month"
 status: active
 launched: 2023-03
 last_updated: 2026-04-13
@@ -32,7 +32,7 @@ author: "aipedia.wiki Editorial"
 
 # Cursor
 
-Cursor is an AI-native code editor developed by Anysphere. It is a fork of VS Code that deeply integrates LLMs into autocomplete, inline editing, codebase-aware chat, and agentic multi-file coding via Composer mode. It is primarily used for professional software development with AI assistance. Cursor supports Claude, GPT-4o, and other models as backends. As of April 2026, pricing starts at $0 (Hobby) with Pro at $20/month and Business at $40/month per seat. Compared to GitHub Copilot at $10/month, Cursor is more deeply integrated but costs twice as much.
+Cursor is an AI-native code editor developed by Anysphere. It is a fork of VS Code that deeply integrates LLMs into autocomplete, inline editing, codebase-aware chat, and agentic multi-file coding. It is primarily used for professional software development with AI assistance. Cursor supports Claude, GPT-4o, and other models as backends. As of April 2026, pricing is: Hobby free, Pro $20/month, Pro+ $60/month (3x usage credits), Ultra $200/month (20x usage credits), and Teams $40/user/month. Compared to GitHub Copilot at $10/month, Cursor is more deeply integrated but costs twice as much at the entry tier.
 
 ## What It Does
 
@@ -47,15 +47,18 @@ Cursor is a VS Code fork that deeply integrates AI into every part of the coding
 
 ## Pricing
 
-Cursor costs $0-$40/month across three tiers, with the free Hobby plan offering 2,000 completions and Pro at $20/month providing unlimited completions plus 500 fast premium requests ([Cursor Pricing](https://cursor.com/pricing)).
+Cursor costs $0-$200/month across five individual tiers plus a $40/user Teams tier. The free Hobby plan offers limited agent requests and tab completions, Pro at $20/month provides unlimited tab completions plus $20 of monthly usage credits for premium models, and higher tiers (Pro+ $60, Ultra $200) multiply the credit allowance ([Cursor Pricing](https://cursor.com/pricing)).
 
 | Plan | Price | Key Limits |
 |------|-------|-----------|
-| Hobby | $0 | 2,000 completions, 50 slow premium requests/month |
-| Pro | $20/mo | Unlimited completions, 500 fast premium requests/month |
-| Business | $40/mo/seat | Pro features + admin, SAML SSO, centralized billing |
+| Hobby | $0 | Limited agent requests, limited tab completions |
+| Pro | $20/mo | Unlimited tab completions + $20/mo usage credits for premium models |
+| Pro+ | $60/mo | 3x Pro credits ($60/mo worth) |
+| Ultra | $200/mo | 20x Pro usage + priority access to new features |
+| Teams | $40/user/mo | Shared chats, centralized billing, RBAC, SSO |
+| Enterprise | Custom | Volume pricing + dedicated support |
 
-*Prices verified 2026-04-13. Check [cursor.com/pricing](https://cursor.com/pricing) for current rates.*
+*Prices verified 2026-04-14. Annual billing saves 20% on all paid tiers. Check [cursor.com/pricing](https://cursor.com/pricing) for current rates.*
 
 ## Key Features
 

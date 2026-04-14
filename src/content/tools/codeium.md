@@ -2,16 +2,18 @@
 type: tool
 slug: codeium
 title: Codeium
-tagline: Free AI code completion for individuals supporting 70+ languages and 40+ editors, with a no-training guarantee.
+tagline: >-
+  Free AI code completion for individuals supporting 70+ languages and 40+
+  editors, with a no-training guarantee.
 category: ai-coding
 company: codeium
-url: https://codeium.com
+url: 'https://codeium.com'
 pricing_model: freemium
-price_range: "$0-$12/month"
+price_range: $0-$200/month
 status: active
 launched: 2022-12
-last_updated: 2026-04-14
-last_verified: 2026-04-14
+last_updated: 2026-04-14T00:00:00.000Z
+last_verified: '2026-04-14'
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -24,10 +26,20 @@ scores:
   value: 9
   moat: 5
   longevity: 6
-tags: [autocomplete, free, ai-coding, ide-plugin, enterprise, vscode, jetbrains, neovim]
-seo_title: "Codeium: Free AI Code Completion Review & Pricing (2026)"
-meta_description: "Codeium offers free AI code completion for individuals across 70+ languages. Teams $12/user/mo. No training on your code. Full review and pricing 2026."
-author: "aipedia.wiki Editorial"
+tags:
+  - autocomplete
+  - free
+  - ai-coding
+  - ide-plugin
+  - enterprise
+  - vscode
+  - jetbrains
+  - neovim
+seo_title: 'Codeium: Free AI Code Completion Review & Pricing (2026)'
+meta_description: >-
+  Codeium offers free AI code completion for individuals across 70+ languages.
+  Teams $12/user/mo. No training on your code. Full review and pricing 2026.
+author: aipedia.wiki Editorial
 ---
 
 # Codeium

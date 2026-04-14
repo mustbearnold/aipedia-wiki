@@ -2,20 +2,22 @@
 type: tool
 slug: frase
 title: Frase.io
-tagline: AI SEO tool that generates content briefs from SERP research and scores your writing for on-page optimization.
+tagline: >-
+  AI SEO tool that generates content briefs from SERP research and scores your
+  writing for on-page optimization.
 category: ai-seo
 company: frase
-url: https://frase.io
+url: 'https://frase.io'
 pricing_model: freemium
-price_range: "$14.99-$114.99/month"
+price_range: $48.75-$300/month
 status: active
 launched: 2018-01
-last_updated: 2026-04-14
-last_verified: 2026-04-14
+last_updated: 2026-04-14T00:00:00.000Z
+last_verified: '2026-04-14'
 update_frequency: monthly
 affiliate:
   has_program: true
-  commission: "30%"
+  commission: 30%
   cookie_days: 30
   network: direct
   link: null
@@ -24,10 +26,20 @@ scores:
   value: 8
   moat: 6
   longevity: 7
-tags: [seo, content-briefs, content-optimization, ai-writing, serp-analysis, on-page-seo, content-strategy]
-seo_title: "Frase.io: Features, Pricing & Review (2026)"
-meta_description: "Frase.io is an AI SEO tool for content briefs and optimization. Plans from $14.99/mo. Combines SERP research, brief generation, and AI writing in one workflow. Best for content teams."
-author: "aipedia.wiki Editorial"
+tags:
+  - seo
+  - content-briefs
+  - content-optimization
+  - ai-writing
+  - serp-analysis
+  - on-page-seo
+  - content-strategy
+seo_title: 'Frase.io: Features, Pricing & Review (2026)'
+meta_description: >-
+  Frase.io is an AI SEO tool for content briefs and optimization. Plans from
+  $14.99/mo. Combines SERP research, brief generation, and AI writing in one
+  workflow. Best for content teams.
+author: aipedia.wiki Editorial
 ---
 
 # Frase.io

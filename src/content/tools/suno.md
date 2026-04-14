@@ -2,20 +2,22 @@
 type: tool
 slug: suno
 title: Suno
-tagline: AI music generation — create full songs with vocals and instruments from a text prompt.
+tagline: >-
+  AI music generation — create full songs with vocals and instruments from a
+  text prompt.
 category: ai-music
 company: Suno AI
-url: https://suno.com
+url: 'https://suno.com'
 pricing_model: freemium
-price_range: "$0-$24/month"
+price_range: $0-$30/month
 status: active
 launched: 2023-12
-last_updated: 2026-04-13
-last_verified: 2026-04-13
+last_updated: 2026-04-13T00:00:00.000Z
+last_verified: '2026-04-14'
 update_frequency: monthly
 affiliate:
   has_program: true
-  commission: "~20%"
+  commission: ~20%
   cookie_days: 30
   network: null
   link: null
@@ -24,10 +26,18 @@ scores:
   value: 9
   moat: 6
   longevity: 7
-tags: [ai-music, music-generation, text-to-music, song-generation, vocal-ai]
-seo_title: "Suno AI: Review, Pricing & How to Use (2026)"
-meta_description: "Suno generates full AI songs with vocals from text prompts. Free 50 credits/day; Pro $8/mo. Complete review of features, pricing, and Udio comparison."
-author: "aipedia.wiki Editorial"
+tags:
+  - ai-music
+  - music-generation
+  - text-to-music
+  - song-generation
+  - vocal-ai
+seo_title: 'Suno AI: Review, Pricing & How to Use (2026)'
+meta_description: >-
+  Suno generates full AI songs with vocals from text prompts. Free 50
+  credits/day; Pro $8/mo. Complete review of features, pricing, and Udio
+  comparison.
+author: aipedia.wiki Editorial
 ---
 
 # Suno

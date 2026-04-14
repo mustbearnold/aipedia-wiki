@@ -4,31 +4,42 @@ slug: elevenlabs
 title: ElevenLabs
 tagline: The best AI voice generator and text-to-speech platform available today.
 category: ai-voice
-secondary_categories: [ai-audio, ai-avatar]
+secondary_categories:
+  - ai-audio
+  - ai-avatar
 company: elevenlabs
-url: https://elevenlabs.io
+url: 'https://elevenlabs.io'
 pricing_model: freemium
-price_range: "$0-$330/month"
+price_range: $0-$990/month
 status: active
 launched: 2023-01
-last_updated: 2026-04-13
-last_verified: 2026-04-13
+last_updated: 2026-04-13T00:00:00.000Z
+last_verified: '2026-04-14'
 update_frequency: monthly
 affiliate:
   has_program: true
-  commission: "22% recurring"
+  commission: 22% recurring
   cookie_days: 30
   network: direct
-  link: "https://try.elevenlabs.io/9qle5pnma4ze"
+  link: 'https://try.elevenlabs.io/9qle5pnma4ze'
 scores:
   utility: 10
   value: 8
   moat: 9
   longevity: 10
-tags: [tts, voice-cloning, text-to-speech, voice-ai, audio, dubbing, voice-agents]
-seo_title: "ElevenLabs: Features, Pricing & Review (2026)"
-meta_description: "ElevenLabs is the leading AI voice generator offering text-to-speech and voice cloning from $0-$330/mo. Best-in-class quality across 32+ languages."
-author: "aipedia.wiki Editorial"
+tags:
+  - tts
+  - voice-cloning
+  - text-to-speech
+  - voice-ai
+  - audio
+  - dubbing
+  - voice-agents
+seo_title: 'ElevenLabs: Features, Pricing & Review (2026)'
+meta_description: >-
+  ElevenLabs is the leading AI voice generator offering text-to-speech and voice
+  cloning from $0-$330/mo. Best-in-class quality across 32+ languages.
+author: aipedia.wiki Editorial
 ---
 
 # ElevenLabs

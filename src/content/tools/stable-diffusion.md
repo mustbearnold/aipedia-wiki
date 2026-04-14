@@ -2,16 +2,18 @@
 type: tool
 slug: stable-diffusion
 title: Stable Diffusion
-tagline: Open-source AI image generation — run locally for free, fine-tune on custom styles, no content restrictions.
+tagline: >-
+  Open-source AI image generation — run locally for free, fine-tune on custom
+  styles, no content restrictions.
 category: ai-image
-company: Stability AI (model); ecosystem includes Automatic1111, ComfyUI, InvokeAI
-url: https://stability.ai
+company: 'Stability AI (model); ecosystem includes Automatic1111, ComfyUI, InvokeAI'
+url: 'https://stability.ai'
 pricing_model: free
-price_range: "Free (open source)"
+price_range: Usage-based (API)
 status: active
 launched: 2022-08
-last_updated: 2026-04-13
-last_verified: 2026-04-13
+last_updated: 2026-04-13T00:00:00.000Z
+last_verified: '2026-04-14'
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -24,10 +26,19 @@ scores:
   value: 10
   moat: 7
   longevity: 9
-tags: [ai-image, open-source, stable-diffusion, local-ai, fine-tuning, comfyui]
-seo_title: "Stable Diffusion Review 2026: Free Open-Source AI Image Generation Guide"
-meta_description: "Stable Diffusion is free, open-source AI image generation you can run locally with no usage limits or censorship. Complete guide to SDXL, ComfyUI, LoRA fine-tuning, and hardware requirements."
-author: "aipedia.wiki Editorial"
+tags:
+  - ai-image
+  - open-source
+  - stable-diffusion
+  - local-ai
+  - fine-tuning
+  - comfyui
+seo_title: 'Stable Diffusion Review 2026: Free Open-Source AI Image Generation Guide'
+meta_description: >-
+  Stable Diffusion is free, open-source AI image generation you can run locally
+  with no usage limits or censorship. Complete guide to SDXL, ComfyUI, LoRA
+  fine-tuning, and hardware requirements.
+author: aipedia.wiki Editorial
 ---
 
 # Stable Diffusion

@@ -7,7 +7,7 @@ category: ai-notes
 company: notion
 url: https://www.notion.so/product/ai
 pricing_model: freemium
-price_range: "$0-$15/month AI add-on"
+price_range: "$0-$24/user/month"
 status: active
 launched: 2023-02
 last_updated: 2026-04-13
@@ -32,7 +32,7 @@ author: "aipedia.wiki Editorial"
 
 # Notion AI
 
-Notion AI is an AI add-on developed by Notion Labs, Inc. It layers LLM-powered features directly into the Notion workspace, including natural language Q&A across all your documents, AI autofill in databases, and a writing assistant for drafting, editing, and summarizing. Its primary differentiator is deep integration with Notion's existing workspace, databases, and connected apps. As of April 2026, AI is bundled into Plus plans at $10/month per member and Business plans at $15/month per member. Compared to Obsidian with AI plugins, Notion AI is plug-and-play but cloud-only; compared to NotebookLM, Notion AI is better for team workflows but weaker at focused document research.
+Notion AI is an LLM-powered feature layer developed by Notion Labs, Inc. It adds natural language Q&A across all your documents, AI autofill in databases, and a writing assistant for drafting, editing, and summarizing directly into the Notion workspace. Its primary differentiator is deep integration with Notion's existing workspace, databases, and connected apps. As of April 2026, Notion has consolidated AI access: the separate $8-10/month AI add-on is no longer available to new Free or Plus subscribers, and unlimited AI is now bundled into the Business tier at $20/user/month (annual) or $24/user/month (monthly). Existing Plus+AI subscribers are grandfathered at their original $10/member/month add-on pricing. Compared to Obsidian with AI plugins, Notion AI is plug-and-play but cloud-only; compared to NotebookLM, Notion AI is better for team workflows but weaker at focused document research.
 
 ## What It Does
 
@@ -48,16 +48,16 @@ Notion AI is an integrated LLM layer within Notion that provides natural languag
 
 ## Pricing
 
-Notion AI is bundled into paid Notion plans starting at $10 per month per member on the Plus tier and $15 per month per member on Business, with no separate AI add-on purchase required since Notion consolidated AI into all paid plans in 2025 ([Notion Pricing](https://www.notion.so/pricing)).
+Notion restructured AI access in mid-2025: the standalone $8-$10/member AI add-on is no longer offered to new Free or Plus users. To get Notion AI today, new users must subscribe to the Business tier ([Notion Pricing](https://www.notion.so/pricing)).
 
-| Plan | Price | Key Limits |
+| Plan | Price | AI Access |
 |------|-------|-----------|
-| Free (no AI) | $0 | Basic Notion features, no AI |
-| Plus + AI | $10/mo per member | Full workspace + AI features |
-| Business + AI | $15/mo per member | Advanced permissions, SAML SSO + AI |
-| Enterprise + AI | Custom | Enterprise security, audit log + AI |
+| Free | $0 | Basic workspace only, no AI |
+| Plus | $10/user/mo (annual) or $12/user/mo (monthly) | No AI for new users (existing +AI subscribers grandfathered at +$10/mo) |
+| Business | $20/user/mo (annual) or $24/user/mo (monthly) | **Unlimited AI included** — only path to Notion AI for new signups |
+| Enterprise | Custom | Unlimited AI + enterprise security, audit log, SAML SSO |
 
-*AI was previously a separate $8-$10/mo add-on. As of 2025, Notion bundles AI into Plus and higher plans. Prices verified 2026-04-13. Check [notion.so/pricing](https://www.notion.so/pricing) for current rates.*
+*Prices verified 2026-04-14. The Plus AI add-on was discontinued for new subscribers in May 2025; existing subscribers keep their legacy $10 Plus + $10 AI = $20/month rate. Check [notion.so/pricing](https://www.notion.so/pricing) for current rates.*
 
 ## Key Features
 
@@ -74,7 +74,7 @@ Notion AI is only useful for existing Notion users, with Q&A accuracy that degra
 - **Only useful if you're already in Notion.** This is an add-on, not a standalone product. If you don't use Notion, there's no reason to start just for the AI features.
 - **Q&A accuracy is inconsistent.** On small, well-organized workspaces it works well. On large, messy workspaces with duplicate or outdated pages, it frequently pulls wrong or outdated information. Garbage in, garbage out.
 - **AI Autofill has latency.** AI-computed database properties can take several seconds per row. On databases with hundreds of entries, this adds up.
-- **Per-member pricing adds up fast.** $10-$15/member/month for teams of 20+ people is $200-$300/month. The AI features may not justify that for every team member.
+- **Per-member pricing adds up fast.** $20-$24/member/month (Business tier, the only path to Notion AI for new users) for teams of 20+ people is $400-$480/month. The AI features may not justify that for every team member, especially when Claude or ChatGPT sits at $20/month for the individual.
 - **No local/offline AI.** Everything goes through Notion's cloud. No option to bring your own model or run locally. Privacy-sensitive workspaces can't opt out.
 - **Writing assistant is generic.** It's fine for basic drafting and editing, but it doesn't know your brand voice, writing style, or domain terminology beyond what's in your workspace.
 

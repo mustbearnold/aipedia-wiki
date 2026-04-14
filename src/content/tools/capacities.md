@@ -2,16 +2,18 @@
 type: tool
 slug: capacities
 title: Capacities
-tagline: Object-based note-taking app that treats every note as a typed object, with AI writing and organization features.
+tagline: >-
+  Object-based note-taking app that treats every note as a typed object, with AI
+  writing and organization features.
 category: ai-notes
 company: Capacities GmbH
-url: https://capacities.io
+url: 'https://capacities.io'
 pricing_model: freemium
-price_range: "Free / €9/month"
+price_range: Free - $12.49+/month
 status: active
 launched: 2021-06
-last_updated: 2026-04-14
-last_verified: 2026-04-14
+last_updated: 2026-04-14T00:00:00.000Z
+last_verified: '2026-04-14'
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -24,10 +26,17 @@ scores:
   value: 8
   moat: 7
   longevity: 7
-tags: [ai-notes, note-taking, pkm, object-based, knowledge-management]
-seo_title: "Capacities Review 2026: Object-Based Note-Taking with AI"
-meta_description: "Capacities is a note-taking app built around typed objects rather than pages. AI writing assistance is included. Free and Pro plans available. Full review."
-author: "aipedia.wiki Editorial"
+tags:
+  - ai-notes
+  - note-taking
+  - pkm
+  - object-based
+  - knowledge-management
+seo_title: 'Capacities Review 2026: Object-Based Note-Taking with AI'
+meta_description: >-
+  Capacities is a note-taking app built around typed objects rather than pages.
+  AI writing assistance is included. Free and Pro plans available. Full review.
+author: aipedia.wiki Editorial
 ---
 
 # Capacities

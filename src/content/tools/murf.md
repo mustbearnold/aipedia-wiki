@@ -2,32 +2,43 @@
 type: tool
 slug: murf
 title: Murf
-tagline: Professional AI text-to-speech for corporate narration and e-learning — 120+ studio-quality voices in 20+ languages.
+tagline: >-
+  Professional AI text-to-speech for corporate narration and e-learning — 120+
+  studio-quality voices in 20+ languages.
 category: ai-voice
 company: Murf AI Inc.
-url: https://murf.ai
+url: 'https://murf.ai'
 pricing_model: freemium
-price_range: "$0-$59/month"
+price_range: $0-$99/month
 status: active
 launched: 2020-10
-last_updated: 2026-04-13
-last_verified: 2026-04-13
+last_updated: 2026-04-13T00:00:00.000Z
+last_verified: '2026-04-14'
 update_frequency: monthly
 affiliate:
   has_program: true
-  commission: "20%"
+  commission: 20%
   cookie_days: null
-  network: "ShareASale"
+  network: ShareASale
   link: null
 scores:
   utility: 8
   value: 7
   moat: 6
   longevity: 7
-tags: [text-to-speech, tts, ai-voice, e-learning, corporate-narration, voice-cloning]
-seo_title: "Murf AI Review 2026: Pricing, Voices & How It Compares to ElevenLabs"
-meta_description: "Murf AI offers 120+ studio-quality voices for corporate narration and e-learning. See real pricing, voice cloning details, and honest comparison with ElevenLabs."
-author: "aipedia.wiki Editorial"
+tags:
+  - text-to-speech
+  - tts
+  - ai-voice
+  - e-learning
+  - corporate-narration
+  - voice-cloning
+seo_title: 'Murf AI Review 2026: Pricing, Voices & How It Compares to ElevenLabs'
+meta_description: >-
+  Murf AI offers 120+ studio-quality voices for corporate narration and
+  e-learning. See real pricing, voice cloning details, and honest comparison
+  with ElevenLabs.
+author: aipedia.wiki Editorial
 ---
 
 # Murf

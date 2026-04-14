@@ -2,32 +2,43 @@
 type: tool
 slug: descript
 title: Descript
-tagline: Audio and video editor where you edit by editing the transcript — with AI voice cloning, overdub, and filler word removal.
+tagline: >-
+  Audio and video editor where you edit by editing the transcript — with AI
+  voice cloning, overdub, and filler word removal.
 category: ai-voice
 company: Descript Inc.
-url: https://descript.com
+url: 'https://descript.com'
 pricing_model: freemium
-price_range: "$0-$30/month"
+price_range: $0-$60/month
 status: active
 launched: 2017-01
-last_updated: 2026-04-13
-last_verified: 2026-04-13
+last_updated: 2026-04-13T00:00:00.000Z
+last_verified: '2026-04-14'
 update_frequency: monthly
 affiliate:
   has_program: true
-  commission: "15%"
+  commission: 15%
   cookie_days: 30
-  network: "ShareASale"
+  network: ShareASale
   link: null
 scores:
   utility: 9
   value: 8
   moat: 8
   longevity: 8
-tags: [audio-editing, video-editing, transcription, overdub, voice-cloning, podcast-editing]
-seo_title: "Descript Review 2026: Edit Audio and Video by Editing Text"
-meta_description: "Descript lets you edit audio and video by editing the transcript — delete words from the text, delete them from the recording. Full review of Overdub voice cloning, Studio Sound, and podcast/YouTube workflow."
-author: "aipedia.wiki Editorial"
+tags:
+  - audio-editing
+  - video-editing
+  - transcription
+  - overdub
+  - voice-cloning
+  - podcast-editing
+seo_title: 'Descript Review 2026: Edit Audio and Video by Editing Text'
+meta_description: >-
+  Descript lets you edit audio and video by editing the transcript — delete
+  words from the text, delete them from the recording. Full review of Overdub
+  voice cloning, Studio Sound, and podcast/YouTube workflow.
+author: aipedia.wiki Editorial
 ---
 
 # Descript

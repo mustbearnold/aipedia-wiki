@@ -2,16 +2,18 @@
 type: tool
 slug: tabnine
 title: Tabnine
-tagline: Privacy-first AI code completion that runs locally or in the cloud, trained on permissively licensed code.
+tagline: >-
+  Privacy-first AI code completion that runs locally or in the cloud, trained on
+  permissively licensed code.
 category: ai-coding
 company: tabnine
-url: https://www.tabnine.com
+url: 'https://www.tabnine.com'
 pricing_model: freemium
-price_range: "$0-$39/month"
+price_range: Free to $5800/month
 status: active
 launched: 2019-01
-last_updated: 2026-04-14
-last_verified: 2026-04-14
+last_updated: 2026-04-14T00:00:00.000Z
+last_verified: '2026-04-14'
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -24,10 +26,18 @@ scores:
   value: 7
   moat: 5
   longevity: 6
-tags: [autocomplete, privacy, local-model, ai-coding, ide-plugin, enterprise]
-seo_title: "Tabnine: AI Code Completion Review & Pricing (2026)"
-meta_description: "Tabnine is a privacy-first AI code completion tool that runs locally or in cloud. Free tier available; Pro $12/mo, Enterprise $39/user/mo. Review 2026."
-author: "aipedia.wiki Editorial"
+tags:
+  - autocomplete
+  - privacy
+  - local-model
+  - ai-coding
+  - ide-plugin
+  - enterprise
+seo_title: 'Tabnine: AI Code Completion Review & Pricing (2026)'
+meta_description: >-
+  Tabnine is a privacy-first AI code completion tool that runs locally or in
+  cloud. Free tier available; Pro $12/mo, Enterprise $39/user/mo. Review 2026.
+author: aipedia.wiki Editorial
 ---
 
 # Tabnine

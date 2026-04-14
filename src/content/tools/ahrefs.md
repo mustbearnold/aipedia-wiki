@@ -2,16 +2,18 @@
 type: tool
 slug: ahrefs
 title: Ahrefs
-tagline: The strongest backlink analysis tool in SEO, with comprehensive keyword research, site audit, and content explorer built on top.
+tagline: >-
+  The strongest backlink analysis tool in SEO, with comprehensive keyword
+  research, site audit, and content explorer built on top.
 category: ai-seo
 company: ahrefs
-url: https://ahrefs.com
+url: 'https://ahrefs.com'
 pricing_model: paid
-price_range: "$29-$449/month"
+price_range: '$129-$1,499/month'
 status: active
 launched: 2011-01
-last_updated: 2026-04-13
-last_verified: 2026-04-13
+last_updated: 2026-04-13T00:00:00.000Z
+last_verified: '2026-04-14'
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -24,10 +26,21 @@ scores:
   value: 7
   moat: 9
   longevity: 10
-tags: [seo, backlinks, keyword-research, site-audit, content-explorer, link-building, serp-analysis, rank-tracking]
-seo_title: "Ahrefs: Features, Pricing & Review (2026)"
-meta_description: "Ahrefs has the largest backlink index in SEO with 35T+ links. Plans start at $29/mo. Best for link building, competitor backlink analysis, and keyword research."
-author: "aipedia.wiki Editorial"
+tags:
+  - seo
+  - backlinks
+  - keyword-research
+  - site-audit
+  - content-explorer
+  - link-building
+  - serp-analysis
+  - rank-tracking
+seo_title: 'Ahrefs: Features, Pricing & Review (2026)'
+meta_description: >-
+  Ahrefs has the largest backlink index in SEO with 35T+ links. Plans start at
+  $29/mo. Best for link building, competitor backlink analysis, and keyword
+  research.
+author: aipedia.wiki Editorial
 ---
 
 # Ahrefs

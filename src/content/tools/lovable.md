@@ -7,14 +7,14 @@ category: ai-design
 company: lovable
 url: https://lovable.dev
 pricing_model: freemium
-price_range: "$0-$100/month"
+price_range: "$0-$50/month"
 status: active
 launched: 2024-09
 last_updated: 2026-04-13
 last_verified: 2026-04-13
 update_frequency: monthly
 seo_title: "Lovable: Features, Pricing & Review (2026)"
-meta_description: "Lovable is an AI app builder that turns plain English into deployed full-stack web apps with Supabase backend. Free tier available; Pro costs $50/mo. Hit $40M ARR in months."
+meta_description: "Lovable is an AI app builder that turns plain English into deployed full-stack web apps with Supabase backend. Free tier available; Pro costs $25/mo, Business $50/mo. Hit $40M ARR in months."
 author: "aipedia.wiki Editorial"
 affiliate:
   has_program: true
@@ -32,11 +32,11 @@ tags: [app-builder, no-code, full-stack, supabase, deployment, prototyping, vibe
 
 # Lovable
 
-Lovable is an AI app builder developed by Lovable (formerly GPT Engineer). It turns natural language descriptions into fully deployed web applications with frontend, Supabase backend, database, and authentication, and is primarily used for building MVPs and internal tools without traditional development. Its key differentiator is the integrated Supabase backend that handles auth and database automatically. As of April 2026, Lovable reached $40M ARR, with a free tier and Pro at $50/month. Bolt.new offers a similar concept running entirely in-browser but lacks built-in backend integration.
+Lovable is an AI app builder developed by Lovable (formerly GPT Engineer). It turns natural language descriptions into fully deployed web applications with frontend, Supabase backend, database, and authentication, and is primarily used for building MVPs and internal tools without traditional development. Its key differentiator is the integrated Supabase backend that handles auth and database automatically. As of April 2026, Lovable reached $40M ARR, with a free tier (5 daily credits), Pro at $25/month (100 credits), Business at $50/month, and custom Enterprise pricing. Bolt.new offers a similar concept running entirely in-browser but lacks built-in backend integration.
 
 ## What It Does
 
-Lovable is an AI app builder that turns natural language descriptions into fully deployed web applications with frontend, Supabase backend, database, and authentication, reaching $40M ARR within months of launch and offering a free tier with Pro at $50/month for 500 generations ([Lovable](https://lovable.dev)). You describe what you want ("a project management tool with Kanban boards and team auth") and Lovable generates the frontend, connects a Supabase backend for database and authentication, and deploys it to a live URL. It supports iterative refinement: you can click on any element and ask for changes in plain English. The tool hit $40M ARR within months of launch, making it one of the fastest-growing AI products. It occupies the "vibe coding" space, building functional apps through conversation rather than traditional development ([Lovable Docs](https://docs.lovable.dev/)).
+Lovable is an AI app builder that turns natural language descriptions into fully deployed web applications with frontend, Supabase backend, database, and authentication, reaching $40M ARR within months of launch and offering a free tier with Pro at $25/month for 100 credits ([Lovable](https://lovable.dev)). You describe what you want ("a project management tool with Kanban boards and team auth") and Lovable generates the frontend, connects a Supabase backend for database and authentication, and deploys it to a live URL. It supports iterative refinement: you can click on any element and ask for changes in plain English. The tool hit $40M ARR within months of launch, making it one of the fastest-growing AI products. It occupies the "vibe coding" space, building functional apps through conversation rather than traditional development ([Lovable Docs](https://docs.lovable.dev/)).
 
 ## Who It's For
 
@@ -51,12 +51,12 @@ Lovable is an AI app builder that turns natural language descriptions into fully
 
 | Plan | Price | Key Limits |
 |------|-------|-----------|
-| Free | $0/month | Limited generations, basic features, Lovable subdomain |
-| Starter | $25/month | 100 generations/month, custom domains, Supabase integration |
-| Pro | $50/month | 500 generations/month, priority support, advanced features |
-| Teams | $100/month | Unlimited generations, team collaboration, priority queue |
+| Free | $0/month | 5 daily credits (up to 30/month), private projects, unlimited collaborators, lovable.app subdomains |
+| Pro | $25/month | 100 monthly credits, custom domains, Supabase integration, team collaboration (up to 2 members) |
+| Business | $50/month | Enhanced features including SSO, data opt-out, advanced controls |
+| Enterprise | Custom | Custom quotas, dedicated support for larger organizations |
 
-*Prices verified 2026-04-13.*
+*Prices verified 2026-04-14. Credit usage varies by request complexity — a styling change might cost 0.5 credits while building a full landing page can use 2+ credits. Check [lovable.dev/pricing](https://lovable.dev/pricing) for current rates.*
 
 ## Key Features
 

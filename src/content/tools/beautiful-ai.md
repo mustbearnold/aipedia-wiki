@@ -2,16 +2,18 @@
 type: tool
 slug: beautiful-ai
 title: Beautiful.ai
-tagline: Smart slide design tool with AI-powered layouts that automatically reflow as content changes, eliminating manual formatting.
+tagline: >-
+  Smart slide design tool with AI-powered layouts that automatically reflow as
+  content changes, eliminating manual formatting.
 category: ai-presentation
 company: Beautiful.ai
-url: https://beautiful.ai
+url: 'https://beautiful.ai'
 pricing_model: freemium
-price_range: "$0-$40/user/month"
+price_range: $0-$50/user/month
 status: active
 launched: 2015-01
-last_updated: 2026-04-14
-last_verified: 2026-04-14
+last_updated: 2026-04-14T00:00:00.000Z
+last_verified: '2026-04-14'
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -24,10 +26,20 @@ scores:
   value: 8
   moat: 7
   longevity: 7
-tags: [presentations, slides, smart-templates, layout-ai, team-collaboration, pitch-decks, design-automation]
-seo_title: "Beautiful.ai: Features, Pricing & Review (2026)"
-meta_description: "Beautiful.ai uses AI-powered smart slides that auto-reformat as you type. Pro costs $12/mo. Full review and comparison with Gamma and Canva. Updated April 2026."
-author: "aipedia.wiki Editorial"
+tags:
+  - presentations
+  - slides
+  - smart-templates
+  - layout-ai
+  - team-collaboration
+  - pitch-decks
+  - design-automation
+seo_title: 'Beautiful.ai: Features, Pricing & Review (2026)'
+meta_description: >-
+  Beautiful.ai uses AI-powered smart slides that auto-reformat as you type. Pro
+  costs $12/mo. Full review and comparison with Gamma and Canva. Updated April
+  2026.
+author: aipedia.wiki Editorial
 ---
 
 # Beautiful.ai

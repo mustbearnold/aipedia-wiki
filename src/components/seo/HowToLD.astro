@@ -1,0 +1,28 @@
+---
+// HowTo schema — helps answer engines quote procedural content directly.
+interface Step { name: string; text: string; }
+interface Props {
+  name: string;
+  description: string;
+  steps: Step[];
+  totalTime?: string; // ISO 8601 duration, e.g. "PT30M"
+}
+
+const { name, description, steps, totalTime } = Astro.props;
+
+const ld = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name,
+  description,
+  ...(totalTime ? { totalTime } : {}),
+  step: steps.map((s, i) => ({
+    '@type': 'HowToStep',
+    position: i + 1,
+    name: s.name,
+    text: s.text,
+  })),
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(ld)} />

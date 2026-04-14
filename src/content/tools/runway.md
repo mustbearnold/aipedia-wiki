@@ -8,7 +8,7 @@ secondary_categories: [ai-video-editing]
 company: runway
 url: https://runwayml.com
 pricing_model: paid
-price_range: "$15-$95/month"
+price_range: "$0-$95/month"
 status: active
 launched: 2023-03
 last_updated: 2026-04-13

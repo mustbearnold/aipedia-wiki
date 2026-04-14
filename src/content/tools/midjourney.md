@@ -7,7 +7,7 @@ category: ai-image
 company: midjourney
 url: https://midjourney.com
 pricing_model: paid
-price_range: "$10-$60/month"
+price_range: "$10-$120/month"
 status: active
 launched: 2022-07
 last_updated: 2026-04-13
@@ -32,11 +32,11 @@ author: "aipedia.wiki Editorial"
 
 # Midjourney
 
-Midjourney is an AI image generation platform developed by Midjourney, Inc. It generates images from text prompts and is primarily used for concept art, design work, marketing visuals, and creative illustration. Its key differentiator is the highest aesthetic quality of any AI image generator, with a distinctive cinematic, polished visual style. As of April 2026, Midjourney v7 is the latest model, with pricing from $10/month (Basic, ~200 images) to $60/month (Pro, stealth mode). Unlike Flux and Leonardo, Midjourney has no free tier and no public API.
+Midjourney is an AI image generation platform developed by Midjourney, Inc. It generates images from text prompts and is primarily used for concept art, design work, marketing visuals, and creative illustration. Its key differentiator is the highest aesthetic quality of any AI image generator, with a distinctive cinematic, polished visual style. As of April 2026, Midjourney v7 is the latest model, with pricing from $10/month (Basic) up through Standard ($30), Pro ($60), and Mega ($120). Unlike Flux and Leonardo, Midjourney has no free tier and no public API.
 
 ## What It Does
 
-Midjourney generates images from text prompts with the highest aesthetic quality of any AI image generator, now featuring v7 with improved prompt adherence, text rendering, and photorealism plus a full web editor with inpainting, outpainting, and style references ([Midjourney](https://midjourney.com)). The platform is no longer Discord-only and produces a distinctive cinematic, polished visual style ([Midjourney Docs](https://docs.midjourney.com)). Plans range from $10-$60/month with no free tier or public API.
+Midjourney generates images from text prompts with the highest aesthetic quality of any AI image generator, now featuring v7 with improved prompt adherence, text rendering, and photorealism plus a full web editor with inpainting, outpainting, and style references ([Midjourney](https://midjourney.com)). The platform is no longer Discord-only and produces a distinctive cinematic, polished visual style ([Midjourney Docs](https://docs.midjourney.com)). Plans range from $10-$120/month with no free tier or public API.
 
 ## Who It's For
 
@@ -49,15 +49,16 @@ Midjourney generates images from text prompts with the highest aesthetic quality
 
 ## Pricing
 
-Midjourney costs $10-$60/month with no free tier, starting at $10/month Basic (~200 fast images plus unlimited relax-mode generations) and topping out at $60/month Pro with stealth mode for private images ([Midjourney](https://midjourney.com)).
+Midjourney costs $10-$120/month with no free tier, starting at $10/month Basic (3.3 GPU hours fast mode) and topping out at $120/month Mega (~60 GPU hours fast mode + all premium features). Annual billing saves 20% across all tiers ([Midjourney](https://midjourney.com)).
 
 | Plan | Price | Fast GPU Hours | Key Limits |
 |------|-------|---------------|-----------|
-| Basic | $10/mo | 3.3 hrs/mo | ~200 images/mo on fast, unlimited on relax |
-| Standard | $30/mo | 15 hrs/mo | ~900 images/mo on fast, unlimited on relax |
-| Pro | $60/mo | 30 hrs/mo | Stealth mode, unlimited relax |
+| Basic | $10/mo | 3.3 hrs/mo | ~200 images/mo on fast, no Relax mode |
+| Standard | $30/mo | 15 hrs/mo | ~900 images/mo on fast, unlimited Relax |
+| Pro | $60/mo | 30 hrs/mo | Stealth mode (private images), unlimited Relax |
+| Mega | $120/mo | ~60 hrs/mo | All Pro features at 2x capacity |
 
-*Prices verified 2026-04-13. Check [midjourney.com](https://midjourney.com) for current rates.*
+*Prices verified 2026-04-14. Annual billing saves 20% across all tiers (Basic $8, Standard $24, Pro $48, Mega $96). Check [midjourney.com](https://midjourney.com) for current rates.*
 
 ## Key Features
 

@@ -2,16 +2,18 @@
 type: tool
 slug: cartesia
 title: Cartesia
-tagline: Ultra-low latency voice synthesis API built for real-time applications — streaming, voice agents, and interactive products.
+tagline: >-
+  Ultra-low latency voice synthesis API built for real-time applications —
+  streaming, voice agents, and interactive products.
 category: ai-voice
 company: Cartesia AI
-url: https://cartesia.ai
+url: 'https://cartesia.ai'
 pricing_model: freemium
-price_range: "$0 free tier / $49-499/month plans"
+price_range: $0-$239/month
 status: active
 launched: 2023-09
-last_updated: 2026-04-14
-last_verified: 2026-04-14
+last_updated: 2026-04-14T00:00:00.000Z
+last_verified: '2026-04-14'
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -24,10 +26,20 @@ scores:
   value: 7
   moat: 8
   longevity: 8
-tags: [ai-voice, tts, text-to-speech, real-time, voice-api, low-latency, voice-agents]
-seo_title: "Cartesia Review 2026: Low-Latency Voice Synthesis API"
-meta_description: "Cartesia is an AI voice synthesis API with sub-100ms latency, built for real-time voice agents and interactive apps. Pricing, features, and alternatives reviewed."
-author: "aipedia.wiki Editorial"
+tags:
+  - ai-voice
+  - tts
+  - text-to-speech
+  - real-time
+  - voice-api
+  - low-latency
+  - voice-agents
+seo_title: 'Cartesia Review 2026: Low-Latency Voice Synthesis API'
+meta_description: >-
+  Cartesia is an AI voice synthesis API with sub-100ms latency, built for
+  real-time voice agents and interactive apps. Pricing, features, and
+  alternatives reviewed.
+author: aipedia.wiki Editorial
 ---
 
 # Cartesia

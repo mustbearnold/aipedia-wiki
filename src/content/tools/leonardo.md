@@ -2,16 +2,18 @@
 type: tool
 slug: leonardo
 title: Leonardo AI
-tagline: The best free tier in AI image generation with 150 images per day and a beginner-friendly interface.
+tagline: >-
+  The best free tier in AI image generation with 150 images per day and a
+  beginner-friendly interface.
 category: ai-image
 company: leonardo-ai
-url: https://leonardo.ai
+url: 'https://leonardo.ai'
 pricing_model: freemium
-price_range: "$0-$24/month"
+price_range: $0-$60/month
 status: active
 launched: 2023-01
-last_updated: 2026-04-13
-last_verified: 2026-04-13
+last_updated: 2026-04-13T00:00:00.000Z
+last_verified: '2026-04-14'
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -19,16 +21,25 @@ affiliate:
   cookie_days: null
   network: null
   link: null
-  # Program closed — Leonardo stopped accepting new affiliates as of 2026-04
 scores:
   utility: 8
   value: 10
   moat: 6
   longevity: 7
-tags: [ai-image, image-generation, text-to-image, free-tier, beginner-friendly, leonardo, art, design]
-seo_title: "Leonardo AI: Features, Pricing & Review (2026)"
-meta_description: "Leonardo AI is a freemium image generator offering 150 free images/day, the most generous free tier available. Paid plans from $12 to $24/month."
-author: "aipedia.wiki Editorial"
+tags:
+  - ai-image
+  - image-generation
+  - text-to-image
+  - free-tier
+  - beginner-friendly
+  - leonardo
+  - art
+  - design
+seo_title: 'Leonardo AI: Features, Pricing & Review (2026)'
+meta_description: >-
+  Leonardo AI is a freemium image generator offering 150 free images/day, the
+  most generous free tier available. Paid plans from $12 to $24/month.
+author: aipedia.wiki Editorial
 ---
 
 # Leonardo AI

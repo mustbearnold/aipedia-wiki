@@ -2,16 +2,18 @@
 type: tool
 slug: zed
 title: Zed
-tagline: AI-first collaborative code editor built in Rust — fast, minimal, and designed for real-time pair programming.
+tagline: >-
+  AI-first collaborative code editor built in Rust — fast, minimal, and designed
+  for real-time pair programming.
 category: ai-coding
 company: zed-industries
-url: https://zed.dev
+url: 'https://zed.dev'
 pricing_model: freemium
-price_range: "$0-$10/month"
+price_range: $0 - $20+/month
 status: active
 launched: 2024-01
-last_updated: 2026-04-14
-last_verified: 2026-04-14
+last_updated: 2026-04-14T00:00:00.000Z
+last_verified: '2026-04-14'
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -24,10 +26,20 @@ scores:
   value: 8
   moat: 6
   longevity: 7
-tags: [code-editor, rust, collaborative, ai-coding, performance, open-source, linux, macos]
-seo_title: "Zed Editor: AI-First Code Editor Review & Pricing (2026)"
-meta_description: "Zed is an AI-first code editor built in Rust. Free open-source base; Zed AI with Claude ~$10/mo. Fastest editor available. Review and pricing 2026."
-author: "aipedia.wiki Editorial"
+tags:
+  - code-editor
+  - rust
+  - collaborative
+  - ai-coding
+  - performance
+  - open-source
+  - linux
+  - macos
+seo_title: 'Zed Editor: AI-First Code Editor Review & Pricing (2026)'
+meta_description: >-
+  Zed is an AI-first code editor built in Rust. Free open-source base; Zed AI
+  with Claude ~$10/mo. Fastest editor available. Review and pricing 2026.
+author: aipedia.wiki Editorial
 ---
 
 # Zed

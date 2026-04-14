@@ -2,16 +2,18 @@
 type: tool
 slug: val-town
 title: Val Town
-tagline: Browser-based TypeScript runtime where you write, run, and deploy serverless scripts with AI code generation.
+tagline: >-
+  Browser-based TypeScript runtime where you write, run, and deploy serverless
+  scripts with AI code generation.
 category: ai-coding
 company: val-town
-url: https://val.town
+url: 'https://val.town'
 pricing_model: freemium
-price_range: "$0-$10/month"
+price_range: $0 - $200+/month
 status: active
 launched: 2023-01
-last_updated: 2026-04-14
-last_verified: 2026-04-14
+last_updated: 2026-04-14T00:00:00.000Z
+last_verified: '2026-04-14'
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -24,10 +26,19 @@ scores:
   value: 9
   moat: 6
   longevity: 7
-tags: [serverless, typescript, browser-ide, ai-coding, automation, deployment, no-setup]
-seo_title: "Val Town: Browser TypeScript Runtime with AI Review (2026)"
-meta_description: "Val Town is a browser-based TypeScript runtime with AI code generation. Write, run, and deploy serverless scripts instantly. Free tier; Pro $10/mo. 2026."
-author: "aipedia.wiki Editorial"
+tags:
+  - serverless
+  - typescript
+  - browser-ide
+  - ai-coding
+  - automation
+  - deployment
+  - no-setup
+seo_title: 'Val Town: Browser TypeScript Runtime with AI Review (2026)'
+meta_description: >-
+  Val Town is a browser-based TypeScript runtime with AI code generation. Write,
+  run, and deploy serverless scripts instantly. Free tier; Pro $10/mo. 2026.
+author: aipedia.wiki Editorial
 ---
 
 # Val Town

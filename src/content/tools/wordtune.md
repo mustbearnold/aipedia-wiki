@@ -2,16 +2,18 @@
 type: tool
 slug: wordtune
 title: Wordtune
-tagline: AI rewriting and paraphrasing tool by AI21 Labs that improves tone, clarity, and flow.
+tagline: >-
+  AI rewriting and paraphrasing tool by AI21 Labs that improves tone, clarity,
+  and flow.
 category: ai-writing
 company: AI21 Labs
-url: https://wordtune.com
+url: 'https://wordtune.com'
 pricing_model: freemium
-price_range: "$0-$27.99/month"
+price_range: $0-$9.99/month
 status: active
 launched: 2020-10
-last_updated: 2026-04-14
-last_verified: 2026-04-14
+last_updated: 2026-04-14T00:00:00.000Z
+last_verified: '2026-04-14'
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -24,10 +26,18 @@ scores:
   value: 7
   moat: 5
   longevity: 6
-tags: [ai-writing, paraphrasing, rewriting, editing, ai21-labs]
-seo_title: "Wordtune Review: Is AI21 Labs' Rewriting Tool Worth It in 2026?"
-meta_description: "Wordtune by AI21 Labs rewrites and paraphrases text for tone and clarity. Free 10 rewrites/day; Plus $13.99/mo. Honest review of features, pricing, and alternatives."
-author: "aipedia.wiki Editorial"
+tags:
+  - ai-writing
+  - paraphrasing
+  - rewriting
+  - editing
+  - ai21-labs
+seo_title: 'Wordtune Review: Is AI21 Labs'' Rewriting Tool Worth It in 2026?'
+meta_description: >-
+  Wordtune by AI21 Labs rewrites and paraphrases text for tone and clarity. Free
+  10 rewrites/day; Plus $13.99/mo. Honest review of features, pricing, and
+  alternatives.
+author: aipedia.wiki Editorial
 ---
 
 # Wordtune

@@ -2,32 +2,42 @@
 type: tool
 slug: adobe-firefly
 title: Adobe Firefly
-tagline: Adobe's commercially safe AI image generation, trained on licensed and public domain content.
+tagline: >-
+  Adobe's commercially safe AI image generation, trained on licensed and public
+  domain content.
 category: ai-image
 company: Adobe
-url: https://firefly.adobe.com
+url: 'https://firefly.adobe.com'
 pricing_model: freemium
-price_range: "$0-$29.99/month"
+price_range: $0-$199.99/month
 status: active
 launched: 2023-03
-last_updated: 2026-04-13
-last_verified: 2026-04-13
+last_updated: 2026-04-13T00:00:00.000Z
+last_verified: '2026-04-14'
 update_frequency: monthly
 affiliate:
   has_program: true
-  commission: "~85% first month"
+  commission: ~85% first month
   cookie_days: 30
-  network: "CJ Affiliate"
+  network: CJ Affiliate
   link: null
 scores:
   utility: 7
   value: 7
   moat: 8
   longevity: 9
-tags: [ai-image, adobe, commercially-safe, creative-cloud, generative-ai]
-seo_title: "Adobe Firefly Review 2026: Commercially Safe AI Image Generation"
-meta_description: "Adobe Firefly is the only major AI image generator trained exclusively on licensed Adobe Stock and public domain content — making outputs commercially safe. Full review with pricing, pros, and cons."
-author: "aipedia.wiki Editorial"
+tags:
+  - ai-image
+  - adobe
+  - commercially-safe
+  - creative-cloud
+  - generative-ai
+seo_title: 'Adobe Firefly Review 2026: Commercially Safe AI Image Generation'
+meta_description: >-
+  Adobe Firefly is the only major AI image generator trained exclusively on
+  licensed Adobe Stock and public domain content — making outputs commercially
+  safe. Full review with pricing, pros, and cons.
+author: aipedia.wiki Editorial
 ---
 
 # Adobe Firefly

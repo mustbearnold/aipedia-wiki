@@ -2,16 +2,18 @@
 type: tool
 slug: seedance
 title: Seedance 2.0
-tagline: ByteDance's AI video generator with strong motion quality and character consistency.
+tagline: >-
+  ByteDance's AI video generator with strong motion quality and character
+  consistency.
 category: ai-video
 company: bytedance
-url: https://seedance.ai
+url: 'https://seedance.ai'
 pricing_model: freemium
-price_range: "$0-$30/month"
+price_range: $13.93/month - $62.9/month
 status: active
 launched: 2025-06
-last_updated: 2026-04-13
-last_verified: 2026-04-13
+last_updated: 2026-04-13T00:00:00.000Z
+last_verified: '2026-04-14'
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -24,10 +26,19 @@ scores:
   value: 9
   moat: 7
   longevity: 8
-tags: [ai-video, video-generation, text-to-video, image-to-video, bytedance, seedance, character-consistency]
-seo_title: "Seedance 2.0: Features, Pricing & Review (2026)"
-meta_description: "Seedance 2.0 is ByteDance's AI video generator excelling at motion quality and character consistency. Free tier available; paid plans from $10-$30/mo."
-author: "aipedia.wiki Editorial"
+tags:
+  - ai-video
+  - video-generation
+  - text-to-video
+  - image-to-video
+  - bytedance
+  - seedance
+  - character-consistency
+seo_title: 'Seedance 2.0: Features, Pricing & Review (2026)'
+meta_description: >-
+  Seedance 2.0 is ByteDance's AI video generator excelling at motion quality and
+  character consistency. Free tier available; paid plans from $10-$30/mo.
+author: aipedia.wiki Editorial
 ---
 
 # Seedance 2.0

@@ -2,20 +2,22 @@
 type: tool
 slug: invideo
 title: InVideo AI
-tagline: Text-to-video platform that turns scripts and prompts into YouTube-ready videos with AI voiceover.
+tagline: >-
+  Text-to-video platform that turns scripts and prompts into YouTube-ready
+  videos with AI voiceover.
 category: ai-video
 company: InVideo
-url: https://invideo.io
+url: 'https://invideo.io'
 pricing_model: freemium
-price_range: "$0-$60/month"
+price_range: $25-$200/month
 status: active
 launched: 2019-07
-last_updated: 2026-04-14
-last_verified: 2026-04-14
+last_updated: 2026-04-14T00:00:00.000Z
+last_verified: '2026-04-14'
 update_frequency: monthly
 affiliate:
   has_program: true
-  commission: "25%"
+  commission: 25%
   cookie_days: 30
   network: null
   link: null
@@ -24,10 +26,19 @@ scores:
   value: 7
   moat: 6
   longevity: 7
-tags: [ai-video, text-to-video, youtube, social-media, voiceover, templates, content-creation]
-seo_title: "InVideo AI: Features, Pricing & Review (2026)"
-meta_description: "InVideo AI turns text prompts into YouTube and social media videos with AI voiceover and templates. Plans from free to $60/month. Reviewed April 2026."
-author: "aipedia.wiki Editorial"
+tags:
+  - ai-video
+  - text-to-video
+  - youtube
+  - social-media
+  - voiceover
+  - templates
+  - content-creation
+seo_title: 'InVideo AI: Features, Pricing & Review (2026)'
+meta_description: >-
+  InVideo AI turns text prompts into YouTube and social media videos with AI
+  voiceover and templates. Plans from free to $60/month. Reviewed April 2026.
+author: aipedia.wiki Editorial
 ---
 
 # InVideo AI

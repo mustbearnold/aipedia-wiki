@@ -2,16 +2,18 @@
 type: tool
 slug: you-com
 title: You.com
-tagline: AI search engine with dedicated Research, Code, and Write modes for deeper, task-focused results.
+tagline: >-
+  AI search engine with dedicated Research, Code, and Write modes for deeper,
+  task-focused results.
 category: ai-search
 company: you-com
-url: https://you.com
+url: 'https://you.com'
 pricing_model: freemium
-price_range: "$0-$20/month"
+price_range: $0 (trial) - $200/month
 status: active
 launched: 2020-11
-last_updated: 2026-04-14
-last_verified: 2026-04-14
+last_updated: 2026-04-14T00:00:00.000Z
+last_verified: '2026-04-14'
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -24,10 +26,20 @@ scores:
   value: 8
   moat: 5
   longevity: 6
-tags: [search-engine, ai-search, research, coding, privacy, answer-engine, web-search]
-seo_title: "You.com: Features, Pricing & Review (2026)"
-meta_description: "You.com is an AI search engine with Research, Code, and Write modes. Free tier available; Pro is $20/mo. Competes with Perplexity for cited AI-powered search results."
-author: "aipedia.wiki Editorial"
+tags:
+  - search-engine
+  - ai-search
+  - research
+  - coding
+  - privacy
+  - answer-engine
+  - web-search
+seo_title: 'You.com: Features, Pricing & Review (2026)'
+meta_description: >-
+  You.com is an AI search engine with Research, Code, and Write modes. Free tier
+  available; Pro is $20/mo. Competes with Perplexity for cited AI-powered search
+  results.
+author: aipedia.wiki Editorial
 ---
 
 # You.com

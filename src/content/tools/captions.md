@@ -2,16 +2,18 @@
 type: tool
 slug: captions
 title: Captions.ai
-tagline: AI-powered video creation and editing app for creators, with auto-captions, AI avatars, and one-tap editing.
+tagline: >-
+  AI-powered video creation and editing app for creators, with auto-captions, AI
+  avatars, and one-tap editing.
 category: ai-video
 company: Captions AI Inc.
-url: https://www.captions.ai
+url: 'https://www.captions.ai'
 pricing_model: freemium
-price_range: "$0-$49.99/month"
+price_range: $0-$279.99/month
 status: active
 launched: 2021-01
-last_updated: 2026-04-14
-last_verified: 2026-04-14
+last_updated: 2026-04-14T00:00:00.000Z
+last_verified: '2026-04-14'
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -24,10 +26,21 @@ scores:
   value: 7
   moat: 6
   longevity: 7
-tags: [ai-video, captions, auto-captions, video-editing, ai-avatar, creator-tools, social-media, tiktok]
-seo_title: "Captions.ai: Features, Pricing & Review (2026)"
-meta_description: "Captions.ai is an AI video editing app with auto-captions, AI avatars, and one-tap editing for social media creators. Free to $49.99/month. Reviewed April 2026."
-author: "aipedia.wiki Editorial"
+tags:
+  - ai-video
+  - captions
+  - auto-captions
+  - video-editing
+  - ai-avatar
+  - creator-tools
+  - social-media
+  - tiktok
+seo_title: 'Captions.ai: Features, Pricing & Review (2026)'
+meta_description: >-
+  Captions.ai is an AI video editing app with auto-captions, AI avatars, and
+  one-tap editing for social media creators. Free to $49.99/month. Reviewed
+  April 2026.
+author: aipedia.wiki Editorial
 ---
 
 # Captions.ai

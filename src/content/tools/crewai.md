@@ -2,20 +2,25 @@
 type: tool
 slug: crewai
 title: CrewAI
-tagline: Open-source Python framework for building and orchestrating teams of AI agents that collaborate on complex tasks.
+tagline: >-
+  Open-source Python framework for building and orchestrating teams of AI agents
+  that collaborate on complex tasks.
 category: ai-automation
 company: crewai
-url: https://www.crewai.com
+url: 'https://www.crewai.com'
 pricing_model: open-source
-price_range: "Free (open-source) / $0-$200+/month (hosted)"
+price_range: Free / Custom (with per-execution costs)
 status: active
 launched: 2023-12
-last_updated: 2026-04-13
-last_verified: 2026-04-13
+last_updated: 2026-04-13T00:00:00.000Z
+last_verified: '2026-04-14'
 update_frequency: monthly
-seo_title: "CrewAI: Features, Pricing & Review (2026)"
-meta_description: "CrewAI is a free open-source Python framework for building multi-agent AI systems. Hosted plans start at $35/mo. Best for developers needing structured agent orchestration."
-author: "aipedia.wiki Editorial"
+seo_title: 'CrewAI: Features, Pricing & Review (2026)'
+meta_description: >-
+  CrewAI is a free open-source Python framework for building multi-agent AI
+  systems. Hosted plans start at $35/mo. Best for developers needing structured
+  agent orchestration.
+author: aipedia.wiki Editorial
 affiliate:
   has_program: false
   commission: null
@@ -27,7 +32,14 @@ scores:
   value: 8
   moat: 6
   longevity: 6
-tags: [ai-agents, multi-agent, open-source, python, orchestration, framework, developer]
+tags:
+  - ai-agents
+  - multi-agent
+  - open-source
+  - python
+  - orchestration
+  - framework
+  - developer
 ---
 
 # CrewAI

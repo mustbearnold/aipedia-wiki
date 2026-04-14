@@ -2,16 +2,18 @@
 type: tool
 slug: playground-ai
 title: Playground AI
-tagline: Design-focused AI image generation platform with Playground v3 model and canvas editing tools.
+tagline: >-
+  Design-focused AI image generation platform with Playground v3 model and
+  canvas editing tools.
 category: ai-image
 company: Playground AI
-url: https://playground.com
+url: 'https://playground.com'
 pricing_model: freemium
-price_range: "$0-$15/month"
+price_range: $0-$79.99/month
 status: active
 launched: 2022-07
-last_updated: 2026-04-14
-last_verified: 2026-04-14
+last_updated: 2026-04-14T00:00:00.000Z
+last_verified: '2026-04-14'
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -24,10 +26,18 @@ scores:
   value: 9
   moat: 6
   longevity: 6
-tags: [ai-image, image-generation, design-tools, canvas-editor, playground-v3]
-seo_title: "Playground AI Review: Design-Focused Image Generation (2026)"
-meta_description: "Playground AI offers Playground v3 image generation with canvas editing. Free 100 images/day; Pro $15/mo. Honest review of features, pricing, and alternatives."
-author: "aipedia.wiki Editorial"
+tags:
+  - ai-image
+  - image-generation
+  - design-tools
+  - canvas-editor
+  - playground-v3
+seo_title: 'Playground AI Review: Design-Focused Image Generation (2026)'
+meta_description: >-
+  Playground AI offers Playground v3 image generation with canvas editing. Free
+  100 images/day; Pro $15/mo. Honest review of features, pricing, and
+  alternatives.
+author: aipedia.wiki Editorial
 ---
 
 # Playground AI

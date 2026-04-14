@@ -2,16 +2,18 @@
 type: tool
 slug: replit-agent
 title: Replit Agent
-tagline: Browser-based AI app builder that creates, runs, and deploys full applications without local development setup.
+tagline: >-
+  Browser-based AI app builder that creates, runs, and deploys full applications
+  without local development setup.
 category: ai-coding
 company: replit
-url: https://replit.com
+url: 'https://replit.com'
 pricing_model: freemium
-price_range: "$0-$40/month"
+price_range: $0-$100+/month
 status: active
 launched: 2024-09
-last_updated: 2026-04-13
-last_verified: 2026-04-13
+last_updated: 2026-04-13T00:00:00.000Z
+last_verified: '2026-04-14'
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -24,10 +26,20 @@ scores:
   value: 7
   moat: 7
   longevity: 7
-tags: [browser-ide, app-builder, no-local-setup, ai-coding, deployment, non-developer, replit]
-seo_title: "Replit Agent: Features, Pricing & Review (2026)"
-meta_description: "Replit Agent is a browser-based AI app builder that creates and deploys full applications from natural language. Free tier available; paid plans from $20/mo."
-author: "aipedia.wiki Editorial"
+tags:
+  - browser-ide
+  - app-builder
+  - no-local-setup
+  - ai-coding
+  - deployment
+  - non-developer
+  - replit
+seo_title: 'Replit Agent: Features, Pricing & Review (2026)'
+meta_description: >-
+  Replit Agent is a browser-based AI app builder that creates and deploys full
+  applications from natural language. Free tier available; paid plans from
+  $20/mo.
+author: aipedia.wiki Editorial
 ---
 
 # Replit Agent

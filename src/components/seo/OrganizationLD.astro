@@ -1,0 +1,46 @@
+---
+// Publisher Organization schema — used on About and root pages to establish
+// E-E-A-T entity for search and answer engines.
+interface Props {
+  url?: string;
+}
+
+const { url = 'https://aipedia.wiki' } = Astro.props;
+
+const org = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  '@id': 'https://aipedia.wiki/#organization',
+  name: 'aipedia.wiki',
+  alternateName: 'aipedia.wiki Editorial',
+  url,
+  logo: {
+    '@type': 'ImageObject',
+    url: 'https://aipedia.wiki/favicon.svg',
+    width: 512,
+    height: 512,
+  },
+  description:
+    'aipedia.wiki is an independent editorial encyclopedia of AI tools. Every tool is reviewed, scored across four dimensions (Utility, Value, Moat, Longevity), and re-verified monthly.',
+  foundingDate: '2025',
+  knowsAbout: [
+    'Artificial Intelligence Tools',
+    'AI Writing Tools',
+    'AI Coding Tools',
+    'AI Image Generation',
+    'AI Video Generation',
+    'AI Voice Synthesis',
+    'AI Automation',
+    'AI Search Engines',
+    'AI SEO Tools',
+    'AI Design Tools',
+  ],
+  publishingPrinciples: 'https://aipedia.wiki/about/',
+  correctionsPolicy: 'https://aipedia.wiki/about/#corrections--contact',
+  ethicsPolicy: 'https://aipedia.wiki/about/',
+  diversityPolicy: 'https://aipedia.wiki/about/',
+  actionableFeedbackPolicy: 'https://aipedia.wiki/about/#corrections--contact',
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(org)} />

@@ -7,7 +7,7 @@ category: ai-video
 company: Synthesia Ltd.
 url: https://synthesia.io
 pricing_model: paid
-price_range: "$18-$64/month"
+price_range: "$0-$89/month"
 status: active
 launched: 2017-01
 last_updated: 2026-04-13
@@ -48,13 +48,14 @@ Synthesia's core workflow is script-to-video: paste or type your text, assign it
 
 ## Pricing
 
-| Plan | Price | Video/Month | Notes |
-|------|-------|-------------|-------|
-| Personal | $18/mo (annual) | 10 minutes | 1 custom avatar, basic templates |
-| Creator | $64/mo (annual) | 30 minutes | 5 custom avatars, brand kit |
-| Enterprise | Custom | Unlimited | SSO, API, custom avatars, SLA |
+| Plan | Price (monthly) | Price (annual) | Video/Month | Notes |
+|------|-----------------|----------------|-------------|-------|
+| Free | $0 | $0 | 3 minutes | 9 avatars, watermarked |
+| Starter | $29/mo | $18/mo | 10 minutes | 125+ avatars, 3 personal avatars |
+| Creator | $89/mo | $64/mo | 30 minutes | 180+ avatars, 5 personal avatars, advanced features |
+| Enterprise | Custom | Custom | Unlimited | 230+ avatars, API, SLA, SSO |
 
-*Prices verified 2026-04-13. Monthly billing available at higher rates. Enterprise pricing requires a sales call.*
+*Prices verified 2026-04-14. Annual billing saves approximately 38% on Starter and 28% on Creator. Enterprise pricing requires a sales call.*
 
 ## Key Features
 
@@ -68,7 +69,7 @@ Synthesia's core workflow is script-to-video: paste or type your text, assign it
 ## Limitations
 
 - Avatars exhibit subtle uncanny valley characteristics at full HD — slightly mechanical blinking, micro-expression inconsistencies, and stiff shoulder movement that read as artificial on close inspection
-- 10 minutes of video per month on the Personal plan is restrictive; a single 5-minute training module leaves minimal buffer for revisions
+- 10 minutes of video per month on the Starter plan is restrictive; a single 5-minute training module leaves minimal buffer for revisions
 - Synthesia is purpose-built for corporate presenter-style video; it is not a general-purpose AI video tool and does not support cinematic generation, animation, or complex visual storytelling
 - Custom avatar creation requires recording a consent video in a controlled environment and uploading it for processing — typically 24-48 hour turnaround; not instant
 - Lacks the creative visual dynamism of live-action video; motion, set design, and visual variety are limited to avatar talking-head plus slide backgrounds

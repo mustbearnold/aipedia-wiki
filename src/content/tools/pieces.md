@@ -2,16 +2,18 @@
 type: tool
 slug: pieces
 title: Pieces for Developers
-tagline: AI-powered developer workflow tool that captures, organizes, and resurfaces code snippets and context across tools.
+tagline: >-
+  AI-powered developer workflow tool that captures, organizes, and resurfaces
+  code snippets and context across tools.
 category: ai-coding
 company: pieces
-url: https://pieces.app
+url: 'https://pieces.app'
 pricing_model: freemium
-price_range: "$0-$8/month"
+price_range: $0-$18.99/month
 status: active
 launched: 2022-04
-last_updated: 2026-04-14
-last_verified: 2026-04-14
+last_updated: 2026-04-14T00:00:00.000Z
+last_verified: '2026-04-14'
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -24,10 +26,20 @@ scores:
   value: 8
   moat: 6
   longevity: 7
-tags: [snippet-manager, workflow, ai-coding, context, developer-tools, vscode, jetbrains, chrome]
-seo_title: "Pieces for Developers: AI Snippet Manager Review (2026)"
-meta_description: "Pieces for Developers is an AI-powered snippet manager and workflow tool. Free for individuals; Teams $8/user/mo. Captures context across tools. Review 2026."
-author: "aipedia.wiki Editorial"
+tags:
+  - snippet-manager
+  - workflow
+  - ai-coding
+  - context
+  - developer-tools
+  - vscode
+  - jetbrains
+  - chrome
+seo_title: 'Pieces for Developers: AI Snippet Manager Review (2026)'
+meta_description: >-
+  Pieces for Developers is an AI-powered snippet manager and workflow tool. Free
+  for individuals; Teams $8/user/mo. Captures context across tools. Review 2026.
+author: aipedia.wiki Editorial
 ---
 
 # Pieces for Developers

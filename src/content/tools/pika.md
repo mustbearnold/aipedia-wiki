@@ -2,16 +2,18 @@
 type: tool
 slug: pika
 title: Pika Labs
-tagline: AI video generation from text and image prompts with a strong focus on creative control.
+tagline: >-
+  AI video generation from text and image prompts with a strong focus on
+  creative control.
 category: ai-video
 company: Pika Labs
-url: https://pika.art
+url: 'https://pika.art'
 pricing_model: freemium
-price_range: "$0-$28/month"
+price_range: $0-$95/month
 status: active
 launched: 2023-11
-last_updated: 2026-04-14
-last_verified: 2026-04-14
+last_updated: 2026-04-14T00:00:00.000Z
+last_verified: '2026-04-14'
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -24,10 +26,19 @@ scores:
   value: 7
   moat: 6
   longevity: 7
-tags: [ai-video, text-to-video, image-to-video, video-generation, creative, short-video]
-seo_title: "Pika Labs: Features, Pricing & Review (2026)"
-meta_description: "Pika Labs generates AI video from text and image prompts. Free plan with 150 credits/month. Honest review of features, pricing, and limitations as of April 2026."
-author: "aipedia.wiki Editorial"
+tags:
+  - ai-video
+  - text-to-video
+  - image-to-video
+  - video-generation
+  - creative
+  - short-video
+seo_title: 'Pika Labs: Features, Pricing & Review (2026)'
+meta_description: >-
+  Pika Labs generates AI video from text and image prompts. Free plan with 150
+  credits/month. Honest review of features, pricing, and limitations as of April
+  2026.
+author: aipedia.wiki Editorial
 ---
 
 # Pika Labs

@@ -2,16 +2,18 @@
 type: tool
 slug: windsurf
 title: Windsurf
-tagline: AI-powered code editor (formerly Codeium) with autocomplete, chat, and agentic flows at a budget-friendly price.
+tagline: >-
+  AI-powered code editor (formerly Codeium) with autocomplete, chat, and agentic
+  flows at a budget-friendly price.
 category: ai-coding
 company: openai
-url: https://windsurf.com
+url: 'https://windsurf.com'
 pricing_model: freemium
-price_range: "$0-$30/month"
+price_range: $0-$200/month
 status: active
 launched: 2024-11
-last_updated: 2026-04-13
-last_verified: 2026-04-13
+last_updated: 2026-04-13T00:00:00.000Z
+last_verified: '2026-04-14'
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -24,10 +26,19 @@ scores:
   value: 8
   moat: 5
   longevity: 6
-tags: [code-editor, ide, autocomplete, ai-coding, vscode-fork, agentic-coding, budget]
-seo_title: "Windsurf: Features, Pricing & Review (2026)"
-meta_description: "Windsurf (formerly Codeium) is a VS Code fork with AI autocomplete, chat, and agentic Cascade flows. Free tier available; Pro plan $15/mo."
-author: "aipedia.wiki Editorial"
+tags:
+  - code-editor
+  - ide
+  - autocomplete
+  - ai-coding
+  - vscode-fork
+  - agentic-coding
+  - budget
+seo_title: 'Windsurf: Features, Pricing & Review (2026)'
+meta_description: >-
+  Windsurf (formerly Codeium) is a VS Code fork with AI autocomplete, chat, and
+  agentic Cascade flows. Free tier available; Pro plan $15/mo.
+author: aipedia.wiki Editorial
 ---
 
 # Windsurf

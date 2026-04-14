@@ -7,7 +7,7 @@ category: ai-automation
 company: n8n-gmbh
 url: https://n8n.io
 pricing_model: freemium
-price_range: "$0 (self-host) - $50/month (cloud)"
+price_range: "$0 (self-host) - $800/month (Business cloud)"
 status: active
 launched: 2019-06
 last_updated: 2026-04-13
@@ -18,7 +18,8 @@ affiliate:
   commission: "30% recurring"
   cookie_days: 90
   network: direct
-  link: https://n8n.io/affiliates
+  link: null
+  application_status: declined-2026-04-15
 scores:
   utility: 9
   value: 10
@@ -32,7 +33,7 @@ author: "aipedia.wiki Editorial"
 
 # n8n
 
-n8n is an open-source workflow automation platform developed by n8n GmbH. It enables users to build visual automation workflows with 400+ integrations and is primarily used for AI-powered business automation, including autonomous AI agents via its native agent nodes. Its key differentiator is the combination of open-source self-hosting with drag-and-drop AI agent building. As of April 2026, n8n is free to self-host with unlimited workflows, or available as a managed cloud service from $20/month. Compared to Zapier, n8n has fewer integrations (400+ vs 6,000+) but offers self-hosting, native AI agents, and dramatically lower cost at scale.
+n8n is an open-source workflow automation platform developed by n8n GmbH. It enables users to build visual automation workflows with 400+ integrations and is primarily used for AI-powered business automation, including autonomous AI agents via its native agent nodes. Its key differentiator is the combination of open-source self-hosting with drag-and-drop AI agent building. As of April 2026, n8n is free to self-host with unlimited workflows, or available as a managed cloud service from $24/month (Starter, 2,500 executions) through $60/month (Pro, 10,000 executions) up to $800/month (Business, 40,000 executions). Compared to Zapier, n8n has fewer integrations (400+ vs 6,000+) but offers self-hosting, native AI agents, and dramatically lower cost at scale.
 
 ## What It Does
 
@@ -47,13 +48,14 @@ n8n is an open-source, self-hostable visual workflow automation platform with 40
 
 ## Pricing
 
-n8n is free to self-host with unlimited workflows and executions, or $20-$50/month for managed cloud hosting with execution-based limits ([n8n Pricing](https://n8n.io/pricing)).
+n8n is free to self-host with unlimited workflows and executions, or $24-$800/month for managed cloud hosting with execution-based limits ([n8n Pricing](https://n8n.io/pricing)).
 
 | Plan | Price | Key Limits |
 |------|-------|-----------|
 | Community (self-host) | $0 | Unlimited workflows, unlimited executions |
-| Starter (cloud) | $20/mo | 2,500 executions, 5 active workflows |
-| Pro (cloud) | $50/mo | 10,000 executions, 15 active workflows |
+| Starter (cloud) | $24/mo | 2,500 executions, unlimited workflows/users |
+| Pro (cloud) | $60/mo | 10,000 executions, admin features |
+| Business (cloud) | $800/mo | 40,000 executions, SSO, advanced permissions |
 | Enterprise | Custom | Unlimited, SSO, audit logs, dedicated support |
 
 *Prices verified 2026-04-13. Check [n8n.io/pricing](https://n8n.io/pricing) for current rates.*

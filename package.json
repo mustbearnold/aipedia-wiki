@@ -18,7 +18,12 @@
     "wiki:extract": "bash ../wikis/_meta/run.sh extract",
     "wiki:signals": "bash ../wikis/_meta/run.sh signals",
     "wiki:stale": "bash ../wikis/_meta/run.sh report",
-    "wiki:check": "bash ../wikis/_meta/run.sh check"
+    "wiki:check": "bash ../wikis/_meta/run.sh check",
+    "wiki:verify-prices": "bash ../wikis/_meta/run.sh verify-prices",
+    "wiki:verify-prices:fix": "bash ../wikis/_meta/run.sh verify-prices-fix",
+    "wiki:verify-claims": "bash ../wikis/_meta/run.sh verify-claims",
+    "wiki:research-tool": "bash ../wikis/_meta/run.sh research-tool",
+    "wiki:research": "bash ../wikis/_meta/run.sh bulk-research"
   },
   "dependencies": {
     "@astrojs/cloudflare": "^13.1.9",

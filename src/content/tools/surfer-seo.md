@@ -2,32 +2,44 @@
 type: tool
 slug: surfer-seo
 title: Surfer SEO
-tagline: AI content optimization platform that analyzes top-ranking pages and scores your content for search performance.
+tagline: >-
+  AI content optimization platform that analyzes top-ranking pages and scores
+  your content for search performance.
 category: ai-seo
 company: surfer
-url: https://surferseo.com
+url: 'https://surferseo.com'
 pricing_model: paid
-price_range: "$79-$219/month"
+price_range: $49-$999/month
 status: active
 launched: 2019-06
-last_updated: 2026-04-13
-last_verified: 2026-04-13
+last_updated: 2026-04-13T00:00:00.000Z
+last_verified: '2026-04-14'
 update_frequency: monthly
 affiliate:
   has_program: true
-  commission: "25% lifetime recurring"
+  commission: 25% lifetime recurring
   cookie_days: 60
   network: direct
-  link: https://surferseo.com/affiliate
+  link: 'https://surferseo.com/affiliate'
 scores:
   utility: 8
   value: 7
   moat: 7
   longevity: 8
-tags: [seo, content-optimization, on-page-seo, content-editor, serp-analysis, nlp, keyword-density]
-seo_title: "Surfer SEO: Features, Pricing & Review (2026)"
-meta_description: "Surfer SEO is an AI content optimization platform starting at $79/mo that scores your content against top-ranking pages. Best for on-page SEO with real-time NLP-based content scoring."
-author: "aipedia.wiki Editorial"
+tags:
+  - seo
+  - content-optimization
+  - on-page-seo
+  - content-editor
+  - serp-analysis
+  - nlp
+  - keyword-density
+seo_title: 'Surfer SEO: Features, Pricing & Review (2026)'
+meta_description: >-
+  Surfer SEO is an AI content optimization platform starting at $79/mo that
+  scores your content against top-ranking pages. Best for on-page SEO with
+  real-time NLP-based content scoring.
+author: aipedia.wiki Editorial
 ---
 
 # Surfer SEO

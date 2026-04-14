@@ -2,32 +2,44 @@
 type: tool
 slug: make
 title: Make
-tagline: Visual workflow automation platform (formerly Integromat) for building complex multi-step integrations at scale.
+tagline: >-
+  Visual workflow automation platform (formerly Integromat) for building complex
+  multi-step integrations at scale.
 category: ai-automation
 company: make-formerly-integromat
-url: https://www.make.com
+url: 'https://www.make.com'
 pricing_model: freemium
-price_range: "$0-$145+/month"
+price_range: $0-$34.12+/month
 status: active
 launched: 2012-01
-last_updated: 2026-04-13
-last_verified: 2026-04-13
+last_updated: 2026-04-13T00:00:00.000Z
+last_verified: '2026-04-14'
 update_frequency: monthly
 affiliate:
   has_program: true
-  commission: "~20% recurring"
+  commission: ~20% recurring
   cookie_days: 120
-  network: "In-house / PartnerStack"
-  link: https://www.make.com/en/affiliate
+  network: In-house / PartnerStack
+  link: null
+  application_status: declined-2026-04-15
 scores:
   utility: 8
   value: 8
   moat: 7
   longevity: 8
-tags: [automation, workflow, integrations, no-code, visual-builder, integromat, api]
-seo_title: "Make (Integromat): Features, Pricing & Review (2026)"
-meta_description: "Make (formerly Integromat) is a visual workflow automation platform with 700+ integrations. Free tier available; paid plans from $9 to $145+/month."
-author: "aipedia.wiki Editorial"
+tags:
+  - automation
+  - workflow
+  - integrations
+  - no-code
+  - visual-builder
+  - integromat
+  - api
+seo_title: 'Make (Integromat): Features, Pricing & Review (2026)'
+meta_description: >-
+  Make (formerly Integromat) is a visual workflow automation platform with 700+
+  integrations. Free tier available; paid plans from $9 to $145+/month.
+author: aipedia.wiki Editorial
 ---
 
 # Make

@@ -7,7 +7,7 @@ category: ai-writing
 company: Rytr
 url: https://rytr.me
 pricing_model: freemium
-price_range: "$0-$29/month"
+price_range: "$0-$24.16/month"
 status: active
 launched: 2021-04
 last_updated: 2026-04-14

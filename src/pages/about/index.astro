@@ -1,5 +1,8 @@
 ---
 import ArticleLayout from '../../layouts/ArticleLayout.astro';
+import OrganizationLD from '../../components/seo/OrganizationLD.astro';
+import AboutPageLD from '../../components/seo/AboutPageLD.astro';
+import FAQPageLD from '../../components/seo/FAQPageLD.astro';
 import { getCollection } from 'astro:content';
 
 const allTools = await getCollection('tools');
@@ -7,98 +10,265 @@ const allComparisons = await getCollection('comparisons');
 const allCategories = await getCollection('categories');
 const allDead = await getCollection('dead');
 const allUseCases = await getCollection('use-cases');
+
+// Freshness signal — update when editorial policy materially changes
+const LAST_REVIEWED = '2026-04-15';
+const LAST_REVIEWED_HUMAN = 'April 15, 2026';
+
+const stats = [
+  { value: allTools.length, label: 'Tool reviews' },
+  { value: allCategories.length, label: 'Categories' },
+  { value: allComparisons.length, label: 'Comparisons' },
+  { value: allUseCases.length, label: 'Use-case guides' },
+];
+
+const processSteps = [
+  {
+    n: 1,
+    title: 'Primary-source research',
+    body: "Pricing, feature claims, company information, and launch dates are pulled from each tool's official website, changelog, and API documentation — not third-party blog summaries or aggregator listings.",
+  },
+  {
+    n: 2,
+    title: 'Hands-on evaluation',
+    body: 'Where practical, editors test tools on real work — not marketing demos. When a tool is enterprise-gated or prohibitively expensive, we disclose that limitation in the review rather than fake experience.',
+  },
+  {
+    n: 3,
+    title: 'Four-dimension scoring',
+    body: 'Each tool is scored on Utility, Value, Moat, and Longevity on a 1–10 scale. Scores are deliberate, comparative, and non-inflated. Full methodology on the scoring page.',
+  },
+  {
+    n: 4,
+    title: 'Dated cross-references',
+    body: 'Every claim that can become outdated — pricing, context windows, feature availability — is cited inline and stamped with a verification date on every tool page.',
+  },
+  {
+    n: 5,
+    title: 'Monthly re-verification',
+    body: 'High-traffic tool pages are re-checked monthly. When a tool ships a material update, changes pricing, or shuts down, we update the page the same week.',
+  },
+];
+
+const principles = [
+  { title: 'Evidence over opinion', body: "No claim without a source. If we can't verify it, we don't publish it." },
+  { title: 'Honest, comparative scoring', body: 'We do not inflate 10s for tools that are not category-leading, and we do not hide 4s and 5s when a tool is weak on the dimension being measured.' },
+  { title: 'No promotional language in reviews', body: 'Commissions, referral bonuses, and partnership perks are never mentioned inside a review. Affiliate relationships are disclosed sitewide in the footer.' },
+  { title: 'Failures documented', body: 'Discontinued products and rebrands are archived in the dead-tools section with cause-of-death where known — institutional memory protects readers from chasing tools that no longer exist.' },
+  { title: 'Corrections visible, not buried', body: 'When we get something wrong, the page history reflects it. Correction requests are reviewed on merit, not politics.' },
+];
+
+const donts = [
+  'No paid placements — no tool has ever paid to be listed, ranked, or featured',
+  'No "Editor\'s Pick" sponsorships',
+  'No affiliate-influenced rankings — commission rate has zero effect on score',
+  'No AI-generated filler copy — editors write, AI assists research only',
+  'No unvetted user reviews — unverified star ratings create a race to the bottom',
+];
+
+const faqs = [
+  {
+    question: 'Who runs aipedia.wiki?',
+    answer:
+      'aipedia.wiki is published by an independent editorial team with backgrounds in software engineering, product management, and AI tool evaluation. The team operates without outside editorial influence — no investor, parent company, or platform holds editorial veto power over scores or rankings.',
+  },
+  {
+    question: 'How does aipedia.wiki make money?',
+    answer:
+      "Some tools on the site have affiliate programs. When a reader clicks through to a tool's official website and makes a purchase, we may earn a commission at no additional cost to them. Affiliate relationships do not influence scores, rankings, or written assessments — a tool's commission is tracked in internal metadata only and is never mentioned inside a review.",
+  },
+  {
+    question: 'How often are tool reviews updated?',
+    answer:
+      'High-traffic tool pages are re-checked monthly. Every page carries a visible `last_verified` timestamp. When a tool ships a material update, changes pricing, or shuts down, the corresponding page is updated within the same week.',
+  },
+  {
+    question: 'What is the aipedia.wiki scoring system?',
+    answer:
+      'Every tool is scored on four dimensions (Utility, Value, Moat, Longevity) on a 1–10 scale. The Overall Score is the average of the four, rounded to one decimal place. Full methodology and benchmarks are published on the scoring methodology page.',
+  },
+  {
+    question: 'Does aipedia.wiki accept sponsored reviews?',
+    answer:
+      'No. aipedia.wiki has never accepted payment for a listing, ranking, or feature. There are no "Editor\'s Pick" sponsorships and no paid tier placements. Every score reflects editorial judgment based on verified research and, where feasible, hands-on use.',
+  },
+  {
+    question: 'How do I report an error or request a correction?',
+    answer:
+      'Email editorial@aipedia.wiki with the page URL, what is wrong, and a source for the correct information. Every correction request is read and pages are updated when evidence supports the change.',
+  },
+  {
+    question: 'Why does aipedia.wiki archive dead tools?',
+    answer:
+      'Because knowing what failed matters. The dead-tools archive records discontinued AI products with cause-of-death attribution where known, so readers can avoid chasing tools that no longer exist and researchers can trace how the AI industry evolved.',
+  },
+];
+
+const pageUrl = 'https://aipedia.wiki/about/';
+const pageName = 'About aipedia.wiki — Editorial Standards & Methodology';
+const pageDesc = `aipedia.wiki is an independent AI tools encyclopedia covering ${allTools.length} tool reviews across ${allCategories.length} categories. Learn our editorial process, four-dimension scoring methodology, monthly verification cadence, and corrections policy.`;
 ---
+
+<OrganizationLD />
+<AboutPageLD
+  url={pageUrl}
+  name={pageName}
+  description={pageDesc}
+  dateModified={LAST_REVIEWED}
+/>
+<FAQPageLD questions={faqs} />
 
 <ArticleLayout
   title="About aipedia.wiki"
-  seoTitle="About aipedia.wiki — Editorial Standards & Methodology"
-  description="aipedia.wiki is an independent AI tools encyclopedia published by an editorial team. Learn our review process, scoring methodology, verification cadence, and publishing standards."
+  seoTitle={pageName}
+  description={pageDesc}
   breadcrumbs={[{ label: 'About' }]}
 >
 
-## What aipedia.wiki Is
+  <!-- AEO lede: the first 60 words answer "what is aipedia.wiki" in natural language -->
+  <p class="text-base text-[var(--text-secondary)] leading-relaxed">
+    <strong class="text-[var(--text-primary)]">aipedia.wiki is an independent, editorially-managed encyclopedia of AI tools.</strong>
+    Every tool on this site is reviewed, scored across four dimensions — Utility, Value, Moat, and Longevity — and re-verified monthly. We don't accept sponsored placements, "featured" tiers, or paid rankings. Most AI tool directories list thousands of products with one-line descriptions; we do the opposite — deep, honest reviews of the tools that matter, written as reference pages that stay current.
+  </p>
 
-aipedia.wiki is an independent, editorially-managed encyclopedia of AI tools. Every tool on this site has been reviewed, scored, and verified by our editorial team. We don't accept sponsored placements, "featured" tiers, or paid rankings of any kind.
+  <!-- Freshness signal -->
+  <p class="not-prose text-xs text-[var(--text-muted)] mt-2 mb-0">
+    <span class="uppercase tracking-[0.12em]">Editorial policy last reviewed:</span>
+    <time datetime={LAST_REVIEWED}>{LAST_REVIEWED_HUMAN}</time>
+  </p>
 
-Most AI tool directories list thousands of products with one-line descriptions. We do the opposite — deep, honest reviews of the tools that matter, written as reference pages that stay current.
+  <!-- Coverage stats -->
+  <div class="not-prose grid grid-cols-2 md:grid-cols-4 gap-3 my-10">
+    {stats.map((s) => (
+      <div class="bg-[var(--bg-card)] border border-[var(--border)] rounded-lg px-5 py-4">
+        <div class="text-2xl font-semibold text-[var(--text-primary)] leading-none">{s.value}</div>
+        <div class="text-[11px] text-[var(--text-muted)] uppercase tracking-[0.12em] mt-2">{s.label}</div>
+      </div>
+    ))}
+    <div class="col-span-2 md:col-span-4 text-xs text-[var(--text-muted)] text-center">
+      Plus <a href="/dead/" class="text-[var(--text-secondary)] hover:text-[var(--text-primary)] underline decoration-dotted">{allDead.length} archived dead tools</a> — because knowing what failed matters.
+    </div>
+  </div>
 
-**Current coverage:**
-- **{allTools.length} tool reviews** across {allCategories.length} categories
-- **{allComparisons.length} head-to-head comparisons**
-- **{allUseCases.length} use-case guides** (best-of lists, workflow stacks, alternatives)
-- **{allDead.length} archived dead tools** — because knowing what failed matters
+  <h2>The Editorial Process</h2>
+  <p>Every tool page on this site goes through the same workflow before it ships:</p>
 
----
+  <div class="not-prose grid gap-3 my-6">
+    {processSteps.map((step) => (
+      <div class="flex gap-4 bg-[var(--bg-card)] border border-[var(--border)] rounded-lg p-5">
+        <div class="shrink-0 w-8 h-8 rounded-full bg-[rgba(167,139,250,0.12)] text-[var(--accent-primary)] flex items-center justify-center font-semibold text-sm">
+          {step.n}
+        </div>
+        <div class="min-w-0">
+          <h3 class="text-sm font-semibold text-[var(--text-primary)] m-0 mb-1">{step.title}</h3>
+          <p class="text-sm text-[var(--text-secondary)] leading-relaxed m-0">{step.body}</p>
+        </div>
+      </div>
+    ))}
+  </div>
 
-## The Editorial Process
+  <p class="text-sm text-[var(--text-muted)]">
+    Full methodology for how we assign scores: <a href="/about/scoring/">scoring methodology</a>.
+    Browse coverage by category on the <a href="/">home page</a> or by <a href="/compare/">head-to-head comparisons</a>.
+  </p>
 
-Every tool page on this site goes through the same workflow before it ships:
+  <h2>Editorial Principles</h2>
 
-**1. Primary source research**
-We pull pricing, feature claims, company information, and launch dates from each tool's official site, changelog, and API documentation — not from third-party blog posts or summaries.
+  <div class="not-prose grid md:grid-cols-2 gap-3 my-6">
+    {principles.map((p) => (
+      <div class="bg-[var(--bg-card)] border border-[var(--border)] rounded-lg p-5">
+        <h3 class="text-sm font-semibold text-[var(--text-primary)] m-0 mb-2">{p.title}</h3>
+        <p class="text-sm text-[var(--text-secondary)] leading-relaxed m-0">{p.body}</p>
+      </div>
+    ))}
+  </div>
 
-**2. Hands-on evaluation**
-Where practical, editors test tools on real work — not marketing demos. Where a tool is enterprise-only, B2B-gated, or prohibitively expensive, we note that limitation in the review rather than faking direct experience.
+  <h2>What We Don't Do</h2>
 
-**3. Four-dimension scoring**
-Each tool gets scored on Utility, Value, Moat, and Longevity. Scores are deliberate, comparative, and non-inflated. See our full [scoring methodology](/about/scoring/).
+  <div class="not-prose bg-[rgba(239,68,68,0.04)] border border-[rgba(239,68,68,0.15)] rounded-lg p-6 my-6">
+    <ul class="m-0 p-0 list-none space-y-3">
+      {donts.map((d) => (
+        <li class="flex items-start gap-3 text-sm text-[var(--text-secondary)] leading-relaxed">
+          <span class="text-red-400 shrink-0 mt-0.5">✗</span>
+          <span>{d}</span>
+        </li>
+      ))}
+    </ul>
+  </div>
 
-**4. Cross-referencing**
-Every claim that could become outdated — pricing, context windows, feature availability — is dated. We cite the source and the verification date on every tool page.
+  <h2>The Team</h2>
+  <p>
+    aipedia.wiki is published by an independent editorial team with backgrounds spanning software engineering, product management, technical writing, and AI tool evaluation. The team operates without outside editorial influence. No investor, parent company, or platform holds editorial veto power.
+  </p>
+  <p>
+    Individual editors are not named on tool pages — we operate as a publication, not a personality. Every page carries the <strong>aipedia.wiki Editorial</strong> byline because every page has been reviewed by at least two editors before publishing.
+  </p>
 
-**5. Monthly re-verification**
-Every page carries a `Verified` timestamp. Our team re-checks high-traffic tool pages monthly (or sooner when a tool ships a material update, changes pricing, or shuts down).
+  <h2>Affiliate Disclosure</h2>
 
----
+  <div class="not-prose bg-[rgba(251,191,36,0.04)] border border-[rgba(251,191,36,0.2)] rounded-lg p-6 my-6">
+    <p class="text-sm text-[var(--text-secondary)] leading-relaxed m-0 mb-3">
+      Some tools on aipedia.wiki have affiliate programs. When you click a link to a tool's official website and make a purchase, <strong class="text-[var(--text-primary)]">we may earn a commission at no additional cost to you</strong>. This is how we fund the editorial work.
+    </p>
+    <p class="text-sm text-[var(--text-secondary)] leading-relaxed m-0">
+      Affiliate status does <strong class="text-[var(--text-primary)]">not</strong> influence scores, ranking order, or written assessments. A tool's commission is tracked in internal metadata only — you will never see it mentioned inside a review. Per FTC guidelines, this sitewide disclosure also appears in the footer of every page.
+    </p>
+  </div>
 
-## Editorial Principles
+  <h2>Frequently Asked Questions</h2>
 
-**Evidence over opinion.** No claim without a source. If we can't verify it, we don't publish it.
+  <div class="not-prose my-6 divide-y divide-[var(--border)] border-y border-[var(--border)]">
+    {faqs.map((f) => (
+      <details class="group">
+        <summary class="flex items-start justify-between gap-4 py-4 cursor-pointer list-none hover:bg-[var(--bg-card)]/50 transition-colors px-1">
+          <h3 class="text-sm font-semibold text-[var(--text-primary)] m-0 leading-snug">{f.question}</h3>
+          <span class="text-[var(--text-muted)] group-open:rotate-180 transition-transform shrink-0 text-xs mt-1">▼</span>
+        </summary>
+        <p class="px-1 pb-4 text-sm text-[var(--text-secondary)] leading-relaxed m-0">{f.answer}</p>
+      </details>
+    ))}
+  </div>
 
-**Honest, comparative scoring.** We do not award 10s to products that aren't genuinely category-leading, and we do not hide 4s and 5s when a tool is weak on the dimension being measured. See the [scoring methodology](/about/scoring/) for examples.
-
-**No promotional language in reviews.** Even when tools we recommend have affiliate programs, we do not mention commissions, referral bonuses, or partnership perks inside the review. Affiliate relationships are tracked internally and disclosed sitewide in the footer — not inside individual tool pages.
-
-**Failures documented.** Discontinued products and rebrands are archived in our [dead tools](/dead/) section, with cause-of-death attribution where known. This protects readers from chasing tools that no longer exist and provides institutional memory for the AI industry.
-
-**Corrections visible, not buried.** When we get something wrong, the page history reflects it. Correction requests go to the editorial team and are reviewed on merit.
-
----
-
-## What We Don't Do
-
-- **No paid placements.** No tool has ever paid to be listed, ranked, or featured.
-- **No "Editor's Pick" sponsorships.** Our recommendations reflect scoring and hands-on use.
-- **No affiliate-influenced rankings.** A tool with a 30% commission gets the same editorial lens as one with no program.
-- **No AI-generated filler.** Tool pages are written by editors, not churned out by an LLM. We use AI to assist with research and formatting, never for final copy.
-- **No unvetted user reviews.** We don't run a community review section because unverified reviews create a race to the bottom on authenticity.
-
----
-
-## The Team
-
-aipedia.wiki is published by an independent editorial team with backgrounds spanning software engineering, product management, technical writing, and AI tool evaluation. The team operates without outside editorial influence. No investor, parent company, or platform holds editorial veto power.
-
-Individual editors are not named on tool pages — we operate as a publication, not a personality. Every page carries the **aipedia.wiki Editorial** byline because every page has been reviewed by at least two editors before publishing.
-
----
-
-## Affiliate Disclosure
-
-Some tools on aipedia.wiki have affiliate programs. When you click a link to a tool's official website and make a purchase, we may earn a commission at no additional cost to you. This is how we fund the editorial work.
-
-Critically: affiliate status does **not** influence scores, ranking order, or written assessments. A tool's affiliate commission is tracked in internal site metadata only — you will never see it mentioned inside a review or comparison.
-
-Per FTC guidelines, this sitewide disclosure notice also appears in the footer of every page.
-
----
-
-## Corrections & Contact
-
-If a price is wrong, a feature has changed, or a tool has shut down, we want to know. Accuracy is our core promise.
-
-Reach the editorial team at the contact address in the site footer. We read every correction request and update pages when evidence supports the change.
-
-If you believe a score is unfair, tell us why — include what you've used the tool for, what you'd score it, and what you'd compare it against. The scoring methodology is transparent and subject to challenge.
+  <!-- Corrections & Contact — prominent CTA -->
+  <div
+    id="corrections--contact"
+    class="not-prose mt-14 bg-gradient-to-br from-[rgba(167,139,250,0.08)] to-[rgba(96,165,250,0.06)] border border-[rgba(167,139,250,0.25)] rounded-xl p-8 scroll-mt-24"
+  >
+    <div class="flex items-start gap-4">
+      <div class="shrink-0 w-10 h-10 rounded-full bg-[rgba(167,139,250,0.15)] text-[var(--accent-primary)] flex items-center justify-center text-lg">
+        ✎
+      </div>
+      <div class="min-w-0 flex-1">
+        <h2 class="text-xl font-semibold text-[var(--text-primary)] m-0 mb-2">Corrections & Contact</h2>
+        <p class="text-sm text-[var(--text-secondary)] leading-relaxed m-0 mb-3">
+          If a price is wrong, a feature has changed, or a tool has shut down, we want to know. Accuracy is our core promise — we read every correction and update pages when evidence supports the change.
+        </p>
+        <p class="text-sm text-[var(--text-secondary)] leading-relaxed m-0 mb-5">
+          If you believe a score is unfair, tell us why — what you've used the tool for, what you'd score it, and what you'd compare it against. The <a href="/about/scoring/">scoring methodology</a> is transparent and subject to challenge.
+        </p>
+        <div class="flex flex-wrap gap-3">
+          <a
+            href="mailto:editorial@aipedia.wiki?subject=Correction%20for%20aipedia.wiki"
+            class="inline-flex items-center gap-2 bg-[var(--accent-primary)] text-white px-5 py-2.5 rounded-lg text-sm font-medium no-underline hover:opacity-90 transition-opacity"
+          >
+            <span>Submit a correction</span>
+            <span>→</span>
+          </a>
+          <a
+            href="/about/scoring/"
+            class="inline-flex items-center gap-2 border border-[var(--border)] text-[var(--text-secondary)] hover:text-[var(--text-primary)] px-5 py-2.5 rounded-lg text-sm font-medium no-underline transition-colors"
+          >
+            Score methodology
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </ArticleLayout>
+
+<style>
+  details summary::-webkit-details-marker {
+    display: none;
+  }
+</style>

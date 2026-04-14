@@ -2,16 +2,16 @@
 type: tool
 slug: kling
 title: Kling 3.0
-tagline: The #1 ELO-ranked AI video generator with the best raw quality and value in the market.
+tagline: The
 category: ai-video
 company: kuaishou
-url: https://klingai.com
+url: 'https://klingai.com'
 pricing_model: freemium
-price_range: "$0-$37/month"
+price_range: $0-$127.99/month
 status: active
 launched: 2024-06
-last_updated: 2026-04-13
-last_verified: 2026-04-13
+last_updated: 2026-04-13T00:00:00.000Z
+last_verified: '2026-04-14'
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -24,10 +24,20 @@ scores:
   value: 10
   moat: 8
   longevity: 8
-tags: [ai-video, video-generation, text-to-video, image-to-video, video-ai, kuaishou, kling]
-seo_title: "Kling 3.0: Features, Pricing & Review (2026)"
-meta_description: "Kling 3.0 by Kuaishou is the #1 ELO-ranked AI video generator. Plans from $0-$37/mo. Best raw quality and value for text-to-video and image-to-video generation."
-author: "aipedia.wiki Editorial"
+tags:
+  - ai-video
+  - video-generation
+  - text-to-video
+  - image-to-video
+  - video-ai
+  - kuaishou
+  - kling
+seo_title: 'Kling 3.0: Features, Pricing & Review (2026)'
+meta_description: >-
+  Kling 3.0 by Kuaishou is the #1 ELO-ranked AI video generator. Plans from
+  $0-$37/mo. Best raw quality and value for text-to-video and image-to-video
+  generation.
+author: aipedia.wiki Editorial
 ---
 
 # Kling 3.0

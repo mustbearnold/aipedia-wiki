@@ -1,0 +1,33 @@
+---
+// AboutPage schema with mainEntity reference to the publisher Organization.
+interface Props {
+  url: string;
+  name: string;
+  description: string;
+  dateModified: string; // YYYY-MM-DD
+}
+
+const { url, name, description, dateModified } = Astro.props;
+
+const ld = {
+  '@context': 'https://schema.org',
+  '@type': 'AboutPage',
+  '@id': `${url}#aboutpage`,
+  url,
+  name,
+  description,
+  dateModified,
+  inLanguage: 'en',
+  isPartOf: {
+    '@type': 'WebSite',
+    '@id': 'https://aipedia.wiki/#website',
+    url: 'https://aipedia.wiki',
+    name: 'aipedia.wiki',
+    publisher: { '@id': 'https://aipedia.wiki/#organization' },
+  },
+  mainEntity: { '@id': 'https://aipedia.wiki/#organization' },
+  publisher: { '@id': 'https://aipedia.wiki/#organization' },
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(ld)} />

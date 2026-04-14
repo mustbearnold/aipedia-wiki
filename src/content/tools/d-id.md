@@ -2,20 +2,22 @@
 type: tool
 slug: d-id
 title: D-ID
-tagline: AI video platform for creating talking-head videos and real-time AI avatar conversations from photos and scripts.
+tagline: >-
+  AI video platform for creating talking-head videos and real-time AI avatar
+  conversations from photos and scripts.
 category: ai-video
 company: D-ID (Digital Humans Ltd.)
-url: https://d-id.com
+url: 'https://d-id.com'
 pricing_model: paid
-price_range: "$5.9-$196/month"
+price_range: $0-$108/month
 status: active
 launched: 2017-01
-last_updated: 2026-04-13
-last_verified: 2026-04-13
+last_updated: 2026-04-13T00:00:00.000Z
+last_verified: '2026-04-14'
 update_frequency: monthly
 affiliate:
   has_program: true
-  commission: "20%"
+  commission: 20%
   cookie_days: 30
   network: null
   link: null
@@ -24,10 +26,18 @@ scores:
   value: 6
   moat: 6
   longevity: 7
-tags: [ai-avatar, talking-head, ai-video, digital-human, real-time-avatar]
-seo_title: "D-ID: AI Avatar & Talking Head Video Review (2026)"
-meta_description: "D-ID creates talking-head videos and real-time AI avatar conversations from photos and scripts. Full review of pricing, credit system, and how D-ID compares to HeyGen and Synthesia."
-author: "aipedia.wiki Editorial"
+tags:
+  - ai-avatar
+  - talking-head
+  - ai-video
+  - digital-human
+  - real-time-avatar
+seo_title: 'D-ID: AI Avatar & Talking Head Video Review (2026)'
+meta_description: >-
+  D-ID creates talking-head videos and real-time AI avatar conversations from
+  photos and scripts. Full review of pricing, credit system, and how D-ID
+  compares to HeyGen and Synthesia.
+author: aipedia.wiki Editorial
 ---
 # D-ID
 

@@ -2,20 +2,22 @@
 type: tool
 slug: freepik
 title: Freepik AI Image Generator
-tagline: Flux-powered AI image generator with commercial license focus, built into Freepik Premium.
+tagline: >-
+  Flux-powered AI image generator with commercial license focus, built into
+  Freepik Premium.
 category: ai-image
 company: Freepik Company
-url: https://freepik.com/ai/image-generator
+url: 'https://freepik.com/ai/image-generator'
 pricing_model: freemium
-price_range: "$0-$9.99/month"
+price_range: $0-$210/month
 status: active
 launched: 2023-06
-last_updated: 2026-04-14
-last_verified: 2026-04-14
+last_updated: 2026-04-14T00:00:00.000Z
+last_verified: '2026-04-14'
 update_frequency: monthly
 affiliate:
   has_program: true
-  commission: "15%"
+  commission: 15%
   cookie_days: 30
   network: null
   link: null
@@ -24,10 +26,19 @@ scores:
   value: 9
   moat: 6
   longevity: 7
-tags: [ai-image, image-generation, commercial-license, stock-assets, flux, freepik]
-seo_title: "Freepik AI Image Generator Review: Commercial-Licensed AI Images (2026)"
-meta_description: "Freepik AI Image Generator uses Flux for commercial-ready images. Included in Freepik Premium ($9.99/mo). Full review of features, pricing, and alternatives."
-author: "aipedia.wiki Editorial"
+tags:
+  - ai-image
+  - image-generation
+  - commercial-license
+  - stock-assets
+  - flux
+  - freepik
+seo_title: 'Freepik AI Image Generator Review: Commercial-Licensed AI Images (2026)'
+meta_description: >-
+  Freepik AI Image Generator uses Flux for commercial-ready images. Included in
+  Freepik Premium ($9.99/mo). Full review of features, pricing, and
+  alternatives.
+author: aipedia.wiki Editorial
 ---
 
 # Freepik AI Image Generator

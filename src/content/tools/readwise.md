@@ -2,16 +2,18 @@
 type: tool
 slug: readwise
 title: Readwise Reader
-tagline: AI-powered reading app that ingests everything you read — articles, newsletters, PDFs, ebooks — and resurfaces highlights with spaced repetition.
+tagline: >-
+  AI-powered reading app that ingests everything you read — articles,
+  newsletters, PDFs, ebooks — and resurfaces highlights with spaced repetition.
 category: ai-notes
 company: Readwise
-url: https://readwise.io/read
+url: 'https://readwise.io/read'
 pricing_model: freemium
-price_range: "Free trial / $7.99/month"
+price_range: $9.99-$12.99/month
 status: active
 launched: 2018-01
-last_updated: 2026-04-14
-last_verified: 2026-04-14
+last_updated: 2026-04-14T00:00:00.000Z
+last_verified: '2026-04-14'
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -24,10 +26,20 @@ scores:
   value: 9
   moat: 8
   longevity: 8
-tags: [ai-notes, reading, highlights, spaced-repetition, pkm, newsletters, rss]
-seo_title: "Readwise Reader Review 2026: AI Reading App for Serious Readers"
-meta_description: "Readwise Reader combines article saving, ebook highlighting, AI summarization, and spaced repetition into one reading app. $7.99/mo review with pricing and alternatives."
-author: "aipedia.wiki Editorial"
+tags:
+  - ai-notes
+  - reading
+  - highlights
+  - spaced-repetition
+  - pkm
+  - newsletters
+  - rss
+seo_title: 'Readwise Reader Review 2026: AI Reading App for Serious Readers'
+meta_description: >-
+  Readwise Reader combines article saving, ebook highlighting, AI summarization,
+  and spaced repetition into one reading app. $7.99/mo review with pricing and
+  alternatives.
+author: aipedia.wiki Editorial
 ---
 
 # Readwise Reader

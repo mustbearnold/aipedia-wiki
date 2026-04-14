@@ -2,16 +2,18 @@
 type: tool
 slug: gamma
 title: Gamma
-tagline: AI-first presentation and document builder that generates polished decks, web pages, and documents from a prompt or outline.
+tagline: >-
+  AI-first presentation and document builder that generates polished decks, web
+  pages, and documents from a prompt or outline.
 category: ai-presentation
 company: Gamma Tech
-url: https://gamma.app
+url: 'https://gamma.app'
 pricing_model: freemium
-price_range: "$0-$20/month"
+price_range: $0-$90/month
 status: active
 launched: 2020-01
-last_updated: 2026-04-14
-last_verified: 2026-04-14
+last_updated: 2026-04-14T00:00:00.000Z
+last_verified: '2026-04-14'
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -24,10 +26,20 @@ scores:
   value: 9
   moat: 6
   longevity: 8
-tags: [presentations, slides, ai-generation, documents, web-pages, pitch-decks, prompt-to-deck]
-seo_title: "Gamma App: Features, Pricing & Review (2026)"
-meta_description: "Gamma generates AI presentations, documents, and web pages from a prompt. Free tier includes 400 AI credits. Pro costs $10/mo. Full review updated April 2026."
-author: "aipedia.wiki Editorial"
+tags:
+  - presentations
+  - slides
+  - ai-generation
+  - documents
+  - web-pages
+  - pitch-decks
+  - prompt-to-deck
+seo_title: 'Gamma App: Features, Pricing & Review (2026)'
+meta_description: >-
+  Gamma generates AI presentations, documents, and web pages from a prompt. Free
+  tier includes 400 AI credits. Pro costs $10/mo. Full review updated April
+  2026.
+author: aipedia.wiki Editorial
 ---
 
 # Gamma

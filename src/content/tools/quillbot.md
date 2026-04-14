@@ -7,7 +7,7 @@ category: ai-writing
 company: Course Hero (QuillBot)
 url: https://quillbot.com
 pricing_model: freemium
-price_range: "$0-$9.95/month"
+price_range: "$0-$19.95/month"
 status: active
 launched: 2017-10
 last_updated: 2026-04-14

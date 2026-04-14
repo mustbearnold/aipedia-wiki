@@ -2,16 +2,18 @@
 type: tool
 slug: activepieces
 title: Activepieces
-tagline: Open-source no-code automation platform and Zapier alternative with AI-native actions.
+tagline: >-
+  Open-source no-code automation platform and Zapier alternative with AI-native
+  actions.
 category: ai-automation
 company: Activepieces Inc.
-url: https://www.activepieces.com
+url: 'https://www.activepieces.com'
 pricing_model: open-source
-price_range: "Free (self-host) / $6-$249/month (cloud)"
+price_range: Free (up to 10 active flows) / $5 per active flow per month thereafter
 status: active
 launched: 2022-06
-last_updated: 2026-04-14
-last_verified: 2026-04-14
+last_updated: 2026-04-14T00:00:00.000Z
+last_verified: '2026-04-14'
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -24,10 +26,18 @@ scores:
   value: 9
   moat: 6
   longevity: 7
-tags: [automation, open-source, zapier-alternative, no-code, workflow, self-hosted]
-seo_title: "Activepieces Review: Open-Source Zapier Alternative (2026)"
-meta_description: "Activepieces is an open-source no-code automation platform. Free to self-host, $6/mo cloud. Honest review comparing it to Zapier, n8n, and Make."
-author: "aipedia.wiki Editorial"
+tags:
+  - automation
+  - open-source
+  - zapier-alternative
+  - no-code
+  - workflow
+  - self-hosted
+seo_title: 'Activepieces Review: Open-Source Zapier Alternative (2026)'
+meta_description: >-
+  Activepieces is an open-source no-code automation platform. Free to self-host,
+  $6/mo cloud. Honest review comparing it to Zapier, n8n, and Make.
+author: aipedia.wiki Editorial
 ---
 
 # Activepieces

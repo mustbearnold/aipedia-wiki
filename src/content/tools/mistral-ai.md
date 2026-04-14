@@ -2,17 +2,20 @@
 type: tool
 slug: mistral-ai
 title: Mistral AI
-tagline: European open-source LLM provider with models from ultra-fast Mistral 7B to frontier-competitive Mistral Large.
+tagline: >-
+  European open-source LLM provider with models from ultra-fast Mistral 7B to
+  frontier-competitive Mistral Large.
 category: ai-chatbots
-secondary_categories: [ai-search]
-company: Mistral AI (Paris, France)
-url: https://mistral.ai
+secondary_categories:
+  - ai-search
+company: 'Mistral AI (Paris, France)'
+url: 'https://mistral.ai'
 pricing_model: freemium
-price_range: "$0-$14.99/month"
+price_range: $0-$24.99/month
 status: active
 launched: 2023-09
-last_updated: 2026-04-13
-last_verified: 2026-04-13
+last_updated: 2026-04-13T00:00:00.000Z
+last_verified: '2026-04-14'
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -25,10 +28,19 @@ scores:
   value: 9
   moat: 7
   longevity: 8
-tags: [llm, open-source-ai, european-ai, ai-api, mistral, ai-models]
-seo_title: "Mistral AI: Models, Pricing & Review (2026)"
-meta_description: "Mistral AI offers open-source LLMs from 7B to frontier-competitive Large, with GDPR-native EU data storage. Full review of le Chat, API pricing, and how Mistral compares to GPT-4o."
-author: "aipedia.wiki Editorial"
+tags:
+  - llm
+  - open-source-ai
+  - european-ai
+  - ai-api
+  - mistral
+  - ai-models
+seo_title: 'Mistral AI: Models, Pricing & Review (2026)'
+meta_description: >-
+  Mistral AI offers open-source LLMs from 7B to frontier-competitive Large, with
+  GDPR-native EU data storage. Full review of le Chat, API pricing, and how
+  Mistral compares to GPT-4o.
+author: aipedia.wiki Editorial
 ---
 # Mistral AI
 

@@ -2,16 +2,18 @@
 type: tool
 slug: ideogram
 title: Ideogram 2.0
-tagline: The AI image generator with the best text-in-image rendering for logos, thumbnails, and marketing materials.
+tagline: >-
+  The AI image generator with the best text-in-image rendering for logos,
+  thumbnails, and marketing materials.
 category: ai-image
 company: ideogram
-url: https://ideogram.ai
+url: 'https://ideogram.ai'
 pricing_model: freemium
-price_range: "$0-$20/month"
+price_range: $0-$60/month
 status: active
 launched: 2023-08
-last_updated: 2026-04-13
-last_verified: 2026-04-13
+last_updated: 2026-04-13T00:00:00.000Z
+last_verified: '2026-04-14'
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -24,10 +26,21 @@ scores:
   value: 9
   moat: 8
   longevity: 7
-tags: [ai-image, image-generation, text-to-image, text-rendering, logos, thumbnails, typography, ideogram, marketing]
-seo_title: "Ideogram 2.0: Features, Pricing & Review (2026)"
-meta_description: "Ideogram 2.0 is a freemium AI image generator starting at $0/mo that excels at rendering readable text in images. Best in class for logos and thumbnails."
-author: "aipedia.wiki Editorial"
+tags:
+  - ai-image
+  - image-generation
+  - text-to-image
+  - text-rendering
+  - logos
+  - thumbnails
+  - typography
+  - ideogram
+  - marketing
+seo_title: 'Ideogram 2.0: Features, Pricing & Review (2026)'
+meta_description: >-
+  Ideogram 2.0 is a freemium AI image generator starting at $0/mo that excels at
+  rendering readable text in images. Best in class for logos and thumbnails.
+author: aipedia.wiki Editorial
 ---
 
 # Ideogram 2.0

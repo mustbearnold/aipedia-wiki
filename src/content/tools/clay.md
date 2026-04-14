@@ -2,16 +2,18 @@
 type: tool
 slug: clay
 title: Clay
-tagline: Data enrichment platform connecting 50+ sources to build hyper-personalized lead lists for AI-powered outreach.
+tagline: >-
+  Data enrichment platform connecting 50+ sources to build hyper-personalized
+  lead lists for AI-powered outreach.
 category: ai-automation
 company: Clay Technologies Inc.
-url: https://clay.com
+url: 'https://clay.com'
 pricing_model: freemium
-price_range: "$0-$800/month"
+price_range: $0-$495/month
 status: active
 launched: 2021-01
-last_updated: 2026-04-13
-last_verified: 2026-04-13
+last_updated: 2026-04-13T00:00:00.000Z
+last_verified: '2026-04-14'
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -24,10 +26,17 @@ scores:
   value: 7
   moat: 8
   longevity: 8
-tags: [data-enrichment, sales-automation, lead-generation, gtm-automation, outreach]
-seo_title: "Clay Review 2026: Pricing, Features & Is It Worth It?"
-meta_description: "Clay connects 50+ data sources to enrich leads with AI. See real pricing, credit system explained, and how Clay compares to Apollo for GTM teams."
-author: "aipedia.wiki Editorial"
+tags:
+  - data-enrichment
+  - sales-automation
+  - lead-generation
+  - gtm-automation
+  - outreach
+seo_title: 'Clay Review 2026: Pricing, Features & Is It Worth It?'
+meta_description: >-
+  Clay connects 50+ data sources to enrich leads with AI. See real pricing,
+  credit system explained, and how Clay compares to Apollo for GTM teams.
+author: aipedia.wiki Editorial
 ---
 
 # Clay

@@ -2,20 +2,25 @@
 type: tool
 slug: perplexity
 title: Perplexity
-tagline: AI-powered search engine that synthesizes answers with citations from multiple sources in real time.
+tagline: >-
+  AI-powered search engine that synthesizes answers with citations from multiple
+  sources in real time.
 category: ai-search
 company: perplexity
-url: https://perplexity.ai
+url: 'https://perplexity.ai'
 pricing_model: freemium
-price_range: "$0-$20/month"
+price_range: $0-$325/month
 status: active
 launched: 2022-12
-last_updated: 2026-04-13
-last_verified: 2026-04-13
+last_updated: 2026-04-13T00:00:00.000Z
+last_verified: '2026-04-14'
 update_frequency: monthly
-seo_title: "Perplexity: Features, Pricing & Review (2026)"
-meta_description: "Perplexity is an AI search engine that delivers cited answers from multiple web sources. Free tier available; Pro costs $20/mo. Used by 100M+ monthly for research."
-author: "aipedia.wiki Editorial"
+seo_title: 'Perplexity: Features, Pricing & Review (2026)'
+meta_description: >-
+  Perplexity is an AI search engine that delivers cited answers from multiple
+  web sources. Free tier available; Pro costs $20/mo. Used by 100M+ monthly for
+  research.
+author: aipedia.wiki Editorial
 affiliate:
   has_program: false
   commission: null
@@ -27,12 +32,19 @@ scores:
   value: 9
   moat: 7
   longevity: 8
-tags: [search-engine, research, citations, answer-engine, web-search, real-time, fact-checking]
+tags:
+  - search-engine
+  - research
+  - citations
+  - answer-engine
+  - web-search
+  - real-time
+  - fact-checking
 ---
 
 # Perplexity
 
-Perplexity is an AI-native search engine developed by Perplexity AI. It reads and synthesizes information from multiple web sources to deliver direct answers with inline citations, and is primarily used for research, fact-checking, and information retrieval. Its key differentiator is the cited-answer format where every claim links to a verifiable source. As of April 2026, Perplexity has 100M+ monthly users, with a free tier and Pro at $20/month. ChatGPT's browsing mode offers similar cited answers but within a broader assistant; Perplexity is more focused and reliable for pure search.
+Perplexity is an AI-native search engine developed by Perplexity AI. It reads and synthesizes information from multiple web sources to deliver direct answers with inline citations, and is primarily used for research, fact-checking, and information retrieval. Its key differentiator is the cited-answer format where every claim links to a verifiable source. As of April 2026, Perplexity has 100M+ monthly users, with a free tier, Pro at $20/month, and a Max tier at $200/month for power users (added in 2026) which includes Sora 2 Pro video generation, unlimited Research mode, and priority Comet Assistant access. Enterprise plans start at $40/user/month. ChatGPT's browsing mode offers similar cited answers but within a broader assistant; Perplexity is more focused and reliable for pure search.
 
 ## What It Does
 
@@ -52,7 +64,9 @@ Perplexity is an AI-native search engine with over 100 million monthly users tha
 | Plan | Price | Key Limits |
 |------|-------|-----------|
 | Free | $0/month | Unlimited quick searches, limited Pro Searches (~5/day), standard model |
-| Pro | $20/month | 600+ Pro Searches/day, choose model (GPT-4o, Claude, Gemini), file upload, API credits |
+| Pro | $20/month ($16.67 annual) | 600+ Pro Searches/day, choose model (GPT-4o, Claude, Gemini), file upload, API credits |
+| Max | $200/user/month | Unlimited Pro Searches, Sora 2 Pro video generation, full Research mode, unlimited file uploads, Comet Assistant priority, early access to new features |
+| Enterprise | $40/user/month | Team workspaces, admin controls, SSO |
 | Enterprise | Custom | SSO, admin controls, data privacy, team management, custom integrations |
 
 *Prices verified 2026-04-13.*

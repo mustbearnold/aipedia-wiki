@@ -2,16 +2,18 @@
 type: tool
 slug: resemble-ai
 title: Resemble AI
-tagline: Voice cloning and AI dubbing platform built for developers and production pipelines.
+tagline: >-
+  Voice cloning and AI dubbing platform built for developers and production
+  pipelines.
 category: ai-voice
 company: Resemble AI
-url: https://www.resemble.ai
+url: 'https://www.resemble.ai'
 pricing_model: freemium
-price_range: "$0.006/sec or $29-$99/month"
+price_range: Starting from $0.0005/second + monthly add-ons
 status: active
 launched: 2019-06
-last_updated: 2026-04-14
-last_verified: 2026-04-14
+last_updated: 2026-04-14T00:00:00.000Z
+last_verified: '2026-04-14'
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -24,10 +26,20 @@ scores:
   value: 6
   moat: 7
   longevity: 7
-tags: [voice-cloning, tts, dubbing, ai-voice, api, text-to-speech, real-time-voice]
-seo_title: "Resemble AI: Features, Pricing & Review (2026)"
-meta_description: "Resemble AI is a voice cloning and AI dubbing platform with pay-per-use and subscription pricing. Developer-focused with real-time voice capabilities. Reviewed April 2026."
-author: "aipedia.wiki Editorial"
+tags:
+  - voice-cloning
+  - tts
+  - dubbing
+  - ai-voice
+  - api
+  - text-to-speech
+  - real-time-voice
+seo_title: 'Resemble AI: Features, Pricing & Review (2026)'
+meta_description: >-
+  Resemble AI is a voice cloning and AI dubbing platform with pay-per-use and
+  subscription pricing. Developer-focused with real-time voice capabilities.
+  Reviewed April 2026.
+author: aipedia.wiki Editorial
 ---
 
 # Resemble AI

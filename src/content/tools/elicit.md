@@ -2,16 +2,18 @@
 type: tool
 slug: elicit
 title: Elicit
-tagline: AI research assistant that automates systematic literature review — finding, screening, and extracting structured data from academic papers at scale.
+tagline: >-
+  AI research assistant that automates systematic literature review — finding,
+  screening, and extracting structured data from academic papers at scale.
 category: ai-research
 company: Ought Inc.
-url: https://elicit.com
+url: 'https://elicit.com'
 pricing_model: freemium
-price_range: "$0-$12/month"
+price_range: $0-$169/month
 status: active
 launched: 2021-01
-last_updated: 2026-04-14
-last_verified: 2026-04-14
+last_updated: 2026-04-14T00:00:00.000Z
+last_verified: '2026-04-14'
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -24,10 +26,20 @@ scores:
   value: 9
   moat: 7
   longevity: 9
-tags: [academic-research, literature-review, systematic-review, paper-search, data-extraction, rct, evidence-synthesis]
-seo_title: "Elicit: Features, Pricing & Review (2026)"
-meta_description: "Elicit automates systematic literature review with AI-powered paper search and structured data extraction. Free tier includes 5,000 credits; Plus costs $12/mo. Updated April 2026."
-author: "aipedia.wiki Editorial"
+tags:
+  - academic-research
+  - literature-review
+  - systematic-review
+  - paper-search
+  - data-extraction
+  - rct
+  - evidence-synthesis
+seo_title: 'Elicit: Features, Pricing & Review (2026)'
+meta_description: >-
+  Elicit automates systematic literature review with AI-powered paper search and
+  structured data extraction. Free tier includes 5,000 credits; Plus costs
+  $12/mo. Updated April 2026.
+author: aipedia.wiki Editorial
 ---
 
 # Elicit

@@ -8,14 +8,14 @@ secondary_categories: [ai-writing, ai-search]
 company: google
 url: https://gemini.google.com
 pricing_model: freemium
-price_range: "$0-$20/month"
+price_range: "$0-$249.99/month"
 status: active
 launched: 2023-12
 last_updated: 2026-04-13
 last_verified: 2026-04-13
 update_frequency: monthly
 seo_title: "Gemini: Features, Pricing & Review (2026)"
-meta_description: "Gemini is Google's multimodal AI assistant with Deep Research, 1M token context, and Workspace integration. Free tier available; Advanced costs $20/mo with 2TB storage."
+meta_description: "Gemini is Google's multimodal AI assistant with Deep Research, 1M token context, and Workspace integration. Free tier, Google AI Plus $7.99, Pro $19.99 (2TB storage), Ultra $249.99."
 author: "aipedia.wiki Editorial"
 affiliate:
   has_program: false
@@ -33,11 +33,11 @@ tags: [chatbot, ai-assistant, writing, search, multimodal, google-workspace, dee
 
 # Gemini
 
-Gemini is a multimodal AI assistant developed by Google. It integrates directly with Google Workspace (Docs, Sheets, Gmail, Drive) and features a Deep Research mode that autonomously browses and synthesizes dozens of web sources. Its key differentiator is native Google ecosystem integration and a 1M token context window on Gemini 1.5 Pro. As of April 2026, Gemini Advanced costs $20/month bundled with 2TB Google One storage. Perplexity offers better dedicated search with citations, but Gemini is unmatched for users embedded in Google Workspace.
+Gemini is a multimodal AI assistant developed by Google. It integrates directly with Google Workspace (Docs, Sheets, Gmail, Drive) and features a Deep Research mode that autonomously browses and synthesizes dozens of web sources. Its key differentiator is native Google ecosystem integration and a 1M token context window on Gemini 3.1 Pro. As of April 2026, Google's subscription tiers are: free, Google AI Plus ($7.99/month), Google AI Pro ($19.99/month, bundled with 2TB Google One storage, formerly "Gemini Advanced"), and Google AI Ultra ($249.99/month). Perplexity offers better dedicated search with citations, but Gemini is unmatched for users embedded in Google Workspace.
 
 ## What It Does
 
-Gemini is Google's multimodal AI assistant powered by the Gemini model family, integrating directly with Google Workspace apps including Docs, Sheets, Gmail, and Drive, and offering a 1M token context window on Gemini 1.5 Pro along with an autonomous Deep Research mode that synthesizes dozens of web sources ([Google Gemini](https://gemini.google.com)). The Deep Research mode autonomously browses dozens of web sources to compile comprehensive research reports. Gemini supports multimodal input (text, images, audio, video) and offers one of the longest context windows available — up to 1M tokens on Gemini 1.5 Pro. Google bundles Gemini Advanced with Google One AI Premium, which also includes 2TB of storage ([Google AI Blog](https://blog.google/technology/ai/)).
+Gemini is Google's multimodal AI assistant powered by the Gemini model family, integrating directly with Google Workspace apps including Docs, Sheets, Gmail, and Drive, and offering a 1M token context window on Gemini 3.1 Pro along with an autonomous Deep Research mode that synthesizes dozens of web sources ([Google Gemini](https://gemini.google.com)). The Deep Research mode autonomously browses dozens of web sources to compile comprehensive research reports. Gemini supports multimodal input (text, images, audio, video) and offers one of the longest context windows available — 1M tokens on Gemini 3.1 Pro. Google's paid access is now organized as Google AI Plus ($7.99/mo) for casual use, Google AI Pro ($19.99/mo, bundled with 2TB Google One storage — the tier formerly known as "Gemini Advanced"), and Google AI Ultra ($249.99/mo) for the highest usage tiers ([Google AI subscriptions](https://gemini.google/subscriptions/)).
 
 ## Who It's For
 
@@ -53,7 +53,9 @@ Gemini is Google's multimodal AI assistant powered by the Gemini model family, i
 | Plan | Price | Key Limits |
 |------|-------|-----------|
 | Free | $0/month | Gemini (standard model), basic features, limited Deep Research |
-| Advanced (Google One AI Premium) | $20/month | Gemini 1.5 Pro, 1M context, Deep Research, Gems, Google Workspace integration, 2TB storage |
+| Google AI Plus | $7.99/month | Enhanced access to Gemini 3.1 Pro, better Deep Research limits |
+| Google AI Pro (formerly Gemini Advanced) | $19.99/month | Gemini 3.1 Pro, 1M context, Deep Research, Gems, Google Workspace integration, 2TB Google One storage |
+| Google AI Ultra | $249.99/month | Highest usage limits, priority access, full Workspace integration |
 
 *Prices verified 2026-04-13.*
 
@@ -80,7 +82,7 @@ Gemini is Google's multimodal AI assistant powered by the Gemini model family, i
 
 ## Bottom Line
 
-Gemini is the best choice for Google Workspace users who need AI natively integrated into Docs, Sheets, and Gmail, with a bundled $20/month plan that includes 2TB storage, a 1M token context window, and Deep Research for autonomous multi-source synthesis, but Claude wins if raw reasoning quality and writing depth are the priority ([Google Gemini](https://gemini.google.com)). The $20/month price point is excellent value considering you also get 2TB of Google One storage. The Deep Research mode is genuinely useful for comprehensive, multi-source research reports. However, for raw reasoning quality and writing depth, Claude and ChatGPT still lead. Gemini is the best second AI assistant, the one you use alongside your primary tool for research and Google-native workflows.
+Gemini is the best choice for Google Workspace users who need AI natively integrated into Docs, Sheets, and Gmail. The $19.99/month Google AI Pro plan (formerly Gemini Advanced) includes 2TB storage, a 1M token context window, and Deep Research for autonomous multi-source synthesis, but Claude wins if raw reasoning quality and writing depth are the priority ([Google Gemini](https://gemini.google.com)). The $19.99/month price is excellent value considering you also get 2TB of Google One storage. The Deep Research mode is genuinely useful for comprehensive, multi-source research reports. However, for raw reasoning quality and writing depth, Claude and ChatGPT still lead. Gemini is the best second AI assistant, the one you use alongside your primary tool for research and Google-native workflows.
 
 ## Best Alternatives
 

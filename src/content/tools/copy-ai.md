@@ -2,20 +2,22 @@
 type: tool
 slug: copy-ai
 title: Copy.ai
-tagline: AI copywriting and go-to-market automation platform for sales and marketing teams.
+tagline: >-
+  AI copywriting and go-to-market automation platform for sales and marketing
+  teams.
 category: ai-writing
 company: Copy.ai Inc.
-url: https://copy.ai
+url: 'https://copy.ai'
 pricing_model: freemium
-price_range: "$0-custom"
+price_range: '$2,000/month - Custom'
 status: active
 launched: 2020-10
-last_updated: 2026-04-13
-last_verified: 2026-04-13
+last_updated: 2026-04-13T00:00:00.000Z
+last_verified: '2026-04-14'
 update_frequency: monthly
 affiliate:
   has_program: true
-  commission: "45%"
+  commission: 45%
   cookie_days: 60
   network: null
   link: null
@@ -24,10 +26,18 @@ scores:
   value: 7
   moat: 5
   longevity: 7
-tags: [ai-writing, copywriting, gtm-automation, sales-copy, marketing-copy]
-seo_title: "Copy.ai Review: Is It Worth It for Teams in 2026?"
-meta_description: "Copy.ai is an AI copywriting and GTM automation platform. Free 2,000 words/month; Starter $49/mo. Full review of features, pricing, and alternatives."
-author: "aipedia.wiki Editorial"
+tags:
+  - ai-writing
+  - copywriting
+  - gtm-automation
+  - sales-copy
+  - marketing-copy
+seo_title: 'Copy.ai Review: Is It Worth It for Teams in 2026?'
+meta_description: >-
+  Copy.ai is an AI copywriting and GTM automation platform. Free 2,000
+  words/month; Starter $49/mo. Full review of features, pricing, and
+  alternatives.
+author: aipedia.wiki Editorial
 ---
 
 # Copy.ai

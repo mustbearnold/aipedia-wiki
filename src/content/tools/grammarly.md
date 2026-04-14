@@ -2,32 +2,42 @@
 type: tool
 slug: grammarly
 title: Grammarly
-tagline: AI writing assistant for grammar, clarity, tone, and style — used by 30M+ daily writers.
+tagline: >-
+  AI writing assistant for grammar, clarity, tone, and style — used by 30M+
+  daily writers.
 category: ai-writing
 company: Grammarly Inc.
-url: https://grammarly.com
+url: 'https://grammarly.com'
 pricing_model: freemium
-price_range: "$0-$15/user/month"
+price_range: $0-$30/user/month
 status: active
 launched: 2009-07
-last_updated: 2026-04-13
-last_verified: 2026-04-13
+last_updated: 2026-04-13T00:00:00.000Z
+last_verified: '2026-04-14'
 update_frequency: monthly
 affiliate:
   has_program: true
-  commission: "20%"
+  commission: 20%
   cookie_days: 90
-  network: "Impact Radius"
+  network: Impact Radius
   link: null
 scores:
   utility: 8
   value: 8
   moat: 8
   longevity: 9
-tags: [ai-writing, grammar-checker, writing-assistant, productivity, chrome-extension]
-seo_title: "Grammarly Review: Is Premium Worth It in 2026?"
-meta_description: "Grammarly is the leading AI writing assistant for grammar, clarity, and tone. Free plan available; Premium $12/mo. Full review of features, pricing, and alternatives."
-author: "aipedia.wiki Editorial"
+tags:
+  - ai-writing
+  - grammar-checker
+  - writing-assistant
+  - productivity
+  - chrome-extension
+seo_title: 'Grammarly Review: Is Premium Worth It in 2026?'
+meta_description: >-
+  Grammarly is the leading AI writing assistant for grammar, clarity, and tone.
+  Free plan available; Premium $12/mo. Full review of features, pricing, and
+  alternatives.
+author: aipedia.wiki Editorial
 ---
 
 # Grammarly

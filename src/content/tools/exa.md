@@ -2,16 +2,21 @@
 type: tool
 slug: exa
 title: Exa AI
-tagline: Semantic search API for LLM applications, letting developers retrieve web content by meaning rather than keywords.
+tagline: >-
+  Semantic search API for LLM applications, letting developers retrieve web
+  content by meaning rather than keywords.
 category: ai-search
 company: exa-ai
-url: https://exa.ai
+url: 'https://exa.ai'
 pricing_model: freemium
-price_range: "$0 (1,000 searches/mo free) then $0.001/search"
+price_range: >-
+  API pricing varies by endpoint, from $0.001/unit (e.g., summaries, contents
+  endpoint) to $0.015/request (Exa Deep Reasoning). Websets plans range from $0
+  (free tier) to $449/month.
 status: active
 launched: 2022-03
-last_updated: 2026-04-14
-last_verified: 2026-04-14
+last_updated: 2026-04-14T00:00:00.000Z
+last_verified: '2026-04-14'
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -24,10 +29,20 @@ scores:
   value: 8
   moat: 7
   longevity: 8
-tags: [search-api, semantic-search, llm-tools, developer-tools, rag, web-search, embeddings]
-seo_title: "Exa AI: Features, Pricing & Review (2026)"
-meta_description: "Exa AI (formerly Metaphor) is a semantic search API for LLM applications. Free tier: 1,000 searches/mo. Pay-as-you-go from $0.001/search. Best for RAG pipelines and AI agent web retrieval."
-author: "aipedia.wiki Editorial"
+tags:
+  - search-api
+  - semantic-search
+  - llm-tools
+  - developer-tools
+  - rag
+  - web-search
+  - embeddings
+seo_title: 'Exa AI: Features, Pricing & Review (2026)'
+meta_description: >-
+  Exa AI (formerly Metaphor) is a semantic search API for LLM applications. Free
+  tier: 1,000 searches/mo. Pay-as-you-go from $0.001/search. Best for RAG
+  pipelines and AI agent web retrieval.
+author: aipedia.wiki Editorial
 ---
 
 # Exa AI

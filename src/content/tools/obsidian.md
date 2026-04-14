@@ -2,16 +2,18 @@
 type: tool
 slug: obsidian
 title: Obsidian
-tagline: Local-first markdown note-taking app with a massive plugin ecosystem, including powerful AI plugins for chat, search, and writing.
+tagline: >-
+  Local-first markdown note-taking app with a massive plugin ecosystem,
+  including powerful AI plugins for chat, search, and writing.
 category: ai-notes
 company: obsidian
-url: https://obsidian.md
+url: 'https://obsidian.md'
 pricing_model: freemium
-price_range: "$0-$50/year (Sync add-on)"
+price_range: $0 - $216+/year (for add-ons)
 status: active
 launched: 2020-03
-last_updated: 2026-04-13
-last_verified: 2026-04-13
+last_updated: 2026-04-13T00:00:00.000Z
+last_verified: '2026-04-14'
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -24,10 +26,22 @@ scores:
   value: 9
   moat: 8
   longevity: 9
-tags: [notes, markdown, local-first, knowledge-base, pkm, zettelkasten, graph-view, plugins, ai-plugins, privacy]
-seo_title: "Obsidian: Features, Pricing & Review (2026)"
-meta_description: "Obsidian is a free, local-first markdown note-taking app with 1,800+ plugins including AI. Your notes stay as files on your device. Sync add-on is $4/mo."
-author: "aipedia.wiki Editorial"
+tags:
+  - notes
+  - markdown
+  - local-first
+  - knowledge-base
+  - pkm
+  - zettelkasten
+  - graph-view
+  - plugins
+  - ai-plugins
+  - privacy
+seo_title: 'Obsidian: Features, Pricing & Review (2026)'
+meta_description: >-
+  Obsidian is a free, local-first markdown note-taking app with 1,800+ plugins
+  including AI. Your notes stay as files on your device. Sync add-on is $4/mo.
+author: aipedia.wiki Editorial
 ---
 
 # Obsidian

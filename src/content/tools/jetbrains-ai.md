@@ -2,16 +2,18 @@
 type: tool
 slug: jetbrains-ai
 title: JetBrains AI Assistant
-tagline: Built-in AI assistant for IntelliJ, PyCharm, WebStorm and all JetBrains IDEs with deep IDE integration.
+tagline: >-
+  Built-in AI assistant for IntelliJ, PyCharm, WebStorm and all JetBrains IDEs
+  with deep IDE integration.
 category: ai-coding
 company: jetbrains
-url: https://www.jetbrains.com/ai/
+url: 'https://www.jetbrains.com/ai/'
 pricing_model: freemium
-price_range: "$8.33-$16.67/month"
+price_range: $0-$30/month
 status: active
 launched: 2023-12
-last_updated: 2026-04-14
-last_verified: 2026-04-14
+last_updated: 2026-04-14T00:00:00.000Z
+last_verified: '2026-04-14'
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -24,10 +26,20 @@ scores:
   value: 7
   moat: 7
   longevity: 8
-tags: [ai-coding, jetbrains, intellij, pycharm, webstorm, ide, autocomplete, enterprise]
-seo_title: "JetBrains AI Assistant: Review & Pricing (2026)"
-meta_description: "JetBrains AI Assistant is built into IntelliJ, PyCharm, WebStorm and all JetBrains IDEs. From $8.33/mo with All Products pack. In-depth review 2026."
-author: "aipedia.wiki Editorial"
+tags:
+  - ai-coding
+  - jetbrains
+  - intellij
+  - pycharm
+  - webstorm
+  - ide
+  - autocomplete
+  - enterprise
+seo_title: 'JetBrains AI Assistant: Review & Pricing (2026)'
+meta_description: >-
+  JetBrains AI Assistant is built into IntelliJ, PyCharm, WebStorm and all
+  JetBrains IDEs. From $8.33/mo with All Products pack. In-depth review 2026.
+author: aipedia.wiki Editorial
 ---
 
 # JetBrains AI Assistant

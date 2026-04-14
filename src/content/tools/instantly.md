@@ -2,20 +2,22 @@
 type: tool
 slug: instantly
 title: Instantly
-tagline: Cold email outreach platform with unlimited sending accounts, AI personalization, and deliverability-first infrastructure.
+tagline: >-
+  Cold email outreach platform with unlimited sending accounts, AI
+  personalization, and deliverability-first infrastructure.
 category: ai-automation
 company: Instantly AI Inc.
-url: https://instantly.ai
+url: 'https://instantly.ai'
 pricing_model: paid
-price_range: "$37-$358/month"
+price_range: $9-$358/month
 status: active
 launched: 2021-10
-last_updated: 2026-04-13
-last_verified: 2026-04-13
+last_updated: 2026-04-13T00:00:00.000Z
+last_verified: '2026-04-14'
 update_frequency: monthly
 affiliate:
   has_program: true
-  commission: "25%"
+  commission: 25%
   cookie_days: 30
   network: null
   link: null
@@ -24,10 +26,18 @@ scores:
   value: 9
   moat: 7
   longevity: 7
-tags: [cold-email, sales-automation, email-outreach, lead-generation, email-deliverability]
-seo_title: "Instantly Review 2026: Pricing, Features & Cold Email Performance"
-meta_description: "Instantly offers unlimited email sending accounts and deliverability-first cold email infrastructure. See real pricing, how it compares to Apollo, and who it's for."
-author: "aipedia.wiki Editorial"
+tags:
+  - cold-email
+  - sales-automation
+  - email-outreach
+  - lead-generation
+  - email-deliverability
+seo_title: 'Instantly Review 2026: Pricing, Features & Cold Email Performance'
+meta_description: >-
+  Instantly offers unlimited email sending accounts and deliverability-first
+  cold email infrastructure. See real pricing, how it compares to Apollo, and
+  who it's for.
+author: aipedia.wiki Editorial
 ---
 
 # Instantly

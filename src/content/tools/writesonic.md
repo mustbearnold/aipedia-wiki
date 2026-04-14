@@ -2,32 +2,42 @@
 type: tool
 slug: writesonic
 title: Writesonic
-tagline: AI writing platform with Chatsonic (ChatGPT with web search) and long-form blog/article generation tools.
+tagline: >-
+  AI writing platform with Chatsonic (ChatGPT with web search) and long-form
+  blog/article generation tools.
 category: ai-writing
 company: Writesonic Inc.
-url: https://writesonic.com
+url: 'https://writesonic.com'
 pricing_model: freemium
-price_range: "$0-$99/month"
+price_range: $0-$499/month
 status: active
 launched: 2020-12
-last_updated: 2026-04-13
-last_verified: 2026-04-13
+last_updated: 2026-04-13T00:00:00.000Z
+last_verified: '2026-04-14'
 update_frequency: monthly
 affiliate:
   has_program: true
-  commission: "30%"
+  commission: 30%
   cookie_days: 30
-  network: "Impact"
+  network: Impact
   link: null
 scores:
   utility: 7
   value: 7
   moat: 4
   longevity: 6
-tags: [ai-writing, blog-generator, chatsonic, content-marketing, seo-writing]
-seo_title: "Writesonic: Features, Pricing & Review (2026)"
-meta_description: "Writesonic is an AI writing platform offering Chatsonic (ChatGPT with web search), long-form article generation, and Botsonic chatbot builder. Full pricing and review for 2026."
-author: "aipedia.wiki Editorial"
+tags:
+  - ai-writing
+  - blog-generator
+  - chatsonic
+  - content-marketing
+  - seo-writing
+seo_title: 'Writesonic: Features, Pricing & Review (2026)'
+meta_description: >-
+  Writesonic is an AI writing platform offering Chatsonic (ChatGPT with web
+  search), long-form article generation, and Botsonic chatbot builder. Full
+  pricing and review for 2026.
+author: aipedia.wiki Editorial
 ---
 # Writesonic
 

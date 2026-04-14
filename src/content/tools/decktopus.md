@@ -2,32 +2,43 @@
 type: tool
 slug: decktopus
 title: Decktopus AI
-tagline: Automated presentation builder that combines AI deck generation with built-in form and Q&A functionality for presenter workflows.
+tagline: >-
+  Automated presentation builder that combines AI deck generation with built-in
+  form and Q&A functionality for presenter workflows.
 category: ai-presentation
 company: Decktopus Inc.
-url: https://decktopus.com
+url: 'https://decktopus.com'
 pricing_model: freemium
-price_range: "$0-$14.99/month"
+price_range: $0-$34.99/month
 status: active
 launched: 2018-01
-last_updated: 2026-04-14
-last_verified: 2026-04-14
+last_updated: 2026-04-14T00:00:00.000Z
+last_verified: '2026-04-14'
 update_frequency: monthly
 affiliate:
   has_program: true
-  commission: "25% recurring"
+  commission: 25% recurring
   cookie_days: null
-  network: "Direct"
-  link: "https://www.decktopus.com?via=aipediawiki"
+  network: Direct
+  link: 'https://www.decktopus.com?via=aipediawiki'
 scores:
   utility: 6
   value: 6
   moat: 5
   longevity: 6
-tags: [presentations, slides, ai-generation, forms, speaker-notes, automation, prompt-to-deck]
-seo_title: "Decktopus AI: Features, Pricing & Review (2026)"
-meta_description: "Decktopus AI generates presentations and includes built-in forms and Q&A. Free tier available; Pro costs $14.99/mo. Full review updated April 2026."
-author: "aipedia.wiki Editorial"
+tags:
+  - presentations
+  - slides
+  - ai-generation
+  - forms
+  - speaker-notes
+  - automation
+  - prompt-to-deck
+seo_title: 'Decktopus AI: Features, Pricing & Review (2026)'
+meta_description: >-
+  Decktopus AI generates presentations and includes built-in forms and Q&A. Free
+  tier available; Pro costs $14.99/mo. Full review updated April 2026.
+author: aipedia.wiki Editorial
 ---
 
 # Decktopus AI

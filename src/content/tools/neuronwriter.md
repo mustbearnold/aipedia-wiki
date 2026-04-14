@@ -2,20 +2,22 @@
 type: tool
 slug: neuronwriter
 title: NeuronWriter
-tagline: NLP-based content optimization tool that scores your writing against top SERP results using semantic analysis.
+tagline: >-
+  NLP-based content optimization tool that scores your writing against top SERP
+  results using semantic analysis.
 category: ai-seo
 company: neuronwriter
-url: https://neuronwriter.com
+url: 'https://neuronwriter.com'
 pricing_model: paid
-price_range: "€19-€97/month"
+price_range: $19-$117/month
 status: active
 launched: 2021-01
-last_updated: 2026-04-14
-last_verified: 2026-04-14
+last_updated: 2026-04-14T00:00:00.000Z
+last_verified: '2026-04-14'
 update_frequency: monthly
 affiliate:
   has_program: true
-  commission: "30%"
+  commission: 30%
   cookie_days: 30
   network: direct
   link: null
@@ -24,10 +26,20 @@ scores:
   value: 9
   moat: 6
   longevity: 7
-tags: [seo, content-optimization, nlp, content-editor, serp-analysis, ai-writing, semantic-seo]
-seo_title: "NeuronWriter: Features, Pricing & Review (2026)"
-meta_description: "NeuronWriter is an NLP-based SEO content optimization tool. Plans from €19/mo. Strong semantic content scoring, AI writing, and SERP analysis. Best value alternative to Surfer SEO."
-author: "aipedia.wiki Editorial"
+tags:
+  - seo
+  - content-optimization
+  - nlp
+  - content-editor
+  - serp-analysis
+  - ai-writing
+  - semantic-seo
+seo_title: 'NeuronWriter: Features, Pricing & Review (2026)'
+meta_description: >-
+  NeuronWriter is an NLP-based SEO content optimization tool. Plans from €19/mo.
+  Strong semantic content scoring, AI writing, and SERP analysis. Best value
+  alternative to Surfer SEO.
+author: aipedia.wiki Editorial
 ---
 
 # NeuronWriter

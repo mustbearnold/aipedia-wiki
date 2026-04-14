@@ -2,32 +2,43 @@
 type: tool
 slug: zapier
 title: Zapier
-tagline: The original no-code automation platform with 6,000+ app integrations for connecting tools and automating workflows.
+tagline: >-
+  The original no-code automation platform with 6,000+ app integrations for
+  connecting tools and automating workflows.
 category: ai-automation
 company: zapier
-url: https://zapier.com
+url: 'https://zapier.com'
 pricing_model: freemium
-price_range: "$0-$299+/month"
+price_range: $0-$103.50+/month
 status: active
 launched: 2012-01
-last_updated: 2026-04-13
-last_verified: 2026-04-13
+last_updated: 2026-04-13T00:00:00.000Z
+last_verified: '2026-04-14'
 update_frequency: monthly
 affiliate:
   has_program: true
-  commission: "15% recurring"
+  commission: 15% recurring
   cookie_days: 90
-  network: "In-house / PartnerStack"
-  link: https://zapier.com/platform/partner-program
+  network: In-house / PartnerStack
+  link: 'https://zapier.com/platform/partner-program'
 scores:
   utility: 8
   value: 6
   moat: 9
   longevity: 9
-tags: [automation, workflow, integrations, no-code, zaps, ai-actions, triggers]
-seo_title: "Zapier: Features, Pricing & Review (2026)"
-meta_description: "Zapier is the leading no-code automation platform with 6,000+ app integrations. Free tier available; paid plans from $19.99 to $299+/month."
-author: "aipedia.wiki Editorial"
+tags:
+  - automation
+  - workflow
+  - integrations
+  - no-code
+  - zaps
+  - ai-actions
+  - triggers
+seo_title: 'Zapier: Features, Pricing & Review (2026)'
+meta_description: >-
+  Zapier is the leading no-code automation platform with 6,000+ app
+  integrations. Free tier available; paid plans from $19.99 to $299+/month.
+author: aipedia.wiki Editorial
 ---
 
 # Zapier
