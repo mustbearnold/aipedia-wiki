@@ -17,8 +17,8 @@ affiliate:
   has_program: true
   commission: "30%"
   cookie_days: 30
-  network: null
-  link: null
+  network: "Direct"
+  link: "https://mubert.com/render/pricing?via=aipediawiki"
 scores:
   utility: 7
   value: 8

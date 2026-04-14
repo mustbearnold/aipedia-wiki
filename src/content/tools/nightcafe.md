@@ -36,7 +36,7 @@ NightCafe is one of the oldest consumer AI art generators, launched in 2019 by N
 
 The key differentiators are the multi-model approach (users can compare outputs across different generation engines), the free daily credit system (5 credits per day without a subscription), and the community platform around AI art creation. NightCafe is less specialized than Midjourney for high-end artistic output but more accessible and model-flexible than most competitors.
 
-Plans range from free (5 credits/day, approximately 1 image) to the AI Art App subscription at $5.99-$49.99/month for additional credits and features. The 15% affiliate commission and the broad appeal of the platform make it a common recommendation in AI art content.
+Plans range from free (5 credits/day, approximately 1 image) to the AI Art App subscription at $5.99-$49.99/month for additional credits and features.
 
 ## What It Does
 
@@ -48,7 +48,6 @@ NightCafe generates images from text prompts using one of several supported AI m
 - **Community-oriented artists** who want to share work, get feedback, and participate in challenges
 - **Free tier users** who want daily image generation without a paid subscription
 - **Hobbyists exploring AI art styles** who benefit from model comparison and preset templates
-- **Affiliate marketers and content creators** covering AI art tools (15% commission, broad appeal)
 
 NightCafe is less suited to professional designers who need maximum output quality, volume-focused producers needing hundreds of images per day, or API developers building image generation into applications.
 
@@ -103,9 +102,6 @@ For professional output quality, Midjourney is the better choice. For maximum mo
 
 **Is NightCafe free?**
 Yes. NightCafe provides 5 free credits per day without any subscription. Credits reset daily. Most image generations cost 4-5 credits, so free users can generate roughly one image per day. No credit card required for the free tier.
-
-**Does NightCafe have an affiliate program?**
-Yes. NightCafe offers a 15% recurring commission on referred subscriptions with a 30-day cookie window. The program is managed directly.
 
 **Which AI models does NightCafe support?**
 NightCafe supports Stable Diffusion (various versions including SDXL), DALL-E, and several NightCafe fine-tuned model variants. The available models are periodically updated as new versions become available. Users can choose the model for each generation.

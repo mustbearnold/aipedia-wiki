@@ -1,31 +1,32 @@
 ---
+/**
+ * Affiliate CTA button.
+ * Renders a "Try {tool}" or "Visit {tool}" button on tool pages.
+ *
+ * IMPORTANT: Per editorial policy, commission rates and affiliate network details
+ * are NEVER shown to users. The `commission` prop is ignored. Affiliate relationships
+ * are disclosed sitewide via the footer only.
+ */
 interface Props {
   title: string;
   url: string;
   hasProgram: boolean;
-  commission?: string | null;
+  commission?: string | null; // accepted but intentionally unused in render
 }
 
-const { title, url, hasProgram, commission = null } = Astro.props;
+const { title, url, hasProgram } = Astro.props;
 ---
 
 {hasProgram ? (
-  <div class="flex flex-col items-start gap-1">
-    <a
-      href={url}
-      target="_blank"
-      rel="noopener sponsored"
-      class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold text-white no-underline hover:no-underline transition-opacity hover:opacity-90"
-      style="background: linear-gradient(135deg, #a78bfa, #7c3aed);"
-    >
-      Try {title} &rarr;
-    </a>
-    {commission && (
-      <span class="text-xs text-[var(--accent-warning)]">
-        Affiliate &middot; {commission}
-      </span>
-    )}
-  </div>
+  <a
+    href={url}
+    target="_blank"
+    rel="noopener sponsored"
+    class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold text-white no-underline hover:no-underline transition-opacity hover:opacity-90"
+    style="background: linear-gradient(135deg, #a78bfa, #7c3aed);"
+  >
+    Try {title} &rarr;
+  </a>
 ) : (
   <a
     href={url}

@@ -79,7 +79,7 @@ Murf converts written scripts into professional-quality voiceovers. You paste yo
 
 ## Bottom Line
 
-Murf is the best-in-class tool for structured professional voiceover workflows — e-learning, corporate narration, and presentation narration specifically. The Google Slides integration, video sync, background music mixer, and team collaboration features are genuinely differentiated from competitors. If your use case is professional narration for business content, Murf's workflow tools justify choosing it over ElevenLabs despite slightly lower raw voice quality. If you need the most natural-sounding voices for creative content, audiobooks, or conversational AI, ElevenLabs wins. The affiliate program — 20% recurring for 24 months via ShareASale — is one of the best long-tail affiliate structures in the AI voice category.
+Murf is the best-in-class tool for structured professional voiceover workflows — e-learning, corporate narration, and presentation narration specifically. The Google Slides integration, video sync, background music mixer, and team collaboration features are genuinely differentiated from competitors. If your use case is professional narration for business content, Murf's workflow tools justify choosing it over ElevenLabs despite slightly lower raw voice quality. If you need the most natural-sounding voices for creative content, audiobooks, or conversational AI, ElevenLabs wins.
 
 ## Best Alternatives
 
@@ -109,5 +109,4 @@ Yes — Murf's voice cloning feature is available on the Pro plan ($26/mo annual
 ## Sources
 
 - Murf.ai pricing page (verified 2026-04-13): https://murf.ai/pricing
-- Murf affiliate program via ShareASale (verified 2026-04-13)
 - G2 Murf AI reviews, 2026 data

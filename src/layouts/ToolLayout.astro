@@ -123,11 +123,6 @@ const breadcrumbLdItems = [
         <a href={`/categories/${catSlug}/`} class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-[rgba(167,139,250,0.15)] border border-[rgba(167,139,250,0.3)] text-[var(--accent-primary)] no-underline hover:no-underline">
           {catInfo.emoji} {catInfo.label}
         </a>
-        {hasProgram && (
-          <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-[rgba(251,191,36,0.1)] border border-[rgba(251,191,36,0.2)] text-[var(--accent-warning)]">
-            Affiliate
-          </span>
-        )}
         {tags.slice(0, 4).map((tag: string) => (
           <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-[var(--bg-card)] border border-[var(--border)] text-[var(--text-muted)]">
             {tag}

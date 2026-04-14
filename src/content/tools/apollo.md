@@ -108,5 +108,4 @@ ZoomInfo has a larger, more frequently refreshed database and stronger enterpris
 ## Sources
 
 - Apollo.io pricing page (verified 2026-04-13): https://apollo.io/pricing
-- Apollo.io affiliate program via Impact (verified 2026-04-13)
 - G2 Apollo.io reviews, 2026 data

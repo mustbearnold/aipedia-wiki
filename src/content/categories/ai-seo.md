@@ -29,11 +29,6 @@ AI SEO tools have undergone a fundamental shift in 2025-2026, expanding from tra
 - **Best for agencies:** Semrush. Most comprehensive, up to $200/sale affiliate.
 - **Best value:** NeuronWriter ($23/mo). Cheapest serious tool.
 
-## Affiliate Programs (Best in all categories)
-- Surfer SEO: **25% lifetime recurring**, compounds forever
-- Semrush: **up to $200 per sale** via Impact
-- Ahrefs: **up to 30% recurring**
-
 ## Video Potential
 - "Best SEO Tool 2026: Surfer vs Semrush vs Ahrefs" (high commercial intent search)
 - "GEO: How to Rank in AI Search Results" (new trend, low competition)

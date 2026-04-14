@@ -75,7 +75,6 @@ Playground AI is less suited to users who need maximum photorealistic quality (I
 - **Less artistic ceiling than Midjourney:** For highly stylized creative art, cinematic photography, and aesthetic-forward illustration, Midjourney v6 produces superior output. Playground's strength is design utility, not artistic peak.
 - **Smaller model ecosystem than Stable Diffusion:** Users who need access to specific fine-tuned models (LoRA, DreamBooth) or the full community model ecosystem will not find the same variety as dedicated Stable Diffusion platforms.
 - **Pro plan ($15/month) competes with stronger alternatives:** At $15/month, Playground Pro is in direct price competition with Midjourney Basic ($10/month) and Freepik Premium ($9.99/month), both of which offer different but significant value. Users need to evaluate which feature set best matches their workflow.
-- **No affiliate program:** No commission structure for content creators or comparison site recommendations.
 - **Startup uncertainty:** Playground AI is a venture-backed startup in a competitive space. Product direction and pricing have changed multiple times since launch, and future pivots are a real consideration for users building workflows around the platform.
 
 ## Bottom Line

@@ -28,11 +28,11 @@ The most important decision in this category is not which tool sounds best — i
 
 ## Comparison Table
 
-| Tool | Price | Best For | Vocals | Commercial License | Affiliate |
-|------|-------|----------|--------|-------------------|-----------|
-| [Suno](../tools/suno.md) | $8/mo (Pro) | Full song generation | Yes — lyrics + melody | Pro+ plans; commercial use requires paid plan | None |
-| [Udio](../tools/udio.md) | $10/mo (Standard) | Highest fidelity audio | Yes | Standard+ plans; commercial use available | None |
-| [Mubert](../tools/mubert.md) | $14/mo (Creator) | Royalty-free background music | No | All plans; YouTube Content ID-safe | 30% commission |
+| Tool | Price | Best For | Vocals | Commercial License |
+|------|-------|----------|--------|-------------------|
+| [Suno](../tools/suno.md) | $8/mo (Pro) | Full song generation | Yes — lyrics + melody | Pro+ plans; commercial use requires paid plan |
+| [Udio](../tools/udio.md) | $10/mo (Standard) | Highest fidelity audio | Yes | Standard+ plans; commercial use available |
+| [Mubert](../tools/mubert.md) | $14/mo (Creator) | Royalty-free background music | No | All plans; YouTube Content ID-safe |
 
 ## The Core Split: Songs vs Background Music
 
@@ -104,7 +104,6 @@ Mubert takes a different approach from Suno and Udio. Rather than generating son
 - Explicit commercial license included on all paid plans and clearly documented
 - Adjustable length, tempo, and mood — generates tracks to exact length requirements
 - Background music consistency — tracks are designed to work under dialogue and narration without competing for attention
-- 30% affiliate commission — the highest in the AI music category
 
 **What Mubert does less well:**
 - Does not generate songs — no vocals, no lyrics, no song structure

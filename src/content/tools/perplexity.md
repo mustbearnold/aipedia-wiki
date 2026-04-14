@@ -76,7 +76,6 @@ Perplexity is an AI-native search engine with over 100 million monthly users tha
 - **Cannot access paywalled content:** Academic papers, news behind paywalls, and gated content are often inaccessible
 - **Hallucination with citations:** Occasionally misrepresents what a source actually says while still linking to it, creating false confidence
 - **Limited conversational depth:** Better as a search tool than as a back-and-forth conversation partner
-- **No affiliate program:** Not monetizable through referrals
 
 ## Bottom Line
 

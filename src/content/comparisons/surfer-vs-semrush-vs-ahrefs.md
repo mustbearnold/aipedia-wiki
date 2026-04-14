@@ -92,18 +92,6 @@ No tool has fully cracked GEO yet, but Semrush is investing the most here. This 
 
 Ahrefs Starter at $29/mo is the cheapest meaningful entry point ([Ahrefs Pricing](https://ahrefs.com/pricing)). Surfer's $79/mo is reasonable for its specialty ([Surfer SEO Pricing](https://surferseo.com/pricing)). Semrush at $140/mo minimum is the most expensive entry, but you get the most features ([Semrush Pricing](https://www.semrush.com/prices/)).
 
-## Affiliate & Monetization Value
-
-For content creators and agencies evaluating these tools partly as affiliate opportunities:
-
-| | Surfer SEO | Semrush | Ahrefs |
-|---|---|---|---|
-| **Affiliate commission** | 25% recurring | $200 per sale, $10 per trial | Up to 30% recurring |
-| **Cookie duration** | 60 days | 120 days | 60 days |
-| **Affiliate competition** | Medium | Very high | Medium |
-
-Semrush has one of the highest-paying affiliate programs in SaaS. Surfer offers recurring commissions which compound. Ahrefs offers up to 30% recurring commissions with a 60-day cookie, making it a solid monetization path as well.
-
 ## Verdict
 
 **Choose Surfer SEO if:**
@@ -118,7 +106,6 @@ Semrush has one of the highest-paying affiliate programs in SaaS. Surfer offers 
 - Competitive intelligence is critical to your strategy
 - You are an agency managing multiple clients
 - You want the best GEO readiness as AI search evolves
-- The affiliate program is a revenue consideration
 
 **Choose Ahrefs if:**
 - Backlink analysis is your top priority

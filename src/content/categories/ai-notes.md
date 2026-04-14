@@ -45,12 +45,6 @@ AI note-taking and knowledge management tools serve seven major platforms as of 
 ## The MOAW Connection
 This wiki (MOAW) itself is a knowledge management system: markdown files in a folder structure. The closest analog is Obsidian's vault concept. Key insight: the best knowledge system is the one you actually maintain. Tools matter less than the habit of capturing and connecting knowledge.
 
-## Affiliate Programs
-- Notion: referral credits ($5-10 per referral), not traditional affiliate
-- Obsidian: no affiliate program
-- Mem: no public affiliate program
-- **Weak category for affiliate revenue.** Most tools are free or low-cost with no affiliate programs.
-
 ## Honest Assessment
 AI note-taking is a feature, not a product. Notion and Obsidian will win because they were already great tools, and AI just makes them better. Standalone "AI-native notes" apps (Mem, Reflect) need to prove they're meaningfully better than Notion + AI or Obsidian + plugins. Most won't survive. Google NotebookLM is genuinely useful but Google could kill it at any time.
 

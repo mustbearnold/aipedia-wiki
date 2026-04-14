@@ -112,4 +112,3 @@ Descript and ElevenLabs serve different primary use cases despite both offering 
 
 - Descript pricing and features: https://descript.com/pricing (verified 2026-04-13)
 - Descript Overdub documentation: https://help.descript.com/en/articles/overdub (verified 2026-04-13)
-- ShareASale affiliate program listing for Descript (verified 2026-04-13)

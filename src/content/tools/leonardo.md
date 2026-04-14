@@ -14,11 +14,12 @@ last_updated: 2026-04-13
 last_verified: 2026-04-13
 update_frequency: monthly
 affiliate:
-  has_program: true
-  commission: "~20% recurring"
-  cookie_days: 30
-  network: direct
-  link: https://leonardo.ai/affiliate
+  has_program: false
+  commission: null
+  cookie_days: null
+  network: null
+  link: null
+  # Program closed — Leonardo stopped accepting new affiliates as of 2026-04
 scores:
   utility: 8
   value: 10
@@ -41,7 +42,6 @@ Leonardo AI is a web-based AI image generation platform developed by Leonardo In
 - **Social media content creators:** daily free generations are enough for consistent social media posting.
 - **Game asset creators:** Leonardo's model library includes game-art-focused models (their original niche).
 - **Students and educators:** free access makes it viable for academic exploration.
-- **Affiliate marketers:** ~20% recurring commission on a tool with natural conversion from free to paid.
 
 ## What It Does
 

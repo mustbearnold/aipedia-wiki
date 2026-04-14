@@ -81,7 +81,7 @@ A "content query" is one SERP analysis run for a target keyword. A typical blog 
 
 ## Bottom Line
 
-NeuronWriter is the best value AI SEO content optimization tool for writers and small agencies who want solid NLP-based content scoring without paying Surfer SEO's $79/month minimum. At €19-€37/month, it delivers most of what Surfer SEO does for content optimization at roughly half the price. The Gold plan at €97 is competitive with Surfer Scale at $129 for high-volume use. The 30% affiliate commission is strong, making it worth featuring for SEO-focused content creators who review tools. The main limitation is that it is not a full SEO suite — it handles on-page content optimization only, and must be paired with [Ahrefs](../tools/ahrefs.md) or [Semrush](../tools/semrush.md) for keyword research and backlinks.
+NeuronWriter is the best value AI SEO content optimization tool for writers and small agencies who want solid NLP-based content scoring without paying Surfer SEO's $79/month minimum. At €19-€37/month, it delivers most of what Surfer SEO does for content optimization at roughly half the price. The Gold plan at €97 is competitive with Surfer Scale at $129 for high-volume use. The main limitation is that it is not a full SEO suite — it handles on-page content optimization only, and must be paired with [Ahrefs](../tools/ahrefs.md) or [Semrush](../tools/semrush.md) for keyword research and backlinks.
 
 ## Best Alternatives
 
@@ -99,9 +99,6 @@ NeuronWriter is developed by a Polish company. All prices are listed in euros, w
 
 **How does NeuronWriter compare to Surfer SEO?**
 Both tools analyze SERP content and score your writing against top-ranking pages using NLP terms. NeuronWriter costs roughly half as much as Surfer SEO and has a comparable content scoring engine. Surfer SEO has a more polished interface, a better-known brand, and deeper competitive SERP analysis. For budget-conscious users, NeuronWriter delivers most of the same value at lower cost.
-
-**Does NeuronWriter have an affiliate program?**
-Yes. NeuronWriter offers a 30% commission affiliate program with a 30-day cookie window, paid directly. This is one of the stronger commission rates in the AI SEO tools category.
 
 ## Sources
 

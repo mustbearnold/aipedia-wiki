@@ -39,12 +39,6 @@ AI writing tools consolidated dramatically in 2025-2026, with foundation models 
 - **Best for marketing teams:** Jasper ($39/mo). Brand voice, team features, campaign workflows.
 - **Best free:** Gemini. Generous free tier, Google Docs integration.
 
-## Affiliate Programs
-- Jasper: **30% recurring for 12 months**, best in category
-- Copy.ai: ~20% recurring
-- Writesonic: ~30% but declining user base
-- Claude/ChatGPT/Gemini: no traditional affiliate programs
-
 ## Honest Assessment
 The standalone AI writing tool market is shrinking. Claude, ChatGPT, and Gemini do 90% of what Jasper/Copy.ai do, for less money. The survivors will be those that build genuine workflow value on top of foundation models, not just a wrapper with a prompt template.
 

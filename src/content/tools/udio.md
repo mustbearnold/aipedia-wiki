@@ -73,7 +73,6 @@ Udio costs $0-$30/month across three tiers. All tiers include commercial use rig
 - **Smaller feature set than Suno:** Udio lacks cover art generation, has a less polished extend workflow, and the overall product surface is narrower. Suno has had longer to iterate on UX.
 - **Company viability questions:** Uncharted Labs is a smaller, less-funded company than Suno AI. Post-lawsuit settlement, long-term platform viability is less certain — a real risk for users building workflows around the tool.
 - **Less vocal generation polish:** Udio's vocals can sound less natural than Suno's, particularly for pop and mainstream genres where Suno has clearly optimized.
-- **No affiliate program:** no referral commissions available, limiting the tool's presence in affiliate-driven review content.
 
 ## Bottom Line
 
@@ -81,7 +80,7 @@ Udio is the better choice for users who prioritize audio fidelity, inpainting co
 
 ## Best Alternatives
 
-- **[Suno](./suno.md):** more polished UX, stronger vocal generation for pop/mainstream genres, better commercial track record, affiliate program. The safer long-term bet.
+- **[Suno](./suno.md):** more polished UX, stronger vocal generation for pop/mainstream genres, better commercial track record. The safer long-term bet.
 - **[Mubert](./mubert.md):** royalty-free background music for content creators. No vocals, no RIAA lawsuit risk, different use case entirely.
 - **Soundraw:** subscription-based background music AI. Less creative flexibility than Udio but safer for content monetization.
 

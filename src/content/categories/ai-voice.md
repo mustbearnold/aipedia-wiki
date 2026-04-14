@@ -28,7 +28,7 @@ AI voice generation and text-to-speech tools have consolidated as of April 2026,
 | ~~Play.ht~~ | DEAD | ~~Was good~~ | — | — | — | — |
 
 ## Our Picks
-- **Best quality:** ElevenLabs Creator ($22/mo). 100K characters/month (~75-90 min audio), voice cloning, 22% affiliate commission.
+- **Best quality:** ElevenLabs Creator ($22/mo). 100K characters/month (~75-90 min audio), voice cloning.
 - **Best open-source:** Fish Audio S2. Open-source model, self-hostable, near-ElevenLabs quality with ultra-low latency. Multilingual. Free tier available on fish.audio, or run locally with full control.
 - **Cheapest API:** Voxtral ($0.016/1K chars). 47% cheaper than ElevenLabs.
 
@@ -36,10 +36,6 @@ AI voice generation and text-to-speech tools have consolidated as of April 2026,
 - ElevenLabs Creator ($22/mo) = 6-10 videos of 8-12 minutes each per month
 - Pick a calm, authoritative voice from their library (similar to AICodeKing style)
 - Clone your own voice if you want unique branding (included in Creator plan)
-
-## Affiliate Programs
-- ElevenLabs: **22% recurring for 12 months**, directly relevant to YouTube audience
-- Murf: affiliate exists, lower rates
 
 ## Video Potential
 - "Best AI Voice for YouTube in 2026" (evergreen search intent)

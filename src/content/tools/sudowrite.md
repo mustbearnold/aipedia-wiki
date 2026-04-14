@@ -78,7 +78,6 @@ Sudowrite is not appropriate for business writing, marketing copy, SEO content, 
 - **Word limits feel tight for serious novelists:** A first draft of an 80,000-word novel involves far more than 90,000 words of AI generation across revisions and exploration. The Professional plan ($29/month for 90K words) may be limiting for writers doing heavy AI-assisted drafting. Max ($59/month for 300K words) is more realistic for serious use.
 - **Output still requires significant editing:** Sudowrite generates readable first-draft prose, but it is not publication-ready. Writers who expect to paste Sudowrite output directly into a manuscript will be disappointed. It is a drafting and ideation tool, not a finishing tool.
 - **Not for non-fiction:** The feature set and interface are entirely fiction-oriented. Using it for essays, marketing, or business writing produces poor results and a poor fit.
-- **No affiliate program:** Limits its presence in comparison content. Discovery is primarily through fiction writing communities.
 - **Relatively high price for a word-count-limited tool:** At $19/month for 30,000 words, the Hobby plan is affordable, but the word count disappears quickly for writers using Describe, Brainstorm, and Write mode extensively on a single project.
 - **AI detection risk for publishing:** Publishers are increasingly aware of AI-generated prose. Writers submitting to traditional publishing should be transparent about AI use in their workflow, as policies are evolving.
 

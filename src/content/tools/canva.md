@@ -109,5 +109,3 @@ Canva is excellent for social media, presentations, and marketing materials. It 
 ## Related
 
 - **Category:** [AI Design](../categories/ai-design.md)
-
-*Some links on this page are affiliate links. We earn a commission at no extra cost to you. This doesn't influence our ratings or recommendations.*

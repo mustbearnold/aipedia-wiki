@@ -79,7 +79,7 @@ An "article" in Frase terms is one SERP research query + document. The Solo plan
 
 ## Bottom Line
 
-Frase.io is the best AI SEO tool for content teams who need fast, SERP-backed brief generation at an affordable price. The brief creation workflow is genuinely faster than doing manual SERP research, and the integrated optimization scoring keeps writers on track throughout the drafting process. At $14.99/month, the Solo plan is the cheapest entry point in AI SEO tools — appropriate for evaluating the product or for very light publishing schedules. Agencies producing significant content volume will need the Team plan at $114.99/month. Compared to [Surfer SEO](../tools/surfer-seo.md), Frase is better for brief generation and overall workflow; Surfer is better for granular on-page content scoring. The 30% affiliate commission makes it worth recommending for SEO-focused content creators.
+Frase.io is the best AI SEO tool for content teams who need fast, SERP-backed brief generation at an affordable price. The brief creation workflow is genuinely faster than doing manual SERP research, and the integrated optimization scoring keeps writers on track throughout the drafting process. At $14.99/month, the Solo plan is the cheapest entry point in AI SEO tools — appropriate for evaluating the product or for very light publishing schedules. Agencies producing significant content volume will need the Team plan at $114.99/month. Compared to [Surfer SEO](../tools/surfer-seo.md), Frase is better for brief generation and overall workflow; Surfer is better for granular on-page content scoring.
 
 ## Best Alternatives
 
@@ -97,9 +97,6 @@ At $14.99/month for 4 articles, Frase is the cheapest AI SEO tool available. If 
 
 **How does Frase compare to Surfer SEO?**
 Frase is better at content brief generation — aggregating what competitors cover and turning it into a writing template. Surfer SEO is better at granular content scoring — tracking keyword density, NLP terms, and on-page structure in real time. Many serious SEO content teams use both together: Frase for briefs, Surfer for final optimization.
-
-**Does Frase have an affiliate program?**
-Yes. Frase offers a 30% commission affiliate program with a 30-day cookie window, paid through direct partnership.
 
 ## Sources
 

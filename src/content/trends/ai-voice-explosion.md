@@ -62,8 +62,6 @@ Three simultaneous shifts are driving adoption:
 
 ## Cross-References
 - [[ai-voice]]: detailed tool comparison
-- [[youtube-production-stack]]: ElevenLabs as the voice layer in the YouTube stack
-- ORACLE wiki: AI voice enables faceless YouTube, automated customer support, and content localization methods
 
 ## FAQ
 

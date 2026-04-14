@@ -17,8 +17,8 @@ affiliate:
   has_program: true
   commission: "30%"
   cookie_days: 30
-  network: null
-  link: null
+  network: "Direct"
+  link: "https://rytr.me?via=aipediawiki"
 scores:
   utility: 6
   value: 8
@@ -83,7 +83,7 @@ Rytr is not the right fit for content agencies doing long-form SEO articles, tea
 
 Rytr is best evaluated as a tool for a specific task: high-volume short-form content at low cost. If you are generating dozens of product descriptions, ad variations, or email subject lines per week and want a template-driven interface rather than a raw prompt box, Rytr at $9/month (Saver) or $29/month (Unlimited) is one of the cheapest tools in the category. If you are doing occasional writing tasks or need long-form quality, ChatGPT Plus ($20/month) or even the free Claude tier delivers higher ceiling output for the same or lower cost.
 
-The 30% affiliate commission and the low price point make Rytr a reasonable recommendation in budget-focused content, but it is not a tool to recommend when quality is the primary criterion.
+The low price point makes Rytr a reasonable option for budget-focused writing, but it is not a tool to recommend when quality is the primary criterion.
 
 ## Best Alternatives
 
@@ -102,9 +102,6 @@ Yes. The free plan allows 10,000 characters per month (roughly 2,000 words) with
 
 **Is Rytr better than ChatGPT for writing?**
 For structured short-form copywriting tasks — product descriptions, ad copy, email subject lines — Rytr's templates provide faster starting points than ChatGPT's blank prompt. For writing quality ceiling, flexibility, or any task outside Rytr's templates, ChatGPT (especially GPT-4o) produces better output. ChatGPT Plus at $20/month also includes image generation, browsing, and a broader feature set.
-
-**Does Rytr have an affiliate program?**
-Yes. Rytr offers a 30% recurring commission on referred subscriptions. The cookie window is 30 days. The program is managed directly through their website.
 
 ## Sources
 

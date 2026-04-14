@@ -74,7 +74,6 @@ Intercom sits between your product and your customers, handling support across e
 - **Full AI features require Advanced/Expert:** Many of the most valuable AI capabilities — AI inbox, advanced workflows, workload management — are locked to $99+ plans.
 - **Setup complexity for custom Fin workflows:** Configuring Fin for nuanced, product-specific queries requires careful knowledge base curation and custom answer flows, which takes time.
 - **Overkill for simple support needs:** If you only need a FAQ chatbot, Intercom is over-engineered and overpriced. A lighter tool (Crisp, Tidio) handles basic use cases for less.
-- **No traditional affiliate program:** Agencies and consultants can participate in the partner program, but there's no standard affiliate commission for content creators or influencers.
 
 ## Bottom Line
 

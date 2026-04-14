@@ -109,5 +109,4 @@ Instantly does not have a permanent free plan, but it offers a free trial that l
 ## Sources
 
 - Instantly pricing page (verified 2026-04-13): https://instantly.ai/pricing
-- Instantly affiliate program page (verified 2026-04-13): https://instantly.ai/affiliates
 - G2 Instantly reviews, 2026 data

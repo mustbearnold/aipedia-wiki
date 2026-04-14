@@ -33,7 +33,7 @@ author: "aipedia.wiki Editorial"
 
 # HeyGen
 
-HeyGen is an AI avatar and talking-head video platform developed by HeyGen, Inc. It generates professional videos of AI avatars delivering scripts with natural lip sync and gestures, and is primarily used for marketing, sales outreach, employee training, and multilingual video translation. Its key differentiator is convincing avatar quality with custom avatar cloning and 40+ language support. As of April 2026, pricing starts at $29/month (Creator, 15 minutes of video) up to $189/month+ (Enterprise, 60+ minutes). Compared to Synthesia, HeyGen offers similar quality at a lower entry price with stronger affiliate economics (35% recurring).
+HeyGen is an AI avatar and talking-head video platform developed by HeyGen, Inc. It generates professional videos of AI avatars delivering scripts with natural lip sync and gestures, and is primarily used for marketing, sales outreach, employee training, and multilingual video translation. Its key differentiator is convincing avatar quality with custom avatar cloning and 40+ language support. As of April 2026, pricing starts at $29/month (Creator, 15 minutes of video) up to $189/month+ (Enterprise, 60+ minutes). Compared to Synthesia, HeyGen offers similar quality at a lower entry price.
 
 ## What It Does
 
@@ -46,7 +46,6 @@ HeyGen creates professional talking-head videos using 100+ AI avatars with natur
 - **Sales teams:** personalized prospecting videos. "Hi [Name], I noticed your company..."
 - **Course creators:** lecture videos without being on camera
 - **Agencies:** client-facing video content production at lower cost than traditional video shoots
-- **Affiliate marketers:** 35% recurring commission makes HeyGen one of the best AI affiliate plays
 
 ## Pricing
 

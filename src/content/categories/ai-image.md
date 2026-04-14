@@ -48,12 +48,6 @@ AI image generation includes seven major tools as of April 2026, with the market
 3. **Canva AI:** best if you want templates + AI generation in one tool
 4. **Leonardo:** best free option for bulk thumbnail testing
 
-## Affiliate Programs
-- Leonardo AI: affiliate program exists, ~20%
-- Midjourney: no formal affiliate program (as of April 2026)
-- Ideogram: no affiliate program yet
-- DALL-E/Imagen: bundled in ChatGPT/Gemini, no separate affiliate
-
 ## Honest Assessment
 Image generation is approaching commodity. The real differentiation is in workflow integration (how fast can you go from idea to final image?) and fine-tuning (can you train on your brand's style?). Midjourney's quality lead is shrinking. Flux + ComfyUI is the power-user play. For most people, whatever's built into their LLM chat (DALL-E or Imagen) is good enough.
 

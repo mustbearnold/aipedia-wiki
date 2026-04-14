@@ -36,23 +36,13 @@ Mubert operates on a fundamentally different architecture: stem-based assembly f
 
 ## Choosing the Right Tool
 
-**Use Suno if:** you want to create songs — real tracks with vocals, melody, and lyrics — that you can release on streaming platforms, use in videos, or share as creative output. Best interface, best brand recognition, affiliate program available (~20%).
+**Use Suno if:** you want to create songs — real tracks with vocals, melody, and lyrics — that you can release on streaming platforms, use in videos, or share as creative output. Best interface, best brand recognition.
 
 **Use Udio if:** audio quality and inpainting control matter more than ease of use, or you want the largest free tier without committing to a paid plan. Note the RIAA lawsuit history and smaller company footprint.
 
 **Use Mubert if:** you are a content creator who needs background music for YouTube, Twitch streams, podcasts, or branded videos. You do not want songs — you want functional, YouTube-safe instrumentals at scale. Safest copyright posture of the three.
 
 **Do not confuse the categories.** Mubert will not make you a song. Suno and Udio will not give you 500 safe background tracks per month for $14. They are complementary, not competitive.
-
-## Affiliate Programs
-
-| Tool | Commission | Cookie | Network |
-|------|------------|--------|---------|
-| Suno | ~20% | 30 days | Direct |
-| Mubert | 30% | 30 days | Direct |
-| Udio | None | — | — |
-
-Mubert's 30% recurring commission is the strongest in this category. Suno's ~20% is solid. Udio has no affiliate program, which limits its coverage in review content and contributes to Suno's brand dominance.
 
 ## Video Potential
 

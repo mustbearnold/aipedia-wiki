@@ -22,13 +22,13 @@ Most YouTube creators should start with ElevenLabs Creator ($22/mo) because it b
 
 ## Comparison Table
 
-| Tool | Price | Best For | Voice Cloning | Characters/Mo | Score | Affiliate |
-|------|-------|----------|---------------|---------------|-------|-----------|
-| [ElevenLabs](../tools/elevenlabs.md) | $22/mo (Creator) | Overall YouTube voiceover | Yes (instant) | 100,000 | 9.2/10 | 22% recurring |
-| [Fish Audio](../tools/fish-audio.md) | Free (open-source) | Budget/privacy-focused creators | Yes (local) | Unlimited | 8.5/10 | None |
-| [Voxtral](../tools/voxtral.md) | $0.016/1K chars (API) | High-volume channels | No | Pay-as-you-go | 8.0/10 | None |
-| [Murf](../tools/murf.md) | $26/mo (Creator) | Corporate/explainer channels | Yes (studio) | 48 hours/yr | 7.8/10 | 20% recurring |
-| [LOVO](../tools/lovo.md) | $24/mo (Pro) | Non-English content | Yes | 200,000 | 7.5/10 | 25% recurring |
+| Tool | Price | Best For | Voice Cloning | Characters/Mo | Score |
+|------|-------|----------|---------------|---------------|-------|
+| [ElevenLabs](../tools/elevenlabs.md) | $22/mo (Creator) | Overall YouTube voiceover | Yes (instant) | 100,000 | 9.2/10 |
+| [Fish Audio](../tools/fish-audio.md) | Free (open-source) | Budget/privacy-focused creators | Yes (local) | Unlimited | 8.5/10 |
+| [Voxtral](../tools/voxtral.md) | $0.016/1K chars (API) | High-volume channels | No | Pay-as-you-go | 8.0/10 |
+| [Murf](../tools/murf.md) | $26/mo (Creator) | Corporate/explainer channels | Yes (studio) | 48 hours/yr | 7.8/10 |
+| [LOVO](../tools/lovo.md) | $24/mo (Pro) | Non-English content | Yes | 200,000 | 7.5/10 |
 
 ## Detailed Reviews
 

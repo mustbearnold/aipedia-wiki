@@ -22,12 +22,12 @@ Content creators and copywriters should use Surfer SEO ($79/mo) because it is th
 
 ## Comparison Table
 
-| Tool | Price | Best For | Content Scoring | Backlink Data | GEO Features | Score | Affiliate |
-|------|-------|----------|----------------|---------------|-------------|-------|-----------|
-| [Surfer SEO](../tools/surfer-seo.md) | $79/mo (Essential) | Content optimization | Yes (real-time) | No | Basic | 9.1/10 | 25% lifetime |
-| [Semrush](../tools/semrush.md) | $140/mo (Pro) | Full SEO suite | Yes (SEO Writing Assistant) | Yes (extensive) | Yes | 9.0/10 | $200/sale |
-| [Ahrefs](../tools/ahrefs.md) | $29/mo (Starter) | Budget/backlinks | Yes (Content Explorer) | Yes (largest index) | Basic | 8.7/10 | 30% recurring |
-| [NeuronWriter](../tools/neuronwriter.md) | $23/mo (Bronze) | Budget content scoring | Yes (NLP-based) | No | No | 7.8/10 | None |
+| Tool | Price | Best For | Content Scoring | Backlink Data | GEO Features | Score |
+|------|-------|----------|----------------|---------------|-------------|-------|
+| [Surfer SEO](../tools/surfer-seo.md) | $79/mo (Essential) | Content optimization | Yes (real-time) | No | Basic | 9.1/10 |
+| [Semrush](../tools/semrush.md) | $140/mo (Pro) | Full SEO suite | Yes (SEO Writing Assistant) | Yes (extensive) | Yes | 9.0/10 |
+| [Ahrefs](../tools/ahrefs.md) | $29/mo (Starter) | Budget/backlinks | Yes (Content Explorer) | Yes (largest index) | Basic | 8.7/10 |
+| [NeuronWriter](../tools/neuronwriter.md) | $23/mo (Bronze) | Budget content scoring | Yes (NLP-based) | No | No | 7.8/10 |
 
 ## Detailed Reviews
 
@@ -45,7 +45,7 @@ Semrush is the most comprehensive SEO platform available, covering every aspect 
 
 The SEO Writing Assistant provides real-time content scoring similar to Surfer, though with less granular NLP term suggestions. Semrush compensates with broader context: keyword gap analysis, topic cluster identification, and content performance tracking over time. ContentShake AI generates article drafts optimized for specific keywords, though human editing is essential for quality.
 
-For agencies, Semrush's reporting features justify the price: automated PDF reports, white-label branding, and client management dashboards. The $200 per sale affiliate commission reflects high customer lifetime value. The main objection is price: at $140 per month (and $250/mo for Guru), Semrush is the most expensive option. Solo creators who only need content optimization should not pay for the full suite.
+For agencies, Semrush's reporting features justify the price: automated PDF reports, white-label branding, and client management dashboards. The main objection is price: at $140 per month (and $250/mo for Guru), Semrush is the most expensive option. Solo creators who only need content optimization should not pay for the full suite.
 
 ### Ahrefs: Best Budget Entry Point
 

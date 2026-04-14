@@ -27,14 +27,9 @@ AI design and app building experienced massive disruption in early 2026. Google 
 | **v0 by Vercel** | $20/mo Premium | React UI components | 8 | 7 | 6 | 7 |
 
 ## Our Picks
-- **Best for thumbnails/social:** Canva Pro ($13/mo). ~$36/referral.
-- **Best app builder:** Lovable ($25/mo). $20M ARR in 2 months, 20% affiliate.
+- **Best for thumbnails/social:** Canva Pro ($13/mo).
+- **Best app builder:** Lovable ($25/mo). $20M ARR in 2 months.
 - **Best free:** Google Stitch (350 gen/month free)
-
-## Affiliate Programs
-- Lovable: **20% recurring for 12 months**
-- Canva: ~$36 per annual Pro referral
-- v0: $5 per lead via Dub.co
 
 ## Video Potential
 - "Google Stitch vs Figma — Is Figma Dead?" (massive news search)

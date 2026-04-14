@@ -32,7 +32,7 @@ author: "aipedia.wiki Editorial"
 
 # Copy.ai
 
-Copy.ai is an AI writing and go-to-market (GTM) automation platform built by Copy.ai Inc. (San Francisco, founded 2020). It launched as a consumer copywriting tool — one of the first "AI writing assistants" — and has since pivoted significantly toward GTM automation for sales and marketing teams: building automated workflows that connect AI writing to CRM data, outreach sequences, and marketing pipelines. The free tier is limited (2,000 words/month), the Starter plan starts at $49/month, and the Advanced plan at $249/month is where the GTM workflow value lives. Affiliate commission of 45% makes it one of the highest-paying programs in AI writing tools.
+Copy.ai is an AI writing and go-to-market (GTM) automation platform built by Copy.ai Inc. (San Francisco, founded 2020). It launched as a consumer copywriting tool — one of the first "AI writing assistants" — and has since pivoted significantly toward GTM automation for sales and marketing teams: building automated workflows that connect AI writing to CRM data, outreach sequences, and marketing pipelines. The free tier is limited (2,000 words/month), the Starter plan starts at $49/month, and the Advanced plan at $249/month is where the GTM workflow value lives.
 
 ## What It Does
 
@@ -78,7 +78,7 @@ Copy.ai costs $0 to custom/enterprise across four tiers. The free tier is very l
 
 ## Bottom Line
 
-Copy.ai is worth it for sales and marketing teams at the Advanced plan ($249/mo) if GTM workflow automation is the goal — the CRM integration and automated outreach pipelines justify the cost at even modest pipeline volumes. For solo copywriters or small teams who just want AI writing assistance, the Starter plan at $49/month competes directly with cheaper alternatives (ChatGPT Plus at $20/month does much of the same thing). The 45% affiliate commission is unusually high and makes this a strong candidate for AI writing affiliate content.
+Copy.ai is worth it for sales and marketing teams at the Advanced plan ($249/mo) if GTM workflow automation is the goal — the CRM integration and automated outreach pipelines justify the cost at even modest pipeline volumes. For solo copywriters or small teams who just want AI writing assistance, the Starter plan at $49/month competes directly with cheaper alternatives (ChatGPT Plus at $20/month does much of the same thing).
 
 ## Best Alternatives
 
@@ -107,5 +107,3 @@ It depends on which plan and which use case. For small marketing teams doing gen
 
 - [Official website](https://copy.ai)
 - [Pricing page](https://copy.ai/pricing)
-
-*Some links on this page are affiliate links. We earn a commission at no extra cost to you. This doesn't influence our ratings or recommendations.*

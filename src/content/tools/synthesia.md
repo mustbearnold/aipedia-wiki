@@ -109,5 +109,4 @@ Both tools serve the AI avatar talking-head video market, but they target slight
 ## Sources
 
 - Synthesia pricing and features: https://synthesia.io/pricing (verified 2026-04-13)
-- Synthesia affiliate program: https://synthesia.io/affiliates (verified 2026-04-13)
 - Synthesia LMS integration documentation: https://help.synthesia.io (verified 2026-04-13)

@@ -19,7 +19,7 @@ affiliate:
   commission: "22% recurring"
   cookie_days: 30
   network: direct
-  link: https://elevenlabs.io/affiliate
+  link: "https://try.elevenlabs.io/9qle5pnma4ze"
 scores:
   utility: 10
   value: 8
@@ -105,12 +105,10 @@ Fish Audio S2 is the best alternative if you need open-source, self-hostable TTS
 
 - **Category:** [AI Voice / TTS](../categories/ai-voice.md)
 - **Trends:** [AI Voice Explosion](../trends/ai-voice-explosion.md)
-- **Use cases:** [YouTube Production Stack](../stacks/youtube-production-stack.md), [AI Agency Stack](../stacks/ai-agency-stack.md)
+- **Use cases:** [AI Agency Stack](../stacks/ai-agency-stack.md)
 
 ## Sources
 
 - [Official website](https://elevenlabs.io)
 - [Pricing page](https://elevenlabs.io/pricing)
 - [API Documentation](https://elevenlabs.io/docs)
-
-*Some links on this page are affiliate links. We earn a commission at no extra cost to you. This doesn't influence our ratings or recommendations.*

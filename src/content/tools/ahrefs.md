@@ -111,5 +111,3 @@ If backlinks and link building are your priority, choose Ahrefs. If you need an 
 
 - **Category:** [AI SEO](../categories/ai-seo.md)
 - **See also:** [Semrush](semrush.md), [Surfer SEO](surfer-seo.md)
-
-*Some links on this page are affiliate links. We earn a commission at no extra cost to you. This doesn't influence our ratings or recommendations.*

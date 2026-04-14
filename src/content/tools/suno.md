@@ -94,7 +94,7 @@ Yes. Suno's free tier provides approximately 50 credits per day (around 1,500 cr
 Commercial use requires the Pro plan ($8/month annually) or higher. The Pro plan includes a commercial license covering music released on streaming platforms, used in videos, or sold directly. The free plan explicitly prohibits commercial use. Note that Suno settled an RIAA lawsuit in early 2025 — the terms were not fully public, so some legal ambiguity around training data remains, though the settlement is widely interpreted as resolving liability for end-users.
 
 **How does Suno compare to Udio?**
-Both generate full songs with vocals from text prompts. Suno has a more polished vocal generation engine, easier interface, and stronger brand recognition. Udio offers higher raw audio fidelity, inpainting (edit specific clip sections), and a larger free tier (1,200 credits/month vs Suno's ~1,500 credits but with 30-second clips only). Udio also has no affiliate program. For most users, Suno is the better starting point; audiophiles and producers often prefer Udio's output quality.
+Both generate full songs with vocals from text prompts. Suno has a more polished vocal generation engine, easier interface, and stronger brand recognition. Udio offers higher raw audio fidelity, inpainting (edit specific clip sections), and a larger free tier (1,200 credits/month vs Suno's ~1,500 credits but with 30-second clips only). For most users, Suno is the better starting point; audiophiles and producers often prefer Udio's output quality.
 
 ## Related
 

@@ -32,15 +32,10 @@ AI automation and agent platforms split into two segments as of April 2026: no-c
 | **Intercom** | $39-139/seat/mo | AI customer support, Fin AI Agent | 9 | 7 | 8 | 9 |
 
 ## Our Picks
-- **Best overall:** n8n ($20/mo cloud). Open-source, AI agents built in, 30% affiliate.
+- **Best overall:** n8n ($20/mo cloud). Open-source, AI agents built in.
 - **Best free:** LangGraph. Open-source, most precise agent control.
 - **Best for non-devs:** Relevance AI. Drag-and-drop agent builder.
 - **Most integrations:** Zapier. 6,000+ apps, but expensive at scale.
-
-## Affiliate Programs
-- n8n: **30% recurring for 12 months**, best commission in category
-- Zapier: 15% recurring (approved partners)
-- Make: ~20%
 
 ## Video Potential
 - "n8n vs Make vs Zapier — Which Automation Tool in 2026?" (high search)

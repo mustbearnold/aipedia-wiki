@@ -77,7 +77,6 @@ Wordtune is not designed for generating content from scratch, doing SEO optimiza
 - **Focused on sentence and paragraph level — not whole documents:** Wordtune works best on selected sentences or short passages. It is not designed for full-document restructuring or article-level rewriting.
 - **No content generation from scratch:** Wordtune cannot write a blog post, ad copy, or email from a prompt. It only works on existing text. Users needing generation and editing need a separate tool.
 - **Spices can feel generic:** The AI-generated expansions are sometimes too generic or off-topic to be directly usable. They work better as idea sparks than as ready-to-paste additions.
-- **No affiliate program:** Unlike QuillBot and Rytr, Wordtune does not offer an affiliate commission, which limits its presence in comparison and review content.
 - **Owned by an AI research company, not a product company:** AI21 Labs' primary business is enterprise API access to its models. Wordtune is a consumer product, but the company's long-term commercial focus may remain on B2B. Product prioritization risk is real.
 
 ## Bottom Line

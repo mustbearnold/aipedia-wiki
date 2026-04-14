@@ -30,13 +30,8 @@ AI video generation exploded in 2025-2026 and now includes six major tools spann
 
 ## Our Picks
 - **Best quality:** Kling 3.0 ($10/mo Standard). #1 ELO, best value.
-- **Best for YouTube creators:** HeyGen ($29/mo). Avatar videos, 35% affiliate.
+- **Best for YouTube creators:** HeyGen ($29/mo). Avatar videos.
 - **Best free option:** Seedance 2.0 (free tier with strong motion quality)
-
-## Affiliate Programs
-- HeyGen: **35% commission**, 30-day cookie. Best in category.
-- Kling: affiliate exists, rates vary
-- Synthesia: ~20%
 
 ## Video Potential
 - "Kling vs Seedance vs Runway — Best AI Video Tool 2026" (massive search intent)

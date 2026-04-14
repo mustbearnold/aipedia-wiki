@@ -109,9 +109,6 @@ Yes. Images generated on Freepik paid plans include a commercial use license. Th
 **What AI model does Freepik use?**
 Freepik's AI Image Generator is primarily powered by Flux (Black Forest Labs), with additional models and style options available. Freepik uses a proprietary implementation and fine-tuning built on top of Flux for quality and style consistency.
 
-**Does Freepik have an affiliate program?**
-Yes. Freepik offers an affiliate program with approximately 15% commission on referred subscriptions, 30-day cookie window. The program is available through their affiliate network.
-
 ## Sources
 
 - [Official website](https://freepik.com)

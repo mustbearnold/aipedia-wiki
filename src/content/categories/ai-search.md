@@ -53,11 +53,6 @@ AI search is cannibalizing traditional web traffic. If you create content (blogs
 3. **Video content is more defensible.** AI search can't fully replicate video demonstrations.
 4. **Original research/data wins.** AI can summarize but can't create primary sources.
 
-## Affiliate Programs
-- Perplexity: no public affiliate program (as of April 2026)
-- Exa/Tavily: developer-focused, no traditional affiliate
-- This category has weak affiliate potential. Focus on the SEO tools that help you rank IN AI search instead.
-
 ## Video Potential
 - "Perplexity vs Google vs ChatGPT — Which AI Search is Best?" (massive search intent)
 - "Google AI Overviews Killed My Blog Traffic — Here's What I'm Doing" (creator angle)

@@ -22,13 +22,13 @@ Small businesses and technical solopreneurs should use n8n (self-hosted or cloud
 
 ## Comparison Table
 
-| Tool | Price | Best For | AI Agent Support | Integrations | Self-Host | Score | Affiliate |
-|------|-------|----------|------------------|-------------|-----------|-------|-----------|
-| [n8n](../tools/n8n.md) | $0 (self-host) / $20/mo (cloud) | Technical solopreneurs, small teams | Native (built-in nodes) | 400+ | Yes | 9.3/10 | 30% recurring |
-| [Zapier](../tools/zapier.md) | $0-299/mo | Non-technical users | Central (Chatbots, AI actions) | 7,000+ | No | 8.5/10 | 15% recurring |
-| [Make](../tools/make.md) | $9-99/mo | Visual workflow builders | Basic (HTTP + AI modules) | 1,800+ | No | 8.2/10 | 20% recurring |
-| [Relevance AI](../tools/relevance-ai.md) | $19-599/mo | AI-first agent deployment | Core product (agent-native) | 100+ | No | 8.0/10 | None |
-| [CrewAI](../tools/crewai.md) | Free (open-source) | Multi-agent developers | Core product (framework) | Via code | Yes | 7.8/10 | None |
+| Tool | Price | Best For | AI Agent Support | Integrations | Self-Host | Score |
+|------|-------|----------|------------------|-------------|-----------|-------|
+| [n8n](../tools/n8n.md) | $0 (self-host) / $20/mo (cloud) | Technical solopreneurs, small teams | Native (built-in nodes) | 400+ | Yes | 9.3/10 |
+| [Zapier](../tools/zapier.md) | $0-299/mo | Non-technical users | Central (Chatbots, AI actions) | 7,000+ | No | 8.5/10 |
+| [Make](../tools/make.md) | $9-99/mo | Visual workflow builders | Basic (HTTP + AI modules) | 1,800+ | No | 8.2/10 |
+| [Relevance AI](../tools/relevance-ai.md) | $19-599/mo | AI-first agent deployment | Core product (agent-native) | 100+ | No | 8.0/10 |
+| [CrewAI](../tools/crewai.md) | Free (open-source) | Multi-agent developers | Core product (framework) | Via code | Yes | 7.8/10 |
 
 ## Detailed Reviews
 
@@ -38,7 +38,7 @@ n8n's core strength is that it sits at the intersection of no-code accessibility
 
 The AI agent capabilities, added throughout 2025 and expanded in 2026, are genuinely useful rather than bolted-on marketing features. The AI Agent node lets you define a tool-using agent with a system prompt, connect it to LLMs (OpenAI, Anthropic, Google, local models via Ollama), and give it access to tools like web search, database queries, code execution, and any of n8n's 400+ integration nodes. You can build a workflow where an AI agent reads incoming emails, classifies them, drafts responses, looks up customer records in your CRM, and queues the draft for human review, all in a single visual workflow.
 
-Self-hosting is straightforward via Docker and eliminates monthly costs entirely. The cloud plan at $20 per month includes 2,500 workflow executions, which covers most small business needs. Higher tiers ($50/mo and up) add more executions, team collaboration, and priority support. The 30% affiliate commission is among the highest in the automation category, and n8n's quality justifies genuine recommendation regardless of commission.
+Self-hosting is straightforward via Docker and eliminates monthly costs entirely. The cloud plan at $20 per month includes 2,500 workflow executions, which covers most small business needs. Higher tiers ($50/mo and up) add more executions, team collaboration, and priority support.
 
 ### Zapier: Best for Non-Technical Users
 

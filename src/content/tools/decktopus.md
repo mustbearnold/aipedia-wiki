@@ -17,8 +17,8 @@ affiliate:
   has_program: true
   commission: "25% recurring"
   cookie_days: null
-  network: null
-  link: null
+  network: "Direct"
+  link: "https://www.decktopus.com?via=aipediawiki"
 scores:
   utility: 6
   value: 6
@@ -32,11 +32,11 @@ author: "aipedia.wiki Editorial"
 
 # Decktopus AI
 
-Decktopus AI is an automated presentation builder developed by Decktopus Inc., founded in 2018. It generates complete presentations from a prompt and includes built-in form and Q&A functionality designed for presenters who collect responses from audiences, and is primarily used by educators, trainers, and professionals who combine presentation delivery with audience interaction. Its key differentiator is the embedded form and Q&A layer: presentations can include response collection, audience polling, and feedback forms without needing separate tools. As of April 2026, Decktopus offers a limited free tier with Pro at $14.99 per month and an active 25% recurring affiliate program ([Decktopus](https://decktopus.com)).
+Decktopus AI is an automated presentation builder developed by Decktopus Inc., founded in 2018. It generates complete presentations from a prompt and includes built-in form and Q&A functionality designed for presenters who collect responses from audiences, and is primarily used by educators, trainers, and professionals who combine presentation delivery with audience interaction. Its key differentiator is the embedded form and Q&A layer: presentations can include response collection, audience polling, and feedback forms without needing separate tools. As of April 2026, Decktopus offers a limited free tier with Pro at $14.99 per month ([Decktopus](https://decktopus.com)).
 
 Decktopus predates most AI presentation tools by several years, launching in 2018 with a template-first approach before adding AI generation. The product has evolved toward AI-assisted deck creation while retaining its original form and interaction features. This combination is genuinely differentiated from pure AI generation tools: a Decktopus presentation can serve as both the slide content and the data collection mechanism in a single workflow, useful for trainers running post-session surveys, educators assigning interactive homework, and sales reps collecting qualification data during a presentation.
 
-The competitive position is niche. Gamma is a stronger general-purpose AI presentation tool at a lower price point, and Pitch is stronger for team collaboration. Decktopus earns its place for specific workflows where presentation plus form integration is the requirement, and its affiliate program is the strongest in the category at 25% recurring commission.
+The competitive position is niche. Gamma is a stronger general-purpose AI presentation tool at a lower price point, and Pitch is stronger for team collaboration. Decktopus earns its place for specific workflows where presentation plus form integration is the requirement.
 
 ## What It Does
 
@@ -48,7 +48,6 @@ Decktopus generates a complete presentation from a topic prompt, applying a visu
 - **Sales professionals** who want to embed qualification forms within proposal decks
 - **Coaches and consultants** collecting client intake information within an onboarding presentation
 - **Marketers** running webinar-style presentations with embedded registration or feedback forms
-- **Affiliates and content creators** who want to recommend a presentation tool with a meaningful recurring commission
 - **Small business owners** who need a simple all-in-one presentation and form tool
 
 ## Pricing
@@ -70,7 +69,6 @@ Decktopus generates a complete presentation from a topic prompt, applying a visu
 - **AI text assistant:** Rewrite, shorten, and expand slide text through inline AI prompts
 - **Presentation analytics:** Track who viewed the presentation and how long they spent on each slide
 - **PDF export:** Export as PDF for static sharing; PPTX export on Pro tier
-- **Affiliate program:** 25% recurring commission — the strongest in the AI presentation category
 
 ## Limitations
 
@@ -84,7 +82,7 @@ Decktopus generates a complete presentation from a topic prompt, applying a visu
 
 ## Bottom Line
 
-Decktopus AI is a reasonable choice for educators, trainers, and professionals who specifically need presentation plus embedded form functionality in a single tool ([Decktopus](https://decktopus.com)). For general AI presentation work, Gamma is a better tool at a lower price. The 25% recurring affiliate program is the strongest reason to recommend Decktopus to an audience, and for content creators in the presentation tools space it is worth highlighting. For end users without that specific form integration need, the value proposition versus Gamma is weak.
+Decktopus AI is a reasonable choice for educators, trainers, and professionals who specifically need presentation plus embedded form functionality in a single tool ([Decktopus](https://decktopus.com)). For general AI presentation work, Gamma is a better tool at a lower price. For users without the specific form integration need, the value proposition versus Gamma is weak.
 
 ## Best Alternatives
 
@@ -99,9 +97,6 @@ Decktopus AI is a reasonable choice for educators, trainers, and professionals w
 
 **What makes Decktopus different from Gamma?**
 Decktopus includes built-in form and Q&A functionality for collecting audience responses within the presentation, which Gamma does not offer. For general AI presentation generation, Gamma is the stronger product. Decktopus earns its place in workflows where slides and data collection are combined.
-
-**Does Decktopus have an affiliate program?**
-Yes. Decktopus offers a 25% recurring commission affiliate program, which is the highest commission rate in the AI presentation tools category. Details are available through the Decktopus website.
 
 **Is Decktopus good for educators?**
 Yes, particularly for educators who run interactive sessions. The ability to embed quizzes, surveys, and Q&A forms directly in a presentation makes it more useful for educational workflows than a pure presentation tool. For static lecture slides, Gamma or Beautiful.ai are stronger choices.
