@@ -88,14 +88,6 @@ Surfer SEO is the best content optimization tool for writers who already know wh
 - **[MarketMuse](../categories/ai-seo.md):** content strategy focus with topic modeling. Enterprise-level pricing. Overkill for most users.
 - **[Semrush](semrush.md):** comprehensive SEO suite with its own content optimization feature (SEO Writing Assistant). Less detailed than Surfer's Content Editor.
 
-## Affiliate Program
-
-- **Commission:** 25% lifetime recurring (not capped, not time-limited) ([Surfer SEO Affiliate Program](https://surferseo.com/affiliate))
-- **Cookie:** 60 days
-- **Network:** Direct (Surfer affiliate dashboard)
-- **Payout:** Monthly
-- **Fit:** The best affiliate commission in the SEO tools category. Lifetime recurring on $79-$219/mo plans means a single referral can pay $20-$55/month forever. Top earners in this niche build income almost entirely around Surfer referrals.
-
 ## FAQ
 
 **Is Surfer SEO worth it for solo bloggers?**

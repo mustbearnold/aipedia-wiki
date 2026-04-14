@@ -91,10 +91,6 @@ Figma remains the best professional UI/UX design tool, and its AI features are u
 - **[Framer](../categories/ai-design.md):** website builder with AI generation. More focused on marketing sites than product UI. Good for landing pages.
 - **[Penpot](../categories/ai-design.md):** open-source Figma alternative. No AI features yet. Free, self-hostable. For teams that won't accept vendor lock-in.
 
-## Affiliate Program
-
-No affiliate program available as of April 2026.
-
 ## FAQ
 
 **Is Figma AI a separate product?**

@@ -12,8 +12,26 @@ export async function getStaticPaths() {
 
 const { tool } = Astro.props;
 const { Content } = await render(tool);
+
+// Extract FAQ questions/answers from raw markdown body for FAQPage JSON-LD
+function extractFAQ(body: string): Array<{ question: string; answer: string }> {
+  const faqMatch = body.match(/##\s+FAQ\s*\n([\s\S]*?)(?=\n##\s|\s*$)/);
+  if (!faqMatch) return [];
+  const faqBlock = faqMatch[1];
+  const pairs: Array<{ question: string; answer: string }> = [];
+  const qRegex = /\*\*([^*]+\?[^*]*)\*\*\s*\n([\s\S]*?)(?=\n\*\*[^*]+\?|\s*$)/g;
+  let match;
+  while ((match = qRegex.exec(faqBlock)) !== null) {
+    const question = match[1].trim();
+    const answer = match[2].trim().replace(/\n+/g, ' ').replace(/\[([^\]]+)\]\([^)]+\)/g, '$1');
+    if (question && answer) pairs.push({ question, answer });
+  }
+  return pairs;
+}
+
+const faqItems = tool.body ? extractFAQ(tool.body) : [];
 ---
 
-<ToolLayout frontmatter={tool.data}>
+<ToolLayout frontmatter={tool.data} faqItems={faqItems}>
   <Content />
 </ToolLayout>

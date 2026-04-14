@@ -89,10 +89,6 @@ Notion AI is a solid AI upgrade for teams already using Notion as their workspac
 - **[Coda AI](../categories/ai-notes.md):** similar concept (AI in a doc/database workspace). Smaller community than Notion.
 - **[Microsoft Copilot in OneNote](../categories/ai-notes.md):** AI in Microsoft's notebook. Better if your team is in the Microsoft ecosystem.
 
-## Affiliate Program
-
-Notion offers referral credits (earn credit toward your own subscription for referring new users) rather than a traditional cash-payout affiliate program. Not viable as a monetization channel.
-
 ## FAQ
 
 **Is Notion AI free?**

@@ -91,14 +91,6 @@ Ahrefs has the best backlink data in the industry, and that's not close. If your
 - **[Moz Pro](../categories/ai-seo.md):** simpler, cheaper ($99/mo). Domain Authority metric is industry-standard despite some limitations. Less data depth.
 - **[Majestic](../categories/ai-seo.md):** backlink-focused like Ahrefs. Trust Flow / Citation Flow metrics. Less feature-rich overall but cheaper for pure link research.
 
-## Affiliate Program
-
-- **Commission:** Up to 30% recurring ([Ahrefs Affiliate Program](https://ahrefs.com/affiliates))
-- **Cookie:** 60 days
-- **Network:** Direct (Ahrefs affiliate dashboard)
-- **Payout:** Monthly
-- **Fit:** Strong recurring commission on a high-value product. 30% of $129-$449/mo is $39-$135/month per referral. Not as generous as Surfer's 25% lifetime (Ahrefs caps the recurring period), but the higher price point means larger individual payouts.
-
 ## FAQ
 
 **Is Ahrefs Starter plan enough for beginners?**

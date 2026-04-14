@@ -2,8 +2,8 @@
 type: category
 slug: ai-image
 title: AI Image Generation
-description: Text-to-image and image editing AI. Midjourney, Flux, DALL-E 3, Ideogram, Leonardo, Imagen 3, Stability AI.
-tool_count: 7
+description: Text-to-image and image editing AI. Midjourney, Flux, DALL-E 3, Ideogram, Leonardo, Adobe Firefly, Stable Diffusion.
+tool_count: 11
 seo_title: "Best AI Image Tools (2026) — aipedia.wiki"
 meta_description: "Midjourney, Flux, and DALL-E 3 lead AI image generation in 2026. Compare 7 tools for quality, pricing, and text rendering. Updated April 2026."
 author: "aipedia.wiki Editorial"
@@ -25,7 +25,8 @@ AI image generation includes seven major tools as of April 2026, with the market
 | **Ideogram 2.0** | Free-$20/mo | Best text-in-image rendering | 8 | 9 | 7 | 7 |
 | **Leonardo AI** | Free-$24/mo | Best free tier (150 images/day) | 8 | 10 | 5 | 7 |
 | **Google Imagen 3** | In Gemini Advanced ($20/mo) | Google users, photorealism | 8 | 8 | 8 | 9 |
-| **Stability AI (SDXL/SD3)** | Free (open-source) | Self-hosting, maximum control | 7 | 10 | 5 | 6 |
+| **Stable Diffusion** | Free (open-source) | Self-hosting, no restrictions, fine-tuning | 9 | 10 | 7 | 9 |
+| **Adobe Firefly** | Free-$29.99/mo | Commercially safe, Creative Cloud users | 7 | 7 | 8 | 9 |
 
 ## Market Dynamics (April 2026)
 - **Midjourney v7** launched early 2026, still the aesthetic benchmark. Now has a web editor (no longer Discord-only).

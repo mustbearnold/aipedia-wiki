@@ -89,10 +89,6 @@ NotebookLM is the best free AI research tool available. The source-grounded Q&A 
 - **[ChatGPT with file upload](../categories/ai-search.md):** upload files to ChatGPT for Q&A. More flexible (has general knowledge too) but less rigorous about citing specific sources.
 - **[Perplexity](../categories/ai-search.md):** AI search with source citations. Better for web research, worse for private document analysis.
 
-## Affiliate Program
-
-No affiliate program available as of April 2026.
-
 ## FAQ
 
 **Is NotebookLM free?**

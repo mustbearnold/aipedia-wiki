@@ -7,12 +7,15 @@ import FreshnessBadge from '../components/FreshnessBadge.astro';
 import AffiliateCTA from '../components/AffiliateCTA.astro';
 import BreadcrumbLD from '../components/seo/BreadcrumbLD.astro';
 import SoftwareApplicationLD from '../components/seo/SoftwareApplicationLD.astro';
+import FAQPageLD from '../components/seo/FAQPageLD.astro';
+import RelatedTools from '../components/RelatedTools.astro';
 
 interface Props {
   frontmatter: Record<string, any>;
+  faqItems?: Array<{ question: string; answer: string }>;
 }
 
-const { frontmatter } = Astro.props;
+const { frontmatter, faqItems = [] } = Astro.props;
 
 const scores = frontmatter.scores ?? { utility: 0, value: 0, moat: 0, longevity: 0 };
 const overallScore = Math.round(((scores.utility ?? 0) + (scores.value ?? 0) + (scores.moat ?? 0) + (scores.longevity ?? 0)) / 4 * 10) / 10;
@@ -28,6 +31,9 @@ const categoryMap: Record<string, { emoji: string; label: string }> = {
   'ai-design': { emoji: '\u{1F58C}\uFE0F', label: 'AI Design' },
   'ai-search': { emoji: '\u{1F50D}', label: 'AI Search' },
   'ai-notes': { emoji: '\u{1F4DD}', label: 'AI Notes' },
+  'ai-music': { emoji: '\u{1F3B5}', label: 'AI Music' },
+  'ai-presentation': { emoji: '\uD83D\uDCCA', label: 'AI Presentation' },
+  'ai-research': { emoji: '\uD83D\uDD2C', label: 'AI Research' },
 };
 
 const catSlug = frontmatter.category ?? '';
@@ -57,6 +63,7 @@ const breadcrumbLdItems = [
   description={frontmatter.meta_description ?? frontmatter.tagline ?? ''}
 >
   <BreadcrumbLD items={breadcrumbLdItems} />
+  {faqItems.length > 0 && <FAQPageLD questions={faqItems} />}
   <SoftwareApplicationLD
     name={frontmatter.title}
     url={frontmatter.url ?? ''}
@@ -153,6 +160,8 @@ const breadcrumbLdItems = [
           hasProgram={hasProgram}
           commission={affiliate?.commission}
         />
+
+        <RelatedTools currentSlug={toolSlug} category={catSlug} limit={4} />
 
         {(frontmatter.price_range || frontmatter.pricing_model) && (
           <div class="bg-[var(--bg-card)] border border-[var(--border)] rounded-xl p-4">

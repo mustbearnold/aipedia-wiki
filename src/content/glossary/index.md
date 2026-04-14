@@ -17,7 +17,7 @@ update_frequency: quarterly
 
 **Large Language Model.** A neural network trained on massive text datasets that can generate, summarize, translate, and reason about text. Examples: GPT-4o, Claude, Gemini, Mistral Large. LLMs are the foundation of most modern AI tools. They work by predicting the next token in a sequence, but this simple mechanism produces remarkably capable behavior at scale.
 
-See also: [LLM Chatbots Category](../categories/llm-chatbots.md), [Foundation Model](#foundation-model), [Tokens](#tokens)
+See also: [AI Writing Category](../categories/ai-writing.md), [Foundation Model](#foundation-model), [Tokens](#tokens)
 
 ---
 
@@ -81,7 +81,7 @@ See also: [Agentic AI](#agentic-ai), [Workflow Automation](#workflow-automation)
 
 A term coined by Andrej Karpathy (2025) describing a coding style where the developer describes what they want in natural language and lets an AI coding assistant (Cursor, Claude Code, Copilot) generate the code. The developer "vibes" with the AI -- reviewing, adjusting, and guiding rather than writing every line. Controversial: critics say it produces fragile code; proponents say it 10x's prototyping speed. Best for MVPs and prototypes, less suitable for production systems without careful review.
 
-See also: [Coding Assistants Category](../categories/coding-assistants.md)
+See also: [AI Coding Category](../categories/ai-coding.md)
 
 ---
 

@@ -83,14 +83,6 @@ HeyGen is strictly an avatar/talking-head platform. It does not generate cinemat
 
 HeyGen is the best choice for marketing, sales, and L&D teams who need professional talking-head videos without filming a real person, but Synthesia wins if you need a more enterprise-focused platform with dedicated account management. It excels in avatar video specifically. Do not confuse it with general AI video generators like Kling or Runway -- HeyGen solves a different problem.
 
-## Affiliate Program
-
-- **Commission:** 35% recurring for the lifetime of the customer
-- **Cookie:** 30 days
-- **Network:** Direct (HeyGen affiliate dashboard)
-- **Payout:** Monthly, details in dashboard
-- **Fit:** Excellent. High conversion rate among marketing and sales audiences. The product demos itself well in video content.
-
 ## Best Alternatives
 
 - **[Synthesia](../categories/ai-video.md):** similar avatar video platform. More enterprise-focused, slightly higher price. Comparable quality.

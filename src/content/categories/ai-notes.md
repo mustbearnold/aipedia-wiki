@@ -2,8 +2,8 @@
 type: category
 slug: ai-notes
 title: AI Note-Taking & Knowledge Management
-description: AI-enhanced note-taking and knowledge management. Notion AI, Obsidian, Google NotebookLM, Mem, Reflect.
-tool_count: 7
+description: AI-enhanced note-taking, knowledge management, and meeting intelligence. Notion AI, Obsidian, NotebookLM, Otter.ai, Fireflies.ai.
+tool_count: 9
 seo_title: "Best AI Note-Taking Tools (2026) — aipedia.wiki"
 meta_description: "Notion AI, Obsidian, and Google NotebookLM lead AI note-taking in 2026. Compare 7 tools for teams, individuals, and research. Updated April 2026."
 author: "aipedia.wiki Editorial"
@@ -26,6 +26,8 @@ AI note-taking and knowledge management tools serve seven major platforms as of 
 | **Capacities** | Free-$12/mo | Object-based notes, structured data | 7 | 8 | 5 | 6 |
 | **Apple Notes + Apple Intelligence** | Free (Apple devices) | iPhone/Mac users, zero friction | 7 | 10 | 8 | 10 |
 | **Google NotebookLM** | Free | Research synthesis, audio overview | 8 | 10 | 7 | 8 |
+| **Otter.ai** | Free-$30/seat/mo | Meeting transcription, Zoom/Teams/Meet | 9 | 9 | 6 | 7 |
+| **Fireflies.ai** | Free-$29/seat/mo | Meeting intelligence, searchable archive | 8 | 8 | 6 | 7 |
 
 ## Market Dynamics (April 2026)
 - **Notion AI** keeps adding features (AI autofill in databases, Q&A across workspace, AI-generated project summaries). Entrenched with teams. Hard to displace.

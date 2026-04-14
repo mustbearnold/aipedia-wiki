@@ -3,7 +3,7 @@ type: category
 slug: ai-voice
 title: AI Voice / Text-to-Speech
 description: AI voice generation, cloning, and text-to-speech. ElevenLabs, Fish Audio S2, Murf, LOVO, Voxtral.
-tool_count: 6
+tool_count: 11
 seo_title: "Best AI Voice Tools (2026) — aipedia.wiki"
 meta_description: "ElevenLabs, Fish Audio S2, and Voxtral lead AI voice generation in 2026. Compare 6 TTS tools for quality, pricing, and self-hosting. Updated April 2026."
 author: "aipedia.wiki Editorial"
@@ -24,6 +24,7 @@ AI voice generation and text-to-speech tools have consolidated as of April 2026,
 | **LOVO AI** | $24-75/mo | Voice + video editing combo | 7 | 6 | 5 | 7 |
 | **Fish Audio (Fish Speech S2)** | Free tier + API | Open-source, multilingual, ultra-low latency | 9 | 10 | 6 | 8 |
 | **Voxtral (Mistral)** | $0.016/1K chars | Cheapest API | 8 | 10 | 6 | 8 |
+| **Descript** | Free-$30/mo | Podcast/video editing, Overdub voice cloning | 9 | 8 | 8 | 8 |
 | ~~Play.ht~~ | DEAD | ~~Was good~~ | — | — | — | — |
 
 ## Our Picks

@@ -88,13 +88,6 @@ n8n is the best choice for developers and agency builders who need AI-powered wo
 - **[Relevance AI](../categories/ai-automation.md):** no-code AI agent builder without the workflow automation layer. Narrower use case.
 - **[LangGraph](../categories/ai-automation.md):** code-first AI agent framework. More precise control but requires Python/JS development.
 
-## Affiliate Program
-
-- **Commission:** 30% recurring for 12 months
-- **Cookie:** 90 days
-- **Network:** Direct (n8n partner program)
-- **Fit:** Excellent for tutorial content. "Build an AI agent in 10 minutes" videos → n8n affiliate link.
-
 ## FAQ
 
 **Is n8n free?**

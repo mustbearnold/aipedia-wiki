@@ -2,8 +2,8 @@
 type: category
 slug: ai-video
 title: AI Video Generation
-description: Text-to-video and image-to-video AI tools. Kling 3.0, Seedance 2.0, Runway, Pika, HeyGen, Synthesia.
-tool_count: 6
+description: Text-to-video, image-to-video, and AI avatar tools. Kling 3.0, Seedance 2.0, Runway, Luma, HeyGen, Synthesia, D-ID.
+tool_count: 11
 seo_title: "Best AI Video Tools (2026) — aipedia.wiki"
 meta_description: "Kling 3.0, Seedance 2.0, and Runway Gen-4.5 lead AI video generation in 2026. Compare 7 tools for quality, pricing, and use cases. Updated April 2026."
 author: "aipedia.wiki Editorial"
@@ -24,7 +24,9 @@ AI video generation exploded in 2025-2026 and now includes six major tools spann
 | **Seedance 2.0 (ByteDance)** | Free tier + paid | Dance/motion, character consistency, fast generation | 9 | 9 | 7 | 8 |
 | **Pika 2.2** | $8-28/mo | Quick social content | 7 | 8 | 5 | 7 |
 | **HeyGen** | $29/mo | AI avatars, talking head | 8 | 7 | 8 | 9 |
-| **Synthesia** | $29-89/mo | Corporate training | 7 | 6 | 7 | 8 |
+| **Synthesia** | $18-64/mo | Corporate training, L&D, talking-head | 8 | 7 | 7 | 8 |
+| **Luma Dream Machine** | Free-$499/mo | Camera controls, cinematic motion | 8 | 7 | 6 | 7 |
+| **D-ID** | $5.9-196/mo | Real-time AI avatar conversations | 7 | 6 | 6 | 7 |
 
 ## Our Picks
 - **Best quality:** Kling 3.0 ($10/mo Standard). #1 ELO, best value.

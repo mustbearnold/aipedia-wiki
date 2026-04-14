@@ -2,8 +2,8 @@
 type: category
 slug: ai-automation
 title: AI Automation & Agents
-description: Workflow automation and AI agent platforms. n8n, Make, Zapier, Relevance AI, CrewAI, LangGraph, Claude Agent SDK.
-tool_count: 7
+description: Workflow automation, AI agent platforms, and sales/support tools. n8n, Make, Zapier, Relevance AI, CrewAI, Apollo, Clay, Intercom, Instantly.
+tool_count: 12
 seo_title: "Best AI Automation Tools (2026) — aipedia.wiki"
 meta_description: "n8n, Make, and Zapier lead workflow automation in 2026. Compare 7 platforms for AI agents, integrations, and self-hosting. Updated April 2026."
 author: "aipedia.wiki Editorial"
@@ -26,6 +26,10 @@ AI automation and agent platforms split into two segments as of April 2026: no-c
 | **CrewAI** | Free-$99+/mo | Multi-agent orchestration (devs) | 8 | 8 | 7 | 8 |
 | **LangGraph** | Free (open source) | Precise agent state machines | 9 | 10 | 7 | 9 |
 | **Claude Agent SDK** | API pricing | Claude-native agents | 9 | 8 | 8 | 9 |
+| **Apollo.io** | Free-$149/user/mo | Sales intelligence, 275M+ contacts | 9 | 8 | 7 | 8 |
+| **Clay** | Free-$800/mo | Data enrichment, signal-based outreach | 9 | 7 | 8 | 8 |
+| **Instantly** | $37-358/mo | Cold email sending, unlimited accounts | 8 | 9 | 7 | 7 |
+| **Intercom** | $39-139/seat/mo | AI customer support, Fin AI Agent | 9 | 7 | 8 | 9 |
 
 ## Our Picks
 - **Best overall:** n8n ($20/mo cloud). Open-source, AI agents built in, 30% affiliate.

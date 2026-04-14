@@ -1,0 +1,112 @@
+---
+import ArticleLayout from '../../layouts/ArticleLayout.astro';
+---
+
+<ArticleLayout
+  title="How We Score AI Tools"
+  seoTitle="How aipedia.wiki Scores AI Tools — Scoring Methodology"
+  description="aipedia.wiki scores every AI tool across four dimensions: Utility, Value, Moat, and Longevity. Here's exactly what each score means and how we calculate it."
+  breadcrumbs={[{ label: 'About', href: '/about/' }, { label: 'Scoring Methodology' }]}
+>
+
+## Our Scoring System
+
+Every tool on aipedia.wiki receives four scores on a 1–10 scale. These are combined into an **Overall Score** displayed on each tool page. Scores are editorial judgments based on verified research — not user votes, paid rankings, or affiliate influence.
+
+---
+
+## The Four Dimensions
+
+### Utility (1–10)
+**Does the tool actually solve a real problem well?**
+
+Utility measures how effectively the tool performs its core job. A score of 9–10 means the tool is genuinely best-in-class at what it does and materially improves workflows. A score of 4–6 means it works but has meaningful limitations or better alternatives exist. Below 4 means the tool barely works or serves too narrow a use case to be broadly useful.
+
+Factors considered:
+- How well does the core feature work in practice?
+- How much friction does it add vs. remove?
+- Is it better than doing the task without AI?
+
+### Value (1–10)
+**Is the price fair for what you get?**
+
+Value scores the price-to-output ratio. A tool can be expensive and still score 9/10 on Value if it replaces $5,000/month of human labor for $50/month. A tool can be free and score 3/10 on Value if it wastes more time than it saves.
+
+Factors considered:
+- What does it replace or enable?
+- How does the price compare to direct competitors?
+- Is the free tier genuinely useful or a funnel with no usable ceiling?
+
+### Moat (1–10)
+**How defensible is this tool's position?**
+
+Moat measures how hard it is for competitors to replicate the tool's key advantage. A score of 9–10 means the tool has proprietary data, unique training, deep integrations, or network effects that are genuinely hard to copy. A score of 3–5 means it is one well-funded competitor away from being commoditized.
+
+Factors considered:
+- Is the core capability replicable with off-the-shelf models?
+- Does the tool have proprietary data, infrastructure, or partnerships?
+- How strong is the user lock-in (workflow integration, data, habit)?
+
+### Longevity (1–10)
+**Will this tool still exist and matter in 2 years?**
+
+Longevity scores the probability that the tool remains relevant and viable. A score of 9–10 means strong company fundamentals, a defensible niche, and clear revenue. A score of 4–6 means uncertain funding, direct competition from frontier model providers, or a use case that may be absorbed into general-purpose AI. Below 4 means the tool is likely to be obsoleted or shut down.
+
+Factors considered:
+- Company revenue, funding runway, and profitability signals
+- Whether the use case is likely to be absorbed into foundation models (e.g., GPT-4o, Claude adding features)
+- Track record of shipping and maintaining the product
+
+---
+
+## Overall Score Calculation
+
+The Overall Score displayed on tool pages is the simple average of the four dimension scores, rounded to one decimal place:
+
+```
+Overall = (Utility + Value + Moat + Longevity) / 4
+```
+
+A tool scoring 8/8/9/7 has an Overall Score of **8.0**.
+
+---
+
+## Score Benchmarks
+
+| Overall Score | Interpretation |
+|---------------|---------------|
+| 9.0–10.0 | Best in class — use this unless there's a specific reason not to |
+| 8.0–8.9 | Excellent — strong across all dimensions |
+| 7.0–7.9 | Good — meaningful strengths with some trade-offs |
+| 6.0–6.9 | Acceptable — usable but notable gaps or better alternatives exist |
+| 5.0–5.9 | Below average — use only if your specific situation warrants it |
+| Below 5.0 | Not recommended for most users |
+
+---
+
+## What Our Scores Are Not
+
+- **Not user reviews.** We do not aggregate star ratings. Scores reflect our editorial assessment.
+- **Not sponsored.** Affiliate relationships do not influence scores. A tool with a 20% affiliate commission gets the same honest treatment as one with no program.
+- **Not permanent.** Scores are updated when pricing, features, or competitive position changes. Every tool page shows a `last_verified` date.
+- **Not weighted by price.** A $5/month tool can outscore a $200/month tool if it delivers more value relative to its price.
+
+---
+
+## Verification Standard
+
+Every score is based on:
+1. **Hands-on use** where feasible — we test the core features, not just read marketing copy
+2. **Verified pricing** — prices are checked against official pricing pages and noted with a verification date
+3. **Competitive context** — scores are calibrated against the current best alternatives in the category
+4. **Named sources** — factual claims include inline links to official pages or credible third-party sources
+
+See the `last_verified` date on each tool page to understand when the information was last checked.
+
+---
+
+## Questions or Disagreements?
+
+If you believe a score is wrong, outdated, or based on incorrect information, we want to know. The goal is accurate, useful information — not defensiveness.
+
+</ArticleLayout>

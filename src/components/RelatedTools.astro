@@ -1,0 +1,85 @@
+---
+import { getCollection } from 'astro:content';
+
+interface Props {
+  currentSlug: string;
+  category: string;
+  limit?: number;
+}
+
+const { currentSlug, category, limit = 4 } = Astro.props;
+
+const allTools = await getCollection('tools');
+
+// Score helper
+function avgScore(scores: any) {
+  if (!scores) return 0;
+  const { utility = 0, value = 0, moat = 0, longevity = 0 } = scores;
+  return Math.round(((utility + value + moat + longevity) / 4) * 10) / 10;
+}
+
+// Same-category tools, excluding current, sorted by score
+const related = allTools
+  .filter(t => {
+    const slug = t.data.slug || t.id.replace(/\.md$/, '');
+    return t.data.category === category && slug !== currentSlug;
+  })
+  .map(t => ({ tool: t, score: avgScore(t.data.scores) }))
+  .sort((a, b) => b.score - a.score)
+  .slice(0, limit);
+
+const categoryEmojiMap: Record<string, string> = {
+  'ai-voice': '🔊',
+  'ai-video': '🎬',
+  'ai-coding': '💻',
+  'ai-automation': '⚡',
+  'ai-seo': '📈',
+  'ai-design': '🎨',
+  'ai-writing': '✍️',
+  'ai-image': '🖼',
+  'ai-search': '🔍',
+  'ai-notes': '📝',
+  'ai-music': '🎵',
+  'ai-presentation': '📊',
+  'ai-research': '🔬',
+};
+
+const emoji = categoryEmojiMap[category] ?? '🔧';
+const categoryLabel = category.replace('ai-', '').replace(/-/g, ' ')
+  .replace(/\b\w/g, c => c.toUpperCase());
+---
+
+{related.length > 0 && (
+  <div class="bg-[var(--bg-card)] border border-[var(--border)] rounded-xl p-4">
+    <div class="flex items-center justify-between mb-3">
+      <h3 class="text-xs font-semibold text-[var(--text-muted)] uppercase tracking-wider">
+        More {categoryLabel} Tools
+      </h3>
+      <a
+        href={`/categories/${category}/`}
+        class="text-xs text-[var(--accent-primary)] no-underline hover:underline"
+      >
+        See all →
+      </a>
+    </div>
+    <div class="space-y-2">
+      {related.map(({ tool, score }) => {
+        const slug = tool.data.slug || tool.id.replace(/\.md$/, '');
+        return (
+          <a
+            href={`/tools/${slug}/`}
+            class="flex items-center gap-3 py-1.5 group no-underline"
+          >
+            <span class="text-base shrink-0">{emoji}</span>
+            <span class="flex-1 text-sm text-[var(--text-secondary)] group-hover:text-[var(--text-primary)] transition-colors truncate">
+              {tool.data.title}
+            </span>
+            <span class="text-xs font-bold bg-gradient-to-r from-[#a78bfa] to-[#60a5fa] bg-clip-text text-transparent shrink-0">
+              {score}
+            </span>
+          </a>
+        );
+      })}
+    </div>
+  </div>
+)}

@@ -91,10 +91,6 @@ Obsidian is the best note-taking tool for people who want ownership, privacy, an
 - **[Logseq](../categories/ai-notes.md):** open-source, local-first, outliner-based. Similar philosophy to Obsidian with different UX. Smaller plugin ecosystem.
 - **[Roam Research](../categories/ai-notes.md):** pioneered bidirectional linking. $15/mo, cloud-based. Smaller community, less active development.
 
-## Affiliate Program
-
-No affiliate program available as of April 2026.
-
 ## FAQ
 
 **Is Obsidian really free?**

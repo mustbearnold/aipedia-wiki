@@ -79,13 +79,6 @@ Leonardo AI is a web-based image generation platform offering the most generous 
 
 Leonardo AI is the best choice for beginners and budget-conscious creators who need generous free image generation, but Midjourney wins if maximum aesthetic quality is the priority. Start with Leonardo to learn AI image generation at zero cost, then graduate to Midjourney, Flux, or Ideogram for specialized needs.
 
-## Affiliate Program
-
-- **Commission:** ~20% recurring
-- **Cookie:** 30 days
-- **Network:** Direct (Leonardo affiliate dashboard)
-- **Fit:** Good. The free tier creates natural conversion. Recommend Leonardo as "start free," and a percentage of users upgrade to paid plans.
-
 ## Best Alternatives
 
 - **[Midjourney](midjourney.md):** best aesthetic quality. $10/mo minimum, no free tier. The upgrade path from Leonardo.

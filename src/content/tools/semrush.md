@@ -90,14 +90,6 @@ Semrush is the most complete SEO platform available. If you can only pick one SE
 - **[Moz Pro](../categories/ai-seo.md):** simpler, cheaper ($99/mo). Less data than Semrush or Ahrefs. Good for beginners.
 - **[SE Ranking](../categories/ai-seo.md):** budget alternative ($52/mo). Covers core SEO features at half the cost. Less data depth.
 
-## Affiliate Program
-
-- **Commission:** Up to $200 per new subscription sale, $10 per trial activation ([Semrush Affiliate Program](https://www.semrush.com/lp/affiliate-program/))
-- **Cookie:** 120 days
-- **Network:** Impact
-- **Payout:** Monthly
-- **Fit:** High conversion rates because Semrush is the industry standard. The $200 per sale is strong but it's a one-time payment, not recurring. Compare to Surfer's 25% lifetime recurring which compounds better over time.
-
 ## FAQ
 
 **Is Semrush worth $140/month?**

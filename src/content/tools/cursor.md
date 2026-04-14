@@ -87,10 +87,6 @@ Cursor is the best choice for developers who want AI deeply integrated into a VS
 - **[Windsurf](../categories/ai-coding.md):** Cursor competitor at $15/mo. Similar feature set, slightly less polished. Good budget option.
 - **[Devin](../categories/ai-coding.md):** fully autonomous AI developer. Delegates entire features. Different use case: Devin replaces the developer, Cursor assists the developer.
 
-## Affiliate Program
-
-No affiliate program available as of April 2026.
-
 ## FAQ
 
 **Is Cursor free?**

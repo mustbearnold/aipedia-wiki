@@ -2,8 +2,8 @@
 type: category
 slug: ai-coding
 title: AI Coding Assistants
-description: AI-powered code editors and autonomous coding agents. Cursor, Claude Code, Copilot, Windsurf, Devin, Replit.
-tool_count: 6
+description: AI-powered code editors and autonomous coding agents. Cursor, Claude Code, Copilot, Windsurf, Devin, Replit, Aider.
+tool_count: 17
 seo_title: "Best AI Coding Tools (2026) — aipedia.wiki"
 meta_description: "Cursor, Claude Code, and GitHub Copilot lead AI coding in 2026. Compare 6 tools across pricing, autonomy, and IDE integration. Updated April 2026."
 author: "aipedia.wiki Editorial"
@@ -25,6 +25,7 @@ AI coding assistants are the fastest-moving category in AI tools as of April 202
 | **Windsurf** | $15/mo Pro | Cursor alternative, cheaper | 7 | 8 | 5 | 6 |
 | **Devin** | $20/mo + $2.25/ACU | Full autonomy, delegate features | 7 | 6 | 8 | 7 |
 | **Replit Agent** | $20/mo Core | Non-devs, browser-only | 7 | 7 | 7 | 7 |
+| **Aider** | Free ($0 + API costs) | Open-source CLI, BYOK, self-hosting | 8 | 10 | 5 | 7 |
 
 ## Our Picks
 - **Best overall:** Cursor ($20/mo). Most polished IDE experience.

@@ -90,14 +90,6 @@ ElevenLabs is the best choice for content creators and developers who need the h
 - **[Murf AI](../categories/ai-voice.md):** corporate narration focus. Lower quality than ElevenLabs but simpler interface for non-technical users.
 - **[OpenAI TTS](../categories/ai-voice.md):** good quality, convenient if you're already in the OpenAI ecosystem. Less configurable.
 
-## Affiliate Program
-
-- **Commission:** 22% recurring for 12 months
-- **Cookie:** 30 days
-- **Network:** Direct (ElevenLabs affiliate dashboard)
-- **Payout:** Monthly, $50 minimum
-- **Fit:** Excellent for YouTube AI tools channels. "Made with ElevenLabs" mention in every video = passive referrals.
-
 ## FAQ
 
 **Is ElevenLabs free?**
