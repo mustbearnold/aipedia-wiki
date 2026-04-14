@@ -4,14 +4,18 @@ import tailwindcss from '@tailwindcss/vite';
 import { remarkRewriteLinks } from './src/plugins/remark-rewrite-links.mjs';
 import { rehypeRemoveFirstH1 } from './src/plugins/rehype-remove-first-h1.mjs';
 
+import cloudflare from '@astrojs/cloudflare';
+
 export default defineConfig({
   site: 'https://aipedia.wiki',
   integrations: [sitemap()],
   output: 'static',
   trailingSlash: 'always',
+
   vite: {
     plugins: [tailwindcss()],
   },
+
   markdown: {
     remarkPlugins: [remarkRewriteLinks],
     rehypePlugins: [rehypeRemoveFirstH1],
@@ -19,4 +23,6 @@ export default defineConfig({
       theme: 'github-dark',
     },
   },
+
+  adapter: cloudflare(),
 });

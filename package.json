@@ -8,10 +8,13 @@
   "scripts": {
     "dev": "bash scripts/copy-content.sh && astro dev",
     "build": "bash scripts/copy-content.sh && astro build && npx pagefind --site dist",
-    "preview": "astro preview",
-    "astro": "astro"
+    "preview": "npm run build && wrangler dev",
+    "astro": "astro",
+    "generate-types": "wrangler types",
+    "deploy": "npm run build && wrangler deploy"
   },
   "dependencies": {
+    "@astrojs/cloudflare": "^13.1.9",
     "@astrojs/sitemap": "^3.7.2",
     "@tailwindcss/typography": "^0.5.19",
     "@tailwindcss/vite": "^4.2.2",
@@ -20,6 +23,10 @@
     "unist-util-visit": "^5.1.0"
   },
   "devDependencies": {
-    "pagefind": "^1.5.2"
+    "pagefind": "^1.5.2",
+    "wrangler": "^4.82.2"
+  },
+  "overrides": {
+    "vite": "^7"
   }
 }
