@@ -17,12 +17,22 @@ import ThemeToggle from './ThemeToggle.astro';
       <a href="/compare/" class="hidden sm:inline text-sm text-[var(--text-secondary)] hover:text-[var(--text-primary)] no-underline transition-colors">Compare</a>
       <a href="/trending/" class="hidden sm:inline text-sm text-[var(--text-secondary)] hover:text-[var(--text-primary)] no-underline transition-colors">Trending</a>
       <button
+        id="search-trigger"
         type="button"
         class="hidden sm:inline-flex items-center gap-1.5 text-sm text-[var(--text-muted)] bg-[var(--bg-card)] border border-[var(--border)] rounded-lg px-3 py-1.5 hover:bg-[var(--bg-card-hover)] transition-colors cursor-pointer"
+        onclick="window.location.href='/search/'"
       >
         <span class="text-xs">&#8984;K</span>
         <span>Search</span>
       </button>
+      <script is:inline>
+        document.addEventListener('keydown', function(e) {
+          if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+            e.preventDefault();
+            window.location.href = '/search/';
+          }
+        });
+      </script>
       <ThemeToggle />
     </div>
   </div>
