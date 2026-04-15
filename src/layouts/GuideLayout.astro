@@ -90,9 +90,23 @@ const breadcrumbLdItems = [
 ];
 
 const verifiedDate = lastVerified ? new Date(lastVerified) : null;
-const verifiedLabel = verifiedDate && !isNaN(verifiedDate.getTime())
-  ? verifiedDate.toLocaleDateString('en-US', { month: 'short', year: 'numeric' })
-  : null;
+const verifiedValid = verifiedDate && !isNaN(verifiedDate.getTime());
+let verifiedLabel: string | null = null;
+let verifiedColor = 'var(--accent-success)';
+let verifiedMachineDate: string | null = null;
+if (verifiedValid) {
+  const daysSince = Math.floor((Date.now() - verifiedDate!.getTime()) / 86400000);
+  if (daysSince < 30) verifiedColor = 'var(--accent-success)';
+  else if (daysSince <= 60) verifiedColor = 'var(--accent-warning)';
+  else verifiedColor = 'var(--accent-danger)';
+  if (daysSince <= 1) verifiedLabel = 'Updated today';
+  else if (daysSince <= 14) verifiedLabel = `Updated ${daysSince} days ago`;
+  else if (daysSince <= 60) {
+    const weeks = Math.round(daysSince / 7);
+    verifiedLabel = `Updated ${weeks} week${weeks === 1 ? '' : 's'} ago`;
+  } else verifiedLabel = `Updated ${verifiedDate!.toLocaleDateString('en-US', { month: 'short', year: 'numeric' })}`;
+  verifiedMachineDate = verifiedDate!.toISOString().split('T')[0];
+}
 
 const itemListItems = rankedTools.map((t) => ({
   name: t.title,
@@ -119,7 +133,10 @@ const itemListItems = rankedTools.map((t) => ({
           {verifiedLabel && (
             <>
               <span aria-hidden="true">·</span>
-              <span><span class="text-[var(--accent-success)]" aria-hidden="true">✓</span> Verified {verifiedLabel}</span>
+              <time datetime={verifiedMachineDate ?? undefined} style={`color: ${verifiedColor};`} class="inline-flex items-center gap-1">
+                <span aria-hidden="true">&#10003;</span>
+                <span>{verifiedLabel}</span>
+              </time>
             </>
           )}
         </div>

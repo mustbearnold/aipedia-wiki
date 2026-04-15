@@ -33,3 +33,4 @@ pnpm-debug.log*
 # Source of truth remains in wikis/_meta/; regenerate with `npm run wiki:refresh`.
 # src/data/_meta/   # intentionally NOT gitignored
 .claude/
+.indexnow-key

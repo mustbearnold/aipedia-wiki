@@ -1,4 +1,7 @@
 ---
+// Shows a verified-date badge with relative-age copy ("Updated 2 days ago")
+// for very recent verifications, falling back to absolute month for older.
+// Color-coded: green < 30d, amber 30-60d, red > 60d.
 interface Props {
   lastVerified: string;
 }
@@ -18,13 +21,28 @@ if (daysSince < 30) {
   color = 'var(--accent-danger)';
 }
 
-const formatted = verifiedDate.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+let label: string;
+if (daysSince <= 1) {
+  label = 'Updated today';
+} else if (daysSince <= 14) {
+  label = `Updated ${daysSince} days ago`;
+} else if (daysSince <= 60) {
+  const weeks = Math.round(daysSince / 7);
+  label = `Updated ${weeks} week${weeks === 1 ? '' : 's'} ago`;
+} else {
+  label = `Updated ${verifiedDate.toLocaleDateString('en-US', { month: 'short', year: 'numeric' })}`;
+}
+
+const machineDate = verifiedDate.toISOString().split('T')[0];
+const absolute = verifiedDate.toLocaleDateString('en-US', { day: 'numeric', month: 'long', year: 'numeric' });
 ---
 
-<span
+<time
+  datetime={machineDate}
+  title={`Last verified ${absolute}`}
   class="inline-flex items-center gap-1 text-xs font-medium"
   style={`color: ${color};`}
 >
-  <span>&#10003;</span>
-  <span>Verified {formatted}</span>
-</span>
+  <span aria-hidden="true">&#10003;</span>
+  <span>{label}</span>
+</time>
