@@ -2,7 +2,7 @@
 type: tool
 slug: gemini
 title: Gemini
-tagline: Google's multimodal AI assistant with deep ecosystem integration, long context, and Deep Research mode.
+tagline: Google's multimodal AI assistant with deep Workspace integration, Deep Research mode, and three distinct model tiers as of April 2026.
 category: ai-chatbots
 secondary_categories: [ai-writing, ai-search]
 company: google
@@ -11,11 +11,11 @@ pricing_model: freemium
 price_range: "$0-$249.99/month"
 status: active
 launched: 2023-12
-last_updated: 2026-04-13
-last_verified: 2026-04-13
+last_updated: 2026-04-15
+last_verified: 2026-04-15
 update_frequency: monthly
-seo_title: "Gemini: Features, Pricing & Review (2026)"
-meta_description: "Gemini is Google's multimodal AI assistant with Deep Research, 1M token context, and Workspace integration. Free tier, Google AI Plus $7.99, Pro $19.99 (2TB storage), Ultra $249.99."
+seo_title: "Gemini Review 2026: Gemini 3.1 Pro, Deep Think, Pricing & Comparison"
+meta_description: "Gemini 3.1 Pro is Google's current flagship model (March 2026). Deep Think 3.1 is Ultra-only. Google AI Pro $19.99/mo includes 5TB storage. Full review vs GPT-5.4 and Claude Opus 4.6."
 author: "aipedia.wiki Editorial"
 affiliate:
   has_program: false
@@ -28,92 +28,101 @@ scores:
   value: 9
   moat: 8
   longevity: 9
-tags: [chatbot, ai-assistant, writing, search, multimodal, google-workspace, deep-research, long-context]
+tags: [chatbot, ai-assistant, writing, search, multimodal, google-workspace, deep-research, long-context, imagen, veo, notebooklm]
 best_for:
   - google workspace power users
-  - researchers using deep research
-  - budget-conscious users
+  - researchers needing autonomous deep research reports
+  - users wanting bundled storage value with AI access
+  - multimodal workflows combining text, image, audio, video
 not_best_for:
-  - users needing advanced reasoning
-  - users prioritizing writing quality
+  - users needing the deepest multi-step reasoning (Claude Opus 4.6 leads)
+  - users outside Google ecosystem getting full value
+  - writing tasks requiring nuanced, distinctive prose
 quick_answer: >-
-  Gemini is Google's multimodal AI assistant, developed by Google DeepMind, with native integration across Docs, Sheets, Gmail, and Drive. Its standout feature is a 1M token context window on Gemini 3.1 Pro and an autonomous Deep Research mode that browses and synthesizes dozens of web sources into cited reports. Google AI Pro costs $19.99/month and bundles 2TB Google One storage, strong value compared to ChatGPT Plus at $20/month. Best for users already inside Google Workspace; not the right pick if writing quality or multi-step reasoning depth is the priority, where Claude leads.
+  Gemini is Google DeepMind's multimodal AI assistant, now on its third-generation model family. The current flagship is Gemini 3.1 Pro (March 2026 global rollout), with Gemini 3 Pro still available and Deep Think 3.1 (192K context, up to 10 prompts/day) exclusive to Google AI Ultra subscribers. Google AI Pro at $19.99/month bundles 5TB storage alongside full Gemini 3.1 Pro and Deep Research access, making it strong value compared to ChatGPT Plus at $20/month (no storage) or Claude Pro at $20/month. Best for users already inside Google Workspace; not the pick if raw reasoning depth or prose quality is the priority, where Claude Opus 4.6 still leads.
 ---
 
 # Gemini
 
-Gemini is a multimodal AI assistant developed by Google. It integrates directly with Google Workspace (Docs, Sheets, Gmail, Drive) and features a Deep Research mode that autonomously browses and synthesizes dozens of web sources. Its key differentiator is native Google ecosystem integration and a 1M token context window on Gemini 3.1 Pro. As of April 2026, Google's subscription tiers are: free, Google AI Plus ($7.99/month), Google AI Pro ($19.99/month, bundled with 2TB Google One storage, formerly "Gemini Advanced"), and Google AI Ultra ($249.99/month). Perplexity offers better dedicated search with citations, but Gemini is unmatched for users embedded in Google Workspace.
+Gemini is Google DeepMind's multimodal AI assistant, integrating directly into Google Docs, Sheets, Gmail, and Drive. As of April 2026, the product runs three distinct models: Gemini 3 Pro (Nov 2025 rollout, still available), Gemini 3.1 Pro (March 2026 global rollout, current default for paid tiers), and Deep Think 3.1 (Ultra-only, February 2026 update, specialized for science and research problems). The subscription lineup is Free, Google AI Pro ($19.99/month, includes 5TB storage), and Google AI Ultra ($249.99/month, unlocks Deep Think and highest usage limits). Competitors GPT-5.4 and Claude Opus 4.6 lead on raw reasoning benchmarks, but Gemini's Workspace integration and bundled storage make it the strongest value for users living in Google's ecosystem.
 
 ## What It Does
 
-Gemini is Google's multimodal AI assistant powered by the Gemini model family, integrating directly with Google Workspace apps including Docs, Sheets, Gmail, and Drive, and offering a 1M token context window on Gemini 3.1 Pro along with an autonomous Deep Research mode that synthesizes dozens of web sources ([Google Gemini](https://gemini.google.com)). The Deep Research mode autonomously browses dozens of web sources to compile comprehensive research reports. Gemini supports multimodal input (text, images, audio, video) and offers one of the longest context windows available — 1M tokens on Gemini 3.1 Pro. Google's paid access is now organized as Google AI Plus ($7.99/mo) for casual use, Google AI Pro ($19.99/mo, bundled with 2TB Google One storage — the tier formerly known as "Gemini Advanced"), and Google AI Ultra ($249.99/mo) for the highest usage tiers ([Google AI subscriptions](https://gemini.google/subscriptions/)).
+Gemini handles text generation, multimodal analysis (text, images, audio, video), autonomous web research via Deep Research mode, and native editing inside Google Workspace apps. The Deep Research mode browses dozens of sources and synthesizes them into structured, cited reports autonomously, with Ultra subscribers getting up to 120 reports/day and Pro subscribers 5 per month. Gemini Live provides real-time voice conversation. Veo 3.1 Fast generates short videos (3/day on Pro, higher on Ultra). Image generation is handled by Nano Banana 2 on Pro (20 images/day) and Nano Banana Pro on Ultra (up to 1,000 images/day). NotebookLM functionality is being progressively folded into the main Gemini app rather than remaining a separate product ([Google Gemini](https://gemini.google.com)).
 
 ## Who It's For
 
-- **Google Workspace power users** who want AI natively in Docs, Sheets, Gmail, and Drive
-- **Researchers** using Deep Research mode to compile multi-source reports automatically
-- **Students** on the free tier who need a capable assistant with no cost
-- **Content creators** using multimodal features to analyze video, audio, and images
-- **Android users** with Gemini as the default assistant replacing Google Assistant
-- **Budget-conscious users** who get excellent value from the Google One AI Premium bundle
+- **Google Workspace power users** who want AI natively inside Docs, Sheets, Gmail, Drive, and Meet
+- **Researchers** running Deep Research reports: autonomous multi-source synthesis with citations
+- **Students and professionals** on the free tier who need a capable assistant at zero cost
+- **Content creators** combining multimodal inputs -- analyze video, describe images, transcribe audio -- in one conversation
+- **Android users** for whom Gemini is now the default device assistant
+- **Budget-aware users** who value the Google One storage bundle included in Google AI Pro
 
 ## Pricing
 
-| Plan | Price | Key Limits |
+| Plan | Price | Key Access |
 |------|-------|-----------|
-| Free | $0/month | Gemini (standard model), basic features, limited Deep Research |
-| Google AI Plus | $7.99/month | Enhanced access to Gemini 3.1 Pro, better Deep Research limits |
-| Google AI Pro (formerly Gemini Advanced) | $19.99/month | Gemini 3.1 Pro, 1M context, Deep Research, Gems, Google Workspace integration, 2TB Google One storage |
-| Google AI Ultra | $249.99/month | Highest usage limits, priority access, full Workspace integration |
+| Free | $0/month | Gemini 3 Pro, 1,500 thinking prompts/day, limited Deep Research |
+| Google AI Pro | $19.99/month | Gemini 3.1 Pro, full Deep Research (5 reports/month), Veo 3.1 Fast (3 videos/day), Gemini Live, Workspace integration, 5TB Google One storage |
+| Google AI Ultra | $249.99/month | Deep Think 3.1 (Ultra-only, 10 prompts/day), 120 Deep Research reports/day, highest image/video/music generation limits, 12,500 AI Credits/month, YouTube Premium included |
 
-*Prices verified 2026-04-13.*
+*Prices verified 2026-04-15 against [Google AI subscription page](https://one.google.com/about/ai-premium/). Google AI Pro was previously marketed as "Google AI Plus" at $7.99 and "Gemini Advanced" at $19.99; the Pro tier at $19.99 now includes 5TB (up from 2TB earlier in 2026).*
 
 ## Key Features
 
-- **Deep Research:** Autonomous research agent that browses and synthesizes dozens of sources into comprehensive reports with citations
-- **Google Workspace integration:** Draft in Docs, analyze in Sheets, summarize in Gmail, search Drive natively
-- **1M token context window:** Process extremely long documents, codebases, or video files (Advanced tier)
-- **Multimodal understanding:** Natively processes text, images, audio, and video in a single conversation
-- **Gems:** Custom AI personas with specific instructions, similar to ChatGPT's Custom GPTs
-- **Google Search grounding:** Responses backed by real-time Google Search results with source links
-- **NotebookLM integration:** Connected to Google's AI notebook tool for research and podcast generation
-- **Android integration:** Replaces Google Assistant as the default mobile AI on Android devices
+- **Three model tiers (not one):** Gemini 3 Pro (Nov 2025), Gemini 3.1 Pro (Mar 2026, current flagship), Deep Think 3.1 (Feb 2026, Ultra-only). These are distinct models with different capability profiles, not just speed variants.
+- **Deep Research mode:** Autonomous research agent that browses dozens of web sources and produces cited, structured reports. Ultra: 120 reports/day. Pro: 5 reports/month. Available in limited form on Free.
+- **Deep Think 3.1:** Specialized reasoning model for science, engineering, and research problems. 192K token context window. Up to 10 prompts/day on Ultra. Takes minutes per response. Not available on Free or Pro tiers ([Google Gemini release notes](https://gemini.google/lk/release-notes/?hl=en-GB)).
+- **Google Workspace integration:** Draft in Docs, analyze in Sheets, summarize in Gmail, organize in Drive, all natively from the Gemini sidebar or app.
+- **Gemini Skills for Chrome:** Save reusable prompts accessible from any Chrome tab; recently extended to Shopping and Productivity workflows.
+- **Gems:** Custom AI personas with persistent instructions, analogous to ChatGPT Custom GPTs.
+- **Veo 3.1 Fast:** Video generation from text prompts, available on Pro and Ultra tiers.
+- **Gemini Live:** Real-time voice conversation mode, available from Pro tier upward.
+- **NotebookLM integration:** Notebook-style research management (formerly separate product) being folded into the core Gemini app; screen automation support at up to 120 requests/day on Ultra.
+- **Google Search grounding:** Responses can be grounded in live Google Search results with source citations.
 
 ## Limitations
 
-- **Reasoning depth:** Falls behind Claude and ChatGPT's o-series on complex multi-step reasoning tasks
-- **Writing quality:** Prose tends to be more generic and less nuanced than Claude's output
-- **Hallucination rate:** Despite Google Search grounding, still produces confident but incorrect claims
-- **Ecosystem lock-in:** Best features require commitment to Google Workspace; less useful outside Google's ecosystem
-- **Privacy concerns:** Google's business model is advertising; data handling policies warrant scrutiny
-- **Inconsistent availability:** Feature rollouts vary significantly by region and account type
-- **Coding capabilities:** Functional but not as strong as Claude or ChatGPT for complex development tasks
+- **Reasoning depth vs. Claude and GPT-5.4:** Deep Think 3.1 is competitive on science and math benchmarks, but Claude Opus 4.6 still leads on nuanced multi-step reasoning for general tasks. Deep Think is Ultra-only and rate-limited to 10 prompts/day, restricting practical access.
+- **Model confusion risk:** Three active model tiers (3 Pro, 3.1 Pro, Deep Think 3.1) with different names, availability, and rate limits create genuine user confusion about what they are actually getting at each subscription level.
+- **Writing quality:** Prose output is functional but tends toward generic phrasing. Claude Opus 4.6 produces more distinctive, nuanced long-form writing.
+- **Deep Research on Pro is severely limited:** 5 reports per month on the $19.99 tier is a real constraint for researchers who want to run multiple daily deep dives.
+- **Ecosystem dependency:** The storage bundle and Workspace features are genuinely valuable only if you use Google products. Outside that ecosystem, the Pro value proposition weakens considerably.
+- **Privacy posture:** Google's advertising business model and data handling practices warrant scrutiny for users processing sensitive documents. Enterprise Workspace accounts have stronger protections than consumer tiers.
+- **Regional inconsistency:** Deep Think 3.1, Gemini Agent mode, and some Ultra features remain US-only or English-only as of April 2026.
 
 ## Bottom Line
 
-Gemini is the best choice for Google Workspace users who need AI natively integrated into Docs, Sheets, and Gmail. The $19.99/month Google AI Pro plan (formerly Gemini Advanced) includes 2TB storage, a 1M token context window, and Deep Research for autonomous multi-source synthesis, but Claude wins if raw reasoning quality and writing depth are the priority ([Google Gemini](https://gemini.google.com)). The $19.99/month price is excellent value considering you also get 2TB of Google One storage. The Deep Research mode is genuinely useful for comprehensive, multi-source research reports. However, for raw reasoning quality and writing depth, Claude and ChatGPT still lead. Gemini is the best second AI assistant, the one you use alongside your primary tool for research and Google-native workflows.
+For Google Workspace users, Gemini is the obvious first-party AI choice: native app integration, bundled storage, and Deep Research in a single subscription. The Google AI Pro plan at $19.99/month is strong value -- you get Gemini 3.1 Pro, Workspace integration, video generation, and 5TB of storage for the same price as a ChatGPT Plus subscription that comes with no storage bonus. Deep Think 3.1 on Ultra is genuinely capable for science and research problems, but the 10 prompt/day limit and $249.99/month price cap its practical utility. Against GPT-5.4 and Claude Opus 4.6 on pure reasoning quality, Gemini is a third choice; against the full-value bundle calculation for a Google user, it can be the first. Best used alongside a stronger reasoning model rather than as a solo replacement.
 
 ## Best Alternatives
 
-- [ChatGPT](chatgpt.md): Stronger general-purpose assistant with broader plugin ecosystem
-- [Claude](claude.md): Superior reasoning, writing quality, and code analysis
-- [Perplexity](perplexity.md): Better dedicated search and research tool if you do not need Workspace integration
+- [ChatGPT](chatgpt.md): GPT-5.4 Thinking on Plus; stronger general reasoning and broader plugin ecosystem
+- [Claude](claude.md): Claude Opus 4.6 leads on nuanced reasoning, writing quality, and long-document analysis
+- [Perplexity](perplexity.md): Purpose-built research tool with better citation management than Deep Research if you do not need Workspace integration
 
 ## FAQ
 
-**Is Gemini free?**
-Yes, Gemini offers a free tier with the standard Gemini model and basic features including limited Deep Research. Gemini Advanced at $20/month includes Gemini 3.1 Pro, 1M context window, full Deep Research, and 2TB Google One storage.
+**What is the difference between Gemini 3 Pro, Gemini 3.1 Pro, and Deep Think 3.1?**
+These are three distinct models, not just speed variants. Gemini 3 Pro rolled out globally in November 2025 and remains available in the model selector. Gemini 3.1 Pro is the current flagship, released globally in March 2026 with improved reasoning for complex tasks. Deep Think 3.1 is a specialized reasoning model for science, engineering, and research problems, with a 192K token context window; it is Ultra-only, limited to 10 prompts/day, and takes minutes per response. Do not conflate them: upgrading from Pro to Ultra primarily buys you Deep Think access and higher usage limits, not a fundamentally different chat experience for everyday tasks.
 
-**What is Gemini Deep Research?**
-Deep Research is an autonomous research agent that browses dozens of web sources to compile comprehensive research reports with citations ([Google Gemini](https://gemini.google.com)). It asks clarifying questions, performs multiple searches, and synthesizes findings into a structured report. It is available in limited form on free and fully on Advanced.
+**Is Gemini free to use?**
+Yes. The free tier includes Gemini 3 Pro access and 1,500 thinking prompts per day. Deep Research is available in limited form. Google AI Pro ($19.99/month) unlocks Gemini 3.1 Pro as default, full Deep Research (5 reports/month), Veo 3.1 Fast video generation, and 5TB Google One storage. Ultra ($249.99/month) is the only tier with Deep Think 3.1.
 
-**How does Gemini compare to Perplexity for research?**
-Gemini Deep Research produces longer, more comprehensive reports by autonomously browsing many sources. Perplexity provides faster, more focused answers with inline citations for individual questions. Gemini is better for deep dives; Perplexity is better for quick, sourced answers.
+**How does Gemini Deep Research compare to Perplexity?**
+Gemini Deep Research produces longer, autonomously compiled reports by browsing many sources in sequence -- better for deep dives on a single topic. Perplexity provides faster, inline-cited answers and better source management for ongoing research workflows. Deep Research is limited to 5 reports/month on Pro; for high-volume research, Perplexity is more practical.
+
+**How does Gemini 3.1 Pro compare to GPT-5.4 and Claude Opus 4.6?**
+On general reasoning benchmarks, GPT-5.4 Thinking and Claude Opus 4.6 lead. Gemini 3.1 Pro is competitive for multimodal tasks and Workspace-integrated workflows where the other two have no native presence. Deep Think 3.1 (Ultra-only) closes the gap on science and math tasks specifically. For most writing and reasoning tasks, Gemini 3.1 Pro is a capable third choice, not a clear leader.
 
 ## Sources
 
-- [Google Gemini Official Site](https://gemini.google.com): Product page, pricing, and feature information
-- [Google AI Blog](https://blog.google/technology/ai/): Model announcements and Gemini updates
+- [Google Gemini Official App](https://gemini.google.com): Product page and feature information
+- [Google DeepMind Gemini](https://deepmind.google/technologies/gemini/): Model variants and technical specifications
+- [Google AI Subscription Plans](https://one.google.com/about/ai-premium/): Tier features and pricing
+- [Gemini Release Notes](https://gemini.google/lk/release-notes/?hl=en-GB): Model rollout dates and feature updates
+- [9to5Google: Google AI Pro and Ultra Features (April 2026)](https://9to5google.com/2026/04/11/google-ai-pro-ultra-features/): Independent tier feature breakdown
 
 ## Related
 
