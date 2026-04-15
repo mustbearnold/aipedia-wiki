@@ -2,21 +2,21 @@
 type: company
 slug: google-deepmind
 title: Google DeepMind
-seo_title: "Google DeepMind Profile (2026) — aipedia.wiki"
-meta_description: "Google DeepMind is Alphabet's unified AI lab building Gemini, NotebookLM, and Google Stitch. Formed from the 2023 merger of Google Brain and DeepMind."
+seo_title: "Google DeepMind Profile (2026), aipedia.wiki"
+meta_description: "Google DeepMind is Alphabet's unified AI lab building Gemini 3.1, NotebookLM, and Google Stitch. Formed from the 2023 merger of Google Brain and DeepMind."
 author: "aipedia.wiki Editorial"
 company_type: bigtech
 founded: 2023
 hq: London, UK / Mountain View, USA
 funding: "Alphabet-funded (no external rounds)"
 key_products: [gemini, notebooklm, google-stitch]
-last_updated: 2026-04-13
+last_updated: 2026-04-15
 update_frequency: quarterly
 ---
 
 # Google DeepMind
 
-Google DeepMind is Alphabet's unified AI research laboratory, formed in April 2023 from the merger of Google Brain (established 2011) and DeepMind (established 2010, acquired by Google in 2014). Led by Demis Hassabis, the lab employs over 3,000 researchers and engineers across London and Mountain View ([Google DeepMind](https://deepmind.google/)). Google DeepMind builds the Gemini family of multimodal models (Ultra, Pro, Flash, Nano), NotebookLM (an AI research assistant with document-grounded responses and Audio Overviews), and Google Stitch (an AI design tool). The lab also produced AlphaFold, whose protein structure predictions won the 2024 Nobel Prize ([AlphaFold](https://alphafold.ebi.ac.uk/)). Google DeepMind's core strategic advantages are unmatched compute infrastructure via proprietary TPUs and distribution across Google's product surface -- Search, Gmail, Docs, Android, Chrome, and YouTube -- reaching billions of users.
+Google DeepMind is Alphabet's unified AI research laboratory, formed in 2023 from the merger of Google Brain and DeepMind under CEO Demis Hassabis. As part of Alphabet with a market cap over $2 trillion, it develops multimodal AI models including the Gemini family, NotebookLM research assistant, and Google Stitch design tool.[https://deepmind.google/]
 
 ## Key Facts
 | | |
@@ -24,26 +24,38 @@ Google DeepMind is Alphabet's unified AI research laboratory, formed in April 20
 | **Founded** | 2023 (merger of Google Brain, est. 2011, and DeepMind, est. 2010) |
 | **HQ** | London, UK / Mountain View, USA |
 | **Funding** | Alphabet-funded (no external fundraising) |
-| **Employees** | ~3,000+ (combined) |
 | **Valuation** | Part of Alphabet ($2T+ market cap) |
+| **Key products** | Gemini, NotebookLM, Google Stitch |
 
-## Products
-- [Gemini](../tools/gemini.md): Multimodal LLM family (Ultra, Pro, Flash, Nano). Competes directly with GPT-4o and Claude. Integrated across Google products.
-- [NotebookLM](../tools/notebooklm.md): AI research assistant that grounds responses in user-uploaded documents. Generates "Audio Overviews" (podcast-style summaries). Free tier available.
-- [Google Stitch](../tools/google-stitch.md): AI-powered design tool for generating UI mockups and prototypes from text or image prompts.
-- **Imagen 3:** Text-to-image generation model. Available through Vertex AI and integrated into Google products.
-- **Veo:** Text-to-video generation model. Competes with Sora.
-- **AlphaFold:** Protein structure prediction. Nobel Prize-winning research (2024).
+## What They Do
+Google DeepMind focuses on advancing AI reasoning and multimodal capabilities through models trained on proprietary TPU infrastructure. The Gemini family powers integrations across Google products like Search, Gmail, and Android, leveraging massive distribution to billions of users.[https://blog.google/technology/ai/]
 
-## Strategy
-Google DeepMind was formed in April 2023 by merging Google Brain (the applied AI team inside Google) with DeepMind (the London-based research lab acquired in 2014). The merger consolidated Alphabet's AI talent under one roof, led by Demis Hassabis. The goal: accelerate the path to AGI while shipping products that leverage Alphabet's massive distribution.
+The lab emphasizes agentic AI for complex tasks in science, engineering, and research. Products like NotebookLM provide document-grounded analysis, while tools such as Google Stitch enable design prototyping from prompts.[https://deepmind.google/models/]
 
-The core strategic advantage is compute. Google owns TPU infrastructure and operates at a scale no startup can match. Gemini models are trained on Google's proprietary data and hardware, giving them cost and performance advantages at inference time. Gemini Flash, in particular, offers strong capability at extremely low API pricing, undercutting competitors.
+Compute scale and data access from Google's ecosystem provide cost advantages, especially for low-latency inference in models like Gemini Flash variants.[https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-pro/]
 
-Distribution is the second moat. Gemini is being integrated into Search, Gmail, Docs, Android, Chrome, and YouTube ([Google AI Blog](https://blog.google/technology/ai/)). NotebookLM demonstrates a "product-led" approach where AI capabilities are packaged into focused tools rather than generic chatbots. Google Stitch extends this into design tooling. The breadth of Google's product surface means Gemini touches billions of users without them needing to seek it out.
+## Current Flagship Products
+- **[Gemini](../tools/gemini.md)**: Multimodal LLM family with **Gemini 3.1 Pro** (advanced reasoning for complex tasks), **Gemini 3.1 Flash-Lite**, and **Gemini 3 Deep Think** (for technical problem-solving).[https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-pro/][https://deepmind.google/models/gemini/]
+- **[NotebookLM](../tools/notebooklm.md)**: AI research assistant with document-grounded responses and Audio Overviews; integrates **Gemini 3.1 Pro**.[https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-pro/]
+- **[Google Stitch](../tools/google-stitch.md)**: AI design tool for UI mockups from text or images; powered by Gemini models.
+- **AlphaFold 3**: Protein structure prediction model expanding beyond proteins.[https://www.pluralsight.com/resources/blog/ai-and-data/best-ai-models-2026-list]
+- **Imagen 3**: Text-to-image model via Vertex AI.
+- **Veo**: Text-to-video model.
 
-## Why They Matter
-Google DeepMind has the largest compute budget, the deepest research bench, and the broadest distribution of any AI organization. For tool evaluators, Gemini Flash is often the best price-to-performance option for API workloads. NotebookLM pioneered the "AI podcast" format and remains the best tool for document-grounded research. The risk for competitors is that Google bundles AI capabilities into existing products at zero marginal cost, making standalone AI tools harder to monetize. For developers, Google's Vertex AI platform offers enterprise-grade model hosting with Gemini, Imagen, and custom model support.
+## Recent News
+- April 2026: Released **Gemini 3.1 Pro** in preview, achieving 77.1% on ARC-AGI-2 benchmark (double prior version); rolling out to Gemini API, Vertex AI, and NotebookLM.[https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-pro/]
+- Early 2026: Launched **Gemini 3** series with Deep Think mode for subscribers and Gemma 4 open models derived from Gemini 3 research.[https://deepmind.google/models/][https://blog.mean.ceo/new-ai-model-releases-news-april-2026/]
+- No new funding or leadership changes reported; remains Alphabet-funded.
+
+## Strategic Position
+Google DeepMind leads in compute via TPUs and distribution across Google products, enabling low-cost scaling unmatched by startups. Gemini 3.1 Pro excels in reasoning benchmarks, positioning it against GPT-5.4 and Claude Sonnet 4.6.[https://blog.mean.ceo/new-ai-model-releases-news-april-2026/]
+
+Threats include competition from Anthropic's Claude Mythos 5 and OpenAI's releases. Opportunities lie in enterprise via Vertex AI and agentic tools for science and design.[https://deepmind.google/models/gemini/]
+
+## Sources
+- [Google DeepMind](https://deepmind.google/) -- Official site for models and research.
+- [Google AI Blog](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-pro/) -- Gemini 3.1 Pro announcement.
+- [Mean CEO Blog](https://blog.mean.ceo/new-ai-model-releases-news-april-2026/) -- April 2026 model updates.
 
 ## Related
 - [Gemini](../tools/gemini.md)
@@ -54,7 +66,4 @@ Google DeepMind has the largest compute budget, the deepest research bench, and 
 - [Video Generation Category](../categories/ai-video.md)
 - [OpenAI](openai.md): Primary competitor on frontier models
 - [Anthropic](anthropic.md): Competitor on reasoning and safety
-
-## Sources
-- [Google DeepMind](https://deepmind.google/) -- Official website with research publications, product announcements, and team information.
-- [Google AI Blog](https://blog.google/technology/ai/) -- Google's official AI blog covering Gemini releases, product integrations, and research breakthroughs.
+---

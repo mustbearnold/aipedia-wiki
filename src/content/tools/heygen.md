@@ -4,7 +4,7 @@ slug: heygen
 title: HeyGen
 tagline: AI avatar and talking-head video platform for marketing, sales, and training content.
 category: ai-video
-secondary_categories: [ai-avatar, ai-marketing]
+
 company: heygen
 url: https://heygen.com
 pricing_model: paid

@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: $0 - $216+/year (for add-ons)
 status: active
 launched: 2020-03
-last_updated: 2026-04-13T00:00:00.000Z
-last_verified: '2026-04-14'
+last_updated: 2026-04-15T00:00:00.000Z
+last_verified: '2026-04-15'
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -26,20 +26,10 @@ scores:
   value: 9
   moat: 8
   longevity: 9
-tags:
-  - notes
-  - markdown
-  - local-first
-  - knowledge-base
-  - pkm
-  - zettelkasten
-  - graph-view
-  - plugins
-  - ai-plugins
-  - privacy
+tags: [notes, markdown, local-first, knowledge-base, pkm, zettelkasten, graph-view, plugins, ai-plugins, privacy]
 seo_title: 'Obsidian: Features, Pricing & Review (2026)'
 meta_description: >-
-  Obsidian is a free, local-first markdown note-taking app with 1,800+ plugins
+  Obsidian is a free, local-first markdown note-taking app with 2,100+ plugins
   including AI. Your notes stay as files on your device. Sync add-on is $4/mo.
 author: aipedia.wiki Editorial
 best_for:
@@ -50,24 +40,28 @@ not_best_for:
   - users needing built-in ai
   - users requiring team collaboration
 quick_answer: >-
-  Obsidian is a local-first markdown note-taking app developed by Dynalist Inc. that stores every note as a plain .md file on your device, no cloud required, no proprietary format, no vendor lock-in. Its 1,800+ community plugins, including Smart Connections and Copilot, add AI semantic search and LLM chat over your own vault using your own API keys. The core app is free for personal use; optional Sync costs $4/month and a commercial license is $50/year. Best for solo knowledge workers who want full data ownership, not for teams needing real-time collaboration or anyone who wants AI that works out of the box, Notion AI is the better choice there.
+  Obsidian is a local-first markdown note-taking app that stores every note as a plain .md file on your device, no cloud required, no proprietary format, no vendor lock-in. Its 2,100+ community plugins, including Smart Connections and Copilot, add AI semantic search and LLM chat over your own vault using your own API keys. The core app is free for personal use; optional Sync costs $4/month and a commercial license is $50/year. Best for solo knowledge workers who want full data ownership, not for teams needing real-time collaboration or anyone who wants AI that works out of the box, Notion AI is the better choice there.
 ---
 
 # Obsidian
 
-Obsidian is a local-first markdown note-taking application developed by Dynalist Inc. It stores notes as plain `.md` files on your local filesystem, ensuring full data ownership with no cloud lock-in or proprietary format. Its key differentiator is a plugin ecosystem of 1,800+ community plugins, including AI plugins like Smart Connections and Copilot that add semantic search and LLM chat using your own API keys. As of April 2026, the core app is free for personal use, with optional Sync at $4/month and a $50/year commercial license. Compared to Notion AI, Obsidian offers more privacy and flexibility but lacks built-in collaboration and requires manual AI setup.
+Obsidian is a local-first markdown note-taking application that stores notes as plain `.md` files on your local filesystem, ensuring full data ownership with no cloud lock-in or proprietary format. Its plugin ecosystem includes over 2,100 community plugins as of April 2026, with AI plugins like Smart Connections and Copilot that add semantic search and LLM chat using your own API keys ([Obsidian](https://obsidian.md)). The core app remains free for personal use, with optional Sync at $4/month and a $50/year commercial license. Compared to Notion AI, Obsidian offers more privacy and flexibility but lacks built-in collaboration and requires manual AI setup.
 
 ## What It Does
 
-Obsidian is a free, local-first markdown note-taking application that stores all notes as plain `.md` files on your filesystem with no cloud lock-in, offering backlinks, graph view, canvas, and a plugin ecosystem of 1,800+ community plugins including AI-powered tools for semantic search and LLM chat ([Obsidian](https://obsidian.md)). AI capabilities come through third-party plugins: Smart Connections (semantic search and AI chat over your vault), Copilot (chat with LLMs in-context), Text Generator (AI writing), and others. Obsidian itself doesn't have built-in AI — the community fills that gap.
+Obsidian stores all notes as plain `.md` files on your filesystem with no cloud lock-in, offering backlinks, graph view, canvas, and a plugin ecosystem of 2,100+ community plugins including AI tools for semantic search and LLM chat ([Obsidian Plugins](https://obsidian.md/plugins)). 
+
+AI capabilities come through third-party plugins: Smart Connections provides semantic search and AI chat over your vault using embeddings; Copilot enables chat with models like Claude Opus 4.6, GPT-5.4, or Gemini 3.1 Pro directly in Obsidian with note context; Text Generator handles AI writing tasks. Obsidian itself has no built-in AI; the community plugins fill that role.
+
+The app supports desktop (Windows, macOS, Linux), mobile (iOS, Android), and web vault access, with end-to-end encrypted Sync as an add-on service ([Obsidian Pricing](https://obsidian.md/pricing)).
 
 ## Who It's For
 
-- **Power users and developers:** people who want full control over their data, local storage, and extensibility. Obsidian's core audience.
-- **PKM practitioners:** Zettelkasten, PARA, MOC (Maps of Content) workflows. Obsidian's linking and graph view are built for these methodologies.
-- **Privacy-conscious users:** notes never leave your device unless you choose to sync. No telemetry. No cloud requirement.
-- **Writers and researchers:** long-form writing, research note organization, academic workflows.
-- **Tinkerers:** the plugin ecosystem is deep. If you enjoy customizing your tools, Obsidian is endlessly configurable.
+- **Power users and developers:** Full control over data, local storage, and extensibility through plugins and themes.
+- **PKM practitioners:** Zettelkasten, PARA, MOC workflows benefit from linking and graph view.
+- **Privacy-conscious users:** Notes stay on your device unless you enable sync; no telemetry or cloud requirement.
+- **Writers and researchers:** Long-form writing, research organization, academic note-taking.
+- **Tinkerers:** Deep plugin ecosystem allows extensive customization of interface and functionality.
 
 ## Pricing
 
@@ -80,56 +74,54 @@ Obsidian is free for personal use with no feature restrictions, offering optiona
 | Publish | $8/mo ($96/yr) | Publish notes as a website |
 | Commercial | $50/yr per user | Required for business use. Same features as Personal |
 
-*Prices verified 2026-04-13. Note: AI plugin costs are separate (most are free, some require your own API key). Check [obsidian.md/pricing](https://obsidian.md/pricing) for current rates.*
+*Prices verified 2026-04-15. Note: AI plugin costs are separate (most are free, some require your own API key). Check [obsidian.md/pricing](https://obsidian.md/pricing) for current rates.*
 
 ## Key Features
 
-- **Local-first storage:** notes are plain markdown files on your filesystem. No vendor lock-in. Works offline. Back up however you want.
-- **Backlinks and graph view:** bidirectional linking between notes. Graph view visualizes connections. Core to knowledge management workflows.
-- **Plugin ecosystem:** 1,800+ community plugins. Install AI, calendars, Kanban boards, database views, templates, and more. The ecosystem is what makes Obsidian endlessly adaptable ([Obsidian Community Plugins](https://obsidian.md/plugins)).
-- **Smart Connections plugin:** semantic search over your vault using embeddings. AI chat that knows your notes. The closest thing to Notion AI Q&A but running locally with your own API key.
-- **Copilot plugin:** chat with Claude Opus 4.6, GPT-5.4, Gemini 3.1 Pro, or local models directly in Obsidian. Reference specific notes in your conversation. Bring-your-own-key model.
-- **Canvas:** infinite canvas for visual thinking. Arrange notes, images, and connections spatially. Useful for brainstorming and project planning.
-- **Templates and Templater:** template system for consistent note structure. Templater plugin adds dynamic templates with JavaScript.
+- **Local-first storage:** Notes are plain markdown files on your filesystem. No vendor lock-in. Works offline. Back up as needed.
+- **Backlinks and graph view:** Bidirectional linking between notes. Graph view shows connections visually.
+- **Plugin ecosystem:** 2,100+ community plugins for AI, calendars, Kanban, databases, templates, and more ([Obsidian Community Plugins](https://obsidian.md/plugins)).
+- **Smart Connections plugin:** Semantic search over your vault using embeddings. AI chat grounded in your notes, using your API key.
+- **Copilot plugin:** Chat with Claude Opus 4.6, GPT-5.4, Gemini 3.1 Pro, or local models in Obsidian. Reference specific notes in chat.
+- **Canvas:** Infinite canvas for arranging notes, images, and connections spatially.
+- **Templates and Templater:** Template system for note structure. Templater adds dynamic JavaScript-based templates.
+- **Daily Notes and Queries:** Automated daily note creation. Dataview plugin for querying and displaying note data as tables or lists.
 
 ## Limitations
 
-Obsidian has no built-in AI features, requiring manual setup of third-party plugins and your own API keys, with a steep learning curve, no real-time collaboration, and a mobile experience that is less polished than the desktop application.
-
-- **AI is not built-in.** Every AI feature requires third-party plugins and your own API keys. Setup is non-trivial. Notion AI is plug-and-play by comparison.
-- **Learning curve is steep.** Obsidian is powerful but not intuitive for new users. Getting the most out of it requires learning plugins, hotkeys, and workflows. Plan for hours of setup.
-- **No real-time collaboration.** Obsidian is a single-user tool. No simultaneous editing, no comments, no team permissions. For team wikis, Notion is better.
-- **Sync costs money.** Free sync alternatives exist (iCloud, Google Drive, Syncthing) but can cause conflicts with `.md` files. Official Sync at $4/mo is reliable but adds cost.
-- **Mobile app is limited.** The iOS and Android apps work but are less polished than the desktop experience. Plugin compatibility varies on mobile.
-- **Plugin quality varies.** Community plugins range from excellent to abandoned. Some break on updates. No guaranteed maintenance.
+- **AI is not built-in.** Requires third-party plugins and your own API keys. Setup takes time. Notion AI works immediately.
+- **Steep learning curve.** Powerful features need plugin knowledge, hotkeys, and workflow setup.
+- **No real-time collaboration.** Single-user focus. No simultaneous editing or team permissions.
+- **Mobile limitations.** iOS and Android apps function but lack full desktop polish and plugin support.
+- **Sync requires payment.** Official Sync costs $4/mo; free alternatives risk file conflicts.
 
 ## Bottom Line
 
-Obsidian is the best note-taking tool for people who want ownership, privacy, and unlimited customization. The AI plugin ecosystem (Smart Connections, Copilot) gives you most of what Notion AI offers, but you run it on your own API keys with your data staying local. The tradeoff is setup effort and no collaboration features. If you're a solo knowledge worker who values control over convenience, Obsidian is the right choice. If you need team collaboration or want AI that works out of the box, look at Notion or NotebookLM.
+Obsidian suits users who prioritize data ownership, privacy, and customization through its plugin ecosystem. AI plugins like Smart Connections and Copilot deliver semantic search and chat comparable to Notion AI, running on your API keys with local data. The cost is setup time and lack of collaboration; solo knowledge workers benefit most.
 
 ## Best Alternatives
 
-- **[Notion AI](notion-ai.md):** built-in AI, real-time collaboration, team features. Cloud-based, per-user pricing. Better for teams, worse for privacy.
-- **[NotebookLM](notebooklm.md):** free AI Q&A over uploaded documents. No note-taking workflow, but unbeatable for source-based research.
-- **[Logseq](../categories/ai-notes.md):** open-source, local-first, outliner-based. Similar philosophy to Obsidian with different UX. Smaller plugin ecosystem.
-- **[Roam Research](../categories/ai-notes.md):** pioneered bidirectional linking. $15/mo, cloud-based. Smaller community, less active development.
+- **[Notion AI](notion-ai.md):** Built-in AI, real-time collaboration, team features. Cloud-based with per-user pricing.
+- **[NotebookLM](notebooklm.md):** Free AI Q&A over documents. Strong for research, lacks full note-taking.
+- **[Logseq](logseq.md):** Open-source, local-first outliner. Similar to Obsidian with different interface.
 
 ## FAQ
 
-**Is Obsidian really free?**
-Yes. Obsidian is free for personal use with no feature restrictions on the core app. All 1,800+ community plugins are also free. You only pay for optional add-ons: Sync ($4/mo), Publish ($8/mo), or a commercial license ($50/year) if using it for work.
+**Is Obsidian free?**  
+Yes. Core app and all 2,100+ community plugins are free for personal use. Paid add-ons are Sync ($4/mo), Publish ($8/mo), and commercial license ($50/year).
 
-**Does Obsidian have AI features built in?**
-No. Obsidian does not include built-in AI. AI capabilities come through third-party community plugins such as Smart Connections (semantic search and AI chat), Copilot (LLM chat with note context), and Text Generator (AI writing). These plugins require your own API keys from OpenAI, Anthropic, or other providers.
+**Does Obsidian have built-in AI?**  
+No. AI comes via community plugins like Smart Connections (semantic search/chat), Copilot (LLM chat), using your API keys from providers like Anthropic or OpenAI.
 
-**Can Obsidian sync across devices?**
-Yes. Obsidian Sync ($4/month) provides end-to-end encrypted sync across desktop and mobile devices. Free alternatives like iCloud, Google Drive, or Syncthing also work but may cause file conflicts with markdown files.
+**How does Obsidian sync?**  
+Obsidian Sync ($4/month) offers end-to-end encrypted sync. Free options like iCloud or Syncthing work but may cause markdown file conflicts.
 
 ## Sources
 
 - [Obsidian Official Site](https://obsidian.md)
 - [Obsidian Pricing](https://obsidian.md/pricing)
-- [Obsidian Community Plugins Directory](https://obsidian.md/plugins)
+- [Obsidian Community Plugins](https://obsidian.md/plugins)
+- [Obsidian Forum](https://forum.obsidian.md)
 
 ## Related
 

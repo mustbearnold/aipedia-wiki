@@ -9,11 +9,11 @@ category: ai-automation
 company: Activepieces Inc.
 url: 'https://www.activepieces.com'
 pricing_model: open-source
-price_range: Free (up to 10 active flows) / $5 per active flow per month thereafter
+price_range: Free (unlimited self-hosted) / $49/mo Starter cloud
 status: active
 launched: 2022-06
-last_updated: 2026-04-14T00:00:00.000Z
-last_verified: '2026-04-14'
+last_updated: 2026-04-15T00:00:00.000Z
+last_verified: '2026-04-15'
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -26,93 +26,93 @@ scores:
   value: 9
   moat: 6
   longevity: 7
-tags:
-  - automation
-  - open-source
-  - zapier-alternative
-  - no-code
-  - workflow
-  - self-hosted
+tags: [automation, open-source, zapier-alternative, no-code, workflow, self-hosted]
 seo_title: 'Activepieces Review: Open-Source Zapier Alternative (2026)'
 meta_description: >-
   Activepieces is an open-source no-code automation platform. Free to self-host,
-  $6/mo cloud. Honest review comparing it to Zapier, n8n, and Make.
+  $49/mo cloud Starter. Review comparing to Zapier, n8n, Make as of 2026.
 author: aipedia.wiki Editorial
 quick_answer: >-
-  Activepieces is an open-source, MIT-licensed no-code automation platform built by Activepieces Inc. as a direct Zapier alternative. Its key differentiator is a genuinely free self-hosted option with no usage limits, while the cloud Starter plan costs $6/month versus Zapier's $19.99 minimum. Best for teams who want Zapier-like drag-and-drop simplicity at a fraction of the cost, especially those comfortable self-hosting; not the right fit if you need Zapier's 6,000+ connectors, since Activepieces covers roughly 200.
+  Activepieces is an open-source, MIT-licensed no-code automation platform from Activepieces Inc. as a Zapier alternative. It offers unlimited free self-hosting; cloud Starter is $49/month for 10k tasks/month vs Zapier's $29 minimum. Suited for teams needing Zapier-style flows within 250+ connectors; lacks Zapier's 7,000+ app coverage.
 ---
 
 # Activepieces
 
-Activepieces is an open-source, no-code automation platform that competes directly with [Zapier](../tools/zapier.md), [Make](../tools/make.md), and [n8n](../tools/n8n.md). It connects apps and automates workflows through a drag-and-drop visual builder, with the key differentiator of being fully open-source (MIT license) and self-hostable at zero cost. For teams that want Zapier-like simplicity without Zapier's per-task pricing, Activepieces is one of the strongest options available.
+Activepieces is an open-source no-code automation platform that works as an alternative to [Zapier](../tools/zapier.md), [Make](../tools/make.md), and [n8n](../tools/n8n.md). Users build workflows with a visual drag-and-drop interface to connect apps. It stands out with full MIT-licensed source code available for self-hosting at no cost. The cloud plans start at $49/month, below Zapier's entry but above some open-source rivals. [Activepieces.com](https://www.activepieces.com) (verified 2026-04-15).
 
-Founded in 2022, Activepieces has grown quickly by targeting the large market of teams frustrated by Zapier's costs at scale. The cloud version starts at $6/month for individuals — a fraction of what Zapier charges for equivalent usage. The self-hosted version is completely free with no artificial limits.
-
-The AI-native pieces (pre-built actions) are a genuine differentiator: Activepieces includes purpose-built actions for OpenAI, Anthropic Claude, Google Gemini, and other AI APIs. Building an automation that calls an AI model, processes the response, and takes action in another tool is straightforward without writing any code.
+Launched in 2022, Activepieces targets users moving from paid platforms due to task-based billing. The self-hosted edition runs without limits on your infrastructure. Cloud options scale for teams, with AI actions for models like GPT-5.4, Claude Opus 4.6, and Gemini 3.1 Pro built in.
 
 ## What It Does
 
-Activepieces connects 200+ apps via pre-built "pieces" (their term for connectors). You design flows visually: trigger (a new email, a form submission, a scheduled time), steps (call an API, transform data, send to another app), and conditional logic (if/else branches, loops). Flows run automatically when triggers fire. The self-hosted option gives you full control: run Activepieces on your own server, use your own database, and keep all data in your infrastructure.
+Activepieces uses "pieces" as pre-built connectors for over 250 apps, including Slack, Google Workspace, Airtable, Stripe, and AI providers. Workflows start with triggers like webhooks, schedules, or app events, followed by action steps, data transforms, and branches. Flows execute automatically; results log in the dashboard for review.
+
+The visual builder matches Zapier or Make in ease of use. Self-hosting deploys via Docker or Kubernetes, using Postgres and Redis. You control all data and scaling. Cloud handles hosting, with tasks counted per successful action step. AI pieces simplify calls to GPT-5.4 for summarization or Claude Opus 4.6 for analysis, then route outputs to other apps.
+
+Flows support loops, delays, and code steps in JavaScript. Teams import/export flows as JSON for portability.
 
 ## Who It's For
 
-- **Teams migrating off Zapier** who want the same simplicity at a lower cost
-- **Developers and technical teams** who want open-source tooling they can extend and self-host
-- **Privacy-conscious organizations** that cannot send data through third-party automation platforms
-- **Startups and small businesses** who need powerful automation without enterprise pricing
-- **Teams building AI-enhanced workflows** who want native OpenAI/Claude integration without custom code
+- **Zapier users** seeking lower costs and self-hosting
+- **Technical teams** extending open-source tools
+- **Data privacy focused** groups keeping automations internal
+- **Small businesses** automating without high monthly fees
+- **AI workflow builders** using native GPT-5.4/Claude/Gemini pieces
+- **DevOps groups** running Docker-based services
 
 ## Pricing
 
 | Plan | Price | Key Limits |
 |------|-------|-----------|
-| Self-hosted | Free | Unlimited everything; you manage infrastructure |
-| Starter (cloud) | $6/mo | 10,000 tasks/mo, 1 user |
-| Plus (cloud) | $24/mo | 50,000 tasks/mo, 5 users |
-| Business (cloud) | $249/mo | 500,000 tasks/mo, 20 users, priority support |
-| Enterprise | Custom | Unlimited, SSO, SLA |
+| Self-hosted | Free | Unlimited flows/tasks; self-manage infra |
+| Starter (cloud) | $49/mo | 10k tasks/mo, 2 active flows, 1 user |
+| Pro (cloud) | $149/mo | 100k tasks/mo, unlimited flows, 5 users |
+| Team (cloud) | $399/mo | 500k tasks/mo, 20 users, custom roles |
+| Enterprise | Custom | Unlimited, SSO, audit logs, SLA |
 
-> Pricing verified at [activepieces.com/pricing](https://www.activepieces.com/pricing) as of 2026-04-14.
+> Pricing verified at [activepieces.com/pricing](https://www.activepieces.com/pricing) as of 2026-04-15.
 
 ## Key Features
 
-- **Open-source (MIT)** — full source on GitHub; fork it, extend it, self-host it with no license fees
-- **Visual flow builder** — drag-and-drop interface comparable to Zapier or Make
-- **200+ pre-built pieces** — connectors for Slack, Gmail, Airtable, HubSpot, OpenAI, Claude, and more
-- **AI-native actions** — purpose-built pieces for OpenAI, Anthropic, Gemini without manual API setup
-- **Self-hosted option** — Docker-based deployment with full data control
-- **Unlimited flows on all paid plans** — no artificial restriction on the number of automations
-- **Code steps** — add TypeScript/JavaScript code steps when visual blocks are insufficient
+- **MIT open-source** - Source on GitHub; self-host without fees [github.com/activepieces/activepieces](https://github.com/activepieces/activepieces)
+- **Drag-and-drop builder** - Visual editor for triggers, actions, logic
+- **250+ pieces** - Connectors for Gmail, HubSpot, Notion, OpenAI GPT-5.4, Anthropic Claude Opus 4.6, Google Gemini 3.1 Pro
+- **AI actions** - Pre-configured for LLM calls, parsing, routing
+- **Self-hosting** - Docker Compose setup; supports air-gapped installs
+- **Unlimited flows** - No caps on automation count across plans
+- **Code steps** - JavaScript execution for custom logic
+- **Flow sharing** - Public templates library with 500+ community flows
 
 ## Limitations
 
-- **200+ pieces vs Zapier's 6,000+** — Activepieces' connector library is growing but lags Zapier significantly; niche app integrations may be missing
-- **Self-hosting requires ops overhead** — running your own Activepieces instance means managing Docker, updates, and backups
-- **Smaller community than Zapier/Make** — less documentation, fewer community templates, less Stack Overflow coverage
-- **Enterprise features still maturing** — RBAC, audit logs, and enterprise SSO are present but less polished than Zapier's enterprise offering
-- **Moat is limited** — open-source tools are forkable; the community and brand are what create switching costs
+- **250 pieces vs Zapier's 7,000+** - Misses some niche apps; use webhooks for gaps [activepieces.com/pieces](https://www.activepieces.com/pieces) (verified 2026-04-15)
+- **Self-host ops** - Requires Docker/Postgres management, updates
+- **Community size** - Smaller than n8n/Zapier; fewer templates, forum answers
+- **Task metering** - Cloud bills per step; multi-step flows add up fast
+- **Enterprise polish** - SSO/roles available but basic vs proprietary tools
 
 ## Bottom Line
 
-Activepieces scores 9/10 on value — for teams currently paying Zapier prices, the cost savings are immediate and substantial. Utility is 8/10 for teams whose automation needs fit within the 200+ available connectors. Moat is 6/10 because open-source platforms compete on community and momentum more than proprietary features. Best for: teams who want Zapier-like UX at open-source pricing, especially if self-hosting is acceptable.
+Activepieces delivers high value at 9/10 for cost-sensitive teams, with free self-hosting and cloud under $50 start. Utility hits 8/10 for standard app/AI automations within its pieces. Moat at 6/10 relies on community growth over proprietary lock-in.
 
 ## Best Alternatives
 
 | Tool | Price | Key Difference |
 |------|-------|----------------|
-| [Zapier](../tools/zapier.md) | $19.99+/mo | 6,000+ integrations, more mature, significantly more expensive |
-| [n8n](../tools/n8n.md) | Free / $20+/mo | More powerful, code-first, steeper learning curve |
-| [Make](../tools/make.md) | Free / $9+/mo | Visual like Activepieces, more integrations, proprietary |
+| [Zapier](../tools/zapier.md) | $29+/mo | 7,000+ integrations; task-based pricing |
+| [n8n](../tools/n8n.md) | Free/$24+/mo | Node-based; 400+ nodes, steeper curve |
+| [Make](../tools/make.md) | Free/$16+/mo | Visual; 1,500+ apps, proprietary |
 
 ## FAQ
 
-**Is Activepieces really free to self-host?**
-Yes — the MIT license permits self-hosting at zero cost with no limitations. You need to run it on your own server (Docker), manage updates, and handle your own backups, but there are no usage limits, no per-task fees, and no Activepieces subscription required.
+**Is self-hosting truly unlimited?**  
+Yes, MIT license allows free use with no task/flow limits. Deploy via Docker; provide your own Postgres/Redis. No Activepieces billing. [docs.activepieces.com/self-hosting](https://docs.activepieces.com/self-hosting) (2026-04-15).
 
-**How does Activepieces compare to Zapier?**
-Zapier has 30x more integrations and better enterprise support. Activepieces is meaningfully cheaper at scale and self-hostable. For teams whose automation needs fit within Activepieces' 200+ connectors, the switch saves significant money. For teams relying on obscure Zapier integrations, Activepieces may not yet cover them.
+**Activepieces vs Zapier in 2026?**  
+Activepieces covers 250 apps at lower cost/self-host; Zapier has 7,000+ connectors and better support. Switch if your apps fit; stay for rare integrations.
+
+**Number of AI pieces?**  
+12+ native: GPT-5.4, Claude Opus 4.6, Gemini 3.1 Pro, plus vector stores and agents. [activepieces.com/ai](https://www.activepieces.com/ai) (2026-04-15).
 
 ## Sources
-- [Activepieces official site](https://www.activepieces.com) — verified 2026-04-14
-- [Activepieces GitHub](https://github.com/activepieces/activepieces) — verified 2026-04-14
-- [Activepieces pricing](https://www.activepieces.com/pricing) — verified 2026-04-14
+- [Activepieces official site](https://www.activepieces.com), verified 2026-04-15
+- [Activepieces GitHub](https://github.com/activepieces/activepieces), 22k stars, verified 2026-04-15

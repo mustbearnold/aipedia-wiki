@@ -2,55 +2,59 @@
 type: company
 slug: elevenlabs-company
 title: ElevenLabs
-seo_title: "ElevenLabs Company Profile (2026) — aipedia.wiki"
-meta_description: "ElevenLabs is the dominant AI voice company offering best-in-class TTS, voice cloning, dubbing, and voice agents. Founded 2022, valued at $3B+ after Series C."
+seo_title: "ElevenLabs Company Profile (2026), aipedia.wiki"
+meta_description: "ElevenLabs offers AI voice synthesis, agents, dubbing, music generation, and transcription. Founded 2022, valued at $11B after Series D."
 author: "aipedia.wiki Editorial"
 company_type: startup
 founded: 2022
 hq: New York, USA
-funding: "Series C (early 2026)"
+funding: "Series D (February 2026)"
 key_products: [elevenlabs]
-last_updated: 2026-04-13
+last_updated: 2026-04-15
 update_frequency: quarterly
 ---
 
 # ElevenLabs
 
-ElevenLabs is the dominant AI voice company, founded in 2022 by Piotr Dabkowski and Mati Staniszewski and headquartered in New York. The company offers industry-leading text-to-speech across 30+ languages, voice cloning from short audio samples, AI-powered video dubbing, conversational voice agents, and AI-generated sound effects. ElevenLabs raised a Series C round in early 2026, bringing total funding to over $180 million at a valuation exceeding $3 billion ([ElevenLabs](https://elevenlabs.io/)). In blind listening tests, ElevenLabs voices are consistently rated closest to human speech, giving the company a quality moat that drives a growth flywheel: more users generate more data, which improves models, which attracts more users. Pricing ranges from $5 to $330 per month across consumer tiers, with API access for developers building voice-enabled applications ([ElevenLabs API Documentation](https://elevenlabs.io/docs)).
+ElevenLabs, founded in 2022 by Piotr Dabkowski and Mati Staniszewski, is headquartered in New York and valued at $11 billion following a $500 million Series D round in February 2026.[1][2][4][5] The company develops AI models for text-to-speech, speech-to-text, sound effects, dubbing, music generation, and conversational agents, with $330 million ARR at the end of 2025.[1][2]
 
 ## Key Facts
 | | |
 |---|---|
 | **Founded** | 2022 |
 | **HQ** | New York, USA |
-| **Funding** | Series C raised early 2026 (total $180M+) |
-| **Employees** | ~300+ |
-| **Valuation** | ~$3B+ (early 2026) |
+| **Funding** | Series D ($500M, February 2026; total $781M) |
+| **Valuation** | $11B (February 2026) |
+| **Key products** | ElevenLabs TTS, Voice Agents, Dubbing, Music |
 
-## Products
-- [ElevenLabs TTS](../tools/elevenlabs.md): Industry-leading text-to-speech platform. Produces natural, expressive speech across 30+ languages. Available via web interface, API, and integrations.
-- **Voice Cloning:** Create custom voice profiles from audio samples. Professional Voice Cloning (PVC) produces near-indistinguishable replicas from ~30 minutes of clean audio. Instant Voice Cloning works from shorter samples.
-- **Voice Agents:** Conversational AI voice agents for customer service, sales, and phone automation. Low-latency, natural turn-taking. Competes with Bland AI and Vapi.
-- **Dubbing:** AI-powered video dubbing that translates and re-voices content while preserving the original speaker's voice characteristics. Used by content creators and media companies.
-- **Sound Effects:** AI-generated sound effects from text descriptions. Useful for video production, game development, and podcasting.
-- **Voice Library:** Marketplace of community-created and professional voices. Creators can monetize their voice clones.
+## What They Do
+ElevenLabs builds foundational AI models across the audio stack, including text-to-speech, transcription, sound effects, dubbing, music, and conversation.[1][3][4] These models integrate with orchestration and enterprise infrastructure for production platforms used by businesses, creators, and developers.[1][3]
 
-## Strategy
-ElevenLabs was founded in 2022 by Piotr Dabkowski and Mati Staniszewski, both Polish-born engineers with backgrounds at Google and Palantir. The company identified a clear gap: existing TTS solutions (Google, Amazon Polly, Microsoft Azure) sounded robotic. ElevenLabs bet that expressive, human-quality TTS would unlock entirely new use cases and markets.
+The company expanded from voice synthesis to full audio AI, adding voice agents for customer support, 29-language video dubbing, text-to-music generation launched in August 2025, celebrity voice deals with Michael Caine and Matthew McConaughey, and an enterprise voice marketplace.[2] Operations span London, New York, San Francisco, Warsaw, Dublin, Tokyo, Seoul, Singapore, Bengaluru, Sydney, São Paulo, Berlin, Paris, and Mexico City.[4]
 
-The bet paid off. ElevenLabs quickly became the default TTS choice for content creators, podcasters, audiobook producers, and developers building voice-enabled applications. The company's moat is quality -- in blind tests, ElevenLabs voices are consistently rated closest to human speech. This quality advantage creates a flywheel: more users generate more data, which improves models, which attracts more users.
+## Current Flagship Products
+- [ElevenLabs TTS](../tools/elevenlabs.md): Text-to-speech platform with human-like synthesis across multiple languages. Supports web, API, and integrations. Flagship model: Eleven Multilingual v3 (2026).[1][3]
+- **Voice Agents**: Conversational AI for customer service and phone automation with low-latency interaction. ElevenAgents platform for enterprise deployment.[2][3][4]
+- **Dubbing**: Video dubbing in 29 languages preserving original voice traits. Supports content translation and re-voicing.[2]
+- **Music**: ElevenLabs Music for text-to-music generation, launched August 2025.[2]
+- **Voice Cloning**: Custom voices from audio samples, with professional and instant options plus celebrity licensing.[2]
+- **Sound Effects**: Text-to-sound effects generation.[1]
 
-The company is expanding from TTS into a full "voice AI platform." Voice Agents (conversational AI for phone/chat) represent a massive TAM -- every call center, customer support operation, and sales team is a potential customer. Dubbing targets the $50B+ localization market. The Voice Library creates a marketplace dynamic where voice actors can monetize their clones, giving ElevenLabs a network effect competitors lack.
+## Recent News
+- February 4, 2026: Raised $500 million Series D at $11 billion valuation, total funding $781 million; eyes IPO.[1][4][5]
+- Year-end 2025: Reached $330 million ARR.[1][2]
+- September 2025: Secondary round at $6.6 billion valuation.[2]
+- January 2025: Series C at $3.3 billion valuation.[2]
+- August 2025: Launched ElevenLabs Music.[2]
+- March 2026: Expanded enterprise adoption with local teams in 14 cities.[4]
 
-## Why They Matter
-ElevenLabs owns the AI voice category. For anyone building products that need synthetic speech -- podcasts, audiobooks, accessibility tools, customer service bots, video content, game dialogue -- ElevenLabs is the quality benchmark. Their API is well-documented, reasonably priced ($5-330/mo tiers), and integrates easily with automation tools like n8n. The competitive threat comes from Mistral's Voxtral ([Mistral AI](https://mistral.ai/)) (open-weight TTS), Google's TTS improvements, and OpenAI's voice capabilities, but as of early 2026, ElevenLabs maintains a clear quality lead. The voice cloning capabilities also raise important ethical questions about consent and misuse that the company actively addresses with verification systems.
-
-## Related
-- [ElevenLabs](../tools/elevenlabs.md)
-- [TTS/Voice Category](../categories/ai-voice.md)
-- [Mistral](mistral.md): Competitor via Voxtral
-- [AI Content Pipeline](../use-cases/ai-content-pipeline.md): Uses TTS for audio content
+## Strategic Position
+ElevenLabs leads in audio AI quality, with models rated closest to human speech and a data flywheel from user growth.[1][2] Enterprise adoption by firms like Deutsche Telekom and Square drives ARR acceleration.[1] Opportunities include voice agents for call centers, dubbing for localization, and music generation markets. Threats are open-weight models like Mistral Voxtral, Google TTS advances, and OpenAI voice tools, though ElevenLabs holds a quality edge as of April 2026.[2][3] Local deployments and safety measures support enterprise trust.[3]
 
 ## Sources
-- [ElevenLabs Official Website](https://elevenlabs.io/) -- Product information, pricing tiers, API documentation, and Voice Library marketplace.
-- [ElevenLabs API Documentation](https://elevenlabs.io/docs) -- Developer documentation for TTS, voice cloning, dubbing, and voice agent APIs.
+- [ElevenLabs Series D Announcement](https://elevenlabs.io/blog/series-d)[1]
+- [SaaStr on ARR and Growth](https://www.saastr.com/elevenlabs-just-hit-330m-arr-it-took-twilio-8-years-to-get-there/)[2]
+- [ElevenLabs About Page](https://elevenlabs.io/about)[3]
+- [EU-Startups on Funding](https://www.eu-startups.com/2026/02/elevenlabs-e424-million-raise-values-the-company-at-e9-3-billion-and-marks-one-of-europes-largest-ai-funding-rounds-this-year/)[4]
+- [Wikipedia](https://en.wikipedia.org/wiki/ElevenLabs)[5]
+---

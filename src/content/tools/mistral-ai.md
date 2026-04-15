@@ -5,8 +5,7 @@ title: Mistral AI
 tagline: >-
   European open-source LLM provider with models from Mistral Small 4 (Apache 2.0, 256k context) to frontier-competitive Mistral Large 3, plus Voxtral TTS, Forge enterprise training, and le Chat Pro.
 category: ai-chatbots
-secondary_categories:
-  - ai-search
+secondary_categories: [ai-search]
 company: 'Mistral AI (Paris, France)'
 url: 'https://mistral.ai'
 pricing_model: freemium
@@ -27,16 +26,7 @@ scores:
   value: 9
   moat: 7
   longevity: 8
-tags:
-  - llm
-  - open-source-ai
-  - european-ai
-  - ai-api
-  - mistral
-  - ai-models
-  - mistral-small-4
-  - voxtral
-  - forge
+tags: [llm, open-source-ai, european-ai, ai-api, mistral, ai-models, mistral-small-4, voxtral, forge]
 seo_title: 'Mistral AI: Models, Pricing & Review (2026)'
 meta_description: >-
   Mistral AI offers open-source LLMs including Mistral Small 4 (March 2026, 256k context, Apache 2.0), Mistral Large 3, Voxtral TTS, and Forge enterprise training. GDPR-native EU data storage. Full review of le Chat, API pricing, and how Mistral compares to GPT-5.4 and Claude Opus 4.6.

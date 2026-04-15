@@ -10,8 +10,8 @@ pricing_model: open-source
 price_range: "Free (open-source)"
 status: active
 launched: 2024-11
-last_updated: 2026-04-14
-last_verified: 2026-04-14
+last_updated: 2026-04-15
+last_verified: 2026-04-15
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -32,98 +32,86 @@ quick_answer: >-
   Kokoro is a free, open-source text-to-speech model released by hexgrad with 82 million parameters, small enough to run on consumer CPU or GPU hardware after a roughly 300MB download, requiring no API key, no network connection, and no per-character fees. At 82M parameters it is significantly smaller than competing open-source models (Tortoise TTS uses 300M-plus, XTTS v2 uses 400M-plus) while benchmarking favorably against them and approaching commercial service quality for fixed-voice English narration. The model is free under an Apache 2.0 license permitting commercial use, with running costs limited to hardware electricity. Best for developers building high-volume TTS pipelines, privacy-sensitive users who cannot send text to external APIs, and self-hosters building fully offline AI stacks; ElevenLabs wins when you need voice cloning, fine-grained emotional control, or real-time streaming, none of which Kokoro supports.
 ---
 
+
 # Kokoro TTS
 
-Kokoro is an open-source text-to-speech model released by hexgrad in late 2024. At 82 million parameters, it is small enough to run on consumer CPU or GPU hardware while producing voice quality that benchmarks favorably against commercial services. It is free, requires no API key, has no usage limits, and keeps audio generation entirely on your own machine. For developers and researchers who want high-quality TTS without ongoing API costs or data privacy concerns, Kokoro is the most capable open-source option available.
+Kokoro is an open-source text-to-speech model released by hexgrad in late 2024. At 82 million parameters, it runs on consumer CPU or GPU hardware while producing voice quality that benchmarks against commercial services. It requires no API key, has no usage limits, and keeps audio generation on local hardware. For developers and researchers needing TTS without API costs or data privacy issues, Kokoro remains a capable open-source option.[https://huggingface.co/hexgrad/Kokoro-82M][https://github.com/hexgrad/kokoro]
 
 ## What It Does
 
-Kokoro generates natural-sounding speech from text, locally on your hardware, with no network requests required after the initial model download (~300MB). It supports multiple built-in voices (American and British English, plus experimental multilingual support in later versions), variable speaking rate, and pitch control.
+Kokoro generates speech from text on local hardware, with no network requests after the initial ~300MB model download. It supports multiple built-in voices for American and British English, variable speaking rate, and pitch control.[https://huggingface.co/hexgrad/Kokoro-82M]
 
-Core capabilities:
+Core capabilities include local inference on CPU or CUDA GPU; 10+ built-in voices across gender and accent variants; style control for rate and pitch; long-form generation for full documents; Python API for application integration; and Gradio demo for browser-based testing.[https://github.com/hexgrad/kokoro]
 
-- **Local inference:** runs on CPU (slower) or CUDA GPU (fast); no internet connection after download
-- **Multiple voices:** 10+ built-in voices across gender and accent variants (American English, British English)
-- **Style control:** adjust speaking rate and pitch; style embeddings in the model allow for further customization
-- **Long-form generation:** handles full document synthesis without the chunking issues that affect some models
-- **Python API:** clean Python library for integration into applications, scripts, and pipelines
-- **Gradio demo:** a browser-based UI is available for non-code users to test the model locally
-
-The model is based on a modified StyleTTS 2 architecture with additional training on high-quality voice data. The 82M parameter count is notable because it is far smaller than competing models (Tortoise TTS uses 300M+, XTTS v2 uses 400M+) while matching or exceeding their output quality.
+The model uses a modified StyleTTS 2 architecture trained on high-quality voice data. Its 82M parameter size is smaller than alternatives like Tortoise TTS (300M+) or XTTS v2 (400M+) while matching their quality in English narration.[https://huggingface.co/hexgrad/Kokoro-82M]
 
 ## Who It's For
 
-- **Developers** building applications that need TTS without API cost at scale — Kokoro eliminates per-character charges for high-volume use
-- **Privacy-sensitive users** who cannot send text content to external APIs (medical, legal, personal data)
-- **Researchers** needing reproducible TTS results without API rate limits or versioning changes
-- **Self-hosters** building local AI pipelines (Ollama + local LLM + Kokoro TTS creates a fully offline AI assistant)
-- **Content creators** who need unlimited generation for subtitles, narration, or prototyping without subscription costs
-
-Not designed for: voice cloning from custom samples (Kokoro uses fixed pre-trained voices), commercial production requiring unique branded voices, or non-technical users wanting a polished GUI.
+- Developers building applications with TTS at scale without per-character charges
+- Privacy-sensitive users avoiding external APIs for sensitive text (medical, legal data)
+- Researchers needing reproducible TTS without rate limits or API changes
+- Self-hosters creating offline AI pipelines (local LLM + Kokoro TTS)
+- Content creators generating unlimited audio for narration or subtitles without subscriptions
 
 ## Pricing
 
-Kokoro is completely free. The model weights are released under the Apache 2.0 license, which permits commercial use.
+| Tier | Price | Details |
+|------|-------|---------|
+| Open-source | Free | Apache 2.0 license; commercial use allowed; self-hosted only |
 
-Running costs are limited to your own hardware electricity. On a modern CPU, generation is roughly real-time (1 second of audio per second of compute). On a GPU (NVIDIA RTX 3060 or better), generation runs 10-20x faster than real-time.
-
-There is no hosted API, no subscription, no usage limits, no data sent to external servers.
+Prices verified 2026-04-15. Running costs limited to hardware electricity. CPU generation near real-time; GPU 10-20x faster.[https://huggingface.co/hexgrad/Kokoro-82M]
 
 ## Key Features
 
-- **Apache 2.0 license:** permissive open-source; commercial use allowed without royalties
-- **82M parameters / ~300MB download:** small enough to run on any modern laptop; no specialized hardware required
-- **CPU and GPU inference:** runs on CPU without configuration; automatic GPU acceleration with CUDA
-- **Multi-voice support:** 10+ distinct voices with natural variation in timbre, age, and accent
-- **Python library:** `pip install kokoro` installs everything needed; integration into existing Python projects is straightforward
-- **Active development:** the hexgrad team and open-source community have released multiple improved checkpoints since the initial release
-- **ONNX export:** convert to ONNX format for deployment in non-Python environments (mobile, browser, C++ applications)
+- Apache 2.0 license permits commercial use without royalties
+- 82M parameters / ~300MB download fits on laptops; no specialized hardware
+- CPU and GPU inference; automatic CUDA acceleration
+- 10+ voices with timbre, age, accent variation
+- Python library via `pip install kokoro`; simple integration
+- Active community updates with improved checkpoints
+- ONNX export for non-Python deployment (mobile, browser, C++)
+- Gradio UI for local testing without coding[https://github.com/hexgrad/kokoro]
 
 ## Limitations
 
-- **No voice cloning** — Kokoro uses fixed pre-trained voice styles; you cannot clone an arbitrary voice from a sample the way ElevenLabs or Cartesia allow
-- **English-primary** — highest quality in American and British English; multilingual support in newer versions but noticeably lower quality in non-English languages
-- **No emotion control** — limited prosody customization; does not match ElevenLabs' fine-grained emotional expression controls
-- **No hosted version** — must self-host; not a drop-in API replacement for ElevenLabs or OpenAI TTS without wrapping in your own server
-- **CPU speed is slow** — real-time generation on CPU is functional but 10-20x slower than GPU; long documents take minutes
-- **No streaming** — Kokoro generates the full audio file before playback, unlike Cartesia's streaming architecture; not suitable for real-time voice agents without additional engineering
+- No voice cloning; fixed pre-trained voices only
+- English primary; multilingual lower quality
+- Limited prosody; no fine-grained emotion control
+- No hosted API; requires self-hosting
+- CPU slower than GPU for long texts
+- No streaming; full audio generated before playback[https://huggingface.co/hexgrad/Kokoro-82M]
 
 ## Bottom Line
 
-Kokoro's value proposition is straightforward: the quality-to-cost ratio is unmatched. You get near-commercial TTS quality for the price of electricity. If you are building a high-volume pipeline, care about data privacy, or simply refuse to pay per-character for audio generation, Kokoro is the correct choice. Its limitations (no voice cloning, no streaming, English-primary) are real, but they rule it out only for specific use cases. For the vast majority of TTS tasks — narration, accessibility, content production, and local AI pipelines — Kokoro is a viable free replacement for services that charge $50-500/month.
+Kokoro provides TTS quality near commercial levels at electricity cost only. It suits high-volume, privacy-focused, or offline use where fixed English voices suffice. Limitations exclude it from voice cloning or real-time agent needs.
 
 ## Best Alternatives
 
 | Tool | Best For | Price |
 |------|----------|-------|
-| [ElevenLabs](../tools/elevenlabs.md) | Voice cloning, emotional range, commercial quality | Free tier / $5+/mo |
-| [Cartesia](../tools/cartesia.md) | Real-time streaming TTS for voice agents | Free tier / $49+/mo |
-| [Murf](../tools/murf.md) | Non-technical users, studio voiceover UI | Free tier / $29+/mo |
-| Coqui TTS | Alternative open-source TTS with voice cloning (archived) | Free |
-| StyleTTS 2 | The architecture Kokoro is based on; more configurable but harder to use | Free |
+| [ElevenLabs](../tools/elevenlabs.md) | Voice cloning, emotion control | Free tier / $5+/mo |
+| [Cartesia](../tools/cartesia.md) | Streaming TTS for agents | Free tier / $49+/mo |
+| [Murf](../tools/murf.md) | Studio UI for voiceover | Free tier / $29+/mo |
 
 ## FAQ
 
-**How does Kokoro compare to ElevenLabs?**
-For fixed-voice narration in English, Kokoro quality is competitive with ElevenLabs at lower tier plans. ElevenLabs produces higher-quality output with fine-grained emotional control, a much larger voice library, and voice cloning from samples — none of which Kokoro offers. ElevenLabs requires an internet connection and charges per character; Kokoro is free and local. The choice is quality and features vs. cost and privacy.
+**How does Kokoro compare to ElevenLabs?**  
+Kokoro matches ElevenLabs for fixed-voice English narration but lacks cloning, emotion control, and larger voice libraries. Kokoro is free and local; ElevenLabs charges per character and needs internet.[https://huggingface.co/hexgrad/Kokoro-82M]
 
-**Can I use Kokoro commercially?**
-Yes. The Apache 2.0 license explicitly permits commercial use, including in closed-source products and services. You can integrate Kokoro into a paid product, wrap it in an API you sell, or use it to generate audio for commercial content.
+**Can I use Kokoro commercially?**  
+Yes, Apache 2.0 allows commercial use in products or services.[https://huggingface.co/hexgrad/Kokoro-82M]
 
-**How do I run Kokoro?**
-Install via pip: `pip install kokoro soundfile`. The model downloads automatically on first use. Basic usage:
+**How do I run Kokoro?**  
+`pip install kokoro soundfile`. Example:
 ```python
 from kokoro import KPipeline
-pipeline = KPipeline(lang_code='a')  # 'a' = American English
+pipeline = KPipeline(lang_code='a')
 audio, _ = pipeline("Your text here.", voice='af_heart')
 ```
-Full documentation and voice samples are on the [Hugging Face model page](https://huggingface.co/hexgrad/Kokoro-82M).
-
-**What GPU do I need?**
-Kokoro runs on CPU without any GPU. A GPU accelerates generation 10-20x. Any NVIDIA GPU with CUDA support (GTX 1060 or newer) works. 4GB VRAM is sufficient; the model fits comfortably in 2GB VRAM.
+See [Hugging Face page](https://huggingface.co/hexgrad/Kokoro-82M).[https://github.com/hexgrad/kokoro]
 
 ## Sources
 
 - [Kokoro-82M on Hugging Face](https://huggingface.co/hexgrad/Kokoro-82M)
 - [hexgrad GitHub](https://github.com/hexgrad/kokoro)
-- [StyleTTS 2 paper (base architecture)](https://arxiv.org/abs/2306.07691)
+---

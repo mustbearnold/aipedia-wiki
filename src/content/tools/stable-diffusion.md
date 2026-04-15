@@ -26,13 +26,7 @@ scores:
   value: 10
   moat: 7
   longevity: 9
-tags:
-  - ai-image
-  - open-source
-  - stable-diffusion
-  - local-ai
-  - fine-tuning
-  - comfyui
+tags: [ai-image, open-source, stable-diffusion, local-ai, fine-tuning, comfyui]
 seo_title: 'Stable Diffusion Review 2026: Free Open-Source AI Image Generation Guide'
 meta_description: >-
   Stable Diffusion is free, open-source AI image generation you can run locally

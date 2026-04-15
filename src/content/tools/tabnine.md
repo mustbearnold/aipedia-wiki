@@ -26,13 +26,7 @@ scores:
   value: 8
   moat: 5
   longevity: 6
-tags:
-  - autocomplete
-  - privacy
-  - local-model
-  - ai-coding
-  - ide-plugin
-  - enterprise
+tags: [autocomplete, privacy, local-model, ai-coding, ide-plugin, enterprise]
 seo_title: 'Tabnine: AI Code Completion Review & Pricing (2026)'
 meta_description: >-
   Tabnine is a privacy-first AI code completion tool that runs locally or in

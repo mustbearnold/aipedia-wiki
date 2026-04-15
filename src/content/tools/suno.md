@@ -26,12 +26,7 @@ scores:
   value: 9
   moat: 6
   longevity: 7
-tags:
-  - ai-music
-  - music-generation
-  - text-to-music
-  - song-generation
-  - vocal-ai
+tags: [ai-music, music-generation, text-to-music, song-generation, vocal-ai]
 seo_title: 'Suno v5.5 Review 2026: Pricing, Voice Cloning & Stem Export Guide'
 meta_description: >-
   Suno v5.5 adds voice cloning, custom models, and stem-level DAW export. Free tier available;

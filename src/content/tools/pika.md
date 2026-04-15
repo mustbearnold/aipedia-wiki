@@ -26,13 +26,7 @@ scores:
   value: 8
   moat: 7
   longevity: 8
-tags:
-  - ai-video
-  - text-to-video
-  - image-to-video
-  - video-generation
-  - creative
-  - short-video
+tags: [ai-video, text-to-video, image-to-video, video-generation, creative, short-video]
 seo_title: 'Pika Labs: Features, Pricing & Review (2026)'
 meta_description: >-
   Pika Labs generates AI video from text and image prompts using Pika 2.1. Free plan with 150 credits/month. Honest review of features, pricing, and limitations as of April 2026.

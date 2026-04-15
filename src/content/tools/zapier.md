@@ -26,14 +26,7 @@ scores:
   value: 6
   moat: 9
   longevity: 9
-tags:
-  - automation
-  - workflow
-  - integrations
-  - no-code
-  - zaps
-  - ai-actions
-  - triggers
+tags: [automation, workflow, integrations, no-code, zaps, ai-actions, triggers]
 seo_title: 'Zapier: Features, Pricing & Review (2026)'
 meta_description: >-
   Zapier is the leading no-code automation platform with 7,000+ app

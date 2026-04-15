@@ -4,7 +4,7 @@ slug: runway
 title: Runway
 tagline: The professional-grade AI video generation platform used by filmmakers and studios, now with GWM-1.
 category: ai-video
-secondary_categories: [ai-video-editing]
+secondary_categories: [ai-video]
 company: runway
 url: https://runwayml.com
 pricing_model: paid

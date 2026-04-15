@@ -26,15 +26,7 @@ scores:
   value: 9
   moat: 6
   longevity: 7
-tags:
-  - autocomplete
-  - free
-  - ai-coding
-  - ide-plugin
-  - enterprise
-  - vscode
-  - jetbrains
-  - neovim
+tags: [autocomplete, free, ai-coding, ide-plugin, enterprise, vscode, jetbrains, neovim]
 seo_title: 'Codeium: Free AI Code Completion Review & Pricing (2026)'
 meta_description: >-
   Codeium offers free AI code completion for individuals across 70+ languages.

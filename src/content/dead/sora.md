@@ -1,72 +1,58 @@
 ---
 type: dead
 slug: sora
-title: "Sora 2 (Discontinued)"
-seo_title: "Sora 2 Shutdown & Alternatives (2026) — aipedia.wiki"
-meta_description: "Sora 2 by OpenAI shut down in 2026. Migration guide to Kling 3.0, Seedance 2.0, and Runway Gen-4.5 for AI video generation."
+title: "Sora (Discontinued)"
+seo_title: "Sora Shutdown & Alternatives (2026), aipedia.wiki"
+meta_description: "Sora by OpenAI shut down in March 2026. Migration guide to Kling 3.0, Seedance 2.0, Runway Gen-4.5, Luma Dream Machine 3, and Hailuo AI for AI video generation."
 author: "aipedia.wiki Editorial"
-died: 2026-04-01
+died: 2026-03-24
 cause: shutdown
-last_updated: 2026-04-13
+last_updated: 2026-04-15
 ---
 
-# Sora 2 -- Discontinued
+# Sora - Discontinued
 
-Sora 2 was OpenAI's second-generation AI video generation model that produced video clips up to 20 seconds long at 1080p resolution from text prompts. It was integrated directly into ChatGPT, giving 100 million+ users access without a separate subscription. OpenAI shut down Sora 2 on April 1, 2026, following its predecessor Sora 1, which was shut down on March 24, 2026. Both versions of Sora have now been discontinued. The recommended migration path for former Sora 2 users is Kling 3.0 ([Kling AI](https://klingai.com)) for best overall quality and value, Seedance 2.0 ([Seedance](https://seedance.ai)) for a free tier option, or Runway Gen-4.5 ([Runway](https://runwayml.com)) for professional-grade cinematic output.
-
-## What Happened
-
-OpenAI shut down Sora 2 on April 1, 2026, discontinuing its AI video generation capabilities entirely. This followed the shutdown of the original Sora on March 24, 2026. The Sora product line had a troubled history from the start: Sora 1 launched to massive hype but underdelivered with months of waitlists, limited access, and artist protests over training data concerns. Sora 2 replaced it in late 2025 with improved quality and ChatGPT integration, but failed to achieve competitive differentiation against rapidly improving rivals like Kling 3.0, Seedance 2.0, and Runway Gen-4.5. OpenAI appears to have decided that video generation was not a strategic priority worth continued investment, particularly as competitors pulled ahead on quality benchmarks. The sora.com domain and all video generation features within ChatGPT have been deactivated.
+Sora was OpenAI's AI video generation model and app. OpenAI shut it down on March 24, 2026, due to high operating costs, copyright issues, and a strategic pivot to business tools.[1][2][3]
 
 ## What It Was
 
-Sora 2 was bundled with ChatGPT subscriptions at no additional cost:
+Sora generated video clips from text prompts. It launched as a model in 2024, followed by a dedicated iOS app in late 2025 positioned as a TikTok-style network for synthetic media.
 
-- **Text-to-video:** generated video clips from text prompts, handling camera motion, lighting, physics, and multi-subject scenes
-- **Image-to-video:** animated still images into video clips
-- **Video remixing:** modified existing videos with prompts (style transfer, extension)
-- **Storyboard mode:** defined multiple scenes with different prompts for longer narratives
-- **1080p output:** Pro tier generated at full HD resolution, 20 seconds max
-- **ChatGPT integration:** accessed through the same ChatGPT interface with no separate app
+The app allowed text-to-video creation, image-to-video animation, and video remixing. It integrated camera motion, physics simulation, and multi-subject scenes, with outputs up to 1080p and 20 seconds. Access was via ChatGPT for subscribers or the standalone app.[1]
 
-Pricing was bundled with ChatGPT: Plus subscribers ($20/mo) got 50 generations/month at 720p, Pro subscribers ($200/mo) got 500 generations at 1080p.
+## What Happened
 
-## Migration Guide
+OpenAI announced the Sora shutdown on March 24, 2026, via X, stating they were "saying goodbye to the Sora app."[1] Downloads dropped from 170,000 to 54,000 the prior week, with revenue falling to $19,000.[1]
 
-For former Sora 2 users, here are the best alternatives ranked by use case:
+An end-of-life update released March 17, 2026, prepared servers for full termination by April 26, 2026.[1] This ended video generation features across ChatGPT and sora.com.[2][3] A $1 billion Disney licensing deal was canceled as a result.[1]
 
-### 1. Kling 3.0: Best Quality & Value
-**Price:** $10-37/mo | **Why:** #1 ELO benchmark position, best overall video quality, and strong value at $10/mo for the Standard plan. Handles complex scenes, motion, and physics better than Sora 2 ever did. The default recommendation for most users migrating from Sora 2.
-- [Kling 3.0 review](../tools/kling.md) | [klingai.com](https://klingai.com)
+## Why It Died
 
-### 2. Seedance 2.0: Best Free Option
-**Price:** Free tier + paid plans | **Why:** ByteDance's video model offers a generous free tier, making it the best replacement for users who were using Sora 2's free or low-cost ChatGPT Plus access. Particularly strong for dance and rhythmic content, with good character consistency.
-- [Seedance 2.0 review](../tools/seedance.md) | [seedance.ai](https://seedance.ai)
+High daily compute costs, estimated in millions, made consumer-scale video generation unsustainable.[2] Copyright and deepfake controversies added pressure.[1] OpenAI pivoted resources to robotics, a business-focused project codenamed Spud, and enterprise tools ahead of a potential IPO.[1][2][3]
 
-### 3. Runway Gen-4.5: Best for Professionals
-**Price:** $15-95/mo | **Why:** The most polished cinematic aesthetic with enterprise features and fine-grained control over motion, camera movement, and style. Preferred by creative professionals and filmmakers who need precise control over output.
-- [Runway Gen-4.5 review](../tools/runway.md) | [runwayml.com](https://runwayml.com)
+Video lacked competitive edge against rivals improving faster on benchmarks.[3] Consumer social features did not align with OpenAI's shift to B2B priorities.[3]
 
-## FAQ
+## Current Alternatives
 
-**When did Sora 2 shut down?**
-OpenAI shut down Sora 2 on April 1, 2026. The original Sora was shut down on March 24, 2026.
+- **Kling 3.0:** Leads ELO benchmarks for quality, motion, and physics. Standard plan at $10/month offers strong value.[../tools/kling.md]
+- **Seedance 2.0:** ByteDance model with generous free tier. Excels in character consistency and rhythmic content.[../tools/seedance.md]
+- **Runway Gen-4.5:** Provides cinematic output with controls for motion and style. Suited for professionals.[../tools/runway.md]
+- **Luma Dream Machine 3:** Fast generation speeds and high-fidelity scenes. Good for iterative workflows.[../tools/luma.md]
+- **Hailuo AI:** MiniMax model strong on realism and long clips. Competitive pricing for high-volume use.[../tools/hailuo.md]
 
-**Can I still access my Sora 2 videos?**
-No. The sora.com domain and all video generation features within ChatGPT have been deactivated. If you did not download your generated videos before the shutdown, they are no longer accessible.
+## Lessons
 
-**What is the best Sora 2 replacement?**
-Kling 3.0 ($10/mo) is the best overall replacement for quality and value. Seedance 2.0 offers a free tier for budget-conscious users. Runway Gen-4.5 ($15-95/mo) is best for professional and cinematic use cases.
+AI video tools face economic hurdles at consumer scale due to compute demands. Companies must balance hype with sustainable costs, as seen in Sora's multimillion daily expenses.[2]
 
-**Does OpenAI still offer any video generation?**
-No. As of April 2026, OpenAI does not offer any video generation product.
+Strategic pivots reveal priorities: OpenAI favored enterprise and robotics over consumer media amid IPO preparations.[3] Rivals like Kling succeeded by focusing on core generation without social app overhead.
+
+Copyright risks amplify with generative media, prompting shutdowns and deal terminations like Disney's.[1] Future models will need robust data provenance.
 
 ## Sources
 
-- [OpenAI Official Website](https://openai.com/)
-- [Kling AI](https://klingai.com)
-- [Seedance](https://seedance.ai)
-- [Runway](https://runwayml.com)
+- [MWM.ai on Sora app termination](https://mwm.ai/articles/sora-openai-app-delisted-amidst-2026-03-30)[1]
+- [Rewiz on Sora shutdown](https://rewiz.app/channels/@linus-tech-tips/sora-is-dead-wan-show-march-27-2026)[2]
+- [TechCrunch on Sora implications](https://techcrunch.com/2026/03/29/soras-shutdown-could-be-a-reality-check-moment-for-ai-video/)[3]
 
 ## Related
 

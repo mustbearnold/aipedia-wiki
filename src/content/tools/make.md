@@ -27,14 +27,7 @@ scores:
   value: 9
   moat: 7
   longevity: 8
-tags:
-  - automation
-  - workflow
-  - integrations
-  - no-code
-  - visual-builder
-  - integromat
-  - api
+tags: [automation, workflow, integrations, no-code, visual-builder, integromat, api]
 seo_title: 'Make (Integromat): Features, Pricing & Review (2026)'
 meta_description: >-
   Make (formerly Integromat) is a visual workflow automation platform with 2,000+

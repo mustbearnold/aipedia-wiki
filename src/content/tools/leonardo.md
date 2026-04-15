@@ -26,15 +26,7 @@ scores:
   value: 10
   moat: 6
   longevity: 7
-tags:
-  - ai-image
-  - image-generation
-  - text-to-image
-  - free-tier
-  - beginner-friendly
-  - leonardo
-  - art
-  - design
+tags: [ai-image, image-generation, text-to-image, free-tier, beginner-friendly, leonardo, art, design]
 seo_title: 'Leonardo AI: Features, Pricing & Review (2026)'
 meta_description: >-
   Leonardo AI is a freemium image generator offering 150 free images/day, the

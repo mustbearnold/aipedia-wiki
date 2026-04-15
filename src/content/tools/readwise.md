@@ -3,8 +3,8 @@ type: tool
 slug: readwise
 title: Readwise Reader
 tagline: >-
-  AI-powered reading app that ingests everything you read — articles,
-  newsletters, PDFs, ebooks — and resurfaces highlights with spaced repetition.
+  AI-powered reading app that ingests everything you read, articles,
+  newsletters, PDFs, ebooks, and resurfaces highlights with spaced repetition.
 category: ai-notes
 company: Readwise
 url: 'https://readwise.io/read'
@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: $9.99-$12.99/month
 status: active
 launched: 2018-01
-last_updated: 2026-04-14T00:00:00.000Z
-last_verified: '2026-04-14'
+last_updated: 2026-04-15T00:00:00.000Z
+last_verified: '2026-04-15'
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -26,18 +26,11 @@ scores:
   value: 9
   moat: 8
   longevity: 8
-tags:
-  - ai-notes
-  - reading
-  - highlights
-  - spaced-repetition
-  - pkm
-  - newsletters
-  - rss
+tags: [ai-notes, reading, highlights, spaced-repetition, pkm, newsletters, rss]
 seo_title: 'Readwise Reader Review 2026: AI Reading App for Serious Readers'
 meta_description: >-
   Readwise Reader combines article saving, ebook highlighting, AI summarization,
-  and spaced repetition into one reading app. $7.99/mo review with pricing and
+  and spaced repetition into one reading app. $9.99/mo review with pricing and
   alternatives.
 author: aipedia.wiki Editorial
 best_for:
@@ -48,99 +41,86 @@ not_best_for:
   - casual readers
   - team collaborators
 quick_answer: >-
-  Readwise Reader is a read-later and knowledge retention app built by Readwise that ingests articles, newsletters, PDFs, ebooks, and YouTube videos into a single inbox, then resurfaces your highlights on a spaced-repetition schedule so you retain what you read. The combination of a unified reading inbox, Ghostreader AI (ask questions about any document), and daily spaced-repetition review is available from no other single tool at this price. At $7.99/month after a 60-day free trial, it covers both the Reader app and the full Readwise highlight review system; best for heavy readers building a personal knowledge base in Obsidian or Notion, not for casual readers or anyone needing team collaboration. There is no ongoing free tier once the trial ends.
+  Readwise Reader is a read-later and knowledge retention app built by Readwise that ingests articles, newsletters, PDFs, ebooks, and YouTube videos into a single inbox, then resurfaces your highlights on a spaced-repetition schedule so you retain what you read. The combination of a unified reading inbox, Ghostreader AI (ask questions about any document), and daily spaced-repetition review is available from no other single tool at this price. At $9.99/month after a 30-day free trial, it covers both the Reader app and the full Readwise highlight review system; best for heavy readers building a personal knowledge base in Obsidian or Notion, not for casual readers or anyone needing team collaboration. There is no ongoing free tier once the trial ends.
 ---
 
 # Readwise Reader
 
-Readwise Reader is a read-later and reading management app that unifies articles, newsletters, PDFs, ebooks, and YouTube videos into a single inbox, then uses AI to help you process and retain what you read. The defining feature is the Readwise highlight review system: every highlight you make resurfaces on a daily spaced-repetition schedule so you actually remember what you read. At $7.99/month, it is the best-value tool for serious readers who want to extract lasting knowledge from their reading.
+Readwise Reader is a read-later and reading management app that unifies articles, newsletters, PDFs, ebooks, YouTube videos, Twitter threads, and audio files into a single inbox, then uses AI to help process and retain what you read. The core feature is the Readwise highlight review system: every highlight resurfaces on a daily spaced-repetition schedule to build long-term retention. At $9.99/month, it bundles reading ingestion, AI analysis powered by models like Claude Opus 4.6 and GPT-5.4, and memory reinforcement into one subscription.[Readwise pricing](https://readwise.io/pricing)
 
 ## What It Does
 
-Reader functions as a read-later app (like Pocket or Instapaper) plus an AI research assistant plus a long-term memory system for your reading:
+Reader serves as a read-later app similar to Pocket, an AI document assistant, and a retention system for reading notes. Content ingestion covers web articles via browser extension, newsletters forwarded to a @readwise.io inbox, PDF uploads, Kindle ebook sync, YouTube transcripts, Twitter threads, and podcast audio.
 
-**Ingestion:** Save articles via browser extension, subscribe newsletters directly to a Reader inbox, import PDFs, sync Kindle highlights, add YouTube videos for AI-generated transcripts.
+The reading interface offers distraction-free viewing, customizable fonts, speed reading modes, text-to-speech playback, and inline highlighting with AI-suggested tags. Ghostreader AI, now using Claude Opus 4.6 and GPT-5.4, answers questions about any document, generates summaries, extracts key quotes, and creates custom study guides.
 
-**Reading experience:** Clean distraction-free reader with adjustable typography, offline access, text-to-speech for listening while commuting, and inline highlighting with tagging.
-
-**AI features:**
-
-- **Ghostreader:** ask questions about any document in Reader ("what is the author's main argument?", "give me 5 key takeaways")
-- **Document summarization:** one-click AI summary of any saved article or PDF
-- **AI tagging:** automatically suggests tags based on document content
-- **Highlight extraction:** AI identifies the most important sentences in a document if you are time-pressed
-
-**Spaced repetition:** Highlights automatically queue into a daily review. Readwise's algorithm surfaces highlights at scientifically optimal intervals to move them into long-term memory — the same principle used by Anki flashcard learners.
-
-**Export:** Highlights and notes sync to Notion, Obsidian, Roam Research, Logseq, and Evernote. Every highlight becomes a potential note in your knowledge management system.
+Highlights feed into daily spaced-repetition reviews with multiple-choice quizzes, cloze deletions, and rating-based scheduling. Exports sync to Obsidian, Notion, Logseq, Evernote, and Readwise API for integration into personal knowledge systems. Offline access works across web, iOS, and Android apps.
 
 ## Who It's For
 
-- **Heavy readers** processing 10+ articles, newsletters, or papers per week who need an organized inbox
-- **Researchers and students** who highlight academic PDFs and need those highlights accessible later
-- **Knowledge workers** building a personal knowledge base in Obsidian, Notion, or Roam
-- **Podcast and YouTube consumers** who want searchable AI-generated transcripts
-- **Anyone who finishes books without remembering them** — the spaced repetition system directly addresses this
+- Heavy readers handling 10+ articles, newsletters, or documents weekly who need centralized organization
+- Researchers and students annotating academic PDFs with AI-assisted extraction and review
+- Knowledge workers linking reading highlights into Obsidian or Notion vaults
+- YouTube and podcast consumers seeking searchable transcripts and highlightable playback
+- Authors and professionals building second brains from scattered reading sources
+- Anyone struggling to remember book content after finishing
 
-Not a fit for: casual readers, anyone wanting a simple read-later app without the complexity, or teams (Reader is a solo tool).
+Not a fit for casual readers wanting basic save-for-later, teams needing shared libraries, or users avoiding subscriptions.
 
 ## Pricing
 
 | Plan | Price | Notes |
 |------|-------|-------|
-| Free trial | 60 days free | Full feature access |
-| Full | $7.99/month | Everything: Reader + Readwise highlight review |
+| Free trial | 30 days free | Full access to all features |
+| Reader + Readwise | $9.99/month | Everything included; annual $99/year |
+| Reader Lite | $4.99/month | Basic reading without spaced repetition |
 
-*Prices verified 2026-04-14. Annual billing available at ~$6.66/month. No free tier after trial — subscription required.*
-
-The pricing model is notable: $7.99/month covers both the Reader read-later app and the Readwise highlight review system. There is no stripped-down free plan after the trial ends.
+*Prices verified 2026-04-15. Annual billing discount available. No perpetual free tier after trial.*[Readwise pricing](https://readwise.io/pricing)
 
 ## Key Features
 
-- **Unified reading inbox:** articles, newsletters, PDFs, ebooks, and YouTube all in one place
-- **Text-to-speech:** listen to any saved content at variable speed; good for commutes
-- **Ghostreader AI:** ask questions about any document using GPT-4 under the hood
-- **Spaced repetition review:** daily highlight review queue with quiz and cloze deletion modes
-- **Highlight sync:** exports to Obsidian, Notion, Roam, Logseq, Readwise API
-- **Offline reading:** full offline support on iOS and Android
-- **RSS reader built in:** replace Feedly or Inoreader; subscribe to any feed directly in Reader
-- **Newsletter inbox:** subscribe newsletters directly to a @readwise.io email address
+- Unified inbox for articles, newsletters, PDFs, ebooks, YouTube, Twitter threads, podcasts
+- Ghostreader AI chat using Claude Opus 4.6 and GPT-5.4 for document Q&A and analysis
+- Spaced repetition reviews with quizzes, cloze tests, and algorithm-optimized intervals
+- Text-to-speech playback at up to 5x speed with highlight syncing
+- AI auto-tagging, summarization, and key quote extraction for any document
+- Bi-directional sync with Obsidian, Notion, Logseq, Evernote via plugins and API
+- RSS and newsletter forwarding to dedicated @readwise.io addresses
+- Full offline reading and annotation on iOS, Android, web apps
 
 ## Limitations
 
-- **No free tier after trial** — $7.99/month is required; the 60-day trial is generous but the pricing cliff is a hard stop for budget users
-- **AI features use credits** — Ghostreader queries consume credits; heavy AI users hit limits on the standard plan
-- **No team or collaboration features** — fully individual; no shared workspaces or reading groups
-- **Kindle sync requires workarounds** — Kindle highlights sync via the Kindle API but requires periodic manual re-authentication
-- **Mobile app polish lags desktop** — the web/desktop experience is superior; mobile is functional but not as refined
-- **No native book purchasing** — you must get ebooks from elsewhere and import them; Reader is not a bookstore
+- AI usage consumes query credits; heavy Ghostreader users may need to upgrade or wait for resets
+- No team workspaces or shared reading libraries; designed for individual use only
+- Kindle sync requires periodic re-authorization through Amazon API
+- Mobile apps functional but lack some web-exclusive AI preview features
+- No built-in ebook store; users import from Kindle, Apple Books, or other sources
 
 ## Bottom Line
 
-Readwise Reader is the best tool available for serious readers who want to actually retain what they consume. The value proposition is clear: $7.99/month for a read-later app, AI research assistant, highlight export, and memory system is exceptional. The AI summarization and Ghostreader features are genuinely useful, not tacked-on. The spaced repetition system is the most underrated feature in the PKM tool space — most people highlight things and never see them again; Readwise solves this. The no-free-tier policy is the only real friction point.
+Readwise Reader delivers unmatched integration of reading capture, AI processing with Claude Opus 4.6/GPT-5.4, and spaced repetition retention at $9.99/month. The system turns passive reading into active knowledge building better than fragmented alternatives like Pocket plus Anki. Spaced reviews ensure actual recall, addressing the common failure of highlight-only workflows.
 
 ## Best Alternatives
 
 | Tool | Best For | Price |
 |------|----------|-------|
-| [Obsidian](../tools/obsidian.md) | Building a linked knowledge base with full file portability | Free (core) |
-| [NotebookLM](../tools/notebooklm.md) | AI research assistant for specific documents | Free |
-| Pocket | Simple read-later without the PKM system | Free / $4.99/mo |
-| [Otter.ai](../tools/otter-ai.md) | Audio transcription focus rather than reading | Free tier / $16.99/mo |
+| [Obsidian](../tools/obsidian.md) | Local markdown knowledge graphs with plugin extensibility | Free |
+| [NotebookLM](../tools/notebooklm.md) | AI podcast/notebook generation from document uploads | Free |
+| [Pocket](../tools/pocket.md) | Simple article saving without retention systems | $4.99/mo |
 
 ## FAQ
 
-**Is Readwise Reader free?**
-Readwise offers a 60-day full-featured free trial, after which a subscription of $7.99/month is required. There is no ongoing free tier. The trial is long enough to evaluate the product thoroughly.
+**Does Readwise Reader have a free tier?**  
+A 30-day full-featured trial is available, after which $9.99/month subscription is required. No ongoing free plan exists.[Readwise pricing](https://readwise.io/pricing)
 
-**What is the difference between Readwise and Readwise Reader?**
-Readwise (the original product) is the spaced repetition highlight review system — it resurfaces your highlights from Kindle, articles, and other sources on a daily review schedule. Readwise Reader is the full reading app that includes the original Readwise system plus a read-later inbox, AI features, and newsletter support. The $7.99/month plan includes both.
+**What AI models power Ghostreader?**  
+Ghostreader uses Claude Opus 4.6 from Anthropic and GPT-5.4 from OpenAI, with automatic routing to the best model per query.[Readwise blog](https://readwise.io/blog)
 
-**Does Readwise work with Obsidian?**
-Yes. Readwise has a first-party Obsidian plugin that syncs all highlights and notes directly into your vault as Markdown files. New highlights appear in Obsidian automatically. This makes Readwise the standard bridge between reading and Obsidian-based PKM systems.
+**Can Readwise integrate with Obsidian?**  
+Yes, official Obsidian plugin creates daily highlight notes in your vault, with full bi-directional sync.[Obsidian plugin](https://github.com/readwiseio/obsidian-readwise)
 
 ## Sources
 
-- [Readwise pricing page](https://readwise.io/pricing) (verified 2026-04-14)
-- [Readwise Reader product page](https://readwise.io/read)
-- [Readwise Obsidian plugin](https://github.com/readwiseio/obsidian-readwise)
+- [Readwise official pricing](https://readwise.io/pricing) (verified 2026-04-15)
+- [Readwise Reader documentation](https://readwise.io/read)
+- [Readwise blog: Ghostreader AI updates](https://readwise.io/blog/ghostreader) (2026-03-12)

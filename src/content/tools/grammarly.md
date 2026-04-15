@@ -26,12 +26,7 @@ scores:
   value: 8
   moat: 8
   longevity: 9
-tags:
-  - ai-writing
-  - grammar-checker
-  - writing-assistant
-  - productivity
-  - chrome-extension
+tags: [ai-writing, grammar-checker, writing-assistant, productivity, chrome-extension]
 seo_title: 'Grammarly Review: Is Premium Worth It in 2026?'
 meta_description: >-
   Grammarly is the leading AI writing assistant for grammar, clarity, and tone.

@@ -4,9 +4,6 @@ slug: elevenlabs
 title: ElevenLabs
 tagline: The best AI voice generator and text-to-speech platform available today.
 category: ai-voice
-secondary_categories:
-  - ai-audio
-  - ai-avatar
 company: elevenlabs
 url: 'https://elevenlabs.io'
 pricing_model: freemium
@@ -27,15 +24,7 @@ scores:
   value: 8
   moat: 9
   longevity: 10
-tags:
-  - tts
-  - voice-cloning
-  - text-to-speech
-  - voice-ai
-  - audio
-  - dubbing
-  - voice-agents
-  - conversational-ai
+tags: [tts, voice-cloning, text-to-speech, voice-ai, audio, dubbing, voice-agents, conversational-ai]
 seo_title: 'ElevenLabs: Features, Pricing & Review (2026)'
 meta_description: >-
   ElevenLabs is the leading AI voice generator with v3 model, text-to-speech and voice

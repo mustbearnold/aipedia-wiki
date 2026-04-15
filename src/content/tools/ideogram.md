@@ -26,16 +26,7 @@ scores:
   value: 9
   moat: 7
   longevity: 7
-tags:
-  - ai-image
-  - image-generation
-  - text-to-image
-  - text-rendering
-  - logos
-  - thumbnails
-  - typography
-  - ideogram
-  - marketing
+tags: [ai-image, image-generation, text-to-image, text-rendering, logos, thumbnails, typography, ideogram, marketing]
 seo_title: 'Ideogram 2.0: Features, Pricing & Review (2026)'
 meta_description: >-
   Ideogram 2.0 is a freemium AI image generator starting at $0/mo that excels at

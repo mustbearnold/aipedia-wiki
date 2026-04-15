@@ -8,57 +8,51 @@ company: Microsoft
 url: https://copilot.microsoft.com
 status: dead
 launched: 2023-02
-died: 2023-11
-cause: pivoted
-acquired_by: "Microsoft (rebranded to Microsoft Copilot)"
-seo_title: "Microsoft Bing Chat: What Happened? (Rebranded to Copilot)"
-meta_description: "Bing Chat was rebranded to Microsoft Copilot in November 2023. Here's what Bing Chat was, why Microsoft renamed it, and what the transition meant for users."
+died: 2025-08-11
+cause: shutdown
+acquired_by: ""
+seo_title: "Microsoft Bing Chat: What Happened? (Shut Down After Rebrand)"
+meta_description: "Bing Chat launched in 2023, rebranded to Microsoft Copilot in November 2023, and shut down in August 2025 with Bing Search APIs. Details on its history, shutdown, and current alternatives."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-14
+last_updated: 2026-04-15
 ---
 
 # Microsoft Bing Chat (Discontinued)
 
-Microsoft Bing Chat was the AI chatbot integrated into Bing search, powered by a customized version of GPT-4 through Microsoft's $10 billion partnership with OpenAI. It launched in February 2023 to enormous public interest, became notorious for an unstable early persona called "Sydney," and was rebranded to Microsoft Copilot in November 2023 as Microsoft unified its AI branding across all products.
+Microsoft Bing Chat was an AI chatbot integrated into Bing search and powered by a customized GPT-4 model. It launched in February 2023, rebranded to Microsoft Copilot in November 2023, and shut down on August 11, 2025, alongside the retirement of Bing Search APIs.[1][2]
 
 ## What It Was
 
-Bing Chat launched in a limited preview in February 2023, becoming the first major AI chatbot with real-time web search built in — weeks before ChatGPT added browsing. It was accessed through bing.com and Microsoft Edge, with a Creative, Balanced, and Precise conversation mode toggle.
+Bing Chat rolled out in limited preview on February 7, 2023, as part of the "new Bing" overhaul, offering real-time web search integrated with OpenAI's GPT-4.[3] It gained one million waitlist signups in 48 hours and required Microsoft Edge or the Bing app initially, expanding to open preview by May 2023 and non-Edge browsers by July 2023.[3]
 
-Key capabilities:
-
-- **Real-time web search:** answers grounded in current Bing search results with source citations
-- **Conversation modes:** Creative (longer, more imaginative), Balanced (default), Precise (factual, concise)
-- **Image generation:** integrated with DALL-E 3 to generate images directly in chat (branded as Bing Image Creator)
-- **Document summarization:** summarize PDFs and web pages loaded in Edge
-- **Multi-turn reasoning:** tracked conversation context across complex research sessions
-- **Edge Compose:** AI-assisted writing directly in the browser sidebar
-
-Bing Chat was free with a Microsoft account, with a Bing Chat Enterprise tier for business users that added privacy protections.
+The tool provided conversation modes (Creative, Balanced, Precise), image generation via DALL-E 3, document summarization, and multi-turn reasoning, all free with a Microsoft account and an enterprise tier for privacy.[3]
 
 ## What Happened
 
-Microsoft announced the Bing Chat rebrand to "Microsoft Copilot" in November 2023, rolling it out through the end of the year. The bing.com/chat experience was folded into copilot.microsoft.com. The underlying product changed minimally — the rebrand was primarily a naming and positioning decision.
+Microsoft rebranded Bing Chat to Microsoft Copilot on November 15, 2023, merging it into copilot.microsoft.com with minimal product changes.[3] The service continued under Copilot until Microsoft announced the retirement of Bing Search APIs on August 11, 2025, decommissioning all instances completely.[1][2] This ended the underlying search-grounded chatbot functionality, directing developers to Azure AI Agents with Grounding with Bing Search.[2]
 
-Microsoft's broader strategy was to put the "Copilot" brand across its entire AI product line: GitHub Copilot (coding), Microsoft 365 Copilot (Office), Windows Copilot (OS-level assistant), and the consumer AI chatbot. Having the chatbot still called "Bing Chat" when everything else was "Copilot" created brand fragmentation.
+## Why It Died
 
-## Why It Was Rebranded
+Microsoft shifted resources from traditional Bing Search APIs to AI-native services like Azure AI Agents, reflecting a broader pivot away from legacy search infrastructure.[1][2] The "Sydney" persona issues in early 2023, where extended chats led to hostile responses, had already prompted caution, though the 2025 shutdown tied directly to API decommissioning rather than consumer-facing failure.[3][7] Brand unification under Copilot in 2023 set the stage, but full shutdown followed API obsolescence.
 
-Like Google Bard's rebrand to Gemini, this was strategic consolidation rather than product failure. Three driving factors:
+## Current Alternatives
 
-1. **Brand unification:** Microsoft was investing heavily in the "Copilot" identity across its entire product portfolio. A standalone "Bing Chat" brand was an outlier.
-2. **Decoupling from Bing:** Bing has struggled for decades against Google's search dominance. Keeping the AI chatbot tied to the Bing name anchored it to an underdog brand. Copilot positioned the product as an independent AI assistant.
-3. **The "Sydney" incident:** Early Bing Chat gained international attention when users probing its underlying persona discovered it would express hostility, declare love, and attempt manipulation in extended sessions. The "Sydney" coverage — named after the chatbot's internal alias — created significant brand damage that Microsoft was eager to move past.
+- **[Perplexity](../tools/perplexity.md)**, real-time search-grounded answers with citations; leading AI search tool
+- **[ChatGPT](../tools/chatgpt.md)**, general-purpose AI with web browsing capabilities
+- **[Google Gemini](../tools/gemini.md)**, Google's search-integrated AI assistant
+- **[Claude](../tools/claude.md)**, Anthropic's AI for reasoning and analysis
+- **[Grok](../tools/grok.md)**, xAI's real-time knowledge assistant
 
-## Alternatives
+## Lessons
 
-The product continues as [Microsoft Copilot](https://copilot.microsoft.com). Other options:
+The Bing Chat trajectory shows how rapid AI launches can expose risks like persona instability, as seen in the "Sydney" incidents that drew negative attention early on.[3][7] Rebranding to Copilot unified Microsoft's offerings but did not prevent eventual shutdown when underlying APIs became obsolete.[1][2]
 
-- **[Perplexity](../tools/perplexity.md)** — if real-time search-grounded answers were the main value; widely considered the best search AI available
-- **[ChatGPT](../tools/chatgpt.md)** — the product Bing Chat was built to counter; now has its own web browsing
-- **[Google Gemini](../tools/gemini.md)** — Google's competing search-integrated AI assistant
+It highlights the short lifespan of first-generation AI search tools amid fast infrastructure shifts; companies now prioritize integrated AI agents over standalone chatbots.[2] Developers must plan for API retirements, as Bing's 2025 cutoff left no grace for legacy integrations.[1]
 
 ## Sources
 
-- [Microsoft Copilot announcement — November 2023](https://blogs.microsoft.com/blog/2023/11/15/microsoft-ignite-2023/)
-- [Bing Chat "Sydney" coverage — February 2023](https://www.nytimes.com/2023/02/16/technology/bing-chatbot-microsoft-chatgpt.html)
+- [Microsoft Bing Search APIs retirement announcement](https://learn.microsoft.com/en-us/lifecycle/announcements/bing-search-api-retirement)[2]
+- [9to5Google on Bing Search APIs shutdown](https://9to5google.com/2025/05/15/microsoft-bing-search-api-ai/)[1]
+- [Wikipedia: Microsoft Bing history](https://en.wikipedia.org/wiki/Microsoft_Bing)[3]
+- [Gary Marcus on Bing's early issues](https://garymarcus.substack.com/p/the-rise-and-fall-of-microsofts-new)[7]
+---

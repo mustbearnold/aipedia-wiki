@@ -2,19 +2,19 @@
 type: tool
 slug: bolt
 title: Bolt.new
-tagline: In-browser full-stack AI app builder powered by WebContainers — no local setup, no installs, just describe and build.
+tagline: In-browser full-stack AI app builder powered by WebContainers, no local setup, no installs, just describe and build.
 category: ai-design
 company: stackblitz
 url: https://bolt.new
 pricing_model: freemium
-price_range: "$0-$55/month"
+price_range: "$0-$60/month"
 status: active
 launched: 2024-10
-last_updated: 2026-04-13
-last_verified: 2026-04-13
+last_updated: 2026-04-15
+last_verified: 2026-04-15
 update_frequency: monthly
 seo_title: "Bolt.new: Features, Pricing & Review (2026)"
-meta_description: "Bolt.new is an in-browser AI app builder by StackBlitz using WebContainers. Free tier available; Pro costs $20/mo. Build full-stack apps with zero local setup required."
+meta_description: "Bolt.new is an in-browser AI app builder by StackBlitz using WebContainers. Free tier available; Pro costs $25/mo. Build full-stack apps with zero local setup required."
 author: "aipedia.wiki Editorial"
 affiliate:
   has_program: false
@@ -29,16 +29,18 @@ scores:
   longevity: 7
 tags: [app-builder, no-code, full-stack, webcontainers, browser-ide, prototyping, vibe-coding, ai-design]
 quick_answer: >-
-  Bolt.new is an in-browser full-stack app builder by StackBlitz that uses patented WebContainers technology to run Node.js entirely in WebAssembly, producing a running application from a natural language description with zero local installation required. Pro costs $20/month for 10M tokens and advanced model access including GPT-5.4 and Claude Opus 4.6. Best for developers and learners who need instant browser-based prototyping on any machine including Chromebooks; not the right fit when your app needs a built-in backend or database, where Lovable's Supabase integration is the stronger choice.
+  Bolt.new is an in-browser full-stack app builder by StackBlitz that uses WebContainers technology to run Node.js entirely in WebAssembly, producing a running application from a natural language description with zero local installation required. Pro costs $25/month for 15M tokens and advanced model access including GPT-5.4, Claude Opus 4.6, and Gemini 3.1 Pro. Best for developers and learners who need instant browser-based prototyping on any machine including Chromebooks; not the right fit when your app needs a built-in backend or database, where Lovable's Supabase integration is the stronger choice.
 ---
 
 # Bolt.new
 
-Bolt.new is an in-browser AI app builder developed by StackBlitz. It generates full-stack web applications from natural language descriptions using WebContainers technology that runs Node.js entirely in the browser, and is primarily used for rapid prototyping without local setup. Its key differentiator is the patented WebContainers runtime that eliminates all installation and environment configuration. As of April 2026, Bolt.new offers a free tier and Pro at $20/month. Lovable provides similar app-building capabilities with built-in Supabase backend, but Bolt.new has zero-friction browser-based development.
+Bolt.new is an in-browser AI app builder developed by StackBlitz. It generates full-stack web applications from natural language descriptions using WebContainers technology that runs Node.js entirely in the browser, and is primarily used for rapid prototyping without local setup. As of April 2026, Bolt.new offers a free tier and Pro at $25/month ([Bolt.new](https://bolt.new)). Lovable provides similar app-building capabilities with built-in Supabase backend, but Bolt.new has zero-friction browser-based development.
 
 ## What It Does
 
-Bolt.new is StackBlitz's AI-powered app builder that generates full-stack web applications from natural language descriptions, running entirely in the browser using patented WebContainers technology that executes Node.js in WebAssembly with zero local installation, offering a free tier and Pro at $20/month with advanced model selection ([Bolt.new](https://bolt.new)). You describe what you want to build in natural language, and Bolt generates a full-stack application — frontend, backend, and package management — all executing in your browser tab without any local installation. It can install npm packages, run Node.js servers, and deploy to production. The key differentiator from competitors like Lovable is that everything runs client-side in the browser via WebContainers, StackBlitz's patented technology for running Node.js in WebAssembly. This means zero setup friction and instant previews ([StackBlitz Blog](https://blog.stackblitz.com/)).
+Bolt.new is StackBlitz's AI-powered app builder that generates full-stack web applications from natural language descriptions, running entirely in the browser using WebContainers technology that executes Node.js in WebAssembly with zero local installation ([Bolt.new](https://bolt.new)). You describe what you want to build in natural language, and Bolt generates a full-stack application; frontend, backend, and package management; all executing in your browser tab without any local installation. It can install npm packages, run Node.js servers, and deploy to production.
+
+The key differentiator from competitors like Lovable is that everything runs client-side in the browser via WebContainers, StackBlitz's technology for running Node.js in WebAssembly. This means zero setup friction and instant previews. Recent updates include support for GPT-5.4, Claude Opus 4.6, and Gemini 3.1 Pro models, with improved token efficiency for complex generations ([StackBlitz Blog](https://blog.stackblitz.com/posts/bolt-new-updates-april-2026/)).
 
 ## Who It's For
 
@@ -52,21 +54,21 @@ Bolt.new is StackBlitz's AI-powered app builder that generates full-stack web ap
 
 | Plan | Price | Key Limits |
 |------|-------|-----------|
-| Free | $0/month | Limited tokens/day, basic models, community support |
-| Pro | $20/month | 10M tokens/month, advanced models (GPT-5.4, Claude Opus 4.6), unlimited projects |
-| Pro+ | $40/month | 26M tokens/month, priority access, all models |
-| Teams | $55/user/month | Shared workspaces, team management, enhanced limits |
+| Free | $0/month | 1M tokens/day, GPT-5.4 access, community support |
+| Pro | $25/month | 15M tokens/month, Claude Opus 4.6 + Gemini 3.1 Pro, unlimited projects |
+| Pro+ | $50/month | 40M tokens/month, priority queue, all models |
+| Teams | $60/user/month | Shared workspaces, admin tools, 50M tokens/user |
 
-*Prices verified 2026-04-13.*
+*Prices verified 2026-04-15.*
 
 ## Key Features
 
 - **WebContainers:** Full Node.js runtime in the browser via WebAssembly; no server needed, no local setup required
 - **Zero-install development:** Start building immediately in any browser; works on Chromebooks, tablets, and restricted machines
-- **Multi-model support:** Choose between GPT-5.4, Claude Opus 4.6, Gemini 3.1 Pro, and other models depending on the task
+- **Multi-model support:** GPT-5.4, Claude Opus 4.6, Gemini 3.1 Pro; select per project
 - **Live preview:** See your app running in real time as the AI generates and modifies code
 - **Full package ecosystem:** Install any npm package directly in the browser environment
-- **Deploy anywhere:** One-click deployment to Netlify, Vercel, or other hosting providers
+- **Deploy anywhere:** One-click deployment to Netlify, Vercel, Cloudflare Pages
 - **File system access:** Full file tree visible and editable; switch between AI generation and manual coding freely
 - **Version snapshots:** Revert to previous states if the AI breaks something during iteration
 
@@ -77,17 +79,15 @@ Bolt.new is StackBlitz's AI-powered app builder that generates full-stack web ap
 - **Token limits matter:** Each AI interaction consumes tokens; complex apps can exhaust monthly allocation quickly
 - **Framework constraints:** Best with React, Next.js, and Vite-based projects; other frameworks have limited support
 - **Not for production-scale apps:** Development environment is great for prototypes and MVPs, but production apps should be moved to proper infrastructure
-- **Limited offline capability:** Browser-based means you need an internet connection (though WebContainers themselves can work offline for some tasks)
-- **No mobile app building:** Web apps only; no React Native or Flutter support
 
 ## Bottom Line
 
-Bolt.new is the best choice for developers and learners who need instant browser-based prototyping with zero local setup, using StackBlitz's patented WebContainers to run Node.js entirely in WebAssembly with full npm package support and one-click deployment to Netlify or Vercel, but Lovable wins if you need built-in backend, database, and authentication out of the box ([Bolt.new](https://bolt.new)). The WebContainers technology is a genuine technical moat that competitors cannot easily replicate. Open a browser tab, describe what you want, and you have a running app in minutes. No terminal, no npm install, no environment configuration. For rapid prototyping and learning, it is excellent. The limitation is that it is a prototyping environment, not a production development platform. At $20/month for Pro, it is reasonably priced for what it delivers.
+Bolt.new is the best choice for developers and learners who need instant browser-based prototyping with zero local setup, using StackBlitz's WebContainers to run Node.js entirely in WebAssembly with full npm package support and one-click deployment to Netlify or Vercel, but Lovable wins if you need built-in backend, database, and authentication out of the box ([Bolt.new](https://bolt.new)). The WebContainers technology is a genuine technical moat that competitors cannot easily replicate. At $25/month for Pro, it is reasonably priced for what it delivers.
 
 ## Best Alternatives
 
 - [Lovable](lovable.md): Similar concept with built-in Supabase backend, auth, and database; better for apps needing a backend
-- [Replit](../categories/ai-design.md): Full cloud IDE with AI assistance, more developer-oriented
+- [Replit](replit.md): Full cloud IDE with AI assistance, more developer-oriented
 - [Cursor](cursor.md): If you want AI coding with a full local development environment
 
 ## FAQ
@@ -109,3 +109,5 @@ Bolt.new works best with React, Next.js, and Vite-based projects. Other framewor
 ## Related
 
 - **Category:** [AI Design](../categories/ai-design.md)
+
+---

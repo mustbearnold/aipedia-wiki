@@ -5,13 +5,13 @@ title: Intercom
 tagline: AI-first customer support platform with Fin AI Agent that automatically resolves 50%+ of support tickets.
 category: ai-automation
 company: Intercom Inc.
-url: https://intercom.com
+url: https://www.intercom.com
 pricing_model: paid
-price_range: "$39-$139/seat/month"
+price_range: "$74-$163/seat/month"
 status: active
 launched: 2011-08
-last_updated: 2026-04-13
-last_verified: 2026-04-13
+last_updated: 2026-04-15
+last_verified: 2026-04-15
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -29,85 +29,87 @@ seo_title: "Intercom Review 2026: Pricing, Fin AI Agent & Honest Assessment"
 meta_description: "Intercom's Fin AI Agent resolves 50%+ of support tickets automatically. See real pricing, how Fin works, and how Intercom compares to Zendesk in 2026."
 author: "aipedia.wiki Editorial"
 quick_answer: >-
-  Intercom is an AI-first customer support platform built by Intercom Inc. that unifies live chat, email, help center, and proactive in-app messaging, with its Fin AI Agent using GPT-4 trained on your knowledge base to automatically resolve 50-plus percent of incoming support tickets without human involvement. That resolution rate is the concrete number that justifies the cost: a 5-person support team paying $495/month on the Advanced plan can eliminate a meaningful fraction of manual ticket handling. Seat-based pricing runs $39 to $139 per seat per month, with Fin resolution fees at $0.99 each on the entry-tier Essential plan. Best for SaaS companies with real support volume that want AI resolution plus live chat plus help center in one platform; Zendesk is the stronger choice for large enterprise operations built around ticket-based workflows rather than conversational support.
+  Intercom is an AI-first customer support platform built by Intercom Inc. that unifies live chat, email, help center, and proactive in-app messaging, with its Fin AI Agent using Claude Opus 4.6 trained on your knowledge base to automatically resolve 50-plus percent of incoming support tickets without human involvement. That resolution rate is the concrete number that justifies the cost: a 5-person support team paying $815/month on the Advanced plan can eliminate a meaningful fraction of manual ticket handling. Seat-based pricing runs $74 to $163 per seat per month, with Fin resolution fees at $0.99 each on the entry-tier Essential plan. Best for SaaS companies with real support volume that want AI resolution plus live chat plus help center in one platform; Zendesk is the stronger choice for large enterprise operations built around ticket-based workflows rather than conversational support.
 ---
 
 # Intercom
 
-Intercom is an AI-first customer support platform that has built one of the most capable AI support agents on the market. Its Fin AI Agent uses GPT-4 combined with your knowledge base to resolve customer queries automatically — no human routing required for the majority of common support issues. Beyond the AI, Intercom unifies live chat, email, help center, and proactive messaging in a single platform with full customer context in every conversation.
+Intercom is an AI-first customer support platform that handles customer interactions across channels with its Fin AI Agent. Fin uses Claude Opus 4.6 combined with your knowledge base to resolve queries automatically for common issues [https://www.intercom.com/fin](https://www.intercom.com/fin). The platform combines live chat, email support, help center, and proactive messaging, providing customer context in all conversations.
 
 ## What It Does
 
-Intercom sits between your product and your customers, handling support across every channel. When a customer sends a message, Fin AI Agent attempts to resolve it first using your help articles, product documentation, and configured answer flows. If it can't resolve the issue, it routes to a human agent with full context — conversation history, customer data, and a summary. Human agents get AI assistance inside the inbox: conversation summaries, suggested replies, and auto-tagging. The platform also enables proactive support — sending targeted messages to users based on their behavior before they even need to ask.
+Intercom manages support between your product and customers across multiple channels. When a message arrives, Fin AI Agent checks the query against your help articles, documentation, and answer flows to provide a response. If resolution fails, the conversation routes to a human agent with history, customer data, and a summary.
+
+Human agents work in a unified inbox with AI tools for summaries, reply suggestions, and tagging. The platform supports proactive outreach by sending messages based on user actions, such as onboarding issues or usage limits. A built-in help center serves as the main source for Fin, with search and analytics.
+
+Customer data from your systems appears in conversations, showing plan details, usage, and history. This setup reduces manual work for routine queries while keeping complex ones with agents.
 
 ## Who It's For
 
-- SaaS companies with support volume too high to handle fully manually
-- Customer success teams that need live chat + email + help center in one platform
-- Product teams that want behavioral messaging and in-app support combined
-- Support managers who need detailed analytics on resolution rates, response times, and CSAT
-- Companies evaluating Zendesk alternatives with stronger AI capabilities
+- SaaS companies handling high support volume manually
+- Customer success teams needing chat, email, help center in one place
+- Product teams using behavioral messaging and in-app support
+- Support managers tracking resolution rates, response times, CSAT
+- Teams switching from Zendesk seeking better AI for conversational support
 
 ## Pricing
 
 | Plan | Price | Key Features |
 |------|-------|--------------|
-| Essential | $39/seat/mo | Live chat, email, help center, basic automation |
-| Advanced | $99/seat/mo | AI inbox features, workflow automation, reporting |
-| Expert | $139/seat/mo | Workload management, SLA management, SSO, advanced security |
+| Essential | $74/seat/mo | Live chat, email, help center, basic automation, Fin at $0.99/resolution |
+| Advanced | $163/seat/mo | AI inbox tools, workflows, reporting, Fin included |
+| Expert | Contact sales | Workload management, SLAs, SSO, advanced security, Fin included |
 
-**Fin AI Agent add-on:** $0.99 per resolution on Essential; included in higher tier plans (confirm at contract stage). A "resolution" is counted when Fin answers a query without human intervention and the customer confirms the answer helped or closes the conversation.
-
-**Verification note:** Pricing confirmed April 2026 via intercom.com/pricing. Per-seat pricing applies to human support agents. Fin AI Agent resolutions are priced separately on lower tiers. Annual billing provides discount.
+**Prices verified 2026-04-15** via [https://www.intercom.com/pricing](https://www.intercom.com/pricing). Per-seat pricing covers human agents, billed annually with discounts. Fin resolutions cost $0.99 each on Essential; included on Advanced and above. Enterprise plans offer custom pricing.
 
 ## Key Features
 
-- **Fin AI Agent** — trained on GPT-4 with your knowledge base, resolves 50%+ of tickets automatically with no human needed; handles multi-step queries and follows custom answer guidelines
-- **Unified inbox** — live chat, email, and social messages in a single queue with full customer context from your CRM and product database
-- **AI inbox assistance** — auto-summarizes long conversations, suggests replies to human agents, auto-tags conversations for reporting
-- **Customer Data Platform** — connects to your product database to show customer plan, usage, health score, and history in every conversation
-- **Proactive support messaging** — trigger in-app messages or emails based on user behavior (e.g., struggling with onboarding step, approaching plan limits)
-- **Help Center** — fully hosted knowledge base that Fin uses as its primary answer source; integrated search and article analytics included
+- **Fin AI Agent**, uses Claude Opus 4.6 with your knowledge base; resolves 50%+ of tickets automatically; manages multi-step queries with custom guidelines [https://www.intercom.com/fin](https://www.intercom.com/fin)
+- **Unified inbox**, combines chat, email, social in one queue with CRM and product data context
+- **AI inbox tools**, summarizes conversations, suggests replies, auto-tags for reports
+- **Customer Data Platform**, displays plan, usage, health score, history in chats
+- **Proactive messaging**, sends in-app or email alerts based on user behavior
+- **Help Center**, hosted knowledge base for Fin; includes search, article analytics
+- **Analytics**, tracks resolution rates, response times, CSAT scores
+- **Integrations**, connects to Salesforce, HubSpot, product analytics tools
 
 ## Limitations
 
-- **Per-seat pricing is expensive:** At $39-$139/seat/mo, a 10-person support team pays $390-$1,390/mo before Fin resolution fees. Costs scale sharply with team size.
-- **Fin quality depends on knowledge base quality:** If your help articles are outdated, incomplete, or poorly written, Fin will give bad answers. Garbage in, garbage out.
-- **Full AI features require Advanced/Expert:** Many of the most valuable AI capabilities — AI inbox, advanced workflows, workload management — are locked to $99+ plans.
-- **Setup complexity for custom Fin workflows:** Configuring Fin for nuanced, product-specific queries requires careful knowledge base curation and custom answer flows, which takes time.
-- **Overkill for simple support needs:** If you only need a FAQ chatbot, Intercom is over-engineered and overpriced. A lighter tool (Crisp, Tidio) handles basic use cases for less.
+- **High per-seat costs:** $74-$163/seat/mo means a 10-person team pays $740-$1,630/mo before add-ons; scales with team size.
+- **Fin performance tied to content quality:** Poor or outdated help articles lead to inaccurate responses.
+- **Advanced AI on higher plans:** Key tools like AI inbox and workflows start at $163/seat/mo.
+- **Setup time for Fin:** Custom flows for product-specific queries need detailed knowledge base work.
+- **Not ideal for low volume:** Overbuilt for basic FAQ needs; simpler tools cost less.
 
 ## Bottom Line
 
-Intercom is the strongest AI-first support platform available in 2026. If you're a SaaS company with meaningful support volume, Fin AI Agent alone often justifies the cost — resolving 50%+ of tickets automatically pays for the platform quickly when human agent time is accounted for. The tradeoff is price: per-seat costs plus Fin resolution fees add up fast for large teams, and the full feature set requires Advanced or Expert plans. For companies that need live chat + email + AI + help center + proactive messaging in one platform, Intercom is the default choice. For simple or low-volume support needs, cheaper alternatives serve better.
+Intercom handles AI-driven support well in 2026, with Fin resolving over 50% of tickets to cut agent time. The platform suits SaaS teams needing integrated chat, AI, and messaging, though per-seat pricing adds up for large groups. Smaller operations may find cheaper options sufficient.
 
 ## Best Alternatives
 
-- **Zendesk** — larger enterprise feature set, more customizable, slower AI adoption, complex pricing
-- **Freshdesk** — cheaper, weaker AI, better for high-volume ticket-based support (not chat-first)
-- **Crisp** — affordable live chat + basic chatbot, missing the depth of Fin and CDP
-- **Tidio** — e-commerce focused, strong Lyro AI bot, much cheaper at small scale
-- **Help Scout** — email-first, strong shared inbox, weaker AI, better for SMB/agency use
+- **[Zendesk](/tools/zendesk)**, ticket-focused for enterprises; deeper workflows, slower AI
+- **[Freshdesk](/tools/freshdesk)**, lower cost for ticket volume; basic AI
+- **[Help Scout](/tools/help-scout)**, email-first shared inbox; lighter AI for SMBs
 
 ## FAQ
 
-**What is Intercom Fin?**
-Fin is Intercom's AI support agent, powered by GPT-4 and trained on your company's help center content, product documentation, and any additional answer guidelines you configure. When a customer sends a support message, Fin reads the query and attempts to answer it using your knowledge base — without human involvement. According to Intercom's published data, most customers see Fin resolve 40-60% of incoming queries automatically. Fin handles multi-part questions, knows when to escalate to a human, and provides answers with source citations so customers can read more. The quality ceiling is your knowledge base: Fin is only as good as the content it's trained on.
+**What is Intercom Fin?**  
+Fin is Intercom's AI agent powered by Claude Opus 4.6, trained on your help center, docs, and guidelines. It answers queries automatically, cites sources, escalates when needed. Customers report 40-60% auto-resolution rates, limited by content quality [https://www.intercom.com/fin](https://www.intercom.com/fin).
 
-**How much does Intercom cost?**
-Intercom's per-seat plans run $39/seat/mo (Essential), $99/seat/mo (Advanced), and $139/seat/mo (Expert), billed annually. On top of this, Fin AI Agent resolutions cost $0.99 each on the Essential plan — this fee is included in higher tiers. For a 5-person support team on Advanced, that's $495/mo before any Fin resolution fees. Enterprise pricing is available for larger organizations with volume discounts. The total cost of ownership is often higher than competitors, but teams that account for the reduction in human agent time from Fin's resolution rate frequently find the economics work.
+**How much does Intercom cost?**  
+Plans start at $74/seat/mo (Essential) to $163/seat/mo (Advanced), annual billing. Fin costs $0.99/resolution on Essential, included higher up. A 5-person Advanced team pays $815/mo. Enterprise custom [https://www.intercom.com/pricing](https://www.intercom.com/pricing).
 
-**How does Intercom compare to Zendesk?**
-Intercom is chat-first and AI-native; Zendesk is ticket-first with AI capabilities added on. Intercom's Fin AI Agent is generally considered more capable out of the box than Zendesk's AI offerings, and the messenger + in-app chat experience is significantly better. Zendesk has deeper customization, a larger app marketplace, and stronger enterprise workflow features for high-volume ticket-based support. Intercom is the better choice for SaaS and product-led companies that prioritize conversational support and AI resolution rates. Zendesk is the better choice for complex enterprise support operations with detailed SLA management needs and large legacy integrations.
+**Intercom vs Zendesk?**  
+Intercom focuses on chat and AI resolution; Zendesk on tickets and enterprise customization. Fin outperforms Zendesk AI for conversational support; Zendesk better for SLAs and integrations in large ops.
 
 ## Related
 
-- [Zendesk](/tools/zendesk) — enterprise alternative, ticket-first support platform
-- [Freshdesk](/tools/freshdesk) — budget-friendly alternative for high-volume ticket support
-- [Tidio](/tools/tidio) — lightweight live chat with AI bot for SMB and e-commerce
+- [Zendesk](/tools/zendesk), enterprise ticket platform
+- [Freshdesk](/tools/freshdesk), ticket support for volume
+- [Tidio](/tools/tidio), chat with AI for SMB/ecom
 
 ## Sources
 
-- Intercom pricing page (verified 2026-04-13): https://intercom.com/pricing
-- Intercom Fin AI Agent documentation: https://intercom.com/fin
-- G2 Intercom reviews, 2026 data
+- [Intercom pricing (2026-04-15)](https://www.intercom.com/pricing)
+- [Intercom Fin docs](https://www.intercom.com/fin)
+- [G2 Intercom reviews, Q1 2026](https://www.g2.com/products/intercom/reviews)

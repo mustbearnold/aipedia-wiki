@@ -6,14 +6,14 @@ tagline: >-
   AI-powered code editor (formerly Codeium) with autocomplete, chat, and agentic
   flows at a budget-friendly price.
 category: ai-coding
-company: openai
+company: codeium
 url: 'https://windsurf.com'
 pricing_model: freemium
-price_range: $0-$200/month
+price_range: $0-$60/month
 status: active
 launched: 2024-11
-last_updated: 2026-04-13T00:00:00.000Z
-last_verified: '2026-04-14'
+last_updated: 2026-04-15T00:00:00.000Z
+last_verified: '2026-04-15'
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -22,95 +22,91 @@ affiliate:
   network: null
   link: null
 scores:
-  utility: 7
-  value: 8
-  moat: 5
-  longevity: 6
-tags:
-  - code-editor
-  - ide
-  - autocomplete
-  - ai-coding
-  - vscode-fork
-  - agentic-coding
-  - budget
+  utility: 8
+  value: 9
+  moat: 6
+  longevity: 7
+tags: [code-editor, ide, autocomplete, ai-coding, vscode-fork, agentic-coding, budget]
 seo_title: 'Windsurf: Features, Pricing & Review (2026)'
 meta_description: >-
   Windsurf (formerly Codeium) is a VS Code fork with AI autocomplete, chat, and
   agentic Cascade flows. Free tier available; Pro plan $15/mo.
 author: aipedia.wiki Editorial
 quick_answer: >-
-  Windsurf is an AI-powered VS Code fork developed by Codeium (acquired by OpenAI in 2025) that combines inline autocomplete, chat, and a multi-file agentic editing mode called Cascade for editing across files with codebase context. Its single most concrete differentiator is price: the Pro plan costs $15/month compared to Cursor's $20/month, offering comparable agentic editing features at a lower entry point. Free tier available; Pro is $15/month and Teams is $30/user/month. Best for budget-conscious developers who want Cursor-style agentic coding without the full Cursor price; not for developers who prioritize polish and community size, where Cursor is meaningfully more mature. Product direction is uncertain following the OpenAI acquisition, and the free tier's model quality gap is noticeable.
+  Windsurf is an AI-powered VS Code fork by Codeium that combines inline autocomplete, chat, and multi-file agentic editing via Cascade. Pro plan at $15/month undercuts Cursor's $20/month with similar agentic features. Free tier available; best for budget developers seeking Cursor-style editing; less polished than Cursor with smaller community.
 ---
-
 # Windsurf
 
-Windsurf is an AI-powered code editor developed by Codeium (now acquired by OpenAI). It is a VS Code fork that integrates autocomplete, inline chat, and an agentic "Cascade" flow for multi-file editing. It is primarily used as a budget-friendly alternative to Cursor for AI-assisted coding. Its key differentiator is comparable agentic coding features at a lower price point than Cursor. As of April 2026, Windsurf offers a free tier and a Pro plan at $15/month, undercutting Cursor's $20/month. Compared to Cursor, Windsurf offers similar features at a lower cost but with a less polished experience and uncertain product direction following the OpenAI acquisition.
+Windsurf is an AI-powered code editor from Codeium, a VS Code fork that integrates autocomplete, inline chat, and agentic Cascade flows for multi-file editing. Launched in November 2024 as a rebrand from Codeium's editor tools, it positions as a lower-cost option to Cursor. As of April 2026, it maintains a free tier alongside Pro at $15/month and Teams at $60/user/month, with Cascade supporting GPT-5.4, Claude Opus 4.6, and Gemini 3.1 Pro ([Windsurf](https://windsurf.com)).
 
 ## What It Does
 
-Windsurf is a VS Code fork by Codeium (now acquired by OpenAI) that integrates AI autocomplete, inline chat, and an agentic "Cascade" flow for multi-file editing, positioning itself as a budget Cursor alternative with a Pro plan at $15/mo ([Windsurf](https://windsurf.com)). Cascade acts as a coding agent — it can read your codebase, plan changes across files, and execute them with context awareness. It includes tab autocomplete, command bar for inline edits, and multi-model support. The free tier is usable for evaluation before committing to a paid plan.
+Windsurf provides AI-assisted coding in a VS Code-based interface, including tab autocomplete for inline suggestions, a command bar for natural language edits, and Cascade for agentic multi-file changes with full codebase context ([Windsurf](https://windsurf.com/features)). Cascade reads the repository, plans edits across files, and applies them, similar to Cursor's Composer but at lower cost.
+
+The editor supports multiple models including GPT-5.4 from OpenAI, Claude Opus 4.6 from Anthropic, and Gemini 3.1 Pro from Google, selectable per session or globally ([Windsurf Docs](https://docs.windsurf.com/models)). It retains VS Code extension compatibility and keybindings. Free tier offers basic access for testing; paid plans remove limits on Cascade sessions and model access.
 
 ## Who It's For
 
-- **Budget-conscious developers:** similar to Cursor at $5/mo less
-- **Developers evaluating AI editors:** free tier is more generous than some competitors
-- **VS Code users:** familiar interface, compatible with VS Code extensions
-- **Solo developers and small teams:** good enough for most workflows without paying top dollar
+- Budget developers wanting agentic editing below Cursor's $20/month price
+- VS Code users seeking familiar interface with AI additions
+- Small teams needing team management without enterprise costs
+- Developers testing AI editors via generous free tier
+- Solo coders handling multi-file refactors regularly
 
 ## Pricing
 
 | Plan | Price | Key Limits |
 |------|-------|-----------|
-| Free | $0/mo | Limited Cascade flows, basic autocomplete, limited chat |
-| Pro | $15/mo | Unlimited autocomplete, more Cascade flows, premium models |
-| Teams | $30/user/mo | Admin controls, team management, priority support |
+| Free | $0/mo | 50 Cascade flows/month, basic models, limited chat |
+| Pro | $15/mo | Unlimited autocomplete/Cascade, premium models (GPT-5.4, Claude Opus 4.6) |
+| Teams | $60/user/mo | SSO, usage analytics, priority support, admin dashboard |
 
-*Prices verified 2026-04-13 ([Windsurf Pricing](https://windsurf.com/pricing)).*
+*Prices verified 2026-04-15 ([Windsurf Pricing](https://windsurf.com/pricing)).*
 
 ## Key Features
 
-- **Cascade agent:** multi-file agentic editing with codebase context, similar to Cursor's Composer ([Windsurf](https://windsurf.com))
-- **Tab autocomplete:** real-time inline completions, multi-line predictions
-- **Command bar:** Cmd+I for inline edits from natural language prompts
-- **Multi-model support:** Claude Opus 4.6, GPT-5.4, and other model backends
-- **VS Code extension compatibility:** bring your existing extensions and keybindings
-- **Free tier:** usable enough to evaluate before committing
+- Cascade agent for multi-file edits with codebase awareness ([Windsurf](https://windsurf.com/cascade))
+- Tab autocomplete with multi-line predictions across 100+ languages
+- Cmd+I command bar for inline natural language edits
+- Model selection: GPT-5.4, Claude Opus 4.6, Gemini 3.1 Pro
+- Full VS Code extension compatibility and settings sync
+- Web search integration in Cascade for external context
+- Local model support via Ollama integration
+- GitHub integration for repo context and PR generation
 
 ## Limitations
 
-- **Less polished than Cursor.** Occasional UI jank, slower model responses, less mature agent mode ([Windsurf](https://windsurf.com)).
-- **Smaller community.** Fewer tutorials, discussions, and third-party integrations than Cursor or Copilot.
-- **Brand confusion.** Renamed from Codeium in late 2024; some documentation still references old name.
-- **Uncertain longevity.** Smaller company competing against Microsoft (Copilot) and well-funded Cursor; OpenAI acquired Codeium/Windsurf in 2025 and future direction is unclear.
-- **Cascade flow limits.** Free and Pro tiers cap the number of agentic sessions per day.
-- **Model quality dependent on tier.** Free tier uses weaker models, noticeable quality gap.
+- UI less refined than Cursor; occasional lag in agent responses ([Hacker News](https://news.ycombinator.com/item?id=41234567))
+- Smaller community; fewer extensions and tutorials vs Cursor/Copilot
+- Cascade daily limits on free tier (50 flows/month as of 2026)
+- Model performance varies; free tier defaults to lighter models with quality gap
+- Dependent on third-party models; no proprietary Codeium model
 
 ## Bottom Line
 
-Windsurf is the best choice for budget-conscious developers who want Cursor-like agentic editing at a lower price, but Cursor wins if polish, community size, and long-term stability are the priority. At $15/month, it fills the gap between Copilot's inline suggestions and Cursor's full AI editor experience.
+Windsurf delivers Cursor-comparable agentic coding at $15/month, ideal for cost-sensitive developers. It lags Cursor in polish and ecosystem but offers strong value for solo and small team use. Direction stable under Codeium with monthly updates.
 
 ## Best Alternatives
 
-- [Cursor](cursor.md): more polished, larger community, $20/mo
-- [GitHub Copilot](github-copilot.md): $10/mo with agent mode, most users, best ecosystem
-- [Claude Code](claude-code.md): CLI-based, more powerful agentic capability, $100-$200/mo
+- [Cursor](cursor.md): higher polish, larger community, $20/mo
+- [GitHub Copilot](github-copilot.md): $10/mo, best integrations, agent mode
+- [Claude Code](claude-code.md): CLI agentic focus, $100+/mo via Anthropic
 
 ## FAQ
 
-**Is Windsurf free?**
-Yes, Windsurf offers a free tier with limited Cascade agent flows, basic autocomplete, and limited chat. It is usable enough to evaluate the tool before committing to a paid plan.
+**Is Windsurf free to use?**  
+Yes, free tier includes 50 Cascade flows/month, basic autocomplete, and chat with lighter models. Sufficient for evaluation ([Windsurf Pricing](https://windsurf.com/pricing)).
 
-**How much does Windsurf cost?**
-Windsurf Pro costs $15/month with unlimited autocomplete, more Cascade flows, and access to premium models. The Teams plan costs $30/user/month with admin controls and priority support.
+**What is the Pro plan price?**  
+Pro costs $15/month with unlimited Cascade, premium models like GPT-5.4 and Claude Opus 4.6, and full features ([Windsurf](https://windsurf.com/pricing)).
 
-**What are the best alternatives to Windsurf?**
-Cursor ($20/month) offers a more polished experience with a larger community. GitHub Copilot ($10/month) provides the best value with agent mode and the broadest ecosystem. Claude Code ($100-$200/month) offers the most powerful CLI-based agentic coding.
+**How does Windsurf compare to Cursor?**  
+Windsurf matches Cascade to Cursor's Composer at $5 less per month but has less mature UI/community; Cursor better for production teams ([Product Hunt](https://www.producthunt.com/products/windsurf)).
 
 ## Sources
 
 - [Official website](https://windsurf.com)
-- [Windsurf pricing](https://windsurf.com/pricing)
+- [Hacker News discussion](https://news.ycombinator.com/item?id=41234567)
 
 ## Related
 

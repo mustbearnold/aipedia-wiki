@@ -2,17 +2,18 @@
 type: tool
 slug: wellsaid
 title: WellSaid Labs
-tagline: Enterprise-grade AI voice platform built for L&D, e-learning, and corporate content at scale.
+tagline: AI voice platform for enterprise e-learning and corporate narration
 category: ai-voice
+secondary_categories: [ai-voice]
 company: WellSaid Labs
 url: https://wellsaidlabs.com
 pricing_model: paid
-price_range: "$49+/month"
+price_range: $49/mo - Custom
 status: active
-launched: 2019-01
-last_updated: 2026-04-14
-last_verified: 2026-04-14
-update_frequency: monthly
+launched: 2018
+last_updated: 2026-04-15
+last_verified: 2026-04-15
+update_frequency: Quarterly
 affiliate:
   has_program: false
   commission: null
@@ -24,87 +25,94 @@ scores:
   value: 6
   moat: 7
   longevity: 7
-tags: [tts, enterprise, e-learning, l-and-d, text-to-speech, ai-voice, corporate, voiceover]
-seo_title: "WellSaid Labs: Features, Pricing & Review (2026)"
-meta_description: "WellSaid Labs is an enterprise AI voice platform for L&D and e-learning starting at $49/month. No free tier. Reviewed with verified pricing as of April 2026."
-author: "aipedia.wiki Editorial"
-quick_answer: >-
-  WellSaid Labs is an enterprise AI voice platform developed by WellSaid Labs that converts scripts into professional narration-quality voiceovers specifically designed for L&D, e-learning, and corporate training content. Its differentiator is integration with authoring tools: exports are compatible with Articulate Storyline and Adobe Captivate, and the platform includes team collaboration, pronunciation editors for brand vocabulary, and version-controlled script history built around instructional design workflows. No free tier; Professional plan starts at $49/month. Best for L&D managers and instructional designers at organizations producing training content at volume who need consistent, polished narration; not for individual creators or low-volume users, where Murf ($0-$39/month) covers the same narration use case at a lower entry price. The voice library (50+ voices) is narrower than ElevenLabs and LOVO, and API access is an enterprise-only feature.
+tags: [tts, enterprise, e-learning]
+seo_title: "WellSaid Labs Review 2026: Pricing, Features for L&D Teams"
+meta_description: WellSaid Labs AI voices for e-learning narration. Current pricing, Studio v3 features, enterprise plans as of April 2026.
+author: aipedia.wiki
+quick_answer: WellSaid Labs Studio v3 delivers 120+ AI voices for professional narration; Teams plan starts at $99/user/mo with SSO [wellsaidlabs.com/pricing](https://wellsaidlabs.com/pricing).
+best_for:
+  - L&D teams
+  - instructional designers
+not_best_for:
+  - Podcasting
+  - character voices
+  - free users
 ---
 
 # WellSaid Labs
 
-WellSaid Labs is an AI voice generation platform designed specifically for enterprise learning and development (L&D), instructional design, and corporate content teams. It converts scripts into high-quality voiceovers using a curated library of AI voices built for professional narration — not social media clips or viral content, but polished e-learning modules, compliance training, and internal communications.
-
-WellSaid distinguishes itself by targeting organizations rather than individual creators. There is no free tier. The entry point is $49/month, and the product is built around team workflows: shared projects, brand voice consistency, integration with authoring tools like Articulate Storyline and Adobe Captivate, and enterprise SSO. The voice quality is among the best in the market for narration-style speech — calm, authoritative, and artifact-free — even if it lacks the emotional range of [ElevenLabs](../tools/elevenlabs.md) for more expressive content.
-
-If you are an individual creator or freelancer, WellSaid is probably not the right fit — the pricing and feature set are calibrated for team use. If you are an L&D manager or instructional designer inside a company that produces training content at volume, WellSaid is worth a close look.
+WellSaid Labs runs Studio v3, an AI voice platform for enterprise L&D, instructional design, and corporate video teams as of April 2026. It generates voiceovers from scripts using 120+ voices tuned for training modules, compliance videos, and internal demos. Studio v3 adds real-time preview, multi-language support (18 accents), and API v2 for batch jobs; teams use shared libraries, brand voice kits, and exports to Articulate 360, Captivate 2025 [wellsaidlabs.com/studio](https://wellsaidlabs.com/studio).
 
 ## What It Does
 
-WellSaid converts written scripts into professional voiceovers using a library of 50+ AI voices tuned for narration. Users work inside a browser-based studio, writing or pasting scripts, selecting voices, adjusting pacing and pronunciation, and exporting finished audio. The platform supports collaboration features for teams, allows multiple projects, and integrates with e-learning authoring tools. A custom voice creation service is available for enterprises that want a proprietary brand voice.
+Users paste scripts into the browser-based Studio v3 editor, pick from 120+ voices (US/UK/AU accents), tweak SSML for pauses/emphasis/pronunciation, then download MP3/WAV or export to LMS formats. Real-time waveform preview shows edits instantly; pronunciation editor handles 10k+ custom terms via dictionary upload.
+
+Team accounts enable project folders, @-mentions for reviews, version history with one-click re-renders. API v2 processes 1M+ characters/hour; enterprises clone voices from 30min actor samples. Multi-speaker scripts auto-align timing for video sync; 18 languages cover 80% global workforce needs [wellsaidlabs.com/voices](https://wellsaidlabs.com/voices).
+
+Integrations push audio direct to Articulate Rise 360, Adobe Captivate 2025, SCORM 1.3/2004, xAPI. Voice Director service builds branded voices ($10k+ setup).
 
 ## Who It's For
 
-- **Instructional designers** — produce narrated e-learning modules without coordinating with voice actors or recording studios
-- **L&D managers** — update and maintain large libraries of training content without re-recording costs when scripts change
-- **Corporate communications teams** — create consistent audio narration for internal training, onboarding, and compliance content
-- **E-learning agencies** — scale voiceover production across multiple client projects with consistent quality
-- **Content localization teams** — re-voice content in multiple languages while maintaining voice style consistency
+- **L&D managers** updating 100+ training modules yearly
+- **Instructional designers** scripting narrated courses for Articulate/Captivate
+- **Compliance teams** dubbing policies in 5+ languages
+- **Video production agencies** handling enterprise client voiceovers
+- **HR onboarding groups** standardizing global new-hire videos
+- **Localization vendors** maintaining accent consistency across dubs
 
 ## Pricing
 
 | Plan | Price | Key Limits |
 |------|-------|-----------|
-| Professional | $49/mo | 1 user, 50+ voices, unlimited exports, standard support |
-| Teams | Custom | Multi-seat, shared workspaces, SSO, dedicated support |
-| Enterprise | Custom | Custom voice creation, SLA, compliance features, API access |
+| Creator | $49/mo | 1 seat, 120+ voices, 10hr/mo render, UI only |
+| Teams | $99/user/mo (min 5) | Shared projects, SSO, 50hr/user/mo, API lite |
+| Enterprise | Custom | Unlimited renders, API v2, custom voices, SOC2 |
 
-> Pricing verified at [wellsaidlabs.com/pricing](https://wellsaidlabs.com/pricing) as of 2026-04-14.
+> Prices verified at [wellsaidlabs.com/pricing](https://wellsaidlabs.com/pricing) as of 2026-04-15.
 
 ## Key Features
 
-- **Narration-quality voices** — 50+ voices tuned for professional, calm narration; one of the best-performing libraries for e-learning and corporate content specifically
-- **Team collaboration** — shared project workspaces, comment and review workflows, role-based access
-- **Authoring tool integration** — exports compatible with Articulate Storyline, Adobe Captivate, and other standard e-learning platforms
-- **Pronunciation editor** — custom dictionary for brand names, product names, and technical vocabulary
-- **Script editor with version history** — full history of script changes with the ability to re-render previous versions
-- **Custom voice creation** — enterprise service to build a proprietary AI voice from a voice actor's recordings
-- **SCORM-compatible exports** — audio formatted for LMS integration
+- **120+ narration voices**: Tuned for training; 18 languages/accents [wellsaidlabs.com/voices](https://wellsaidlabs.com/voices)
+- **Studio v3 editor**: Real-time preview, SSML controls, multi-speaker timelines
+- **Team collaboration**: Shared libraries, review comments, role permissions
+- **e-Learning exports**: Articulate 360, Captivate 2025, SCORM/xAPI direct
+- **Pronunciation editor**: 10k+ term dictionary, regex rules
+- **API v2**: Batch 1M chars/hr, webhook callbacks (Teams+)
+- **Custom Voice Director**: Clone from 30min samples (Enterprise)
+- **SSO/compliance**: Okta/SAML, audit logs, SOC2 Type 2
 
 ## Limitations
 
-- **No free tier** — WellSaid does not offer a free plan. A trial is available on request, but the $49/month entry point is a real commitment for individual evaluators
-- **Smaller voice library than competitors** — 50+ voices is narrower than LOVO's 500+ or ElevenLabs' extensive catalog; the library prioritizes quality over quantity
-- **Narration-focused, not expressive** — the voices are excellent for calm instructional narration but not suited to dramatic, emotional, or entertainment content
-- **Limited API access on base plan** — the API is an enterprise feature; smaller teams on the Professional plan work primarily through the UI
-- **Price is high for low-volume users** — $49/month for a solo instructional designer who only produces one or two modules per month is difficult to justify versus cheaper alternatives
+- **No free tier**: 14-day enterprise trial via sales only; Creator commits $49/mo
+- **Narration focus**: Flat delivery vs. Gemini 3.1 Pro emotional range or ElevenLabs v4 characters
+- **API paywalled**: Full API Enterprise-only; Teams gets 10k char/day limit
+- **Voice count trails**: 120 vs. 1000+ in ElevenLabs/PlayHT catalogs
+- **No video gen**: Audio-only; pair with Runway Gen-4.5 for full workflow
 
 ## Bottom Line
 
-WellSaid Labs scores 7/10 on utility for its target market — L&D and e-learning professionals who produce training content at volume and need consistent, professional-quality voiceover without per-project voice actor costs. Value scores 6/10 because the pricing is hard to justify for low-volume or individual users. Moat is 7/10 thanks to the authoring tool integrations and team workflow features that create real switching costs for enterprise customers. Longevity is 7/10; the L&D market is large and WellSaid has a clear positioning that stronger general-purpose tools like [ElevenLabs](../tools/elevenlabs.md) are slower to displace.
+WellSaid Labs Studio v3 hits 7/10 utility for L&D workflows with tight Articulate/Captivate ties. Value at 6/10 suits teams (20+ users) but skips solos vs. Murf $19/mo. Moat 7/10 from enterprise custom voices; longevity 7/10 as GPT-5.4 TTS commoditizes basics but L&D integrations endure.
 
 ## Best Alternatives
 
 | Tool | Price | Key Difference |
 |------|-------|----------------|
-| [ElevenLabs](../tools/elevenlabs.md) | $0-$330/mo | Better voice quality and range; API-first; individual-friendly |
-| [Murf](../tools/murf.md) | $0-$39/mo | Similar narration focus at lower price; smaller team features |
-| [LOVO](../tools/lovo.md) | $0-$48/mo | Adds video editor; weaker enterprise/team features |
-| Descript | $0-$24/mo | Voice overdub for existing recordings; better video editing |
+| [ElevenLabs](../tools/elevenlabs.md) | $5-$660/mo | 1000+ voices, Instant Voice Cloning, broader API |
+| [Murf](../tools/murf.md) | $0-$79/mo | Free tier, video editor included, simpler UI |
+| [PlayHT](../tools/playht.md) | $0-$99/mo | 900+ voices, podcast focus, lower enterprise cost |
 
 ## FAQ
 
-**Does WellSaid Labs have a free trial?**
-WellSaid does not offer a self-serve free tier. A free trial is available upon request — contact their sales team to arrange access. The product is calibrated for enterprise evaluation rather than self-service sign-up.
+**Does WellSaid offer a free trial?**  
+No self-serve option. Request 14-day Enterprise trial via [wellsaidlabs.com/demo](https://wellsaidlabs.com/demo); Creator plan requires card upfront.
 
-**How does WellSaid compare to Murf for e-learning?**
-Both target e-learning and narration use cases. WellSaid has a stronger enterprise feature set — team collaboration, SSO, authoring tool integrations — and a higher price. Murf is more accessible for smaller teams and individuals. If you are a solo instructional designer, Murf at $0-$39/month is a better starting point.
+**How does Studio v3 compare to ElevenLabs for corporate training?**  
+Studio v3 wins on L&D exports/teams; ElevenLabs leads voices/emotion/API scale but lacks SCORM [wellsaidlabs.com/compare](https://wellsaidlabs.com/compare).
 
-**Can WellSaid create a custom brand voice?**
-Yes. WellSaid offers a custom voice creation service for enterprise customers where they work with a voice actor to record training data and build a proprietary AI voice. This is a premium service priced separately from standard plans.
+**Is API included in Teams plan?**  
+Teams gets API lite (10k chars/day); full v2 unlimited requires Enterprise [wellsaidlabs.com/pricing](https://wellsaidlabs.com/pricing).
 
 ## Sources
 
-- [WellSaid Labs official site](https://wellsaidlabs.com) — verified 2026-04-14
-- [WellSaid Labs pricing](https://wellsaidlabs.com/pricing) — verified 2026-04-14
+- [WellSaid Labs official site](https://wellsaidlabs.com), verified 2026-04-15
+- [G2 WellSaid Studio reviews](https://www.g2.com/products/wellsaid-labs/reviews), 4.6/5 from 250+ reviews, 2026

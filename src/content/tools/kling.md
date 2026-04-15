@@ -24,14 +24,7 @@ scores:
   value: 10
   moat: 8
   longevity: 8
-tags:
-  - ai-video
-  - video-generation
-  - text-to-video
-  - image-to-video
-  - video-ai
-  - kuaishou
-  - kling
+tags: [ai-video, video-generation, text-to-video, image-to-video, video-ai, kuaishou, kling]
 seo_title: 'Kling 3.0 Review 2026: Features, Pricing & Video Quality Guide'
 meta_description: >-
   Kling 3.0 by Kuaishou generates clips up to 15 seconds at 720p or 1080p. Plans from

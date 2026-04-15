@@ -8,55 +8,57 @@ company: OpenAI
 url: https://openai.com
 status: dead
 launched: 2021-08
-died: 2023-03
+died: 2023-03-23
 cause: shutdown
 acquired_by: ""
 seo_title: "OpenAI Codex: What Happened? (Discontinued)"
-meta_description: "OpenAI Codex API was deprecated in March 2023. Learn what it was, why OpenAI shut it down, and the best alternatives for AI coding today."
+meta_description: "OpenAI Codex API was deprecated on March 23, 2023. Learn what it was, why OpenAI shut it down, and the best alternatives for AI coding today."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-14
+last_updated: 2026-04-15
 ---
 
 # OpenAI Codex (Discontinued)
 
-OpenAI Codex was a dedicated AI code-generation API based on GPT-3, fine-tuned on billions of lines of public code from GitHub. It was the original engine behind GitHub Copilot from its launch in 2021 through early 2023. OpenAI deprecated the Codex API on March 23, 2023, directing developers to GPT-4, which had surpassed it on every benchmark.
+OpenAI Codex was a dedicated API for AI code generation based on GPT-3 and fine-tuned on public GitHub code. OpenAI shut it down on March 23, 2023, because newer models like GPT-3.5-Turbo and later successors outperformed it on coding tasks.[1][2]
 
 ## What It Was
 
-Codex was offered as a standalone API with two primary models: `code-davinci-002` (most capable, optimized for code completion and generation) and `code-cushman-001` (faster, lighter). It supported over a dozen programming languages, with strongest performance in Python, JavaScript, TypeScript, Go, Ruby, and SQL.
+Codex launched in August 2021 as a free beta API. It powered GitHub Copilot and supported code completion, generation from natural language, code explanation, unit test creation, and cross-language translation across languages like Python, JavaScript, and SQL.[2]
 
-Key capabilities included:
-
-- **Code completion:** fill in next lines given a prefix
-- **Docstring-to-code:** write a natural language description, get working code
-- **Code-to-explanation:** describe what existing code does
-- **Unit test generation:** produce test cases from a function signature
-- **Cross-language translation:** convert code between languages
-
-During its beta period (2021–2022), Codex was free. When it moved to general availability, it was priced at $0.10 per 1,000 tokens for `code-davinci-002`. GitHub Copilot's subscription model abstracted these costs for end users.
+The API offered models such as `code-davinci-002` for high capability and `code-cushman-001` for speed. Pricing started at $0.10 per 1,000 tokens upon general availability. GitHub Copilot handled costs via subscription for its users.[2]
 
 ## What Happened
 
-OpenAI announced the deprecation of the Codex API on March 23, 2023, with the models going offline that same day. The official rationale was straightforward: GPT-4, released earlier in March 2023, was significantly better at code than Codex on every measure. Maintaining a separate specialized API became redundant.
+OpenAI announced the Codex API deprecation on March 23, 2023, with models `code-davinci-002`, `code-davinci-001`, `code-cushman-002`, and `code-cushman-001` going offline that day.[1][2] Developers were directed to GPT-3.5-Turbo or GPT-4o as replacements, with no migration period.[2]
 
-GitHub Copilot had already begun migrating from Codex to GPT-4 in early 2023 as part of Copilot X. Developers using the Codex API directly were given no migration window — the deprecation was effective immediately upon announcement, which drew criticism from teams that had built production tooling around the models.
+GitHub Copilot transitioned to newer models around that time. A later `codex-mini-latest` model was deprecated on February 12, 2026, but the core Codex API ended in 2023.[1]
 
-## Why It Failed
+## Why It Died
 
-Codex was not a product failure — it succeeded at its job and powered one of the most successful developer tools in history. It was retired because a general-purpose model (GPT-4) outperformed a specialized one (Codex), making the specialized model redundant. This is a common pattern in AI product cycles: fine-tuned specialist models get leapfrogged by the next generation of foundation models. OpenAI's incentive to maintain the Codex API separately evaporated once GPT-4 made it obsolete.
+Codex succeeded in powering tools like Copilot but became redundant when general-purpose models like GPT-3.5-Turbo and GPT-4 surpassed its coding performance.[2] OpenAI prioritized investment in newer foundation models over maintaining a specialized API.[1][2]
 
-The immediate deprecation without migration window was the only genuine failure — production systems using `code-davinci-002` broke overnight.
+The sudden shutdown without warning disrupted production systems dependent on Codex models.[2]
 
-## Alternatives
+## Current Alternatives
 
-If you were using the Codex API directly, the best replacements are:
+Current replacements for Codex API users include:
 
-- **GPT-4o via OpenAI API** — the direct successor; better at code than Codex ever was, with 128K context
-- **[GitHub Copilot](../tools/github-copilot.md)** — the highest-level abstraction for developers; uses GPT-4o under the hood
-- **[Cursor](../tools/cursor.md)** — IDE-integrated AI coding built on top of frontier models including Claude and GPT-4o
-- **[Aider](../tools/aider.md)** — open-source CLI coding agent with model flexibility
+- **[GitHub Copilot](../tools/github-copilot.md)**, IDE-integrated coding assistant using latest OpenAI models
+- **[Cursor](../tools/cursor.md)**, AI-powered code editor with frontier model support
+- **[Aider](../tools/aider.md)**, Open-source CLI tool for AI-assisted coding
+- **[Claude Code](../tools/claude-code.md)**, Anthropic's coding interface via API and apps
+- **[Codeium](../tools/codeium.md)**, Free AI coding autocomplete for multiple IDEs
+
+## Lessons
+
+Specialized AI models like Codex often get replaced by advancing general-purpose foundation models, as seen with GPT-3.5 and beyond.[1][2] Companies prioritize scalable, multi-task models over niche APIs.
+
+Sudden deprecations without transition periods risk breaking user workflows; phased sunsets with clear timelines build trust.[2]
+
+Rapid AI progress shortens product lifecycles, requiring developers to build model-agnostic systems for resilience.[1]
 
 ## Sources
 
-- [OpenAI deprecation announcement — March 2023](https://openai.com/blog/gpt-4)
-- [OpenAI API deprecation notice](https://platform.openai.com/docs/deprecations)
+- [OpenAI API Deprecations](https://developers.openai.com/api/docs/deprecations)[1]
+- [Hacker News: OpenAI Codex Discontinuation](https://news.ycombinator.com/item?id=35242069)[2]
+- [OpenAI Codex Changelog](https://developers.openai.com/codex/changelog)[4]

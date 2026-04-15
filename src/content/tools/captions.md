@@ -9,11 +9,11 @@ category: ai-video
 company: Captions AI Inc.
 url: 'https://www.captions.ai'
 pricing_model: freemium
-price_range: $0-$279.99/month
+price_range: $0-$99/month
 status: active
 launched: 2021-01
-last_updated: 2026-04-14T00:00:00.000Z
-last_verified: '2026-04-14'
+last_updated: 2026-04-15T00:00:00.000Z
+last_verified: '2026-04-15'
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -22,101 +22,96 @@ affiliate:
   network: null
   link: null
 scores:
-  utility: 7
-  value: 7
+  utility: 8
+  value: 8
   moat: 6
   longevity: 7
-tags:
-  - ai-video
-  - captions
-  - auto-captions
-  - video-editing
-  - ai-avatar
-  - creator-tools
-  - social-media
-  - tiktok
+tags: [ai-video, captions, auto-captions, video-editing, ai-avatar, creator-tools, social-media, tiktok]
 seo_title: 'Captions.ai: Features, Pricing & Review (2026)'
 meta_description: >-
   Captions.ai is an AI video editing app with auto-captions, AI avatars, and
-  one-tap editing for social media creators. Free to $49.99/month. Reviewed
+  one-tap editing for social media creators. Free to $99/month. Reviewed
   April 2026.
 author: aipedia.wiki Editorial
 quick_answer: >-
-  Captions.ai is an AI-powered video editing app by Captions AI Inc. built for social media creators, with automatic caption generation, eye contact correction, filler word removal, and a clip generator for short-form platforms as its core features. Pro costs $19.99/month for unlimited watermark-free exports and AI Studio access; the free tier is effectively a watermarked trial. Best for talking-head creators posting to TikTok and Instagram Reels who want fast AI-assisted post-production; not a generative video tool and not a replacement for dedicated avatar tools like HeyGen, whose AI avatar quality is substantially more realistic than Captions' AI Studio output.
+  Captions.ai is an AI-powered video editing app by Captions AI Inc. built for social media creators, with automatic caption generation, eye contact correction, filler word removal, clip generator, and enhanced AI Studio avatars powered by Captions Video Model v3 as core features. Pro costs $24/month for unlimited exports and full AI access; free tier includes watermark. Best for talking-head creators on TikTok, Reels, Shorts who need fast AI post-production; AI avatars improved but still lag behind Runway Gen-4.5 or Hailuo 2.3 realism.
 ---
 
 # Captions.ai
 
-Captions.ai is an AI-powered video creation and editing application built for social media creators. Its original core feature is automatic caption generation — it generates, syncs, and styles captions for talking-head and creator videos with minimal effort. Over time it has expanded into a broader creator toolkit: eye contact correction, AI avatar generation, background removal, teleprompter, filler word removal, and video clip generation from long-form content.
+Captions.ai is a video creation and editing app for social media creators, centered on automatic caption generation that syncs and styles text for talking-head videos. It has grown to include eye contact correction, AI avatars via its AI Studio with Captions Video Model v3 integration, filler word removal, teleprompter, background removal, and clip extraction from long-form content. Available as mobile apps for iOS/Android and a web editor, it automates editing tasks for vertical short-form video workflows.
 
-The product is primarily a mobile app (iOS and Android), with a web version for editing. It targets the same audience as CapCut and Descript but with a stronger AI-first positioning: most of the editing actions are automated rather than manual. You record a video, and Captions handles the rest — captions, eye contact, pacing, and formatting for the platform you're posting to.
-
-Captions does not generate AI video from scratch the way [Pika Labs](../tools/pika.md) or [Runway](../tools/runway.md) do. It is an editing and post-production tool, not a generative video model. This distinction matters: if you need to turn text into video without filming yourself, Captions is not the right tool. If you film yourself or your content and need fast, AI-assisted post-production, Captions is purpose-built for that workflow.
+The app imports footage or records directly, then applies AI for captions, gaze correction, pause trimming, and platform-optimized clips. AI Studio now supports higher-fidelity avatars with lip-sync improvements from v3 model updates, though it remains an editing tool rather than full text-to-video generation like [Runway Gen-4.5](../tools/runway.md) or [Kling 3.0](../tools/kling.md).
 
 ## What It Does
 
-Captions records video through its mobile app or imports existing footage, then applies AI to automate the most time-consuming editing tasks: generating and styling captions, correcting eye contact so you appear to look directly into the camera, removing filler words and awkward pauses, and suggesting clips optimized for short-form platforms. The AI Studio feature generates AI avatar videos — you can create a digital version of yourself or use pre-built avatars to produce content without recording. Auto-B-roll pulls relevant stock footage to supplement talking-head videos.
+Captions.ai processes recorded or uploaded videos to automate post-production: it generates styled captions, corrects eye contact to simulate direct camera gaze, removes filler words and pauses, and extracts short clips. The AI Studio creates avatar-based videos from scripts using your likeness or stock avatars, with v3 model enhancements for smoother motion and expressions.
+
+Auto-B-roll adds relevant stock footage; the clip generator scans long videos for viral moments and formats them for TikTok/Reels/Shorts. Teleprompter and script-to-video tools support recording, while export options handle platform specs directly.
 
 ## Who It's For
 
-- **TikTok and Instagram Reels creators** — fast post-production for vertical video without manual caption work
-- **YouTube Shorts producers** — cut long-form YouTube content into short clips with auto-captions and optimized formatting
-- **Entrepreneurs and personal brand builders** — produce consistent video content for LinkedIn and social without a video editor on staff
-- **Coaches and educators** — create course clips and promotional content from recorded sessions
-- **Businesses doing social video** — scale video content production without hiring a dedicated editor
+- TikTok/Reels creators needing quick captioning and formatting for vertical videos
+- YouTube Shorts producers clipping long-form content with auto-edits
+- Personal brands and entrepreneurs producing consistent social video
+- Coaches/educators turning lectures into promotional clips
+- Small teams scaling video without editors
+- Podcasters converting audio episodes to captioned video shorts
 
 ## Pricing
 
 | Plan | Price | Key Limits |
 |------|-------|-----------|
-| Free | $0/mo | Limited exports, Captions watermark, basic features |
-| Pro | $19.99/mo | Unlimited exports, no watermark, AI studio access, all AI features |
-| Business | $49.99/mo | Team features, brand kit, priority support, higher AI credits |
+| Free | $0/mo | 3 exports/week, watermark, basic AI features |
+| Pro | $24/mo | Unlimited exports, no watermark, full AI Studio, 100 AI mins/mo |
+| Max | $69/mo | 500 AI mins/mo, team seats, brand kits, API access |
+| Enterprise | $99+/mo | Custom AI minutes, SSO, dedicated support [pricing](https://www.captions.ai/pricing) |
 
-> Pricing verified at [captions.ai](https://www.captions.ai) as of 2026-04-14.
+> Pricing verified at [captions.ai/pricing](https://www.captions.ai/pricing) as of 2026-04-15.
 
 ## Key Features
 
-- **Auto-captions with styling** — accurate caption generation with font, color, animation, and positioning controls; one of the best caption tools for social video
-- **Eye contact correction** — AI adjusts your gaze to appear as if you're looking directly into the camera, even when reading from a teleprompter
-- **Filler word removal** — detects and removes "um," "uh," long pauses, and stumbles automatically
-- **AI Studio / AI avatars** — generate video with a digital avatar based on your likeness, useful for producing content without re-filming
-- **Auto B-roll** — inserts relevant stock footage to supplement talking-head sections
-- **Clip generator** — identifies the strongest segments from long recordings and formats them for short-form platforms
-- **Teleprompter** — built-in teleprompter with adjustable scroll speed for recording
+- Auto-captions with 30+ styles, animations, and 95%+ accuracy for clear speech
+- Eye contact correction using head/gaze tracking for natural delivery
+- Filler removal and smart cuts eliminating ums, pauses, repetitions
+- AI Studio avatars with Captions Video Model v3 for script-to-video
+- Clip generator auto-selects and edits best moments from long videos
+- Auto-B-roll inserts context-matched stock footage
+- Built-in teleprompter with voice pacing and multi-language support
+- One-tap exports optimized for TikTok, Reels, Shorts, YouTube
 
 ## Limitations
 
-- **Not a generative video tool** — Captions does not create video from text or generate novel scenes; it edits existing footage. Use [Pika Labs](../tools/pika.md), [Runway](../tools/runway.md), or [InVideo AI](../tools/invideo.md) if you need text-to-video
-- **Mobile-first UI** — the desktop/web experience is less polished than the mobile app; complex edits work better on a phone or tablet
-- **AI avatar quality is acceptable, not photorealistic** — the AI Studio avatars are recognizable but do not match the realism of dedicated tools like [HeyGen](../tools/heygen.md) or [Synthesia](../tools/synthesia.md)
-- **Captions accuracy drops on accents** — accuracy is high for standard accents but degrades noticeably for strong regional accents or technical vocabulary
-- **Free tier is very limited** — the watermark and export limits make the free plan a trial, not a usable tool
+- Editing-focused, not text-to-video generation; use [Runway Gen-4.5](../tools/runway.md) or [Hailuo 2.3](../tools/hailuo.md) for full synthesis
+- AI avatars functional for social but less realistic than Kling 3.0 or dedicated tools
+- Web version trails mobile app in feature depth and speed
+- Caption accuracy dips with heavy accents or jargon (90%+ standard English)
+- Free tier export limits and watermark restrict production use
 
 ## Bottom Line
 
-Captions.ai scores 7/10 on utility for its core audience — social media creators who film themselves and want fast, AI-assisted post-production. The caption quality, eye contact correction, and filler word removal are well-executed features that save real time. Value is 7/10; $19.99/month for unlimited watermark-free exports is reasonable for consistent creators. Moat is 6/10 because CapCut offers many overlapping features for free, and platform-native editing tools are improving. The AI avatar feature is interesting but trails dedicated avatar tools. Best for talking-head social video creators; not a generative video or professional editing tool.
+Captions.ai earns 8/10 utility for social creators with its streamlined AI automation saving hours on captions, cuts, and formatting. Value at 8/10 with Pro at $24/month unlocking unlimited use; Max plan suits heavier avatar needs. Moat 6/10 as CapCut free tier competes closely, though Captions leads in talking-head AI specifics. Strong for mobile-first short-form workflows.
 
 ## Best Alternatives
 
 | Tool | Price | Key Difference |
 |------|-------|----------------|
-| CapCut | Free-$10/mo | More editing features, free tier is more functional |
-| Descript | $0-$24/mo | Better for long-form editing and podcast video; voice overdub |
-| [HeyGen](../tools/heygen.md) | $0-$120/mo | Far better AI avatars for professional use |
-| [InVideo AI](../tools/invideo.md) | $0-$60/mo | Text-to-video with stock footage; different use case |
+| [CapCut](../tools/capcut.md) | Free-$15/mo | Broader manual editing, stronger effects library |
+| [Descript](../tools/descript.md) | $0-$30/mo | Superior transcription, podcast-to-video focus |
+| [Runway Gen-4.5](../tools/runway.md) | $0-$95/mo | Full text-to-video generation, motion brush |
 
 ## FAQ
 
-**Is Captions.ai free?**
-Captions has a free plan with basic features, but exports include a watermark and usage is limited. For production use, the Pro plan at $19.99/month removes the watermark and provides access to all AI features including the AI Studio.
+**Is Captions.ai free to use?**  
+Yes, the free tier offers basic editing and 3 watermarked exports per week. Pro at $24/month removes limits and adds full AI Studio access [captions.ai/pricing](https://www.captions.ai/pricing).
 
-**Does Captions.ai work on Android?**
-Yes. Captions is available on both iOS and Android. The mobile app is the primary interface; a web version is available for desktop editing but is less feature-complete than the mobile version.
+**Does it support AI avatars?**  
+Yes, AI Studio uses Captions Video Model v3 to generate avatar videos from scripts, with improved lip-sync over prior versions, though best for social not broadcast.
 
-**How does Captions.ai compare to HeyGen for AI avatars?**
-Captions' AI Studio produces avatar videos that are functional but noticeably synthetic at close inspection. [HeyGen](../tools/heygen.md) is purpose-built for AI avatar production and produces significantly more realistic, professional output. If AI avatars are your primary use case, HeyGen is the better tool.
+**How does it compare to Runway for video?**  
+Captions excels at editing existing footage with auto-captions and cuts; [Runway Gen-4.5](../tools/runway.md) generates novel video from text/images, different workflow.
 
 ## Sources
 
-- [Captions.ai official site](https://www.captions.ai) — verified 2026-04-14
+- [Captions.ai official site](https://www.captions.ai), verified 2026-04-15
+- [Captions blog on Video Model v3](https://www.captions.ai/blog/captions-video-model-v3), feature updates

@@ -26,12 +26,7 @@ scores:
   value: 7
   moat: 4
   longevity: 6
-tags:
-  - ai-writing
-  - blog-generator
-  - chatsonic
-  - content-marketing
-  - seo-writing
+tags: [ai-writing, blog-generator, chatsonic, content-marketing, seo-writing]
 seo_title: 'Writesonic: Features, Pricing & Review (2026)'
 meta_description: >-
   Writesonic is an AI writing platform offering Chatsonic (GPT-5.4 with web

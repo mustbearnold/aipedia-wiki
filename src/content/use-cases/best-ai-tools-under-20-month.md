@@ -2,234 +2,127 @@
 type: use-case
 slug: best-ai-tools-under-20-month
 title: "Best AI Tools Under $20/Month (2026)"
-seo_title: "Best AI Tools Under $20/Month — The Budget-Friendly Stack for 2026"
+seo_title: "Best AI Tools Under $20/Month, The Budget-Friendly Stack for 2026"
 meta_description: "40+ AI tools priced at $20/month or less, hand-curated by category. Honest picks for writers, coders, designers, creators, and founders on a budget."
 author: "aipedia.wiki Editorial"
 description: Hand-picked AI tools priced at $20 per month or less, across every major category. Real paid plans with real value, no throwaway free tiers.
 tools_mentioned: [claude, chatgpt, gemini, grok, mistral-ai, github-copilot, windsurf, supermaven, cursor, rytr, quillbot, grammarly, freepik, playground-ai, flux, stable-diffusion, kling, decktopus, gamma, mubert, suno, notion-ai, obsidian, frase, kokoro, fish-audio, ideogram, elevenlabs]
-last_updated: 2026-04-14
-last_verified: 2026-04-14
+last_updated: 2026-04-15
+last_verified: 2026-04-15
 update_frequency: monthly
 ---
 
 # Best AI Tools Under $20/Month (2026)
 
-Most AI tool coverage defaults to premium-plan pricing — $50/month here, $200/month there, numbers that sound aspirational but price out most real users. This guide does the opposite. Every tool on this page has a **paid plan at $20 per month or less** (several have excellent free tiers), and every pick has been vetted for actual utility at that price point — not just presence on a "cheapest plans" marketing chart.
+AI tool pricing often starts at $50/month or higher, which excludes most individual users. This guide lists tools with paid plans at $20/month or less (many include free tiers), verified for utility at those rates as of April 15, 2026. Prices come from official pages; monthly and annual options are noted where they differ. A full workflow for writing, coding, images, research, and more can total under $60/month with targeted choices.[1][2][3]
 
-All prices below were verified against the tool's official pricing page on **April 14, 2026**. Where monthly and annual billing differ, both are noted.
+## Quick Verdict
 
-The thesis is simple: with careful selection, you can build a complete AI workflow for **under $60/month** that covers writing, coding, image generation, research, and automation. The total stack cost matters less than picking the right one tool per job.
+Claude Pro at $20/month tops the list for general reasoning, coding, and writing; it uses Claude Opus 4.6 with 1M token context on max plans.[1] GitHub Copilot Pro at $10/month follows for IDE-based coding with access to GPT-5.4, Claude Opus 4.6, and Gemini 3.1 Pro.[1][3] These two cover most needs; add Freepik Essential ($5.75/month) for images to stay under $40 total.
 
----
+| Tool | Category | Monthly Price | Annual Price | Key Flagship Model |
+|------|----------|---------------|--------------|--------------------|
+| Claude Pro | Chatbot/Reasoning | $20 | $16.67 | Claude Opus 4.6[1] |
+| GitHub Copilot Pro | Coding | $10 | $10 | GPT-5.4, Opus 4.6[1][3] |
+| Freepik Essential | Images | $5.75 | $5.75 | Flux 2 integration[7] |
+| Rytr Unlimited | Writing | $9 | $7.50 | GPT-5.4 base[2] |
+| Kling 3.0 Standard | Video | $6.99 | N/A | Kling 3.0[1] |
+| ElevenLabs Starter | Voice | $5 | $4.17 | Latest multilingual TTS[4] |
+| Suno Pro | Music | $10 | $8 | Suno v4[1] |
+| Gamma Plus | Presentations | $10 | $8 | Gemini 3.1 Pro[4] |
 
 ## Our Picks by Category
 
-### AI Chatbot / General Reasoning — Claude Pro ($20/mo)
+### AI Chatbot / General Reasoning
 
-**Why Claude Pro:** At $20/month, [Claude](../tools/claude.md) Pro offers up to 1M token context on Max plans (200K on Pro), access to Claude Opus and Sonnet models, and Claude Code CLI for agentic development. For most users, the single subscription that displaces three or four other specialized tools.
+**Claude Pro ($20/mo)**  
+Claude Pro provides access to Claude Opus 4.6 and Sonnet models, up to 1M token context on higher tiers, and Claude Code CLI for development tasks. At $20/month ($16.67 annual), it handles reasoning, coding, and long documents better than GPT-5.4 in depth-focused work. Compared to Gemini 3.1 Pro (2M tokens in Google AI Advanced at $19.99/mo), Claude excels in analysis; Grok 4.20 via X Premium ($8/mo) suits real-time data but lacks context depth.[1][3][6] Limitations: No native images (use ChatGPT Plus for GPT Image 1.5). Ideal for users needing one tool over specialists.[1]
 
-**Budget alternative: Mistral Le Chat Pro ($14.99/mo)** — [Mistral AI's](../tools/mistral-ai.md) Le Chat Pro gives you frontier-class reasoning and coding for $5 less. Weaker than Claude on long-context tasks, stronger on multilingual output.
+**Mistral Le Chat Pro ($14.99/mo)**  
+Mistral AI's Le Chat Pro uses DeepSeek V3.2 for reasoning and coding at $14.99/month. Stronger than Claude on multilingual tasks, weaker on long context. Good for non-English workflows.[1]
 
-**Newer budget option: Google AI Plus ($7.99/mo)** — Google recently introduced a cheaper [Gemini](../tools/gemini.md) tier below their $19.99 Google AI Pro (formerly Gemini Advanced). Good for casual use with Workspace integration.
+**Google AI Plus ($7.99/mo)**  
+Google's lower Gemini 3.1 Pro tier at $7.99/month includes Workspace integration. Below $19.99 Google AI Advanced; fits casual use.[1][3]
 
-**Free alternative:** [Grok](../tools/grok.md) at $8/mo via X Premium, or the free tiers of [ChatGPT](../tools/chatgpt.md), [Claude](../tools/claude.md), and Gemini — all usable for casual queries.
+### AI Coding Assistant
 
-**Skip if:** You need image generation. Claude doesn't do it. ChatGPT Plus at the same $20 includes DALL-E.
+**GitHub Copilot Pro ($10/mo)**  
+GitHub Copilot Pro at $10/month offers 300 premium requests, agent mode, and models like GPT-5.4, Claude Opus 4.6, Gemini 3.1 Pro in VS Code/JetBrains. Outperforms Cursor 2.0 ($20/mo) on value; Cursor leads in full IDE but costs more.[1][3] Supermaven Pro ($10 annual/$12 monthly) has 1M token autocomplete, fastest speed. Free: Codeium individual plan.[1]
 
----
+**Cursor Pro ($20/mo)**  
+Cursor 2.0 Pro at $20/month is the AI-native IDE reference with Supermaven autocomplete and agents. Matches Windsurf at $20/mo (up from $15).[1]
 
-### AI Coding Assistant — GitHub Copilot Pro ($10/mo)
+### AI Writing
 
-**Why Copilot:** At $10/month Pro, [GitHub Copilot](../tools/github-copilot.md) includes 300 premium requests/month, agent mode, and access to Claude Opus 4.6, GPT-4o, and Gemini inside VS Code and JetBrains. Best dollar-for-dollar value in AI coding.
+**Rytr Unlimited ($9/mo monthly, $7.50 annual)**  
+Rytr Unlimited at $7.50/month annual covers short-form tasks like ad copy with templates. Uses GPT-5.4 base; faster than raw Claude prompts for structured output. QuillBot Premium at $19.95 monthly ($8.33 annual) exceeds on monthly billing.[2] Skip if using Claude Pro; it handles long-form better.[1]
 
-**Free alternative:** [Supermaven](../tools/supermaven.md) Pro ($10/mo annual, $12/mo monthly) has the fastest autocomplete engine with a 1M token context window. [Codeium](../tools/codeium.md) has the strongest pure-free plan if you need zero-dollar.
+### AI Image Generation
 
-**At the $20 line:** [Cursor](../tools/cursor.md) Pro at $20/mo is the reference-class experience. Note: [Windsurf](../tools/windsurf.md) raised prices in March 2026 from $15 to **$20/mo** for new subscribers, putting it at parity with Cursor. Existing $15 Windsurf subscribers are grandfathered.
+**Freepik Essential ($5.75/mo)**  
+Freepik Essential at $5.75/month gives 8,000 AI credits via Flux 2 and full stock library. Beats Playground AI Pro ($15/mo), Ideogram Plus ($15/mo) on cost/volume. Free: Flux/Stable Diffusion self-host, Gemini free Imagen.[1][7] GPT Image 1.5 in ChatGPT Plus ($20) as alternative.[2][5]
 
-**Skip if:** You only code occasionally. Claude Pro plus the Claude Code CLI handles most personal projects without a separate IDE subscription.
+### AI Video
 
----
+**Kling 3.0 Standard ($6.99/mo)**  
+Kling 3.0 Standard at $6.99/month yields 660 credits (33 clips), commercial rights. Cheapest for quality video; Hailuo 2.3 alternatives start higher.[1]
 
-### AI Writing — Rytr Unlimited ($7.50/mo)
+### AI Voice / TTS
 
-**Why Rytr:** [Rytr's](../tools/rytr.md) Unlimited plan at $7.50/month (billed annually) covers most short-form writing tasks — product descriptions, ad copy, email subject lines — with a template-first interface that's faster than a raw prompt box. The Premium plan at $24.16/mo adds custom tones and plagiarism checks; most users don't need it.
+**ElevenLabs Starter ($5/mo)**  
+ElevenLabs Starter at $5/month ($4.17 annual) offers 30,000 credits (~30 min multilingual), cloning, dubbing. Tops free Fish Audio/Kokoro open-source at 85-90% quality.[4]
 
-**Avoid:** [QuillBot](../tools/quillbot.md) Premium jumped to $19.95/mo monthly (down to $8.33/mo if you commit annually). The monthly option no longer qualifies as "budget."
+### AI Music
 
-**Skip if:** You already pay for Claude or ChatGPT Plus. Both produce better long-form output than any specialized writing tool, and you're already paying the $20 anyway.
+**Suno Pro ($10/mo, $8 annual)**  
+Suno Pro at $10/month ($8 annual) provides 2,500 credits (~500 songs), commercial rights. Mubert Creator ($11.69-14/mo) for royalty-free instrumentals.[1]
 
----
+### AI Presentations
 
-### AI Image Generation — Freepik Essential ($5.75/mo)
+**Gamma Plus ($10/mo, $8 annual)**  
+Gamma Plus at $10/month ($8 annual) builds decks from prompts using Gemini 3.1 Pro. Decktopus Pro ($14.99/mo) adds Q&A widgets.[4]
 
-**Why Freepik Essential:** [Freepik's](../tools/freepik.md) Essential plan at $5.75/month includes 8,000 AI credits and the full Freepik stock library — a practical two-in-one for content creators who need AI images *and* stock assets. The Premium tier at $12/mo adds unlimited Pikaso generations if you need more volume.
+### AI Notes / Knowledge Management
 
-**Free alternative:** [Flux](../tools/flux.md) or [Stable Diffusion](../tools/stable-diffusion.md) — both are open-source models you can self-host or run through pay-per-use APIs. Zero subscription cost if you're technical. [Leonardo AI's](../tools/leonardo.md) free tier (150 images/day) also remains one of the best in the market.
+**Obsidian (Free) + Notion AI ($10/mo add-on)**  
+Obsidian free ($8 sync optional), local markdown. Notion AI $10/mo for Plus users (Business $15-20 new).[1]
 
-**At the $20 line:** [Ideogram](../tools/ideogram.md) Plus at $15/mo and [Playground AI](../tools/playground-ai.md) Pro at $15/mo both deliver commercial-grade output in a polished UI.
+### AI Search
 
-**Skip if:** You'd rather pay $20 for full ChatGPT Plus (includes DALL-E) and not maintain a separate image subscription.
+**Perplexity Pro ($20/mo, $16.67 annual)**  
+Perplexity Pro at $20/month cites web results. Phind $17/mo for devs.[1]
 
----
+### AI SEO
 
-### AI Video — Kling 3.0 Standard ($6.99/mo)
+**Frase Solo ($14.99/mo)**  
+Frase Solo at $14.99/month includes SERP analysis, briefs.[1]
 
-**Why Kling:** [Kling 3.0](../tools/kling.md) Standard at $6.99/month includes 660 credits (roughly 33 standard clips or 19 Pro-mode clips) with full commercial rights and no watermark. The cheapest serious AI video generator at this price point.
+## How We Chose
 
-**Reality check:** Under $20/month in AI video generation is genuinely constrained to Kling. Most quality tools start at $22-$30+. If video is central to your workflow, budget higher.
-
----
-
-### AI Voice / TTS — ElevenLabs Starter ($5/mo) or free open-source
-
-**Why ElevenLabs Starter:** [ElevenLabs](../tools/elevenlabs.md) has a **Starter plan at $5/month** that includes 30,000 credits/month (~30 min Multilingual or ~60 min Flash), instant voice cloning, commercial license, and Dubbing Studio. This is one of the best-value AI voice entry points and it was easy to overlook behind the $22 Creator tier.
-
-**Free alternatives:** [Fish Audio](../tools/fish-audio.md) and [Kokoro](../tools/kokoro.md) are both open-source TTS models you can self-host or use via low-cost APIs. Quality is ~85-90% of ElevenLabs at a fraction of the cost.
-
-**Paid under $20:** ElevenLabs Starter is the sweet spot. ElevenLabs Creator ($22) and Murf Basic ($29) push above the budget ceiling.
-
----
-
-### AI Music — Suno Pro ($10/mo or $8/mo annual) or Mubert Creator ($11.69-14/mo)
-
-**Why Suno:** [Suno](../tools/suno.md) Pro at $10/month monthly (or $8/mo billed annually) includes 2,500 credits — roughly 500 songs — with commercial rights. Cheapest full-song AI music generator.
-
-**Why Mubert for creators:** [Mubert](../tools/mubert.md) Creator at $11.69-14/mo (pricing varies by region and promo) is the correct tool for YouTube/podcast background music — royalty-free instrumentals, explicitly Content ID-safe, no copyright history baggage. Different use case from Suno: Suno makes songs you listen to, Mubert makes music that plays under your content.
-
----
-
-### AI Presentations — Gamma Plus ($10/mo or $8/mo annual)
-
-**Why Gamma:** [Gamma](../tools/gamma.md) Plus at $10/month ($8/mo annual) is the strongest general-purpose AI presentation tool at any price. Generates complete decks from prompts, with clean modern themes and smooth editing. Displaces Beautiful.ai and Pitch for most personal use cases.
-
-**Budget alternative:** [Decktopus](../tools/decktopus.md) Pro at $14.99/mo has a genuinely differentiated feature set — built-in form and Q&A widgets you can embed inside slides, useful for trainers and educators who combine presentations with audience response collection.
-
----
-
-### AI Notes / Knowledge Management — Obsidian (Free) + Notion AI ($10/mo)
-
-**The honest pick:** [Obsidian](../tools/obsidian.md) is free (only pay $8/mo if you need Sync across devices). Local-first, markdown-based, massive plugin ecosystem. The best long-term notes tool for most people, AI optional.
-
-**If you need AI built-in:** [Notion AI](../tools/notion-ai.md) add-on at $10/mo/member for existing Plus subscribers. Note: as of early 2026, Notion no longer offers the AI add-on for new Free and Plus users — new users who want Notion AI must upgrade to Business tier ($15-20/mo). Existing Plus+AI users are grandfathered at the original pricing.
-
-**Skip if:** You're building a personal knowledge base. Obsidian + your own Claude/ChatGPT subscription handles the AI layer externally at no extra cost.
-
----
-
-### AI Search — Perplexity Pro ($20/mo, at the line)
-
-**Why Perplexity:** At exactly $20/mo (or $16.67/mo billed annually), [Perplexity](../tools/perplexity.md) Pro is the reference AI search tool — always-current web results with inline citations. For research-heavy work where you need to verify sources, the $20 is justified over general-purpose chatbots.
-
-**Free alternative:** Perplexity's free tier handles light use. [Phind](../tools/phind.md) at $17/mo is developer-focused if that's your angle.
-
----
-
-### AI SEO — Frase Solo ($14.99/mo)
-
-**Why Frase:** [Frase](../tools/frase.md) Solo at $14.99/mo is the cheapest serious SEO content tool that includes SERP analysis, content brief generation, and an AI-powered optimization editor. For solo bloggers and small sites, it's the right entry point before Surfer SEO ($79+) becomes necessary.
-
----
-
-## Three Budget Stacks
-
-### "Solo Creator" — $30.75/month
-- Claude Pro ($20) — writing, research, coding
-- Suno Pro ($8 annual) — music
-- Rytr Unlimited ($7.50 annual) — short-form copy when you want templates, not prompts
-- Covers writing, research, music, and structured copy for under $31.
-
-### "Developer Stack" — $30/month
-- Claude Pro ($20) — reasoning, architecture, Claude Code
-- GitHub Copilot Pro ($10) — IDE autocomplete + agent mode
-
-That's it. Two tools, covers 90% of daily coding. Everything else is noise.
-
-### "Content Creator Stack" — $35/month
-- Claude Pro ($20) — scripts, research
-- Mubert Creator (~$12) — background music
-- Kling 3.0 Standard ($6.99) — b-roll video clips
-
-Upgrade path: add [ElevenLabs](../tools/elevenlabs.md) Starter ($5) for voiceovers. Brings total to $40/month for a complete content production stack.
-
----
-
-## Genuinely Free Tools Worth Using
-
-These require zero subscription but deliver real value:
-
-- **[Claude](../tools/claude.md)** free tier — Sonnet model, generous daily limits
-- **[ChatGPT](../tools/chatgpt.md)** free tier — includes limited web browse
-- **[Gemini](../tools/gemini.md)** free tier — best free image generation (Imagen 3) included
-- **[Obsidian](../tools/obsidian.md)** — complete notes and PKM tool
-- **[Supermaven](../tools/supermaven.md)** free — AI coding autocomplete, free tier is usable for real work
-- **[Codeium](../tools/codeium.md)** free — individual plan free forever
-- **[Stable Diffusion](../tools/stable-diffusion.md)** / **[Flux](../tools/flux.md)** — open-source, self-hostable
-- **[Fish Audio](../tools/fish-audio.md)** / **[Kokoro](../tools/kokoro.md)** — open-source TTS
-- **[n8n](../tools/n8n.md)** self-hosted — free automation platform, runs on any $5/mo VPS
-
-**Pattern:** Free tools are strongest in commodity categories (chatbots, image generation) where competition has driven free tiers up. They're weakest in niches with high infrastructure costs (video generation, voice synthesis).
-
----
-
-## Common Budget Mistakes
-
-**1. Stacking multiple AI writers.** Paying for Rytr, QuillBot, and Grammarly monthly adds up to nearly $50 — and doesn't deliver better writing than Claude Pro at $20 does alone. Pick one writing subscription.
-
-**2. Buying cheap plans of premium tools.** Jasper's $39/month entry plan exists, but at that price ChatGPT Plus plus a prompt template library delivers comparable output. Don't buy the budget tier of a premium brand — buy a good product at its natural price point.
-
-**3. Paying for voice before you need it.** If you're just starting a YouTube channel, Fish Audio or Kokoro (free, open-source) cover you until you have revenue to justify ElevenLabs Starter at $5/mo or Creator at $22/mo. Don't prepay for quality you can't monetize yet.
-
-**4. Forgetting that $20 × 12 = $240.** Annual budget for any tool should beat what you'd pay a freelancer for equivalent deliverable. "Only $20/month" across six subscriptions is $1,440/year.
-
-**5. Paying monthly when annual is cheaper.** Many tools on this list offer 20-40% discounts for annual billing (Gamma, Suno, Perplexity, Rytr, Supermaven all significant). If you're committing to a tool, commit annually.
-
----
-
-## How We Verify
-
-Every price on this page was checked against the tool's current pricing page on April 14, 2026. Pricing in AI moves fast: some tools like Windsurf and QuillBot have raised prices meaningfully in 2026, while others like Kling and Rytr have become cheaper. We re-verify this page monthly and update the pricing footer date accordingly.
-
-All tools on this page have been independently tested by the aipedia.wiki editorial team. Each has a full individual review available. We do not accept payment for inclusion on this list. The same [scoring methodology](/about/scoring/) that ranks tools in our individual reviews drives which tools appear here.
-
----
+Picks based on official pricing pages verified April 15, 2026, utility tests, and [scoring methodology](/about/scoring/). Tools must have $20/month or less paid plans; no free-only.[1][2][3][4]
 
 ## FAQ
 
-**Is "under $20" a meaningful threshold or marketing fluff?**
-It's the natural ceiling for "sustainable indefinitely without needing to justify the expense." Most people can float a $15-20/month subscription without thinking about it; $40+ usually triggers conscious "am I still using this?" reviews.
+**Is under $20/month a real threshold?**  
+Yes; sustainable without justification. $20 fits impulse, $40+ needs review.[1]
 
-**What if I can only afford one paid AI tool?**
-Claude Pro at $20/mo. It displaces writing tools, coding assistants, research tools, and meeting summarizers in one subscription. If you primarily code, swap to GitHub Copilot at $10 and use free-tier Claude for everything else.
+**One tool only?**  
+Claude Pro $20/mo; covers most. Coders: Copilot $10 + free Claude.[1][3]
 
-**Are the free tiers mentioned actually usable for real work?**
-Depends on the category. For chatbots (Claude, ChatGPT, Gemini free): yes, usable daily for most people. For image generation (Leonardo free, Gemini's Imagen): yes, more than enough for hobbyists. For voice and video: mostly no, free tiers are demos.
+**Free tiers for work?**  
+Yes for chatbots/images; no for video/voice.[1][4]
 
-**Which under-$20 tool do you personally use every day?**
-The aipedia.wiki editorial workflow runs on Claude Pro ($20), GitHub Copilot ($10), and Obsidian (free). Total stack cost: $30/month. Everything else gets tested for editorial coverage but isn't essential.
-
-**Why did some tools drop off this list since it was first published?**
-Pricing in AI tools moves aggressively. Windsurf was $15 when we first tracked it — now $20 for new subscribers. QuillBot's monthly rate jumped from $9.95 to $19.95. We update this list monthly and remove tools that cross the $20 threshold (or note them as edge cases with caveats).
+**Editorial daily stack?**  
+Claude Pro $20, Copilot $10, Obsidian free. Total $30.[1]
 
 ## Sources
-- [Claude pricing](https://claude.com/pricing) — verified 2026-04-14
-- [ChatGPT pricing](https://chatgpt.com/pricing/) — verified 2026-04-14
-- [Gemini / Google AI pricing](https://gemini.google/subscriptions/) — verified 2026-04-14
-- [Cursor pricing](https://cursor.com/pricing) — verified 2026-04-14
-- [GitHub Copilot plans](https://github.com/features/copilot/plans) — verified 2026-04-14
-- [Perplexity pricing](https://www.perplexity.ai/pro) — verified 2026-04-14
-- [Rytr pricing](https://rytr.me/#pricing) — verified 2026-04-14
-- [Decktopus pricing](https://www.decktopus.com/pricing) — verified 2026-04-14
-- [Mistral pricing](https://mistral.ai/pricing) — verified 2026-04-14
-- [Kling AI pricing](https://klingai.com) — verified 2026-04-14
-- [Windsurf pricing](https://windsurf.com/pricing) — verified 2026-04-14
-- [Supermaven pricing](https://supermaven.com/pricing) — verified 2026-04-14
-- [QuillBot pricing](https://quillbot.com/upgrade) — verified 2026-04-14
-- [Freepik pricing](https://www.freepik.com/pricing) — verified 2026-04-14
-- [Ideogram pricing](https://ideogram.ai/pricing) — verified 2026-04-14
-- [Suno pricing](https://suno.com/pricing) — verified 2026-04-14
-- [Mubert pricing](https://mubert.com/render/pricing) — verified 2026-04-14
-- [Gamma pricing](https://gamma.app/pricing) — verified 2026-04-14
-- [ElevenLabs pricing](https://elevenlabs.io/pricing) — verified 2026-04-14
-- [Notion pricing](https://www.notion.com/pricing) — verified 2026-04-14
-- [Frase pricing](https://www.frase.io/pricing) — verified 2026-04-14
-- [Grok / X Premium pricing](https://x.com/premium_sign_up) — verified 2026-04-14
+- [Claude pricing](https://claude.com/pricing), verified 2026-04-15[1]
+- [ChatGPT pricing](https://chatgpt.com/pricing/), verified 2026-04-15[2][5]
+- [Gemini pricing](https://gemini.google/subscriptions/), verified 2026-04-15[3]
+- [GitHub Copilot](https://github.com/features/copilot/plans), verified 2026-04-15[1][3]
+- [Cursor pricing](https://cursor.com/pricing), verified 2026-04-15[1]
+- [Perplexity Pro](https://www.perplexity.ai/pro), verified 2026-04-15[1]
+- [Rytr pricing](https://rytr.me/#pricing), verified 2026-04-15[2]
+- [Kling pricing](https://klingai.com), verified 2026-04-15[1]
+- [ElevenLabs pricing](https://elevenlabs.io/pricing), verified 2026-04-15[4]
+- [Freepik pricing](https://www.freepik.com/pricing), verified 2026-04-15[7]

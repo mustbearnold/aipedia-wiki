@@ -26,13 +26,7 @@ scores:
   value: 8
   moat: 8
   longevity: 8
-tags:
-  - audio-editing
-  - video-editing
-  - transcription
-  - overdub
-  - voice-cloning
-  - podcast-editing
+tags: [audio-editing, video-editing, transcription, overdub, voice-cloning, podcast-editing]
 seo_title: 'Descript Review 2026: Edit Audio and Video by Editing Text'
 meta_description: >-
   Descript lets you edit audio and video by editing the transcript, delete

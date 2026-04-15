@@ -29,16 +29,7 @@ scores:
   value: 9
   moat: 7
   longevity: 8
-tags:
-  - search-engine
-  - research
-  - citations
-  - answer-engine
-  - web-search
-  - real-time
-  - fact-checking
-  - ai-agent
-  - perplexity-computer
+tags: [search-engine, research, citations, answer-engine, web-search, real-time, fact-checking, ai-agent, perplexity-computer]
 quick_answer: >-
   Perplexity is an AI-native search and agent platform from Perplexity AI with 100M+ monthly users. At its core it synthesizes cited answers from multiple live web sources; Pro ($20/month) adds model selection across GPT-5.4, GPT-5.4 Thinking, Claude Sonnet 4.6, GPT-5.3-Codex, and Gemini 3.1 Pro, plus Deep Research with presentations and Voice Mode. The Max tier ($200/month) adds Perplexity Computer, a cloud-based AI agent that orchestrates 19 frontier models across 400+ tools for multi-step tasks including research, coding, deployment, and automation. Comet, the AI-native browser, launched on iOS on March 27, 2026. Best for researchers and professionals who need cited, verifiable answers; Max is for power users wanting a managed agentic environment. Not a replacement for Claude or ChatGPT on writing, coding, or creative tasks.
 ---

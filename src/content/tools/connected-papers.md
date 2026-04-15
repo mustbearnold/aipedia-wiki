@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "Free / $5/month"
 status: active
 launched: 2020-06
-last_updated: 2026-04-14
-last_verified: 2026-04-14
+last_updated: 2026-04-15
+last_verified: 2026-04-15
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -34,7 +34,7 @@ quick_answer: >-
 
 # Connected Papers
 
-Connected Papers takes a different approach to academic research than traditional search engines. Instead of keyword search, you paste in a single paper (by title, DOI, or URL) and Connected Papers generates a visual graph showing related papers — arranged by similarity rather than citation chains. Papers that cite each other and share references cluster together visually. Papers at the center are most influential for that research area; papers at the periphery are newer or more specialized.
+Connected Papers takes a different approach to academic research than traditional search engines. Instead of keyword search, you paste in a single paper (by title, DOI, or URL) and Connected Papers generates a visual graph showing related papers arranged by similarity rather than citation chains. Papers that cite each other and share references cluster together visually. Papers at the center are most influential for that research area; papers at the periphery are newer or more specialized.
 
 The tool solves a real problem: a researcher who knows one landmark paper in a new field doesn't know the right keywords to search for everything else that matters. Connected Papers finds the conceptual neighborhood around a paper, surfacing foundational works and recent developments that traditional keyword search would miss.
 
@@ -44,66 +44,71 @@ It is built on the [Semantic Scholar](../tools/semantic-scholar.md) database, wh
 
 Enter any paper by title, DOI, URL, or ArXiv ID. Connected Papers generates a visual graph: circles represent papers, sized by citation count, positioned by similarity. You can hover over any paper to see its title, authors, year, and abstract snippet. Click any paper to open it on Semantic Scholar or access the full text. You can then generate a new graph centered on that paper to explore laterally.
 
-The **Prior Works** view shows the most foundational papers a given work builds on. The **Derivative Works** view shows what has been built on top of a paper — useful for tracking a field's evolution after a foundational publication.
+The Prior Works view shows the most foundational papers a given work builds on. The Derivative Works view shows what has been built on top of a paper, useful for tracking a field's evolution after a foundational publication. Both views rank papers by influence within the subgraph.
+
+The tool also supports batch operations for users on the Academic plan, allowing researchers to generate multiple graphs in sequence without manual re-entry. Export functionality lets you save graph images and metadata for inclusion in literature review documents.
 
 ## Who It's For
 
-- **Researchers entering a new field** who know one key paper but not the landscape
-- **PhD students** mapping out a research area for literature reviews
-- **Authors** checking the competitive and related work landscape before submission
-- **Research librarians** helping patrons explore unfamiliar academic domains
-- **Analysts and journalists** who need to quickly understand the academic consensus around a topic
+- Researchers entering a new field who know one key paper but not the landscape
+- PhD students mapping out a research area for literature reviews
+- Authors checking the competitive and related work landscape before submission
+- Research librarians helping patrons explore unfamiliar academic domains
+- Analysts and journalists who need to quickly understand the academic consensus around a topic
+- Grant writers building the related work section of a proposal
 
 ## Pricing
 
-| Plan | Price | Graphs/Month |
-|------|-------|-------------|
-| Free | $0 | 5 graphs/month |
-| Academic | $5/month | Unlimited |
+| Plan | Price | Graphs/Month | Features |
+|------|-------|-------------|----------|
+| Free | $0 | 5 graphs/month | Basic graph generation, Prior/Derivative Works |
+| Academic | $5/month | Unlimited | All free features plus batch operations, export |
 
-> 5 graphs/month is genuinely adequate for occasional use. Heavy users — anyone doing a systematic review — need the Academic plan.
+Prices verified 2026-04-15. Free tier requires no account creation; Academic plan requires email signup and valid payment method.
 
 ## Key Features
 
-- **Visual similarity graph** — papers arranged by conceptual similarity, not just citation chains
-- **Prior Works view** — foundational papers a work builds on, ranked by influence
-- **Derivative Works view** — papers that build on the seed paper, tracking field evolution
-- **220M paper index** — powered by Semantic Scholar's full database
-- **DOI / ArXiv support** — accepts any paper identifier, not just titles
-- **No account required** for free tier — immediate use without signup
+- Visual similarity graph with papers arranged by conceptual similarity, not just citation chains
+- Prior Works view showing foundational papers ranked by influence
+- Derivative Works view tracking field evolution after a seed paper
+- 220 million paper index powered by Semantic Scholar
+- DOI, ArXiv ID, and URL support for any paper identifier
+- No account required for free tier; immediate use without signup
+- Hover previews showing title, authors, year, and abstract snippet
+- Direct links to Semantic Scholar and full-text sources where available
 
 ## Limitations
 
-- **5 graphs/month on free tier** — restrictive for active researchers who need to explore many papers
-- **Discovery only, no synthesis** — Connected Papers finds related papers but does not read them, extract data, or answer research questions. [Elicit](../tools/elicit.md) and [Consensus](../tools/consensus.md) handle synthesis
-- **No citation classification** — cannot distinguish supporting from contrasting citations; [Scite](../tools/scite.md) does this
-- **Graph can be overwhelming** — a well-cited paper in a large field generates a very dense graph; filtering is limited
-- **Coverage dependent on Semantic Scholar** — humanities and some social science fields are less comprehensively indexed
+- 5 graphs/month on free tier is restrictive for active researchers doing systematic reviews
+- Discovery only, no synthesis; Connected Papers finds related papers but does not read them, extract data, or answer research questions. [Elicit](../tools/elicit.md) and [Consensus](../tools/consensus.md) handle synthesis
+- No citation classification; cannot distinguish supporting from contrasting citations. [Scite](../tools/scite.md) provides this capability
+- Graph can be overwhelming for well-cited papers in large fields; filtering options are limited
+- Coverage dependent on Semantic Scholar; humanities and some social science fields are less comprehensively indexed
 
 ## Bottom Line
 
-Connected Papers is the best tool for one specific job: mapping an unfamiliar research area from a single seed paper. Utility is 7/10 — it is excellent at its specific task, but that task is narrower than what tools like Elicit or Semantic Scholar do. Value is 8/10 because the free tier covers most use cases and the $5/month Academic plan is among the cheapest in the category. The tool has no close equivalent — the visual graph approach is genuinely unique.
+Connected Papers is the best tool for one specific job: mapping an unfamiliar research area from a single seed paper. Utility is 7/10 because it excels at its specific task but that task is narrower than what tools like Elicit or Semantic Scholar do. Value is 8/10 because the free tier covers most use cases and the $5/month Academic plan is among the cheapest in the category. The tool has no close equivalent; the visual graph approach is genuinely unique.
 
 ## Best Alternatives
 
 | Tool | Price | Key Difference |
 |------|-------|----------------|
-| [Semantic Scholar](../tools/semantic-scholar.md) | Free | Broader search; less visual discovery; better for known search terms |
+| [Semantic Scholar](../tools/semantic-scholar.md) | Free | Broader search capability; less visual discovery; better for known search terms |
 | [Elicit](../tools/elicit.md) | Free / $12/mo | AI synthesis and data extraction across papers, not visual graph |
 | [Consensus](../tools/consensus.md) | Free / $10.99/mo | Research question synthesis with consensus meter |
-| ResearchRabbit | Free | Similar visual graph approach; free; different algorithm |
 
 ## FAQ
 
 **How is Connected Papers different from citation tracking in Google Scholar?**
-Google Scholar shows direct citations (papers that cite your paper). Connected Papers shows conceptual similarity — papers that share themes, methods, and references with your paper, even if they don't directly cite it. The graph reveals the neighborhood, not just the citation chain.
+Google Scholar shows direct citations (papers that cite your paper). Connected Papers shows conceptual similarity: papers that share themes, methods, and references with your paper, even if they don't directly cite it. The graph reveals the neighborhood, not just the citation chain.
 
 **Does Connected Papers work for all academic fields?**
-Best coverage in STEM, computer science, and social sciences. Humanities coverage is more limited — the underlying Semantic Scholar database is less comprehensive for arts and humanities. Still useful in those fields, but expect smaller, sparser graphs.
+Best coverage in STEM, computer science, and social sciences. Humanities coverage is more limited because the underlying Semantic Scholar database is less comprehensive for arts and humanities. Still useful in those fields, but expect smaller, sparser graphs.
 
 **Is the Academic plan worth $5/month?**
-If you're doing active research across multiple projects, yes. 5 graphs/month runs out fast during a literature review. At $5/month with unlimited graphs, it is the cheapest productivity upgrade in the research tool category.
+If you're doing active research across multiple projects, yes. Five graphs per month runs out fast during a literature review. At $5/month with unlimited graphs, it is the cheapest productivity upgrade in the research tool category.
 
 ## Sources
-- [Connected Papers official site](https://connectedpapers.com) — verified 2026-04-14
-- [Connected Papers blog](https://blog.connectedpapers.com) — verified 2026-04-14
+
+- [Connected Papers official site](https://connectedpapers.com) - verified 2026-04-15
+- [Semantic Scholar about page](https://www.semanticscholar.org/about) - verified 2026-04-15
