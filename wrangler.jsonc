@@ -9,15 +9,10 @@
 	},
 	"observability": {
 		"enabled": true
-	},
-	"d1_databases": [
-		{
-			"binding": "DB",
-			"database_name": "aipedia-reviews",
-			"database_id": "REPLACE_AFTER_CREATE"
-		}
-	],
-	"vars": {
-		"TURNSTILE_SITE_KEY": "REPLACE_WITH_TURNSTILE_SITE_KEY"
 	}
+	// D1 reviews database is configured in the Cloudflare Pages dashboard
+	// (Settings → Bindings → D1 database binding: DB → select your database).
+	// Keeping it out of wrangler.jsonc avoids the placeholder-ID deploy error
+	// and lets you swap databases without code changes.
+	// See REVIEWS-SETUP.md for the full activation walkthrough.
 }
