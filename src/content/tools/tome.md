@@ -31,13 +31,13 @@ author: "aipedia.wiki Editorial"
 quick_answer: >-
   Tome is an AI storytelling and presentation tool by Magical Tome Inc. that blends slides, long-form text, and multimedia into a continuous scrollable narrative format rather than a conventional 16:9 deck. Its key differentiator is AI generation tuned for coherent narrative arc (problem-solution, before-after structures) rather than bullet-point extraction, which produces meaningfully different output from generic slide tools. Free tier available; Pro is $16/month. Best for founders crafting investor pitches and product strategists building vision documents shared as live URLs; not for sales teams, data-heavy presentations, or anyone needing PPTX compatibility, where Gamma ($10/month) handles export fidelity better. The fluid format can feel informal in contexts where a tight slide deck is expected.
 best_for:
-  - Early-stage founders and startup pitches
+  - - Early-stage founders and startup pitches
   - Product vision and strategy documents
   - Narrative-driven internal alignment
   - Investor presentations shared as URLs
   - Brand storytelling and campaign narratives
 not_best_for:
-  - Sales decks requiring standard slide format
+  - - Sales decks requiring standard slide format
   - Data-heavy presentations with tables and charts
   - Teams needing PowerPoint export fidelity
   - Audiences expecting conventional 16:9 slides

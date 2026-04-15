@@ -34,12 +34,12 @@ meta_description: >-
   $12/mo. Updated April 2026.
 author: aipedia.wiki Editorial
 best_for:
-  - academic researchers
+  - - academic researchers
   - evidence synthesis professionals
   - policy analysts
   - systematic review teams
 not_best_for:
-  - casual research questions
+  - - casual research questions
   - non-english literature focus
   - general-purpose web search
 quick_answer: >-

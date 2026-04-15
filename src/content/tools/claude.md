@@ -30,13 +30,13 @@ scores:
   longevity: 10
 tags: [chatbot, ai-assistant, writing, coding, reasoning, analysis, long-context, artifacts, claude-code, extended-thinking, computer-use]
 best_for:
-  - long-form writing and editing
+  - - long-form writing and editing
   - complex reasoning and analysis
   - agentic coding via Claude Code
   - large document and codebase processing
   - computer security research (via Mythos Preview, invite-only)
 not_best_for:
-  - image generation
+  - - image generation
   - broad plugin or integration ecosystem
   - users wanting a single tool for shopping, calendar, and search
 quick_answer: >-

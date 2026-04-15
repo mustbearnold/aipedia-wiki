@@ -33,11 +33,11 @@ meta_description: >-
   including AI. Your notes stay as files on your device. Sync add-on is $4/mo.
 author: aipedia.wiki Editorial
 best_for:
-  - power users valuing control
+  - - power users valuing control
   - pkm practitioners
   - privacy-conscious users
 not_best_for:
-  - users needing built-in ai
+  - - users needing built-in ai
   - users requiring team collaboration
 quick_answer: >-
   Obsidian is a local-first markdown note-taking app that stores every note as a plain .md file on your device, no cloud required, no proprietary format, no vendor lock-in. Its 2,100+ community plugins, including Smart Connections and Copilot, add AI semantic search and LLM chat over your own vault using your own API keys. The core app is free for personal use; optional Sync costs $4/month and a commercial license is $50/year. Best for solo knowledge workers who want full data ownership, not for teams needing real-time collaboration or anyone who wants AI that works out of the box, Notion AI is the better choice there.

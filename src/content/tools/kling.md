@@ -31,12 +31,12 @@ meta_description: >-
   $0-$37/mo. Kling 4 has not launched. Top community ELO ranking for AI video quality.
 author: aipedia.wiki Editorial
 best_for:
-  - ai video quality
+  - - ai video quality
   - cost-effective video
   - short-form content
   - b-roll generation
 not_best_for:
-  - api access
+  - - api access
   - western content standards
   - long video clips
 quick_answer: >-

@@ -36,13 +36,13 @@ author: aipedia.wiki Editorial
 quick_answer: >-
   Murf is an AI text-to-speech platform built for professional narration workflows, offering 140+ studio-quality voices across 25+ languages alongside video sync, background music mixing, Google Slides integration, and team collaboration. The workflow toolset differentiates it from ElevenLabs: voice cloning, per-word audio controls, and direct video timeline assembly are designed specifically for e-learning and corporate production. Pro is $26/month annually (voice cloning included, commercial license, 96 hours per year); best for L&D teams and instructional designers producing structured narrated content, not for creators needing the most natural-sounding voices or real-time voice synthesis.
 best_for:
-  - E-learning and corporate training content
+  - - E-learning and corporate training content
   - Product demo and explainer videos
   - Presentation narration and slide integration
   - Team-based voiceover production
   - Instructional design workflows
 not_best_for:
-  - Audiobook and fiction narration
+  - - Audiobook and fiction narration
   - Real-time voice synthesis
   - Conversational AI applications
   - Creative storytelling requiring emotional range

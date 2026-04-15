@@ -29,13 +29,13 @@ seo_title: "Goose AI Agent: Features, Review & Alternatives (2026)"
 meta_description: "Goose is a free open-source AI agent from the Agentic AI Foundation (formerly Block). Desktop, CLI, and API. Supports 15+ LLM providers and 70+ MCP extensions."
 author: "aipedia.wiki Editorial"
 best_for:
-  - developers who want a free
+  - - developers who want a free
   - self-hosted autonomous agent
   - teams that need LLM provider flexibility without lock-in
   - power users building custom automation with MCP extensions
   - engineers who prefer CLI-first workflows
 not_best_for:
-  - users who want a managed
+  - - users who want a managed
   - hosted agent service
   - non-developers who need a no-code interface
 quick_answer: >-

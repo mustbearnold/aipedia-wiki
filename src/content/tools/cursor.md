@@ -29,11 +29,11 @@ seo_title: "Cursor: Features, Pricing & Review (2026)"
 meta_description: "Cursor is an AI-native code editor built on VS Code with autocomplete, chat, and Background Agents. Free tier available; Pro costs $20/mo. Best IDE for AI coding."
 author: "aipedia.wiki Editorial"
 best_for:
-  - professional developers on VS Code
+  - - professional developers on VS Code
   - multi-file agentic refactors
   - teams wanting standardized AI-assisted development
 not_best_for:
-  - fully autonomous cli agent workflows
+  - - fully autonomous cli agent workflows
   - jetbrains or vim users
   - high-volume api users on Pro tier
 quick_answer: >-

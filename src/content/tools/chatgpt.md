@@ -30,13 +30,13 @@ scores:
   longevity: 10
 tags: [chatbot, ai-assistant, writing, search, code-interpreter, image-generation, gpt-5, codex, agent-mode, voice, memory]
 best_for:
-  - general-purpose tasks
+  - - general-purpose tasks
   - image generation (GPT Image 1.5)
   - Codex coding agent (Pro tiers)
   - mainstream and business users
   - agent and automation workflows
 not_best_for:
-  - users who need video generation (Sora discontinued)
+  - - users who need video generation (Sora discontinued)
   - free users who dislike ads
   - deep long-form reasoning vs. Claude Opus 4.6
 quick_answer: >-

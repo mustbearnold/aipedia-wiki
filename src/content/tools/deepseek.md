@@ -32,12 +32,12 @@ author: "aipedia.wiki Editorial"
 quick_answer: >-
   DeepSeek is a Chinese AI lab that releases open-weight frontier models. As of April 15, 2026, DeepSeek-V3.2 remains the flagship general chat and coding model; DeepSeek-V4 has not yet launched (expected late April 2026 but has missed earlier target windows). DeepSeek-R1 (January 2025) is the reasoning model, matched or exceeded OpenAI o1 on AIME 2024 at launch; R2 has not been announced. The single biggest differentiator is cost: API access starts at $0.28 per million input tokens, roughly 9x cheaper than GPT-5.4. The chat interface at chat.deepseek.com is free with no declared usage cap. Best for developers and researchers who want frontier performance at minimal cost; not for users who need tight enterprise compliance or a polished product experience.
 best_for:
-  - developers seeking low-cost API access
+  - - developers seeking low-cost API access
   - math and coding tasks requiring reasoning
   - self-hosters running open weights locally
   - researchers needing an open-weight frontier baseline
 not_best_for:
-  - enterprise buyers needing SOC 2 / GDPR assurances
+  - - enterprise buyers needing SOC 2 / GDPR assurances
   - users who prefer a polished consumer product
   - workloads requiring guaranteed uptime SLAs
 ---

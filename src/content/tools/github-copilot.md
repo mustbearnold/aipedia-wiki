@@ -29,12 +29,12 @@ seo_title: "GitHub Copilot: Features, Pricing & Review (2026)"
 meta_description: "GitHub Copilot is an AI coding assistant with autocomplete, chat, and agent mode in VS Code and JetBrains. Free tier available; Pro plan $10/mo includes Claude Opus 4.6 and agent mode."
 author: "aipedia.wiki Editorial"
 best_for:
-  - vscode developers
+  - - vscode developers
   - github ecosystem users
   - budget-conscious programmers
   - teams wanting ide-native agent mode
 not_best_for:
-  - maximum autonomous agentic coding
+  - - maximum autonomous agentic coding
   - non-github workflows
   - power users needing 1500+ premium requests per month
 quick_answer: >-

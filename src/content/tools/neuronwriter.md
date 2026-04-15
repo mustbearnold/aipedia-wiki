@@ -36,13 +36,13 @@ author: aipedia.wiki Editorial
 quick_answer: >-
   NeuronWriter is an NLP-based SEO content optimization tool from a Polish software company that analyzes the top 30 SERP results for a keyword, extracts the semantic terms and entities used by ranking pages, and scores your content in real-time as you write. The differentiator is value: its content scoring engine is broadly comparable to Surfer SEO at roughly half the price, with the Bronze plan starting at 19 euros/month for 25 content queries. Plans are priced in euros (19 to 97 euros/month), which introduces minor currency fluctuation for US users; best for budget-conscious SEO writers and small agencies who want solid NLP-based optimization without Surfer SEO's $79/month minimum, not for teams needing a full SEO suite with keyword research and backlink data.
 best_for:
-  - Budget-conscious SEO writers
+  - - Budget-conscious SEO writers
   - content agencies
   - affiliate site operators
   - freelance writers
   - European in-house SEO teams.
 not_best_for:
-  - Large enterprises needing full SEO suites
+  - - Large enterprises needing full SEO suites
   - teams requiring advanced backlink analysis
   - organizations preferring USD pricing.
 

@@ -30,12 +30,12 @@ seo_title: "Runway: Features, Pricing & Review (2026)"
 meta_description: "Runway is the professional AI video generation platform with GWM-1 and Gen-4.5 via API, used by studios. Plans from $15-$95/mo. Best for production pipelines."
 author: "aipedia.wiki Editorial"
 best_for:
-  - professional filmmakers
+  - - professional filmmakers
   - video production studios
   - api integration
   - advertising agencies
 not_best_for:
-  - raw quality priority
+  - - raw quality priority
   - budget constraints
 quick_answer: >-
   Runway is a professional AI video generation and editing platform developed by Runway AI, Inc. As of April 2026, the platform has expanded beyond Gen-4.5 to GWM-1 (General World Model), an autoregressive model built on Gen-4.5 for real-time interactive applications including Worlds, Avatars, and Robotics. Gen-4.5 remains the core video generation model available via API (2-10 second clips, text-to-video and image-to-video). Runway also hosts third-party models including Seedance 2.0 (available to Unlimited plan subscribers outside the US). Plans run $15/month (Basic) to $95/month (Pro, API access), with an Unlimited tier above that. Best for production studios and developers who need a stable API, a mature professional ecosystem, and broad model access under one roof; not the best pick when raw video quality at lowest cost is the only criterion, where Kling still wins on pure value.

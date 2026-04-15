@@ -7,16 +7,16 @@ interface Props {
 const { category, active = false } = Astro.props;
 
 const categoryMap: Record<string, { emoji: string; label: string }> = {
-  'ai-voice': { emoji: '🎙️', label: 'AI Voice' },
-  'ai-video': { emoji: '🎬', label: 'AI Video' },
-  'ai-coding': { emoji: '💻', label: 'AI Coding' },
-  'ai-image': { emoji: '🎨', label: 'AI Image' },
-  'ai-writing': { emoji: '✍️', label: 'AI Writing' },
-  'ai-automation': { emoji: '⚡', label: 'AI Automation' },
-  'ai-seo': { emoji: '📈', label: 'AI SEO' },
-  'ai-design': { emoji: '🖌️', label: 'AI Design' },
-  'ai-search': { emoji: '🔍', label: 'AI Search' },
-  'ai-notes': { emoji: '📝', label: 'AI Notes' },
+  'ai-voice': { emoji: '🎙️', label: 'Voice' },
+  'ai-video': { emoji: '🎬', label: 'Video' },
+  'ai-coding': { emoji: '💻', label: 'Coding' },
+  'ai-image': { emoji: '🎨', label: 'Image' },
+  'ai-writing': { emoji: '✍️', label: 'Writing' },
+  'ai-automation': { emoji: '⚡', label: 'Automation' },
+  'ai-seo': { emoji: '📈', label: 'SEO' },
+  'ai-design': { emoji: '🖌️', label: 'Design' },
+  'ai-search': { emoji: '🔍', label: 'Search' },
+  'ai-notes': { emoji: '📝', label: 'Notes' },
 };
 
 const info = categoryMap[category] ?? { emoji: '🔧', label: category };

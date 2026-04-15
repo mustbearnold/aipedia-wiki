@@ -31,13 +31,13 @@ author: "aipedia.wiki Editorial"
 quick_answer: >-
   Aider is a free, open-source command-line coding assistant created by Paul Gauthier that edits real files in your local git repo, auto-commits each change, and works with virtually any LLM via API key. Its architect mode separates planning from execution, using one model to design the approach and a second cheaper model to write the code, keeping session costs as low as $0.05-0.30/hour on Claude Opus 4.6. Aider itself costs nothing (Apache 2.0); you pay API costs directly. Best for CLI-comfortable developers who want BYOK economics and transparent git history; not the right fit if you want a polished GUI, where Cursor at $20/month is the better choice.
 best_for:
-  - CLI-comfortable developers
+  - - CLI-comfortable developers
   - Open-source contributors
   - BYOK (bring your own key) users
   - Privacy-conscious teams
   - Cost-transparent workflows
 not_best_for:
-  - Developers requiring GUI IDE experience
+  - - Developers requiring GUI IDE experience
   - Teams without terminal proficiency
   - Projects needing visual diff viewers
   - Users wanting zero configuration

@@ -30,11 +30,11 @@ seo_title: "MiniMax AI: Features, Pricing & Review (2026)"
 meta_description: "MiniMax is the Shanghai AI lab behind Talkie, Hailuo video, and the M2 LLM family. API from $0.12/1M tokens. Honest 2026 review with pricing and alternatives."
 author: "aipedia.wiki Editorial"
 best_for:
-  - developers wanting cheap multimodal API access
+  - - developers wanting cheap multimodal API access
   - users of the Talkie AI companion app
   - teams building voice or video generation apps
 not_best_for:
-  - users who need deep English-language chat quality matching GPT-5.4
+  - - users who need deep English-language chat quality matching GPT-5.4
   - enterprises requiring US-based data residency
 quick_answer: >-
   MiniMax is a Shanghai-based AI company (founded 2021, listed on the Hong Kong Stock Exchange in January 2026) that builds multimodal foundation models and consumer apps. Its M2 series models offer text, audio, video, and music generation via API at prices starting around $0.12 per million input tokens, making them among the cheapest multimodal APIs available. Its Talkie companion app reached 11 million monthly active users by mid-2024. Best for cost-conscious API builders and Talkie users; less competitive for English-first chatbot quality versus OpenAI or Anthropic.

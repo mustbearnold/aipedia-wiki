@@ -31,12 +31,12 @@ author: "aipedia.wiki Editorial"
 quick_answer: >-
   Rytr is a budget AI writing assistant launched in 2021 that generates short-form content from over 40 use-case templates including ad copy, product descriptions, and email subject lines. Its differentiator is price: the Unlimited plan at $29/month and the Saver plan at $9/month are among the lowest in the category for uncapped template-driven generation. Best for freelancers and e-commerce sellers generating high-volume short-form copy at low cost, not for anyone needing long-form article quality or the reasoning depth that direct ChatGPT or Claude access provides. Its underlying model produces competent but not exceptional output.
 best_for:
-  - Freelancers generating high-volume short-form copy
+  - - Freelancers generating high-volume short-form copy
   - E-commerce sellers creating product descriptions at scale
   - Social media managers drafting captions and ad variations
   - Budget-conscious users on the free tier
 not_best_for:
-  - Long-form content and SEO articles
+  - - Long-form content and SEO articles
   - Teams requiring workflow automation
   - Users needing output at the ceiling of current AI capability
 ---

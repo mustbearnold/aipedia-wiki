@@ -34,12 +34,12 @@ meta_description: >-
   research.
 author: aipedia.wiki Editorial
 best_for:
-  - link builders
+  - - link builders
   - seo professionals
   - affiliate site owners
   - content marketers
 not_best_for:
-  - users needing all-in-one platform
+  - - users needing all-in-one platform
   - users wanting advanced content optimization
   - teams requiring PPC research
 quick_answer: >-

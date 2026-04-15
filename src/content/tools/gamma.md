@@ -36,14 +36,14 @@ author: aipedia.wiki Editorial
 quick_answer: >-
   Gamma is an AI-first presentation and document builder developed by Gamma Tech (founded 2020) that generates complete, styled decks, documents, and shareable web pages from a single text prompt or outline. Its card-based format functions simultaneously as a slide deck, a scrollable document, and a shareable browser URL without any download required, making it more versatile than traditional slide tools for client-facing and async sharing workflows. The free tier includes 400 one-time AI credits; Plus costs $10/month with 400 credits per month; Pro costs $20/month with unlimited credits; Team costs $30/month with team collaboration features. Best for professionals who need polished presentations quickly without design skills, not for enterprise workflows requiring pixel-accurate PowerPoint round-trip fidelity, where PPTX export quality from Gamma still needs cleanup in PowerPoint. The free-tier 400 credits are one-time rather than monthly, so heavy users hit the limit quickly.
 best_for:
-  - Founders building pitch decks
+  - - Founders building pitch decks
   - consultants creating client proposals
   - educators producing course materials
   - marketing teams building campaign presentations
   - students producing academic work
   - and anyone who needs a polished presentation in minutes without design skills.
 not_best_for:
-  - Enterprise organizations requiring pixel-perfect PowerPoint export fidelity
+  - - Enterprise organizations requiring pixel-perfect PowerPoint export fidelity
   - teams needing advanced data visualization and charting
   - workflows requiring offline presentation capability
   - or users who need thousands of template variations.

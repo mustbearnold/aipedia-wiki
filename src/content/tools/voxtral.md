@@ -31,13 +31,13 @@ author: "aipedia.wiki Editorial"
 quick_answer: >-
   Voxtral is Mistral AI's open-weight voice model, launched March 2026, that handles both text-to-speech and speech-to-text in a single API, and is simultaneously free to self-host and available via the Mistral commercial API. The commercial TTS API is priced at $0.016 per 1,000 characters, which is 47% cheaper than ElevenLabs ($0.030/1K chars), making it the lowest-cost major TTS API as of April 2026. Best for developers building voice-enabled applications at scale where cost matters more than top-tier expressiveness; not for content creators who need voice cloning or a wide voice library, where ElevenLabs is the stronger choice. Voxtral does not support custom voice cloning, has a narrower stock voice library than competitors, and launched only weeks ago with limited community tooling.
 best_for:
-  - Developers building voice-enabled applications at scale
+  - - Developers building voice-enabled applications at scale
   - High-volume content producers (e-learning, accessibility, platforms)
   - Teams already using Mistral for text generation
   - Privacy-sensitive deployments requiring on-premise audio processing
   - Researchers experimenting with voice synthesis
 not_best_for:
-  - Content creators needing voice cloning or emotional expressiveness
+  - - Content creators needing voice cloning or emotional expressiveness
   - Podcast and audiobook producers prioritizing naturalness
   - Users requiring a consumer-facing UI or no-code interface
   - Applications demanding the broadest multilingual voice library

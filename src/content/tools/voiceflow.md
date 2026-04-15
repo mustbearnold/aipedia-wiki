@@ -31,13 +31,13 @@ author: "aipedia.wiki Editorial"
 quick_answer: >-
   Voiceflow is a no-code AI agent builder that uses a visual canvas to design, test, and deploy chatbots and voice assistants for customer support, lead qualification, and FAQ answering across web chat, Slack, WhatsApp, and Teams. The platform combines a drag-and-drop conversation designer with a knowledge base feature that enables RAG-powered question answering without scripting every response. Sandbox tier is free (2 agents, 500 interactions/month); Pro is $50/month (unlimited agents, 5,000 interactions); Teams is $900/month. Best for product and CX teams who need to ship LLM-powered customer-facing agents without full engineering support. Not ideal for developers seeking code-level control, where n8n or Relevance AI are better fits. Interaction-based pricing scales poorly for high-volume deployments, and LLM API costs are billed separately on top of the Voiceflow subscription.
 best_for:
-  - Product managers building customer support chatbots
+  - - Product managers building customer support chatbots
   - CX teams deploying FAQ and onboarding agents
   - Agencies building conversational AI for clients
   - E-commerce teams handling order tracking and pre-sales qualification
   - Enterprise teams needing RBAC and deployment controls
 not_best_for:
-  - Developers who need code-level control over agent logic
+  - - Developers who need code-level control over agent logic
   - Teams requiring complex multi-system workflow automation
   - High-volume deployments where interaction costs become prohibitive
   - Organizations already invested in Dialogflow or other legacy platforms

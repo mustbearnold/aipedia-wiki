@@ -49,12 +49,12 @@ quick_answer: >-
   correction, where Grammarly covers the error-catching workflow. The free tier
   limit runs out quickly for anyone editing a full document.
 best_for:
-  - Non-native English speakers refining professional writing
+  - - Non-native English speakers refining professional writing
   - Business professionals polishing emails and reports
   - Students improving essay clarity and flow
   - Writers with drafts seeking alternative phrasings
 not_best_for:
-  - Content generation from scratch
+  - - Content generation from scratch
   - High-volume SEO article production
   - Grammar and spelling correction
   - Users needing full-document restructuring

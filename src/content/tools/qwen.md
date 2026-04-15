@@ -32,12 +32,12 @@ author: "aipedia.wiki Editorial"
 quick_answer: >-
   Qwen is Alibaba Cloud's family of open-weight large language models covering text, code, vision, math, and reasoning, with models ranging from 600M to 235B parameters. The flagship Qwen3-235B-A22B matched DeepSeek-R1 and Gemini 2.5 Pro on reasoning and coding benchmarks at its April 2025 release; current comparisons are against GPT-5.4 and Claude Opus 4.6. Alibaba Cloud API access starts at $0.23/M tokens for Qwen 2.5 72B; best for developers who want open-weight frontier performance they can self-host or access cheaply, not for teams needing a polished consumer chat product with strong English-only focus.
 best_for:
-  - multilingual applications (119 languages)
+  - - multilingual applications (119 languages)
   - developers wanting open weights to self-host
   - coding and math workloads
   - cost-sensitive API usage
 not_best_for:
-  - users wanting a polished consumer chat app
+  - - users wanting a polished consumer chat app
   - teams needing enterprise compliance guarantees
   - workloads where Alibaba data residency is a concern
 ---

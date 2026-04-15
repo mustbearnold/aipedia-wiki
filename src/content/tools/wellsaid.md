@@ -31,10 +31,10 @@ meta_description: WellSaid Labs AI voices for e-learning narration. Current pric
 author: aipedia.wiki
 quick_answer: WellSaid Labs Studio v3 delivers 120+ AI voices for professional narration; Teams plan starts at $99/user/mo with SSO [wellsaidlabs.com/pricing](https://wellsaidlabs.com/pricing).
 best_for:
-  - L&D teams
+  - - L&D teams
   - instructional designers
 not_best_for:
-  - Podcasting
+  - - Podcasting
   - character voices
   - free users
 ---

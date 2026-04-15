@@ -36,12 +36,12 @@ tags: [ai-agents, multi-agent, open-source, python, orchestration, framework, de
 quick_answer: >-
   CrewAI is an open-source Python framework for building multi-agent AI systems, developed by CrewAI Inc. and launched in December 2023. Its key differentiator is the role-based agent design pattern, where each agent gets a defined role, goal, backstory, and tool set, making multi-agent coordination more intuitive than the lower-level graph approach required by LangGraph. The core framework is free under the MIT license; the hosted CrewAI+ platform starts at $35/month for deployment and monitoring (LLM API costs are separate). Best for Python developers prototyping multi-agent workflows, not for production-critical systems where output consistency and cost controls are non-negotiable, since multi-agent LLM calls multiply quickly and debugging remains difficult.
 best_for:
-  - Python developers building AI agent systems
+  - - Python developers building AI agent systems
   - AI/ML engineers prototyping multi-agent workflows
   - Startups building AI-powered products
   - Teams integrating agents into existing Python codebases
 not_best_for:
-  - Non-Python teams or JavaScript-first organizations
+  - - Non-Python teams or JavaScript-first organizations
   - Production systems requiring guaranteed output consistency
   - Cost-sensitive applications with strict LLM budget caps
   - Teams needing fine-grained control over agent state and execution

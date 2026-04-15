@@ -29,12 +29,12 @@ seo_title: "Hermes Agent: Features, Pricing & Review (2026)"
 meta_description: "Hermes Agent is Nous Research's free MIT-licensed autonomous AI agent with persistent memory, auto-generated skills, natural language scheduling, and multi-platform support (Telegram, Discord, Slack, WhatsApp, Signal, CLI)."
 author: "aipedia.wiki Editorial"
 best_for:
-  - developers who want a self-improving autonomous agent
+  - - developers who want a self-improving autonomous agent
   - users needing scheduled AI tasks on messaging platforms
   - teams at AI research-adjacent organizations
   - anyone wanting persistent cross-session AI memory
 not_best_for:
-  - users wanting plug-and-play no-setup agents
+  - - users wanting plug-and-play no-setup agents
   - non-technical users unfamiliar with self-hosting
   - tasks requiring deep IDE integration for coding
 quick_answer: >-

@@ -35,20 +35,20 @@ const categoryEmojiMap: Record<string, string> = {
 };
 
 const categoryLabelMap: Record<string, { emoji: string; label: string }> = {
-  'ai-chatbots': { emoji: '\uD83D\uDCAC', label: 'AI Chatbots' },
-  'ai-voice': { emoji: '\uD83D\uDD0A', label: 'AI Voice' },
-  'ai-video': { emoji: '\uD83C\uDFAC', label: 'AI Video' },
-  'ai-coding': { emoji: '\uD83D\uDCBB', label: 'AI Coding' },
-  'ai-automation': { emoji: '\u26A1', label: 'AI Automation' },
-  'ai-seo': { emoji: '\uD83D\uDCC8', label: 'AI SEO' },
-  'ai-design': { emoji: '\uD83C\uDFA8', label: 'AI Design' },
-  'ai-writing': { emoji: '\u270D\uFE0F', label: 'AI Writing' },
-  'ai-image': { emoji: '\uD83D\uDDBC', label: 'AI Image' },
-  'ai-search': { emoji: '\uD83D\uDD0D', label: 'AI Search' },
-  'ai-notes': { emoji: '\uD83D\uDCDD', label: 'AI Notes' },
-  'ai-music': { emoji: '\uD83C\uDFB5', label: 'AI Music' },
-  'ai-presentation': { emoji: '\uD83D\uDCCA', label: 'AI Presentation' },
-  'ai-research': { emoji: '\uD83D\uDD2C', label: 'AI Research' },
+  'ai-chatbots': { emoji: '\uD83D\uDCAC', label: 'Chatbots' },
+  'ai-voice': { emoji: '\uD83D\uDD0A', label: 'Voice' },
+  'ai-video': { emoji: '\uD83C\uDFAC', label: 'Video' },
+  'ai-coding': { emoji: '\uD83D\uDCBB', label: 'Coding' },
+  'ai-automation': { emoji: '\u26A1', label: 'Automation' },
+  'ai-seo': { emoji: '\uD83D\uDCC8', label: 'SEO' },
+  'ai-design': { emoji: '\uD83C\uDFA8', label: 'Design' },
+  'ai-writing': { emoji: '\u270D\uFE0F', label: 'Writing' },
+  'ai-image': { emoji: '\uD83D\uDDBC', label: 'Image' },
+  'ai-search': { emoji: '\uD83D\uDD0D', label: 'Search' },
+  'ai-notes': { emoji: '\uD83D\uDCDD', label: 'Notes' },
+  'ai-music': { emoji: '\uD83C\uDFB5', label: 'Music' },
+  'ai-presentation': { emoji: '\uD83D\uDCCA', label: 'Presentation' },
+  'ai-research': { emoji: '\uD83D\uDD2C', label: 'Research' },
 };
 
 const impactColors: Record<string, string> = {
@@ -127,7 +127,7 @@ const impactColors: Record<string, string> = {
 
   <!-- All Tools (filterable) -->
   <section class="mb-10">
-    <h2 class="text-xl font-bold text-[var(--text-primary)] mb-6">All Tools</h2>
+    <h2 id="tools-grid-heading" class="text-xl font-bold text-[var(--text-primary)] mb-6">All Tools</h2>
     <div id="tools-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
       {scoredTools.map(({ tool, score }, idx) => {
         const cat = tool.data.category ?? '';
@@ -331,7 +331,18 @@ const impactColors: Record<string, string> = {
       const cards = document.querySelectorAll<HTMLElement>('.tool-card-wrapper');
       const countEl = document.getElementById('filter-count');
       const linkEl = document.getElementById('category-link') as HTMLAnchorElement | null;
+      const headingEl = document.getElementById('tools-grid-heading');
       const pageSizeBtns = document.querySelectorAll<HTMLButtonElement>('.page-size-btn');
+
+      // Build label map from pill text so we don't have to duplicate categoryLabelMap in JS
+      const pillLabelMap: Record<string, string> = {};
+      pills.forEach(p => {
+        const f = p.getAttribute('data-filter') ?? '';
+        // pill text content includes emoji + label; strip emoji/whitespace for the heading
+        const txt = (p.textContent ?? '').replace(/\s+/g, ' ').trim();
+        // remove a leading emoji character if present (first non-ascii run + following space)
+        pillLabelMap[f] = txt.replace(/^[^A-Za-z]+/, '').trim() || txt;
+      });
       if (!pills.length || !cards.length) return; // not on homepage
 
       let activeFilter = 'all';
@@ -436,6 +447,15 @@ const impactColors: Record<string, string> = {
             linkEl.classList.remove('hidden');
           } else {
             linkEl.classList.add('hidden');
+          }
+        }
+
+        if (headingEl) {
+          if (filter === 'all') {
+            headingEl.textContent = 'All Tools';
+          } else {
+            const label = pillLabelMap[filter] ?? filter.replace(/^ai-/, '');
+            headingEl.textContent = `${label} Tools`;
           }
         }
       }

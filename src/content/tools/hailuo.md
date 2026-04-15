@@ -29,11 +29,11 @@ seo_title: "Hailuo AI Video Generator: Pricing, Review & Alternatives (2026)"
 meta_description: "Hailuo AI is MiniMax's text-to-video generator with native 1080P output and plans starting at $7.99/month. Honest 2026 review vs Kling and Runway."
 author: "aipedia.wiki Editorial"
 best_for:
-  - content creators wanting affordable 1080P AI video
+  - - content creators wanting affordable 1080P AI video
   - social media producers needing fast short clips
   - developers integrating video via the MiniMax API
 not_best_for:
-  - professional filmmakers needing precise motion control
+  - - professional filmmakers needing precise motion control
   - users who need long-form video beyond 10 seconds per clip
 quick_answer: >-
   Hailuo AI is MiniMax's text-to-video and image-to-video generator, launched March 2024. It produces native 1080P clips up to 10 seconds from text prompts or still images, starting free with 200 trial credits and paid plans from $7.99 per month (promotional) or $14.99 per month (regular). Compared to Kling and Runway, Hailuo is generally cheaper and reasonably competitive on quality for short social-media clips, but it lacks the advanced camera controls and longer generation windows of higher-end tools.

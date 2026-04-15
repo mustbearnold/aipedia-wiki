@@ -31,12 +31,12 @@ author: "aipedia.wiki Editorial"
 quick_answer: >-
   Scite is an academic citation tool developed by scite LLC that classifies each of its 1.2+ billion indexed citations as Supporting, Contrasting, or Mentioning, solving the core problem that traditional citation databases like Google Scholar treat all citations as equal. This classification is the only one of its kind at scale and is the primary reason researchers use it. The Essential plan costs $20/month with a limited free tier; best for PhD students and researchers doing systematic literature reviews who need to evaluate scientific credibility, not for casual academic work, where Semantic Scholar covers basic needs for free.
 best_for:
-  - PhD students conducting systematic literature reviews
+  - - PhD students conducting systematic literature reviews
   - Researchers evaluating paper credibility before citation
   - Journal editors assessing cited work quality
   - Science journalists fact-checking claims
 not_best_for:
-  - Casual academic browsing
+  - - Casual academic browsing
   - Researchers with no budget for tools
   - Fields with sparse coverage (engineering, humanities)
 ---

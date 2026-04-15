@@ -32,12 +32,12 @@ author: "aipedia.wiki Editorial"
 quick_answer: >-
   MiniMax Speech is MiniMax's text-to-speech and voice cloning API, offering the Speech-02-HD, Speech-02-Turbo, and Speech 2.6 model family. Its main selling point is aggressive pricing: $0.03/1K chars for Turbo and $0.05/1K chars for HD, which is up to 85% cheaper than ElevenLabs. It supports 40 languages, 300 plus pre-built voices, 5-second voice cloning, and emotional expression controls. Best for cost-sensitive production workloads and multilingual apps. ElevenLabs still leads on voice quality ceiling, voice library breadth, and ecosystem maturity.
 best_for:
-  - cost-sensitive production tts workloads
+  - - cost-sensitive production tts workloads
   - multilingual apps (40 languages)
   - voice cloning with short reference audio
   - conversational ai and ivr systems
 not_best_for:
-  - users needing the highest quality ceiling for audiobooks or luxury production
+  - - users needing the highest quality ceiling for audiobooks or luxury production
   - teams reliant on a large curated third-party voice marketplace
   - developers requiring a mature plugin ecosystem
 ---

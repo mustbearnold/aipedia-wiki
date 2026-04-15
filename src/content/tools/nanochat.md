@@ -29,12 +29,12 @@ seo_title: "nanochat by Karpathy: Full LLM Pipeline in ~8K Lines (2026)"
 meta_description: "nanochat is Andrej Karpathy's minimal, MIT-licensed LLM training framework covering tokenization, pretraining, fine-tuning, RLHF, and inference in ~8K lines of Python."
 author: "aipedia.wiki Editorial"
 best_for:
-  - ML engineers learning the full LLM training pipeline end-to-end
+  - - ML engineers learning the full LLM training pipeline end-to-end
   - educators teaching LLM internals in courses or workshops
   - researchers wanting a minimal, readable baseline to build on
   - engineers benchmarking training efficiency on single GPU nodes
 not_best_for:
-  - anyone who needs a production chatbot or deployed AI assistant
+  - - anyone who needs a production chatbot or deployed AI assistant
   - teams looking for a framework to train custom models at scale
 quick_answer: >-
   nanochat is an educational artifact from Andrej Karpathy (former OpenAI, Tesla AI) released in October 2025. It implements the complete LLM pipeline, tokenization, pretraining, supervised fine-tuning, RLHF, inference, and a ChatGPT-like web interface, in approximately 8,000 lines of readable Python. It is explicitly designed for learning and understanding, not production use. GPT-2-level models can be trained for around $48 on an 8xH100 node. The codebase has 51k+ GitHub stars and an MIT license. If you want to understand how language models work end-to-end, this is the clearest single resource available.

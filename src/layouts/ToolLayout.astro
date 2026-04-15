@@ -34,20 +34,20 @@ const scores = frontmatter.scores ?? { utility: 0, value: 0, moat: 0, longevity:
 const overallScore = Math.round(((scores.utility ?? 0) + (scores.value ?? 0) + (scores.moat ?? 0) + (scores.longevity ?? 0)) / 4 * 10) / 10;
 
 const categoryMap: Record<string, { emoji: string; label: string }> = {
-  'ai-chatbots': { emoji: '\u{1F4AC}', label: 'AI Chatbots' },
-  'ai-voice': { emoji: '\u{1F399}\uFE0F', label: 'AI Voice' },
-  'ai-video': { emoji: '\u{1F3AC}', label: 'AI Video' },
-  'ai-coding': { emoji: '\u{1F4BB}', label: 'AI Coding' },
-  'ai-image': { emoji: '\u{1F3A8}', label: 'AI Image' },
-  'ai-writing': { emoji: '\u270D\uFE0F', label: 'AI Writing' },
-  'ai-automation': { emoji: '\u26A1', label: 'AI Automation' },
-  'ai-seo': { emoji: '\u{1F4C8}', label: 'AI SEO' },
-  'ai-design': { emoji: '\u{1F58C}\uFE0F', label: 'AI Design' },
-  'ai-search': { emoji: '\u{1F50D}', label: 'AI Search' },
-  'ai-notes': { emoji: '\u{1F4DD}', label: 'AI Notes' },
-  'ai-music': { emoji: '\u{1F3B5}', label: 'AI Music' },
-  'ai-presentation': { emoji: '\uD83D\uDCCA', label: 'AI Presentation' },
-  'ai-research': { emoji: '\uD83D\uDD2C', label: 'AI Research' },
+  'ai-chatbots': { emoji: '\u{1F4AC}', label: 'Chatbots' },
+  'ai-voice': { emoji: '\u{1F399}\uFE0F', label: 'Voice' },
+  'ai-video': { emoji: '\u{1F3AC}', label: 'Video' },
+  'ai-coding': { emoji: '\u{1F4BB}', label: 'Coding' },
+  'ai-image': { emoji: '\u{1F3A8}', label: 'Image' },
+  'ai-writing': { emoji: '\u270D\uFE0F', label: 'Writing' },
+  'ai-automation': { emoji: '\u26A1', label: 'Automation' },
+  'ai-seo': { emoji: '\u{1F4C8}', label: 'SEO' },
+  'ai-design': { emoji: '\u{1F58C}\uFE0F', label: 'Design' },
+  'ai-search': { emoji: '\u{1F50D}', label: 'Search' },
+  'ai-notes': { emoji: '\u{1F4DD}', label: 'Notes' },
+  'ai-music': { emoji: '\u{1F3B5}', label: 'Music' },
+  'ai-presentation': { emoji: '\uD83D\uDCCA', label: 'Presentation' },
+  'ai-research': { emoji: '\uD83D\uDD2C', label: 'Research' },
 };
 
 const catSlug = frontmatter.category ?? '';
