@@ -26,15 +26,15 @@ scores:
   longevity: 7
 tags: [open-source, byok, local-model, ai-coding, vscode, jetbrains, self-hosted]
 seo_title: "Continue: Open-Source AI Coding Extension Review (2026)"
-meta_description: "Continue is a free, open-source AI coding extension for VS Code and JetBrains. Use any model — Claude, GPT-4, or local LLMs. MIT license. Review 2026."
+meta_description: "Continue is a free, open-source AI coding extension for VS Code and JetBrains. Use any model — Claude Opus 4.6, GPT-5.4, or local LLMs. MIT license. Review 2026."
 author: "aipedia.wiki Editorial"
 quick_answer: >-
-  Continue is a free, MIT-licensed open-source AI coding extension for VS Code and JetBrains, developed by Continue.dev, that acts as a flexible IDE layer connecting to any model you choose, including Claude, GPT-4o, Gemini, or local models via Ollama, without providing AI of its own. The extension is completely free; model costs are paid directly to your chosen provider, or eliminated entirely with a local Ollama model. Best for developers who want full model choice, zero subscription lock-in, and the option to keep code entirely on-device; not the right fit for developers who want an out-of-the-box experience without configuration work, where GitHub Copilot at $10/month is simpler and more capable from day one.
+  Continue is a free, MIT-licensed open-source AI coding extension for VS Code and JetBrains, developed by Continue.dev, that acts as a flexible IDE layer connecting to any model you choose, including Claude Opus 4.6, GPT-5.4, Gemini 3.1 Pro, or local models via Ollama, without providing AI of its own. The extension is completely free; model costs are paid directly to your chosen provider, or eliminated entirely with a local Ollama model. Best for developers who want full model choice, zero subscription lock-in, and the option to keep code entirely on-device; not the right fit for developers who want an out-of-the-box experience without configuration work, where GitHub Copilot at $10/month is simpler and more capable from day one.
 ---
 
 # Continue
 
-Continue is a free, open-source AI coding assistant extension for VS Code and JetBrains, developed by Continue.dev and released under the MIT license. Unlike Copilot or Cursor, Continue does not provide AI itself — instead, it acts as a flexible IDE layer that connects to any model you choose: Claude via API, GPT-4o, Gemini, Mistral, or local models running through Ollama or LM Studio. This makes it the most cost-controllable option available: the extension is free, and you pay only for the API calls you make (or nothing, if you run a local model). The key differentiator over GitHub Copilot is full model choice, full data control, and zero subscription lock-in.
+Continue is a free, open-source AI coding assistant extension for VS Code and JetBrains, developed by Continue.dev and released under the MIT license. Unlike Copilot or Cursor, Continue does not provide AI itself — instead, it acts as a flexible IDE layer that connects to any model you choose: Claude Opus 4.6 via API, GPT-5.4, Gemini 3.1 Pro, Mistral, or local models running through Ollama or LM Studio. This makes it the most cost-controllable option available: the extension is free, and you pay only for the API calls you make (or nothing, if you run a local model). The key differentiator over GitHub Copilot is full model choice, full data control, and zero subscription lock-in.
 
 ## What It Does
 

@@ -77,14 +77,14 @@ Available deployment modes:
 | Self-hosted (MIT) | Free | All features, you supply the API key and infrastructure |
 | Cloud free tier | Free | Via GitHub login, limited tasks, uses Minimax model ([GitHub](https://github.com/All-Hands-AI/OpenHands)) |
 | Cloud paid / Enterprise | Custom | Multi-user, RBAC, Kubernetes self-hosted, Slack/Jira integrations |
-| Model API costs | Usage-based | Claude Sonnet at roughly $3/MTok input; a typical coding session costs $0.50-$5 |
+| Model API costs | Usage-based | Claude Opus 4.6 or GPT-5.4; a typical coding session costs $0.50-$5 |
 
 The self-hosted path is fully free. The free cloud tier provides a no-setup entry point for evaluation.
 
 ## Key Features
 
 - **Docker sandbox:** isolated container per task; the agent can install packages, run builds, execute tests, and write files without touching your host system ([docs.openhands.dev](https://docs.openhands.dev/))
-- **Model-agnostic architecture:** works with Claude, GPT-4o, Gemini, Llama, and any LiteLLM-compatible endpoint; switch models per task
+- **Model-agnostic architecture:** works with Claude Opus 4.6, GPT-5.4, Gemini 3.1 Pro, Llama 4, and any LiteLLM-compatible endpoint; switch models per task
 - **GitHub and GitLab integration:** clones repos, reads issues, opens pull requests, and applies review feedback autonomously
 - **Multiple interfaces:** CLI, local GUI, Python SDK, and cloud -- pick the right interface for your workflow
 - **6,488 commits and 101 releases:** active development cadence with regular capability improvements
@@ -121,7 +121,7 @@ They are the same project. The project was renamed from OpenDevin to OpenHands i
 The self-hosted version is MIT-licensed and completely free. You pay only for the AI model API you connect. The cloud platform has a free tier via GitHub login that uses the Minimax model.
 
 **Does OpenHands work with Claude?**
-Yes. OpenHands is model-agnostic and officially supports Claude (Anthropic), GPT (OpenAI), Gemini (Google), and any LiteLLM-compatible model. You configure your preferred model via API key.
+Yes. OpenHands is model-agnostic and officially supports Claude Opus 4.6 (Anthropic), GPT-5.4 (OpenAI), Gemini 3.1 Pro (Google), and any LiteLLM-compatible model. You configure your preferred model via API key.
 
 **How does OpenHands compare to Devin?**
 OpenHands is functionally similar: both are autonomous software engineers that take a task description and produce working code with tests. Devin is a managed commercial service. OpenHands is free and self-hosted, meaning you control the model, the environment, and the data. Devin may have more reliable task completion on complex real-world benchmarks, but OpenHands costs dramatically less.

@@ -57,7 +57,7 @@ The Kimi K2.5 model underlying the API supports four distinct operating modes: I
 - **Analysts and researchers** who need to process very long documents (contracts, research papers, code repositories) in a single 256K-token context without chunking
 - **Bilingual Chinese-English teams** where cultural nuance and terminology accuracy in both languages matters
 - **Developers building agentic applications** who want a model with native multi-step tool-calling support (up to 300 steps per task)
-- **Coding teams** looking for strong code generation and debugging at a lower price point than Claude or GPT-4o
+- **Coding teams** looking for strong code generation and debugging at a lower price point than Claude Opus 4.6 or GPT-5.4
 - **Users who want free long-context chat** without paying for a premium plan
 
 ## Pricing
@@ -76,7 +76,7 @@ The Kimi K2.5 model underlying the API supports four distinct operating modes: I
 
 - **256K-token context window (free):** the free tier includes a 256K context window, enough for large codebases or hundred-page documents without any paid plan ([Kimi platform](https://platform.moonshot.ai/))
 - **Kimi K2.5: 1T-parameter MoE:** 1 trillion total parameters, 32B activated per token, balancing capability and inference efficiency; open-source weights available
-- **Agent Swarm (beta):** coordinates up to 100 specialized sub-agents in parallel; achieved 50.2% on Humanity's Last Exam vs GPT-5.2's 45.5% at 76% lower cost, per Moonshot benchmarks
+- **Agent Swarm (beta):** coordinates up to 100 specialized sub-agents in parallel; achieved 50.2% on Humanity's Last Exam vs GPT-5.4's benchmark score at 76% lower cost, per Moonshot benchmarks
 - **Native multimodal:** vision and language trained together, not as separate components; supports image and document inputs
 - **300-step tool calling:** Kimi K2 Thinking mode supports up to 300 sequential tool calls in a single agent task, enabling long-horizon automation
 - **OpenAI-compatible API:** drop-in replacement for OpenAI's SDK by changing the endpoint to api.moonshot, simplifying migration

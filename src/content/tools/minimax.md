@@ -34,7 +34,7 @@ best_for:
   - users of the Talkie AI companion app
   - teams building voice or video generation apps
 not_best_for:
-  - users who need deep English-language chat quality matching GPT-4o
+  - users who need deep English-language chat quality matching GPT-5.4
   - enterprises requiring US-based data residency
 quick_answer: >-
   MiniMax is a Shanghai-based AI company (founded 2021, listed on the Hong Kong Stock Exchange in January 2026) that builds multimodal foundation models and consumer apps. Its M2 series models offer text, audio, video, and music generation via API at prices starting around $0.12 per million input tokens, making them among the cheapest multimodal APIs available. Its Talkie companion app reached 11 million monthly active users by mid-2024. Best for cost-conscious API builders and Talkie users; less competitive for English-first chatbot quality versus OpenAI or Anthropic.
@@ -87,7 +87,7 @@ The MiniMax consumer agent interface and Talkie have a free tier with paid upgra
 ## Limitations
 
 - **Chinese-company risk:** Subject to Chinese regulatory requirements and US-China tech tensions; data residency outside China is not clearly documented for Western enterprise compliance
-- **English quality lags top Western models:** M2 series benchmarks place it below GPT-4o and Claude 3.5/3.7 on English reasoning tasks; it is more competitive on cost than quality
+- **English quality lags top Western models:** M2 series benchmarks place it below GPT-5.4 and Claude Opus 4.6 on English reasoning tasks; it is more competitive on cost than quality
 - **Copyright litigation:** MiniMax has faced copyright lawsuits from major entertainment studios over Talkie's celebrity simulations
 - **Talkie moderation gaps:** The app has been criticized for inadequate content moderation on AI-generated character interactions
 - **Limited English documentation:** API docs are available in English but community support and tutorials are primarily in Chinese

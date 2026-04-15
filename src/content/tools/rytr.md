@@ -36,9 +36,9 @@ quick_answer: >-
 
 Rytr is a budget-friendly AI writing assistant built for short-form content: ad copy, email subject lines, product descriptions, social captions, and blog outlines. Launched in 2021, it positioned itself as the affordable alternative to Jasper and Copy.ai at a time when most AI writing tools were priced for marketing teams. The free tier (10,000 characters per month) is genuinely usable for light work, and the Unlimited plan at $29/month is one of the lowest prices in the category for uncapped generation.
 
-The core value proposition is simple: fast first drafts from a template, cheap enough that the return on even one saved hour of writing justifies the cost. It won't produce the nuanced, well-reasoned long-form content that a direct GPT-4o or Claude session can deliver, but for high-volume short-form tasks it removes the blank-page friction at a price that stacks up well against the alternatives.
+The core value proposition is simple: fast first drafts from a template, cheap enough that the return on even one saved hour of writing justifies the cost. It won't produce the nuanced, well-reasoned long-form content that a direct GPT-5.4 or Claude Opus 4.6 session can deliver, but for high-volume short-form tasks it removes the blank-page friction at a price that stacks up well against the alternatives.
 
-Rytr operates on its own fine-tuned model rather than a direct GPT-4o or Claude wrapper, which limits ceiling quality but also keeps costs down. The 40+ use-case templates and built-in tone selector handle most common copywriting tasks without requiring prompt engineering skills from the user.
+Rytr operates on its own fine-tuned model rather than a direct GPT-5.4 or Claude Opus 4.6 wrapper, which limits ceiling quality but also keeps costs down. The 40+ use-case templates and built-in tone selector handle most common copywriting tasks without requiring prompt engineering skills from the user.
 
 ## What It Does
 
@@ -75,7 +75,7 @@ Rytr is not the right fit for content agencies doing long-form SEO articles, tea
 
 ## Limitations
 
-- **Output quality below ChatGPT and Claude direct access:** Rytr's underlying model produces competent but not exceptional copy. For anything requiring nuance, persuasion depth, or factual accuracy, direct GPT-4o or Claude access will outperform it.
+- **Output quality below ChatGPT and Claude direct access:** Rytr's underlying model produces competent but not exceptional copy. For anything requiring nuance, persuasion depth, or factual accuracy, direct GPT-5.4 or Claude Opus 4.6 access will outperform it.
 - **Not suited for long-form content:** Articles over 800 words become repetitive and require significant editing. Rytr is fundamentally a short-form tool.
 - **No web research or real-time data:** Generated content is based on training data only. No ability to pull current pricing, recent news, or live product information into output.
 - **Thin moat:** The template layer and low price are the main differentiators. As ChatGPT and Claude become cheaper and more accessible, the convenience advantage of Rytr's templates narrows.
@@ -103,7 +103,7 @@ The low price point makes Rytr a reasonable option for budget-focused writing, b
 Yes. The free plan allows 10,000 characters per month (roughly 2,000 words) with access to all 40+ templates and one custom use case. No credit card required. For regular use, the Saver plan at $9/month or Unlimited at $29/month is needed.
 
 **Is Rytr better than ChatGPT for writing?**
-For structured short-form copywriting tasks — product descriptions, ad copy, email subject lines — Rytr's templates provide faster starting points than ChatGPT's blank prompt. For writing quality ceiling, flexibility, or any task outside Rytr's templates, ChatGPT (especially GPT-4o) produces better output. ChatGPT Plus at $20/month also includes image generation, browsing, and a broader feature set.
+For structured short-form copywriting tasks -- product descriptions, ad copy, email subject lines -- Rytr's templates provide faster starting points than ChatGPT's blank prompt. For writing quality ceiling, flexibility, or any task outside Rytr's templates, ChatGPT (especially GPT-5.4) produces better output. ChatGPT Plus at $20/month also includes image generation, browsing, and a broader feature set.
 
 ## Sources
 

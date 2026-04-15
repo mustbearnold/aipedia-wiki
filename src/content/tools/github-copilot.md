@@ -37,7 +37,7 @@ not_best_for:
   - complex agentic coding
   - non-github workflows
 quick_answer: >-
-  GitHub Copilot is an AI coding assistant developed by GitHub (Microsoft), providing inline autocomplete, chat, and agent mode directly inside VS Code and JetBrains IDEs. The $10/month Pro plan includes access to Claude Opus 4.6 and GPT-4o in agent mode, multi-file edits, terminal commands, and self-correction, making it the best-value entry point in AI coding. Free tier covers 2,000 completions and 50 chat messages per month; Business and Enterprise plans run $19-$39 per user per month. Best for developers already in the GitHub ecosystem who want affordable AI assistance in their existing IDE; not the right tool if you need the most capable autonomous coding agent, Claude Code handles that, at significantly higher cost.
+  GitHub Copilot is an AI coding assistant developed by GitHub (Microsoft), providing inline autocomplete, chat, and agent mode directly inside VS Code and JetBrains IDEs. The $10/month Pro plan includes access to Claude Opus 4.6 and GPT-5.4 in agent mode, multi-file edits, terminal commands, and self-correction, making it the best-value entry point in AI coding. Free tier covers 2,000 completions and 50 chat messages per month; Business and Enterprise plans run $19-$39 per user per month. Best for developers already in the GitHub ecosystem who want affordable AI assistance in their existing IDE; not the right tool if you need the most capable autonomous coding agent, Claude Code handles that, at significantly higher cost.
 ---
 
 # GitHub Copilot
@@ -61,7 +61,7 @@ GitHub Copilot is an AI coding assistant that provides inline autocomplete, chat
 | Plan | Price | Key Limits |
 |------|-------|-----------|
 | Free | $0/mo | 2,000 completions/mo, 50 chat messages/mo, limited models |
-| Pro | $10/mo | Unlimited completions, Claude Opus 4.6 + GPT-4o, agent mode |
+| Pro | $10/mo | Unlimited completions, Claude Opus 4.6 + GPT-5.4, agent mode |
 | Business | $19/user/mo | Organization management, IP indemnity, policy controls |
 | Enterprise | $39/user/mo | Enterprise SSO, audit logs, fine-tuned models |
 
@@ -71,7 +71,7 @@ GitHub Copilot is an AI coding assistant that provides inline autocomplete, chat
 
 - **Inline autocomplete:** real-time code suggestions as you type, multi-line aware ([GitHub Copilot](https://github.com/features/copilot))
 - **Agent mode:** multi-file edits, terminal commands, self-correction loop (similar to Claude Code but inside the IDE)
-- **Model selection:** switch between Claude Opus 4.6, GPT-4o, Gemini, and others on Pro plan
+- **Model selection:** switch between Claude Opus 4.6, GPT-5.4, Gemini 3.1 Pro, and others on Pro plan
 - **Codebase-aware chat:** ask questions about your project with @workspace context
 - **Pull request integration:** generates PR descriptions, reviews code, suggests changes
 - **GitHub Actions integration:** AI-assisted workflow creation and debugging

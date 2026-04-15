@@ -73,7 +73,7 @@ Windsurf is a VS Code fork by Codeium (now acquired by OpenAI) that integrates A
 - **Cascade agent:** multi-file agentic editing with codebase context, similar to Cursor's Composer ([Windsurf](https://windsurf.com))
 - **Tab autocomplete:** real-time inline completions, multi-line predictions
 - **Command bar:** Cmd+I for inline edits from natural language prompts
-- **Multi-model support:** Claude, GPT-4o, and other model backends
+- **Multi-model support:** Claude Opus 4.6, GPT-5.4, and other model backends
 - **VS Code extension compatibility:** bring your existing extensions and keybindings
 - **Free tier:** usable enough to evaluate before committing
 

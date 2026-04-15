@@ -34,11 +34,11 @@ quick_answer: >-
 
 # Cursor
 
-Cursor is an AI-native code editor developed by Anysphere. It is a fork of VS Code that deeply integrates LLMs into autocomplete, inline editing, codebase-aware chat, and agentic multi-file coding. It is primarily used for professional software development with AI assistance. Cursor supports Claude, GPT-4o, and other models as backends. As of April 2026, pricing is: Hobby free, Pro $20/month, Pro+ $60/month (3x usage credits), Ultra $200/month (20x usage credits), and Teams $40/user/month. Compared to GitHub Copilot at $10/month, Cursor is more deeply integrated but costs twice as much at the entry tier.
+Cursor is an AI-native code editor developed by Anysphere. It is a fork of VS Code that deeply integrates LLMs into autocomplete, inline editing, codebase-aware chat, and agentic multi-file coding. It is primarily used for professional software development with AI assistance. Cursor supports Claude Opus 4.6, GPT-5.4, and other models as backends. As of April 2026, pricing is: Hobby free, Pro $20/month, Pro+ $60/month (3x usage credits), Ultra $200/month (20x usage credits), and Teams $40/user/month. Compared to GitHub Copilot at $10/month, Cursor is more deeply integrated but costs twice as much at the entry tier.
 
 ## What It Does
 
-Cursor is a VS Code fork that deeply integrates AI into every part of the coding workflow, offering tab autocomplete, inline editing via Cmd+K, codebase-aware chat, and autonomous multi-file editing through Composer agent mode ([Cursor](https://cursor.com)). It supports Claude, GPT-4o, and other models as backends, with the ability to switch models per task or bring your own API key ([Cursor Docs](https://docs.cursor.com)).
+Cursor is a VS Code fork that deeply integrates AI into every part of the coding workflow, offering tab autocomplete, inline editing via Cmd+K, codebase-aware chat, and autonomous multi-file editing through Composer agent mode ([Cursor](https://cursor.com)). It supports Claude Opus 4.6, GPT-5.4, and other models as backends, with the ability to switch models per task or bring your own API key ([Cursor Docs](https://docs.cursor.com)).
 
 ## Who It's For
 
@@ -68,7 +68,7 @@ Cursor costs $0-$200/month across five individual tiers plus a $40/user Teams ti
 - **Cmd+K inline editing:** highlight code, describe the change, it rewrites. Faster than switching to a chat panel.
 - **Codebase-aware chat:** `@codebase` indexes your entire project for architecture questions, usage finding, and pattern understanding ([Cursor Docs](https://docs.cursor.com)).
 - **Composer (Agent mode):** describe a feature, Cursor plans and implements across multiple files. Review and accept changes.
-- **Model flexibility:** use Claude Opus/Sonnet, GPT-4o, or bring your own API key. Switch models per task.
+- **Model flexibility:** use Claude Opus 4.6, GPT-5.4, or bring your own API key. Switch models per task.
 - **VS Code compatibility:** all extensions, keybindings, and settings from VS Code work. Zero migration friction.
 
 ## Limitations

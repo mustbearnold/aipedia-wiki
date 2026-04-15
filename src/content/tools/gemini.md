@@ -102,7 +102,7 @@ Gemini is the best choice for Google Workspace users who need AI natively integr
 ## FAQ
 
 **Is Gemini free?**
-Yes, Gemini offers a free tier with the standard Gemini model and basic features including limited Deep Research. Gemini Advanced at $20/month includes Gemini 1.5 Pro, 1M context window, full Deep Research, and 2TB Google One storage.
+Yes, Gemini offers a free tier with the standard Gemini model and basic features including limited Deep Research. Gemini Advanced at $20/month includes Gemini 3.1 Pro, 1M context window, full Deep Research, and 2TB Google One storage.
 
 **What is Gemini Deep Research?**
 Deep Research is an autonomous research agent that browses dozens of web sources to compile comprehensive research reports with citations ([Google Gemini](https://gemini.google.com)). It asks clarifying questions, performs multiple searches, and synthesizes findings into a structured report. It is available in limited form on free and fully on Advanced.

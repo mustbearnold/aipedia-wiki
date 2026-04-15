@@ -29,7 +29,7 @@ scores:
   longevity: 7
 tags: [app-builder, no-code, full-stack, webcontainers, browser-ide, prototyping, vibe-coding, ai-design]
 quick_answer: >-
-  Bolt.new is an in-browser full-stack app builder by StackBlitz that uses patented WebContainers technology to run Node.js entirely in WebAssembly, producing a running application from a natural language description with zero local installation required. Pro costs $20/month for 10M tokens and advanced model access including GPT-4o and Claude Sonnet. Best for developers and learners who need instant browser-based prototyping on any machine including Chromebooks; not the right fit when your app needs a built-in backend or database, where Lovable's Supabase integration is the stronger choice.
+  Bolt.new is an in-browser full-stack app builder by StackBlitz that uses patented WebContainers technology to run Node.js entirely in WebAssembly, producing a running application from a natural language description with zero local installation required. Pro costs $20/month for 10M tokens and advanced model access including GPT-5.4 and Claude Opus 4.6. Best for developers and learners who need instant browser-based prototyping on any machine including Chromebooks; not the right fit when your app needs a built-in backend or database, where Lovable's Supabase integration is the stronger choice.
 ---
 
 # Bolt.new
@@ -53,7 +53,7 @@ Bolt.new is StackBlitz's AI-powered app builder that generates full-stack web ap
 | Plan | Price | Key Limits |
 |------|-------|-----------|
 | Free | $0/month | Limited tokens/day, basic models, community support |
-| Pro | $20/month | 10M tokens/month, advanced models (GPT-4o, Claude Sonnet), unlimited projects |
+| Pro | $20/month | 10M tokens/month, advanced models (GPT-5.4, Claude Opus 4.6), unlimited projects |
 | Pro+ | $40/month | 26M tokens/month, priority access, all models |
 | Teams | $55/user/month | Shared workspaces, team management, enhanced limits |
 
@@ -63,7 +63,7 @@ Bolt.new is StackBlitz's AI-powered app builder that generates full-stack web ap
 
 - **WebContainers:** Full Node.js runtime in the browser via WebAssembly; no server needed, no local setup required
 - **Zero-install development:** Start building immediately in any browser; works on Chromebooks, tablets, and restricted machines
-- **Multi-model support:** Choose between GPT-4o, Claude Sonnet, Gemini, and other models depending on the task
+- **Multi-model support:** Choose between GPT-5.4, Claude Opus 4.6, Gemini 3.1 Pro, and other models depending on the task
 - **Live preview:** See your app running in real time as the AI generates and modifies code
 - **Full package ecosystem:** Install any npm package directly in the browser environment
 - **Deploy anywhere:** One-click deployment to Netlify, Vercel, or other hosting providers

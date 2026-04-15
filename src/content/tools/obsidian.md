@@ -88,7 +88,7 @@ Obsidian is free for personal use with no feature restrictions, offering optiona
 - **Backlinks and graph view:** bidirectional linking between notes. Graph view visualizes connections. Core to knowledge management workflows.
 - **Plugin ecosystem:** 1,800+ community plugins. Install AI, calendars, Kanban boards, database views, templates, and more. The ecosystem is what makes Obsidian endlessly adaptable ([Obsidian Community Plugins](https://obsidian.md/plugins)).
 - **Smart Connections plugin:** semantic search over your vault using embeddings. AI chat that knows your notes. The closest thing to Notion AI Q&A but running locally with your own API key.
-- **Copilot plugin:** chat with Claude, GPT-4o, or local models directly in Obsidian. Reference specific notes in your conversation. Bring-your-own-key model.
+- **Copilot plugin:** chat with Claude Opus 4.6, GPT-5.4, Gemini 3.1 Pro, or local models directly in Obsidian. Reference specific notes in your conversation. Bring-your-own-key model.
 - **Canvas:** infinite canvas for visual thinking. Arrange notes, images, and connections spatially. Useful for brainstorming and project planning.
 - **Templates and Templater:** template system for consistent note structure. Templater plugin adds dynamic templates with JavaScript.
 

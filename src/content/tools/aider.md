@@ -2,7 +2,7 @@
 type: tool
 slug: aider
 title: Aider
-tagline: Open-source CLI coding assistant that edits multiple files in your git repo using Claude, GPT-4o, or any LLM.
+tagline: Open-source CLI coding assistant that edits multiple files in your git repo using Claude, GPT-5.4, or any LLM.
 category: ai-coding
 company: Paul Gauthier (open source)
 url: https://aider.chat
@@ -26,14 +26,14 @@ scores:
   longevity: 7
 tags: [ai-coding, open-source, cli, git-integration, agentic-coding, byok]
 seo_title: "Aider: Open-Source AI Coding Assistant Review (2026)"
-meta_description: "Aider is a free open-source CLI coding assistant that edits real files in your git repo using Claude, GPT-4o, or Ollama. Full review of features, API costs, and how it compares to Cursor."
+meta_description: "Aider is a free open-source CLI coding assistant that edits real files in your git repo using Claude, GPT-5.4, or Ollama. Full review of features, API costs, and how it compares to Cursor."
 author: "aipedia.wiki Editorial"
 quick_answer: >-
-  Aider is a free, open-source command-line coding assistant created by Paul Gauthier that edits real files in your local git repo, auto-commits each change, and works with virtually any LLM via API key. Its architect mode separates planning from execution, using one model to design the approach and a second cheaper model to write the code, keeping session costs as low as $0.05-0.30/hour on Claude Sonnet. Aider itself costs nothing (Apache 2.0); you pay API costs directly. Best for CLI-comfortable developers who want BYOK economics and transparent git history; not the right fit if you want a polished GUI, where Cursor at $20/month is the better choice.
+  Aider is a free, open-source command-line coding assistant created by Paul Gauthier that edits real files in your local git repo, auto-commits each change, and works with virtually any LLM via API key. Its architect mode separates planning from execution, using one model to design the approach and a second cheaper model to write the code, keeping session costs as low as $0.05-0.30/hour on Claude Opus 4.6. Aider itself costs nothing (Apache 2.0); you pay API costs directly. Best for CLI-comfortable developers who want BYOK economics and transparent git history; not the right fit if you want a polished GUI, where Cursor at $20/month is the better choice.
 ---
 # Aider
 
-Aider is a free, open-source command-line coding assistant that edits real files in your local git repository. Unlike browser-based coding tools or IDE plugins, Aider runs in your terminal, reads your actual codebase, proposes multi-file edits, and commits each change to git with a descriptive message — automatically. It supports virtually any LLM via API key: Claude Sonnet/Opus, GPT-4o, Gemini, Mistral, and local models via Ollama. For developers who want Cursor-level AI coding capabilities without a proprietary IDE or subscription lock-in, Aider is the default open-source answer.
+Aider is a free, open-source command-line coding assistant that edits real files in your local git repository. Unlike browser-based coding tools or IDE plugins, Aider runs in your terminal, reads your actual codebase, proposes multi-file edits, and commits each change to git with a descriptive message — automatically. It supports virtually any LLM via API key: Claude Opus 4.6, GPT-5.4, Gemini 3.1 Pro, Mistral, and local models via Ollama. For developers who want Cursor-level AI coding capabilities without a proprietary IDE or subscription lock-in, Aider is the default open-source answer.
 
 ## What It Does
 
@@ -54,10 +54,10 @@ Aider itself is free and open-source (Apache 2.0). You pay LLM API costs directl
 
 | Model | Typical Cost/Hour of Active Coding | Notes |
 |-------|------------------------------------|-------|
-| Claude Sonnet 3.7 | ~$0.05–0.30/hr | Best quality-to-cost ratio; recommended default |
-| Claude Opus 4 | ~$0.50–2.00/hr | Highest quality; expensive on large codebases |
-| GPT-4o | ~$0.10–0.50/hr | Solid alternative; slightly weaker at multi-file edits |
-| Gemini 1.5 Pro | ~$0.02–0.15/hr | Cheapest capable option; large context window useful |
+| Claude Opus 4.6 | ~$0.05–0.30/hr | Best quality-to-cost ratio; recommended default |
+| Claude Opus 4.6 (large sessions) | ~$0.50–2.00/hr | Highest quality; expensive on large codebases |
+| GPT-5.4 | ~$0.10–0.50/hr | Solid alternative; slightly weaker at multi-file edits |
+| Gemini 3.1 Pro | ~$0.02–0.15/hr | Cheapest capable option; large context window useful |
 | Ollama (local) | $0 | Fully offline; quality lower than frontier models |
 
 > **Verification note:** Cost estimates reflect API pricing as of 2026-04-13 and vary significantly with codebase size (repo-map tokens) and session length. A quick bug fix costs pennies; a large feature spanning many files can cost $1–5 on Opus.
@@ -67,7 +67,7 @@ Aider itself is free and open-source (Apache 2.0). You pay LLM API costs directl
 - **Edits real local files** — no sandbox, no copy-paste; changes go directly into your working directory
 - **Automatic git commits** — every accepted change is committed with an AI-generated descriptive message
 - **Multi-file editing** — handles changes that span multiple files in a single instruction
-- **Any LLM via API** — Claude, GPT-4o, Gemini, Mistral, local Ollama; swap with a flag
+- **Any LLM via API** — Claude Opus 4.6, GPT-5.4, Gemini 3.1 Pro, Mistral, local Ollama; swap with a flag
 - **Architect + editor mode** — large smart model plans the approach; fast cheap model executes the diff
 - **Repo-map** — compact structural summary of entire codebase; LLM understands the project without you adding every file
 - **/add command** — explicitly add specific files to context to control what the LLM sees
@@ -100,13 +100,13 @@ Aider earns a perfect 10/10 for value — it is free, open-source, and delivers 
 ## FAQ
 
 **Is Aider free?**
-Yes. Aider is free and open-source software licensed under Apache 2.0. The only costs are the LLM API keys you bring yourself — you pay your LLM provider (Anthropic, OpenAI, Google, etc.) directly. For light use with an efficient model like Claude Sonnet or Gemini, typical sessions cost cents to low dollars. There is no Aider subscription, no usage tier, and no feature paywall.
+Yes. Aider is free and open-source software licensed under Apache 2.0. The only costs are the LLM API keys you bring yourself — you pay your LLM provider (Anthropic, OpenAI, Google, etc.) directly. For light use with an efficient model like Claude Opus 4.6 or Gemini 3.1 Pro, typical sessions cost cents to low dollars. There is no Aider subscription, no usage tier, and no feature paywall.
 
 **How does Aider compare to Cursor?**
-Cursor is a GUI-based IDE fork of VS Code with AI assistance built in. Aider is a CLI tool that works with any editor. Cursor is easier to adopt for developers comfortable in VS Code and offers better visual context (file tree, inline diffs, tab completion). Aider is preferred by developers who want LLM choice flexibility, BYOK economics, transparent git history, and full control without IDE lock-in. For raw coding capability on complex multi-file tasks, Aider with Claude Sonnet is competitive with Cursor's best models. Choose Cursor if you want a polished GUI; choose Aider if you prefer CLI + BYOK.
+Cursor is a GUI-based IDE fork of VS Code with AI assistance built in. Aider is a CLI tool that works with any editor. Cursor is easier to adopt for developers comfortable in VS Code and offers better visual context (file tree, inline diffs, tab completion). Aider is preferred by developers who want LLM choice flexibility, BYOK economics, transparent git history, and full control without IDE lock-in. For raw coding capability on complex multi-file tasks, Aider with Claude Opus 4.6 is competitive with Cursor's best models. Choose Cursor if you want a polished GUI; choose Aider if you prefer CLI + BYOK.
 
 **What LLMs does Aider support?**
-Aider supports any LLM accessible via an OpenAI-compatible API, which covers Claude (Anthropic API), GPT-4o and GPT-4.1 (OpenAI), Gemini (Google), Mistral, and local models via Ollama. The `--model` flag lets you specify any model at runtime. Aider's benchmark leaderboard at aider.chat/docs/leaderboards ranks models on coding performance — Claude Sonnet 3.7 and GPT-4o consistently rank near the top for the architect role.
+Aider supports any LLM accessible via an OpenAI-compatible API, which covers Claude (Anthropic API), GPT-5.4 (OpenAI), Gemini 3.1 Pro (Google), Mistral, and local models via Ollama. The `--model` flag lets you specify any model at runtime. Aider's benchmark leaderboard at aider.chat/docs/leaderboards ranks models on coding performance -- Claude Opus 4.6 and GPT-5.4 consistently rank near the top for the architect role.
 
 ## Related
 

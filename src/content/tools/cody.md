@@ -29,7 +29,7 @@ seo_title: "Cody by Sourcegraph: AI Coding Assistant Review & Pricing (2026)"
 meta_description: "Cody by Sourcegraph is a codebase-aware AI coding assistant. Free on Sourcegraph.com; Pro $9/mo; Enterprise custom. In-depth review and pricing 2026."
 author: "aipedia.wiki Editorial"
 quick_answer: >-
-  Cody is an AI coding assistant developed by Sourcegraph, built on top of Sourcegraph's code search infrastructure, enabling it to reason across entire organizations with hundreds of repositories rather than just open files. The free tier is hosted on Sourcegraph.com with limited completions; Pro is $9/month with higher limits and broader model selection including Claude and GPT-4o. Best for enterprise teams already using Sourcegraph where cross-repository AI context is a genuine daily need; for individual developers or teams without Sourcegraph, GitHub Copilot at $10/month offers comparable or stronger general coding capability at nearly the same price.
+  Cody is an AI coding assistant developed by Sourcegraph, built on top of Sourcegraph's code search infrastructure, enabling it to reason across entire organizations with hundreds of repositories rather than just open files. The free tier is hosted on Sourcegraph.com with limited completions; Pro is $9/month with higher limits and broader model selection including Claude Opus 4.6 and GPT-5.4. Best for enterprise teams already using Sourcegraph where cross-repository AI context is a genuine daily need; for individual developers or teams without Sourcegraph, GitHub Copilot at $10/month offers comparable or stronger general coding capability at nearly the same price.
 ---
 
 # Cody
@@ -38,7 +38,7 @@ Cody is an AI coding assistant developed by Sourcegraph, the company behind the 
 
 ## What It Does
 
-Cody integrates as an extension into VS Code and JetBrains and connects to Sourcegraph's code intelligence backend. Autocomplete provides inline suggestions as you type. The chat panel answers questions about your code using context drawn from the current file, open tabs, and (with Sourcegraph Enterprise) your entire codebase across repos. The `@-mention` system lets you pull specific files, symbols, or search results into context explicitly. Cody supports multiple model backends — including Claude and GPT-4o — and allows organizations to configure which models their teams can access. Commands provide one-click actions for common tasks: explain code, generate unit tests, document functions, or fix bugs.
+Cody integrates as an extension into VS Code and JetBrains and connects to Sourcegraph's code intelligence backend. Autocomplete provides inline suggestions as you type. The chat panel answers questions about your code using context drawn from the current file, open tabs, and (with Sourcegraph Enterprise) your entire codebase across repos. The `@-mention` system lets you pull specific files, symbols, or search results into context explicitly. Cody supports multiple model backends -- including Claude Opus 4.6 and GPT-5.4 -- and allows organizations to configure which models their teams can access. Commands provide one-click actions for common tasks: explain code, generate unit tests, document functions, or fix bugs.
 
 ## Who It's For
 
@@ -64,7 +64,7 @@ Cody integrates as an extension into VS Code and JetBrains and connects to Sourc
 - **Sourcegraph code intelligence backend:** understands symbols, definitions, and usages across your entire codebase and across repositories
 - **Multi-repo context:** Enterprise tier can answer questions using code from hundreds of repos simultaneously
 - **@-mention context system:** explicitly pull specific files, repos, symbols, or search results into your conversation
-- **Multi-model support:** choose from Claude, GPT-4o, and other models; Enterprise can restrict which models teams use
+- **Multi-model support:** choose from Claude Opus 4.6, GPT-5.4, and other models; Enterprise can restrict which models teams use
 - **Commands:** one-click prompts for explain, test, document, fix — built-in workflows for common tasks
 - **VS Code and JetBrains support:** installs as a plugin into your existing IDE
 

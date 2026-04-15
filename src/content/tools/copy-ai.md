@@ -48,7 +48,7 @@ Copy.ai is an AI writing and go-to-market (GTM) automation platform built by Cop
 
 ## What It Does
 
-Copy.ai generates marketing copy, sales emails, ad copy, social posts, and long-form content from templates and prompts. On higher tiers, it runs automated GTM workflows — for example, pulling a prospect from a CRM, researching their company, drafting a personalized outreach email, and routing it to a sales rep for review. The platform integrates with Salesforce, HubSpot, and other sales tools. The underlying generation is powered by GPT-4o and Claude under the hood ([Copy.ai](https://copy.ai)).
+Copy.ai generates marketing copy, sales emails, ad copy, social posts, and long-form content from templates and prompts. On higher tiers, it runs automated GTM workflows — for example, pulling a prospect from a CRM, researching their company, drafting a personalized outreach email, and routing it to a sales rep for review. The platform integrates with Salesforce, HubSpot, and other sales tools. The underlying generation is powered by GPT-5.4 and Claude Opus 4.6 under the hood ([Copy.ai](https://copy.ai)).
 
 ## Who It's For
 
@@ -77,12 +77,12 @@ Copy.ai costs $0 to custom/enterprise across four tiers. The free tier is very l
 - **GTM AI workflows:** the Advanced plan's key differentiator — build automated pipelines that chain AI tasks together: research prospect → personalize email → populate CRM field → route to rep. Competes with Clay for sales automation workflows.
 - **CRM integrations:** native integrations with Salesforce and HubSpot, plus Zapier for broader connectivity. Data flows in and out of Copy.ai without manual copy-paste.
 - **Team collaboration:** multiple users, shared workspaces, and content history on Advanced and Enterprise plans. Useful for marketing teams with multiple copywriters.
-- **Powered by GPT-4o and Claude:** Copy.ai routes generation to top-tier models under the hood, meaning output quality tracks the frontier even as Copy.ai's own product layer evolves.
+- **Powered by GPT-5.4 and Claude Opus 4.6:** Copy.ai routes generation to top-tier models under the hood, meaning output quality tracks the frontier even as Copy.ai's own product layer evolves.
 - **Brand voice settings:** define your company's tone, vocabulary, and style; Copy.ai applies it across all generated content on the account.
 
 ## Limitations
 
-- **Thin moat — same underlying LLMs as ChatGPT:** Copy.ai generates content using GPT-4o and Claude, the same models available directly via ChatGPT or Claude.ai. For basic copywriting, the template layer adds convenience but not capability. The defensible value is in GTM workflow automation, not the writing itself.
+- **Thin moat — same underlying LLMs as ChatGPT:** Copy.ai generates content using GPT-5.4 and Claude Opus 4.6, the same models available directly via ChatGPT or Claude.ai. For basic copywriting, the template layer adds convenience but not capability. The defensible value is in GTM workflow automation, not the writing itself.
 - **Free tier is very limited:** 2,000 words per month is approximately four short blog posts or fifteen marketing emails. It is sufficient for evaluation but not for regular use. Most users will need Starter ($49/mo) at minimum.
 - **Advanced plan expensive for small teams:** $249/month for five users is $50/user/month — reasonable for enterprise sales teams where each seat drives pipeline, but expensive for small content or marketing teams where the GTM workflows add less value.
 - **Pivoted from copywriting to GTM automation — feature set is scattered:** Copy.ai's identity shift from "AI copywriter for everyone" to "GTM AI platform for sales teams" means the product serves two different audiences with partially overlapping needs. The interface and feature set reflect this tension.
@@ -95,7 +95,7 @@ Copy.ai is worth it for sales and marketing teams at the Advanced plan ($249/mo)
 ## Best Alternatives
 
 - **[Jasper](./jasper.md):** closer competitor for marketing copy — similar template approach, stronger brand voice features, higher quality ceiling for long-form content.
-- **ChatGPT Plus ($20/mo):** for most copywriting tasks, GPT-4o directly via ChatGPT delivers similar quality to Copy.ai's Starter plan at less than half the price.
+- **ChatGPT Plus ($20/mo):** for most copywriting tasks, GPT-5.4 directly via ChatGPT delivers similar quality to Copy.ai's Starter plan at less than half the price.
 - **Clay:** purpose-built for GTM data enrichment and outreach personalization at scale. Better than Copy.ai's workflow automation for large sales teams with complex data needs.
 - **[Grammarly](./grammarly.md):** for writing quality improvement rather than content generation — complementary to Copy.ai, not a direct alternative.
 
@@ -105,7 +105,7 @@ Copy.ai is worth it for sales and marketing teams at the Advanced plan ($249/mo)
 Yes, Copy.ai has a free plan limited to 2,000 words per month and access to most of the template library. No credit card is required to start. The free tier is sufficient for evaluation and light, occasional use. For regular use — even as a solo copywriter — most users will hit the word limit quickly and need the Starter plan at $49/month, which includes unlimited word generation.
 
 **How is Copy.ai different from ChatGPT?**
-Copy.ai provides a structured interface on top of the same underlying LLMs (GPT-4o, Claude) that power ChatGPT. The value-add is the template library (90+ pre-built formats for ads, emails, product descriptions) and the GTM workflow automation (Advanced plan), which lets non-technical sales and marketing teams automate multi-step content pipelines without prompting from scratch. For users comfortable with ChatGPT's interface, the template convenience may not justify the price difference. For teams who need automation, CRM integration, and structured workflows, Copy.ai adds real value beyond raw ChatGPT access.
+Copy.ai provides a structured interface on top of the same underlying LLMs (GPT-5.4, Claude Opus 4.6) that power ChatGPT. The value-add is the template library (90+ pre-built formats for ads, emails, product descriptions) and the GTM workflow automation (Advanced plan), which lets non-technical sales and marketing teams automate multi-step content pipelines without prompting from scratch. For users comfortable with ChatGPT's interface, the template convenience may not justify the price difference. For teams who need automation, CRM integration, and structured workflows, Copy.ai adds real value beyond raw ChatGPT access.
 
 **Is Copy.ai worth it for small teams?**
 It depends on which plan and which use case. For small marketing teams doing general copywriting, the Starter plan ($49/mo for 1 user) is mediocre value — ChatGPT Plus ($20/mo) covers most of the same ground. For small sales teams running personalized outreach at scale with CRM integration, the Advanced plan ($249/mo for 5 users) starts to justify itself if it saves even a few hours of manual prospecting work per week. The GTM automation is where Copy.ai differentiates; if you are not using those workflows, you are paying a premium for a template layer over standard LLMs.

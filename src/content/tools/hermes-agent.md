@@ -90,7 +90,7 @@ No subscription fee. Full feature set available in the free open-source version 
 - **Self-hosted only.** No official managed cloud version; you are responsible for uptime, updates, and security.
 - **Setup complexity.** Configuring six platform integrations, a sandbox backend, and API keys requires developer comfort.
 - **Early version (0.8.0 as of April 2026).** API surface and configuration format may change between releases.
-- **API key costs.** Heavy use of frontier models (GPT-4o, Claude Opus) accumulates real bills; no cost controls built in.
+- **API key costs.** Heavy use of frontier models (GPT-5.4, Claude Opus 4.6) accumulates real bills; no cost controls built in.
 - **Low moat as open-source.** Nothing preventing forks or competing projects from copying the architecture.
 - **No IDE integration.** Hermes Agent is a conversational and automation agent, not an AI coding assistant for software engineers.
 - **Small community vs. OpenClaw.** 87.6K stars vs. 358K for OpenClaw; smaller ecosystem of community skills.

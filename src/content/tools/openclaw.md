@@ -47,7 +47,7 @@ OpenClaw is a free, open-source personal AI assistant that runs on your own hard
 
 ## What It Does
 
-OpenClaw acts as a local gateway that connects your AI model of choice (Claude, GPT, or any OpenAI-compatible endpoint) to your machine and your messaging apps ([openclaw.ai](https://openclaw.ai/)). You send a message from WhatsApp or Telegram, and the agent reads it, uses whatever tools are needed (browser, shell, files, calendar, email), and replies in the same thread. Key capabilities include:
+OpenClaw acts as a local gateway that connects your AI model of choice (Claude Opus 4.6, GPT-5.4, or any OpenAI-compatible endpoint) to your machine and your messaging apps ([openclaw.ai](https://openclaw.ai/)). You send a message from WhatsApp or Telegram, and the agent reads it, uses whatever tools are needed (browser, shell, files, calendar, email), and replies in the same thread. Key capabilities include:
 
 - **Browser automation:** a dedicated Chrome/Chromium instance with snapshots and action replay
 - **Shell access:** executes commands, reads output, and handles long-running processes
@@ -71,7 +71,7 @@ OpenClaw acts as a local gateway that connects your AI model of choice (Claude, 
 | Tier | Cost | Notes |
 |------|------|-------|
 | OpenClaw (self-hosted) | Free | Open-source MIT license, you supply the API key |
-| Model API costs | Usage-based | Varies by provider; typical GPT-4o or Claude Sonnet usage runs $5-$30/month for moderate use |
+| Model API costs | Usage-based | Varies by provider; typical GPT-5.4 or Claude Opus 4.6 usage runs $5-$30/month for moderate use |
 | Node/server costs | Varies | Runs on any always-on machine or a small VPS ($5-$10/month) |
 
 OpenClaw itself has no subscription or license fee. Total cost is API usage plus whatever you pay to keep a server running ([GitHub](https://github.com/openclaw/openclaw)).

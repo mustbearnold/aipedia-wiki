@@ -46,7 +46,7 @@ n8n is an open-source workflow automation platform developed by n8n GmbH. It ena
 
 ## What It Does
 
-n8n is an open-source, self-hostable visual workflow automation platform with 400+ integrations and native AI agent nodes that let you build autonomous agents inside workflows without writing code ([n8n](https://n8n.io)). Connect any LLM (Claude, GPT-4o, Llama), give it tools (web search, database queries, API calls), and let it reason through multi-step tasks ([n8n Docs](https://docs.n8n.io)). Unlike Zapier and Make, n8n can be fully self-hosted for $0 with unlimited workflows.
+n8n is an open-source, self-hostable visual workflow automation platform with 400+ integrations and native AI agent nodes that let you build autonomous agents inside workflows without writing code ([n8n](https://n8n.io)). Connect any LLM (Claude Opus 4.6, GPT-5.4, Llama 4, Gemini 3.1 Pro), give it tools (web search, database queries, API calls), and let it reason through multi-step tasks ([n8n Docs](https://docs.n8n.io)). Unlike Zapier and Make, n8n can be fully self-hosted for $0 with unlimited workflows.
 
 ## Who It's For
 

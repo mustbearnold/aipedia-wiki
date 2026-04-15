@@ -41,11 +41,11 @@ quick_answer: >-
 
 # Doubao
 
-Doubao (pronounced "doe-bao," meaning "bean bag" in Chinese) is ByteDance's AI assistant product, launched in August 2023. By early 2026, it had surpassed 100 million daily active users during the Lunar New Year period, making it China's most-used AI application by that metric ([36Kr](https://eu.36kr.com/en/p/3609313072153862)). ByteDance, the parent company of TikTok, has positioned Doubao as its primary consumer AI product, releasing Doubao-Seed-2.0 on February 14, 2026 with reasoning capabilities ByteDance benchmarks at parity with GPT-5.2 and Gemini 3 Pro on math, coding, and reasoning ([Gulf News](https://gulfnews.com/technology/what-is-doubao-20-all-about-chinas-new-ai-app-thats-cheaper-than-deepseek-and-rivaling-gpt-52-1.500444799)). Outside China, Doubao's technology is accessible via the Cici app (later rebranded Dola) in select international markets.
+Doubao (pronounced "doe-bao," meaning "bean bag" in Chinese) is ByteDance's AI assistant product, launched in August 2023. By early 2026, it had surpassed 100 million daily active users during the Lunar New Year period, making it China's most-used AI application by that metric ([36Kr](https://eu.36kr.com/en/p/3609313072153862)). ByteDance, the parent company of TikTok, has positioned Doubao as its primary consumer AI product, releasing Doubao-Seed-2.0 on February 14, 2026 with reasoning capabilities ByteDance benchmarks at parity with GPT-5.4 and Gemini 3.1 Pro on math, coding, and reasoning ([Gulf News](https://gulfnews.com/technology/what-is-doubao-20-all-about-chinas-new-ai-app-thats-cheaper-than-deepseek-and-rivaling-gpt-52-1.500444799)). Outside China, Doubao's technology is accessible via the Cici app (later rebranded Dola) in select international markets.
 
 ## What It Does
 
-Doubao integrates multiple AI capabilities into a single interface: text conversation, image generation via ByteDance's Seedream model, video generation via the Seedance model, voice interaction, document analysis, and code generation. The Doubao 2.0 model focuses on long-chain reasoning and autonomous multi-step task execution, with ByteDance benchmarking Doubao-Seed-2.0 at parity with GPT-5.2 and Gemini 3 Pro on math, coding, and reasoning while costing dramatically less to operate ([seczine.com](https://seczine.com/technology/2026/02/bytedance-launches-doubao-20-gpt52level-performanc/)). The platform is available on web, Windows, macOS, iOS, and Android.
+Doubao integrates multiple AI capabilities into a single interface: text conversation, image generation via ByteDance's Seedream model, video generation via the Seedance model, voice interaction, document analysis, and code generation. The Doubao 2.0 model focuses on long-chain reasoning and autonomous multi-step task execution, with ByteDance benchmarking Doubao-Seed-2.0 at parity with GPT-5.4 and Gemini 3.1 Pro on math, coding, and reasoning while costing dramatically less to operate ([seczine.com](https://seczine.com/technology/2026/02/bytedance-launches-doubao-20-gpt52level-performanc/)). The platform is available on web, Windows, macOS, iOS, and Android.
 
 The underlying model family (Doubao-Seed-2.0-pro, Seed-2.0-lite, Seed-2.0-mini, and Seed-2.0-code) is also available as an API through Volcano Engine, ByteDance's cloud platform, at prices ByteDance claims are up to 99.3% below Western competitors.
 
@@ -78,7 +78,7 @@ The underlying model family (Doubao-Seed-2.0-pro, Seed-2.0-lite, Seed-2.0-mini, 
 
 ## Limitations
 
-- **China-first product:** Core optimization is for Chinese-language tasks; English-language quality does not match GPT-4o or Claude 3.5 for nuanced writing and reasoning
+- **China-first product:** Core optimization is for Chinese-language tasks; English-language quality does not match GPT-5.4 or Claude Opus 4.6 for nuanced writing and reasoning
 - **Not in US app stores as "Doubao":** US users cannot directly download the Doubao app from the US App Store or Google Play; international access is via the Cici/Dola app in select markets
 - **Geopolitical risk:** ByteDance is subject to ongoing US regulatory scrutiny (same parent company as TikTok); enterprise adoption in the West carries compliance and data-residency risk
 - **API via Volcano Engine (Chinese platform):** Western developers accessing the API must work through ByteDance's Chinese cloud infrastructure, which raises data sovereignty questions
@@ -102,10 +102,10 @@ For Chinese-language users and China-based enterprises, Doubao is the obvious ch
 Not directly as "Doubao" in Western app stores. Outside China, ByteDance distributes similar functionality through the Cici app (rebranded Dola in some markets), which supports 18 languages and is available in select international markets. The API is accessible globally via Volcano Engine, ByteDance's cloud platform.
 
 **How does Doubao's pricing compare to ChatGPT?**
-ByteDance claims the Doubao API is priced up to 99.3% below international competitors. At approximately RMB 0.0008 per 1,000 tokens (about $0.11 per million tokens), it is dramatically cheaper than GPT-4o. The trade-off is data residency on Chinese infrastructure and Chinese-language optimization.
+ByteDance claims the Doubao API is priced up to 99.3% below international competitors. At approximately RMB 0.0008 per 1,000 tokens (about $0.11 per million tokens), it is dramatically cheaper than GPT-5.4. The trade-off is data residency on Chinese infrastructure and Chinese-language optimization.
 
 **What is Doubao-Seed-2.0?**
-Doubao-Seed-2.0 is the model family released on February 14, 2026, focused on long-chain reasoning and autonomous multi-step task completion. ByteDance benchmarks it at parity with GPT-5.2 and Gemini 3 Pro on math, coding, and reasoning, while significantly cutting operating costs compared to earlier Doubao versions. The family includes Pro, Lite, Mini, and Code variants.
+Doubao-Seed-2.0 is the model family released on February 14, 2026, focused on long-chain reasoning and autonomous multi-step task completion. ByteDance benchmarks it at parity with GPT-5.4 and Gemini 3.1 Pro on math, coding, and reasoning, while significantly cutting operating costs compared to earlier Doubao versions. The family includes Pro, Lite, Mini, and Code variants.
 
 ## Sources
 

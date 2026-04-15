@@ -26,8 +26,8 @@ scores:
   moat: 6
   longevity: 7
 tags: [ai-assistant, xai, twitter-ai, real-time-search, grok]
-seo_title: "Grok AI Review: Features, Pricing & GPT-4o Comparison (2026)"
-meta_description: "Grok is xAI's AI assistant with real-time X/Twitter data access. Free via X; SuperGrok $30/mo. Full review of Grok 3 features, pricing, and ChatGPT comparison."
+seo_title: "Grok AI Review: Features, Pricing & GPT-5.4 Comparison (2026)"
+meta_description: "Grok is xAI's AI assistant with real-time X/Twitter data access. Free via X; SuperGrok $30/mo. Full review of Grok 4 features, pricing, and ChatGPT comparison."
 author: "aipedia.wiki Editorial"
 quick_answer: >-
   Grok is xAI's AI assistant, built by Elon Musk's company and tightly integrated with X (formerly Twitter), giving it real-time access to the X data firehose that no other mainstream AI assistant can match. That live social data, covering breaking news, trending topics, and current posts, is the single feature that differentiates it from ChatGPT and Claude. Access is free with a limited X account, $8/month bundled with X Premium, or $30/month for standalone SuperGrok; SuperGrok Heavy runs $50/month. Best for X power users, political analysts, and trend researchers who need real-time social context, not for users who want the most capable general-purpose assistant (ChatGPT or Claude win there). Ownership concentration in a single high-profile individual is a real platform risk.
@@ -35,7 +35,7 @@ quick_answer: >-
 
 # Grok
 
-Grok is the AI assistant built by xAI, Elon Musk's AI company, and is tightly integrated with X (formerly Twitter). Launched in November 2023, Grok's defining differentiator is real-time access to the X data firehose — it can see trending topics, recent posts, and breaking discussions that no other commercial AI assistant has live access to. Grok 3 (released early 2025) is competitive on standard benchmarks, and the SuperGrok tier at $30/month provides standalone access. Content policies are notably more permissive than competitors, which attracts both free-speech advocates and users frustrated by ChatGPT's refusals.
+Grok is the AI assistant built by xAI, Elon Musk's AI company, and is tightly integrated with X (formerly Twitter). Launched in November 2023, Grok's defining differentiator is real-time access to the X data firehose — it can see trending topics, recent posts, and breaking discussions that no other commercial AI assistant has live access to. Grok 4 is competitive on standard benchmarks, and the SuperGrok tier at $30/month provides standalone access. Content policies are notably more permissive than competitors, which attracts both free-speech advocates and users frustrated by ChatGPT's refusals.
 
 ## What It Does
 
@@ -46,7 +46,7 @@ Grok is a general-purpose AI assistant covering Q&A, writing, analysis, coding, 
 - **X/Twitter power users:** analysts, journalists, and political observers who want AI that knows what is happening on X right now
 - **Users frustrated by ChatGPT restrictions:** Grok's more permissive content policy allows discussion of topics other assistants refuse
 - **Market researchers and trend analysts:** real-time social data plus AI synthesis is a genuinely unique capability
-- **Benchmark-conscious users:** Grok 3 scores competitively on MMLU, MATH, and coding benchmarks — it is a capable model, not just a novelty
+- **Benchmark-conscious users:** Grok 4 scores competitively on MMLU, MATH, and coding benchmarks -- it is a capable model, not just a novelty
 - **X Premium subscribers:** Grok access is bundled with X Premium ($8/mo), making it effectively free for existing subscribers
 
 ## Pricing
@@ -57,15 +57,15 @@ Grok is available in four tiers, from free (limited) to SuperGrok Heavy at $50/m
 |------|-------|--------------|
 | Free (X account) | $0 | Limited Grok queries/day |
 | X Premium | $8/mo | More daily Grok queries, integrated in X feed |
-| SuperGrok | $30/mo | Full Grok 3 access, DeepSearch, Think mode |
-| SuperGrok Heavy | $50/mo | Higher rate limits, Grok 3 full context, priority |
+| SuperGrok | $30/mo | Full Grok 4 access, DeepSearch, Think mode |
+| SuperGrok Heavy | $50/mo | Higher rate limits, Grok 4 full context, priority |
 
 *Prices verified 2026-04-13. Check [x.ai/grok](https://x.ai/grok) for current rates.*
 
 ## Key Features
 
 - **Real-time X/Twitter data access:** Grok can see live X posts, trending topics, and breaking news as it happens — a capability no other mainstream AI assistant has. Invaluable for social listening, political analysis, and current-events research ([xAI](https://x.ai)).
-- **Grok 3 competitive benchmarks:** Grok 3 scores within range of GPT-4o on MMLU, MATH, and reasoning benchmarks. It is a genuinely capable model, not a gimmick.
+- **Grok 4 competitive benchmarks:** Grok 4 scores within range of GPT-5.4 on MMLU, MATH, and reasoning benchmarks. It is a genuinely capable model, not a gimmick.
 - **DeepSearch:** web + X search mode that synthesizes results from live web crawl and X data into cited answers. Competes with Perplexity, though Perplexity generally delivers better-structured research outputs.
 - **Think mode:** visible step-by-step reasoning similar to o1/o3 and Claude's extended thinking. Useful for math, logic puzzles, and multi-step analysis.
 - **Aurora image generation:** Grok's image generation model. Produces images from text prompts within the Grok interface. Quality is competitive with DALL-E 3 but lags Midjourney and Flux for artistic outputs.
@@ -76,7 +76,7 @@ Grok is available in four tiers, from free (limited) to SuperGrok Heavy at $50/m
 - **Bundled with X Premium creates weird incentives:** Grok's distribution is tied to X subscriptions, meaning xAI's commercial success depends partly on X's platform health — itself a volatile proposition post-acquisition.
 - **Content policies are inconsistent:** the "fewer restrictions" positioning cuts both ways. Grok can be unpredictable — sometimes refusing benign requests, sometimes generating content other models would decline. There is no clearly documented policy.
 - **Musk/xAI ownership risk:** Grok's roadmap, training priorities, and platform availability are subject to Elon Musk's personal and business decisions in a way that competitors are not. This is a real concentration risk for users building workflows around the tool.
-- **Smaller context window than Claude:** Grok 3's context window is competitive with GPT-4o but shorter than Claude's 200K token window, limiting use for long-document analysis.
+- **Smaller context window than Claude:** Grok 4's context window is competitive with GPT-5.4 but shorter than Claude's 200K token window, limiting use for long-document analysis.
 - **DeepSearch is not as good as Perplexity:** for structured research with clean citations and source management, Perplexity is a stronger product. Grok's DeepSearch is a general-purpose web search augmentation, not a research tool.
 - **Aurora image quality lags Midjourney:** for high-quality artistic image generation, Midjourney, Flux, and Ideogram all produce better results than Aurora. Grok's image generation is convenient but not best-in-class.
 
@@ -94,13 +94,13 @@ Grok is worth using if you are already on X Premium (it is effectively free at t
 ## FAQ
 
 **Is Grok free?**
-Partially. Any X (Twitter) account gets limited free access to Grok queries per day. For meaningful usage, X Premium ($8/month) is effectively the minimum paid tier and is the best value for existing X users. SuperGrok ($30/month) provides full standalone access to Grok 3 with DeepSearch and Think mode. SuperGrok Heavy ($50/month) adds higher rate limits and priority access.
+Partially. Any X (Twitter) account gets limited free access to Grok queries per day. For meaningful usage, X Premium ($8/month) is effectively the minimum paid tier and is the best value for existing X users. SuperGrok ($30/month) provides full standalone access to Grok 4 with DeepSearch and Think mode. SuperGrok Heavy ($50/month) adds higher rate limits and priority access.
 
 **How is Grok different from ChatGPT?**
 Grok's primary differentiator is real-time X/Twitter data access — it can see live posts, trending topics, and breaking discussions that ChatGPT cannot. Grok also has a more permissive content policy, declining fewer requests. ChatGPT leads on ecosystem breadth (plugins, GPTs, custom instructions), reliability, and predictability of behavior. For most general-purpose tasks (writing, coding, research), they are competitive. Choose Grok if real-time X data or reduced content restrictions specifically matter to you; choose ChatGPT for everything else.
 
-**Is Grok 3 better than GPT-4o?**
-On benchmark scores, Grok 3 is competitive with GPT-4o — within a few percentage points on MMLU, MATH, and coding benchmarks depending on the specific test. In practical use, performance differences are task-dependent and often marginal. Grok 3 is a capable model. However, "better" depends heavily on use case: Grok wins on real-time social data access; GPT-4o wins on ecosystem integration, plugin availability, and overall product polish. Neither consistently outperforms the other across all tasks.
+**Is Grok 4 better than GPT-5.4?**
+On benchmark scores, Grok 4 is competitive with GPT-5.4 -- within a few percentage points on MMLU, MATH, and coding benchmarks depending on the specific test. In practical use, performance differences are task-dependent and often marginal. Grok 4 is a capable model. However, "better" depends heavily on use case: Grok wins on real-time social data access; GPT-5.4 wins on ecosystem integration, plugin availability, and overall product polish. Neither consistently outperforms the other across all tasks.
 
 ## Related
 

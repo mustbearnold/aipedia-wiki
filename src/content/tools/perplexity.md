@@ -41,7 +41,7 @@ tags:
   - real-time
   - fact-checking
 quick_answer: >-
-  Perplexity is an AI-native search engine from Perplexity AI with 100 million-plus monthly users that synthesizes answers with numbered inline citations from multiple live web sources, and is primarily used as a research and fact-checking tool rather than a general-purpose assistant. Every response links claims to verifiable sources, which meaningfully reduces hallucination risk compared to a standard chatbot with browsing; Pro Search adds a multi-step research mode with clarifying questions and deeper synthesis. Pro is $20/month for 600-plus Pro Searches daily with model selection across GPT-4o, Claude, and Gemini; best for researchers and professionals who need cited, verifiable answers from the live web, not for writing, coding, or creative tasks where ChatGPT or Claude provide more depth.
+  Perplexity is an AI-native search engine from Perplexity AI with 100 million-plus monthly users that synthesizes answers with numbered inline citations from multiple live web sources, and is primarily used as a research and fact-checking tool rather than a general-purpose assistant. Every response links claims to verifiable sources, which meaningfully reduces hallucination risk compared to a standard chatbot with browsing; Pro Search adds a multi-step research mode with clarifying questions and deeper synthesis. Pro is $20/month for 600-plus Pro Searches daily with model selection across GPT-5.4, Claude Opus 4.6, and Gemini 3.1 Pro; best for researchers and professionals who need cited, verifiable answers from the live web, not for writing, coding, or creative tasks where ChatGPT or Claude provide more depth.
 ---
 
 # Perplexity
@@ -50,7 +50,7 @@ Perplexity is an AI-native search engine developed by Perplexity AI. It reads an
 
 ## What It Does
 
-Perplexity is an AI-native search engine with over 100 million monthly users that reads and synthesizes information from multiple web sources in real time, delivering direct answers with numbered inline citations linking to verifiable sources, with a free tier and Pro at $20/month offering advanced model selection and 600+ Pro Searches per day ([Perplexity](https://perplexity.ai)). Unlike traditional search engines that return a list of links, Perplexity reads the pages for you, extracts relevant information, and presents a coherent answer with numbered source references you can verify. Pro users get access to advanced reasoning models (including GPT-4o, Claude, and Gemini), higher query limits, and Pro Search — a multi-step research mode that asks clarifying questions and performs deeper searches. With 100M+ monthly users, it is the leading AI search product and a genuine threat to Google's search dominance ([Perplexity Blog](https://blog.perplexity.ai/)).
+Perplexity is an AI-native search engine with over 100 million monthly users that reads and synthesizes information from multiple web sources in real time, delivering direct answers with numbered inline citations linking to verifiable sources, with a free tier and Pro at $20/month offering advanced model selection and 600+ Pro Searches per day ([Perplexity](https://perplexity.ai)). Unlike traditional search engines that return a list of links, Perplexity reads the pages for you, extracts relevant information, and presents a coherent answer with numbered source references you can verify. Pro users get access to advanced reasoning models (including GPT-5.4, Claude Opus 4.6, and Gemini 3.1 Pro), higher query limits, and Pro Search — a multi-step research mode that asks clarifying questions and performs deeper searches. With 100M+ monthly users, it is the leading AI search product and a genuine threat to Google's search dominance ([Perplexity Blog](https://blog.perplexity.ai/)).
 
 ## Who It's For
 
@@ -66,7 +66,7 @@ Perplexity is an AI-native search engine with over 100 million monthly users tha
 | Plan | Price | Key Limits |
 |------|-------|-----------|
 | Free | $0/month | Unlimited quick searches, limited Pro Searches (~5/day), standard model |
-| Pro | $20/month ($16.67 annual) | 600+ Pro Searches/day, choose model (GPT-4o, Claude, Gemini), file upload, API credits |
+| Pro | $20/month ($16.67 annual) | 600+ Pro Searches/day, choose model (GPT-5.4, Claude Opus 4.6, Gemini 3.1 Pro), file upload, API credits |
 | Max | $200/user/month | Unlimited Pro Searches, Sora 2 Pro video generation, full Research mode, unlimited file uploads, Comet Assistant priority, early access to new features |
 | Enterprise | $40/user/month | Team workspaces, admin controls, SSO |
 | Enterprise | Custom | SSO, admin controls, data privacy, team management, custom integrations |
@@ -77,7 +77,7 @@ Perplexity is an AI-native search engine with over 100 million monthly users tha
 
 - **Cited answers:** Every claim is linked to its source with numbered inline citations, making verification easy
 - **Pro Search:** Multi-step research mode that asks clarifying questions, searches multiple times, and synthesizes deeper answers
-- **Model selection:** Pro users choose between GPT-4o, Claude Sonnet, Gemini, and Perplexity's own models per query
+- **Model selection:** Pro users choose between GPT-5.4, Claude Opus 4.6, Gemini 3.1 Pro, and Perplexity's own models per query
 - **Collections:** Organize research into themed collections with custom instructions for each research project
 - **Focus modes:** Search specific domains: academic papers, YouTube, Reddit, news, or the full web
 - **File upload and analysis:** Upload PDFs, images, and documents for AI-powered analysis with web context
@@ -112,7 +112,7 @@ Perplexity provides direct answers with cited sources instead of a list of links
 Pro Search is a multi-step research mode that asks clarifying questions, performs deeper searches across multiple sources, and synthesizes more comprehensive answers. Free users get approximately 5 Pro Searches per day; Pro subscribers get 600+ per day.
 
 **Can I choose which AI model Perplexity uses?**
-Yes, Pro subscribers can select from GPT-4o, Claude Sonnet, Gemini, and Perplexity's own models on a per-query basis. Free users are limited to Perplexity's default model.
+Yes, Pro subscribers can select from GPT-5.4, Claude Opus 4.6, Gemini 3.1 Pro, and Perplexity's own models on a per-query basis. Free users are limited to Perplexity's default model.
 
 ## Sources
 
