@@ -5,6 +5,14 @@ import { getCollection } from 'astro:content';
 
 const allTrends = await getCollection('trends');
 
+function toYmd(v: unknown): string {
+  if (!v) return '';
+  if (v instanceof Date) return isNaN(v.getTime()) ? '' : v.toISOString().slice(0, 10);
+  const s = String(v);
+  const d = new Date(s);
+  return isNaN(d.getTime()) ? s : d.toISOString().slice(0, 10);
+}
+
 const sorted = allTrends
   .map(t => ({
     slug: t.data.slug || t.id.replace(/\.md$/, ''),
@@ -12,7 +20,7 @@ const sorted = allTrends
     description: t.data.description || t.data.meta_description || '',
     timeframe: t.data.timeframe || '',
     impact: t.data.impact || 'medium',
-    lastUpdated: t.data.last_updated,
+    lastUpdated: toYmd(t.data.last_updated),
   }))
   .sort((a, b) => (b.lastUpdated || '').localeCompare(a.lastUpdated || ''));
 
