@@ -1,34 +1,44 @@
 ---
 import { getCollection, render } from 'astro:content';
-import ArticleLayout from '../../layouts/ArticleLayout.astro';
+import ArticlePlusLayout from '../../layouts/ArticlePlusLayout.astro';
 
 export async function getStaticPaths() {
   const entries = await getCollection('trends');
-  return entries.map(entry => ({
+  return entries.map((entry) => ({
     params: { slug: entry.data.slug || entry.id.replace(/\.md$/, '').replace(/\\/g, '/') },
     props: { entry },
   }));
 }
 
 const { entry } = Astro.props;
-const { Content } = await render(entry);
+const { Content, headings } = await render(entry);
+
+const slug = entry.data.slug ?? entry.id.replace(/\.md$/, '');
+const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
 
 const impactColors: Record<string, string> = {
   high: 'red',
   medium: 'yellow',
   low: 'blue',
 };
-
 const impact = entry.data.impact ?? 'medium';
 const badgeColor = impactColors[impact] ?? 'gray';
+
+const wordCount = entry.body ? entry.body.split(/\s+/).filter(Boolean).length : 0;
+const readingMinutes = Math.max(1, Math.round(wordCount / 230));
 ---
 
-<ArticleLayout
+<ArticlePlusLayout
   title={entry.data.title}
   seoTitle={entry.data.seo_title}
   description={entry.data.meta_description ?? entry.data.description ?? ''}
+  pageUrl={`${siteBase}trends/${slug}/`}
   breadcrumbs={[{ label: 'Trends', href: '/trends/' }, { label: entry.data.title }]}
   badge={{ text: `${impact.charAt(0).toUpperCase() + impact.slice(1)} Impact`, color: badgeColor }}
+  headings={headings}
+  readingMinutes={readingMinutes}
+  lastVerified={entry.data.last_updated ? String(entry.data.last_updated) : undefined}
+  metaExtra={entry.data.timeframe}
 >
   <Content />
-</ArticleLayout>
+</ArticlePlusLayout>

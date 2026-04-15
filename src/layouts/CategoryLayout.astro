@@ -1,0 +1,202 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import BreadcrumbLD from '../components/seo/BreadcrumbLD.astro';
+import ItemListLD from '../components/seo/ItemListLD.astro';
+import ShareButtons from '../components/ShareButtons.astro';
+import FeedbackForm from '../components/FeedbackForm.astro';
+
+interface ToolData {
+  slug: string;
+  title: string;
+  category?: string;
+  company?: string;
+  url?: string;
+  price_range?: string;
+  pricing_model?: string;
+  affiliate?: { link?: string | null } | null;
+  scores?: { utility?: number; value?: number; moat?: number; longevity?: number };
+  tagline?: string;
+  quick_answer?: string;
+}
+
+interface Props {
+  title: string;
+  seoTitle?: string;
+  description?: string;
+  slug: string;
+  emoji: string;
+  tools: ToolData[];
+  lastVerified?: string;
+}
+
+const { title, seoTitle, description = '', slug, emoji, tools, lastVerified } = Astro.props;
+const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
+
+function overallScore(t: ToolData): number {
+  const s = t.scores ?? {};
+  return Math.round((((s.utility ?? 0) + (s.value ?? 0) + (s.moat ?? 0) + (s.longevity ?? 0)) / 4) * 10) / 10;
+}
+function ctaLabel(t: ToolData): string {
+  const model = (t.pricing_model ?? '').toLowerCase();
+  const price = (t.price_range ?? '').toLowerCase();
+  const modelFree = model === 'free' || model === 'freemium';
+  const priceFree = /\$0(?!\s*\(self|\s*\(self-host)/i.test(price) || /\bfree\b/i.test(price);
+  if (modelFree && priceFree) return `Try ${t.title} free`;
+  if (model === 'enterprise') return `Visit ${t.title}`;
+  return `Get ${t.title}`;
+}
+function ctaHref(t: ToolData): string {
+  const affUrl = t.affiliate?.link;
+  return (affUrl && affUrl.length > 0 ? affUrl : t.url) ?? '#';
+}
+function ctaRel(t: ToolData): string {
+  const affUrl = t.affiliate?.link;
+  return affUrl && affUrl.length > 0 ? 'sponsored noopener' : 'noopener';
+}
+
+const sorted = [...tools].sort((a, b) => overallScore(b) - overallScore(a));
+const top3 = sorted.slice(0, 3);
+const rest = sorted.slice(3);
+
+const breadcrumbItems = [{ label: title }];
+const breadcrumbLdItems = [
+  { name: 'Home', url: siteBase },
+  { name: title, url: `${siteBase}categories/${slug}/` },
+];
+
+const verifiedDate = lastVerified ? new Date(lastVerified) : null;
+const verifiedLabel = verifiedDate && !isNaN(verifiedDate.getTime())
+  ? verifiedDate.toLocaleDateString('en-US', { month: 'short', year: 'numeric' })
+  : null;
+
+const itemListItems = sorted.map((t) => ({
+  name: t.title,
+  slug: t.slug,
+  category: t.category,
+  score: overallScore(t) || undefined,
+}));
+---
+
+<BaseLayout title={seoTitle ?? title} description={description}>
+  <BreadcrumbLD items={breadcrumbLdItems} />
+  {itemListItems.length > 0 && (
+    <ItemListLD name={title} description={description} items={itemListItems} siteBase={siteBase} />
+  )}
+  <Breadcrumb items={breadcrumbItems} />
+
+  <div class="max-w-5xl mx-auto">
+    <!-- Hero -->
+    <div class="flex items-start gap-4 mb-5" data-pagefind-ignore>
+      <div class="w-14 h-14 rounded-xl flex items-center justify-center text-2xl shrink-0" style="background: linear-gradient(135deg, rgba(167,139,250,0.2), rgba(96,165,250,0.2));">
+        {emoji}
+      </div>
+      <div class="flex-1">
+        <h1 class="text-2xl font-bold leading-tight m-0">{title}</h1>
+        <div class="flex items-center gap-x-3 gap-y-1 mt-1 text-sm text-[var(--text-muted)] flex-wrap">
+          <span>{tools.length} tool{tools.length === 1 ? '' : 's'} ranked</span>
+          {verifiedLabel && (
+            <>
+              <span aria-hidden="true">·</span>
+              <span><span class="text-[var(--accent-success)]" aria-hidden="true">✓</span> Updated {verifiedLabel}</span>
+            </>
+          )}
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Answer: top 3 -->
+    {top3.length > 0 && (
+      <aside class="not-prose mb-6 rounded-2xl border border-[rgba(167,139,250,0.28)] bg-gradient-to-br from-[rgba(167,139,250,0.10)] via-[rgba(96,165,250,0.06)] to-transparent p-5 sm:p-6">
+        <div class="text-[11px] font-semibold uppercase tracking-wider text-[var(--accent-primary)] mb-3">
+          Top picks
+        </div>
+        <div class="grid sm:grid-cols-3 gap-3">
+          {top3.map((t, i) => {
+            const score = overallScore(t);
+            const href = ctaHref(t);
+            const rel = ctaRel(t);
+            const label = ctaLabel(t);
+            const rankLabel = i === 0 ? 'Best overall' : i === 1 ? 'Runner-up' : 'Best value';
+            return (
+              <div class="rounded-xl border border-[var(--border)] bg-[var(--bg-card)] p-4">
+                <div class="text-[10px] font-bold uppercase tracking-wider text-[var(--accent-primary)] mb-1">{rankLabel}</div>
+                <a href={`/tools/${t.slug}/`} class="block text-[15px] font-semibold text-[var(--text-primary)] hover:text-[var(--accent-primary)] no-underline mb-1">{t.title}</a>
+                {score > 0 && (
+                  <div class="text-[12px] text-[var(--text-muted)] mb-3">
+                    <span class="text-[var(--accent-primary)] font-bold tabular-nums">{score}/10</span>
+                    {t.price_range && <span> · {t.price_range}</span>}
+                  </div>
+                )}
+                {href !== '#' && (
+                  <a
+                    href={href}
+                    target="_blank"
+                    rel={rel}
+                    class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg text-[12px] font-semibold bg-[var(--accent-primary)] text-[#0b0a14] hover:brightness-110 no-underline"
+                    data-category-cta={t.slug}
+                  >
+                    {label} →
+                  </a>
+                )}
+              </div>
+            );
+          })}
+        </div>
+      </aside>
+    )}
+
+    <!-- Category description article -->
+    <article class="prose prose-invert prose-sm max-w-none wiki-prose mb-8">
+      <slot />
+    </article>
+
+    <!-- Full ranked list -->
+    {sorted.length > 0 && (
+      <section class="not-prose mb-8">
+        <h2 id="all-tools" class="text-lg font-semibold m-0 mb-3">All {title.toLowerCase()} tools ranked</h2>
+        <ol class="list-none p-0 m-0 space-y-2">
+          {sorted.map((t, i) => {
+            const score = overallScore(t);
+            const href = ctaHref(t);
+            const rel = ctaRel(t);
+            const label = ctaLabel(t);
+            return (
+              <li class="rounded-lg border border-[var(--border)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] p-3 flex items-center gap-3 flex-wrap transition-colors">
+                <div class="shrink-0 w-8 h-8 rounded-md flex items-center justify-center text-[12px] font-bold text-[var(--text-secondary)] bg-[var(--bg-base)] border border-[var(--border)] tabular-nums">
+                  {i + 1}
+                </div>
+                <div class="flex-1 min-w-0">
+                  <a href={`/tools/${t.slug}/`} class="text-[14.5px] font-semibold text-[var(--text-primary)] hover:text-[var(--accent-primary)] no-underline">{t.title}</a>
+                  {t.tagline && (
+                    <div class="text-[12px] text-[var(--text-muted)] truncate">{t.tagline}</div>
+                  )}
+                </div>
+                {t.price_range && (
+                  <span class="hidden sm:inline shrink-0 text-[11px] text-[var(--text-muted)]">{t.price_range}</span>
+                )}
+                {score > 0 && (
+                  <span class="shrink-0 text-[12.5px] font-bold tabular-nums text-[var(--accent-primary)] min-w-[40px] text-right">{score}</span>
+                )}
+                {href !== '#' && (
+                  <a
+                    href={href}
+                    target="_blank"
+                    rel={rel}
+                    class="shrink-0 inline-flex items-center gap-1 px-2.5 py-1 rounded-md text-[11.5px] font-semibold text-[var(--text-secondary)] border border-[var(--border)] hover:border-[rgba(167,139,250,0.45)] hover:text-[var(--accent-primary)] no-underline"
+                    data-category-list-cta={t.slug}
+                  >
+                    {label} →
+                  </a>
+                )}
+              </li>
+            );
+          })}
+        </ol>
+      </section>
+    )}
+
+    <ShareButtons title={title} pageUrl={`${siteBase}categories/${slug}/`} />
+    <FeedbackForm toolName={title} />
+  </div>
+</BaseLayout>

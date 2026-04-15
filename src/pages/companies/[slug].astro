@@ -1,36 +1,61 @@
 ---
-import { getCollection, render } from 'astro:content';
-import ArticleLayout from '../../layouts/ArticleLayout.astro';
+import { getCollection, getEntry, render } from 'astro:content';
+import CompanyLayout from '../../layouts/CompanyLayout.astro';
 
 export async function getStaticPaths() {
   const entries = await getCollection('companies');
-  return entries.map(entry => ({
+  return entries.map((entry) => ({
     params: { slug: entry.data.slug || entry.id.replace(/\.md$/, '').replace(/\\/g, '/') },
     props: { entry },
   }));
 }
 
 const { entry } = Astro.props;
-const { Content } = await render(entry);
+const { Content, headings } = await render(entry);
 
-const typeColors: Record<string, string> = {
-  startup: 'green',
-  bigtech: 'blue',
-  acquired: 'yellow',
-  dead: 'red',
-};
+const slug = entry.data.slug ?? entry.id.replace(/\.md$/, '');
+const productSlugs: string[] = entry.data.key_products ?? [];
+const productEntries = await Promise.all(
+  productSlugs.map(async (s) => {
+    try {
+      return await getEntry('tools', s);
+    } catch {
+      return null;
+    }
+  })
+);
 
-const companyType = entry.data.company_type ?? 'startup';
-const badgeColor = typeColors[companyType] ?? 'gray';
-const badgeText = companyType.charAt(0).toUpperCase() + companyType.slice(1);
+const keyProducts = productEntries
+  .filter((t): t is NonNullable<typeof t> => t != null)
+  .map((t) => ({
+    slug: t.data.slug ?? t.id.replace(/\.md$/, ''),
+    title: t.data.title,
+    category: t.data.category,
+    url: t.data.url,
+    price_range: t.data.price_range,
+    pricing_model: t.data.pricing_model,
+    affiliate: t.data.affiliate,
+    scores: t.data.scores,
+    tagline: t.data.tagline,
+  }));
+
+const wordCount = entry.body ? entry.body.split(/\s+/).filter(Boolean).length : 0;
+const readingMinutes = Math.max(1, Math.round(wordCount / 230));
 ---
 
-<ArticleLayout
+<CompanyLayout
   title={entry.data.title}
   seoTitle={entry.data.seo_title}
   description={entry.data.meta_description ?? ''}
-  breadcrumbs={[{ label: 'Companies', href: '/companies/' }, { label: entry.data.title }]}
-  badge={{ text: badgeText, color: badgeColor }}
+  slug={slug}
+  companyType={entry.data.company_type ?? 'startup'}
+  founded={entry.data.founded}
+  hq={entry.data.hq}
+  funding={entry.data.funding}
+  keyProducts={keyProducts}
+  headings={headings}
+  lastVerified={entry.data.last_updated ? String(entry.data.last_updated) : undefined}
+  readingMinutes={readingMinutes}
 >
   <Content />
-</ArticleLayout>
+</CompanyLayout>

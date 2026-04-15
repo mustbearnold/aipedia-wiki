@@ -1,0 +1,27 @@
+---
+// Per-company Organization schema (e.g. Anthropic, OpenAI).
+// Distinct from OrganizationLD.astro which describes the aipedia.wiki publisher entity.
+interface Props {
+  name: string;
+  url?: string;
+  description?: string;
+  founded?: string | number;
+  hq?: string;
+  pageUrl?: string;
+}
+
+const { name, url, description, founded, hq, pageUrl } = Astro.props;
+
+const jsonLd: Record<string, unknown> = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name,
+};
+if (url) jsonLd.url = url;
+if (description) jsonLd.description = description;
+if (founded) jsonLd.foundingDate = String(founded);
+if (hq) jsonLd.address = { '@type': 'PostalAddress', addressLocality: hq };
+if (pageUrl) jsonLd.mainEntityOfPage = pageUrl;
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />

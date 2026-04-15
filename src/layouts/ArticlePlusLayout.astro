@@ -1,0 +1,106 @@
+---
+/**
+ * Enhanced article layout for "narrative" pages (trends, dead tools).
+ * Adds sticky TOC sidebar, byline, share buttons, feedback form.
+ * Use this instead of the plain ArticleLayout when the page has
+ * markdown headings worth navigating.
+ */
+import BaseLayout from './BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import BreadcrumbLD from '../components/seo/BreadcrumbLD.astro';
+import TableOfContents from '../components/TableOfContents.astro';
+import ShareButtons from '../components/ShareButtons.astro';
+import FAQAccordionScript from '../components/FAQAccordionScript.astro';
+import FeedbackForm from '../components/FeedbackForm.astro';
+
+interface Props {
+  title: string;
+  seoTitle?: string;
+  description?: string;
+  pageUrl: string;
+  breadcrumbs?: Array<{ label: string; href?: string }>;
+  badge?: { text: string; color: string };
+  headings?: Array<{ depth: number; slug: string; text: string }>;
+  readingMinutes?: number;
+  lastVerified?: string;
+  metaExtra?: string;
+}
+
+const {
+  title, seoTitle, description = '', pageUrl,
+  breadcrumbs, badge, headings = [],
+  readingMinutes = 0, lastVerified, metaExtra,
+} = Astro.props;
+
+const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
+
+const badgeColors: Record<string, string> = {
+  red: 'bg-[rgba(239,68,68,0.1)] text-red-400 border-[rgba(239,68,68,0.2)]',
+  green: 'bg-[rgba(74,222,128,0.1)] text-[var(--accent-success)] border-[rgba(74,222,128,0.2)]',
+  yellow: 'bg-[rgba(251,191,36,0.1)] text-[var(--accent-warning)] border-[rgba(251,191,36,0.2)]',
+  blue: 'bg-[rgba(96,165,250,0.1)] text-blue-400 border-[rgba(96,165,250,0.2)]',
+  purple: 'bg-[rgba(167,139,250,0.1)] text-[var(--accent-primary)] border-[rgba(167,139,250,0.2)]',
+  gray: 'bg-[rgba(156,163,175,0.1)] text-gray-400 border-[rgba(156,163,175,0.2)]',
+};
+const badgeClass = badge ? (badgeColors[badge.color] ?? badgeColors.gray) : '';
+
+const breadcrumbLdItems = breadcrumbs
+  ? [
+      { name: 'Home', url: siteBase },
+      ...breadcrumbs.map((b) => ({
+        name: b.label,
+        url: b.href ? `${siteBase}${b.href.replace(/^\//, '')}` : `${siteBase}${Astro.url.pathname.replace(/^\//, '')}`,
+      })),
+    ]
+  : undefined;
+
+const verifiedDate = lastVerified ? new Date(lastVerified) : null;
+const verifiedLabel = verifiedDate && !isNaN(verifiedDate.getTime())
+  ? verifiedDate.toLocaleDateString('en-US', { month: 'short', year: 'numeric' })
+  : null;
+---
+
+<BaseLayout title={seoTitle ?? title} description={description}>
+  {breadcrumbLdItems && <BreadcrumbLD items={breadcrumbLdItems} />}
+  {breadcrumbs && <Breadcrumb items={breadcrumbs} />}
+
+  <div class="lg:grid lg:grid-cols-[1fr_280px] lg:gap-8">
+    <div>
+      <div class="mb-5" data-pagefind-ignore>
+        <div class="flex items-center gap-3 flex-wrap mb-2">
+          <h1 class="text-2xl font-bold leading-tight m-0">{title}</h1>
+          {badge && (
+            <span class={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium border ${badgeClass}`}>
+              {badge.text}
+            </span>
+          )}
+        </div>
+        <div class="flex items-center gap-x-3 gap-y-1 text-sm text-[var(--text-muted)] flex-wrap">
+          <span>By <span class="text-[var(--text-secondary)]">aipedia.wiki Editorial</span></span>
+          {readingMinutes > 0 && (<><span aria-hidden="true">·</span><span>{readingMinutes} min read</span></>)}
+          {metaExtra && (<><span aria-hidden="true">·</span><span>{metaExtra}</span></>)}
+          {verifiedLabel && (
+            <>
+              <span aria-hidden="true">·</span>
+              <span><span class="text-[var(--accent-success)]" aria-hidden="true">✓</span> Updated {verifiedLabel}</span>
+            </>
+          )}
+        </div>
+      </div>
+
+      <article class="prose prose-invert prose-sm max-w-none wiki-prose">
+        <slot />
+      </article>
+
+      <FAQAccordionScript />
+      <ShareButtons title={title} pageUrl={pageUrl} />
+      <FeedbackForm toolName={title} />
+    </div>
+
+    <aside class="hidden lg:block">
+      <div class="sticky top-20 space-y-4">
+        <TableOfContents headings={headings} />
+      </div>
+    </aside>
+  </div>
+</BaseLayout>

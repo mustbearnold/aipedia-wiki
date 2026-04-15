@@ -1,63 +1,58 @@
 ---
 import { getCollection, getEntry, render } from 'astro:content';
-import ArticleLayout from '../../layouts/ArticleLayout.astro';
-import ItemListLD from '../../components/seo/ItemListLD.astro';
+import ComparisonLayout from '../../layouts/ComparisonLayout.astro';
 
 export async function getStaticPaths() {
   const entries = await getCollection('comparisons');
-  return entries.map(entry => ({
+  return entries.map((entry) => ({
     params: { slug: entry.data.slug || entry.id.replace(/\.md$/, '').replace(/\\/g, '/') },
     props: { entry },
   }));
 }
 
 const { entry } = Astro.props;
-const { Content } = await render(entry);
-
-const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
+const { Content, headings } = await render(entry);
 
 const toolSlugs: string[] = entry.data.tools ?? [];
 const toolEntries = await Promise.all(
-  toolSlugs.map(async (slug) => {
+  toolSlugs.map(async (s) => {
     try {
-      return await getEntry('tools', slug);
+      return await getEntry('tools', s);
     } catch {
       return null;
     }
   })
 );
 
-const items = toolEntries
+const tools = toolEntries
   .filter((t): t is NonNullable<typeof t> => t != null)
-  .map((t) => {
-    const s = t.data.scores ?? {};
-    const utility = s.utility ?? 0;
-    const value = s.value ?? 0;
-    const moat = s.moat ?? 0;
-    const longevity = s.longevity ?? 0;
-    const overall = Math.round(((utility + value + moat + longevity) / 4) * 10) / 10;
-    return {
-      name: t.data.title,
-      slug: t.data.slug ?? t.id.replace(/\.md$/, ''),
-      category: t.data.category,
-      score: overall || undefined,
-    };
-  });
+  .map((t) => ({
+    slug: t.data.slug ?? t.id.replace(/\.md$/, ''),
+    title: t.data.title,
+    category: t.data.category,
+    company: t.data.company,
+    url: t.data.url,
+    price_range: t.data.price_range,
+    pricing_model: t.data.pricing_model,
+    affiliate: t.data.affiliate,
+    scores: t.data.scores,
+    tagline: t.data.tagline,
+  }));
+
+const wordCount = entry.body ? entry.body.split(/\s+/).filter(Boolean).length : 0;
+const readingMinutes = Math.max(1, Math.round(wordCount / 230));
 ---
 
-<ArticleLayout
+<ComparisonLayout
   title={entry.data.title}
   seoTitle={entry.data.seo_title}
   description={entry.data.meta_description ?? ''}
-  breadcrumbs={[{ label: 'Compare', href: '/compare/' }, { label: entry.data.title }]}
+  slug={entry.data.slug ?? entry.id.replace(/\.md$/, '')}
+  tools={tools}
+  headings={headings}
+  winner={entry.data.winner}
+  lastVerified={entry.data.last_verified ? String(entry.data.last_verified) : undefined}
+  readingMinutes={readingMinutes}
 >
-  {items.length > 0 && (
-    <ItemListLD
-      name={entry.data.title}
-      description={entry.data.meta_description}
-      items={items}
-      siteBase={siteBase}
-    />
-  )}
   <Content />
-</ArticleLayout>
+</ComparisonLayout>
