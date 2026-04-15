@@ -9,9 +9,10 @@ interface Props {
   title: string;
   description: string;
   ogImage?: string;
+  noindex?: boolean;
 }
 
-const { title, description, ogImage } = Astro.props;
+const { title, description, ogImage, noindex } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? 'https://aipedia.wiki');
 const ogImageUrl = ogImage
   ? new URL(ogImage, Astro.site ?? 'https://aipedia.wiki').href
@@ -27,7 +28,7 @@ const ogImageUrl = ogImage
     <link rel="canonical" href={canonicalURL.href} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.ico" />
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content={noindex ? 'noindex, nofollow' : 'index, follow'} />
 
     <!-- Impact affiliate network site verification -->
     <meta name="impact-site-verification" value="2c73acbf-cc61-403b-82c5-2e55071f3a01" />
