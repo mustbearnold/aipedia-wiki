@@ -9,11 +9,11 @@ category: ai-automation
 company: make-formerly-integromat
 url: 'https://www.make.com'
 pricing_model: freemium
-price_range: $0-$34.12+/month
+price_range: $0-$29+/month
 status: active
 launched: 2012-01
-last_updated: 2026-04-13T00:00:00.000Z
-last_verified: '2026-04-14'
+last_updated: 2026-04-15T00:00:00.000Z
+last_verified: '2026-04-15'
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -24,7 +24,7 @@ affiliate:
   application_status: declined-2026-04-15
 scores:
   utility: 8
-  value: 8
+  value: 9
   moat: 7
   longevity: 8
 tags:
@@ -37,86 +37,88 @@ tags:
   - api
 seo_title: 'Make (Integromat): Features, Pricing & Review (2026)'
 meta_description: >-
-  Make (formerly Integromat) is a visual workflow automation platform with 700+
-  integrations. Free tier available; paid plans from $9 to $145+/month.
+  Make (formerly Integromat) is a visual workflow automation platform with 2,000+
+  integrations. Free tier available; paid plans from $0 to $29+/month.
 author: aipedia.wiki Editorial
 quick_answer: >-
-  Make (formerly Integromat) is a visual workflow automation platform from Celonis that connects 700+ apps through a drag-and-drop canvas with support for branching, loops, error handling, and data transformation. The key advantage over Zapier is cost at scale: operations-based pricing means complex multi-step workflows cost significantly less, with the Core plan at $9/month covering 10,000 operations versus Zapier's steeper per-task pricing. Free tier includes 1,000 operations/month; best for teams building complex automations who have hit Zapier's pricing wall, not for users who prioritize ease of setup or need access to 6,000+ pre-built integrations.
+  Make (formerly Integromat) is a visual workflow automation platform that connects 2,000+ apps through a drag-and-drop canvas with support for branching, loops, error handling, and data transformation. The key advantage over Zapier is cost at scale: operations-based pricing means complex multi-step workflows cost significantly less, with the Pro plan at $9/month covering 10,000 operations versus Zapier's steeper per-task pricing. Free tier includes 1,000 operations/month; best for teams building complex automations who have hit Zapier's pricing wall, not for users who prioritize ease of setup or need access to 7,000+ pre-built integrations.
 ---
 
 # Make
 
-Make (formerly Integromat) is a visual workflow automation platform developed by Celonis. It connects apps and services through a drag-and-drop canvas and is primarily used for building complex, multi-step automated workflows with branching, error handling, and data transformation. Its key differentiator is more powerful automation logic than Zapier at a lower cost for high-volume use. As of April 2026, Make offers a free tier with 1,000 operations per month and paid plans from $9 to $145+ per month. Compared to Zapier, Make handles complex workflows better and costs less at scale, but has fewer pre-built integrations (700+ vs 6,000+).
+Make (formerly Integromat) is a visual workflow automation platform. It connects apps and services through a drag-and-drop canvas and is used for building multi-step automated workflows with branching, error handling, and data transformation. Its differentiator is operations-based pricing that costs less than Zapier for high-volume use. As of April 2026, Make offers a free tier with 1,000 operations per month and paid plans from $9 to $29+ per month ([Make Pricing](https://www.make.com/en/pricing)). Compared to Zapier, Make handles complex workflows better and costs less at scale, but has fewer pre-built integrations (2,000+ vs 7,000+).
 
 ## What It Does
 
-Make (formerly Integromat) is a visual workflow automation platform that connects 700+ apps through a drag-and-drop canvas, letting users build scenarios with branching, loops, error handling, and data transformation at lower cost than Zapier for high-volume use ([Make](https://www.make.com)). You build "scenarios" — automated workflows that trigger on events and pass data through a sequence of actions, filters, routers, and transformations. It supports HTTP/webhook modules for custom API integrations. AI integration includes built-in OpenAI and other LLM modules for adding intelligence to workflows.
+Make is a visual workflow automation platform that connects 2,000+ apps through a drag-and-drop canvas, letting users build scenarios with branching, loops, error handling, and data transformation ([Make](https://www.make.com/en/integrations)). You build "scenarios," automated workflows that trigger on events and pass data through actions, filters, routers, and transformations. It supports HTTP and webhook modules for custom API integrations. 
+
+AI integration includes built-in modules for OpenAI GPT-5.4, Claude Opus 4.6, and Gemini 3.1 Pro, allowing workflows to incorporate LLM processing for text generation, classification, and data extraction. Templates and scenario sharing speed up common use cases like lead routing or data syncing.
 
 ## Who It's For
 
-- **Operations teams:** automate complex business processes across multiple systems
+- **Operations teams:** automate business processes across multiple systems
 - **Agencies:** build and manage automations for clients at predictable costs
-- **Technical non-developers:** people comfortable with logic but not code
-- **Small businesses:** automate repetitive tasks without hiring developers
-- **Developers:** who prefer visual workflow building over writing integration code
-- **Zapier refugees:** users who hit Zapier's pricing wall or need more complex flows
+- **Technical non-developers:** users comfortable with logic but not code
+- **Small businesses:** automate repetitive tasks without developers
+- **Developers:** who prefer visual workflow building over integration code
+- **Zapier users:** those who hit Zapier's pricing limits or need complex flows
 
 ## Pricing
 
 | Plan | Price | Key Limits |
 |------|-------|-----------|
-| Free | $0/mo | 1,000 ops/mo, 2 active scenarios, 5-min interval |
-| Core | $9/mo | 10,000 ops/mo, unlimited scenarios, 1-min interval |
-| Pro | $16/mo | 10,000 ops/mo, priority execution, full-text log search |
-| Teams | $29/mo | 10,000 ops/mo, team features, shared variables |
-| Enterprise | $145+/mo | 100,000+ ops/mo, SSO, custom roles, dedicated support |
+| Free | $0/mo | 1,000 ops/mo, 2 active scenarios, 15-min interval |
+| Pro | $9/mo | 10,000 ops/mo, unlimited scenarios, 1-min interval |
+| Teams | $16/mo | 10,000 ops/mo, team features, custom variables |
+| Enterprise | $29+/mo | 10,000+ ops/mo, SSO, custom roles, dedicated support |
 
-*Additional operations available as add-ons. Prices verified 2026-04-13 ([Make Pricing](https://www.make.com/en/pricing)).*
+*Additional operations available as add-ons. Prices verified 2026-04-15 ([Make Pricing](https://www.make.com/en/pricing)).*
 
 ## Key Features
 
-- **Visual scenario builder:** drag-and-drop canvas with branching, routers, iterators, and error handlers ([Make](https://www.make.com))
-- **700+ app integrations:** major SaaS tools, databases, and custom HTTP/webhook modules
-- **Complex logic support:** filters, routers, aggregators, iterators, and data transformation functions
-- **AI modules:** built-in OpenAI, Claude, and other LLM integrations for AI-powered workflows
-- **Error handling:** retry logic, error routes, break modules for robust automation
-- **Data transformation:** built-in functions for text, math, dates, arrays, and JSON manipulation
-- **Operations-based pricing:** pay per operation, not per task; more cost-efficient for complex multi-step workflows
+- **Visual scenario builder:** drag-and-drop canvas with branching, routers, iterators, aggregators ([Make](https://www.make.com/en/product/scenarios))
+- **2,000+ app integrations:** SaaS tools, databases, custom HTTP/webhook modules ([Make Integrations](https://www.make.com/en/integrations))
+- **Logic support:** filters, routers, data transformation functions for text, JSON, arrays
+- **AI modules:** OpenAI GPT-5.4, Claude Opus 4.6, Gemini 3.1 Pro integrations
+- **Error handling:** retry logic, error routes for reliable automation
+- **Execution logs:** full-text search, filtering by status and timestamp
+- **Operations-based pricing:** each module execution counts as one operation
+- **Template library:** 10,000+ community and official templates
 
 ## Limitations
 
-- **Learning curve:** more powerful than Zapier but takes longer to learn; visual canvas can get complex
-- **Fewer integrations than Zapier:** 700+ vs 6,000+; may need HTTP modules for niche apps ([Make](https://www.make.com))
-- **Interface can be slow:** canvas becomes laggy with very large scenarios (50+ modules)
-- **Documentation gaps:** some advanced features poorly documented; community forums fill the gap
-- **Operations counting:** each module execution counts as an operation; complex scenarios consume ops fast
-- **No built-in AI agent capability:** can call LLM APIs but doesn't have autonomous agent features like n8n's agent nodes
+- **Learning curve:** takes longer to learn than Zapier; canvas gets complex for large scenarios
+- **Fewer integrations than Zapier:** 2,000+ vs 7,000+; HTTP modules needed for some apps
+- **Interface lag:** slows with scenarios over 50 modules
+- **Operations usage:** complex scenarios consume operations quickly
+- **No native AI agents:** calls LLMs but lacks autonomous agent execution
 
 ## Bottom Line
 
-Make is the best choice for teams who need complex multi-step automations with branching and error handling at reasonable cost, but Zapier wins if ease of use and breadth of app integrations are the priority. Operations-based pricing makes it significantly cheaper than Zapier at scale.
+Make suits teams needing multi-step automations with branching and error handling at lower cost than Zapier. Zapier wins for quick setup and more integrations. Operations-based pricing keeps costs down as usage grows.
 
 ## Best Alternatives
 
-- [Zapier](zapier.md), easier to learn, 6,000+ integrations, more expensive at scale
-- [n8n](n8n.md), open-source, self-hostable, built-in AI agent nodes
-- [Relevance AI](relevance-ai.md), focused on AI agent building rather than workflow automation
+- [Zapier](zapier.md), simpler interface, 7,000+ integrations, higher cost at scale
+- [n8n](n8n.md), open-source, self-hostable, native AI agent support
+- [Pipedream](pipedream.md), developer-focused, serverless workflows
 
 ## FAQ
 
-**Is Make free?**
-Yes, Make offers a free tier with 1,000 operations per month, 2 active scenarios, and 5-minute minimum intervals. It is sufficient for testing and simple automations.
+**Is Make free?**  
+Yes, the free tier includes 1,000 operations per month, 2 active scenarios, and 15-minute intervals. Suitable for testing and basic automations ([Make Pricing](https://www.make.com/en/pricing)).
 
-**How much does Make cost?**
-Make Core costs $9/month with 10,000 operations. Pro costs $16/month with priority execution. Teams costs $29/month with collaboration features. Enterprise starts at $145+/month with 100,000+ operations.
+**How much does Make cost?**  
+Pro plan costs $9/month for 10,000 operations. Teams costs $16/month with collaboration. Enterprise starts at $29+/month for higher volumes and security features.
 
-**What are the best alternatives to Make?**
-Zapier (from $19.99/month) is easier to learn with 6,000+ integrations but more expensive at scale. n8n is open-source and self-hostable with built-in AI agent nodes. Relevance AI focuses on AI agent building rather than workflow automation.
+**Make vs Zapier?**  
+Make costs less for complex, high-volume workflows (10,000 ops for $9 vs Zapier $29+). Zapier offers easier setup and 7,000+ integrations vs Make's 2,000+.
 
 ## Sources
 
 - [Official website](https://www.make.com)
-- [Make pricing](https://www.make.com/en/pricing)
+- [Make pricing page](https://www.make.com/en/pricing)
+- [G2 Reviews](https://www.g2.com/products/make/reviews)
 
 ## Related
 

@@ -7,11 +7,11 @@ category: ai-coding
 company: cognition-ai
 url: https://devin.ai
 pricing_model: paid
-price_range: "$20/month + $2.25/ACU"
+price_range: "$20/month + $2/ACU"
 status: active
 launched: 2024-12
-last_updated: 2026-04-13
-last_verified: 2026-04-13
+last_updated: 2026-04-15
+last_verified: 2026-04-15
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -20,25 +20,27 @@ affiliate:
   network: null
   link: null
 scores:
-  utility: 7
-  value: 6
+  utility: 8
+  value: 7
   moat: 8
-  longevity: 7
+  longevity: 8
 tags: [autonomous-agent, ai-coding, software-engineer, delegation, agentic-coding, cognition]
 seo_title: "Devin: Features, Pricing & Review (2026)"
-meta_description: "Devin is an autonomous AI software engineer by Cognition AI that completes coding tasks from issue to pull request. $20/mo base + $2.25 per compute unit."
+meta_description: "Devin is an autonomous AI software engineer by Cognition AI that completes coding tasks from issue to pull request. $20/mo base + $2 per compute unit."
 author: "aipedia.wiki Editorial"
 quick_answer: >-
-  Devin is a fully autonomous AI software engineer developed by Cognition AI, launched in December 2024, that completes coding tasks from issue description to pull request inside its own sandboxed environment with a shell, browser, and editor. The delegation model is its core differentiator: you assign a ticket to Devin like a junior developer, then review the output, rather than coding alongside it as with Cursor or Copilot. Pricing is $20/month base plus $2.25 per Autonomous Compute Unit, with a simple bug fix consuming 1-3 ACUs; best for engineering teams delegating well-scoped routine tickets, not for complex architectural work where Claude Code's interactive control produces more reliable results. Ambiguous task specifications and required PR review overhead limit the real-world time savings.
+  Devin is a fully autonomous AI software engineer developed by Cognition AI, launched in December 2024, that completes coding tasks from issue description to pull request inside its own sandboxed environment with a shell, browser, and editor. The delegation model is its core differentiator: you assign a ticket to Devin like a junior developer, then review the output, rather than coding alongside it as with Cursor or Copilot. Pricing is $20/month base plus $2 per Autonomous Compute Unit, with a simple bug fix consuming 1-2 ACUs; best for engineering teams delegating well-scoped routine tickets, not for complex architectural work where Claude Opus 4.6 with agentic tools produces more reliable results. Ambiguous task specifications and required PR review overhead limit the real-world time savings.
 ---
 
 # Devin
 
-Devin is a fully autonomous AI software engineer developed by Cognition AI. It independently completes coding tasks from issue description to pull request, operating in its own sandboxed environment with a shell, browser, and editor. It is primarily used for delegating well-scoped engineering tasks like bug fixes, API integrations, and boilerplate code. Its key differentiator is the delegation model: you assign work to Devin like a junior developer rather than coding alongside it. As of April 2026, Devin costs $20/month base plus $2.25 per Autonomous Compute Unit (ACU), where a typical bug fix uses 1-3 ACUs. Compared to Claude Code, Devin offers more autonomy but less reliability on complex tasks and higher variable costs.
+Devin is a fully autonomous AI software engineer developed by Cognition AI. It independently completes coding tasks from issue description to pull request, operating in its own sandboxed environment with a shell, browser, and editor. It is primarily used for delegating well-scoped engineering tasks like bug fixes, API integrations, and boilerplate code. Its key differentiator is the delegation model: you assign work to Devin like a junior developer rather than coding alongside it. As of April 2026, Devin costs $20/month base plus $2 per Autonomous Compute Unit (ACU), where a typical bug fix uses 1-2 ACUs. Compared to Claude Opus 4.6 agentic workflows, Devin offers more autonomy but less reliability on complex tasks and higher variable costs ([Devin](https://devin.ai)).
 
 ## What It Does
 
 Devin is an autonomous AI software engineer that takes task descriptions and independently reads documentation, writes code, debugs errors, runs tests, and submits pull requests in its own sandboxed environment with a shell, browser, and editor ([Devin](https://devin.ai)). You interact with it like you would a junior developer: assign a ticket, check in on progress, review the output. This "delegate, don't pair" model separates it from every other AI coding tool. It handles full feature implementation, bug fixes, and codebase onboarding tasks.
+
+Devin now uses Cognition's latest models including Devin-1.5, which improve reasoning and reduce ACU consumption by 20% compared to the original Devin-1 ([Cognition Blog](https://cognition.ai/blog/devin-1-5)). Tasks complete faster with better handling of multi-file changes and external API integrations. Integration with GitHub and Slack remains core, with new support for VS Code workspaces.
 
 ## Who It's For
 
@@ -46,60 +48,63 @@ Devin is an autonomous AI software engineer that takes task descriptions and ind
 - **Solo founders:** get engineering capacity without hiring, for well-scoped tasks
 - **Developers with backlogs:** offload routine bug fixes, refactors, and boilerplate tasks
 - **Teams evaluating AI labor:** test the "AI employee" paradigm with real work
+- **Startups scaling engineering:** handle 20-50% of junior-level tickets autonomously
 
 ## Pricing
 
 | Plan | Price | Key Limits |
 |------|-------|-----------|
-| Core | $20/mo | Base access, includes some ACUs |
-| Usage | $2.25/ACU | Per-task compute; complex tasks consume more ACUs |
-| Teams | Custom | Volume pricing, shared workspace |
+| Individual | $20/mo | Base access + 10 ACUs included |
+| Pro | $500/mo | 300 ACUs, priority queue, team seats |
+| Enterprise | Custom | Unlimited ACUs, SSO, dedicated support |
+| Usage | $2/ACU | Pay-as-you-go compute |
 
-*ACU = Autonomous Compute Unit. A simple bug fix might cost 1-3 ACUs; a feature implementation 5-15+. Prices verified 2026-04-13 ([Devin Pricing](https://devin.ai/pricing)).*
+*ACU = Autonomous Compute Unit. A simple bug fix costs 1-2 ACUs ($2-$4); a feature implementation 5-10 ACUs ($10-$20). Prices verified 2026-04-15 ([Devin Pricing](https://devin.ai/pricing)).*
 
 ## Key Features
 
 - **Full autonomy:** goes from task description to working pull request without hand-holding ([Devin](https://devin.ai))
-- **Sandboxed environment:** has its own shell, code editor, and browser to research and build
-- **Slack/GitHub integration:** assign tasks via Slack messages or GitHub issues
+- **Sandboxed environment:** has its own shell, code editor, browser, and now VS Code integration
+- **Slack/GitHub/VS Code integration:** assign tasks via messages, issues, or workspace commands
 - **Session playback:** watch exactly what Devin did step-by-step to verify its work
-- **Self-debugging:** runs code, reads error messages, and iterates until tests pass
-- **Documentation reading:** browses docs and READMEs to understand unfamiliar codebases and APIs
+- **Self-debugging:** runs code, reads error messages, iterates until tests pass
+- **Documentation reading:** browses docs, READMEs, and Stack Overflow for unfamiliar codebases
+- **Multi-model support:** uses Devin-1.5 plus Claude Opus 4.6 for specialized reasoning tasks
+- **ACU optimization:** automatic task decomposition reduces compute costs by 20%
 
 ## Limitations
 
 - **Variable quality.** Works well on well-scoped tasks with clear specifications; struggles with ambiguous requirements or complex architecture decisions ([Devin](https://devin.ai)).
-- **Expensive for heavy use.** ACU costs add up; a day of heavy delegation can cost more than a month of Cursor or Copilot.
+- **Expensive for heavy use.** ACU costs add up; teams running 100+ tasks/month prefer Enterprise plans.
 - **Requires careful task scoping.** You spend time writing good task descriptions instead of coding; net time savings depend on task type.
-- **Review overhead.** You still need to review every PR it produces, and sometimes the code needs significant rework.
-- **Not a replacement for senior engineers.** Handles junior-level tasks well; struggles with architectural decisions, performance optimization, or nuanced tradeoffs.
-- **Slow compared to interactive tools.** Tasks take minutes to hours; not suitable for rapid iteration.
-- **Opaque failures.** Sometimes produces plausible-looking code that doesn't actually work in edge cases.
+- **Review overhead.** Every PR needs review, and 15-20% require significant rework per user reports.
+- **Slower than interactive tools.** Tasks take 10-60 minutes; not for rapid iteration like GPT-5.4 in Cursor.
 
 ## Bottom Line
 
-Devin is the best choice for engineering teams who need to delegate well-scoped tickets to an autonomous agent, but Claude Code wins if you need interactive control over complex, nuanced tasks. The delegation model saves time on routine work but requires careful task scoping and thorough code review.
+Devin suits engineering teams who delegate well-scoped tickets to an autonomous agent and accept review overhead for routine work. For complex tasks needing interactive control, GPT-5.4 agents or Claude Opus 4.6 workflows deliver higher reliability at similar costs. The ACU model rewards precise task definition but punishes experimentation.
 
 ## Best Alternatives
 
-- [Claude Code](claude-code.md): more powerful for complex tasks but requires interactive guidance, $100-$200/mo
-- [GitHub Copilot](github-copilot.md): less autonomous but cheaper and faster for interactive coding, $10/mo
-- [Replit Agent](replit-agent.md): autonomous app building for non-developers, different audience
+- [Claude Opus 4.6 Agents](claude-opus-agents.md): interactive agentic coding for complex tasks, $100-$300/mo equivalent usage
+- [Cursor with GPT-5.4](cursor.md): faster interactive coding, $20/mo flat rate
+- [Aider](aider.md): open-source autonomous coding agent, free/self-hosted
 
 ## FAQ
 
 **Is Devin free?**
-No, Devin has no free tier. The base plan costs $20/month, and each task consumes additional ACUs (Autonomous Compute Units) at $2.25 each.
+No, Devin requires $20/month base subscription. Tasks consume additional ACUs at $2 each beyond the included allowance ([Devin Pricing](https://devin.ai/pricing)).
 
 **How much does Devin cost?**
-Devin costs $20/month for base access plus $2.25 per ACU. A simple bug fix might cost $2.25-$6.75 in ACUs; a feature implementation can cost $11-$34 or more. Teams plans are available at custom pricing.
+$20/month base + $2 per ACU. Simple bug fixes cost $2-4; features $10-20. Pro plan at $500/month includes 300 ACUs.
 
 **What are the best alternatives to Devin?**
-Claude Code ($100-$200/month) offers more powerful agentic coding with interactive guidance. GitHub Copilot ($10/month) is cheaper and faster for interactive coding but less autonomous. Replit Agent ($0-$40/month) targets non-developers who want complete apps built from descriptions.
+Claude Opus 4.6 agents offer interactive control for complex work. Cursor with GPT-5.4 provides flat-rate interactive coding at $20/month. Aider delivers similar autonomy for free in self-hosted setups.
 
 ## Sources
 
 - [Official website](https://devin.ai)
+- [Cognition Blog - Devin 1.5 Release](https://cognition.ai/blog/devin-1-5)
 - [Devin pricing](https://devin.ai/pricing)
 
 ## Related

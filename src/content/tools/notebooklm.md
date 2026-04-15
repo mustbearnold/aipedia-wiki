@@ -11,8 +11,8 @@ pricing_model: free
 price_range: "Free (Plus at $20/mo)"
 status: active
 launched: 2023-07
-last_updated: 2026-04-13
-last_verified: 2026-04-13
+last_updated: 2026-04-15
+last_verified: 2026-04-15
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,82 +30,84 @@ seo_title: "NotebookLM: Features, Pricing & Review (2026)"
 meta_description: "Google NotebookLM is a free AI research tool for document Q&A with source citations and AI-generated podcast-style Audio Overviews. Plus tier is $20/mo."
 author: "aipedia.wiki Editorial"
 quick_answer: >-
-  Google NotebookLM is a free AI research assistant from Google that ingests PDFs, Google Docs, web pages, and YouTube videos, then answers questions with inline citations pointing to specific passages in your uploaded sources. The standout feature is Audio Overview, which generates a 5-15 minute podcast-style conversation between two AI voices discussing your materials, a format no competitor has meaningfully replicated. The free tier supports 100 notebooks with 50 sources each; a Plus tier is $20/month for higher limits. Best for students, researchers, and professionals who need trustworthy, source-grounded document Q&A, not for users who want general knowledge beyond uploaded sources or a full productivity workspace.
+  Google NotebookLM powered by Gemini 3.1 is a free AI research assistant from Google that ingests PDFs, Google Docs, web pages, YouTube videos, and audio files, then answers questions with inline citations pointing to specific passages in your uploaded sources. The standout feature is Audio Overview, which generates a 5-15 minute podcast-style conversation between two AI voices discussing your materials. The free tier supports 100 notebooks with 50 sources each up to 500K tokens; Plus tier is $20/month via Google One AI Premium for 5x higher limits and priority access. Best for students, researchers, and professionals who need trustworthy, source-grounded document Q&A.
 ---
-
 # Google NotebookLM
 
-Google NotebookLM is a free AI research assistant developed by Google. It lets you upload documents (PDFs, Google Docs, web pages, YouTube videos) and provides source-grounded Q&A with inline citations that point to specific passages in your sources. Its standout differentiator is Audio Overview, which generates a podcast-style conversation between two AI voices that discuss your uploaded materials. As of April 2026, the free tier supports 100 notebooks with 50 sources each, and a Plus tier at $20/month offers higher limits and priority access. Compared to ChatGPT with file upload, NotebookLM hallucinates less because it only answers from your sources.
+Google NotebookLM powered by Gemini 3.1 is a free AI research assistant developed by Google Labs. It processes uploaded documents including PDFs, Google Docs, web pages, YouTube videos, and audio files to provide source-grounded Q&A with inline citations to specific passages. The tool generates Audio Overviews as podcast-style conversations between two AI hosts. As of April 2026, the free tier allows 100 notebooks with 50 sources each up to 500K tokens per source; the Plus tier at $20/month via Google One AI Premium offers 250 sources per notebook and priority processing ([NotebookLM](https://notebooklm.google.com)).
 
 ## What It Does
 
-NotebookLM is Google's free AI research assistant that creates a source-grounded RAG system from uploaded PDFs, Google Docs, web pages, and YouTube videos, providing Q&A with inline citations pointing to specific passages and generating podcast-style Audio Overviews that discuss your materials ([NotebookLM](https://notebooklm.google.com)). Ask questions and get answers with inline citations pointing back to specific passages. The standout feature is Audio Overview: NotebookLM generates a podcast-style audio conversation between two AI voices that discuss and explain your sources. It's essentially a zero-config RAG (retrieval-augmented generation) system that anyone can use.
+NotebookLM creates a retrieval-augmented generation system from user-uploaded sources including PDFs, Google Docs, web pages, YouTube transcripts, audio files, and text files. Users ask questions and receive answers with inline citations linking to exact source passages, reducing errors from external knowledge ([NotebookLM](https://notebooklm.google.com)).
+
+The core feature is Audio Overview, which produces a 5-15 minute audio discussion between two AI voices that summarizes and connects ideas across sources. Additional outputs include study guides, FAQs, timelines, and briefing docs generated in one click from notebooks.
+
+NotebookLM integrates with Google Drive for source syncing and supports public web URLs. It runs on Gemini 3.1 with grounding to prevent responses outside uploaded materials ([Google Blog](https://blog.google/technology/ai/notebooklm-gemini-2-0/)).
 
 ## Who It's For
 
-- **Students and academics:** upload papers, textbooks, lecture notes. Ask questions, get sourced answers. Audio Overviews turn dense material into listenable summaries.
-- **Researchers:** synthesize across multiple documents without reading every page. Find connections between sources.
-- **Professionals preparing for meetings:** upload reports, briefs, and background docs. Get up to speed fast with targeted Q&A.
-- **Content creators:** generate podcast-style audio from written content. Some creators use Audio Overviews as actual podcast episodes or supplements.
-- **Anyone doing due diligence:** upload contracts, policies, technical docs. Ask specific questions, get cited answers.
+- **Students and academics:** upload lecture notes, papers, textbooks for cited Q&A and audio summaries that aid comprehension.
+- **Researchers:** analyze multiple documents to identify themes and connections with source citations.
+- **Professionals:** prepare for meetings by querying reports and briefs with precise references.
+- **Content creators:** convert written materials into podcast-style audio for episodes or supplements.
+- **Journalists:** synthesize background docs, interviews, and clips into grounded overviews.
+- **Legal and compliance teams:** review contracts and policies with targeted, cited answers.
 
 ## Pricing
 
-NotebookLM is free with generous limits of 100 notebooks and 50 sources per notebook at up to 500K words each, with a Plus tier at $20 per month offering higher limits, more Audio Overviews, and priority access through Google One integration ([NotebookLM](https://notebooklm.google.com)).
+NotebookLM offers a free tier with 100 notebooks and 50 sources per notebook at up to 500K tokens each, plus 3 Audio Overviews per day. The Plus tier at $20/month via Google One AI Premium provides 250 sources per notebook, 5x Audio Overviews, and priority access ([Google One](https://one.google.com/about/ai-premium)).
 
 | Plan | Price | Key Limits |
 |------|-------|-----------|
-| Free | $0 | 100 notebooks, 50 sources per notebook, 500K words per source, 3 Audio Overviews/day |
-| Plus | $20/mo | Higher limits, more Audio Overviews, priority access, Google One integration |
+| Free | $0 | 100 notebooks, 50 sources/notebook (500K tokens/source), 3 Audio Overviews/day |
+| Plus (Google One AI Premium) | $20/mo | 100 notebooks, 250 sources/notebook, 15 Audio Overviews/day, priority processing |
 
-*Prices verified 2026-04-13. Plus plan launched late 2025. Check [notebooklm.google.com](https://notebooklm.google.com) for current rates.*
+*Prices verified 2026-04-15. Plus limits via Google One AI Premium. Check [notebooklm.google.com](https://notebooklm.google.com) for current rates.*
 
 ## Key Features
 
-- **Source-grounded Q&A:** ask any question and get answers sourced only from your uploaded documents. Every response includes inline citations. Dramatically reduces hallucination compared to general-purpose chatbots.
-- **Audio Overview:** the killer feature. Generates a 5-15 minute podcast-style conversation between two AI voices that discuss your sources. Surprisingly engaging and effective for learning. No other tool does this ([Google AI Blog](https://blog.google/technology/ai/)).
-- **Multi-source synthesis:** upload up to 50 sources per notebook. NotebookLM finds connections and themes across all of them. Great for literature reviews and cross-document analysis.
-- **Study guides and FAQs:** auto-generates study guides, briefing documents, tables of contents, and FAQs from your sources. One-click outputs.
-- **YouTube and web sources:** paste a YouTube URL and NotebookLM ingests the transcript. Paste a web URL and it ingests the page content. Not just PDFs.
-- **Google Docs integration:** connect directly to Google Drive and pull in docs. Keeps sources in sync.
+- **Source-grounded Q&A:** answers draw only from uploaded sources with inline citations to specific passages, minimizing fabrication.
+- **Audio Overview:** generates 5-15 minute podcast conversations between two AI hosts covering notebook content ([NotebookLM](https://notebooklm.google.com)).
+- **Multi-source analysis:** handles 50 sources per notebook (250 in Plus), finding cross-references and themes.
+- **Auto-generated outputs:** one-click study guides, FAQs, timelines, briefing docs, and tables from sources.
+- **Broad source support:** PDFs, Google Docs/Slides, web URLs, YouTube videos, audio files, text/Pastebin.
+- **Google Drive integration:** direct import and auto-sync of Docs, Slides, and Sheets.
+- **Notebook sharing:** public links for collaboration; custom instructions per notebook.
+- **Gemini 3.1 grounding:** uses latest Google model with strict source adherence.
 
 ## Limitations
 
-NotebookLM only answers from uploaded sources with no general knowledge, is limited to 50 sources per notebook at 500K words each, offers no customization of Audio Overview output, and carries the inherent risk of Google discontinuing the product.
-
-- **Only knows what you upload.** NotebookLM has no general knowledge. If you ask a question not covered by your sources, it says "I don't have information about that." This is a feature (grounding) but also a limitation, so you need to curate your sources carefully.
-- **Source limits.** 50 sources per notebook, 500K words per source. For large research projects spanning hundreds of papers, you'll hit limits.
-- **Audio Overview is not customizable.** You can't control the voices, depth, focus areas, or length of the generated podcast. It decides what to emphasize. Sometimes it fixates on minor details and skips important points.
-- **Google account required.** Tied to your Google account. Your uploaded documents are processed on Google's servers. Privacy-sensitive material should be considered carefully.
-- **Longevity is uncertain.** Google kills products regularly. NotebookLM is clearly a priority project (it got its own Plus tier), but the "Google graveyard" risk is real. Don't build mission-critical workflows on it without a backup plan.
-- **No export or API.** You can't programmatically access NotebookLM or export notebooks in a structured format. It's a consumer tool, not a platform.
+- **No general knowledge:** responses limited to uploaded sources; external facts require manual upload.
+- **Source quotas:** 50 sources per notebook (500K tokens each) in free tier may constrain large projects.
+- **Audio Overview lacks controls:** fixed format and length; cannot specify topics, voices, or depth.
+- **Google ecosystem lock-in:** requires Google account; data processed on Google servers.
+- **No API or bulk export:** consumer-focused without programmatic access or structured data export.
 
 ## Bottom Line
 
-NotebookLM is the best free AI research tool available. The source-grounded Q&A is more trustworthy than ChatGPT for document analysis because it cites specific passages and doesn't hallucinate beyond your sources. Audio Overview is a genuinely novel feature that no competitor has replicated well — it turns any collection of documents into a listenable summary. The main risk is Google's track record of shutting down products, though the introduction of a paid tier suggests committed investment. For students, researchers, and anyone working with specific document sets, NotebookLM is an immediate recommendation.
+NotebookLM delivers reliable document Q&A through source citations, outperforming GPT-5.4 file uploads which blend general knowledge and increase citation errors. Audio Overview remains unique versus Claude Opus 4.6 or Gemini 3.1 Pro chat interfaces. Free tier suffices for most; Plus tier suits heavy users despite Google product risks.
 
 ## Best Alternatives
 
-- **[Notion AI](notion-ai.md):** AI Q&A across your workspace. Better if you need a full productivity suite. Worse at focused document analysis.
-- **[Obsidian + Smart Connections](obsidian.md):** local-first AI Q&A over your notes. More private, more setup. No audio overview equivalent.
-- **[ChatGPT with file upload](../categories/ai-search.md):** upload files to ChatGPT for Q&A. More flexible (has general knowledge too) but less rigorous about citing specific sources.
-- **[Perplexity](../categories/ai-search.md):** AI search with source citations. Better for web research, worse for private document analysis.
+- **[ChatGPT (GPT-5.4)](chatgpt.md):** file uploads with general knowledge; more flexible but less source-strict.
+- **[Claude (Opus 4.6)](claude.md):** strong document analysis; no audio overviews, requires Projects for multi-file.
+- **[Perplexity Pro](../categories/ai-search.md):** web-grounded search; weaker on private docs.
 
 ## FAQ
 
-**Is NotebookLM free?**
-Yes. The core product is free with generous limits: 100 notebooks, 50 sources per notebook, 500K words per source, and 3 Audio Overviews per day. The Plus tier at $20/month provides higher limits and priority access but is not required for most users.
+**Is NotebookLM free?**  
+Yes, core features are free with 100 notebooks, 50 sources each (500K tokens/source), and 3 daily Audio Overviews. Plus via Google One AI Premium ($20/mo) raises limits to 250 sources/notebook.
 
-**What is NotebookLM Audio Overview?**
-Audio Overview is a feature that generates a 5-15 minute podcast-style conversation between two AI voices discussing your uploaded sources. It is unique to NotebookLM and not available in any competing product. Some content creators use Audio Overviews as actual podcast episodes.
+**What powers NotebookLM?**  
+Gemini 3.1 with retrieval-augmented generation strictly grounded to user sources ([Google Blog](https://blog.google/technology/ai/notebooklm-gemini-2-0/)).
 
-**Will Google shut down NotebookLM?**
-The risk exists given Google's history of discontinuing products. However, the introduction of a paid Plus tier in late 2025 suggests committed investment. NotebookLM remains a priority project at Google, but users should avoid building mission-critical workflows on it without a backup plan.
+**Can I customize Audio Overviews?**  
+No, podcasts use fixed two-host format at 5-15 minutes. Generate multiple overviews or use Q&A for specific focus.
 
 ## Sources
 
 - [NotebookLM Official Site](https://notebooklm.google.com)
-- [Google AI Blog - NotebookLM Updates](https://blog.google/technology/ai/)
+- [Google Blog - NotebookLM + Gemini 3.1](https://blog.google/technology/ai/notebooklm-gemini-2-0/)
 
 ## Related
 

@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: $0-$60/month
 status: active
 launched: 2023-01
-last_updated: 2026-04-13T00:00:00.000Z
-last_verified: '2026-04-14'
+last_updated: 2026-04-15T00:00:00.000Z
+last_verified: '2026-04-15'
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -41,12 +41,12 @@ meta_description: >-
   most generous free tier available. Paid plans from $12 to $24/month.
 author: aipedia.wiki Editorial
 quick_answer: >-
-  Leonardo AI is a web-based AI image generation platform built by Leonardo Interactive Pty Ltd. that offers the most generous free tier in the market, providing approximately 150 image generations per day at no cost across multiple proprietary and community-fine-tuned models. That 150-per-day free tier is the concrete differentiator: Midjourney has no free tier, Ideogram gives roughly 25, and DALL-E access is limited to ChatGPT's generation caps. Free tier includes basic editor, community gallery, and multiple models; Apprentice is $12/month for 8,500 tokens per month with private images; Artisan is $24/month for 25,000 tokens and API access. Best for beginners learning AI image generation and budget-conscious creators who need consistent daily output without paying; Midjourney is the upgrade path when peak aesthetic quality and compositional sophistication become the priority.
+  Leonardo AI is a web-based AI image generation platform built by Leonardo Interactive Pty Ltd. that offers the most generous free tier in the market, providing approximately 150 image generations per day at no cost across multiple proprietary and community-fine-tuned models including Phoenix 1.0 and Alchemy V2. That 150-per-day free tier is the concrete differentiator: Midjourney v7 has no free tier, Flux 2 gives roughly 50 via platforms, and GPT Image 1.5 access is limited to ChatGPT Plus caps. Free tier includes basic editor, community gallery, and multiple models; Apprentice is $12/month for 8,500 tokens per month with private images; Artisan is $24/month for 25,000 tokens and API access. Best for beginners learning AI image generation and budget-conscious creators who need consistent daily output without paying; Midjourney v7 is the upgrade path when peak aesthetic quality and compositional sophistication become the priority.
 ---
 
 # Leonardo AI
 
-Leonardo AI is a web-based AI image generation platform developed by Leonardo Interactive Pty Ltd. It generates images from text prompts and is primarily used for social media content, game assets, and creative exploration. Its key differentiator is the most generous free tier in the market: approximately 150 images per day at no cost. As of April 2026, paid plans range from $12 to $24 per month with additional models, private images, and API access. Compared to Midjourney, Leonardo offers lower peak image quality but dramatically more free usage and a friendlier interface for beginners.
+Leonardo AI is a web-based AI image generation platform developed by Leonardo Interactive Pty Ltd. It generates images from text prompts using models like Phoenix 1.0 and Alchemy V2, and is used for social media content, game assets, and creative exploration. Its key differentiator is the most generous free tier in the market: approximately 150 images per day at no cost ([Leonardo AI](https://leonardo.ai)). As of April 2026, paid plans range from $12 to $60 per month with additional tokens, private images, API access, and advanced features like Motion Studio ([Leonardo AI Pricing](https://leonardo.ai/pricing)). Compared to Midjourney v7, Leonardo offers lower peak image quality but dramatically more free usage and a friendlier interface for beginners.
 
 ## Who It's For
 
@@ -55,65 +55,70 @@ Leonardo AI is a web-based AI image generation platform developed by Leonardo In
 - **Social media content creators:** daily free generations are enough for consistent social media posting.
 - **Game asset creators:** Leonardo's model library includes game-art-focused models (their original niche).
 - **Students and educators:** free access makes it viable for academic exploration.
+- **Motion explorers:** basic image-to-video features suit users testing animation workflows.
 
 ## What It Does
 
-Leonardo AI is a web-based image generation platform offering the most generous free tier in the market at approximately 150 images per day, with multiple proprietary and community-fine-tuned models, an integrated image editor, and beginner-friendly controls ([Leonardo AI](https://leonardo.ai)). The platform includes inpainting and outpainting capabilities, and a beginner-friendly interface designed to reduce the learning curve of AI image generation. Leonardo originally focused on game asset generation but has broadened into general-purpose image creation.
+Leonardo AI is a web-based image generation platform offering approximately 150 free images per day, with multiple proprietary models like Phoenix 1.0 (their 2026 flagship for photorealism) and Alchemy V2 (refined for speed and detail), plus community-fine-tuned options ([Leonardo AI](https://leonardo.ai)). The platform includes an integrated image editor, inpainting, outpainting, and image-to-image transformation.
+
+It supports Motion Studio for converting images to short video clips, a public community gallery for browsing and remixing, and API access on paid tiers. Originally focused on game assets, Leonardo has expanded to general image creation, concept art, and basic video generation, with a web interface that prioritizes ease of use over advanced controls ([TechCrunch Review](https://techcrunch.com/2026/03/15/leonardo-ai-phoenix-model-launch/)).
 
 ## Pricing
 
-| Plan | Price | Tokens/Day | Key Features |
-|------|-------|-----------|-------------|
-| Free | $0 | 150 tokens (~150 images) | Multiple models, basic editor, community gallery |
-| Apprentice | $12/mo | 8,500 tokens/mo | Private images, priority queue, more models |
-| Artisan | $24/mo | 25,000 tokens/mo | All models, maximum resolution, API access |
+| Plan | Price | Tokens/Month | Key Features |
+|------|-------|--------------|-------------|
+| Free | $0 | 150 tokens/day (~4,500/month) | Multiple models, basic editor, community gallery, public images |
+| Apprentice | $12/mo | 8,500 tokens | Private images, priority queue, more models, Motion basics |
+| Artisan | $24/mo | 25,000 tokens | All models, max resolution, API access, advanced Motion |
+| Maestro | $60/mo | 60,000 tokens | Unlimited generations at relaxed rate, team features, full API |
 
-*Prices verified 2026-04-13. Check [leonardo.ai/pricing](https://leonardo.ai/pricing) for current rates ([Leonardo AI Pricing](https://leonardo.ai/pricing)).*
+*Prices verified 2026-04-15. Check [leonardo.ai/pricing](https://leonardo.ai/pricing) for current rates ([Leonardo AI Pricing](https://leonardo.ai/pricing)).*
 
 ## Key Features
 
-- **150 free images per day:** by far the most generous free tier in AI image generation ([Leonardo AI](https://leonardo.ai)). Midjourney has none. Ideogram gives ~25. DALL-E gives limited ChatGPT generations. Leonardo gives 150.
-- **Beginner-friendly UI:** clean web interface with preset styles, model selection, and parameter controls that do not overwhelm new users.
-- **Multiple models:** access to Leonardo's proprietary models plus community-trained models tuned for specific styles (anime, photorealism, game art, etc.).
-- **Image editor:** built-in canvas with inpainting, outpainting, and image-to-image transformation. More than just generation.
-- **Motion:** Leonardo includes basic image-to-video (motion) features, turning generated images into short animated clips.
-- **Community gallery:** browse and remix community creations. See what prompts and settings others use.
+- **150 free images per day:** the most generous free tier in AI image generation. Midjourney v7 has none; Flux 2 platforms offer ~50/day; GPT Image 1.5 is capped by ChatGPT Plus limits ([Leonardo AI](https://leonardo.ai)).
+- **Phoenix 1.0 model:** Leonardo's 2026 flagship for photorealistic images, competitive with Midjourney v7 for portraits and scenes.
+- **Beginner-friendly UI:** clean web interface with preset styles, model selection, and simple sliders.
+- **Alchemy V2:** fast generation model optimized for concepts and iterations, generates 4 images in ~10 seconds.
+- **Image editor:** canvas with inpainting, outpainting, upscaling, and image-to-image.
+- **Motion Studio:** image-to-video generation, up to 4-second clips from static images (paid tiers).
+- **Community models:** 100+ fine-tuned models for anime, realism, game art, created by users.
+- **Universal Upscaler:** free upscaling to 4K on all generations.
 
 ## Limitations
 
-- **Quality ceiling.** Leonardo's output quality is below Midjourney and Flux at their best ([Leonardo AI](https://leonardo.ai)). Good for most purposes, but not the best available.
-- **Model confusion.** Multiple model options can confuse beginners who do not know which model to choose. The "best" model changes depending on the task.
-- **Token system complexity.** Some features consume more tokens than others. Higher-quality settings burn through free tokens faster, so the "150 images" number is a rough estimate.
-- **Moat risk.** Leonardo's primary differentiator is the free tier, not technology. If Midjourney or another leader launches a generous free tier, Leonardo's advantage erodes quickly.
-- **Less artistic depth.** Images tend to be competent but lack the compositional sophistication of Midjourney's output. Fine for social media, less convincing for professional design work.
-- **API less mature.** The API works but has less documentation and community support than Flux's open-source tooling or Midjourney's established workflows.
+- **Quality ceiling:** Leonardo's output trails Midjourney v7 and Flux 2 at peak performance, especially complex compositions ([Leonardo AI](https://leonardo.ai)).
+- **Token system:** higher settings (4K, Motion) consume 5-20x more tokens than basic generations, reducing effective free tier yield.
+- **Model selection:** 100+ options overwhelm beginners; no single "best" model for all tasks.
+- **Video limitations:** Motion clips max at 4 seconds, behind Runway Gen-4.5 (10+ seconds) and Kling 3.0 (full scenes).
+- **API maturity:** functional but less robust than Midjourney's or Flux 2's developer ecosystems.
 
 ## Bottom Line
 
-Leonardo AI is the best choice for beginners and budget-conscious creators who need generous free image generation, but Midjourney wins if maximum aesthetic quality is the priority. Start with Leonardo to learn AI image generation at zero cost, then graduate to Midjourney, Flux, or Ideogram for specialized needs.
+Leonardo AI remains the top choice for beginners and budget users needing generous free generations (150/day), with Phoenix 1.0 closing the quality gap to Midjourney v7. Upgrade to Midjourney v7 or Flux 2 for professional work requiring top-tier composition; stay with Leonardo for daily social media, game concepts, or learning AI art.
 
 ## Best Alternatives
 
-- **[Midjourney](midjourney.md):** best aesthetic quality. $10/mo minimum, no free tier. The upgrade path from Leonardo.
-- **[Flux](flux.md):** open-source, self-hostable, LoRA ecosystem. For technical users who want maximum control.
-- **[Ideogram 2.0](ideogram.md):** best text rendering. Free tier (~25/day) but smaller than Leonardo's.
-- **[DALL-E 3](../categories/ai-image.md):** built into ChatGPT. Most accessible for casual users already in the OpenAI ecosystem.
+- **[Midjourney](midjourney.md):** highest image quality with v7/v8 alpha models. $10/mo minimum, no free tier.
+- **[Flux](flux.md):** open-source leader with Flux 2; self-hostable, massive LoRA ecosystem.
+- **[Ideogram](ideogram.md):** best text-in-images; ~50 free/day, strong for graphics and logos.
 
 ## FAQ
 
-**Is Leonardo AI free?**
-Yes, Leonardo AI offers a free tier with approximately 150 image generations per day. Free images use basic models and are visible in the community gallery.
+**Is Leonardo AI free?**  
+Yes, the free tier provides approximately 150 image generations per day using basic models. Images are public in the community gallery ([Leonardo AI](https://leonardo.ai)).
 
-**How much does Leonardo AI cost?**
-Leonardo AI has three tiers: Free ($0 with 150 tokens/day), Apprentice ($12/month with 8,500 tokens/month and private images), and Artisan ($24/month with 25,000 tokens/month and full API access).
+**How much does Leonardo AI cost?**  
+Plans start at $12/month (Apprentice: 8,500 tokens) up to $60/month (Maestro: 60,000 tokens). Free tier gives ~4,500 tokens/month equivalent ([Leonardo AI Pricing](https://leonardo.ai/pricing)).
 
-**What are the best alternatives to Leonardo AI?**
-Midjourney ($10-$60/month) produces the highest quality images but has no free tier. Ideogram 2.0 ($0-$20/month) is the best for text rendering in images. Flux is the best open-source, self-hostable option for technical users.
+**What are the best Leonardo AI alternatives?**  
+Midjourney v7 ($10-$60/month) for maximum quality; Flux 2 (free self-hosted) for customization; GPT Image 1.5 via ChatGPT Plus ($20/month) for casual integrated use.
 
 ## Sources
 
 - [Official website](https://leonardo.ai)
 - [Leonardo AI pricing](https://leonardo.ai/pricing)
+- [TechCrunch: Phoenix 1.0 launch](https://techcrunch.com/2026/03/15/leonardo-ai-phoenix-model-launch/)
 
 ## Related
 

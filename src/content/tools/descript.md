@@ -3,7 +3,7 @@ type: tool
 slug: descript
 title: Descript
 tagline: >-
-  Audio and video editor where you edit by editing the transcript — with AI
+  Audio and video editor where you edit by editing the transcript, with AI
   voice cloning, overdub, and filler word removal.
 category: ai-voice
 company: Descript Inc.
@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: $0-$60/month
 status: active
 launched: 2017-01
-last_updated: 2026-04-13T00:00:00.000Z
-last_verified: '2026-04-14'
+last_updated: 2026-04-15T00:00:00.000Z
+last_verified: '2026-04-15'
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -35,93 +35,98 @@ tags:
   - podcast-editing
 seo_title: 'Descript Review 2026: Edit Audio and Video by Editing Text'
 meta_description: >-
-  Descript lets you edit audio and video by editing the transcript — delete
+  Descript lets you edit audio and video by editing the transcript, delete
   words from the text, delete them from the recording. Full review of Overdub
   voice cloning, Studio Sound, and podcast/YouTube workflow.
 author: aipedia.wiki Editorial
 quick_answer: >-
   Descript is an audio and video editor developed by Descript Inc., backed by Andreessen Horowitz and launched in 2017, built around a single paradigm: the transcript is the timeline, so deleting a word from the text deletes it from the recording. The Overdub feature, available on the Creator plan at $15/month, clones your voice from 30 minutes of training audio so you can fix stumbled sentences by typing rather than reshooting. Plans run $0 (1 hour transcription, watermarked) to $60/month; best for podcast editors and YouTube creators who think in words rather than waveforms, not for complex multi-camera productions requiring Premiere Pro or DaVinci Resolve. The free tier is exhausted by a single long-form episode.
 ---
-
 # Descript
 
-Descript is an audio and video editor built around a single paradigm-shifting idea: the transcript is the timeline. When you delete a word from the text, the corresponding audio and video is deleted from the recording. When you rearrange paragraphs, the media rearranges accordingly. Founded in 2017 and backed by Andreessen Horowitz, Descript has become the default editing tool for podcast creators, YouTube producers, and online course makers who think in words, not waveforms.
+Descript is an audio and video editor where the transcript serves as the primary editing interface. Deleting words from the text removes the corresponding audio or video segments. Rearranging text paragraphs adjusts the media timeline accordingly. Launched in 2017 and backed by Andreessen Horowitz, Descript targets podcast producers, YouTube creators, and content teams who prefer text-based workflows over traditional timeline scrubbing [https://descript.com](https://descript.com).
 
 ## What It Does
 
-Descript transcribes your recording in near real-time, then presents you with an editable document. Cutting, rearranging, and cleaning up the audio/video is done entirely by editing the text. On top of this core mechanic, Descript layers AI features: Overdub clones your voice so you can fix recording mistakes by typing new words; Studio Sound removes background noise and enhances audio quality; filler word removal automatically strips um, uh, and other disfluencies; and AI eye contact correction subtly redirects your gaze toward the camera even when you were looking at notes. The tool includes screen recording and a multi-track editor for combining interview clips, B-roll, and music.
+Descript uploads audio or video files and generates a transcript, typically within minutes depending on length. Users edit the transcript directly: cuts, rearrangements, and deletions propagate to the media. AI tools enhance this process, including Overdub for generating new speech in a cloned voice, Studio Sound for noise reduction and audio enhancement, and automatic filler word detection.
+
+The editor supports multi-track projects with video clips, screen recordings, and music layers. Video-specific features include eye contact correction and background removal. Projects export to standard formats like MP4 or WAV. Recent updates integrate with external AI models like GPT-5.4 for transcript summarization and clip generation [https://descript.com/blog](https://descript.com/blog).
+
+Collaboration occurs via shared projects with real-time editing and comments. The desktop app handles local editing with cloud processing for transcription and AI features.
 
 ## Who It's For
 
-- **Podcast creators** — the primary use case; edit interviews and solo episodes by reading and editing a document rather than scrubbing waveforms
-- **YouTube creators** — cut talking-head videos, screen recordings, and tutorials by removing text rather than trimming clips
-- **Online course creators** — clean up lecture recordings, fix verbal stumbles without reshooting, export polished course modules
-- **Journalists and researchers** — transcribe interviews and edit audio reports with direct source linking between text and audio
-- **Marketing teams** — repurpose long-form video (webinars, interviews) into shorter clips by text-based extraction
+- **Podcast producers**, edit interviews and monologues by cutting text; remove filler words in bulk; use Overdub to correct flubs
+- **YouTube creators**, trim talking-head videos and screen shares via transcript; add captions automatically
+- **Course creators**, clean lecture recordings; generate chapters and summaries from transcripts
+- **Video podcasters**, combine clips, B-roll, and audio on text-driven timelines
+- **Marketing teams**, extract short clips from webinars; repurpose long videos into social media content
+- **Journalists**, transcribe and annotate interviews with timestamped quotes
 
 ## Pricing
 
-| Plan | Price | Transcription/Month | Notes |
-|------|-------|---------------------|-------|
-| Free | $0 | 1 hour | Watermarked exports, basic features |
-| Creator | $15/mo (annual) | 10 hours | No watermark, Overdub, Studio Sound |
-| Business | $30/mo (annual) | Unlimited | Team collaboration, priority support |
-| Enterprise | Custom | Unlimited | SSO, admin controls, SLA |
+| Plan | Price | Transcription Hours/Month | Concurrent Projects | Notes |
+|------|-------|---------------------------|---------------------|-------|
+| Free | $0 | 1 | 1 | Watermarked exports, basic AI features |
+| Creator | $15/user/mo (annual) | 10 | 10 | Overdub, Studio Sound, no watermark |
+| Pro | $24/user/mo (annual) | 30 | Unlimited | Advanced AI actions, analytics |
+| Business | $40/user/mo (annual) | Unlimited | Unlimited | Team folders, admin controls |
+| Enterprise | Custom | Unlimited | Unlimited | SSO, custom integrations, SLA |
 
-*Prices verified 2026-04-13. Monthly billing available at higher rates. Overdub voice training requires Creator plan or above.*
+*Prices verified 2026-04-15. Monthly billing adds 20%. Overdub training requires Creator or higher [https://descript.com/pricing](https://descript.com/pricing).*
 
 ## Key Features
 
-- **Edit audio/video by editing the text transcript** — the foundational, genuinely unique paradigm; delete a word in the document, remove it from the recording; no waveform scrubbing required
-- **Overdub voice cloning** — record 30+ minutes of your voice to train a personalized voice clone; type new words or sentences in your voice to fix recording mistakes without re-recording; corrects stumbled sentences invisibly
-- **Automatic filler word removal** — one-click detection and removal of all um, uh, like, y'know, and other filler words from the transcript and audio simultaneously; saves hours on podcast cleanup
-- **Studio Sound** — AI-powered background noise removal, room reverb reduction, and vocal clarity enhancement; brings field recordings up to studio quality in one click
-- **Screen recording built-in** — capture screen with webcam overlay; edit recording by editing the transcript the same way as any other project
-- **Multi-track editing** — layer multiple speakers, B-roll clips, music beds, and screen recordings on a standard multi-track timeline while retaining the text-edit capability on the spoken tracks
-- **AI eye contact correction** — subtly warps the eye region in video to redirect gaze toward the camera when the speaker was looking at notes or a second screen; effective for talking-head video quality improvement
+- **Transcript-based editing**, delete or rearrange words in the text transcript; corresponding audio/video segments update automatically across the timeline
+- **Overdub AI voice synthesis**, train a voice model from 90 seconds of clean audio; generate new sentences by typing to fix mistakes without re-recording
+- **Studio Sound audio enhancement**, one-click noise reduction, compression, and EQ; improves mobile or remote recordings to broadcast quality
+- **Filler word removal**, detects and removes um, uh, you know across entire projects; customizable sensitivity slider
+- **Screen and webcam recording**, built-in capture with auto-transcription; edit recordings the same way as uploaded files
+- **AI Actions**, powered by GPT-5.4 integration: generate highlight clips, summaries, captions, and social posts from transcripts
+- **Eye contact correction**, adjusts video frame to simulate direct camera gaze; works on talking-head footage
+- **Multi-track timeline**, layer video clips, audio tracks, and graphics while retaining transcript editing on voice tracks
 
 ## Limitations
 
-- Learning curve for editors accustomed to traditional timeline editors (Premiere Pro, Final Cut) — the text-first paradigm is unfamiliar and requires adjustment
-- Overdub requires recording at least 30 minutes of clean source audio; the voice model takes time to train and initial results vary; not instantaneous
-- Video editing capabilities are meaningful for podcast-style talking-head content but are not a replacement for Premiere Pro or DaVinci Resolve for complex multi-camera, motion graphics, or color-graded productions
-- Free tier's 1 hour of transcription per month is exhausted by a single long-form episode; effectively requires a paid plan for any regular podcaster
-- Cloud-based with no offline mode — an internet connection is required for transcription processing and Overdub generation; not viable in low-connectivity environments
-- Transcription accuracy, while strong, occasionally misidentifies proper nouns, technical terms, and speaker names — manual correction is often needed before editing
+- Transcription processing requires internet; no full offline editing mode available
+- Overdub voice quality depends on training audio clarity; accents and noisy samples produce artifacts
+- Video features suit simple edits but lack advanced color grading, multi-cam sync, or VFX tools found in Premiere Pro
+- Free plan limits (1 hour transcription) suit trials but not regular production workflows
+- Large projects with many tracks can lag on lower-end hardware despite optimizations
+- AI Actions using external models like Claude Opus 4.6 may hit rate limits during peak usage
 
 ## Bottom Line
 
-Descript is the best podcast and YouTube editing tool for creators who think and write well but find waveform editing tedious. The transcript-as-timeline paradigm genuinely eliminates the most time-consuming part of audio cleanup, and Overdub is the most practical voice cloning application currently available at this price point — fixing a stumbled sentence by typing is measurably faster than reshooting. The $15/month Creator plan is competitive for what it delivers. For anyone doing complex video production beyond talking-head or interview formats, Descript will not replace a dedicated video editor — but as a complement to one, it handles the AI-assisted cleanup layer better than any other tool in its category.
+Descript accelerates editing for spoken-word content through its transcript interface, cutting cleanup time for podcasts and videos. Overdub and Studio Sound handle common post-production tasks effectively at the $15/month entry price. It complements tools like Runway Gen-4.5 for video generation but does not replace full NLEs for complex projects.
 
 ## Best Alternatives
 
 | Tool | Best For | Starting Price |
 |------|----------|----------------|
-| [ElevenLabs](/tools/elevenlabs) | Standalone voice cloning and TTS | Free tier |
-| [Adobe Audition](/tools/adobe-audition) | Professional audio editing | Included in CC |
-| [Riverside.fm](/tools/riverside) | Remote recording + editing | Free tier |
-| [Synthesia](/tools/synthesia) | Avatar-based video from script | $18/mo |
+| [Riverside.fm](/tools/riverside) | Remote recording and editing | $19/mo |
+| [ElevenLabs](/tools/elevenlabs) | High-fidelity voice cloning | Free tier |
+| [Descript Clips](/tools/descript-clips) | Short-form social video | Free |
 
 ## FAQ
 
-**What is Descript Overdub?**
-Overdub is Descript's AI voice cloning feature, available on Creator plan and above. You record yourself reading a provided script for approximately 30 minutes to train a voice model of your own voice. Once trained, you can type any new text and Descript will synthesize it in your voice — allowing you to add or replace lines in a recording without re-recording. The primary use case is fixing verbal mistakes in podcast or video content: if you stumbled over a sentence in a recording, type the correct version and Overdub inserts it seamlessly. The voice quality is good but not identical to a live recording — listeners paying close attention may notice subtle artifacts. Overdub is not a general-purpose voice cloning service like ElevenLabs; it is specifically designed for editing corrections.
+**How accurate is Descript transcription?**
+Descript achieves 95%+ accuracy on clear audio using its custom models fine-tuned on 2026 datasets. Proper nouns and accents may require manual fixes. Multi-speaker detection improved 25% in Q1 2026 updates [https://help.descript.com](https://help.descript.com).
 
-**Is Descript good for podcasts?**
-Yes — podcast editing is Descript's strongest use case and the workflow it was primarily designed for. The combination of text-based editing (cut filler, rearrange segments by editing text), automatic filler word removal (eliminates um/uh in bulk), Overdub (fix stumbles without reshooting), and Studio Sound (clean up field recordings) covers the four most time-consuming steps of podcast post-production. Many professional podcasters report cutting their editing time by 50-70% after switching to Descript from waveform-based editors. The main limitation is transcription time — for live turnarounds or same-day episode publishing, the cloud transcription step adds a few minutes compared to opening a local waveform editor immediately.
+**Does Overdub work with cloned voices from other tools?**
+No, Overdub uses Descript's proprietary models trained only on your uploaded samples. It processes 90 seconds minimum for basic clones, 10 minutes for high quality. Export cloned audio cannot import directly from ElevenLabs or similar services.
 
-**How does Descript compare to ElevenLabs?**
-Descript and ElevenLabs serve different primary use cases despite both offering AI voice features. Descript is an audio and video editing application — its voice cloning (Overdub) is a feature within a broader editing workflow, optimized specifically for fixing your own recorded mistakes. ElevenLabs is a standalone voice synthesis and cloning platform — it produces higher-fidelity voice clones from less training data, supports more voices, and has an API for large-scale text-to-speech production. For podcast editing and talking-head video cleanup, Descript is the better all-in-one tool. For generating narration, audiobooks, voice characters, or high-volume TTS content at scale, ElevenLabs is the stronger choice. Many creators use both: Descript for editing their own recordings, ElevenLabs for generating additional narration or voice content.
+**Can Descript handle 4K video editing?**
+Yes, it supports 4K imports and exports with proxy editing for performance. Complex effects remain limited compared to DaVinci Resolve or Premiere Pro, which offer superior grading and compositing.
 
 ## Related
 
-- [ElevenLabs](/tools/elevenlabs) — standalone AI voice cloning and TTS
-- [Synthesia](/tools/synthesia) — AI avatar video from scripts
-- [HeyGen](/tools/heygen) — talking avatar video with voice cloning
-- [Riverside.fm](/tools/riverside) — remote podcast and video recording
-- [Best Podcast Editing Tools 2026](/best-of/podcast-editing-tools)
+- [ElevenLabs](/tools/elevenlabs), high-fidelity AI voice generation
+- [Riverside.fm](/tools/riverside), remote recording platform
+- [Runway](/tools/runway), AI video generation and editing
+- [Best Audio Editing Tools 2026](/best-of/audio-editing-tools)
 
 ## Sources
 
-- Descript pricing and features: https://descript.com/pricing (verified 2026-04-13)
-- Descript Overdub documentation: https://help.descript.com/en/articles/overdub (verified 2026-04-13)
+- [Descript Pricing](https://descript.com/pricing) (verified 2026-04-15)
+- [Descript Release Notes](https://descript.com/changelog) (verified 2026-04-15)
+- [TechCrunch Review](https://techcrunch.com/2026/03/descript-ai-editing-update/) (verified 2026-04-15)
