@@ -1,0 +1,121 @@
+---
+type: tool
+slug: doubao
+title: Doubao
+tagline: ByteDance's AI assistant app, China's most-used AI product by daily active users, with text, image, video, and voice in one interface.
+category: ai-chatbots
+company: bytedance
+url: https://www.doubao.com/
+pricing_model: freemium
+price_range: "Free (consumer); API from RMB 0.0008/1K tokens"
+status: active
+launched: 2023-08
+last_updated: 2026-04-15
+last_verified: 2026-04-15
+update_frequency: monthly
+affiliate:
+  has_program: false
+  commission: null
+  cookie_days: null
+  network: null
+  link: null
+scores:
+  utility: 7
+  value: 8
+  moat: 6
+  longevity: 7
+tags: [chinese-ai, bytedance, ai-chatbot, multimodal, doubao, consumer-ai, china]
+seo_title: "Doubao AI Review: Features, Pricing & Availability (2026)"
+meta_description: "Doubao is ByteDance's AI assistant with 100M+ daily active users in China. Free consumer app; API pricing 90%+ cheaper than Western rivals. Honest 2026 review."
+author: "aipedia.wiki Editorial"
+best_for:
+  - Chinese-language users wanting a capable free all-in-one AI assistant
+  - enterprises processing high-volume Chinese text at minimal API cost
+  - developers in Asia building on ByteDance's AI platform
+not_best_for:
+  - users outside China seeking a primary English-language chatbot
+  - teams requiring Western data residency or compliance standards
+quick_answer: >-
+  Doubao is ByteDance's consumer AI assistant, launched August 2023 in China, that surpassed 100 million daily active users during the 2026 Lunar New Year period. It combines text chat, image generation (via Seedream), video generation (via Seedance), voice interaction, and document analysis in one free app. Outside China it is accessible via the Cici/Dola app in select markets. The API is aggressively cheap, claiming costs 90% or more below international competitors. Primary limitation for Western users: the product is heavily optimized for Chinese-language use and is not directly available in US app stores as "Doubao."
+---
+
+# Doubao
+
+Doubao (pronounced "doe-bao," meaning "bean bag" in Chinese) is ByteDance's AI assistant product, launched in August 2023. By early 2026, it had surpassed 100 million daily active users during the Lunar New Year period, making it China's most-used AI application by that metric ([36Kr](https://eu.36kr.com/en/p/3609313072153862)). ByteDance, the parent company of TikTok, has positioned Doubao as its primary consumer AI product, releasing a major Doubao 2.0 upgrade in early 2026 with reasoning capabilities described as comparable to GPT-5 at a fraction of the cost ([Gulf News](https://gulfnews.com/technology/what-is-doubao-20-all-about-chinas-new-ai-app-thats-cheaper-than-deepseek-and-rivaling-gpt-52-1.500444799)). Outside China, Doubao's technology is accessible via the Cici app (later rebranded Dola) in select international markets.
+
+## What It Does
+
+Doubao integrates multiple AI capabilities into a single interface: text conversation, image generation via ByteDance's Seedream model, video generation via the Seedance model, voice interaction, document analysis, and code generation. The Doubao 2.0 model focuses on long-chain reasoning and autonomous multi-step task execution, with ByteDance claiming it matches GPT-4o and Claude 3.5 Sonnet on multiple evaluation benchmarks while costing dramatically less to operate ([seczine.com](https://seczine.com/technology/2026/02/bytedance-launches-doubao-20-gpt52level-performanc/)). The platform is available on web, Windows, macOS, iOS, and Android.
+
+The underlying large language model (Doubao-1.5-pro and later versions) is also available as an API through Volcano Engine, ByteDance's cloud platform, at prices that ByteDance claims are up to 99.3% below Western competitors.
+
+## Who It's For
+
+- **Chinese-language users** who want a free, capable AI assistant for daily work and study tasks
+- **Enterprise teams in China and Asia** needing high-volume text processing at low cost
+- **Developers building on Volcano Engine** who want ByteDance's model quality with aggressive API pricing
+- **International users** in markets where the Cici/Dola app is available, who want an alternative to ChatGPT or Claude
+
+## Pricing
+
+| Tier | Price | Notes |
+|------|-------|-------|
+| Consumer (Doubao app) | Free | All core features including text, image, voice |
+| API (Doubao-1.5-pro) | RMB 0.0008/1K tokens | Approximately $0.11 per million tokens at April 2026 exchange rates; via Volcano Engine |
+| Enterprise | Custom | Custom contracts through ByteDance/Volcano Engine |
+
+*API pricing verified 2026-04-15 via [dataglobehub.com](https://dataglobehub.com/doubao-statistics-and-insights/) and [aiwiki.ai/wiki/doubao](https://aiwiki.ai/wiki/doubao). Consumer app is free with no subscription required.*
+
+## Key Features
+
+- **100M+ DAU:** Largest consumer AI app by daily active users in China as of early 2026 ([36Kr](https://eu.36kr.com/en/p/3609313072153862))
+- **Multimodal in one app:** Text, image (Seedream), video (Seedance), voice, and document analysis without switching platforms
+- **Doubao 2.0 reasoning:** Long-chain reasoning with autonomous multi-step task execution; ByteDance claims performance comparable to GPT-5 at lower cost
+- **18-language support:** The international Cici/Dola version supports 18 languages including English, Russian, Arabic, French, German, Japanese, and Korean, plus 20 Chinese regional dialects
+- **ByteDance distribution muscle:** Integrated with Douyin (Chinese TikTok) ecosystem, giving it unmatched organic distribution
+- **Ultra-cheap API:** Volcano Engine API pricing is among the lowest for a frontier-tier Chinese model, enabling high-volume enterprise applications
+- **Desktop and mobile:** Full-featured apps on Windows, macOS, iOS, and Android
+
+## Limitations
+
+- **China-first product:** Core optimization is for Chinese-language tasks; English-language quality does not match GPT-4o or Claude 3.5 for nuanced writing and reasoning
+- **Not in US app stores as "Doubao":** US users cannot directly download the Doubao app from the US App Store or Google Play; international access is via the Cici/Dola app in select markets
+- **Geopolitical risk:** ByteDance is subject to ongoing US regulatory scrutiny (same parent company as TikTok); enterprise adoption in the West carries compliance and data-residency risk
+- **API via Volcano Engine (Chinese platform):** Western developers accessing the API must work through ByteDance's Chinese cloud infrastructure, which raises data sovereignty questions
+- **Feature parity gap:** The international Cici/Dola version lags the Chinese Doubao app in features and model updates
+- **No clear Western enterprise SLA:** Dedicated Western data centers and enterprise contracts equivalent to Azure OpenAI or AWS Bedrock are not publicly documented
+
+## Bottom Line
+
+For Chinese-language users and China-based enterprises, Doubao is the obvious choice: free consumer tier, massive ecosystem integration, best-in-class distribution, and API pricing that is 90% or more cheaper than OpenAI. For Western users, it is an interesting benchmark and the Cici/Dola app is usable in supported markets, but it is not a realistic primary choice given geopolitical risk, limited US app store presence, and Chinese-language optimization. If cost is the primary driver for API workloads, compare it against DeepSeek, which has better Western market penetration at similarly aggressive pricing.
+
+## Best Alternatives
+
+- [ChatGPT](chatgpt.md): Broadest feature set, US-based, best English quality
+- [Claude](claude.md): Strong reasoning and long-context processing, US-based
+- DeepSeek: Another China-based low-cost API with similar pricing philosophy but more international adoption
+- [Gemini](gemini.md): Google's assistant with strong multilingual support and international infrastructure
+
+## FAQ
+
+**Is Doubao available outside China?**
+Not directly as "Doubao" in Western app stores. Outside China, ByteDance distributes similar functionality through the Cici app (rebranded Dola in some markets), which supports 18 languages and is available in select international markets. The API is accessible globally via Volcano Engine, ByteDance's cloud platform.
+
+**How does Doubao's pricing compare to ChatGPT?**
+ByteDance claims the Doubao API is priced up to 99.3% below international competitors. At approximately RMB 0.0008 per 1,000 tokens (about $0.11 per million tokens), it is dramatically cheaper than GPT-4o. The trade-off is data residency on Chinese infrastructure and Chinese-language optimization.
+
+**What is Doubao 2.0?**
+Doubao 2.0 is the major model update released in early 2026, focused on long-chain reasoning and autonomous multi-step task completion. ByteDance positions its performance as comparable to GPT-5 at a fraction of the cost. It also significantly cuts operating costs compared to earlier Doubao versions.
+
+## Sources
+
+- [Doubao official site](https://www.doubao.com/)
+- [36Kr: Doubao surpasses 100M DAU](https://eu.36kr.com/en/p/3609313072153862)
+- [Gulf News: Doubao 2.0 overview](https://gulfnews.com/technology/what-is-doubao-20-all-about-chinas-new-ai-app-thats-cheaper-than-deepseek-and-rivaling-gpt-52-1.500444799)
+- [Security Enterprise Cloud: Doubao 2.0 launch](https://seczine.com/technology/2026/02/bytedance-launches-doubao-20-gpt52level-performanc/)
+- [DataGlobeHub: Doubao statistics](https://dataglobehub.com/doubao-statistics-and-insights/)
+- [AI Wiki: Doubao entry](https://aiwiki.ai/wiki/doubao)
+
+## Related
+
+- **Category:** [AI Chatbots](../categories/ai-chatbots.md)

@@ -9,5 +9,15 @@
 	},
 	"observability": {
 		"enabled": true
+	},
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "aipedia-reviews",
+			"database_id": "REPLACE_AFTER_CREATE"
+		}
+	],
+	"vars": {
+		"TURNSTILE_SITE_KEY": "REPLACE_WITH_TURNSTILE_SITE_KEY"
 	}
 }

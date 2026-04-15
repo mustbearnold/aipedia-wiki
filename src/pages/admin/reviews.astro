@@ -1,0 +1,112 @@
+---
+// Admin moderation dashboard. Basic-auth gated by the Pages Function endpoints it calls.
+// Browser will prompt for username/password on first /api/reviews/admin/* fetch.
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Review Moderation — aipedia.wiki admin"
+  description="Internal review moderation queue."
+>
+  <div class="max-w-4xl mx-auto">
+    <h1 class="text-2xl font-bold mb-1">Review Moderation</h1>
+    <p class="text-sm text-[var(--text-muted)] mb-6">Approve or reject user-submitted reviews. Basic-auth protected.</p>
+
+    <div class="flex gap-2 mb-4" data-admin-tabs>
+      <button type="button" class="px-3 py-1.5 rounded-lg text-sm font-semibold bg-[var(--accent-primary)] text-[#0b0a14]" data-admin-status="pending">Pending</button>
+      <button type="button" class="px-3 py-1.5 rounded-lg text-sm font-semibold border border-[var(--border)] text-[var(--text-secondary)]" data-admin-status="approved">Approved</button>
+      <button type="button" class="px-3 py-1.5 rounded-lg text-sm font-semibold border border-[var(--border)] text-[var(--text-secondary)]" data-admin-status="rejected">Rejected</button>
+    </div>
+
+    <div class="space-y-3" data-admin-list>
+      <div class="text-sm text-[var(--text-muted)]">Loading…</div>
+    </div>
+  </div>
+
+  <script is:inline>
+    (function () {
+      const listEl = document.querySelector('[data-admin-list]');
+      const tabs = document.querySelectorAll('[data-admin-status]');
+      let current = 'pending';
+
+      function escapeHtml(s) {
+        return String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+      }
+
+      function setTab(status) {
+        current = status;
+        tabs.forEach((t) => {
+          const active = t.getAttribute('data-admin-status') === status;
+          t.className = active
+            ? 'px-3 py-1.5 rounded-lg text-sm font-semibold bg-[var(--accent-primary)] text-[#0b0a14]'
+            : 'px-3 py-1.5 rounded-lg text-sm font-semibold border border-[var(--border)] text-[var(--text-secondary)]';
+        });
+        load();
+      }
+
+      tabs.forEach((t) => t.addEventListener('click', () => setTab(t.getAttribute('data-admin-status'))));
+
+      async function load() {
+        if (!listEl) return;
+        listEl.innerHTML = '<div class="text-sm text-[var(--text-muted)]">Loading…</div>';
+        try {
+          const r = await fetch('/api/reviews/admin/list?status=' + encodeURIComponent(current));
+          if (r.status === 401) {
+            listEl.innerHTML = '<div class="text-sm text-[var(--text-muted)]">Enter the admin password in the browser prompt, then reload.</div>';
+            return;
+          }
+          if (!r.ok) throw new Error('bad response');
+          const data = await r.json();
+          const reviews = data.reviews || [];
+          if (reviews.length === 0) {
+            listEl.innerHTML = `<div class="text-sm text-[var(--text-muted)]">No ${current} reviews.</div>`;
+            return;
+          }
+          listEl.innerHTML = reviews.map((r) => `
+            <article class="rounded-xl border border-[var(--border)] bg-[var(--bg-card)] p-4" data-review-id="${r.id}">
+              <div class="flex items-center justify-between gap-2 mb-2 flex-wrap">
+                <div class="flex items-center gap-2">
+                  <a href="/tools/${escapeHtml(r.tool_slug)}/" class="text-[12px] font-semibold text-[var(--accent-primary)] no-underline">${escapeHtml(r.tool_slug)}</a>
+                  <span class="text-[var(--accent-warning)] text-sm">${'★'.repeat(r.rating)}${'☆'.repeat(5 - r.rating)}</span>
+                  <span class="text-[14px] font-semibold">${escapeHtml(r.title)}</span>
+                </div>
+                <div class="text-[11px] text-[var(--text-muted)]">
+                  ${escapeHtml(r.author_name)} · spam: ${Number(r.spam_score || 0).toFixed(2)}
+                </div>
+              </div>
+              <p class="text-[13px] whitespace-pre-wrap m-0 mb-3">${escapeHtml(r.body)}</p>
+              <div class="flex gap-2">
+                <button type="button" class="px-3 py-1 rounded text-[12px] font-semibold bg-[var(--accent-success)] text-[#0b0a14]" data-act="approve" data-id="${r.id}">Approve</button>
+                <button type="button" class="px-3 py-1 rounded text-[12px] font-semibold border border-[var(--border)] text-[var(--text-secondary)]" data-act="reject" data-id="${r.id}">Reject</button>
+                <button type="button" class="px-3 py-1 rounded text-[12px] font-semibold border border-rose-400/30 text-rose-400" data-act="delete" data-id="${r.id}">Delete</button>
+              </div>
+            </article>
+          `).join('');
+        } catch (e) {
+          listEl.innerHTML = '<div class="text-sm text-rose-400">Failed to load. Check the Pages Function logs or auth.</div>';
+        }
+      }
+
+      listEl?.addEventListener('click', async (ev) => {
+        const btn = ev.target;
+        if (!(btn instanceof HTMLElement)) return;
+        const act = btn.getAttribute('data-act');
+        const id = btn.getAttribute('data-id');
+        if (!act || !id) return;
+        btn.textContent = '…';
+        try {
+          await fetch('/api/reviews/admin/moderate', {
+            method: 'POST',
+            headers: { 'content-type': 'application/json' },
+            body: JSON.stringify({ id: parseInt(id, 10), action: act }),
+          });
+          load();
+        } catch {
+          btn.textContent = 'err';
+        }
+      });
+
+      load();
+    })();
+  </script>
+</BaseLayout>

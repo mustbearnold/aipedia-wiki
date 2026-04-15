@@ -16,6 +16,7 @@ import FAQAccordionScript from '../components/FAQAccordionScript.astro';
 import ShareButtons from '../components/ShareButtons.astro';
 import PostBodyEnhancements from '../components/PostBodyEnhancements.astro';
 import RelatedComparisons from '../components/RelatedComparisons.astro';
+import ReviewsBlock from '../components/ReviewsBlock.astro';
 import StickyMobileCTA from '../components/StickyMobileCTA.astro';
 import ProsCons from '../components/ProsCons.astro';
 import FeedbackForm from '../components/FeedbackForm.astro';
@@ -196,6 +197,8 @@ const breadcrumbLdItems = [
       />
 
       <RelatedComparisons toolSlug={toolSlug} toolTitle={frontmatter.title} />
+
+      <ReviewsBlock toolSlug={toolSlug} toolTitle={frontmatter.title} />
 
       <ShareButtons title={frontmatter.title} pageUrl={`${siteBase}tools/${toolSlug}/`} />
 
