@@ -29,11 +29,11 @@ seo_title: "Doubao AI Review: Features, Pricing & Availability (2026)"
 meta_description: "Doubao is ByteDance's AI assistant with 100M+ daily active users in China. Free consumer app; API pricing 90%+ cheaper than Western rivals. Honest 2026 review."
 author: "aipedia.wiki Editorial"
 best_for:
-  - - Chinese-language users wanting a capable free all-in-one AI assistant
+  - Chinese-language users wanting a capable free all-in-one AI assistant
   - enterprises processing high-volume Chinese text at minimal API cost
   - developers in Asia building on ByteDance's AI platform
 not_best_for:
-  - - users outside China seeking a primary English-language chatbot
+  - users outside China seeking a primary English-language chatbot
   - teams requiring Western data residency or compliance standards
 quick_answer: >-
   Doubao is ByteDance's consumer AI assistant, launched August 2023 in China, that surpassed 100 million daily active users during the 2026 Lunar New Year period. It combines text chat, image generation (via Seedream), video generation (via Seedance), voice interaction, and document analysis in one free app. Outside China it is accessible via the Cici/Dola app in select markets. The API is aggressively cheap, claiming costs 90% or more below international competitors. Primary limitation for Western users: the product is heavily optimized for Chinese-language use and is not directly available in US app stores as "Doubao."

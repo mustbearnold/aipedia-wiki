@@ -35,12 +35,12 @@ author: aipedia.wiki Editorial
 quick_answer: >-
   Reflect is a networked note-taking app built around bidirectional wiki-style links and end-to-end encrypted sync, with an embedded AI writing assistant. The key differentiator is the combination of bidirectional linking and E2EE in a single clean product, meaning Reflect cannot read your notes. There is no free tier beyond a 14-day trial; the single plan costs $12/month. Best for privacy-conscious professionals who have already validated that networked notes fit their workflow, not for power users who need Obsidian's 1,000-plus community plugins.
 best_for:
-  - - Privacy-conscious knowledge workers
+  - Privacy-conscious knowledge workers
   - Personal knowledge base builders
   - Writers and researchers
   - Roam Research users seeking alternatives
 not_best_for:
-  - - Teams requiring real-time collaboration
+  - Teams requiring real-time collaboration
   - Users seeking a free tier
   - Power users needing extensive plugin ecosystems
   - Casual note-takers

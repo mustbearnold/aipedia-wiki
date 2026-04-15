@@ -32,12 +32,12 @@ author: "aipedia.wiki Editorial"
 quick_answer: >-
   Kimi is a chatbot and AI model family developed by Moonshot AI, a Beijing-based startup founded in 2023 and backed by Alibaba, Tencent, and IDG Capital at a $10B valuation. The flagship Kimi K2.5 is a 1-trillion-parameter Mixture-of-Experts model activating 32B parameters per request, with a 256K-token context window available to free users. API pricing starts at $0.60/M input and $3.00/M output tokens; best for long-document analysis and bilingual Chinese-English workloads, not for teams needing enterprise SLAs or lower cost than DeepSeek's API.
 best_for:
-  - - long-document and codebase analysis (256K context free)
+  - long-document and codebase analysis (256K context free)
   - bilingual Chinese-English workflows
   - agentic multi-step tasks with tool use
   - researchers processing large files without chunking
 not_best_for:
-  - - budget-first API usage (DeepSeek is 2x cheaper on input)
+  - budget-first API usage (DeepSeek is 2x cheaper on input)
   - enterprise buyers needing Western data residency
   - users who want a fully English-native product experience
 ---

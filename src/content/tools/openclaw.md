@@ -29,12 +29,12 @@ seo_title: "OpenClaw: Features, Pricing & Review (2026)"
 meta_description: "OpenClaw is a free, open-source personal AI assistant that runs locally and controls your computer, browser, and shell from WhatsApp, Telegram, Discord, Slack, Signal, or iMessage. 358K GitHub stars."
 author: "aipedia.wiki Editorial"
 best_for:
-  - - developers who want a self-hosted AI agent
+  - developers who want a self-hosted AI agent
   - users wanting AI accessible via existing chat apps
   - privacy-conscious users who want local-first processing
   - tinkerers who build custom skills
 not_best_for:
-  - - users wanting a managed cloud solution with no setup
+  - users wanting a managed cloud solution with no setup
   - non-technical users uncomfortable with self-hosting
   - teams needing enterprise support or SLAs
 quick_answer: >-

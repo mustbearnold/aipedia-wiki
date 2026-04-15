@@ -34,11 +34,11 @@ meta_description: >-
   alternatives.
 author: aipedia.wiki Editorial
 best_for:
-  - - heavy readers
+  - heavy readers
   - researchers and students
   - knowledge base builders
 not_best_for:
-  - - casual readers
+  - casual readers
   - team collaborators
 quick_answer: >-
   Readwise Reader is a read-later and knowledge retention app built by Readwise that ingests articles, newsletters, PDFs, ebooks, and YouTube videos into a single inbox, then resurfaces your highlights on a spaced-repetition schedule so you retain what you read. The combination of a unified reading inbox, Ghostreader AI (ask questions about any document), and daily spaced-repetition review is available from no other single tool at this price. At $9.99/month after a 30-day free trial, it covers both the Reader app and the full Readwise highlight review system; best for heavy readers building a personal knowledge base in Obsidian or Notion, not for casual readers or anyone needing team collaboration. There is no ongoing free tier once the trial ends.

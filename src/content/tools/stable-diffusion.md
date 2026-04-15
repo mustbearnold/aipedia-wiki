@@ -34,12 +34,12 @@ meta_description: >-
   LoRA fine-tuning, and hardware requirements.
 author: aipedia.wiki Editorial
 best_for:
-  - - local installation users
+  - local installation users
   - fine-tuning control
   - developer workflows
   - unlimited generation
 not_best_for:
-  - - non-technical users
+  - non-technical users
   - quick setup requirements
 quick_answer: >-
   Stable Diffusion is an open-source AI image generation model originally released by Stability AI in August 2022, with model weights publicly available for anyone to download and run. The current flagship is SD 3.5 Large, SD 4 has not launched as of April 2026. SDXL is still widely used by the community but is now superseded by the SD 3.5 family as Stability AI's leading architecture. Local installation is free with no per-image fees, no usage caps, and no content filters. The community ecosystem on Civitai hosts thousands of fine-tuned checkpoints. Best for developers and power users with a compatible GPU who need unlimited, uncensored generation with ControlNet and LoRA fine-tuning; not the right pick vs. Midjourney v7 when aesthetic quality out of the box matters more than control or cost. Requires an NVIDIA GPU with at least 8GB VRAM and meaningful setup time.

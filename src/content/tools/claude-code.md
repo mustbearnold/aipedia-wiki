@@ -29,12 +29,12 @@ seo_title: "Claude Code: Features, Pricing & Review (2026)"
 meta_description: "Claude Code is Anthropic's CLI-based agentic coding tool that navigates full codebases autonomously. v2.1.1014 adds Ultraplan, Monitor, Agent SDK, Skills, and MCP. Requires $100-$200/mo Claude Max subscription or API key."
 author: "aipedia.wiki Editorial"
 best_for:
-  - - professional developers
+  - professional developers
   - backend engineers
   - teams needing autonomous testing and CI integration
   - developers who want MCP tool extensibility
 not_best_for:
-  - - users preferring gui editors
+  - users preferring gui editors
   - budget-conscious developers
   - beginners who want setup-free tooling
 quick_answer: >-

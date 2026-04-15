@@ -29,12 +29,12 @@ seo_title: "OpenHands: Features, Pricing & Review (2026)"
 meta_description: "OpenHands (formerly OpenDevin) is a free open-source AI software engineer with 71K+ GitHub stars. It autonomously writes and tests code in a sandboxed Docker environment and works with Claude, GPT, or any LLM."
 author: "aipedia.wiki Editorial"
 best_for:
-  - - developers who want a free Devin alternative
+  - developers who want a free Devin alternative
   - teams needing self-hosted AI software engineering
   - open-source contributors and researchers
   - developers who want model-agnostic AI coding agents
 not_best_for:
-  - - users wanting tight IDE integration with autocomplete
+  - users wanting tight IDE integration with autocomplete
   - beginners who need guided step-by-step assistance
   - teams requiring enterprise SLAs without self-hosting
 quick_answer: >-

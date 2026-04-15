@@ -33,12 +33,12 @@ meta_description: >-
   Pro and Premier unlock commercial use. Full review vs. Udio.
 author: aipedia.wiki Editorial
 best_for:
-  - - content creators needing original music
+  - content creators needing original music
   - hobbyist songwriters
   - game and indie developers
   - podcast and YouTube producers
 not_best_for:
-  - - professional DAW-based production (see stem export caveat)
+  - professional DAW-based production (see stem export caveat)
   - niche genre accuracy
 quick_answer: >-
   Suno is the most widely used AI music generator as of April 2026. The current model is v5.5, which adds voice cloning (Voices), custom model fine-tuning (up to three models for Pro and Premier users), style personalization (My Taste), and a Studio mode with stem-level editing and DAW export. Earlier versions including v4.5 remain accessible. The RIAA lawsuit filed in June 2024 against Suno and Udio was settled in early 2025 under undisclosed terms. Free tier is available for non-commercial personal use; commercial rights require at least the Pro plan. Best for content creators, hobbyists, and game developers who need original music at low cost.

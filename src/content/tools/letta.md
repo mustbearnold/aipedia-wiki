@@ -29,12 +29,12 @@ seo_title: "Letta (formerly MemGPT): Features, Pricing & Review (2026)"
 meta_description: "Letta (formerly MemGPT) is an open-source stateful agent framework with persistent, portable memory. Self-host free or use hosted plans from $0-$200/month."
 author: "aipedia.wiki Editorial"
 best_for:
-  - - developers building agents that need long-term memory
+  - developers building agents that need long-term memory
   - teams that need memory portable across LLM providers
   - researchers experimenting with stateful agent architectures
   - applications requiring personalized, evolving AI assistants
 not_best_for:
-  - - teams that only need simple single-turn LLM calls
+  - teams that only need simple single-turn LLM calls
   - developers who want a no-code visual workflow builder
 quick_answer: >-
   Letta (formerly MemGPT) is an open-source Python framework for building stateful AI agents with persistent, structured memory. Agents store memory in blocks (persona, human context, archival storage) that persist across sessions and can be ported between LLM providers. Originally a UC Berkeley research project, Letta has grown to 22k+ GitHub stars and offers a self-hosted open-source path plus hosted plans from free to $200/month. Best for developers who need agents that genuinely remember and improve over time; not a drop-in replacement for simple chatbot frameworks.

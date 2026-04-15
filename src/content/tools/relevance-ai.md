@@ -29,13 +29,13 @@ seo_title: "Relevance AI: Features, Pricing & Review (2026)"
 meta_description: "Relevance AI is a no-code platform for building AI agents with drag-and-drop workflows and LLM integration. Free tier available; paid plans from $19/mo to $299/mo."
 author: "aipedia.wiki Editorial"
 best_for:
-  - - Non-technical teams building AI agents for sales
+  - Non-technical teams building AI agents for sales
   - support
   - and operations
   - agencies deploying AI tools for clients
   - business teams prototyping AI assistants without developers.
 not_best_for:
-  - - Engineering teams needing maximum control over agent behavior
+  - Engineering teams needing maximum control over agent behavior
   - teams requiring extensive pre-built SaaS integrations
   - mission-critical production workflows requiring guaranteed reliability.
 quick_answer: >-

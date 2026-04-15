@@ -29,12 +29,12 @@ seo_title: "Flux Review 2026: FLUX.2, Pricing & Features Guide"
 meta_description: "Flux by Black Forest Labs has upgraded to the FLUX.2 family in 2026. FLUX 2 Pro and FLUX 2 Max are the current flagships. Free to self-host; API from ~$0.03/image."
 author: "aipedia.wiki Editorial"
 best_for:
-  - - developers and technical users
+  - developers and technical users
   - lora fine-tuners
   - comfyui power users
   - high-volume production pipelines
 not_best_for:
-  - - non-technical users
+  - non-technical users
   - users needing immediate aesthetic polish without setup
 quick_answer: >-
   Flux is an open-source text-to-image model developed by Black Forest Labs, founded by the original Stable Diffusion team. The model family has upgraded to FLUX.2 as of 2026: FLUX 2 Pro (Arena AI rank 10, ELO 1157) and FLUX 2 Max (rank 8, ELO 1167) are the current flagships, with FLUX 2 Flex rounding out the lineup. FLUX 1.1 Pro Ultra remains available as a legacy option. API pricing starts around $0.03-$0.06 per image for FLUX 2 Pro. Flux Schnell (Apache 2.0) and Flux Dev remain free for self-hosting. The defining advantage remains the largest LoRA fine-tuning ecosystem in AI image generation. Best for developers and ComfyUI power users who want full pipeline control. Midjourney v7 produces more aesthetically refined output by default; FLUX.2 competes on photorealism and prompt adherence.

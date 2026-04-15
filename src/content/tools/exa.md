@@ -48,12 +48,12 @@ quick_answer: >-
   developers building AI agents, RAG systems, and automated research tools that
   need semantic precision over maximum web index breadth.
 best_for:
-  - - AI agents and autonomous systems needing live web retrieval
+  - AI agents and autonomous systems needing live web retrieval
   - RAG pipelines requiring semantic relevance over keyword matching
   - Automated research and competitive intelligence workflows
   - LLM applications augmented with real-time web context
 not_best_for:
-  - - Consumer search interfaces or end-user applications
+  - Consumer search interfaces or end-user applications
   - Use cases requiring maximum web index coverage
   - Applications where keyword-based search is sufficient
   - Non-developer teams without API integration capability

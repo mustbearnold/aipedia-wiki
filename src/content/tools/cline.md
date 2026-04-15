@@ -29,12 +29,12 @@ seo_title: "Cline: Features, Pricing & Review (2026)"
 meta_description: "Cline is a free open-source AI coding agent for VS Code (formerly Claude Dev) with 60K+ GitHub stars, Plan/Act modes, MCP tool creation, and support for Claude Opus 4.6, GPT-5.4, Gemini 3.1 Pro, and local models. No subscription required."
 author: "aipedia.wiki Editorial"
 best_for:
-  - - VS Code developers who want an autonomous coding agent
+  - VS Code developers who want an autonomous coding agent
   - developers who want to avoid a monthly subscription
   - power users who want to control which AI model they use
   - teams building custom MCP tools for their workflow
 not_best_for:
-  - - developers on JetBrains who want the richest experience (support is newer)
+  - developers on JetBrains who want the richest experience (support is newer)
   - users wanting a zero-setup managed subscription with guardrails
   - beginners who need hand-holding rather than autonomous execution
 quick_answer: >-

@@ -36,12 +36,12 @@ author: aipedia.wiki Editorial
 quick_answer: >-
   Replit Agent is a browser-based AI app builder developed by Replit that creates full applications (frontend, backend, and database) from natural language descriptions and deploys them on Replit's infrastructure with zero local setup. The defining differentiator is end-to-end app creation and deployment entirely in the browser, targeting people who want working apps rather than users who want to code. Core costs $20/month; best for non-developers and rapid prototypers validating ideas, not for developers who need production-grade code quality or architectural control, where Cursor is a better fit.
 best_for:
-  - - Non-developers building prototypes
+  - Non-developers building prototypes
   - Rapid idea validation
   - Students learning application development
   - Small business internal tools
 not_best_for:
-  - - Production applications requiring high code quality
+  - Production applications requiring high code quality
   - Developers needing architectural control
   - Complex integrations or performance-critical systems
   - Teams requiring strict deployment compliance

@@ -35,14 +35,14 @@ author: aipedia.wiki Editorial
 quick_answer: >-
   Ideogram 2.0 is an AI image generator developed by Ideogram Inc. that produces images from text prompts with industry-leading accuracy for rendering readable text inside the image, spelling words correctly and kerning typography legibly where Midjourney v8, Flux 2, and other competitors routinely fail. That text rendering accuracy is the single most concrete differentiator: ask it for a thumbnail reading 'GRAND OPENING' and the words will actually be legible. Free tier provides roughly 25 generations per day; Basic is $8/month for about 100 per day; Plus is $20/month for about 400. Best for YouTube thumbnail creators, logo designers, and marketers who need text embedded in images; Midjourney v8 remains the better choice when overall artistic quality and photorealism matter more than typography.
 best_for:
-  - - YouTube thumbnail creators
+  - YouTube thumbnail creators
   - Logo designers
   - Social media managers
   - Merchandise designers
   - Marketing teams
   - Meme creators
 not_best_for:
-  - - Photorealistic portraits
+  - Photorealistic portraits
   - Landscape photography
   - Artistic compositions without text
   - Users needing API access

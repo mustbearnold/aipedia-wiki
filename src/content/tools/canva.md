@@ -29,13 +29,13 @@ scores:
   longevity: 9
 tags: [design-tool, social-media, templates, presentations, thumbnails, marketing, text-to-image, magic-design, non-designer]
 best_for:
-  - - social media managers
+  - social media managers
   - small business owners
   - content creators
   - educators
   - marketing teams
 not_best_for:
-  - - professional designers
+  - professional designers
   - print production work
   - product design teams
 quick_answer: >-

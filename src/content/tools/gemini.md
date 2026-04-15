@@ -30,12 +30,12 @@ scores:
   longevity: 9
 tags: [chatbot, ai-assistant, writing, search, multimodal, google-workspace, deep-research, long-context, imagen, veo, notebooklm]
 best_for:
-  - - google workspace power users
+  - google workspace power users
   - researchers needing autonomous deep research reports
   - users wanting bundled storage value with AI access
   - multimodal workflows combining text, image, audio, video
 not_best_for:
-  - - users needing the deepest multi-step reasoning (Claude Opus 4.6 leads)
+  - users needing the deepest multi-step reasoning (Claude Opus 4.6 leads)
   - users outside Google ecosystem getting full value
   - writing tasks requiring nuanced, distinctive prose
 quick_answer: >-

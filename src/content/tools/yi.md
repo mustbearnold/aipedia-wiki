@@ -30,11 +30,11 @@ seo_title: "Yi (01.AI) LLM: Models, Pricing & Review (2026)"
 meta_description: "Yi is 01.AI's open-weight LLM family from Kai-Fu Lee's lab. Yi-Lightning at $0.14/1M tokens, Yi-34B open-source. Honest 2026 review including the March 2025 pivot away from pre-training."
 author: "aipedia.wiki Editorial"
 best_for:
-  - - researchers and developers wanting a large open-weight model for self-hosting
+  - researchers and developers wanting a large open-weight model for self-hosting
   - teams needing very long context windows at low API cost
   - Chinese-English bilingual applications
 not_best_for:
-  - - teams wanting active frontier model development (01.AI stopped pre-training in March 2025)
+  - teams wanting active frontier model development (01.AI stopped pre-training in March 2025)
   - production workloads requiring guaranteed long-term support from the original lab
 quick_answer: >-
   Yi is the open-weight LLM family developed by 01.AI, the Beijing-based AI startup founded by Kai-Fu Lee in March 2023. The Yi-34B model was notable at launch for beating Llama 2 on benchmarks, and Yi-Lightning (October 2024) offered competitive reasoning at just $0.14 per million tokens. However, in March 2025, 01.AI stopped pre-training large models and pivoted to selling AI business solutions built on DeepSeek's models. The Yi open-weight models remain available on Hugging Face and third-party APIs, but active flagship model development from 01.AI has ceased.

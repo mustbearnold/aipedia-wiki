@@ -31,13 +31,13 @@ meta_description: >-
   cloning from $0-$330/mo. Best-in-class quality across 74 languages.
 author: aipedia.wiki Editorial
 best_for:
-  - - voice cloning
+  - voice cloning
   - audiobook narration
   - multilingual content
   - youtube creators
   - conversational ai agents
 not_best_for:
-  - - budget api usage
+  - budget api usage
   - self-hosted solutions
   - production api without stability (v3 alpha artifacts)
 quick_answer: >-

@@ -32,12 +32,12 @@ author: "aipedia.wiki Editorial"
 quick_answer: >-
   GLM (General Language Model) is an LLM family developed by Zhipu AI, rebranded as Z.ai in 2026, and jointly created with Tsinghua University KEG Lab. GLM-5.1, released April 7, 2026 as open source under MIT license, topped SWE-Bench Pro at 58.4%, nudging past GPT-5.4 (57.7%) and Claude Opus 4.6 (57.3%). Free models (GLM-4.7-Flash, GLM-4.5-Flash) are available to all registered users; paid API for GLM-5 starts at $1.00/M input tokens. Best for developers building coding agents who want an open-source SWE-bench leader; not for teams needing a polished English consumer chat product.
 best_for:
-  - - coding and agentic engineering tasks
+  - coding and agentic engineering tasks
   - developers wanting open-source SWE-bench-leading weights
   - bilingual Chinese-English professional workflows
   - budget-conscious access via free Flash models
 not_best_for:
-  - - polished English-language consumer chat
+  - polished English-language consumer chat
   - enterprise buyers needing Western data residency
   - users who prioritize writing quality over coding benchmarks
 ---

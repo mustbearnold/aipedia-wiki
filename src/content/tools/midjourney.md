@@ -29,12 +29,12 @@ seo_title: "Midjourney: Features, Pricing & Review (2026)"
 meta_description: "Midjourney is the AI image generator with the best aesthetic quality. Plans from $10-$120/mo. V7 is default; V8 is in alpha. No free tier or public API."
 author: "aipedia.wiki Editorial"
 best_for:
-  - - aesthetic image quality
+  - aesthetic image quality
   - concept art
   - design work
   - marketing visuals
 not_best_for:
-  - - text rendering in images
+  - text rendering in images
   - programmatic api access
   - budget-conscious users
 quick_answer: >-
