@@ -41,13 +41,13 @@ quick_answer: >-
 
 # Doubao
 
-Doubao (pronounced "doe-bao," meaning "bean bag" in Chinese) is ByteDance's AI assistant product, launched in August 2023. By early 2026, it had surpassed 100 million daily active users during the Lunar New Year period, making it China's most-used AI application by that metric ([36Kr](https://eu.36kr.com/en/p/3609313072153862)). ByteDance, the parent company of TikTok, has positioned Doubao as its primary consumer AI product, releasing a major Doubao 2.0 upgrade in early 2026 with reasoning capabilities described as comparable to GPT-5 at a fraction of the cost ([Gulf News](https://gulfnews.com/technology/what-is-doubao-20-all-about-chinas-new-ai-app-thats-cheaper-than-deepseek-and-rivaling-gpt-52-1.500444799)). Outside China, Doubao's technology is accessible via the Cici app (later rebranded Dola) in select international markets.
+Doubao (pronounced "doe-bao," meaning "bean bag" in Chinese) is ByteDance's AI assistant product, launched in August 2023. By early 2026, it had surpassed 100 million daily active users during the Lunar New Year period, making it China's most-used AI application by that metric ([36Kr](https://eu.36kr.com/en/p/3609313072153862)). ByteDance, the parent company of TikTok, has positioned Doubao as its primary consumer AI product, releasing Doubao-Seed-2.0 on February 14, 2026 with reasoning capabilities ByteDance benchmarks at parity with GPT-5.2 and Gemini 3 Pro on math, coding, and reasoning ([Gulf News](https://gulfnews.com/technology/what-is-doubao-20-all-about-chinas-new-ai-app-thats-cheaper-than-deepseek-and-rivaling-gpt-52-1.500444799)). Outside China, Doubao's technology is accessible via the Cici app (later rebranded Dola) in select international markets.
 
 ## What It Does
 
-Doubao integrates multiple AI capabilities into a single interface: text conversation, image generation via ByteDance's Seedream model, video generation via the Seedance model, voice interaction, document analysis, and code generation. The Doubao 2.0 model focuses on long-chain reasoning and autonomous multi-step task execution, with ByteDance claiming it matches GPT-4o and Claude 3.5 Sonnet on multiple evaluation benchmarks while costing dramatically less to operate ([seczine.com](https://seczine.com/technology/2026/02/bytedance-launches-doubao-20-gpt52level-performanc/)). The platform is available on web, Windows, macOS, iOS, and Android.
+Doubao integrates multiple AI capabilities into a single interface: text conversation, image generation via ByteDance's Seedream model, video generation via the Seedance model, voice interaction, document analysis, and code generation. The Doubao 2.0 model focuses on long-chain reasoning and autonomous multi-step task execution, with ByteDance benchmarking Doubao-Seed-2.0 at parity with GPT-5.2 and Gemini 3 Pro on math, coding, and reasoning while costing dramatically less to operate ([seczine.com](https://seczine.com/technology/2026/02/bytedance-launches-doubao-20-gpt52level-performanc/)). The platform is available on web, Windows, macOS, iOS, and Android.
 
-The underlying large language model (Doubao-1.5-pro and later versions) is also available as an API through Volcano Engine, ByteDance's cloud platform, at prices that ByteDance claims are up to 99.3% below Western competitors.
+The underlying model family (Doubao-Seed-2.0-pro, Seed-2.0-lite, Seed-2.0-mini, and Seed-2.0-code) is also available as an API through Volcano Engine, ByteDance's cloud platform, at prices ByteDance claims are up to 99.3% below Western competitors.
 
 ## Who It's For
 
@@ -61,7 +61,7 @@ The underlying large language model (Doubao-1.5-pro and later versions) is also 
 | Tier | Price | Notes |
 |------|-------|-------|
 | Consumer (Doubao app) | Free | All core features including text, image, voice |
-| API (Doubao-1.5-pro) | RMB 0.0008/1K tokens | Approximately $0.11 per million tokens at April 2026 exchange rates; via Volcano Engine |
+| API (Doubao-Seed-2.0-pro) | RMB 0.0008/1K tokens | Approximately $0.11 per million tokens at April 2026 exchange rates; via Volcano Engine |
 | Enterprise | Custom | Custom contracts through ByteDance/Volcano Engine |
 
 *API pricing verified 2026-04-15 via [dataglobehub.com](https://dataglobehub.com/doubao-statistics-and-insights/) and [aiwiki.ai/wiki/doubao](https://aiwiki.ai/wiki/doubao). Consumer app is free with no subscription required.*
@@ -104,8 +104,8 @@ Not directly as "Doubao" in Western app stores. Outside China, ByteDance distrib
 **How does Doubao's pricing compare to ChatGPT?**
 ByteDance claims the Doubao API is priced up to 99.3% below international competitors. At approximately RMB 0.0008 per 1,000 tokens (about $0.11 per million tokens), it is dramatically cheaper than GPT-4o. The trade-off is data residency on Chinese infrastructure and Chinese-language optimization.
 
-**What is Doubao 2.0?**
-Doubao 2.0 is the major model update released in early 2026, focused on long-chain reasoning and autonomous multi-step task completion. ByteDance positions its performance as comparable to GPT-5 at a fraction of the cost. It also significantly cuts operating costs compared to earlier Doubao versions.
+**What is Doubao-Seed-2.0?**
+Doubao-Seed-2.0 is the model family released on February 14, 2026, focused on long-chain reasoning and autonomous multi-step task completion. ByteDance benchmarks it at parity with GPT-5.2 and Gemini 3 Pro on math, coding, and reasoning, while significantly cutting operating costs compared to earlier Doubao versions. The family includes Pro, Lite, Mini, and Code variants.
 
 ## Sources
 

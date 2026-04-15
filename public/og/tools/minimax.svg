@@ -13,9 +13,9 @@
   <rect width="1200" height="630" fill="url(#bg)"/>
   <rect x="0" y="0" width="1200" height="6" fill="url(#accent)"/>
   <text x="80" y="100" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="600" fill="#a78bfa" letter-spacing="2">aipedia.wiki</text>
-  <text x="80" y="135" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="500" fill="#9ca3af">AI Research</text>
+  <text x="80" y="135" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="500" fill="#9ca3af">AI Chatbots</text>
   <text x="80" y="270" font-family="Inter, system-ui, sans-serif" font-size="92" font-weight="800" fill="#fafafa">MiniMax</text>
-  <text x="80" y="320" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="500" fill="#9ca3af">minimax</text>
+  <text x="80" y="320" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="500" fill="#9ca3af">MiniMax</text>
   <foreignObject x="80" y="360" width="900" height="160">
     <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Inter, system-ui, sans-serif; font-size: 26px; line-height: 1.4; color: #d1d5db;"></div>
   </foreignObject>

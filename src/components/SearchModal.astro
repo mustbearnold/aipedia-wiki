@@ -4,14 +4,17 @@ import { getCollection } from 'astro:content';
 const allTools = await getCollection('tools');
 const toolsIndex = allTools
   .filter(t => t.data.type === 'tool' && t.data.status !== 'dead')
-  .map(t => ({
-    slug: t.slug,
-    title: t.data.title ?? '',
-    tagline: t.data.tagline ?? '',
-    category: t.data.category ?? '',
-    price: t.data.price_range ?? '',
-    url: `/tools/${t.slug}/`,
-  }))
+  .map(t => {
+    const slug = t.data.slug || t.id.replace(/\.md$/, '').replace(/\\/g, '/');
+    return {
+      slug,
+      title: t.data.title ?? '',
+      tagline: t.data.tagline ?? '',
+      category: t.data.category ?? '',
+      price: t.data.price_range ?? '',
+      url: `/tools/${slug}/`,
+    };
+  })
   .sort((a, b) => a.title.localeCompare(b.title));
 
 const categoryEmoji: Record<string, string> = {

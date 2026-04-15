@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated": "2026-04-15T10:31:04.266Z",
-  "total_active": 131,
+  "generated": "2026-04-15T10:48:36.703Z",
+  "total_active": 132,
   "total_dead": 8,
   "tools": {
     "activepieces": {
@@ -2854,13 +2854,57 @@
       },
       "page_path": "wikis/ai-tools/pages/tools/midjourney.md"
     },
+    "minimax-speech": {
+      "slug": "minimax-speech",
+      "status": "active",
+      "title": "MiniMax Speech",
+      "category": "ai-voice",
+      "secondary_categories": [
+        "ai-research"
+      ],
+      "company": "MiniMax",
+      "url": "https://www.minimax.io/audio",
+      "pricing_model": "freemium",
+      "price_range": "$0 free tier / $0.03-$0.05 per 1K chars",
+      "launched": "2025-04",
+      "last_updated": "2026-04-15T00:00:00.000Z",
+      "last_verified": "2026-04-15T00:00:00.000Z",
+      "update_frequency": "quarterly",
+      "scores": {
+        "utility": 8,
+        "value": 9,
+        "moat": 4,
+        "longevity": 6
+      },
+      "tags": [
+        "tts",
+        "voice-cloning",
+        "chinese-ai",
+        "multilingual",
+        "minimax",
+        "speech-02",
+        "api"
+      ],
+      "affiliate": {
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null
+      },
+      "page_path": "wikis/ai-tools/pages/tools/minimax-speech.md"
+    },
     "minimax": {
       "slug": "minimax",
       "status": "active",
       "title": "MiniMax",
-      "category": "ai-research",
-      "secondary_categories": [],
-      "company": "minimax",
+      "category": "ai-chatbots",
+      "secondary_categories": [
+        "ai-research",
+        "ai-voice",
+        "ai-video"
+      ],
+      "company": "MiniMax",
       "url": "https://www.minimax.io/",
       "pricing_model": "freemium",
       "price_range": "Free - $0.30/1M tokens (API)",
@@ -4882,8 +4926,11 @@
       "status": "active",
       "title": "Yi (01.AI)",
       "category": "ai-research",
-      "secondary_categories": [],
-      "company": "01ai",
+      "secondary_categories": [
+        "ai-chatbots",
+        "ai-coding"
+      ],
+      "company": "01.AI",
       "url": "https://www.01.ai/",
       "pricing_model": "open-source",
       "price_range": "Free (open-weight); Yi-Lightning API at $0.14/1M tokens",

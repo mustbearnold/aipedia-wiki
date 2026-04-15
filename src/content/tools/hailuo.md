@@ -41,11 +41,11 @@ quick_answer: >-
 
 # Hailuo AI
 
-Hailuo AI is the video generation product from MiniMax, the Shanghai-based AI company behind the Talkie companion app and the M2 LLM family (see [MiniMax page](../tools/minimax.md)). Launched in March 2024, it converts text prompts and still images into short video clips at native 1080P resolution. As of April 2026, it supports clips up to 10 seconds, offers a free trial tier, and competes directly with [Kling](../tools/kling.md) and Runway at a lower price point. The product runs on the Hailuo 01 and Hailuo 02 foundation video models.
+Hailuo AI is the video generation product from MiniMax, the Shanghai-based AI company behind the Talkie companion app and the M2 LLM family (see [MiniMax page](../tools/minimax.md)). Launched in March 2024, it converts text prompts and still images into short video clips at native 1080P resolution. As of April 2026, it supports clips up to 10 seconds, offers a free trial tier, and competes directly with [Kling](../tools/kling.md) and Runway at a lower price point. The product runs on the Hailuo 2.3 and Hailuo 2.3 Fast foundation video models, released in October 2025 and built on the earlier Hailuo 02 architecture.
 
 ## What It Does
 
-Hailuo generates short video clips (up to 10 seconds) from text descriptions or input images. Users write a prompt describing the scene, motion, and style; Hailuo renders a clip in 768P or 1080P. The image-to-video mode takes a still frame as the starting point and animates it according to a text instruction. The platform operates on a credit system, with each generation consuming credits based on resolution and clip length. Higher-tier plans unlock the Hailuo 01 and Hailuo 02 models, which produce better motion quality and longer clips.
+Hailuo generates short video clips (up to 10 seconds) from text descriptions or input images. Users write a prompt describing the scene, motion, and style; Hailuo renders a clip in 768P or 1080P. The image-to-video mode takes a still frame as the starting point and animates it according to a text instruction. The platform operates on a credit system, with each generation consuming credits based on resolution and clip length. Higher-tier plans unlock the Hailuo 02 and Hailuo 2.3 models, which produce better motion quality and longer clips.
 
 ## Who It's For
 
@@ -65,8 +65,8 @@ Prices shown are current promotional rates (verified 2026-04-15 at [hailuoai.vid
 | Standard | $7.99 (reg. $14.99) | 1,000 | Approx. 40 six-second 768P clips; 1080P supported; no watermark |
 | Pro | $24.99 (reg. $54.99) | 4,500 | Approx. 180 six-second clips; 10-second 1080P; 2 concurrent tasks |
 | Master | $63.99 (reg. $94.99) | 10,000 | Approx. 400 six-second clips; parallel processing |
-| Ultra | $124.99 | 12,000 | Unlimited Hailuo 01 model access (no credit burn); approx. 480 six-second clips |
-| Max | $199.99 | 20,000 | Unlimited Hailuo 01 + 02 access; approx. 900 six-second clips |
+| Ultra | $124.99 | 12,000 | Unlimited Hailuo 02 model access (no credit burn); approx. 480 six-second clips |
+| Max | $199.99 | 20,000 | Unlimited Hailuo 02 + 2.3 access; approx. 900 six-second clips |
 
 Pay-as-you-go credits also available at roughly $1 per 70 credits. Credits expire at end of the second calendar year after purchase.
 
@@ -74,7 +74,7 @@ Pay-as-you-go credits also available at roughly $1 per 70 credits. Credits expir
 
 - **Native 1080P output:** All paid plans support 1080P HD video, not just upscaled output
 - **Image-to-video:** Animate any still image with a text motion prompt
-- **Hailuo 01 and 02 models:** Newer Hailuo 02 model available on Master plan and above, with improved motion coherence and detail
+- **Hailuo 2.3 and 2.3 Fast models:** The current Hailuo 2.3 (released October 2025) builds on Hailuo 02 and is available on Master plan and above, with improved motion coherence and detail
 - **Text-to-video:** Full scene generation from text descriptions; supports basic cinematography instructions
 - **Watermark-free downloads:** All paid plans include clean output suitable for publishing
 - **MiniMax API integration:** Video generation available programmatically via the MiniMax developer API, same models as consumer site

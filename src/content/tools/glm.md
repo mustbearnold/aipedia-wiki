@@ -48,7 +48,7 @@ GLM (General Language Model, also known as ChatGLM) is a large language model fa
 
 ## What It Does
 
-GLM serves two audiences: developers building coding agents through the API, and users accessing the chat interface at z.ai or chatglm.cn. The GLM-5 model family targets agentic engineering and long-horizon coding tasks, with GLM-5.1 built on a 745-billion parameter Mixture-of-Experts architecture with 40 billion active parameters per token and a 200K-token context window ([Hugging Face](https://huggingface.co/zai-org/GLM-5)). It can generate up to 128K output tokens in a single response, which is relevant for long code generation tasks.
+GLM serves two audiences: developers building coding agents through the API, and users accessing the chat interface at z.ai or chatglm.cn. The GLM-5 model family targets agentic engineering and long-horizon coding tasks, with GLM-5.1 built on a 754-billion parameter Mixture-of-Experts architecture with 40 billion active parameters per token and a 200K-token context window ([Hugging Face](https://huggingface.co/zai-org/GLM-5)). It can generate up to 128K output tokens in a single response, which is relevant for long code generation tasks.
 
 Zhipu offers two free models for all registered users: GLM-4.7-Flash (203K context, lightweight) and GLM-4.5-Flash (general-purpose, lower capability). These cover simple completions, formatting, and basic Q&A at zero cost. The paid GLM-5 tier and the Coding Plan subscription (billed quarterly) target developers who need the full agentic and reasoning capabilities. GLM-4.7 previously achieved 73.8% on SWE-bench and 85.2% on HumanEval before GLM-5.1 surpassed it ([Vertu AI Tools](https://vertu.com/ai-tools/glm-4-7-and-glm-4-7-flash-the-definitive-2026-guide-to-zhipu-ais-reasoning-powerhouse/)).
 
@@ -78,7 +78,7 @@ Zhipu offers two free models for all registered users: GLM-4.7-Flash (203K conte
 
 - **SWE-Bench Pro leader:** GLM-5.1 scored 58.4% on SWE-Bench Pro (April 7, 2026), above GPT-5.4 (57.7%) and Claude Opus 4.6 (57.3%) at launch ([Hugging Face](https://huggingface.co/zai-org/GLM-5))
 - **Open source under MIT:** GLM-5.1 weights are freely available on Hugging Face, enabling local deployment, fine-tuning, and commercial use without licensing fees
-- **745B MoE architecture, 40B active:** large total parameter count with efficient sparse activation; 200K context window, up to 128K output tokens per response
+- **754B MoE architecture, 40B active:** large total parameter count with efficient sparse activation; 200K context window, up to 128K output tokens per response
 - **Free Flash models:** GLM-4.7-Flash and GLM-4.5-Flash are available at zero cost to registered users for lightweight tasks
 - **OpenAI and Anthropic API compatibility:** GLM supports both API formats, allowing it to be used as a drop-in backend in Cursor, Cline, Continue.dev, and similar tools
 - **Trained on domestic hardware:** GLM-5.1 trained entirely on Huawei Ascend 910B chips, relevant for customers assessing supply-chain independence

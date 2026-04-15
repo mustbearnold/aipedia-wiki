@@ -4,7 +4,8 @@ slug: yi
 title: Yi (01.AI)
 tagline: Kai-Fu Lee's open-weight LLM family from 01.AI, known for large context windows and competitive benchmark scores at low inference cost.
 category: ai-research
-company: 01ai
+secondary_categories: [ai-chatbots, ai-coding]
+company: 01.AI
 url: https://www.01.ai/
 pricing_model: open-source
 price_range: "Free (open-weight); Yi-Lightning API at $0.14/1M tokens"

@@ -3,8 +3,9 @@ type: tool
 slug: minimax
 title: MiniMax
 tagline: Shanghai AI lab behind the Talkie companion app, Hailuo video, and the M2 family of multimodal foundation models.
-category: ai-research
-company: minimax
+category: ai-chatbots
+secondary_categories: [ai-research, ai-voice, ai-video]
+company: MiniMax
 url: https://www.minimax.io/
 pricing_model: freemium
 price_range: "Free - $0.30/1M tokens (API)"
@@ -90,7 +91,7 @@ The MiniMax consumer agent interface and Talkie have a free tier with paid upgra
 - **Copyright litigation:** MiniMax has faced copyright lawsuits from major entertainment studios over Talkie's celebrity simulations
 - **Talkie moderation gaps:** The app has been criticized for inadequate content moderation on AI-generated character interactions
 - **Limited English documentation:** API docs are available in English but community support and tutorials are primarily in Chinese
-- **Valuation vs. traction gap:** $2.5B valuation (2024) on $70M ARR (Talkie alone, 2024) leaves a wide monetization gap to close
+- **Valuation vs. traction gap:** $6.5B IPO valuation (HKEX listing January 2026), with shares doubling to imply a ~$13B day-one market cap, on $70M ARR (Talkie, 2024) leaves a wide monetization gap to close
 
 ## Bottom Line
 

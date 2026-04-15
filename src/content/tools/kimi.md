@@ -66,7 +66,7 @@ The Kimi K2.5 model underlying the API supports four distinct operating modes: I
 |------|-------|-----------|
 | Free (Adagio) | $0/month | Unlimited basic chat, 256K context; limited DeepResearch and agent tasks |
 | Paid Membership | Custom tiers | Higher quotas for DeepResearch and agent use; see kimi.com for current plans |
-| API - Kimi K2.5 | $0.60/M input, $3.00/M output | Cache: $0.10/M; multimodal, all modes |
+| API - Kimi K2.5 | $0.60/M input, $2.50/M output | Cache: $0.10/M; multimodal, all modes |
 | API - Kimi K2 0905 | $0.60/M input, $2.50/M output | Cache: $0.15/M; base MoE, strong coding |
 | API - Kimi K2 Thinking | $0.60/M input, $2.50/M output | Cache: $0.15/M; deep reasoning, 300-step tool calling |
 
