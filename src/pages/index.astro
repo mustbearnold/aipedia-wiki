@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ToolCard from '../components/ToolCard.astro';
+import HomepageLD from '../components/seo/HomepageLD.astro';
 
 const allTools = await getCollection('tools');
 const trends = await getCollection('trends');
@@ -58,15 +59,24 @@ const impactColors: Record<string, string> = {
 };
 ---
 
-<BaseLayout title="aipedia.wiki — The AI Tools Encyclopedia" description="Comprehensive, honest encyclopedia of every AI tool. Reviews, scores, comparisons, and guides.">
+<BaseLayout
+  title={`aipedia.wiki: ${allTools.length} AI tools, honestly scored (2026)`}
+  description={`Honest reviews of ${allTools.length} AI tools scored on utility, value, moat and longevity. ${comparisons.length} head-to-head comparisons. Flagship models and pricing verified monthly.`}
+>
+  <HomepageLD
+    toolCount={allTools.length}
+    comparisonCount={comparisons.length}
+    categoryCount={categories.length}
+    lastUpdated="2026-04-16"
+  />
 
   <!-- Hero -->
   <section class="text-center py-16 md:py-24">
     <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-4">
-      The AI Tools <span class="bg-gradient-to-r from-[#a78bfa] to-[#60a5fa] bg-clip-text text-transparent">Encyclopedia</span>
+      {allTools.length} AI tools, <span class="bg-gradient-to-r from-[#a78bfa] to-[#60a5fa] bg-clip-text text-transparent">honestly scored</span>
     </h1>
-    <p class="text-[var(--text-muted)] mb-8">
-      {allTools.length} tools &middot; {categories.length} categories &middot; Honest reviews &middot; Updated April 2026
+    <p class="text-[var(--text-muted)] mb-8 max-w-2xl mx-auto px-4">
+      Reviews scored on Utility, Value, Moat and Longevity. {comparisons.length} head-to-head comparisons. Flagship models and pricing verified monthly. Updated April 2026.
     </p>
 
     <!-- Search bar -->
@@ -322,6 +332,58 @@ const impactColors: Record<string, string> = {
           </a>
         );
       })}
+    </div>
+  </section>
+
+  <!-- FAQ (visible; paired with FAQPage schema in HomepageLD) -->
+  <section class="max-w-3xl mx-auto mb-16 px-4" aria-labelledby="faq-heading">
+    <h2 id="faq-heading" class="text-2xl font-bold text-[var(--text-primary)] mb-6">Frequently asked</h2>
+    <div class="space-y-3">
+      <details class="group rounded-xl border border-[var(--border)] bg-[var(--bg-card)] p-4 hover:bg-[var(--bg-card-hover)] transition-colors">
+        <summary class="cursor-pointer text-[15px] font-semibold text-[var(--text-primary)] list-none flex items-center justify-between">
+          How are AI tools scored on aipedia.wiki?
+          <span class="text-[var(--text-muted)] group-open:rotate-45 transition-transform">+</span>
+        </summary>
+        <p class="mt-3 text-[14px] leading-relaxed text-[var(--text-secondary)]">
+          Every tool is scored 1 to 10 across four dimensions: Utility (how well it does its core job), Value (quality per dollar), Moat (defensibility against competitors), and Longevity (likelihood the product still exists in 2 years). Methodology is published at <a href="/about/scoring/" class="text-[var(--accent-primary)] no-underline hover:underline">/about/scoring/</a>. Rankings are reviewed monthly and revised when a product ships a flagship model, changes pricing, or is acquired or discontinued.
+        </p>
+      </details>
+      <details class="group rounded-xl border border-[var(--border)] bg-[var(--bg-card)] p-4 hover:bg-[var(--bg-card-hover)] transition-colors">
+        <summary class="cursor-pointer text-[15px] font-semibold text-[var(--text-primary)] list-none flex items-center justify-between">
+          How often is aipedia.wiki updated?
+          <span class="text-[var(--text-muted)] group-open:rotate-45 transition-transform">+</span>
+        </summary>
+        <p class="mt-3 text-[14px] leading-relaxed text-[var(--text-secondary)]">
+          Tool pages are re-verified monthly for pricing and flagship model references. Comparison pages are refreshed quarterly or whenever a compared tool ships a material update. The current content pass covers flagship models as of April 2026 including GPT-5.4, Claude Opus 4.6, Gemini 3.1 Pro, Midjourney v8 alpha, Flux 2, and Kling 3.0.
+        </p>
+      </details>
+      <details class="group rounded-xl border border-[var(--border)] bg-[var(--bg-card)] p-4 hover:bg-[var(--bg-card-hover)] transition-colors">
+        <summary class="cursor-pointer text-[15px] font-semibold text-[var(--text-primary)] list-none flex items-center justify-between">
+          Is aipedia.wiki affiliate spam?
+          <span class="text-[var(--text-muted)] group-open:rotate-45 transition-transform">+</span>
+        </summary>
+        <p class="mt-3 text-[14px] leading-relaxed text-[var(--text-secondary)]">
+          No. Editorial copy never mentions affiliate programs and never positions a product based on commission. Some outbound links are affiliate links where a program exists, but the presence or absence of an affiliate program has no effect on a tool's score or placement. Discontinued and failed products are covered honestly in the Dead Tools section.
+        </p>
+      </details>
+      <details class="group rounded-xl border border-[var(--border)] bg-[var(--bg-card)] p-4 hover:bg-[var(--bg-card-hover)] transition-colors">
+        <summary class="cursor-pointer text-[15px] font-semibold text-[var(--text-primary)] list-none flex items-center justify-between">
+          Which AI tool is best in 2026?
+          <span class="text-[var(--text-muted)] group-open:rotate-45 transition-transform">+</span>
+        </summary>
+        <p class="mt-3 text-[14px] leading-relaxed text-[var(--text-secondary)]">
+          There is no single best AI tool because different workflows have different winners. For long-form writing and nuanced reasoning: <a href="/tools/claude/" class="text-[var(--accent-primary)] no-underline hover:underline">Claude Opus 4.6</a>. For multimodal generalist use with plugins and image generation: <a href="/tools/chatgpt/" class="text-[var(--accent-primary)] no-underline hover:underline">ChatGPT with GPT-5.4</a>. For deep Google Workspace integration: <a href="/tools/gemini/" class="text-[var(--accent-primary)] no-underline hover:underline">Gemini 3.1 Pro</a>. For agentic coding from the CLI: <a href="/tools/claude-code/" class="text-[var(--accent-primary)] no-underline hover:underline">Claude Code</a>. See <a href="/compare/" class="text-[var(--accent-primary)] no-underline hover:underline">/compare/</a> for head-to-head breakdowns.
+        </p>
+      </details>
+      <details class="group rounded-xl border border-[var(--border)] bg-[var(--bg-card)] p-4 hover:bg-[var(--bg-card-hover)] transition-colors">
+        <summary class="cursor-pointer text-[15px] font-semibold text-[var(--text-primary)] list-none flex items-center justify-between">
+          How many AI tools and comparisons are covered?
+          <span class="text-[var(--text-muted)] group-open:rotate-45 transition-transform">+</span>
+        </summary>
+        <p class="mt-3 text-[14px] leading-relaxed text-[var(--text-secondary)]">
+          {allTools.length} AI tools across {categories.length} categories, with {comparisons.length} head-to-head comparison pages. Categories include Chatbots, Coding, Writing, Image, Video, Voice, Music, Design, SEO, Research, Notes, Search, Automation, and Presentation.
+        </p>
+      </details>
     </div>
   </section>
 

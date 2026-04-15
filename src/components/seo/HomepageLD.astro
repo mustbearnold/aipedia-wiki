@@ -1,0 +1,103 @@
+---
+// Homepage structured data: WebSite (with SearchAction for sitelink search box),
+// Organization (E-E-A-T entity), and FAQPage for rich snippet eligibility.
+interface Props {
+  toolCount: number;
+  comparisonCount: number;
+  categoryCount: number;
+  lastUpdated: string; // ISO date, e.g. '2026-04-16'
+}
+
+const { toolCount, comparisonCount, categoryCount, lastUpdated } = Astro.props;
+
+const website = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': 'https://aipedia.wiki/#website',
+  url: 'https://aipedia.wiki',
+  name: 'aipedia.wiki',
+  alternateName: 'AI Pedia Wiki',
+  description: `Honest reviews of ${toolCount} AI tools scored on utility, value, moat and longevity. ${comparisonCount} head-to-head comparisons. Flagship models and pricing verified monthly.`,
+  inLanguage: 'en-US',
+  dateModified: lastUpdated,
+  publisher: { '@id': 'https://aipedia.wiki/#organization' },
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: {
+      '@type': 'EntryPoint',
+      urlTemplate: 'https://aipedia.wiki/?q={search_term_string}',
+    },
+    'query-input': 'required name=search_term_string',
+  },
+};
+
+const organization = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  '@id': 'https://aipedia.wiki/#organization',
+  name: 'aipedia.wiki',
+  url: 'https://aipedia.wiki',
+  logo: {
+    '@type': 'ImageObject',
+    url: 'https://aipedia.wiki/favicon.svg',
+    width: 512,
+    height: 512,
+  },
+  description:
+    'Independent editorial encyclopedia of AI tools. Every tool scored across four dimensions (Utility, Value, Moat, Longevity) and re-verified monthly.',
+  foundingDate: '2025',
+  publishingPrinciples: 'https://aipedia.wiki/about/',
+  correctionsPolicy: 'https://aipedia.wiki/about/#corrections--contact',
+  ethicsPolicy: 'https://aipedia.wiki/about/',
+};
+
+const faq = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'How are AI tools scored on aipedia.wiki?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: `Every tool is scored 1 to 10 across four dimensions: Utility (how well it does its core job), Value (quality per dollar), Moat (defensibility against competitors), and Longevity (likelihood the product still exists in 2 years). Scoring methodology is published at /about/scoring/. Rankings are reviewed monthly and revised when a product ships a flagship model, changes pricing, or is acquired or discontinued.`,
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How often is aipedia.wiki updated?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: `Tool pages are re-verified monthly for pricing and flagship model references. Comparison pages are refreshed quarterly or whenever a compared tool ships a material update. The current content pass covers flagship models as of April 2026 including GPT-5.4, Claude Opus 4.6, Gemini 3.1 Pro, Midjourney v8 alpha, Flux 2, and Kling 3.0.`,
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is aipedia.wiki affiliate spam?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: `No. Editorial copy never mentions affiliate programs and never positions a product based on commission. Some outbound links are affiliate links where a program exists, but the presence or absence of an affiliate program has no effect on a tool's score or placement. Discontinued and failed products are covered honestly in the Dead Tools section.`,
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Which AI tool is best in 2026?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: `There is no single best AI tool because different workflows have different winners. For long-form writing and nuanced reasoning: Claude Opus 4.6. For multimodal generalist use with plugins and image generation: ChatGPT with GPT-5.4. For deep Google Workspace integration: Gemini 3.1 Pro. For agentic coding from the CLI: Claude Code. See /compare/ for head-to-head breakdowns or /tools/ for the ranked catalog.`,
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How many AI tools and comparisons are covered?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: `${toolCount} AI tools across ${categoryCount} categories, with ${comparisonCount} head-to-head comparison pages. Categories include AI Chatbots, Coding, Writing, Image, Video, Voice, Music, Design, SEO, Research, Notes, Search, Automation, and Presentation.`,
+      },
+    },
+  ],
+};
+---
+<script type="application/ld+json" set:html={JSON.stringify(website)} />
+<script type="application/ld+json" set:html={JSON.stringify(organization)} />
+<script type="application/ld+json" set:html={JSON.stringify(faq)} />
