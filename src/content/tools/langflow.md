@@ -28,6 +28,8 @@ tags: [llm-workflows, ai-agents, langchain, open-source, visual-builder, no-code
 seo_title: "Langflow: Features, Pricing & Review (2026)"
 meta_description: "Langflow is a free, open-source visual builder for LangChain LLM workflows and AI agents. Self-host for $0 or use cloud at $0.002/credit. Best for developer-friendly AI agent prototyping."
 author: "aipedia.wiki Editorial"
+quick_answer: >-
+  Langflow is a free, open-source visual drag-and-drop builder for LangChain-based LLM workflows and AI agents, developed by Langflow Inc. and acquired by DataStax in 2024, allowing developers to assemble RAG pipelines, multi-agent systems, and chatbots from 100-plus pre-built component nodes rather than writing Python orchestration code from scratch. The self-hosted version has no feature limits and deploys any flow as a REST API endpoint directly from the canvas, making it the fastest path from LLM workflow idea to live endpoint for developers who know LangChain concepts. Self-hosting is free (a VPS costs $5-$20/month); cloud usage is $0.002 per credit. Best for developers and AI engineers prototyping LangChain workflows without boilerplate; n8n is the better choice when the primary need is general business process automation with AI nodes rather than LangChain-native pipeline development. The moat is thin: Flowise and several other visual LLM builders offer nearly identical functionality.
 ---
 
 # Langflow

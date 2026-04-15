@@ -28,6 +28,8 @@ scores:
   moat: 6
   longevity: 8
 tags: [app-builder, no-code, full-stack, supabase, deployment, prototyping, vibe-coding, ai-design]
+quick_answer: >-
+  Lovable is an AI app builder developed by Lovable (formerly GPT Engineer) that converts natural language descriptions into fully deployed full-stack web applications with a React frontend, Supabase backend, database, and authentication, reaching $40M ARR within months of launch. The built-in Supabase integration is the differentiator over Bolt.new: backend, auth, and database are provisioned automatically rather than requiring manual setup, which eliminates the most painful step for non-technical founders building apps with user accounts or persistent data. Free tier includes 5 daily credits; Pro is $25/month for 100 credits with custom domains; Business is $50/month. Best for non-technical founders and product managers who need a deployed MVP with a real backend in hours; Bolt.new is the better choice for frontend-only prototyping without Supabase lock-in, and apps that succeed at scale will need to be rebuilt with traditional engineering practices.
 ---
 
 # Lovable

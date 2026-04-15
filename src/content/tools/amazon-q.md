@@ -28,6 +28,8 @@ tags: [autocomplete, aws, cloud, ai-coding, enterprise, ide-plugin, codewhispere
 seo_title: "Amazon Q Developer: AI Coding Assistant Review & Pricing (2026)"
 meta_description: "Amazon Q Developer (formerly CodeWhisperer) is AWS's AI coding assistant. Free tier 50 interactions/mo; Pro $19/user/mo. Review and pricing 2026."
 author: "aipedia.wiki Editorial"
+quick_answer: >-
+  Amazon Q Developer is AWS's AI coding assistant, evolved from CodeWhisperer, with deep native understanding of IAM policies, CloudFormation, CDK constructs, and the full AWS SDK that no generic tool matches. The free tier covers unlimited autocomplete but caps chat at 50 interactions per month; Pro is $19/user/month with unlimited chat, security scanning for OWASP vulnerabilities, and automated Java and .NET migration assistance. Best for teams building on AWS who want AI tuned to their stack; a poor investment for non-AWS development, where GitHub Copilot at $10/month delivers better general coding capability.
 ---
 
 # Amazon Q Developer

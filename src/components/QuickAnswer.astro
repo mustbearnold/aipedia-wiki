@@ -1,0 +1,122 @@
+---
+interface Props {
+  name: string;
+  company?: string;
+  category?: string;
+  score: number;
+  priceRange?: string;
+  tagline?: string;
+  metaDescription?: string;
+  quickAnswer?: string;
+  bestFor?: string[];
+  notBestFor?: string[];
+  lastVerified?: string;
+}
+
+const {
+  name,
+  company,
+  category,
+  score,
+  priceRange,
+  tagline,
+  metaDescription,
+  quickAnswer,
+  bestFor,
+  notBestFor,
+  lastVerified,
+} = Astro.props;
+
+function titleCase(s: string): string {
+  return s.replace(/\b\w/g, (c) => c.toUpperCase());
+}
+
+const CATEGORY_NOUN: Record<string, string> = {
+  'AI Chatbots': 'AI chatbot',
+  'AI Coding': 'AI coding assistant',
+  'AI Voice': 'AI voice tool',
+  'AI Video': 'AI video generator',
+  'AI Image': 'AI image generator',
+  'AI Writing': 'AI writing tool',
+  'AI Automation': 'automation platform',
+  'AI SEO': 'AI SEO tool',
+  'AI Design': 'AI design tool',
+  'AI Search': 'AI search engine',
+  'AI Notes': 'AI notes app',
+  'AI Music': 'AI music generator',
+  'AI Presentation': 'AI presentation tool',
+  'AI Research': 'AI research tool',
+};
+
+function categoryNoun(cat?: string): string {
+  if (!cat) return '';
+  return CATEGORY_NOUN[cat] ?? cat.toLowerCase().replace(/^ai\s+/i, 'AI ').replace(/s$/, '') + ' tool';
+}
+
+function buildAuto(): string {
+  const sentences: string[] = [];
+  const ownerName = company ? titleCase(company) : '';
+  const noun = categoryNoun(category);
+  const sameAsName = ownerName && name && ownerName.toLowerCase() === name.toLowerCase();
+  const article = noun && /^[aeiou]/i.test(noun) ? 'an' : 'a';
+  if (ownerName && noun && !sameAsName) {
+    sentences.push(`${name} is ${ownerName}'s ${noun}.`);
+  } else if (noun) {
+    sentences.push(`${name} is ${article} ${noun}.`);
+  } else if (ownerName && !sameAsName) {
+    sentences.push(`${name} is built by ${ownerName}.`);
+  }
+  const lead = (tagline ?? metaDescription ?? '').trim();
+  if (lead) {
+    const punctuated = /[.!?]$/.test(lead) ? lead : `${lead}.`;
+    sentences.push(punctuated);
+  }
+  if (priceRange) {
+    sentences.push(`Pricing: ${priceRange}.`);
+  }
+  if (bestFor && bestFor.length > 0) {
+    sentences.push(`Best for: ${bestFor.join(', ')}.`);
+  }
+  if (notBestFor && notBestFor.length > 0) {
+    sentences.push(`Not ideal for: ${notBestFor.join(', ')}.`);
+  }
+  return sentences.join(' ');
+}
+
+const explicit = (quickAnswer ?? '').trim();
+const body = explicit || buildAuto();
+
+const verifiedDate = lastVerified ? new Date(lastVerified) : null;
+const verifiedLabel = verifiedDate && !isNaN(verifiedDate.getTime())
+  ? verifiedDate.toLocaleDateString('en-US', { month: 'short', year: 'numeric' })
+  : null;
+
+const scoreColor = score >= 9 ? 'text-emerald-400' : score >= 8 ? 'text-[var(--accent-primary)]' : score >= 6 ? 'text-amber-400' : 'text-rose-400';
+---
+
+<aside
+  class="not-prose mb-6 rounded-2xl border border-[rgba(167,139,250,0.28)] bg-gradient-to-br from-[rgba(167,139,250,0.10)] via-[rgba(96,165,250,0.06)] to-transparent p-5 sm:p-6 shadow-[0_1px_0_rgba(255,255,255,0.04)_inset]"
+  aria-label="Quick answer"
+  data-pagefind-meta="quick-answer"
+>
+  <div class="flex items-center justify-between gap-3 mb-3">
+    <div class="flex items-center gap-2">
+      <span
+        class="inline-flex items-center justify-center px-2 h-6 rounded-md text-[11px] font-bold uppercase tracking-wider text-[var(--accent-primary)] bg-[rgba(167,139,250,0.18)] border border-[rgba(167,139,250,0.35)]"
+        aria-hidden="true">TL;DR</span>
+      <span class="text-[11px] font-semibold uppercase tracking-wider text-[var(--accent-primary)]">
+        Quick Answer
+      </span>
+    </div>
+    <div class="flex items-center gap-2 text-[11px]">
+      <span class={`font-bold tabular-nums ${scoreColor}`}>{score}<span class="text-[var(--text-muted)] font-normal">/10</span></span>
+      {verifiedLabel && (
+        <span class="text-[var(--text-muted)] hidden sm:inline">·</span>
+      )}
+      {verifiedLabel && (
+        <span class="text-[var(--text-muted)] hidden sm:inline">Verified {verifiedLabel}</span>
+      )}
+    </div>
+  </div>
+  <p class="text-[15px] leading-relaxed text-[var(--text-primary)] m-0">{body}</p>
+</aside>

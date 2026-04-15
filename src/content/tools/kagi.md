@@ -28,6 +28,8 @@ tags: [search-engine, privacy, ad-free, ai-summarization, paid-search, kagi-assi
 seo_title: "Kagi: Features, Pricing & Review (2026)"
 meta_description: "Kagi is a paid, privacy-focused search engine with no ads and AI summarization via Kagi Assistant. Plans from $5/mo (100 searches) to $25/mo (unlimited). Is it worth it?"
 author: "aipedia.wiki Editorial"
+quick_answer: >-
+  Kagi is a paid, privacy-first search engine built by Kagi Inc. that eliminates ads and third-party tracking entirely by funding itself through subscriptions, with user-controlled result ranking, domain blocking, and an AI assistant called Kagi Assistant on the top tier. The business model is the differentiator: because Kagi earns no ad revenue, its incentives align with delivering relevant results rather than maximizing clicks, which produces a noticeable quality improvement on informational queries where SEO spam currently dominates Google. No free tier; Starter is $5/month for 100 searches; Professional is $10/month for 300; Ultimate is $25/month for unlimited searches plus Kagi Assistant. Best for power users and researchers willing to pay $10-$25/month to opt out of ad-supported search; the 300-search cap on the $10 plan is genuinely limiting for anyone who searches heavily throughout the day.
 ---
 
 # Kagi

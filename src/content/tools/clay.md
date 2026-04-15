@@ -37,6 +37,8 @@ meta_description: >-
   Clay connects 50+ data sources to enrich leads with AI. See real pricing,
   credit system explained, and how Clay compares to Apollo for GTM teams.
 author: aipedia.wiki Editorial
+quick_answer: >-
+  Clay is a data enrichment and GTM automation platform by Clay Technologies that pulls from 50+ data sources simultaneously, including Apollo, LinkedIn, Crunchbase, and Hunter, and uses an AI agent called Claygent for custom per-lead research at scale. The Starter plan costs $149/month for 2,000 credits; credits are consumed per enrichment action per row, so a 1,000-lead table with 10 columns can consume a full monthly plan quickly. Best for GTM engineers and growth teams running high-signal outbound who have outgrown static lead lists; not a standalone tool, as you still need a separate sender like Instantly, and the credit system and learning curve make it a poor fit for non-technical users.
 ---
 
 # Clay

@@ -38,6 +38,8 @@ meta_description: >-
   Reflect is a networked note-taking app with AI writing assistance and
   end-to-end encryption. No free tier — $10/month. Honest review April 2026.
 author: aipedia.wiki Editorial
+quick_answer: >-
+  Reflect is a networked note-taking app built around bidirectional wiki-style links and end-to-end encrypted sync, with an embedded GPT-4 writing assistant. The key differentiator is the combination of bidirectional linking and E2EE in a single clean product, meaning Reflect cannot read your notes. There is no free tier beyond a 14-day trial; the single plan costs $10/month. Best for privacy-conscious professionals who have already validated that networked notes fit their workflow, not for power users who need Obsidian's 1,000-plus community plugins.
 ---
 
 # Reflect

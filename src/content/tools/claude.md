@@ -29,6 +29,16 @@ scores:
   moat: 9
   longevity: 10
 tags: [chatbot, ai-assistant, writing, coding, reasoning, analysis, long-context, artifacts, claude-code]
+best_for:
+  - long-form writing
+  - complex reasoning
+  - code analysis
+  - document processing
+not_best_for:
+  - image generation
+  - web browsing integration
+quick_answer: >-
+  Claude is Anthropic's AI assistant, trained with Constitutional AI to reduce sycophancy and harmful outputs. Its defining differentiator is a context window up to 1M tokens on Max plans, the largest of any major AI assistant, enabling full codebase or book-length analysis in a single conversation. Free tier available; Pro is $20/month, with Max tiers at $100-$200/month. Best for long-form writing, deep reasoning, and agentic coding via Claude Code; not the right pick if you need image generation or a broad plugin ecosystem like ChatGPT's.
 ---
 
 # Claude

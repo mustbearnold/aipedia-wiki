@@ -3,6 +3,15 @@
 /* Reserve scrollbar space always — prevents layout jut when modals lock body scroll */
 html {
   scrollbar-gutter: stable;
+  scroll-behavior: smooth;
+}
+
+/* TOC anchor links must clear the sticky nav (~57px) when scrolling into view.
+   Use scroll-margin-top per element only — combining with scroll-padding-top
+   on html stacks the offsets and lands the target too far down. */
+.wiki-prose :is(h1, h2, h3, h4),
+.faq-accordion details {
+  scroll-margin-top: 80px;
 }
 
 /* ─── View Transitions (longer + cleaner than Astro defaults) ─── */

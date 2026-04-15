@@ -28,6 +28,8 @@ tags: [tts, text-to-speech, voice-ai, open-source, self-hosted, voice-cloning, f
 seo_title: "Fish Audio: Features, Pricing & Review (2026)"
 meta_description: "Fish Audio / Fish Speech S2 is the leading open-source TTS model. Free to self-host; cloud API at $0.015/1K chars. Near-ElevenLabs quality, half the cost."
 author: "aipedia.wiki Editorial"
+quick_answer: >-
+  Fish Audio (Fish Speech S2) is an open-source text-to-speech model developed by the Fish Audio team, MIT-licensed and runnable on consumer GPUs with 8GB or more VRAM. Its defining advantage is combining near-ElevenLabs generation quality with full self-hosting capability and first-token latency under 150ms, allowing developers to run unlimited TTS inference with no per-character cost. Self-hosting is free; the cloud API costs approximately $0.015 per 1,000 characters, roughly half ElevenLabs' rate of $0.030 per 1,000 characters. Best for developers who need on-premise TTS for privacy-sensitive or high-volume applications where self-hosting eliminates recurring costs entirely, not for teams who want a polished cloud platform with the best available voice cloning quality, where ElevenLabs remains the stronger product. Voice cloning quality falls slightly short of ElevenLabs Professional Voice Cloning in side-by-side comparisons.
 ---
 
 # Fish Audio / Fish Speech S2

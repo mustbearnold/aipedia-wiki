@@ -40,6 +40,8 @@ meta_description: >-
   Codeium offers free AI code completion for individuals across 70+ languages.
   Teams $12/user/mo. No training on your code. Full review and pricing 2026.
 author: aipedia.wiki Editorial
+quick_answer: >-
+  Codeium is a free AI code completion tool developed by Codeium (formerly Exafunction), offering unlimited individual use across 70+ programming languages and 40+ editors with no credit card and no training on user code. The individual plan is permanently free; Teams costs $12/user/month and adds cross-repository context awareness for organizations. Best for developers who want capable AI autocomplete without any subscription cost, particularly those using niche languages or editors not well covered by Copilot; the tradeoff is that completion quality sits below GitHub Copilot, which costs $10/month and offers meaningfully better model quality and agent mode.
 ---
 
 # Codeium

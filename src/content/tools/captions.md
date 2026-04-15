@@ -41,6 +41,8 @@ meta_description: >-
   one-tap editing for social media creators. Free to $49.99/month. Reviewed
   April 2026.
 author: aipedia.wiki Editorial
+quick_answer: >-
+  Captions.ai is an AI-powered video editing app by Captions AI Inc. built for social media creators, with automatic caption generation, eye contact correction, filler word removal, and a clip generator for short-form platforms as its core features. Pro costs $19.99/month for unlimited watermark-free exports and AI Studio access; the free tier is effectively a watermarked trial. Best for talking-head creators posting to TikTok and Instagram Reels who want fast AI-assisted post-production; not a generative video tool and not a replacement for dedicated avatar tools like HeyGen, whose AI avatar quality is substantially more realistic than Captions' AI Studio output.
 ---
 
 # Captions.ai

@@ -29,6 +29,15 @@ tags: [automation, workflows, ai-agents, no-code, open-source, integrations, zap
 seo_title: "n8n: Features, Pricing & Review (2026)"
 meta_description: "n8n is an open-source workflow automation platform with native AI agent nodes. Free to self-host; cloud plans from $20/mo. Best Zapier alternative for AI workflows."
 author: "aipedia.wiki Editorial"
+best_for:
+  - ai automation agency builders
+  - technical founders
+  - developers avoiding vendor lock-in
+not_best_for:
+  - non-technical users
+  - users needing many integrations
+quick_answer: >-
+  n8n is an open-source workflow automation platform built by n8n GmbH that lets you build visual workflows connecting 400+ apps, including native AI agent nodes for autonomous multi-step task execution. Unlike every other automation platform at its price point, it can be fully self-hosted for $0 with unlimited workflows and unlimited executions. Cloud plans run $24-$800/month; best for developers and agency builders who need AI-powered automation with zero vendor lock-in, not for non-technical users who need Zapier's 6,000+ integrations. Complex workflows with 20+ nodes can become difficult to navigate.
 ---
 
 # n8n

@@ -29,6 +29,8 @@ tags: [research, document-qa, summarization, podcast, audio-overview, google, ra
 seo_title: "NotebookLM: Features, Pricing & Review (2026)"
 meta_description: "Google NotebookLM is a free AI research tool for document Q&A with source citations and AI-generated podcast-style Audio Overviews. Plus tier is $20/mo."
 author: "aipedia.wiki Editorial"
+quick_answer: >-
+  Google NotebookLM is a free AI research assistant from Google that ingests PDFs, Google Docs, web pages, and YouTube videos, then answers questions with inline citations pointing to specific passages in your uploaded sources. The standout feature is Audio Overview, which generates a 5-15 minute podcast-style conversation between two AI voices discussing your materials, a format no competitor has meaningfully replicated. The free tier supports 100 notebooks with 50 sources each; a Plus tier is $20/month for higher limits. Best for students, researchers, and professionals who need trustworthy, source-grounded document Q&A, not for users who want general knowledge beyond uploaded sources or a full productivity workspace.
 ---
 
 # Google NotebookLM

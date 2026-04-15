@@ -40,6 +40,8 @@ meta_description: >-
   available; Pro is $20/mo. Competes with Perplexity for cited AI-powered search
   results.
 author: aipedia.wiki Editorial
+quick_answer: >-
+  You.com is an AI search engine developed by You.com Inc. that routes queries through purpose-built modes including Research for cited web synthesis, Code for developer documentation queries, and Write for drafting, each using different source weighting to produce more task-relevant output than a generic search interface. The strongest concrete differentiator is the Code mode, which surfaces developer documentation, Stack Overflow, and GitHub results with AI-generated explanations in a cleaner format than Google for programming queries. Free tier with daily mode caps; Pro is $20/month for unlimited access. Best for developers who want a search-native coding answer tool and researchers who need cited multi-source synthesis; not for most general users, where Perplexity has a larger user base, more refined citation quality, and identical Pro pricing at $20/month making You.com the harder-to-justify alternative. Mode switching adds friction that auto-routing competitors eliminate.
 ---
 
 # You.com

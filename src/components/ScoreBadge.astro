@@ -1,14 +1,33 @@
 ---
 interface Props {
   score: number;
+  /** When true, render as a full-width sidebar header bar instead of a compact pill. */
+  fullWidth?: boolean;
 }
 
-const { score } = Astro.props;
+const { score, fullWidth = false } = Astro.props;
 ---
 
-<div class="inline-flex flex-col items-center justify-center rounded-xl border border-[var(--border)] px-5 py-3" style="background: linear-gradient(135deg, rgba(167,139,250,0.1), rgba(96,165,250,0.1));">
-  <span class="text-3xl font-bold bg-gradient-to-r from-[#a78bfa] to-[#60a5fa] bg-clip-text text-transparent leading-none">
-    {score}
-  </span>
-  <span class="text-xs text-[var(--text-muted)] mt-1">/10 Score</span>
-</div>
+{fullWidth ? (
+  <div
+    class="flex items-baseline justify-between w-full rounded-xl border border-[var(--border)] px-5 py-3"
+    style="background: linear-gradient(135deg, rgba(167,139,250,0.10), rgba(96,165,250,0.08));"
+  >
+    <span class="text-[11px] font-semibold uppercase tracking-wider text-[var(--text-muted)]">
+      Score
+    </span>
+    <span class="text-3xl font-bold bg-gradient-to-r from-[#a78bfa] to-[#60a5fa] bg-clip-text text-transparent leading-none tabular-nums">
+      {score}<span class="text-base font-normal text-[var(--text-muted)]">/10</span>
+    </span>
+  </div>
+) : (
+  <div
+    class="inline-flex flex-col items-center justify-center rounded-xl border border-[var(--border)] px-5 py-3"
+    style="background: linear-gradient(135deg, rgba(167,139,250,0.1), rgba(96,165,250,0.1));"
+  >
+    <span class="text-3xl font-bold bg-gradient-to-r from-[#a78bfa] to-[#60a5fa] bg-clip-text text-transparent leading-none">
+      {score}
+    </span>
+    <span class="text-xs text-[var(--text-muted)] mt-1">/10 Score</span>
+  </div>
+)}

@@ -40,6 +40,8 @@ tags:
   - web-search
   - real-time
   - fact-checking
+quick_answer: >-
+  Perplexity is an AI-native search engine from Perplexity AI with 100 million-plus monthly users that synthesizes answers with numbered inline citations from multiple live web sources, and is primarily used as a research and fact-checking tool rather than a general-purpose assistant. Every response links claims to verifiable sources, which meaningfully reduces hallucination risk compared to a standard chatbot with browsing; Pro Search adds a multi-step research mode with clarifying questions and deeper synthesis. Pro is $20/month for 600-plus Pro Searches daily with model selection across GPT-4o, Claude, and Gemini; best for researchers and professionals who need cited, verifiable answers from the live web, not for writing, coding, or creative tasks where ChatGPT or Claude provide more depth.
 ---
 
 # Perplexity

@@ -28,6 +28,8 @@ tags: [meeting-transcription, ai-notes, meeting-summary, productivity, zoom-inte
 seo_title: "Fireflies.ai: Features, Pricing & Review (2026)"
 meta_description: "Fireflies.ai records, transcribes, and makes every meeting searchable. Free plan available. Full review of pricing, CRM integrations, and how it compares to Otter.ai."
 author: "aipedia.wiki Editorial"
+quick_answer: >-
+  Fireflies.ai is an AI meeting assistant developed by Fireflies.ai Inc. that records, transcribes, and summarizes meetings across Zoom, Microsoft Teams, Google Meet, and Webex, then makes the entire meeting history searchable through a natural language interface called AskFred. The AskFred feature is the key differentiator: users query their full transcript archive with questions like 'what did we decide about the Q3 budget?' and receive cited answers from specific past meetings, going well beyond basic per-meeting summaries. The free plan covers 800 total minutes of storage; Pro costs $18/seat/month (annual) with unlimited transcription, and Business at $29/seat/month adds video recording and native CRM sync to Salesforce and HubSpot. Best for sales teams that need meeting notes pushed automatically into their CRM pipeline, not for individuals who just need basic transcription, where Fathom is free and covers most of the same ground.
 ---
 # Fireflies.ai
 

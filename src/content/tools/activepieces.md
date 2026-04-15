@@ -38,6 +38,8 @@ meta_description: >-
   Activepieces is an open-source no-code automation platform. Free to self-host,
   $6/mo cloud. Honest review comparing it to Zapier, n8n, and Make.
 author: aipedia.wiki Editorial
+quick_answer: >-
+  Activepieces is an open-source, MIT-licensed no-code automation platform built by Activepieces Inc. as a direct Zapier alternative. Its key differentiator is a genuinely free self-hosted option with no usage limits, while the cloud Starter plan costs $6/month versus Zapier's $19.99 minimum. Best for teams who want Zapier-like drag-and-drop simplicity at a fraction of the cost, especially those comfortable self-hosting; not the right fit if you need Zapier's 6,000+ connectors, since Activepieces covers roughly 200.
 ---
 
 # Activepieces

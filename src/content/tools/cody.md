@@ -28,6 +28,8 @@ tags: [codebase-search, ai-coding, enterprise, sourcegraph, ide-plugin, vscode, 
 seo_title: "Cody by Sourcegraph: AI Coding Assistant Review & Pricing (2026)"
 meta_description: "Cody by Sourcegraph is a codebase-aware AI coding assistant. Free on Sourcegraph.com; Pro $9/mo; Enterprise custom. In-depth review and pricing 2026."
 author: "aipedia.wiki Editorial"
+quick_answer: >-
+  Cody is an AI coding assistant developed by Sourcegraph, built on top of Sourcegraph's code search infrastructure, enabling it to reason across entire organizations with hundreds of repositories rather than just open files. The free tier is hosted on Sourcegraph.com with limited completions; Pro is $9/month with higher limits and broader model selection including Claude and GPT-4o. Best for enterprise teams already using Sourcegraph where cross-repository AI context is a genuine daily need; for individual developers or teams without Sourcegraph, GitHub Copilot at $10/month offers comparable or stronger general coding capability at nearly the same price.
 ---
 
 # Cody

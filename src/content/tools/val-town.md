@@ -39,6 +39,8 @@ meta_description: >-
   Val Town is a browser-based TypeScript runtime with AI code generation. Write,
   run, and deploy serverless scripts instantly. Free tier; Pro $10/mo. 2026.
 author: aipedia.wiki Editorial
+quick_answer: >-
+  Val Town is a browser-based TypeScript runtime and deployment platform by Val Town, Inc. where you write a script, click run, and it deploys as a live serverless function with no installation, CLI, or infrastructure configuration required. The defining feature is zero-setup deployment: HTTP endpoints and cron-scheduled jobs are live in under five minutes, with AI code generation (powered by Claude) that writes deployable TypeScript from a natural language description. Free for unlimited public vals; Pro is $10/month. Best for developers who want to run a TypeScript script on a schedule or expose a quick API without managing a project or deployment pipeline; not for complex applications, frontend work, or anyone outside the TypeScript/JavaScript ecosystem. Public-by-default means API keys in code are a real risk for new users.
 ---
 
 # Val Town

@@ -37,6 +37,8 @@ meta_description: >-
   Capacities is a note-taking app built around typed objects rather than pages.
   AI writing assistance is included. Free and Pro plans available. Full review.
 author: aipedia.wiki Editorial
+quick_answer: >-
+  Capacities is a personal knowledge management app by Capacities GmbH that structures notes as typed objects, such as Books, People, and Projects, each with defined properties that form a connected knowledge graph rather than flat pages. The free plan is unlimited; Pro costs approximately $10/month (priced at 9 EUR) and adds AI writing, AI chat over your notes, and custom object types. Best for solo researchers and writers who think structurally and want semantic links between ideas; not suitable for teams needing real-time collaboration, and data portability is limited since notes are stored in a proprietary format rather than plain Markdown files.
 ---
 
 # Capacities

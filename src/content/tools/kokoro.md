@@ -28,6 +28,8 @@ tags: [ai-voice, tts, text-to-speech, open-source, local, free, kokoro]
 seo_title: "Kokoro TTS Review 2026: Free Open-Source Text-to-Speech That Sounds Human"
 meta_description: "Kokoro is a free, open-source TTS model with 82M parameters that runs locally on consumer hardware. Quality rivals ElevenLabs. Full review with setup guide."
 author: "aipedia.wiki Editorial"
+quick_answer: >-
+  Kokoro is a free, open-source text-to-speech model released by hexgrad with 82 million parameters, small enough to run on consumer CPU or GPU hardware after a roughly 300MB download, requiring no API key, no network connection, and no per-character fees. At 82M parameters it is significantly smaller than competing open-source models (Tortoise TTS uses 300M-plus, XTTS v2 uses 400M-plus) while benchmarking favorably against them and approaching commercial service quality for fixed-voice English narration. The model is free under an Apache 2.0 license permitting commercial use, with running costs limited to hardware electricity. Best for developers building high-volume TTS pipelines, privacy-sensitive users who cannot send text to external APIs, and self-hosters building fully offline AI stacks; ElevenLabs wins when you need voice cloning, fine-grained emotional control, or real-time streaming, none of which Kokoro supports.
 ---
 
 # Kokoro TTS

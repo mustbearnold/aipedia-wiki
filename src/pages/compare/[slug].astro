@@ -1,6 +1,7 @@
 ---
-import { getCollection, render } from 'astro:content';
+import { getCollection, getEntry, render } from 'astro:content';
 import ArticleLayout from '../../layouts/ArticleLayout.astro';
+import ItemListLD from '../../components/seo/ItemListLD.astro';
 
 export async function getStaticPaths() {
   const entries = await getCollection('comparisons');
@@ -12,6 +13,36 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await render(entry);
+
+const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
+
+const toolSlugs: string[] = entry.data.tools ?? [];
+const toolEntries = await Promise.all(
+  toolSlugs.map(async (slug) => {
+    try {
+      return await getEntry('tools', slug);
+    } catch {
+      return null;
+    }
+  })
+);
+
+const items = toolEntries
+  .filter((t): t is NonNullable<typeof t> => t != null)
+  .map((t) => {
+    const s = t.data.scores ?? {};
+    const utility = s.utility ?? 0;
+    const value = s.value ?? 0;
+    const moat = s.moat ?? 0;
+    const longevity = s.longevity ?? 0;
+    const overall = Math.round(((utility + value + moat + longevity) / 4) * 10) / 10;
+    return {
+      name: t.data.title,
+      slug: t.data.slug ?? t.id.replace(/\.md$/, ''),
+      category: t.data.category,
+      score: overall || undefined,
+    };
+  });
 ---
 
 <ArticleLayout
@@ -20,5 +51,13 @@ const { Content } = await render(entry);
   description={entry.data.meta_description ?? ''}
   breadcrumbs={[{ label: 'Compare', href: '/compare/' }, { label: entry.data.title }]}
 >
+  {items.length > 0 && (
+    <ItemListLD
+      name={entry.data.title}
+      description={entry.data.meta_description}
+      items={items}
+      siteBase={siteBase}
+    />
+  )}
   <Content />
 </ArticleLayout>

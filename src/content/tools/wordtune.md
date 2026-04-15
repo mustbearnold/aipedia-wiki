@@ -38,6 +38,8 @@ meta_description: >-
   10 rewrites/day; Plus $13.99/mo. Honest review of features, pricing, and
   alternatives.
 author: aipedia.wiki Editorial
+quick_answer: >-
+  Wordtune is an AI rewriting and paraphrasing tool built by AI21 Labs that improves existing text for clarity, tone, and flow across seven modes including Casual, Formal, Shorten, and Expand, accessed via a Chrome extension that works inside Google Docs, Gmail, and LinkedIn. The key differentiator from QuillBot is intent: Wordtune is tuned to preserve the writer's voice while improving how a sentence reads, rather than wholesale paraphrasing for plagiarism avoidance or SEO. Free tier offers 10 rewrites per day; Plus is $13.99/month with unlimited rewrites, Spices, and summarization. Best for non-native English speakers and business professionals refining drafts rather than generating content from scratch; not for content marketers needing volume article generation or users wanting grammar correction, where Grammarly covers the error-catching workflow. The free tier limit runs out quickly for anyone editing a full document.
 ---
 
 # Wordtune

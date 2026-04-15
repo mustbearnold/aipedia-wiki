@@ -1,0 +1,144 @@
+---
+/**
+ * Client-side enhancements that run on every tool page after content renders:
+ *
+ *  1. Style the "Sources" h2 + the list/paragraphs that follow as a distinct
+ *     "Cited X sources" callout — increases trust signal density.
+ *  2. Wrap the price column in any pricing table with the page's outbound URL
+ *     (affiliate URL when present, canonical otherwise) so each row has a
+ *     clickable path to checkout. Adds a small caret to the linked cell.
+ *
+ * Both rules are idempotent (data-attributes guard re-runs across view
+ * transitions).
+ */
+
+interface Props {
+  outboundUrl: string;
+  isAffiliate: boolean;
+}
+
+const { outboundUrl, isAffiliate } = Astro.props;
+const rel = isAffiliate ? 'sponsored noopener' : 'noopener';
+---
+
+<script is:inline define:vars={{ outboundUrl, rel }}>
+  (function () {
+    function styleSources() {
+      const heading = document.getElementById('sources');
+      if (!heading || heading.dataset.sourcesStyled === '1') return;
+
+      const collected = [];
+      let next = heading.nextElementSibling;
+      while (next && next.tagName !== 'H2') {
+        collected.push(next);
+        next = next.nextElementSibling;
+      }
+      if (collected.length === 0) return;
+
+      let totalLinks = 0;
+      collected.forEach((el) => { totalLinks += el.querySelectorAll('a').length; });
+
+      const wrap = document.createElement('aside');
+      wrap.className =
+        'sources-callout not-prose mt-8 rounded-xl border border-[var(--border)] bg-[var(--bg-card)] p-5';
+      wrap.setAttribute('aria-label', 'Sources');
+
+      const head = document.createElement('div');
+      head.className = 'flex items-center gap-2 mb-3';
+      const icon = document.createElement('span');
+      icon.className =
+        'inline-flex items-center justify-center w-5 h-5 rounded-md text-[10px] font-bold text-[var(--accent-primary)] bg-[rgba(167,139,250,0.15)] border border-[rgba(167,139,250,0.25)]';
+      icon.textContent = '\u00A7';
+      icon.setAttribute('aria-hidden', 'true');
+      const title = document.createElement('span');
+      title.className =
+        'text-[11px] font-semibold uppercase tracking-wider text-[var(--accent-primary)]';
+      title.textContent =
+        'Cited ' + totalLinks + ' source' + (totalLinks === 1 ? '' : 's');
+      head.appendChild(icon);
+      head.appendChild(title);
+      wrap.appendChild(head);
+
+      const body = document.createElement('div');
+      body.className = 'text-[13px] leading-relaxed text-[var(--text-secondary)] space-y-2';
+      collected.forEach((el) => body.appendChild(el));
+      wrap.appendChild(body);
+
+      heading.insertAdjacentElement('afterend', wrap);
+      heading.style.display = 'none';
+      heading.dataset.sourcesStyled = '1';
+    }
+
+    function enhancePricingTables() {
+      const tables = document.querySelectorAll('article.wiki-prose table');
+      tables.forEach((tbl) => {
+        const headerCells = [...tbl.querySelectorAll('thead th')];
+        const isPricing = headerCells.some((th) => /price|cost|plan/i.test(th.textContent || ''));
+        if (!isPricing) return;
+        if (tbl.dataset.pricingEnhanced === '1') return;
+        tbl.dataset.pricingEnhanced = '1';
+
+        const rows = [...tbl.querySelectorAll('tbody tr')];
+
+        // 1) "Most Popular" badge on the row most teams pick.
+        // Heuristic: the lowest-priced PAID tier (skip the row whose first cell text is exactly
+        // "Free" or whose price cell shows $0). Falls back to the second row if heuristic fails.
+        const planCells = rows.map((r) => r.querySelector('td'));
+        const popularIdx = (() => {
+          for (let i = 0; i < rows.length; i++) {
+            const planText = (planCells[i]?.textContent || '').trim().toLowerCase();
+            const rowText = (rows[i].textContent || '').toLowerCase();
+            if (planText === 'free' || /\$0\b/.test(rowText)) continue;
+            return i;
+          }
+          return rows.length > 1 ? 1 : -1;
+        })();
+
+        if (popularIdx >= 0 && planCells[popularIdx]) {
+          const cell = planCells[popularIdx];
+          const badge = document.createElement('span');
+          badge.className =
+            'ml-2 inline-flex items-center px-1.5 py-0.5 rounded text-[9px] font-bold uppercase tracking-wider text-[#0b0a14] bg-[var(--accent-primary)] align-middle';
+          badge.textContent = 'Most Popular';
+          cell.appendChild(badge);
+          // Subtly emphasise the row.
+          rows[popularIdx].style.backgroundColor = 'rgba(167,139,250,0.06)';
+        }
+
+        // 2) Wrap each plan-name cell in the outbound link so every tier is clickable to checkout.
+        if (!outboundUrl || outboundUrl === '#') return;
+        rows.forEach((row) => {
+          const planCell = row.querySelector('td');
+          if (!planCell || planCell.querySelector('a')) return;
+          const link = document.createElement('a');
+          link.href = outboundUrl;
+          link.target = '_blank';
+          link.rel = rel;
+          link.className =
+            'text-[var(--accent-primary)] no-underline hover:underline inline-flex items-center gap-1';
+          // Move all child nodes of planCell into the link (preserves the "Most Popular" badge).
+          while (planCell.firstChild) link.appendChild(planCell.firstChild);
+          link.append(
+            Object.assign(document.createElement('span'), {
+              className: 'text-[10px] opacity-70',
+              textContent: '\u2197',
+              ariaHidden: 'true',
+            })
+          );
+          planCell.appendChild(link);
+        });
+      });
+    }
+
+    function run() {
+      try { styleSources(); } catch (_) {}
+      try { enhancePricingTables(); } catch (_) {}
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', run);
+    } else {
+      run();
+    }
+    document.addEventListener('astro:page-load', run);
+  })();
+</script>

@@ -29,6 +29,16 @@ scores:
   moat: 9
   longevity: 10
 tags: [chatbot, ai-assistant, writing, search, code-interpreter, dall-e, plugins, gpt-4o, reasoning]
+best_for:
+  - general-purpose tasks
+  - image generation
+  - plugin ecosystem
+  - mainstream users
+not_best_for:
+  - deep technical analysis
+  - long-form reasoning
+quick_answer: >-
+  ChatGPT is a general-purpose AI assistant built by OpenAI, offering text generation, web browsing, image creation via DALL-E, Python execution, and a plugin ecosystem in one product. With 200 million weekly active users, it is the most widely used AI assistant on the planet, a scale no competitor matches. The free tier covers basic use; Plus runs $20/month and unlocks GPT-4o, o-series reasoning models, DALL-E, and Code Interpreter. Best for general users who want a single tool that does everything; not the best choice vs. Claude when deep long-form reasoning or large-context document analysis is the priority. Rate limits on advanced reasoning models can frustrate Plus users during peak hours.
 ---
 
 # ChatGPT

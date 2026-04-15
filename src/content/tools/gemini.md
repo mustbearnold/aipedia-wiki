@@ -29,6 +29,15 @@ scores:
   moat: 8
   longevity: 9
 tags: [chatbot, ai-assistant, writing, search, multimodal, google-workspace, deep-research, long-context]
+best_for:
+  - google workspace power users
+  - researchers using deep research
+  - budget-conscious users
+not_best_for:
+  - users needing advanced reasoning
+  - users prioritizing writing quality
+quick_answer: >-
+  Gemini is Google's multimodal AI assistant, developed by Google DeepMind, with native integration across Docs, Sheets, Gmail, and Drive. Its standout feature is a 1M token context window on Gemini 3.1 Pro and an autonomous Deep Research mode that browses and synthesizes dozens of web sources into cited reports. Google AI Pro costs $19.99/month and bundles 2TB Google One storage, strong value compared to ChatGPT Plus at $20/month. Best for users already inside Google Workspace; not the right pick if writing quality or multi-step reasoning depth is the priority, where Claude leads.
 ---
 
 # Gemini

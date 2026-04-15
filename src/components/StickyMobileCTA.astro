@@ -1,0 +1,84 @@
+---
+interface Props {
+  name: string;
+  canonicalUrl?: string;
+  affiliateUrl?: string | null;
+  pricingModel?: string;
+  priceRange?: string;
+}
+
+const { name, canonicalUrl, affiliateUrl, pricingModel, priceRange } = Astro.props;
+
+const href = (affiliateUrl && affiliateUrl.length > 0 ? affiliateUrl : canonicalUrl) ?? '';
+const isAffiliate = Boolean(affiliateUrl && affiliateUrl.length > 0);
+const rel = isAffiliate ? 'sponsored noopener' : 'noopener';
+
+function ctaLabel() {
+  const model = (pricingModel ?? '').toLowerCase();
+  const price = (priceRange ?? '').toLowerCase();
+  const modelFree = model === 'free' || model === 'freemium';
+  const priceFree = /\$0(?!\s*\(self|\s*\(self-host)/i.test(price) || /\bfree\b/i.test(price);
+  if (modelFree && priceFree) return `Try ${name} free`;
+  if (model === 'enterprise') return `Visit ${name}`;
+  return `Get ${name}`;
+}
+const label = ctaLabel();
+---
+
+{href && (
+  <div
+    id="sticky-cta"
+    class="fixed bottom-0 left-0 right-0 z-40 border-t border-[var(--border)] bg-[rgba(11,10,20,0.92)] backdrop-blur px-4 py-3 translate-y-full transition-transform duration-200 ease-out"
+    aria-hidden="true"
+  >
+    <div class="max-w-6xl mx-auto flex items-center justify-between gap-3">
+      <div class="min-w-0">
+        <div class="text-[11px] text-[var(--text-muted)] uppercase tracking-wider">Ready to try?</div>
+        <div class="text-sm font-semibold text-[var(--text-primary)] truncate">{name}{priceRange ? ` · ${priceRange}` : ''}</div>
+      </div>
+      <a
+        href={href}
+        target="_blank"
+        rel={rel}
+        class="shrink-0 inline-flex items-center gap-2 px-4 py-2 rounded-lg font-semibold text-sm bg-[var(--accent-primary)] text-[#0b0a14] hover:brightness-110 no-underline"
+        data-sticky-cta-link
+      >
+        {label}
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+  </div>
+)}
+
+<script is:inline>
+  (function () {
+    function init() {
+      const bar = document.getElementById('sticky-cta');
+      if (!bar) return;
+      // Reveal once the user has scrolled past the body CTA at the top.
+      const trigger = document.querySelector('a[data-tool-cta]');
+      if (!trigger) return;
+      const obs = new IntersectionObserver(
+        (entries) => {
+          for (const e of entries) {
+            if (!e.isIntersecting && e.boundingClientRect.top < 0) {
+              bar.classList.remove('translate-y-full');
+              bar.setAttribute('aria-hidden', 'false');
+            } else if (e.isIntersecting) {
+              bar.classList.add('translate-y-full');
+              bar.setAttribute('aria-hidden', 'true');
+            }
+          }
+        },
+        { threshold: 0 }
+      );
+      obs.observe(trigger);
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+    document.addEventListener('astro:page-load', init);
+  })();
+</script>

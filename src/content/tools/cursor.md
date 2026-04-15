@@ -28,6 +28,8 @@ tags: [code-editor, ide, autocomplete, ai-coding, vscode-fork, agentic-coding]
 seo_title: "Cursor: Features, Pricing & Review (2026)"
 meta_description: "Cursor is an AI-native code editor built on VS Code with autocomplete, chat, and agent mode. Free tier available; Pro costs $20/mo. Best IDE for AI coding."
 author: "aipedia.wiki Editorial"
+quick_answer: >-
+  Cursor is an AI-native code editor built on VS Code, developed by Anysphere and launched in March 2023. Its tab autocomplete predicts multi-line edits rather than just the next token, and Composer (agent mode) handles multi-file refactors from a single description, making it more deeply integrated than GitHub Copilot at $10/month. The Hobby plan is free with limits; Pro costs $20/month with 500 fast premium model requests included; higher tiers reach $200/month for 20x usage. Best for professional developers who want AI woven into a VS Code-style IDE, not for those who prefer a fully agentic CLI workflow (Claude Code handles that better). Heavy users exhaust the 500 monthly fast requests in one to two weeks.
 ---
 
 # Cursor

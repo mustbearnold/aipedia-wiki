@@ -28,6 +28,8 @@ tags: [autocomplete, ai-coding, context-window, fast, vscode, jetbrains, neovim]
 seo_title: "Supermaven: Ultra-Fast AI Code Completion Review (2026)"
 meta_description: "Supermaven offers AI code autocomplete with a 1M token context window. Free tier available; Pro $10/mo. Fastest completion latency in the category. 2026."
 author: "aipedia.wiki Editorial"
+quick_answer: >-
+  Supermaven is an AI code autocompletion tool founded by Jacob Jackson (the original creator of Tabnine) that runs as an extension in VS Code, JetBrains, and Neovim with a 1 million token context window, roughly 10 times larger than GitHub Copilot's, enabling whole-codebase-aware suggestions. The tool's custom model targets median suggestion latency under 250ms, prioritizing speed over feature breadth. Pro costs $10/month with a functional free tier; best for developers who want the fastest autocomplete layer with large-codebase context and already use a separate tool for chat or agent mode, not for users who want a single all-in-one coding assistant.
 ---
 
 # Supermaven

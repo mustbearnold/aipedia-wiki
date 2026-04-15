@@ -38,6 +38,8 @@ meta_description: >-
   cold email infrastructure. See real pricing, how it compares to Apollo, and
   who it's for.
 author: aipedia.wiki Editorial
+quick_answer: >-
+  Instantly is a cold email outreach platform built by Instantly AI Inc. around one structural differentiator: unlimited email sending accounts on every paid plan, so you can connect as many Gmail and Outlook inboxes as needed and rotate sends across all of them without per-account fees breaking the economics at scale. That unlimited-account model, combined with automated warm-up infrastructure and a 160 million-plus contact database, means serious outbound operators can scale sending volume in ways that per-account competitors like Apollo cannot match. Growth plan starts at $37/month (annual) for unlimited accounts and 1,000 active leads; Hypergrowth is $97/month for 25,000 leads. Best for SDRs, agencies, and outbound operators running high-volume cold email, especially paired with Clay for enrichment; not an all-in-one CRM and the lead database is secondary to Apollo or Clay.
 ---
 
 # Instantly

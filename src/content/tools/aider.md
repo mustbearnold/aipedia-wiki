@@ -28,6 +28,8 @@ tags: [ai-coding, open-source, cli, git-integration, agentic-coding, byok]
 seo_title: "Aider: Open-Source AI Coding Assistant Review (2026)"
 meta_description: "Aider is a free open-source CLI coding assistant that edits real files in your git repo using Claude, GPT-4o, or Ollama. Full review of features, API costs, and how it compares to Cursor."
 author: "aipedia.wiki Editorial"
+quick_answer: >-
+  Aider is a free, open-source command-line coding assistant created by Paul Gauthier that edits real files in your local git repo, auto-commits each change, and works with virtually any LLM via API key. Its architect mode separates planning from execution, using one model to design the approach and a second cheaper model to write the code, keeping session costs as low as $0.05-0.30/hour on Claude Sonnet. Aider itself costs nothing (Apache 2.0); you pay API costs directly. Best for CLI-comfortable developers who want BYOK economics and transparent git history; not the right fit if you want a polished GUI, where Cursor at $20/month is the better choice.
 ---
 # Aider
 

@@ -29,6 +29,8 @@ tags: [ai-assistant, xai, twitter-ai, real-time-search, grok]
 seo_title: "Grok AI Review: Features, Pricing & GPT-4o Comparison (2026)"
 meta_description: "Grok is xAI's AI assistant with real-time X/Twitter data access. Free via X; SuperGrok $30/mo. Full review of Grok 3 features, pricing, and ChatGPT comparison."
 author: "aipedia.wiki Editorial"
+quick_answer: >-
+  Grok is xAI's AI assistant, built by Elon Musk's company and tightly integrated with X (formerly Twitter), giving it real-time access to the X data firehose that no other mainstream AI assistant can match. That live social data, covering breaking news, trending topics, and current posts, is the single feature that differentiates it from ChatGPT and Claude. Access is free with a limited X account, $8/month bundled with X Premium, or $30/month for standalone SuperGrok; SuperGrok Heavy runs $50/month. Best for X power users, political analysts, and trend researchers who need real-time social context, not for users who want the most capable general-purpose assistant (ChatGPT or Claude win there). Ownership concentration in a single high-profile individual is a real platform risk.
 ---
 
 # Grok

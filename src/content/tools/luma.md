@@ -28,6 +28,8 @@ tags: [ai-video, video-generation, text-to-video, image-to-video, camera-control
 seo_title: "Luma Dream Machine Review 2026: AI Video Generation with Camera Controls"
 meta_description: "Luma Dream Machine generates smooth AI video from text and images with precise camera motion controls. Full review of Ray2 model, pricing, and how it compares to Kling and Runway."
 author: "aipedia.wiki Editorial"
+quick_answer: >-
+  Luma Dream Machine is an AI video generation platform from Luma AI, launched in June 2024, that produces short video clips from text prompts or reference images using its Ray2 model. The clearest differentiator is explicit camera control: pan, tilt, zoom, dolly, and orbit movements can be specified per clip, which is more granular than most competitors at the same price. Standard starts at $29.99/month for 120 generations; best for cinematography-focused creators who care about camera movement, not for those who want the strongest raw motion quality (Kling edges it out there) or audio in their output (Luma generates silent video only).
 ---
 
 # Luma Dream Machine

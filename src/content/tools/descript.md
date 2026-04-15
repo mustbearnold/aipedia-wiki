@@ -39,6 +39,8 @@ meta_description: >-
   words from the text, delete them from the recording. Full review of Overdub
   voice cloning, Studio Sound, and podcast/YouTube workflow.
 author: aipedia.wiki Editorial
+quick_answer: >-
+  Descript is an audio and video editor developed by Descript Inc., backed by Andreessen Horowitz and launched in 2017, built around a single paradigm: the transcript is the timeline, so deleting a word from the text deletes it from the recording. The Overdub feature, available on the Creator plan at $15/month, clones your voice from 30 minutes of training audio so you can fix stumbled sentences by typing rather than reshooting. Plans run $0 (1 hour transcription, watermarked) to $60/month; best for podcast editors and YouTube creators who think in words rather than waveforms, not for complex multi-camera productions requiring Premiere Pro or DaVinci Resolve. The free tier is exhausted by a single long-form episode.
 ---
 
 # Descript

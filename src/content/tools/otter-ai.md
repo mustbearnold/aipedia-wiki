@@ -28,6 +28,8 @@ tags: [meeting-transcription, ai-notes, zoom-integration, meeting-summary, produ
 seo_title: "Otter.ai: Features, Pricing & Review (2026)"
 meta_description: "Otter.ai automatically transcribes and summarizes Zoom, Teams, and Meet calls. Free plan includes 300 min/month. Full pricing, accuracy, and alternatives reviewed."
 author: "aipedia.wiki Editorial"
+quick_answer: >-
+  Otter.ai is an AI meeting assistant from Otter.ai Inc. that deploys a calendar-synced bot (OtterPilot) to automatically record, transcribe, and summarize Zoom, Microsoft Teams, and Google Meet calls, delivering action items and key decisions to your inbox minutes after each meeting ends. The free tier at 300 minutes/month is one of the most accessible starting points in the category, and the full-text search across all past meeting transcripts is a genuine advantage for teams managing large call archives. Pro is $16.99/month (or about $10/month annual); best for professionals managing heavy meeting schedules who need searchable archives and team collaboration, but test Fathom first since it covers the core transcription and summary use case for free.
 ---
 # Otter.ai
 

@@ -46,6 +46,9 @@ const tools = defineCollection({
     seo_title: z.string().optional(),
     meta_description: z.string().optional(),
     author: z.string().optional(),
+    quick_answer: z.string().optional(),
+    best_for: z.array(z.string()).optional(),
+    not_best_for: z.array(z.string()).optional(),
   }).passthrough(),
 });
 

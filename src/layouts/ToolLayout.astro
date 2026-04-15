@@ -9,13 +9,25 @@ import BreadcrumbLD from '../components/seo/BreadcrumbLD.astro';
 import SoftwareApplicationLD from '../components/seo/SoftwareApplicationLD.astro';
 import FAQPageLD from '../components/seo/FAQPageLD.astro';
 import RelatedTools from '../components/RelatedTools.astro';
+import QuickAnswer from '../components/QuickAnswer.astro';
+import ToolCTA from '../components/ToolCTA.astro';
+import TableOfContents from '../components/TableOfContents.astro';
+import FAQAccordionScript from '../components/FAQAccordionScript.astro';
+import ShareButtons from '../components/ShareButtons.astro';
+import PostBodyEnhancements from '../components/PostBodyEnhancements.astro';
+import RelatedComparisons from '../components/RelatedComparisons.astro';
+import StickyMobileCTA from '../components/StickyMobileCTA.astro';
+import ProsCons from '../components/ProsCons.astro';
+import FeedbackForm from '../components/FeedbackForm.astro';
 
 interface Props {
   frontmatter: Record<string, any>;
   faqItems?: Array<{ question: string; answer: string }>;
+  headings?: Array<{ depth: number; slug: string; text: string }>;
+  readingMinutes?: number;
 }
 
-const { frontmatter, faqItems = [] } = Astro.props;
+const { frontmatter, faqItems = [], headings = [], readingMinutes = 0 } = Astro.props;
 
 const scores = frontmatter.scores ?? { utility: 0, value: 0, moat: 0, longevity: 0 };
 const overallScore = Math.round(((scores.utility ?? 0) + (scores.value ?? 0) + (scores.moat ?? 0) + (scores.longevity ?? 0)) / 4 * 10) / 10;
@@ -62,6 +74,7 @@ const breadcrumbLdItems = [
 <BaseLayout
   title={frontmatter.seo_title ?? frontmatter.title}
   description={frontmatter.meta_description ?? frontmatter.tagline ?? ''}
+  ogImage={`/og/tools/${toolSlug}.svg`}
 >
   <BreadcrumbLD items={breadcrumbLdItems} />
   {faqItems.length > 0 && <FAQPageLD questions={faqItems} />}
@@ -71,12 +84,16 @@ const breadcrumbLdItems = [
     category={catInfo.label}
     priceRange={frontmatter.price_range ?? 'Free'}
     score={overallScore}
+    description={frontmatter.meta_description ?? frontmatter.tagline ?? ''}
+    publisher={frontmatter.company ?? ''}
+    reviewBody={frontmatter.tagline ?? frontmatter.meta_description ?? ''}
+    pageUrl={`${siteBase}tools/${toolSlug}/`}
   />
 
   <Breadcrumb items={breadcrumbItems} />
 
-  <!-- Mobile compact summary (visible below lg) -->
-  <div class="lg:hidden flex items-center gap-3 mb-6 flex-wrap">
+  <!-- Mobile compact summary intentionally removed: Quick Answer + body CTA + sticky bottom CTA cover the same info on mobile without redundancy. -->
+  <div class="hidden lg:hidden flex items-center gap-3 mb-6 flex-wrap">
     <ScoreBadge score={overallScore} />
     <AffiliateCTA
       title={frontmatter.title}
@@ -109,8 +126,20 @@ const breadcrumbLdItems = [
               </span>
             )}
           </div>
-          <div class="flex items-center gap-3 mt-1 text-sm text-[var(--text-muted)]">
+          <div class="flex items-center gap-x-3 gap-y-1 mt-1 text-sm text-[var(--text-muted)] flex-wrap">
             {frontmatter.company && <span>{frontmatter.company}</span>}
+            {frontmatter.author && (
+              <>
+                <span aria-hidden="true">·</span>
+                <span>By <span class="text-[var(--text-secondary)]">{frontmatter.author}</span></span>
+              </>
+            )}
+            {readingMinutes > 0 && (
+              <>
+                <span aria-hidden="true">·</span>
+                <span>{readingMinutes} min read</span>
+              </>
+            )}
             {frontmatter.last_verified && (
               <FreshnessBadge lastVerified={String(frontmatter.last_verified)} />
             )}
@@ -130,18 +159,55 @@ const breadcrumbLdItems = [
         ))}
       </div>
 
+      <QuickAnswer
+        name={frontmatter.title}
+        company={frontmatter.company}
+        category={catInfo.label}
+        score={overallScore}
+        priceRange={frontmatter.price_range}
+        tagline={frontmatter.tagline}
+        metaDescription={frontmatter.meta_description}
+        quickAnswer={frontmatter.quick_answer}
+        bestFor={frontmatter.best_for}
+        notBestFor={frontmatter.not_best_for}
+        lastVerified={frontmatter.last_verified ? String(frontmatter.last_verified) : undefined}
+      />
+
+      <ToolCTA
+        name={frontmatter.title}
+        canonicalUrl={frontmatter.url}
+        affiliateUrl={affiliate?.link}
+        pricingModel={frontmatter.pricing_model}
+        priceRange={frontmatter.price_range}
+      />
+
+      <ProsCons pros={frontmatter.best_for} cons={frontmatter.not_best_for} />
+
       <!-- Markdown content -->
       <article class="prose prose-invert prose-sm max-w-none wiki-prose">
         <slot />
       </article>
+
+      <FAQAccordionScript />
+
+      <PostBodyEnhancements
+        outboundUrl={(affiliate?.link && affiliate.link.length > 0 ? affiliate.link : (frontmatter.url ?? '#'))}
+        isAffiliate={Boolean(affiliate?.link && affiliate.link.length > 0)}
+      />
+
+      <RelatedComparisons toolSlug={toolSlug} toolTitle={frontmatter.title} />
+
+      <ShareButtons title={frontmatter.title} pageUrl={`${siteBase}tools/${toolSlug}/`} />
+
+      <FeedbackForm toolName={frontmatter.title} />
     </div>
 
     <!-- Right column: sidebar (desktop only) -->
     <aside class="hidden lg:block">
       <div class="sticky top-20 space-y-4">
-        <div class="flex justify-center">
-          <ScoreBadge score={overallScore} />
-        </div>
+        <TableOfContents headings={headings} />
+
+        <ScoreBadge score={overallScore} fullWidth />
 
         <ScoreGrid
           utility={scores.utility ?? 0}
@@ -150,32 +216,16 @@ const breadcrumbLdItems = [
           longevity={scores.longevity ?? 0}
         />
 
-        <AffiliateCTA
-          title={frontmatter.title}
-          url={affiliate?.link ?? frontmatter.url ?? '#'}
-          hasProgram={hasProgram}
-          commission={affiliate?.commission}
-        />
-
         <RelatedTools currentSlug={toolSlug} category={catSlug} limit={4} />
-
-        {(frontmatter.price_range || frontmatter.pricing_model) && (
-          <div class="bg-[var(--bg-card)] border border-[var(--border)] rounded-xl p-4">
-            {frontmatter.price_range && (
-              <div class="mb-2">
-                <div class="text-xs text-[var(--text-muted)] mb-1">Price Range</div>
-                <div class="text-sm font-medium text-[var(--text-primary)]">{frontmatter.price_range}</div>
-              </div>
-            )}
-            {frontmatter.pricing_model && (
-              <div>
-                <div class="text-xs text-[var(--text-muted)] mb-1">Model</div>
-                <div class="text-sm font-medium text-[var(--text-primary)] capitalize">{frontmatter.pricing_model}</div>
-              </div>
-            )}
-          </div>
-        )}
       </div>
     </aside>
   </div>
+
+  <StickyMobileCTA
+    name={frontmatter.title}
+    canonicalUrl={frontmatter.url}
+    affiliateUrl={affiliate?.link}
+    pricingModel={frontmatter.pricing_model}
+    priceRange={frontmatter.price_range}
+  />
 </BaseLayout>

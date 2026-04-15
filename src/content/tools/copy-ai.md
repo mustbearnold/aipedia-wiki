@@ -38,6 +38,8 @@ meta_description: >-
   words/month; Starter $49/mo. Full review of features, pricing, and
   alternatives.
 author: aipedia.wiki Editorial
+quick_answer: >-
+  Copy.ai is an AI copywriting and go-to-market automation platform built by Copy.ai Inc., launched in 2020. Its clearest differentiator is the GTM workflow layer on the Advanced plan: automated pipelines that pull a prospect from Salesforce or HubSpot, draft personalized outreach, and route it to a sales rep without manual intervention. Plans run $0 (2,000 words/month) to $249/month for five users; best for sales and marketing teams that need CRM-integrated outreach automation, not solo writers who can get the same generation quality from ChatGPT Plus at $20/month. The free tier covers evaluation only, and the GTM features worth paying for require the $249 Advanced tier.
 ---
 
 # Copy.ai

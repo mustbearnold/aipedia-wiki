@@ -1,0 +1,28 @@
+---
+interface Props {
+  toolName: string;
+}
+
+const { toolName } = Astro.props;
+const subject = encodeURIComponent(`Feedback on ${toolName}`);
+const mailto = `mailto:editorial@aipedia.wiki?subject=${subject}`;
+---
+
+<details class="not-prose mt-6 mb-2 rounded-xl border border-[var(--border)] bg-[var(--bg-card)] open:bg-[var(--bg-card-hover)] transition-colors group">
+  <summary class="cursor-pointer list-none px-4 py-3 text-sm font-medium text-[var(--text-primary)] flex items-center justify-between gap-3">
+    <span>Spotted an error or want to share your experience with {toolName}?</span>
+    <span aria-hidden="true" class="text-[var(--text-muted)] text-lg leading-none transition-transform group-open:rotate-45">+</span>
+  </summary>
+  <div class="px-4 pb-4 pt-1 text-sm text-[var(--text-secondary)] leading-relaxed">
+    <p class="m-0 mb-3">
+      We update every tool page when pricing or features change. If you spot a stale fact, want to flag a missing capability, or have used {toolName} and want to share what worked or didn't, the editorial team reads every email.
+    </p>
+    <a
+      href={mailto}
+      class="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold text-[var(--text-primary)] border border-[var(--border)] hover:bg-[var(--bg-card-hover)] no-underline"
+    >
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      Email editorial@aipedia.wiki
+    </a>
+  </div>
+</details>

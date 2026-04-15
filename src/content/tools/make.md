@@ -40,6 +40,8 @@ meta_description: >-
   Make (formerly Integromat) is a visual workflow automation platform with 700+
   integrations. Free tier available; paid plans from $9 to $145+/month.
 author: aipedia.wiki Editorial
+quick_answer: >-
+  Make (formerly Integromat) is a visual workflow automation platform from Celonis that connects 700+ apps through a drag-and-drop canvas with support for branching, loops, error handling, and data transformation. The key advantage over Zapier is cost at scale: operations-based pricing means complex multi-step workflows cost significantly less, with the Core plan at $9/month covering 10,000 operations versus Zapier's steeper per-task pricing. Free tier includes 1,000 operations/month; best for teams building complex automations who have hit Zapier's pricing wall, not for users who prioritize ease of setup or need access to 6,000+ pre-built integrations.
 ---
 
 # Make

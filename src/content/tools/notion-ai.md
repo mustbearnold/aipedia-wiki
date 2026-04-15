@@ -28,6 +28,8 @@ tags: [notes, workspace, wiki, knowledge-base, ai-writing, ai-q-and-a, databases
 seo_title: "Notion AI: Features, Pricing & Review (2026)"
 meta_description: "Notion AI adds Q&A, AI autofill, and writing assistance to Notion workspaces. Bundled into Plus plans at $10/mo per member. Best for teams already using Notion."
 author: "aipedia.wiki Editorial"
+quick_answer: >-
+  Notion AI is an LLM feature layer developed by Notion Labs, Inc. that adds natural language Q&A across workspace documents, AI Autofill for computed database properties, and inline writing assistance throughout the existing Notion workspace. Deep integration with Notion's databases and connected apps (Slack, Google Drive) is the differentiator: Autofill can auto-summarize linked pages, classify database entries, and extract structured data from unstructured text without leaving the workspace. Notion AI is now bundled exclusively into the Business tier at $20/user/month (annual) for new subscribers; best for teams already using Notion as their primary wiki and project tool, not for users evaluating Notion for the first time just for AI features (NotebookLM does document Q&A better for free).
 ---
 
 # Notion AI

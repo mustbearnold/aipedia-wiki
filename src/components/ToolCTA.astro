@@ -1,0 +1,49 @@
+---
+interface Props {
+  name: string;
+  canonicalUrl?: string;
+  affiliateUrl?: string | null;
+  pricingModel?: string;
+  priceRange?: string;
+}
+
+const { name, canonicalUrl, affiliateUrl, pricingModel, priceRange } = Astro.props;
+
+const href = (affiliateUrl && affiliateUrl.length > 0 ? affiliateUrl : canonicalUrl) ?? '#';
+const isAffiliate = Boolean(affiliateUrl && affiliateUrl.length > 0);
+
+function ctaLabel(): string {
+  const model = (pricingModel ?? '').toLowerCase();
+  const price = (priceRange ?? '').toLowerCase();
+  // Require BOTH a freemium/free pricing model AND an actual $0 / Free
+  // signal in the price range. Open-source alone is not enough: many
+  // open-source tools have free self-hosting but their affiliate URL
+  // points to a paid hosted product.
+  const modelSignalsFree = model === 'free' || model === 'freemium';
+  const priceSignalsFree = /\$0(?!\s*\(self|\s*\(self-host)/i.test(price) || /\bfree\b/i.test(price);
+  const hasFree = modelSignalsFree && priceSignalsFree;
+  if (hasFree) return `Try ${name} free`;
+  if (model === 'enterprise') return `Visit ${name}`;
+  return `Get ${name}`;
+}
+
+const label = ctaLabel();
+const hasUrl = href !== '#';
+const rel = isAffiliate ? 'sponsored noopener' : 'noopener';
+---
+
+{hasUrl && (
+  <a
+    href={href}
+    target="_blank"
+    rel={rel}
+    class="not-prose mb-6 flex w-full items-center justify-center gap-2 px-5 py-3 rounded-xl font-semibold text-[15px] bg-[var(--accent-primary)] text-[#0b0a14] hover:brightness-110 transition-all shadow-[0_4px_14px_rgba(167,139,250,0.35)] hover:shadow-[0_6px_20px_rgba(167,139,250,0.45)] no-underline"
+    data-tool-cta={name}
+  >
+    <span>{label}</span>
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <line x1="5" y1="12" x2="19" y2="12"></line>
+      <polyline points="12 5 19 12 12 19"></polyline>
+    </svg>
+  </a>
+)}

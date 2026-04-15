@@ -28,6 +28,8 @@ tags: [research, academic-search, peer-review, evidence-synthesis, science]
 seo_title: "Consensus AI: Academic Search Engine Review & Pricing (2026)"
 meta_description: "Consensus searches peer-reviewed papers and gives you a consensus meter showing what the research says. Free tier available. Review April 2026."
 author: "aipedia.wiki Editorial"
+quick_answer: >-
+  Consensus is an AI-powered academic search engine by Consensus Inc. that searches over 200 million peer-reviewed papers and returns a Consensus Meter showing what percentage of relevant studies support or refute a research question. The free tier uses GPT-3.5 synthesis with limited daily searches; Premium at $10.99/month unlocks GPT-4-powered synthesis, unlimited searches, and the full Consensus Meter. Best for researchers, students, and medical professionals who need quick evidence orientation grounded in peer-reviewed literature; the Consensus Meter can oversimplify nuanced scientific debates, and coverage is strongest in biomedical and social science fields rather than engineering or humanities.
 ---
 
 # Consensus

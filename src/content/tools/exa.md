@@ -43,6 +43,8 @@ meta_description: >-
   tier: 1,000 searches/mo. Pay-as-you-go from $0.001/search. Best for RAG
   pipelines and AI agent web retrieval.
 author: aipedia.wiki Editorial
+quick_answer: >-
+  Exa AI (formerly Metaphor Systems) is a semantic search API developed by Exa AI Inc., providing LLM applications with web retrieval based on meaning and concept rather than keyword matching. Its neural search index returns conceptually relevant pages even when terminology between the query and content differs, which makes it substantially more useful than the Bing Search API or SerpAPI for the open-ended, intent-driven queries that AI agents and RAG pipelines generate. The free tier covers 1,000 searches per month; pay-as-you-go pricing starts at $0.001 per search, making 100 daily agent searches cost roughly $3/month. Best for developers building AI agents and RAG pipelines that need accurate semantic retrieval, not for consumer search or applications where maximum web index breadth matters more than semantic precision. Index coverage is narrower than Google's.
 ---
 
 # Exa AI

@@ -40,6 +40,15 @@ meta_description: >-
   structured data extraction. Free tier includes 5,000 credits; Plus costs
   $12/mo. Updated April 2026.
 author: aipedia.wiki Editorial
+best_for:
+  - academic researchers
+  - evidence synthesis professionals
+  - policy analysts
+not_best_for:
+  - casual research questions
+  - non-english literature focus
+quick_answer: >-
+  Elicit is an AI research assistant developed by Ought Inc., built specifically to automate systematic literature review for academic researchers, policy analysts, and evidence-synthesis professionals. Its defining capability is structured data extraction: it can pull configurable columns, sample size, population, intervention, outcomes, effect sizes, from hundreds of papers simultaneously across a corpus of 125 million-plus studies. A free tier provides 5,000 credits per month; Plus costs $12/month. Best for researchers conducting formal systematic or scoping reviews, not for casual research questions or non-academic topics, where Perplexity or Consensus serve better.
 ---
 
 # Elicit

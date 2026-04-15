@@ -40,6 +40,8 @@ meta_description: >-
   real-time voice agents and interactive apps. Pricing, features, and
   alternatives reviewed.
 author: aipedia.wiki Editorial
+quick_answer: >-
+  Cartesia is an AI voice synthesis API by Cartesia AI, founded by MIT and Carnegie Mellon researchers, designed specifically for real-time applications with a sub-100ms time-to-first-audio on its Sonic model, compared to 200-500ms for ElevenLabs streaming. The free tier includes 500K characters/month; Starter is $49/month for 3M characters with voice cloning. Best for developers building voice agents, conversational AI, and interactive call systems where latency directly impacts user experience; not optimized for content creation, podcast production, or long-form voiceover work, where ElevenLabs or Murf produce more natural output.
 ---
 
 # Cartesia

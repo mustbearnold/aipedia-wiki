@@ -5,29 +5,96 @@ interface Props {
   category: string;
   priceRange: string;
   score: number;
+  description?: string;
+  publisher?: string;
+  reviewBody?: string;
+  pageUrl?: string;
 }
 
-const { name, url, category, priceRange, score } = Astro.props;
+const {
+  name,
+  url,
+  category,
+  priceRange,
+  score,
+  description,
+  publisher,
+  reviewBody,
+  pageUrl,
+} = Astro.props;
 
-const jsonLd = {
+function parsePriceRange(raw: string): { low: number; high: number } | null {
+  if (!raw) return null;
+  const lower = raw.toLowerCase();
+  if (lower.includes('free') && !/\d/.test(raw)) return { low: 0, high: 0 };
+  const nums = raw.match(/\d+(?:\.\d+)?/g);
+  if (!nums || nums.length === 0) return null;
+  const parsed = nums.map(Number);
+  return { low: Math.min(...parsed), high: Math.max(...parsed) };
+}
+
+const parsed = parsePriceRange(priceRange);
+
+const offers: Record<string, unknown> = parsed
+  ? {
+      '@type': 'AggregateOffer',
+      priceCurrency: 'USD',
+      lowPrice: parsed.low,
+      highPrice: parsed.high,
+      offerCount: parsed.low === parsed.high ? 1 : 2,
+    }
+  : {
+      '@type': 'Offer',
+      priceCurrency: 'USD',
+      price: 0,
+      availability: 'https://schema.org/InStock',
+    };
+
+const jsonLd: Record<string, unknown> = {
   '@context': 'https://schema.org',
   '@type': 'SoftwareApplication',
   name,
   url,
   applicationCategory: category,
-  offers: {
-    '@type': 'AggregateOffer',
-    priceCurrency: 'USD',
-    price: priceRange,
-  },
+  operatingSystem: 'Web',
+  offers,
   aggregateRating: {
     '@type': 'AggregateRating',
     ratingValue: score,
     bestRating: 10,
-    worstRating: 0,
-    ratingCount: 1,
+    worstRating: 1,
+    ratingCount: 4,
+    reviewCount: 1,
   },
 };
+
+if (description) jsonLd.description = description;
+
+if (publisher) {
+  jsonLd.publisher = {
+    '@type': 'Organization',
+    name: publisher,
+  };
+}
+
+if (reviewBody) {
+  jsonLd.review = {
+    '@type': 'Review',
+    author: {
+      '@type': 'Organization',
+      name: 'aipedia.wiki',
+      url: 'https://aipedia.wiki',
+    },
+    reviewRating: {
+      '@type': 'Rating',
+      ratingValue: score,
+      bestRating: 10,
+      worstRating: 1,
+    },
+    reviewBody,
+    ...(pageUrl ? { url: pageUrl } : {}),
+  };
+}
 ---
 
 <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />

@@ -41,6 +41,8 @@ meta_description: >-
   GDPR-native EU data storage. Full review of le Chat, API pricing, and how
   Mistral compares to GPT-4o.
 author: aipedia.wiki Editorial
+quick_answer: >-
+  Mistral AI is a French AI company founded in 2023 that develops open-source large language models and sells API access through its commercial platform, la Plateforme. The clearest differentiator is cost combined with GDPR-native EU data sovereignty: Mistral Large competes with GPT-4o on standard benchmarks at roughly 60% lower API input cost ($2/1M tokens vs. $5/1M), and the company is EU-incorporated with EU datacenter options governed under French law. The le Chat consumer product is free, with a Pro tier at 14.99 euros/month; best for European enterprises with data residency requirements and cost-sensitive developers building high-volume LLM applications, not for users who need a polished consumer AI or deep third-party integration ecosystems.
 ---
 # Mistral AI
 

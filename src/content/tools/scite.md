@@ -28,6 +28,8 @@ tags: [citations, academic-research, peer-review, literature-review, evidence]
 seo_title: "Scite.ai Review: Smart Citation Tool for Researchers (2026)"
 meta_description: "Scite shows how papers cite each other — supporting, contrasting, or mentioning. Unique citation context that no other tool provides. Review April 2026."
 author: "aipedia.wiki Editorial"
+quick_answer: >-
+  Scite is an academic citation tool developed by scite LLC that classifies each of its 1.2 billion indexed citations as Supporting, Contrasting, or Mentioning, solving the core problem that traditional citation databases like Google Scholar treat all citations as equal. This classification is the only one of its kind at scale and is the primary reason researchers use it. The Essential plan costs $20/month with a limited free tier; best for PhD students and researchers doing systematic literature reviews who need to evaluate scientific credibility, not for casual academic work, where Semantic Scholar covers basic needs for free.
 ---
 
 # Scite

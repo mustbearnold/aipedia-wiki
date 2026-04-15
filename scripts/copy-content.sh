@@ -8,6 +8,10 @@ PROJECT_DIR="$(dirname "$SCRIPT_DIR")"
 WIKI_DIR="$(dirname "$PROJECT_DIR")/wikis/ai-tools/pages"
 CONTENT_DIR="$PROJECT_DIR/src/content"
 
+# Regenerate per-tool OG SVGs from the live tools-registry.json so social
+# share previews stay in sync with current titles, scores, and taglines.
+node "$SCRIPT_DIR/generate-og-svgs.mjs" || echo "OG SVG generation failed (non-fatal)"
+
 # Check if wiki source exists
 if [ ! -d "$WIKI_DIR" ]; then
   echo "Wiki directory not found at $WIKI_DIR — using committed content."

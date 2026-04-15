@@ -28,6 +28,8 @@ scores:
   moat: 7
   longevity: 7
 tags: [app-builder, no-code, full-stack, webcontainers, browser-ide, prototyping, vibe-coding, ai-design]
+quick_answer: >-
+  Bolt.new is an in-browser full-stack app builder by StackBlitz that uses patented WebContainers technology to run Node.js entirely in WebAssembly, producing a running application from a natural language description with zero local installation required. Pro costs $20/month for 10M tokens and advanced model access including GPT-4o and Claude Sonnet. Best for developers and learners who need instant browser-based prototyping on any machine including Chromebooks; not the right fit when your app needs a built-in backend or database, where Lovable's Supabase integration is the stronger choice.
 ---
 
 # Bolt.new

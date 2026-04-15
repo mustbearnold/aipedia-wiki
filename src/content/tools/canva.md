@@ -28,6 +28,15 @@ scores:
   moat: 8
   longevity: 9
 tags: [design-tool, social-media, templates, presentations, thumbnails, marketing, text-to-image, magic-design, non-designer]
+best_for:
+  - social media managers
+  - small business owners
+  - content creators
+not_best_for:
+  - professional designers
+  - print production work
+quick_answer: >-
+  Canva AI is a web-based design platform developed by Canva Pty Ltd., used by over 200 million people to create social media graphics, presentations, and marketing materials without design skills. Its Magic Studio suite, including Magic Design, text-to-image generation, background removal, and Magic Write, is built on top of 250,000+ professional templates in a drag-and-drop interface. The free tier is generous; Pro costs $13/month and unlocks unlimited AI features, a Brand Kit, and 1TB storage. Best for non-designers producing social content and marketing visuals; not a replacement for Figma or Adobe for professional designers who need precision, vector tools, or print-ready CMYK output.
 ---
 
 # Canva AI

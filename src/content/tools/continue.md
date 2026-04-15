@@ -28,6 +28,8 @@ tags: [open-source, byok, local-model, ai-coding, vscode, jetbrains, self-hosted
 seo_title: "Continue: Open-Source AI Coding Extension Review (2026)"
 meta_description: "Continue is a free, open-source AI coding extension for VS Code and JetBrains. Use any model — Claude, GPT-4, or local LLMs. MIT license. Review 2026."
 author: "aipedia.wiki Editorial"
+quick_answer: >-
+  Continue is a free, MIT-licensed open-source AI coding extension for VS Code and JetBrains, developed by Continue.dev, that acts as a flexible IDE layer connecting to any model you choose, including Claude, GPT-4o, Gemini, or local models via Ollama, without providing AI of its own. The extension is completely free; model costs are paid directly to your chosen provider, or eliminated entirely with a local Ollama model. Best for developers who want full model choice, zero subscription lock-in, and the option to keep code entirely on-device; not the right fit for developers who want an out-of-the-box experience without configuration work, where GitHub Copilot at $10/month is simpler and more capable from day one.
 ---
 
 # Continue

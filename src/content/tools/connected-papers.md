@@ -28,6 +28,8 @@ tags: [academic-search, research, visualization, citations, paper-graph, literat
 seo_title: "Connected Papers Review (2026): Visual Academic Research Graph"
 meta_description: "Connected Papers builds a visual graph of related academic papers from a single seed paper. Free and $5/month Academic plan. Review April 2026."
 author: "aipedia.wiki Editorial"
+quick_answer: >-
+  Connected Papers is a visual academic research tool by Connected Papers Ltd. that generates a similarity graph of related papers from a single seed paper, revealing the conceptual neighborhood around a work rather than just its direct citation chain. The graph is built on Semantic Scholar's index of 220 million papers, and papers are positioned by co-citation and bibliographic coupling rather than keyword matching. Free gives 5 graphs/month; the Academic plan is $5/month for unlimited graphs. Best for researchers entering unfamiliar fields who know one landmark paper and need to map the surrounding literature; it does not synthesize findings or answer research questions, for which Elicit or Consensus are the right tools.
 ---
 
 # Connected Papers

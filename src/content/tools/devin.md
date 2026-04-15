@@ -28,6 +28,8 @@ tags: [autonomous-agent, ai-coding, software-engineer, delegation, agentic-codin
 seo_title: "Devin: Features, Pricing & Review (2026)"
 meta_description: "Devin is an autonomous AI software engineer by Cognition AI that completes coding tasks from issue to pull request. $20/mo base + $2.25 per compute unit."
 author: "aipedia.wiki Editorial"
+quick_answer: >-
+  Devin is a fully autonomous AI software engineer developed by Cognition AI, launched in December 2024, that completes coding tasks from issue description to pull request inside its own sandboxed environment with a shell, browser, and editor. The delegation model is its core differentiator: you assign a ticket to Devin like a junior developer, then review the output, rather than coding alongside it as with Cursor or Copilot. Pricing is $20/month base plus $2.25 per Autonomous Compute Unit, with a simple bug fix consuming 1-3 ACUs; best for engineering teams delegating well-scoped routine tickets, not for complex architectural work where Claude Code's interactive control produces more reliable results. Ambiguous task specifications and required PR review overhead limit the real-world time savings.
 ---
 
 # Devin

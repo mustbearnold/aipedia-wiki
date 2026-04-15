@@ -1,0 +1,87 @@
+---
+// Client-side: find the "FAQ" h2 in the article body and convert each
+// "<p><strong>Question?</strong>... </p>" into a styled <details> accordion.
+---
+
+<script is:inline>
+  (function () {
+    function transformFAQ() {
+      const heading = document.getElementById('faq');
+      if (!heading || heading.dataset.faqAccordionApplied === '1') return;
+
+      const items = [];
+      let next = heading.nextElementSibling;
+      while (next && next.tagName !== 'H2') {
+        if (next.tagName === 'P') {
+          const strong = next.querySelector(':scope > strong');
+          if (strong && strong.textContent.trim().endsWith('?')) {
+            items.push({ p: next, strong });
+          }
+        }
+        next = next.nextElementSibling;
+      }
+      if (items.length === 0) return;
+
+      const wrap = document.createElement('div');
+      wrap.className = 'faq-accordion not-prose space-y-2 my-4';
+
+      for (const { p, strong } of items) {
+        const question = strong.textContent.trim();
+        // Build the answer by cloning p and removing the leading <strong> + whitespace
+        const answerHost = document.createElement('div');
+        answerHost.className =
+          'px-4 pb-4 pt-1 text-[14px] leading-relaxed text-[var(--text-secondary)]';
+        // Move all child nodes of <p> after the <strong> into answerHost.
+        let node = strong.nextSibling;
+        // Skip any leading whitespace text node
+        while (node && node.nodeType === 3 && /^\s+$/.test(node.nodeValue)) {
+          node = node.nextSibling;
+        }
+        // Trim leading whitespace from the first text node we keep
+        if (node && node.nodeType === 3) node.nodeValue = node.nodeValue.replace(/^\s+/, '');
+        while (node) {
+          const nextNode = node.nextSibling;
+          answerHost.appendChild(node);
+          node = nextNode;
+        }
+
+        const details = document.createElement('details');
+        details.className =
+          'group rounded-lg border border-[var(--border)] bg-[var(--bg-card)] open:bg-[var(--bg-card-hover)] transition-colors';
+
+        const summary = document.createElement('summary');
+        summary.className =
+          'cursor-pointer list-none px-4 py-3 font-medium text-[15px] text-[var(--text-primary)] flex items-center justify-between gap-3';
+        const qSpan = document.createElement('span');
+        qSpan.textContent = question;
+        const plus = document.createElement('span');
+        plus.setAttribute('aria-hidden', 'true');
+        plus.className =
+          'text-[var(--text-muted)] text-lg leading-none transition-transform group-open:rotate-45';
+        plus.textContent = '+';
+        summary.appendChild(qSpan);
+        summary.appendChild(plus);
+
+        details.appendChild(summary);
+        details.appendChild(answerHost);
+        wrap.appendChild(details);
+        p.remove();
+      }
+
+      heading.insertAdjacentElement('afterend', wrap);
+      heading.dataset.faqAccordionApplied = '1';
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', transformFAQ);
+    } else {
+      transformFAQ();
+    }
+    document.addEventListener('astro:page-load', transformFAQ);
+  })();
+</script>
+
+<style is:global>
+  .faq-accordion summary::-webkit-details-marker { display: none; }
+  .faq-accordion summary::marker { display: none; content: ''; }
+</style>

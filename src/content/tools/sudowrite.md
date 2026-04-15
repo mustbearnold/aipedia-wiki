@@ -28,6 +28,8 @@ tags: [ai-writing, fiction, creative-writing, novel-writing, storytelling]
 seo_title: "Sudowrite Review: Best AI Tool for Fiction Writers in 2026?"
 meta_description: "Sudowrite is an AI writing tool built for fiction writers and novelists. Hobby $19/mo, Professional $29/mo, Max $59/mo. Full review of features, pricing, and alternatives."
 author: "aipedia.wiki Editorial"
+quick_answer: >-
+  Sudowrite is an AI writing tool founded in 2020 by fiction writers Amit Gupta and James Yu, built entirely around the fiction writing workflow with features including a Story Engine for full novel outlining and chapter generation, Write mode for style-aware scene continuation, and a Describe mode for sensory details. The Story Engine is the most differentiated feature in the creative writing category. Plans start at $19/month for 30,000 AI-generated words; best for novelists and genre fiction writers who want AI assistance that understands story structure, not for anyone doing business writing, SEO content, or marketing copy, for which the tool is a poor fit.
 ---
 
 # Sudowrite

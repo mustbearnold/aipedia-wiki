@@ -40,6 +40,8 @@ meta_description: >-
   JetBrains AI Assistant is built into IntelliJ, PyCharm, WebStorm and all
   JetBrains IDEs. From $8.33/mo with All Products pack. In-depth review 2026.
 author: aipedia.wiki Editorial
+quick_answer: >-
+  JetBrains AI Assistant is the built-in AI coding feature for the entire JetBrains IDE family, developed by JetBrains, covering IntelliJ IDEA, PyCharm, WebStorm, GoLand, Rider, DataGrip, and more, with deep integration into JetBrains' own refactoring, inspection, and code analysis systems that third-party plugins cannot replicate. That native IDE depth is the differentiator: AI Chat explains JetBrains inspections in context, commit message generation pulls from the staged diff, and code actions understand the project structure as the IDE already indexes it. A limited free tier is included; AI Pro costs $8.33/month billed annually ($100/year); the All Products plus AI bundle runs about $16.67/month. Best for developers already using JetBrains IDEs who want AI without installing a separate plugin; Cursor is the stronger choice for pure AI coding capability, though it requires switching to a VS Code-based editor.
 ---
 
 # JetBrains AI Assistant

@@ -28,6 +28,15 @@ tags: [ai-image, image-generation, text-to-image, open-source, self-hosted, flux
 seo_title: "Flux: Features, Pricing & Review (2026)"
 meta_description: "Flux is the leading open-source AI image model by Black Forest Labs. Free to self-host with massive LoRA ecosystem. Best for customization and developer workflows."
 author: "aipedia.wiki Editorial"
+best_for:
+  - developers and technical users
+  - lora fine-tuners
+  - comfyui power users
+not_best_for:
+  - non-technical users
+  - users needing immediate polish
+quick_answer: >-
+  Flux is an open-source text-to-image model developed by Black Forest Labs, founded by the original Stable Diffusion team. Its defining advantage is the largest LoRA fine-tuning ecosystem in AI image generation, thousands of community LoRAs on CivitAI and Hugging Face let you train custom styles, characters, or products in under an hour. Flux schnell is free under Apache 2.0 for self-hosting; Flux Pro runs roughly $0.05 per image via API. Best for developers and ComfyUI power users who want full pipeline control, not for anyone who wants polished results without technical setup, Midjourney produces more aesthetically refined output by default. Full-quality inference requires 24GB VRAM.
 ---
 
 # Flux

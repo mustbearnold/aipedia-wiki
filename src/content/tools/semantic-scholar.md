@@ -28,6 +28,15 @@ tags: [academic-search, research, free, open-access, ai-research, citations]
 seo_title: "Semantic Scholar: Free AI Academic Search Engine Review (2026)"
 meta_description: "Semantic Scholar is a free AI-powered academic search engine from Allen Institute for AI. 220M papers indexed. No account needed. Review April 2026."
 author: "aipedia.wiki Editorial"
+best_for:
+  - academic research
+  - literature discovery
+  - free access seekers
+  - interdisciplinary researchers
+not_best_for:
+  - ai synthesis needs
+quick_answer: >-
+  Semantic Scholar is a free, AI-powered academic search engine built and maintained by the Allen Institute for AI (AI2), a non-profit founded by Microsoft co-founder Paul Allen. Its index covers 220 million papers across all major disciplines, and an AI layer generates one-sentence TLDR summaries per paper, distinguishes highly influential citations from casual mentions, and powers a free API used by hundreds of third-party research tools. Everything, search, TLDR, Semantic Reader, and the API, is free with no paid tier. Best for researchers, students, and developers who need a comprehensive, no-cost starting point for literature discovery; not the right tool vs. Consensus or Elicit when you need AI synthesis across multiple papers rather than discovery of individual ones. Coverage in some humanities fields is thinner than in STEM and social sciences.
 ---
 
 # Semantic Scholar

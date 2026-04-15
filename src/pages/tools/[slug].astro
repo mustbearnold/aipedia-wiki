@@ -11,7 +11,7 @@ export async function getStaticPaths() {
 }
 
 const { tool } = Astro.props;
-const { Content } = await render(tool);
+const { Content, headings } = await render(tool);
 
 // Extract FAQ questions/answers from raw markdown body for FAQPage JSON-LD
 function extractFAQ(body: string): Array<{ question: string; answer: string }> {
@@ -30,8 +30,11 @@ function extractFAQ(body: string): Array<{ question: string; answer: string }> {
 }
 
 const faqItems = tool.body ? extractFAQ(tool.body) : [];
+
+const wordCount = tool.body ? tool.body.split(/\s+/).filter(Boolean).length : 0;
+const readingMinutes = Math.max(1, Math.round(wordCount / 230));
 ---
 
-<ToolLayout frontmatter={tool.data} faqItems={faqItems}>
+<ToolLayout frontmatter={tool.data} faqItems={faqItems} headings={headings} readingMinutes={readingMinutes}>
   <Content />
 </ToolLayout>

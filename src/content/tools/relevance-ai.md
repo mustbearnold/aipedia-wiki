@@ -28,6 +28,8 @@ tags: [ai-agents, no-code, agent-builder, llm, workflow, drag-and-drop, automati
 seo_title: "Relevance AI: Features, Pricing & Review (2026)"
 meta_description: "Relevance AI is a no-code platform for building AI agents with drag-and-drop workflows and LLM integration. Free tier available; paid plans from $19/mo."
 author: "aipedia.wiki Editorial"
+quick_answer: >-
+  Relevance AI is a no-code AI agent builder developed by Relevance AI Pty Ltd that lets non-technical teams create agents combining LLM calls, API requests, and conditional logic through a drag-and-drop interface. Its differentiator versus Make or Zapier is a focus on agents that reason and decide rather than simply routing data between apps. Paid plans run from $19 to $234 per month; best for business teams prototyping AI-powered assistants without developers, not for engineering teams who need the full control that CrewAI or LangChain provides. The free tier's 100 credits per day is barely enough to test a basic agent.
 ---
 
 # Relevance AI

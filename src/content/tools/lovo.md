@@ -40,6 +40,8 @@ meta_description: >-
   editor. Plans from free to $48/month. Honest review with pricing verified
   April 2026.
 author: aipedia.wiki Editorial
+quick_answer: >-
+  LOVO (Genny) is an AI voice generation and video production platform from LOVO AI, offering 500+ voices across 100+ languages alongside a built-in drag-and-drop video editor, AI script writer, and screen recorder. The all-in-one workflow is the differentiator: where ElevenLabs stops at voice output, LOVO bundles a royalty-free media library and timeline editor so a creator can go from script to finished video without switching tools. Plans run from free (5 downloads/month, watermarked) to $48/month for Pro; best for e-learning and explainer video production, not for developers needing a clean TTS API or creators demanding the highest raw voice quality.
 ---
 
 # LOVO (Genny)

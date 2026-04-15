@@ -39,6 +39,8 @@ meta_description: >-
   Windsurf (formerly Codeium) is a VS Code fork with AI autocomplete, chat, and
   agentic Cascade flows. Free tier available; Pro plan $15/mo.
 author: aipedia.wiki Editorial
+quick_answer: >-
+  Windsurf is an AI-powered VS Code fork developed by Codeium (acquired by OpenAI in 2025) that combines inline autocomplete, chat, and a multi-file agentic editing mode called Cascade for editing across files with codebase context. Its single most concrete differentiator is price: the Pro plan costs $15/month compared to Cursor's $20/month, offering comparable agentic editing features at a lower entry point. Free tier available; Pro is $15/month and Teams is $30/user/month. Best for budget-conscious developers who want Cursor-style agentic coding without the full Cursor price; not for developers who prioritize polish and community size, where Cursor is meaningfully more mature. Product direction is uncertain following the OpenAI acquisition, and the free tier's model quality gap is noticeable.
 ---
 
 # Windsurf
