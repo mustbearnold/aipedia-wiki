@@ -3,23 +3,20 @@ type: tool
 slug: perplexity
 title: Perplexity
 tagline: >-
-  AI-powered search engine that synthesizes answers with citations from multiple
-  sources in real time.
+  AI-powered search engine and agentic computer platform that synthesizes cited answers from multiple sources in real time, with Perplexity Computer for multi-step task orchestration.
 category: ai-search
 company: perplexity
 url: 'https://perplexity.ai'
 pricing_model: freemium
-price_range: $0-$325/month
+price_range: $0-$200/month
 status: active
 launched: 2022-12
-last_updated: 2026-04-13T00:00:00.000Z
-last_verified: '2026-04-14'
+last_updated: 2026-04-15T00:00:00.000Z
+last_verified: '2026-04-15'
 update_frequency: monthly
 seo_title: 'Perplexity: Features, Pricing & Review (2026)'
 meta_description: >-
-  Perplexity is an AI search engine that delivers cited answers from multiple
-  web sources. Free tier available; Pro costs $20/mo. Used by 100M+ monthly for
-  research.
+  Perplexity is an AI search engine and agentic computer platform with 100M+ monthly users. Free tier available; Pro at $20/mo; Max at $200/mo includes Perplexity Computer with 19-model orchestration.
 author: aipedia.wiki Editorial
 affiliate:
   has_program: false
@@ -40,17 +37,23 @@ tags:
   - web-search
   - real-time
   - fact-checking
+  - ai-agent
+  - perplexity-computer
 quick_answer: >-
-  Perplexity is an AI-native search engine from Perplexity AI with 100 million-plus monthly users that synthesizes answers with numbered inline citations from multiple live web sources, and is primarily used as a research and fact-checking tool rather than a general-purpose assistant. Every response links claims to verifiable sources, which meaningfully reduces hallucination risk compared to a standard chatbot with browsing; Pro Search adds a multi-step research mode with clarifying questions and deeper synthesis. Pro is $20/month for 600-plus Pro Searches daily with model selection across GPT-5.4, Claude Opus 4.6, and Gemini 3.1 Pro; best for researchers and professionals who need cited, verifiable answers from the live web, not for writing, coding, or creative tasks where ChatGPT or Claude provide more depth.
+  Perplexity is an AI-native search and agent platform from Perplexity AI with 100M+ monthly users. At its core it synthesizes cited answers from multiple live web sources; Pro ($20/month) adds model selection across GPT-5.4, GPT-5.4 Thinking, Claude Sonnet 4.6, GPT-5.3-Codex, and Gemini 3.1 Pro, plus Deep Research with presentations and Voice Mode. The Max tier ($200/month) adds Perplexity Computer, a cloud-based AI agent that orchestrates 19 frontier models across 400+ tools for multi-step tasks including research, coding, deployment, and automation. Comet, the AI-native browser, launched on iOS on March 27, 2026. Best for researchers and professionals who need cited, verifiable answers; Max is for power users wanting a managed agentic environment. Not a replacement for Claude or ChatGPT on writing, coding, or creative tasks.
 ---
 
 # Perplexity
 
-Perplexity is an AI-native search engine developed by Perplexity AI. It reads and synthesizes information from multiple web sources to deliver direct answers with inline citations, and is primarily used for research, fact-checking, and information retrieval. Its key differentiator is the cited-answer format where every claim links to a verifiable source. As of April 2026, Perplexity has 100M+ monthly users, with a free tier, Pro at $20/month, and a Max tier at $200/month for power users (added in 2026) which includes Sora 2 Pro video generation, unlimited Research mode, and priority Comet Assistant access. Enterprise plans start at $40/user/month. ChatGPT's browsing mode offers similar cited answers but within a broader assistant; Perplexity is more focused and reliable for pure search.
+Perplexity is an AI-native search and agent platform developed by Perplexity AI. Its search product reads and synthesizes information from multiple web sources to deliver direct answers with inline citations, primarily used for research, fact-checking, and information retrieval. As of April 2026, the product has expanded significantly: the Max tier ($200/month) includes Perplexity Computer, a cloud-based AI agent launched February 25, 2026, that orchestrates 19 frontier models (including Claude Opus 4.6, GPT-5.4, Gemini, and Grok) across 400+ tools for multi-step agentic tasks. Comet, Perplexity's AI-native browser, launched on iOS on March 27, 2026 with device sync, richer tools, and quick tab switching. The company reports ARR of $450M as of March 2026, driven in part by a shift to usage-based API pricing ([Perplexity](https://perplexity.ai)).
 
 ## What It Does
 
-Perplexity is an AI-native search engine with over 100 million monthly users that reads and synthesizes information from multiple web sources in real time, delivering direct answers with numbered inline citations linking to verifiable sources, with a free tier and Pro at $20/month offering advanced model selection and 600+ Pro Searches per day ([Perplexity](https://perplexity.ai)). Unlike traditional search engines that return a list of links, Perplexity reads the pages for you, extracts relevant information, and presents a coherent answer with numbered source references you can verify. Pro users get access to advanced reasoning models (including GPT-5.4, Claude Opus 4.6, and Gemini 3.1 Pro), higher query limits, and Pro Search — a multi-step research mode that asks clarifying questions and performs deeper searches. With 100M+ monthly users, it is the leading AI search product and a genuine threat to Google's search dominance ([Perplexity Blog](https://blog.perplexity.ai/)).
+Perplexity operates on two tracks: an AI search product and a newer agentic computer platform ([Perplexity](https://perplexity.ai)).
+
+The search product reads and synthesizes live web sources in real time, delivering direct answers with numbered inline citations linking to verifiable sources. Pro Search asks clarifying questions and performs multi-step searches for deeper results. Deep Research (available on Pro and Max) now supports generated presentations alongside the standard research reports. Voice Mode is available on Pro and Max. A Model Council feature lets Pro and Max users run the same query against multiple frontier models simultaneously and compare answers.
+
+Perplexity Computer, the agentic layer, is a cloud-based environment for Max subscribers that orchestrates a 19-model lineup across 400+ tool connectors for tasks like research pipelines, code execution, deployment, and automation. The Claude Opus 4.6 model handles orchestration of subtasks. Custom Skills let users define repeatable workflows. Live credit tracking shows consumption in real time.
 
 ## Who It's For
 
@@ -59,65 +62,84 @@ Perplexity is an AI-native search engine with over 100 million monthly users tha
 - **Students** writing papers who need citations and multiple perspectives on a topic
 - **Journalists** verifying information across multiple sources quickly
 - **Anyone frustrated with traditional search** who wants answers instead of a page of SEO-optimized links
-- **Developers** using the Perplexity API for search-augmented AI applications
+- **Developers** using the Perplexity API and Sonar API for search-augmented AI applications
+- **Power users** who want a managed agentic environment (Max + Perplexity Computer)
+- **Enterprise teams** who need expanded admin controls, Memory, and security
 
 ## Pricing
 
-| Plan | Price | Key Limits |
-|------|-------|-----------|
+| Plan | Price | Key Features |
+|------|-------|-------------|
 | Free | $0/month | Unlimited quick searches, limited Pro Searches (~5/day), standard model |
-| Pro | $20/month ($16.67 annual) | 600+ Pro Searches/day, choose model (GPT-5.4, Claude Opus 4.6, Gemini 3.1 Pro), file upload, API credits |
-| Max | $200/user/month | Unlimited Pro Searches, Sora 2 Pro video generation, full Research mode, unlimited file uploads, Comet Assistant priority, early access to new features |
-| Enterprise | $40/user/month | Team workspaces, admin controls, SSO |
-| Enterprise | Custom | SSO, admin controls, data privacy, team management, custom integrations |
+| Pro | $20/month ($16.67 annual) | 600+ Pro Searches/day, model selector (GPT-5.4, GPT-5.4 Thinking, Claude Sonnet 4.6, GPT-5.3-Codex, Gemini 3.1 Pro), Deep Research with presentations, Voice Mode, Model Council, file upload |
+| Max | $200/month | Everything in Pro plus Perplexity Computer (19-model agent, 400+ tools, Custom Skills, 10,000 credits/month), Comet Assistant priority access, early features |
+| Enterprise | $40/user/month (base) | Expanded controls, Memory, admin features, SSO, security; Computer integration available; custom pricing for larger deployments |
 
-*Prices verified 2026-04-13.*
+*Prices verified 2026-04-15. Sonar API pricing not independently confirmed in research; verify at [perplexity.ai/api](https://www.perplexity.ai/api).*
 
 ## Key Features
 
-- **Cited answers:** Every claim is linked to its source with numbered inline citations, making verification easy
-- **Pro Search:** Multi-step research mode that asks clarifying questions, searches multiple times, and synthesizes deeper answers
-- **Model selection:** Pro users choose between GPT-5.4, Claude Opus 4.6, Gemini 3.1 Pro, and Perplexity's own models per query
-- **Collections:** Organize research into themed collections with custom instructions for each research project
-- **Focus modes:** Search specific domains: academic papers, YouTube, Reddit, news, or the full web
+- **Cited answers:** Every claim is linked to its source with numbered inline citations, making verification straightforward ([Perplexity](https://perplexity.ai))
+- **Deep Research with presentations:** Multi-step research mode that asks clarifying questions, searches multiple times, synthesizes comprehensive answers, and can output a presentation format (Pro and Max)
+- **Model selector:** Pro and Max users choose from GPT-5.4, GPT-5.4 Thinking (step-by-step reasoning), Claude Sonnet 4.6, GPT-5.3-Codex (coding), Gemini 3.1 Pro, and others per query
+- **Model Council:** Run the same query across multiple frontier models and compare answers side by side
+- **Perplexity Computer (Max only):** Cloud agentic platform that orchestrates 19 frontier models across 400+ tool connectors; handles research, coding, deployment, and automation workflows; includes Custom Skills and live credit tracking; launched February 25, 2026
+- **Comet browser:** AI-native iOS browser with device sync, richer tools, smarter Assistant, and quick tab switching; launched March 27, 2026; pre-orders announced February 20, 2026
+- **Voice Mode:** Conversational voice interface available on Pro and Max
+- **Focus modes:** Search specific domains including academic papers, YouTube, Reddit, news, or the full web
+- **Health/Finance capabilities:** Structured outputs and domain-specific research modes added March 2026
 - **File upload and analysis:** Upload PDFs, images, and documents for AI-powered analysis with web context
 - **Spaces:** Collaborative research workspaces for teams to share searches and build shared knowledge
-- **API access:** Programmatic access to Perplexity's search-augmented AI for building applications
+- **Sonar API:** Programmatic access to Perplexity's search-augmented AI for building applications
 
 ## Limitations
 
+- **Sonar API pricing not confirmed:** Per-model/per-token rates for the Sonar API were not detailed in available research as of April 15, 2026; verify directly at perplexity.ai before building on it
 - **Source quality varies:** Citations come from whatever ranks on the web; low-quality or outdated sources can still be cited confidently
 - **Not a replacement for deep analysis:** Answers are good for factual queries but shallow on nuanced, subjective, or complex reasoning tasks
-- **Source recency gaps:** Sometimes cites older sources when newer information is available
 - **Cannot access paywalled content:** Academic papers, news behind paywalls, and gated content are often inaccessible
 - **Hallucination with citations:** Occasionally misrepresents what a source actually says while still linking to it, creating false confidence
-- **Limited conversational depth:** Better as a search tool than as a back-and-forth conversation partner
+- **Perplexity Computer is Max-only:** The agentic platform requires the $200/month tier and a 10,000-credit budget; not available on Pro or Free
+- **Comet browser is iOS only at launch:** Desktop availability was not confirmed as of April 15, 2026
+- **Spaces and Labs feature status:** Not confirmed in current research; verify at perplexity.ai for current availability
 
 ## Bottom Line
 
-Perplexity is the best choice for researchers and professionals who need sourced, verifiable answers with inline citations from multiple web sources, offering a genuinely useful free tier and Pro at $20/month with 600+ daily Pro Searches and model selection, but ChatGPT wins if you also need writing, coding, and creative capabilities in one tool ([Perplexity](https://perplexity.ai)). The free tier is genuinely useful, and Pro at $20/month is worth it for anyone doing regular research. It does not replace ChatGPT or Claude for writing, coding, or creative work. It replaces Google for information retrieval. The cited-answer format is what search should have been all along. The main risk is that Google, OpenAI, and others are all building similar search features into their products.
+Perplexity is the best choice for researchers and professionals who need sourced, verifiable answers from the live web. Pro at $20/month is the right tier for regular research use, providing model selection across GPT-5.4, Claude Sonnet 4.6, and Gemini 3.1 Pro, plus Deep Research with presentations. Max at $200/month is a meaningful product expansion: Perplexity Computer is a serious agentic platform that competes in a different category than the search product alone, but the credit-based pricing requires careful evaluation before committing. Comet on iOS brings the AI assistant to the browser layer. ChatGPT still wins if you also need writing, coding, and creative capabilities in one tool. Gemini Deep Research competes directly with Perplexity Pro Search. The main risk to Perplexity's search moat remains that Google, OpenAI, and Anthropic are all building cited-answer features into their own products ([Perplexity](https://perplexity.ai)).
 
 ## Best Alternatives
 
-- [ChatGPT](chatgpt.md): Browsing mode provides cited answers alongside full AI assistant capabilities
-- [Gemini](gemini.md): Deep Research mode competes directly with Perplexity Pro Search
+- [ChatGPT](chatgpt.md): Browsing mode provides cited answers alongside full AI assistant capabilities; GPT-5.4 also available directly
+- [Gemini](gemini.md): Deep Research mode competes directly with Perplexity Pro Search; tighter Google Search integration
 - [Google Search](../categories/ai-search.md): AI Overviews increasingly provide direct answers with sources
 
 ## FAQ
 
 **Is Perplexity better than Google Search?**
-Perplexity provides direct answers with cited sources instead of a list of links. For factual questions, product comparisons, and research queries, it is faster and more useful than Google. Google still wins for navigational queries, local results, and image search.
+Perplexity provides direct answers with cited sources instead of a list of links. For factual questions, product comparisons, and research queries, it is faster and more useful than Google for most people. Google still wins for navigational queries, local results, image search, and real-time current events where freshness matters most.
 
-**What is Perplexity Pro Search?**
-Pro Search is a multi-step research mode that asks clarifying questions, performs deeper searches across multiple sources, and synthesizes more comprehensive answers. Free users get approximately 5 Pro Searches per day; Pro subscribers get 600+ per day.
+**What is Perplexity Computer?**
+Perplexity Computer is a cloud-based agentic platform for Max subscribers ($200/month) that orchestrates 19 frontier models across 400+ tool connectors. It handles multi-step tasks like research pipelines, code writing and execution, deployment, and workflow automation. Claude Opus 4.6 handles orchestration. Custom Skills let you define repeatable workflows. It launched on February 25, 2026. Access requires the $200/month Max tier and uses a credit system (10,000 credits/month included).
 
-**Can I choose which AI model Perplexity uses?**
-Yes, Pro subscribers can select from GPT-5.4, Claude Opus 4.6, Gemini 3.1 Pro, and Perplexity's own models on a per-query basis. Free users are limited to Perplexity's default model.
+**What is Comet?**
+Comet is Perplexity's AI-native browser, launched on iOS on March 27, 2026. It integrates the Perplexity Assistant directly into the browser with device sync, richer tools, and quick tab switching. Desktop availability had not been confirmed as of April 15, 2026.
+
+**What is Pro Search / Deep Research?**
+Deep Research is a multi-step research mode that asks clarifying questions, performs multiple searches, and synthesizes comprehensive answers; it now supports a presentation output format in addition to text reports. Free users get approximately 5 Pro Searches per day; Pro subscribers get 600+ per day.
+
+**Which AI models are available in Perplexity's model selector?**
+Pro and Max subscribers can choose from GPT-5.4, GPT-5.4 Thinking (step-by-step reasoning), Claude Sonnet 4.6, GPT-5.3-Codex (coding-optimized), Gemini 3.1 Pro, and Grok (lightweight tasks), among others. The full Perplexity Computer environment for Max subscribers orchestrates a 19-model lineup. Free users are limited to Perplexity's default model.
+
+**What is the Sonar API?**
+The Sonar API is Perplexity's programmatic search-augmented AI offering for developers building applications. Per-model pricing details were not confirmed in available research as of April 15, 2026; check [perplexity.ai/api](https://www.perplexity.ai/api) for current rates.
 
 ## Sources
 
-- [Perplexity AI Official Site](https://perplexity.ai): Product page, pricing, and feature information
+- [Perplexity AI Official Site](https://perplexity.ai): Product, pricing, and feature information
 - [Perplexity AI Blog](https://blog.perplexity.ai/): Product updates, model changes, and feature announcements
+- [The Definitive Guide to Perplexity Computer](https://linas.substack.com/p/perplexity-computer-guide): Third-party deep dive on Computer features and credit model (2026)
+- [Perplexity Release Notes March 2026](https://releasebot.io/updates/perplexity-ai): Feature changelog including Health/Finance, Voice Mode, and presentation output
+- [I Tested Perplexity Computer for Weeks](https://www.news.aakashg.com/p/perplexity-computer-guide-product-managers): Product manager analysis of Computer capabilities and limitations
 
 ## Related
 

@@ -2,7 +2,7 @@
 type: tool
 slug: midjourney
 title: Midjourney
-tagline: The AI image generator with the best aesthetic quality, now with a web editor and v7 model.
+tagline: The AI image generator with the best aesthetic quality, now with v7 default and v8 in alpha.
 category: ai-image
 company: midjourney
 url: https://midjourney.com
@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "$10-$120/month"
 status: active
 launched: 2022-07
-last_updated: 2026-04-13
-last_verified: 2026-04-13
+last_updated: 2026-04-15
+last_verified: 2026-04-15
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -24,9 +24,9 @@ scores:
   value: 8
   moat: 9
   longevity: 10
-tags: [ai-image, image-generation, text-to-image, midjourney, art, design, creative, v7]
+tags: [ai-image, image-generation, text-to-image, midjourney, art, design, creative, v7, v8]
 seo_title: "Midjourney: Features, Pricing & Review (2026)"
-meta_description: "Midjourney is the AI image generator with the best aesthetic quality. Plans from $10-$60/mo. V7 model with web editor. No free tier or public API available."
+meta_description: "Midjourney is the AI image generator with the best aesthetic quality. Plans from $10-$120/mo. V7 is default; V8 is in alpha. No free tier or public API."
 author: "aipedia.wiki Editorial"
 best_for:
   - aesthetic image quality
@@ -35,19 +35,19 @@ best_for:
   - marketing visuals
 not_best_for:
   - text rendering in images
-  - photorealistic output
+  - programmatic api access
   - budget-conscious users
 quick_answer: >-
-  Midjourney is an AI image generator from Midjourney, Inc., used primarily for concept art, design work, and marketing visuals. The v7 model, released in early 2026, delivers the highest aesthetic quality of any image generator, strong composition, cinematic lighting, and improved text rendering, though Ideogram 2.0 still leads on text-heavy designs. Plans run $10-$120/month with no free tier and no public API, making it more expensive to start than Flux or Leonardo. Best for designers who prioritize visual polish over customizability; not for developers needing programmatic access or users on a tight budget.
+  Midjourney is an AI image generator from Midjourney, Inc., used primarily for concept art, design work, and marketing visuals. V7 is the current default model as of April 2026; V8 is in alpha testing with reported improvements to realism and censorship. Plans run $10-$120/month with no free tier and no public API, making it more expensive to start than Flux or Leonardo. Best for designers who prioritize visual polish over customizability; not for developers needing programmatic access, users requiring perfect text rendering (use Ideogram), or users on a tight budget (use Leonardo free tier).
 ---
 
 # Midjourney
 
-Midjourney is an AI image generation platform developed by Midjourney, Inc. It generates images from text prompts and is primarily used for concept art, design work, marketing visuals, and creative illustration. Its key differentiator is the highest aesthetic quality of any AI image generator, with a distinctive cinematic, polished visual style. As of April 2026, Midjourney v7 is the latest model, with pricing from $10/month (Basic) up through Standard ($30), Pro ($60), and Mega ($120). Unlike Flux and Leonardo, Midjourney has no free tier and no public API.
+Midjourney is an AI image generation platform developed by Midjourney, Inc. It generates images from text prompts and is primarily used for concept art, design work, marketing visuals, and creative illustration. Its key differentiator is aesthetic quality, with a distinctive cinematic, polished visual style that consistently ranks first in creative quality assessments. As of April 2026, v7 is the default production model and v8 is in alpha testing. Pricing runs $10-$120/month with no free tier and no public API ([Midjourney](https://midjourney.com)).
 
 ## What It Does
 
-Midjourney generates images from text prompts with the highest aesthetic quality of any AI image generator, now featuring v7 with improved prompt adherence, text rendering, and photorealism plus a full web editor with inpainting, outpainting, and style references ([Midjourney](https://midjourney.com)). The platform is no longer Discord-only and produces a distinctive cinematic, polished visual style ([Midjourney Docs](https://docs.midjourney.com)). Plans range from $10-$120/month with no free tier or public API.
+Midjourney generates images from text prompts with strong aesthetic quality, now featuring a full web editor with inpainting, outpainting, and style references alongside the long-running Discord interface ([Midjourney](https://midjourney.com)). V7 (launched early 2026) improved prompt adherence, text rendering, hand accuracy, and photorealism. V8 entered alpha in early 2026 with further reported improvements to realism and content handling ([Midjourney Docs](https://docs.midjourney.com)). Plans range from $10-$120/month with no free tier or public API.
 
 ## Who It's For
 
@@ -60,23 +60,24 @@ Midjourney generates images from text prompts with the highest aesthetic quality
 
 ## Pricing
 
-Midjourney costs $10-$120/month with no free tier, starting at $10/month Basic (3.3 GPU hours fast mode) and topping out at $120/month Mega (~60 GPU hours fast mode + all premium features). Annual billing saves 20% across all tiers ([Midjourney](https://midjourney.com)).
+Midjourney costs $10-$120/month with no free tier. Annual billing saves approximately 20% across all tiers. Stealth mode (private image generation) requires the Pro plan or higher ([Midjourney](https://midjourney.com)).
 
-| Plan | Price | Fast GPU Hours | Key Limits |
-|------|-------|---------------|-----------|
-| Basic | $10/mo | 3.3 hrs/mo | ~200 images/mo on fast, no Relax mode |
-| Standard | $30/mo | 15 hrs/mo | ~900 images/mo on fast, unlimited Relax |
-| Pro | $60/mo | 30 hrs/mo | Stealth mode (private images), unlimited Relax |
-| Mega | $120/mo | ~60 hrs/mo | All Pro features at 2x capacity |
+| Plan | Price (Monthly) | Price (Annual) | Fast GPU Hours | Key Limits |
+|------|----------------|----------------|---------------|-----------|
+| Basic | $10/mo | $8/mo (~$96/yr) | 3.3 hrs/mo | No Relax mode, images public by default |
+| Standard | $30/mo | $24/mo (~$288/yr) | 15 hrs/mo | Unlimited Relax mode |
+| Pro | $60/mo | $48/mo (~$576/yr) | 30 hrs/mo | Stealth mode (private images), unlimited Relax |
+| Mega | $120/mo | $96/mo (~$1,152/yr) | 60 hrs/mo | All Pro features at 2x capacity |
 
-*Prices verified 2026-04-14. Annual billing saves 20% across all tiers (Basic $8, Standard $24, Pro $48, Mega $96). Check [midjourney.com](https://midjourney.com) for current rates.*
+*Prices verified 2026-04-15. Check [midjourney.com](https://midjourney.com) for current rates.*
 
 ## Key Features
 
-- **Aesthetic quality:** Midjourney's images are consistently the most visually appealing, with strong composition, lighting, color theory, and artistic style understanding ([Midjourney](https://midjourney.com)). Other models may match on technical accuracy, but Midjourney wins on "does this look good."
-- **v7 model:** launched early 2026 with major improvements in prompt understanding, text rendering, hand/finger accuracy, and photorealism mode ([Midjourney Docs](https://docs.midjourney.com)).
+- **Aesthetic quality:** Midjourney's images are consistently the most visually appealing, with strong composition, lighting, color theory, and artistic style understanding ([Midjourney](https://midjourney.com)). Other models may match on technical accuracy; Midjourney wins on "does this look good."
+- **V7 model (default):** launched early 2026 with major improvements in prompt understanding, text rendering, hand and finger accuracy, and photorealism mode.
+- **V8 model (alpha):** in testing as of April 2026. Not yet confirmed as default. Early reports indicate further improvements to photorealism and content handling.
 - **Web editor:** full browser-based editor with canvas, inpainting, outpainting, and style references. No longer Discord-only (though Discord still works).
-- **Style references:** upload reference images to guide the aesthetic. "Make it look like this" actually works well.
+- **Style references:** upload reference images to guide the aesthetic. Works reliably for consistent brand and character styles.
 - **Relax mode:** unlimited generations at slower speed on Standard and Pro plans. Effectively unlimited images if you are patient.
 - **Community and ecosystem:** the largest AI art community. Extensive prompt databases, style guides, and shared techniques.
 
@@ -84,17 +85,17 @@ Midjourney costs $10-$120/month with no free tier, starting at $10/month Basic (
 
 Midjourney has no free tier ($10/month minimum), no public API for programmatic access, and a distinctive aesthetic that can look identifiably AI-generated to experienced viewers ([Midjourney](https://midjourney.com)).
 
-- **No free tier.** $10/mo minimum. Every competitor except Runway offers some form of free access.
+- **No free tier.** $10/mo minimum. Competitors including Leonardo, Flux, and Ideogram offer free access.
 - **No API.** As of April 2026, no public API for programmatic access. Cannot integrate into automated workflows. This is a significant gap for developers and businesses.
-- **Text rendering still imperfect.** v7 improved text-in-image dramatically, but Ideogram 2.0 is still better for text-heavy images like logos and thumbnails.
-- **"Midjourney look."** The distinctive aesthetic is a strength and a weakness. Images can look "too Midjourney," and experienced viewers can spot them. Less neutral than Flux.
-- **Photorealism.** While v7 improved significantly, DALL-E and Flux still produce more naturally photorealistic output for certain subjects.
+- **Text rendering still imperfect.** V7 improved text-in-image, but Ideogram 2.0 remains the better choice for text-heavy designs like logos and thumbnails.
+- **V8 is alpha only.** Not yet in production. Feature set and default model status not confirmed as of April 15, 2026.
+- **"Midjourney look."** The distinctive aesthetic is a strength and a weakness. Images can look "too Midjourney," and experienced viewers can identify them. Less neutral than Flux for photorealism use cases.
 - **No self-hosting.** Cloud-only, closed-source. No way to run locally or fine-tune.
 - **Image rights.** Basic plan images are public by default. Need Pro plan ($60/mo) for stealth mode (private images).
 
 ## Bottom Line
 
-Midjourney is the best choice for designers and creators who prioritize aesthetic quality and visual polish above all else, but Flux wins if you need open-source self-hosting, LoRA customization, or zero per-image costs. The v7 model and web editor addressed the two biggest historical complaints (quality ceiling and Discord-only UX). Choose Ideogram if you need perfect text rendering. Choose Leonardo if you want a free tier.
+Midjourney is the best choice for designers and creators who prioritize aesthetic quality and visual polish above all else. V7 delivers the current production standard; V8 alpha testing shows the roadmap continuing. The web editor addressed the historical Discord-only UX complaint. Choose Ideogram if you need reliable text rendering. Choose Leonardo if you want a free tier. Choose Flux if you need open-source self-hosting or LoRA customization. If no public API and no free tier are acceptable trade-offs for the quality ceiling, Midjourney wins.
 
 ## Best Alternatives
 
@@ -106,13 +107,16 @@ Midjourney is the best choice for designers and creators who prioritize aestheti
 ## FAQ
 
 **Is Midjourney free?**
-No, Midjourney does not have a free tier. The minimum plan costs $10/month (Basic). Midjourney occasionally ran limited free trials in the past, but as of April 2026 there is no free access. Leonardo AI is the best free alternative for AI image generation.
+No, Midjourney does not have a free tier. The minimum plan costs $10/month (Basic). As of April 2026 there is no free access. Leonardo AI is the best free alternative for AI image generation.
 
 **How much does Midjourney cost?**
-Midjourney Basic costs $10/month (~200 images on fast mode, unlimited on relax). Standard costs $30/month (~900 fast images). Pro costs $60/month (stealth mode for private images, 30 fast GPU hours). All plans include unlimited generations on relax (slower) mode.
+Midjourney Basic costs $10/month (~3.3 GPU hours fast mode, no Relax). Standard costs $30/month (15 fast GPU hours, unlimited Relax). Pro costs $60/month (stealth mode for private images, 30 fast GPU hours). Mega costs $120/month (60 fast GPU hours, all Pro features). Annual billing saves approximately 20%.
+
+**What is Midjourney V8?**
+V8 is an alpha model as of April 2026, not yet confirmed as the default. Early testing reports improvements to photorealism and content handling compared to V7. V7 remains the production default for paid subscribers. Check [midjourney.com](https://midjourney.com) for current model status.
 
 **What are the best alternatives to Midjourney?**
-Flux is the best alternative for technical users who want open-source, self-hosting, and LoRA customization (free to self-host). Ideogram 2.0 is better for text rendering in images. Leonardo AI offers the best free tier (150 images/day) for users who want to avoid monthly fees.
+Flux is the best alternative for technical users who want open-source, self-hosting, and LoRA customization. Ideogram 2.0 is better for text rendering in images. Leonardo AI offers the best free tier for users who want to avoid monthly fees.
 
 ## Related
 

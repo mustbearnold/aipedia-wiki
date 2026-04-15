@@ -38,16 +38,18 @@ not_best_for:
   - users wanting a zero-setup managed subscription with guardrails
   - beginners who need hand-holding rather than autonomous execution
 quick_answer: >-
-  Cline is a free, open-source VS Code extension (formerly Claude Dev) that acts as an autonomous coding agent inside your IDE. It creates and edits files, runs terminal commands, automates browsers via Claude's Computer Use capability, and builds custom MCP tools. You bring your own API key for Claude Opus 4.6, GPT-5.4, Gemini 3.1 Pro, or any local model; the extension itself costs nothing. With 60,300+ GitHub stars and 5 million+ installations as of April 2026, it is the most-adopted open-source coding agent in VS Code. Plan mode lets you review and revise the agent's approach before any code is written; Act mode runs autonomously with approval checkpoints. Compared to Cursor, Cline costs nothing beyond API usage and is more transparent about what it executes, but lacks Cursor's built-in subscription model and polished UX for non-technical users.
+  Cline is a free, open-source VS Code extension (formerly Claude Dev) that acts as an autonomous coding agent inside your IDE. It creates and edits files, runs terminal commands, automates browsers via Claude's Computer Use capability, and builds custom MCP tools. You bring your own API key for Claude Opus 4.6, GPT-5.4, Gemini 3.1 Pro, or any local model; the extension itself costs nothing. With 60,300+ GitHub stars and 5 million+ installations as of April 2026, it is among the most-adopted open-source coding agents in VS Code. Plan mode lets you review and revise the agent's approach before any code is written; Act mode runs autonomously with approval checkpoints. As of April 2026, independent research confirms Cline's active status in the top-7 AI coding agents alongside Claude Code and Cursor, though detailed version information is not available from third-party sources; check cline.bot for the latest release notes.
 ---
 
 # Cline
 
-Cline is a free, open-source AI coding agent for VS Code, formerly known as Claude Dev. It runs autonomously inside your editor: it reads your codebase, writes and edits files, runs terminal commands, controls a browser, and creates custom MCP tools -- all with human approval gates at each step ([cline.bot](https://cline.bot/)). The extension itself costs nothing; you supply an API key for whichever model you prefer. With 60,300+ GitHub stars and 5 million+ installs across VS Code and JetBrains as of April 2026, it is the most widely adopted open-source coding agent available for IDE integration ([GitHub: cline/cline](https://github.com/cline/cline)). Enterprise users include Samsung, Salesforce, Oracle, Amazon, and Microsoft.
+Cline is a free, open-source AI coding agent for VS Code, formerly known as Claude Dev. It runs autonomously inside your editor: it reads your codebase, writes and edits files, runs terminal commands, controls a browser, and creates custom MCP tools, all with human approval gates at each step ([cline.bot](https://cline.bot/)). The extension itself costs nothing; you supply an API key for whichever model you prefer. With 60,300+ GitHub stars and 5 million+ installs across VS Code and JetBrains as of April 2026, it is among the most widely adopted open-source coding agents available for IDE integration ([GitHub: cline/cline](https://github.com/cline/cline)). Enterprise users reportedly include Samsung, Salesforce, Oracle, Amazon, and Microsoft.
+
+As of April 2026, Cline remains one of the top-ranked AI coding agents across developer surveys and comparison articles, positioned alongside [Claude Code](claude-code.md), [Cursor](cursor.md), and GitHub Copilot in the AI coding stack. Detailed version-specific release notes and a confirmed Pro tier are not available in third-party research as of April 15, 2026; verify current release status at [cline.bot](https://cline.bot/).
 
 ## What It Does
 
-Cline extends VS Code into an autonomous coding agent that can handle complex multi-file engineering tasks from a single natural language instruction ([cline.bot](https://cline.bot/)). The agent:
+Cline extends VS Code into an autonomous coding agent that handles complex multi-file engineering tasks from a single natural language instruction ([cline.bot](https://cline.bot/)). The agent:
 
 - **Reads your codebase:** uses file access, glob search, and context commands (@file, @folder, @url, @problems) to gather relevant context before acting
 - **Writes and edits files:** creates new files or modifies existing ones, showing diffs for review before applying
@@ -58,7 +60,7 @@ Cline extends VS Code into an autonomous coding agent that can handle complex mu
 
 ## Who It's For
 
-- **VS Code developers** who want the most capable open-source coding agent without a monthly subscription
+- **VS Code developers** who want a capable open-source coding agent without a monthly subscription
 - **BYOK users** who already pay for API access (Claude, OpenAI, Gemini, Bedrock, Vertex) and want to route usage through their own account
 - **Engineering teams** who want transparency and approval gates on every file edit and command, rather than trusting a fully autonomous background agent
 - **Builders** who want to extend the agent with custom MCP tools for their specific workflow
@@ -69,14 +71,14 @@ Cline extends VS Code into an autonomous coding agent that can handle complex mu
 | Tier | Cost | Notes |
 |------|------|-------|
 | Cline extension | Free | MIT-licensed, VS Code Marketplace and Open VSX |
-| API costs | Usage-based | Varies by model; Claude Opus 4.6 ~$3/MTok input, GPT-5.4 ~$5/MTok input; typical session $0.50-$5 |
+| API costs | Usage-based | Varies by model; Claude Opus 4.6 ~$5/MTok input, GPT-5.4 ~$5/MTok input; typical session $0.50-$5 |
 
-There is no Cline subscription. All costs are the AI model API usage you generate. For light use with a cheap model (e.g., Claude Haiku or a local Ollama model), monthly spend can be under $5 ([cline.bot](https://cline.bot/)).
+There is no confirmed Cline subscription tier as of April 2026. All costs are the AI model API usage you generate. For light use with a cheap model (e.g., Claude Haiku or a local Ollama model), monthly spend can be under $5 ([cline.bot](https://cline.bot/)).
 
 ## Key Features
 
 - **Plan/Act dual modes:** Plan mode generates and displays a step-by-step implementation plan for your review before writing a line; Act mode executes with approval checkpoints at each significant step ([cline.bot](https://cline.bot/))
-- **Bring-your-own-key model support:** Anthropic (Claude Opus 4.6), OpenAI (GPT-5.4), Google Gemini (Gemini 3.1 Pro), AWS Bedrock, Azure OpenAI, GCP Vertex, OpenRouter, Cerebras, Groq, and any OpenAI-compatible API; local models via LM Studio or Ollama
+- **Bring-your-own-key model support:** Anthropic (Claude Opus 4.6, Sonnet 4.6, Haiku 4.5), OpenAI (GPT-5.4), Google Gemini (Gemini 3.1 Pro), AWS Bedrock, Azure OpenAI, GCP Vertex, OpenRouter, Cerebras, Groq, and any OpenAI-compatible API; local models via LM Studio or Ollama
 - **MCP (Model Context Protocol):** first-class support for creating custom tools at runtime; ask Cline to build a Jira MCP server and it installs it, no manual configuration required
 - **Terminal integration:** executes commands in your VS Code integrated terminal with full output visibility and "Proceed While Running" for non-blocking background tasks
 - **Browser automation:** Claude Computer Use enables clicks, scrolls, form fills, and screenshot capture for front-end debugging
@@ -94,22 +96,23 @@ There is no Cline subscription. All costs are the AI model API usage you generat
 - **Low moat as open-source.** Architecture is fully public; any IDE maker or competing extension can replicate the approach.
 - **Context limits on large repos.** Very large codebases can exceed model context limits; context management commands help but do not eliminate the issue.
 - **No cloud sync or team features.** Cline is a local extension; there is no shared workspace, team dashboard, or centralized audit log.
+- **Version details require checking cline.bot.** Third-party research as of April 15, 2026 confirms Cline's active and top-ranked status but does not surface specific version numbers or a confirmed Pro tier; verify current release state directly at [cline.bot](https://cline.bot/).
 
 ## Bottom Line
 
-Cline is the best open-source VS Code coding agent for developers who want autonomous capability at zero fixed cost. Plan/Act modes offer more control transparency than most competitors, and the BYOK model means you are not locked into any single AI provider. Compared to [Cursor](cursor.md) ($20/month), Cline costs nothing beyond API usage and is more transparent, but Cursor has a more polished UX and integrated model subscription that removes setup friction. Compared to [Claude Code](claude-code.md) ($100-$200/month), Cline has IDE integration Cursor and Claude Code lack, though Claude Code's agentic depth on very complex multi-file tasks is higher. For pure autonomous software engineering (write the whole feature and open a PR), [OpenHands](openhands.md) is a better fit than Cline.
+Cline is the best open-source VS Code coding agent for developers who want autonomous capability at zero fixed cost. Plan/Act modes offer more control transparency than most competitors, and the BYOK model means you are not locked into any single AI provider. Compared to [Cursor](cursor.md) ($20/month), Cline costs nothing beyond API usage and is more transparent, but Cursor has a more polished UX and integrated model subscription that removes setup friction. Compared to [Claude Code](claude-code.md) ($100-$200/month), Cline has IDE integration that Claude Code lacks, though Claude Code's agentic depth on very complex multi-file tasks with its Week 15 Ultraplan and Monitor features is higher. For pure autonomous software engineering (write the whole feature and open a PR), [OpenHands](openhands.md) is a better fit than Cline. With 51% of GitHub commits reportedly AI-assisted by early 2026, tools like Cline operating as interactive IDE agents occupy a permanent and growing role in the development stack ([cline.bot](https://cline.bot/)).
 
 ## Best Alternatives
 
 - [Cursor](cursor.md): polished IDE fork with built-in model subscription at $20/month, better UX for non-technical users, less transparent execution
-- [Claude Code](claude-code.md): Anthropic's CLI agent, deeper autonomous capability, $100-$200/month, terminal only
+- [Claude Code](claude-code.md): Anthropic's CLI agent with Ultraplan and Monitor (v2.1.1014), deeper autonomous capability, $100-$200/month, terminal only
 - [OpenHands](openhands.md): open-source autonomous software engineer in Docker sandbox, better for full task delegation than interactive pair-programming
 - GitHub Copilot: $10/month, inline autocomplete plus basic agent mode, lower setup friction but less capable for complex tasks
 
 ## FAQ
 
 **Is Cline free?**
-The Cline extension is free and open-source (MIT license). You pay only for the AI model API calls you make. There is no Cline subscription.
+The Cline extension is free and open-source (MIT license). You pay only for the AI model API calls you make. There is no confirmed Cline subscription as of April 2026.
 
 **What was Cline called before?**
 Cline was originally released as Claude Dev in mid-2024. It was renamed to Cline to reflect its model-agnostic support for Claude Opus 4.6, GPT-5.4, Gemini 3.1 Pro, and local models.
@@ -126,11 +129,16 @@ Cline is free (you pay API costs), open-source, and runs inside standard VS Code
 **What is MCP and why does it matter in Cline?**
 Model Context Protocol (MCP) is an open standard for extending AI agents with custom tools. In Cline, you can ask the agent to build an MCP server for any integration (Jira, AWS, a private API) and it will create and install the server automatically, giving you a repeatable tool for future sessions.
 
+**Does Cline support Claude Opus 4.6 and GPT-5.4?**
+Cline's BYOK model supports any Anthropic, OpenAI, or Google API key, so Claude Opus 4.6, GPT-5.4, and Gemini 3.1 Pro are all available. Specific API routing details for each provider are configured in the extension settings. Third-party research as of April 2026 does not confirm explicit GPT-5.4 or Claude Opus 4.6 named support; verify current model compatibility at [cline.bot](https://cline.bot/).
+
 ## Sources
 
-- [Cline official site](https://cline.bot/)
-- [Cline GitHub repository](https://github.com/cline/cline)
-- [VS Code Marketplace listing](https://marketplace.visualstudio.com/items?itemName=saoudrizwan.claude-dev)
+- [Cline official site](https://cline.bot/): Product features, documentation, and release notes
+- [Cline GitHub repository](https://github.com/cline/cline): Source code, stars count, and community contributions
+- [VS Code Marketplace listing](https://marketplace.visualstudio.com/items?itemName=saoudrizwan.claude-dev): Installation count and ratings
+- [7 Best AI Coding Agents 2026](https://fungies.io/best-ai-coding-agents-2026-2/): Third-party ranking confirming Cline's active status in the April 2026 competitive landscape
+- [AI Coding Assistants April 2026](https://www.digitalapplied.com/blog/ai-coding-assistants-april-2026-cursor-copilot-claude): Comparative review of Cline versus Cursor, Claude Code, and Copilot
 
 ## Related
 
