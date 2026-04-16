@@ -532,6 +532,23 @@ const featuredComparisons = comparisons
       rail.addEventListener('scroll', updateArrowState, { passive: true });
       window.addEventListener('resize', updateArrowState);
       updateArrowState();
+
+      // Mouse wheel: convert vertical wheel to horizontal scroll while the
+      // cursor is over the rail. Only intercepts when (a) the wheel is
+      // primarily vertical (trackpad horizontal swipes pass through) and
+      // (b) the rail can still scroll in that direction (so hitting the end
+      // lets the page scroll normally instead of trapping the cursor).
+      rail.addEventListener('wheel', (e) => {
+        if (!e.deltaY) return;
+        if (Math.abs(e.deltaY) <= Math.abs(e.deltaX)) return;
+        const max = rail.scrollWidth - rail.clientWidth;
+        const cur = rail.scrollLeft;
+        const goingRight = e.deltaY > 0;
+        const canScroll = (goingRight && cur < max - 1) || (!goingRight && cur > 1);
+        if (!canScroll) return;
+        e.preventDefault();
+        rail.scrollBy({ left: e.deltaY, behavior: 'auto' });
+      }, { passive: false });
     })();
   </script>
 
