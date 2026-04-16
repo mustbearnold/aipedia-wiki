@@ -460,16 +460,11 @@ a, button, [role="button"], .tool-card, .category-pill, .helpful-btn, .copy-btn 
   transition-duration: 80ms;
 }
 
-/* Tool logo chips inside category cards — frameless with a thin ring
-   so dark-on-transparent logos still read against the card. */
+/* Tool logo chips inside category cards — bare 24px logos, no ring at
+   this size (would read as pixel-dust). Fan-out on card hover. */
 .cat-tool-logo {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
   flex: none;
-  overflow: hidden;
   transition: transform 200ms cubic-bezier(0.22, 1, 0.36, 1);
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.15);
 }
 @media (hover: hover) and (pointer: fine) {
   .cat-card:hover .cat-tool-logo:nth-child(1) { transform: translateX(-3px) translateY(-1px); }
