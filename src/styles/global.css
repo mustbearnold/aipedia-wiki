@@ -129,6 +129,18 @@ html {
   border-bottom-color: var(--accent-primary);
 }
 
+/* Escape hatch: let Tailwind's text-* classes win inside .not-prose blocks.
+   Without this, .wiki-prose a wins on specificity and every link inside a
+   .not-prose wrapper picks up --accent-primary, which kills contrast on
+   solid-purple buttons (empty-looking text). */
+.wiki-prose .not-prose a {
+  color: inherit;
+  border-bottom: none;
+}
+.wiki-prose .not-prose a:hover {
+  border-bottom: none;
+}
+
 .wiki-prose table {
   width: 100%;
   border-collapse: collapse;
