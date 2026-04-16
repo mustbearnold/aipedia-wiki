@@ -57,9 +57,7 @@
         if (!slug) return '';
         const logoSrc = '/logos/tools/' + slug + '.png';
         return '<a href="/tools/' + slug + '/" class="shrink-0 w-[140px] rounded-xl border border-[var(--border)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] hover:border-[rgba(167,139,250,0.35)] transition-colors p-3 no-underline group">' +
-          '<span class="tool-logo block mb-2" style="width: 32px; height: 32px; padding: 2px; border-radius: 8px;">' +
-            '<img src="' + logoSrc + '" alt="" width="32" height="32" loading="lazy" class="block w-full h-full object-contain" onerror="this.style.display=\'none\'" />' +
-          '</span>' +
+          '<img src="' + logoSrc + '" alt="" width="32" height="32" loading="lazy" class="block mb-2 object-contain" style="width: 32px; height: 32px; border-radius: 8px;" onerror="this.style.display=\'none\'" />' +
           '<div class="text-[13px] font-semibold text-[var(--text-primary)] group-hover:text-[var(--accent-primary)] truncate transition-colors">' + title + '</div>' +
         '</a>';
       }).join('');

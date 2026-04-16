@@ -174,21 +174,11 @@ const categoryEmoji: Record<string, string> = {
   #search-results .s-result.is-selected,
   #search-results .g-result.is-selected { box-shadow: inset 0 0 0 1px rgba(167,139,250,0.35); }
   #search-results .s-icon {
-    width: 34px; height: 34px; border-radius: 8px;
+    width: 34px; height: 34px;
     display: flex !important; align-items: center; justify-content: center;
     flex-shrink: 0;
-    overflow: hidden;
-    background: linear-gradient(135deg, rgba(255,255,255,0.88), rgba(255,255,255,0.72));
-    box-shadow: inset 0 1px 0 rgba(255,255,255,0.7), 0 1px 2px rgba(0,0,0,0.1);
-    padding: 2px;
   }
-  @supports (backdrop-filter: blur(8px)) {
-    #search-results .s-icon {
-      background: linear-gradient(135deg, rgba(255,255,255,0.78), rgba(255,255,255,0.58));
-      backdrop-filter: blur(12px) saturate(150%);
-    }
-  }
-  #search-results .s-icon img { width: 100%; height: 100%; object-fit: contain; display: block; }
+  #search-results .s-icon img { width: 100%; height: 100%; object-fit: contain; display: block; border-radius: 6px; }
   #search-results .s-text { flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; gap: 1px; }
   #search-results .s-name {
     font-size: 13px; font-weight: 600; color: var(--text-primary);
