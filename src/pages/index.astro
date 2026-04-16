@@ -161,7 +161,7 @@ const featuredComparisons = comparisons
       </div>
     </div>
 
-    <div id="cat-rail" class="cat-rail flex gap-3 overflow-x-auto -mx-4 px-4 md:mx-0 md:px-0 snap-x snap-mandatory">
+    <div id="cat-rail" class="cat-rail flex gap-3 overflow-x-auto -mx-4 px-4 md:mx-0 md:px-0">
       <a href="/tools/" class="cat-card shrink-0 snap-start w-[200px] rounded-xl overflow-hidden no-underline group relative" style="background: linear-gradient(135deg, rgba(167,139,250,0.18), rgba(96,165,250,0.12)); border: 1px solid rgba(167,139,250,0.28);">
         <div class="px-3 py-2.5 flex flex-col gap-1.5">
           <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-[var(--accent-primary)]">All tools</div>
@@ -506,49 +506,83 @@ const featuredComparisons = comparisons
   </section>
 
   <script is:inline>
-    // Category rail: arrow buttons scroll the strip by ~1 card width.
-    // Hides arrows when at start/end so users know when they hit the boundary.
+    // Category rail: seamless auto-scrolling carousel.
+    // - Cards are cloned once so the rail is 2x its visual width.
+    // - RAF loop drifts scrollLeft forward at a constant px/sec.
+    // - When scrollLeft crosses the halfway mark (width of the original
+    //   set), we subtract half the total width. Visually nothing changes
+    //   because the clones line up exactly with the originals.
+    // - Hover pauses the drift so users can read without motion.
+    // - Wheel while hovering scrolls horizontally and the halfway-wrap
+    //   still applies in both directions for seamless looping.
+    // - Arrow buttons scroll by ~2 cards and pause the drift briefly.
     (function () {
       const rail = document.getElementById('cat-rail');
       const prev = document.getElementById('cat-rail-prev');
       const next = document.getElementById('cat-rail-next');
       if (!rail || !prev || !next) return;
 
+      const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const SPEED = 22; // px per second
+      const MANUAL_PAUSE_MS = 1400; // pause after arrow click or wheel
+
+      // Duplicate children once so we can loop seamlessly.
+      const originals = Array.from(rail.children);
+      originals.forEach((c) => rail.appendChild(c.cloneNode(true)));
+
+      let paused = false;
+      let manualPauseUntil = 0;
+      let lastTs = 0;
+
+      function halfWidth() {
+        return rail.scrollWidth / 2;
+      }
+      function normalize() {
+        const hw = halfWidth();
+        if (rail.scrollLeft >= hw) rail.scrollLeft -= hw;
+        else if (rail.scrollLeft < 0) rail.scrollLeft += hw;
+      }
+      function loop(ts) {
+        const isPaused = paused || Date.now() < manualPauseUntil || document.hidden;
+        if (!isPaused && lastTs) {
+          const dt = Math.min(0.05, (ts - lastTs) / 1000);
+          rail.scrollLeft += SPEED * dt;
+          normalize();
+        }
+        lastTs = ts;
+        requestAnimationFrame(loop);
+      }
+      if (!reduced) requestAnimationFrame(loop);
+
       function step(dir) {
         const cards = rail.querySelectorAll('.cat-card');
         if (!cards.length) return;
-        const cardWidth = cards[0].getBoundingClientRect().width + 12; // + gap
+        const cardWidth = cards[0].getBoundingClientRect().width + 12;
         rail.scrollBy({ left: dir * cardWidth * 2, behavior: 'smooth' });
+        manualPauseUntil = Date.now() + MANUAL_PAUSE_MS;
       }
-      function updateArrowState() {
-        const max = rail.scrollWidth - rail.clientWidth;
-        prev.style.opacity = rail.scrollLeft > 4 ? '1' : '0.35';
-        prev.style.pointerEvents = rail.scrollLeft > 4 ? 'auto' : 'none';
-        next.style.opacity = rail.scrollLeft < max - 4 ? '1' : '0.35';
-        next.style.pointerEvents = rail.scrollLeft < max - 4 ? 'auto' : 'none';
-      }
+
       prev.addEventListener('click', () => step(-1));
       next.addEventListener('click', () => step(1));
-      rail.addEventListener('scroll', updateArrowState, { passive: true });
-      window.addEventListener('resize', updateArrowState);
-      updateArrowState();
 
-      // Mouse wheel: convert vertical wheel to horizontal scroll while the
-      // cursor is over the rail. Only intercepts when (a) the wheel is
-      // primarily vertical (trackpad horizontal swipes pass through) and
-      // (b) the rail can still scroll in that direction (so hitting the end
-      // lets the page scroll normally instead of trapping the cursor).
+      rail.addEventListener('mouseenter', () => { paused = true; });
+      rail.addEventListener('mouseleave', () => { paused = false; lastTs = 0; });
+
+      // Seamless wrap on any scroll event (drift, wheel, arrow, touch)
+      rail.addEventListener('scroll', normalize, { passive: true });
+
+      // Wheel: vertical deltaY -> horizontal scroll, with seamless wrap.
       rail.addEventListener('wheel', (e) => {
         if (!e.deltaY) return;
         if (Math.abs(e.deltaY) <= Math.abs(e.deltaX)) return;
-        const max = rail.scrollWidth - rail.clientWidth;
-        const cur = rail.scrollLeft;
-        const goingRight = e.deltaY > 0;
-        const canScroll = (goingRight && cur < max - 1) || (!goingRight && cur > 1);
-        if (!canScroll) return;
         e.preventDefault();
-        rail.scrollBy({ left: e.deltaY, behavior: 'auto' });
+        rail.scrollLeft += e.deltaY;
+        normalize();
+        manualPauseUntil = Date.now() + MANUAL_PAUSE_MS;
       }, { passive: false });
+
+      // Pause drift when the tab is backgrounded
+      document.addEventListener('visibilitychange', () => { lastTs = 0; });
     })();
   </script>
 

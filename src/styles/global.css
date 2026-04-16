@@ -399,7 +399,6 @@ a, button, [role="button"], .tool-card, .category-pill, .helpful-btn, .copy-btn 
    Vertical padding is non-negotiable: overflow-x: auto implicitly clips
    the Y axis too, which cuts off card lift shadows on hover. */
 .cat-rail {
-  scroll-behavior: smooth;
   scroll-padding: 1rem;
   padding-top: 6px;
   padding-bottom: 12px;
