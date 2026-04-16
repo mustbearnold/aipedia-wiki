@@ -66,9 +66,18 @@ html {
   body {
     background-color: var(--bg-base);
     color: var(--text-secondary);
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-family: 'Geist', 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
     font-size: 14px;
     line-height: 1.7;
+    font-feature-settings: 'ss01', 'cv11';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Geist Mono for code, keyboard keys, and tabular figures */
+  code, pre, kbd, samp, .font-mono, .tabular-nums {
+    font-family: 'Geist Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   }
 
   h1, h2, h3, h4 {
