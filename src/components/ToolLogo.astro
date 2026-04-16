@@ -29,11 +29,11 @@ for (const ext of EXTS) {
   }
 }
 
-// Compute a deterministic background color for the logo container so
-// dark logos (drawn in black on a transparent background) stay visible
-// against the dark site theme.
-const palette = ['#ffffff', '#f1f5f9', '#fef3c7', '#dbeafe', '#dcfce7', '#fce7f3', '#fee2e2', '#e0e7ff'];
-const bgColor = palette[slug.charCodeAt(0) % palette.length];
+// Single neutral backdrop so the grid of logos reads coherent across
+// the site. Real review sites (The Verge, Ars Technica, etc) use one
+// consistent tone rather than per-tool tints. Keeps dark logos visible
+// on the dark theme without introducing chromatic noise.
+const bgColor = '#f8fafc';
 ---
 
 {logoUrl ? (
