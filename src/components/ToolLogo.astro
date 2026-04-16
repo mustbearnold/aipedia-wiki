@@ -96,12 +96,16 @@ const radius = Math.max(6, Math.round(size * 0.22));
       0 1px 2px rgba(15, 23, 42, 0.08),
       0 0 0 1px rgba(15, 23, 42, 0.06);
   }
-  /* Subtle hover response when logo is inside a hoverable card */
-  .tool-card:hover .tool-logo,
-  a:hover > .tool-logo {
-    box-shadow:
-      inset 0 1px 0 rgba(255, 255, 255, 0.8),
-      0 4px 12px rgba(167, 139, 250, 0.18),
-      0 0 0 1px rgba(167, 139, 250, 0.25);
+  /* Subtle hover response when logo is inside a hoverable card.
+     Scoped to pointer devices so mobile taps don't leave the logo
+     stuck in a hover state. */
+  @media (hover: hover) and (pointer: fine) {
+    .tool-card:hover .tool-logo,
+    a:hover > .tool-logo {
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.8),
+        0 4px 12px rgba(167, 139, 250, 0.18),
+        0 0 0 1px rgba(167, 139, 250, 0.25);
+    }
   }
 </style>

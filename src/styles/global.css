@@ -294,13 +294,21 @@ html {
 .tool-card {
   will-change: transform;
 }
-.tool-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 24px -12px rgba(167, 139, 250, 0.35),
-              0 4px 10px -4px rgba(96, 165, 250, 0.18);
+@media (hover: hover) and (pointer: fine) {
+  .tool-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px -12px rgba(167, 139, 250, 0.35),
+                0 4px 10px -4px rgba(96, 165, 250, 0.18);
+  }
+}
+/* Mobile tap feedback: brief press-down on :active instead of sticky hover */
+.tool-card:active {
+  transform: translateY(0) scale(0.98);
+  transition: transform 80ms ease-out;
 }
 @media (prefers-reduced-motion: reduce) {
-  .tool-card:hover { transform: none; box-shadow: none; }
+  .tool-card:hover,
+  .tool-card:active { transform: none; box-shadow: none; }
 }
 
 /* Category pills: magnetic 3D tilt + lifted active state + click ripple.
@@ -321,13 +329,15 @@ html {
   will-change: transform;
   position: relative;
 }
-.category-pill:hover {
-  transform: translateZ(6px) rotateX(var(--ry, 0deg)) rotateY(var(--rx, 0deg)) scale(1.04);
-  background: var(--bg-card-hover);
-  border-color: rgba(167, 139, 250, 0.35);
-  color: var(--text-primary);
-  box-shadow: 0 6px 14px -6px rgba(167, 139, 250, 0.4),
-              0 2px 6px -2px rgba(96, 165, 250, 0.25);
+@media (hover: hover) and (pointer: fine) {
+  .category-pill:hover {
+    transform: translateZ(6px) rotateX(var(--ry, 0deg)) rotateY(var(--rx, 0deg)) scale(1.04);
+    background: var(--bg-card-hover);
+    border-color: rgba(167, 139, 250, 0.35);
+    color: var(--text-primary);
+    box-shadow: 0 6px 14px -6px rgba(167, 139, 250, 0.4),
+                0 2px 6px -2px rgba(96, 165, 250, 0.25);
+  }
 }
 .category-pill:active {
   transform: translateZ(2px) rotateX(var(--ry, 0deg)) rotateY(var(--rx, 0deg)) scale(0.98);
@@ -357,4 +367,27 @@ html {
   .category-pill:active,
   .category-pill.active { transform: none; transition: background-color 120ms ease, color 120ms ease; }
   .category-pill.ripple { animation: none; }
+}
+
+/* iOS Safari zooms into inputs when their font-size is below 16px on focus.
+   Enforce 16px on all text-entry elements on mobile regardless of what
+   Tailwind classes were applied. Desktop keeps the smaller size via the
+   min-width 768px carve-out where needed. */
+@media (max-width: 767px) {
+  input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]),
+  textarea,
+  select {
+    font-size: 16px !important;
+  }
+}
+
+/* Prevent iOS text-size boost on orientation change while we're at it */
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Better tap response: remove 300ms tap delay and dim flash on touch */
+a, button, [role="button"], .tool-card, .category-pill, .helpful-btn, .copy-btn {
+  -webkit-tap-highlight-color: rgba(167, 139, 250, 0.15);
+  touch-action: manipulation;
 }

@@ -22,7 +22,7 @@ const ogImageUrl = ogImage
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalURL.href} />
@@ -89,41 +89,47 @@ const ogImageUrl = ogImage
 
     <script is:inline>
       // Category pill 3D: magnetic tilt on hover + ripple propagation on click.
-      // Delegates on document so it survives Astro view transitions.
+      // Tilt only runs on devices with a real pointer (skips touch).
+      // Ripple fires on both click and touch so mobile still gets the satisfying
+      // cascade without leaving stuck hover states.
       (function () {
         if (window.__pill3DBound) return;
         window.__pill3DBound = true;
 
-        var MAX_TILT = 12; // degrees
+        var MAX_TILT = 12;
         var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        var hasFinePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
 
-        document.addEventListener('mousemove', function (e) {
-          if (reduced) return;
-          var pill = e.target.closest && e.target.closest('.category-pill');
-          if (!pill) return;
-          var r = pill.getBoundingClientRect();
-          var nx = (e.clientX - r.left) / r.width - 0.5;  // -0.5 .. +0.5
-          var ny = (e.clientY - r.top) / r.height - 0.5;
-          pill.style.setProperty('--rx', (nx * MAX_TILT).toFixed(2) + 'deg');
-          pill.style.setProperty('--ry', (-ny * MAX_TILT).toFixed(2) + 'deg');
-        });
+        if (hasFinePointer && !reduced) {
+          document.addEventListener('mousemove', function (e) {
+            var pill = e.target.closest && e.target.closest('.category-pill');
+            if (!pill) return;
+            var r = pill.getBoundingClientRect();
+            var nx = (e.clientX - r.left) / r.width - 0.5;
+            var ny = (e.clientY - r.top) / r.height - 0.5;
+            pill.style.setProperty('--rx', (nx * MAX_TILT).toFixed(2) + 'deg');
+            pill.style.setProperty('--ry', (-ny * MAX_TILT).toFixed(2) + 'deg');
+          });
 
-        document.addEventListener('mouseleave', function (e) {
-          var pill = e.target.closest && e.target.closest('.category-pill');
-          if (!pill) return;
-          pill.style.setProperty('--rx', '0deg');
-          pill.style.setProperty('--ry', '0deg');
-        }, true);
+          document.addEventListener('mouseleave', function (e) {
+            var pill = e.target.closest && e.target.closest('.category-pill');
+            if (!pill) return;
+            pill.style.setProperty('--rx', '0deg');
+            pill.style.setProperty('--ry', '0deg');
+          }, true);
+        }
 
-        document.addEventListener('click', function (e) {
-          var pill = e.target.closest && e.target.closest('.category-pill');
-          if (!pill) return;
+        function fireRipple(pill) {
           var row = pill.closest('.category-pills');
           if (!row) return;
           var pills = Array.prototype.slice.call(row.querySelectorAll('.category-pill'));
           var clickedIdx = pills.indexOf(pill);
-          pills.forEach(function (p) { p.classList.remove('ripple'); });
-          // Force reflow so animation can replay
+          pills.forEach(function (p) {
+            p.classList.remove('ripple');
+            // Also clear any lingering tilt values on touch devices
+            p.style.setProperty('--rx', '0deg');
+            p.style.setProperty('--ry', '0deg');
+          });
           void row.offsetWidth;
           pills.forEach(function (p, i) {
             var dist = Math.abs(i - clickedIdx);
@@ -134,6 +140,12 @@ const ogImageUrl = ogImage
               p.style.removeProperty('--ripple-delay');
             }, 360 + dist * 55 + 50);
           });
+        }
+
+        document.addEventListener('click', function (e) {
+          var pill = e.target.closest && e.target.closest('.category-pill');
+          if (!pill) return;
+          fireRipple(pill);
         });
       })();
     </script>
