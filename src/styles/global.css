@@ -392,12 +392,17 @@ a, button, [role="button"], .tool-card, .category-pill, .helpful-btn, .copy-btn 
   touch-action: manipulation;
 }
 
-/* Category rail — horizontal scroll with rich cards */
+/* Category rail — horizontal scroll with rich cards.
+   Vertical padding is non-negotiable: overflow-x: auto implicitly clips
+   the Y axis too, which cuts off card lift shadows and translate on hover.
+   The padding gives the lift animation room to show without being clipped. */
 .cat-rail {
   scroll-behavior: smooth;
   scrollbar-width: thin;
   scrollbar-color: rgba(167, 139, 250, 0.25) transparent;
   scroll-padding: 1rem;
+  padding-top: 6px;
+  padding-bottom: 18px;
 }
 .cat-rail::-webkit-scrollbar { height: 6px; }
 .cat-rail::-webkit-scrollbar-track { background: transparent; }
