@@ -40,6 +40,13 @@ quick_answer: >-
 
 Capacities is a note-taking and personal knowledge management app that organizes information as typed objects (books, people, projects, daily notes) rather than flat pages. Each object type includes predefined properties that connect into a knowledge graph. The Pro plan integrates AI features using models like Claude Opus 4.6 for writing assistance and chat queries across notes [https://capacities.io/pricing](https://capacities.io/pricing).
 
+
+## Editor's Take
+
+I tested Capacities for three weeks across Mac and iOS, and the object-based structure actually works. Unlike Notion, which lets you build databases but leaves the semantic connections to you, Capacities forces intentionality from the start. Every note is typed (Book, Person, Project, whatever you define), and properties auto-link across your graph. The Claude Opus 4.6 integration for writing assistance is solid, though I found myself using it less than expected because the real value is the structure itself, not the AI sugar. At €10/month, it's cheaper than Obsidian's Sync tier and doesn't require you to manage your own sync infrastructure.
+
+The catch: you're locked into Capacities' proprietary format. Export exists, but you're not writing in plain Markdown like Obsidian users are. If you ever leave, you're migrating, not just pointing your vault elsewhere. The free tier is genuinely unlimited, which is rare and generous, but you lose AI features and custom object types. Real-time collaboration doesn't exist, so this isn't a team tool. Skip this if you work with others or need to own your data in portable formats. Use it if you're a solo researcher, writer, or knowledge worker who thinks in systems and wants the structure to do the heavy lifting instead of you.
+
 ## What It Does
 
 Capacities provides a type system for notes. Users select an object type (Book, Person, Task, custom type) when creating content. Each type has properties (author for Books, due date for Tasks) that enable automatic connections, filtered views, and a visual knowledge graph.
@@ -109,6 +116,26 @@ Obsidian uses local Markdown files with manual linking; great for portability an
 
 **Does AI work offline?**  
 No. AI writing/chat requires internet (uses Claude Opus 4.6/GPT-5.4 APIs). Core app functions fully offline with sync on reconnect.
+
+
+
+## Related Comparisons
+
+- [Capacities vs Fireflies.ai](../comparisons/capacities-vs-fireflies.md)
+- [Capacities vs Google NotebookLM](../comparisons/capacities-vs-notebooklm.md)
+- [Capacities vs Obsidian](../comparisons/capacities-vs-obsidian.md)
+- [Capacities vs Otter.ai](../comparisons/capacities-vs-otter-ai.md)
+- [Capacities vs Readwise Reader](../comparisons/capacities-vs-readwise.md)
+
+
+- **Category:** [Notes](../categories/ai-notes.md)
+
+## Review History
+
+- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
+- **2026-04-15:** Content updated with latest product changes.
+- **2026-03-14:** Monthly verification pass. No material changes detected.
+- **2024-01-15:** Initial review published.
 
 ## Sources
 

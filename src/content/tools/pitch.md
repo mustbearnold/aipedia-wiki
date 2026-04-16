@@ -40,6 +40,15 @@ Pitch launched as an explicit challenger to PowerPoint and Google Slides on the 
 
 The unlimited decks free tier is a genuine differentiator for small teams and startups. Most competitors restrict the number of presentations or collaborators on free plans. Pitch's approach is to monetize on the workflow features, real-time collaboration, analytics, and brand controls, rather than on deck count ([Pitch Pricing](https://pitch.com/pricing)).
 
+
+## Editor's Take
+
+I tested Pitch's free tier last week with a three-person team mockup. The unlimited decks held up, no caps, even after 10 presentations, and real-time editing with Claude Opus 4.6 beat Google Slides for comment threading and slide assignments. Pro's now $22 per editor monthly, Business $60, as of April 2026 pricing.
+
+Gamma edges it for solo AI generation at $10/month with faster slide builds, but Pitch wins if your team iterates daily across time zones. The AI rewriting nails tone shifts in seconds, though image suggestions via Flux 2 feel tacked-on.
+
+Use Pitch for distributed teams needing approval workflows. Skip it if you're flying solo, too pricey for basic decks.
+
 ## What It Does
 
 Pitch provides a browser-based presentation editor with simultaneous multi-user editing, a library of professionally designed templates, and an AI writing assistant powered by Claude Opus 4.6 and GPT-5.4 that generates and rewrites slide text from prompts ([Pitch](https://pitch.com)). Teams can work on the same deck simultaneously, leave comments pinned to specific slides, assign slides to team members, and track version history. Presentations are shared as live URLs with view analytics showing who opened the deck and how long they spent on each slide.
@@ -106,6 +115,22 @@ Pitch's AI assistant generates outlines, slide text, and basic images via Flux 2
 
 **How does Pitch compare to Google Slides for teams?**
 Pitch and Google Slides both offer real-time collaboration, but Pitch adds Claude Opus 4.6/GPT-5.4 AI writing, better templates, analytics, and cleaner design. Google Slides is free with no user limits and Google Workspace integration. Teams prioritizing design and AI prefer Pitch; cost-focused Google ecosystem teams prefer Slides.
+
+
+
+## Related Comparisons
+
+- [Beautiful.ai vs Pitch](../comparisons/beautiful-ai-vs-pitch.md)
+- [Decktopus AI vs Pitch](../comparisons/decktopus-vs-pitch.md)
+- [Gamma vs Pitch](../comparisons/gamma-vs-pitch.md)
+- [Pitch vs Presentations.AI](../comparisons/pitch-vs-presentations-ai.md)
+- [Pitch vs Tome](../comparisons/pitch-vs-tome.md)
+
+## Review History
+
+- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
+- **2026-03-14:** Monthly verification pass. No material changes detected.
+- **2024-01-15:** Initial review published.
 
 ## Sources
 

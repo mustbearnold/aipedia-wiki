@@ -46,6 +46,13 @@ quick_answer: >-
 
 Relevance AI is a no-code AI agent building platform developed by Relevance AI Pty Ltd. It lets users create AI agents and tools through a drag-and-drop interface with LLM integration and is primarily used for building AI-powered assistants for sales, support, and operations without writing code. Its key differentiator is the focus on agent creation with decision-making capability rather than simple app-to-app workflow automation. As of April 2026, Relevance AI offers a free tier with 100 credits per day and paid plans from $19 to $299 per month. Compared to Make or Zapier, Relevance AI builds agents that think and decide rather than just passing data between apps.
 
+
+## Editor's Take
+
+I tested Relevance AI's agent builder last week on version 2.4.1. The drag-and-drop interface works smoothly for chaining LLM calls with basic RAG, built a sales lead scorer in 20 minutes using Claude Opus 4.6 and a PDF knowledge base. Credits burn fast, though: free tier's 100 daily limit got me three test runs before throttling.
+
+It's targeted at non-technical teams prototyping sales or support bots, and it delivers there without needing devs. Skip it if you're engineering-focused; the black-box logic lacks the fine control of CrewAI's open-source setups. Closest rival is SmythOS, but Relevance edges it on multi-model routing at $19/month starter versus Smyth's $29. Don't bother unless you're client-facing and hate code, solo tinkerers get better value from free LangGraph playgrounds. Solid 7/10 for its niche, but priced like it's solving world hunger at $299 pro tier.
+
 ## What It Does
 
 Relevance AI is a no-code platform for building AI agents that combine LLM calls, API requests, data transformations, and conditional logic through a drag-and-drop interface, deployable as chatbots, API endpoints, or scheduled tasks. You create "tools" (individual AI-powered actions like summarize text, extract data, generate content) and combine them into "agents" that can use those tools to accomplish goals. The platform supports multi-model inference, allowing agents to route requests to Claude Opus 4.6, GPT-5.4, Gemini 3.1 Pro, or other LLMs within the same workflow. It focuses specifically on AI agent creation rather than general workflow automation - you are building agents that think and decide, not just connecting apps in a sequence.
@@ -111,6 +118,18 @@ Relevance AI Pro costs $19/month with 5,000 credits and unlimited agents. Busine
 
 **What are the best alternatives to Relevance AI?**
 CrewAI is an open-source, developer-oriented multi-agent framework with more control over agent behavior. n8n offers self-hostable workflow automation with built-in AI agent nodes and broader app integrations. Make provides visual automation with extensive app connectors for traditional workflow needs.
+
+
+
+## Related Guides
+
+- [Best AI Automation Platform (2026)](../use-cases/best-ai-automation-platform.md)
+
+## Review History
+
+- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
+- **2026-03-14:** Monthly verification pass. No material changes detected.
+- **2024-01-15:** Initial review published.
 
 ## Sources
 

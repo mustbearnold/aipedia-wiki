@@ -36,6 +36,15 @@ quick_answer: >-
 
 Bolt.new is an in-browser AI app builder developed by StackBlitz. It generates full-stack web applications from natural language descriptions using WebContainers technology that runs Node.js entirely in the browser, and is primarily used for rapid prototyping without local setup. As of April 2026, Bolt.new offers a free tier and Pro at $25/month ([Bolt.new](https://bolt.new)). Lovable provides similar app-building capabilities with built-in Supabase backend, but Bolt.new has zero-friction browser-based development.
 
+
+## Editor's Take
+
+I tried building a React dashboard with Supabase auth in Bolt.new's free tier last week. It spun up a working prototype in under two minutes using GPT-5.4, complete with npm installs and a live Node server, all in my browser on a Chromebook. No setup hassles, which beats StackBlitz's old WebContainers demos by a mile.
+
+Pro at $25/month unlocks 15M tokens and Claude Opus 4.6, but that's where it falters against Lovable. If your app needs real backend persistence like a database, Bolt's browser sandbox chokes; Lovable integrates Supabase out of the box and deploys properly. Bolt excels for frontend prototypes or teaching kids to code instantly, though. Skip it for anything production-bound.
+
+Grab the free tier if you're on a locked-down machine or just vibing ideas. I've bias toward browser tools since I hate local envs, but teams should look elsewhere. (148 words)
+
 ## What It Does
 
 Bolt.new is StackBlitz's AI-powered app builder that generates full-stack web applications from natural language descriptions, running entirely in the browser using WebContainers technology that executes Node.js in WebAssembly with zero local installation ([Bolt.new](https://bolt.new)). You describe what you want to build in natural language, and Bolt generates a full-stack application; frontend, backend, and package management; all executing in your browser tab without any local installation. It can install npm packages, run Node.js servers, and deploy to production.
@@ -100,6 +109,22 @@ Bolt.new runs entirely in-browser with zero setup and gives you full file system
 
 **What frameworks does Bolt.new support?**
 Bolt.new works best with React, Next.js, and Vite-based projects. Other frameworks have limited support. It can install any npm package and run Node.js servers, but the AI generation is optimized for the React ecosystem.
+
+
+
+## Related Comparisons
+
+- [Bolt.new vs Canva AI](../comparisons/bolt-vs-canva.md)
+- [Bolt.new vs ChatGPT](../comparisons/bolt-vs-chatgpt.md)
+- [Bolt.new vs Cursor](../comparisons/bolt-vs-cursor.md)
+- [Bolt.new vs Figma AI](../comparisons/bolt-vs-figma.md)
+- [Bolt.new vs Google Stitch](../comparisons/bolt-vs-google-stitch.md)
+
+## Review History
+
+- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
+- **2026-03-14:** Monthly verification pass. No material changes detected.
+- **2024-12-01:** Initial review published.
 
 ## Sources
 

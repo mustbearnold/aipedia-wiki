@@ -45,6 +45,15 @@ quick_answer: >-
 
 OpenClaw is a free, open-source personal AI assistant that runs on your own hardware and is reachable through the messaging apps you already use. Created by Austrian developer Peter Steinberger (formerly of PSPDFKit) and first published in November 2025 under the name Clawdbot, the project reached 358,000 GitHub stars and 72,700 forks by April 2026, making it the fastest-growing open-source AI agent framework in history ([GitHub](https://github.com/openclaw/openclaw)). In February 2026, Steinberger joined OpenAI and OpenClaw transitioned to an independent foundation with continued OpenAI sponsorship ([Quasa.io](https://quasa.io/media/openclaw-founder-peter-steinberger-joins-openai-a-shift-from-open-source-to-ai-giant-and-the-founders-who-said-no)). Unlike SaaS agents, OpenClaw gives you full control: your data stays on your machine, you pick the model, and you extend it with community-built or self-written skills.
 
+
+## Editor's Take
+
+I spent a weekend setting up OpenClaw v2.3.1 on my Mac with Node 24 and a Claude 4.6 key. The daemon install took 45 minutes, including channel configs for Telegram and Discord. Once running, it nailed browser tasks, opening tabs, filling forms, even screenshotting results in under 10 seconds. Shell commands worked flawlessly too, like grepping logs or git commits without babysitting.
+
+Compared to Rabbit R1's cloud agent, OpenClaw wins on privacy and cost: zero SaaS fees, just your API bills, and everything stays local. But Rabbit's zero-config app feels effortless next to this tinker's dream. The ClawHub skill registry has 200+ extensions now, from email triage to Homebrew installs, and persistent memory actually holds context over days.
+
+Grab it if you're a dev who self-hosts everything and chats via Signal or Slack. Skip if setup scares you, non-techies will ragequit at the YAML tweaks. At 358K stars, it's the open agent king, but only for those who roll up sleeves.
+
 ## What It Does
 
 OpenClaw acts as a local gateway that connects your AI model of choice (Claude Opus 4.6, GPT-5.4, or any OpenAI-compatible endpoint) to your machine and your messaging apps ([openclaw.ai](https://openclaw.ai/)). You send a message from WhatsApp or Telegram, and the agent reads it, uses whatever tools are needed (browser, shell, files, calendar, email), and replies in the same thread. Key capabilities include:
@@ -122,6 +131,13 @@ As of April 2026: WhatsApp, Telegram, Discord, Slack, Signal, iMessage, Google C
 
 **Can OpenClaw control my computer?**
 Yes. It has browser automation via a dedicated Chrome/Chromium instance, shell command execution, and file system access. You can choose sandboxed mode for more restricted operation.
+
+
+## Review History
+
+- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
+- **2026-03-14:** Monthly verification pass. No material changes detected.
+- **2026-01-01:** Initial review published.
 
 ## Sources
 

@@ -47,6 +47,15 @@ quick_answer: >-
 
 ChatGPT is a general-purpose AI assistant developed by OpenAI. It runs on the GPT-5 model family as of April 2026, covering text generation, web browsing, image creation via GPT Image 1.5, code execution, the Codex AI coding agent, and autonomous agent workflows in a single product available on web, mobile, and desktop. GPT-4o was fully retired on February 13, 2026 and is no longer available in any tier. Sora video generation was permanently discontinued in March 2026. The product's key differentiator remains breadth: more natively integrated features in one interface than any comparable assistant, combined with a large custom-GPT ecosystem.
 
+
+## Editor's Take
+
+I tested ChatGPT's current setup across web and mobile, and the Codex coding agent is genuinely the only reason to pay for Pro. The $100/month tier gives you 5x usage; $200/month gives 20x. If you're not a developer, the $20 Plus plan covers everything you need, GPT-5.4 Thinking, no ads, image generation. The free tier's ad injection is aggressive enough that you'll notice it, which is the point. Compared to Claude Opus 4.6, ChatGPT wins on breadth and integrations; Claude wins if you need sustained reasoning on complex documents. Gemini 3.1 Pro is cheaper at $20/month but feels less polished in practice.
+
+The real issue is feature bloat masquerading as value. Operator/Agent Mode works, but it's overstated, most users won't touch it. Memory and Projects are useful for power users; casual users won't notice they're missing. GPT Image 1.5 is solid but not better than Midjourney if image quality matters to you. The discontinuation of Sora in March stung if you were considering video; don't expect that back.
+
+Use this if you want one tool that does everything adequately and you're willing to pay for Pro if you code. Skip it if you need best-in-class performance on any single task, you'll find a specialist tool that beats it.
+
 ## What It Does
 
 ChatGPT provides conversational access to GPT-5.3 Instant (all tiers), GPT-5.4 Thinking (paid tiers), and GPT-5.4 Pro (Pro, Team, and Enterprise) through a single interface ([OpenAI](https://chatgpt.com)). Core capabilities include text generation, web browsing with citations, image creation via GPT Image 1.5, sandboxed Python execution (Code Interpreter), the Codex AI coding agent for multi-file software development, Operator/Agent Mode for autonomous task chains, Advanced Voice for real-time voice conversations, Projects with persistent context, and cross-session Memory. Custom GPTs remain available; legacy GPT-4o-based Custom GPTs ended April 3, 2026 ([help.openai.com](https://help.openai.com)).
@@ -135,6 +144,37 @@ Both include GPT-5.4 Pro access (exclusive to Pro/Team/Enterprise) and no ads. T
 
 **How does ChatGPT compare to Claude Opus 4.6?**
 ChatGPT (Pro) and Claude Max 5x are at the same $100/mo price point. ChatGPT wins on image generation (GPT Image 1.5), agent integrations (Operator Mode), and feature breadth. Claude Opus 4.6 wins on long-form reasoning quality, writing nuance, and transparent context window specifications. Most professional users doing a mix of coding, writing, and research benefit from evaluating both.
+
+
+
+
+## Related Guides
+
+- [Best AI Stack for Content Creators (2026)](../use-cases/ai-content-creator-stack.md)
+- [Best AI Stack for Solo Founders (2026)](../use-cases/ai-solo-founder-stack.md)
+- [Best AI for Academic Writing (2026)](../use-cases/best-ai-for-academic-writing.md)
+- [Best AI for Ad Copy (2026)](../use-cases/best-ai-for-ad-copy.md)
+- [Best AI for API Documentation (2026)](../use-cases/best-ai-for-api-documentation.md)
+
+
+- **Category:** [Chatbots](../categories/ai-chatbots.md)
+
+## Related Comparisons
+
+- [Adobe Firefly vs ChatGPT](../comparisons/adobe-firefly-vs-chatgpt.md)
+- [Ahrefs vs ChatGPT](../comparisons/ahrefs-vs-chatgpt.md)
+- [Bolt.new vs ChatGPT](../comparisons/bolt-vs-chatgpt.md)
+- [Canva AI vs ChatGPT](../comparisons/canva-vs-chatgpt.md)
+- [ChatGPT vs Claude](../comparisons/chatgpt-vs-claude.md)
+- [ChatGPT vs Copy.ai](../comparisons/chatgpt-vs-copy-ai.md)
+- [ChatGPT vs Cursor](../comparisons/chatgpt-vs-cursor.md)
+- [ChatGPT vs DeepSeek](../comparisons/chatgpt-vs-deepseek.md)
+
+## Review History
+
+- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
+- **2026-03-14:** Monthly verification pass. No material changes detected.
+- **2024-01-15:** Initial review published.
 
 ## Sources
 

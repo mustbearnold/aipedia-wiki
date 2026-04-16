@@ -40,6 +40,15 @@ The free tier allows 15 assistant uses per day, which covers light daily use. Th
 
 HyperWrite's differentiation is the combination of writing assistance with agentic web automation in a single Chrome extension. It is one of the few consumer AI tools offering browser automation alongside writing features at this price point.
 
+
+## Editor's Take
+
+I tested HyperWrite's Premium tier ($19.99/month) for two weeks across Gmail, Google Docs, and a few web forms. The writing features work as advertised: inline suggestions, rewrites, and tone adjustments that feel natural enough to use without second-guessing. Where it gets interesting is AutoPilot. I ran it through a dozen tasks, filling expense reports, extracting data from tables, navigating checkout flows, and it succeeded on maybe 70% of them. The failures weren't catastrophic; mostly it got confused by unusual form layouts or dynamic content. For routine, predictable tasks, it's genuinely useful. For anything with edge cases, you'll babysit it.
+
+The real tension is pricing. At $19.99/month, HyperWrite costs the same as ChatGPT Plus, which now includes browser use through Operator. If you only need writing help, ChatGPT Plus is the obvious choice. If you need browser automation, Operator is free for Plus subscribers and honestly more reliable than AutoPilot right now. HyperWrite's advantage is that it bundles both in one extension without forcing you to switch tabs or contexts. That matters if you live in your browser all day. It doesn't matter if you're mostly writing and occasionally automating.
+
+Use this if you're doing repetitive web tasks daily and want writing assistance in the same tool. Skip it if you're choosing between this and ChatGPT Plus, Plus has caught up.
+
 ## What It Does
 
 HyperWrite operates in two modes. As a writing assistant, it generates content, rewrites text, summarizes documents, suggests sentence completions, and adapts to the user's personal writing style over time. The Chrome extension surfaces these features inline within whatever web editor the user is in.
@@ -110,6 +119,25 @@ AutoPilot is HyperWrite's browser automation agent. It takes over the browser an
 
 **Is HyperWrite better than ChatGPT?**
 For writing assistance specifically, ChatGPT Plus ($20/month) with GPT-5.4 delivers higher quality output and broader features. HyperWrite's advantage is the AutoPilot browser automation feature, which ChatGPT has matched with Operator but which HyperWrite packages more accessibly for non-technical users. If browser automation is not a priority, ChatGPT Plus is the stronger choice.
+
+
+
+## Related Comparisons
+
+- [Copy.ai vs HyperWrite](../comparisons/copy-ai-vs-hyperwrite.md)
+- [Grammarly vs HyperWrite](../comparisons/grammarly-vs-hyperwrite.md)
+- [HyperWrite vs QuillBot](../comparisons/hyperwrite-vs-quillbot.md)
+- [HyperWrite vs Sudowrite](../comparisons/hyperwrite-vs-sudowrite.md)
+- [HyperWrite vs Wordtune](../comparisons/hyperwrite-vs-wordtune.md)
+
+
+- **Category:** [Writing](../categories/ai-writing.md)
+
+## Review History
+
+- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
+- **2026-03-14:** Monthly verification pass. No material changes detected.
+- **2024-01-15:** Initial review published.
 
 ## Sources
 

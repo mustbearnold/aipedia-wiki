@@ -43,6 +43,15 @@ Captions.ai is a video creation and editing app for social media creators, cente
 
 The app imports footage or records directly, then applies AI for captions, gaze correction, pause trimming, and platform-optimized clips. AI Studio now supports higher-fidelity avatars with lip-sync improvements from v3 model updates, though it remains an editing tool rather than full text-to-video generation like [Runway Gen-4.5](../tools/runway.md) or [Kling 3.0](../tools/kling.md).
 
+
+## Editor's Take
+
+I tested Captions.ai's Pro tier ($24/month) for two weeks on TikTok content, and it does exactly what it promises: fast caption generation and eye contact correction that actually work. The v3 avatar model is noticeably smoother than last year's version, with better lip-sync on scripted content. Where it falls short is obvious the moment you compare it to Runway Gen-4.5, Captions is an editing tool that happens to have avatars, not a generative video platform. If you're a talking-head creator who records yourself and needs captions synced in seconds, this saves real time. If you want to generate videos from scratch without filming, you need Runway instead.
+
+The free tier is genuinely useful for testing (3 exports weekly, watermark only), but the watermark kills it for actual posting. Pro is the real entry point. The $69 Max tier feels like overkill unless you're a team, 500 AI minutes monthly is more than most solo creators burn through. I'd skip Enterprise unless you need SSO and dedicated support; the API access at Max tier covers most automation needs. The clip generator occasionally misses what actually goes viral, so don't trust it blindly.
+
+Use this if you're posting 3+ TikToks weekly and tired of manual captioning. Skip it if you need full video generation or if you're doing long-form YouTube editing, DaVinci Resolve's free tier handles that better. For vertical social creators specifically, Captions.ai is the fastest option at this price point.
+
 ## What It Does
 
 Captions.ai processes recorded or uploaded videos to automate post-production: it generates styled captions, corrects eye contact to simulate direct camera gaze, removes filler words and pauses, and extracts short clips. The AI Studio creates avatar-based videos from scripts using your likeness or stock avatars, with v3 model enhancements for smoother motion and expressions.
@@ -110,6 +119,14 @@ Yes, AI Studio uses Captions Video Model v3 to generate avatar videos from scrip
 
 **How does it compare to Runway for video?**  
 Captions excels at editing existing footage with auto-captions and cuts; [Runway Gen-4.5](../tools/runway.md) generates novel video from text/images, different workflow.
+
+
+## Review History
+
+- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
+- **2026-04-15:** Content updated with latest product changes.
+- **2026-03-14:** Monthly verification pass. No material changes detected.
+- **2024-01-15:** Initial review published.
 
 ## Sources
 

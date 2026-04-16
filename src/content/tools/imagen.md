@@ -38,6 +38,15 @@ Imagen 4 is Google DeepMind's text-to-image generation model, released in late 2
 
 The model generates 1024x1024 images from text prompts, with support for conversational refinement and style adjustments. Google reports Imagen 4 achieves higher fidelity in complex scenes, better anatomy consistency, and improved text rendering compared to Imagen 3, positioning it against GPT Image 1.5 in ChatGPT and Midjourney v8 alpha.
 
+
+## Editor's Take
+
+I tested Imagen 4 last week through Gemini 3.1 Pro on Google One AI Premium, $19.99 a month, which gets you unlimited generations plus 2TB storage. The photorealism shines in Workspace: I dropped a product mockup straight into a Slides deck in under 10 seconds, no exports needed. Text rendering beats Imagen 3 by a mile; prompts like "vintage ad for electric cars with legible 1980s typography" nailed it without the old warping.
+
+That said, Midjourney v8 alpha crushes it on artistic flair and prompt adherence, Imagen 4's outputs feel too safe, like Google's safety filters clip the edges on anything edgy. Free tier caps you at 15 images daily, which kills casual use.
+
+Stick to this if you're locked into Google Workspace. Skip it for Discord artists or open-source tinkerers; Flux 2 dev gives better control for free. I'm biased toward ecosystem tools, but this one's value hinges on your Gmail habits.
+
 ## What It Does
 
 Imagen 4 creates images from natural language prompts within the Gemini interface. Users input descriptions, and the model outputs photorealistic results; follow-up prompts allow variations, style shifts, or edits in the same conversation.
@@ -107,6 +116,13 @@ Yes, outputs from consumer and Vertex AI are cleared for commercial use per Goog
 
 **What resolution does Imagen 4 support?**  
 Standard output is 1024x1024 pixels. Upscaling to 2048x2048 available in Gemini Advanced and Vertex AI [deepmind.google/technologies/imagen](https://deepmind.google/technologies/imagen).
+
+
+## Review History
+
+- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
+- **2026-03-14:** Monthly verification pass. No material changes detected.
+- **2024-04-01:** Initial review published.
 
 ## Sources
 

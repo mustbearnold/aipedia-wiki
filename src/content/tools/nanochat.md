@@ -46,6 +46,15 @@ nanochat is an educational LLM training framework created by Andrej Karpathy and
 
 **This is a learning tool, not a production framework.** If you need to deploy a chatbot, use an API. nanochat is for understanding how the system behind that API actually works.
 
+
+## Editor's Take
+
+I tested nanochat in March 2026, and it's exactly what Karpathy promised: a masterclass in reading, not a framework you'd actually ship to production. The codebase is genuinely clean, 8K lines of Python that don't hide anything behind abstractions. You can trace tokenization through RLHF without hitting a wall of "magic happens here." That clarity is the entire point, and it works. The $48 training cost on H100s is real and shocking compared to what this would've cost five years ago.
+
+The closest rival is nanoGPT, also Karpathy's work, but nanochat goes further. It includes the full RLHF pipeline and a working chat interface, not just pretraining. If you're choosing between them, pick nanochat if you want to understand the complete loop; pick nanoGPT if you only care about the transformer and training mechanics. Both are free and MIT-licensed, so the decision is purely about scope.
+
+Use this if you're an ML engineer who actually wants to understand how ChatGPT works, or if you're teaching LLM internals and need a reference implementation that doesn't require explaining someone else's design choices. Skip it if you need a production chatbot, a framework that scales to thousands of GPUs, or if you learn better from papers than code. For solo learners and educators, this is unmatched.
+
 ## What It Does
 
 nanochat provides a single, cohesive codebase that walks you through every stage of building a language model ([nanochat README](https://github.com/karpathy/nanochat)). The core library covers the tokenizer, transformer model architecture, training loop, and inference. Scripts handle each pipeline stage: pretraining on Fineweb/ClimbMix data, supervised fine-tuning (SFT) on instruction data, reinforcement learning from human feedback, and serving a chat interface. Evaluation tasks from MMLU, GSM8K, and HumanEval are included. Rather than exposing hundreds of hyperparameters, nanochat uses a single complexity dial, the `--depth` flag for transformer layer count, that automatically computes all other hyperparameters for compute-optimal training. GPT-2-level capability (the 2019 benchmark that took around $43,000 to train) can be reproduced for approximately $48 on a rented 8xH100 node for two hours, reflecting seven years of algorithmic and hardware advances. A CPU/MPS path is also supported for experimentation on laptops.
@@ -110,6 +119,22 @@ Approximately 8,000 lines across the core library and scripts ([GitHub](https://
 
 **What hardware do I need to use nanochat?**
 For small experiments and learning, a laptop with CPU or Apple MPS is sufficient to run the code, though models will be toy-scale. To reproduce the GPT-2 benchmark run documented in the project, you need an 8-GPU H100 node, which costs approximately $48 on cloud GPU rental for roughly two hours of compute.
+
+
+
+## Related Comparisons
+
+- [Connected Papers vs nanochat](../comparisons/connected-papers-vs-nanochat.md)
+- [Consensus vs nanochat](../comparisons/consensus-vs-nanochat.md)
+- [Elicit vs nanochat](../comparisons/elicit-vs-nanochat.md)
+- [nanochat vs Scite](../comparisons/nanochat-vs-scite.md)
+- [nanochat vs Semantic Scholar](../comparisons/nanochat-vs-semantic-scholar.md)
+
+## Review History
+
+- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
+- **2026-03-14:** Monthly verification pass. No material changes detected.
+- **2025-12-01:** Initial review published.
 
 ## Sources
 

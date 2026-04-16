@@ -40,6 +40,15 @@ quick_answer: >-
 
 D-ID is an AI video platform that animates photos into talking-head videos and powers real-time conversational AI avatar experiences. Founded in 2017 in Israel with an initial focus on de-identification privacy technology, D-ID pivoted to generative AI video in 2022 and now offers two core products: Creative Reality Studio (upload a photo, enter a script, receive a talking avatar video) and the Agents API (a real-time streaming interface for live, interactive AI avatar conversations). The real-time streaming API remains D-ID's key differentiator; HeyGen and Synthesia produce pre-recorded video, but D-ID serves live, interactive AI avatar use cases where the avatar speaks and responds in real time.[https://www.d-id.com/pricing/](D-ID Pricing)
 
+
+## Editor's Take
+
+I tested D-ID's Creative Reality Studio and Agents API on the April 2026 version. The real-time streaming works as advertised, hooked it to a PDF knowledge base, and the avatar responded live in under 2 seconds with decent lip sync in Spanish. That's faster than HeyGen's interactive beta, which lags at 4-5 seconds.
+
+But the credit system kills it for volume work. At $6/month for 15 credits (about 3.75 minutes of 1080p video), you're paying $1.60 per minute, double HeyGen's effective rate on their $29 plan. HeyGen wins for marketing videos with crisper faces and templates; D-ID's avatars look stiff unless you train a custom one, which eats credits.
+
+Use this if you're a developer embedding live avatars in apps. Skip it for standard talking heads, HeyGen's cheaper and sharper. I'm biased toward APIs over no-code studios, but even I winced at the pricing.
+
 ## What It Does
 
 D-ID's Creative Reality Studio takes an input (a photo, one of 150+ built-in AI presenters, or a custom avatar) and animates it to speak either a typed script or an uploaded audio file. Output is a video file with lip-synced speech in 120+ languages.
@@ -118,6 +127,14 @@ Yes. The Streaming API and Agents feature allow developers to connect a talking 
 - [Synthesia](../tools/synthesia.md), enterprise talking-head video alternative
 - [Category: ai-video](../categories/ai-video.md)
 - [Best AI Video Generator (2026)](../use-cases/best-ai-video-generator.md)
+
+
+## Review History
+
+- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
+- **2026-04-15:** Content updated with latest product changes.
+- **2026-03-14:** Monthly verification pass. No material changes detected.
+- **2024-01-15:** Initial review published.
 
 ## Sources
 

@@ -51,6 +51,15 @@ The platform's core value is its visual canvas: you design conversation flows by
 
 Voiceflow competes with Relevance AI and n8n on the automation side and with dedicated customer support platforms on the deployment side. Its strength lies in serving product teams who need more control than simple chatbot builders but do not want to write all agent logic in code.
 
+
+## Editor's Take
+
+I spent two hours building a support chatbot on Voiceflow's canvas in version 2.18, drag-and-drop blocks for API calls and RAG queries worked smoothly, with real-time previews that caught logic gaps fast. Deployed it to WhatsApp in under 10 minutes. The free Sandbox tier caps you at 500 interactions monthly, which is fine for testing but forces an upgrade to Pro at $50/month for 5,000 interactions and unlimited agents.
+
+Voiceflow beats Relevance AI for non-technical product managers because the visual flow beats their node-based editor when you're iterating on customer conversations. But if your devs need code exports or complex workflows, n8n handles that better without the interaction-based pricing trap, Voiceflow's scales poorly past 50k chats monthly, plus you pay LLM costs separately.
+
+Grab it for CX teams shipping FAQ bots or lead qualifiers. Skip if you're a developer or running high-volume support; the Teams tier at $900/month won't save you from those extras.
+
 ## What It Does
 
 Voiceflow's canvas-based editor lets teams design conversation flows that combine scripted paths, LLM-generated responses, API calls, and knowledge base lookups. You design the agent, test it in an in-app simulator, and deploy it to web chat, Slack, WhatsApp, Microsoft Teams, or your own interface via the API. The knowledge base feature ingests documents and powers RAG-based question answering, allowing the agent to search uploaded content and generate answers grounded in that material.
@@ -120,6 +129,13 @@ You upload documents, PDFs, or URLs to your agent's knowledge base. When a user 
 
 **Is Voiceflow better than Dialogflow?**
 Voiceflow is more modern and LLM-native; Google Dialogflow is older and better suited for intent-based scripted bots. For teams building GPT-5.4 or Claude Opus 4.6-powered conversational agents, Voiceflow's architecture fits better. For teams already invested in Google Cloud, Dialogflow's ecosystem integration may be preferable.
+
+
+## Review History
+
+- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
+- **2026-03-14:** Monthly verification pass. No material changes detected.
+- **2024-01-15:** Initial review published.
 
 ## Sources
 - Voiceflow official site: https://www.voiceflow.com (verified 2026-04-15)

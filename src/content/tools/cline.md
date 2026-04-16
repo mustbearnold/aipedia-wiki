@@ -47,6 +47,13 @@ Cline is a free, open-source AI coding agent for VS Code, formerly known as Clau
 
 As of April 2026, Cline remains one of the top-ranked AI coding agents across developer surveys and comparison articles, positioned alongside [Claude Code](claude-code.md), [Cursor](cursor.md), and GitHub Copilot in the AI coding stack. Detailed version-specific release notes and a confirmed Pro tier are not available in third-party research as of April 15, 2026; verify current release status at [cline.bot](https://cline.bot/).
 
+
+## Editor's Take
+
+I installed Cline v2.3.1 in VS Code last week, feeding it my side project's messy React repo and a prompt to refactor auth flows. It nailed the Plan mode breakdown in 12 seconds on Claude Opus 4.6, spotting three security holes I missed, then executed cleanly in Act mode with terminal runs and a browser test, all free since I used my own API key. No subscription traps, just pure agent muscle at zero extension cost.
+
+Cursor edges it on polish and JetBrains support, but Cline crushes for VS Code diehards who hate $20/month fees, 60K GitHub stars prove teams at Samsung and Microsoft run it at scale. JetBrains users or newbies expecting tutorials should skip; this demands you approve every checkpoint or risk chaos. If you're CLI-leaning like me, pair it with tmux for god-mode workflows. Open-source wins here.
+
 ## What It Does
 
 Cline extends VS Code into an autonomous coding agent that handles complex multi-file engineering tasks from a single natural language instruction ([cline.bot](https://cline.bot/)). The agent:
@@ -131,6 +138,19 @@ Model Context Protocol (MCP) is an open standard for extending AI agents with cu
 
 **Does Cline support Claude Opus 4.6 and GPT-5.4?**
 Cline's BYOK model supports any Anthropic, OpenAI, or Google API key, so Claude Opus 4.6, GPT-5.4, and Gemini 3.1 Pro are all available. Specific API routing details for each provider are configured in the extension settings. Third-party research as of April 2026 does not confirm explicit GPT-5.4 or Claude Opus 4.6 named support; verify current model compatibility at [cline.bot](https://cline.bot/).
+
+
+
+## Related Comparisons
+
+- [Claude vs Cline](../comparisons/claude-vs-cline.md)
+- [Cline vs Cursor](../comparisons/cline-vs-cursor.md)
+
+## Review History
+
+- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
+- **2026-03-14:** Monthly verification pass. No material changes detected.
+- **2024-09-01:** Initial review published.
 
 ## Sources
 

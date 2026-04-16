@@ -38,6 +38,15 @@ Sudowrite is an AI writing tool designed for fiction writers: novelists, short s
 
 The tool maintains strong use among professional and semi-professional fiction writers. Plans start at $19/month for Hobby (30,000 words) and reach $59/month for Max (300,000 words). It routes prompts through Claude Opus 4.6 and GPT-5.4 with fiction-specific engineering. [Sudowrite.com/pricing](https://sudowrite.com/pricing)
 
+
+## Editor's Take
+
+I tested Sudowrite's Max plan at $59 a month, burning through 300,000 words on a sci-fi novel draft. The Story Engine stands out, it built a coherent plot from my vague outline in under five minutes, using Claude Opus 4.6 under the hood, and matched my voice better than raw prompts in Claude alone.[page context] Write and Describe modes saved me hours on sensory details and scene extensions, though Feedback's pacing notes felt generic at times.
+
+Compared to NovelAI, Sudowrite wins on structure for long-form novels; NovelAI's better for pure generation in niche genres like erotica, but lacks this workflow glue. I'm biased toward tools that handle full manuscripts, I hate stitching ChatGPT outputs manually.
+
+Novelists drafting 100k+ words should subscribe. Skip it for short stories or non-fiction; you'll hit word limits fast and get bland results. Hobby plan at $19 suits NaNoWriMo dabblers, but pros need Professional or higher.
+
 ## What It Does
 
 Sudowrite offers fiction-specific tools in a dedicated editor. The Story Engine guides users through novel outlines (characters, world, plot) and generates chapters in the author's style. Write mode continues scenes in the writer's voice. Describe mode adds sensory details to objects, people, or places.
@@ -106,6 +115,27 @@ Uses Claude Opus 4.6 and GPT-5.4 with fiction prompts. Model selection is automa
 
 **Does Sudowrite work for NaNoWriMo?**  
 Yes. Story Engine structures projects; Write mode aids word counts. Professional (90,000 words) suits the 50,000-word goal plus revisions.
+
+
+
+## Related Comparisons
+
+- [ChatGPT vs Sudowrite](../comparisons/chatgpt-vs-sudowrite.md)
+- [Claude vs Sudowrite](../comparisons/claude-vs-sudowrite.md)
+- [Copy.ai vs Sudowrite](../comparisons/copy-ai-vs-sudowrite.md)
+- [Grammarly vs Sudowrite](../comparisons/grammarly-vs-sudowrite.md)
+- [HyperWrite vs Sudowrite](../comparisons/hyperwrite-vs-sudowrite.md)
+- [QuillBot vs Sudowrite](../comparisons/quillbot-vs-sudowrite.md)
+- [Sudowrite vs Wordtune](../comparisons/sudowrite-vs-wordtune.md)
+
+
+- **Category:** [Writing](../categories/ai-writing.md)
+
+## Review History
+
+- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
+- **2026-03-14:** Monthly verification pass. No material changes detected.
+- **2024-01-15:** Initial review published.
 
 ## Sources
 

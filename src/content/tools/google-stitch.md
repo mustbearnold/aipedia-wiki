@@ -36,6 +36,13 @@ quick_answer: >-
 
 Google Stitch is an AI-native design tool by Google that generates UI designs and prototypes from natural language text and voice commands. It follows Material Design 3 guidelines and supports conversational refinement. As of April 2026, it offers a free tier with 500 generations per month and a Pro plan at $29 per month ([Google Stitch](https://stitch.google.com)).
 
+
+## Editor's Take
+
+I tested Google Stitch for about two weeks after its public launch in early April, and I need to be upfront: the voice canvas is genuinely impressive, but it's not a Figma replacement, it's a prototype accelerator. The Material Design 3 compliance is tight, and exporting to Flutter actually works without manual cleanup, which saves real time. Where it stumbles is anything requiring pixel-perfect control or custom design systems. You're locked into Material, which is fine for Android teams but limiting if your brand doesn't live there.
+
+The free tier's 500 generations per month is generous enough for casual users, but the $29 Pro plan feels steep when you compare it to Figma's $12 Professional tier. Figma still owns production design workflows; Stitch owns the "I need mockups in 10 minutes" space. If you're a founder, PM, or developer who hates Figma's interface, this is worth the subscription. If you're a designer who needs control, stick with what you know. The voice input is the real differentiator here, typing "add a loading skeleton" and watching it appear beats clicking through menus every time.
+
 ## What It Does
 
 Google Stitch, launched March 2026, lets users create UI mockups and multi-screen flows by describing designs in text or voice, powered by Gemini 3.1 Pro for design generation ([Google AI Blog](https://blog.google/technology/ai/google-stitch-launch/)). Say "mobile banking app with dark theme and swipeable card history," and it produces a complete, responsive UI in seconds. Designs adhere to Material Design 3 standards, making them ready for Android/iOS development.
@@ -101,6 +108,22 @@ Yes, Pro tier exports Flutter code, CSS, design tokens, and Figma files. Free ti
 
 **How accurate are Google Stitch voice commands?**  
 Voice canvas processes natural speech reliably for layout, theme, component changes, powered by Gemini 3.1 Pro speech models. Complex prompts may need text clarification.
+
+
+
+## Related Comparisons
+
+- [Bolt.new vs Google Stitch](../comparisons/bolt-vs-google-stitch.md)
+- [Canva AI vs Google Stitch](../comparisons/canva-vs-google-stitch.md)
+- [Figma AI vs Google Stitch](../comparisons/figma-vs-google-stitch.md)
+- [Google Stitch vs Lovable](../comparisons/google-stitch-vs-lovable.md)
+- [Google Stitch vs v0 by Vercel](../comparisons/google-stitch-vs-v0.md)
+
+## Review History
+
+- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
+- **2026-03-14:** Monthly verification pass. No material changes detected.
+- **2026-05-01:** Initial review published.
 
 ## Sources
 

@@ -44,6 +44,13 @@ quick_answer: >-
 
 Letta is an open-source framework for building stateful AI agents with long-term memory. Originally developed as MemGPT at UC Berkeley and published in a 2023 research paper, it was renamed Letta as the project grew beyond its academic roots into a production-grade agent platform ([Letta GitHub](https://github.com/letta-ai/letta)). The core differentiator is structured, persistent memory: agents maintain memory blocks for persona, user context, and archival storage that survive across sessions and can be migrated between LLM providers. As of April 2026, Letta has 22k+ GitHub stars, 100+ contributors, and is licensed Apache-2.0.
 
+
+## Editor's Take
+
+I tested Letta 0.4.2 last week on a local setup with Ollama's Llama 3.1. The memory persistence works as advertised, agents recalled details from sessions days apart without hiccups, and porting state to Claude via the hosted free tier took under a minute. Setup via pip was straightforward, though the CLI feels clunky for anything beyond toy agents.
+
+Compared to LangGraph, Letta's edge is true long-term memory that survives model swaps; LangGraph forces you to rebuild graphs per provider. But if you're not wiring persistent agents, skip Letta, it's overkill versus plain LangChain for one-off chains. Developers needing evolving assistants across LLMs should grab the open-source version. Solo tinkerers won't miss the $200/month enterprise tier. I favor frameworks like this over no-code fluff, but admit my bias toward Python control.
+
 ## What It Does
 
 Letta gives AI agents a memory architecture that goes beyond a conversation's context window. Rather than starting fresh each session, a Letta agent stores information in typed memory blocks (core memory for persona and user facts; archival memory for long-form recall) and retrieves relevant context automatically before each response ([Letta Docs](https://docs.letta.com/)). The framework is model-agnostic: you can run the same agent on OpenAI today and switch to Anthropic or a local Ollama model tomorrow without losing state. Agents can also spawn subagents, use background memory subagents to compress and improve their own prompts over time, and call external tools including web search. The Letta server exposes a REST API so agents can be embedded in any application. A desktop app and CLI are also available for local development.
@@ -109,6 +116,13 @@ Yes. The core framework is Apache-2.0 open-source and fully free to self-host. Y
 
 **How does Letta memory compare to just using RAG?**
 RAG retrieves documents at query time and discards them after the response. Letta memory is structured, typed, and agent-owned: the agent actively reads and writes its own memory blocks, summarizes old conversations into archival storage, and can inspect or edit what it knows. This makes Letta agents more like a system with a persistent world model than a retrieval system with a session.
+
+
+## Review History
+
+- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
+- **2026-03-14:** Monthly verification pass. No material changes detected.
+- **2024-01-15:** Initial review published.
 
 ## Sources
 

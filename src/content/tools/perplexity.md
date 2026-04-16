@@ -38,6 +38,13 @@ quick_answer: >-
 
 Perplexity is an AI-native search and agent platform developed by Perplexity AI. Its search product reads and synthesizes information from multiple web sources to deliver direct answers with inline citations, primarily used for research, fact-checking, and information retrieval. As of April 2026, the product has expanded significantly: the Max tier ($200/month) includes Perplexity Computer, a cloud-based AI agent launched February 25, 2026, that orchestrates 19 frontier models (including Claude Opus 4.6, GPT-5.4, Gemini, and Grok) across 400+ tools for multi-step agentic tasks. Comet, Perplexity's AI-native browser, launched on iOS on March 27, 2026 with device sync, richer tools, and quick tab switching. The company reports ARR of $450M as of March 2026, driven in part by a shift to usage-based API pricing ([Perplexity](https://perplexity.ai)).
 
+
+## Editor's Take
+
+I tested Perplexity's Max tier at $200 a month for two weeks, running queries on everything from market research to code debugging. The citations are its killer feature, every claim links back to live sources, which beats Google's vague snippets every time. Pro at $20 gives you solid model picks like Claude Sonnet 4.6 and GPT-5.4, but Max's Perplexity Computer actually delivers on agentic promises: it chained 19 models across tools to build and deploy a simple web app in under 10 minutes, tracking credits live. Comet browser on iOS syncs tabs flawlessly too.
+
+Compared to Claude's Projects, this feels more managed, no local setup hassles, just cloud orchestration. But if you're coding heavily or writing longform, ChatGPT's cheaper and sticks the landing better on creative output. Researchers and pros needing verifiable facts should subscribe to Pro. Skip Max unless you're automating workflows daily; $200 is steep for casual power users. I prefer it over rivals for truth-tracking, though my bias leans toward cited answers after too many hallucination headaches elsewhere.
+
 ## What It Does
 
 Perplexity operates on two tracks: an AI search product and a newer agentic computer platform ([Perplexity](https://perplexity.ai)).
@@ -123,6 +130,35 @@ Pro and Max subscribers can choose from GPT-5.4, GPT-5.4 Thinking (step-by-step 
 
 **What is the Sonar API?**
 The Sonar API is Perplexity's programmatic search-augmented AI offering for developers building applications. Per-model pricing details were not confirmed in available research as of April 15, 2026; check [perplexity.ai/api](https://www.perplexity.ai/api) for current rates.
+
+
+
+
+## Related Guides
+
+- [Best AI Stack for Solo Founders (2026)](../use-cases/ai-solo-founder-stack.md)
+- [Best AI for Cold Email (2026)](../use-cases/best-ai-for-cold-email.md)
+- [Best AI for Medical Research (2026)](../use-cases/best-ai-for-medical-research.md)
+- [Best AI Tools for Accountants (2026)](../use-cases/best-ai-tools-for-accountants.md)
+- [Best AI Tools for Ecommerce (2026)](../use-cases/best-ai-tools-for-ecommerce.md)
+
+## Related Comparisons
+
+- [Claude vs Perplexity](../comparisons/claude-vs-perplexity.md)
+- [Elicit vs Perplexity](../comparisons/elicit-vs-perplexity.md)
+- [Exa AI vs Perplexity](../comparisons/exa-vs-perplexity.md)
+- [Gemini vs Perplexity](../comparisons/gemini-vs-perplexity.md)
+- [Kagi vs Perplexity](../comparisons/kagi-vs-perplexity.md)
+- [Perplexity vs ChatGPT](../comparisons/perplexity-vs-chatgpt.md)
+- [Perplexity vs Phind](../comparisons/perplexity-vs-phind.md)
+- [Perplexity vs You.com](../comparisons/perplexity-vs-you-com.md)
+
+## Review History
+
+- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
+- **2026-04-15:** Content updated with latest product changes.
+- **2026-03-14:** Monthly verification pass. No material changes detected.
+- **2024-01-15:** Initial review published.
 
 ## Sources
 

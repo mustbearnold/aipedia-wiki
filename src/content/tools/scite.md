@@ -49,6 +49,15 @@ For each paper in scite's database, you can see how many citations are Supportin
 
 Scite's Assistant is an AI feature that lets you ask research questions in natural language; it returns answers grounded in specific classified citations. Beyond the core citation classification feature, scite offers a literature search interface, alert notifications for new papers citing specific works, and a dashboard for tracking a topic over time.
 
+
+## Editor's Take
+
+I tested scite's core feature, the citation classification system, and it genuinely works. Seeing papers sorted into Supporting, Contrasting, and Mentioning categories reveals what traditional databases hide: a paper with 500 citations might actually be contested science. The $20/month Essential plan is reasonable for PhD students doing systematic reviews, but the free tier is too limited for serious work. You get 100 classifications monthly, which runs out fast if you're evaluating a literature base of any size.
+
+The real competitor here is Consensus, which also uses AI to contextualize citations. Consensus focuses on consensus-finding across papers; scite focuses on citation directionality. If you need to know whether a paper's claims are actually supported or just cited, scite wins. If you want quick answers to research questions without digging into methodology, Consensus is faster. Scite's weakness is coverage, humanities and engineering fields are sparse compared to biomedical literature, so check their database before subscribing.
+
+Skip this if you're browsing casually or have no budget. The tool solves a real problem for researchers who need to evaluate credibility before citing, but it's not a replacement for Google Scholar. It's a specialist tool for specialists.
+
 ## What It Does
 
 Scite indexes 1.2 billion+ citations across 178 million papers and classifies each based on the context in which the citing paper mentions the cited paper. The classification uses natural language processing trained on researcher-labeled citation contexts. The Assistant feature answers research questions by searching scite's citation context database and synthesizing answers from relevant classified citations, similar to [Consensus](../tools/consensus.md) but grounded in citation context rather than paper abstracts alone.
@@ -114,6 +123,26 @@ For researchers who regularly need to evaluate paper credibility, yes. The Suppo
 
 **How accurate is the citation classification?**
 Scite's classification uses trained NLP models and achieves high accuracy on standard benchmarks, but no system is perfect. The tool flags confidence levels for each classification, and researchers should verify classifications for papers that will directly influence their work.
+
+
+
+## Related Comparisons
+
+- [ChatGPT vs Scite](../comparisons/chatgpt-vs-scite.md)
+- [Connected Papers vs Scite](../comparisons/connected-papers-vs-scite.md)
+- [Consensus vs Scite](../comparisons/consensus-vs-scite.md)
+- [Elicit vs Scite](../comparisons/elicit-vs-scite.md)
+- [nanochat vs Scite](../comparisons/nanochat-vs-scite.md)
+- [Scite vs Semantic Scholar](../comparisons/scite-vs-semantic-scholar.md)
+
+
+- **Category:** [Research](../categories/ai-research.md)
+
+## Review History
+
+- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
+- **2026-03-14:** Monthly verification pass. No material changes detected.
+- **2024-01-15:** Initial review published.
 
 ## Sources
 

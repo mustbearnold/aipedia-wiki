@@ -133,7 +133,10 @@ const breadcrumbLdItems = [
             {frontmatter.author && (
               <>
                 <span aria-hidden="true">·</span>
-                <span>By <a href="/about/editor/" class="text-[var(--text-secondary)] no-underline hover:text-[var(--accent-primary)] hover:underline">Daniel Mercer</a></span>
+                <a href="/about/editor/" class="inline-flex items-center gap-1.5 no-underline hover:underline">
+                  <img src="/editor-headshot.jpg" alt="" width="18" height="18" class="rounded-full object-cover" loading="lazy" />
+                  <span class="text-[var(--text-secondary)] hover:text-[var(--accent-primary)]">Eli Marsh</span>
+                </a>
               </>
             )}
             {readingMinutes > 0 && (
