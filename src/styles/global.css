@@ -399,12 +399,20 @@ a, button, [role="button"], .tool-card, .category-pill, .helpful-btn, .copy-btn 
    Vertical padding is non-negotiable: overflow-x: auto implicitly clips
    the Y axis too, which cuts off card lift shadows on hover. */
 .cat-rail {
-  scroll-padding: 1rem;
+  /* Viewport: clips the horizontally-moving track. Vertical padding
+     keeps the card hover-lift shadow visible. */
   padding-top: 6px;
   padding-bottom: 12px;
-  /* Hide scrollbar */
-  scrollbar-width: none;
-  -ms-overflow-style: none;
+  position: relative;
+}
+.cat-rail-track {
+  /* Inner track: animated via transform for GPU acceleration.
+     will-change hints the compositor to promote this to its own layer
+     so we don't trigger layout/paint on every frame. */
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+  width: max-content;
+  backface-visibility: hidden;
 }
 .cat-rail::-webkit-scrollbar { display: none; }
 

@@ -161,8 +161,9 @@ const featuredComparisons = comparisons
       </div>
     </div>
 
-    <div id="cat-rail" class="cat-rail flex gap-3 overflow-x-auto -mx-4 px-4 md:mx-0 md:px-0">
-      <a href="/tools/" class="cat-card shrink-0 snap-start w-[200px] rounded-xl overflow-hidden no-underline group relative" style="background: linear-gradient(135deg, rgba(167,139,250,0.18), rgba(96,165,250,0.12)); border: 1px solid rgba(167,139,250,0.28);">
+    <div id="cat-rail" class="cat-rail -mx-4 px-4 md:mx-0 md:px-0 overflow-hidden">
+      <div id="cat-rail-track" class="cat-rail-track flex gap-3">
+      <a href="/tools/" class="cat-card shrink-0 w-[200px] rounded-xl overflow-hidden no-underline group relative" style="background: linear-gradient(135deg, rgba(167,139,250,0.18), rgba(96,165,250,0.12)); border: 1px solid rgba(167,139,250,0.28);">
         <div class="px-3 py-2.5 flex flex-col gap-1.5">
           <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-[var(--accent-primary)]">All tools</div>
           <div class="text-[18px] font-bold text-[var(--text-primary)] leading-tight">{allTools.length} tools</div>
@@ -175,7 +176,7 @@ const featuredComparisons = comparisons
       {categoryRail.map((cat) => (
         <a
           href={`/categories/${cat.slug}/`}
-          class="cat-card shrink-0 snap-start w-[200px] rounded-xl no-underline group relative overflow-hidden"
+          class="cat-card shrink-0 w-[200px] rounded-xl no-underline group relative overflow-hidden"
           style={`background: var(--bg-card); border: 1px solid var(--border); --cat-grad: ${cat.gradient};`}
         >
           <span class="cat-card-accent" aria-hidden="true" style={`background: ${cat.gradient};`}></span>
@@ -202,6 +203,7 @@ const featuredComparisons = comparisons
           </div>
         </a>
       ))}
+      </div>
     </div>
   </section>
 
@@ -506,60 +508,97 @@ const featuredComparisons = comparisons
   </section>
 
   <script is:inline>
-    // Category rail: seamless auto-scrolling carousel.
-    // - Cards are cloned once so the rail is 2x its visual width.
-    // - RAF loop drifts scrollLeft forward at a constant px/sec.
-    // - When scrollLeft crosses the halfway mark (width of the original
-    //   set), we subtract half the total width. Visually nothing changes
-    //   because the clones line up exactly with the originals.
-    // - Hover pauses the drift so users can read without motion.
-    // - Wheel while hovering scrolls horizontally and the halfway-wrap
-    //   still applies in both directions for seamless looping.
-    // - Arrow buttons scroll by ~2 cards and pause the drift briefly.
+    // Category rail: true 60fps seamless carousel via GPU-accelerated
+    // transform: translateX on an inner track (not scrollLeft, which
+    // rounds to integer pixels and stutters at low speeds).
+    //
+    // - Cards cloned once into the track so the track is 2x width.
+    // - RAF loop decrements a float `offset` by SPEED * dt each frame.
+    // - When offset <= -halfWidth, we add halfWidth back. Clones align
+    //   with originals so the jump is visually invisible.
+    // - Hover pauses; wheel injects offset delta; arrows animate to offset.
     (function () {
-      const rail = document.getElementById('cat-rail');
-      const prev = document.getElementById('cat-rail-prev');
-      const next = document.getElementById('cat-rail-next');
-      if (!rail || !prev || !next) return;
+      const rail  = document.getElementById('cat-rail');
+      const track = document.getElementById('cat-rail-track');
+      const prev  = document.getElementById('cat-rail-prev');
+      const next  = document.getElementById('cat-rail-next');
+      if (!rail || !track || !prev || !next) return;
 
       const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      const SPEED = 22; // px per second
-      const MANUAL_PAUSE_MS = 1400; // pause after arrow click or wheel
+      const SPEED = 36; // px per second — bumped for visible motion
+      const MANUAL_PAUSE_MS = 1400;
 
-      // Duplicate children once so we can loop seamlessly.
-      const originals = Array.from(rail.children);
-      originals.forEach((c) => rail.appendChild(c.cloneNode(true)));
+      // Clone track contents once. Using inert clones (no IDs, no event
+      // targets) keeps behaviour clean.
+      const originals = Array.from(track.children);
+      originals.forEach((c) => {
+        const clone = c.cloneNode(true);
+        clone.setAttribute('aria-hidden', 'true');
+        clone.setAttribute('tabindex', '-1');
+        track.appendChild(clone);
+      });
 
+      let offset = 0;
       let paused = false;
       let manualPauseUntil = 0;
       let lastTs = 0;
+      let halfWidth = 0;
 
-      function halfWidth() {
-        return rail.scrollWidth / 2;
+      function measure() {
+        // Total track width includes all clones; halfWidth is the width
+        // of one set of originals (plus gaps) so the wrap is seamless.
+        halfWidth = track.scrollWidth / 2;
       }
-      function normalize() {
-        const hw = halfWidth();
-        if (rail.scrollLeft >= hw) rail.scrollLeft -= hw;
-        else if (rail.scrollLeft < 0) rail.scrollLeft += hw;
+      measure();
+      window.addEventListener('resize', measure);
+      // Re-measure once fonts settle
+      setTimeout(measure, 400);
+      setTimeout(measure, 1500);
+
+      function apply() {
+        // Normalize offset into the (-halfWidth, 0] band
+        if (offset <= -halfWidth) offset += halfWidth;
+        else if (offset > 0) offset -= halfWidth;
+        track.style.transform = 'translate3d(' + offset + 'px, 0, 0)';
       }
-      function loop(ts) {
-        const isPaused = paused || Date.now() < manualPauseUntil || document.hidden;
-        if (!isPaused && lastTs) {
+
+      function tick(ts) {
+        const frozen = paused || Date.now() < manualPauseUntil || document.hidden || halfWidth === 0;
+        if (!frozen && lastTs) {
           const dt = Math.min(0.05, (ts - lastTs) / 1000);
-          rail.scrollLeft += SPEED * dt;
-          normalize();
+          offset -= SPEED * dt;
+          apply();
+        } else if (!lastTs) {
+          apply();
         }
         lastTs = ts;
-        requestAnimationFrame(loop);
+        requestAnimationFrame(tick);
       }
-      if (!reduced) requestAnimationFrame(loop);
+      if (!reduced) requestAnimationFrame(tick);
+      else apply();
 
       function step(dir) {
-        const cards = rail.querySelectorAll('.cat-card');
+        measure();
+        const cards = track.querySelectorAll('.cat-card');
         if (!cards.length) return;
         const cardWidth = cards[0].getBoundingClientRect().width + 12;
-        rail.scrollBy({ left: dir * cardWidth * 2, behavior: 'smooth' });
+        animateOffsetTo(offset - dir * cardWidth * 2, 420);
+      }
+
+      function animateOffsetTo(target, duration) {
         manualPauseUntil = Date.now() + MANUAL_PAUSE_MS;
+        const start = offset;
+        const delta = target - start;
+        const startTs = performance.now();
+        function frame(now) {
+          const t = Math.min(1, (now - startTs) / duration);
+          // ease-out cubic
+          const eased = 1 - Math.pow(1 - t, 3);
+          offset = start + delta * eased;
+          apply();
+          if (t < 1) requestAnimationFrame(frame);
+        }
+        requestAnimationFrame(frame);
       }
 
       prev.addEventListener('click', () => step(-1));
@@ -568,20 +607,15 @@ const featuredComparisons = comparisons
       rail.addEventListener('mouseenter', () => { paused = true; });
       rail.addEventListener('mouseleave', () => { paused = false; lastTs = 0; });
 
-      // Seamless wrap on any scroll event (drift, wheel, arrow, touch)
-      rail.addEventListener('scroll', normalize, { passive: true });
-
-      // Wheel: vertical deltaY -> horizontal scroll, with seamless wrap.
       rail.addEventListener('wheel', (e) => {
         if (!e.deltaY) return;
         if (Math.abs(e.deltaY) <= Math.abs(e.deltaX)) return;
         e.preventDefault();
-        rail.scrollLeft += e.deltaY;
-        normalize();
+        offset -= e.deltaY;
+        apply();
         manualPauseUntil = Date.now() + MANUAL_PAUSE_MS;
       }, { passive: false });
 
-      // Pause drift when the tab is backgrounded
       document.addEventListener('visibilitychange', () => { lastTs = 0; });
     })();
   </script>
