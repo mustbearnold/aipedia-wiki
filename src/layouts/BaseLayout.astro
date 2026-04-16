@@ -88,6 +88,57 @@ const ogImageUrl = ogImage
     </script>
 
     <script is:inline>
+      // Category pill 3D: magnetic tilt on hover + ripple propagation on click.
+      // Delegates on document so it survives Astro view transitions.
+      (function () {
+        if (window.__pill3DBound) return;
+        window.__pill3DBound = true;
+
+        var MAX_TILT = 12; // degrees
+        var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        document.addEventListener('mousemove', function (e) {
+          if (reduced) return;
+          var pill = e.target.closest && e.target.closest('.category-pill');
+          if (!pill) return;
+          var r = pill.getBoundingClientRect();
+          var nx = (e.clientX - r.left) / r.width - 0.5;  // -0.5 .. +0.5
+          var ny = (e.clientY - r.top) / r.height - 0.5;
+          pill.style.setProperty('--rx', (nx * MAX_TILT).toFixed(2) + 'deg');
+          pill.style.setProperty('--ry', (-ny * MAX_TILT).toFixed(2) + 'deg');
+        });
+
+        document.addEventListener('mouseleave', function (e) {
+          var pill = e.target.closest && e.target.closest('.category-pill');
+          if (!pill) return;
+          pill.style.setProperty('--rx', '0deg');
+          pill.style.setProperty('--ry', '0deg');
+        }, true);
+
+        document.addEventListener('click', function (e) {
+          var pill = e.target.closest && e.target.closest('.category-pill');
+          if (!pill) return;
+          var row = pill.closest('.category-pills');
+          if (!row) return;
+          var pills = Array.prototype.slice.call(row.querySelectorAll('.category-pill'));
+          var clickedIdx = pills.indexOf(pill);
+          pills.forEach(function (p) { p.classList.remove('ripple'); });
+          // Force reflow so animation can replay
+          void row.offsetWidth;
+          pills.forEach(function (p, i) {
+            var dist = Math.abs(i - clickedIdx);
+            p.style.setProperty('--ripple-delay', (dist * 55) + 'ms');
+            p.classList.add('ripple');
+            setTimeout(function () {
+              p.classList.remove('ripple');
+              p.style.removeProperty('--ripple-delay');
+            }, 360 + dist * 55 + 50);
+          });
+        });
+      })();
+    </script>
+
+    <script is:inline>
       // Score-bar fill: when a .score-grid enters view, flip data-played
       // so CSS transitions fire (staggered via per-cell --bar-delay).
       (function () {

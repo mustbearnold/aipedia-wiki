@@ -98,11 +98,11 @@ const impactColors: Record<string, string> = {
   </section>
 
   <!-- Category Pills (filter buttons) -->
-  <section class="flex items-center justify-center gap-2 flex-wrap mb-4">
+  <section id="category-pills" class="category-pills flex items-center justify-center gap-2 flex-wrap mb-4">
     <button
       type="button"
       data-filter="all"
-      class="category-pill active inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium transition-colors cursor-pointer bg-[rgba(167,139,250,0.15)] border border-[rgba(167,139,250,0.3)] text-[var(--accent-primary)]"
+      class="category-pill active inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium cursor-pointer bg-[rgba(167,139,250,0.15)] border border-[rgba(167,139,250,0.3)] text-[var(--accent-primary)]"
     >All</button>
     {categories.map(cat => {
       const slug = cat.data.slug || cat.id.replace(/\.md$/, '').replace(/\\/g, '/');
@@ -111,9 +111,9 @@ const impactColors: Record<string, string> = {
         <button
           type="button"
           data-filter={slug}
-          class="category-pill inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium transition-colors cursor-pointer bg-[var(--bg-card)] border border-[var(--border)] text-[var(--text-secondary)]"
+          class="category-pill inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium cursor-pointer bg-[var(--bg-card)] border border-[var(--border)] text-[var(--text-secondary)]"
         >
-          <span>{info.emoji}</span>
+          <span class="pill-emoji">{info.emoji}</span>
           <span>{info.label}</span>
         </button>
       );
