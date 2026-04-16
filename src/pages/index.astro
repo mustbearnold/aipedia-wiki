@@ -161,7 +161,7 @@ const featuredComparisons = comparisons
       </div>
     </div>
 
-    <div id="cat-rail" class="cat-rail -mx-4 px-4 md:mx-0 md:px-0 overflow-hidden">
+    <div id="cat-rail" class="cat-rail -mx-4 px-4 md:mx-0 md:px-0 overflow-x-auto overflow-y-visible">
       <div id="cat-rail-track" class="cat-rail-track flex gap-3">
       <a href="/tools/" class="cat-card shrink-0 w-[200px] rounded-xl overflow-hidden no-underline group relative" style="background: linear-gradient(135deg, rgba(167,139,250,0.18), rgba(96,165,250,0.12)); border: 1px solid rgba(167,139,250,0.28);">
         <div class="px-3 py-2.5 flex flex-col gap-1.5">
@@ -559,6 +559,7 @@ const featuredComparisons = comparisons
       if (!rail || !track || !prev || !next) return;
 
       const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const isTouchPrimary = window.matchMedia('(hover: none) and (pointer: coarse)').matches;
       const SPEED = 36; // px per second — bumped for visible motion
       const MANUAL_PAUSE_MS = 1400;
 
@@ -571,6 +572,16 @@ const featuredComparisons = comparisons
         clone.setAttribute('tabindex', '-1');
         track.appendChild(clone);
       });
+
+      // Touch-primary devices: use native horizontal scroll. The transform
+      // animation and drag handlers are desktop-only. Native scroll gives
+      // us momentum, rubber-band, and accessibility for free — and more
+      // importantly, it actually works on iOS.
+      if (isTouchPrimary) {
+        track.style.transform = 'none';
+        // Hide scrollbar (already done in CSS via scrollbar-width: none)
+        return;
+      }
 
       // Split offset and target so user input feels smooth instead of jumpy.
       // target: where we WANT the track (updated by auto-drift OR wheel OR arrow).
