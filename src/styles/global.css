@@ -330,6 +330,9 @@ html {
   visibility: visible;
   transform: translateY(0);
 }
+.light #filter-popover {
+  background: #ffffff !important;
+}
 #filter-trigger[aria-expanded="true"] #filter-chevron {
   transform: rotate(180deg);
 }
