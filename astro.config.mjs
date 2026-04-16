@@ -4,6 +4,7 @@ import tailwindcss from '@tailwindcss/vite';
 import { remarkRewriteLinks } from './src/plugins/remark-rewrite-links.mjs';
 import { remarkToolMentions } from './src/plugins/remark-tool-mentions.mjs';
 import { remarkGlossaryMentions } from './src/plugins/remark-glossary-mentions.mjs';
+import { remarkFootnoteRefs } from './src/plugins/remark-footnote-refs.mjs';
 import { rehypeRemoveFirstH1 } from './src/plugins/rehype-remove-first-h1.mjs';
 
 import cloudflare from '@astrojs/cloudflare';
@@ -21,7 +22,7 @@ export default defineConfig({
   },
 
   markdown: {
-    remarkPlugins: [remarkRewriteLinks, remarkToolMentions, remarkGlossaryMentions],
+    remarkPlugins: [remarkRewriteLinks, remarkFootnoteRefs, remarkToolMentions, remarkGlossaryMentions],
     rehypePlugins: [rehypeRemoveFirstH1],
     shikiConfig: {
       theme: 'github-dark',
