@@ -13,18 +13,20 @@ update_frequency: quarterly
 > Quick-reference definitions for every key term used across the AI Tools wiki. Each heading is an anchor link -- use `glossary/index.md#term-name` to link from any page.
 
 ---
-
 ## LLM
 
-**Large Language Model.** A neural network trained on massive text datasets that can generate, summarize, translate, and reason about text. Examples: GPT-5.4, Claude Opus 4.6, Gemini 3.1 Pro, Mistral Large 2. LLMs are the foundation of most modern AI tools. They work by predicting the next token in a sequence, but this simple mechanism produces remarkably capable behavior at scale.[1][4]
-
-See also: [AI Writing Category](../categories/ai-writing.md), [Foundation Model](#foundation-model), [Tokens](#tokens)
+**Large Language Model (LLM)** is a deep learning neural network trained on vast text datasets to understand, generate, and process human-like natural language. LLMs underpin modern AI tools by enabling text generation, summarization, translation, and reasoning at scale. Examples include GPT-5.4, Claude Opus 4.6, and Gemini 3.1 Pro.  
+See also: [Foundation Model](#foundation-model), [Tokens](#tokens), [AI Writing Category](../categories/ai-writing.md)
 
 ---
 
 ## Foundation Model
 
-A large AI model trained on broad data that can be adapted to many downstream tasks. Foundation models (like GPT-5.4, Claude Opus 4.6, Gemini 3.1 Pro) serve as the base layer that products are built on top of. The term emphasizes that these models are not task-specific; they are general-purpose systems that can be fine-tuned, prompted, or integrated into specialized applications.[1][4]
+A **foundation model** is a large AI model trained on broad data using self-supervision at scale that adapts to a wide range of downstream tasks.
+
+These models form the base for specialized applications, enabling faster and cost-effective development.
+
+Examples include GPT-5.4, Claude Opus 4.6, and Gemini 3.1 Pro.
 
 See also: [LLM](#llm), [Fine-tuning](#fine-tuning)
 
@@ -32,7 +34,11 @@ See also: [LLM](#llm), [Fine-tuning](#fine-tuning)
 
 ## Fine-tuning
 
-The process of taking a pre-trained foundation model and training it further on a specific dataset to specialize its behavior. Fine-tuning is how you make a general model better at your particular task; for example, training Claude Opus 4.6 on your company's support tickets to improve customer service responses. It requires labeled data and is more expensive than prompt engineering but produces more consistent results.[2]
+Fine-tuning is the process of adapting a pre-trained foundation model by further training it on a task-specific dataset to improve performance on targeted applications.
+
+Fine-tuning leverages existing model knowledge to achieve superior results with less data and compute than training from scratch.
+
+For example, fine-tuning GPT-5.4 on company support tickets enhances customer service response accuracy.
 
 See also: [LoRA](#lora), [Foundation Model](#foundation-model), [Prompt Engineering](#prompt-engineering)
 
@@ -40,7 +46,11 @@ See also: [LoRA](#lora), [Foundation Model](#foundation-model), [Prompt Engineer
 
 ## LoRA
 
-**Low-Rank Adaptation.** A parameter-efficient fine-tuning technique that trains only a small number of adapter weights instead of the full model. LoRA makes fine-tuning accessible to smaller teams because it requires much less compute and memory than full fine-tuning. You can think of it as adding a small "patch" to a model's behavior without rewriting the whole thing. Popular for customizing open-source models like DeepSeek V3.2 and Llama 4.[2]
+**LoRA (Low-Rank Adaptation)** is a parameter-efficient fine-tuning technique that freezes pre-trained model weights and injects trainable low-rank decomposition matrices into Transformer layers.
+
+It reduces compute and memory needs, enabling smaller teams to customize large models without full retraining.
+
+LoRA customizes open-source models like Llama 4 and DeepSeek V3.2 for specific tasks.
 
 See also: [Fine-tuning](#fine-tuning), [Open Source vs Closed Source](#open-source-vs-closed-source)
 
@@ -48,7 +58,11 @@ See also: [Fine-tuning](#fine-tuning), [Open Source vs Closed Source](#open-sour
 
 ## RAG
 
-**Retrieval-Augmented Generation.** A technique that gives an LLM access to external knowledge by retrieving relevant documents before generating a response. Instead of relying solely on what the model learned during training, RAG systems search a knowledge base (using embeddings and vector databases), find relevant passages, and inject them into the prompt. This reduces hallucination and keeps responses grounded in current, domain-specific information.[1][3]
+Retrieval-Augmented Generation (RAG) is a technique that enables large language models to retrieve relevant information from external knowledge bases before generating responses.
+
+RAG grounds outputs in current, domain-specific data to produce accurate responses without retraining the model.
+
+For example, Claude Opus 4.6 uses RAG to query a company vector database for employee HR policies during a leave inquiry.
 
 See also: [Embedding](#embedding), [Vector Database](#vector-database), [Hallucination](#hallucination)
 
@@ -56,7 +70,11 @@ See also: [Embedding](#embedding), [Vector Database](#vector-database), [Halluci
 
 ## Prompt Engineering
 
-The practice of crafting inputs (prompts) to get better outputs from LLMs. This includes techniques like few-shot examples, chain-of-thought reasoning, system prompts, and structured output formatting. Prompt engineering is the cheapest and fastest way to improve AI tool performance before resorting to fine-tuning. Good prompts are specific, provide context, and define the desired output format.[2][4]
+**Prompt engineering** is the process of designing and refining natural language prompts to guide generative AI models, particularly large language models, toward producing accurate and desired outputs.
+
+Prompt engineering optimizes AI performance without model retraining, enabling precise control over responses through techniques like few-shot prompting and chain-of-thought reasoning.
+
+For example, Claude Opus 4.6 generates step-by-step solutions when prompted with "Think step by step" for complex math problems.
 
 See also: [LLM](#llm), [Fine-tuning](#fine-tuning), [Tokens](#tokens)
 
@@ -64,15 +82,19 @@ See also: [LLM](#llm), [Fine-tuning](#fine-tuning), [Tokens](#tokens)
 
 ## Agentic AI
 
-AI systems that can take autonomous actions to accomplish goals, not just generate text. An agentic AI can use tools (search the web, write files, call APIs, execute code), make decisions, and chain multiple steps together without human intervention at each step. Examples: Claude with Computer Use, Grok 4.20 agents, AutoGPT 3. The "agentic" pattern is the biggest trend in AI tooling as of 2026.[1][4][5]
+Agentic AI is an autonomous artificial intelligence system that accomplishes specific goals by reasoning, planning, and executing multi-step actions across tools and systems without continuous human intervention. This capability enables AI to operate proactively in complex, dynamic environments rather than simply responding to prompts or generating content. Claude Opus 4.6 with Computer Use, Gemini 3.1 Pro agents, and GPT-5.4 demonstrate agentic capabilities by autonomously breaking down tasks, making contextual decisions, and coordinating across multiple specialized agents to reach defined outcomes.
 
-See also: [Multi-agent](#multi-agent), [Workflow Automation](#workflow-automation), [SDK](#sdk)
+See also: [Multi-agent](#multi-agent), [Workflow Automation](#workflow-automation), [Large Language Model](#large-language-model), [Autonomous Agent](#autonomous-agent)
 
 ---
 
 ## Multi-agent
 
-An architecture where multiple AI agents collaborate on a task, each with specialized roles. For example, one agent researches, another writes, a third reviews. Multi-agent systems can tackle complex tasks that would overwhelm a single agent. Frameworks like Claude Agent SDK, CrewAI 2, and LangGraph 0.5 enable multi-agent orchestration. Still experimental in production but rapidly maturing.[1][5]
+A **multi-agent system** is a computational architecture of multiple autonomous AI agents that interact in a shared environment to achieve complex goals difficult for a single agent.
+
+Multi-agent systems divide tasks among specialized agents for superior efficiency, scalability, and resilience in production workflows.
+
+CrewAI 2 orchestrates a research agent using GPT-5.4, a writing agent with Claude Opus 4.6, and a review agent for report generation.
 
 See also: [Agentic AI](#agentic-ai), [Workflow Automation](#workflow-automation)
 
@@ -80,23 +102,31 @@ See also: [Agentic AI](#agentic-ai), [Workflow Automation](#workflow-automation)
 
 ## Vibe Coding
 
-A term coined by Andrej Karpathy (2025) describing a coding style where the developer describes what they want in natural language and lets an AI coding assistant (Cursor 2, Claude Code, Copilot 365) generate the code. The developer "vibes" with the AI; reviewing, adjusting, and guiding rather than writing every line. Controversial: critics say it produces fragile code; proponents say it 10x's prototyping speed. Best for MVPs and prototypes, less suitable for production systems without careful review.[5]
+Vibe coding is a software development practice where developers describe tasks in natural language prompts to AI large language models, which generate, refine, and debug code.
 
-See also: [AI Coding Category](../categories/ai-coding.md)
+It accelerates prototyping and experimentation by shifting focus from manual coding to guiding AI outputs.
+
+Andrej Karpathy coined the term in February 2025, exemplified by using Claude Opus 4.6 or Cursor 2 to build MVPs from conversational descriptions.
+
+See also: [Agentic Engineering](#agentic-engineering), [Software 2.0](#software-20), [AI Coding Category](../categories/ai-coding.md)
 
 ---
 
 ## GEO
 
-**Generative Engine Optimization.** The practice of optimizing content to appear in AI-generated responses (ChatGPT, Perplexity, Gemini search) rather than traditional search results. As users shift from Googling to asking AI, GEO is becoming the next frontier of content marketing. Techniques include structuring content for easy extraction, including authoritative citations, and targeting the questions LLMs get asked. Related to but distinct from SEO.[1]
+Generative Engine Optimization (GEO) is the practice of structuring content so AI systems like ChatGPT, Claude Opus 4.6, and Gemini 3.1 Pro cite it in generated responses. This shifts visibility from search rankings to direct inclusion in AI-generated answers, making brand representation dependent on LLM synthesis rather than click-through traffic. Content optimization for GEO emphasizes clear structure, authoritative citations, comprehensive topic coverage, and natural language that LLMs can easily extract and reference, distinguishing it fundamentally from traditional SEO's focus on keyword ranking and backlinks.
 
-See also: [SEO](#seo), [AI Content Pipeline](../use-cases/ai-content-pipeline.md)
+See also: [SEO](#seo), [Answer Engine Optimization](#answer-engine-optimization), [Large Language Model](#large-language-model), [AI Overviews](#ai-overviews)
 
 ---
 
 ## SEO
 
-**Search Engine Optimization.** The practice of optimizing content to rank higher in search engine results (primarily Google). Still important in 2026 but increasingly complemented by GEO. Key techniques: keyword research, on-page optimization, backlink building, technical site performance. AI tools like Surfer SEO automate much of the analysis. AI-generated content is accepted by Google if it meets quality standards.[1]
+**Search Engine Optimization (SEO)** is the practice of improving websites and web pages to increase visibility and organic traffic in unpaid search engine results pages (SERPs).
+
+SEO drives targeted users searching for information, products, or services, boosting engagement, brand awareness, and conversions without paid ads.
+
+Surfer SEO automates keyword research and on-page analysis for higher rankings.
 
 See also: [GEO](#geo), [Surfer SEO](../tools/surfer-seo.md)
 
@@ -104,39 +134,42 @@ See also: [GEO](#geo), [Surfer SEO](../tools/surfer-seo.md)
 
 ## TTS (Text-to-Speech)
 
-Technology that converts written text into spoken audio. Modern AI TTS (ElevenLabs v3, Voxtral 2, OpenAI TTS-2) produces speech nearly indistinguishable from human voices. Used for audiobook production, podcast generation, accessibility, customer service bots, and content creation. Quality has improved dramatically since 2023; the best models capture emotion, pacing, and natural speech patterns.[1]
-
+**TTS (Text-to-Speech)** converts written text into spoken audio using speech synthesis technology.  
+Modern AI TTS enables scalable voice content creation for accessibility, audiobooks, virtual assistants, and customer service.  
+ElevenLabs v3 and OpenAI TTS-2 produce human-like speech with emotion and natural pacing.  
 See also: [Voice Cloning](#voice-cloning), [ElevenLabs](../tools/elevenlabs.md), [Voxtral](../tools/voxtral.md)
 
 ---
 
 ## Voice Cloning
 
-Creating a synthetic replica of a specific person's voice using AI. Professional voice cloning (ElevenLabs PVC v2) requires ~30 minutes of clean audio. Instant voice cloning works from shorter samples but with lower fidelity. Raises significant ethical concerns about consent, deepfakes, and fraud. Legitimate uses: content creators scaling production, accessibility, preserving voices of people with degenerative conditions.[1]
-
+Voice cloning replicates a specific person's voice using AI trained on audio samples to synthesize realistic speech matching their tone, accent, and inflections. This technology enables scalable content creation and accessibility tools while posing risks of fraud and deepfakes without consent safeguards. ElevenLabs PVC v2 clones voices from 30 minutes of audio, while instant methods like those in Claude Opus 4.6 use seconds-long clips.  
 See also: [TTS](#tts-text-to-speech), [ElevenLabs](../tools/elevenlabs.md)
 
 ---
 
 ## Tokens
 
-The basic units that LLMs process text in. A token is roughly 3/4 of a word in English (so "artificial intelligence" is about 3 tokens). Pricing for LLM APIs is based on tokens processed; both input (what you send) and output (what the model generates). Understanding token counts matters for cost estimation and staying within context window limits. Example: 1,000 tokens is roughly 750 words.[2][4]
+Tokens are the discrete units of text that large language models break down and process, representing words, subwords, punctuation, or character combinations. Token count directly determines both computational cost and the maximum input length a model can accept within its context window. In GPT-5.4, approximately 750 English words equal 1,000 tokens, making token estimation essential for API budgeting and prompt design.
 
-See also: [Context Window](#context-window), [API](#api), [LLM](#llm)
+See also: [Context Window](#context-window), [Tokenization](#tokenization), [LLM](#llm), [API](#api)
 
 ---
 
 ## Context Window
 
-The maximum amount of text (measured in tokens) an LLM can process in a single conversation. Larger context windows allow the model to work with longer documents and maintain more conversation history. As of 2026: Claude Opus 4.6 supports up to 2M tokens, Gemini 3.1 Pro supports 4M tokens, GPT-5.4 supports 1M tokens. Larger windows cost more per request and may reduce accuracy on information in the "middle" of very long contexts.[4]
-
+**Context window** is the maximum number of tokens a large language model processes at once, including prompts and conversation history, acting as its working memory. Larger windows enable handling of extended documents and sustained dialogues. As of 2026, Claude Opus 4.6 supports 2M tokens, Gemini 3.1 Pro supports 4M tokens, and GPT-5.4 supports 1M tokens.  
 See also: [Tokens](#tokens), [LLM](#llm)
 
 ---
 
 ## API
 
-**Application Programming Interface.** A structured way for software to communicate with other software. In the AI tools context, APIs let you send prompts to an LLM and receive responses programmatically; essential for building automated workflows, custom apps, and integrations. Most AI tools offer APIs: Claude API, OpenAI API, ElevenLabs API. Pricing is typically usage-based (per token or per request).[1][4]
+An **API** (Application Programming Interface) is a set of rules and protocols that enables software applications to communicate, exchange data, and access features from other systems.
+
+APIs enable developers to integrate AI services into apps and workflows by sending programmatic requests for responses.
+
+OpenAI API processes prompts to GPT-5.4; Claude API handles queries to Claude Opus 4.6.
 
 See also: [SDK](#sdk), [Tokens](#tokens), [Workflow Automation](#workflow-automation)
 
@@ -144,7 +177,11 @@ See also: [SDK](#sdk), [Tokens](#tokens), [Workflow Automation](#workflow-automa
 
 ## SDK
 
-**Software Development Kit.** A collection of tools, libraries, and documentation that makes it easier to build with an API. An SDK wraps the raw API calls in convenient functions for a specific programming language. Examples: Anthropic Python SDK (for Claude), OpenAI Node SDK. The Claude Agent SDK goes further by providing a framework for building autonomous AI agents.[1][5]
+**Software Development Kit (SDK).** Collection of tools, libraries, and documentation that simplifies building applications with an API by wrapping calls in language-specific functions.
+
+SDKs accelerate development and reduce errors for developers integrating AI services.
+
+Examples include Anthropic Python SDK for Claude Opus 4.6 and OpenAI Node SDK for GPT-5.4; the Claude Agent SDK adds frameworks for autonomous AI agents.
 
 See also: [API](#api), [Agentic AI](#agentic-ai)
 
@@ -152,7 +189,11 @@ See also: [API](#api), [Agentic AI](#agentic-ai)
 
 ## Open Source vs Closed Source
 
-In AI, this distinction refers to whether a model's weights and architecture are publicly available. **Open source/open weight** models (DeepSeek V3.2, Llama 4, Mixtral 2) can be downloaded, self-hosted, fine-tuned, and inspected. **Closed source** models (GPT-5.4, Claude Opus 4.6) are only accessible via API; you can't see or modify the underlying model. Open source offers more control and privacy; closed source typically offers higher capability and easier setup. The line is blurring as "open weight" models become competitive with closed models.[2][4]
+**Open Source vs Closed Source** in AI distinguishes models with publicly available weights, architecture, code, and data from proprietary models where these elements remain confidential and accessible only via API or fee.
+
+Open source enables self-hosting, fine-tuning, inspection, and privacy; closed source provides superior performance, updates, security, and ease of integration.
+
+Examples include open source **Llama 4**, **DeepSeek V3.2**, and **Mixtral 2** versus closed source **GPT-5.4** and **Claude Opus 4.6**.
 
 See also: [Mistral](../companies/mistral.md), [LoRA](#lora), [Fine-tuning](#fine-tuning)
 
@@ -160,39 +201,50 @@ See also: [Mistral](../companies/mistral.md), [LoRA](#lora), [Fine-tuning](#fine
 
 ## SaaS
 
-**Software as a Service.** Software delivered over the internet on a subscription basis rather than installed locally. Most AI tools are SaaS products: you pay monthly and access them via browser or API. Examples: ChatGPT Plus ($20/mo), Surfer SEO ($89/mo), n8n Cloud ($20/mo). The SaaS model dominates AI tools because models require expensive infrastructure to run.[1]
-
-See also: [ARR](#arr), [API](#api)
+**SaaS** is a cloud computing model where providers host and deliver applications over the internet on a subscription basis, managing all infrastructure and updates.
+This model enables AI tool users to access compute-intensive services without local installation or maintenance costs.
+Examples include ChatGPT Plus with GPT-5.4 and Claude Opus 4.6 via browser APIs.
+See also: [ARR](#arr), [API](#api), [MaaS](#maas)
 
 ---
 
 ## ARR
 
-**Annual Recurring Revenue.** The annualized value of a company's subscription revenue. A key metric for evaluating SaaS businesses, including AI tool companies. Example: ChatGPT reportedly crossed $4B ARR by 2026. ARR matters when evaluating whether an AI tool is likely to survive and continue development; tools with strong ARR are more sustainable than those burning VC cash with no revenue.[1]
+**Annual Recurring Revenue (ARR)** is the normalized annual value of predictable subscription revenue from contracts, excluding one-time fees and overages.
 
-See also: [SaaS](#saas)
+ARR gauges financial health and growth potential for SaaS companies, including AI tools, enabling accurate forecasting and investor evaluation.
+
+For example, ChatGPT reportedly reached $4B ARR by 2026.
+
+See also: [SaaS](#saas), [MRR](#mrr)
 
 ---
 
 ## Affiliate Marketing
 
-Earning commission by promoting other companies' products. In the AI tools space, many tools offer affiliate programs (20-50% recurring commissions). This creates an opportunity to monetize AI tool expertise by reviewing, comparing, and recommending tools. Relevant to this wiki because many AI tool review sites are funded by affiliate revenue, which can bias recommendations. We disclose any affiliate relationships.[1]
-
-See also: [AI Content Pipeline](../use-cases/ai-content-pipeline.md)
+Affiliate marketing is earning commission by promoting third-party products or services, with compensation typically tied to sales, clicks, or conversions. In the AI tools ecosystem, this model creates financial incentives that can influence product recommendations and editorial objectivity. AI tool review platforms frequently rely on affiliate revenue from GPT-5.4, Claude Opus 4.6, Gemini 3.1 Pro, and other major vendors, making disclosure of these relationships essential for reader trust. See also: [Sponsored Content](#sponsored-content), [Disclosure Requirements](#disclosure-requirements), [Bias in AI Reviews](#bias-in-ai-reviews)
 
 ---
 
 ## No-code/Low-code
 
-Platforms that allow building software applications with minimal or no programming. In the AI tools space, no-code platforms like n8n, Make, and Zapier let non-developers create AI-powered workflows. Low-code tools like Retool or Bubble add AI capabilities with drag-and-drop interfaces. These tools democratize AI; you don't need to be a developer to build an AI customer support bot or content pipeline.[1]
+No-code and low-code platforms enable building applications using visual drag-and-drop interfaces and pre-built components with minimal or no hand-coding required.
 
-See also: [Workflow Automation](#workflow-automation), [n8n](../tools/n8n.md)
+They accelerate development for developers and non-technical users, enabling rapid creation of custom software without deep programming expertise.
+
+Bubble supports no-code web apps, while Retool provides low-code dashboards integrated with GPT-5.4 APIs.
+
+See also: [Workflow Automation](#workflow-automation), [n8n](../tools/n8n.md), [Bubble](../tools/bubble.md)
 
 ---
 
 ## Workflow Automation
 
-Using software to automate multi-step business processes that would otherwise require manual human action. In the AI tools context, workflow automation platforms (n8n, Make, Zapier) connect AI models to business tools; triggering actions, routing data, and orchestrating complex sequences. Examples: auto-responding to support tickets, generating and scheduling social media posts, scoring and routing leads.[1][5]
+**Workflow automation** uses software to execute multi-step business processes automatically based on triggers, rules, actions, and logic, minimizing human intervention.
+
+It enables faster operations, reduces errors, and frees teams for high-value work.
+
+For example, Zapier connects GPT-5.4 to generate social posts and schedules them via Make.
 
 See also: [No-code/Low-code](#no-codelow-code), [Agentic AI](#agentic-ai), [n8n](../tools/n8n.md)
 
@@ -200,7 +252,11 @@ See also: [No-code/Low-code](#no-codelow-code), [Agentic AI](#agentic-ai), [n8n]
 
 ## Embedding
 
-A numerical representation (vector) of text, images, or other data that captures semantic meaning. Embeddings allow you to measure how similar two pieces of content are by comparing their vectors. Used in RAG systems to find relevant documents, in recommendation engines, and in search. Example: the embeddings for "dog" and "puppy" would be very close in vector space, while "dog" and "refrigerator" would be far apart.[1][3]
+**Embedding** is a numerical vector representation of text, images, audio, or other data that captures semantic meaning and relationships in multidimensional space.
+
+This enables machines to quantify similarity between data points by measuring vector proximity, powering semantic search and AI applications.
+
+For example, embeddings for "dog" and "puppy" cluster closely in GPT-5.4's vector space, while "dog" and "refrigerator" remain distant.
 
 See also: [Vector Database](#vector-database), [RAG](#rag)
 
@@ -208,7 +264,11 @@ See also: [Vector Database](#vector-database), [RAG](#rag)
 
 ## Vector Database
 
-A specialized database optimized for storing and searching embeddings (vectors). When you build a RAG system, you store document embeddings in a vector database and query it to find the most relevant passages for a given prompt. Popular options: Pinecone v2, Weaviate 2, Chroma 1, Qdrant 2. Vector databases are essential infrastructure for any AI application that needs to search through private or domain-specific knowledge.[1]
+A **vector database** stores, indexes, and queries high-dimensional vector embeddings representing unstructured data like text, images, or audio for efficient similarity search.
+
+Vector databases enable low-latency semantic retrieval essential for RAG systems and generative AI applications.
+
+Pinecone v2 stores embeddings from GPT-5.4 for querying relevant passages in enterprise RAG pipelines.
 
 See also: [Embedding](#embedding), [RAG](#rag)
 
@@ -216,7 +276,11 @@ See also: [Embedding](#embedding), [RAG](#rag)
 
 ## Hallucination
 
-When an AI model generates information that sounds plausible but is factually incorrect or entirely fabricated. LLMs hallucinate because they are pattern-matching systems, not knowledge databases; they predict what text "should" come next based on training patterns, not by verifying facts. Mitigation strategies: RAG (grounding in real documents), asking the model to cite sources, human review, lowering temperature settings. Hallucination rates vary by model and task.[1][4]
+**Hallucination** is a response generated by an AI model that contains false or misleading information presented confidently as fact.
+
+This undermines reliability in critical applications like healthcare, law, and education, where accuracy determines outcomes.
+
+For example, Claude Opus 4.6 might claim GPT-5.4 won two Nobel Prizes, though it won none.
 
 See also: [RAG](#rag), [LLM](#llm)
 
@@ -224,31 +288,33 @@ See also: [RAG](#rag), [LLM](#llm)
 
 ## Inference
 
-The process of running a trained AI model to generate outputs (as opposed to training, which is the process of creating the model). When you send a prompt to Claude Opus 4.6 and get a response, that's inference. Inference costs are what you pay for API usage; they depend on model size, input/output length, and hardware. Inference optimization (smaller models, quantization, caching) is a major focus for reducing AI tool costs.[1][4]
+Inference is the execution phase where a trained AI model analyzes new data to produce predictions, decisions, or generated outputs without learning anything new. This is where AI delivers real-world value, transforming learned patterns into actionable results at scale. When you send a prompt to Claude Opus 4.6 and receive a response, or when GPT-5.4 generates text, that computational process is inference. Inference differs fundamentally from training: it requires only a forward pass through the model rather than parameter updates, making individual predictions far less computationally demanding than model development. Inference costs represent what users pay for API usage and depend on model size, input/output token length, and underlying hardware. Optimization techniques, including model quantization, prompt caching, and deploying smaller specialized models, have become critical for reducing inference expenses in production environments.
 
-See also: [Tokens](#tokens), [Latency](#latency), [API](#api)
+See also: [Training](#training), [Tokens](#tokens), [Latency](#latency), [API](#api), [Quantization](#quantization)
 
 ---
 
 ## Latency
 
-The time delay between sending a request to an AI model and receiving the response. Measured in milliseconds or seconds. Low latency matters for real-time applications like voice agents, coding assistants, and chatbots. Factors affecting latency: model size (larger = slower), input length, output length, server load, geographic distance to API server. Streaming (receiving tokens as they're generated) helps perceived latency even when total generation time is high.[1]
+Latency is the time delay between when an AI system receives an input and generates the corresponding output. This metric directly impacts user experience, with low latency enabling real-time interactions in conversational interfaces and autonomous systems. In Claude Opus 4.6 and GPT-5.4, latency stems from data preprocessing, mathematical computations, data transfer between processing units, and postprocessing, with larger models typically exhibiting higher latency due to increased computational overhead. Reducing latency requires model compression, optimized inference code, hardware acceleration, and lower-precision numerical formats. Streaming responses decreases perceived latency by delivering tokens incrementally rather than waiting for complete generation.
 
-See also: [Inference](#inference), [TTS](#tts-text-to-speech), [API](#api)
+See also: [Inference](#inference), [TTS](#tts-text-to-speech), [API](#api), [Model Compression](#model-compression)
 
 ---
 
 ## Computer Use
 
-A capability in agentic AI systems that allows models to interact directly with computer interfaces, such as clicking buttons, typing, and navigating screens. Enabled in models like Claude Opus 4.6 and Grok 4.20. Extends agents beyond APIs to handle visual UIs and legacy software. Key for automating desktop tasks but requires safeguards against unintended actions.[5]
-
-See also: [Agentic AI](#agentic-ai), [Multi-agent](#multi-agent)
+**Computer Use** is a capability in agentic AI systems that enables models to interact directly with computer interfaces by clicking buttons, typing text, and navigating screens. This extends AI agents beyond APIs to control visual UIs and legacy software for desktop automation. Claude Opus 4.6 demonstrates Computer Use by operating browsers and applications through screen observation and mouse actions. See also: [Agentic AI](#agentic-ai), [Multi-agent](#multi-agent)
 
 ---
 
 ## MoE (Mixture of Experts)
 
-**Mixture of Experts.** An AI architecture that activates only subsets of a model's parameters (experts) for each input, improving efficiency and scaling. Used in models like Mixtral 2 and Grok 4.20. MoE reduces compute needs during inference compared to dense models while maintaining performance. Becoming standard for large-scale LLMs.[4]
+**MoE (Mixture of Experts)** is a machine learning architecture that divides a neural network into specialized sub-networks called experts, with a gating network activating only relevant experts per input for efficiency.
+
+This selective activation scales models to billions of parameters while reducing compute costs during training and inference.
+
+Mixtral 2 and Grok 4.20 deploy MoE layers to match dense model performance at lower inference expense.
 
 See also: [LLM](#llm), [Inference](#inference)
 
@@ -256,7 +322,11 @@ See also: [LLM](#llm), [Inference](#inference)
 
 ## Test-Time Compute
 
-Extra computation applied during inference to improve model outputs, such as multiple reasoning paths or search over possibilities. Featured in reasoning models like GPT-5.4 and o4 series successors. Scales performance with available hardware; more compute yields better results on complex tasks. Optimizes cost-performance tradeoffs.[4]
+Test-Time Compute allocates additional computational resources during model inference to enhance output quality through techniques like multiple sampling, search, or iterative refinement.
+
+This scales performance on complex tasks by trading inference time and hardware for superior accuracy and reasoning.
+
+Examples include GPT-5.4 generating chain-of-thought reasoning and Claude Opus 4.6 using Monte Carlo Tree Search.
 
 See also: [Inference](#inference), [Reasoning Models](#reasoning-models)
 
@@ -264,6 +334,6 @@ See also: [Inference](#inference), [Reasoning Models](#reasoning-models)
 
 ## Reasoning Models
 
-LLMs optimized for step-by-step logical thinking, math, and multi-step problem-solving. Examples: Claude Opus 4.6 Reasoning, Gemini 3.1 Pro Think. Use techniques like chain-of-thought internally. Excel at coding, science, and planning over standard LLMs but slower and more expensive.[4]
-
+**Reasoning models** are large language models trained to perform multi-step logical reasoning, breaking complex problems into chain-of-thought steps for superior accuracy on math, coding, and planning tasks. They enable reliable solutions to challenges beyond standard LLMs' pattern-matching capabilities. Examples include Claude Opus 4.6 Reasoning and Gemini 3.1 Pro Think.  
 See also: [LLM](#llm), [Prompt Engineering](#prompt-engineering)
+

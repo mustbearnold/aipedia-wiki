@@ -1,0 +1,161 @@
+---
+// EmailCapture.astro
+// Reusable email signup form that POSTs to /api/subscribe.
+//
+// Props:
+//   variant: 'inline' | 'hero' | 'footer' (controls surrounding spacing/prominence)
+//   source: optional string passed to the API so we know where the signup came from
+
+export interface Props {
+  variant?: 'inline' | 'hero' | 'footer';
+  source?: string;
+}
+
+const { variant = 'inline', source = 'unknown' } = Astro.props;
+const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY ?? '';
+
+// Unique id suffix so multiple instances on one page don't collide
+const uid = Math.random().toString(36).slice(2, 8);
+const formId = `email-capture-${uid}`;
+const inputId = `email-capture-input-${uid}`;
+const statusId = `email-capture-status-${uid}`;
+const submitId = `email-capture-submit-${uid}`;
+const submitLabelId = `email-capture-submit-label-${uid}`;
+
+const containerClasses = {
+  hero: 'rounded-2xl border border-[rgba(167,139,250,0.28)] bg-gradient-to-br from-[rgba(167,139,250,0.10)] via-[rgba(96,165,250,0.06)] to-transparent p-6 sm:p-8',
+  inline: 'rounded-2xl border border-[var(--border)] bg-[var(--bg-card)] p-5 sm:p-6',
+  footer: 'rounded-2xl border border-[rgba(167,139,250,0.28)] bg-gradient-to-br from-[rgba(167,139,250,0.10)] via-[rgba(96,165,250,0.06)] to-transparent p-6 sm:p-8',
+}[variant];
+---
+
+<section
+  class={`email-capture max-w-3xl mx-auto my-12 ${containerClasses}`}
+  data-source={source}
+>
+  <div class="mb-4">
+    <div class="text-[11px] font-semibold uppercase tracking-wider text-[var(--accent-primary)] mb-2">
+      Newsletter
+    </div>
+    <h2 class="text-xl sm:text-2xl font-bold text-[var(--text-primary)] mb-1 leading-tight">
+      Get the monthly AI tools digest
+    </h2>
+    <p class="text-sm text-[var(--text-secondary)] leading-relaxed m-0">
+      What changed across 132 tools, honest. No fluff.
+    </p>
+  </div>
+
+  <form id={formId} class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
+    <label for={inputId} class="sr-only">Email address</label>
+    <input
+      id={inputId}
+      type="email"
+      name="email"
+      required
+      autocomplete="email"
+      inputmode="email"
+      placeholder="you@example.com"
+      class="flex-1 min-w-0 rounded-lg border border-[var(--border)] bg-[var(--bg-base)] px-3 py-2.5 text-sm text-[var(--text-primary)] placeholder:text-[var(--text-muted)] focus:outline-none focus:ring-1 focus:ring-[var(--accent-primary)]"
+    />
+    {turnstileSiteKey && (
+      <div class="cf-turnstile shrink-0" data-sitekey={turnstileSiteKey} data-theme="dark" data-size="flexible"></div>
+    )}
+    <button
+      type="submit"
+      id={submitId}
+      class="shrink-0 inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl font-semibold text-sm bg-[var(--accent-primary)] text-[#0b0a14] hover:brightness-110 transition-all shadow-[0_4px_14px_rgba(167,139,250,0.35)] hover:shadow-[0_6px_20px_rgba(167,139,250,0.45)] no-underline"
+    >
+      <span id={submitLabelId}>Subscribe</span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <line x1="5" y1="12" x2="19" y2="12"></line>
+        <polyline points="12 5 19 12 12 19"></polyline>
+      </svg>
+    </button>
+  </form>
+
+  <div id={statusId} class="mt-3 text-[13px] min-h-[1em]" role="status" aria-live="polite"></div>
+
+  <p class="mt-3 text-[11px] text-[var(--text-muted)] m-0">
+    One email a month. Unsubscribe anytime. No sharing with third parties.
+  </p>
+</section>
+
+{turnstileSiteKey && (
+  <script is:inline async src="https://challenges.cloudflare.com/turnstile/v0/api.js" defer></script>
+)}
+
+<script is:inline define:vars={{ formId, inputId, statusId, submitId, submitLabelId, source }}>
+  (function () {
+    const form = document.getElementById(formId);
+    if (!form || form.dataset.bound === '1') return;
+    form.dataset.bound = '1';
+
+    const inputEl = document.getElementById(inputId);
+    const statusEl = document.getElementById(statusId);
+    const submitBtn = document.getElementById(submitId);
+    const submitLabel = document.getElementById(submitLabelId);
+
+    const ERROR_MESSAGES = {
+      invalid_email: "That doesn't look like a valid email. Double-check and try again.",
+      rate_limited: 'Too many signups from this network today. Try again tomorrow.',
+      captcha_failed: 'Captcha failed. Refresh the page and try again.',
+      subscribe_disabled: 'Signups are temporarily unavailable. Try again later.',
+      db_failed: 'Something went wrong on our end. Try again in a minute.',
+      invalid_json: 'Something went wrong. Try again.',
+    };
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const email = (inputEl.value || '').trim();
+      if (!email) {
+        statusEl.textContent = 'Enter your email to subscribe.';
+        statusEl.style.color = '#f87171';
+        return;
+      }
+
+      submitBtn.disabled = true;
+      submitLabel.textContent = 'Subscribing...';
+      statusEl.textContent = '';
+      statusEl.style.color = '';
+
+      const fd = new FormData(form);
+      const turnstile_token = fd.get('cf-turnstile-response') || undefined;
+
+      try {
+        const res = await fetch('/api/subscribe', {
+          method: 'POST',
+          headers: { 'content-type': 'application/json' },
+          body: JSON.stringify({ email, source, turnstile_token }),
+        });
+        const data = await res.json().catch(() => ({}));
+
+        if (res.ok && data.ok) {
+          if (data.already) {
+            statusEl.textContent = "You're already on the list. I'll send the next digest.";
+          } else {
+            statusEl.textContent = "Thanks. I'll send the next digest.";
+          }
+          statusEl.style.color = '#34d399';
+          inputEl.value = '';
+          submitLabel.textContent = 'Subscribed';
+          // Keep button disabled on success so users don't spam-click
+        } else {
+          const msg = ERROR_MESSAGES[data.error] || 'Something went wrong. Try again.';
+          statusEl.textContent = msg;
+          statusEl.style.color = '#f87171';
+          submitBtn.disabled = false;
+          submitLabel.textContent = 'Subscribe';
+        }
+      } catch (err) {
+        statusEl.textContent = 'Network error. Try again.';
+        statusEl.style.color = '#f87171';
+        submitBtn.disabled = false;
+        submitLabel.textContent = 'Subscribe';
+      } finally {
+        if (window.turnstile) {
+          try { window.turnstile.reset(); } catch (_) {}
+        }
+      }
+    });
+  })();
+</script>

@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ToolCard from '../components/ToolCard.astro';
 import HomepageLD from '../components/seo/HomepageLD.astro';
+import EmailCapture from '../components/EmailCapture.astro';
 
 const allTools = await getCollection('tools');
 const trends = await getCollection('trends');
@@ -334,6 +335,9 @@ const impactColors: Record<string, string> = {
       })}
     </div>
   </section>
+
+  <!-- Email capture (monthly digest) -->
+  <EmailCapture variant="footer" source="homepage" />
 
   <!-- FAQ (visible; paired with FAQPage schema in HomepageLD) -->
   <section class="max-w-3xl mx-auto mb-16 px-4" aria-labelledby="faq-heading">

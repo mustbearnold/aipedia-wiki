@@ -194,6 +194,22 @@ const glossary = defineCollection({
   }).passthrough(),
 });
 
+const reports = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: 'src/content/reports' }),
+  schema: z.object({
+    type: z.string().optional(),
+    slug: z.string().optional(),
+    title: z.string(),
+    seo_title: z.string().optional(),
+    meta_description: z.string().optional(),
+    description: z.string().optional(),
+    author: z.string().optional(),
+    last_updated: dateish,
+    last_verified: dateish,
+    update_frequency: z.string().optional(),
+  }).passthrough(),
+});
+
 /* ------------------------------------------------------------------ */
 /*  Export                                                              */
 /* ------------------------------------------------------------------ */
@@ -207,4 +223,5 @@ export const collections = {
   'use-cases': useCases,
   dead,
   glossary,
+  reports,
 };
