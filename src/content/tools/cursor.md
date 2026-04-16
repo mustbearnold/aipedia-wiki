@@ -38,6 +38,19 @@ not_best_for:
   - high-volume api users on Pro tier
 quick_answer: >-
   Cursor is an AI-native code editor built on VS Code, developed by Anysphere (valued at $29.3B as of January 2026, crossing $2B ARR). The Hobby plan is free with limits; Pro costs $20/month with $20 of monthly usage credits for premium models (Claude Opus 4.6, GPT-5.4, Gemini 3.1 Pro, Grok); higher tiers reach $200/month for 20x usage. Key 2026 additions include Background Agents (autonomous tasks running in parallel, launched December 2025) and Composer 2 via Composer 1.5 (20x scaled reinforcement learning, 60% latency reduction). Best for professional developers who want AI woven into a VS Code-style IDE; not for those who prefer a fully agentic CLI workflow (Claude Code handles that better). Note that Pro moved from 500 fixed fast requests to usage-based credits in mid-2025, which in practice reduced typical monthly requests from ~500 to ~225.
+price_history:
+  - date: 2023-03-15
+    plan: "Pro"
+    price: "$20/mo"
+    note: "Cursor Pro pricing set at launch"
+  - date: 2024-09-10
+    plan: "Business"
+    price: "$40/user/mo"
+    note: "Business tier added"
+  - date: 2026-04-15
+    plan: "Pro"
+    price: "$20/mo"
+    note: "Verified, unchanged"
 ---
 
 # Cursor

@@ -40,6 +40,19 @@ not_best_for:
   - writing tasks requiring nuanced, distinctive prose
 quick_answer: >-
   Gemini is Google DeepMind's multimodal AI assistant, now on its third-generation model family. The current flagship is Gemini 3.1 Pro (March 2026 global rollout), with Gemini 3 Pro still available and Deep Think 3.1 (192K context, up to 10 prompts/day) exclusive to Google AI Ultra subscribers. Google AI Pro at $19.99/month bundles 5TB storage alongside full Gemini 3.1 Pro and Deep Research access, making it strong value compared to ChatGPT Plus at $20/month (no storage) or Claude Pro at $20/month. Best for users already inside Google Workspace; not the pick if raw reasoning depth or prose quality is the priority, where Claude Opus 4.6 still leads.
+price_history:
+  - date: 2024-02-08
+    plan: "Advanced"
+    price: "$19.99/mo"
+    note: "Gemini Advanced launched"
+  - date: 2025-03-01
+    plan: "Advanced"
+    price: "$20/mo"
+    note: "Rounded to $20"
+  - date: 2026-04-15
+    plan: "Advanced"
+    price: "$20/mo"
+    note: "Verified, unchanged"
 ---
 
 # Gemini

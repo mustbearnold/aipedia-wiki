@@ -47,6 +47,19 @@ not_best_for:
   - Artistic compositions without text
   - Users needing API access
   - Advanced LoRA customization
+price_history:
+  - date: 2023-08-28
+    plan: "Basic"
+    price: "$7/mo"
+    note: "Basic tier at launch"
+  - date: 2024-09-01
+    plan: "Basic"
+    price: "$8/mo"
+    note: "Price increased $1"
+  - date: 2026-04-15
+    plan: "Plus"
+    price: "$20/mo"
+    note: "Plus tier verified"
 ---
 
 # Ideogram 2.0

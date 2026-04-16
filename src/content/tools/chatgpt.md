@@ -41,6 +41,23 @@ not_best_for:
   - deep long-form reasoning vs. Claude Opus 4.6
 quick_answer: >-
   ChatGPT is OpenAI's general-purpose AI assistant, running GPT-5.3 Instant by default across all tiers and GPT-5.4 Thinking/Pro on paid plans as of April 2026. GPT-4o was fully retired February 13, 2026. The free tier now includes ads; Plus ($20/mo) is ad-free with GPT-5.4 Thinking; two Pro tiers ($100 and $200/mo) add the Codex AI coding agent at 5x and 20x usage respectively. Image generation uses GPT Image 1.5 (replaced DALL-E 3 in March 2025). Sora video was permanently discontinued in March 2026. Core features include Operator/Agent Mode, Advanced Voice, Projects, Memory, Canvas, and Custom GPTs. Codex is the standout new capability for developers. Compared to Claude Opus 4.6, Gemini 3.1 Pro, and Grok 4, ChatGPT's breadth of integrations and its Codex coding agent remain its clearest advantages.
+price_history:
+  - date: 2023-02-01
+    plan: "Plus"
+    price: "$20/mo"
+    note: "ChatGPT Plus launched"
+  - date: 2024-01-10
+    plan: "Team"
+    price: "$25/user/mo"
+    note: "Team tier launched"
+  - date: 2024-09-12
+    plan: "Pro"
+    price: "$200/mo"
+    note: "Pro tier launched with o1 access"
+  - date: 2026-04-15
+    plan: "Plus"
+    price: "$20/mo"
+    note: "Verified, unchanged"
 ---
 
 # ChatGPT

@@ -41,6 +41,23 @@ not_best_for:
   - users wanting a single tool for shopping, calendar, and search
 quick_answer: >-
   Claude is Anthropic's AI assistant built on Constitutional AI training to reduce sycophancy and harmful outputs. As of April 2026, both Opus 4.6 and Sonnet 4.6 carry a 1M token context window, the largest of any major general-purpose AI assistant, with up to 128K output tokens on Opus. Free tier gives access to Sonnet; Pro ($20/mo) unlocks Opus and extended thinking; Max tiers at $100-$200/mo raise usage limits. Claude Code CLI (v2.1.108 as of April 14, 2026) is the strongest agentic coding tool available. A separate frontier model, Claude Mythos Preview, was announced April 7, 2026 for defensive cybersecurity via Project Glasswing; it is invitation-only and not a general-release product. Best for writing, deep reasoning, and code; not the pick if you need image generation or a plugin ecosystem comparable to GPT-5.4's.
+price_history:
+  - date: 2023-09-07
+    plan: "Pro"
+    price: "$20/mo"
+    note: "Claude Pro launched"
+  - date: 2025-04-09
+    plan: "Max 5x"
+    price: "$100/mo"
+    note: "Max tier launched"
+  - date: 2025-04-09
+    plan: "Max 20x"
+    price: "$200/mo"
+    note: "Max 20x launched"
+  - date: 2026-04-15
+    plan: "Pro"
+    price: "$20/mo"
+    note: "Verified, unchanged"
 ---
 
 # Claude

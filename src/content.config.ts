@@ -49,6 +49,12 @@ const tools = defineCollection({
     quick_answer: z.string().optional(),
     best_for: z.array(z.string()).optional(),
     not_best_for: z.array(z.string()).optional(),
+    price_history: z.array(z.object({
+      date: z.string(),
+      plan: z.string().optional(),
+      price: z.string(),
+      note: z.string().optional(),
+    })).optional(),
   }).passthrough(),
 });
 

@@ -35,6 +35,19 @@ meta_description: >-
 author: aipedia.wiki Editorial
 quick_answer: >-
   Grammarly is an AI writing assistant built by Grammarly Inc. that has grown to 30 million daily active users by embedding a real-time grammar, style, and tone checker directly into Gmail, Google Docs, Slack, and thousands of other web apps via a browser extension. Its inline correction layer operates without switching contexts, which no general-purpose chatbot matches. Free plan covers basic grammar; Premium runs $12/month (annual) for full suggestions, tone detection, and plagiarism checking; Business is $15/user/month for style guides. Best for knowledge workers and non-native English speakers who write daily in the browser, not for heavy-generation tasks where Claude Opus 4.6 or GPT-5.4 produce meaningfully better output.
+price_history:
+  - date: 2020-01-01
+    plan: "Premium"
+    price: "$12/mo"
+    note: "Annual plan monthly equivalent"
+  - date: 2023-09-15
+    plan: "Business"
+    price: "$15/user/mo"
+    note: "Business tier launched"
+  - date: 2026-04-15
+    plan: "Pro"
+    price: "$12/mo"
+    note: "Rebranded Premium to Pro; price held"
 ---
 
 # Grammarly

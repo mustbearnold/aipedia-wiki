@@ -30,6 +30,15 @@ meta_description: "Notion AI is bundled into the Business plan at $20/user/month
 author: "aipedia.wiki Editorial"
 quick_answer: >-
   Notion AI is an LLM feature layer developed by Notion Labs, Inc. that adds natural language Q&A across workspace documents, AI Autofill for computed database properties, a writing assistant, AI meeting notes with custom instructions, and as of 2026, multi-agent orchestration and Workers for Agents with custom code execution. Notion AI remains bundled into the Business tier at $20/user/month (annual) or $24/user/month (monthly); it is not available as a separate add-on for new Free or Plus users. The underlying LLMs are not disclosed on notion.so; third-party reporting indicates Notion uses lighter models including Haiku and Gemini variants for agent workflows rather than GPT-5.4 or Claude Opus 4.6. Best for teams already using Notion as their primary wiki and project tool; not for users evaluating Notion for the first time just for AI features (NotebookLM does document Q&A better for free, and Claude handles writing tasks at comparable cost for individuals).
+price_history:
+  - date: 2023-02-22
+    plan: "AI add-on"
+    price: "$10/user/mo"
+    note: "Notion AI launched"
+  - date: 2026-04-15
+    plan: "AI add-on"
+    price: "$10/user/mo"
+    note: "Verified, unchanged"
 ---
 
 # Notion AI

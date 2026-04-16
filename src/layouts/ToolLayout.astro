@@ -23,6 +23,8 @@ import FeedbackForm from '../components/FeedbackForm.astro';
 import ReportOutdatedButton from '../components/ReportOutdatedButton.astro';
 import HelpfulVote from '../components/HelpfulVote.astro';
 import BadgeEmbed from '../components/BadgeEmbed.astro';
+import CiteThisPage from '../components/CiteThisPage.astro';
+import PriceHistory from '../components/PriceHistory.astro';
 
 interface Props {
   frontmatter: Record<string, any>;
@@ -210,9 +212,13 @@ const breadcrumbLdItems = [
 
       <ShareButtons title={frontmatter.title} pageUrl={`${siteBase}tools/${toolSlug}/`} />
 
+      <PriceHistory history={frontmatter.price_history} toolName={frontmatter.title} />
+
       <HelpfulVote pageSlug={toolSlug} pageType="tool" />
 
       <BadgeEmbed slug={toolSlug} title={frontmatter.title} />
+
+      <CiteThisPage title={`${frontmatter.title} — Editorial Review`} pageUrl={`${siteBase}tools/${toolSlug}/`} pageType="tool-review" />
 
       <FeedbackForm toolName={frontmatter.title} />
 

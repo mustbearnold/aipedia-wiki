@@ -1,0 +1,91 @@
+---
+// Render price history timeline for a tool if the frontmatter has a
+// price_history array. Shows old price, new price, and the change delta.
+// If fewer than 2 real entries, shows nothing (no point showing a timeline
+// with one point).
+interface HistoryEntry {
+  date: string;
+  plan?: string;
+  price: string;
+  note?: string;
+}
+
+interface Props {
+  history?: HistoryEntry[];
+  toolName: string;
+}
+
+const { history, toolName } = Astro.props;
+
+if (!history || history.length < 2) {
+  return Astro.redirect ? null : null;
+}
+
+// Sort ascending by date
+const sorted = [...history].sort((a, b) => a.date.localeCompare(b.date));
+
+function parsePrice(s: string): number | null {
+  const m = String(s).match(/\$?([\d.]+)/);
+  if (!m) return null;
+  return Number(m[1]);
+}
+
+function fmtDate(d: string) {
+  const dt = new Date(d);
+  if (isNaN(dt.getTime())) return d;
+  return dt.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+}
+
+// Compute deltas for each entry relative to the previous with the same plan
+const rows = sorted.map((entry, i) => {
+  let delta: number | null = null;
+  for (let j = i - 1; j >= 0; j--) {
+    if (sorted[j].plan === entry.plan) {
+      const prev = parsePrice(sorted[j].price);
+      const curr = parsePrice(entry.price);
+      if (prev != null && curr != null && prev > 0) {
+        delta = ((curr - prev) / prev) * 100;
+      }
+      break;
+    }
+  }
+  return { ...entry, delta };
+});
+---
+
+{sorted.length >= 2 && (
+  <section class="not-prose my-8" aria-labelledby="price-history-heading">
+    <div class="flex items-baseline justify-between mb-3">
+      <h2 id="price-history-heading" class="text-lg font-bold text-[var(--text-primary)] m-0">Price history</h2>
+      <span class="text-xs text-[var(--text-muted)]">Since launch</span>
+    </div>
+    <div class="rounded-xl border border-[var(--border)] bg-[var(--bg-card)] overflow-hidden">
+      <ul class="list-none p-0 m-0">
+        {rows.map((r, idx) => (
+          <li class={`flex items-center gap-3 px-4 py-3 ${idx < rows.length - 1 ? 'border-b border-[var(--border)]' : ''}`}>
+            <div class="shrink-0 w-20 text-[11px] text-[var(--text-muted)] tabular-nums">
+              {fmtDate(r.date)}
+            </div>
+            <div class="flex-1 min-w-0">
+              <div class="text-[13px] font-medium text-[var(--text-primary)]">
+                <span>{r.plan ? `${r.plan}: ` : ''}</span>
+                <span class="tabular-nums">{r.price}</span>
+              </div>
+              {r.note && (
+                <div class="text-[11.5px] text-[var(--text-muted)] mt-0.5">{r.note}</div>
+              )}
+            </div>
+            {r.delta != null && Math.abs(r.delta) > 0.5 && (
+              <div class={`shrink-0 text-[11px] font-semibold tabular-nums ${r.delta > 0 ? 'text-[var(--accent-warning)]' : 'text-[var(--accent-success)]'}`}>
+                {r.delta > 0 ? '+' : ''}{r.delta.toFixed(0)}%
+              </div>
+            )}
+          </li>
+        ))}
+      </ul>
+    </div>
+    <p class="text-[11px] text-[var(--text-muted)] mt-2 leading-relaxed">
+      Price changes tracked from public pricing pages. Email <a href="mailto:eli@aipedia.wiki" class="text-[var(--accent-primary)] no-underline">eli@aipedia.wiki</a> to flag a missed change.
+    </p>
+  </section>
+)}

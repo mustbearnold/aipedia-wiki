@@ -1,0 +1,102 @@
+---
+// "Cite this page" — journalist-ready attribution snippet.
+// Gives reporters, bloggers, and academics a copy-paste-ready citation
+// in multiple formats. Every citation that lands on another site is a
+// backlink. Low effort, high leverage for authority building.
+interface Props {
+  title: string;
+  pageUrl: string;
+  author?: string;
+  pageType?: string;
+  datePublished?: string;
+}
+
+const {
+  title,
+  pageUrl,
+  author = 'Eli Marsh',
+  pageType = 'article',
+  datePublished,
+} = Astro.props;
+
+const today = new Date();
+const accessDate = today.toLocaleDateString('en-US', { day: 'numeric', month: 'long', year: 'numeric' });
+const year = today.getFullYear();
+
+// APA: Marsh, E. (2026). Title. aipedia.wiki. Retrieved April 16, 2026, from URL
+const apa = `Marsh, E. (${year}). ${title}. aipedia.wiki. Retrieved ${accessDate}, from ${pageUrl}`;
+
+// MLA 9: Marsh, Eli. "Title." aipedia.wiki, 2026, URL. Accessed 16 April 2026.
+const mla = `Marsh, Eli. "${title}." aipedia.wiki, ${year}, ${pageUrl}. Accessed ${accessDate}.`;
+
+// Chicago author-date: Marsh, Eli. 2026. "Title." aipedia.wiki. URL.
+const chicago = `Marsh, Eli. ${year}. "${title}." aipedia.wiki. ${pageUrl}.`;
+
+// Plain text for news writers
+const news = `According to ${author}, editor-in-chief of aipedia.wiki (${pageUrl})`;
+
+// BibTeX
+const bibKey = title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 40) + `-${year}`;
+const bibtex = `@misc{${bibKey},
+  author = {Marsh, Eli},
+  title = {${title}},
+  year = {${year}},
+  publisher = {aipedia.wiki},
+  url = {${pageUrl}},
+  note = {Accessed: ${today.toISOString().split('T')[0]}}
+}`;
+---
+
+<details class="not-prose mt-6 rounded-xl border border-[var(--border)] bg-[var(--bg-card)]">
+  <summary class="cursor-pointer px-5 py-3 text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--text-primary)] flex items-center justify-between">
+    <span class="inline-flex items-center gap-2">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
+      </svg>
+      Cite this page
+    </span>
+    <span class="text-xs text-[var(--text-muted)] ml-2">For journalists, researchers, and bloggers</span>
+  </summary>
+
+  <div class="px-5 pb-5 pt-2 border-t border-[var(--border)] space-y-3">
+    <div>
+      <div class="flex items-center justify-between mb-1">
+        <label class="text-xs font-medium text-[var(--text-muted)]">News writers</label>
+        <button type="button" class="copy-btn text-xs text-[var(--accent-primary)] hover:underline" data-copy={news}>Copy</button>
+      </div>
+      <code class="block text-[11px] text-[var(--text-secondary)] bg-[var(--bg-base)] rounded px-3 py-2 whitespace-pre-wrap break-all border border-[var(--border)]">{news}</code>
+    </div>
+
+    <div>
+      <div class="flex items-center justify-between mb-1">
+        <label class="text-xs font-medium text-[var(--text-muted)]">APA</label>
+        <button type="button" class="copy-btn text-xs text-[var(--accent-primary)] hover:underline" data-copy={apa}>Copy</button>
+      </div>
+      <code class="block text-[11px] text-[var(--text-secondary)] bg-[var(--bg-base)] rounded px-3 py-2 whitespace-pre-wrap break-all border border-[var(--border)]">{apa}</code>
+    </div>
+
+    <div>
+      <div class="flex items-center justify-between mb-1">
+        <label class="text-xs font-medium text-[var(--text-muted)]">MLA 9</label>
+        <button type="button" class="copy-btn text-xs text-[var(--accent-primary)] hover:underline" data-copy={mla}>Copy</button>
+      </div>
+      <code class="block text-[11px] text-[var(--text-secondary)] bg-[var(--bg-base)] rounded px-3 py-2 whitespace-pre-wrap break-all border border-[var(--border)]">{mla}</code>
+    </div>
+
+    <div>
+      <div class="flex items-center justify-between mb-1">
+        <label class="text-xs font-medium text-[var(--text-muted)]">Chicago</label>
+        <button type="button" class="copy-btn text-xs text-[var(--accent-primary)] hover:underline" data-copy={chicago}>Copy</button>
+      </div>
+      <code class="block text-[11px] text-[var(--text-secondary)] bg-[var(--bg-base)] rounded px-3 py-2 whitespace-pre-wrap break-all border border-[var(--border)]">{chicago}</code>
+    </div>
+
+    <div>
+      <div class="flex items-center justify-between mb-1">
+        <label class="text-xs font-medium text-[var(--text-muted)]">BibTeX</label>
+        <button type="button" class="copy-btn text-xs text-[var(--accent-primary)] hover:underline" data-copy={bibtex}>Copy</button>
+      </div>
+      <code class="block text-[11px] text-[var(--text-secondary)] bg-[var(--bg-base)] rounded px-3 py-2 whitespace-pre-wrap border border-[var(--border)]">{bibtex}</code>
+    </div>
+  </div>
+</details>

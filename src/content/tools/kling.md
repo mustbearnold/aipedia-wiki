@@ -41,6 +41,15 @@ not_best_for:
   - long video clips
 quick_answer: >-
   Kling 3.0 is an AI video generation platform developed by Kuaishou, a Chinese technology company, used for text-to-video, image-to-video, and B-roll production. Kling 4 has not launched as of April 2026. Kling 3.0 generates clips from 3 to 15 seconds at 720p or 1080p, with Multi-Shot and Element Binding for character consistency. It holds a top community ELO ranking for AI video quality, at roughly one-third the price of Runway. The free tier includes a watermark and only the older 2.0 model; the $10/month Standard plan unlocks Kling 3.0 and watermark-free output. Best for creators who want strong raw quality at the lowest cost; not suitable for production pipelines requiring a public API, or users with concerns about Chinese-company data handling.
+price_history:
+  - date: 2024-06-06
+    plan: "Standard"
+    price: "$10/mo"
+    note: "Standard at launch"
+  - date: 2026-04-15
+    plan: "Standard"
+    price: "$10/mo"
+    note: "Verified, unchanged"
 ---
 
 # Kling 3.0

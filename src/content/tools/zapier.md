@@ -34,6 +34,19 @@ meta_description: >-
 author: aipedia.wiki Editorial
 quick_answer: >-
   Zapier is the original no-code automation platform developed by Zapier Inc. that connects apps through trigger-action workflows called Zaps, with 7,000+ app integrations making it the broadest integration library of any automation platform by a wide margin. That integration breadth is the defining moat: no competitor comes close, and it scores 9/10 on moat as a result. Free tier offers 100 tasks/month; paid plans start at $19.99/month for 750 tasks, scaling to $299+/month for 50,000+ tasks. Best for non-technical users and small businesses who need simple automations across a wide variety of tools with the lowest learning curve in the category; not for teams with complex multi-step logic or high task volumes where Make is meaningfully cheaper and handles branching and looping more elegantly. Task-based pricing is aggressive since every action in a multi-step Zap counts separately, so a 5-step Zap consuming 5 tasks per trigger adds up fast.
+price_history:
+  - date: 2022-04-20
+    plan: "Starter"
+    price: "$19.99/mo"
+    note: "Starter tier pricing"
+  - date: 2025-01-15
+    plan: "Starter"
+    price: "$20/mo"
+    note: "Rounded to $20"
+  - date: 2026-04-15
+    plan: "Starter"
+    price: "$20/mo"
+    note: "Verified, unchanged"
 ---
 
 # Zapier

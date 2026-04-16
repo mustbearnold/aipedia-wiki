@@ -39,6 +39,19 @@ not_best_for:
   - power users needing 1500+ premium requests per month
 quick_answer: >-
   GitHub Copilot is an AI coding assistant developed by GitHub (Microsoft), providing inline autocomplete, chat, and agent mode directly inside VS Code and JetBrains IDEs. Five tiers exist: Free ($0, 2,000 completions, 50 premium requests/mo), Pro ($10/mo, 300 premium requests, agent mode), Pro+ ($39/mo, 1,500 premium requests), Business ($19/seat/mo), and Enterprise ($39/seat/mo). Pro and above include a model selector with GPT-5.4, Claude Opus 4.6, Gemini 2.5/3.1 Pro, and Grok. Agent mode reached general availability in March 2026 with multi-file edits, terminal commands, and agentic code review. Best for developers already in the GitHub ecosystem who want affordable AI assistance in their existing IDE; not the right tool if you need the most capable autonomous coding agent (Claude Code handles that, at significantly higher cost) or if you need more than 300 premium requests per month without upgrading to Pro+.
+price_history:
+  - date: 2022-06-21
+    plan: "Individual"
+    price: "$10/mo"
+    note: "Copilot GA launch"
+  - date: 2025-07-01
+    plan: "Pro+"
+    price: "$39/mo"
+    note: "Pro+ tier added with premium model access"
+  - date: 2026-04-15
+    plan: "Individual"
+    price: "$10/mo"
+    note: "Verified, unchanged"
 ---
 
 # GitHub Copilot

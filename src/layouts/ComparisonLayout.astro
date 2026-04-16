@@ -9,6 +9,7 @@ import FAQAccordionScript from '../components/FAQAccordionScript.astro';
 import FeedbackForm from '../components/FeedbackForm.astro';
 import ReportOutdatedButton from '../components/ReportOutdatedButton.astro';
 import ComparisonEmbed from '../components/ComparisonEmbed.astro';
+import CiteThisPage from '../components/CiteThisPage.astro';
 
 interface ToolData {
   slug: string;
@@ -233,6 +234,8 @@ const winningTool = winner && winner !== 'depends' ? tools.find((t) => t.slug ==
       <FAQAccordionScript />
       <ShareButtons title={title} pageUrl={`${siteBase}compare/${slug}/`} />
       <ComparisonEmbed slug={slug} title={title} />
+
+      <CiteThisPage title={title} pageUrl={`${siteBase}compare/${slug}/`} pageType="comparison" />
 
       <FeedbackForm toolName={title} />
       <ReportOutdatedButton pageTitle={title} pageSlug={slug} pageType="comparison" />

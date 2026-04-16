@@ -39,6 +39,23 @@ not_best_for:
   - budget-conscious users
 quick_answer: >-
   Midjourney is an AI image generator from Midjourney, Inc., used primarily for concept art, design work, and marketing visuals. V7 is the current default model as of April 2026; V8 is in alpha testing with reported improvements to realism and censorship. Plans run $10-$120/month with no free tier and no public API, making it more expensive to start than Flux or Leonardo. Best for designers who prioritize visual polish over customizability; not for developers needing programmatic access, users requiring perfect text rendering (use Ideogram), or users on a tight budget (use Leonardo free tier).
+price_history:
+  - date: 2022-06-10
+    plan: "Basic"
+    price: "$10/mo"
+    note: "Basic plan at launch"
+  - date: 2023-03-01
+    plan: "Pro"
+    price: "$60/mo"
+    note: "Pro tier introduced"
+  - date: 2024-01-15
+    plan: "Mega"
+    price: "$120/mo"
+    note: "Mega plan added"
+  - date: 2026-04-15
+    plan: "Basic"
+    price: "$10/mo"
+    note: "Verified, unchanged"
 ---
 
 # Midjourney

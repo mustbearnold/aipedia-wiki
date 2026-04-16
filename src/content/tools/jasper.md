@@ -45,6 +45,23 @@ not_best_for:
   - Developers or technical content creators
   - Anyone prioritizing cost over brand workflow features
   - Teams needing advanced SEO optimization
+price_history:
+  - date: 2023-01-01
+    plan: "Boss Mode"
+    price: "$59/mo"
+    note: "Boss Mode pricing"
+  - date: 2024-03-12
+    plan: "Creator"
+    price: "$49/mo"
+    note: "Creator tier added, cheaper entry"
+  - date: 2025-08-01
+    plan: "Pro"
+    price: "$69/mo"
+    note: "Pro added; older plans grandfathered"
+  - date: 2026-04-15
+    plan: "Creator"
+    price: "$49/mo"
+    note: "Verified, unchanged"
 ---
 
 # Jasper

@@ -42,6 +42,23 @@ not_best_for:
   - production api without stability (v3 alpha artifacts)
 quick_answer: >-
   ElevenLabs is an AI voice generation and text-to-speech platform by ElevenLabs, Inc., used for voice cloning, audiobook narration, multilingual dubbing, and conversational voice agents. As of April 2026, the flagship is Eleven v3 (alpha research preview), ranked #2 on Artificial Analysis TTS ELO (1,179) and supporting 74 languages. Free tier provides experimentation access; paid plans run $5-$330/month. API pricing is $0.120/1K characters for v2/v3, $0.060/1K for Flash/Turbo models, with a 80% UI discount on v3 through end of June 2026. Best for content creators and developers who need the highest-quality output; not the right call if API cost matters most or if you need stable production output from the newest model (use v2 for API stability while v3 is in alpha).
+price_history:
+  - date: 2023-04-01
+    plan: "Starter"
+    price: "$5/mo"
+    note: "Starter tier launched"
+  - date: 2023-11-01
+    plan: "Creator"
+    price: "$22/mo"
+    note: "Creator added"
+  - date: 2024-05-01
+    plan: "Pro"
+    price: "$99/mo"
+    note: "Pro tier introduced"
+  - date: 2026-04-15
+    plan: "Creator"
+    price: "$22/mo"
+    note: "Verified, unchanged"
 ---
 
 # ElevenLabs
