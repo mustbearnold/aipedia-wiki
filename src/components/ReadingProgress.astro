@@ -1,0 +1,50 @@
+---
+// 2px top-of-viewport bar that fills as you scroll the current article.
+// Pure CSS + minimal JS. Uses the viewport-to-document ratio so it tracks
+// actual reading position rather than content-specific offsets.
+---
+
+<div
+  id="reading-progress"
+  class="fixed top-0 left-0 right-0 h-[2px] z-[60] pointer-events-none"
+  style="background: transparent;"
+  aria-hidden="true"
+>
+  <div
+    id="reading-progress-bar"
+    class="h-full origin-left"
+    style="transform: scaleX(0); background: linear-gradient(90deg, #a78bfa, #60a5fa); box-shadow: 0 0 8px rgba(167,139,250,0.4);"
+  ></div>
+</div>
+
+<script is:inline>
+  (function () {
+    if (window.__readingProgressBound) return;
+    window.__readingProgressBound = true;
+
+    let ticking = false;
+    function update() {
+      ticking = false;
+      const bar = document.getElementById('reading-progress-bar');
+      if (!bar) return;
+      const doc = document.documentElement;
+      const scrollable = doc.scrollHeight - window.innerHeight;
+      if (scrollable <= 0) {
+        bar.style.transform = 'scaleX(0)';
+        return;
+      }
+      const p = Math.max(0, Math.min(1, window.scrollY / scrollable));
+      bar.style.transform = 'scaleX(' + p + ')';
+    }
+    function onScroll() {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(update);
+      }
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll, { passive: true });
+    document.addEventListener('astro:after-swap', update);
+    update();
+  })();
+</script>

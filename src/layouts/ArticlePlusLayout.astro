@@ -6,6 +6,7 @@
  * markdown headings worth navigating.
  */
 import BaseLayout from './BaseLayout.astro';
+import ReadingProgress from '../components/ReadingProgress.astro';
 import Breadcrumb from '../components/Breadcrumb.astro';
 import BreadcrumbLD from '../components/seo/BreadcrumbLD.astro';
 import TableOfContents from '../components/TableOfContents.astro';
@@ -61,6 +62,7 @@ const verifiedLabel = verifiedDate && !isNaN(verifiedDate.getTime())
 ---
 
 <BaseLayout title={seoTitle ?? title} description={description}>
+  <ReadingProgress />
   {breadcrumbLdItems && <BreadcrumbLD items={breadcrumbLdItems} />}
   {breadcrumbs && <Breadcrumb items={breadcrumbs} />}
 

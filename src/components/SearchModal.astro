@@ -168,14 +168,27 @@ const categoryEmoji: Record<string, string> = {
     transition: background 100ms;
     margin: 0 !important;
   }
-  #search-results .s-result:hover { background: var(--bg-card-hover); }
+  #search-results .s-result:hover,
+  #search-results .s-result.is-selected,
+  #search-results .g-result.is-selected { background: var(--bg-card-hover); }
+  #search-results .s-result.is-selected,
+  #search-results .g-result.is-selected { box-shadow: inset 0 0 0 1px rgba(167,139,250,0.35); }
   #search-results .s-icon {
     width: 34px; height: 34px; border-radius: 8px;
     display: flex !important; align-items: center; justify-content: center;
-    font-size: 16px; flex-shrink: 0;
-    background: linear-gradient(135deg, rgba(167,139,250,0.18), rgba(96,165,250,0.18));
-    border: 1px solid rgba(167,139,250,0.15);
+    flex-shrink: 0;
+    overflow: hidden;
+    background: linear-gradient(135deg, rgba(255,255,255,0.88), rgba(255,255,255,0.72));
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.7), 0 1px 2px rgba(0,0,0,0.1);
+    padding: 2px;
   }
+  @supports (backdrop-filter: blur(8px)) {
+    #search-results .s-icon {
+      background: linear-gradient(135deg, rgba(255,255,255,0.78), rgba(255,255,255,0.58));
+      backdrop-filter: blur(12px) saturate(150%);
+    }
+  }
+  #search-results .s-icon img { width: 100%; height: 100%; object-fit: contain; display: block; }
   #search-results .s-text { flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; gap: 1px; }
   #search-results .s-name {
     font-size: 13px; font-weight: 600; color: var(--text-primary);
@@ -277,7 +290,7 @@ const categoryEmoji: Record<string, string> = {
       input.placeholder = activeTab === 'tools' ? 'Search tools...' : 'Search all pages...';
       const q = input.value.trim();
       if (q) runSearch(q);
-      else showHint();
+      else { showHint(); preselectFirst(); }
     }
   });
 
@@ -336,6 +349,7 @@ const categoryEmoji: Record<string, string> = {
     requestAnimationFrame(() => requestAnimationFrame(() => modal.classList.add('is-open')));
     setTimeout(() => input.focus(), 50);
     showHint();
+    preselectFirst();
   }
 
   function closeModal() {
@@ -374,7 +388,7 @@ const categoryEmoji: Record<string, string> = {
         <div class="s-section">Popular tools</div>
         ${featured.map(t => `
           <a class="s-result" href="${t.url}">
-            <div class="s-icon">${EMOJI[t.category] || '🔧'}</div>
+            <div class="s-icon"><img src="/logos/tools/${t.slug}.png" alt="" onerror="this.replaceWith(Object.assign(document.createElement('span'),{textContent:'${EMOJI[t.category]||'🔧'}',style:'font-size:16px'}))" /></div>
             <div class="s-text">
               <div class="s-name">${esc(t.title)}</div>
               <div class="s-sub">${esc(t.tagline)}</div>
@@ -420,7 +434,7 @@ const categoryEmoji: Record<string, string> = {
     }
     results.innerHTML = hits.map(t => `
       <a class="s-result" href="${t.url}">
-        <div class="s-icon">${EMOJI[t.category] || '🔧'}</div>
+        <div class="s-icon"><img src="/logos/tools/${t.slug}.png" alt="" onerror="this.replaceWith(Object.assign(document.createElement('span'),{textContent:'${EMOJI[t.category]||'🔧'}',style:'font-size:16px'}))" /></div>
         <div class="s-text">
           <div class="s-name">${highlight(t.title, q)}</div>
           <div class="s-sub">${highlight(t.tagline, q)}</div>
@@ -461,8 +475,14 @@ const categoryEmoji: Record<string, string> = {
       </a>`).join('');
   }
 
+  function preselectFirst() {
+    const { results } = els();
+    const first = results?.querySelector('a');
+    if (first) first.classList.add('is-selected');
+  }
+
   function runSearch(q) {
-    if (activeTab === 'tools') searchTools(q);
+    if (activeTab === 'tools') { searchTools(q); preselectFirst(); }
     else searchGeneral(q);
   }
 
@@ -484,17 +504,46 @@ const categoryEmoji: Record<string, string> = {
     if (e.target.id !== 'search-input') return;
     clearTimeout(debounceTimer);
     const q = e.target.value.trim();
-    if (!q) { showHint(); return; }
-    if (activeTab === 'tools') searchTools(q);
-    else { debounceTimer = setTimeout(() => searchGeneral(q), 200); }
+    if (!q) { showHint(); preselectFirst(); return; }
+    if (activeTab === 'tools') { searchTools(q); preselectFirst(); }
+    else { debounceTimer = setTimeout(() => { searchGeneral(q).then(preselectFirst); }, 200); }
   });
+
+  function selectedResult() {
+    const { results } = els();
+    return results?.querySelector('a.is-selected');
+  }
+  function moveSelection(dir) {
+    const { results } = els();
+    if (!results) return;
+    const all = Array.from(results.querySelectorAll('a'));
+    if (!all.length) return;
+    const cur = all.findIndex(a => a.classList.contains('is-selected'));
+    let next = cur + dir;
+    if (next < 0) next = all.length - 1;
+    if (next >= all.length) next = 0;
+    all.forEach(a => a.classList.remove('is-selected'));
+    all[next].classList.add('is-selected');
+    all[next].scrollIntoView({ block: 'nearest' });
+  }
 
   document.addEventListener('keydown', (e) => {
     const isInput = e.target.id === 'search-input';
     if (isInput && e.key === 'Escape') { e.stopPropagation(); closeModal(); return; }
+    if (isInput && (e.key === 'ArrowDown' || (e.key === 'Tab' && !e.shiftKey))) {
+      e.preventDefault();
+      moveSelection(1);
+      return;
+    }
+    if (isInput && (e.key === 'ArrowUp' || (e.key === 'Tab' && e.shiftKey))) {
+      e.preventDefault();
+      moveSelection(-1);
+      return;
+    }
     if (isInput && e.key === 'Enter') {
+      e.preventDefault();
       const { results } = els();
-      const a = results?.querySelector('a');
+      const a = selectedResult() || results?.querySelector('a');
       if (a) a.click();
       return;
     }

@@ -1,5 +1,6 @@
 ---
 import BaseLayout from './BaseLayout.astro';
+import ReadingProgress from '../components/ReadingProgress.astro';
 import Breadcrumb from '../components/Breadcrumb.astro';
 import ScoreBadge from '../components/ScoreBadge.astro';
 import ScoreGrid from '../components/ScoreGrid.astro';
@@ -83,6 +84,7 @@ const breadcrumbLdItems = [
   description={frontmatter.meta_description ?? frontmatter.tagline ?? ''}
   ogImage={`/og/tools/${toolSlug}.svg`}
 >
+  <ReadingProgress />
   <BreadcrumbLD items={breadcrumbLdItems} />
   {faqItems.length > 0 && <FAQPageLD questions={faqItems} />}
   <SoftwareApplicationLD
@@ -251,4 +253,20 @@ const breadcrumbLdItems = [
     pricingModel={frontmatter.pricing_model}
     priceRange={frontmatter.price_range}
   />
+
+  <script is:inline define:vars={{ toolSlug, toolTitle: frontmatter.title }}>
+    (function () {
+      const KEY = 'recently-viewed-tools';
+      const MAX = 10;
+      try {
+        const raw = localStorage.getItem(KEY);
+        let list = raw ? JSON.parse(raw) : [];
+        if (!Array.isArray(list)) list = [];
+        list = list.filter((e) => e && e.slug !== toolSlug);
+        list.unshift({ slug: toolSlug, title: toolTitle, at: Date.now() });
+        list = list.slice(0, MAX);
+        localStorage.setItem(KEY, JSON.stringify(list));
+      } catch (_) {}
+    })();
+  </script>
 </BaseLayout>

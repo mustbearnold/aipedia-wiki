@@ -4,6 +4,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import ToolCard from '../components/ToolCard.astro';
 import HomepageLD from '../components/seo/HomepageLD.astro';
 import EmailCapture from '../components/EmailCapture.astro';
+import RecentlyViewed from '../components/RecentlyViewed.astro';
 
 const allTools = await getCollection('tools');
 const trends = await getCollection('trends');
@@ -135,6 +136,8 @@ const impactColors: Record<string, string> = {
       <a id="category-link" href="#" class="text-xs text-[var(--accent-primary)] no-underline hover:underline hidden">View all &rarr;</a>
     </div>
   </div>
+
+  <RecentlyViewed />
 
   <!-- All Tools (filterable) -->
   <section class="mb-10">

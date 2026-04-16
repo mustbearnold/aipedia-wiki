@@ -1,5 +1,6 @@
 ---
 import BaseLayout from './BaseLayout.astro';
+import ReadingProgress from '../components/ReadingProgress.astro';
 import Breadcrumb from '../components/Breadcrumb.astro';
 import BreadcrumbLD from '../components/seo/BreadcrumbLD.astro';
 import CompanyOrganizationLD from '../components/seo/CompanyOrganizationLD.astro';
@@ -86,6 +87,7 @@ const verifiedLabel = verifiedDate && !isNaN(verifiedDate.getTime())
 ---
 
 <BaseLayout title={seoTitle ?? title} description={description}>
+  <ReadingProgress />
   <BreadcrumbLD items={breadcrumbLdItems} />
   <CompanyOrganizationLD name={title} description={description} founded={founded} hq={hq} pageUrl={`${siteBase}companies/${slug}/`} />
   <Breadcrumb items={breadcrumbItems} />

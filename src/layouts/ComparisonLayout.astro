@@ -1,5 +1,6 @@
 ---
 import BaseLayout from './BaseLayout.astro';
+import ReadingProgress from '../components/ReadingProgress.astro';
 import Breadcrumb from '../components/Breadcrumb.astro';
 import BreadcrumbLD from '../components/seo/BreadcrumbLD.astro';
 import ItemListLD from '../components/seo/ItemListLD.astro';
@@ -145,6 +146,7 @@ const winningTool = winner && winner !== 'depends' ? tools.find((t) => t.slug ==
 ---
 
 <BaseLayout title={seoTitle ?? title} description={description}>
+  <ReadingProgress />
   <BreadcrumbLD items={breadcrumbLdItems} />
   {itemListItems.length > 0 && (
     <ItemListLD name={title} description={description} items={itemListItems} siteBase={siteBase} />

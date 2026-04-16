@@ -1,0 +1,80 @@
+---
+// Personalized "Pick up where you left off" strip.
+// Reads a localStorage array of recently visited tool slugs (written by
+// a tracker script on ToolLayout). Only renders if the user has 3+ tools
+// in history. Hydration is client-only; the server renders a stub that
+// becomes the real strip on load.
+---
+
+<section
+  id="recently-viewed"
+  class="hidden mb-10"
+  aria-labelledby="recently-viewed-heading"
+>
+  <div class="flex items-baseline justify-between mb-3">
+    <h2 id="recently-viewed-heading" class="text-[11px] font-semibold uppercase tracking-[0.12em] text-[var(--accent-primary)] m-0">
+      Pick up where you left off
+    </h2>
+    <button
+      id="recently-viewed-clear"
+      type="button"
+      class="text-[11px] text-[var(--text-muted)] hover:text-[var(--text-secondary)] transition-colors"
+    >
+      Clear history
+    </button>
+  </div>
+  <div id="recently-viewed-list" class="flex gap-3 overflow-x-auto pb-1" style="scrollbar-width: thin;"></div>
+</section>
+
+<script is:inline>
+  (function () {
+    if (window.__recentlyViewedBound) return;
+    window.__recentlyViewedBound = true;
+    const STORAGE_KEY = 'recently-viewed-tools';
+    const MIN_TO_SHOW = 3;
+    const MAX_TO_SHOW = 8;
+
+    function read() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        return raw ? JSON.parse(raw) : [];
+      } catch (_) { return []; }
+    }
+
+    function render() {
+      const section = document.getElementById('recently-viewed');
+      const list = document.getElementById('recently-viewed-list');
+      if (!section || !list) return;
+      const entries = read();
+      if (!Array.isArray(entries) || entries.length < MIN_TO_SHOW) {
+        section.classList.add('hidden');
+        return;
+      }
+      const shown = entries.slice(0, MAX_TO_SHOW);
+      list.innerHTML = shown.map(function (e) {
+        const slug = String(e.slug || '').replace(/[^a-z0-9-]/gi, '');
+        const title = String(e.title || slug).replace(/[<>"']/g, '');
+        if (!slug) return '';
+        const logoSrc = '/logos/tools/' + slug + '.png';
+        return '<a href="/tools/' + slug + '/" class="shrink-0 w-[140px] rounded-xl border border-[var(--border)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] hover:border-[rgba(167,139,250,0.35)] transition-colors p-3 no-underline group">' +
+          '<span class="tool-logo block mb-2" style="width: 32px; height: 32px; padding: 2px; border-radius: 8px;">' +
+            '<img src="' + logoSrc + '" alt="" width="32" height="32" loading="lazy" class="block w-full h-full object-contain" onerror="this.style.display=\'none\'" />' +
+          '</span>' +
+          '<div class="text-[13px] font-semibold text-[var(--text-primary)] group-hover:text-[var(--accent-primary)] truncate transition-colors">' + title + '</div>' +
+        '</a>';
+      }).join('');
+      section.classList.remove('hidden');
+    }
+
+    const clearBtn = document.getElementById('recently-viewed-clear');
+    if (clearBtn) {
+      clearBtn.addEventListener('click', function () {
+        try { localStorage.removeItem(STORAGE_KEY); } catch (_) {}
+        render();
+      });
+    }
+
+    render();
+    document.addEventListener('astro:after-swap', render);
+  })();
+</script>

@@ -1,7 +1,8 @@
 ---
 // Renders a tool's official logo from /logos/tools/<slug>.*
-// Resolves extension at build time by checking the public folder.
-// Falls back to a category-emoji badge if no logo file is present.
+// Glass-panel aesthetic: translucent frosted background with a subtle
+// top highlight and soft drop shadow. Keeps dark logos visible against
+// the dark site theme without looking like a sticker.
 import { existsSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { join } from 'node:path';
@@ -16,8 +17,6 @@ interface Props {
 
 const { slug, title, size = 48, rounded = true, className = '' } = Astro.props;
 
-// Resolve the logo extension by checking the public directory.
-// This runs at build time and is deterministic.
 const PUBLIC = fileURLToPath(new URL('../../public/logos/tools/', import.meta.url));
 const EXTS = ['.png', '.svg', '.jpg', '.webp', '.gif', '.ico'];
 
@@ -29,28 +28,80 @@ for (const ext of EXTS) {
   }
 }
 
-// Single neutral backdrop so the grid of logos reads coherent across
-// the site. Real review sites (The Verge, Ars Technica, etc) use one
-// consistent tone rather than per-tool tints. Keeps dark logos visible
-// on the dark theme without introducing chromatic noise.
-const bgColor = '#f8fafc';
+// Padding scales with size but tighter than before so the logo dominates,
+// not the backdrop. ~4% instead of 8%.
+const padding = Math.max(2, Math.round(size * 0.04));
+const radius = Math.max(6, Math.round(size * 0.22));
 ---
 
 {logoUrl ? (
-  <img
-    src={logoUrl}
-    alt={`${title} logo`}
-    width={size}
-    height={size}
-    loading="lazy"
-    class={`block object-contain ${rounded ? 'rounded-lg' : ''} ${className}`}
-    style={`background: ${bgColor}; padding: ${Math.round(size * 0.08)}px;`}
-  />
+  <span
+    class={`tool-logo ${className}`}
+    style={`width: ${size}px; height: ${size}px; padding: ${padding}px; border-radius: ${radius}px;`}
+  >
+    <img
+      src={logoUrl}
+      alt={`${title} logo`}
+      width={size}
+      height={size}
+      loading="lazy"
+      class="block w-full h-full object-contain"
+    />
+  </span>
 ) : (
-  <div
-    class={`inline-flex items-center justify-center font-bold text-[var(--text-primary)] bg-[rgba(167,139,250,0.12)] border border-[rgba(167,139,250,0.3)] ${rounded ? 'rounded-lg' : ''} ${className}`}
-    style={`width: ${size}px; height: ${size}px; font-size: ${Math.round(size * 0.42)}px;`}
+  <span
+    class={`tool-logo tool-logo-monogram inline-flex items-center justify-center font-bold text-[var(--text-primary)] ${className}`}
+    style={`width: ${size}px; height: ${size}px; font-size: ${Math.round(size * 0.42)}px; border-radius: ${radius}px;`}
   >
     {title.split(' ').slice(0, 2).map(w => w[0]).join('').toUpperCase()}
-  </div>
+  </span>
 )}
+
+<style is:global>
+  .tool-logo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: none;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.82));
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.7),
+      inset 0 -1px 0 rgba(0, 0, 0, 0.04),
+      0 1px 2px rgba(0, 0, 0, 0.12),
+      0 0 0 1px rgba(255, 255, 255, 0.04);
+    overflow: hidden;
+    transition: transform 200ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 200ms;
+  }
+  @supports (backdrop-filter: blur(8px)) {
+    .tool-logo {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.78), rgba(255, 255, 255, 0.58));
+      backdrop-filter: blur(12px) saturate(150%);
+      -webkit-backdrop-filter: blur(12px) saturate(150%);
+    }
+  }
+  .tool-logo-monogram {
+    background: linear-gradient(135deg, rgba(167, 139, 250, 0.18), rgba(96, 165, 250, 0.12));
+    color: var(--text-primary);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.1),
+      0 0 0 1px rgba(167, 139, 250, 0.25);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+  /* Light mode: glass panel needs darker edges to read on light bg */
+  .light .tool-logo {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(248, 250, 252, 0.9));
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 1),
+      0 1px 2px rgba(15, 23, 42, 0.08),
+      0 0 0 1px rgba(15, 23, 42, 0.06);
+  }
+  /* Subtle hover response when logo is inside a hoverable card */
+  .tool-card:hover .tool-logo,
+  a:hover > .tool-logo {
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.8),
+      0 4px 12px rgba(167, 139, 250, 0.18),
+      0 0 0 1px rgba(167, 139, 250, 0.25);
+  }
+</style>
