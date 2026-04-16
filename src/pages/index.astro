@@ -657,6 +657,83 @@ const featuredComparisons = comparisons
         manualPauseUntil = Date.now() + MANUAL_PAUSE_MS;
       }, { passive: false });
 
+      // Touch / pointer drag support for mobile. Uses Pointer Events so
+      // both touch and mouse drag work with one code path.
+      let dragging = false;
+      let dragStartX = 0;
+      let dragStartOffset = 0;
+      let dragStartTarget = 0;
+      let dragMoved = false;
+      let dragPointerId = null;
+      let lastDragX = 0;
+      let lastDragTs = 0;
+      let dragVelocity = 0; // px/ms
+
+      rail.addEventListener('pointerdown', (e) => {
+        // Only touch + primary mouse; ignore right-click etc.
+        if (e.pointerType === 'mouse' && e.button !== 0) return;
+        dragging = true;
+        dragMoved = false;
+        dragPointerId = e.pointerId;
+        dragStartX = e.clientX;
+        lastDragX = e.clientX;
+        lastDragTs = e.timeStamp;
+        dragStartOffset = offset;
+        dragStartTarget = target;
+        dragVelocity = 0;
+        paused = true;
+        manualPauseUntil = Date.now() + MANUAL_PAUSE_MS;
+      });
+
+      rail.addEventListener('pointermove', (e) => {
+        if (!dragging || e.pointerId !== dragPointerId) return;
+        const dx = e.clientX - dragStartX;
+        if (!dragMoved && Math.abs(dx) > 4) {
+          dragMoved = true;
+          try { rail.setPointerCapture(e.pointerId); } catch (_) {}
+        }
+        if (dragMoved) {
+          e.preventDefault();
+          // Follow the finger 1:1 — move both offset and target so the
+          // easing doesn't lag behind the finger.
+          offset = dragStartOffset + dx;
+          target = dragStartTarget + dx;
+          const nowTs = e.timeStamp;
+          const dt = nowTs - lastDragTs;
+          if (dt > 0) dragVelocity = (e.clientX - lastDragX) / dt;
+          lastDragX = e.clientX;
+          lastDragTs = nowTs;
+        }
+      }, { passive: false });
+
+      function endDrag(e) {
+        if (!dragging || (e && e.pointerId !== dragPointerId)) return;
+        dragging = false;
+        dragPointerId = null;
+        // Flick: carry recent velocity forward as target delta. Capped so a
+        // fast swipe doesn't send it spinning forever.
+        if (dragMoved) {
+          const flick = Math.max(-600, Math.min(600, dragVelocity * 280));
+          target += flick;
+        }
+        paused = false;
+        manualPauseUntil = Date.now() + MANUAL_PAUSE_MS;
+        // If the pointer didn't move, let the click bubble normally.
+        // If it did move, swallow the next click so we don't navigate
+        // when the user meant to pan.
+        if (dragMoved) {
+          const swallow = (ev) => { ev.preventDefault(); ev.stopPropagation(); };
+          rail.addEventListener('click', swallow, { capture: true, once: true });
+        }
+      }
+      rail.addEventListener('pointerup', endDrag);
+      rail.addEventListener('pointercancel', endDrag);
+      rail.addEventListener('pointerleave', endDrag);
+
+      // Let the browser know we want horizontal pan only — prevents the
+      // page from scrolling vertically when the finger moves horizontally.
+      rail.style.touchAction = 'pan-y';
+
       document.addEventListener('visibilitychange', () => { lastTs = 0; });
     })();
   </script>
