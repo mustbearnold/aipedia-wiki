@@ -210,6 +210,43 @@ const reports = defineCollection({
   }).passthrough(),
 });
 
+const workflows = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: 'src/content/workflows' }),
+  schema: z.object({
+    type: z.string().optional(),
+    slug: z.string().optional(),
+    title: z.string(),
+    seo_title: z.string().optional(),
+    meta_description: z.string().optional(),
+    description: z.string().optional(),
+    stack: z.array(z.string()).optional(),
+    tools_mentioned: z.array(z.string()).optional(),
+    author: z.string().optional(),
+    last_updated: dateish,
+    last_verified: dateish,
+    update_frequency: z.string().optional(),
+  }).passthrough(),
+});
+
+const benchmarks = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: 'src/content/benchmarks' }),
+  schema: z.object({
+    type: z.string().optional(),
+    slug: z.string().optional(),
+    title: z.string(),
+    seo_title: z.string().optional(),
+    meta_description: z.string().optional(),
+    description: z.string().optional(),
+    tools_tested: z.array(z.string()).optional(),
+    category: z.string().optional(),
+    methodology_version: z.string().optional(),
+    author: z.string().optional(),
+    last_updated: dateish,
+    last_verified: dateish,
+    update_frequency: z.string().optional(),
+  }).passthrough(),
+});
+
 /* ------------------------------------------------------------------ */
 /*  Export                                                              */
 /* ------------------------------------------------------------------ */
@@ -224,4 +261,6 @@ export const collections = {
   dead,
   glossary,
   reports,
+  workflows,
+  benchmarks,
 };

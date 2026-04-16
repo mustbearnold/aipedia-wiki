@@ -1,0 +1,75 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import EmailCapture from '../../components/EmailCapture.astro';
+import { getCollection } from 'astro:content';
+
+const entries = await getCollection('benchmarks');
+
+function toYmd(v: unknown): string {
+  if (!v) return '';
+  if (v instanceof Date) return isNaN(v.getTime()) ? '' : v.toISOString().slice(0, 10);
+  const s = String(v);
+  const d = new Date(s);
+  return isNaN(d.getTime()) ? s : d.toISOString().slice(0, 10);
+}
+
+const sorted = entries
+  .map(e => ({
+    slug: e.data.slug || e.id.replace(/\.md$/, ''),
+    title: e.data.title,
+    description: e.data.meta_description || e.data.description || '',
+    category: e.data.category || '',
+    toolsTested: e.data.tools_tested || [],
+    lastUpdated: toYmd(e.data.last_updated),
+  }))
+  .sort((a, b) => (b.lastUpdated || '').localeCompare(a.lastUpdated || ''));
+---
+
+<BaseLayout
+  title="Original AI Tool Benchmarks — Same Task, Same Prompts — aipedia.wiki"
+  description="Honest head-to-head benchmarks of AI tools on real tasks. TTS blind tests, coding tool same-task comparisons, image generator grids. Original data, not scraped."
+>
+  <Breadcrumb items={[{ label: 'Benchmarks' }]} />
+
+  <section class="mb-10 pt-2">
+    <h1 class="text-3xl sm:text-4xl font-bold mb-3 leading-tight">
+      Original <span class="bg-gradient-to-r from-[#a78bfa] to-[#60a5fa] bg-clip-text text-transparent">benchmarks</span>
+    </h1>
+    <p class="text-[var(--text-secondary)] text-sm sm:text-base max-w-2xl leading-relaxed">
+      Same task, same prompts, different tools. Each benchmark is an honest editorial test with a published methodology, raw data on request, and a version number so you can see when it was last re-run.
+    </p>
+  </section>
+
+  <section class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-16">
+    {sorted.map((b) => (
+      <a
+        href={`/benchmarks/${b.slug}/`}
+        class="group block rounded-xl border border-[var(--border)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] hover:border-[rgba(167,139,250,0.4)] p-5 no-underline transition-colors"
+      >
+        {b.category && (
+          <div class="text-[11px] font-semibold uppercase tracking-[0.12em] text-[var(--accent-primary)] mb-2">
+            {b.category.replace(/^ai-/, '').replace(/-/g, ' ')}
+          </div>
+        )}
+        <h2 class="text-[17px] font-bold text-[var(--text-primary)] group-hover:text-[var(--accent-primary)] mb-2 transition-colors">
+          {b.title}
+        </h2>
+        <p class="text-[13.5px] leading-relaxed text-[var(--text-secondary)] m-0 mb-3">
+          {b.description}
+        </p>
+        {b.toolsTested.length > 0 && (
+          <div class="flex flex-wrap gap-1.5 pt-2 border-t border-[var(--border)]">
+            {b.toolsTested.slice(0, 6).map((s: string) => (
+              <span class="text-[11px] px-2 py-0.5 rounded-full bg-[var(--bg-base)] border border-[var(--border)] text-[var(--text-muted)]">
+                {s}
+              </span>
+            ))}
+          </div>
+        )}
+      </a>
+    ))}
+  </section>
+
+  <EmailCapture variant="footer" source="benchmarks-index" />
+</BaseLayout>

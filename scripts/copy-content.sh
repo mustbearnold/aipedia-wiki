@@ -37,6 +37,10 @@ cp "$WIKI_DIR"/dead/*.md "$CONTENT_DIR/dead/" 2>/dev/null
 cp "$WIKI_DIR"/glossary/*.md "$CONTENT_DIR/glossary/" 2>/dev/null
 mkdir -p "$CONTENT_DIR/reports"
 cp "$WIKI_DIR"/reports/*.md "$CONTENT_DIR/reports/" 2>/dev/null
+mkdir -p "$CONTENT_DIR/workflows"
+cp "$WIKI_DIR"/workflows/*.md "$CONTENT_DIR/workflows/" 2>/dev/null
+mkdir -p "$CONTENT_DIR/benchmarks"
+cp "$WIKI_DIR"/benchmarks/*.md "$CONTENT_DIR/benchmarks/" 2>/dev/null
 
 TOTAL=$(find "$CONTENT_DIR" -name "*.md" | wc -l)
 echo "Copied $TOTAL markdown files."

@@ -8,6 +8,7 @@ import ShareButtons from '../components/ShareButtons.astro';
 import FAQAccordionScript from '../components/FAQAccordionScript.astro';
 import FeedbackForm from '../components/FeedbackForm.astro';
 import ReportOutdatedButton from '../components/ReportOutdatedButton.astro';
+import ComparisonEmbed from '../components/ComparisonEmbed.astro';
 
 interface ToolData {
   slug: string;
@@ -231,6 +232,8 @@ const winningTool = winner && winner !== 'depends' ? tools.find((t) => t.slug ==
 
       <FAQAccordionScript />
       <ShareButtons title={title} pageUrl={`${siteBase}compare/${slug}/`} />
+      <ComparisonEmbed slug={slug} title={title} />
+
       <FeedbackForm toolName={title} />
       <ReportOutdatedButton pageTitle={title} pageSlug={slug} pageType="comparison" />
     </div>

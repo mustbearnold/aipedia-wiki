@@ -1,0 +1,55 @@
+---
+// Offers tool creators and bloggers an embeddable comparison-verdict SVG
+// they can drop on their own site. Every embed generates a backlink to
+// the aipedia.wiki comparison page. Low effort, high leverage.
+interface Props {
+  slug: string;
+  title: string;
+}
+
+const { slug, title } = Astro.props;
+const embedUrl = `https://aipedia.wiki/embed/comparisons/${slug}.svg`;
+const pageUrl = `https://aipedia.wiki/compare/${slug}/`;
+const htmlSnippet = `<a href="${pageUrl}" target="_blank" rel="noopener"><img src="${embedUrl}" alt="${title} — aipedia.wiki" width="384" /></a>`;
+const markdownSnippet = `[![${title} — aipedia.wiki](${embedUrl})](${pageUrl})`;
+---
+
+<details class="not-prose mt-8 rounded-xl border border-[var(--border)] bg-[var(--bg-card)]">
+  <summary class="cursor-pointer px-5 py-3 text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--text-primary)] flex items-center justify-between">
+    <span class="inline-flex items-center gap-2">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+      </svg>
+      Embed this verdict on your site
+    </span>
+    <span class="text-xs text-[var(--text-muted)] ml-2">Free. Links back.</span>
+  </summary>
+
+  <div class="px-5 pb-5 pt-2 border-t border-[var(--border)]">
+    <div class="mb-4 flex items-center justify-center py-4 bg-[var(--bg-base)] rounded-lg">
+      <img src={embedUrl} alt={`${title} comparison verdict`} width="384" loading="lazy" />
+    </div>
+
+    <div class="space-y-3">
+      <div>
+        <div class="flex items-center justify-between mb-1">
+          <label class="text-xs font-medium text-[var(--text-muted)]">HTML</label>
+          <button type="button" class="copy-btn text-xs text-[var(--accent-primary)] hover:underline" data-copy={htmlSnippet}>Copy</button>
+        </div>
+        <code class="block text-[11px] text-[var(--text-secondary)] bg-[var(--bg-base)] rounded px-3 py-2 overflow-x-auto whitespace-nowrap border border-[var(--border)]">{htmlSnippet}</code>
+      </div>
+
+      <div>
+        <div class="flex items-center justify-between mb-1">
+          <label class="text-xs font-medium text-[var(--text-muted)]">Markdown</label>
+          <button type="button" class="copy-btn text-xs text-[var(--accent-primary)] hover:underline" data-copy={markdownSnippet}>Copy</button>
+        </div>
+        <code class="block text-[11px] text-[var(--text-secondary)] bg-[var(--bg-base)] rounded px-3 py-2 overflow-x-auto whitespace-nowrap border border-[var(--border)]">{markdownSnippet}</code>
+      </div>
+    </div>
+
+    <p class="text-xs text-[var(--text-muted)] mt-4 leading-relaxed">
+      Embed updates automatically if scores or the verdict change. Attribution via the link is required.
+    </p>
+  </div>
+</details>
