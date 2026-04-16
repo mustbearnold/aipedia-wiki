@@ -14,13 +14,39 @@ const scores = [
   { label: 'Moat', value: moat },
   { label: 'Longevity', value: longevity },
 ];
+
+function colorFor(v: number) {
+  if (v >= 9) return '#34d399';       // emerald
+  if (v >= 7.5) return '#a78bfa';     // violet
+  if (v >= 6) return '#60a5fa';       // blue
+  if (v >= 4) return '#fbbf24';       // amber
+  return '#f87171';                   // red
+}
 ---
 
-<div class="grid grid-cols-2 gap-2">
-  {scores.map((s) => (
-    <div class="bg-[var(--bg-card)] border border-[var(--border)] rounded-lg p-3 text-center">
-      <div class="text-lg font-bold text-[var(--text-primary)]">{s.value}</div>
-      <div class="text-xs text-[var(--text-muted)]">{s.label}</div>
+<div class="score-grid grid grid-cols-2 gap-2" data-animate-bars>
+  {scores.map((s, i) => (
+    <div
+      class="relative overflow-hidden bg-[var(--bg-card)] border border-[var(--border)] rounded-lg p-3 text-center"
+      style={`--bar-target: ${Math.max(0, Math.min(100, s.value * 10))}%; --bar-color: ${colorFor(s.value)}; --bar-delay: ${i * 80}ms;`}
+    >
+      <div class="text-lg font-bold text-[var(--text-primary)] relative z-10">{s.value}</div>
+      <div class="text-xs text-[var(--text-muted)] relative z-10">{s.label}</div>
+      <div class="score-bar absolute left-0 bottom-0 h-[3px] rounded-b-lg" style="background: var(--bar-color);" aria-hidden="true"></div>
     </div>
   ))}
 </div>
+
+<style>
+  .score-bar {
+    width: 0;
+    transition: width 900ms cubic-bezier(0.22, 1, 0.36, 1);
+    transition-delay: var(--bar-delay, 0ms);
+  }
+  .score-grid[data-played] .score-bar {
+    width: var(--bar-target, 0%);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .score-bar { transition: none; }
+  }
+</style>
