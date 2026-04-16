@@ -276,11 +276,11 @@ html {
   will-change: transform;
 }
 .marquee-hover:hover > .marquee-hover-inner {
-  animation: marquee-hover-slide 9s ease-in-out infinite;
+  animation: marquee-hover-slide 6s linear infinite;
 }
 @keyframes marquee-hover-slide {
-  0%, 15%   { transform: translateX(0); }
-  50%, 65%  { transform: translateX(min(0px, calc(100cqw - 100%))); }
+  0%        { transform: translateX(0); }
+  45%, 55%  { transform: translateX(min(0px, calc(100cqw - 100%))); }
   100%      { transform: translateX(0); }
 }
 @media (prefers-reduced-motion: reduce) {
