@@ -311,18 +311,80 @@ html {
   .tool-card:active { transform: none; box-shadow: none; }
 }
 
-/* Filter dropdown options: flat rows inside a popover. Selected row
-   gets the accent bg, hover row gets the card-hover bg. */
+/* Filter dropdown options: flat rows inside a popover. Row has a soft
+   violet wash that slides in from the left on hover, and the label
+   shifts right 4px in sync. Selected row keeps the wash permanently. */
 .filter-option {
-  transition: background-color 120ms ease, color 120ms ease;
+  position: relative;
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 8px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  overflow: hidden;
+  transition: color 140ms ease;
+}
+.filter-option::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(167, 139, 250, 0.18), rgba(167, 139, 250, 0.06) 70%, transparent);
+  transform: translateX(-100%);
+  transition: transform 220ms cubic-bezier(0.22, 1, 0.36, 1);
+  z-index: 0;
+}
+.filter-option-label {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  transition: transform 220ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.filter-option:hover {
+  color: var(--text-primary);
+}
+.filter-option:hover::before {
+  transform: translateX(0);
+}
+.filter-option:hover .filter-option-label {
+  transform: translateX(4px);
 }
 .filter-option.active {
   color: var(--accent-primary);
-  background: rgba(167, 139, 250, 0.12);
+}
+.filter-option.active::before {
+  transform: translateX(0);
+}
+.filter-option.active .filter-option-label {
+  transform: translateX(4px);
 }
 .filter-option:focus-visible {
   outline: 2px solid rgba(167, 139, 250, 0.5);
   outline-offset: -2px;
+}
+
+/* Themed slim scrollbar on the popover list */
+.filter-popover-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(167, 139, 250, 0.35) transparent;
+}
+.filter-popover-scroll::-webkit-scrollbar { width: 6px; }
+.filter-popover-scroll::-webkit-scrollbar-track { background: transparent; }
+.filter-popover-scroll::-webkit-scrollbar-thumb {
+  background: rgba(167, 139, 250, 0.3);
+  border-radius: 3px;
+}
+.filter-popover-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(167, 139, 250, 0.55);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .filter-option::before,
+  .filter-option-label { transition: none; }
 }
 /* Popover open state (toggled via data-open) */
 #filter-popover[data-open="true"] {
