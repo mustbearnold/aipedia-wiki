@@ -24,7 +24,7 @@ Unit testing verifies code components in isolation; AI tools automate test writi
 
 | Rank | Tool | Best For | Price |
 |---|---|---|---|
-| 1 | [Cursor 2.0](../tools/cursor-ai.md) | IDE-native test generation and debugging | Free tier / Pro $20/mo |
+| 1 | [Cursor 2.0](../tools/cursor.md) | IDE-native test generation and debugging | Free tier / Pro $20/mo |
 | 2 | [GitHub Copilot](../tools/github-copilot.md) | GitHub-integrated test suggestions | Free / Pro $10/mo |
 | 3 | [Claude Opus 4.6](../tools/claude.md) | Reasoning-heavy test design | Free / Pro $20/mo |
 

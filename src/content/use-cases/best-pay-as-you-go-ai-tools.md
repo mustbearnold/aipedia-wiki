@@ -104,7 +104,7 @@ Grok 4.20 is available through X Premium ($168/year) and offers real-time access
 
 ## How We Chose
 
-We evaluated tools based on current pricing as of April 15, 2026, feature maturity, pay-as-you-go flexibility, and suitability for different user types. Recommendations prioritize tools with transparent pricing, no hidden fees, and clear value for casual to moderate usage. See our [methodology](../methodology.md) for full evaluation criteria.
+We evaluated tools based on current pricing as of April 15, 2026, feature maturity, pay-as-you-go flexibility, and suitability for different user types. Recommendations prioritize tools with transparent pricing, no hidden fees, and clear value for casual to moderate usage. See our methodology for full evaluation criteria.
 
 ## FAQ
 

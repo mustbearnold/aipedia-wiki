@@ -26,9 +26,9 @@ Developers use AI tools for code generation, autocompletion, debugging, refactor
 |---|---|---|---|
 | 1 | [Cursor 2.0](../tools/cursor.md) | AI code editing, refactoring | $20/month Pro; Free tier |
 | 2 | [Claude Opus 4.6](../tools/claude.md) | API reasoning, long-context code | $15/$75 per 1M tokens input/output |
-| 3 | [GPT-5.4 Codex](../tools/openai-gpt.md) | Code generation, autocompletion | $1.75/$14 per 1M tokens input/output[1] |
+| 3 | [GPT-5.4 Codex](../tools/chatgpt.md) | Code generation, autocompletion | $1.75/$14 per 1M tokens input/output[1] |
 | 4 | [GitHub Copilot](../tools/github-copilot.md) | IDE autocomplete | $10/month individual; $19/user/month business |
-| 5 | [Replit Ghostwriter](../tools/replit-ghostwriter.md) | Collaborative coding | Free tier; $20/month Pro |
+| 5 | Replit Ghostwriter | Collaborative coding | Free tier; $20/month Pro |
 
 ## Top Picks
 
@@ -48,7 +48,7 @@ GitHub Copilot uses GPT-5.4 under the hood for IDE autocomplete (VS Code, JetBra
 Replit Ghostwriter offers in-browser AI coding with autocomplete, explain, and transform tools powered by tuned GPT-5.4-mini. It suits collaborative dev for quick prototypes in 50+ langs. Pricing: Free core, Pro $20/month (faster models, more compute). Limitations: Browser-bound (less for large projects), basic compared to Cursor.[1]
 
 ## How We Chose
-We evaluated tools based on developer benchmarks (HumanEval+ 90%+ pass@1), pricing from official APIs as of 2026-04-15, user ratings on GitHub/HN, and fit for common tasks like editing/generating/debugging. See [methodology](../methodology.md).
+We evaluated tools based on developer benchmarks (HumanEval+ 90%+ pass@1), pricing from official APIs as of 2026-04-15, user ratings on GitHub/HN, and fit for common tasks like editing/generating/debugging. See methodology.
 
 ## FAQ
 

@@ -64,7 +64,7 @@ No pricing beyond hosting. Suits custom agents. Needs Python; no visuals.
 
 ## How We Chose
 
-We tested workflows with GPT-5.4, Claude Opus 4.6 on agent tasks, integrations, costs as of 2026-04-15. Scores weigh AI depth (40%), ease (30%), price (20%), hosting (10%). See [methodology](../methodology.md).
+We tested workflows with GPT-5.4, Claude Opus 4.6 on agent tasks, integrations, costs as of 2026-04-15. Scores weigh AI depth (40%), ease (30%), price (20%), hosting (10%). See methodology.
 
 ## FAQ
 

@@ -153,9 +153,9 @@ Sonnet 4.6 at $3/$15 per MTok is the best-value entry point for developers build
 
 ## Best Alternatives
 
-- [ChatGPT](chatgpt.md): GPT-5.4 Pro has a broader plugin ecosystem, native image generation (DALL-E), and deeper multimodal integration; better for general-purpose users who want one tool for many tasks
-- [Gemini](gemini.md): Gemini 3.1 Pro has native Google Workspace integration, Search grounding, and strong multimodal capabilities; better for users in the Google ecosystem
-- [Cursor](cursor.md): If primarily using Claude for coding, Cursor provides IDE-integrated code editing with Claude under the hood and a richer development environment than the CLI alone
+- ChatGPT: GPT-5.4 Pro has a broader plugin ecosystem, native image generation (DALL-E), and deeper multimodal integration; better for general-purpose users who want one tool for many tasks
+- Gemini: Gemini 3.1 Pro has native Google Workspace integration, Search grounding, and strong multimodal capabilities; better for users in the Google ecosystem
+- Cursor: If primarily using Claude for coding, Cursor provides IDE-integrated code editing with Claude under the hood and a richer development environment than the CLI alone
 
 ## FAQ
 

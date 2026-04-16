@@ -78,7 +78,7 @@ Limitations: No vocals/songs; ambient focus limits artistic range; interface les
 
 ## How We Chose
 
-We tested each tool's flagship version (Suno v4.5, Udio v2.1, Mubert v3.2) on April 15, 2026, across 50 prompts for songs/background music. Criteria: output quality, licensing, pricing, workflow. See [methodology](../methodology.md).
+We tested each tool's flagship version (Suno v4.5, Udio v2.1, Mubert v3.2) on April 15, 2026, across 50 prompts for songs/background music. Criteria: output quality, licensing, pricing, workflow. See methodology.
 
 ## FAQ
 

@@ -110,9 +110,9 @@ Obsidian suits users who prioritize data ownership, privacy, and customization t
 
 ## Best Alternatives
 
-- **[Notion AI](notion-ai.md):** Built-in AI, real-time collaboration, team features. Cloud-based with per-user pricing.
-- **[NotebookLM](notebooklm.md):** Free AI Q&A over documents. Strong for research, lacks full note-taking.
-- **[Logseq](logseq.md):** Open-source, local-first outliner. Similar to Obsidian with different interface.
+- **Notion AI:** Built-in AI, real-time collaboration, team features. Cloud-based with per-user pricing.
+- **NotebookLM:** Free AI Q&A over documents. Strong for research, lacks full note-taking.
+- **Logseq:** Open-source, local-first outliner. Similar to Obsidian with different interface.
 
 ## FAQ
 
@@ -159,4 +159,4 @@ Obsidian Sync ($4/month) offers end-to-end encrypted sync. Free options like iCl
 ## Related
 
 - **Category:** [AI Notes & Knowledge](../categories/ai-notes.md)
-- **See also:** [Notion AI](notion-ai.md), [NotebookLM](notebooklm.md)
+- **See also:** Notion AI, NotebookLM

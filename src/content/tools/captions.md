@@ -105,7 +105,7 @@ Captions.ai earns 8/10 utility for social creators with its streamlined AI autom
 
 | Tool | Price | Key Difference |
 |------|-------|----------------|
-| [CapCut](../tools/capcut.md) | Free-$15/mo | Broader manual editing, stronger effects library |
+| CapCut | Free-$15/mo | Broader manual editing, stronger effects library |
 | [Descript](../tools/descript.md) | $0-$30/mo | Superior transcription, podcast-to-video focus |
 | [Runway Gen-4.5](../tools/runway.md) | $0-$95/mo | Full text-to-video generation, motion brush |
 

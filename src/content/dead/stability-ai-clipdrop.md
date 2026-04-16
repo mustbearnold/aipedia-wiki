@@ -45,9 +45,9 @@ Replacements for Clipdrop's features as of 2026-04-15:
 
 - **[Adobe Firefly](../tools/adobe-firefly.md)** - background removal, generative fill, relighting; commercial-grade with copyright protections
 - **[Canva](../tools/canva.md)** - background remover, magic eraser, AI generation in design platform
-- **[Photoroom](../tools/photoroom.md)** - background removal and replacement with API support
-- **[Topaz Labs Gigapixel AI](../tools/topaz-labs.md)** - specialized upscaling to high resolutions
-- **[Runway ML](../tools/runway-ml.md)** - image editing, inpainting, and relighting tools
+- **Photoroom** - background removal and replacement with API support
+- **Topaz Labs Gigapixel AI** - specialized upscaling to high resolutions
+- **[Runway ML](../tools/runway.md)** - image editing, inpainting, and relighting tools
 
 ## Lessons
 

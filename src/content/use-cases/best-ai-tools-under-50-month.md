@@ -25,7 +25,7 @@ AI tools under $50/month deliver strong performance for writing, coding, researc
 | Rank | Tool | Best For | Price |
 |---|---|---|---|
 | 1 | [ChatGPT](../tools/chatgpt.md) | General tasks, reasoning | $20/month |
-| 2 | [Gemini Advanced](../tools/gemini-advanced.md) | Multimodal, long context | $19.99/month |
+| 2 | [Gemini Advanced](../tools/gemini.md) | Multimodal, long context | $19.99/month |
 | 3 | [Claude](../tools/claude.md) | Coding, analysis | $20/month |
 | 4 | [Cursor](../tools/cursor.md) | Coding IDE | $20/month |
 | 5 | [Midjourney](../tools/midjourney.md) | Image generation | $10/month |
@@ -74,7 +74,7 @@ Limitations: Relaxed GPU time on basic; public generations. Verified April 15, 2
 
 ## How We Chose
 
-Ranked by versatility, pricing under $50/month, and 2026 benchmarks from sources like DataNorth and TechRadar; prioritized tools with free tiers and broad use.[2][6] See [methodology](../methodology.md).
+Ranked by versatility, pricing under $50/month, and 2026 benchmarks from sources like DataNorth and TechRadar; prioritized tools with free tiers and broad use.[2][6] See methodology.
 
 ## FAQ
 

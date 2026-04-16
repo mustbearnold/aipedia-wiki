@@ -179,7 +179,7 @@ Fish Audio S2 is the best alternative if you need open-source, self-hostable TTS
 
 - **Category:** [AI Voice / TTS](../categories/ai-voice.md)
 - **Trends:** [AI Voice Explosion](../trends/ai-voice-explosion.md)
-- **Use cases:** [AI Agency Stack](../stacks/ai-agency-stack.md)
+- **Use cases:** AI Agency Stack
 
 ## Sources
 

@@ -116,8 +116,8 @@ Perplexity is the best choice for researchers and professionals who need sourced
 
 ## Best Alternatives
 
-- [ChatGPT](chatgpt.md): Browsing mode provides cited answers alongside full AI assistant capabilities; GPT-5.4 also available directly
-- [Gemini](gemini.md): Deep Research mode competes directly with Perplexity Pro Search; tighter Google Search integration
+- ChatGPT: Browsing mode provides cited answers alongside full AI assistant capabilities; GPT-5.4 also available directly
+- Gemini: Deep Research mode competes directly with Perplexity Pro Search; tighter Google Search integration
 - [Google Search](../categories/ai-search.md): AI Overviews increasingly provide direct answers with sources
 
 ## FAQ

@@ -98,8 +98,8 @@ NotebookLM delivers reliable document Q&A through source citations, outperformin
 
 ## Best Alternatives
 
-- **[ChatGPT (GPT-5.4)](chatgpt.md):** file uploads with general knowledge; more flexible but less source-strict.
-- **[Claude (Opus 4.6)](claude.md):** strong document analysis; no audio overviews, requires Projects for multi-file.
+- **ChatGPT (GPT-5.4):** file uploads with general knowledge; more flexible but less source-strict.
+- **Claude (Opus 4.6):** strong document analysis; no audio overviews, requires Projects for multi-file.
 - **[Perplexity Pro](../categories/ai-search.md):** web-grounded search; weaker on private docs.
 
 ## FAQ
@@ -148,4 +148,4 @@ No, podcasts use fixed two-host format at 5-15 minutes. Generate multiple overvi
 
 - **Category:** [AI Notes & Knowledge](../categories/ai-notes.md)
 - **Secondary:** [AI Search](../categories/ai-search.md)
-- **See also:** [Notion AI](notion-ai.md), [Obsidian](obsidian.md)
+- **See also:** Notion AI, Obsidian

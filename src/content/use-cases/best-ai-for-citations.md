@@ -24,7 +24,7 @@ AI tools for citations and references assist with generating bibliographies, ver
 
 | Rank | Tool | Best For | Price |
 |---|---|---|---|
-| 1 | [Perplexity AI](../tools/perplexity-ai.md) | Real-time web citations | Free; Pro $20/month |
+| 1 | [Perplexity AI](../tools/perplexity.md) | Real-time web citations | Free; Pro $20/month |
 | 2 | [NotebookLM](../tools/notebooklm.md) | Document-specific references | Free |
 | 3 | [ChatGPT](../tools/chatgpt.md) | General citation generation (GPT-5.4) | Free; Plus $20/month |
 | 4 | [Gemini](../tools/gemini.md) | Long-context research (Gemini 3.1 Pro) | Free; Advanced $20/month |

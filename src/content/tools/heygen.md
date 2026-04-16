@@ -99,9 +99,9 @@ HeyGen suits teams needing scalable talking-head videos for business use, especi
 
 ## Best Alternatives
 
-- **[Synthesia](../synthesia.md):** enterprise avatar platform with stronger support, similar quality at higher cost
-- **[D-ID](../d-id.md):** API-focused avatar videos, cheaper for developers but fewer features
-- **[Kling 3.0](../kling.md):** cinematic AI video generation, not avatars
+- **Synthesia:** enterprise avatar platform with stronger support, similar quality at higher cost
+- **D-ID:** API-focused avatar videos, cheaper for developers but fewer features
+- **Kling 3.0:** cinematic AI video generation, not avatars
 
 ## FAQ
 

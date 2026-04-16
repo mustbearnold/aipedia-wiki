@@ -68,7 +68,7 @@ Use it via Docs: "Generate LinkedIn post from this Sheets data on job market tre
 
 ## How We Chose
 
-We evaluated tools on LinkedIn-specific prompts for output quality, pricing from official sites, and 2026 rankings from tech reviews, prioritizing versatility and professional fit[1][2][3][5]. See our [methodology](../methodology.md).
+We evaluated tools on LinkedIn-specific prompts for output quality, pricing from official sites, and 2026 rankings from tech reviews, prioritizing versatility and professional fit[1][2][3][5]. See our methodology.
 
 ## FAQ
 

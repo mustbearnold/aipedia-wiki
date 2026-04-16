@@ -115,9 +115,9 @@ Grammarly Premium at $12/month (annual) justifies cost for daily English writers
 
 ## Best Alternatives
 
-- **[Jasper](./jasper.md):** marketing-focused AI writing with templates; stronger generation, weaker inline editing.
-- **[Claude](./claude.md):** Anthropic's Claude Opus 4.6 excels at complex drafting/rewriting; no browser extension.
-- **[GPT-5.4](./chatgpt.md):** OpenAI's general-purpose model for generation; requires context switching.
+- **Jasper:** marketing-focused AI writing with templates; stronger generation, weaker inline editing.
+- **Claude:** Anthropic's Claude Opus 4.6 excels at complex drafting/rewriting; no browser extension.
+- **GPT-5.4:** OpenAI's general-purpose model for generation; requires context switching.
 
 ## FAQ
 
@@ -158,7 +158,7 @@ Grammarly provides inline corrections in your apps without workflow breaks. GPT-
 ## Related
 
 - **Category:** [AI Writing](../categories/ai-writing.md)
-- **Compare:** [Jasper](./jasper.md), [Copy.ai](./copy-ai.md)
+- **Compare:** Jasper, Copy.ai
 
 ## Sources
 

@@ -44,7 +44,7 @@ Google Gemini 3.1 Pro API (2026-04-15) at $0.50-$2/M tokens (est.); good multimo
 Why it fits: Fast, cheap for volume; 60-70% resolution. Limitations: Weaker instruction-following vs Claude; Google ecosystem lock-in[1].
 
 ## How We Chose
-Ranked by resolution rate/cost ratio from benchmarks (LMSYS Arena support evals), pricing pages (2026-04-15), and deployment tests on 1k synthetic tickets. Prioritized 70%+ automation, < $200/mo for 500 tickets, multi-helpdesk support. See [methodology](../methodology.md).
+Ranked by resolution rate/cost ratio from benchmarks (LMSYS Arena support evals), pricing pages (2026-04-15), and deployment tests on 1k synthetic tickets. Prioritized 70%+ automation, < $200/mo for 500 tickets, multi-helpdesk support. See methodology.
 
 ## FAQ
 **What is the fastest setup?**  

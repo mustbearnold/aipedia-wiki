@@ -97,9 +97,9 @@ Windsurf delivers Cursor-comparable agentic coding at $15/month, ideal for cost-
 
 ## Best Alternatives
 
-- [Cursor](cursor.md): higher polish, larger community, $20/mo
-- [GitHub Copilot](github-copilot.md): $10/mo, best integrations, agent mode
-- [Claude Code](claude-code.md): CLI agentic focus, $100+/mo via Anthropic
+- Cursor: higher polish, larger community, $20/mo
+- GitHub Copilot: $10/mo, best integrations, agent mode
+- Claude Code: CLI agentic focus, $100+/mo via Anthropic
 
 ## FAQ
 

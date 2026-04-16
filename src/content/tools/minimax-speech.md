@@ -119,10 +119,10 @@ MiniMax Speech is the best value TTS API available as of April 2026 for multilin
 
 ## Best Alternatives
 
-- [ElevenLabs](elevenlabs.md): Highest quality ceiling and largest voice marketplace; significantly more expensive but the right choice for premium production
-- [Cartesia](cartesia.md): Low-latency focus, strong for real-time conversational AI; competitive pricing
-- [Fish Audio](fish-audio.md): Open-source-adjacent, strong voice cloning, active community voice library
-- [Voxtral](voxtral.md): Mistral's voice model entry; newer but worth benchmarking for European language quality
+- ElevenLabs: Highest quality ceiling and largest voice marketplace; significantly more expensive but the right choice for premium production
+- Cartesia: Low-latency focus, strong for real-time conversational AI; competitive pricing
+- Fish Audio: Open-source-adjacent, strong voice cloning, active community voice library
+- Voxtral: Mistral's voice model entry; newer but worth benchmarking for European language quality
 
 ## FAQ
 

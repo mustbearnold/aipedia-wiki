@@ -51,7 +51,7 @@ Limits: 500 credits/mo, no tracking, short history. Standard ($129/mo) expands a
 
 ## How We Chose
 
-We tested tools on 10 keywords for scoring accuracy, backlink depth, GEO fit (vs. GPT-5.4, Gemini 3.1 Pro), and pricing as of 2026-04-15. Scores weigh content optimization (40%), suite coverage (30%), value (20%), GEO (10%). See [methodology](../methodology.md).
+We tested tools on 10 keywords for scoring accuracy, backlink depth, GEO fit (vs. GPT-5.4, Gemini 3.1 Pro), and pricing as of 2026-04-15. Scores weigh content optimization (40%), suite coverage (30%), value (20%), GEO (10%). See methodology.
 
 ## FAQ
 

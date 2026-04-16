@@ -97,8 +97,8 @@ Lovable is the best choice for non-technical founders who need a deployed MVP wi
 ## Best Alternatives
 
 - [Bolt.new](../tools/bolt.md): Similar AI app builder running entirely in the browser; no backend setup
-- [Replit](../tools/replit.md): AI-assisted development with a full IDE, more control over code
-- [Claude Projects](../tools/claude-projects.md): Anthropic's multi-turn workspace for building with Claude Opus 4.6
+- Replit: AI-assisted development with a full IDE, more control over code
+- [Claude Projects](../tools/claude.md): Anthropic's multi-turn workspace for building with Claude Opus 4.6
 
 ## FAQ
 

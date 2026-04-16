@@ -101,9 +101,9 @@ Make suits teams needing multi-step automations with branching and error handlin
 
 ## Best Alternatives
 
-- [Zapier](zapier.md), simpler interface, 7,000+ integrations, higher cost at scale
-- [n8n](n8n.md), open-source, self-hostable, native AI agent support
-- [Pipedream](pipedream.md), developer-focused, serverless workflows
+- Zapier, simpler interface, 7,000+ integrations, higher cost at scale
+- n8n, open-source, self-hostable, native AI agent support
+- Pipedream, developer-focused, serverless workflows
 
 ## FAQ
 

@@ -25,9 +25,9 @@ Suno alternatives focus on AI music generation for full songs, instrumentals, or
 | Rank | Tool | Best For | Price |
 |---|---|---|---|
 | 1 | [Udio v2.1](../tools/udio.md) | Full songs from text | Free / Pro $10/mo |
-| 2 | [Suno v4](../tools/suno-v4.md) | Custom lyrics to music | Free / Pro $10/mo |
+| 2 | [Suno v4](../tools/suno.md) | Custom lyrics to music | Free / Pro $10/mo |
 | 3 | [ElevenLabs v3.2](../tools/elevenlabs.md) | AI vocals and voiceovers | Free / Creator $5/mo |
-| 4 | [Sora 2](../tools/sora-2.md) | Music videos with audio | Free via ChatGPT / Plus $20/mo |
+| 4 | Sora 2 | Music videos with audio | Free via ChatGPT / Plus $20/mo |
 
 ## Top Picks
 

@@ -73,7 +73,7 @@ Limitations: Focuses more on search than pure style; shorter context for edits.
 
 ## How We Chose
 
-We evaluated tools on grammar accuracy, pricing, free tiers, and integration using 2026 benchmarks from pricing pages and reviews. See [methodology](../methodology.md).
+We evaluated tools on grammar accuracy, pricing, free tiers, and integration using 2026 benchmarks from pricing pages and reviews. See methodology.
 
 ## FAQ
 

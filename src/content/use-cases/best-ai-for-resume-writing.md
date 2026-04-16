@@ -27,7 +27,7 @@ ChatGPT with GPT-5.4 tops the list for its balance of customization, multimodal 
 | 1 | [ChatGPT](../tools/chatgpt.md) | Custom resumes from job descriptions | Plus $20/month[1][5] |
 | 2 | [Claude](../tools/claude.md) | ATS-optimized professional formats | Pro $20/month |
 | 3 | [Gemini](../tools/gemini.md) | Free quick drafts | Free tier; Pro $19.99/month[3] |
-| 4 | [Resume.io](../tools/resume-io.md) | Template-based builders | Free; Premium $2.95/7 days[1] |
+| 4 | Resume.io | Template-based builders | Free; Premium $2.95/7 days[1] |
 
 ## Top Picks
 
@@ -73,7 +73,7 @@ Limitations: Less customizable than LLMs; focuses on templates over full rewrite
 
 ## How We Chose
 
-We evaluated tools on output quality for resumes (coherence, ATS fit), pricing from official pages, and user fit via 2026 benchmarks. See [methodology](../methodology.md).
+We evaluated tools on output quality for resumes (coherence, ATS fit), pricing from official pages, and user fit via 2026 benchmarks. See methodology.
 
 ## FAQ
 

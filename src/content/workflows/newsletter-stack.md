@@ -34,7 +34,7 @@ Perplexity Max owns research. I query topics like "latest on AI agent workflows 
 
 Claude Pro with Opus 4.6 owns writing and checking. It drafts from my outlines, edits for voice, fact-checks against sources. I use three distinct chats per post: draft, edit, check; Opus 4.6 nails nuance without hype. First time I tried one chat it mixed roles and bloated the output.
 
-### [Substack (free)](/tools/substack/)
+### Substack (free)
 
 Substack owns publishing. I paste formatted text, embed Perplexity links, schedule weekly. No learning curve; analytics show open rates over 45%. It lacks native AI but that's fine; I don't need it.
 

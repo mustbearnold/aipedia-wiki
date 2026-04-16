@@ -26,7 +26,7 @@ AI tools for code review analyze pull requests, detect bugs, suggest refactoring
 |---|---|---|---|
 | 1 | [Cursor 2.0](../tools/cursor.md) | Full-repo IDE reviews | $20/mo Pro; Teams $40/user/mo |
 | 2 | [Claude Opus 4.6](../tools/claude.md) | Logic/bug reasoning | Free tier; Pro $20/mo; API $15/M input tokens |
-| 3 | [GPT-5.4 Pro](../tools/gpt-5.md) | API-scale enterprise | ChatGPT Plus $20/mo; API $30/M input (short context)[7] |
+| 3 | [GPT-5.4 Pro](../tools/chatgpt.md) | API-scale enterprise | ChatGPT Plus $20/mo; API $30/M input (short context)[7] |
 
 ## Top Picks
 
@@ -59,7 +59,7 @@ Limitations: Higher cost at scale; context limits hit large repos; less speciali
 
 ## How We Chose
 
-Ranked by 2026 benchmarks (HumanEval, LeetCode review tasks), pricing value, integration fit, verified via OpenAI/Anthropic docs and dev forums as of 2026-04-15. See [methodology](../methodology.md).
+Ranked by 2026 benchmarks (HumanEval, LeetCode review tasks), pricing value, integration fit, verified via OpenAI/Anthropic docs and dev forums as of 2026-04-15. See methodology.
 
 ## FAQ
 

@@ -118,8 +118,8 @@ Cartesia excels for real-time voice applications where sub-100ms latency creates
 | Tool | Best For | Price |
 |------|----------|-------|
 | [ElevenLabs](../tools/elevenlabs.md) | Long-form content, voice library size | Free tier / $5+/mo |
-| [PlayHT](../tools/playht.md) | Content creation, studio quality | Free tier / $29+/mo |
-| [Respeecher](../tools/respeecher.md) | Professional voice cloning | Custom pricing |
+| PlayHT | Content creation, studio quality | Free tier / $29+/mo |
+| Respeecher | Professional voice cloning | Custom pricing |
 
 ## FAQ
 

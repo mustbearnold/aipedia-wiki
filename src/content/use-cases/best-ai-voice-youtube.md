@@ -60,7 +60,7 @@ LOVO Pro ($24/mo) provides 200,000 chars and cloning for multilingual channels [
 
 ## How We Chose
 
-We tested tools on 10-min scripts for naturalness, cloning accuracy, cost/video, using Turbo v3.1, S2, Voxtral v1.2 benchmarks vs. GPT-5.4/Claude Opus 4.6. Ranked by YouTube fit: quality (40%), cost (30%), cloning (20%), ease (10%). See [methodology](../methodology.md).
+We tested tools on 10-min scripts for naturalness, cloning accuracy, cost/video, using Turbo v3.1, S2, Voxtral v1.2 benchmarks vs. GPT-5.4/Claude Opus 4.6. Ranked by YouTube fit: quality (40%), cost (30%), cloning (20%), ease (10%). See methodology.
 
 ## FAQ
 

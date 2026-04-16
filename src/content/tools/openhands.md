@@ -66,7 +66,7 @@ OpenHands wraps an LLM in a task-execution loop that operates inside a controlle
 
 Available deployment modes:
 
-- **CLI:** terminal interface comparable to [Claude Code](claude-code.md) or Codex CLI
+- **CLI:** terminal interface comparable to Claude Code or Codex CLI
 - **Local GUI:** a React single-page app backed by a REST API, for browser-based interaction on your laptop
 - **SDK:** a Python library for building custom agent workflows and deploying to cloud scale
 - **Cloud:** hosted service with free tier via GitHub login, GitHub/GitLab integration, multi-user RBAC, Slack and Jira connectivity
@@ -108,17 +108,17 @@ The self-hosted path is fully free. The free cloud tier provides a no-setup entr
 - **Cloud free tier uses Minimax model.** If you want Claude or GPT on the cloud tier, you need a paid plan or self-hosting with your own API key.
 - **Variable task success rate.** Complex multi-file refactors across large codebases can exceed context limits or produce incorrect results requiring human review.
 - **Low moat as open-source.** The architecture is public; commercial competitors and forks can copy it.
-- **Slower than IDE tools for simple edits.** The agent loop adds latency; for a quick one-file change, [Cline](cline.md) in VS Code is faster.
+- **Slower than IDE tools for simple edits.** The agent loop adds latency; for a quick one-file change, Cline in VS Code is faster.
 - **Enterprise features are separate-licensed.** The enterprise directory has distinct licensing terms outside the MIT license.
 
 ## Bottom Line
 
-OpenHands is the best free starting point for developers who want autonomous AI software engineering at Devin's capability level without Devin's price. The Docker sandbox, GitHub PR integration, and multi-model support make it production-credible for real tasks. For pure coding speed and IDE integration, [Cline](cline.md) inside VS Code is faster for interactive sessions. For maximum autonomous depth with no infrastructure setup, commercial Devin at $20/month (plus task fees) or [Claude Code](claude-code.md) at $100/month offers better reliability at a cost. OpenHands wins on the price-to-capability ratio for developers comfortable with self-hosting.
+OpenHands is the best free starting point for developers who want autonomous AI software engineering at Devin's capability level without Devin's price. The Docker sandbox, GitHub PR integration, and multi-model support make it production-credible for real tasks. For pure coding speed and IDE integration, Cline inside VS Code is faster for interactive sessions. For maximum autonomous depth with no infrastructure setup, commercial Devin at $20/month (plus task fees) or Claude Code at $100/month offers better reliability at a cost. OpenHands wins on the price-to-capability ratio for developers comfortable with self-hosting.
 
 ## Best Alternatives
 
-- [Cline](cline.md): open-source VS Code agent, faster for interactive coding sessions, tight IDE integration
-- [Claude Code](claude-code.md): Anthropic's official CLI agent, $100-$200/month, best autonomous capability but no free tier
+- Cline: open-source VS Code agent, faster for interactive coding sessions, tight IDE integration
+- Claude Code: Anthropic's official CLI agent, $100-$200/month, best autonomous capability but no free tier
 - Devin (Cognition): commercial AI software engineer, $20/month plus per-task credits, fully managed with no setup
 
 ## FAQ

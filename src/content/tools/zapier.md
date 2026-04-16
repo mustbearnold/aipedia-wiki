@@ -116,9 +116,9 @@ Zapier is the best choice for non-technical users who need simple automations ac
 
 ## Best Alternatives
 
-- [Make](make.md), more complex flows, cheaper at scale, 2,000+ integrations
-- [n8n](n8n.md), open-source, self-hostable, developer-friendly, built-in AI agents
-- [Relevance AI](relevance-ai.md), AI agent builder, different paradigm than workflow automation
+- Make, more complex flows, cheaper at scale, 2,000+ integrations
+- n8n, open-source, self-hostable, developer-friendly, built-in AI agents
+- Relevance AI, AI agent builder, different paradigm than workflow automation
 
 ## FAQ
 

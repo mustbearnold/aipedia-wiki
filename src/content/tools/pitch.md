@@ -101,9 +101,9 @@ Pitch is the best presentation tool for teams that collaborate on decks daily an
 
 | Tool | Price | Key Difference |
 |------|-------|----------------|
-| [Gamma](gamma.md) | $10/mo Plus | Full prompt-to-deck AI with GPT-5.4, lower price for solo users |
-| [Beautiful.ai](beautiful-ai.md) | $12/mo Pro | Smart auto-reflow layouts, better for design-consistency needs |
-| [Tome](tome.md) | $16/mo Pro | Native video generation via Runway Gen-4.5, stronger narrative formats |
+| Gamma | $10/mo Plus | Full prompt-to-deck AI with GPT-5.4, lower price for solo users |
+| Beautiful.ai | $12/mo Pro | Smart auto-reflow layouts, better for design-consistency needs |
+| Tome | $16/mo Pro | Native video generation via Runway Gen-4.5, stronger narrative formats |
 
 ## FAQ
 

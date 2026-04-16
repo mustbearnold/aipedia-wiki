@@ -99,9 +99,9 @@ Mubert provides reliable, copyright-safe background music for content at low cos
 
 ## Best Alternatives
 
-- **[Suno](./suno.md):** text-to-song with vocals; higher creativity, copyright risks
-- **[Udio](./udio.md):** song generation rival to Suno; similar legal history
-- **[Soundraw](./soundraw.md):** AI instrumentals with more melodic options
+- **Suno:** text-to-song with vocals; higher creativity, copyright risks
+- **Udio:** song generation rival to Suno; similar legal history
+- **Soundraw:** AI instrumentals with more melodic options
 
 ## FAQ
 
@@ -137,7 +137,7 @@ No, strictly instrumental background tracks. For vocals, use Suno or Udio.
 ## Related
 
 - **Category:** [AI Music Generation](../categories/ai-music.md)
-- **Compare:** [Suno](./suno.md), [Udio](./udio.md)
+- **Compare:** Suno, Udio
 
 ## Sources
 

@@ -94,9 +94,9 @@ Google Stitch delivers fast, professional UI mockups for non-designers through v
 
 ## Best Alternatives
 
-- [Figma](figma.md): Professional standard with mature collaboration and handoff
-- [Lovable](lovable.md): Design-to-full-app builder for end-to-end prototyping
-- [Canva Magic Studio](canva.md): Simpler designs for marketing and social content
+- Figma: Professional standard with mature collaboration and handoff
+- Lovable: Design-to-full-app builder for end-to-end prototyping
+- Canva Magic Studio: Simpler designs for marketing and social content
 
 ## FAQ
 

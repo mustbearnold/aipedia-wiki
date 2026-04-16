@@ -106,9 +106,9 @@ Semrush remains the most complete SEO platform available, covering more marketin
 
 ## Best Alternatives
 
-- **[Ahrefs](ahrefs.md):** superior backlink database. Better for link building. Starts at $29/mo.
-- **[Surfer SEO](surfer-seo.md):** focused content optimization at $79/mo. Pairs well with lighter keyword tools.
-- **[SE Ranking](se-ranking.md):** covers core SEO at $52/mo. Less data but lower cost.
+- **Ahrefs:** superior backlink database. Better for link building. Starts at $29/mo.
+- **Surfer SEO:** focused content optimization at $79/mo. Pairs well with lighter keyword tools.
+- **SE Ranking:** covers core SEO at $52/mo. Less data but lower cost.
 
 ## FAQ
 
@@ -154,6 +154,6 @@ Tracks brand presence in AI responses from ChatGPT (GPT-5.4), Perplexity, Claude
 ## Related
 
 - **Category:** [AI SEO](../categories/ai-seo.md)
-- **See also:** [Ahrefs](ahrefs.md), [Surfer SEO](surfer-seo.md)
+- **See also:** Ahrefs, Surfer SEO
 
 *Some links on this page are affiliate links. We earn a commission at no extra cost to you. This doesn't influence our ratings or recommendations.*

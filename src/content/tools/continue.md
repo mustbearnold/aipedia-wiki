@@ -97,9 +97,9 @@ Continue earns a perfect 10/10 value score since it is completely free, with imp
 
 | Tool | Price | Key Difference |
 |------|-------|----------------|
-| [GitHub Copilot](github-copilot.md) | $10/mo | Better out-of-box experience, chat + agent mode included, stronger autocomplete |
-| [Cursor](cursor.md) | $20/mo | Full AI IDE with built-in models, no setup required |
-| [Codeium](codeium.md) | Free | Also free with included AI models, less configuration |
+| GitHub Copilot | $10/mo | Better out-of-box experience, chat + agent mode included, stronger autocomplete |
+| Cursor | $20/mo | Full AI IDE with built-in models, no setup required |
+| Codeium | Free | Also free with included AI models, less configuration |
 
 ## FAQ
 

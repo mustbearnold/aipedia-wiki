@@ -26,9 +26,9 @@ Runway focuses on AI video generation from text or images. Alternatives match th
 |---|---|---|---|
 | 1 | [Kling 3.0](../tools/kling.md) | Realistic motion, long clips | Free tier; Pro $19.99/month |
 | 2 | [Hailuo 2.3](../tools/hailuo.md) | Fast generation, beginners | Free 100 credits/day; Standard $9.99/month |
-| 3 | [Luma Dream Machine 2.1](../tools/luma-dream-machine.md) | Image-to-video, extensions | Free tier; Pro $29/month |
+| 3 | [Luma Dream Machine 2.1](../tools/luma.md) | Image-to-video, extensions | Free tier; Pro $29/month |
 | 4 | [Pika 2.1](../tools/pika.md) | Short social clips | Free tier; Plus $10/month |
-| 5 | [Genmo 2.0](../tools/genmo.md) | Creative styles | Free tier; Pro $15/month |
+| 5 | Genmo 2.0 | Creative styles | Free tier; Pro $15/month |
 
 ## Top Picks
 

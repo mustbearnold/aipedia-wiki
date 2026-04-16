@@ -101,9 +101,9 @@ Codeium delivers strong value through permanent free individual access, earning 
 
 | Tool | Price | Key Difference |
 |------|-------|----------------|
-| [GitHub Copilot](github-copilot.md) | $10/mo | Superior model quality, agent mode, GitHub ecosystem |
-| [Cursor](cursor.md) | $20/mo | Full IDE with Composer for multi-file edits |
-| [Supermaven](supermaven.md) | Free/$10 | Ultra-fast autocomplete, million-token context |
+| GitHub Copilot | $10/mo | Superior model quality, agent mode, GitHub ecosystem |
+| Cursor | $20/mo | Full IDE with Composer for multi-file edits |
+| Supermaven | Free/$10 | Ultra-fast autocomplete, million-token context |
 
 ## FAQ
 

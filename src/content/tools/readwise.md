@@ -113,7 +113,7 @@ Readwise Reader delivers unmatched integration of reading capture, AI processing
 |------|----------|-------|
 | [Obsidian](../tools/obsidian.md) | Local markdown knowledge graphs with plugin extensibility | Free |
 | [NotebookLM](../tools/notebooklm.md) | AI podcast/notebook generation from document uploads | Free |
-| [Pocket](../tools/pocket.md) | Simple article saving without retention systems | $4.99/mo |
+| Pocket | Simple article saving without retention systems | $4.99/mo |
 
 ## FAQ
 

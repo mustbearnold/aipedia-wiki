@@ -135,9 +135,9 @@ ChatGPT is the broadest AI assistant available in April 2026 and the right defau
 
 ## Best Alternatives
 
-- [Claude](claude.md): Superior for long-form writing, nuanced reasoning, and code analysis; Claude Max 5x at $100/mo is a direct competitor to ChatGPT Pro $100
-- [Gemini](gemini.md): Better Google Workspace integration, Veo 3 video generation, competitive free tier
-- [Perplexity](perplexity.md): Better for pure research and search with citations
+- Claude: Superior for long-form writing, nuanced reasoning, and code analysis; Claude Max 5x at $100/mo is a direct competitor to ChatGPT Pro $100
+- Gemini: Better Google Workspace integration, Veo 3 video generation, competitive free tier
+- Perplexity: Better for pure research and search with citations
 
 ## FAQ
 

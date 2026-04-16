@@ -171,7 +171,7 @@ Runway Gen-4.5 is the best alternative if you need API access and a professional
 
 ## Related
 
-- **Category:** [AI Video Generation](/tools/categories/ai-video)
+- **Category:** [AI Video Generation](../categories/ai-video.md)
 - **Compare:** [Runway](/tools/runway), [Seedance 2](/tools/seedance), [HeyGen](/tools/heygen)
 
 ## Sources

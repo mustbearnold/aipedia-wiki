@@ -171,7 +171,7 @@ The RIAA filed suit against both Suno and Udio in June 2024 for alleged training
 
 ## Related
 
-- **Category:** [AI Music Generation](/tools/categories/ai-music)
+- **Category:** [AI Music Generation](../categories/ai-music.md)
 - **Compare:** [Udio](/tools/udio), [Mubert](/tools/mubert)
 
 ## Sources

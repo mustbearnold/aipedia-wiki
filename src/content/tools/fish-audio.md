@@ -95,7 +95,7 @@ Fish Audio / Fish Speech S2 suits developers managing GPU infrastructure for sel
 
 ## Best Alternatives
 
-- [ElevenLabs](elevenlabs.md): Higher quality, mature cloud platform, higher cost.
+- ElevenLabs: Higher quality, mature cloud platform, higher cost.
 - [Coqui TTS](../categories/ai-voice.md): Open-source TTS, simpler deploy, lower quality.
 - [OpenAI TTS](../categories/ai-voice.md): Easy cloud API, no self-hosting.
 

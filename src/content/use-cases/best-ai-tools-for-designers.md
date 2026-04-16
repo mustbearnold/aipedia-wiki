@@ -26,7 +26,7 @@ Designers use AI tools for image generation, vector edits, layout automation, an
 |---|---|---|---|
 | 1 | [Midjourney](../tools/midjourney.md) | Image generation | $10/month basic |
 | 2 | [Adobe Firefly](../tools/adobe-firefly.md) | Brand-safe edits | Free tier; $4.99/month Creative Cloud starter |
-| 3 | [Canva Magic Studio](../tools/canva-magic-studio.md) | Quick layouts | Free; $15/month Pro |
+| 3 | [Canva Magic Studio](../tools/canva.md) | Quick layouts | Free; $15/month Pro |
 | 4 | [Gamma](../tools/gamma.md) | Presentations | Free; $10/month Pro |
 | 5 | [Cursor](../tools/cursor.md) | UI prototyping | Free; $20/month Pro |
 

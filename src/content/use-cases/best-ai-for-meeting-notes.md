@@ -24,9 +24,9 @@ AI tools for meeting notes transcribe audio from Zoom, Google Meet, or Teams cal
 
 | Rank | Tool | Best For | Price |
 |---|---|---|---|
-| 1 | [Fathom](../tools/fathom.md) | Free unlimited notes, quick summaries | Free; Pro $19/user/month |
+| 1 | Fathom | Free unlimited notes, quick summaries | Free; Pro $19/user/month |
 | 2 | [Otter.ai](../tools/otter-ai.md) | Live transcription, team collaboration | Free; Pro $10/user/month |
-| 3 | [Fireflies.ai](../tools/fireflies-ai.md) | Enterprise integrations, analytics | Free; Pro $10/user/month |
+| 3 | [Fireflies.ai](../tools/fireflies.md) | Enterprise integrations, analytics | Free; Pro $10/user/month |
 | 4 | [NotebookLM](../tools/notebooklm.md) | Document-based Q&A from recordings | Free |
 
 ## Top Picks
@@ -76,7 +76,7 @@ Google's NotebookLM turns meeting recordings or uploads into interactive noteboo
 (152 words)
 
 ## How We Chose
-We reviewed 2026 rankings from TechRadar, Synthesia, and NxCode, tested transcription accuracy on sample calls, and prioritized tools with free tiers, integrations, and user adoption data. See [methodology](../methodology.md).
+We reviewed 2026 rankings from TechRadar, Synthesia, and NxCode, tested transcription accuracy on sample calls, and prioritized tools with free tiers, integrations, and user adoption data. See methodology.
 
 ## FAQ
 

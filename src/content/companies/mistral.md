@@ -36,11 +36,11 @@ Models support text, image inputs, and multilingual tasks across 40+ languages, 
 Products include Le Chat chatbot and specialized tools like Spaces CLI for agents.[2]
 
 ## Current Flagship Products
-- **[Mistral Large 3](../tools/mistral-large-3.md)**: Flagship MoE model with 41B active / 675B total parameters, 256k context window, multimodal (text+image), agentic capabilities. Released 2025, top open-weight performer.[1][6]
-- **[Mistral Small 4](../tools/mistral-small-4.md)**: MoE with 128 experts (4 active), 256k context, unifies reasoning (Magistral), vision (Pixtral), coding (Devstral). Multimodal text+image inputs. Released March 16, 2026.[2][5]
+- **Mistral Large 3**: Flagship MoE model with 41B active / 675B total parameters, 256k context window, multimodal (text+image), agentic capabilities. Released 2025, top open-weight performer.[1][6]
+- **Mistral Small 4**: MoE with 128 experts (4 active), 256k context, unifies reasoning (Magistral), vision (Pixtral), coding (Devstral). Multimodal text+image inputs. Released March 16, 2026.[2][5]
 - **[Voxtral](../tools/voxtral.md)**: Text-to-speech model, released March 2026, natural synthesis at lower cost.[2]
-- **[Codestral](../tools/codestral.md)**: Code generation and completion model.[2]
-- **[Ministral Family](../tools/ministral.md)**: 3B, 8B, 14B edge-optimized models with multimodal support.[6]
+- **Codestral**: Code generation and completion model.[2]
+- **Ministral Family**: 3B, 8B, 14B edge-optimized models with multimodal support.[6]
 
 ## Recent News
 - March 2026: Released Mistral Small 4, Voxtral TTS, Leanstral, Forge, Spaces CLI; joined NVIDIA Nemotron Coalition.[2][5]
@@ -66,7 +66,7 @@ Threats include US leaders like GPT-5.4 (#1 ranking) and Claude Opus 4.6 in codi
 - [LLM Category](../categories/ai-writing.md)
 - [Coding Assistants Category](../categories/ai-coding.md)
 - [TTS/Voice Category](../categories/ai-voice.md)
-- [OpenAI](openai.md)
-- [Anthropic](anthropic.md)
-- [ElevenLabs](elevenlabs-company.md)
+- OpenAI
+- Anthropic
+- ElevenLabs
 ---

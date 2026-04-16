@@ -43,7 +43,7 @@ Retaining infrastructure for low-usage models proved inefficient as capabilities
 
 Teams replacing text-davinci models use these active APIs as of 2026-04-15:
 
-- **[gpt-5.1-chat-latest](../tools/gpt-5.1-chat-latest.md)** via OpenAI API: Successor post-GPT-4o shutdown on February 16, 2026; handles text generation with top performance.[1][2]
+- **[gpt-5.1-chat-latest](../tools/chatgpt.md)** via OpenAI API: Successor post-GPT-4o shutdown on February 16, 2026; handles text generation with top performance.[1][2]
 - **[Claude](../tools/claude.md)** via Anthropic API: Matches GPT capabilities for writing; reduces OpenAI reliance.[1]
 - **[Gemini](../tools/gemini.md)** via Google API: Competitive on instruction tasks; viable migration option.[1]
 - **Llama 4 (open-source)**: Self-hostable at low cost; approaches closed-model quality for text tasks.[1]

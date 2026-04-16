@@ -65,7 +65,7 @@ Solid free option for data-informed brainstorming (152 words).
 
 ## How We Chose
 
-We evaluated tools based on 2026 benchmarks for reasoning, context handling, and multimodal support, prioritizing user reviews and pricing from verified sources. See [methodology](../methodology.md).
+We evaluated tools based on 2026 benchmarks for reasoning, context handling, and multimodal support, prioritizing user reviews and pricing from verified sources. See methodology.
 
 ## FAQ
 

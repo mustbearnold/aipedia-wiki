@@ -105,9 +105,9 @@ Seedance 3.1 suits creators needing strong motion and character consistency at l
 
 ## Best Alternatives
 
-- **[Kling 3.0](kling.md):** Top-ranked overall quality; similar pricing.
-- **[Runway GWM-1](runway.md):** Professional API and ecosystem; higher cost.
-- **[Hailuo 2.3](hailuo.md):** Strong competitor; focuses on longer clips.
+- **Kling 3.0:** Top-ranked overall quality; similar pricing.
+- **Runway GWM-1:** Professional API and ecosystem; higher cost.
+- **Hailuo 2.3:** Strong competitor; focuses on longer clips.
 
 ## FAQ
 

@@ -44,7 +44,7 @@ Google's Gemini 3.1 Pro integrates with Google Workspace for cover letter creati
 
 ## How We Chose
 
-We evaluated tools on output quality for cover letters, pricing, ease of use, and model capabilities as of 2026-04-15. See [methodology](../methodology.md).
+We evaluated tools on output quality for cover letters, pricing, ease of use, and model capabilities as of 2026-04-15. See methodology.
 
 ## FAQ
 

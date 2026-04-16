@@ -78,7 +78,7 @@ Pros: Tailored for academia; table parsing. Cons: No general reasoning or multim
 (151 words)
 
 ## How We Chose
-Ranked by fit for medical workflows (context size, multimodality, reasoning benchmarks on PubMed tasks) from 2026 reviews; prioritized tools with 1M+ tokens and science evals. See [methodology](../methodology.md).
+Ranked by fit for medical workflows (context size, multimodality, reasoning benchmarks on PubMed tasks) from 2026 reviews; prioritized tools with 1M+ tokens and science evals. See methodology.
 
 ## FAQ
 

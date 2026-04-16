@@ -103,9 +103,9 @@ Surfer SEO excels at on-page content scoring for known keywords, complementing r
 
 ## Best Alternatives
 
-- **[Clearscope](../clearscope.md):** content grading with simpler SERP insights; starts at $170/mo.
-- **[Frase](../frase.md):** optimization plus AI research; $15-$115/mo range.
-- **[Semrush](../semrush.md):** full SEO suite including Writing Assistant; less granular than Surfer.
+- **Clearscope:** content grading with simpler SERP insights; starts at $170/mo.
+- **Frase:** optimization plus AI research; $15-$115/mo range.
+- **Semrush:** full SEO suite including Writing Assistant; less granular than Surfer.
 
 ## FAQ
 
@@ -153,6 +153,6 @@ No, it optimizes known keywords only. Use Ahrefs or Semrush first.
 ## Related
 
 - **Category:** [AI SEO](../categories/ai-seo.md)
-- **See also:** [Semrush](../semrush.md), [Ahrefs](../ahrefs.md)
+- **See also:** Semrush, Ahrefs
 
 *Some links on this page are affiliate links. We earn a commission at no extra cost to you. This doesn't influence our ratings or recommendations.*

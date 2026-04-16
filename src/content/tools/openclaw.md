@@ -111,8 +111,8 @@ OpenClaw is the most mature open-source personal agent framework as of April 202
 
 ## Best Alternatives
 
-- [Hermes Agent](hermes-agent.md): Nous Research's MIT-licensed agent with similar multi-platform support, stronger persistent memory and skill system, backed by an active AI research org
-- [Claude Code](claude-code.md): Anthropic's official CLI agent, more capable for software engineering but terminal-only and costs $100-200/month
+- Hermes Agent: Nous Research's MIT-licensed agent with similar multi-platform support, stronger persistent memory and skill system, backed by an active AI research org
+- Claude Code: Anthropic's official CLI agent, more capable for software engineering but terminal-only and costs $100-200/month
 - Zapier/Make AI workflows: fully managed automation with no self-hosting, but per-task pricing and less personal-agent depth
 
 ## FAQ

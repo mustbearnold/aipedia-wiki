@@ -64,6 +64,6 @@ Threats include competition from Anthropic's Claude Mythos 5 and OpenAI's releas
 - [LLM Category](../categories/ai-writing.md)
 - [Image Generation Category](../categories/ai-image.md)
 - [Video Generation Category](../categories/ai-video.md)
-- [OpenAI](openai.md): Primary competitor on frontier models
-- [Anthropic](anthropic.md): Competitor on reasoning and safety
+- OpenAI: Primary competitor on frontier models
+- Anthropic: Competitor on reasoning and safety
 ---

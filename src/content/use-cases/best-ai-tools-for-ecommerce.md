@@ -68,7 +68,7 @@ Pros: Every answer sourced; fast for data-driven tasks. Cons: Not for direct con
 (149 words)
 
 ## How We Chose
-We evaluated tools based on ecommerce fit (content, support, personalization), current versions/pricing from official sites and reviews as of 2026-04-15, user adoption, and integration ease. See [methodology](../methodology.md).[1][2][3]
+We evaluated tools based on ecommerce fit (content, support, personalization), current versions/pricing from official sites and reviews as of 2026-04-15, user adoption, and integration ease. See methodology.[1][2][3]
 
 ## FAQ
 

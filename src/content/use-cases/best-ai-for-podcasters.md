@@ -26,8 +26,8 @@ Podcasters use AI for transcription, audio editing, voiceovers, and episode plan
 |---|---|---|---|
 | 1 | [Descript](../tools/descript.md) | Audio editing, transcription | Free; Pro $24/user/month |
 | 2 | [ElevenLabs](../tools/elevenlabs.md) | Voice generation, cloning | Free; Starter $5/month |
-| 3 | [Castmagic](../tools/castmagic.md) | Show notes, clips | $23/month |
-| 4 | [Podcastle](../tools/podcastle.md) | Recording, enhancement | Free; Pro $14.99/month |
+| 3 | Castmagic | Show notes, clips | $23/month |
+| 4 | Podcastle | Recording, enhancement | Free; Pro $14.99/month |
 
 ## Top Picks
 
@@ -68,7 +68,7 @@ Pros: Built-in recording; easy guest invites; enhancement tools. Cons: Transcrip
 (162 words)
 
 ## How We Chose
-Reviewed 50+ tools via API docs, pricing pages, user benchmarks as of 2026-04-15. Prioritized transcription accuracy >95%, podcast integrations, per-hour costs under $2. See [methodology](../methodology.md).
+Reviewed 50+ tools via API docs, pricing pages, user benchmarks as of 2026-04-15. Prioritized transcription accuracy >95%, podcast integrations, per-hour costs under $2. See methodology.
 
 ## FAQ
 

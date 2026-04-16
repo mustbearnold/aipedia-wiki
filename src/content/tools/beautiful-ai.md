@@ -106,9 +106,9 @@ Beautiful.ai suits business professionals who need consistently polished slide d
 
 | Tool | Price | Key Difference |
 |------|-------|----------------|
-| [Gamma](gamma.md) | $10/mo Plus | Full prompt-to-deck generation using Claude Opus 4.6, card-based format |
-| [Pitch](pitch.md) | $22/mo Pro | Stronger team collaboration features, unlimited free decks |
-| [Canva](canva.md) | $13/mo Pro | Vast template library, broader design tools beyond presentations |
+| Gamma | $10/mo Plus | Full prompt-to-deck generation using Claude Opus 4.6, card-based format |
+| Pitch | $22/mo Pro | Stronger team collaboration features, unlimited free decks |
+| Canva | $13/mo Pro | Vast template library, broader design tools beyond presentations |
 
 ## FAQ
 

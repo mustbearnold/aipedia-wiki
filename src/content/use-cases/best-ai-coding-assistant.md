@@ -62,7 +62,7 @@ Copilot Free offers limited completions. It fits routine tasks but limits on arc
 
 ## How We Chose
 
-We ranked tools by testing on refactors, generation, and autonomy across VS Code, JetBrains, CLI setups. Scores weigh adoption, model access (Claude Opus 4.6, GPT-5.4), pricing as of 2026-04-15, and fit for profiles. See [methodology](../methodology.md).
+We ranked tools by testing on refactors, generation, and autonomy across VS Code, JetBrains, CLI setups. Scores weigh adoption, model access (Claude Opus 4.6, GPT-5.4), pricing as of 2026-04-15, and fit for profiles. See methodology.
 
 ## FAQ
 

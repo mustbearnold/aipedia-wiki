@@ -108,7 +108,7 @@ WellSaid Labs Studio v3 hits 7/10 utility for L&D workflows with tight Articulat
 |------|-------|----------------|
 | [ElevenLabs](../tools/elevenlabs.md) | $5-$660/mo | 1000+ voices, Instant Voice Cloning, broader API |
 | [Murf](../tools/murf.md) | $0-$79/mo | Free tier, video editor included, simpler UI |
-| [PlayHT](../tools/playht.md) | $0-$99/mo | 900+ voices, podcast focus, lower enterprise cost |
+| PlayHT | $0-$99/mo | 900+ voices, podcast focus, lower enterprise cost |
 
 ## FAQ
 

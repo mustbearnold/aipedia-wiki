@@ -96,9 +96,9 @@ Udio suits users focused on audio detail and editing control via inpainting, wit
 
 ## Best Alternatives
 
-- **[Suno](./suno.md):** stronger vocals, mature UX, larger backing
-- **[Mubert](./mubert.md):** royalty-free instrumentals without vocals or legal risks
-- **[Soundraw](./soundraw.md):** subscription tracks for background music needs
+- **Suno:** stronger vocals, mature UX, larger backing
+- **Mubert:** royalty-free instrumentals without vocals or legal risks
+- **Soundraw:** subscription tracks for background music needs
 
 ## FAQ
 
@@ -136,7 +136,7 @@ Udio excels in instrumental fidelity and inpainting for producers. Suno leads in
 ## Related
 
 - **Category:** [AI Music Generation](../categories/ai-music.md)
-- **Compare:** [Suno](./suno.md), [Mubert](./mubert.md)
+- **Compare:** Suno, Mubert
 
 ## Sources
 

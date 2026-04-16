@@ -96,9 +96,9 @@ Fireflies scores 8/10 utility for reliable transcription and AskFred search acro
 
 | Tool | Price | Key Difference |
 |------|-------|----------------|
-| [Fathom](../tools/fathom.md) | Free | Covers basics at no cost; no CRM sync |
+| Fathom | Free | Covers basics at no cost; no CRM sync |
 | [Otter.ai](../tools/otter-ai.md) | Free / $17/mo | Better mobile; weaker cross-search |
-| [Gong](../tools/gong.md) | Custom | Deeper sales analytics |
+| Gong | Custom | Deeper sales analytics |
 
 ## FAQ
 
@@ -134,7 +134,7 @@ Yes, AskFred queries full library with cited answers. Depends on storage; free c
 
 - [Otter.ai](../tools/otter-ai.md)
 - [Category: ai-notes](../categories/ai-notes.md)
-- [Best AI Meeting Assistant (2026)](../use-cases/best-ai-meeting-assistant.md)
+- Best AI Meeting Assistant (2026)
 
 ## Sources
 

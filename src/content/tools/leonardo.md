@@ -98,9 +98,9 @@ Leonardo AI remains the top choice for beginners and budget users needing genero
 
 ## Best Alternatives
 
-- **[Midjourney](midjourney.md):** highest image quality with v7/v8 alpha models. $10/mo minimum, no free tier.
-- **[Flux](flux.md):** open-source leader with Flux 2; self-hostable, massive LoRA ecosystem.
-- **[Ideogram](ideogram.md):** best text-in-images; ~50 free/day, strong for graphics and logos.
+- **Midjourney:** highest image quality with v7/v8 alpha models. $10/mo minimum, no free tier.
+- **Flux:** open-source leader with Flux 2; self-hostable, massive LoRA ecosystem.
+- **Ideogram:** best text-in-images; ~50 free/day, strong for graphics and logos.
 
 ## FAQ
 

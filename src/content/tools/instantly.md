@@ -105,7 +105,7 @@ Instantly delivers the lowest cost per send at scale due to unlimited accounts, 
 
 - **[Apollo.io](/tools/apollo)**: Database + sequences + CRM; account limits but simpler for small teams
 - **[Clay](/tools/clay)**: Enrichment specialist; import to Instantly for sending
-- **[Smartlead](/tools/smartlead)**: Unlimited accounts like Instantly; different warm-up approach
+- **Smartlead**: Unlimited accounts like Instantly; different warm-up approach
 
 ## FAQ
 
@@ -143,7 +143,7 @@ Instantly wins on economics (unlimited accounts) for agencies with 10+ client po
 
 - [Apollo.io](/tools/apollo)
 - [Clay](/tools/clay)
-- [Smartlead](/tools/smartlead)
+- Smartlead
 
 ## Sources
 

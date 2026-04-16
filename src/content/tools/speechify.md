@@ -36,7 +36,7 @@ quick_answer: >-
 
 Speechify is a text-to-speech application designed to help people consume written content by listening rather than reading. It supports importing PDFs, Google Docs, web articles, emails, physical books (via camera scan), and ePubs, then reads them aloud in AI-generated voices including the Speechify 5 flagship model at speeds up to 5x [https://speechify.com](https://speechify.com). The target audience is people who want to move faster through large reading loads; students, professionals, and people with dyslexia or other reading difficulties.
 
-Speechify is not a voice creation tool. It is a reading and listening tool. That distinction matters: it competes with Audible and read-aloud browser extensions more than it competes with [ElevenLabs](../tools/elevenlabs.md) or [PlayHT](../tools/playht.md). The core value proposition is speed-reading via audio, not producing voice content for others.
+Speechify is not a voice creation tool. It is a reading and listening tool. That distinction matters: it competes with Audible and read-aloud browser extensions more than it competes with [ElevenLabs](../tools/elevenlabs.md) or PlayHT. The core value proposition is speed-reading via audio, not producing voice content for others.
 
 The premium plan at $149/year (roughly $12.42/month) unlocks Speechify 5 voices, higher speeds, and advanced features. An optional voice cloning add-on lets users hear their own documents read back in their own voice. The free tier covers standard voices at normal speed, which is functional but limited compared to the premium experience [https://speechify.com/pricing](https://speechify.com/pricing).
 
@@ -90,7 +90,7 @@ Offline mode allows downloading content for listening without internet on mobile
 
 ## Limitations
 
-- **Not a content creation tool**, Speechify produces audio only for personal listening; no export of audio files for sharing or publishing. For that, use [ElevenLabs](../tools/elevenlabs.md) or [PlayHT](../tools/playht.md)
+- **Not a content creation tool**, Speechify produces audio only for personal listening; no export of audio files for sharing or publishing. For that, use [ElevenLabs](../tools/elevenlabs.md) or PlayHT
 - **Premium requires annual commitment**, $149/year with limited monthly options; trial needed to test speed-listening fit
 - **Free tier limitations**, 1.5x speed cap and 10 daily imports restrict heavy use; voices less natural than premium Speechify 5
 - **Voice cloning is personal only**, cloned voice cannot be exported or shared; limited to your own listening
@@ -105,7 +105,7 @@ Speechify earns an 8/10 on utility for its core audience: people who want to con
 | Tool | Price | Key Difference |
 |------|-------|----------------|
 | [ElevenLabs](../tools/elevenlabs.md) | $0-$99/mo | Voice creation/export for publishing; not personal reading |
-| [PlayHT](../tools/playht.md) | $0-$99/mo | Audio file generation for content; lacks reading sync |
+| PlayHT | $0-$99/mo | Audio file generation for content; lacks reading sync |
 | Microsoft Edge Read Aloud | Free | Browser-based; basic voices, no cross-device or 5x speed |
 | Natural Reader | $0-$129/yr | Similar reader; fewer voices, no AI Q&A |
 
@@ -115,7 +115,7 @@ Speechify earns an 8/10 on utility for its core audience: people who want to con
 Yes. Speechify has a free plan with standard voices, 1.5x speed, and 10 daily imports. It covers basic use but lacks Speechify 5 voices, 5x speed, and unlimited access available in Premium at $149/year [https://speechify.com/pricing](https://speechify.com/pricing).
 
 **Can Speechify export audio files?**  
-No. Speechify focuses on personal listening and does not export audio files. For text-to-audio file creation and sharing, use [ElevenLabs](../tools/elevenlabs.md) or [PlayHT](../tools/playht.md).
+No. Speechify focuses on personal listening and does not export audio files. For text-to-audio file creation and sharing, use [ElevenLabs](../tools/elevenlabs.md) or PlayHT.
 
 **What is the Speechify 5 voice model?**  
 Speechify 5 is the current flagship voice model (2025 release) with improved naturalness at high speeds up to 5x. It powers premium playback across all import sources [https://speechify.com/blog/speechify-5](https://speechify.com/blog/speechify-5).

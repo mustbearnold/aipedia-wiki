@@ -106,8 +106,8 @@ MiniMax is worth evaluating if you are building voice, companion, or video apps 
 
 ## Best Alternatives
 
-- [Claude](claude.md): Best-in-class English reasoning, stronger context handling, $20/month or API
-- [ChatGPT](chatgpt.md): Broadest feature set with DALL-E, browsing, and plugins
+- Claude: Best-in-class English reasoning, stronger context handling, $20/month or API
+- ChatGPT: Broadest feature set with DALL-E, browsing, and plugins
 - Character.AI: Larger companion app with 17M MAU, US-based, but no developer API
 - [Hailuo](../tools/hailuo.md): MiniMax's own video generation product, covered separately
 

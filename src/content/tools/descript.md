@@ -106,9 +106,9 @@ Descript accelerates editing for spoken-word content through its transcript inte
 
 | Tool | Best For | Starting Price |
 |------|----------|----------------|
-| [Riverside.fm](/tools/riverside) | Remote recording and editing | $19/mo |
+| Riverside.fm | Remote recording and editing | $19/mo |
 | [ElevenLabs](/tools/elevenlabs) | High-fidelity voice cloning | Free tier |
-| [Descript Clips](/tools/descript-clips) | Short-form social video | Free |
+| Descript Clips | Short-form social video | Free |
 
 ## FAQ
 
@@ -152,7 +152,7 @@ Yes, it supports 4K imports and exports with proxy editing for performance. Comp
 ## Related
 
 - [ElevenLabs](/tools/elevenlabs), high-fidelity AI voice generation
-- [Riverside.fm](/tools/riverside), remote recording platform
+- Riverside.fm, remote recording platform
 - [Runway](/tools/runway), AI video generation and editing
 - [Best Audio Editing Tools 2026](/best-of/audio-editing-tools)
 

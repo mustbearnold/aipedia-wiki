@@ -56,6 +56,6 @@ Anthropic holds a competitive moat through enterprise dominance (40% share vs. O
 - [Claude Code](../tools/claude-code.md)
 - [LLM Category](../categories/ai-writing.md)
 - [Coding Assistants Category](../categories/ai-coding.md)
-- [OpenAI](openai.md): Primary competitor
-- [Google DeepMind](google-deepmind.md): Competitor on frontier models
+- OpenAI: Primary competitor
+- Google DeepMind: Competitor on frontier models
 ---

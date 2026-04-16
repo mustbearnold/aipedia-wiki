@@ -111,8 +111,8 @@ Clay is the best enrichment platform available in 2026 for teams that take outbo
 ## Best Alternatives
 
 - [Apollo.io](/tools/apollo) - All-in-one database and sending platform with less enrichment depth but easier onboarding
-- [ZoomInfo Enrich](/tools/zoominfo) - Enterprise enrichment with stronger coverage for large accounts but significantly higher pricing
-- [Clearbit](/tools/clearbit) - Strong enrichment for tech companies, now part of HubSpot, simpler interface but fewer data sources
+- ZoomInfo Enrich - Enterprise enrichment with stronger coverage for large accounts but significantly higher pricing
+- Clearbit - Strong enrichment for tech companies, now part of HubSpot, simpler interface but fewer data sources
 
 ## FAQ
 

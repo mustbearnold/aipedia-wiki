@@ -96,9 +96,9 @@ Intercom handles AI-driven support well in 2026, with Fin resolving over 50% of 
 
 ## Best Alternatives
 
-- **[Zendesk](/tools/zendesk)**, ticket-focused for enterprises; deeper workflows, slower AI
-- **[Freshdesk](/tools/freshdesk)**, lower cost for ticket volume; basic AI
-- **[Help Scout](/tools/help-scout)**, email-first shared inbox; lighter AI for SMBs
+- **Zendesk**, ticket-focused for enterprises; deeper workflows, slower AI
+- **Freshdesk**, lower cost for ticket volume; basic AI
+- **Help Scout**, email-first shared inbox; lighter AI for SMBs
 
 ## FAQ
 
@@ -140,9 +140,9 @@ Intercom focuses on chat and AI resolution; Zendesk on tickets and enterprise cu
 
 ## Related
 
-- [Zendesk](/tools/zendesk), enterprise ticket platform
-- [Freshdesk](/tools/freshdesk), ticket support for volume
-- [Tidio](/tools/tidio), chat with AI for SMB/ecom
+- Zendesk, enterprise ticket platform
+- Freshdesk, ticket support for volume
+- Tidio, chat with AI for SMB/ecom
 
 ## Sources
 

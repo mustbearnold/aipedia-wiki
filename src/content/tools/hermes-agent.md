@@ -106,13 +106,13 @@ No subscription fee. Full feature set available in the free open-source version 
 
 ## Bottom Line
 
-Hermes Agent is the strongest open-source choice for users who need a truly persistent, self-improving AI agent with multi-platform reach and scheduled automation. Its natural language scheduling, self-written skills, and Nous Research backing put it ahead of simpler bot frameworks. The main competition in open source is [OpenClaw](openclaw.md), which has a larger community and more messaging platforms. For pure software engineering tasks, [Claude Code](claude-code.md) and [Cline](cline.md) are more appropriate. If you want zero infrastructure effort, commercial options like a Claude-powered Zapier workflow trade flexibility for convenience.
+Hermes Agent is the strongest open-source choice for users who need a truly persistent, self-improving AI agent with multi-platform reach and scheduled automation. Its natural language scheduling, self-written skills, and Nous Research backing put it ahead of simpler bot frameworks. The main competition in open source is OpenClaw, which has a larger community and more messaging platforms. For pure software engineering tasks, Claude Code and Cline are more appropriate. If you want zero infrastructure effort, commercial options like a Claude-powered Zapier workflow trade flexibility for convenience.
 
 ## Best Alternatives
 
-- [OpenClaw](openclaw.md): larger community (358K stars), more messaging platforms (24+), but less structured memory and skill system
-- [Claude Code](claude-code.md): Anthropic's official CLI coding agent, $100-$200/month but purpose-built for software engineering
-- [Cline](cline.md): open-source VS Code agent for coding tasks, not a personal assistant framework
+- OpenClaw: larger community (358K stars), more messaging platforms (24+), but less structured memory and skill system
+- Claude Code: Anthropic's official CLI coding agent, $100-$200/month but purpose-built for software engineering
+- Cline: open-source VS Code agent for coding tasks, not a personal assistant framework
 
 ## FAQ
 

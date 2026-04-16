@@ -95,9 +95,9 @@ Bolt.new is the best choice for developers and learners who need instant browser
 
 ## Best Alternatives
 
-- [Lovable](lovable.md): Similar concept with built-in Supabase backend, auth, and database; better for apps needing a backend
-- [Replit](replit.md): Full cloud IDE with AI assistance, more developer-oriented
-- [Cursor](cursor.md): If you want AI coding with a full local development environment
+- Lovable: Similar concept with built-in Supabase backend, auth, and database; better for apps needing a backend
+- Replit: Full cloud IDE with AI assistance, more developer-oriented
+- Cursor: If you want AI coding with a full local development environment
 
 ## FAQ
 

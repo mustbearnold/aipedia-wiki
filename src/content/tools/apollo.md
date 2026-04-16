@@ -96,7 +96,7 @@ Apollo.io remains the best all-in-one option for outbound sales teams that want 
 
 ## Best Alternatives
 
-- **[ZoomInfo](/tools/zoominfo)**, larger database, enterprise focus, 3x more expensive
+- **ZoomInfo**, larger database, enterprise focus, 3x more expensive
 - **[Clay](/tools/clay)**, enrichment-focused, connects 75+ data sources, no built-in sending
 - **[Instantly](/tools/instantly)**, sending-focused, unlimited warmups, weaker database
 
@@ -136,7 +136,7 @@ ZoomInfo has a larger database and stronger enterprise features but costs $20,00
 
 - [Clay](/tools/clay), enrichment layer that pairs with Apollo for hyper-personalization
 - [Instantly](/tools/instantly), cold email sending layer, pairs with Apollo data
-- [Outreach](/tools/outreach), enterprise sales engagement platform
+- Outreach, enterprise sales engagement platform
 
 ## Sources
 

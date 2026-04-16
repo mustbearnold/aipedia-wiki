@@ -50,7 +50,7 @@ const tools = defineCollection({
     best_for: z.array(z.string()).optional(),
     not_best_for: z.array(z.string()).optional(),
     price_history: z.array(z.object({
-      date: z.string(),
+      date: z.union([z.string(), z.date()]).transform((d) => d instanceof Date ? d.toISOString().split('T')[0] : String(d)),
       plan: z.string().optional(),
       price: z.string(),
       note: z.string().optional(),

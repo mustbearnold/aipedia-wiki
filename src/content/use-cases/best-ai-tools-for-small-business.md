@@ -26,7 +26,7 @@ Small businesses use AI tools for content generation, customer queries, marketin
 |---|---|---|---|
 | 1 | [ChatGPT](../tools/chatgpt.md) | Versatile text, image, code tasks | Free / $20/mo Plus / $200/mo Pro[3] |
 | 2 | [Gemini](../tools/gemini.md) | Google Workspace integration | Free / $19.99/mo Advanced[3] |
-| 3 | [Microsoft 365 Copilot](../tools/microsoft-365-copilot.md) | Microsoft Office automation | $30/user/mo (with Microsoft 365)[1] |
+| 3 | [Microsoft 365 Copilot](../tools/github-copilot.md) | Microsoft Office automation | $30/user/mo (with Microsoft 365)[1] |
 | 4 | [Claude](../tools/claude.md) | Long documents, analysis | Free / $20/mo Pro[1] |
 
 ## Top Picks

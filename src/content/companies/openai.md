@@ -34,11 +34,11 @@ ChatGPT serves as the primary consumer interface with tiered subscriptions, whil
 
 ## Current Flagship Products
 - [ChatGPT](../tools/chatgpt.md): Conversational interface powered by GPT-5.4 Thinking for Plus/Pro users.
-- [GPT-5.4](../tools/gpt-5-4.md): Flagship multimodal model with native computer-use, configurable reasoning, and 1M+ token context. Supports text/image input, available via API and ChatGPT [3](https://developers.openai.com/api/docs/models)[4](https://codingscape.com/blog/most-powerful-llms-large-language-models)[7](https://openai.com/index/introducing-gpt-5-4/).
-- [GPT-5.4 Pro](../tools/gpt-5-4-pro.md): Premium variant for complex tasks, replacing GPT-5.2 in ChatGPT Pro [7](https://openai.com/index/introducing-gpt-5-4/).
-- [DALL-E 4](../tools/dall-e-4.md): Image generation model integrated in ChatGPT Images, with precise edits and 4x faster generation [8](https://openai.com/research/index/release/).
-- [Codex](../tools/codex.md): Agentic code system with GPT-5.3 Codex integration and Playwright skill for visual debugging. Powers GPT-5.4 coding [2](https://designforonline.com/the-best-ai-models-so-far-in-2026/)[7](https://openai.com/index/introducing-gpt-5-4/).
-- [gpt-oss-120b](../tools/gpt-oss-120b.md): Open-weight model for data centers and customization [6](https://openai.com/open-models/).
+- GPT-5.4: Flagship multimodal model with native computer-use, configurable reasoning, and 1M+ token context. Supports text/image input, available via API and ChatGPT [3](https://developers.openai.com/api/docs/models)[4](https://codingscape.com/blog/most-powerful-llms-large-language-models)[7](https://openai.com/index/introducing-gpt-5-4/).
+- GPT-5.4 Pro: Premium variant for complex tasks, replacing GPT-5.2 in ChatGPT Pro [7](https://openai.com/index/introducing-gpt-5-4/).
+- DALL-E 4: Image generation model integrated in ChatGPT Images, with precise edits and 4x faster generation [8](https://openai.com/research/index/release/).
+- Codex: Agentic code system with GPT-5.3 Codex integration and Playwright skill for visual debugging. Powers GPT-5.4 coding [2](https://designforonline.com/the-best-ai-models-so-far-in-2026/)[7](https://openai.com/index/introducing-gpt-5-4/).
+- gpt-oss-120b: Open-weight model for data centers and customization [6](https://openai.com/open-models/).
 
 ## Recent News
 - February 2026: Released GPT-5.3 Codex and other GPT-5 family models [2](https://designforonline.com/the-best-ai-models-so-far-in-2026/).

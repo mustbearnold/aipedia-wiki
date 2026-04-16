@@ -123,9 +123,9 @@ Runway is the best choice for professional studios and developers who need a rel
 
 ## Best Alternatives
 
-- **[Kling 3.0](kling.md):** #1 quality, better value. No public API. Best for creators who just need output quality.
-- **[Seedance 2.0](seedance.md):** strong motion quality, free tier. Close to Kling on quality. Available on Runway's Unlimited plan outside the US.
-- **[HeyGen](heygen.md):** different niche: avatar/talking-head videos for business use.
+- **Kling 3.0:** #1 quality, better value. No public API. Best for creators who just need output quality.
+- **Seedance 2.0:** strong motion quality, free tier. Close to Kling on quality. Available on Runway's Unlimited plan outside the US.
+- **HeyGen:** different niche: avatar/talking-head videos for business use.
 - **[Pika](../categories/ai-video.md):** simpler, cheaper. Good for quick social content, not professional workflows.
 
 ## FAQ

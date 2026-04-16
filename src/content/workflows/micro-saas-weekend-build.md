@@ -30,11 +30,11 @@ I built a working SaaS product in 48 hours last month. It takes payments, stores
 
 Cursor 2.0 is where the speed comes from. I use it as a pair programmer that understands your entire codebase at once. You paste your schema, your API routes, your component structure, and it generates the next piece with context. It hallucinates less than it did six months ago. The Tab completion is fast enough that I rarely use the chat. I pay for Pro; the free tier would have cost me the weekend because I'd hit token limits by Saturday afternoon.
 
-### [Supabase](/tools/supabase/) Pro ($25/mo)
+### Supabase Pro ($25/mo)
 
 Supabase is PostgreSQL with guardrails. I use it for three things: the database (100 GB included), user authentication (100,000 monthly active users included), and file storage (100 GB included). The Row Level Security rules mean I can write auth logic in SQL instead of middleware. The free tier is genuinely useful for testing, but Pro is where you get daily backups and email support. I've never needed to scale beyond Pro; if I do, the pricing is transparent and doesn't surprise you.
 
-### [Cloudflare Workers](/tools/cloudflare-workers/) (free tier)
+### Cloudflare Workers (free tier)
 
 Workers runs the API layer. I deploy the backend as a serverless function; Cloudflare handles routing, CORS, and edge caching automatically. The free tier gives you 100,000 requests per day. I used 8,000 requests in the first week. If you exceed that, it's $0.50 per million requests. For a weekend project, you'll never pay.
 

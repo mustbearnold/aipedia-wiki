@@ -27,9 +27,9 @@ HeyGen handles 175+ languages with motion controls in its 2026 flagship. Colossy
 | Rank | Tool | Best For | Price |
 |---|---|---|---|
 | 1 | [HeyGen](../tools/heygen.md) | General business videos, custom avatars | Free; Creator $29/month |
-| 2 | [Colossyan](../tools/colossyan.md) | Enterprise training, interactive | Free; Pro $87/month |
-| 3 | [Elai](../tools/elai.md) | Fast text-to-video, multilingual | Free; Basic $29/month |
-| 4 | [DeepBrain AI](../tools/deepbrain.md) | Realistic digital humans, API | Free trial; Pro $180/month |
+| 2 | Colossyan | Enterprise training, interactive | Free; Pro $87/month |
+| 3 | Elai | Fast text-to-video, multilingual | Free; Basic $29/month |
+| 4 | DeepBrain AI | Realistic digital humans, API | Free trial; Pro $180/month |
 
 ## Top Picks
 
@@ -74,7 +74,7 @@ Replaces Synthesia for high-end demos or news, via API or no-code studio. Suppor
 **Cons:** Higher cost; longer render times (5-10 min/video). (162 words)
 
 ## How We Chose
-Selected via 2026-04-15 web search for avatar video tools, prioritizing lip-sync quality, language support, pricing under $100/month entry, and user reviews >4.5/5. Ranked by versatility vs. Synthesia benchmarks. See [methodology](../methodology.md).
+Selected via 2026-04-15 web search for avatar video tools, prioritizing lip-sync quality, language support, pricing under $100/month entry, and user reviews >4.5/5. Ranked by versatility vs. Synthesia benchmarks. See methodology.
 
 ## FAQ
 

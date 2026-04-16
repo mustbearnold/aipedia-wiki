@@ -27,11 +27,11 @@ This workflow answers deep research questions with sourced citations, organized 
 
 ### Perplexity Pro ($20/mo)
 
-[Perplexity Pro](/tools/perplexity-pro/) owns discovery. It pulls real-time sources from 10-50 sites, synthesizes with inline citations using Claude Opus 4.6 and GPT-5.4, and supports 20 deep research queries daily.[3][1] I use it first because single-model tools like ChatGPT lack live web data and citations.[3]
+Perplexity Pro owns discovery. It pulls real-time sources from 10-50 sites, synthesizes with inline citations using Claude Opus 4.6 and GPT-5.4, and supports 20 deep research queries daily.[3][1] I use it first because single-model tools like ChatGPT lack live web data and citations.[3]
 
 ### Claude Projects ($45/mo with Pro)
 
-[Claude Projects](/tools/claude-projects/) via Claude Opus 4.6 owns reasoning and threading. One Project per topic holds instructions, artifacts, and 100k token context for follow-ups without re-explaining.[2][4] Beats ChatGPT folders; no context loss across 50-message threads.
+[Claude Projects](../tools/claude.md) via Claude Opus 4.6 owns reasoning and threading. One Project per topic holds instructions, artifacts, and 100k token context for follow-ups without re-explaining.[2][4] Beats ChatGPT folders; no context loss across 50-message threads.
 
 ### Notion AI ($25/mo add-on, but $65 stack total with others)
 

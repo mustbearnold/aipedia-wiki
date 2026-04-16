@@ -89,7 +89,7 @@ ChatGPT with GPT-5.4 offers broad capabilities including text analysis, code for
 
 ## How We Chose
 
-We evaluated tools based on context window size, citation accuracy, multimodal support, and researcher workflow fit, cross-referencing 2026 rankings from TechRadar, NxCode, and ALM Corp. See [methodology](../methodology.md).[1][3]
+We evaluated tools based on context window size, citation accuracy, multimodal support, and researcher workflow fit, cross-referencing 2026 rankings from TechRadar, NxCode, and ALM Corp. See methodology.[1][3]
 
 ## FAQ
 

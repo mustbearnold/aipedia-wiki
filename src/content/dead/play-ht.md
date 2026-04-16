@@ -37,10 +37,10 @@ Meta sought the team's expertise, not the product, leading to shutdown. Acqui-hi
 ## Current Alternatives
 
 - **[ElevenLabs](../tools/elevenlabs.md)**: Matches Play.ht quality with strong API; $5 to $330 per month; low migration effort despite re-cloning needs.
-- **[Fish Audio S2](../tools/fish-audio-s2.md)**: Open-source and self-hostable; free; medium-high setup but avoids vendor risks.
+- **[Fish Audio S2](../tools/fish-audio.md)**: Open-source and self-hostable; free; medium-high setup but avoids vendor risks.
 - **[Voxtral](../tools/voxtral.md)**: Low per-character API costs from Mistral; medium migration; competitive quality.
-- **[Murf AI](../tools/murf-ai.md)**: Offers voice replication and API migration; 6 months free for Play.ht users with proof.[1]
-- **[Google Cloud TTS](../tools/google-cloud-tts.md)**: Enterprise option with pay-per-character; reliable but lower quality.
+- **Murf AI**: Offers voice replication and API migration; 6 months free for Play.ht users with proof.[1]
+- **Google Cloud TTS**: Enterprise option with pay-per-character; reliable but lower quality.
 
 ## Lessons
 

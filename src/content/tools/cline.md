@@ -45,7 +45,7 @@ quick_answer: >-
 
 Cline is a free, open-source AI coding agent for VS Code, formerly known as Claude Dev. It runs autonomously inside your editor: it reads your codebase, writes and edits files, runs terminal commands, controls a browser, and creates custom MCP tools, all with human approval gates at each step ([cline.bot](https://cline.bot/)). The extension itself costs nothing; you supply an API key for whichever model you prefer. With 60,300+ GitHub stars and 5 million+ installs across VS Code and JetBrains as of April 2026, it is among the most widely adopted open-source coding agents available for IDE integration ([GitHub: cline/cline](https://github.com/cline/cline)). Enterprise users reportedly include Samsung, Salesforce, Oracle, Amazon, and Microsoft.
 
-As of April 2026, Cline remains one of the top-ranked AI coding agents across developer surveys and comparison articles, positioned alongside [Claude Code](claude-code.md), [Cursor](cursor.md), and GitHub Copilot in the AI coding stack. Detailed version-specific release notes and a confirmed Pro tier are not available in third-party research as of April 15, 2026; verify current release status at [cline.bot](https://cline.bot/).
+As of April 2026, Cline remains one of the top-ranked AI coding agents across developer surveys and comparison articles, positioned alongside Claude Code, Cursor, and GitHub Copilot in the AI coding stack. Detailed version-specific release notes and a confirmed Pro tier are not available in third-party research as of April 15, 2026; verify current release status at [cline.bot](https://cline.bot/).
 
 
 ## Editor's Take
@@ -107,13 +107,13 @@ There is no confirmed Cline subscription tier as of April 2026. All costs are th
 
 ## Bottom Line
 
-Cline is the best open-source VS Code coding agent for developers who want autonomous capability at zero fixed cost. Plan/Act modes offer more control transparency than most competitors, and the BYOK model means you are not locked into any single AI provider. Compared to [Cursor](cursor.md) ($20/month), Cline costs nothing beyond API usage and is more transparent, but Cursor has a more polished UX and integrated model subscription that removes setup friction. Compared to [Claude Code](claude-code.md) ($100-$200/month), Cline has IDE integration that Claude Code lacks, though Claude Code's agentic depth on very complex multi-file tasks with its Week 15 Ultraplan and Monitor features is higher. For pure autonomous software engineering (write the whole feature and open a PR), [OpenHands](openhands.md) is a better fit than Cline. With 51% of GitHub commits reportedly AI-assisted by early 2026, tools like Cline operating as interactive IDE agents occupy a permanent and growing role in the development stack ([cline.bot](https://cline.bot/)).
+Cline is the best open-source VS Code coding agent for developers who want autonomous capability at zero fixed cost. Plan/Act modes offer more control transparency than most competitors, and the BYOK model means you are not locked into any single AI provider. Compared to Cursor ($20/month), Cline costs nothing beyond API usage and is more transparent, but Cursor has a more polished UX and integrated model subscription that removes setup friction. Compared to Claude Code ($100-$200/month), Cline has IDE integration that Claude Code lacks, though Claude Code's agentic depth on very complex multi-file tasks with its Week 15 Ultraplan and Monitor features is higher. For pure autonomous software engineering (write the whole feature and open a PR), OpenHands is a better fit than Cline. With 51% of GitHub commits reportedly AI-assisted by early 2026, tools like Cline operating as interactive IDE agents occupy a permanent and growing role in the development stack ([cline.bot](https://cline.bot/)).
 
 ## Best Alternatives
 
-- [Cursor](cursor.md): polished IDE fork with built-in model subscription at $20/month, better UX for non-technical users, less transparent execution
-- [Claude Code](claude-code.md): Anthropic's CLI agent with Ultraplan and Monitor (v2.1.1014), deeper autonomous capability, $100-$200/month, terminal only
-- [OpenHands](openhands.md): open-source autonomous software engineer in Docker sandbox, better for full task delegation than interactive pair-programming
+- Cursor: polished IDE fork with built-in model subscription at $20/month, better UX for non-technical users, less transparent execution
+- Claude Code: Anthropic's CLI agent with Ultraplan and Monitor (v2.1.1014), deeper autonomous capability, $100-$200/month, terminal only
+- OpenHands: open-source autonomous software engineer in Docker sandbox, better for full task delegation than interactive pair-programming
 - GitHub Copilot: $10/month, inline autocomplete plus basic agent mode, lower setup friction but less capable for complex tasks
 
 ## FAQ

@@ -130,7 +130,7 @@ Mistral earns an 8/10 for utility: the API models are genuinely competitive, Mis
 | [ChatGPT](../tools/chatgpt.md) | Free / $20/month | Larger ecosystem; more polished consumer product; US-based |
 | [Claude](../tools/claude.md) | Free / $20/month | Anthropic; strongest at reasoning and 1M-token context; US-based |
 | [Gemini](../tools/gemini.md) | Free / $19.99/month | Google; best multimodal; deepest Google Workspace integration |
-| [Llama](../tools/llama.md) | Free (open-source) | Meta's open-source alternative; larger community than Mistral |
+| Llama | Free (open-source) | Meta's open-source alternative; larger community than Mistral |
 
 ## FAQ
 
@@ -181,10 +181,10 @@ Three concrete reasons: (1) Cost: Mistral Large 3 API is roughly 60% cheaper tha
 
 ## Related
 
-- [Company: Mistral](../companies/mistral.md)
-- [Category: ai-models](../categories/ai-models.md)
-- [Trend: European AI](../trends/european-ai.md)
-- [Best LLM API (2026)](../use-cases/best-llm-api.md)
+- Company: Mistral
+- [Category: ai-models](../categories/ai-chatbots.md)
+- Trend: European AI
+- Best LLM API (2026)
 
 ## Sources
 

@@ -94,7 +94,7 @@ Great for fact-checking essays (151 words)[1].
 
 ## How We Chose
 
-We ranked tools by student fit (accuracy, free tiers, ease), cross-referencing 2026 reviews for versions/pricing. See [methodology](../methodology.md).
+We ranked tools by student fit (accuracy, free tiers, ease), cross-referencing 2026 reviews for versions/pricing. See methodology.
 
 ## FAQ
 

@@ -104,9 +104,9 @@ Copy.ai suits sales and marketing teams on Team plan ($249/month) where workflow
 
 ## Best Alternatives
 
-- **[Jasper](./jasper.md):** Template-focused for marketing; stronger long-form and SEO features
+- **Jasper:** Template-focused for marketing; stronger long-form and SEO features
 - **ChatGPT Teams ($25/user/month):** Direct GPT-5.4 access; custom GPTs replicate most Copy.ai templates
-- **[Clay](./clay.md):** Sales automation with better data enrichment; pairs with Copy.ai for full GTM stack
+- **Clay:** Sales automation with better data enrichment; pairs with Copy.ai for full GTM stack
 
 ## FAQ
 
@@ -145,7 +145,7 @@ Yes for sales teams using workflows (3+ hours/week saved on outreach). Skip for 
 ## Related
 
 - **Category:** [AI Writing](../categories/ai-writing.md)
-- **Compare:** [Jasper](./jasper.md), [Grammarly](./grammarly.md)
+- **Compare:** Jasper, Grammarly
 
 ## Sources
 

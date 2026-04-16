@@ -79,7 +79,7 @@ Pros: High fidelity; fast; style variety. Cons: No edits; queue times. Verified 
 
 ## How We Chose
 
-Ranked by free tier limits, model recency (e.g., GPT-5.4-mini vs. priors), and benchmarks from official docs. Verified via API pages and reviews April 2026. See [methodology](../methodology.md).
+Ranked by free tier limits, model recency (e.g., GPT-5.4-mini vs. priors), and benchmarks from official docs. Verified via API pages and reviews April 2026. See methodology.
 
 ## FAQ
 

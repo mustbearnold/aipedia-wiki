@@ -110,9 +110,9 @@ Val Town scores high on value (9/10) with a generous free tier and $20/month Pro
 
 | Tool | Price | Key Difference |
 |------|-------|----------------|
-| [Replit Agent](replit-agent.md) | Free/paid | Multi-language, full projects, AI agent for apps |
+| Replit Agent | Free/paid | Multi-language, full projects, AI agent for apps |
 | [Bolt](bolt.new) | Free/paid | Full-stack app generation from prompts |
-| [n8n](n8n.md) | Free/self-hosted | Visual workflows, multi-step automations |
+| n8n | Free/self-hosted | Visual workflows, multi-step automations |
 
 ## FAQ
 

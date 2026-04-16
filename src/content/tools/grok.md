@@ -103,10 +103,10 @@ Grok is worth using if you are on X Premium (it is effectively free at the incre
 
 ## Best Alternatives
 
-- **[ChatGPT](./chatgpt.md):** GPT-5.4 Thinking on Plus; stronger general reasoning, documented capabilities and limitations, broader plugin ecosystem. The default choice for most users.
-- **[Claude](./claude.md):** Claude Opus 4.6 for reasoning quality, writing, and long-document analysis (1M context). More predictable behavior; Constitutional AI training reduces sycophancy and policy inconsistency.
-- **[Perplexity](./perplexity.md):** Better structured web research and citation management than Grok's DeepSearch for queries not involving X data.
-- **[Gemini](./gemini.md):** Google's assistant with Workspace integration and real-time Google Search grounding. Comparable breadth; stronger for document workflows; no X data access.
+- **ChatGPT:** GPT-5.4 Thinking on Plus; stronger general reasoning, documented capabilities and limitations, broader plugin ecosystem. The default choice for most users.
+- **Claude:** Claude Opus 4.6 for reasoning quality, writing, and long-document analysis (1M context). More predictable behavior; Constitutional AI training reduces sycophancy and policy inconsistency.
+- **Perplexity:** Better structured web research and citation management than Grok's DeepSearch for queries not involving X data.
+- **Gemini:** Google's assistant with Workspace integration and real-time Google Search grounding. Comparable breadth; stronger for document workflows; no X data access.
 
 ## FAQ
 
@@ -152,7 +152,7 @@ Grok 4 Heavy scores 100% on AIME 2025 and 88.4% GPQA Diamond, which places it at
 ## Related
 
 - **Category:** [AI Search](../categories/ai-search.md)
-- **Compare:** [ChatGPT](./chatgpt.md), [Claude](./claude.md), [Gemini](./gemini.md)
+- **Compare:** ChatGPT, Claude, Gemini
 
 ## Sources
 

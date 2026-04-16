@@ -46,7 +46,7 @@ Image generation remains free in [Meta AI](https://meta.ai). Dedicated tools ali
 - **[Adobe Firefly](../tools/adobe-firefly.md)**: Commercially safe images with Creative Cloud tools.
 - **[Ideogram](../tools/ideogram.md)**: Strong free tier and text rendering.
 - **[Canva](../tools/canva.md)**: Image generation in a design platform.
-- **[Leonardo.ai](../tools/leonardo-ai.md)**: Advanced customization and fine-tuning.
+- **[Leonardo.ai](../tools/leonardo.md)**: Advanced customization and fine-tuning.
 - **Stable Diffusion (local)**: Unlimited local runs on user hardware.
 
 ## Lessons

@@ -101,9 +101,9 @@ Sudowrite serves fiction writers with tools like Story Engine and Write mode tai
 
 | Tool | Price | Key Difference |
 |------|-------|----------------|
-| [Claude Pro](../tools/anthropic-claude.md) | $20/month | General-purpose prose; lacks fiction workflow |
+| [Claude Pro](../tools/claude.md) | $20/month | General-purpose prose; lacks fiction workflow |
 | [ChatGPT Plus](../tools/chatgpt.md) | $20/month | Broad features; no story structure tools |
-| [NovelAI](../tools/novelai.md) | $10-$25/month | Fiction focus; strong in anime/genre styles |
+| NovelAI | $10-$25/month | Fiction focus; strong in anime/genre styles |
 
 ## FAQ
 

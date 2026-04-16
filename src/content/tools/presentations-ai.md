@@ -100,9 +100,9 @@ Presentations.AI delivers fast, low-friction prompt-to-deck generation powered b
 
 | Tool | Price | Key Difference |
 |------|-------|----------------|
-| [Gamma](gamma.md) | $20/mo Plus | Better generation quality, 800 monthly credits free tier, collaboration features |
-| [Beautiful.ai](beautiful-ai.md) | $15/mo Pro | Smart auto-reflow layouts, 100+ templates, brand kits |
-| [Plus AI](plus-ai.md) | $20/mo Pro | Native Google Slides/PowerPoint integration, enterprise security |
+| Gamma | $20/mo Plus | Better generation quality, 800 monthly credits free tier, collaboration features |
+| Beautiful.ai | $15/mo Pro | Smart auto-reflow layouts, 100+ templates, brand kits |
+| Plus AI | $20/mo Pro | Native Google Slides/PowerPoint integration, enterprise security |
 
 ## FAQ
 

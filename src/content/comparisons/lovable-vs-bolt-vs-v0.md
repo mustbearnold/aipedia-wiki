@@ -82,7 +82,7 @@ Lovable, due to integrated database, auth, and APIs.
 ## Related
 
 - [Lovable](../tools/lovable.md)
-- [Bolt.new](../tools/bolt-new.md)
+- [Bolt.new](../tools/bolt.md)
 - [v0](../tools/v0.md)
 - [AI App Builders Category](../categories/ai-design.md)
 

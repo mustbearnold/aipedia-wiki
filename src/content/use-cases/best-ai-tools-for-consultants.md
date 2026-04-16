@@ -98,7 +98,7 @@ Limitations: Perplexity is specialized for research; it lacks the multimodal cap
 
 ## How We Chose
 
-We ranked tools by fit for consulting workflows: versatility across research, analysis, writing, and presentation; integration with enterprise platforms; reasoning depth for complex problem-solving; and current pricing as of April 2026. We prioritized tools that reduce friction in weekly consultant tasks like client memo drafting, data analysis, and deck building. See our [methodology](../methodology.md) for details.
+We ranked tools by fit for consulting workflows: versatility across research, analysis, writing, and presentation; integration with enterprise platforms; reasoning depth for complex problem-solving; and current pricing as of April 2026. We prioritized tools that reduce friction in weekly consultant tasks like client memo drafting, data analysis, and deck building. See our methodology for details.
 
 ---
 

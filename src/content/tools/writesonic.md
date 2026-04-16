@@ -142,7 +142,7 @@ Yes for drafts; Article Writer 7.0 scores 85-95 on Surfer SEO metrics matching t
 ## Related
 
 - [Category: ai-writing](../categories/ai-writing.md)
-- [Best AI Writing Tool (2026)](../use-cases/best-ai-writing-tool.md)
+- Best AI Writing Tool (2026)
 - [Best AI SEO Tool (2026)](../use-cases/best-ai-seo-tool.md)
 
 ## Sources

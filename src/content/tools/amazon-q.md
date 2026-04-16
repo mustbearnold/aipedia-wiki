@@ -95,9 +95,9 @@ Amazon Q Developer scores high on value (8/10) and longevity (8/10) due to AWS i
 
 | Tool | Price | Key Difference |
 |------|-------|----------------|
-| [GitHub Copilot](github-copilot.md) | $10/mo | Stronger general coding, less AWS focus |
-| [Cursor](cursor.md) | $20/mo | AI-native IDE without AWS depth |
-| [Codeium](codeium.md) | Free | Free autocomplete, no AWS features |
+| GitHub Copilot | $10/mo | Stronger general coding, less AWS focus |
+| Cursor | $20/mo | AI-native IDE without AWS depth |
+| Codeium | Free | Free autocomplete, no AWS features |
 
 ## FAQ
 

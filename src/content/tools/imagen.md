@@ -104,7 +104,7 @@ Imagen 4 delivers reliable photorealism and Workspace integration for Google use
 |------|-------|----------------|
 | [Midjourney](../tools/midjourney.md) | $10+/month | Superior artistic and stylized imagery |
 | [Flux](../tools/flux.md) | Free/API | Open weights, local deployment option |
-| [GPT Image](../tools/gpt-image.md) | $20/month via ChatGPT | Tighter prompt adherence, broader styles |
+| [GPT Image](../tools/chatgpt.md) | $20/month via ChatGPT | Tighter prompt adherence, broader styles |
 
 ## FAQ
 

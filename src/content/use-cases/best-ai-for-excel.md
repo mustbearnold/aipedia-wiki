@@ -24,10 +24,10 @@ AI tools enhance Excel and spreadsheet workflows through data analysis, formula 
 
 | Rank | Tool | Best For | Price |
 |---|---|---|---|
-| 1 | [Microsoft 365 Copilot](../tools/microsoft-copilot.md) | Native Excel integration | $30/user/month |
+| 1 | [Microsoft 365 Copilot](../tools/github-copilot.md) | Native Excel integration | $30/user/month |
 | 2 | [ChatGPT](../tools/chatgpt.md) | File analysis and reasoning | Free; Plus $20/month |
 | 3 | [Claude](../tools/claude.md) | Code and large datasets | Free; Pro $20/month |
-| 4 | [Google Gemini](../tools/google-gemini.md) | Long-context analysis | Free; Advanced $20/month |
+| 4 | [Google Gemini](../tools/gemini.md) | Long-context analysis | Free; Advanced $20/month |
 | 5 | [Cursor](../tools/cursor.md) | Spreadsheet scripting | Free; Pro $20/month |
 
 ## Top Picks

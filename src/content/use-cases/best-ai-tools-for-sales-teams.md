@@ -24,8 +24,8 @@ Sales teams use AI for conversation intelligence, lead scoring, email personaliz
 
 | Rank | Tool | Best For | Price |
 |---|---|---|---|
-| 1 | [Gong](../tools/gong.md) | Conversation intelligence | $100/user/mo (Team); $160/user/mo (Enterprise)[1] |
-| 2 | [Salesforce Einstein](../tools/salesforce-einstein.md) | CRM automation | $50/user/mo add-on (Sales Cloud); $75/user/mo (Service Cloud)[3] |
+| 1 | Gong | Conversation intelligence | $100/user/mo (Team); $160/user/mo (Enterprise)[1] |
+| 2 | Salesforce Einstein | CRM automation | $50/user/mo add-on (Sales Cloud); $75/user/mo (Service Cloud)[3] |
 | 3 | [ChatGPT](../tools/chatgpt.md) | Lead research & personalization | Free; Plus $20/mo; Pro $200/mo[1][2] |
 | 4 | [Claude](../tools/claude.md) | Long-form deal analysis | Free; Pro $20/mo; Team $30/user/mo[3] |
 | 5 | [Gemini](../tools/gemini.md) | Google Workspace integration | Free; Advanced $19.99/mo[1][3] |

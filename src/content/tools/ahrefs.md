@@ -112,7 +112,7 @@ Ahrefs has the best backlink data in the industry, and that remains unmatched. I
 
 - **[Semrush](../tools/semrush.md):** broader feature set including PPC, social, AI Search Visibility. Slightly weaker backlink data. Starts at $140/mo. The main competitor.
 - **[Surfer SEO](../tools/surfer-seo.md):** content optimization that Ahrefs lacks. $79/mo. Use alongside Ahrefs, not instead of it.
-- **[Moz Pro](../tools/moz-pro.md):** simpler, cheaper ($99/mo). Domain Authority metric is industry-standard. Less data depth overall.
+- **Moz Pro:** simpler, cheaper ($99/mo). Domain Authority metric is industry-standard. Less data depth overall.
 
 ## FAQ
 

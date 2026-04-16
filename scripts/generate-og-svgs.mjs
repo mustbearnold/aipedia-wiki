@@ -89,7 +89,7 @@ function main() {
   if (!existsSync(OUT_DIR)) mkdirSync(OUT_DIR, { recursive: true });
 
   const data = JSON.parse(readFileSync(REGISTRY, 'utf8'));
-  const tools = Object.values(data.tools ?? {}).filter((t) => t.status === 'active' && t.slug);
+  const tools = Object.values(data.tools ?? {}).filter((t) => t.slug && t.status !== 'dead' && t.status !== 'acquired');
 
   let written = 0;
   for (const tool of tools) {

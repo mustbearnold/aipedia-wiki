@@ -105,9 +105,9 @@ Decktopus AI suits educators, trainers, and professionals who need presentation 
 
 | Tool | Price | Key Difference |
 |------|-------|----------------|
-| [Gamma](gamma.md) | $10/mo | Superior AI generation quality, unlimited free tier, broader features |
-| [Presentations.AI](presentations-ai.md) | $25/mo | Pure prompt-to-deck focus with GPT-5.4 optimization, no forms |
-| [Beautiful.ai](beautiful-ai.md) | $15/mo | Advanced auto-layouts, larger template library |
+| Gamma | $10/mo | Superior AI generation quality, unlimited free tier, broader features |
+| Presentations.AI | $25/mo | Pure prompt-to-deck focus with GPT-5.4 optimization, no forms |
+| Beautiful.ai | $15/mo | Advanced auto-layouts, larger template library |
 
 ## FAQ
 

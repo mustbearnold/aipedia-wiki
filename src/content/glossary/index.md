@@ -195,7 +195,7 @@ Open source enables self-hosting, fine-tuning, inspection, and privacy; closed s
 
 Examples include open source **Llama 4**, **DeepSeek V3.2**, and **Mixtral 2** versus closed source **GPT-5.4** and **Claude Opus 4.6**.
 
-See also: [Mistral](../companies/mistral.md), [LoRA](#lora), [Fine-tuning](#fine-tuning)
+See also: Mistral, [LoRA](#lora), [Fine-tuning](#fine-tuning)
 
 ---
 
@@ -234,7 +234,7 @@ They accelerate development for developers and non-technical users, enabling rap
 
 Bubble supports no-code web apps, while Retool provides low-code dashboards integrated with GPT-5.4 APIs.
 
-See also: [Workflow Automation](#workflow-automation), [n8n](../tools/n8n.md), [Bubble](../tools/bubble.md)
+See also: [Workflow Automation](#workflow-automation), [n8n](../tools/n8n.md), Bubble
 
 ---
 

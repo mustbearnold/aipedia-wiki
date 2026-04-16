@@ -25,10 +25,10 @@ AI tools for customer support automate responses, triage tickets, and analyze in
 | Rank | Tool | Best For | Price |
 |---|---|---|---|
 | 1 | [Intercom](../tools/intercom.md) | Full ticket and chat automation | Starts at $79/month |
-| 2 | [Zendesk](../tools/zendesk.md) | Enterprise ticketing and analytics | Starts at $55/agent/month |
-| 3 | [Ada](../tools/ada.md) | No-code chatbots | Starts at $500/month |
-| 4 | [Gorgias](../tools/gorgias.md) | Ecommerce support | Starts at $10/month |
-| 5 | [Help Scout](../tools/help-scout.md) | Shared inbox AI | Starts at $20/user/month |
+| 2 | Zendesk | Enterprise ticketing and analytics | Starts at $55/agent/month |
+| 3 | Ada | No-code chatbots | Starts at $500/month |
+| 4 | Gorgias | Ecommerce support | Starts at $10/month |
+| 5 | Help Scout | Shared inbox AI | Starts at $20/user/month |
 
 ## Top Picks
 
@@ -48,7 +48,7 @@ Gorgias 2026 uses Claude 4.6 for ecommerce-specific automation, auto-tagging Sho
 Help Scout AI, powered by GPT-5.4 in its Spring 2026 update, adds reply suggestions and summarization to shared inboxes. It scans conversations for insights and drafts context-aware responses. Fits small teams preferring email-centric support. Pricing: Standard $20/user/month (basic AI), Plus $40 (advanced). 15-day trial. Pros: Simple interface; unlimited inboxes; Beacon widget. Cons: Lacks full automation; no voice support; per-user cost adds up. [Help Scout pricing](https://www.helpscout.com/pricing/).
 
 ## How We Chose
-We evaluated 20+ tools on resolution rate, integration count, pricing per resolution, and 2026 model benchmarks (e.g., GDPval-AA). Prioritized platforms with live data from G2, Capterra, and vendor sites as of 2026-04-15. See [methodology](../methodology.md).
+We evaluated 20+ tools on resolution rate, integration count, pricing per resolution, and 2026 model benchmarks (e.g., GDPval-AA). Prioritized platforms with live data from G2, Capterra, and vendor sites as of 2026-04-15. See methodology.
 
 ## FAQ
 

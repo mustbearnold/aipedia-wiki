@@ -157,7 +157,7 @@ Midjourney v7 is the best alternative for users who want the highest aesthetic q
 
 ## Related
 
-- **Category:** [AI Image Generation](/tools/categories/ai-image)
+- **Category:** [AI Image Generation](../categories/ai-image.md)
 - **Compare:** [Stable Diffusion](/tools/stable-diffusion), [Midjourney](/tools/midjourney), [Ideogram](/tools/ideogram)
 
 ## Sources

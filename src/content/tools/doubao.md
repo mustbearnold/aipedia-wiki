@@ -98,10 +98,10 @@ For Chinese-language users and China-based enterprises, Doubao is the obvious ch
 
 ## Best Alternatives
 
-- [ChatGPT](chatgpt.md): Broadest feature set, US-based, best English quality
-- [Claude](claude.md): Strong reasoning and long-context processing, US-based
+- ChatGPT: Broadest feature set, US-based, best English quality
+- Claude: Strong reasoning and long-context processing, US-based
 - DeepSeek: Another China-based low-cost API with similar pricing philosophy but more international adoption
-- [Gemini](gemini.md): Google's assistant with strong multilingual support and international infrastructure
+- Gemini: Google's assistant with strong multilingual support and international infrastructure
 
 ## FAQ
 

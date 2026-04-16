@@ -125,9 +125,9 @@ Midjourney is the best choice for designers and creators who prioritize aestheti
 
 ## Best Alternatives
 
-- **[Flux](flux.md):** open-source, self-hostable, massive LoRA ecosystem. Best for customization and developer workflows.
-- **[Ideogram 2.0](ideogram.md):** best text rendering in images. Better for logos, thumbnails, and text-heavy designs.
-- **[Leonardo AI](leonardo.md):** best free tier (150 images/day). Good quality, best entry point.
+- **Flux:** open-source, self-hostable, massive LoRA ecosystem. Best for customization and developer workflows.
+- **Ideogram 2.0:** best text rendering in images. Better for logos, thumbnails, and text-heavy designs.
+- **Leonardo AI:** best free tier (150 images/day). Good quality, best entry point.
 - **[DALL-E](../categories/ai-image.md):** integrated into ChatGPT. Most accessible, good photorealism.
 
 ## FAQ

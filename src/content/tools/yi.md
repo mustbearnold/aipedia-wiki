@@ -115,7 +115,7 @@ Yi-34B and Yi-Lightning were genuinely impressive models when they launched: com
 - Llama 3 (Meta): Actively developed open-weight models with Apache 2.0 license; stronger community support
 - Qwen 2.5 (Alibaba): Strong Chinese-English bilingual performance, active development, and competitive pricing
 - DeepSeek: Where 01.AI itself now points for enterprise solutions; highly competitive pricing and active development
-- [Claude](claude.md): If quality is the priority over self-hosting or cost
+- Claude: If quality is the priority over self-hosting or cost
 
 ## FAQ
 

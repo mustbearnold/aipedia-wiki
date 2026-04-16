@@ -120,9 +120,9 @@ For Google Workspace users, Gemini is the obvious first-party AI choice: native 
 
 ## Best Alternatives
 
-- [ChatGPT](chatgpt.md): GPT-5.4 Thinking on Plus; stronger general reasoning and broader plugin ecosystem
-- [Claude](claude.md): Claude Opus 4.6 leads on nuanced reasoning, writing quality, and long-document analysis
-- [Perplexity](perplexity.md): Purpose-built research tool with better citation management than Deep Research if you do not need Workspace integration
+- ChatGPT: GPT-5.4 Thinking on Plus; stronger general reasoning and broader plugin ecosystem
+- Claude: Claude Opus 4.6 leads on nuanced reasoning, writing quality, and long-document analysis
+- Perplexity: Purpose-built research tool with better citation management than Deep Research if you do not need Workspace integration
 
 ## FAQ
 

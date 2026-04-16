@@ -62,7 +62,7 @@ Cons: Ecosystem lock-in favors Google users; weaker standalone creativity than C
 
 ## How We Chose
 
-We ranked tools by performance in long-form text generation, context handling, and book-specific tasks like outlining and editing, drawing from 2026 benchmarks and editorial tests.[1][3] See our [methodology](../methodology.md).
+We ranked tools by performance in long-form text generation, context handling, and book-specific tasks like outlining and editing, drawing from 2026 benchmarks and editorial tests.[1][3] See our methodology.
 
 ## FAQ
 

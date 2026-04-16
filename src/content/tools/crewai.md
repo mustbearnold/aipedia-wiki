@@ -111,7 +111,7 @@ CrewAI is the best choice for Python developers who need an intuitive framework 
 
 ## Best Alternatives
 
-- [LangGraph](../tools/langgraph.md), lower-level graph-based orchestration with more control over agent state
+- LangGraph, lower-level graph-based orchestration with more control over agent state
 - [n8n](../tools/n8n.md), visual workflow automation with AI agent nodes, self-hostable
 - [Relevance AI](../tools/relevance-ai.md), no-code agent builder for non-developers
 

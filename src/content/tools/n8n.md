@@ -149,7 +149,7 @@ Zapier is the best alternative if you need maximum integrations (7,000+) and a n
 
 - **Category:** [AI Automation & Agents](../categories/ai-automation.md)
 - **Trends:** [Agent Commerce](../trends/agent-commerce.md)
-- **Use cases:** [AI Agency Stack](../stacks/ai-agency-stack.md)
+- **Use cases:** AI Agency Stack
 
 ## Sources
 

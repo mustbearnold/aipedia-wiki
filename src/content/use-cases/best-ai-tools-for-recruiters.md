@@ -24,9 +24,9 @@ Recruiters use AI to source candidates from large databases, screen resumes for 
 
 | Rank | Tool | Best For | Price |
 |------|------|----------|-------|
-| 1 | [Paradox](../tools/paradox-olivia.md) | Automated screening and scheduling | Free trial; $5,000+/yr enterprise |
-| 2 | [Eightfold AI](../tools/eightfold-ai.md) | Skills-based talent matching | Custom enterprise ($50K+/yr) |
-| 3 | [HireEZ](../tools/hireez.md) | Sourcing from 800M+ profiles | Free; Pro $99/mo; Enterprise custom |
+| 1 | Paradox | Automated screening and scheduling | Free trial; $5,000+/yr enterprise |
+| 2 | Eightfold AI | Skills-based talent matching | Custom enterprise ($50K+/yr) |
+| 3 | HireEZ | Sourcing from 800M+ profiles | Free; Pro $99/mo; Enterprise custom |
 | 4 | [ChatGPT](../tools/chatgpt.md) | Resume parsing and JD writing | Free; Plus $20/mo; Pro $200/mo |
 
 ## Top Picks

@@ -24,7 +24,7 @@ AI transcription tools convert audio and video to text with timestamps, speaker 
 
 | Rank | Tool | Best For | Price |
 |---|---|---|---|
-| 1 | [Fathom](../tools/fathom.md) | Meetings, calls | Free; $19/user/month paid |
+| 1 | Fathom | Meetings, calls | Free; $19/user/month paid |
 | 2 | [Descript](../tools/descript.md) | Podcasts, editing | Free tier; $15/user/month Pro |
 | 3 | [ElevenLabs](../tools/elevenlabs.md) / Whisper Flow | Voice notes, dictation | Free tier; $5/month+ |
 

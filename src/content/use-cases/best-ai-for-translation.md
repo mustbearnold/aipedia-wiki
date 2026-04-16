@@ -38,7 +38,7 @@ Pricing: Free tier limits 500K characters/month; Starter $8.99/month (5M charact
 
 Limitations: Fewer languages (32 vs. 100+ in rivals); no audio/video translation; API at $25+/million characters.
 
-[Read full review](../tools/deepl.md)
+Read full review
 
 ### 2. ChatGPT Plus (GPT-5.4)
 
@@ -58,11 +58,11 @@ Pricing: Free; API via Vertex AI at pay-per-use (~$20/1M characters for NMT mode
 
 Limitations: Lower fluency in complex sentences; occasional errors in idioms; no customization without API.
 
-[Read full review](../tools/google-translate.md)
+Read full review
 
 ## How We Chose
 
-Ranked by 2026 benchmarks (BLEU scores, human evals), pricing efficiency, and fit for common cases like docs/business. Verified via official sites April 15, 2026. [Methodology](../methodology.md)
+Ranked by 2026 benchmarks (BLEU scores, human evals), pricing efficiency, and fit for common cases like docs/business. Verified via official sites April 15, 2026. Methodology
 
 ## FAQ
 

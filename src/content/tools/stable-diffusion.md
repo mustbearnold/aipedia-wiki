@@ -169,7 +169,7 @@ Out of the box with no fine-tuning, Midjourney v7 produces consistently more pol
 - [Flux](/tools/flux) — newer open-source model with FLUX.2 architecture and better photorealism
 - [Midjourney](/tools/midjourney) — aesthetic quality leader, closed source
 - [Adobe Firefly](/tools/adobe-firefly) — commercially safe alternative
-- [ComfyUI ecosystem](/tools/comfyui) — node-based workflow builder for SD
+- ComfyUI ecosystem — node-based workflow builder for SD
 - [Best AI Image Generators 2026](/best-of/ai-image-generators)
 
 ## Sources

@@ -115,7 +115,7 @@ Murf is the best-in-class tool for structured professional voiceover workflows: 
 ## Best Alternatives
 
 - [ElevenLabs](/tools/elevenlabs) - more natural voices, better for creative content and real-time use cases, comparable pricing
-- [PlayHT](/tools/playht) - strong voice cloning, developer-friendly API, good alternative for technical users
+- PlayHT - strong voice cloning, developer-friendly API, good alternative for technical users
 - [Descript](/tools/descript) - transcription, voice, and video editing in one platform, steeper learning curve
 
 ## FAQ

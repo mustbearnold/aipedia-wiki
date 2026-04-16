@@ -106,7 +106,7 @@ Resemble AI earns 8/10 utility for developers needing real-time voice APIs and c
 | Tool | Price | Key Difference |
 |------|-------|----------------|
 | [ElevenLabs](../tools/elevenlabs.md) | $5-$330/mo | Superior narration quality, larger voice library |
-| [ElevenLabs Voice Isolator](../tools/voice-isolator.md) | Usage-based | Better for content creators, integrated editing |
+| ElevenLabs Voice Isolator | Usage-based | Better for content creators, integrated editing |
 | [Cartesia](../tools/cartesia.md) | $0.001/sec | Ultra-low latency focus, developer-first |
 
 ## FAQ

@@ -102,9 +102,9 @@ Zed delivers strong value (8/10) with a free editor and $20/month AI tier, and i
 
 | Tool | Price | Key Difference |
 |------|-------|----------------|
-| [Cursor](cursor.md) | $20/mo | VS Code-based, full extension ecosystem, deeper agent mode |
-| [GitHub Copilot](github-copilot.md) | $10/mo | Works in VS Code/JetBrains, no editor switch |
-| [Continue](continue.md) | Free | Open-source AI plugin for VS Code, BYOK |
+| Cursor | $20/mo | VS Code-based, full extension ecosystem, deeper agent mode |
+| GitHub Copilot | $10/mo | Works in VS Code/JetBrains, no editor switch |
+| Continue | Free | Open-source AI plugin for VS Code, BYOK |
 
 ## FAQ
 

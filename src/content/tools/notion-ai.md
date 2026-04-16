@@ -109,8 +109,8 @@ Notion AI is a solid AI upgrade for teams already using Notion as their primary 
 
 ## Best Alternatives
 
-- **[Obsidian](obsidian.md):** local-first markdown notes with AI plugins. More flexible, more private, no per-user fees. Steeper learning curve.
-- **[NotebookLM](notebooklm.md):** Google's free AI research tool. Better for document Q&A on specific source sets. No workspace or database features.
+- **Obsidian:** local-first markdown notes with AI plugins. More flexible, more private, no per-user fees. Steeper learning curve.
+- **NotebookLM:** Google's free AI research tool. Better for document Q&A on specific source sets. No workspace or database features.
 - **[Coda AI](../categories/ai-notes.md):** similar concept with AI in a doc/database workspace. Smaller community than Notion.
 - **[Microsoft Copilot in OneNote](../categories/ai-notes.md):** AI in Microsoft's notebook. Better if your team lives in the Microsoft ecosystem.
 
@@ -162,4 +162,4 @@ Notion AI has one advantage: it searches your workspace automatically without re
 ## Related
 
 - **Category:** [AI Notes & Knowledge](../categories/ai-notes.md)
-- **See also:** [Obsidian](obsidian.md), [NotebookLM](notebooklm.md)
+- **See also:** Obsidian, NotebookLM

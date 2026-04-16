@@ -118,9 +118,9 @@ GitHub Copilot is the best choice for developers who want affordable, well-integ
 
 ## Best Alternatives
 
-- [Claude Code](claude-code.md): more capable agentic coding from the CLI, Ultraplan for cloud environments, $100-$200/mo
-- [Cursor](cursor.md): more deeply AI-native editor experience, similar model access, $20-$200/mo depending on tier
-- [Windsurf](windsurf.md): Cursor alternative with competitive pricing
+- Claude Code: more capable agentic coding from the CLI, Ultraplan for cloud environments, $100-$200/mo
+- Cursor: more deeply AI-native editor experience, similar model access, $20-$200/mo depending on tier
+- Windsurf: Cursor alternative with competitive pricing
 
 ## FAQ
 

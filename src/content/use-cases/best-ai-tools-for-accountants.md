@@ -24,9 +24,9 @@ Accountants use AI tools to automate data entry, analyze financial statements, g
 
 | Rank | Tool | Best For | Price |
 |---|---|---|---|
-| 1 | [Microsoft Copilot](../tools/microsoft-copilot.md) | Excel automation, enterprise reporting | $30/user/month |
+| 1 | [Microsoft Copilot](../tools/github-copilot.md) | Excel automation, enterprise reporting | $30/user/month |
 | 2 | [ChatGPT](../tools/chatgpt.md) | Reasoning, tax analysis | Free / $20/month / $200/month |
-| 3 | [Google Gemini](../tools/google-gemini.md) | Multimodal data processing, Sheets integration | Free / $19.99/month |
+| 3 | [Google Gemini](../tools/gemini.md) | Multimodal data processing, Sheets integration | Free / $19.99/month |
 | 4 | [Claude](../tools/claude.md) | Document analysis, compliance review | Free / $20/month |
 | 5 | [Perplexity](../tools/perplexity.md) | Real-time financial research | Free / $20/month |
 
@@ -94,7 +94,7 @@ Useful for research alongside core tools.[1] (154 words)
 
 ## How We Chose
 
-We ranked tools by accountant-specific fit (Excel/data integration, reasoning accuracy, pricing) using 2026 reviews and popularity data. See [methodology](../methodology.md).[1][4][5][6]
+We ranked tools by accountant-specific fit (Excel/data integration, reasoning accuracy, pricing) using 2026 reviews and popularity data. See methodology.[1][4][5][6]
 
 ## FAQ
 

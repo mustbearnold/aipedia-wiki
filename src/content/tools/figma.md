@@ -99,9 +99,9 @@ Figma holds strong as the standard for collaborative UI/UX design, with AI featu
 
 ## Best Alternatives
 
-- **[v0 by Vercel](v0.md):** Prompt-to-React code generation for developers, pairs with Figma for handoff.
-- **[Google Stitch](google-stitch.md):** AI UI from text/images, strong for Material Design and Android.
-- **[Framer](framer.md):** AI site builder focused on interactive prototypes and publishing.
+- **v0 by Vercel:** Prompt-to-React code generation for developers, pairs with Figma for handoff.
+- **Google Stitch:** AI UI from text/images, strong for Material Design and Android.
+- **Framer:** AI site builder focused on interactive prototypes and publishing.
 
 ## FAQ
 
@@ -142,4 +142,4 @@ Figma offers visual editing and collaboration; Claude generates text/code ideas 
 ## Related
 
 - **Category:** [AI Design](../categories/ai-design.md)
-- **See also:** [v0](v0.md)
+- **See also:** v0

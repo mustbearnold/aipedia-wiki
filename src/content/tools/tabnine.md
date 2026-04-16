@@ -101,9 +101,9 @@ Tabnine delivers solid value for privacy-focused users (8/10 value, 7/10 utility
 
 | Tool | Price | Key Difference |
 |------|-------|----------------|
-| [GitHub Copilot](github-copilot.md) | $10/mo | Superior completion quality, chat integration |
-| [Cursor](cursor.md) | $20/mo | AI-native IDE with agent capabilities |
-| [Codeium](codeium.md) | Free | Unlimited free completions, cloud-based |
+| GitHub Copilot | $10/mo | Superior completion quality, chat integration |
+| Cursor | $20/mo | AI-native IDE with agent capabilities |
+| Codeium | Free | Unlimited free completions, cloud-based |
 
 ## FAQ
 

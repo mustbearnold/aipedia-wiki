@@ -95,9 +95,9 @@ Devin suits engineering teams who delegate well-scoped tickets to an autonomous 
 
 ## Best Alternatives
 
-- [Claude Opus 4.6 Agents](claude-opus-agents.md): interactive agentic coding for complex tasks, $100-$300/mo equivalent usage
-- [Cursor with GPT-5.4](cursor.md): faster interactive coding, $20/mo flat rate
-- [Aider](aider.md): open-source autonomous coding agent, free/self-hosted
+- Claude Opus 4.6 Agents: interactive agentic coding for complex tasks, $100-$300/mo equivalent usage
+- Cursor with GPT-5.4: faster interactive coding, $20/mo flat rate
+- Aider: open-source autonomous coding agent, free/self-hosted
 
 ## FAQ
 
