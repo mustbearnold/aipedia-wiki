@@ -311,23 +311,27 @@ html {
   .tool-card:active { transform: none; box-shadow: none; }
 }
 
-/* Filter pills: simple chip-style filter. No 3D, no ripple, no lift —
-   these are secondary controls and should feel calm, not performative. */
-.category-pill {
-  transition: background-color 140ms ease,
-              border-color 140ms ease,
-              color 140ms ease;
+/* Filter dropdown options: flat rows inside a popover. Selected row
+   gets the accent bg, hover row gets the card-hover bg. */
+.filter-option {
+  transition: background-color 120ms ease, color 120ms ease;
 }
-@media (hover: hover) and (pointer: fine) {
-  .category-pill:hover {
-    background: var(--bg-card-hover);
-    border-color: rgba(167, 139, 250, 0.25);
-    color: var(--text-primary);
-  }
+.filter-option.active {
+  color: var(--accent-primary);
+  background: rgba(167, 139, 250, 0.12);
 }
-.category-pill:active {
-  transform: scale(0.97);
-  transition: transform 80ms ease-out;
+.filter-option:focus-visible {
+  outline: 2px solid rgba(167, 139, 250, 0.5);
+  outline-offset: -2px;
+}
+/* Popover open state (toggled via data-open) */
+#filter-popover[data-open="true"] {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+#filter-trigger[aria-expanded="true"] #filter-chevron {
+  transform: rotate(180deg);
 }
 
 /* iOS Safari zooms into inputs when their font-size is below 16px on focus.

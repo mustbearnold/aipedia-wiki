@@ -215,27 +215,53 @@ const featuredComparisons = comparisons
     </div>
   </section>
 
-  <!-- Compact filter bar (moved below the rail so it's attached to the grid, not the hero) -->
-  <section id="category-pills" class="category-pills flex items-center gap-2 flex-wrap mb-4" aria-label="Filter tool grid">
-    <span class="text-[11px] font-semibold uppercase tracking-[0.12em] text-[var(--text-muted)] mr-1">Filter</span>
+  <!-- Filter dropdown: single trigger, click-open popover with 15 options. -->
+  <section id="category-pills" class="relative inline-block mb-4" aria-label="Filter tool grid">
     <button
+      id="filter-trigger"
       type="button"
-      data-filter="all"
-      class="category-pill active inline-flex items-center gap-1.5 px-3 py-1 rounded-lg text-[11px] font-medium cursor-pointer bg-[rgba(167,139,250,0.15)] border border-[rgba(167,139,250,0.3)] text-[var(--accent-primary)]"
-    >All</button>
-    {categories.map(cat => {
-      const slug = cat.data.slug || cat.id.replace(/\.md$/, '').replace(/\\/g, '/');
-      const info = categoryLabelMap[slug] ?? { emoji: '\uD83D\uDD27', label: slug };
-      return (
+      aria-haspopup="listbox"
+      aria-expanded="false"
+      aria-controls="filter-popover"
+      class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-[12px] font-medium bg-[var(--bg-card)] border border-[var(--border)] text-[var(--text-secondary)] hover:bg-[var(--bg-card-hover)] hover:border-[rgba(167,139,250,0.3)] hover:text-[var(--text-primary)] transition-colors cursor-pointer"
+    >
+      <span class="text-[10px] font-semibold uppercase tracking-[0.12em] text-[var(--text-muted)]">Filter</span>
+      <span id="filter-current-label" class="text-[var(--text-primary)]">All</span>
+      <svg id="filter-chevron" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" class="transition-transform" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
+      </svg>
+    </button>
+
+    <div
+      id="filter-popover"
+      role="listbox"
+      aria-label="Filter by category"
+      class="absolute left-0 top-full mt-2 z-20 min-w-[180px] rounded-lg bg-[var(--bg-card)] border border-[var(--border)] shadow-[0_12px_32px_-8px_rgba(0,0,0,0.55)] opacity-0 invisible translate-y-1 transition-all duration-150 origin-top-left"
+      data-open="false"
+    >
+      <div class="max-h-[50vh] overflow-y-auto py-1">
         <button
           type="button"
-          data-filter={slug}
-          class="category-pill inline-flex items-center px-3 py-1 rounded-lg text-[11px] font-medium cursor-pointer bg-[var(--bg-card)] border border-[var(--border)] text-[var(--text-secondary)]"
-        >
-          {info.label}
-        </button>
-      );
-    })}
+          data-filter="all"
+          role="option"
+          aria-selected="true"
+          class="category-pill filter-option active w-full text-left px-3 py-1.5 text-[13px] font-medium cursor-pointer text-[var(--accent-primary)] bg-[rgba(167,139,250,0.08)] border-0"
+        >All tools</button>
+        {categories.map(cat => {
+          const slug = cat.data.slug || cat.id.replace(/\.md$/, '').replace(/\\/g, '/');
+          const info = categoryLabelMap[slug] ?? { emoji: '\uD83D\uDD27', label: slug };
+          return (
+            <button
+              type="button"
+              data-filter={slug}
+              role="option"
+              aria-selected="false"
+              class="category-pill filter-option w-full text-left px-3 py-1.5 text-[13px] font-medium cursor-pointer text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-card-hover)] border-0 bg-transparent"
+            >{info.label}</button>
+          );
+        })}
+      </div>
+    </div>
   </section>
 
   <!-- Filter count + page size + category link -->
@@ -663,8 +689,10 @@ const featuredComparisons = comparisons
         return isNaN(n) ? 30 : n;
       })();
 
-      const activeClasses = 'bg-[rgba(167,139,250,0.15)] border-[rgba(167,139,250,0.3)] text-[var(--accent-primary)]'.split(' ');
-      const inactiveClasses = 'bg-[var(--bg-card)] border-[var(--border)] text-[var(--text-secondary)]'.split(' ');
+      // Dropdown UI elements
+      const trigger = document.getElementById('filter-trigger');
+      const popover = document.getElementById('filter-popover');
+      const currentLabelEl = document.getElementById('filter-current-label');
 
       function updatePageSizeButtons() {
         pageSizeBtns.forEach(btn => {
@@ -734,14 +762,19 @@ const featuredComparisons = comparisons
         pills.forEach(pill => {
           const f = pill.getAttribute('data-filter') ?? '';
           const isActive = f === filter;
-          if (isActive) {
-            pill.classList.remove(...inactiveClasses);
-            pill.classList.add(...activeClasses, 'active');
-          } else {
-            pill.classList.remove(...activeClasses, 'active');
-            pill.classList.add(...inactiveClasses);
-          }
+          pill.classList.toggle('active', isActive);
+          pill.setAttribute('aria-selected', String(isActive));
         });
+
+        // Sync the trigger label with the current filter
+        if (currentLabelEl) {
+          if (filter === 'all') {
+            currentLabelEl.textContent = 'All';
+          } else {
+            const label = pillLabelMap[filter] ?? filter.replace(/^ai-/, '');
+            currentLabelEl.textContent = label;
+          }
+        }
 
         if (countEl) {
           const shown = Math.min(visible, limit === Infinity ? visible : limit);
@@ -772,8 +805,42 @@ const featuredComparisons = comparisons
       pills.forEach(pill => {
         pill.addEventListener('click', () => {
           const filter = pill.getAttribute('data-filter') ?? 'all';
-          setFilter(filter === activeFilter ? 'all' : filter);
+          setFilter(filter);
+          closePopover();
         });
+      });
+
+      // Dropdown open/close behavior
+      function openPopover() {
+        if (!popover || !trigger) return;
+        popover.setAttribute('data-open', 'true');
+        trigger.setAttribute('aria-expanded', 'true');
+      }
+      function closePopover() {
+        if (!popover || !trigger) return;
+        popover.setAttribute('data-open', 'false');
+        trigger.setAttribute('aria-expanded', 'false');
+      }
+      function togglePopover() {
+        const open = popover?.getAttribute('data-open') === 'true';
+        open ? closePopover() : openPopover();
+      }
+
+      trigger?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        togglePopover();
+      });
+      document.addEventListener('click', (e) => {
+        const t = e.target as Node;
+        if (!popover?.contains(t) && !trigger?.contains(t)) {
+          closePopover();
+        }
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && popover?.getAttribute('data-open') === 'true') {
+          closePopover();
+          trigger?.focus();
+        }
       });
     }
 
