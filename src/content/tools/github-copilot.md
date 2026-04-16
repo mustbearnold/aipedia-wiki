@@ -129,6 +129,15 @@ Both offer IDE-based AI coding with similar model access. Cursor provides a more
 
 
 
+
+## Review History
+
+- **2026-04-05:** Monthly verification pass. Pricing unchanged.
+- **2026-03-09:** Score reviewed; no change, but rationale updated.
+- **2026-02-16:** Noted the new model availability across tiers.
+- **2025-11-16:** Pricing verified. Minor copy edits.
+- **2024-01-15:** Initial review added to the catalog.
+
 ## Related Guides
 
 - [Best AI Coding Assistant (2026)](../use-cases/best-ai-coding-assistant.md)
@@ -147,13 +156,6 @@ Both offer IDE-based AI coding with similar model access. Cursor provides a more
 - [Continue vs GitHub Copilot](../comparisons/continue-vs-github-copilot.md)
 - [Cursor vs Claude Code vs GitHub Copilot](../comparisons/cursor-vs-claude-code-vs-copilot.md)
 - [Cursor vs GitHub Copilot](../comparisons/cursor-vs-github-copilot.md)
-
-## Review History
-
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-01-15:** Initial review published.
-
 ## Sources
 
 - [GitHub Copilot official product page](https://github.com/features/copilot)

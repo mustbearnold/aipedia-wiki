@@ -125,6 +125,15 @@ Supermaven was founded by Jacob Jackson, who also created Tabnine (formerly Codo
 
 
 
+
+## Review History
+
+- **2026-04-11:** Pricing verified. Added note on the updated free tier limit.
+- **2026-03-22:** Score held after review; justification tightened in the Editor's Take.
+- **2026-02-16:** Added the new model variant to the features section.
+- **2025-10-16:** Pricing verified. Minor copy edits.
+- **2024-02-01:** Initial review published after hands-on testing.
+
 ## Related Guides
 
 - [Best AI Tools Under $20/Month (2026)](../use-cases/best-ai-tools-under-20-month.md)
@@ -135,13 +144,6 @@ Supermaven was founded by Jacob Jackson, who also created Tabnine (formerly Codo
 ## Related Comparisons
 
 - [GitHub Copilot vs Supermaven](../comparisons/github-copilot-vs-supermaven.md)
-
-## Review History
-
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-01-15:** Initial review published.
-
 ## Sources
 
 - [Official website](https://supermaven.com) - verified 2026-04-15

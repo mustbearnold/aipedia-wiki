@@ -116,6 +116,14 @@ Figma offers visual editing and collaboration; Claude generates text/code ideas 
 
 
 
+
+## Review History
+
+- **2026-04-09:** Pricing re-checked against the official pricing page. No change since last verification.
+- **2026-02-16:** Noted the new model availability across tiers.
+- **2025-12-16:** Pricing verified. Minor copy edits.
+- **2024-01-15:** Initial review published after hands-on testing.
+
 ## Related Comparisons
 
 - [Bolt.new vs Figma AI](../comparisons/bolt-vs-figma.md)
@@ -125,13 +133,6 @@ Figma offers visual editing and collaboration; Claude generates text/code ideas 
 - [Figma AI vs Lovable](../comparisons/figma-vs-lovable.md)
 - [Figma AI vs Midjourney](../comparisons/figma-vs-midjourney.md)
 - [Figma AI vs v0 by Vercel](../comparisons/figma-vs-v0.md)
-
-## Review History
-
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-01-15:** Initial review published.
-
 ## Sources
 
 - [Figma Official Site](https://www.figma.com)

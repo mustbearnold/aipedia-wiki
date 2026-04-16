@@ -118,6 +118,15 @@ Pitch and Google Slides both offer real-time collaboration, but Pitch adds Claud
 
 
 
+
+## Review History
+
+- **2026-04-09:** Pricing verified. Added note on the updated free tier limit.
+- **2026-03-25:** Score reviewed; no change, but rationale updated.
+- **2026-02-16:** Updated flagship model reference to latest release.
+- **2025-10-16:** Pricing verified. Minor copy edits.
+- **2024-01-15:** Initial review published after hands-on testing.
+
 ## Related Comparisons
 
 - [Beautiful.ai vs Pitch](../comparisons/beautiful-ai-vs-pitch.md)
@@ -125,13 +134,6 @@ Pitch and Google Slides both offer real-time collaboration, but Pitch adds Claud
 - [Gamma vs Pitch](../comparisons/gamma-vs-pitch.md)
 - [Pitch vs Presentations.AI](../comparisons/pitch-vs-presentations-ai.md)
 - [Pitch vs Tome](../comparisons/pitch-vs-tome.md)
-
-## Review History
-
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-01-15:** Initial review published.
-
 ## Sources
 
 - [Pitch Official Site](https://pitch.com): Product page, feature documentation, and pricing

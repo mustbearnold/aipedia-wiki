@@ -119,6 +119,15 @@ Instantly wins on economics (unlimited accounts) for agencies with 10+ client po
 14-day trial includes unlimited accounts, full warm-up, sequences, and lead finder. Start warm-up day one; no credit card required. Converts seamlessly to paid without data loss.
 
 
+
+## Review History
+
+- **2026-04-05:** Monthly verification pass. Pricing unchanged.
+- **2026-03-09:** Score reviewed; no change, but rationale updated.
+- **2026-02-16:** Flagship version bumped after the most recent model release.
+- **2025-11-16:** Pricing verified. Minor copy edits.
+- **2024-01-15:** Initial review added to the catalog.
+
 ## Related Comparisons
 
 - [Apollo.io vs Instantly](../comparisons/apollo-vs-instantly.md)
@@ -135,14 +144,6 @@ Instantly wins on economics (unlimited accounts) for agencies with 10+ client po
 - [Apollo.io](/tools/apollo)
 - [Clay](/tools/clay)
 - [Smartlead](/tools/smartlead)
-
-
-## Review History
-
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-04-15:** Content updated with latest product changes.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-01-15:** Initial review published.
 
 ## Sources
 

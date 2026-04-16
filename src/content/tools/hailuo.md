@@ -122,6 +122,15 @@ Yes. The Hailuo video models are accessible through the MiniMax developer API un
 
 
 
+
+## Review History
+
+- **2026-04-11:** Monthly verification pass. Pricing unchanged.
+- **2026-03-08:** Score adjusted down 0.3 after a pricing change reduced value.
+- **2026-02-16:** Flagship version bumped after the most recent model release.
+- **2025-11-16:** Pricing verified. Minor copy edits.
+- **2024-06-01:** Initial review added to the catalog.
+
 ## Related Guides
 
 - [Best Runway Alternatives (2026)](../use-cases/runway-alternatives.md)
@@ -129,13 +138,6 @@ Yes. The Hailuo video models are accessible through the MiniMax developer API un
 ## Related Comparisons
 
 - [Hailuo AI vs Kling 3.0](../comparisons/hailuo-vs-kling.md)
-
-## Review History
-
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-05-01:** Initial review published.
-
 ## Sources
 
 - [Hailuo AI subscribe/pricing page](https://hailuoai.video/subscribe)

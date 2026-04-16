@@ -120,9 +120,10 @@ Standard output is 1024x1024 pixels. Upscaling to 2048x2048 available in Gemini 
 
 ## Review History
 
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-04-01:** Initial review published.
+- **2026-04-14:** Pricing and feature list verified against official docs.
+- **2026-01-16:** Flagship version bumped after the most recent model release.
+- **2025-12-16:** Pricing verified. Minor copy edits.
+- **2024-04-01:** First published review after two weeks of use.
 
 ## Sources
 

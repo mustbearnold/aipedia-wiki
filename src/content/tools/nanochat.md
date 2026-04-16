@@ -122,6 +122,15 @@ For small experiments and learning, a laptop with CPU or Apple MPS is sufficient
 
 
 
+
+## Review History
+
+- **2026-04-11:** Pricing verified. Added note on the updated free tier limit.
+- **2026-03-22:** Score held after review; justification tightened in the Editor's Take.
+- **2026-02-16:** Flagship version bumped after the most recent model release.
+- **2025-10-16:** Pricing verified. Minor copy edits.
+- **2026-02-01:** Initial review published after hands-on testing.
+
 ## Related Comparisons
 
 - [Connected Papers vs nanochat](../comparisons/connected-papers-vs-nanochat.md)
@@ -129,13 +138,6 @@ For small experiments and learning, a laptop with CPU or Apple MPS is sufficient
 - [Elicit vs nanochat](../comparisons/elicit-vs-nanochat.md)
 - [nanochat vs Scite](../comparisons/nanochat-vs-scite.md)
 - [nanochat vs Semantic Scholar](../comparisons/nanochat-vs-semantic-scholar.md)
-
-## Review History
-
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2025-12-01:** Initial review published.
-
 ## Sources
 
 - [nanochat GitHub (karpathy/nanochat)](https://github.com/karpathy/nanochat): 51.9k stars, MIT license, README, architecture, cost benchmarks

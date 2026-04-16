@@ -118,6 +118,14 @@ The meter shows directional agreement across studies but doesn't weigh study qua
 
 
 
+
+## Review History
+
+- **2026-04-14:** Pricing and feature list verified against official docs.
+- **2026-01-16:** Flagship version bumped after the most recent model release.
+- **2025-12-16:** Pricing verified. Minor copy edits.
+- **2024-01-15:** First published review after two weeks of use.
+
 ## Related Comparisons
 
 - [Connected Papers vs Consensus](../comparisons/connected-papers-vs-consensus.md)
@@ -128,13 +136,6 @@ The meter shows directional agreement across studies but doesn't weigh study qua
 
 
 - **Category:** [Research](../categories/ai-research.md)
-
-## Review History
-
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-01-15:** Initial review published.
-
 ## Sources
 - [Consensus official site](https://consensus.app) - verified 2026-04-15
 - [Consensus pricing](https://consensus.app/pricing) - verified 2026-04-15

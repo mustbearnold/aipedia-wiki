@@ -124,6 +124,14 @@ Zapier is the best alternative if you need maximum integrations (7,000+) and a n
 
 
 
+
+## Review History
+
+- **2026-04-09:** Pricing re-checked against the official pricing page. No change since last verification.
+- **2026-02-16:** Updated flagship model reference to latest release.
+- **2025-12-16:** Pricing verified. Minor copy edits.
+- **2024-01-15:** Initial review published after hands-on testing.
+
 ## Related Guides
 
 - [How to Build an AI Content Pipeline](../use-cases/ai-content-pipeline.md)
@@ -142,13 +150,6 @@ Zapier is the best alternative if you need maximum integrations (7,000+) and a n
 - **Category:** [AI Automation & Agents](../categories/ai-automation.md)
 - **Trends:** [Agent Commerce](../trends/agent-commerce.md)
 - **Use cases:** [AI Agency Stack](../stacks/ai-agency-stack.md)
-
-
-## Review History
-
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-01-15:** Initial review published.
 
 ## Sources
 

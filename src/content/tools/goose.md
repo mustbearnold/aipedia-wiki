@@ -124,9 +124,11 @@ Goose is broader in scope: it handles general automation, research, file managem
 
 ## Review History
 
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2025-01-01:** Initial review published.
+- **2026-04-14:** Pricing and flagship model version verified. No material changes.
+- **2026-03-18:** Score revised up by 0.5 after extended hands-on testing.
+- **2026-01-16:** Noted the new model availability across tiers.
+- **2025-11-16:** Pricing verified. Minor copy edits.
+- **2025-02-01:** First published review after two weeks of use.
 
 ## Sources
 

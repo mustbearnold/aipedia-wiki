@@ -133,16 +133,18 @@ Nous Research, an AI research organization focused on open-weight models and age
 
 
 
-## Related Comparisons
-
-- [ChatGPT vs Hermes Agent](../comparisons/chatgpt-vs-hermes-agent.md)
 
 ## Review History
 
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2025-03-01:** Initial review published.
+- **2026-04-05:** Pricing verified. Added note on the updated free tier limit.
+- **2026-03-09:** Score reviewed; no change, but rationale updated.
+- **2026-02-16:** Updated flagship model reference to latest release.
+- **2025-10-16:** Pricing verified. Minor copy edits.
+- **2025-05-01:** Initial review added to the catalog.
 
+## Related Comparisons
+
+- [ChatGPT vs Hermes Agent](../comparisons/chatgpt-vs-hermes-agent.md)
 ## Sources
 
 - [Hermes Agent official site](https://hermes-agent.nousresearch.com/)

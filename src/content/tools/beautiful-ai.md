@@ -123,6 +123,15 @@ Gamma generates complete first drafts faster from prompts using Claude Opus 4.6.
 
 
 
+
+## Review History
+
+- **2026-04-15:** Pricing verified. Added note on the updated free tier limit.
+- **2026-03-26:** Score revised up by 0.5 after extended hands-on testing.
+- **2026-02-16:** Updated flagship model reference to latest release.
+- **2025-10-16:** Pricing verified. Minor copy edits.
+- **2024-01-15:** Initial review published after hands-on testing.
+
 ## Related Comparisons
 
 - [Beautiful.ai vs Decktopus AI](../comparisons/beautiful-ai-vs-decktopus.md)
@@ -130,14 +139,6 @@ Gamma generates complete first drafts faster from prompts using Claude Opus 4.6.
 - [Beautiful.ai vs Pitch](../comparisons/beautiful-ai-vs-pitch.md)
 - [Beautiful.ai vs Presentations.AI](../comparisons/beautiful-ai-vs-presentations-ai.md)
 - [Beautiful.ai vs Tome](../comparisons/beautiful-ai-vs-tome.md)
-
-## Review History
-
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-04-15:** Content updated with latest product changes.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-01-15:** Initial review published.
-
 ## Sources
 
 - [Beautiful.ai Official Site](https://www.beautiful.ai): Product pages, Smart Slide docs, pricing

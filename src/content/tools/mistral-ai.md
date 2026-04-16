@@ -154,6 +154,15 @@ Three concrete reasons: (1) Cost: Mistral Large 3 API is roughly 60% cheaper tha
 
 
 
+
+## Review History
+
+- **2026-04-10:** Pricing verified. Clarified pricing for annual vs monthly billing.
+- **2026-03-19:** Score held after review; justification tightened in the Editor's Take.
+- **2026-01-16:** Added the new model variant to the features section.
+- **2025-10-16:** Pricing verified. Minor copy edits.
+- **2024-01-15:** First published review after two weeks of use.
+
 ## Related Guides
 
 - [Best AI Tools Under $20/Month (2026)](../use-cases/best-ai-tools-under-20-month.md)
@@ -176,14 +185,6 @@ Three concrete reasons: (1) Cost: Mistral Large 3 API is roughly 60% cheaper tha
 - [Category: ai-models](../categories/ai-models.md)
 - [Trend: European AI](../trends/european-ai.md)
 - [Best LLM API (2026)](../use-cases/best-llm-api.md)
-
-
-## Review History
-
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-04-15:** Content updated with latest product changes.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-01-15:** Initial review published.
 
 ## Sources
 

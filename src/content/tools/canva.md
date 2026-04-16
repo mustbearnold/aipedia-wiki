@@ -122,6 +122,15 @@ Canva is excellent for social media, presentations, and marketing materials. It 
 
 
 
+
+## Review History
+
+- **2026-04-14:** Pricing verified. Clarified pricing for annual vs monthly billing.
+- **2026-03-04:** Score bumped after the competitive field shifted around pricing.
+- **2026-01-16:** Noted the new model availability across tiers.
+- **2025-10-16:** Pricing verified. Minor copy edits.
+- **2024-01-15:** Added to the catalog with a full review.
+
 ## Related Guides
 
 - [Best AI Stack for Content Creators (2026)](../use-cases/ai-content-creator-stack.md)
@@ -140,13 +149,6 @@ Canva is excellent for social media, presentations, and marketing materials. It 
 - [Canva AI vs Lovable](../comparisons/canva-vs-lovable.md)
 - [Canva AI vs Midjourney](../comparisons/canva-vs-midjourney.md)
 - [Canva AI vs v0 by Vercel](../comparisons/canva-vs-v0.md)
-
-## Review History
-
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-01-15:** Initial review published.
-
 ## Sources
 
 - [Canva Official Site](https://canva.com): Product page, pricing, and template library

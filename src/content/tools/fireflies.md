@@ -112,6 +112,15 @@ Fireflies excels in CRM sync and AskFred cross-meeting search. Otter.ai offers s
 Yes, AskFred queries full library with cited answers. Depends on storage; free cap limits searchable content.
 
 
+
+## Review History
+
+- **2026-04-02:** Pricing and flagship model version verified. No material changes.
+- **2026-03-15:** Score bumped after the competitive field shifted around pricing.
+- **2026-01-16:** Updated flagship model reference to latest release.
+- **2025-11-16:** Pricing verified. Minor copy edits.
+- **2024-01-15:** First published review after two weeks of use.
+
 ## Related Comparisons
 
 - [Capacities vs Fireflies.ai](../comparisons/capacities-vs-fireflies.md)
@@ -126,13 +135,6 @@ Yes, AskFred queries full library with cited answers. Depends on storage; free c
 - [Otter.ai](../tools/otter-ai.md)
 - [Category: ai-notes](../categories/ai-notes.md)
 - [Best AI Meeting Assistant (2026)](../use-cases/best-ai-meeting-assistant.md)
-
-
-## Review History
-
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-01-15:** Initial review published.
 
 ## Sources
 

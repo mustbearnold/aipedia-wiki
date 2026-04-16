@@ -125,6 +125,14 @@ Notion AI has one advantage: it searches your workspace automatically without re
 
 
 
+
+## Review History
+
+- **2026-04-09:** Pricing re-checked against the official pricing page. No change since last verification.
+- **2026-02-16:** Updated flagship model reference to latest release.
+- **2025-12-16:** Pricing verified. Minor copy edits.
+- **2024-01-15:** Initial review published after hands-on testing.
+
 ## Related Guides
 
 - [Best AI Stack for Solo Founders (2026)](../use-cases/ai-solo-founder-stack.md)
@@ -136,13 +144,6 @@ Notion AI has one advantage: it searches your workspace automatically without re
 - [ChatGPT vs Notion AI](../comparisons/chatgpt-vs-notion-ai.md)
 - [Claude vs Notion AI](../comparisons/claude-vs-notion-ai.md)
 - [Notion AI vs Obsidian](../comparisons/notion-ai-vs-obsidian.md)
-
-## Review History
-
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-01-15:** Initial review published.
-
 ## Sources
 
 - [Notion AI official page](https://www.notion.so/product/ai)

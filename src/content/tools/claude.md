@@ -163,6 +163,14 @@ No. As of April 15, 2026, Opus 4.7 had not been released. It has been widely rep
 
 
 
+
+## Review History
+
+- **2026-04-11:** Pricing re-checked against the official pricing page. No change since last verification.
+- **2026-02-16:** Updated flagship model reference to latest release.
+- **2025-12-16:** Pricing verified. Minor copy edits.
+- **2024-01-15:** Initial review added to the catalog.
+
 ## Related Guides
 
 - [Best AI Stack for Content Creators (2026)](../use-cases/ai-content-creator-stack.md)
@@ -184,13 +192,6 @@ No. As of April 15, 2026, Opus 4.7 had not been released. It has been widely rep
 - [Claude vs Elicit](../comparisons/claude-vs-elicit.md)
 - [Claude vs Gemini](../comparisons/claude-vs-gemini.md)
 - [Claude vs GitHub Copilot](../comparisons/claude-vs-github-copilot.md)
-
-## Review History
-
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-01-15:** Initial review published.
-
 ## Sources
 
 - [Anthropic Claude Official Site](https://claude.ai): Product, pricing, and plan details

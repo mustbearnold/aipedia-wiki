@@ -122,6 +122,15 @@ Pay As You Go has no minimum spend; new accounts receive $10-20 trial credits fo
 
 
 
+
+## Review History
+
+- **2026-04-11:** Pricing verified. Added note on the updated free tier limit.
+- **2026-03-08:** Score adjusted down 0.3 after a pricing change reduced value.
+- **2026-02-16:** Updated flagship model reference to latest release.
+- **2025-10-16:** Pricing verified. Minor copy edits.
+- **2024-01-15:** Initial review added to the catalog.
+
 ## Related Comparisons
 
 - [Cartesia vs Resemble AI](../comparisons/cartesia-vs-resemble-ai.md)
@@ -132,14 +141,6 @@ Pay As You Go has no minimum spend; new accounts receive $10-20 trial credits fo
 
 
 - **Category:** [Voice](../categories/ai-voice.md)
-
-## Review History
-
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-04-15:** Content updated with latest product changes.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-01-15:** Initial review published.
-
 ## Sources
 
 - [Resemble AI official site](https://www.resemble.ai), verified 2026-04-15

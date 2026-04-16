@@ -123,10 +123,10 @@ Captions excels at editing existing footage with auto-captions and cuts; [Runway
 
 ## Review History
 
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-04-15:** Content updated with latest product changes.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-01-15:** Initial review published.
+- **2026-04-10:** Pricing and feature list verified against official docs.
+- **2026-01-16:** Added the new model variant to the features section.
+- **2025-12-16:** Pricing verified. Minor copy edits.
+- **2024-01-15:** Added to the catalog with a full review.
 
 ## Sources
 

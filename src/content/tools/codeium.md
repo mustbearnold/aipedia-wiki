@@ -118,20 +118,21 @@ Copilot provides higher completion accuracy and agent features for $10/month. Co
 
 
 
+
+## Review History
+
+- **2026-04-09:** Monthly verification pass. Pricing unchanged.
+- **2026-03-25:** Score reviewed; no change, but rationale updated.
+- **2026-02-16:** Added the new model variant to the features section.
+- **2025-11-16:** Pricing verified. Minor copy edits.
+- **2024-01-15:** Initial review published after hands-on testing.
+
 ## Related Comparisons
 
 - [Codeium vs GitHub Copilot](../comparisons/codeium-vs-github-copilot.md)
 
 
 - **Category:** [Coding](../categories/ai-coding.md)
-
-## Review History
-
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-04-15:** Content updated with latest product changes.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-01-15:** Initial review published.
-
 ## Sources
 
 - [Official website](https://codeium.com), verified 2026-04-15

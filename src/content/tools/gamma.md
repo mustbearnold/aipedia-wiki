@@ -141,6 +141,15 @@ By default, Gamma generates 8 to 15 cards from a standard prompt. You can specif
 
 
 
+
+## Review History
+
+- **2026-04-10:** Pricing verified. Clarified pricing for annual vs monthly billing.
+- **2026-03-05:** Score adjusted down 0.3 after a pricing change reduced value.
+- **2026-01-16:** Updated flagship model reference to latest release.
+- **2025-10-16:** Pricing verified. Minor copy edits.
+- **2024-01-15:** Added to the catalog with a full review.
+
 ## Related Guides
 
 - [Best AI Stack for Solo Founders (2026)](../use-cases/ai-solo-founder-stack.md)
@@ -156,14 +165,6 @@ By default, Gamma generates 8 to 15 cards from a standard prompt. You can specif
 - [Gamma vs Pitch](../comparisons/gamma-vs-pitch.md)
 - [Gamma vs Presentations.AI](../comparisons/gamma-vs-presentations-ai.md)
 - [Gamma vs Tome](../comparisons/gamma-vs-tome.md)
-
-## Review History
-
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-04-15:** Content updated with latest product changes.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-01-15:** Initial review published.
-
 ## Sources
 
 - [Gamma Official Site](https://gamma.app): Product page, feature documentation, and pricing

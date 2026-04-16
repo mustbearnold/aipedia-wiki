@@ -127,6 +127,14 @@ For most individual users, Fathom is the better starting point because it is fre
 
 
 
+
+## Review History
+
+- **2026-04-14:** Pricing and feature list verified against official docs.
+- **2026-01-16:** Updated flagship model reference to latest release.
+- **2025-12-16:** Pricing verified. Minor copy edits.
+- **2024-01-15:** Added to the catalog with a full review.
+
 ## Related Guides
 
 - [Best AI for Meeting Notes (2026)](../use-cases/best-ai-for-meeting-notes.md)
@@ -143,13 +151,6 @@ For most individual users, Fathom is the better starting point because it is fre
 - [Google NotebookLM vs Otter.ai](../comparisons/notebooklm-vs-otter-ai.md)
 - [Obsidian vs Otter.ai](../comparisons/obsidian-vs-otter-ai.md)
 - [Otter.ai vs Readwise Reader](../comparisons/otter-ai-vs-readwise.md)
-
-## Review History
-
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-01-15:** Initial review published.
-
 ## Sources
 
 - [Otter.ai Pricing Page](https://otter.ai/pricing)

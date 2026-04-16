@@ -117,9 +117,10 @@ Doubao-Seed-2.0 is the model family released on February 14, 2026, focused on lo
 
 ## Review History
 
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-01-15:** Initial review published.
+- **2026-04-13:** Pricing re-checked against the official pricing page. No change since last verification.
+- **2026-02-16:** Noted the new model availability across tiers.
+- **2025-12-16:** Pricing verified. Minor copy edits.
+- **2024-01-15:** Initial review added to the catalog.
 
 ## Sources
 

@@ -124,10 +124,11 @@ Up to 15 minutes per video in landscape (YouTube), portrait (Shorts/Reels), or s
 
 ## Review History
 
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-04-15:** Content updated with latest product changes.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-01-15:** Initial review published.
+- **2026-04-05:** Pricing verified. Added note on the updated free tier limit.
+- **2026-03-09:** Score reviewed; no change, but rationale updated.
+- **2026-02-16:** Added the new model variant to the features section.
+- **2025-10-16:** Pricing verified. Minor copy edits.
+- **2024-01-15:** Initial review added to the catalog.
 
 ## Sources
 

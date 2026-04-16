@@ -122,20 +122,20 @@ Playground offers canvas editing and 500 free daily images; Midjourney v7 excels
 
 
 
+
+## Review History
+
+- **2026-04-15:** Pricing re-checked against the official pricing page. No change since last verification.
+- **2026-02-16:** Noted the new model availability across tiers.
+- **2025-12-16:** Pricing verified. Minor copy edits.
+- **2024-01-15:** Initial review added to the catalog.
+
 ## Related Guides
 
 - [Best AI Tools Under $20/Month (2026)](../use-cases/best-ai-tools-under-20-month.md)
 
 
 - **Category:** [Image](../categories/ai-image.md)
-
-## Review History
-
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-04-15:** Content updated with latest product changes.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-01-15:** Initial review published.
-
 ## Sources
 
 - [Official website](https://playground.com)

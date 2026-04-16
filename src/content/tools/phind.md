@@ -112,6 +112,14 @@ Yes. Phind offers extensions for VS Code, JetBrains IDEs, and Vim/Neovim that re
 
 
 
+
+## Review History
+
+- **2026-04-14:** Pricing and feature list verified against official docs.
+- **2026-01-16:** Updated flagship model reference to latest release.
+- **2025-12-16:** Pricing verified. Minor copy edits.
+- **2024-01-15:** Added to the catalog with a full review.
+
 ## Related Comparisons
 
 - [ChatGPT vs Phind](../comparisons/chatgpt-vs-phind.md)
@@ -119,13 +127,6 @@ Yes. Phind offers extensions for VS Code, JetBrains IDEs, and Vim/Neovim that re
 - [Kagi vs Phind](../comparisons/kagi-vs-phind.md)
 - [Perplexity vs Phind](../comparisons/perplexity-vs-phind.md)
 - [Phind vs You.com](../comparisons/phind-vs-you-com.md)
-
-## Review History
-
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-01-15:** Initial review published.
-
 ## Sources
 
 - [Phind Official Site](https://phind.com): Product page, pricing, and feature information

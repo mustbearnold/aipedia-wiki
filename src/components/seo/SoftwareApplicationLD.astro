@@ -1,4 +1,9 @@
 ---
+// SoftwareApplication schema with editorial Review by Eli Marsh.
+// Google's rich results for software apps prefer a named Person reviewer
+// over an Organization, and flag fake aggregateRating counts. We emit one
+// honest editorial review (reviewCount: 1) plus the aggregateRating
+// reflecting that single editorial rating, not a user-review aggregate.
 interface Props {
   name: string;
   url: string;
@@ -9,6 +14,8 @@ interface Props {
   publisher?: string;
   reviewBody?: string;
   pageUrl?: string;
+  datePublished?: string;
+  dateModified?: string;
 }
 
 const {
@@ -21,6 +28,8 @@ const {
   publisher,
   reviewBody,
   pageUrl,
+  datePublished,
+  dateModified,
 } = Astro.props;
 
 function parsePriceRange(raw: string): { low: number; high: number } | null {
@@ -50,6 +59,38 @@ const offers: Record<string, unknown> = parsed
       availability: 'https://schema.org/InStock',
     };
 
+const reviewer = {
+  '@type': 'Person',
+  name: 'Eli Marsh',
+  url: 'https://aipedia.wiki/about/editor/',
+  jobTitle: 'Editor-in-Chief',
+  worksFor: {
+    '@type': 'Organization',
+    name: 'aipedia.wiki',
+    url: 'https://aipedia.wiki',
+  },
+};
+
+const review: Record<string, unknown> = {
+  '@type': 'Review',
+  author: reviewer,
+  reviewRating: {
+    '@type': 'Rating',
+    ratingValue: score,
+    bestRating: 10,
+    worstRating: 1,
+  },
+  ...(reviewBody ? { reviewBody } : {}),
+  ...(pageUrl ? { url: pageUrl } : {}),
+  ...(datePublished ? { datePublished } : {}),
+  ...(dateModified ? { dateModified } : {}),
+  publisher: {
+    '@type': 'Organization',
+    name: 'aipedia.wiki',
+    url: 'https://aipedia.wiki',
+  },
+};
+
 const jsonLd: Record<string, unknown> = {
   '@context': 'https://schema.org',
   '@type': 'SoftwareApplication',
@@ -63,9 +104,10 @@ const jsonLd: Record<string, unknown> = {
     ratingValue: score,
     bestRating: 10,
     worstRating: 1,
-    ratingCount: 4,
+    ratingCount: 1,
     reviewCount: 1,
   },
+  review,
 };
 
 if (description) jsonLd.description = description;
@@ -74,25 +116,6 @@ if (publisher) {
   jsonLd.publisher = {
     '@type': 'Organization',
     name: publisher,
-  };
-}
-
-if (reviewBody) {
-  jsonLd.review = {
-    '@type': 'Review',
-    author: {
-      '@type': 'Organization',
-      name: 'aipedia.wiki',
-      url: 'https://aipedia.wiki',
-    },
-    reviewRating: {
-      '@type': 'Rating',
-      ratingValue: score,
-      bestRating: 10,
-      worstRating: 1,
-    },
-    reviewBody,
-    ...(pageUrl ? { url: pageUrl } : {}),
   };
 }
 ---

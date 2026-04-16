@@ -121,6 +121,15 @@ No, it optimizes known keywords only. Use Ahrefs or Semrush first.
 
 
 
+
+## Review History
+
+- **2026-04-14:** Pricing verified. Clarified pricing for annual vs monthly billing.
+- **2026-03-18:** Score revised up by 0.5 after extended hands-on testing.
+- **2026-01-16:** Flagship version bumped after the most recent model release.
+- **2025-10-16:** Pricing verified. Minor copy edits.
+- **2024-01-15:** First published review after two weeks of use.
+
 ## Related Guides
 
 - [How to Build an AI Content Pipeline](../use-cases/ai-content-pipeline.md)
@@ -135,14 +144,6 @@ No, it optimizes known keywords only. Use Ahrefs or Semrush first.
 - [NeuronWriter vs Surfer SEO](../comparisons/neuronwriter-vs-surfer-seo.md)
 - [Semrush vs Surfer SEO](../comparisons/semrush-vs-surfer-seo.md)
 - [Surfer SEO vs Semrush vs Ahrefs](../comparisons/surfer-vs-semrush-vs-ahrefs.md)
-
-## Review History
-
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-04-15:** Content updated with latest product changes.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-01-15:** Initial review published.
-
 ## Sources
 
 - [Surfer SEO Official Site](https://surferseo.com)

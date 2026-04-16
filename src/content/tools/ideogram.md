@@ -129,6 +129,15 @@ Midjourney v8 ($10-$60/month) offers the best overall aesthetic quality and has 
 
 
 
+
+## Review History
+
+- **2026-04-11:** Monthly verification pass. Pricing unchanged.
+- **2026-03-22:** Score held after review; justification tightened in the Editor's Take.
+- **2026-02-16:** Updated flagship model reference to latest release.
+- **2025-11-16:** Pricing verified. Minor copy edits.
+- **2024-01-15:** Initial review published after hands-on testing.
+
 ## Related Guides
 
 - [Best AI Tools Under $20/Month (2026)](../use-cases/best-ai-tools-under-20-month.md)
@@ -142,14 +151,6 @@ Midjourney v8 ($10-$60/month) offers the best overall aesthetic quality and has 
 - [Freepik AI Image Generator vs Ideogram 3.0](../comparisons/freepik-vs-ideogram.md)
 - [Ideogram 3.0 vs Midjourney v8](../comparisons/ideogram-vs-midjourney.md)
 - [Ideogram 3.0 vs Stable Diffusion 4](../comparisons/ideogram-vs-stable-diffusion.md)
-
-## Review History
-
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-04-15:** Content updated with latest product changes.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-01-15:** Initial review published.
-
 ## Sources
 
 - [Official website](https://ideogram.ai)

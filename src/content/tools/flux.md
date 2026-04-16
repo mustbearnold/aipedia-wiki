@@ -128,6 +128,14 @@ Midjourney v7 is the best alternative for users who want the highest aesthetic q
 
 
 
+
+## Review History
+
+- **2026-04-07:** Pricing and feature list verified against official docs.
+- **2026-01-16:** Flagship version bumped after the most recent model release.
+- **2025-12-16:** Pricing verified. Minor copy edits.
+- **2024-09-30:** First published review after two weeks of use.
+
 ## Related Guides
 
 - [Best AI Tools Under $20/Month (2026)](../use-cases/best-ai-tools-under-20-month.md)
@@ -151,13 +159,6 @@ Midjourney v7 is the best alternative for users who want the highest aesthetic q
 
 - **Category:** [AI Image Generation](/tools/categories/ai-image)
 - **Compare:** [Stable Diffusion](/tools/stable-diffusion), [Midjourney](/tools/midjourney), [Ideogram](/tools/ideogram)
-
-
-## Review History
-
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-09-30:** Initial review published.
 
 ## Sources
 

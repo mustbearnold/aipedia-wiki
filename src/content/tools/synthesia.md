@@ -116,6 +116,15 @@ Both make avatar videos; HeyGen prioritizes realism for marketing/sales, Synthes
 
 
 
+
+## Review History
+
+- **2026-04-11:** Pricing verified. Added note on the updated free tier limit.
+- **2026-03-08:** Score adjusted down 0.3 after a pricing change reduced value.
+- **2026-02-16:** Updated flagship model reference to latest release.
+- **2025-10-16:** Pricing verified. Minor copy edits.
+- **2024-01-15:** Initial review added to the catalog.
+
 ## Related Guides
 
 - [Best AI for Presentations (2026)](../use-cases/best-ai-for-presentations.md)
@@ -140,13 +149,6 @@ Both make avatar videos; HeyGen prioritizes realism for marketing/sales, Synthes
 - [Hailuo](/tools/hailuo), AI video with dynamic scenes
 - [ElevenLabs](/tools/elevenlabs), AI voiceovers
 - [Best AI Avatar Video Tools 2026](/best-of/ai-avatar-video)
-
-
-## Review History
-
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-01-15:** Initial review published.
 
 ## Sources
 

@@ -128,10 +128,10 @@ JetBrains includes a limited AI free tier in its IDEs. It provides a reduced num
 
 ## Review History
 
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-04-15:** Content updated with latest product changes.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-02-01:** Initial review published.
+- **2026-04-02:** Pricing and feature list verified against official docs.
+- **2026-01-16:** Noted the new model availability across tiers.
+- **2025-12-16:** Pricing verified. Minor copy edits.
+- **2024-02-01:** Added to the catalog with a full review.
 
 ## Sources
 

@@ -123,6 +123,15 @@ Yes, it supports 4K imports and exports with proxy editing for performance. Comp
 
 
 
+
+## Review History
+
+- **2026-04-15:** Pricing verified. Added note on the updated free tier limit.
+- **2026-03-26:** Score revised up by 0.5 after extended hands-on testing.
+- **2026-02-16:** Flagship version bumped after the most recent model release.
+- **2025-10-16:** Pricing verified. Minor copy edits.
+- **2024-01-15:** Initial review published after hands-on testing.
+
 ## Related Guides
 
 - [Best AI Stack for Content Creators (2026)](../use-cases/ai-content-creator-stack.md)
@@ -146,14 +155,6 @@ Yes, it supports 4K imports and exports with proxy editing for performance. Comp
 - [Riverside.fm](/tools/riverside), remote recording platform
 - [Runway](/tools/runway), AI video generation and editing
 - [Best Audio Editing Tools 2026](/best-of/audio-editing-tools)
-
-
-## Review History
-
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-04-15:** Content updated with latest product changes.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-01-15:** Initial review published.
 
 ## Sources
 

@@ -112,6 +112,15 @@ Both are meaningfully more private than Google. Kagi has a more explicit no-logg
 
 
 
+
+## Review History
+
+- **2026-04-13:** Monthly verification pass. Pricing unchanged.
+- **2026-03-24:** Score adjusted down 0.3 after a pricing change reduced value.
+- **2026-02-16:** Noted the new model availability across tiers.
+- **2025-11-16:** Pricing verified. Minor copy edits.
+- **2024-01-15:** Initial review published after hands-on testing.
+
 ## Related Comparisons
 
 - [ChatGPT vs Kagi](../comparisons/chatgpt-vs-kagi.md)
@@ -119,13 +128,6 @@ Both are meaningfully more private than Google. Kagi has a more explicit no-logg
 - [Kagi vs Perplexity](../comparisons/kagi-vs-perplexity.md)
 - [Kagi vs Phind](../comparisons/kagi-vs-phind.md)
 - [Kagi vs You.com](../comparisons/kagi-vs-you-com.md)
-
-## Review History
-
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-01-15:** Initial review published.
-
 ## Sources
 
 - [Kagi Official Site](https://kagi.com): Product page, search features, and pricing

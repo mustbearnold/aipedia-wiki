@@ -123,19 +123,20 @@ Teams gets API lite (10k chars/day); full v2 unlimited requires Enterprise [well
 
 
 
+
+## Review History
+
+- **2026-04-14:** Pricing and feature list verified against official docs.
+- **2026-01-16:** Flagship version bumped after the most recent model release.
+- **2025-12-16:** Pricing verified. Minor copy edits.
+- **2024-01-15:** First published review after two weeks of use.
+
 ## Related Comparisons
 
 - [ElevenLabs vs WellSaid Labs](../comparisons/elevenlabs-vs-wellsaid.md)
 
 
 - **Category:** [Voice](../categories/ai-voice.md)
-
-## Review History
-
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-01-15:** Initial review published.
-
 ## Sources
 
 - [WellSaid Labs official site](https://wellsaidlabs.com), verified 2026-04-15

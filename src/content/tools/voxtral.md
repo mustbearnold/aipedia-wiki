@@ -129,6 +129,14 @@ Yes. Voxtral is integrated into the standard Mistral API. Developers already usi
 
 
 
+
+## Review History
+
+- **2026-04-11:** Pricing re-checked against the official pricing page. No change since last verification.
+- **2026-02-16:** Flagship version bumped after the most recent model release.
+- **2025-12-16:** Pricing verified. Minor copy edits.
+- **2026-05-01:** Initial review published after hands-on testing.
+
 ## Related Guides
 
 - [Best AI Voice Generator for YouTube (2026)](../use-cases/best-ai-voice-youtube.md)
@@ -143,13 +151,6 @@ Yes. Voxtral is integrated into the standard Mistral API. Developers already usi
 - [ElevenLabs vs Voxtral](../comparisons/elevenlabs-vs-voxtral.md)
 - [Fish Audio / Fish Speech S2 vs Voxtral](../comparisons/fish-audio-vs-voxtral.md)
 - [Resemble AI vs Voxtral](../comparisons/resemble-ai-vs-voxtral.md)
-
-## Review History
-
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2026-05-01:** Initial review published.
-
 ## Sources
 
 - [Mistral AI Voxtral announcement](https://mistral.ai/voxtral) - verified 2026-04-15

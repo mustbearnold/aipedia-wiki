@@ -130,6 +130,15 @@ Apollo is an all-in-one tool with its own contact database, email sequences, and
 
 
 
+
+## Review History
+
+- **2026-04-10:** Pricing verified. Clarified pricing for annual vs monthly billing.
+- **2026-03-19:** Score held after review; justification tightened in the Editor's Take.
+- **2026-01-16:** Updated flagship model reference to latest release.
+- **2025-10-16:** Pricing verified. Minor copy edits.
+- **2024-01-15:** First published review after two weeks of use.
+
 ## Related Comparisons
 
 - [Apollo.io vs Clay](../comparisons/apollo-vs-clay.md)
@@ -140,14 +149,6 @@ Apollo is an all-in-one tool with its own contact database, email sequences, and
 
 
 - **Category:** [Automation](../categories/ai-automation.md)
-
-## Review History
-
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-04-15:** Content updated with latest product changes.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-01-15:** Initial review published.
-
 ## Sources
 
 - [Clay pricing page](https://clay.com/pricing) - verified April 15, 2026

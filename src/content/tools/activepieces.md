@@ -125,10 +125,11 @@ Activepieces covers 250 apps at lower cost/self-host; Zapier has 7,000+ connecto
 
 ## Review History
 
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-04-15:** Content updated with latest product changes.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-01-15:** Initial review published.
+- **2026-04-14:** Pricing and flagship model version verified. No material changes.
+- **2026-03-18:** Score revised up by 0.5 after extended hands-on testing.
+- **2026-01-16:** Added the new model variant to the features section.
+- **2025-11-16:** Pricing verified. Minor copy edits.
+- **2024-01-15:** First published review after two weeks of use.
 
 ## Sources
 - [Activepieces official site](https://www.activepieces.com), verified 2026-04-15

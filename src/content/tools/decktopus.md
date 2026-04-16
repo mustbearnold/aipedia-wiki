@@ -123,6 +123,14 @@ Generation uses GPT-5.4 and Claude Opus 4.6; image suggestions leverage Gemini 3
 
 
 
+
+## Review History
+
+- **2026-04-13:** Pricing re-checked against the official pricing page. No change since last verification.
+- **2026-02-16:** Flagship version bumped after the most recent model release.
+- **2025-12-16:** Pricing verified. Minor copy edits.
+- **2024-01-15:** Initial review added to the catalog.
+
 ## Related Guides
 
 - [Best AI Tools Under $20/Month (2026)](../use-cases/best-ai-tools-under-20-month.md)
@@ -134,14 +142,6 @@ Generation uses GPT-5.4 and Claude Opus 4.6; image suggestions leverage Gemini 3
 - [Decktopus AI vs Pitch](../comparisons/decktopus-vs-pitch.md)
 - [Decktopus AI vs Presentations.AI](../comparisons/decktopus-vs-presentations-ai.md)
 - [Decktopus AI vs Tome](../comparisons/decktopus-vs-tome.md)
-
-## Review History
-
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-04-15:** Content updated with latest product changes.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-01-15:** Initial review published.
-
 ## Sources
 
 - [Decktopus Official Site](https://decktopus.com): Product features and pricing

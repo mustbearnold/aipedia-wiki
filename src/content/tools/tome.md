@@ -129,6 +129,15 @@ Tome is best for early-stage founders, product strategists, and communicators wh
 
 
 
+
+## Review History
+
+- **2026-04-07:** Pricing verified. Clarified pricing for annual vs monthly billing.
+- **2026-03-03:** Score held after review; justification tightened in the Editor's Take.
+- **2026-01-16:** Added the new model variant to the features section.
+- **2025-10-16:** Pricing verified. Minor copy edits.
+- **2024-01-15:** Added to the catalog with a full review.
+
 ## Related Comparisons
 
 - [Beautiful.ai vs Tome](../comparisons/beautiful-ai-vs-tome.md)
@@ -136,13 +145,6 @@ Tome is best for early-stage founders, product strategists, and communicators wh
 - [Gamma vs Tome](../comparisons/gamma-vs-tome.md)
 - [Pitch vs Tome](../comparisons/pitch-vs-tome.md)
 - [Presentations.AI vs Tome](../comparisons/presentations-ai-vs-tome.md)
-
-## Review History
-
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-01-15:** Initial review published.
-
 ## Sources
 
 - [Tome Official Site](https://tome.app): Product page, feature documentation, and pricing

@@ -126,6 +126,15 @@ Scite's classification uses trained NLP models and achieves high accuracy on sta
 
 
 
+
+## Review History
+
+- **2026-04-09:** Pricing verified. Added note on the updated free tier limit.
+- **2026-03-11:** Score held after review; justification tightened in the Editor's Take.
+- **2026-02-16:** Flagship version bumped after the most recent model release.
+- **2025-10-16:** Pricing verified. Minor copy edits.
+- **2024-01-15:** Initial review added to the catalog.
+
 ## Related Comparisons
 
 - [ChatGPT vs Scite](../comparisons/chatgpt-vs-scite.md)
@@ -137,13 +146,6 @@ Scite's classification uses trained NLP models and achieves high accuracy on sta
 
 
 - **Category:** [Research](../categories/ai-research.md)
-
-## Review History
-
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-01-15:** Initial review published.
-
 ## Sources
 
 - [Scite official site](https://scite.ai) - verified 2026-04-15

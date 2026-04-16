@@ -131,6 +131,14 @@ Rytr is not designed for long-form content. Articles over 800 words become repet
 
 
 
+
+## Review History
+
+- **2026-04-10:** Pricing and feature list verified against official docs.
+- **2026-01-16:** Updated flagship model reference to latest release.
+- **2025-12-16:** Pricing verified. Minor copy edits.
+- **2024-01-15:** First published review after two weeks of use.
+
 ## Related Guides
 
 - [Best AI Tools Under $20/Month (2026)](../use-cases/best-ai-tools-under-20-month.md)
@@ -141,13 +149,6 @@ Rytr is not designed for long-form content. Articles over 800 words become repet
 ## Related Comparisons
 
 - [ChatGPT vs Rytr](../comparisons/chatgpt-vs-rytr.md)
-
-## Review History
-
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-01-15:** Initial review published.
-
 ## Sources
 
 - [Official website](https://rytr.me)

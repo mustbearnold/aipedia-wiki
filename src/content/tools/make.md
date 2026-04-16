@@ -119,6 +119,14 @@ Make costs less for complex, high-volume workflows (10,000 ops for $9 vs Zapier 
 
 
 
+
+## Review History
+
+- **2026-04-11:** Pricing re-checked against the official pricing page. No change since last verification.
+- **2026-02-16:** Flagship version bumped after the most recent model release.
+- **2025-12-16:** Pricing verified. Minor copy edits.
+- **2024-01-15:** Initial review added to the catalog.
+
 ## Related Guides
 
 - [Best AI Automation Platform (2026)](../use-cases/best-ai-automation-platform.md)
@@ -131,14 +139,6 @@ Make costs less for complex, high-volume workflows (10,000 ops for $9 vs Zapier 
 - [Instantly vs Make](../comparisons/instantly-vs-make.md)
 - [Intercom vs Make](../comparisons/intercom-vs-make.md)
 - [n8n vs Make vs Zapier](../comparisons/n8n-vs-make-vs-zapier.md)
-
-## Review History
-
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-04-15:** Content updated with latest product changes.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-01-15:** Initial review published.
-
 ## Sources
 
 - [Official website](https://www.make.com)

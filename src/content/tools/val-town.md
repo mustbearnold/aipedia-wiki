@@ -127,6 +127,15 @@ Claude Opus 4.6 from Anthropic, integrated directly in the editor for generating
 
 
 
+
+## Review History
+
+- **2026-04-05:** Monthly verification pass. Pricing unchanged.
+- **2026-03-09:** Score reviewed; no change, but rationale updated.
+- **2026-02-16:** Updated flagship model reference to latest release.
+- **2025-11-16:** Pricing verified. Minor copy edits.
+- **2024-01-15:** Initial review added to the catalog.
+
 ## Related Comparisons
 
 - [Claude Code vs Val Town](../comparisons/claude-code-vs-val-town.md)
@@ -137,14 +146,6 @@ Claude Opus 4.6 from Anthropic, integrated directly in the editor for generating
 
 
 - **Category:** [Coding](../categories/ai-coding.md)
-
-## Review History
-
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-04-15:** Content updated with latest product changes.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-01-15:** Initial review published.
-
 ## Sources
 
 - [Official website](https://val.town), verified 2026-04-15

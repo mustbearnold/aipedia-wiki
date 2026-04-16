@@ -120,9 +120,11 @@ RAG retrieves documents at query time and discards them after the response. Lett
 
 ## Review History
 
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-01-15:** Initial review published.
+- **2026-04-05:** Monthly verification pass. Pricing unchanged.
+- **2026-03-23:** Score bumped after the competitive field shifted around pricing.
+- **2026-02-16:** Flagship version bumped after the most recent model release.
+- **2025-11-16:** Pricing verified. Minor copy edits.
+- **2024-01-15:** Initial review published after hands-on testing.
 
 ## Sources
 

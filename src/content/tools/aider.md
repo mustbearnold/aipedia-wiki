@@ -132,6 +132,15 @@ Aider supports any LLM accessible via an OpenAI-compatible API, which covers Cla
 
 
 
+
+## Review History
+
+- **2026-04-07:** Pricing and flagship model version verified. No material changes.
+- **2026-03-17:** Score reviewed; no change, but rationale updated.
+- **2026-01-16:** Flagship version bumped after the most recent model release.
+- **2025-11-16:** Pricing verified. Minor copy edits.
+- **2024-01-15:** First published review after two weeks of use.
+
 ## Related Guides
 
 - [Best Cursor Alternatives (2026)](../use-cases/cursor-alternatives.md)
@@ -147,13 +156,6 @@ Aider supports any LLM accessible via an OpenAI-compatible API, which covers Cla
 - [Cursor](../tools/cursor.md) - leading GUI AI IDE; the most common alternative
 - [Category: ai-coding](../categories/ai-coding.md)
 - [Best AI Coding Assistant (2026)](../use-cases/best-ai-coding-assistant.md)
-
-
-## Review History
-
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-01-15:** Initial review published.
 
 ## Sources
 

@@ -134,6 +134,15 @@ The Sonar API is Perplexity's programmatic search-augmented AI offering for deve
 
 
 
+
+## Review History
+
+- **2026-04-05:** Monthly verification pass. Pricing unchanged.
+- **2026-03-09:** Score reviewed; no change, but rationale updated.
+- **2026-02-16:** Noted the new model availability across tiers.
+- **2025-11-16:** Pricing verified. Minor copy edits.
+- **2024-01-15:** Initial review added to the catalog.
+
 ## Related Guides
 
 - [Best AI Stack for Solo Founders (2026)](../use-cases/ai-solo-founder-stack.md)
@@ -152,14 +161,6 @@ The Sonar API is Perplexity's programmatic search-augmented AI offering for deve
 - [Perplexity vs ChatGPT](../comparisons/perplexity-vs-chatgpt.md)
 - [Perplexity vs Phind](../comparisons/perplexity-vs-phind.md)
 - [Perplexity vs You.com](../comparisons/perplexity-vs-you-com.md)
-
-## Review History
-
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-04-15:** Content updated with latest product changes.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-01-15:** Initial review published.
-
 ## Sources
 
 - [Perplexity AI Official Site](https://perplexity.ai): Product, pricing, and feature information

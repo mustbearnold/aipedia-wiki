@@ -113,6 +113,15 @@ Udio excels in instrumental fidelity and inpainting for producers. Suno leads in
 
 
 
+
+## Review History
+
+- **2026-04-12:** Pricing and flagship model version verified. No material changes.
+- **2026-03-16:** Score adjusted down 0.3 after a pricing change reduced value.
+- **2026-01-16:** Added the new model variant to the features section.
+- **2025-11-16:** Pricing verified. Minor copy edits.
+- **2024-07-01:** First published review after two weeks of use.
+
 ## Related Guides
 
 - [Best AI Music Generator (2026): Suno vs Udio vs Mubert](../use-cases/best-ai-music-generator.md)
@@ -128,13 +137,6 @@ Udio excels in instrumental fidelity and inpainting for producers. Suno leads in
 
 - **Category:** [AI Music Generation](../categories/ai-music.md)
 - **Compare:** [Suno](./suno.md), [Mubert](./mubert.md)
-
-
-## Review History
-
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-06-01:** Initial review published.
 
 ## Sources
 

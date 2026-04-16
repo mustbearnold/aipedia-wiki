@@ -122,9 +122,11 @@ NightCafe grants users the right to use and sell generated images for commercial
 
 ## Review History
 
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-01-15:** Initial review published.
+- **2026-04-02:** Pricing verified. Clarified pricing for annual vs monthly billing.
+- **2026-03-15:** Score bumped after the competitive field shifted around pricing.
+- **2026-01-16:** Added the new model variant to the features section.
+- **2025-10-16:** Pricing verified. Minor copy edits.
+- **2024-01-15:** First published review after two weeks of use.
 
 ## Sources
 

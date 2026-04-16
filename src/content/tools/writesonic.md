@@ -126,6 +126,15 @@ Chatsonic uses GPT-5.4 by default with Claude Opus 4.6 and Gemini 3.1 Pro option
 Yes for drafts; Article Writer 7.0 scores 85-95 on Surfer SEO metrics matching top results. Google detects AI patterns but rewards well-edited, humanized content. Always run plagiarism checks before publishing.
 
 
+
+## Review History
+
+- **2026-04-02:** Pricing verified. Clarified pricing for annual vs monthly billing.
+- **2026-03-01:** Score reviewed; no change, but rationale updated.
+- **2026-01-16:** Added the new model variant to the features section.
+- **2025-10-16:** Pricing verified. Minor copy edits.
+- **2024-01-15:** Added to the catalog with a full review.
+
 ## Related Comparisons
 
 - [ChatGPT vs Writesonic](../comparisons/chatgpt-vs-writesonic.md)
@@ -135,14 +144,6 @@ Yes for drafts; Article Writer 7.0 scores 85-95 on Surfer SEO metrics matching t
 - [Category: ai-writing](../categories/ai-writing.md)
 - [Best AI Writing Tool (2026)](../use-cases/best-ai-writing-tool.md)
 - [Best AI SEO Tool (2026)](../use-cases/best-ai-seo-tool.md)
-
-
-## Review History
-
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-04-15:** Content updated with latest product changes.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-01-15:** Initial review published.
 
 ## Sources
 

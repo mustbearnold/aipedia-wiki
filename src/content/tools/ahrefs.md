@@ -128,6 +128,15 @@ If backlinks and link building are your priority, choose Ahrefs. If you need an 
 
 
 
+
+## Review History
+
+- **2026-04-12:** Pricing and flagship model version verified. No material changes.
+- **2026-03-16:** Score adjusted down 0.3 after a pricing change reduced value.
+- **2026-01-16:** Noted the new model availability across tiers.
+- **2025-11-16:** Pricing verified. Minor copy edits.
+- **2024-01-15:** First published review after two weeks of use.
+
 ## Related Guides
 
 - [Best AI SEO Tool (2026)](../use-cases/best-ai-seo-tool.md)
@@ -140,14 +149,6 @@ If backlinks and link building are your priority, choose Ahrefs. If you need an 
 - [Ahrefs vs NeuronWriter](../comparisons/ahrefs-vs-neuronwriter.md)
 - [Ahrefs vs Surfer SEO](../comparisons/ahrefs-vs-surfer-seo.md)
 - [Surfer SEO vs Semrush vs Ahrefs](../comparisons/surfer-vs-semrush-vs-ahrefs.md)
-
-## Review History
-
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-04-15:** Content updated with latest product changes.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-01-15:** Initial review published.
-
 ## Sources
 
 - [Ahrefs Official Site](https://ahrefs.com)

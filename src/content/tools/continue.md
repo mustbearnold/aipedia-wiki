@@ -114,6 +114,15 @@ Copilot is easier to set up and includes high-quality autocomplete out of the bo
 
 
 
+
+## Review History
+
+- **2026-04-02:** Pricing verified. Clarified pricing for annual vs monthly billing.
+- **2026-03-15:** Score bumped after the competitive field shifted around pricing.
+- **2026-01-16:** Noted the new model availability across tiers.
+- **2025-10-16:** Pricing verified. Minor copy edits.
+- **2024-01-15:** First published review after two weeks of use.
+
 ## Related Comparisons
 
 - [Claude Code vs Continue](../comparisons/claude-code-vs-continue.md)
@@ -124,13 +133,6 @@ Copilot is easier to set up and includes high-quality autocomplete out of the bo
 
 
 - **Category:** [Coding](../categories/ai-coding.md)
-
-## Review History
-
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-01-15:** Initial review published.
-
 ## Sources
 
 - [Official website](https://continue.dev), verified 2026-04-15

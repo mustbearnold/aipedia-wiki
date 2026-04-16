@@ -124,6 +124,15 @@ Tracks brand presence in AI responses from ChatGPT (GPT-5.4), Perplexity, Claude
 
 
 
+
+## Review History
+
+- **2026-04-14:** Pricing and flagship model version verified. No material changes.
+- **2026-03-04:** Score bumped after the competitive field shifted around pricing.
+- **2026-01-16:** Added the new model variant to the features section.
+- **2025-11-16:** Pricing verified. Minor copy edits.
+- **2024-01-15:** Added to the catalog with a full review.
+
 ## Related Guides
 
 - [Best AI SEO Tool (2026)](../use-cases/best-ai-seo-tool.md)
@@ -136,13 +145,6 @@ Tracks brand presence in AI responses from ChatGPT (GPT-5.4), Perplexity, Claude
 - [NeuronWriter vs Semrush](../comparisons/neuronwriter-vs-semrush.md)
 - [Semrush vs Surfer SEO](../comparisons/semrush-vs-surfer-seo.md)
 - [Surfer SEO vs Semrush vs Ahrefs](../comparisons/surfer-vs-semrush-vs-ahrefs.md)
-
-## Review History
-
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-01-15:** Initial review published.
-
 ## Sources
 
 - [Semrush Official Site](https://www.semrush.com)

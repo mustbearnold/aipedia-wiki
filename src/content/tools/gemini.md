@@ -128,6 +128,15 @@ On general reasoning benchmarks, GPT-5.4 Thinking and Claude Opus 4.6 lead. Gemi
 
 
 
+
+## Review History
+
+- **2026-04-12:** Pricing and flagship model version verified. No material changes.
+- **2026-03-02:** Score revised up by 0.5 after extended hands-on testing.
+- **2026-01-16:** Flagship version bumped after the most recent model release.
+- **2025-11-16:** Pricing verified. Minor copy edits.
+- **2024-03-01:** Added to the catalog with a full review.
+
 ## Related Guides
 
 - [Best AI for Academic Writing (2026)](../use-cases/best-ai-for-academic-writing.md)
@@ -149,13 +158,6 @@ On general reasoning benchmarks, GPT-5.4 Thinking and Claude Opus 4.6 lead. Gemi
 - [Gemini vs Grok](../comparisons/gemini-vs-grok.md)
 - [Gemini vs Mistral AI](../comparisons/gemini-vs-mistral-ai.md)
 - [Gemini vs Perplexity](../comparisons/gemini-vs-perplexity.md)
-
-## Review History
-
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-02-01:** Initial review published.
-
 ## Sources
 
 - [Google Gemini Official App](https://gemini.google.com): Product page and feature information

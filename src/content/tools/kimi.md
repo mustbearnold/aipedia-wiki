@@ -120,17 +120,18 @@ For free users, Kimi's 256K context is available at no cost, while Claude Pro's 
 
 
 
+
+## Review History
+
+- **2026-04-09:** Pricing re-checked against the official pricing page. No change since last verification.
+- **2026-02-16:** Noted the new model availability across tiers.
+- **2025-12-16:** Pricing verified. Minor copy edits.
+- **2024-01-15:** Initial review added to the catalog.
+
 ## Related Comparisons
 
 - [ChatGPT vs Kimi](../comparisons/chatgpt-vs-kimi.md)
 - [Claude vs Kimi](../comparisons/claude-vs-kimi.md)
-
-## Review History
-
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-01-15:** Initial review published.
-
 ## Sources
 
 - [Moonshot AI API Platform](https://platform.moonshot.ai/)

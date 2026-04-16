@@ -121,6 +121,15 @@ Make offers more complex workflow capabilities at lower cost per operation. n8n 
 
 
 
+
+## Review History
+
+- **2026-04-10:** Pricing and flagship model version verified. No material changes.
+- **2026-03-05:** Score adjusted down 0.3 after a pricing change reduced value.
+- **2026-01-16:** Added the new model variant to the features section.
+- **2025-11-16:** Pricing verified. Minor copy edits.
+- **2024-01-15:** Added to the catalog with a full review.
+
 ## Related Guides
 
 - [Best AI Automation Platform (2026)](../use-cases/best-ai-automation-platform.md)
@@ -133,14 +142,6 @@ Make offers more complex workflow capabilities at lower cost per operation. n8n 
 - [Instantly vs Zapier](../comparisons/instantly-vs-zapier.md)
 - [Intercom vs Zapier](../comparisons/intercom-vs-zapier.md)
 - [n8n vs Make vs Zapier](../comparisons/n8n-vs-make-vs-zapier.md)
-
-## Review History
-
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-04-15:** Content updated with latest product changes.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-01-15:** Initial review published.
-
 ## Sources
 
 - [Official website](https://zapier.com)

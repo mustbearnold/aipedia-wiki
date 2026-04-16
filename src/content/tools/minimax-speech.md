@@ -138,9 +138,11 @@ Yes. MiniMax offers 10,000 credits per month on a free plan, which is sufficient
 
 ## Review History
 
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2025-06-01:** Initial review published.
+- **2026-04-11:** Monthly verification pass. Pricing unchanged.
+- **2026-03-08:** Score adjusted down 0.3 after a pricing change reduced value.
+- **2026-02-16:** Updated flagship model reference to latest release.
+- **2025-11-16:** Pricing verified. Minor copy edits.
+- **2025-07-01:** Initial review added to the catalog.
 
 ## Sources
 

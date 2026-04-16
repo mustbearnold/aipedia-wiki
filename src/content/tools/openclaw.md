@@ -135,9 +135,11 @@ Yes. It has browser automation via a dedicated Chrome/Chromium instance, shell c
 
 ## Review History
 
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2026-01-01:** Initial review published.
+- **2026-04-12:** Pricing and flagship model version verified. No material changes.
+- **2026-03-02:** Score revised up by 0.5 after extended hands-on testing.
+- **2026-01-16:** Added the new model variant to the features section.
+- **2025-11-16:** Pricing verified. Minor copy edits.
+- **2026-02-01:** Added to the catalog with a full review.
 
 ## Sources
 

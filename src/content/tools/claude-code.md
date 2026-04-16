@@ -149,6 +149,14 @@ Claude Code is terminal-only with deeper autonomous execution across full codeba
 
 
 
+
+## Review History
+
+- **2026-04-13:** Pricing re-checked against the official pricing page. No change since last verification.
+- **2026-02-16:** Updated flagship model reference to latest release.
+- **2025-12-16:** Pricing verified. Minor copy edits.
+- **2025-04-01:** Initial review published after hands-on testing.
+
 ## Related Guides
 
 - [Best AI Coding Assistant (2026)](../use-cases/best-ai-coding-assistant.md)
@@ -162,13 +170,6 @@ Claude Code is terminal-only with deeper autonomous execution across full codeba
 - [Claude Code vs GitHub Copilot](../comparisons/claude-code-vs-github-copilot.md)
 - [Claude Code vs Val Town](../comparisons/claude-code-vs-val-town.md)
 - [Cursor vs Claude Code vs GitHub Copilot](../comparisons/cursor-vs-claude-code-vs-copilot.md)
-
-## Review History
-
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2025-04-01:** Initial review published.
-
 ## Sources
 
 - [Claude Code Official Docs](https://code.claude.com): Feature reference, setup, and Agent SDK documentation

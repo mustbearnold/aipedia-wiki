@@ -21,6 +21,8 @@ import StickyMobileCTA from '../components/StickyMobileCTA.astro';
 import ProsCons from '../components/ProsCons.astro';
 import FeedbackForm from '../components/FeedbackForm.astro';
 import ReportOutdatedButton from '../components/ReportOutdatedButton.astro';
+import HelpfulVote from '../components/HelpfulVote.astro';
+import BadgeEmbed from '../components/BadgeEmbed.astro';
 
 interface Props {
   frontmatter: Record<string, any>;
@@ -90,6 +92,8 @@ const breadcrumbLdItems = [
     publisher={frontmatter.company ?? ''}
     reviewBody={frontmatter.tagline ?? frontmatter.meta_description ?? ''}
     pageUrl={`${siteBase}tools/${toolSlug}/`}
+    datePublished={frontmatter.last_updated ? String(frontmatter.last_updated) : undefined}
+    dateModified={frontmatter.last_verified ? String(frontmatter.last_verified) : undefined}
   />
 
   <Breadcrumb items={breadcrumbItems} />
@@ -205,6 +209,10 @@ const breadcrumbLdItems = [
       <ReviewsBlock toolSlug={toolSlug} toolTitle={frontmatter.title} />
 
       <ShareButtons title={frontmatter.title} pageUrl={`${siteBase}tools/${toolSlug}/`} />
+
+      <HelpfulVote pageSlug={toolSlug} pageType="tool" />
+
+      <BadgeEmbed slug={toolSlug} title={frontmatter.title} />
 
       <FeedbackForm toolName={frontmatter.title} />
 

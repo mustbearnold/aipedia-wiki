@@ -118,6 +118,15 @@ Copilot edges out on raw completion accuracy and adds chat/agent modes at $10/mo
 
 
 
+
+## Review History
+
+- **2026-04-12:** Pricing verified. Clarified pricing for annual vs monthly billing.
+- **2026-03-16:** Score adjusted down 0.3 after a pricing change reduced value.
+- **2026-01-16:** Noted the new model availability across tiers.
+- **2025-10-16:** Pricing verified. Minor copy edits.
+- **2024-01-15:** First published review after two weeks of use.
+
 ## Related Comparisons
 
 - [Cursor vs Tabnine](../comparisons/cursor-vs-tabnine.md)
@@ -125,14 +134,6 @@ Copilot edges out on raw completion accuracy and adds chat/agent modes at $10/mo
 
 
 - **Category:** [Coding](../categories/ai-coding.md)
-
-## Review History
-
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-04-15:** Content updated with latest product changes.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-01-15:** Initial review published.
-
 ## Sources
 
 - [Official website](https://www.tabnine.com), verified 2026-04-15

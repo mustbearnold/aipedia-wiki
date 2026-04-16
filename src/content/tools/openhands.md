@@ -141,9 +141,11 @@ Yes. GitHub and GitLab integration is built in. It can clone a repo from an issu
 
 ## Review History
 
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-05-01:** Initial review published.
+- **2026-04-11:** Monthly verification pass. Pricing unchanged.
+- **2026-03-08:** Score adjusted down 0.3 after a pricing change reduced value.
+- **2026-02-16:** Noted the new model availability across tiers.
+- **2025-11-16:** Pricing verified. Minor copy edits.
+- **2024-06-01:** Initial review added to the catalog.
 
 ## Sources
 

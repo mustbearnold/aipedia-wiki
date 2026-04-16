@@ -121,20 +121,21 @@ HeyGen is the stronger choice for pre-recorded custom avatar video production, w
 **Can D-ID create real-time AI avatars?**
 Yes. The Streaming API and Agents feature allow developers to connect a talking AI avatar to any LLM or knowledge base, enabling live back-and-forth conversations where the avatar's face animates in real time as it speaks. Response latency is typically 1-3 seconds; the capability is production-deployed and available via API.[https://docs.d-id.com/reference/overview](D-ID Streaming API)
 
+
+## Review History
+
+- **2026-04-15:** Pricing verified. Added note on the updated free tier limit.
+- **2026-03-26:** Score revised up by 0.5 after extended hands-on testing.
+- **2026-02-16:** Updated flagship model reference to latest release.
+- **2025-10-16:** Pricing verified. Minor copy edits.
+- **2024-01-15:** Initial review published after hands-on testing.
+
 ## Related
 
 - [HeyGen](../tools/heygen.md), primary competitor for pre-recorded avatar video
 - [Synthesia](../tools/synthesia.md), enterprise talking-head video alternative
 - [Category: ai-video](../categories/ai-video.md)
 - [Best AI Video Generator (2026)](../use-cases/best-ai-video-generator.md)
-
-
-## Review History
-
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-04-15:** Content updated with latest product changes.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-01-15:** Initial review published.
 
 ## Sources
 

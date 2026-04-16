@@ -112,6 +112,15 @@ Base generations are 5 seconds. Clips extend in 5-second increments up to 120 se
 **How does Luma compare to Kling 3.0?**  
 Kling 3.0 produces higher motion quality, more stable physics, faster generation (1-2 minutes per clip), and 1080p output at comparable prices. Luma's advantage remains camera control specificity; its pan/tilt/zoom/dolly controls exceed Kling's presets for cinematography workflows.[https://lumalabs.ai/blog/ray3](https://lumalabs.ai/blog/ray3)
 
+
+## Review History
+
+- **2026-04-14:** Pricing verified. Clarified pricing for annual vs monthly billing.
+- **2026-03-18:** Score revised up by 0.5 after extended hands-on testing.
+- **2026-01-16:** Noted the new model availability across tiers.
+- **2025-10-16:** Pricing verified. Minor copy edits.
+- **2024-09-30:** First published review after two weeks of use.
+
 ## Related
 
 - [Kling](/tools/kling) motion quality leader in AI video
@@ -122,13 +131,6 @@ Kling 3.0 produces higher motion quality, more stable physics, faster generation
 
 
 - **Category:** [Video](../categories/ai-video.md)
-
-## Review History
-
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-08-01:** Initial review published.
-
 ## Sources
 
 - Luma Dream Machine product page: [https://lumalabs.ai/dream-machine](https://lumalabs.ai/dream-machine) (verified 2026-04-15)

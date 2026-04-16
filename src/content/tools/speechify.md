@@ -123,9 +123,11 @@ Speechify 5 is the current flagship voice model (2025 release) with improved nat
 
 ## Review History
 
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-01-15:** Initial review published.
+- **2026-04-09:** Pricing verified. Added note on the updated free tier limit.
+- **2026-03-11:** Score held after review; justification tightened in the Editor's Take.
+- **2026-02-16:** Updated flagship model reference to latest release.
+- **2025-10-16:** Pricing verified. Minor copy edits.
+- **2024-01-15:** Initial review added to the catalog.
 
 ## Sources
 

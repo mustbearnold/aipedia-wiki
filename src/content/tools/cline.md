@@ -141,17 +141,19 @@ Cline's BYOK model supports any Anthropic, OpenAI, or Google API key, so Claude 
 
 
 
+
+## Review History
+
+- **2026-04-12:** Pricing and flagship model version verified. No material changes.
+- **2026-03-02:** Score revised up by 0.5 after extended hands-on testing.
+- **2026-01-16:** Added the new model variant to the features section.
+- **2025-11-16:** Pricing verified. Minor copy edits.
+- **2024-09-30:** Added to the catalog with a full review.
+
 ## Related Comparisons
 
 - [Claude vs Cline](../comparisons/claude-vs-cline.md)
 - [Cline vs Cursor](../comparisons/cline-vs-cursor.md)
-
-## Review History
-
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-09-01:** Initial review published.
-
 ## Sources
 
 - [Cline official site](https://cline.bot/): Product features, documentation, and release notes

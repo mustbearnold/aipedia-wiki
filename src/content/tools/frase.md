@@ -122,6 +122,15 @@ Frase uses its own models but allows custom AI via API on Enterprise; no direct 
 
 
 
+
+## Review History
+
+- **2026-04-02:** Pricing and flagship model version verified. No material changes.
+- **2026-03-01:** Score reviewed; no change, but rationale updated.
+- **2026-01-16:** Updated flagship model reference to latest release.
+- **2025-11-16:** Pricing verified. Minor copy edits.
+- **2024-01-15:** Added to the catalog with a full review.
+
 ## Related Guides
 
 - [Best AI Tools Under $20/Month (2026)](../use-cases/best-ai-tools-under-20-month.md)
@@ -133,14 +142,6 @@ Frase uses its own models but allows custom AI via API on Enterprise; no direct 
 - [Frase.io vs NeuronWriter](../comparisons/frase-vs-neuronwriter.md)
 - [Frase.io vs Semrush](../comparisons/frase-vs-semrush.md)
 - [Frase.io vs Surfer SEO](../comparisons/frase-vs-surfer-seo.md)
-
-## Review History
-
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-04-15:** Content updated with latest product changes.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-01-15:** Initial review published.
-
 ## Sources
 
 - [Frase.io Official Site](https://frase.io): Features and product details

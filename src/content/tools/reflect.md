@@ -133,10 +133,10 @@ No. Reflect is designed for individual use only. There are no real-time collabor
 
 ## Review History
 
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-04-15:** Content updated with latest product changes.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-01-15:** Initial review published.
+- **2026-04-07:** Pricing and feature list verified against official docs.
+- **2026-01-16:** Noted the new model availability across tiers.
+- **2025-12-16:** Pricing verified. Minor copy edits.
+- **2024-01-15:** First published review after two weeks of use.
 
 ## Sources
 

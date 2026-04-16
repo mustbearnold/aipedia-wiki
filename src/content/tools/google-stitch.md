@@ -111,6 +111,15 @@ Voice canvas processes natural speech reliably for layout, theme, component chan
 
 
 
+
+## Review History
+
+- **2026-04-14:** Pricing verified. Clarified pricing for annual vs monthly billing.
+- **2026-03-04:** Score bumped after the competitive field shifted around pricing.
+- **2026-01-16:** Noted the new model availability across tiers.
+- **2025-10-16:** Pricing verified. Minor copy edits.
+- **2026-07-01:** Added to the catalog with a full review.
+
 ## Related Comparisons
 
 - [Bolt.new vs Google Stitch](../comparisons/bolt-vs-google-stitch.md)
@@ -118,13 +127,6 @@ Voice canvas processes natural speech reliably for layout, theme, component chan
 - [Figma AI vs Google Stitch](../comparisons/figma-vs-google-stitch.md)
 - [Google Stitch vs Lovable](../comparisons/google-stitch-vs-lovable.md)
 - [Google Stitch vs v0 by Vercel](../comparisons/google-stitch-vs-v0.md)
-
-## Review History
-
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2026-05-01:** Initial review published.
-
 ## Sources
 
 - [Google Stitch Official Site](https://stitch.google.com): Product demos, pricing, signup

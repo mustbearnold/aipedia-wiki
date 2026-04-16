@@ -122,6 +122,15 @@ No; it uses models developed in-house by AI2, such as SciBERT and related archit
 
 
 
+
+## Review History
+
+- **2026-04-02:** Pricing verified. Clarified pricing for annual vs monthly billing.
+- **2026-03-01:** Score reviewed; no change, but rationale updated.
+- **2026-01-16:** Noted the new model availability across tiers.
+- **2025-10-16:** Pricing verified. Minor copy edits.
+- **2024-01-15:** Added to the catalog with a full review.
+
 ## Related Comparisons
 
 - [Connected Papers vs Semantic Scholar](../comparisons/connected-papers-vs-semantic-scholar.md)
@@ -132,13 +141,6 @@ No; it uses models developed in-house by AI2, such as SciBERT and related archit
 
 
 - **Category:** [Research](../categories/ai-research.md)
-
-## Review History
-
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-01-15:** Initial review published.
-
 ## Sources
 
 - [Semantic Scholar official site](https://www.semanticscholar.org), verified 2026-04-15

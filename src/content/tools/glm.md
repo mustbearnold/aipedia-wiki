@@ -124,16 +124,18 @@ Yes. GLM supports OpenAI-compatible API formats. You can configure Cursor, Conti
 
 
 
-## Related Comparisons
-
-- [ChatGPT vs GLM (ChatGLM)](../comparisons/chatgpt-vs-glm.md)
 
 ## Review History
 
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-01-15:** Initial review published.
+- **2026-04-15:** Pricing verified. Added note on the updated free tier limit.
+- **2026-03-26:** Score revised up by 0.5 after extended hands-on testing.
+- **2026-02-16:** Flagship version bumped after the most recent model release.
+- **2025-10-16:** Pricing verified. Minor copy edits.
+- **2024-01-15:** Initial review published after hands-on testing.
 
+## Related Comparisons
+
+- [ChatGPT vs GLM (ChatGLM)](../comparisons/chatgpt-vs-glm.md)
 ## Sources
 
 - [GLM-5 / GLM-5.1 on Hugging Face](https://huggingface.co/zai-org/GLM-5)

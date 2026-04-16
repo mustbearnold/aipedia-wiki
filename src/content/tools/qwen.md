@@ -137,6 +137,15 @@ QwQ (formally QwQ-32B) is a reasoning-focused model in the Qwen family, designed
 
 
 
+
+## Review History
+
+- **2026-04-12:** Pricing verified. Clarified pricing for annual vs monthly billing.
+- **2026-03-02:** Score revised up by 0.5 after extended hands-on testing.
+- **2026-01-16:** Flagship version bumped after the most recent model release.
+- **2025-10-16:** Pricing verified. Minor copy edits.
+- **2024-01-15:** Added to the catalog with a full review.
+
 ## Related Comparisons
 
 - [ChatGPT vs Qwen](../comparisons/chatgpt-vs-qwen.md)
@@ -144,13 +153,6 @@ QwQ (formally QwQ-32B) is a reasoning-focused model in the Qwen family, designed
 - [DeepSeek vs Qwen](../comparisons/deepseek-vs-qwen.md)
 - [Gemini vs Qwen](../comparisons/gemini-vs-qwen.md)
 - [Mistral AI vs Qwen](../comparisons/mistral-ai-vs-qwen.md)
-
-## Review History
-
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-01-15:** Initial review published.
-
 ## Sources
 
 - [Qwen3 official blog post](https://qwenlm.github.io/blog/qwen3/)

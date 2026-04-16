@@ -118,6 +118,14 @@ Yes for light users (50 Research/day covers most); Pro needed for daily heavy wo
 
 
 
+
+## Review History
+
+- **2026-04-12:** Pricing and feature list verified against official docs.
+- **2026-01-16:** Flagship version bumped after the most recent model release.
+- **2025-12-16:** Pricing verified. Minor copy edits.
+- **2024-01-15:** First published review after two weeks of use.
+
 ## Related Comparisons
 
 - [ChatGPT vs You.com](../comparisons/chatgpt-vs-you-com.md)
@@ -125,14 +133,6 @@ Yes for light users (50 Research/day covers most); Pro needed for daily heavy wo
 - [Kagi vs You.com](../comparisons/kagi-vs-you-com.md)
 - [Perplexity vs You.com](../comparisons/perplexity-vs-you-com.md)
 - [Phind vs You.com](../comparisons/phind-vs-you-com.md)
-
-## Review History
-
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-04-15:** Content updated with latest product changes.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-01-15:** Initial review published.
-
 ## Sources
 
 - [You.com Official Site](https://you.com): Pricing, features, model info

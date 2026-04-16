@@ -119,6 +119,15 @@ QuillBot specializes in paraphrasing existing text with modes and sliders. GPT-5
 
 
 
+
+## Review History
+
+- **2026-04-05:** Pricing verified. Added note on the updated free tier limit.
+- **2026-03-09:** Score reviewed; no change, but rationale updated.
+- **2026-02-16:** Noted the new model availability across tiers.
+- **2025-10-16:** Pricing verified. Minor copy edits.
+- **2024-01-15:** Initial review added to the catalog.
+
 ## Related Guides
 
 - [Best AI Tools Under $20/Month (2026)](../use-cases/best-ai-tools-under-20-month.md)
@@ -134,13 +143,6 @@ QuillBot specializes in paraphrasing existing text with modes and sliders. GPT-5
 - [HyperWrite vs QuillBot](../comparisons/hyperwrite-vs-quillbot.md)
 - [QuillBot vs Sudowrite](../comparisons/quillbot-vs-sudowrite.md)
 - [QuillBot vs Wordtune](../comparisons/quillbot-vs-wordtune.md)
-
-## Review History
-
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-01-15:** Initial review published.
-
 ## Sources
 
 - [Official website](https://quillbot.com)

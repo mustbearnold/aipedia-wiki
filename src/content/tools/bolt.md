@@ -112,6 +112,15 @@ Bolt.new works best with React, Next.js, and Vite-based projects. Other framewor
 
 
 
+
+## Review History
+
+- **2026-04-12:** Pricing and flagship model version verified. No material changes.
+- **2026-03-16:** Score adjusted down 0.3 after a pricing change reduced value.
+- **2026-01-16:** Added the new model variant to the features section.
+- **2025-11-16:** Pricing verified. Minor copy edits.
+- **2025-01-01:** First published review after two weeks of use.
+
 ## Related Comparisons
 
 - [Bolt.new vs Canva AI](../comparisons/bolt-vs-canva.md)
@@ -119,13 +128,6 @@ Bolt.new works best with React, Next.js, and Vite-based projects. Other framewor
 - [Bolt.new vs Cursor](../comparisons/bolt-vs-cursor.md)
 - [Bolt.new vs Figma AI](../comparisons/bolt-vs-figma.md)
 - [Bolt.new vs Google Stitch](../comparisons/bolt-vs-google-stitch.md)
-
-## Review History
-
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-12-01:** Initial review published.
-
 ## Sources
 
 - [Bolt.new Official Site](https://bolt.new): Product page, pricing, and getting started

@@ -117,6 +117,15 @@ Gamma offers better value: more free credits (800 vs 10 presentations), collabor
 
 
 
+
+## Review History
+
+- **2026-04-09:** Pricing verified. Added note on the updated free tier limit.
+- **2026-03-25:** Score reviewed; no change, but rationale updated.
+- **2026-02-16:** Noted the new model availability across tiers.
+- **2025-10-16:** Pricing verified. Minor copy edits.
+- **2024-01-15:** Initial review published after hands-on testing.
+
 ## Related Comparisons
 
 - [Beautiful.ai vs Presentations.AI](../comparisons/beautiful-ai-vs-presentations-ai.md)
@@ -124,13 +133,6 @@ Gamma offers better value: more free credits (800 vs 10 presentations), collabor
 - [Gamma vs Presentations.AI](../comparisons/gamma-vs-presentations-ai.md)
 - [Pitch vs Presentations.AI](../comparisons/pitch-vs-presentations-ai.md)
 - [Presentations.AI vs Tome](../comparisons/presentations-ai-vs-tome.md)
-
-## Review History
-
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-01-15:** Initial review published.
-
 ## Sources
 
 - [Presentations.AI Official Site](https://www.presentations.ai): Product page and pricing

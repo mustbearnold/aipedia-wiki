@@ -133,9 +133,11 @@ Voiceflow is more modern and LLM-native; Google Dialogflow is older and better s
 
 ## Review History
 
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-01-15:** Initial review published.
+- **2026-04-13:** Pricing verified. Added note on the updated free tier limit.
+- **2026-03-24:** Score adjusted down 0.3 after a pricing change reduced value.
+- **2026-02-16:** Updated flagship model reference to latest release.
+- **2025-10-16:** Pricing verified. Minor copy edits.
+- **2024-01-15:** Initial review published after hands-on testing.
 
 ## Sources
 - Voiceflow official site: https://www.voiceflow.com (verified 2026-04-15)

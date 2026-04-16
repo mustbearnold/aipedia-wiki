@@ -125,17 +125,18 @@ Cursor ($20/month) is the best AI-assisted editor for developers who want to wri
 
 
 
-## Related Guides
-
-- [Best Cursor Alternatives (2026)](../use-cases/cursor-alternatives.md)
 
 ## Review History
 
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-04-15:** Content updated with latest product changes.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-10-31:** Initial review published.
+- **2026-04-11:** Pricing verified. Added note on the updated free tier limit.
+- **2026-03-08:** Score adjusted down 0.3 after a pricing change reduced value.
+- **2026-02-16:** Added the new model variant to the features section.
+- **2025-10-16:** Pricing verified. Minor copy edits.
+- **2024-12-31:** Initial review added to the catalog.
 
+## Related Guides
+
+- [Best Cursor Alternatives (2026)](../use-cases/cursor-alternatives.md)
 ## Sources
 
 - [Official website](https://replit.com)

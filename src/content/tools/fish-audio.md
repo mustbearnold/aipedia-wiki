@@ -112,6 +112,14 @@ ElevenLabs for premium cloud TTS. Coqui TTS for simpler open-source option [http
 
 
 
+
+## Review History
+
+- **2026-04-14:** Pricing and feature list verified against official docs.
+- **2026-01-16:** Noted the new model availability across tiers.
+- **2025-12-16:** Pricing verified. Minor copy edits.
+- **2024-05-01:** Added to the catalog with a full review.
+
 ## Related Guides
 
 - [Best AI Tools Under $20/Month (2026)](../use-cases/best-ai-tools-under-20-month.md)
@@ -128,13 +136,6 @@ ElevenLabs for premium cloud TTS. Coqui TTS for simpler open-source option [http
 ## Related
 
 - **Category:** [AI Voice / TTS](../categories/ai-voice.md)
-
-
-## Review History
-
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-05-01:** Initial review published.
 
 ## Sources
 

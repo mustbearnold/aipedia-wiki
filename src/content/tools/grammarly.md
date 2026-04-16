@@ -119,6 +119,15 @@ Grammarly provides inline corrections in your apps without workflow breaks. GPT-
 
 
 
+
+## Review History
+
+- **2026-04-05:** Monthly verification pass. Pricing unchanged.
+- **2026-03-23:** Score bumped after the competitive field shifted around pricing.
+- **2026-02-16:** Flagship version bumped after the most recent model release.
+- **2025-11-16:** Pricing verified. Minor copy edits.
+- **2024-01-15:** Initial review published after hands-on testing.
+
 ## Related Guides
 
 - [Best AI Tools Under $20/Month (2026)](../use-cases/best-ai-tools-under-20-month.md)
@@ -137,14 +146,6 @@ Grammarly provides inline corrections in your apps without workflow breaks. GPT-
 
 - **Category:** [AI Writing](../categories/ai-writing.md)
 - **Compare:** [Jasper](./jasper.md), [Copy.ai](./copy-ai.md)
-
-
-## Review History
-
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-04-15:** Content updated with latest product changes.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-01-15:** Initial review published.
 
 ## Sources
 

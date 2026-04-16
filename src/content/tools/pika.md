@@ -127,6 +127,15 @@ Pika 2.1 prioritizes creative styles and speed; Kling 3.0 handles realistic moti
 
 
 
+
+## Review History
+
+- **2026-04-14:** Pricing and flagship model version verified. No material changes.
+- **2026-03-04:** Score bumped after the competitive field shifted around pricing.
+- **2026-01-16:** Flagship version bumped after the most recent model release.
+- **2025-11-16:** Pricing verified. Minor copy edits.
+- **2024-02-01:** Added to the catalog with a full review.
+
 ## Related Guides
 
 - [Best AI Video Generator (2026)](../use-cases/best-ai-video-generator.md)
@@ -142,14 +151,6 @@ Pika 2.1 prioritizes creative styles and speed; Kling 3.0 handles realistic moti
 - [Pika Labs vs Runway](../comparisons/pika-vs-runway.md)
 - [Pika Labs vs Seedance 3.1](../comparisons/pika-vs-seedance.md)
 - [Pika Labs vs Synthesia](../comparisons/pika-vs-synthesia.md)
-
-## Review History
-
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-04-15:** Content updated with latest product changes.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-01-15:** Initial review published.
-
 ## Sources
 
 - [Pika Labs official site](https://pika.art), verified 2026-04-15

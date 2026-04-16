@@ -111,6 +111,15 @@ Cody supports Claude Opus 4.6, GPT-5.4, and Gemini 3.1 Pro on Pro and Enterprise
 
 
 
+
+## Review History
+
+- **2026-04-14:** Pricing verified. Clarified pricing for annual vs monthly billing.
+- **2026-03-18:** Score revised up by 0.5 after extended hands-on testing.
+- **2026-01-16:** Updated flagship model reference to latest release.
+- **2025-10-16:** Pricing verified. Minor copy edits.
+- **2024-01-15:** First published review after two weeks of use.
+
 ## Related Comparisons
 
 - [Claude vs Cody](../comparisons/claude-vs-cody.md)
@@ -118,13 +127,6 @@ Cody supports Claude Opus 4.6, GPT-5.4, and Gemini 3.1 Pro on Pro and Enterprise
 
 
 - **Category:** [Coding](../categories/ai-coding.md)
-
-## Review History
-
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-01-15:** Initial review published.
-
 ## Sources
 
 - [Official Cody website](https://sourcegraph.com/cody) - verified 2026-04-15

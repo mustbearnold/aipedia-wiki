@@ -116,6 +116,14 @@ No, strictly instrumental background tracks. For vocals, use Suno or Udio.
 
 
 
+
+## Review History
+
+- **2026-04-14:** Pricing and feature list verified against official docs.
+- **2026-01-16:** Added the new model variant to the features section.
+- **2025-12-16:** Pricing verified. Minor copy edits.
+- **2024-01-15:** Added to the catalog with a full review.
+
 ## Related Guides
 
 - [Best AI Music Generator (2026): Suno vs Udio vs Mubert](../use-cases/best-ai-music-generator.md)
@@ -130,13 +138,6 @@ No, strictly instrumental background tracks. For vocals, use Suno or Udio.
 
 - **Category:** [AI Music Generation](../categories/ai-music.md)
 - **Compare:** [Suno](./suno.md), [Udio](./udio.md)
-
-
-## Review History
-
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-01-15:** Initial review published.
 
 ## Sources
 

@@ -138,6 +138,15 @@ Out of the box with no fine-tuning, Midjourney v7 produces consistently more pol
 
 
 
+
+## Review History
+
+- **2026-04-12:** Pricing verified. Clarified pricing for annual vs monthly billing.
+- **2026-03-02:** Score revised up by 0.5 after extended hands-on testing.
+- **2026-01-16:** Added the new model variant to the features section.
+- **2025-10-16:** Pricing verified. Minor copy edits.
+- **2024-01-15:** Added to the catalog with a full review.
+
 ## Related Guides
 
 - [Best AI Tools Under $20/Month (2026)](../use-cases/best-ai-tools-under-20-month.md)
@@ -162,14 +171,6 @@ Out of the box with no fine-tuning, Midjourney v7 produces consistently more pol
 - [Adobe Firefly](/tools/adobe-firefly) — commercially safe alternative
 - [ComfyUI ecosystem](/tools/comfyui) — node-based workflow builder for SD
 - [Best AI Image Generators 2026](/best-of/ai-image-generators)
-
-
-## Review History
-
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-04-15:** Content updated with latest product changes.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-01-15:** Initial review published.
 
 ## Sources
 

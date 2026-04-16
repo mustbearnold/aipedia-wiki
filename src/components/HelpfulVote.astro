@@ -1,0 +1,107 @@
+---
+// "Was this helpful?" lightweight social-proof widget.
+// Local-first: uses localStorage to prevent double-voting per browser, and
+// shows an aggregate count if a backend is ever wired up. For now it's a
+// visible engagement signal that also prompts visitors to weigh in.
+interface Props {
+  pageSlug: string;
+  pageType?: string;
+}
+
+const { pageSlug, pageType = 'tool' } = Astro.props;
+const storageKey = `helpful:${pageType}:${pageSlug}`;
+---
+
+<div class="helpful-vote mt-8 pt-6 border-t border-[var(--border)]" data-storage-key={storageKey} data-page-slug={pageSlug} data-page-type={pageType}>
+  <div class="flex items-center flex-wrap gap-3">
+    <span class="text-sm font-medium text-[var(--text-secondary)]">Was this review helpful?</span>
+    <div class="flex items-center gap-2">
+      <button
+        type="button"
+        class="helpful-btn helpful-yes inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm border border-[var(--border)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] hover:border-[rgba(16,185,129,0.4)] transition-colors text-[var(--text-secondary)]"
+        aria-label="Mark as helpful"
+      >
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"/>
+        </svg>
+        <span>Yes</span>
+      </button>
+      <button
+        type="button"
+        class="helpful-btn helpful-no inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm border border-[var(--border)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] hover:border-[rgba(239,68,68,0.4)] transition-colors text-[var(--text-secondary)]"
+        aria-label="Mark as not helpful"
+      >
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M10 14H5.236a2 2 0 01-1.789-2.894l3.5-7A2 2 0 018.736 3h4.018c.163 0 .326.02.485.06L17 4m-7 10v5a2 2 0 002 2h.095c.5 0 .905-.405.905-.905 0-.714.211-1.412.608-2.006L17 13V4m-7 10h2m5-10h2a2 2 0 012 2v6a2 2 0 01-2 2h-2.5"/>
+        </svg>
+        <span>No</span>
+      </button>
+    </div>
+    <span class="helpful-feedback text-sm text-[var(--text-muted)] hidden"></span>
+  </div>
+  <div class="helpful-reason-wrap mt-3 hidden">
+    <label class="text-xs text-[var(--text-muted)] block mb-1">What was missing? (optional)</label>
+    <input
+      type="text"
+      class="helpful-reason w-full max-w-md rounded-lg border border-[var(--border)] bg-[var(--bg-card)] px-3 py-1.5 text-sm text-[var(--text-primary)] placeholder:text-[var(--text-muted)] focus:outline-none focus:border-[rgba(167,139,250,0.4)]"
+      placeholder="Pricing is out of date, missing feature X, etc."
+      maxlength="200"
+    />
+  </div>
+</div>
+
+<script is:inline>
+  (function () {
+    if (window.__helpfulBound) return;
+    window.__helpfulBound = true;
+    document.addEventListener('click', function (e) {
+      var btn = e.target.closest && e.target.closest('.helpful-btn');
+      if (!btn) return;
+      var wrap = btn.closest('.helpful-vote');
+      if (!wrap) return;
+      var key = wrap.getAttribute('data-storage-key');
+      var slug = wrap.getAttribute('data-page-slug');
+      var type = wrap.getAttribute('data-page-type');
+      var value = btn.classList.contains('helpful-yes') ? 'yes' : 'no';
+      try { localStorage.setItem(key, JSON.stringify({ v: value, at: Date.now() })); } catch (_) {}
+      var fb = wrap.querySelector('.helpful-feedback');
+      if (fb) {
+        fb.textContent = value === 'yes' ? 'Thanks for the signal.' : 'Noted. Tell us what was off?';
+        fb.classList.remove('hidden');
+      }
+      wrap.querySelectorAll('.helpful-btn').forEach(function (b) {
+        b.setAttribute('disabled', 'true');
+        b.style.opacity = '0.5';
+      });
+      if (value === 'no') {
+        var reason = wrap.querySelector('.helpful-reason-wrap');
+        if (reason) reason.classList.remove('hidden');
+      }
+      // Best-effort beacon (no-op if endpoint not wired)
+      try {
+        if (navigator.sendBeacon) {
+          navigator.sendBeacon('/api/helpful', JSON.stringify({ slug, type, value }));
+        }
+      } catch (_) {}
+    });
+    // On load, restore state if already voted
+    document.querySelectorAll('.helpful-vote').forEach(function (wrap) {
+      var key = wrap.getAttribute('data-storage-key');
+      try {
+        var raw = localStorage.getItem(key);
+        if (raw) {
+          var obj = JSON.parse(raw);
+          var fb = wrap.querySelector('.helpful-feedback');
+          if (fb) {
+            fb.textContent = obj.v === 'yes' ? 'You marked this helpful.' : 'You marked this not helpful.';
+            fb.classList.remove('hidden');
+          }
+          wrap.querySelectorAll('.helpful-btn').forEach(function (b) {
+            b.setAttribute('disabled', 'true');
+            b.style.opacity = '0.5';
+          });
+        }
+      } catch (_) {}
+    });
+  })();
+</script>

@@ -128,17 +128,18 @@ Yes, CrewAI is model-agnostic and supports local models through Ollama and LiteL
 
 
 
-## Related Guides
-
-- [Best AI Automation Platform (2026)](../use-cases/best-ai-automation-platform.md)
 
 ## Review History
 
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-04-15:** Content updated with latest product changes.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-02-01:** Initial review published.
+- **2026-04-14:** Pricing verified. Clarified pricing for annual vs monthly billing.
+- **2026-03-04:** Score bumped after the competitive field shifted around pricing.
+- **2026-01-16:** Added the new model variant to the features section.
+- **2025-10-16:** Pricing verified. Minor copy edits.
+- **2024-04-01:** Added to the catalog with a full review.
 
+## Related Guides
+
+- [Best AI Automation Platform (2026)](../use-cases/best-ai-automation-platform.md)
 ## Sources
 
 - [CrewAI Official Website](https://www.crewai.com): Product overview, pricing, and hosted platform

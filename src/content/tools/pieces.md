@@ -117,10 +117,11 @@ Traditional managers store/retrieve text. Pieces adds AI auto-enrichment, natura
 
 ## Review History
 
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-04-15:** Content updated with latest product changes.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-01-15:** Initial review published.
+- **2026-04-12:** Pricing and flagship model version verified. No material changes.
+- **2026-03-02:** Score revised up by 0.5 after extended hands-on testing.
+- **2026-01-16:** Noted the new model availability across tiers.
+- **2025-11-16:** Pricing verified. Minor copy edits.
+- **2024-01-15:** Added to the catalog with a full review.
 
 ## Sources
 

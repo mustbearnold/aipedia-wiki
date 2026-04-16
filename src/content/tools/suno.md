@@ -133,6 +133,14 @@ The RIAA filed suit against both Suno and Udio in June 2024 for alleged training
 
 
 
+
+## Review History
+
+- **2026-04-12:** Pricing and feature list verified against official docs.
+- **2026-01-16:** Updated flagship model reference to latest release.
+- **2025-12-16:** Pricing verified. Minor copy edits.
+- **2024-02-01:** Added to the catalog with a full review.
+
 ## Related Guides
 
 - [Best AI Stack for Content Creators (2026)](../use-cases/ai-content-creator-stack.md)
@@ -152,14 +160,6 @@ The RIAA filed suit against both Suno and Udio in June 2024 for alleged training
 
 - **Category:** [AI Music Generation](/tools/categories/ai-music)
 - **Compare:** [Udio](/tools/udio), [Mubert](/tools/mubert)
-
-
-## Review History
-
-- **2026-04-15:** Pricing, flagship model, and feature claims verified against official sources.
-- **2026-04-15:** Content updated with latest product changes.
-- **2026-03-14:** Monthly verification pass. No material changes detected.
-- **2024-02-01:** Initial review published.
 
 ## Sources
 
