@@ -391,3 +391,58 @@ a, button, [role="button"], .tool-card, .category-pill, .helpful-btn, .copy-btn 
   -webkit-tap-highlight-color: rgba(167, 139, 250, 0.15);
   touch-action: manipulation;
 }
+
+/* Category rail — horizontal scroll with rich cards */
+.cat-rail {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(167, 139, 250, 0.25) transparent;
+  scroll-padding: 1rem;
+}
+.cat-rail::-webkit-scrollbar { height: 6px; }
+.cat-rail::-webkit-scrollbar-track { background: transparent; }
+.cat-rail::-webkit-scrollbar-thumb { background: rgba(167, 139, 250, 0.25); border-radius: 3px; }
+.cat-rail::-webkit-scrollbar-thumb:hover { background: rgba(167, 139, 250, 0.45); }
+
+.cat-card {
+  transition: transform 200ms cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 200ms cubic-bezier(0.22, 1, 0.36, 1),
+              border-color 200ms ease;
+  will-change: transform;
+}
+@media (hover: hover) and (pointer: fine) {
+  .cat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 24px -12px rgba(167, 139, 250, 0.4),
+                0 4px 10px -4px rgba(96, 165, 250, 0.2);
+    border-color: rgba(167, 139, 250, 0.35);
+  }
+}
+.cat-card:active {
+  transform: translateY(-1px) scale(0.99);
+  transition-duration: 80ms;
+}
+
+/* Tool logo chips shown inside category cards (avatar-stack style) */
+.cat-tool-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.78));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7),
+              0 1px 2px rgba(0, 0, 0, 0.2),
+              0 0 0 2px var(--bg-card);
+  overflow: hidden;
+  transition: transform 200ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+@media (hover: hover) and (pointer: fine) {
+  .cat-card:hover .cat-tool-logo:nth-child(1) { transform: translateX(-4px) translateY(-1px); }
+  .cat-card:hover .cat-tool-logo:nth-child(2) { transform: translateY(-2px); }
+  .cat-card:hover .cat-tool-logo:nth-child(3) { transform: translateX(2px) translateY(-1px); }
+  .cat-card:hover .cat-tool-logo:nth-child(4) { transform: translateX(6px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cat-card, .cat-card:hover, .cat-card:active,
+  .cat-card:hover .cat-tool-logo { transform: none; }
+}
