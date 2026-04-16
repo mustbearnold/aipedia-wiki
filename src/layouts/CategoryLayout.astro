@@ -5,6 +5,7 @@ import BreadcrumbLD from '../components/seo/BreadcrumbLD.astro';
 import ItemListLD from '../components/seo/ItemListLD.astro';
 import ShareButtons from '../components/ShareButtons.astro';
 import FeedbackForm from '../components/FeedbackForm.astro';
+import { shortenPrice } from '../utils/shorten-price';
 
 interface ToolData {
   slug: string;
@@ -125,7 +126,7 @@ const itemListItems = sorted.map((t) => ({
                 {score > 0 && (
                   <div class="text-[12px] text-[var(--text-muted)] mb-3">
                     <span class="text-[var(--accent-primary)] font-bold tabular-nums">{score}/10</span>
-                    {t.price_range && <span> · {t.price_range}</span>}
+                    {t.price_range && <span title={t.price_range}> · {shortenPrice(t.price_range)}</span>}
                   </div>
                 )}
                 {href !== '#' && (
@@ -173,7 +174,7 @@ const itemListItems = sorted.map((t) => ({
                   )}
                 </div>
                 {t.price_range && (
-                  <span class="hidden sm:inline shrink-0 text-[11px] text-[var(--text-muted)]">{t.price_range}</span>
+                  <span class="hidden sm:inline shrink-0 text-[11px] text-[var(--text-muted)]" title={t.price_range}>{shortenPrice(t.price_range)}</span>
                 )}
                 {score > 0 && (
                   <span class="shrink-0 text-[12.5px] font-bold tabular-nums text-[var(--accent-primary)] min-w-[40px] text-right">{score}</span>

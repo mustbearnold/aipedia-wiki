@@ -1,5 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
+import { shortenPrice } from '../utils/shorten-price';
 
 const allTools = await getCollection('tools');
 const toolsIndex = allTools
@@ -11,7 +12,7 @@ const toolsIndex = allTools
       title: t.data.title ?? '',
       tagline: t.data.tagline ?? '',
       category: t.data.category ?? '',
-      price: t.data.price_range ?? '',
+      price: shortenPrice(t.data.price_range ?? ''),
       url: `/tools/${slug}/`,
     };
   })

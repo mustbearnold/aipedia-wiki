@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
+import { shortenPrice } from '../../utils/shorten-price';
 
 const allTools = await getCollection('tools');
 
@@ -80,6 +81,7 @@ for (const [role, cats] of Object.entries(STACKS)) {
           tagline: t.data.tagline,
           category: t.data.category,
           price: t.data.price_range,
+          priceDisplay: shortenPrice(t.data.price_range ?? ''),
           url: `/tools/${t.data.slug || t.id.replace(/\.md$/, '')}/`,
         }));
     }
@@ -287,7 +289,7 @@ const categoryEmoji: Record<string, string> = {
                       <div class="text-sm font-semibold text-[var(--text-primary)] truncate">${t.title}</div>
                       <div class="text-xs text-[var(--text-muted)] truncate">${t.tagline || ''}</div>
                     </div>
-                    <div class="text-xs text-[var(--text-muted)] flex-shrink-0 whitespace-nowrap">${t.price || 'Free'}</div>
+                    <div class="text-xs text-[var(--text-muted)] flex-shrink-0 whitespace-nowrap" title="${t.price || ''}">${t.priceDisplay || 'Free'}</div>
                   </a>`;
               }).join('')}
             </div>

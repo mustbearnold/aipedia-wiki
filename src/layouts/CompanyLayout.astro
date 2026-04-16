@@ -7,6 +7,7 @@ import CompanyOrganizationLD from '../components/seo/CompanyOrganizationLD.astro
 import TableOfContents from '../components/TableOfContents.astro';
 import ShareButtons from '../components/ShareButtons.astro';
 import FeedbackForm from '../components/FeedbackForm.astro';
+import { shortenPrice } from '../utils/shorten-price';
 
 interface ToolData {
   slug: string;
@@ -131,7 +132,7 @@ const verifiedLabel = verifiedDate && !isNaN(verifiedDate.getTime())
                   </div>
                   {t.tagline && (<div class="text-[12px] text-[var(--text-muted)] leading-snug">{t.tagline}</div>)}
                   <div class="flex items-center gap-2 flex-wrap">
-                    {t.price_range && (<span class="text-[11px] text-[var(--text-muted)]">{t.price_range}</span>)}
+                    {t.price_range && (<span class="text-[11px] text-[var(--text-muted)]" title={t.price_range}>{shortenPrice(t.price_range)}</span>)}
                     {href && (
                       <a href={href} target="_blank" rel={rel} class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md text-[11.5px] font-semibold text-[var(--text-secondary)] border border-[var(--border)] hover:border-[rgba(167,139,250,0.45)] hover:text-[var(--accent-primary)] no-underline" data-company-product-cta={t.slug}>
                         {label} →

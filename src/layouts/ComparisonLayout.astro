@@ -12,6 +12,7 @@ import ReportOutdatedButton from '../components/ReportOutdatedButton.astro';
 import ComparisonEmbed from '../components/ComparisonEmbed.astro';
 import CiteThisPage from '../components/CiteThisPage.astro';
 import ToolLogo from '../components/ToolLogo.astro';
+import { shortenPrice } from '../utils/shorten-price';
 
 interface ToolData {
   slug: string;
@@ -205,7 +206,7 @@ const winningTool = winner && winner !== 'depends' ? tools.find((t) => t.slug ==
                 )}
               </div>
               {t.price_range && (
-                <div class="text-[12px] text-[var(--text-muted)]">{t.price_range}</div>
+                <div class="text-[12px] text-[var(--text-muted)]" title={t.price_range}>{shortenPrice(t.price_range)}</div>
               )}
               {href !== '#' && (
                 <a

@@ -1,6 +1,7 @@
 ---
 import ScoreTier from './ScoreTier.astro';
 import ToolLogo from './ToolLogo.astro';
+import { shortenPrice } from '../utils/shorten-price';
 
 interface Props {
   title: string;
@@ -12,36 +13,6 @@ interface Props {
 }
 
 const { title, slug, category, score, priceRange, emoji = '🔧' } = Astro.props;
-
-// Normalize messy price_range strings into one of a few uniform shapes so
-// the card grid reads as a consistent row rather than a mix of "$0-$200/mo"
-// and "Free (open weights) / API from $0.23/M input" truncating mid-phrase.
-function shortenPrice(raw: string): string {
-  if (!raw) return '';
-  const s = raw.trim();
-
-  // Already simple subscription range with a slash in "/mo" or "/month"
-  // is fine as-is, just normalize the unit.
-  const subscription = s.match(/^(\$[0-9.]+(?:\s*[-–]\s*\$?[0-9.]+)?)\s*\/\s*(?:month|mo)\b/i);
-  if (subscription) return `${subscription[1]}/mo`;
-
-  // Pull the "$X/mo" fragment if it's buried in a longer string
-  const monthly = s.match(/\$[0-9.]+(?:\s*[-–]\s*\$?[0-9.]+)?\s*\/\s*(?:month|mo)\b/i);
-  if (monthly && s.toLowerCase().startsWith('$')) return monthly[0].replace(/month/i, 'mo');
-
-  const hasFree = /\bfree\b/i.test(s);
-  const hasApi = /\bAPI\b|token|usage-based|\/M\b|\/1M\b/i.test(s);
-  const hasOpen = /open[\s-]?(weights|source)/i.test(s);
-
-  if (hasOpen && hasFree) return 'Open source + API';
-  if (hasOpen)            return 'Open source';
-  if (hasFree && hasApi)  return 'Free · API extra';
-  if (hasFree)            return 'Free';
-  if (hasApi)             return 'API usage-based';
-
-  // Fallback: strip parentheticals and collapse spaces
-  return s.replace(/\s*\([^)]*\)/g, '').replace(/\s+/g, ' ').trim();
-}
 
 const displayPrice = shortenPrice(priceRange);
 
