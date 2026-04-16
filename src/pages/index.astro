@@ -221,7 +221,7 @@ const featuredComparisons = comparisons
     <button
       type="button"
       data-filter="all"
-      class="category-pill active inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-medium cursor-pointer bg-[rgba(167,139,250,0.15)] border border-[rgba(167,139,250,0.3)] text-[var(--accent-primary)]"
+      class="category-pill active inline-flex items-center gap-1.5 px-3 py-1 rounded-lg text-[11px] font-medium cursor-pointer bg-[rgba(167,139,250,0.15)] border border-[rgba(167,139,250,0.3)] text-[var(--accent-primary)]"
     >All</button>
     {categories.map(cat => {
       const slug = cat.data.slug || cat.id.replace(/\.md$/, '').replace(/\\/g, '/');
@@ -230,7 +230,7 @@ const featuredComparisons = comparisons
         <button
           type="button"
           data-filter={slug}
-          class="category-pill inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-medium cursor-pointer bg-[var(--bg-card)] border border-[var(--border)] text-[var(--text-secondary)]"
+          class="category-pill inline-flex items-center gap-1.5 px-3 py-1 rounded-lg text-[11px] font-medium cursor-pointer bg-[var(--bg-card)] border border-[var(--border)] text-[var(--text-secondary)]"
         >
           <span class="pill-emoji">{info.emoji}</span>
           <span>{info.label}</span>
