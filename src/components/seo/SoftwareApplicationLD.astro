@@ -34,19 +34,13 @@ const {
   slug,
 } = Astro.props;
 
-// Resolve logo URL at build time
-import { existsSync } from 'node:fs';
-import { fileURLToPath } from 'node:url';
-import { join } from 'node:path';
-const LOGO_DIR = fileURLToPath(new URL('../../../public/logos/tools/', import.meta.url));
+// Resolve logo URL via static manifest (avoids node:fs which breaks
+// Cloudflare's miniflare-based prerender step)
+import logoManifest from '../../data/logo-manifest.json';
 let logoUrl: string | undefined;
 if (slug) {
-  for (const ext of ['.png', '.svg', '.jpg', '.webp']) {
-    if (existsSync(join(LOGO_DIR, `${slug}${ext}`))) {
-      logoUrl = `https://aipedia.wiki/logos/tools/${slug}${ext}`;
-      break;
-    }
-  }
+  const relPath = (logoManifest as Record<string, string>)[slug];
+  if (relPath) logoUrl = `https://aipedia.wiki${relPath}`;
 }
 
 function parsePriceRange(raw: string): { low: number; high: number } | null {

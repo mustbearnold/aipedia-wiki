@@ -12,6 +12,11 @@ CONTENT_DIR="$PROJECT_DIR/src/content"
 # share previews stay in sync with current titles, scores, and taglines.
 node "$SCRIPT_DIR/generate-og-svgs.mjs" || echo "OG SVG generation failed (non-fatal)"
 
+# Generate the logo manifest so components can resolve logo extensions
+# at build time without calling node:fs from Astro frontmatter (Cloudflare
+# prerender runs in miniflare which has no node:fs).
+node "$SCRIPT_DIR/generate-logo-manifest.mjs" || echo "Logo manifest generation failed (non-fatal)"
+
 # Check if wiki source exists
 if [ ! -d "$WIKI_DIR" ]; then
   echo "Wiki directory not found at $WIKI_DIR — using committed content."
