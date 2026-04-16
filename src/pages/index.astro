@@ -546,40 +546,61 @@ const featuredComparisons = comparisons
         track.appendChild(clone);
       });
 
+      // Split offset and target so user input feels smooth instead of jumpy.
+      // target: where we WANT the track (updated by auto-drift OR wheel OR arrow).
+      // offset: where the track ACTUALLY is (eases toward target each frame).
+      // Mouse wheel fires 100px per notch on desktop — jumping offset by 100
+      // looks jerky. Jumping target by 100 and letting offset chase it
+      // produces a smooth inertial slide.
       let offset = 0;
+      let target = 0;
       let paused = false;
       let manualPauseUntil = 0;
       let lastTs = 0;
       let halfWidth = 0;
 
       function measure() {
-        // Total track width includes all clones; halfWidth is the width
-        // of one set of originals (plus gaps) so the wrap is seamless.
         halfWidth = track.scrollWidth / 2;
       }
       measure();
       window.addEventListener('resize', measure);
-      // Re-measure once fonts settle
       setTimeout(measure, 400);
       setTimeout(measure, 1500);
 
+      function wrap(v) {
+        if (halfWidth <= 0) return v;
+        if (v <= -halfWidth) return v + halfWidth;
+        if (v > 0) return v - halfWidth;
+        return v;
+      }
+
       function apply() {
-        // Normalize offset into the (-halfWidth, 0] band
-        if (offset <= -halfWidth) offset += halfWidth;
-        else if (offset > 0) offset -= halfWidth;
-        track.style.transform = 'translate3d(' + offset + 'px, 0, 0)';
+        track.style.transform = 'translate3d(' + offset.toFixed(2) + 'px, 0, 0)';
       }
 
       function tick(ts) {
-        const frozen = paused || Date.now() < manualPauseUntil || document.hidden || halfWidth === 0;
-        if (!frozen && lastTs) {
-          const dt = Math.min(0.05, (ts - lastTs) / 1000);
-          offset -= SPEED * dt;
-          apply();
-        } else if (!lastTs) {
-          apply();
-        }
+        const dt = lastTs ? Math.min(0.05, (ts - lastTs) / 1000) : 0;
         lastTs = ts;
+        const autoDriftOn = !paused && Date.now() >= manualPauseUntil && !document.hidden && halfWidth > 0;
+
+        if (autoDriftOn) target -= SPEED * dt;
+
+        // Exponential ease: offset catches ~63% of the gap each 1/EASE_RATE seconds.
+        // Higher EASE_RATE = snappier; lower = floatier. 14 feels native.
+        const EASE_RATE = 14;
+        const k = 1 - Math.exp(-EASE_RATE * dt);
+        offset += (target - offset) * k;
+
+        // Wrap both so they stay in [-halfWidth, 0]
+        target = wrap(target);
+        // Keep offset within one half of target so the wrap doesn't jump visually
+        if (Math.abs(target - offset) > halfWidth) {
+          if (target < offset) offset -= halfWidth;
+          else offset += halfWidth;
+        }
+        offset = wrap(offset);
+
+        apply();
         requestAnimationFrame(tick);
       }
       if (!reduced) requestAnimationFrame(tick);
@@ -590,37 +611,23 @@ const featuredComparisons = comparisons
         const cards = track.querySelectorAll('.cat-card');
         if (!cards.length) return;
         const cardWidth = cards[0].getBoundingClientRect().width + 12;
-        animateOffsetTo(offset - dir * cardWidth * 2, 420);
-      }
-
-      function animateOffsetTo(target, duration) {
+        target -= dir * cardWidth * 2;
         manualPauseUntil = Date.now() + MANUAL_PAUSE_MS;
-        const start = offset;
-        const delta = target - start;
-        const startTs = performance.now();
-        function frame(now) {
-          const t = Math.min(1, (now - startTs) / duration);
-          // ease-out cubic
-          const eased = 1 - Math.pow(1 - t, 3);
-          offset = start + delta * eased;
-          apply();
-          if (t < 1) requestAnimationFrame(frame);
-        }
-        requestAnimationFrame(frame);
       }
 
       prev.addEventListener('click', () => step(-1));
       next.addEventListener('click', () => step(1));
 
       rail.addEventListener('mouseenter', () => { paused = true; });
-      rail.addEventListener('mouseleave', () => { paused = false; lastTs = 0; });
+      rail.addEventListener('mouseleave', () => { paused = false; });
 
       rail.addEventListener('wheel', (e) => {
         if (!e.deltaY) return;
         if (Math.abs(e.deltaY) <= Math.abs(e.deltaX)) return;
         e.preventDefault();
-        offset -= e.deltaY;
-        apply();
+        // Move the target, not the offset. The RAF loop eases offset toward
+        // target every frame so the motion stays continuous and smooth.
+        target -= e.deltaY;
         manualPauseUntil = Date.now() + MANUAL_PAUSE_MS;
       }, { passive: false });
 
