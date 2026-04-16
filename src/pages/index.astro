@@ -741,9 +741,9 @@ const featuredComparisons = comparisons
       rail.addEventListener('pointercancel', endDrag);
       rail.addEventListener('pointerleave', endDrag);
 
-      // Let the browser know we want horizontal pan only — prevents the
-      // page from scrolling vertically when the finger moves horizontally.
-      rail.style.touchAction = 'pan-y';
+      // touch-action is set via CSS (pan-x) now, so the browser handles
+      // horizontal pan natively on touch. Desktop pointer drag still works
+      // through the handlers above since touch-action doesn't affect mouse.
 
       document.addEventListener('visibilitychange', () => { lastTs = 0; });
     })();

@@ -429,11 +429,23 @@ a, button, [role="button"], .tool-card, .category-pill, .helpful-btn, .copy-btn 
    Vertical padding is non-negotiable: overflow-x: auto implicitly clips
    the Y axis too, which cuts off card lift shadows on hover. */
 .cat-rail {
-  /* Viewport: clips the horizontally-moving track. Vertical padding
-     keeps the card hover-lift shadow visible. */
+  /* Viewport for the track. Vertical padding keeps the card hover-lift
+     shadow visible. touch-action: pan-x explicitly tells the browser
+     this element handles horizontal touch pan — critical on Android
+     where long-press on a link-card otherwise triggers save/share
+     menu instead of scrolling. */
   padding-top: 6px;
   padding-bottom: 12px;
   position: relative;
+  touch-action: pan-x;
+  -webkit-overflow-scrolling: touch;
+}
+.cat-rail,
+.cat-rail .cat-card {
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-user-drag: none;
 }
 .cat-rail-track {
   /* Inner track: animated via transform for GPU acceleration.
