@@ -660,6 +660,65 @@ const featuredComparisons = comparisons
     })();
   </script>
 
+  <script is:inline>
+    // Filter dropdown: trigger + popover + outside-click + Escape.
+    // Bound via document delegation so it survives Astro view transitions
+    // and doesn't depend on any other initializer succeeding.
+    (function () {
+      if (window.__filterDropdownBound) return;
+      window.__filterDropdownBound = true;
+
+      function getEls() {
+        return {
+          trigger: document.getElementById('filter-trigger'),
+          popover: document.getElementById('filter-popover'),
+        };
+      }
+
+      function isOpen() {
+        return getEls().popover?.getAttribute('data-open') === 'true';
+      }
+      function openIt() {
+        var els = getEls();
+        if (!els.trigger || !els.popover) return;
+        els.popover.setAttribute('data-open', 'true');
+        els.trigger.setAttribute('aria-expanded', 'true');
+      }
+      function closeIt() {
+        var els = getEls();
+        if (!els.trigger || !els.popover) return;
+        els.popover.setAttribute('data-open', 'false');
+        els.trigger.setAttribute('aria-expanded', 'false');
+      }
+
+      document.addEventListener('click', function (e) {
+        var trigger = document.getElementById('filter-trigger');
+        var popover = document.getElementById('filter-popover');
+        if (!trigger || !popover) return;
+        var target = e.target;
+
+        // Click on or inside the trigger → toggle
+        if (trigger.contains(target)) {
+          e.preventDefault();
+          e.stopPropagation();
+          isOpen() ? closeIt() : openIt();
+          return;
+        }
+        // Click outside both trigger and popover → close
+        if (!popover.contains(target)) {
+          closeIt();
+        }
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && isOpen()) {
+          closeIt();
+          document.getElementById('filter-trigger')?.focus();
+        }
+      });
+    })();
+  </script>
+
   <script>
     function initCategoryFilter() {
       const pills = document.querySelectorAll<HTMLButtonElement>('.category-pill');
@@ -689,9 +748,8 @@ const featuredComparisons = comparisons
         return isNaN(n) ? 30 : n;
       })();
 
-      // Dropdown UI elements
-      const trigger = document.getElementById('filter-trigger');
-      const popover = document.getElementById('filter-popover');
+      // Dropdown trigger label element (the popover open/close is handled
+      // in a separate IIFE above so it works even if initCategoryFilter fails)
       const currentLabelEl = document.getElementById('filter-current-label');
 
       function updatePageSizeButtons() {
@@ -806,41 +864,12 @@ const featuredComparisons = comparisons
         pill.addEventListener('click', () => {
           const filter = pill.getAttribute('data-filter') ?? 'all';
           setFilter(filter);
-          closePopover();
+          // Close the popover after any option pick
+          const pop = document.getElementById('filter-popover');
+          const trg = document.getElementById('filter-trigger');
+          pop?.setAttribute('data-open', 'false');
+          trg?.setAttribute('aria-expanded', 'false');
         });
-      });
-
-      // Dropdown open/close behavior
-      function openPopover() {
-        if (!popover || !trigger) return;
-        popover.setAttribute('data-open', 'true');
-        trigger.setAttribute('aria-expanded', 'true');
-      }
-      function closePopover() {
-        if (!popover || !trigger) return;
-        popover.setAttribute('data-open', 'false');
-        trigger.setAttribute('aria-expanded', 'false');
-      }
-      function togglePopover() {
-        const open = popover?.getAttribute('data-open') === 'true';
-        open ? closePopover() : openPopover();
-      }
-
-      trigger?.addEventListener('click', (e) => {
-        e.stopPropagation();
-        togglePopover();
-      });
-      document.addEventListener('click', (e) => {
-        const t = e.target as Node;
-        if (!popover?.contains(t) && !trigger?.contains(t)) {
-          closePopover();
-        }
-      });
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && popover?.getAttribute('data-open') === 'true') {
-          closePopover();
-          trigger?.focus();
-        }
       });
     }
 
