@@ -46,14 +46,13 @@ const categoryLabel = category.replace('ai-', 'AI ').replace(/\b\w/g, (c) => c.t
           {score}
         </span>
       </div>
-      <div class="flex items-center gap-2 text-xs text-[var(--text-muted)] min-w-0 mb-2">
-        <span class="whitespace-nowrap shrink-0">{categoryLabel}</span>
+      <div class="flex items-center gap-2 text-xs text-[var(--text-muted)] min-w-0">
+        <ScoreTier score={score} size="sm" />
         <span class="shrink-0">&middot;</span>
         <span class="marquee-hover flex-1 min-w-0" title={priceRange}>
           <span class="marquee-hover-inner">{priceRange}</span>
         </span>
       </div>
-      <ScoreTier score={score} size="sm" />
     </div>
   </div>
 </a>
