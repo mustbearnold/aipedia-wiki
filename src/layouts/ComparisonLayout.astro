@@ -10,6 +10,7 @@ import FeedbackForm from '../components/FeedbackForm.astro';
 import ReportOutdatedButton from '../components/ReportOutdatedButton.astro';
 import ComparisonEmbed from '../components/ComparisonEmbed.astro';
 import CiteThisPage from '../components/CiteThisPage.astro';
+import ToolLogo from '../components/ToolLogo.astro';
 
 interface ToolData {
   slug: string;
@@ -192,7 +193,7 @@ const winningTool = winner && winner !== 'depends' ? tools.find((t) => t.slug ==
             <div class={`rounded-xl border ${winBadge ? 'border-[rgba(167,139,250,0.45)] bg-[rgba(167,139,250,0.06)]' : 'border-[var(--border)] bg-[var(--bg-card)]'} p-4 flex flex-col gap-3`}>
               <div class="flex items-start justify-between gap-3">
                 <div class="flex items-center gap-2 min-w-0">
-                  <span class="text-xl" aria-hidden="true">{emoji}</span>
+                  <ToolLogo slug={t.slug} title={t.title} size={28} className="shrink-0" />
                   <a href={`/tools/${t.slug}/`} class="text-[15px] font-semibold text-[var(--text-primary)] hover:text-[var(--accent-primary)] no-underline truncate">{t.title}</a>
                 </div>
                 {score > 0 && (

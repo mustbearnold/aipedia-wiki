@@ -14,8 +14,12 @@
   <rect x="0" y="0" width="1200" height="6" fill="url(#accent)"/>
   <text x="80" y="100" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="600" fill="#a78bfa" letter-spacing="2">aipedia.wiki</text>
   <text x="80" y="135" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="500" fill="#9ca3af">AI Presentation</text>
-  <text x="80" y="270" font-family="Inter, system-ui, sans-serif" font-size="92" font-weight="800" fill="#fafafa">Tome</text>
-  <text x="80" y="320" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="500" fill="#9ca3af">Magical Tome Inc.</text>
+  <g transform="translate(80, 180)">
+    <rect x="0" y="0" width="100" height="100" rx="18" fill="#ffffff" opacity="0.04"/>
+    <image href="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNTYiIGhlaWdodD0iMjU2IiB2aWV3Qm94PSIwIDAgMjU2IDI1NiI+CiAgPHJlY3Qgd2lkdGg9IjI1NiIgaGVpZ2h0PSIyNTYiIHJ4PSI0OCIgZmlsbD0iI2Y4NzE3MSIvPgogIDx0ZXh0IHg9IjEyOCIgeT0iMTI4IiBmb250LWZhbWlseT0ic3lzdGVtLXVpLCAtYXBwbGUtc3lzdGVtLCAnU2Vnb2UgVUknLCBSb2JvdG8sIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTEwIiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjMGIwYTE0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCI+VE88L3RleHQ+Cjwvc3ZnPg==" x="10" y="10" width="80" height="80" preserveAspectRatio="xMidYMid meet"/>
+  </g>
+  <text x="210" y="270" font-family="Inter, system-ui, sans-serif" font-size="76" font-weight="800" fill="#fafafa">Tome</text>
+  <text x="210" y="310" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="500" fill="#9ca3af">Magical Tome Inc.</text>
   <foreignObject x="80" y="360" width="900" height="160">
     <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Inter, system-ui, sans-serif; font-size: 26px; line-height: 1.4; color: #d1d5db;"></div>
   </foreignObject>

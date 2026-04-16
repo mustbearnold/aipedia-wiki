@@ -1,0 +1,56 @@
+---
+// Renders a tool's official logo from /logos/tools/<slug>.*
+// Resolves extension at build time by checking the public folder.
+// Falls back to a category-emoji badge if no logo file is present.
+import { existsSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
+import { join } from 'node:path';
+
+interface Props {
+  slug: string;
+  title: string;
+  size?: number;
+  rounded?: boolean;
+  className?: string;
+}
+
+const { slug, title, size = 48, rounded = true, className = '' } = Astro.props;
+
+// Resolve the logo extension by checking the public directory.
+// This runs at build time and is deterministic.
+const PUBLIC = fileURLToPath(new URL('../../public/logos/tools/', import.meta.url));
+const EXTS = ['.png', '.svg', '.jpg', '.webp', '.gif', '.ico'];
+
+let logoUrl: string | null = null;
+for (const ext of EXTS) {
+  if (existsSync(join(PUBLIC, `${slug}${ext}`))) {
+    logoUrl = `/logos/tools/${slug}${ext}`;
+    break;
+  }
+}
+
+// Compute a deterministic background color for the logo container so
+// dark logos (drawn in black on a transparent background) stay visible
+// against the dark site theme.
+const palette = ['#ffffff', '#f1f5f9', '#fef3c7', '#dbeafe', '#dcfce7', '#fce7f3', '#fee2e2', '#e0e7ff'];
+const bgColor = palette[slug.charCodeAt(0) % palette.length];
+---
+
+{logoUrl ? (
+  <img
+    src={logoUrl}
+    alt={`${title} logo`}
+    width={size}
+    height={size}
+    loading="lazy"
+    class={`block object-contain ${rounded ? 'rounded-lg' : ''} ${className}`}
+    style={`background: ${bgColor}; padding: ${Math.round(size * 0.08)}px;`}
+  />
+) : (
+  <div
+    class={`inline-flex items-center justify-center font-bold text-[var(--text-primary)] bg-[rgba(167,139,250,0.12)] border border-[rgba(167,139,250,0.3)] ${rounded ? 'rounded-lg' : ''} ${className}`}
+    style={`width: ${size}px; height: ${size}px; font-size: ${Math.round(size * 0.42)}px;`}
+  >
+    {title.split(' ').slice(0, 2).map(w => w[0]).join('').toUpperCase()}
+  </div>
+)}

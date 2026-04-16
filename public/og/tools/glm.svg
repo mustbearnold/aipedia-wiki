@@ -14,8 +14,12 @@
   <rect x="0" y="0" width="1200" height="6" fill="url(#accent)"/>
   <text x="80" y="100" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="600" fill="#a78bfa" letter-spacing="2">aipedia.wiki</text>
   <text x="80" y="135" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="500" fill="#9ca3af">AI Chatbots</text>
-  <text x="80" y="270" font-family="Inter, system-ui, sans-serif" font-size="92" font-weight="800" fill="#fafafa">GLM (ChatGLM)</text>
-  <text x="80" y="320" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="500" fill="#9ca3af">Zhipu AI (Z.ai)</text>
+  <g transform="translate(80, 180)">
+    <rect x="0" y="0" width="100" height="100" rx="18" fill="#ffffff" opacity="0.04"/>
+    <image href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAOgSURBVHgB7Z3LcRpBEIYb2QcfCWGVARkIIhAZQAaQAUsE4AggAysDUAZkAI6Avfq0noaljGERjxn6MdNf1V/S6qLZ/ufRM10MDbhO06nr9ObUrp6bYFxi5bRx+nD6rH5/CAzyyGnrVJoe1swpgzvpgQU+pNZVTG9iBMDe4Fg1Agu+XBP6ghoZu3pwQgb7eUpD42MQrq+7TPJbZcAU9immQcMPpz9Oywb86/0GLYXT6wtYz+dit8FFA97B4OINDcjA4KKNa0AJBheFGcDMCxismAHMmAHMmAHMmAHMfAdPms3mTpwURbHTMZTt2mw24IPXyV6/3y+5abfbZ+1ar9clBbPZzPdkVLcBeZ6ftWk0GpUUoMlZlqVrAAbgtD0YECparZZv8EvVi3Cn0/nvGef8xWIBFIzHY1itVhAClSOgbuqZTCYlBXUjz0P6DHC9nK0d2+02xLyv14C6hQ+fqbKe4XAYMvi6DMCeX9f78O8UBEg5z+R9HM294XEpJ7j1ACj+Ny76vpuuOkqtokw5e73es95DXmBvFdW8P51On/kesoJ6qyh3u09+F1mBvUV49kNF4JRTvwGUKWfdZi95A+bzeUlB3WYveQMGg0FJQaBTzrgMwIDgMQAFT0w59RqgqMASnwHKCixxGaCtwBKVAe6MKbaUU5cBVCknwW5XnwGKCyz6DVBeYNFvgOYCi3oDIk85ZRsQSYFFrwGRFFh0GhBRgUWfAd1ut6RCyLwvx4AICyy6DIiwwKLHgEgLLDoMiLjAosOAiAss8g1IcLcrx4AECixyDUikwCLXgEQKLDINSKjAIs+AxAos8gxIrMAiywBLORkNSLTAIseARAssMgxIuMDCb0DiBZa75H1f0CkuIDCZTIACvK+h7mOjVB+drbun6BGCOspZYMHRQJXyIri5DBCzcMHnLLBQbvYOiDKAu8BCNfKOEWUAZ4GFauSdIsYAzt0u5cg7RYQB3AUW6nn/mBAGeF1Zxn1FGN6Ugmmvdh52j7PAgqOBmxAjwOu+IKre53Mx6zPu9wmJfX8AM3Z3NDNmADNmADNmADNmADNogP+BtvEwZgAvKzTgEwwufqMBSzC4+IU7YdzPr6ufBi2vhzXgJxjUzJ02hwfs/fg126WJRGuo+RbbvsCGxqoeXCAX1MhYlcMVcgGNTDb4B/qwn6e0vJh0bauY3kUG+5Va04tKDHwOX6T4DbhO5tR2eq9+b4FxiaLSEvYnDB9w5ajnLzy3z1aOtKIfAAAAAElFTkSuQmCC" x="10" y="10" width="80" height="80" preserveAspectRatio="xMidYMid meet"/>
+  </g>
+  <text x="210" y="270" font-family="Inter, system-ui, sans-serif" font-size="76" font-weight="800" fill="#fafafa">GLM (ChatGLM)</text>
+  <text x="210" y="310" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="500" fill="#9ca3af">Zhipu AI (Z.ai)</text>
   <foreignObject x="80" y="360" width="900" height="160">
     <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Inter, system-ui, sans-serif; font-size: 26px; line-height: 1.4; color: #d1d5db;"></div>
   </foreignObject>

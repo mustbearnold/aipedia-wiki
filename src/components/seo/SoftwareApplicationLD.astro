@@ -16,6 +16,7 @@ interface Props {
   pageUrl?: string;
   datePublished?: string;
   dateModified?: string;
+  slug?: string;
 }
 
 const {
@@ -30,7 +31,23 @@ const {
   pageUrl,
   datePublished,
   dateModified,
+  slug,
 } = Astro.props;
+
+// Resolve logo URL at build time
+import { existsSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
+import { join } from 'node:path';
+const LOGO_DIR = fileURLToPath(new URL('../../../public/logos/tools/', import.meta.url));
+let logoUrl: string | undefined;
+if (slug) {
+  for (const ext of ['.png', '.svg', '.jpg', '.webp']) {
+    if (existsSync(join(LOGO_DIR, `${slug}${ext}`))) {
+      logoUrl = `https://aipedia.wiki/logos/tools/${slug}${ext}`;
+      break;
+    }
+  }
+}
 
 function parsePriceRange(raw: string): { low: number; high: number } | null {
   if (!raw) return null;
@@ -111,6 +128,7 @@ const jsonLd: Record<string, unknown> = {
 };
 
 if (description) jsonLd.description = description;
+if (logoUrl) jsonLd.image = logoUrl;
 
 if (publisher) {
   jsonLd.publisher = {

@@ -14,8 +14,12 @@
   <rect x="0" y="0" width="1200" height="6" fill="url(#accent)"/>
   <text x="80" y="100" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="600" fill="#a78bfa" letter-spacing="2">aipedia.wiki</text>
   <text x="80" y="135" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="500" fill="#9ca3af">AI Automation</text>
-  <text x="80" y="270" font-family="Inter, system-ui, sans-serif" font-size="92" font-weight="800" fill="#fafafa">Zapier</text>
-  <text x="80" y="320" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="500" fill="#9ca3af">zapier</text>
+  <g transform="translate(80, 180)">
+    <rect x="0" y="0" width="100" height="100" rx="18" fill="#ffffff" opacity="0.04"/>
+    <image href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAMAAAAKE/YAAAAAPFBMVEX/TwD//fn/59r/0bv/ez7/ZR//vJz/kF3/pn3/8un/WhD/3Mv/sYz/m23/hU7/cC//x6v/cC7/pnz/sY0Zxl0pAAADV0lEQVR42u3Z3XKbMBCG4V39IiHAbu//XhujCpBWTlziZoaZ7zlKAIvXY5DFmAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAVtEYS9cSE39Ika7E8crRhRj+60pXyFSiPV3HcMVoU6INXYjilaIrsWptvtJ9+OBT8teapuGUuHjvJ28iPWVn779eapgpOeeGeaHvmXSf34oHzUXemrnVlC/fUezX2Y02NgUu1GTbgnWDSR9/vbpGkIYyZOAjtc27+5RmNW9cLLszVS+gdso3BQtRzAN9O1rLHVVVIIqKD8Z+9F3JgeoCXwb6dnRiyVRVth1h6EVbxdJUFfymxG+J9twxVlWz4VqInWjFHcEeC5zl90Qr7jHHqkmLV8pov3W6yXtXhtXHgnF6PTqpo/rUy3Z7GWvN9vb0sWp8lLkhjVwEGb1V2nyxlIPjIToEEf2i7dTjY3ij8/+/aJXqqiLM9DBv79i00V5MJX8DpxzdOLsKvsWy6W6mtJ8qs1X0nTJbdv9uozVnpj3RrY52hshae7I5UZfrRTsqEme6jQ7l782yb9mjf9EJ4tUvRS9i4a+a6IWzG20iZ8dR3YnkeNvnz1q0n0QH2gXOmmhTDpV3vD2MOtO/2u/o4KvgSQfeyWgtb2MZLXWilzMPGlm408GUi1+M1j8SLZuVFRfxT0Ub+jf3sE/PBwN/Ha2+vjwsZzcj0PloX5p1pM1+MmU+mz2imBJCEx2fTw/noyfuj+r3xuzWi57F8WMVvX+LhzdGD2J6rhsVFaoXrcXVcWujk8wyUUafb5b3VRCfSI4uhnYg30Yb8f5mZj2Y09GOC1NZtmieSrOIzpytH6fkfTo278+qvDOdjOYnxj2a3WzmSbOo2iiteKM/WU8rv3wkD6EM/OZo1XnW8p1orcVRMpo0d9n3RxuuudiLNvKF/WdEKdH3oqV9+ti/LEMnuv1AvIh+Vj3S/4iOqnkMHXvRMW+t5iARTVZzQ8f3R8dHtePq+ct1oqujwkQiuvCKs+3I09HDM5EebNKBOeg5r1H8KrYLpsWFNSTZPTGb6cC4MQeP6VBofGbpv9ujs/uLP3VaayP9NBl9JYj+KdtkeyV8xd/cLhm9TcQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANfyB5U5Gypf+Ee+AAAAAElFTkSuQmCC" x="10" y="10" width="80" height="80" preserveAspectRatio="xMidYMid meet"/>
+  </g>
+  <text x="210" y="270" font-family="Inter, system-ui, sans-serif" font-size="76" font-weight="800" fill="#fafafa">Zapier</text>
+  <text x="210" y="310" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="500" fill="#9ca3af">zapier</text>
   <foreignObject x="80" y="360" width="900" height="160">
     <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Inter, system-ui, sans-serif; font-size: 26px; line-height: 1.4; color: #d1d5db;"></div>
   </foreignObject>

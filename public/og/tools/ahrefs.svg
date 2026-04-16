@@ -14,8 +14,12 @@
   <rect x="0" y="0" width="1200" height="6" fill="url(#accent)"/>
   <text x="80" y="100" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="600" fill="#a78bfa" letter-spacing="2">aipedia.wiki</text>
   <text x="80" y="135" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="500" fill="#9ca3af">AI SEO</text>
-  <text x="80" y="270" font-family="Inter, system-ui, sans-serif" font-size="92" font-weight="800" fill="#fafafa">Ahrefs</text>
-  <text x="80" y="320" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="500" fill="#9ca3af">ahrefs</text>
+  <g transform="translate(80, 180)">
+    <rect x="0" y="0" width="100" height="100" rx="18" fill="#ffffff" opacity="0.04"/>
+    <image href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAMAAABlApw1AAAAilBMVEU6V/y1wP3/////0p//iACElv21wP7Ot77/tGCEap1TXd2Dlv2Dap1TbP1fd/14i/2cq/3Cy/7a3/7m6v7y9f9HYv1rgf2dq/3O1f6ptf3m6v/z9f/Z3/7By/53i/1HYvyptf6otf2Qof1GYvycq/7n6v9TbPzN1f7a3/9sgf2otf6Qof7NfD9sY727TKiZAAACHElEQVR4AezPRQGAQAAAsDOc/nkJgPPBtgYLmwAAAAAAAAAAiOmCXBYJHCcgICAgICAgICAgICAgIFDVFzTtom5RH55nSIvKolFAQEBAQOATAQGBiX272VkbBqIwPBzJ3lQGBxMTcCDgBNLf+7+9LtpNpQltWFRzpO9cwfssM4rDdueib/YJPAA9mwIQtno2ASDsot8foMw+oM3HTkknAWyPHZSRANpjAkALyB0AFoCeTwwIHcAMcAdQA04ANWADbsAG3IAIbsAO3ID2TA6I4AYEkAMc3l0pJgDn1d39xUd3DYONj/qMf1zqL7fochiMXSXufy/3N3cNZs8qPV6s+LodbN+Fxhf1t0xw2MqL+dNAcZmr0Pd4kpwW74v9JIAZ6pxwA4rQABK0NTwAqIvsgE8UgA9A/kwNyB3ABFDymQBKPjEgdIBxQH2V7wHzAC9La08AAaAs5R8PoADgy2I+CeA86vn2AAn6miB/LN8OgEVAj4WdXSu/1zq93gRgg+V1TYzRN8n0bbQC3MfdzA4Y2QEyswMqO2As5AC5swOe7AD5yg4YH3hvj4sNgOT38p2dP3cnrF75ZurXY782fxrEFED8+nxbAJnW59sCSC1r840B5LlfmW8NIOIeeLm5DtYfQLgZS0tTpnjB8ayKocw1iLLrrO67uh/yvzbkeJnTr/LU++iC/GwPDgQAAAAABPlbT7BBBQAAAAAAAAAAJ2bicv/VYBakAAAAAElFTkSuQmCC" x="10" y="10" width="80" height="80" preserveAspectRatio="xMidYMid meet"/>
+  </g>
+  <text x="210" y="270" font-family="Inter, system-ui, sans-serif" font-size="76" font-weight="800" fill="#fafafa">Ahrefs</text>
+  <text x="210" y="310" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="500" fill="#9ca3af">ahrefs</text>
   <foreignObject x="80" y="360" width="900" height="160">
     <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Inter, system-ui, sans-serif; font-size: 26px; line-height: 1.4; color: #d1d5db;"></div>
   </foreignObject>

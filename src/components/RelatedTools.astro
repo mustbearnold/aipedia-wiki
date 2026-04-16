@@ -1,5 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
+import ToolLogo from './ToolLogo.astro';
 
 interface Props {
   currentSlug: string;
@@ -70,7 +71,7 @@ const categoryLabel = category.replace('ai-', '').replace(/-/g, ' ')
             href={`/tools/${slug}/`}
             class="flex items-center gap-3 py-1.5 group no-underline"
           >
-            <span class="text-base shrink-0">{emoji}</span>
+            <ToolLogo slug={slug} title={tool.data.title} size={20} className="shrink-0" />
             <span class="flex-1 text-sm text-[var(--text-secondary)] group-hover:text-[var(--text-primary)] transition-colors truncate">
               {tool.data.title}
             </span>

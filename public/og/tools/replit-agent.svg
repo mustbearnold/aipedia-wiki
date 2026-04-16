@@ -14,8 +14,12 @@
   <rect x="0" y="0" width="1200" height="6" fill="url(#accent)"/>
   <text x="80" y="100" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="600" fill="#a78bfa" letter-spacing="2">aipedia.wiki</text>
   <text x="80" y="135" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="500" fill="#9ca3af">AI Coding</text>
-  <text x="80" y="270" font-family="Inter, system-ui, sans-serif" font-size="92" font-weight="800" fill="#fafafa">Replit Agent</text>
-  <text x="80" y="320" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="500" fill="#9ca3af">replit</text>
+  <g transform="translate(80, 180)">
+    <rect x="0" y="0" width="100" height="100" rx="18" fill="#ffffff" opacity="0.04"/>
+    <image href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAMAAABlApw1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABFUExURQAAAP9AAP9AAP86AP88AP89AP8+AP89AP88AP87AP88AP88AP89AP88AP89AP89AP88AP87AP88AP88AP89AP88AP88ACSn9BsAAAAWdFJOUwAQIDBAUF9gb3B/gI+Qn6CvsL/P3++NaW4cAAABm0lEQVR42u3dQW7CQAxAUWeYNA2QNEw8vv9Ru6u6KliNwBb/nSBfCCFiJyMAAAAAAAAA8Ez1umm3P3Vt6ygxlWYP0pMEVNQe9xHy+j2qRLOaiw4SSzWni8SymFOTWJo5dYlFzatIKD17gLlVAggggAACCCCAAAIIIIAAAggggAACCCDg3/T9AkYJZTOvOfmAw5qEUs2tJB/R2BZuzOo1U3Cs8mVe5xIs4dJ2VXPQtQ6STJmaeejerieJZVRzWkv2L7xScLBqb7dcYTX7R7BI8u2Km8Sym5OyYfTiACOAAAIIIIAAAggggAACCCCAAAIIIIAA7sy94N7oLrFkn3CM2ecDW/LlkMm8VqaUXP+Pz25OyyBhlLnZb13vaOs8yHPU87ardnuczkXCGJJvLhY1p17ZODvQmvyX6WRuJfnm7i37/6uZ9ftDdZ7gIIAAAggggAACCCCAAAIIIIAAAggggAAC/Lp5nXjv9ItXH3j3+rGqOU2Se4NMS/ITIEaR1AWTOMR7NYlWiaku7f45NPtSObEHAAAAAAAAAA73DZolRvc922GDAAAAAElFTkSuQmCC" x="10" y="10" width="80" height="80" preserveAspectRatio="xMidYMid meet"/>
+  </g>
+  <text x="210" y="270" font-family="Inter, system-ui, sans-serif" font-size="76" font-weight="800" fill="#fafafa">Replit Agent</text>
+  <text x="210" y="310" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="500" fill="#9ca3af">replit</text>
   <foreignObject x="80" y="360" width="900" height="160">
     <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Inter, system-ui, sans-serif; font-size: 26px; line-height: 1.4; color: #d1d5db;"></div>
   </foreignObject>

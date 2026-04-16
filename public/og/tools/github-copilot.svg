@@ -14,8 +14,12 @@
   <rect x="0" y="0" width="1200" height="6" fill="url(#accent)"/>
   <text x="80" y="100" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="600" fill="#a78bfa" letter-spacing="2">aipedia.wiki</text>
   <text x="80" y="135" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="500" fill="#9ca3af">AI Coding</text>
-  <text x="80" y="270" font-family="Inter, system-ui, sans-serif" font-size="92" font-weight="800" fill="#fafafa">GitHub Copilot</text>
-  <text x="80" y="320" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="500" fill="#9ca3af">microsoft-github</text>
+  <g transform="translate(80, 180)">
+    <rect x="0" y="0" width="100" height="100" rx="18" fill="#ffffff" opacity="0.04"/>
+    <image href="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjEsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAzNiAzNiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMzYgMzYiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGZpbGw9IiMxOTE3MTciIGQ9Ik0xOCwxLjRDOSwxLjQsMS43LDguNywxLjcsMTcuN2MwLDcuMiw0LjcsMTMuMywxMS4xLDE1LjUNCgljMC44LDAuMSwxLjEtMC40LDEuMS0wLjhjMC0wLjQsMC0xLjQsMC0yLjhjLTQuNSwxLTUuNS0yLjItNS41LTIuMmMtMC43LTEuOS0xLjgtMi40LTEuOC0yLjRjLTEuNS0xLDAuMS0xLDAuMS0xDQoJYzEuNiwwLjEsMi41LDEuNywyLjUsMS43YzEuNSwyLjUsMy44LDEuOCw0LjcsMS40YzAuMS0xLjEsMC42LTEuOCwxLTIuMmMtMy42LTAuNC03LjQtMS44LTcuNC04LjFjMC0xLjgsMC42LTMuMiwxLjctNC40DQoJYy0wLjItMC40LTAuNy0yLjEsMC4yLTQuM2MwLDAsMS40LTAuNCw0LjUsMS43YzEuMy0wLjQsMi43LTAuNSw0LjEtMC41YzEuNCwwLDIuOCwwLjIsNC4xLDAuNWMzLjEtMi4xLDQuNS0xLjcsNC41LTEuNw0KCWMwLjksMi4yLDAuMywzLjksMC4yLDQuM2MxLDEuMSwxLjcsMi42LDEuNyw0LjRjMCw2LjMtMy44LDcuNi03LjQsOGMwLjYsMC41LDEuMSwxLjUsMS4xLDNjMCwyLjIsMCwzLjksMCw0LjUNCgljMCwwLjQsMC4zLDAuOSwxLjEsMC44YzYuNS0yLjIsMTEuMS04LjMsMTEuMS0xNS41QzM0LjMsOC43LDI3LDEuNCwxOCwxLjR6Ii8+DQo8L3N2Zz4NCg==" x="10" y="10" width="80" height="80" preserveAspectRatio="xMidYMid meet"/>
+  </g>
+  <text x="210" y="270" font-family="Inter, system-ui, sans-serif" font-size="76" font-weight="800" fill="#fafafa">GitHub Copilot</text>
+  <text x="210" y="310" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="500" fill="#9ca3af">microsoft-github</text>
   <foreignObject x="80" y="360" width="900" height="160">
     <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Inter, system-ui, sans-serif; font-size: 26px; line-height: 1.4; color: #d1d5db;"></div>
   </foreignObject>

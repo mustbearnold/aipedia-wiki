@@ -11,6 +11,30 @@ import { join } from 'node:path';
 const ROOT = fileURLToPath(new URL('../', import.meta.url));
 const REGISTRY = join(ROOT, 'src/data/_meta/tools-registry.json');
 const OUT_DIR = join(ROOT, 'public/og/tools');
+const LOGO_DIR = join(ROOT, 'public/logos/tools');
+
+function findLogoFile(slug) {
+  for (const ext of ['.png', '.svg', '.jpg', '.webp', '.gif', '.ico']) {
+    const p = join(LOGO_DIR, `${slug}${ext}`);
+    if (existsSync(p)) return { path: p, ext };
+  }
+  return null;
+}
+
+function embedLogo(slug) {
+  const logo = findLogoFile(slug);
+  if (!logo) return null;
+  const buf = readFileSync(logo.path);
+  // Inline as base64 data URL so the OG SVG is self-contained
+  const b64 = buf.toString('base64');
+  let mime = 'image/png';
+  if (logo.ext === '.svg') mime = 'image/svg+xml';
+  else if (logo.ext === '.jpg') mime = 'image/jpeg';
+  else if (logo.ext === '.webp') mime = 'image/webp';
+  else if (logo.ext === '.gif') mime = 'image/gif';
+  else if (logo.ext === '.ico') mime = 'image/x-icon';
+  return `data:${mime};base64,${b64}`;
+}
 
 const CATEGORY_LABEL = {
   'ai-chatbots': 'AI Chatbots',
@@ -50,6 +74,16 @@ function svgFor(tool) {
   const company = escapeXml(tool.company ?? '');
   const scoreColor =
     overall >= 9 ? '#34d399' : overall >= 8 ? '#a78bfa' : overall >= 6 ? '#fbbf24' : '#f87171';
+  const logoData = embedLogo(tool.slug);
+
+  const logoBlock = logoData
+    ? `<g transform="translate(80, 180)">
+    <rect x="0" y="0" width="100" height="100" rx="18" fill="#ffffff" opacity="0.04"/>
+    <image href="${logoData}" x="10" y="10" width="80" height="80" preserveAspectRatio="xMidYMid meet"/>
+  </g>`
+    : '';
+
+  const titleX = logoData ? 210 : 80;
 
   return `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
@@ -67,8 +101,9 @@ function svgFor(tool) {
   <rect x="0" y="0" width="1200" height="6" fill="url(#accent)"/>
   <text x="80" y="100" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="600" fill="#a78bfa" letter-spacing="2">aipedia.wiki</text>
   <text x="80" y="135" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="500" fill="#9ca3af">${category}</text>
-  <text x="80" y="270" font-family="Inter, system-ui, sans-serif" font-size="92" font-weight="800" fill="#fafafa">${title}</text>
-  <text x="80" y="320" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="500" fill="#9ca3af">${company}</text>
+  ${logoBlock}
+  <text x="${titleX}" y="270" font-family="Inter, system-ui, sans-serif" font-size="76" font-weight="800" fill="#fafafa">${title}</text>
+  <text x="${titleX}" y="310" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="500" fill="#9ca3af">${company}</text>
   <foreignObject x="80" y="360" width="900" height="160">
     <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Inter, system-ui, sans-serif; font-size: 26px; line-height: 1.4; color: #d1d5db;">${tagline}</div>
   </foreignObject>
