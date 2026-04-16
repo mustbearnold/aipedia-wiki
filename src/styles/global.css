@@ -258,3 +258,33 @@ html {
   padding: 0.25rem 0.5rem;
   margin-left: -0.5rem;
 }
+
+/* Marquee-on-hover: text with ellipsis by default, scrolls end-to-end on
+   hover only when it actually overflows. Pure CSS using container queries
+   so no JS overhead per card. min(0, ...) keeps short text still. */
+.marquee-hover {
+  container-type: inline-size;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: block;
+  min-width: 0;
+}
+.marquee-hover > .marquee-hover-inner {
+  display: inline-block;
+  white-space: nowrap;
+  will-change: transform;
+}
+.marquee-hover:hover > .marquee-hover-inner {
+  animation: marquee-hover-slide 9s ease-in-out infinite;
+}
+@keyframes marquee-hover-slide {
+  0%, 15%   { transform: translateX(0); }
+  50%, 65%  { transform: translateX(min(0px, calc(100cqw - 100%))); }
+  100%      { transform: translateX(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee-hover:hover > .marquee-hover-inner {
+    animation: none;
+  }
+}
