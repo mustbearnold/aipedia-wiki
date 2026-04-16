@@ -410,6 +410,31 @@ a, button, [role="button"], .tool-card, .category-pill, .helpful-btn, .copy-btn 
               border-color 200ms ease;
   will-change: transform;
 }
+/* Thin top-edge accent: barely-there 2px gradient strip that hints at the
+   category color without colonising the card. */
+.cat-card-accent {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  opacity: 0.85;
+  pointer-events: none;
+  z-index: 1;
+}
+/* Soft radial glow from the top-left corner — fades to transparent over
+   ~60% of the card. Reads as "color-coded" at a glance without being loud. */
+.cat-card-glow {
+  position: absolute;
+  top: -30%; left: -20%;
+  width: 140%; height: 140%;
+  opacity: 0.09;
+  filter: blur(18px);
+  pointer-events: none;
+  z-index: 0;
+  transition: opacity 200ms ease;
+}
+@media (hover: hover) and (pointer: fine) {
+  .cat-card:hover .cat-card-glow { opacity: 0.18; }
+}
 @media (hover: hover) and (pointer: fine) {
   .cat-card:hover {
     transform: translateY(-3px);

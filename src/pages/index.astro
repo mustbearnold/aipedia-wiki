@@ -175,16 +175,24 @@ const featuredComparisons = comparisons
       {categoryRail.map((cat) => (
         <a
           href={`/categories/${cat.slug}/`}
-          class="cat-card shrink-0 snap-start w-[200px] rounded-xl overflow-hidden no-underline group relative"
-          style="background: var(--bg-card); border: 1px solid var(--border);"
+          class="cat-card shrink-0 snap-start w-[200px] rounded-xl no-underline group relative overflow-hidden"
+          style={`background: var(--bg-card); border: 1px solid var(--border); --cat-grad: ${cat.gradient};`}
         >
-          <div class="h-[44px] flex items-center px-3 relative overflow-hidden" style={`background: ${cat.gradient};`}>
-            <span class="text-xl leading-none" aria-hidden="true" style="filter: drop-shadow(0 1px 2px rgba(0,0,0,0.2));">{cat.emoji}</span>
-            <span class="ml-auto text-[10px] font-semibold text-white/85 tabular-nums">{cat.count} {cat.count === 1 ? 'tool' : 'tools'}</span>
-          </div>
-          <div class="px-3 py-2 flex items-center justify-between gap-2">
-            <div class="text-[13px] font-bold text-[var(--text-primary)] group-hover:text-[var(--accent-primary)] transition-colors truncate">{cat.label}</div>
-            <div class="flex items-center -space-x-1.5 shrink-0">
+          <span class="cat-card-accent" aria-hidden="true" style={`background: ${cat.gradient};`}></span>
+          <span class="cat-card-glow" aria-hidden="true" style={`background: ${cat.gradient};`}></span>
+          <div class="relative px-3 py-3 flex flex-col gap-2.5">
+            <div class="flex items-center gap-2">
+              <span
+                class="shrink-0 inline-flex items-center justify-center rounded-md text-[15px] leading-none"
+                style={`width: 26px; height: 26px; background: ${cat.gradient}; box-shadow: inset 0 1px 0 rgba(255,255,255,0.25), 0 2px 4px -2px rgba(0,0,0,0.3);`}
+                aria-hidden="true"
+              >
+                {cat.emoji}
+              </span>
+              <span class="text-[13px] font-bold text-[var(--text-primary)] group-hover:text-[var(--accent-primary)] transition-colors truncate">{cat.label}</span>
+              <span class="ml-auto text-[10px] font-semibold text-[var(--text-muted)] tabular-nums shrink-0">{cat.count}</span>
+            </div>
+            <div class="flex items-center -space-x-1.5 min-h-[22px]">
               {cat.tools.slice(0, 3).map((t) => (
                 <span class="cat-tool-logo" style="width: 22px; height: 22px; border-radius: 6px; padding: 1px;" title={t.title}>
                   <img src={`/logos/tools/${t.slug}.png`} alt="" width="22" height="22" loading="lazy" class="block w-full h-full object-contain" onerror="this.style.display='none'" />
