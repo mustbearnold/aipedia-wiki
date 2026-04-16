@@ -162,13 +162,11 @@ const featuredComparisons = comparisons
     </div>
 
     <div id="cat-rail" class="cat-rail flex gap-3 overflow-x-auto pb-2 -mx-4 px-4 md:mx-0 md:px-0 snap-x snap-mandatory">
-      <a href="/tools/" class="cat-card shrink-0 snap-start w-[220px] rounded-2xl overflow-hidden no-underline group relative" style="background: linear-gradient(135deg, rgba(167,139,250,0.18), rgba(96,165,250,0.12)); border: 1px solid rgba(167,139,250,0.28);">
-        <div class="p-4 h-full flex flex-col justify-between min-h-[140px]">
-          <div>
-            <div class="text-[11px] font-semibold uppercase tracking-[0.12em] text-[var(--accent-primary)]">All tools</div>
-            <div class="text-[22px] font-bold text-[var(--text-primary)] leading-tight mt-1">{allTools.length} tools</div>
-          </div>
-          <div class="text-[12px] text-[var(--text-muted)] group-hover:text-[var(--text-secondary)] transition-colors">
+      <a href="/tools/" class="cat-card shrink-0 snap-start w-[200px] rounded-xl overflow-hidden no-underline group relative" style="background: linear-gradient(135deg, rgba(167,139,250,0.18), rgba(96,165,250,0.12)); border: 1px solid rgba(167,139,250,0.28);">
+        <div class="px-3 py-2.5 flex flex-col gap-1.5">
+          <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-[var(--accent-primary)]">All tools</div>
+          <div class="text-[18px] font-bold text-[var(--text-primary)] leading-tight">{allTools.length} tools</div>
+          <div class="text-[11px] text-[var(--text-muted)] group-hover:text-[var(--text-secondary)] transition-colors">
             Browse the full catalog &rarr;
           </div>
         </div>
@@ -177,24 +175,21 @@ const featuredComparisons = comparisons
       {categoryRail.map((cat) => (
         <a
           href={`/categories/${cat.slug}/`}
-          class="cat-card shrink-0 snap-start w-[220px] rounded-2xl overflow-hidden no-underline group relative"
+          class="cat-card shrink-0 snap-start w-[200px] rounded-xl overflow-hidden no-underline group relative"
           style="background: var(--bg-card); border: 1px solid var(--border);"
         >
-          <div class="h-[68px] flex items-center px-4 relative overflow-hidden" style={`background: ${cat.gradient};`}>
-            <span class="text-3xl leading-none" aria-hidden="true" style="filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));">{cat.emoji}</span>
-            <span class="ml-auto text-[11px] font-semibold text-white/80 tabular-nums">{cat.count} {cat.count === 1 ? 'tool' : 'tools'}</span>
+          <div class="h-[44px] flex items-center px-3 relative overflow-hidden" style={`background: ${cat.gradient};`}>
+            <span class="text-xl leading-none" aria-hidden="true" style="filter: drop-shadow(0 1px 2px rgba(0,0,0,0.2));">{cat.emoji}</span>
+            <span class="ml-auto text-[10px] font-semibold text-white/85 tabular-nums">{cat.count} {cat.count === 1 ? 'tool' : 'tools'}</span>
           </div>
-          <div class="p-3">
-            <div class="text-[14px] font-bold text-[var(--text-primary)] group-hover:text-[var(--accent-primary)] transition-colors">{cat.label}</div>
-            <div class="flex items-center -space-x-2 mt-2.5 min-h-[28px]">
-              {cat.tools.slice(0, 4).map((t) => (
-                <span class="cat-tool-logo" style="width: 28px; height: 28px; border-radius: 8px; padding: 2px;" title={t.title}>
-                  <img src={`/logos/tools/${t.slug}.png`} alt="" width="28" height="28" loading="lazy" class="block w-full h-full object-contain" onerror="this.style.display='none'" />
+          <div class="px-3 py-2 flex items-center justify-between gap-2">
+            <div class="text-[13px] font-bold text-[var(--text-primary)] group-hover:text-[var(--accent-primary)] transition-colors truncate">{cat.label}</div>
+            <div class="flex items-center -space-x-1.5 shrink-0">
+              {cat.tools.slice(0, 3).map((t) => (
+                <span class="cat-tool-logo" style="width: 22px; height: 22px; border-radius: 6px; padding: 1px;" title={t.title}>
+                  <img src={`/logos/tools/${t.slug}.png`} alt="" width="22" height="22" loading="lazy" class="block w-full h-full object-contain" onerror="this.style.display='none'" />
                 </span>
               ))}
-              {cat.tools.length === 0 && (
-                <span class="text-[11px] text-[var(--text-muted)]">No tools yet</span>
-              )}
             </div>
           </div>
         </a>
