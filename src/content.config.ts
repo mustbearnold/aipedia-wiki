@@ -234,6 +234,27 @@ const workflows = defineCollection({
   }).passthrough(),
 });
 
+const news = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: 'src/content/news' }),
+  schema: z.object({
+    type: z.string().optional(),
+    slug: z.string().optional(),
+    title: z.string(),
+    date: z.union([z.string(), z.date()]).transform((d) => d instanceof Date ? d.toISOString().split('T')[0] : String(d)),
+    severity: z.enum(['minor', 'major', 'breaking']).optional(),
+    summary: z.string().optional(),
+    affects: z.array(z.string()).optional(),
+    categories: z.array(z.string()).optional(),
+    author: z.string().optional(),
+    last_updated: dateish,
+    last_verified: dateish,
+    sources: z.array(z.object({
+      url: z.string(),
+      title: z.string().optional(),
+    })).optional(),
+  }).passthrough(),
+});
+
 const benchmarks = defineCollection({
   loader: glob({ pattern: '**/*.md', base: 'src/content/benchmarks' }),
   schema: z.object({
@@ -269,4 +290,5 @@ export const collections = {
   reports,
   workflows,
   benchmarks,
+  news,
 };

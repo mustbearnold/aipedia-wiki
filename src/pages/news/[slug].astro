@@ -1,0 +1,43 @@
+---
+import { getCollection, render } from 'astro:content';
+import ArticlePlusLayout from '../../layouts/ArticlePlusLayout.astro';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('news');
+  return entries.map((entry) => ({
+    params: { slug: entry.data.slug || entry.id.replace(/\.md$/, '').replace(/\\/g, '/') },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content, headings } = await render(entry);
+
+const slug = entry.data.slug ?? entry.id.replace(/\.md$/, '');
+const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
+
+const wordCount = entry.body ? entry.body.split(/\s+/).filter(Boolean).length : 0;
+const readingMinutes = Math.max(1, Math.round(wordCount / 230));
+
+const severityBadge: Record<string, { text: string; color: string }> = {
+  breaking: { text: 'Breaking', color: 'red' },
+  major:    { text: 'Major',    color: 'yellow' },
+  minor:    { text: 'Update',   color: 'gray' },
+};
+const sev = (entry.data.severity as string) || 'minor';
+const badge = severityBadge[sev] ?? severityBadge.minor;
+---
+
+<ArticlePlusLayout
+  title={entry.data.title}
+  seoTitle={`${entry.data.title} — aipedia.wiki News`}
+  description={entry.data.summary ?? ''}
+  pageUrl={`${siteBase}news/${slug}/`}
+  breadcrumbs={[{ label: 'News', href: '/news/' }, { label: entry.data.title }]}
+  headings={headings}
+  readingMinutes={readingMinutes}
+  lastVerified={entry.data.last_verified ? String(entry.data.last_verified) : (entry.data.date ? String(entry.data.date) : undefined)}
+  badge={badge}
+>
+  <Content />
+</ArticlePlusLayout>
