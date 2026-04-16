@@ -276,7 +276,7 @@ html {
   will-change: transform;
 }
 .marquee-hover:hover > .marquee-hover-inner {
-  animation: marquee-hover-slide 6s linear infinite;
+  animation: marquee-hover-slide var(--marquee-duration, 6s) linear infinite;
 }
 @keyframes marquee-hover-slide {
   0%        { transform: translateX(0); }

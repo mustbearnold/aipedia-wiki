@@ -86,5 +86,46 @@ const ogImageUrl = ogImage
       const observer = new MutationObserver(updateBg);
       observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
     </script>
+
+    <script is:inline>
+      // Constant-speed marquee: measure each .marquee-hover element's
+      // overflow distance and set --marquee-duration so speed stays
+      // uniform across cards regardless of text length.
+      (function () {
+        var PX_PER_SEC = 80;   // perceived scroll speed
+        var PAUSE_FRAC = 0.1;  // 10% of cycle is the pause at the end
+        var MIN_S = 3;         // don't let very short marquees cycle too fast
+        var MAX_S = 14;        // or very long ones too slow
+
+        function tune(el) {
+          var inner = el.querySelector('.marquee-hover-inner');
+          if (!inner) return;
+          var overflow = inner.scrollWidth - el.clientWidth;
+          if (overflow <= 2) {
+            el.style.setProperty('--marquee-duration', '0s');
+            return;
+          }
+          var motionSec = (overflow * 2) / PX_PER_SEC;
+          var totalSec = motionSec / (1 - PAUSE_FRAC);
+          totalSec = Math.max(MIN_S, Math.min(MAX_S, totalSec));
+          el.style.setProperty('--marquee-duration', totalSec.toFixed(2) + 's');
+        }
+
+        function tuneAll() {
+          document.querySelectorAll('.marquee-hover').forEach(tune);
+        }
+
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', tuneAll);
+        } else {
+          tuneAll();
+        }
+        window.addEventListener('resize', (function () {
+          var t;
+          return function () { clearTimeout(t); t = setTimeout(tuneAll, 150); };
+        })());
+        document.addEventListener('astro:after-swap', tuneAll);
+      })();
+    </script>
   </body>
 </html>
