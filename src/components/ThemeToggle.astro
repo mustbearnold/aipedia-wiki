@@ -1,7 +1,6 @@
 <button
-  id="theme-toggle"
   type="button"
-  class="inline-flex items-center justify-center w-8 h-8 rounded-lg hover:bg-[var(--bg-card-hover)] transition-colors cursor-pointer"
+  class="theme-toggle inline-flex items-center justify-center w-8 h-8 rounded-lg hover:bg-[var(--bg-card-hover)] transition-colors cursor-pointer"
   aria-label="Toggle theme"
 >
   <!-- Sun icon (shown in light mode) -->
@@ -15,25 +14,38 @@
   </svg>
 </button>
 
-<script>
-  const btn = document.getElementById('theme-toggle');
-  const sunIcon = btn?.querySelector('.theme-icon-sun');
-  const moonIcon = btn?.querySelector('.theme-icon-moon');
-
-  function updateIcons() {
-    const isLight = document.documentElement.classList.contains('light');
-    if (sunIcon && moonIcon) {
-      sunIcon.classList.toggle('hidden', !isLight);
-      moonIcon.classList.toggle('hidden', isLight);
+<script is:inline>
+  (function () {
+    if (window.__themeToggleBound) {
+      window.__themeToggleUpdate && window.__themeToggleUpdate();
+      return;
     }
-  }
+    window.__themeToggleBound = true;
 
-  updateIcons();
+    function updateIcons() {
+      var isLight = document.documentElement.classList.contains('light');
+      document.querySelectorAll('.theme-toggle').forEach(function (btn) {
+        var sun = btn.querySelector('.theme-icon-sun');
+        var moon = btn.querySelector('.theme-icon-moon');
+        if (sun) sun.classList.toggle('hidden', !isLight);
+        if (moon) moon.classList.toggle('hidden', isLight);
+      });
+    }
+    window.__themeToggleUpdate = updateIcons;
 
-  btn?.addEventListener('click', () => {
-    document.documentElement.classList.toggle('light');
-    const isLight = document.documentElement.classList.contains('light');
-    localStorage.setItem('theme', isLight ? 'light' : 'dark');
+    // Event delegation so handler survives view transitions + multiple instances
+    document.addEventListener('click', function (e) {
+      var btn = e.target.closest && e.target.closest('.theme-toggle');
+      if (!btn) return;
+      e.preventDefault();
+      document.documentElement.classList.toggle('light');
+      var isLight = document.documentElement.classList.contains('light');
+      try { localStorage.setItem('theme', isLight ? 'light' : 'dark'); } catch (_) {}
+      updateIcons();
+    });
+
+    // Initial icon sync + after view transitions
     updateIcons();
-  });
+    document.addEventListener('astro:after-swap', updateIcons);
+  })();
 </script>
