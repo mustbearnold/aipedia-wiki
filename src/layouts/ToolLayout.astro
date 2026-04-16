@@ -20,6 +20,7 @@ import ReviewsBlock from '../components/ReviewsBlock.astro';
 import StickyMobileCTA from '../components/StickyMobileCTA.astro';
 import ProsCons from '../components/ProsCons.astro';
 import FeedbackForm from '../components/FeedbackForm.astro';
+import ReportOutdatedButton from '../components/ReportOutdatedButton.astro';
 
 interface Props {
   frontmatter: Record<string, any>;
@@ -132,7 +133,7 @@ const breadcrumbLdItems = [
             {frontmatter.author && (
               <>
                 <span aria-hidden="true">·</span>
-                <span>By <span class="text-[var(--text-secondary)]">{frontmatter.author}</span></span>
+                <span>By <a href="/about/editor/" class="text-[var(--text-secondary)] no-underline hover:text-[var(--accent-primary)] hover:underline">Daniel Mercer</a></span>
               </>
             )}
             {readingMinutes > 0 && (
@@ -203,6 +204,8 @@ const breadcrumbLdItems = [
       <ShareButtons title={frontmatter.title} pageUrl={`${siteBase}tools/${toolSlug}/`} />
 
       <FeedbackForm toolName={frontmatter.title} />
+
+      <ReportOutdatedButton pageTitle={frontmatter.title} pageSlug={toolSlug} pageType="tool" />
     </div>
 
     <!-- Right column: sidebar (desktop only) -->

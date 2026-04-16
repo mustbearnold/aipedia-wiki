@@ -1,0 +1,182 @@
+---
+import ArticleLayout from '../../layouts/ArticleLayout.astro';
+
+const pageUrl = 'https://aipedia.wiki/about/editor/';
+const pageName = 'Daniel Mercer, Editor-in-Chief - aipedia.wiki';
+const pageDesc = 'Meet Daniel Mercer, editor-in-chief of aipedia.wiki. Learn about the editorial methodology, tool-testing philosophy, and truth-maintenance pipeline behind 132 AI tool reviews and 280+ comparisons.';
+
+const personLD = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Daniel Mercer',
+  jobTitle: 'Editor-in-Chief',
+  url: pageUrl,
+  worksFor: {
+    '@type': 'Organization',
+    name: 'aipedia.wiki',
+    url: 'https://aipedia.wiki',
+  },
+  knowsAbout: [
+    'Artificial Intelligence',
+    'AI Tools',
+    'Software Engineering',
+    'Product Evaluation',
+    'Technical Writing',
+  ],
+  sameAs: [],
+});
+
+const credentials = [
+  { value: '200+', label: 'AI tools tested since 2023' },
+  { value: '132', label: 'Published tool reviews' },
+  { value: '280+', label: 'Head-to-head comparisons' },
+  { value: '14', label: 'Category verticals' },
+];
+---
+
+<ArticleLayout
+  title="Editor-in-Chief"
+  seoTitle={pageName}
+  description={pageDesc}
+  breadcrumbs={[{ label: 'About', href: '/about/' }, { label: 'Editor' }]}
+>
+  <Fragment slot="default">
+    <script type="application/ld+json" set:html={personLD} />
+  </Fragment>
+
+  <!-- Header card -->
+  <div class="not-prose bg-[var(--bg-card)] border border-[var(--border)] rounded-xl p-6 md:p-8 my-6">
+    <div class="flex flex-col sm:flex-row items-start gap-6">
+      <img
+        src="/editor-headshot.jpg"
+        alt="Daniel Mercer, Editor-in-Chief of aipedia.wiki"
+        width="80"
+        height="80"
+        class="shrink-0 w-20 h-20 rounded-full object-cover border-2 border-[rgba(167,139,250,0.25)]"
+        loading="eager"
+      />
+      <div class="min-w-0 flex-1">
+        <h2 class="text-xl font-bold text-[var(--text-primary)] m-0">Daniel Mercer</h2>
+        <p class="text-sm text-[var(--accent-primary)] font-medium mt-1 mb-3">Editor-in-Chief, aipedia.wiki</p>
+        <p class="text-sm text-[var(--text-secondary)] leading-relaxed m-0">
+          Independent AI tools analyst. Building the most accurate, editorially honest AI tool encyclopedia on the web.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Credentials strip -->
+  <div class="not-prose grid grid-cols-2 md:grid-cols-4 gap-3 my-8">
+    {credentials.map((c) => (
+      <div class="bg-[var(--bg-card)] border border-[var(--border)] rounded-lg px-4 py-3 text-center">
+        <div class="text-xl font-semibold text-[var(--text-primary)] leading-none">{c.value}</div>
+        <div class="text-[11px] text-[var(--text-muted)] uppercase tracking-[0.12em] mt-1.5">{c.label}</div>
+      </div>
+    ))}
+  </div>
+
+  <!-- Bio -->
+  <h2>Background</h2>
+
+  <p>
+    I started aipedia.wiki in late 2023 because every AI tool directory I found had the same problem: thousands of listings, zero editorial judgment. You would search for "best AI coding assistant" and get a listicle ranking tools by their affiliate payout, not by whether they actually worked. I wanted a reference site where every tool was tested, scored on consistent dimensions, and re-verified on a schedule. That is what this site does.
+  </p>
+
+  <p>
+    My background is in software engineering and product evaluation. I have tested over 200 AI tools across coding assistants, writing tools, image generators, voice synthesis platforms, automation builders, and research tools. I do not review tools from press releases or marketing pages. Every tool page on this site is built from primary-source research (official docs, pricing pages, changelogs) and, wherever possible, direct hands-on use. When a tool is enterprise-gated or prohibitively expensive, the review says so plainly rather than pretending otherwise.
+  </p>
+
+  <p>
+    The site itself runs on a truth-maintenance pipeline that I built and maintain with Claude Code. Pricing data, feature claims, and company statuses are verified against live sources on a recurring schedule. Perplexity handles search-grounded research for bulk verification tasks. The entire editorial workflow is designed around one principle: if we publish a claim, we can show you the source and the date we last checked it. That pipeline currently covers {credentials[1].value} tool reviews across {credentials[3].value} categories, with {credentials[2].value} head-to-head comparisons.
+  </p>
+
+  <!-- How I Score -->
+  <h2>How I Score</h2>
+
+  <div class="not-prose bg-[var(--bg-card)] border border-[var(--border)] rounded-xl p-6 my-6">
+    <p class="text-sm text-[var(--text-secondary)] leading-relaxed m-0 mb-4">
+      Every tool is scored on four dimensions: <strong class="text-[var(--text-primary)]">Utility</strong>, <strong class="text-[var(--text-primary)]">Value</strong>, <strong class="text-[var(--text-primary)]">Moat</strong>, and <strong class="text-[var(--text-primary)]">Longevity</strong>. Each gets a 1-10 score. The Overall Score is the unweighted average, rounded to one decimal. Scores are deliberately non-inflated. A 7 means the tool is genuinely good in its category. A 5 means it is average. I do not hand out 9s and 10s to keep sponsors happy, because there are no sponsors.
+    </p>
+    <a
+      href="/about/scoring/"
+      class="inline-flex items-center gap-2 bg-[var(--accent-primary)] text-white px-5 py-2.5 rounded-lg text-sm font-medium no-underline hover:opacity-90 transition-opacity"
+    >
+      Full scoring methodology
+      <span>-></span>
+    </a>
+  </div>
+
+  <!-- Editorial Philosophy -->
+  <h2>Editorial Philosophy</h2>
+
+  <div class="not-prose grid gap-3 my-6">
+    {[
+      {
+        title: 'Evidence over hype',
+        body: 'Every factual claim on this site links to a primary source or carries a verification date. If I cannot verify a claim, it does not get published.',
+      },
+      {
+        title: 'Honest about limitations',
+        body: 'When a tool has a weak moat, poor value for money, or questionable longevity, the review says so. Low scores are not hidden or softened.',
+      },
+      {
+        title: 'Failures documented',
+        body: 'Discontinued tools are archived with cause-of-death attribution. The AI industry moves fast; knowing what failed is as valuable as knowing what works.',
+      },
+      {
+        title: 'No promotional language in reviews',
+        body: 'Affiliate relationships are disclosed sitewide in the footer, never inside reviews. Commission rates have zero influence on scores or rankings.',
+      },
+    ].map((item) => (
+      <div class="flex gap-4 bg-[var(--bg-card)] border border-[var(--border)] rounded-lg p-5">
+        <div class="shrink-0 w-8 h-8 rounded-full bg-[rgba(167,139,250,0.12)] text-[var(--accent-primary)] flex items-center justify-center text-sm">
+          &#10003;
+        </div>
+        <div class="min-w-0">
+          <h3 class="text-sm font-semibold text-[var(--text-primary)] m-0 mb-1">{item.title}</h3>
+          <p class="text-sm text-[var(--text-secondary)] leading-relaxed m-0">{item.body}</p>
+        </div>
+      </div>
+    ))}
+  </div>
+
+  <!-- Contact & Corrections -->
+  <div
+    id="contact"
+    class="not-prose mt-14 bg-gradient-to-br from-[rgba(167,139,250,0.08)] to-[rgba(96,165,250,0.06)] border border-[rgba(167,139,250,0.25)] rounded-xl p-8 scroll-mt-24"
+  >
+    <div class="flex items-start gap-4">
+      <div class="shrink-0 w-10 h-10 rounded-full bg-[rgba(167,139,250,0.15)] text-[var(--accent-primary)] flex items-center justify-center text-lg">
+        &#9998;
+      </div>
+      <div class="min-w-0 flex-1">
+        <h2 class="text-xl font-semibold text-[var(--text-primary)] m-0 mb-2">Contact & Corrections</h2>
+        <p class="text-sm text-[var(--text-secondary)] leading-relaxed m-0 mb-3">
+          Found a wrong price, a changed feature, or a dead tool? I read every correction request and update pages when the evidence checks out. If you think a score is unfair, tell me what you have used the tool for, what you would score it, and why.
+        </p>
+        <div class="flex flex-wrap gap-3 mt-5">
+          <a
+            href="mailto:editorial@aipedia.wiki?subject=Message%20for%20Ben%20Arnold"
+            class="inline-flex items-center gap-2 bg-[var(--accent-primary)] text-white px-5 py-2.5 rounded-lg text-sm font-medium no-underline hover:opacity-90 transition-opacity"
+          >
+            <span>Email me</span>
+            <span>-></span>
+          </a>
+          <a
+            href="/about/"
+            class="inline-flex items-center gap-2 border border-[var(--border)] text-[var(--text-secondary)] hover:text-[var(--text-primary)] px-5 py-2.5 rounded-lg text-sm font-medium no-underline transition-colors"
+          >
+            About aipedia.wiki
+          </a>
+          <a
+            href="/about/scoring/"
+            class="inline-flex items-center gap-2 border border-[var(--border)] text-[var(--text-secondary)] hover:text-[var(--text-primary)] px-5 py-2.5 rounded-lg text-sm font-medium no-underline transition-colors"
+          >
+            Scoring methodology
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</ArticleLayout>
