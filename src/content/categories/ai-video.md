@@ -3,7 +3,7 @@ type: category
 slug: ai-video
 title: AI Video Generation
 description: Text-to-video, image-to-video, and AI avatar tools. Kling 3.0, Seedance 2.0, Runway, Luma, HeyGen, Synthesia, D-ID.
-tool_count: 17
+tool_count: 18
 seo_title: "Best AI Video Tools (2026), aipedia.wiki"
 meta_description: "Kling 3.0, Seedance 2.0, Veo 3, and Runway Gen-4.5 lead AI video generation in 2026. Compare 17 live tools for quality, pricing, and use cases. Sora 2 discontinued April 2026. Updated April 2026."
 author: "aipedia.wiki Editorial"

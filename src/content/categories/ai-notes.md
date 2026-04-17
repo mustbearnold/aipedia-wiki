@@ -3,7 +3,7 @@ type: category
 slug: ai-notes
 title: AI Note-Taking & Knowledge Management
 description: AI-enhanced note-taking, knowledge management, and meeting intelligence. Notion AI, Obsidian, NotebookLM, Otter.ai, Fireflies.ai.
-tool_count: 9
+tool_count: 10
 seo_title: "Best AI Note-Taking Tools (2026) . aipedia.wiki"
 meta_description: "Notion AI, Obsidian, and Google NotebookLM lead AI note-taking in 2026. Compare 7 tools for teams, individuals, and research. Updated April 2026."
 author: "aipedia.wiki Editorial"

@@ -3,7 +3,7 @@ type: category
 slug: ai-image
 title: AI Image Generation
 description: Text-to-image and image editing AI. Midjourney, Flux, DALL-E 3, Ideogram, Leonardo, Adobe Firefly, Stable Diffusion.
-tool_count: 11
+tool_count: 17
 seo_title: "Best AI Image Tools (2026) . aipedia.wiki"
 meta_description: "Midjourney, Flux, and DALL-E 3 lead AI image generation in 2026. Compare 7 tools for quality, pricing, and text rendering. Updated April 2026."
 author: "aipedia.wiki Editorial"

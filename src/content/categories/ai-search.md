@@ -3,7 +3,7 @@ type: category
 slug: ai-search
 title: AI Search & Research Tools
 description: AI-powered search engines and research assistants. Perplexity, Google AI Overviews, Gemini Deep Research, Exa, Tavily.
-tool_count: 5
+tool_count: 7
 seo_title: "Best AI Search Tools (2026) . aipedia.wiki"
 meta_description: "Perplexity, Google AI Overviews, and Gemini Deep Research lead AI search in 2026. Compare 7 tools for research, citations, and APIs. Updated April 2026."
 author: "aipedia.wiki Editorial"

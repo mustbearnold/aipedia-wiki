@@ -3,7 +3,7 @@ type: category
 slug: ai-chatbots
 title: AI Chatbots & LLMs
 description: General-purpose large language model chatbots. ChatGPT, Claude, Gemini, Grok, Mistral . the foundation models that power everything else.
-tool_count: 5
+tool_count: 13
 seo_title: "Best AI Chatbots & LLMs (2026) . aipedia.wiki"
 meta_description: "ChatGPT, Claude, and Gemini lead the AI chatbot space in 2026. Compare 5 general-purpose LLMs on reasoning, coding, context window, and price. Updated April 2026."
 author: "aipedia.wiki Editorial"

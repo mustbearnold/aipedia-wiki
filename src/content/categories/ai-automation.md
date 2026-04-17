@@ -3,7 +3,7 @@ type: category
 slug: ai-automation
 title: AI Automation & Agents
 description: Workflow automation, AI agent platforms, and sales/support tools. n8n, Make, Zapier, Relevance AI, CrewAI, Apollo, Clay, Intercom, Instantly.
-tool_count: 12
+tool_count: 22
 seo_title: "Best AI Automation Tools (2026) . aipedia.wiki"
 meta_description: "n8n, Make, and Zapier lead workflow automation in 2026. Compare 7 platforms for AI agents, integrations, and self-hosting. Updated April 2026."
 author: "aipedia.wiki Editorial"
