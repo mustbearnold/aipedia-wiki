@@ -2,18 +2,18 @@
 type: tool
 slug: qwen
 title: Qwen
-tagline: Alibaba's open-weight LLM family covering chat, coding, vision, and reasoning across 100+ languages.
+tagline: Alibaba Cloud's open-weight LLM family covering chat, coding, vision, and reasoning across 119 languages, with Qwen3.6 Plus at 1M context.
 category: ai-chatbots
 secondary_categories: [ai-coding, ai-research]
 company: Alibaba Cloud
 url: https://qwen.ai/
 pricing_model: freemium
-price_range: "Free (open weights) / API from $0.23/M tokens"
+price_range: "Free (open weights) / API from ~$0.15/M tokens"
 status: active
 launched: 2023-09
-last_updated: 2026-04-15
-last_verified: 2026-04-15
-update_frequency: quarterly
+last_updated: 2026-04-17
+last_verified: 2026-04-17
+update_frequency: monthly
 affiliate:
   has_program: false
   commission: null
@@ -26,142 +26,151 @@ scores:
   moat: 5
   longevity: 8
 tags: [open-weights, alibaba, multilingual, coding, vision, reasoning, qwen3, api, chinese-llm]
-seo_title: "Qwen: Features, Pricing & Review (2026)"
-meta_description: "Qwen is Alibaba's open-weight LLM family. Qwen3 72B rivals frontier models like GPT-5.4 on benchmarks; API starts at $0.23/M tokens. 119 languages, coding, vision, and reasoning models included."
+seo_title: "Qwen: Features, Pricing & Review (April 2026)"
+meta_description: "Qwen is Alibaba's open-weight LLM family. Qwen3.6 Plus flagship (April 2026) runs 1M context with agentic coding; Apache 2.0 weights across 119 languages. API from ~$0.15/M tokens."
 author: "aipedia.wiki Editorial"
-quick_answer: >-
-  Qwen is Alibaba Cloud's family of open-weight large language models covering text, code, vision, math, and reasoning, with models ranging from 600M to 235B parameters. The flagship Qwen3-235B-A22B matched DeepSeek-R1 and Gemini 2.5 Pro on reasoning and coding benchmarks at its April 2025 release; current comparisons are against GPT-5.4 and Claude Opus 4.6. Alibaba Cloud API access starts at $0.23/M tokens for Qwen 2.5 72B; best for developers who want open-weight frontier performance they can self-host or access cheaply, not for teams needing a polished consumer chat product with strong English-only focus.
 best_for:
-  - multilingual applications (119 languages)
-  - developers wanting open weights to self-host
-  - coding and math workloads
-  - cost-sensitive API usage
+  - multilingual products across 119 languages
+  - developers wanting open weights for self-hosting
+  - coding, math, and agentic workloads
+  - cost-sensitive high-volume API use
 not_best_for:
   - users wanting a polished consumer chat app
-  - teams needing enterprise compliance guarantees
-  - workloads where Alibaba data residency is a concern
+  - teams needing strict Western data residency on hosted API
+  - workloads sensitive to Alibaba cloud exposure
+quick_answer: >-
+  Qwen is Alibaba's open-weight LLM family. Qwen3.6 Plus (April 2026) runs 1M context with agentic coding. Apache 2.0 weights cover 119 languages. API from ~$0.15/M on smaller models. Pick it for multilingual or self-hosted deployment. Skip for polished consumer chat.
 ---
 
 # Qwen
 
-Qwen (pronounced "chwen") is Alibaba Cloud's series of open-weight large language models, developed by the Qwen team inside Alibaba. The family spans text generation, code, vision-language, math, and reasoning, with models from 600M to 235B parameters. Qwen3, released April 29, 2025, is the current flagship generation, pre-trained on approximately 36 trillion tokens across 119 languages ([Qwen blog](https://qwenlm.github.io/blog/qwen3/)). By late 2025 the series had expanded to Qwen3.5 and Qwen3.6 Plus, with Qwen3.6 Plus supporting a 1M-token context window and agentic capabilities suited for complex coding and research workflows ([Alibaba Cloud Blog](https://www.alibabacloud.com/blog/qwen3-6-plus-towards-real-world-agents_603005)).
+Alibaba Cloud's open-weight LLM family, developed by the Qwen team and spanning text, code, vision-language, math, and reasoning. Model sizes run from 0.6B up through the 235B-parameter MoE flagship and the trillion-parameter Qwen3-Max.
 
+The current surface includes **Qwen3.6 Plus** (released April 2, 2026) as the flagship proprietary model with 1M native context and always-on chain-of-thought. **Qwen3-Max** is Alibaba's trillion-parameter closed model. Open-weight releases from the Qwen3 line ship under Apache 2.0 on [Hugging Face](https://huggingface.co/Qwen). Qwen3-Coder (480B MoE with 35B active) leads coding tasks among Alibaba releases.
 
-## Editor's Take
+## System Verdict
 
-I've reviewed the search results provided, but they don't contain specific information about Qwen's current performance, pricing, or competitive positioning as of April 2026. The search results primarily reference AIPediaHub as a general AI tool directory and Wikipedia's AI initiatives, rather than detailed technical data about Qwen itself.
+> **Pick Qwen if you need open-weight frontier models with multilingual reach.** Apache 2.0 across most sizes gives real commercial flexibility. 119-language coverage, strongest among major open-weight families. Qwen3-Coder handles agentic coding at frontier-adjacent quality. Cost-per-token on Alibaba Cloud undercuts OpenAI and Anthropic by 5-10x for equivalent capability.
+>
+> **Skip it if you want a polished consumer chat product or strict Western data residency.** qwen.ai is functional but developer-first, not ChatGPT-grade. Alibaba Cloud is a Chinese provider, which matters for regulated enterprise buyers. Competing open-weight families like [DeepSeek](/tools/deepseek/) publish stronger reasoning benchmarks on specific tasks.
+>
+> **Who uses which surface:** Hugging Face downloads for self-hosters, Alibaba Cloud Model Studio API for hosted use, OpenRouter or DeepInfra for neutral gateways, Qwen3-Coder for IDE coding backends, Qwen3.6 Plus for agentic 1M-context workloads.
 
-Given the constraints of my instructions, to base answers on provided search results and clearly distinguish between sourced facts and inference, I cannot write an authentic "Editor's Take" that meets your standards. An effective take requires:
+## Key Facts
 
-- Hands-on testing details (response times, specific model performance)
-- Current pricing verification against competitors
-- Direct comparison data (e.g., Qwen3.6 Plus vs. Claude Opus 4.6 on specific benchmarks)
-- Real usage friction points
+| | |
+|---|---|
+| **Flagship (proprietary)** | Qwen3.6 Plus (released April 2, 2026, 1M context) |
+| **Trillion-parameter model** | Qwen3-Max (pricing cut up to 50% in 2026 price war) |
+| **Open-weight line** | Qwen3 series on Apache 2.0 (0.6B through 235B MoE) |
+| **Coding flagship** | Qwen3-Coder (480B MoE, 35B active) |
+| **Vision flagship** | Qwen3.5-Omni (multimodal) |
+| **Language coverage** | 119 languages, pre-trained on ~36T tokens |
+| **Architecture** | Hybrid thinking / non-thinking mode switchable |
+| **Context window** | Up to 1M tokens on Qwen3.6 Plus |
+| **Hosted API pricing** | From ~$0.15/M input (Qwen3-32B) to ~$0.70/M (Qwen3-235B Thinking) |
+| **Qwen3-Max pricing** | ~$0.861/M input, ~$3.441/M output at launch, now reduced |
+| **Batch invocation** | 50% off real-time pricing on supported models |
 
-The page content you provided includes detailed specs (Qwen3-Coder-Next at 70.6-71.3% on SWE-bench, $0.23/M tokens pricing, 1M-token context), but the search results don't verify or contextualize these claims for April 2026.
+Every data point above was verified on 2026-04-17. See Sources.
 
-To write this take authentically in aipedia.wiki Editorial's voice, I'd need search results containing:
-- Recent benchmark comparisons (Qwen vs. GPT-5.4, Claude Opus 4.6)
-- Current API pricing and rate limits
-- User feedback or performance reports from Q1-Q2 2026
-- Competitive positioning in the open-weight LLM space
+## What it actually is
 
-Would you like to provide additional search results, or would you prefer I note this limitation in the response?
+A multi-pronged model family covering four surfaces. Chat at [qwen.ai](https://qwen.ai/) and tongyi.aliyun.com. Hosted API through Alibaba Cloud Model Studio. Open-weight downloads on Hugging Face. Third-party gateway access through OpenRouter, Together AI, and DeepInfra.
 
-## What It Does
+The family splits into specialists. Core text models (Qwen3, Qwen3.5, Qwen3.6) handle general chat and reasoning. Qwen3-Coder is the coding-optimized variant. Qwen-VL and Qwen3.5-Omni handle vision and multimodal. QwQ-32B is a reasoning-first model in the chain-of-thought style.
 
-Qwen covers multiple modalities through specialized sub-families. The core text models (Qwen3, Qwen 2.5) handle general chat, summarization, translation, and long-document analysis across 119 languages, with context windows up to 128K tokens for most sizes. Qwen2.5-Coder, released in two sizes (7B on September 19, 2024, and 32B on November 11, 2024), is a dedicated code model covering 338 programming languages with a 131K token context window and competitive HumanEval and SWE-bench scores ([Qwen GitHub](https://github.com/QwenLM/Qwen3)). As of April 2026, Qwen3-Coder-Next (80B MoE with 3B active parameters) is the newer agentic coding model, scoring roughly 70.6 to 71.3% on SWE-bench. Qwen-VL handles vision-language tasks, including image understanding, OCR, and document analysis. QwQ is a reasoning-focused model in the Qwen family, designed for step-by-step chain-of-thought similar to DeepSeek-R1.
+The real moats are Apache 2.0 licensing on most open sizes, 119-language coverage no other major family matches, and Alibaba's willingness to run aggressive API pricing. Thin-margin cloud pricing combined with open weights gives teams a self-host escape valve most closed-model providers cannot offer.
 
-Qwen3 introduced hybrid thinking/non-thinking modes, letting users trade latency for reasoning depth. The 235B-parameter MoE flagship (Qwen3-235B-A22B) activates only 22B parameters per inference, keeping it cost-efficient while matching or exceeding Gemini 2.5 Pro and DeepSeek-R1 on coding and math benchmarks at release.
+## When to pick Qwen
 
-## Who It's For
+- **Multilingual products.** 119-language training covers Chinese, Japanese, Korean, Arabic, and European languages at higher quality than English-centric families.
+- **Self-hosted deployment.** Apache 2.0 weights run from single-CPU (0.6B) to 4x A100 (72B dense) to MoE clusters (235B, 480B Coder). No licensing fees.
+- **Cost-sensitive API at frontier-adjacent quality.** Qwen3-32B at ~$0.15/M input undercuts closed-model alternatives 5-10x.
+- **Agentic coding with 1M context.** Qwen3.6 Plus supports entire-codebase workflows without chunking, with always-on chain-of-thought.
+- **Vision and video input.** Qwen3.5 Plus and Qwen3.6 Plus accept image and video in addition to text.
+- **IDE backends via OpenAI-compatible API.** Drop Qwen3-Coder into Cursor, Continue.dev, or Cline.
 
-- **Multilingual product teams** building applications in 119 languages, especially Chinese, Japanese, Korean, Arabic, and European languages
-- **Developers wanting cost-efficient API access** to a frontier-tier model at $0.23-$0.325/M input tokens
-- **Self-hosters** who want to run capable models locally; sizes from 0.5B (single CPU) to 72B (4x A100) available
-- **Coding and math teams** using Qwen2.5-Coder or Qwen3 with thinking mode for complex technical tasks
-- **Researchers** needing an open-weight baseline competitive with closed models for comparison studies
+## When to pick something else
+
+- **Polished consumer chat product:** [ChatGPT](/tools/chatgpt/) or [Claude](/tools/claude/). qwen.ai is developer-first.
+- **Strongest open-weight reasoning:** [DeepSeek](/tools/deepseek/) R1 still leads on specific reasoning benchmarks.
+- **Best-in-class English writing:** [Claude](/tools/claude/) Opus 4.7. Qwen handles English well but trails Claude on nuance.
+- **Google Workspace integration:** [Gemini](/tools/gemini/). Qwen has no Workspace hooks.
+- **Open-weight with Huawei Ascend training stack:** [GLM](/tools/glm/) GLM-5.1 is the closest alternative with domestic-silicon provenance.
+- **Broadest plugin marketplace:** [ChatGPT](/tools/chatgpt/). No Qwen equivalent to the GPT Store.
 
 ## Pricing
 
-| Plan | Price | Notes |
-|------|-------|-------|
-| Open Weights (HuggingFace) | Free | Self-host any model; 0.5B to 235B available |
-| Qwen 2.5 72B (Alibaba API) | $0.23/M input, ~$0.90/M output | Competitive frontier model |
-| Qwen3.5 Plus (Alibaba API) | $0.26/M input, $1.56/M output | Feb 2026 release, text + image + video input |
-| Qwen3.6 Plus (Alibaba API) | $0.325/M input, $1.95/M output | 1M context, agentic coding |
-| Batch Invocation | 50% off real-time price | Available for supported models |
-| Qwen-Turbo | $0.0004/K input, $0.0012/K output | Fast, lightweight tasks |
+Hosted pricing via [Alibaba Cloud Model Studio](https://www.alibabacloud.com/help/en/model-studio/model-pricing). Self-host for free under Apache 2.0 via [Hugging Face](https://huggingface.co/Qwen).
 
-*Prices verified 2026-04-15 from [Alibaba Cloud Model Studio](https://www.alibabacloud.com/help/en/model-studio/model-pricing) and [OpenRouter](https://openrouter.ai/qwen/qwen3.6-plus).*
+| Plan / Model | Price | Notes |
+|---|---|---|
+| Open weights (Hugging Face) | Free | Apache 2.0 across most Qwen3 sizes |
+| Qwen3-32B (dense) | $0.15/M input, $0.75/M output | Lightweight hosted tier |
+| Qwen3-235B-A22B | $0.20-$1.20/M input, $1.00-$6.00/M output | Tiered by context length |
+| Qwen3.5 Plus | $0.26/M input, $1.56/M output | Feb 2026, text + image + video input |
+| Qwen3.6 Plus | $0.325/M input, $1.95/M output | 1M context, agentic coding |
+| Qwen3-Max | From ~$0.861/M input after 50% cut | Trillion-parameter closed flagship |
+| Qwen-Turbo | $0.0004/K input, $0.0012/K output | Fast, lightweight |
+| Batch invocation | 50% off real-time | Supported models only |
 
-## Key Features
+*Prices verified 2026-04-17 via [Alibaba Cloud Model Studio pricing](https://www.alibabacloud.com/help/en/model-studio/model-pricing), [DeepInfra Qwen API pricing 2026](https://deepinfra.com/blog/qwen-api-pricing-2026-guide), and [OpenRouter Qwen3.6 Plus preview](https://openrouter.ai/qwen/qwen3.6-plus-preview). Qwen3-Max rates dropped as much as 50% during the 2026 China AI price war.*
 
-- **119-language multilingual support:** pre-trained on data covering 119 languages and dialects, with strong performance in Chinese, Japanese, Korean, Arabic, and major European languages ([Qwen Blog](https://qwenlm.github.io/blog/qwen3/))
-- **Hybrid thinking/non-thinking modes:** Qwen3 models can switch between fast response and extended chain-of-thought reasoning within the same model, without needing separate model deployments
-- **Open weights with commercial license:** model weights released on HuggingFace under permissive licenses, enabling local deployment and fine-tuning
-- **Qwen2.5-Coder 32B:** dedicated code model, 131K context, covers 338 programming languages; competitive on HumanEval and SWE-bench
-- **Qwen3.6 Plus 1M context:** the latest release supports 1 million token context for entire-codebase and long-document workflows
-- **Vision-language (Qwen-VL):** image, document, and screenshot understanding; trained on multimodal data from the start
-- **Efficient MoE architecture:** Qwen3-235B activates only 22B parameters per token, making frontier-scale inference affordable
-- **Multiple inference providers:** available via Alibaba Cloud, Together AI, DeepInfra, OpenRouter, and self-hosting
+## Against the alternatives
 
-## Limitations
+| | Qwen3.6 Plus | DeepSeek V3 | Claude Opus 4.7 | GLM-5.1 |
+|---|---|---|---|---|
+| **Open weights** | Apache 2.0 on open line | V3 open | Closed | MIT on GLM-5.1 |
+| **Context window** | 1M | 64K | 1M | 200K |
+| **Language coverage** | 119 | Chinese + English focus | Broad, English-strongest | Chinese + English |
+| **API input price** | ~$0.325/M | ~$0.28/M | $5.00/M | $1.00/M |
+| **Coding** | Qwen3-Coder 480B MoE | Strong | Claude Code CLI | SWE-Bench Pro leader |
+| **Multimodal** | Text, vision, video input | Limited vision | Text + vision | Text-first |
+| **Best viewed as** | Open-weight multilingual | Cheap capable API | Reasoning specialist | Open-weight coding leader |
 
-- **Consumer chat product is minimal:** qwen.ai does not offer the same polished consumer experience as ChatGPT or Claude; primarily an API and open-weight resource
-- **Data residency concerns:** Alibaba Cloud is a Chinese company; enterprise buyers in regulated industries need to evaluate accordingly
-- **Thin moat:** open-weight releases mean competitors can reproduce and improve on Qwen's work continuously; leadership positions shift quickly
-- **Documentation primarily in Chinese first:** official docs are often translated but some resources lag in English quality
-- **Vision and multimodal less mature than text models:** Qwen-VL is capable but lags behind GPT-4o Vision in independent evaluations
+## Failure modes
 
-## Bottom Line
+- **Consumer chat product is minimal.** qwen.ai is functional for testing but lacks ChatGPT-grade onboarding, memory, or ecosystem.
+- **Data residency on Alibaba Cloud.** Enterprise buyers in regulated industries need to evaluate the Chinese-cloud posture. Self-hosting the Apache 2.0 weights is the workaround.
+- **Thin moat on open-weight leaderboard.** DeepSeek, Kimi, GLM, and Qwen all iterate monthly. Leadership positions shift fast.
+- **English documentation lag.** Official docs translate from Chinese first. Some resources trail the Chinese original by weeks.
+- **Vision models lag best-in-class.** Qwen-VL and Qwen3.5-Omni are capable but trail GPT-4o Vision and Gemini 3.1 Pro on independent evaluations.
+- **Hosted API rate limits vary by region.** Alibaba Cloud tier and regional load affect throughput. Production deployments should load-test.
+- **Qwen3-Max tier pricing is complex.** Tiered-by-context pricing is harder to budget than flat rates. Batch discounts help.
 
-Qwen is the strongest open-weight LLM family for multilingual and coding workloads as of April 2026. At $0.23/M input tokens for Qwen 2.5 72B, it delivers frontier-adjacent performance at a price that undercuts most closed models by 5-10x. Teams building multilingual products, or developers who want to self-host a capable model without per-token costs, get more options here than from any other single source. ChatGPT and Claude offer better product experience; DeepSeek offers a more focused (and in some benchmarks stronger) reasoning model at similar pricing.
+## Methodology
 
-## Best Alternatives
-
-- [DeepSeek](../tools/deepseek.md): stronger reasoning benchmarks with R1; similarly priced API; more focused model family
-- [ChatGPT](../tools/chatgpt.md): polished consumer product, broader integrations; 10x higher API cost
-- [Claude](../tools/claude.md): best writing and reasoning quality; significantly more expensive
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-04-17 against [Alibaba Cloud Model Studio pricing](https://www.alibabacloud.com/help/en/model-studio/model-pricing), [Qwen3 blog](https://qwenlm.github.io/blog/qwen3/), [Constellation Research Qwen 3.6 Plus coverage](https://www.constellationr.com/insights/news/alibabas-qwen-launches-new-flagship-llm-qwen-36-plus), and [DeepInfra Qwen API pricing 2026 guide](https://deepinfra.com/blog/qwen-api-pricing-2026-guide).
 
 ## FAQ
 
 **Is Qwen open source?**
-Yes. Qwen model weights are released publicly on HuggingFace under permissive licenses (varies by model size). You can download and run them locally, fine-tune them, or deploy them commercially without paying Alibaba, as long as you follow the license terms. The hosted API on Alibaba Cloud is separate and pay-per-token.
+Largely yes. The Qwen3 open-weight line ships under Apache 2.0 on Hugging Face, covering sizes from 0.6B to 235B MoE. Download, self-host, fine-tune, and deploy commercially without licensing fees. Qwen3-Max and Qwen3.5/3.6 Plus are proprietary hosted models.
 
-**How does Qwen3 compare to GPT-4o?**
-Qwen3-235B-A22B-Thinking, the flagship reasoning variant, matches or exceeds GPT-4o on math and coding benchmarks as of its April 2025 release. For general chat, Qwen3 72B is competitive with GPT-4o at roughly 10x lower API cost. GPT-4o has better multimodal integration and a more polished interface.
+**What is Qwen3.6 Plus?**
+Alibaba's current proprietary flagship, released April 2, 2026. Supports 1M native context, always-on chain-of-thought, and agentic coding. Priced at $0.325/M input and $1.95/M output through Alibaba Cloud Model Studio.
 
-**What is QwQ?**
-QwQ (formally QwQ-32B) is a reasoning-focused model in the Qwen family, designed to perform extended chain-of-thought reasoning similar to DeepSeek-R1 and OpenAI o1. It was released as an open-weight model and is available on HuggingFace. Qwen3's built-in thinking mode largely overlaps with QwQ's capabilities in more recent releases.
+**How does Qwen3 compare to Claude Opus 4.7?**
+Qwen3-235B-A22B and Qwen3.6 Plus are competitive on coding and math benchmarks but trail Claude Opus 4.7 on long-form English reasoning. At roughly 10-15x lower API cost, Qwen wins on value for multilingual and coding workloads.
 
+**What is Qwen3-Coder?**
+The coding-optimized branch, a 480B-parameter MoE with 35B active. Released as open-weight under Apache 2.0. Handles long-context agentic coding, competitive on HumanEval and SWE-bench against closed frontier models.
 
+**Can I run Qwen locally?**
+Yes. Sizes start at 0.6B for single CPU, with 7B and 14B practical on consumer GPUs. The 72B dense model runs on 4x A100. MoE variants require larger clusters. Quantized versions extend accessibility further.
 
-
-## Review History
-
-- **2026-04-12:** Pricing verified. Clarified pricing for annual vs monthly billing.
-- **2026-03-02:** Score revised up by 0.5 after extended hands-on testing.
-- **2026-01-16:** Flagship version bumped after the most recent model release.
-- **2025-10-16:** Pricing verified. Minor copy edits.
-- **2024-01-15:** Added to the catalog with a full review.
-
-## Related Comparisons
-
-- [ChatGPT vs Qwen](../comparisons/chatgpt-vs-qwen.md)
-- [Claude vs Qwen](../comparisons/claude-vs-qwen.md)
-- [DeepSeek vs Qwen](../comparisons/deepseek-vs-qwen.md)
-- [Gemini vs Qwen](../comparisons/gemini-vs-qwen.md)
-- [Mistral AI vs Qwen](../comparisons/mistral-ai-vs-qwen.md)
 ## Sources
 
-- [Qwen3 official blog post](https://qwenlm.github.io/blog/qwen3/)
-- [Alibaba Cloud Model Studio pricing](https://www.alibabacloud.com/help/en/model-studio/model-pricing)
-- [Qwen3.6-Plus announcement](https://www.alibabacloud.com/blog/qwen3-6-plus-towards-real-world-agents_603005)
-- [OpenRouter Qwen3.6 Plus pricing](https://openrouter.ai/qwen/qwen3.6-plus)
-- [Qwen Wikipedia](https://en.wikipedia.org/wiki/Qwen)
+- [Qwen3 official blog](https://qwenlm.github.io/blog/qwen3/): architecture, training, 119-language coverage
+- [Alibaba Cloud Model Studio pricing](https://www.alibabacloud.com/help/en/model-studio/model-pricing): current hosted rates
+- [Constellation Research: Qwen 3.6 Plus launch](https://www.constellationr.com/insights/news/alibabas-qwen-launches-new-flagship-llm-qwen-36-plus): flagship release and features
+- [DeepInfra Qwen API pricing guide 2026](https://deepinfra.com/blog/qwen-api-pricing-2026-guide): tiered pricing reference
+- [OpenRouter Qwen3.6 Plus preview](https://openrouter.ai/qwen/qwen3.6-plus-preview): alternative gateway pricing
+- [Hugging Face Qwen](https://huggingface.co/Qwen): open-weight model downloads
+- [Qwen Wikipedia](https://en.wikipedia.org/wiki/Qwen): model family overview and release history
 
 ## Related
 
-- **Category:** [AI Chatbots](../categories/ai-chatbots.md)
-- **Category:** [AI Coding](../categories/ai-coding.md)
+- **Category:** [AI Chatbots](/categories/ai-chatbots/) · [AI Coding](/categories/ai-coding/)
+- **Comparisons:** [ChatGPT vs Qwen](/comparisons/chatgpt-vs-qwen/) · [Claude vs Qwen](/comparisons/claude-vs-qwen/) · [DeepSeek vs Qwen](/comparisons/deepseek-vs-qwen/) · [Gemini vs Qwen](/comparisons/gemini-vs-qwen/) · [Mistral AI vs Qwen](/comparisons/mistral-ai-vs-qwen/)
