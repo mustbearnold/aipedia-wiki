@@ -2,16 +2,16 @@
 type: tool
 slug: mem
 title: Mem
-tagline: AI-powered notes app that automatically organizes your notes and surfaces relevant context when you need it.
+tagline: AI-powered notes app that auto-surfaces related context and answers questions across your knowledge base without folders or tags.
 category: ai-notes
 company: Mem Labs
 url: https://mem.ai
 pricing_model: freemium
-price_range: "$0-$19.99/month"
+price_range: "$0-$25/user/month"
 status: active
 launched: 2020-09
-last_updated: 2026-04-15
-last_verified: 2026-04-15
+last_updated: 2026-04-17
+last_verified: 2026-04-17
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -25,118 +25,145 @@ scores:
   moat: 6
   longevity: 6
 tags: [notes, ai-notes, knowledge-management, pkm, productivity, auto-organize, second-brain]
-seo_title: "Mem: AI Notes App Review, Features & Pricing (2026)"
-meta_description: "Mem is an AI notes app that auto-organizes your notes and surfaces relevant context. Free and Pro plans reviewed. Honest assessment as of April 2026."
+seo_title: "Mem: AI Notes App Review, Features & Pricing (April 2026)"
+meta_description: "Mem is an AI notes app with Smart Search, Similar Mems, and Smart Write. Mem X Pro runs $19.99/mo; Teams at $25/user. Skips folders in favor of AI-managed recall."
 author: "aipedia.wiki Editorial"
+best_for:
+  - knowledge workers who dislike filing
+  - consultants managing context across clients
+  - high-volume meeting-note capture
+  - conversational queries over a large note library
+not_best_for:
+  - visual database structure like Notion
+  - offline or local-first workflows
+  - users who need portable plain-Markdown storage
 quick_answer: >-
-  Mem is an AI-powered notes application from Mem Labs that skips folders and tags entirely, instead using AI to automatically surface relevant past notes while you write new ones and to answer conversational questions about your knowledge base. The core bet is that AI-managed organization beats manual filing: a Smart Search feature lets you query your notes in plain language and receive synthesized answers drawn from your actual content. Pro is $19.99/month; best for knowledge workers who want frictionless capture with AI-powered recall, not for users who need visual organization, database-style structure, or local-first privacy (Obsidian serves those cases better).
+  Mem is an AI-first notes app that replaces folders with automatic recall. Pick it for high-volume capture with conversational search. Skip it for databases, offline use, or local-first privacy.
+price_history:
+  - date: 2025-10-01
+    plan: "Pro"
+    price: "$19.99/mo"
+    note: "Raised from $14.99 during Mem 2.0 refresh"
+  - date: 2026-04-15
+    plan: "Teams"
+    price: "$25/user/mo"
+    note: "Unchanged since launch"
 ---
 
 # Mem
 
-Mem is an AI-powered notes and knowledge management application that takes a different approach from traditional note-taking tools: instead of requiring you to organize notes into folders or hierarchies, Mem uses AI powered by models like Claude Opus 4.6 and GPT-5.4 to automatically surface relevant notes based on what you're currently working on. Write a note about a meeting, and Mem will surface related notes from past meetings, projects, or research without you asking [https://mem.ai](https://mem.ai).
+An AI-first notes app from Mem Labs. Skips folders and tags entirely: notes get auto-linked, related context surfaces in a sidebar as you write, and Smart Search answers plain-language questions across the vault. Backed by frontier models for retrieval and writing aids.
 
-The core philosophy is that manual organization is friction. Mem bets that AI can handle the organizational layer, freeing you to focus on capturing and using information rather than filing it. It is a useful framing, but it comes with real trade-offs: the less you organize manually, the more you depend on the AI surfacing the right things, which works well for some workflows and poorly for others.
+Free tier caps at 100 notes. Pro is $19.99/mo. Teams at $25/user/mo adds shared workspaces.
 
-Mem competes primarily with [Notion AI](../tools/notion-ai.md) and [Reflect](../tools/reflect.md) in the AI-augmented notes space. Compared to Notion, Mem is simpler and more focused on rapid capture and AI recall, but lacks Notion's database and project management depth. Compared to Reflect, Mem's auto-organization is more aggressive, while Reflect relies more on manual backlinks and networked thinking.
+## System Verdict
 
+> **Pick Mem if manual filing is the bottleneck.** The auto-surfacing of related notes mid-write is the clearest differentiator. Smart Search returns cited snippets from old notes in seconds, which beats folder-hunting for consultants and journalists working across many clients.
+>
+> **Skip it if you need structure, offline, or export freedom.** No databases, no kanban, no local storage. The 2025 price increase from $14.99 to $19.99 narrowed the value gap against Notion AI and Reflect, both of which give more control over how notes are organized.
+>
+> **Who pays which tier:** Free for under 100 notes, Pro $19.99/mo for solo knowledge workers with heavy capture, Teams $25/user/mo for 2+ seat teams wanting shared AI-surfaced context.
 
-## Editor's Take
+## Key Facts
 
-I tested Mem's latest build from April 15, 2026, with Claude Opus 4.6 handling search and GPT-5.4 for writing aids. The auto-surfacing of related notes mid-writing is slick, query "product roadmap decisions" and it pulls exact snippets from six-month-old meetings in under two seconds. No folders, no tags, just AI doing the heavy lifting. Pro runs $19.99/month, which feels right for heavy users dumping 50+ notes weekly.
+| | |
+|---|---|
+| **Core bet** | AI-managed organization replaces folders and tags |
+| **Backing models** | Frontier LLMs for Smart Search and Smart Write |
+| **Smart Search** | Natural-language queries over the whole vault with cited snippets |
+| **Similar Mems** | Auto-surfaces related notes while writing |
+| **Smart Write / Smart Edit** | Draft, expand, rewrite with vault context |
+| **Capture surfaces** | Web, desktop, iOS, Android, browser extension, email forwarding |
+| **Integrations** | Google Calendar, Slack (Pro), Zapier |
+| **Free tier** | 100 notes, basic search, 5 AI generations/month |
+| **Pro** | $19.99/mo, unlimited notes and AI |
+| **Offline mode** | None, cloud-only |
 
-That said, it flops if you need visual structure or offline access. Reflect edges it out for networked thinkers; Reflect's backlinks give you control Mem's black-box AI lacks, and Reflect's $15/month Pro is cheaper with better local sync. I bias toward tools with export options, Mem's locked-in feel irks me after a week of daily use.
+Every data point was verified against vendor docs on 2026-04-17. See Sources.
 
-Grab Mem if you're a consultant chaining meetings and hate filing. Skip it for academics or teams wanting databases; Notion AI handles that at similar cost without the organization gamble.
+## What it actually is
 
-## What It Does
+A cloud-only notes app whose value depends on AI surfacing the right past note at the right moment. Capture happens through web, mobile, browser clips, or email forwarding. The editor auto-links related notes as a sidebar recommendation, so prior context arrives without a search.
 
-Mem captures notes in a minimal, fast-loading interface and uses AI to create links between related notes, surface relevant past notes while you write new ones, and answer questions about your knowledge base. The Smart Search feature treats your notes like a queryable database; you can ask "what did we decide about the product roadmap?" and receive an AI-synthesized answer from relevant notes. Mem integrates Claude Opus 4.6 for advanced reasoning in search and GPT-5.4 for writing assistance [https://mem.ai/pricing](https://mem.ai/pricing).
+Smart Search is the power-user feature. Queries like "what did we decide about pricing in Q1" return AI-synthesized answers citing the underlying notes. Smart Write drafts and expands inside any note with full vault context.
 
-Mem also provides an AI writing assistant for drafting, editing, and expanding within notes, with access to your full knowledge base. Recent updates include enhanced team collaboration features and integrations with calendar apps for automatic meeting note capture.
+The moat: no other mainstream notes app commits as hard to AI-first organization. The fragility: if Smart Search misses, the system breaks, because there are no folders to fall back on.
 
-The app supports cross-platform use via web, desktop, and mobile, with capture tools like browser extensions and email forwarding.
+## When to pick Mem
 
-## Who It's For
+- **High-volume meeting capture.** Consultants and sales ICs running 20+ meetings a week get the most lift from auto-linking.
+- **You prefer conversational retrieval.** Asking "what did Stripe say about rate limits" beats hunting a folder tree.
+- **You want frictionless capture across devices.** Email forwarding, browser extension, and mobile share sheet all work out of the box.
+- **Your notes library is large and consistent.** Mem surfaces better connections with 500+ notes than with 50.
+- **Calendar-driven workflows.** Google Calendar integration auto-creates meeting notes with AI summaries.
 
-- **Knowledge workers** who take large volumes of meeting notes and need to quickly find past decisions and context
-- **Researchers** capturing ideas, sources, and observations who want them connected automatically rather than manually
-- **Consultants and freelancers** managing context across multiple clients without complex folder structures
-- **Writers and journalists** building a personal reference library that can be queried conversationally
-- **Teams** (on Pro plans) sharing a knowledge base where AI helps surface relevant institutional knowledge
-- **Content creators** using AI to summarize research notes and generate outlines
+## When to pick something else
+
+- **Structured databases and project management:** [Notion AI](/tools/notion-ai/). Mem has no databases, kanban, or relational data.
+- **Local-first, offline, privacy-sensitive notes:** [Obsidian](/tools/obsidian/). Mem is cloud-only and servers hold plaintext for AI processing.
+- **Manual backlink control with E2EE:** [Reflect](/tools/reflect/). Cheaper at $10/mo and end-to-end encrypted.
+- **Source-grounded document Q&A:** [NotebookLM](/tools/notebooklm/). Free, citation-precise, better for research.
+- **Reading-heavy workflows:** [Readwise Reader](/tools/readwise/) for ingestion plus highlight retention.
 
 ## Pricing
 
 | Plan | Price | Key Limits |
 |------|-------|-----------|
-| Free | $0/mo | 100 notes, basic AI search, 5 AI generations/month |
-| Pro | $19.99/mo or $192/yr | Unlimited notes, full AI features, Smart Search, AI writing, 1,000 AI generations/month, team sharing |
-| Team | $25/user/mo | Everything in Pro + admin controls, shared workspaces, priority support |
+| Free | $0 | 100 notes, basic AI search, 5 AI generations/mo |
+| Pro | $19.99/mo ($192/yr) | Unlimited notes, Smart Search, Smart Write, 1,000 AI generations/mo |
+| Teams | $25/user/mo | Shared workspaces, admin controls, priority support |
 
-> Pricing verified at [mem.ai/pricing](https://mem.ai/pricing) as of 2026-04-15.
+*Prices verified 2026-04-17 via [mem.ai/pricing](https://get.mem.ai/pricing).*
 
-## Key Features
+## Against the alternatives
 
-- **AI auto-organization**, Mem creates connections between related notes automatically, surfacing relevant context without manual tagging or folder management
-- **Smart Search**, query your notes conversationally; ask questions and get AI-synthesized answers drawn from your actual notes using Claude Opus 4.6
-- **Related notes surfacing**, while writing a new note, Mem surfaces potentially relevant older notes in the sidebar, reducing the effort to recall prior context
-- **AI writing assistant**, draft, summarize, expand, and edit within notes using GPT-5.4 with access to your full knowledge base
-- **Capture anywhere**, browser extension, mobile app, email forwarding, Slack/Google Calendar integrations for quick note capture
-- **Templates**, structured templates for meetings, projects, and recurring note types
-- **Team workspaces**, shared knowledge bases with AI surfacing collective team context
-- **Calendar integration**, automatic note creation from meeting events with AI-generated summaries
+| | Mem Pro | Notion AI | Reflect | Obsidian |
+|---|---|---|---|---|
+| **Price** | $19.99/mo | $10-$20/mo | $10/mo | Free |
+| **Organization model** | **AI auto-links, no folders** | Databases + pages | Manual backlinks | Manual, local files |
+| **Offline** | None | Limited | Full | Full |
+| **End-to-end encryption** | No | No | Yes | Yes (local) |
+| **Plugin ecosystem** | None | Limited | Limited | 1,000+ |
+| **Best viewed as** | Frictionless capture | Team wiki + AI | Privacy-first PKM | Power-user PKM |
 
-## Limitations
+## Failure modes
 
-- **Dependent on AI quality for core value**, if the AI surfaces the wrong related notes, or misses critical connections, the entire value proposition breaks down; the system works better with a large, consistent note library than a sparse one
-- **Less structured than Notion**, Mem does not support databases, kanban boards, or relational data; it is a notes tool, not a project management or wiki platform
-- **No offline mode**, Mem requires an internet connection; there is no local storage or offline access
-- **Privacy considerations**, your entire knowledge base lives on Mem's servers and is processed by AI; review their data handling policies for sensitive information
-- **Pricing increases**, Pro plan rose from $14.99 to $19.99/month in late 2025, reducing value for solo users compared to alternatives
+- **Smart Search misses break the model.** No folders means no fallback. A miss on a critical query costs more than an equivalent miss in a structured tool.
+- **Pricing increase narrowed the value gap.** Pro moved from $14.99 to $19.99 in late 2025. Reflect at $10/mo and Notion AI at $10 now undercut Mem on price.
+- **Cloud-only, no offline.** Field work, travel, or regulated data all need a different tool.
+- **No databases or project management.** Mem is a notes app, not a wiki or tracker. Workflows that depend on structured records outgrow it.
+- **Export is lossy.** Markdown export exists but drops AI-generated backlinks and Similar Mems relationships.
+- **Privacy posture is cloud-processing.** Entire vault is readable by the AI layer. Not appropriate for legally sensitive content.
+- **Longevity risk.** Small vendor in a crowded category against Notion, Obsidian, and native AI notes features appearing in macOS and ChatGPT.
 
-## Bottom Line
+## Methodology
 
-Mem scores 8/10 on utility for knowledge workers who want AI to handle the organizational burden of a large note collection. The Smart Search and auto-surfacing features deliver consistent value with Claude Opus 4.6 integration. Value is 7/10 at $19.99/month; moat is 6/10 as similar AI organization appears in Notion AI and Reflect; longevity is 6/10 given competitive pressure from established platforms.
-
-## Best Alternatives
-
-| Tool | Price | Key Difference |
-|------|-------|----------------|
-| [Notion AI](../tools/notion-ai.md) | $10-$20/mo | Databases, project management, team wikis; more structured |
-| [Reflect](../tools/reflect.md) | $15/mo | Networked notes with manual backlinks; more user-controlled organization |
-| [Obsidian](../tools/obsidian.md) | $0 | Local-first, privacy-focused, graph view, plugin ecosystem |
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [mem.ai](https://mem.ai) and the [Mem pricing page](https://get.mem.ai/pricing).
 
 ## FAQ
 
 **Does Mem have a free plan?**
-Yes. Mem has a free tier with 100 notes, basic AI search, and 5 AI generations per month. Full features require Pro at $19.99/month [https://mem.ai/pricing](https://mem.ai/pricing).
+Yes. Free covers 100 notes, basic AI search, and 5 AI generations per month. Pro at $19.99/mo unlocks unlimited notes, Smart Search, Smart Write, and 1,000 monthly AI generations ([mem.ai/pricing](https://get.mem.ai/pricing)).
 
-**Is Mem good for team use?**
-Yes, Team plan at $25/user/month supports shared workspaces where AI surfaces notes from across the team's knowledge base. It works for small teams but lacks Notion's advanced permissions.
+**Is Mem good for teams?**
+The Teams plan at $25/user/mo supports shared workspaces with AI that surfaces collective context. Fine for small teams, weaker than Notion on permissions and admin depth.
 
 **How does Mem compare to Obsidian?**
-Obsidian stores notes locally (privacy-first, offline) with manual backlinking. Mem stores notes in the cloud with AI auto-connections. Choose Obsidian for local control; Mem for AI organization.
+Obsidian stores notes locally as Markdown with manual backlinking. Mem stores in the cloud with AI auto-linking. Obsidian wins on privacy, portability, and plugins. Mem wins on zero-friction capture and conversational search.
 
+**Can Mem work offline?**
+No. The app is cloud-only. No local storage or offline mode exists.
 
+**Mem vs Reflect?**
+Reflect costs less ($10/mo), adds end-to-end encryption, and relies on manual backlinks for control. Mem is pricier and cloud-processed but eliminates the filing step entirely. Control-seekers pick Reflect. Capture-first users pick Mem.
 
-
-## Review History
-
-- **2026-04-02:** Pricing and flagship model version verified. No material changes.
-- **2026-03-15:** Score bumped after the competitive field shifted around pricing.
-- **2026-01-16:** Added the new model variant to the features section.
-- **2025-11-16:** Pricing verified. Minor copy edits.
-- **2024-01-15:** First published review after two weeks of use.
-
-## Related Comparisons
-
-- [ChatGPT vs Mem](../comparisons/chatgpt-vs-mem.md)
-
-
-- **Category:** [Notes](../categories/ai-notes.md)
 ## Sources
 
-- [Mem official site](https://mem.ai), verified 2026-04-15
-- [Mem pricing page](https://mem.ai/pricing), verified 2026-04-15
-- [TechCrunch review of Mem AI updates](https://techcrunch.com/2026/03/12/mem-ai-claude-integration), covers 2026 model integrations
+- [mem.ai](https://mem.ai): product overview and feature list
+- [Mem pricing page](https://get.mem.ai/pricing): current Free, Pro, and Teams tiers
+- [Mem X launch notes](https://newsletter.mem.ai/p/introducing-mem-x-and-teams): AI feature history and roadmap
+
+## Related
+
+- **Category:** [AI Notes](/categories/ai-notes/)
+- **Comparisons:** [ChatGPT vs Mem](/comparisons/chatgpt-vs-mem/)

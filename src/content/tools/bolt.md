@@ -2,19 +2,19 @@
 type: tool
 slug: bolt
 title: Bolt.new
-tagline: In-browser full-stack AI app builder powered by WebContainers, no local setup, no installs, just describe and build.
+tagline: StackBlitz's in-browser full-stack AI app builder. WebContainers run Node.js in WebAssembly, zero local setup, token-metered billing.
 category: ai-design
 company: stackblitz
 url: https://bolt.new
 pricing_model: freemium
-price_range: "$0-$60/month"
+price_range: "$0-$2000/month"
 status: active
 launched: 2024-10
-last_updated: 2026-04-15
-last_verified: 2026-04-15
+last_updated: 2026-04-17
+last_verified: 2026-04-17
 update_frequency: monthly
-seo_title: "Bolt.new: Features, Pricing & Review (2026)"
-meta_description: "Bolt.new is an in-browser AI app builder by StackBlitz using WebContainers. Free tier available; Pro costs $25/mo. Build full-stack apps with zero local setup required."
+seo_title: "Bolt.new: Features, Pricing & Review (April 2026)"
+meta_description: "Bolt.new by StackBlitz builds full-stack web apps in the browser via WebContainers. Token-metered pricing: Free 1M tokens/month, Pro $25 for 10M with rollover, Teams $30/member, Enterprise custom. Enhance prompt button, multi-model support."
 author: "aipedia.wiki Editorial"
 affiliate:
   has_program: false
@@ -29,112 +29,126 @@ scores:
   longevity: 7
 tags: [app-builder, no-code, full-stack, webcontainers, browser-ide, prototyping, vibe-coding, ai-design]
 quick_answer: >-
-  Bolt.new is an in-browser full-stack app builder by StackBlitz that uses WebContainers technology to run Node.js entirely in WebAssembly, producing a running application from a natural language description with zero local installation required. Pro costs $25/month for 15M tokens and advanced model access including GPT-5.4, Claude Opus 4.6, and Gemini 3.1 Pro. Best for developers and learners who need instant browser-based prototyping on any machine including Chromebooks; not the right fit when your app needs a built-in backend or database, where Lovable's Supabase integration is the stronger choice.
+  Bolt.new runs a full Node.js stack in the browser via StackBlitz WebContainers, generating apps from prompts with zero local setup. Pick it for in-browser prototyping on locked-down machines or instant demos. Skip it if you need a built-in database (use Lovable) or production-grade code quality.
 ---
 
 # Bolt.new
 
-Bolt.new is an in-browser AI app builder developed by StackBlitz. It generates full-stack web applications from natural language descriptions using WebContainers technology that runs Node.js entirely in the browser, and is primarily used for rapid prototyping without local setup. As of April 2026, Bolt.new offers a free tier and Pro at $25/month ([Bolt.new](https://bolt.new)). Lovable provides similar app-building capabilities with built-in Supabase backend, but Bolt.new has zero-friction browser-based development.
+StackBlitz's in-browser AI app builder at [bolt.new](https://bolt.new). WebContainers run the full Node.js stack in WebAssembly inside any modern browser. No installs, no local environment, just a prompt and a running app.
 
+Token-metered billing. The Enhance prompt button rewrites your rough request into a structured spec before generation starts.
 
-## Editor's Take
+## System Verdict
 
-I tried building a React dashboard with Supabase auth in Bolt.new's free tier last week. It spun up a working prototype in under two minutes using GPT-5.4, complete with npm installs and a live Node server, all in my browser on a Chromebook. No setup hassles, which beats StackBlitz's old WebContainers demos by a mile.
+> **Pick Bolt.new if you want to prototype a full-stack app in the browser without touching a local environment.** WebContainers run npm, Node servers, and Vite builds client-side, which makes it the only credible option for Chromebooks, locked-down work machines, or classroom settings. Multi-model routing across GPT-5.4, Claude Opus 4.7, and Gemini 3.1 Pro.
+>
+> **Skip it if your app needs a real backend or database out of the box.** [Lovable](/tools/lovable/) provisions Supabase with auth, Postgres, and real-time subscriptions from one prompt. Skip Bolt also if you want architectural control. [Cursor](/tools/cursor/) and [Claude](/tools/claude/) Code give you a full local environment with better code quality.
+>
+> **Who pays which tier:** Free for 1M tokens a month and casual exploration, Pro $25/mo for 10M tokens and token rollover, Teams $30/member/mo for shared workspaces and admin controls, Pro scales up to $2,000/mo for 1200M tokens if you are running real volume. Tokens on paid plans roll over one extra month; on-demand token packs ($20 for 10M) never expire while your subscription stays active.
 
-Pro at $25/month unlocks 15M tokens and Claude Opus 4.6, but that's where it falters against Lovable. If your app needs real backend persistence like a database, Bolt's browser sandbox chokes; Lovable integrates Supabase out of the box and deploys properly. Bolt excels for frontend prototypes or teaching kids to code instantly, though. Skip it for anything production-bound.
+## Key Facts
 
-Grab the free tier if you're on a locked-down machine or just vibing ideas. I've bias toward browser tools since I hate local envs, but teams should look elsewhere. (148 words)
+| | |
+|---|---|
+| **Product** | In-browser full-stack AI app builder |
+| **Runtime** | StackBlitz WebContainers. Node.js in WebAssembly, client-side |
+| **Models** | GPT-5.4, Claude Opus 4.7, Gemini 3.1 Pro. Multi-model routing |
+| **Billing** | Token-metered. Entire project file tree syncs to the model each message |
+| **Free tier** | 1M tokens per month |
+| **Pro** | $25/mo for 10M+ tokens, rollover, all models |
+| **Pro max** | Scales to $2,000/mo for 1200M tokens |
+| **Enhance prompt** | Rewrites rough prompts into structured specs before generation |
+| **Deploy** | One-click to Netlify, Vercel, Cloudflare Pages |
+| **Version snapshots** | Revert to prior states if generation breaks the project |
 
-## What It Does
+Every data point above was verified against vendor sources on 2026-04-17. See Sources.
 
-Bolt.new is StackBlitz's AI-powered app builder that generates full-stack web applications from natural language descriptions, running entirely in the browser using WebContainers technology that executes Node.js in WebAssembly with zero local installation ([Bolt.new](https://bolt.new)). You describe what you want to build in natural language, and Bolt generates a full-stack application; frontend, backend, and package management; all executing in your browser tab without any local installation. It can install npm packages, run Node.js servers, and deploy to production.
+## What it actually is
 
-The key differentiator from competitors like Lovable is that everything runs client-side in the browser via WebContainers, StackBlitz's technology for running Node.js in WebAssembly. This means zero setup friction and instant previews. Recent updates include support for GPT-5.4, Claude Opus 4.6, and Gemini 3.1 Pro models, with improved token efficiency for complex generations ([StackBlitz Blog](https://blog.stackblitz.com/posts/bolt-new-updates-april-2026/)).
+A browser tab that runs a full Node development environment. Bolt generates code, installs npm packages, starts servers, and renders the live app inside the same page. No container on a remote VM, no local toolchain.
 
-## Who It's For
+WebContainers is the moat. StackBlitz built the WebAssembly runtime that executes Node.js entirely client-side. Competitors who want the same experience either pay to license it or rebuild it, which is non-trivial.
 
-- **Developers** who want to prototype quickly without setting up local environments
-- **Non-technical users** building simple web apps, landing pages, and internal tools
-- **Educators and students** learning web development with instant feedback
-- **Designers** creating interactive prototypes that actually work
-- **Anyone on restricted machines** (Chromebooks, work computers) who cannot install local development tools
+The trade-off is persistence. Bolt excels at frontend-heavy prototypes and demo apps. Apps needing authenticated users, a Postgres database, or production-grade data models hit friction. Lovable wins that lane because Supabase is provisioned inside the default flow.
+
+## When to pick Bolt.new
+
+- **You need instant frontend prototyping with zero setup.** Open the tab, describe the app, see it run. No install step.
+- **You work on a Chromebook, tablet, or locked-down work machine.** WebContainers run without admin privileges or OS-level dev tools.
+- **You teach or demo web development.** Students see a working app in minutes with full file system access.
+- **You want the Enhance prompt button to do the structuring.** Rough ideas become detailed specs before generation consumes tokens.
+- **You deploy to Netlify, Vercel, or Cloudflare Pages.** One-click deploy with your existing account.
+
+## When to pick something else
+
+- **Full-stack app with built-in backend, auth, and Postgres:** [Lovable](/tools/lovable/) provisions Supabase end to end.
+- **Autonomous agent that owns the whole app:** [Replit Agent](/tools/replit-agent/) with Agent 3 runs sessions up to 200 minutes.
+- **Component-level generation for React plus shadcn/ui:** [v0](/tools/v0/) has tighter Figma import and shadcn patterns.
+- **AI-native IDE on a local machine:** [Cursor](/tools/cursor/) for full architectural control across a real codebase.
+- **Terminal agent on an existing repo:** [Claude](/tools/claude/) Code CLI, strongest at multi-file refactors.
 
 ## Pricing
 
-| Plan | Price | Key Limits |
-|------|-------|-----------|
-| Free | $0/month | 1M tokens/day, GPT-5.4 access, community support |
-| Pro | $25/month | 15M tokens/month, Claude Opus 4.6 + Gemini 3.1 Pro, unlimited projects |
-| Pro+ | $50/month | 40M tokens/month, priority queue, all models |
-| Teams | $60/user/month | Shared workspaces, admin tools, 50M tokens/user |
+Pricing via [bolt.new/pricing](https://bolt.new/pricing). Annual billing saves 10%.
 
-*Prices verified 2026-04-15.*
+| Plan | Price | Tokens | Who's it for |
+|------|-------|--------|--------------|
+| Free | $0 | 1M/month | Casual use, first prototypes |
+| Pro | $25/mo | 10M/month, rollover | **Solo builders running sustained work** |
+| Pro scaled | $50 to $2,000/mo | 26M to 1200M/month | Heavy daily users |
+| Teams | $30/member/mo | Shared pool, admin tools | Small teams, classrooms, agencies |
+| Enterprise | Custom | Custom | Compliance-heavy orgs |
 
-## Key Features
+*Prices verified 2026-04-17 via [bolt.new/pricing](https://bolt.new/pricing). Tokens from paid subscriptions roll over one additional month. On-demand token purchases ($20 for 10M) never expire while you stay subscribed.*
 
-- **WebContainers:** Full Node.js runtime in the browser via WebAssembly; no server needed, no local setup required
-- **Zero-install development:** Start building immediately in any browser; works on Chromebooks, tablets, and restricted machines
-- **Multi-model support:** GPT-5.4, Claude Opus 4.6, Gemini 3.1 Pro; select per project
-- **Live preview:** See your app running in real time as the AI generates and modifies code
-- **Full package ecosystem:** Install any npm package directly in the browser environment
-- **Deploy anywhere:** One-click deployment to Netlify, Vercel, Cloudflare Pages
-- **File system access:** Full file tree visible and editable; switch between AI generation and manual coding freely
-- **Version snapshots:** Revert to previous states if the AI breaks something during iteration
+## Against the alternatives
 
-## Limitations
+| | Bolt.new | Lovable | v0 |
+|---|---|---|---|
+| **Scope** | Full-stack in-browser app | Full-stack deployed app with backend | Components and pages |
+| **Runtime** | Browser WebContainers | Hosted runtime + Supabase | Hosted preview |
+| **Backend** | None built-in | Supabase native | None |
+| **Code access** | Full file tree, editable | Full code, GitHub sync | Full export |
+| **Deploy targets** | Netlify, Vercel, Cloudflare | lovable.app, custom domain | Vercel one-click |
+| **Best viewed as** | In-browser IDE with AI | App factory with backend | Component factory |
 
-- **Browser performance constraints:** WebContainers run in WebAssembly, which is slower than native; complex apps can lag
-- **No native backend databases:** Does not include built-in database integration like Lovable's Supabase; you need to connect external services
-- **Token limits matter:** Each AI interaction consumes tokens; complex apps can exhaust monthly allocation quickly
-- **Framework constraints:** Best with React, Next.js, and Vite-based projects; other frameworks have limited support
-- **Not for production-scale apps:** Development environment is great for prototypes and MVPs, but production apps should be moved to proper infrastructure
+## Failure modes
 
-## Bottom Line
+- **WebAssembly is slower than native.** Large apps or memory-heavy build steps lag visibly versus a local Node install. WebContainers runs in the browser main thread with real limits.
+- **No built-in database.** Bolt can call external services, but the prompt-to-backend loop is nothing like Lovable's Supabase integration. Expect manual wiring.
+- **Token burn on large projects.** Each message syncs the full file tree to the model. A 50-file app burns far more tokens per prompt than a 5-file landing page.
+- **Framework optimization skews React.** React, Next.js, and Vite get the best generation quality. Other frameworks work but lag on idiomatic output.
+- **Not production infrastructure.** Apps deployed from Bolt are fine for demos and MVPs. Real traffic needs a move to proper hosting.
+- **Generation can break the project.** Version snapshots exist for a reason. Revert early, revert often.
 
-Bolt.new is the best choice for developers and learners who need instant browser-based prototyping with zero local setup, using StackBlitz's WebContainers to run Node.js entirely in WebAssembly with full npm package support and one-click deployment to Netlify or Vercel, but Lovable wins if you need built-in backend, database, and authentication out of the box ([Bolt.new](https://bolt.new)). The WebContainers technology is a genuine technical moat that competitors cannot easily replicate. At $25/month for Pro, it is reasonably priced for what it delivers.
+## Methodology
 
-## Best Alternatives
-
-- Lovable: Similar concept with built-in Supabase backend, auth, and database; better for apps needing a backend
-- Replit: Full cloud IDE with AI assistance, more developer-oriented
-- Cursor: If you want AI coding with a full local development environment
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [bolt.new/pricing](https://bolt.new/pricing), [support.bolt.new](https://support.bolt.new), and the [StackBlitz blog](https://blog.stackblitz.com/).
 
 ## FAQ
 
-**Does Bolt.new require any local installation?**
-No. Bolt.new runs entirely in the browser using StackBlitz's WebContainers technology, which executes Node.js in WebAssembly ([Bolt.new](https://bolt.new)). You need only a modern browser and an internet connection. It works on Chromebooks, tablets, and restricted work machines.
+**Does Bolt.new run locally?**
+No. Everything runs in the browser via StackBlitz WebContainers, which execute Node.js in WebAssembly. A modern browser and internet connection are the only requirements ([bolt.new](https://bolt.new)).
 
-**What is the difference between Bolt.new and Lovable?**
-Bolt.new runs entirely in-browser with zero setup and gives you full file system access to edit code manually. Lovable includes built-in Supabase backend for database and authentication. Choose Bolt.new for frontend-focused prototyping; choose Lovable when your app needs a backend.
+**How does token billing work?**
+Each message syncs the full project file tree to the model, so token cost scales with project size. Free gives 1M tokens a month, Pro gives 10M with rollover, and on-demand packs ($20 for 10M) never expire while you stay subscribed ([bolt.new/pricing](https://bolt.new/pricing)).
 
-**What frameworks does Bolt.new support?**
-Bolt.new works best with React, Next.js, and Vite-based projects. Other frameworks have limited support. It can install any npm package and run Node.js servers, but the AI generation is optimized for the React ecosystem.
+**What is the Enhance prompt button?**
+A one-click rewrite that expands rough prompts into structured specs before Bolt generates code. Sits behind the plus icon in the chatbox. Improves output quality on vague requests.
 
+**Bolt.new vs Lovable?**
+Bolt runs in-browser with zero setup and full file system access. Lovable includes Supabase backend with auth and Postgres provisioned automatically. Pick Bolt for frontend-heavy prototypes. Pick Lovable when the app needs a real backend.
 
+**Which frameworks does Bolt support best?**
+React, Next.js, and Vite-based projects get the strongest generation quality. Other frameworks work through npm but see thinner prompt-to-code accuracy.
 
-
-## Review History
-
-- **2026-04-12:** Pricing and flagship model version verified. No material changes.
-- **2026-03-16:** Score adjusted down 0.3 after a pricing change reduced value.
-- **2026-01-16:** Added the new model variant to the features section.
-- **2025-11-16:** Pricing verified. Minor copy edits.
-- **2025-01-01:** First published review after two weeks of use.
-
-## Related Comparisons
-
-- [Bolt.new vs Canva AI](../comparisons/bolt-vs-canva.md)
-- [Bolt.new vs ChatGPT](../comparisons/bolt-vs-chatgpt.md)
-- [Bolt.new vs Cursor](../comparisons/bolt-vs-cursor.md)
-- [Bolt.new vs Figma AI](../comparisons/bolt-vs-figma.md)
-- [Bolt.new vs Google Stitch](../comparisons/bolt-vs-google-stitch.md)
 ## Sources
 
-- [Bolt.new Official Site](https://bolt.new): Product page, pricing, and getting started
-- [StackBlitz Blog](https://blog.stackblitz.com/): WebContainers technology updates and Bolt.new announcements
+- [bolt.new/pricing](https://bolt.new/pricing): tiers, token allocations, rollover rules
+- [support.bolt.new](https://support.bolt.new): Enhance prompt, prompting guide
+- [StackBlitz blog](https://blog.stackblitz.com/): WebContainers technology, Bolt release notes
 
 ## Related
 
-- **Category:** [AI Design](../categories/ai-design.md)
-
----
+- **Category:** [AI Design](/categories/ai-design/)
+- **Comparisons:** [Bolt.new vs ChatGPT](/comparisons/bolt-vs-chatgpt/) · [Bolt.new vs Cursor](/comparisons/bolt-vs-cursor/) · [Bolt.new vs Figma AI](/comparisons/bolt-vs-figma/) · [Bolt.new vs Google Stitch](/comparisons/bolt-vs-google-stitch/) · [Lovable vs Bolt.new vs v0](/comparisons/lovable-vs-bolt-vs-v0/)

@@ -2,18 +2,16 @@
 type: tool
 slug: capacities
 title: Capacities
-tagline: >-
-  Object-based note-taking app that treats every note as a typed object, with AI
-  writing and organization features.
+tagline: Object-based PKM that treats every note as a typed object (Book, Person, Project) with property-driven auto-links and an embedded AI assistant.
 category: ai-notes
 company: Capacities GmbH
-url: 'https://capacities.io'
+url: https://capacities.io
 pricing_model: freemium
-price_range: Free - $12.49+/month
+price_range: "$0-$14.99/month"
 status: active
 launched: 2021-06
-last_updated: 2026-04-15T00:00:00.000Z
-last_verified: '2026-04-15'
+last_updated: 2026-04-17
+last_verified: 2026-04-17
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -27,119 +25,148 @@ scores:
   moat: 7
   longevity: 7
 tags: [ai-notes, note-taking, pkm, object-based, knowledge-management]
-seo_title: 'Capacities Review 2026: Object-Based Note-Taking with AI'
-meta_description: >-
-  Capacities is a note-taking app built around typed objects rather than pages.
-  AI writing assistance is included. Free and Pro plans available. Full review.
+seo_title: "Capacities Review: Object-Based PKM with AI (April 2026)"
+meta_description: "Capacities is an object-based PKM app where every note is a typed object. Free tier is unlimited; Pro at $9.99/mo annual adds AI assistant; Believer at $12.49/mo supports the project."
 author: aipedia.wiki Editorial
+best_for:
+  - solo researchers and writers who think structurally
+  - knowledge workers linking sources with metadata
+  - project and character trackers across connected objects
+  - users wanting structure without Obsidian's setup tax
+not_best_for:
+  - teams needing real-time collaboration
+  - users requiring plain-Markdown portability
+  - workflows dependent on heavy plugin ecosystems
 quick_answer: >-
-  Capacities is a personal knowledge management app by Capacities GmbH that structures notes as typed objects, such as Books, People, and Projects, each with defined properties that form a connected knowledge graph rather than flat pages. The free plan is unlimited; Pro costs 10 EUR/month (approximately $11 USD) and adds AI writing powered by models like Claude Opus 4.6, AI chat over notes, custom object types, and image generation. Best for solo researchers and writers who think structurally and want semantic links between ideas; not suitable for teams needing real-time collaboration, and data portability is limited since notes are stored in a proprietary format rather than plain Markdown files.
+  Capacities is object-based PKM where every note is a typed object with properties. Pick it for structural thinking and clean auto-links. Skip it for teams, plugin depth, or plain-Markdown portability.
+price_history:
+  - date: 2025-11-01
+    plan: "Pro"
+    price: "$9.99/mo (annual)"
+    note: "Added AI assistant to Pro tier"
+  - date: 2026-04-15
+    plan: "Believer"
+    price: "$12.49/mo (annual)"
+    note: "Verified unchanged"
 ---
 
 # Capacities
 
-Capacities is a note-taking and personal knowledge management app that organizes information as typed objects (books, people, projects, daily notes) rather than flat pages. Each object type includes predefined properties that connect into a knowledge graph. The Pro plan integrates AI features using models like Claude Opus 4.6 for writing assistance and chat queries across notes [https://capacities.io/pricing](https://capacities.io/pricing).
+An object-based personal knowledge management app built by Capacities GmbH. Every note is a typed object (Book, Person, Project, Daily Note, or custom type) with defined properties that form a connected knowledge graph. The Pro tier adds an AI assistant for writing, chat over notes, and auto-tagging.
 
+Free tier is genuinely unlimited on notes and objects. Pro is $9.99/mo annual, Believer $12.49/mo annual.
 
-## Editor's Take
+## System Verdict
 
-I tested Capacities for three weeks across Mac and iOS, and the object-based structure actually works. Unlike Notion, which lets you build databases but leaves the semantic connections to you, Capacities forces intentionality from the start. Every note is typed (Book, Person, Project, whatever you define), and properties auto-link across your graph. The Claude Opus 4.6 integration for writing assistance is solid, though I found myself using it less than expected because the real value is the structure itself, not the AI sugar. At €10/month, it's cheaper than Obsidian's Sync tier and doesn't require you to manage your own sync infrastructure.
+> **Pick Capacities if structure is the point.** Object typing forces intentionality at the moment of capture. Every Book gets an author property, every Project gets a status, every Person gets links to meetings. That structural prior is what Obsidian and Notion leave to the user.
+>
+> **Skip it for team work or plain-Markdown portability.** No real-time collaboration, no shared workspaces. Export exists but the proprietary database structure loses fidelity on the way out. If you might leave, Obsidian is a safer long-term home.
+>
+> **Who pays which tier:** Free for indefinite solo use without AI, Pro $9.99/mo annual ($11.99 monthly) for the AI assistant and custom object types, Believer $12.49/mo annual for users who want to support development and get early features.
 
-The catch: you're locked into Capacities' proprietary format. Export exists, but you're not writing in plain Markdown like Obsidian users are. If you ever leave, you're migrating, not just pointing your vault elsewhere. The free tier is genuinely unlimited, which is rare and generous, but you lose AI features and custom object types. Real-time collaboration doesn't exist, so this isn't a team tool. Skip this if you work with others or need to own your data in portable formats. Use it if you're a solo researcher, writer, or knowledge worker who thinks in systems and wants the structure to do the heavy lifting instead of you.
+## Key Facts
 
-## What It Does
+| | |
+|---|---|
+| **Core model** | Typed objects with custom properties |
+| **Pre-built object types** | Book, Person, Project, Daily Note, Article, Video, Podcast |
+| **Custom objects** | Pro and Believer tiers only |
+| **AI assistant** | Writing, chat over notes, auto-fill properties, auto-tagging |
+| **AI backend** | Frontier LLMs (model routing varies) |
+| **Graph view** | Visual map of object connections |
+| **Platforms** | Web, macOS, Windows, iOS, Android |
+| **Offline** | Full, with sync on reconnect |
+| **Encryption** | End-to-end on sync |
+| **Free tier** | Unlimited notes/objects, 5GB media, core object types |
+| **API** | None public |
 
-Capacities provides a type system for notes. Users select an object type (Book, Person, Task, custom type) when creating content. Each type has properties (author for Books, due date for Tasks) that enable automatic connections, filtered views, and a visual knowledge graph.
+Every data point was verified against vendor docs on 2026-04-17. See Sources.
 
-Links between objects carry semantic meaning ("this project references this person"). Pro users access AI tools: text generation/editing with Claude Opus 4.6 or GPT-5.4, chat queries over all notes ("summarize my notes on topic X"), auto-tagging, and structured note creation from prompts. Recent updates include image generation for object thumbnails and calendar integrations [https://capacities.io/changelog](https://capacities.io/changelog).
+## What it actually is
 
-Apps run on web, desktop (Mac/Windows), and mobile (iOS/Android) with offline support and end-to-end encryption.
+A typed-object database dressed as a notes app. Creating a note starts with picking an object type. Each type carries properties that auto-link across the graph: a new Book links to its Author (a Person object), the Person links back to every Book and Project they appear in.
 
-## Who It's For
+The AI assistant layers on top. Writing aids generate or rewrite text. The AI Chat queries the whole vault ("what links to this project"). Auto-fill populates object properties from prompt input. Image generation creates object thumbnails.
 
-- Researchers linking sources via structured metadata across thousands of notes
-- Writers tracking characters, sources, and outlines in connected object networks
-- Knowledge workers needing more structure than Notion but less setup than Obsidian
-- Users who define custom information types and build systems from properties
-- Solo professionals maintaining project trackers with daily note integration
-- Journalers wanting automatic cross-links between recurring entries and objects
+The moat: no other mainstream PKM tool enforces object typing at the capture step. The ceiling: the proprietary format limits export fidelity, and there is no plugin marketplace to extend behavior.
+
+## When to pick Capacities
+
+- **You think in systems.** Researchers tracking sources, authors tracking characters, founders tracking decisions all benefit from typed objects.
+- **You want structure without Obsidian's setup cost.** Capacities ships the object system on day one. No plugin stack to assemble.
+- **Daily notes plus object links is the habit.** Daily notes auto-link mentioned objects so a journal entry becomes part of the graph.
+- **Free tier covers the need.** The unlimited free plan on notes and core objects is rare and generous for solo use.
+- **E2EE sync matters.** Cross-device sync is end-to-end encrypted.
+
+## When to pick something else
+
+- **Local-first with plugins:** [Obsidian](/tools/obsidian/). Free, portable Markdown, 1,000+ plugins.
+- **Team wiki with databases:** [Notion AI](/tools/notion-ai/). Real-time collab, full database depth.
+- **AI-first capture without typing:** [Mem](/tools/mem/). Skip the object step entirely.
+- **Cited document Q&A:** [NotebookLM](/tools/notebooklm/). Free, citation-grounded research.
+- **Reading-plus-retention:** [Readwise Reader](/tools/readwise/). Ingestion and spaced-repetition review.
 
 ## Pricing
 
 | Plan | Price | Key Limits |
 |------|-------|------------|
-| Free | €0 | Unlimited notes/objects, core types, all apps, offline, basic search |
-| Pro | €10/month (or €96/year) | AI writing/chat (Claude Opus 4.6, GPT-5.4), custom objects, image gen, advanced views, full export, priority support |
+| Free | $0 | Unlimited notes/objects, core types, 5GB media, all platforms, offline |
+| Pro | $9.99/mo annual ($11.99/mo monthly) | AI assistant, custom object types, unlimited media, advanced views |
+| Believer | $12.49/mo annual ($14.99/mo monthly) | Everything in Pro plus project support, early features |
 
-*Prices verified 2026-04-15. Billed in EUR. Annual plan saves 20%. No usage-based AI limits on Pro [https://capacities.io/pricing](https://capacities.io/pricing).*
+*Prices verified 2026-04-17 via [capacities.io/pricing](https://capacities.io/pricing). Annual billing applied in EUR and USD.*
 
-## Key Features
+## Against the alternatives
 
-- Typed objects with custom properties, templates, and multiple views (gallery/table/kanban)
-- Knowledge graph visualization showing semantic connections between all objects
-- Bi-directional linking with automatic backlinks and property-based relations
-- AI writing assistant using Claude Opus 4.6/GPT-5.4 for generate/rewrite/summarize
-- AI chat interface querying entire knowledge base ("what links to this project?")
-- Daily notes with auto-linking to referenced objects and calendar integration
-- Web clipper saving pages as structured objects (Article, Video, Podcast types)
-- Image generation for object covers using integrated diffusion models
-- Cross-platform apps with offline sync and end-to-end encryption
+| | Capacities Pro | Obsidian | Notion AI | Reflect |
+|---|---|---|---|---|
+| **Price** | $9.99/mo annual | Free | $10-$20/mo | $10/mo |
+| **Storage format** | **Typed objects** | Local Markdown | Pages + databases | Markdown + backlinks |
+| **AI built-in** | Yes, Pro+ | Via plugins | Yes | Yes |
+| **Offline** | Full | Full | Limited | Full |
+| **E2EE sync** | Yes | Local only | No | Yes |
+| **Team collaboration** | None | None | Real-time | None |
+| **Plugin ecosystem** | None | 1,000+ | Limited | None |
+| **Best viewed as** | Structured PKM | Power-user vault | Team wiki | Privacy-first PKM |
 
-## Limitations
+## Failure modes
 
-- Solo-focused; no real-time collaboration or team workspaces
-- Proprietary storage format; exports to Markdown/CSV but loses some structure
-- Steep initial learning curve for object type setup and property management
-- AI features solid but not specialized (uses general models vs. note-optimized)
-- No built-in task automation/workflows beyond basic reminders
-- Smaller ecosystem than Notion/Obsidian (fewer templates/plugins)
+- **Proprietary storage.** Export to Markdown/CSV exists but loses object relationships. Migration off Capacities is a one-way rebuild, not a file move.
+- **Learning curve on setup.** Object types and properties need upfront design. Users who want to just write tend to bounce.
+- **AI is general-purpose, not note-optimized.** The assistant uses frontier LLMs, not a model tuned for long-vault context. Quality is solid, not specialized.
+- **No real-time collaboration.** Shared workspaces and team editing do not exist.
+- **Smaller ecosystem than Notion or Obsidian.** Fewer templates, community resources, and integrations.
+- **No public API.** Programmatic access and custom automations are limited.
+- **AI requires internet.** Core notes work offline, but AI chat and property auto-fill need a live connection.
 
-## Bottom Line
+## Methodology
 
-Capacities suits users who model knowledge as interconnected object types rather than pages or plain text. The unlimited free plan works indefinitely for basic use; Pro unlocks AI that integrates smoothly with the object system. It stands out for solo structured thinking but lacks team features and full Markdown portability.
-
-## Best Alternatives
-
-| Tool | Best For | Price |
-|------|----------|-------|
-| [Obsidian](../tools/obsidian.md) | Local Markdown files, plugin ecosystem, graph view | Free |
-| [Notion AI](../tools/notion-ai.md) | Team collaboration, databases, AI pages | Free/$10+ mo |
-| [Reflect](../tools/reflect.md) | AI-first networked notes, GPT-5.4 integration | $10/mo |
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [capacities.io/pricing](https://capacities.io/pricing), [capacities.io/product/ai](https://capacities.io/product/ai), and the [Capacities changelog](https://capacities.io/whats-new/release-26/).
 
 ## FAQ
 
-**Is the free plan actually unlimited?**  
-Yes. Free includes unlimited objects/notes, all core types, full cross-platform sync, offline access, and basic search. No time limits or note caps. AI features require Pro at €10/month [https://capacities.io/pricing](https://capacities.io/pricing).
+**Is the free plan actually unlimited?**
+Yes. Free covers unlimited notes, unlimited objects across core types, all platforms, full offline, and 5GB media. AI and custom object types require Pro.
 
-**Capacities vs. Obsidian?**  
-Obsidian uses local Markdown files with manual linking; great for portability and plugins. Capacities uses typed objects in a proprietary database with semantic auto-links and built-in AI. Obsidian suits tinkerers; Capacities suits structured thinkers.
+**Capacities vs Obsidian?**
+Obsidian stores notes as local Markdown files with manual linking. Capacities uses typed objects in a proprietary database with property-driven auto-links and built-in AI. Obsidian suits tinkerers with strong file-ownership preferences. Capacities suits structured thinkers who want the object system out of the box.
 
-**Does AI work offline?**  
-No. AI writing/chat requires internet (uses Claude Opus 4.6/GPT-5.4 APIs). Core app functions fully offline with sync on reconnect.
+**Does AI work offline?**
+No. Writing aids and AI Chat require internet. Core note creation, editing, and browsing all work offline with sync on reconnect.
 
+**What's the difference between Pro and Believer?**
+Both include the AI assistant and custom object types. Believer is a support tier at $12.49/mo annual that funds ongoing development and ships early features first. Functionally Pro is sufficient for most users.
 
+**Can Capacities handle teams?**
+No. Capacities is solo-focused. No shared workspaces or real-time collaboration. Notion is the right tool for team knowledge bases.
 
-
-## Review History
-
-- **2026-04-11:** Pricing verified. Added note on the updated free tier limit.
-- **2026-03-22:** Score held after review; justification tightened in the Editor's Take.
-- **2026-02-16:** Flagship version bumped after the most recent model release.
-- **2025-10-16:** Pricing verified. Minor copy edits.
-- **2024-01-15:** Initial review published after hands-on testing.
-
-## Related Comparisons
-
-- [Capacities vs Fireflies.ai](../comparisons/capacities-vs-fireflies.md)
-- [Capacities vs Google NotebookLM](../comparisons/capacities-vs-notebooklm.md)
-- [Capacities vs Obsidian](../comparisons/capacities-vs-obsidian.md)
-- [Capacities vs Otter.ai](../comparisons/capacities-vs-otter-ai.md)
-- [Capacities vs Readwise Reader](../comparisons/capacities-vs-readwise.md)
-
-
-- **Category:** [Notes](../categories/ai-notes.md)
 ## Sources
 
-- [Capacities Pricing](https://capacities.io/pricing) (verified 2026-04-15)
-- [Capacities Changelog](https://capacities.io/changelog) (latest features)
-- [Capacities Documentation](https://capacities.io/docs) (object system details)
+- [capacities.io/pricing](https://capacities.io/pricing): current Free, Pro, and Believer tiers
+- [capacities.io/product/ai](https://capacities.io/product/ai): AI assistant scope and capabilities
+- [Capacities changelog](https://capacities.io/whats-new/release-26/): recent feature releases
+
+## Related
+
+- **Category:** [AI Notes](/categories/ai-notes/)
+- **Comparisons:** [Capacities vs NotebookLM](/comparisons/capacities-vs-notebooklm/) · [Capacities vs Obsidian](/comparisons/capacities-vs-obsidian/) · [Capacities vs Readwise](/comparisons/capacities-vs-readwise/) · [Capacities vs Fireflies](/comparisons/capacities-vs-fireflies/) · [Capacities vs Otter.ai](/comparisons/capacities-vs-otter-ai/)

@@ -2,18 +2,16 @@
 type: tool
 slug: tabnine
 title: Tabnine
-tagline: >-
-  Privacy-first AI code completion that runs locally or in the cloud, trained on
-  permissively licensed code.
+tagline: Privacy-first AI code assistant. Runs on-device, self-hosted, or air-gapped. Trained on permissively licensed code to cut IP risk.
 category: ai-coding
 company: tabnine
-url: 'https://www.tabnine.com'
+url: https://www.tabnine.com
 pricing_model: freemium
-price_range: Free to $39/user/month
+price_range: "$0-$39+/user/month"
 status: active
 launched: 2019-01
-last_updated: 2026-04-15T00:00:00.000Z
-last_verified: '2026-04-15'
+last_updated: 2026-04-17
+last_verified: 2026-04-17
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -24,118 +22,131 @@ affiliate:
 scores:
   utility: 7
   value: 8
-  moat: 5
-  longevity: 6
-tags: [autocomplete, privacy, local-model, ai-coding, ide-plugin, enterprise]
-seo_title: 'Tabnine: AI Code Completion Review & Pricing (2026)'
-meta_description: >-
-  Tabnine is a privacy-first AI code completion tool that runs locally or in
-  cloud. Free tier available; Pro $12/mo, Enterprise $39/user/mo. Review 2026.
+  moat: 6
+  longevity: 7
+tags: [autocomplete, privacy, local-model, ai-coding, ide-plugin, enterprise, air-gapped, self-hosted]
+seo_title: "Tabnine: Features, Pricing & Review (April 2026)"
+meta_description: "Tabnine is the privacy-first AI code assistant with on-device models, VPC, on-prem, and air-gapped deployment. Free tier, Dev Pro $12/user/mo, Enterprise $39/user/mo with fine-tuning on private repos. Routes to Claude, GPT, Gemini, Mistral, Meta, plus Tabnine Protected models."
 author: aipedia.wiki Editorial
 quick_answer: >-
-  Tabnine is a privacy-first AI code completion tool that offers inline autocomplete across 30+ IDEs and 80+ programming languages, with models that run entirely on-device. It uses models trained on permissively licensed open-source code to minimize copyright risks. Free tier available; Pro $12/mo, Enterprise $39/user/mo for private fine-tuning. Best for teams needing strict data privacy or air-gapped setups.
+  Tabnine is the privacy-first AI code assistant for regulated teams and air-gapped networks. Pick it for SaaS, VPC, on-prem, or fully offline deployment with IP indemnification and SOC 2, ISO 27001, GDPR compliance. Skip it if raw completion quality or agent features matter more than privacy posture (use Cursor or GitHub Copilot).
 ---
 
 # Tabnine
 
-Tabnine provides AI-powered code completion with a focus on data privacy. Models run locally or in the cloud and train exclusively on permissively licensed open-source code. It supports over 30 IDEs and 80 programming languages, serving developers and enterprises with IP or compliance needs. Compared to broader tools like GitHub Copilot, Tabnine prioritizes on-device execution over maximum capability.
+Privacy-first AI code assistant at [tabnine.com](https://www.tabnine.com). Autocomplete, chat, and agent features across 30+ IDEs and 80+ languages. Deployment options span SaaS, single-tenant VPC, on-premises Kubernetes, and fully air-gapped clusters.
 
+Models route across Claude, GPT, Gemini, Mistral, Meta, plus Tabnine's Protected models trained only on permissively licensed code. Zero code retention, no training on user code, IP indemnification on Enterprise.
 
-## Editor's Take
+## System Verdict
 
-I tested Tabnine Pro at version 4.2.17 in VS Code last week. Completions hit around 200ms latency on my M3 MacBook with the local model enabled, which beats free tiers of most rivals but trails Cursor's 150ms on complex React hooks. The privacy angle holds up, no code leaves my machine, and it's trained solely on permissively licensed stuff, unlike Copilot's messy data scrapes.
+> **Pick Tabnine if your team cannot ship code outside a controlled boundary.** The only mainstream AI coding assistant with turnkey air-gapped deployment, including Dell PowerEdge GPU bundles for offline clusters. Tabnine Protected models train exclusively on permissively licensed open-source code, which removes most copyright and IP risk at the training-data layer.
+>
+> **Skip it if raw completion quality or agent capability outranks privacy.** [GitHub Copilot](/tools/github-copilot/) edges Tabnine on completion accuracy and ships a mature chat surface at $10/user/mo. [Cursor](/tools/cursor/) is the category leader for AI-native IDE workflows with Claude Opus 4.7. [Claude](/tools/claude/) Code CLI handles terminal agent work that Tabnine does not touch.
+>
+> **Who pays which tier:** Free for individual developers testing the product, Dev Pro $12/user/mo for solo work, Enterprise $39/user/mo for private fine-tuning, air-gapped deploy, SSO, SLA, and IP indemnification. Annual commitment only on paid plans.
 
-Versus GitHub Copilot, Tabnine wins on air-gapped setups and $12/month Pro pricing, but loses hard on raw smarts for multi-file context or refactoring. Enterprise at $39/user/month adds fine-tuning, which I've seen shine in team repos, yet it's gated too high for solos. I bias toward local tools since I code offline often, but even I skip it for chat-based edits.
+## Key Facts
 
-Grab Pro if your org demands zero cloud telemetry or you're in finance. Ditch it for anything needing agentic features, Cursor does that better without the hassle.
+| | |
+|---|---|
+| **Product** | AI code assistant: autocomplete, chat, agents |
+| **IDEs** | VS Code, JetBrains suite, Vim, Emacs, Visual Studio, 30+ total |
+| **Languages** | 80+ from Python and TypeScript to COBOL and Rust |
+| **Models** | Claude, GPT, Gemini, Mistral, Meta, plus Tabnine Protected |
+| **Deployment** | SaaS, single-tenant VPC, on-prem Kubernetes, air-gapped |
+| **Air-gapped hardware** | Dell PowerEdge with NVIDIA GPUs, turnkey bundles |
+| **Privacy stance** | Zero code retention, no training on user code, no third-party sharing |
+| **Compliance** | SOC 2, ISO 27001, GDPR, enterprise-grade |
+| **IP indemnification** | Enterprise tier |
+| **Fine-tuning** | Enterprise only, trained on customer's private repos |
 
-## What It Does
+Every data point above was verified against vendor sources on 2026-04-17. See Sources.
 
-Tabnine delivers inline code suggestions as users type, predicting tokens, lines, or functions from file context. The free tier uses cloud models for basic completions; Pro and Enterprise add full-function and multi-line suggestions with larger models and local execution options. Enterprise includes custom fine-tuning on private codebases for organization-specific patterns.
+## What it actually is
 
-It integrates as plugins into VS Code, JetBrains IDEs, Vim, Emacs, and others. Models process context without sending code off-device in privacy modes, supporting air-gapped environments.
+An IDE-embedded AI coding assistant built around a privacy-first deployment story. Completions, chat, and agents run inside your environment, not on shared infrastructure. Enterprise customers can isolate the entire stack inside their own VPC or a disconnected on-prem cluster.
 
-## Who It's For
+Model routing is the 2026 pivot. Earlier versions shipped only Tabnine's own models. Current versions route to Claude, GPT, Gemini, Mistral, and Meta for users who want frontier capability, with Tabnine Protected models as the zero-IP-risk fallback. When using Tabnine-provided LLM access, billing is actual provider cost plus a 5% handling fee.
 
-- Enterprise teams with policies blocking code transmission to external servers
-- Compliance officers concerned with training data licensing and IP risks
-- Developers in regulated sectors like finance or healthcare
-- Users in offline or air-gapped networks requiring local models
-- Organizations fine-tuning models on internal repositories
-- Developers seeking free or low-cost autocomplete without IDE changes
+The moat is compliance depth. SOC 2, ISO 27001, GDPR, IP indemnification, air-gapped deploy, and private fine-tuning together are unmatched in the category. The weakness is the completion-quality gap versus Copilot and Cursor on public benchmarks.
+
+## When to pick Tabnine
+
+- **You work in regulated sectors.** Finance, healthcare, defense, legal. Tabnine's compliance posture fits procurement requirements most competitors fail.
+- **You need air-gapped or on-prem deployment.** Dell PowerEdge GPU bundles deliver turnkey offline clusters with no cloud dependency.
+- **Your legal team blocks training on proprietary code.** Tabnine Protected models train only on permissively licensed open-source code. IP indemnification on Enterprise.
+- **You want private fine-tuning on your own codebase.** Enterprise tier trains org-specific models from internal repos, accessible only to your team.
+- **You need SSO, SLA, and audit controls.** Enterprise hits the checkboxes enterprise procurement actually asks for.
+
+## When to pick something else
+
+- **Best-in-class completion quality:** [GitHub Copilot](/tools/github-copilot/) at $10/user/mo, stronger on raw accuracy and chat.
+- **AI-native IDE with agent edits across files:** [Cursor](/tools/cursor/) with Claude Opus 4.7.
+- **Terminal coding agent for working developers:** [Claude](/tools/claude/) Code CLI.
+- **Free unlimited cloud completions:** Codeium.
+- **Autonomous agent that builds full apps:** [Replit Agent](/tools/replit-agent/) or [Lovable](/tools/lovable/).
 
 ## Pricing
 
-| Plan      | Price          | Key Limits                          |
-|-----------|----------------|-------------------------------------|
-| Starter   | $0/mo          | Basic cloud completions, 30 req/mo |
-| Pro       | $12/mo         | Full completions, local models      |
-| Enterprise| $39/user/mo    | Fine-tuning, air-gapped, SSO, SLA   |
+Pricing via [tabnine.com/pricing](https://www.tabnine.com/pricing). Annual commitment required on paid plans.
 
-> **Verification note:** Pricing confirmed at [tabnine.com/pricing](https://www.tabnine.com/pricing) as of 2026-04-15.
+| Plan | Price | Key features | Who's it for |
+|------|-------|--------------|--------------|
+| Free | $0 | Basic cloud completions, all major IDEs | Individual developers testing the product |
+| Dev Pro | $12/user/mo | Full completions, chat, agents, broader model choice | **Solo developers who want privacy without enterprise overhead** |
+| Enterprise | $39/user/mo | Private fine-tuning, air-gapped deploy, SSO, SLA, IP indemnification, SOC 2 + ISO 27001 | Regulated orgs and compliance-heavy teams |
 
-## Key Features
+*Prices verified 2026-04-17 via [tabnine.com/pricing](https://www.tabnine.com/pricing). When using Tabnine-provided LLM access, billing is actual LLM provider price plus a 5% handling fee. 90-day free trial on Dev Pro.*
 
-- Local model execution keeps all data on-device for Pro and Enterprise users
-- Training on permissively licensed code reduces copyright concerns
-- Enterprise fine-tuning creates custom models from private repositories
-- Support for 30+ IDEs including VS Code and JetBrains
-- Coverage of 80+ languages from Python to COBOL
-- Team-wide context sharing improves suggestions across users
-- Air-gapped deployment for secure environments
-- Single sign-on and admin controls in Enterprise
+## Against the alternatives
 
-## Limitations
+| | Tabnine Enterprise | GitHub Copilot | Cursor |
+|---|---|---|---|
+| **Deployment** | SaaS, VPC, on-prem, air-gapped | SaaS only (Copilot Enterprise adds some isolation) | SaaS only |
+| **Privacy posture** | Zero retention, IP indemnification | Zero retention, indemnification on Enterprise | Zero retention on paid tiers |
+| **Completion quality** | Mid-tier, behind Copilot | Strongest on raw accuracy | Strongest in agent mode |
+| **Agent capability** | Basic, growing | Copilot Workspace | Cursor Agent, strongest of the three |
+| **Model routing** | Claude, GPT, Gemini, Mistral, Meta, Protected | GPT family + Claude | Claude Opus 4.7, GPT, others |
+| **Best viewed as** | Compliance-first assistant | Mainstream default | Power-user IDE |
 
-- Completions lag behind Copilot or Cursor on complex tasks due to smaller base models
-- Lacks chat interface or agent features for code explanation or edits
-- Custom fine-tuning limited to Enterprise tier
-- Slower rollout of multi-file context compared to competitors
-- Privacy advantages diminish as rivals add local options
+## Failure modes
 
-## Bottom Line
+- **Completion quality lags Copilot and Cursor on public benchmarks.** Tabnine Protected models trade peak accuracy for IP safety. Routed frontier models close the gap but cost more.
+- **Monthly billing is not offered on paid plans.** Annual commitment only. Not friendly to short-term evaluation beyond the 90-day Dev Pro trial.
+- **Agent features are thinner than competitors.** Chat exists. Multi-file agent edits and terminal control are less mature than Cursor or Claude Code.
+- **Privacy advantage is shrinking.** Copilot, Cursor, and others all added zero-retention options in 2025-2026. Tabnine's full air-gapped story still wins, but SaaS-only competitors are close enough on privacy for most teams.
+- **Enterprise price is steep for what you get.** $39/user/mo pays for the compliance stack. Teams without those requirements get more value elsewhere.
+- **LLM handling fee.** 5% on top of actual provider cost when using Tabnine-routed models. Small number, worth knowing if you budget precisely.
 
-Tabnine delivers solid value for privacy-focused users (8/10 value, 7/10 utility) but faces moat pressure (5/10) from competitors matching its features. Choose it for strict compliance needs; otherwise, Copilot or Cursor provide stronger assistance at similar costs.
+## Methodology
 
-## Best Alternatives
-
-| Tool | Price | Key Difference |
-|------|-------|----------------|
-| GitHub Copilot | $10/mo | Superior completion quality, chat integration |
-| Cursor | $20/mo | AI-native IDE with agent capabilities |
-| Codeium | Free | Unlimited free completions, cloud-based |
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [tabnine.com/pricing](https://www.tabnine.com/pricing) and Tabnine's deployment documentation.
 
 ## FAQ
 
-**Does Tabnine send code to external servers?**  
-Free tier uses cloud processing. Pro and Enterprise offer local models with zero data transmission; Enterprise supports full air-gapped installs.
+**Does Tabnine send my code to external servers?**
+Depends on deployment. SaaS uses Tabnine-managed infrastructure with zero code retention. VPC, on-prem, and air-gapped options keep everything inside your boundary. Enterprise supports fully offline clusters with no external traffic ([tabnine.com/pricing](https://www.tabnine.com/pricing)).
 
-**Can Tabnine train on my private code?**  
-Shared models exclude user code. Enterprise fine-tuning builds private models from your repositories, accessible only to your team.
+**Which models does Tabnine support?**
+Routes across Claude, GPT, Gemini, Mistral, and Meta, plus Tabnine's own Protected models trained only on permissively licensed code. When using Tabnine-provided LLM access, billing is actual provider cost plus a 5% handling fee.
 
-**How does Tabnine stack up against GitHub Copilot?**  
-Copilot edges out on raw completion accuracy and adds chat/agent modes at $10/mo. Tabnine excels in local privacy and permissive training data.
+**Can Tabnine train on my private code?**
+Shared models exclude customer code. Enterprise fine-tuning builds private models from your own repositories, accessible only to your team. No cross-customer training.
 
+**Tabnine vs GitHub Copilot?**
+Copilot edges Tabnine on raw completion quality and ships a more mature chat surface at $10/user/mo. Tabnine wins on deployment flexibility (air-gapped, on-prem, VPC) and IP indemnification on Enterprise. Pick Copilot for default assistance, Tabnine for regulated environments.
 
+**Does Tabnine support air-gapped deployment?**
+Yes, on Enterprise. Turnkey Dell PowerEdge GPU bundles run offline clusters with no cloud dependency. No other mainstream AI code assistant offers this.
 
-
-## Review History
-
-- **2026-04-12:** Pricing verified. Clarified pricing for annual vs monthly billing.
-- **2026-03-16:** Score adjusted down 0.3 after a pricing change reduced value.
-- **2026-01-16:** Noted the new model availability across tiers.
-- **2025-10-16:** Pricing verified. Minor copy edits.
-- **2024-01-15:** First published review after two weeks of use.
-
-## Related Comparisons
-
-- [Cursor vs Tabnine](../comparisons/cursor-vs-tabnine.md)
-- [GitHub Copilot vs Tabnine](../comparisons/github-copilot-vs-tabnine.md)
-
-
-- **Category:** [Coding](../categories/ai-coding.md)
 ## Sources
 
-- [Official website](https://www.tabnine.com), verified 2026-04-15
-- [Tabnine pricing](https://www.tabnine.com/pricing), verified 2026-04-15
-- [Hacker News discussion](https://news.ycombinator.com/item?id=43215678), recent thread on privacy features
+- [tabnine.com/pricing](https://www.tabnine.com/pricing): current tiers, Enterprise features, deployment options
+- [tabnine.com](https://www.tabnine.com): product overview, model routing, privacy stance
+- [Tabnine docs](https://docs.tabnine.com): deployment architecture, fine-tuning guide
+
+## Related
+
+- **Category:** [AI Coding](/categories/ai-coding/)
+- **Comparisons:** [Cursor vs Tabnine](/comparisons/cursor-vs-tabnine/) · [GitHub Copilot vs Tabnine](/comparisons/github-copilot-vs-tabnine/)
