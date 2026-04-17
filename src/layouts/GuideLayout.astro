@@ -1,14 +1,13 @@
 ---
 import BaseLayout from './BaseLayout.astro';
-import ReadingProgress from '../components/ReadingProgress.astro';
 import Breadcrumb from '../components/Breadcrumb.astro';
 import BreadcrumbLD from '../components/seo/BreadcrumbLD.astro';
 import ItemListLD from '../components/seo/ItemListLD.astro';
+import ArticleLD from '../components/seo/ArticleLD.astro';
 import TableOfContents from '../components/TableOfContents.astro';
 import ShareButtons from '../components/ShareButtons.astro';
 import FAQAccordionScript from '../components/FAQAccordionScript.astro';
 import FeedbackForm from '../components/FeedbackForm.astro';
-import { shortenPrice } from '../utils/shorten-price';
 
 interface ToolData {
   slug: string;
@@ -92,23 +91,9 @@ const breadcrumbLdItems = [
 ];
 
 const verifiedDate = lastVerified ? new Date(lastVerified) : null;
-const verifiedValid = verifiedDate && !isNaN(verifiedDate.getTime());
-let verifiedLabel: string | null = null;
-let verifiedColor = 'var(--accent-success)';
-let verifiedMachineDate: string | null = null;
-if (verifiedValid) {
-  const daysSince = Math.floor((Date.now() - verifiedDate!.getTime()) / 86400000);
-  if (daysSince < 30) verifiedColor = 'var(--accent-success)';
-  else if (daysSince <= 60) verifiedColor = 'var(--accent-warning)';
-  else verifiedColor = 'var(--accent-danger)';
-  if (daysSince <= 1) verifiedLabel = 'Updated today';
-  else if (daysSince <= 14) verifiedLabel = `Updated ${daysSince} days ago`;
-  else if (daysSince <= 60) {
-    const weeks = Math.round(daysSince / 7);
-    verifiedLabel = `Updated ${weeks} week${weeks === 1 ? '' : 's'} ago`;
-  } else verifiedLabel = `Updated ${verifiedDate!.toLocaleDateString('en-US', { month: 'short', year: 'numeric' })}`;
-  verifiedMachineDate = verifiedDate!.toISOString().split('T')[0];
-}
+const verifiedLabel = verifiedDate && !isNaN(verifiedDate.getTime())
+  ? verifiedDate.toLocaleDateString('en-US', { month: 'short', year: 'numeric' })
+  : null;
 
 const itemListItems = rankedTools.map((t) => ({
   name: t.title,
@@ -119,11 +104,20 @@ const itemListItems = rankedTools.map((t) => ({
 ---
 
 <BaseLayout title={seoTitle ?? title} description={description}>
-  <ReadingProgress />
   <BreadcrumbLD items={breadcrumbLdItems} />
   {itemListItems.length > 0 && (
     <ItemListLD name={title} description={description} items={itemListItems} siteBase={siteBase} />
   )}
+  <ArticleLD
+    headline={title}
+    description={description}
+    pageUrl={`${siteBase}guides/${slug}/`}
+    datePublished={lastVerified}
+    dateModified={lastVerified}
+    articleType="Article"
+    articleSection="Use Cases"
+    about={rankedTools.map((t) => t.title)}
+  />
   <Breadcrumb items={breadcrumbItems} />
 
   <div class="lg:grid lg:grid-cols-[1fr_280px] lg:gap-8">
@@ -131,18 +125,12 @@ const itemListItems = rankedTools.map((t) => ({
       <div class="mb-5" data-pagefind-ignore>
         <h1 class="text-2xl font-bold leading-tight m-0 mb-2">{title}</h1>
         <div class="flex items-center gap-x-3 gap-y-1 text-sm text-[var(--text-muted)] flex-wrap">
-          <a href="/about/editor/" class="inline-flex items-center gap-1.5 no-underline hover:underline">
-            <img src="/editor-headshot.jpg" alt="" width="18" height="18" class="rounded-full object-cover" loading="lazy" />
-            <span class="text-[var(--text-secondary)] hover:text-[var(--accent-primary)]">Eli Marsh</span>
-          </a>
+          <span>By <span class="text-[var(--text-secondary)]">aipedia.wiki Editorial</span></span>
           {readingMinutes > 0 && (<><span aria-hidden="true">·</span><span>{readingMinutes} min read</span></>)}
           {verifiedLabel && (
             <>
               <span aria-hidden="true">·</span>
-              <time datetime={verifiedMachineDate ?? undefined} style={`color: ${verifiedColor};`} class="inline-flex items-center gap-1">
-                <span aria-hidden="true">&#10003;</span>
-                <span>{verifiedLabel}</span>
-              </time>
+              <span><span class="text-[var(--accent-success)]" aria-hidden="true">✓</span> Verified {verifiedLabel}</span>
             </>
           )}
         </div>
@@ -172,7 +160,7 @@ const itemListItems = rankedTools.map((t) => ({
                       {t.title}
                     </a>
                     {t.price_range && (
-                      <div class="text-[12px] text-[var(--text-muted)] mt-0.5" title={t.price_range}>{shortenPrice(t.price_range)}</div>
+                      <div class="text-[12px] text-[var(--text-muted)] mt-0.5">{t.price_range}</div>
                     )}
                   </div>
                   {score > 0 && (

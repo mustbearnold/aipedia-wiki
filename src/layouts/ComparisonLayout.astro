@@ -1,18 +1,13 @@
 ---
 import BaseLayout from './BaseLayout.astro';
-import ReadingProgress from '../components/ReadingProgress.astro';
 import Breadcrumb from '../components/Breadcrumb.astro';
 import BreadcrumbLD from '../components/seo/BreadcrumbLD.astro';
 import ItemListLD from '../components/seo/ItemListLD.astro';
+import ArticleLD from '../components/seo/ArticleLD.astro';
 import TableOfContents from '../components/TableOfContents.astro';
 import ShareButtons from '../components/ShareButtons.astro';
 import FAQAccordionScript from '../components/FAQAccordionScript.astro';
 import FeedbackForm from '../components/FeedbackForm.astro';
-import ReportOutdatedButton from '../components/ReportOutdatedButton.astro';
-import ComparisonEmbed from '../components/ComparisonEmbed.astro';
-import CiteThisPage from '../components/CiteThisPage.astro';
-import ToolLogo from '../components/ToolLogo.astro';
-import { shortenPrice } from '../utils/shorten-price';
 
 interface ToolData {
   slug: string;
@@ -116,23 +111,10 @@ const breadcrumbLdItems = [
 ];
 
 const verifiedDate = lastVerified ? new Date(lastVerified) : null;
-const verifiedValid = verifiedDate && !isNaN(verifiedDate.getTime());
-let verifiedLabel: string | null = null;
-let verifiedColor: string = 'var(--accent-success)';
-let verifiedMachineDate: string | null = null;
-if (verifiedValid) {
-  const daysSince = Math.floor((Date.now() - verifiedDate!.getTime()) / 86400000);
-  if (daysSince < 30) verifiedColor = 'var(--accent-success)';
-  else if (daysSince <= 60) verifiedColor = 'var(--accent-warning)';
-  else verifiedColor = 'var(--accent-danger)';
-  if (daysSince <= 1) verifiedLabel = 'Updated today';
-  else if (daysSince <= 14) verifiedLabel = `Updated ${daysSince} days ago`;
-  else if (daysSince <= 60) {
-    const weeks = Math.round(daysSince / 7);
-    verifiedLabel = `Updated ${weeks} week${weeks === 1 ? '' : 's'} ago`;
-  } else verifiedLabel = `Updated ${verifiedDate!.toLocaleDateString('en-US', { month: 'short', year: 'numeric' })}`;
-  verifiedMachineDate = verifiedDate!.toISOString().split('T')[0];
-}
+const verifiedLabel =
+  verifiedDate && !isNaN(verifiedDate.getTime())
+    ? verifiedDate.toLocaleDateString('en-US', { month: 'short', year: 'numeric' })
+    : null;
 
 const itemListItems = tools
   .filter((t) => t)
@@ -147,11 +129,20 @@ const winningTool = winner && winner !== 'depends' ? tools.find((t) => t.slug ==
 ---
 
 <BaseLayout title={seoTitle ?? title} description={description}>
-  <ReadingProgress />
   <BreadcrumbLD items={breadcrumbLdItems} />
   {itemListItems.length > 0 && (
     <ItemListLD name={title} description={description} items={itemListItems} siteBase={siteBase} />
   )}
+  <ArticleLD
+    headline={title}
+    description={description}
+    pageUrl={`${siteBase}compare/${slug}/`}
+    datePublished={lastVerified}
+    dateModified={lastVerified}
+    articleType="Article"
+    articleSection="Tool Comparison"
+    about={tools.map((t) => t.title)}
+  />
   <Breadcrumb items={breadcrumbItems} />
 
   <div class="lg:grid lg:grid-cols-[1fr_280px] lg:gap-8">
@@ -161,10 +152,7 @@ const winningTool = winner && winner !== 'depends' ? tools.find((t) => t.slug ==
       <div class="mb-5" data-pagefind-ignore>
         <h1 class="text-2xl font-bold leading-tight m-0 mb-2">{title}</h1>
         <div class="flex items-center gap-x-3 gap-y-1 text-sm text-[var(--text-muted)] flex-wrap">
-          <a href="/about/editor/" class="inline-flex items-center gap-1.5 no-underline hover:underline">
-            <img src="/editor-headshot.jpg" alt="" width="18" height="18" class="rounded-full object-cover" loading="lazy" />
-            <span class="text-[var(--text-secondary)] hover:text-[var(--accent-primary)]">Eli Marsh</span>
-          </a>
+          <span>By <span class="text-[var(--text-secondary)]">aipedia.wiki Editorial</span></span>
           {readingMinutes > 0 && (
             <>
               <span aria-hidden="true">·</span>
@@ -174,10 +162,9 @@ const winningTool = winner && winner !== 'depends' ? tools.find((t) => t.slug ==
           {verifiedLabel && (
             <>
               <span aria-hidden="true">·</span>
-              <time datetime={verifiedMachineDate ?? undefined} style={`color: ${verifiedColor};`} class="inline-flex items-center gap-1">
-                <span aria-hidden="true">&#10003;</span>
-                <span>{verifiedLabel}</span>
-              </time>
+              <span>
+                <span class="text-[var(--accent-success)]" aria-hidden="true">✓</span> Verified {verifiedLabel}
+              </span>
             </>
           )}
         </div>
@@ -196,7 +183,7 @@ const winningTool = winner && winner !== 'depends' ? tools.find((t) => t.slug ==
             <div class={`rounded-xl border ${winBadge ? 'border-[rgba(167,139,250,0.45)] bg-[rgba(167,139,250,0.06)]' : 'border-[var(--border)] bg-[var(--bg-card)]'} p-4 flex flex-col gap-3`}>
               <div class="flex items-start justify-between gap-3">
                 <div class="flex items-center gap-2 min-w-0">
-                  <ToolLogo slug={t.slug} title={t.title} size={36} className="shrink-0" />
+                  <span class="text-xl" aria-hidden="true">{emoji}</span>
                   <a href={`/tools/${t.slug}/`} class="text-[15px] font-semibold text-[var(--text-primary)] hover:text-[var(--accent-primary)] no-underline truncate">{t.title}</a>
                 </div>
                 {score > 0 && (
@@ -206,7 +193,7 @@ const winningTool = winner && winner !== 'depends' ? tools.find((t) => t.slug ==
                 )}
               </div>
               {t.price_range && (
-                <div class="text-[12px] text-[var(--text-muted)]" title={t.price_range}>{shortenPrice(t.price_range)}</div>
+                <div class="text-[12px] text-[var(--text-muted)]">{t.price_range}</div>
               )}
               {href !== '#' && (
                 <a
@@ -237,12 +224,7 @@ const winningTool = winner && winner !== 'depends' ? tools.find((t) => t.slug ==
 
       <FAQAccordionScript />
       <ShareButtons title={title} pageUrl={`${siteBase}compare/${slug}/`} />
-      <ComparisonEmbed slug={slug} title={title} />
-
-      <CiteThisPage title={title} pageUrl={`${siteBase}compare/${slug}/`} pageType="comparison" />
-
       <FeedbackForm toolName={title} />
-      <ReportOutdatedButton pageTitle={title} pageSlug={slug} pageType="comparison" />
     </div>
 
     <!-- Right column: sidebar (desktop only) -->

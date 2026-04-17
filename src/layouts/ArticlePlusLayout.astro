@@ -6,9 +6,9 @@
  * markdown headings worth navigating.
  */
 import BaseLayout from './BaseLayout.astro';
-import ReadingProgress from '../components/ReadingProgress.astro';
 import Breadcrumb from '../components/Breadcrumb.astro';
 import BreadcrumbLD from '../components/seo/BreadcrumbLD.astro';
+import ArticleLD from '../components/seo/ArticleLD.astro';
 import TableOfContents from '../components/TableOfContents.astro';
 import ShareButtons from '../components/ShareButtons.astro';
 import FAQAccordionScript from '../components/FAQAccordionScript.astro';
@@ -25,12 +25,18 @@ interface Props {
   readingMinutes?: number;
   lastVerified?: string;
   metaExtra?: string;
+  articleType?: 'Article' | 'NewsArticle' | 'BlogPosting';
+  articleSection?: string;
+  datePublished?: string;
 }
 
 const {
   title, seoTitle, description = '', pageUrl,
   breadcrumbs, badge, headings = [],
   readingMinutes = 0, lastVerified, metaExtra,
+  articleType = 'Article',
+  articleSection,
+  datePublished,
 } = Astro.props;
 
 const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
@@ -62,8 +68,17 @@ const verifiedLabel = verifiedDate && !isNaN(verifiedDate.getTime())
 ---
 
 <BaseLayout title={seoTitle ?? title} description={description}>
-  <ReadingProgress />
   {breadcrumbLdItems && <BreadcrumbLD items={breadcrumbLdItems} />}
+  <ArticleLD
+    headline={title}
+    description={description}
+    pageUrl={pageUrl}
+    datePublished={datePublished ?? lastVerified}
+    dateModified={lastVerified}
+    articleType={articleType}
+    articleSection={articleSection}
+    wordCount={readingMinutes ? Math.round(readingMinutes * 230) : undefined}
+  />
   {breadcrumbs && <Breadcrumb items={breadcrumbs} />}
 
   <div class="lg:grid lg:grid-cols-[1fr_280px] lg:gap-8">

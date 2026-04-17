@@ -1,0 +1,78 @@
+---
+// Article / NewsArticle / BlogPosting schema emitter.
+//
+// Use for long-form editorial content where Google rich-results and LLM
+// extractors benefit from headline + author + datePublished metadata. The
+// author is always the aipedia.wiki Editorial Organization per the
+// anti-fabrication policy (never a fabricated Person).
+interface Props {
+  headline: string;
+  description?: string;
+  pageUrl: string;
+  datePublished?: string;
+  dateModified?: string;
+  image?: string;
+  articleType?: 'Article' | 'NewsArticle' | 'BlogPosting';
+  articleSection?: string;
+  wordCount?: number;
+  keywords?: string[];
+  about?: string[];
+}
+
+const {
+  headline,
+  description,
+  pageUrl,
+  datePublished,
+  dateModified,
+  image,
+  articleType = 'Article',
+  articleSection,
+  wordCount,
+  keywords,
+  about,
+} = Astro.props;
+
+const publisher = {
+  '@type': 'Organization',
+  name: 'aipedia.wiki',
+  url: 'https://aipedia.wiki',
+  logo: {
+    '@type': 'ImageObject',
+    url: 'https://aipedia.wiki/logo.png',
+  },
+};
+
+const author = {
+  '@type': 'Organization',
+  name: 'aipedia.wiki Editorial',
+  url: 'https://aipedia.wiki/about/editorial/',
+};
+
+const jsonLd: Record<string, unknown> = {
+  '@context': 'https://schema.org',
+  '@type': articleType,
+  headline,
+  author,
+  publisher,
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': pageUrl,
+  },
+  url: pageUrl,
+  inLanguage: 'en',
+};
+
+if (description) jsonLd.description = description;
+if (datePublished) jsonLd.datePublished = datePublished;
+if (dateModified || datePublished) jsonLd.dateModified = dateModified ?? datePublished;
+if (image) jsonLd.image = image;
+if (articleSection) jsonLd.articleSection = articleSection;
+if (wordCount && wordCount > 0) jsonLd.wordCount = wordCount;
+if (keywords && keywords.length > 0) jsonLd.keywords = keywords.join(', ');
+if (about && about.length > 0) {
+  jsonLd.about = about.map((entity) => ({ '@type': 'Thing', name: entity }));
+}
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />

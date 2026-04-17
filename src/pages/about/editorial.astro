@@ -1,0 +1,174 @@
+---
+import ArticleLayout from '../../layouts/ArticleLayout.astro';
+
+const pageUrl = 'https://aipedia.wiki/about/editorial/';
+const pageName = 'Editorial Policy — aipedia.wiki';
+const pageDesc = 'How aipedia.wiki is edited: scoring methodology, verification pipeline, anti-fabrication policy. Tool pages maintained by aipedia.wiki Editorial.';
+
+// Organization schema (no fabricated individual editor).
+const orgLD = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'aipedia.wiki Editorial',
+  url: pageUrl,
+  parentOrganization: {
+    '@type': 'Organization',
+    name: 'aipedia.wiki',
+    url: 'https://aipedia.wiki',
+  },
+  knowsAbout: [
+    'Artificial Intelligence',
+    'Large Language Models',
+    'AI Tools Evaluation',
+    'Product Comparison Methodology',
+    'Editorial Standards',
+  ],
+  publishingPrinciples: 'https://aipedia.wiki/about/editorial/',
+});
+---
+
+<ArticleLayout
+  title="Editorial Policy"
+  seoTitle={pageName}
+  description={pageDesc}
+  breadcrumbs={[{ label: 'About', href: '/about/' }, { label: 'Editorial' }]}
+>
+  <Fragment slot="default">
+    <script type="application/ld+json" set:html={orgLD} />
+  </Fragment>
+
+  <h2>Who writes this site</h2>
+
+  <p>
+    aipedia.wiki is edited by aipedia.wiki Editorial, an in-house editorial team working with a purpose-built truth-maintenance toolchain. We do not publish content under a named individual byline. Every page is produced by the editorial process described below, verified against primary vendor sources, and maintained on a recurring schedule.
+  </p>
+
+  <p>
+    We do not claim hands-on testing we have not done. Where a review benefits from usage evidence, we rely on vendor-published documentation, official changelogs, third-party benchmark publications, and verified user feedback. Where usage claims would be appropriate but we cannot verify them, the page says so.
+  </p>
+
+  <h2>How pages are produced</h2>
+
+  <ol>
+    <li><strong>Scope.</strong> Every tool is categorised, tagged, and entered into the canonical tool registry.</li>
+    <li><strong>Facts layer.</strong> Atomic facts (current flagship model, pricing, launch dates) live in a canonical JSON store; pages reference these rather than duplicating.</li>
+    <li><strong>Editorial analysis.</strong> Each tool page carries an editorial take that names strengths, weaknesses, and the closest rival. Analyst-voiced, not personal-diary-voiced.</li>
+    <li><strong>Verification.</strong> Prices, flagship models, and feature availability are re-checked against official sources via our automated verification pipeline.</li>
+    <li><strong>Compliance audit.</strong> Every page is run through a rule-based audit aligned with current Google search guidance (E-E-A-T, Reviews System, Helpful Content System).</li>
+    <li><strong>Cross-reference integrity.</strong> Pages are checked for orphan status, broken links, and inconsistency with other pages that reference the same tool.</li>
+  </ol>
+
+  <h2>Scoring methodology</h2>
+
+  <div class="not-prose bg-[var(--bg-card)] border border-[var(--border)] rounded-xl p-6 my-6">
+    <p class="text-sm text-[var(--text-secondary)] leading-relaxed m-0 mb-4">
+      Four dimensions, each scored 1 to 10: <strong class="text-[var(--text-primary)]">Utility</strong> (does the core job well), <strong class="text-[var(--text-primary)]">Value</strong> (quality per dollar), <strong class="text-[var(--text-primary)]">Moat</strong> (hard to replicate or displace), <strong class="text-[var(--text-primary)]">Longevity</strong> (will it exist in two years). The overall score is the unweighted average. A 7 means genuinely good. A 5 means average.
+    </p>
+    <a
+      href="/about/scoring/"
+      class="inline-flex items-center gap-2 bg-[var(--accent-primary)] text-[#0b0a14] px-5 py-2.5 rounded-lg text-sm font-medium no-underline hover:opacity-90 transition-opacity"
+    >
+      Full scoring methodology
+      <span>-&gt;</span>
+    </a>
+  </div>
+
+  <h2>Verification pipeline</h2>
+
+  <ul>
+    <li><strong>Daily:</strong> importance-scoring decay on operational memory, Google ranking-signal monitor, failure-mode detection against recent edits.</li>
+    <li><strong>Weekly:</strong> fact consolidation across every tool page, flagship-model re-verification against vendor domains, compliance audit against current Google guidance, price-drift detection.</li>
+    <li><strong>Per-commit gate:</strong> a pre-commit hook blocks fabricated testing claims, citation residue, template placeholders, and other known failure modes before shipping.</li>
+  </ul>
+
+  <p>
+    Every tool page carries a "last verified" date. If a price changes after our last verification, the next cycle catches it.
+  </p>
+
+  <h2>Editorial stance</h2>
+
+  <div class="not-prose grid gap-3 my-6">
+    {[
+      {
+        title: 'Primary sources only',
+        body: 'Every atomic fact is traced to the vendor\'s own documentation, pricing page, or changelog. We do not cite third-party aggregators for price or flagship-version claims.',
+      },
+      {
+        title: 'No fabricated experience',
+        body: 'We will not invent hands-on testing claims. Where the review benefits from usage evidence we cannot produce, the page says so and relies on official documentation + verified user reviews.',
+      },
+      {
+        title: 'Affiliate neutrality',
+        body: 'Affiliate links are present where available, but commissions have zero influence on scores. A 30%-commission tool can score a 4 if it earns a 4.',
+      },
+      {
+        title: 'Honest negatives',
+        body: 'Tools that are overhyped get flagged. The dead-tools archive documents products that shut down. Hidden or deceptive pricing is called out on the tool page itself.',
+      },
+      {
+        title: 'Version clarity',
+        body: 'Where a tool has multiple model versions, we list them with API pricing, context window, and launch date. Where a vendor hides pricing, we say so.',
+      },
+      {
+        title: 'Correction policy',
+        body: 'We read every correction. Pages update when evidence checks out. If you think a score is unfair, the Contact Us link below accepts reasoned disagreement.',
+      },
+    ].map((item) => (
+      <div class="flex gap-4 bg-[var(--bg-card)] border border-[var(--border)] rounded-lg p-5">
+        <div class="shrink-0 w-8 h-8 rounded-full bg-[rgba(167,139,250,0.12)] text-[var(--accent-primary)] flex items-center justify-center text-sm">
+          &#10003;
+        </div>
+        <div class="min-w-0">
+          <h3 class="text-sm font-semibold text-[var(--text-primary)] m-0 mb-1">{item.title}</h3>
+          <p class="text-sm text-[var(--text-secondary)] leading-relaxed m-0">{item.body}</p>
+        </div>
+      </div>
+    ))}
+  </div>
+
+  <h2>How AI is used on this site</h2>
+
+  <p>
+    AI assistance is part of our production pipeline. Per Google's stated AI content policy, quality is judged by E-E-A-T and unique value regardless of production method. We disclose: page drafts are produced with AI tooling, every draft runs through the verification pipeline above, and no page ships without passing the compliance gate. Our unique value is editorial synthesis, verified facts, and continuous maintenance, not production volume.
+  </p>
+
+  <!-- Contact -->
+  <div
+    id="contact"
+    class="not-prose mt-14 bg-gradient-to-br from-[rgba(167,139,250,0.08)] to-[rgba(96,165,250,0.06)] border border-[rgba(167,139,250,0.25)] rounded-xl p-8 scroll-mt-24"
+  >
+    <div class="flex items-start gap-4">
+      <div class="shrink-0 w-10 h-10 rounded-full bg-[rgba(167,139,250,0.15)] text-[var(--accent-primary)] flex items-center justify-center text-lg">
+        &#9998;
+      </div>
+      <div class="min-w-0 flex-1">
+        <h2 class="text-xl font-semibold text-[var(--text-primary)] m-0 mb-2">Corrections, feedback, disagreement</h2>
+        <p class="text-sm text-[var(--text-secondary)] leading-relaxed m-0 mb-3">
+          Found a wrong price, a changed feature, or a tool that shut down? We read every correction and update pages when the evidence checks out. If you think a score is unfair, tell us what you would score it and why; we will look at the case.
+        </p>
+        <div class="flex flex-wrap gap-3 mt-5">
+          <a
+            href="mailto:hello@aipedia.wiki?subject=Correction%20or%20feedback"
+            class="inline-flex items-center gap-2 bg-[var(--accent-primary)] text-[#0b0a14] px-5 py-2.5 rounded-lg text-sm font-medium no-underline hover:opacity-90 transition-opacity"
+          >
+            <span>Email editorial</span>
+            <span>-&gt;</span>
+          </a>
+          <a
+            href="/about/"
+            class="inline-flex items-center gap-2 border border-[var(--border)] text-[var(--text-secondary)] hover:text-[var(--text-primary)] px-5 py-2.5 rounded-lg text-sm font-medium no-underline transition-colors"
+          >
+            About aipedia.wiki
+          </a>
+          <a
+            href="/about/scoring/"
+            class="inline-flex items-center gap-2 border border-[var(--border)] text-[var(--text-secondary)] hover:text-[var(--text-primary)] px-5 py-2.5 rounded-lg text-sm font-medium no-underline transition-colors"
+          >
+            Scoring methodology
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</ArticleLayout>

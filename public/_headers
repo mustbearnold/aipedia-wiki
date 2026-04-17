@@ -1,0 +1,28 @@
+# Cloudflare Pages _headers configuration for aipedia.wiki
+# Applied globally unless a path-specific block overrides.
+# Docs: https://developers.cloudflare.com/pages/configuration/headers/
+
+/*
+  Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://challenges.cloudflare.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://challenges.cloudflare.com; frame-src https://challenges.cloudflare.com; base-uri 'self'; form-action 'self'
+
+# Admin pages: noindex and no caching.
+/admin/*
+  X-Robots-Tag: noindex, nofollow, nosnippet, noarchive
+  Cache-Control: private, no-store
+
+# API endpoints: never cache, never index.
+/api/*
+  X-Robots-Tag: noindex, nofollow
+  Cache-Control: private, no-store
+
+# Static assets can be aggressively cached.
+/_astro/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/pagefind/*
+  Cache-Control: public, max-age=86400
