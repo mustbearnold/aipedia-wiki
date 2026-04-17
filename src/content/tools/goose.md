@@ -2,16 +2,16 @@
 type: tool
 slug: goose
 title: Goose
-tagline: Open-source AI agent that works with any LLM. Desktop app, CLI, and API for code, workflows, and general automation.
+tagline: Open-source AI agent originally from Block, now governed by the Linux Foundation's Agentic AI Foundation. Desktop, CLI, and API across 15+ LLMs with 70+ MCP extensions.
 category: ai-automation
 company: agentic-ai-foundation
-url: https://goose-docs.ai
+url: https://block.github.io/goose/
 pricing_model: open-source
-price_range: "Free (open-source)"
+price_range: "Free (Apache-2.0; BYOK LLM costs)"
 status: active
-launched: 2024-11
-last_updated: 2026-04-15
-last_verified: 2026-04-15
+launched: 2025-01
+last_updated: 2026-04-17
+last_verified: 2026-04-17
 update_frequency: frequent
 affiliate:
   has_program: false
@@ -24,119 +24,150 @@ scores:
   value: 10
   moat: 5
   longevity: 7
-tags: [open-source, agent, cli, desktop-app, multi-llm, mcp, automation, coding, block, linux-foundation, rust]
-seo_title: "Goose AI Agent: Features, Review & Alternatives (2026)"
-meta_description: "Goose is a free open-source AI agent from the Agentic AI Foundation (formerly Block). Desktop, CLI, and API. Supports 15+ LLM providers and 70+ MCP extensions."
+tags: [open-source, agent, cli, desktop-app, multi-llm, mcp, automation, coding, block, linux-foundation, rust, aaif, apache-2]
+seo_title: "Goose AI Agent: Features, Review & Alternatives (April 2026)"
+meta_description: "Goose is the free Apache-2.0 AI agent from Block, contributed to the Linux Foundation's Agentic AI Foundation in December 2025. Desktop, CLI, and API with 15+ LLM providers and 70+ MCP extensions."
 author: "aipedia.wiki Editorial"
 best_for:
-  - developers who want a free
-  - self-hosted autonomous agent
-  - teams that need LLM provider flexibility without lock-in
-  - power users building custom automation with MCP extensions
-  - engineers who prefer CLI-first workflows
+  - developers wanting a free self-hosted autonomous agent
+  - teams needing LLM provider flexibility
+  - MCP ecosystem power users
+  - CLI-first workflows
 not_best_for:
-  - users who want a managed
-  - hosted agent service
-  - non-developers who need a no-code interface
+  - users who want managed hosted agents
+  - non-developers needing no-code interfaces
+  - deep IDE coding integration (Cursor/Claude Code are better)
 quick_answer: >-
-  Goose is a free, Apache-2.0 open-source AI agent that runs on your desktop, in the terminal, or via API. Originally created by Block (the company behind Square and Cash App), it is now maintained by the Agentic AI Foundation at the Linux Foundation. It supports 15+ LLM providers including OpenAI, Anthropic, Google, and local models via Ollama, and extends via 70+ Model Context Protocol extensions. Best for developers who want a capable, vendor-neutral autonomous agent at zero cost; not a hosted or managed service.
+  Goose is a free Apache-2.0 AI agent originally from Block (Square, Cash App), contributed to the Linux Foundation's Agentic AI Foundation in December 2025. It runs on desktop, CLI, and API with 15+ LLM providers and 70+ MCP extensions. Best for developers wanting a vendor-neutral autonomous agent; no managed hosting tier.
+price_history:
+  - date: 2025-12-15
+    plan: "Open-source"
+    price: "Free"
+    note: "Block contributed Goose to the Linux Foundation's Agentic AI Foundation (AAIF)."
+  - date: 2026-04-17
+    plan: "Open-source"
+    price: "Free"
+    note: "Verified unchanged. Apache-2.0, BYOK LLM costs."
 ---
 
 # Goose
 
-Goose is a free, open-source AI agent that runs natively on macOS, Linux, and Windows. Originally built and open-sourced by Block (the company behind Square, Cash App, and Tidal) in late 2024, it transitioned in 2025 to the Agentic AI Foundation (AAIF) under the Linux Foundation as an independent, community-governed project ([GitHub](https://github.com/aaif-goose/goose)). The agent supports 15+ LLM providers through a unified interface, extends via the Model Context Protocol (MCP) with 70+ available extensions, and handles code, workflows, research, and general task automation without requiring a subscription or cloud account. As of April 2026 it has 42k+ GitHub stars and is licensed Apache-2.0.
+Free, Apache-2.0 AI agent originally open-sourced by Block (the company behind Square, Cash App, and Tidal) in January 2025. In December 2025, Block contributed Goose to the Linux Foundation's Agentic AI Foundation (AAIF). The project is now community-governed under the [block/goose](https://github.com/block/goose) repository.
 
+Runs as a native desktop app, CLI, and API on macOS, Linux, and Windows. Supports 15+ LLM providers through a unified interface and extends via 70+ Model Context Protocol extensions.
 
-## Editor's Take
+## System Verdict
 
-I installed Goose v3.2.1 on my Linux box last week, Rust binary compiled in under two minutes, no fuss. It handled a real workflow: scraping a site, parsing JSON with local Ollama Llama3, and pushing to GitHub via MCP extension. Response times averaged 4-6 seconds per step, faster than I'd get hammering Claude.dev directly. The YAML recipes are a standout; I reused one for batch file renames that saved an hour.
+> **Pick Goose if the team wants a free, vendor-neutral autonomous agent.** Provider-agnostic by design: Anthropic, OpenAI, Google, Mistral, Ollama local, OpenRouter, Azure, and Bedrock all work without changing workflows. Apache-2.0 permits commercial use with zero restriction.
+>
+> MCP is the ecosystem play. Goose was one of the earliest adopters and has one of the deepest extension libraries, with 70+ documented connectors covering GitHub, Google Drive, databases, browsers, and custom APIs. Rust-native on the back end, so startup and tool-call latency stay low.
+>
+> **Skip it if the workload demands managed hosting or deep IDE integration.** No cloud tier. [Cursor](/tools/cursor/) and [Claude Code](/tools/claude-code/) are purpose-built for in-editor autonomous coding; Goose is broader but less tuned.
+>
+> **Who pays what:** nobody pays Goose. The real cost is LLM usage. Local Ollama models run free; frontier [Claude](/tools/claude/) or [ChatGPT](/tools/chatgpt/) API calls cost what they cost.
 
-Closest rival is Devin from Cognition, polished IDE integration, but you're locked into their cloud and paying $20/month minimum. Goose stays free, Apache-2.0, with 15+ LLMs and 70+ extensions as of April 2026. Subagents parallelize decently, though prompt injection detection feels basic; I hit a sandbox escape once on purpose.
+## Key Facts
 
-Grab it if you're a CLI dev automating code or data tasks without vendor handcuffs. Skip if you need no-code or hosted reliability, non-devs will bail on the terminal. My bias: I live in open-source, so this beats SaaS every time.
+| | |
+|---|---|
+| **License** | Apache-2.0 (permissive, commercial use OK) |
+| **Governance** | Linux Foundation Agentic AI Foundation (AAIF), since December 2025 |
+| **Original creator** | Block (Square, Cash App, Tidal) |
+| **Languages** | Rust (core, ~50% of codebase) + TypeScript (UI) |
+| **Platforms** | macOS, Linux, Windows (native desktop + CLI + API) |
+| **LLM providers** | 15+ (Anthropic, OpenAI, Google, Mistral, Ollama, OpenRouter, Azure, Bedrock, more) |
+| **MCP extensions** | 70+ documented |
+| **GitHub stars** | 29,000+ as of April 2026 |
+| **Pricing** | Free. Users pay their own LLM costs |
 
-## What It Does
+Every data point above was verified against vendor documentation on 2026-04-17. See Sources.
 
-Goose is a general-purpose autonomous agent that executes multi-step tasks on your local machine. You describe what you need, and Goose plans and executes a sequence of tool calls, browsing, code execution, API calls, and file operations until the task is complete ([Goose Docs](https://goose-docs.ai)). The agent is built in Rust (50.7% of the codebase) with a TypeScript frontend, making it fast and cross-platform. Provider flexibility is a core design principle: you configure which LLM to use via API key, and can switch between OpenAI, Anthropic Claude, Google Gemini, Mistral, Ollama local models, Azure, and others without changing how you use the agent. Extensions via MCP connect Goose to databases, GitHub, Google Drive, browsers, and custom APIs. YAML-based recipes let you capture and share reusable workflows. Subagents allow Goose to spin up parallel specialized agents for complex tasks. A prompt injection detection layer and sandbox mode provide basic safety controls.
+## What it actually is
 
-## Who It's For
+A general-purpose autonomous agent that executes multi-step tasks on the local machine. Users describe what they need; Goose plans and executes a sequence of tool calls: browsing, code execution, API calls, file operations, until the task completes.
 
-- **Developers** who want a capable autonomous agent that runs entirely on their own machine and API keys
-- **Teams that need LLM flexibility** and cannot commit to a single provider
-- **Power users** who want to automate complex multi-step tasks (research, data processing, code generation, file management) without a SaaS subscription
-- **Open-source contributors** building extensions and tools in the MCP ecosystem
-- **Engineers** who prefer CLI-first or API-driven workflows over GUI-heavy tools
+The Rust core handles orchestration, tool dispatch, and sandboxing. A TypeScript frontend ships as the desktop app. The CLI wraps the same core for terminal workflows.
+
+Provider flexibility is the architectural commitment. Swap LLMs via config; workflows, extensions, and recipes do not change. This matters when frontier model rankings shift every few months.
+
+## When to pick Goose
+
+- **Vendor neutrality is a hard requirement.** Providers are config-swappable; no lock-in to Anthropic or OpenAI.
+- **MCP is the integration standard the team already invested in.** 70+ extensions beat most single-vendor catalogs.
+- **Tasks span research, file operations, coding, and API calls.** Goose handles mixed workloads, not just code.
+- **Local LLM (Ollama) is acceptable or required.** Works fully offline with local models for privacy-sensitive workflows.
+- **YAML recipes need to capture and share workflows.** Reusable, portable configurations travel between teammates and CI.
+
+## When to pick something else
+
+- **IDE-integrated autonomous coding:** [Cursor](/tools/cursor/) or [Claude Code](/tools/claude-code/). Better in-editor ergonomics, deeper codebase awareness.
+- **Managed hosted agent:** [ChatGPT](/tools/chatgpt/) Agent Mode or a hosted platform. Goose runs only on user machines.
+- **Persistent memory across sessions:** [Letta](/tools/letta/) or [Hermes Agent](/tools/hermes-agent/). Goose has no built-in long-term memory blocks.
+- **No-code UX:** [Zapier](/tools/zapier/), [Make](/tools/make/), or [Activepieces](/tools/activepieces/). Goose assumes developer comfort.
+- **Git-native coding loop:** [Aider](/tools/aider/). Narrower scope, tighter commit-level integration.
 
 ## Pricing
 
 | Plan | Price |
-|------|-------|
-| Open-source (self-run) | Free |
-| Desktop app | Free (bring your own LLM API keys) |
+|---|---|
+| Open-source (all surfaces) | Free |
+| Desktop app | Free, bring your own LLM API keys |
 | CLI | Free |
-| API | Free (open-source; host yourself) |
+| API (self-host) | Free |
 
-*Goose itself is entirely free and Apache-2.0. You pay for LLM API usage directly with your chosen provider (e.g., Anthropic, OpenAI). Prices verified 2026-04-15 ([Goose GitHub](https://github.com/aaif-goose/goose)).*
+*Goose itself is Apache-2.0 and free. Users pay the LLM provider directly. Verified 2026-04-17 via [GitHub](https://github.com/block/goose) and the [official docs](https://block.github.io/goose/).*
 
-## Key Features
+## Against the alternatives
 
-- **15+ LLM providers:** OpenAI, Anthropic, Google, Mistral, Ollama, OpenRouter, Azure, Bedrock, and more; switch providers without changing workflows ([Goose Docs](https://goose-docs.ai))
-- **70+ MCP extensions:** Connect to GitHub, Google Drive, databases, web browsers, Slack, and custom APIs via the Model Context Protocol standard
-- **Native desktop app:** macOS, Linux, and Windows; not Electron or a web wrapper (Rust + TypeScript)
-- **CLI and API:** Full command-line interface and programmable API for scripting and integration
-- **YAML recipes:** Capture reusable, portable workflow configurations and share them across teams
-- **Subagents:** Spawn independent agents to run parallel tasks within a session
-- **MCP app UIs:** Extensions can render interactive interfaces directly in the desktop app
-- **Security controls:** Prompt injection detection, tool permission controls, sandbox mode
-- **Apache-2.0 license:** Permissive; can be used commercially without restriction
+| | Goose | Cursor | Claude Code | Aider |
+|---|---|---|---|---|
+| **License** | Apache-2.0 open-source | Proprietary | Proprietary | Apache-2.0 |
+| **Hosted tier** | No | Yes | Yes | No |
+| **LLM providers** | 15+ | Limited | Claude only | OpenAI, Anthropic, others |
+| **Scope** | General automation + code | IDE coding | CLI coding | Git-native coding |
+| **MCP ecosystem** | 70+ extensions, deep | Growing | Growing | Limited |
+| **Local model support** | Yes (Ollama) | No | No | Yes |
+| **Best viewed as** | Vendor-neutral autonomous agent | Best coding IDE | Best CLI coder (Claude) | Commit-focused coder |
 
-## Limitations
+## Failure modes
 
-- **No managed hosting.** Goose runs on your machine. If you want a cloud-hosted agent with zero infrastructure, you need a different tool.
-- **Requires LLM API keys.** You supply and pay for your own model access; there is no bundled free LLM quota.
-- **No built-in long-term memory.** Goose does not have Letta-style persistent memory blocks; session state resets unless you implement your own memory layer via an extension.
-- **Moderate moat.** The MCP ecosystem is shared across many agent tools; provider flexibility is increasingly table stakes. Goose's differentiation is the community governance and broad extension library, not proprietary technology.
-- **Non-developer UX is limited.** The no-code audience is not well served; setting up providers, extensions, and recipes assumes developer comfort.
-- **Organizational transition.** The move from Block to AAIF/Linux Foundation is recent (2025); some documentation links and references are still being updated as of April 2026.
+- **No managed hosting.** Runs on user machines only. Teams wanting a cloud-hosted agent need a different tool.
+- **BYOK API costs.** No bundled LLM quota. Heavy use of Claude Opus 4.7 or GPT-5.4 accumulates real bills.
+- **No built-in long-term memory.** Session state resets unless a memory extension is wired in manually.
+- **MCP is a shared standard.** Provider flexibility and MCP are increasingly table-stakes across agent tools, so the moat is narrowing.
+- **Non-developer UX gaps.** Configuring providers, extensions, and recipes assumes comfort with env vars, YAML, and a terminal.
+- **Organizational transition still in progress.** Move from Block to AAIF/Linux Foundation is recent; some docs and references still reference the original Block URLs.
+- **Prompt injection defenses are basic.** Sandbox mode exists, but adversarial inputs can still escape in edge cases. Review tool permissions for production workloads.
+- **Desktop app maturity varies by OS.** Linux and macOS lead; Windows parity is improving but trails.
 
-## Bottom Line
+## Methodology
 
-Goose is the best fully free, open-source general-purpose agent available as of April 2026. The combination of multi-provider LLM support, 70+ MCP extensions, native desktop and CLI interfaces, and Apache-2.0 licensing makes it a strong default choice for developers who want maximum flexibility at zero tool cost. It lacks built-in persistent memory (use Letta for that) and is not a managed service (use a SaaS agent platform for that), but for local autonomous task execution with your own API keys it is hard to beat. The Linux Foundation governance model suggests long-term sustainability.
-
-## Best Alternatives
-
-- [Aider](../tools/aider.md): CLI coding agent optimized specifically for code generation and git commits; narrower scope but deeper coding focus
-- [Cursor](../tools/cursor.md): IDE-integrated coding agent; better GUI experience, less general automation, not free beyond trial
-- [Claude Code](../tools/claude-code.md): Anthropic's terminal agent; deeper autonomous coding capability but locked to Claude models and costs $100-$200/month
-- [Letta](../tools/letta.md): Better choice if you need agents with persistent long-term memory across sessions
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis shown. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [Goose documentation](https://block.github.io/goose/), the [block/goose GitHub repository](https://github.com/block/goose), and the [Block open-source announcement](https://block.xyz/inside/block-open-source-introduces-codename-goose).
 
 ## FAQ
 
-**Who made Goose?**
-Goose was originally created and open-sourced by Block (the financial technology company behind Square and Cash App) in late 2024. In 2025 it transitioned to the Agentic AI Foundation (AAIF), an independent foundation under the Linux Foundation, which now governs the project.
+**Who owns Goose?**
+Goose was created and open-sourced by Block (Square, Cash App, Tidal) in January 2025. In December 2025, Block contributed the project to the Linux Foundation's Agentic AI Foundation (AAIF), where it is now community-governed. Code still lives at [block/goose](https://github.com/block/goose).
 
 **Is Goose really free?**
-Yes. Goose itself is Apache-2.0 open-source and costs nothing to download and run. You pay only for the LLM API calls you make to whichever provider you configure (OpenAI, Anthropic, etc.). There is no Goose subscription or usage fee.
+Yes. Apache-2.0 open-source, no subscription, no usage fees to Goose. Users pay whichever LLM provider they configure.
 
-**How does Goose compare to Aider or Claude Code for coding tasks?**
-Goose is broader in scope: it handles general automation, research, file management, and workflows, not just code. Aider is narrower and more optimized for code generation with direct git integration; Claude Code offers deeper autonomous coding capability within a project's full codebase but costs $100-$200/month and is locked to Anthropic's models. Goose is the best starting point if you want a free, flexible agent for mixed tasks including coding.
+**Goose vs Aider or Claude Code for coding?**
+Goose is broader: general automation, research, file management, plus coding. Aider is narrower and optimized for code + git commits. [Claude Code](/tools/claude-code/) offers deeper autonomous coding within a codebase but costs $100 to $200 per month and runs only on Anthropic models.
 
+**Which LLMs work with Goose?**
+15+ providers including Anthropic, OpenAI, Google Gemini, Mistral, Ollama local models, OpenRouter, Azure, and Bedrock. Provider is a config switch.
 
-## Review History
-
-- **2026-04-14:** Pricing and flagship model version verified. No material changes.
-- **2026-03-18:** Score revised up by 0.5 after extended hands-on testing.
-- **2026-01-16:** Noted the new model availability across tiers.
-- **2025-11-16:** Pricing verified. Minor copy edits.
-- **2025-02-01:** First published review after two weeks of use.
+**Does Goose support MCP?**
+Yes, natively and deeply. 70+ documented MCP extensions cover GitHub, Google Drive, databases, browsers, Slack, and custom APIs.
 
 ## Sources
 
-- [Goose GitHub (aaif-goose/goose)](https://github.com/aaif-goose/goose): 42.1k stars, Apache-2.0, organizational history, architecture details
-- [Goose documentation](https://goose-docs.ai): Feature descriptions, extension list, provider support, verified 2026-04-15
-- [Block open-source announcement](https://block.github.io/goose/): Original Block home page (now redirects to goose-docs.ai)
+- [Goose GitHub (block/goose)](https://github.com/block/goose): Apache-2.0 license, codebase, governance history
+- [Goose documentation](https://block.github.io/goose/): features, extensions, provider support
+- [Block open-source announcement](https://block.xyz/inside/block-open-source-introduces-codename-goose): original launch context
+- [Agentic AI Foundation](https://www.aaif.dev/): Linux Foundation project handling Goose governance since December 2025
 
 ## Related
 
-- **Category:** [AI Automation](../categories/ai-automation.md)
-- **Category:** [AI Coding](../categories/ai-coding.md)
+- **Category:** [AI Automation](/categories/ai-automation/) · [AI Coding](/categories/ai-coding/)

@@ -3,17 +3,17 @@ type: tool
 slug: activepieces
 title: Activepieces
 tagline: >-
-  Open-source no-code automation platform and Zapier alternative with AI-native
-  actions.
+  Open-source MIT-licensed automation platform. Free to self-host; cloud Standard is
+  free for 10 flows, then $5 per active flow per month.
 category: ai-automation
 company: Activepieces Inc.
 url: 'https://www.activepieces.com'
 pricing_model: open-source
-price_range: Free (unlimited self-hosted) / $49/mo Starter cloud
+price_range: Free self-host / $5 per active flow (cloud)
 status: active
 launched: 2022-06
-last_updated: 2026-04-15T00:00:00.000Z
-last_verified: '2026-04-15'
+last_updated: 2026-04-17
+last_verified: 2026-04-17
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -26,111 +26,154 @@ scores:
   value: 9
   moat: 6
   longevity: 7
-tags: [automation, open-source, zapier-alternative, no-code, workflow, self-hosted]
-seo_title: 'Activepieces Review: Open-Source Zapier Alternative (2026)'
+tags: [automation, open-source, zapier-alternative, no-code, workflow, self-hosted, mcp]
+seo_title: 'Activepieces Review: Open-Source Zapier Alternative (April 2026)'
 meta_description: >-
-  Activepieces is an open-source no-code automation platform. Free to self-host,
-  $49/mo cloud Starter. Review comparing to Zapier, n8n, Make as of 2026.
+  Activepieces is an MIT-licensed no-code automation platform with AI agents and
+  native MCP support. Free to self-host; cloud Standard free for 10 flows, then
+  $5/flow/month. Verified April 2026.
 author: aipedia.wiki Editorial
+best_for:
+  - teams leaving Zapier on cost
+  - privacy-sensitive automations kept on-prem
+  - AI agent workflows with MCP tool servers
+  - developer teams comfortable with Docker
+not_best_for:
+  - non-technical users wanting zero infra
+  - workflows needing 1000+ third-party connectors
+  - heavy enterprise SSO/audit requirements without an annual contract
 quick_answer: >-
-  Activepieces is an open-source, MIT-licensed no-code automation platform from Activepieces Inc. as a Zapier alternative. It offers unlimited free self-hosting; cloud Starter is $49/month for 10k tasks/month vs Zapier's $29 minimum. Suited for teams needing Zapier-style flows within 250+ connectors; lacks Zapier's 7,000+ app coverage.
+  Activepieces is an MIT-licensed Zapier alternative. Self-host free with unlimited runs, or use cloud Standard (10 flows free, then $5 per active flow per month). Every piece doubles as an MCP server for Claude Desktop, Cursor, and Windsurf. Pick it for cost and privacy; skip if the connector catalog (~400) gaps your stack.
+price_history:
+  - date: 2026-02-01
+    plan: "Standard"
+    price: "$5/flow/mo"
+    note: "Per-flow pricing replaces per-task metering; 10 flows included free."
+  - date: 2026-04-17
+    plan: "Self-hosted"
+    price: "Free"
+    note: "Verified unchanged. MIT license, unlimited runs."
 ---
 
 # Activepieces
 
-Activepieces is an open-source no-code automation platform that works as an alternative to [Zapier](../tools/zapier.md), [Make](../tools/make.md), and [n8n](../tools/n8n.md). Users build workflows with a visual drag-and-drop interface to connect apps. It stands out with full MIT-licensed source code available for self-hosting at no cost. The cloud plans start at $49/month, below Zapier's entry but above some open-source rivals. [Activepieces.com](https://www.activepieces.com) (verified 2026-04-15).
+Open-source no-code automation platform from Activepieces Inc. Positioned as a [Zapier](/tools/zapier/) alternative, with the full codebase under MIT license on [GitHub](https://github.com/activepieces/activepieces). Every piece doubles as a Model Context Protocol server, so flows can be called from Claude Desktop, Cursor, or Windsurf as AI agent tools.
 
-Launched in 2022, Activepieces targets users moving from paid platforms due to task-based billing. The self-hosted edition runs without limits on your infrastructure. Cloud options scale for teams, with AI actions for models like GPT-5.4, Claude Opus 4.6, and Gemini 3.1 Pro built in.
+Two deployment paths: self-host free on your own infrastructure, or use the cloud Standard plan (10 flows free, then $5 per active flow per month).
 
+## System Verdict
 
-## Editor's Take
+> **Pick Activepieces if cost or data residency ruled out Zapier.** Self-hosted is genuinely free with unlimited runs. Cloud Standard starts free for 10 active flows and scales at $5 per flow, not per task, which avoids the step-multiplier trap that makes Zapier expensive.
+>
+> The MCP integration is the real 2026 upgrade. Pieces contributed to the catalog auto-expose as MCP servers, so a single Activepieces install gives an agent in [Claude Desktop](/tools/claude/) or [Cursor](/tools/cursor/) access to ~400 tools without writing connector code.
+>
+> **Skip it if the connector catalog gaps your stack.** Zapier still wins on raw breadth. Skip too if the team has no Docker comfort, no Postgres admin, and no appetite for version upgrades. [Make](/tools/make/) is the better managed pick there.
+>
+> **Who pays which tier:** solo self-host for hobbyists and privacy-first teams, cloud Standard free for small teams under 10 flows, cloud Standard paid ($5/flow) for production teams, Enterprise annual contract for SSO, audit logs, and Git sync.
 
-I self-hosted Activepieces v1.12.3 on a DigitalOcean droplet last week. Setup took 20 minutes with Docker Compose, Postgres and Redis spun up fine, no glitches. Built a flow pulling Stripe payments into Airtable via GPT-5.4 summarization; executed in 4 seconds, logged cleanly. The 250+ pieces cover essentials like Slack and Google Workspace, but miss niche apps Zapier has.
+## Key Facts
 
-Cloud Starter at $49/month for 10k tasks beats Zapier's $29 entry only if you ignore Zapier's broader 7,000+ integrations, Activepieces feels limited there. n8n edges it for coders with native Node.js steps, but Activepieces' drag-drop is smoother for non-devs. I'm biased toward self-hosting; data stays mine.
+| | |
+|---|---|
+| **License** | MIT (self-host free, unlimited runs) |
+| **Cloud Standard** | 10 active flows free, then $5 per active flow per month |
+| **Connectors ("pieces")** | ~400 (Gmail, Slack, Stripe, HubSpot, Notion, plus LLM providers) |
+| **MCP servers** | Every piece exposes as MCP automatically |
+| **AI actions** | Native pieces for GPT-5.4, Claude Opus 4.7, Gemini 3.1 Pro |
+| **Self-host stack** | Docker Compose, Postgres, Redis |
+| **Code steps** | JavaScript (Node-based) |
+| **Enterprise deploy** | Custom annual contract (SSO, audit, Git sync, private pieces) |
 
-Use it if you're ditching Zapier for cost or privacy. Skip if you need exotic connectors or zero infra hassle, stick to Make then. Solid for small teams, not enterprises yet.
+Every data point above was verified against vendor documentation on 2026-04-17. See Sources.
 
-## What It Does
+## What it actually is
 
-Activepieces uses "pieces" as pre-built connectors for over 250 apps, including Slack, Google Workspace, Airtable, Stripe, and AI providers. Workflows start with triggers like webhooks, schedules, or app events, followed by action steps, data transforms, and branches. Flows execute automatically; results log in the dashboard for review.
+A visual workflow builder with drag-and-drop triggers, actions, branches, loops, and JavaScript code steps. Self-hosted runs on Docker Compose with Postgres and Redis. Cloud handles hosting and metering.
 
-The visual builder matches Zapier or Make in ease of use. Self-hosting deploys via Docker or Kubernetes, using Postgres and Redis. You control all data and scaling. Cloud handles hosting, with tasks counted per successful action step. AI pieces simplify calls to GPT-5.4 for summarization or Claude Opus 4.6 for analysis, then route outputs to other apps.
+The 2026 positioning shift is AI agents and MCP. Contributing a piece to the public catalog auto-exposes it as an MCP server, usable from [Claude Desktop](/tools/claude/), Cursor, or Windsurf. This makes Activepieces a two-way bridge: flows call LLMs, and LLMs call flows.
 
-Flows support loops, delays, and code steps in JavaScript. Teams import/export flows as JSON for portability.
+The moats are thin. Code is MIT-licensed, so any competitor can fork. Differentiation rests on community contribution velocity, the MCP-first catalog, and the simplicity of the per-flow pricing model.
 
-## Who It's For
+## When to pick Activepieces
 
-- **Zapier users** seeking lower costs and self-hosting
-- **Technical teams** extending open-source tools
-- **Data privacy focused** groups keeping automations internal
-- **Small businesses** automating without high monthly fees
-- **AI workflow builders** using native GPT-5.4/Claude/Gemini pieces
-- **DevOps groups** running Docker-based services
+- **Cost is the dealbreaker.** Zapier's step-based metering is punishing on multi-action flows. Activepieces charges per active flow, not per execution.
+- **Data cannot leave on-prem.** Self-hosted deployment keeps every webhook, payload, and log on infrastructure the team controls.
+- **The agent stack uses MCP.** Pieces expose as MCP servers natively; Claude Desktop or Cursor can invoke them without custom connectors.
+- **The team has Docker and Postgres comfort.** Self-host setup runs in 20 minutes. Updates, backups, and scaling are the team's job.
+- **Workflows need AI actions inline.** Native pieces for GPT-5.4, Claude Opus 4.7, and Gemini 3.1 Pro remove boilerplate OpenAI and Anthropic SDK calls.
+
+## When to pick something else
+
+- **Broadest connector catalog:** [Zapier](/tools/zapier/) ships 7,000+ integrations. Activepieces lists ~400.
+- **Managed cloud with deep node library:** [n8n](/tools/n8n/) offers a similar open-source story plus cloud. Self-host n8n if the team prefers Node-flavored workflows over drag-and-drop.
+- **Visual workflow builder with generous free tier:** [Make](/tools/make/) remains the best pick for non-technical users who will never self-host.
+- **Enterprise SSO, SCIM, audit out of the box without a custom contract:** Zapier Enterprise or [Workato](/tools/workato/).
+- **Coding the agent logic directly:** LangGraph or the MCP SDK. Activepieces is a GUI-first product.
 
 ## Pricing
 
-| Plan | Price | Key Limits |
-|------|-------|-----------|
-| Self-hosted | Free | Unlimited flows/tasks; self-manage infra |
-| Starter (cloud) | $49/mo | 10k tasks/mo, 2 active flows, 1 user |
-| Pro (cloud) | $149/mo | 100k tasks/mo, unlimited flows, 5 users |
-| Team (cloud) | $399/mo | 500k tasks/mo, 20 users, custom roles |
-| Enterprise | Custom | Unlimited, SSO, audit logs, SLA |
+Pricing via [activepieces.com/pricing](https://www.activepieces.com/pricing):
 
-> Pricing verified at [activepieces.com/pricing](https://www.activepieces.com/pricing) as of 2026-04-15.
+| Plan | Price | What you get |
+|---|---|---|
+| Self-hosted (Community) | Free | MIT license, unlimited flows, unlimited runs, all pieces, all MCP servers |
+| Cloud Standard | Free for 10 active flows, $5 per additional flow/mo | Unlimited runs, AI agents, unlimited tables, email support |
+| Cloud Unlimited | Custom (annual) | SSO, audit logs, role permissions, centralized AI billing, Git sync, private pieces |
+| Embed | From $30,000/yr | Embedded builder and agents, JS SDK, custom templates, white-label |
 
-## Key Features
+*Prices verified 2026-04-17 via [activepieces.com/pricing](https://www.activepieces.com/pricing). Pricing shifted from per-task to per-active-flow in early 2026.*
 
-- **MIT open-source** - Source on GitHub; self-host without fees [github.com/activepieces/activepieces](https://github.com/activepieces/activepieces)
-- **Drag-and-drop builder** - Visual editor for triggers, actions, logic
-- **250+ pieces** - Connectors for Gmail, HubSpot, Notion, OpenAI GPT-5.4, Anthropic Claude Opus 4.6, Google Gemini 3.1 Pro
-- **AI actions** - Pre-configured for LLM calls, parsing, routing
-- **Self-hosting** - Docker Compose setup; supports air-gapped installs
-- **Unlimited flows** - No caps on automation count across plans
-- **Code steps** - JavaScript execution for custom logic
-- **Flow sharing** - Public templates library with 500+ community flows
+## Against the alternatives
 
-## Limitations
+| | Activepieces | Zapier | n8n | Make |
+|---|---|---|---|---|
+| **License** | MIT open-source | Proprietary | Sustainable-Use (fair-code) | Proprietary |
+| **Self-host** | Yes, free, unlimited | No | Yes, free | No |
+| **Connector count** | ~400 | 7,000+ | 400+ | 1,500+ |
+| **Native MCP** | Yes, every piece | No | No | No |
+| **Pricing model** | Per active flow | Per task | Per execution | Per operation |
+| **Entry cloud price** | Free (10 flows) | $29.99/mo | $24/mo | Free tier + $9/mo |
+| **Best viewed as** | MCP-first automation | Breadth champion | Coder-friendly OSS | Polished visual builder |
 
-- **250 pieces vs Zapier's 7,000+** - Misses some niche apps; use webhooks for gaps [activepieces.com/pieces](https://www.activepieces.com/pieces) (verified 2026-04-15)
-- **Self-host ops** - Requires Docker/Postgres management, updates
-- **Community size** - Smaller than n8n/Zapier; fewer templates, forum answers
-- **Task metering** - Cloud bills per step; multi-step flows add up fast
-- **Enterprise polish** - SSO/roles available but basic vs proprietary tools
+## Failure modes
 
-## Bottom Line
+- **Connector gaps.** Niche SaaS apps common on Zapier may be missing. Workaround is custom HTTP pieces or community contributions, both of which cost time.
+- **Self-host operations load.** Postgres backups, Redis uptime, Docker updates, and TLS renewal are the operator's problem. Cloud Standard exists for teams that do not want that.
+- **Per-flow pricing surprises.** A flow that triggers 10,000 times per month costs the same $5 as one that fires twice. That is usually a win, but low-volume test flows still count against the active-flow total.
+- **Community piece quality varies.** Official pieces are maintained; community contributions can go stale when upstream APIs change.
+- **MCP exposure needs review.** Every published piece becomes an MCP server. Teams running private pieces must opt into that exposure explicitly to avoid leaking internal endpoints to external agents.
+- **Enterprise controls require a contract.** SSO, SCIM, audit logs, and Git sync live behind the Unlimited annual plan. No self-serve path to those features.
+- **JavaScript-only code steps.** Python, Ruby, Go, or Bash custom logic has to run as an external HTTP endpoint that the flow calls.
 
-Activepieces delivers high value at 9/10 for cost-sensitive teams, with free self-hosting and cloud under $50 start. Utility hits 8/10 for standard app/AI automations within its pieces. Moat at 6/10 relies on community growth over proprietary lock-in.
+## Methodology
 
-## Best Alternatives
-
-| Tool | Price | Key Difference |
-|------|-------|----------------|
-| [Zapier](../tools/zapier.md) | $29+/mo | 7,000+ integrations; task-based pricing |
-| [n8n](../tools/n8n.md) | Free/$24+/mo | Node-based; 400+ nodes, steeper curve |
-| [Make](../tools/make.md) | Free/$16+/mo | Visual; 1,500+ apps, proprietary |
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis shown. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [activepieces.com/pricing](https://www.activepieces.com/pricing) and the [Activepieces GitHub repository](https://github.com/activepieces/activepieces).
 
 ## FAQ
 
-**Is self-hosting truly unlimited?**  
-Yes, MIT license allows free use with no task/flow limits. Deploy via Docker; provide your own Postgres/Redis. No Activepieces billing. [docs.activepieces.com/self-hosting](https://docs.activepieces.com/self-hosting) (2026-04-15).
+**Is self-hosting truly free?**
+Yes. MIT license, unlimited flows, unlimited runs, all pieces. The operator pays only for the server, database, and Redis. No Activepieces billing.
 
-**Activepieces vs Zapier in 2026?**  
-Activepieces covers 250 apps at lower cost/self-host; Zapier has 7,000+ connectors and better support. Switch if your apps fit; stay for rare integrations.
+**How is cloud pricing structured in 2026?**
+Cloud Standard is free for the first 10 active flows, then $5 per active flow per month. Runs are unlimited. This replaces the earlier per-task model.
 
-**Number of AI pieces?**  
-12+ native: GPT-5.4, Claude Opus 4.6, Gemini 3.1 Pro, plus vector stores and agents. [activepieces.com/ai](https://www.activepieces.com/ai) (2026-04-15).
+**Does Activepieces support MCP?**
+Yes. Every piece in the public catalog automatically exposes as a Model Context Protocol server. Claude Desktop, [Cursor](/tools/cursor/), and Windsurf can call Activepieces flows as agent tools.
 
+**Activepieces vs Zapier in 2026?**
+Activepieces wins on cost, self-host option, and native MCP. Zapier wins on connector breadth (7,000+ vs ~400) and hands-off reliability.
 
-## Review History
-
-- **2026-04-14:** Pricing and flagship model version verified. No material changes.
-- **2026-03-18:** Score revised up by 0.5 after extended hands-on testing.
-- **2026-01-16:** Added the new model variant to the features section.
-- **2025-11-16:** Pricing verified. Minor copy edits.
-- **2024-01-15:** First published review after two weeks of use.
+**Which AI models ship as native pieces?**
+GPT-5.4, Claude Opus 4.7, Gemini 3.1 Pro, plus OpenRouter, vector-store, and agent pieces. Switching provider is a config change.
 
 ## Sources
-- [Activepieces official site](https://www.activepieces.com), verified 2026-04-15
-- [Activepieces GitHub](https://github.com/activepieces/activepieces), 22k stars, verified 2026-04-15
+
+- [Activepieces pricing](https://www.activepieces.com/pricing): plan structure, per-flow cost
+- [Activepieces GitHub](https://github.com/activepieces/activepieces): MIT license, codebase, MCP positioning
+- [Activepieces self-hosting docs](https://www.activepieces.com/docs/install/overview): Docker Compose, Postgres, Redis setup
+- [Pricing-model blog post](https://www.activepieces.com/blog/automation-pricing): 2026 shift from per-task to per-flow billing
+
+## Related
+
+- **Category:** [AI Automation](/categories/ai-automation/)
+- **Comparisons:** [Activepieces vs Zapier](/comparisons/activepieces-vs-zapier/) · [Activepieces vs n8n](/comparisons/activepieces-vs-n8n/) · [Activepieces vs Make](/comparisons/activepieces-vs-make/)

@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "Free - $199.99/month"
 status: active
 launched: 2024-03
-last_updated: 2026-04-15
-last_verified: 2026-04-15
+last_updated: 2026-04-17
+last_verified: 2026-04-17
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -36,118 +36,140 @@ not_best_for:
   - professional filmmakers needing precise motion control
   - users who need long-form video beyond 10 seconds per clip
 quick_answer: >-
-  Hailuo AI is MiniMax's text-to-video and image-to-video generator, launched March 2024. It produces native 1080P clips up to 10 seconds from text prompts or still images, starting free with 200 trial credits and paid plans from $7.99 per month (promotional) or $14.99 per month (regular). Compared to Kling and Runway, Hailuo is generally cheaper and reasonably competitive on quality for short social-media clips, but it lacks the advanced camera controls and longer generation windows of higher-end tools.
+  Hailuo AI is MiniMax's text-to-video and image-to-video generator. Current model is Hailuo 2.3 (and 2.3 Fast), delivering native 1080P clips of 6-10 seconds. API pricing starts at $0.28 per 6s clip at 768P, $0.49 at 1080P. Consumer plans from $7.99 promo / $14.99 regular.
 ---
 
 # Hailuo AI
 
-Hailuo AI is the video generation product from MiniMax, the Shanghai-based AI company behind the Talkie companion app and the M2 LLM family (see [MiniMax page](../tools/minimax.md)). Launched in March 2024, it converts text prompts and still images into short video clips at native 1080P resolution. As of April 2026, it supports clips up to 10 seconds, offers a free trial tier, and competes directly with [Kling](../tools/kling.md) and Runway at a lower price point. The product runs on the Hailuo 2.3 and Hailuo 2.3 Fast foundation video models, released in October 2025 and built on the earlier Hailuo 02 architecture.
+The video generation product from [MiniMax](/tools/minimax/), the Shanghai AI lab behind the Talkie companion app and the M2 LLM family. Launched March 2024. The current foundation models are **Hailuo 2.3** and **Hailuo 2.3 Fast**.
 
+Native 1080P output. 6-10 second clip length. Free trial tier. API access via the MiniMax platform.
 
-## Editor's Take
+## System Verdict
 
-I tested Hailuo 2.3 on the Standard plan at the $7.99 promo rate, churning out a dozen 10-second 1080P clips from text prompts like "drone shot over neon Tokyo at night." Generations took 2-4 minutes each, with solid motion fluidity for social clips but occasional physics glitches, like floating objects. No watermarks, and the image-to-video mode nailed animating my test photo into a smooth pan. Credits burned fast on 1080P, though, about 25 per clip.
+> **Pick Hailuo if the priority is cheap, native 1080P AI video for short-form social content.** At $0.28 per 6-second 768P clip and $0.49 per 1080P clip on API, it sets the current cost-performance record for generative video. Hailuo 2.3 adds better physics, stylization, and anime support over 2.2.
+>
+> **Skip it for anything longer than 10 seconds.** Maximum clip length stays capped at 10s; narrative sequences need manual stitching. [Kling 3.0](/tools/kling/) holds the edge on precise camera control and prompt adherence. [Veo 3](/tools/veo/) wins on native audio and cinematic polish.
+>
+> The consumer subscription page is promo-heavy. Regular prices are ~2x the promotional rates. Budget-sensitive teams should price API usage directly against predictable workloads rather than relying on promotional tiers that may lapse.
 
-Kling edges it on camera controls and prompt adherence; if you need precise zooms or multi-shot consistency, pick Kling's $10/month starter instead. Hailuo wins on raw affordability for Reels producers or indie marketers cranking volume. Skip it for anything over 10 seconds or pro editing workflows.
+## Key Facts
 
-Use this if you're budget-capped and okay with short-form limits. I prefer it over Runway for quick solos, but teams should look elsewhere. (148 words)
+| | |
+|---|---|
+| **Parent company** | MiniMax (Shanghai, listed HKEX Jan 2026) |
+| **Current models** | Hailuo 2.3, Hailuo 2.3 Fast |
+| **Previous flagship** | Hailuo 02 (pricing retained on 2.3) |
+| **Clip length** | 6-10 seconds |
+| **Output resolution** | 768P (Standard) and 1080P (Pro) native |
+| **API price per clip (6s)** | $0.28 at 768P, $0.49 at 1080P |
+| **Fast-model discount** | Up to 50% off on batch generation |
+| **Free tier** | 200 trial credits, watermarked |
+| **Consumer plan floor** | $7.99/mo promo ($14.99 regular) |
+| **Audio** | None (video only; add separately) |
 
-## What It Does
+## What it actually is
 
-Hailuo generates short video clips (up to 10 seconds) from text descriptions or input images. Users write a prompt describing the scene, motion, and style; Hailuo renders a clip in 768P or 1080P. The image-to-video mode takes a still frame as the starting point and animates it according to a text instruction. The platform operates on a credit system, with each generation consuming credits based on resolution and clip length. Higher-tier plans unlock the Hailuo 02 and Hailuo 2.3 models, which produce better motion quality and longer clips.
+A text-to-video and image-to-video product served via a consumer web app and a developer API. Users write a prompt describing scene, motion, and style, or supply a still image as the starting frame.
 
-## Who It's For
+The consumer platform runs on a credit system. Credits spend faster on 1080P and on longer clips. Ultra and Max tiers advertise "unlimited" access on specific older model lines; the newest models still burn credits.
 
-- **Social media creators** producing short-form video content for TikTok, Instagram Reels, or YouTube Shorts
-- **Marketers** generating quick visual concepts for campaigns without a production crew
-- **Indie filmmakers and animators** prototyping scenes before committing to full production
-- **Developers** using the MiniMax API to embed video generation in their own apps
-- **Budget-focused teams** wanting a capable alternative to Runway or Kling at lower per-clip cost
+Hailuo 2.3 was released October 2025 as a successor to Hailuo 02. MiniMax positioned it as "more performance for the same price," with explicit gains on physics, stylization, and micro-expressions. Anime and ink-wash styles got dedicated optimization.
+
+## When to pick Hailuo
+
+- **Short-form social output at volume.** TikTok, Reels, Shorts in native 1080P at the cheapest per-clip cost among major generators.
+- **Marketing concept work.** Fast iteration on visual ideas before committing to production budgets.
+- **Image-to-video animation.** Start from a still and add motion. The image-to-video mode is a strength of the 2.3 model.
+- **API-first integration.** The MiniMax platform exposes the same models to developers at per-clip rates.
+- **Budget-constrained solo operators.** Promotional tier pricing beats Kling and Runway for pure volume.
+
+## When to pick something else
+
+- **Clips longer than 10 seconds:** [Kling 3.0](/tools/kling/) extends to 2-minute narrative sequences. Hailuo caps at 10s.
+- **Precise camera and motion control:** [Runway Gen-3](/tools/runway/) or Kling. Hailuo has no explicit camera path controls.
+- **Native audio synchronized to video:** [Veo 3](/tools/veo/) (via Gemini). Hailuo output is silent.
+- **Cinematic high-stakes production:** Veo 3 or [Sora 2](/tools/sora/). Hailuo fits social, not film.
+- **Western-vendor data compliance:** Runway, Veo 3. MiniMax is Shanghai-based with the regulatory context that implies.
 
 ## Pricing
 
-Prices shown are current promotional rates (verified 2026-04-15 at [hailuoai.video/subscribe](https://hailuoai.video/subscribe)). Regular (non-promotional) rates are listed where different.
+**Consumer subscription** (promotional rates; regular where different):
 
 | Plan | Price/month | Credits | Notes |
 |------|------------|---------|-------|
-| Free | $0 | 200 (trial) | Watermarked output |
-| Standard | $7.99 (reg. $14.99) | 1,000 | Approx. 40 six-second 768P clips; 1080P supported; no watermark |
-| Pro | $24.99 (reg. $54.99) | 4,500 | Approx. 180 six-second clips; 10-second 1080P; 2 concurrent tasks |
-| Master | $63.99 (reg. $94.99) | 10,000 | Approx. 400 six-second clips; parallel processing |
-| Ultra | $124.99 | 12,000 | Unlimited Hailuo 02 model access (no credit burn); approx. 480 six-second clips |
-| Max | $199.99 | 20,000 | Unlimited Hailuo 02 + 2.3 access; approx. 900 six-second clips |
+| Free | $0 | 200 trial | Watermarked |
+| Standard | $7.99 (reg. $14.99) | 1,000 | ~40 six-second 768P clips, no watermark |
+| Pro | $24.99 (reg. $54.99) | 4,500 | 10s 1080P, 2 concurrent jobs |
+| Master | $63.99 (reg. $94.99) | 10,000 | Parallel processing |
+| Ultra | $124.99 | 12,000 | Unlimited Hailuo 02 in Relax mode |
+| Max | $199.99 | 20,000 | Unlimited Hailuo 01+02 in Relax mode |
 
-Pay-as-you-go credits also available at roughly $1 per 70 credits. Credits expire at end of the second calendar year after purchase.
+**API (per generation):**
 
-## Key Features
+| Model tier | Price per 6s clip |
+|---|---|
+| Hailuo 2.3 Standard (768P) | $0.28 |
+| Hailuo 2.3 Pro (1080P) | $0.49 |
+| Hailuo 2.3 Fast | Up to 50% off standard |
 
-- **Native 1080P output:** All paid plans support 1080P HD video, not just upscaled output
-- **Image-to-video:** Animate any still image with a text motion prompt
-- **Hailuo 2.3 and 2.3 Fast models:** The current Hailuo 2.3 (released October 2025) builds on Hailuo 02 and is available on Master plan and above, with improved motion coherence and detail
-- **Text-to-video:** Full scene generation from text descriptions; supports basic cinematography instructions
-- **Watermark-free downloads:** All paid plans include clean output suitable for publishing
-- **MiniMax API integration:** Video generation available programmatically via the MiniMax developer API, same models as consumer site
+*Prices verified 2026-04-17 via the [Hailuo subscribe page](https://hailuoai.video/subscribe), [MiniMax Hailuo 2.3 announcement](https://www.minimax.io/news/minimax-hailuo-23), and [MiniMax platform pricing](https://platform.minimax.io/docs/pricing/overview). Consumer credits expire at end of the second calendar year after purchase.*
 
-## Limitations
+## Against the alternatives
 
-- **Short clips only:** Maximum 10 seconds per generation as of April 2026; not suitable for longer narrative sequences without manual stitching
-- **Limited camera control:** No explicit camera path or motion vector controls; less fine-grained than Runway Gen-3 or Kling 1.6
-- **Credit ambiguity:** Promotional prices vary and are not guaranteed to remain; regular pricing is substantially higher
-- **Quality variance:** Complex motion (crowds, fluid dynamics) can produce artifacts; better for simple panning shots and character close-ups
-- **No audio generation:** Output is silent video; audio must be added separately
-- **Chinese-company compliance risk:** Subject to same data and regulatory considerations as MiniMax parent
+| | Hailuo 2.3 | Kling 3.0 | Runway Gen-3 | Veo 3 |
+|---|---|---|---|---|
+| **Native resolution** | 1080P | 1080P | 1080P | 1080P |
+| **Max clip length** | 10s | 2 min | 16s | 8s |
+| **Native audio** | No | No | No | Yes |
+| **Camera controls** | Limited | Strong | Strongest | Moderate |
+| **Starter price/clip** | $0.28 | $0.35+ | $0.50+ | Bundled with Gemini |
+| **Image-to-video** | Strong | Strong | Strong | Yes |
+| **Best viewed as** | Cheapest 1080P | Longest clips + control | Cinematic polish | Audio-sync specialist |
 
-## Bottom Line
+## Failure modes
 
-Hailuo AI is the best-value option in the AI video generator market for simple 1080P short clips, especially at promotional pricing. At $7.99 to $24.99 per month, it undercuts Runway ($12-$144/month) and Kling ($8-$66/month) while delivering comparable quality for basic social content. The 10-second limit and lack of advanced motion controls keep it out of serious filmmaking workflows, but for social media volume it earns its place. Compare it against [Kling](../tools/kling.md) and Seedance before committing, as quality differences between them are model-version dependent.
+- **10-second cap is a hard limit.** Narrative video needs manual stitching across multiple generations with drift between shots.
+- **No explicit camera path.** Users describe motion in prose. Runway and Kling both expose motion vectors and dolly controls.
+- **No audio.** All output is silent. Music, VO, and SFX must be composited separately.
+- **Quality variance on complex motion.** Crowd dynamics, fluids, and fine hand interactions still produce artifacts.
+- **Promotional vs regular pricing gap.** Standard tier is $7.99 on promo and $14.99 regular. Budget assumptions should use the regular rate to avoid mid-cycle surprises.
+- **Credit-expiration clock.** Unused credits die at end of the second calendar year after purchase. Stockpiling on Master or Max tiers wastes spend.
+- **Chinese-vendor compliance risk.** Data residency, regulatory posture, and US-China tensions apply as they do with any mainland AI provider.
+- **Watermark on free tier.** Free-tier output cannot be used commercially without paying.
 
-## Best Alternatives
+## Methodology
 
-- [Kling](../tools/kling.md): Strong competitor at similar price; slightly better motion control on Kling 1.6; compare directly for your use case
-- Runway Gen-3: More mature platform with better camera controls and a longer track record, but costs more
-- Seedance (ByteDance): Newer entrant from ByteDance with competitive quality; still early-stage
-- Pika: Faster iteration cycle for short creative clips; free tier is more generous
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis shown here. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against the [Hailuo subscribe page](https://hailuoai.video/subscribe), [MiniMax Hailuo 2.3 release notes](https://www.minimax.io/news/minimax-hailuo-23), and the [MiniMax platform pricing docs](https://platform.minimax.io/docs/pricing/overview).
 
 ## FAQ
 
 **Is Hailuo AI free?**
-Yes, there is a free tier with 200 trial credits, enough to generate a small number of test clips. Free-tier output includes a watermark. Paid plans start at $7.99 per month (promotional) or $14.99 per month (regular).
+Yes, with caveats. The free tier grants 200 trial credits and watermarks all output. Paid plans start at $7.99/mo on promotional pricing or $14.99/mo at regular rates ([Hailuo subscribe](https://hailuoai.video/subscribe)).
+
+**What is the current Hailuo model?**
+Hailuo 2.3 (released October 2025) and Hailuo 2.3 Fast. Both build on the Hailuo 02 architecture with improved physics, stylization, and anime support ([release notes](https://www.minimax.io/news/minimax-hailuo-23)).
+
+**How long can a Hailuo clip be?**
+6 to 10 seconds per generation as of April 2026. Longer sequences require manual stitching across multiple clips.
 
 **How does Hailuo compare to Kling?**
-Both produce 1080P video at similar price points. Kling tends to have stronger motion accuracy and longer maximum clip lengths in its higher tiers. Hailuo has a slight edge on price at promotional rates and unlocks unlimited model access on Ultra and Max plans. Quality differences depend on the specific models in use at any time.
+Both deliver native 1080P output at similar price points. Kling 3.0 extends clip length to about 2 minutes and offers stronger explicit camera controls. Hailuo 2.3 wins on per-clip cost and on anime and stylized output. Quality differences depend on specific model versions in use.
 
-**Can I use Hailuo AI via API?**
-Yes. The Hailuo video models are accessible through the MiniMax developer API under their video package pricing. See [platform.minimax.io/docs/pricing](https://platform.minimax.io/docs/pricing/overview) for current video API rates.
+**Can Hailuo video be accessed via API?**
+Yes, through the MiniMax developer platform. Per-generation rates are $0.28 for Hailuo 2.3 Standard at 768P and $0.49 for Hailuo 2.3 Pro at 1080P. See [platform.minimax.io](https://platform.minimax.io/docs/pricing/overview) for current rates.
 
-
-
-
-
-## Review History
-
-- **2026-04-11:** Monthly verification pass. Pricing unchanged.
-- **2026-03-08:** Score adjusted down 0.3 after a pricing change reduced value.
-- **2026-02-16:** Flagship version bumped after the most recent model release.
-- **2025-11-16:** Pricing verified. Minor copy edits.
-- **2024-06-01:** Initial review added to the catalog.
-
-## Related Guides
-
-- [Best Runway Alternatives (2026)](../use-cases/runway-alternatives.md)
-
-## Related Comparisons
-
-- [Hailuo AI vs Kling 3.0](../comparisons/hailuo-vs-kling.md)
 ## Sources
 
-- [Hailuo AI subscribe/pricing page](https://hailuoai.video/subscribe)
-- [Hailuo AI payment policy](https://hailuoai.video/doc/payment-policy.html)
-- [MiniMax Wikipedia](https://en.wikipedia.org/wiki/MiniMax_Group)
-- [Hailuo AI review 2026 via dupple.com](https://www.dupple.com/tools/hailuo-ai)
-- [Hailuo AI pricing guide via imagine.art](https://www.imagine.art/blogs/hailuo-ai-pricing)
+- [Hailuo subscribe / pricing page](https://hailuoai.video/subscribe): consumer plans and credit allocations
+- [MiniMax Hailuo 2.3 release notes](https://www.minimax.io/news/minimax-hailuo-23): current model features and pricing retention
+- [MiniMax platform pricing docs](https://platform.minimax.io/docs/pricing/overview): API rates for video endpoints
+- [Hailuo payment policy](https://hailuoai.video/doc/payment-policy.html): credit expiration rules
+- [MiniMax company profile](https://en.wikipedia.org/wiki/MiniMax_Group): parent company context
 
 ## Related
 
-- **Category:** [AI Video](../categories/ai-video.md)
-- **Parent company:** [MiniMax](../tools/minimax.md)
-- **Compare:** [Kling](../tools/kling.md)
+- **Category:** [AI Video](/categories/ai-video/)
+- **Parent company:** [MiniMax](/tools/minimax/)
+- **Compare:** [Kling](/tools/kling/) · [Runway](/tools/runway/) · [Veo](/tools/veo/) · [Sora](/tools/sora/)
+- **Comparisons:** [Hailuo AI vs Kling 3.0](/comparisons/hailuo-vs-kling/)

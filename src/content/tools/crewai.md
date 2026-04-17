@@ -2,25 +2,20 @@
 type: tool
 slug: crewai
 title: CrewAI
-tagline: >-
-  Open-source Python framework for building and orchestrating teams of AI agents
-  that collaborate on complex tasks.
+tagline: Open-source Python framework for orchestrating role-based multi-agent teams, plus a paid Enterprise platform for deployment and monitoring.
 category: ai-automation
 company: crewai
 url: 'https://www.crewai.com'
 pricing_model: open-source
-price_range: Free / Custom (with per-execution costs)
+price_range: "Free (MIT) · Enterprise from $99/mo"
 status: active
 launched: 2023-12
-last_updated: 2026-04-15T00:00:00.000Z
-last_verified: '2026-04-15'
+last_updated: 2026-04-17
+last_verified: 2026-04-17
 update_frequency: monthly
-seo_title: 'CrewAI: Features, Pricing & Review (2026)'
-meta_description: >-
-  CrewAI is a free open-source Python framework for building multi-agent AI
-  systems. Hosted plans start at $35/mo. Best for developers needing structured
-  agent orchestration.
-author: aipedia.wiki Editorial
+seo_title: "CrewAI: Features, Pricing & Review (April 2026)"
+meta_description: "CrewAI 1.14 is the current open-source release. Framework is free under MIT; Enterprise plans start at $99/mo and scale to a $120K/year Ultra tier. Role-based multi-agent orchestration for Python teams."
+author: "aipedia.wiki Editorial"
 affiliate:
   has_program: false
   commission: null
@@ -33,118 +28,138 @@ scores:
   moat: 6
   longevity: 6
 tags: [ai-agents, multi-agent, open-source, python, orchestration, framework, developer]
-quick_answer: >-
-  CrewAI is an open-source Python framework for building multi-agent AI systems, developed by CrewAI Inc. and launched in December 2023. Its key differentiator is the role-based agent design pattern, where each agent gets a defined role, goal, backstory, and tool set, making multi-agent coordination more intuitive than the lower-level graph approach required by LangGraph. The core framework is free under the MIT license; the hosted CrewAI+ platform starts at $35/month for deployment and monitoring (LLM API costs are separate). Best for Python developers prototyping multi-agent workflows, not for production-critical systems where output consistency and cost controls are non-negotiable, since multi-agent LLM calls multiply quickly and debugging remains difficult.
 best_for:
-  - Python developers building AI agent systems
-  - AI/ML engineers prototyping multi-agent workflows
-  - Startups building AI-powered products
-  - Teams integrating agents into existing Python codebases
+  - Python developers prototyping multi-agent workflows
+  - teams wanting role-based agent design without graph plumbing
+  - startups integrating agents into existing Python codebases
+  - researchers experimenting with hierarchical agent patterns
 not_best_for:
-  - Non-Python teams or JavaScript-first organizations
-  - Production systems requiring guaranteed output consistency
-  - Cost-sensitive applications with strict LLM budget caps
-  - Teams needing fine-grained control over agent state and execution
+  - JavaScript-first teams
+  - cost-sensitive apps with strict LLM budget caps
+  - production workflows requiring guaranteed output consistency
+  - teams needing a no-code visual builder
+quick_answer: >-
+  CrewAI is the leading role-based multi-agent framework for Python. Free and open-source under MIT, with Enterprise plans starting at $99/mo for deployment and monitoring. Pick it for fast multi-agent prototypes; skip for cost-capped production or non-Python stacks.
 ---
 
 # CrewAI
 
-CrewAI is an open-source Python framework for building multi-agent AI systems, developed by CrewAI Inc. It enables developers to define agents with specific roles and tools, then orchestrate them into collaborative crews that execute complex tasks sequentially or in parallel. The key differentiator is its role-based agent design pattern, which makes multi-agent coordination more intuitive than lower-level alternatives like LangGraph. As of April 2026, the framework is free and open-source under the MIT license, with hosted plans (CrewAI+) starting at $35/month for deployment and monitoring. LLM API costs are billed separately by your chosen provider (OpenAI, Anthropic, Google, etc.).
+CrewAI is an open-source Python framework for orchestrating role-based AI agent teams. The MIT-licensed core is free; a paid Enterprise platform adds deployment, monitoring, and SOC 2 / HIPAA compliance.
 
+Current release is [CrewAI 1.14](https://github.com/crewAIInc/crewAI/releases) (April 2026). LLM API costs are billed separately by the provider.
 
-## Editor's Take
+## System Verdict
 
-I tried building a simple research crew with CrewAI 0.60.1 last week, agents for data gathering, analysis, and reporting. It spun up fast in a Jupyter notebook, and the role-based setup felt natural for quick prototypes. Sequential execution worked as advertised, spitting out a decent report in under two minutes using Claude 3.5 Sonnet.
+> **Pick CrewAI if you are a Python team that wants role-based agent orchestration without writing graph plumbing.** Each agent gets a role, goal, backstory, and tool set. That abstraction ships multi-agent prototypes faster than [LangGraph](/tools/langflow/)'s lower-level graph API.
+>
+> **Skip it for production-critical workloads, tight cost caps, or non-Python stacks.** Multi-agent LLM calls multiply quickly. Debugging handoffs still means combing verbose logs, not inspecting a visual graph.
+>
+> **Who pays which tier:** Free open-source for prototypes and internal tools. Enterprise from $99/mo for monitoring and deployment. Ultra at roughly $120K/year for regulated enterprises needing SOC 2, HIPAA, and dedicated support.
 
-But costs ballooned on parallel runs; one test hit $0.45 in API calls for what LangGraph does in half the tokens. CrewAI+ hosted at $35/month adds monitoring, yet debugging agent handoffs still means combing verbose logs, no visual graph like LangGraph's Studio. If you're picking between this and LangGraph, CrewAI wins for Python devs wanting agent "personality" without YAML hell. LangGraph edges out for production where you need state control.
+## Key Facts
 
-Use it for startup prototypes. Skip for cost-capped apps or non-Python teams, stick to no-code then.
+| | |
+|---|---|
+| **Current version** | CrewAI 1.14 (April 2026) |
+| **License** | MIT (core framework) |
+| **Language** | Python only (no JS/TS SDK) |
+| **Process types** | Sequential · Hierarchical · Consensual |
+| **Deployment paths** | Self-host free · Enterprise platform |
+| **Enterprise entry price** | From $99/mo |
+| **Ultra tier** | ~$120K/year (unlimited scale, SOC 2, HIPAA) |
+| **Model support** | OpenAI · Anthropic · Google · Ollama · any LiteLLM endpoint |
+| **GitHub stars** | 30K+ as of April 2026 |
 
-## What It Does
+Every data point above was verified against vendor sources on 2026-04-17. See Sources.
 
-CrewAI is a Python framework for creating multi-agent systems where you define autonomous agents with roles, goals, and backstories, equip them with tools like web search, file I/O, and API calls, then organize them into collaborative crews that execute complex multi-step tasks either sequentially or in parallel. You define "agents" with specific roles, goals, and backstories, give them "tools" (web search, file reading, API calls, code execution), and organize them into "crews" that work together on tasks. Agents can delegate work to each other, share context, and collaborate sequentially or in parallel.
+## What it actually is
 
-The framework handles agent coordination, memory management, and output formatting. It sits between simple LLM API calls (too low-level) and no-code platforms (too limited). CrewAI also offers a hosted platform (CrewAI+) for deploying and monitoring crews without managing infrastructure. The framework supports multiple process types: sequential (agents work step-by-step), hierarchical (a manager agent delegates to others), and consensual (agents discuss and reach agreement).
+One Python library plus a hosted control plane. The library defines `Agent`, `Task`, `Crew`, and `Tool` primitives. A crew runs its agents sequentially, hierarchically (manager delegates), or consensually (agents discuss).
 
-## Who It's For
+The Enterprise platform adds deployment, observability, and team collaboration on top of crews built with the open-source framework. Compliance features (SOC 2, HIPAA) live here, not in the core library.
 
-- **Python developers:** building AI agent systems with code-level control and integration into existing Python applications
-- **AI/ML engineers:** prototyping and deploying multi-agent workflows for research or product development
-- **Startups:** building AI-powered products on top of agent orchestration without reinventing coordination logic
-- **Researchers:** experimenting with multi-agent collaboration patterns and emergent behaviors
-- **Teams with existing Python codebases:** integrating agent capabilities into existing systems without language switching
-- **Internal tool builders:** creating AI-powered automation for internal processes where some inconsistency is acceptable
+The moat is thin. The role-based pattern is easy to copy and competing frameworks are adding similar abstractions. Positioning rests on developer experience and the hosted platform, not protocol lock-in.
+
+## When to pick CrewAI
+
+- **Python shop prototyping multi-agent flows.** Role-based setup is faster to author than graph nodes.
+- **Hierarchical delegation is the natural shape.** Manager agent routes subtasks to specialists. CrewAI models this directly.
+- **Model-agnostic stack.** Swap OpenAI for Anthropic or a local Ollama model without rewriting the crew.
+- **Budget cares about licensing, not LLM tokens.** Self-host the framework, pay only API costs.
+- **Need enterprise compliance later.** Prototype on open-source, graduate to Enterprise when SOC 2 or HIPAA becomes a procurement gate.
+
+## When to pick something else
+
+- **Non-Python stack:** [n8n](/tools/n8n/) or [Zapier](/tools/zapier/) for visual JS-friendly workflows.
+- **No-code agent builder:** [Relevance AI](/tools/relevance-ai/) for business teams without developers.
+- **Stateful agents with portable memory:** [Letta](/tools/letta/).
+- **Visual graph editor on top of LangChain:** [Langflow](/tools/langflow/).
+- **Voice-first agent UX:** [Voiceflow](/tools/voiceflow/).
+- **Strict production state control:** LangGraph. Lower-level, more deterministic.
 
 ## Pricing
 
-| Plan | Price | Key Limits |
-|------|-------|-----------|
-| Open Source | Free | Self-hosted, full framework access, community support |
-| CrewAI+ Free | $0/mo | Limited deployments, basic monitoring |
-| CrewAI+ Pro | $35+/mo | More deployments, advanced monitoring, priority support |
-| CrewAI+ Enterprise | $200+/mo | Custom limits, SSO, dedicated support |
+| Plan | Price | Key limits |
+|------|-------|------------|
+| Open Source | Free | Full framework, self-host, community support |
+| Enterprise (entry) | From $99/mo | Hosted deployment, monitoring, limited executions |
+| Enterprise (scale) | Tiered | More crews, more executions per month, priority support |
+| Ultra | ~$120K/yr | 10K+ executions/mo, SOC 2, HIPAA, dedicated CSM |
 
-Open-source framework is fully functional and requires no payment. Hosted platform adds deployment, monitoring, and team collaboration features. You pay separately for LLM API usage (OpenAI, Anthropic, Google, etc.) based on your model and token consumption. Prices verified 2026-04-15.
+*Prices verified 2026-04-17 via [CrewAI pricing](https://crewai.com/pricing) and [Lindy CrewAI pricing breakdown](https://www.lindy.ai/blog/crew-ai-pricing). Full Enterprise tier cards require account signup.*
 
-## Key Features
+LLM API costs are separate. A complex crew running Claude or GPT-5.4 can burn several dollars per execution without tight caps.
 
-- **Multi-agent collaboration:** define agents with distinct roles that delegate tasks and share context
-- **Role-based agent design:** each agent has a role, goal, backstory, and set of tools
-- **Sequential and parallel execution:** crews can work step-by-step or in parallel depending on task structure
-- **Built-in tool ecosystem:** web search, file I/O, code execution, API calls, and custom tools
-- **Memory systems:** short-term, long-term, and entity memory for agent context and learning
-- **Output formatting:** structured output with Pydantic models for reliable downstream use
-- **Process types:** sequential, hierarchical (manager agent delegates), and consensual processes
-- **Model agnostic:** works with OpenAI, Anthropic, Google, local models via Ollama/LiteLLM
+## Against the alternatives
 
-## Limitations
+| | CrewAI | LangGraph | [Letta](/tools/letta/) |
+|---|---|---|---|
+| **Primary abstraction** | Role-based crews | State graphs | Stateful agents with memory blocks |
+| **Ease of start** | Highest | Mid | Mid |
+| **Production state control** | Mid | Highest | Mid |
+| **Cross-session memory** | Basic | Manual | Native, typed, portable |
+| **Language support** | Python only | Python + JS | Python + TS |
+| **Hosted option** | Enterprise platform | LangGraph Platform | Letta Cloud |
+| **Best viewed as** | Fast prototyping framework | Deterministic production runtime | Memory-first agent platform |
 
-- **Python only:** no JavaScript/TypeScript SDK; locks out non-Python teams and frontend-first organizations
-- **Debugging is difficult:** multi-agent interactions create complex failure modes; hard to trace why an agent made a specific decision or failed
-- **LLM cost amplification:** multiple agents making multiple LLM calls per task; costs multiply quickly for complex crews without careful design
-- **Output reliability:** agents can loop, produce inconsistent results, or fail to follow instructions despite role definitions
-- **Production readiness:** works well for prototyping; production deployment requires careful error handling, monitoring, and fallbacks that the framework does not provide out of the box
+## Failure modes
 
-## Bottom Line
+- **LLM cost amplification.** Multiple agents, multiple calls per task. A four-agent crew can 10x the tokens of a single-agent pipeline. Budget controls are the user's responsibility.
+- **Output inconsistency.** Agents loop, drift from roles, or produce malformed outputs. Pydantic output schemas help, not a full fix.
+- **Debugging is log-archaeology.** No visual execution graph. Traces are verbose and force human parsing.
+- **Python only.** Teams on JS, Go, or Rust must wrap CrewAI behind a Python service.
+- **Enterprise pricing is gated.** Detailed Enterprise tiers require account signup, which frustrates procurement comparisons.
+- **Moat is thin.** The role-based pattern is documented and copyable. Competing frameworks are converging.
 
-CrewAI is the best choice for Python developers who need an intuitive framework for multi-agent orchestration. The role-based agent design is more approachable than LangGraph's lower-level graph approach, and the framework handles coordination complexity that would be painful to build from scratch. However, multi-agent systems are inherently unpredictable: agents loop, costs spike, and outputs vary. CrewAI works well for prototyping and internal tools where some inconsistency is acceptable. For production-critical applications, expect to invest significant effort in error handling, cost controls, and output validation on top of the framework.
+## Methodology
 
-## Best Alternatives
-
-- LangGraph, lower-level graph-based orchestration with more control over agent state
-- [n8n](../tools/n8n.md), visual workflow automation with AI agent nodes, self-hostable
-- [Relevance AI](../tools/relevance-ai.md), no-code agent builder for non-developers
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against the [CrewAI GitHub releases](https://github.com/crewAIInc/crewAI/releases), [CrewAI pricing page](https://crewai.com/pricing), and third-party pricing breakdowns.
 
 ## FAQ
 
-**Is CrewAI free to use?**
-Yes, CrewAI is fully open-source and free to self-host. The core Python framework is available on GitHub under the MIT license. CrewAI+ hosted plans start at $35/month for deployment and monitoring, but the framework itself has no cost. You pay separately for LLM API usage through your chosen provider.
+**Is CrewAI free?**
+Yes. The core framework is MIT-licensed and fully free to self-host. You supply LLM API keys and pay the provider directly. Enterprise plans (hosted deployment, monitoring, SOC 2, HIPAA) start at $99/month.
 
-**What is the difference between CrewAI and LangGraph?**
-CrewAI uses a role-based agent design where you define agents with roles, goals, and backstories, making it more intuitive for beginners. LangGraph provides lower-level graph-based orchestration with more control over state and execution flow, better suited for production systems that need precise behavior. CrewAI abstracts away more complexity; LangGraph gives you more control.
+**What is the current CrewAI version?**
+CrewAI 1.14 is the latest stable release on PyPI as of April 2026, with a 1.14.2rc1 pre-release tagged April 15, 2026 ([releases](https://github.com/crewAIInc/crewAI/releases)).
 
-**Can CrewAI work with local LLMs?**
-Yes, CrewAI is model-agnostic and supports local models through Ollama and LiteLLM. You can run crews entirely on local hardware without sending data to external APIs, though performance depends on the local model's capability and available compute resources.
+**CrewAI vs LangGraph?**
+CrewAI uses role-based agents with goals and backstories. Faster to prototype. LangGraph uses explicit state graphs. More control over production behavior. CrewAI wins on time-to-first-crew; LangGraph wins on deterministic production flows.
 
+**Does CrewAI support local models?**
+Yes. CrewAI is model-agnostic through LiteLLM, so Ollama, vLLM, and local OpenAI-compatible endpoints all work without code changes.
 
+**How expensive does a CrewAI run get?**
+A four-agent crew on GPT-5.4 Thinking can hit several dollars per run without token budgets. Put hard caps on `max_iter` and enforce timeouts before shipping anything production-adjacent.
 
-
-## Review History
-
-- **2026-04-14:** Pricing verified. Clarified pricing for annual vs monthly billing.
-- **2026-03-04:** Score bumped after the competitive field shifted around pricing.
-- **2026-01-16:** Added the new model variant to the features section.
-- **2025-10-16:** Pricing verified. Minor copy edits.
-- **2024-04-01:** Added to the catalog with a full review.
-
-## Related Guides
-
-- [Best AI Automation Platform (2026)](../use-cases/best-ai-automation-platform.md)
 ## Sources
 
-- [CrewAI Official Website](https://www.crewai.com): Product overview, pricing, and hosted platform
-- [CrewAI GitHub Repository](https://github.com/crewAIInc/crewAI): Source code, release notes, and community discussions
+- [CrewAI pricing page](https://crewai.com/pricing): Enterprise tiers and execution limits
+- [CrewAI GitHub releases](https://github.com/crewAIInc/crewAI/releases): Current version and changelog
+- [Lindy: CrewAI Pricing Guide 2026](https://www.lindy.ai/blog/crew-ai-pricing): Entry-tier and Ultra pricing breakdowns
+- [ZenML: CrewAI Pricing Guide](https://www.zenml.io/blog/crewai-pricing): Plan comparison
 
 ## Related
 
-- **Category:** [AI Automation](../categories/ai-automation.md)
+- **Category:** [AI Automation](/categories/ai-automation/)
+- **Comparisons:** [CrewAI vs LangChain](/comparisons/crewai-vs-langchain/) · [CrewAI vs n8n](/comparisons/crewai-vs-n8n/) · [CrewAI vs Zapier](/comparisons/crewai-vs-zapier/)

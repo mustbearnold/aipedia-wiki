@@ -2,16 +2,16 @@
 type: tool
 slug: openhands
 title: OpenHands
-tagline: Open-source AI software engineer (formerly OpenDevin) that autonomously writes, tests, and ships code in a sandboxed Docker environment with any LLM.
+tagline: Open-source AI software engineer (formerly OpenDevin). MIT-licensed CLI, GUI, and SDK that autonomously write and test code in a Docker sandbox with any LLM.
 category: ai-coding
 company: all-hands-ai
 url: https://docs.openhands.dev/
 pricing_model: open-source
-price_range: "Free (open-source MIT, BYOK API costs) + Cloud free tier"
+price_range: "Free (MIT, BYOK) · Cloud free tier · Pro $20/mo · Enterprise custom"
 status: active
 launched: 2024-03
-last_updated: 2026-04-15
-last_verified: 2026-04-15
+last_updated: 2026-04-17
+last_verified: 2026-04-17
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -24,135 +24,143 @@ scores:
   value: 9
   moat: 4
   longevity: 7
-tags: [open-source, ai-software-engineer, docker, sandboxed, devin-alternative, multi-model, python, typescript, github-integration, self-hosted]
-seo_title: "OpenHands: Features, Pricing & Review (2026)"
-meta_description: "OpenHands (formerly OpenDevin) is a free open-source AI software engineer with 71K+ GitHub stars. It autonomously writes and tests code in a sandboxed Docker environment and works with Claude, GPT, or any LLM."
+tags: [open-source, ai-software-engineer, docker, sandboxed, devin-alternative, multi-model, python, typescript, github-integration, self-hosted, openhands-cloud]
+seo_title: "OpenHands: Features, Pricing & Review (April 2026)"
+meta_description: "OpenHands (formerly OpenDevin) is a free, MIT-licensed AI software engineer maintained by All Hands AI. Self-host free; OpenHands Cloud offers a free MiniMax tier, a $20/mo Pro subscription, and Enterprise self-hosted options."
 author: "aipedia.wiki Editorial"
 best_for:
-  - developers who want a free Devin alternative
-  - teams needing self-hosted AI software engineering
+  - developers wanting a free Devin alternative
+  - teams needing self-hosted autonomous coding
   - open-source contributors and researchers
-  - developers who want model-agnostic AI coding agents
+  - model-agnostic agentic coding setups
 not_best_for:
-  - users wanting tight IDE integration with autocomplete
-  - beginners who need guided step-by-step assistance
-  - teams requiring enterprise SLAs without self-hosting
+  - users wanting tight IDE autocomplete
+  - beginners needing guided step-by-step help
+  - teams requiring managed SLAs with zero infrastructure
 quick_answer: >-
-  OpenHands (formerly OpenDevin) is a free, MIT-licensed AI software engineer that autonomously handles software tasks end-to-end inside a sandboxed Docker container. With 71,200+ GitHub stars as of April 2026, it is the most-starred open-source Devin alternative available. You bring your own API key for Claude, GPT, or any supported model. It offers a local GUI, a CLI comparable to Claude Code, a Python SDK for custom agent workflows, and a cloud option with a free tier via GitHub login. The Docker sandbox means it can run shell commands, install packages, and execute code safely. It does not offer inline IDE autocomplete; it works best for complete task delegation rather than pair-programming.
+  OpenHands is the MIT-licensed AI software engineer formerly named OpenDevin, maintained by All Hands AI. Self-host free, or use OpenHands Cloud with a free MiniMax tier, a $20/mo Pro subscription for BYOK, and an Enterprise self-hosted plan. Pick it for autonomous coding on your own stack; skip for inline IDE autocomplete.
 ---
 
 # OpenHands
 
-OpenHands is a free, open-source AI software engineer formerly known as OpenDevin. It autonomously reads, writes, runs, and debugs code inside a sandboxed Docker environment and is accessible via a local GUI, CLI, Python SDK, or hosted cloud platform ([docs.openhands.dev](https://docs.openhands.dev/)). The project has 71,200+ GitHub stars and over 9,000 forks as of April 2026, making it the most widely adopted open-source alternative to Devin ([GitHub: All-Hands-AI/OpenHands](https://github.com/All-Hands-AI/OpenHands)). You supply the AI model via API key (Claude, GPT, and others are supported); OpenHands handles the agent loop, sandbox management, file editing, terminal execution, and GitHub/GitLab integration.
+OpenHands is the open-source AI software engineer previously known as OpenDevin, maintained by All Hands AI. It reads, writes, runs, and debugs code inside a Docker sandbox, accessible via CLI, GUI, Python SDK, or OpenHands Cloud ([docs.openhands.dev](https://docs.openhands.dev/)).
 
+The repo carries 71K+ GitHub stars as of April 2026. Model is bring-your-own: Claude Opus 4.7, GPT-5.4, Gemini 3.1 Pro, or any LiteLLM-compatible endpoint.
 
-## Editor's Take
+## System Verdict
 
-I fired up OpenHands v0.32 on my Ubuntu box last week, feeding it Claude 3.7 via API key for a full-stack bug hunt in a React repo. It nailed the planning, Docker sandbox kept everything contained, no rogue npm installs wrecked my setup, and it shipped a clean PR in 22 minutes. Stars hit 71,200 as of mid-April 2026, and the local GUI feels snappier than Devin’s bloated interface[1].
+> **Pick OpenHands if autonomous software engineering at Devin-class capability is the goal and infrastructure ownership is acceptable.** The MIT license, Docker sandbox, and GitHub PR integration make it production-credible for real tasks. Model flexibility is the moat against closed services.
+>
+> **Skip it if IDE autocomplete is the primary need.** OpenHands delegates full tasks; it does not pair-program inline. Cursor or Claude Code fit in-editor workflows better.
+>
+> **Who pays which tier:** Self-host free for developers who run Docker locally. OpenHands Cloud free tier on MiniMax for zero-setup evaluation. Pro at $20/mo for BYOK cloud runs. Enterprise for on-prem Kubernetes deployments with RBAC and Slack/Jira hooks.
 
-Compared to Devin, which costs $500/month per seat, OpenHands wins on price, free MIT license, just your LLM costs, and self-hosting flexibility. CLI mode rivals Claude Code for terminal diehards like me, though the SDK shines for scripting custom agents. I bias toward open-source; if you hate Docker tinkering, it'll frustrate you.
+## Key Facts
 
-Grab it if you're a dev chasing Devin without the bill or a team wanting GitHub-integrated autonomy. Skip if you crave VS Code autocomplete, this delegates tasks, doesn't pair-program. Solid 8/10 for utility.
+| | |
+|---|---|
+| **Former name** | OpenDevin (renamed 2024) |
+| **Maintainer** | All Hands AI |
+| **License** | MIT (core) · Enterprise directory is separate-licensed |
+| **GitHub stars** | 71,200+ (April 2026) |
+| **Interfaces** | CLI · Local GUI · Python SDK · OpenHands Cloud |
+| **Sandbox** | Docker container per task |
+| **Cloud free tier** | MiniMax model, GitHub login, limited tasks |
+| **Pro subscription** | $20/mo · BYOK · covers Cloud runtime compute |
+| **Enterprise** | Self-hosted on Kubernetes · RBAC · Slack/Jira · custom pricing |
+| **Model support** | Claude · GPT · Gemini · Llama 4 · any LiteLLM endpoint |
 
-## What It Does
+Every data point above was verified against vendor sources on 2026-04-17. See Sources.
 
-OpenHands wraps an LLM in a task-execution loop that operates inside a controlled environment ([docs.openhands.dev](https://docs.openhands.dev/)). Given a task description, it:
+## What it actually is
 
-1. **Plans the approach** based on the codebase and task
-2. **Edits files** across the repository using code-aware operations
-3. **Runs tests and commands** in a sandboxed Docker terminal, reading output and adapting
-4. **Iterates on failures** by reading error messages and adjusting the approach
-5. **Submits results** via pull request (GitHub/GitLab) or delivers them locally
+An agent loop that wraps any LLM inside a controlled code-execution environment. Given a task, OpenHands plans the approach, edits files, runs tests, reads failures, iterates, and submits a pull request.
 
-Available deployment modes:
+Deployment is your choice. CLI for terminal natives. Local GUI for browser-based work. Python SDK for custom agent automation. OpenHands Cloud for zero-setup evaluation.
 
-- **CLI:** terminal interface comparable to Claude Code or Codex CLI
-- **Local GUI:** a React single-page app backed by a REST API, for browser-based interaction on your laptop
-- **SDK:** a Python library for building custom agent workflows and deploying to cloud scale
-- **Cloud:** hosted service with free tier via GitHub login, GitHub/GitLab integration, multi-user RBAC, Slack and Jira connectivity
+The moat is low and the team knows it. The architecture is public, the model layer is swappable, and competing forks exist. Positioning rests on community velocity, benchmark leadership, and the cloud platform rather than protocol lock-in.
 
-## Who It's For
+## When to pick OpenHands
 
-- **Developers** who want Devin-like task delegation without a $500/month subscription
-- **Open-source contributors** who want an AI agent to handle issues, PRs, and refactors automatically
-- **ML/AI researchers** who need a programmable agent framework they can modify and extend
-- **Teams** running private infrastructure who cannot send code to a hosted SaaS service
-- **Startups** evaluating AI software engineering before committing to a commercial product
+- **Devin-class capability without the Devin bill.** Self-hosting plus BYOK beats commercial Devin on price for most solo developers.
+- **Private infrastructure.** Code must not leave the company network. Self-host on Kubernetes with full audit control.
+- **Model-agnostic coding agent.** Benchmark Claude Opus 4.7 against GPT-5.4 on the same task without rewriting the agent.
+- **Autonomous PR workflows.** Feed an issue, get a reviewable pull request. Works on GitHub and GitLab natively.
+- **Research on agent architectures.** Open evaluation infrastructure and Theory-of-Mind tooling for measuring agent performance.
+
+## When to pick something else
+
+- **IDE autocomplete and pair-programming:** Cursor, [Cline](/tools/cline/), or GitHub Copilot.
+- **Managed autonomous agent with zero setup:** Devin (Cognition) for a commercial SLA.
+- **Terminal coding on Anthropic models:** Claude Code CLI for deepest Claude integration.
+- **Visual agent workflow builder:** [Langflow](/tools/langflow/) or [Relevance AI](/tools/relevance-ai/).
+- **Multi-agent team orchestration:** [CrewAI](/tools/crewai/).
 
 ## Pricing
 
 | Tier | Cost | Notes |
 |------|------|-------|
-| Self-hosted (MIT) | Free | All features, you supply the API key and infrastructure |
-| Cloud free tier | Free | Via GitHub login, limited tasks, uses Minimax model ([GitHub](https://github.com/All-Hands-AI/OpenHands)) |
-| Cloud paid / Enterprise | Custom | Multi-user, RBAC, Kubernetes self-hosted, Slack/Jira integrations |
-| Model API costs | Usage-based | Claude Opus 4.6 or GPT-5.4; a typical coding session costs $0.50-$5 |
+| Self-hosted (MIT) | Free | Full features, BYO API key and infrastructure |
+| Cloud Free | Free | GitHub login, MiniMax model, limited tasks |
+| Cloud Pro | $20/mo | Covers runtime compute, BYO LLM keys |
+| Cloud Enterprise | Custom | Self-hosted Kubernetes, RBAC, Slack/Jira, support |
+| Model API costs | Usage-based | Typical session: $0.50-$5 on Claude Opus 4.7 or GPT-5.4 |
 
-The self-hosted path is fully free. The free cloud tier provides a no-setup entry point for evaluation.
+*Prices verified 2026-04-17 via [OpenHands pricing](https://openhands.dev/pricing) and [Pro subscription docs](https://docs.openhands.dev/openhands/usage/cloud/pro-subscription). Self-hosting remains fully free.*
 
-## Key Features
+## Against the alternatives
 
-- **Docker sandbox:** isolated container per task; the agent can install packages, run builds, execute tests, and write files without touching your host system ([docs.openhands.dev](https://docs.openhands.dev/))
-- **Model-agnostic architecture:** works with Claude Opus 4.6, GPT-5.4, Gemini 3.1 Pro, Llama 4, and any LiteLLM-compatible endpoint; switch models per task
-- **GitHub and GitLab integration:** clones repos, reads issues, opens pull requests, and applies review feedback autonomously
-- **Multiple interfaces:** CLI, local GUI, Python SDK, and cloud -- pick the right interface for your workflow
-- **6,488 commits and 101 releases:** active development cadence with regular capability improvements
-- **Theory-of-Mind module and evaluation infrastructure:** research-grade tooling for measuring agent performance ([GitHub](https://github.com/All-Hands-AI/OpenHands))
-- **Chrome extension:** browser-based task submission without leaving your current tab
-- **71,200+ GitHub stars:** large community, extensive third-party integrations, and active issue tracker
+| | OpenHands | Claude Code | Devin |
+|---|---|---|---|
+| **License** | MIT (open-source) | Proprietary | Proprietary |
+| **Hosting** | Self or Cloud | Anthropic cloud | Cognition cloud |
+| **Model choice** | Any (BYOK) | Claude only | Cognition's stack |
+| **Entry cost** | Free (self-host) | $20/mo Pro | Paid per-task |
+| **Sandbox** | Docker | Anthropic-managed | Cognition-managed |
+| **GitHub PR integration** | Native | Native | Native |
+| **IDE autocomplete** | No | No (CLI-first) | No |
+| **Best viewed as** | Model-agnostic open-source agent | Anthropic-native CLI agent | Managed commercial SLA |
 
-## Limitations
+## Failure modes
 
-- **No inline autocomplete.** OpenHands is a task-delegation agent, not a pair-programming copilot; it does not provide Copilot-style in-editor suggestions.
-- **Docker required for self-hosting.** Full sandbox functionality needs Docker installed; lightweight local runs may skip sandboxing but reduce safety.
-- **Cloud free tier uses Minimax model.** If you want Claude or GPT on the cloud tier, you need a paid plan or self-hosting with your own API key.
-- **Variable task success rate.** Complex multi-file refactors across large codebases can exceed context limits or produce incorrect results requiring human review.
-- **Low moat as open-source.** The architecture is public; commercial competitors and forks can copy it.
-- **Slower than IDE tools for simple edits.** The agent loop adds latency; for a quick one-file change, Cline in VS Code is faster.
-- **Enterprise features are separate-licensed.** The enterprise directory has distinct licensing terms outside the MIT license.
+- **No inline autocomplete.** Task-delegation only. Pair-programming requires Cursor or Cline.
+- **Docker dependency for self-hosting.** Full sandbox safety needs Docker. Lightweight mode drops isolation.
+- **Cloud free tier uses MiniMax.** Claude or GPT on Cloud requires the $20/mo Pro plan or self-hosting with your own key.
+- **Variable reliability on complex refactors.** Large multi-file changes can exceed context limits or produce code requiring human fix-up.
+- **Low moat.** Architecture is public; commercial services compete on reliability, not novelty.
+- **Slower than IDE tools for one-file edits.** The plan-act-observe loop adds latency. Cline in VS Code wins on micro-edits.
+- **Enterprise directory has separate license terms.** The enterprise extensions are not under MIT. Read the licensing before deploying.
 
-## Bottom Line
+## Methodology
 
-OpenHands is the best free starting point for developers who want autonomous AI software engineering at Devin's capability level without Devin's price. The Docker sandbox, GitHub PR integration, and multi-model support make it production-credible for real tasks. For pure coding speed and IDE integration, Cline inside VS Code is faster for interactive sessions. For maximum autonomous depth with no infrastructure setup, commercial Devin at $20/month (plus task fees) or Claude Code at $100/month offers better reliability at a cost. OpenHands wins on the price-to-capability ratio for developers comfortable with self-hosting.
-
-## Best Alternatives
-
-- Cline: open-source VS Code agent, faster for interactive coding sessions, tight IDE integration
-- Claude Code: Anthropic's official CLI agent, $100-$200/month, best autonomous capability but no free tier
-- Devin (Cognition): commercial AI software engineer, $20/month plus per-task credits, fully managed with no setup
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [OpenHands documentation](https://docs.openhands.dev/), [OpenHands pricing](https://openhands.dev/pricing), the [Pro subscription docs](https://docs.openhands.dev/openhands/usage/cloud/pro-subscription), and the [All-Hands-AI/OpenHands GitHub repo](https://github.com/All-Hands-AI/OpenHands).
 
 ## FAQ
 
-**What is the difference between OpenHands and OpenDevin?**
-They are the same project. The project was renamed from OpenDevin to OpenHands in 2024. All development now happens under the OpenHands name.
+**OpenHands vs OpenDevin: same project?**
+Yes. OpenDevin was renamed OpenHands in 2024. All development and releases now ship under the OpenHands name, maintained by All Hands AI.
 
 **Is OpenHands free?**
-The self-hosted version is MIT-licensed and completely free. You pay only for the AI model API you connect. The cloud platform has a free tier via GitHub login that uses the Minimax model.
+Self-hosting is fully free under MIT. OpenHands Cloud offers a free tier on MiniMax via GitHub login. Pro at $20/mo covers cloud runtime compute with bring-your-own LLM keys. Enterprise is custom-priced for on-prem Kubernetes.
 
 **Does OpenHands work with Claude?**
-Yes. OpenHands is model-agnostic and officially supports Claude Opus 4.6 (Anthropic), GPT-5.4 (OpenAI), Gemini 3.1 Pro (Google), and any LiteLLM-compatible model. You configure your preferred model via API key.
+Yes. OpenHands is model-agnostic. Claude Opus 4.7, GPT-5.4, Gemini 3.1 Pro, Llama 4, and any LiteLLM-compatible endpoint are supported via API key.
 
-**How does OpenHands compare to Devin?**
-OpenHands is functionally similar: both are autonomous software engineers that take a task description and produce working code with tests. Devin is a managed commercial service. OpenHands is free and self-hosted, meaning you control the model, the environment, and the data. Devin may have more reliable task completion on complex real-world benchmarks, but OpenHands costs dramatically less.
+**OpenHands vs Devin?**
+Both are autonomous software engineers that turn task descriptions into reviewable PRs. OpenHands is open-source, self-hostable, and model-agnostic. Devin is commercial, managed, and faster to onboard. OpenHands wins on price and control; Devin wins on reliability out of the box.
 
-**Can OpenHands open pull requests on GitHub?**
-Yes. GitHub and GitLab integration is built in. It can clone a repo from an issue description, implement a fix, and open a pull request for human review.
-
-
-## Review History
-
-- **2026-04-11:** Monthly verification pass. Pricing unchanged.
-- **2026-03-08:** Score adjusted down 0.3 after a pricing change reduced value.
-- **2026-02-16:** Noted the new model availability across tiers.
-- **2025-11-16:** Pricing verified. Minor copy edits.
-- **2024-06-01:** Initial review added to the catalog.
+**Can OpenHands open GitHub pull requests?**
+Yes. Native GitHub and GitLab integration. It clones a repo, reads issues, implements a fix inside a Docker sandbox, and opens a PR for human review.
 
 ## Sources
 
-- [OpenHands documentation](https://docs.openhands.dev/)
-- [OpenHands GitHub repository](https://github.com/All-Hands-AI/OpenHands)
-- [OpenHands official site](https://openhands.dev/)
+- [OpenHands documentation](https://docs.openhands.dev/): Architecture, deployment modes, agent loop
+- [OpenHands pricing](https://openhands.dev/pricing): Cloud tiers and Pro subscription
+- [Pro subscription docs](https://docs.openhands.dev/openhands/usage/cloud/pro-subscription): $20/mo Pro plan details
+- [All-Hands-AI/OpenHands GitHub](https://github.com/All-Hands-AI/OpenHands): Source, stars, release history
+- [OpenHands Index announcement](https://openhands.dev/blog/openhands-index): January 2026 platform update
 
 ## Related
 
-- **Category:** [AI Coding](../categories/ai-coding.md)
+- **Category:** [AI Coding](/categories/ai-coding/)
+- **Comparisons:** [OpenHands vs Claude Code](/comparisons/openhands-vs-claude-code/) · [OpenHands vs Cursor](/comparisons/openhands-vs-cursor/) · [OpenHands vs Devin](/comparisons/openhands-vs-devin/)

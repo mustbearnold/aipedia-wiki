@@ -2,17 +2,17 @@
 type: tool
 slug: letta
 title: Letta
-tagline: Stateful agent framework with persistent memory. Build AI agents that learn, remember, and improve across sessions.
+tagline: Stateful agent platform (formerly MemGPT) with persistent, portable memory. Build agents that learn across sessions and survive model swaps.
 category: ai-automation
 company: letta-ai
 url: https://www.letta.com/
 pricing_model: open-source
-price_range: "Free (open-source self-host); hosted plans $0-$200/month"
+price_range: "Free (open-source) · Hosted from $0 · Letta Max tier for heavy workloads"
 status: active
 launched: 2023-10
-last_updated: 2026-04-15
-last_verified: 2026-04-15
-update_frequency: frequent
+last_updated: 2026-04-17
+last_verified: 2026-04-17
+update_frequency: monthly
 affiliate:
   has_program: false
   commission: null
@@ -24,115 +24,144 @@ scores:
   value: 9
   moat: 6
   longevity: 7
-tags: [agent-framework, memory, stateful, memgpt, open-source, python, llm-agents, long-term-memory, rag]
-seo_title: "Letta (formerly MemGPT): Features, Pricing & Review (2026)"
-meta_description: "Letta (formerly MemGPT) is an open-source stateful agent framework with persistent, portable memory. Self-host free or use hosted plans from $0-$200/month."
+tags: [agent-framework, memory, stateful, memgpt, open-source, python, llm-agents, long-term-memory, rag, letta-code]
+seo_title: "Letta (formerly MemGPT): Features, Pricing & Review (April 2026)"
+meta_description: "Letta is the open-source stateful agent platform formerly known as MemGPT. Self-host free under Apache-2.0, or use Letta Cloud with Free, Professional, Scale, and Enterprise tiers. Letta Code ships a memory-first coding CLI."
 author: "aipedia.wiki Editorial"
 best_for:
   - developers building agents that need long-term memory
-  - teams that need memory portable across LLM providers
-  - researchers experimenting with stateful agent architectures
-  - applications requiring personalized, evolving AI assistants
+  - teams requiring memory portable across LLM providers
+  - researchers experimenting with stateful architectures
+  - memory-first coding via Letta Code CLI
 not_best_for:
-  - teams that only need simple single-turn LLM calls
-  - developers who want a no-code visual workflow builder
+  - teams needing simple single-turn LLM calls
+  - developers who want a drag-and-drop visual builder
+  - workflows with no state or personalization requirement
 quick_answer: >-
-  Letta (formerly MemGPT) is an open-source Python framework for building stateful AI agents with persistent, structured memory. Agents store memory in blocks (persona, human context, archival storage) that persist across sessions and can be ported between LLM providers. Originally a UC Berkeley research project, Letta has grown to 22k+ GitHub stars and offers a self-hosted open-source path plus hosted plans from free to $200/month. Best for developers who need agents that genuinely remember and improve over time; not a drop-in replacement for simple chatbot frameworks.
+  Letta is the open-source stateful agent platform formerly known as MemGPT. Apache-2.0 and free to self-host; Letta Cloud adds hosted tiers including Enterprise. Pick it when agents must remember users, carry state across model swaps, or power a memory-first coding CLI via Letta Code.
 ---
 
 # Letta
 
-Letta is an open-source framework for building stateful AI agents with long-term memory. Originally developed as MemGPT at UC Berkeley and published in a 2023 research paper, it was renamed Letta as the project grew beyond its academic roots into a production-grade agent platform ([Letta GitHub](https://github.com/letta-ai/letta)). The core differentiator is structured, persistent memory: agents maintain memory blocks for persona, user context, and archival storage that survive across sessions and can be migrated between LLM providers. As of April 2026, Letta has 22k+ GitHub stars, 100+ contributors, and is licensed Apache-2.0.
+Letta is the open-source stateful agent platform originally released as MemGPT at UC Berkeley. The core is Apache-2.0 licensed. Letta Cloud hosts the same platform with tiered plans; Letta Code ships the platform as a memory-first coding CLI ([docs](https://docs.letta.com/letta-code/)).
 
+The differentiator is typed memory blocks (persona, human context, archival) that persist across sessions and port between LLM providers.
 
-## Editor's Take
+## System Verdict
 
-I tested Letta 0.4.2 last week on a local setup with Ollama's Llama 3.1. The memory persistence works as advertised, agents recalled details from sessions days apart without hiccups, and porting state to Claude via the hosted free tier took under a minute. Setup via pip was straightforward, though the CLI feels clunky for anything beyond toy agents.
+> **Pick Letta if your agent must remember users, carry state across sessions, or survive a model swap without losing context.** The memory architecture is the real product. Core memory, archival memory, and background memory subagents give agents an editable world model rather than a fresh context window per turn.
+>
+> **Skip it if your workload is stateless.** Simple RAG, one-shot chat, or deterministic pipelines ship faster with [LangChain](/tools/langflow/) or direct API calls. Letta's memory layer is overhead if you never retrieve from it.
+>
+> **Who pays which tier:** Free self-hosted for research and prototypes. Letta Cloud Professional for individual developers shipping stateful agents. Scale for multi-agent production workloads. Enterprise for private deployments with SSO and dedicated quotas.
 
-Compared to LangGraph, Letta's edge is true long-term memory that survives model swaps; LangGraph forces you to rebuild graphs per provider. But if you're not wiring persistent agents, skip Letta, it's overkill versus plain LangChain for one-off chains. Developers needing evolving assistants across LLMs should grab the open-source version. Solo tinkerers won't miss the $200/month enterprise tier. I favor frameworks like this over no-code fluff, but admit my bias toward Python control.
+## Key Facts
 
-## What It Does
+| | |
+|---|---|
+| **Former name** | MemGPT (UC Berkeley, 2023 paper) |
+| **License** | Apache-2.0 (open-source core) |
+| **GitHub** | letta-ai/letta · 22K+ stars, 100+ contributors |
+| **Memory model** | Typed blocks: core (persona, human) · archival (long-form) |
+| **Memory portability** | Cross-provider: OpenAI, Anthropic, Google, Ollama |
+| **SDKs** | Python · TypeScript |
+| **REST API** | Yes, full agent lifecycle |
+| **Letta Code** | `npm install -g @letta-ai/letta-code` · memory-first coding CLI |
+| **Hosted tiers** | Free · Professional · Scale · Max · Enterprise |
+| **Free tier quota** | 50 premium + 500 standard requests/month |
 
-Letta gives AI agents a memory architecture that goes beyond a conversation's context window. Rather than starting fresh each session, a Letta agent stores information in typed memory blocks (core memory for persona and user facts; archival memory for long-form recall) and retrieves relevant context automatically before each response ([Letta Docs](https://docs.letta.com/)). The framework is model-agnostic: you can run the same agent on OpenAI today and switch to Anthropic or a local Ollama model tomorrow without losing state. Agents can also spawn subagents, use background memory subagents to compress and improve their own prompts over time, and call external tools including web search. The Letta server exposes a REST API so agents can be embedded in any application. A desktop app and CLI are also available for local development.
+Every data point above was verified against vendor sources on 2026-04-17. See Sources.
 
-## Who It's For
+## What it actually is
 
-- **Application developers** building AI assistants that must remember user preferences, history, and context across many sessions
-- **ML engineers** who want fine-grained control over what an agent knows and when it retrieves information
-- **Teams requiring LLM portability** who cannot risk vendor lock-in and need memory to survive model switches
-- **Researchers** studying agent architectures, memory management, and long-horizon task completion
-- **Enterprises** deploying personalized agents at scale via the API plan with per-agent billing
+A stateful agent runtime. Every agent owns typed memory blocks that it reads and writes. The agent loop runs before each response, retrieves relevant archival context, and can hand off to background subagents that compress and improve its own prompts.
+
+Memory is the portable layer. Swap the underlying LLM from OpenAI to Anthropic and the agent keeps its history, persona, and learned facts. That portability is the product-level claim that sets Letta apart from LangGraph or CrewAI.
+
+Letta Code is the most interesting recent ship. A Terminal-Bench top-ranked OSS harness, it puts a persisted agent behind a coding CLI so sessions accumulate context over days instead of starting cold.
+
+## When to pick Letta
+
+- **Personalized AI assistants.** Agents that must remember user preferences, history, and ongoing projects across many sessions.
+- **Avoiding vendor lock-in.** Memory that survives a migration from OpenAI to Anthropic or a local Ollama model.
+- **Memory-first coding.** Letta Code CLI keeps a single persisted agent across multi-day coding sessions.
+- **Research on agent architectures.** Open-source, transparent memory blocks, extensible subagent patterns.
+- **Regulated enterprises.** Self-host on your own infrastructure with full control over data residency.
+
+## When to pick something else
+
+- **Multi-agent task pipelines:** [CrewAI](/tools/crewai/). Role-based crews are faster for hierarchical delegation.
+- **Visual agent builder on LangChain:** [Langflow](/tools/langflow/).
+- **No-code business agents:** [Relevance AI](/tools/relevance-ai/).
+- **Voice-first agent UX:** [Voiceflow](/tools/voiceflow/).
+- **General workflow automation:** [n8n](/tools/n8n/) or [Zapier](/tools/zapier/).
+- **Deterministic production graphs:** LangGraph. More control, less memory tooling.
 
 ## Pricing
 
-| Plan | Price | Key Limits |
-|------|-------|-----------|
-| Open-source (self-host) | Free | Unlimited; bring your own compute and API keys |
-| Free (hosted) | $0/month | Limited usage quota, open-weights models only |
-| Pro | $20/month | Up to 20 stateful agents, usage quota for frontier models |
-| Max Lite | $100/month | Up to 50 agents, 5x higher limits on Letta Auto |
-| Max | $200/month | Up to 50 agents, 20x limits, early access features |
-| API Plan | $20/month base + usage | Unlimited agents at $0.10/agent/month active; $0.00015/sec tool execution |
+| Plan | Price | Key limits |
+|------|-------|------------|
+| Open-source (self-host) | Free | Apache-2.0, BYO compute and API keys |
+| Free (Letta Cloud) | $0/mo | 50 premium + 500 standard requests/mo |
+| Professional | Paid tier | 500 premium + 5,000 standard requests/mo |
+| Scale | Paid tier | 5,000 premium + 50,000 standard requests/mo |
+| Max | Power-user tier | High-throughput agentic coding workloads |
+| Enterprise | Custom | SAML/OIDC SSO, private models, dedicated quotas |
+| API Plan | Usage-based | Unlimited agents; billed per active agent + tool-execution seconds |
 
-*Prices verified 2026-04-15 ([Letta Pricing](https://www.letta.com/pricing)). Self-hosting is fully free with your own LLM API keys.*
+*Prices verified 2026-04-17 via [Letta pricing](https://www.letta.com/pricing). Self-hosting is free; you still pay for LLM tokens through your provider.*
 
-## Key Features
+## Against the alternatives
 
-- **Persistent memory blocks:** Core memory (persona, human context) and archival memory persist across sessions and are transparently editable ([Letta Docs](https://docs.letta.com/))
-- **Model-agnostic:** Works with OpenAI, Anthropic, Google, Mistral, Ollama, and other providers; memory is portable between them
-- **Background memory subagents:** Subagents can review and compress memory, improving prompts and context over time without manual intervention
-- **Tool use and function calling:** Agents call tools including web search, custom Python functions, and MCP-compatible integrations
-- **REST API and SDKs:** Python and TypeScript SDKs; full REST API for embedding agents in applications
-- **Memory palace UI:** Desktop and web interface for visualizing and editing what an agent knows
-- **Subagents:** Agents can spawn child agents for parallel or specialized tasks
-- **Self-hostable:** Run the Letta server locally or on your own infrastructure; Apache-2.0 license
+| | Letta | LangGraph | [CrewAI](/tools/crewai/) |
+|---|---|---|---|
+| **Primary abstraction** | Stateful agents with typed memory | State graphs | Role-based crews |
+| **Cross-session memory** | Native, portable, editable | Manual wiring | Basic context sharing |
+| **Model-switch resilience** | High, memory ports cleanly | Low, bound to graph impl | Mid |
+| **Production state control** | Mid | Highest | Mid |
+| **Language support** | Python + TS | Python + JS | Python only |
+| **Coding CLI** | Letta Code | None native | None native |
+| **Best viewed as** | Memory-first agent platform | Deterministic runtime | Fast multi-agent prototyping |
 
-## Limitations
+## Failure modes
 
-- **More complex than simple frameworks.** Letta's memory architecture adds overhead. If you need a stateless RAG pipeline or a simple chatbot, lighter tools (LangChain, direct API calls) are less work.
-- **Self-hosted setup requires DevOps.** Running `letta server` locally is straightforward; production self-hosting requires database management and infrastructure care.
-- **Moat is moderate.** The stateful-memory position is defensible, but LangGraph, CrewAI, and other frameworks are adding memory features; the category is maturing quickly.
-- **Hosted free tier is limited.** Meaningful hosted usage requires a paid plan. Open-source self-hosting sidesteps this but shifts cost to your own API spend.
-- **Python-first.** TypeScript SDK exists but the ecosystem depth is primarily Python.
-- **Category uncertainty.** As frontier models extend their own context windows, the relative advantage of external memory management may narrow over time.
+- **Memory overhead for stateless jobs.** If you never retrieve archival memory, Letta's architecture is weight without benefit. Use plain LangChain.
+- **Self-host setup has moving parts.** Production self-hosting wants Postgres, a persistent volume, and careful upgrade discipline.
+- **Category convergence.** LangGraph, CrewAI, and ChatGPT Projects are all adding memory features. Letta's advantage narrows as frontier models expand context.
+- **Python-first ecosystem.** TypeScript SDK exists but the examples, templates, and community content lean Python.
+- **Moat at 6/10.** Research pedigree and memory architecture are real, but the patterns are documented and copyable.
+- **Hosted free tier is tight.** 50 premium requests a month is evaluation-scale. Real usage requires Professional or self-hosting.
 
-## Bottom Line
+## Methodology
 
-Letta is the most mature open-source framework for agents that need genuine long-term memory and cross-session continuity. It is the right choice when your use case specifically requires agents that learn from past interactions, remember individual users, or carry state across many sessions and model versions. For simpler agentic workflows or teams that do not need persistent memory, CrewAI or LangGraph involve less architectural overhead. The self-hosted path is genuinely free; the hosted tiers offer a managed option at competitive prices relative to building memory infrastructure yourself.
-
-## Best Alternatives
-
-- [CrewAI](../tools/crewai.md): Multi-agent orchestration with role-based agents; better for task pipelines, weaker on long-term memory
-- [LangFlow](../tools/langflow.md): Visual workflow builder built on LangChain; more accessible to non-developers, less control over memory internals
-- [Relevance AI](../tools/relevance-ai.md): No-code agent builder with memory features; managed platform rather than self-hostable framework
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [Letta pricing](https://www.letta.com/pricing), [Letta Code docs](https://docs.letta.com/letta-code/), the [Letta Code blog](https://www.letta.com/blog/letta-code), and the [letta-ai/letta GitHub repo](https://github.com/letta-ai/letta).
 
 ## FAQ
 
-**What is the difference between Letta and MemGPT?**
-They are the same project. MemGPT was the original research prototype published in a 2023 UC Berkeley paper demonstrating how paging-style memory management could extend LLM context. The team renamed the project Letta as it matured into a production framework with a full API, SDKs, and hosted plans.
+**Is Letta the same project as MemGPT?**
+Yes. MemGPT was the original 2023 UC Berkeley research prototype. The team renamed it Letta as it matured into a production-ready platform with hosted tiers, SDKs, and Letta Code.
 
-**Can I use Letta for free?**
-Yes. The core framework is Apache-2.0 open-source and fully free to self-host. You supply your own LLM API keys and compute. Letta also offers a hosted free tier with limited quota, and paid hosted plans starting at $20/month for more capacity.
+**Is Letta free?**
+Yes. The core is Apache-2.0 open-source and free to self-host. You pay only LLM API costs through your chosen provider. Letta Cloud also offers a free hosted tier with 50 premium plus 500 standard requests per month.
 
-**How does Letta memory compare to just using RAG?**
-RAG retrieves documents at query time and discards them after the response. Letta memory is structured, typed, and agent-owned: the agent actively reads and writes its own memory blocks, summarizes old conversations into archival storage, and can inspect or edit what it knows. This makes Letta agents more like a system with a persistent world model than a retrieval system with a session.
+**What is Letta Code?**
+A memory-first coding CLI built on the Letta API. Install with `npm install -g @letta-ai/letta-code`. Unlike session-based coding assistants, Letta Code keeps a persisted agent that learns across days and is portable across models ([docs](https://docs.letta.com/letta-code/)).
 
+**How does Letta memory compare to RAG?**
+RAG retrieves documents at query time and discards them. Letta memory is typed, editable, and agent-owned. The agent reads and writes its own memory blocks, compresses old conversations to archival storage, and can introspect what it knows.
 
-## Review History
-
-- **2026-04-05:** Monthly verification pass. Pricing unchanged.
-- **2026-03-23:** Score bumped after the competitive field shifted around pricing.
-- **2026-02-16:** Flagship version bumped after the most recent model release.
-- **2025-11-16:** Pricing verified. Minor copy edits.
-- **2024-01-15:** Initial review published after hands-on testing.
+**Can Letta swap between LLM providers mid-agent?**
+Yes. Memory lives outside the model. Switch from OpenAI to Anthropic or a local Ollama endpoint without losing persona, user facts, or conversation history.
 
 ## Sources
 
-- [Letta GitHub (letta-ai/letta)](https://github.com/letta-ai/letta): 22.1k stars, Apache-2.0, project history
-- [Letta official site](https://www.letta.com/): Product overview, feature descriptions
-- [Letta pricing page](https://www.letta.com/pricing): Tier details verified 2026-04-15
-- [Letta documentation](https://docs.letta.com/): Architecture and memory block documentation
+- [Letta pricing page](https://www.letta.com/pricing): Current Cloud tiers and quotas
+- [Letta Code docs](https://docs.letta.com/letta-code/): CLI install and memory-first coding architecture
+- [Letta Code announcement](https://www.letta.com/blog/letta-code): Terminal-Bench results and positioning
+- [letta-ai/letta GitHub](https://github.com/letta-ai/letta): Apache-2.0 source and release history
+- [Letta documentation](https://docs.letta.com/): Memory block architecture reference
 
 ## Related
 
-- **Category:** [AI Automation](../categories/ai-automation.md)
+- **Category:** [AI Automation](/categories/ai-automation/)
+- **Comparisons:** [Letta vs CrewAI](/comparisons/letta-vs-crewai/) · [Letta vs LangChain](/comparisons/letta-vs-langchain/)

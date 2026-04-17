@@ -2,16 +2,16 @@
 type: tool
 slug: relevance-ai
 title: Relevance AI
-tagline: No-code platform for building AI agents and tools with drag-and-drop workflows and LLM integration.
+tagline: No-code AI workforce platform for building agents that reason and act, billed on Actions plus separate Vendor Credits.
 category: ai-automation
 company: relevance-ai
 url: https://relevanceai.com
 pricing_model: freemium
-price_range: "$0-$299/month"
+price_range: "$0 · Pro from $19/mo (annual) · Team from $234/mo · Enterprise custom"
 status: active
 launched: 2023-06
-last_updated: 2026-04-15
-last_verified: 2026-04-15
+last_updated: 2026-04-17
+last_verified: 2026-04-17
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -24,120 +24,142 @@ scores:
   value: 6
   moat: 5
   longevity: 6
-tags: [ai-agents, no-code, agent-builder, llm, workflow, drag-and-drop, automation, rag]
-seo_title: "Relevance AI: Features, Pricing & Review (2026)"
-meta_description: "Relevance AI is a no-code platform for building AI agents with drag-and-drop workflows and LLM integration. Free tier available; paid plans from $19/mo to $299/mo."
+tags: [ai-agents, no-code, agent-builder, llm, workflow, drag-and-drop, automation, rag, ai-workforce]
+seo_title: "Relevance AI: Features, Pricing & Review (April 2026)"
+meta_description: "Relevance AI is a no-code AI workforce platform. Free tier with 200 actions/mo; Pro $19/mo annual; Team $234/mo; Enterprise custom. Split pricing: Actions plus Vendor Credits since September 2025."
 author: "aipedia.wiki Editorial"
 best_for:
-  - Non-technical teams building AI agents for sales
-  - support
-  - and operations
-  - agencies deploying AI tools for clients
-  - business teams prototyping AI assistants without developers.
+  - non-technical teams building sales or support agents
+  - agencies deploying AI workforce tools for clients
+  - business teams prototyping assistants without engineers
+  - ops managers automating judgment work, not just data routing
 not_best_for:
-  - Engineering teams needing maximum control over agent behavior
-  - teams requiring extensive pre-built SaaS integrations
-  - mission-critical production workflows requiring guaranteed reliability.
+  - engineering teams needing maximum control
+  - teams relying on extensive pre-built SaaS integrations
+  - mission-critical workflows with zero tolerance for drift
+  - cost-predictable budgets (credit system is opaque)
 quick_answer: >-
-  Relevance AI is a no-code AI agent builder that lets non-technical teams create agents combining LLM calls, API requests, and conditional logic through a drag-and-drop interface. Its differentiator versus Make or Zapier is a focus on agents that reason and decide rather than simply routing data between apps. Paid plans run from $19 to $299 per month; best for business teams prototyping AI-powered assistants without developers, not for engineering teams who need the full control that CrewAI or LangChain provides. The free tier's 100 credits per day is barely enough to test a basic agent.
+  Relevance AI is a no-code platform for building AI workforce agents that reason and decide. Free tier has 200 actions per month. Pro is $19/mo annual, Team $234/mo, Enterprise custom. Pricing splits Actions from Vendor Credits. Pick it for non-technical teams shipping sales or support bots; skip for engineering depth or predictable unit economics.
 ---
 
 # Relevance AI
 
-Relevance AI is a no-code AI agent building platform developed by Relevance AI Pty Ltd. It lets users create AI agents and tools through a drag-and-drop interface with LLM integration and is primarily used for building AI-powered assistants for sales, support, and operations without writing code. Its key differentiator is the focus on agent creation with decision-making capability rather than simple app-to-app workflow automation. As of April 2026, Relevance AI offers a free tier with 100 credits per day and paid plans from $19 to $299 per month. Compared to Make or Zapier, Relevance AI builds agents that think and decide rather than just passing data between apps.
+Relevance AI is a no-code AI workforce platform built by Relevance AI Pty Ltd. Drag-and-drop tools and agents run on Claude, GPT-5.4, or Gemini 3.1 Pro within the same workflow.
 
+Since September 2025, pricing splits into Actions (what the agent does) and Vendor Credits (LLM model costs). That split changes the cost calculus versus flat-token platforms.
 
-## Editor's Take
+## System Verdict
 
-I tested Relevance AI's agent builder last week on version 2.4.1. The drag-and-drop interface works smoothly for chaining LLM calls with basic RAG, built a sales lead scorer in 20 minutes using Claude Opus 4.6 and a PDF knowledge base. Credits burn fast, though: free tier's 100 daily limit got me three test runs before throttling.
+> **Pick Relevance AI if a non-technical team needs AI agents that make judgment calls, not just shuffle data between apps.** The sweet spot is sales qualification, support triage, and lead research. Built-in OCR, classify, and extract tools cover most business agent patterns without code.
+>
+> **Skip it if you need engineering-grade control or predictable unit costs.** The Actions plus Vendor Credits split is transparent on paper and opaque in practice. Complex agents with multiple decision branches burn credits faster than flat-rate alternatives.
+>
+> **Who pays which tier:** Free for proof-of-concept. Pro at $19/mo for solo operators or tight prototypes. Team at $234/mo for small sales or support pods. Enterprise for custom models, SSO, and contractual SLAs.
 
-It's targeted at non-technical teams prototyping sales or support bots, and it delivers there without needing devs. Skip it if you're engineering-focused; the black-box logic lacks the fine control of CrewAI's open-source setups. Closest rival is SmythOS, but Relevance edges it on multi-model routing at $19/month starter versus Smyth's $29. Don't bother unless you're client-facing and hate code, solo tinkerers get better value from free LangGraph playgrounds. Solid 7/10 for its niche, but priced like it's solving world hunger at $299 pro tier.
+## Key Facts
 
-## What It Does
+| | |
+|---|---|
+| **Category** | No-code AI workforce builder |
+| **Launch** | 2023-06 |
+| **Pricing model** | Actions (agent steps) + Vendor Credits (LLM tokens), split since Sept 2025 |
+| **Free tier** | 200 actions/mo · $2 bonus Vendor Credits |
+| **Pro tier** | $19/mo billed annually · 30,000 actions/yr · $240 Vendor Credits/yr |
+| **Team tier** | $234/mo annually · 84,000 actions/yr · $840 Vendor Credits/yr · 5 build + 45 end users |
+| **Enterprise** | Custom · custom models, SSO, dedicated support |
+| **Model support** | Claude Opus 4.7 · GPT-5.4 · Gemini 3.1 Pro · multi-model routing |
+| **Built-in tools** | OCR · Classify · Extract · web scrape · PDF parse · email |
+| **Annual discount** | ~33% off monthly rates |
 
-Relevance AI is a no-code platform for building AI agents that combine LLM calls, API requests, data transformations, and conditional logic through a drag-and-drop interface, deployable as chatbots, API endpoints, or scheduled tasks. You create "tools" (individual AI-powered actions like summarize text, extract data, generate content) and combine them into "agents" that can use those tools to accomplish goals. The platform supports multi-model inference, allowing agents to route requests to Claude Opus 4.6, GPT-5.4, Gemini 3.1 Pro, or other LLMs within the same workflow. It focuses specifically on AI agent creation rather than general workflow automation - you are building agents that think and decide, not just connecting apps in a sequence.
+Every data point above was verified against vendor sources on 2026-04-17. See Sources.
 
-The platform includes a knowledge base feature for retrieval-augmented generation (RAG), allowing agents to reference uploaded documents, PDFs, and web content when making decisions. Agents can be deployed as embeddable chatbot widgets, REST API endpoints, or background tasks triggered on a schedule.
+## What it actually is
 
-## Who It's For
+A visual builder for composable AI tools and agents. A "tool" is an atomic action like Extract, Classify, or OCR. An "agent" wires tools into a goal-seeking loop with branching, memory, and RAG.
 
-- **Business teams:** build AI assistants for sales, support, and operations without engineering help
-- **Marketing teams:** create content generation, lead scoring, and research agents
-- **Agencies:** build and deploy AI tools for clients quickly without custom development
-- **Non-technical founders:** prototype AI-powered products without hiring developers
-- **Operations managers:** automate knowledge work that requires judgment, not just data movement
-- **Customer success teams:** build AI agents that handle routine inquiries and escalate complex issues
+Agents deploy as chatbot widgets, REST endpoints, or scheduled background jobs. Multi-model routing lets one agent call Claude for reasoning, GPT for generation, and Gemini for multimodal in the same run.
+
+The moat is the no-code UX and the opinionated agent primitives, not the underlying LLMs. Anyone with an API key can replicate the tools. Relevance AI bets non-technical teams pay for the integration cut.
+
+## When to pick Relevance AI
+
+- **Sales ops without engineers.** Lead scoring, qualification, and outbound research agents ship in hours.
+- **Support triage with judgment.** Classify incoming tickets, draft responses, escalate when confidence is low.
+- **Agency client work.** Ship AI tools for a client without standing up infrastructure.
+- **Workforce agents that handle documents.** OCR plus Extract plus Classify is the backbone of invoice, contract, and resume workflows.
+- **Mixed model routing.** Single agent that calls Claude for analysis and GPT-5.4 for drafting without custom plumbing.
+
+## When to pick something else
+
+- **Developer-grade agent framework:** [CrewAI](/tools/crewai/) or [Letta](/tools/letta/) for Python-native control.
+- **General app-to-app automation with huge SaaS catalog:** [Zapier](/tools/zapier/) or [n8n](/tools/n8n/).
+- **Voice-first conversational agents:** [Voiceflow](/tools/voiceflow/).
+- **Visual LangChain-style agent flows:** [Langflow](/tools/langflow/).
+- **Predictable per-seat pricing:** [Zapier](/tools/zapier/) tiers are easier to model than split credits.
 
 ## Pricing
 
-| Plan | Price | Key Limits |
-|------|-------|-----------|
-| Free | $0/mo | 100 credits/day, 1 agent, community support |
-| Pro | $19/mo | 5,000 credits/mo, unlimited agents, API access, email support |
-| Business | $59/mo | 20,000 credits/mo, team collaboration, priority support, custom branding |
-| Enterprise | $299+/mo | 100,000+ credits/mo, custom models, SSO, dedicated support, SLA |
+| Plan | Price (annual) | Actions | Vendor Credits | Users |
+|------|----------------|---------|----------------|-------|
+| Free | $0/mo | 200/mo | $2 bonus | 1 user, 1 project |
+| Pro | $19/mo | 30,000/yr | $240/yr | 1 user |
+| Team | $234/mo | 84,000/yr | $840/yr | 5 build + 45 end users |
+| Enterprise | Custom | Custom | Custom | Unlimited seats |
 
-Credits are consumed per LLM call and tool execution. Complex agents with multiple decision branches use more credits per run. Prices verified 2026-04-15 via official pricing page.
+*Prices verified 2026-04-17 via [Relevance AI pricing](https://relevanceai.com/pricing) and [Lindy pricing analysis](https://www.lindy.ai/blog/relevance-ai-pricing). Annual billing saves about 33% versus monthly. All plans include unlimited agents and tools.*
 
-## Key Features
+Actions are agent steps. Vendor Credits are consumed by the LLM call itself. Complex branching agents burn both faster than simple linear chains.
 
-- **Visual agent builder:** drag-and-drop interface for creating AI agents with tools, memory, and decision logic without code
-- **Tool library:** pre-built tools for web scraping, PDF parsing, email, data extraction, and common business tasks
-- **Multi-model support:** use Claude Opus 4.6, GPT-5.4, Gemini 3.1 Pro, and other LLMs within the same agent
-- **Agent deployment:** deploy as chatbot widget, REST API endpoint, or scheduled background task
-- **Knowledge base and RAG:** upload documents and web content for agents to reference during execution
-- **Custom tool creation:** build reusable tools from LLM prompts, API calls, and conditional logic
-- **Team collaboration:** share agents, tools, and knowledge bases across team members with role-based access
-- **Agent memory:** agents can maintain conversation history and context across multiple interactions
+## Against the alternatives
 
-## Limitations
+| | Relevance AI | [CrewAI](/tools/crewai/) | [Zapier](/tools/zapier/) |
+|---|---|---|---|
+| **Audience** | Non-technical ops/sales | Python developers | Mixed, app-automation-first |
+| **Abstraction** | Visual tools + agents | Role-based crews | Triggers + Zaps |
+| **Agents that reason** | Yes, native | Yes, code-defined | Limited via AI Actions |
+| **SaaS integrations** | Narrow | None (you build) | Broadest in the category |
+| **Cost predictability** | Low (split credits) | Medium (LLM tokens only) | High (per-task) |
+| **Enterprise controls** | Yes at Enterprise tier | Yes at Ultra tier | Yes at Enterprise |
+| **Best viewed as** | AI workforce builder | Developer agent framework | App automation platform |
 
-- **Not a workflow automation platform:** no equivalent to Zapier or Make's app connector library; you can call APIs but there are no pre-built integrations for most SaaS tools
-- **Credit system is opaque:** hard to predict costs for complex agents; usage varies significantly based on model selection and agent complexity
-- **Limited ecosystem:** smaller user base means fewer templates, tutorials, and community support compared to established platforms
-- **Agent quality depends on prompt engineering:** the platform provides the framework, but results depend on how well you configure prompts and tool chains
-- **Reliability for production use:** agents can produce inconsistent outputs; not yet suitable for mission-critical workflows without human oversight
+## Failure modes
 
-## Bottom Line
+- **Credit system is opaque.** Predicting per-run cost needs manual calibration. Multi-branch agents with retries can spike usage by 5x versus happy-path tests.
+- **Narrow SaaS integration library.** API calls work, but there is no Zapier-scale app catalog. Integrating with a niche CRM means writing the REST call yourself.
+- **Agent quality depends on prompt craft.** The visual builder lowers the floor, not the ceiling. Bad prompts still ship bad agents.
+- **Production reliability is a DIY concern.** Agents drift, loop, or fail silently without human-in-the-loop. Enterprise tier adds audit, not guaranteed determinism.
+- **Smaller ecosystem.** Fewer templates, fewer tutorials, thinner community than CrewAI, LangChain, or Zapier.
+- **Free tier is demo-sized.** 200 actions a month is enough to test, not enough to run a real workflow.
 
-Relevance AI is the best choice for non-technical teams who need to build AI agents that make decisions without writing code. For teams with developers who need maximum control over agent behavior, CrewAI or LangChain are better options. The platform works well for prototyping and light production use in a rapidly evolving market.
+## Methodology
 
-## Best Alternatives
-
-- [CrewAI](../tools/crewai.md), developer-oriented multi-agent framework, open-source, more control over agent behavior
-- [n8n](../tools/n8n.md), workflow automation with built-in AI agent nodes, self-hostable, broader app integrations
-- [Make](../tools/make.md), visual automation platform with extensive app connectors, not agent-focused
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [Relevance AI pricing](https://relevanceai.com/pricing), [Relevance AI documentation](https://relevanceai.com/docs/get-started/subscriptions/plans), and [Lindy's Relevance AI pricing breakdown](https://www.lindy.ai/blog/relevance-ai-pricing).
 
 ## FAQ
 
 **Is Relevance AI free?**
-Yes, Relevance AI offers a free tier with 100 credits per day, 1 agent, and community support. It is enough to test basic agents but not for sustained production use.
+Yes. The Free tier gives 200 actions per month plus $2 in Vendor Credits. It fits demos and early prototypes. Sustained use requires Pro at $19/mo annual or higher.
 
-**How much does Relevance AI cost?**
-Relevance AI Pro costs $19/month with 5,000 credits and unlimited agents. Business costs $59/month with 20,000 credits and team features. Enterprise starts at $299+/month with 100,000+ credits and SSO.
+**How does Relevance AI pricing work?**
+Since September 2025, pricing splits into Actions (agent steps) and Vendor Credits (LLM token costs). Every plan grants a pool of each per year. Annual billing saves roughly 33% over monthly. All plans include unlimited agents and tools.
 
-**What are the best alternatives to Relevance AI?**
-CrewAI is an open-source, developer-oriented multi-agent framework with more control over agent behavior. n8n offers self-hostable workflow automation with built-in AI agent nodes and broader app integrations. Make provides visual automation with extensive app connectors for traditional workflow needs.
+**Relevance AI vs CrewAI?**
+Relevance AI targets non-technical teams through a drag-and-drop builder. [CrewAI](/tools/crewai/) targets Python developers through a role-based framework. Pick Relevance AI when business users own the agent; pick CrewAI when engineers own it.
 
+**Does Relevance AI handle OCR and document extraction?**
+Yes. OCR, Classify, and Extract are built-in primitives. Combining them with a knowledge base RAG store covers most document-intelligence workflows without code.
 
+**Can Relevance AI use multiple LLMs in one agent?**
+Yes. Multi-model routing lets a single agent call Claude Opus 4.7 for reasoning, GPT-5.4 for generation, and Gemini 3.1 Pro for multimodal tasks within the same workflow.
 
-
-## Review History
-
-- **2026-04-09:** Pricing verified. Added note on the updated free tier limit.
-- **2026-03-25:** Score reviewed; no change, but rationale updated.
-- **2026-02-16:** Noted the new model availability across tiers.
-- **2025-10-16:** Pricing verified. Minor copy edits.
-- **2024-01-15:** Initial review published after hands-on testing.
-
-## Related Guides
-
-- [Best AI Automation Platform (2026)](../use-cases/best-ai-automation-platform.md)
 ## Sources
 
-- [Official website](https://relevanceai.com)
-- [Relevance AI pricing](https://relevanceai.com/pricing)
+- [Relevance AI pricing page](https://relevanceai.com/pricing): Current tiers, Actions, Vendor Credits
+- [Relevance AI docs: plans and credits](https://relevanceai.com/docs/get-started/subscriptions/plans): Action and credit definitions
+- [Lindy: Relevance AI pricing 2026](https://www.lindy.ai/blog/relevance-ai-pricing): Independent pricing breakdown
+- [G2: Relevance AI pricing](https://www.g2.com/products/relevance-ai/pricing): Third-party verification
 
 ## Related
 
-- **Category:** [AI Automation](../categories/ai-automation.md)
+- **Category:** [AI Automation](/categories/ai-automation/)
+- **Comparisons:** [Relevance AI vs CrewAI](/comparisons/relevance-ai-vs-crewai/) · [Relevance AI vs Zapier](/comparisons/relevance-ai-vs-zapier/) · [Relevance AI vs n8n](/comparisons/relevance-ai-vs-n8n/)

@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0 free tier / $0.03-$0.05 per 1K chars"
 status: active
 launched: 2025-04
-last_updated: 2026-04-15
-last_verified: 2026-04-15
+last_updated: 2026-04-17
+last_verified: 2026-04-17
 update_frequency: quarterly
 affiliate:
   has_program: false
@@ -27,10 +27,8 @@ scores:
   longevity: 6
 tags: [tts, voice-cloning, chinese-ai, multilingual, minimax, speech-02, api]
 seo_title: "MiniMax Speech: TTS + Voice Cloning Review (2026)"
-meta_description: "MiniMax Speech offers Speech-02-HD and Speech-02-Turbo TTS with 300+ voices, 40 languages, and voice cloning at $0.03-$0.05/1K chars. ElevenLabs alternative."
+meta_description: "MiniMax Speech offers Speech-02-HD, Speech-02-Turbo, and Speech 2.6 TTS with 300+ voices, 40 languages, and voice cloning at $0.03-$0.05/1K chars."
 author: "aipedia.wiki Editorial"
-quick_answer: >-
-  MiniMax Speech is MiniMax's text-to-speech and voice cloning API, offering the Speech-02-HD, Speech-02-Turbo, and Speech 2.6 model family. Its main selling point is aggressive pricing: $0.03/1K chars for Turbo and $0.05/1K chars for HD, which is up to 85% cheaper than ElevenLabs. It supports 40 languages, 300 plus pre-built voices, 5-second voice cloning, and emotional expression controls. Best for cost-sensitive production workloads and multilingual apps. ElevenLabs still leads on voice quality ceiling, voice library breadth, and ecosystem maturity.
 best_for:
   - cost-sensitive production tts workloads
   - multilingual apps (40 languages)
@@ -40,119 +38,138 @@ not_best_for:
   - users needing the highest quality ceiling for audiobooks or luxury production
   - teams reliant on a large curated third-party voice marketplace
   - developers requiring a mature plugin ecosystem
+quick_answer: >-
+  MiniMax Speech is a multilingual TTS and voice-cloning API. Speech-02-Turbo runs $0.03 per 1K chars; Speech-02-HD runs $0.05 per 1K chars. Covers 40 languages and 300+ voices with 5-second voice cloning. Up to 85% cheaper than ElevenLabs; trails on peak quality.
 ---
 
 # MiniMax Speech
 
-MiniMax Speech is the text-to-speech and voice cloning product line from MiniMax, a well-funded Shanghai-based AI company. The core API offers three model tiers: Speech-02-Turbo for real-time and cost-sensitive workloads, Speech-02-HD for high-fidelity production audio, and Speech 2.6 (the current flagship on the web platform). The models support 40 languages with native accents, 300 plus pre-built voices, and 5-second voice cloning. Pricing sits well below ElevenLabs at $0.03-$0.05 per 1,000 characters. ElevenLabs still holds the edge on voice quality ceiling and voice library breadth, but MiniMax Speech is a credible alternative for budget-conscious production teams and multilingual deployments.
+The text-to-speech and voice-cloning product line from [MiniMax](/tools/minimax/), the Shanghai AI lab. Three model tiers are in active use: **Speech-02-Turbo** for low-latency and cost-sensitive workloads, **Speech-02-HD** for high-fidelity production, and **Speech 2.6** as the web-platform flagship.
 
+40-language coverage. 300+ pre-built voices. 5-second zero-shot voice cloning. Speech-02-HD ranked first on the Artificial Analysis Speech Arena at time of measurement.
 
-## Editor's Take
+## System Verdict
 
-I tested MiniMax Speech's API with Speech-02-HD and Speech 2.6 on a batch of Mandarin and Spanish voiceovers last week. The 5-second cloning worked fine for casual clones, but accents drifted on non-native languages compared to ElevenLabs' v3. Output hit 98% MOS scores in Artificial Analysis benchmarks, yet real-world playback revealed flatter prosody than ElevenLabs' expressive edge.
+> **Pick MiniMax Speech if the brief is multilingual TTS at production volume where price-per-character drives the budget.** At $0.03-$0.05 per 1K chars it runs 80-85% cheaper than [ElevenLabs](/tools/elevenlabs/) pay-per-use, with 40-language output and emotion-aware delivery.
+>
+> **Skip it for peak-quality audiobook and luxury production work.** ElevenLabs still holds the quality ceiling, the larger curated voice marketplace, and the deeper third-party integration stack. [Cartesia](/tools/cartesia/) owns low-latency conversational use cases with tighter streaming guarantees.
+>
+> The naming drift matters. "Speech 2.6" on the web platform and "Speech-02-HD/Turbo" on the API are the same product line with slightly different SKUs. Integration requires reading both docs carefully.
 
-Pricing holds at $0.03 per 1K chars for Turbo and $0.05 for HD, still 80% below ElevenLabs for volume work. If you're scaling multilingual IVR or chatbots on a budget, this beats ElevenLabs on cost without much quality drop. I prefer ElevenLabs for premium narration; its library and plugins save hours MiniMax doesn't match.
+## Key Facts
 
-Skip it for audiobooks or if you need 500+ voices. Production teams pinching pennies should start here.
+| | |
+|---|---|
+| **Vendor** | MiniMax (Shanghai, HKEX-listed) |
+| **Model tiers** | Speech-02-Turbo, Speech-02-HD, Speech 2.6 |
+| **API price (Turbo)** | $0.03 per 1K characters |
+| **API price (HD)** | $0.05 per 1K characters |
+| **Languages** | 40, with native accents |
+| **Pre-built voices** | 300+ |
+| **Voice cloning** | Zero-shot from 3-10 second reference audio |
+| **Cross-lingual cloning** | Yes (clone English, speak Spanish with same timbre) |
+| **Emotions** | 9 (auto, happy, sad, angry, fearful, disgusted, surprised, calm, neutral) |
+| **Streaming** | Real-time supported |
+| **Output formats** | MP3, WAV, FLAC, PCM at 8000-44100 Hz |
+| **Arena ranking** | Speech-02-HD ranked #1 on Artificial Analysis Speech Arena |
+| **Free tier** | 10,000 credits/month |
 
-## What It Does
+## What it actually is
 
-MiniMax Speech converts text to audio using a neural TTS engine that supports 40 languages, 300 plus pre-built voices, and fine-grained controls for speed, pitch, volume, and emotional tone ([MiniMax Audio](https://www.minimax.io/audio)). The voice cloning feature generates a custom voice ID from as little as 5-10 seconds of reference audio and applies it across all supported languages. The API supports real-time streaming for low-latency conversational applications and async batch processing for longer content. Output formats include MP3, WAV, FLAC, and PCM at configurable sample rates. According to the Artificial Analysis Speech Arena, Speech-02-HD ranked first among TTS models in quality at time of measurement, with Speech-02-Turbo placing third ([Replicate](https://replicate.com/blog/minimax-text-to-speech)).
+A hosted TTS API with three modes. Turbo is speed and cost. HD is fidelity. Speech 2.6 is the current-generation platform brand.
 
-The product family as of April 2026:
+Zero-shot cloning works from 3-10 seconds of reference audio. No fine-tuning. The cloned voice carries across all supported languages, which is a material differentiator against older TTS clone pipelines.
 
-- **Speech-02-Turbo** - lower latency, lower cost ($0.03/1K chars), good for interactive use cases
-- **Speech-02-HD** - higher fidelity, studio-grade output ($0.05/1K chars), best for voiceovers and audiobooks
-- **Speech 2.6 / Speech 2.6 Turbo** - current-generation model shown on the web platform, supports 40 languages with updated prosody ([MiniMax.io](https://www.minimax.io/))
+The emotion controls ship nine tags plus an auto mode that infers emotional tone from text context. Speed, pitch, volume, and bitrate are exposed as parameters. Sync endpoints handle up to 10,000 characters per request; async batch handles up to 200,000.
 
-## Who It's For
+## When to pick MiniMax Speech
 
-- **API developers** building conversational AI, customer support bots, or IVR systems who need low-latency TTS at scale
-- **Multilingual product teams** needing consistent voice output across 40 languages without separate vendor relationships
-- **Content creators and indie developers** wanting voice cloning on a free or low-cost tier before committing to a subscription
-- **Cost-conscious teams** replacing or benchmarking against ElevenLabs to reduce per-character costs
-- **Researchers and startups** prototyping audio products who want a capable free tier with API access
+- **Scaling multilingual IVR, chatbots, or conversational AI.** Turbo at $0.03 per 1K chars supports high-volume voice agents economically.
+- **Multilingual content pipelines.** One vendor for 40 languages avoids per-market vendor sprawl.
+- **Voice cloning from short reference clips.** The 5-second requirement is practical for talent workflows.
+- **Cost-sensitive prototyping.** 10,000 free credits monthly cover prototype-scale volume without a card on file.
+- **Cross-lingual cloning.** Clone a speaker in English and output Spanish with the same timbre. This is not easy elsewhere.
+
+## When to pick something else
+
+- **Peak-quality audiobook and luxury narration:** [ElevenLabs](/tools/elevenlabs/). MiniMax trails on the very top of the quality range.
+- **Curated community voice library:** ElevenLabs and Cartesia have thousands of community-contributed voices. MiniMax's 300+ is a narrower catalog.
+- **Lowest-latency streaming for voice agents:** [Cartesia](/tools/cartesia/) is tuned for this. MiniMax streams well, but Cartesia leads.
+- **Offline or self-hosted requirement:** [Kokoro](/tools/kokoro/) at Apache 2.0 runs locally. MiniMax Speech is hosted only.
+- **Western vendor compliance posture:** ElevenLabs, Cartesia, or Azure Speech. MiniMax is China-based by default.
 
 ## Pricing
 
 | Model / Plan | Price | Notes |
 |---|---|---|
-| Free tier | $0 | 10,000 credits/month ([source](https://replicate.com/blog/minimax-text-to-speech)) |
-| Speech-02-Turbo | $0.03 per 1K chars | ~$30 per million characters |
-| Speech-02-HD | $0.05 per 1K chars | ~$50 per million characters |
-| Voice cloning | $3 per voice | One-time fee per cloned voice |
-| Starter subscription | $5/month | 100,000 credits/month |
-| Standard subscription | $30/month | 300,000 credits/month |
-| Pro subscription | $99/month | 1,100,000 credits/month |
-| Business subscription | $999/month | 20,000,000 credits/month |
+| Free tier | $0 | 10,000 credits/month |
+| Speech-02-Turbo | $0.03 per 1K chars | ~$30 per 1M characters |
+| Speech-02-HD | $0.05 per 1K chars | ~$50 per 1M characters |
+| Voice cloning | $3 per voice | One-time, requires real-name verification |
+| Starter sub | $5/mo | 100,000 credits |
+| Standard sub | $30/mo | 300,000 credits |
+| Pro sub | $99/mo | 1,100,000 credits |
+| Business sub | $999/mo | 20,000,000 credits |
 
-*Prices verified 2026-04-15 via [Replicate blog](https://replicate.com/blog/minimax-text-to-speech) and [platform.minimax.io pricing docs](https://platform.minimax.io/docs/guides/pricing-speech). Official per-character rates from direct API: Turbo $0.03/1K, HD $0.05/1K. Subscription tiers bundle credits. Voice real-name verification required for voice cloning access.*
+*Prices verified 2026-04-17 via the [MiniMax Speech platform docs](https://platform.minimax.io/docs/guides/pricing-speech), [Replicate Speech-02 listing](https://replicate.com/minimax/speech-02-hd), and [fal.ai Speech-02-HD](https://fal.ai/models/fal-ai/minimax/speech-02-hd). For reference: ElevenLabs pay-per-use runs roughly $0.30 per 1K chars, placing Speech-02-HD at about 6x cheaper per character.*
 
-For comparison, ElevenLabs' Starter plan charges approximately $0.30 per 1,000 characters for equivalent quality output on pay-per-use, making MiniMax Speech-02-HD roughly 6x cheaper at the direct API rate.
+## Against the alternatives
 
-## Key Features
+| | MiniMax Speech-02-HD | ElevenLabs v3 | Cartesia Sonic | Kokoro |
+|---|---|---|---|---|
+| **$/1K chars (list)** | $0.05 | ~$0.30 | ~$0.15 | Free (self-host) |
+| **Languages** | 40 | 32+ | 15+ | 9 |
+| **Voice cloning** | 3-10s zero-shot | Best-in-class | Yes | No |
+| **Cross-lingual cloning** | Yes | Yes | Limited | N/A |
+| **Real-time streaming** | Yes | Yes | Strongest | No |
+| **Quality ceiling** | High | Highest | High | Mid (narration-grade) |
+| **Voice library breadth** | 300+ | 3,000+ | Large | 26 (v1.0) |
+| **Best viewed as** | Cheapest hosted multilingual | Premium hosted | Streaming specialist | Offline-first |
 
-- **300 plus pre-built voices** across diverse demographics, languages, and regional accents, including English (US, UK, Australian, Indian), Mandarin, Cantonese, Japanese, Korean, French, German, Spanish, Arabic, and more ([MiniMax Audio](https://www.minimax.io/audio))
-- **5-second voice cloning** generating a custom voice from a short reference clip with claimed 99% vocal similarity; multi-language clone output supported ([MiniMax News](https://www.minimax.io/news/speech-02-series))
-- **40-language support** with native pronunciation and dialect boosts for regional variants
-- **Emotional expression controls** with nine emotion options: auto, happy, sad, angry, fearful, disgusted, surprised, calm, and neutral; auto mode infers tone from text context
-- **Real-time streaming** for interactive applications requiring low-latency audio playback
-- **Fine-grained parameter controls** for speed (0.5x to 2.0x), pitch, volume, and bitrate
-- **Multiple output formats**: MP3, WAV, FLAC, PCM at 8000-44100 Hz
-- **Up to 200,000 characters per request** on async endpoints; up to 10,000 characters on sync/streaming ([fal.ai](https://fal.ai/models/fal-ai/minimax/speech-02-hd))
-- **English text normalization** for improved handling of numbers, abbreviations, and symbols
-- **Private deployment option** available at enterprise tier for data isolation
+## Failure modes
 
-## Limitations
+- **Quality ceiling below ElevenLabs on critical listening.** Independent reviews flag ElevenLabs winning on luxury audiobook and high-stakes production. MiniMax is close but not ahead.
+- **Voice library is narrower.** 300+ voices against ElevenLabs' thousands. Specific demographic or style gaps can force workarounds.
+- **Voice cloning requires real-name verification.** Individual or enterprise verification adds friction to quick prototypes.
+- **Ecosystem is thinner.** Fewer SDKs, integrations, and community tutorials compared to ElevenLabs or Cartesia as of April 2026.
+- **Peak-load latency spikes.** Some reviews note occasional processing delays under heavy load. Base latency is competitive.
+- **China-based vendor.** Enterprise compliance teams with US or EU data-residency requirements should use the private deployment option or choose a Western vendor.
+- **Model naming inconsistency.** Web platform shows "Speech 2.6" while API docs reference "Speech-02-HD/Turbo." The mapping is not clearly documented.
+- **Accent drift on non-native cloned voices.** Cloning an English speaker into Mandarin output preserves timbre but can drift on native accent nuances.
 
-- **Quality ceiling below ElevenLabs for premium production.** Independent reviews and user comparisons note that ElevenLabs retains the edge for luxury audiobook and high-stakes voice production, where naturalness at the absolute top end matters. MiniMax Speech performs well but the gap is visible in critical listening scenarios.
-- **Smaller voice marketplace.** ElevenLabs and Cartesia offer curated third-party voice libraries with thousands of community-contributed voices. MiniMax's 300 plus pre-built voices is a solid selection but narrower.
-- **Voice cloning requires account verification.** Individual or enterprise real-name verification is required to access the cloning API, which adds friction for quick prototyping ([MiniMax.io](https://www.minimax.io/audio)).
-- **Developing ecosystem.** Fewer third-party integrations, SDKs, and community tutorials compared to ElevenLabs or Cartesia as of April 2026 ([Kingy AI review](https://kingy.ai/ai/minimax-audio-the-ultimate-deep-dive-review/)).
-- **Peak-load latency spikes.** Some independent reviews note occasional processing delays under heavy load, though the base latency profile is competitive.
-- **China-based vendor.** Enterprise teams with data residency requirements outside China should evaluate the private deployment option or consider alternatives.
-- **Model naming is inconsistent.** The web platform shows "Speech 2.6" while most third-party integrations and official pricing docs reference "Speech-02" variants. The relationship between these naming schemes is not clearly documented.
+## Methodology
 
-## Bottom Line
-
-MiniMax Speech is the best value TTS API available as of April 2026 for multilingual production workloads where price per character matters. The $0.03-$0.05/1K pricing, 40-language support, and 5-second voice cloning make it a compelling alternative to ElevenLabs for most practical use cases. It should not be the default choice for studios that need the absolute highest voice quality ceiling, a deep third-party voice library, or a Western-vendor compliance posture. For cost-sensitive teams building conversational AI, IVR, or multilingual content pipelines, it is worth benchmarking seriously against ElevenLabs before committing to the higher-priced option.
-
-## Best Alternatives
-
-- ElevenLabs: Highest quality ceiling and largest voice marketplace; significantly more expensive but the right choice for premium production
-- Cartesia: Low-latency focus, strong for real-time conversational AI; competitive pricing
-- Fish Audio: Open-source-adjacent, strong voice cloning, active community voice library
-- Voxtral: Mistral's voice model entry; newer but worth benchmarking for European language quality
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis shown here. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against the [MiniMax Audio product page](https://www.minimax.io/audio), [MiniMax Speech-02 series announcement](https://www.minimax.io/news/speech-02-series), [Replicate pricing](https://replicate.com/minimax/speech-02-hd), [fal.ai listing](https://fal.ai/models/fal-ai/minimax/speech-02-hd), and the [platform.minimax.io pricing docs](https://platform.minimax.io/docs/guides/pricing-speech).
 
 ## FAQ
 
 **How does MiniMax Speech pricing compare to ElevenLabs?**
-MiniMax Speech-02-HD costs $0.05 per 1,000 characters. ElevenLabs' equivalent pay-as-you-go rate is substantially higher. MiniMax claims up to 85% cheaper pricing than ElevenLabs in marketing materials. The trade-off is that ElevenLabs offers a more mature ecosystem, broader voice library, and a marginally higher quality ceiling for demanding production use cases.
+Speech-02-HD costs $0.05 per 1,000 characters. ElevenLabs pay-per-use runs around $0.30 per 1K for equivalent quality, putting MiniMax at roughly 6x cheaper. ElevenLabs retains a broader voice library, richer integrations, and a higher quality ceiling for premium production.
 
 **What is the difference between Speech-02-HD and Speech-02-Turbo?**
-Speech-02-HD is optimized for audio quality and is best for voiceovers, audiobooks, and any content where fidelity matters. Speech-02-Turbo is optimized for speed and cost ($0.03 vs $0.05 per 1K chars) and is better suited for real-time conversational apps, IVR, and high-volume workloads where marginal quality differences are acceptable.
+HD is optimized for fidelity and costs $0.05 per 1K chars. It suits voiceovers and audiobooks. Turbo is optimized for speed and cost at $0.03 per 1K chars. It suits real-time conversational apps and IVR. Feature sets (emotions, cloning, languages) are equivalent.
 
 **Does MiniMax Speech have a free tier?**
-Yes. MiniMax offers 10,000 credits per month on a free plan, which is sufficient for prototyping. Voice cloning on the free tier is limited and requires identity verification. API access is available on free and paid plans.
+Yes. 10,000 credits per month covers prototype-scale work. Voice cloning on the free tier requires identity verification and is capped more tightly than paid tiers.
 
+**What languages does MiniMax Speech cover?**
+40 languages with native pronunciation and dialect support. English (US, UK, Australian, Indian), Mandarin, Cantonese, Japanese, Korean, French, German, Spanish, Arabic, and many more ([MiniMax Audio](https://www.minimax.io/audio)).
 
-## Review History
-
-- **2026-04-11:** Monthly verification pass. Pricing unchanged.
-- **2026-03-08:** Score adjusted down 0.3 after a pricing change reduced value.
-- **2026-02-16:** Updated flagship model reference to latest release.
-- **2025-11-16:** Pricing verified. Minor copy edits.
-- **2025-07-01:** Initial review added to the catalog.
+**Can I clone a voice across languages?**
+Yes. Clone a speaker from a 3-10 second English sample, then output audio in Spanish, Mandarin, or any of the 40 supported languages using the cloned timbre. Accent nuance can drift on non-native outputs.
 
 ## Sources
 
-- [MiniMax Audio product page](https://www.minimax.io/audio) - official product features and voice library
-- [MiniMax Speech-02 series announcement](https://www.minimax.io/news/speech-02-series) - model launch details and feature specifications (April 2025)
-- [Replicate blog: Run MiniMax Speech-02 models with an API](https://replicate.com/blog/minimax-text-to-speech) - per-character pricing confirmed ($0.03 Turbo, $0.05 HD, $3/voice clone)
-- [MiniMax API pricing docs](https://platform.minimax.io/docs/guides/pricing-speech) - subscription tier pricing
-- [WaveSpeedAI: Speech-02-Turbo](https://wavespeed.ai/models/minimax/speech-02-turbo) - third-party API pricing corroboration ($0.03/1K chars)
-- [fal.ai: Speech-02-HD](https://fal.ai/models/fal-ai/minimax/speech-02-hd) - third-party API integration specs
+- [MiniMax Audio product page](https://www.minimax.io/audio): official features and voice library
+- [Speech-02 series announcement](https://www.minimax.io/news/speech-02-series): launch details and specifications
+- [MiniMax Speech 2.6 announcement](https://www.minimax.io/news/minimax-speech-26): current web-platform flagship
+- [Replicate Speech-02-HD](https://replicate.com/minimax/speech-02-hd): per-character pricing reference
+- [fal.ai Speech-02-HD](https://fal.ai/models/fal-ai/minimax/speech-02-hd): API integration specs
+- [MiniMax Speech pricing docs](https://platform.minimax.io/docs/guides/pricing-speech): subscription tier rates
+- [Voice Clone docs](https://platform.minimax.io/docs/guides/speech-voice-clone): cloning API reference
 
 ## Related
 
-- **Category:** [AI Voice](../categories/ai-voice.md)
+- **Category:** [AI Voice](/categories/ai-voice/)
+- **Parent company:** [MiniMax](/tools/minimax/)
+- **Compare:** [ElevenLabs](/tools/elevenlabs/) · [Cartesia](/tools/cartesia/) · [Kokoro](/tools/kokoro/)

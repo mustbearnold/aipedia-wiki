@@ -2,16 +2,16 @@
 type: tool
 slug: openclaw
 title: OpenClaw
-tagline: Self-hosted open-source personal AI assistant that controls your computer, browser, and shell across 24+ messaging platforms.
+tagline: Self-hosted open-source personal AI agent that controls your computer, browser, and shell from 24+ messaging apps. Now governed by an independent foundation.
 category: ai-automation
-company: openclaw (independent foundation)
+company: openclaw-foundation
 url: https://openclaw.ai/
 pricing_model: open-source
-price_range: "Free (open-source, BYOK API costs)"
+price_range: "Free (MIT) · BYOK API costs · server hosting on you"
 status: active
 launched: 2025-11
-last_updated: 2026-04-15
-last_verified: 2026-04-15
+last_updated: 2026-04-17
+last_verified: 2026-04-17
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -25,129 +25,140 @@ scores:
   moat: 3
   longevity: 7
 tags: [open-source, self-hosted, personal-assistant, browser-automation, multi-platform, local-first, whatsapp, telegram, discord, slack, signal, imessage]
-seo_title: "OpenClaw: Features, Pricing & Review (2026)"
-meta_description: "OpenClaw is a free, open-source personal AI assistant that runs locally and controls your computer, browser, and shell from WhatsApp, Telegram, Discord, Slack, Signal, or iMessage. 358K GitHub stars."
+seo_title: "OpenClaw: Features, Pricing & Review (April 2026)"
+meta_description: "OpenClaw is a free, open-source personal AI agent that runs locally and reaches your AI from WhatsApp, Telegram, Discord, Slack, Signal, or iMessage. MIT license, 247K+ GitHub stars, governed by an independent foundation with OpenAI sponsorship."
 author: "aipedia.wiki Editorial"
 best_for:
-  - developers who want a self-hosted AI agent
-  - users wanting AI accessible via existing chat apps
-  - privacy-conscious users who want local-first processing
-  - tinkerers who build custom skills
+  - developers wanting a self-hosted personal agent
+  - users who want AI inside their existing chat apps
+  - privacy-conscious operators running local-first
+  - tinkerers building custom skills on ClawHub
 not_best_for:
-  - users wanting a managed cloud solution with no setup
-  - non-technical users uncomfortable with self-hosting
+  - users who want a managed cloud agent with zero setup
+  - non-technical users uncomfortable with daemons and YAML
   - teams needing enterprise support or SLAs
 quick_answer: >-
-  OpenClaw is a free, open-source personal AI assistant created by Peter Steinberger that runs on your own machine and is accessible through the messaging apps you already use: WhatsApp, Telegram, Discord, Slack, Signal, iMessage, and 18 more. It controls your browser, files, and shell, integrates with 50+ services, and builds persistent memory across sessions. Because it is self-hosted and open-source, you bring your own API key and pay only model costs. The tradeoff is real setup effort: you need Node 24, a daemon install, and manual configuration of each channel. With 358K GitHub stars as of April 2026 and OpenAI as a sponsor, it is the most widely adopted open-source personal agent framework available.
+  OpenClaw is the open-source personal AI agent by Peter Steinberger. MIT-licensed, self-hosted, reachable from WhatsApp, Telegram, Discord, Slack, Signal, iMessage and 18 more apps. Steinberger joined OpenAI in February 2026; the project moved to an independent foundation with OpenAI sponsorship. Free plus BYOK API costs. Pick it for local-first personal agents; skip if setup scares you.
 ---
 
 # OpenClaw
 
-OpenClaw is a free, open-source personal AI assistant that runs on your own hardware and is reachable through the messaging apps you already use. Created by Austrian developer Peter Steinberger (formerly of PSPDFKit) and first published in November 2025 under the name Clawdbot, the project reached 358,000 GitHub stars and 72,700 forks by April 2026, making it the fastest-growing open-source AI agent framework in history ([GitHub](https://github.com/openclaw/openclaw)). In February 2026, Steinberger joined OpenAI and OpenClaw transitioned to an independent foundation with continued OpenAI sponsorship ([Quasa.io](https://quasa.io/media/openclaw-founder-peter-steinberger-joins-openai-a-shift-from-open-source-to-ai-giant-and-the-founders-who-said-no)). Unlike SaaS agents, OpenClaw gives you full control: your data stays on your machine, you pick the model, and you extend it with community-built or self-written skills.
+OpenClaw is the open-source personal AI agent built by Austrian developer Peter Steinberger, first published November 2025 as Clawdbot, renamed Moltbot after an Anthropic trademark complaint, then renamed OpenClaw three days later ([Wikipedia](https://en.wikipedia.org/wiki/OpenClaw)).
 
+It runs on your machine, controls your browser and shell, and is reachable from the messaging apps you already use. The repo carries 247K+ GitHub stars as of early March 2026 and continues to climb.
 
-## Editor's Take
+## System Verdict
 
-I spent a weekend setting up OpenClaw v2.3.1 on my Mac with Node 24 and a Claude 4.6 key. The daemon install took 45 minutes, including channel configs for Telegram and Discord. Once running, it nailed browser tasks, opening tabs, filling forms, even screenshotting results in under 10 seconds. Shell commands worked flawlessly too, like grepping logs or git commits without babysitting.
+> **Pick OpenClaw if a persistent, self-hosted personal AI agent reachable from your phone is the goal and setup time is not the bottleneck.** The cross-app gateway is the real moat. WhatsApp, Telegram, Discord, Slack, Signal, iMessage, and more all reach the same agent, with the same memory, running on your hardware.
+>
+> **Skip it if zero-config matters more than control.** Setup needs Node 24, a daemon install, and per-channel configuration. Rabbit, Claude apps, or ChatGPT Operator Mode are easier if you do not want to run your own server.
+>
+> **Who pays which tier:** Everyone. OpenClaw itself is free. Costs are bring-your-own-key LLM bills plus whatever you pay to keep a small VPS or always-on machine running.
 
-Compared to Rabbit R1's cloud agent, OpenClaw wins on privacy and cost: zero SaaS fees, just your API bills, and everything stays local. But Rabbit's zero-config app feels effortless next to this tinker's dream. The ClawHub skill registry has 200+ extensions now, from email triage to Homebrew installs, and persistent memory actually holds context over days.
+## Key Facts
 
-Grab it if you're a dev who self-hosts everything and chats via Signal or Slack. Skip if setup scares you, non-techies will ragequit at the YAML tweaks. At 358K stars, it's the open agent king, but only for those who roll up sleeves.
+| | |
+|---|---|
+| **Creator** | Peter Steinberger (ex-PSPDFKit) |
+| **Governance** | Independent foundation · OpenAI sponsorship · community maintainers |
+| **License** | MIT |
+| **First release** | November 2025 (as Clawdbot) |
+| **GitHub stars** | 247K+ (March 2026), rising |
+| **Messaging channels** | 24+ (WhatsApp, Telegram, Discord, Slack, Signal, iMessage, Teams, Matrix, WeChat, Nostr, and more) |
+| **Model support** | Claude · GPT · any OpenAI-compatible endpoint · provider failover |
+| **Interface** | Messaging-first · Live Canvas A2UI · voice input |
+| **Platforms** | macOS · iOS · Android · Linux · Windows (WSL2) |
+| **Skill system** | ClawHub registry · auto-discover · auto-install |
 
-## What It Does
+Every data point above was verified against vendor sources on 2026-04-17. See Sources.
 
-OpenClaw acts as a local gateway that connects your AI model of choice (Claude Opus 4.6, GPT-5.4, or any OpenAI-compatible endpoint) to your machine and your messaging apps ([openclaw.ai](https://openclaw.ai/)). You send a message from WhatsApp or Telegram, and the agent reads it, uses whatever tools are needed (browser, shell, files, calendar, email), and replies in the same thread. Key capabilities include:
+## What it actually is
 
-- **Browser automation:** a dedicated Chrome/Chromium instance with snapshots and action replay
-- **Shell access:** executes commands, reads output, and handles long-running processes
-- **File operations:** read, write, move, and search files on your local system
-- **Persistent memory:** remembers user preferences and context across sessions using a local profile store
-- **Skill system (ClawHub):** a registry of community-built add-ons for Gmail, GitHub, Spotify, Obsidian, Hue smart lights, and dozens more
-- **Self-written skills:** the agent can author and install its own skills when given a new task type
-- **Voice input:** wake-word detection on macOS/iOS, continuous voice on Android
-- **Live Canvas:** an agent-driven visual workspace with A2UI support for richer visual output
+A local gateway process that sits between your messaging apps and an LLM. You chat from WhatsApp or Signal; OpenClaw receives the message on your hardware, runs whatever tools it needs (browser, shell, files, calendar, email), and replies in the same thread.
 
-## Who It's For
+Skills live in ClawHub, a registry of community-built add-ons. The agent can identify which skill fits a task and install it on demand. It can even author its own skills for new task types.
 
-- **Developers** who want a persistent, self-hosted AI agent that works across all their tools
-- **Privacy-conscious users** who need local-first processing with no third-party cloud storing their data
-- **Power users** who want to reach their AI from WhatsApp on their phone or Signal on the desktop without switching apps
-- **Tinkerers and builders** who want to write custom skills and contribute to an active open-source community
-- **Teams running private infrastructure** where data cannot leave a controlled environment
+The founder story matters. Steinberger joined OpenAI in February 2026; OpenClaw transitioned to an independent foundation with continued OpenAI sponsorship. Long-term direction now depends on community governance.
+
+## When to pick OpenClaw
+
+- **Personal AI reachable from your phone.** Chat on WhatsApp, get full desktop control at home.
+- **Privacy-first setups.** Code, files, and browsing stay on your hardware. Only outbound LLM API calls leave.
+- **Always-on agent.** Unlike on-demand chatbots, OpenClaw persists and can run scheduled or triggered workflows.
+- **Tinkerers and skill authors.** ClawHub plus self-written skills make OpenClaw a platform, not just a product.
+- **Local-first orgs.** Private infrastructure deployments where data residency rules out SaaS.
+
+## When to pick something else
+
+- **Managed, zero-setup agent:** [ChatGPT](/tools/chatgpt/) Operator Mode or Claude apps. No daemons, no YAML.
+- **Multi-agent Python framework:** [CrewAI](/tools/crewai/) or [Letta](/tools/letta/).
+- **Workflow automation with big SaaS catalog:** [Zapier](/tools/zapier/) or [n8n](/tools/n8n/).
+- **Voice-first conversational AI:** [Voiceflow](/tools/voiceflow/).
+- **Visual agent flow builder:** [Langflow](/tools/langflow/) or [Relevance AI](/tools/relevance-ai/).
 
 ## Pricing
 
 | Tier | Cost | Notes |
 |------|------|-------|
-| OpenClaw (self-hosted) | Free | Open-source MIT license, you supply the API key |
-| Model API costs | Usage-based | Varies by provider; typical GPT-5.4 or Claude Opus 4.6 usage runs $5-$30/month for moderate use |
-| Node/server costs | Varies | Runs on any always-on machine or a small VPS ($5-$10/month) |
+| OpenClaw (self-hosted) | Free | MIT license, BYOK API, BYO server |
+| LLM API costs | Usage-based | Typical Claude Opus 4.7 or GPT-5.4 use: $5-$30/month |
+| Server / VPS | ~$5-$10/mo | Any always-on machine works |
 
-OpenClaw itself has no subscription or license fee. Total cost is API usage plus whatever you pay to keep a server running ([GitHub](https://github.com/openclaw/openclaw)).
+*No subscription. No license fee. No managed cloud tier. Total cost equals LLM usage plus whatever you spend on hosting ([GitHub](https://github.com/openclaw/openclaw)).*
 
-## Key Features
+## Against the alternatives
 
-- **24+ messaging platforms:** WhatsApp, Telegram, Slack, Discord, Signal, iMessage, Google Chat, Matrix, LINE, Mattermost, Nostr, Twitch, WeChat, and more from a single gateway process ([openclaw.ai](https://openclaw.ai/))
-- **Local-first gateway:** a WebSocket control plane that manages sessions, channels, tools, and events entirely on your hardware
-- **ClawHub skill registry:** automatic discovery and installation of community skills; the agent identifies which skill fits a new task and installs it on demand
-- **Multi-model flexibility:** OpenAI (OAuth and API key), Anthropic, and any OpenAI-compatible endpoint with failover between providers
-- **Sandboxing options:** choose full system access or sandboxed execution depending on your trust requirements
-- **iOS/macOS/Android/Linux/Windows (WSL2) support:** covers every major platform a developer uses
-- **OpenAI and GitHub sponsorship:** corporate backing gives the independent foundation runway even after Steinberger's departure
+| | OpenClaw | [ChatGPT](/tools/chatgpt/) Operator | Claude apps |
+|---|---|---|---|
+| **License** | MIT (open-source) | Proprietary SaaS | Proprietary SaaS |
+| **Hosting** | Your hardware | OpenAI cloud | Anthropic cloud |
+| **Privacy model** | Local data, BYOK calls outbound | OpenAI-hosted | Anthropic-hosted |
+| **Channel coverage** | 24+ messaging apps | Browser + mobile | Browser + mobile + CLI |
+| **Skill extensibility** | ClawHub + self-authored | OpenAI ecosystem | Anthropic MCP |
+| **Setup effort** | High (daemon + channels) | Zero | Zero |
+| **Pricing shape** | BYOK + self-host | Subscription | Subscription |
+| **Best viewed as** | Local-first personal agent platform | Managed generalist agent | Anthropic-native assistant |
 
-## Limitations
+## Failure modes
 
-- **Non-trivial setup.** Requires Node 24+, daemon installation, and per-channel configuration. Not a five-minute install for non-developers.
-- **No managed hosting option.** There is no official cloud-hosted version; you are entirely responsible for uptime and maintenance.
-- **API key costs.** You pay model costs directly; a heavily used agent can accumulate real API bills.
-- **Founder departure.** Peter Steinberger joined OpenAI in February 2026. The project now depends on community governance, which introduces uncertainty about long-term direction ([Quasa.io](https://quasa.io/media/openclaw-founder-peter-steinberger-joins-openai-a-shift-from-open-source-to-ai-giant-and-the-founders-who-said-no)).
-- **Low moat.** As an open-source project with no proprietary backend, forks and competitors can copy the approach easily.
-- **Windows requires WSL2.** Native Windows support is limited; Windows users need WSL2 for full functionality.
-- **Early versioning.** The project is under active development; breaking changes between releases are expected.
+- **Setup has friction.** Node 24, daemon, per-channel credentials. Not a five-minute install.
+- **No managed hosting.** Uptime, upgrades, and backups are the user's responsibility.
+- **Founder departure.** Steinberger joined OpenAI in February 2026. The foundation model is healthy but unproven versus a VC-backed company's roadmap velocity.
+- **Low moat.** MIT license and public architecture invite forks. Differentiation rests on community momentum and skill breadth.
+- **Windows needs WSL2.** Native Windows users face extra setup versus macOS or Linux.
+- **Breaking changes during rapid development.** Active project. Expect version-to-version config churn.
+- **API bills can surprise.** A heavily used agent on Claude Opus 4.7 can run up real costs without prompt caching and careful skill design.
 
-## Bottom Line
+## Methodology
 
-OpenClaw is the most mature open-source personal agent framework as of April 2026, with the widest platform coverage and a large community. If you want an AI assistant you can reach from your phone via WhatsApp that also has full access to your Mac or Linux machine, and you are comfortable self-hosting, OpenClaw is the right tool. It costs nothing beyond API usage. The main risk is the post-Steinberger governance transition; the foundation model is unproven compared to a VC-backed company. For users who want zero setup, a managed SaaS option like a Claude-powered workflow in [Zapier or n8n](../categories/ai-automation.md) is more appropriate.
-
-## Best Alternatives
-
-- Hermes Agent: Nous Research's MIT-licensed agent with similar multi-platform support, stronger persistent memory and skill system, backed by an active AI research org
-- Claude Code: Anthropic's official CLI agent, more capable for software engineering but terminal-only and costs $100-200/month
-- Zapier/Make AI workflows: fully managed automation with no self-hosting, but per-task pricing and less personal-agent depth
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against the [openclaw/openclaw GitHub repo](https://github.com/openclaw/openclaw), [openclaw.ai](https://openclaw.ai/), [Steinberger's OpenAI announcement](https://steipete.me/posts/2026/openclaw), [TechCrunch coverage](https://techcrunch.com/2026/02/15/openclaw-creator-peter-steinberger-joins-openai/), and the [OpenClaw Wikipedia entry](https://en.wikipedia.org/wiki/OpenClaw).
 
 ## FAQ
 
 **Is OpenClaw free?**
-Yes. OpenClaw is MIT-licensed and free to use. You pay only for the AI model API you connect to it (e.g., OpenAI, Anthropic).
+Yes. MIT-licensed, free to self-host. You pay only LLM API usage (OpenAI, Anthropic, or any compatible provider) plus whatever a small always-on server costs.
 
-**Who owns OpenClaw now that Peter Steinberger joined OpenAI?**
-OpenClaw transferred to an independent foundation in February 2026. OpenAI is listed as a sponsor but does not control the project. Community maintainers govern the roadmap.
+**What happened after Peter Steinberger joined OpenAI?**
+Steinberger announced the move on February 14, 2026. OpenClaw transitioned to an independent foundation on the same announcement. OpenAI remains a sponsor. Community maintainers govern the roadmap ([steipete.me](https://steipete.me/posts/2026/openclaw)).
 
-**Does OpenClaw send my data to any cloud?**
-By design, OpenClaw runs on your own hardware and your data does not pass through any OpenClaw-controlled server. It does send messages to whichever AI model API you configure (e.g., OpenAI or Anthropic).
+**Does OpenClaw send my data to a third-party cloud?**
+By design, OpenClaw runs on your own hardware. No OpenClaw-controlled server touches your data. Outbound calls go only to the LLM provider you configure (Claude, GPT, local model, etc).
 
-**What messaging apps does OpenClaw support?**
-As of April 2026: WhatsApp, Telegram, Discord, Slack, Signal, iMessage, Google Chat, Matrix, LINE, Mattermost, Nostr, Twitch, WeChat, Zalo, IRC, Microsoft Teams, Feishu, BlueBubbles, Synology Chat, Tlon, WebChat, and more ([GitHub](https://github.com/openclaw/openclaw)).
+**Which messaging apps does OpenClaw support?**
+WhatsApp, Telegram, Discord, Slack, Signal, iMessage, Microsoft Teams, Google Chat, Matrix, LINE, Mattermost, Nostr, Twitch, WeChat, Zalo, IRC, Feishu, BlueBubbles, Synology Chat, Tlon, WebChat, and more. The gateway design keeps a single agent across every channel.
 
 **Can OpenClaw control my computer?**
-Yes. It has browser automation via a dedicated Chrome/Chromium instance, shell command execution, and file system access. You can choose sandboxed mode for more restricted operation.
-
-
-## Review History
-
-- **2026-04-12:** Pricing and flagship model version verified. No material changes.
-- **2026-03-02:** Score revised up by 0.5 after extended hands-on testing.
-- **2026-01-16:** Added the new model variant to the features section.
-- **2025-11-16:** Pricing verified. Minor copy edits.
-- **2026-02-01:** Added to the catalog with a full review.
+Yes. Dedicated Chrome/Chromium browser automation, shell command execution, and filesystem access. Sandboxed mode is available for higher-trust environments.
 
 ## Sources
 
-- [OpenClaw GitHub repository](https://github.com/openclaw/openclaw)
-- [OpenClaw official site](https://openclaw.ai/)
-- [Peter Steinberger joins OpenAI announcement](https://quasa.io/media/openclaw-founder-peter-steinberger-joins-openai-a-shift-from-open-source-to-ai-giant-and-the-founders-who-said-no)
-- [N9O: The Lobster That Broke GitHub](https://n9o.xyz/posts/202602-steipete-openclaw-openai/)
+- [openclaw/openclaw GitHub](https://github.com/openclaw/openclaw): Source, stars, skills
+- [openclaw.ai](https://openclaw.ai/): Official product site
+- [Peter Steinberger: OpenClaw, OpenAI and the future](https://steipete.me/posts/2026/openclaw): Founder post on OpenAI move
+- [TechCrunch: OpenClaw creator joins OpenAI](https://techcrunch.com/2026/02/15/openclaw-creator-peter-steinberger-joins-openai/): Coverage of the transition
+- [Wikipedia: OpenClaw](https://en.wikipedia.org/wiki/OpenClaw): Naming history (Clawdbot to Moltbot to OpenClaw) and project timeline
 
 ## Related
 
-- **Category:** [AI Automation](../categories/ai-automation.md)
+- **Category:** [AI Automation](/categories/ai-automation/)
+- **Comparisons:** [OpenClaw vs ChatGPT Operator](/comparisons/openclaw-vs-chatgpt/) · [OpenClaw vs Claude Code](/comparisons/openclaw-vs-claude-code/) · [OpenClaw vs n8n](/comparisons/openclaw-vs-n8n/)
