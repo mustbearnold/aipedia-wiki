@@ -2,17 +2,16 @@
 type: tool
 slug: cartesia
 title: Cartesia
-tagline: >-
-  Ultra-low latency voice synthesis API built for real-time applications, streaming, voice agents, and interactive products.
+tagline: Real-time voice synthesis API. Sonic 3 hits 90ms time-to-first-audio; Sonic Turbo hits 40ms. Built for voice agents, not voiceovers.
 category: ai-voice
 company: Cartesia AI
-url: 'https://cartesia.ai'
+url: https://cartesia.ai
 pricing_model: freemium
-price_range: $0-$499/month
+price_range: "$0-$499/month + credits"
 status: active
 launched: 2023-09
-last_updated: 2026-04-15T00:00:00.000Z
-last_verified: '2026-04-15'
+last_updated: 2026-04-17
+last_verified: 2026-04-17
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -25,135 +24,153 @@ scores:
   value: 8
   moat: 9
   longevity: 8
-tags: [ai-voice, tts, text-to-speech, real-time, voice-api, low-latency, voice-agents]
-seo_title: 'Cartesia Review 2026: Low-Latency Voice Synthesis API'
-meta_description: >-
-  Cartesia is an AI voice synthesis API with sub-100ms latency, built for
-  real-time voice agents and interactive apps. Pricing, features, and
-  alternatives reviewed.
-author: aipedia.wiki Editorial
+tags: [ai-voice, tts, text-to-speech, real-time, voice-api, low-latency, voice-agents, sonic, cartesia]
+seo_title: "Cartesia: Features, Pricing & Review (April 2026)"
+meta_description: "Cartesia Sonic 3 delivers 90ms time-to-first-audio for real-time voice agents; Sonic Turbo hits 40ms. Credit-based pricing with Free to Enterprise tiers. Reviewed April 2026."
+author: "aipedia.wiki Editorial"
+best_for:
+  - real-time voice agents and conversational AI
+  - phone and IVR systems needing sub-100ms latency
+  - game NPC dialogue at scale
+  - teams integrating with LiveKit, Daily.co, or Twilio
+not_best_for:
+  - podcast or audiobook narration
+  - high-expressiveness character voiceover
+  - workflows needing the broadest voice library
+  - creators who want a no-code UI
 quick_answer: >-
-  Cartesia is an AI voice synthesis API by Cartesia AI, founded by MIT and Carnegie Mellon researchers, designed specifically for real-time applications with a sub-100ms time-to-first-audio on its Sonic Turbo model, compared to 200-500ms for ElevenLabs streaming. The free tier includes 1M characters/month; Starter is $49/month for 5M characters with voice cloning. Best for developers building voice agents, conversational AI, and interactive call systems where latency directly impacts user experience; not optimized for content creation, podcast production, or long-form voiceover work, where ElevenLabs or PlayHT produce more natural output.
+  Cartesia is the real-time voice synthesis leader in 2026. Sonic 3 hits 90ms time-to-first-audio; Sonic Turbo hits 40ms. Pick it for voice agents, phone systems, and interactive products where latency sets trust. Skip it for podcasts or audiobooks where Fish Audio S2 Pro and ElevenLabs rank higher on expressiveness.
+price_history:
+  - date: 2026-03-01
+    plan: "Credits"
+    price: "1 credit/char TTS"
+    note: "Sonic 3 launch with updated credit-based pricing"
+  - date: 2026-04-15
+    plan: "Pricing"
+    price: "Verified unchanged"
+    note: "Free through Scale tiers stable"
 ---
 
 # Cartesia
 
-Cartesia is an AI voice synthesis API designed specifically for real-time applications. Its Sonic Turbo model delivers streaming audio with under 100ms time-to-first-audio while maintaining voice quality comparable to leading TTS services. The API serves voice agents, conversational AI, live call systems, and interactive products where low latency prevents conversational delays. Founded in 2023 by researchers from MIT and Carnegie Mellon, Cartesia holds a strong position in production voice AI applications as of April 2026.[Cartesia.ai](https://cartesia.ai)
+Voice synthesis built for real-time use. **Sonic 3** is the current flagship at 90ms time-to-first-audio; **Sonic Turbo** hits 40ms for latency-critical workloads.
 
+Founded in 2023 by MIT and Carnegie Mellon researchers. Integrates natively with LiveKit, Daily.co, and Twilio Voice for voice agent deployments.
 
-## Editor's Take
+## System Verdict
 
-I tested Cartesia's Sonic Turbo model last week with a voice agent prototype using their WebSocket API. The sub-100ms time-to-first-audio is real, my latency averaged 85ms on a basic AWS setup, beating ElevenLabs' 250ms streaming by a wide margin in live calls. Voice cloning from a 10-second sample worked cleanly on the $49 Starter plan, though it needs clean input audio or you'll get artifacts.
+> **Pick Cartesia if building a voice agent, phone system, or any product where sub-100ms latency sets user trust.** Sonic 3 and Turbo lead the real-time TTS category in 2026 benchmarks, with native WebSocket streaming and purpose-built integrations for voice infrastructure.
+>
+> **Skip it for long-form narration, podcasts, or audiobooks.** [Fish Audio](/tools/fish-audio/) S2 Pro and [ElevenLabs](/tools/elevenlabs/) both rank higher on expressiveness and emotional range. Cartesia optimizes for speed, not nuance.
+>
+> **Who pays which tier:** Free tier for prototyping. Starter $49/mo for solo devs shipping production voice agents. Growth $199/mo for teams running multi-agent deployments. Scale $499/mo for sustained high-volume workloads. Enterprise for on-prem and custom models.
 
-ElevenLabs edges it on naturalness for non-real-time work, like podcasts, where Cartesia sounds slightly robotic at high speeds. But if you're building conversational AI or phone agents, Cartesia wins on responsiveness, those 100ms gaps kill user trust elsewhere. Skip it for voiceovers; use PlayHT instead.
+## Key Facts
 
-Use this for production voice apps at scale. Solo devs should stick to the free 1M chars tier unless cloning is essential. I've got a bias toward low-latency tools since I hate laggy demos, but the Growth plan at $199 feels right for teams handling 20M chars.
+| | |
+|---|---|
+| **Flagship model** | Sonic 3 (90ms time-to-first-audio) |
+| **Fastest model** | Sonic Turbo (40ms time-to-first-audio) |
+| **Voice library** | 150+ voices |
+| **Languages** | 25+ with native prosody |
+| **Voice cloning** | 10-second reference minimum; 30-60s for quality |
+| **Streaming** | WebSocket, bidirectional audio |
+| **Integrations** | LiveKit, Daily.co, Twilio Voice |
+| **SDKs** | Python, Node.js, cURL |
+| **Pricing model** | Credit-based, 1 credit per character for TTS |
+| **Pro Voice Cloning** | 1.5 credits per character + one-time training fee |
 
-## What It Does
+Every data point above was verified against vendor sources on 2026-04-17. See Sources.
 
-Cartesia's Sonic Turbo model generates streaming audio that starts in under 100ms from request submission. This addresses the 200-500ms latency common in services like ElevenLabs and OpenAI TTS, which create noticeable pauses in live interactions. The streaming architecture sends audio chunks as they generate, enabling immediate playback.
+## What it actually is
 
-Core API capabilities include:
+A developer API built specifically for real-time voice applications. Not a creator studio, not a consumer app. Cartesia sells latency and streaming reliability to teams shipping voice agents.
 
-- Streaming TTS with WebSocket support for real-time bidirectional audio
-- Voice cloning from 10-second audio samples via API
-- Library of 150+ voices covering multiple accents and styles
-- Control over speaking rate, pitch, emphasis, and emotional tone through parameters
-- Support for 25+ languages with native prosody
-- Integration with voice platforms like LiveKit and Daily.co
+Sonic 3 handles the default case at 90ms time-to-first-audio. Sonic Turbo drops that to 40ms for applications where even 100ms gaps break the conversational illusion. Both stream audio chunks as they generate, keeping perceived latency minimal.
 
-Use cases center on voice agents for customer service, AI phone systems, accessibility tools, and interactive games.
+The moat is the combination of architecture and integration depth. Competing TTS APIs ship streaming, but few match Sonic Turbo's 40ms TTFA, and none have the same native hooks into LiveKit and Twilio. Voice cloning from 10-second samples covers most production scenarios.
 
-## Who It's For
+## When to pick Cartesia
 
-- Voice AI developers creating real-time agents or IVR systems
-- Product teams integrating voice into AI assistants
-- Accessibility tool developers requiring responsive TTS
-- Game developers needing low-latency character voices
-- Teams building conversational interfaces where 100ms gaps matter
-- Enterprises deploying production voice agents at scale
+- **Building voice agents or conversational AI.** 100ms latency gaps destroy user trust. Cartesia eliminates them.
+- **Phone and IVR systems.** Native Twilio Voice integration plus sub-100ms TTFA makes it the default real-time voice stack.
+- **Game NPC dialogue at runtime.** Dynamic voice generation during gameplay works at Sonic Turbo's 40ms TTFA.
+- **Already on LiveKit or Daily.co.** First-class integrations shorten deployment time significantly.
+- **Scaled production voice workloads.** Growth and Scale tiers are priced for teams shipping, not hobbyists.
 
-Not designed for: pre-recorded voiceovers, podcasts, or audiobooks where latency plays no role.
+## When to pick something else
+
+- **Long-form narration or podcasts:** [Fish Audio](/tools/fish-audio/) S2 Pro tops 2026 blind preference tests. [ElevenLabs](/tools/elevenlabs/) remains the creator default.
+- **Open-weight self-hosting:** [Fish Audio](/tools/fish-audio/) ships MIT weights. [Voxtral](/tools/voxtral/) ships CC BY-NC weights for non-commercial use.
+- **Cheapest multilingual commercial API:** [Voxtral](/tools/voxtral/) at $0.016 per 1K chars undercuts Cartesia's credit pricing at most volumes.
+- **Enterprise dubbing with lip-sync:** [Resemble AI](/tools/resemble-ai/) ships Localize across 149 languages and deepfake detection.
+- **Personal document reading:** [Speechify](/tools/speechify/) solves consumption, not production.
 
 ## Pricing
 
-| Plan | Price | Included Characters | Notes |
-|------|-------|---------------------|-------|
-| Free | $0 | 1M chars/month | API access, Sonic Turbo, standard voices |
-| Starter | $49/month | 5M chars/month | Voice cloning, priority support |
-| Growth | $199/month | 20M chars/month | Custom voices, higher concurrency |
-| Scale | $499/month | 60M chars/month | Volume discounts, dedicated support |
-| Enterprise | Custom | Custom | Custom models, on-prem deployment |
-| Pay-as-you-go | $0.001/char | N/A | Available on all plans |
+| Plan | Price | Included | Notes |
+|------|-------|----------|-------|
+| Free | $0 | Limited credits | Prototyping, Sonic 3 access |
+| Starter | $49/mo | Expanded credits | Voice cloning, priority support |
+| Growth | $199/mo | Higher credit volume | Custom voices, higher concurrency |
+| Scale | $499/mo | Scale credit volume | Volume discounts, dedicated support |
+| Enterprise | Custom | Custom | On-prem deployment, custom models |
 
-*Prices verified 2026-04-15. Pricing subject to change; verify at [cartesia.ai/pricing](https://cartesia.ai/pricing).*
+TTS is billed at 1 credit per character. Pro Voice Cloning runs 1.5 credits per character plus a one-time training fee.
 
-The free tier supports substantial prototyping. Pay-as-you-go at $0.001 per character remains competitive for high-volume use.
+*Prices verified 2026-04-17 via [cartesia.ai/pricing](https://cartesia.ai/pricing) and [eesel AI pricing breakdown](https://www.eesel.ai/blog/cartesia-sonic-3-pricing).*
 
-## Key Features
+## Against the alternatives
 
-- Sub-100ms time-to-first-audio on Sonic Turbo model
-- Streaming WebSocket API for real-time applications
-- Voice cloning from 10+ seconds of reference audio
-- 150+ voices with accent and style variety
-- 25+ languages with contextual prosody control
-- SDKs for Python, Node.js, and cURL
-- Conversation memory for multi-turn prosody consistency
-- Integration with LiveKit, Daily.co, and Twilio Voice
+| | Cartesia Sonic 3 | ElevenLabs v3 | Fish Audio S2 Pro | Voxtral |
+|---|---|---|---|---|
+| **Time-to-first-audio** | 90ms Sonic 3, 40ms Turbo | 200-400ms streaming | Low, not sub-100ms | ~70ms |
+| **Voice cloning reference** | 10+ sec | 1-5 min for best quality | Short samples | 3 sec |
+| **Voice library** | 150+ | 5,000+ | Smaller, growing | 9 language-specific |
+| **Languages** | 25+ | 30+ | 80+ | 9 |
+| **Open weights** | None | None | MIT | CC BY-NC 4.0 |
+| **Voice agent integrations** | LiveKit, Daily, Twilio | Some | None native | None native |
+| **Best viewed as** | Real-time agent specialist | Creator platform default | Quality + open-weight leader | Mistral-stack voice |
 
-## Limitations
+## Failure modes
 
-- Less natural for long-form narration compared to ElevenLabs
-- Voice library smaller than ElevenLabs (150+ vs 5,000+)
-- Requires clean reference audio for optimal cloning results
-- API-only; no web interface for non-developers
-- Emotion controls less granular than specialized services
+- **Not tuned for long-form narration.** Expressiveness and emotional range trail ElevenLabs and Fish Audio at equivalent speeds. Use it for agents, not audiobooks.
+- **Voice library is smaller than ElevenLabs.** 150+ voices versus 5,000+. Teams needing specific voice personas may need to clone.
+- **Voice cloning needs clean reference audio.** Noisy input produces artifacts. 30-60 seconds of clean, varied speech is the practical minimum for production quality.
+- **Credit pricing is opaque at low volumes.** Free tier credit count varies by plan refresh. High-volume teams should model credit consumption against the pay-as-you-go alternative before committing.
+- **No consumer UI.** API-only. Creators without engineering resources should pick ElevenLabs or Fish Audio.
+- **Enterprise features gate on-prem.** Teams with data-residency requirements need the custom tier. Scale at $499 still uses the hosted API.
 
-## Bottom Line
+## Methodology
 
-Cartesia excels for real-time voice applications where sub-100ms latency creates clear advantages over alternatives. Developers building voice agents or conversational AI find its streaming performance unmatched. For non-real-time content like voiceovers or podcasts, other services deliver better results.
-
-## Best Alternatives
-
-| Tool | Best For | Price |
-|------|----------|-------|
-| [ElevenLabs](../tools/elevenlabs.md) | Long-form content, voice library size | Free tier / $5+/mo |
-| PlayHT | Content creation, studio quality | Free tier / $29+/mo |
-| Respeecher | Professional voice cloning | Custom pricing |
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity). Last verified 2026-04-17 against [Cartesia pricing](https://cartesia.ai/pricing), [Sonic 3 page](https://cartesia.ai/sonic), [Cartesia docs](https://docs.cartesia.ai/), and [eesel AI pricing analysis](https://www.eesel.ai/blog/cartesia-sonic-3-pricing).
 
 ## FAQ
 
 **How does Cartesia latency compare to ElevenLabs?**
-Cartesia Sonic Turbo achieves under 100ms time-to-first-audio. ElevenLabs streaming typically reaches 200-400ms, creating perceptible delays in voice agents.[Cartesia Docs](https://docs.cartesia.ai)
+Sonic 3 hits 90ms time-to-first-audio and Sonic Turbo hits 40ms. ElevenLabs streaming typically lands at 200-400ms. The gap creates perceptible delays in voice agents where Cartesia feels live and ElevenLabs feels laggy.
 
 **What audio length is needed for voice cloning?**
-Minimum 10 seconds of clean audio produces usable clones; 30-60 seconds yields optimal quality. Clones persist via API voice IDs.
+Minimum 10 seconds of clean audio produces usable clones. 30-60 seconds yields production quality. Clones persist via API voice IDs for reuse across sessions.
 
 **Does Cartesia support long conversations?**
-Yes, the model maintains prosody context across multiple turns, suitable for extended voice agent sessions.
+Yes. The model maintains prosody context across multiple turns, which keeps voice consistency stable across long voice-agent sessions.
 
+**Can Cartesia handle non-English languages?**
+Yes. 25+ languages with native prosody. Multilingual coverage is narrower than [Fish Audio](/tools/fish-audio/) but sufficient for most voice-agent deployments in Western markets.
 
+**Is there a free tier?**
+Yes. The free plan provides limited credits and Sonic 3 access for prototyping. Production workloads run on paid tiers from $49/mo.
 
-
-## Review History
-
-- **2026-04-11:** Pricing re-checked against the official pricing page. No change since last verification.
-- **2026-02-16:** Updated flagship model reference to latest release.
-- **2025-12-16:** Pricing verified. Minor copy edits.
-- **2024-01-15:** Initial review added to the catalog.
-
-## Related Comparisons
-
-- [Cartesia vs Descript](../comparisons/cartesia-vs-descript.md)
-- [Cartesia vs ElevenLabs](../comparisons/cartesia-vs-elevenlabs.md)
-- [Cartesia vs Fish Audio / Fish Speech S2](../comparisons/cartesia-vs-fish-audio.md)
-- [Cartesia vs Resemble AI](../comparisons/cartesia-vs-resemble-ai.md)
-- [Cartesia vs Voxtral](../comparisons/cartesia-vs-voxtral.md)
-
-
-- **Category:** [Voice](../categories/ai-voice.md)
 ## Sources
 
-- [Cartesia.ai](https://cartesia.ai) (verified 2026-04-15)
-- [Cartesia Documentation](https://docs.cartesia.ai)
-- [Cartesia Pricing](https://cartesia.ai/pricing)
+- [Cartesia pricing](https://cartesia.ai/pricing): current tier structure and credit costs
+- [Sonic 3 page](https://cartesia.ai/sonic): latency benchmarks and capabilities
+- [Cartesia docs](https://docs.cartesia.ai/): API spec, SDKs, integrations
+- [eesel AI: Cartesia Sonic 3 pricing](https://www.eesel.ai/blog/cartesia-sonic-3-pricing): 2026 pricing breakdown
+- [Inworld: Best TTS APIs for real-time voice agents 2026](https://inworld.ai/resources/best-voice-ai-tts-apis-for-real-time-voice-agents-2026-benchmarks): latency benchmarks
+
+## Related
+
+- **Category:** [AI Voice / TTS](/categories/ai-voice/)
+- **Comparisons:** [Cartesia vs ElevenLabs](/comparisons/cartesia-vs-elevenlabs/), [Cartesia vs Fish Audio](/comparisons/cartesia-vs-fish-audio/), [Cartesia vs Voxtral](/comparisons/cartesia-vs-voxtral/), [Cartesia vs Resemble AI](/comparisons/cartesia-vs-resemble-ai/)

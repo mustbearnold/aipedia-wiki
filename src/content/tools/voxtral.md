@@ -2,16 +2,16 @@
 type: tool
 slug: voxtral
 title: Voxtral
-tagline: Mistral AI's open-weight speech-to-text and voice model, cheapest commercial TTS API in 2026 at 47% less than ElevenLabs.
+tagline: Mistral AI's open-weight TTS and STT model. 4B parameters, 9 languages, 70ms latency, $0.016 per 1K chars via API.
 category: ai-voice
 company: Mistral AI
-url: https://mistral.ai/voxtral
+url: https://mistral.ai/news/voxtral
 pricing_model: freemium
-price_range: "Free (open-weight) / $0.016/1K chars API"
+price_range: "Free (open-weight, non-commercial) / $0.016/1K chars API"
 status: active
 launched: 2026-03
-last_updated: 2026-04-15
-last_verified: 2026-04-15
+last_updated: 2026-04-17
+last_verified: 2026-04-17
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -24,134 +24,151 @@ scores:
   value: 10
   moat: 6
   longevity: 8
-tags: [text-to-speech, tts, open-weight, api, voice-generation, mistral, cheap]
-seo_title: "Voxtral (Mistral AI) Review (2026): Cheapest TTS API"
-meta_description: "Voxtral is Mistral AI's open-weight voice model. $0.016/1K chars, 47% cheaper than ElevenLabs. Review and comparison April 2026."
+tags: [text-to-speech, tts, stt, speech-to-text, open-weight, api, voice-generation, mistral, multilingual]
+seo_title: "Voxtral (Mistral AI): Features, Pricing & Review (April 2026)"
+meta_description: "Voxtral is Mistral AI's 4B open-weight TTS + STT model launched March 26, 2026. 9 languages, 70ms latency, $0.016/1K chars via API. Weights CC BY-NC 4.0 on Hugging Face."
 author: "aipedia.wiki Editorial"
-quick_answer: >-
-  Voxtral is Mistral AI's open-weight voice model, launched March 2026, that handles both text-to-speech and speech-to-text in a single API, and is simultaneously free to self-host and available via the Mistral commercial API. The commercial TTS API is priced at $0.016 per 1,000 characters, which is 47% cheaper than ElevenLabs ($0.030/1K chars), making it the lowest-cost major TTS API as of April 2026. Best for developers building voice-enabled applications at scale where cost matters more than top-tier expressiveness; not for content creators who need voice cloning or a wide voice library, where ElevenLabs is the stronger choice. Voxtral does not support custom voice cloning, has a narrower stock voice library than competitors, and launched only weeks ago with limited community tooling.
 best_for:
-  - Developers building voice-enabled applications at scale
-  - High-volume content producers (e-learning, accessibility, platforms)
-  - Teams already using Mistral for text generation
-  - Privacy-sensitive deployments requiring on-premise audio processing
-  - Researchers experimenting with voice synthesis
+  - developers building voice agents at scale
+  - teams already using Mistral text models
+  - multilingual voice cloning from 3-second references
+  - non-commercial research and self-hosting
 not_best_for:
-  - Content creators needing voice cloning or emotional expressiveness
-  - Podcast and audiobook producers prioritizing naturalness
-  - Users requiring a consumer-facing UI or no-code interface
-  - Applications demanding the broadest multilingual voice library
+  - commercial deployments relying on open weights (CC BY-NC blocks this)
+  - languages outside the supported nine
+  - creator workflows needing a polished UI
+  - expressive long-form narration where Fish Audio or ElevenLabs rank higher on quality
+quick_answer: >-
+  Voxtral is Mistral AI's first TTS model, released March 26, 2026. It wins 68.4% of head-to-head preference tests against ElevenLabs Flash v2.5 across 9 languages at 70ms latency. Pick it for scale API voice agents and Mistral-stack integration; skip for commercial self-hosting (CC BY-NC blocks that) or any language outside the supported nine.
+price_history:
+  - date: 2026-03-26
+    plan: "API launch"
+    price: "$0.016/1K chars"
+    note: "Voxtral TTS shipped alongside open weights on Hugging Face"
+  - date: 2026-04-15
+    plan: "API"
+    price: "$0.016/1K chars"
+    note: "Verified unchanged"
 ---
 
 # Voxtral
 
-Voxtral is Mistral AI's voice model, launched in March 2026. It is simultaneously an open-weight model (free to self-host) and a commercial API, following Mistral's dual-release strategy used for its text models. The commercial API prices Voxtral at $0.016 per 1,000 characters, undercutting every major competitor: ElevenLabs charges $0.030/1K chars on its API, making Voxtral 47% cheaper at equivalent scale. Voxtral handles both speech-to-text (transcription) and text-to-speech (voice generation) in a unified model, reducing vendor fragmentation for developers.
+Mistral AI's first voice model. Voxtral launched March 26, 2026 as a 4.1-billion-parameter open-weight system covering both text-to-speech and speech-to-text in a unified architecture.
 
+The commercial API prices at $0.016 per 1,000 characters. Open weights ship on Hugging Face under CC BY-NC 4.0, which permits research and non-commercial use only.
 
-## Editor's Take
+## System Verdict
 
-I tested Voxtral's API last week with a 10-minute podcast script in English and French. Generation took 4 seconds on average, output quality solid for neutral narration but flat on emphasis, ElevenLabs edges it out there with better emotional inflection at twice the $0.016/1K chars price.
+> **Pick Voxtral if you are already on the Mistral stack and need cheap, fast multilingual TTS via API.** The 68.4% win rate against ElevenLabs Flash v2.5 in Mistral's own benchmarks puts quality above the "cheap TTS" tier. Voice cloning works from 3-second references, and 70ms latency keeps it viable for voice agents.
+>
+> **Skip it if commercial self-hosting is the goal (CC BY-NC license blocks that), if you need languages outside the supported nine, or if top-tier quality matters more than cost ([Fish Audio](/tools/fish-audio/) S2 Pro ranks higher on blind tests with MIT weights).**
+>
+> **Who pays which tier:** Free tier on La Plateforme for testing. API at $0.016/1K chars for developers at scale. Hugging Face weights for research teams and non-commercial deployments only. Commercial self-hosters should pick [Fish Audio](/tools/fish-audio/) or negotiate a Mistral enterprise license.
 
-The open-weight version runs fine on a single A100 if you have Mistral's La Platform access, which saved me $200 on a batch job versus cloud TTS. It's unbeatable for high-volume devs already in the Mistral ecosystem; self-hosting kills costs entirely. Skip it for podcasts or cloning, ElevenLabs wins on voice variety and naturalness, no contest.
+## Key Facts
 
-Use Voxtral if scale trumps polish. I prefer it over pricier rivals for bulk e-learning audio, but content creators will hate the limited voices. Launched March 2026, version 1.0 feels raw but cheap.
+| | |
+|---|---|
+| **Model** | Voxtral TTS (4.1B parameters, released March 26, 2026) |
+| **Capabilities** | Text-to-speech and speech-to-text in one model |
+| **Languages** | 9: English, French, German, Spanish, Dutch, Portuguese, Italian, Hindi, Arabic |
+| **Latency** | ~70ms multilingual |
+| **Voice cloning** | 3-second reference audio |
+| **Max output** | 2 minutes per generation call |
+| **Output formats** | MP3, WAV, PCM, FLAC, Opus |
+| **Open-weight license** | CC BY-NC 4.0 (non-commercial) on Hugging Face |
+| **API pricing** | $0.016 per 1,000 characters ($16 per 1M) |
+| **Win rate vs ElevenLabs Flash v2.5** | 68.4% in Mistral's human preference tests |
 
-## What It Does
+Every data point above was verified against vendor sources on 2026-04-17. See Sources.
 
-Voxtral performs two core functions within a single model architecture:
+## What it actually is
 
-**Text-to-Speech:** Converts text to natural-sounding audio across multiple speaker voices. Supports multilingual output consistent with Mistral's model family (French, Spanish, German, Italian, Portuguese, Dutch, and others). Output formats include MP3 and WAV. The API accepts straightforward REST calls with configurable voice selection, speaking rate, and pitch parameters. Voice quality is competitive with commercial-tier tools, though independent benchmarks consistently place [ElevenLabs](../tools/elevenlabs.md) above Voxtral on naturalness and emotional range metrics.
+A single voice model from Mistral AI covering both TTS and STT, released as part of the broader La Plateforme stack that already carries Mistral's text models. Developers use one account, one API key, and one invoice.
 
-**Speech-to-Text:** Transcribes audio to text with accuracy competitive with OpenAI's Whisper on standard benchmarks. Supports long-form audio (interviews, meetings, lectures, podcasts) without hard length limits. Returns word-level timestamps and speaker diarization for multi-speaker content. Handles background noise and accented speech reasonably well for a March 2026 release.
+Voice cloning takes a 3-second reference and reproduces voice timbre, accent, and inflection. The 9-language list covers Western European markets plus Hindi and Arabic, which is narrower than ElevenLabs or Fish Audio but deeper than most STT-only competitors.
 
-The open-weight model can be self-hosted on hardware supporting Mistral's model format (GGUF-compatible inference engines). This enables zero-marginal-cost deployments for organizations with existing GPU infrastructure.
+The real differentiator is pricing and Mistral-stack consolidation. At $0.016 per 1K chars, Voxtral is among the cheapest major-provider commercial APIs in 2026. The CC BY-NC license on open weights limits commercial self-hosting, so Voxtral's commercial play runs through the Mistral API.
 
-## Who It's For
+## When to pick Voxtral
 
-- Developers building voice-enabled applications where per-character cost directly impacts unit economics
-- High-volume content producers (e-learning platforms, accessibility services, automated narration systems) operating at scale
-- Teams already using Mistral for text generation who want to consolidate vendor relationships and billing
-- Organizations with privacy requirements where audio must not leave on-premise infrastructure
-- Researchers and hobbyists experimenting with voice synthesis who want a free, open-weight baseline
-- Startups in early-stage voice product development where cost efficiency enables faster iteration
+- **You already use Mistral for text generation.** One vendor, one billing line, one SDK covers text plus voice.
+- **Cost at scale drives unit economics.** $0.016 per 1K chars undercuts most commercial alternatives.
+- **You need multilingual voice cloning from short references.** 3-second samples are enough to clone across all 9 supported languages.
+- **70ms latency supports conversational AI.** Fast enough for voice agents and real-time applications.
+- **Research or non-commercial self-hosting.** CC BY-NC weights on Hugging Face enable local inference for academic or personal projects.
+
+## When to pick something else
+
+- **Commercial self-hosting:** [Fish Audio](/tools/fish-audio/) ships MIT weights with no commercial restriction. Voxtral's CC BY-NC license blocks commercial use of open weights.
+- **Top-tier TTS quality:** [Fish Audio](/tools/fish-audio/) S2 Pro ranks first in 2026 blind preference tests. [ElevenLabs](/tools/elevenlabs/) retains the strongest creator workflow.
+- **Sub-100ms streaming for voice agents:** [Cartesia](/tools/cartesia/) Sonic 3 lands at 40-90ms time-to-first-audio, faster than Voxtral's 70ms.
+- **Enterprise voice cloning with compliance:** [Resemble AI](/tools/resemble-ai/) bundles watermarking, deepfake detection, and on-premise deployment.
+- **Languages outside the supported nine:** Fish Audio covers 80+. [ElevenLabs](/tools/elevenlabs/) covers 30+.
 
 ## Pricing
 
 | Access | Cost | Notes |
 |--------|------|-------|
-| Open-weight model | Free | Self-host; requires GPU with 8GB+ VRAM |
-| Mistral API (TTS) | $0.016/1K chars | Approximately 47% cheaper than ElevenLabs API |
-| Mistral API (STT) | $0.002/minute | Competitive with OpenAI Whisper API pricing |
+| Open-weight (Hugging Face) | Free | CC BY-NC 4.0, non-commercial only |
+| La Plateforme free tier | Free | Testing and evaluation |
+| Mistral API (TTS) | $0.016/1K chars ($16/1M) | Commercial production use |
+| Mistral API (STT) | ~$0.002/minute | Competitive with Whisper API |
 
-Prices verified 2026-04-15. For comparison: [ElevenLabs](../tools/elevenlabs.md) API charges $0.030/1K chars for TTS; OpenAI Whisper API charges $0.006/minute for STT.
+*Prices verified 2026-04-17 via [Mistral Voxtral announcement](https://mistral.ai/news/voxtral-tts) and [VentureBeat coverage](https://venturebeat.com/orchestration/mistral-ai-just-released-a-text-to-speech-model-it-says-beats-elevenlabs-and). ElevenLabs API pricing cited at $0.030/1K chars for comparison.*
 
-## Key Features
+## Against the alternatives
 
-- $0.016/1K chars pricing, lowest commercial TTS API cost among major providers as of April 2026
-- Open-weight model release, full model weights available; self-host for zero marginal cost after infrastructure investment
-- Unified speech-to-text and text-to-speech, transcription and generation in one model, reducing API fragmentation
-- Multilingual support, covers French, Spanish, German, Italian, Portuguese, Dutch, and additional languages within Mistral's language coverage
-- Single API vendor integration, combine with Mistral text models (Mistral Large 2, Mistral Small) under one account and invoice
-- Long-form audio handling, no artificial limits on transcription input length
-- Timestamp and diarization output, word-level timing and speaker identification for multi-speaker content
+| | Voxtral | ElevenLabs v3 | Fish Audio S2 Pro | Cartesia Sonic 3 |
+|---|---|---|---|---|
+| **API price per 1M chars** | $16 | ~$30 | $15 | Credit-based |
+| **Latency** | ~70ms | 200-400ms streaming | Low, not sub-100ms | 40-90ms |
+| **Languages** | 9 | 30+ | 80+ | 25+ |
+| **Voice cloning reference** | 3 sec | Varies, best at 1-5 min | Short samples work | 10+ sec |
+| **Open weights** | CC BY-NC 4.0 | None | MIT | None |
+| **Blind-test quality** | Beats ElevenLabs Flash v2.5 | Strong | #1 in 2026 | Tuned for real-time |
+| **Best viewed as** | Mistral-stack voice default | Creator platform | Quality + open-weight leader | Real-time agent specialist |
 
-## Limitations
+## Failure modes
 
-- Voice quality below ElevenLabs, naturalness and emotional range benchmarks consistently favor ElevenLabs, particularly for expressive narration and character voices
-- No voice cloning, Voxtral does not support custom voice cloning from audio samples; [ElevenLabs](../tools/elevenlabs.md) and [Resemble AI](../tools/resemble-ai.md) remain the category leaders
-- Limited voice library, fewer stock voice options than ElevenLabs or [Murf](../tools/murf.md); approximately 12-15 voices versus ElevenLabs' 30+
-- API-only product, no browser interface, no consumer-facing UI, no no-code studio for non-developers
-- March 2026 launch, newer than competitors; limited community tooling, fewer third-party integrations, and smaller ecosystem of plugins and wrappers
+- **CC BY-NC 4.0 license blocks commercial self-hosting.** The open weights are for research and non-commercial use only. Commercial deployments must use the Mistral API or negotiate a custom license.
+- **9 languages is narrow.** Japanese, Korean, Chinese, and most African and Southeast Asian languages are not supported as of April 2026.
+- **Benchmarks are vendor-published.** The 68.4% win rate against ElevenLabs Flash v2.5 comes from Mistral's own evaluation. Independent third-party blind tests are still limited.
+- **Recent launch, thin ecosystem.** Released March 26, 2026. Community tooling, wrappers, and integrations lag ElevenLabs and Fish Audio.
+- **No consumer UI.** API-only product. Creators needing a polished studio should pick ElevenLabs or Speechify Studio.
+- **2-minute generation cap per call.** Longer outputs require chunking and stitching.
+- **Tested against Flash v2.5, not ElevenLabs v3.** Quality comparison is against ElevenLabs' faster model tier, not the flagship.
 
-## Bottom Line
+## Methodology
 
-Voxtral scores 10/10 on value: it is the cheapest commercial TTS API and free to self-host. Utility is 8/10 for its primary use case (developer API integration), lower for content creators needing voice cloning or broad voice libraries. Longevity is 8/10: Mistral is well-funded with a track record of maintaining open models long-term. The open-weight release mitigates typical API-only product risk. If you are building a voice application and quality is not your primary differentiator, Voxtral should be your default choice.
-
-## Best Alternatives
-
-| Tool | Price | Key Difference |
-|------|-------|----------------|
-| [ElevenLabs](../tools/elevenlabs.md) | $5-330/mo | Best voice quality; voice cloning; consumer product |
-| [Fish Audio S2](../tools/fish-audio.md) | Free / API | Open-source; near-ElevenLabs quality; self-hostable |
-| [Cartesia](../tools/cartesia.md) | Free tier / API | Ultra-low latency; real-time voice applications |
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity). Last verified 2026-04-17 against [Mistral Voxtral announcement](https://mistral.ai/news/voxtral), [Voxtral TTS announcement](https://mistral.ai/news/voxtral-tts), [Mistral docs](https://docs.mistral.ai/models/voxtral-tts-26-03), and [VentureBeat launch coverage](https://venturebeat.com/orchestration/mistral-ai-just-released-a-text-to-speech-model-it-says-beats-elevenlabs-and).
 
 ## FAQ
 
-**Is Voxtral's open-weight model free to use commercially?**
-Yes. Mistral releases Voxtral under an open-weight license permitting commercial use. Check the exact license terms on Mistral's HuggingFace repository for any attribution or distribution requirements specific to your deployment model.
+**Is Voxtral free?**
+Partially. Open weights on Hugging Face are free for non-commercial use under CC BY-NC 4.0. The Mistral API has a free tier for testing, then charges $0.016 per 1,000 characters for production use ([Mistral announcement](https://mistral.ai/news/voxtral-tts)).
 
-**How does Voxtral compare to ElevenLabs for podcast narration?**
-ElevenLabs is the better choice. For narration where listener experience is the primary product (podcasts, audiobooks, YouTube voiceovers), ElevenLabs produces more natural and emotionally varied output. Voxtral is the right choice when cost at scale matters more than top-tier voice quality.
+**Can I use Voxtral commercially by self-hosting the open weights?**
+No. The CC BY-NC 4.0 license blocks commercial use of the open weights. Commercial production must run through the Mistral API at $0.016 per 1,000 characters, or via a negotiated enterprise license.
 
-**Can I use Voxtral with the Mistral API directly?**
-Yes. Voxtral is integrated into the standard Mistral API. Developers already using Mistral for text generation can add voice capabilities without a new vendor relationship, separate API key, or additional billing account.
+**What languages does Voxtral support?**
+Nine: English, French, German, Spanish, Dutch, Portuguese, Italian, Hindi, and Arabic. Coverage is narrower than [Fish Audio](/tools/fish-audio/) (80+) or [ElevenLabs](/tools/elevenlabs/) (30+).
 
+**How does Voxtral compare to ElevenLabs?**
+Mistral's published human preference tests show Voxtral winning 68.4% of head-to-head comparisons against ElevenLabs Flash v2.5. Independent blind tests from Fish Audio and Artificial Analysis rank [Fish Audio](/tools/fish-audio/) S2 Pro higher on aggregate quality. Voxtral wins on price at scale.
 
+**Does Voxtral handle speech-to-text?**
+Yes. Voxtral is a unified TTS + STT model. STT pricing runs around $0.002 per minute via the Mistral API.
 
-
-
-## Review History
-
-- **2026-04-11:** Pricing re-checked against the official pricing page. No change since last verification.
-- **2026-02-16:** Flagship version bumped after the most recent model release.
-- **2025-12-16:** Pricing verified. Minor copy edits.
-- **2026-05-01:** Initial review published after hands-on testing.
-
-## Related Guides
-
-- [Best AI Voice Generator for YouTube (2026)](../use-cases/best-ai-voice-youtube.md)
-
-
-- **Category:** [Voice](../categories/ai-voice.md)
-
-## Related Comparisons
-
-- [Cartesia vs Voxtral](../comparisons/cartesia-vs-voxtral.md)
-- [Descript vs Voxtral](../comparisons/descript-vs-voxtral.md)
-- [ElevenLabs vs Voxtral](../comparisons/elevenlabs-vs-voxtral.md)
-- [Fish Audio / Fish Speech S2 vs Voxtral](../comparisons/fish-audio-vs-voxtral.md)
-- [Resemble AI vs Voxtral](../comparisons/resemble-ai-vs-voxtral.md)
 ## Sources
 
-- [Mistral AI Voxtral announcement](https://mistral.ai/voxtral) - verified 2026-04-15
-- [Mistral API pricing documentation](https://mistral.ai/api) - verified 2026-04-15
+- [Mistral Voxtral announcement](https://mistral.ai/news/voxtral): model overview and capabilities
+- [Voxtral TTS launch post](https://mistral.ai/news/voxtral-tts): March 26, 2026 release and benchmarks
+- [Mistral docs: Voxtral TTS](https://docs.mistral.ai/models/voxtral-tts-26-03): API spec, output formats, pricing
+- [VentureBeat: Mistral released TTS that beats ElevenLabs](https://venturebeat.com/orchestration/mistral-ai-just-released-a-text-to-speech-model-it-says-beats-elevenlabs-and): launch analysis
+- [DataCamp Voxtral TTS guide](https://www.datacamp.com/blog/voxtral-tts): practical implementation examples
+
+## Related
+
+- **Category:** [AI Voice / TTS](/categories/ai-voice/)
+- **Comparisons:** [ElevenLabs vs Voxtral](/comparisons/elevenlabs-vs-voxtral/), [Cartesia vs Voxtral](/comparisons/cartesia-vs-voxtral/), [Fish Audio vs Voxtral](/comparisons/fish-audio-vs-voxtral/), [Resemble AI vs Voxtral](/comparisons/resemble-ai-vs-voxtral/)
