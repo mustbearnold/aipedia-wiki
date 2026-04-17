@@ -38,7 +38,7 @@ not_best_for:
   - text-in-image work where Ideogram still wins
   - users who need a hosted web UI from the vendor
 quick_answer: >-
-  Flux is Black Forest Labs' image model family, available as open weights (Flux.2 Dev, Flux.2 Klein Apache 2.0, Flux.1 Dev, Flux.1 Schnell) and through API (Flux.2 Pro, Flux.2 Flex, Flux.1 Kontext Pro/Max for edits, Flux.1.1 Pro Ultra legacy). Flux.2 launched November 25, 2025; Klein dropped January 15, 2026 as the fastest variant, sub-second on consumer GPUs. Kontext is the standout instruction-based edit model, preserving character identity across edits. Pricing spans $0.003/image (Schnell on Replicate) to ~$0.08/image (Kontext Max on BFL). Best viewed as API-first · there is no consumer app from BFL. Flux wins on photoreal open-weights and edit fidelity; Midjourney still wins default aesthetics; Ideogram still wins text-in-image.
+  Flux is Black Forest Labs' image model family, strongest for open-weight photoreal and instruction-based edits via Kontext. Pick it for API-first production pipelines, on-prem deployment, or LoRA fine-tuning. Skip if you want a consumer web app (Midjourney) or text-in-image accuracy (Ideogram).
 price_history:
   - date: 2026-01-15
     plan: "Flux.2 Klein"
@@ -52,11 +52,13 @@ price_history:
 
 # Flux
 
-Black Forest Labs' image model family. Flux.2 Pro and Flex are the current API flagships for photoreal generation; Flux.2 Dev and Klein are open-weight. Flux.1 Kontext handles instruction-based image editing with character consistency. Flux.1.1 Pro Ultra remains available as a legacy high-resolution option. The entire line is API-first · BFL does not ship a consumer web app. Access runs through bfl.ai, Replicate, fal.ai, Together, and Cloudflare Workers AI.
+Black Forest Labs' image model family. Flux.2 Pro and Flex are the current API flagships for photoreal generation; Flux.2 Dev and Klein are open-weight. Flux.1 Kontext handles instruction-based image editing with character consistency. Flux.1.1 Pro Ultra remains available as a legacy high-resolution option.
+
+The entire line is API-first. BFL does not ship a consumer web app. Access runs through bfl.ai, Replicate, fal.ai, Together, and Cloudflare Workers AI.
 
 ## System Verdict
 
-> **Pick Flux if you are building image generation into a product, need open weights for on-prem deployment, or want instruction-based edits that preserve subject identity.** Flux.2 Pro delivers the strongest open-ecosystem photoreal quality available. Flux.1 Kontext is the best widely-available instruction editor · ask for "put sunglasses on the same person" and the person stays the same. Open-weight Flux.2 Dev and Klein ship under developer-friendly licenses, and the LoRA ecosystem on Civitai and Hugging Face is the largest outside legacy Stable Diffusion.
+> **Pick Flux if you are building image generation into a product, need open weights for on-prem deployment, or want instruction-based edits that preserve subject identity.** Flux.2 Pro delivers the strongest open-ecosystem photoreal quality available. Flux.1 Kontext is the best widely-available instruction editor: ask for "put sunglasses on the same person" and the person stays the same. Open-weight Flux.2 Dev and Klein ship under developer-friendly licenses, and the LoRA ecosystem on Civitai and Hugging Face is the largest outside legacy Stable Diffusion.
 >
 > **Skip it if you want to type prompts into a nice web app.** BFL ships no consumer UI. You need API skills, ComfyUI, or a third-party front-end. [Midjourney](/tools/midjourney/) still wins on default aesthetic polish with zero setup; [Ideogram](/tools/ideogram/) still wins decisively on text-in-image; [ChatGPT](/tools/chatgpt/)'s GPT Image 1.5 wins for users who already pay for a chat subscription and don't want a separate image bill.
 >
@@ -108,7 +110,7 @@ The moats:
 
 ## Pricing
 
-Flux is priced per-image, per provider. The same model often has different rates on different infrastructure · best viewed as API-first, pick the host that matches your workload.
+Flux is priced per-image, per provider. The same model often has different rates on different infrastructure. Best viewed as API-first: pick the host that matches your workload.
 
 **Black Forest Labs direct API** (credits-based, 1 credit = $0.01):
 
@@ -162,24 +164,24 @@ Prices verified 2026-04-15 via [BFL pricing](https://bfl.ai/pricing), [Replicate
 - **Kontext edits sometimes miss.** Character consistency holds most of the time but breaks on extreme poses, occlusion, or subjects with distinctive features the model wants to "improve." Budget for retries.
 - **Prompt syntax differs per provider.** BFL, Replicate, fal, and Cloudflare each have slightly different parameter names and default settings. Prompts that work identically across all hosts are rare; expect provider-specific tuning.
 - **Text-in-image is mid.** Flux.2 Pro handles short phrases credibly but fails on longer strings and complex typography. [Ideogram](/tools/ideogram/) wins this category.
-- **Licensing tree is a thicket.** Schnell and Klein are Apache 2.0 (commercial OK). Flux.1 Dev and Flux.2 Dev ship under BFL's community / non-commercial licenses · commercial use needs an agreement. Pro/Flex/Max/Ultra are API-only. Read the license before shipping.
+- **Licensing tree is a thicket.** Schnell and Klein are Apache 2.0 (commercial OK). Flux.1 Dev and Flux.2 Dev ship under BFL's community / non-commercial licenses, so commercial use needs an agreement. Pro/Flex/Max/Ultra are API-only. Read the license before shipping.
 - **Base model cadence depends on BFL.** Unlike SD's large independent trainer community, Flux base-model updates come from Black Forest Labs only. No community 2.x lineage forking.
 - **Provider pricing moves.** Replicate, fal, Together, and BFL have all adjusted rates multiple times since Flux.2 launched. Quoted figures here are current-to-verification-date.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline · an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-15 against [Black Forest Labs](https://bfl.ai), the [Flux.2 model page](https://bfl.ai/models/flux-2), [Flux.2 Dev on Hugging Face](https://huggingface.co/black-forest-labs/FLUX.2-dev), [Replicate's Black Forest Labs collection](https://replicate.com/black-forest-labs), [fal.ai pricing](https://fal.ai/docs/platform-apis/v1/models/pricing), and the [VentureBeat Flux.2 launch coverage](https://venturebeat.com/ai/black-forest-labs-launches-flux-2-ai-image-models-to-challenge-nano-banana).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-15 against [Black Forest Labs](https://bfl.ai), the [Flux.2 model page](https://bfl.ai/models/flux-2), [Flux.2 Dev on Hugging Face](https://huggingface.co/black-forest-labs/FLUX.2-dev), [Replicate's Black Forest Labs collection](https://replicate.com/black-forest-labs), [fal.ai pricing](https://fal.ai/docs/platform-apis/v1/models/pricing), and the [VentureBeat Flux.2 launch coverage](https://venturebeat.com/ai/black-forest-labs-launches-flux-2-ai-image-models-to-challenge-nano-banana).
 
 ## FAQ
 
 **Is Flux free?**
-Flux.1 Schnell and Flux.2 Klein are Apache 2.0 and free for commercial self-hosting. Flux.1 Dev and Flux.2 Dev are open-weight under BFL's community license · free for research, requires a license for commercial use. Flux.2 Pro, Flex, and the Kontext Pro/Max tiers are API-only and paid. BFL does not operate a hosted free tier.
+Flux.1 Schnell and Flux.2 Klein are Apache 2.0 and free for commercial self-hosting. Flux.1 Dev and Flux.2 Dev are open-weight under BFL's community license: free for research, requires a license for commercial use. Flux.2 Pro, Flex, and the Kontext Pro/Max tiers are API-only and paid. BFL does not operate a hosted free tier.
 
 **What is Flux Kontext?**
 Flux.1 Kontext is BFL's instruction-based image editor. Give it an input image and a text instruction ("put the man in a red jacket," "change the background to a beach") and it edits while preserving subject identity across successive edits. Three tiers: Dev (open-weight, ~$0.023/image via API), Pro (~$0.04/image on fal and BFL), Max (~$0.08/image, highest fidelity). Edits typically complete in 6-12 seconds.
 
 **What is the difference between Flux.2 variants?**
-Pro is the closed API flagship for photoreal production. Flex is the versatile middle tier. Dev is the 32B open-weight research model · same architecture, downloadable. Klein is the Apache 2.0 speed variant released January 15, 2026 · sub-second on consumer GPUs, lower quality ceiling than Pro but permissively licensed.
+Pro is the closed API flagship for photoreal production. Flex is the versatile middle tier. Dev is the 32B open-weight research model, same architecture, downloadable. Klein is the Apache 2.0 speed variant released January 15, 2026: sub-second on consumer GPUs, lower quality ceiling than Pro but permissively licensed.
 
 **Where should I run Flux?**
 BFL direct for Kontext and production pipelines that want first-party support. Replicate for simple per-image pay-as-you-go and mixed-model workflows. fal.ai for the cheapest sustained hosted inference. Self-hosted for open weights on your own hardware (RTX 4090 recommended for Flux.2 Dev at full quality). Cloudflare Workers AI is a new option for edge deployment of Flux.2 Dev.
@@ -188,7 +190,7 @@ BFL direct for Kontext and production pipelines that want first-party support. R
 Adequately, not best-in-class. Short phrases work; longer text and complex typography still fail. [Ideogram](/tools/ideogram/) v3 renders text at ~90-95% accuracy and is the clear pick if text is the point of the image.
 
 **How does Flux compare to Midjourney?**
-Midjourney wins default aesthetic polish and ease of use (paid web app, no API integration). Flux wins photoreal fidelity, open weights, instruction-based editing (Kontext), and cost at scale. Most teams end up using both · Midjourney for exploration, Flux for production.
+Midjourney wins default aesthetic polish and ease of use (paid web app, no API integration). Flux wins photoreal fidelity, open weights, instruction-based editing (Kontext), and cost at scale. Most teams end up using both: Midjourney for exploration, Flux for production.
 
 ## Related
 
