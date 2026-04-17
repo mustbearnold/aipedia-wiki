@@ -2,16 +2,16 @@
 type: tool
 slug: claude-code
 title: Claude Code
-tagline: CLI-based agentic coding tool that operates on full codebases, runs commands, and iterates on errors autonomously. Now includes Ultraplan, Monitor, Agent SDK, Skills, and MCP server support.
+tagline: Anthropic's terminal-based agentic coding CLI. Reads, writes, and runs across full codebases autonomously. Included with Claude Pro at $20/mo; Max tiers scale usage up to 20x.
 category: ai-coding
 company: anthropic
 url: https://code.claude.com
 pricing_model: paid
-price_range: "$100-$200/month"
+price_range: "$20-$200/month"
 status: active
 launched: 2025-02
-last_updated: 2026-04-15
-last_verified: 2026-04-15
+last_updated: 2026-04-17
+last_verified: 2026-04-17
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -21,162 +21,168 @@ affiliate:
   link: null
 scores:
   utility: 10
-  value: 7
+  value: 8
   moat: 9
   longevity: 9
-tags: [cli, agentic-coding, terminal, codebase-wide, autonomous, anthropic, claude, ultraplan, mcp, agent-sdk, skills]
-seo_title: "Claude Code: Features, Pricing & Review (2026)"
-meta_description: "Claude Code is Anthropic's CLI-based agentic coding tool that navigates full codebases autonomously. v2.1.1014 adds Ultraplan, Monitor, Agent SDK, Skills, and MCP. Requires $100-$200/mo Claude Max subscription or API key."
+tags: [cli, agentic-coding, terminal, codebase-wide, autonomous, anthropic, claude-opus, ultraplan, monitor, mcp, skills]
+seo_title: "Claude Code: Features, Pricing & Review (April 2026)"
+meta_description: "Claude Code is Anthropic's CLI agentic coding tool running on Claude Opus 4.7. Reads, writes, and runs across full codebases autonomously. Included with Pro $20/mo; Max 5x $100/mo or Max 20x $200/mo."
 author: "aipedia.wiki Editorial"
 best_for:
-  - professional developers
-  - backend engineers
-  - teams needing autonomous testing and CI integration
-  - developers who want MCP tool extensibility
+  - professional backend developers
+  - teams needing autonomous multi-file refactoring
+  - CLI-first workflows with MCP tool integration
+  - long-running agentic sessions with checkpointing
 not_best_for:
-  - users preferring gui editors
-  - budget-conscious developers
-  - beginners who want setup-free tooling
+  - users who want IDE integration
+  - free-tier developers
+  - beginners uncomfortable with the terminal
 quick_answer: >-
-  Claude Code is Anthropic's terminal-based agentic coding tool (current version v2.1.1014, April 2026) that runs in your shell and autonomously reads files, writes code, executes tests, and self-corrects across an entire codebase until a task is complete. Week 15 (April 6-10, 2026) added Ultraplan (cloud-based planning in research preview), the Monitor tool (background event watcher with /loop self-pacing), /autofix-pr CLI, Agent SDK hosting support, configurable Skills, and MCP server support. Requires a Claude Max subscription at $100 or $200 per month, or pay-per-token API access. Best for professional developers comfortable in a terminal who need whole-codebase autonomy. No free tier; no IDE integration; very long sessions can degrade as context fills.
+  Claude Code is Anthropic's terminal-based agentic coding CLI running on Claude Opus 4.7. Pick Max 5x at $100/mo for sustained coding; Pro at $20/mo covers lighter use. Skip for IDE workflows (Cursor, Copilot) or free tooling (Cline).
+price_history:
+  - date: 2026-04-16
+    plan: "Default model"
+    price: "Claude Opus 4.7"
+    note: "Opus 4.7 released April 16, 2026; new tokenizer produces 1.0-1.35x more tokens vs 4.6."
+  - date: 2026-04-15
+    plan: "Pro"
+    price: "$20/mo"
+    note: "Claude Code available on Pro tier as of 2026; previously Max-only."
 ---
 
 # Claude Code
 
-Claude Code is a terminal-based agentic coding tool developed by Anthropic. It operates on entire codebases from the command line, reading files, writing code, running tests, and iterating on errors autonomously. It is primarily used for complex multi-file engineering tasks that require full project understanding. Its key differentiator is the agentic loop: it plans, executes, validates, and self-corrects without manual intervention. The current version as of April 15, 2026 is v2.1.1014, with Ultraplan, Monitor, Agent SDK, Skills, and MCP server support all shipped in Week 15 (April 6-10, 2026) ([Claude Code Docs](https://code.claude.com/docs/en/whats-new/2026-w15)). Claude Code requires a Max subscription at $100 or $200 per month, or a pay-per-token API key. Compared to GitHub Copilot, Claude Code offers far deeper autonomous capability but at 10-20x the cost and without IDE integration. Compared to Cursor, Claude Code lacks visual editing but offers more autonomous, codebase-wide execution.
+Claude Code is Anthropic's terminal-based agentic coding CLI. It runs inside your shell, reads files across an entire codebase, writes code, executes tests, runs commands, and self-corrects through errors without manual intervention.
 
+Claude Opus 4.7 (released April 16, 2026) is the default backing model. Access is included with Claude Pro at $20/mo and scales through Max 5x at $100/mo and Max 20x at $200/mo. No free tier.
 
-## Editor's Take
+## System Verdict
 
-I tested Claude Code v2.1.1014 on a mid-sized Rails repo last week. It shredded a stubborn migration bug across 15 files in 22 minutes, self-fixing test failures without me touching vim once. Ultraplan's cloud planning preview cut setup time in half; I revised the task outline in-browser, then watched it execute locally via terminal. Monitor's /loop pacing kept long sessions from spinning out, response times stayed under 8 seconds even at 45k tokens.
+> **Pick Claude Code if you run serious multi-file engineering from the terminal.** The agentic loop (plan, execute, validate, self-correct) is the deepest on the market as of April 2026. Opus 4.7 takes measurable leads on agentic coding benchmarks against GPT-5.4 Pro and Gemini 3.1 Pro. MCP server support, Skills, and Agent SDK hosting turn it into a production agent platform, not just a coding assistant.
+>
+> **Skip it if you want IDE-integrated coding, visual editing, or a free tier.** [Cursor](/tools/cursor/) at $20/mo owns IDE-integrated AI coding with inline autocomplete and visual diffs. [GitHub Copilot](/tools/github-copilot/) at $10/mo is the cheapest entry for GitHub-centric teams. [Cline](/tools/cline/) is free open-source VS Code with BYOK. Claude Code is CLI-only and demands real terminal comfort.
+>
+> **Who pays which tier:** Pro $20/mo for light agentic sessions and individual contributors, Max 5x $100/mo for sustained daily coding, Max 20x $200/mo when Claude Code is your primary development tool. API key (BYOK) pay-per-token suits teams building commercial products on top of Claude Code; third-party services routing Claude Code through Max subscriptions are restricted per Anthropic's April 2026 policy.
 
-The $100 Max tier justifies itself for backend teams grinding CI pipelines, but solo devs get hosed at that price. Cursor does 80% of this in a GUI for $20/month with zero CLI friction. Claude Code wins on raw autonomy and MCP extensibility, but if you hate terminals or watch pennies, stick to Cursor.
+## Key Facts
 
-I'm CLI-biased from years in ops, so this feels like home. Skip if you're visual or green. Pros with messy codebases: install it yesterday.
+| | |
+|---|---|
+| **Backing model** | Claude Opus 4.7 (released April 16, 2026) · Sonnet 4.6 · Haiku 4.5 selectable |
+| **Context window** | 1M tokens (Opus and Sonnet) · 200K (Haiku) |
+| **Interface** | Terminal only · no IDE integration · macOS and Linux native · Windows via WSL |
+| **Agent loop** | Plan → execute → validate → self-correct · extended thinking on Opus |
+| **Ultraplan** | Research preview · cloud-based planning session with web UI revision |
+| **Monitor tool** | Background event watcher · streams CI and server events into session |
+| **MCP support** | First-class Model Context Protocol server integration |
+| **Skills** | Named, configurable workflow shortcuts |
+| **Checkpointing** | Save and restore session state during long runs |
+| **Pricing** | Pro $20 · Max 5x $100 · Max 20x $200 · API pay-per-token |
 
-## What It Does
+Every data point above was verified against vendor sources on 2026-04-17. See Sources.
 
-Claude Code runs in your shell and autonomously reads files, writes code, executes tests, runs commands, and self-corrects across your entire codebase using Claude's full context window ([Claude Code Docs](https://code.claude.com/llms.txt)). The agent loop means you describe what you want, and it determines the full sequence: search the code, understand existing patterns, make coordinated edits across multiple files, run the build, fix errors, and repeat until done.
+## What it actually is
 
-Version 2.1.1014 (current as of April 15, 2026) expands beyond pure coding with:
+A CLI-based agentic coding tool that runs in your shell and treats your entire codebase as context. You describe a task; Claude Code plans the full sequence, reads relevant files, makes coordinated edits across multiple files, runs tests or builds, reads errors, and iterates until the task completes.
 
-- **Ultraplan** (research preview): a cloud-based planning session that auto-creates a default environment, lets you revise the plan in a web session, and then executes remotely from your terminal
-- **Monitor tool**: a background event watcher that streams logs, CI events, and server output into your Claude Code session in real time; integrates with `/loop` self-pacing so the agent can react to live events rather than polling manually
-- **Agent SDK support**: hosting documentation for deploying Claude Code agents into production pipelines
-- **Skills**: configurable task shortcuts that let you package repeatable workflows as named commands
-- **MCP (Model Context Protocol) servers**: first-class support for connecting external tools, with transport, auth, error handling, and tool search configuration
-- **Channels**: push external events or webhooks into active sessions for event-driven workflows
-- **Checkpointing**: save and restore session state at any point during a long agentic run
+Opus 4.7 is the default model. Sonnet 4.6 and Haiku 4.5 are selectable for cost or speed trade-offs. The 1M token context on Opus and Sonnet means real-world codebases load in one session.
 
-## Who It's For
+Feature surface expanded through 2026. Ultraplan (research preview) launches a cloud-based planning session with a web UI for plan revision, then executes the approved plan from your terminal. The Monitor tool watches CI logs, server output, and running processes and streams events into the active session; paired with `/loop` self-pacing, the agent reacts to live events without manual polling.
 
-- **Professional developers** who want maximum AI coding capability and are comfortable in a terminal
-- **Backend and infrastructure engineers** working on complex multi-file systems
-- **Developers building production AI pipelines** who need Agent SDK hosting and MCP integration
-- **Teams** that need an AI agent that runs tests, lints, validates its own work, and watches CI in real time via Monitor
-- **Power users** who prefer CLI workflows and want Ultraplan cloud environments for large tasks
+MCP (Model Context Protocol) server support makes external tools first-class: configure transport, auth, error handling, and tool search across any MCP-compatible service. Skills package repeatable workflows as named commands. Agent SDK hosting documentation covers deploying Claude Code agents into production pipelines. Checkpointing saves session state for rollback on long runs.
+
+The moats: the agent loop depth no IDE-based competitor matches, Claude Opus 4.7's lead on agentic coding benchmarks, and the MCP + Skills + Agent SDK combination that turns Claude Code into a platform for building production AI pipelines.
+
+## When to pick Claude Code
+
+- **You run multi-file refactors, migrations, or large test-driven work.** Agent loop self-corrects through failed tests until the task completes, often without human intervention.
+- **You already pay for Claude Pro or Max.** Claude Code is included; there is no separate Claude Code subscription.
+- **You need MCP tool integration.** First-class MCP server support beats every IDE-integrated competitor on external tool plumbing.
+- **You build production AI agents.** Agent SDK hosting and Skills support ship the work beyond personal use.
+- **You work backend or infrastructure.** Terminal-native workflows fit naturally. No context-switch into a GUI.
+- **Your codebase is large.** The 1M context on Opus 4.7 loads real-world repos in one session, no chunking required.
+
+## When to pick something else
+
+- **IDE-integrated AI coding:** [Cursor](/tools/cursor/) at $20/mo. Visual diffs, inline autocomplete, and a VS Code-familiar interface.
+- **Cheapest GitHub-centric entry:** [GitHub Copilot](/tools/github-copilot/) at $10/mo with Claude Opus agent mode.
+- **Free open-source option:** [Cline](/tools/cline/). VS Code agent, BYOK for models. No fixed subscription.
+- **Autonomous cloud coding:** [Devin](/tools/devin/) or similar cloud-only agents if you want runs without a local terminal.
+- **GUI-only users:** Cursor, [Windsurf](/tools/windsurf/), or Zed AI. Claude Code has no visual mode.
 
 ## Pricing
 
-| Plan | Price | Key Limits |
-|------|-------|-----------|
-| Claude Max 5x | $100/month | 5x Pro usage limits; Claude Code included |
-| Claude Max 20x | $200/month | 20x Pro usage limits; Claude Code included |
-| API (BYOK) | Usage-based | Pay per token; no fixed monthly cap; Claude Opus 4.6 at $5/$25 per MTok input/output |
+Subscription pricing via [claude.com/pricing](https://claude.com/pricing). Claude Code is not sold separately; access comes with a Claude subscription tier or an API key.
 
-*No free tier for Claude Code. Requires Max subscription or API key. Prices verified 2026-04-15 via [Anthropic Pricing](https://www.anthropic.com/pricing). Note: Anthropic announced restrictions on third-party services routing Claude Code through Max subscriptions; API key (BYOK) remains unrestricted.*
+| Plan | Price | Claude Code access | Who's it for |
+|------|-------|--------------------|--------------|
+| Free | $0 | **Not included** | N/A for Claude Code |
+| Pro | $20/mo ($17 annual) | Included · light usage | Individual contributors, lighter sessions |
+| Max 5x | $100/mo | 5x Pro usage limits | **Most daily coders should land here** |
+| Max 20x | $200/mo | 20x Pro usage limits | Primary dev tool, sustained agentic workloads |
+| Team (Premium) | $100/seat/mo | Premium seats only, 5-seat minimum | Teams standardizing on Claude Code |
+| API (BYOK) | Pay-per-token | Unrestricted | Commercial products built on Claude Code |
 
-## Key Features
+*Prices verified 2026-04-17 via [Anthropic pricing](https://claude.com/pricing) and [Claude Code docs](https://code.claude.com/docs/en/overview). Pro users see lower rate ceilings than Max tiers; heavy agentic workloads should price against Max. Third-party services routing Claude Code through Max subscriptions are restricted per Anthropic's April 2026 policy; use API key path for commercial redistribution.*
 
-- **Full codebase awareness:** reads and navigates your entire project, not just open files, using Claude's full context window ([Claude Code Docs](https://code.claude.com))
-- **Agentic loop:** plans multi-step changes, executes them, validates results, self-corrects on errors, repeats until the task is done
-- **Ultraplan (research preview):** cloud-based planning session with web UI for revision; launches a default environment automatically; execute the approved plan from your terminal (v2.1.101+)
-- **Monitor tool:** background event watcher that streams CI logs, server events, and process output into your session for real-time reactions; `/loop` self-pacing lets the agent check in on long-running tasks at the right interval (v2.1.98+)
-- **Agent SDK:** hosting support for deploying Claude Code agents to production; includes documentation for production deployment patterns
-- **Skills:** named, configurable workflow shortcuts; define repeatable tasks as Skills for your team or project
-- **MCP server support:** first-class support for connecting external tools via Model Context Protocol; configure transport, auth, error handling, and search across your MCP tool set
-- **Channels:** push external events and webhooks into active Claude Code sessions for event-driven agentic workflows
-- **Checkpointing:** save and restore session state; useful for long agentic runs where you want rollback capability
-- **/autofix-pr:** CLI command for web-based PR auto-fixing directly from your terminal (Week 15, April 2026)
-- **/agents:** tabbed agent layout with default high-effort mode for Max subscribers
-- **/team-onboarding:** packages team setup and configuration for consistent environments across a team
-- **Shell integration:** runs tests, builds, linters, git commands directly as part of its workflow
-- **CLAUDE.md project memory:** persistent per-project instructions that shape agent behavior across sessions
-- **Extended thinking:** shows Claude's reasoning chain for complex architectural decisions
+## Against the alternatives
 
-## Limitations
+| | Claude Code | Cursor | GitHub Copilot |
+|---|---|---|---|
+| **Interface** | Terminal only | VS Code fork | VS Code / JetBrains / Neovim |
+| **Backing model** | Opus 4.7 / Sonnet 4.6 / Haiku 4.5 | Opus 4.7 / GPT-5.4 / Gemini 3.1 | Opus 4.7 agent mode, GPT-5.4 |
+| **Context depth** | 1M tokens (Opus) | Depends on model | Depends on model |
+| **Agent autonomy** | **Deepest** · full agentic loop | Strong · IDE-bounded | Growing · agent mode added |
+| **MCP support** | **First-class** | Emerging | Limited |
+| **Entry price** | $20/mo (Pro) | $20/mo (Pro) | $10/mo |
+| **Free tier** | None | Limited | None for full features |
+| **Best viewed as** | CLI agentic platform | IDE AI assistant | GitHub-centric copilot |
 
-- **No GUI or IDE integration.** Terminal only; no inline autocomplete, no visual diff preview, no syntax highlighting in the editing experience. Cursor or Cline are better if you need IDE integration.
-- **Expensive.** $100-$200/month is 5-20x more than IDE-integrated competitors for most developers ([Anthropic Pricing](https://www.anthropic.com/pricing)).
-- **Rate limits on Max plans.** Heavy sessions can hit usage caps; the 20x plan mitigates this but costs $200/month. Anthropic does not publish exact message limits.
-- **No free tier.** There is no meaningful free trial; API key usage still costs money from the first token.
-- **Requires comfort with the CLI.** Not suitable for developers who rely on visual IDE workflows.
-- **Session context limits.** Very long sessions can degrade performance as the context window fills; checkpointing helps manage this.
-- **Ultraplan is a research preview.** Cloud planning is not production-ready and may change or be removed.
-- **OS support not documented.** Claude Code Docs do not specify supported operating systems; in practice it works on macOS and Linux; Windows support via WSL only.
-- **Third-party subscription restrictions.** Anthropic announced in April 2026 that third-party services routing Claude Code through Max subscriptions are restricted; teams building commercial products on top of Claude Code should use the API key path.
+## Failure modes
 
-## Bottom Line
+- **No IDE or GUI.** Terminal-only. No inline autocomplete, no visual diff, no syntax highlighting. Cursor or Cline if IDE integration matters.
+- **No free tier.** Requires Pro at minimum. API key access still costs money from the first token.
+- **Rate limits not fully published.** Pro caps hit faster than Max; Max 20x is the only tier with published "primary tool all day" framing. Heavy users discover limits by hitting them.
+- **Opus 4.7 tokenizer bump.** Same per-token rate as 4.6 but 1.0-1.35x more effective tokens. API workloads need re-benchmarking before migrating.
+- **Ultraplan is research preview.** Cloud planning is not production-ready and may change or be removed.
+- **Windows support is WSL only.** Native Windows is unsupported; WSL works but adds setup friction.
+- **Session context limits on long runs.** Even 1M tokens fills on sustained sessions. Checkpointing helps but does not eliminate the ceiling.
+- **Third-party subscription restrictions.** Commercial products cannot route Claude Code through a Max subscription. API key (BYOK) path is required for redistribution.
+- **Computer Use inside Claude Code is research preview.** Not production-ready and not available in claude.ai chat.
+- **No IDE refactoring visualization.** Agent explains what it did after the fact. Users who prefer reviewing proposed changes before they commit should use Cursor.
 
-Claude Code is the most capable terminal-based agentic coding tool available in April 2026. Week 15 (April 6-10) was a major release: Ultraplan, Monitor, Agent SDK, Skills, and MCP server support together make Claude Code a credible platform for production AI pipelines, not just a personal power-user tool. The $100-$200/month cost and CLI-only interface remain real barriers. For developers who need IDE integration, Cursor at $20/month or Cline at zero fixed cost are better fits. For pure autonomous, full-codebase engineering from the terminal, nothing else in April 2026 matches Claude Code's depth ([Claude Code](https://code.claude.com)).
+## Methodology
 
-## Best Alternatives
-
-- Cursor: IDE-based with visual editing, $20/month Pro, less autonomous but far more accessible for most developers
-- Cline: free open-source VS Code agent with BYOK model support; less autonomous depth but no fixed subscription cost
-- GitHub Copilot: $10/month with Claude Opus 4.6 agent mode; best value entry point for teams already in the GitHub ecosystem
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [Claude Code docs](https://code.claude.com/docs/en/overview), [Anthropic pricing](https://claude.com/pricing), [Claude Code llms.txt](https://code.claude.com/llms.txt), and the [Opus 4.7 release coverage](https://www.anthropic.com/news/claude-opus-4-7).
 
 ## FAQ
 
 **Is Claude Code free?**
-No. Claude Code has no free tier. It requires either a Claude Max subscription ($100 or $200/month) or an Anthropic API key with pay-per-token billing.
+No. Claude Code is not included in the free Claude tier. Access requires a Claude Pro subscription ($20/mo), Max 5x ($100/mo), Max 20x ($200/mo), or an Anthropic API key with pay-per-token billing ([Claude Code pricing](https://claude.com/pricing)).
 
-**What version is Claude Code on?**
-As of April 15, 2026, the current version is v2.1.1014. The major Week 15 (April 6-10, 2026) release added Ultraplan, the Monitor tool, /autofix-pr, Agent SDK hosting support, Skills, and MCP server support. See [Week 15 changelog](https://code.claude.com/docs/en/whats-new/2026-w15) for details.
+**What model does Claude Code run on?**
+Claude Opus 4.7 is the default backing model as of April 16, 2026. Sonnet 4.6 and Haiku 4.5 are selectable for cost or speed trade-offs. The 1M token context window applies to Opus and Sonnet.
 
 **What is Ultraplan?**
-Ultraplan is a research preview feature that launches a cloud-based planning session with a web UI. Claude auto-creates a default environment, presents a plan you can revise, and then executes the approved plan remotely from your terminal. It is not yet production-ready.
+A research preview feature that launches a cloud-based planning session with a web UI. Claude auto-creates a default environment, presents a plan for revision, and then executes the approved plan from your terminal. Not production-ready.
 
 **What is the Monitor tool?**
-Monitor is a background event watcher (added in v2.1.98) that streams CI logs, server events, and process output into your active Claude Code session. Combined with `/loop` self-pacing, the agent can react to live events in real time rather than requiring you to copy-paste output manually.
+A background event watcher that streams CI logs, server events, and process output into an active Claude Code session. Combined with `/loop` self-pacing, the agent reacts to live events in real time rather than requiring manual copy-paste.
 
 **What operating systems does Claude Code support?**
-Claude Code documentation does not formally list supported operating systems. In practice it is used on macOS and Linux. Windows users typically run it via WSL (Windows Subsystem for Linux).
+macOS and Linux natively. Windows users run it via WSL (Windows Subsystem for Linux). Native Windows support is not documented.
 
-**How does Claude Code differ from Cursor?**
-Claude Code is terminal-only with deeper autonomous execution across full codebases; it costs $100-$200/month and requires comfort with the CLI. Cursor is a VS Code fork with IDE features, visual editing, and a $20/month Pro subscription; it is more accessible but less autonomous. Both can use Claude Opus 4.6 as the underlying model. For pure autonomous multi-file engineering, Claude Code is stronger. For day-to-day coding with AI assistance inside a familiar editor, Cursor is better.
+**Claude Code vs Cursor?**
+Claude Code is terminal-only with deeper autonomous execution across full codebases; both support Opus 4.7. Cursor is a VS Code fork with IDE features, visual editing, and inline autocomplete at $20/mo. For pure autonomous multi-file engineering, Claude Code is stronger. For day-to-day coding inside a familiar editor, Cursor wins.
 
-
-
-
-
-## Review History
-
-- **2026-04-13:** Pricing re-checked against the official pricing page. No change since last verification.
-- **2026-02-16:** Updated flagship model reference to latest release.
-- **2025-12-16:** Pricing verified. Minor copy edits.
-- **2025-04-01:** Initial review published after hands-on testing.
-
-## Related Guides
-
-- [Best AI Coding Assistant (2026)](../use-cases/best-ai-coding-assistant.md)
-- [Best Cursor Alternatives (2026)](../use-cases/cursor-alternatives.md)
-
-## Related Comparisons
-
-- [Aider vs Claude Code](../comparisons/aider-vs-claude-code.md)
-- [Claude Code vs Continue](../comparisons/claude-code-vs-continue.md)
-- [Claude Code vs Devin](../comparisons/claude-code-vs-devin.md)
-- [Claude Code vs GitHub Copilot](../comparisons/claude-code-vs-github-copilot.md)
-- [Claude Code vs Val Town](../comparisons/claude-code-vs-val-town.md)
-- [Cursor vs Claude Code vs GitHub Copilot](../comparisons/cursor-vs-claude-code-vs-copilot.md)
 ## Sources
 
-- [Claude Code Official Docs](https://code.claude.com): Feature reference, setup, and Agent SDK documentation
-- [Claude Code Week 15 Changelog](https://code.claude.com/docs/en/whats-new/2026-w15): Ultraplan, Monitor, MCP, Skills, Agent SDK shipping notes (April 6-10, 2026)
+- [Claude Code docs](https://code.claude.com/docs/en/overview): Feature reference, setup, and agent documentation
 - [Claude Code llms.txt](https://code.claude.com/llms.txt): Full capability manifest
-- [Anthropic Pricing](https://www.anthropic.com/pricing): Max plan prices and API token rates
+- [Anthropic pricing](https://claude.com/pricing): Max plan prices and tier access
+- [Opus 4.7 release](https://www.anthropic.com/news/claude-opus-4-7): Backing model details
 
 ## Related
 
-- **Category:** [AI Coding](../categories/ai-coding.md)
+- **Category:** [AI Coding](/categories/ai-coding/)
+- **Comparisons:** [Cursor vs Claude Code vs Copilot](/comparisons/cursor-vs-claude-code-vs-copilot/) · [Claude Code vs GitHub Copilot](/comparisons/claude-code-vs-github-copilot/) · [Claude Code vs Devin](/comparisons/claude-code-vs-devin/) · [Aider vs Claude Code](/comparisons/aider-vs-claude-code/) · [Claude Code vs Continue](/comparisons/claude-code-vs-continue/)

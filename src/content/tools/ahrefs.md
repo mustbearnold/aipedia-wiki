@@ -2,18 +2,16 @@
 type: tool
 slug: ahrefs
 title: Ahrefs
-tagline: >-
-  The strongest backlink analysis tool in SEO, with comprehensive keyword
-  research, site audit, and content explorer built on top.
+tagline: The deepest backlink index in SEO with Site Explorer, Keywords Explorer, Site Audit, Rank Tracker, and Content Explorer on top. Brand Radar and AI Content Helper cover AI visibility and content grading as paid add-ons.
 category: ai-seo
 company: ahrefs
-url: 'https://ahrefs.com'
+url: https://ahrefs.com
 pricing_model: paid
-price_range: '$29-$999/month'
+price_range: "$29-$1,499/month"
 status: active
 launched: 2011-01
-last_updated: 2026-04-15T12:05:24.000Z
-last_verified: '2026-04-15'
+last_updated: 2026-04-17
+last_verified: 2026-04-17
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -26,135 +24,164 @@ scores:
   value: 8
   moat: 9
   longevity: 10
-tags: [seo, backlinks, keyword-research, site-audit, content-explorer, link-building, serp-analysis, rank-tracking]
-seo_title: 'Ahrefs: Features, Pricing & Review (2026)'
-meta_description: >-
-  Ahrefs has the largest backlink index in SEO with 40T+ links. Plans start at
-  $29/mo. Best for link building, competitor backlink analysis, and keyword
-  research.
+tags: [seo, backlinks, keyword-research, site-audit, content-explorer, rank-tracker, brand-radar, ai-content-helper, ai-visibility]
+seo_title: "Ahrefs: Features, Pricing & Review (April 2026)"
+meta_description: "Ahrefs runs the largest backlink index in SEO with Site Explorer, Keywords Explorer, Site Audit, Rank Tracker, and Content Explorer. Plans $29-$1,499/mo. Brand Radar tracks AI visibility across 6 platforms."
 author: aipedia.wiki Editorial
 best_for:
   - link builders
-  - seo professionals
-  - affiliate site owners
-  - content marketers
+  - competitor backlink analysis
+  - serious SEO professionals
+  - content marketers doing topical research
 not_best_for:
-  - users needing all-in-one platform
-  - users wanting advanced content optimization
-  - teams requiring PPC research
+  - all-in-one marketing suite needs (use Semrush)
+  - teams needing native PPC research
+  - users who want deep content-grading in the base plan
 quick_answer: >-
-  Ahrefs is an SEO platform developed by Ahrefs Pte. Ltd. that centers on the industry's largest backlink index, 40 trillion+ known links crawled and refreshed every 15-30 minutes. No competitor matches that freshness at scale. Plans start at $29/month for the Starter tier and reach $999/month for Enterprise with API access and custom integrations. Best for link builders and SEO professionals where backlink depth is the priority. As of April 2026, Ahrefs has introduced AI-assisted keyword brief generation and basic AI content recommendations, though these remain limited compared to Semrush's AI suite. Ahrefs remains SEO-only with no PPC research, social analytics, or AI Search Visibility tracking.
+  Ahrefs runs the industry's deepest backlink index with five core tools on top. Pick the $129 Lite for real SEO work, $29 Starter for solo bloggers. Skip for all-in-one marketing (Semrush), native PPC, or content-grading depth in the base plan.
+price_history:
+  - date: 2026-01-15
+    plan: "Starter"
+    price: "$29/mo"
+    note: "Starter tier launched January 2026, cutting entry price 70%."
+  - date: 2026-04-15
+    plan: "Lite"
+    price: "$129/mo"
+    note: "Verified unchanged. Annual billing is 2 months free."
 ---
 
 # Ahrefs
 
-Ahrefs is an SEO toolset developed by Ahrefs Pte. Ltd., a Singapore-based company founded by Dmitry Gerasimenko. It provides the industry's largest and most frequently updated backlink index, with 40 trillion+ known links crawled and refreshed every 15-30 minutes. Ahrefs also covers keyword research, site auditing, rank tracking, and content discovery. Its primary differentiator is backlink data depth and freshness, which no competitor matches. As of April 2026, pricing starts at $29/month with the Starter plan, making it the most affordable entry point for professional-grade SEO data. Compared to Semrush, Ahrefs has stronger backlink data but narrower feature coverage.
+Ahrefs runs the industry's deepest backlink index with Site Explorer, Keywords Explorer, Site Audit, Rank Tracker, and Content Explorer built on top. The Starter plan at $29/mo landed January 2026, pulling entry pricing down 70% from the old Lite-only floor.
 
+Brand Radar tracks brand appearances across ChatGPT, Perplexity, Gemini, Copilot, Google AI Overviews, and Google AI Mode. AI Content Helper grades pages against top-ranking competitors. Both are paid add-ons.
 
-## Editor's Take
+## System Verdict
 
-I've tested Ahrefs extensively over the past year, and the $29 Starter tier changed the calculus for solo SEO work. The backlink data is genuinely unmatched, 40 trillion links refreshed every 15-30 minutes means you're not guessing about competitor link profiles. Where it falls short is everywhere else. The AI keyword brief feature they added in 2025 is functional but basic compared to Semrush's content brief tool. If you need PPC research, social analytics, or advanced content optimization, you're buying a second tool anyway, which defeats the purpose of an all-in-one platform.
+> **Pick Ahrefs if backlinks drive your SEO strategy.** The index is the deepest in the category and updates materially faster than competitors. Site Explorer alone wins most competitor-analysis workflows. Keywords Explorer and Content Explorer handle the research loops around it.
+>
+> **Skip it if you need an all-in-one marketing suite, native PPC research, or content grading included in the base plan.** [Semrush](/tools/semrush/) covers more surface area (PPC, social, ContentShake) at a higher entry price. Ahrefs is SEO-only and increasingly charges separately for AI-era features.
+>
+> **Who pays which tier:** Starter $29/mo for solo bloggers and hobby sites, Lite $129/mo for most working SEO pros, Standard $249/mo for agencies juggling clients, Advanced $449/mo for API access and large-scale operations, Enterprise $1,499/mo+ annual for enterprise-grade controls. Brand Radar runs $199/mo per AI platform or $699/mo for the full bundle; AI Content Helper is $99/mo on top of the base subscription.
 
-The real question is whether you're a backlink-first person or a feature-breadth person. I am the former, so Ahrefs works. Link builders should absolutely use this. Content marketers doing serious competitor analysis should too. But if you're a generalist marketer who wants one platform to handle SEO, PPC, and content strategy, Semrush at $120/month gives you more surface area, even if its backlink data trails behind. Ahrefs knows what it is and doesn't pretend otherwise. That focus is its strength and its limitation.
+## Key Facts
 
-## What It Does
+| | |
+|---|---|
+| **Core tools** | Site Explorer · Keywords Explorer · Site Audit · Rank Tracker · Content Explorer |
+| **Backlink index** | Largest in SEO · refreshed continuously for active crawl targets |
+| **Brand Radar coverage** | ChatGPT · Perplexity · Gemini · Copilot · Google AI Overviews · Google AI Mode |
+| **Brand Radar prompt pool** | 320M+ search-backed prompts sourced from People Also Ask |
+| **AI Content Helper** | Content grading vs top-ranking pages · multi-intent detection · Ask AI rephrase/summarize |
+| **Keyword coverage** | Google · YouTube · Amazon · Bing · 10+ search engines |
+| **Starter limits** | 1 project · 750 tracked keywords · 1 user · restricted report depth |
+| **Pricing** | Starter $29 · Lite $129 · Standard $249 · Advanced $449 · Enterprise $1,499+ |
+| **Add-ons** | Brand Radar $199-$699/mo · AI Content Helper $99/mo |
+| **Annual billing** | 2 months free (~17% savings) |
 
-Ahrefs maintains the industry's largest backlink index at 40 trillion+ known links, crawled and refreshed every 15-30 minutes, with comprehensive keyword research, site auditing, rank tracking, and content discovery tools built on top of that backlink foundation. You can see every backlink pointing to any domain, page, or URL - who links there, with what anchor text, when the link appeared, and whether it's followed or nofollowed. The Starter plan at $29/mo opened up Ahrefs to solo bloggers and small agencies for the first time in 2024. In 2026, Ahrefs added AI-assisted keyword brief generation that summarizes search intent and top-ranking content for any keyword, plus basic AI content recommendations that flag optimization gaps on your pages.
+Every data point above was verified against vendor sources on 2026-04-17. See Sources.
 
-## Who It's For
+## What it actually is
 
-- **Link builders:** the primary use case. Ahrefs' backlink data is unmatched for finding link opportunities, analyzing competitor link profiles, and monitoring new/lost links.
-- **SEO professionals:** comprehensive enough for full SEO workflows, especially teams that prioritize off-page SEO and backlink strategy.
-- **Content marketers:** Content Explorer finds the most linked-to and shared content on any topic. Great for content ideation and gap analysis.
-- **Affiliate site owners:** analyze competitor backlinks, find link-building targets, track keyword rankings across multiple properties.
-- **Solo bloggers and small agencies:** Starter plan at $29/mo makes Ahrefs accessible for small sites without enterprise budgets.
-- **Enterprise SEO teams:** Advanced and Enterprise tiers support unlimited projects, API access, and custom integrations for large-scale operations.
+An SEO platform from Ahrefs Pte. Ltd., founded by Dmitry Gerasimenko in Singapore. Core pitch: the best backlink data in the industry, crawled and refreshed at a cadence no competitor matches.
+
+Five tools drive daily use. Site Explorer reveals any domain's full backlink profile, organic keywords, top pages, and estimated traffic. Keywords Explorer supplies difficulty scores, volume, click metrics, and SERP overviews with backlink counts for ranking pages. Site Audit crawls your own properties for technical SEO issues. Rank Tracker handles daily position monitoring with desktop and mobile splits. Content Explorer indexes the most linked and shared pages on any topic.
+
+Two AI-era add-ons matter for 2026. [Brand Radar](https://ahrefs.com/brand-radar) monitors how brands appear across six AI platforms plus YouTube, TikTok, and Reddit, using a 320M+ pool of search-backed prompts. AI Content Helper grades draft pages against top-ranking competitors, detects multi-intent searches, and includes an Ask AI rewriter inside the content editor.
+
+The moat is the index itself. The Starter tier at $29/mo (launched January 2026) broadened access but carries real report-depth limits; serious work still requires Lite or above.
+
+## When to pick Ahrefs
+
+- **You run a link-building program.** The backlink index depth is why agencies and consultants pay. No substitute exists at the same refresh cadence.
+- **You analyze competitors weekly.** Site Explorer's backlink + keyword overlap view is the fastest path to understanding how a competitor ranks.
+- **You do topical research at scale.** Content Explorer finds the most-linked and most-shared pages on any topic, with filters for traffic, date, and backlinks.
+- **You track rankings across markets.** Rank Tracker handles daily, device-split, location-specific monitoring on up to 5,000 keywords (Advanced).
+- **You need AI visibility data.** Brand Radar covers six AI platforms plus YouTube, TikTok, and Reddit. The prompt pool is the largest in the category.
+- **You have API integration needs.** The Advanced tier at $449/mo adds API access for custom reporting and data pipelines.
+
+## When to pick something else
+
+- **All-in-one marketing suite (SEO + PPC + social):** [Semrush](/tools/semrush/). More surface area, weaker backlinks. Starts at $139.95/mo.
+- **Content optimization depth:** [Surfer SEO](/tools/surfer-seo/) at $79/mo. Content Helper-style scoring built into the core product, not a $99/mo add-on.
+- **Simpler and cheaper for small sites:** Moz Pro at $99/mo. Thinner data, easier UI.
+- **AI-first SEO agent workflows:** Purpose-built AI SEO agents. Ahrefs is data-first, not agent-first.
+- **Free competitive research:** Google Search Console plus Keyword Planner covers basics at $0. Ahrefs is the paid upgrade.
 
 ## Pricing
 
-Ahrefs offers four tiers from $29 per month for the Starter plan to $999 per month for Enterprise with API access and custom integrations. Annual billing provides approximately 17-20% discount across all tiers.
+Subscription pricing via [ahrefs.com/pricing](https://ahrefs.com/pricing). Annual billing applies 2 months free across all tiers.
 
-| Plan | Price/Month | Key Limits |
-|------|-------------|-----------|
-| Starter | $29 | 750 tracked keywords, 1 project, 1 user, limited reports |
-| Lite | $129 | 5 projects, 750 tracked keywords, full backlink data, 3 users |
-| Standard | $249 | 20 projects, 2,000 tracked keywords, SERP history, 5 users |
-| Advanced | $449 | 50 projects, 5,000 tracked keywords, API access, 10 users |
-| Enterprise | $999+ | Unlimited projects, custom limits, dedicated support, custom integrations |
+| Plan | Monthly | Keywords | Projects | Users | Who's it for |
+|------|---------|----------|----------|-------|--------------|
+| Starter | $29 | 750 tracked | 1 | 1 | Solo bloggers testing the waters |
+| Lite | $129 | 750 tracked | 5 | 3 | **Most working SEO pros should land here** |
+| Standard | $249 | 2,000 | 20 | 5 | Agencies with multiple clients |
+| Advanced | $449 | 5,000 | 50 | 10 | Large operations needing API access |
+| Enterprise | $1,499+ annual | Custom | Unlimited | Custom | SOC 2 contracts, dedicated support |
 
-Prices verified 2026-04-15. Annual billing saves 17-20%. Check [ahrefs.com/pricing](https://ahrefs.com/pricing) for current rates and promotional offers.
+**Add-ons (per month):**
 
-## Key Features
+| Add-on | Price | What you get |
+|--------|-------|--------------|
+| AI Content Helper | $99 | Content grading, multi-intent detection, Ask AI rewriter |
+| Brand Radar (per platform) | $199 | Single AI platform tracking |
+| Brand Radar (all 6 bundle) | $699 | Full coverage: ChatGPT, Perplexity, Gemini, Copilot, AI Overviews, AI Mode |
 
-- **Backlink Index:** the largest and most frequently updated backlink database available. 40 trillion+ known links. Updated every 15-30 minutes for active crawl targets. The gold standard for backlink research.
-- **Site Explorer:** enter any domain and see its full backlink profile, organic keywords, top pages, and traffic estimates. The core tool most users open first. Includes new AI-assisted summaries of competitor strategy.
-- **Keywords Explorer:** keyword difficulty scores, search volume, click metrics, SERP overview with backlink counts for ranking pages. Covers 10+ search engines including Google, YouTube, Amazon, Bing. Now includes AI-generated keyword briefs summarizing search intent.
-- **Content Explorer:** search a topic and find every page that ranks or gets shared for it. Filter by traffic, backlinks, publish date. Unmatched for content research and link prospecting.
-- **Site Audit:** crawls your site and identifies technical SEO issues. Covers on-page, technical, and off-page factors. Includes AI recommendations for fixing common issues.
-- **Rank Tracker:** daily tracking with desktop/mobile split. SERP feature tracking. Shareable reports. Tracks up to 5,000 keywords on Advanced plan.
-- **Free Webmaster Tools:** limited free access to Site Audit and Site Explorer for sites you verify ownership of. Good entry point for new users.
+*Prices verified 2026-04-17 via [ahrefs.com/pricing](https://ahrefs.com/pricing), [Brand Radar product page](https://ahrefs.com/brand-radar), and [January 2026 features update](https://ahrefs.com/blog/new-features-january-2026/). Annual billing is 2 months free (approximately 17% savings).*
 
-## Limitations
+## Against the alternatives
 
-Ahrefs is an SEO-only platform with no PPC research, social media tools, AI Search Visibility tracking, or advanced content optimization, and its Starter plan restricts report depth enough that heavy users must jump to $129 per month.
+| | Ahrefs Lite ($129) | Semrush Pro ($139.95) | Surfer SEO ($79) |
+|---|---|---|---|
+| **Backlink data** | Deepest in category | Second · good but thinner | None |
+| **Keyword research** | 10+ engines covered | 27B+ keyword database | Content-focused only |
+| **PPC research** | None | Native | None |
+| **Content optimization** | AI Content Helper ($99 add-on) | ContentShake / SEO Writing Assistant | Core product |
+| **AI visibility** | Brand Radar ($199-$699 add-on) | AI Visibility Toolkit ($99 add-on) | None |
+| **Starter tier** | $29/mo | $0 free tier | $0 free trial |
+| **Best viewed as** | Backlink specialist | Full-suite generalist | Content optimizer |
 
-- **Narrower than Semrush.** Ahrefs is SEO-only. No PPC research, social media tools, or AI Search Visibility tracking. If you need an all-in-one marketing suite, Semrush covers more ground.
-- **Content optimization is basic.** No Content Editor equivalent to Surfer SEO. The new AI content recommendations are limited to flagging gaps, not providing detailed optimization guidance or real-time scoring.
-- **Keyword difficulty metric is backlink-only.** Ahrefs' keyword difficulty score is purely based on how many referring domains rank in the top 10. This is useful but doesn't account for content quality, brand authority, or topical relevance the way Semrush's metric does.
-- **Starter plan is limited.** $29/mo gets you in the door but with restricted report depth and only 1 project. Heavy users hit limits quickly and need to jump to $129/mo.
-- **UI remains dense.** The interface is powerful but information-heavy. Newer users find Semrush's UI more approachable and less overwhelming.
+## Failure modes
 
-## Bottom Line
+- **Starter tier is genuinely restricted.** $29 gets you in the door. Report depth, project count, and user count all cap hard. Serious users land on Lite within a month.
+- **SEO-only positioning.** No PPC research, no social, no native content-grading in the base plan. Buying a second tool defeats the "all-in-one" promise of Semrush.
+- **Keyword difficulty is backlink-weighted.** The KD score rests heavily on referring-domain counts of top-10 results. It ignores content quality signals that matter in AI-Overviews era.
+- **AI features cost extra.** Brand Radar and AI Content Helper are separate line items. A solo user wanting everything pays Lite + Content Helper = $228/mo, or Lite + Brand Radar bundle = $828/mo.
+- **UI is dense.** Information-heavy screens overwhelm new users. Semrush feels more approachable for generalist marketers.
+- **Brand Radar coverage gaps remain.** Six AI platforms plus three social networks is broad, but regional AI tools and emerging platforms (Copilot inside Microsoft 365 for enterprise workflows, for example) are not fully covered.
+- **Enterprise floor jumped.** $1,499/mo annual is a real step up from Advanced at $449. Budgeting needs to anticipate the cliff.
+- **Credit and limit enforcement.** Each tier caps crawl rows, reports per day, and data retention. Heavy users hit ceilings before they realize the tier is undersized.
 
-Ahrefs has the best backlink data in the industry, and that remains unmatched. If your SEO strategy is link-building-focused, Ahrefs is the right tool. The Starter plan at $29/mo is the best low-cost entry point for serious SEO data. Where Ahrefs falls short is breadth - Semrush covers PPC, social, AI visibility, and content optimization that Ahrefs doesn't. The ideal setup for serious SEOs is Ahrefs for backlinks plus Surfer SEO for content optimization, but that's $158-$348/mo combined. If you can only pick one, Semrush covers more ground; if backlinks matter most, pick Ahrefs.
+## Methodology
 
-## Best Alternatives
-
-- **[Semrush](../tools/semrush.md):** broader feature set including PPC, social, AI Search Visibility. Slightly weaker backlink data. Starts at $140/mo. The main competitor.
-- **[Surfer SEO](../tools/surfer-seo.md):** content optimization that Ahrefs lacks. $79/mo. Use alongside Ahrefs, not instead of it.
-- **Moz Pro:** simpler, cheaper ($99/mo). Domain Authority metric is industry-standard. Less data depth overall.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [ahrefs.com/pricing](https://ahrefs.com/pricing), [Brand Radar product page](https://ahrefs.com/brand-radar), [January 2026 features update](https://ahrefs.com/blog/new-features-january-2026/), and [About Brand Radar help doc](https://help.ahrefs.com/en/articles/11064852-about-brand-radar).
 
 ## FAQ
 
-**Is Ahrefs Starter plan enough for beginners?**
-Yes. The $29/month Starter plan includes Site Explorer, Keywords Explorer, and basic backlink data. It covers keyword research and competitor analysis for small sites. Heavy users doing link building at scale will need the Lite plan at $129/month for full backlink data access and multiple projects.
+**Is the Ahrefs Starter plan enough for beginners?**
+For a single solo blog or hobby site, yes. The $29/mo tier covers Site Explorer and Keywords Explorer basics with 750 tracked keywords and 1 project. Link building at scale requires Lite at $129/mo for deeper reports and multi-project support.
 
-**Does Ahrefs have AI features now?**
-As of April 2026, Ahrefs has added AI-assisted keyword brief generation that summarizes search intent and top-ranking content, plus basic AI content recommendations that flag optimization gaps. These features are more limited than Semrush's AI suite, which includes AI Search Visibility tracking and more advanced content generation tools.
+**What does Brand Radar actually track?**
+Brand appearances across ChatGPT, Perplexity, Gemini, Copilot, Google AI Overviews, and Google AI Mode, plus YouTube, TikTok, and Reddit. Uses a 320M+ prompt pool derived from People Also Ask queries. Pricing runs $199/mo per AI platform or $699/mo for the full bundle.
 
-**Should I choose Ahrefs or Semrush?**
-If backlinks and link building are your priority, choose Ahrefs. If you need an all-in-one platform covering SEO, PPC, social, and AI search visibility, choose Semrush. Many professional SEOs use both tools for different purposes.
+**What is AI Content Helper?**
+A $99/mo add-on that grades your draft content against top-ranking competitors, detects multiple search intents behind a single keyword, color-codes sentences by subtopic, and includes an Ask AI feature for rephrasing, summarizing, or expanding sections. Not included in the base subscription on any tier.
 
+**Ahrefs vs Semrush for a solo SEO?**
+If backlinks and competitor link analysis drive your strategy, Ahrefs. If you want PPC, social, and native content optimization in one platform, Semrush. Many pros pay for both; the right single pick depends on whether links or breadth matter more.
 
+**Does annual billing actually save money?**
+Yes. Ahrefs applies a 2-months-free discount on annual plans across every tier, equivalent to roughly 17% savings versus monthly billing.
 
-
-
-## Review History
-
-- **2026-04-12:** Pricing and flagship model version verified. No material changes.
-- **2026-03-16:** Score adjusted down 0.3 after a pricing change reduced value.
-- **2026-01-16:** Noted the new model availability across tiers.
-- **2025-11-16:** Pricing verified. Minor copy edits.
-- **2024-01-15:** First published review after two weeks of use.
-
-## Related Guides
-
-- [Best AI SEO Tool (2026)](../use-cases/best-ai-seo-tool.md)
-
-## Related Comparisons
-
-- [Ahrefs vs ChatGPT](../comparisons/ahrefs-vs-chatgpt.md)
-- [Ahrefs vs Frase.io](../comparisons/ahrefs-vs-frase.md)
-- [Ahrefs vs MarketMuse](../comparisons/ahrefs-vs-marketmuse.md)
-- [Ahrefs vs NeuronWriter](../comparisons/ahrefs-vs-neuronwriter.md)
-- [Ahrefs vs Surfer SEO](../comparisons/ahrefs-vs-surfer-seo.md)
-- [Surfer SEO vs Semrush vs Ahrefs](../comparisons/surfer-vs-semrush-vs-ahrefs.md)
 ## Sources
 
-- [Ahrefs Official Site](https://ahrefs.com)
-- [Ahrefs Pricing](https://ahrefs.com/pricing)
+- [ahrefs.com/pricing](https://ahrefs.com/pricing): Current tier pricing and features
+- [Brand Radar product page](https://ahrefs.com/brand-radar): AI platform coverage and prompt pool
+- [About Brand Radar help doc](https://help.ahrefs.com/en/articles/11064852-about-brand-radar): Brand Radar feature detail
+- [January 2026 features update](https://ahrefs.com/blog/new-features-january-2026/): Starter tier launch, recent additions
 
 ## Related
 
-- **Category:** [AI SEO](../categories/ai-seo.md)
-- **See also:** [Semrush](../tools/semrush.md), [Surfer SEO](../tools/surfer-seo.md)
+- **Category:** [AI SEO](/categories/ai-seo/)
+- **Comparisons:** [Ahrefs vs ChatGPT](/comparisons/ahrefs-vs-chatgpt/) · [Ahrefs vs Surfer SEO](/comparisons/ahrefs-vs-surfer-seo/) · [Surfer vs Semrush vs Ahrefs](/comparisons/surfer-vs-semrush-vs-ahrefs/) · [Ahrefs vs Frase](/comparisons/ahrefs-vs-frase/) · [Ahrefs vs MarketMuse](/comparisons/ahrefs-vs-marketmuse/)
