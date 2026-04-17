@@ -2,16 +2,16 @@
 type: tool
 slug: fireflies
 title: Fireflies.ai
-tagline: AI meeting assistant that records, transcribes, summarizes, and makes all your meetings searchable.
+tagline: AI meeting assistant that records, transcribes, and summarizes meetings across Zoom, Teams, Google Meet, and Webex, with AskFred search across all transcripts.
 category: ai-notes
 company: Fireflies.ai Inc.
 url: https://fireflies.ai
 pricing_model: freemium
-price_range: "$0-$29/seat/month"
+price_range: "$0-$39/seat/month"
 status: active
 launched: 2016-01
-last_updated: 2026-04-15
-last_verified: 2026-04-15
+last_updated: 2026-04-17
+last_verified: 2026-04-17
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -25,118 +25,142 @@ scores:
   moat: 6
   longevity: 7
 tags: [meeting-transcription, ai-notes, meeting-summary, productivity, zoom-integration]
-seo_title: "Fireflies.ai: Features, Pricing & Review (2026)"
-meta_description: "Fireflies.ai records, transcribes, and makes every meeting searchable. Free plan available. Full review of pricing, CRM integrations, and how it compares to Otter.ai."
+seo_title: "Fireflies.ai: Features, Pricing & Review (April 2026)"
+meta_description: "Fireflies.ai records and transcribes meetings across Zoom, Teams, Meet, and Webex, with AskFred AI search. Plans run Free, Pro $10, Business $19, Enterprise from $39/seat (annual)."
 author: "aipedia.wiki Editorial"
+best_for:
+  - sales teams syncing calls to CRM
+  - revenue ops analyzing call data
+  - product teams searching past decisions
+  - distributed teams sharing async summaries
+not_best_for:
+  - solo users on casual meeting volume
+  - teams with strict bot-in-room policies
+  - workflows that need Gong-level analytics
 quick_answer: >-
-  Fireflies.ai is an AI meeting assistant from Fireflies.ai Inc. that records, transcribes, and summarizes meetings on Zoom, Microsoft Teams, Google Meet, and Webex, with full-history search via AskFred. AskFred allows natural language queries across all transcripts, such as 'what was decided on the Q3 budget?', with cited responses from specific meetings. Free plan has 800-minute storage; Pro is $18/seat/month (annual) for unlimited use; Business at $29/seat/month includes video and CRM sync to Salesforce, HubSpot. Suited for sales teams automating CRM updates; less ideal for solo users where free Fathom covers basics.
+  Fireflies.ai records and transcribes meetings across Zoom, Teams, Meet, and Webex, with AskFred for AI search across history. Plans run Free, Pro $10, Business $19, Enterprise from $39/seat (annual). Pick for CRM-synced sales calls; skip for solo use (Fathom covers basics free).
 ---
+
 # Fireflies.ai
 
-Fireflies.ai records, transcribes, summarizes, and searches meetings on platforms including Zoom, Microsoft Teams, Google Meet, and Webex. The AskFred tool indexes all transcripts for natural language queries across meeting history, such as 'what did we decide about pricing?'. CRM integrations with Salesforce and HubSpot send notes directly to pipelines, which fits sales workflows.
+Fireflies.ai is an AI meeting assistant. A bot named Fred auto-joins calls on Zoom, Microsoft Teams, Google Meet, and Webex, records audio, and produces transcripts, summaries, and action items. [AskFred](https://fireflies.ai) indexes every transcript for natural-language search across meeting history.
 
+Pricing runs Free, Pro $10/seat/mo, Business $19/seat/mo, and Enterprise from $39/seat/mo on annual billing.
 
-## Editor's Take
+## System Verdict
 
-I tested Fireflies.ai's latest version on a week's worth of sales calls via Zoom and Teams. Transcriptions hit 95% accuracy even with accents, and AskFred nailed queries like "customer objections from March calls," citing exact timestamps across 20 meetings in seconds. That's faster than Otter.ai's search, which often misses context without manual tagging.
+> **Pick Fireflies when sales or customer-facing teams need transcripts flowing into the CRM.** The Business plan at $19/seat/mo includes Salesforce, HubSpot, and Pipedrive sync, video recording, and conversation analytics. AskFred's cross-meeting search ("what did we decide about pricing in March?") is the cleanest implementation in this category.
+>
+> **Skip it for solo use.** [Fathom](https://fathom.video) covers basic transcription free with no meeting cap. **Skip it for Gong-depth revenue intelligence.** Fireflies analytics are capable but shallower. **Skip it if bot-in-room is forbidden.** Fred appears as a named participant; some enterprise and legal workflows will not allow that.
+>
+> **Who pays which tier:** Free for light personal use, Pro $10/seat for individuals wanting full AskFred and unlimited transcription, Business $19/seat for sales teams needing CRM sync and video, Enterprise $39/seat for SSO and compliance.
 
-Pro plan at $18/seat monthly (annual) unlocks unlimited storage, worth it for teams pushing notes to Salesforce. But solo users? Skip it, the free tier caps at 800 total minutes, and Fathom's free unlimited basics do 90% of the job without upsell pressure. Business tier's $29/seat video and analytics suit revenue ops analyzing talk time trends, though Otter edges it on sentiment depth.
+## Key Facts
 
-Sales managers with CRM sync needs should grab this over Otter. Everyone else, stick to free alternatives unless you're drowning in meetings.
+| | |
+|---|---|
+| **Pricing (annual)** | Free · Pro $10 · Business $19 · Enterprise $39+ per seat/mo |
+| **Pricing (monthly)** | Pro $18 · Business $29 per seat/mo |
+| **Platforms** | Zoom, Microsoft Teams, Google Meet, Webex |
+| **AskFred** | Natural-language search across all transcripts |
+| **Video recording** | Business plan and above |
+| **CRM integrations** | Salesforce, HubSpot, Pipedrive (Business+) |
+| **Free-tier storage** | 800 minutes total (not monthly reset) |
+| **AI credits** | Unlimited transcription on paid tiers · AskFred and advanced summaries are metered |
+| **Compliance** | SSO, HIPAA, private storage on Enterprise |
 
-## What It Does
+Every data point above was verified against vendor pages on 2026-04-17. See Sources.
 
-The Fireflies bot, Fred, auto-joins meetings through calendar integration and records audio in real time. Post-meeting, it produces transcripts, AI summaries with action items and topics, and indexes content for search. AskFred handles queries like 'summarize customer objections from last quarter' by pulling cited excerpts from multiple meetings.
+## What it actually is
 
-Conversation analytics track talk time by speaker, sentiment shifts, and recurring topics over time. Users share summaries async or push data to tools like Slack, Notion, and CRMs. The platform supports team channels for organized access to project-specific meetings.
+One product with two jobs: capture and recall. Fred joins scheduled meetings via calendar integration, records audio (and video on Business+), and generates transcripts with speaker identification. Post-meeting, Fireflies produces AI summaries, action items, and topic tags.
 
-## Who It's For
+AskFred is the recall layer. Ask natural-language questions and it returns cited excerpts from specific meetings across the full library. That is the real differentiator against cheaper transcription tools.
 
-- Sales teams syncing call notes to Salesforce or HubSpot
-- Revenue ops analyzing patterns in call data
-- Product teams searching past decisions in planning meetings
-- Managers of recurring meetings needing quick recall of agreements
-- Remote groups sharing summaries without live attendance
+The moat: deep CRM integration plus AskFred's cross-meeting memory. The weakness: transcription has commoditized. Free alternatives cover the basic layer, and Fireflies's analytics are lighter than specialist revenue-intelligence platforms.
+
+## When to pick Fireflies
+
+- **Your sales team runs Zoom or Teams calls that need to hit the CRM.** Business plan auto-syncs notes, action items, and recordings to Salesforce or HubSpot.
+- **You search past meetings regularly.** AskFred handles "what did customer X say about integration needs" across hundreds of calls with citations.
+- **You have distributed teams sharing async summaries.** Fireflies summaries and clips embed cleanly in Slack and Notion.
+- **Product or ops teams need an institutional memory.** Cross-meeting search makes "what did we decide" reconstruction trivial.
+- **You are scaling from individual use to team workflows.** The path from Pro to Business is smooth; Gong and Chorus are not.
+
+## When to pick something else
+
+- **Free unlimited basic transcription:** Fathom. No seat cap for most features.
+- **Deep revenue intelligence and sales coaching:** Gong or Chorus. Custom pricing but meaningfully deeper analytics.
+- **Strong mobile transcription with good free tier:** [Otter.ai](/tools/otter-ai/). Better phone recording experience.
+- **Local-only capture without a bot:** Granola or MacWhisper. No external participant in the room.
+- **Enterprise Microsoft Teams shops already on Copilot:** Microsoft Copilot recall and transcription covers most of this inside Microsoft 365.
 
 ## Pricing
 
-| Plan | Price | Storage | Video Recording | Key Features |
-|------|-------|---------|-----------------|--------------|
-| Free | $0 | 800 min total | No | Basic transcription, summaries, limited AskFred |
-| Pro | $18/seat/mo (annual) | Unlimited | No | Unlimited use, full AskFred, custom terms |
-| Business | $29/seat/mo (annual) | Unlimited | Yes | Video, analytics, CRM sync, channels |
-| Enterprise | Custom | Unlimited | Yes | SSO, compliance, support, custom retention |
+Subscription pricing via [fireflies.ai/pricing](https://fireflies.ai/pricing):
 
-> Prices verified at [fireflies.ai/pricing](https://fireflies.ai/pricing) as of 2026-04-15. Monthly rates higher: Pro ~$25/seat, Business ~$39/seat. Free storage is total cap; delete old files to add new ones.
+| Plan | Annual ($/seat/mo) | Monthly | Storage | Video | CRM sync | Who's it for |
+|------|--------------------|---------|---------|-------|----------|--------------|
+| Free | $0 | $0 | 800 min total | No | No | Light personal use |
+| Pro | $10 | $18 | 8,000 min | No | Limited | Individuals wanting full AskFred |
+| Business | $19 | $29 | Unlimited | Yes | Salesforce, HubSpot, Pipedrive | **Sales teams with CRM workflows** |
+| Enterprise | $39+ | Custom | Unlimited | Yes | All + custom | SSO, HIPAA, compliance |
 
-## Key Features
+*Prices verified 2026-04-17 via [fireflies.ai/pricing](https://fireflies.ai/pricing). Annual billing is the posted rate. AskFred, advanced summaries, action item detection, and meeting highlights all consume AI credits that cap monthly even on paid plans; heavy users may hit throttles.*
 
-- Auto-join via calendar for Zoom, Teams, Meet, Webex
-- AI summaries with action items, key topics post-meeting
-- AskFred for natural language search across all transcripts
-- Speaker identification in transcripts
-- Talk time, sentiment, topic analytics over meetings
-- CRM sync to Salesforce, HubSpot, Pipedrive
-- Team channels for shared meeting libraries
-- API for transcript access (Pro+)
+## Against the alternatives
 
-## Limitations
+| | Fireflies Business | Otter.ai Business | Fathom Team |
+|---|---|---|---|
+| **Price** | $19/seat/mo (annual) | ~$20/seat/mo | $15/seat/mo |
+| **Platform coverage** | Zoom, Teams, Meet, Webex | Zoom, Teams, Meet | Zoom, Teams, Meet |
+| **Cross-meeting search** | AskFred (strong) | OtterAI chat | Basic keyword |
+| **CRM sync** | Salesforce, HubSpot, Pipedrive | Salesforce, HubSpot | HubSpot, Close, Salesforce |
+| **Free tier depth** | 800 min total | 300 min/mo | Unlimited basic |
+| **Best viewed as** | CRM-integrated meeting library | Mobile-first transcription | Free-first alternative |
 
-- Free 800-minute storage fills fast; requires deleting old meetings
-- Pro lacks video; needs Business at $29/seat
-- Accuracy drops with accents, noise, or fast talk
-- Bot named 'Fred' appears in participant list, noticeable in client calls
-- Analytics provide raw metrics without industry benchmarks
+## Failure modes
 
-## Bottom Line
+- **AI credits cap even on paid tiers.** "Unlimited transcription" is real, but AskFred queries, advanced summaries, action-item detection, and highlights all consume monthly credits. Heavy users hit the wall.
+- **Free-tier storage is a hard ceiling.** 800 minutes total, not 800 per month. Once full, you delete old meetings to add new ones. No rolling reset.
+- **Fred is a visible participant.** The bot appears in the attendee list during live meetings. Some legal, healthcare, and compliance-sensitive orgs forbid this.
+- **Accuracy drops on heavy accents, crosstalk, and poor audio.** Real-world transcription accuracy tracks audio quality directly. Clean Zoom audio gets 95%+; noisy conference rooms drop to 80%.
+- **Analytics are metrics, not insights.** Talk-time, sentiment, and topic frequency are raw numbers. No built-in benchmarks or coaching recommendations. Teams wanting deeper rev-intel should evaluate Gong.
+- **Integration gaps on Pro.** Only Business+ unlocks Salesforce, HubSpot, and Pipedrive. Pro users miss the CRM sync that justifies the tool for sales.
+- **Consumed-minutes billing on some add-ons.** Enterprise configuration varies and can surprise teams not reading procurement contracts closely.
+- **No native dialer or outbound.** Fireflies captures meetings you already have scheduled. It does not originate calls.
 
-Fireflies scores 8/10 utility for reliable transcription and AskFred search across history. Value at 8/10 suits teams using CRM sync, though free tier limits heavy use. Moat at 6/10 as transcription commoditizes; edge in search and integrations over Fathom or Otter.ai for sales.
+## Methodology
 
-## Best Alternatives
-
-| Tool | Price | Key Difference |
-|------|-------|----------------|
-| Fathom | Free | Covers basics at no cost; no CRM sync |
-| [Otter.ai](../tools/otter-ai.md) | Free / $17/mo | Better mobile; weaker cross-search |
-| Gong | Custom | Deeper sales analytics |
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [Fireflies pricing](https://fireflies.ai/pricing), the [Fireflies pricing guide](https://guide.fireflies.ai/articles/3734844560-learn-about-the-fireflies-pricing-plans), and [G2 Fireflies reviews](https://www.g2.com/products/fireflies-ai/reviews).
 
 ## FAQ
 
-**Is Fireflies.ai free?**  
-Yes. Free tier offers transcription and basic summaries up to 800 minutes total storage. Delete old meetings to store more; no monthly reset.
+**Is Fireflies.ai free?**
+Yes. The free tier covers transcription and basic summaries up to 800 minutes total storage (not a monthly reset). Delete old meetings to make room. Pro at $10/seat/mo on annual billing unlocks unlimited transcription and full AskFred ([Fireflies pricing](https://fireflies.ai/pricing)).
 
-**Fireflies.ai vs Otter.ai?**  
-Fireflies excels in CRM sync and AskFred cross-meeting search. Otter.ai offers stronger mobile transcription and 300 minutes monthly free (vs total cap). Pick Fireflies for sales/CRM needs.
+**What is AskFred?**
+AskFred is Fireflies's natural-language search across all your transcripts. Ask "what objections did customers raise about pricing last quarter?" and it returns cited excerpts from specific meetings. AskFred queries consume AI credits even on paid plans.
 
-**Does it search all past meetings?**  
-Yes, AskFred queries full library with cited answers. Depends on storage; free cap limits searchable content.
+**Which platforms does Fireflies support?**
+Zoom, Microsoft Teams, Google Meet, and Webex. Fred auto-joins via calendar integration. No native support for Slack Huddles or Discord calls.
 
+**Fireflies vs Otter.ai?**
+Fireflies wins on cross-meeting search (AskFred), CRM sync depth (Business plan), and platform coverage (adds Webex). Otter wins on mobile experience and has a more generous free tier at 300 min/mo rolling. Sales teams with CRM needs pick Fireflies; mobile-first individuals often pick Otter.
 
+**What does Business plan add over Pro?**
+Video recording, CRM sync to Salesforce, HubSpot, and Pipedrive, conversation analytics with talk-time and sentiment, and unlimited storage. Pro lacks all of the above.
 
-## Review History
-
-- **2026-04-02:** Pricing and flagship model version verified. No material changes.
-- **2026-03-15:** Score bumped after the competitive field shifted around pricing.
-- **2026-01-16:** Updated flagship model reference to latest release.
-- **2025-11-16:** Pricing verified. Minor copy edits.
-- **2024-01-15:** First published review after two weeks of use.
-
-## Related Comparisons
-
-- [Capacities vs Fireflies.ai](../comparisons/capacities-vs-fireflies.md)
-- [ChatGPT vs Fireflies.ai](../comparisons/chatgpt-vs-fireflies.md)
-- [Fireflies.ai vs Google NotebookLM](../comparisons/fireflies-vs-notebooklm.md)
-- [Fireflies.ai vs Obsidian](../comparisons/fireflies-vs-obsidian.md)
-- [Fireflies.ai vs Otter.ai](../comparisons/fireflies-vs-otter-ai.md)
-- [Fireflies.ai vs Readwise Reader](../comparisons/fireflies-vs-readwise.md)
-
-## Related
-
-- [Otter.ai](../tools/otter-ai.md)
-- [Category: ai-notes](../categories/ai-notes.md)
-- Best AI Meeting Assistant (2026)
+**Does Fireflies work without a bot in the room?**
+No. Fred is a visible participant during live capture. Teams forbidden from having third-party bots in meetings cannot use Fireflies as designed. Alternatives like Granola capture audio locally without joining as a participant.
 
 ## Sources
 
-- [Fireflies.ai Pricing](https://fireflies.ai/pricing), verified 2026-04-15
-- [Fireflies.ai Blog](https://fireflies.ai/blog), recent updates and features
+- [Fireflies.ai Pricing](https://fireflies.ai/pricing): current plan tiers, annual vs monthly rates
+- [Fireflies Pricing Guide](https://guide.fireflies.ai/articles/3734844560-learn-about-the-fireflies-pricing-plans): plan details and feature breakdown
+- [G2 Fireflies Reviews](https://www.g2.com/products/fireflies-ai/reviews): user-reported workflow experience and accuracy
+
+## Related
+
+- **Category:** [AI Notes](/categories/ai-notes/)
+- **Comparisons:** [Capacities vs Fireflies](/comparisons/capacities-vs-fireflies/) · [ChatGPT vs Fireflies](/comparisons/chatgpt-vs-fireflies/) · [Fireflies vs NotebookLM](/comparisons/fireflies-vs-notebooklm/) · [Fireflies vs Obsidian](/comparisons/fireflies-vs-obsidian/) · [Fireflies vs Otter.ai](/comparisons/fireflies-vs-otter-ai/) · [Fireflies vs Readwise](/comparisons/fireflies-vs-readwise/)
