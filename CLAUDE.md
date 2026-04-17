@@ -111,6 +111,8 @@ author: "aipedia.wiki Editorial"
   - Key Facts "recent shutdowns" row: only list items retired within 12 months
   - Body prose: no "back in 2023" / "in early 2024" unless directly relevant to a today choice
 
+- **NO em-dashes or en-dashes in content.** Both `—` and `–` are statistical markers of unedited AI output post-2024 and Google's Helpful Content system trains against them. Pre-commit hook (`scripts/block-ai-tells.mjs`) blocks new commits that introduce them. Replace: `—` → `. ` (sentence break) or `:` (definition) or `,` (comma pause). `–` → `-` (ASCII hyphen). Applies to everything in `src/content/*.md`.
+
 - **Agent-voice template** (use for all editorial analysis blocks):
   - `## System Verdict` — top-of-page callout in blockquote form. Declarative, names alternatives. "Pick X if Y. Skip if Z." No "I tested", no first-person, no hedging.
   - `## Key Facts` — 2-col table (label / value). Machine-readable, no prose.

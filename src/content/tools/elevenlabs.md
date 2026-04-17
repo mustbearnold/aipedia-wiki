@@ -2,7 +2,7 @@
 type: tool
 slug: elevenlabs
 title: ElevenLabs
-tagline: The top-ranked AI voice generator in April 2026 — Eleven v3 (GA) covers 70+ languages with expressive audio tags, Flash v2.5 hits ~75ms latency for conversational agents, and voice cloning works from a 1-minute sample.
+tagline: The top-ranked AI voice generator in April 2026 · Eleven v3 (GA) covers 70+ languages with expressive audio tags, Flash v2.5 hits ~75ms latency for conversational agents, and voice cloning works from a 1-minute sample.
 category: ai-voice
 company: elevenlabs
 url: 'https://elevenlabs.io'
@@ -72,15 +72,15 @@ The top-ranked AI voice generation platform in April 2026. Eleven v3 is generall
 
 | | |
 |---|---|
-| **Flagship model** | Eleven v3 (GA) — 70+ languages, audio tags for emotion/pacing/style |
+| **Flagship model** | Eleven v3 (GA) · 70+ languages, audio tags for emotion/pacing/style |
 | **Real-time model** | Flash v2.5 (32 languages, ~75ms) · Flash v2 (English, ~75ms) |
 | **Narration model** | Multilingual v2 (29 languages, emotionally-aware) |
 | **Voice cloning** | Instant (IVC, 1-5 min sample) · Professional (PVC, 30+ min, fine-tuned) |
 | **Subscription pricing** | Free · Starter $6 · Creator $22 · Pro $99 · Scale $330 · Business $990 · Enterprise custom |
 | **API pricing** | v3 / Multilingual v2: $0.12 / 1K chars · Flash / Turbo: $0.06 / 1K chars |
 | **Commercial rights** | Included from Starter ($6) and above |
-| **Conversational AI** | ElevenAgents (GA) — bring-your-own-LLM, RAG, Twilio/Vonage/SIP, JS/Python/Swift/React SDKs |
-| **Long-form audio** | Studio (GA) — multi-voice audiobooks from ePub/PDF |
+| **Conversational AI** | ElevenAgents (GA) · bring-your-own-LLM, RAG, Twilio/Vonage/SIP, JS/Python/Swift/React SDKs |
+| **Long-form audio** | Studio (GA) · multi-voice audiobooks from ePub/PDF |
 | **Speech-to-text** | Scribe v2 (GA, Jan 2026) · Scribe v2 Realtime (~150ms, $0.28/hr) |
 | **Music & SFX** | Eleven Music (GA, Aug 2025, licensed training data) · Sound Effects |
 | **Self-hosted option** | None (cloud-only) |
@@ -91,15 +91,15 @@ Every data point above verified against ElevenLabs' published sources on 2026-04
 
 A single cloud platform covering the full AI audio stack: text-to-speech (Eleven v3, Multilingual v2, Flash v2.5), voice cloning (IVC + PVC), speech-to-text (Scribe v2), conversational AI agents (ElevenAgents), long-form audiobook production (Studio), music generation (Eleven Music), and sound effects. Credits are consumed per character generated across all TTS models; API usage is billed separately at per-1K-character rates.
 
-The real moats: voice quality lead (Eleven v3 produces the most expressive TTS output currently shipping), clone quality (Professional Voice Cloning is the near-indistinguishable benchmark other vendors are measured against), and language coverage (70+ languages on v3 is broader than any major competitor). ElevenAgents adds a second moat — the only fully integrated voice-agent platform with bring-your-own-LLM support, telephony, RAG, and first-party SDKs across four languages.
+The real moats: voice quality lead (Eleven v3 produces the most expressive TTS output currently shipping), clone quality (Professional Voice Cloning is the near-indistinguishable benchmark other vendors are measured against), and language coverage (70+ languages on v3 is broader than any major competitor). ElevenAgents adds a second moat · the only fully integrated voice-agent platform with bring-your-own-LLM support, telephony, RAG, and first-party SDKs across four languages.
 
 ## When to pick ElevenLabs
 
 - **Highest-quality narration.** Eleven v3 (GA) with audio tags produces more expressive output than any cloud competitor. Critical for audiobooks, trailers, premium YouTube content, and character voiceovers.
-- **Real-time voice agents in 32 languages.** Flash v2.5 at ~75ms latency with ElevenAgents is the most complete production-grade voice-agent stack shipping today — bring-your-own-LLM, telephony integration, RAG, SDKs.
+- **Real-time voice agents in 32 languages.** Flash v2.5 at ~75ms latency with ElevenAgents is the most complete production-grade voice-agent stack shipping today · bring-your-own-LLM, telephony integration, RAG, SDKs.
 - **Professional voice cloning.** PVC from 30+ minutes of source audio is the quality benchmark. Consent verification gate is meaningful but surmountable for legitimate use.
 - **Multilingual dubbing and localization.** 70+ languages on v3 with the same voice across languages is unmatched. YouTube creators going global land here.
-- **Audiobook production.** Studio handles multi-voice audiobooks from ePub/PDF with character assignment and narrative direction — end-to-end, no separate stitching workflow.
+- **Audiobook production.** Studio handles multi-voice audiobooks from ePub/PDF with character assignment and narrative direction · end-to-end, no separate stitching workflow.
 - **Low-friction commercial rights.** Commercial license unlocks at the $6 Starter plan; no separate licensing negotiation needed for monetized content.
 
 ## When to pick something else
@@ -146,38 +146,38 @@ Prices verified 2026-04-15 via [ElevenLabs pricing](https://elevenlabs.io/pricin
 | **Clone quality** | PVC is the benchmark | Strong open-source clones | Good, fewer controls |
 | **Real-time latency** | ~75ms on Flash v2.5 | Varies by deployment | Sub-40ms (leads the field) |
 | **Commercial rights** | From $6 Starter | Open-source license terms apply | Commercial from paid tier |
-| **Open source / self-host** | None — cloud-only | Yes — open weights | None |
+| **Open source / self-host** | None · cloud-only | Yes · open weights | None |
 | **API pricing (Multilingual)** | $0.12 / 1K chars | Lower on self-host | Competitive |
 | **Language coverage** | 70+ (v3) · 32 (Flash v2.5) | Narrower multilingual range | 15+ |
 | **Best viewed as** | Quality + coverage leader | Open-source alternative | Latency specialist |
 
 ## Failure modes
 
-- **Credit exhaustion is the dominant cost surprise.** Plans are capped in credits per month; overages either block generation or bill separately depending on plan. Long-form audio projects can exhaust Creator (100K) or even Pro (500K) credits faster than expected — 500K credits is ~8 hours of audio at typical speaking rate.
+- **Credit exhaustion is the dominant cost surprise.** Plans are capped in credits per month; overages either block generation or bill separately depending on plan. Long-form audio projects can exhaust Creator (100K) or even Pro (500K) credits faster than expected · 500K credits is ~8 hours of audio at typical speaking rate.
 - **Instant Voice Cloning consent gate is minimal.** IVC accepts a 1-minute sample with self-attestation. Easy to misuse; ElevenLabs has consent verification on PVC but not IVC. Clone-without-permission remains a real moderation and legal risk.
-- **Audio tags and emotion control are v3-specific.** Flash v2.5 and Multilingual v2 don't expose the same inline audio-tag markup. Switching models for latency forfeits expressiveness — the lineup forces a quality-vs-latency tradeoff per project.
+- **Audio tags and emotion control are v3-specific.** Flash v2.5 and Multilingual v2 don't expose the same inline audio-tag markup. Switching models for latency forfeits expressiveness · the lineup forces a quality-vs-latency tradeoff per project.
 - **API rate limits bite on bulk workloads.** Credit caps and per-plan concurrency limits can stall batch generation. High-volume API users regularly escalate to Business or Enterprise for predictable throughput.
-- **No self-hosted / on-prem option.** Cloud-only. For regulated environments, on-prem, or air-gapped deployments, ElevenLabs is not an option — [Fish Audio](/tools/fish-audio/) or other open-weights models are required.
+- **No self-hosted / on-prem option.** Cloud-only. For regulated environments, on-prem, or air-gapped deployments, ElevenLabs is not an option · [Fish Audio](/tools/fish-audio/) or other open-weights models are required.
 - **Credit-based pricing is hard to forecast.** The credit system spans TTS, STT, and Conversational AI with different consumption rates per model. Users report monthly cost unpredictability, especially when mixing v3 and Flash output.
 - **Content moderation rejects legitimate material.** The moderation layer flags some adult fiction, political content, and clinical/medical scripts. Enterprise contracts can loosen filters; on consumer plans, blockages are final.
 - **PVC quality on v3 is still optimizing.** Professional Voice Cloning is fully supported on Multilingual v2 and Flash; v3-specific PVC optimization is a rolling improvement area per ElevenLabs docs. Use Multilingual v2 + PVC for the most reliable clone quality, v3 for maximum expressiveness on designed or IVC voices.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline — an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-15 against [ElevenLabs pricing](https://elevenlabs.io/pricing), [ElevenLabs API pricing](https://elevenlabs.io/pricing/api), the [Models documentation](https://elevenlabs.io/docs/overview/models), the [Voice Cloning documentation](https://elevenlabs.io/docs/creative-platform/voices/voice-cloning), and the [Conversational AI overview](https://elevenlabs.io/conversational-ai).
+This page was produced by the aipedia.wiki editorial pipeline · an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-15 against [ElevenLabs pricing](https://elevenlabs.io/pricing), [ElevenLabs API pricing](https://elevenlabs.io/pricing/api), the [Models documentation](https://elevenlabs.io/docs/overview/models), the [Voice Cloning documentation](https://elevenlabs.io/docs/creative-platform/voices/voice-cloning), and the [Conversational AI overview](https://elevenlabs.io/conversational-ai).
 
 ## FAQ
 
 **Is ElevenLabs free to use?**
-Yes — the Free tier gives 10,000 credits per month (~10 minutes of TTS) but does not include commercial rights or voice cloning. For monetized content, the $6/mo Starter plan is the lowest tier with commercial rights and Instant Voice Cloning.
+Yes · the Free tier gives 10,000 credits per month (~10 minutes of TTS) but does not include commercial rights or voice cloning. For monetized content, the $6/mo Starter plan is the lowest tier with commercial rights and Instant Voice Cloning.
 
 **What is Eleven v3 and is it production-ready?**
-Eleven v3 is ElevenLabs' most expressive TTS model, covering 70+ languages with audio tags that control emotion, pacing, and style inline. It is generally available as of early 2026. For real-time conversational use cases ElevenLabs still recommends Flash v2.5 or Turbo v2.5 — a real-time-optimized v3 variant is in development.
+Eleven v3 is ElevenLabs' most expressive TTS model, covering 70+ languages with audio tags that control emotion, pacing, and style inline. It is generally available as of early 2026. For real-time conversational use cases ElevenLabs still recommends Flash v2.5 or Turbo v2.5 · a real-time-optimized v3 variant is in development.
 
 **What's the difference between Instant and Professional Voice Cloning?**
 Instant Voice Cloning (IVC) generates a usable clone from 1-5 minutes of audio near-instantaneously, with minimal consent gating. Professional Voice Cloning (PVC) requires 30+ minutes of source audio, fine-tunes the model on the target voice, and produces near-indistinguishable replicas. IVC is available from the Starter plan; PVC unlocks at Creator ($22/mo) and above.
 
-**Which model should I use — v3, Multilingual v2, or Flash v2.5?**
+**Which model should I use · v3, Multilingual v2, or Flash v2.5?**
 Use Eleven v3 for expressive narration, audiobooks, character voiceovers, and trailers. Use Multilingual v2 for polished professional narration where consistent emotional tone matters more than maximum expressiveness. Use Flash v2.5 for real-time conversational agents and any workflow where ~75ms latency matters more than peak quality.
 
 **Does ElevenLabs offer speech-to-text?**

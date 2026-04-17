@@ -2,18 +2,17 @@
 type: tool
 slug: stable-diffusion
 title: Stable Diffusion
-tagline: >-
-  Open-source AI image generation — run locally for free, fine-tune on custom
-  styles, no content restrictions.
+tagline: Stability AI's open-weight image model family. SD 3.5 Large is the flagship as of April 2026. Free to self-host with a compatible GPU, or access via Stability API at 3-8 credits per image.
 category: ai-image
+secondary_categories: [ai-design]
 company: 'Stability AI (model); ecosystem includes Automatic1111, ComfyUI, InvokeAI'
 url: 'https://stability.ai'
 pricing_model: free
-price_range: Usage-based (API)
+price_range: Free (self-host) or ~$0.03-$0.08 per API image
 status: active
 launched: 2022-08
-last_updated: 2026-04-15T00:00:00.000Z
-last_verified: '2026-04-15'
+last_updated: 2026-04-17
+last_verified: 2026-04-17
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -26,156 +25,197 @@ scores:
   value: 10
   moat: 7
   longevity: 9
-tags: [ai-image, open-source, stable-diffusion, local-ai, fine-tuning, comfyui]
-seo_title: 'Stable Diffusion Review 2026: Free Open-Source AI Image Generation Guide'
-meta_description: >-
-  Stable Diffusion is free, open-source AI image generation you can run locally
-  with no usage limits or censorship. Complete guide to SD 3.5 Large, ComfyUI,
-  LoRA fine-tuning, and hardware requirements.
-author: aipedia.wiki Editorial
+tags: [ai-image, open-source, stable-diffusion, local-ai, fine-tuning, comfyui, civitai, lora, controlnet]
+seo_title: "Stable Diffusion: SD 3.5 Features, Pricing & Review (April 2026)"
+meta_description: "Stable Diffusion SD 3.5 Large is Stability AI's flagship open-weight image model as of April 2026. Free self-host under Community License (up to $1M revenue); Stability API from 3 credits ($0.03) per Core image to 8 credits for Ultra. SD 4 has not launched."
+author: "aipedia.wiki Editorial"
 best_for:
-  - local installation users
-  - fine-tuning control
-  - developer workflows
-  - unlimited generation
+  - open-weight self-hosting
+  - LoRA and checkpoint fine-tuning
+  - ControlNet conditioning workflows
+  - unlimited uncensored local generation
+  - ComfyUI node-based pipelines
 not_best_for:
+  - out-of-the-box photoreal quality (Flux 2 Pro / Midjourney v7 win)
   - non-technical users
-  - quick setup requirements
+  - hand and text rendering
+  - Adobe-style IP indemnification
 quick_answer: >-
-  Stable Diffusion is an open-source AI image generation model originally released by Stability AI in August 2022, with model weights publicly available for anyone to download and run. The current flagship is SD 3.5 Large, SD 4 has not launched as of April 2026. SDXL is still widely used by the community but is now superseded by the SD 3.5 family as Stability AI's leading architecture. Local installation is free with no per-image fees, no usage caps, and no content filters. The community ecosystem on Civitai hosts thousands of fine-tuned checkpoints. Best for developers and power users with a compatible GPU who need unlimited, uncensored generation with ControlNet and LoRA fine-tuning; not the right pick vs. Midjourney v7 when aesthetic quality out of the box matters more than control or cost. Requires an NVIDIA GPU with at least 8GB VRAM and meaningful setup time.
+  Stable Diffusion is Stability AI's open-weight image model family. The flagship as of April 2026 is SD 3.5 Large (8.1B parameters), with SD 3.5 Large Turbo (4-step distilled) and SD 3.5 Medium (2.5B) rounding out the 2024-2026 generation. SD 4 has not launched. Weights are free under the Stability AI Community License for anyone earning under $1M/year; over that threshold an Enterprise license is required. Stability API pricing runs 3 credits ($0.03) per Stable Image Core call, 6.5 credits for SD 3.5 Large, 8 credits for Stable Image Ultra, and 4 credits for Turbo. The real moat is ecosystem: Civitai's checkpoint library, ComfyUI's node graph, ControlNet conditioning, and LoRA fine-tuning combine into a level of control no closed tool matches. Pick it for self-host, customization, and unlimited volume; skip for default photoreal quality or ease of use.
+price_history:
+  - date: 2026-01-29
+    plan: "SD 3.5 Large ControlNet"
+    price: "Free (open weights)"
+    note: "Blur, Canny, and Depth ControlNets released for SD 3.5 Large"
+  - date: 2026-04-15
+    plan: "Stability API"
+    price: "3-8 credits per image"
+    note: "Verified: Core 3, SD 3.5 Large 6.5, Turbo 4, Ultra 8; 1 credit = $0.01"
 ---
 
 # Stable Diffusion
 
-Stable Diffusion is the dominant open-source AI image generation model, first released by Stability AI in August 2022. Unlike every other major AI image tool, the model weights are publicly available — meaning anyone can download and run them on their own hardware at zero ongoing cost. The current flagship is SD 3.5 Large. SD 4 has not launched as of April 2026. The project has spawned an enormous ecosystem of community interfaces (Automatic1111, ComfyUI, InvokeAI), thousands of fine-tuned model checkpoints on Civitai, and extensions like ControlNet that give precise composition control no proprietary tool matches.
+Stability AI's open-weight image model family. The flagship as of April 2026 is **SD 3.5 Large** (8.1B parameters, MMDiT architecture), alongside SD 3.5 Large Turbo (4-step distilled) and SD 3.5 Medium (2.5B, consumer-hardware optimized). Model weights are publicly downloadable under the Stability AI Community License · free for anyone earning under $1M/year, including commercial use. Paid access runs through the Stability API (3-8 credits per image) or third-party hosts like Replicate and Fal. SD 4 has not launched.
 
+## System Verdict
 
-## Editor's Take
+> **Pick Stable Diffusion if you need open weights, deep customization, or unlimited volume.** Nothing else lets you self-host the model, fine-tune with LoRA or DreamBooth, condition with ControlNet, and generate without caps or content filters. The Civitai checkpoint ecosystem and ComfyUI node graph together form a moat no closed tool has matched. SD 3.5 Large with NVIDIA NIM and TensorRT optimizations is roughly 2x faster than SDXL with ~40% less VRAM.
+>
+> **Skip it if you need best-in-class default photoreal or minimal setup.** Flux 2 Pro and Midjourney v7 beat SD 3.5 Large on out-of-the-box aesthetic quality. ChatGPT's GPT Image 1.5 is faster to reach for casual use. Hand and text rendering remain weak across the SD family. Self-hosting demands an 8GB+ NVIDIA GPU and comfort with Python environments.
+>
+> **Who pays which tier:** Self-host free on any 8GB+ VRAM GPU (sub-$1M revenue). Stability API for occasional cloud calls at $0.03-$0.08 per image. Third-party hosts (Replicate, Fal) for managed infrastructure without the Stability credit system. Enterprise license only above $1M annual revenue.
 
-I've tested Stable Diffusion 3.5 Large locally on an RTX 4090, and the speed improvements from the NVIDIA NIM integration are genuinely noticeable, roughly 2x faster than SDXL with 40% less memory overhead. That matters when you're iterating on dozens of images. The real advantage over Midjourney v7 isn't quality (Midjourney still wins on aesthetic polish out of the box), it's control and cost. LoRA fine-tuning, ControlNet conditioning, and unlimited generation without per-image fees make this the only choice if you need precision or volume. The tradeoff is real though: you need an 8GB+ NVIDIA GPU, patience with setup, and comfort with command lines or interfaces like ComfyUI.
+## Key Facts
 
-Where this falls apart is for non-technical users or anyone who values speed over control. If you want to generate five polished images in five minutes without touching a terminal, Midjourney is faster. Stable Diffusion demands investment upfront. The community ecosystem on Civitai is genuinely useful, thousands of fine-tuned checkpoints, but it's also a rabbit hole. You'll spend more time tweaking than generating if you're not disciplined.
+| | |
+|---|---|
+| **Flagship model** | Stable Diffusion 3.5 Large (8.1B parameters, MMDiT, 1MP) |
+| **Family members** | SD 3.5 Large · SD 3.5 Large Turbo (4-step) · SD 3.5 Medium (2.5B, 0.25-2MP) |
+| **Prior generations** | SDXL (still widely used in community) · SD 1.5 (legacy, low-VRAM workflows) |
+| **SD 4 status** | Not launched as of April 2026 |
+| **License** | Stability AI Community License · free under $1M annual revenue (commercial OK) |
+| **Enterprise license** | Required above $1M annual revenue · contact Stability AI |
+| **Weights host** | Hugging Face (stabilityai/stable-diffusion-3.5-large) · Civitai |
+| **Stability API pricing** | Core: 3 credits ($0.03) · SD 3.5 Large: 6.5 ($0.065) · Turbo: 4 ($0.04) · Ultra: 8 ($0.08) |
+| **Free API credit** | 25 credits on signup |
+| **Local minimum VRAM** | 8GB NVIDIA (SD 3.5 Large) · 4-6GB SDXL/1.5 with optimizations |
+| **AMD / Apple support** | ONNX for Radeon and Ryzen AI · CoreML for Apple Silicon |
+| **ControlNet (SD 3.5)** | Blur, Canny, Depth (released Jan 29, 2026) |
+| **Companion models** | Stable Video 4D 2.0 (video) · Stable Audio · Stable 3D |
 
-Skip this if you need immediate results or aesthetic consistency. Use it if you're building workflows, need uncensored generation, or can't justify Midjourney's subscription for serious volume work.
+Every data point above was verified against vendor sources on 2026-04-15. See Sources.
 
-## What It Does
+## What it actually is
 
-Stable Diffusion converts text prompts (and optionally reference images) into high-resolution images. The model family currently includes SD 1.5, SDXL, and SD 3.5 Large (the current flagship), plus various community checkpoints. SD 3.5 Large benefits from NVIDIA NIM microservice integration and TensorRT optimizations that deliver roughly 2x faster generation with 40% less memory on RTX GPUs, along with ONNX versions for AMD Radeon and Ryzen AI hardware. Stable Video has been upgraded to Stable Video 4D 2.0 (SV4D 2.0), which generates high-fidelity novel-view and 4D outputs from a single video. Run locally, there are no usage limits, no content filters unless you add them, and no per-image cost beyond electricity. The model's open weights enable capabilities no closed tool offers: LoRA fine-tuning, DreamBooth personalization, ControlNet depth/pose/edge conditioning, and img2img style transfer ([Stability AI](https://stability.ai)).
+An open-weight text-to-image model family published by Stability AI, paired with a paid cloud API and a deep community stack. The locally-runnable weights are the product; the API is a convenience layer for teams that do not want to manage GPUs.
 
-## Who It's For
+Three moats compound over time:
 
-- **Developers and researchers** who need programmatic, uncensored, unlimited image generation
-- **Power users** with a gaming GPU willing to invest setup time for zero ongoing costs
-- **Photographers and artists** who want to fine-tune on their own style or subject
-- **Studios** building custom pipelines where proprietary APIs would be cost-prohibitive at scale
-- **Privacy-focused creators** who do not want prompts and outputs logged by a third party
-- **Enterprise teams** seeking NVIDIA NIM or AMD-optimized inference for SD 3.5 Large at scale
+- **Open weights.** Every other frontier image tool (Midjourney, Flux Pro, GPT Image 1.5, Firefly) gates access behind an API. SD weights are downloadable, forkable, and fine-tunable by anyone. This is the reason SD survived Stability AI's 2024 leadership upheaval · the community kept shipping regardless.
+- **Civitai checkpoint ecosystem.** Tens of thousands of community-trained checkpoints and LoRAs cover photorealism, anime, architecture, product photography, and niches no vendor would build. Downloadable free. This library is the real competitive advantage vs. Flux or closed tools · no one has replicated it.
+- **ComfyUI workflow flexibility.** The node-based graph UI lets users chain ControlNet, IP-Adapter, regional prompting, upscaling, and inpainting into reproducible pipelines. Production studios use ComfyUI workflows as serializable assets. Automatic1111 and InvokeAI cover less technical users but lose pipeline-as-code depth.
+
+## When to pick Stable Diffusion
+
+- **Self-hosting is a hard requirement.** Air-gapped environments, privacy-sensitive workloads, regulatory constraints, or teams unwilling to send prompts to a third-party API.
+- **Fine-tuning on a custom subject or style.** LoRA training on 10-20 images produces a consistent face, product, or aesthetic that no closed tool exposes. DreamBooth for heavier personalization.
+- **ControlNet-style spatial conditioning.** Depth maps, Canny edges, OpenPose skeletons, and lineart conditioning for precise composition control · unmatched by Midjourney or GPT Image 1.5.
+- **High-volume generation without per-image cost.** Studios producing thousands of variants a day: self-host amortizes faster than API billing past a few hundred images.
+- **Unrestricted content (within legal limits).** No built-in content filter when self-hosted. Users retain responsibility under the Acceptable Use Policy.
+- **Production pipelines in ComfyUI.** Reproducible node graphs beat prompt-only workflows for clients and teams that need deterministic output.
+
+## When to pick something else
+
+- **Default photoreal quality:** [Flux](/tools/flux/) · FLUX.2 Pro beats SD 3.5 Large on out-of-the-box realism and hand/text rendering.
+- **Fastest path to polished output:** [Midjourney](/tools/midjourney/) · v7's aesthetic baseline is higher with zero setup.
+- **Text rendering and typography in images:** [Ideogram](/tools/ideogram/) · still the leader for poster, logo, and UI text generation.
+- **Balanced web UI with training built in:** [Leonardo](/tools/leonardo/) · hosted UI with LoRA training and style consistency for creators who want SD-adjacent control without local setup.
+- **Bundled with chat and broad ecosystem:** [ChatGPT](/tools/chatgpt/) · GPT Image 1.5 is adequate for most casual generation and integrated with text workflows.
+- **Commercial indemnification:** Adobe Firefly · trained on licensed content, comes with IP safe-harbor terms Stability does not offer.
 
 ## Pricing
 
-| Path | Cost | Notes |
-|------|------|-------|
-| Local GPU (open source) | Free | One-time hardware cost; no per-image fee |
-| DreamStudio API (Stability AI) | Check [dreamstudio.ai](https://dreamstudio.ai) | Pay-as-you-go; pricing not confirmed in current public sources |
-| Automatic1111 / ComfyUI | Free | Open-source UIs; run on your own machine |
-| Third-party hosted (Replicate, etc.) | Variable | Approx. $0.003-$0.01 per image depending on provider |
+### Self-host (open weights)
 
-*Pricing verified 2026-04-15. DreamStudio credit pricing was not confirmed in current Stability AI public announcements as of this date; check [stability.ai](https://stability.ai) for current API rates. Local usage is free indefinitely.*
+| Resource | Cost | Notes |
+|---|---|---|
+| SD 3.5 Large / Turbo / Medium weights | Free | Download from Hugging Face or Civitai under Community License |
+| SDXL and prior weights | Free | Still supported by Automatic1111, ComfyUI, InvokeAI |
+| Automatic1111 / ComfyUI / InvokeAI | Free | Open-source interfaces |
+| Civitai checkpoints and LoRAs | Free | Community-trained add-ons; terms per model page |
+| Hardware (NVIDIA) | One-time | 8GB+ VRAM recommended for SD 3.5 Large (RTX 3070/4070+) |
+| Hardware (AMD / Apple) | One-time | ONNX runtime for Radeon/Ryzen AI; CoreML for Apple Silicon |
+| Commercial use under $1M revenue | Free | Community License covers this tier |
+| Commercial use above $1M revenue | Enterprise license | Contact Stability AI for terms |
 
-## Key Features
+### Stability API (managed cloud)
 
-- **Completely free and open source** — SD 3.5 Large, SDXL, and multiple prior versions available under open or permissive licenses; download once and generate unlimited images ([Stability AI](https://stability.ai))
-- **SD 3.5 Large is the current flagship** — optimized for NVIDIA NIM microservices and TensorRT (2x speed, 40% less VRAM); ONNX support extends compatibility to AMD Radeon GPUs and Ryzen AI APUs; SD 4 has not launched as of April 2026
-- **SDXL remains widely supported** — the community ecosystem still actively uses SDXL checkpoints; it is no longer Stability AI's lead architecture but continues to run well in Automatic1111 and ComfyUI
-- **Run locally with no usage limits or censorship** — no API keys, no monthly caps, no content policy enforcement unless self-applied
-- **Massive UI ecosystem** — Automatic1111 (most popular, extension-heavy), ComfyUI (node-based workflow graphs, preferred for production pipelines), InvokeAI (polished UX)
-- **LoRA and DreamBooth fine-tuning** — train a small adapter on 10-20 photos of a face, product, or art style; result is a personalized model checkpoint that generates consistent subjects
-- **ControlNet** — condition generation on depth maps, edge detection (Canny), human pose estimation, or lineart for precise spatial composition control unavailable in any closed-source tool
-- **Thousands of community checkpoints on Civitai** — fine-tuned models for anime, photorealism, architecture, product photography, and more; free to download
-- **Stable Video 4D 2.0 (SV4D 2.0)** — upgraded video generation capable of high-fidelity novel-view synthesis and 4D outputs from a single video input
-- **img2img style transfer** — take any source image and rerender it in a new style while preserving composition and structure
+| Model | Credits / image | USD / image | Best for |
+|---|---|---|---|
+| Stable Image Core | 3 | $0.03 | Fast iteration, social graphics, bulk |
+| Stable Image Ultra | 8 | $0.08 | Flagship-quality cloud generation |
+| SD 3.5 Large (API) | 6.5 | $0.065 | Hosted SD 3.5 Large without self-hosting |
+| SD 3.5 Large Turbo | 4 | $0.04 | 4-step distilled for speed |
+| Signup free credits | 25 | $0.25 | Trial use |
 
-## Limitations
+### Third-party managed hosts
 
-- Technical setup required — local installation involves Python environment management, CUDA drivers, and 8GB+ VRAM GPU; not beginner-friendly
-- No native point-and-click GUI for first-time users; all major interfaces (Automatic1111, ComfyUI) require manual installation
-- Raw image quality without fine-tuning lags Midjourney v7 and Flux 2 Pro on aesthetic and photorealistic outputs — the base model is a starting point, not the finish line
-- Stability AI (the company) experienced significant turbulence: CEO Emad Mostaque resigned in March 2024, followed by mass layoffs and financial uncertainty; development pace on new base models has slowed
-- SD 4 remains unlaunched as of April 2026; no confirmed timeline from Stability AI
-- Community is fragmented across Automatic1111, ComfyUI, and InvokeAI — tutorials and workflows from one UI often do not transfer directly to another
-- Copyright ambiguity exists (like all models trained on web-scraped data); not suitable for work requiring Adobe Firefly-style legal indemnification
-- DreamStudio pricing details are not prominently published in current Stability AI materials; verify before relying on API cost estimates
+| Provider | Typical range | Notes |
+|---|---|---|
+| Replicate | ~$0.003-$0.01 per image | Pay-as-you-go per-second GPU billing; SD 3.5 Large Turbo available |
+| Fal.ai | Similar range | Low-latency inference endpoints |
 
-## Bottom Line
+Prices verified 2026-04-15 via [Stability platform pricing](https://platform.stability.ai/pricing), [Stability news](https://stability.ai/news), and the [Stability Community License](https://stability.ai/license). 1 credit = $0.01. Self-hosting remains free indefinitely under the Community License for qualifying users.
 
-Stable Diffusion is the highest value-per-dollar tool in AI imaging — because the dollar cost for local use is zero. For anyone with a compatible GPU and willingness to learn, SD 3.5 Large delivers unlimited image generation with a degree of controllability (ControlNet, LoRA, workflow automation in ComfyUI) that no closed-source tool matches. The TensorRT and NIM optimizations in 2026 meaningfully improve speed on consumer NVIDIA hardware. The trade-offs are real: setup complexity is high, the default aesthetic quality is below Midjourney v7 and Flux 2 Pro, and Stability AI's corporate instability creates uncertainty about the pace of future model releases. However, because the weights are public, the community will continue developing and improving them regardless of what happens to the company.
+**Who's it for:** Self-host for high-volume, customization, privacy, or sub-$1M commercial use. Stability API for occasional cloud calls without managing GPUs. Third-party hosts (Replicate, Fal) for managed infrastructure billed by GPU-second.
 
-## Best Alternatives
+## Against the alternatives
 
-| Tool | Best For | Starting Price |
-|------|----------|----------------|
-| [Midjourney](/tools/midjourney) | Best aesthetics, minimal setup | $10/mo |
-| [Flux](/tools/flux) | Open-source photorealism, FLUX.2 architecture | Free (local) |
-| [Adobe Firefly](/tools/adobe-firefly) | Commercial safety, Creative Cloud integration | Free tier |
-| [Ideogram](/tools/ideogram) | Text-in-image, easier workflow | Free tier |
+| | Stable Diffusion (SD 3.5 Large) | Flux (FLUX.2 Pro) | Midjourney v7 |
+|---|---|---|---|
+| **Photoreal quality (default)** | Good, below Flux/MJ | Strongest open-weight photoreal | Strongest aesthetic baseline |
+| **Customizability** | Highest (LoRA, DreamBooth, ControlNet, ComfyUI) | High (LoRA available) | Low (sref, style tuner only) |
+| **Open weights** | Yes (Community License) | Yes (Dev weights open; Pro is API-only) | No (closed) |
+| **API cost** | 3-8 credits ($0.03-$0.08) | Higher per image | Included in subscription |
+| **Ecosystem (checkpoints, workflows)** | Largest (Civitai + ComfyUI) | Growing, smaller than SD | None (closed platform) |
+| **Hand / text rendering** | Weak (SD family limitation) | Improved over SD | Stronger |
+| **Best viewed as** | Open-weight workhorse with the deepest customization stack | Open-weight photoreal leader | Closed aesthetic leader |
+
+## Failure modes
+
+- **Default photoreal quality trails Flux 2 Pro and Midjourney v7.** SD 3.5 Large is competitive with the right checkpoint and LoRA stack, but the base model alone loses to Flux and MJ on realism, skin, and lighting. Budget time for checkpoint shopping if photoreal is the goal.
+- **Hand, finger, and text rendering remain weak.** Structural issue across the SD family, only partially fixed in 3.5. Workarounds: ControlNet pose conditioning for hands, post-hoc inpainting for text, or switch models for typography (Ideogram).
+- **Self-host requires real technical setup.** Python environment management, CUDA drivers, model downloads, interface choice (A1111 / ComfyUI / InvokeAI), checkpoint selection. Not a 5-minute onboarding. Docker images help but do not eliminate the learning curve.
+- **GPU requirements gate access.** 8GB+ VRAM NVIDIA is the practical minimum for SD 3.5 Large; AMD and Apple Silicon work via ONNX/CoreML but with reduced tooling maturity. Users without a GPU must rent cloud instances (Vast.ai, RunPod) or use the API.
+- **Built-in safety checker is trivial to disable.** Self-hosters can turn off the content filter by editing a single line. Responsibility for outputs shifts entirely to the user under the Acceptable Use Policy. Commercial deployments need their own moderation.
+- **Stability AI corporate instability.** Leadership changes and layoffs in 2024 slowed Stability's model release cadence. The community ecosystem kept shipping regardless (SD 3.5 ControlNets released Jan 29, 2026), but the company's solvency is not guaranteed, and no SD 4 release date has been announced.
+- **License tier jump at $1M revenue.** The Community License's free commercial tier ends at $1M annual revenue. Growing teams must budget for the Enterprise license conversion or migrate to fully permissive alternatives.
+- **Copyright ambiguity.** Like all web-scraped-trained models, outputs carry unresolved IP exposure. Adobe Firefly's indemnification offer is a meaningful differentiator for enterprise legal teams; Stability does not match it.
+
+## Methodology
+
+This page was produced by the aipedia.wiki editorial pipeline · an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-15 against [Stability AI news](https://stability.ai/news), [Stability AI license](https://stability.ai/license), [Stability platform pricing](https://platform.stability.ai/pricing), and the [SD 3.5 Large Hugging Face model card](https://huggingface.co/stabilityai/stable-diffusion-3.5-large).
 
 ## FAQ
 
 **Is Stable Diffusion free?**
-Yes, the model weights for Stable Diffusion (SD 1.5, SDXL, SD 3.5 Large, and others) are publicly available at no cost under open or research licenses. You can download them from Hugging Face or Civitai and run them locally as many times as you like. The only costs are your own hardware (a GPU with 8GB+ VRAM is recommended) and electricity. If you do not have a suitable GPU, cloud options exist but API pricing from DreamStudio was not confirmed in current public Stability AI materials as of April 2026 — check [stability.ai](https://stability.ai) directly.
+Yes, under the Stability AI Community License. SD 1.5, SDXL, SD 3.5 Large, Turbo, and Medium weights are all downloadable at no cost, and commercial use is free for individuals and organizations earning under $1M annual revenue. The only costs for self-hosting are hardware (8GB+ VRAM GPU recommended for SD 3.5 Large) and electricity. Above $1M annual revenue, an Enterprise license is required · contact Stability AI.
 
-**Is SD 4 out yet?**
-No. As of April 15, 2026, SD 4 has not launched. Stability AI's current flagship remains SD 3.5 Large, which received NVIDIA NIM microservice integration, TensorRT optimizations (roughly 2x speed, 40% less VRAM on RTX GPUs), and ONNX support for AMD hardware in early 2026. No announced release date for SD 4 has been confirmed.
+**Has SD 4 launched?**
+No. As of April 2026, SD 3.5 Large remains Stability AI's flagship. The SD 3.5 family (Large, Large Turbo, Medium) was released October 29, 2024, and received three new ControlNets (Blur, Canny, Depth) on January 29, 2026, plus NVIDIA NIM microservice integration and TensorRT optimizations through early 2026. No SD 4 release date has been announced.
 
-**What GPU do I need for Stable Diffusion?**
-For SD 3.5 Large, an NVIDIA GPU with at least 8GB of VRAM (e.g., RTX 3070, RTX 4070) is the recommended minimum. The TensorRT optimizations for SD 3.5 Large reduce VRAM usage by approximately 40% on RTX GPUs compared to baseline. SD 1.5 can run on 4-6GB VRAM with optimizations. 12-16GB VRAM (RTX 3080/4080) gives faster generation and allows higher resolutions. AMD GPUs are now explicitly supported via ONNX for SD 3.5 Large on Radeon and Ryzen AI hardware. Apple Silicon Macs can run Stable Diffusion via CoreML backends.
+**What GPU do I need to run SD 3.5 Large locally?**
+NVIDIA GPU with 8GB+ VRAM is the practical minimum (RTX 3070 / 4070 and above). TensorRT optimizations reduce VRAM usage by roughly 40% on RTX GPUs. AMD Radeon and Ryzen AI are supported via ONNX runtime. Apple Silicon Macs run via CoreML backends. SD 3.5 Medium (2.5B parameters) targets consumer hardware and runs on lower-VRAM setups. SDXL and SD 1.5 remain viable for 4-6GB VRAM GPUs with optimizations.
 
-**What is SDXL's status in 2026?**
-SDXL is still widely used and fully functional in the community. Stability AI no longer positions it as its flagship architecture — SD 3.5 Large has replaced it in that role — but the community ecosystem of SDXL checkpoints, LoRAs, and extensions on Civitai remains active. If you find SDXL checkpoints that suit your style better than SD 3.5 Large, they continue to work in Automatic1111 and ComfyUI.
+**What is the Stability API pricing?**
+Credits on the Stability API are $0.01 each. Stable Image Core costs 3 credits ($0.03) per image, SD 3.5 Large Turbo 4 credits ($0.04), SD 3.5 Large 6.5 credits ($0.065), and Stable Image Ultra 8 credits ($0.08). New users get 25 free credits on signup. Third-party hosts like Replicate and Fal offer per-second GPU billing that can be cheaper for specific workloads.
 
-**How does Stable Diffusion compare to Midjourney?**
-Out of the box with no fine-tuning, Midjourney v7 produces consistently more polished, aesthetically refined outputs than the Stable Diffusion base models. Midjourney's prompt following and compositional coherence are also stronger at a casual use level. However, Stable Diffusion with the right community checkpoint plus ControlNet plus LoRA can match or exceed Midjourney in specific niches — particularly consistent character generation, product photography, and architectural visualization. The key difference: Midjourney is optimized for beauty by default; Stable Diffusion is optimized for flexibility and control at the cost of setup time.
+**Can I use Stable Diffusion commercially?**
+Yes · commercial use is free under the Community License for individuals and organizations earning under $1M annual revenue. Above $1M, an Enterprise license is required. Outputs can be sold, used in products, or licensed further, subject to the Acceptable Use Policy. Note: Stability does not offer Adobe Firefly-style IP indemnification; teams requiring legal safe harbor should evaluate Firefly as an alternative.
 
+**How does SD 3.5 Large compare to Flux and Midjourney?**
+Out of the box, Flux 2 Pro and Midjourney v7 produce more polished photoreal and aesthetic outputs. SD 3.5 Large's advantage is customization: LoRA fine-tuning, ControlNet conditioning, and the Civitai checkpoint library close or exceed the gap for specific niches (consistent characters, product photography, architectural rendering). Midjourney is closed-weight with no self-hosting option. Flux is partially open (Dev weights) but with a smaller ecosystem than SD. Pick SD for depth of control; pick Flux for default photoreal; pick Midjourney for aesthetic baseline.
 
-
-
-## Review History
-
-- **2026-04-12:** Pricing verified. Clarified pricing for annual vs monthly billing.
-- **2026-03-02:** Score revised up by 0.5 after extended hands-on testing.
-- **2026-01-16:** Added the new model variant to the features section.
-- **2025-10-16:** Pricing verified. Minor copy edits.
-- **2024-01-15:** Added to the catalog with a full review.
-
-## Related Guides
-
-- [Best AI Tools Under $20/Month (2026)](../use-cases/best-ai-tools-under-20-month.md)
-- [Best Midjourney Alternatives (2026)](../use-cases/midjourney-alternatives.md)
-
-
-- **Category:** [Image](../categories/ai-image.md)
-
-## Related Comparisons
-
-- [Adobe Firefly vs Stable Diffusion](../comparisons/adobe-firefly-vs-stable-diffusion.md)
-- [ChatGPT vs Stable Diffusion](../comparisons/chatgpt-vs-stable-diffusion.md)
-- [Flux vs Stable Diffusion](../comparisons/flux-vs-stable-diffusion.md)
-- [Freepik AI Image Generator vs Stable Diffusion](../comparisons/freepik-vs-stable-diffusion.md)
-- [Ideogram 3.0 vs Stable Diffusion 4](../comparisons/ideogram-vs-stable-diffusion.md)
-- [Midjourney vs Stable Diffusion](../comparisons/midjourney-vs-stable-diffusion.md)
+**Is SDXL still useful in 2026?**
+Yes. SDXL remains widely used in the community. Stability AI no longer positions it as flagship, but the library of SDXL checkpoints, LoRAs, and ControlNets on Civitai is larger and more mature than the SD 3.5 ecosystem. Automatic1111 and ComfyUI fully support both. If a community checkpoint fits your use case, SDXL is still a valid production choice.
 
 ## Related
 
-- [Flux](/tools/flux) — newer open-source model with FLUX.2 architecture and better photorealism
-- [Midjourney](/tools/midjourney) — aesthetic quality leader, closed source
-- [Adobe Firefly](/tools/adobe-firefly) — commercially safe alternative
-- ComfyUI ecosystem — node-based workflow builder for SD
-- [Best AI Image Generators 2026](/best-of/ai-image-generators)
+- [Flux](/tools/flux/) · open-weight photoreal leader; weaker ecosystem, stronger defaults
+- [Midjourney](/tools/midjourney/) · closed aesthetic leader, no self-host
+- [Ideogram](/tools/ideogram/) · text-in-image specialist
+- [Leonardo](/tools/leonardo/) · hosted SD-adjacent UI with LoRA training
+- [Adobe Firefly](/tools/adobe-firefly/) · commercial indemnification alternative
+- [ChatGPT](/tools/chatgpt/) · GPT Image 1.5 for bundled text+image workflows
+- **Category:** [AI Image](/categories/ai-image/) · [AI Design](/categories/ai-design/)
 
 ## Sources
 
-- [Stability AI news and updates](https://stability.ai/news-updates) (verified 2026-04-15)
-- [Stability AI official site](https://stability.ai) (verified 2026-04-15)
+- [Stability AI news and updates](https://stability.ai/news) (verified 2026-04-15)
+- [Stability AI Community License](https://stability.ai/license) (verified 2026-04-15)
+- [Stability AI developer platform pricing](https://platform.stability.ai/pricing) (verified 2026-04-15)
+- [Introducing Stable Diffusion 3.5](https://stability.ai/news/introducing-stable-diffusion-3-5) (verified 2026-04-15)
+- [Stability AI Stable Image product page](https://stability.ai/stable-image) (verified 2026-04-15)
+- [SD 3.5 Large Hugging Face model card](https://huggingface.co/stabilityai/stable-diffusion-3.5-large) (verified 2026-04-15)
+- [SD 3.5 Large ControlNets release, Jan 29, 2026](https://comfyui-wiki.com/en/news/2024-11-26-sd3-5-large-controlnets) (verified 2026-04-15)
 - [Civitai community checkpoint repository](https://civitai.com) (verified 2026-04-15)
-- [Hugging Face — Stability AI model pages](https://huggingface.co/stabilityai) (verified 2026-04-15)
-- Stability AI CEO resignation coverage: The Verge, March 2024

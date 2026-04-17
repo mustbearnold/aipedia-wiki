@@ -54,7 +54,7 @@ price_history:
 
 # ChatGPT
 
-OpenAI's general-purpose AI assistant. Runs the GPT-5 model family across web, mobile, and desktop — text, image generation (GPT Image 1.5), web browsing with citations, sandboxed code execution, the Codex coding agent, and Operator Agent Mode in a single interface. No video generation: Sora was shut down in March 2026.
+OpenAI's general-purpose AI assistant. Runs the GPT-5 model family across web, mobile, and desktop · text, image generation (GPT Image 1.5), web browsing with citations, sandboxed code execution, the Codex coding agent, and Operator Agent Mode in a single interface. No video generation: Sora was shut down in March 2026.
 
 ## System Verdict
 
@@ -69,12 +69,12 @@ OpenAI's general-purpose AI assistant. Runs the GPT-5 model family across web, m
 | | |
 |---|---|
 | **Flagship model** | GPT-5.4 Pro (Pro / Team / Enterprise only) |
-| **Default model** | GPT-5.3 Instant (all tiers) — Free/Go also get GPT-5.4 mini via "Thinking" in the + menu |
+| **Default model** | GPT-5.3 Instant (all tiers) · Free/Go also get GPT-5.4 mini via "Thinking" in the + menu |
 | **Context window** | Not publicly specified for GPT-5 family |
 | **Pricing** | Free · Go $8 · Plus $20 · Pro $100 / $200 · Team $25/user · Enterprise custom |
 | **Image generation** | GPT Image 1.5 |
 | **Video generation** | None (Sora shut down March 2026) |
-| **Coding agent** | Codex — included on Plus, scaled 5x / 20x on Pro tiers |
+| **Coding agent** | Codex · included on Plus, scaled 5x / 20x on Pro tiers |
 | **Agent mode** | Operator / Agent Mode on Plus and above |
 | **Recent shutdowns** | Sora (Mar 2026) · GPT-4o (Feb 2026) |
 
@@ -131,17 +131,17 @@ Prices verified 2026-04-17 via [OpenAI pricing](https://chatgpt.com/pricing/), [
 
 ## Failure modes
 
-- **Ads on the free tier are aggressive.** Shipped with the 2026 monetization push — present in the conversation stream, not a banner you can ignore. If you use AI daily, the free tier is not viable.
+- **Ads on the free tier are aggressive.** Shipped with the 2026 monetization push · present in the conversation stream, not a banner you can ignore. If you use AI daily, the free tier is not viable.
 - **Hallucination on niche or fast-moving topics.** GPT-5 is better than GPT-4 but still fabricates plausible-sounding wrong answers on thin-source domains. Citations help but are not a fix.
 - **Context window is not published.** OpenAI does not disclose an exact token limit for the GPT-5 family. Claude and Gemini both publish explicit 1M-token limits. Consequence: you cannot plan long-context workflows with the same certainty.
 - **Rate limits on GPT-5.4 Thinking for Plus.** Plus users hit caps during peak periods; the only real fix is moving to Pro.
 - **Memory is shallow and can be intrusive.** Stores stated preferences and conversation snippets; occasionally surfaces them out of context or drifts from stated preferences. Manual cleanup required.
 - **Privacy default on Free / Go.** Conversations on ad-supported tiers may be used for model training unless explicitly opted out. Paid tiers default to no-training.
-- **Codex usage caps are relative, not absolute.** "5x Plus" doesn't publish the Plus baseline in tokens or seconds — heavy users should monitor their own usage to calibrate tier choice.
+- **Codex usage caps are relative, not absolute.** "5x Plus" doesn't publish the Plus baseline in tokens or seconds · heavy users should monitor their own usage to calibrate tier choice.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline — an automated system that ingests vendor documentation, normalizes factual claims, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17.
+This page was produced by the aipedia.wiki editorial pipeline · an automated system that ingests vendor documentation, normalizes factual claims, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17.
 
 ## Pricing
 

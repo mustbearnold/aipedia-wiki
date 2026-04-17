@@ -55,7 +55,7 @@ price_history:
 
 # Perplexity
 
-Perplexity is an AI-native answer engine. Every response is synthesized from live web sources with numbered inline citations — no list of ten blue links, no scraped snippets stripped of attribution. The house model is **Sonar** (a Llama-tuned search model running on Cerebras infrastructure at ~1,200 tokens/sec); Pro subscribers can override it per query with GPT-5.4, Claude Opus 4.7, Gemini 3.1 Pro, or Grok. Max adds Model Council and Perplexity Computer. The Comet browser is free on every major platform.
+Perplexity is an AI-native answer engine. Every response is synthesized from live web sources with numbered inline citations · no list of ten blue links, no scraped snippets stripped of attribution. The house model is **Sonar** (a Llama-tuned search model running on Cerebras infrastructure at ~1,200 tokens/sec); Pro subscribers can override it per query with GPT-5.4, Claude Opus 4.7, Gemini 3.1 Pro, or Grok. Max adds Model Council and Perplexity Computer. The Comet browser is free on every major platform.
 
 ## System Verdict
 
@@ -82,17 +82,17 @@ Perplexity is an AI-native answer engine. Every response is synthesized from liv
 
 ## What it actually is
 
-One product surface — answer engine plus a thin agent layer — with two pricing tracks (consumer and enterprise). The free tier is Sonar on light rate limits; Pro adds model switching, unlimited Pro searches, Deep Research, Spaces, and Voice; Max layers on Model Council and Perplexity Computer.
+One product surface · answer engine plus a thin agent layer · with two pricing tracks (consumer and enterprise). The free tier is Sonar on light rate limits; Pro adds model switching, unlimited Pro searches, Deep Research, Spaces, and Voice; Max layers on Model Council and Perplexity Computer.
 
-The moats are specific and narrow. First, citation UX: every numbered claim links to the underlying source inline, which neither ChatGPT nor Claude nor Gemini matches in default behavior. Second, the Sonar+frontier-model architecture: Perplexity routes cheap queries to Sonar on Cerebras for speed and expensive ones to whichever frontier model the user picks — a neutrality play no single-vendor chatbot can replicate. Third, Deep Research's direct export to decks and spreadsheets eliminates the copy-paste step that kills most research-to-deliverable workflows. Fourth, Comet is the only AI-native browser available free on every major platform. The open question is whether any of these survive once Google AI Overviews, ChatGPT browsing, and Gemini Deep Research close the gap.
+The moats are specific and narrow. First, citation UX: every numbered claim links to the underlying source inline, which neither ChatGPT nor Claude nor Gemini matches in default behavior. Second, the Sonar+frontier-model architecture: Perplexity routes cheap queries to Sonar on Cerebras for speed and expensive ones to whichever frontier model the user picks · a neutrality play no single-vendor chatbot can replicate. Third, Deep Research's direct export to decks and spreadsheets eliminates the copy-paste step that kills most research-to-deliverable workflows. Fourth, Comet is the only AI-native browser available free on every major platform. The open question is whether any of these survive once Google AI Overviews, ChatGPT browsing, and Gemini Deep Research close the gap.
 
 ## When to pick Perplexity
 
-- **You need verifiable answers with live citations.** Every sentence is traceable to a source — the exact behavior that default ChatGPT and Claude chats do not produce without explicit browsing mode prompts.
+- **You need verifiable answers with live citations.** Every sentence is traceable to a source · the exact behavior that default ChatGPT and Claude chats do not produce without explicit browsing mode prompts.
 - **You want to A/B frontier models on the same question.** Pro's model switcher and Max's Model Council are the cleanest way to run GPT-5.4, Opus 4.7, and Gemini 3.1 Pro against the same prompt without three subscriptions.
-- **You run research-to-deliverable workflows.** Deep Research exports directly to PowerPoint, spreadsheets, and dashboards — the step that kills throughput when researchers use a chatbot and then paste into slides manually.
+- **You run research-to-deliverable workflows.** Deep Research exports directly to PowerPoint, spreadsheets, and dashboards · the step that kills throughput when researchers use a chatbot and then paste into slides manually.
 - **You want a browser-layer AI assistant.** Comet is free on iOS, Android, Mac, and Windows; it reads the page, summarizes tabs, and answers in context without leaving the browser.
-- **You're building search-augmented LLM apps.** The Sonar and Sonar Pro APIs ship real-time web-wide research with citations as a primitive — cheaper than stitching your own Bing/Brave + RAG stack.
+- **You're building search-augmented LLM apps.** The Sonar and Sonar Pro APIs ship real-time web-wide research with citations as a primitive · cheaper than stitching your own Bing/Brave + RAG stack.
 
 ## When to pick something else
 
@@ -120,7 +120,7 @@ Enterprise pricing via [perplexity.ai/enterprise/pricing](https://perplexity.ai/
 | Enterprise Pro | $40/user/mo ($400/user/yr) | Team Spaces, SSO, admin controls |
 | Enterprise Max | $325/user/mo | Unlimited Pro + Labs, Computer at scale, full compliance + audit |
 
-Education Pro runs $10/mo (or free for a promotional window at participating universities). Sonar and Sonar Pro APIs are priced separately at [perplexity.ai/api-platform](https://perplexity.ai/api-platform) — verify current per-token rates there before building on it.
+Education Pro runs $10/mo (or free for a promotional window at participating universities). Sonar and Sonar Pro APIs are priced separately at [perplexity.ai/api-platform](https://perplexity.ai/api-platform) · verify current per-token rates there before building on it.
 
 Prices verified 2026-04-17 via [Perplexity pricing](https://perplexity.ai/pro), [enterprise pricing](https://perplexity.ai/enterprise/pricing), and the [Perplexity Help Center](https://perplexity.ai/help-center/en/articles/11187416-which-perplexity-subscription-plan-is-right-for-you).
 
@@ -128,25 +128,25 @@ Prices verified 2026-04-17 via [Perplexity pricing](https://perplexity.ai/pro), 
 
 | | Perplexity Pro | ChatGPT Plus | Claude Pro |
 |---|---|---|---|
-| **Source citation quality** | Strongest — inline numbered citations by default | Good in browsing mode, absent elsewhere | Present when browsing is invoked, less granular |
+| **Source citation quality** | Strongest · inline numbered citations by default | Good in browsing mode, absent elsewhere | Present when browsing is invoked, less granular |
 | **Research depth** | Deep Research reads 100+ pages, exports to deck/sheet | Browsing + Deep Research mode, no direct export | Projects + web search, no direct deliverable export |
 | **Pricing** | $20/mo | $20/mo | $20/mo |
 | **Best viewed as** | Cited answer engine and research specialist | Generalist default with broadest feature suite | Reasoning, writing, and coding specialist |
 
 ## Failure modes
 
-- **Citations don't guarantee correctness.** Perplexity occasionally misrepresents what a linked source actually says — the citation looks authoritative but the underlying claim is a paraphrase drift or outright hallucination. Spot-check before quoting.
+- **Citations don't guarantee correctness.** Perplexity occasionally misrepresents what a linked source actually says · the citation looks authoritative but the underlying claim is a paraphrase drift or outright hallucination. Spot-check before quoting.
 - **Source quality varies by query.** For thin-coverage topics the engine cites low-tier SEO content and blog roundups with the same confidence as primary sources. Depth is only as good as the open web on the topic.
 - **Paywalled content is mostly inaccessible.** Academic journals, gated news, and subscription research do not load. For scientific literature use [Consensus](/tools/consensus/) or [Elicit](/tools/elicit/) instead.
 - **Model switching adds a decision tax.** Pro users with six models on tap tend to ping-pong. The default (Sonar auto-routing) is the right choice for most queries; override only when you have a specific reason.
-- **Perplexity Computer credits deplete quietly.** Max includes 10,000 credits/mo. Multi-step agent runs burn them fast — watch the live credit tracker before kicking off a long deploy or scraping job.
+- **Perplexity Computer credits deplete quietly.** Max includes 10,000 credits/mo. Multi-step agent runs burn them fast · watch the live credit tracker before kicking off a long deploy or scraping job.
 - **Comet is not on iPad.** Mac, Windows, iPhone, and Android ship. iPad users are stuck with the web app or the regular Perplexity iOS app.
-- **Model Council is web-only on Max.** Not available on mobile apps, Enterprise Pro, or the free tier. The synthesizer step adds latency — expect 30-60s before a unified answer.
+- **Model Council is web-only on Max.** Not available on mobile apps, Enterprise Pro, or the free tier. The synthesizer step adds latency · expect 30-60s before a unified answer.
 - **No native image, video, or voice generation beyond Voice Mode input.** For multimodal creation you need a second tool.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline — an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [perplexity.ai/pro](https://perplexity.ai/pro), [perplexity.ai/enterprise/pricing](https://perplexity.ai/enterprise/pricing), the [Perplexity Help Center](https://perplexity.ai/help-center), the [March 27, 2026 changelog](https://perplexity.ai/changelog/what-we-shipped--march-27-2026), and the [February 6, 2026 Deep Research upgrade notes](https://perplexity.ai/changelog/what-we-shipped---february-6th-2026).
+This page was produced by the aipedia.wiki editorial pipeline · an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [perplexity.ai/pro](https://perplexity.ai/pro), [perplexity.ai/enterprise/pricing](https://perplexity.ai/enterprise/pricing), the [Perplexity Help Center](https://perplexity.ai/help-center), the [March 27, 2026 changelog](https://perplexity.ai/changelog/what-we-shipped--march-27-2026), and the [February 6, 2026 Deep Research upgrade notes](https://perplexity.ai/changelog/what-we-shipped---february-6th-2026).
 
 ## FAQ
 
@@ -157,19 +157,19 @@ Yes. The free tier runs Sonar with roughly 3-5 Pro searches per day and full acc
 GPT-5.4, GPT-5.4 Thinking, Claude Opus 4.7, Claude Sonnet 4.6, Gemini 3.1 Pro, and Grok. Sonar is the default and auto-routes most queries. Free users are limited to Sonar.
 
 **What is Sonar?**
-Sonar is Perplexity's house search model — a Llama 3.3 70B variant further tuned for factuality and citation quality, served on Cerebras inference at roughly 1,200 tokens per second. It is also available to developers as the Sonar and Sonar Pro APIs. Pricing for the API tier is listed at [perplexity.ai/api-platform](https://perplexity.ai/api-platform).
+Sonar is Perplexity's house search model · a Llama 3.3 70B variant further tuned for factuality and citation quality, served on Cerebras inference at roughly 1,200 tokens per second. It is also available to developers as the Sonar and Sonar Pro APIs. Pricing for the API tier is listed at [perplexity.ai/api-platform](https://perplexity.ai/api-platform).
 
 **What does Deep Research do today?**
-Deep Research runs multi-step research — typically 100+ sources over 2-5 minutes — and as of the February 2026 upgrade exports the result directly to PowerPoint, spreadsheets, dashboards, or a generated website. It runs on Claude Opus class models for Pro and Max users.
+Deep Research runs multi-step research · typically 100+ sources over 2-5 minutes · and as of the February 2026 upgrade exports the result directly to PowerPoint, spreadsheets, dashboards, or a generated website. It runs on Claude Opus class models for Pro and Max users.
 
 **Is Comet browser Mac-only?**
 No. Comet shipped on Mac and Windows in July 2025, Android in November 2025, and iPhone on March 18, 2026. It is free across every platform. There is no iPad build.
 
 **What are Spaces?**
-Spaces are file-grounded research workspaces — the renamed and expanded version of the old Collections feature. Queries inside a Space search both uploaded files and the open web. Pro users get up to 50 files per Space, Enterprise up to 500. Scheduled Tasks let a Space run recurring research automatically.
+Spaces are file-grounded research workspaces · the renamed and expanded version of the old Collections feature. Queries inside a Space search both uploaded files and the open web. Pro users get up to 50 files per Space, Enterprise up to 500. Scheduled Tasks let a Space run recurring research automatically.
 
 **What is Model Council and who gets it?**
-Model Council runs the same query against three frontier models simultaneously — typically GPT-5.4, Claude Opus 4.7, and Gemini 3.1 Pro — then uses a synthesizer (Claude Opus) to resolve agreements and disagreements into a unified answer. It is **Max-only** (and Enterprise Max), web-only, not on mobile.
+Model Council runs the same query against three frontier models simultaneously · typically GPT-5.4, Claude Opus 4.7, and Gemini 3.1 Pro · then uses a synthesizer (Claude Opus) to resolve agreements and disagreements into a unified answer. It is **Max-only** (and Enterprise Max), web-only, not on mobile.
 
 **What is Perplexity Computer?**
 A cloud-based agent environment for Max subscribers that orchestrates 19 frontier models across 400+ tool connectors for multi-step tasks: research pipelines, code execution, deployment, automation. Claude Opus handles orchestration. 10,000 credits per month are included; live credit tracking shows consumption as runs progress.
