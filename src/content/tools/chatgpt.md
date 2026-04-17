@@ -211,7 +211,7 @@ Yes. The free tier provides GPT-5.3 Instant access at no cost but includes ads a
 No. DALL-E 3 was retired in March 2025 and replaced by GPT Image 1.5, which is the current native image generation model across all ChatGPT tiers. References to DALL-E in older reviews describe a retired product.
 
 **Is Sora available in ChatGPT?**
-No. Sora was permanently discontinued in March 2026. Sora 2 exists as a separate product but is not integrated into ChatGPT. ChatGPT has no video generation capability as of April 2026.
+No. OpenAI's entire Sora line was discontinued between March 24 and April 1, 2026 due to compute costs, copyright pressure, and a strategic pivot to enterprise tools. ChatGPT has no video generation capability as of April 2026. For video, use Kling, Veo 3, Runway, Luma, or Pika.
 
 **What is ChatGPT Codex and which plan do I need?**
 Codex is OpenAI's AI coding agent integrated into ChatGPT. It handles multi-file, autonomous software development tasks. Plus users get day-to-day Codex access. The $100/mo Pro plan gets 5x Plus usage (10x through May 31, 2026 promo). The $200/mo Pro plan gets 20x Plus usage ([TechCrunch](https://techcrunch.com/2026/04/09/chatgpt-pro-plan-100-month-codex/)).
