@@ -2,16 +2,16 @@
 type: tool
 slug: imagen
 title: Imagen 4
-tagline: Google's image generation model built into Gemini, producing photorealistic and detailed images.
+tagline: Google DeepMind's flagship text-to-image model. Served through the Gemini app, Google AI Studio, the Gemini API, and Vertex AI.
 category: ai-image
 company: Google DeepMind
 url: https://gemini.google.com
 pricing_model: freemium
-price_range: "$0 (via Gemini, limited) / $20/month (Google One AI Premium)"
+price_range: "$0-$249.99/month"
 status: active
-launched: 2024-02
-last_updated: 2026-04-15
-last_verified: 2026-04-15
+launched: 2025-05
+last_updated: 2026-04-17
+last_verified: 2026-04-17
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -24,110 +24,164 @@ scores:
   value: 8
   moat: 7
   longevity: 8
-tags: [ai-image, image-generation, google, gemini, text-to-image, deepmind]
-seo_title: "Imagen 4 Review: Google's AI Image Generator via Gemini (2026)"
-meta_description: "Imagen 4 is Google's AI image generator built into Gemini. Access via Gemini free (limited) or Google One AI Premium ($20/mo). Full review with alternatives."
+tags: [ai-image, image-generation, google, gemini, deepmind, vertex-ai, ai-studio]
+seo_title: "Imagen 4: Features, Pricing & Review (April 2026)"
+meta_description: "Imagen 4 is Google's text-to-image model. Ships in Fast / Standard / Ultra tiers through the Gemini app, Google AI Studio (free testing), the Gemini API ($0.02-$0.06 per image), and Vertex AI. Review for April 2026."
 author: "aipedia.wiki Editorial"
+best_for:
+  - Google Workspace users generating visuals inside Docs and Slides
+  - developers wanting pay-per-image API access
+  - enterprise production via Vertex AI
+  - in-image text rendering for signage and typography
+not_best_for:
+  - aesthetic-quality leadership (Midjourney still wins)
+  - open weights or self-hosting
+  - uncensored or edgy content
 quick_answer: >-
-  Imagen 4 is Google DeepMind's text-to-image model integrated into Google Gemini, delivering photorealistic images with SynthID watermarking. It stands out with Google Workspace integration, generating images inside Docs and Slides. Free Gemini offers limited generations; unlimited access comes with Google One AI Premium at $19.99/month, including Gemini 3.1 Pro and 2TB storage. Suited for Google ecosystem users; Midjourney v8 alpha offers superior artistic results, Flux 2 excels in open-source flexibility.
+  Imagen 4 is Google's flagship image model, served through the Gemini app, Google AI Studio, the Gemini API, and Vertex AI. It ships in Fast, Standard, and Ultra tiers at $0.02, $0.04, and $0.06 per image on the API. Pick it for Google-stack workflows; skip it if aesthetic ceiling or open weights matter more.
+price_history:
+  - date: 2026-04-17
+    plan: "Gemini API"
+    price: "$0.02-$0.06 per image"
+    note: "Fast / Standard / Ultra tiers verified on ai.google.dev"
+  - date: 2026-04-17
+    plan: "Google AI Pro"
+    price: "$19.99/mo"
+    note: "Consumer bundle with Gemini 3.1 Pro, 2TB storage, verified"
 ---
 
 # Imagen 4
 
-Imagen 4 is Google DeepMind's text-to-image generation model, released in late 2025 as an upgrade over Imagen 3. Integrated directly into Google Gemini, it powers image creation within the chat interface, Google Workspace apps, and Vertex AI for enterprise use. Access occurs through the free Gemini tier with daily limits or the full Google One AI Premium plan at $19.99 per month, which bundles Gemini 3.1 Pro, 2TB storage, and expanded image generation [one.google.com/about/plans](https://one.google.com/about/plans).
+Google DeepMind's current flagship text-to-image model. Served through four surfaces: the consumer [Gemini](/tools/gemini/) app, Google AI Studio for free testing, the Gemini API for developers, and Vertex AI for enterprise production.
 
-The model generates 1024x1024 images from text prompts, with support for conversational refinement and style adjustments. Google reports Imagen 4 achieves higher fidelity in complex scenes, better anatomy consistency, and improved text rendering compared to Imagen 3, positioning it against GPT Image 1.5 in ChatGPT and Midjourney v8 alpha.
+The model ships in three tiers: **Fast**, **Standard**, and **Ultra**. API pricing runs $0.02, $0.04, and $0.06 per image. Every output carries a SynthID watermark for provenance.
 
+## System Verdict
 
-## Editor's Take
+> **Pick Imagen 4 if your workflow lives inside Google's stack.** Native generation inside Docs, Slides, and Gmail removes the copy-paste step that breaks momentum in Workspace-heavy teams. Developers get predictable per-image pricing through the Gemini API with no subscription required. Vertex AI covers enterprise with SLAs, SSO, and adjustable safety filters.
+>
+> **Skip it if you need aesthetic ceiling.** [Midjourney](/tools/midjourney/) still beats Imagen 4 on cinematic and stylized output. [Flux](/tools/flux/) beats it on open weights and LoRA fine-tuning. [Ideogram](/tools/ideogram/) beats it on dense text-in-image reliability for logos and posters.
+>
+> **Who pays which tier:** Google AI Studio free for experimentation, Gemini API pay-per-image for low-volume apps, Google AI Pro $19.99/mo for individuals using Gemini 3.1 Pro + Imagen 4 in Workspace, Google AI Ultra $249.99/mo for teams running Veo 3.1 video alongside image generation, Vertex AI for production with compliance needs.
 
-I tested Imagen 4 last week through Gemini 3.1 Pro on Google One AI Premium, $19.99 a month, which gets you unlimited generations plus 2TB storage. The photorealism shines in Workspace: I dropped a product mockup straight into a Slides deck in under 10 seconds, no exports needed. Text rendering beats Imagen 3 by a mile; prompts like "vintage ad for electric cars with legible 1980s typography" nailed it without the old warping.
+## Key Facts
 
-That said, Midjourney v8 alpha crushes it on artistic flair and prompt adherence, Imagen 4's outputs feel too safe, like Google's safety filters clip the edges on anything edgy. Free tier caps you at 15 images daily, which kills casual use.
+| | |
+|---|---|
+| **Model family** | Imagen 4 Fast · Imagen 4 Standard · Imagen 4 Ultra |
+| **API pricing** | Fast $0.02 · Standard $0.04 · Ultra $0.06 per image |
+| **Resolutions** | Up to 2K standard · 4K on Ultra via token-metered output |
+| **Free testing** | Google AI Studio playground (capped daily) |
+| **Consumer bundle** | Google AI Pro $19.99/mo · Google AI Ultra $249.99/mo |
+| **Enterprise** | Vertex AI with Google Cloud billing, SSO, audit |
+| **Watermark** | SynthID embedded in every output |
+| **Text rendering** | Materially improved over Imagen 3 for signage and typography |
+| **Open weights** | None |
+| **Best-in-class for** | Workspace-embedded generation, per-image API billing |
 
-Stick to this if you're locked into Google Workspace. Skip it for Discord artists or open-source tinkerers; Flux 2 dev gives better control for free. I'm biased toward ecosystem tools, but this one's value hinges on your Gmail habits.
+Every data point was verified against vendor documentation on 2026-04-17. See Sources.
 
-## What It Does
+## What it actually is
 
-Imagen 4 creates images from natural language prompts within the Gemini interface. Users input descriptions, and the model outputs photorealistic results; follow-up prompts allow variations, style shifts, or edits in the same conversation.
+One image model served through four entry points. Consumer users hit it through the Gemini app and get Imagen 4 generations bundled with Gemini 3.1 Pro on [Google AI Pro](https://gemini.google/subscriptions/) ($19.99/mo) or Ultra ($249.99/mo).
 
-Integration extends to Google Workspace: images generate directly in Docs, Slides, and Gmail, streamlining workflows for teams. ImageFX in Google Labs offers a dedicated interface with prompt enhancers and style explorers for standalone use.
+Developers access the same model through `ai.google.dev` (Gemini API) at per-image rates, or through AI Studio's browser playground for free testing. Enterprise runs through Vertex AI, where Imagen 4 usage appears as line items on the Google Cloud bill alongside inference, storage, and logging.
 
-Enterprise users access Imagen 4 via Vertex AI API, supporting batch generation, fine-tuning, and custom safety filters for production applications [cloud.google.com/vertex-ai/generative-ai/docs/image/overview](https://cloud.google.com/vertex-ai/generative-ai/docs/image/overview).
+The moat is integration depth. No other image model ships native inside Docs, Slides, Gmail, and Sheets. The Ultra tier also leans into 4K output, which matters for print and large-format signage that Midjourney and Flux still require an upscale pass to reach.
 
-## Who It's For
+## When to pick Imagen 4
 
-- Google One AI Premium subscribers seeking bundled image generation with Gemini Advanced
-- Google Workspace teams creating visuals in Docs, Slides, and Gmail
-- Marketers generating product mockups or campaign assets
-- Developers building image workflows via Vertex AI
-- Enterprises needing compliant AI generation with Google Cloud SLAs
-- Casual users in the Google ecosystem wanting quick image creation
+- **You work in Google Workspace every day.** Generating inside Slides without export-reimport is the killer feature.
+- **You need predictable per-image API billing.** Fast at $0.02 is the cheapest tier among major closed models for prototype apps.
+- **You need in-image text for signage, packaging, or vintage-style ads.** Imagen 4 materially improved over Imagen 3 on legibility.
+- **You need SynthID provenance.** Every output carries an embedded watermark, which matters for news and regulated publishing.
+- **You need Vertex AI for production.** Google Cloud compliance, SLAs, and adjustable safety filters beat consumer endpoints for enterprise workloads.
+
+## When to pick something else
+
+- **Maximum aesthetic quality for cinematic, stylized, or illustrative work:** [Midjourney](/tools/midjourney/). Still the reference point for visual polish.
+- **Open weights, LoRA fine-tuning, or self-hosting:** [Flux](/tools/flux/). Imagen 4 offers none of those.
+- **Dense text rendering for logos and posters:** [Ideogram](/tools/ideogram/) remains the safer pick for text-critical production.
+- **Image generation bundled with a chat assistant you already pay for:** GPT Image 1.5 inside [ChatGPT](/tools/chatgpt/).
+- **Video generation alongside images:** [Runway](/tools/runway/) for production control, or Veo 3.1 inside [Gemini](/tools/gemini/) Ultra.
 
 ## Pricing
 
-| Access Method | Price | Key Details |
-|--------------|-------|-------------|
-| Gemini Free | $0/month | 10-20 Imagen 4 generations per day |
-| Google One AI Premium | $19.99/month | Unlimited Imagen 4 in Gemini 3.1 Pro, 2TB storage, Workspace integration |
-| Vertex AI API | $0.04 per image | Pay-per-use for enterprise; volume discounts available |
-| ImageFX (Google Labs) | $0/month | Limited daily generations; no subscription required |
+Consumer subscription pricing via [gemini.google/subscriptions](https://gemini.google/subscriptions/):
 
-> Pricing verified at [one.google.com/about/plans](https://one.google.com/about/plans) and [cloud.google.com/vertex-ai/pricing](https://cloud.google.com/vertex-ai/pricing) as of 2026-04-15.
+| Plan | Price | What you get |
+|------|-------|---------------|
+| Gemini (free) | $0 | Limited daily Imagen 4 generations in the Gemini app |
+| Google AI Pro | $19.99/mo | Gemini 3.1 Pro, Imagen 4 at consumer limits, 2TB storage |
+| Google AI Ultra | $249.99/mo | Max Gemini 3.1 Pro, Veo 3.1 video, 30TB storage, Project Mariner |
 
-## Key Features
+API and enterprise pricing via [ai.google.dev/gemini-api/docs/models/imagen](https://ai.google.dev/gemini-api/docs/models/imagen) and [cloud.google.com/vertex-ai/generative-ai/pricing](https://cloud.google.com/vertex-ai/generative-ai/pricing):
 
-- Photorealistic output at 1024x1024 resolution with accurate lighting and textures
-- Conversational refinement: edit, vary, or upscale images via Gemini chat
-- Google Workspace integration for in-app image generation
-- SynthID watermarking embedded in every output for provenance tracking [deepmind.google/technologies/synthid](https://deepmind.google/technologies/synthid)
-- Improved text rendering for logos, signs, and typography
-- Vertex AI support for API access, fine-tuning, and enterprise compliance
-- ImageFX interface with style prompts and visual prompt builder
-- Safety filters blocking harmful content with adjustable enterprise controls
+| Tier | Per-image | Typical use |
+|------|-----------|-------------|
+| Imagen 4 Fast | $0.02 | Prototype apps, high volume at lower fidelity |
+| Imagen 4 Standard | $0.04 | Production default |
+| Imagen 4 Ultra | $0.06 | 4K output, campaign hero images |
+| Google AI Studio | $0 | Browser playground for free testing (capped) |
+| Vertex AI | Per-image + Cloud billing | Enterprise production with SLAs |
 
-## Limitations
+*Prices verified 2026-04-17 via [Gemini API docs](https://ai.google.dev/gemini-api/docs/models/imagen), [Vertex AI pricing](https://cloud.google.com/vertex-ai/generative-ai/pricing), and [Google AI subscriptions](https://gemini.google/subscriptions/). Ultra has a $124.99/mo introductory offer for the first three months.*
 
-- Tied to Google ecosystem; no standalone app or open-source weights
-- Daily limits persist even on premium plans during peak usage
-- Artistic styles lag Midjourney v8 alpha and Flux 2
-- Strict content policies block nudity, violence, and public figures
-- Vertex AI pricing accumulates for high-volume production
+## Against the alternatives
 
-## Bottom Line
+| | Imagen 4 | Midjourney V7 | GPT Image 1.5 |
+|---|---|---|---|
+| **Aesthetic ceiling** | Strong photoreal, mid on stylized | **Strongest** stylized/cinematic | Strong, softer look |
+| **Text rendering** | Materially improved, not Ideogram-grade | Improved on V7 | Good |
+| **API access** | Full public API, per-image | None public | OpenAI API |
+| **Workspace integration** | **Native in Docs, Slides, Gmail** | None | Via ChatGPT |
+| **Open weights** | No | No | No |
+| **Watermark / provenance** | SynthID on every output | None | C2PA metadata |
+| **Best viewed as** | Google-stack integrator | Visual-quality specialist | Bundled generalist |
 
-Imagen 4 delivers reliable photorealism and Workspace integration for Google users, making it a solid bundle component in the $19.99 Google One AI Premium plan. It matches GPT Image 1.5 in assistant integration but trails Midjourney v8 in creative output. Best for productivity-focused teams; artists should consider Midjourney or Flux 2.
+## Failure modes
 
-## Best Alternatives
+- **Aesthetic ceiling trails Midjourney.** Photoreal is strong, but cinematic composition and stylized illustration still look safer and more corporate out of the box.
+- **Safety filters reject more than competitors.** Nudity, public figures, violent imagery, and some medical or historical reference get blocked where Flux or Stable Diffusion self-hosted would pass.
+- **Rate limits on consumer tiers.** Even Google AI Pro caps daily Imagen 4 generations; hitting the wall during a deadline is a known failure mode.
+- **Vertex AI billing is opaque.** Charges land inside the broader Google Cloud invoice alongside inference, storage, and logging. Cost attribution for a single campaign takes real bookkeeping.
+- **No open weights.** Every workflow that needs offline, air-gapped, or fine-tuned generation has to use Flux or Stable Diffusion instead.
+- **Free AI Studio testing has undocumented daily caps.** The playground is free but not guaranteed. Production apps should move to metered API.
+- **Consumer and API outputs both carry SynthID.** Fine for most uses, but workflows that require clean pixel output without embedded watermarks need a different model.
 
-| Tool | Price | Key Difference |
-|------|-------|----------------|
-| [Midjourney](../tools/midjourney.md) | $10+/month | Superior artistic and stylized imagery |
-| [Flux](../tools/flux.md) | Free/API | Open weights, local deployment option |
-| [GPT Image](../tools/chatgpt.md) | $20/month via ChatGPT | Tighter prompt adherence, broader styles |
+## Methodology
+
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against the [Imagen 4 Gemini API launch post](https://developers.googleblog.com/en/imagen-4-now-available-in-the-gemini-api-and-google-ai-studio/), [Gemini API Imagen docs](https://ai.google.dev/gemini-api/docs/models/imagen), [Vertex AI generative pricing](https://cloud.google.com/vertex-ai/generative-ai/pricing), [Google AI subscriptions](https://gemini.google/subscriptions/), and the [SynthID overview](https://deepmind.google/technologies/synthid).
 
 ## FAQ
 
-**Is Imagen 4 free to use?**  
-Limited generations available free via Gemini app and ImageFX. Unlimited access requires Google One AI Premium at $19.99/month [one.google.com/about/plans](https://one.google.com/about/plans).
+**Is Imagen 4 free to use?**
+Partly. Google AI Studio allows free testing in the browser playground at capped daily volumes. The Gemini app on the free tier also includes limited Imagen 4 generations. Unlimited consumer access requires [Google AI Pro](https://gemini.google/subscriptions/) at $19.99/mo.
 
-**Can Imagen 4 images be used commercially?**  
-Yes, outputs from consumer and Vertex AI are cleared for commercial use per Google's terms. Review [gemini.google.com/faq](https://gemini.google.com/faq) for restrictions.
+**How much does Imagen 4 cost on the API?**
+Fast is $0.02 per image, Standard $0.04, Ultra $0.06, verified on [ai.google.dev](https://ai.google.dev/gemini-api/docs/models/imagen). Vertex AI uses the same per-image rates integrated into the Google Cloud bill.
 
-**What resolution does Imagen 4 support?**  
-Standard output is 1024x1024 pixels. Upscaling to 2048x2048 available in Gemini Advanced and Vertex AI [deepmind.google/technologies/imagen](https://deepmind.google/technologies/imagen).
+**Can Imagen 4 images be used commercially?**
+Yes. Google permits commercial use of outputs from both consumer tiers and Vertex AI, subject to the standard acceptable-use policy. SynthID watermarking remains embedded in the output.
 
+**Imagen 4 vs Midjourney V7 for quality?**
+Midjourney still wins on stylized, cinematic, and illustrative work. Imagen 4 is competitive on photoreal, closer than Imagen 3 was, and wins outright on in-image text legibility for signage-style prompts. For portfolio-grade art, Midjourney remains the default.
 
-## Review History
+**What is SynthID?**
+Google's provenance watermarking system. Every Imagen 4 output carries an invisible watermark detectable by Google's verification tools. Details on [deepmind.google/technologies/synthid](https://deepmind.google/technologies/synthid).
 
-- **2026-04-14:** Pricing and feature list verified against official docs.
-- **2026-01-16:** Flagship version bumped after the most recent model release.
-- **2025-12-16:** Pricing verified. Minor copy edits.
-- **2024-04-01:** First published review after two weeks of use.
+**Is Imagen 4 available outside Google?**
+No. The model is served only through Google surfaces: Gemini app, AI Studio, Gemini API, and Vertex AI. No open weights and no third-party licensing.
 
 ## Sources
 
-- [Gemini Official Site](https://gemini.google.com)
-- [Google One Plans](https://one.google.com/about/plans)
-- [Imagen on DeepMind](https://deepmind.google/technologies/imagen)
-- [Google Cloud Next 2026 Recap - The Verge](https://www.theverge.com/2026/4/10/google-cloud-next-imagen4-announcement)
+- [Imagen 4 Gemini API launch](https://developers.googleblog.com/en/imagen-4-now-available-in-the-gemini-api-and-google-ai-studio/): availability across Gemini API and AI Studio
+- [Gemini API Imagen docs](https://ai.google.dev/gemini-api/docs/models/imagen): model tiers, per-image pricing
+- [Vertex AI generative pricing](https://cloud.google.com/vertex-ai/generative-ai/pricing): enterprise per-image rates
+- [Google AI subscriptions](https://gemini.google/subscriptions/): Google AI Pro and Ultra consumer plans
+- [SynthID overview](https://deepmind.google/technologies/synthid): provenance watermarking
+
+## Related
+
+- **Category:** [AI Image Generation](/categories/ai-image/)
+- **Comparisons:** [Imagen vs Midjourney](/comparisons/imagen-vs-midjourney/) · [Imagen vs Flux](/comparisons/imagen-vs-flux/) · [Imagen vs ChatGPT](/comparisons/imagen-vs-chatgpt/)
