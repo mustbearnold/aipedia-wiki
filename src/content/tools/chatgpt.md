@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2022-11
-last_updated: 2026-04-15
-last_verified: 2026-04-15
+last_updated: 2026-04-17
+last_verified: 2026-04-17
 update_frequency: monthly
 seo_title: "ChatGPT: Features, Pricing & Review (April 2026)"
 meta_description: "ChatGPT runs on GPT-5.3 and GPT-5.4 models as of April 2026. Free tier includes ads; Plus is $20/mo ad-free; Pro plans at $100 and $200/mo add Codex coding agent. DALL-E and Sora are retired."
@@ -42,18 +42,10 @@ not_best_for:
 quick_answer: >-
   ChatGPT is OpenAI's general-purpose AI assistant, running GPT-5.3 Instant by default across all tiers and GPT-5.4 Thinking/Pro on paid plans as of April 2026. GPT-4o was fully retired February 13, 2026. The free tier now includes ads; Plus ($20/mo) is ad-free with GPT-5.4 Thinking; two Pro tiers ($100 and $200/mo) add the Codex AI coding agent at 5x and 20x usage respectively. Image generation uses GPT Image 1.5 (replaced DALL-E 3 in March 2025). Sora video was permanently discontinued in March 2026. Core features include Operator/Agent Mode, Advanced Voice, Projects, Memory, Canvas, and Custom GPTs. Codex is the standout new capability for developers. Compared to Claude Opus 4.6, Gemini 3.1 Pro, and Grok 4, ChatGPT's breadth of integrations and its Codex coding agent remain its clearest advantages.
 price_history:
-  - date: 2023-02-01
-    plan: "Plus"
-    price: "$20/mo"
-    note: "ChatGPT Plus launched"
-  - date: 2024-01-10
-    plan: "Team"
-    price: "$25/user/mo"
-    note: "Team tier launched"
-  - date: 2024-09-12
+  - date: 2026-04-09
     plan: "Pro"
-    price: "$200/mo"
-    note: "Pro tier launched with o1 access"
+    price: "$100/mo"
+    note: "New $100 Pro tier launched with 5x Codex (10x promo to May 31 2026)"
   - date: 2026-04-15
     plan: "Plus"
     price: "$20/mo"
@@ -62,7 +54,7 @@ price_history:
 
 # ChatGPT
 
-OpenAI's general-purpose AI assistant. Runs the GPT-5 model family as of April 2026 across web, mobile, and desktop — text, image generation (GPT Image 1.5), web browsing with citations, sandboxed code execution, the Codex coding agent, and Operator Agent Mode in a single interface. Sora video and DALL-E 3 are both retired; GPT-4o was sunset February 13, 2026.
+OpenAI's general-purpose AI assistant. Runs the GPT-5 model family across web, mobile, and desktop — text, image generation (GPT Image 1.5), web browsing with citations, sandboxed code execution, the Codex coding agent, and Operator Agent Mode in a single interface. No video generation: Sora was shut down in March 2026.
 
 ## System Verdict
 
@@ -77,22 +69,22 @@ OpenAI's general-purpose AI assistant. Runs the GPT-5 model family as of April 2
 | | |
 |---|---|
 | **Flagship model** | GPT-5.4 Pro (Pro / Team / Enterprise only) |
-| **Default model** | GPT-5.3 Instant (all tiers) |
+| **Default model** | GPT-5.3 Instant (all tiers) — Free/Go also get GPT-5.4 mini via "Thinking" in the + menu |
 | **Context window** | Not publicly specified for GPT-5 family |
 | **Pricing** | Free · Go $8 · Plus $20 · Pro $100 / $200 · Team $25/user · Enterprise custom |
-| **Image generation** | GPT Image 1.5 (replaced DALL-E 3 in March 2025) |
-| **Video generation** | None (Sora discontinued March 2026) |
+| **Image generation** | GPT Image 1.5 |
+| **Video generation** | None (Sora shut down March 2026) |
 | **Coding agent** | Codex — included on Plus, scaled 5x / 20x on Pro tiers |
 | **Agent mode** | Operator / Agent Mode on Plus and above |
-| **Retired features** | GPT-4o (Feb 13 2026) · Sora (Mar 2026) · DALL-E 3 (Mar 2025) · o1/o3 series |
+| **Recent shutdowns** | Sora (Mar 2026) · GPT-4o (Feb 2026) |
 
 Every data point above was verified against vendor sources on 2026-04-15. See Sources.
 
 ## What it actually is
 
-One consumer-facing product covering text chat, image gen, web search, code execution, voice, and autonomous agent workflows. Users pay for model access and Codex usage; free tier runs ads to subsidize GPT-5.3 Instant. The GPT-5 family replaced the entire GPT-4 and o-series lineup in a single transition on February 13, 2026.
+One consumer-facing product covering text chat, image gen, web search, code execution, voice, and autonomous agent workflows. Users pay for model access and Codex usage; the free tier runs ads to subsidize GPT-5.3 Instant.
 
-The product's real moat is ecosystem — the GPT Store carries more third-party custom-GPTs than any competing assistant, and Operator Mode integrates natively with Slack, Google Drive, GitHub, and Zapier. The Codex coding agent (launched in its current form on the April 9, 2026 Pro relaunch) is the one capability that has no direct equivalent in Claude or Gemini's consumer tiers.
+The real moat is ecosystem. The GPT Store carries more third-party custom-GPTs than any competing assistant, and Operator Mode integrates natively with Slack, Google Drive, GitHub, and Zapier. Codex, the coding agent that runs as part of Pro tiers, has no direct equivalent in Claude or Gemini's consumer products.
 
 ## When to pick ChatGPT
 
@@ -115,15 +107,15 @@ The product's real moat is ecosystem — the GPT Store carries more third-party 
 
 | Plan | Price | Models | Codex | Ads | Who's it for |
 |------|-------|--------|-------|-----|--------------|
-| Free | $0 | GPT-5.3 Instant | Limited | Yes | Casual users OK with ads |
-| Go | $8/mo | GPT-5.3 Instant | Limited | Yes | Budget paid — skip, Plus is better value |
+| Free | $0 | GPT-5.3 Instant (+ GPT-5.4 mini via Thinking) | Limited | Yes | Casual users OK with ads, ~10 msg / 5h |
+| Go | $8/mo | GPT-5.3 Instant (+ GPT-5.4 mini via Thinking) | Limited | Yes | ~160 msg / 3h, no Thinking on tougher models |
 | Plus | $20/mo | + GPT-5.4 Thinking | Day-to-day | No | **Most individuals should land here** |
 | Pro $100 | $100/mo | + GPT-5.4 Pro | 5x Plus (10x promo) | No | Developers running Codex weekly |
 | Pro $200 | $200/mo | + GPT-5.4 Pro | 20x Plus | No | Sustained agentic coding workloads |
 | Team | $25/user/mo | Full Pro lineup | Scaled | No | 2+ seat teams wanting admin + no training |
 | Enterprise | ~$60/user | Full Pro lineup | High | No | SSO, SOC 2, audit, data privacy |
 
-Prices verified 2026-04-15 via [MacRumors](https://www.macrumors.com/2026/04/09/openai-pro-subscription-tiers/) and [TechCrunch](https://techcrunch.com/2026/04/09/chatgpt-pro-plan-100-month-codex/). The Codex 10x promotion for $100 Pro subscribers runs through May 31, 2026; it reverts to 5x after.
+Prices verified 2026-04-17 via [OpenAI pricing](https://chatgpt.com/pricing/), [MacRumors](https://www.macrumors.com/2026/04/09/openai-pro-subscription-tiers/), and [TechCrunch](https://techcrunch.com/2026/04/09/chatgpt-pro-plan-100-month-codex/). The Codex 10x promotion for $100 Pro subscribers runs through May 31, 2026; it reverts to 5x after.
 
 ## Against the alternatives
 
@@ -149,7 +141,7 @@ Prices verified 2026-04-15 via [MacRumors](https://www.macrumors.com/2026/04/09/
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline — an automated system that ingests vendor documentation, normalizes factual claims, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-15.
+This page was produced by the aipedia.wiki editorial pipeline — an automated system that ingests vendor documentation, normalizes factual claims, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17.
 
 ## Pricing
 
@@ -163,7 +155,7 @@ This page was produced by the aipedia.wiki editorial pipeline — an automated s
 | Team/Business | $25/user/mo | Full Pro model suite | Scaled | No | Workspace + admin controls |
 | Enterprise | Custom (~$60/user/mo) | Full Pro model suite | High | No | SOC 2, SSO, audit logs, data privacy |
 
-*Prices verified 2026-04-15 via [MacRumors](https://www.macrumors.com/2026/04/09/openai-pro-subscription-tiers/) and [TechCrunch](https://techcrunch.com/2026/04/09/chatgpt-pro-plan-100-month-codex/).*
+*Prices verified 2026-04-17 via [OpenAI pricing](https://chatgpt.com/pricing/), [MacRumors](https://www.macrumors.com/2026/04/09/openai-pro-subscription-tiers/), and [TechCrunch](https://techcrunch.com/2026/04/09/chatgpt-pro-plan-100-month-codex/).*
 
 The $100/mo Pro plan was introduced on April 9, 2026, directly targeting Claude Max 5x. The Codex 10x promo (for $100 Pro subscribers) runs through May 31, 2026, after which it reverts to 5x.
 

@@ -100,3 +100,20 @@ author: "aipedia.wiki Editorial"
 - **Scores must be honest.** Low moat or longevity scores should be stated plainly.
 - **Every claim needs a source.** Inline links to official pricing pages where possible.
 - **"Prices verified" date** must appear below every pricing table.
+
+- **Present-tense facts only.** Surface what's relevant to a TODAY reader. Historical detail (retirements, product launches, price changes) stays out unless a current user would still be searching for or expecting the retired thing.
+  - Recency test against today's date:
+    - Within ~6 months → keep
+    - 6-12 months → keep only if it explains a current gap ("no video gen — Sora shut down last year")
+    - 12+ months → drop from main page
+  - `price_history` frontmatter: keep only the latest 2-3 entries
+  - Review History section: max 4 recent entries
+  - Key Facts "recent shutdowns" row: only list items retired within 12 months
+  - Body prose: no "back in 2023" / "in early 2024" unless directly relevant to a today choice
+
+- **Agent-voice template** (use for all editorial analysis blocks):
+  - `## System Verdict` — top-of-page callout in blockquote form. Declarative, names alternatives. "Pick X if Y. Skip if Z." No "I tested", no first-person, no hedging.
+  - `## Key Facts` — 2-col table (label / value). Machine-readable, no prose.
+  - `## When to pick X` / `## When to pick something else` — concrete scenarios as bullets.
+  - `## Failure modes` — what goes wrong in real use. Specific, cite when possible.
+  - `## Methodology` footer — short disclosure: automated pipeline, verified date, scoring rubric.
