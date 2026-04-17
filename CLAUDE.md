@@ -113,6 +113,13 @@ author: "aipedia.wiki Editorial"
 
 - **NO em-dashes or en-dashes in content.** Both `—` and `–` are statistical markers of unedited AI output post-2024 and Google's Helpful Content system trains against them. Pre-commit hook (`scripts/block-ai-tells.mjs`) blocks new commits that introduce them. Replace: `—` → `. ` (sentence break) or `:` (definition) or `,` (comma pause). `–` → `-` (ASCII hyphen). Applies to everything in `src/content/*.md`.
 
+- **Tight-prose rules (permanent, 2026-04-17).** User-locked-in editorial standard. Every tool page, comparison, and content item must pass these on every edit:
+  1. **Quick Answer body ≤ 60 words.** 3 short sentences max. First sentence is the bold verdict. Facts live in the chip strip + Key Facts table, NOT inline in the Quick Answer prose.
+  2. **No `·` (middle-dot) in prose.** Legitimate only in: table cells (`Sonnet · Haiku · Opus`), inline spec strings (`$10 · $30 · $60`), related-links lists. If `·` is being used as a heavy comma or sentence-pause inside a paragraph, restructure.
+  3. **Sentences stay under ~25 words.** One idea per sentence. 35+ words means split.
+  4. **Paragraphs break every 2-3 sentences** in body prose. Hard-enter between ideas — no one-paragraph walls.
+  The Midjourney tool page (`src/content/tools/midjourney.md`) is the canonical reference for this structure.
+
 - **Agent-voice template** (use for all editorial analysis blocks):
   - `## System Verdict` — top-of-page callout in blockquote form. Declarative, names alternatives. "Pick X if Y. Skip if Z." No "I tested", no first-person, no hedging.
   - `## Key Facts` — 2-col table (label / value). Machine-readable, no prose.

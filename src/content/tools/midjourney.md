@@ -38,7 +38,7 @@ not_best_for:
   - users needing a free tier
   - guaranteed text rendering in logos or thumbnails
 quick_answer: >-
-  Midjourney is the aesthetic-quality leader in AI image generation. V7 has been the production default since June 16, 2025 across web and Discord. V8 Alpha launched March 17, 2026 and V8.1 Alpha followed on April 14, 2026, both on alpha.midjourney.com only · roughly 4-5x faster than earlier models with native 2K HD output and improved text rendering when prompts use quotation marks. Plans run $10 (Basic), $30 (Standard), $60 (Pro), $120 (Mega) per month with 20% off annual. No free tier. No official public API · only an invite-gated Enterprise API; developers still typically route through unofficial third-party wrappers. Paid subscribers get commercial rights; businesses grossing $1M+ annually must be on Pro or Mega. Best for designers and creators who prize visual polish; skip for programmatic workflows, logo text rendering (use Ideogram), or anyone who needs a free starting point (use Leonardo or Flux).
+  Midjourney is the aesthetic-quality leader in AI image generation. V7 is production; V8 Alpha and V8.1 Alpha are gated to alpha.midjourney.com while they mature. No free tier and no public API. Pick it when visual polish outranks everything else; skip for programmatic workflows, reliable logo text (use Ideogram), or anything that needs free generations to get started.
 price_history:
   - date: 2024-01-15
     plan: "Mega"
@@ -47,18 +47,22 @@ price_history:
   - date: 2026-04-15
     plan: "Basic"
     price: "$10/mo"
-    note: "Verified, unchanged · all four tiers flat since 2024"
+    note: "Verified unchanged. All four tiers flat since 2024."
 ---
 
 # Midjourney
 
-Midjourney is the aesthetic-quality leader in AI image generation. **V7** is the production default across the web app and Discord as of April 2026. **V8 Alpha** (launched March 17, 2026) and **V8.1 Alpha** (April 14, 2026) ship through [alpha.midjourney.com](https://alpha.midjourney.com) · roughly 4-5× faster than prior models, with default HD 2K output on V8.1 and improved text rendering when prompts enclose target strings in quotation marks. Pricing is $10-$120/month with no free tier and no generally-available public API.
+Black Forest Labs' aesthetic-quality leader in AI image generation. **V7** is today's production default on web and Discord. **V8 Alpha** and **V8.1 Alpha** ship through [alpha.midjourney.com](https://alpha.midjourney.com) while they mature: faster renders, HD 2K output, better text rendering when prompts quote the target string.
+
+Pricing runs $10-$120/month. No free tier. No generally-available public API.
 
 ## System Verdict
 
-> **Pick Midjourney if visual quality is the single axis you cannot compromise on.** Still the reference point for cinematic composition, lighting, and stylized illustration. The web editor now leads Discord for most workflows · Remix, Vary Region, Pan, Zoom Out, Retexture, Smart Select, and a proper Organize page with folders, search, and bulk actions. Niji 7 (launched January 9, 2026) covers anime and illustrative styles in the same subscription.
+> **Pick Midjourney if visual quality is the single axis you cannot compromise on.** Still the reference point for cinematic composition, lighting, and stylized illustration.
 >
-> **Skip it if you need a programmatic API, a free tier, or guaranteed text rendering.** There is no generally-available public API in April 2026 · an Enterprise dashboard API exists but access is invitation-only. The $10/mo Basic floor shuts out casual users (Leonardo free tier and Flux open weights are better entry points). Ideogram still beats V7 on text-in-image for logos and thumbnails, though V8's quoted-text handling narrows that gap on alpha.
+> The web editor now leads Discord for most workflows. Remix, Vary Region, Pan, Zoom Out, Retexture, Smart Select, and a proper Organize page with folders, search, and bulk actions are all native. Niji 7 (launched January 2026) covers anime and illustrative styles in the same subscription.
+>
+> **Skip it if you need a programmatic API, a free tier, or guaranteed text rendering.** The only official API is Enterprise, and it is invitation-gated. Ideogram still beats V7 on text-in-image for logos and thumbnails. The $10/mo Basic floor shuts out casual users; Leonardo and Flux are better entry points.
 >
 > **Who pays which tier:** Basic $10/mo for hobbyists, Standard $30/mo for most working designers (unlimited Relax + 15 Fast hours), Pro $60/mo if you need Stealth mode for client confidentiality, Mega $120/mo for agencies running sustained Fast-mode workloads. Businesses grossing over $1M/year must be on Pro or Mega for commercial rights.
 
@@ -81,7 +85,11 @@ Every data point above was verified against vendor documentation on 2026-04-15. 
 
 ## What it actually is
 
-One image-generation product served through two interfaces · a web app (including the alpha site for V8/V8.1) and a Discord bot · with a single subscription covering both. V7 handles production workloads; V8 and V8.1 Alpha are opt-in previews on alpha.midjourney.com. Niji 7 is the sister model for anime and illustrative styles. Output editing happens through the web editor's Remix, Vary Region, Pan, Zoom Out, Retexture, Paint, Smart Select, and Move/Resize tools.
+One image-generation product served through two interfaces: a web app (including the alpha site for V8 and V8.1) and a Discord bot. A single subscription covers both.
+
+V7 handles production workloads. V8 and V8.1 Alpha are opt-in previews on alpha.midjourney.com. Niji 7 is the sister model for anime and illustrative styles.
+
+Output editing happens through the web editor. Remix, Vary Region, Pan, Zoom Out, Retexture, Paint, Smart Select, and Move/Resize are all first-class tools, not after-the-fact plugins.
 
 The moats: Midjourney's aesthetic prior (cinematic composition, lighting, color theory) remains the clearest differentiator against every other major generator; the Organize page gives a purpose-built asset library Discord can't match; and Niji 7 removes the need for a separate anime-specialist tool. The API gap is a real weakness for developers but a deliberate product choice, not a roadmap item.
 
@@ -89,7 +97,7 @@ The moats: Midjourney's aesthetic prior (cinematic composition, lighting, color 
 
 - **You need the strongest "does this look good" output.** Midjourney still tops blind preference tests for cinematic and stylized work. Flux and GPT Image 1.5 are closer on photoreal than they were a year ago, but not on mood and composition.
 - **You work on moodboards, concept art, or marketing visuals.** The web editor's Organize page (folders, bulk actions, search across prompts and parameters) is the closest thing to a proper asset library in any image generator.
-- **You shoot anime or illustrative styles regularly.** Niji 7 is bundled in the same subscription · no second tool required.
+- **You shoot anime or illustrative styles regularly.** Niji 7 is bundled in the same subscription. No second tool required.
 - **You need Stealth mode for client work.** Pro and Mega keep generations off the public feed, which matters for agencies and freelance designers under NDA.
 - **Your shop can live without an API.** Solo designers and small teams doing manual work get the most out of Midjourney; the moment workflows need automation, the trade-off shifts.
 
@@ -128,19 +136,19 @@ Subscription pricing via [midjourney.com pricing](https://docs.midjourney.com/hc
 
 ## Failure modes
 
-- **No public API.** The official Enterprise API is invitation-only. Third-party wrappers (APIFRAME, ImagineAPI, PiAPI, etc.) use browser emulation or bot automation that violates Midjourney's ToS · accounts can be banned. If automation is required, pick a different tool.
+- **No public API.** The official Enterprise API is invitation-only. Third-party wrappers (APIFRAME, ImagineAPI, PiAPI, and others) use browser emulation or bot automation that violates Midjourney's ToS. Accounts can be banned. If automation is required, pick a different tool.
 - **Text rendering is "better, not fixed."** V7 improved signage-quality text; V8 Alpha reads quoted strings more accurately; neither hits Ideogram-grade reliability for logos and dense typography.
 - **Hand and finger artifacts still surface.** V7 reduced the rate materially, but complex poses with multiple hands or interlaced fingers remain a known weakness.
 - **V8 and V8.1 are alpha-only.** They live on alpha.midjourney.com, not the main site or Discord. V8.1 creations do not appear on the main website feed. Fast mode only on V8 Alpha.
 - **Moderation false-positives.** Safety filters reject prompts containing anatomical, violent, or political terms even in obviously benign contexts (medical illustration, historical reference, costume work). Appeals are slow.
 - **Distinctive "Midjourney look" leaks through.** Experienced viewers can identify MJ output by its lighting and composition defaults. Using `--raw`, Style References, or Personalization profiles helps; it does not eliminate the signature.
 - **Basic plan images are public by default.** Stealth mode (private gallery) requires Pro or Mega. Freelancers on Basic or Standard leak client concepts to the public feed unless they manually manage visibility.
-- **Revenue threshold for commercial rights.** Companies grossing over $1M/year must be on Pro ($60) or Mega ($120) to use outputs commercially · Basic and Standard commercial rights are for sole operators and smaller shops only.
+- **Revenue threshold for commercial rights.** Companies grossing over $1M/year must be on Pro ($60) or Mega ($120). Basic and Standard commercial rights are for sole operators and smaller shops only.
 - **Copyright on unmodified outputs.** Under U.S. law, purely AI-generated images likely have no copyright protection. Midjourney grants usage rights, but you cannot stop others from copying unmodified outputs. Substantive human editing strengthens the claim.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline · an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-15 against [Midjourney Version docs](https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version), [Comparing Plans](https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans), [Using Images & Videos Commercially](https://docs.midjourney.com/hc/en-us/articles/27870375276557-Using-Images-Videos-Commercially), the [V8 Alpha update](https://updates.midjourney.com/v8-alpha/), and the [Niji V7 announcement](https://updates.midjourney.com/niji-v7/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-15 against [Midjourney Version docs](https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version), [Comparing Plans](https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans), [Using Images & Videos Commercially](https://docs.midjourney.com/hc/en-us/articles/27870375276557-Using-Images-Videos-Commercially), the [V8 Alpha update](https://updates.midjourney.com/v8-alpha/), and the [Niji V7 announcement](https://updates.midjourney.com/niji-v7/).
 
 ## FAQ
 
@@ -148,18 +156,18 @@ This page was produced by the aipedia.wiki editorial pipeline · an automated sy
 No. The free trial was discontinued in late 2024. The cheapest plan is Basic at $10/month. Free alternatives include [Leonardo](/tools/leonardo/) and self-hosted [Stable Diffusion](/tools/stable-diffusion/).
 
 **What is the current Midjourney version?**
-V7 is the production default across the web app and Discord as of April 2026. V8 Alpha (released March 17, 2026) and V8.1 Alpha (released April 14, 2026) are preview-only on [alpha.midjourney.com](https://alpha.midjourney.com) · they are not yet the default on the main site or Discord.
+V7 is the production default across the web app and Discord as of April 2026. V8 Alpha (released March 17, 2026) and V8.1 Alpha (released April 14, 2026) are preview-only on [alpha.midjourney.com](https://alpha.midjourney.com). Neither is the default on the main site or Discord yet.
 
 **What's new in V8 Alpha and V8.1 Alpha?**
-V8 Alpha runs roughly 4-5× faster than V7 (Fast mode only), reads prompts more accurately, and renders quoted text strings with notably better legibility. V8.1 Alpha adds default HD · native 2K images without an explicit upscale step ([V8 Alpha update](https://updates.midjourney.com/v8-alpha/)).
+V8 Alpha runs roughly 4-5× faster than V7 (Fast mode only), reads prompts more accurately, and renders quoted text strings with notably better legibility. V8.1 Alpha adds default HD: native 2K images without an explicit upscale step ([V8 Alpha update](https://updates.midjourney.com/v8-alpha/)).
 
 **Does Midjourney have an API?**
-Not a generally-available one. An Enterprise API exists but is invitation-gated via the Midjourney developer application. Unofficial third-party wrappers (APIFRAME, PiAPI, ImagineAPI, etc.) operate via browser automation and violate Midjourney's ToS · they risk account bans and should be treated as unsupported.
+Not a generally-available one. An Enterprise API exists but is invitation-gated via the Midjourney developer application. Unofficial third-party wrappers (APIFRAME, PiAPI, ImagineAPI, and others) operate via browser automation and violate Midjourney's ToS. They risk account bans and should be treated as unsupported.
 
 **Do I get commercial rights to my images?**
-Yes for paid tiers · Basic, Standard, Pro, and Mega all include commercial rights. Free-trial users have no commercial rights. Businesses grossing over $1,000,000/year must be on Pro or Mega to use outputs commercially ([Using Images & Videos Commercially](https://docs.midjourney.com/hc/en-us/articles/27870375276557-Using-Images-Videos-Commercially)).
+Yes for paid tiers. Basic, Standard, Pro, and Mega all include commercial rights. Free-trial users have no commercial rights. Businesses grossing over $1,000,000/year must be on Pro or Mega to use outputs commercially ([Using Images & Videos Commercially](https://docs.midjourney.com/hc/en-us/articles/27870375276557-Using-Images-Videos-Commercially)).
 
-**Web app or Discord · which should I use?**
+**Web app or Discord, which should I use?**
 Most new users should start on the web app. The editor now carries the heavier toolset (Remix, Vary Region, Pan, Zoom Out, Retexture, Smart Select) and the Organize page handles folders, search, and bulk actions Discord has no equivalent for. Discord still wins on community and live feedback, and the same subscription covers both ([Web vs Discord](https://docs.midjourney.com/hc/en-us/articles/33329300781837-Web-vs-Discord)).
 
 **Midjourney vs Ideogram for text in images?**
