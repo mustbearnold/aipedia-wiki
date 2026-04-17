@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated": "2026-04-17T23:04:19.583Z",
-  "total_active": 178,
+  "generated": "2026-04-17T23:05:28.446Z",
+  "total_active": 179,
   "total_dead": 8,
   "tools": {
     "activepieces": {
@@ -55,8 +55,8 @@
       "pricing_model": "enterprise",
       "price_range": "$30K-$500K+/year",
       "launched": "2016-01",
-      "last_updated": "2026-04-18T00:00:00.000Z",
-      "last_verified": "2026-04-18T00:00:00.000Z",
+      "last_updated": "2026-04-17T00:00:00.000Z",
+      "last_verified": "2026-04-17T00:00:00.000Z",
       "update_frequency": "quarterly",
       "scores": {
         "utility": 9,
@@ -6338,6 +6338,45 @@
         "link": null
       },
       "page_path": "wikis/ai-tools/pages/tools/tripo3d.md"
+    },
+    "typeface": {
+      "slug": "typeface",
+      "status": "active",
+      "title": "Typeface",
+      "category": "ai-writing",
+      "secondary_categories": [
+        "ai-image",
+        "ai-automation"
+      ],
+      "company": "Typeface Inc.",
+      "url": "https://www.typeface.ai",
+      "pricing_model": "enterprise",
+      "price_range": "Enterprise custom (contact sales)",
+      "launched": "2022-02",
+      "last_updated": "2026-04-17T00:00:00.000Z",
+      "last_verified": "2026-04-17T00:00:00.000Z",
+      "update_frequency": "quarterly",
+      "scores": {
+        "utility": 8,
+        "value": 6,
+        "moat": 7,
+        "longevity": 7
+      },
+      "tags": [
+        "enterprise-content",
+        "brand-ai",
+        "ai-writing",
+        "typeface",
+        "content-automation"
+      ],
+      "affiliate": {
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null
+      },
+      "page_path": "wikis/ai-tools/pages/tools/typeface.md"
     },
     "udio": {
       "slug": "udio",
