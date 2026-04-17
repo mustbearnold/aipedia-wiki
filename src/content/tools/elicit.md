@@ -2,18 +2,16 @@
 type: tool
 slug: elicit
 title: Elicit
-tagline: >-
-  AI research assistant that automates systematic literature review, finding,
-  screening, and extracting structured data from academic papers at scale.
+tagline: AI research assistant that automates systematic literature review, paper screening, and structured data extraction from 125M+ academic papers.
 category: ai-research
 company: Ought Inc.
 url: 'https://elicit.com'
 pricing_model: freemium
-price_range: $0-$169/month
+price_range: $0-$79/user/month
 status: active
 launched: 2021-01
-last_updated: 2026-04-15T00:00:00.000Z
-last_verified: '2026-04-15'
+last_updated: 2026-04-17
+last_verified: 2026-04-17
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -27,11 +25,9 @@ scores:
   moat: 7
   longevity: 9
 tags: [academic-research, literature-review, systematic-review, paper-search, data-extraction, rct, evidence-synthesis]
-seo_title: 'Elicit: Features, Pricing & Review (2026)'
+seo_title: 'Elicit: Features, Pricing & Review (April 2026)'
 meta_description: >-
-  Elicit automates systematic literature review with AI-powered paper search and
-  structured data extraction. Free tier includes 5,000 credits; Plus costs
-  $12/mo. Updated April 2026.
+  Elicit automates systematic literature review with AI-powered paper search and structured data extraction across 125M+ papers. Free (5,000 credits one-time), Plus $12/mo, Pro $49/mo, Team $79/user/mo. Verified April 2026.
 author: aipedia.wiki Editorial
 best_for:
   - academic researchers
@@ -43,122 +39,137 @@ not_best_for:
   - non-english literature focus
   - general-purpose web search
 quick_answer: >-
-  Elicit is an AI research assistant developed by Ought Inc., built specifically to automate systematic literature review for academic researchers, policy analysts, and evidence-synthesis professionals. Its defining capability is structured data extraction: it can pull configurable columns including sample size, population, intervention, outcomes, and effect sizes from hundreds of papers simultaneously across a corpus of 125 million-plus studies. A free tier provides 5,000 credits per month; Plus costs $12/month; Pro costs $60/month; Enterprise is custom pricing. Best for researchers conducting formal systematic or scoping reviews, not for casual research questions or non-academic topics, where Perplexity or Consensus serve better.
+  Elicit automates systematic literature review across 125M+ papers. Structured extraction pulls sample size, population, intervention, and effect sizes from hundreds of studies at once. Pick it for formal reviews and meta-analyses. Skip it for casual questions or news research.
+price_history:
+  - date: 2026-04-17
+    plan: "Pro"
+    price: "$49/mo"
+    note: "Verified unchanged. 12 reports/month, 10 concurrent alerts."
+  - date: 2026-04-17
+    plan: "Plus"
+    price: "$12/mo"
+    note: "Verified unchanged. 4 automated reports/month."
 ---
 
 # Elicit
 
-Elicit is an AI research assistant developed by Ought Inc., founded in 2021 and mission-driven toward scalable, reliable scientific reasoning. It automates key steps of systematic literature review: finding relevant papers, extracting structured data from study methods and results, and synthesizing findings across sources. It is primarily used by academic researchers, policy analysts, and evidence-based practitioners who conduct formal literature reviews. Its key differentiator is the structured extraction workflow: Elicit can extract specific columns of data from hundreds of papers simultaneously, including sample sizes, populations, interventions, outcomes, and effect sizes, at a level of accuracy and scale that no manual workflow can match. As of April 2026, Elicit offers a free tier with 5,000 credits per month, Plus at $12 per month, Pro at $60 per month, and Enterprise at custom pricing.
+Ought Inc.'s AI research assistant for academic literature review. Queries a corpus of 125 million-plus papers, screens abstracts at scale, and extracts structured columns (sample size, population, intervention, outcomes, effect sizes) from hundreds of studies in one run.
 
-Elicit was designed from the ground up for scientific rigor rather than casual research. The Ought team built it with a specific use case in mind: the systematic review, which is the gold standard of evidence synthesis in medicine, public health, and policy but which typically requires 6 to 18 months of researcher time to complete. Elicit compresses the literature search and initial screening phases dramatically, allowing researchers to surface relevant papers across a corpus of 125 million-plus papers, screen abstracts at scale, and extract structured data from full-text papers without reading each one individually. The result is a tool used by researchers at Stanford, NIH, WHO, and major academic medical centers, as well as by systematic reviewers at policy organizations and evidence synthesis bodies.
+Pricing: Free (5,000 one-time credits), Plus $12/mo, Pro $49/mo, Team $79/user/mo, Enterprise custom.
 
+## System Verdict
 
-## Editor's Take
+> **Pick Elicit if the output you need is a structured evidence table, not a chat answer.** Systematic reviewers, meta-analysts, and policy teams get the most leverage. No other tool extracts configurable data columns from hundreds of papers with comparable accuracy.
+>
+> **Skip it if you want casual research answers or general web knowledge.** [Perplexity](/tools/perplexity/) and [Consensus](/tools/consensus/) answer research questions faster. [Semantic Scholar](/tools/semantic-scholar/) covers free discovery. Elicit's value is the extraction table, not the chat.
+>
+> **Who pays which tier:** Free for one-time trials (credits do not refresh), Plus $12/mo for solo researchers running 4 reports/month, Pro $49/mo for anyone doing 12+ reports or running concurrent alerts, Team $79/user/mo for collaborating review groups (2-seat minimum), Enterprise for SSO and institutional deployment.
 
-I tested Elicit Plus at $12/month for two weeks on a systematic review of RCTs in public health. The structured extraction nailed sample sizes, interventions, and effect sizes from 200 papers in under an hour, accuracy hit 92% on my benchmark set, far better than manual screening. Free tier's 5,000 credits cap you at light use, but Pro at $60 unlocks unlimited for teams.
+## Key Facts
 
-Compared to Consensus, Elicit wins on data tables you can export directly to CSV for meta-analysis; Consensus feels more like a chatty summarizer without that rigor. I bias toward tools with evals, Ought's transparency here edges it out.
+| | |
+|---|---|
+| **Corpus size** | 125M+ academic papers |
+| **Core workflow** | Paper search, screening, structured data extraction |
+| **Signature feature** | Configurable extraction columns (sample size, population, intervention, outcomes, effect sizes) |
+| **Notebooks** | Long-form synthesis combining multiple paper sets into one document |
+| **Confidence scoring** | Flags uncertain extractions for human review |
+| **Export** | CSV for integration with Covidence, RevMan, meta-analysis tools |
+| **API access** | Enterprise tier only |
+| **Company** | Ought Inc. (founded 2021, mission is scalable scientific reasoning) |
+| **Free tier** | 5,000 one-time credits. No monthly refresh. |
 
-Academic researchers and policy teams doing formal reviews: use this. Solo bloggers or casual queries: skip it, Perplexity's faster and free enough. Enterprise custom pricing suits orgs, but overkill for individuals.
+## What it actually is
 
-## What It Does
+A single product for the systematic review workflow, delivered through a web app. Researchers enter a question, Elicit retrieves relevant papers, extracts predefined or custom data columns from abstracts or full text, and populates a table that exports to CSV.
 
-Elicit accepts a research question in natural language and queries a corpus of 125 million-plus academic papers to surface the most relevant studies. For each paper, Elicit extracts a configurable set of data columns from the abstract or full text, including study design, population, intervention, comparison, outcome, sample size, and key findings. Users can add custom columns for domain-specific extraction needs. Results populate a structured table that can be exported to CSV or copied into systematic review workflows. Elicit also provides a summary synthesis across the retrieved papers, a list of key concepts and terms, and options to screen papers for inclusion and exclusion criteria.
+The Notebooks feature combines multiple paper searches into a structured research document with narrative synthesis. Team collaboration lets multiple reviewers screen and extract from the same corpus.
 
-A separate "notebooks" feature supports longer-form research synthesis combining multiple paper sets into a single document. The tool integrates with common systematic review platforms and supports team collaboration, allowing multiple researchers to screen and extract data from the same corpus simultaneously. Elicit also tracks extraction confidence scores and flags uncertain extractions for human review.
+The moat is the extraction pipeline. Ought built Elicit around systematic review methodology, which typically consumes 6 to 18 months of researcher time. Elicit compresses the literature search and initial screening phases into hours.
 
-## Who It's For
+## When to pick Elicit
 
-- Academic researchers conducting systematic or scoping reviews in medicine, public health, psychology, and adjacent fields
-- Evidence synthesis professionals at Cochrane, Campbell Collaboration, and similar organizations
-- Policy analysts at government agencies and NGOs who need rapid evidence reviews to inform decisions
-- Clinicians and practitioners in evidence-based medicine who review literature to support clinical decisions
-- PhD students and postdocs completing thesis literature reviews and meta-analyses
-- Research teams at foundations funding evidence-based interventions who need rapid landscape reviews
+- **You are running a formal systematic or scoping review.** The extraction table replaces weeks of manual data pulling from methods sections.
+- **You need structured data, not a chat answer.** Custom columns apply consistently across hundreds of papers and export clean to CSV.
+- **You work in medicine, public health, psychology, or policy.** These domains have the densest Elicit coverage and match its RCT-oriented extraction defaults.
+- **You are writing a meta-analysis.** The CSV export plugs directly into RevMan or Covidence without manual transcription.
+- **You run 4+ reports per month.** Free credits are one-time. Plus refreshes monthly. Pro unlocks 12 reports and 10 concurrent alerts.
+
+## When to pick something else
+
+- **Research question answers with primary-source grounding:** [Perplexity](/tools/perplexity/) or [Consensus](/tools/consensus/). Faster, cheaper, conversational.
+- **Free paper discovery:** [Semantic Scholar](/tools/semantic-scholar/). 200M+ papers, TLDR summaries, no cost.
+- **Visual literature mapping from a seed paper:** [Connected Papers](/tools/connected-papers/). Graph view, not extraction table.
+- **Citation credibility (supporting vs contrasting):** [Scite](/tools/scite/). Different problem, different tool.
+- **General-purpose research chat:** [ChatGPT](/tools/chatgpt/) or [Claude](/tools/claude/). Elicit is a specialist, not a generalist.
 
 ## Pricing
 
-| Plan | Price | Key Limits |
-|------|-------|-----------|
-| Free | $0/month | 5,000 credits/month, abstract-level extraction, limited columns per search |
-| Plus | $12/month | 25,000 credits/month, full-text extraction, expanded columns, higher paper limits |
-| Pro | $60/month | 100,000 credits/month, priority support, advanced features, team collaboration |
-| Enterprise | Custom | Unlimited credits, API access, priority support, custom workflows, SLA |
+Subscription pricing via [elicit.com/pricing](https://elicit.com/pricing).
 
-Prices verified at [elicit.com/pricing](https://elicit.com/pricing) as of 2026-04-15.
+| Plan | Price | Reports/Month | Credits | Who's it for |
+|------|-------|---------------|---------|--------------|
+| Basic | $0 | Limited | 5,000 one-time | Trial run only. Credits do not refresh. |
+| Plus | $12/mo ($120/yr) | 4 | Refreshed monthly | Solo researchers with steady review load |
+| Pro | $49/mo ($499/yr) | 12 | Higher limits, 10 concurrent alerts | **Most active researchers land here** |
+| Team | $79/user/mo ($780/yr) | 20 pooled/user | Team collaboration, 2-seat minimum | Review groups and research labs |
+| Enterprise | Custom | Unlimited | SSO, SAML, 2FA, API, dedicated CS | Institutions and funded review programs |
 
-## Key Features
+*Prices verified 2026-04-17 via [Elicit pricing](https://elicit.com/pricing) and [Overview of Plans](https://support.elicit.com/en/articles/8670209). Annual billing saves roughly 15%.*
 
-- Systematic paper search: Query a corpus of 125M+ academic papers with natural language research questions; surface the most relevant papers using semantic search and relevance ranking
-- Structured data extraction: Extract predefined or custom columns from abstracts and full texts simultaneously, including sample size, population, intervention, outcome, effect size, and study design
-- Abstract and full-text screening: Mark papers for inclusion or exclusion with reasons; track screening status across a team with role-based permissions
-- Custom extraction columns: Define domain-specific data points for extraction; Elicit applies them consistently across all papers in the set
-- Synthesis summaries: AI-generated summaries of findings across the retrieved paper set, with citations and confidence indicators
-- Research notebooks: Combine multiple paper searches into a structured research document with integrated evidence and narrative synthesis
-- CSV export and integrations: Export all extracted data to CSV for integration with systematic review software like Covidence or RevMan
-- Extraction confidence scoring: Elicit flags uncertain extractions for human review, reducing manual verification burden
+## Against the alternatives
 
-## Limitations
+| | Elicit | Consensus | Semantic Scholar |
+|---|---|---|---|
+| **Primary output** | Structured extraction table | Consensus meter + answer | Paper list + TLDR |
+| **Corpus** | 125M+ papers | 200M+ papers | 200M+ papers |
+| **Custom extraction columns** | Yes | No | No |
+| **CSV export for meta-analysis** | Yes | No | Partial (RIS export) |
+| **Free tier depth** | One-time credits | Generous monthly | Fully free, forever |
+| **Price floor (paid)** | $12/mo Plus | $10.99/mo Premium | $0 |
+| **Best viewed as** | Systematic-review engine | Research Q&A | Free discovery layer |
 
-- Requires research expertise to use well: Elicit is most powerful in the hands of researchers who understand systematic review methodology; casual users may not frame research questions precisely enough to get high-quality results
-- Not a general-purpose AI search: Elicit is not designed for casual research questions, news, or non-academic topics; Perplexity or Consensus serve those use cases better
-- Credit consumption on large reviews: Comprehensive systematic reviews consuming hundreds of papers deplete credits quickly; Pro tier may be needed for any serious review
-- Full-text access depends on open access: Elicit can extract from full text only when papers are open access or uploaded; paywalled papers limit extraction to abstracts
-- AI extraction errors occur: Structured extraction is accurate at scale but not perfect; individual extraction errors require spot-checking, particularly for quantitative outcomes
+## Failure modes
 
-## Bottom Line
+- **Free credits do not refresh.** The 5,000 Basic credits are a one-time allocation. Anyone doing sustained work hits zero within a single review.
+- **Report caps bite quickly.** Plus allows 4 automated reports/month. Running more than one review per week forces the Pro upgrade at $49/mo.
+- **Paywalled papers limit extraction to abstracts.** Full-text extraction requires open access or user-uploaded PDFs.
+- **Extraction errors happen on nuanced outcome data.** Accuracy is strong on structured abstracts and weaker on unusual reporting formats. Spot-checking primary outcomes is still required.
+- **Framing the question matters.** Researchers who don't specify inclusion criteria precisely get noisier results. Elicit rewards methodological rigor, not casual prompts.
+- **Non-English coverage is thin.** English-language literature dominates the corpus.
+- **No general web search.** Elicit only queries academic papers. News, preprints outside the corpus, and grey literature require other tools.
 
-Elicit is the best AI research tool for systematic literature review and is used by professional researchers at leading academic and policy institutions worldwide. Its structured extraction capability, pulling specific data columns from hundreds of papers simultaneously, is genuinely transformative for evidence synthesis workflows that would otherwise take months. The $12 per month Plus tier is exceptional value for any researcher who conducts literature reviews regularly.
+## Methodology
 
-## Best Alternatives
-
-| Tool | Price | Key Difference |
-|------|-------|----------------|
-| [Consensus](../tools/consensus.md) | $10.99/mo Premium | Research question answering with consensus meter; less structured extraction |
-| [Semantic Scholar](../tools/semantic-scholar.md) | Free | Comprehensive paper search and discovery; no structured extraction |
-| [Scite](../tools/scite.md) | $20/mo Essential | Smart citation analysis; focuses on citation quality rather than bulk extraction |
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the analysis above. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [Elicit pricing](https://elicit.com/pricing), [Overview of Elicit Plans](https://support.elicit.com/en/articles/8670209), and [Ought Research](https://ought.org).
 
 ## FAQ
 
-**What is a systematic literature review?**
-A systematic literature review is a rigorous, reproducible method of identifying and synthesizing all relevant research on a specific question. It follows a defined protocol including comprehensive database searches, explicit inclusion/exclusion criteria, structured data extraction, and quality assessment. Systematic reviews are the gold standard of evidence synthesis in medicine, public health, and policy.
+**Is Elicit free?**
+The Basic tier is free but credits are a one-time 5,000 allocation, not a monthly refresh. Any sustained review work requires Plus ($12/mo) or higher.
 
-**How accurate is Elicit's data extraction?**
-Elicit's extraction accuracy is high for well-structured quantitative data in abstracts and methods sections, but not perfect. Researchers using Elicit for formal systematic reviews should spot-check a random sample of extractions, particularly for key outcome data. It is accurate enough to replace initial screening passes but not to replace careful human verification of primary outcome data.
+**What does a "report" mean in Elicit pricing?**
+A report is one automated systematic review run across the corpus. Plus allows 4/month, Pro 12/month, Team 20 pooled per user ([Overview of Plans](https://support.elicit.com/en/articles/8670209)).
 
-**Can Elicit access paywalled papers?**
-Elicit can extract data from open-access papers and from papers uploaded directly by the user. For paywalled papers, extraction is limited to the abstract. Researchers with institutional library access can often download PDFs and upload them to Elicit for full-text extraction.
+**How accurate is the structured extraction?**
+High on well-structured abstracts and methods sections, lower on unusual reporting formats. Elicit flags confidence scores per extraction. Primary outcome data still warrants manual spot-checking before publication.
 
+**Can Elicit read paywalled papers?**
+Only if they are open access or uploaded directly. Paywalled papers are limited to abstract-level extraction.
 
+**Elicit vs Consensus: which one?**
+Elicit for structured extraction tables and formal systematic reviews. [Consensus](/tools/consensus/) for conversational research Q&A with a consensus meter. Different outputs, different workflows.
 
+**Does Elicit replace a systematic reviewer?**
+No. It compresses the search and initial-screening phases. Final inclusion decisions, quality assessment, and outcome verification still require trained reviewers.
 
-
-## Review History
-
-- **2026-04-13:** Pricing re-checked against the official pricing page. No change since last verification.
-- **2026-02-16:** Added the new model variant to the features section.
-- **2025-12-16:** Pricing verified. Minor copy edits.
-- **2024-01-15:** Initial review published after hands-on testing.
-
-## Related Guides
-
-- [Best AI for Medical Research (2026)](../use-cases/best-ai-for-medical-research.md)
-
-## Related Comparisons
-
-- [ChatGPT vs Elicit](../comparisons/chatgpt-vs-elicit.md)
-- [Claude vs Elicit](../comparisons/claude-vs-elicit.md)
-- [Connected Papers vs Elicit](../comparisons/connected-papers-vs-elicit.md)
-- [Consensus vs Elicit](../comparisons/consensus-vs-elicit.md)
-- [Elicit vs nanochat](../comparisons/elicit-vs-nanochat.md)
-- [Elicit vs Perplexity](../comparisons/elicit-vs-perplexity.md)
-- [Elicit vs Scite](../comparisons/elicit-vs-scite.md)
-- [Elicit vs Semantic Scholar](../comparisons/elicit-vs-semantic-scholar.md)
 ## Sources
 
-- [Elicit Official Site](https://elicit.com): Product page, feature documentation, and pricing
-- [Ought Research](https://ought.org): Organization background and mission
+- [Elicit pricing](https://elicit.com/pricing): current tier prices and limits
+- [Overview of Elicit Plans](https://support.elicit.com/en/articles/8670209): report allocations and feature matrix
+- [Ought Research](https://ought.org): company background and mission
 
 ## Related
 
-- Category: [AI Research Tools](../categories/ai-research.md)
+- **Category:** [AI Research](/categories/ai-research/)
+- **Comparisons:** [Elicit vs Consensus](/comparisons/consensus-vs-elicit/) | [Elicit vs Scite](/comparisons/elicit-vs-scite/) | [Elicit vs Semantic Scholar](/comparisons/elicit-vs-semantic-scholar/) | [Elicit vs Perplexity](/comparisons/elicit-vs-perplexity/) | [Connected Papers vs Elicit](/comparisons/connected-papers-vs-elicit/)

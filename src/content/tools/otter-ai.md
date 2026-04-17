@@ -2,16 +2,16 @@
 type: tool
 slug: otter-ai
 title: Otter.ai
-tagline: AI meeting transcription and notes that automatically records, transcribes, and summarizes Zoom, Teams, and Meet calls.
+tagline: AI meeting assistant that auto-joins Zoom, Teams, and Meet via OtterPilot to transcribe, summarize, and chat across calls.
 category: ai-notes
 company: Otter.ai Inc.
 url: https://otter.ai
 pricing_model: freemium
-price_range: "$0-$30/month"
+price_range: "$0-$30/user/month"
 status: active
 launched: 2016-02
-last_updated: 2026-04-15
-last_verified: 2026-04-15
+last_updated: 2026-04-17
+last_verified: 2026-04-17
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -24,135 +24,154 @@ scores:
   value: 9
   moat: 6
   longevity: 7
-tags: [meeting-transcription, ai-notes, zoom-integration, meeting-summary, productivity]
-seo_title: "Otter.ai: Features, Pricing & Review (2026)"
-meta_description: "Otter.ai automatically transcribes and summarizes Zoom, Teams, and Meet calls. Free plan includes 300 min/month. Full pricing, accuracy, and alternatives reviewed."
+tags: [meeting-transcription, ai-notes, zoom-integration, meeting-summary, productivity, otterpilot]
+seo_title: "Otter.ai: Features, Pricing & Review (April 2026)"
+meta_description: >-
+  Otter.ai auto-joins Zoom, Teams, and Meet via OtterPilot, transcribes, and summarizes with action items. Free (300 min/mo), Pro $16.99/mo, Business $30/user/mo, Enterprise custom. Verified April 2026.
 author: "aipedia.wiki Editorial"
 quick_answer: >-
-  Otter.ai is an AI meeting assistant from Otter.ai Inc. that deploys a calendar-synced bot (OtterPilot) to automatically record, transcribe, and summarize Zoom, Microsoft Teams, and Google Meet calls, delivering action items and key decisions to your inbox minutes after each meeting ends. The free tier at 300 minutes/month is one of the most accessible starting points in the category, and the full-text search across all past meeting transcripts is a genuine advantage for teams managing large call archives. Pro is $16.99/month (or about $10/month annual); best for professionals managing heavy meeting schedules who need searchable archives and team collaboration, but test Fathom first since it covers the core transcription and summary use case for free.
+  Otter.ai joins meetings via OtterPilot, transcribes in real time, and summarizes with action items. Full-text search across every past transcript is the real differentiator. Pick it for heavy meeting loads. Skip it if Fathom's free tier covers the basics.
 best_for:
-  - Professionals in back-to-back meetings who cannot take notes and participate simultaneously
-  - Managers and team leads who need a reliable record of decisions and assigned action items
-  - Sales teams who want a searchable log of customer calls and discovery conversations
-  - Async teams who share meeting recordings with colleagues who could not attend live
+  - professionals in back-to-back meetings
+  - managers needing action-item archives
+  - sales teams logging discovery calls
+  - async teams sharing meeting notes
 not_best_for:
-  - Users who only need basic transcription and are comfortable with free alternatives
-  - Organizations requiring video recording on lower-tier plans
-  - Teams with heavy non-English or highly technical jargon-heavy meetings
+  - users comfortable with free alternatives
+  - organizations needing video recording at Pro tier
+  - heavy non-English or jargon-dense meetings
+price_history:
+  - date: 2026-04-17
+    plan: "Pro"
+    price: "$16.99/mo"
+    note: "Verified. Annual billing drops to ~$8.33/mo."
+  - date: 2026-04-17
+    plan: "Business"
+    price: "$30/user/mo"
+    note: "Verified. Includes video recording and team analytics."
 ---
 
 # Otter.ai
 
-Otter.ai is an AI meeting assistant that automatically records, transcribes, and summarizes meetings on Zoom, Microsoft Teams, and Google Meet. It joins calls via a calendar-synced bot, produces a real-time live transcript, and delivers an AI-generated summary with action items, key decisions, and highlights as soon as the call ends. The free plan is genuinely useful at 300 minutes per month, making it one of the most accessible starting points in the ai-notes category.
+Otter.ai Inc.'s AI meeting assistant. OtterPilot syncs with calendars and auto-joins Zoom, Microsoft Teams, and Google Meet calls to deliver real-time transcripts and post-meeting summaries with action items. Full-text search across every stored transcript is the headline differentiator.
 
+Pricing: Free (300 min/month), Pro $16.99/mo ($8.33/mo annual), Business $30/user/mo, Enterprise custom.
 
-## Editor's Take
+## System Verdict
 
-I tested Otter.ai's latest version, 3.2 from April 2026, on a week's worth of sales calls and team standups. Transcription accuracy hit 92% on clear English audio, dropping to 85% with accents or overlapping talk, decent, but not flawless. OtterPilot joins Zoom and Teams flawlessly via calendar sync, and the post-meeting summaries with action items land in my inbox within two minutes. Search across 50 hours of transcripts found every "Q2 targets" mention instantly, which saved me hours.
+> **Pick Otter.ai if you need a searchable archive across every meeting, not just transcripts of the last one.** The search index is the real product. Everything else (real-time transcripts, summaries, action items) is table stakes in the category.
+>
+> **Skip it if Fathom's free tier covers your load.** Fathom transcribes and summarizes for $0 on individual plans and handles 80% of Otter's use case. Otter wins on search depth, team workspaces, and in-person mobile capture. Pay for those specifically, or stay free.
+>
+> **Who pays which tier:** Free for anyone with fewer than 2-3 meetings per week, Pro $16.99/mo ($8.33/mo annual) for solo professionals in heavy call loads, Business $30/user/mo for teams that need video recording and shared workspaces, Enterprise for SSO, compliance controls, and OtterPilot for Sales.
 
-Pro at $16.99 monthly (or $10 on annual) beats Fireflies.ai's $18 equivalent for solo users, mainly because Otter's free 300 minutes/month tier lets you test without commitment, unlike Fireflies' stingier 800-second limit. Fireflies edges out on multi-language support, though.
+## Key Facts
 
-Grab Otter if you're in sales or management drowning in calls and need searchable archives. Skip it for casual use, Fathom's free tier covers basics without the upsell pressure. I bias toward tools with strong free plans; power users won't notice the difference.
+| | |
+|---|---|
+| **Core integrations** | Zoom, Microsoft Teams, Google Meet |
+| **Signature feature** | OtterPilot calendar-synced auto-join bot |
+| **Transcription accuracy** | 85-90% on clear English, 70-80% with accents or overlapping talk |
+| **Search** | Full-text across every past meeting transcript |
+| **AI Chat** | Cross-meeting Q&A, email drafting, status updates |
+| **Speaker ID** | Trained voice profiles for recurring participants |
+| **Video recording** | Business tier and above only |
+| **Free tier** | 300 min/month, 30-min cap per meeting, 3 AI summaries/month |
+| **Mobile capture** | In-person meetings via iOS/Android app |
+| **Company** | Otter.ai Inc., founded 2016 |
 
-## What It Does
+## What it actually is
 
-Otter.ai connects to your calendar, detects upcoming meetings, and deploys OtterPilot, a bot that joins the call on your behalf and begins transcribing in real time. Participants see the live transcript scrolling as the meeting progresses. After the meeting ends, Otter generates a structured summary including action items, key points, and decisions. Every transcript is stored and fully searchable, so you can retrieve a specific discussion from any past meeting by keyword.
+One product with three surfaces: the live transcript view during a call, the post-meeting summary delivered to inbox, and the searchable archive of every past meeting. OtterPilot is the auto-join bot that connects calendar events to calls without manual setup each time.
 
-The platform uses neural network-based speech recognition to convert audio to text, then applies large language models to extract summaries and action items. Speaker identification works by training voice profiles for regular participants, though it can also identify speakers by name if they introduce themselves clearly. The search functionality indexes every word across your entire meeting history, allowing you to find references to specific projects, decisions, or conversations without manually reviewing transcripts.
+Neural speech-to-text converts audio in real time. A language model layer extracts action items, decisions, and highlights for the summary. Custom vocabulary improves accuracy on industry terms, acronyms, and names.
 
-## Who It's For
+The moat is modest. Transcription is commoditized. Fathom, Fireflies, and Grain all cover the same core job. Otter's edge is the longer operating history, richer search index, and Business-tier team collaboration features.
 
-- Professionals in back-to-back meetings who cannot take notes and participate simultaneously
-- Managers and team leads who need a reliable record of decisions and assigned action items
-- Sales teams who want a searchable log of customer calls and discovery conversations
-- Async teams who share meeting recordings with colleagues who could not attend live
-- Students and researchers conducting interviews or lectures that need verbatim records
-- Compliance-focused teams who need audit trails of important conversations
+## When to pick Otter.ai
+
+- **You are drowning in meetings.** Back-to-back calls where note-taking steals focus from participation.
+- **You need to search every past meeting, not just skim recent transcripts.** Full-text search across the archive is the feature that justifies Pro.
+- **You manage a sales team.** Every discovery call becomes a searchable record. OtterPilot for Sales (Enterprise) adds CRM hooks.
+- **You run async team workflows.** Shared summaries let colleagues catch up without watching full recordings.
+- **You need in-person capture via mobile.** Otter's mobile app transcribes live conversations, not just video calls.
+
+## When to pick something else
+
+- **Free, no-fuss meeting transcription:** Fathom. Covers 80% of Otter's use case at $0 on individual plans.
+- **Stronger CRM integrations and cross-meeting Q&A search:** [Fireflies](/tools/fireflies/). Deeper sales-workflow hooks.
+- **Video highlight clips alongside transcripts:** Grain. Better for marketing and testimonials.
+- **AI notes tied to personal knowledge bases:** Google NotebookLM or Obsidian workflows. Different product category.
+- **Multi-language meetings:** [Fireflies](/tools/fireflies/) edges Otter on non-English support.
 
 ## Pricing
 
-| Plan | Price | Minutes/Month | Max Per Meeting | Key Limits |
-|------|-------|---------------|-----------------|-----------|
-| Basic | Free | 300 min | 30 min | 3 AI summaries/month, no video recording |
-| Pro | $16.99/mo | 1,200 min | 90 min | Unlimited AI summaries, custom vocabulary, no video recording |
-| Business | $30/seat/mo | Unlimited | 4 hrs | Video recording, team workspaces, usage analytics, priority support |
-| Enterprise | Custom | Unlimited | Unlimited | SSO, compliance controls, dedicated support, custom integrations |
+Subscription pricing via [otter.ai/pricing](https://otter.ai/pricing).
 
-Prices verified at otter.ai/pricing as of 2026-04-15. Annual billing reduces Pro to approximately $10/month. Free plan limits are enforced strictly; 300 minutes disappears quickly for anyone in more than two long meetings per week.
+| Plan | Price | Minutes/Month | Per Meeting | Key Features |
+|------|-------|---------------|-------------|--------------|
+| Basic | $0 | 300 min | 30 min | 3 AI summaries/mo, no video, limited AI Chat |
+| Pro | $16.99/mo ($8.33/mo annual) | 1,200 min | 90 min | Unlimited summaries, custom vocabulary, bulk export, 2 concurrent OtterPilots |
+| Business | $30/user/mo (~$20 annual) | 6,000 min | 4 hrs | Video recording, team workspaces, analytics, priority support |
+| Enterprise | Custom | Unlimited | Unlimited | SSO, SCIM, compliance, OtterPilot for Sales, video replay |
 
-## Key Features
+*Prices verified 2026-04-17 via [otter.ai/pricing](https://otter.ai/pricing). Annual billing drops Pro to roughly $8.33/mo. Free tier hits the 300-minute cap fast for anyone in more than 2 long weekly meetings.*
 
-- OtterPilot auto-join bot that connects to every calendar meeting without manual setup each time
-- Real-time live transcript that appears word-by-word as speakers talk
-- AI meeting summary with action items, key points, and decisions auto-extracted after each call
-- Speaker identification that labels speakers by name when voice profiles are trained
-- Highlight and comment functionality to annotate any part of the transcript during or after the meeting
-- Full-text search across entire meeting history to retrieve specific discussions by keyword
-- Native integration with Zoom, Microsoft Teams, and Google Meet
-- Custom vocabulary to add industry terms, names, and acronyms for improved accuracy
-- Shareable meeting summaries and transcripts for team collaboration
+## Against the alternatives
 
-## Limitations
+| | Otter.ai Pro | Fathom Free | Fireflies Pro |
+|---|---|---|---|
+| **Price** | $16.99/mo | $0 | ~$18/mo |
+| **Meeting minutes** | 1,200/mo | Unlimited | Unlimited |
+| **Platforms** | Zoom, Teams, Meet | Zoom, Teams, Meet | Zoom, Teams, Meet, Webex |
+| **Cross-meeting search** | Strong | Basic | Strong |
+| **AI Chat / Q&A** | Yes | Yes | Yes (deeper CRM hooks) |
+| **Video recording** | No (Business tier) | Yes | Yes |
+| **Mobile in-person capture** | Yes | No | Limited |
+| **Best viewed as** | Searchable meeting archive | Free default | CRM-integrated sales tool |
 
-- Transcription accuracy is 80-90% under ideal conditions (clear audio, native English, minimal crosstalk) and drops noticeably with heavy accents, technical jargon, or multiple speakers talking simultaneously
-- OtterPilot joining as a bot is visible to all participants and can feel intrusive in external client meetings or sensitive discussions
-- 300 minutes per month on the free plan disappears fast; two 90-minute weekly team meetings exceed it within the first week
-- $16.99/month is steep for a single-feature tool when free alternatives like Fathom cover the core use case
-- No video recording on Basic or Pro plans; only Business and above capture the video feed alongside the transcript
-- Mobile transcription quality is lower than desktop; background noise on phone calls causes frequent errors
+## Failure modes
 
-## Bottom Line
+- **OtterPilot is visible to all participants.** The bot shows up as a meeting attendee. External clients and sensitive discussions may push back.
+- **Free tier burns fast.** 300 min/month plus a 30-min per-meeting cap. Two weekly team standups exceed it by week two.
+- **Transcription accuracy drops with accents and overlap.** 85-90% on clean English. 70-80% when multiple speakers talk simultaneously or strong regional accents appear.
+- **No video recording at Pro.** Only Business ($30/user/mo) and Enterprise capture video alongside transcript. Pro users get audio-only archives.
+- **Mobile transcription lags desktop.** Background noise on phone calls causes frequent errors.
+- **Moat is thin.** Fathom covers 80% of Otter's use case for free. Pay for specific advantages (search depth, team workspaces, mobile), not for general transcription.
+- **AI Chat query limits vary by tier.** Heavy users on Pro should confirm current caps before relying on it as a daily workflow.
+- **No offline mode.** Transcription and search require active connection.
 
-Otter.ai earns a 9/10 for utility because the core product, automatic transcription and AI summaries delivered to your inbox minutes after a call, genuinely works and saves real time. The value score is also 9/10 relative to category; the free plan is functional, and the Pro plan at approximately $10/month annual is reasonable for heavy users. The moat is modest (6/10) because the underlying transcription technology is commoditized and Fathom offers a free product that covers 80% of the use case. If you are evaluating Otter.ai primarily for basic meeting transcription and summaries, test Fathom first; it is free and often sufficient. Otter.ai's advantage is its longer history, richer search, and the Business plan's team collaboration features.
+## Methodology
 
-## Best Alternatives
-
-| Tool | Price | Key Difference |
-|------|-------|----------------|
-| Fathom | Free | Covers 80% of Otter use cases at $0; best starting point |
-| Fireflies.ai | Free / $18/mo | Stronger CRM integrations and cross-meeting Q&A search |
-| Grain | Free / $19/mo | Video highlight clips in addition to transcription |
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the analysis above. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [Otter.ai pricing](https://otter.ai/pricing), [Otter.ai OtterPilot overview](https://otter.ai/otterpilot), and [Otter.ai Help Center](https://help.otter.ai).
 
 ## FAQ
 
 **Is Otter.ai free?**
-Yes. The Basic plan is permanently free and includes 300 transcription minutes per month with a 30-minute cap per conversation. It also includes 3 AI-generated summaries per month. The free plan is sufficient for light users with one or two short meetings per week. Heavy meeting schedules will hit the 300-minute ceiling quickly.
+The Basic tier is permanently free with 300 transcription minutes per month and a 30-minute cap per meeting. It includes 3 AI summaries per month. Enough for very light users. Not enough for anyone with a normal meeting load.
 
 **How accurate is Otter.ai transcription?**
-In ideal conditions, clear microphone, native English speaker, no background noise, minimal crosstalk, Otter.ai reaches 85-90% word accuracy. Accuracy drops to 70-80% with strong regional accents, heavy technical jargon, or multiple speakers overlapping. Custom vocabulary helps with domain-specific terminology. For compliance or legal transcription requiring high accuracy, human review is still necessary.
+85 to 90 percent on clean English audio with a single speaker. Drops to 70 to 80 percent with strong accents, overlapping talk, or heavy technical jargon. Custom vocabulary helps on domain terms. Compliance-grade transcription still needs human review.
 
-**Is Otter.ai better than Fathom?**
-For most individual users, Fathom is the better starting point because it is free and covers core transcription and summary functionality. Otter.ai is worth the upgrade for teams that need searchable archives across all past meetings, Business plan collaboration features (shared workspaces, team analytics), or the ability to transcribe in-person conversations via the mobile app (not just video calls). If Fathom meets your needs, stay there.
+**Otter.ai vs Fathom: which one?**
+For most solo users, Fathom's free tier covers the core transcription and summary workflow. Otter earns the upgrade when you need searchable archives across all past meetings, Business-tier team workspaces, or in-person mobile capture.
 
+**What does OtterPilot do?**
+OtterPilot is the calendar-synced bot that auto-joins scheduled meetings on Zoom, Teams, or Meet. It begins transcribing on entry, posts the live transcript for participants, and delivers a summary to the inbox after the call ([OtterPilot overview](https://otter.ai/otterpilot)).
 
+**Does Otter.ai integrate with Salesforce or HubSpot?**
+Enterprise includes OtterPilot for Sales with CRM hooks. [Fireflies](/tools/fireflies/) has deeper out-of-the-box CRM integrations on lower tiers.
 
+**Can Otter.ai record video?**
+Only on Business ($30/user/mo) and Enterprise. Basic and Pro capture audio transcripts only.
 
-
-## Review History
-
-- **2026-04-14:** Pricing and feature list verified against official docs.
-- **2026-01-16:** Updated flagship model reference to latest release.
-- **2025-12-16:** Pricing verified. Minor copy edits.
-- **2024-01-15:** Added to the catalog with a full review.
-
-## Related Guides
-
-- [Best AI for Meeting Notes (2026)](../use-cases/best-ai-for-meeting-notes.md)
-
-
-- **Category:** [Notes](../categories/ai-notes.md)
-
-## Related Comparisons
-
-- [Capacities vs Otter.ai](../comparisons/capacities-vs-otter-ai.md)
-- [ChatGPT vs Otter.ai](../comparisons/chatgpt-vs-otter-ai.md)
-- [ElevenLabs vs Otter.ai](../comparisons/elevenlabs-vs-otter-ai.md)
-- [Fireflies.ai vs Otter.ai](../comparisons/fireflies-vs-otter-ai.md)
-- [Google NotebookLM vs Otter.ai](../comparisons/notebooklm-vs-otter-ai.md)
-- [Obsidian vs Otter.ai](../comparisons/obsidian-vs-otter-ai.md)
-- [Otter.ai vs Readwise Reader](../comparisons/otter-ai-vs-readwise.md)
 ## Sources
 
-- [Otter.ai Pricing Page](https://otter.ai/pricing)
-- [Otter.ai Help Center](https://help.otter.ai)
-- [Otter.ai OtterPilot Overview](https://otter.ai/otterpilot)
+- [Otter.ai pricing](https://otter.ai/pricing): current tier prices and limits
+- [Otter.ai OtterPilot overview](https://otter.ai/otterpilot): bot features and meeting platforms
+- [Otter.ai Help Center](https://help.otter.ai): feature documentation and limits
+
+## Related
+
+- **Category:** [AI Notes](/categories/ai-notes/)
+- **Comparisons:** [Otter.ai vs Fireflies](/comparisons/fireflies-vs-otter-ai/) | [ChatGPT vs Otter.ai](/comparisons/chatgpt-vs-otter-ai/) | [Google NotebookLM vs Otter.ai](/comparisons/notebooklm-vs-otter-ai/) | [Otter.ai vs Readwise Reader](/comparisons/otter-ai-vs-readwise/) | [ElevenLabs vs Otter.ai](/comparisons/elevenlabs-vs-otter-ai/)

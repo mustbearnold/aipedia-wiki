@@ -3,17 +3,17 @@ type: tool
 slug: frase
 title: Frase.io
 tagline: >-
-  AI SEO tool that generates content briefs from SERP research and scores your
-  writing for on-page optimization.
+  SERP-backed content briefs in under a minute, plus an integrated AI writer
+  and optimization editor.
 category: ai-seo
 company: frase
 url: 'https://frase.io'
 pricing_model: freemium
-price_range: $45-$225/month
+price_range: $15-$115/month
 status: active
 launched: 2018-01
-last_updated: 2026-04-15T00:00:00.000Z
-last_verified: '2026-04-15'
+last_updated: 2026-04-17
+last_verified: 2026-04-17
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -27,130 +27,140 @@ scores:
   moat: 6
   longevity: 7
 tags: [seo, content-briefs, content-optimization, ai-writing, serp-analysis, on-page-seo, content-strategy]
-seo_title: 'Frase.io: Features, Pricing & Review (2026)'
+seo_title: 'Frase.io: Features, Pricing & Review (April 2026)'
 meta_description: >-
-  Frase.io is an AI SEO tool for content briefs and optimization. Plans from
-  $45/mo. Combines SERP research, brief generation, and AI writing in one
-  workflow. Best for content teams.
-author: aipedia.wiki Editorial
+  Frase.io generates SERP-backed content briefs in under a minute and scores
+  drafts against top competitors. Plans run $15-$115/mo across Solo, Basic,
+  and Team tiers.
+author: "aipedia.wiki Editorial"
+best_for:
+  - content managers producing briefs at scale
+  - SEO agencies handling multiple clients
+  - solo operators needing fast SERP research
+not_best_for:
+  - teams needing granular NLP density scoring
+  - workflows requiring native keyword research
+  - users wanting deep backlink data
 quick_answer: >-
-  Frase.io is an AI SEO content platform developed by Frase Inc. (launched 2018) that crawls the top-ranking SERP results for any target keyword and assembles them into a structured content brief in under a minute, then lets writers draft and score their content in an integrated editor. The speed of brief generation is the core value: one click produces a document showing what the top 10 results cover, their average word count, cited sources, and related questions, replacing 30-60 minutes of manual SERP research. Plans start at $45/month for Basic (30 articles, 1 seat), $115/month for Team (unlimited articles, 3 seats), and $225/month for Enterprise (unlimited articles, 10 seats, advanced features). Best for content teams and SEO agencies who need fast, SERP-backed brief creation at scale, not for teams that need deep granular content scoring, where Surfer SEO provides more rigorous keyword density and NLP entity analysis. Frase has no backlink data or keyword research tools, requiring Ahrefs or Semrush alongside it for a full SEO workflow.
+  Frase.io converts keywords into SERP-backed content briefs in under a minute.
+  Three tiers run $15 to $115 per month. Pick it for brief-first workflows and
+  team collaboration. Skip for granular NLP scoring or keyword research.
 ---
 
 # Frase.io
 
-Frase.io is an AI SEO content platform developed by Frase Inc. It combines SERP research, automated content brief generation, and AI writing into a single workflow, used by content teams and SEO agencies to produce optimized articles from keywords. Its main feature is generating a research-backed content brief from a keyword in under a minute, pulling data from top SERP results into a template for writers. As of April 2026, Frase offers plans from $45/month (Basic) to $225/month (Enterprise) [frase.io/pricing](https://frase.io/pricing).
+Frase.io is an AI SEO content platform built around one-click content brief generation. It scrapes top-ranking SERP pages, extracts headings, questions, word counts, and sources, then assembles them into a writer-ready brief in under a minute.
 
+Three subscription tiers: Solo, Basic, Team. Pricing runs $15 to $115 per month.
 
-## Editor's Take
+## System Verdict
 
-I tested Frase's current version on the Team plan at $115 a month. Brief generation from a keyword like "best AI SEO tools" still takes under a minute, pulling solid SERP data on headings, word counts, and questions from top results. The editor's real-time scoring flags topic gaps against competitors, which saved me 20 minutes per article during a batch of 10 posts.
+> **Pick Frase if the bottleneck is research-to-brief speed.** One click produces a document showing what top 10 results cover, their average word count, cited sources, and related questions. Replaces 30 to 60 minutes of manual SERP work per keyword.
+>
+> **Skip it for density-level scoring.** [Surfer SEO](/tools/surfer-seo/) reads keyword density, NLP entities, and heading structure at a finer grain. Frase's optimization scoring is lighter. Pair with [Ahrefs](/tools/ahrefs/) or [Semrush](/tools/semrush/) for keyword volume and backlinks; Frase has neither.
+>
+> **Who pays which tier:** Solo $15 for individuals producing 4 articles per month, Basic $45 for freelancers scaling to 15 articles with one seat, Team $115 for agencies covering unlimited articles across 3 seats plus collaboration.
 
-It's faster for briefs than Surfer SEO, especially if you're scaling for a team of three. Surfer wins on granular NLP metrics and keyword density, though, Frase feels lighter there. I like the integrated AI drafter for outlines, but it hallucinates sources sometimes.
+## Key Facts
 
-Content teams churning briefs should grab the Team plan. Solo writers, stick to Basic at $45 or skip for free SERP tools; the limits hit quick. Don't use it without Ahrefs for keywords.
+| | |
+|---|---|
+| **Core function** | SERP-backed brief generation + optimization editor |
+| **Tiers** | Solo $15 · Basic $45 · Team $115 (monthly) |
+| **Article limits** | Solo 4/mo · Basic 15/mo · Team 75/mo (unlimited on spec pages) |
+| **Seats** | Solo 1 · Basic 1 · Team 3 (+$25 per extra user, cap 9) |
+| **Brief generation time** | Under one minute per keyword |
+| **AI writing add-on** | Unlimited AI writing $35/month on top of base |
+| **Agent features** | Research, optimization, AI visibility, site audits, publishing, API |
+| **Integrations** | Google Docs export, Google Search Console, Zapier |
+| **Native keyword research** | None |
+| **Backlink data** | None |
+| **Free trial** | 7-day trial on all plans |
 
-## What It Does
+Every data point above was verified against vendor sources on 2026-04-17. See Sources.
 
-Frase.io crawls top-ranking pages for a target keyword, extracts topics, headings, statistics, and FAQs, and assembles them into a structured content brief. Writers then draft and optimize articles in an integrated editor that scores content against SERP competitors in real time [frase.io](https://frase.io).
+## What it actually is
 
-The brief generation starts with one click on a keyword: it shows coverage across top-10 results, average word count, structure, cited sources, and related questions from People Also Ask. AI assists in generating sections or full drafts based on this data.
+A brief-first content platform. The pipeline is: keyword in, SERP scrape out, structured brief assembled, writer drafts inside the editor, optimization score guides coverage gaps.
 
-Optimization scoring tracks topic coverage as you write, highlighting gaps compared to ranking pages. Additional tools include SERP previews and FAQ builders for featured snippets.
+The brief is the product's defining feature. It lists top-10 coverage, average word count, question clusters from People Also Ask, cited sources, and heading patterns. Writers start with context instead of a blank page.
 
-## Who It's For
+The editor scores drafts in real time against competitors. The AI drafter fills sections when speed outranks voice control. Site audits, AI visibility tracking, and publishing via API shipped as part of the 2025-2026 platform expansion under the Frase Agent.
 
-- Content managers who produce briefs for writers from SERP data
-- SEO agencies handling multiple clients with scalable brief workflows
-- Freelance writers optimizing articles without manual research
-- Solo operators like bloggers needing affordable SERP analysis and AI drafting
-- B2B teams building topical authority with research-driven content
+## When to pick Frase
+
+- **You run a content team and briefs are the bottleneck.** Solo plans produce 4 briefs per month; Team scales to 75 with 3 seats.
+- **You write to a voice that rejects generic AI drafts.** Frase's value is research and structure, not finished prose. You supply the writing.
+- **You need People Also Ask coverage.** The brief surfaces question clusters that feed FAQ sections and featured-snippet targeting.
+- **Your stack already owns keyword research.** Pair with Ahrefs or Semrush upstream; Frase covers the editor and brief layer.
+- **You publish through Google Docs.** Native export keeps your review workflow intact.
+
+## When to pick something else
+
+- **Density and NLP entity scoring:** [Surfer SEO](/tools/surfer-seo/). Deeper editor, more granular. Costs more.
+- **Budget optimization with comparable scoring:** [NeuronWriter](/tools/neuronwriter/). Silver at $37/month hits a similar value band.
+- **Topic authority mapping for enterprises:** [MarketMuse](/tools/marketmuse/). Broader content planning at enterprise price.
+- **Full SEO suite:** [Semrush](/tools/semrush/) or [Ahrefs](/tools/ahrefs/). Keyword volume, backlinks, rank tracking, plus a lighter content tool.
 
 ## Pricing
 
-| Plan      | Price      | Key Limits                          |
-|-----------|------------|-------------------------------------|
-| Basic     | $45/month | 30 articles/month, 1 seat           |
-| Team      | $115/month| Unlimited articles, 3 seats         |
-| Enterprise| $225/month| Unlimited articles, 10 seats, API   |
+| Plan | Monthly | Articles | Seats | Who's it for |
+|------|---------|---------|-------|--------------|
+| Solo | $15 | 4/mo | 1 | Individuals starting on SEO content |
+| Basic | $45 | 15/mo | 1 | Freelancers and small teams |
+| Team | $115 | 75/mo | 3 (+$25/user, cap 9) | **Most agencies land here** |
 
-> Prices verified at [frase.io/pricing](https://frase.io/pricing) as of 2026-04-15. Annual billing offers 20% discount.
+*Prices verified 2026-04-17 via [Frase pricing](https://www.frase.io/pricing) and the [pricing help center](https://help.frase.io/pricing-plans). Annual billing saves around 15-20%. Unlimited AI writing is a $35/month add-on. All plans include the Frase Agent: research, optimization, AI visibility, site audits, publishing, API.*
 
-An "article" counts as one SERP query plus document. Basic suits light users; Team and Enterprise support agencies with higher volume and collaboration.
+## Against the alternatives
 
-## Key Features
+| | Frase Basic | Surfer Essential | NeuronWriter Silver |
+|---|---|---|---|
+| **Monthly** | $45 | $99 ($79 annual) | $37 |
+| **Brief generation speed** | **Fastest** (under 1 min) | Functional | Functional |
+| **Optimization scoring depth** | Moderate, topic coverage | **Strongest** NLP + density | Strong NLP terms |
+| **AI drafter** | Native, $35/mo unlimited add-on | Surfer AI included | GPT-5.4 / Opus 4.6 fine-tunes |
+| **Questions / PAA extraction** | **Strongest** | Moderate | Moderate |
+| **Collaboration** | Team plan, 3-9 seats | Scale plan, 5 seats | Team on higher tiers |
+| **Best viewed as** | Brief-first workflow | Editor-first premium | Budget scoring pick |
 
-- Automated content briefs: One-click SERP analysis with headings, gaps, questions, word counts, sources.
-- Real-time optimization scoring: Tracks topic coverage vs. top competitors during writing.
-- AI writing: Generates sections or drafts from brief data, tied to SERP insights.
-- SERP visualization: Side-by-side competitor coverage for gap identification.
-- Answer engine tools: Pulls People Also Ask data for FAQ and snippet targeting.
-- Collaboration: Shared docs and briefs on Team/Enterprise plans.
-- Integrations: Google Search Console import, Google Docs export, Zapier.
+## Failure modes
 
-## Limitations
+- **AI writer hallucinates sources.** Generates plausible-looking citations that don't exist. Fact-check before publish.
+- **Scoring runs shallower than Surfer.** Topic coverage works; keyword density and NLP entity precision lag.
+- **Article caps hit fast on Solo.** 4 articles per month stops most freelancers. Basic at $45 is the practical floor for regular work.
+- **Unlimited AI writing costs extra.** Base plans cap AI usage; the $35/month unlimited add-on sits on top.
+- **No keyword research or backlinks.** Upstream discovery needs Ahrefs or Semrush.
+- **Interface density.** Multiple views (document, brief, SERP, outline) on one screen overwhelms new users for the first few sessions.
 
-- Lower plans cap articles at 30/month, pushing agencies to Team quickly.
-- Scoring less detailed than Surfer SEO on keyword density and NLP entities [surferseo.com](https://surferseo.com).
-- AI output needs editing for brand voice and facts.
-- No keyword research or backlinks; pair with Ahrefs or Semrush.
-- Interface packs multiple views, which can overwhelm new users.
+## Methodology
 
-## Bottom Line
-
-Frase.io suits content teams needing quick SERP briefs and integrated optimization. Brief creation saves manual research time, and scoring guides drafting. Team plan at $115/month fits most agencies; Basic works for solos.
-
-## Best Alternatives
-
-| Tool            | Price     | Key Difference                          |
-|-----------------|-----------|-----------------------------------------|
-| [Surfer SEO](../tools/surfer-seo.md) | $89+/mo  | Deeper scoring; weaker briefs           |
-| [NeuronWriter](../tools/neuronwriter.md) | €29+/mo | Cheaper optimization; basic SERP data   |
-| [Semrush](../tools/semrush.md)        | $139+/mo | Full SEO suite; broader but costlier    |
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [Frase pricing](https://www.frase.io/pricing) and the [pricing help center](https://help.frase.io/pricing-plans).
 
 ## FAQ
 
-**Is Frase worth it for solo users?**  
-Yes, Basic at $45/month for 30 articles provides strong value for 1-2 articles weekly, covering briefs and scoring better than manual methods.
+**How much does Frase cost?**
+Three tiers: Solo $15/mo, Basic $45/mo, Team $115/mo. Annual billing saves 15 to 20 percent. Unlimited AI writing is a separate $35/month add-on ([Frase pricing](https://www.frase.io/pricing)).
 
-**Frase vs. Surfer SEO?**  
-Frase excels at brief generation and workflow; Surfer at detailed on-page metrics. Use Frase for research, Surfer for polish.
+**Is Frase worth it for solo users?**
+Solo at $15/mo suits 4 articles per month. Basic at $45 covers 15 articles and hits the value band for 1-2 articles per week.
 
-**Does Frase integrate with GPT-5.4 or Claude Opus 4.6?**  
-Frase uses its own models but allows custom AI via API on Enterprise; no direct GPT-5.4/Claude Opus 4.6 integration listed.
+**Frase vs Surfer SEO?**
+Frase wins on brief generation speed and People Also Ask extraction. Surfer wins on editor scoring depth and keyword density. Teams running brief-heavy workflows pick Frase; teams optimizing finished drafts pick Surfer.
 
+**Does Frase do keyword research?**
+No. Frase scores keywords you bring in. Use [Ahrefs](/tools/ahrefs/) or [Semrush](/tools/semrush/) for volume and difficulty.
 
+**Does Frase integrate with GPT-5.4 or Claude Opus 4.6?**
+Frase ships its own models. Enterprise and API access allow custom model wiring. No direct native GPT-5.4 or Claude Opus 4.6 integration on standard tiers.
 
-
-
-## Review History
-
-- **2026-04-02:** Pricing and flagship model version verified. No material changes.
-- **2026-03-01:** Score reviewed; no change, but rationale updated.
-- **2026-01-16:** Updated flagship model reference to latest release.
-- **2025-11-16:** Pricing verified. Minor copy edits.
-- **2024-01-15:** Added to the catalog with a full review.
-
-## Related Guides
-
-- [Best AI Tools Under $20/Month (2026)](../use-cases/best-ai-tools-under-20-month.md)
-
-## Related Comparisons
-
-- [Ahrefs vs Frase.io](../comparisons/ahrefs-vs-frase.md)
-- [Frase.io vs MarketMuse](../comparisons/frase-vs-marketmuse.md)
-- [Frase.io vs NeuronWriter](../comparisons/frase-vs-neuronwriter.md)
-- [Frase.io vs Semrush](../comparisons/frase-vs-semrush.md)
-- [Frase.io vs Surfer SEO](../comparisons/frase-vs-surfer-seo.md)
 ## Sources
 
-- [Frase.io Official Site](https://frase.io): Features and product details
-- [Frase.io Pricing](https://frase.io/pricing): Plan details as of 2026-04-15
-- [G2 Frase Reviews](https://www.g2.com/products/frase/reviews): User feedback on workflows
+- [Frase pricing](https://www.frase.io/pricing): current plan prices, seats, limits
+- [Frase pricing help center](https://help.frase.io/pricing-plans): tier breakdown and add-ons
+- [Frase how much does it cost](https://help.frase.io/how-much-does-frase-cost): AI writing add-on details
 
 ## Related
 
-- **Category:** [AI SEO](../categories/ai-seo.md)
-- **See also:** [Surfer SEO](../tools/surfer-seo.md), [NeuronWriter](../tools/neuronwriter.md), [Ahrefs](../tools/ahrefs.md)
-
----
+- **Category:** [AI SEO](/categories/ai-seo/)
+- **Comparisons:** [Frase vs Surfer SEO](/comparisons/frase-vs-surfer-seo/) · [Frase vs NeuronWriter](/comparisons/frase-vs-neuronwriter/) · [Frase vs MarketMuse](/comparisons/frase-vs-marketmuse/) · [Frase vs Semrush](/comparisons/frase-vs-semrush/) · [Ahrefs vs Frase](/comparisons/ahrefs-vs-frase/)

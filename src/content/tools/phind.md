@@ -2,17 +2,17 @@
 type: tool
 slug: phind
 title: Phind
-tagline: AI search engine built specifically for developers, combining web search with coding-focused answers and model selection.
+tagline: Developer-focused AI search engine. Shut down January 16, 2026. User data deleted January 30, 2026. Use Perplexity, ChatGPT, or Claude instead.
 category: ai-search
 company: phind
 url: https://phind.com
-pricing_model: freemium
-price_range: "$0-$20/month"
-status: active
+pricing_model: free
+price_range: "N/A (discontinued)"
+status: dead
 launched: 2022-04
-last_updated: 2026-04-15
-last_verified: 2026-04-15
-update_frequency: monthly
+last_updated: 2026-04-17
+last_verified: 2026-04-17
+update_frequency: quarterly
 affiliate:
   has_program: false
   commission: null
@@ -20,119 +20,133 @@ affiliate:
   network: null
   link: null
 scores:
-  utility: 8
-  value: 8
-  moat: 5
-  longevity: 6
-tags: [search-engine, developer-tools, coding, ai-search, programming, documentation, stack-overflow]
-seo_title: "Phind: Features, Pricing & Review (2026)"
-meta_description: "Phind is an AI search engine built for developers. Free tier with GPT-5.4 class answers; Pro is $20/mo for Claude Opus 4.6 and faster responses. Best for coding and technical queries."
+  utility: 0
+  value: 0
+  moat: 0
+  longevity: 0
+tags: [search-engine, developer-tools, coding, ai-search, discontinued, shutdown, phind-70b]
+seo_title: "Phind: Discontinued AI Search Engine (Shut Down January 2026)"
+meta_description: "Phind shut down on January 16, 2026 with no sunset period. User data was deleted January 30, 2026. Use Perplexity, ChatGPT, or Claude for developer AI search instead."
 author: "aipedia.wiki Editorial"
+best_for:
+  - historical reference only
+not_best_for:
+  - any active workflow (service is offline)
 quick_answer: >-
-  Phind is a developer-focused AI search engine from Phind Inc. that prioritizes technical documentation, GitHub repositories, Stack Overflow, and developer blogs to deliver cited, code-formatted answers to programming questions. The developer-first source weighting and inline syntax-highlighted code blocks make it more precise than Perplexity for framework-specific and library-specific queries, with less verbose output than ChatGPT for targeted technical lookups. Free tier uses GPT-5.4 class models; Pro is $20/month for Claude Opus 4.6-class models and priority speed. Best for software developers who run many specific technical searches per day and want cited answers with working code examples, not for general research, writing, or architecture discussions requiring long-context reasoning.
+  Phind was a developer-focused AI search engine with the Phind-70B model and VS Code extension. It shut down without warning on January 16, 2026. User data was deleted January 30, 2026. Replace with Perplexity, ChatGPT, or Claude.
 ---
 
 # Phind
 
-Phind is an AI search engine developed by Phind Inc., built specifically for software developers. It synthesizes answers to technical questions from web documentation, Stack Overflow, GitHub, and other developer sources, and is primarily used for programming help, framework questions, and debugging support. Its key differentiator is the developer-first design: the interface, source prioritization, and response format are all optimized for coding queries rather than general knowledge. As of April 2026, Phind offers a free tier with GPT-5.4 class answers and a Pro plan at $20/month that unlocks Claude Opus 4.6-class models, higher limits, and faster response times [Phind](https://phind.com/pricing). Compared to Perplexity, Phind is narrower but often more precise for pure coding and technical queries.
+Phind was a developer-focused AI search engine built around the Phind-70B model. It ran technical search across GitHub, Stack Overflow, official docs, and developer blogs, with a VS Code extension and multi-model Pro tier.
 
+**The service shut down on January 16, 2026, with no sunset period.** User data was deleted on January 30, 2026. This page exists as a reference for users still searching for Phind and planning migration to active tools.
 
-## Editor's Take
+## System Verdict
 
-I tested Phind's free tier and Pro plan last week, running 50+ queries on React hooks, Docker debugging, and AWS Lambda edge cases. The Claude Opus 4.6 responses in Pro are snappier than Perplexity's, under 2 seconds versus their 4-5, and the code blocks actually compile without tweaks 90% of the time. Free GPT-5.4 holds up for basics, but hits limits fast if you're grinding daily.
+> **Phind is offline. No subscription, no free tier, no API.** The shutdown came without advance warning roughly one month after a $10M funding round. The VS Code extension no longer connects to the backend. User accounts and history were permanently deleted on January 30, 2026.
+>
+> **What to use instead:** [Perplexity](/tools/perplexity/) for cited developer search, [ChatGPT](/tools/chatgpt/) Plus for Codex coding agent access, [Claude](/tools/claude/) for long-context code reasoning, or GitHub Copilot Workspace for in-IDE assistance.
+>
+> **Who should read this page:** Former Phind users planning migration, researchers tracking AI search consolidation, and teams auditing retired tools in their stack.
 
-Versus Perplexity, Phind wins on pure dev precision because it weights Stack Overflow and GitHub heavier, skipping fluff. Perplexity spreads thin on general searches; Phind stays laser-focused. That $20/month Pro is worth it for full-time coders doing 20 technical lookups a day. Skip if you're not in dev, it's useless for marketing or writing.
+## Key Facts
 
-My bias: I live in the terminal, so anything web-based feels slow. Still, Phind's model selector edges out rivals for picking the right brain per query. Use it.
+| | |
+|---|---|
+| **Status** | Dead. Shut down January 16, 2026 |
+| **Data deletion** | January 30, 2026 |
+| **Flagship model (former)** | Phind-70B |
+| **Former price** | Free tier, Pro $20/mo, Business $40/user/mo |
+| **Former features** | VS Code extension, JetBrains plugin, model selector (Pro), multi-turn chat |
+| **Shutdown context** | Closed roughly one month after a $10M funding round |
+| **Replacement tools** | Perplexity, ChatGPT, Claude, GitHub Copilot Workspace |
 
-## What It Does
+Every data point above was verified against public shutdown reporting on 2026-04-17. See Sources.
 
-Phind is a developer-focused AI search engine that reads technical documentation, GitHub repositories, Stack Overflow threads, and developer blogs to synthesize direct answers to programming questions, including working code examples, step-by-step explanations, and inline citations to the source material ([Phind](https://phind.com)). Rather than returning a list of links, Phind reads the relevant pages and generates a consolidated answer with code blocks formatted for immediate use. It also supports multi-turn conversation, so you can follow up on an answer without re-querying.
+## What it actually was
 
-The Pro plan unlocks access to Claude Opus 4.6-class models, which handle more complex reasoning tasks, along with priority queueing to eliminate slowdowns during peak hours. Phind now includes a model selector in Pro, letting users switch between GPT-5.4, Claude Opus 4.6, and Gemini 3.1 Pro variants depending on the query type. The service processes over 10 million developer queries monthly as of Q1 2026 [Phind Blog](https://phind.com/blog/q1-2026-update).
+A developer-focused AI search engine. Queries routed to the Phind-70B model with web retrieval weighted toward Stack Overflow, GitHub, and official documentation. Output included syntax-highlighted code blocks and inline citations.
 
-## Who It's For
+Pro gave a model selector (GPT, Claude, Gemini frontier variants), higher daily caps, priority speed, and API access. VS Code and JetBrains extensions rendered answers in-IDE.
 
-- **Software developers** who find that Google or ChatGPT gives imprecise answers to framework-specific or library-specific questions
-- **Junior developers** learning new languages or frameworks who need cited explanations alongside code examples
-- **Experienced engineers** debugging errors, checking API documentation, or comparing library options quickly
-- **Technical recruiters and PMs** who need to read and understand technical concepts without a deep background
-- **DevOps and SRE teams** verifying configuration syntax or cloud service integrations
-- **Anyone who finds ChatGPT's coding answers too verbose** and wants more direct, search-backed responses
+The moat was narrow: developer-first source weighting and the Phind-70B model. That moat did not survive general-purpose AI search consolidation. Perplexity, ChatGPT, and Claude absorbed the use case.
+
+## When to pick Phind
+
+- **Never, as of January 16, 2026.** The service is offline.
+
+## When to pick something else
+
+- **Cited developer search with broad coverage:** [Perplexity](/tools/perplexity/). Pro at $20/mo covers most former Phind use cases.
+- **Agentic coding with multi-file autonomy:** [ChatGPT](/tools/chatgpt/) Plus (Codex) at $20/mo or Pro tiers at $100-$200/mo.
+- **Long-context code reasoning:** [Claude](/tools/claude/) Pro at $20/mo. 1M token context on Opus and Sonnet.
+- **In-IDE coding assistant:** GitHub Copilot Workspace at $19/mo for project-level awareness inside VS Code.
+- **Semantic search API for custom dev tools:** [Exa](/tools/exa/). Drop-in for LangChain and LlamaIndex.
 
 ## Pricing
 
-| Plan | Price | Key Limits |
-|------|-------|-----------|
-| Free | $0/month | GPT-5.4 class model, 200 queries/day, standard response speed |
-| Pro | $20/month | Claude Opus 4.6-class model, GPT-5.4, Gemini 3.1 Pro; 1,000 queries/day; priority speed; model selector |
+No active pricing. Phind shut down January 16, 2026. Former pricing (for historical reference):
 
-> Pricing verified at [phind.com/pricing](https://phind.com/pricing) as of 2026-04-15.
+| Former Plan | Former Price | Status |
+|---|---|---|
+| Free | $0/mo | Offline |
+| Pro | $20/mo | Offline |
+| Business | $40/user/mo | Offline |
 
-## Key Features
+Verified 2026-04-17 via [Phind shutdown on Hacker News](https://news.ycombinator.com/item?id=46594533) and [Devtalk: Phind has shut down](https://devtalk.com/t/phind-has-shut-down/230488).
 
-- **Developer-first source prioritization:** Results are weighted toward official documentation, GitHub, Stack Overflow, MDN, and developer-authored technical content rather than general web pages.
-- **Inline code examples:** Answers include formatted, syntax-highlighted code blocks rather than descriptions of code.
-- **Cited answers:** Every claim links to the source page so you can read the original context or verify the answer against documentation.
-- **Multi-turn conversation:** Ask follow-up questions in context without starting a new search. Useful for iterative debugging.
-- **Model selection (Pro):** Pro users can switch between GPT-5.4, Claude Opus 4.6, and Gemini 3.1 Pro depending on whether they want speed, depth, or cost efficiency.
-- **VS Code and JetBrains extensions:** Phind integrates into Visual Studio Code and IntelliJ, allowing in-editor search without switching to a browser.
-- **API access (Pro):** Developers can integrate Phind search into custom tools via REST API with 10,000 calls/month included.
+## Against the alternatives
 
-## Limitations
+| | Phind (dead) | Perplexity Pro | ChatGPT Plus |
+|---|---|---|---|
+| **Status** | Offline | Active | Active |
+| **Price** | N/A | $20/mo | $20/mo |
+| **Developer focus** | Was primary | Strong (citations) | Codex coding agent |
+| **IDE integration** | Extensions offline | Limited | Plugins via OpenAI API |
+| **Model access** | Phind-70B (offline) | Auto-routed frontier | GPT frontier + Thinking |
+| **Best viewed as** | Historical reference | Cited research default | Generalist + coding agent |
 
-- **Narrowly scoped.** Phind is optimized for coding and technical queries. For research, writing, or general knowledge questions, Perplexity or ChatGPT will produce better results.
-- **Free tier limits.** Free users hit 200 queries/day cap and can encounter queue times during peak hours, making it less reliable for time-sensitive work.
-- **Answer freshness varies.** For cutting-edge libraries with recent major version changes, answers can lag behind the latest documentation. Always verify against official docs for version-sensitive questions.
-- **No native image analysis.** Text-only queries; cannot upload error screenshots or diagrams for analysis (VS Code extension supports image paste).
-- **IDE integration scope.** Extensions provide search but lack full code completion or refactoring capabilities of GitHub Copilot Workspace.
+## Failure modes
 
-## Bottom Line
+- **Service is offline.** All subscriptions, APIs, and extensions stopped functioning on January 16, 2026. No grace period.
+- **User data was deleted.** Accounts, chat history, saved answers, and extension configurations were purged January 30, 2026. No export window.
+- **No official migration path.** Phind did not hand off users to a successor product. Switching to Perplexity, ChatGPT, or Claude requires re-setup.
+- **Extension remnants still appear in marketplaces.** The VS Code listing still exists but the backend does not respond. Uninstall to avoid confusion.
+- **Third-party pricing pages show stale data.** Many review sites still list Pro at $20/mo. Treat any price source older than February 2026 as wrong.
 
-Phind remains the most focused AI search tool for developers who want fast, citation-backed answers to specific coding questions without the verbosity of ChatGPT. At $20/month for Pro with access to GPT-5.4, Claude Opus 4.6, and model switching, it offers strong value compared to [Perplexity](../tools/perplexity.md) Pro ($20/month) while staying calibrated for technical queries. The updated IDE extensions and API access make it more embeddable in developer workflows. Heavy users doing 10+ technical searches daily will find Pro essential; casual users can stick with free.
+## Methodology
 
-## Best Alternatives
-
-| Tool | Price | Key Difference |
-|------|-------|----------------|
-| [Perplexity](../tools/perplexity.md) | $0-$20/mo | Broader subject coverage; better for research and non-coding queries |
-| [ChatGPT](../tools/chatgpt.md) | $0-$20/mo | Superior for code generation and long-context reasoning; less search-native |
-| GitHub Copilot Workspace | $19/mo | In-IDE AI coding assistant with project-level awareness; limited web search |
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-04-17 against [Phind shutdown on Hacker News](https://news.ycombinator.com/item?id=46594533), [Devtalk shutdown thread](https://devtalk.com/t/phind-has-shut-down/230488), and [intelligenttools.co coverage](https://intelligenttools.co/tools/phind).
 
 ## FAQ
 
-**Is Phind better than ChatGPT for coding?**
-For targeted, specific coding questions where you want a quick, cited answer from documentation, yes. For writing complex code, designing architecture, or extended reasoning over a codebase, ChatGPT with GPT-5.4 provides better depth. They serve different parts of the developer workflow.
+**Is Phind still available?**
+No. Phind shut down January 16, 2026, without advance warning. The main site, API, and extensions are offline.
 
-**What models does Phind use?**
-Free tier uses GPT-5.4 class models. Pro subscribers access Claude Opus 4.6, GPT-5.4 full, and Gemini 3.1 Pro via model selector with faster response times [Phind Pricing](https://phind.com/pricing).
+**When was user data deleted?**
+January 30, 2026. Accounts, chat history, and saved queries were permanently purged. No export window was offered.
 
-**Does Phind have IDE extensions?**
-Yes. Phind offers extensions for VS Code, JetBrains IDEs, and Vim/Neovim that render technical search answers in a side panel alongside your code.
+**What happened to Phind-70B?**
+The model powered Phind's answer engine. It is no longer accessible through the product. No public release as open weights.
 
+**What should former Phind users switch to?**
+Perplexity Pro for cited developer search, ChatGPT Plus for Codex agent access, Claude Pro for long-context reasoning, or GitHub Copilot Workspace for in-IDE assistance. Pick based on whether the priority is search, agent autonomy, or IDE integration.
 
+**Does the VS Code extension still work?**
+No. The extension marketplace listing persists, but the backend does not respond. Uninstall to avoid confusion.
 
+**Why did Phind shut down?**
+Public reporting indicates closure roughly one month after a $10M funding round. The company did not publish a detailed post-mortem.
 
-## Review History
-
-- **2026-04-14:** Pricing and feature list verified against official docs.
-- **2026-01-16:** Updated flagship model reference to latest release.
-- **2025-12-16:** Pricing verified. Minor copy edits.
-- **2024-01-15:** Added to the catalog with a full review.
-
-## Related Comparisons
-
-- [ChatGPT vs Phind](../comparisons/chatgpt-vs-phind.md)
-- [Exa AI vs Phind](../comparisons/exa-vs-phind.md)
-- [Kagi vs Phind](../comparisons/kagi-vs-phind.md)
-- [Perplexity vs Phind](../comparisons/perplexity-vs-phind.md)
-- [Phind vs You.com](../comparisons/phind-vs-you-com.md)
 ## Sources
 
-- [Phind Official Site](https://phind.com): Product page, pricing, and feature information
-- [Phind Blog - Q1 2026 Update](https://phind.com/blog/q1-2026-update): Model upgrades, usage stats, and extension releases
+- [Phind shutdown on Hacker News](https://news.ycombinator.com/item?id=46594533): primary shutdown thread
+- [Devtalk: Phind has shut down](https://devtalk.com/t/phind-has-shut-down/230488): community discussion and timeline
+- [intelligenttools.co: Why did Phind shut down](https://intelligenttools.co/blog/improved-phind-shutdown-post): shutdown context reporting
+- [Phind review 2026 (shut down)](https://www.toolsforhumans.ai/ai-tools/phind): retrospective review
 
 ## Related
 
-- **Category:** [AI Search](../categories/ai-search.md)
----```
+- **Category:** [AI Search](/categories/ai-search/)
+- **Comparisons:** [ChatGPT vs Phind](/comparisons/chatgpt-vs-phind/) | [Exa AI vs Phind](/comparisons/exa-vs-phind/) | [Kagi vs Phind](/comparisons/kagi-vs-phind/) | [Perplexity vs Phind](/comparisons/perplexity-vs-phind/) | [Phind vs You.com](/comparisons/phind-vs-you-com/)

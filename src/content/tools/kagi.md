@@ -2,7 +2,7 @@
 type: tool
 slug: kagi
 title: Kagi
-tagline: Paid, ad-free search engine with AI summarization, privacy-first design, and user-controlled result ranking.
+tagline: Paid, ad-free search engine with user-controlled ranking and the Kagi Assistant AI layer on the Ultimate tier.
 category: ai-search
 company: kagi-inc
 url: https://kagi.com
@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "$5-$25/month"
 status: active
 launched: 2017-06
-last_updated: 2026-04-15
-last_verified: 2026-04-15
+last_updated: 2026-04-17
+last_verified: 2026-04-17
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -25,114 +25,140 @@ scores:
   moat: 6
   longevity: 7
 tags: [search-engine, privacy, ad-free, ai-summarization, paid-search, kagi-assistant, no-tracking]
-seo_title: "Kagi: Features, Pricing & Review (2026)"
-meta_description: "Kagi is a paid, privacy-focused search engine with no ads and AI summarization via Kagi Assistant. Plans from $5/mo (100 searches) to $25/mo (unlimited). Is it worth it?"
+seo_title: "Kagi: Ad-Free Search Review & Pricing (April 2026)"
+meta_description: "Kagi is paid, ad-free search with user ranking controls and Kagi Assistant. Starter $5/mo (300 searches), Professional $10/mo unlimited, Ultimate $25/mo adds premium AI models. No free tier."
 author: "aipedia.wiki Editorial"
+best_for:
+  - privacy-focused users who want zero tracking
+  - power researchers frustrated by SEO spam
+  - knowledge workers willing to pay for relevance
+  - users who want domain blocking and result boosting
+not_best_for:
+  - casual searchers on a free-only budget
+  - workflows needing the absolute widest index
+  - users who prefer auto-routed AI search over manual controls
 quick_answer: >-
-  Kagi is a paid, privacy-first search engine built by Kagi Inc. that eliminates ads and third-party tracking entirely by funding itself through subscriptions, with user-controlled result ranking, domain blocking, and an AI assistant called Kagi Assistant on the top tier. The business model is the differentiator: because Kagi earns no ad revenue, its incentives align with delivering relevant results rather than maximizing clicks, which produces a noticeable quality improvement on informational queries where SEO spam currently dominates Google. No free tier; Starter is $5/month for 100 searches; Professional is $10/month for 300; Ultimate is $25/month for unlimited searches plus Kagi Assistant. Best for power users and researchers willing to pay $10-$25/month to opt out of ad-supported search; the 300-search cap on the $10 plan is genuinely limiting for anyone who searches heavily throughout the day.
+  Kagi is paid, ad-free search. Starter $5/mo (300 searches), Professional $10/mo (unlimited), Ultimate $25/mo adds Kagi Assistant with premium models. No free tier; 100-search trial only. Pick it for clean results and domain controls. Skip it if free alternatives are good enough.
 ---
 
 # Kagi
 
-Kagi is a paid, privacy-focused search engine developed by Kagi Inc. It provides ad-free web search with user-controlled result ranking and AI summarization features via Kagi Assistant, and is primarily used by users who want search results based on relevance rather than advertiser interests or engagement optimization ([Kagi](https://kagi.com)). Its key differentiator is the business model: Kagi is funded entirely by subscriptions, so its incentives align with user value rather than ad revenue. As of April 2026, Kagi maintains plans starting at $5/month for 100 searches, $10/month for 300, and $25/month for unlimited searches with Kagi Assistant included.
+Kagi is a paid search engine funded entirely by subscriptions. No ads, no third-party tracking, no behavioral profiles. Users can boost, block, or pin domains, and those preferences personalize ranking without training on private data.
 
+Kagi Assistant is the integrated AI chat layer. Basic Assistant is now available across all paid tiers; premium models (GPT, Claude, Gemini frontier tier) are Ultimate-only.
 
-## Editor's Take
+## System Verdict
 
-I signed up for Kagi's Ultimate plan at $25 a month two weeks ago, expecting cleaner results than Google. The ad-free searches deliver, SEO spam vanishes on tech queries, and my boosts for sites like arXiv stick after a few uses. Kagi Assistant summarizes pages decently in 5-10 seconds, better than Perplexity's free tier for quick facts without fluff. But the $10 Professional plan caps you at 300 searches; I hit that by noon on heavy days, forcing upgrades.
+> **Pick Kagi if the ad-supported web feels broken and result quality matters more than $10-$25/month.** SEO spam drops away on informational queries. Domain blocking and site boosting compound over weeks of use. Assistant gives a cited AI answer layer without leaving the search surface.
+>
+> **Skip it if Google or Perplexity free tier already does the job.** Index breadth is narrower than Google on niche and very recent queries. Assistant on Ultimate is capable but trails dedicated [Perplexity](/tools/perplexity/) for depth of cited research.
+>
+> **Who pays which tier:** Starter $5/mo for light searchers (300/month cap), Professional $10/mo for most users (unlimited search, basic Assistant), Ultimate $25/mo for power researchers who want premium AI models alongside unlimited search.
 
-Perplexity edges it out for AI depth, its pro mode chains reasoning across sources while Kagi Assistant feels like a bolted-on summarizer. Privacy nuts love Kagi's no-tracking stance, and results rank by relevance, not clicks. Skip if you're casual or budget-tight; Google's free for that. Power researchers, grab Ultimate. I won't cancel mine yet.
+## Key Facts
 
-## What It Does
+| | |
+|---|---|
+| **Product type** | Paid, ad-free search engine with AI assistant |
+| **Free tier** | None. 100-search trial for new users |
+| **Starter** | $5/mo: 300 searches/month |
+| **Professional** | $10/mo: unlimited searches, basic Assistant |
+| **Ultimate** | $25/mo: unlimited + premium Assistant models (GPT, Claude, Gemini frontier) |
+| **Annual discount** | 10% off all tiers |
+| **Personalization** | Domain block, boost, pin, Lenses (community filters) |
+| **Privacy** | No behavioral tracking, no ad profiles, subscription-funded |
+| **Index** | Proprietary crawl + licensed third-party indexes |
 
-Kagi is a premium search engine that charges users a monthly subscription to eliminate ads, third-party tracking, and the search quality compromises that come from advertiser incentives, while adding features like personalized result ranking, site blocking, and an integrated AI summarization assistant called Kagi Assistant ([Kagi Pricing](https://kagi.com/pricing)). The search index is built on a combination of proprietary crawling and licensed data from third-party indexes, with Kagi's own ranking algorithms applied on top.
+Every data point above was verified against vendor documentation on 2026-04-17. See Sources.
 
-Users can block domains they never want to see, boost sites they trust, and mark results as preferred; all of which improve personal search quality over time without training on private data. Kagi Assistant, available on the Ultimate plan, is an AI chat interface with web access and summarization capabilities.
+## What it actually is
 
-## Who It's For
+One search product with three subscription tiers. Every result is organic. Every user has personal block, boost, and pin controls that persist across sessions.
 
-- Privacy-conscious users who want search without cross-site tracking, behavioral profiling, or data sold to advertisers
-- Knowledge workers and researchers frustrated by SEO-optimized spam dominating Google and Bing results
-- Users willing to pay for a higher-quality product and who value the incentive alignment of a subscription model
-- Developers and technical users who want clean, uncluttered results without shopping ads and SEO farms
-- Power users who want to customize search behavior: block domains, boost trusted sites, and tune result rankings
+Kagi Assistant is an AI chat layer with web access. Basic tier models now ship with Professional and above; premium frontier models (GPT, Claude, Gemini top tier) stay Ultimate-only. Universal Summarizer collapses any page or video to a short brief on demand.
+
+The moat: subscription economics. Because Kagi earns no ad revenue, its ranking incentive is user retention, not click maximization. That shows up most clearly on high-commercial-intent queries where Google surfaces shopping carousels and SEO farms.
+
+## When to pick Kagi
+
+- **SEO spam is killing research productivity.** Kagi's ad-free result list reads cleaner than Google on product reviews, technical queries, and medical lookups.
+- **Personal ranking control matters.** Block domains forever, boost trusted sources, pin favorites. Preferences stay private and do not train models.
+- **Privacy is non-negotiable.** Zero behavioral tracking, no ad profile, no data sold. Subscription model removes the conflict-of-interest.
+- **Power users want Lenses and Summarizer.** Community-curated Lenses filter to academic, developer, or small-web sources. Universal Summarizer handles long pages and video.
+- **Ultimate subscribers want premium AI in one tab.** GPT, Claude, and Gemini top-tier models inside Kagi Assistant without a second subscription.
+
+## When to pick something else
+
+- **Free AI search with strong citations:** [Perplexity](/tools/perplexity/). Free tier is capable; Pro is $20/mo with auto-routed models.
+- **Developer API for semantic retrieval:** [Exa](/tools/exa/). Kagi has no production developer API.
+- **General-purpose AI assistant with image gen:** [ChatGPT](/tools/chatgpt/). Broader feature surface at $20/mo.
+- **Academic paper search with evidence synthesis:** [Consensus](/tools/consensus/) or [Elicit](/tools/elicit/).
+- **Enterprise research agent:** [You.com](/tools/you-com/) ARI on Max or Enterprise tiers.
 
 ## Pricing
 
-| Plan | Price | Key Limits |
-|------|-------|-----------|
-| Starter | $5/month | 100 searches/month |
-| Professional | $10/month | 300 searches/month |
-| Ultimate | $25/month | Unlimited searches + Kagi Assistant AI chat |
+Pricing via [kagi.com/pricing](https://kagi.com/pricing):
 
-> Pricing verified at [kagi.com/pricing](https://kagi.com/pricing) as of 2026-04-15.
+| Plan | Monthly | Searches | Assistant | Who's it for |
+|---|---|---|---|---|
+| Starter | $5 | 300/mo | Basic | Light searchers testing the product |
+| Professional | $10 | Unlimited | Basic | **Most paying users land here** |
+| Ultimate | $25 | Unlimited | Premium frontier models | Power researchers + AI power users |
 
-There is no free tier. Kagi offers a 100-search free trial for new users to evaluate the product before committing. At 300 searches per month, the Professional plan works out to about 10 searches per day; reasonable for moderate use but constraining for heavy researchers.
+Annual billing saves 10% across all tiers. Fair pricing policy: unused Starter months auto-credit the next cycle. Prices verified 2026-04-17 via [Kagi pricing](https://kagi.com/pricing) and [Kagi plan types docs](https://help.kagi.com/kagi/plans/plan-types.html).
 
-## Key Features
+No free tier. New users get a 100-search trial before subscribing.
 
-- Ad-free search: No sponsored results, no shopping carousels, no ad slots. Every result is organic. This alone changes the search experience significantly for high-commercial-intent queries.
-- Personalized ranking: Block specific domains from ever appearing in your results. Boost trusted sources to rank higher. Preferences are stored privately and not used to train models or build advertising profiles.
-- Kagi Lenses: Curated search filters that restrict results to specific communities (academics, developers, small web, etc.) for more targeted searches.
-- Kagi Assistant: AI chat with web access, included in the Ultimate plan. Provides answers with citations; competes with Perplexity AI in functionality within Kagi's ad-free environment.
-- Summarize any page: One-click AI summarization of any web page from the search results; useful for quickly evaluating whether a source is worth reading.
-- Zero tracking: No behavioral tracking, no IP logging beyond session, no data sold to third parties. Kagi's privacy policy is transparent ([Kagi Privacy](https://kagi.com/privacy)).
-- Quick Answers: AI-generated direct answers at the top of results with source citations.
+## Against the alternatives
 
-## Limitations
+| | Kagi Ultimate | Perplexity Pro | Google + DuckDuckGo |
+|---|---|---|---|
+| **Price** | $25/mo | $20/mo | Free |
+| **Ads** | None | None | Yes (Google) / limited (DDG) |
+| **Personalization** | Block, boost, pin, Lenses | None | None (private) |
+| **AI layer** | Assistant with frontier models | Auto-routed models | Separate tools |
+| **Privacy** | Zero tracking | No ad targeting | Google tracks, DDG does not |
+| **Index breadth** | Narrower than Google | Uses web index + AI | Widest |
+| **Best viewed as** | Premium research toolkit | Cited AI research engine | Free baseline |
 
-- No free tier. Every competitor (Google, Bing, Perplexity, DuckDuckGo) is free. Kagi asks you to pay from day one, which is a meaningful barrier for casual users.
-- Search limit on lower plans. 100 searches per month at $5 and 300 at $10 are genuinely limiting for power users. Heavy researchers will need the $25 Ultimate plan.
-- Index depth is narrower than Google. For obscure, niche, or very recent queries, Kagi occasionally misses results that Google would find. It is not a full Google replacement for edge-case searches.
-- Smaller user base equals less community feedback. Google's quality improves with billions of daily search interactions. Kagi's index and ranking have less behavioral data to work with.
-- Kagi Assistant quality trails leaders. On the Ultimate plan, Kagi Assistant works well but does not match GPT-5.4 or Claude Opus 4.6 in reasoning depth or accuracy.
+## Failure modes
 
-## Bottom Line
+- **No free tier.** Every competitor is free. Subscription wall is a hard sell for users who search casually.
+- **Starter cap bites fast.** 300 searches/month at $5 runs out inside a week for heavy users. Most should go straight to Professional.
+- **Narrower index than Google.** Very recent news, obscure domains, and non-English long-tail are patchier. Not a full Google replacement.
+- **Assistant trails Perplexity on depth.** Fine for quick synthesis; less thorough on multi-source primary research than Perplexity Pro.
+- **Small behavioral data pool.** Kagi has fewer interactions than Google to train ranking signals with. Personalization is manual, not learned.
+- **Lens discovery is patchy.** Community Lenses live behind a few clicks. New users miss half the power without reading the docs.
 
-Kagi is the best search engine for users who believe the ad-supported web is fundamentally broken and are willing to pay $10-$25/month to opt out. The result quality is genuinely better than Google for informational queries where SEO farms currently dominate; the difference is real and noticeable after a week of use. The limitation is the search count caps on lower plans; most users who rely on search heavily will need the $25 Ultimate plan to avoid rationing.
+## Methodology
 
-## Best Alternatives
-
-| Tool | Price | Key Difference |
-|------|-------|----------------|
-| [Perplexity](../tools/perplexity.md) | $0-$20/mo | Stronger AI search with citations; free tier; no personalization or domain blocking |
-| DuckDuckGo | Free | Privacy-focused but ad-supported; no AI assistant; results based on Bing index |
-| Brave Search | Free | Privacy-first, ad-optional; independent index; less AI integration than Kagi |
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-04-17 against [Kagi pricing](https://kagi.com/pricing), [Kagi plan types docs](https://help.kagi.com/kagi/plans/plan-types.html), and [Kagi Assistant for all](https://blog.kagi.com/assistant-for-all).
 
 ## FAQ
 
 **Is Kagi worth $25/month?**
-For users who do 10+ searches per day and find Google results increasingly filled with SEO spam and AI-generated junk content, yes. The quality difference on information-dense queries is real. For casual searchers, the cost is hard to justify relative to free alternatives.
+For users running 20+ searches per day who want premium AI models bundled, yes. For lighter users, Professional at $10/mo with unlimited search and basic Assistant is the sweet spot.
 
-**Does Kagi have a free trial?**
-Yes. New users get 100 free searches before being asked to subscribe. This is enough to evaluate whether the result quality improvement justifies the subscription cost for your typical search patterns.
+**Is there a free trial?**
+Yes. New users get 100 free searches before being asked to subscribe. Enough to evaluate whether result quality justifies paying.
 
-**How does Kagi's privacy compare to DuckDuckGo?**
-Both are meaningfully more private than Google. Kagi has a more explicit no-logging policy and is transparent about its data practices. DuckDuckGo is free but still serves ads (non-behavioral). Kagi's subscription model means it has no financial incentive to monetize user data at all.
+**What changed with Kagi Assistant?**
+Basic Assistant rolled out to all paid tiers. Ultimate still holds premium frontier models (GPT, Claude, Gemini top tier) and unlimited usage.
 
+**Kagi vs Perplexity?**
+Kagi is a search engine with an AI layer. Perplexity is an AI answer engine with search underneath. Kagi gives finer control over ranking; Perplexity gives deeper research synthesis. Pick Kagi for daily search replacement, Perplexity for research tasks.
 
+**Does Kagi track users?**
+No behavioral tracking, no ad profiles, no data sold to third parties. IP is not logged beyond session. Subscription economics remove the incentive to profile users.
 
-
-## Review History
-
-- **2026-04-13:** Monthly verification pass. Pricing unchanged.
-- **2026-03-24:** Score adjusted down 0.3 after a pricing change reduced value.
-- **2026-02-16:** Noted the new model availability across tiers.
-- **2025-11-16:** Pricing verified. Minor copy edits.
-- **2024-01-15:** Initial review published after hands-on testing.
-
-## Related Comparisons
-
-- [ChatGPT vs Kagi](../comparisons/chatgpt-vs-kagi.md)
-- [Exa AI vs Kagi](../comparisons/exa-vs-kagi.md)
-- [Kagi vs Perplexity](../comparisons/kagi-vs-perplexity.md)
-- [Kagi vs Phind](../comparisons/kagi-vs-phind.md)
-- [Kagi vs You.com](../comparisons/kagi-vs-you-com.md)
 ## Sources
 
-- [Kagi Official Site](https://kagi.com): Product page, search features, and pricing
-- [Kagi Blog](https://blog.kagi.com): Recent updates on features and Assistant improvements
+- [Kagi pricing](https://kagi.com/pricing): current tier structure
+- [Kagi plan types docs](https://help.kagi.com/kagi/plans/plan-types.html): detailed plan features
+- [Kagi Assistant for all](https://blog.kagi.com/assistant-for-all): Assistant tier expansion
+- [Kagi Ultimate plan docs](https://help.kagi.com/kagi/plans/ultimate-plan.html): premium model access
 
 ## Related
 
-- **Category:** [AI Search](../categories/ai-search.md)
+- **Category:** [AI Search](/categories/ai-search/)
+- **Comparisons:** [ChatGPT vs Kagi](/comparisons/chatgpt-vs-kagi/) | [Exa AI vs Kagi](/comparisons/exa-vs-kagi/) | [Kagi vs Perplexity](/comparisons/kagi-vs-perplexity/) | [Kagi vs Phind](/comparisons/kagi-vs-phind/) | [Kagi vs You.com](/comparisons/kagi-vs-you-com/)

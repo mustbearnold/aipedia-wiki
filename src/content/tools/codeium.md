@@ -3,17 +3,17 @@ type: tool
 slug: codeium
 title: Codeium
 tagline: >-
-  Free AI code completion for individuals supporting 70+ languages and 40+
-  editors, with a no-training guarantee.
+  AI code completion brand. Rebranded to Windsurf for the agentic IDE in 2025.
+  Codeium name covers enterprise autocomplete plugins across 70+ languages.
 category: ai-coding
-company: codeium
+company: cognition
 url: 'https://codeium.com'
 pricing_model: freemium
-price_range: $0-$200/month
+price_range: $0-$60/user/month
 status: active
 launched: 2022-12
-last_updated: 2026-04-15T00:00:00.000Z
-last_verified: '2026-04-15'
+last_updated: 2026-04-17
+last_verified: 2026-04-17
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -22,119 +22,159 @@ affiliate:
   network: null
   link: null
 scores:
-  utility: 8
-  value: 9
-  moat: 6
-  longevity: 7
-tags: [autocomplete, free, ai-coding, ide-plugin, enterprise, vscode, jetbrains, neovim]
-seo_title: 'Codeium: Free AI Code Completion Review & Pricing (2026)'
+  utility: 7
+  value: 8
+  moat: 5
+  longevity: 6
+tags: [autocomplete, free, ai-coding, ide-plugin, enterprise, vscode, jetbrains, neovim, windsurf]
+seo_title: 'Codeium: Free AI Code Completion Review & Pricing (April 2026)'
 meta_description: >-
-  Codeium offers free AI code completion for individuals across 70+ languages.
-  Teams $12/user/mo. No training on your code. Full review and pricing 2026.
-author: aipedia.wiki Editorial
+  Codeium is the plugin brand for AI autocomplete across 70+ languages and 40+
+  editors. The company rebranded to Windsurf for the agentic IDE in April 2025.
+  Free tier available; Pro $20/mo under Windsurf.
+author: "aipedia.wiki Editorial"
+best_for:
+  - individual developers needing free autocomplete
+  - users on niche languages or editors
+  - students and open-source contributors
+  - teams testing AI coding before committing
+not_best_for:
+  - developers needing agentic multi-file workflows
+  - users wanting best-in-class completion quality
+  - teams relying on GitHub-native integrations
 quick_answer: >-
-  Codeium is a free AI code completion tool offering unlimited individual use across 70+ programming languages and 40+ editors with no credit card and no training on user code. The individual plan is permanently free; Teams costs $12/user/month and adds cross-repository context awareness for organizations. Best for developers who want capable AI autocomplete without any subscription cost, particularly those using niche languages or editors not well covered by Copilot; the tradeoff is that completion quality sits below GitHub Copilot, which costs $10/month and offers better model quality and agent capabilities.
+  Codeium is the autocomplete brand. The company rebranded to Windsurf in April 2025
+  for the agentic IDE, and Cognition acquired Windsurf in December 2025. Free plugin
+  autocomplete across 70+ languages remains. Paid plans run under the Windsurf brand.
 ---
 
 # Codeium
 
-Codeium is an AI code completion tool that provides free access for individual developers across 70+ programming languages and 40+ editors. The service maintains a no-training policy on user code and supports unlimited completions without requiring a credit card. As of April 2026, Codeium continues to position itself against paid options like GitHub Copilot by emphasizing broad compatibility and zero cost for personal use, while teams access advanced context features on paid plans.[Codeium.com](https://codeium.com)
+Codeium is the AI code completion brand that ships plugin-based autocomplete across 70+ languages and 40+ editors. The company rebranded to **Windsurf** in April 2025 for its agentic IDE product. Cognition AI acquired Windsurf in December 2025.
 
+Today, **Codeium** refers to the plugin-based autocomplete and enterprise deployment products. **Windsurf** refers to the agentic IDE (formerly the Windsurf Editor) with Cascade and Supercomplete. Separate products, separate pricing pages, one underlying company.
 
-## Editor's Take
+## System Verdict
 
-I installed Codeium's latest VS Code extension, version 1.14.2 from April 2026, and used it daily for a week on Python and Rust projects. The free tier delivers unlimited completions across 70+ languages with no hiccups, zero credit card nonsense, and it runs offline-capable after initial setup. Chat sidebar handles basic refactoring prompts decently, pulling from open files, but context feels shallow without the $12/user/month Teams plan.
+> **Pick Codeium plugin autocomplete if budget is zero and Copilot is ruled out.** Free tier runs unlimited completions across 70+ languages and 40+ editors. Strong on Neovim, Emacs, JetBrains, and niche languages Copilot covers weakly.
+>
+> **Skip the Codeium brand for agentic work.** The Windsurf Editor is where Cascade, Supercomplete, and multi-file autonomous editing live. Separate product, separate purchase path.
+>
+> **Who pays what:** Free plugin autocomplete for solo developers, Windsurf Pro $20/mo for individual agentic work, Windsurf Teams $40/user/mo for collaboration, Windsurf Enterprise $60/user/mo with SSO, RBAC, SCIM, and doubled quotas.
 
-Compared to GitHub Copilot at $10/month, Codeium lags in suggestion quality; Copilot nails multi-file logic more often, while Codeium hallucinates edge cases in niche langs like Racket. That's fine for solo devs or students scraping by on free tools, grab it if Copilot's paywall bugs you or you need Neovim support. Skip if you're on Teams; the cross-repo awareness upgrade isn't worth $12 when Cursor offers sharper agents for similar cash. I bias toward free options, but even I hit limits on complex refactors.
+## Key Facts
 
-## What It Does
+| | |
+|---|---|
+| **Current brand structure** | Codeium = plugins + enterprise autocomplete · Windsurf = agentic IDE |
+| **Parent company** | Cognition AI (acquired Windsurf December 2025, ~$250M) |
+| **Rebrand date** | April 2025 (Codeium -> Windsurf for the IDE) |
+| **Codeium plugin languages** | 70+ |
+| **Codeium plugin editors** | 40+ (VS Code, JetBrains, Neovim, Emacs, Jupyter) |
+| **Free plugin autocomplete** | Unlimited completions, no credit card |
+| **Training on user code** | No for individual plugin users |
+| **Windsurf Pro (IDE)** | $20/mo (raised from $15 in March 2026) |
+| **Windsurf Teams** | $40/user/mo |
+| **Windsurf Enterprise** | $60/user/mo (SSO, RBAC, SCIM, doubled quotas) |
+| **Windsurf Free** | 25 prompt credits/mo |
 
-Codeium delivers inline code suggestions as users type, covering single lines, functions, and code blocks in languages from Python to Fortran. It integrates with editors including VS Code, JetBrains IDEs, Neovim, Emacs, and Jupyter notebooks. The tool installs as a plugin and activates automatically in supported environments.
+Every data point above was verified against vendor sources on 2026-04-17. See Sources.
 
-Codeium Chat offers a sidebar interface for code-related queries, such as generating functions from prompts, explaining snippets, or suggesting fixes. This chat pulls context from open files for relevant responses. Teams and Enterprise plans include a context engine that scans organization repositories for improved suggestion accuracy across files.
+## What it actually is
 
-Recent updates as of 2026 added support for longer context windows and faster inference, though the core free offering remains unchanged from prior years.[Codeium Docs](https://docs.codeium.com)
+Two product lines under one company.
 
-## Who It's For
+**Codeium plugins** deliver inline autocomplete and a chat sidebar inside VS Code, JetBrains, Neovim, Emacs, and Jupyter. Individual use stays free: unlimited completions, no card required, no training on user code. Enterprise buyers get self-hosted deployment, SSO, audit logs, and VPC installation.
 
-- Individual developers seeking free AI autocomplete without subscriptions
-- Students and open source contributors on tight budgets
-- Users of niche languages like COBOL, VHDL, or Racket
-- Teams testing AI tools before enterprise commitments
-- Developers prioritizing editor compatibility over maximum model performance
-- Organizations requiring explicit no-training guarantees on code data
+**Windsurf Editor** is the agentic IDE that Codeium launched in November 2024 and rebranded around in April 2025. Cascade handles multi-file edits, Supercomplete tabs predict longer sequences, and the editor ships autonomous workflows the plugin does not offer. Cognition acquired the company for roughly $250M in December 2025.
+
+## When to pick Codeium
+
+- **Zero-dollar autocomplete across wide language coverage.** Free plugin tier runs unlimited completions. Good on Racket, Fortran, Lisp, Assembly.
+- **Neovim or Emacs is the editor.** Plugin support is first-class where Copilot ships thinner integration.
+- **Students and open-source contributors.** Free forever, no trial expiration.
+- **Enterprises needing self-hosted autocomplete.** VPC deployment and no-training guarantees available under enterprise contracts.
+- **Testing AI coding before committing to Copilot or Cursor.** Free tier is the lowest-friction on-ramp.
+
+## When to pick something else
+
+- **Best-in-class completion quality:** [GitHub Copilot](/tools/github-copilot/) at $10/mo. Tighter GitHub integration and stronger multi-file logic.
+- **Agentic multi-file editing inside a dedicated IDE:** Windsurf Editor ($20/mo Pro) or [Cursor](/tools/cursor/) ($20/mo). Codeium plugins do not ship Cascade-grade features.
+- **Ultra-fast autocomplete with very long context:** [Tabnine](/tools/tabnine/) or Supermaven. Different speed/quality bias.
+- **Free autocomplete with open-source control:** Continue (open-source plugin) runs against self-hosted models.
 
 ## Pricing
 
-| Plan | Price | Key Limits |
-|------|-------|-----------|
-| Individual | Free | Unlimited completions, chat, all 70+ languages, 40+ editors |
-| Teams | $12/user/mo | Cross-repo context, admin dashboard, priority support |
-| Enterprise | Custom | Self-hosted option, SSO, audit logs, VPC deployment |
+Codeium plugin pricing (autocomplete + chat):
 
-> **Verification note:** Pricing confirmed at [codeium.com/pricing](https://codeium.com/pricing) as of 2026-04-15.
+| Plan | Price | Scope | Who's it for |
+|------|-------|-------|--------------|
+| Individual | Free | Unlimited completions, 70+ languages, 40+ editors | Solo developers on any editor |
+| Teams | $12/user/mo | Cross-repo context, admin dashboard, priority support | Small engineering teams |
+| Enterprise | Custom | Self-hosted, SSO, audit logs, VPC deployment | Regulated orgs |
 
-## Key Features
+Windsurf pricing (agentic IDE):
 
-- Unlimited free individual use with no completion limits or credit card requirement
-- Support for 70+ languages including mainstream and niche options like Julia, Lisp, and Assembly
-- Integrations with 40+ editors and IDEs, broader than most competitors
-- No training commitment: user code from individuals not used for model training
-- Codeium Chat for code generation, explanation, and debugging with file context
-- Teams context awareness indexes repositories for relevant suggestions
-- Self-hosted Enterprise deployment for compliance needs
-- Regular model updates without changing free tier access
+| Plan | Price | Scope | Who's it for |
+|------|-------|-------|--------------|
+| Free | $0 | 25 prompt credits/mo | Evaluating the IDE |
+| Pro | $20/mo | Full agentic workflows | **Most individual Windsurf users** |
+| Teams | $40/user/mo | Centralized billing, admin analytics | Agencies and small teams |
+| Enterprise | $60/user/mo | SSO, RBAC, SCIM, doubled quotas, long context | Regulated enterprises |
 
-## Limitations
+*Prices verified 2026-04-17 via [Windsurf pricing blog](https://windsurf.com/blog/windsurf-pricing-plans) and [Windsurf usage docs](https://docs.windsurf.com/windsurf/accounts/usage). Windsurf self-serve plans moved from credit-based to quota-based in March 2026. Existing subscribers grandfathered at prior prices.*
 
-- Completions trail GitHub Copilot in quality for complex, multi-step logic
-- Chat lacks depth of Copilot Workspace or Cursor Composer for multi-file tasks
-- No autonomous agent mode for plan-and-execute editing workflows
-- Enterprise features require custom pricing, less transparent than Teams plan
-- Dependent on cloud inference, no local model execution option
+## Against the alternatives
 
-## Bottom Line
+| | Codeium plugin (free) | GitHub Copilot | Windsurf Pro | Cursor Pro |
+|---|---|---|---|---|
+| **Monthly** | $0 | $10 | $20 | $20 |
+| **Primary job** | Inline autocomplete + chat | Autocomplete + Copilot Workspace | Agentic IDE (Cascade) | Agentic IDE (Composer) |
+| **Editor coverage** | **Widest** (40+) | VS Code, JetBrains, Neovim, Vim | Dedicated Windsurf editor | Dedicated Cursor editor |
+| **Multi-file agent** | No | Copilot Workspace (separate) | **Cascade** | **Composer** |
+| **Language breadth** | **70+ including niche** | Broad | Broad | Broad |
+| **Training on user code** | No for individuals | No | No | No |
+| **Best viewed as** | Zero-cost fallback | Default paid autocomplete | Dedicated agentic IDE | Dedicated agentic IDE |
 
-Codeium delivers strong value through permanent free individual access, earning a 9/10 value score. Utility reaches 8/10 for broad compatibility and reliable basic completions. Moat improved to 6/10 with growing adoption; longevity at 7/10 as free tiers proliferate but Codeium maintains wide editor support.
+## Failure modes
 
-## Best Alternatives
+- **Brand confusion.** "Codeium" historically covered both the plugin and the IDE. Post-April-2025 the IDE is Windsurf. Reviews and social mentions pre-rebrand may describe either.
+- **Pricing moved.** Windsurf Pro raised from $15 to $20 in March 2026. Earlier price screenshots are stale.
+- **Completion quality lags Copilot on complex logic.** Copilot's multi-file reasoning is measurably stronger on large edits.
+- **Free plugin tier has no agent.** Agentic workflows require the Windsurf Editor or a competitor; the free plugin is autocomplete only.
+- **No local model execution on plugins.** Cloud inference required. Continue (open-source) covers the fully-local niche.
+- **Cognition ownership post-December 2025.** Product direction now sits inside Cognition AI (Devin). Roadmap priorities favor the agentic IDE over the plugin line.
+- **Enterprise pricing is opaque.** Codeium Teams lists at $12/user/mo; Windsurf Teams at $40/user/mo. Buyers must clarify which product the contract covers.
 
-| Tool | Price | Key Difference |
-|------|-------|----------------|
-| GitHub Copilot | $10/mo | Superior model quality, agent mode, GitHub ecosystem |
-| Cursor | $20/mo | Full IDE with Composer for multi-file edits |
-| Supermaven | Free/$10 | Ultra-fast autocomplete, million-token context |
+## Methodology
+
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [Windsurf pricing blog](https://windsurf.com/blog/windsurf-pricing-plans), [Windsurf usage docs](https://docs.windsurf.com/windsurf/accounts/usage), [Codeium official site](https://codeium.com), and the Cognition acquisition announcement.
 
 ## FAQ
 
-**Is Codeium really free forever?**  
-Yes, the individual plan offers unlimited completions and chat with no caps, trials, or payment details required. This has remained consistent since launch.[Codeium Pricing](https://codeium.com/pricing)
+**Is Codeium the same as Windsurf?**
+Same company, different products today. Codeium is the plugin-based autocomplete brand. Windsurf is the agentic IDE. The rename happened in April 2025. Cognition AI acquired the combined company in December 2025.
 
-**Does Codeium use my code for training?**  
-Codeium commits not to train on individual user code, with a published privacy policy. Enterprise users get additional data controls.[Codeium Privacy](https://codeium.com/privacy)
+**Is Codeium really free forever?**
+Yes for the individual plugin tier. Unlimited completions, 70+ languages, 40+ editors, no credit card required, no training on user code.
 
-**How does Codeium compare to GitHub Copilot?**  
-Copilot provides higher completion accuracy and agent features for $10/month. Codeium matches on price for individuals ($0) and exceeds on editor support but lags in advanced capabilities.
+**What changed with the Cognition acquisition?**
+Cognition bought Windsurf for roughly $250M in December 2025. At acquisition, Windsurf had $82M ARR and 350+ enterprise customers. Roadmap direction consolidated around the agentic IDE, with the Codeium plugin line continuing for autocomplete users.
 
+**Codeium plugin vs GitHub Copilot?**
+Copilot at $10/mo delivers higher completion accuracy and a Copilot Workspace agent. Codeium's free tier matches on editor breadth and exceeds on niche-language support. Students and Neovim users pick Codeium; mainstream VS Code and GitHub-heavy users pick Copilot.
 
+**Which plan gets Cascade?**
+Cascade is a Windsurf Editor feature, not a Codeium plugin feature. Windsurf Pro at $20/mo includes Cascade. The free Codeium plugin does not.
 
-
-## Review History
-
-- **2026-04-09:** Monthly verification pass. Pricing unchanged.
-- **2026-03-25:** Score reviewed; no change, but rationale updated.
-- **2026-02-16:** Added the new model variant to the features section.
-- **2025-11-16:** Pricing verified. Minor copy edits.
-- **2024-01-15:** Initial review published after hands-on testing.
-
-## Related Comparisons
-
-- [Codeium vs GitHub Copilot](../comparisons/codeium-vs-github-copilot.md)
-
-
-- **Category:** [Coding](../categories/ai-coding.md)
 ## Sources
 
-- [Official website](https://codeium.com), verified 2026-04-15
-- [Codeium pricing](https://codeium.com/pricing), verified 2026-04-15
-- [TechCrunch coverage](https://techcrunch.com/2026/03/12/codeium-raises-150m-series-c/), funding and updates
+- [Windsurf pricing blog](https://windsurf.com/blog/windsurf-pricing-plans): current plan prices and the March 2026 quota move
+- [Windsurf usage docs](https://docs.windsurf.com/windsurf/accounts/usage): plan quotas and enterprise details
+- [Codeium official site](https://codeium.com): plugin pricing, language and editor list
+- [Codeium privacy](https://codeium.com/privacy): no-training guarantee
+
+## Related
+
+- **Category:** [AI Coding](/categories/ai-coding/)
+- **Comparisons:** [Codeium vs GitHub Copilot](/comparisons/codeium-vs-github-copilot/)

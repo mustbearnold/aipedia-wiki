@@ -2,7 +2,7 @@
 type: tool
 slug: semantic-scholar
 title: Semantic Scholar
-tagline: Free AI-powered academic search engine from the Allen Institute for AI, indexing 220 million papers.
+tagline: Free AI-powered academic search engine from Allen Institute for AI, indexing 200M+ papers with TLDR summaries and a free public API.
 category: ai-research
 company: Allen Institute for AI (AI2)
 url: https://www.semanticscholar.org
@@ -10,8 +10,8 @@ pricing_model: free
 price_range: "Free"
 status: active
 launched: 2015-11
-last_updated: 2026-04-15
-last_verified: 2026-04-15
+last_updated: 2026-04-17
+last_verified: 2026-04-17
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -25,124 +25,146 @@ scores:
   moat: 8
   longevity: 9
 tags: [academic-search, research, free, open-access, ai-research, citations]
-seo_title: "Semantic Scholar: Free AI Academic Search Engine Review (2026)"
-meta_description: "Semantic Scholar is a free AI-powered academic search engine from Allen Institute for AI. 220M papers indexed. No account needed. Review April 2026."
+seo_title: "Semantic Scholar: Free AI Academic Search Engine (April 2026)"
+meta_description: >-
+  Semantic Scholar is a free AI-powered academic search engine from Allen Institute for AI, indexing 200M+ papers with TLDR summaries, influential-citation signals, and a free public API. No paid tier. Verified April 2026.
 author: "aipedia.wiki Editorial"
 best_for:
   - academic research
   - literature discovery
   - free access seekers
   - interdisciplinary researchers
+  - developers building research tools
 not_best_for:
-  - ai synthesis needs
+  - ai synthesis across papers
+  - citation-sentiment analysis
+  - humanities-heavy research
 quick_answer: >-
-  Semantic Scholar is a free, AI-powered academic search engine built and maintained by the Allen Institute for AI (AI2), a non-profit founded by Microsoft co-founder Paul Allen. Its index covers 220 million papers across all major disciplines, and an AI layer generates one-sentence TLDR summaries per paper, distinguishes highly influential citations from casual mentions, and powers a free API used by hundreds of third-party research tools. Everything, search, TLDR, Semantic Reader, and the API, is free with no paid tier. Best for researchers, students, and developers who need a comprehensive, no-cost starting point for literature discovery; not the right tool vs. Consensus or Elicit when you need AI synthesis across multiple papers rather than discovery of individual ones. Coverage in some humanities fields is thinner than in STEM and social sciences.
+  Semantic Scholar is a free academic search engine from Allen Institute for AI covering 200M+ papers. TLDR summaries, influential-citation signals, and a free public API. No paid tier. Pick it as the default starting point. Skip it when you need cross-paper synthesis.
+price_history:
+  - date: 2026-04-17
+    plan: "Free"
+    price: "$0"
+    note: "Verified fully free. No paid tier exists."
 ---
 
 # Semantic Scholar
 
-Semantic Scholar is a free, AI-powered academic search engine built and maintained by the Allen Institute for AI (AI2), a non-profit research organization founded by Microsoft co-founder Paul Allen. [Semantic Scholar official site](https://www.semanticscholar.org) Unlike commercial research tools, Semantic Scholar has no paid tier; it is entirely free, requires no account for basic use, and its API is freely available for developers. With 220 million papers indexed across all major academic disciplines, it is one of the largest publicly accessible academic databases.[Allen Institute for AI](https://allenai.org)
+Allen Institute for AI (AI2)'s free academic search engine. The S2AG index covers 205 million publications, 121 million authors, and nearly 2.5 billion citation edges, with roughly 60 million full-text papers. No paid tier. No account required for basic search.
 
-The AI layer extracts structured information from papers: key results, methods, authors, and citation context. The TLDR feature auto-generates one-sentence summaries of papers. The Semantic Reader overlays reading assistance on open-access papers directly in the browser. The API powers hundreds of third-party research tools and academic applications.[Semantic Scholar API](https://api.semanticscholar.org)
+An AI layer generates TLDR one-sentence summaries, distinguishes influential citations from casual mentions, and powers a free public API used by hundreds of third-party research tools.
 
-For researchers who need a free, comprehensive starting point for literature discovery, Semantic Scholar has no direct peer. Its value score is 10/10 because it is genuinely excellent and genuinely free, a rare combination.
+## System Verdict
 
+> **Pick Semantic Scholar as the default starting point for any academic search.** Free, comprehensive, and built on AI2's in-house SciBERT-family models. The API alone justifies the tool: every major research application in the space (including [Connected Papers](/tools/connected-papers/)) is built on top of it.
+>
+> **Skip it when the question requires cross-paper synthesis or citation-sentiment analysis.** [Consensus](/tools/consensus/) and [Elicit](/tools/elicit/) synthesize across abstracts and extract structured data. [Scite](/tools/scite/) classifies citations as supporting or contrasting. Semantic Scholar finds and summarizes individual papers. It does not reason across them.
+>
+> **Who uses which tier:** Everyone uses the free tier. Developers register for a free API key. Institutions can request bulk dataset access. There is no paid consumer plan, and there has not been one since launch.
 
-## Editor's Take
+## Key Facts
 
-I pulled up Semantic Scholar last week to chase citations on a neural architecture paper. The search returned 220 million papers indexed as of April 2026, with TL;DR summaries still generating in under two seconds, no login required, no paywall nonsense.[1] Influential citations pop right up, separating signal from noise better than Google Scholar's raw counts.
+| | |
+|---|---|
+| **Corpus size** | 205M+ publications, 121M+ authors, ~2.5B citation edges |
+| **Full-text coverage** | ~60M papers |
+| **Signature feature** | TLDR one-sentence AI summaries per paper |
+| **Influential citations** | Separates high-signal citations from casual mentions |
+| **Semantic Reader** | In-browser reading assistant for open-access papers |
+| **API** | Free public API with registration, generous rate limits |
+| **Backing organization** | Allen Institute for AI (non-profit, Paul Allen legacy) |
+| **Models** | In-house SciBERT-family, not general-purpose LLMs |
+| **Account requirement** | None for basic search |
+| **Paid tier** | None |
 
-It's free from AI2, so the value crushes Elicit, which charges $12/month for synthesis you don't get here. Semantic Scholar sticks to discovery: find papers, skim TL;DRs, export RIS files. If you're a grad student or indie researcher scraping by, use this daily. Synthesis junkies? Skip it, Elicit or Consensus parse across docs, while this hands you singles.
+## What it actually is
 
-I bias toward free tools since I edit on a wiki budget, but even paying folks waste money overlooking it. Solid at version 2.17.1.
+A single product with a web search interface and a free public API. The S2AG (Semantic Scholar Academic Graph) bulk dataset exposes the full corpus to institutions and developers.
 
-## What It Does
+Search ranks by citation-graph analysis: papers cited by important papers rank higher. Each result shows a TLDR summary, citation count, influential-citation count, and direct references. Semantic Reader overlays highlighting and summaries on open-access papers.
 
-Semantic Scholar crawls and indexes academic papers from PubMed, arXiv, IEEE, ACM, and hundreds of other sources. You search by keyword, author, or paper title. Results are ranked by relevance using citation graph analysis (papers cited by important papers rank higher).[Semantic Scholar official site](https://www.semanticscholar.org)
+The Research Feed recommends new papers based on reading history and saved papers. Export supports RIS and BibTeX for citation manager integration.
 
-The AI-generated TLDR (Too Long Didn't Read) gives you a one-sentence summary per result. Citation counts, influential citations, and references are displayed per paper. The Research Feed recommends new papers based on your reading history.
+The moat is institutional. AI2 is a non-profit with permanent funding, which removes the venture-backed shutdown risk that kills commercial research tools. The API's hundreds of downstream applications ([Connected Papers](/tools/connected-papers/), academic apps, citation managers) further entrench it.
 
-The Semantic Reader provides in-browser enhancements for open-access papers, including citation highlighting and paper summaries.
+## When to pick Semantic Scholar
 
-## Who It's For
+- **You need a free starting point for any academic search.** No signup friction, no paywall, no credit cap.
+- **You are a developer building research tools.** The free API covers 200M+ papers with generous rate limits. Commercial alternatives charge per query.
+- **You work on interdisciplinary research.** Coverage spans STEM, social sciences, and medicine at one query.
+- **You want influential-citation filtering.** Distinguishes papers that shaped a field from those with many casual mentions.
+- **You need a citation-graph view.** Built-in visualization of how a paper connects to its references and descendants.
 
-- Any researcher who needs a free, comprehensive academic search engine as a starting point
-- Developers building academic tools who want a free API for programmatic paper access
-- Students who cannot afford institutional subscriptions to Web of Science or Scopus
-- Journalists and science writers who need to quickly check the academic landscape on a topic
-- Interdisciplinary researchers who need broad coverage across multiple fields
+## When to pick something else
+
+- **AI synthesis across multiple papers:** [Consensus](/tools/consensus/) or [Elicit](/tools/elicit/). Semantic Scholar finds papers; these tools reason across them.
+- **Citation sentiment analysis:** [Scite](/tools/scite/). Supporting/Contrasting/Mentioning classification is outside Semantic Scholar's scope.
+- **Visual literature mapping from a seed paper:** [Connected Papers](/tools/connected-papers/) (which itself runs on Semantic Scholar's index).
+- **Structured extraction for meta-analysis:** [Elicit](/tools/elicit/). Configurable columns from hundreds of papers.
+- **Humanities-heavy research:** JSTOR or subject-specific databases. Semantic Scholar's coverage thins in arts and humanities.
 
 ## Pricing
 
-| Plan | Price | Notes |
-|------|-------|-------|
-| Free | $0 | Everything; search, API, TLDR, Semantic Reader |
+| Plan | Price | Access |
+|------|-------|--------|
+| Free | $0 | Full search, TLDR, Semantic Reader, Research Feed, API (with registration) |
 
-Prices verified 2026-04-15. Semantic Scholar has no paid plans. Maintained by Allen Institute for AI (non-profit). API free with registration.[Semantic Scholar official site](https://www.semanticscholar.org)
+*Verified 2026-04-17. Semantic Scholar is fully free with no paid tier. Maintained by Allen Institute for AI, a non-profit research organization. Bulk dataset access available to institutions at no cost on request.*
 
-## Key Features
+## Against the alternatives
 
-- 220M+ papers; one of the largest academic databases, covering all major disciplines[Semantic Scholar official site](https://www.semanticscholar.org)
-- TLDR summaries; AI-generated one-sentence summaries for most papers
-- Semantic Reader; in-browser reading assistant for open-access papers with citation highlighting
-- Influential citations; distinguishes highly cited papers from papers with many casual mentions
-- Research Feed; personalized paper recommendations based on saved papers and reading history
-- Free API; programmatic access to the full database with no per-query cost[Semantic Scholar API](https://api.semanticscholar.org)
-- Citation graph; visualize how papers cite each other across the research landscape
+| | Semantic Scholar | Consensus | Elicit |
+|---|---|---|---|
+| **Price** | Free | $0-$10.99/mo | $0-$79/user/mo |
+| **Corpus** | 205M+ papers | 200M+ papers | 125M+ papers |
+| **AI summary per paper** | TLDR (1 sentence) | Full paper answer synthesis | Extraction columns |
+| **Cross-paper synthesis** | No | Yes | Yes (structured) |
+| **Free public API** | Yes | No | Enterprise only |
+| **Citation context** | Influential citations | No | No |
+| **Best viewed as** | Free discovery layer | Research Q&A | Systematic-review engine |
 
-## Limitations
+## Failure modes
 
-- No AI synthesis across papers; Semantic Scholar finds and summarizes individual papers but does not synthesize a multi-paper answer to a research question the way Consensus or Elicit does
-- No citation classification; unlike Scite, Semantic Scholar counts citations but does not classify them as supporting, contrasting, or neutral
-- Coverage gaps in some humanities fields; strongest in STEM and social sciences; arts and some humanities are less comprehensively indexed
-- Basic interface; the UI is functional but not as polished as paid competitors; advanced filtering is less sophisticated than Web of Science or Scopus
+- **No cross-paper synthesis.** Semantic Scholar finds and summarizes individual papers. It will not answer "what does the literature say about X" the way [Consensus](/tools/consensus/) does.
+- **No citation classification.** Counts are shown, but sentiment (supporting vs contrasting) is not. [Scite](/tools/scite/) fills that gap.
+- **Humanities coverage thins.** Best in STEM and social sciences. Arts and humanities researchers will find sparser indexing.
+- **TLDR summaries are one sentence.** Useful for triage, not a substitute for reading the methods or results.
+- **Interface is functional, not polished.** Advanced filtering trails Web of Science and Scopus. Good enough for most use cases, not for every institutional workflow.
+- **No full-text for paywalled content.** Open-access papers get Semantic Reader enhancements. Paywalled papers show abstracts only.
+- **API rate limits exist.** Generous but finite. Heavy commercial users should confirm limits before building production dependencies.
 
-## Bottom Line
+## Methodology
 
-Semantic Scholar scores 10/10 on value; it is free, comprehensive, and excellent. Utility is 8/10 for literature discovery (slightly below paid tools that add synthesis and citation classification). Longevity is 9/10: Allen Institute for AI is a well-funded non-profit with a clear mission, making Semantic Scholar's continued operation reliably funded in a way that venture-backed tools are not.
-
-## Best Alternatives
-
-| Tool | Price | Key Difference |
-|------|-------|----------------|
-| [Consensus](../tools/consensus.md) | Free / $10.99/mo | AI synthesis and Consensus Meter; pays for what Semantic Scholar doesn't do |
-| [Elicit](../tools/elicit.md) | Free / $12/mo | Structured literature review extraction |
-| [Scite](../tools/scite.md) | $20/mo | Citation classification (Supporting/Contrasting) |
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies corpus and feature details against primary sources, and generates the analysis above. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [Semantic Scholar](https://www.semanticscholar.org), [Allen Institute for AI](https://allenai.org), the [Semantic Scholar Academic Graph paper](https://dl.acm.org/doi/fullHtml/10.1145/3487553.3527147), and the [S2ORC GitHub repo](https://github.com/allenai/s2orc).
 
 ## FAQ
 
-**Is Semantic Scholar better than Google Scholar?**  
-They're complementary. Google Scholar has a broader index and better full-text search. Semantic Scholar has better AI features (TLDR, citation graph analysis, influential citations) and a more structured, research-focused interface. Most researchers use both.[Semantic Scholar official site](https://www.semanticscholar.org)
+**Is Semantic Scholar really free?**
+Yes. Fully free with no paid tier. Maintained by Allen Institute for AI, a non-profit. Registration is optional for basic search and required for API access.
 
-**Is Semantic Scholar's API really free?**  
-Yes; register for an API key and access is free with generous rate limits. The API is used by hundreds of academic tools, citation managers, and research applications.[Semantic Scholar API](https://api.semanticscholar.org)
+**Is Semantic Scholar better than Google Scholar?**
+They are complementary. Google Scholar has broader full-text search. Semantic Scholar has better AI features (TLDR, influential citations, citation graph) and cleaner metadata. Most researchers use both.
 
-**Does Semantic Scholar use large language models like GPT-5.4 or Claude Opus 4.6?**  
-No; it uses models developed in-house by AI2, such as SciBERT and related architectures, focused on academic text processing rather than general-purpose LLMs.
+**Is the API really free?**
+Yes. Register for an API key and access is free with generous rate limits ([S2ORC GitHub](https://github.com/allenai/s2orc)). Hundreds of academic tools and citation managers are built on it.
 
+**What models does Semantic Scholar use?**
+In-house AI2 models including the SciBERT family, focused on academic text processing. Not GPT-5, not Claude, not a general-purpose LLM.
 
+**Why is the corpus called S2AG?**
+S2AG stands for Semantic Scholar Academic Graph. It contains titles, abstracts, authors, and citation edges for open-access papers across every major discipline ([ACM article](https://dl.acm.org/doi/fullHtml/10.1145/3487553.3527147)).
 
+**Does Semantic Scholar do synthesis like Consensus?**
+No. It finds and summarizes individual papers. For cross-paper synthesis or meta-analysis support, use [Consensus](/tools/consensus/) or [Elicit](/tools/elicit/).
 
-## Review History
-
-- **2026-04-02:** Pricing verified. Clarified pricing for annual vs monthly billing.
-- **2026-03-01:** Score reviewed; no change, but rationale updated.
-- **2026-01-16:** Noted the new model availability across tiers.
-- **2025-10-16:** Pricing verified. Minor copy edits.
-- **2024-01-15:** Added to the catalog with a full review.
-
-## Related Comparisons
-
-- [Connected Papers vs Semantic Scholar](../comparisons/connected-papers-vs-semantic-scholar.md)
-- [Consensus vs Semantic Scholar](../comparisons/consensus-vs-semantic-scholar.md)
-- [Elicit vs Semantic Scholar](../comparisons/elicit-vs-semantic-scholar.md)
-- [nanochat vs Semantic Scholar](../comparisons/nanochat-vs-semantic-scholar.md)
-- [Scite vs Semantic Scholar](../comparisons/scite-vs-semantic-scholar.md)
-
-
-- **Category:** [Research](../categories/ai-research.md)
 ## Sources
 
-- [Semantic Scholar official site](https://www.semanticscholar.org), verified 2026-04-15
-- [Allen Institute for AI](https://allenai.org), verified 2026-04-15
-- [Semantic Scholar API](https://api.semanticscholar.org), verified 2026-04-15
+- [Semantic Scholar](https://www.semanticscholar.org): product site and TLDR feature
+- [Allen Institute for AI](https://allenai.org): organization, funding, and mission
+- [Semantic Scholar Academic Graph (ACM)](https://dl.acm.org/doi/fullHtml/10.1145/3487553.3527147): corpus size and structure
+- [S2ORC GitHub](https://github.com/allenai/s2orc): open research corpus and API access
+
+## Related
+
+- **Category:** [AI Research](/categories/ai-research/)
+- **Comparisons:** [Semantic Scholar vs Consensus](/comparisons/consensus-vs-semantic-scholar/) | [Scite vs Semantic Scholar](/comparisons/scite-vs-semantic-scholar/) | [Elicit vs Semantic Scholar](/comparisons/elicit-vs-semantic-scholar/) | [Connected Papers vs Semantic Scholar](/comparisons/connected-papers-vs-semantic-scholar/)

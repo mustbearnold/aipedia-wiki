@@ -2,16 +2,16 @@
 type: tool
 slug: scite
 title: Scite
-tagline: Smart citation tool that shows how papers are cited, whether they are supported, contrasted, or just mentioned.
+tagline: Smart Citations classify every academic reference as Supporting, Contrasting, or Mentioning across 1.2B+ indexed citations.
 category: ai-research
 company: scite LLC
 url: https://scite.ai
 pricing_model: freemium
-price_range: "Free (limited) / $20/month"
+price_range: "$0-$20/month"
 status: active
 launched: 2018-01
-last_updated: 2026-04-15
-last_verified: 2026-04-15
+last_updated: 2026-04-17
+last_verified: 2026-04-17
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -24,12 +24,13 @@ scores:
   value: 7
   moat: 8
   longevity: 8
-tags: [citations, academic-research, peer-review, literature-review, evidence]
-seo_title: "Scite.ai Review: Smart Citation Tool for Researchers (2026)"
-meta_description: "Scite shows how papers cite each other, supporting, contrasting, or mentioning. Unique citation context that no other tool provides. Review April 2026."
+tags: [citations, academic-research, peer-review, literature-review, evidence, smart-citations]
+seo_title: "Scite.ai: Smart Citations Review & Pricing (April 2026)"
+meta_description: >-
+  Scite classifies 1.2B+ citations as Supporting, Contrasting, or Mentioning. Personal $20/mo, Team and Enterprise custom. Unique citation-context signal no other tool provides. Verified April 2026.
 author: "aipedia.wiki Editorial"
 quick_answer: >-
-  Scite is an academic citation tool developed by scite LLC that classifies each of its 1.2+ billion indexed citations as Supporting, Contrasting, or Mentioning, solving the core problem that traditional citation databases like Google Scholar treat all citations as equal. This classification is the only one of its kind at scale and is the primary reason researchers use it. The Essential plan costs $20/month with a limited free tier; best for PhD students and researchers doing systematic literature reviews who need to evaluate scientific credibility, not for casual academic work, where Semantic Scholar covers basic needs for free.
+  Scite classifies each citation as Supporting, Contrasting, or Mentioning across 1.2B+ indexed references. The Assistant answers research questions grounded in that classified context. Pick it for credibility checks and systematic reviews. Skip it for casual browsing or humanities-heavy fields.
 best_for:
   - PhD students conducting systematic literature reviews
   - Researchers evaluating paper credibility before citation
@@ -39,114 +40,130 @@ not_best_for:
   - Casual academic browsing
   - Researchers with no budget for tools
   - Fields with sparse coverage (engineering, humanities)
+price_history:
+  - date: 2026-04-17
+    plan: "Personal"
+    price: "$20/mo"
+    note: "Verified unchanged. Annual at $200/yr."
 ---
 
 # Scite
 
-Scite is an academic research tool that solves a specific, important problem: not all citations are endorsements. When researchers cite a paper, they might be supporting its findings, contradicting them, or simply mentioning them in passing. Traditional citation databases count citations as equal; scite classifies them. This distinction matters enormously for evaluating scientific credibility.
+scite LLC's Smart Citations platform. Every citation in its 1.2 billion-plus index is classified as Supporting, Contrasting, or Mentioning based on the text surrounding the reference in the citing paper. The Assistant layers AI Q&A on top of that classified database.
 
-For each paper in scite's database, you can see how many citations are Supporting (the citing paper affirms the findings), Contrasting (the citing paper disputes the findings), and Mentioning (neutral reference). A paper with 500 citations but 200 contrasting ones is in a very different scientific position than a paper with 500 supporting citations.
+Pricing: Free tier limited, Personal $20/mo ($200/yr), Team and Enterprise custom.
 
-Scite's Assistant is an AI feature that lets you ask research questions in natural language; it returns answers grounded in specific classified citations. Beyond the core citation classification feature, scite offers a literature search interface, alert notifications for new papers citing specific works, and a dashboard for tracking a topic over time.
+## System Verdict
 
+> **Pick Scite if you need to know whether a paper's claims are supported or contested, not just how many times it was cited.** The Supporting/Contrasting/Mentioning split is the only at-scale citation-context classification on the market and transforms citation counts from a popularity metric into an evidence signal.
+>
+> **Skip it if your field is lightly covered or your budget is zero.** Biomedical and social sciences have dense coverage. Engineering, computer science, arts, and humanities thin out fast. For free discovery, [Semantic Scholar](/tools/semantic-scholar/) covers the basics. For conversational research Q&A, [Consensus](/tools/consensus/) is faster and cheaper.
+>
+> **Who pays which tier:** Free for one-off checks with strict limits, Personal $20/mo for any researcher doing regular literature work, Team for lab groups, Enterprise ($5K to $25K/year typical) for institutional SSO and API access.
 
-## Editor's Take
+## Key Facts
 
-I tested scite's core feature, the citation classification system, and it genuinely works. Seeing papers sorted into Supporting, Contrasting, and Mentioning categories reveals what traditional databases hide: a paper with 500 citations might actually be contested science. The $20/month Essential plan is reasonable for PhD students doing systematic reviews, but the free tier is too limited for serious work. You get 100 classifications monthly, which runs out fast if you're evaluating a literature base of any size.
+| | |
+|---|---|
+| **Classified citations indexed** | 1.2B+ across 178M papers |
+| **Classification labels** | Supporting, Contrasting, Mentioning |
+| **Signature feature** | Citation-context classification via trained NLP |
+| **Scite Assistant** | AI Q&A grounded in classified citation contexts |
+| **Reference Check** | Audits a draft's bibliography for retracted or contested sources |
+| **Analytics** | Journal-level and author-level supporting-to-contrasting ratios |
+| **API access** | Enterprise tier only |
+| **Student discount** | 30 to 50 percent off Personal plan |
+| **Coverage strength** | Biomedical, social sciences |
+| **Coverage weakness** | Engineering, CS, humanities |
 
-The real competitor here is Consensus, which also uses AI to contextualize citations. Consensus focuses on consensus-finding across papers; scite focuses on citation directionality. If you need to know whether a paper's claims are actually supported or just cited, scite wins. If you want quick answers to research questions without digging into methodology, Consensus is faster. Scite's weakness is coverage, humanities and engineering fields are sparse compared to biomedical literature, so check their database before subscribing.
+## What it actually is
 
-Skip this if you're browsing casually or have no budget. The tool solves a real problem for researchers who need to evaluate credibility before citing, but it's not a replacement for Google Scholar. It's a specialist tool for specialists.
+One product with three surfaces: the citation database, the Assistant, and Reference Check. Researchers search for a paper, see a classified citation dashboard (how many cite it, how many support, how many contrast), and drill into specific citation contexts.
 
-## What It Does
+The Assistant accepts natural-language research questions and returns answers synthesized from classified citation contexts, not abstracts alone. This is the structural difference from Consensus, which synthesizes from abstracts.
 
-Scite indexes 1.2 billion+ citations across 178 million papers and classifies each based on the context in which the citing paper mentions the cited paper. The classification uses natural language processing trained on researcher-labeled citation contexts. The Assistant feature answers research questions by searching scite's citation context database and synthesizing answers from relevant classified citations, similar to [Consensus](../tools/consensus.md) but grounded in citation context rather than paper abstracts alone.
+The moat is the classified database itself. Building it required years of NLP training on researcher-labeled citation contexts. No other tool at this scale has replicated the dataset.
 
-The platform also provides journal-level and author-level analytics showing the ratio of supporting to contrasting citations, which helps researchers understand the standing of a particular researcher's work or the citation patterns within a journal. Citation alerts notify users when papers they follow receive new citations, enabling researchers to stay current with how their work is being used and challenged.
+## When to pick Scite
 
-## Who It's For
+- **You are evaluating a paper before citing it.** Seeing 200 contrasting citations against a high-count paper changes how you frame it in your own work.
+- **You are running a systematic review.** The classification surfaces contested claims that citation counts alone would hide.
+- **You are a journal editor or peer reviewer.** Quickly assess whether a submitted paper's cited sources have been replicated or disputed.
+- **You fact-check science coverage.** Journalists get a direct signal on whether a viral study has held up.
+- **You need the Assistant grounded in primary-source context.** Unlike generalist chatbots, answers tie back to classified citations with source links.
 
-- Researchers evaluating a paper's credibility before citing it in their own work
-- PhD students doing systematic literature reviews who need to assess the weight of evidence
-- Academic institutions checking for reproducibility issues before building on a paper
-- Journal editors and peer reviewers assessing the standing of cited work
-- Science journalists fact-checking whether a widely cited paper has been replicated or contested
-- Research teams needing programmatic access to citation context via API
+## When to pick something else
+
+- **Free discovery and TLDR summaries:** [Semantic Scholar](/tools/semantic-scholar/). 200M+ papers, no cost, unmatched value for a starting point.
+- **Research question Q&A with a consensus meter:** [Consensus](/tools/consensus/). Faster and cheaper at $10.99/mo Premium.
+- **Structured extraction tables for meta-analysis:** [Elicit](/tools/elicit/). Different output, different workflow.
+- **Visual paper graph from a seed reference:** [Connected Papers](/tools/connected-papers/). Explores conceptual neighborhood, not citation sentiment.
+- **Humanities or sparse-coverage fields:** Google Scholar or a subject-specific database. Scite's coverage is thin outside STEM and social sciences.
 
 ## Pricing
 
-| Plan | Price | Notes |
-|------|-------|-------|
-| Free | $0 | Limited searches, basic citation context, restricted Assistant queries |
-| Essential | $20/month | Unlimited search, full Assistant access, citation alerts, topic dashboards |
-| Research | Custom | Team features, API access, institutional licensing, priority support |
+Subscription pricing via [scite.ai/pricing](https://scite.ai/pricing).
 
-Prices verified at [scite.ai/pricing](https://scite.ai/pricing) as of 2026-04-15.
+| Plan | Price | Key Access |
+|------|-------|-----------|
+| Free | $0 | Limited daily searches, no full citation statements |
+| Personal | $20/mo ($200/yr) | Unlimited Smart Citations, full Assistant, Reference Check, alerts |
+| Team | Custom | Multi-seat licenses, team analytics |
+| Enterprise | Custom (~$5K-$25K/yr) | SSO, API, institutional licensing |
 
-## Key Features
+*Prices verified 2026-04-17 via [scite.ai/pricing](https://scite.ai/pricing). Student discounts of 30 to 50 percent apply on Personal. Enterprise ranges cited from independent channel reporting.*
 
-- Citation classification: every citation labeled Supporting, Contrasting, or Mentioning
-- 1.2+ billion classified citations: the largest database of context-classified citations available
-- Scite Assistant: AI Q&A grounded in citation context, not just abstracts
-- Citation alerts: get notified when a paper you follow receives new citations
-- Topic dashboard: track the citation landscape for a research area over time
-- Journal and author analysis: see supporting/contrasting ratios at journal and researcher level
-- API access: programmatic access for institution-level research tools and integrations
+## Against the alternatives
 
-## Limitations
+| | Scite | Consensus | Semantic Scholar |
+|---|---|---|---|
+| **Primary signal** | Citation sentiment (Support/Contrast) | Consensus meter from abstracts | Citation counts + influential citations |
+| **Q&A interface** | Assistant (classified-context grounded) | Yes (abstract-grounded) | No native Q&A |
+| **Database size** | 1.2B+ citations across 178M papers | 200M+ papers | 200M+ papers |
+| **Free tier usefulness** | Very limited | Generous monthly | Fully free, forever |
+| **Price floor (paid)** | $20/mo Personal | $10.99/mo Premium | $0 |
+| **Best viewed as** | Credibility checker | Research question answerer | Free discovery engine |
 
-- Limited free tier: the free plan is too restricted to evaluate whether the tool fits your workflow; a trial period is available but short
-- Citation classification error rates: NLP-based classification has documented error rates, particularly for nuanced or sarcastic citation contexts; always verify important classifications
-- Coverage gaps in some fields: strong in biomedical and social sciences; thinner in engineering, computer science, arts, and humanities
-- $20/month cost: reasonable for institutions but steep for independent academics without institutional access
-- No offline access: all features require internet connectivity and active account
+## Failure modes
 
-## Bottom Line
+- **Classification is NLP, not ground truth.** Nuanced or sarcastic citation contexts get misclassified. Verify high-stakes classifications manually.
+- **Free tier is a demo, not a workflow.** A handful of searches per day and no access to full citation statements. Anyone evaluating the tool seriously needs the trial or Personal plan.
+- **Coverage gaps outside STEM and social sciences.** Engineering, CS, humanities, and arts have sparse citation-context data. Check your field before subscribing.
+- **No offline access.** All features require internet and an active session.
+- **Assistant inherits classification error rates.** If the underlying citation context was misclassified, the Assistant's synthesized answer carries the error forward.
+- **$20/mo feels steep without institutional backing.** Independent academics and hobbyists will feel it. Cochrane-grade reviewers will not.
+- **Smaller API footprint.** Programmatic access is Enterprise-only. Solo developers cannot script against the database.
 
-Scite scores 8/10 on utility for researchers who need to evaluate scientific credibility. The classification of citations as supporting or contrasting is genuinely unique and not available in Google Scholar, PubMed, or Web of Science. Moat is 8/10 because the classified citation database is proprietary and has taken years to build. Value is 7/10 at $20/month, excellent for active researchers but expensive for casual use.
+## Methodology
 
-## Best Alternatives
-
-| Tool | Price | Key Difference |
-|------|-------|----------------|
-| [Consensus](../tools/consensus.md) | Free / $10.99/month | Evidence synthesis from abstracts, no citation classification |
-| [Semantic Scholar](../tools/semantic-scholar.md) | Free | Broad database with citation counts but no classification |
-| Google Scholar | Free | Largest index, no citation context classification |
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the analysis above. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [scite.ai](https://scite.ai) and [scite pricing](https://scite.ai/pricing).
 
 ## FAQ
 
 **What makes Scite different from Google Scholar?**
-Google Scholar counts citations; scite classifies them. Knowing that a paper has 500 citations is less useful than knowing that 150 of them explicitly contest its findings. Scite's citation context transforms citation counts from a popularity metric into an evidence-quality signal.
+Google Scholar counts citations. Scite classifies them. Knowing a paper has 500 citations is less useful than knowing 150 of them explicitly contest its findings.
 
-**Is Scite worth paying for?**
-For researchers who regularly need to evaluate paper credibility, yes. The Supporting/Contrasting/Mentioning breakdown saves hours of reading and makes literature review more rigorous. For casual or occasional academic work, [Semantic Scholar](../tools/semantic-scholar.md) is free and covers basic needs.
+**Is Scite worth $20/month?**
+For active researchers running regular literature reviews, yes. The Supporting/Contrasting split saves hours and flags contested science. For occasional academic work, [Semantic Scholar](/tools/semantic-scholar/) is free and covers basic needs.
 
-**How accurate is the citation classification?**
-Scite's classification uses trained NLP models and achieves high accuracy on standard benchmarks, but no system is perfect. The tool flags confidence levels for each classification, and researchers should verify classifications for papers that will directly influence their work.
+**How accurate is citation classification?**
+Scite uses trained NLP models and publishes confidence levels per classification. High-stakes citations should still be manually verified, particularly in nuanced or critical contexts.
 
+**Scite vs Consensus: what is the difference?**
+Scite grounds answers in classified citation contexts. [Consensus](/tools/consensus/) grounds answers in paper abstracts with a consensus meter across studies. Scite answers "is this paper supported or contested?" Consensus answers "what does the literature say about X?"
 
+**Does Scite work for humanities research?**
+Coverage is thinnest outside STEM and social sciences. Humanities researchers will find sparse citation-context data for most fields.
 
+**Can I integrate Scite into my institution's research tools?**
+Yes, via the Enterprise tier. API access and SSO are bundled. Personal and Team plans do not include the API.
 
-## Review History
-
-- **2026-04-09:** Pricing verified. Added note on the updated free tier limit.
-- **2026-03-11:** Score held after review; justification tightened in the Editor's Take.
-- **2026-02-16:** Flagship version bumped after the most recent model release.
-- **2025-10-16:** Pricing verified. Minor copy edits.
-- **2024-01-15:** Initial review added to the catalog.
-
-## Related Comparisons
-
-- [ChatGPT vs Scite](../comparisons/chatgpt-vs-scite.md)
-- [Connected Papers vs Scite](../comparisons/connected-papers-vs-scite.md)
-- [Consensus vs Scite](../comparisons/consensus-vs-scite.md)
-- [Elicit vs Scite](../comparisons/elicit-vs-scite.md)
-- [nanochat vs Scite](../comparisons/nanochat-vs-scite.md)
-- [Scite vs Semantic Scholar](../comparisons/scite-vs-semantic-scholar.md)
-
-
-- **Category:** [Research](../categories/ai-research.md)
 ## Sources
 
-- [Scite official site](https://scite.ai) - verified 2026-04-15
-- [Scite pricing page](https://scite.ai/pricing) - verified 2026-04-15
+- [scite.ai](https://scite.ai): product overview and classification methodology
+- [scite.ai pricing](https://scite.ai/pricing): current tier prices and limits
+
+## Related
+
+- **Category:** [AI Research](/categories/ai-research/)
+- **Comparisons:** [Scite vs Consensus](/comparisons/consensus-vs-scite/) | [Scite vs Semantic Scholar](/comparisons/scite-vs-semantic-scholar/) | [Elicit vs Scite](/comparisons/elicit-vs-scite/) | [Connected Papers vs Scite](/comparisons/connected-papers-vs-scite/) | [ChatGPT vs Scite](/comparisons/chatgpt-vs-scite/)
