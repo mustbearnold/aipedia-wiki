@@ -36,7 +36,7 @@ I ran five prompts through [Midjourney v8 alpha](/tools/midjourney/), [Flux 2](/
 
 ## The grid
 
-_Image files will be added when the image upload pipeline is ready. If you want early access to the raw files, email eli@aipedia.wiki and I'll share a Dropbox link._
+_Image files will be added when the image upload pipeline is ready. If you want early access to the raw files, email hello@aipedia.wiki and I'll share a Dropbox link._
 
 | Prompt | Midjourney v8 | Flux 2 | Ideogram | Adobe Firefly | Leonardo |
 |---|---|---|---|---|---|

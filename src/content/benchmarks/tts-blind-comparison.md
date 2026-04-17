@@ -35,7 +35,7 @@ I ran the same four prompts through [ElevenLabs](/tools/elevenlabs/), [Fish Audi
 
 ## Audio samples
 
-_Sample files will be added when the audio upload pipeline is ready. If you want early access to the raw files, email eli@aipedia.wiki and I'll share a Dropbox link._
+_Sample files will be added when the audio upload pipeline is ready. If you want early access to the raw files, email hello@aipedia.wiki and I'll share a Dropbox link._
 
 | Prompt | ElevenLabs | Fish Audio S2 | Cartesia Sonic | Resemble |
 |---|---|---|---|---|
@@ -81,7 +81,7 @@ This is v1. When I run v2 (likely July 2026, after at least two of these tools s
 - Add a conversational prompt with interruptions. Cartesia may win more than this test shows.
 - Run the dramatic prompt at different speed settings. ElevenLabs' "stability" slider changes results meaningfully and this test used the default.
 
-If you've run your own comparison and your scores differ, [email me](mailto:eli@aipedia.wiki). Disagreement is fine; undocumented disagreement is not useful.
+If you've run your own comparison and your scores differ, [email me](mailto:hello@aipedia.wiki). Disagreement is fine; undocumented disagreement is not useful.
 
 ## FAQ
 
