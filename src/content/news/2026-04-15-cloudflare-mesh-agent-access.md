@@ -7,7 +7,7 @@ severity: major
 summary: "Cloudflare launched Mesh, enabling AI agents secure access to private company networks in minutes instead of days. The platform solves the problem of letting agents reach internal databases safely without exposing sensitive systems."
 affects: []
 categories: [ai-automation]
-author: "Eli Marsh"
+author: "aipedia.wiki Editorial"
 last_updated: 2026-04-15
 last_verified: 2026-04-15
 sources:

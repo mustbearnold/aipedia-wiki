@@ -1,5 +1,5 @@
 ---
-// SoftwareApplication schema with editorial Review by Eli Marsh.
+// SoftwareApplication schema with editorial Review by aipedia.wiki Editorial.
 // Google's rich results for software apps prefer a named Person reviewer
 // over an Organization, and flag fake aggregateRating counts. We emit one
 // honest editorial review (reviewCount: 1) plus the aggregateRating
@@ -71,9 +71,9 @@ const offers: Record<string, unknown> = parsed
     };
 
 const reviewer = {
-  '@type': 'Person',
-  name: 'Eli Marsh',
-  url: 'https://aipedia.wiki/about/editor/',
+  '@type': 'Organization',
+  name: 'aipedia.wiki Editorial',
+  url: 'https://aipedia.wiki/about/editorial/',
   jobTitle: 'Editor-in-Chief',
   worksFor: {
     '@type': 'Organization',

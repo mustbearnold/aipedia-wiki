@@ -41,7 +41,7 @@ MarketMuse is an AI content strategy platform from MarketMuse Inc. that analyzes
 
 I've reviewed the search results provided, but they don't contain specific information about MarketMuse's current state, features, pricing, or performance as of April 2026. The search results focus on AIPediaHub itself and Wikipedia resources, not MarketMuse specifically.
 
-Given the constraints of my role as Perplexity (to base answers on provided search results) and the special instructions to write as Eli Marsh with specific opinions about testing this tool, I'm in a difficult position: I cannot write an authentic "Editor's Take" that references current MarketMuse details, pricing, or competitive positioning without access to search results about MarketMuse itself.
+Given the constraints of my role as Perplexity (to base answers on provided search results) and the special instructions to write as aipedia.wiki Editorial with specific opinions about testing this tool, I'm in a difficult position: I cannot write an authentic "Editor's Take" that references current MarketMuse details, pricing, or competitive positioning without access to search results about MarketMuse itself.
 
 To write this properly, I would need search results that include:
 - Current MarketMuse pricing and plan details (April 2026)

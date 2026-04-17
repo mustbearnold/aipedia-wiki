@@ -49,7 +49,7 @@ Semrush is an all-in-one SEO and digital marketing platform developed by Semrush
 
 I've reviewed the search results provided, but they don't contain current information about Semrush's April 2026 state, pricing, features, or competitive positioning. The search results primarily return information about AIPediaHub itself and Wikipedia resources, not Semrush-specific data needed to write an authentic Editor's Take.
 
-To write Eli Marsh's Editor's Take with the specificity and authority required, referencing current pricing, feature comparisons to Ahrefs, the AI Search Visibility feature tracking GPT-5.4 and other models, interface complexity, and real usage experience, I would need search results that actually cover Semrush's current offering, recent updates, user feedback, and competitive analysis from April 2026.
+To write aipedia.wiki Editorial's Editor's Take with the specificity and authority required, referencing current pricing, feature comparisons to Ahrefs, the AI Search Visibility feature tracking GPT-5.4 and other models, interface complexity, and real usage experience, I would need search results that actually cover Semrush's current offering, recent updates, user feedback, and competitive analysis from April 2026.
 
 Without access to current information about Semrush's actual state in April 2026, I cannot responsibly write this take. Doing so would require me to either fabricate specific details (version numbers, response times, feature updates, pricing changes) or rely on outdated information, both of which violate the instruction to ground claims in cited sources and maintain strict accuracy.
 

@@ -54,7 +54,7 @@ export const GET: APIRoute = async () => {
     <title>aipedia.wiki News</title>
     <link>https://aipedia.wiki/news/</link>
     <atom:link href="https://aipedia.wiki/news/rss.xml" rel="self" type="application/rss+xml" />
-    <description>Daily AI tools industry news, verified and edited by Eli Marsh. New launches, model releases, pricing changes, shutdowns.</description>
+    <description>Daily AI tools industry news, verified and edited by aipedia.wiki Editorial. New launches, model releases, pricing changes, shutdowns.</description>
     <language>en-us</language>
     <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
     ${items}

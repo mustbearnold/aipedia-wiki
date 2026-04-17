@@ -7,7 +7,7 @@ severity: major
 summary: "Zetrix AI and China's CAICT launched Avatar, a blockchain platform giving AI agents verified identities and access to digital assets. The platform functions as digital passports for autonomous agents handling money and credentials."
 affects: []
 categories: [ai-automation]
-author: "Eli Marsh"
+author: "aipedia.wiki Editorial"
 last_updated: 2026-04-15
 last_verified: 2026-04-15
 sources:

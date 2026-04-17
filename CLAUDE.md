@@ -1,53 +1,46 @@
 # aipedia-wiki — Architecture Guide for Claude
 
-## CRITICAL: Source of Truth
+## Source of Truth
 
-**NEVER edit files inside `aipedia-wiki/src/content/`.**
+**Edit content directly in `src/content/`.** That's the single source of truth. It's git-tracked, deployed from GitHub, and what Astro reads at build time.
 
-`src/content/` is a **generated directory**. Every time `npm run dev` or `npm run build` runs, the script `scripts/copy-content.sh` **deletes everything in `src/content/` and replaces it** by copying from the real source.
-
-**The real source is:**
-```
-wikis/ai-tools/pages/
-```
-
-All edits — new tool pages, category updates, glossary fixes, use-case guides — go there.
+The old dual-tree setup (`wikis/ai-tools/pages/` → `src/content/` via `copy-content.sh`) was retired 2026-04-17 after it caused a silent content-wipe bug on news/benchmarks. The legacy tree is archived at `../wikis/ai-tools.legacy-backup-2026-04-17/` for one-way reference only — do not edit.
 
 ## Directory Map
 
 ```
-MOAW - Mother of All Wiki's/
-├── aipedia-wiki/               ← Astro site (the rendered website)
-│   ├── CLAUDE.md               ← You are here
-│   ├── scripts/
-│   │   └── copy-content.sh     ← Copies wikis/ai-tools/pages/ → src/content/ on every dev/build
-│   ├── src/
-│   │   ├── content/            ← ⚠️ GENERATED. Do not edit. Gets deleted on every run.
-│   │   ├── pages/              ← Astro page routes (index.astro, etc.) — safe to edit
-│   │   ├── components/         ← Astro/React components — safe to edit
-│   │   └── layouts/            ← Layout templates — safe to edit
-│   └── package.json
-│
-└── wikis/
-    └── ai-tools/
-        └── pages/              ← ✅ SOURCE OF TRUTH. Edit everything here.
-            ├── tools/          ← One .md file per tool
-            ├── categories/     ← One .md file per category
-            ├── comparisons/    ← Comparison pages
-            ├── trends/         ← Trend analysis pages
-            ├── companies/      ← Company profile pages
-            ├── use-cases/      ← Best-of guides and use case pages
-            ├── dead/           ← Dead/discontinued tools
-            └── glossary/       ← Glossary index
+aipedia-wiki/                     ← Astro site (this is a standalone git repo)
+├── CLAUDE.md                     ← You are here
+├── scripts/
+│   ├── copy-content.sh           ← Pre-build asset gen (OG svgs, logo manifest). No longer copies content.
+│   ├── generate-og-svgs.mjs
+│   └── generate-logo-manifest.mjs
+├── src/
+│   ├── content/                  ← ✅ SOURCE OF TRUTH. Edit directly.
+│   │   ├── tools/                ← One .md file per tool
+│   │   ├── categories/           ← One .md file per category
+│   │   ├── comparisons/          ← Head-to-head comparison pages
+│   │   ├── trends/               ← Trend analysis pages
+│   │   ├── companies/            ← Company profile pages
+│   │   ├── use-cases/            ← Best-of guides + stacks
+│   │   ├── dead/                 ← Discontinued tools
+│   │   ├── glossary/             ← Glossary index
+│   │   ├── news/                 ← Daily AI news items
+│   │   ├── benchmarks/           ← Head-to-head benchmark reports
+│   │   ├── workflows/            ← Production workflow pages
+│   │   └── reports/              ← Monthly digest reports
+│   ├── pages/                    ← Astro page routes
+│   ├── components/               ← Astro/React components
+│   └── layouts/                  ← Layout templates
+└── package.json
 ```
 
 ## Workflow
 
 ### Adding or editing content
-1. Edit files in `wikis/ai-tools/pages/`
-2. Run `bash scripts/copy-content.sh` from the `aipedia-wiki/` directory to sync to `src/content/`
-3. The running dev server picks up changes automatically (no restart needed)
-4. After edits that change rankings, pricing, or tool status: `npm run wiki:refresh` regenerates the truth-maintenance layer at `wikis/_meta/`. Full system docs: `wikis/_meta/README.md`. Live dashboard: `/admin/wiki-health/`.
+1. Edit the relevant `.md` file in `src/content/<type>/`
+2. Dev server picks up changes automatically (no copy step needed)
+3. Commit in this repo (`cd aipedia-wiki && git commit`) and push to GitHub → Cloudflare Pages auto-deploys
 
 ### Starting the dev server
 ```bash
@@ -55,10 +48,8 @@ cd aipedia-wiki
 npm run dev
 # Opens at http://localhost:4321
 ```
-The dev script runs copy-content.sh automatically on startup.
 
 ### Site config and UI
-Edit these files directly in `aipedia-wiki/src/` — they are NOT copied from wikis/:
 - `src/pages/index.astro` — homepage (category emoji/label maps live here)
 - `src/components/` — UI components
 - `src/layouts/` — page layouts
@@ -99,12 +90,13 @@ author: "aipedia.wiki Editorial"
 ```
 
 ### Adding a new category
-1. Create `wikis/ai-tools/pages/categories/[slug].md`
-2. Add the slug to `categoryEmojiMap` and `categoryLabelMap` in `aipedia-wiki/src/pages/index.astro`
+1. Create `src/content/categories/[slug].md`
+2. Add the slug to `categoryEmojiMap` and `categoryLabelMap` in `src/pages/index.astro`
 
 ## Editorial Rules
 
+- **No individual-author bylines.** Author field must always be `"aipedia.wiki Editorial"` (Organization). No fabricated Person personas — Google E-E-A-T risk and directly contradicts the `/about/editorial/` trust artifact.
 - **No affiliate promotional language in page body.** The `affiliate` frontmatter block is for internal use only. Never write sentences like "X has a great 20% commission" in page content.
 - **Scores must be honest.** Low moat or longevity scores should be stated plainly.
 - **Every claim needs a source.** Inline links to official pricing pages where possible.
-- **Prices verified date** must appear below every pricing table.
+- **"Prices verified" date** must appear below every pricing table.

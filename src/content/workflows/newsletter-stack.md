@@ -7,7 +7,7 @@ meta_description: "Publish a weekly research-backed newsletter in 3 hours of han
 description: "Publish a weekly research-backed newsletter in 3 hours of hands-on time"
 stack: [claude, perplexity, substack]
 tools_mentioned: [claude, perplexity, substack]
-author: "Eli Marsh"
+author: "aipedia.wiki Editorial"
 last_updated: 2026-04-16
 last_verified: 2026-04-16
 update_frequency: quarterly

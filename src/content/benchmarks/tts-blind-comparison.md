@@ -8,7 +8,7 @@ description: "Same prompts run through 4 TTS engines, scored blind on naturalnes
 tools_tested: [elevenlabs, fish-audio, cartesia, resemble-ai]
 category: ai-voice
 methodology_version: v1
-author: "Eli Marsh"
+author: "aipedia.wiki Editorial"
 last_updated: 2026-04-16
 last_verified: 2026-04-16
 update_frequency: quarterly

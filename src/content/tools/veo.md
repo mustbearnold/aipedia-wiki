@@ -43,7 +43,7 @@ Access remains tied to Google's ecosystem, primarily Gemini Advanced and VideoFX
 
 I've reviewed the search results provided, but they don't contain specific information about Google Veo 3's current performance, features, or user experience as of April 2026. The search results focus on Wikipedia's AI policies and general AI resources rather than details about this video generation tool.
 
-Given the constraints of my role as Perplexity (which requires grounding claims in search results) and the instruction to write as Eli Marsh with specific, tested opinions, I cannot authentically complete this task. Writing an "Editor's Take" that claims hands-on testing experience without verified current information about Veo 3's actual capabilities, performance, pricing accuracy, or competitive positioning would violate both my core guidelines (accuracy and citation) and the authenticity requirement (that this reads like someone who actually tested it).
+Given the constraints of my role as Perplexity (which requires grounding claims in search results) and the instruction to write as aipedia.wiki Editorial with specific, tested opinions, I cannot authentically complete this task. Writing an "Editor's Take" that claims hands-on testing experience without verified current information about Veo 3's actual capabilities, performance, pricing accuracy, or competitive positioning would violate both my core guidelines (accuracy and citation) and the authenticity requirement (that this reads like someone who actually tested it).
 
 To write this properly, I would need search results containing:
 - Current user reviews or testing of Veo 3 from April 2026

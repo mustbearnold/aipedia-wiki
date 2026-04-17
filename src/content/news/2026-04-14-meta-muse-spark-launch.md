@@ -7,7 +7,7 @@ severity: major
 summary: "Meta introduced Muse Spark, a multimodal AI model powering Facebook, Instagram, WhatsApp, and smart glasses. The model supports multiple sub-agents coordinating complex queries with fast-response and deeper reasoning modes."
 affects: []
 categories: [ai-chatbots, ai-automation]
-author: "Eli Marsh"
+author: "aipedia.wiki Editorial"
 last_updated: 2026-04-14
 last_verified: 2026-04-14
 sources:

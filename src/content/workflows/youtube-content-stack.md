@@ -7,7 +7,7 @@ meta_description: "Go from blank page to published YouTube video with a single-p
 description: "Go from blank page to published YouTube video with a single-person team"
 stack: [claude, midjourney, elevenlabs, descript, ideogram]
 tools_mentioned: [claude, midjourney, elevenlabs, descript, ideogram]
-author: "Eli Marsh"
+author: "aipedia.wiki Editorial"
 last_updated: 2026-04-16
 last_verified: 2026-04-16
 update_frequency: quarterly

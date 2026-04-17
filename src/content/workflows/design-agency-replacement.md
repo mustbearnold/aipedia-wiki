@@ -7,7 +7,7 @@ meta_description: "Produce marketing visuals, brand assets, and ad creative with
 description: "Produce marketing visuals, brand assets, and ad creative without a contractor"
 stack: [midjourney, figma, canva]
 tools_mentioned: [midjourney, figma, canva]
-author: "Eli Marsh"
+author: "aipedia.wiki Editorial"
 last_updated: 2026-04-16
 last_verified: 2026-04-16
 update_frequency: quarterly

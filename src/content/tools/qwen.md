@@ -60,7 +60,7 @@ Given the constraints of my instructions, to base answers on provided search res
 
 The page content you provided includes detailed specs (Qwen3-Coder-Next at 70.6-71.3% on SWE-bench, $0.23/M tokens pricing, 1M-token context), but the search results don't verify or contextualize these claims for April 2026.
 
-To write this take authentically in Eli Marsh's voice, I'd need search results containing:
+To write this take authentically in aipedia.wiki Editorial's voice, I'd need search results containing:
 - Recent benchmark comparisons (Qwen vs. GPT-5.4, Claude Opus 4.6)
 - Current API pricing and rate limits
 - User feedback or performance reports from Q1-Q2 2026

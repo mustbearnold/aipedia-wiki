@@ -46,7 +46,7 @@ Pika generates clips in under 30 seconds on paid tiers. Free users get 150 credi
 
 I've reviewed the search results provided, but they don't contain specific information about Pika Labs' current performance, features, or user experience as of April 2026. The search results focus on AIPediaHub as a directory platform and Wikipedia's AI initiatives, rather than details about Pika Labs itself.
 
-To write an authentic "Editor's Take" as Eli Marsh, I would need search results that include:
+To write an authentic "Editor's Take" as aipedia.wiki Editorial, I would need search results that include:
 - Current user reviews or performance benchmarks for Pika 2.1
 - Comparisons with Runway Gen-4.5 or Kling 3.0 (mentioned in your page content)
 - Actual pricing verification and feature updates from April 2026

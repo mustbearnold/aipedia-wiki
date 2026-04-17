@@ -7,7 +7,7 @@ meta_description: "Answer deep research questions with sourced citations, organi
 description: "Answer deep research questions with sourced citations, organized notes, and follow-up threads in a single workflow"
 stack: [perplexity, claude, notion-ai]
 tools_mentioned: [perplexity, claude, notion-ai]
-author: "Eli Marsh"
+author: "aipedia.wiki Editorial"
 last_updated: 2026-04-16
 last_verified: 2026-04-16
 update_frequency: quarterly

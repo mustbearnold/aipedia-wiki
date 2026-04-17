@@ -7,7 +7,7 @@ severity: major
 summary: "HubSpot launched four AI agent products including Prospecting Agent, Customer Agent, and HubSpot AEO. Early customers report 2x better response rates and 70% automatic case resolution."
 affects: []
 categories: [ai-automation]
-author: "Eli Marsh"
+author: "aipedia.wiki Editorial"
 last_updated: 2026-04-15
 last_verified: 2026-04-15
 sources:

@@ -7,7 +7,7 @@ meta_description: "Turn a 60-minute interview into a polished episode plus socia
 description: "Turn a 60-minute interview into a polished episode plus social clips in under 2 hours of hands-on time"
 stack: [claude, elevenlabs, descript, fish-audio]
 tools_mentioned: [claude, elevenlabs, descript, fish-audio]
-author: "Eli Marsh"
+author: "aipedia.wiki Editorial"
 last_updated: 2026-04-16
 last_verified: 2026-04-16
 update_frequency: quarterly

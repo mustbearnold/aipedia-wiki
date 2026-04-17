@@ -22,7 +22,7 @@ if (!history || history.length < 2) {
 }
 
 // Sort ascending by date
-const sorted = [...history].sort((a, b) => a.date.localeCompare(b.date));
+const sorted = [...history].sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
 
 function parsePrice(s: string): number | null {
   const m = String(s).match(/\$?([\d.]+)/);

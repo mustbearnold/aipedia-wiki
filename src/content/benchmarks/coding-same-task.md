@@ -8,7 +8,7 @@ description: "Five AI coding tools, same task, same repo. Honest scoring on time
 tools_tested: [cursor, claude-code, github-copilot, windsurf, aider]
 category: ai-coding
 methodology_version: v1
-author: "Eli Marsh"
+author: "aipedia.wiki Editorial"
 last_updated: 2026-04-16
 last_verified: 2026-04-16
 update_frequency: quarterly

@@ -7,7 +7,7 @@ severity: minor
 summary: "Google updated Gemini to generate interactive 3D models and simulations directly in responses. Users can rotate views, adjust parameters, and interact with real-time simulations like orbital systems and physics phenomena."
 affects: [gemini]
 categories: [ai-chatbots]
-author: "Eli Marsh"
+author: "aipedia.wiki Editorial"
 last_updated: 2026-04-10
 last_verified: 2026-04-10
 sources:

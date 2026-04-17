@@ -7,7 +7,7 @@ severity: major
 summary: "Z.ai open-sourced GLM-5.1 under MIT License, designed for extended autonomous work. The model sustains up to eight hours on single tasks, handles thousands of tool calls, and outperforms Western models on coding and reasoning benchmarks."
 affects: []
 categories: [ai-coding, ai-automation]
-author: "Eli Marsh"
+author: "aipedia.wiki Editorial"
 last_updated: 2026-04-09
 last_verified: 2026-04-09
 sources:

@@ -7,7 +7,7 @@ meta_description: "Go from idea to deployed, authenticated, billable web app in 
 description: "Go from idea to deployed, authenticated, billable web app in two days without writing CSS by hand"
 stack: [cursor, supabase, cloudflare]
 tools_mentioned: [cursor, supabase, cloudflare]
-author: "Eli Marsh"
+author: "aipedia.wiki Editorial"
 last_updated: 2026-04-16
 last_verified: 2026-04-16
 update_frequency: quarterly

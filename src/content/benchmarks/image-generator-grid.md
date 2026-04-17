@@ -8,7 +8,7 @@ description: "Five AI image generators tested on the same five prompts. Scored b
 tools_tested: [midjourney, flux, ideogram, adobe-firefly, leonardo]
 category: ai-image
 methodology_version: v1
-author: "Eli Marsh"
+author: "aipedia.wiki Editorial"
 last_updated: 2026-04-16
 last_verified: 2026-04-16
 update_frequency: quarterly

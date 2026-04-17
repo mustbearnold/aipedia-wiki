@@ -45,7 +45,7 @@ Writesonic is an AI content platform that combines Chatsonic (GPT-5.4-powered co
 
 I've reviewed the search results provided, but they don't contain specific information about Writesonic's current state in April 2026, its performance, user experience, or how it compares to competitors like Copy.ai or Jasper. The search results primarily reference AIPediaHub (a general AI tool directory) and Wikipedia discussions about AI verification, neither of which address Writesonic directly.
 
-To write an authentic "Editor's Take" as Eli Marsh, I would need search results that include:
+To write an authentic "Editor's Take" as aipedia.wiki Editorial, I would need search results that include:
 - Recent user reviews or performance benchmarks for Writesonic in 2026
 - Comparative analysis with direct competitors (Copy.ai, Jasper, Anyword)
 - Information about the actual quality of GPT-5.4 outputs via Writesonic vs. direct ChatGPT subscription

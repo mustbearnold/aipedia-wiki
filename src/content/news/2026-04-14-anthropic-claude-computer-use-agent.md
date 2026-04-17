@@ -7,7 +7,7 @@ severity: major
 summary: "Anthropic shipped computer use capabilities for Claude, enabling the AI to browse, open files, click through workflows, and automate tasks on behalf of users. The agent mode makes Claude practically useful for automating actual work."
 affects: [claude]
 categories: [ai-automation, ai-chatbots]
-author: "Eli Marsh"
+author: "aipedia.wiki Editorial"
 last_updated: 2026-04-14
 last_verified: 2026-04-14
 sources:

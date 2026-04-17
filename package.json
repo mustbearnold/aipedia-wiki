@@ -6,9 +6,13 @@
     "node": ">=22.12.0"
   },
   "scripts": {
+    "predev": "node scripts/guard-content.mjs",
+    "prebuild": "node scripts/guard-content.mjs",
     "dev": "bash scripts/copy-content.sh && astro dev",
     "build": "bash scripts/copy-content.sh && astro build && npx pagefind --site dist && cp -r dist/pagefind public/pagefind",
     "preview": "npm run build && wrangler dev",
+    "guard:check": "node scripts/guard-content.mjs",
+    "guard:baseline": "node scripts/guard-content.mjs --baseline",
     "astro": "astro",
     "generate-types": "wrangler types",
     "deploy": "npm run build && wrangler deploy",

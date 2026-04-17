@@ -7,7 +7,7 @@ severity: breaking
 summary: "Anthropic delayed releasing its Claude Mythos model due to unprecedented hacking capabilities. The company is testing it defensively through Project Glasswing with major tech partners before public release."
 affects: [claude]
 categories: [ai-chatbots]
-author: "Eli Marsh"
+author: "aipedia.wiki Editorial"
 last_updated: 2026-04-10
 last_verified: 2026-04-10
 sources:

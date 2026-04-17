@@ -7,7 +7,7 @@ meta_description: "Ship production code faster by splitting work between a CLI a
 description: "Ship production code faster by splitting work between a CLI agent (Claude Code) and an IDE agent (Cursor)"
 stack: [claude-code, cursor]
 tools_mentioned: [claude-code, cursor]
-author: "Eli Marsh"
+author: "aipedia.wiki Editorial"
 last_updated: 2026-04-16
 last_verified: 2026-04-16
 update_frequency: quarterly
