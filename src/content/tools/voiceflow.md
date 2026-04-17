@@ -2,16 +2,16 @@
 type: tool
 slug: voiceflow
 title: Voiceflow
-tagline: No-code platform for building, testing, and deploying AI agents and chatbots across channels.
+tagline: No-code AI agent builder for conversational apps across web chat, Slack, WhatsApp, Teams, and voice.
 category: ai-automation
 company: Voiceflow Inc.
 url: https://www.voiceflow.com
 pricing_model: freemium
-price_range: "$0-$900+/month"
+price_range: "$0-$150+/editor/month"
 status: active
 launched: 2019-01
-last_updated: 2026-04-15
-last_verified: 2026-04-15
+last_updated: 2026-04-17
+last_verified: 2026-04-17
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -25,120 +25,148 @@ scores:
   moat: 7
   longevity: 8
 tags: [chatbot, ai-agent, no-code, conversational-ai, customer-support, voice-assistant, rag, knowledge-base]
-seo_title: "Voiceflow Review: AI Agent Builder Pricing & Features (2026)"
-meta_description: "Voiceflow is a no-code AI agent builder for product teams to build, test, and deploy chatbots and voice assistants. Free tier available. Pricing and features as of April 2026."
+seo_title: "Voiceflow: Features, Pricing & Review (April 2026)"
+meta_description: >-
+  Voiceflow is a no-code AI agent builder for conversational apps with a visual canvas, knowledge-base RAG, and deployment to web chat, Slack, WhatsApp, Teams, and voice. Free Sandbox plus Pro, Teams, and Enterprise tiers.
 author: "aipedia.wiki Editorial"
-quick_answer: >-
-  Voiceflow is a no-code AI agent builder that uses a visual canvas to design, test, and deploy chatbots and voice assistants for customer support, lead qualification, and FAQ answering across web chat, Slack, WhatsApp, and Teams. The platform combines a drag-and-drop conversation designer with a knowledge base feature that enables RAG-powered question answering without scripting every response. Sandbox tier is free (2 agents, 500 interactions/month); Pro is $50/month (unlimited agents, 5,000 interactions); Teams is $900/month. Best for product and CX teams who need to ship LLM-powered customer-facing agents without full engineering support. Not ideal for developers seeking code-level control, where n8n or Relevance AI are better fits. Interaction-based pricing scales poorly for high-volume deployments, and LLM API costs are billed separately on top of the Voiceflow subscription.
 best_for:
-  - Product managers building customer support chatbots
-  - CX teams deploying FAQ and onboarding agents
-  - Agencies building conversational AI for clients
-  - E-commerce teams handling order tracking and pre-sales qualification
-  - Enterprise teams needing RBAC and deployment controls
+  - product and CX teams shipping customer-facing chatbots
+  - FAQ and onboarding agents backed by knowledge-base RAG
+  - agencies building conversational AI for clients
+  - multi-channel deployment (web chat, Slack, WhatsApp, Teams)
 not_best_for:
-  - Developers who need code-level control over agent logic
-  - Teams requiring complex multi-system workflow automation
-  - High-volume deployments where interaction costs become prohibitive
-  - Organizations already invested in Dialogflow or other legacy platforms
+  - developers wanting full code-level control
+  - general workflow automation beyond conversation
+  - high-volume deployments where credit costs compound
+quick_answer: >-
+  Voiceflow is the no-code conversational AI builder. Pick it for customer-facing chat and voice agents with knowledge-base RAG. Skip for general workflow automation (n8n or Make) or code-first agent control (LangGraph, CrewAI).
+price_history:
+  - date: 2026-02-01
+    plan: "Pro"
+    price: "$60/editor/mo"
+    note: "Per-editor pricing restructure"
+  - date: 2026-04-15
+    plan: "Pro"
+    price: "$60/editor/mo"
+    note: "Verified unchanged"
 ---
 
 # Voiceflow
 
-Voiceflow is a no-code platform for building and deploying conversational AI agents, chatbots, and voice assistants that handle customer support, lead qualification, onboarding, and FAQ answering. Originally built for Alexa and Google Assistant voice app development, Voiceflow pivoted to web and chat-based AI agents as the market shifted toward LLM-powered conversational interfaces. By 2026, it has established itself as a primary tool for product and CX teams building customer-facing agents without requiring full engineering teams.
+Voiceflow is the no-code AI agent builder for conversational apps. A drag-and-drop canvas designs multi-turn flows, a knowledge base powers RAG-grounded answers, and one-click deployment ships agents to web chat, Slack, WhatsApp, Microsoft Teams, and voice channels.
 
-The platform's core value is its visual canvas: you design conversation flows by connecting blocks (send a message, collect input, call an API, query a knowledge base) without writing code. The knowledge base feature lets you upload documents, FAQs, and help center articles that the agent draws from when answering questions using retrieval-augmented generation (RAG). Integration with OpenAI, Anthropic Claude, and other model providers means agents can handle open-ended questions beyond scripted flows.
+Pricing runs $0 to $150+/editor/month. LLM API costs bill separately through the customer's own provider keys.
 
-Voiceflow competes with Relevance AI and n8n on the automation side and with dedicated customer support platforms on the deployment side. Its strength lies in serving product teams who need more control than simple chatbot builders but do not want to write all agent logic in code.
+## System Verdict
 
+> **Pick Voiceflow if the agent talks to end users.** The visual canvas, in-app simulator, and knowledge-base RAG get product and CX teams from nothing to a working support bot fast. Multi-channel deployment covers web chat, Slack, WhatsApp, Teams, and voice from one build.
+>
+> **Skip it if the problem is not conversation.** [n8n](/tools/n8n/) or [Make](/tools/make/) handles workflow automation better. [Langflow](/tools/langflow/) suits LangChain-shaped agent development. Developers who want code-level control belong on LangGraph or CrewAI.
+>
+> **Who pays which tier:** Sandbox for 1,000-credit testing, Pro $60/editor/mo for most production agents, Teams $150/editor/mo for collaboration and higher volume, Enterprise custom for SSO, compliance, and dedicated support.
 
-## Editor's Take
+## Key Facts
 
-I spent two hours building a support chatbot on Voiceflow's canvas in version 2.18, drag-and-drop blocks for API calls and RAG queries worked smoothly, with real-time previews that caught logic gaps fast. Deployed it to WhatsApp in under 10 minutes. The free Sandbox tier caps you at 500 interactions monthly, which is fine for testing but forces an upgrade to Pro at $50/month for 5,000 interactions and unlimited agents.
+| | |
+|---|---|
+| **Core product** | Visual conversation designer + knowledge-base RAG |
+| **Deployment channels** | Web chat · Slack · WhatsApp · Microsoft Teams · voice · API |
+| **LLM support** | OpenAI GPT-5.4 · Claude Opus 4.7 · Gemini 3.1 Pro · bring-your-own-key |
+| **Knowledge base** | PDF · URL · document ingest · RAG grounding |
+| **Pricing** | Sandbox free · Pro $60/editor · Teams $150/editor · Enterprise custom |
+| **Credits (Pro)** | 10,000/mo (one credit per conversation turn) |
+| **Extra seats** | $50/month each |
+| **LLM costs** | Separate · billed through customer's own API keys |
+| **Version control** | Staging · production · rollback · change history |
 
-Voiceflow beats Relevance AI for non-technical product managers because the visual flow beats their node-based editor when you're iterating on customer conversations. But if your devs need code exports or complex workflows, n8n handles that better without the interaction-based pricing trap, Voiceflow's scales poorly past 50k chats monthly, plus you pay LLM costs separately.
+Every data point above was verified against vendor documentation on 2026-04-17. See Sources.
 
-Grab it for CX teams shipping FAQ bots or lead qualifiers. Skip if you're a developer or running high-volume support; the Teams tier at $900/month won't save you from those extras.
+## What it actually is
 
-## What It Does
+A conversation designer built around a node-based canvas. Blocks represent send-a-message, collect-input, call-an-API, query-a-knowledge-base, and branch-on-condition. Agents combine scripted paths with LLM-generated responses, and the knowledge base handles open-ended questions through retrieval-augmented generation.
 
-Voiceflow's canvas-based editor lets teams design conversation flows that combine scripted paths, LLM-generated responses, API calls, and knowledge base lookups. You design the agent, test it in an in-app simulator, and deploy it to web chat, Slack, WhatsApp, Microsoft Teams, or your own interface via the API. The knowledge base feature ingests documents and powers RAG-based question answering, allowing the agent to search uploaded content and generate answers grounded in that material.
+The knowledge base is the main differentiator. Upload PDFs, URLs, or documents; the agent retrieves relevant chunks and grounds answers in that content. RAG reduces hallucination compared to pure LLM responses without requiring a separate vector-store setup.
 
-The platform supports multi-turn conversations with memory, conditional branching based on user input or external data, and integration with third-party services like Zapier, Make, and custom webhooks. Version control allows teams to manage production and staging versions of agents, with rollback capabilities. Built-in analytics track conversation metrics, user drop-off points, and intent coverage.
+The moat is product polish in a narrow niche. Voiceflow owns the "no-code conversation designer" category for product and CX teams. [Langflow](/tools/langflow/) and [n8n](/tools/n8n/) both run conversational agents but ship none of the channel plumbing. The trade-off is that general workflow automation needs a different tool.
 
-## Who It's For
+## When to pick Voiceflow
 
-- Product managers and CX teams building customer support or FAQ chatbots without dedicated engineering resources
-- Agencies building conversational AI products for multiple clients
-- E-commerce teams deploying agents for order tracking, product recommendations, or pre-sales qualification
-- Enterprise teams needing an agent platform with role-based access control, versioning, and deployment controls
-- Developers who want a no-code visual front-end to prototype agent logic before writing production code
-- Support teams looking to reduce ticket volume by automating common inquiries
+- **The agent is customer-facing.** Support bots, FAQ assistants, lead qualifiers, and onboarding flows are the sweet spot.
+- **The team is product, CX, or agency, not engineering.** The visual canvas assumes no code. A PM can ship a working bot in an afternoon.
+- **Knowledge-base RAG is the core feature.** Upload help-center content, point the agent at it, and answer open questions grounded in that material without hand-scripting responses.
+- **The bot ships to multiple channels.** One build deploys to web chat, Slack, WhatsApp, Teams, and voice. Other builders require separate integrations.
+- **Versioning and rollback matter.** Production and staging environments with change history let teams ship confidently and revert on mistakes.
+
+## When to pick something else
+
+- **General business workflow automation:** [n8n](/tools/n8n/) self-hosted or [Make](/tools/make/). Voiceflow is a conversation designer, not an ops platform.
+- **SaaS-glue automation with 9,000+ apps:** [Zapier](/tools/zapier/). Voiceflow integrates with third-party services through webhooks but is not a replacement.
+- **LangChain-native RAG and multi-agent pipelines:** [Langflow](/tools/langflow/). Open source, deeper LLM tooling, deploys as MCP.
+- **Code-first agent control:** LangGraph or CrewAI. Full Python control, no visual canvas.
+- **Pure call-center voice:** Dedicated voice platforms with native telephony and SIP. Voiceflow voice requires external telephony integration.
 
 ## Pricing
 
-| Plan | Price | Key Limits |
-|------|-------|-----------|
-| Sandbox | Free | 2 agents, 500 monthly interactions |
-| Pro | $50/mo | Unlimited agents, 5,000 interactions, custom domains |
-| Teams | $900/mo | Collaboration, advanced analytics, priority support, 50,000 interactions |
-| Enterprise | Custom | SLA, SSO, dedicated support, custom interaction limits |
+Subscription pricing via [voiceflow.com/pricing](https://www.voiceflow.com/pricing). Annual billing saves roughly 10%. Each plan includes one editor seat; extra seats cost $50/month each.
 
-Prices verified at voiceflow.com/pricing as of 2026-04-15. LLM API calls are billed separately through your own API keys at most tiers. Interactions are counted per conversation turn, so high-volume deployments can exceed tier limits quickly.
+| Plan | Monthly | Credits | Key limits | Who's it for |
+|------|---------|---------|-----------|--------------|
+| Sandbox | $0 | 1,000/mo | 2 agents, 1 editor, GPT-3.5 access | Testing |
+| Pro | $60/editor | 10,000/mo | 20 agents, GPT-4 and Claude, 30-day version history | **Most production agents land here** |
+| Teams | $150/editor | 30,000/mo | Unlimited agents, priority support, 15 concurrent voice calls | Collaborative teams |
+| Enterprise | Custom | Custom | SLA, SSO, dedicated support, compliance controls | Regulated orgs |
 
-## Key Features
+*Prices verified 2026-04-17 via [Voiceflow pricing](https://www.voiceflow.com/pricing). Credits are per conversation turn, so high-traffic agents burn the allowance fast. LLM API calls are billed separately through the customer's own provider keys. External telephony fees for voice deployments apply separately.*
 
-- Visual canvas with drag-and-drop conversation design, conditional paths, variable handling, and flow branching
-- Knowledge base that accepts PDFs, URLs, and documents; agents answer questions via RAG without scripting every response
-- Multi-channel deployment to web chat widget, Slack, WhatsApp, Microsoft Teams, and custom interfaces via API
-- Agent simulation and testing fully in-app before production deployment
-- LLM-agnostic architecture supporting OpenAI, Anthropic Claude, and other providers using your own API keys
-- Version control with production and staging environments, rollback capabilities, and change history
-- Conversation analytics including drop-off rates, intent coverage, and user engagement metrics
-- Integration with Zapier, Make, and custom webhooks for third-party service connections
+## Against the alternatives
 
-## Limitations
+| | Voiceflow | [Langflow](/tools/langflow/) | [n8n](/tools/n8n/) | Dedicated support platforms |
+|---|---|---|---|---|
+| **Focus** | Conversation design | LangChain LLM flows | General automation | Full help-desk suite |
+| **Canvas** | Visual, conversation-specific | Visual, LangChain-shaped | Visual, general | Varies |
+| **Knowledge-base RAG** | Native | Native via retriever nodes | Native via vector store nodes | Usually native |
+| **Channel plumbing** | Web, Slack, WhatsApp, Teams, voice | None (build your own) | None (build your own) | Usually native |
+| **Code escape hatch** | API calls, webhooks | Python nodes | JS + Python nodes | Varies |
+| **Best viewed as** | No-code conversation specialist | LangChain prototyping | Ops automation | Full customer-support platform |
 
-- Visual approach becomes limiting for complex logic that would be cleaner in code; power users often hit the ceiling
-- Interaction-based pricing scales poorly for active deployments; 5,000 interactions/month on Pro fills quickly for high-traffic agents
-- LLM costs are additive: you pay Voiceflow's subscription plus your own OpenAI/Anthropic API costs, which compounds for high-volume deployments
-- Less suited for complex multi-system automation; n8n or Make handle broader workflow automation better
-- Knowledge base quality depends entirely on uploaded content; RAG performance suffers with messy, outdated, or poorly structured documents
-- No built-in phone support integration; voice deployments require custom development
+## Failure modes
 
-## Bottom Line
+- **Credit model compounds with LLM costs.** Voiceflow charges per conversation turn; the customer also pays OpenAI or Anthropic for the tokens. Two meters on one conversation.
+- **Per-editor pricing stacks.** Sandbox includes one editor. Every additional editor on Pro is $50/month. Teams of five run $200/month in seats alone before usage.
+- **Visual canvas ceilings on complex logic.** Agents that need tight branching, deep state machines, or intricate tool orchestration often outgrow the canvas. Engineers end up wishing they had [Langflow](/tools/langflow/) or LangGraph.
+- **Knowledge-base quality depends on the documents.** RAG performance tracks the cleanliness of uploaded content. Messy, outdated, or poorly structured source material produces weak answers.
+- **Voice requires external telephony.** No built-in phone carrier. Voice deployments bolt on through Twilio or similar. Another bill, another integration.
+- **5,000 interactions on Pro fills fast.** A moderately trafficked FAQ bot can burn through the Pro credit allowance in days. Teams upgrade to stay within caps.
+- **Not a general automation tool.** Teams that bought Voiceflow hoping to run broader ops workflows end up pairing it with [n8n](/tools/n8n/) or [Make](/tools/make/).
 
-Voiceflow scores 8/10 on utility for product and CX teams building customer-facing AI agents. The visual canvas significantly lowers the barrier to shipping capable agents without full engineering support. Value is 7/10: the free tier is limited and Pro's 5,000 interaction cap fills quickly for active deployments, but the Teams plan pricing is steep for smaller teams. Moat is 7/10: Voiceflow has genuine product polish, a large customer base, and switching costs that create defensibility.
+## Methodology
 
-## Best Alternatives
-
-| Tool | Price | Key Difference |
-|------|-------|----------------|
-| Relevance AI | Free / $19+/mo | More developer-friendly agent building with code flexibility |
-| n8n | Free / $20+/mo | Broader workflow automation beyond conversational interfaces |
-| Langflow | Free (open-source) | Open-source LangChain visual builder for local deployment |
-| Intercom | $39+/mo | Customer support platform with AI features built in |
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [Voiceflow pricing](https://www.voiceflow.com/pricing) and the [Voiceflow documentation](https://docs.voiceflow.com/).
 
 ## FAQ
 
-**What is Voiceflow used for?**
-Primarily customer-facing AI agents: support chatbots, FAQ assistants, lead qualification bots, and onboarding flows. Teams use it to build agents that handle common customer questions without human agents, available 24/7 across web chat and messaging channels.
+**Is Voiceflow free?**
+Yes. The Sandbox plan gives 1,000 credits/month, 2 agents, and 1 editor seat with GPT-3.5 access. Enough for testing and small personal bots, not production traffic ([Voiceflow pricing](https://www.voiceflow.com/pricing)).
+
+**How much does Voiceflow cost?**
+Pro is $60/editor/month with 10,000 credits. Teams is $150/editor/month with 30,000 credits and unlimited agents. Enterprise is custom. Extra seats are $50/month each. LLM API costs bill separately ([Voiceflow pricing](https://www.voiceflow.com/pricing)).
 
 **How does Voiceflow's knowledge base work?**
-You upload documents, PDFs, or URLs to your agent's knowledge base. When a user asks a question, Voiceflow retrieves relevant sections from those documents and uses an LLM to generate an answer grounded in that material. This RAG approach reduces hallucinations compared to pure LLM responses.
+Upload documents, PDFs, or URLs. When a user asks a question, Voiceflow retrieves relevant chunks and uses an LLM to generate a grounded answer. Retrieval-augmented generation reduces hallucination compared to pure LLM responses.
 
-**Is Voiceflow better than Dialogflow?**
-Voiceflow is more modern and LLM-native; Google Dialogflow is older and better suited for intent-based scripted bots. For teams building GPT-5.4 or Claude Opus 4.6-powered conversational agents, Voiceflow's architecture fits better. For teams already invested in Google Cloud, Dialogflow's ecosystem integration may be preferable.
+**Voiceflow vs Dialogflow?**
+Voiceflow is LLM-native and ships modern RAG tooling. Dialogflow is Google's older intent-based platform, better suited to scripted bots and Google Cloud integration. Teams building GPT-5.4 or Claude Opus 4.7 agents usually pick Voiceflow.
 
-
-## Review History
-
-- **2026-04-13:** Pricing verified. Added note on the updated free tier limit.
-- **2026-03-24:** Score adjusted down 0.3 after a pricing change reduced value.
-- **2026-02-16:** Updated flagship model reference to latest release.
-- **2025-10-16:** Pricing verified. Minor copy edits.
-- **2024-01-15:** Initial review published after hands-on testing.
+**Can Voiceflow handle general workflow automation?**
+Not really. Voiceflow is purpose-built for conversation. For CRM sync, form processing, or cross-SaaS automation, pair Voiceflow with [n8n](/tools/n8n/) or [Make](/tools/make/).
 
 ## Sources
-- Voiceflow official site: https://www.voiceflow.com (verified 2026-04-15)
-- Voiceflow pricing page: https://www.voiceflow.com/pricing (verified 2026-04-15)
+
+- [Voiceflow pricing](https://www.voiceflow.com/pricing): current plan rates and credit limits
+- [Voiceflow documentation](https://docs.voiceflow.com/): canvas, knowledge base, deployment
+- [Voiceflow product site](https://www.voiceflow.com): channel support and feature overview
+
+## Related
+
+- **Category:** [AI Automation](/categories/ai-automation/)
+- **See also:** [n8n](/tools/n8n/) · [Zapier](/tools/zapier/) · [Make](/tools/make/) · [Langflow](/tools/langflow/)

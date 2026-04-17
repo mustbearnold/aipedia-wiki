@@ -2,16 +2,16 @@
 type: tool
 slug: n8n
 title: n8n
-tagline: Open-source workflow automation platform with native AI agent capabilities.
+tagline: Open-source workflow automation with native AI Agent nodes, self-host or cloud.
 category: ai-automation
 company: n8n-gmbh
 url: https://n8n.io
 pricing_model: freemium
-price_range: "$0 (self-host) - $1,000/month (Enterprise cloud)"
+price_range: "$0 (self-host) - $800+/month (Business cloud)"
 status: active
 launched: 2019-06
-last_updated: 2026-04-15
-last_verified: 2026-04-15
+last_updated: 2026-04-17
+last_verified: 2026-04-17
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -25,137 +25,148 @@ scores:
   value: 10
   moat: 7
   longevity: 9
-tags: [automation, workflows, ai-agents, no-code, open-source, integrations, zapier-alternative]
-seo_title: "n8n: Features, Pricing & Review (2026)"
-meta_description: "n8n is an open-source workflow automation platform with native AI agent nodes. Free to self-host; cloud plans from $29/mo. Best Zapier alternative for AI workflows."
+tags: [automation, workflows, ai-agents, no-code, open-source, integrations, zapier-alternative, self-host]
+seo_title: "n8n: Features, Pricing & Review (April 2026)"
+meta_description: "n8n is the open-source workflow automation platform with native AI Agent nodes. Free to self-host with unlimited executions. Cloud plans from €24/mo."
 author: "aipedia.wiki Editorial"
 best_for:
-  - ai automation agency builders
-  - technical founders
-  - developers avoiding vendor lock-in
+  - developers and agencies avoiding vendor lock-in
+  - teams needing data residency or self-hosting
+  - native AI agent workflows
+  - high-volume automation with predictable cost
 not_best_for:
-  - non-technical users
-  - users needing many integrations
+  - non-technical users who want zero setup
+  - teams needing 9,000+ pre-built integrations
+  - organizations mandating SaaS-only procurement
 quick_answer: >-
-  n8n is an open-source workflow automation platform built by n8n GmbH that lets you build visual workflows connecting 500+ apps, including native AI agent nodes for autonomous multi-step task execution. Unlike every other automation platform at its price point, it can be fully self-hosted for $0 with unlimited workflows and unlimited executions. Cloud plans run $29-$1,000/month; best for developers and agency builders who need AI-powered automation with zero vendor lock-in, not for non-technical users who need Zapier's 7,000+ integrations. Complex workflows with 20+ nodes can become difficult to navigate.
+  n8n is the open-source automation platform with native AI Agent nodes. Self-host for free with unlimited executions. Pick it for developer control, data residency, and AI agents. Skip for non-technical teams or long-tail SaaS coverage.
+price_history:
+  - date: 2025-10-15
+    plan: "Cloud Starter"
+    price: "€24/mo"
+    note: "Cloud pricing migrated to EUR"
+  - date: 2026-04-15
+    plan: "Community (self-host)"
+    price: "$0"
+    note: "Free self-host verified unchanged"
 ---
 
 # n8n
 
-n8n is an open-source workflow automation platform developed by n8n GmbH. It enables users to build visual automation workflows with 500+ integrations and is primarily used for AI-powered business automation, including autonomous AI agents via its native agent nodes. Its key differentiator is the combination of open-source self-hosting with drag-and-drop AI agent building. As of April 2026, n8n is free to self-host with unlimited workflows, or available as a managed cloud service from $29/month (Starter, 5,000 executions) through $99/month (Pro, 25,000 executions) up to $1,000/month (Enterprise, unlimited executions) [n8n Pricing](https://n8n.io/pricing/). Compared to Zapier, n8n has fewer integrations (500+ vs 7,000+) but offers self-hosting, native AI agents, and lower cost at scale.
+n8n is the open-source workflow automation platform built by n8n GmbH. Visual canvas, 500+ integrations, native AI Agent nodes, and JavaScript or Python code nodes when the visual layer runs out. Self-host for free with unlimited executions, or run managed cloud from €24/month.
 
+## System Verdict
 
-## Editor's Take
+> **Pick n8n if the automation layer needs to be owned, not rented.** Self-hosting is free with unlimited workflows and unlimited executions. The AI Agent node ships autonomous multi-step agents with tool calling out of the box. JavaScript and Python code nodes close any gap the visual canvas leaves.
+>
+> **Skip it if onboarding speed outweighs control.** [Zapier](/tools/zapier/) ships 9,000+ integrations to n8n's 500+. Non-technical operators land faster on Zapier or [Make](/tools/make/). Teams that refuse server ops work belong on managed platforms.
+>
+> **Who pays which tier:** Community self-host for engineers and agencies, Starter €24/mo for small cloud use, Pro €60/mo for active production, Business €800/mo for SSO and scale, Enterprise custom for on-prem and dedicated support.
 
-I self-hosted n8n version 3.0 on a $5/month VPS last week. Workflows spun up in minutes, connected Claude Opus 4.6 to my CRM for lead scoring, added an AI agent node for email triage. Executions hit 10,000 without a hitch, zero cost beyond hosting. The visual editor handles 15-node chains cleanly, and error logs in the March 2026 update actually make debugging tolerable.
+## Key Facts
 
-Zapier costs 5x more for similar volume, with no self-host option. n8n's 500+ integrations lag Zapier's 7,000, but for AI agents and custom JS nodes, it's unmatched at $0 or $29/month Starter cloud. Developers and agency builders automating ops should grab it. Non-technical users will quit after the first loop node fails, stick to Zapier if you hate config files.
+| | |
+|---|---|
+| **License** | Fair-code (source-available, self-host permitted) |
+| **Core product** | Visual workflow canvas with code fallback |
+| **Integration count** | 500+ apps |
+| **AI Agent node** | Native · connects to Claude Opus 4.7, GPT-5.4, Gemini 3.1 Pro, Llama 4, local models |
+| **Code nodes** | JavaScript · Python |
+| **Cloud pricing** | Starter €24 · Pro €60 · Business €800 · Enterprise custom |
+| **Self-host** | Free · unlimited workflows · unlimited executions |
+| **Deployment** | Docker · Kubernetes · VPS · Railway · any Node.js host |
+| **Data residency** | Full control in self-host |
 
-My bias: I loathe SaaS lock-in. n8n owns that fight. Skip cloud unless your team needs sharing.
+Every data point above was verified against vendor documentation on 2026-04-17. See Sources.
 
-## What It Does
+## What it actually is
 
-n8n is an open-source, self-hostable visual workflow automation platform with 500+ integrations and native AI agent nodes that let you build autonomous agents inside workflows without writing code ([n8n](https://n8n.io)). Connect any LLM (Claude Opus 4.6, GPT-5.4, Llama 4, Gemini 3.1 Pro), give it tools (web search, database queries, API calls), and let it reason through multi-step tasks ([n8n Docs](https://docs.n8n.io)). Unlike Zapier and Make, n8n can be fully self-hosted for $0 with unlimited workflows.
+A workflow automation engine built on Node.js with a drag-and-drop canvas and a code escape hatch. Workflows run locally, in Docker, on a VPS, in Kubernetes, or on n8n's managed cloud. The same workflow file moves between them.
 
-The platform supports workflow versioning, credential sharing across teams, and code nodes for JavaScript or Python when visual nodes are insufficient. n8n version 3.0, released March 2026, added improved AI chain nodes and better error handling for agentic workflows ([n8n Blog](https://blog.n8n.io/n8n-3-0-release/)).
+The AI Agent node is the part worth noticing. Point it at any LLM, give it tools (HTTP requests, database queries, subworkflows), and it reasons through multi-step tasks without external orchestration frameworks. Chain nodes sequence LLM calls with memory and tool access.
 
-## Who It's For
+The moat is the license and the agent stack. Source-available with self-host permitted means no vendor can pull the rug. Native AI Agent nodes beat bolt-on LLM modules in [Make](/tools/make/) and [Zapier](/tools/zapier/) for agentic workloads. The trade-off is 500+ integrations to Zapier's 9,000+ and a steeper learning curve than either.
 
-- **AI automation agency builders:** build and sell AI workflows to clients. Self-host on client's infra for maximum margin.
-- **Technical founders:** automate internal ops (lead scoring, content pipelines, customer support triage) without hiring a dev team.
-- **Developers who hate vendor lock-in:** open-source, self-host, own your workflows. Export and migrate anytime.
-- **AI agent experimenters:** fastest way to prototype multi-step AI agents without writing framework code.
-- **Teams with data residency needs:** self-hosting keeps data on-premise or in compliant regions.
+## When to pick n8n
+
+- **Data residency or compliance rules require on-prem.** Self-host on a controlled server. No traffic leaves the perimeter.
+- **The workflow involves AI agents with tool calling.** The AI Agent node is purpose-built. [Make](/tools/make/) calls LLMs but does not run agent loops; [Zapier](/tools/zapier/) Agents work but cost task credits per tool call.
+- **Budget is tight and volume is high.** Self-host is free. A $5 to $20/month VPS handles tens of thousands of executions without cloud bills.
+- **The team writes code.** JavaScript and Python code nodes cover anything the visual layer cannot. Credentials, versioning, and queue mode scale to production.
+- **Agencies run automation for clients.** Self-host on the client's infrastructure keeps margins high and data ownership clean.
+
+## When to pick something else
+
+- **Non-technical team with zero server ops:** [Zapier](/tools/zapier/). Lower learning curve, AI Copilot builds flows from prompts, 9,000+ integrations.
+- **Cost-efficient complex branching without self-hosting:** [Make](/tools/make/). Operations-based billing stays affordable at volume.
+- **LangChain-native RAG and multi-agent pipelines:** [Langflow](/tools/langflow/). Visual canvas tuned to LLM chains, not SaaS glue.
+- **Customer-facing chat or voice agents:** [Voiceflow](/tools/voiceflow/). Built for support, not workflow ops.
+- **Niche long-tail SaaS integration:** Zapier. 9,000+ connectors covers the tail that n8n often requires HTTP nodes to reach.
 
 ## Pricing
 
-n8n is free to self-host with unlimited workflows and executions, or $29-$1,000/month for managed cloud hosting with execution-based limits ([n8n Pricing](https://n8n.io/pricing)).
+Subscription pricing via [n8n.io/pricing](https://n8n.io/pricing).
 
-| Plan | Price | Key Limits |
-|------|-------|-----------|
-| Community (self-host) | $0 | Unlimited workflows, unlimited executions |
-| Starter (cloud) | $29/mo | 5,000 executions, unlimited workflows/users |
-| Pro (cloud) | $99/mo | 25,000 executions, admin features, priority support |
-| Enterprise (cloud) | $1,000/mo | Unlimited executions, SSO, audit logs, dedicated support |
+| Plan | Monthly | Executions | Key limits | Who's it for |
+|------|---------|------------|-----------|--------------|
+| Community (self-host) | $0 | Unlimited | Self-managed infrastructure | **Developers and agencies land here** |
+| Starter (cloud) | €24 | 2,500 | Unlimited workflows, 5 users | Small teams, light cloud use |
+| Pro (cloud) | €60 | 10,000 | Admin features, priority support | Active production |
+| Business (cloud) | €800 | 40,000 | SSO, audit logs, dedicated resources | Enterprise scale |
+| Enterprise | Custom | Unlimited | On-prem option, dedicated support, SLA | Regulated orgs |
 
-*Prices verified 2026-04-15. Check [n8n.io/pricing](https://n8n.io/pricing) for current rates.*
+*Prices verified 2026-04-17 via [n8n pricing](https://n8n.io/pricing). Qualifying startups get 50% off the Business plan. Self-hosted Community Edition has no feature caps; hosting cost is the VPS bill (typically $5 to $20/month).*
 
-## Key Features
+## Against the alternatives
 
-- **AI Agent nodes (n8n 3.0):** drag-and-drop AI agent builder connecting LLMs to tools (HTTP requests, databases, code execution) for autonomous task reasoning ([n8n Docs](https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/)).
-- **500+ integrations:** Slack, Google Sheets, PostgreSQL, Stripe, HubSpot, Notion, and more ([n8n Integrations](https://n8n.io/integrations/)). Not as many as Zapier (7,000+) but covers all major services.
-- **Self-hostable:** run on your own server for $0. Full control over data. Supports Docker, Kubernetes, and VPS deployments.
-- **Code when you need it:** JavaScript/Python code nodes for custom logic. Best of no-code + code.
-- **Credential sharing:** teams can share API keys and OAuth connections. Important for agency workflows.
-- **Version history:** roll back workflow changes. Production-grade reliability.
-- **AI chain nodes:** sequence multiple LLM calls with memory and tool access for complex reasoning.
-- **Queue mode:** handle high-volume executions with worker scaling in self-hosted setups.
+| | n8n | [Zapier](/tools/zapier/) | [Make](/tools/make/) | [Langflow](/tools/langflow/) |
+|---|---|---|---|---|
+| **License** | Source-available, self-host OK | Proprietary SaaS | Proprietary SaaS | Open source (MIT) |
+| **Integration count** | 500+ | 9,000+ | 2,000+ | LLM-focused |
+| **AI agents** | Native AI Agent nodes | Zapier Agents + Central | LLM modules (no agents) | LangGraph-based |
+| **Self-host** | Free, unlimited | None | None | Free, unlimited |
+| **Code escape hatch** | JS + Python nodes | Code step (JS/Python) | Custom functions | Custom Python nodes |
+| **Best viewed as** | Dev-friendly open source | Incumbent generalist | Cost-efficient cloud | LLM-chain specialist |
 
-## Limitations
+## Failure modes
 
-n8n has a steeper learning curve than Zapier, fewer integrations (500+ vs 7,000+), and execution-based cloud pricing that can add up for heavy workflows ([n8n Pricing](https://n8n.io/pricing)).
+- **Learning curve is steeper than [Zapier](/tools/zapier/).** The JSON data model, expression syntax, and credential system assume technical comfort. Non-technical operators stall.
+- **500+ integrations lags [Zapier](/tools/zapier/).** Niche SaaS often requires hand-built HTTP nodes and OAuth. Doable but costs engineering time.
+- **Self-host ops is real work.** Upgrades, backups, credential encryption, queue mode, and scaling to worker processes fall on whoever runs the server.
+- **AI Agent node tuning matters.** Complex multi-step reasoning can loop or stall without careful prompt and tool design. Not fire-and-forget.
+- **Cloud executions burn fast.** Heavy cron schedules or high-frequency triggers chew through monthly execution limits. Self-host removes the limit entirely.
+- **UI clutters past 20 nodes.** Large workflows become visually hard to navigate. Sub-workflows and careful grouping help.
+- **No enterprise-grade SaaS polish on lower cloud tiers.** SSO, audit logs, and dedicated resources land only on Business and Enterprise.
 
-- **Learning curve.** Steeper than Zapier. n8n assumes some technical comfort. Non-technical users may struggle with the JSON data model.
-- **Fewer integrations than Zapier.** 500+ vs 7,000+. Most important ones are covered, but niche SaaS tools may require custom HTTP nodes.
-- **Cloud pricing is execution-based.** Heavy workflows can burn through executions fast. Self-hosting avoids this entirely.
-- **UI can feel cluttered.** Complex workflows with 20+ nodes become hard to navigate visually.
-- **AI agent nodes occasionally require tuning.** Complex multi-step reasoning may need prompt adjustments for reliability.
+## Methodology
 
-## Bottom Line
-
-n8n is the best choice for developers and agency builders who need AI-powered workflow automation with full self-hosting control, but Zapier wins if you need 7,000+ integrations and prefer zero setup. The self-hosted option at $0 is unbeatable for margin. The AI agent nodes in version 3.0 make it the top open-source platform for agentic workflows.
-
-## Best Alternatives
-
-- **[Zapier](../zapier):** most integrations (7,000+), easiest for non-technical users. But expensive at scale and no self-host option.
-- **[Make.com](../make):** cheaper than Zapier, more visual, good for complex flows. No native AI agents.
-- **[LangGraph](../langgraph):** code-first AI agent framework. More precise control but requires Python/JS development.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [n8n pricing](https://n8n.io/pricing), [n8n documentation](https://docs.n8n.io), and the [n8n AI Agent node docs](https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/).
 
 ## FAQ
 
 **Is n8n free?**
-Yes, n8n is free to self-host with unlimited workflows and unlimited executions. You need your own server and basic technical skills to set it up. The cloud-hosted version starts at $29/month with limited executions. Self-hosting is the most popular option for cost-conscious users and agencies ([n8n Pricing](https://n8n.io/pricing)).
+Yes, self-hosted. The Community Edition runs on any Node.js host with unlimited workflows and unlimited executions. Hosting cost is the VPS bill (typically $5 to $20/month). Cloud plans start at €24/month ([n8n pricing](https://n8n.io/pricing)).
 
-**How much does n8n cost?**
-Self-hosted n8n costs $0 (you pay only for your server, typically $5-$20/month on a VPS). Cloud plans cost $29/month (Starter, 5,000 executions), $99/month (Pro, 25,000 executions), or $1,000/month for Enterprise. Self-hosting is the best value ([n8n Pricing](https://n8n.io/pricing)).
+**What does the AI Agent node do?**
+It runs autonomous multi-step reasoning with tool calling. Connect any LLM (Claude Opus 4.7, GPT-5.4, Gemini 3.1 Pro, local models), define tools, and the agent plans and executes tasks inside a workflow ([n8n Agent docs](https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/)).
 
-**What are the best alternatives to n8n?**
-Zapier is the best alternative if you need maximum integrations (7,000+) and a non-technical setup. Make.com offers visual automation at lower cost than Zapier but lacks native AI agents. LangGraph is better for code-first AI agent development.
+**n8n vs Zapier?**
+n8n wins on self-host, native AI agents, and cost at volume. [Zapier](/tools/zapier/) wins on integration breadth (9,000+ vs 500+) and onboarding speed for non-technical users.
 
+**Is n8n really open source?**
+Fair-code licensed: source-available, self-host permitted, commercial use permitted with limits on offering n8n itself as a managed service. The distinction matters for vendors resetting n8n as a product; it does not affect normal self-host use.
 
-
-
-## Review History
-
-- **2026-04-09:** Pricing re-checked against the official pricing page. No change since last verification.
-- **2026-02-16:** Updated flagship model reference to latest release.
-- **2025-12-16:** Pricing verified. Minor copy edits.
-- **2024-01-15:** Initial review published after hands-on testing.
-
-## Related Guides
-
-- [How to Build an AI Content Pipeline](../use-cases/ai-content-pipeline.md)
-- [Best AI Tools for Customer Support (2026)](../use-cases/ai-customer-support.md)
-- [How to Build AI Lead Generation](../use-cases/ai-lead-generation.md)
-- [Best AI Stack for Solo Founders (2026)](../use-cases/ai-solo-founder-stack.md)
-- [Best AI Automation Platform (2026)](../use-cases/best-ai-automation-platform.md)
-
-## Related Comparisons
-
-- [ChatGPT vs n8n](../comparisons/chatgpt-vs-n8n.md)
-- [n8n vs Make vs Zapier](../comparisons/n8n-vs-make-vs-zapier.md)
-
-## Related
-
-- **Category:** [AI Automation & Agents](../categories/ai-automation.md)
-- **Trends:** [Agent Commerce](../trends/agent-commerce.md)
-- **Use cases:** AI Agency Stack
+**How do cloud executions count AI workflows?**
+AI workflows count as regular executions. There is no separate AI pricing tier. A tool-calling Agent run counts as one execution regardless of how many LLM calls it makes internally.
 
 ## Sources
 
-- [Official website](https://n8n.io)
-- [Pricing page](https://n8n.io/pricing)
-- [Documentation](https://docs.n8n.io)
-- [n8n 3.0 Release Notes](https://blog.n8n.io/n8n-3-0-release/)
+- [n8n pricing](https://n8n.io/pricing): current cloud plan rates and execution limits
+- [n8n documentation](https://docs.n8n.io): self-host setup, nodes, and workflow reference
+- [n8n AI Agent node](https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/): native agent capabilities
+- [n8n GitHub](https://github.com/n8n-io/n8n): source, releases, and license
 
-*Some links on this page are affiliate links. We earn a commission at no extra cost to you. This doesn't influence our ratings or recommendations.*
+## Related
+
+- **Category:** [AI Automation](/categories/ai-automation/)
+- **Comparisons:** [n8n vs Make vs Zapier](/comparisons/n8n-vs-make-vs-zapier/) · [ChatGPT vs n8n](/comparisons/chatgpt-vs-n8n/)

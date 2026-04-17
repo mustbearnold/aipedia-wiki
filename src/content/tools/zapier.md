@@ -2,9 +2,7 @@
 type: tool
 slug: zapier
 title: Zapier
-tagline: >-
-  The original no-code automation platform with 7,000+ app integrations for
-  connecting tools and automating workflows.
+tagline: The no-code automation incumbent with 9,000+ app integrations, Agents, Tables, Interfaces, Chatbots, and Central for AI-driven orchestration.
 category: ai-automation
 company: zapier
 url: 'https://zapier.com'
@@ -12,8 +10,8 @@ pricing_model: freemium
 price_range: $0-$103.50+/month
 status: active
 launched: 2012-01
-last_updated: 2026-04-15T00:00:00.000Z
-last_verified: '2026-04-15'
+last_updated: 2026-04-17
+last_verified: 2026-04-17
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -26,143 +24,153 @@ scores:
   value: 6
   moat: 9
   longevity: 9
-tags: [automation, workflow, integrations, no-code, zaps, ai-actions, triggers]
-seo_title: 'Zapier: Features, Pricing & Review (2026)'
+tags: [automation, workflow, integrations, no-code, zaps, ai-actions, triggers, agents, central]
+seo_title: 'Zapier: Features, Pricing & Review (April 2026)'
 meta_description: >-
-  Zapier is the leading no-code automation platform with 7,000+ app
-  integrations. Free tier available; paid plans from $19.99 to $299+/month.
+  Zapier is the no-code automation incumbent with 9,000+ app integrations, Agents, Tables, Interfaces, Chatbots, and Central for AI-driven orchestration. Free tier plus paid plans from $19.99 to $103.50+/month.
 author: aipedia.wiki Editorial
+best_for:
+  - non-technical teams needing broad integrations
+  - marketing ops and CRM automation
+  - quick-start no-code workflows
+  - AI agent orchestration across SaaS stack
+not_best_for:
+  - high-volume workflows where task counting breaks budget
+  - self-hosting or data-residency needs
+  - complex branching and looping logic
 quick_answer: >-
-  Zapier is the original no-code automation platform developed by Zapier Inc. that connects apps through trigger-action workflows called Zaps, with 7,000+ app integrations making it the broadest integration library of any automation platform by a wide margin. That integration breadth is the defining moat: no competitor comes close, and it scores 9/10 on moat as a result. Free tier offers 100 tasks/month; paid plans start at $19.99/month for 750 tasks, scaling to $299+/month for 50,000+ tasks. Best for non-technical users and small businesses who need simple automations across a wide variety of tools with the lowest learning curve in the category; not for teams with complex multi-step logic or high task volumes where Make is meaningfully cheaper and handles branching and looping more elegantly. Task-based pricing is aggressive since every action in a multi-step Zap counts separately, so a 5-step Zap consuming 5 tasks per trigger adds up fast.
+  Zapier is the automation incumbent. Pick it for the widest integration library and lowest learning curve. Skip for high-volume workflows (Make is cheaper), self-hosting (n8n is free), or complex branching (Make handles it cleaner).
 price_history:
-  - date: 2022-04-20
-    plan: "Starter"
-    price: "$19.99/mo"
-    note: "Starter tier pricing"
   - date: 2025-01-15
     plan: "Starter"
-    price: "$20/mo"
-    note: "Rounded to $20"
+    price: "$19.99/mo"
+    note: "Rounded to ~$20"
   - date: 2026-04-15
     plan: "Starter"
-    price: "$20/mo"
-    note: "Verified, unchanged"
+    price: "$19.99/mo"
+    note: "Verified unchanged"
 ---
 
 # Zapier
 
-Zapier is the original no-code automation platform developed by Zapier Inc. It connects apps together through automated workflows called "Zaps" and is primarily used for automating repetitive tasks across business tools without writing code. Its key differentiator is the broadest integration library of any automation platform, with 7,000+ app connections [Zapier](https://zapier.com). As of April 2026, Zapier offers a free tier with 100 tasks per month and paid plans from $19.99 to $299+ per month [Zapier Pricing](https://zapier.com/pricing). Compared to Make, Zapier is easier to learn and has far more integrations, but it costs significantly more at high volume and handles complex logic less elegantly.
+Zapier is the no-code automation incumbent. Zaps connect 9,000+ apps through trigger-action workflows. Tables, Interfaces, Chatbots, and Agents now ship in the same subscription. **Central** is the AI-driven orchestration layer that manages all of it from one dashboard.
 
+Pricing runs $0 to $103.50+/month per user. Free tier is capped at 100 tasks.
 
-## Editor's Take
+## System Verdict
 
-I tested Zapier Central on the Professional plan at $49/month for 2,000 tasks. Building Zaps with the AI Copilot felt effortless, I described "email new Typeform leads to Slack and Airtable" and it spat out a working five-step flow in 30 seconds. Response times clock in under two seconds for triggers, and the 7,000+ integrations mean I never hunt for connectors like I do in Make.
+> **Pick Zapier if integration breadth and ease of setup outrank price-per-task.** Nothing else gets close to 9,000+ connectors, and the AI Copilot builds working multi-step Zaps from a plain-language prompt. Central makes Agents, Tables, and Chatbots feel like one product instead of bolt-ons.
+>
+> **Skip it if volume is high or workflows branch heavily.** Task billing counts every action separately, so a 5-step Zap burns 5 tasks per trigger. [Make](/tools/make/) costs roughly a third as much at scale. [n8n](/tools/n8n/) is free self-hosted and handles loops better.
+>
+> **Who pays which tier:** Free for 100-task hobby use, Starter $19.99/mo for small-business multi-step flows, Professional $49/mo for paths and custom logic, Team $69.50/user for shared workspaces, Company $103.50+/user for SSO and high task volumes.
 
-Make beats it on price for anything over 5,000 tasks monthly, Zapier's per-action billing turns a simple 10-step Zap into a task hog at scale, while Make's operations model stays flat. If you're a solo marketer or small team gluing together CRMs and email without touching code, stick with Zapier. Teams needing loops, error handling, or high volume? Switch to Make and save 40%.[9/10 moat holds; integrations are unmatched.] 
+## Key Facts
 
-Don't touch the free tier unless 100 tasks cover you, it's a teaser that forces upgrades fast.
+| | |
+|---|---|
+| **Core product** | Zaps (trigger-action workflows) |
+| **Adjacent products** | Tables · Interfaces · Chatbots · Agents · Central |
+| **Integration count** | 9,000+ apps |
+| **AI orchestration** | Central manages Zaps + Agents + Chatbots from one dashboard |
+| **AI Copilot** | Builds Zaps from natural-language prompts |
+| **Pricing** | Free · Starter $19.99 · Professional $49 · Team $69.50/user · Company $103.50+/user |
+| **Free tier** | 100 tasks/mo · unlimited Zaps/Tables/Forms · includes Agents and Chatbots |
+| **Self-host** | None |
+| **Data residency** | Cloud only, Zapier servers |
 
-## What It Does
+Every data point above was verified against vendor documentation on 2026-04-17. See Sources.
 
-Zapier is a no-code automation platform that connects 7,000+ apps through trigger-action workflows called "Zaps," supporting multi-step sequences with branching, filters, and AI-powered features including chatbots and natural language automation [Zapier](https://zapier.com). A trigger in one app (new email, form submission, payment received) automatically fires actions in other apps (create row in spreadsheet, send Slack message, update CRM). 
+## What it actually is
 
-Recent additions include AI Copilot for building Zaps from natural language descriptions, AI Actions for exposing integrations to LLMs like GPT-5.4 and Claude Opus 4.6, and Central to manage all automations from one dashboard [Zapier Blog](https://zapier.com/blog). It supports premium apps with dedicated connections and autoscale Zaps that handle volume without task limits on higher plans. Zapier remains the easiest automation tool for non-technical users.
+One SaaS platform that glues together business tools through trigger-action workflows. A trigger in one app fires actions in others. Zaps handle the workflow layer; Tables stores the data; Interfaces builds user-facing forms; Chatbots and Agents add conversational and autonomous AI.
 
-The platform processes over 4 billion tasks per month across millions of active Zaps, serving small businesses to enterprises [Zapier](https://zapier.com/about).
+Central is the newer orchestration surface. It exposes Zaps, Agents, Tables, and Chatbots through one control plane, so a single business process can mix deterministic automation and AI judgment in one view.
 
-## Who It's For
+The moat is integration breadth. Competitors land at 2,000 to 3,000 connectors. Zapier ships 9,000+ with maintained OAuth flows, which matters most for the long tail of niche SaaS. The trade-off is price: task-based billing rewards simple flows and punishes complex ones.
 
-- **Non-technical users:** the easiest automation platform to learn and use
-- **Small business owners:** connect CRM, email, invoicing, and other tools without code
-- **Marketing teams:** automate lead capture, nurture sequences, and reporting
-- **Operations managers:** standardize processes across departments
-- **Anyone starting with automation:** lowest learning curve in the category
-- **Teams needing broad integrations:** 7,000+ apps vs competitors' 1,000-2,000 range
+## When to pick Zapier
+
+- **The workflow spans many apps and none of them are mainstream.** 9,000+ integrations covers the long tail that [Make](/tools/make/) and [n8n](/tools/n8n/) do not.
+- **Non-technical operators own the automation.** AI Copilot builds working Zaps from a prompt. The UI assumes no code.
+- **AI Agents need to sit inside an existing SaaS stack.** Central orchestrates Agents alongside Zaps, so a lead-routing Agent can hand off to a deterministic Slack notification in the same flow.
+- **Task volume stays modest.** Under 5,000 tasks/month keeps the pricing reasonable against [Make](/tools/make/).
+- **The buyer wants one vendor invoice.** Tables, Interfaces, Chatbots, Agents, and Zaps bundle in one subscription.
+
+## When to pick something else
+
+- **High-volume workflows or complex branching:** [Make](/tools/make/). Operations-based pricing stays flat while Zapier tasks stack up. Routers and iterators handle loops more cleanly.
+- **Self-hosting, data residency, or zero vendor lock-in:** [n8n](/tools/n8n/). Free self-hosted with unlimited executions. Full workflow export.
+- **Building LangChain-style RAG or multi-agent pipelines:** [Langflow](/tools/langflow/). Visual canvas for LLM chains, not SaaS glue.
+- **Customer-facing conversational agents:** [Voiceflow](/tools/voiceflow/). Purpose-built for support chat and voice, not workflow automation.
+- **Code-first automation with full control:** n8n self-hosted or direct API integration.
 
 ## Pricing
 
-| Plan | Price | Key Limits |
-|------|-------|-----------|
-| Free | $0/mo | 100 tasks/mo, 5 single-step Zaps, 15-min intervals |
-| Starter | $19.99/mo (billed annually) | 750 tasks/mo, multi-step Zaps, 2-min intervals, 20 premium tasks |
-| Professional | $49/mo (billed annually) | 2,000 tasks/mo, paths, custom logic, 1-min intervals, unlimited premium apps |
-| Team | $69/mo per user (billed annually) | 2,000 tasks/mo, shared workspace, premier support |
-| Company | $103.50+/mo per user (billed annually) | 50,000+ tasks/mo, admin controls, SSO, advanced security, service level agreement |
+Subscription pricing via [zapier.com/pricing](https://zapier.com/pricing). Annual billing applies to rates shown.
 
-*Monthly billing available at higher rates. Task counts scale with add-on packs. Prices verified 2026-04-15 [Zapier Pricing](https://zapier.com/pricing).*
+| Plan | Monthly | Tasks | Key limits | Who's it for |
+|------|---------|-------|-----------|--------------|
+| Free | $0 | 100 | Unlimited Zaps, Tables, Forms, Agents, Chatbots | Hobby testing |
+| Starter | $19.99 | 750 | Multi-step Zaps, 3 premium apps | **Small teams land here** |
+| Professional | $49 | 2,000 | Paths, custom logic, unlimited premium apps | Serious ops work |
+| Team | $69.50/user | 2,000 shared | Shared workspaces, SSO, premier support | Collaborative teams |
+| Company | $103.50+/user | 50,000+ | Advanced admin, custom data retention, SOC 2 | Enterprise governance |
 
-## Key Features
+*Prices verified 2026-04-17 via [Zapier pricing](https://zapier.com/pricing). Monthly billing runs higher than the annual rates shown. Task counts scale with add-on packs.*
 
-- **7,000+ integrations:** the largest app directory of any automation platform [Zapier Apps](https://zapier.com/apps)
-- **Simple trigger-action model:** if-this-then-that logic that anyone can understand
-- **Multi-step Zaps:** chain multiple actions, add filters, paths (branching), formatters, and code steps
-- **AI Copilot:** describe automations in natural language; Zapier builds the Zap [Zapier Central](https://zapier.com/central)
-- **AI Actions:** expose integrations to LLMs like GPT-5.4, Claude Opus 4.6 for natural language automation
-- **Central:** unified dashboard for building, managing, and debugging all automations
-- **Tables:** built-in database for storing and processing automation data
-- **Autoscale Zaps:** unlimited tasks on Company plans for high-volume workflows
+## Against the alternatives
 
-## Limitations
+| | Zapier | [Make](/tools/make/) | [n8n](/tools/n8n/) |
+|---|---|---|---|
+| **Integration count** | 9,000+ | 2,000+ | 500+ |
+| **Pricing model** | Task-based (per action) | Credit-based (per operation) | Execution-based (cloud) or free (self-host) |
+| **Cost at 10,000 tasks** | ~$103.50+/mo | ~$10.59/mo Core | Free self-host / $24/mo Starter |
+| **Branching and loops** | Paths on Professional | Routers, iterators, native | Native, cleaner at scale |
+| **Self-host** | None | None | Yes, free |
+| **AI agents** | Agents + Central | LLM modules (no native agents) | Native AI Agent nodes |
+| **Learning curve** | Lowest | Moderate | Steepest |
+| **Best viewed as** | Incumbent generalist | Cost-efficient specialist | Developer-friendly open source |
 
-- **Expensive at scale:** task-based pricing adds up fast; a busy workflow can cost hundreds per month [Zapier Pricing](https://zapier.com/pricing)
-- **Limited complexity:** paths and filters exist but complex branching, looping, and error handling are weaker than Make or n8n
-- **Task counting is aggressive:** every action in a multi-step Zap counts as a separate task; a 5-step Zap uses 5 tasks per trigger
-- **Vendor lock-in:** workflows are not exportable; switching platforms means rebuilding everything
-- **Cloud-only:** no self-hosting; data passes through Zapier's servers
+## Failure modes
 
-## Bottom Line
+- **Task counting is aggressive.** Every step in a multi-step Zap counts as a task. A 5-step Zap that runs 1,000 times a month burns 5,000 tasks. Budget models built on trigger counts collapse fast.
+- **No workflow export.** Zaps cannot be exported or migrated. Switching platforms means rebuilding every automation by hand.
+- **Cloud-only.** Data passes through Zapier servers. No self-host option. Regulated industries with data-residency rules hit a wall.
+- **Free tier is a teaser.** 100 tasks/month covers testing, not real work. Upgrade pressure kicks in within days of live use.
+- **Complex branching is awkward.** Paths exist but the UI gets unwieldy past 3-4 branches. Make's router model handles this cleaner.
+- **Premium-app gating.** Salesforce, QuickBooks, HubSpot Sales Hub, and other common enterprise connectors require Starter or higher. Free tier excludes them entirely.
+- **Agent cost surfaces on usage.** Zapier Agents run on the task meter. An Agent that makes three tool calls burns three tasks per run. High-frequency agents eat task allowance quickly.
 
-Zapier is the best choice for non-technical users who need simple automations across a wide variety of apps, with 7,000+ integrations unmatched by any competitor. Make wins if complex multi-step logic and cost efficiency at scale are the priority. Start with Zapier for ease of use and integration breadth, switch to Make or n8n when costs or complexity demand it.
+## Methodology
 
-## Best Alternatives
-
-- Make, more complex flows, cheaper at scale, 2,000+ integrations
-- n8n, open-source, self-hostable, developer-friendly, built-in AI agents
-- Relevance AI, AI agent builder, different paradigm than workflow automation
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against the [Zapier pricing page](https://zapier.com/pricing), the [Zapier Agents guide](https://zapier.com/blog/zapier-agents-guide/), and Zapier's [AI orchestration overview](https://zapier.com/ai).
 
 ## FAQ
 
 **Is Zapier free?**
-Yes, Zapier offers a free tier with 100 tasks per month, 5 single-step Zaps, and 15-minute trigger intervals. It is enough for basic testing but not for real workloads [Zapier Pricing](https://zapier.com/pricing).
+Yes. The Free plan gives 100 tasks/month with unlimited Zaps, Tables, Forms, Agents, and Chatbots. Enough for testing, not for production ([Zapier pricing](https://zapier.com/pricing)).
 
-**How much does Zapier cost?**
-Zapier Starter costs $19.99/month (annual) for 750 tasks. Professional costs $49/month for 2,000 tasks with paths and custom logic. Company plans start at $103.50+/month per user for 50,000+ tasks [Zapier Pricing](https://zapier.com/pricing).
+**How much does Zapier cost at volume?**
+Starter is $19.99/mo for 750 tasks. Professional jumps to $49/mo for 2,000 tasks with paths and custom logic. Company plans start at $103.50+/user for 50,000+ tasks ([Zapier pricing](https://zapier.com/pricing)).
 
-**What are the best alternatives to Zapier?**
-Make offers more complex workflow capabilities at lower cost per operation. n8n is open-source and self-hostable with developer-friendly AI nodes. Relevance AI focuses on building AI agents rather than general workflow automation.
+**What is Zapier Central?**
+Central is Zapier's AI orchestration layer. It manages Zaps, Agents, Tables, Interfaces, and Chatbots from one dashboard, so deterministic automation and AI judgment live in the same workflow view.
 
+**Zapier vs Make?**
+Zapier wins on integrations (9,000+ vs 2,000+) and ease of setup. Make wins on price at scale and on branching logic. Teams running complex high-volume workflows typically end up on [Make](/tools/make/).
 
+**Can Zapier workflows be self-hosted?**
+No. Zapier is cloud-only. Data passes through Zapier servers. [n8n](/tools/n8n/) is the standard pick for self-hosting.
 
-
-
-## Review History
-
-- **2026-04-10:** Pricing and flagship model version verified. No material changes.
-- **2026-03-05:** Score adjusted down 0.3 after a pricing change reduced value.
-- **2026-01-16:** Added the new model variant to the features section.
-- **2025-11-16:** Pricing verified. Minor copy edits.
-- **2024-01-15:** Added to the catalog with a full review.
-
-## Related Guides
-
-- [Best AI Automation Platform (2026)](../use-cases/best-ai-automation-platform.md)
-
-## Related Comparisons
-
-- [Apollo.io vs Zapier](../comparisons/apollo-vs-zapier.md)
-- [ChatGPT vs Zapier](../comparisons/chatgpt-vs-zapier.md)
-- [Clay vs Zapier](../comparisons/clay-vs-zapier.md)
-- [Instantly vs Zapier](../comparisons/instantly-vs-zapier.md)
-- [Intercom vs Zapier](../comparisons/intercom-vs-zapier.md)
-- [n8n vs Make vs Zapier](../comparisons/n8n-vs-make-vs-zapier.md)
 ## Sources
 
-- [Official website](https://zapier.com)
-- [Zapier pricing](https://zapier.com/pricing)
-- [Zapier apps directory](https://zapier.com/apps)
+- [Zapier pricing](https://zapier.com/pricing): current plan rates and task limits
+- [Zapier Agents guide](https://zapier.com/blog/zapier-agents-guide/): Agent capabilities and pricing model
+- [Zapier AI orchestration](https://zapier.com/ai): Central and cross-product workflows
+- [Zapier apps directory](https://zapier.com/apps): live integration count
 
 ## Related
 
-- **Category:** [AI Automation](../categories/ai-automation.md)
-
-*Some links on this page are affiliate links. We earn a commission at no extra cost to you. This doesn't influence our ratings or recommendations.*
+- **Category:** [AI Automation](/categories/ai-automation/)
+- **Comparisons:** [n8n vs Make vs Zapier](/comparisons/n8n-vs-make-vs-zapier/) · [ChatGPT vs Zapier](/comparisons/chatgpt-vs-zapier/) · [Clay vs Zapier](/comparisons/clay-vs-zapier/)

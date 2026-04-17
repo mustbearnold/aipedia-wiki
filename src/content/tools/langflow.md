@@ -2,16 +2,16 @@
 type: tool
 slug: langflow
 title: Langflow
-tagline: Visual drag-and-drop builder for LangChain-based LLM workflows and AI agents, free and open-source.
+tagline: Open-source visual canvas for LangChain-based LLM workflows, agents, and RAG pipelines. Version 1.8 as of April 2026.
 category: ai-automation
 company: langflow
 url: https://langflow.org
 pricing_model: open-source
-price_range: "$0 (self-hosted) or $0.002/credit (cloud)"
+price_range: "$0 (self-host) · cloud pricing via hosting partner"
 status: active
 launched: 2023-04
-last_updated: 2026-04-15
-last_verified: 2026-04-15
+last_updated: 2026-04-17
+last_verified: 2026-04-17
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -24,114 +24,147 @@ scores:
   value: 9
   moat: 3
   longevity: 7
-tags: [llm-workflows, ai-agents, langchain, open-source, visual-builder, no-code, rag, automation]
-seo_title: "Langflow: Features, Pricing & Review (2026)"
-meta_description: "Langflow is a free, open-source visual builder for LangChain LLM workflows and AI agents. Self-host for $0 or use cloud at $0.002/credit. Best for developer-friendly AI agent prototyping."
+tags: [llm-workflows, ai-agents, langchain, open-source, visual-builder, no-code, rag, automation, langgraph]
+seo_title: "Langflow: Features, Pricing & Review (April 2026)"
+meta_description: "Langflow is a free, open-source visual builder for LangChain LLM workflows, AI agents, and RAG pipelines. Version 1.8 ships MCP servers and improved agent nodes. Self-host for $0."
 author: "aipedia.wiki Editorial"
+best_for:
+  - developers prototyping LangChain and LangGraph workflows visually
+  - AI engineers building RAG pipelines
+  - teams deploying flows as REST or MCP endpoints
+  - open-source-first shops avoiding vendor lock-in
+not_best_for:
+  - non-technical users without LangChain familiarity
+  - teams needing general business SaaS automation
+  - organizations needing a vendor SLA out of the box
 quick_answer: >-
-  Langflow is a free, open-source visual drag-and-drop builder for LangChain-based LLM workflows and AI agents, developed by Langflow Inc. and acquired by DataStax in 2024, allowing developers to assemble RAG pipelines, multi-agent systems, and chatbots from 100-plus pre-built component nodes rather than writing Python orchestration code from scratch. The self-hosted version has no feature limits and deploys any flow as a REST API endpoint directly from the canvas, making it the fastest path from LLM workflow idea to live endpoint for developers who know LangChain concepts. Self-hosting is free (a VPS costs $5-$20/month); cloud usage is $0.002 per credit. Best for developers and AI engineers prototyping LangChain workflows without boilerplate; n8n is the better choice when the primary need is general business process automation with AI nodes rather than LangChain-native pipeline development. The moat is thin: Flowise and several other visual LLM builders offer nearly identical functionality.
+  Langflow is the open-source visual canvas for LangChain LLM workflows. Pick it for fast RAG and agent prototypes that deploy as REST or MCP endpoints. Skip for general SaaS automation (n8n or Zapier) or if a vendor SLA is required.
+price_history:
+  - date: 2026-03-09
+    plan: "DataStax Langflow cloud"
+    price: "Deprecated"
+    note: "DataStax-hosted Langflow deprecated; shutdown April 9, 2026. OSS continues."
+  - date: 2026-04-15
+    plan: "Langflow OSS"
+    price: "$0"
+    note: "Self-host continues free. Version 1.8.4 released April 1, 2026."
 ---
 
 # Langflow
 
-Langflow is an open-source visual drag-and-drop builder for LangChain-based LLM workflows and AI agents. Developed by Langflow Inc. and acquired by DataStax in 2024, it lets developers build RAG pipelines, multi-agent systems, chatbots, and data processing chains using a node-based interface instead of writing Python code from scratch. As of April 2026, Langflow version 1.3 supports over 150 pre-built components compatible with GPT-5.4, Claude Opus 4.6, and Gemini 3.1 Pro; self-hosting remains free with no limits, while the cloud service charges $0.002 per credit ([langflow.org/pricing](https://langflow.org/pricing)).
+Langflow is the open-source visual canvas for LangChain-based LLM workflows, agents, and RAG pipelines. Version 1.8.4 (April 2026) ships improved agent nodes, MCP server export, and deeper LangGraph integration. Free to self-host. DataStax-hosted Langflow was deprecated March 9, 2026 and shut down April 9, 2026; the OSS project continues.
 
+## System Verdict
 
-## Editor's Take
+> **Pick Langflow if the workload is LangChain-shaped.** Drag nodes for models, prompts, retrievers, tools, and agents onto a canvas, connect them, and deploy the result as a REST or MCP endpoint. 150+ pre-built components cover most RAG and agent patterns without writing orchestration code.
+>
+> **Skip it if the problem is general business automation.** [n8n](/tools/n8n/) handles SaaS glue better. [Zapier](/tools/zapier/) covers 9,000+ apps. Langflow's integration library is LLM-centric, not business-app-centric.
+>
+> **Who pays which tier:** Self-host for most users (free forever, unlimited), a cloud partner like IBM watsonx or Render for managed hosting, or a support contract through an ecosystem partner for teams that need SLA-backed deployment.
 
-I fired up Langflow 1.3 on a $10 DigitalOcean droplet last week. Building a RAG chain with Flux 2 embeddings and GPT-5.4 took four minutes flat, drag document loader to splitter, vector store, retriever, done. Testing on-canvas showed node outputs instantly, no Python hacks needed. Deployed the flow as a REST endpoint in seconds; hit it from curl, got responses under 800ms.
+## Key Facts
 
-Self-hosting stays free with zero limits, even post-DataStax acquisition. Cloud's still $0.002/credit, fine for bursts but pointless if you spin your own instance. Flowise matches 90% of this visually, but Langflow wins on LangChain/LangGraph depth, agents hand off tasks cleaner there. Flowise feels generic by comparison.
+| | |
+|---|---|
+| **License** | MIT (fully open source) |
+| **Current version** | 1.8.4 (April 1, 2026) |
+| **Core product** | Visual canvas for LangChain and LangGraph flows |
+| **Components** | 150+ pre-built nodes: models, prompts, retrievers, tools, agents, embeddings |
+| **Deployment** | REST API · MCP server · Python export |
+| **DataStax cloud status** | Deprecated March 9, 2026 · shut down April 9, 2026 |
+| **Self-host** | Free · Docker · Python · unlimited |
+| **Supported models** | GPT-5.4 · Claude Opus 4.7 · Gemini 3.1 Pro · Llama 4 · local models |
+| **LangGraph support** | Native (multi-agent, stateful memory, tool calling) |
 
-Grab it if you prototype LLM pipelines daily and hate boilerplate. Skip if you're non-technical or want n8n-style business automations; those drag in AI nodes without LangChain lock-in. My bias: I live in code, so visual beats nothing, but purists will code anyway.
+Every data point above was verified against vendor documentation on 2026-04-17. See Sources.
 
-## What It Does
+## What it actually is
 
-Langflow provides a visual canvas where LLM components like models, prompts, retrievers, tools, and agents appear as draggable nodes connected by edges to define data flow. Users prototype AI pipelines without writing orchestration code; a RAG workflow might link a document loader, text splitter, Flux 2 embeddings, vector store, retrieval node, and GPT-5.4 into a complete chain in minutes ([langflow.org/docs](https://langflow.org/docs)).
+A Python application with a React canvas that lets engineers assemble LangChain and LangGraph flows as draggable nodes and edges. Each node is a LangChain component: a model, a prompt template, a retriever, a vector store, an agent, a tool.
 
-Flows run in real-time on the canvas for testing, with inputs and outputs visible per node. Completed workflows export as Python code or deploy as REST API endpoints for integration with apps or services. Langflow builds on LangGraph for multi-agent support, enabling task handoffs and tool use across agents powered by models like Claude Opus 4.6.
+Flows run in real time on the canvas for debugging, with per-node inputs and outputs visible inline. Finished flows export three ways: as Python code for integration into an existing codebase, as a REST API endpoint for external apps to hit, or as an MCP server for direct consumption by AI agents that speak the Model Context Protocol.
 
-The tool suits rapid iteration on agent architectures, RAG variants, and LLM chains. DataStax backing has added enterprise templates for production RAG with Hailuo 2.3 video retrieval and Runway Gen-4.5 multimodal processing as of the 1.3 release in March 2026.
+The moat is thin. Flowise offers a near-identical visual LangChain experience. LangGraph Studio ships from LangChain directly. Langflow's edge is active development, the MCP server export, and the larger component library, but the category is crowded and the core idea is not defensible on its own.
 
-## Who It's For
+## When to pick Langflow
 
-- Developers prototyping LangChain workflows visually before coding
-- AI engineers testing RAG setups with GPT-5.4, Gemini 3.1 Pro retrievers
-- Technical analysts using templates without full Python skills
-- Startup teams building AI internal tools without backend resources
-- Agencies demoing LLM agents to clients via interactive canvas
-- DataStax users needing managed Langflow with SLA support
+- **The pipeline is a LangChain or LangGraph flow.** Retrievers, chains, agents, and tool-calling nodes are first-class. Faster than writing orchestration code by hand.
+- **RAG prototypes need fast iteration.** A document-loader-to-answer chain lands in minutes. Swap embedders, retrievers, or models without touching code.
+- **The deploy target is an MCP server.** Version 1.8 exposes flows as MCP endpoints directly, so downstream agents can consume them without custom glue.
+- **Multi-agent handoff is the hard part.** LangGraph integration handles stateful agent coordination better than ad-hoc orchestration.
+- **The team prefers open source over managed SaaS.** Self-host on a $10 VPS or run locally during development. No vendor dependency.
+
+## When to pick something else
+
+- **General SaaS automation (CRM, email, Slack, forms):** [n8n](/tools/n8n/) self-hosted or [Zapier](/tools/zapier/). Langflow is LLM-centric, not business-app-centric.
+- **Cost-efficient visual automation at scale:** [Make](/tools/make/). Operations-based billing for non-AI workflows.
+- **Customer-facing chat or voice agents:** [Voiceflow](/tools/voiceflow/). Purpose-built conversation designer.
+- **Pure code-first agent control:** LangGraph directly, or CrewAI. No visual canvas, but full code clarity.
+- **Managed SLA-backed LangChain hosting:** LangSmith or LangGraph Platform from LangChain itself. The DataStax-hosted Langflow option shut down April 9, 2026.
 
 ## Pricing
 
-| Plan | Price | Key Limits |
-|------|-------|-----------|
-| Self-hosted | $0 | Unlimited; requires Docker/Python server |
-| Cloud Starter | $0.002/credit | Pay-per-use; 1 credit = 1 workflow run |
-| Cloud Pro | $99/mo base + usage | Higher limits, teams, analytics |
-| Enterprise (DataStax) | Custom | Managed, SLA, VPC deployment |
+Langflow is MIT-licensed and free to self-host. Hosting cost is whatever the chosen infrastructure charges.
 
-> Pricing verified at [langflow.org/pricing](https://langflow.org/pricing) as of 2026-04-15.
+| Option | Price | Notes |
+|------|-------|-------|
+| Self-host (Docker, Python, Kubernetes) | $0 | **Most users land here.** VPS cost typically $5 to $20/month. |
+| Cloud partners (IBM watsonx, Render, Railway) | Partner pricing | Managed hosting without DataStax. Verify current partner list on [langflow.org](https://langflow.org). |
+| Ecosystem support contracts | Custom | SLA-backed deployment through partner integrators. |
 
-Self-hosting needs Docker and a VPS ($5-$20/month). Cloud suits sporadic use; Pro/Enterprise for teams.
+*Prices verified 2026-04-17 via [langflow.org](https://langflow.org) and the [Langflow GitHub](https://github.com/langflow-ai/langflow). DataStax-hosted Langflow was deprecated March 9, 2026 and shut down April 9, 2026.*
 
-## Key Features
+## Against the alternatives
 
-- Visual canvas with 150+ LangChain nodes: models (GPT-5.4/Claude Opus 4.6), chains, agents, retrievers, embeddings (Flux 2)
-- Real-time canvas execution: test node inputs/outputs before full runs
-- Python code export: syncs with visual flow for production integration
-- One-click API deployment: REST endpoints from canvas for apps/Zapier
-- Custom Python nodes: extend beyond pre-builts without limits
-- RAG/multi-agent templates: PDF Q&A, video search (Hailuo 2.3/Runway Gen-4.5)
-- LangGraph integration: agent collaboration, tool calling, stateful memory
-- DataStax cloud: analytics, versioning, team workspaces (Pro+)
+| | Langflow | Flowise | [n8n](/tools/n8n/) | LangGraph (code) |
+|---|---|---|---|---|
+| **License** | MIT | Apache 2.0 | Fair-code | MIT |
+| **Focus** | LangChain LLM flows | LangChain LLM flows | General automation + AI | Code-first agents |
+| **Visual canvas** | Yes | Yes | Yes | No |
+| **Component count** | 150+ | ~120 | 500+ (broader categories) | N/A |
+| **MCP server export** | Yes (1.8+) | Partial | Via code node | Direct |
+| **Best for** | LangChain prototyping | Simpler LLM flows | SaaS + AI workflows | Production agent code |
+| **Moat** | Thin, ecosystem-driven | Thin, similar niche | License + AI Agent nodes | Framework depth |
 
-## Limitations
+## Failure modes
 
-- Open-source means low moat; Flowise, LangGraph Studio offer similar visuals.
-- Tied to LangChain abstractions; switching to raw APIs or LlamaIndex requires rework.
-- Large flows (40+ nodes) get cluttered; code exports needed for maintenance.
-- Requires LangChain familiarity for non-template use; not pure no-code.
-- Cloud costs scale with volume; self-host for heavy production.
+- **Moat is thin.** Flowise, LangGraph Studio, and several smaller projects offer overlapping functionality. Switching cost is low, which cuts both ways.
+- **LangChain lock-in.** Flows assume LangChain abstractions. Migrating to raw SDK calls or LlamaIndex requires rewriting the logic.
+- **Large flows clutter fast.** Canvases past 40 nodes become hard to navigate. Sub-flows and careful grouping help; exporting to Python for maintenance is often the answer.
+- **Not pure no-code.** Non-template use assumes familiarity with LangChain concepts (chains, retrievers, agents, tool calling). Operators without that grounding stall.
+- **DataStax cloud shutdown.** Teams that stood up workflows on DataStax-hosted Langflow before March 2026 need to migrate to self-host or another partner by April 9, 2026. Existing data was scheduled for deletion.
+- **Component quality varies.** Community-contributed nodes ship at uneven maturity. Core nodes are solid; some integrations lag model releases.
+- **Version churn.** Monthly releases move fast. Breaking changes land occasionally. Pin versions for production.
 
-## Bottom Line
+## Methodology
 
-Langflow delivers the quickest visual path to LangChain AI workflows and API endpoints at $0 self-hosted. Version 1.3 adds strong 2026 model support, but competition erodes uniqueness. Ideal for LangChain developers; use n8n for broader automation.
-
-## Best Alternatives
-
-| Tool | Price | Key Difference |
-|------|-------|----------------|
-| [n8n](../tools/n8n.md) | $0-$50/mo | General automation with AI nodes; less LangChain focus |
-| Flowise | $0 (open-source) | Simpler LangChain visual builder; smaller ecosystem |
-| [CrewAI](../tools/crewai.md) | $0 (open-source) | Code-based multi-agent; more flexibility, no visuals |
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [langflow.org](https://langflow.org), the [Langflow GitHub releases](https://github.com/langflow-ai/langflow/releases), and the [Langflow documentation](https://docs.langflow.org/).
 
 ## FAQ
 
-**Does Langflow work with GPT-5.4 and Claude Opus 4.6?**  
-Yes, version 1.3 nodes support GPT-5.4, Claude Opus 4.6, Gemini 3.1 Pro via API keys ([langflow.org/integrations](https://langflow.org/integrations)).
+**Is Langflow free?**
+Yes. MIT-licensed and free to self-host with no usage caps. Hosting cost is whatever infrastructure the team runs on. A $5 to $20/month VPS covers small deployments ([Langflow GitHub](https://github.com/langflow-ai/langflow)).
 
-**Is self-hosting truly unlimited?**  
-Yes, no feature/usage caps; just provide your server. Docker setup takes 10 minutes.
+**What happened to DataStax Langflow?**
+DataStax deprecated its hosted Langflow service March 9, 2026 and shut it down April 9, 2026. All DataStax Langflow data was scheduled for deletion at shutdown. The open-source Langflow project continues independently.
 
-**Cloud vs self-host: when to choose each?**  
-Cloud for teams/testing ($0.002/credit); self-host for production (free, scales with your infra).
+**Langflow vs Flowise?**
+Both are open-source visual LangChain builders. Langflow has a larger component library, native LangGraph support, and MCP server export. Flowise is simpler and lighter-weight. Most teams will feel small differences between them.
 
+**Langflow vs n8n?**
+Langflow targets LangChain LLM pipelines. [n8n](/tools/n8n/) targets general business automation with 500+ SaaS integrations. Pick Langflow for RAG and agent prototypes. Pick n8n for workflows that glue CRM, email, and Slack together.
 
-## Review History
-
-- **2026-04-15:** Pricing verified. Added note on the updated free tier limit.
-- **2026-03-26:** Score revised up by 0.5 after extended hands-on testing.
-- **2026-02-16:** Updated flagship model reference to latest release.
-- **2025-10-16:** Pricing verified. Minor copy edits.
-- **2024-01-15:** Initial review published after hands-on testing.
+**Can Langflow flows be deployed to production?**
+Yes. Flows export as REST API endpoints, MCP servers, or Python code. Pinning a Langflow version and running behind a reverse proxy is the standard production pattern.
 
 ## Sources
 
-- [Langflow Official Site](https://langflow.org): Docs, pricing, changelog
-- [Langflow GitHub](https://github.com/langflow-ai/langflow): v1.3 release notes, 28k stars
+- [Langflow official site](https://langflow.org): docs, components, and tutorials
+- [Langflow GitHub](https://github.com/langflow-ai/langflow): source, releases, and license
+- [Langflow documentation](https://docs.langflow.org/): component reference and deployment guides
+- [DataStax Langflow deprecation notice](https://docs.datastax.com/en/langflow/index.html): March 2026 shutdown schedule
 
 ## Related
 
-- **Category:** [AI Automation](../categories/ai-automation.md)
-- **See also:** [n8n](../tools/n8n.md), [CrewAI](../tools/crewai.md)
+- **Category:** [AI Automation](/categories/ai-automation/)
+- **See also:** [n8n](/tools/n8n/) · [Zapier](/tools/zapier/) · [Make](/tools/make/) · [Voiceflow](/tools/voiceflow/)
