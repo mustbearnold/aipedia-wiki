@@ -41,3 +41,8 @@ pnpm-debug.log*
 # working on the site. Must stay private to avoid gaming by vendors.
 aipediawiki_bible.md
 trust_cleanup_task.md
+
+# Operational affiliate program tracker. Contains commission rates,
+# network account handles, application status, and decline reasons.
+# Internal only.
+affiliate_tracker.md
