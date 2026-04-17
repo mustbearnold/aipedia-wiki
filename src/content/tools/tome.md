@@ -2,17 +2,18 @@
 type: tool
 slug: tome
 title: Tome
-tagline: AI-native storytelling and presentation tool that blends slides, documents, and multimedia into a single narrative format.
+tagline: >-
+  The AI storytelling deck tool shut down its presentation product in April 2025. Founders pivoted to Lightfield (AI CRM). AngelList holds the Tome brand.
 category: ai-presentation
-company: Magical Tome Inc.
+company: Magical Tome Inc. (discontinued) · AngelList (brand owner)
 url: https://tome.app
-pricing_model: freemium
-price_range: "$0-$16/month"
-status: active
+pricing_model: free
+price_range: "Discontinued"
+status: dead
 launched: 2020-01
-last_updated: 2026-04-15
-last_verified: 2026-04-15
-update_frequency: monthly
+last_updated: 2026-04-17
+last_verified: 2026-04-17
+update_frequency: quarterly
 affiliate:
   has_program: false
   commission: null
@@ -20,136 +21,133 @@ affiliate:
   network: null
   link: null
 scores:
-  utility: 7
-  value: 7
-  moat: 6
-  longevity: 7
-tags: [presentations, storytelling, narrative, ai-generation, documents, hybrid-format, pitch-decks]
-seo_title: "Tome App: Features, Pricing & Review (2026)"
-meta_description: "Tome is an AI storytelling and presentation tool with a narrative-first format. Free tier available; Pro costs $16/mo. Full review updated April 2026."
+  utility: 3
+  value: 3
+  moat: 2
+  longevity: 1
+tags: [presentations, storytelling, narrative, ai-generation, discontinued, shut-down, pivot]
+seo_title: "Tome: Shut Down April 2025. What to Use Instead (April 2026)"
+meta_description: "Tome's AI presentation tool was discontinued April 15, 2025. Founders rebuilt as Lightfield (AI-native CRM). AngelList acquired the brand. Use Gamma, Beautiful.ai, or Pitch instead."
 author: "aipedia.wiki Editorial"
-quick_answer: >-
-  Tome is an AI storytelling and presentation tool by Magical Tome Inc. that blends slides, long-form text, and multimedia into a continuous scrollable narrative format rather than a conventional 16:9 deck. Its key differentiator is AI generation tuned for coherent narrative arc (problem-solution, before-after structures) rather than bullet-point extraction, which produces meaningfully different output from generic slide tools. Free tier available; Pro is $16/month. Best for founders crafting investor pitches and product strategists building vision documents shared as live URLs; not for sales teams, data-heavy presentations, or anyone needing PPTX compatibility, where Gamma ($10/month) handles export fidelity better. The fluid format can feel informal in contexts where a tight slide deck is expected.
 best_for:
-  - Early-stage founders and startup pitches
-  - Product vision and strategy documents
-  - Narrative-driven internal alignment
-  - Investor presentations shared as URLs
-  - Brand storytelling and campaign narratives
+  - historical reference only
 not_best_for:
-  - Sales decks requiring standard slide format
-  - Data-heavy presentations with tables and charts
-  - Teams needing PowerPoint export fidelity
-  - Audiences expecting conventional 16:9 slides
-  - Collaborative workflows with heavy version control
+  - any current presentation workflow
+  - new sign-ups
+  - B2B sales deck generation
+  - narrative-first long-form decks
+quick_answer: >-
+  Tome shut down its AI presentation tool on April 15, 2025. The founding team pivoted to Lightfield, an AI-native CRM. AngelList holds the Tome brand for a different product. Use Gamma, Beautiful.ai, or Pitch instead.
 ---
 
 # Tome
 
-Tome is an AI-native storytelling and presentation tool developed by Magical Tome Inc., founded in 2020. It blends slide decks, long-form documents, and multimedia into a single scrollable narrative format, and is primarily used by founders, strategists, and communicators who want to tell a story rather than build a conventional slide deck. Its key differentiator is a narrative-first design philosophy: Tome pages flow as a continuous story rather than a sequence of disconnected slides, and the AI generation is tuned for coherent narrative arc rather than bullet-point extraction. As of April 2026, Tome offers a free basic tier with Pro at $16 per month.
+Tome's AI presentation product is discontinued. The company announced the shutdown on October 15, 2024, ended new presentation features on March 1, 2025, and shut the product off on April 15, 2025.
 
-Tome emerged from a perspective that slides as a format are fundamentally broken for complex ideas. A deck of 20 bullet-point slides often obscures the reasoning connecting them. Tome's page format encourages writers to build a coherent arc from opening hook through supporting argument to call to action, with AI assistance at each step. The product attracted an audience among early-stage founders using it for investor narratives, product strategists building internal vision documents, and educators building course materials where narrative flow matters.
+The founding team rebuilt as [Lightfield](https://lightfield.com), an AI-native CRM focused on sales intelligence. AngelList acquired the Tome brand for a separate document-summarization product.
 
-The competitive challenge for Tome is that its format is distinctive enough to attract specific users but unfamiliar enough to create friction when sharing with audiences who expect a conventional slide deck. Tome presentations viewed as a live URL work well; export to PPTX is available but the format translation is lossy. The strongest Tome use cases are internal alignment documents and founder narratives shared as links rather than file attachments.
+## System Verdict
 
+> **Do not pick Tome for new work.** The AI presentation tool is dead. Existing users lost active workspaces in April 2025.
+>
+> **Narrative-first deck use cases go to [Gamma](/tools/gamma/).** Card-based output covers the same "flowing story rather than a slide deck" brief. B2B sales deck workflows (Tome's attempted pivot) go to native sales enablement tools or [Pitch](/tools/pitch/) with CRM integrations.
+>
+> **Who needs to know this is dead:** anyone following 2023-2024 reviews that rated Tome highly, anyone seeing the tome.app domain in a comparison list, and anyone searching for a narrative-arc AI deck tool. The category moved on. Tome did not.
 
-## Editor's Take
+## Key Facts
 
-I tested Tome's latest version, 3.2.1 from April 2026, by generating a 12-page investor pitch from a prompt about an AI hardware startup. The AI nailed the narrative arc, hook, problem-solution, traction, ask, in under 90 seconds, blending text blocks, embeds, and subtle animations into a scrollable story that felt alive. Pro tier at $16/month unlocks unlimited generations and custom branding, which held up during my three-day edit session with real-time collab.
+| | |
+|---|---|
+| **Status** | Discontinued (presentation product shut down April 15, 2025) |
+| **Shutdown announcement** | October 15, 2024 |
+| **Final date new features shipped** | March 1, 2025 |
+| **Final operational date** | April 15, 2025 |
+| **Original company** | Magical Tome Inc. |
+| **Team's new company** | [Lightfield](https://lightfield.com) (AI-native CRM, launched November 14, 2025) |
+| **Brand owner** | AngelList (acquired for separate document-summarization product) |
+| **Recommended replacement for narrative decks** | [Gamma](/tools/gamma/) |
+| **Recommended replacement for B2B sales decks** | Native sales enablement platforms |
 
-Gamma edges it out at $10/month for anyone needing PPTX exports that don't look mangled; Tome's are functional but lose the fluid layout magic. Tome shines for founders scripting solo pitches or strategists crafting vision docs shared as links, I've bookmarked three from my tests. Skip it if your audience demands 16:9 slides or data tables; the format fights back there.
+Every data point above was verified against reporting on 2026-04-17. See Sources.
 
-Selfishly, I prefer this over PowerPoint's rigidity every time. It's not for sales teams chasing templates. Use Tome to stand out; otherwise, stick with Gamma.
+## What it actually is
 
-## What It Does
+A dead product with an active brand. Magical Tome Inc. built an AI-native storytelling deck tool from 2020 to 2025, raised capital through Series B, and reached roughly 20 million registered users before the founding team concluded the economics did not work.
 
-Tome generates a complete narrative presentation from a text prompt, producing pages with a flowing layout that combines text, images, and multimedia elements in a visually coherent sequence. The AI generation is tuned to produce story structures including problem-solution, before-after, and narrative arc frameworks rather than generic bullet lists. Users can edit individual pages, ask the AI to rewrite sections, swap themes, and embed video, Figma frames, and external content. Presentations are shared as live URLs with optional password protection and analytics tracking.
+The team attempted a pivot to B2B sales enablement (CRM integrations, bulk personalization, viewer analytics) before deciding to shut down the presentation product entirely. That decision shipped as the April 2025 shutdown. The founders relaunched as Lightfield, an AI-native CRM, in November 2025.
 
-The AI outline tool allows users to build narrative structure before generating full content, enabling approval of the story arc before pages are written. This workflow reduces iteration cycles for users who know their narrative direction but want AI to handle content generation and visual composition. The system integrates with Claude Opus 4.6 for text generation and GPT Image 1.5 for image creation, allowing users to regenerate sections or swap AI providers through the interface.
+The tome.app domain and brand now sit with AngelList, pointed at a document-summarization tool that has no relationship to the original presentation product.
 
-## Who It's For
+## When to pick Tome
 
-- Early-stage founders crafting investor decks and pitch narratives
-- Product managers building product vision and strategy documents for internal alignment
-- Strategists and consultants making narrative-driven recommendations
-- Educators building course materials where story flow is important
-- Marketing leads creating brand story and campaign narrative documents
-- Writers and communicators who think in narrative terms rather than bullet-point lists
+- No current scenarios. The product no longer exists.
+
+## When to pick something else
+
+- **Narrative-first decks as shareable URLs:** [Gamma](/tools/gamma/). Card format covers the original Tome brief and is actively developed.
+- **Designer slide layouts that auto-reflow:** [Beautiful.ai](/tools/beautiful-ai/).
+- **Collaborative team decks with unlimited free presentations:** [Pitch](/tools/pitch/).
+- **B2B sales-deck workflows with CRM data:** native sales enablement platforms (Gong, Mutiny, Highspot) rather than a presentation tool.
+- **Canva-style broad template library:** [Canva](/tools/canva/).
+- **Design-system integration with a product team:** [Figma](/tools/figma/) Slides.
 
 ## Pricing
 
-| Plan | Price | Key Limits |
-|------|-------|-----------|
-| Free | $0/month | Basic AI generation, limited pages per workspace, Tome branding, limited image generation |
-| Pro | $16/month | Unlimited AI generation, all themes, custom fonts, no branding, analytics, priority support, unlimited pages |
+The Tome AI presentation product was discontinued on April 15, 2025. No current pricing exists for the original product.
 
-Prices verified at [tome.app/pricing](https://tome.app/pricing) as of 2026-04-15.
+The AngelList-owned tome.app domain hosts a different product (document summarization) with separate pricing. The founding team's new company, Lightfield, prices as an AI CRM product, not a presentation tool.
 
-## Key Features
+*Shutdown verified 2026-04-17 via [VentureBeat coverage](https://venturebeat.com/technology/tomes-founders-ditch-viral-presentation-app-with-20m-users-to-build-ai) and [Lightfield](https://lightfield.com).*
 
-- Narrative AI generation: Generates story-structured presentations from a prompt, prioritizing coherent arc and connective reasoning over bullet-point lists
-- Fluid page format: Pages scroll and flow rather than snapping to fixed slide dimensions; layout adapts to content length
-- Multimedia tiles: Each page is composed of tiles that can contain text, images, AI-generated images, video embeds, and external content
-- AI image generation: Generates custom images for each page based on context using GPT Image 1.5, with options to regenerate or upload alternatives
-- Figma and video embeds: Embed live Figma frames, YouTube videos, Loom recordings, and other external content directly into pages
-- Theme system: Clean, minimal themes designed for narrative readability rather than slide-deck aesthetics
-- Live URL sharing: Every Tome presentation has a shareable URL that renders natively in the browser with optional password protection
-- Outline-first workflow: AI can generate a structured outline first, which users approve and edit before full content generation
+## Against the alternatives
 
-## Limitations
+| | Tome (dead) | Gamma | Beautiful.ai |
+|---|---|---|---|
+| **Status** | **Discontinued April 2025** | Active | Active |
+| **Narrative-first output** | Was the category leader | Card format covers the brief | Slide-first |
+| **Shareable URL** | Was native | Native | Available |
+| **PPTX export** | Was lossy | Lossy | Cleaner |
+| **Active development** | **None** | Monthly releases | Monthly releases |
+| **Best viewed as** | **Do not use** | Narrative + slide generalist | Design-automation specialist |
 
-- Not a conventional slide tool: Tome's format does not map to 16:9 slides; audiences expecting a traditional deck may find the format unfamiliar
-- PPTX export is limited: Export to PowerPoint is available but the fluid layout does not translate cleanly to fixed-size slides
-- Narrower audience than Gamma: The narrative-first philosophy is a strength for some users and a mismatch for others; Gamma and Beautiful.ai serve broader audiences
-- Less structured data handling: Tome is not the right tool for presentations that are primarily tables, charts, and data visualizations
-- Free tier is restrictive: The page and workspace limits on the free plan are tighter than Gamma's free tier
+## Failure modes
 
-## Bottom Line
+- **The product no longer exists.** Existing accounts, presentations, and workspaces were sunset on April 15, 2025.
+- **Third-party reviews are stale.** Any 2023 or 2024 review that rates Tome highly predates the shutdown and is misleading for today's reader.
+- **Brand confusion.** The tome.app domain now points at an AngelList document-summarization product, not the original deck tool.
+- **Archived decks are gone.** Users who did not export before April 15, 2025 cannot recover their content.
+- **The pivot did not save it.** The attempted move to B2B sales enablement preceded the shutdown, not replaced it.
 
-Tome is the best AI presentation tool for users who think in narrative terms and whose primary use cases are founder pitches, product vision documents, and strategy narratives shared as links rather than PPTX attachments. For those users, the narrative-first AI generation and fluid page format are genuine advantages over generic slide tools. For everyone else, Gamma or Beautiful.ai is the better choice.
+## Methodology
 
-## Best Alternatives
-
-| Tool | Price | Key Difference |
-|------|-------|----------------|
-| [Gamma](../tools/gamma.md) | $10/mo Plus | More versatile format, broader AI generation, stronger free tier |
-| [Beautiful.ai](../tools/beautiful-ai.md) | $12/mo Pro | Traditional slide format, smart auto-layout, better for sales and business decks |
-| [Pitch](../tools/pitch.md) | $22/mo Pro | Superior collaboration, unlimited decks free, conventional slide format |
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. The tool is marked dead because the original product shut down on April 15, 2025. Last verified 2026-04-17 against [VentureBeat coverage of the Lightfield pivot](https://venturebeat.com/technology/tomes-founders-ditch-viral-presentation-app-with-20m-users-to-build-ai).
 
 ## FAQ
 
-**Is Tome a slide deck tool?**
-Tome is inspired by presentations but uses a fluid page format rather than fixed-size slides. Pages scroll and adapt to content. It works well as a presentation viewed on a screen or shared as a link, but it is not a PowerPoint replacement for situations requiring standard 16:9 slides.
+**Is Tome still available?**
+No. The AI presentation product shut down on April 15, 2025. The founding team moved to a new company called Lightfield (AI-native CRM).
 
-**Does Tome export to PowerPoint?**
-Yes, but the conversion is imperfect. The fluid layout format does not map cleanly to fixed slide dimensions. If you need PPTX files with good fidelity, Gamma or Beautiful.ai handle this better.
+**What happened to my Tome presentations?**
+Accounts and workspaces were sunset with the April 15, 2025 shutdown. Users who did not export before that date cannot recover content.
 
-**Who is Tome best for?**
-Tome is best for early-stage founders, product strategists, and communicators who want to tell a coherent story and share it as a URL. It is not the right choice for sales decks, data-heavy presentations, or any workflow requiring PPTX compatibility.
+**Why did Tome shut down?**
+The founders publicly stated the consumer presentation market did not support the economics they needed. They attempted a B2B sales pivot and then chose to rebuild as an AI CRM instead.
 
+**What is Lightfield?**
+Lightfield is an AI-native CRM built by the Tome founding team. It launched November 14, 2025 and handles customer context capture, follow-up automation, and structured plus unstructured data inputs from sales conversations.
 
+**What owns the tome.app domain now?**
+AngelList acquired the Tome brand and uses it for a document-summarization product. That product is unrelated to the original AI presentation tool.
 
+**What should I use instead?**
+For narrative-first decks: [Gamma](/tools/gamma/). For polished business slides: [Beautiful.ai](/tools/beautiful-ai/). For team collaboration: [Pitch](/tools/pitch/). For B2B sales enablement: a native sales platform, not a presentation tool.
 
-## Review History
-
-- **2026-04-07:** Pricing verified. Clarified pricing for annual vs monthly billing.
-- **2026-03-03:** Score held after review; justification tightened in the Editor's Take.
-- **2026-01-16:** Added the new model variant to the features section.
-- **2025-10-16:** Pricing verified. Minor copy edits.
-- **2024-01-15:** Added to the catalog with a full review.
-
-## Related Comparisons
-
-- [Beautiful.ai vs Tome](../comparisons/beautiful-ai-vs-tome.md)
-- [Decktopus AI vs Tome](../comparisons/decktopus-vs-tome.md)
-- [Gamma vs Tome](../comparisons/gamma-vs-tome.md)
-- [Pitch vs Tome](../comparisons/pitch-vs-tome.md)
-- [Presentations.AI vs Tome](../comparisons/presentations-ai-vs-tome.md)
 ## Sources
 
-- [Tome Official Site](https://tome.app): Product page, feature documentation, and pricing
-- [Tome Help Center](https://help.tome.app): Feature guides and workflow documentation
+- [VentureBeat: Tome's founders ditch viral presentation app to build Lightfield](https://venturebeat.com/technology/tomes-founders-ditch-viral-presentation-app-with-20m-users-to-build-ai): Shutdown and pivot coverage
+- [CB Insights: Lightfield profile](https://www.cbinsights.com/company/tome-1): Company data on the successor entity
 
 ## Related
 
-- Category: [AI Presentation Tools](../categories/ai-presentation.md)
+- **Category:** [AI Presentation Tools](/categories/ai-presentation/)
+- **Comparisons:** [Gamma vs Tome](/comparisons/gamma-vs-tome/) · [Beautiful.ai vs Tome](/comparisons/beautiful-ai-vs-tome/) · [Pitch vs Tome](/comparisons/pitch-vs-tome/) · [Presentations.AI vs Tome](/comparisons/presentations-ai-vs-tome/) · [Decktopus AI vs Tome](/comparisons/decktopus-vs-tome/)

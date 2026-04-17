@@ -2,16 +2,17 @@
 type: tool
 slug: presentations-ai
 title: Presentations.AI
-tagline: Prompt-to-deck tool that turns a topic or outline into a complete, designed presentation in seconds with minimal user input.
+tagline: >-
+  Prompt-to-deck generator pushing a unified deck format. Annual-billed plans from $40 (Public Beta) to $198 (Pro).
 category: ai-presentation
 company: Presentations.AI
 url: https://www.presentations.ai
 pricing_model: freemium
-price_range: "$0-$25/month"
+price_range: "$0-$600/year"
 status: active
 launched: 2022-01
-last_updated: 2026-04-15
-last_verified: 2026-04-15
+last_updated: 2026-04-17
+last_verified: 2026-04-17
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -20,124 +21,147 @@ affiliate:
   network: null
   link: null
 scores:
-  utility: 7
-  value: 7
-  moat: 5
-  longevity: 6
-tags: [presentations, slides, prompt-to-deck, ai-generation, quick-decks, automation]
-seo_title: "Presentations.AI: Features, Pricing & Review (2026)"
-meta_description: "Presentations.AI turns prompts into full slide decks instantly. Free tier includes 10 presentations/month; Pro costs $25/mo. Full review updated April 2026."
+  utility: 6
+  value: 6
+  moat: 4
+  longevity: 5
+tags: [presentations, slides, prompt-to-deck, ai-generation, quick-decks, automation, annual-billing]
+seo_title: "Presentations.AI: Features, Pricing & Review (April 2026)"
+meta_description: "Presentations.AI ships prompt-to-deck generation with a unified deck format. Starter free, Public Beta $40/yr, Pro $198/yr, Enterprise custom. SOC 2 Type II certified. Verified April 2026."
 author: "aipedia.wiki Editorial"
+best_for:
+  - occasional decks from a prompt
+  - students and solo users needing a quick structured first draft
+  - teams on Public Beta wanting analytics at low cost
+  - orgs that need SOC 2 Type II compliance on a presentation tool
+not_best_for:
+  - heavy prompt-to-deck users (Gamma has more credits and features)
+  - prompt-to-deck plus deep collaboration (Pitch wins)
+  - design-first consistent formatting (Beautiful.ai wins)
+  - users who prefer monthly billing (annual-only plans)
 quick_answer: >-
-  Presentations.AI is a prompt-to-deck generator founded in 2022 that produces a complete, designed slide deck from a topic or pasted outline in seconds with minimal configuration. Its differentiator is raw speed and simplicity: fewer inputs, faster output, and a lower friction workflow than any comparable tool. The free tier covers 10 presentations per month, and Pro costs $25/month; best for occasional users who need a quick structured first draft, not regular presenters who will quickly outgrow its shallow feature set compared to Gamma.
+  Presentations.AI is a prompt-to-deck generator with a unified deck format and annual-only pricing. Starter is free with limited credits. Pro runs $198/yr. Pick it for occasional decks and SOC 2 security. Skip it for monthly billing or heavy generation volume, where Gamma wins.
 ---
 
 # Presentations.AI
 
-Presentations.AI is a prompt-to-deck presentation generator founded in 2022. It accepts a topic, an outline, or a brief description and produces a complete, designed slide deck in seconds with minimal user configuration required, and is primarily used by individuals who need a quick, usable first draft without investing time in a design tool. Its key differentiator is the speed and simplicity of the prompt-to-deck workflow: fewer inputs, faster output, lower friction than any other tool in the category. As of April 2026, Presentations.AI offers 10 free presentations per month on its free tier with Pro at $25 per month ([Presentations.AI Pricing](https://www.presentations.ai/pricing)).
+A prompt-to-deck generator built around a unified deck format. Users paste a topic or outline and receive a complete designed slide deck in seconds.
 
-Presentations.AI remains the most narrowly focused tool in this category. Where Gamma, Beautiful.ai, and Plus AI offer layered feature sets beyond basic generation, Presentations.AI is optimized for a single workflow: paste in a topic, get a deck. This simplicity is its appeal and its limitation. Users who need maximum speed for first drafts, rough internal drafts, or presentations where a polished first-pass is sufficient will find it faster to use than more feature-rich alternatives. The tool now integrates GPT-5.4 for text generation and Midjourney v7 for images, matching competitor quality levels ([Presentations.AI](https://www.presentations.ai)).
+Pricing is annual-only: Starter free, Public Beta $40/year, Pro $198/year, Enterprise custom. Core slide generation and PowerPoint export use 5 credits per slide.
 
-The tool was founded in 2022 and has operated in a market that became significantly more competitive as Google with Gemini 3.1 Pro, Canva, and Microsoft expanded their AI generation capabilities. Its moat is shallow: the prompt-to-deck workflow it specializes in is now offered by most major competitors, and without distinctive features in editing, collaboration, or format innovation, the competitive pressure from better-funded tools is the main risk to its longevity.
+## System Verdict
 
+> **Pick Presentations.AI if you want a low-friction prompt-to-deck tool with enterprise security on a small annual bill.** SOC 2 Type II certification and the unified deck format are the differentiators. Starter is free; Public Beta at $40/year is the cheapest paid tier in the category.
+>
+> **Skip it if you generate decks regularly.** [Gamma](/tools/gamma/) ships more generous credits, faster iteration, and deeper editing for a similar effective price. If you want team collaboration, [Pitch](/tools/pitch/) is stronger. If you want layout discipline, [Beautiful.ai](/tools/beautiful-ai/) wins.
+>
+> **Who pays which tier:** Starter free for trial users, Public Beta $40/year for small teams wanting early features and analytics, Pro $198/year for individuals who need advanced features, Enterprise custom for orgs requiring unlimited credits and SOC 2.
 
-## Editor's Take
+## Key Facts
 
-I tested Presentations.AI's latest version this week, prompted it with a 200-word sales pitch outline, and got a 12-slide deck in 14 seconds. Clean themes, GPT-5.4 text that's 80% usable out of the gate, Midjourney v7 images that don't look phoned in. Free tier still caps at 10 decks a month, Pro's $25 for unlimited. It's stupidly fast for one-offs.
+| | |
+|---|---|
+| **Company** | Presentations.AI (founded 2022) |
+| **Core workflow** | Single-prompt generation to a full designed deck |
+| **Format** | Unified deck format across slide, scroll, and embedded views |
+| **Credit model** | 5 credits per slide for generation and PowerPoint export |
+| **Starter (free)** | $0 · unlimited users · limited AI credits |
+| **Public Beta** | $40/year · up to 10 members · pro templates + analytics |
+| **Pro** | $198/year · single user · advanced features |
+| **Enterprise** | Custom · unlimited users · unlimited credits · SOC 2 Type II |
+| **Security** | SOC 2 Type II · encryption in transit and at rest |
+| **Billing** | Annual-only (no monthly plans) |
 
-Compared to Gamma, the closest rival, this skips the bloat. Gamma lets you remix slides deeply and collaborate live; Presentations.AI barely edits, you regenerate or tweak text manually. If you crank out weekly pitches and hate PowerPoint fiddling, use this. Skip it if you're presenting to execs who demand pixel-perfect control or team input, Gamma's $10 cheaper per seat anyway and won't leave you stuck.
+Every data point above was verified against vendor documentation on 2026-04-17. See Sources.
 
-I'm biased toward minimalism after years in CLI land, but even I hit limits fast. Fine for quarterly board drafts, not daily drivers.
+## What it actually is
 
-## What It Does
+A narrow prompt-to-deck tool. Users pick a theme, enter a prompt or outline, and the system generates a structured deck with title, agenda, content slides, and closing. Text comes from integrated LLMs; images come from bundled generation models.
 
-Presentations.AI generates a complete slide deck from a text prompt, topic description, or pasted outline ([Presentations.AI](https://www.presentations.ai)). The AI produces a structured deck with a title slide, agenda, content slides, and a closing slide, applying a chosen visual theme and generating body text and suggested images for each slide using GPT-5.4 and Midjourney v7. Users can regenerate the entire deck, change themes, swap individual slides, and edit text directly.
+The unified deck format is the vendor's term for a single artifact that renders as slides, a scroll view, or an embed without separate exports. Output ships as PPTX, PDF, or a shareable URL.
 
-Presentations export to PPTX and PDF and can be shared as live links. The interface is intentionally minimal: fewer options than Gamma or Beautiful.ai, optimized for users who want output with minimal decision-making. Recent updates added basic AI chat for outline refinement and image replacement powered by Flux 2 ([TechCrunch Review](https://techcrunch.com/2026/03/15/presentations-ai-updates-gpt5-midjourney/)).
+The moat is thin. Prompt-to-deck is now a commodity feature; [Gamma](/tools/gamma/), [Canva](/tools/canva/), Google Slides, and Microsoft 365 Copilot all ship similar workflows. Presentations.AI competes on simplicity, annual pricing, and SOC 2 compliance rather than feature depth.
 
-## Who It's For
+## When to pick Presentations.AI
 
-- Professionals who need quick first drafts for internal meetings, proposals, or presentations
-- Students who need a starting point for school presentations
-- Small business owners who need occasional slide decks without investing in a full presentation tool subscription
-- Anyone with blank-slide syndrome who needs a structured starting point to edit from
-- Speed-first users who prioritize getting something usable in 30 seconds over maximum output quality
-- Teams that need disposable draft decks for brainstorming sessions
+- **You want the cheapest paid prompt-to-deck tier with analytics.** Public Beta at $40/year undercuts most monthly plans.
+- **Your org needs SOC 2 Type II on the presentation stack.** Enterprise tier covers compliance that smaller tools do not.
+- **You prefer annual billing.** Flat yearly cost, no month-to-month churn.
+- **You need a quick structured first draft a few times per year.** Starter free tier covers the use case.
+
+## When to pick something else
+
+- **Heavy prompt-to-deck volume:** [Gamma](/tools/gamma/) at $10/mo ships unlimited credits on standard models and more editing depth.
+- **Team collaboration and unlimited decks on free:** [Pitch](/tools/pitch/).
+- **Layout discipline and PPTX round-trip:** [Beautiful.ai](/tools/beautiful-ai/).
+- **Broader design-tool needs beyond decks:** [Canva](/tools/canva/) covers social, print, and video.
+- **Design-system integration with a product team:** [Figma](/tools/figma/) Slides.
 
 ## Pricing
 
-| Plan | Price | Key Limits |
-|------|-------|-----------|
-| Free | $0/month | 10 presentations/month, basic themes, PDF export, watermarked PPTX |
-| Pro | $25/month | Unlimited AI presentations, all themes, PPTX export without watermark, priority generation, custom fonts |
+Subscription pricing via [presentations.ai/pricing](https://www.presentations.ai/pricing). Annual-only billing, with regional purchasing-power parity adjustments on some plans.
 
-> Pricing verified at [presentations.ai/pricing](https://www.presentations.ai/pricing) as of 2026-04-15.
+| Plan | Annual Price | Effective/mo | Users | Credits | Who's it for |
+|------|--------------|--------------|-------|---------|--------------|
+| Starter | $0 | $0 | Unlimited | Limited | Trial users and occasional decks |
+| Public Beta | $40/year | ~$3.33 | Up to 10 | Additional credits | **Small teams wanting analytics cheap** |
+| Pro | $198/year | ~$16.50 | 1 | Additional credits | Solo users needing pro templates |
+| Enterprise | Custom | Custom | Unlimited | Unlimited | SOC 2, admin controls, dedicated support |
 
-## Key Features
+*Prices verified 2026-04-17 via [Presentations.AI pricing](https://www.presentations.ai/pricing). Public Beta and Pro prices listed above reflect current discount from regular $120 and $600 annual rates. Core generation and PowerPoint export run 5 credits per slide.*
 
-- Single-prompt generation: Enter a topic or paste an outline and receive a complete designed deck in seconds
-- Theme selection: Choose from 50+ visual themes before generating; the AI applies the theme across all slides
-- Content and image generation: Generates slide text via GPT-5.4 and sources/generates relevant images via Midjourney v7 for each slide automatically
-- Slide-level editing: Edit text, swap images, add or delete slides, and rearrange after generation
-- PPTX export: Download as a standard PowerPoint file for further editing in desktop tools
-- PDF export: Export as PDF for static sharing
-- Live link sharing: Share presentations as URLs for browser-based viewing
-- AI outline chat: Basic conversational refinement of generated outlines before deck creation
+## Against the alternatives
 
-## Limitations
+| | Presentations.AI | Gamma | Pitch |
+|---|---|---|---|
+| **Prompt-to-deck speed** | Fast | **Fastest** | Generator AI assist |
+| **Free tier generosity** | Limited credits | 400 one-time credits | **Unlimited decks, 5 members** |
+| **Collaboration** | Basic | Paid tiers | **Strongest in category** |
+| **Editing depth** | Shallow | Mid | Mid |
+| **PPTX export** | Watermarked on free | Lossy | Standard |
+| **Enterprise security** | **SOC 2 Type II** | Paid tiers | Enterprise tier |
+| **Billing** | Annual-only | Monthly or annual | Monthly or annual |
+| **Best viewed as** | Low-friction annual tier | Prompt-to-deck default | Team-deck collaboration default |
 
-- Shallow feature set: Lacks collaboration, brand controls, analytics, and advanced editing compared to Gamma or Plus AI
-- Free tier limits: 10 presentations/month is improved but still restrictive vs Gamma's 800 monthly AI credits
-- Low moat: Core prompt-to-deck feature offered by all major competitors using similar models (GPT-5.4, Claude Opus 4.6)
-- No collaboration features: Single-user tool with no real-time co-editing, comment threads, or team workspace
-- Limited template depth: Theme library smaller than Beautiful.ai's 100+ smart templates
+## Failure modes
 
-## Bottom Line
+- **Shallow feature set.** Editing, collaboration, and template depth trail [Gamma](/tools/gamma/) and [Pitch](/tools/pitch/).
+- **Annual-only billing.** No monthly option means trial-to-paid conversion requires a full yearly commitment.
+- **Starter credits run out fast.** Heavy users hit the cap inside a single session.
+- **Watermarked PPTX export on free.** Removing the watermark requires a paid tier.
+- **Low moat.** Prompt-to-deck is a commodity feature; Google, Microsoft, and Canva all ship equivalent workflows at no extra cost to existing subscribers.
+- **5 credits per slide adds up.** A 12-slide deck costs 60 credits before edits or regeneration.
 
-Presentations.AI delivers fast, low-friction prompt-to-deck generation powered by GPT-5.4 and Midjourney v7, but its narrow feature set and lack of collaboration make it difficult to recommend over Gamma for most users ([Presentations.AI](https://www.presentations.ai)). Gamma offers comparable generation at $20/month with a more generous free tier and richer editing/collaboration. Presentations.AI suits occasional users needing quick decks a few times monthly without subscription commitment.
+## Methodology
 
-## Best Alternatives
-
-| Tool | Price | Key Difference |
-|------|-------|----------------|
-| Gamma | $20/mo Plus | Better generation quality, 800 monthly credits free tier, collaboration features |
-| Beautiful.ai | $15/mo Pro | Smart auto-reflow layouts, 100+ templates, brand kits |
-| Plus AI | $20/mo Pro | Native Google Slides/PowerPoint integration, enterprise security |
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [Presentations.AI pricing](https://www.presentations.ai/pricing).
 
 ## FAQ
 
-**How many free presentations does Presentations.AI offer?**
-The free tier includes 10 presentations per month. Pro at $25/month required for unlimited generation. This is less generous than Gamma's 800 AI credits per month free ([Presentations.AI Pricing](https://www.presentations.ai/pricing)).
+**Is Presentations.AI free?**
+Yes. The Starter plan is free with limited AI credits and unlimited users. Paid tiers start at $40/year for Public Beta.
 
-**Is the output from Presentations.AI good enough for professional use?**
-For internal meetings and educational use, yes. For client-facing presentations, output typically needs editing. GPT-5.4 text and Midjourney v7 images produce solid first drafts ([TechCrunch](https://techcrunch.com/2026/03/15/presentations-ai-updates-gpt5-midjourney/)).
+**What is the unified deck format?**
+The vendor's term for a single artifact that renders as 16:9 slides, a scroll view, or an embed without separate export steps. Similar in spirit to [Gamma](/tools/gamma/)'s card format.
 
-**How does Presentations.AI compare to Gamma?**
-Gamma offers better value: more free credits (800 vs 10 presentations), collaboration, card formats, and similar GPT-5.4 quality at $20/month. Presentations.AI wins on interface simplicity for absolute beginners.
+**How many credits does a deck cost?**
+Core slide generation and PowerPoint export run 5 credits per slide. A 12-slide deck costs 60 credits before any regeneration or edits.
 
+**Does Presentations.AI support monthly billing?**
+No. All tiers are billed annually. This is a meaningful friction point compared to [Gamma](/tools/gamma/) and [Pitch](/tools/pitch/), which ship both.
 
+**Is the Enterprise tier SOC 2 certified?**
+Yes. Enterprise ships SOC 2 Type II compliance with data encrypted in transit and at rest. This is unusual for a small prompt-to-deck vendor.
 
+**How does it compare to Gamma?**
+[Gamma](/tools/gamma/) ships more credits, deeper editing, monthly billing, and a browser-native URL output. Presentations.AI ships lower annual pricing on Public Beta and SOC 2 on Enterprise. Heavy users favor Gamma; annual-billing and compliance-driven buyers favor Presentations.AI.
 
-## Review History
-
-- **2026-04-09:** Pricing verified. Added note on the updated free tier limit.
-- **2026-03-25:** Score reviewed; no change, but rationale updated.
-- **2026-02-16:** Noted the new model availability across tiers.
-- **2025-10-16:** Pricing verified. Minor copy edits.
-- **2024-01-15:** Initial review published after hands-on testing.
-
-## Related Comparisons
-
-- [Beautiful.ai vs Presentations.AI](../comparisons/beautiful-ai-vs-presentations-ai.md)
-- [Decktopus AI vs Presentations.AI](../comparisons/decktopus-vs-presentations-ai.md)
-- [Gamma vs Presentations.AI](../comparisons/gamma-vs-presentations-ai.md)
-- [Pitch vs Presentations.AI](../comparisons/pitch-vs-presentations-ai.md)
-- [Presentations.AI vs Tome](../comparisons/presentations-ai-vs-tome.md)
 ## Sources
 
-- [Presentations.AI Official Site](https://www.presentations.ai): Product page and pricing
-- [TechCrunch: Presentations.AI 2026 Updates](https://techcrunch.com/2026/03/15/presentations-ai-updates-gpt5-midjourney/): Model integrations and feature review
+- [Presentations.AI pricing](https://www.presentations.ai/pricing): Starter, Public Beta, Pro, and Enterprise tiers
+- [Presentations.AI](https://www.presentations.ai): Product features and unified deck format description
 
 ## Related
 
-- **Category:** [AI Presentation Tools](../categories/ai-presentation.md)
+- **Category:** [AI Presentation Tools](/categories/ai-presentation/)
+- **Comparisons:** [Gamma vs Presentations.AI](/comparisons/gamma-vs-presentations-ai/) · [Beautiful.ai vs Presentations.AI](/comparisons/beautiful-ai-vs-presentations-ai/) · [Pitch vs Presentations.AI](/comparisons/pitch-vs-presentations-ai/) · [Presentations.AI vs Tome](/comparisons/presentations-ai-vs-tome/) · [Decktopus AI vs Presentations.AI](/comparisons/decktopus-vs-presentations-ai/)

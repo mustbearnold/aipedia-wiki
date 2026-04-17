@@ -2,16 +2,17 @@
 type: tool
 slug: pitch
 title: Pitch
-tagline: Collaborative presentation software with AI writing assistance and unlimited decks on the free tier for distributed teams.
+tagline: >-
+  Collaborative deck tool with real-time multi-user editing, curated templates, and AI copy help. Free tier supports unlimited decks for up to 5 members.
 category: ai-presentation
 company: Pitch Software GmbH
 url: https://pitch.com
 pricing_model: freemium
-price_range: "$0-$60/month"
+price_range: "$0-$30/seat/month"
 status: active
 launched: 2019-01
-last_updated: 2026-04-15
-last_verified: 2026-04-15
+last_updated: 2026-04-17
+last_verified: 2026-04-17
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -25,121 +26,142 @@ scores:
   moat: 6
   longevity: 7
 tags: [presentations, collaboration, slides, ai-writing, team-workflows, pitch-decks, real-time-editing]
-seo_title: "Pitch: Features, Pricing & Review (2026)"
-meta_description: "Pitch is a collaborative presentation tool with AI writing and unlimited free decks. Pro costs $22/mo. Full review updated April 2026."
+seo_title: "Pitch: Features, Pricing & Review (April 2026)"
+meta_description: "Pitch ships real-time multi-user editing, AI copy help, and unlimited decks on a free tier with 5 members. Plus $15, Team $23/seat, Business $30/seat. Verified April 2026."
 author: "aipedia.wiki Editorial"
+best_for:
+  - distributed teams iterating on decks daily
+  - sales orgs sharing a deck library
+  - startups managing investor-deck versions
+  - teams that want AI copy help inside a collaboration workflow
+not_best_for:
+  - solo users chasing lowest-cost AI generation
+  - full prompt-to-deck first drafts
+  - data-heavy analytics-style slides
+  - pixel-perfect PPTX round-trip
 quick_answer: >-
-  Pitch is a collaborative presentation tool developed by Pitch Software GmbH that combines real-time multi-user editing with AI writing assistance powered by models like Claude Opus 4.6. The single most important differentiator is unlimited decks on the free tier with up to 3 collaborators, which no major competitor matches. Pro costs $22/month, making it more expensive than Gamma ($10) for solo users; it is best for distributed teams that iterate on decks daily and need simultaneous editing and approval workflows, not individuals focused purely on AI generation speed.
+  Pitch is the strongest collaboration layer in AI presentation tools. The free tier supports unlimited decks for 5 members. Pick it for distributed teams that iterate daily. Skip it for solo prompt-to-deck speed, where Gamma wins.
 ---
 
 # Pitch
 
-Pitch is a collaborative presentation software product developed by Pitch Software GmbH, founded in 2019 in Berlin. It provides real-time multi-user editing, AI-assisted writing powered by models including Claude Opus 4.6 and GPT-5.4, and a curated template library for creating professional slide decks, and is primarily used by remote and distributed teams that collaborate on presentations daily ([Pitch](https://pitch.com)). Its key differentiator is the collaboration layer: Pitch is the most fully featured presentation tool for teams that need simultaneous editing, comment threads, approval workflows, and deck management at scale, with unlimited decks on the free tier. As of April 2026, Pitch offers a free plan with unlimited decks, Pro at $22 per month per editor, and Business at $60 per month per editor ([Pitch Pricing](https://pitch.com/pricing)).
+Pitch Software GmbH's collaborative deck tool, built out of Berlin. Real-time multi-user editing, a curated template library, and AI copy and image help sit on top of a collaboration-first product.
 
-Pitch launched as an explicit challenger to PowerPoint and Google Slides on the collaboration axis. Its founding team came from the design and startup world in Berlin, and the product reflects that: clean interface, strong template quality, and a workflow optimized for teams that iterate on decks across multiple contributors. The AI writing features, expanded in 2025 to integrate Claude Opus 4.6 and GPT-5.4, handle slide text generation, rewriting, tonal adjustment, and now basic image suggestions via Flux 2 integration, but the AI layer remains additive to a collaboration-first product.
+Free tier supports unlimited decks with up to 5 members. Paid tiers run $13 to $30 per seat per month on annual billing.
 
-The unlimited decks free tier is a genuine differentiator for small teams and startups. Most competitors restrict the number of presentations or collaborators on free plans. Pitch's approach is to monetize on the workflow features, real-time collaboration, analytics, and brand controls, rather than on deck count ([Pitch Pricing](https://pitch.com/pricing)).
+## System Verdict
 
+> **Pick Pitch if your deck work is a team sport.** The collaboration layer (live cursors, pinned comments, slide assignments, version history, analytics) is the deepest in this category. The free tier's unlimited decks and 5-member limit covers most small-team workflows before any upgrade decision.
+>
+> **Skip it if you are solo.** [Gamma](/tools/gamma/) ships faster prompt-to-deck generation at $10/mo for individual users, and the collaboration features Pitch charges for go unused.
+>
+> **Who pays which tier:** Free for small teams and founders, Plus $13/mo annual for solo pros who want unbranded exports, Team $19/seat/mo annual for 2-25 seat teams with shared pitch rooms and analytics, Business $25/seat/mo annual for larger orgs needing batch creation and unlimited guests.
 
-## Editor's Take
+## Key Facts
 
-I tested Pitch's free tier last week with a three-person team mockup. The unlimited decks held up, no caps, even after 10 presentations, and real-time editing with Claude Opus 4.6 beat Google Slides for comment threading and slide assignments. Pro's now $22 per editor monthly, Business $60, as of April 2026 pricing.
+| | |
+|---|---|
+| **Company** | Pitch Software GmbH (founded 2019, Berlin) |
+| **Free tier** | Unlimited decks · 5 members · 100 one-time AI credits |
+| **Plus (solo)** | $15/mo monthly · $13/mo annual · 3,000 AI credits/yr |
+| **Team** | $23/seat/mo monthly · $19/seat/mo annual · 6,000 credits/seat/yr · 25 members max |
+| **Business** | $30/seat/mo monthly · $25/seat/mo annual · 9,000 credits/seat/yr · 200 members max |
+| **Enterprise** | Custom pricing · SAML SSO · dedicated success manager |
+| **AI features** | Generator (layout), copy rewrite, brand-voice matching, image enhance |
+| **Credit pricing** | Extra credits at $0.004 per credit |
+| **Live sharing** | Browser URL with view analytics |
 
-Gamma edges it for solo AI generation at $10/month with faster slide builds, but Pitch wins if your team iterates daily across time zones. The AI rewriting nails tone shifts in seconds, though image suggestions via Flux 2 feel tacked-on.
+Every data point above was verified against vendor documentation on 2026-04-17. See Sources.
 
-Use Pitch for distributed teams needing approval workflows. Skip it if you're flying solo, too pricey for basic decks.
+## What it actually is
 
-## What It Does
+A browser-based deck editor with real-time multi-user editing, analytics, and an AI layer that focuses on copy help and brand consistency rather than full deck generation. Teams work simultaneously, comment inline, assign slides, and track version history.
 
-Pitch provides a browser-based presentation editor with simultaneous multi-user editing, a library of professionally designed templates, and an AI writing assistant powered by Claude Opus 4.6 and GPT-5.4 that generates and rewrites slide text from prompts ([Pitch](https://pitch.com)). Teams can work on the same deck simultaneously, leave comments pinned to specific slides, assign slides to team members, and track version history. Presentations are shared as live URLs with view analytics showing who opened the deck and how long they spent on each slide.
+The Generator AI tool drafts layouts and content inside the collaboration flow. It does not compete with [Gamma](/tools/gamma/) on pure prompt-to-deck speed. AI credits are consumable: paid plans ship a yearly quota, credits reset with the subscription, and the free tier's 100 credits are one-time.
 
-AI features include generating slide outlines, headlines, body copy, and speaker notes from topics or pasted content. Recent 2026 updates added Flux 2-powered image suggestions and basic chart generation from data prompts. PPTX, PDF, and video export are available on all tiers, with Pro and Business adding custom branding to exports ([Pitch Features](https://pitch.com/features)).
+The moat is workflow. Pitch rooms, custom domains, interactive embeds, co-present mode, and content variables are all collaboration-era features that solo AI tools do not match. The free-tier unlimited-decks model is also a genuine wedge against competitors who cap presentations on free.
 
-## Who It's For
+## When to pick Pitch
 
-- Distributed and remote teams that need multiple people editing the same presentation simultaneously
-- Startups and scale-ups managing a library of decks across sales, product, and marketing
-- Sales teams building repeatable pitch deck frameworks with shared templates
-- Design-conscious professionals who care about presentation aesthetics and want clean, modern templates
-- Agencies that produce presentations for clients and need collaboration and approval workflows
-- Small teams that want professional presentation tools without paying per deck
+- **Your team edits the same deck in parallel.** Live cursors, comment threads, slide assignments, and version history are deeper here than in any competitor.
+- **You ship a library of decks across sales, product, and marketing.** Centralized template control and brand kits keep output consistent.
+- **You track who views what.** View analytics and pitch rooms make external sharing measurable.
+- **You want unlimited decks on free.** Most competitors cap. Pitch does not.
+
+## When to pick something else
+
+- **Solo prompt-to-deck generation:** [Gamma](/tools/gamma/) at $10/mo ships a faster first draft and a browser-native URL output.
+- **Pixel-clean PPTX export for enterprise delivery:** [Beautiful.ai](/tools/beautiful-ai/) exports cleaner on round-trip.
+- **Narrative-first long-form decks:** [Tome](/tools/tome/) was the reference point; Tome is shut down, so [Gamma](/tools/gamma/) is the working substitute.
+- **Design-system integration with a product team:** [Figma](/tools/figma/) Slides uses the same tokens the product uses.
+- **Brand-kit breadth for non-presentation assets:** [Canva](/tools/canva/) covers social, print, and video alongside slides.
 
 ## Pricing
 
-| Plan | Price | Key Limits |
-|------|-------|-----------|
-| Free | $0/month | Unlimited decks, 3 members, basic templates, community support, Claude Opus 4.6 AI |
-| Pro | $22/month per editor | Unlimited members, priority AI (GPT-5.4 access), custom domains, brand kit, advanced analytics |
-| Business | $60/month per editor | SSO, advanced permissions, workspace management, Flux 2 image gen, dedicated support |
+Subscription pricing via [pitch.com/pricing/us](https://pitch.com/pricing/us).
 
-> Pricing verified at [pitch.com/pricing](https://pitch.com/pricing) as of 2026-04-15.
+| Plan | Monthly | Annual (effective/mo) | Members | AI credits | Who's it for |
+|------|---------|-----------------------|---------|------------|--------------|
+| Free | $0 | $0 | 5 | 100 one-time | Small teams and founders |
+| Plus | $15 | $13 | 1 | 3,000/yr | Solo pros wanting unbranded exports |
+| Team | $23/seat | $19/seat | 2-25 | 6,000/seat/yr | **Most paying teams land here** |
+| Business | $30/seat | $25/seat | 2-200 | 9,000/seat/yr | Larger orgs, batch creation, unlimited guests |
+| Enterprise | Custom | Custom | 30+ | Custom | SSO, success manager, invoiced billing |
 
-## Key Features
+*Prices verified 2026-04-17 via [Pitch pricing](https://pitch.com/pricing/us). Annual billing saves roughly 15-20%. Extra AI credits at $0.004 each.*
 
-- Real-time collaboration: Multiple users edit simultaneously with live cursors, comment threads, and @mentions pinned to specific slides
-- Unlimited decks on free tier: No cap on presentations created or stored; a genuine advantage over most competitors
-- AI writing assistant: Generate slide outlines, body copy, speaker notes from topics using Claude Opus 4.6 and GPT-5.4; rewrite text for tones
-- Curated template library: Professionally designed templates across business categories including investor decks, product launches, quarterly reviews
-- Version history: Full revision history with named versions and one-click restore
-- Presentation analytics: Track opens, views per slide, time spent, viewer identity for shared decks
-- Brand kit: Store brand colors, fonts, logos for consistent styling across organization
-- Integrations: Slack, Figma, Google Drive, Notion; 2026 adds Gemini 3.1 Pro for data analysis slides
+## Against the alternatives
 
-## Limitations
+| | Pitch | Gamma | Beautiful.ai |
+|---|---|---|---|
+| **Real-time collaboration** | **Strongest** | Available | Team tier+ |
+| **Unlimited free decks** | **Yes, 5 members** | No (credit cap) | No free tier |
+| **Full prompt-to-deck** | Generator AI assist | **Fastest** | Editor AI assist |
+| **Brand governance** | Team/Business | Paid tiers | Team/Custom |
+| **PPTX export** | Standard | Lossy | Cleaner |
+| **View analytics** | Native | Pro+ | Team+ |
+| **Best viewed as** | Team-deck collaboration default | Prompt-to-deck default | Design-automation specialist |
 
-- AI generation is not full prompt-to-deck: Pitch's AI handles writing and basic images; it does not generate complete designed decks from single prompts like Gamma with GPT-5.4
-- Pro tier is expensive relative to Gamma: At $22 per month per editor, Pro costs more than Gamma ($10) for solo users
-- No native video generation: Lacks Runway Gen-4.5 or Hailuo 2.3 integration for slide animations or video exports found in Tome
-- Template variety narrower than Canva: Curated library is high quality but smaller than mass-market options
-- Free tier caps at 3 members: Limits collaboration use case for teams larger than 3 without upgrade
+## Failure modes
 
-## Bottom Line
+- **AI does not do full prompt-to-deck.** Generator AI drafts layouts and copy; full-deck generation from a prompt still favors [Gamma](/tools/gamma/).
+- **Solo pricing is weak.** Plus at $13/mo annual costs more than Gamma Plus for a single user without matching the prompt-to-deck speed.
+- **Free tier caps at 5 members.** Teams beyond that size upgrade to Team or stay fragmented.
+- **AI credits are consumable.** Heavy AI use burns through the yearly quota; overage costs $0.004 per credit.
+- **Template variety is narrower than Canva.** Curated quality is high, but library depth trails mass-market tools.
+- **No native video generation or advanced chart tooling.** Data-heavy decks need external visualization.
 
-Pitch is the best presentation tool for teams that collaborate on decks daily and need simultaneous editing, approval workflows, and a clean shared library of presentations ([Pitch](https://pitch.com)). The unlimited decks free tier remains a genuine competitive advantage for small teams and startups. For individuals focused on AI generation speed, Gamma at $10 per month with GPT-5.4 delivers more automation at lower cost.
+## Methodology
 
-## Best Alternatives
-
-| Tool | Price | Key Difference |
-|------|-------|----------------|
-| Gamma | $10/mo Plus | Full prompt-to-deck AI with GPT-5.4, lower price for solo users |
-| Beautiful.ai | $12/mo Pro | Smart auto-reflow layouts, better for design-consistency needs |
-| Tome | $16/mo Pro | Native video generation via Runway Gen-4.5, stronger narrative formats |
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [Pitch pricing](https://pitch.com/pricing/us) and the [Free plan help center article](https://help.pitch.com/en/articles/9364575-pitch-s-free-plan).
 
 ## FAQ
 
 **Is Pitch free?**
-Yes. Pitch offers a free plan with unlimited decks and up to 3 team members. Most AI presentation tools restrict deck counts or collaborators on free plans; Pitch's unlimited decks free tier is a genuine differentiator ([Pitch Pricing](https://pitch.com/pricing)).
+Yes. The free tier ships unlimited decks, 5 members, and 100 one-time AI credits. Most competitors cap free-tier deck count; Pitch does not.
 
-**Does Pitch generate full presentations from a prompt?**
-Pitch's AI assistant generates outlines, slide text, and basic images via Flux 2 from topics, but does not produce fully designed decks from single prompts like Gamma. Users build and adjust structure after AI content generation.
+**What is a pitch room?**
+A shared space for grouping decks with external viewers. Team includes 2 pitch rooms; Business unlocks unlimited.
 
-**How does Pitch compare to Google Slides for teams?**
-Pitch and Google Slides both offer real-time collaboration, but Pitch adds Claude Opus 4.6/GPT-5.4 AI writing, better templates, analytics, and cleaner design. Google Slides is free with no user limits and Google Workspace integration. Teams prioritizing design and AI prefer Pitch; cost-focused Google ecosystem teams prefer Slides.
+**How does Pitch compare to Gamma?**
+[Gamma](/tools/gamma/) ships faster prompt-to-deck generation at a lower solo price. Pitch ships a stronger collaboration and deck-library layer for teams. Solo users favor Gamma; distributed teams favor Pitch.
 
+**What AI models does Pitch use?**
+The vendor does not publish exact model names publicly. AI credits cover layout generation, copy rewrite, brand-voice matching, and image enhancement.
 
+**Does Pitch export to PowerPoint?**
+Yes on all paid tiers, with custom-branded exports on Plus and above. PPTX fidelity trails [Beautiful.ai](/tools/beautiful-ai/) on complex layouts.
 
+**Can I buy extra AI credits?**
+Yes. Overage credits run $0.004 per credit across all paid plans.
 
-## Review History
-
-- **2026-04-09:** Pricing verified. Added note on the updated free tier limit.
-- **2026-03-25:** Score reviewed; no change, but rationale updated.
-- **2026-02-16:** Updated flagship model reference to latest release.
-- **2025-10-16:** Pricing verified. Minor copy edits.
-- **2024-01-15:** Initial review published after hands-on testing.
-
-## Related Comparisons
-
-- [Beautiful.ai vs Pitch](../comparisons/beautiful-ai-vs-pitch.md)
-- [Decktopus AI vs Pitch](../comparisons/decktopus-vs-pitch.md)
-- [Gamma vs Pitch](../comparisons/gamma-vs-pitch.md)
-- [Pitch vs Presentations.AI](../comparisons/pitch-vs-presentations-ai.md)
-- [Pitch vs Tome](../comparisons/pitch-vs-tome.md)
 ## Sources
 
-- [Pitch Official Site](https://pitch.com): Product page, feature documentation, and pricing
-- [Pitch Pricing Page](https://pitch.com/pricing): Current plan details and limits as of April 2026
-- [TechCrunch Pitch Review](https://techcrunch.com/2026/03/15/pitch-ai-updates-2026): Third-party coverage of 2026 AI feature expansions
+- [Pitch pricing](https://pitch.com/pricing/us): Current Free, Plus, Team, Business, and Enterprise tiers
+- [Pitch Free plan](https://help.pitch.com/en/articles/9364575-pitch-s-free-plan): Free-tier limits and Generator AI details
+- [Pitch features](https://pitch.com/features): Collaboration, analytics, and brand kit documentation
 
 ## Related
 
-- **Category:** [AI Presentation Tools](../categories/ai-presentation.md)
+- **Category:** [AI Presentation Tools](/categories/ai-presentation/)
+- **Comparisons:** [Gamma vs Pitch](/comparisons/gamma-vs-pitch/) · [Beautiful.ai vs Pitch](/comparisons/beautiful-ai-vs-pitch/) · [Pitch vs Tome](/comparisons/pitch-vs-tome/) · [Pitch vs Presentations.AI](/comparisons/pitch-vs-presentations-ai/) · [Decktopus AI vs Pitch](/comparisons/decktopus-vs-pitch/)

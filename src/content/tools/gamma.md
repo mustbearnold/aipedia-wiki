@@ -3,17 +3,16 @@ type: tool
 slug: gamma
 title: Gamma
 tagline: >-
-  AI-first presentation and document builder that generates polished decks, web
-  pages, and documents from a prompt or outline.
+  AI-first deck, doc, and web-page generator built on a card format. Prompt in, polished output in seconds.
 category: ai-presentation
 company: Gamma Tech
 url: 'https://gamma.app'
 pricing_model: freemium
-price_range: $0-$30/month
+price_range: $0-$100/month
 status: active
 launched: 2020-01
-last_updated: 2026-04-15T12:20:38.000Z
-last_verified: '2026-04-15'
+last_updated: 2026-04-17
+last_verified: 2026-04-17
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -27,149 +26,140 @@ scores:
   moat: 6
   longevity: 8
 tags: [presentations, slides, ai-generation, documents, web-pages, pitch-decks, prompt-to-deck]
-seo_title: 'Gamma App: Features, Pricing & Review (2026)'
+seo_title: 'Gamma: Features, Pricing & Review (April 2026)'
 meta_description: >-
-  Gamma generates AI presentations, documents, and web pages from a prompt. Free
-  tier includes 400 AI credits. Plus costs $10/mo, Pro $20/mo, Team $30/mo. Full
-  review updated April 2026.
+  Gamma generates decks, docs, and web pages from a prompt. Free tier includes 400 one-time AI credits. Plus $10, Pro $20, Ultra $100/month as of April 2026.
 author: aipedia.wiki Editorial
-quick_answer: >-
-  Gamma is an AI-first presentation and document builder developed by Gamma Tech (founded 2020) that generates complete, styled decks, documents, and shareable web pages from a single text prompt or outline. Its card-based format functions simultaneously as a slide deck, a scrollable document, and a shareable browser URL without any download required, making it more versatile than traditional slide tools for client-facing and async sharing workflows. The free tier includes 400 one-time AI credits; Plus costs $10/month with 400 credits per month; Pro costs $20/month with unlimited credits; Team costs $30/month with team collaboration features. Best for professionals who need polished presentations quickly without design skills, not for enterprise workflows requiring pixel-accurate PowerPoint round-trip fidelity, where PPTX export quality from Gamma still needs cleanup in PowerPoint. The free-tier 400 credits are one-time rather than monthly, so heavy users hit the limit quickly.
 best_for:
-  - Founders building pitch decks
-  - consultants creating client proposals
-  - educators producing course materials
-  - marketing teams building campaign presentations
-  - students producing academic work
-  - and anyone who needs a polished presentation in minutes without design skills.
+  - founder pitch decks
+  - consultant client proposals
+  - marketing campaign decks
+  - shareable web pages from a prompt
+  - one-tool output across slide, doc, and URL
 not_best_for:
-  - Enterprise organizations requiring pixel-perfect PowerPoint export fidelity
-  - teams needing advanced data visualization and charting
-  - workflows requiring offline presentation capability
-  - or users who need thousands of template variations.
-
+  - pixel-accurate PowerPoint round-trip fidelity
+  - data-heavy chart-first decks
+  - offline presentation workflows
+  - teams that need enterprise brand governance
+quick_answer: >-
+  Gamma generates decks, docs, and shareable web pages from a single prompt. The card format works as all three at once. Pick it for speed and format flexibility. Skip it for pixel-perfect PPTX export or chart-heavy analytics decks.
 ---
 
 # Gamma
 
-Gamma is an AI-first presentation and document builder developed by Gamma Tech, founded in 2020. It generates complete, designed presentations, documents, and web pages from a text prompt or outline, and is primarily used by professionals, students, and teams who need polished decks without starting from a blank slide. Its key differentiator is a flexible card-based format that works as a slide deck, a scrollable document, or a shareable web page - all generated from a single prompt. As of April 2026, Gamma offers 400 free AI credits on its free tier, with Plus at $10 per month, Pro at $20 per month, and Team at $30 per month.
+Gamma Tech's AI-first deck builder. A single prompt produces a card-based document that renders as a slide deck, a scrollable page, or a shared URL without a separate export step.
 
-Gamma launched into a market dominated by PowerPoint and Google Slides and chose not to compete on format compatibility. Instead it built a new format: the card, which is neither a fixed slide nor a free-form document but something between the two. Cards can contain text, images, charts, embeds, and interactive elements, and they display as slides in presentation mode or as a flowing page in document mode. The AI layer generates the entire deck including layout, hierarchy, and suggested visuals from an outline or a brief prompt, which compresses a task that used to take an hour into a few minutes.
+The free tier includes 400 one-time AI credits. Paid tiers run $10 to $100 per month.
 
-Gamma has become the most widely cited AI presentation tool in the category. Its brand recognition among early adopters of AI tools, combined with a free tier that provides meaningful capability before any payment, has built a large user base. It does not have PowerPoint export fidelity at the level enterprise users require, but for internal decks, client proposals, educational content, and pitch presentations, the output quality is competitive with tools costing multiples of its price.
+## System Verdict
 
+> **Pick Gamma if you want a designed first draft in under a minute and care less about PowerPoint round-trip than about time saved.** The card format doubles as a shareable web page. No other tool in this category ships the same three outputs from one generation.
+>
+> **Skip it if you need pixel-accurate PPTX for enterprise clients or chart-first data decks.** Export fidelity still needs a cleanup pass in PowerPoint. Chart customization trails [Beautiful.ai](/tools/beautiful-ai/) and native slide tools.
+>
+> **Who pays which tier:** Free for occasional one-offs, Plus $10/mo for regular solo users, Pro $20/mo for unlimited credits and analytics, Ultra $100/mo for top image models and early features. Teams that need shared workspaces upgrade to seat-based Team or Business pricing.
 
-## Editor's Take
+## Key Facts
 
-I've tested Gamma extensively over the past year, and it's genuinely the fastest way to turn a messy outline into a client-ready deck. The card format is the real innovation here, it sidesteps the entire "is this a slide or a document?" debate by being both simultaneously. For founders pitching investors or consultants building proposals, that flexibility saves hours. The free tier's 400 one-time credits disappear fast if you're iterating, though, which pushes regular users toward Plus ($10/month) quickly enough that the "free" positioning feels slightly misleading.
+| | |
+|---|---|
+| **Company** | Gamma Tech (founded 2020) |
+| **Output formats** | Slide deck · scrollable doc · shareable web page (single source) |
+| **Generation time** | Under 20 seconds for a standard 8-15 card deck |
+| **AI models** | Claude Opus 4.7 and GPT-5.4 available for generation |
+| **Free tier** | 400 one-time AI credits (not monthly) |
+| **Pricing (monthly)** | Plus $10 · Pro $20 · Ultra $100 |
+| **Team/Business** | Seat-based, per-user pricing |
+| **PPTX export** | Available, lossy on complex layouts |
+| **Offline mode** | None |
 
-Where Gamma stumbles is PPTX export. If you need pixel-perfect PowerPoint compatibility for enterprise clients, you'll spend 20 minutes cleaning up formatting in PowerPoint anyway. That's where Deck.com still has an edge for corporate workflows. Gamma also lacks the charting sophistication of tools like Beautiful.ai, so if your deck is data-heavy, you're manually tweaking charts post-generation.
+Every data point above was verified against vendor documentation on 2026-04-17. See Sources.
 
-Use Gamma if you value speed and don't need PowerPoint round-trip fidelity. Skip it if your workflow demands enterprise export standards or you're building complex financial dashboards. For everyone else, students, startups, marketing teams, it's the obvious choice.
+## What it actually is
 
-## What It Does
+One product serving three outputs from a single generation. A Gamma card holds text, images, charts, and embeds; the same file renders as a 16:9 slide, a scroll-flow document, or a public URL.
 
-Gamma accepts a topic, an outline, or a paste of existing text and generates a complete, styled presentation or document in seconds. The AI selects a visual theme, structures the content into logical sections, generates headings and body text, and suggests image placements. Users can then edit individual cards, change the theme, regenerate specific sections, or ask the AI to rewrite content inline. Presentations can be shared as a live URL (no download required), exported to PDF, or presented in full-screen mode directly from the browser. Gamma also supports importing from existing PowerPoint files, converting them into its card format for AI-assisted editing.
+The AI layer handles layout, hierarchy, theme, and image selection from a prompt or outline. Claude Opus 4.7 and GPT-5.4 are both selectable as the generation model.
 
-The platform integrates with Claude Opus 4.6 and GPT-5.4 for content generation, allowing users to choose their preferred AI backbone. Generation speed has improved significantly since 2025; most decks now render in under 20 seconds. The card format automatically reflows for mobile viewing, making presentations accessible on phones and tablets without additional export steps.
+The moat is format, not model quality. Gamma's shareable URL output skips the download-and-attach loop entirely, which matters for client-facing async work.
 
-Gamma's AI can also generate presentations from images, PDFs, and web links. Users can upload a research paper or a competitor's website and ask Gamma to synthesize it into a presentation, which accelerates research and competitive analysis workflows.
+## When to pick Gamma
 
-## Who It's For
+- **You need a designed first draft in minutes, not hours.** Prompt-to-card workflow is fastest in the category.
+- **Your deck ships as a link, not a file.** The browser-native URL output beats sending a PPTX attachment for async review.
+- **You want one artifact for multiple surfaces.** The same Gamma file becomes a deck, a doc, and a mobile-friendly web page.
+- **You are a founder, consultant, or marketer working solo or in a small team.** Sweet spot for the feature set at the Plus price.
 
-- Founders and startups building investor pitch decks and product demos
-- Consultants and agencies creating client-facing proposals and reports
-- Educators and trainers producing course materials and workshop decks
-- Marketing teams building campaign presentations, strategy decks, and internal briefs
-- Students producing academic presentations and project summaries
-- Sales teams creating product overviews and customer case studies
-- Anyone who needs a polished presentation quickly without design skills or time
+## When to pick something else
+
+- **Pixel-perfect PPTX output:** [Beautiful.ai](/tools/beautiful-ai/) exports cleaner, and native PowerPoint still wins on round-trip fidelity.
+- **Team collaboration at scale:** [Pitch](/tools/pitch/) ships a stronger collaboration layer with unlimited free decks.
+- **Sales-deck workflows with CRM hooks:** [Tome](/tools/tome/) pivoted to that lane and later shut down. Use a native sales enablement tool instead.
+- **Google Workspace-native editing:** [Figma](/tools/figma/) Slides or Google Slides integrate deeper with Docs and Drive.
+- **Design-system control across a large org:** [Canva](/tools/canva/) ships stronger brand kits for non-designers at scale.
 
 ## Pricing
 
-| Plan | Price | Key Limits |
-|------|-------|-----------|
-| Free | $0/month | 400 AI credits (one-time), unlimited manual editing, Gamma watermark on exports |
-| Plus | $10/month | 400 AI credits per month, no watermark, custom fonts, basic analytics |
-| Pro | $20/month | Unlimited AI credits, priority generation, custom domains, advanced analytics, export options |
-| Team | $30/month | All Pro features plus 3 team seats, shared workspace, admin controls, team analytics |
+Subscription pricing via [gamma.app/pricing](https://gamma.app/pricing).
 
-Prices verified at [gamma.app/pricing](https://gamma.app/pricing) as of 2026-04-15.
+| Plan | Monthly | Annual (effective/mo) | AI credits | Who's it for |
+|------|---------|-----------------------|------------|--------------|
+| Free | $0 | $0 | 400 one-time | Trial users and occasional decks |
+| Plus | $10 | $8 | Unlimited, standard models | **Most solo users land here** |
+| Pro | $20 | $15 | Unlimited, advanced models + analytics + custom domain | Client-facing and brand work |
+| Ultra | $100 | introductory | Unlimited, top image models + early features | Power users and agencies |
+| Team | Seat-based | Seat-based | Shared workspace | 2+ seat collaboration |
+| Business | Seat-based | Seat-based | Shared workspace + admin | 10+ seat orgs |
 
-## Key Features
+*Prices verified 2026-04-17 via [gamma.app/pricing](https://gamma.app/pricing). Annual billing saves roughly 20%. Free credits are one-time, not monthly.*
 
-- Prompt-to-deck generation: Type a topic or paste an outline and receive a fully designed presentation with layout, text, and image suggestions in under 30 seconds
-- Card-based format: Flexible unit between a slide and a document section; works as a presentation, scrollable page, or shareable web link
-- AI inline editing: Rewrite, shorten, expand, or change tone of any card directly through a chat-style interface
-- Theme engine: Dozens of built-in themes with color, typography, and layout presets; custom brand themes available on higher tiers
-- Image and icon integration: AI suggests and places images from Unsplash and icon libraries; users can swap or upload their own
-- Embeds: Embed videos, charts, tweets, Figma frames, and other live content directly into cards
-- Collaboration: Real-time co-editing with comment threads and version history on Plus and higher tiers
-- Sharing as URL: Every Gamma presentation has a shareable link that displays in the browser without a PowerPoint or PDF download
+## Against the alternatives
 
-## Limitations
+| | Gamma | Beautiful.ai | Canva |
+|---|---|---|---|
+| **Prompt-to-deck speed** | **Fastest** | Mid (design-first) | Mid |
+| **PPTX export fidelity** | Lossy | Cleaner | Mid |
+| **Shareable URL output** | **Native, first-class** | Available | Available |
+| **Chart customization** | Basic | Stronger | Mid |
+| **Brand governance** | Paid tiers | Team/Custom | Strongest in category |
+| **Best viewed as** | Prompt-to-deck default | Design-automation specialist | Brand-kit generalist |
 
-- PowerPoint export is imperfect: Exported PPTX files rarely match the web presentation pixel-for-pixel; enterprise workflows requiring round-trip PPTX editing are frustrating
-- Format is proprietary: The card format does not map cleanly to traditional slide decks; clients expecting a 16:9 slide may be confused
-- AI credits are consumable: The free tier's 400 credits are one-time, not monthly; heavy users hit the limit quickly
-- Limited chart customization: Data visualization options are basic compared to tools like Datawrapper or native PowerPoint charts
-- No offline mode: Requires an internet connection for both editing and presenting
+## Failure modes
 
-## Bottom Line
+- **PPTX export still needs cleanup.** Custom fonts, embedded live content, and complex layouts do not translate pixel-perfect. Treat Gamma as a drafting surface for anyone who will open the file in PowerPoint later.
+- **Free credits are one-time, not monthly.** The 400-credit allocation runs out fast during iteration. Plus at $10/mo is the practical entry point.
+- **Card format confuses trad-deck audiences.** Viewers expecting fixed 16:9 slides sometimes read the scrollable view as unfinished.
+- **Chart tooling is thin.** Data-heavy decks require post-generation editing or a separate visualization tool.
+- **No offline mode.** Editing and presenting both require an internet connection.
+- **Watermark on free-tier exports.** PDF and PPTX output show Gamma branding until Plus.
 
-Gamma is the best AI presentation tool available in 2026 for professionals who need polished decks without investing hours in design. The prompt-to-deck workflow genuinely works at a quality level suitable for client-facing and investor-facing presentations, and the card format's flexibility as both a slide deck and a shareable web page is a meaningful advantage over traditional tools. The $10/month Plus tier is fair value for anyone who presents regularly.
+## Methodology
 
-## Best Alternatives
-
-| Tool | Price | Key Difference |
-|------|-------|----------------|
-| [Beautiful.ai](../tools/beautiful-ai.md) | $12/mo Pro | Smarter layout engine, auto-reflow slides, more traditional slide format |
-| [Tome](../tools/tome.md) | $16/mo Pro | Narrative-first storytelling format, stronger for long-form content |
-| [Pitch](../tools/pitch.md) | $22/mo Pro | Superior team collaboration workflows, unlimited decks free |
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [Gamma pricing](https://gamma.app/pricing) and vendor documentation.
 
 ## FAQ
 
 **Is Gamma free?**
-Yes. Gamma's free tier includes 400 one-time AI credits, unlimited manual editing, and the ability to share presentations as URLs. The Gamma watermark appears on PDF and PPTX exports. Plus at $10/month adds 400 credits per month and removes the watermark.
+Yes, with limits. The free tier includes 400 one-time AI credits and Gamma branding on exports. Plus at $10/mo removes the watermark and unlocks unlimited credits on standard models.
+
+**What is the card format?**
+A Gamma card is the base unit of a file. It holds text, images, charts, and embeds. The same card renders as a 16:9 slide in presentation mode, a scroll-flow section in document mode, or a section on a shareable web page.
 
 **Can Gamma export to PowerPoint?**
-Yes, Gamma exports to PPTX, but the fidelity is imperfect. Complex layouts, custom fonts, and embedded elements may not translate cleanly. For final delivery requiring pixel-accurate PPTX, treat Gamma as a drafting tool and expect to reformat in PowerPoint.
+Yes. PPTX export is available on all paid tiers. Fidelity is lossy on complex layouts, custom fonts, and embedded content. Expect a cleanup pass in PowerPoint for enterprise delivery.
 
-**How many slides does Gamma generate from a prompt?**
-By default, Gamma generates 8 to 15 cards from a standard prompt. You can specify more or fewer in the prompt, or manually add and delete cards after generation. Each card consumes a small number of AI credits.
+**How many slides does Gamma generate per prompt?**
+Default generation produces 8-15 cards from a standard prompt. Users can specify card count in the prompt or add and delete cards after generation.
 
+**Which AI model does Gamma use?**
+Claude Opus 4.7 and GPT-5.4 are both selectable as the generation model inside the product. Higher tiers unlock advanced image models for visual generation.
 
-
-
-
-## Review History
-
-- **2026-04-10:** Pricing verified. Clarified pricing for annual vs monthly billing.
-- **2026-03-05:** Score adjusted down 0.3 after a pricing change reduced value.
-- **2026-01-16:** Updated flagship model reference to latest release.
-- **2025-10-16:** Pricing verified. Minor copy edits.
-- **2024-01-15:** Added to the catalog with a full review.
-
-## Related Guides
-
-- [Best AI Stack for Solo Founders (2026)](../use-cases/ai-solo-founder-stack.md)
-- [Best AI for Presentations (2026)](../use-cases/best-ai-for-presentations.md)
-- [Best AI Tools for Designers (2026)](../use-cases/best-ai-tools-for-designers.md)
-- [Best AI Tools Under $20/Month (2026)](../use-cases/best-ai-tools-under-20-month.md)
-
-## Related Comparisons
-
-- [Beautiful.ai vs Gamma](../comparisons/beautiful-ai-vs-gamma.md)
-- [ChatGPT vs Gamma](../comparisons/chatgpt-vs-gamma.md)
-- [Decktopus AI vs Gamma](../comparisons/decktopus-vs-gamma.md)
-- [Gamma vs Pitch](../comparisons/gamma-vs-pitch.md)
-- [Gamma vs Presentations.AI](../comparisons/gamma-vs-presentations-ai.md)
-- [Gamma vs Tome](../comparisons/gamma-vs-tome.md)
 ## Sources
 
-- [Gamma Official Site](https://gamma.app): Product page, feature documentation, and pricing
-- [Gamma Pricing Page](https://gamma.app/pricing): Current pricing tiers and feature comparison
+- [Gamma pricing](https://gamma.app/pricing): Current plans, credits, and tier features
+- [Gamma Help Center](https://help.gamma.app/en/articles/8077107-upgrading-your-gamma-subscription): Upgrade flow and plan details
 
 ## Related
 
-- Category: [AI Presentation Tools](../categories/ai-presentation.md)
+- **Category:** [AI Presentation Tools](/categories/ai-presentation/)
+- **Comparisons:** [Beautiful.ai vs Gamma](/comparisons/beautiful-ai-vs-gamma/) · [Gamma vs Pitch](/comparisons/gamma-vs-pitch/) · [Gamma vs Tome](/comparisons/gamma-vs-tome/) · [Gamma vs Presentations.AI](/comparisons/gamma-vs-presentations-ai/) · [ChatGPT vs Gamma](/comparisons/chatgpt-vs-gamma/)
