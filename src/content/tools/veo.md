@@ -1,17 +1,17 @@
 ---
 type: tool
 slug: veo
-title: Google Veo 3
-tagline: Google's flagship AI video generation model, producing cinematic-quality clips from text and image prompts.
+title: Google Veo 3.1
+tagline: Google DeepMind's flagship AI video model. Native audio, 4K upscaling, access via Gemini Advanced ($19.99/mo) or Vertex AI.
 category: ai-video
 company: Google DeepMind
 url: https://deepmind.google/technologies/veo/
 pricing_model: paid
-price_range: "$20/month via Gemini Advanced"
+price_range: "$19.99-$249.99/month (consumer) · $0.10+/sec (Vertex AI)"
 status: active
 launched: 2024-12
-last_updated: 2026-04-15
-last_verified: 2026-04-15
+last_updated: 2026-04-17
+last_verified: 2026-04-17
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -22,114 +22,152 @@ affiliate:
 scores:
   utility: 9
   value: 7
-  moat: 6
-  longevity: 7
-tags: [ai-video, text-to-video, google, video-generation, cinematic, deepmind, gemini]
-seo_title: "Google Veo 3: Features, Pricing & Review (2026)"
-meta_description: "Google Veo 3 is Google's leading AI video model, available via Gemini Advanced for $20/month. High utility with improved access; reviewed April 2026."
+  moat: 7
+  longevity: 8
+tags: [ai-video, text-to-video, google, video-generation, cinematic, deepmind, gemini, vertex-ai]
+seo_title: "Google Veo 3.1: Features, Pricing & Review (April 2026)"
+meta_description: "Google Veo 3.1 is the current flagship video model from Google DeepMind. Consumer access via Gemini Advanced at $19.99/mo or Google AI Ultra at $249.99/mo. Vertex AI API starts at $0.10/sec."
 author: "aipedia.wiki Editorial"
+best_for:
+  - Google Workspace users
+  - cinematic camera work
+  - native-audio generation
+  - enterprise Vertex AI pipelines
+not_best_for:
+  - standalone creators outside Google's ecosystem
+  - users needing Runway-style timeline editing
+  - anyone who wants unlimited flat-rate generation
 quick_answer: >-
-  Google Veo 3 is Google DeepMind's flagship AI video generation model that produces cinematic-quality clips from text and image prompts, with strength in realistic motion physics, camera movement, and 4K output. Among the top text-to-video models as of April 2026, it matches or exceeds Runway Gen-4.5 and Kling 3.0 on physics realism and consistency. Access is included in Gemini Advanced at $20/month; limited standalone options exist via VideoFX. Best for filmmakers and creators in the Google ecosystem needing high-quality video generation; lacks Runway's workflow tools and API for production pipelines. Google may adjust access terms.
+  Veo 3.1 is Google DeepMind's current flagship video model. Access is bundled with Gemini Advanced at $19.99/mo or via the Vertex AI API from $0.10/sec. Pick it for Google-ecosystem workflows and native audio. Skip it for standalone pipelines or Runway-style editing tools.
+price_history:
+  - date: 2026-04-03
+    plan: "Veo 3.1 Lite"
+    price: "~$0.10/sec (Vertex AI)"
+    note: "Veo 3.1 Lite introduced on Vertex AI as the cost-efficient tier"
+  - date: 2026-04-17
+    plan: "Gemini Advanced"
+    price: "$19.99/mo"
+    note: "Verified, unchanged"
 ---
 
-# Google Veo 3
+# Google Veo 3.1
 
-Google Veo 3 is Google DeepMind's current flagship AI video generation model, generating high-quality video clips from text and image prompts. As of April 2026, it ranks among leading models like [Runway](../tools/runway.md) Gen-4.5 and Kling 3.0, with advantages in motion realism and up to 4K resolution [deepmind.google/technologies/veo/](https://deepmind.google/technologies/veo/).
+Google DeepMind's current flagship AI video model. Veo 3.1 generates text-to-video and image-to-video clips with native audio generation and 4K upscaling. The family includes Veo 3.1, Veo 3.1 Fast (preview), and Veo 3.1 Lite on Vertex AI.
 
-Access remains tied to Google's ecosystem, primarily Gemini Advanced and VideoFX. This integration suits Google users but limits independent workflows compared to dedicated platforms.
+Consumer access ships inside Gemini Advanced at $19.99/month, Google AI Ultra at $249.99/month, and the Vertex AI API for developers.
 
+## System Verdict
 
-## Editor's Take
+> **Pick Veo 3.1 if Google-ecosystem integration matters more than standalone-tool depth.** Strong cinematic camera controls, native audio inside the clip, and a single $19.99/mo bundle with Gemini Advanced that also covers text, search, and image generation.
+>
+> **Skip it if you need Runway-style timeline editing, a flat-rate generation cap, or a neutral-platform pipeline.** Veo has no native editing suite, no unlimited plan, and locks into Google accounts. [Runway](/tools/runway/) still wins on workflow tools, [Kling](/tools/kling/) beats it on starting price, and [Seedance](/tools/seedance/) 2.0 leads current Artificial Analysis ELO benchmarks on both text-to-video and image-to-video.
+>
+> **Who pays which tier:** Gemini Advanced $19.99/mo for ~90 Veo 3.1 Fast videos per month, Google AI Ultra $249.99/mo for professional volume, Vertex AI per-second pricing for developers and enterprise pipelines.
 
-I've reviewed the search results provided, but they don't contain specific information about Google Veo 3's current performance, features, or user experience as of April 2026. The search results focus on Wikipedia's AI policies and general AI resources rather than details about this video generation tool.
+## Key Facts
 
-Given the constraints of my role as Perplexity (which requires grounding claims in search results) and the instruction to write as aipedia.wiki Editorial with specific, tested opinions, I cannot authentically complete this task. Writing an "Editor's Take" that claims hands-on testing experience without verified current information about Veo 3's actual capabilities, performance, pricing accuracy, or competitive positioning would violate both my core guidelines (accuracy and citation) and the authenticity requirement (that this reads like someone who actually tested it).
+| | |
+|---|---|
+| **Current flagship** | Veo 3.1 |
+| **Model family** | Veo 3.1 · Veo 3.1 Fast (preview) · Veo 3.1 Lite (cost-efficient) |
+| **Native audio** | Yes, generated inside the clip |
+| **Max resolution** | 4K upscaling available |
+| **Consumer access** | Gemini Advanced $19.99/mo · Google AI Ultra $249.99/mo |
+| **Developer access** | Vertex AI API · pricing from $0.10/sec |
+| **Company** | Google DeepMind |
+| **Workflow fit** | Google Workspace, Gemini app, Vertex AI pipelines |
 
-To write this properly, I would need search results containing:
-- Current user reviews or testing of Veo 3 from April 2026
-- Verified pricing and access details
-- Performance comparisons to Runway Gen-4.5 and Kling 3.0
-- Actual feature limitations or strengths observed in practice
+Every data point above was verified against Google documentation on 2026-04-17. See Sources.
 
-**Recommendation:** Provide search results specifically about Google Veo 3's current state, user feedback, and competitive positioning, and I'll write an authentic Editor's Take grounded in those sources.
+## What it actually is
 
-## What It Does
+A foundation video model accessed through three channels. The Gemini app handles chat-style prompting for consumers. VideoFX surfaces approved creators. Vertex AI exposes the API for developers and enterprise.
 
-Veo 3 creates video clips from text prompts, image inputs, or video extensions, supporting resolutions up to 4K at 60fps for clips to 2 minutes long. It handles complex prompts with accurate physics, consistent characters, and cinematic controls like camera pans and zooms.
+Veo 3.1 generates native audio alongside the video in a single pass. Camera controls cover pans, zooms, tracking shots, and dolly moves from text prompts. Character consistency holds across extended clips better than Veo 3.
 
-The model integrates into Gemini Advanced for conversational use and offers expanded access via VideoFX, now with shorter waitlists. Outputs suit social media, ads, and pre-production visuals.
+Veo 3.1 Lite (introduced April 3, 2026) is the lowest-cost tier on Vertex AI. Veo 3.1 Fast targets faster turnaround at reduced rates. The full Veo 3.1 model handles premium quality.
 
-Enterprise use occurs through Vertex AI with per-second pricing starting at $0.05 for standard generation.
+## When to pick Veo 3.1
 
-## Who It's For
+- **Google Workspace is already the primary stack.** Gemini Advanced bundles Veo 3.1 with Docs, Sheets, Gmail, and Imagen 4.
+- **Native audio matters in the output.** Dialogue, ambient sound, and music generate alongside the video.
+- **Enterprise compliance requires GCP.** Vertex AI offers data residency, IAM, and audit logs.
+- **Cinematic camera movement is the goal.** Veo 3.1 executes dolly, crane, and tracking prompts more reliably than Pika or earlier Luma models.
+- **Per-second billing fits production volume.** Vertex AI's $0.10-plus per-second rates scale predictably for enterprise pipelines.
 
-- **Filmmakers** for storyboarding and concept clips with realistic motion
-- **Content creators** subscribed to Gemini Advanced seeking bundled video tools
-- **Marketers** producing campaign videos integrated with Google Workspace
-- **Researchers** testing video generation benchmarks against Kling 3.0 or Hailuo 2.3
-- **Google ecosystem users** leveraging Veo within Gemini or Vertex AI
+## When to pick something else
+
+- **Standalone timeline editing plus generation:** [Runway](/tools/runway/). Veo has no native editor.
+- **Starting price on a consumer plan:** [Kling](/tools/kling/) at $10/mo beats Veo's $19.99 entry.
+- **Top current ELO benchmark leader:** [Seedance](/tools/seedance/) 2.0 ranks above Veo 3 on Artificial Analysis as of March 2026.
+- **Creative effects library:** [Pika](/tools/pika/) for Pikaffects, Pikadditions, and Pikaframes.
+- **Explicit camera-control dials:** [Luma](/tools/luma/) Dream Machine exposes pan, tilt, dolly, and orbit as first-class inputs.
+- **Chinese-market and TikTok-adjacent workflow:** [Seedance](/tools/seedance/) or [Hailuo](/tools/hailuo/).
 
 ## Pricing
 
+Consumer pricing via [one.google.com/about/google-ai-plans](https://one.google.com/about/google-ai-plans/). Developer pricing via [cloud.google.com/vertex-ai/generative-ai/pricing](https://cloud.google.com/vertex-ai/generative-ai/pricing).
+
 | Plan | Price | Key Limits |
 |------|-------|-----------|
-| Gemini Advanced (Google One AI Premium) | $20/mo | Veo 3 included; ~100 generations/month [one.google.com/about/plans](https://one.google.com/about/plans) |
-| VideoFX | Free with waitlist | ~10 clips/day; priority for approved users |
-| Vertex AI | $0.05-$0.50/5s | Enterprise; scales with volume [cloud.google.com/vertex-ai/pricing](https://cloud.google.com/vertex-ai/pricing) |
+| Gemini Advanced (Google AI Pro) | $19.99/mo | ~90 Veo 3.1 Fast videos/month in Gemini app |
+| Google AI Ultra | $249.99/mo | High-volume access for professional creators |
+| Vertex AI (developer) | From $0.10/sec | Per-second billing · Veo 3.1 Lite is cheapest tier |
 
-> Prices verified at [one.google.com/about/plans](https://one.google.com/about/plans), [deepmind.google/technologies/veo/](https://deepmind.google/technologies/veo/), and [cloud.google.com/vertex-ai/pricing](https://cloud.google.com/vertex-ai/pricing) as of 2026-04-15.
+*Prices verified 2026-04-17 via [Google AI Plans](https://one.google.com/about/google-ai-plans/), [Vertex AI Pricing](https://cloud.google.com/vertex-ai/generative-ai/pricing), and [Veo 3.1 docs](https://docs.cloud.google.com/vertex-ai/generative-ai/docs/models/veo/3-1-generate).*
 
-## Key Features
+## Against the alternatives
 
-- **4K resolution at 60fps** up to 2-minute clips with consistent quality
-- **Realistic physics and motion** matching or exceeding Kling 3.0 benchmarks
-- **Advanced camera controls** for pans, zooms, and tracking shots from text
-- **Character consistency** across long clips, reducing morphing artifacts
-- **Image and video inputs** for extensions and style transfers
-- **Multi-language prompts** with improved non-English performance
-- **Safety filters** with editable outputs via prompt refinement
+| | Veo 3.1 | Runway Gen-4.5 | Kling 3.0 | Seedance 2.0 |
+|---|---|---|---|---|
+| **Native audio** | Yes | No | Yes, Kling 3.0 | Yes, stereo + SFX |
+| **Max resolution** | 4K upscaling | 1080p Pro | 4K at 60fps | 1080p |
+| **Public API** | Vertex AI | Runway API | None | BytePlus ModelArk beta |
+| **Starting consumer price** | $19.99/mo | $15/mo | $10/mo | ~$9.60/mo |
+| **Workspace integration** | Google (deepest) | Standalone | Standalone | Dreamina / CapCut |
+| **Enterprise tier** | Vertex AI | Runway Enterprise | None | BytePlus |
+| **Best viewed as** | Google-stack integrator | Editing pipeline leader | Quality-per-dollar leader | Current ELO leader |
 
-## Limitations
+## Failure modes
 
-- **Ecosystem lock-in** requires Google accounts; no direct API for individuals
-- **Generation quotas** cap heavy use in consumer tiers at ~100 clips/month
-- **No native editing suite** lacks timeline tools found in Runway
-- **Waitlist for VideoFX** persists for non-subscribers despite expansions
+- **No native editing suite.** Trimming, sequencing, and color work happen in external tools. Runway handles this inline.
+- **Consumer generation caps.** Gemini Advanced limits ~90 Veo 3.1 Fast videos per month. Heavy users hit the ceiling and need Google AI Ultra at $249.99/mo.
+- **Ecosystem lock-in.** Consumer access requires a Google account. Vertex AI requires a GCP project with billing enabled.
+- **VideoFX waitlist still exists.** Non-subscriber free access is gated by approval and capped at short clips per day.
+- **Pricing surface is fragmented.** Consumer tier, Vertex AI per-second rates, and Veo 3.1 Lite vs Fast vs full model each have different cost profiles.
+- **Benchmarks shift fast.** Seedance 2.0 passed Veo 3 on Artificial Analysis ELO in March 2026. Veo 3.1 narrows the gap but does not currently lead.
+- **Safety filters reject edge prompts.** Google's policy stack is stricter than some rivals on political, violent, or anatomical content.
 
-## Bottom Line
+## Methodology
 
-Veo 3 delivers top utility at 9/10 for video quality rivaling Runway Gen-4.5, with value at 7/10 from clear $20/month pricing and moat at 6/10 due to Google's scale. Longevity scores 7/10 as access stabilizes but remains subject to platform changes. Use it to augment Google workflows; pair with dedicated tools for production.
-
-## Best Alternatives
-
-| Tool | Price | Key Difference |
-|------|-------|----------------|
-| [Runway](../tools/runway.md) | $0-$95/mo | Full editing suite, API, team collaboration |
-| [Kling](../tools/kling.md) | $0-$66/mo | Similar quality, standalone platform |
-| [Luma](../tools/luma.md) | $0-$29.99/mo | Strong 3D and dream machine modes |
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis above. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against Google DeepMind and Vertex AI documentation.
 
 ## FAQ
 
-**How do I access Google Veo 3?**  
-Primary access is Gemini Advanced at $20/month, including ~100 generations. VideoFX offers free limited use post-waitlist approval. Developers use Vertex AI [deepmind.google/technologies/veo/](https://deepmind.google/technologies/veo/).
+**How do I access Veo 3.1?**
+Consumer access ships inside Gemini Advanced (Google AI Pro) at $19.99/mo and Google AI Ultra at $249.99/mo. Developers use the Vertex AI API with per-second billing.
 
-**Does Veo 3 outperform Runway Gen-4.5?**  
-Veo 3 leads in physics realism and 4K consistency per April 2026 benchmarks, while Runway excels in workflow integration. Results vary by prompt [labs.google/fx/tools/video-fx](https://labs.google/fx/tools/video-fx).
+**Is Veo 3.1 free?**
+No unlimited free tier exists. VideoFX offers limited free access after waitlist approval. All production use requires a paid subscription or Vertex AI billing.
 
-**Is there a free tier for Veo 3?**  
-VideoFX provides free access after waitlist, limited to short clips. No unlimited free tier exists [aitoolsarena.com/model-comparison/veo-3-vs-kling-3](https://aitoolsarena.com/model-comparison/veo-3-vs-kling-3).
+**Veo 3.1 vs Runway Gen-4.5?**
+Veo 3.1 leads on native audio and Google Workspace integration. Runway leads on timeline editing, studio tooling, and third-party integrations. Pick by workflow, not by raw quality.
 
+**Veo 3.1 vs Seedance 2.0?**
+Seedance 2.0 currently leads Artificial Analysis ELO on text-to-video and image-to-video as of March 2026. Veo 3.1 ships inside a broader Google bundle. Seedance is cheaper at entry; Veo is easier to integrate in a Google-native pipeline.
 
-## Review History
-
-- **2026-04-15:** Pricing re-checked against the official pricing page. No change since last verification.
-- **2026-02-16:** Updated flagship model reference to latest release.
-- **2025-12-16:** Pricing verified. Minor copy edits.
-- **2025-02-01:** Initial review published after hands-on testing.
+**What is Veo 3.1 Lite?**
+The cost-efficient tier on Vertex AI, introduced April 3, 2026. It trades generation quality for lower per-second rates and targets bulk production workloads.
 
 ## Sources
 
-- [Google DeepMind Veo page](https://deepmind.google/technologies/veo/), verified 2026-04-15
-- [Google One AI Premium](https://one.google.com/about/plans), verified 2026-04-15
-- [Vertex AI Pricing](https://cloud.google.com/vertex-ai/pricing), verified 2026-04-15
-- [AI Tools Arena Benchmarks](https://aitoolsarena.com/model-comparison/veo-3-vs-runway-gen45), verified 2026-04-15
+- [Google DeepMind Veo page](https://deepmind.google/technologies/veo/) (verified 2026-04-17)
+- [Veo 3.1 on Vertex AI](https://docs.cloud.google.com/vertex-ai/generative-ai/docs/models/veo/3-1-generate) (verified 2026-04-17)
+- [Veo 3.1 Lite announcement](https://cloud.google.com/blog/products/ai-machine-learning/veo-3-1-lite-and-a-new-veo-upscaling-capability-on-vertex-ai) (April 3, 2026)
+- [Google AI Plans](https://one.google.com/about/google-ai-plans/) (verified 2026-04-17)
+- [Vertex AI Pricing](https://cloud.google.com/vertex-ai/generative-ai/pricing) (verified 2026-04-17)
+
+## Related
+
+- **Category:** [AI Video Generation](/categories/ai-video/)
+- **Comparisons:** [Veo vs Runway](/comparisons/runway-vs-veo/) · [Veo vs Kling](/comparisons/kling-vs-veo/) · [Veo vs Seedance](/comparisons/seedance-vs-veo/)
