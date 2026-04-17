@@ -93,7 +93,7 @@ A consumer creative app, not a developer platform. The surface is a web and mobi
 
 Seedream 5.0-Preview is the image pipeline. The February 2026 update added real-time web search, letting a prompt like "the current Louvre renovation scaffolding at night" pull live reference instead of training-cutoff fiction. Visual reasoning improves composition handling on complex multi-object scenes.
 
-Seedance 2.0 is the video pipeline. ByteDance positions it against Sora 2 and Kling 2, with the phased international rollout running through CapCut first.
+Seedance 2.0 is the video pipeline. ByteDance positions it against Kling 3.0 and Runway Gen-4, with the phased international rollout running through CapCut first.
 
 The moats: CapCut integration is native, not a plugin. A generated image drops into a CapCut timeline without export steps. Real-time web search on Seedream is not in Midjourney or Flux. Pricing floors are well below the Western incumbents. The weakness is access: China account requires Chinese phone and payment; international access routes through Dreamina with phased market availability.
 

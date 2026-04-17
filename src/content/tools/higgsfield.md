@@ -83,7 +83,7 @@ The differentiator is the shot language. Cinema Studio 3.5 exposes per-shot came
 | **Funding** | Series A $130M at $1.3B valuation (Accel, Menlo, AI Capital) |
 | **Category** | AI video generation · cinematic camera control |
 | **Current flagship** | Cinema Studio 3.5, Soul ID, Seedance 2.0 (aggregated) |
-| **Other models available** | Kling 3.0, Veo 3, Sora 2, Nano Banana, Wan 2.6, Flux.2 Pro |
+| **Other models available** | Kling 3.0, Veo 3, Nano Banana, Wan 2.6, Flux.2 Pro |
 | **Max resolution** | 1080p (Seedance 2.0, Plus and Ultra tiers) |
 | **Max duration** | 8-16s on most models · 30s on Motion Control |
 | **Free tier** | ~10 daily credits · 1 concurrent job · watermarked · no commercial license |
@@ -94,7 +94,7 @@ The differentiator is the shot language. Cinema Studio 3.5 exposes per-shot came
 
 ## What it actually is
 
-A multi-model video studio with an opinionated camera-language layer on top. Rather than a single proprietary model, Higgsfield routes each job to the best available backbone. Seedance 2.0 for photoreal motion. Kling 3.0 for quick turnarounds. Veo 3 for complex prompts. Sora 2 for specific styles. Nano Banana and Soul V2 for image work.
+A multi-model video studio with an opinionated camera-language layer on top. Rather than a single proprietary model, Higgsfield routes each job to the best available backbone. Seedance 2.0 for photoreal motion. Kling 3.0 for quick turnarounds. Veo 3 for complex prompts. Nano Banana and Soul V2 for image work.
 
 Cinema Studio 3.5 adds per-shot camera control (dolly, orbit, push-in, crane, static, handheld) and style transfer. Motion Control supports longer 30-second clips with sustained camera moves. Soul ID lets you fix a character's face across unlimited generations, solving the identity-drift problem that still plagues most text-to-video tools.
 
@@ -170,7 +170,7 @@ This page was produced by the aipedia.wiki editorial pipeline, an automated syst
 Yes, with limits. The free tier gives about 10 daily credits, caps output at 720p and 8-second clips, watermarks every export, and disallows commercial use. Starter at $15/month (annual) removes the watermark, enables commercial licensing, and unlocks 1080p and the full model catalog.
 
 **What is the current flagship model?**
-Higgsfield is model-agnostic. It orchestrates Seedance 2.0 (current 1080p workhorse), Kling 3.0, Veo 3, Sora 2, Nano Banana, Wan 2.6, and Soul V2 for character work. The proprietary differentiator is Cinema Studio 3.5, which adds per-shot camera control on top of whichever backbone you pick.
+Higgsfield is model-agnostic. It orchestrates Seedance 2.0 (current 1080p workhorse), Kling 3.0, Veo 3, Nano Banana, Wan 2.6, and Soul V2 for character work. The proprietary differentiator is Cinema Studio 3.5, which adds per-shot camera control on top of whichever backbone you pick.
 
 **Does Higgsfield have an API?**
 Yes, but only on the Ultra tier ($99/mo annual). Starter and Plus are GUI-only. If API-first workflow matters and budget is tight, [Runway](/tools/runway/), [Luma](/tools/luma/), [Pika](/tools/pika/), and [Kling](/tools/kling/) all expose APIs at lower price points.

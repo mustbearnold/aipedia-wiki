@@ -29,7 +29,7 @@ seo_title: "Vidu: Features, Pricing & Review (2026)"
 meta_description: "Vidu Q1 from Shengshu Technology generates 5-second 1080p clips with up to 7 reference images and native 48kHz audio. Free plan includes 800 monthly credits. Paid tiers start at $10/mo."
 author: "aipedia.wiki Editorial"
 quick_answer: >-
-  Vidu is Shengshu Technology's AI video tool, and Q1 is the current flagship as of April 2026. Pick it for cheap reference-to-video work where character consistency across multiple images matters. Skip it for clips longer than 5 seconds or cinematic motion on par with Sora 2 or Veo 3.
+  Vidu is Shengshu Technology's AI video tool, and Q1 is the current flagship as of April 2026. Pick it for cheap reference-to-video work where character consistency across multiple images matters. Skip it for clips longer than 5 seconds or cinematic motion on par with Kling 3.0 or Veo 3.
 ---
 
 # Vidu
@@ -42,7 +42,7 @@ Alibaba led a $293M round into Shengshu on April 10, 2026, signaling the company
 
 > **Pick Vidu if you need cheap, character-consistent short clips from reference images.** Q1's 7-reference pipeline prevents the face-drift that breaks Runway and Pika outputs, and the $10/mo Standard tier undercuts nearly every Western competitor. The built-in audio generation skips a second tool for foley and background music on short-form content.
 >
-> **Skip it if you need clips longer than 5 seconds or Sora-tier cinematic motion.** Q1 caps at 5 seconds per generation. For 10-25 second clips with synchronized dialogue, Sora 2 Pro wins. For photoreal cinematic motion, Veo 3 wins. For long-form narrative with extended durations, Kling 2.0 wins.
+> **Skip it if you need clips longer than 5 seconds or Sora-tier cinematic motion.** Q1 caps at 5 seconds per generation. For 10-25 second clips with synchronized dialogue, Kling 3.0 Pro wins. For photoreal cinematic motion, Veo 3 wins. For long-form narrative with extended durations, Kling 2.0 wins.
 >
 > **Who pays which tier:** Free plan covers casual testers with 800 monthly credits. Standard $10/mo fits hobbyists running 200 clips a month. Premium $35/mo fits short-form creators at 1,000 clips. Ultimate $99/mo fits agency teams needing unlimited videos.
 
@@ -97,7 +97,7 @@ Credits scale with quality tier: higher settings consume 1.5 to 2.5x more credit
 
 ## Against the alternatives
 
-| | Vidu Q1 | Sora 2 | Runway Gen-4 | Kling 2.0 |
+| | Vidu Q1 | Kling 3.0 | Runway Gen-4 | Kling 2.0 |
 |---|---|---|---|---|
 | **Entry price** | $10/mo | $20/mo (via ChatGPT Plus) | $15/mo | $10/mo |
 | **Max duration** | 5s | 25s (Pro) | 10s | 10s |
@@ -109,7 +109,7 @@ Credits scale with quality tier: higher settings consume 1.5 to 2.5x more credit
 ## Failure modes
 
 - **5-second hard cap.** Q1 cannot produce longer single clips. Stitching multiple generations introduces motion discontinuities.
-- **Motion realism gap.** Q1 holds subjects consistent but its motion model trails Sora 2 and Veo 3 on complex physics and dynamic camera work.
+- **Motion realism gap.** Q1 holds subjects consistent but its motion model trails Kling 3.0 and Veo 3 on complex physics and dynamic camera work.
 - **No lip-synced dialogue.** The audio generator handles foley and music, not synchronized character speech. Workflows needing dialogue need a second tool.
 - **China-hosted infrastructure.** Some enterprise users have data-residency requirements that rule Vidu out regardless of output quality.
 - **Pricing page localization lag.** English-language pricing sometimes shows "Loading pricing plans" on first visit. Refresh or visit from a US IP resolves it.
