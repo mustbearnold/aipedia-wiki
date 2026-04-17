@@ -1,9 +1,21 @@
 @import 'tailwindcss';
 
-/* Reserve scrollbar space always — prevents layout jut when modals lock body scroll */
+/* Reserve scrollbar space always. Prevents layout jut when modals lock body scroll. */
 html {
   scrollbar-gutter: stable;
   scroll-behavior: smooth;
+}
+
+/* Global horizontal-overflow guard. Any rogue child that tries to extend past
+   the viewport (wide markdown tables, embedded iframes, code blocks with long
+   single tokens) gets clipped instead of triggering body-wide horizontal scroll.
+   `overflow-x: clip` is used instead of `hidden` because `hidden` would create
+   a scroll-containing block and break `position: sticky` on descendants (nav
+   bar, sticky CTAs, etc). Supported everywhere we care about: Safari 16+,
+   Chrome 90+, Firefox 81+. */
+html, body {
+  overflow-x: clip;
+  max-width: 100%;
 }
 
 /* TOC anchor links must clear the sticky nav (~57px) when scrolling into view.
@@ -332,8 +344,17 @@ html {
   border-bottom: none;
 }
 
+/* Markdown tables from remark become bare <table> elements with no wrapper.
+   On narrow screens wide tables (pricing matrices, comparison tables) overflow
+   the viewport and trigger body-wide horizontal scroll. Turning the table
+   itself into a block-level scroll container confines the overflow to the
+   table, so the user swipes INSIDE the table instead of the whole page. */
 .wiki-prose table {
+  display: block;
   width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
   border-collapse: collapse;
   font-size: 0.8125rem;
   margin: 1.5rem 0;
@@ -621,14 +642,15 @@ a, button, [role="button"], .tool-card, .category-pill, .helpful-btn, .copy-btn 
    the Y axis too, which cuts off card lift shadows on hover. */
 .cat-rail {
   /* Viewport for the track. Vertical padding keeps the card hover-lift
-     shadow visible. touch-action: pan-x explicitly tells the browser
-     this element handles horizontal touch pan — critical on Android
-     where long-press on a link-card otherwise triggers save/share
-     menu instead of scrolling. */
+     shadow visible. touch-action: pan-x pan-y lets the browser pick the
+     dominant axis per gesture: horizontal swipes pan the rail, vertical
+     swipes still scroll the page. Using plain pan-x here (the older fix)
+     swallowed vertical scroll on iOS whenever a finger landed in the rail,
+     which made the homepage feel sticky and broken. */
   padding-top: 6px;
   padding-bottom: 12px;
   position: relative;
-  touch-action: pan-x;
+  touch-action: pan-x pan-y;
   -webkit-overflow-scrolling: touch;
 }
 .cat-rail,
