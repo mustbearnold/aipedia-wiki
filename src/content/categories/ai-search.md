@@ -2,10 +2,10 @@
 type: category
 slug: ai-search
 title: AI Search & Research Tools
-description: AI-powered search engines and research assistants. Perplexity, Google AI Overviews, Gemini Deep Research, Exa, Tavily.
+description: AI-powered search engines and research assistants. Perplexity, Kagi, Phind, Exa, Morphic, Genspark, You.com.
 tool_count: 7
-seo_title: "Best AI Search Tools (2026) . aipedia.wiki"
-meta_description: "Perplexity, Google AI Overviews, and Gemini Deep Research lead AI search in 2026. Compare 7 tools for research, citations, and APIs. Updated April 2026."
+seo_title: "Best AI Search Tools (2026), aipedia.wiki"
+meta_description: "Perplexity, Kagi, and Genspark lead AI search in 2026. Compare 7 tools including Morphic, Phind, and Exa for research, citations, and APIs. Updated April 2026."
 author: "aipedia.wiki Editorial"
 last_updated: 2026-04-17
 last_verified: 2026-04-17

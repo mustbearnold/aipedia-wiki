@@ -2,10 +2,10 @@
 type: category
 slug: ai-design
 title: AI Design & App Building
-description: AI design tools and vibe coding app builders. Canva, Figma, Google Stitch, Lovable, Bolt, v0.
+description: AI design tools and vibe coding app builders. Canva, Figma, Google Stitch, Framer AI, Galileo AI, Lovable, Bolt, v0, Uizard.
 tool_count: 8
-seo_title: "Best AI Design Tools (2026) . aipedia.wiki"
-meta_description: "Canva AI, Figma AI, and Lovable lead AI design and app building in 2026. Compare 6 tools for design, vibe coding, and prototyping. Updated April 2026."
+seo_title: "Best AI Design Tools (2026), aipedia.wiki"
+meta_description: "Canva AI, Figma AI, and Lovable lead AI design and app building in 2026. Compare 8 tools including Google Stitch, Framer AI, Galileo AI, and Uizard for design, vibe coding, and prototyping. Updated April 2026."
 author: "aipedia.wiki Editorial"
 last_updated: 2026-04-17
 last_verified: 2026-04-17
