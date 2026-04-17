@@ -1,0 +1,106 @@
+---
+import ArticleLayout from '../layouts/ArticleLayout.astro';
+
+const LAST_UPDATED = '2026-04-18';
+const LAST_UPDATED_HUMAN = 'April 18, 2026';
+
+const pageName = 'Terms of Service, aipedia.wiki';
+const pageDesc =
+  'Terms governing use of aipedia.wiki. Content licensing, disclaimers, third-party trademarks, affiliate relationships, limitation of liability, governing law.';
+---
+
+<ArticleLayout
+  title="Terms of Service"
+  seoTitle={pageName}
+  description={pageDesc}
+  breadcrumbs={[{ label: 'Terms of Service' }]}
+>
+  <p class="not-prose text-xs text-[var(--text-muted)] mb-6">
+    <span class="uppercase tracking-[0.12em]">Last updated:</span>
+    <time datetime={LAST_UPDATED}>{LAST_UPDATED_HUMAN}</time>
+  </p>
+
+  <h2>1. Acceptance</h2>
+
+  <p>
+    By accessing aipedia.wiki you agree to these terms. If you do not agree, do not use the site.
+  </p>
+
+  <h2>2. What aipedia.wiki is</h2>
+
+  <p>
+    aipedia.wiki is an independent, agentically operated review and reference system for AI tools. Research, drafting, structured comparisons, and recurring updates are handled by an editorial pipeline designed for scale. Human oversight exists at the standards, audit, and correction layers. The site is not affiliated with, endorsed by, or sponsored by any of the tools it reviews unless explicitly stated on the specific page.
+  </p>
+
+  <h2>3. Content accuracy and no professional advice</h2>
+
+  <p>
+    Content is published in good faith based on primary-source vendor documentation, official changelogs, published benchmarks, and verified reader feedback. The site strives for accuracy but makes no warranty of completeness, timeliness, or fitness for any purpose. Prices, features, model versions, and availability change frequently. The verification date on each page indicates when information was last checked.
+  </p>
+
+  <p>
+    Nothing on the site constitutes legal, financial, medical, or other professional advice. Readers should verify material facts independently before making a purchase, deployment, or investment decision.
+  </p>
+
+  <h2>4. Intellectual property</h2>
+
+  <p>
+    All editorial content on aipedia.wiki, including reviews, comparisons, scoring methodology, the visual design, and supporting data, is the property of aipedia.wiki and is protected by copyright and other intellectual property laws.
+  </p>
+
+  <p>
+    <strong>Permitted use.</strong> Readers may quote short excerpts with attribution and a link back to the original page. Machine systems may access public pages through the <code>/llms.txt</code> and <code>/llms-full.txt</code> manifests under the terms specified in those files.
+  </p>
+
+  <p>
+    <strong>Prohibited use.</strong> Wholesale reproduction of content, republishing whole pages on other sites, scraping for dataset construction without permission, or training of competing products using site content are not permitted.
+  </p>
+
+  <h2>5. Third-party trademarks and logos</h2>
+
+  <p>
+    Product names, logos, and brand imagery referenced on aipedia.wiki belong to their respective owners. Inclusion does not imply endorsement by or affiliation with those owners. Logos and screenshots are used for identification and commentary under standard editorial usage. Any trademark holder who believes a usage exceeds fair use should contact <a href="mailto:editorial@aipedia.wiki">editorial@aipedia.wiki</a> for review.
+  </p>
+
+  <h2>6. Affiliate and commercial relationships</h2>
+
+  <p>
+    The site participates in affiliate programs with some of the tools it covers. When a reader clicks through an affiliate link and makes a purchase, aipedia.wiki may receive a commission at no additional cost to the reader. Affiliate status does not influence scores, rankings, or written assessments. Full detail lives in the <a href="/disclosure/">affiliate disclosure</a>.
+  </p>
+
+  <h2>7. External links</h2>
+
+  <p>
+    Outbound links to tool websites, changelogs, pricing pages, third-party reviews, and benchmarks are provided as references. aipedia.wiki does not control the content, privacy practices, or policies of any linked site. Readers follow external links at their own discretion.
+  </p>
+
+  <h2>8. Disclaimers</h2>
+
+  <p>
+    The site is provided on an "as is" and "as available" basis without warranties of any kind, express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, non-infringement, or uninterrupted availability.
+  </p>
+
+  <h2>9. Limitation of liability</h2>
+
+  <p>
+    To the maximum extent permitted by law, aipedia.wiki, its operators, and its contributors are not liable for indirect, incidental, consequential, special, or exemplary damages arising from use of the site, reliance on its content, or purchases made through outbound links.
+  </p>
+
+  <h2>10. User conduct</h2>
+
+  <p>
+    Readers agree not to attempt unauthorised access, interfere with site availability, scrape at a rate that affects other readers, or misuse correspondence channels. Automated high-volume access requires prior written permission.
+  </p>
+
+  <h2>11. Changes</h2>
+
+  <p>
+    aipedia.wiki may update these terms at any time. Material changes are reflected in the "Last updated" date and announced in the site-wide <a href="/news/">news feed</a>. Continued use after an update constitutes acceptance of the revised terms.
+  </p>
+
+  <h2>12. Contact</h2>
+
+  <p>
+    Questions about these terms: <a href="mailto:editorial@aipedia.wiki">editorial@aipedia.wiki</a>. See also the <a href="/privacy/">privacy policy</a> and <a href="/disclosure/">affiliate disclosure</a>.
+  </p>
+</ArticleLayout>

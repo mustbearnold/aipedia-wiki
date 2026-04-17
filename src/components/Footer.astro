@@ -27,9 +27,16 @@ const siteLinks = [
 ];
 
 const editorialLinks = [
-  { label: 'About Editorial Team', href: '/about/' },
+  { label: 'About', href: '/about/' },
+  { label: 'Editorial Policy', href: '/about/editorial/' },
   { label: 'Scoring Methodology', href: '/about/scoring/' },
-  { label: 'Corrections Policy', href: '/about/#corrections--contact' },
+  { label: 'Media Kit', href: '/media-kit/' },
+];
+
+const legalLinks = [
+  { label: 'Privacy Policy', href: '/privacy/' },
+  { label: 'Terms of Service', href: '/terms/' },
+  { label: 'Affiliate Disclosure', href: '/disclosure/' },
 ];
 
 const standards = [
@@ -91,6 +98,15 @@ const standards = [
           ))}
         </div>
       </div>
+    </div>
+
+    <!-- Legal row: privacy / terms / disclosure -->
+    <div class="border-t border-[var(--border)] pt-6 pb-6 mb-4 flex flex-wrap gap-x-6 gap-y-2">
+      {legalLinks.map((l) => (
+        <a href={l.href} class="text-xs text-[var(--text-muted)] hover:text-[var(--text-primary)] no-underline transition-colors">
+          {l.label}
+        </a>
+      ))}
     </div>
 
     <!-- Standards -->

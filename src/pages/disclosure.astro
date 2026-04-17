@@ -1,0 +1,93 @@
+---
+import ArticleLayout from '../layouts/ArticleLayout.astro';
+
+const LAST_UPDATED = '2026-04-18';
+const LAST_UPDATED_HUMAN = 'April 18, 2026';
+
+const pageName = 'Affiliate Disclosure, aipedia.wiki';
+const pageDesc =
+  'How affiliate links work on aipedia.wiki. FTC-compliant disclosure. Editorial independence from commission rates. Network list.';
+---
+
+<ArticleLayout
+  title="Affiliate Disclosure"
+  seoTitle={pageName}
+  description={pageDesc}
+  breadcrumbs={[{ label: 'Affiliate Disclosure' }]}
+>
+  <p class="not-prose text-xs text-[var(--text-muted)] mb-6">
+    <span class="uppercase tracking-[0.12em]">Last updated:</span>
+    <time datetime={LAST_UPDATED}>{LAST_UPDATED_HUMAN}</time>
+  </p>
+
+  <h2>The short version</h2>
+
+  <p>
+    <strong>Some outbound links on aipedia.wiki are affiliate links.</strong> When a reader clicks through and makes a purchase, the site may receive a commission at no extra cost to the reader. Commission rates do not influence scores, rankings, ordering, or written assessments.
+  </p>
+
+  <h2>How affiliate links work</h2>
+
+  <p>
+    When you click an outbound link to a tool's website, the destination site may record that the visit originated from aipedia.wiki. If you then sign up for a paid plan or make a purchase within the network's cookie window, the operator of that program credits aipedia.wiki with a commission. You pay the same price you would have paid arriving directly.
+  </p>
+
+  <p>
+    Affiliate tracking is typically handled by a third-party network. Networks currently used or applied to include Impact, PartnerStack, Rewardful, FirstPromoter, ShareASale, Awin, and CJ Affiliate, along with direct in-house programs for specific tools. The full technical chain (click, cookie, attribution) is governed by each network's own privacy policy.
+  </p>
+
+  <h2>Editorial independence</h2>
+
+  <p>
+    A tool's commission rate, cookie length, or partnership status has no effect on its score, ranking position, or written treatment. The scoring methodology at <a href="/about/scoring/">/about/scoring/</a> applies uniformly.
+  </p>
+
+  <p>
+    Concretely, the site has:
+  </p>
+
+  <ul>
+    <li>Given low scores to tools that pay the highest commissions.</li>
+    <li>Recommended tools that pay zero commission when they are the best pick for a job.</li>
+    <li>Called out overpriced or stagnant products even while affiliate programs were active.</li>
+    <li>Archived products in <a href="/dead/">the dead tools section</a> when they shut down, even when that removed revenue.</li>
+  </ul>
+
+  <h2>What you will never see</h2>
+
+  <ul>
+    <li>An affiliate program mentioned inside an editorial review, in a pricing table, or in a comparison. Commission rates are internal metadata only.</li>
+    <li>A tool ranked higher because it paid more.</li>
+    <li>A "sponsored post" disguised as an independent review.</li>
+    <li>A "featured partner" carve-out that bumps a paying vendor above a better alternative.</li>
+    <li>Fake urgency, fake reviews, or fake consensus for commission.</li>
+  </ul>
+
+  <h2>Identifying affiliate links</h2>
+
+  <p>
+    Per FTC guidance, aipedia.wiki maintains a site-wide affiliate disclosure (this page and the footer notice on every page) that applies to all outbound links to tools covered by the site. Individual links are not separately tagged because the site-wide disclosure covers the full content.
+  </p>
+
+  <p>
+    If a specific partnership warrants stronger disclosure (sponsored content, a paid test, or a non-editorial placement), it is called out inline on the page in question. None currently exist.
+  </p>
+
+  <h2>If a commission were to change editorial behaviour</h2>
+
+  <p>
+    It would be a breach of the editorial standards at <a href="/about/editorial/">/about/editorial/</a> and grounds for correction. Reader reports of suspected bias are read and acted on. Email <a href="mailto:editorial@aipedia.wiki">editorial@aipedia.wiki</a> with the tool name and the claim you think is compromised.
+  </p>
+
+  <h2>Regulatory compliance</h2>
+
+  <p>
+    This disclosure is designed to satisfy the U.S. FTC "Guides Concerning the Use of Endorsements and Testimonials in Advertising" (16 CFR Part 255), the U.K. Advertising Standards Authority guidance on affiliate marketing, and the equivalent national frameworks where the site is accessible. If a regulator or affiliate network identifies a gap, correction is welcome.
+  </p>
+
+  <h2>Contact</h2>
+
+  <p>
+    Questions about affiliate relationships, disclosures, or editorial independence: <a href="mailto:editorial@aipedia.wiki">editorial@aipedia.wiki</a>.
+  </p>
+</ArticleLayout>

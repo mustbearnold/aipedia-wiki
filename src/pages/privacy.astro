@@ -1,0 +1,100 @@
+---
+import ArticleLayout from '../layouts/ArticleLayout.astro';
+
+const LAST_UPDATED = '2026-04-18';
+const LAST_UPDATED_HUMAN = 'April 18, 2026';
+
+const pageName = 'Privacy Policy, aipedia.wiki';
+const pageDesc =
+  'How aipedia.wiki handles data. Privacy-first analytics, cookie policy, affiliate-network cookies, user rights under GDPR and CCPA, contact for data requests.';
+---
+
+<ArticleLayout
+  title="Privacy Policy"
+  seoTitle={pageName}
+  description={pageDesc}
+  breadcrumbs={[{ label: 'Privacy Policy' }]}
+>
+  <p class="not-prose text-xs text-[var(--text-muted)] mb-6">
+    <span class="uppercase tracking-[0.12em]">Last updated:</span>
+    <time datetime={LAST_UPDATED}>{LAST_UPDATED_HUMAN}</time>
+  </p>
+
+  <h2>Summary</h2>
+
+  <p>
+    aipedia.wiki is an independent, agentically operated review site for AI tools. The site collects minimal data, does not set tracking cookies of its own, and does not sell or share data with advertisers. This page documents exactly what happens when a reader visits.
+  </p>
+
+  <h2>What data is collected</h2>
+
+  <p>
+    The site collects only the data needed to serve pages, detect abuse, and measure traffic. Specifically:
+  </p>
+
+  <ul>
+    <li><strong>Server request logs.</strong> The Cloudflare edge records each request (IP address, user agent, requested URL, referrer, timestamp). These are retained by Cloudflare under its standard policy and are not exported to any other system.</li>
+    <li><strong>Aggregated traffic analytics.</strong> Cloudflare Web Analytics measures pageviews, device type, and country at an aggregated level. No cookies. No cross-site tracking. No individual reader profile is built.</li>
+    <li><strong>Search queries.</strong> The on-site search (Pagefind) runs entirely in the reader's browser. Queries are never sent to any server.</li>
+    <li><strong>Email you send.</strong> If you email <a href="mailto:editorial@aipedia.wiki">editorial@aipedia.wiki</a> through a feedback form or correction link, the message is delivered to an editorial inbox. Content is read, actioned where relevant, and retained for correspondence history.</li>
+  </ul>
+
+  <h2>What is not collected</h2>
+
+  <ul>
+    <li>No third-party advertising trackers.</li>
+    <li>No behavioural profile, cohort membership, or retargeting pixel.</li>
+    <li>No account system. No login. No password to leak.</li>
+    <li>No sale of data to third parties. Ever.</li>
+  </ul>
+
+  <h2>Cookies</h2>
+
+  <p>
+    aipedia.wiki does not set any first-party tracking cookies. A small <code>theme</code> preference is stored in <code>localStorage</code> (not a cookie) so the site remembers whether you picked light or dark mode. That value never leaves your browser.
+  </p>
+
+  <p>
+    When you click an outbound link to a tool's website, that third party may set its own cookies under its own policy. aipedia.wiki does not control those cookies. See the <a href="/disclosure/">affiliate disclosure</a> for how affiliate links work.
+  </p>
+
+  <h2>Third-party services</h2>
+
+  <ul>
+    <li><strong>Cloudflare Pages</strong> hosts the site and delivers pages via a global CDN. <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Cloudflare privacy policy</a>.</li>
+    <li><strong>Google Fonts</strong> serves the Geist typeface. Font requests hit <code>fonts.googleapis.com</code> and <code>fonts.gstatic.com</code>. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google privacy policy</a>.</li>
+    <li><strong>Affiliate networks</strong> (Impact, PartnerStack, Rewardful, FirstPromoter, ShareASale, others) may drop a click-tracking cookie when you click through an affiliate link. Each network runs under its own privacy policy, linked from the destination site.</li>
+  </ul>
+
+  <h2>Your rights</h2>
+
+  <p>
+    Readers in the EU, UK, and California have statutory data rights including access, correction, and deletion.
+  </p>
+
+  <p>
+    Because aipedia.wiki does not maintain reader accounts or behavioural profiles, there is very little data to request. Cloudflare server logs contain IP addresses and request metadata, which are purged on the standard Cloudflare retention cycle. Email correspondence is retained in the editorial inbox.
+  </p>
+
+  <p>
+    To request access to, correction of, or deletion of data the site holds about you, email <a href="mailto:editorial@aipedia.wiki">editorial@aipedia.wiki</a> with subject line "Data request". Requests are processed within 30 days.
+  </p>
+
+  <h2>Children</h2>
+
+  <p>
+    The site is not directed at children under 13. No data is knowingly collected from children under 13.
+  </p>
+
+  <h2>Changes to this policy</h2>
+
+  <p>
+    This policy may be updated to reflect changes in the site, its infrastructure, or applicable law. The "Last updated" date at the top of this page reflects the most recent material change. Substantive changes are announced in the site-wide <a href="/news/">news feed</a>.
+  </p>
+
+  <h2>Contact</h2>
+
+  <p>
+    Privacy questions and data requests: <a href="mailto:editorial@aipedia.wiki">editorial@aipedia.wiki</a>.
+  </p>
+</ArticleLayout>

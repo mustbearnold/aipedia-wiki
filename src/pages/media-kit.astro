@@ -1,0 +1,159 @@
+---
+import ArticleLayout from '../layouts/ArticleLayout.astro';
+import { getCollection } from 'astro:content';
+
+const allTools = await getCollection('tools');
+const allComparisons = await getCollection('comparisons');
+const allCategories = await getCollection('categories');
+const allUseCases = await getCollection('use-cases');
+const allDead = await getCollection('dead');
+const allNews = await getCollection('news');
+
+const LAST_UPDATED = '2026-04-18';
+const LAST_UPDATED_HUMAN = 'April 18, 2026';
+
+const pageName = 'Media Kit & Partnerships, aipedia.wiki';
+const pageDesc =
+  'aipedia.wiki media kit for partnerships and affiliate programs. Site description, audience, content inventory, editorial standards, review methodology, partnership contact.';
+---
+
+<ArticleLayout
+  title="Media Kit & Partnerships"
+  seoTitle={pageName}
+  description={pageDesc}
+  breadcrumbs={[{ label: 'Media Kit' }]}
+>
+  <p class="not-prose text-xs text-[var(--text-muted)] mb-6">
+    <span class="uppercase tracking-[0.12em]">Last updated:</span>
+    <time datetime={LAST_UPDATED}>{LAST_UPDATED_HUMAN}</time>
+  </p>
+
+  <h2>Site description</h2>
+
+  <p>
+    aipedia.wiki is an independent AI tools encyclopedia. The site reviews, scores, and compares AI tools across 14 categories (chatbots and LLMs, coding, writing, image, video, voice, music, search, research, automation, design, notes, presentation, SEO). Every tool page follows a consistent agent-voice template: quick answer, key facts, system verdict, when to pick the tool, when to pick something else, pricing, failure modes, methodology disclosure.
+  </p>
+
+  <p>
+    The site is agentically operated. Research, drafting, structured comparisons, and recurring updates are handled by an editorial pipeline designed for scale. Human oversight exists at the standards, audit, and correction layers. Full detail at <a href="/about/editorial/">/about/editorial/</a>.
+  </p>
+
+  <h2>Site at a glance</h2>
+
+  <div class="not-prose my-6 grid grid-cols-2 md:grid-cols-3 gap-3">
+    <div class="rounded-xl border border-[var(--border)] bg-[var(--bg-card)] p-4">
+      <div class="text-2xl font-bold text-[var(--text-primary)] tabular-nums">{allTools.length}</div>
+      <div class="text-xs text-[var(--text-muted)] uppercase tracking-[0.1em] mt-1">Tool reviews</div>
+    </div>
+    <div class="rounded-xl border border-[var(--border)] bg-[var(--bg-card)] p-4">
+      <div class="text-2xl font-bold text-[var(--text-primary)] tabular-nums">{allCategories.length}</div>
+      <div class="text-xs text-[var(--text-muted)] uppercase tracking-[0.1em] mt-1">Categories</div>
+    </div>
+    <div class="rounded-xl border border-[var(--border)] bg-[var(--bg-card)] p-4">
+      <div class="text-2xl font-bold text-[var(--text-primary)] tabular-nums">{allComparisons.length}</div>
+      <div class="text-xs text-[var(--text-muted)] uppercase tracking-[0.1em] mt-1">Head-to-head comparisons</div>
+    </div>
+    <div class="rounded-xl border border-[var(--border)] bg-[var(--bg-card)] p-4">
+      <div class="text-2xl font-bold text-[var(--text-primary)] tabular-nums">{allUseCases.length}</div>
+      <div class="text-xs text-[var(--text-muted)] uppercase tracking-[0.1em] mt-1">Use-case guides</div>
+    </div>
+    <div class="rounded-xl border border-[var(--border)] bg-[var(--bg-card)] p-4">
+      <div class="text-2xl font-bold text-[var(--text-primary)] tabular-nums">{allDead.length}</div>
+      <div class="text-xs text-[var(--text-muted)] uppercase tracking-[0.1em] mt-1">Archived dead tools</div>
+    </div>
+    <div class="rounded-xl border border-[var(--border)] bg-[var(--bg-card)] p-4">
+      <div class="text-2xl font-bold text-[var(--text-primary)] tabular-nums">{allNews.length}</div>
+      <div class="text-xs text-[var(--text-muted)] uppercase tracking-[0.1em] mt-1">News items</div>
+    </div>
+  </div>
+
+  <h2>Audience</h2>
+
+  <p>
+    Primary readers are AI tool buyers at the point of decision. Sub-groups:
+  </p>
+
+  <ul>
+    <li><strong>Developers and technical founders</strong> evaluating agentic coding tools, IDE assistants, and autonomous agent frameworks.</li>
+    <li><strong>Indie makers and solopreneurs</strong> choosing budget-friendly writing, video, voice, and automation stacks.</li>
+    <li><strong>Marketing and content teams</strong> comparing enterprise writing platforms, SEO tools, and AI video generators.</li>
+    <li><strong>Researchers and educators</strong> picking literature-review tools, citation assistants, and long-document analysis stacks.</li>
+    <li><strong>Enterprise buyers</strong> reading up on compliance-grade platforms before starting a procurement cycle.</li>
+  </ul>
+
+  <h2>Content standards</h2>
+
+  <ul>
+    <li><strong>Primary-source research.</strong> Every atomic fact is verifiable against the vendor's own documentation, pricing page, or changelog.</li>
+    <li><strong>Four-dimension scoring.</strong> Utility, Value, Moat, Longevity on a 1 to 10 scale. Unweighted average. <a href="/about/scoring/">Methodology</a>.</li>
+    <li><strong>Monthly verification.</strong> Pricing and flagship models are re-checked against vendor pages. Every page carries a visible "last verified" date.</li>
+    <li><strong>No paid placements, no sponsored reviews.</strong> Affiliate status has zero effect on score. <a href="/disclosure/">Affiliate disclosure</a>.</li>
+    <li><strong>Corrections welcomed.</strong> Reader reports are read and actioned on merit.</li>
+  </ul>
+
+  <h2>Why partner with aipedia.wiki</h2>
+
+  <p>
+    The site targets high-intent buyers searching for specific tool names, tool comparisons, and "best X for Y" queries. Every tool page cross-links to relevant comparisons and category pages. Outbound clicks to partner sites are measured by each partner's affiliate network and appear in the partner dashboard under aipedia.wiki as the originating publisher.
+  </p>
+
+  <p>
+    Partners benefit from:
+  </p>
+
+  <ul>
+    <li><strong>Evergreen placement.</strong> Tool pages are permanent and kept current through recurring verification.</li>
+    <li><strong>Comparison pages.</strong> Head-to-head entries put tools directly in buyer-intent traffic.</li>
+    <li><strong>Category rail exposure.</strong> New tools enter the appropriate category page and the site-wide tool grid without additional negotiation.</li>
+    <li><strong>Honest coverage.</strong> A clean editorial record is durable: readers trust the placement, which makes the outbound click more likely to convert.</li>
+  </ul>
+
+  <h2>Partnership and affiliate program enrolment</h2>
+
+  <p>
+    aipedia.wiki is actively enrolling in affiliate programs across the AI tooling space. Networks used or applied to include Impact, PartnerStack, Rewardful, FirstPromoter, ShareASale, Awin, and CJ Affiliate.
+  </p>
+
+  <p>
+    Direct program questions, in-house affiliate enrolments, bespoke attribution, press inquiries, or partnership proposals:
+  </p>
+
+  <p>
+    <a
+      href="mailto:editorial@aipedia.wiki?subject=Partnership%20inquiry"
+      class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold bg-[var(--accent-primary)] text-[#0b0a14] no-underline hover:brightness-110 transition-all shadow-[0_4px_14px_rgba(167,139,250,0.35)]"
+    >
+      editorial@aipedia.wiki
+    </a>
+  </p>
+
+  <h2>Brand assets</h2>
+
+  <p>
+    Logo, favicon, and OG images are available under the paths below. Partners may use these for partner-directory pages, press coverage, and integration announcements.
+  </p>
+
+  <ul>
+    <li><a href="/favicon.svg">favicon.svg</a></li>
+    <li><a href="/og-default.svg">og-default.svg</a> (default 1200x630 OG card)</li>
+    <li>Site name: <code>aipedia.wiki</code> (lowercase, no space, no "the")</li>
+    <li>Typeface: Geist</li>
+  </ul>
+
+  <h2>Fact sheet</h2>
+
+  <div class="not-prose my-4 rounded-xl border border-[var(--border)] bg-[var(--bg-card)] p-5">
+    <dl class="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-6 text-sm">
+      <div><dt class="text-[var(--text-muted)] text-xs uppercase tracking-[0.1em]">Name</dt><dd class="text-[var(--text-primary)] m-0">aipedia.wiki</dd></div>
+      <div><dt class="text-[var(--text-muted)] text-xs uppercase tracking-[0.1em]">Category</dt><dd class="text-[var(--text-primary)] m-0">AI tools review and reference</dd></div>
+      <div><dt class="text-[var(--text-muted)] text-xs uppercase tracking-[0.1em]">Tools reviewed</dt><dd class="text-[var(--text-primary)] m-0 tabular-nums">{allTools.length}</dd></div>
+      <div><dt class="text-[var(--text-muted)] text-xs uppercase tracking-[0.1em]">Categories</dt><dd class="text-[var(--text-primary)] m-0 tabular-nums">{allCategories.length}</dd></div>
+      <div><dt class="text-[var(--text-muted)] text-xs uppercase tracking-[0.1em]">Comparisons</dt><dd class="text-[var(--text-primary)] m-0 tabular-nums">{allComparisons.length}</dd></div>
+      <div><dt class="text-[var(--text-muted)] text-xs uppercase tracking-[0.1em]">Use-case guides</dt><dd class="text-[var(--text-primary)] m-0 tabular-nums">{allUseCases.length}</dd></div>
+      <div><dt class="text-[var(--text-muted)] text-xs uppercase tracking-[0.1em]">Editorial model</dt><dd class="text-[var(--text-primary)] m-0">Agentically operated, standards-governed</dd></div>
+      <div><dt class="text-[var(--text-muted)] text-xs uppercase tracking-[0.1em]">Monetisation</dt><dd class="text-[var(--text-primary)] m-0">Affiliate links, editorial independence</dd></div>
+      <div><dt class="text-[var(--text-muted)] text-xs uppercase tracking-[0.1em]">Hosting</dt><dd class="text-[var(--text-primary)] m-0">Cloudflare Pages</dd></div>
+      <div><dt class="text-[var(--text-muted)] text-xs uppercase tracking-[0.1em]">Contact</dt><dd class="text-[var(--text-primary)] m-0"><a href="mailto:editorial@aipedia.wiki">editorial@aipedia.wiki</a></dd></div>
+    </dl>
+  </div>
+</ArticleLayout>
