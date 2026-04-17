@@ -77,9 +77,9 @@ The AI Sound Effects feature generates up to 10 seconds of layered 48kHz audio f
 
 ## When to pick something else
 
-- **For clips longer than 5 seconds:** [Sora](/tools/sora/) (up to 25s on Pro) or [Kling](/tools/kling/). Q1 caps hard at 5 seconds.
+- **For clips longer than 5 seconds:** [Kling](/tools/kling/) or [Veo](/tools/veo/). Q1 caps hard at 5 seconds.
 - **For cinematic photoreal motion:** [Veo](/tools/veo/) or [Runway](/tools/runway/). Q1's motion model is functional, not cinematic.
-- **For synchronized dialogue and character speech:** [Sora](/tools/sora/). Vidu's audio is foley and music, not lip-synced speech.
+- **For synchronized dialogue and character speech:** [Hailuo](/tools/hailuo/) or [Kling](/tools/kling/). Vidu's audio is foley and music, not lip-synced speech.
 - **For the current open-weights state of the art:** [Wan](/tools/wan/) or [Hailuo](/tools/hailuo/). Vidu is closed-source.
 
 ## Pricing

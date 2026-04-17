@@ -89,7 +89,7 @@ Hailuo 2.3 was released October 2025 as a successor to Hailuo 02. MiniMax positi
 - **Clips longer than 10 seconds:** [Kling 3.0](/tools/kling/) extends to 2-minute narrative sequences. Hailuo caps at 10s.
 - **Precise camera and motion control:** [Runway Gen-3](/tools/runway/) or Kling. Hailuo has no explicit camera path controls.
 - **Native audio synchronized to video:** [Veo 3](/tools/veo/) (via Gemini). Hailuo output is silent.
-- **Cinematic high-stakes production:** Veo 3 or [Sora 2](/tools/sora/). Hailuo fits social, not film.
+- **Cinematic high-stakes production:** Veo 3 or [Runway Gen-3](/tools/runway/). Hailuo fits social, not film.
 - **Western-vendor data compliance:** Runway, Veo 3. MiniMax is Shanghai-based with the regulatory context that implies.
 
 ## Pricing
@@ -171,5 +171,5 @@ Yes, through the MiniMax developer platform. Per-generation rates are $0.28 for 
 
 - **Category:** [AI Video](/categories/ai-video/)
 - **Parent company:** [MiniMax](/tools/minimax/)
-- **Compare:** [Kling](/tools/kling/) · [Runway](/tools/runway/) · [Veo](/tools/veo/) · [Sora](/tools/sora/)
+- **Compare:** [Kling](/tools/kling/) · [Runway](/tools/runway/) · [Veo](/tools/veo/) · [Pika](/tools/pika/)
 - **Comparisons:** [Hailuo AI vs Kling 3.0](/comparisons/hailuo-vs-kling/)
