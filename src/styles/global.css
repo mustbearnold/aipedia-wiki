@@ -99,14 +99,151 @@ html {
   line-height: 1.8;
 }
 
+/* H2 sections get a strong visual anchor: gradient-bar badge to the left,
+   bigger type, color-accent. Breaks up long-form prose into clearly bounded
+   blocks instead of reading as one wall. */
 .wiki-prose h2 {
-  margin-top: 2.5rem;
-  margin-bottom: 1rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid var(--border);
-  font-size: 1.25rem;
-  font-weight: 600;
+  position: relative;
+  margin-top: 3rem;
+  margin-bottom: 1.25rem;
+  padding-left: 1rem;
+  font-size: 1.4rem;
+  font-weight: 700;
   letter-spacing: -0.025em;
+  color: var(--text-primary);
+}
+.wiki-prose h2::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.25rem;
+  bottom: 0.25rem;
+  width: 4px;
+  border-radius: 2px;
+  background: linear-gradient(180deg, var(--accent-primary), rgba(96,165,250,0.8));
+}
+
+/* Section-specific callouts. Heading IDs are auto-slugified from the text,
+   so `## Who It's For` becomes `#who-its-for` etc. These treatments give
+   each recurring section type a distinct visual identity. */
+.wiki-prose h2#bottom-line,
+.wiki-prose h2#the-bottom-line,
+.wiki-prose h2#verdict {
+  color: var(--accent-primary);
+  font-size: 1.5rem;
+}
+.wiki-prose h2#bottom-line::before,
+.wiki-prose h2#the-bottom-line::before,
+.wiki-prose h2#verdict::before {
+  background: linear-gradient(180deg, rgb(167,139,250), rgb(236,72,153));
+  width: 6px;
+}
+/* The FIRST paragraph under a "Bottom Line" heading becomes a verdict card. */
+.wiki-prose h2#bottom-line + p,
+.wiki-prose h2#the-bottom-line + p,
+.wiki-prose h2#verdict + p {
+  background: linear-gradient(135deg, rgba(167,139,250,0.10), rgba(96,165,250,0.06));
+  border: 1px solid rgba(167,139,250,0.28);
+  border-radius: 1rem;
+  padding: 1.25rem 1.5rem;
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+}
+
+.wiki-prose h2#limitations::before,
+.wiki-prose h2#known-limitations::before,
+.wiki-prose h2#caveats::before {
+  background: linear-gradient(180deg, rgb(251,191,36), rgb(239,68,68));
+}
+
+.wiki-prose h2#who-its-for::before,
+.wiki-prose h2#who-it-s-for::before,
+.wiki-prose h2#best-for::before {
+  background: linear-gradient(180deg, rgb(34,197,94), rgb(16,185,129));
+}
+
+.wiki-prose h2#pricing::before {
+  background: linear-gradient(180deg, rgb(245,158,11), rgb(234,179,8));
+}
+
+.wiki-prose h2#what-it-does::before,
+.wiki-prose h2#overview::before {
+  background: linear-gradient(180deg, rgb(96,165,250), rgb(59,130,246));
+}
+
+/* Label-rows: `**Writers and editors** who need...` become chip cards.
+   Targets `<li>` that starts with a `<strong>` — common pattern in
+   tool-page "Who It's For" / "Limitations" sections. */
+.wiki-prose li:has(> strong:first-child) {
+  list-style: none;
+  position: relative;
+  padding: 0.75rem 0.875rem 0.75rem 1rem;
+  margin-left: -1.5rem;
+  margin-bottom: 0.5rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 3px solid rgba(167,139,250,0.5);
+  border-radius: 0.5rem;
+  transition: border-color 0.15s, transform 0.15s;
+}
+.wiki-prose li:has(> strong:first-child):hover {
+  border-left-color: var(--accent-primary);
+  transform: translateX(2px);
+}
+.wiki-prose li:has(> strong:first-child) > strong:first-child {
+  display: inline-block;
+  margin-right: 0.5rem;
+  color: var(--accent-primary);
+  font-weight: 600;
+}
+
+/* Amber variant for limitations/caveats sections. */
+.wiki-prose h2#limitations + ul li:has(> strong:first-child),
+.wiki-prose h2#known-limitations + ul li:has(> strong:first-child),
+.wiki-prose h2#caveats + ul li:has(> strong:first-child) {
+  border-left-color: rgba(251,191,36,0.6);
+}
+.wiki-prose h2#limitations + ul li:has(> strong:first-child) > strong:first-child,
+.wiki-prose h2#known-limitations + ul li:has(> strong:first-child) > strong:first-child,
+.wiki-prose h2#caveats + ul li:has(> strong:first-child) > strong:first-child {
+  color: var(--accent-warning);
+}
+/* Green variant for Who It's For / Best For. */
+.wiki-prose h2#who-its-for + ul li:has(> strong:first-child),
+.wiki-prose h2#who-it-s-for + ul li:has(> strong:first-child),
+.wiki-prose h2#best-for + ul li:has(> strong:first-child) {
+  border-left-color: rgba(34,197,94,0.6);
+}
+.wiki-prose h2#who-its-for + ul li:has(> strong:first-child) > strong:first-child,
+.wiki-prose h2#who-it-s-for + ul li:has(> strong:first-child) > strong:first-child,
+.wiki-prose h2#best-for + ul li:has(> strong:first-child) > strong:first-child {
+  color: var(--accent-success);
+}
+
+/* Pull-quote style for paragraphs that start with a `>`. Markdown
+   blockquote default is bland — give it real weight. */
+.wiki-prose blockquote {
+  border-left: none;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  background: linear-gradient(135deg, rgba(167,139,250,0.08), rgba(96,165,250,0.04));
+  border-radius: 0.75rem;
+  font-size: 1.0625rem;
+  font-style: normal;
+  color: var(--text-primary);
+  position: relative;
+}
+.wiki-prose blockquote::before {
+  content: '"';
+  position: absolute;
+  top: -0.5rem;
+  left: 0.75rem;
+  font-size: 3rem;
+  font-weight: 700;
+  color: rgba(167,139,250,0.35);
+  line-height: 1;
 }
 
 .wiki-prose h3 {

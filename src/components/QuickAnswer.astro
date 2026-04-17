@@ -11,6 +11,8 @@ interface Props {
   bestFor?: string[];
   notBestFor?: string[];
   lastVerified?: string;
+  launched?: string;
+  pricingModel?: string;
 }
 
 const {
@@ -25,6 +27,8 @@ const {
   bestFor,
   notBestFor,
   lastVerified,
+  launched,
+  pricingModel,
 } = Astro.props;
 
 function titleCase(s: string): string {
@@ -71,14 +75,8 @@ function buildAuto(): string {
     const punctuated = /[.!?]$/.test(lead) ? lead : `${lead}.`;
     sentences.push(punctuated);
   }
-  if (priceRange) {
-    sentences.push(`Pricing: ${priceRange}.`);
-  }
   if (bestFor && bestFor.length > 0) {
-    sentences.push(`Best for: ${bestFor.join(', ')}.`);
-  }
-  if (notBestFor && notBestFor.length > 0) {
-    sentences.push(`Not ideal for: ${notBestFor.join(', ')}.`);
+    sentences.push(`Best for: ${bestFor.slice(0, 3).join(', ')}.`);
   }
   return sentences.join(' ');
 }
@@ -92,6 +90,26 @@ const verifiedLabel = verifiedDate && !isNaN(verifiedDate.getTime())
   : null;
 
 const scoreColor = score >= 9 ? 'text-emerald-400' : score >= 8 ? 'text-[var(--accent-primary)]' : score >= 6 ? 'text-amber-400' : 'text-rose-400';
+const scoreBg = score >= 9 ? 'rgba(52,211,153,0.12)' : score >= 8 ? 'rgba(167,139,250,0.14)' : score >= 6 ? 'rgba(251,191,36,0.12)' : 'rgba(244,63,94,0.12)';
+const scoreBorder = score >= 9 ? 'rgba(52,211,153,0.3)' : score >= 8 ? 'rgba(167,139,250,0.3)' : score >= 6 ? 'rgba(251,191,36,0.3)' : 'rgba(244,63,94,0.3)';
+
+const launchedLabel = launched ? (() => {
+  const m = String(launched).match(/^(\d{4})/);
+  return m ? m[1] : null;
+})() : null;
+
+const priceBadge = pricingModel === 'free'
+  ? 'Free'
+  : (priceRange && /^\s*\$?0/.test(priceRange) ? 'Free tier' : priceRange);
+
+// Stat chips — each gets a tiny icon + label/value. Order: score (always), price,
+// category, launched, verified. Rendered above the prose as a dense strip.
+const chips: Array<{ label: string; value: string; icon: 'star' | 'price' | 'tag' | 'launch' | 'verify'; tone?: 'score' | 'price' | 'default' }> = [];
+chips.push({ label: 'Score', value: `${score}/10`, icon: 'star', tone: 'score' });
+if (priceBadge) chips.push({ label: 'Pricing', value: priceBadge, icon: 'price', tone: 'price' });
+if (category) chips.push({ label: 'Category', value: category, icon: 'tag' });
+if (launchedLabel) chips.push({ label: 'Launched', value: launchedLabel, icon: 'launch' });
+if (verifiedLabel) chips.push({ label: 'Verified', value: verifiedLabel, icon: 'verify' });
 ---
 
 <aside
@@ -99,7 +117,7 @@ const scoreColor = score >= 9 ? 'text-emerald-400' : score >= 8 ? 'text-[var(--a
   aria-label="Quick answer"
   data-pagefind-meta="quick-answer"
 >
-  <div class="flex items-center justify-between gap-3 mb-3">
+  <div class="flex items-center justify-between gap-3 mb-4">
     <div class="flex items-center gap-2">
       <span
         class="inline-flex items-center justify-center px-2 h-6 rounded-md text-[11px] font-bold uppercase tracking-wider text-[var(--accent-primary)] bg-[rgba(167,139,250,0.18)] border border-[rgba(167,139,250,0.35)]"
@@ -108,15 +126,57 @@ const scoreColor = score >= 9 ? 'text-emerald-400' : score >= 8 ? 'text-[var(--a
         Quick Answer
       </span>
     </div>
-    <div class="flex items-center gap-2 text-[11px]">
-      <span class={`font-bold tabular-nums ${scoreColor}`}>{score}<span class="text-[var(--text-muted)] font-normal">/10</span></span>
-      {verifiedLabel && (
-        <span class="text-[var(--text-muted)] hidden sm:inline">·</span>
-      )}
-      {verifiedLabel && (
-        <span class="text-[var(--text-muted)] hidden sm:inline">Verified {verifiedLabel}</span>
-      )}
+    <div
+      class="flex items-center gap-1.5 px-2.5 py-1 rounded-lg border tabular-nums"
+      style={`background:${scoreBg};border-color:${scoreBorder};`}
+    >
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" class={scoreColor} aria-hidden="true">
+        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+      </svg>
+      <span class={`font-bold text-sm ${scoreColor}`}>{score}<span class="text-[var(--text-muted)] text-[11px] font-normal">/10</span></span>
     </div>
   </div>
+
+  <!-- Stat chips strip — dense, scannable, renders before prose. -->
+  <div class="flex flex-wrap gap-1.5 mb-4">
+    {chips.slice(1).map((c) => {
+      const toneBg = c.tone === 'price'
+        ? 'bg-[rgba(52,211,153,0.10)] border-[rgba(52,211,153,0.28)] text-emerald-300'
+        : 'bg-[var(--bg-card)] border-[var(--border)] text-[var(--text-secondary)]';
+      return (
+        <span class={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-medium border ${toneBg} tabular-nums`}>
+          {c.icon === 'price' && (
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="12" y1="1" x2="12" y2="23"/>
+              <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+            </svg>
+          )}
+          {c.icon === 'tag' && (
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/>
+              <line x1="7" y1="7" x2="7.01" y2="7"/>
+            </svg>
+          )}
+          {c.icon === 'launch' && (
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+              <line x1="16" y1="2" x2="16" y2="6"/>
+              <line x1="8" y1="2" x2="8" y2="6"/>
+              <line x1="3" y1="10" x2="21" y2="10"/>
+            </svg>
+          )}
+          {c.icon === 'verify' && (
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+              <polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+          )}
+          <span class="text-[var(--text-muted)] uppercase tracking-wider text-[10px]">{c.label}:</span>
+          <span class="text-[var(--text-primary)]">{c.value}</span>
+        </span>
+      );
+    })}
+  </div>
+
   <p class="text-[15px] leading-relaxed text-[var(--text-primary)] m-0">{body}</p>
 </aside>
