@@ -2,7 +2,7 @@
 type: tool
 slug: elevenlabs
 title: ElevenLabs
-tagline: The best AI voice generator and text-to-speech platform available today.
+tagline: The top-ranked AI voice generator in April 2026 — Eleven v3 (GA) covers 70+ languages with expressive audio tags, Flash v2.5 hits ~75ms latency for conversational agents, and voice cloning works from a 1-minute sample.
 category: ai-voice
 company: elevenlabs
 url: 'https://elevenlabs.io'
@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: $0-$990/month
 status: active
 launched: 2023-01
-last_updated: 2026-04-15T00:00:00.000Z
-last_verified: '2026-04-15'
+last_updated: 2026-04-17
+last_verified: 2026-04-17
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -25,10 +25,9 @@ scores:
   moat: 9
   longevity: 10
 tags: [tts, voice-cloning, text-to-speech, voice-ai, audio, dubbing, voice-agents, conversational-ai]
-seo_title: 'ElevenLabs: Features, Pricing & Review (2026)'
+seo_title: 'ElevenLabs: Features, Pricing & Review (April 2026)'
 meta_description: >-
-  ElevenLabs is the leading AI voice generator with v3 model, text-to-speech and voice
-  cloning from $0-$330/mo. Best-in-class quality across 74 languages.
+  ElevenLabs runs Eleven v3 (GA) for expressive TTS in 70+ languages, Flash v2.5 at ~75ms latency for agents, and full Instant + Professional Voice Cloning. Free tier through $990/mo Business, with commercial rights from the $6 Starter plan.
 author: aipedia.wiki Editorial
 best_for:
   - voice cloning
@@ -38,152 +37,160 @@ best_for:
   - conversational ai agents
 not_best_for:
   - budget api usage
-  - self-hosted solutions
-  - production api without stability (v3 alpha artifacts)
+  - self-hosted / on-prem deployments
+  - teams that need open-source model weights
 quick_answer: >-
-  ElevenLabs is an AI voice generation and text-to-speech platform by ElevenLabs, Inc., used for voice cloning, audiobook narration, multilingual dubbing, and conversational voice agents. As of April 2026, the flagship is Eleven v3 (alpha research preview), ranked #2 on Artificial Analysis TTS ELO (1,179) and supporting 74 languages. Free tier provides experimentation access; paid plans run $5-$330/month. API pricing is $0.120/1K characters for v2/v3, $0.060/1K for Flash/Turbo models, with a 80% UI discount on v3 through end of June 2026. Best for content creators and developers who need the highest-quality output; not the right call if API cost matters most or if you need stable production output from the newest model (use v2 for API stability while v3 is in alpha).
+  ElevenLabs is the market-leading AI voice generation platform as of April 2026. Eleven v3 is generally available and is the most expressive TTS model ElevenLabs ships, covering 70+ languages with audio tags that control emotion, pacing, and style inline. Flash v2.5 (32 languages, ~75ms latency) is the recommended model for real-time conversational agents; Multilingual v2 (29 languages) remains the pick for polished narration. Pricing runs Free (10K credits), Starter $6 (30K + commercial rights + Instant Voice Cloning), Creator $22 (100K + Professional Voice Cloning + 192kbps), Pro $99 (500K + 44.1kHz PCM), Scale $330 (2M), and Business $990 (6M + 10 seats). API rates are $0.12/1K chars for v3/Multilingual v2 and $0.06/1K chars for Flash/Turbo. Commercial rights unlock at Starter. ElevenAgents (conversational AI) and Studio (long-form audiobook production) are both GA. Best for creators, localization, and voice-agent builders who need top quality; skip if you need self-hosted weights or sub-$0.06/1K API pricing.
 price_history:
-  - date: 2023-04-01
-    plan: "Starter"
-    price: "$5/mo"
-    note: "Starter tier launched"
-  - date: 2023-11-01
-    plan: "Creator"
-    price: "$22/mo"
-    note: "Creator added"
-  - date: 2024-05-01
-    plan: "Pro"
-    price: "$99/mo"
-    note: "Pro tier introduced"
+  - date: 2026-02-01
+    plan: "Eleven v3"
+    price: "GA"
+    note: "v3 exited alpha to general availability; recommended for narration and audiobooks"
   - date: 2026-04-15
-    plan: "Creator"
-    price: "$22/mo"
+    plan: "Starter"
+    price: "$6/mo"
+    note: "Starter plan verified at $6/mo (30K credits + commercial rights + IVC)"
+  - date: 2026-04-15
+    plan: "Business"
+    price: "$990/mo"
     note: "Verified, unchanged"
 ---
 
 # ElevenLabs
 
-ElevenLabs is the leading AI voice generation and text-to-speech platform developed by ElevenLabs, Inc. It converts text into human-quality speech and is primarily used for voice cloning, multilingual dubbing, audiobook narration, and conversational voice agents. As of April 2026, the flagship model is Eleven v3, an alpha research preview that ranks #2 on the Artificial Analysis TTS ELO leaderboard (ELO 1,179) and supports 74 languages ([ElevenLabs](https://elevenlabs.io)). API pricing is $0.120/1K characters for v2/v3 models and $0.060/1K for Flash/Turbo models, making it more expensive than budget alternatives like Voxtral. The Conversational AI product is production-ready with sub-100ms latency on Flash v2.5.
+The top-ranked AI voice generation platform in April 2026. Eleven v3 is generally available and covers 70+ languages with audio tags that control emotion, pacing, and style inline. Flash v2.5 drops latency to ~75ms for real-time voice agents across 32 languages. Instant Voice Cloning works from a 1-5 minute sample; Professional Voice Cloning fine-tunes on 30+ minutes for near-indistinguishable replicas. ElevenAgents (conversational AI) and Studio (audiobook production) are both GA, and Scribe v2 handles speech-to-text on the same platform.
 
+## System Verdict
 
-## Editor's Take
+> **Pick ElevenLabs if you need the highest-quality AI voice output available right now.** Eleven v3 leads on expressiveness and language coverage, Flash v2.5 is the fastest production-grade multilingual real-time model, and the clone quality on Professional Voice Cloning beats every cloud competitor. ElevenAgents is the most complete voice-agent stack on the market: bring-your-own-LLM, telephony via Twilio/Vonage/SIP, RAG, and SDKs for JS/Python/Swift/React.
+>
+> **Skip it if you need self-hosted weights, rock-bottom API pricing, or open-source.** [Fish Audio](/tools/fish-audio/) offers open-source models with near-ElevenLabs quality for self-hosting. [Voxtral](/tools/voxtral/) undercuts API pricing when quality-per-dollar matters more than peak quality. [Cartesia](/tools/cartesia/) wins on sub-40ms latency for ultra-responsive agents. For corporate narration on simpler interfaces at lower cost, [Murf](/tools/murf/), [WellSaid](/tools/wellsaid/), or [Lovo](/tools/lovo/) cover the basics.
+>
+> **Who pays which tier:** Free for tinkering (no commercial rights), Starter $6/mo for hobbyist creators needing commercial use + Instant Voice Cloning, Creator $22/mo for most YouTube/podcast creators (Professional Voice Cloning + 192kbps unlocks here), Pro $99/mo for developers shipping production voice features (44.1kHz PCM via API), Scale $330/mo for agency/studio workloads, Business $990/mo for teams needing 10 seats and 6M credits.
 
-I tested ElevenLabs v3 alpha last week with a 10-minute audiobook script in three languages. The expressiveness blew me away, audio tags nailed pauses and emphasis better than anything else I've heard. Latency on Flash v2.5 for conversational agents hit sub-100ms consistently, perfect for real-time demos. But v3 still has alpha artifacts in longer generations, so I stuck to v2 for API work.
+## Key Facts
 
-Compared to PlayHT, ElevenLabs wins on quality (ELO 1,179 vs. their 1,050), but PlayHT's API is half the cost at $0.060/1K characters across models. ElevenLabs charges $0.120/1K for v3, which adds up fast for high-volume use, my 50K character test ran $6. Free tier's generous for tinkering, though.
+| | |
+|---|---|
+| **Flagship model** | Eleven v3 (GA) — 70+ languages, audio tags for emotion/pacing/style |
+| **Real-time model** | Flash v2.5 (32 languages, ~75ms) · Flash v2 (English, ~75ms) |
+| **Narration model** | Multilingual v2 (29 languages, emotionally-aware) |
+| **Voice cloning** | Instant (IVC, 1-5 min sample) · Professional (PVC, 30+ min, fine-tuned) |
+| **Subscription pricing** | Free · Starter $6 · Creator $22 · Pro $99 · Scale $330 · Business $990 · Enterprise custom |
+| **API pricing** | v3 / Multilingual v2: $0.12 / 1K chars · Flash / Turbo: $0.06 / 1K chars |
+| **Commercial rights** | Included from Starter ($6) and above |
+| **Conversational AI** | ElevenAgents (GA) — bring-your-own-LLM, RAG, Twilio/Vonage/SIP, JS/Python/Swift/React SDKs |
+| **Long-form audio** | Studio (GA) — multi-voice audiobooks from ePub/PDF |
+| **Speech-to-text** | Scribe v2 (GA, Jan 2026) · Scribe v2 Realtime (~150ms, $0.28/hr) |
+| **Music & SFX** | Eleven Music (GA, Aug 2025, licensed training data) · Sound Effects |
+| **Self-hosted option** | None (cloud-only) |
 
-Use it if you're cloning voices or dubbing multilingual YouTube videos; the 74-language support is unmatched. Skip if API budgets matter or you need rock-solid production stability now, wait for v3 general release or go cheaper elsewhere. I'm biased toward top-tier audio, but even I winced at the pricing for scale.
+Every data point above verified against ElevenLabs' published sources on 2026-04-15. See Sources.
 
-## What It Does
+## What it actually is
 
-ElevenLabs generates human-quality speech from text, handling voice cloning, multilingual synthesis in 74 languages, voice design, and conversational AI voice agents ([ElevenLabs](https://elevenlabs.io)). The v3 model (alpha) is the most expressive TTS model ElevenLabs has released, supporting audio tags that control emotion, pacing, and style within a single generation ([ElevenLabs Blog](https://elevenlabs.io/blog/v3-audiotags)). Voice cloning supports both Instant Voice Cloning (IVC) from short samples and Professional Voice Cloning (PVC) from 30+ minutes of source audio. The Conversational AI platform supports bring-your-own-LLM (Claude Opus 4.6, GPT-5.4, Gemini 3.1 Pro, Grok, or custom), RAG integration, telephony via Twilio/Vonage/SIP, and SDKs for JS, Python, Swift, and React.
+A single cloud platform covering the full AI audio stack: text-to-speech (Eleven v3, Multilingual v2, Flash v2.5), voice cloning (IVC + PVC), speech-to-text (Scribe v2), conversational AI agents (ElevenAgents), long-form audiobook production (Studio), music generation (Eleven Music), and sound effects. Credits are consumed per character generated across all TTS models; API usage is billed separately at per-1K-character rates.
 
-## Who It's For
+The real moats: voice quality lead (Eleven v3 produces the most expressive TTS output currently shipping), clone quality (Professional Voice Cloning is the near-indistinguishable benchmark other vendors are measured against), and language coverage (70+ languages on v3 is broader than any major competitor). ElevenAgents adds a second moat — the only fully integrated voice-agent platform with bring-your-own-LLM support, telephony, RAG, and first-party SDKs across four languages.
 
-- **YouTube creators:** faceless channels using AI narration (Creator plan = 6-10 videos/month)
-- **Podcast producers:** AI narration, audio translation, clip generation
-- **App developers:** voice agents, IVR systems, in-app TTS via API
-- **Audiobook authors:** narrate a full book without a recording studio
-- **Content localizers:** translate and dub content into 74 languages
-- **Conversational AI builders:** phone agents and voice-enabled products with sub-100ms latency
+## When to pick ElevenLabs
+
+- **Highest-quality narration.** Eleven v3 (GA) with audio tags produces more expressive output than any cloud competitor. Critical for audiobooks, trailers, premium YouTube content, and character voiceovers.
+- **Real-time voice agents in 32 languages.** Flash v2.5 at ~75ms latency with ElevenAgents is the most complete production-grade voice-agent stack shipping today — bring-your-own-LLM, telephony integration, RAG, SDKs.
+- **Professional voice cloning.** PVC from 30+ minutes of source audio is the quality benchmark. Consent verification gate is meaningful but surmountable for legitimate use.
+- **Multilingual dubbing and localization.** 70+ languages on v3 with the same voice across languages is unmatched. YouTube creators going global land here.
+- **Audiobook production.** Studio handles multi-voice audiobooks from ePub/PDF with character assignment and narrative direction — end-to-end, no separate stitching workflow.
+- **Low-friction commercial rights.** Commercial license unlocks at the $6 Starter plan; no separate licensing negotiation needed for monetized content.
+
+## When to pick something else
+
+- **Open-source or self-hosted:** [Fish Audio](/tools/fish-audio/) offers open-weights models with near-ElevenLabs quality and on-prem deployment.
+- **Budget API usage:** [Voxtral](/tools/voxtral/) undercuts per-character pricing materially when peak quality is not the constraint.
+- **Ultra-low latency agents:** [Cartesia](/tools/cartesia/) ships sub-40ms latency for the most responsive real-time applications.
+- **Enterprise voice AI with custom deployments:** [Resemble AI](/tools/resemble-ai/) offers more flexibility for enterprise deployment and security review.
+- **Corporate narration on a simpler UI:** [Murf](/tools/murf/), [WellSaid](/tools/wellsaid/), and [Lovo](/tools/lovo/) target business narration with lower quality ceilings but simpler authoring flows.
+- **Consumer reading / listening apps:** [Speechify](/tools/speechify/) is built for reading-aloud use cases (articles, books, documents) rather than production TTS.
 
 ## Pricing
 
-ElevenLabs costs $0-$330/month across five tiers, with voice cloning available on all paid plans starting at $5/month and API access included from the Starter tier ([ElevenLabs Pricing](https://elevenlabs.io/pricing)). API usage is billed separately at $0.120/1K characters for v2/v3 and $0.060/1K for Flash/Turbo. A promotional 80% discount applies to v3 in the UI through end of June 2026.
+Subscription pricing via [elevenlabs.io/pricing](https://elevenlabs.io/pricing):
 
-| Plan | Price | Characters/Month | Voice Cloning | API Access |
-|------|-------|------------------|---------------|------------|
-| Free | $0 | Limited (experimentation) | No | No |
-| Starter | $5/mo | 30K (~22 min) | Up to 10 voices | Yes |
-| Creator | $22/mo | 100K (~75 min) | Up to 30 voices | Yes |
-| Pro | $99/mo | 500K (~6 hrs) | Up to 160 voices | Yes |
-| Scale | $330/mo | 2M (~25 hrs) | Up to 660 voices | Yes |
+| Plan | Price | Credits/mo | Voice Cloning | Audio Quality | Who's it for |
+|---|---|---|---|---|---|
+| Free | $0 | 10K (~10 min) | None | 128 kbps | Tinkering, no commercial rights |
+| Starter | $6/mo | 30K (~30 min) | Instant Voice Cloning | 128 kbps | Hobbyist creators needing commercial rights |
+| Creator | $22/mo | 100K (~100 min) | Professional Voice Cloning | **192 kbps** | **Most YouTube / podcast creators should land here** |
+| Pro | $99/mo | 500K (~500 min) | PVC | **44.1 kHz PCM via API** | Devs shipping production voice features |
+| Scale | $330/mo | 2M (~1,800 min) | PVC · 3 seats | 44.1 kHz PCM | Agency / studio workloads |
+| Business | $990/mo | 6M (~6,000 min) | PVC · 10 seats · low-latency TTS | 44.1 kHz PCM | Teams needing volume + seats |
+| Enterprise | Custom | Custom | PVC · custom seats · SLA / SSO / HIPAA BAA | Custom | Compliance-heavy orgs |
 
-*Prices verified 2026-04-15. API pricing: $0.120/1K chars for v2/v3; $0.060/1K for Flash/Turbo. Check [elevenlabs.io/pricing](https://elevenlabs.io/pricing) for current rates.*
+API pricing (billed separately on top of subscription or pay-as-you-go):
 
-## Key Features
+| Model | $ per 1K chars | Notes |
+|---|---|---|
+| Eleven v3 | $0.12 | GA; most expressive; 70+ languages |
+| Multilingual v2 | $0.12 | Polished narration; 29 languages |
+| Flash v2.5 | $0.06 | Real-time; ~75ms; 32 languages |
+| Flash v2 | $0.06 | Real-time; ~75ms; English only |
+| Scribe v2 (STT) | $0.22 / hour | Transcription |
+| Scribe v2 Realtime | $0.28 / hour | ~150ms streaming STT |
 
-- **Eleven v3 (alpha):** most expressive TTS model ElevenLabs has released. Supports audio tags for fine-grained emotion and style control within a generation. Ranked #2 on Artificial Analysis TTS ELO (1,179). Note: artifacts present in API; use v2 for production stability while v3 is in alpha ([ElevenLabs Blog](https://elevenlabs.io/blog/v3-audiotags)).
-- **74 languages:** same voice, different language. Up from 32 in earlier versions. The dubbing quality is consistent across the language set.
-- **Instant Voice Cloning (IVC):** upload a short sample, get a usable clone quickly. For v3 specifically, IVC and designed voices are recommended over PVC until PVC optimization ships.
-- **Professional Voice Cloning (PVC):** near-perfect replicas from 30+ minutes of source audio, with consent verification. Not yet fully optimized for v3; optimization coming soon.
-- **Conversational AI / Agents:** production-ready platform with sub-100ms latency on Flash v2.5, averaging ~75ms across 32 languages. Supports bring-your-own-LLM (Claude Opus 4.6, GPT-5.4, Gemini 3.1 Pro), RAG, multimodal voice/text, and full telephony integration ([ElevenLabs](https://elevenlabs.io)).
-- **Audio Tags (v3):** markup system for directing emotion, pacing, and emphasis inline. More granular control than SSML.
-- **API:** well-documented REST and WebSocket APIs with Python, Node, Swift, React SDKs.
+Prices verified 2026-04-15 via [ElevenLabs pricing](https://elevenlabs.io/pricing), [ElevenLabs API pricing](https://elevenlabs.io/pricing/api), and the [Models documentation](https://elevenlabs.io/docs/overview/models). Creator plan currently shows a 50%-off first-month promotion ($22 → $11) on the public pricing page.
 
-## Limitations
+## Against the alternatives
 
-ElevenLabs' main trade-offs are API cost, alpha-stage instability on v3, and no self-hosted option ([ElevenLabs Pricing](https://elevenlabs.io/pricing)).
+| | ElevenLabs v3 | Fish Audio | Cartesia |
+|---|---|---|---|
+| **Voice quality ceiling** | Highest on v3 (GA) | Near-ElevenLabs | Strong, speed-optimized |
+| **Clone quality** | PVC is the benchmark | Strong open-source clones | Good, fewer controls |
+| **Real-time latency** | ~75ms on Flash v2.5 | Varies by deployment | Sub-40ms (leads the field) |
+| **Commercial rights** | From $6 Starter | Open-source license terms apply | Commercial from paid tier |
+| **Open source / self-host** | None — cloud-only | Yes — open weights | None |
+| **API pricing (Multilingual)** | $0.12 / 1K chars | Lower on self-host | Competitive |
+| **Language coverage** | 70+ (v3) · 32 (Flash v2.5) | Narrower multilingual range | 15+ |
+| **Best viewed as** | Quality + coverage leader | Open-source alternative | Latency specialist |
 
-- **Price at scale.** $0.120/1K characters for v2/v3 via API. Flash/Turbo is $0.060/1K. Both are significantly more expensive than budget alternatives like Voxtral. For high-volume API use, the cost difference compounds quickly.
-- **v3 is alpha.** The newest model has artifacts in API output; ElevenLabs recommends using v2 for production stability. PVC is not yet optimized for v3.
-- **Voice cloning ethics.** Easy to clone any voice from a short sample. ElevenLabs has consent verification for Professional Cloning, but Instant Cloning is minimally gated.
-- **Complex credit-based pricing.** The subscription credit system can be unpredictable at scale; users report difficulty forecasting monthly costs.
-- **No offline/self-hosted option.** Cloud-only. If you need on-premise TTS, look at open-source alternatives or Fish Audio S2.
+## Failure modes
 
-## Bottom Line
+- **Credit exhaustion is the dominant cost surprise.** Plans are capped in credits per month; overages either block generation or bill separately depending on plan. Long-form audio projects can exhaust Creator (100K) or even Pro (500K) credits faster than expected — 500K credits is ~8 hours of audio at typical speaking rate.
+- **Instant Voice Cloning consent gate is minimal.** IVC accepts a 1-minute sample with self-attestation. Easy to misuse; ElevenLabs has consent verification on PVC but not IVC. Clone-without-permission remains a real moderation and legal risk.
+- **Audio tags and emotion control are v3-specific.** Flash v2.5 and Multilingual v2 don't expose the same inline audio-tag markup. Switching models for latency forfeits expressiveness — the lineup forces a quality-vs-latency tradeoff per project.
+- **API rate limits bite on bulk workloads.** Credit caps and per-plan concurrency limits can stall batch generation. High-volume API users regularly escalate to Business or Enterprise for predictable throughput.
+- **No self-hosted / on-prem option.** Cloud-only. For regulated environments, on-prem, or air-gapped deployments, ElevenLabs is not an option — [Fish Audio](/tools/fish-audio/) or other open-weights models are required.
+- **Credit-based pricing is hard to forecast.** The credit system spans TTS, STT, and Conversational AI with different consumption rates per model. Users report monthly cost unpredictability, especially when mixing v3 and Flash output.
+- **Content moderation rejects legitimate material.** The moderation layer flags some adult fiction, political content, and clinical/medical scripts. Enterprise contracts can loosen filters; on consumer plans, blockages are final.
+- **PVC quality on v3 is still optimizing.** Professional Voice Cloning is fully supported on Multilingual v2 and Flash; v3-specific PVC optimization is a rolling improvement area per ElevenLabs docs. Use Multilingual v2 + PVC for the most reliable clone quality, v3 for maximum expressiveness on designed or IVC voices.
 
-ElevenLabs is the best choice for content creators and developers who need the highest-quality AI voice output. The v3 model is the most expressive TTS system available as of April 2026, but use v2 for any production API workflow until v3 exits alpha. The Conversational AI platform is production-ready and supports all major LLM backends including Claude Opus 4.6 and GPT-5.4. Only skip ElevenLabs if you need API pricing under $0.06/1K chars (use Voxtral or Flash alternatives) or self-hosting (use Fish Audio S2).
+## Methodology
 
-## Best Alternatives
-
-- **[Fish Audio S2](../categories/ai-voice.md):** open-source, self-hostable, near-ElevenLabs quality at lower cost. Best open-source option.
-- **[Voxtral (Mistral)](../categories/ai-voice.md):** cheaper API pricing. Quality is lower than ElevenLabs v3. Best for budget API use.
-- **[Murf AI](../categories/ai-voice.md):** corporate narration focus. Lower quality than ElevenLabs but simpler interface for non-technical users.
-- **[OpenAI TTS](../categories/ai-voice.md):** good quality, convenient if you're already in the OpenAI ecosystem. Less configurable.
+This page was produced by the aipedia.wiki editorial pipeline — an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-15 against [ElevenLabs pricing](https://elevenlabs.io/pricing), [ElevenLabs API pricing](https://elevenlabs.io/pricing/api), the [Models documentation](https://elevenlabs.io/docs/overview/models), the [Voice Cloning documentation](https://elevenlabs.io/docs/creative-platform/voices/voice-cloning), and the [Conversational AI overview](https://elevenlabs.io/conversational-ai).
 
 ## FAQ
 
-**Is ElevenLabs free?**
-Yes, ElevenLabs has a free plan for experimentation with hundreds of narrators. The free plan does not include voice cloning or API access. It is sufficient for testing voice quality and generating short clips, but most serious users will need a paid plan.
+**Is ElevenLabs free to use?**
+Yes — the Free tier gives 10,000 credits per month (~10 minutes of TTS) but does not include commercial rights or voice cloning. For monetized content, the $6/mo Starter plan is the lowest tier with commercial rights and Instant Voice Cloning.
 
-**How much does ElevenLabs cost?**
-ElevenLabs costs $5/month (Starter, 30K characters), $22/month (Creator, 100K characters), $99/month (Pro, 500K characters), or $330/month (Scale, 2M characters). API usage is billed at $0.120 per 1,000 characters for v2/v3 models and $0.060/1K for Flash/Turbo models. All paid plans include voice cloning and API access. A promotional 80% discount applies to v3 in the UI through end of June 2026.
+**What is Eleven v3 and is it production-ready?**
+Eleven v3 is ElevenLabs' most expressive TTS model, covering 70+ languages with audio tags that control emotion, pacing, and style inline. It is generally available as of early 2026. For real-time conversational use cases ElevenLabs still recommends Flash v2.5 or Turbo v2.5 — a real-time-optimized v3 variant is in development.
 
-**What is Eleven v3?**
-Eleven v3 is ElevenLabs' newest TTS model, released in 2026 as an alpha research preview. It is the most expressive model ElevenLabs has built, supporting 74 languages and audio tags for fine-grained emotion and style control. It ranks #2 on the Artificial Analysis TTS ELO leaderboard (ELO 1,179). As of April 2026, it has artifacts in API output; ElevenLabs recommends v2 for production workflows while v3 is in alpha.
+**What's the difference between Instant and Professional Voice Cloning?**
+Instant Voice Cloning (IVC) generates a usable clone from 1-5 minutes of audio near-instantaneously, with minimal consent gating. Professional Voice Cloning (PVC) requires 30+ minutes of source audio, fine-tunes the model on the target voice, and produces near-indistinguishable replicas. IVC is available from the Starter plan; PVC unlocks at Creator ($22/mo) and above.
 
-**What are the best alternatives to ElevenLabs?**
-Fish Audio S2 is the best alternative if you need open-source, self-hostable TTS at lower cost. Voxtral by Mistral offers cloud API at lower per-character pricing, though quality is lower. OpenAI TTS is a good option if you are already in the OpenAI ecosystem.
+**Which model should I use — v3, Multilingual v2, or Flash v2.5?**
+Use Eleven v3 for expressive narration, audiobooks, character voiceovers, and trailers. Use Multilingual v2 for polished professional narration where consistent emotional tone matters more than maximum expressiveness. Use Flash v2.5 for real-time conversational agents and any workflow where ~75ms latency matters more than peak quality.
 
+**Does ElevenLabs offer speech-to-text?**
+Yes. Scribe v2 (launched January 2026) is the transcription model at $0.22/hr; Scribe v2 Realtime streams at ~150ms for $0.28/hr. Both are part of the standard platform.
 
+**Can I self-host ElevenLabs models?**
+No. ElevenLabs is cloud-only with no on-premise or open-weights option. For self-hosted deployments, [Fish Audio](/tools/fish-audio/) is the strongest open-source alternative.
 
-
-## Review History
-
-- **2026-04-12:** Pricing and feature list verified against official docs.
-- **2026-01-16:** Noted the new model availability across tiers.
-- **2025-12-16:** Pricing verified. Minor copy edits.
-- **2024-01-15:** First published review after two weeks of use.
-
-## Related Guides
-
-- [Best AI Stack for Content Creators (2026)](../use-cases/ai-content-creator-stack.md)
-- [Best AI Tools for Podcasters (2026)](../use-cases/best-ai-for-podcasters.md)
-- [Best AI for Transcription (2026)](../use-cases/best-ai-for-transcription.md)
-- [Best AI Tools for YouTube Creators (2026)](../use-cases/best-ai-for-youtube-creators.md)
-- [Best AI Tools Under $20/Month (2026)](../use-cases/best-ai-tools-under-20-month.md)
-
-## Related Comparisons
-
-- [Cartesia vs ElevenLabs](../comparisons/cartesia-vs-elevenlabs.md)
-- [ChatGPT vs ElevenLabs](../comparisons/chatgpt-vs-elevenlabs.md)
-- [Descript vs ElevenLabs](../comparisons/descript-vs-elevenlabs.md)
-- [ElevenLabs vs Fish Audio S2](../comparisons/elevenlabs-vs-fish-audio.md)
-- [ElevenLabs vs HeyGen](../comparisons/elevenlabs-vs-heygen.md)
-- [ElevenLabs vs Murf](../comparisons/elevenlabs-vs-murf.md)
-- [ElevenLabs vs Otter.ai](../comparisons/elevenlabs-vs-otter-ai.md)
-- [ElevenLabs vs Resemble AI](../comparisons/elevenlabs-vs-resemble-ai.md)
+**Does the subscription include API access?**
+Yes, API access is included from Starter ($6) and above. API usage is billed against the plan's credit allocation; overages are billed separately at the listed per-1K-character rates.
 
 ## Related
 
-- **Category:** [AI Voice / TTS](../categories/ai-voice.md)
-- **Trends:** [AI Voice Explosion](../trends/ai-voice-explosion.md)
-- **Use cases:** AI Agency Stack
-
-## Sources
-
-- [Official website](https://elevenlabs.io)
-- [Pricing page](https://elevenlabs.io/pricing)
-- [API Documentation](https://elevenlabs.io/docs)
-- [ElevenLabs v3 Audio Tags announcement](https://elevenlabs.io/blog/v3-audiotags)
+- **Category:** [AI Voice / TTS](/categories/ai-voice/)
+- **Compare:** [Cartesia vs ElevenLabs](/comparisons/cartesia-vs-elevenlabs/) · [ElevenLabs vs Fish Audio](/comparisons/elevenlabs-vs-fish-audio/) · [ElevenLabs vs Murf](/comparisons/elevenlabs-vs-murf/) · [ElevenLabs vs Resemble AI](/comparisons/elevenlabs-vs-resemble-ai/)
+- **Use cases:** [Best AI for Podcasters](/use-cases/best-ai-for-podcasters/) · [Best AI for YouTube Creators](/use-cases/best-ai-for-youtube-creators/) · [Best AI for Transcription](/use-cases/best-ai-for-transcription/)
