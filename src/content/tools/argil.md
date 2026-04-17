@@ -6,7 +6,7 @@ tagline: AI video avatar platform built for creators and marketers, with one-sho
 category: ai-video
 company: argil
 url: https://argil.ai
-pricing_model: subscription
+pricing_model: paid
 price_range: "$39-$999/month"
 status: active
 launched: 2023-06

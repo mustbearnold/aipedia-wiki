@@ -40,7 +40,7 @@ not_best_for:
   - broad plugin or integration ecosystem
   - users wanting a single tool for shopping, calendar, and search
 quick_answer: >-
-  Claude is the strongest generally-available LLM for reasoning, long-form writing, and agentic coding as of April 2026. Pick it for Opus 4.7 on deep work and Claude Code CLI on terminal-native coding. Skip it for native image or video gen and broad plugin ecosystems.
+  Claude is Anthropic's assistant, and Opus 4.7 currently leads published benchmarks for agentic coding, scaled tool use, and long-context reasoning as of April 2026. Pick it for deep work and terminal-native coding via Claude Code. Skip it for native image or video generation and broad plugin ecosystems.
 price_history:
   - date: 2026-04-16
     plan: "Opus 4.7"

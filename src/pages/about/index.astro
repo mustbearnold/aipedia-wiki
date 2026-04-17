@@ -30,8 +30,8 @@ const processSteps = [
   },
   {
     n: 2,
-    title: 'Hands-on evaluation',
-    body: 'Where practical, editors test tools on real work — not marketing demos. When a tool is enterprise-gated or prohibitively expensive, we disclose that limitation in the review rather than fake experience.',
+    title: 'Structured evaluation',
+    body: 'Each tool is evaluated against a consistent rubric using vendor documentation, changelogs, third-party benchmark publications, and verified user feedback. Where hands-on testing evidence is not produced by the editorial pipeline, the review says so and relies on primary-source material instead of inventing usage claims.',
   },
   {
     n: 3,
@@ -59,18 +59,19 @@ const principles = [
 ];
 
 const donts = [
-  'No paid placements — no tool has ever paid to be listed, ranked, or featured',
-  'No "Editor\'s Pick" sponsorships',
-  'No affiliate-influenced rankings — commission rate has zero effect on score',
-  'No AI-generated filler copy — editors write, AI assists research only',
-  'No unvetted user reviews — unverified star ratings create a race to the bottom',
+  'No paid placements. No tool has ever paid to be listed, ranked, or featured.',
+  'No "Editor\'s Pick" sponsorships.',
+  'No affiliate-influenced rankings. Commission rate has zero effect on score.',
+  'No fake-human byline. The site is agentically operated and says so openly.',
+  'No unvetted user reviews. Unverified star ratings create a race to the bottom.',
+  'No padded summary copy. Pages exist only when they carry real decision value.',
 ];
 
 const faqs = [
   {
     question: 'Who runs aipedia.wiki?',
     answer:
-      'aipedia.wiki is published by an independent editorial team with backgrounds in software engineering, product management, and AI tool evaluation. The team operates without outside editorial influence — no investor, parent company, or platform holds editorial veto power over scores or rankings.',
+      'aipedia.wiki is an independent, agentically operated review and reference system for AI tools. Research, drafting, structured comparisons, and recurring updates are handled by an editorial pipeline designed for scale. Human oversight exists at the standards, audit, and correction layers. No investor, parent company, or platform holds editorial veto power over scores or rankings.',
   },
   {
     question: 'How does aipedia.wiki make money?',
@@ -90,7 +91,7 @@ const faqs = [
   {
     question: 'Does aipedia.wiki accept sponsored reviews?',
     answer:
-      'No. aipedia.wiki has never accepted payment for a listing, ranking, or feature. There are no "Editor\'s Pick" sponsorships and no paid tier placements. Every score reflects editorial judgment based on verified research and, where feasible, hands-on use.',
+      'No. aipedia.wiki has never accepted payment for a listing, ranking, or feature. There are no "Editor\'s Pick" sponsorships and no paid tier placements. Every score reflects structured editorial judgment against the four-dimension rubric, based on primary-source research verified on a recurring cycle.',
   },
   {
     question: 'How do I report an error or request a correction?',
@@ -127,8 +128,8 @@ const pageDesc = `aipedia.wiki is an independent AI tools encyclopedia covering 
 
   <!-- AEO lede: the first 60 words answer "what is aipedia.wiki" in natural language -->
   <p class="text-base text-[var(--text-secondary)] leading-relaxed">
-    <strong class="text-[var(--text-primary)]">aipedia.wiki is an independent, editorially-managed encyclopedia of AI tools.</strong>
-    Every tool on this site is reviewed, scored across four dimensions — Utility, Value, Moat, and Longevity — and re-verified monthly. We don't accept sponsored placements, "featured" tiers, or paid rankings. Most AI tool directories list thousands of products with one-line descriptions; we do the opposite — deep, honest reviews of the tools that matter, written as reference pages that stay current.
+    <strong class="text-[var(--text-primary)]">aipedia.wiki is an independent, agentically operated AI tools encyclopedia and review system.</strong>
+    Every tool is evaluated against a four-dimension rubric (Utility, Value, Moat, Longevity) and re-verified on a recurring cycle. No sponsored placements, no "featured" tiers, no paid rankings. Where most directories stack thin listings, this site publishes structured decision pages designed to stay current as the market moves.
   </p>
 
   <!-- Freshness signal -->
@@ -196,20 +197,23 @@ const pageDesc = `aipedia.wiki is an independent AI tools encyclopedia covering 
     </ul>
   </div>
 
-  <h2>The Team</h2>
+  <h2>How aipedia.wiki operates</h2>
   <p>
-    aipedia.wiki is published by an independent editorial team with backgrounds spanning software engineering, product management, technical writing, and AI tool evaluation. The team operates without outside editorial influence. No investor, parent company, or platform holds editorial veto power.
+    aipedia.wiki is agentically operated. Research gathering, drafting, structured comparisons, and recurring maintenance are handled by an editorial pipeline designed for scale. Human oversight exists at the standards, audit, and correction layers. No investor, parent company, or platform holds editorial veto power over scores or rankings.
   </p>
   <p>
-    Individual editors are not named on tool pages - we operate as a publication, not a personality. Every page carries the <strong>aipedia.wiki Editorial</strong> byline because every page has been reviewed by at least two editors before publishing.
+    Individual editors are not named on tool pages because the site operates as a system, not a personality. Every page carries the <strong>aipedia.wiki Editorial</strong> byline and is maintained under the standards for sourcing, scoring, freshness, and corrections described on the <a href="/about/editorial/">editorial policy</a> page.
+  </p>
+  <p class="text-sm text-[var(--text-muted)] leading-relaxed">
+    The trust promise is not handcrafted prose. It is clear methodology, current facts, structured judgment, visible sourcing where appropriate, and honest corrections.
   </p>
 
   <div class="not-prose bg-[var(--bg-card)] border border-[var(--border)] rounded-lg p-5 my-6 flex items-center gap-4">
     <div class="min-w-0 flex-1">
-      <a href="/about/editorial/" class="text-sm font-semibold text-[var(--text-primary)] hover:text-[var(--accent-primary)] no-underline transition-colors">aipedia.wiki Editorial</a>
-      <p class="text-xs text-[var(--text-muted)] m-0 mt-0.5">Editor-in-Chief - methodology, testing approach, and contact info</p>
+      <a href="/about/editorial/" class="text-sm font-semibold text-[var(--text-primary)] hover:text-[var(--accent-primary)] no-underline transition-colors">Editorial policy and standards</a>
+      <p class="text-xs text-[var(--text-muted)] m-0 mt-0.5">Full methodology, verification cadence, anti-fabrication policy, and correction pathway</p>
     </div>
-    <a href="/about/editorial/" class="shrink-0 text-xs text-[var(--text-secondary)] hover:text-[var(--text-primary)] no-underline transition-colors">View profile &rarr;</a>
+    <a href="/about/editorial/" class="shrink-0 text-xs text-[var(--text-secondary)] hover:text-[var(--text-primary)] no-underline transition-colors">Read standards &rarr;</a>
   </div>
 
   <h2>Affiliate Disclosure</h2>

@@ -2,8 +2,8 @@
 import ArticleLayout from '../../layouts/ArticleLayout.astro';
 
 const pageUrl = 'https://aipedia.wiki/about/editorial/';
-const pageName = 'Editorial Policy — aipedia.wiki';
-const pageDesc = 'How aipedia.wiki is edited: scoring methodology, verification pipeline, anti-fabrication policy. Tool pages maintained by aipedia.wiki Editorial.';
+const pageName = 'Editorial Policy · aipedia.wiki';
+const pageDesc = 'How aipedia.wiki operates: agentically operated editorial pipeline, scoring methodology, verification cadence, anti-fabrication policy, corrections pathway.';
 
 // Organization schema (no fabricated individual editor).
 const orgLD = JSON.stringify({
@@ -37,14 +37,18 @@ const orgLD = JSON.stringify({
     <script type="application/ld+json" set:html={orgLD} />
   </Fragment>
 
-  <h2>Who writes this site</h2>
+  <h2>How aipedia.wiki operates</h2>
 
   <p>
-    aipedia.wiki is edited by aipedia.wiki Editorial, an in-house editorial team working with a purpose-built truth-maintenance toolchain. We do not publish content under a named individual byline. Every page is produced by the editorial process described below, verified against primary vendor sources, and maintained on a recurring schedule.
+    aipedia.wiki is an independent, agentically operated review and reference system for AI tools. Research gathering, drafting, structured comparisons, and recurring updates are handled by an editorial pipeline designed for scale. Human oversight exists at the standards, audit, and correction layers.
   </p>
 
   <p>
-    We do not claim hands-on testing we have not done. Where a review benefits from usage evidence, we rely on vendor-published documentation, official changelogs, third-party benchmark publications, and verified user feedback. Where usage claims would be appropriate but we cannot verify them, the page says so.
+    The trust promise is not handcrafted prose. It is clear methodology, current facts, structured judgment, visible sourcing where appropriate, and honest corrections. Pages are published under the aipedia.wiki Editorial byline (Organization, not Person) because the site operates as a system, not a personality.
+  </p>
+
+  <p>
+    aipedia.wiki does not claim hands-on testing the editorial pipeline did not produce. Where a review benefits from usage evidence, the system relies on vendor-published documentation, official changelogs, third-party benchmark publications, and verified user feedback. Where usage claims would be appropriate but cannot be verified, the page says so.
   </p>
 
   <h2>How pages are produced</h2>
@@ -129,7 +133,11 @@ const orgLD = JSON.stringify({
   <h2>How AI is used on this site</h2>
 
   <p>
-    AI assistance is part of our production pipeline. Per Google's stated AI content policy, quality is judged by E-E-A-T and unique value regardless of production method. We disclose: page drafts are produced with AI tooling, every draft runs through the verification pipeline above, and no page ships without passing the compliance gate. Our unique value is editorial synthesis, verified facts, and continuous maintenance, not production volume.
+    aipedia.wiki is agentically operated. Research, drafting, structured comparisons, and recurring updates are produced by an editorial pipeline. Every page runs through the verification pipeline above, and no page ships without passing the compliance gate. The unique value is structured editorial synthesis, verified facts, and continuous maintenance, not production volume.
+  </p>
+
+  <p>
+    Per Google's stated AI content policy, quality is judged by E-E-A-T and unique value regardless of production method. aipedia.wiki takes the explicit position that declared, standards-governed automation is more trustworthy than hidden, handcrafted-looking automation. Readers do not need to believe every conclusion; the promise is that the site operates honestly, consistently, and usefully.
   </p>
 
   <!-- Contact -->

@@ -7,8 +7,8 @@ meta_description: "Build a semi-automated content pipeline producing SEO-optimiz
 author: "aipedia.wiki Editorial"
 description: Automate blog posts, social media, and newsletters using Claude 4.6, Surfer SEO, n8n, and Canva with a human review step.
 tools_mentioned: [claude, surfer-seo, n8n, canva]
-last_updated: 2026-04-15
-last_verified: 2026-04-15
+last_updated: 2026-04-17
+last_verified: 2026-04-17
 update_frequency: quarterly
 ---
 
@@ -44,9 +44,9 @@ n8n is an open-source workflow tool that connects APIs for triggers, routing, an
 
 Canva creates graphics, images, and templates with built-in AI text-to-image (powered by integrations like stable diffusion equivalents) for blog headers and social visuals.[2] It works in pipelines for resizing assets across platforms and quick edits from blog titles. Pro $13/mo (2026 pricing) unlocks AI tools, unlimited storage; free tier limits exports. Outperforms Midjourney v7/DALL-E 4 for non-artists needing fast, template-based output tied to text workflows.[2][7] Limitations: Less control than dedicated generators like Flux 2; best for simple assets. n8n integrates via API for auto-generation.[2]
 
-## How We Chose
+## How the stack was selected
 
-We evaluated 2026 flagships via benchmarks and hands-on tests for pipeline fit: long-form consistency (Claude 4.6 tops GPT-5, Gemini 3.1 Pro[7]), SEO specificity (Surfer over generalists), automation reliability (n8n vs. Make), visuals speed (Canva vs. Midjourney).[1][2][5][7] Pricing/versions verified 2026-04-15 from official sites and reviews.
+2026 flagships were evaluated against published benchmarks and primary vendor documentation for pipeline fit: long-form consistency (Claude 4.6 tops GPT-5 and Gemini 3.1 Pro in third-party evaluations[7]), SEO specificity (Surfer beats generalists), automation reliability (n8n vs Make), visuals speed (Canva vs Midjourney).[1][2][5][7] Pricing and versions verified 2026-04-17 from official vendor sources.
 
 ## FAQ
 

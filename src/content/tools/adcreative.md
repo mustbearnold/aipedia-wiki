@@ -7,7 +7,7 @@ category: ai-seo
 secondary_categories: [ai-design, ai-image]
 company: adcreative-ai
 url: https://adcreative.ai
-pricing_model: subscription
+pricing_model: paid
 price_range: "$29-$599/month"
 status: active
 launched: 2021-03

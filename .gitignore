@@ -34,3 +34,10 @@ pnpm-debug.log*
 # src/data/_meta/   # intentionally NOT gitignored
 .claude/
 .indexnow-key
+
+# Governing doctrine — internal only, never push to GitHub.
+# This file defines editorial identity, trust model, scoring philosophy,
+# and disclosure rules. Use as the source of truth for any agent or editor
+# working on the site. Must stay private to avoid gaming by vendors.
+aipediawiki_bible.md
+trust_cleanup_task.md
