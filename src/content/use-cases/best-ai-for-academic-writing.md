@@ -42,7 +42,7 @@ Limitations include occasional verbosity requiring editing and no native real-ti
 
 ### 2. ChatGPT
 
-ChatGPT, using OpenAI's GPT-5.4 model, handles diverse academic tasks from brainstorming outlines to code for data analysis in papers. It generates text, analyzes images of charts, and supports voice for dictating ideas. Integration with tools like Sora 2 aids figure creation, though text remains core. It formats references in APA or MLA and checks plagiarism phrasing.[2][5]
+ChatGPT, using OpenAI's GPT-5.4 model, handles diverse academic tasks from brainstorming outlines to code for data analysis in papers. It generates text, analyzes images of charts, and supports voice for dictating ideas. Native GPT Image 1.5 aids figure creation, though text remains core. It formats references in APA or MLA and checks plagiarism phrasing.[2][5]
 
 Pricing: Free tier with GPT-5.4 access (limited queries), Plus $20/month for more usage and file uploads, Pro $200/month for unlimited advanced features. API at $2.50/million input tokens, $10/million output.[1][2]
 

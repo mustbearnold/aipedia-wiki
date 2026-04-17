@@ -51,7 +51,7 @@ HeyGen Creator generates talking-head avatar videos from scripts for faceless ch
 
 ## Runway Standard ($15/mo)
 
-Runway Standard creates b-roll clips from text like "hands typing, office, soft light" for 10-minute video gaps. Gen-4 model produces usable 10-second clips; combine 8-10 per video. Standard ($15/mo, was $12) offers credits for regular use. Pika free (150 credits/mo) for low volume. Outperforms Sora 2 (via ChatGPT Pro $200/mo) on cost for short clips; Kling 3.0 competes but higher entry.[4][3] Style consistency via prompt prefixes ("cinematic, natural light"). Free alternative: Hailuo 2.3 limited tiers. (164 words)
+Runway Standard creates b-roll clips from text like "hands typing, office, soft light" for 10-minute video gaps. Gen-4 model produces usable 10-second clips; combine 8-10 per video. Standard ($15/mo, was $12) offers credits for regular use. Pika free (150 credits/mo) for low volume. Beats Kling 3.0 ($10/mo Standard) on ease for short-clip workflows at the $15 price point.[4][3] Style consistency via prompt prefixes ("cinematic, natural light"). Free alternative: Hailuo 2.3 limited tiers. (164 words)
 
 ## Descript Hobbyist ($12/mo)
 

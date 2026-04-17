@@ -34,7 +34,7 @@ AI tools under $50/month deliver strong performance for writing, coding, researc
 
 ### 1. ChatGPT (OpenAI GPT-5.4)
 
-ChatGPT provides access to GPT-5.4, a multimodal model for text generation, image creation, voice conversations, web browsing, code execution, and file analysis.[6] It suits general users needing one tool for mixed tasks like writing drafts, debugging code, summarizing PDFs, or research with o3 reasoning for verified answers from multiple sources.[2] Pricing starts free with limits; Plus at $20/month unlocks GPT-5.4, higher limits, memory, and integrations like Sora 2 for video.[1][6] Pro costs $200/month but exceeds the budget.
+ChatGPT provides access to GPT-5.4, a multimodal model for text generation, image creation, voice conversations, web browsing, code execution, and file analysis.[6] It suits general users needing one tool for mixed tasks like writing drafts, debugging code, summarizing PDFs, or research with o3 reasoning for verified answers from multiple sources.[2] Pricing starts free with limits; Plus at $20/month unlocks GPT-5.4, higher limits, memory, and integrations.[1][6] Pro costs $200/month but exceeds the budget. For video, pair with Kling 3.0 or Veo 3.
 
 Pros: Handles diverse inputs/outputs; chain-of-thought reduces errors in math/coding; plugin ecosystem.[2][6]  
 Cons: Specialists outperform it in niches like coding or images; rate limits on free tier.[6]  

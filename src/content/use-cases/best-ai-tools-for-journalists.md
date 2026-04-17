@@ -34,7 +34,7 @@ Journalists today need AI tools that accelerate research, verify facts, synthesi
 
 ### 1. ChatGPT (GPT-5.4) - Best for General Journalism Workflows
 
-ChatGPT with GPT-5.4 is the most broadly capable AI tool for journalists[1]. It handles text generation, document analysis, image creation, voice conversations, real-time web browsing, and code execution in one interface[1]. For journalism, this means you can upload PDFs of research materials, ask it to extract key quotes and data points, draft article sections, and generate supporting visuals without switching tools. The integration with Sora 2 video generation enables multimedia storytelling directly from your research[3]. The weakness is that specialist tools outperform it in individual categories, but for daily journalism work spanning multiple tasks, the versatility justifies the cost.
+ChatGPT with GPT-5.4 is the most broadly capable AI tool for journalists[1]. It handles text generation, document analysis, image creation, voice conversations, real-time web browsing, and code execution in one interface[1]. For journalism, this means you can upload PDFs of research materials, ask it to extract key quotes and data points, draft article sections, and generate supporting visuals without switching tools. For video storytelling, journalists pair ChatGPT with Kling 3.0 or Veo 3 separately. The weakness is that specialist tools outperform it in individual categories, but for daily journalism work spanning multiple tasks, the versatility justifies the cost.
 
 **Pricing:** Free tier with limited access; Plus $20/month for priority access and more features; Pro $200/month for advanced capabilities[1][2].
 
