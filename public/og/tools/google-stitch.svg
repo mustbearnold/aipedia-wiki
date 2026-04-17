@@ -16,7 +16,7 @@
   <text x="80" y="135" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="500" fill="#9ca3af">AI Design</text>
   <g transform="translate(80, 180)">
     <rect x="0" y="0" width="100" height="100" rx="18" fill="#ffffff" opacity="0.04"/>
-    <image href="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNTYiIGhlaWdodD0iMjU2IiB2aWV3Qm94PSIwIDAgMjU2IDI1NiI+CiAgPHJlY3Qgd2lkdGg9IjI1NiIgaGVpZ2h0PSIyNTYiIHJ4PSI0OCIgZmlsbD0iI2EzZTYzNSIvPgogIDx0ZXh0IHg9IjEyOCIgeT0iMTI4IiBmb250LWZhbWlseT0ic3lzdGVtLXVpLCAtYXBwbGUtc3lzdGVtLCAnU2Vnb2UgVUknLCBSb2JvdG8sIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTEwIiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjMGIwYTE0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCI+R1M8L3RleHQ+Cjwvc3ZnPg==" x="10" y="10" width="80" height="80" preserveAspectRatio="xMidYMid meet"/>
+    <image href="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMjU2IiBoZWlnaHQ9IjI1NiIgdmlld0JveD0iMCAwIDI1NiAyNTYiPg0KICA8cmVjdCB3aWR0aD0iMjU2IiBoZWlnaHQ9IjI1NiIgcng9IjQ4IiBmaWxsPSIjYTNlNjM1Ii8+DQogIDx0ZXh0IHg9IjEyOCIgeT0iMTI4IiBmb250LWZhbWlseT0ic3lzdGVtLXVpLCAtYXBwbGUtc3lzdGVtLCAnU2Vnb2UgVUknLCBSb2JvdG8sIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTEwIiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjMGIwYTE0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCI+R1M8L3RleHQ+DQo8L3N2Zz4=" x="10" y="10" width="80" height="80" preserveAspectRatio="xMidYMid meet"/>
   </g>
   <text x="210" y="270" font-family="Inter, system-ui, sans-serif" font-size="76" font-weight="800" fill="#fafafa">Google Stitch</text>
   <text x="210" y="310" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="500" fill="#9ca3af">google</text>
@@ -25,7 +25,7 @@
   </foreignObject>
   <g transform="translate(960, 80)">
     <rect x="0" y="0" width="160" height="160" rx="20" fill="rgba(167,139,250,0.10)" stroke="rgba(167,139,250,0.35)" stroke-width="2"/>
-    <text x="80" y="100" font-family="Inter, system-ui, sans-serif" font-size="64" font-weight="800" text-anchor="middle" fill="#fbbf24">7.5</text>
+    <text x="80" y="100" font-family="Inter, system-ui, sans-serif" font-size="64" font-weight="800" text-anchor="middle" fill="#fbbf24">7.8</text>
     <text x="80" y="130" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="500" text-anchor="middle" fill="#9ca3af">/10 SCORE</text>
   </g>
   <text x="80" y="570" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="500" fill="#6b7280">Independent editorial review · Verified Apr 2026</text>
