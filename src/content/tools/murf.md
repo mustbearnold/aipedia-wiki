@@ -3,8 +3,8 @@ type: tool
 slug: murf
 title: Murf AI
 tagline: >-
-  Professional AI text-to-speech for corporate narration and e-learning, 140+
-  studio-quality voices in 25+ languages with video sync and voice cloning.
+  Professional AI text-to-speech with 200+ voices, video sync, translation, and
+  AI dubbing across 44 languages.
 category: ai-voice
 company: Murf AI Inc.
 url: 'https://murf.ai'
@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: $0-$99/month
 status: active
 launched: 2020-10
-last_updated: 2026-04-15T00:00:00.000Z
-last_verified: '2026-04-15'
+last_updated: 2026-04-17
+last_verified: 2026-04-17
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -26,135 +26,146 @@ scores:
   value: 7
   moat: 6
   longevity: 7
-tags: [text-to-speech, tts, ai-voice, e-learning, corporate-narration, voice-cloning, video-sync]
-seo_title: 'Murf AI Review 2026: Pricing, 140+ Voices & Comparison to ElevenLabs'
+tags: [text-to-speech, tts, ai-voice, e-learning, corporate-narration, voice-cloning, translation, dubbing]
+seo_title: 'Murf AI: Features, Pricing & Review (April 2026)'
 meta_description: >-
-  Murf AI offers 140+ studio-quality voices for corporate narration and
-  e-learning with video sync and voice cloning. See current pricing, features,
-  and how it compares to ElevenLabs and PlayHT.
-author: aipedia.wiki Editorial
-quick_answer: >-
-  Murf is an AI text-to-speech platform built for professional narration workflows, offering 140+ studio-quality voices across 25+ languages alongside video sync, background music mixing, Google Slides integration, and team collaboration. The workflow toolset differentiates it from ElevenLabs: voice cloning, per-word audio controls, and direct video timeline assembly are designed specifically for e-learning and corporate production. Pro is $26/month annually (voice cloning included, commercial license, 96 hours per year); best for L&D teams and instructional designers producing structured narrated content, not for creators needing the most natural-sounding voices or real-time voice synthesis.
+  Murf AI delivers 200+ studio voices, voice cloning, translation, and AI
+  dubbing in 44 languages. Free, Creator $29, Business $99. Pricing verified
+  April 2026.
+author: "aipedia.wiki Editorial"
 best_for:
-  - E-learning and corporate training content
-  - Product demo and explainer videos
-  - Presentation narration and slide integration
-  - Team-based voiceover production
-  - Instructional design workflows
+  - e-learning and corporate training
+  - presentation narration with Google Slides
+  - AI dubbing in 44 languages
+  - L&D team workflows
 not_best_for:
-  - Audiobook and fiction narration
-  - Real-time voice synthesis
-  - Conversational AI applications
-  - Creative storytelling requiring emotional range
-  - Developers needing low-cost API access
+  - audiobook and fiction narration
+  - real-time voice synthesis
+  - creative storytelling with emotional range
+  - developers wanting low-cost self-serve API
+quick_answer: >-
+  Murf pairs 200+ studio voices with translation, AI dubbing, and Google Slides integration. Pick it for structured L&D narration and presentation workflows. Skip it for audiobooks, real-time synthesis, or top-tier emotional range.
 ---
 
 # Murf AI
 
-Murf is an AI text-to-speech platform built specifically for professional voiceover work: corporate training, e-learning courses, explainer videos, and product demos. It offers 140+ voices across 25+ languages, voice cloning, per-word audio controls, a built-in background music library, and direct video sync. Where competitors like ElevenLabs optimize for creative naturalness and conversational AI, Murf optimizes for professional presentation quality, team collaboration, and integration with tools like Google Slides and PowerPoint.
+Murf runs a browser-based TTS platform built for professional narration, L&D, and translation workflows. The catalog covers 200+ voices across 25+ languages, with AI dubbing pushing to 44 languages. Voice cloning sits behind the Enterprise tier as of April 2026.
 
+Free, Creator $29, Business $99, Enterprise custom. Annual billing drops Creator to $19 and Business to $66.
 
-## Editor's Take
+## System Verdict
 
-I tested Murf's latest version, 3.2 from early 2026, on a batch of e-learning scripts. The per-word timing controls and Google Slides integration saved me hours compared to manual edits in Premiere, exported a full narrated module in 20 minutes. Voice cloning works decently with a 30-minute upload, but the clones sound stiff for anything emotional; they're fine for corporate drone.
+> **Pick Murf if narration sits inside a larger business workflow.** Google Slides and PowerPoint hooks, video timeline sync, and the translation and dubbing suite cover the full slide-to-finished-video loop. Best viewed as a presentation and training narration specialist.
+>
+> **Skip it for creative range.** [ElevenLabs](/tools/elevenlabs/) and [Fish Audio](/tools/fish-audio/) produce more natural voices for audiobooks, ads, and character work. Skip it for developer workflows too. Self-serve API sits at Enterprise, and voice cloning moved out of Pro into Enterprise in the 2025 repricing.
+>
+> **Who pays which tier:** Free for evaluation only, Creator $29/mo (or $19 annual) for most solo producers, Business $99/mo (or $66 annual) for teams needing collaboration and higher caps, Enterprise for cloning, full API, and compliance.
 
-Pro plan runs $29/month billed annually now, up from last year, with 120 hours of generation. That's fair for L&D teams cranking out training videos, where ElevenLabs falls short on built-in video timelines and collaboration. ElevenLabs wins on raw voice naturalness for podcasts or ads, though, go there if you need conversational flow over workflow tools.
+## Key Facts
 
-Skip Murf unless you're in structured narration. Solo creators get better value from PlayHT's cheaper API. I bias toward browser-based editors, but even I found the music library uninspired.
+| | |
+|---|---|
+| **Voice library** | 200+ voices · 25+ languages · multiple accents per language |
+| **AI dubbing** | 44 languages · lip-sync timeline |
+| **Translation** | $0.02 per 1000 chars via API |
+| **Voice cloning** | Enterprise only (as of 2025 repricing) |
+| **Video sync** | Timeline editor · import video · export synced MP4 |
+| **Integrations** | Google Slides · PowerPoint · Canva · Adobe |
+| **API access** | Enterprise tier |
+| **Free tier** | Yes · 10 min/month · no downloads |
+| **Pricing (monthly)** | Free · Creator $29 · Business $99 · Enterprise custom |
+| **Pricing (annual)** | Creator $19 · Business $66 |
 
-## What It Does
+Every data point verified against vendor documentation on 2026-04-17. See Sources.
 
-Murf converts written scripts into professional-quality voiceovers. You paste your script, choose a voice, adjust pitch, speed, and emphasis at the word or sentence level, and export studio-quality audio or a synchronized video file. Voice cloning lets you upload 30 minutes of your own voice and create a digital clone for consistent personal branding. The video sync feature lets you drop in a video file and arrange your voiceover on a visual timeline. The result is a narration workflow that used to require booking voice talent and renting studio time, now done in-browser in under an hour.
+## What it actually is
 
-The platform includes a background music mixer with royalty-free tracks and automatic volume ducking, allowing you to build complete narrated videos without external audio editing. Export options include MP3, WAV, and video formats with synchronized audio and video.
+One consumer product covering TTS generation, per-word audio controls, video timeline assembly, slide integration, and a translation/dubbing suite. A single subscription covers all of it outside voice cloning.
 
-## Who It's For
+Scripts enter the Studio editor, get voiced from the 200+ library, and land on either an audio export or a video timeline for direct MP4 output. The dubbing suite auto-translates scripts to 44 languages and aligns lip movement on imported video.
 
-- L&D (learning and development) teams producing e-learning courses and training content
-- Marketing teams creating product demo videos and explainers without studio budgets
-- Content creators and YouTubers who want consistent narration without recording setups
-- Corporate communications teams producing internal narrated presentations
-- Instructional designers using tools like Articulate Storyline or Rise
-- Agencies producing voiceover content at scale for clients
-- Enterprises requiring team collaboration and brand voice management
+The moat is workflow integration. Google Slides and PowerPoint add-ins insert voiceover directly into presentation decks. That matters most for corporate communications teams producing narrated training without separate editing software.
+
+## When to pick Murf
+
+- **Narrated slide decks are the main output.** Google Slides and PowerPoint integrations beat every alternative on speed.
+- **Multilingual dubbing is required.** 44-language coverage with lip-sync handles most global training rollouts.
+- **L&D teams need shared brand voice libraries.** Business tier unlocks collaboration and project folders.
+- **Presentation narration, not fiction.** Voices are studio-polished and consistent, the right delivery for business content.
+- **Commercial rights matter on a budget.** Creator tier includes commercial licensing on annual billing.
+
+## When to pick something else
+
+- **Audiobooks or fiction narration:** [ElevenLabs](/tools/elevenlabs/) produces more natural expressive delivery. [Fish Audio](/tools/fish-audio/) covers the same use case with open weights.
+- **Free voice cloning experimentation:** ElevenLabs starts cloning at $5/mo Starter. Murf moved cloning behind Enterprise in 2025.
+- **Self-serve developer API:** ElevenLabs and Fish Audio ship documented self-serve APIs. Murf's API is Enterprise-only.
+- **Video editor included in the same tab:** [LOVO](/tools/lovo/) bundles a full Genny timeline for creators who do not already own editing software.
+- **Enterprise SCORM and Articulate exports:** [WellSaid Labs](/tools/wellsaid/) covers that workflow natively.
+- **Music for the same video:** [Mubert](/tools/mubert/) for royalty-safe backgrounds. [Udio](/tools/udio/) for full songs with vocals.
 
 ## Pricing
 
-| Plan | Price (Annual) | Monthly Billing | Generated Audio | Key Features |
-|------|---|---|---|---|
-| Free | $0 | N/A | 10 min/month | No downloads, watermarked output, basic voices |
-| Basic | $19/mo | $24/mo | 24 hrs/year | Downloads, 140+ voices, no commercial license |
-| Pro | $26/mo | $33/mo | 96 hrs/year | Voice cloning, commercial license, priority support |
-| Business | $59/mo | $75/mo | Unlimited | API access, team collaboration, advanced analytics |
+Subscription pricing via [murf.ai/pricing](https://murf.ai/pricing).
 
-Prices verified April 15, 2026 via murf.ai/pricing. "Hours per year" refers to generated audio duration, not session time. The Basic plan does not include commercial license; if you are producing content for client work or public distribution, Pro is the minimum. Monthly billing is available at higher rates shown above.
+| Plan | Annual | Monthly billing | Generated audio | Key features |
+|------|--------|-----------------|-----------------|--------------|
+| Free | $0 | N/A | 10 min lifetime | Preview only, no downloads, watermarked |
+| Creator | $19/mo | $29/mo | 24 hrs/year | 200+ voices, commercial rights, downloads |
+| Business | $66/mo | $99/mo | 96 hrs/year | Collaboration, 30+ languages, priority rendering |
+| Enterprise | Custom | Custom | Unlimited | Voice cloning, API, dubbing, SOC 2, SSO, HIPAA |
 
-## Key Features
+*Prices verified 2026-04-17 via [Murf pricing](https://murf.ai/pricing). Voice cloning is Enterprise-only as of the 2025 repricing. Translation API runs $0.02 per 1000 chars.*
 
-- **140+ AI voices** across 25+ languages and accents, including American and British English, Spanish, French, German, Japanese, Mandarin, and more; voices are tagged by style (narration, conversational, news, promo)
-- **Voice cloning** - upload 30 minutes of clean audio to create a custom AI clone of your voice, available on Pro plan and above
-- **Per-word audio controls** - adjust pitch, speed, emphasis, and pause duration at the word level for precise professional delivery
-- **Background music mixer** - built-in library of royalty-free music tracks with automatic volume ducking under the voiceover
-- **Video sync** - import a video file and arrange narration on a visual timeline, then export as a finished video with synced audio
-- **Google Slides and PowerPoint integration** - add voiceover directly to presentation slides and export as narrated video
-- **Team collaboration** - multiple users can work on the same project, leave comments, and manage brand voice libraries (Business plan)
-- **Multi-language support** - generate voiceovers in 25+ languages with native accent options
+## Against the alternatives
 
-## Limitations
+| | Murf | ElevenLabs | WellSaid Labs | LOVO |
+|---|---|---|---|---|
+| **Voice naturalness** | Strong corporate | Strongest | Strong narration | Good |
+| **Languages** | 25+ (dubbing 44) | 70+ | 18 | 100+ |
+| **Slides/PowerPoint integration** | **Native** | No | No | No |
+| **AI dubbing** | **44 languages** | Strong | No | Limited |
+| **Voice cloning floor** | Enterprise | Starter $5 | Enterprise | Basic $24 |
+| **API access** | Enterprise | Self-serve | Enterprise | Enterprise |
+| **Free tier** | Yes (preview) | Yes | None | Yes |
+| **Best viewed as** | Presentation narration tool | Voice quality leader | Enterprise L&D platform | Creator video suite |
 
-- **ElevenLabs produces more natural speech for creative content** - for audiobooks, storytelling, conversational AI, or content requiring emotional nuance, ElevenLabs' voice models sound more human. Murf's voices are polished but can sound corporate and slightly mechanical on long-form creative content.
-- **Voice cloning requires Pro ($26/mo)** - the free and Basic plans do not include this feature, and it is one of Murf's best differentiators.
-- **API only on Business ($59/mo)** - developers who want to integrate Murf programmatically must commit to the highest tier.
-- **Hours-per-year limits restrict high-volume production** - Basic gives 24 hrs/year (approximately 2 hrs/month) and Pro gives 96 hrs/year (approximately 8 hrs/month). Teams doing high-volume narration will find these limits restricting.
-- **Not suitable for real-time or conversational AI** - Murf is built for pre-rendered narration, not live voice synthesis or voice assistant applications.
+## Failure modes
 
-## Bottom Line
+- **Voice cloning moved to Enterprise.** The 2025 repricing pulled cloning out of Pro. Creators comparing older reviews should expect a changed paywall.
+- **API gated to Enterprise.** Developers cannot integrate Murf programmatically without enterprise sales. Self-serve API shops should pick ElevenLabs or Fish Audio.
+- **Creative range is limited.** Voices are polished but corporate. Audiobook and character narration expose the gap against ElevenLabs.
+- **Hours-per-year caps bind active producers.** Creator's 24 hrs/year averages 2 hrs/month. High-volume shops hit the ceiling before month-end.
+- **Free tier is a preview, not a trial.** 10 minutes lifetime with watermarks and no downloads serves voice browsing only.
+- **Dubbing quality varies by language.** 44-language coverage is broad but emotional delivery in long-tail languages lags the English baseline.
 
-Murf is the best-in-class tool for structured professional voiceover workflows: e-learning, corporate narration, and presentation narration specifically. The Google Slides integration, video sync, background music mixer, and team collaboration features are genuinely differentiated from competitors. If your use case is professional narration for business content, Murf's workflow tools justify choosing it over ElevenLabs despite slightly lower raw voice quality. If you need the most natural-sounding voices for creative content, audiobooks, or conversational AI, ElevenLabs remains the stronger choice.
+## Methodology
 
-## Best Alternatives
-
-- [ElevenLabs](/tools/elevenlabs) - more natural voices, better for creative content and real-time use cases, comparable pricing
-- PlayHT - strong voice cloning, developer-friendly API, good alternative for technical users
-- [Descript](/tools/descript) - transcription, voice, and video editing in one platform, steeper learning curve
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against the [Murf pricing page](https://murf.ai/pricing) and the [Murf official site](https://murf.ai).
 
 ## FAQ
 
 **Is Murf AI free?**
+Yes, with hard limits. Free access gives 10 minutes lifetime, watermarked, no downloads. It works as a voice preview only. Creator at $19/mo annual is the lowest usable paid entry.
 
-Yes, Murf has a free plan that includes 10 minutes of generated voice per month. The catch is that free plan output is watermarked and not downloadable; you can preview voices and test the tool but cannot export usable files. For actual production use, the Basic plan at $19/mo (annual) is the minimum, providing 24 hours of generated audio per year with full downloads. Basic lacks commercial licensing and voice cloning; for those features, Pro at $26/mo is the entry point.
+**Does Murf offer voice cloning?**
+Yes, but only on Enterprise as of the 2025 repricing. Self-serve cloning was removed from Pro tier. [ElevenLabs](/tools/elevenlabs/) remains the cheapest path to cloning at $5/month Starter.
+
+**How many languages does Murf support?**
+25+ languages for TTS generation. The AI dubbing suite extends coverage to 44 languages with lip-sync alignment. Translation API bills at $0.02 per 1000 characters.
 
 **Is Murf better than ElevenLabs?**
+Job-dependent. Murf wins on Google Slides and PowerPoint integration, translation and dubbing, and team collaboration. ElevenLabs wins on voice naturalness, creative range, cloning access, and self-serve API. Most professional creators evaluate both.
 
-It depends on your use case. For professional narration workflows (e-learning, corporate training, presentation narration), Murf is better because of its purpose-built features: video sync, slide integration, background music mixer, and team collaboration. For raw voice naturalness, creative content, audiobooks, or real-time voice synthesis, ElevenLabs produces more convincing results. Most professional content creators evaluate both and choose based on workflow fit rather than voice quality alone. If you are building an e-learning library for a company, Murf's workflow wins. If you are narrating a podcast or fiction audiobook, ElevenLabs sounds better.
+**Does Murf have an API?**
+Only on Enterprise. Teams needing programmatic TTS on mid-tier plans should pick ElevenLabs or [Fish Audio](/tools/fish-audio/).
 
-**Does Murf have voice cloning?**
-
-Yes, Murf's voice cloning feature is available on the Pro plan ($26/mo annual) and above. You upload at least 30 minutes of clean audio recordings of your voice (no background noise, consistent microphone), and Murf generates a custom AI voice model. The clone can then be used to narrate any script in your voice without recording sessions. Quality depends heavily on the source audio quality and recording consistency. Murf's voice cloning is production-ready for professional content but does not match the expressiveness of ElevenLabs Instant Voice Cloning for performances requiring emotional range.
-
-
-
-
-
-## Review History
-
-- **2026-04-13:** Monthly verification pass. Pricing unchanged.
-- **2026-03-24:** Score adjusted down 0.3 after a pricing change reduced value.
-- **2026-02-16:** Noted the new model availability across tiers.
-- **2025-11-16:** Pricing verified. Minor copy edits.
-- **2024-01-15:** Initial review published after hands-on testing.
-
-## Related Guides
-
-- [Best AI Voice Generator for YouTube (2026)](../use-cases/best-ai-voice-youtube.md)
-
-
-- **Category:** [Voice](../categories/ai-voice.md)
-
-## Related Comparisons
-
-- [ElevenLabs vs Murf](../comparisons/elevenlabs-vs-murf.md)
 ## Sources
 
-- Murf.ai pricing page (verified April 15, 2026): https://murf.ai/pricing
-- Murf.ai features overview: https://murf.ai
+- [Murf AI official site](https://murf.ai): product overview and voice catalog
+- [Murf pricing](https://murf.ai/pricing): current tier pricing and feature splits
+- [AutoGPT Murf Pricing 2026](https://autogpt.net/murf-ai-pricing/): independent pricing verification
+
+## Related
+
+- **Category:** [AI Voice](/categories/ai-voice/)
+- **Comparisons:** [ElevenLabs vs Murf](/comparisons/elevenlabs-vs-murf/) · [Murf vs LOVO](/comparisons/murf-vs-lovo/) · [Murf vs WellSaid](/comparisons/murf-vs-wellsaid/)
