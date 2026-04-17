@@ -3,7 +3,7 @@ type: category
 slug: ai-image
 title: AI Image Generation
 description: Text-to-image, image editing, and upscaling AI. Midjourney, Flux, Ideogram, Leonardo, Adobe Firefly, Stable Diffusion, Recraft, Krea, Magnific, Playground, Freepik.
-tool_count: 17
+tool_count: 18
 seo_title: "Best AI Image Tools (2026), aipedia.wiki"
 meta_description: "Midjourney, Flux, and Ideogram lead AI image generation in 2026. Compare 17 tools including Recraft, Krea, and Magnific for quality, pricing, text rendering, and creative upscaling. Updated April 2026."
 author: "aipedia.wiki Editorial"

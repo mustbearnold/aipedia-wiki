@@ -3,7 +3,7 @@ type: category
 slug: ai-coding
 title: AI Coding Assistants
 description: AI-powered code editors and autonomous coding agents. Cursor, Claude Code, GitHub Copilot, Windsurf, Devin, Replit, Aider, Antigravity, Trae, Same.dev, Cline, Continue, Zed, Bolt, Lovable, v0.
-tool_count: 20
+tool_count: 22
 seo_title: "Best AI Coding Tools (2026), aipedia.wiki"
 meta_description: "Cursor, Claude Code, and GitHub Copilot lead AI coding in 2026. Compare 20 tools including Antigravity (Google), Trae (ByteDance), and Same.dev across pricing, autonomy, and IDE integration. Updated April 2026."
 author: "aipedia.wiki Editorial"
