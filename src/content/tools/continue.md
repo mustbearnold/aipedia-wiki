@@ -2,16 +2,16 @@
 type: tool
 slug: continue
 title: Continue
-tagline: Open-source AI coding extension for VS Code and JetBrains, bring your own models, full local control.
+tagline: Open-source AI coding extension for VS Code and JetBrains. BYOK for any model, Continue Hub for shared agents, MIT licensed.
 category: ai-coding
 company: continue-dev
 url: https://continue.dev
-pricing_model: open-source
-price_range: "Free"
+pricing_model: freemium
+price_range: "$0-$20/seat/month"
 status: active
 launched: 2023-05
-last_updated: 2026-04-15
-last_verified: 2026-04-15
+last_updated: 2026-04-17
+last_verified: 2026-04-17
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -24,118 +24,154 @@ scores:
   value: 10
   moat: 5
   longevity: 8
-tags: [open-source, byok, local-model, ai-coding, vscode, jetbrains, self-hosted]
-seo_title: "Continue: Open-Source AI Coding Extension Review (2026)"
-meta_description: "Continue is a free, open-source AI coding extension for VS Code and JetBrains. Use any model, Claude Opus 4.6, GPT-5.4, or local LLMs. MIT license. Review 2026."
+tags: [open-source, byok, local-model, ai-coding, vscode, jetbrains, self-hosted, continue-hub]
+seo_title: "Continue: Open-Source AI Coding Extension Review (April 2026)"
+meta_description: "Continue is a free, MIT-licensed AI coding extension for VS Code and JetBrains. Solo free + BYOK, Team $20/seat with $10 credits, Company custom. Use Claude Opus 4.7, GPT-5.4, Gemini, or local Ollama models. Verified April 2026."
 author: "aipedia.wiki Editorial"
+best_for:
+  - BYOK developers
+  - privacy-conscious workflows with local models
+  - multi-IDE teams (VS Code + JetBrains + Vim)
+  - teams with existing API agreements (Bedrock, Azure, Vertex)
+  - open-source contributors
+not_best_for:
+  - zero-configuration setups
+  - users wanting bundled frontier models
+  - individuals who just want autocomplete
 quick_answer: >-
-  Continue is a free, MIT-licensed open-source AI coding extension for VS Code and JetBrains, developed by Continue.dev, that acts as a flexible IDE layer connecting to any model you choose, including Claude Opus 4.6, GPT-5.4, Gemini 3.1 Pro, or local models via Ollama, without providing AI of its own. The extension is completely free; model costs are paid directly to your chosen provider, or eliminated entirely with a local Ollama model. Best for developers who want full model choice, zero subscription lock-in, and the option to keep code entirely on-device; not the right fit for developers who want an out-of-the-box experience without configuration work, where GitHub Copilot at $10/month is simpler and more capable from day one.
+  Pick Continue for a free, MIT-licensed AI coding extension with full model choice across VS Code, JetBrains, and Vim. Skip it if you want plug-and-play day-one setup, where GitHub Copilot at $10/mo is simpler. Team tier at $20/seat adds shared agents and governance.
+price_history:
+  - date: 2026-03-01
+    plan: "Team"
+    price: "$20/seat/mo"
+    note: "Team tier restructured with $10 per-seat frontier-model credits included"
+  - date: 2026-04-15
+    plan: "Solo"
+    price: "$0"
+    note: "Solo remains free with full open-source extension access"
 ---
 
 # Continue
 
-Continue is a free, open-source AI coding assistant extension for VS Code and JetBrains, developed by Continue.dev and released under the MIT license. Unlike Copilot or Cursor, Continue does not provide AI itself; instead, it acts as a flexible IDE layer that connects to any model you choose: Claude Opus 4.6 via API, GPT-5.4, Gemini 3.1 Pro, Mistral Large 2, or local models running through Ollama or LM Studio [https://continue.dev](https://continue.dev). This makes it the most cost-controllable option available: the extension is free, and you pay only for the API calls you make (or nothing, if you run a local model). The key differentiator over GitHub Copilot is full model choice, full data control, and zero subscription lock-in [https://docs.continue.dev](https://docs.continue.dev).
+An open-source AI coding extension for VS Code and JetBrains, developed by Continue.dev under the MIT license. Unlike Copilot or Cursor, Continue ships no model of its own. It is a flexible IDE layer that connects to any model you pick.
 
+Claude Opus 4.7, GPT-5.4, Gemini 3.1 Pro, Mistral Large, or local models via Ollama, LM Studio, or vLLM all route through the same extension interface.
 
-## Editor's Take
+## System Verdict
 
-I installed Continue 1.2.7 in VS Code last week, hooked it to a local Llama 3.1 405B via Ollama, and spent three hours tweaking the config.json for codebase indexing. Autocomplete hits in under 200ms on my M3 Mac, which beats Cursor's occasional lag on GPT-5.4, and the @codebase context pulls full-file awareness without phoning home, zero data leaks, unlike Copilot's GitHub telemetry.
+> **Pick Continue for maximum model choice with zero vendor lock-in.** Extension is free. Solo tier stays BYOK. Team tier at $20/seat/mo adds shared agents, centralized governance, and $10 of frontier-model credits per seat. Company tier covers custom SSO, BYOK for API keys, and SLAs.
+>
+> **Skip it for out-of-the-box plug-and-play.** [GitHub Copilot](/tools/github-copilot/) at $10/mo works from day one with less configuration. [Cursor](/tools/cursor/) at $20/mo bundles models and visual polish.
+>
+> **Who pays what:** Solo stays free with your own keys. Team $20/seat/mo is right for small teams wanting shared agents and governance. Company custom covers enterprise compliance.
 
-The real win is model swapping: Claude Opus 4.6 for refactors, Mistral Large 2 for quick fixes, all free if you're local. Cursor users pay $20/month for less flexibility; Continue costs nothing beyond your hardware. But skip it if you hate YAML configs or want zero setup, Copilot's plug-and-play wins there.
+## Key Facts
 
-Privacy obsessives and tinkerers, this is your tool. Everyone else, stick to Cursor unless you're budget-constrained. I've bias toward open-source, but the numbers don't lie: 10/10 value.
+| | |
+|---|---|
+| **License** | MIT, open source |
+| **Primary IDEs** | VS Code · JetBrains (IntelliJ, PyCharm, WebStorm) · Vim/Neovim |
+| **Model providers** | Anthropic · OpenAI · Google · Mistral · AWS Bedrock · Azure OpenAI · GCP Vertex · Ollama · LM Studio · vLLM |
+| **Continue Hub** | Shared agents, slash commands, rules, MCPs |
+| **@codebase context** | Project indexing with embeddings |
+| **Custom slash commands** | Yes, defined in config |
+| **Agentic tools** | `@terminal`, `@edit`, custom functions |
+| **Solo pricing** | $0, full OSS extension |
+| **Team pricing** | $20/seat/mo with $10/seat frontier-model credits |
+| **Company pricing** | Custom with SSO, BYOK keys, SLAs |
 
-## What It Does
+Every data point above was verified against vendor documentation on 2026-04-17. See Sources.
 
-Continue adds a chat panel, autocomplete, and inline editing commands to your existing VS Code or JetBrains IDE. You configure which model to use per task; for example, a fast local model for autocomplete and a larger cloud model like Claude Opus 4.6 for complex reasoning. The `@codebase` command indexes your project so the model can answer questions with full file context, including support for embeddings via models like bge-large-en-v1.5.
+## What it actually is
 
-Inline editing lets you highlight code and describe the change you want, with support for multi-file edits and diff reviews. Continue also supports custom slash commands (reusable prompts), context providers that pull in documentation, GitHub issues, or web search results, and agentic workflows through tools like `@terminal` and custom functions. All configuration lives in a local `~/.continue/config.json` file, and the extension never stores your code on Continue's servers [https://github.com/continuedev/continue](https://github.com/continuedev/continue).
+An IDE extension that adds a chat panel, autocomplete, and inline edit commands. Model choice is per-task. A fast local model handles autocomplete; a larger cloud model handles complex reasoning. Both live in the same interface.
 
-## Who It's For
+`@codebase` indexes the project with embeddings. The extension answers architecture and usage questions with full file context. Inline editing takes highlighted code plus a natural-language change request.
 
-- Developers who want BYOK (bring your own key) to avoid per-seat subscription costs
-- Privacy-conscious developers who need to ensure code never reaches a third-party server, achievable by using local models via Ollama
-- Experimenters who want to swap models freely to compare quality across providers like Anthropic, OpenAI, and Google
-- Teams on a budget who have API access through other agreements (e.g., AWS Bedrock, Azure OpenAI, Google Vertex AI)
-- Open-source contributors who want a fully auditable, hackable coding assistant
-- Developers in JetBrains IDEs who lack the Cursor option and find Copilot's JetBrains integration weaker
+Continue Hub is the shared layer. Agents, slash commands, rules, and MCP servers publish once and install across team members. Solo developers use it for personal reusable prompts; teams use it for governance and consistency.
+
+Context providers pull documentation, GitHub issues, terminal output, web search, and images. Agentic tools like `@terminal` and custom functions cover multi-step runs. Config lives in `~/.continue/config.json` and is version-controllable.
+
+## When to pick Continue
+
+- **You want full model choice without IDE lock-in.** Swap Opus 4.7 for Mistral Large at will. Run on-device with Ollama when compliance requires it.
+- **Your team spans VS Code, JetBrains, and Vim.** Continue ships on all three; Cursor does not.
+- **You already have API access through Bedrock, Azure, or Vertex.** Route usage through existing enterprise agreements.
+- **Data residency is non-negotiable.** Local Ollama or LM Studio keeps code entirely on-device.
+- **You want Team governance without losing BYOK.** Shared agents and slash commands via Continue Hub.
+
+## When to pick something else
+
+- **Fastest plug-and-play setup:** [GitHub Copilot](/tools/github-copilot/) at $10/mo.
+- **Polished IDE with bundled models:** [Cursor](/tools/cursor/) at $20/mo.
+- **VS Code autonomous agent with approval gates:** [Cline](/tools/cline/). Plan/Act modes, free BYOK.
+- **CLI workflow with auto git commits:** [Aider](/tools/aider/). Free, BYOK, terminal-only.
+- **Terminal-first agentic runs:** [Claude Code](/tools/claude/) on Max 5x at $100/mo.
 
 ## Pricing
 
-| Plan | Price | Key Limits |
-|------|-------|-----------|
-| Extension | Free | MIT open-source, no usage limits |
-| Model costs | Pay-per-use | You pay your own API provider directly |
-| Local models | $0 | Use Ollama, LM Studio, or vLLM, no API costs |
+Pricing via [continue.dev/pricing](https://www.continue.dev/pricing).
 
-> **Verification note:** Continue extension is free and open-source. Model costs depend on your chosen provider. Prices verified 2026-04-15 at [continue.dev](https://continue.dev).
+| Plan | Price | Features | Who's it for |
+|------|-------|----------|--------------|
+| Solo | $0 | Full open-source extension · BYOK any provider | **Individuals on BYOK** |
+| Starter | $3/MTok input + output | Pay-as-you-go · create and run agents · Slack/Sentry/Snyk integrations | Pay-as-you-go users |
+| Team | $20/seat/mo | $10/seat frontier credits · team agent management · private agent sharing · usage controls · Gmail/GitHub SSO | Small teams |
+| Company | Custom | Custom SSO (SAML/OIDC) · BYOK API keys · commitment options · invoicing · SLAs | Compliance-heavy orgs |
 
-## Key Features
+*Prices verified 2026-04-17 via [Continue pricing](https://www.continue.dev/pricing). Solo stays free and BYOK; model costs are paid directly to the chosen provider, or eliminated entirely with a local Ollama model.*
 
-- **Any model, any provider:** connect to Anthropic (Claude Opus 4.6), OpenAI (GPT-5.4), Google (Gemini 3.1 Pro), Mistral, Ollama, LM Studio, AWS Bedrock, Azure OpenAI, Google Vertex AI, or self-hosted vLLM servers
-- **Local model support:** run completions fully on-device via Ollama with no data leaving your machine; supports GPU acceleration
-- **@codebase context:** indexes your project with embeddings and retrieves relevant files to answer architecture and usage questions
-- **Custom slash commands:** define reusable prompts (e.g., `/test`, `/explain`, `/document`) in your config.json
-- **Context providers:** pull in docs, GitHub issues, terminal output, web search, or images alongside your code context
-- **Agentic tools:** use `@terminal`, `@edit`, custom functions, and multi-step reasoning for complex tasks
-- **Multi-IDE support:** VS Code, JetBrains (IntelliJ, PyCharm, WebStorm), Vim/Neovim
-- **Fully open-source (MIT):** inspect, fork, or contribute to the codebase at [github.com/continuedev/continue](https://github.com/continuedev/continue) (v0.8.34 as of April 2026)
+## Against the alternatives
 
-## Limitations
+| | Continue Solo | GitHub Copilot | Cursor Pro |
+|---|---|---|---|
+| **Price** | Free + BYOK | $10/mo bundled | $20/mo bundled |
+| **Model choice** | Any BYOK provider | GitHub-hosted models | Mostly bundled |
+| **IDE support** | VS Code · JetBrains · Vim | VS Code · JetBrains · Visual Studio | VS Code fork |
+| **Setup time** | 15-30 min | Under 5 min | Under 10 min |
+| **Local model option** | Yes via Ollama | No | Partial |
+| **Best viewed as** | Flexible BYOK IDE layer | Fastest plug-and-play | Polished bundled IDE |
 
-- **No AI included.** You must configure and pay for your own model. This works well for experienced users but adds friction for developers who want something that works out of the box.
-- **Autocomplete quality depends on your model choice.** A misconfigured or slow local model produces poor completions. Matching model to task takes experimentation.
-- **Setup overhead.** First-time configuration (API keys, model selection, context providers, embeddings) takes 15-30 minutes, more than installing Copilot.
-- **No built-in hosting.** Unlike Cursor or Copilot, there is no Continue-hosted model; you manage all infrastructure.
-- **Community-driven support.** While documentation is solid, support relies on GitHub issues and Discord rather than dedicated enterprise channels.
+## Failure modes
 
-## Bottom Line
+- **No AI included.** Must configure and pay for your own model. Adds friction versus Copilot.
+- **Autocomplete quality tracks the chosen model.** A slow or misconfigured local model produces poor completions. Matching model to task takes trial runs.
+- **Setup overhead.** First-time configuration (keys, model selection, context providers, embeddings) runs 15-30 minutes.
+- **No built-in hosting.** Unlike Cursor or Copilot, no Continue-managed model. All infrastructure is user-managed.
+- **Community-driven support.** Documentation is solid. Support runs through GitHub issues and Discord, not dedicated channels.
+- **Hub governance is new.** Team-level policy controls are improving but younger than enterprise-grade competitors.
+- **Moat is low.** Openness and flexibility are the bet. No proprietary model advantage.
+- **Model provider limits apply.** Rate limits, context windows, and quality floors are set by the chosen provider, not by Continue.
 
-Continue earns a perfect 10/10 value score since it is completely free, with improved utility (8/10) from better agentic tools and embedding support in 2026. The moat remains low (5/10) because it competes on openness and flexibility, not proprietary AI, though its multi-IDE support and active community (12k+ GitHub stars) add defensibility. It remains the best option for developers who want zero subscription cost, full model flexibility, or full data control.
+## Methodology
 
-## Best Alternatives
-
-| Tool | Price | Key Difference |
-|------|-------|----------------|
-| GitHub Copilot | $10/mo | Better out-of-box experience, chat + agent mode included, stronger autocomplete |
-| Cursor | $20/mo | Full AI IDE with built-in models, no setup required |
-| Codeium | Free | Also free with included AI models, less configuration |
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [Continue pricing](https://www.continue.dev/pricing), [Continue docs](https://docs.continue.dev), and the [Continue GitHub repo](https://github.com/continuedev/continue).
 
 ## FAQ
 
-**Does Continue cost anything?**  
-The Continue extension is completely free and open-source under the MIT license. You pay only for model API usage, or nothing if you use local models via Ollama or LM Studio [https://continue.dev/pricing](https://continue.dev/pricing).
+**Does Continue cost anything?**
+The extension is free under MIT. Solo tier stays BYOK: you pay your provider directly. Team at $20/seat/mo adds governance and $10/seat of frontier-model credits. Company tier covers SSO, BYOK keys, and SLAs.
 
-**Can I use Continue without sending code to the cloud?**  
-Yes. Configure Continue to use a local model through Ollama, LM Studio, or vLLM and your code never leaves your machine. This remains one of Continue's strongest use cases [https://docs.continue.dev/reference](https://docs.continue.dev/reference).
+**Can I use Continue fully offline?**
+Yes. Configure a local Ollama, LM Studio, or vLLM model and code never leaves the machine. This is one of Continue's strongest compliance stories.
 
-**How does Continue compare to GitHub Copilot?**  
-Copilot is easier to set up and includes high-quality autocomplete out of the box. Continue is free and gives you full control over which model you use (Claude Opus 4.6, GPT-5.4, etc.). If you already pay for API access elsewhere, Continue can be cheaper overall.
+**Continue vs GitHub Copilot, which is better?**
+Copilot is easier on day one and ships quality autocomplete bundled. Continue is free and gives full control over model, provider, and data flow. Teams with existing API contracts or strict data-residency needs usually come out cheaper and more flexible on Continue.
 
+**Which IDEs does Continue support?**
+VS Code, JetBrains (IntelliJ, PyCharm, WebStorm), and Vim/Neovim. The extension is near-feature-parity across all three.
 
+**What is Continue Hub?**
+A shared registry for agents, slash commands, rules, and MCP servers. Publish once, install across team members. Solos use it for reusable personal prompts; teams use it for consistency and governance.
 
-
-## Review History
-
-- **2026-04-02:** Pricing verified. Clarified pricing for annual vs monthly billing.
-- **2026-03-15:** Score bumped after the competitive field shifted around pricing.
-- **2026-01-16:** Noted the new model availability across tiers.
-- **2025-10-16:** Pricing verified. Minor copy edits.
-- **2024-01-15:** First published review after two weeks of use.
-
-## Related Comparisons
-
-- [Claude Code vs Continue](../comparisons/claude-code-vs-continue.md)
-- [Continue vs Cursor](../comparisons/continue-vs-cursor.md)
-- [Continue vs Devin](../comparisons/continue-vs-devin.md)
-- [Continue vs GitHub Copilot](../comparisons/continue-vs-github-copilot.md)
-- [Continue vs Val Town](../comparisons/continue-vs-val-town.md)
-
-
-- **Category:** [Coding](../categories/ai-coding.md)
 ## Sources
 
-- [Official website](https://continue.dev), verified 2026-04-15
-- [GitHub repository](https://github.com/continuedev/continue), 12.4k stars, v0.8.34 (2026-04-10), verified 2026-04-15
-- [Continue documentation](https://docs.continue.dev), verified 2026-04-15
-```
+- [Continue pricing](https://www.continue.dev/pricing): Solo, Team, Company plans verified 2026-04-17
+- [Continue docs](https://docs.continue.dev): configuration, context providers, models
+- [GitHub: continuedev/continue](https://github.com/continuedev/continue): source code and releases
+- [continue.dev](https://continue.dev): product overview
+
+## Related
+
+- **Category:** [AI Coding](/categories/ai-coding/)
+- **Comparisons:** [Claude Code vs Continue](/comparisons/claude-code-vs-continue/) · [Continue vs Cursor](/comparisons/continue-vs-cursor/) · [Continue vs Devin](/comparisons/continue-vs-devin/) · [Continue vs GitHub Copilot](/comparisons/continue-vs-github-copilot/) · [Continue vs Val Town](/comparisons/continue-vs-val-town/)
