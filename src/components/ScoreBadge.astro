@@ -1,14 +1,85 @@
 ---
 interface Props {
   score: number;
-  /** When true, render as a full-width sidebar header bar instead of a compact pill. */
+  /** "pill" = compact inline, "sidebar" = full-width sidebar header, "hero" = big radial card for the tool-page hero. */
+  variant?: 'pill' | 'sidebar' | 'hero';
+  /** Optional legacy alias — if true, renders sidebar variant. */
   fullWidth?: boolean;
+  /** Optional tier label shown below the number in hero variant. */
+  tier?: string;
 }
 
-const { score, fullWidth = false } = Astro.props;
+const { score, variant, fullWidth = false, tier } = Astro.props;
+const resolvedVariant = variant ?? (fullWidth ? 'sidebar' : 'pill');
+
+// Score-to-color palette (shared across variants). Higher scores skew emerald/violet,
+// lower scores amber/rose.
+const palette =
+  score >= 9 ? { from: '#34d399', to: '#10b981', label: 'Category Leader' } :
+  score >= 8 ? { from: '#a78bfa', to: '#60a5fa', label: 'Strong Choice' } :
+  score >= 6.5 ? { from: '#60a5fa', to: '#38bdf8', label: 'Solid' } :
+  score >= 5 ? { from: '#fbbf24', to: '#f97316', label: 'Mixed' } :
+  { from: '#f87171', to: '#e11d48', label: 'Weak' };
+
+const tierLabel = tier ?? palette.label;
+
+// For the hero radial: compute arc-dashoffset based on score.
+const RADIUS = 52;
+const CIRC = 2 * Math.PI * RADIUS;
+const fill = Math.max(0, Math.min(1, score / 10));
+const offset = CIRC * (1 - fill);
+const gradId = `score-grad-${Math.random().toString(36).slice(2, 8)}`;
 ---
 
-{fullWidth ? (
+{resolvedVariant === 'hero' && (
+  <div
+    class="hero-score not-prose relative flex items-center gap-4 rounded-2xl border border-[var(--border)] px-4 py-3"
+    style={`background: radial-gradient(120% 120% at 100% 0%, ${palette.from}22 0%, transparent 55%), var(--bg-card);`}
+    aria-label={`Editorial score: ${score} out of 10`}
+  >
+    <div class="relative shrink-0 w-[96px] h-[96px]">
+      <svg width="96" height="96" viewBox="0 0 120 120" class="-rotate-90" aria-hidden="true">
+        <defs>
+          <linearGradient id={gradId} x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color={palette.from} />
+            <stop offset="100%" stop-color={palette.to} />
+          </linearGradient>
+        </defs>
+        <circle cx="60" cy="60" r={RADIUS} stroke="var(--border)" stroke-width="8" fill="none" />
+        <circle
+          cx="60" cy="60" r={RADIUS}
+          stroke={`url(#${gradId})`}
+          stroke-width="8"
+          stroke-linecap="round"
+          fill="none"
+          stroke-dasharray={CIRC}
+          stroke-dashoffset={offset}
+          style="filter: drop-shadow(0 0 8px rgba(167,139,250,0.25));"
+        />
+      </svg>
+      <div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+        <div class="text-2xl font-bold leading-none tabular-nums bg-gradient-to-br bg-clip-text text-transparent"
+             style={`background-image: linear-gradient(135deg, ${palette.from}, ${palette.to});`}>
+          {score}
+        </div>
+        <div class="text-[9px] uppercase tracking-wider text-[var(--text-muted)] mt-0.5 font-semibold">/ 10</div>
+      </div>
+    </div>
+    <div class="flex-1 min-w-0">
+      <div class="text-[10px] uppercase tracking-[0.08em] font-bold leading-tight mb-1" style={`color: ${palette.from}`}>
+        {tierLabel}
+      </div>
+      <div class="text-[11px] text-[var(--text-muted)] leading-snug mb-1.5">
+        Utility · Value · Moat · Longevity
+      </div>
+      <a href="/about/scoring/" class="text-[11px] text-[var(--text-secondary)] hover:text-[var(--accent-primary)] no-underline inline-flex items-center gap-1 whitespace-nowrap">
+        Methodology <span aria-hidden="true">→</span>
+      </a>
+    </div>
+  </div>
+)}
+
+{resolvedVariant === 'sidebar' && (
   <div
     class="flex items-baseline justify-between w-full rounded-xl border border-[var(--border)] px-5 py-3"
     style="background: linear-gradient(135deg, rgba(167,139,250,0.10), rgba(96,165,250,0.08));"
@@ -20,7 +91,9 @@ const { score, fullWidth = false } = Astro.props;
       {score}<span class="text-base font-normal text-[var(--text-muted)]">/10</span>
     </span>
   </div>
-) : (
+)}
+
+{resolvedVariant === 'pill' && (
   <div
     class="inline-flex flex-col items-center justify-center rounded-xl border border-[var(--border)] px-5 py-3"
     style="background: linear-gradient(135deg, rgba(167,139,250,0.1), rgba(96,165,250,0.1));"

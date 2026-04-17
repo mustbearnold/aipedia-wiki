@@ -117,24 +117,13 @@ if (verifiedLabel) chips.push({ label: 'Verified', value: verifiedLabel, icon: '
   aria-label="Quick answer"
   data-pagefind-meta="quick-answer"
 >
-  <div class="flex items-center justify-between gap-3 mb-4">
-    <div class="flex items-center gap-2">
-      <span
-        class="inline-flex items-center justify-center px-2 h-6 rounded-md text-[11px] font-bold uppercase tracking-wider text-[var(--accent-primary)] bg-[rgba(167,139,250,0.18)] border border-[rgba(167,139,250,0.35)]"
-        aria-hidden="true">TL;DR</span>
-      <span class="text-[11px] font-semibold uppercase tracking-wider text-[var(--accent-primary)]">
-        Quick Answer
-      </span>
-    </div>
-    <div
-      class="flex items-center gap-1.5 px-2.5 py-1 rounded-lg border tabular-nums"
-      style={`background:${scoreBg};border-color:${scoreBorder};`}
-    >
-      <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" class={scoreColor} aria-hidden="true">
-        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-      </svg>
-      <span class={`font-bold text-sm ${scoreColor}`}>{score}<span class="text-[var(--text-muted)] text-[11px] font-normal">/10</span></span>
-    </div>
+  <div class="flex items-center gap-2 mb-4">
+    <span
+      class="inline-flex items-center justify-center px-2 h-6 rounded-md text-[11px] font-bold uppercase tracking-wider text-[var(--accent-primary)] bg-[rgba(167,139,250,0.18)] border border-[rgba(167,139,250,0.35)]"
+      aria-hidden="true">TL;DR</span>
+    <span class="text-[11px] font-semibold uppercase tracking-wider text-[var(--accent-primary)]">
+      Quick Answer
+    </span>
   </div>
 
   <!-- Stat chips strip — dense, scannable, renders before prose. -->
@@ -178,5 +167,20 @@ if (verifiedLabel) chips.push({ label: 'Verified', value: verifiedLabel, icon: '
     })}
   </div>
 
-  <p class="text-[15px] leading-relaxed text-[var(--text-primary)] m-0">{body}</p>
+  {(() => {
+    // Split on sentence boundary so we can emphasize the first sentence as
+    // the verdict headline, and wrap the rest as body. If the prose is a
+    // single sentence, the body block stays empty.
+    const m = body.match(/^(.+?[.!?])(\s+)([\s\S]*)$/);
+    const verdict = m ? m[1] : body;
+    const rest = m ? m[3] : '';
+    return (
+      <>
+        <p class="text-[17px] leading-snug font-semibold text-[var(--text-primary)] m-0" style="letter-spacing:-0.01em;">{verdict}</p>
+        {rest && (
+          <p class="text-[14px] leading-relaxed text-[var(--text-secondary)] m-0 mt-3">{rest}</p>
+        )}
+      </>
+    );
+  })()}
 </aside>

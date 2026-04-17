@@ -124,52 +124,71 @@ const breadcrumbLdItems = [
   <div class="lg:grid lg:grid-cols-[1fr_280px] lg:gap-8">
     <!-- Left column: main content -->
     <div>
-      <!-- Hero (excluded from search index) -->
-      <div class="flex items-start gap-4 mb-5" data-pagefind-ignore>
-        <ToolLogo slug={toolSlug} title={frontmatter.title} size={56} className="shrink-0" />
-        <div>
-          <div class="flex items-center gap-3 flex-wrap">
-            <h1 class="text-2xl font-bold leading-tight m-0">{frontmatter.title}</h1>
-            {frontmatter.status === 'active' && (
-              <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-[rgba(74,222,128,0.1)] text-[var(--accent-success)] border border-[rgba(74,222,128,0.2)]">
-                Active
-              </span>
-            )}
+      <!-- Hero grid: title block (left) + radial score card (right on desktop) -->
+      <div class="grid md:grid-cols-[1fr_auto] gap-5 md:gap-6 mb-6 items-start" data-pagefind-ignore>
+        <div class="flex items-start gap-5 min-w-0">
+          <div class="shrink-0 rounded-2xl p-1 ring-1 ring-white/5"
+               style="background: linear-gradient(135deg, rgba(167,139,250,0.14), rgba(96,165,250,0.08));">
+            <ToolLogo slug={toolSlug} title={frontmatter.title} size={72} className="rounded-xl" />
           </div>
-          <div class="flex items-center gap-x-3 gap-y-1 mt-1 text-sm text-[var(--text-muted)] flex-wrap">
-            {frontmatter.company && <span>{frontmatter.company}</span>}
-            {frontmatter.author && (
-              <>
-                <span aria-hidden="true">·</span>
-                <a href="/about/editorial/" class="inline-flex items-center gap-1.5 no-underline hover:underline">
-                  <span class="text-[var(--text-secondary)] hover:text-[var(--accent-primary)]">aipedia.wiki Editorial</span>
-                </a>
-              </>
+          <div class="min-w-0 flex-1">
+            <div class="flex items-center gap-2.5 flex-wrap mb-2">
+              <h1 class="text-3xl sm:text-[2.25rem] font-bold leading-[1.05] m-0 text-[var(--text-primary)]" style="letter-spacing:-0.025em;">{frontmatter.title}</h1>
+              {frontmatter.status === 'active' && (
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-semibold uppercase tracking-wider bg-[rgba(74,222,128,0.12)] text-[var(--accent-success)] border border-[rgba(74,222,128,0.25)]">
+                  <span class="w-1.5 h-1.5 rounded-full bg-[var(--accent-success)]"></span>
+                  Active
+                </span>
+              )}
+            </div>
+            {frontmatter.tagline && (
+              <p class="text-[15px] text-[var(--text-secondary)] leading-relaxed m-0 mb-3 max-w-[60ch]">
+                {frontmatter.tagline}
+              </p>
             )}
-            {readingMinutes > 0 && (
-              <>
-                <span aria-hidden="true">·</span>
-                <span>{readingMinutes} min read</span>
-              </>
-            )}
-            {frontmatter.last_verified && (
-              <FreshnessBadge lastVerified={String(frontmatter.last_verified)} />
-            )}
+            <div class="flex items-center gap-x-3 gap-y-1 text-xs text-[var(--text-muted)] flex-wrap">
+              {frontmatter.company && (
+                <span class="inline-flex items-center gap-1.5">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                    <polyline points="9 22 9 12 15 12 15 22"/>
+                  </svg>
+                  {frontmatter.company}
+                </span>
+              )}
+              <span aria-hidden="true">·</span>
+              <a href="/about/editorial/" class="inline-flex items-center gap-1.5 no-underline hover:text-[var(--accent-primary)] transition-colors">
+                By aipedia.wiki Editorial
+              </a>
+              {readingMinutes > 0 && (
+                <>
+                  <span aria-hidden="true">·</span>
+                  <span>{readingMinutes} min read</span>
+                </>
+              )}
+              {frontmatter.last_verified && (
+                <FreshnessBadge lastVerified={String(frontmatter.last_verified)} />
+              )}
+            </div>
           </div>
+        </div>
+        <!-- Radial score card: right-aligned on desktop, full-width below on mobile -->
+        <div class="md:w-[280px] w-full">
+          <ScoreBadge score={overallScore} variant="hero" />
         </div>
       </div>
 
-      <!-- Tag chips (excluded from search index) -->
-      <div class="flex items-center gap-2 flex-wrap mb-6" data-pagefind-ignore>
-        <a href={`/categories/${catSlug}/`} class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-[rgba(167,139,250,0.15)] border border-[rgba(167,139,250,0.3)] text-[var(--accent-primary)] no-underline hover:no-underline">
-          {catInfo.emoji} {catInfo.label}
-        </a>
-        {tags.slice(0, 4).map((tag: string) => (
-          <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-[var(--bg-card)] border border-[var(--border)] text-[var(--text-muted)]">
-            {tag}
-          </span>
-        ))}
-      </div>
+      <!-- Topic tags (category is in breadcrumb already, so drop the dup) -->
+      {tags.length > 0 && (
+        <div class="flex items-center gap-2 flex-wrap mb-6" data-pagefind-ignore>
+          <span class="text-[10px] uppercase tracking-wider font-semibold text-[var(--text-muted)] mr-1">Tags:</span>
+          {tags.slice(0, 6).map((tag: string) => (
+            <span class="inline-flex items-center px-2.5 py-0.5 rounded-md text-[11px] font-medium bg-[var(--bg-card)] border border-[var(--border)] text-[var(--text-muted)] hover:text-[var(--text-secondary)] hover:border-[var(--accent-primary)]/30 transition-colors">
+              {tag}
+            </span>
+          ))}
+        </div>
+      )}
 
       <QuickAnswer
         name={frontmatter.title}

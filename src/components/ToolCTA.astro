@@ -33,17 +33,32 @@ const rel = isAffiliate ? 'sponsored noopener' : 'noopener';
 ---
 
 {hasUrl && (
-  <a
-    href={href}
-    target="_blank"
-    rel={rel}
-    class="not-prose mb-6 flex w-full items-center justify-center gap-2 px-5 py-3 rounded-xl font-semibold text-[15px] bg-[var(--accent-primary)] text-[#0b0a14] hover:brightness-110 transition-all shadow-[0_4px_14px_rgba(167,139,250,0.35)] hover:shadow-[0_6px_20px_rgba(167,139,250,0.45)] no-underline"
-    data-tool-cta={name}
-  >
-    <span>{label}</span>
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-      <line x1="5" y1="12" x2="19" y2="12"></line>
-      <polyline points="12 5 19 12 12 19"></polyline>
-    </svg>
-  </a>
+  <div class="not-prose mb-6 flex items-center gap-3 flex-wrap">
+    <a
+      href={href}
+      target="_blank"
+      rel={rel}
+      class="group inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-[15px] bg-[var(--accent-primary)] text-[#0b0a14] hover:brightness-110 transition-all shadow-[0_4px_14px_rgba(167,139,250,0.35)] hover:shadow-[0_8px_24px_rgba(167,139,250,0.5)] no-underline"
+      data-tool-cta={name}
+    >
+      <span>{label}</span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="transition-transform group-hover:translate-x-0.5">
+        <line x1="5" y1="12" x2="19" y2="12"></line>
+        <polyline points="12 5 19 12 12 19"></polyline>
+      </svg>
+    </a>
+    {priceRange && (
+      <span class="inline-flex items-center gap-1.5 text-xs text-[var(--text-muted)]">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+        </svg>
+        <span class="tabular-nums">{priceRange}</span>
+      </span>
+    )}
+    {isAffiliate && (
+      <span class="inline-flex items-center text-[10px] uppercase tracking-wider text-[var(--text-muted)] opacity-70">
+        Affiliate link
+      </span>
+    )}
+  </div>
 )}
