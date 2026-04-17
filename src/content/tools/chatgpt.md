@@ -38,7 +38,7 @@ best_for:
 not_best_for:
   - users who need video generation (Sora discontinued)
   - free users who dislike ads
-  - deep long-form reasoning vs. Claude Opus 4.6
+  - deep long-form reasoning vs. Claude Opus 4.7
 quick_answer: >-
   ChatGPT is the broadest AI assistant in a single subscription. Pick it for text, image gen, Codex coding agent, Operator mode, and the largest custom-GPT marketplace. Skip it for best-in-class reasoning (Claude Opus 4.7), Google Workspace depth (Gemini), or video generation.
 price_history:
@@ -62,7 +62,7 @@ No video generation. Sora was shut down in March 2026.
 
 > **Pick ChatGPT if you want one tool that handles the widest spread of AI tasks in a single subscription.** Strongest ecosystem, largest custom-GPT library, and the only mainstream assistant that bundles a real coding agent (Codex) at the $100 tier. Best default for users who don't already know which specialist they need.
 >
-> **Skip it if you need best-in-class on any single axis.** Claude Opus 4.6 beats it on long-form reasoning and document coherence; Midjourney beats its image output; Gemini 3.1 Pro beats it on Google Workspace integration; Perplexity beats it on cited research. ChatGPT's value is coverage, not peak performance.
+> **Skip it if you need best-in-class on any single axis.** Claude Opus 4.7 beats it on long-form reasoning and document coherence; Midjourney beats its image output; Gemini 3.1 Pro beats it on Google Workspace integration; Perplexity beats it on cited research. ChatGPT's value is coverage, not peak performance.
 >
 > **Who pays which tier:** Free (with ads) for casual users, Plus $20/mo for most individuals, Pro $100/mo if you actually run Codex sessions weekly, Pro $200/mo for sustained agentic coding workloads.
 
@@ -98,7 +98,7 @@ The real moat is ecosystem. The GPT Store carries more third-party custom-GPTs t
 
 ## When to pick something else
 
-- **Long-form writing or nuanced reasoning:** Claude Opus 4.6. Better output coherence on 10K+ word documents.
+- **Long-form writing or nuanced reasoning:** Claude Opus 4.7. Better output coherence on 10K+ word documents.
 - **Budget-conscious professional coding:** Claude Max 5x at $100/mo competes directly with ChatGPT Pro $100 and wins on sustained Opus usage.
 - **Google Workspace-heavy workflow:** Gemini 3.1 Pro. Native Docs / Sheets / Gmail integration ChatGPT can't match.
 - **Research with cited sources:** Perplexity. Better citation surfacing and primary-source grounding.
@@ -183,7 +183,7 @@ The $100/mo Pro plan was introduced on April 9, 2026, directly targeting Claude 
 - **Hallucination:** GPT-5 family still produces plausible-sounding but incorrect information on niche or rapidly changing topics; citations help but are not infallible
 - **Rate limits on Thinking/Pro models:** Plus users can hit GPT-5.4 Thinking caps during peak usage; Pro plans alleviate this but add cost
 - **Memory is shallow:** Memory stores snippets and stated preferences, not deep conversational history; it can be inaccurate or intrusive and requires manual management
-- **Context window not publicly specified for GPT-5 family:** OpenAI has not published official context window sizes for the GPT-5 generation as of April 2026; Claude Opus 4.6 and Gemini 3.1 Pro publish explicit limits
+- **Context window not publicly specified for GPT-5 family:** OpenAI has not published official context window sizes for the GPT-5 generation as of April 2026; Claude Opus 4.7 and Gemini 3.1 Pro publish explicit limits
 - **Privacy on Free/Go tiers:** Free and Go tier conversations may be used for model training unless opted out; paid tiers default to no training on user data
 
 ## Bottom Line
@@ -192,7 +192,7 @@ ChatGPT is the broadest AI assistant available in April 2026. It's the right def
 
 The Codex coding agent is a genuine differentiator for developers willing to pay for Pro. The two new Pro tiers ($100 and $200/mo) are a direct response to Claude Max pricing and make high-volume Codex usage viable.
 
-Against Claude Opus 4.6, ChatGPT wins on feature breadth and image generation; Claude wins on long-form reasoning quality and transparency about context limits. Against Gemini 3.1 Pro, ChatGPT wins on Codex and agent integrations; Gemini wins on Google Workspace depth and video generation (Veo 3). Against Grok 4, ChatGPT wins on ecosystem maturity and image generation.
+Against Claude Opus 4.7, ChatGPT wins on feature breadth and image generation; Claude wins on long-form reasoning quality and transparency about context limits. Against Gemini 3.1 Pro, ChatGPT wins on Codex and agent integrations; Gemini wins on Google Workspace depth and video generation (Veo 3). Against Grok 4, ChatGPT wins on ecosystem maturity and image generation.
 
 For most users, Plus at $20/mo delivers the best value. Power coders should evaluate the $100 Pro plan against Claude Max 5x directly.
 
@@ -222,8 +222,8 @@ GPT-4o was fully retired on February 13, 2026. GPT-5.3 Instant replaced it as th
 **What is the difference between the $100 and $200 Pro plans?**
 Both include GPT-5.4 Pro access (exclusive to Pro/Team/Enterprise) and no ads. The main difference is Codex usage: $100/mo gets 5x Plus (with a 10x promo running until May 31, 2026); $200/mo gets 20x Plus for heavy agentic coding workloads. The $200 plan is aimed at developers running sustained Codex sessions ([MacRumors](https://www.macrumors.com/2026/04/09/openai-pro-subscription-tiers/)).
 
-**How does ChatGPT compare to Claude Opus 4.6?**
-ChatGPT (Pro) and Claude Max 5x are at the same $100/mo price point. ChatGPT wins on image generation (GPT Image 1.5), agent integrations (Operator Mode), and feature breadth. Claude Opus 4.6 wins on long-form reasoning quality, writing nuance, and transparent context window specifications. Most professional users doing a mix of coding, writing, and research benefit from evaluating both.
+**How does ChatGPT compare to Claude Opus 4.7?**
+ChatGPT (Pro) and Claude Max 5x are at the same $100/mo price point. ChatGPT wins on image generation (GPT Image 1.5), agent integrations (Operator Mode), and feature breadth. Claude Opus 4.7 wins on long-form reasoning quality, writing nuance, and transparent context window specifications. Most professional users doing a mix of coding, writing, and research benefit from evaluating both.
 
 
 

@@ -71,7 +71,7 @@ Self-serve is gone. Free and Pro shut down July 23, 2025. Enterprise is the only
 |---|---|
 | **Product status** | Enterprise only as of July 23, 2025 |
 | **Pricing** | $59/user/month, annual contract |
-| **Models** | Claude Opus 4.6, GPT-5.4, Gemini 3.1 Pro, admin-configurable |
+| **Models** | Claude Opus 4.7, GPT-5.4, Gemini 3.1 Pro, admin-configurable |
 | **Core moat** | Sourcegraph code graph: cross-repo symbol + usage context |
 | **Editor support** | VS Code, JetBrains, Visual Studio, CLI |
 | **Deployment** | Sourcegraph Cloud or self-hosted |
@@ -144,7 +144,7 @@ This page was produced by the aipedia.wiki editorial pipeline, an automated syst
 No. Sourcegraph retired both self-serve tiers on July 23, 2025. The only current product is Cody Enterprise at $59/user/month with annual contract ([plan changes notice](https://sourcegraph.com/blog/changes-to-cody-free-pro-and-enterprise-starter-plans)).
 
 **What models does Cody support?**
-Claude Opus 4.6, GPT-5.4, and Gemini 3.1 Pro on Enterprise tier. Admins can whitelist models, route through Azure OpenAI or AWS Bedrock, and enforce which models any given team can call.
+Claude Opus 4.7, GPT-5.4, and Gemini 3.1 Pro on Enterprise tier. Admins can whitelist models, route through Azure OpenAI or AWS Bedrock, and enforce which models any given team can call.
 
 **How does Cody differ from Amp?**
 Cody is conversational AI plus autocomplete on top of the code graph. Amp is the agentic coding product: multi-step edits, shared team workflows, CLI-first. Amp is being spun out as a separate company under Quinn Slack and Beyang Liu while Cody stays with Sourcegraph.

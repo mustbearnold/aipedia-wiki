@@ -7,8 +7,8 @@ meta_description: "Top AI tools for book writing include Claude for long-form st
 description: "This page recommends 3 AI tools for book writing, matched to outlining, drafting, editing, and research, with pricing, pros, and cons verified as of April 2026."
 tools_mentioned: ["claude", "chatgpt", "gemini"]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-15
-last_verified: 2026-04-15
+last_updated: 2026-04-17
+last_verified: 2026-04-17
 update_frequency: monthly
 ---
 
@@ -18,7 +18,7 @@ AI tools assist book writing by generating outlines, drafting chapters, editing 
 
 ## Quick Verdict
 
-Claude (with Opus 4.6) is the top choice for book writing due to its strength in long-form analysis and document tasks.[3] ChatGPT (GPT-5.4) serves as runner-up for its all-in-one drafting and image integration.[1] Gemini (3.1 Pro) fits users needing extensive context for revisions.[3]
+Claude (with Opus 4.7) is the top choice for book writing due to its strength in long-form analysis and document tasks.[3] ChatGPT (GPT-5.4) serves as runner-up for its all-in-one drafting and image integration.[1] Gemini (3.1 Pro) fits users needing extensive context for revisions.[3]
 
 ## At a Glance
 
@@ -30,11 +30,11 @@ Claude (with Opus 4.6) is the top choice for book writing due to its strength in
 
 ## Top Picks
 
-### 1. Claude (Opus 4.6)
+### 1. Claude (Opus 4.7)
 
 Claude, from Anthropic, processes extended text for book-length projects, making it suitable for outlining plots, developing character arcs, and refining manuscripts.[3][4] It maintains coherence across chapters, which aids iterative writing sessions. Users upload full drafts for analysis, receiving suggestions on pacing, consistency, and style without losing narrative voice.
 
-For book writing, Claude stands out by handling document-heavy workflows better than generalists; it excels at restructuring sections or expanding scenes while preserving tone.[3] Pricing includes a free tier with limits, Pro at $20/month for higher quotas and priority access, and team plans for collaboration.[1] As of 2026-04-15, Opus 4.6 supports up to 200k tokens per interaction, ideal for novel chapters.[3]
+For book writing, Claude stands out by handling document-heavy workflows better than generalists; it excels at restructuring sections or expanding scenes while preserving tone.[3] Pricing includes a free tier with limits, Pro at $20/month for higher quotas and priority access, and team plans for collaboration.[1] As of 2026-04-15, Opus 4.7 supports up to 200k tokens per interaction, ideal for novel chapters.[3]
 
 Limitations include weaker multimodal features compared to ChatGPT; it focuses on text, so image generation for covers requires external tools. No native voice mode limits dictation use. Free tier caps daily messages, pushing heavy users to Pro. Still, for authors prioritizing prose quality, Claude delivers reliable structure. Read more in our [Claude review](../tools/claude.md).
 

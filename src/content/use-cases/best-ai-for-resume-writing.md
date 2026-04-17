@@ -7,8 +7,8 @@ meta_description: "Top AI tools for resume writing include ChatGPT with GPT-5.4,
 description: "This page recommends 3-5 AI tools for resume writing with pricing, pros, and cons as of April 2026."
 tools_mentioned: ["chatgpt", "claude", "gemini", "resume-io"]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-15
-last_verified: 2026-04-15
+last_updated: 2026-04-17
+last_verified: 2026-04-17
 update_frequency: monthly
 ---
 
@@ -41,11 +41,11 @@ Limitations include occasional generic phrasing without specific prompting and n
 
 (168 words)
 
-### 2. Claude (Opus 4.6)
+### 2. Claude (Opus 4.7)
 
-Anthropic's Claude, powered by Opus 4.6, generates resumes with emphasis on clear structure and bias-free language. It handles long contexts (up to 200K tokens) for compiling multi-year career histories into one-page formats. Best for users needing ATS-friendly layouts; it suggests quantifiable metrics and avoids fluff. Positioning focuses on safety, reducing hallucinated job titles[1].
+Anthropic's Claude, powered by Opus 4.7, generates resumes with emphasis on clear structure and bias-free language. It handles long contexts (up to 200K tokens) for compiling multi-year career histories into one-page formats. Best for users needing ATS-friendly layouts; it suggests quantifiable metrics and avoids fluff. Positioning focuses on safety, reducing hallucinated job titles[1].
 
-Pricing: Free tier with basic model; Pro $20/month for Opus 4.6 unlimited; Team $30/user/month[1].
+Pricing: Free tier with basic model; Pro $20/month for Opus 4.7 unlimited; Team $30/user/month[1].
 
 Limitations: Lacks native image input for scans; requires text-only prompts. Slower than GPT-5.4 for iterative edits[1].
 
@@ -84,7 +84,7 @@ Gemini free tier for simple prompts; ChatGPT Plus for guided chats[3][5].
 All four: ChatGPT (GPT-5.4-mini), Claude basic, Gemini full free, Resume.io previews[1][3][5].
 
 **Which handles ATS optimization best?**  
-Claude Opus 4.6 for keyword integration; Resume.io for scanning[1].
+Claude Opus 4.7 for keyword integration; Resume.io for scanning[1].
 
 **How often is this list updated?**  
 Verified monthly as of 2026-04-15.

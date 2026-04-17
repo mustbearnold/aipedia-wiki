@@ -121,7 +121,7 @@ Grow Mode builds topic clusters from SERP data and suggests related content. The
 | **Content editor scoring** | **Strongest** granular NLP | Moderate topic coverage | Strong NLP terms |
 | **SERP Analyzer** | **Strongest**, ships with Scale+ | None | Thinner, entities only |
 | **Brief generation** | Functional | **Fastest**, PAA-heavy | Functional |
-| **AI drafter** | Surfer AI, 5-20 articles/mo | Native + $35/mo unlimited | GPT-5.4 / Opus 4.6 fine-tunes |
+| **AI drafter** | Surfer AI, 5-20 articles/mo | Native + $35/mo unlimited | GPT-5.4 / Opus 4.7 fine-tunes |
 | **Keyword research** | None | None | None |
 | **Best viewed as** | Editor-first premium | Brief-first workflow | Budget scoring pick |
 

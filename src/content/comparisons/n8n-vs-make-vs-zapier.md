@@ -8,8 +8,8 @@ winner: depends
 seo_title: "n8n vs Make vs Zapier: Best Automation Tool (2026)"
 meta_description: "n8n leads for AI agents and self-hosting. Zapier offers the most integrations. Make provides the lowest cloud pricing. Full comparison updated April 2026."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-15
-last_verified: 2026-04-15
+last_updated: 2026-04-17
+last_verified: 2026-04-17
 update_frequency: quarterly
 ---
 
@@ -33,7 +33,7 @@ Select n8n for AI agents or self-hosting with unlimited automations. Select Zapi
 
 ## Where n8n Wins
 - Self-hosting allows unlimited workflows and executions on user infrastructure at zero cost ([n8n Docs](https://docs.n8n.io/hosting/)).
-- Native AI agent nodes support tool use, memory, RAG pipelines, and multi-agent setups with models like OpenAI GPT-5.3, Anthropic Claude Opus 4.6, and Ollama.
+- Native AI agent nodes support tool use, memory, RAG pipelines, and multi-agent setups with models like OpenAI GPT-5.3, Anthropic Claude Opus 4.7, and Ollama.
 - Full code access with JavaScript and Python nodes handles complex logic, loops, and error handling.
 - Git integration enables version control for workflows.
 - Active open-source community contributes over 900 nodes.
@@ -76,7 +76,7 @@ n8n serves technical needs with AI agents, self-hosting, and complexity. Zapier 
 n8n self-hosts free with unlimited use; cloud starts at $20 for 2,500 executions. Make cloud begins at $9 for 10,000 operations.
 
 **Which handles AI agents best?**
-n8n, with native support for tool calling, RAG, memory, and models like GPT-5.3 or Claude Opus 4.6. Others offer basic LLM steps.
+n8n, with native support for tool calling, RAG, memory, and models like GPT-5.3 or Claude Opus 4.7. Others offer basic LLM steps.
 
 ## Sources
 - n8n official site: [https://n8n.io](https://n8n.io)

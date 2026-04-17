@@ -71,7 +71,7 @@ Five subscription tiers: Bronze, Silver, Gold, Platinum, Diamond. Pricing runs $
 | **AI credits** | 15K Bronze · 30K Silver · 45K Gold · 60K Platinum · 75K Diamond |
 | **Content queries** | 25 Bronze · 50 Silver · scales up through tiers |
 | **Projects** | 2 Bronze · 5 Silver · more on higher tiers |
-| **AI writing** | Fine-tuned GPT-5.4 and Claude Opus 4.6 for SEO-calibrated drafts |
+| **AI writing** | Fine-tuned GPT-5.4 and Claude Opus 4.7 for SEO-calibrated drafts |
 | **Integrations** | Chrome extension, WordPress, Google Docs, Google Search Console |
 | **Native keyword research** | None. Pair with Ahrefs or Semrush |
 | **Backlink data** | None |
@@ -123,7 +123,7 @@ The moat is thin. The core scoring engine is commodity NLP applied to SERP scrap
 | **Content editor scoring** | Strong NLP terms + score | **Strongest** granular NLP | Lighter, brief-led |
 | **SERP analysis depth** | Top 30 terms + entities | Top 10-50, backlinks + structure | Top 10 coverage + questions |
 | **Brief generation** | Functional | Functional | **Fastest** |
-| **AI drafter** | GPT-5.4 / Opus 4.6 fine-tunes | Surfer AI | Native + API on Enterprise |
+| **AI drafter** | GPT-5.4 / Opus 4.7 fine-tunes | Surfer AI | Native + API on Enterprise |
 | **Keyword research** | None | None | None |
 | **Best viewed as** | Budget value pick | Polished editor premium | Brief-first workflow |
 

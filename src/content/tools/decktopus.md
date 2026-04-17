@@ -40,7 +40,7 @@ quick_answer: >-
 
 Decktopus AI is an automated presentation builder developed by Decktopus Inc., founded in 2018. It generates complete presentations from a prompt and includes built-in form and Q&A functionality designed for presenters who collect responses from audiences, and is primarily used by educators, trainers, and professionals who combine presentation delivery with audience interaction. Its key differentiator is the embedded form and Q&A layer: presentations can include response collection, audience polling, and feedback forms without needing separate tools. As of April 2026, Decktopus offers a limited free tier with Pro at $39 per month ([Decktopus](https://decktopus.com/pricing)).
 
-Decktopus predates most AI presentation tools by several years, launching in 2018 with a template-first approach before adding AI generation powered by models like GPT-5.4 and Claude Opus 4.6. The product has evolved toward AI-assisted deck creation while retaining its original form and interaction features. This combination is differentiated from pure AI generation tools: a Decktopus presentation can serve as both the slide content and the data collection mechanism in a single workflow, useful for trainers running post-session surveys, educators assigning interactive homework, and sales reps collecting qualification data during a presentation.
+Decktopus predates most AI presentation tools by several years, launching in 2018 with a template-first approach before adding AI generation powered by models like GPT-5.4 and Claude Opus 4.7. The product has evolved toward AI-assisted deck creation while retaining its original form and interaction features. This combination is differentiated from pure AI generation tools: a Decktopus presentation can serve as both the slide content and the data collection mechanism in a single workflow, useful for trainers running post-session surveys, educators assigning interactive homework, and sales reps collecting qualification data during a presentation.
 
 The competitive position is niche. Gamma is a stronger general-purpose AI presentation tool at a lower price point, and Pitch is stronger for team collaboration. Decktopus earns its place for specific workflows where presentation plus form integration is the requirement.
 
@@ -80,7 +80,7 @@ An AI assistant powered by GPT-5.4 is available for inline text rewriting and co
 
 ## Key Features
 
-- **AI presentation generation:** Generate complete decks from prompts using GPT-5.4 and Claude Opus 4.6 with themed layouts, text, and images
+- **AI presentation generation:** Generate complete decks from prompts using GPT-5.4 and Claude Opus 4.7 with themed layouts, text, and images
 - **Built-in form widgets:** Add response collection, polls, and feedback forms to slides with real-time response dashboards
 - **Speaker notes generation:** AI generates presenter notes for each slide
 - **Q&A mode:** Live Q&A slide with audience question collection and moderation
@@ -118,7 +118,7 @@ Decktopus includes built-in forms and live Q&A for audience interaction, absent 
 The free tier allows 10 lifetime presentations with branding and limited AI credits. Pro at $39/month unlocks unlimited use ([Decktopus Pricing](https://decktopus.com/pricing)).
 
 **What AI models power Decktopus?**  
-Generation uses GPT-5.4 and Claude Opus 4.6; image suggestions leverage Gemini 3.1 Pro ([Product Hunt](https://www.producthunt.com/products/decktopus)).
+Generation uses GPT-5.4 and Claude Opus 4.7; image suggestions leverage Gemini 3.1 Pro ([Product Hunt](https://www.producthunt.com/products/decktopus)).
 
 
 

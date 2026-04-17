@@ -8,8 +8,8 @@ winner: depends
 seo_title: "Claude vs Cursor: Which Is Better in 2026?"
 meta_description: "Honest head-to-head of Claude and Cursor as of April 2026. Flagship models, current pricing, and which tool fits your workflow."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-15
-last_verified: 2026-04-15
+last_updated: 2026-04-17
+last_verified: 2026-04-17
 update_frequency: quarterly
 ---
 
@@ -25,8 +25,8 @@ Claude suits general coding and document tasks with its 1M token context window.
 
 | | Claude | Cursor |
 |---|---|---|
-| **Flagship** | Claude Opus 4.6 | Cursor 2.0 |
-| **Price** | $2/$12 per million tokens (input/output) | Free / $19.99/mo Advanced |
+| **Flagship** | Claude Opus 4.7 | Cursor 2.0 |
+| **Price** | $5/$25 per million tokens (input/output) | Free / $19.99/mo Advanced |
 | **Context Window** | 1M tokens | 2M tokens (via Gemini integration) |
 | **Best For** | Long-form coding, analysis | IDE autocomplete, refactors |
 

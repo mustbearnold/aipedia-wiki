@@ -8,8 +8,8 @@ winner: depends
 seo_title: "Bolt.new vs Google Stitch: Which Is Better in 2026?"
 meta_description: "Head-to-head of Bolt.new and Google Stitch as of April 2026. Flagship models, current pricing, and which tool fits your workflow."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-15
-last_verified: 2026-04-15
+last_updated: 2026-04-17
+last_verified: 2026-04-17
 update_frequency: quarterly
 ---
 
@@ -25,14 +25,14 @@ Google Stitch suits Google Workspace users for design tasks due to its ecosystem
 
 | | Bolt.new | Google Stitch |
 |---|---|---|
-| **Flagship** | GPT-5.4 / Claude Opus 4.6 | Gemini 3.1 Pro |
+| **Flagship** | GPT-5.4 / Claude Opus 4.7 | Gemini 3.1 Pro |
 | **Price** | Free tier; Pro $20/mo | Free tier; Advanced $19.99/mo[2] |
 | **Best For** | App prototyping from prompts | Design in Google Workspace |
 
 ## Where Bolt.new Wins
 
 - Handles full app development from natural language prompts, including frontend and backend code generation.
-- Supports multiple top models like GPT-5.4 and Claude Opus 4.6 for flexible output quality.[1]
+- Supports multiple top models like GPT-5.4 and Claude Opus 4.7 for flexible output quality.[1]
 - Free tier offers substantial usage for individual prototyping without commitment.
 - Faster iteration for solo developers building MVPs.
 - Larger effective context via chained model calls for complex designs.
@@ -67,7 +67,7 @@ Selection depends on workflow: Bolt.new for prompt-to-app development, Google St
 Both have free tiers for basic use; paid plans are Bolt.new Pro $20/mo and Google Stitch Advanced $19.99/mo.[2]
 
 **Which has better output quality?**  
-Gemini 3.1 Pro leads benchmarks in Google Stitch; Bolt.new accesses GPT-5.4 or Claude Opus 4.6 for comparable or higher scores per task.[1][7]
+Gemini 3.1 Pro leads benchmarks in Google Stitch; Bolt.new accesses GPT-5.4 or Claude Opus 4.7 for comparable or higher scores per task.[1][7]
 
 **Can I use both?**  
 Yes, free tiers allow combining Bolt.new for prototyping and Google Stitch for Workspace designs.

@@ -55,7 +55,7 @@ price_history:
 
 Fiction-first AI writing tool founded in 2020 by Amit Gupta and James Yu. Runs on the custom-trained **Muse** model: a proprietary LLM built on a dataset of published novels and stories, tuned for long-form creative prose.
 
-Routes fallback to Claude Opus 4.6 and GPT-5.4 for specific tasks. Runs unfiltered, meaning it handles romance, violence, horror, and intense themes that general assistants refuse.
+Routes fallback to Claude Opus 4.7 and GPT-5.4 for specific tasks. Runs unfiltered, meaning it handles romance, violence, horror, and intense themes that general assistants refuse.
 
 ## System Verdict
 
@@ -70,7 +70,7 @@ Routes fallback to Claude Opus 4.6 and GPT-5.4 for specific tasks. Runs unfilter
 | | |
 |---|---|
 | **Primary model** | **Muse** · custom-trained LLM built exclusively for fiction |
-| **Fallback models** | Claude Opus 4.6 · GPT-5.4 (task-dependent routing) |
+| **Fallback models** | Claude Opus 4.7 · GPT-5.4 (task-dependent routing) |
 | **Core modes** | Write · Describe · Expand · Rewrite · Brainstorm · Feedback |
 | **Structure tool** | Story Engine · builds outline, characters, world, chapters |
 | **Editor** | Canvas · organizes chapters, scenes, notes, story elements |
@@ -153,7 +153,7 @@ No ongoing free tier. A one-time free trial includes 10,000 credits with full fe
 Sudowrite's custom-trained large language model, built on a proprietary dataset of published novels and stories. Tuned for long-form fiction and available exclusively inside Sudowrite. Muse runs unfiltered on romance, violence, horror, and other themes general LLMs refuse.
 
 **What AI models does Sudowrite use?**
-Muse is the primary model for fiction generation. The platform routes fallback tasks to Claude Opus 4.6 and GPT-5.4 based on task type. Users do not select the model directly; Sudowrite routes automatically.
+Muse is the primary model for fiction generation. The platform routes fallback tasks to Claude Opus 4.7 and GPT-5.4 based on task type. Users do not select the model directly; Sudowrite routes automatically.
 
 **Does Sudowrite work for NaNoWriMo?**
 Yes. The Professional tier's 1M credits comfortably cover a 50k draft plus revisions. Story Engine structures projects and Write mode extends scenes in the writer's voice for daily word count support.

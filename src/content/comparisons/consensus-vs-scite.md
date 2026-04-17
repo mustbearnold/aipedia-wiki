@@ -8,14 +8,14 @@ winner: depends
 seo_title: "Consensus vs Scite: Which Is Better in 2026?"
 meta_description: "Honest head-to-head of Consensus and Scite as of April 2026. Flagship models, current pricing, and which tool fits your workflow."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-15
-last_verified: 2026-04-15
+last_updated: 2026-04-17
+last_verified: 2026-04-17
 update_frequency: quarterly
 ---
 
 # Consensus vs Scite
 
-[Consensus](../tools/consensus.md) and [Scite](../tools/scite.md) are AI research tools that analyze scientific literature, with Consensus using AI to summarize findings across papers and Scite focusing on citation statements to classify support or contradiction. As of April 2026, Consensus runs on GPT-5.4 models for query synthesis, while Scite employs a proprietary classification system integrated with recent LLMs like Claude Opus 4.6.
+[Consensus](../tools/consensus.md) and [Scite](../tools/scite.md) are AI research tools that analyze scientific literature, with Consensus using AI to summarize findings across papers and Scite focusing on citation statements to classify support or contradiction. As of April 2026, Consensus runs on GPT-5.4 models for query synthesis, while Scite employs a proprietary classification system integrated with recent LLMs like Claude Opus 4.7.
 
 ## Quick Answer
 
@@ -25,7 +25,7 @@ Scite edges out for citation-specific analysis in academic workflows; Consensus 
 
 | | Consensus | Scite |
 |---|---|---|
-| **Flagship** | GPT-5.4 | Claude Opus 4.6 integration |
+| **Flagship** | GPT-5.4 | Claude Opus 4.7 integration |
 | **Price** | Free / Pro $8.99/mo | Free / Essential $20/mo |
 | **Context Window** | 2M tokens | 1M tokens |
 | **Best For** | Evidence synthesis, quick answers | Citation classification, smart citations |
@@ -40,7 +40,7 @@ Scite edges out for citation-specific analysis in academic workflows; Consensus 
 
 ## Where Scite Wins
 
-- Classifies 1.6B+ citation statements as supporting, contradicting, or mentioning, with Claude Opus 4.6 enhancements.
+- Classifies 1.6B+ citation statements as supporting, contradicting, or mentioning, with Claude Opus 4.7 enhancements.
 - Smart Citations link directly to evidence in papers, aiding precise verification.
 - Essential plan at $20/mo unlocks full exports, API access, and team collaboration.
 - Tracks citation trends over time for impact analysis.

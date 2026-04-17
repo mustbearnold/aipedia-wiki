@@ -7,8 +7,8 @@ meta_description: "The best AI tool stack for YouTube, TikTok, and social media 
 author: "aipedia.wiki Editorial"
 description: A practical AI tool stack for content creators, from script to video to distribution. Budget and premium versions with honest cost estimates.
 tools_mentioned: [chatgpt, claude, elevenlabs, heygen, runway, descript, capcut, suno, canva]
-last_updated: 2026-04-15
-last_verified: 2026-04-15
+last_updated: 2026-04-17
+last_verified: 2026-04-17
 update_frequency: monthly
 ---
 
@@ -18,12 +18,12 @@ This stack supports independent content creators who produce weekly videos for Y
 
 ## Quick Verdict
 
-**Perplexity Pro** leads for research with cited sources; **Claude 4.6 Pro** follows for script writing due to its handling of long-form content.[4][5] The stack uses Claude over ChatGPT GPT-5 for scripts because Claude produces less repetitive output in specific styles. ChatGPT serves as the free alternative across steps with its multimodal features.[1][4]
+**Perplexity Pro** leads for research with cited sources; **Claude Pro** follows for script writing due to its handling of long-form content.[4][5] The stack uses Claude over ChatGPT GPT-5 for scripts because Claude produces less repetitive output in specific styles. ChatGPT serves as the free alternative across steps with its multimodal features.[1][4]
 
 | Tool | Best Step | Monthly Cost | Flagship Model/Version |
 |------|-----------|--------------|------------------------|
 | Perplexity Pro | Research | $20 | Current search engine[4] |
-| Claude 4.6 Pro | Scripts | $20 | Claude 4.6[5] |
+| Claude Pro | Scripts | $20 | Claude Opus 4.7[5] |
 | ElevenLabs Creator | Voiceover | $22 | Current voice models |
 | HeyGen Creator | Avatar video | $24 | Current avatar tech |
 | Runway Standard | B-roll | $15 | Gen-4[4] |
@@ -37,9 +37,9 @@ This stack supports independent content creators who produce weekly videos for Y
 
 Perplexity Pro handles research and ideation by pulling trending topics, statistics, and discussions with inline citations for verification. Creators paste results into scripts for sourced claims. It outperforms ChatGPT free tier on systematic citations, though ChatGPT GPT-5 offers web browsing in Plus ($20/mo).[4][1] Pro includes unlimited Pro searches daily, file uploads, and API access. Free tier limits Pro searches to 5/day. Use for niche trends: "Current YouTube trends in fitness, cite sources." Limits include occasional source staleness; cross-check recent events. Compared to Gemini 3 Pro (free generous tier), Perplexity prioritizes citations over depth.[5][4] For content creators, it cuts research time from hours to minutes. Switch to ChatGPT GPT-5 Plus if you need integrated image analysis alongside research.[1] (168 words)
 
-## Claude 4.6 Pro ($20/mo)
+## Claude Pro ($20/mo)
 
-Claude 4.6 Pro writes scripts from Perplexity research, matching specific voices with examples for 10-minute YouTube formats. Prompt: "Write script for [audience] on [topic], tone [style], hook in 30 seconds, use stats [paste]." It handles long context better than ChatGPT GPT-5 for non-formulaic output.[5][1] Pro tier ($20/mo) provides 200K token context, higher limits than free (limited daily use). Claude edges ChatGPT in instruction-following for multi-part scripts; GPT-5 excels in multimodal but repeats phrases more.[4] Limitations: No native image generation (use ChatGPT for that). Free alternative: ChatGPT GPT-4o free tier suffices for short scripts. For faceless channels, pair with HeyGen. DeepSeek V3.2 (free) trails in creative writing but works for basic outlines.[5] Creators report 2x faster iteration vs manual drafting. (172 words)
+Claude Pro writes scripts from Perplexity research, matching specific voices with examples for 10-minute YouTube formats. Prompt: "Write script for [audience] on [topic], tone [style], hook in 30 seconds, use stats [paste]." It handles long context better than ChatGPT GPT-5 for non-formulaic output.[5][1] Pro tier ($20/mo) provides 200K token context, higher limits than free (limited daily use). Claude edges ChatGPT in instruction-following for multi-part scripts; GPT-5 excels in multimodal but repeats phrases more.[4] Limitations: No native image generation (use ChatGPT for that). Free alternative: ChatGPT GPT-4o free tier suffices for short scripts. For faceless channels, pair with HeyGen. DeepSeek V3.2 (free) trails in creative writing but works for basic outlines.[5] Creators report 2x faster iteration vs manual drafting. (172 words)
 
 ## ElevenLabs Creator ($22/mo)
 
@@ -67,7 +67,7 @@ Suno Pro generates royalty-free music like "lo-fi hip-hop, 120bpm, no vocals." P
 
 ## How We Chose
 
-Selected via 2026 benchmarks, user adoption (800M+ for ChatGPT), pricing from official pages, workflow fit from tests. Prioritized cost under $150/mo, free tiers, model updates like Claude 4.6/GPT-5.[1][4][5]
+Selected via 2026 benchmarks, user adoption (800M+ for ChatGPT), pricing from official pages, workflow fit from tests. Prioritized cost under $150/mo, free tiers, model updates like the Claude 4 series / GPT-5.[1][4][5]
 
 ## FAQ
 

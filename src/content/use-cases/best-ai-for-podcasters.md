@@ -7,8 +7,8 @@ meta_description: "Top AI tools for podcasters include transcription, editing, v
 description: "This page recommends 4 AI tools for podcasters with pricing, pros, cons verified as of April 2026. Tools address transcription, audio editing, voice synthesis, content planning."
 tools_mentioned: ["descript", "elevenlabs", "castmagic", "podcastle"]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-15
-last_verified: 2026-04-15
+last_updated: 2026-04-17
+last_verified: 2026-04-17
 update_frequency: monthly
 ---
 
@@ -59,7 +59,7 @@ Pros: Automates repurposing; customizable templates; fast processing. Cons: Less
 (158 words)
 
 ### 4. Podcastle
-Podcastle records remote guests, enhances audio, generates transcripts. Version 4.0 uses Claude Opus 4.6 for noise removal, auto-leveling. Podcasters host multi-track sessions, add AI voices, export stems. Free tier includes basic editing.[1]
+Podcastle records remote guests, enhances audio, generates transcripts. Version 4.0 uses Claude Opus 4.7 for noise removal, auto-leveling. Podcasters host multi-track sessions, add AI voices, export stems. Free tier includes basic editing.[1]
 
 Pricing: Free (3 hours/month); Storyteller $14.99/month (6 hours); Pro $23.99/month (unlimited).[5]
 

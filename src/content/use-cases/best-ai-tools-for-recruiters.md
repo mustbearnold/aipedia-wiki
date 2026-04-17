@@ -7,8 +7,8 @@ meta_description: "Top AI tools for recruiters in 2026 include Paradox, Eightfol
 description: "This page recommends AI tools for recruiters to source candidates, screen resumes, match skills, and schedule interviews, with pricing, pros, and cons verified as of April 2026."
 tools_mentioned: ["paradox-olivia", "eightfold-ai", "hireez", "chatgpt"]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-15
-last_verified: 2026-04-15
+last_updated: 2026-04-17
+last_verified: 2026-04-17
 update_frequency: monthly
 ---
 
@@ -42,7 +42,7 @@ Eightfold AI builds skills-based talent pipelines using deep learning on 1.5B+ p
 Recruiters value its ATS integrations (Oracle, SAP) for real-time matching beyond keywords. Generate diverse shortlists in seconds. Pricing is custom enterprise, typically $50,000+/year for mid-size teams. Drawbacks: high cost for small firms; requires data clean-up for accuracy. Ideal for strategic talent acquisition (168 words).
 
 ### 3. HireEZ (Flagship: Sourcer 3.0)
-HireEZ sources from 800M+ profiles across LinkedIn, GitHub, and databases with AI search. Sourcer 3.0 (February 2026) uses Claude Opus 4.6 for semantic queries like "React devs with AWS in NYC under 40." It automates outreach and tracks engagement[1].
+HireEZ sources from 800M+ profiles across LinkedIn, GitHub, and databases with AI search. Sourcer 3.0 (February 2026) uses Claude Opus 4.7 for semantic queries like "React devs with AWS in NYC under 40." It automates outreach and tracks engagement[1].
 
 Best for agencies filling niche roles quickly; integrates with 50+ ATS. Pricing: Free (basic search), Pro $99/user/month (unlimited sourcing), Enterprise custom with CRM sync. Cons: outreach limits on free tier; occasional false positives in matches. Strong for proactive sourcing (152 words).
 

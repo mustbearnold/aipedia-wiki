@@ -8,8 +8,8 @@ winner: depends
 seo_title: "Claude vs Elicit: Which Is Better in 2026?"
 meta_description: "Honest head-to-head of Claude and Elicit as of April 2026. Flagship models, current pricing, and which tool fits your workflow."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-15
-last_verified: 2026-04-15
+last_updated: 2026-04-17
+last_verified: 2026-04-17
 update_frequency: quarterly
 ---
 
@@ -25,9 +25,9 @@ Claude suits general tasks like writing and coding; Elicit excels in academic re
 
 | | Claude | Elicit |
 |---|---|---|
-| **Flagship** | Claude Opus 4.6, Sonnet 4.6 | Elicit 3.0 (powered by mixed models incl. Claude Sonnet 4.6, GPT-5.4)[2][3] |
+| **Flagship** | Claude Opus 4.7, Sonnet 4.6 | Elicit 3.0 (powered by mixed models incl. Claude Sonnet 4.6, GPT-5.4)[2][3] |
 | **Price** | Free / Pro $20/mo / Max $200/mo | Free (limited) / Plus $12/mo / Enterprise custom |
-| **Context Window / Output** | 1M tokens input, 128K output (Opus 4.6) | 200K tokens effective (research-focused) |
+| **Context Window / Output** | 1M tokens input, 128K output (Opus 4.7) | 200K tokens effective (research-focused) |
 | **Best For** | Coding, analysis, long-form writing | Literature reviews, paper summarization |
 
 ## Where Claude Wins
@@ -48,7 +48,7 @@ Claude suits general tasks like writing and coding; Elicit excels in academic re
 
 ## Key Differences
 
-Claude acts as a general AI for diverse tasks including coding (preferred over prior versions 70% in tests) and analysis, with Opus 4.6 and Sonnet 4.6 leading proprietary models as of February 2026 releases[1][2]. Elicit specializes in research, using models like Claude Sonnet 4.6 and GPT-5.4 under the hood to query papers, extract findings, and build workflows for academics[2][3][4]. Claude's 1M token context handles large docs; Elicit's effective 200K suits paper batches[3]. Pricing starts similar, but Claude scales to $200/mo Max for heavy use, while Elicit caps at $12/mo Plus for most researchers[3].
+Claude acts as a general AI for diverse tasks including coding (preferred over prior versions 70% in tests) and analysis, with Opus 4.7 (April 2026) and Sonnet 4.6 leading proprietary models[1][2]. Elicit specializes in research, using models like Claude Sonnet 4.6 and GPT-5.4 under the hood to query papers, extract findings, and build workflows for academics[2][3][4]. Claude's 1M token context handles large docs; Elicit's effective 200K suits paper batches[3]. Pricing starts similar, but Claude scales to $200/mo Max for heavy use, while Elicit caps at $12/mo Plus for most researchers[3].
 
 ## Who should choose Claude
 

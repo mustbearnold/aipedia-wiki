@@ -8,8 +8,8 @@ author: "aipedia.wiki Editorial"
 description: Google's free AI design tool dropped Figma stock 12%. Design-by-conversation paradigm with voice canvas.
 timeframe: Google Stitch launched March 2026. Figma stock dropped 12% same day. Impact still unfolding.
 impact: medium
-last_updated: 2026-04-15
-last_verified: 2026-04-15
+last_updated: 2026-04-17
+last_verified: 2026-04-17
 update_frequency: monthly
 ---
 
@@ -33,7 +33,7 @@ Agentic AI trends amplify Stitch's impact, enabling task-specific automation in 
 
 Google gains via ecosystem lock-in: Stitch outputs feed Google Ads, Sites, and Slides, boosting Workspace retention.[2] Non-designers like founders and marketers win most, skipping hires or Canva for instant generation.[6]
 
-Vibe coding tools thrive: Stitch designs pair with Lovable (Claude Opus 4.6 backend) or Bolt.new (GPT-5.4 integration) for hours-to-app cycles.[5] Canva holds templates niche, complementary to Stitch's generation.[6]
+Vibe coding tools thrive: Stitch designs pair with Lovable (Claude Opus 4.7 backend) or Bolt.new (GPT-5.4 integration) for hours-to-app cycles.[5] Canva holds templates niche, complementary to Stitch's generation.[6]
 
 ## What To Watch Next
 

@@ -8,8 +8,8 @@ winner: depends
 seo_title: "Obsidian vs Readwise Reader: Which Is Better in 2026?"
 meta_description: "Honest head-to-head of Obsidian and Readwise Reader as of April 2026. Flagship models, current pricing, and which tool fits your workflow."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-15
-last_verified: 2026-04-15
+last_updated: 2026-04-17
+last_verified: 2026-04-17
 update_frequency: quarterly
 ---
 
@@ -25,7 +25,7 @@ Obsidian suits users wanting a customizable, free note-taking vault with local s
 
 | | Obsidian | Readwise Reader |
 |---|---|---|
-| **Flagship** | Obsidian 1.8.0 (with AI plugins like Copilot using GPT-5.4, Claude Opus 4.6) | Readwise Reader (AI summaries via GPT-5.3, Claude Sonnet 4.6) |
+| **Flagship** | Obsidian 1.8.0 (with AI plugins like Copilot using GPT-5.4, Claude Opus 4.7) | Readwise Reader (AI summaries via GPT-5.3, Claude Sonnet 4.6) |
 | **Price** | Free core; Sync $5/month; Publish $8/month; AI plugins $20-200/month via providers | $8/month or $72/year |
 | **Context Window/Output Specs** | Local Markdown files; AI context up to 2M tokens via Gemini 3.1 Pro plugins | Article processing; AI outputs up to 200K tokens via integrated models |
 | **Best For** | Long-term knowledge graphs, developer workflows | Reading highlights, quick article digestion |
@@ -48,7 +48,7 @@ Obsidian suits users wanting a customizable, free note-taking vault with local s
 
 ## Key Differences
 
-Obsidian functions as a full knowledge base built on linked Markdown files stored locally, emphasizing extensibility through 1,000+ plugins that add AI capabilities via APIs to models like Claude Opus 4.6 or Gemini 3.1 Pro with 2M token contexts. Readwise Reader, by contrast, centers on content ingestion and processing, using AI from GPT-5.3 Codex for summaries and analysis within a browser or app interface priced at $8/month. Obsidian requires setup for AI features, often adding $20/month for provider access, while Reader bundles them. Obsidian excels in static, evergreen note organization; Reader prioritizes dynamic reading workflows.
+Obsidian functions as a full knowledge base built on linked Markdown files stored locally, emphasizing extensibility through 1,000+ plugins that add AI capabilities via APIs to models like Claude Opus 4.7 or Gemini 3.1 Pro with 2M token contexts. Readwise Reader, by contrast, centers on content ingestion and processing, using AI from GPT-5.3 Codex for summaries and analysis within a browser or app interface priced at $8/month. Obsidian requires setup for AI features, often adding $20/month for provider access, while Reader bundles them. Obsidian excels in static, evergreen note organization; Reader prioritizes dynamic reading workflows.
 
 ## Who should choose Obsidian
 

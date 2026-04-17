@@ -7,8 +7,8 @@ meta_description: "40+ AI tools priced at $20/month or less, hand-curated by cat
 author: "aipedia.wiki Editorial"
 description: Hand-picked AI tools priced at $20 per month or less, across every major category. Real paid plans with real value, no throwaway free tiers.
 tools_mentioned: [claude, chatgpt, gemini, grok, mistral-ai, github-copilot, windsurf, supermaven, cursor, rytr, quillbot, grammarly, freepik, playground-ai, flux, stable-diffusion, kling, decktopus, gamma, mubert, suno, notion-ai, obsidian, frase, kokoro, fish-audio, ideogram, elevenlabs]
-last_updated: 2026-04-15
-last_verified: 2026-04-15
+last_updated: 2026-04-17
+last_verified: 2026-04-17
 update_frequency: monthly
 ---
 
@@ -18,12 +18,12 @@ AI tool pricing often starts at $50/month or higher, which excludes most individ
 
 ## Quick Verdict
 
-Claude Pro at $20/month tops the list for general reasoning, coding, and writing; it uses Claude Opus 4.6 with 1M token context on max plans.[1] GitHub Copilot Pro at $10/month follows for IDE-based coding with access to GPT-5.4, Claude Opus 4.6, and Gemini 3.1 Pro.[1][3] These two cover most needs; add Freepik Essential ($5.75/month) for images to stay under $40 total.
+Claude Pro at $20/month tops the list for general reasoning, coding, and writing; it uses Claude Opus 4.7 with 1M token context on max plans.[1] GitHub Copilot Pro at $10/month follows for IDE-based coding with access to GPT-5.4, Claude Opus 4.7, and Gemini 3.1 Pro.[1][3] These two cover most needs; add Freepik Essential ($5.75/month) for images to stay under $40 total.
 
 | Tool | Category | Monthly Price | Annual Price | Key Flagship Model |
 |------|----------|---------------|--------------|--------------------|
-| Claude Pro | Chatbot/Reasoning | $20 | $16.67 | Claude Opus 4.6[1] |
-| GitHub Copilot Pro | Coding | $10 | $10 | GPT-5.4, Opus 4.6[1][3] |
+| Claude Pro | Chatbot/Reasoning | $20 | $16.67 | Claude Opus 4.7[1] |
+| GitHub Copilot Pro | Coding | $10 | $10 | GPT-5.4, Opus 4.7[1][3] |
 | Freepik Essential | Images | $5.75 | $5.75 | Flux 2 integration[7] |
 | Rytr Unlimited | Writing | $9 | $7.50 | GPT-5.4 base[2] |
 | Kling 3.0 Standard | Video | $6.99 | N/A | Kling 3.0[1] |
@@ -36,7 +36,7 @@ Claude Pro at $20/month tops the list for general reasoning, coding, and writing
 ### AI Chatbot / General Reasoning
 
 **Claude Pro ($20/mo)**  
-Claude Pro provides access to Claude Opus 4.6 and Sonnet models, up to 1M token context on higher tiers, and Claude Code CLI for development tasks. At $20/month ($16.67 annual), it handles reasoning, coding, and long documents better than GPT-5.4 in depth-focused work. Compared to Gemini 3.1 Pro (2M tokens in Google AI Advanced at $19.99/mo), Claude excels in analysis; Grok 4.20 via X Premium ($8/mo) suits real-time data but lacks context depth.[1][3][6] Limitations: No native images (use ChatGPT Plus for GPT Image 1.5). Ideal for users needing one tool over specialists.[1]
+Claude Pro provides access to Claude Opus 4.7 and Sonnet models, up to 1M token context on higher tiers, and Claude Code CLI for development tasks. At $20/month ($16.67 annual), it handles reasoning, coding, and long documents better than GPT-5.4 in depth-focused work. Compared to Gemini 3.1 Pro (2M tokens in Google AI Advanced at $19.99/mo), Claude excels in analysis; Grok 4.20 via X Premium ($8/mo) suits real-time data but lacks context depth.[1][3][6] Limitations: No native images (use ChatGPT Plus for GPT Image 1.5). Ideal for users needing one tool over specialists.[1]
 
 **Mistral Le Chat Pro ($14.99/mo)**  
 Mistral AI's Le Chat Pro uses DeepSeek V3.2 for reasoning and coding at $14.99/month. Stronger than Claude on multilingual tasks, weaker on long context. Good for non-English workflows.[1]
@@ -47,7 +47,7 @@ Google's lower Gemini 3.1 Pro tier at $7.99/month includes Workspace integration
 ### AI Coding Assistant
 
 **GitHub Copilot Pro ($10/mo)**  
-GitHub Copilot Pro at $10/month offers 300 premium requests, agent mode, and models like GPT-5.4, Claude Opus 4.6, Gemini 3.1 Pro in VS Code/JetBrains. Outperforms Cursor 2.0 ($20/mo) on value; Cursor leads in full IDE but costs more.[1][3] Supermaven Pro ($10 annual/$12 monthly) has 1M token autocomplete, fastest speed. Free: Codeium individual plan.[1]
+GitHub Copilot Pro at $10/month offers 300 premium requests, agent mode, and models like GPT-5.4, Claude Opus 4.7, Gemini 3.1 Pro in VS Code/JetBrains. Outperforms Cursor 2.0 ($20/mo) on value; Cursor leads in full IDE but costs more.[1][3] Supermaven Pro ($10 annual/$12 monthly) has 1M token autocomplete, fastest speed. Free: Codeium individual plan.[1]
 
 **Cursor Pro ($20/mo)**  
 Cursor 2.0 Pro at $20/month is the AI-native IDE reference with Supermaven autocomplete and agents. Matches Windsurf at $20/mo (up from $15).[1]

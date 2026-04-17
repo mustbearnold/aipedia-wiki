@@ -8,8 +8,8 @@ winner: depends
 seo_title: "Elicit vs Perplexity: Which Is Better in 2026?"
 meta_description: "Honest head-to-head of Elicit and Perplexity as of April 2026. Flagship models, current pricing, and which tool fits your workflow."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-15
-last_verified: 2026-04-15
+last_updated: 2026-04-17
+last_verified: 2026-04-17
 update_frequency: quarterly
 ---
 
@@ -25,7 +25,7 @@ Perplexity suits broader research needs with real-time web access. Elicit excels
 
 | | Elicit | Perplexity |
 |---|---|---|
-| **Flagship** | Elicit 3.0 (Claude Sonnet 4.6 backend) | Perplexity Pro (Gemini 3.1 Pro, Claude Opus 4.6) |
+| **Flagship** | Elicit 3.0 (Claude Sonnet 4.6 backend) | Perplexity Pro (Gemini 3.1 Pro, Claude Opus 4.7) |
 | **Price** | Free / Plus $12/month / Team $25/user/month | Free / Pro $20/month / Enterprise custom |
 | **Context Window** | 1M tokens | 2M tokens (Gemini 3.1 Pro) |
 | **Best For** | Academic literature review | General research, fact-checking |

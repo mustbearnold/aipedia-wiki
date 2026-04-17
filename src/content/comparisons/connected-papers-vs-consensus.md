@@ -8,8 +8,8 @@ winner: depends
 seo_title: "Connected Papers vs Consensus: Which Is Better in 2026?"
 meta_description: "Honest head-to-head of Connected Papers and Consensus as of April 2026. Flagship models, current pricing, and which tool fits your workflow."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-15
-last_verified: 2026-04-15
+last_updated: 2026-04-17
+last_verified: 2026-04-17
 update_frequency: quarterly
 ---
 
@@ -25,7 +25,7 @@ Consensus fits workflows needing direct answers and evidence extraction from pap
 
 | | Connected Papers | Consensus |
 |---|---|---|
-| **Flagship** | Graph-based similarity visualization (v1.1.3) | AI research agent with evidence extraction (powered by GPT-5.3, Claude Opus 4.6) |
+| **Flagship** | Graph-based similarity visualization (v1.1.3) | AI research agent with evidence extraction (powered by GPT-5.3, Claude Opus 4.7) |
 | **Price** | Free basic; Pro $3/mo or $36/yr | Free basic; Plus $8.99/mo or $96/yr; Pro $22.99/mo |
 | **Context Window/Output Specs** | Unlimited graph nodes; 200 papers max per graph | 2M token context; extracts key findings, P-values, study sizes |
 | **Best For** | Visual literature mapping | Synthesizing answers from 200M+ papers |

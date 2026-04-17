@@ -10,8 +10,9 @@ founded: 2021
 hq: San Francisco, USA
 funding: "$40B+"
 key_products: [claude, claude-code]
-last_updated: 2026-04-15
+last_updated: 2026-04-17
 update_frequency: quarterly
+last_verified: 2026-04-17
 ---
 
 # Anthropic
@@ -33,10 +34,11 @@ Anthropic builds frontier AI systems with safety techniques applied at scale, in
 Claude models support long context windows and excel in reasoning, competing with rivals on benchmarks while prioritizing safety alignment. Anthropic pursues B2B revenue through API access, partnerships like AWS Bedrock and Google, and developer tools.[1][3]
 
 ## Current Flagship Products
-- **[Claude](../tools/claude.md)**: Family of LLMs including Opus 4.6, Sonnet, Haiku. Available via API, web/app, with 1M+ token context.[2]
+- **[Claude](../tools/claude.md)**: Family of LLMs including Opus 4.7, Sonnet 4.6, Haiku 4.5. Available via API, web/app, with 1M+ token context.[2]
 - **[Claude Code](../tools/claude-code.md)**: CLI-based agentic coding tool for terminal workflows, file operations, command execution. Generated $1B revenue in six months.[1]
 
 ## Recent News
+- April 2026: Launched Claude Opus 4.7, the new flagship. Same $5/$25 per MTok API pricing, 1M context, 128K output max.
 - February 2026: Raised $30B Series G funding led by GIC and Coatue at $380B valuation to expand research, products, infrastructure.[3][2]
 - February 2026: Launched Claude Opus 4.6, advancing toward multi-step task execution.[2]
 - October 2025: Signed multibillion-dollar AI chips deal with Google.[2]

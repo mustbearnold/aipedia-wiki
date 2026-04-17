@@ -75,7 +75,7 @@ Two products in one SKU. AI Assistant handles chat, completion, and code actions
 | **AI Pro** | $10/mo individuals, $20/mo organizations, 10 credits/mo |
 | **AI Ultimate** | $30/mo individuals, $60/mo organizations, 35 credits/mo |
 | **All Products Pack** | $299/year, bundles AI Pro |
-| **Models** | Claude Opus 4.6, GPT-5.4, Gemini 3.1 Pro, JetBrains local model |
+| **Models** | Claude Opus 4.7, GPT-5.4, Gemini 3.1 Pro, JetBrains local model |
 | **Agent** | Junie, credit-metered |
 | **VS Code support** | None |
 

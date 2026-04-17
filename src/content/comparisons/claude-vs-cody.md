@@ -8,8 +8,8 @@ winner: depends
 seo_title: "Claude vs Cody: Which Is Better in 2026?"
 meta_description: "Honest head-to-head of Claude and Cody as of April 2026. Flagship models, current pricing, and which tool fits your workflow."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-15
-last_verified: 2026-04-15
+last_updated: 2026-04-17
+last_verified: 2026-04-17
 update_frequency: quarterly
 ---
 
@@ -25,7 +25,7 @@ Claude suits broad tasks including long-form writing and reasoning; Cody excels 
 
 | | Claude | Cody |
 |---|---|---|
-| **Flagship** | Claude Opus 4.6 | GPT-5.3 Codex (via Cursor 2.0 integration) |
+| **Flagship** | Claude Opus 4.7 | GPT-5.3 Codex (via Cursor 2.0 integration) |
 | **Price** | $20/month (Pro) | $20/month (Pro); $200/month (Pro+) |
 | **Context Window** | 1M tokens | 2M tokens |
 | **Best For** | Long analysis, document tasks | IDE code completion, agentic coding |
@@ -48,7 +48,7 @@ Claude suits broad tasks including long-form writing and reasoning; Cody excels 
 
 ## Key Differences
 
-Claude's Claude Opus 4.6 leads in expert-level analysis with a 1M token window, making it suitable for tasks beyond coding like SEO content and multi-step reasoning.[1][4] Cody, built on GPT-5.3 Codex in Cursor 2.0, prioritizes developer tools with 2M token context for large codebases, multimodal inputs, and real-time IDE support.[1][3] Claude offers broader versatility at $20/month Pro; Cody matches pricing but adds Pro+ at $200/month for advanced agents.[3]
+Claude's Claude Opus 4.7 leads in expert-level analysis with a 1M token window, making it suitable for tasks beyond coding like SEO content and multi-step reasoning.[1][4] Cody, built on GPT-5.3 Codex in Cursor 2.0, prioritizes developer tools with 2M token context for large codebases, multimodal inputs, and real-time IDE support.[1][3] Claude offers broader versatility at $20/month Pro; Cody matches pricing but adds Pro+ at $200/month for advanced agents.[3]
 
 ## Who should choose Claude
 

@@ -8,8 +8,8 @@ winner: depends
 seo_title: "Capacities vs Obsidian: Which Is Better in 2026?"
 meta_description: "Honest head-to-head of Capacities and Obsidian as of April 2026. Flagship models, current pricing, and which tool fits your workflow."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-15
-last_verified: 2026-04-15
+last_updated: 2026-04-17
+last_verified: 2026-04-17
 update_frequency: quarterly
 ---
 
@@ -25,7 +25,7 @@ Obsidian suits users prioritizing local control, customization, and free core fu
 
 | | Capacities | Obsidian |
 |---|---|---|
-| **Flagship** | Capacities AI Objects (GPT-5.4 integration) | Obsidian 1.8 (local AI plugins with GPT-5.4/Claude Opus 4.6) |
+| **Flagship** | Capacities AI Objects (GPT-5.4 integration) | Obsidian 1.8 (local AI plugins with GPT-5.4/Claude Opus 4.7) |
 | **Price** | Free; Pro $15/mo | Free; Sync $5/mo; Publish $10/mo; AI plugins extra via API |
 | **Best For** | Object-based PKM, team collaboration | Local Markdown graphs, plugin power users |
 
@@ -42,12 +42,12 @@ Obsidian suits users prioritizing local control, customization, and free core fu
 - Free core app with no limits on notes or vaults.
 - Local-first storage; files owned by user in Markdown format.
 - Graph view visualizes note connections.
-- 1,000+ plugins including AI (e.g., Copilot with GPT-5.4, Continue with Claude Opus 4.6).
+- 1,000+ plugins including AI (e.g., Copilot with GPT-5.4, Continue with Claude Opus 4.7).
 - Canvas for spatial note arrangement.
 
 ## Key Differences
 
-Capacities structures notes around customizable objects with AI automation for extraction and linking, making it easier for workflows involving databases or teams; it integrates GPT-5.4 directly for pro users at $15/month. Obsidian stores everything as plain Markdown files for portability, relies on community plugins for AI (supporting models like GPT-5.4 or Claude Opus 4.6 via API keys), and remains free with optional $5/month sync. Capacities emphasizes collaboration; Obsidian focuses on personal knowledge graphs and extensibility.
+Capacities structures notes around customizable objects with AI automation for extraction and linking, making it easier for workflows involving databases or teams; it integrates GPT-5.4 directly for pro users at $15/month. Obsidian stores everything as plain Markdown files for portability, relies on community plugins for AI (supporting models like GPT-5.4 or Claude Opus 4.7 via API keys), and remains free with optional $5/month sync. Capacities emphasizes collaboration; Obsidian focuses on personal knowledge graphs and extensibility.
 
 ## Who should choose Capacities
 
@@ -67,7 +67,7 @@ Choose Capacities for structured, AI-native note-taking with team features at $1
 Obsidian core is free; Capacities Pro costs $15/month for AI features.
 
 **Which has better output quality?**  
-Obsidian plugins access top models like GPT-5.4 or Claude Opus 4.6; Capacities uses GPT-5.4 natively.
+Obsidian plugins access top models like GPT-5.4 or Claude Opus 4.7; Capacities uses GPT-5.4 natively.
 
 **Can I use both?**  
 Yes; export Markdown from Capacities to Obsidian vaults or use Obsidian plugins for Capacities-like objects.
