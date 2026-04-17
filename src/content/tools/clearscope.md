@@ -7,7 +7,7 @@ category: ai-seo
 secondary_categories: [ai-writing]
 company: Mushi Labs
 url: https://clearscope.io
-pricing_model: subscription
+pricing_model: paid
 price_range: "$129-$399/month"
 status: active
 launched: 2016-01
