@@ -40,7 +40,7 @@ not_best_for:
   - free users who dislike ads
   - deep long-form reasoning vs. Claude Opus 4.6
 quick_answer: >-
-  ChatGPT is OpenAI's general-purpose AI assistant, running GPT-5.3 Instant by default across all tiers and GPT-5.4 Thinking/Pro on paid plans as of April 2026. GPT-4o was fully retired February 13, 2026. The free tier now includes ads; Plus ($20/mo) is ad-free with GPT-5.4 Thinking; two Pro tiers ($100 and $200/mo) add the Codex AI coding agent at 5x and 20x usage respectively. Image generation uses GPT Image 1.5 (replaced DALL-E 3 in March 2025). Sora video was permanently discontinued in March 2026. Core features include Operator/Agent Mode, Advanced Voice, Projects, Memory, Canvas, and Custom GPTs. Codex is the standout new capability for developers. Compared to Claude Opus 4.6, Gemini 3.1 Pro, and Grok 4, ChatGPT's breadth of integrations and its Codex coding agent remain its clearest advantages.
+  ChatGPT is the broadest AI assistant in a single subscription. Pick it for text, image gen, Codex coding agent, Operator mode, and the largest custom-GPT marketplace. Skip it for best-in-class reasoning (Claude Opus 4.7), Google Workspace depth (Gemini), or video generation.
 price_history:
   - date: 2026-04-09
     plan: "Pro"
@@ -54,7 +54,9 @@ price_history:
 
 # ChatGPT
 
-OpenAI's general-purpose AI assistant. Runs the GPT-5 model family across web, mobile, and desktop · text, image generation (GPT Image 1.5), web browsing with citations, sandboxed code execution, the Codex coding agent, and Operator Agent Mode in a single interface. No video generation: Sora was shut down in March 2026.
+OpenAI's general-purpose AI assistant. Runs the GPT-5 model family across web, mobile, and desktop: text, image generation (GPT Image 1.5), web browsing with citations, sandboxed code execution, the Codex coding agent, and Operator Agent Mode in a single interface.
+
+No video generation. Sora was shut down in March 2026.
 
 ## System Verdict
 
@@ -131,17 +133,17 @@ Prices verified 2026-04-17 via [OpenAI pricing](https://chatgpt.com/pricing/), [
 
 ## Failure modes
 
-- **Ads on the free tier are aggressive.** Shipped with the 2026 monetization push · present in the conversation stream, not a banner you can ignore. If you use AI daily, the free tier is not viable.
+- **Ads on the free tier are aggressive.** Shipped with the 2026 monetization push. Present in the conversation stream, not a banner you can ignore. If you use AI daily, the free tier is not viable.
 - **Hallucination on niche or fast-moving topics.** GPT-5 is better than GPT-4 but still fabricates plausible-sounding wrong answers on thin-source domains. Citations help but are not a fix.
 - **Context window is not published.** OpenAI does not disclose an exact token limit for the GPT-5 family. Claude and Gemini both publish explicit 1M-token limits. Consequence: you cannot plan long-context workflows with the same certainty.
 - **Rate limits on GPT-5.4 Thinking for Plus.** Plus users hit caps during peak periods; the only real fix is moving to Pro.
 - **Memory is shallow and can be intrusive.** Stores stated preferences and conversation snippets; occasionally surfaces them out of context or drifts from stated preferences. Manual cleanup required.
 - **Privacy default on Free / Go.** Conversations on ad-supported tiers may be used for model training unless explicitly opted out. Paid tiers default to no-training.
-- **Codex usage caps are relative, not absolute.** "5x Plus" doesn't publish the Plus baseline in tokens or seconds · heavy users should monitor their own usage to calibrate tier choice.
+- **Codex usage caps are relative, not absolute.** "5x Plus" doesn't publish the Plus baseline in tokens or seconds. Heavy users should monitor their own usage to calibrate tier choice.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline · an automated system that ingests vendor documentation, normalizes factual claims, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, normalizes factual claims, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17.
 
 ## Pricing
 
@@ -186,7 +188,13 @@ The $100/mo Pro plan was introduced on April 9, 2026, directly targeting Claude 
 
 ## Bottom Line
 
-ChatGPT is the broadest AI assistant available in April 2026 and the right default for users who want a single tool covering text, image generation (GPT Image 1.5), web browsing, code execution, and autonomous agent workflows. The Codex coding agent is a genuine differentiator for developers willing to pay for Pro. The two new Pro tiers ($100 and $200/mo) are a direct response to Claude Max pricing and make high-volume Codex usage viable. Against Claude Opus 4.6, ChatGPT wins on feature breadth and image generation; Claude wins on long-form reasoning quality and transparency about context limits. Against Gemini 3.1 Pro, ChatGPT wins on Codex and agent integrations; Gemini wins on Google Workspace depth and video generation (Veo 3). Against Grok 4, ChatGPT wins on ecosystem maturity and image generation. For most users, Plus at $20/mo delivers the best value; power coders should evaluate the $100 Pro plan against Claude Max 5x directly.
+ChatGPT is the broadest AI assistant available in April 2026. It's the right default for users who want a single tool covering text, image generation (GPT Image 1.5), web browsing, code execution, and autonomous agent workflows.
+
+The Codex coding agent is a genuine differentiator for developers willing to pay for Pro. The two new Pro tiers ($100 and $200/mo) are a direct response to Claude Max pricing and make high-volume Codex usage viable.
+
+Against Claude Opus 4.6, ChatGPT wins on feature breadth and image generation; Claude wins on long-form reasoning quality and transparency about context limits. Against Gemini 3.1 Pro, ChatGPT wins on Codex and agent integrations; Gemini wins on Google Workspace depth and video generation (Veo 3). Against Grok 4, ChatGPT wins on ecosystem maturity and image generation.
+
+For most users, Plus at $20/mo delivers the best value. Power coders should evaluate the $100 Pro plan against Claude Max 5x directly.
 
 ## Best Alternatives
 
