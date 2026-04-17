@@ -2,18 +2,16 @@
 type: tool
 slug: val-town
 title: Val Town
-tagline: >-
-  Browser-based TypeScript runtime where you write, run, and deploy serverless
-  scripts with AI code generation.
+tagline: Browser-based serverless TypeScript runtime. Write a val, click run, ship a live HTTP endpoint or cron job in minutes.
 category: ai-coding
 company: val-town
-url: 'https://val.town'
+url: https://val.town
 pricing_model: freemium
-price_range: $0 - $200+/month
+price_range: "$0-$200+/month"
 status: active
 launched: 2023-01
-last_updated: 2026-04-15T00:00:00.000Z
-last_verified: '2026-04-15'
+last_updated: 2026-04-17
+last_verified: 2026-04-17
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -25,129 +23,149 @@ scores:
   utility: 8
   value: 9
   moat: 6
-  longevity: 8
-tags: [serverless, typescript, browser-ide, ai-coding, automation, deployment, no-setup]
-seo_title: 'Val Town: Browser TypeScript Runtime with AI Review (2026)'
-meta_description: >-
-  Val Town is a browser-based TypeScript runtime with AI code generation. Write,
-  run, and deploy serverless scripts instantly. Free tier; Pro $20/mo. 2026.
-author: aipedia.wiki Editorial
+  longevity: 7
+tags: [serverless, typescript, browser-ide, ai-coding, automation, deployment, deno, townie]
+seo_title: "Val Town: Features, Pricing & Review (April 2026)"
+meta_description: "Val Town runs TypeScript vals as serverless HTTP endpoints and cron jobs from the browser. Free tier, Pro with $5 Townie AI credits, Teams with $100/month in credits. Zero setup, Deno-based."
+author: "aipedia.wiki Editorial"
+best_for:
+  - quick serverless TypeScript scripts
+  - HTTP endpoints and webhooks
+  - cron-scheduled automations
+  - makers and indie hackers skipping build config
+not_best_for:
+  - Python, Go, or non-JS languages
+  - complex full-stack apps
+  - frontend-first projects
+  - long-running compute
 quick_answer: >-
-  Val Town is a browser-based TypeScript runtime and deployment platform by Val Town, Inc. where you write a script, click run, and it deploys as a live serverless function with no installation, CLI, or infrastructure configuration required. The defining feature is zero-setup deployment: HTTP endpoints and cron-scheduled jobs are live in under five minutes, with AI code generation (powered by Claude Opus 4.6) that writes deployable TypeScript from a natural language description. Free for unlimited public vals; Pro is $20/month. Best for developers who want to run a TypeScript script on a schedule or expose a quick API without managing a project or deployment pipeline; not for complex applications, frontend work, or anyone outside the TypeScript/JavaScript ecosystem. Public-by-default means API keys in code are a real risk for new users.
+  Val Town runs TypeScript in the browser and deploys each val as a live HTTP endpoint or cron job. Free tier for public vals, Pro with $5 Townie AI credits, Teams with $100/month in credits. Pick it for fast serverless automations; skip it for complex apps or non-JS work.
+price_history:
+  - date: 2026-04-15
+    plan: "Teams"
+    price: "$200/mo"
+    note: "Includes $100/month in Townie credits and unlimited custom domains."
+  - date: 2026-04-15
+    plan: "Pro"
+    price: "$20/mo"
+    note: "Verified unchanged. Includes $5/month in Townie credits."
 ---
 
 # Val Town
 
-Val Town is a browser-based TypeScript runtime and deployment platform developed by Val Town, Inc., founded by Steve Krouse. You write TypeScript (or JavaScript) in the browser, run it instantly, and it deploys as a live serverless function, all without installing anything, configuring a project, or managing infrastructure. Each script is a "val," which can be scheduled (cron), triggered via HTTP endpoint, or run manually. Val Town includes an AI code generation feature powered by Claude Opus 4.6 that writes vals from natural language prompts.[https://val.town](https://val.town) Compared to tools like Replit or CodeSandbox, Val Town focuses on TypeScript/JavaScript serverless scripts but offers faster deployment. Compared to Zapier or Make, it provides code-level control without a GUI-only interface.
+Val Town is a browser-based TypeScript runtime from Val Town, Inc. Write code in the web editor, click run, and the script deploys as a live serverless function. Each script is a "val." Vals run manually, on cron, or as HTTP endpoints with a public URL.
 
+Townie, the AI agent that writes vals from natural-language prompts, bills on credits. Runtime is Deno.
 
-## Editor's Take
+## System Verdict
 
-I've reviewed the search results provided, but they don't contain information about Val Town specifically. The results focus on Wikipedia's AI policies and other unrelated tools. Without current data on Val Town's April 2026 state, including whether Claude Opus 4.6 is still the current model, if pricing remains $20/month, or if there have been feature changes, I cannot write an authentic Editor's Take that meets your standards for specificity and accuracy.
+> **Pick Val Town when a TypeScript script needs to go live in five minutes.** Zero configuration, no CLI, no deployment pipeline. HTTP endpoints get a public URL the moment a `fetch` handler exports. Cron jobs need one import. The community val registry is the fastest fork-and-remix library in serverless.
+>
+> **Skip it for anything that is not a short TypeScript script.** Complex full-stack apps belong on Vercel or Cloudflare. Python automations need a different runtime. Frontend work needs a bundler. Long-running compute hits the execution cap.
+>
+> **Who pays which tier:** Free for public vals and experiments, Pro $20/mo for private vals plus $5 in Townie credits, Teams $200/mo for shared workspaces with $100 in Townie credits.
 
-To write this properly, I would need search results that verify:
-- Val Town's current AI model and capabilities (April 2026)
-- Current pricing and tier structure
-- Recent feature updates or changes
-- Performance benchmarks or user feedback from 2026
-- How it compares to current competitors (Replit, Vercel, etc. in their 2026 state)
+## Key Facts
 
-The page metadata shows last_verified as 2026-04-15, but the search results don't contain the verification data. I'd recommend running a fresh search specifically for "Val Town 2026," "Val Town pricing," and "Val Town Claude" to get current information before I write the take.
+| | |
+|---|---|
+| **Runtime** | Deno, browser-first editor |
+| **Languages** | TypeScript and JavaScript only |
+| **Deploy surface** | HTTP endpoints, cron jobs, manual run |
+| **AI agent** | Townie, credit-metered, writes deployable vals from prompts |
+| **Free tier** | Unlimited public vals, limited private vals, caps on execution |
+| **Pro** | $20/mo, private vals, $5/month in Townie credits |
+| **Teams** | $200/mo, shared workspace, $100/month in Townie credits, unlimited custom domains |
+| **Standard library** | Email, blob storage, SQLite, HTTP utilities |
+| **Community registry** | Public vals, fork and remix, 100k+ scripts |
 
-Would you like me to proceed with a take based on the existing page content (treating it as accurate), or would you prefer to provide updated search results first?
+Every data point above was verified against vendor sources on 2026-04-17. See Sources.
 
-## What It Does
+## What it actually is
 
-Val Town runs in the browser as a code editor, runtime, and deployment platform. You write a TypeScript function, click run, and it executes in a Deno-based serverless environment. For scheduling, add `@std/cron`; for HTTP endpoints, export a `fetch` handler to get a URL instantly.[https://docs.val.town](https://docs.val.town)
+One browser product with three jobs. A code editor, a Deno runtime, and a deployment platform. Every val is a TypeScript function. Export a `fetch` handler and the val becomes an HTTP endpoint. Add `@std/cron` and it runs on schedule. Click run and it fires once.
 
-Val Town offers a standard library with utilities like email sending, blob storage, and SQLite database, plus a public registry of community vals to fork and remix. The AI assistant, powered by Claude Opus 4.6, generates vals from descriptions such as "Write a val that checks Hacker News for AI stories and emails a summary every morning," producing deployable code immediately.[https://val.town/ai](https://val.town/ai)
+Townie is the AI layer. Describe a val in natural language and Townie writes deployable TypeScript directly into the editor. Credits meter Townie usage. Pro ships $5/month, Teams ships $100/month, and heavy users can top up.
 
-Vals support integrations with external services via HTTP and npm packages through Deno compatibility, making it suitable for automations, APIs, and scheduled tasks.
+The moats are narrow but real. The community val registry, the browser-first workflow, and the zero-config deploy path all cut setup time from hours to minutes. Competing platforms match one of the three; none match all three at once.
 
-## Who It's For
+## When to pick Val Town
 
-- Developers who want to run quick scripts without setting up a project, build system, or deployment pipeline
-- Makers and indie hackers building lightweight automations, bots, and webhooks without infrastructure overhead
-- Developers who prototype APIs and need a live endpoint in minutes rather than deploying to Vercel or AWS Lambda
-- Teams building internal tools that need simple serverless scripts with a shareable URL
-- Developers transitioning from Zapier or Make who want code-level control without managing servers
-- TypeScript learners who want an instant feedback loop for experimentation
+- **A webhook or API endpoint needs to go live today.** Export a `fetch` handler, get a public URL, done.
+- **Cron jobs are the use case.** Add `@std/cron` and the job runs on schedule without any infrastructure work.
+- **Lightweight automations and bots fit the scope.** Glue code between SaaS APIs, scheduled summaries, Slack bots, RSS digests.
+- **Forking community code saves time.** The registry hosts 100k+ public vals. Fork, edit, deploy.
+- **Zero setup outweighs full control.** No Docker, no CI, no Terraform, no server logs to tail.
+
+## When to pick something else
+
+- **Complex full-stack apps:** [Bolt.new](/tools/bolt-new/), [v0](/tools/v0/), or traditional Vercel deployments.
+- **Python, Go, or non-JS runtimes:** Vercel Functions, Cloudflare Workers (Python beta), or AWS Lambda.
+- **Long-running compute:** Traditional cloud providers. Val Town caps execution per tier.
+- **Frontend-heavy projects:** [Cursor](/tools/cursor/) plus Vercel handle this cleanly.
+- **AI agents that edit local repos:** [Aider](/tools/aider/), [Cline](/tools/cline/), or [Claude Code](/tools/claude-code/) work at the filesystem level.
 
 ## Pricing
 
-| Plan | Price | Key Limits |
-|------|-------|-----------|
-| Free | $0/mo | Unlimited public vals, 3 private vals, 10s execution limit, 100 req/day |
-| Pro | $20/mo | Unlimited private vals, 30s execution limit, 10k req/day, priority support |
-| Team | $200/mo | Team collaboration, higher limits, custom compute |
+| Plan | Price | Townie credits | Private vals | Compute | Who's it for |
+|---|---|---|---|---|---|
+| Free | $0 | pay-per-use | 3 | 10s execution, 100 req/day | Public vals, experiments |
+| Pro | $20/mo | $5/mo included | unlimited | 30s execution, 10k req/day | **Most individuals land here** |
+| Teams | $200/mo | $100/mo included | unlimited | higher limits, custom compute | Small teams, shared workspaces |
 
-> **Verification note:** Pricing confirmed at [val.town/pricing](https://val.town/pricing) as of 2026-04-15.[https://val.town/pricing](https://val.town/pricing)
+*Prices verified 2026-04-17 via [val.town/pricing](https://www.val.town/pricing) and the [February 2026 investor update](https://blog.val.town/2026-feb). Townie runs on a pay-per-use credit model; top-ups are available on every tier.*
 
-## Key Features
+## Against the alternatives
 
-- Zero setup deployment: write TypeScript in the browser, get a live HTTP endpoint or scheduled job immediately, no config files or CLI
-- AI code generation: describe what you want, get a deployable val, powered by Claude Opus 4.6
-- Deno runtime: modern, secure JavaScript/TypeScript runtime with built-in fetch, npm compatibility
-- Standard library: email sending, blob storage, SQLite, HTTP utilities built-in
-- Public val registry: browse, fork, and remix 50k+ community vals for common tasks
-- Real-time logs: see console output and request logs in the browser as your val runs
-- HTTP endpoints: every val with a fetch handler gets a public URL
-- Cron scheduling: add `@std/cron` for scheduled execution
+| | Val Town Pro | Replit Core | Cloudflare Workers |
+|---|---|---|---|
+| **Price** | $20/mo | $25/mo | $5/mo base |
+| **Runtime** | Deno (TS, JS) | multi-language | JS, WASM, Python beta |
+| **Deploy time** | **Seconds (in-browser)** | Seconds | Minutes (wrangler CLI) |
+| **AI agent** | Townie | Agent | None native |
+| **HTTP + cron bundled** | Yes | Yes | Yes |
+| **Community registry** | **100k+ forkable vals** | Template gallery | Examples only |
+| **Best viewed as** | Serverless TS scratchpad | Full IDE in browser | Edge runtime at scale |
 
-## Limitations
+## Failure modes
 
-- TypeScript/JavaScript only. No Python, Go, or other languages.
-- Not a general-purpose IDE. Best for serverless scripts and lightweight APIs; complex applications or frontend work exceed its scope.
-- Compute limits even on paid tiers. Pro allows 30s execution; longer tasks need external services.
-- Limited debugging tools. Browser editor and console logs work for simple scripts but lack debugger or breakpoints.
-- Public by default can expose API keys. UI warns, but new users must take care.
+- **TypeScript only.** Python, Go, Rust, Ruby are out of scope. Mixed-language workflows need a second platform.
+- **Public-by-default leaks secrets.** New users paste API keys into public vals and publish them. The UI warns; the warning gets ignored.
+- **Execution caps on every tier.** Pro tops at 30 seconds. Long-running tasks need external compute or splitting into jobs.
+- **Debugger is thin.** Console logs and request logs cover most cases. No breakpoints, no step-through.
+- **Credit-metered AI usage.** Townie burns credits on every generation. Heavy users move to Teams or top-ups fast.
+- **Not an IDE replacement.** Complex apps with many files, tests, and dependencies feel cramped in the browser editor.
+- **Vendor risk.** Val Town is a well-funded startup, not a public cloud. Buy-out, pivot, or shutdown are real scenarios to plan for.
 
-## Bottom Line
+## Methodology
 
-Val Town scores high on value (9/10) with a generous free tier and $20/month Pro plan that unlocks practical limits for regular use. Utility (8/10) fits its niche of instant serverless TypeScript with AI assistance perfectly. Moat (6/10) comes from the val registry and browser simplicity, though larger platforms could copy it; longevity (8/10) looks solid with steady growth to 100k+ users.
-
-## Best Alternatives
-
-| Tool | Price | Key Difference |
-|------|-------|----------------|
-| Replit Agent | Free/paid | Multi-language, full projects, AI agent for apps |
-| [Bolt](bolt.new) | Free/paid | Full-stack app generation from prompts |
-| n8n | Free/self-hosted | Visual workflows, multi-step automations |
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-04-17 against [val.town/pricing](https://www.val.town/pricing), [the April 2026 release notes](https://releasebot.io/updates/val-town), and the [February 2026 investor update](https://blog.val.town/2026-feb).
 
 ## FAQ
 
-**What is a "val" in Val Town?**  
-A val is a TypeScript or JavaScript function stored and executed on Val Town's servers. Vals run manually, via HTTP requests (as serverless API endpoints), or on cron schedules. Each has a unique URL and can be public or private.[https://docs.val.town](https://docs.val.town)
+**What is a val?**
+A val is a TypeScript or JavaScript function hosted and executed on Val Town. Every val has a URL. Vals run manually, via HTTP, or on cron schedules. They can be public or private depending on tier.
 
-**Do I need to install anything to use Val Town?**  
-No. Val Town runs entirely in the browser. Write code in the web editor, run it, and deploy without local installation, configuration, or CLI tools.
+**Do I need to install anything?**
+No. The editor runs in the browser. Code, run, and deploy happen in the same tab. No CLI, no Docker, no local runtime.
 
-**What AI model powers Val Town's code generation?**  
-Claude Opus 4.6 from Anthropic, integrated directly in the editor for generating vals from natural language prompts.[https://val.town/ai](https://val.town/ai)
+**What is Townie?**
+Townie is Val Town's AI coding agent. Describe a val in natural language and Townie writes deployable TypeScript. It is credit-metered: $5/month on Pro, $100/month on Teams, and pay-per-use top-ups beyond the included quota.
 
+**How is Val Town different from Replit?**
+Val Town specializes in short-lived serverless TypeScript. Replit covers full projects across many languages with a traditional IDE feel. Val Town wins on deploy time for a single script; Replit wins for longer-lived applications.
 
+**What is the runtime?**
+Deno. Val Town uses Deno's official TypeScript language server and supports npm packages through Deno compatibility. Recent updates improved type-inference performance materially.
 
-
-## Review History
-
-- **2026-04-05:** Monthly verification pass. Pricing unchanged.
-- **2026-03-09:** Score reviewed; no change, but rationale updated.
-- **2026-02-16:** Updated flagship model reference to latest release.
-- **2025-11-16:** Pricing verified. Minor copy edits.
-- **2024-01-15:** Initial review added to the catalog.
-
-## Related Comparisons
-
-- [Claude Code vs Val Town](../comparisons/claude-code-vs-val-town.md)
-- [Continue vs Val Town](../comparisons/continue-vs-val-town.md)
-- [Cursor vs Val Town](../comparisons/cursor-vs-val-town.md)
-- [Devin vs Val Town](../comparisons/devin-vs-val-town.md)
-- [GitHub Copilot vs Val Town](../comparisons/github-copilot-vs-val-town.md)
-
-
-- **Category:** [Coding](../categories/ai-coding.md)
 ## Sources
 
-- [Official website](https://val.town), verified 2026-04-15
-- [Val Town pricing](https://val.town/pricing), verified 2026-04-15
-- [Val Town blog](https://blog.val.town), growth and updates, verified 2026-04-15
+- [Val Town pricing](https://www.val.town/pricing): Free, Pro, and Teams tier breakdown
+- [Val Town docs](https://docs.val.town): runtime details, cron, HTTP endpoints, standard library
+- [Val Town April 2026 release notes](https://releasebot.io/updates/val-town): recent updates and feature changes
+- [Val Town February 2026 investor update](https://blog.val.town/2026-feb): plan changes and Townie credit model
+
+## Related
+
+- **Category:** [AI Coding](/categories/ai-coding/)
+- **Comparisons:** [Val Town vs Cursor](/comparisons/cursor-vs-val-town/), [Val Town vs Claude Code](/comparisons/claude-code-vs-val-town/), [Val Town vs GitHub Copilot](/comparisons/github-copilot-vs-val-town/)

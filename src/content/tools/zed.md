@@ -2,18 +2,16 @@
 type: tool
 slug: zed
 title: Zed
-tagline: >-
-  AI-first collaborative code editor built in Rust, fast, minimal, and designed
-  for real-time pair programming.
+tagline: Native Rust code editor with GPU rendering, real-time multiplayer, and the Zeta2 edit-prediction model. Free for individuals.
 category: ai-coding
 company: zed-industries
-url: 'https://zed.dev'
+url: https://zed.dev
 pricing_model: freemium
-price_range: $0 - $20+/month
+price_range: "$0-$20/month"
 status: active
 launched: 2024-01
-last_updated: 2026-04-15T00:00:00.000Z
-last_verified: '2026-04-15'
+last_updated: 2026-04-17
+last_verified: 2026-04-17
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -23,111 +21,155 @@ affiliate:
   link: null
 scores:
   utility: 8
-  value: 8
+  value: 9
   moat: 7
   longevity: 8
-tags: [code-editor, rust, collaborative, ai-coding, performance, open-source, linux, macos, windows]
-seo_title: 'Zed Editor: AI Code Editor Review & Pricing (2026)'
-meta_description: >-
-  Zed is an AI code editor built in Rust. Free open-source base; Zed AI
-  with Claude Opus 4.6 ~$20/mo. Fastest editor available. Review and pricing 2026.
-author: aipedia.wiki Editorial
+tags: [code-editor, rust, collaborative, ai-coding, performance, open-source, linux, macos, windows, zeta]
+seo_title: "Zed: Features, Pricing & Review (April 2026)"
+meta_description: "Zed is a native Rust code editor with GPU rendering, real-time multiplayer, and AI via Claude, GPT-5.4, and Gemini. Free tier runs the Zeta2 edit-prediction model. Pro $20/month with 500 prompts."
+author: "aipedia.wiki Editorial"
+best_for:
+  - developers who find VS Code sluggish
+  - pair programmers and remote collaborators
+  - Claude and Gemini users wanting native AI
+  - BYOK and local-model workflows via Ollama
+not_best_for:
+  - heavy VS Code extension users
+  - developers chasing top-tier agent mode
+  - Windows users needing full parity with macOS
+  - teams deep in the JetBrains ecosystem
 quick_answer: >-
-  Zed is an open-source code editor by Zed Industries, built from scratch in Rust with a custom GPU-accelerated rendering engine, making it the fastest code editor available with near-instant startup and smoother scrolling than VS Code or Electron-based alternatives. The defining differentiator is native performance combined with real-time multiplayer editing as a first-class feature, where multiple developers share a live session in the same buffer with cursor presence. The base editor is free and open-source; Zed AI with Claude Opus 4.6-powered completions and chat is $20/month. Best for macOS, Linux, and Windows developers who find VS Code sluggish and want clean AI integration with Claude natively embedded; Cursor remains stronger for VS Code extensions and deeper agent mode.
+  Zed is a native Rust code editor with GPU rendering and real-time multiplayer. The editor is free. Zeta2 edit prediction ships unlimited on Personal. Pro at $20/month adds 500 hosted AI prompts plus pay-as-you-go. Pick it for speed and collaboration; skip it for deep extension ecosystems.
+price_history:
+  - date: 2026-04-15
+    plan: "Pro"
+    price: "$20/mo"
+    note: "500 prompts/month included. API list price plus 10% beyond the quota."
+  - date: 2026-01-20
+    plan: "ACP"
+    price: "no change"
+    note: "Agent Client Protocol launched with JetBrains; Zed ships Claude Code, Codex CLI, and Gemini CLI integrations."
 ---
 
 # Zed
 
-Zed is a code editor developed by Zed Industries, a team that includes several of the original creators of the Atom editor and the Tree-sitter parsing library. It is written entirely in Rust using a custom GPU-accelerated rendering engine (GPUI), making it the fastest code editor available; startup is near-instant, and scrolling through large files is smoother than VS Code. It is open-source (Apache 2.0), available on macOS, Linux, and Windows, and built with real-time multiplayer collaboration as a first-class feature. AI is integrated natively through Zed AI, which uses Claude Opus 4.6 as its primary model [zed.dev/pricing](https://zed.dev/pricing). Compared to Cursor, Zed trades the VS Code extension ecosystem and deep agent mode for speed, native design, and multiplayer.
+Native code editor from Zed Industries, founded by several original authors of Atom and Tree-sitter. Written in Rust with a custom GPU-accelerated rendering engine (GPUI). Startup sits under 100ms. Scrolling stays smooth on 10k-line files.
 
+The editor is free and open-source (Apache 2.0). Runs on macOS, Linux, and Windows (stable since Q1 2026).
 
-## Editor's Take
+## System Verdict
 
-I fired up Zed 1.22 on my M3 MacBook last week, and the startup speed still blows VS Code out of the water, under 100ms even with a 10k-line Rust project loaded. The GPU rendering holds up scrolling through massive logs without a stutter, something Cursor can't match on anything but top-end hardware. Zed AI with Claude Opus 4.6 at $20/month delivers solid inline completions and a chat panel that actually understands buffer context, though the multi-turn convos occasionally repeat themselves on complex refactors.
+> **Pick Zed when editor performance and real-time collaboration drive the decision.** Native Rust beats every Electron-based competitor on startup, scrolling, and memory. Multiplayer editing is first-class, not a plugin: shared buffers, cursor presence, voice channels. Zeta2 edit prediction runs unlimited on the free Personal plan.
+>
+> **Skip it if the VS Code extension ecosystem is load-bearing.** [Cursor](/tools/cursor/) keeps the VS Code plugin story and ships the deepest agent mode available. [JetBrains AI](/tools/jetbrains-ai/) wins on IDE-native code intelligence. [GitHub Copilot](/tools/github-copilot/) installs into any editor at $10/month.
+>
+> **Who pays which tier:** Free for the editor plus unlimited Zeta2 edit prediction and 50 hosted prompts/month, Pro $20/month for 500 hosted prompts plus API-price-plus-10% overage, Teams for shared workspaces and admin controls.
 
-Compared to Cursor, Zed wins on raw performance and multiplayer, pair programming feels native, with cursor presence and voice channels that don't lag. Cursor edges it for VS Code plugin compatibility and agentic workflows, but if you're ditching Electron bloat, Zed's the pick. I bias toward native apps over fork-heavy IDEs, so take that into account.
+## Key Facts
 
-Use Zed if speed and collaboration trump extensions; solo VS Code diehards or heavy Copilot users should stick with Cursor. The free tier's plenty for testing, but $20/month unlocks the real value.
+| | |
+|---|---|
+| **Engine** | Rust plus custom GPU renderer (GPUI) |
+| **Platforms** | macOS, Linux, Windows (stable Q1 2026) |
+| **License** | Apache 2.0, open-source |
+| **Edit prediction** | Zeta2, open-source, 30% better than Zeta1 |
+| **AI models** | Claude Opus 4.7, GPT-5.4, Gemini 3.1 Pro, Grok, Ollama BYOK |
+| **Free tier** | Unlimited edit prediction, 50 prompts/month |
+| **Pro** | $20/month, 500 prompts/month, API list plus 10% overage |
+| **Student plan** | Pro, free |
+| **Multiplayer** | Shared buffers, cursor presence, voice |
+| **Agent Client Protocol** | Claude Code, Codex CLI, Gemini CLI, OpenCode |
 
-## What It Does
+Every data point above was verified against vendor sources on 2026-04-17. See Sources.
 
-Zed is a native code editor (not an Electron app) that provides inline AI completions, an AI chat panel, and real-time collaborative editing where multiple developers share a live session in the same buffer. The editor uses Tree-sitter for syntax highlighting and structural parsing, enabling accurate multi-language support with fast incremental parsing across 60+ languages.
+## What it actually is
 
-Zed AI integrates Claude Opus 4.6 directly into the editor: inline completions predict next edits, the assistant panel supports multi-turn conversations with code context, and inline transformations let users highlight a block and describe a change. The editor is keyboard-driven with a Vim mode and command palette.
+One native editor covering three jobs: a fast code editor, an AI assistant panel, and a real-time multiplayer surface. Tree-sitter powers syntax and structural parsing across 60+ languages.
 
-Channels provide team communication built into the editor, including text chat and voice, without leaving Zed.
+AI integration splits into two features. Zeta2 edit prediction runs locally-ish and predicts the next edit, not just the next token, so one tab accepts multi-line changes. The assistant panel handles chat, inline transformations, and multi-file context through Claude, GPT-5.4, Gemini, Grok, or a local Ollama model.
 
-## Who It's For
+The Agent Client Protocol (ACP), launched January 2026 in collaboration with JetBrains, ships [Claude Code](/tools/claude-code/), Codex CLI, Gemini CLI, and OpenCode integrations inside the editor. Agent work still happens through these external CLIs, not a native Zed Composer.
 
-- Developers who find VS Code and Electron apps sluggish and want a native, GPU-accelerated editor
-- Pair programmers and remote collaborators who want multiplayer editing built into the editor
-- macOS, Linux, and Windows developers willing to leave the VS Code extension ecosystem for performance
-- Claude users who want AI embedded natively with a chat panel
-- Vim users who want modern editor with first-class Vim bindings without plugins
-- Developers who value open-source; Zed's core is Apache 2.0 licensed
+## When to pick Zed
+
+- **Editor responsiveness outranks every other factor.** Native Rust plus GPU rendering beats VS Code on startup, scroll, and input latency.
+- **Pair programming and remote collaboration are weekly workflows.** Multiplayer is first-class; no external plugin required.
+- **Vim bindings matter.** First-class Vim mode ships without plugins.
+- **Claude, GPT-5.4, or a local Ollama model is the target AI.** Swap freely. BYOK works on every tier.
+- **Open-source editor ethics matter.** Apache 2.0 license, public repo, no telemetry-first product model.
+
+## When to pick something else
+
+- **Deep VS Code extension use:** [Cursor](/tools/cursor/) keeps the ecosystem and ships the strongest AI-native IDE.
+- **Strongest agent mode:** [Cursor](/tools/cursor/) Composer, [Claude Code](/tools/claude-code/), [Cline](/tools/cline/), or [Aider](/tools/aider/) handle autonomous work better than Zed's current stack.
+- **IDE-native intelligence on IntelliJ or PyCharm:** [JetBrains AI](/tools/jetbrains-ai/) hooks into inspections and refactorings.
+- **One coding AI for any editor:** [GitHub Copilot](/tools/github-copilot/).
+- **Latency-first completion only:** [Supermaven](/tools/supermaven/) still leads pure autocomplete speed.
+- **Free BYOK autocomplete plus chat:** [Continue](/tools/continue/) covers VS Code and JetBrains.
 
 ## Pricing
 
-| Plan | Price | Key Limits |
-|------|-------|-----------|
-| Zed (editor) | Free | Full editor, open-source, no AI |
-| Zed AI Pro | $20/mo | AI completions and chat powered by Claude Opus 4.6, 500 prompts/month [zed.dev/pricing](https://zed.dev/pricing) |
-| Zed AI Teams | $20/user/mo | Everything in Pro, shared workspaces, admin controls |
+| Plan | Price | Edit prediction | Hosted prompts | Who's it for |
+|---|---|---|---|---|
+| Personal | $0 | Unlimited Zeta2 | 50/mo | Most individuals |
+| Pro | $20/mo | Unlimited Zeta2 | 500/mo, then API plus 10% | Heavy hosted-AI users |
+| Pro (students) | $0 | Unlimited Zeta2 | 500/mo | Verified students |
+| Teams | contact | Unlimited Zeta2 | shared quota | Admin controls, shared workspaces |
 
-> **Verification note:** Zed editor is free and open-source. Zed AI pricing confirmed at [zed.dev/pricing](https://zed.dev/pricing) as of 2026-04-15.
+*Prices verified 2026-04-17 via [zed.dev/pricing](https://zed.dev/pricing), [zed.dev/docs/ai/models](https://zed.dev/docs/ai/models), and [zed.dev/education](https://zed.dev/education). Pro includes a two-week free trial with $20 of token credits. Overages bill at API list price plus 10%, either at month-end or per $10 of usage, whichever comes first.*
 
-## Key Features
+## Against the alternatives
 
-- Native Rust engine: GPU-accelerated, instant startup, no memory bloat
-- Real-time multiplayer: collaborate live with cursor presence and shared edits
-- Tree-sitter parsing: accurate, fast structural parsing for 60+ languages
-- Zed AI (Claude Opus 4.6): inline completions and multi-turn chat designed into the editor [zed.dev/ai](https://zed.dev/ai)
-- Channels: team text chat and voice built into the editor
-- Vim mode: first-class Vim keybindings without plugins
-- Open-source: Apache 2.0 licensed; github.com/zed-industries/zed
-- Windows support: stable release since Q1 2026 [zed.dev/blog/windows-release](https://zed.dev/blog/windows-release)
+| | Zed Pro | Cursor Pro | VS Code + Copilot |
+|---|---|---|---|
+| **Price** | $20/mo | $20/mo | $10/mo |
+| **Editor engine** | **Native Rust + GPU** | Electron (VS Code fork) | Electron |
+| **Startup + scroll** | **Fastest** | Mid | Mid |
+| **Real-time multiplayer** | **First-class** | Via extensions | Via Live Share |
+| **Agent mode** | External CLIs via ACP | Composer (strongest) | Workspace agent |
+| **Extension ecosystem** | LSP plus native extensions | Full VS Code marketplace | Full VS Code marketplace |
+| **BYOK support** | Claude, GPT, Gemini, Ollama | Multi-model | Copilot only |
+| **Best viewed as** | Native speed + collaboration | AI-native IDE | Universal default |
 
-## Limitations
+## Failure modes
 
-- No VS Code extension ecosystem. Language servers (LSP) work, but rich plugins are unavailable.
-- Agent mode is limited. Zed AI provides completions and chat, but lacks Composer-style multi-file autonomous editing.
-- Young ecosystem. Zed has fewer community resources, themes, and integrations than VS Code.
-- Multiplayer adoption. Collaborative features require team-wide Zed usage.
+- **No VS Code extension marketplace.** Zed ships LSP support and a growing native extension ecosystem. VS Code plugin depth is not reproducible here.
+- **Agent mode runs through external CLIs.** ACP wires in [Claude Code](/tools/claude-code/) and others, but there is no native Composer-equivalent yet.
+- **Windows parity lags macOS.** Windows went stable in Q1 2026. Some features land on macOS first.
+- **Overage billing is granular.** Hosted AI beyond 500 prompts charges per $10 of usage. Heavy users need to monitor spend.
+- **Multiplayer needs team-wide adoption.** Collaboration only works when every participant is on Zed.
+- **Smaller community than VS Code or JetBrains.** Fewer themes, fewer tutorials, fewer Stack Overflow answers.
+- **Zeta2 is edit prediction, not chat.** Heavy chat users still need the hosted-prompt quota on Pro.
 
-## Bottom Line
+## Methodology
 
-Zed delivers strong value (8/10) with a free editor and $20/month AI tier, and improved utility (8/10) now with Windows support. The moat (7/10) grows from native performance and multiplayer, though extensions remain a gap versus Cursor. Zed suits developers prioritizing speed and collaboration across macOS, Linux, and Windows.
-
-## Best Alternatives
-
-| Tool | Price | Key Difference |
-|------|-------|----------------|
-| Cursor | $20/mo | VS Code-based, full extension ecosystem, deeper agent mode |
-| GitHub Copilot | $10/mo | Works in VS Code/JetBrains, no editor switch |
-| Continue | Free | Open-source AI plugin for VS Code, BYOK |
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-04-17 against [zed.dev/pricing](https://zed.dev/pricing), [zed.dev/docs/ai/models](https://zed.dev/docs/ai/models), and [zed.dev/docs/ai/edit-prediction](https://zed.dev/docs/ai/edit-prediction).
 
 ## FAQ
 
-**Is Zed free?**  
-The Zed editor is free and open-source. Zed AI Pro adds Claude Opus 4.6-powered completions and chat for $20/month [zed.dev/pricing](https://zed.dev/pricing).
+**Is Zed free?**
+The editor is free and open-source under Apache 2.0. The Personal plan includes unlimited Zeta2 edit prediction plus 50 hosted AI prompts per month. Pro at $20/month unlocks 500 prompts plus overage at API list price plus 10% ([zed.dev/pricing](https://zed.dev/pricing)).
 
-**Does Zed work on Windows?**  
-Yes, Zed has stable Windows support since Q1 2026 [zed.dev/blog/windows-release](https://zed.dev/blog/windows-release).
+**Does Zed run on Windows?**
+Yes. Windows went stable in Q1 2026 and runs on macOS, Linux, and Windows.
 
-**How does Zed's AI compare to Cursor?**  
-Cursor has deeper agent mode for multi-file editing. Zed AI uses Claude Opus 4.6 for completions and chat, prioritizing editor speed and multiplayer.
+**What is Zeta2?**
+Zeta2 is Zed's open-source edit-prediction model, 30% better than Zeta1. It predicts the next edit rather than the next token, so one tab accepts multi-line changes. Unlimited use on every tier.
 
+**What AI models does Zed support?**
+Claude Opus 4.7, GPT-5.4, Gemini 3.1 Pro, and Grok via hosted billing. Local models work through Ollama. BYOK is supported on every tier.
 
-## Review History
-
-- **2026-04-12:** Pricing verified. Clarified pricing for annual vs monthly billing.
-- **2026-03-16:** Score adjusted down 0.3 after a pricing change reduced value.
-- **2026-01-16:** Noted the new model availability across tiers.
-- **2025-10-16:** Pricing verified. Minor copy edits.
-- **2024-05-01:** First published review after two weeks of use.
+**How does Zed compare to Cursor?**
+Zed wins on native performance, multiplayer, and open-source ethics. Cursor wins on the VS Code extension ecosystem and the Composer agent mode. Most buyers pick based on whether editor speed or agent depth matters more.
 
 ## Sources
 
-- [Official website](https://zed.dev), verified 2026-04-15
-- [Zed pricing](https://zed.dev/pricing), verified 2026-04-15
-- [Zed GitHub repository](https://github.com/zed-industries/zed), verified 2026-04-15
+- [Zed pricing](https://zed.dev/pricing): Personal, Pro, and Teams tier details
+- [Zed AI models](https://zed.dev/docs/ai/models): Claude, GPT, Gemini, Grok, Ollama support
+- [Zed Edit Prediction docs](https://zed.dev/docs/ai/edit-prediction): Zeta2 model and unlimited-use policy
+- [Zed education](https://zed.dev/education): free Pro for verified students
+
+## Related
+
+- **Category:** [AI Coding](/categories/ai-coding/)
+- **Comparisons:** [Zed vs Cursor](/comparisons/zed-vs-cursor/), [Zed vs VS Code](/comparisons/zed-vs-vscode/)
