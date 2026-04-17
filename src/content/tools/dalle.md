@@ -6,8 +6,8 @@ tagline: OpenAI's retired image generation model. Replaced by GPT Image 1.5 insi
 category: ai-image
 company: OpenAI
 url: https://openai.com/index/introducing-gpt-image-1-5/
-pricing_model: null
-price_range: null
+pricing_model: free
+price_range: "Retired"
 status: dead
 launched: 2022-04
 last_updated: 2026-04-17
