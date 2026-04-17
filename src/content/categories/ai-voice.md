@@ -2,10 +2,10 @@
 type: category
 slug: ai-voice
 title: AI Voice / Text-to-Speech
-description: AI voice generation, cloning, and text-to-speech. ElevenLabs, Fish Audio S2, Murf, LOVO, Voxtral.
+description: AI voice generation, cloning, and text-to-speech. ElevenLabs, Cartesia, WellSaid, Fish Audio S2, Murf, LOVO, Resemble, MiniMax Speech, Speechify, Voxtral, Kokoro.
 tool_count: 12
-seo_title: "Best AI Voice Tools (2026) . aipedia.wiki"
-meta_description: "ElevenLabs, Fish Audio S2, and Voxtral lead AI voice generation in 2026. Compare 6 TTS tools for quality, pricing, and self-hosting. Updated April 2026."
+seo_title: "Best AI Voice Tools (2026), aipedia.wiki"
+meta_description: "ElevenLabs, Cartesia, and WellSaid lead AI voice in 2026. Compare 12 TTS tools including Fish Audio S2, Murf, Resemble, and Voxtral for quality, latency, pricing, and self-hosting. Updated April 2026."
 author: "aipedia.wiki Editorial"
 last_updated: 2026-04-17
 last_verified: 2026-04-17

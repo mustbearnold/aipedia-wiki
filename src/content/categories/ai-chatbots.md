@@ -2,10 +2,10 @@
 type: category
 slug: ai-chatbots
 title: AI Chatbots & LLMs
-description: General-purpose large language model chatbots. ChatGPT, Claude, Gemini, Grok, Mistral . the foundation models that power everything else.
+description: General-purpose large language model chatbots. ChatGPT, Claude, Gemini, Grok, Mistral, DeepSeek, Kimi, Qwen, GLM, Yi, Doubao, Llama, Reka. The foundation models that power everything else.
 tool_count: 13
-seo_title: "Best AI Chatbots & LLMs (2026) . aipedia.wiki"
-meta_description: "ChatGPT, Claude, and Gemini lead the AI chatbot space in 2026. Compare 5 general-purpose LLMs on reasoning, coding, context window, and price. Updated April 2026."
+seo_title: "Best AI Chatbots & LLMs (2026), aipedia.wiki"
+meta_description: "ChatGPT, Claude Opus 4.7, and Gemini 3.1 Pro lead the AI chatbot space in 2026. Compare 13 general-purpose LLMs including DeepSeek, Kimi, Qwen, and Reka on reasoning, coding, context, and price. Updated April 2026."
 author: "aipedia.wiki Editorial"
 last_updated: 2026-04-17
 last_verified: 2026-04-17

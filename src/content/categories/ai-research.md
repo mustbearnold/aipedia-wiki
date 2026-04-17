@@ -2,10 +2,10 @@
 type: category
 slug: ai-research
 title: AI Research Tools
-description: AI-powered tools for academic research, literature review, and paper discovery. Elicit, Consensus, Scite, Connected Papers, Semantic Scholar.
+description: AI-powered tools for academic research, literature review, and paper discovery. Elicit, Consensus, Scite, Connected Papers, Semantic Scholar, Julius, Kagi.
 tool_count: 7
-seo_title: "Best AI Research Tools (2026) . aipedia.wiki"
-meta_description: "Elicit, Consensus, and Semantic Scholar lead AI academic research tools in 2026. Compare 5 tools for literature review, citation analysis, and paper discovery. Updated April 2026."
+seo_title: "Best AI Research Tools (2026), aipedia.wiki"
+meta_description: "Elicit, Consensus, and Semantic Scholar lead AI academic research tools in 2026. Compare 7 tools including Julius AI and Kagi for literature review, citation analysis, data analysis, and paper discovery. Updated April 2026."
 author: "aipedia.wiki Editorial"
 last_updated: 2026-04-17
 last_verified: 2026-04-17
