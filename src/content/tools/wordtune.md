@@ -3,17 +3,16 @@ type: tool
 slug: wordtune
 title: Wordtune
 tagline: >-
-  AI rewriting and paraphrasing tool by AI21 Labs that improves tone, clarity,
-  and flow.
+  AI21 Labs' voice-preserving rewriter for clarity, tone, and flow across the browser.
 category: ai-writing
 company: AI21 Labs
 url: 'https://wordtune.com'
 pricing_model: freemium
-price_range: $0-$27.99/month
+price_range: $0-$24.99/month
 status: active
 launched: 2020-10
-last_updated: 2026-04-15T00:00:00.000Z
-last_verified: '2026-04-15'
+last_updated: 2026-04-17
+last_verified: 2026-04-17
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -27,144 +26,151 @@ scores:
   moat: 5
   longevity: 6
 tags: [ai-writing, paraphrasing, rewriting, editing, ai21-labs]
-seo_title: 'Wordtune Review: Is AI21 Labs'' Rewriting Tool Worth It in 2026?'
+seo_title: 'Wordtune: Features, Pricing & Review (April 2026)'
 meta_description: >-
-  Wordtune by AI21 Labs rewrites and paraphrases text for tone and clarity. Free
-  10 rewrites/day; Plus $13.99/mo; Unlimited $27.99/mo. Honest review of
-  features, pricing, and alternatives.
+  Wordtune is AI21 Labs' voice-preserving rewriter. Free tier 10 rewrites/day; Plus $24.99/mo; Unlimited $19.99/mo (or $9.99 annual); Teams $15.99/user. Spices insert examples and stats.
 author: aipedia.wiki Editorial
-quick_answer: >-
-  Wordtune is an AI rewriting and paraphrasing tool built by AI21 Labs that
-  improves existing text for clarity, tone, and flow across seven modes
-  including Casual, Formal, Shorten, and Expand, accessed via a Chrome
-  extension that works inside Google Docs, Gmail, and LinkedIn. The key
-  differentiator from QuillBot is intent: Wordtune is tuned to preserve the
-  writer's voice while improving how a sentence reads, rather than wholesale
-  paraphrasing for plagiarism avoidance or SEO. Free tier offers 10 rewrites
-  per day; Plus is $13.99/month with unlimited rewrites, Spices, and
-  summarization; Unlimited is $27.99/month with all features and priority
-  support. Best for non-native English speakers and business professionals
-  refining drafts rather than generating content from scratch; not for content
-  marketers needing volume article generation or users wanting grammar
-  correction, where Grammarly covers the error-catching workflow. The free tier
-  limit runs out quickly for anyone editing a full document.
 best_for:
-  - Non-native English speakers refining professional writing
-  - Business professionals polishing emails and reports
-  - Students improving essay clarity and flow
-  - Writers with drafts seeking alternative phrasings
+  - voice-preserving sentence rewrites
+  - non-native English speakers refining drafts
+  - business professionals polishing email and reports
+  - students improving essay clarity
 not_best_for:
-  - Content generation from scratch
-  - High-volume SEO article production
-  - Grammar and spelling correction
-  - Users needing full-document restructuring
+  - content generation from scratch
+  - high-volume SEO production
+  - pure grammar and spelling fixes
+  - full-document restructuring
+quick_answer: >-
+  Wordtune is AI21 Labs' rewriter that preserves the writer's voice. Pick it for sentence-level rewrites, Spices insertions, and summaries. Skip it for drafting from scratch, SEO volume, or grammar fixes where Grammarly or Claude win.
+price_history:
+  - date: 2026-04-17
+    plan: "Unlimited"
+    price: "$19.99/mo"
+    note: "Unlimited plan monthly rate; $9.99/mo on annual billing."
+  - date: 2026-04-17
+    plan: "Plus"
+    price: "$24.99/mo"
+    note: "Plus plan with 30 rewrites/day and 5 summaries/day."
 ---
 
 # Wordtune
 
-Wordtune is an AI rewriting and paraphrasing tool developed by AI21 Labs, the Israeli AI research company behind the Jurassic language models. Unlike general-purpose AI writing tools that generate content from scratch, Wordtune's core function is improving existing text: rewriting sentences for clarity, adjusting tone, expanding or shortening passages, and suggesting alternatives for selected text. It is the most research-backed tool in the rewriting category, given AI21 Labs' academic origins and substantial NLP research investment.
+AI21 Labs' voice-preserving writing tool. Rewrites existing text for clarity, tone, and flow across Casual, Formal, Shorten, Expand, and tone-variation modes. Spices insert examples, counterarguments, statistics, and analogies inline.
 
-The tool is accessed primarily through a web app and a Chrome extension that integrates into Google Docs, Gmail, LinkedIn, and most browser-based text editors. The free tier allows 10 rewrites per day, which is genuinely useful for occasional editing. The Plus plan at $13.99/month and Unlimited at $27.99/month remove daily limits and add AI-powered summarization and longer document support.
+Runs through a web app and browser extension that works inside Google Docs, Gmail, LinkedIn, X, and most browser-based editors. Built on AI21's proprietary Jurassic language models with fiction-independent training focused on natural rewrites.
 
-Wordtune's differentiation from competitors like QuillBot is its focus on preserving the writer's voice while improving quality. Rather than wholesale paraphrasing to avoid detection or produce new phrasing, Wordtune aims to help writers write better in their own style.
+## System Verdict
 
+> **Pick Wordtune if the goal is improving sentences you have already written without losing your voice.** The rewrite output stays closer to source intent than [QuillBot](/tools/quillbot/)'s mode-heavy paraphrases.
+>
+> **Skip it for drafting, SEO volume, or grammar work.** Wordtune cannot generate from a blank prompt. [Claude](/tools/claude/) and [ChatGPT](/tools/chatgpt/) outdraft it. [Grammarly](/tools/grammarly/) outchecks it on grammar and spelling for less money.
+>
+> **Who pays which tier:** Free for occasional edits (10 rewrites per day), Unlimited $9.99/mo annual for individual daily users, Plus $24.99/mo if the 30 rewrites and 5 summaries per day are the right shape, Teams $15.99/user/mo annual for small teams needing shared admin.
 
-## Editor's Take
+## Key Facts
 
-I tested Wordtune's Chrome extension in Google Docs with the latest version, 3.2.1 from April 2026. The rewrites hit fast, under two seconds per sentence, and the voice preservation actually works better than QuillBot's, which often spits out generic fluff. Pick Formal mode for emails, and it tightens phrasing without killing your intent. Free tier's 10 rewrites daily? Fine for quick fixes, but you'll hit the wall editing a report.
+| | |
+|---|---|
+| **Parent company** | AI21 Labs (Tel Aviv, founded 2017 by Yoav Shoham, Amnon Shashua, Ori Goshen) |
+| **Model backbone** | AI21 Jurassic family · proprietary rewrite fine-tuning |
+| **Rewrite modes** | Casual · Formal · Shorten · Expand · tone variations |
+| **Spices** | AI-generated inserts for examples, counterarguments, stats, humor, analogies |
+| **Surfaces** | Web app · Chrome extension · Microsoft Word add-in |
+| **Summaries** | Paid tiers · condenses web pages, PDFs, long docs |
+| **Multilingual input** | Non-English drafts rewritten into natural English |
+| **Strategic note** | AI21 has pivoted toward enterprise Maestro platform · consumer Wordtune still live as of April 2026 |
 
-Plus at $13.99/month unlocks unlimited and Spices, those insertable examples or stats that bulk up weak points. Unlimited's $27.99 feels like a cash grab unless you need priority support, which I didn't. Against QuillBot's $9.95 Unlimited, Wordtune wins on subtlety but loses on raw paraphrase volume.
+Every data point above was verified against vendor documentation on 2026-04-17. See Sources.
 
-Non-native speakers and execs polishing drafts should grab Plus. Skip if you're churning SEO posts or hunting grammar fixes, Grammarly does that cheaper. I prefer it for my own edits, bias toward research-grade NLP noted.
+## What it actually is
 
-## What It Does
+One sentence-level rewriting engine exposed through a browser extension, a web editor, and a Word add-in. Users highlight text, pick a rewrite mode or a Spice, and Wordtune returns three to five alternatives that stay close to the source tone.
 
-Wordtune rewrites selected text in seven modes: Casual, Formal, Shorten, Expand, and three tone-adjustment variations. Users highlight a sentence or paragraph, select a rewrite style, and Wordtune produces three to five alternative phrasings. The Spices feature inserts AI-generated expansions: examples, counterarguments, statistics, or analogies to develop a point further. A summarization feature (paid plans) condenses long documents and web pages. The Chrome extension applies all features inside the user's existing editor without switching tabs.
+Summaries condense long documents or web pages on paid tiers. Multilingual input lets non-native writers draft in their first language and receive idiomatic English output.
 
-The tool also supports multilingual input, allowing non-native English speakers to draft in their first language and receive English rewrites. This workflow is particularly useful for professionals writing in English as a second language who want to ensure naturalness and idiom accuracy.
+The moat is narrow. Voice preservation and Spices are the differentiators, but [QuillBot](/tools/quillbot/) paraphrases cheaper and [Claude](/tools/claude/) rewrites at higher coherence past a paragraph. AI21 Labs' pivot toward enterprise tooling leaves Wordtune's roadmap visibly thinner than two years ago.
 
-## Who It's For
+## When to pick Wordtune
 
-- Non-native English speakers who want to refine phrasing and naturalness in professional writing
-- Business professionals polishing emails, reports, and presentations for clarity and tone
-- Students improving essay drafts for academic clarity and flow
-- Content writers who have a draft and want alternative phrasings without starting over
-- Anyone who knows what they want to say but not how to say it well
-- Professionals working in Google Docs or Gmail who need in-editor editing assistance
+- **Editing an existing draft for clarity or tone.** Voice-preserving rewrites keep the writer's intent while improving readability.
+- **Non-native English writing for professional contexts.** Multilingual input plus Formal mode produces natural business prose from rough drafts.
+- **Developing thin paragraphs with Spices.** Example and statistic inserts unstick weak sections faster than free-form LLM prompting.
+- **Google Docs and Gmail-heavy workflows.** Chrome extension provides inline rewrites without tab switching.
+- **Summarizing long reads for quick review.** Paid tiers handle PDFs and web pages at respectable quality.
 
-Wordtune is not designed for generating content from scratch, doing SEO optimization, or automating high-volume content production. It is an editing aid, not a content factory.
+## When to pick something else
+
+- **Drafting from scratch:** [Claude](/tools/claude/) or [ChatGPT](/tools/chatgpt/). Wordtune cannot generate without source text.
+- **Grammar and spelling layer across the browser:** [Grammarly](/tools/grammarly/). Broader coverage, stronger rule engine, cheaper at $12/mo Pro.
+- **Budget paraphrasing with mode controls:** [QuillBot](/tools/quillbot/) Premium at $8.33/mo annual beats Wordtune on pure paraphrase cost and mode variety.
+- **SEO-heavy marketing output:** [Jasper](/tools/jasper/) or [Copy.ai](/tools/copy-ai/). Template libraries and campaign workflows Wordtune lacks.
+- **Fiction and long-form creative prose:** [Sudowrite](/tools/sudowrite/). Story workflow and the Muse model fit narrative work Wordtune does not.
 
 ## Pricing
 
-| Plan | Price | Key Limits |
-|------|-------|-----------|
-| Free | $0/month | 10 rewrites/day, basic rewrite modes |
-| Plus | $13.99/month | Unlimited rewrites, Spices, summarization, AI templates |
-| Unlimited | $27.99/month | All Plus features, unlimited AI templates, priority support |
+Subscription pricing via [wordtune.com/plans](https://wordtune.com/plans):
 
-Prices verified at wordtune.com/plans as of 2026-04-15.
+| Plan | Monthly | Annual (effective/mo) | Key Limits |
+|------|---------|-----------------------|------------|
+| Free | $0 | $0 | 10 rewrites + 10 Spices per day · basic rewrite modes · AI prompts · summaries |
+| Plus | $24.99 | See Unlimited | Up to 30 rewrites/day · 5 summaries/day · unlimited text corrections |
+| Unlimited | $19.99 | $9.99 | Unlimited rewrites, Spices, summaries · vocabulary enrichment · priority support |
+| Teams | $15.99/user | $7.99/user | Unlimited features plus admin console and business support |
 
-## Key Features
+*Prices verified 2026-04-17 via [wordtune.com/plans](https://wordtune.com/plans). Annual billing unlocks the effective rates shown; monthly billing matches the Monthly column. Regional pricing applies.*
 
-- Seven rewrite modes: Casual, Formal, Shorten, Expand, and tone-adjustment variations give precise control over how a sentence is transformed, rather than generic paraphrasing.
-- Spices: AI-generated sentence expansions that add examples, counterarguments, statistics, or humor to a selected passage. Useful for developing thin paragraphs.
-- Chrome extension: Works inside Google Docs, Gmail, LinkedIn, Twitter/X, and most browser-based editors. No switching tabs required.
-- Summarization: Condenses web pages, PDF documents, and long texts into key points. Available on Plus and Unlimited plans.
-- Multilingual input: Can process text written in non-English languages and rewrite in English, useful for non-native speakers drafting in their first language.
-- AI21 Labs research foundation: Wordtune is built on AI21 Labs' proprietary language models, which are optimized for natural language editing rather than general-purpose generation. This produces rewrite suggestions that feel more natural and idiomatic than alternatives.
+## Against the alternatives
 
-## Limitations
+| | Wordtune Unlimited | QuillBot Premium | Grammarly Pro |
+|---|---|---|---|
+| **Best monthly price (annual)** | $9.99 | $8.33 | $12.00 |
+| **Voice preservation** | **Strongest** | Mode-dependent | Mid |
+| **Rewrite modes** | 7 | 9 | Rewrite via GrammarlyGO |
+| **Spices (inline inserts)** | **Yes** | No | Partial via GrammarlyGO |
+| **Summaries** | Yes (paid) | Yes (1,200 words free) | Via GrammarlyGO |
+| **Grammar + spelling** | Light | Mid | **Strongest** |
+| **Plagiarism scan** | None | Yes (20 pages/mo) | Yes (16B+ sources) |
+| **Best viewed as** | Voice-preserving rewriter | Mode-based paraphraser | Inline writing layer |
 
-- 10 rewrites per day on free is genuinely restrictive: For anyone editing a full document, 10 rewrites run out quickly. The free tier is better suited to evaluating the tool than regular use.
-- Focused on sentence and paragraph level, not whole documents: Wordtune works best on selected sentences or short passages. It is not designed for full-document restructuring or article-level rewriting.
-- No content generation from scratch: Wordtune cannot write a blog post, ad copy, or email from a prompt. It only works on existing text. Users needing generation and editing need a separate tool.
-- Spices can feel generic: The AI-generated expansions are sometimes too generic or off-topic to be directly usable. They work better as idea sparks than as ready-to-paste additions.
+## Failure modes
 
-## Bottom Line
+- **No generation from a blank prompt.** Wordtune needs source text. Users expecting an LLM chatbot hit a wall immediately.
+- **Spices feel generic on specialized content.** AI-generated inserts work as idea sparks but often need rewriting before they fit. Treat them as starting points, not finished copy.
+- **Plus plan economics trail Unlimited.** Plus at $24.99 monthly offers 30 rewrites plus 5 summaries per day. Unlimited at $9.99/mo annual removes those caps. Plus only makes sense on month-to-month billing for short projects.
+- **Sentence-level focus misses document structure.** Wordtune does not restructure full documents or suggest reorganization. It polishes what is already there.
+- **Free tier 10-rewrite cap depletes fast.** Editing anything longer than an email burns the daily allowance in minutes.
+- **AI21 roadmap risk.** AI21 Labs' strategic focus has moved to the enterprise Maestro platform and reasoning models. Consumer Wordtune remains live but sees less public product velocity than 2022-2023.
+- **Grammar coverage is light.** Wordtune flags obvious errors but is not a replacement for a dedicated grammar engine. Pair with [Grammarly](/tools/grammarly/) for full coverage.
 
-Wordtune is the strongest tool specifically for rewriting and refining existing text. If the core need is improving clarity, adjusting tone, or finding better phrasing for sentences you have already written, Wordtune at $13.99/month (Plus) is well-priced for what it delivers. The Chrome extension integration into Google Docs and Gmail makes it low-friction for professional writing workflows. For users who also need content generation from scratch, a general-purpose tool like Claude Opus 4.6 or GPT-5.4 is a better fit.
+## Methodology
 
-## Best Alternatives
-
-| Tool | Price | Key Difference |
-|------|-------|----------------|
-| [QuillBot](../tools/quillbot.md) | $0-$9.95/month | Cheaper, paraphrasing-focused, plagiarism checker |
-| [Grammarly](../tools/grammarly.md) | $0-$30/month | Grammar and clarity focus, broader writing integration |
-| Claude Opus 4.6 | $20/month | Full generation and editing; no template structure |
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [wordtune.com/plans](https://wordtune.com/plans) and the [Wordtune Help Center pricing article](https://support.wordtune.com/en/articles/8262930-wordtune-s-plans-pricing).
 
 ## FAQ
 
 **Is Wordtune free?**
-Yes. The free plan allows 10 rewrites per day with access to basic rewrite modes. No credit card required. The limit resets daily. For regular professional use, the Plus plan at $13.99/month removes limits and adds Spices and summarization.
+Yes. The free tier covers 10 rewrites and 10 Spices per day plus access to AI prompts and basic summaries. No credit card required. Unlimited at $9.99/mo annual removes the daily caps and adds vocabulary and clarity enhancements ([wordtune.com/plans](https://wordtune.com/plans)).
 
 **Who makes Wordtune?**
-Wordtune is made by AI21 Labs, an Israeli AI research company founded in 2017 by Yoav Shoham, Amnon Shashua, and Ori Goshen. AI21 Labs is known for its Jurassic language model series and enterprise AI products. Wordtune is their consumer-facing editing tool.
+AI21 Labs, a Tel Aviv AI research company founded in 2017 by Yoav Shoham, Amnon Shashua, and Ori Goshen. AI21 also develops the Jurassic language model family and the enterprise Maestro platform.
 
-**How does Wordtune compare to Grammarly?**
-Grammarly focuses on grammar correction, spelling, and writing clarity through rule-based and AI-powered suggestions. Wordtune focuses on rewriting and rephrasing: improving how something is said, not just correcting errors. Many users use both: Grammarly catches mistakes, Wordtune improves phrasing. They are complementary rather than direct competitors.
+**Wordtune vs QuillBot?**
+Wordtune rewrites with voice preservation as the primary goal. QuillBot offers nine paraphrase modes and a word flipper for granular control. Writers who value staying close to source tone pick Wordtune; writers who want targeted mode-based transformations pick QuillBot.
 
+**Wordtune vs Grammarly?**
+Grammarly catches grammar, spelling, tone, and clarity inline across 500,000+ sites. Wordtune rewrites sentences you have already written into clearer alternatives. Both tools complement each other; neither replaces the other on its primary job.
 
+**What are Spices?**
+AI-generated inline inserts that extend a selected passage with an example, counterargument, statistic, humor, or analogy. Available on the free tier (10/day) and unlimited on paid tiers. Useful for developing thin paragraphs fast.
 
-
-## Review History
-
-- **2026-04-13:** Pricing re-checked against the official pricing page. No change since last verification.
-- **2026-02-16:** Updated flagship model reference to latest release.
-- **2025-12-16:** Pricing verified. Minor copy edits.
-- **2024-01-15:** Initial review added to the catalog.
-
-## Related Comparisons
-
-- [ChatGPT vs Wordtune](../comparisons/chatgpt-vs-wordtune.md)
-- [Copy.ai vs Wordtune](../comparisons/copy-ai-vs-wordtune.md)
-- [Grammarly vs Wordtune](../comparisons/grammarly-vs-wordtune.md)
-- [HyperWrite vs Wordtune](../comparisons/hyperwrite-vs-wordtune.md)
-- [QuillBot vs Wordtune](../comparisons/quillbot-vs-wordtune.md)
-- [Sudowrite vs Wordtune](../comparisons/sudowrite-vs-wordtune.md)
-
-
-- **Category:** [Writing](../categories/ai-writing.md)
 ## Sources
 
-- [Official website](https://wordtune.com)
-- [Pricing page](https://wordtune.com/plans)
+- [Wordtune Plans](https://wordtune.com/plans): Current pricing for Free, Plus, Unlimited, and Teams tiers
+- [Wordtune Help Center Pricing](https://support.wordtune.com/en/articles/8262930-wordtune-s-plans-pricing): Plan-level feature breakdown
+- [AI21 Labs company site](https://www.ai21.com/): Parent company and model backbone
+- [AI21 Wordtune upgrade coverage (Reworked)](https://www.reworked.co/the-wire/ai21-labs-rolls-out-wordtune-upgrade-expanding-its-generative-ai-offering-with-all-in-one-platform/): Feature history
+
+## Related
+
+- **Category:** [AI Writing](/categories/ai-writing/)
+- **Comparisons:** [ChatGPT vs Wordtune](/comparisons/chatgpt-vs-wordtune/) · [Grammarly vs Wordtune](/comparisons/grammarly-vs-wordtune/) · [QuillBot vs Wordtune](/comparisons/quillbot-vs-wordtune/) · [Sudowrite vs Wordtune](/comparisons/sudowrite-vs-wordtune/) · [Copy.ai vs Wordtune](/comparisons/copy-ai-vs-wordtune/)
