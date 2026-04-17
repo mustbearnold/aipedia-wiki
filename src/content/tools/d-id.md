@@ -2,22 +2,20 @@
 type: tool
 slug: d-id
 title: D-ID
-tagline: >-
-  AI video platform for creating talking-head videos and real-time AI avatar
-  conversations from photos and scripts.
+tagline: Real-time streaming AI avatar platform for interactive conversations, powered by the Agents API and Creative Reality Studio.
 category: ai-video
 company: D-ID (Digital Humans Ltd.)
 url: 'https://www.d-id.com'
 pricing_model: paid
-price_range: $6-$180/month
+price_range: "$4.70-$108/month annual"
 status: active
 launched: 2017-01
-last_updated: 2026-04-15T00:00:00.000Z
-last_verified: '2026-04-15'
+last_updated: 2026-04-17
+last_verified: 2026-04-17
 update_frequency: monthly
 affiliate:
   has_program: true
-  commission: 20%
+  commission: "20%"
   cookie_days: 30
   network: null
   link: null
@@ -26,119 +24,133 @@ scores:
   value: 6
   moat: 7
   longevity: 7
-tags: [ai-avatar, talking-head, ai-video, digital-human, real-time-avatar]
-seo_title: 'D-ID: AI Avatar & Talking Head Video Review (2026)'
-meta_description: >-
-  D-ID creates talking-head videos and real-time AI avatar conversations from
-  photos and scripts. Full review of pricing, credit system, and how D-ID
-  compares to HeyGen and Synthesia.
+tags: [ai-avatar, talking-head, ai-video, digital-human, real-time-avatar, streaming-api, agents]
+seo_title: "D-ID: Features, Pricing & Review (April 2026)"
+meta_description: "D-ID runs Creative Reality Studio for talking-head video and the Agents API for real-time streaming avatar conversations. Lite $4.70, Pro $16, Advanced $108 annual billing. The streaming avatar specialist."
 author: aipedia.wiki Editorial
 quick_answer: >-
-  D-ID is an AI video platform developed by D-ID (Digital Humans Ltd.) in Israel that animates photos into talking-head videos and powers real-time conversational AI avatar experiences. Its primary technical differentiator is the Streaming API and Agents feature, which enables live, interactive AI avatar conversations that respond in real time to user input, a capability HeyGen and Synthesia do not match. Pricing runs $6/month (15 credits, roughly 3.75 minutes of video) to $180/month (375 credits); best for developers building real-time interactive avatar applications, not for marketing teams producing standard talking-head video where HeyGen delivers better quality at a lower effective cost per minute. The credit system makes the platform more expensive per output minute than minute-based competitors.
+  D-ID is the real-time streaming AI avatar platform. Creative Reality Studio animates photos into talking-head video; the Agents API powers live conversational avatars over 120+ languages. Pick it for interactive kiosks, support bots, and embedded streaming avatars. Skip it for pre-recorded marketing video where [HeyGen](/tools/heygen/) costs less per minute.
 ---
+
 # D-ID
 
-D-ID is an AI video platform that animates photos into talking-head videos and powers real-time conversational AI avatar experiences. Founded in 2017 in Israel with an initial focus on de-identification privacy technology, D-ID pivoted to generative AI video in 2022 and now offers two core products: Creative Reality Studio (upload a photo, enter a script, receive a talking avatar video) and the Agents API (a real-time streaming interface for live, interactive AI avatar conversations). The real-time streaming API remains D-ID's key differentiator; HeyGen and Synthesia produce pre-recorded video, but D-ID serves live, interactive AI avatar use cases where the avatar speaks and responds in real time.[https://www.d-id.com/pricing/](D-ID Pricing)
+D-ID is the real-time streaming AI avatar platform built by D-ID (Digital Humans Ltd.) in Israel. The company started in de-identification privacy tech, pivoted to generative video in 2022, and now ships two products under one subscription.
 
+**Creative Reality Studio** animates photos or stock presenters into scripted talking-head video. **Agents** connects a talking avatar to any LLM or knowledge base for live interactive conversations.
 
-## Editor's Take
+## System Verdict
 
-I tested D-ID's Creative Reality Studio and Agents API on the April 2026 version. The real-time streaming works as advertised, hooked it to a PDF knowledge base, and the avatar responded live in under 2 seconds with decent lip sync in Spanish. That's faster than HeyGen's interactive beta, which lags at 4-5 seconds.
+> **Pick D-ID when the use case requires a live conversational avatar, not a pre-recorded video.** The Agents API and streaming interface are production-deployed for customer support, interactive kiosks, AI companions, and education apps. No direct competitor ships comparable real-time streaming.
+>
+> **Skip it for standard marketing or L&D video production.** The credit system makes per-minute output expensive against [HeyGen](/tools/heygen/)'s Creator tier or [Synthesia](/tools/synthesia/)'s minute-based plans. Photorealism on custom avatars trails both.
+>
+> **Who pays which tier:** Lite $4.70/mo annual for evaluation or hobby projects (40 credits). Pro $16/mo annual for developers prototyping streaming avatars (60 credits). Advanced $108/mo annual for production agent deployments (400 credits). Enterprise for SLA, dedicated support, and API priority.
 
-But the credit system kills it for volume work. At $6/month for 15 credits (about 3.75 minutes of 1080p video), you're paying $1.60 per minute, double HeyGen's effective rate on their $29 plan. HeyGen wins for marketing videos with crisper faces and templates; D-ID's avatars look stiff unless you train a custom one, which eats credits.
+## Key Facts
 
-Use this if you're a developer embedding live avatars in apps. Skip it for standard talking heads, HeyGen's cheaper and sharper. I'm biased toward APIs over no-code studios, but even I winced at the pricing.
+| | |
+|---|---|
+| **Core products** | Creative Reality Studio (scripted) · Agents (real-time) · Streaming API |
+| **Real-time streaming** | Live avatar conversations · typical 1 to 3 second response latency |
+| **LLM integrations** | GPT-5.4, Claude Opus 4.7, and other frontier models via Agents |
+| **AI presenters** | 150+ stock avatars · photo upload for custom animation |
+| **Languages** | 120+ with natural voice per language |
+| **Output resolution** | Standard 1280×1280 · Premium AI presenters at 1080p |
+| **Tiers (annual)** | Lite $4.70 / 40 credits · Pro $16 / 60 credits · Advanced $108 / 400 credits · Enterprise custom |
+| **Credit model** | Roughly 1 credit per 15 seconds of output |
 
-## What It Does
+Every data point above was verified against vendor documentation on 2026-04-17. See Sources.
 
-D-ID's Creative Reality Studio takes an input (a photo, one of 150+ built-in AI presenters, or a custom avatar) and animates it to speak either a typed script or an uploaded audio file. Output is a video file with lip-synced speech in 120+ languages.
+## What it actually is
 
-The Agents feature extends this to interactive use: connect D-ID to a knowledge base (website, PDF, FAQ), and users can have a live text or voice conversation with a talking AI avatar that answers from that knowledge base in real time.
+One platform, two use-case tracks. Creative Reality Studio is the script-to-video flow: upload a face or pick a presenter, paste a script, receive a talking-head video. Useful for e-learning or explainer content where a fixed output is the deliverable.
 
-The streaming API enables developers to embed real-time AI avatar conversations in applications, customer support interfaces, educational platforms, or interactive kiosks. As of April 2026, D-ID supports integration with LLMs like GPT-5.4 and Claude Opus 4.6 for agent responses.[https://docs.d-id.com/reference/overview](D-ID Streaming API)
+The Agents feature is the differentiator. Connect a knowledge base (PDF, FAQ, website) and the avatar holds a live text or voice conversation, answering from that source in real time. The streaming API lets developers embed this in customer support interfaces, kiosks, or companion apps.
 
-## Who It's For
+Credit cost is the main friction. Roughly 15 seconds of output per credit means a minute of video runs 4 credits. Pro at $16 annual delivers 60 credits per month, so about 15 minutes of pre-recorded output.
 
-- **Marketing and communication teams** creating spokesperson videos without on-camera talent
-- **E-learning and training developers** who want an AI presenter to narrate course content across multiple languages
-- **Customer support platforms** building interactive AI agents with a human-like avatar face
-- **Developers** building real-time AI avatar experiences via the streaming API
-- **Enterprises** requiring multilingual video content at scale without re-shooting with human presenters
-- **Content creators** producing talking-head style videos without appearing on camera
+## When to pick D-ID
+
+- **You build a live AI agent that needs a face.** Customer support, onboarding kiosks, AI companions, interactive education. No competitor ships a mature streaming avatar API.
+- **You embed avatars in apps via API.** Creative Reality Studio and the streaming interface are API-first; the platform is built for developers, not brand marketers.
+- **You need multilingual live conversation.** 120+ languages with natural voice per language.
+- **You connect avatars to your own LLM or knowledge base.** Plug GPT-5.4, Claude Opus 4.7, or a custom agent into the avatar layer.
+- **You want low-volume evaluation.** Lite at $4.70 annual makes prototype work cheap.
+
+## When to pick something else
+
+- **Standard marketing, sales, or training video at scale:** [HeyGen](/tools/heygen/). More expressive Avatar IV output, faster custom cloning, clearer minute-based pricing.
+- **Enterprise L&D with SCORM and PowerPoint import:** [Synthesia](/tools/synthesia/). Deeper LMS pipeline.
+- **Transcript-based podcast and video cleanup:** [Descript](/tools/descript/). Different workflow entirely.
+- **Short-form vertical social video:** [Captions](/tools/captions/). Gaze correction, auto-captions, clips for TikTok and Reels.
+- **Cinematic scene generation:** [Runway](/tools/runway/), Kling, or Veo 3. D-ID only renders faces.
 
 ## Pricing
 
-| Plan | Price | Credits | Notes |
-|------|-------|---------|-------|
-| Lite | $6/mo | 15 credits | Entry-level; ~3.75 minutes of video at 15 sec/credit |
-| Pro | $36/mo | 120 credits | ~30 minutes of video; most popular plan |
-| Advanced | $180/mo | 375 credits | ~94 minutes of video; team features |
-| Enterprise | Custom | Custom | SLA, dedicated support, API priority |
+Subscription pricing via [d-id.com/pricing/studio](https://www.d-id.com/pricing/studio/). Annual billing saves up to 30% and is the baseline for the figures below.
 
-**Credit system:** approximately 1 credit = 15 seconds of generated video. Credit packages can be purchased additionally. Credits do not roll over between billing cycles on lower plans.
+| Plan | Annual (effective/mo) | Credits | Minutes (~15 sec/credit) | Who's it for |
+|------|-----------------------|---------|--------------------------|--------------|
+| Lite | $4.70 | 40 | ~10 min | Evaluation, hobby, prototyping |
+| Pro | $16 | 60 | ~15 min | Developers building streaming avatars |
+| Advanced | $108 | 400 | ~100 min | Production agent deployments |
+| Enterprise | Custom | Custom | Custom | SLA, dedicated support, API priority |
 
-> **Verification note:** Pricing confirmed at [https://www.d-id.com/pricing/](d-id.com/pricing) as of 2026-04-15. The credit model makes cost-per-output relatively expensive compared to HeyGen's minute-based pricing on its Creator plan. Advanced users should calculate their monthly video minute requirements before selecting a plan.
+*Prices verified 2026-04-17 via [D-ID Studio pricing](https://www.d-id.com/pricing/studio/) and [D-ID API pricing](https://www.d-id.com/pricing/api/). Roughly 1 credit buys 15 seconds of generated video. API pricing is separate from Studio, billed by volume; contact sales for production-scale deployments.*
 
-## Key Features
+## Against the alternatives
 
-- **Animate any photo**, upload any face photo and animate it to speak any script or audio file
-- **150+ AI presenters**, library of stock AI avatar personas available without a custom photo
-- **120+ languages**, multilingual text-to-speech with natural voice options per language
-- **Real-time streaming API**, live AI avatar conversations; the avatar speaks and responds dynamically, not from a pre-recorded script
-- **Agents**, interactive AI avatars connected to a knowledge base; users converse with the avatar in real time
-- **PowerPoint integration**, convert slide decks into presenter videos with AI avatar delivery
-- **Google Slides integration**, auto-generates a video version of any presentation
-- **Custom avatar creation**, train a custom avatar from video footage of a real person (Advanced and Enterprise)
+| | D-ID (Pro) | [HeyGen](/tools/heygen/) (Creator) | [Synthesia](/tools/synthesia/) (Starter) |
+|---|---|---|---|
+| **Annual entry price** | $16/mo | $29/mo | $29/mo ($18 annual) |
+| **Monthly output** | 60 credits (~15 min) | 200 credits (~10 min Avatar IV) | 10 min |
+| **Real-time streaming** | **Agents API, production-grade** | Interactive Avatars | None |
+| **Photorealism (custom)** | Mid | **Strong** | Mid |
+| **Languages** | 120+ | 175+ | 130+ |
+| **LMS / SCORM export** | Limited | Limited | **Native** |
+| **Best viewed as** | Streaming API specialist | Mid-market default | Enterprise L&D specialist |
 
-## Limitations
+## Failure modes
 
-- **Credit system is expensive per output second**, at $6 for 15 credits (~3.75 minutes), the Lite plan costs $1.60/minute of video; HeyGen Pro at $36/mo includes 45+ minutes
-- **Uncanny valley at close zoom**, avatar faces can appear subtly unnatural, particularly around eye movement and blinking; noticeable in close-up framings
-- **HeyGen and Synthesia have overtaken D-ID** for quality on custom avatar creation, both produce more realistic output at comparable or lower price points for pre-recorded video
-- **Free trial is limited**, 4 credits on signup; enough for 1 minute of video evaluation
-- **Agents feature latency**, real-time conversation can have 2-4 second delays under heavy load; knowledge base integration requires technical setup
+- **Credit economics are hostile for volume.** Pre-recorded video costs meaningfully more per minute than minute-based competitors. [HeyGen](/tools/heygen/) Pro at $99 covers more output volume.
+- **Uncanny valley at close framing.** Custom avatar quality trails [HeyGen](/tools/heygen/) Avatar IV and [Synthesia](/tools/synthesia/) Express-2, especially around eye movement and blinking.
+- **Agents latency spikes under load.** Typical response is 1 to 3 seconds; heavy load pushes 2 to 4 seconds.
+- **Knowledge base setup is technical.** Agents require developer time to connect a PDF, FAQ, or website source cleanly.
+- **Credits don't roll over.** Unused monthly credits on lower plans expire at the next billing cycle.
+- **Free trial is minimal.** 4 signup credits cover roughly one minute of evaluation video.
 
-## Bottom Line
+## Methodology
 
-D-ID scores 8/10 for utility and 6/10 for value. The utility score reflects strong support for multilingual presenter video and the real-time avatar API, both serving real needs. The value score reflects the credit system, which makes D-ID more expensive per minute of output than HeyGen or Synthesia for pre-recorded video. The moat is 7/10 due to the real-time streaming API, which HeyGen and Synthesia do not match; for live AI avatar applications, D-ID remains the clear choice.
-
-## Best Alternatives
-
-| Tool | Price | Key Difference |
-|------|-------|----------------|
-| [HeyGen](../tools/heygen.md) | $29/mo (Creator) | Better quality custom avatars; clearer minute-based pricing; no real-time |
-| [Synthesia](../tools/synthesia.md) | $30/mo (Starter) | More polished templates; enterprise-focused; no real-time |
-| [Runway](../tools/runway.md) | $15-95/mo | Full video generation with Gen-4.5; different use case from talking heads |
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [D-ID Studio pricing](https://www.d-id.com/pricing/studio/), [D-ID API pricing](https://www.d-id.com/pricing/api/), and [D-ID Agents documentation](https://www.d-id.com/agents/).
 
 ## FAQ
 
 **What is D-ID used for?**
-D-ID is used for (1) creating talking-head presenter videos from a photo and a script, common for e-learning, marketing explainers, and multilingual content localization; and (2) building real-time interactive AI avatar conversations via the streaming API, used in customer service bots, interactive kiosks, and AI companion applications. The second use case has no direct competitor; HeyGen and Synthesia only produce pre-recorded video.
+Two distinct use cases. Creative Reality Studio produces pre-recorded talking-head video from a photo or presenter plus a script. Agents and the streaming API power live interactive AI avatar conversations for support, kiosks, and companion apps.
 
 **How does D-ID compare to HeyGen?**
-HeyGen is the stronger choice for pre-recorded custom avatar video production, with better photorealism, cleaner output, and more transparent minute-based pricing. D-ID is the stronger choice if you need a real-time streaming AI avatar that can hold a live conversation (via the Agents or streaming API). For most marketing teams creating explainer videos or localized content, HeyGen will deliver better results at a lower effective cost per output minute.
+[HeyGen](/tools/heygen/) wins on pre-recorded video quality, custom avatar cloning speed, and per-minute pricing. D-ID wins when the product needs a live streaming conversational avatar, which HeyGen's Interactive Avatars approximates but D-ID ships as a developer-first API.
 
-**Can D-ID create real-time AI avatars?**
-Yes. The Streaming API and Agents feature allow developers to connect a talking AI avatar to any LLM or knowledge base, enabling live back-and-forth conversations where the avatar's face animates in real time as it speaks. Response latency is typically 1-3 seconds; the capability is production-deployed and available via API.[https://docs.d-id.com/reference/overview](D-ID Streaming API)
+**Can D-ID run real-time avatar conversations?**
+Yes. The Streaming API and Agents feature are production-deployed. Connect any LLM or knowledge base; typical response latency is 1 to 3 seconds. This remains D-ID's clearest differentiator ([D-ID Agents](https://www.d-id.com/agents/)).
 
+**How expensive is D-ID per minute of video?**
+Roughly 1 credit per 15 seconds of output means 4 credits per minute. Lite at $4.70 annual covers 10 minutes per month; Pro at $16 covers about 15 minutes; Advanced at $108 covers roughly 100 minutes ([D-ID Studio pricing](https://www.d-id.com/pricing/studio/)).
 
-## Review History
+**Does D-ID support SCORM or LMS export?**
+Limited. Enterprise L&D buyers looking for native SCORM, Workday, SAP, or Cornerstone integration should compare against [Synthesia](/tools/synthesia/), which builds around that pipeline.
 
-- **2026-04-15:** Pricing verified. Added note on the updated free tier limit.
-- **2026-03-26:** Score revised up by 0.5 after extended hands-on testing.
-- **2026-02-16:** Updated flagship model reference to latest release.
-- **2025-10-16:** Pricing verified. Minor copy edits.
-- **2024-01-15:** Initial review published after hands-on testing.
-
-## Related
-
-- [HeyGen](../tools/heygen.md), primary competitor for pre-recorded avatar video
-- [Synthesia](../tools/synthesia.md), enterprise talking-head video alternative
-- [Category: ai-video](../categories/ai-video.md)
-- [Best AI Video Generator (2026)](../use-cases/best-ai-video-generator.md)
+**What LLMs plug into D-ID Agents?**
+GPT-5.4, Claude Opus 4.7, and other frontier models are supported through the Agents integration layer. Custom agents and knowledge bases (PDFs, FAQs, websites) connect via the documented API.
 
 ## Sources
 
-- [D-ID Pricing](https://www.d-id.com/pricing/), verified 2026-04-15
-- [D-ID Agents](https://www.d-id.com/agents/), real-time avatar feature overview
-- [TechCrunch: D-ID raises $25M for real-time avatars (2025)](https://techcrunch.com/2025/03/12/d-id-raises-25m-real-time-avatars/), funding and feature context
+- [D-ID Studio pricing](https://www.d-id.com/pricing/studio/): Studio plan structure and credit allocations
+- [D-ID API pricing](https://www.d-id.com/pricing/api/): API volume pricing
+- [D-ID Agents](https://www.d-id.com/agents/): real-time streaming avatar product
+- [D-ID Streaming API docs](https://docs.d-id.com/reference/overview): developer integration reference
+
+## Related
+
+- **Category:** [AI Video Generation](/categories/ai-video/)
+- **Comparisons:** [HeyGen vs D-ID](/comparisons/heygen-vs-d-id/) · [Synthesia vs D-ID](/comparisons/synthesia-vs-d-id/) · [D-ID vs Runway](/comparisons/d-id-vs-runway/) · [Captions vs D-ID](/comparisons/captions-vs-d-id/)

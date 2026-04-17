@@ -2,22 +2,20 @@
 type: tool
 slug: descript
 title: Descript
-tagline: >-
-  Audio and video editor where you edit by editing the transcript, with AI
-  voice cloning, overdub, and filler word removal.
+tagline: Transcript-based audio and video editor with Overdub voice cloning, Studio Sound, and filler-word removal.
 category: ai-voice
 company: Descript Inc.
 url: 'https://descript.com'
 pricing_model: freemium
-price_range: $0-$60/month
+price_range: "$0-$65/user/month"
 status: active
 launched: 2017-01
-last_updated: 2026-04-15T00:00:00.000Z
-last_verified: '2026-04-15'
+last_updated: 2026-04-17
+last_verified: 2026-04-17
 update_frequency: monthly
 affiliate:
   has_program: true
-  commission: 15%
+  commission: "15%"
   cookie_days: 30
   network: ShareASale
   link: null
@@ -26,138 +24,135 @@ scores:
   value: 8
   moat: 8
   longevity: 8
-tags: [audio-editing, video-editing, transcription, overdub, voice-cloning, podcast-editing]
-seo_title: 'Descript Review 2026: Edit Audio and Video by Editing Text'
-meta_description: >-
-  Descript lets you edit audio and video by editing the transcript, delete
-  words from the text, delete them from the recording. Full review of Overdub
-  voice cloning, Studio Sound, and podcast/YouTube workflow.
+tags: [audio-editing, video-editing, transcription, overdub, voice-cloning, podcast-editing, studio-sound]
+seo_title: "Descript: Features, Pricing & Review (April 2026)"
+meta_description: "Descript edits audio and video by editing the transcript. Overdub voice cloning, Studio Sound, and filler removal sit on a free, Hobbyist $24, Creator $35, Business $65 ladder. Built for podcasters and creators who think in words."
 author: aipedia.wiki Editorial
 quick_answer: >-
-  Descript is an audio and video editor developed by Descript Inc., backed by Andreessen Horowitz and launched in 2017, built around a single paradigm: the transcript is the timeline, so deleting a word from the text deletes it from the recording. The Overdub feature, available on the Creator plan at $15/month, clones your voice from 30 minutes of training audio so you can fix stumbled sentences by typing rather than reshooting. Plans run $0 (1 hour transcription, watermarked) to $60/month; best for podcast editors and YouTube creators who think in words rather than waveforms, not for complex multi-camera productions requiring Premiere Pro or DaVinci Resolve. The free tier is exhausted by a single long-form episode.
+  Descript is the transcript-first audio and video editor. Delete a word from the text, it disappears from the recording. Overdub clones a voice for typed fixes; Studio Sound cleans noisy recordings to broadcast quality; filler detection strips ums in bulk. Pick it for podcast and creator post-production; skip it for multi-cam or complex VFX.
 ---
+
 # Descript
 
-Descript is an audio and video editor where the transcript serves as the primary editing interface. Deleting words from the text removes the corresponding audio or video segments. Rearranging text paragraphs adjusts the media timeline accordingly. Launched in 2017 and backed by Andreessen Horowitz, Descript targets podcast producers, YouTube creators, and content teams who prefer text-based workflows over traditional timeline scrubbing [https://descript.com](https://descript.com).
+Descript is the transcript-first audio and video editor built by Descript Inc., backed by Andreessen Horowitz. The core paradigm sticks: the transcript is the timeline. Deleting a word from the text deletes it from the recording.
 
+**Overdub** clones a voice from training audio so creators fix stumbled sentences by typing. **Studio Sound** runs one-click noise reduction and EQ. Automatic filler detection strips ums and pauses across an entire project.
 
-## Editor's Take
+## System Verdict
 
-I tested Descript's latest version, 4.2.1 from March 2026, on a 45-minute podcast episode. Transcription hit 98% accuracy in under five minutes, and editing the text to cut ums and stumbles felt natural, faster than Audacity's waveform scrubbing. Overdub, now on the $15/month Creator plan, cloned my voice from 25 minutes of clean audio; the output matched my inflection well enough for fixes without retakes.
+> **Pick Descript when post-production is the bottleneck on spoken-word content.** Podcast editors, YouTube talking-head creators, and course producers collapse hours of waveform scrubbing into text edits. Overdub and Studio Sound handle the fix-a-flub and denoise passes that otherwise force a re-record.
+>
+> **Skip it for multi-cam productions, color grading, or VFX-heavy work.** Premiere Pro and DaVinci Resolve still win there. Skip it for remote recording sessions: [Riverside](/tools/riverside/) captures cleaner source material, and Descript is the editor downstream.
+>
+> **Who pays which tier:** Free for evaluation (60 minutes, 100 credits, watermarked). Hobbyist $24/mo for occasional solo creators. Creator $35/mo for most working podcasters and YouTubers (30 hours, 800 credits, 4K export). Business $65/user/mo for teams with admin and brand controls. Enterprise for SSO and custom onboarding.
 
-Compared to Riverside, Descript wins on post-production speed for solo podcasters, Riverside's remote recording is better, but its editor lags for text-driven cuts. Pro plan at $30/user/month unlocks unlimited Studio Sound, which nukes background noise effectively. Enterprise is $60/seat with GPT-5.4 clip generation, but overkill unless you're a team.
+## Key Facts
 
-Use it if you hate timelines and produce talking-head content. Skip if you need multi-cam sync; Premiere still rules there. Free tier burns out on one episode, so commit or bounce.
+| | |
+|---|---|
+| **Core paradigm** | Transcript is the timeline · edit text to edit media |
+| **Overdub voice cloning** | Training from short audio samples · typed fixes in creator voice |
+| **Studio Sound** | One-click noise reduction, compression, EQ · ~10 credits per use |
+| **Filler removal** | Automatic detection of ums, uhs, pauses across full project |
+| **AI Actions** | Highlight clips, summaries, captions, social posts from transcript |
+| **Eye contact correction** | Adjusts video frame to simulate direct camera gaze |
+| **Tiers** | Free · Hobbyist $24 ($16 annual) · Creator $35 ($24 annual) · Business $65/user · Enterprise custom |
+| **4K export** | Creator and above |
+| **Credit model** | AI features consume credits · pool per plan |
 
-## What It Does
+Every data point above was verified against vendor documentation on 2026-04-17. See Sources.
 
-Descript uploads audio or video files and generates a transcript, typically within minutes depending on length. Users edit the transcript directly: cuts, rearrangements, and deletions propagate to the media. AI tools enhance this process, including Overdub for generating new speech in a cloned voice, Studio Sound for noise reduction and audio enhancement, and automatic filler word detection.
+## What it actually is
 
-The editor supports multi-track projects with video clips, screen recordings, and music layers. Video-specific features include eye contact correction and background removal. Projects export to standard formats like MP4 or WAV. Recent updates integrate with external AI models like GPT-5.4 for transcript summarization and clip generation [https://descript.com/blog](https://descript.com/blog).
+A desktop app (plus web for lighter workflows) that ingests audio or video, transcribes it, and makes the transcript the primary editing surface. Cuts, rearrangements, and splice points in the text propagate to the media timeline.
 
-Collaboration occurs via shared projects with real-time editing and comments. The desktop app handles local editing with cloud processing for transcription and AI features.
+The paid plans bundle AI features on a credit system. Studio Sound costs roughly 10 credits per application. Overdub, Eye Contact correction, Green Screen, and AI Actions all draw from the same pool.
 
-## Who It's For
+Collaboration runs through shared projects with real-time editing and comments. Export covers MP4, WAV, and standard podcast hosts; SCORM and advanced color are out of scope.
 
-- **Podcast producers**, edit interviews and monologues by cutting text; remove filler words in bulk; use Overdub to correct flubs
-- **YouTube creators**, trim talking-head videos and screen shares via transcript; add captions automatically
-- **Course creators**, clean lecture recordings; generate chapters and summaries from transcripts
-- **Video podcasters**, combine clips, B-roll, and audio on text-driven timelines
-- **Marketing teams**, extract short clips from webinars; repurpose long videos into social media content
-- **Journalists**, transcribe and annotate interviews with timestamped quotes
+## When to pick Descript
+
+- **You hate scrubbing waveforms.** Text-driven edits on spoken content are measurably faster than Audacity or Premiere for cut-and-rearrange workflows.
+- **You record in noisy environments.** Studio Sound pulls mobile, laptop, and untreated-room recordings into broadcast quality in one click.
+- **You stumble on camera or mic and hate re-recording.** Overdub fixes sentences by typing in the cloned voice.
+- **You repurpose long recordings into clips.** AI Actions generate highlight clips, summaries, and social posts directly from the transcript.
+- **You produce talking-head video.** Eye contact correction simulates direct camera gaze on off-axis takes.
+
+## When to pick something else
+
+- **Remote recording sessions with separate per-speaker tracks:** [Riverside](/tools/riverside/) captures cleaner source. Use Descript as the editor downstream.
+- **Higher-fidelity voice cloning for narration or character work:** [ElevenLabs](/tools/elevenlabs/). Overdub is optimized for fix-a-flub, not long-form synthesis.
+- **Multi-camera productions, color grading, VFX:** Premiere Pro or DaVinci Resolve. Descript is not a professional NLE.
+- **Short-form vertical video with gaze correction and captions as the core workflow:** [Captions](/tools/captions/).
+- **Avatar-led talking-head video from a typed script:** [HeyGen](/tools/heygen/) or [Synthesia](/tools/synthesia/).
 
 ## Pricing
 
-| Plan | Price | Transcription Hours/Month | Concurrent Projects | Notes |
-|------|-------|---------------------------|---------------------|-------|
-| Free | $0 | 1 | 1 | Watermarked exports, basic AI features |
-| Creator | $15/user/mo (annual) | 10 | 10 | Overdub, Studio Sound, no watermark |
-| Pro | $24/user/mo (annual) | 30 | Unlimited | Advanced AI actions, analytics |
-| Business | $40/user/mo (annual) | Unlimited | Unlimited | Team folders, admin controls |
-| Enterprise | Custom | Unlimited | Unlimited | SSO, custom integrations, SLA |
+Subscription pricing via [descript.com/pricing](https://www.descript.com/pricing). Annual billing saves up to 35% against monthly.
 
-*Prices verified 2026-04-15. Monthly billing adds 20%. Overdub training requires Creator or higher [https://descript.com/pricing](https://descript.com/pricing).*
+| Plan | Monthly | Annual (effective/mo) | Transcription | AI credits | 4K export |
+|------|---------|-----------------------|---------------|------------|-----------|
+| Free | $0 | $0 | 60 min/mo | 100 one-time | No |
+| Hobbyist | $24 | $16 | 10 hrs/mo | 400/mo | No |
+| Creator | $35 | $24 | 30 hrs/mo | 800/mo | Yes |
+| Business | $65/user | Annual discount | Higher | 1,500/mo | Yes |
+| Enterprise | Custom | Custom | Unlimited | Custom | Yes |
 
-## Key Features
+*Prices verified 2026-04-17 via [Descript pricing](https://www.descript.com/pricing). Studio Sound consumes roughly 10 credits per application. Overdub, Eye Contact, Green Screen, and AI Actions all draw from the same monthly credit pool. Free-tier exports carry a watermark.*
 
-- **Transcript-based editing**, delete or rearrange words in the text transcript; corresponding audio/video segments update automatically across the timeline
-- **Overdub AI voice synthesis**, train a voice model from 90 seconds of clean audio; generate new sentences by typing to fix mistakes without re-recording
-- **Studio Sound audio enhancement**, one-click noise reduction, compression, and EQ; improves mobile or remote recordings to broadcast quality
-- **Filler word removal**, detects and removes um, uh, you know across entire projects; customizable sensitivity slider
-- **Screen and webcam recording**, built-in capture with auto-transcription; edit recordings the same way as uploaded files
-- **AI Actions**, powered by GPT-5.4 integration: generate highlight clips, summaries, captions, and social posts from transcripts
-- **Eye contact correction**, adjusts video frame to simulate direct camera gaze; works on talking-head footage
-- **Multi-track timeline**, layer video clips, audio tracks, and graphics while retaining transcript editing on voice tracks
+## Against the alternatives
 
-## Limitations
+| | Descript (Creator) | [Riverside](/tools/riverside/) | Premiere Pro | [ElevenLabs](/tools/elevenlabs/) |
+|---|---|---|---|---|
+| **Primary workflow** | Transcript-driven editing | Remote recording | Timeline NLE | Voice synthesis |
+| **Voice cloning** | Overdub (fix-a-flub) | None | None | **Highest fidelity** |
+| **Noise reduction** | Studio Sound | Magic Audio | Manual DeNoise | N/A |
+| **Multi-cam** | Limited | Yes (recording) | **Full** | N/A |
+| **4K support** | Creator+ | Yes | Full | N/A |
+| **Price floor** | $24/mo Hobbyist | ~$19/mo | $22.99/mo | Free tier |
+| **Best viewed as** | Podcast / creator post specialist | Remote session capture | Pro NLE | Voice specialist |
 
-- Transcription processing requires internet; no full offline editing mode available
-- Overdub voice quality depends on training audio clarity; accents and noisy samples produce artifacts
-- Video features suit simple edits but lack advanced color grading, multi-cam sync, or VFX tools found in Premiere Pro
-- Free plan limits (1 hour transcription) suit trials but not regular production workflows
-- Large projects with many tracks can lag on lower-end hardware despite optimizations
-- AI Actions using external models like Claude Opus 4.6 may hit rate limits during peak usage
+## Failure modes
 
-## Bottom Line
+- **Transcription accuracy on heavy accents or jargon.** Strong English hits 95%+. Accents, technical terminology, and multi-speaker overlap still force manual cleanup.
+- **Overdub artifacts with noisy training audio.** Clean 30-minute samples produce usable output. Compressed or reverb-heavy training input audibly degrades results.
+- **No full offline mode.** Transcription and most AI features require internet. Local editing works on already-transcribed projects.
+- **Credit burn on Hobbyist.** 400 credits per month cover roughly 40 Studio Sound applications. Power users hit Creator's 800-credit ceiling fast.
+- **Weak on multi-cam and color.** Not built for it. Professional video teams keep Descript for audio cleanup and hand off to Premiere or Resolve.
+- **Free tier export watermark.** Useful for evaluation, not for public posting.
+- **Large projects lag on modest hardware.** Multi-track video with many layers strains laptops without discrete GPU.
 
-Descript accelerates editing for spoken-word content through its transcript interface, cutting cleanup time for podcasts and videos. Overdub and Studio Sound handle common post-production tasks effectively at the $15/month entry price. It complements tools like Runway Gen-4.5 for video generation but does not replace full NLEs for complex projects.
+## Methodology
 
-## Best Alternatives
-
-| Tool | Best For | Starting Price |
-|------|----------|----------------|
-| Riverside.fm | Remote recording and editing | $19/mo |
-| [ElevenLabs](/tools/elevenlabs) | High-fidelity voice cloning | Free tier |
-| Descript Clips | Short-form social video | Free |
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [Descript pricing](https://www.descript.com/pricing) and the [Descript help center](https://help.descript.com).
 
 ## FAQ
 
+**Is Descript free?**
+Yes, for evaluation. The free tier gives 60 minutes of transcription per month, 100 one-time AI credits, and watermarked exports. Hobbyist at $24/mo ($16 annual) unlocks 10 hours of transcription and 400 monthly credits ([Descript pricing](https://www.descript.com/pricing)).
+
 **How accurate is Descript transcription?**
-Descript achieves 95%+ accuracy on clear audio using its custom models fine-tuned on 2026 datasets. Proper nouns and accents may require manual fixes. Multi-speaker detection improved 25% in Q1 2026 updates [https://help.descript.com](https://help.descript.com).
+95%+ on clean English audio. Accents, technical jargon, and multi-speaker overlap require manual fixes. Multi-speaker detection improved in 2026 but still benefits from labeled training.
 
-**Does Overdub work with cloned voices from other tools?**
-No, Overdub uses Descript's proprietary models trained only on your uploaded samples. It processes 90 seconds minimum for basic clones, 10 minutes for high quality. Export cloned audio cannot import directly from ElevenLabs or similar services.
+**What is Overdub and what does it need?**
+Overdub is Descript's voice cloning for typed fixes. It trains on clean audio samples and generates new sentences in the creator's voice. It is optimized for fix-a-flub, not long-form narration. Use [ElevenLabs](/tools/elevenlabs/) for higher-fidelity synthesis.
 
-**Can Descript handle 4K video editing?**
-Yes, it supports 4K imports and exports with proxy editing for performance. Complex effects remain limited compared to DaVinci Resolve or Premiere Pro, which offer superior grading and compositing.
+**Can Descript handle 4K video?**
+Yes on Creator and above. 4K import and export are supported with proxy editing. Complex color grading and VFX still require DaVinci Resolve or Premiere Pro.
 
+**How does Descript compare to Riverside?**
+Different roles in the same pipeline. [Riverside](/tools/riverside/) captures cleaner remote recordings with per-speaker tracks. Descript is the editor downstream. Many podcasters run both.
 
-
-
-## Review History
-
-- **2026-04-15:** Pricing verified. Added note on the updated free tier limit.
-- **2026-03-26:** Score revised up by 0.5 after extended hands-on testing.
-- **2026-02-16:** Flagship version bumped after the most recent model release.
-- **2025-10-16:** Pricing verified. Minor copy edits.
-- **2024-01-15:** Initial review published after hands-on testing.
-
-## Related Guides
-
-- [Best AI Stack for Content Creators (2026)](../use-cases/ai-content-creator-stack.md)
-- [Best AI Tools for Podcasters (2026)](../use-cases/best-ai-for-podcasters.md)
-- [Best AI for Transcription (2026)](../use-cases/best-ai-for-transcription.md)
-
-
-- **Category:** [Voice](../categories/ai-voice.md)
-
-## Related Comparisons
-
-- [Cartesia vs Descript](../comparisons/cartesia-vs-descript.md)
-- [Descript vs ElevenLabs](../comparisons/descript-vs-elevenlabs.md)
-- [Descript vs Fish Audio / Fish Speech S2](../comparisons/descript-vs-fish-audio.md)
-- [Descript vs Resemble AI](../comparisons/descript-vs-resemble-ai.md)
-- [Descript vs Voxtral](../comparisons/descript-vs-voxtral.md)
-
-## Related
-
-- [ElevenLabs](/tools/elevenlabs), high-fidelity AI voice generation
-- Riverside.fm, remote recording platform
-- [Runway](/tools/runway), AI video generation and editing
-- [Best Audio Editing Tools 2026](/best-of/audio-editing-tools)
+**What does Studio Sound actually do?**
+One-click noise reduction, compression, and EQ. It lifts mobile and untreated-room recordings into broadcast quality. Each application costs roughly 10 credits from the plan's monthly pool.
 
 ## Sources
 
-- [Descript Pricing](https://descript.com/pricing) (verified 2026-04-15)
-- [Descript Release Notes](https://descript.com/changelog) (verified 2026-04-15)
-- [TechCrunch Review](https://techcrunch.com/2026/03/descript-ai-editing-update/) (verified 2026-04-15)
+- [Descript pricing](https://www.descript.com/pricing): plan structure, credit allocations, feature gating
+- [Descript help center](https://help.descript.com): Overdub setup, Studio Sound credit cost, transcription accuracy
+- [Descript release notes](https://www.descript.com/changelog): feature history and AI Actions rollout
+
+## Related
+
+- **Category:** [AI Voice](/categories/ai-voice/)
+- **Comparisons:** [Descript vs ElevenLabs](/comparisons/descript-vs-elevenlabs/) · [Descript vs Riverside](/comparisons/descript-vs-riverside/) · [Descript vs Resemble AI](/comparisons/descript-vs-resemble-ai/) · [Cartesia vs Descript](/comparisons/cartesia-vs-descript/) · [Descript vs Fish Audio](/comparisons/descript-vs-fish-audio/)
