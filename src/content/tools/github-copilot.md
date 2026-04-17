@@ -2,7 +2,7 @@
 type: tool
 slug: github-copilot
 title: GitHub Copilot
-tagline: AI coding assistant integrated into VS Code and JetBrains with inline autocomplete, chat, and agent mode.
+tagline: Microsoft/GitHub's AI pair programmer. Claude Opus 4.7 GA across Pro+/Business/Enterprise (April 16, 2026), Agent/Edit/Ask modes, and an autonomous Coding Agent that turns issues into PRs, all native to the GitHub graph.
 category: ai-coding
 company: microsoft-github
 url: https://github.com/features/copilot
@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$39/user/month"
 status: active
 launched: 2021-06
-last_updated: 2026-04-15
-last_verified: 2026-04-15
+last_updated: 2026-04-17
+last_verified: 2026-04-17
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -22,160 +22,167 @@ affiliate:
 scores:
   utility: 9
   value: 9
-  moat: 8
+  moat: 9
   longevity: 10
-tags: [ide, autocomplete, ai-coding, vscode, jetbrains, github, microsoft, agent-mode, mcp]
-seo_title: "GitHub Copilot: Features, Pricing & Review (2026)"
-meta_description: "GitHub Copilot is an AI coding assistant with autocomplete, chat, and agent mode in VS Code and JetBrains. Free tier available; Pro plan $10/mo includes Claude Opus 4.6 and agent mode."
+tags: [ide, autocomplete, ai-coding, vscode, jetbrains, xcode, neovim, github, microsoft, agent-mode, coding-agent, mcp, claude-opus-4-7]
+seo_title: "GitHub Copilot: Features, Pricing & Review (April 2026)"
+meta_description: "GitHub Copilot runs Claude Opus 4.7 (GA April 16, 2026) plus GPT-5.4 and Gemini 3.1 Pro across VS Code, Visual Studio, JetBrains, Xcode, and Neovim. Free, Pro $10, Pro+ $39, Business $19/seat, Enterprise $39/seat. Agent mode, Coding Agent, and MCP all native to the GitHub graph."
 author: "aipedia.wiki Editorial"
 best_for:
-  - vscode developers
-  - github ecosystem users
-  - budget-conscious programmers
-  - teams wanting ide-native agent mode
+  - developers already in the GitHub ecosystem
+  - JetBrains, Xcode, and Neovim users with no Cursor path
+  - teams needing issue-to-PR automation via Coding Agent
+  - budget-conscious VS Code developers at $10/mo Pro
 not_best_for:
-  - maximum autonomous agentic coding
-  - non-github workflows
-  - power users needing 1500+ premium requests per month
+  - pure terminal / CLI autonomous agent loops
+  - power users who burn through 300 premium requests in a week
+  - GitLab or Bitbucket-centric teams
 quick_answer: >-
-  GitHub Copilot is an AI coding assistant developed by GitHub (Microsoft), providing inline autocomplete, chat, and agent mode directly inside VS Code and JetBrains IDEs. Five tiers exist: Free ($0, 2,000 completions, 50 premium requests/mo), Pro ($10/mo, 300 premium requests, agent mode), Pro+ ($39/mo, 1,500 premium requests), Business ($19/seat/mo), and Enterprise ($39/seat/mo). Pro and above include a model selector with GPT-5.4, Claude Opus 4.6, Gemini 2.5/3.1 Pro, and Grok. Agent mode reached general availability in March 2026 with multi-file edits, terminal commands, and agentic code review. Best for developers already in the GitHub ecosystem who want affordable AI assistance in their existing IDE; not the right tool if you need the most capable autonomous coding agent (Claude Code handles that, at significantly higher cost) or if you need more than 300 premium requests per month without upgrading to Pro+.
+  GitHub Copilot is the cheapest credible AI coding stack, native to VS Code, JetBrains, Xcode, and Neovim. Pro $10/mo is unmatched entry pricing; Pro+ $39/mo unlocks Claude Opus 4.7 plus the full model picker. Skip for pure CLI autonomous loops (Claude Code) or a GUI multi-agent workbench (Cursor).
 price_history:
-  - date: 2022-06-21
-    plan: "Individual"
-    price: "$10/mo"
-    note: "Copilot GA launch"
-  - date: 2025-07-01
+  - date: 2026-04-16
     plan: "Pro+"
     price: "$39/mo"
-    note: "Pro+ tier added with premium model access"
-  - date: 2026-04-15
-    plan: "Individual"
+    note: "Claude Opus 4.7 GA on Pro+/Business/Enterprise at 7.5x promotional multiplier through April 30, 2026; Opus 4.5 and 4.6 being retired from the picker"
+  - date: 2026-04-10
+    plan: "Pro+"
+    price: "$39/mo"
+    note: "Opus 4.6 Fast retired from Pro+; new per-model limits enforced"
+  - date: 2026-04-17
+    plan: "Pro"
     price: "$10/mo"
     note: "Verified, unchanged"
 ---
 
 # GitHub Copilot
 
-GitHub Copilot is an AI-powered coding assistant developed by GitHub (Microsoft). It provides inline autocomplete, chat, and agentic coding capabilities directly inside VS Code and JetBrains IDEs. It is primarily used for day-to-day code completion and AI-assisted development workflows. Its key differentiator is the combination of the largest user base, deepest GitHub ecosystem integration, and access to Claude Opus 4.6 and GPT-5.4 via a model selector at $10/month. As of April 2026, GitHub Copilot offers five tiers: Free ($0), Pro ($10/mo), Pro+ ($39/mo), Business ($19/seat/mo), and Enterprise ($39/seat/mo). Agent mode reached general availability in March 2026. Compared to Cursor, Copilot offers broader ecosystem integration and lower cost; Cursor provides a more deeply AI-native editor experience and is now $20-$200/month depending on tier.
+GitHub's AI pair programmer, built by Microsoft and GitHub on top of the largest code-and-repo graph in the world. Ships as a first-party extension inside VS Code, Visual Studio, JetBrains, Xcode, and Neovim. The GA Coding Agent runs asynchronously on GitHub Actions to turn issues into pull requests.
 
+Claude Opus 4.7 went generally available inside Copilot on April 16, 2026, within hours of Anthropic's release.
 
-## Editor's Take
+## System Verdict
 
-I tested GitHub Copilot Pro at $10 a month in VS Code last week. The inline autocomplete handles Python and JavaScript blocks reliably, often nailing context from open files in under a second. Agent mode, now GA since March 2026, edits across five files at once and runs terminal commands without babysitting, beats Cursor's agent for reliability in GitHub repos, though Cursor feels more native if you're all-in on AI editing.
+> **Pick GitHub Copilot if you're already inside the GitHub ecosystem and want AI inside your current IDE at the lowest credible price.** Pro at $10/mo is the cheapest entry point in serious AI coding. The model picker hands you Claude Opus 4.7, GPT-5.4, Gemini 3.1 Pro, and Grok from a single bill.
+>
+> The autonomous Coding Agent accepts a GitHub issue, spins up a cloud dev environment via Actions, self-reviews the patch, and opens a PR. No direct equivalent in Cursor or Claude Code. IDE coverage is unmatched: JetBrains, Xcode, and Neovim developers have no Cursor path.
+>
+> **Skip it if you want a pure autonomous terminal loop or a GUI-first multi-agent workbench.** [Claude Code](/tools/claude-code/) runs a cleaner CLI agent loop on test failures and build errors. [Cursor](/tools/cursor/) 3.0 ships an Agents Window with parallel worktree and cloud agents that Copilot doesn't match.
+>
+> Heavy Opus 4.7 users on Pro+ will burn the 1,500-request pool fast. At the 7.5x promotional multiplier, that's roughly 200 Opus 4.7 turns per month.
+>
+> **Who pays which tier:** Free for evaluation and students, Pro $10/mo for most individuals, Pro+ $39/mo for power users who need the full model picker and Spark access, Business $19/seat for teams wanting IP indemnification and policy controls, Enterprise $39/seat for org-scale knowledge features and SSO/audit. Enterprise also requires GitHub Enterprise Cloud at $21/user/mo on top.
 
-Pro's 300 premium requests cover my daily chat queries and code reviews fine, with Claude Opus 4.6 edging out GPT-5.4 for reasoning. Don't bother with Pro+ at $39 unless you burn through requests; that's Cursor Pro territory at similar cost but less ecosystem lock-in.
+## Key Facts
 
-Use this if you're in VS Code or JetBrains and want cheap AI without switching tools. Skip it for heavy agentic work, Claude Code does that better, or if you need unlimited premium hits. I'm biased toward IDE plugins over full editors, but the free tier's 2,000 completions make it a no-brainer starter.
+| | |
+|---|---|
+| **Flagship model (GA April 16, 2026)** | Claude Opus 4.7 (Pro+, Business, Enterprise) at 7.5x premium-request multiplier through April 30, 2026 |
+| **Other models in picker** | GPT-5.4 · GPT-5-Codex · Claude Sonnet 4.6 · Gemini 3.1 Pro · Gemini 2.5 Pro · Grok · Claude Haiku 4.5 |
+| **Free-tier models** | Claude Sonnet 4.6 · GPT-4.1 only |
+| **Modes** | Ask · Edit · Agent · Coding Agent (autonomous, cloud) · Code Review · Copilot CLI |
+| **IDE support** | VS Code · Visual Studio · JetBrains · Xcode · Neovim (chat limited to first three) |
+| **Agent mode status** | GA on VS Code and JetBrains since March 2026; MCP tool use supported |
+| **Coding Agent status** | GA for all paid Copilot subscribers; runs in GitHub Actions sandbox, self-reviews, runs security scans |
+| **Subscription pricing** | Free · Pro $10 · Pro+ $39 · Business $19/seat · Enterprise $39/seat |
+| **Premium request caps** | Free 50 · Pro 300 · Pro+ 1,500 · Business 300/seat · Enterprise 1,000/seat · overage $0.04 each |
+| **Copilot Spaces** | Context-scoping feature accessible via the GitHub MCP server |
+| **Recent shipments (12 mo)** | Coding Agent GA · Agent mode GA (Mar 2026) · MCP support GA · Copilot CLI GA (Apr 2026) · Opus 4.7 GA (Apr 16, 2026) · Agentic code review (Mar 2026) |
 
-## What It Does
+## What it actually is
 
-GitHub Copilot provides inline autocomplete, chat, and agentic multi-file editing inside VS Code and JetBrains IDEs ([GitHub Copilot](https://github.com/features/copilot)). Autocomplete suggests lines and blocks as you type. Chat answers questions about your codebase via @workspace context. Agent mode (GA March 2026) can make multi-file changes, run terminal commands, and iterate on errors. It has the largest user base of any AI coding tool, with deep integration into the GitHub ecosystem (pull requests, issues, Actions). Premium requests are the rate-limiting mechanism: each Chat message, agent mode interaction, and code review uses one or more premium requests from your monthly allocation. Extra premium requests cost $0.04 each on paid tiers.
+A first-party extension bundle covering autocomplete, inline edits, chat, agentic multi-file work, and an autonomous GitHub-native agent that runs in the cloud. One subscription buys access to a curated model picker (Opus 4.7, GPT-5.4, Gemini 3.1 Pro, Grok, Sonnet 4.6) billed via a single premium-request pool. No per-model setup. No BYO API keys.
 
-## Who It's For
+Three moats, none easy to replicate.
 
-- **Any developer using VS Code or JetBrains:** the lowest-friction way to add AI to your workflow
-- **Teams already on GitHub:** integration with repos, PRs, and Actions is native
-- **Budget-conscious developers:** $10/mo for Claude Opus 4.6 and agent mode is the best-value entry point in AI coding
-- **Students and open-source contributors:** free tier available with 2,000 completions/mo
-- **Enterprise teams:** admin controls, policy management, IP indemnification on Business and Enterprise tiers
+First, GitHub-native integration. Coding Agent assigns to a GitHub issue like a teammate, runs in an Actions-backed sandbox, and opens a PR against the right branch. No third-party tool is wired this deep into the repo, issue, and PR graph.
+
+Second, enterprise distribution. Copilot is already a line item in every Microsoft/GitHub enterprise agreement. IP indemnification on Business and Enterprise is a lawyer-tested feature Cursor and Claude Code don't match.
+
+Third, IDE breadth. JetBrains, Xcode, and Neovim developers only have Copilot among first-tier AI coding tools with OAuth-simple setup.
+
+## When to pick GitHub Copilot
+
+- **You already pay for GitHub.** Copilot inherits your OAuth, your SSO, and your repo permissions. Setup is a VS Code extension install.
+- **You use JetBrains, Xcode, or Neovim.** Cursor is a VS Code fork with no path to those editors. Copilot is the only first-tier AI coding tool shipping native extensions for all of them.
+- **You want issue-to-PR automation.** Coding Agent turns an assigned GitHub issue into a self-reviewed PR autonomously. No equivalent exists in Cursor or Claude Code.
+- **You want $10/mo entry pricing with a real model picker.** Pro at $10 includes Opus 4.7 (via premium requests on qualifying tiers), GPT-5.4, Gemini 3.1 Pro, and agent mode. Cheapest serious AI coding subscription on the market.
+- **You need IP indemnification.** Business and Enterprise tiers include Microsoft-backed IP indemnity for Copilot suggestions. No direct analog from Cursor or Anthropic.
+- **You want MCP tool use without leaving the IDE.** Agent mode autonomously invokes MCP servers once configured, and the GitHub MCP server now exposes Copilot Spaces for scoped context.
+
+## When to pick something else
+
+- **Pure CLI autonomous agent loop:** [Claude Code](/tools/claude-code/). Stronger terminal-native loop on test failures and build errors; runs the whole cycle without IDE supervision.
+- **GUI-first multi-agent workbench:** [Cursor](/tools/cursor/). Cursor 3.0's Agents Window orchestrates parallel agents across local worktrees, cloud sandboxes, and remote SSH with Design Mode for UI clicks.
+- **Open-source agent inside stock VS Code:** [Cline](/tools/cline/). BYO API key, no editor fork, no premium-request pool.
+- **Terminal pair-programmer with precise diff control:** [Aider](/tools/aider/). Git-native, surgical edits, popular with power users.
+- **Cursor-style editor on a tighter budget:** [Windsurf](/tools/windsurf/). Similar ergonomics at a lower sticker price.
+- **Fully configurable, self-hostable VS Code extension:** [Continue](/tools/continue/). Bring your own models and policies.
 
 ## Pricing
 
-| Plan | Price | Premium Requests | Key Notes |
-|------|-------|-----------------|-----------|
-| Free | $0/mo | 50/mo | 2,000 completions/mo; basic models only (Claude Sonnet 4.6, GPT-4.1); no agent mode |
-| Pro | $10/mo | 300/mo | Unlimited completions; all premium models; agent mode |
-| Pro+ | $39/mo | 1,500/mo | Unlimited completions; all premium models + Spark access; for power users |
-| Business | $19/user/mo | 300/user/mo | Org management, IP indemnity, policy controls |
-| Enterprise | $39/user/mo | 1,000/user/mo | Enterprise SSO, audit logs, compliance |
+Subscription tiers via [github.com/features/copilot/plans](https://github.com/features/copilot/plans) and [docs.github.com/copilot/get-started/plans](https://docs.github.com/en/copilot/get-started/plans):
 
-Extra premium requests: $0.04 each on all paid tiers. Prices verified 2026-04-15 from secondary sources ([GitHub Copilot Plans](https://github.com/features/copilot/plans)).
+| Plan | Price | Premium requests | Model access | Who's it for |
+|---|---|---|---|---|
+| Free | $0 | 50/mo | Sonnet 4.6 · GPT-4.1 · 2,000 completions | Students, evaluation, OSS maintainers |
+| Pro | $10/mo | 300/mo | Full picker (Opus 4.7 not included; see note) · agent mode · unlimited completions | **Most individuals should land here** |
+| Pro+ | $39/mo | 1,500/mo | Full picker **including Opus 4.7** · GitHub Spark · early access | AI power users burning Pro limits weekly |
+| Business | $19/user/mo | 300/user/mo | Full picker including Opus 4.7 · org policy · IP indemnity · audit | 2+ seat teams on GitHub Enterprise |
+| Enterprise | $39/user/mo | 1,000/user/mo | Full picker including Opus 4.7 · org knowledge · SSO · SCIM · audit logs | Compliance-heavy orgs (also needs GitHub Enterprise Cloud at $21/user/mo) |
 
-## Key Features
+Overage: $0.04 per premium request on every paid tier. Opus 4.7 is billed from the same pool at a **7.5x promotional multiplier** through April 30, 2026. On Pro+'s 1,500-request pool, that works out to roughly 200 Opus 4.7 turns per month. The post-promotion multiplier has not been announced.
 
-- **Inline autocomplete:** real-time code suggestions as you type, multi-line aware ([GitHub Copilot](https://github.com/features/copilot))
-- **Agent mode (GA March 2026):** multi-file edits, terminal commands, self-correction loop, agentic code review; consumes premium requests; requires Pro or above
-- **Model selector:** switch between GPT-5.4, Claude Opus 4.6, Claude Sonnet 4.6, Gemini 2.5/3.1 Pro, and Grok on Pro and above; Free tier is limited to Claude Sonnet 4.6 and GPT-4.1
-- **Agentic code review (March 2026):** agent mode can review PRs and suggest changes autonomously
-- **Codebase-aware chat:** ask questions about your project with @workspace context
-- **Pull request integration:** generates PR descriptions, reviews code, suggests changes
-- **GitHub Actions integration:** AI-assisted workflow creation and debugging
-- **Copilot Extensions and MCP support:** ecosystem of extensions added in 2026, with MCP integration for connecting external tools
-- **Semantic code search:** upgraded in March 2026 for better codebase navigation
+Prices verified 2026-04-17 via [GitHub Copilot plans](https://github.com/features/copilot/plans), [docs.github.com individual plans](https://docs.github.com/en/copilot/concepts/billing/individual-plans), the [Opus 4.7 GA changelog](https://github.blog/changelog/2026-04-16-claude-opus-4-7-is-generally-available/), and the [Opus 4.6 Fast retirement changelog](https://github.blog/changelog/2026-04-10-enforcing-new-limits-and-retiring-opus-4-6-fast-from-copilot-pro/).
 
-## Limitations
+## Against the alternatives
 
-- **Premium request caps are real.** Pro gives 300/mo; heavy Chat or agent mode use will hit the limit within a week for active developers. Pro+ at $39/mo gives 1,500/mo.
-- **Agent mode less capable than Claude Code.** IDE sandbox limits what it can do compared to full terminal access, and Claude Code's Ultraplan feature creates cloud environments autonomously.
-- **Free tier is restrictive.** 50 premium requests/mo is not enough for real evaluation of Chat or agent mode.
-- **Autocomplete quality varies by language.** Excellent for Python/JS/TS; less reliable for niche languages.
-- **Dependent on GitHub ecosystem.** Less useful if your team uses GitLab or Bitbucket.
-- **Pro+ rate limiting reported.** Community reports of `user_weekly_rate_limited` errors on Pro+ suggest limits exist beyond the stated 1,500/mo quota.
+| | GitHub Copilot Pro $10 | Cursor Pro $20 | Claude Code (via Claude Max 5x $100) |
+|---|---|---|---|
+| **IDE integration** | Native extension in VS Code, Visual Studio, JetBrains, Xcode, Neovim | VS Code fork only | Terminal-first, no IDE |
+| **Model access** | Picker: Opus 4.7 (Pro+ and above) · GPT-5.4 · Gemini 3.1 Pro · Grok · Sonnet 4.6 | Picker: Opus 4.7 · GPT-5.4 · Gemini 3.1 Pro · Grok · Kimi · Composer 2 | Opus 4.7 · Sonnet 4.6 · Haiku 4.5 only |
+| **Agent quality** | Agent mode (IDE) + Coding Agent (async, GitHub-native) | Agents Window + Cloud Agents (supervised workbench) | Strongest autonomous CLI loop |
+| **GitHub-native features** | Issue-to-PR via Coding Agent · PR review agent · Actions integration · Spaces · IP indemnity | None beyond a repo connection | None native |
+| **Pricing** | $10/mo flat + 300 premium requests (Opus locked to Pro+ at 7.5x) | $20/mo + $20 usage pool at API rates | $100/mo flat for Max 5x |
+| **Best viewed as** | GitHub-native AI inside your existing IDE | GUI-first multi-agent workbench | Strongest autonomous CLI agent |
 
-## Bottom Line
+## Failure modes
 
-GitHub Copilot is the best choice for developers who want affordable, well-integrated AI coding assistance inside their existing IDE. At $10/month, the Pro plan offers access to GPT-5.4, Claude Opus 4.6, and agent mode, which is the best-value entry point in AI coding as of April 2026. For maximum autonomous capability on complex tasks, Claude Code wins at $100-$200/mo. For a more deeply AI-integrated editor experience, Cursor ($20-$200/mo) is competitive. For teams already in the GitHub ecosystem who do not need a separate IDE, Copilot is the default choice.
+- **Premium request quota burns fast on Opus 4.7.** At the 7.5x multiplier, Pro+'s 1,500 requests yield ~200 Opus turns. Heavy Opus users should pin Sonnet 4.6 or GPT-5.4 for routine work and reserve Opus for hard problems, or plan for overage at $0.04/request.
+- **Opus 4.7 is not in Pro ($10).** Access requires Pro+ ($39), Business, or Enterprise. Pro is GPT-5.4 + Gemini + Sonnet 4.6 by default.
+- **Post-April 30 Opus 4.7 multiplier is unannounced.** Budget accordingly: the 7.5x figure is explicitly "promotional."
+- **Autocomplete latency varies by language.** Strongest on Python, TypeScript, JavaScript, Go. Noticeably weaker than dedicated IDE stacks on niche languages and on large cold files.
+- **GitHub lock-in is real.** Coding Agent, PR review, Spaces, and org knowledge all assume GitHub is your forge. GitLab and Bitbucket teams get the extension but lose the agent graph.
+- **Enterprise admin surface is complex.** Policy controls, per-model allow/deny lists, content exclusions, and SKU combinations (Copilot Enterprise + GitHub Enterprise Cloud) take real time to configure correctly.
+- **Auth quirks on multi-account setups.** Users with multiple GitHub accounts (personal plus corporate) regularly hit sign-in confusion across the VS Code, JetBrains, and Copilot CLI surfaces; the fix is usually signing out of all GitHub integrations and signing back in on the intended account.
+- **Pro+ rate limits exist beyond the 1,500-request quota.** Community reports of `user_weekly_rate_limited` errors suggest undocumented per-week caps; heavy users should monitor for this.
+- **Coding Agent needs well-scoped issues.** Vague tickets produce bad PRs. Works best when the issue has acceptance criteria, file hints, and a reproduction: essentially the same hygiene that makes a junior engineer productive.
 
-## Best Alternatives
+## Methodology
 
-- Claude Code: more capable agentic coding from the CLI, Ultraplan for cloud environments, $100-$200/mo
-- Cursor: more deeply AI-native editor experience, similar model access, $20-$200/mo depending on tier
-- Windsurf: Cursor alternative with competitive pricing
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, normalizes factual claims, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [github.com/features/copilot](https://github.com/features/copilot), [github.com/features/copilot/plans](https://github.com/features/copilot/plans), [docs.github.com/en/copilot](https://docs.github.com/en/copilot), the [Opus 4.7 GA changelog](https://github.blog/changelog/2026-04-16-claude-opus-4-7-is-generally-available/), and the [Copilot feature matrix](https://docs.github.com/en/copilot/reference/copilot-feature-matrix).
 
 ## FAQ
 
 **Is GitHub Copilot free?**
-Yes. The free tier provides 2,000 code completions and 50 premium requests per month. Students and open-source contributors also get free access. The free tier is limited to basic models (Claude Sonnet 4.6, GPT-4.1) and does not include agent mode.
+Yes. The Free tier gives 2,000 code completions and 50 premium requests per month on Claude Sonnet 4.6 and GPT-4.1. Students, teachers, and maintainers of popular open-source projects get Copilot Pro at no cost. Agent mode and the full model picker require Pro or above.
 
-**How much does GitHub Copilot cost?**
-GitHub Copilot Pro costs $10/month for individuals with unlimited completions, 300 premium requests/month, and agent mode. Pro+ costs $39/month with 1,500 premium requests. Business plans cost $19/user/month (300 premium requests/user), and Enterprise plans cost $39/user/month (1,000 premium requests/user). Extra premium requests cost $0.04 each.
+**Does GitHub Copilot include Claude Opus 4.7?**
+Yes, but not on every tier. Opus 4.7 went GA inside Copilot on [April 16, 2026](https://github.blog/changelog/2026-04-16-claude-opus-4-7-is-generally-available/) for Pro+, Business, and Enterprise. It is billed from the premium-request pool at a 7.5x multiplier through April 30, 2026. Pro ($10) does not include Opus 4.7. Upgrade to Pro+ ($39) or Business/Enterprise for access.
 
-**What AI models are available in GitHub Copilot?**
-On Pro and above, the model selector includes GPT-5.4, Claude Opus 4.6, Claude Sonnet 4.6, Gemini 2.5/3.1 Pro, and Grok. The Free tier is limited to Claude Sonnet 4.6 and GPT-4.1.
+**What's the difference between Agent mode and the Coding Agent?**
+Agent mode runs inside your IDE (VS Code, JetBrains, Visual Studio) and edits your open repo interactively: you watch it think, it asks for approval on sensitive actions, and iterates on errors. The Coding Agent is asynchronous and cloud-hosted: you assign a GitHub issue to Copilot, it spins up a GitHub Actions sandbox, writes and self-reviews code, runs security scans, and opens a PR for your review. Agent mode is for active coding; Coding Agent is for backlog triage.
 
-**What is agent mode in GitHub Copilot?**
-Agent mode, which reached general availability in March 2026, lets Copilot make multi-file edits, run terminal commands, and iterate on errors autonomously inside VS Code and JetBrains. Each agent mode interaction consumes one or more premium requests. It is not available on the Free tier.
+**How does Copilot compare to Cursor?**
+Copilot is a first-party extension to your existing IDE (VS Code, JetBrains, Visual Studio, Xcode, Neovim); Cursor is a VS Code fork. Copilot Pro is $10/mo vs Cursor Pro $20/mo + usage pool. Cursor's Agents Window is a stronger supervised multi-agent workbench; Copilot's Coding Agent is stronger on GitHub-native issue-to-PR automation. JetBrains, Xcode, and Neovim developers can't use Cursor; Copilot is the only option there.
 
-**How does GitHub Copilot compare to Cursor?**
-Both offer IDE-based AI coding with similar model access. Cursor provides a more deeply AI-native editor (the entire IDE is rebuilt around AI), while Copilot is a plugin that adds AI to your existing VS Code or JetBrains setup. Copilot Pro at $10/mo is cheaper than Cursor Pro at $20/mo, but Cursor's interface for agentic tasks is more fluid. If you already live in VS Code and are in the GitHub ecosystem, Copilot is the natural choice.
+**What IDEs does Copilot support?**
+VS Code, Visual Studio, JetBrains IDEs (IntelliJ, PyCharm, WebStorm, Rider, GoLand, etc.), Xcode, and Vim/Neovim. Chat functionality is available in VS Code, JetBrains, and Visual Studio; autocomplete is available everywhere. Edit mode is VS Code and JetBrains. Agent mode is VS Code and JetBrains GA ([feature matrix](https://docs.github.com/en/copilot/reference/copilot-feature-matrix)).
 
-
-
-
-
-## Review History
-
-- **2026-04-05:** Monthly verification pass. Pricing unchanged.
-- **2026-03-09:** Score reviewed; no change, but rationale updated.
-- **2026-02-16:** Noted the new model availability across tiers.
-- **2025-11-16:** Pricing verified. Minor copy edits.
-- **2024-01-15:** Initial review added to the catalog.
-
-## Related Guides
-
-- [Best AI Coding Assistant (2026)](../use-cases/best-ai-coding-assistant.md)
-- [Best AI for Debugging (2026)](../use-cases/best-ai-for-debugging.md)
-- [Best AI for Unit Tests (2026)](../use-cases/best-ai-for-unit-tests.md)
-- [Best AI for Unit Tests (2026)](../use-cases/best-ai-for-unit-tests.md)
-- [Best AI Tools for Developers (2026)](../use-cases/best-ai-tools-for-developers.md)
-
-## Related Comparisons
-
-- [Aider vs GitHub Copilot](../comparisons/aider-vs-github-copilot.md)
-- [ChatGPT vs GitHub Copilot](../comparisons/chatgpt-vs-github-copilot.md)
-- [Claude Code vs GitHub Copilot](../comparisons/claude-code-vs-github-copilot.md)
-- [Claude vs GitHub Copilot](../comparisons/claude-vs-github-copilot.md)
-- [Codeium vs GitHub Copilot](../comparisons/codeium-vs-github-copilot.md)
-- [Continue vs GitHub Copilot](../comparisons/continue-vs-github-copilot.md)
-- [Cursor vs Claude Code vs GitHub Copilot](../comparisons/cursor-vs-claude-code-vs-copilot.md)
-- [Cursor vs GitHub Copilot](../comparisons/cursor-vs-github-copilot.md)
-## Sources
-
-- [GitHub Copilot official product page](https://github.com/features/copilot)
-- [GitHub Copilot pricing plans](https://github.com/features/copilot/plans)
-- [GitHub Community: Student plan updates (March 2026)](https://github.com/orgs/community/discussions/189268)
-- [GitHub Community: Pro+ rate limiting reports](https://github.com/orgs/community/discussions/192485)
+**Does Copilot support MCP?**
+Yes. Agent mode in VS Code and the Coding Agent both support the Model Context Protocol for tool use. Configured MCP servers are invoked autonomously by the agent without per-call approval once authorized ([enhance agent mode with MCP](https://docs.github.com/en/copilot/tutorials/enhance-agent-mode-with-mcp)). The GitHub MCP server now exposes Copilot Spaces for scoping a task to a curated bundle of code, docs, and issues.
 
 ## Related
 
-- **Category:** [AI Coding](../categories/ai-coding.md)
+- **Category:** [AI Coding](/categories/ai-coding/)
+- **Alternatives:** [Cursor](/tools/cursor/) · [Claude Code](/tools/claude-code/) · [Cline](/tools/cline/) · [Aider](/tools/aider/) · [Windsurf](/tools/windsurf/) · [Continue](/tools/continue/)
+- **Comparisons:** [Cursor vs Claude Code vs GitHub Copilot](/comparisons/cursor-vs-claude-code-vs-copilot/) · [Cursor vs GitHub Copilot](/comparisons/cursor-vs-github-copilot/) · [Claude Code vs GitHub Copilot](/comparisons/claude-code-vs-github-copilot/) · [Continue vs GitHub Copilot](/comparisons/continue-vs-github-copilot/)

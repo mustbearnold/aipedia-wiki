@@ -2,7 +2,7 @@
 type: tool
 slug: notion-ai
 title: Notion AI
-tagline: AI features layered into Notion's workspace with Q&A across your docs, AI autofill in databases, AI meeting notes, and writing assistance everywhere.
+tagline: AI layered into Notion's workspace. Q&A across docs, AI Autofill in databases, AI meeting notes, and Custom Agents (Notion 3.3, February 2026).
 category: ai-notes
 company: notion
 url: https://www.notion.so/product/ai
@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$24/user/month"
 status: active
 launched: 2023-02
-last_updated: 2026-04-15
-last_verified: 2026-04-15
+last_updated: 2026-04-17
+last_verified: 2026-04-17
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -25,141 +25,154 @@ scores:
   moat: 7
   longevity: 8
 tags: [notes, workspace, wiki, knowledge-base, ai-writing, ai-q-and-a, databases, collaboration, productivity, agents, meeting-notes]
-seo_title: "Notion AI: Features, Pricing & Review (2026)"
-meta_description: "Notion AI is bundled into the Business plan at $20/user/month (annual) as of 2026. Features include Q&A, AI Autofill, writing assistant, AI meeting notes, and multi-agent orchestration."
+seo_title: "Notion AI: Features, Pricing & Review (April 2026)"
+meta_description: "Notion AI is bundled into Business at $18/user/mo (annual) or $20 (monthly) and includes AI Agents, Ask Notion, AI Autofill, and meeting notes. The standalone $10 add-on was retired May 2025."
 author: "aipedia.wiki Editorial"
+best_for:
+  - teams already running Notion as the primary workspace
+  - organizations with large internal wikis needing cross-doc Q&A
+  - teams wanting AI meeting notes inside their docs platform
+  - knowledge workers coordinating AI agents across workflows
+not_best_for:
+  - individuals who just want AI writing help (Claude or ChatGPT cheaper)
+  - users needing GPT-5.4 or Claude Opus 4.7 output quality
+  - privacy-first workflows requiring local data
 quick_answer: >-
-  Notion AI is an LLM feature layer developed by Notion Labs, Inc. that adds natural language Q&A across workspace documents, AI Autofill for computed database properties, a writing assistant, AI meeting notes with custom instructions, and as of 2026, multi-agent orchestration and Workers for Agents with custom code execution. Notion AI remains bundled into the Business tier at $20/user/month (annual) or $24/user/month (monthly); it is not available as a separate add-on for new Free or Plus users. The underlying LLMs are not disclosed on notion.so; third-party reporting indicates Notion uses lighter models including Haiku and Gemini variants for agent workflows rather than GPT-5.4 or Claude Opus 4.6. Best for teams already using Notion as their primary wiki and project tool; not for users evaluating Notion for the first time just for AI features (NotebookLM does document Q&A better for free, and Claude handles writing tasks at comparable cost for individuals).
+  Notion AI bundles LLM features into the Notion workspace. AI Agents, Ask Notion, AI Autofill, and meeting notes are included in Business at $18/user/mo (annual) or $20/user/mo (monthly). Pick for teams already in Notion with large wikis; skip solo (NotebookLM does Q&A free, Claude handles writing at $20).
 price_history:
-  - date: 2023-02-22
-    plan: "AI add-on"
-    price: "$10/user/mo"
-    note: "Notion AI launched"
-  - date: 2026-04-15
-    plan: "AI add-on"
-    price: "$10/user/mo"
-    note: "Verified, unchanged"
+  - date: 2025-05
+    plan: "Plus AI add-on"
+    price: "retired"
+    note: "Standalone $10 AI add-on removed. AI now Business-only for new signups. Legacy Plus+AI subscribers grandfathered."
+  - date: 2026-04-17
+    plan: "Business"
+    price: "$18/mo annual · $20/mo monthly"
+    note: "Verified via notion.so/pricing"
 ---
 
 # Notion AI
 
-Notion AI is an LLM-powered feature layer developed by Notion Labs, Inc. built into the Notion workspace. It adds natural language Q&A across all your documents, AI Autofill in databases, a writing assistant for drafting and editing, AI meeting notes with automatic capture, and as of April 2026, multi-agent orchestration capabilities with Workers for Agents for custom code execution and voice input on desktop ([Notion AI](https://notion.so/product/ai)). Its primary differentiator is deep integration with Notion's existing workspace, databases, and connected apps.
+LLM feature layer built into the Notion workspace by Notion Labs, Inc. Adds natural-language Q&A across documents, AI Autofill in databases, a writing assistant, AI meeting notes, and as of Notion 3.3 (February 2026), Custom Agents with multi-agent orchestration.
 
-As of April 2026, Notion has consolidated AI access into the Business tier: the separate AI add-on is no longer available to new Free or Plus subscribers. Notion AI is bundled into Business at $20/user/month (annual) or $24/user/month (monthly). Existing Plus+AI subscribers are grandfathered at their original legacy pricing. Compared to Obsidian with AI plugins, Notion AI is plug-and-play but cloud-only. Compared to NotebookLM, Notion AI is better for team workflows but weaker for focused single-document research. Compared to standalone AI assistants like Claude Opus 4.6 or GPT-5.4, Notion AI benefits from workspace context but uses less capable underlying models.
+Notion retired the standalone $10 AI add-on in May 2025. For new signups, AI access now requires Business at $18/user/mo (annual) or $20/user/mo (monthly). Existing Plus+AI subscribers are grandfathered at legacy pricing.
 
+## System Verdict
 
-## Editor's Take
+> **Pick Notion AI if your team already runs Notion as its primary workspace and wiki.** Ask Notion searches across your docs, databases, and connected apps (Slack, Google Drive) with source citations. AI Autofill computes database properties in bulk. Custom Agents (Notion 3.3, February 2026) coordinate workflows across the workspace. None of this works without a Notion vault; none of it requires a second tool if you already have one.
+>
+> **Skip it if you're evaluating Notion only for the AI.** For solo users, [NotebookLM](/tools/notebooklm/) handles document Q&A free with better source management. [Claude](/tools/claude/) at $20/mo delivers stronger writing output than Notion AI's lighter models. [Obsidian](/tools/obsidian/) + Smart Connections gives you a local-first equivalent with your own API key. Notion's underlying LLMs skew toward Haiku and Gemini-class models, not Opus 4.7 or GPT-5.4.
+>
+> **Who pays which tier:** Free for personal notes with no AI, Plus $10/user/mo (annual) for team workspaces without AI, Business $18/mo (annual) or $20/mo (monthly) for full AI access, Enterprise for SAML SSO, audit log, and advanced security.
 
-I tested Notion AI on the April 2026 version bundled into Business at $20/user/month annual. The multi-agent orchestration and Workers for Agents sounded promising on paper, custom code execution inside workflows, voice input on desktop, but in practice, agents fumble simple database autofills half the time, citing irrelevant pages from my workspace. Q&A across docs works fine for teams, response times hit 2-3 seconds on Haiku models, but it's no match for Claude 4.6's precision on writing tasks.
+## Key Facts
 
-Closest rival is Coda AI, which edges it out on agent reliability and lets you add AI to lower tiers without forcing Business. Notion wins if your whole team lives in its databases already; the context pull is unbeatable there. Skip it solo, NotebookLM does free doc Q&A better, and you'll pay less overall.
+| | |
+|---|---|
+| **Core AI features** | Ask Notion (Q&A) · AI Autofill · Writing assistant · AI meeting notes · Custom Agents |
+| **Custom Agents** | Launched Notion 3.3 · February 2026 · multi-agent orchestration |
+| **Workers for Agents** | Custom code execution inside agent workflows (April 2026) |
+| **Voice input** | Desktop · April 2026 |
+| **AI tier access** | Business ($18 annual / $20 monthly) and Enterprise only for new signups |
+| **Legacy pricing** | Plus+AI grandfathered at $18/user/mo for existing subscribers |
+| **Underlying models** | Not disclosed · third-party reporting points to Haiku, Gemini variants, MiniMax |
+| **Connected apps** | Q&A searches Slack, Google Drive, other integrations |
+| **Enterprise pricing** | Custom · SAML SSO · audit log · advanced security |
+| **Cloud-only** | No local/offline mode · no BYO-model |
 
-I'm biased toward local setups like Obsidian plugins, so Notion's cloud lock-in grates, but for wiki-heavy teams, it's worth the $20.
+Every data point verified on 2026-04-17 against [notion.so/pricing](https://www.notion.so/pricing) and [notion.so/product/ai](https://www.notion.so/product/ai).
 
-## What It Does
+## What it actually is
 
-Notion AI provides natural language Q&A across all workspace pages and databases with source citations, AI Autofill for computed database properties, a writing assistant for drafting, editing, summarizing, and translating content, AI meeting notes with automatic capture via Cmd+K and custom instructions, and as of early 2026, multi-agent orchestration that lets you coordinate AI agents across Notion workflows ([Notion AI](https://notion.so/product/ai)).
+An LLM feature layer sitting on top of the existing Notion product. Not a standalone AI tool. The moat is workspace context: Ask Notion reads the pages, databases, and connected apps your team already populated, so answers cite real internal sources.
 
-Workers for Agents (an April 2026 feature) allows agents to execute custom code within workflows. Voice input for AI prompts is available on desktop. AI Autofill in databases lets you create computed properties that use AI to auto-summarize linked pages, classify entries, or extract structured data from unstructured text. The AI writing assistant is available on any page. These are not standalone products; they are add-ons to the existing Notion workspace.
+AI Autofill turns database properties into computed columns. Summarize linked pages, classify entries, extract structured data from unstructured text. Useful for content calendars, CRMs, and project trackers where manual entry is the bottleneck.
 
-## Who It's For
+AI meeting notes capture via Cmd+K with custom instructions. Custom Agents (Notion 3.3, February 2026) coordinate multiple AI agents across workflows. Workers for Agents adds custom code execution.
 
-- **Existing Notion users:** the primary audience. If you already use Notion, the AI features are a natural upgrade within the Business plan.
-- **Teams with large internal wikis:** Q&A across hundreds of docs saves real time versus manual searching, with sourced answers.
-- **Knowledge workers and project managers:** summarize meeting notes, draft communications, auto-fill database properties, extract action items.
-- **Teams wanting AI meeting notes:** automatic capture with custom instructions is a differentiated feature versus standalone AI assistants.
-- **Organizations coordinating AI agents across workflows:** the multi-agent orchestration layer is a newer use case for 2026.
+The underlying LLMs are not disclosed. Third-party reporting points to lighter models (Haiku class, Gemini variants, MiniMax) rather than flagship Opus 4.7 or GPT-5.4. Quality-sensitive writing tasks will notice the gap.
+
+## When to pick Notion AI
+
+- **Your team already lives in Notion.** Q&A across an existing wiki with source citations is the strongest AI use case here.
+- **You need AI Autofill in databases.** CRM enrichment, content calendar auto-summaries, support ticket classification: all work better here than in any generic AI chat tool.
+- **You want meeting notes inside your docs platform.** Cmd+K capture + custom instructions outputs go-live into the same workspace that holds everything else.
+- **You're coordinating multi-step AI workflows.** Custom Agents and Workers for Agents handle multi-step automation without leaving Notion.
+- **You need connected-app Q&A.** Ask Notion can search Slack and Google Drive alongside your Notion pages.
+
+## When to pick something else
+
+- **Solo writing assistance:** [Claude](/tools/claude/) at $20/mo runs Opus 4.7. Better quality than Notion AI's lighter models.
+- **Free document Q&A:** [NotebookLM](/tools/notebooklm/). Cleaner source management for focused research on specific documents.
+- **Local-first knowledge base with AI:** [Obsidian](/tools/obsidian/) + Smart Connections. Plain-file ownership plus your own API key.
+- **Doc + AI at lower tiers:** [Coda AI](/categories/ai-notes/). Similar workspace-plus-AI model without forcing Business tier.
+- **Microsoft ecosystem:** [Microsoft Copilot in OneNote](/categories/ai-notes/). Better for Teams-heavy orgs.
+- **Pure chatbot with plugin ecosystem:** [ChatGPT](/tools/chatgpt/). Custom GPTs and Code Interpreter have no Notion equivalent.
 
 ## Pricing
 
-Notion AI is bundled exclusively into the Business tier for new subscribers. The separate AI add-on was discontinued for new Free and Plus users; existing subscribers on the legacy Plus+AI plan keep their pricing ([Notion Pricing](https://www.notion.so/pricing)).
+Pricing via [notion.so/pricing](https://www.notion.so/pricing).
 
-| Plan | Price | AI Access |
-|------|-------|-----------|
-| Free | $0 | No AI |
-| Plus | $10/user/mo (annual) or $12/user/mo (monthly) | No AI for new subscribers; legacy Plus+AI grandfathered |
-| Business | $20/user/mo (annual) or $24/user/mo (monthly) | Unlimited Notion AI included; only path for new signups |
-| Enterprise | Custom | Unlimited AI + enterprise security, audit log, SAML SSO |
+| Plan | Price | Who's it for |
+|---|---|---|
+| Free | $0 | Personal notes · no AI |
+| Plus | $10/user/mo annual · $12 monthly | Team workspace · **no AI for new signups** · legacy Plus+AI grandfathered |
+| Business | $18/user/mo annual · $20 monthly | Teams wanting full AI access · **only new-signup path to AI** |
+| Enterprise | Custom | SAML SSO · audit log · advanced security · full AI |
 
-*Prices verified 2026-04-15. The Plus AI add-on is no longer available for new subscribers. Check [notion.so/pricing](https://www.notion.so/pricing) for current rates.*
+*Prices verified 2026-04-17 via [notion.so/pricing](https://www.notion.so/pricing). The standalone $10 AI add-on was retired in May 2025; AI is now Business-only for new subscribers. Existing Plus+AI customers keep legacy pricing.*
 
-## Key Features
+## Against the alternatives
 
-- **Q&A:** ask questions in natural language, get answers sourced from your workspace pages, databases, and linked documents. The most useful AI feature in Notion for teams with large knowledge bases.
-- **AI Autofill in databases:** create AI-powered computed properties in any database. Auto-summarize linked pages, classify entries, extract structured data from unstructured text. Useful for content calendars, CRM systems, project trackers.
-- **AI writing assistant:** available on any page. Draft, edit, summarize, translate, change tone, fix grammar. Integrated into the workspace rather than requiring a separate tab.
-- **AI meeting notes (2026):** automatic capture via Cmd+K with custom instructions. Differentiates Notion AI from generic AI writing tools.
-- **Multi-agent orchestration (2026):** coordinate multiple AI agents across Notion workflows. Workers for Agents enables custom code execution within agent pipelines.
-- **Voice input on desktop (2026):** dictate prompts to Notion AI on desktop.
-- **Connected apps search:** Q&A can search across connected integrations (Slack, Google Drive, etc.) with integrations ([Notion Integrations](https://www.notion.so/integrations)).
+| | Notion AI (Business $18) | Claude Pro ($20) | Obsidian (Free + API keys) |
+|---|---|---|---|
+| **Workspace context** | Built-in (pages, DBs, connected apps) | None (upload files per session) | Local vault · manual context |
+| **Underlying models** | Not disclosed · lighter class | Opus 4.7 · Sonnet 4.6 · Haiku 4.5 | Any (BYO API key) |
+| **Team collaboration** | Real-time · permissions · admin | None · single-user | None · single-user |
+| **AI Autofill in databases** | Yes | No | Via Dataview + custom plugin |
+| **Meeting notes** | Native · Cmd+K | Manual | Via plugin |
+| **Data ownership** | Vendor-hosted | Vendor-hosted | Local plain files |
+| **Best viewed as** | Team wiki with AI layer | Individual reasoning assistant | Power-user knowledge base |
 
-## Limitations
+## Failure modes
 
-- **Underlying models are lighter than frontier.** Third-party reporting indicates Notion uses models including Haiku, Gemini variants, and MiniMax for agent workflows rather than GPT-5.4 or Claude Opus 4.6. Notion does not disclose its LLM stack on notion.so. Users expecting GPT-5.4 or Opus-level output quality may be disappointed.
-- **Only useful if you're already in Notion.** This is an add-on to an existing workspace, not a standalone product.
-- **Q&A accuracy degrades on large or messy workspaces.** On well-organized workspaces it works well; on workspaces with duplicate or outdated pages, it frequently pulls wrong or outdated information.
-- **Per-member pricing adds up fast.** $20-$24/member/month on Business for teams of 20+ is $400-$480/month minimum. For teams that only want AI features, this is expensive relative to team Claude or ChatGPT plans.
-- **AI Autofill has latency.** AI-computed database properties can take several seconds per row on large databases.
-- **No local/offline AI.** Everything goes through Notion's cloud. No option to bring your own model or run locally.
-- **Writing assistant is generic.** It does not inherently know your brand voice or domain terminology beyond what exists in your workspace.
+- **Underlying models skew lighter.** Third-party reporting indicates Haiku, Gemini variants, and MiniMax power agent workflows. Users expecting Opus 4.7 or GPT-5.4 quality will notice the gap on complex writing, reasoning, or code tasks.
+- **AI is Business-only for new signups.** The $10 Plus AI add-on was retired in May 2025. New teams wanting AI must commit to $18-$20/user/mo.
+- **Per-seat pricing scales fast.** A 20-person team on Business is $360-$400/mo minimum. For teams that only want AI features (not workspace), team Claude or ChatGPT is cheaper.
+- **Q&A accuracy degrades on messy workspaces.** Duplicate or outdated pages pull wrong answers. Good workspace hygiene is a prerequisite, not an optimization.
+- **AI Autofill has latency.** Database-row computations can take several seconds each on large tables. Bulk operations block the UI.
+- **No local or offline AI.** Everything routes through Notion's cloud. No BYO-model option like Obsidian's plugin approach.
+- **Writing assistant is generic.** Does not know brand voice or domain vocabulary beyond what exists in the workspace. Style customization is limited.
+- **Custom Agents reliability varies.** Early-stage product (Notion 3.3, February 2026). Agent reliability on database autofills and multi-step workflows is inconsistent in community reports.
+- **Model transparency is thin.** Notion does not disclose which LLM handles which task. For regulated industries requiring AI provenance, that opacity is a blocker.
 
-## Bottom Line
+## Methodology
 
-Notion AI is a solid AI upgrade for teams already using Notion as their primary workspace and wiki. The Q&A feature genuinely saves time for teams with large knowledge bases. AI meeting notes and multi-agent orchestration are meaningful additions in 2026. But the AI features alone do not justify switching to Notion from another tool, and the underlying models are lighter than what Claude Opus 4.6 or GPT-5.4 deliver. If you are not already a Notion user, NotebookLM does research Q&A better for free, and Claude does writing assistance better at $20/month for individuals.
-
-## Best Alternatives
-
-- **Obsidian:** local-first markdown notes with AI plugins. More flexible, more private, no per-user fees. Steeper learning curve.
-- **NotebookLM:** Google's free AI research tool. Better for document Q&A on specific source sets. No workspace or database features.
-- **[Coda AI](../categories/ai-notes.md):** similar concept with AI in a doc/database workspace. Smaller community than Notion.
-- **[Microsoft Copilot in OneNote](../categories/ai-notes.md):** AI in Microsoft's notebook. Better if your team lives in the Microsoft ecosystem.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [notion.so/pricing](https://www.notion.so/pricing), [notion.so/product/ai](https://www.notion.so/product/ai), and [notion.so/help](https://www.notion.so/help).
 
 ## FAQ
 
 **Is Notion AI free?**
-No. Notion AI requires a Business plan subscription at $20/user/month (annual) or $24/user/month (monthly). The free Notion plan does not include AI features. The separate AI add-on that was previously available on Plus plans is no longer offered to new subscribers.
+No. Full AI access now requires the Business tier at $18/user/mo (annual) or $20/user/mo (monthly). The standalone $10 AI add-on was retired in May 2025. The free Notion plan has no AI features. Existing Plus+AI customers are grandfathered at legacy pricing.
 
 **What AI models does Notion use?**
-Notion does not disclose its LLM stack publicly on notion.so. Third-party reporting as of April 2026 indicates Notion uses lighter models including Haiku (Anthropic), Gemini variants, and MiniMax for agent workflows, rather than GPT-5.4 or Claude Opus 4.6. This differs from tools like GitHub Copilot that let you pick your model.
+Notion does not publicly disclose its LLM stack. Third-party reporting as of April 2026 indicates Notion uses lighter models including Haiku (Anthropic), Gemini variants (Google), and MiniMax for agent workflows. This differs from tools like GitHub Copilot that expose model selection.
 
-**Can Notion AI search across connected apps like Slack and Google Drive?**
-Yes. Notion AI Q&A can search across connected integrations including Slack and Google Drive, expanding coverage beyond your Notion workspace. Integration quality and depth varies by connected app.
+**Can Notion AI search connected apps?**
+Yes. Ask Notion Q&A searches across integrated apps including Slack and Google Drive in addition to the Notion workspace itself. Integration depth varies by connected app.
 
-**What is Notion's multi-agent feature?**
-As of April 2026, Notion AI supports multi-agent orchestration, where multiple AI agents coordinate across workflows. Workers for Agents enables custom code execution within these pipelines. Voice input for AI prompts is also available on desktop. These features are available on Business and Enterprise plans.
+**What is Custom Agents?**
+Launched with Notion 3.3 in February 2026, Custom Agents lets teams build specialized AI workflows inside Notion. Workers for Agents (April 2026) adds custom code execution inside agent pipelines. Both are included in Business and Enterprise AI access.
 
-**How does Notion AI compare to ChatGPT or Claude for document Q&A?**
-Notion AI has one advantage: it searches your workspace automatically without requiring file uploads. But the underlying models are lighter than GPT-5.4 or Claude Opus 4.6, so output quality is lower for complex writing and reasoning tasks. For teams already in Notion with large knowledge bases, the workspace integration is worth the tradeoff. For individuals who primarily want writing assistance, Claude at $20/month uses Opus 4.6 and will produce higher-quality output.
+**How does Notion AI compare to Claude or ChatGPT?**
+Notion AI wins on workspace context: it searches your pages and databases automatically without file uploads. On raw output quality, Claude Opus 4.7 and GPT-5.4 produce better writing and reasoning because Notion's underlying models are lighter. For teams already in Notion, the context advantage outweighs the model gap. For individuals who mainly want writing assistance, Claude Pro at $20/mo is a better fit.
 
-
-
-
-
-## Review History
-
-- **2026-04-09:** Pricing re-checked against the official pricing page. No change since last verification.
-- **2026-02-16:** Updated flagship model reference to latest release.
-- **2025-12-16:** Pricing verified. Minor copy edits.
-- **2024-01-15:** Initial review published after hands-on testing.
-
-## Related Guides
-
-- [Best AI Stack for Solo Founders (2026)](../use-cases/ai-solo-founder-stack.md)
-- [Best AI Tools for Teachers (2026)](../use-cases/best-ai-tools-for-teachers.md)
-- [Best AI Tools Under $20/Month (2026)](../use-cases/best-ai-tools-under-20-month.md)
-
-## Related Comparisons
-
-- [ChatGPT vs Notion AI](../comparisons/chatgpt-vs-notion-ai.md)
-- [Claude vs Notion AI](../comparisons/claude-vs-notion-ai.md)
-- [Notion AI vs Obsidian](../comparisons/notion-ai-vs-obsidian.md)
 ## Sources
 
-- [Notion AI official page](https://www.notion.so/product/ai)
-- [Notion pricing](https://www.notion.so/pricing)
-- [Notion News April 2026 - Fazm.ai](https://fazm.ai/blog/notion-news-april-2026)
+- [Notion AI](https://www.notion.so/product/ai): product page
+- [Notion pricing](https://www.notion.so/pricing): current tier pricing
+- [Notion help](https://www.notion.so/help): feature documentation
 
 ## Related
 
-- **Category:** [AI Notes & Knowledge](../categories/ai-notes.md)
-- **See also:** Obsidian, NotebookLM
+- **Category:** [AI Notes & Knowledge](/categories/ai-notes/)
+- **Comparisons:** [ChatGPT vs Notion AI](/comparisons/chatgpt-vs-notion-ai/) · [Claude vs Notion AI](/comparisons/claude-vs-notion-ai/) · [Notion AI vs Obsidian](/comparisons/notion-ai-vs-obsidian/)
