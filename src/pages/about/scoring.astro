@@ -13,7 +13,7 @@ const dimensions = [
     icon: '⚡',
     question: 'Does the tool actually solve a real problem well?',
     description:
-      'Utility measures how effectively the tool performs its core job. 9–10 means genuinely best-in-class — meaningfully improves workflows vs. not using AI. 4–6 means it works but has meaningful limitations or better alternatives exist. Below 4 means the tool barely works or serves too narrow a use case to be broadly useful.',
+      'Utility measures how effectively the tool performs its core job. 9 to 10 means genuinely best-in-class, meaningfully improving workflows vs. not using AI. 4 to 6 means it works but has meaningful limitations or better alternatives exist. Below 4 means the tool barely works or serves too narrow a use case to be broadly useful.',
     factors: [
       'How well does the core feature work in practice?',
       'How much friction does it add vs. remove?',
@@ -26,7 +26,7 @@ const dimensions = [
     icon: '💰',
     question: 'Is the price fair for what you get?',
     description:
-      "Value scores the price-to-output ratio — not cheapness. A tool can be expensive and still score 9/10 on Value if it replaces $5,000/month of human labor for $50/month. A tool can be free and score 3/10 on Value if it wastes more time than it saves.",
+      "Value scores the price-to-output ratio, not cheapness. A tool can be expensive and still score 9/10 on Value if it replaces $5,000/month of human labor for $50/month. A tool can be free and score 3/10 on Value if it wastes more time than it saves.",
     factors: [
       'What does it replace or enable?',
       'How does the price compare to direct competitors?',
@@ -39,7 +39,7 @@ const dimensions = [
     icon: '🏰',
     question: "How defensible is this tool's position?",
     description:
-      'Moat measures how hard it is for competitors to replicate the tool\'s key advantage. 9–10 means proprietary data, unique training, deep integrations, or network effects that are genuinely hard to copy. 3–5 means one well-funded competitor away from commoditization.',
+      'Moat measures how hard it is for competitors to replicate the tool\'s key advantage. 9 to 10 means proprietary data, unique training, deep integrations, or network effects that are genuinely hard to copy. 3 to 5 means one well-funded competitor away from commoditization.',
     factors: [
       'Is the core capability replicable with off-the-shelf models?',
       'Does it have proprietary data, infrastructure, or partnerships?',
@@ -52,7 +52,7 @@ const dimensions = [
     icon: '⏳',
     question: 'Will this tool still exist and matter in 2 years?',
     description:
-      'Longevity scores the probability that the tool remains relevant and viable. 9–10 means strong fundamentals, a defensible niche, and clear revenue. 4–6 means uncertain funding or a use case that may be absorbed into general-purpose AI. Below 4 means the tool is likely to be obsoleted or shut down.',
+      'Longevity scores the probability that the tool remains relevant and viable. 9 to 10 means strong fundamentals, a defensible niche, and clear revenue. 4 to 6 means uncertain funding or a use case that may be absorbed into general-purpose AI. Below 4 means the tool is likely to be obsoleted or shut down.',
     factors: [
       'Company revenue, funding runway, and profitability signals',
       'Is the use case likely to be absorbed into foundation models?',
@@ -63,17 +63,17 @@ const dimensions = [
 ];
 
 const benchmarks = [
-  { range: '9.0–10.0', label: 'Best in class', blurb: 'Use this unless there is a specific reason not to' },
-  { range: '8.0–8.9', label: 'Excellent', blurb: 'Strong across all dimensions' },
-  { range: '7.0–7.9', label: 'Good', blurb: 'Meaningful strengths with some trade-offs' },
-  { range: '6.0–6.9', label: 'Acceptable', blurb: 'Usable but notable gaps or better alternatives exist' },
-  { range: '5.0–5.9', label: 'Below average', blurb: 'Use only if your specific situation warrants it' },
+  { range: '9.0 to 10.0', label: 'Best in class', blurb: 'Use this unless there is a specific reason not to' },
+  { range: '8.0 to 8.9', label: 'Excellent', blurb: 'Strong across all dimensions' },
+  { range: '7.0 to 7.9', label: 'Good', blurb: 'Meaningful strengths with some trade-offs' },
+  { range: '6.0 to 6.9', label: 'Acceptable', blurb: 'Usable but notable gaps or better alternatives exist' },
+  { range: '5.0 to 5.9', label: 'Below average', blurb: 'Use only if your specific situation warrants it' },
   { range: 'Below 5.0', label: 'Not recommended', blurb: 'For most users' },
 ];
 
 const notList = [
   { title: 'Not user reviews', body: 'We do not aggregate star ratings. Scores reflect editorial assessment.' },
-  { title: 'Not sponsored', body: 'Affiliate relationships do not influence scores. A 20% commission or no program — same treatment.' },
+  { title: 'Not sponsored', body: 'Affiliate relationships do not influence scores. A 20% commission or no program gets the same treatment.' },
   { title: 'Not permanent', body: 'Scores update when pricing, features, or competitive position changes.' },
   { title: 'Not weighted by price', body: 'A $5/mo tool can outscore a $200/mo tool if it delivers more value relative to its price.' },
 ];
@@ -84,23 +84,23 @@ const howToSteps = [
     text: "Read the tool's official pricing page, product documentation, changelog, and API reference. Note exact tier names, prices, feature claims, and launch date.",
   },
   {
-    name: 'Use it hands-on where feasible',
-    text: 'Where practical, editors test the tool on real work — not marketing demos. Enterprise-gated or prohibitively expensive tools are noted as untested.',
+    name: 'Cross-reference against vendor documentation',
+    text: 'Feature claims are verified against the official docs, changelog, and API reference. Enterprise-gated or prohibitively expensive tools are noted as untested, not speculatively scored.',
   },
   {
-    name: 'Score Utility (1–10)',
-    text: 'Rate how effectively the tool performs its core job vs. alternatives. 9–10 for best-in-class, 4–6 for works-with-limitations, below 4 for too narrow or broken.',
+    name: 'Score Utility (1 to 10)',
+    text: 'Rate how effectively the tool performs its core job vs. alternatives. 9 to 10 for best-in-class, 4 to 6 for works-with-limitations, below 4 for too narrow or broken.',
   },
   {
-    name: 'Score Value (1–10)',
+    name: 'Score Value (1 to 10)',
     text: 'Rate the price-to-output ratio. Consider what the tool replaces or enables, how price compares to competitors, and whether the free tier is useful or a funnel.',
   },
   {
-    name: 'Score Moat (1–10)',
+    name: 'Score Moat (1 to 10)',
     text: 'Rate how hard competitors would find it to replicate the tool\'s key advantage. Proprietary data, unique training, deep integrations, and network effects score high.',
   },
   {
-    name: 'Score Longevity (1–10)',
+    name: 'Score Longevity (1 to 10)',
     text: 'Rate the probability the tool remains relevant in 2 years. Consider funding signals, whether the use case will be absorbed into foundation models, and shipping track record.',
   },
   {
@@ -117,12 +117,12 @@ const faqs = [
   {
     question: 'How does aipedia.wiki score AI tools?',
     answer:
-      'Every tool is scored on four dimensions: Utility (does it solve a real problem well), Value (price-to-output ratio), Moat (defensibility), and Longevity (will it still exist in 2 years). Each dimension is rated on a 1–10 scale and the Overall Score is the average, rounded to one decimal.',
+      'Every tool is scored on four dimensions: Utility (does it solve a real problem well), Value (price-to-output ratio), Moat (defensibility), and Longevity (will it still exist in 2 years). Each dimension is rated on a 1 to 10 scale and the Overall Score is the average, rounded to one decimal.',
   },
   {
     question: 'What is a good aipedia.wiki score?',
     answer:
-      '9.0–10.0 is best-in-class; 8.0–8.9 is excellent; 7.0–7.9 is good with some trade-offs; 6.0–6.9 is acceptable but notable gaps exist; 5.0–5.9 is below average; below 5.0 is not recommended for most users.',
+      '9.0 to 10.0 is best-in-class; 8.0 to 8.9 is excellent; 7.0 to 7.9 is good with some trade-offs; 6.0 to 6.9 is acceptable but notable gaps exist; 5.0 to 5.9 is below average; below 5.0 is not recommended for most users.',
   },
   {
     question: 'Do affiliate commissions affect scores?',
@@ -137,7 +137,7 @@ const faqs = [
   {
     question: 'Why does a tool I love have a low score?',
     answer:
-      "Scores are comparative and non-inflated. A low Moat score, for example, often reflects that the core capability is replicable with off-the-shelf foundation models — not that the tool is bad. A low Longevity score may reflect funding or competitive risk, not current quality. Read the dimension scores individually; the Overall is just the average.",
+      "Scores are comparative and non-inflated. A low Moat score, for example, often reflects that the core capability is replicable with off-the-shelf foundation models, not that the tool is bad. A low Longevity score may reflect funding or competitive risk, not current quality. Read the dimension scores individually; the Overall is just the average.",
   },
   {
     question: 'Can I challenge a score?',
@@ -152,9 +152,9 @@ const faqs = [
 ];
 
 const pageUrl = 'https://aipedia.wiki/about/scoring/';
-const pageName = 'How aipedia.wiki Scores AI Tools — Scoring Methodology';
+const pageName = 'How aipedia.wiki Scores AI Tools: Scoring Methodology';
 const pageDesc =
-  'aipedia.wiki scores every AI tool across four dimensions: Utility, Value, Moat, and Longevity on a 1–10 scale. Overall Score is the average, rounded to one decimal. Full methodology, benchmarks, and score interpretation.';
+  'aipedia.wiki scores every AI tool across four dimensions: Utility, Value, Moat, and Longevity on a 1 to 10 scale. Overall Score is the average, rounded to one decimal. Full methodology, benchmarks, and score interpretation.';
 ---
 
 <OrganizationLD />
@@ -174,8 +174,8 @@ const pageDesc =
 
   <!-- AEO lede: first 60 words answer "how does aipedia.wiki score tools" directly -->
   <p class="text-base text-[var(--text-secondary)] leading-relaxed">
-    <strong class="text-[var(--text-primary)]">aipedia.wiki scores every AI tool on four dimensions — Utility, Value, Moat, and Longevity — on a 1–10 scale.</strong>
-    The Overall Score is the average of the four, rounded to one decimal place. Scores are editorial judgments based on primary-source research and, where feasible, hands-on use — never user votes, paid rankings, or affiliate influence.
+    <strong class="text-[var(--text-primary)]">aipedia.wiki scores every AI tool on four dimensions (Utility, Value, Moat, and Longevity) on a 1 to 10 scale.</strong>
+    The Overall Score is the average of the four, rounded to one decimal place. Scores are editorial judgments based on primary-source research, vendor documentation, and published benchmark data. Never user votes, paid rankings, or affiliate influence.
   </p>
 
   <p class="not-prose text-xs text-[var(--text-muted)] mt-2 mb-0">
@@ -192,7 +192,7 @@ const pageDesc =
           <span class="text-2xl leading-none" aria-hidden="true">{d.icon}</span>
           <div>
             <h3 class="text-base font-semibold text-[var(--text-primary)] m-0 leading-none">{d.name}</h3>
-            <p class="text-[11px] text-[var(--text-muted)] uppercase tracking-[0.12em] m-0 mt-1">Score 1–10</p>
+            <p class="text-[11px] text-[var(--text-muted)] uppercase tracking-[0.12em] m-0 mt-1">Score 1 to 10</p>
           </div>
         </div>
         <p class="text-sm font-medium text-[var(--text-primary)] m-0 mb-2">{d.question}</p>
@@ -265,10 +265,10 @@ const pageDesc =
 
   <p>Every score is based on:</p>
   <ol>
-    <li><strong>Hands-on use</strong> where feasible — we test the core features, not just read marketing copy</li>
+    <li><strong>Primary-source research</strong> across the vendor's pricing page, product documentation, changelog, and API reference</li>
     <li><strong>Verified pricing</strong> checked against official pricing pages and noted with a verification date</li>
-    <li><strong>Competitive context</strong> — scores are calibrated against the current best alternatives in the category</li>
-    <li><strong>Named sources</strong> — factual claims include inline links to official pages or credible third-party sources</li>
+    <li><strong>Competitive context</strong>. Scores are calibrated against the current best alternatives in the category</li>
+    <li><strong>Named sources</strong>. Factual claims include inline links to official pages or credible third-party sources</li>
   </ol>
   <p class="text-sm text-[var(--text-muted)]">
     See the <code>last_verified</code> date on each tool page to understand when the information was last checked.
@@ -298,7 +298,7 @@ const pageDesc =
       <div class="min-w-0 flex-1">
         <h2 class="text-xl font-semibold text-[var(--text-primary)] m-0 mb-2">Disagree with a score?</h2>
         <p class="text-sm text-[var(--text-secondary)] leading-relaxed m-0 mb-5">
-          If you believe a score is wrong, outdated, or based on incorrect information, we want to know. Include what you've used the tool for, what you'd score it, and what you'd compare it against. The goal is accurate, useful information — not defensiveness.
+          If you believe a score is wrong, outdated, or based on incorrect information, we want to know. Include what you've used the tool for, what you'd score it, and what you'd compare it against. The goal is accurate, useful information, not defensiveness.
         </p>
         <a
           href="mailto:editorial@aipedia.wiki?subject=Score%20challenge%20on%20aipedia.wiki"

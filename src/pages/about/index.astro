@@ -26,7 +26,7 @@ const processSteps = [
   {
     n: 1,
     title: 'Primary-source research',
-    body: "Pricing, feature claims, company information, and launch dates are pulled from each tool's official website, changelog, and API documentation — not third-party blog summaries or aggregator listings.",
+    body: "Pricing, feature claims, company information, and launch dates are pulled from each tool's official website, changelog, and API documentation. Third-party blog summaries and aggregator listings are not treated as primary sources.",
   },
   {
     n: 2,
@@ -36,12 +36,12 @@ const processSteps = [
   {
     n: 3,
     title: 'Four-dimension scoring',
-    body: 'Each tool is scored on Utility, Value, Moat, and Longevity on a 1–10 scale. Scores are deliberate, comparative, and non-inflated. Full methodology on the scoring page.',
+    body: 'Each tool is scored on Utility, Value, Moat, and Longevity on a 1 to 10 scale. Scores are deliberate, comparative, and non-inflated. Full methodology on the scoring page.',
   },
   {
     n: 4,
     title: 'Dated cross-references',
-    body: 'Every claim that can become outdated — pricing, context windows, feature availability — is cited inline and stamped with a verification date on every tool page.',
+    body: 'Every claim that can become outdated (pricing, context windows, feature availability) is cited inline and stamped with a verification date on every tool page.',
   },
   {
     n: 5,
@@ -54,7 +54,7 @@ const principles = [
   { title: 'Evidence over opinion', body: "No claim without a source. If we can't verify it, we don't publish it." },
   { title: 'Honest, comparative scoring', body: 'We do not inflate 10s for tools that are not category-leading, and we do not hide 4s and 5s when a tool is weak on the dimension being measured.' },
   { title: 'No promotional language in reviews', body: 'Commissions, referral bonuses, and partnership perks are never mentioned inside a review. Affiliate relationships are disclosed sitewide in the footer.' },
-  { title: 'Failures documented', body: 'Discontinued products and rebrands are archived in the dead-tools section with cause-of-death where known — institutional memory protects readers from chasing tools that no longer exist.' },
+  { title: 'Failures documented', body: 'Discontinued products and rebrands are archived in the dead-tools section with cause-of-death where known. Institutional memory protects readers from chasing tools that no longer exist.' },
   { title: 'Corrections visible, not buried', body: 'When we get something wrong, the page history reflects it. Correction requests are reviewed on merit, not politics.' },
 ];
 
@@ -76,7 +76,7 @@ const faqs = [
   {
     question: 'How does aipedia.wiki make money?',
     answer:
-      "Some tools on the site have affiliate programs. When a reader clicks through to a tool's official website and makes a purchase, we may earn a commission at no additional cost to them. Affiliate relationships do not influence scores, rankings, or written assessments — a tool's commission is tracked in internal metadata only and is never mentioned inside a review.",
+      "Some tools on the site have affiliate programs. When a reader clicks through to a tool's official website and makes a purchase, we may earn a commission at no additional cost to them. Affiliate relationships do not influence scores, rankings, or written assessments. A tool's commission is tracked in internal metadata only and is never mentioned inside a review.",
   },
   {
     question: 'How often are tool reviews updated?',
@@ -86,7 +86,7 @@ const faqs = [
   {
     question: 'What is the aipedia.wiki scoring system?',
     answer:
-      'Every tool is scored on four dimensions (Utility, Value, Moat, Longevity) on a 1–10 scale. The Overall Score is the average of the four, rounded to one decimal place. Full methodology and benchmarks are published on the scoring methodology page.',
+      'Every tool is scored on four dimensions (Utility, Value, Moat, Longevity) on a 1 to 10 scale. The Overall Score is the average of the four, rounded to one decimal place. Full methodology and benchmarks are published on the scoring methodology page.',
   },
   {
     question: 'Does aipedia.wiki accept sponsored reviews?',
@@ -106,7 +106,7 @@ const faqs = [
 ];
 
 const pageUrl = 'https://aipedia.wiki/about/';
-const pageName = 'About aipedia.wiki — Editorial Standards & Methodology';
+const pageName = 'About aipedia.wiki: Editorial Standards & Methodology';
 const pageDesc = `aipedia.wiki is an independent AI tools encyclopedia covering ${allTools.length} tool reviews across ${allCategories.length} categories. Learn our editorial process, four-dimension scoring methodology, monthly verification cadence, and corrections policy.`;
 ---
 
@@ -147,7 +147,7 @@ const pageDesc = `aipedia.wiki is an independent AI tools encyclopedia covering 
       </div>
     ))}
     <div class="col-span-2 md:col-span-4 text-xs text-[var(--text-muted)] text-center">
-      Plus <a href="/dead/" class="text-[var(--text-secondary)] hover:text-[var(--text-primary)] underline decoration-dotted">{allDead.length} archived dead tools</a> — because knowing what failed matters.
+      Plus <a href="/dead/" class="text-[var(--text-secondary)] hover:text-[var(--text-primary)] underline decoration-dotted">{allDead.length} archived dead tools</a>. Knowing what failed matters.
     </div>
   </div>
 
@@ -223,7 +223,7 @@ const pageDesc = `aipedia.wiki is an independent AI tools encyclopedia covering 
       Some tools on aipedia.wiki have affiliate programs. When you click a link to a tool's official website and make a purchase, <strong class="text-[var(--text-primary)]">we may earn a commission at no additional cost to you</strong>. This is how we fund the editorial work.
     </p>
     <p class="text-sm text-[var(--text-secondary)] leading-relaxed m-0">
-      Affiliate status does <strong class="text-[var(--text-primary)]">not</strong> influence scores, ranking order, or written assessments. A tool's commission is tracked in internal metadata only — you will never see it mentioned inside a review. Per FTC guidelines, this sitewide disclosure also appears in the footer of every page.
+      Affiliate status does <strong class="text-[var(--text-primary)]">not</strong> influence scores, ranking order, or written assessments. A tool's commission is tracked in internal metadata only. You will never see it mentioned inside a review. Per FTC guidelines, this sitewide disclosure also appears in the footer of every page.
     </p>
   </div>
 
@@ -253,10 +253,10 @@ const pageDesc = `aipedia.wiki is an independent AI tools encyclopedia covering 
       <div class="min-w-0 flex-1">
         <h2 class="text-xl font-semibold text-[var(--text-primary)] m-0 mb-2">Corrections & Contact</h2>
         <p class="text-sm text-[var(--text-secondary)] leading-relaxed m-0 mb-3">
-          If a price is wrong, a feature has changed, or a tool has shut down, we want to know. Accuracy is our core promise — we read every correction and update pages when evidence supports the change.
+          If a price is wrong, a feature has changed, or a tool has shut down, we want to know. Accuracy is the core promise. Every correction is read and pages are updated when evidence supports the change.
         </p>
         <p class="text-sm text-[var(--text-secondary)] leading-relaxed m-0 mb-5">
-          If you believe a score is unfair, tell us why — what you've used the tool for, what you'd score it, and what you'd compare it against. The <a href="/about/scoring/">scoring methodology</a> is transparent and subject to challenge.
+          If you believe a score is unfair, tell us why. Include what you've used the tool for, what you'd score it, and what you'd compare it against. The <a href="/about/scoring/">scoring methodology</a> is transparent and subject to challenge.
         </p>
         <div class="flex flex-wrap gap-3">
           <a
