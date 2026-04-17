@@ -1,85 +1,129 @@
 ---
 type: workflow
 slug: youtube-content-stack
-title: "The Full AI Stack for a Solo YouTuber: Script, Visuals, Voice, Thumbnails"
-seo_title: "The Full AI Stack for a Solo YouTuber: Script, Visuals, Voice, Thumbnails"
-meta_description: "Go from blank page to published YouTube video with a single-person team."
+title: "Solo YouTuber AI Stack: Script, Visuals, Voice, Thumbnails"
+seo_title: "Solo YouTuber AI Stack: Script, Visuals, Voice, Thumbnails (April 2026)"
+meta_description: "Go from blank page to published YouTube video as a solo operator. 4-5 hours per video, $187/mo stack, exact tool-per-stage breakdown."
 description: "Go from blank page to published YouTube video with a single-person team"
 stack: [claude, midjourney, elevenlabs, descript, ideogram]
 tools_mentioned: [claude, midjourney, elevenlabs, descript, ideogram]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-16
-last_verified: 2026-04-16
+last_updated: 2026-04-17
+last_verified: 2026-04-17
 update_frequency: quarterly
 ---
 
-# The Full AI Stack for a Solo YouTuber: Script, Visuals, Voice, Thumbnails
+# Solo YouTuber AI Stack: Script, Visuals, Voice, Thumbnails
 
-I publish one YouTube video every two weeks. I used to spend 12-15 hours per video: writing, finding stock footage, recording voiceovers, editing, designing thumbnails. Now I spend 4-5 hours. The stack costs me $187 per month. You'll learn exactly which tool owns each stage, where the seams are, and what still requires a human touch.
+This stack is for a solo YouTuber publishing 2-4 videos per month on a $187/month tools budget.
+
+Hands-on time per 10-minute video: 4-5 hours, down from a conventional 12-15 hours. Five tools cover script, visuals, voiceover, editing, and thumbnails.
+
+## System Verdict
+
+> **Pick this stack for 2-4 mid-length videos per month with generated voiceover and AI-assisted visuals.** Claude scripts, Midjourney visualizes, ElevenLabs voices, Descript assembles, Ideogram thumbnails.
+>
+> **Skip it for photoreal-video niches (Midjourney is stylized), human-voice niches (ASMR, meditation, high-end corporate), or daily-publishing cadence.**
+>
+> **Total cost: $187/month.** Replaces roughly $800-1,800 of freelance work per video.
+
+## Key Facts
+
+| | |
+|---|---|
+| **Format** | 10-minute video, 800-1,200 word script |
+| **Cadence** | 2-4 videos/month |
+| **Hands-on time** | 4-5 hours per video |
+| **Monthly cost** | $187 |
+| **Script model** | Claude Opus 4.7, 1M token context |
+| **Visuals** | Midjourney V8 Alpha |
+| **Voiceover** | ElevenLabs, cloned Creator voice |
+| **Editor** | Descript Standard |
+| **Thumbnails** | Ideogram |
 
 ## The short version
 
-- Claude Opus 4.6 writes the script and hook variations; I pick the best one and rewrite the opener (30 minutes saved per video).
-- Midjourney v8 alpha generates 8-12 concept images; I select 3-4 and use them as B-roll or reference (45 minutes saved).
-- ElevenLabs generates a natural-sounding voiceover in my chosen voice; I layer it with music and sound design (60 minutes saved).
-- Descript handles video assembly, auto-captions, and basic color grading; I add transitions and fix pacing (30 minutes saved).
-- Ideogram creates 4-6 thumbnail variations; I pick one and tweak text placement (20 minutes saved).
-- Total time saved per video: roughly 3 hours. Total monthly cost: $187.
+- Claude Opus 4.7 writes the script and hook variations. Rewrite the opener and CTA by hand. Saves ~30 min.
+- Midjourney V8 Alpha generates 8-12 concept images. Pick 3-4 for B-roll or reference. Saves ~45 min.
+- ElevenLabs generates a cloned-voice voiceover. Layer with music and sound design. Saves ~60 min.
+- Descript assembles video, auto-captions at ~98% accuracy, handles basic color grading. Saves ~30 min.
+- Ideogram creates thumbnail variations. Pick one, tweak text in Descript. Saves ~20 min.
+- Net time saved per video: ~3 hours. Monthly stack cost: $187.
 
-## What I use and why
+## The stack
 
-### [Claude Opus 4.6](/tools/claude/) ($20/mo)
+### [Claude Opus 4.7](/tools/claude/) ($20/mo)
 
-Claude owns script generation and hook ideation. I feed it my video topic, target audience, and desired length (800-1200 words for a 10-minute video). Opus 4.6's 1 million token context window means I can paste my entire channel's transcript history and ask it to match my tone. The output is 70% usable; I always rewrite the first 30 seconds and the call-to-action because AI hooks feel generic. I use Claude Pro at $20/month; the Max tier ($100+) is overkill for this workflow.
+Owns script generation and hook ideation.
 
-### [Midjourney v8 alpha](/tools/midjourney/) ($30/mo)
+Inputs: video topic, target audience, desired length (800-1,200 words for a 10-minute video). The 1M-token context window accepts a full channel transcript history as voice reference.
 
-Midjourney generates visual concepts and B-roll reference images. I prompt it with scene descriptions from the script ("overhead shot of a laptop with code on screen, warm lighting, 4K"). V8 alpha is faster than v7 and handles text-in-image better, though it still fails on complex typography. I generate 8-12 images per video, cherry-pick 3-4, and either use them directly or feed them to Descript as reference for stock footage searches. The $30/month subscription gives me 900 fast GPU minutes; I use roughly 200-250 per video.
+Output is ~70% usable. Always rewrite the first 30 seconds and the CTA by hand; AI hooks feel generic. Claude Pro at $20/mo is sufficient; Max 5x at $100/mo is overkill for this workflow.
+
+### [Midjourney V8 Alpha](/tools/midjourney/) ($30/mo)
+
+Generates visual concepts and B-roll reference images.
+
+Prompt with scene descriptions pulled from the script ("overhead shot of a laptop with code on screen, warm lighting, 4K"). V8 Alpha is faster than V7 and handles text-in-image better, though complex typography still fails.
+
+Typical usage: 8-12 images per video, 3-4 selected. V8 Alpha is on [alpha.midjourney.com](https://alpha.midjourney.com). Standard $30/mo plan covers ~200-250 fast GPU minutes per video.
 
 ### [ElevenLabs](/tools/elevenlabs/) ($99/mo)
 
-ElevenLabs handles voiceover generation. I use the "Creator" voice (a custom voice I trained on 30 minutes of my own narration) so the AI voice sounds like me. I paste the script, set the speed to 0.95x (slightly slower than natural speech), and generate the full voiceover in one pass. Output quality is 95% broadcast-ready; I occasionally re-generate a single paragraph if the inflection misses. The $99/month plan includes unlimited generations and voice cloning. This is the single biggest time-saver in the stack.
+Owns voiceover generation.
+
+Train a Creator voice clone on 30 minutes of clean narration. Paste script, set speed to 0.95x (slightly slower than natural speech), generate in one pass. Output is ~95% broadcast-ready.
+
+The $99/mo plan includes unlimited generations and voice cloning. This is the single biggest time-saver in the stack.
 
 ### [Descript](/tools/descript/) ($24/mo)
 
-Descript assembles the video. I import the ElevenLabs voiceover, drag in the Midjourney images and stock footage, and Descript auto-generates captions with 98% accuracy. I correct 2-3 captions per video, add speaker labels, and adjust timing. Descript's auto-reframe feature crops footage for vertical clips (TikTok, Shorts) automatically. I use the Standard plan at $24/month; the Pro plan ($34/mo) adds collaboration features I don't need solo.
+Assembles the video.
+
+Import the ElevenLabs voiceover, drag Midjourney images and stock footage onto the timeline. Auto-captions land at ~98% accuracy. Auto-reframe crops footage for vertical clips.
+
+Standard plan at $24/mo covers a solo workflow. Pro at $34/mo adds collaboration; not needed for solo.
 
 ### [Ideogram](/tools/ideogram/) ($14/mo)
 
-Ideogram creates thumbnail variations. I describe the video topic and desired visual style ("bold red text, shocked face, 3D effect"). Ideogram generates 4-6 options in seconds. I pick the strongest one, download it, and use Descript's text overlay tool to add the final title. Ideogram's April 2026 update improved text rendering significantly; thumbnails now read clearly at 168x94 pixels. The $14/month plan includes 100 monthly generations; I use roughly 30-40 per video.
+Owns thumbnail generation.
+
+Prompt with topic plus visual style ("bold red text, shocked face, 3D effect"). Ideogram returns 4-6 options in seconds. April 2026 text rendering reads clearly at 168x94 pixels.
+
+$14/mo plan includes 100 monthly generations. Typical usage: 30-40 per video.
 
 ## The workflow, step by step
 
-1. **Script generation (Claude).** Open Claude, paste my video topic and target keyword. Prompt: "Write a 1000-word YouTube script for [topic]. Hook in first 30 seconds. Tone: conversational, no jargon. Include 3 call-to-action variations at the end." Copy the output into a Google Doc. Rewrite the first paragraph and the CTA. Time: 20 minutes.
+1. **Script generation (Claude, 20 min).** Open Claude Pro. Paste video topic and target keyword. Prompt: "Write a 1,000-word YouTube script for [topic]. Hook in the first 30 seconds. Tone: conversational, no jargon. Include 3 call-to-action variations at the end." Copy output to a Google Doc. Rewrite paragraph 1 and the CTA by hand.
 
-2. **Visual concept ideation (Midjourney).** Extract 4-5 key scenes from the script. For each scene, write a Midjourney prompt: "/imagine [scene description], cinematic, 4K, warm lighting, no text." Generate 2-3 images per scene. Time: 15 minutes.
+2. **Visual concept ideation (Midjourney, 15 min).** Extract 4-5 key scenes from the script. For each scene, write a Midjourney prompt: "/imagine [scene description], cinematic, 4K, warm lighting, no text." Generate 2-3 images per scene.
 
-3. **Voiceover generation (ElevenLabs).** Copy the final script into ElevenLabs. Select "Creator" voice, set speed to 0.95x, generate. Download as MP3. Time: 5 minutes (mostly waiting).
+3. **Voiceover (ElevenLabs, 5 min).** Paste final script. Select Creator voice, set speed to 0.95x, generate. Download MP3. Wall-clock is mostly the generation wait.
 
-4. **Thumbnail concepts (Ideogram).** Write a prompt: "YouTube thumbnail for [topic]. Bold text, high contrast, emotional reaction. 1200x675px." Generate 4-6 variations. Download the strongest one. Time: 10 minutes.
+4. **Thumbnail concepts (Ideogram, 10 min).** Prompt: "YouTube thumbnail for [topic]. Bold text, high contrast, emotional reaction. 1200x675px." Generate 4-6 variations. Download the strongest.
 
-5. **Video assembly (Descript).** Create a new Descript project. Import the ElevenLabs voiceover as the primary track. Drag in Midjourney images and stock footage (I use Pexels or Unsplash for filler B-roll) to match script sections. Descript auto-generates captions. Time: 25 minutes.
+5. **Video assembly (Descript, 25 min).** Create a new Descript project. Import ElevenLabs voiceover as primary track. Drag in Midjourney images plus stock footage (Pexels or Unsplash for filler B-roll). Descript auto-generates captions.
 
-6. **Caption correction and timing (Descript).** Read through auto-captions. Correct 2-3 errors (usually proper nouns or technical terms). Adjust timing on key phrases to match visual cuts. Add speaker labels if needed. Time: 15 minutes.
+6. **Caption correction and timing (Descript, 15 min).** Read auto-captions. Correct 2-3 errors, usually proper nouns or technical terms. Adjust timing on key phrases to match visual cuts. Add speaker labels if needed.
 
-7. **Thumbnail finalization (Descript or Figma).** Import the Ideogram thumbnail into Descript's text overlay tool. Add the final title text, adjust font size and position for readability at small sizes. Export as PNG. Time: 10 minutes.
+7. **Thumbnail finalization (Descript, 10 min).** Import Ideogram thumbnail into Descript's text overlay tool. Add final title text. Adjust font size and position for small-size legibility. Export PNG.
 
-8. **Export and upload.** Export video from Descript at 1080p, 30fps. Upload to YouTube with the auto-generated captions as the subtitle file. Add the thumbnail. Write the description (I do this manually; AI descriptions are too generic). Time: 15 minutes.
+8. **Export and upload (15 min).** Export video from Descript at 1080p, 30fps. Upload to YouTube with auto-captions as the subtitle file. Attach thumbnail. Write the description by hand; AI-generated descriptions are too generic.
 
 ## Where it breaks
 
-**Claude's hooks are generic.** Opus 4.6 writes competent openers, but they lack the specificity that stops a viewer mid-scroll. I always rewrite the first 30 seconds myself. If I skip this step, click-through rate drops 15-20%.
+Claude hooks are generic. Opus 4.7 writes competent openers but lacks the specificity that stops a viewer mid-scroll. Skipping the manual rewrite on the first 30 seconds drops CTR by 15-20%.
 
-**Midjourney v8 cannot do text on logos or complex graphics.** If your video needs a branded graphic or a specific logo in the image, Midjourney will hallucinate it or render it illegibly. I work around this by generating concept images and then adding text in Figma or Descript.
+Midjourney V8 Alpha cannot render logos or branded graphics reliably. Workaround: generate the concept image and add text in Figma or Descript.
 
-**ElevenLabs' Creator voice struggles with emphasis.** The AI voice doesn't naturally emphasize key phrases the way a human would. I sometimes re-generate a single sentence with a manual emphasis marker (using ElevenLabs' SSML tags), but this adds 5-10 minutes per video if I'm picky.
+ElevenLabs Creator voice does not emphasize key phrases naturally. Re-generating a single sentence with an SSML emphasis marker adds 5-10 minutes per video.
 
-**Descript's auto-reframe for vertical clips sometimes crops out important details.** If your B-roll has text or a small object in the corner, the auto-crop might cut it off. I always preview vertical exports before publishing to Shorts.
+Descript auto-reframe crops out details in corners on vertical clips. Always preview vertical exports before publishing to Shorts.
 
 ## Monthly cost
 
-| Tool | Price | Purpose |
-|------|-------|---------|
+| Tool | Price/mo | Purpose |
+|---|---|---|
 | Claude Pro | $20 | Script and hook generation |
 | Midjourney | $30 | Visual concept generation |
 | ElevenLabs | $99 | Voiceover generation |
@@ -87,20 +131,35 @@ Ideogram creates thumbnail variations. I describe the video topic and desired vi
 | Ideogram | $14 | Thumbnail generation |
 | **Total** | **$187** | **Per month** |
 
-For comparison: hiring a freelance video editor runs $500-1500 per video. A voiceover artist costs $100-300 per video. This stack replaces roughly $800-1800 of freelance work per video at $187/month.
+*Prices verified 2026-04-17 via vendor pricing pages.*
+
+For comparison: a freelance video editor runs $500-1,500 per video. A voiceover artist runs $100-300 per video. This stack replaces ~$800-1,800 of freelance spend per video for $187/month.
 
 ## Who this is for
 
-Copy this if you publish 2-4 videos per month and want to cut editing time in half without sacrificing quality. You should be comfortable with basic video editing concepts (pacing, color grading, caption placement) because the AI tools handle generation, not creative direction.
+Copy this stack for 2-4 videos per month, solo operator, looking to cut editing time in half without sacrificing quality. Baseline comfort with pacing, color grading, and caption placement is required; the tools handle generation, not creative direction.
 
-Skip this if you need photorealistic video (Midjourney generates stylized images, not stock footage), if your niche requires a human voice (ASMR, meditation, high-end corporate), or if you're publishing daily and need a faster pipeline.
+Skip it for photoreal video needs (Midjourney generates stylized images, not stock footage), human-voice niches (ASMR, meditation, high-end corporate), or daily-publishing cadence.
 
 ## FAQ
 
-**Can I use the free tiers of these tools?** Partially. Claude Free has daily message limits (30-100 depending on complexity). Midjourney Free gives you 25 fast GPU minutes per month (roughly 2-3 videos). ElevenLabs Free is 10,000 characters per month (one short voiceover). Descript Free is 3 hours of video per month. You'd hit the ceiling after one video. The paid tiers are necessary.
+**Can the free tiers cover this workflow?**
+Partially, and not at a sustainable cadence. Claude Free caps at 30-100 daily messages depending on complexity. Midjourney has no free tier. ElevenLabs Free caps at 10,000 characters/month (~one short voiceover). Descript Free caps at 3 hours/month. Ceiling hits after one video. Paid tiers are necessary.
 
-**What if I want to use GPT-5.4 instead of Claude?** GPT-5.4 costs $2.50 per million input tokens via API, or $20/month for ChatGPT Plus. For script generation, both work equally well. Claude's advantage is the 1 million token context window; if you're feeding it your entire channel history, Claude wins. For a single script, they're interchangeable.
+**GPT-5.4 instead of Claude for scripts?**
+Both work equally well for a single script. Claude's advantage is the 1M-token context window for feeding full channel history as voice reference. For a one-off script, they are interchangeable.
 
-**How do I train ElevenLabs' Creator voice on my own voice?** Upload 30 minutes of clean audio (no background noise, consistent microphone). ElevenLabs trains the voice model in 24 hours. Cost is included in the $99/month plan. Quality is 90%+ match to your natural voice if your source audio is clean.
+**How is the Creator voice trained?**
+Upload 30 minutes of clean audio (no background noise, consistent microphone). ElevenLabs trains the voice model in ~24 hours. Training cost is bundled in the $99/mo plan. Quality lands at ~90%+ match to the source voice given clean input.
 
-**Can I automate this entire workflow?** Partially. You can chain Claude -> Midjourney -> ElevenLabs -> Descript using Zapier or Make, but you'll lose creative control at each stage. I recommend keeping the human in the loop for script approval and thumbnail selection. The time saved by full automation (maybe 30 minutes) isn't worth the quality drop.
+**Can the entire workflow run fully automated?**
+Partially. Zapier or Make can chain Claude to Midjourney to ElevenLabs to Descript, but creative control drops at each stage. Keep a human in the loop for script approval and thumbnail selection. Full automation saves ~30 minutes at a quality cost that is not worth the tradeoff at this cadence.
+
+## System Notes
+
+This page documents an operational stack verified by the aipedia.wiki editorial pipeline. Last verified 2026-04-17.
+
+## Related
+
+- **Tools:** [Claude](/tools/claude/) · [Midjourney](/tools/midjourney/) · [ElevenLabs](/tools/elevenlabs/) · [Descript](/tools/descript/) · [Ideogram](/tools/ideogram/)
+- **Workflows:** [Podcast Automation Stack](/workflows/podcast-automation-stack/) · [Newsletter Stack](/workflows/newsletter-stack/) · [Research Assistant Stack](/workflows/research-assistant-stack/)
