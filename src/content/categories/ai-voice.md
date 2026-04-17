@@ -4,11 +4,11 @@ slug: ai-voice
 title: AI Voice / Text-to-Speech
 description: AI voice generation, cloning, and text-to-speech. ElevenLabs, Fish Audio S2, Murf, LOVO, Voxtral.
 tool_count: 11
-seo_title: "Best AI Voice Tools (2026) — aipedia.wiki"
+seo_title: "Best AI Voice Tools (2026) . aipedia.wiki"
 meta_description: "ElevenLabs, Fish Audio S2, and Voxtral lead AI voice generation in 2026. Compare 6 TTS tools for quality, pricing, and self-hosting. Updated April 2026."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-13
-last_verified: 2026-04-13
+last_updated: 2026-04-17
+last_verified: 2026-04-17
 update_frequency: monthly
 ---
 
@@ -25,7 +25,7 @@ AI voice generation and text-to-speech tools have consolidated as of April 2026,
 | **Fish Audio (Fish Speech S2)** | Free tier + API | Open-source, multilingual, ultra-low latency | 9 | 10 | 6 | 8 |
 | **Voxtral (Mistral)** | $0.016/1K chars | Cheapest API | 8 | 10 | 6 | 8 |
 | **Descript** | Free-$30/mo | Podcast/video editing, Overdub voice cloning | 9 | 8 | 8 | 8 |
-| ~~Play.ht~~ | DEAD | ~~Was good~~ | — | — | — | — |
+| ~~Play.ht~~ | DEAD | ~~Was good~~ | . | . | . | . |
 
 ## Our Picks
 - **Best quality:** ElevenLabs Creator ($22/mo). 100K characters/month (~75-90 min audio), voice cloning.
@@ -39,8 +39,8 @@ AI voice generation and text-to-speech tools have consolidated as of April 2026,
 
 ## Video Potential
 - "Best AI Voice for YouTube in 2026" (evergreen search intent)
-- "Play.ht is DEAD — Where to Go Now" (news for orphaned users)
-- "ElevenLabs vs Murf vs LOVO — Full Comparison" (comparison)
+- "Play.ht is DEAD . Where to Go Now" (news for orphaned users)
+- "ElevenLabs vs Murf vs LOVO . Full Comparison" (comparison)
 - "Voxtral: Mistral's New AI Voice is 47% Cheaper" (news)
 
 ## Sources

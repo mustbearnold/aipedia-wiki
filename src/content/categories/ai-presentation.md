@@ -4,7 +4,7 @@ slug: ai-presentation
 title: AI Presentation Tools
 description: AI tools for creating slides and presentations. Gamma, Beautiful.ai, Tome, Pitch, and more.
 tool_count: 6
-seo_title: "Best AI Presentation Tools (2026) — aipedia.wiki"
+seo_title: "Best AI Presentation Tools (2026) . aipedia.wiki"
 meta_description: "Gamma, Beautiful.ai, and Tome lead AI presentation tools in 2026. Compare 6 tools for AI-generated slides and decks. Updated April 2026."
 author: "aipedia.wiki Editorial"
 last_updated: 2026-04-14

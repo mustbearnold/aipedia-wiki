@@ -4,11 +4,11 @@ slug: ai-design
 title: AI Design & App Building
 description: AI design tools and vibe coding app builders. Canva, Figma, Google Stitch, Lovable, Bolt, v0.
 tool_count: 6
-seo_title: "Best AI Design Tools (2026) — aipedia.wiki"
+seo_title: "Best AI Design Tools (2026) . aipedia.wiki"
 meta_description: "Canva AI, Figma AI, and Lovable lead AI design and app building in 2026. Compare 6 tools for design, vibe coding, and prototyping. Updated April 2026."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-13
-last_verified: 2026-04-13
+last_updated: 2026-04-17
+last_verified: 2026-04-17
 update_frequency: monthly
 ---
 
@@ -32,9 +32,9 @@ AI design and app building experienced massive disruption in early 2026. Google 
 - **Best free:** Google Stitch (350 gen/month free)
 
 ## Video Potential
-- "Google Stitch vs Figma — Is Figma Dead?" (massive news search)
+- "Google Stitch vs Figma . Is Figma Dead?" (massive news search)
 - "I Built a Full App with Lovable in 1 Hour" (demo/tutorial)
-- "Bolt vs Lovable vs v0 — Best AI App Builder 2026" (comparison)
+- "Bolt vs Lovable vs v0 . Best AI App Builder 2026" (comparison)
 
 ## Sources
 

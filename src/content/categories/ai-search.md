@@ -4,11 +4,11 @@ slug: ai-search
 title: AI Search & Research Tools
 description: AI-powered search engines and research assistants. Perplexity, Google AI Overviews, Gemini Deep Research, Exa, Tavily.
 tool_count: 5
-seo_title: "Best AI Search Tools (2026) — aipedia.wiki"
+seo_title: "Best AI Search Tools (2026) . aipedia.wiki"
 meta_description: "Perplexity, Google AI Overviews, and Gemini Deep Research lead AI search in 2026. Compare 7 tools for research, citations, and APIs. Updated April 2026."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-13
-last_verified: 2026-04-13
+last_updated: 2026-04-17
+last_verified: 2026-04-17
 update_frequency: monthly
 ---
 
@@ -54,8 +54,8 @@ AI search is cannibalizing traditional web traffic. If you create content (blogs
 4. **Original research/data wins.** AI can summarize but can't create primary sources.
 
 ## Video Potential
-- "Perplexity vs Google vs ChatGPT — Which AI Search is Best?" (massive search intent)
-- "Google AI Overviews Killed My Blog Traffic — Here's What I'm Doing" (creator angle)
+- "Perplexity vs Google vs ChatGPT . Which AI Search is Best?" (massive search intent)
+- "Google AI Overviews Killed My Blog Traffic . Here's What I'm Doing" (creator angle)
 - "How to Build an AI Agent with Web Search (Tavily + LangGraph)" (developer tutorial)
 - "GEO: The New SEO for AI Search" (trend explainer, low competition)
 

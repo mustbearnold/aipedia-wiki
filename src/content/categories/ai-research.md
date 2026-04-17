@@ -4,11 +4,11 @@ slug: ai-research
 title: AI Research Tools
 description: AI-powered tools for academic research, literature review, and paper discovery. Elicit, Consensus, Scite, Connected Papers, Semantic Scholar.
 tool_count: 5
-seo_title: "Best AI Research Tools (2026) — aipedia.wiki"
+seo_title: "Best AI Research Tools (2026) . aipedia.wiki"
 meta_description: "Elicit, Consensus, and Semantic Scholar lead AI academic research tools in 2026. Compare 5 tools for literature review, citation analysis, and paper discovery. Updated April 2026."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-14
-last_verified: 2026-04-14
+last_updated: 2026-04-17
+last_verified: 2026-04-17
 update_frequency: monthly
 ---
 
@@ -16,7 +16,7 @@ update_frequency: monthly
 
 AI research tools are reshaping how academics, scientists, and knowledge workers engage with the scholarly literature. Where a systematic literature review once required weeks of manual database searches, abstract screening, and data extraction, tools like Elicit can now automate the majority of that workflow across tens of millions of papers. Elicit is the clear leader in this category, developed by Ought with a mission-driven approach to scientific rigor: its structured data extraction from RCTs and observational studies is used by professional researchers at academic institutions and policy organizations worldwide ([Elicit](https://elicit.com)).
 
-Consensus takes a complementary approach, answering research questions with direct synthesis of claims from peer-reviewed papers, including a consensus meter that quantifies agreement across the literature — a feature with no direct equivalent elsewhere in the category. Scite addresses a different but equally important problem: traditional citation counts treat a citing paper as a positive signal regardless of whether it supports, disputes, or merely mentions the cited work. Scite's smart citation index classifies each citation as supporting, contrasting, or mentioning, giving researchers a sharply more accurate picture of a paper's standing in the literature.
+Consensus takes a complementary approach, answering research questions with direct synthesis of claims from peer-reviewed papers, including a consensus meter that quantifies agreement across the literature . a feature with no direct equivalent elsewhere in the category. Scite addresses a different but equally important problem: traditional citation counts treat a citing paper as a positive signal regardless of whether it supports, disputes, or merely mentions the cited work. Scite's smart citation index classifies each citation as supporting, contrasting, or mentioning, giving researchers a sharply more accurate picture of a paper's standing in the literature.
 
 Connected Papers and Semantic Scholar serve discovery rather than synthesis. Connected Papers generates a visual graph of related academic papers, allowing researchers to map out a research area and identify foundational works and recent developments without knowing the right search terms. Semantic Scholar, built by the Allen Institute for AI and permanently free, indexes 200 million-plus papers across all disciplines with AI-powered relevance ranking and citation analysis, and is the infrastructure layer that several other tools in this category build upon.
 
