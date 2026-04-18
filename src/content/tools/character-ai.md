@@ -1,0 +1,123 @@
+---
+type: tool
+slug: character-ai
+title: Character AI
+tagline: The largest AI roleplay platform with 20M monthly users and 10M+ user-created characters. Free tier covers most use; c.ai+ at $9.99/mo adds priority and faster responses.
+category: ai-chatbots
+company: character-ai
+url: https://character.ai
+pricing_model: freemium
+price_range: "$0 free / $9.99/mo c.ai+"
+status: active
+launched: 2022-09
+last_updated: 2026-04-18
+last_verified: 2026-04-18
+update_frequency: monthly
+affiliate:
+  has_program: false
+  commission: null
+  cookie_days: null
+  network: null
+  link: null
+scores:
+  utility: 8
+  value: 9
+  moat: 8
+  longevity: 7
+tags: [ai-chat, roleplay, character, companion, entertainment, creative-writing, community]
+seo_title: "Character AI: Features, Pricing & Review (April 2026)"
+meta_description: "Character AI is the largest AI roleplay platform with 20M+ monthly users. Free tier, c.ai+ at $9.99/mo unlocks priority queue, faster responses, and the Imagine Gallery image generator."
+author: "aipedia.wiki Editorial"
+best_for:
+  - conversational roleplay with AI characters
+  - creative writing prompts
+  - companion-style chat
+  - interactive storytelling
+not_best_for:
+  - factual research
+  - coding or technical work
+  - commercial content workflows
+  - users who need guaranteed data privacy
+quick_answer: >-
+  Character AI is the dominant AI roleplay and companion chat platform. Users create characters with personality prompts; other users chat with them. Free tier is generous. c.ai+ at $9.99/month adds priority, faster responses, the Imagine Gallery image gen (March 2026), and interactive features. Pick it for creative, conversational, or entertainment use. Skip it for factual research, coding, or anything requiring verifiable output.
+---
+
+# Character AI
+
+The largest user-generated AI character platform on the internet. Over 10 million user-created characters. 20+ million monthly active users. Chat with "characters" ranging from historical figures to fictional personas to user-designed companions.
+
+## System Verdict
+
+> **Pick Character AI if you want creative or entertainment-focused conversation.** The character library is unmatched, the roleplay depth beats most alternatives, and the free tier is genuinely useful. The 2026 additions (Imagine Gallery image gen, interactive games, experimental features lab) widen the gap against free chatbot alternatives.
+>
+> **Skip it if you need factual reliability, source citations, or business output.** Character AI's models are tuned for engaging roleplay, not accuracy. The platform also has a history of content-moderation controversy (lawsuits filed 2024-2025 over teen user safety) that is still shaping the product.
+>
+> **Who pays for c.ai+:** Heavy users who hit free-tier rate limits during peak hours. The $9.99/month unlocks priority access + faster response times. Same underlying model. Value is convenience, not capability.
+
+## Key Facts
+
+| | |
+|---|---|
+| **Monthly active users** | 20M+ |
+| **User-created characters** | 10M+ |
+| **Free tier** | Unlimited chat with all characters, subject to peak-hour rate limits |
+| **c.ai+ price** | $9.99/mo or $94.99/year (annual saves ~20%) |
+| **c.ai+ features** | Priority queue, faster responses, Imagine Gallery image generator (March 2026), interactive games, experimental features |
+| **Platforms** | Web (character.ai), iOS, Android |
+| **Content moderation** | Strict after 2024-2025 lawsuits. Some content categories now blocked or minors-restricted. |
+| **Underlying model** | Proprietary (not GPT/Claude/Gemini). Trained by the Character AI team. |
+
+## When to pick Character AI
+
+- **Creative writing partners.** Roleplay-tuned models write in-character more consistently than generalist assistants like ChatGPT or Claude.
+- **Companion-style chat.** The platform's core use case. Persistent character personalities, multi-turn coherence over long sessions, community-shared characters.
+- **Language learning through roleplay.** Practice conversations in a target language with a character that stays in role.
+- **Free exploration.** The free tier is genuinely sufficient for most casual users.
+
+## When to pick something else
+
+- **Facts and research:** [Perplexity](/tools/perplexity/), [ChatGPT](/tools/chatgpt/), or [Claude](/tools/claude/). Character AI will hallucinate freely in service of the narrative.
+- **Commercial content creation:** [ChatGPT](/tools/chatgpt/) or [Claude](/tools/claude/). Character AI's terms of service restrict commercial use of generated content.
+- **Uncensored roleplay:** Platforms like [Janitor AI](https://janitorai.com) or SpicyChat target this audience specifically.
+- **Private or local chat:** [Ollama](/tools/ollama/) + an open-weight model for fully local, unmoderated use.
+
+## Pricing
+
+| Plan | Price | What's included |
+|---|---|---|
+| Free | $0 | Unlimited chat, all characters, standard queue |
+| c.ai+ (monthly) | $9.99/mo | Priority, faster responses, Imagine Gallery, games |
+| c.ai+ (annual) | $94.99/year (~$7.92/mo) | Same as monthly, 20% savings |
+
+Prices verified 2026-04-18 via [character.ai/subscription/plus/pricing](https://character.ai/subscription/plus/pricing).
+
+## Failure modes
+
+- **Hallucination is a feature, not a bug.** Character AI will confidently state fictional "facts" if the narrative demands them. Unusable for research or factual Q&A.
+- **Content moderation has tightened.** Post-2024 lawsuits, previously-allowed content categories now trigger filters. Users report unexpected blocks on long-running roleplays.
+- **Data handling concerns.** Chats are retained for model training by default. Read the privacy policy before discussing anything sensitive.
+- **Teen user safety history.** Character AI faced lawsuits in 2024-2025 alleging insufficient safeguards for minor users. The platform has added parental controls and time-use notifications, but the reputational overhang remains.
+- **Model does not match frontier quality.** Raw intelligence trails GPT-5.4 and Claude Opus 4.7. The moat is character library + roleplay tuning, not base model capability.
+
+## Methodology
+
+Produced by the aipedia.wiki editorial pipeline. Last verified 2026-04-18 against the [character.ai pricing page](https://character.ai/subscription/plus/pricing) and [StartupHub.ai 2026 review](https://www.startuphub.ai/ai-news/reviews/2026/character-ai-review-2026). Scoring uses the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/).
+
+## FAQ
+
+**Is Character AI safe for kids?**
+Character AI now requires age verification and has added teen-specific safeguards after 2024-2025 legal pressure. Parents should review the platform's moderation history before allowing young users. Not recommended for under-13.
+
+**Can I use Character AI output commercially?**
+No. Terms of service restrict commercial use. For commercial creative work use [ChatGPT](/tools/chatgpt/) or [Claude](/tools/claude/) where commercial rights are granted on paid plans.
+
+**What's the Imagine Gallery?**
+A conversational image generator added for c.ai+ subscribers in March 2026. Generates images contextual to the current roleplay. Quality roughly matches DALL-E 3, behind Midjourney or Flux.
+
+**Does Character AI train on my chats?**
+Yes by default. Some settings allow opting out, but the default is chat retention for model improvement. Treat conversations as non-private.
+
+## Related
+
+- **Category:** [AI Chatbots](/categories/ai-chatbots/)
+- **See also:** [ChatGPT](/tools/chatgpt/) · [Claude](/tools/claude/) · [Poe](/tools/poe/)
