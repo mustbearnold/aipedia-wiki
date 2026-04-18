@@ -11,6 +11,28 @@ const allTools = await getCollection('tools');
 const trends = await getCollection('trends');
 const comparisons = await getCollection('comparisons');
 const categories = await getCollection('categories');
+const newsEntries = await getCollection('news');
+
+// Latest news: used in the freshness bar above the hero. Sort by date desc, take most recent.
+const latestNews = newsEntries
+  .map(n => ({
+    slug: n.data.slug || n.id.replace(/\.md$/, ''),
+    title: n.data.title,
+    date: String(n.data.date).slice(0, 10),
+  }))
+  .sort((a, b) => b.date.localeCompare(a.date))[0];
+
+// "N updates this fortnight" chip: count news items dated within the last 14 days.
+// Using news instead of tool last_updated because the stamping hook touches every
+// tool on every commit, so last_updated is not a reliable "new" signal.
+function daysSinceDate(v: unknown): number {
+  if (!v) return Infinity;
+  const d = (v instanceof Date) ? v : new Date(String(v));
+  const t = d.getTime();
+  if (isNaN(t)) return Infinity;
+  return (Date.now() - t) / 86400000;
+}
+const recentNewsCount = newsEntries.filter(n => daysSinceDate(n.data.date) <= 14).length;
 
 // Sort ALL tools by overall score (avg of 4 scores), descending
 const scoredTools = allTools
@@ -128,16 +150,44 @@ const featuredComparisons = comparisons
   />
 
   <!-- Hero -->
-  <section class="text-center pt-4 pb-8 md:pt-14 md:pb-20">
+  <section class="text-center pt-4 pb-4 md:pt-14 md:pb-10">
     <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-4">
       <span class="count-up tabular-nums" data-target={allTools.length}>{allTools.length}</span> AI tools, <span class="bg-gradient-to-r from-[#a78bfa] to-[#60a5fa] bg-clip-text text-transparent whitespace-nowrap">agent&#8209;scored</span>
     </h1>
-    <p class="text-sm sm:text-base text-[var(--text-muted)] mb-6 max-w-2xl mx-auto px-4">
+    <p class="text-sm sm:text-base text-[var(--text-muted)] mb-4 max-w-2xl mx-auto px-4">
       Scored on Utility, Value, Moat, and Longevity. <span class="count-up tabular-nums" data-target={comparisons.length}>{comparisons.length}</span> comparisons. Verified monthly.
     </p>
 
+    <!-- Freshness bar: latest news + new-this-week signal -->
+    <div class="flex flex-wrap items-center justify-center gap-2 mb-5 px-4">
+      {latestNews && (
+        <a
+          href={`/news/${latestNews.slug}/`}
+          class="inline-flex items-center gap-2 rounded-lg border border-[rgba(167,139,250,0.3)] bg-[rgba(167,139,250,0.06)] px-3 py-1.5 text-[11px] sm:text-xs text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[rgba(167,139,250,0.12)] hover:border-[rgba(167,139,250,0.5)] no-underline transition-colors group max-w-full"
+          title={latestNews.title}
+        >
+          <span class="relative flex h-2 w-2 shrink-0">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[var(--accent-primary)] opacity-60"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-[var(--accent-primary)]"></span>
+          </span>
+          <span class="font-semibold text-[var(--accent-primary)] shrink-0">Just shipped:</span>
+          <span class="truncate">{latestNews.title}</span>
+          <span class="shrink-0 text-[var(--text-muted)] group-hover:text-[var(--accent-primary)] transition-colors">&rarr;</span>
+        </a>
+      )}
+      {recentNewsCount > 1 && (
+        <a
+          href="/news/"
+          class="inline-flex items-center gap-1.5 rounded-lg border border-[var(--border)] bg-[var(--bg-card)] px-3 py-1.5 text-[11px] sm:text-xs text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:border-[rgba(167,139,250,0.35)] no-underline transition-colors shrink-0"
+        >
+          <span class="tabular-nums font-semibold text-[var(--accent-primary)]">{recentNewsCount}</span>
+          <span class="text-[var(--text-muted)]">updates this fortnight</span>
+        </a>
+      )}
+    </div>
+
     <!-- Search bar -->
-    <div class="max-w-xl mx-auto">
+    <div class="max-w-xl mx-auto px-4 sm:px-0">
       <button
         id="homepage-search-bar"
         type="button"
@@ -151,6 +201,64 @@ const featuredComparisons = comparisons
         <span class="ml-auto text-xs opacity-40">⌘K</span>
       </button>
     </div>
+  </section>
+
+  <!-- Triple-CTA row: three primary paths into the wiki, equal weight -->
+  <section class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-8" aria-label="How to explore">
+    <a
+      href="/tools/"
+      class="group block rounded-xl border border-[var(--border)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] hover:border-[rgba(167,139,250,0.4)] transition-colors p-4 no-underline"
+    >
+      <div class="flex items-start gap-3">
+        <span class="shrink-0 inline-flex items-center justify-center w-9 h-9 rounded-lg" style="background: linear-gradient(135deg, rgba(96,165,250,0.2), rgba(167,139,250,0.15)); border: 1px solid rgba(167,139,250,0.25);">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-[var(--accent-primary)]" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+        </span>
+        <div class="min-w-0 flex-1">
+          <div class="flex items-center gap-1 mb-0.5">
+            <h3 class="text-sm font-semibold text-[var(--text-primary)] m-0 group-hover:text-[var(--accent-primary)] transition-colors">Browse Tools</h3>
+            <span class="text-[var(--text-muted)] group-hover:text-[var(--accent-primary)] group-hover:translate-x-0.5 transition-all">&rarr;</span>
+          </div>
+          <p class="text-xs text-[var(--text-muted)] m-0 leading-snug">{allTools.length} reviews across {categories.length} categories</p>
+        </div>
+      </div>
+    </a>
+
+    <a
+      href="/tool-finder/"
+      class="group block rounded-xl border border-[var(--border)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] hover:border-[rgba(167,139,250,0.4)] transition-colors p-4 no-underline"
+    >
+      <div class="flex items-start gap-3">
+        <span class="shrink-0 inline-flex items-center justify-center w-9 h-9 rounded-lg" style="background: linear-gradient(135deg, rgba(74,222,128,0.2), rgba(96,165,250,0.15)); border: 1px solid rgba(74,222,128,0.25);">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-[var(--accent-success)]" aria-hidden="true"><path d="M15 4V2"/><path d="M15 16v-2"/><path d="M8 9h2"/><path d="M20 9h2"/><path d="M17.8 11.8 19 13"/><path d="M15 9h0"/><path d="M17.8 6.2 19 5"/><path d="m3 21 9-9"/><path d="M12.2 6.2 11 5"/></svg>
+        </span>
+        <div class="min-w-0 flex-1">
+          <div class="flex items-center gap-1 mb-0.5">
+            <h3 class="text-sm font-semibold text-[var(--text-primary)] m-0 group-hover:text-[var(--accent-primary)] transition-colors">Tool Finder</h3>
+            <span class="text-[var(--text-muted)] group-hover:text-[var(--accent-primary)] group-hover:translate-x-0.5 transition-all">&rarr;</span>
+          </div>
+          <p class="text-xs text-[var(--text-muted)] m-0 leading-snug">Answer a few prompts, get a match</p>
+        </div>
+      </div>
+    </a>
+
+    <a
+      href="/stack-builder/"
+      class="group block rounded-xl border border-[rgba(167,139,250,0.3)] bg-gradient-to-br from-[rgba(167,139,250,0.08)] to-[rgba(96,165,250,0.05)] hover:border-[rgba(167,139,250,0.5)] hover:from-[rgba(167,139,250,0.12)] transition-colors p-4 no-underline"
+    >
+      <div class="flex items-start gap-3">
+        <span class="shrink-0 inline-flex items-center justify-center w-9 h-9 rounded-lg" style="background: linear-gradient(135deg, rgba(167,139,250,0.3), rgba(96,165,250,0.2)); border: 1px solid rgba(167,139,250,0.4);">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-[var(--accent-primary)]" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+        </span>
+        <div class="min-w-0 flex-1">
+          <div class="flex items-center gap-1 mb-0.5">
+            <h3 class="text-sm font-semibold text-[var(--text-primary)] m-0 group-hover:text-[var(--accent-primary)] transition-colors">Stack Builder</h3>
+            <span class="text-[9px] px-1.5 py-0.5 rounded bg-[rgba(167,139,250,0.15)] border border-[rgba(167,139,250,0.3)] uppercase tracking-wider text-[var(--accent-primary)] font-semibold">New</span>
+            <span class="text-[var(--text-muted)] group-hover:text-[var(--accent-primary)] group-hover:translate-x-0.5 transition-all ml-auto">&rarr;</span>
+          </div>
+          <p class="text-xs text-[var(--text-muted)] m-0 leading-snug">Compose a multi-tool workflow</p>
+        </div>
+      </div>
+    </a>
   </section>
 
   <!-- Browse by category — horizontal scroll rail with rich cards -->
