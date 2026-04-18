@@ -14,9 +14,12 @@
   <rect x="0" y="0" width="1200" height="6" fill="url(#accent)"/>
   <text x="80" y="100" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="600" fill="#a78bfa" letter-spacing="2">aipedia.wiki</text>
   <text x="80" y="135" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="500" fill="#9ca3af">AI Design</text>
-  
-  <text x="80" y="270" font-family="Inter, system-ui, sans-serif" font-size="76" font-weight="800" fill="#fafafa">Framer AI</text>
-  <text x="80" y="310" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="500" fill="#9ca3af">framer</text>
+  <g transform="translate(80, 180)">
+    <rect x="0" y="0" width="100" height="100" rx="18" fill="#ffffff" opacity="0.04"/>
+    <image href="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjggMTI4IiB3aWR0aD0iMTI4IiBoZWlnaHQ9IjEyOCIgYXJpYS1sYWJlbD0iRiI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImctZnJhbWVyYWkiIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VjNDg5OSIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmNDcyYjYiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiByeD0iMjgiIGZpbGw9InVybCgjZy1mcmFtZXJhaSkiLz4KICA8dGV4dCB4PSI1MCUiIHk9IjUwJSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiCiAgICAgICAgZm9udC1mYW1pbHk9Ii1hcHBsZS1zeXN0ZW0sIEJsaW5rTWFjU3lzdGVtRm9udCwgJ1NlZ29lIFVJJywgUm9ib3RvLCAnSGVsdmV0aWNhIE5ldWUnLCBBcmlhbCwgc2Fucy1zZXJpZiIKICAgICAgICBmb250LXNpemU9IjY0IiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjMGIwYTE0IiBsZXR0ZXItc3BhY2luZz0iLTEiPkY8L3RleHQ+Cjwvc3ZnPgo=" x="10" y="10" width="80" height="80" preserveAspectRatio="xMidYMid meet"/>
+  </g>
+  <text x="210" y="270" font-family="Inter, system-ui, sans-serif" font-size="76" font-weight="800" fill="#fafafa">Framer AI</text>
+  <text x="210" y="310" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="500" fill="#9ca3af">framer</text>
   <foreignObject x="80" y="360" width="900" height="160">
     <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Inter, system-ui, sans-serif; font-size: 26px; line-height: 1.4; color: #d1d5db;"></div>
   </foreignObject>
