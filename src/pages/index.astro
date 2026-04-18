@@ -154,7 +154,7 @@ const featuredComparisons = comparisons
   </section>
 
   <!-- Browse by category — horizontal scroll rail with rich cards -->
-  <section class="mb-10" aria-labelledby="browse-by-cat-heading">
+  <section class="mb-8" aria-labelledby="browse-by-cat-heading">
     <div class="flex items-baseline justify-between mb-4">
       <h2 id="browse-by-cat-heading" class="text-xl font-bold text-[var(--text-primary)] m-0">Browse by category</h2>
       <div class="flex items-center gap-2">
@@ -295,7 +295,7 @@ const featuredComparisons = comparisons
   <RecentlyViewed />
 
   <!-- All Tools (filterable); heading lives in the toolbar above -->
-  <section class="mb-10" aria-labelledby="tools-grid-heading">
+  <section class="mb-8" aria-labelledby="tools-grid-heading">
     <div id="tools-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
       {scoredTools.map(({ tool, score }, idx) => {
         const cat = tool.data.category ?? '';
@@ -321,7 +321,7 @@ const featuredComparisons = comparisons
   </section>
 
   <!-- Trending -->
-  <section class="mb-16">
+  <section class="mb-10">
     <h2 class="text-xl font-bold text-[var(--text-primary)] mb-6">Trending</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
       {trends.map(trend => {
@@ -351,7 +351,7 @@ const featuredComparisons = comparisons
   </section>
 
   <!-- What's New -->
-  <section class="mb-16">
+  <section class="mb-10">
     <h2 class="text-xl font-bold text-[var(--text-primary)] mb-6">What's New</h2>
     <div class="space-y-2">
       <!-- Shutdown: red accent -->
@@ -403,7 +403,7 @@ const featuredComparisons = comparisons
   </section>
 
   <!-- Best Of Guides -->
-  <section class="mb-16">
+  <section class="mb-10">
     <h2 class="text-xl font-bold text-[var(--text-primary)] mb-6">Best Of</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
       <a href="/guides/best-ai-voice-youtube/" class="block rounded-xl p-[1px] bg-gradient-to-br from-[#a78bfa] to-[#60a5fa] hover:from-[#c4b5fd] hover:to-[#93c5fd] transition-all no-underline group">
@@ -446,7 +446,7 @@ const featuredComparisons = comparisons
   </section>
 
   <!-- Alternatives Guides -->
-  <section class="mb-16">
+  <section class="mb-10">
     <h2 class="text-xl font-bold text-[var(--text-primary)] mb-6">Alternatives</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
       <a href="/guides/cursor-alternatives/" class="block rounded-xl p-[1px] bg-gradient-to-br from-[#60a5fa] to-[#a78bfa] hover:from-[#93c5fd] hover:to-[#c4b5fd] transition-all no-underline group">
@@ -471,7 +471,7 @@ const featuredComparisons = comparisons
   </section>
 
   <!-- Featured comparisons (top 12 by combined tool score; full list at /compare/) -->
-  <section class="mb-16">
+  <section class="mb-10">
     <div class="flex items-baseline justify-between mb-6">
       <h2 class="text-xl font-bold text-[var(--text-primary)] m-0">Featured comparisons</h2>
       <a href="/compare/" class="text-xs text-[var(--accent-primary)] no-underline hover:underline">
@@ -499,7 +499,7 @@ const featuredComparisons = comparisons
   <EmailCapture variant="footer" source="homepage" />
 
   <!-- FAQ (visible; paired with FAQPage schema in HomepageLD) -->
-  <section class="max-w-3xl mx-auto mb-16 px-4" aria-labelledby="faq-heading">
+  <section class="max-w-3xl mx-auto mb-10 px-4" aria-labelledby="faq-heading">
     <h2 id="faq-heading" class="text-2xl font-bold text-[var(--text-primary)] mb-6">Frequently asked</h2>
     <div class="space-y-3">
       <details class="group rounded-xl border border-[var(--border)] bg-[var(--bg-card)] p-4 hover:bg-[var(--bg-card-hover)] transition-colors">
