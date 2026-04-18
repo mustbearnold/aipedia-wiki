@@ -64,6 +64,8 @@ Anthropic's AI assistant. **Opus 4.7** is the flagship as of **April 16, 2026**,
 
 ## Recent developments
 
+- **April 16:** [Systemic MCP vulnerability exposes 200k servers](/news/2026-04-16-mcp-vulnerability-200k-servers/) to arbitrary command execution. OX Security disclosure; Anthropic says behavior is by design, ships only documentation update advising STDIO adapter caution.
+- **April 14:** [Anthropic fielding $800B valuation offers](/news/2026-04-14-anthropic-800b-valuation-offers/), more than double February's $350B round. Revenue at $30B annualised, 1,400% YoY. Early IPO talks with Goldman, JPM, Morgan Stanley for possible October 2026 listing.
 - **April 17:** [Claude Design launches](/news/2026-04-17-anthropic-launches-claude-design/). Prompt-to-prototype bundled with Pro+. Figma stock fell ~7%.
 - **April 17:** [Cursor, Windsurf, Zed, Continue, GitHub Copilot ship Opus 4.7 within 24 hours](/news/2026-04-17-opus-4-7-day-two-ide-adoption/) of the release.
 - **April 16:** [Opus 4.7 ships as new flagship](/news/2026-04-16-anthropic-claude-opus-47/), retaking frontier lead on agentic coding, tool use, and financial analysis.

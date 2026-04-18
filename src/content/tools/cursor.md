@@ -60,6 +60,9 @@ Anysphere's AI-native code editor. A VS Code fork with LLMs wired into autocompl
 
 ## Recent developments
 
+- **April 17:** [Cursor in talks for $2B+ round at $50B valuation](/news/2026-04-17-cursor-2b-at-50b-valuation/). Nearly doubles the $29.3B valuation from 6 months ago. $2B ARR in Feb 2026. Thrive and a16z co-lead; Nvidia and Battery participating.
+- **April 16:** [Systemic MCP vulnerability exposes 200k servers](/news/2026-04-16-mcp-vulnerability-200k-servers/). Cursor's MCP plugin layer inherits the exposure. Audit installed MCP servers; prefer first-party or sandboxed.
+- **April 16:** [OpenAI Codex Desktop ships as "super app"](/news/2026-04-16-openai-codex-desktop-super-app/) with computer use, memory, image gen, 90+ plugins. Desktop-agent surface, not an IDE, but the Computer Use plus Memory combo is the long-term threat to IDE-as-home paradigm.
 - **April 17:** [Cursor ships Opus 4.7 support on day two](/news/2026-04-17-opus-4-7-day-two-ide-adoption/) of Anthropic's release, alongside Windsurf, Zed, and Continue. Kept Cursor current with the April 2026 flagship within 24 hours.
 - **April 2:** [Cursor 3 release makes the Agents Window the primary interface](/news/2026-04-02-cursor-3-agent-first-release/). Agent-first IDE shift; traditional editor view moves to a background role for users opting into the new layout.
 

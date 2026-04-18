@@ -80,6 +80,8 @@ No video generation. Sora was shut down in March 2026.
 
 ## Recent developments (March-April 2026)
 
+- **April 16, 2026:** [Systemic MCP vulnerability exposes 200k servers](/news/2026-04-16-mcp-vulnerability-200k-servers/). Codex Desktop's 90+ plugins and MCP tool access all inherit the exposure. Audit third-party servers; prefer first-party.
+- **April 16, 2026:** [Codex Desktop ships as OpenAI "super app"](/news/2026-04-16-openai-codex-desktop-super-app/): computer use, memory, gpt-image-1.5, in-app browser, 90+ plugins, multi-agent. Biggest Codex surface expansion since launch.
 - **April 16, 2026:** [Agents SDK ships native sandbox execution](/news/2026-04-16-openai-agents-sdk-sandbox-update/) + model-native harness + configurable memory + snapshotting. Python first, TypeScript coming.
 - **April 16, 2026:** [GPT-Rosalind research preview](/news/2026-04-16-openai-gpt-rosalind-drug-discovery/) life-sciences reasoning model for biology, drug discovery, translational medicine.
 - **April 14, 2026:** [OpenAI acquires Hiro Finance](/news/2026-04-14-openai-acquires-hiro-finance/) in acqui-hire. Signals native personal-finance capability incoming to ChatGPT.

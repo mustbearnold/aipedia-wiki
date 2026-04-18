@@ -64,6 +64,8 @@ Google DeepMind's multimodal AI assistant. **Gemini 3.1 Pro** is the flagship as
 
 ## Recent developments (April 2026)
 
+- **April 17:** [Chrome AI Mode launches desktop side-by-side view](/news/2026-04-17-google-chrome-ai-mode-side-by-side/). Click a link in AI Mode, Chrome opens the page beside the AI pane instead of replacing it. Plus menu pulls content from open tabs into queries. Distributes Gemini to Chrome's massive install base as the default browser AI.
+- **April 16:** [Google in talks to deploy Gemini on Pentagon classified networks](/news/2026-04-16-google-pentagon-gemini-classified/). "All lawful purposes" framing similar to OpenAI's February DoD deal. Google proposed safeguards against domestic surveillance and autonomous weapons use. Reversal of post-Maven 2018 posture.
 - **April 17:** [Google Photos ↔ Gemini integration](/news/2026-04-17-google-photos-gemini-nano-banana/) goes live as an opt-in. Paid subscribers can generate images with their own faces and locations via Nano Banana without manually uploading reference photos. First major consumer integration where one toggle unlocks broad library access for generative models.
 - **April 15:** [Google Whisk + Doppl shutdown announced](/news/2026-04-15-google-whisk-doppl-shutdown/) for April 30. Doppl's virtual try-on capability folds into Google Search and Shopping. Whisk fully sunsets. Pattern of Google retiring experimental AI apps into core products continues.
 - **April 10:** [Google Gemini ships 3D model generation](/news/2026-04-10-google-gemini-3d-models/) inside the app. Text or image input produces 3D assets for AR/VR workflows.

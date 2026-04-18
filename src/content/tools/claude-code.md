@@ -62,6 +62,9 @@ Claude Opus 4.7 (released April 16, 2026) is the default backing model. Access i
 
 ## Recent developments (April 2026)
 
+- **April 16:** [Systemic MCP vulnerability exposes 200k servers](/news/2026-04-16-mcp-vulnerability-200k-servers/) to arbitrary command execution. Affects every MCP server Claude Code invokes. Treat third-party MCP servers as shell-access risk; prefer first-party or sandbox via container.
+- **April 16:** [OpenAI ships Codex Desktop as "super app"](/news/2026-04-16-openai-codex-desktop-super-app/): computer use, memory, gpt-image-1.5, 90+ plugins, multi-agent. Desktop-agent surface competes directly with Claude Code's CLI-native workflow.
+- **April 14:** [Anthropic receiving $800B valuation offers](/news/2026-04-14-anthropic-800b-valuation-offers/), more than double February's $350B round. Supports continued Claude Code investment and enterprise roadmap.
 - **April 17:** [Claude Design ships](/news/2026-04-17-anthropic-launches-claude-design/) with a direct handoff path to Claude Code. Design a prototype in Claude Design, then one-click package it into a production-build bundle for Claude Code. Closed loop: prompt → design → working app.
 - **April 17:** [Cursor, Windsurf, Zed, Continue, GitHub Copilot all shipped Opus 4.7 support within 24 hours](/news/2026-04-17-opus-4-7-day-two-ide-adoption/) of the Anthropic release. Claude Code itself picked up 4.7 on day zero through the Anthropic SDK.
 - **April 16:** [Opus 4.7 ships as default backing model](/news/2026-04-16-anthropic-claude-opus-47/). Takes measurable leads on agentic coding, scaled tool use, and long-context reasoning. New tokenizer = 1.0-1.35x more tokens per input, same $5/$25 per MTok.

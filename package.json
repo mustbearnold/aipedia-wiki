@@ -8,8 +8,8 @@
   "scripts": {
     "predev": "node scripts/guard-content.mjs",
     "prebuild": "node scripts/guard-content.mjs",
-    "dev": "bash scripts/copy-content.sh && astro dev",
-    "build": "bash scripts/copy-content.sh && astro build && npx pagefind --site dist && cp -r dist/pagefind public/pagefind",
+    "dev": "node scripts/copy-content.mjs && astro dev",
+    "build": "node scripts/copy-content.mjs && astro build && npx pagefind --site dist && node -e \"const fs=require('fs'),path=require('path');function cp(s,d){fs.mkdirSync(d,{recursive:true});for(const e of fs.readdirSync(s,{withFileTypes:true})){const S=path.join(s,e.name),D=path.join(d,e.name);e.isDirectory()?cp(S,D):fs.copyFileSync(S,D)}}cp('dist/pagefind','public/pagefind')\"",
     "preview": "npm run build && wrangler dev",
     "guard:check": "node scripts/guard-content.mjs",
     "guard:baseline": "node scripts/guard-content.mjs --baseline",
@@ -39,7 +39,9 @@
     "unist-util-visit": "^5.1.0"
   },
   "devDependencies": {
+    "@resvg/resvg-js": "^2.6.2",
     "pagefind": "^1.5.2",
+    "sharp": "^0.34.5",
     "wrangler": "^4.82.2"
   },
   "overrides": {

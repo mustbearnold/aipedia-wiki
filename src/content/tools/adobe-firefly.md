@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: $0-$199.99/month
 status: active
 launched: 2023-03
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-04-18
+last_verified: 2026-04-18
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -61,6 +61,10 @@ price_history:
 Adobe's native AI image and video generator. **Firefly Image Model 5** is the production flagship, generating 4MP native-resolution images with prompt-based editing and layer support.
 
 Trained only on licensed Adobe Stock and public domain content. Paid plans include IP indemnification against copyright claims. No other major image generator offers this guarantee.
+
+## Recent developments
+
+- **April 15, 2026:** [Firefly AI Assistant launches](/news/2026-04-15-adobe-firefly-ai-assistant/). Conversational agent orchestrates multi-step tasks across Photoshop, Premiere, Lightroom, Illustrator, Express, and Firefly. Third-party Claude integration confirmed. Precision Flow, AI Markup, Audio Enhance Speech live same day. Public beta in the coming weeks; full demos at Adobe Summit April 19-22 Las Vegas.
 
 ## System Verdict
 
