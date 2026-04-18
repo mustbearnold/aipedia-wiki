@@ -25,8 +25,8 @@ scores:
   moat: 9
   longevity: 8
 tags: [inference, lpu, fast, llama, qwen, deepseek, hardware, nvidia-acquisition]
-seo_title: "Groq: Features, Pricing & Review (April 2026)"
-meta_description: "Groq is the fastest LLM inference provider in 2026, pushing 300-1,000 tokens/sec on custom LPU hardware. Free 30 req/min. Llama 4 Scout $0.11/$0.34 per M tokens. Acquired by Nvidia for $20B."
+seo_title: "Groq (LPU Inference): Features, Pricing & Review (April 2026)"
+meta_description: "Groq is the fastest LLM inference provider in 2026 (not Grok, xAI's chatbot). Custom LPU silicon pushes 300-1,000 tokens/sec on open-weight models. Free 30 req/min. Llama 4 Scout $0.11/$0.34 per M tokens. Acquired by Nvidia for $20B."
 author: "aipedia.wiki Editorial"
 best_for:
   - latency-sensitive LLM workloads
@@ -42,6 +42,8 @@ quick_answer: >-
 ---
 
 # Groq
+
+> **Not to be confused with [Grok](/tools/grok/)** (xAI's chatbot, different company, different product). This page is Groq, the LPU inference provider.
 
 The fastest LLM inference provider on the market in 2026. Custom silicon called the Language Processing Unit (LPU) delivers token-per-second rates that GPU-based providers (even H100 and B200) cannot match. Nvidia acquired Groq in early 2026 at a rumored $20B valuation, a 2.9× markup on the last private round.
 
@@ -121,6 +123,9 @@ Verified 2026-04-18 via [groq.com/pricing](https://groq.com/pricing).
 Produced by the aipedia.wiki editorial pipeline. Last verified 2026-04-18 against [groq.com/pricing](https://groq.com/pricing) and [IntuitionLabs' Nvidia-Groq acquisition analysis](https://intuitionlabs.ai/articles/nvidia-groq-ai-inference-deal).
 
 ## FAQ
+
+**Is Groq the same as Grok?**
+No. Groq (this page) is a hardware-accelerated LLM inference provider founded in 2016, now Nvidia-acquired. [Grok](/tools/grok/) is xAI's chatbot product launched 2023, owned by SpaceX post-merger. Different companies, different products, easy to confuse because of the single-letter spelling. Groq publicly complained about the naming collision in 2023 when Grok launched.
 
 **Is Groq really 10× faster than other providers?**
 On open-weight models, the LPU hardware delivers 3-10× higher tokens/second than GPU-based providers. Real-world advantage depends on model, context length, and region.

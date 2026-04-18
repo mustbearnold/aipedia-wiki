@@ -26,8 +26,8 @@ scores:
   moat: 7
   longevity: 6
 tags: [ai-assistant, xai, twitter-ai, real-time-search, grok, multi-agent, long-context]
-seo_title: "Grok: Features, Pricing & Review (April 2026)"
-meta_description: "Grok 4.3 beta (April 17, 2026) adds PDF, PowerPoint, spreadsheet, and video-input on 16-agent Heavy architecture. SuperGrok Heavy $300/mo (beta access). TTS API + Voice Mode on X. 2M token context, real-time X data. SpaceX-owned post-$1.25T merger."
+seo_title: "Grok (xAI): Features, Pricing & Review (April 2026)"
+meta_description: "Grok is xAI's AI chatbot (not Groq, the LPU inference provider). Grok 4.3 beta (April 17, 2026) adds PDF, PowerPoint, spreadsheet, video-input on 16-agent Heavy architecture. SuperGrok Heavy $300/mo. TTS API + Voice Mode on X. 2M token context, real-time X data."
 author: "aipedia.wiki Editorial"
 best_for:
   - X (Twitter) power users needing real-time feed analysis
@@ -56,6 +56,8 @@ price_history:
 ---
 
 # Grok
+
+> **Not to be confused with [Groq](/tools/groq/)** (the LPU inference provider, different company, different product). This page is xAI's Grok chatbot.
 
 xAI's AI assistant, tightly integrated with X (formerly Twitter) and running on the Colossus 2 supercluster. Two active production models as of April 2026:
 
@@ -184,6 +186,9 @@ Consumer tier pricing for SuperGrok tiers is not uniformly disclosed on xAI's pu
 This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [x.ai](https://x.ai), [docs.x.ai reasoning docs](https://docs.x.ai/developers/model-capabilities/text/reasoning), and [Artificial Analysis](https://artificialanalysis.ai/models/grok-4-20/providers).
 
 ## FAQ
+
+**Is Grok the same as Groq?**
+No. Grok (this page) is xAI's chatbot (launched 2023, owned by SpaceX post-merger). [Groq](/tools/groq/) is an LPU inference hardware company (founded 2016, Nvidia-acquired 2026). Different companies, different products. Groq has publicly complained about the naming confusion since Grok launched.
 
 **Is Grok free?**
 Any X account gets limited free queries per day. X Premium (~$8/mo) bundles meaningful Grok access plus Voice Mode for existing X subscribers. SuperGrok Lite ($10/mo) is the entry paid tier. SuperGrok ($30/mo) is the standard full-access tier covering Grok 4.20 and Grok 4 Heavy. SuperGrok Heavy ($300/mo) adds Grok 4.3 beta Early Access, ~4,000 msg/day, 360 min Deep Search, max compute priority, and multi-agent capabilities.
