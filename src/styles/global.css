@@ -658,12 +658,21 @@ a, button, [role="button"], .tool-card, .category-pill, .helpful-btn, .copy-btn 
   touch-action: pan-x pan-y;
   -webkit-overflow-scrolling: touch;
 }
-.cat-rail,
-.cat-rail .cat-card {
-  user-select: none;
-  -webkit-user-select: none;
-  -webkit-touch-callout: none;
-  -webkit-user-drag: none;
+/* Desktop-only: keep anchors non-selectable and non-draggable so a rail pan
+   gesture doesn't accidentally drag-select text or initiate an HTML5 drag
+   on an <a>. On mobile these properties do nothing useful (native scroll
+   handles panning, no drag to worry about) but combined on an <a> they
+   cause iOS Safari to require 2 taps to navigate — first tap focuses the
+   element, second tap fires the click. Scoping to hover+fine-pointer
+   makes mobile taps single-tap as expected. */
+@media (hover: hover) and (pointer: fine) {
+  .cat-rail,
+  .cat-rail .cat-card {
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-drag: none;
+  }
 }
 .cat-rail-track {
   /* Inner track: animated via transform for GPU acceleration.
