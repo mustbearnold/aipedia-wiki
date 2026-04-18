@@ -14,9 +14,12 @@ interface Props {
 
 const { title, description, ogImage, noindex } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? 'https://aipedia.wiki');
+// Social networks (X, LinkedIn, Facebook, Slack, iMessage) reject SVG
+// for link previews — PNG/JPG/WebP only. All OG images must be raster.
+// generate-og-svgs.mjs rasterizes each SVG to PNG at build time.
 const ogImageUrl = ogImage
   ? new URL(ogImage, Astro.site ?? 'https://aipedia.wiki').href
-  : new URL('/og-default.svg', Astro.site ?? 'https://aipedia.wiki').href;
+  : new URL('/og-default.png', Astro.site ?? 'https://aipedia.wiki').href;
 ---
 
 <html lang="en">
@@ -49,6 +52,7 @@ const ogImageUrl = ogImage
     <meta property="og:url" content={canonicalURL.href} />
     <meta property="og:site_name" content="aipedia.wiki" />
     <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
 
