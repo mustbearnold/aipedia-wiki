@@ -45,28 +45,44 @@ const radius = Math.max(6, Math.round(size * 0.22));
 )}
 
 <style is:global>
-  /* Frameless logo with a single-pixel soft white ring at the rounded
-     edge — just enough definition to separate dark-on-transparent logos
-     from the dark card without reading as a container. */
+  /* Every tool logo renders inside a white rounded-square chip. Three
+     problems this solves in one rule:
+       1. Dark-on-transparent logos (Semantic Scholar, Wan, many favicons)
+          become readable because the transparent zones fill with white.
+       2. Circular logos (InVideo, Fish Audio) take the chip's rounded-
+          square shape, matching the site's grid aesthetic.
+       3. All logos share a consistent visual weight no matter the
+          source asset's original design.
+     Cost: logos that already fill their bounding box (Midjourney black
+     starburst, Descript red square) get a small white inset frame.
+     Acceptable trade for universal readability. */
   .tool-logo {
     flex: none;
+    background: #ffffff;
+    padding: 3px;
+    box-sizing: border-box;
     transition: transform 200ms cubic-bezier(0.22, 1, 0.36, 1),
                 box-shadow 200ms ease;
-    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.12);
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.15),
+                0 1px 2px rgba(0, 0, 0, 0.25);
   }
   @media (hover: hover) and (pointer: fine) {
     .tool-card:hover .tool-logo,
     a:hover > .tool-logo {
-      box-shadow: 0 0 0 1px rgba(167, 139, 250, 0.35);
+      box-shadow: 0 0 0 1px rgba(167, 139, 250, 0.45),
+                  0 2px 6px rgba(167, 139, 250, 0.2);
     }
   }
   .light .tool-logo {
-    box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.12);
+    background: #f8fafc;
+    box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.08),
+                0 1px 2px rgba(0, 0, 0, 0.04);
   }
-  /* Monogram fallback (used when a logo file is missing) keeps a subtle
-     accent-tinted chip so the initials have something to sit against. */
+  /* Monogram fallback (used when a logo file is missing) keeps the
+     accent-tinted chip so initials still have gradient character. */
   .tool-logo-monogram {
     background: linear-gradient(135deg, rgba(167, 139, 250, 0.18), rgba(96, 165, 250, 0.12));
+    padding: 0;
     color: var(--text-primary);
   }
 </style>
