@@ -11,8 +11,8 @@ pricing_model: open-source
 price_range: "$0-$0.85/1M tokens"
 status: active
 launched: 2023-02
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-04-18
+last_verified: 2026-04-18
 update_frequency: monthly
 seo_title: "Llama: Features, Pricing & Review (April 2026)"
 meta_description: "Meta's Llama 4 Maverick (400B total, 17B active, 1M context) is the flagship open-weight LLM. Scout offers 10M tokens. Free weights under the Llama 4 Community License. Hosted pricing from $0.15 per 1M input tokens on Groq."
@@ -56,6 +56,8 @@ price_history:
 # Llama
 
 Meta's open-weight LLM family. **Llama 4 Maverick** (400B total, 17B active parameters, mixture-of-experts, 1M context) is the current flagship. **Scout** (109B total, 17B active, 10M context) fits on a single H100 and owns the long-context tier. **Behemoth** (2T total, 288B active) remains an internal teacher model; Meta has not publicly released it.
+
+> **April 2, 2026 competitive note:** [Google released Gemma 4 under Apache 2.0](/news/2026-04-02-google-gemma-4-apache-license/). Apache licensing is strictly more permissive than Meta's Llama 4 Community License (which caps at 700M monthly active users). For self-hosters with concerns about the Llama license, Gemma 4 is the closest drop-in alternative at comparable small-to-mid scale.
 
 Weights ship free under the Llama 4 Community License. Hosted inference starts at $0.15 per million input tokens across Groq, Together, Fireworks, DeepInfra, and major clouds.
 

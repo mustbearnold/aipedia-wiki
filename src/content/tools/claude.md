@@ -62,6 +62,16 @@ Anthropic's AI assistant. **Opus 4.7** is the flagship as of **April 16, 2026**,
 
 **Claude Design** (launched April 17, 2026) is the newest product: a prompt-to-prototype tool that produces slide decks, app mockups, marketing one-pagers, and pitch materials from text prompts. Powered by Opus 4.7. Reads a company's codebase and design files to apply the existing design system automatically, then hands off to Claude Code for production builds. Exports to PDF, PPTX, URL, or Canva. Available to Claude Pro, Max, Team, and Enterprise subscribers. The launch sent Figma stock down ~7% on the day. See the [full coverage](/news/2026-04-17-anthropic-launches-claude-design/).
 
+## Recent developments
+
+- **April 17:** [Claude Design launches](/news/2026-04-17-anthropic-launches-claude-design/). Prompt-to-prototype bundled with Pro+. Figma stock fell ~7%.
+- **April 17:** [Cursor, Windsurf, Zed, Continue, GitHub Copilot ship Opus 4.7 within 24 hours](/news/2026-04-17-opus-4-7-day-two-ide-adoption/) of the release.
+- **April 16:** [Opus 4.7 ships as new flagship](/news/2026-04-16-anthropic-claude-opus-47/), retaking frontier lead on agentic coding, tool use, and financial analysis.
+- **April 16:** [Qwen3.6-35B-A3B released open-source](/news/2026-04-16-qwen-3-6-35b-a3b-release/). Aggregate ~82% of Opus 4.7 at zero cost; gap widens on MCP Atlas tool use (62%).
+- **April 14:** [Claude Computer Use agent mode](/news/2026-04-14-anthropic-claude-computer-use-agent/) expands to broader availability.
+- **April 10:** [Mythos Preview access tightened](/news/2026-04-10-anthropic-mythos-hacking-restriction/) over cybersecurity dual-use risk. Invitation-only via Project Glasswing.
+- **April 7:** [Anthropic locks in 3.5GW Google TPU capacity](/news/2026-04-07-anthropic-google-broadcom-tpu-deal/) via Google Cloud + Broadcom. $30B run-rate disclosed.
+
 ## System Verdict
 
 > **Pick Claude if you need the strongest reasoning, long-form writing, or agentic coding available right now.** Opus 4.7 (released April 16) takes measurable leads on agentic coding, tool use, and financial analysis against GPT-5.4 and Gemini 3.1 Pro. Claude Code remains the strongest CLI coding agent on the market. The 1M context window on Opus and Sonnet beats ChatGPT's undisclosed window when you actually need the whole codebase loaded.

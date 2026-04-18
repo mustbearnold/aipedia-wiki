@@ -47,6 +47,10 @@ price_history:
     plan: "Enterprise"
     price: "Contact sales"
     note: "Reported third-party ACV roughly $1,000-$1,200 per lawyer per month; no public list price"
+  - date: 2026-03-30
+    plan: "Series funding announcement"
+    price: "$200M round at $11B valuation"
+    note: "Announced March 30, 2026. See [news writeup](/news/2026-03-30-harvey-200m-at-11b-valuation/) for details."
   - date: 2026-03-25
     plan: "Company valuation"
     price: "$11B"

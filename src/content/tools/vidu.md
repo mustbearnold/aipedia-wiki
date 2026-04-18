@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$99/month"
 status: active
 launched: 2024-07
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-04-18
+last_verified: 2026-04-18
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -45,6 +45,10 @@ Alibaba led a $293M round into Shengshu on April 10, 2026, signaling the company
 > **Skip it if you need clips longer than 5 seconds or Sora-tier cinematic motion.** Q1 caps at 5 seconds per generation. For 10-25 second clips with synchronized dialogue, Kling 3.0 Pro wins. For photoreal cinematic motion, Veo 3 wins. For long-form narrative with extended durations, Kling 2.0 wins.
 >
 > **Who pays which tier:** Free plan covers casual testers with 800 monthly credits. Standard $10/mo fits hobbyists running 200 clips a month. Premium $35/mo fits short-form creators at 1,000 clips. Ultimate $99/mo fits agency teams needing unlimited videos.
+
+## Recent developments
+
+- **April 10, 2026:** [Alibaba leads $293M round in Shengshu Technology](/news/2026-04-10-alibaba-vidu-shengshu-funding/), Vidu's parent company. Major capital injection backing Vidu's competition with Kling, Runway, and Veo 3.
 
 ## Key Facts
 

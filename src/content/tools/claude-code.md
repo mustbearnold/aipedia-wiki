@@ -64,7 +64,7 @@ Claude Opus 4.7 (released April 16, 2026) is the default backing model. Access i
 
 - **April 17:** [Claude Design ships](/news/2026-04-17-anthropic-launches-claude-design/) with a direct handoff path to Claude Code. Design a prototype in Claude Design, then one-click package it into a production-build bundle for Claude Code. Closed loop: prompt → design → working app.
 - **April 17:** [Cursor, Windsurf, Zed, Continue, GitHub Copilot all shipped Opus 4.7 support within 24 hours](/news/2026-04-17-opus-4-7-day-two-ide-adoption/) of the Anthropic release. Claude Code itself picked up 4.7 on day zero through the Anthropic SDK.
-- **April 16:** Opus 4.7 released, now default backing model. Takes measurable leads on agentic coding, scaled tool use, and long-context reasoning.
+- **April 16:** [Opus 4.7 ships as default backing model](/news/2026-04-16-anthropic-claude-opus-47/). Takes measurable leads on agentic coding, scaled tool use, and long-context reasoning. New tokenizer = 1.0-1.35x more tokens per input, same $5/$25 per MTok.
 - **April 14:** [Claude computer-use agent](/news/2026-04-14-anthropic-claude-computer-use-agent/) expands availability. Available inside Claude Code as research preview.
 
 ## System Verdict

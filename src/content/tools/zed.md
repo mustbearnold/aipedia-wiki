@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$20/month"
 status: active
 launched: 2024-01
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-04-18
+last_verified: 2026-04-18
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -52,6 +52,8 @@ price_history:
 ---
 
 # Zed
+
+> **April 17, 2026:** [Zed shipped Claude Opus 4.7 support within 24 hours](/news/2026-04-17-opus-4-7-day-two-ide-adoption/) of Anthropic's release, alongside Cursor, Windsurf, and Continue. Model selector now lists Opus 4.7 as the default Claude option.
 
 Native code editor from Zed Industries, founded by several original authors of Atom and Tree-sitter. Written in Rust with a custom GPU-accelerated rendering engine (GPUI). Startup sits under 100ms. Scrolling stays smooth on 10k-line files.
 

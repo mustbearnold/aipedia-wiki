@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$50/month"
 status: active
 launched: 2024-09
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-04-18
+last_verified: 2026-04-18
 update_frequency: monthly
 seo_title: "Lovable: Features, Pricing & Review (April 2026)"
 meta_description: "Lovable builds deployed full-stack React apps from plain-English prompts. Supabase provisioned automatically for Postgres, auth, and real-time. Free $25 workspace credit (through May 2026), Starter $20/mo, Launch $50/mo. Dev Mode edits code directly."
@@ -45,6 +45,10 @@ Dev Mode (rolled out early 2026) lets paid users edit generated code directly in
 > **Skip it if you want pure frontend prototyping or full architectural control.** [Bolt.new](/tools/bolt/) runs a browser-native Node environment with zero vendor lock-in. [v0](/tools/v0/) is tighter for React and Next.js components. Production apps at scale will need rewriting by engineers regardless of how polished the generated code looks.
 >
 > **Who pays which tier:** Free with $25 workspace credit monthly (promo through May 2026), Starter $20/mo for private projects and no Lovable badge, Launch $50/mo for 2.5x messaging and priority support, Enterprise for SSO and custom quotas. Switched to Claude Sonnet as the default generation model in early 2026.
+
+## Recent developments
+
+- **April 17, 2026:** [Anthropic launches Claude Design](/news/2026-04-17-anthropic-launches-claude-design/) with a direct handoff to Claude Code for production builds. Directly competitive with Lovable's prompt-to-app workflow. Claude Design's advantage is design-system awareness (reads a team's codebase + design files); Lovable's advantage is mature Supabase-backed deployment with Dev Mode for direct code editing.
 
 ## Key Facts
 

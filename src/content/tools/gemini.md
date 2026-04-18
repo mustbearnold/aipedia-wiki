@@ -67,6 +67,7 @@ Google DeepMind's multimodal AI assistant. **Gemini 3.1 Pro** is the flagship as
 - **April 17:** [Google Photos ↔ Gemini integration](/news/2026-04-17-google-photos-gemini-nano-banana/) goes live as an opt-in. Paid subscribers can generate images with their own faces and locations via Nano Banana without manually uploading reference photos. First major consumer integration where one toggle unlocks broad library access for generative models.
 - **April 15:** [Google Whisk + Doppl shutdown announced](/news/2026-04-15-google-whisk-doppl-shutdown/) for April 30. Doppl's virtual try-on capability folds into Google Search and Shopping. Whisk fully sunsets. Pattern of Google retiring experimental AI apps into core products continues.
 - **April 10:** [Google Gemini ships 3D model generation](/news/2026-04-10-google-gemini-3d-models/) inside the app. Text or image input produces 3D assets for AR/VR workflows.
+- **April 2:** [Google Gemma 4 released under Apache 2.0](/news/2026-04-02-google-gemma-4-apache-license/). Open-weight sibling family to Gemini, fully permissive for commercial use, competes with Llama 4 on open-weight flagship positioning.
 
 ## System Verdict
 

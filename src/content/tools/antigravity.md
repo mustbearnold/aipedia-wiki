@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$249.99/month"
 status: active
 launched: 2025-11
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-04-18
+last_verified: 2026-04-18
 update_frequency: monthly
 seo_title: "Antigravity: Features, Pricing & Review (April 2026)"
 meta_description: "Google Antigravity is an agent-first IDE built on a VS Code fork. Gemini 3.1 Pro default, Claude Sonnet 4.6, Opus 4.6, and GPT-OSS 120B supported. Free tier with rate limits, AI Pro $20/mo, AI Ultra $249.99/mo, plus 2,500 credits for $25. Manager view runs parallel agents with Artifacts."
@@ -56,6 +56,9 @@ price_history:
 ---
 
 # Antigravity
+
+> **April 17, 2026 update:** [Antigravity is still routing to Opus 4.6](/news/2026-04-17-opus-4-7-day-two-ide-adoption/) as of day two of Anthropic's 4.7 release. Cursor, Windsurf, Zed, and Continue all shipped 4.7 support within 24 hours; Google has not published a 4.7 adoption date for Antigravity. This is a concrete lag relative to the other IDE agents.
+
 
 Google's agent-first IDE. A heavily modified fork of VS Code. The Manager view orchestrates multiple autonomous agents working in parallel across editor, terminal, and an integrated Chrome browser. Launched in public preview on November 20, 2025 alongside Gemini 3.
 

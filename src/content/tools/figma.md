@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$90/month"
 status: active
 launched: 2016-09
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-04-18
+last_verified: 2026-04-18
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -48,6 +48,10 @@ price_history:
     plan: "Professional"
     price: "$16/editor/mo"
     note: "Verified unchanged on annual billing."
+  - date: 2026-04-17
+    plan: "Competitive landscape"
+    price: "~7% stock drop"
+    note: "Anthropic launched Claude Design targeting the non-designer segment. Figma stock fell ~7% on the announcement. Mike Krieger (Anthropic CPO) resigned from Figma's board on April 14, three days before the launch. See [news](/news/2026-04-17-anthropic-launches-claude-design/)."
 ---
 
 # Figma

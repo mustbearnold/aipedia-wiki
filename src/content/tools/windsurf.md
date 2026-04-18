@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2024-11
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-04-18
+last_verified: 2026-04-18
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -55,6 +55,8 @@ price_history:
 Cognition AI's AI-native code editor. A VS Code fork with inline autocomplete, a command bar, and Cascade: a multi-file agentic editor with full codebase context.
 
 Owned by Cognition since July 2025, after Google took a licensing deal and an earlier OpenAI acquisition collapsed. Now a sibling product to [Devin](/tools/devin/) inside the Cognition stack.
+
+> **April 17, 2026:** [Windsurf shipped Claude Opus 4.7 support within 24 hours](/news/2026-04-17-opus-4-7-day-two-ide-adoption/) of Anthropic's release, alongside Cursor, Zed, and Continue.
 
 ## System Verdict
 

@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2023-03
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-04-18
+last_verified: 2026-04-18
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -57,6 +57,11 @@ price_history:
 # Cursor
 
 Anysphere's AI-native code editor. A VS Code fork with LLMs wired into autocomplete (Tab), inline edits (Cmd+K), codebase-aware chat (@codebase), and the Agents Window (the multi-agent workbench introduced in Cursor 3.0 on April 2, 2026).
+
+## Recent developments
+
+- **April 17:** [Cursor ships Opus 4.7 support on day two](/news/2026-04-17-opus-4-7-day-two-ide-adoption/) of Anthropic's release, alongside Windsurf, Zed, and Continue. Kept Cursor current with the April 2026 flagship within 24 hours.
+- **April 2:** [Cursor 3 release makes the Agents Window the primary interface](/news/2026-04-02-cursor-3-agent-first-release/). Agent-first IDE shift; traditional editor view moves to a background role for users opting into the new layout.
 
 Claude Opus 4.7, GPT-5.4, Gemini 3.1 Pro, Grok 4.20, Kimi K2.5, and Cursor's in-house Composer 2 are all first-class. Opus 4.7 landed in Cursor within minutes of Anthropic's April 16, 2026 release.
 

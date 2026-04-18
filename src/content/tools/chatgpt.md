@@ -86,6 +86,7 @@ No video generation. Sora was shut down in March 2026.
 - **April 9, 2026:** [$100/mo Pro tier launched](/news/2026-04-09-chatgpt-pro-100-tier-launch/) between Plus and Pro Max. 5x Codex vs Plus; 10x promo through May 31.
 - **March 31, 2026:** [OpenAI closes $122B round at $852B valuation](/news/2026-03-31-openai-122b-round-852b-valuation/), largest private raise in history.
 - **March 9, 2026:** [OpenAI acquires Promptfoo](/news/2026-03-09-openai-acquires-promptfoo/) AI security testing. Integrating into OpenAI Frontier for enterprise agent deployments.
+- **April 1, 2026:** [Sora 2 model retired](/news/2026-04-01-openai-retires-sora-2-model/), completing the Sora product-line shutdown. OpenAI out of video-generation entirely.
 
 ## System Verdict
 
