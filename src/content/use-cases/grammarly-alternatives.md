@@ -7,8 +7,8 @@ meta_description: "Discover top AI writing assistants as Grammarly alternatives.
 description: "This page recommends four AI tools as Grammarly alternatives for grammar checks, style suggestions, and writing edits, with details on pricing, pros, and cons verified as of 2026-04-15."
 tools_mentioned: ["claude", "chatgpt", "gemini", "perplexity"]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-04-18
+last_verified: 2026-04-18
 update_frequency: monthly
 ---
 
@@ -73,7 +73,7 @@ Limitations: Focuses more on search than pure style; shorter context for edits.
 
 ## How We Chose
 
-We evaluated tools on grammar accuracy, pricing, free tiers, and integration using 2026 benchmarks from pricing pages and reviews. See methodology.
+Tools were evaluated on grammar accuracy, pricing, free tiers, and integration using 2026 benchmarks from pricing pages and reviews. See methodology.
 
 ## FAQ
 

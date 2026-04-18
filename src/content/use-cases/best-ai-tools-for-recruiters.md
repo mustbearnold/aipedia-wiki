@@ -7,8 +7,8 @@ meta_description: "Top AI tools for recruiters in 2026 include Paradox, Eightfol
 description: "This page recommends AI tools for recruiters to source candidates, screen resumes, match skills, and schedule interviews, with pricing, pros, and cons verified as of April 2026."
 tools_mentioned: ["paradox-olivia", "eightfold-ai", "hireez", "chatgpt"]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-04-18
+last_verified: 2026-04-18
 update_frequency: monthly
 ---
 
@@ -53,7 +53,7 @@ Recruiters use it for quick tasks like ranking candidates or writing emails. Fre
 
 ## How We Chose
 
-We ranked tools by recruiting fit (sourcing/screening/automation), verified 2026-04-15 versions/pricing via category benchmarks, and prioritized ATS integration over general LLMs[1][3].
+Tools were ranked by recruiting fit (sourcing/screening/automation), verified 2026-04-15 versions/pricing via category benchmarks, and prioritized ATS integration over general LLMs[1][3].
 
 ## FAQ
 

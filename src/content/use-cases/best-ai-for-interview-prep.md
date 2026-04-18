@@ -7,8 +7,8 @@ meta_description: "Top AI tools for interview preparation as of April 2026. Comp
 description: "Curated recommendations for AI tools that help with interview preparation, including mock interviews, behavioral coaching, technical problem solving, and real-time feedback."
 tools_mentioned: ["chatgpt", "claude", "gemini", "grok", "notebooklm"]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-04-18
+last_verified: 2026-04-18
 update_frequency: monthly
 ---
 
@@ -84,7 +84,7 @@ NotebookLM is purpose-built for analyzing your own materials. Upload your resume
 
 ## How We Chose
 
-We evaluated tools based on reasoning quality, context window size, real-time capabilities, pricing transparency, and suitability for three interview types: behavioral, technical, and domain-specific. Recommendations reflect flagship models as of April 15, 2026, with pricing verified against official sources.
+Tools were evaluated based on reasoning quality, context window size, real-time capabilities, pricing transparency, and suitability for three interview types: behavioral, technical, and domain-specific. Recommendations reflect flagship models as of April 15, 2026, with pricing verified against official sources.
 
 ## FAQ
 

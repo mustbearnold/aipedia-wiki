@@ -7,8 +7,8 @@ meta_description: "Discover the top AI tools for generating accurate citations a
 description: "This page recommends 3-5 AI tools for citations and references, with details on versions, pricing, pros, and cons verified as of 2026-04-15."
 tools_mentioned: ["perplexity-ai", "notebooklm", "chatgpt", "gemini", "claude"]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-04-18
+last_verified: 2026-04-18
 update_frequency: monthly
 ---
 
@@ -104,7 +104,7 @@ Free tier for basics; Pro for extended use. Suited for citing in technical docs 
 
 ## How We Chose
 
-We reviewed 2026 tool lists, prioritizing citation accuracy, source linking, and pricing from primary sites and benchmarks as of 2026-04-15.[1][2][6]
+Sources: 2026 tool lists, prioritising citation accuracy, source linking, and pricing from primary sites and benchmarks as of 2026-04-15.[1][2][6]
 
 ## FAQ
 

@@ -7,8 +7,8 @@ meta_description: "Top AI tools for summarization as of April 2026: Claude Opus 
 description: "This page recommends top AI tools for summarization with pricing, pros, and cons verified as of April 2026."
 tools_mentioned: ["claude", "chatgpt", "gemini"]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-04-18
+last_verified: 2026-04-18
 update_frequency: monthly
 ---
 
@@ -56,7 +56,7 @@ Pros: Free high-quality tier; handles mixed media; Google ecosystem integration.
 
 ## How We Chose
 
-We evaluated based on context window, benchmark scores (e.g., CNN/DailyMail F1), user reviews, and API pricing from official docs as of 2026-04-15. Tools ranked by fit for common summarization needs like accuracy and scale.
+Tools were evaluated based on context window, benchmark scores (e.g., CNN/DailyMail F1), user reviews, and API pricing from official docs as of 2026-04-15. Tools ranked by fit for common summarization needs like accuracy and scale.
 
 ## FAQ
 

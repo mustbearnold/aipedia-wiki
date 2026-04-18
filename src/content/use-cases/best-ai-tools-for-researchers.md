@@ -7,8 +7,8 @@ meta_description: "Top AI tools for researchers in 2026 include Perplexity for s
 description: "This page recommends AI tools for researchers, covering literature review, data analysis, and hypothesis testing, with pricing, pros, and cons verified as of April 2026."
 tools_mentioned: ["perplexity", "claude", "gemini", "chatgpt"]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-04-18
+last_verified: 2026-04-18
 update_frequency: monthly
 ---
 
@@ -89,7 +89,7 @@ ChatGPT with GPT-5.4 offers broad capabilities including text analysis, code for
 
 ## How We Chose
 
-We evaluated tools based on context window size, citation accuracy, multimodal support, and researcher workflow fit, cross-referencing 2026 rankings from TechRadar, NxCode, and ALM Corp. See methodology.[1][3]
+Tools were evaluated based on context window size, citation accuracy, multimodal support, and researcher workflow fit, cross-referencing 2026 rankings from TechRadar, NxCode, and ALM Corp. See methodology.[1][3]
 
 ## FAQ
 

@@ -7,8 +7,8 @@ meta_description: "Automate lead sourcing, enrichment, and AI-powered scoring us
 author: "aipedia.wiki Editorial"
 description: Scrape, enrich, and qualify leads automatically using n8n, Claude, and data enrichment tools.
 tools_mentioned: [n8n, claude]
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-04-18
+last_verified: 2026-04-18
 update_frequency: quarterly
 ---
 
@@ -44,7 +44,7 @@ OpenAI GPT-5.4 API (2026-04-15) handles multimodal lead scoring via ChatGPT Plus
 Google Gemini 3.1 Pro (2026-04-15, $20/mo Advanced) offers 2M token context for lead dossiers in Google ecosystem. Scores ICP with video/audio if needed; integrates Workspace. Weaker than Claude on reasoning depth for qualification. Limitations: Ecosystem lock-in[1][3].
 
 ## How We Chose
-We tested stacks processing 500+ sample leads against ICPs in SaaS/ecomm; scored on volume, accuracy (human-validated 85%+ hot leads), cost at scale. Prioritized API stability, node support in n8n. Verified versions/pricing via official docs 2026-04-15.
+Tools were evaluated on lead-scoring benchmarks, ICP-fit reports from 2026 SaaS/ecomm reviews, and cost at scale. Prioritised API stability and node support in n8n. Verified versions/pricing via official docs 2026-04-15.
 
 ## FAQ
 **What if I have no coding skills?**  

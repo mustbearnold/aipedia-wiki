@@ -7,8 +7,8 @@ meta_description: "Discover the top open source AI tools as of April 2026, inclu
 description: "This page recommends 5 open source AI tools matched to common use cases with pricing, pros, and cons as of April 2026."
 tools_mentioned: ["deepseek-v3-2", "flux-2", "llama-4", "mistral-large-3", "whisper-large-v3"]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-04-18
+last_verified: 2026-04-18
 update_frequency: monthly
 ---
 
@@ -119,7 +119,7 @@ OpenAI's Whisper Large V3 remains the top open speech-to-text model in 2026, sup
 
 ## How We Chose
 
-We evaluated tools on Hugging Face downloads, LMSYS Arena rankings, and benchmark scores (e.g., MMLU, HumanEval) against 2026 flagships like GPT-5.4. Prioritized fully open weights, active maintenance, and community support as of 2026-04-15.[1][2][10-13]
+Tools were evaluated on Hugging Face downloads, LMSYS Arena rankings, and benchmark scores (e.g., MMLU, HumanEval) against 2026 flagships like GPT-5.4. Prioritized fully open weights, active maintenance, and community support as of 2026-04-15.[1][2][10-13]
 
 ## FAQ
 

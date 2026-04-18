@@ -7,8 +7,8 @@ meta_description: "Top AI tools for generating cover letters include ChatGPT wit
 description: "This page recommends 3-5 AI tools for cover letters with pricing, pros, and cons as of April 2026."
 tools_mentioned: ["chatgpt", "claude", "gemini"]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-04-18
+last_verified: 2026-04-18
 update_frequency: monthly
 ---
 
@@ -44,7 +44,7 @@ Google's Gemini 3.1 Pro integrates with Google Workspace for cover letter creati
 
 ## How We Chose
 
-We evaluated tools on output quality for cover letters, pricing, ease of use, and model capabilities as of 2026-04-15. See methodology.
+Tools were evaluated on output quality for cover letters, pricing, ease of use, and model capabilities as of 2026-04-15. See methodology.
 
 ## FAQ
 

@@ -7,8 +7,8 @@ meta_description: "Top AI tools for generating, updating, and maintaining API do
 description: "This page recommends 3-5 AI tools matched to the specific use case with pricing, pros, and cons as of April 2026."
 tools_mentioned: ["chatgpt", "gemini", "cursor", "claude"]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-15
-last_verified: 2026-04-15
+last_updated: 2026-04-18
+last_verified: 2026-04-18
 update_frequency: monthly
 ---
 
@@ -89,7 +89,7 @@ Upload code or specs; it outputs formatted docs, runs tests via code interpreter
 
 ## How We Chose
 
-We reviewed 2026 rankings from TechRadar, NxCode, Pluralsight, and DataCamp. Tools ranked by code/doc generation benchmarks, context size, pricing, and API-specific tests (e.g., OpenAPI output quality).[1][3][6]
+Sources: 2026 rankings from TechRadar, NxCode, Pluralsight, and DataCamp. Tools ranked by code/doc generation benchmarks, context size, pricing, and API-specific benchmark suites (e.g., OpenAPI output quality).[1][3][6]
 
 ## FAQ
 

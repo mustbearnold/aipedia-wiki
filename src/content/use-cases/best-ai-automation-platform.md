@@ -7,8 +7,8 @@ meta_description: "n8n ($0 self-hosted or $20/mo cloud) is the best AI automatio
 author: "aipedia.wiki Editorial"
 description: n8n leads AI automation because it combines visual workflow building, native AI agent nodes, and self-hosting for $0, with a cloud option at $20/mo.
 tools_mentioned: [n8n, zapier, make, relevance-ai, crewai]
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-04-18
+last_verified: 2026-04-18
 update_frequency: monthly
 ---
 
@@ -64,7 +64,7 @@ No pricing beyond hosting. Suits custom agents. Needs Python; no visuals.
 
 ## How We Chose
 
-We tested workflows with GPT-5.4, Claude Opus 4.7 on agent tasks, integrations, costs as of 2026-04-15. Scores weigh AI depth (40%), ease (30%), price (20%), hosting (10%). See methodology.
+Tools were evaluated on agent-task fit with GPT-5.4 and Claude Opus 4.7, integrations, and costs as of 2026-04-15. Scores weigh AI depth (40%), ease (30%), price (20%), hosting (10%). See methodology.
 
 ## FAQ
 

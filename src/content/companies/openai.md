@@ -10,8 +10,9 @@ founded: 2015
 hq: San Francisco, USA
 funding: "$133B+"
 key_products: [chatgpt, codex]
-last_updated: 2026-04-15
+last_updated: 2026-04-18
 update_frequency: quarterly
+last_verified: 2026-04-18
 ---
 
 # OpenAI
@@ -47,7 +48,7 @@ ChatGPT serves as the primary consumer interface with tiered subscriptions, whil
 - 2026: Introduced gpt-oss open models and DALL-E 4 in ChatGPT Images [6](https://openai.com/open-models/)[8](https://openai.com/research/index/release/).
 
 ## Strategic Position
-OpenAI leads with GPT-5.4 topping benchmarks in coding (57.7% SWE-bench Pro) and reasoning, ahead of Gemini 3.1 Pro and Claude 4.6 on select metrics [4](https://codingscape.com/blog/most-powerful-llms-large-language-models). Compute scale from Microsoft funding provides a moat, but threats include Anthropic's safety focus, Google's distribution, and open-source from Meta/Mistral. Opportunities lie in agentic tools and enterprise adoption, with open models countering customization demands [1](https://i10x.ai/news/openai-2026-ai-roadmap-gpt-5-models).
+OpenAI leads with GPT-5.4 topping benchmarks in coding (57.7% SWE-bench Pro) and reasoning, ahead of Gemini 3.1 Pro and Claude Opus 4.7 on select metrics [4](https://codingscape.com/blog/most-powerful-llms-large-language-models). Compute scale from Microsoft funding provides a moat, but threats include Anthropic's safety focus, Google's distribution, and open-source from Meta/Mistral. Opportunities lie in agentic tools and enterprise adoption, with open models countering customization demands [1](https://i10x.ai/news/openai-2026-ai-roadmap-gpt-5-models).
 
 ## Sources
 - [OpenAI Official Website](https://openai.com/) -- Announcements on GPT-5.4, funding, and open models.

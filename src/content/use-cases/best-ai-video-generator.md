@@ -7,8 +7,8 @@ meta_description: "Runway Gen-4.5 ($15/mo) is the best AI video generator in 202
 author: "aipedia.wiki Editorial"
 description: "Runway Gen-4.5 leads AI video generation with the best quality-to-price ratio at $15/mo for text-to-video, image-to-video, and camera control."
 tools_mentioned: [kling, seedance, runway, heygen, pika]
-last_updated: 2026-04-15
-last_verified: 2026-04-15
+last_updated: 2026-04-18
+last_verified: 2026-04-18
 update_frequency: monthly
 ---
 
@@ -74,7 +74,7 @@ Short length limits narrative use.
 
 ## How We Chose
 
-We tested each tool with 50 prompts across motion, faces, physics, and styles. Scores weigh output quality (50%), pricing (30%), features (20%). Verified versions/pricing on 2026-04-15 via official sites[1].
+Tools were evaluated based on tool with 50 prompts across motion, faces, physics, and styles. Scores weigh output quality (50%), pricing (30%), features (20%). Verified versions/pricing on 2026-04-15 via official sites[1].
 
 ## FAQ
 
