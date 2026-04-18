@@ -5,6 +5,7 @@ import ToolCard from '../components/ToolCard.astro';
 import HomepageLD from '../components/seo/HomepageLD.astro';
 import EmailCapture from '../components/EmailCapture.astro';
 import RecentlyViewed from '../components/RecentlyViewed.astro';
+import logoManifest from '../data/logo-manifest.json';
 
 const allTools = await getCollection('tools');
 const trends = await getCollection('trends');
@@ -88,11 +89,15 @@ const categoryRail = categories
     const gradient = categoryGradients[slug] ?? 'linear-gradient(135deg, #a78bfa, #60a5fa)';
     const tools = scoredTools
       .filter((t) => t.tool.data.category === slug || (Array.isArray(t.tool.data.secondary_categories) && t.tool.data.secondary_categories.includes(slug)))
-      .slice(0, 4)
-      .map((t) => ({
-        slug: t.tool.data.slug || t.tool.id.replace(/\.md$/, ''),
-        title: t.tool.data.title,
-      }));
+      .slice(0, 5)
+      .map((t) => {
+        const toolSlug = t.tool.data.slug || t.tool.id.replace(/\.md$/, '');
+        return {
+          slug: toolSlug,
+          title: t.tool.data.title,
+          logo: (logoManifest as Record<string, string>)[toolSlug] ?? `/logos/tools/${toolSlug}.png`,
+        };
+      });
     const count = scoredTools.filter((t) => t.tool.data.category === slug).length;
     return { slug, label, emoji, gradient, tools, count };
   })
@@ -164,12 +169,12 @@ const featuredComparisons = comparisons
 
     <div id="cat-rail" class="cat-rail -mx-4 px-4 md:mx-0 md:px-0 overflow-x-auto overflow-y-visible">
       <div id="cat-rail-track" class="cat-rail-track flex gap-3">
-      <a href="/tools/" class="cat-card shrink-0 w-[200px] rounded-xl overflow-hidden no-underline group relative" style="background: linear-gradient(135deg, rgba(167,139,250,0.18), rgba(96,165,250,0.12)); border: 1px solid rgba(167,139,250,0.28);">
-        <div class="px-3 py-2.5 flex flex-col gap-1.5">
+      <a href="/tools/" class="cat-card shrink-0 w-[168px] rounded-xl overflow-hidden no-underline group relative" style="background: linear-gradient(135deg, rgba(167,139,250,0.18), rgba(96,165,250,0.12)); border: 1px solid rgba(167,139,250,0.28);">
+        <div class="px-3 py-2 flex flex-col gap-1">
           <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-[var(--accent-primary)]">All tools</div>
           <div class="text-[18px] font-bold text-[var(--text-primary)] leading-tight">{allTools.length} tools</div>
           <div class="text-[11px] text-[var(--text-muted)] group-hover:text-[var(--text-secondary)] transition-colors">
-            Browse the full catalog &rarr;
+            Browse the catalog &rarr;
           </div>
         </div>
       </a>
@@ -177,12 +182,12 @@ const featuredComparisons = comparisons
       {categoryRail.map((cat) => (
         <a
           href={`/categories/${cat.slug}/`}
-          class="cat-card shrink-0 w-[200px] rounded-xl no-underline group relative overflow-hidden"
+          class="cat-card shrink-0 w-[168px] rounded-xl no-underline group relative overflow-hidden"
           style={`background: var(--bg-card); border: 1px solid var(--border); --cat-grad: ${cat.gradient};`}
         >
           <span class="cat-card-accent" aria-hidden="true" style={`background: ${cat.gradient};`}></span>
           <span class="cat-card-glow" aria-hidden="true" style={`background: ${cat.gradient};`}></span>
-          <div class="relative px-3 py-2.5 flex flex-col gap-2">
+          <div class="relative px-3 py-2 flex flex-col gap-1.5">
             <div class="flex items-center gap-2">
               <span
                 class="shrink-0 inline-flex items-center justify-center rounded-md text-[14px] leading-none"
@@ -194,16 +199,16 @@ const featuredComparisons = comparisons
               <span class="text-[13px] font-bold text-[var(--text-primary)] group-hover:text-[var(--accent-primary)] transition-colors truncate">{cat.label}</span>
               <span class="ml-auto text-[10px] font-semibold text-[var(--text-muted)] tabular-nums shrink-0">{cat.count}</span>
             </div>
-            <div class="flex items-center gap-1.5 min-h-[24px]">
-              {cat.tools.slice(0, 3).map((t) => (
+            <div class="flex items-center gap-1 min-h-[22px]">
+              {cat.tools.slice(0, 5).map((t) => (
                 <img
-                  src={`/logos/tools/${t.slug}.png`}
+                  src={t.logo}
                   alt=""
-                  width="24"
-                  height="24"
+                  width="22"
+                  height="22"
                   loading="lazy"
                   class="cat-tool-logo block object-contain"
-                  style="width: 24px; height: 24px; border-radius: 5px;"
+                  style="width: 22px; height: 22px; border-radius: 5px; background: #fff; padding: 1px; box-sizing: border-box;"
                   title={t.title}
                   onerror="this.style.display='none'"
                 />
