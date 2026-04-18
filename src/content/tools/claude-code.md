@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "$20-$200/month"
 status: active
 launched: 2025-02
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-04-18
+last_verified: 2026-04-18
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -48,6 +48,10 @@ price_history:
     plan: "Pro"
     price: "$20/mo"
     note: "Claude Code available on Pro tier as of 2026; previously Max-only."
+  - date: 2026-04-17
+    plan: "Claude Design handoff"
+    price: "Bundled"
+    note: "Claude Code now receives production-build bundles from Claude Design (new Pro+ product). Closed loop: prompt -> design -> Claude Code -> working app."
 ---
 
 # Claude Code
@@ -55,6 +59,13 @@ price_history:
 Claude Code is Anthropic's terminal-based agentic coding CLI. It runs inside your shell, reads files across an entire codebase, writes code, executes tests, runs commands, and self-corrects through errors without manual intervention.
 
 Claude Opus 4.7 (released April 16, 2026) is the default backing model. Access is included with Claude Pro at $20/mo and scales through Max 5x at $100/mo and Max 20x at $200/mo. No free tier.
+
+## Recent developments (April 2026)
+
+- **April 17:** [Claude Design ships](/news/2026-04-17-anthropic-launches-claude-design/) with a direct handoff path to Claude Code. Design a prototype in Claude Design, then one-click package it into a production-build bundle for Claude Code. Closed loop: prompt → design → working app.
+- **April 17:** [Cursor, Windsurf, Zed, Continue, GitHub Copilot all shipped Opus 4.7 support within 24 hours](/news/2026-04-17-opus-4-7-day-two-ide-adoption/) of the Anthropic release. Claude Code itself picked up 4.7 on day zero through the Anthropic SDK.
+- **April 16:** Opus 4.7 released, now default backing model. Takes measurable leads on agentic coding, scaled tool use, and long-context reasoning.
+- **April 14:** [Claude computer-use agent](/news/2026-04-14-anthropic-claude-computer-use-agent/) expands availability. Available inside Claude Code as research preview.
 
 ## System Verdict
 

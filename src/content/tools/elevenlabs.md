@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: $0-$990/month
 status: active
 launched: 2023-01
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-04-18
+last_verified: 2026-04-18
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -46,6 +46,10 @@ price_history:
     plan: "Eleven v3"
     price: "GA"
     note: "v3 exited alpha to general availability; recommended for narration and audiobooks"
+  - date: 2026-03-16
+    plan: "Competitive landscape"
+    price: "Grok TTS API launched"
+    note: "xAI shipped Grok TTS at $4.20/1M chars with 5 voices + 20+ languages. First major TTS-API competitor to ElevenLabs since 2023. ElevenLabs still leads on voice cloning depth + language breadth + expressiveness, but the pricing floor moved."
   - date: 2026-04-15
     plan: "Starter"
     price: "$6/mo"

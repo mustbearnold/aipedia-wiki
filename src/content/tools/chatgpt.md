@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2022-11
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-04-18
+last_verified: 2026-04-18
 update_frequency: monthly
 seo_title: "ChatGPT: Features, Pricing & Review (April 2026)"
 meta_description: "ChatGPT runs on GPT-5.3 and GPT-5.4 models as of April 2026. Free tier includes ads; Plus is $20/mo ad-free; Pro plans at $100 and $200/mo add Codex coding agent. DALL-E and Sora are retired."
@@ -42,14 +42,34 @@ not_best_for:
 quick_answer: >-
   ChatGPT is the broadest AI assistant in a single subscription. Pick it for text, image gen, Codex coding agent, Operator mode, and the largest custom-GPT marketplace. Skip it for best-in-class reasoning (Claude Opus 4.7), Google Workspace depth (Gemini), or video generation.
 price_history:
+  - date: 2026-03-09
+    plan: "Acquisition"
+    price: "Promptfoo"
+    note: "OpenAI acquires Promptfoo, AI security testing platform. Feeds into OpenAI Frontier. Open-source license preserved."
+  - date: 2026-03-31
+    plan: "Company funding"
+    price: "$122B round / $852B valuation"
+    note: "Largest private raise in history. Anchored by SoftBank, Amazon, Nvidia, a16z, D. E. Shaw. $3B from retail investors."
   - date: 2026-04-09
     plan: "Pro"
     price: "$100/mo"
     note: "New $100 Pro tier launched with 5x Codex (10x promo to May 31 2026)"
+  - date: 2026-04-14
+    plan: "Acquisition"
+    price: "Hiro Finance"
+    note: "OpenAI acquires personal finance startup (acqui-hire). Hiro product sunsets April 20; second fintech buy after Roi."
   - date: 2026-04-15
     plan: "Plus"
     price: "$20/mo"
     note: "Verified, unchanged"
+  - date: 2026-04-16
+    plan: "Agents SDK update"
+    price: "Same"
+    note: "Native sandbox execution, model-native harness, configurable memory, snapshotting. Python first, TypeScript coming."
+  - date: 2026-04-16
+    plan: "GPT-Rosalind"
+    price: "Research preview"
+    note: "Life sciences reasoning model for biology, drug discovery, translational medicine. Plus Codex research plugin with 50+ tools."
 ---
 
 # ChatGPT
@@ -57,6 +77,15 @@ price_history:
 OpenAI's general-purpose AI assistant. Runs the GPT-5 model family across web, mobile, and desktop: text, image generation (GPT Image 1.5), web browsing with citations, sandboxed code execution, the Codex coding agent, and Operator Agent Mode in a single interface.
 
 No video generation. Sora was shut down in March 2026.
+
+## Recent developments (March-April 2026)
+
+- **April 16, 2026:** [Agents SDK ships native sandbox execution](/news/2026-04-16-openai-agents-sdk-sandbox-update/) + model-native harness + configurable memory + snapshotting. Python first, TypeScript coming.
+- **April 16, 2026:** [GPT-Rosalind research preview](/news/2026-04-16-openai-gpt-rosalind-drug-discovery/) life-sciences reasoning model for biology, drug discovery, translational medicine.
+- **April 14, 2026:** [OpenAI acquires Hiro Finance](/news/2026-04-14-openai-acquires-hiro-finance/) in acqui-hire. Signals native personal-finance capability incoming to ChatGPT.
+- **April 9, 2026:** [$100/mo Pro tier launched](/news/2026-04-09-chatgpt-pro-100-tier-launch/) between Plus and Pro Max. 5x Codex vs Plus; 10x promo through May 31.
+- **March 31, 2026:** [OpenAI closes $122B round at $852B valuation](/news/2026-03-31-openai-122b-round-852b-valuation/), largest private raise in history.
+- **March 9, 2026:** [OpenAI acquires Promptfoo](/news/2026-03-09-openai-acquires-promptfoo/) AI security testing. Integrating into OpenAI Frontier for enterprise agent deployments.
 
 ## System Verdict
 

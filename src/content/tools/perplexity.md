@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$325/user/month"
 status: active
 launched: 2022-12
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-04-18
+last_verified: 2026-04-18
 update_frequency: monthly
 seo_title: "Perplexity: Features, Pricing & Review (April 2026)"
 meta_description: "Perplexity runs Sonar plus switchable frontier models (GPT-5.4, Claude Opus 4.7, Gemini 3.1 Pro) in April 2026. Free tier; Pro $20/mo; Max $200/mo adds Model Council and Perplexity Computer; Enterprise $40-$325/user. Comet browser free on iOS, Android, Mac, and Windows."
@@ -58,6 +58,11 @@ price_history:
 Perplexity is an AI-native answer engine. Every response is synthesized from live web sources with numbered inline citations (no list of ten blue links, no scraped snippets stripped of attribution).
 
 The house model is **Sonar**, a Llama-tuned search model running on Cerebras infrastructure at ~1,200 tokens/sec. Pro subscribers can override it per query with GPT-5.4, Claude Opus 4.7, Gemini 3.1 Pro, or Grok.
+
+## Recent developments (March-April 2026)
+
+- **April 16:** [Perplexity Personal Computer ships for Mac](/news/2026-04-16-perplexity-personal-computer-mac/), a desktop-native research agent that works across your local files and browser tabs alongside web search.
+- **March 18:** Comet browser paywall dropped. Free across iOS, Android, Mac, and Windows.
 
 Max adds Model Council and Perplexity Computer. The Comet browser is free on every major platform.
 

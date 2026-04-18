@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$249.99/month"
 status: active
 launched: 2023-12
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-04-18
+last_verified: 2026-04-18
 update_frequency: monthly
 seo_title: "Gemini: Features, Pricing & Review (April 2026)"
 meta_description: "Gemini 3.1 Pro is Google's flagship (Feb 2026, 1M token context). Google AI Pro $19.99/mo bundles 5TB storage, Veo 3.1, and Nano Banana 2. Ultra $249.99/mo unlocks Deep Think 3.1 and Nano Banana Pro. Best AI for Google Workspace users."
@@ -61,6 +61,12 @@ price_history:
 Google DeepMind's multimodal AI assistant. **Gemini 3.1 Pro** is the flagship as of February 19, 2026: 1M token context, 77.1% on ARC-AGI-2, native support for text, images, audio, video, and full code repositories.
 
 **Gemini 3.1 Deep Think** handles science, math, and research-grade reasoning for Ultra subscribers. The same subscription covers Workspace integration, Nano Banana image generation, Veo 3.1 video, and the default Android assistant.
+
+## Recent developments (April 2026)
+
+- **April 17:** [Google Photos ↔ Gemini integration](/news/2026-04-17-google-photos-gemini-nano-banana/) goes live as an opt-in. Paid subscribers can generate images with their own faces and locations via Nano Banana without manually uploading reference photos. First major consumer integration where one toggle unlocks broad library access for generative models.
+- **April 15:** [Google Whisk + Doppl shutdown announced](/news/2026-04-15-google-whisk-doppl-shutdown/) for April 30. Doppl's virtual try-on capability folds into Google Search and Shopping. Whisk fully sunsets. Pattern of Google retiring experimental AI apps into core products continues.
+- **April 10:** [Google Gemini ships 3D model generation](/news/2026-04-10-google-gemini-3d-models/) inside the app. Text or image input produces 3D assets for AR/VR workflows.
 
 ## System Verdict
 
