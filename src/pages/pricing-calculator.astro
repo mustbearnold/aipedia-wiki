@@ -4,129 +4,76 @@ import Breadcrumb from '../components/Breadcrumb.astro';
 import EmailCapture from '../components/EmailCapture.astro';
 import { getCollection } from 'astro:content';
 
-// Load tools that have plausible pricing we can reason about for the calculator.
-// The calculator is opinionated: it shows monthly cost per tool based on a
-// simplified usage model (users + usage tier). For tools with API-only
-// pricing we use common usage patterns.
+// Parse price_range string like "$0-$200/month" or "$10/mo" into { min, max } numbers.
+// Handles k/K (thousands), commas, decimals, "Free", and ranges.
+function parsePriceRange(priceRange: string | undefined | null): { min: number; max: number } {
+  if (!priceRange) return { min: 0, max: 0 };
+  const s = String(priceRange).toLowerCase();
+
+  // Pull every dollar amount in the string, strip commas.
+  const matches = [...s.matchAll(/\$?\s*(\d+(?:,\d{3})*(?:\.\d+)?)\s*([km])?/g)]
+    .map(m => {
+      let n = parseFloat(m[1].replace(/,/g, ''));
+      if (m[2] === 'k') n *= 1000;
+      if (m[2] === 'm') n *= 1000000;
+      return n;
+    })
+    .filter(n => Number.isFinite(n) && n >= 0);
+
+  if (matches.length === 0) {
+    // Handle "Free" as $0 if price_range is just "Free"
+    if (/free/i.test(s)) return { min: 0, max: 0 };
+    return { min: 0, max: 0 };
+  }
+  if (matches.length === 1) return { min: matches[0], max: matches[0] };
+  return { min: Math.min(...matches), max: Math.max(...matches) };
+}
 
 const allTools = await getCollection('tools');
 
-// Whitelist of tools the calculator supports with accurate per-month cost models
-const SUPPORTED = [
-  { slug: 'chatgpt', name: 'ChatGPT', category: 'ai-chatbots', plans: [
-    { id: 'free', label: 'Free', price: 0 },
-    { id: 'plus', label: 'Plus ($20/mo)', price: 20 },
-    { id: 'pro', label: 'Pro ($200/mo)', price: 200 },
-    { id: 'team', label: 'Team ($25/user/mo)', price: 25, perUser: true },
-  ]},
-  { slug: 'claude', name: 'Claude', category: 'ai-chatbots', plans: [
-    { id: 'free', label: 'Free', price: 0 },
-    { id: 'pro', label: 'Pro ($20/mo)', price: 20 },
-    { id: 'max5', label: 'Max 5x ($100/mo)', price: 100 },
-    { id: 'max20', label: 'Max 20x ($200/mo)', price: 200 },
-    { id: 'team', label: 'Team ($30/user/mo)', price: 30, perUser: true },
-  ]},
-  { slug: 'gemini', name: 'Gemini', category: 'ai-chatbots', plans: [
-    { id: 'free', label: 'Free', price: 0 },
-    { id: 'advanced', label: 'Advanced ($20/mo)', price: 20 },
-  ]},
-  { slug: 'perplexity', name: 'Perplexity', category: 'ai-search', plans: [
-    { id: 'free', label: 'Free', price: 0 },
-    { id: 'pro', label: 'Pro ($20/mo)', price: 20 },
-  ]},
-  { slug: 'cursor', name: 'Cursor', category: 'ai-coding', plans: [
-    { id: 'hobby', label: 'Hobby (Free)', price: 0 },
-    { id: 'pro', label: 'Pro ($20/mo)', price: 20 },
-    { id: 'business', label: 'Business ($40/user/mo)', price: 40, perUser: true },
-  ]},
-  { slug: 'github-copilot', name: 'GitHub Copilot', category: 'ai-coding', plans: [
-    { id: 'individual', label: 'Individual ($10/mo)', price: 10 },
-    { id: 'pro', label: 'Pro+ ($39/mo)', price: 39 },
-    { id: 'business', label: 'Business ($19/user/mo)', price: 19, perUser: true },
-  ]},
-  { slug: 'claude-code', name: 'Claude Code', category: 'ai-coding', plans: [
-    { id: 'api', label: 'API usage only (~$50-150/mo)', price: 100 },
-    { id: 'max5', label: 'Included with Claude Max 5x', price: 0, note: 'Requires Claude Max' },
-    { id: 'max20', label: 'Included with Claude Max 20x', price: 0, note: 'Requires Claude Max' },
-  ]},
-  { slug: 'midjourney', name: 'Midjourney', category: 'ai-image', plans: [
-    { id: 'basic', label: 'Basic ($10/mo)', price: 10 },
-    { id: 'standard', label: 'Standard ($30/mo)', price: 30 },
-    { id: 'pro', label: 'Pro ($60/mo)', price: 60 },
-    { id: 'mega', label: 'Mega ($120/mo)', price: 120 },
-  ]},
-  { slug: 'ideogram', name: 'Ideogram', category: 'ai-image', plans: [
-    { id: 'free', label: 'Free', price: 0 },
-    { id: 'basic', label: 'Basic ($8/mo)', price: 8 },
-    { id: 'plus', label: 'Plus ($20/mo)', price: 20 },
-    { id: 'pro', label: 'Pro ($60/mo)', price: 60 },
-  ]},
-  { slug: 'elevenlabs', name: 'ElevenLabs', category: 'ai-voice', plans: [
-    { id: 'free', label: 'Free', price: 0 },
-    { id: 'starter', label: 'Starter ($5/mo)', price: 5 },
-    { id: 'creator', label: 'Creator ($22/mo)', price: 22 },
-    { id: 'pro', label: 'Pro ($99/mo)', price: 99 },
-    { id: 'scale', label: 'Scale ($330/mo)', price: 330 },
-  ]},
-  { slug: 'runway', name: 'Runway', category: 'ai-video', plans: [
-    { id: 'free', label: 'Free', price: 0 },
-    { id: 'standard', label: 'Standard ($15/mo)', price: 15 },
-    { id: 'pro', label: 'Pro ($35/mo)', price: 35 },
-    { id: 'unlimited', label: 'Unlimited ($95/mo)', price: 95 },
-  ]},
-  { slug: 'kling', name: 'Kling', category: 'ai-video', plans: [
-    { id: 'free', label: 'Free', price: 0 },
-    { id: 'standard', label: 'Standard ($10/mo)', price: 10 },
-    { id: 'pro', label: 'Pro ($37/mo)', price: 37 },
-    { id: 'premier', label: 'Premier ($92/mo)', price: 92 },
-  ]},
-  { slug: 'zapier', name: 'Zapier', category: 'ai-automation', plans: [
-    { id: 'free', label: 'Free', price: 0 },
-    { id: 'starter', label: 'Starter ($20/mo)', price: 20 },
-    { id: 'professional', label: 'Professional ($49/mo)', price: 49 },
-    { id: 'team', label: 'Team ($103/user/mo)', price: 103, perUser: true },
-  ]},
-  { slug: 'n8n', name: 'n8n', category: 'ai-automation', plans: [
-    { id: 'self', label: 'Self-hosted (Free)', price: 0 },
-    { id: 'starter', label: 'Cloud Starter (€20/mo)', price: 22 },
-    { id: 'pro', label: 'Cloud Pro (€50/mo)', price: 55 },
-  ]},
-  { slug: 'notion-ai', name: 'Notion AI', category: 'ai-notes', plans: [
-    { id: 'addon', label: 'AI add-on ($10/user/mo)', price: 10, perUser: true },
-  ]},
-  { slug: 'grammarly', name: 'Grammarly', category: 'ai-writing', plans: [
-    { id: 'free', label: 'Free', price: 0 },
-    { id: 'pro', label: 'Pro ($12/mo)', price: 12 },
-    { id: 'business', label: 'Business ($15/user/mo)', price: 15, perUser: true },
-  ]},
-  { slug: 'jasper', name: 'Jasper', category: 'ai-writing', plans: [
-    { id: 'creator', label: 'Creator ($49/mo)', price: 49 },
-    { id: 'pro', label: 'Pro ($69/mo)', price: 69 },
-    { id: 'business', label: 'Business (custom)', price: 0, note: 'Contact sales' },
-  ]},
-  { slug: 'canva', name: 'Canva', category: 'ai-design', plans: [
-    { id: 'free', label: 'Free', price: 0 },
-    { id: 'pro', label: 'Pro ($15/mo)', price: 15 },
-    { id: 'teams', label: 'Teams ($30/user/mo)', price: 30, perUser: true },
-  ]},
-  { slug: 'figma', name: 'Figma', category: 'ai-design', plans: [
-    { id: 'free', label: 'Free', price: 0 },
-    { id: 'professional', label: 'Professional ($15/user/mo)', price: 15, perUser: true },
-    { id: 'organization', label: 'Organization ($45/user/mo)', price: 45, perUser: true },
-  ]},
-  { slug: 'suno', name: 'Suno', category: 'ai-music', plans: [
-    { id: 'free', label: 'Free', price: 0 },
-    { id: 'pro', label: 'Pro ($10/mo)', price: 10 },
-    { id: 'premier', label: 'Premier ($30/mo)', price: 30 },
-  ]},
-];
+const tools = allTools
+  .filter(t => t.data.status !== 'dead')
+  .map(t => {
+    const { min, max } = parsePriceRange(t.data.price_range);
+    const slug = t.data.slug || t.id.replace(/\.md$/, '');
+    return {
+      slug,
+      title: t.data.title,
+      category: t.data.category || 'other',
+      priceRange: t.data.price_range || '',
+      min,
+      max,
+      // Heuristic: "per user" if the price_range mentions /user or /seat
+      perUser: /\/(user|seat)/i.test(String(t.data.price_range || '')),
+    };
+  })
+  .filter(t => t.max > 0 || /free/i.test(String(t.priceRange))) // keep paid tools + explicit free tools
+  .sort((a, b) => a.title.localeCompare(b.title));
 
-const CATEGORIES = [...new Set(SUPPORTED.map(t => t.category))].sort();
+const categories = [...new Set(tools.map(t => t.category))].sort();
+
+// Emoji per category (matches the stack-builder convention)
+const CAT_EMOJI: Record<string, string> = {
+  'ai-chatbots': '💬',
+  'ai-coding': '💻',
+  'ai-writing': '✍️',
+  'ai-image': '🎨',
+  'ai-video': '🎬',
+  'ai-voice': '🎙️',
+  'ai-notes': '📝',
+  'ai-search': '🔍',
+  'ai-seo': '📈',
+  'ai-automation': '⚡',
+  'ai-design': '🖌️',
+  'ai-music': '🎵',
+  'ai-presentation': '📊',
+  'ai-research': '🔬',
+};
 ---
 
 <BaseLayout
   title="AI Stack Pricing Calculator — Monthly Cost Estimator — aipedia.wiki"
-  description="Estimate monthly cost for any combination of 20+ AI tools including ChatGPT, Claude, Cursor, Midjourney, ElevenLabs, and more. Live pricing verified monthly."
+  description="Calculate the monthly cost of any AI tool stack. Pick as many tools as you want from 200+ AI tools. Pricing verified April 2026."
 >
   <Breadcrumb items={[{ label: 'Pricing Calculator' }]} />
 
@@ -135,34 +82,79 @@ const CATEGORIES = [...new Set(SUPPORTED.map(t => t.category))].sort();
       AI Stack <span class="bg-gradient-to-r from-[#a78bfa] to-[#60a5fa] bg-clip-text text-transparent">pricing calculator</span>
     </h1>
     <p class="text-[var(--text-secondary)] text-sm sm:text-base max-w-2xl leading-relaxed">
-      Pick the tools you use, pick the plan, pick how many seats. Get your monthly cost. Pricing verified April 2026.
+      Pick any AI tools from our {tools.length}-tool library. Choose your tier (low / high end of the published price range) and seat count. See your monthly and yearly cost update live. Pricing verified April 2026.
     </p>
   </section>
 
-  <div class="lg:grid lg:grid-cols-[1fr_320px] lg:gap-8 mb-12">
+  <div class="lg:grid lg:grid-cols-[1fr_340px] lg:gap-8 mb-12">
     <section>
-      <div id="calc-grid" class="space-y-4">
-        {CATEGORIES.map((cat) => (
-          <div class="rounded-xl border border-[var(--border)] bg-[var(--bg-card)] p-4">
-            <h2 class="text-[11px] font-semibold uppercase tracking-[0.12em] text-[var(--accent-primary)] mb-3">
-              {cat.replace(/^ai-/, '').replace(/-/g, ' ')}
-            </h2>
-            <div class="space-y-3">
-              {SUPPORTED.filter(t => t.category === cat).map((t) => (
-                <div class="calc-tool flex items-center gap-3 flex-wrap" data-slug={t.slug}>
-                  <label class="inline-flex items-center gap-2 min-w-[140px]">
-                    <input type="checkbox" class="calc-enable accent-[var(--accent-primary)]" data-slug={t.slug} />
-                    <span class="text-sm font-medium text-[var(--text-primary)]">{t.name}</span>
-                  </label>
-                  <select class="calc-plan flex-1 min-w-[200px] rounded-lg border border-[var(--border)] bg-[var(--bg-base)] px-3 py-1.5 text-sm text-[var(--text-primary)]" data-slug={t.slug} disabled>
-                    {t.plans.map((p) => (
-                      <option value={p.id} data-price={p.price} data-per-user={p.perUser ? 'true' : 'false'}>{p.label}</option>
-                    ))}
-                  </select>
-                  <input type="number" class="calc-seats w-20 rounded-lg border border-[var(--border)] bg-[var(--bg-base)] px-3 py-1.5 text-sm text-[var(--text-primary)]" data-slug={t.slug} value="1" min="1" max="100" disabled />
+      <!-- Search + category filter -->
+      <div class="sticky top-16 z-10 bg-[var(--bg-base)] pt-1 pb-3 mb-3 border-b border-[var(--border)]">
+        <div class="flex items-center gap-2 mb-2">
+          <input
+            id="calc-search"
+            type="search"
+            placeholder="Search AI tools (e.g. Claude, Midjourney, Cursor, Grok)..."
+            class="flex-1 rounded-lg border border-[var(--border)] bg-[var(--bg-card)] px-3 py-2 text-sm text-[var(--text-primary)] placeholder:text-[var(--text-muted)] focus:outline-none focus:border-[var(--accent-primary)]"
+          />
+          <select id="calc-category" class="rounded-lg border border-[var(--border)] bg-[var(--bg-card)] px-3 py-2 text-sm text-[var(--text-primary)]">
+            <option value="">All categories</option>
+            {categories.map(c => (
+              <option value={c}>{CAT_EMOJI[c] || '🔧'} {c.replace(/^ai-/, '').replace(/-/g, ' ')}</option>
+            ))}
+          </select>
+        </div>
+        <div class="text-xs text-[var(--text-muted)]">
+          <span id="calc-shown-count">{tools.length}</span> of {tools.length} tools shown.
+          <span class="text-[var(--accent-primary)] ml-2"><span id="calc-picked-count">0</span> picked</span>.
+        </div>
+      </div>
+
+      <!-- Tool list -->
+      <div id="calc-tool-list" class="space-y-2">
+        {tools.map(t => (
+          <div
+            class="calc-tool flex items-center gap-3 p-3 rounded-xl border border-[var(--border)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] transition-colors"
+            data-slug={t.slug}
+            data-title={t.title.toLowerCase()}
+            data-category={t.category}
+            data-min={t.min}
+            data-max={t.max}
+            data-per-user={t.perUser ? 'true' : 'false'}
+          >
+            <label class="flex items-center gap-2 cursor-pointer flex-1 min-w-0">
+              <input type="checkbox" class="calc-enable accent-[var(--accent-primary)]" />
+              <div class="min-w-0 flex-1">
+                <div class="flex items-center gap-2">
+                  <span class="text-base">{CAT_EMOJI[t.category] || '🔧'}</span>
+                  <span class="text-sm font-semibold text-[var(--text-primary)] truncate">{t.title}</span>
                 </div>
-              ))}
-            </div>
+                <div class="text-xs text-[var(--text-muted)] truncate">{t.priceRange || 'Free'}</div>
+              </div>
+            </label>
+            <select
+              class="calc-tier rounded-lg border border-[var(--border)] bg-[var(--bg-base)] px-2 py-1 text-xs text-[var(--text-primary)]"
+              disabled
+            >
+              <option value="min" data-price={t.min}>Low (${t.min})</option>
+              {t.min !== t.max && (
+                <option value="mid" data-price={Math.round((t.min + t.max) / 2)}>Mid (${Math.round((t.min + t.max) / 2)})</option>
+              )}
+              {t.min !== t.max && (
+                <option value="max" data-price={t.max} selected>High (${t.max})</option>
+              )}
+            </select>
+            {t.perUser && (
+              <input
+                type="number"
+                class="calc-seats w-14 rounded-lg border border-[var(--border)] bg-[var(--bg-base)] px-2 py-1 text-xs text-[var(--text-primary)]"
+                value="1"
+                min="1"
+                max="999"
+                title="Seats"
+                disabled
+              />
+            )}
           </div>
         ))}
       </div>
@@ -171,10 +163,10 @@ const CATEGORIES = [...new Set(SUPPORTED.map(t => t.category))].sort();
     <aside class="lg:sticky lg:top-20 lg:self-start mt-8 lg:mt-0">
       <div class="rounded-xl border border-[rgba(167,139,250,0.3)] bg-gradient-to-br from-[rgba(167,139,250,0.1)] via-[rgba(96,165,250,0.06)] to-transparent p-5">
         <div class="text-[11px] font-semibold uppercase tracking-[0.12em] text-[var(--accent-primary)] mb-2">Your Stack</div>
-        <div id="calc-total-monthly" class="text-3xl font-bold text-[var(--text-primary)] leading-none mb-1">$0</div>
+        <div id="calc-total-monthly" class="text-3xl font-bold text-[var(--text-primary)] leading-none mb-1">$0/mo</div>
         <div class="text-xs text-[var(--text-muted)] mb-4"><span id="calc-total-yearly">$0</span>/year</div>
 
-        <ul id="calc-breakdown" class="space-y-1.5 text-sm text-[var(--text-secondary)] border-t border-[var(--border)] pt-3">
+        <ul id="calc-breakdown" class="space-y-1.5 text-sm text-[var(--text-secondary)] border-t border-[var(--border)] pt-3 max-h-[400px] overflow-y-auto">
           <li class="text-xs text-[var(--text-muted)]">Pick tools to see a breakdown.</li>
         </ul>
 
@@ -188,7 +180,7 @@ const CATEGORIES = [...new Set(SUPPORTED.map(t => t.category))].sort();
       </div>
 
       <p class="text-xs text-[var(--text-muted)] mt-3 leading-relaxed">
-        All prices in USD. Pricing verified April 2026. Self-hosted and free plans count as $0. "Contact sales" plans show as $0 with a note. Email <a href="mailto:hello@aipedia.wiki" class="text-[var(--accent-primary)] no-underline">hello@aipedia.wiki</a> if a number looks wrong.
+        All prices in USD. Pricing verified April 2026. Ranges are parsed from each tool's published <code>price_range</code>. Low / Mid / High reflect the bottom, middle, and top of that range. Free plans count as $0. Email <a href="mailto:hello@aipedia.wiki" class="text-[var(--accent-primary)] no-underline">hello@aipedia.wiki</a> if a number looks wrong.
       </p>
     </aside>
   </div>
@@ -200,9 +192,7 @@ const CATEGORIES = [...new Set(SUPPORTED.map(t => t.category))].sort();
       if (window.__calcBound) return;
       window.__calcBound = true;
 
-      function currency(n) {
-        return '$' + Math.round(n).toLocaleString();
-      }
+      const currency = (n) => '$' + Math.round(n).toLocaleString();
 
       function compute() {
         const rows = document.querySelectorAll('.calc-tool');
@@ -210,23 +200,25 @@ const CATEGORIES = [...new Set(SUPPORTED.map(t => t.category))].sort();
         const lines = [];
         rows.forEach((row) => {
           const enable = row.querySelector('.calc-enable');
-          const plan = row.querySelector('.calc-plan');
-          const seats = row.querySelector('.calc-seats');
-          if (!enable || !plan || !seats) return;
-          plan.disabled = !enable.checked;
-          seats.disabled = !enable.checked;
+          const tier = row.querySelector('.calc-tier');
+          const seats = row.querySelector('.calc-seats'); // may be null
+          if (!enable || !tier) return;
+          tier.disabled = !enable.checked;
+          if (seats) seats.disabled = !enable.checked;
           if (!enable.checked) return;
 
-          const selected = plan.options[plan.selectedIndex];
-          const price = Number(selected.getAttribute('data-price') || 0);
-          const perUser = selected.getAttribute('data-per-user') === 'true';
-          const count = Math.max(1, Number(seats.value || 1));
+          const selected = tier.options[tier.selectedIndex];
+          const price = Number(selected?.getAttribute('data-price') || 0);
+          const perUser = row.getAttribute('data-per-user') === 'true';
+          const count = seats ? Math.max(1, Number(seats.value || 1)) : 1;
           const monthly = perUser ? price * count : price;
-          if (monthly === 0 && !/free|self/i.test(selected.textContent)) return;
-          const name = row.querySelector('.calc-enable + span')?.textContent || row.getAttribute('data-slug');
+
+          const titleEl = row.querySelector('.calc-enable ~ div .text-sm');
+          const name = titleEl ? titleEl.textContent : row.getAttribute('data-slug');
+
           lines.push({
             name,
-            label: selected.textContent.replace(/\s*\([^)]*\)\s*$/, ''),
+            label: selected?.value === 'min' ? 'Low end' : selected?.value === 'mid' ? 'Mid' : 'High end',
             seats: perUser ? count : 1,
             perUser,
             monthly,
@@ -236,61 +228,90 @@ const CATEGORIES = [...new Set(SUPPORTED.map(t => t.category))].sort();
 
         document.getElementById('calc-total-monthly').textContent = currency(total) + '/mo';
         document.getElementById('calc-total-yearly').textContent = currency(total * 12);
+        document.getElementById('calc-picked-count').textContent = String(lines.length);
 
         const ul = document.getElementById('calc-breakdown');
         if (lines.length === 0) {
           ul.innerHTML = '<li class="text-xs text-[var(--text-muted)]">Pick tools to see a breakdown.</li>';
         } else {
           ul.innerHTML = lines.map((l) => {
-            const seatLabel = l.perUser && l.seats > 1 ? ' x' + l.seats : '';
+            const seatLabel = l.perUser && l.seats > 1 ? ' ×' + l.seats : '';
             return '<li class="flex justify-between gap-3"><span class="truncate"><strong class="text-[var(--text-primary)] font-medium">' + l.name + '</strong><span class="text-[var(--text-muted)] text-xs"> ' + l.label + seatLabel + '</span></span><span class="text-[var(--text-primary)] font-medium tabular-nums shrink-0">' + currency(l.monthly) + '</span></li>';
           }).join('');
         }
 
-        // Persist to localStorage
+        // Persist
         try {
-          const state = {};
+          const state = [];
           rows.forEach((row) => {
-            const slug = row.getAttribute('data-slug');
-            state[slug] = {
-              enabled: row.querySelector('.calc-enable').checked,
-              plan: row.querySelector('.calc-plan').value,
-              seats: row.querySelector('.calc-seats').value,
-            };
+            const enable = row.querySelector('.calc-enable');
+            if (!enable?.checked) return;
+            const tier = row.querySelector('.calc-tier');
+            const seats = row.querySelector('.calc-seats');
+            state.push({
+              slug: row.getAttribute('data-slug'),
+              tier: tier?.value,
+              seats: seats?.value || '1',
+            });
           });
-          localStorage.setItem('calc-state', JSON.stringify(state));
+          localStorage.setItem('calc-state-v2', JSON.stringify(state));
         } catch (_) {}
       }
 
       function restore() {
         try {
-          const state = JSON.parse(localStorage.getItem('calc-state') || '{}');
-          Object.keys(state).forEach((slug) => {
-            const row = document.querySelector('.calc-tool[data-slug="' + slug + '"]');
+          const raw = localStorage.getItem('calc-state-v2');
+          if (!raw) return;
+          const state = JSON.parse(raw);
+          if (!Array.isArray(state)) return;
+          state.forEach((s) => {
+            const row = document.querySelector('.calc-tool[data-slug="' + s.slug + '"]');
             if (!row) return;
-            const s = state[slug];
-            if (s.enabled) row.querySelector('.calc-enable').checked = true;
-            if (s.plan) row.querySelector('.calc-plan').value = s.plan;
-            if (s.seats) row.querySelector('.calc-seats').value = s.seats;
+            const enable = row.querySelector('.calc-enable');
+            const tier = row.querySelector('.calc-tier');
+            const seats = row.querySelector('.calc-seats');
+            if (enable) enable.checked = true;
+            if (tier && s.tier) tier.value = s.tier;
+            if (seats && s.seats) seats.value = s.seats;
           });
         } catch (_) {}
       }
 
+      // Filter by search + category
+      function applyFilter() {
+        const q = (document.getElementById('calc-search').value || '').toLowerCase().trim();
+        const cat = document.getElementById('calc-category').value || '';
+        let shown = 0;
+        document.querySelectorAll('.calc-tool').forEach((row) => {
+          const title = row.getAttribute('data-title') || '';
+          const rowCat = row.getAttribute('data-category') || '';
+          const matchQ = !q || title.includes(q);
+          const matchC = !cat || rowCat === cat;
+          const show = matchQ && matchC;
+          row.style.display = show ? '' : 'none';
+          if (show) shown++;
+        });
+        document.getElementById('calc-shown-count').textContent = String(shown);
+      }
+
       document.addEventListener('change', function (e) {
-        if (e.target.matches('.calc-enable, .calc-plan, .calc-seats')) compute();
+        if (e.target.matches('.calc-enable, .calc-tier, .calc-seats')) compute();
+        if (e.target.matches('#calc-category')) applyFilter();
       });
       document.addEventListener('input', function (e) {
         if (e.target.matches('.calc-seats')) compute();
+        if (e.target.matches('#calc-search')) applyFilter();
       });
       document.getElementById('calc-reset')?.addEventListener('click', function () {
         document.querySelectorAll('.calc-enable').forEach((el) => (el.checked = false));
-        document.querySelectorAll('.calc-seats').forEach((el) => (el.value = 1));
-        try { localStorage.removeItem('calc-state'); } catch (_) {}
+        document.querySelectorAll('.calc-seats').forEach((el) => (el.value = '1'));
+        try { localStorage.removeItem('calc-state-v2'); localStorage.removeItem('calc-state'); } catch (_) {}
         compute();
       });
 
       restore();
       compute();
+      applyFilter();
     })();
   </script>
 </BaseLayout>
