@@ -2,20 +2,20 @@
 type: tool
 slug: claude
 title: Claude
-tagline: Anthropic's AI assistant. Opus 4.7 is the new flagship as of April 16, 2026 · 1M token context, strongest agentic coding via Claude Code, Constitutional AI training for reduced sycophancy.
+tagline: Anthropic's AI assistant. Opus 4.7 flagship (April 16, 2026) + Claude Design (April 17) for prompt-to-prototype workflows + Claude Code CLI for agentic coding. 1M token context. Constitutional AI training.
 category: ai-chatbots
-secondary_categories: [ai-writing, ai-coding]
+secondary_categories: [ai-writing, ai-coding, ai-design]
 company: anthropic
 url: https://claude.ai
 pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2023-03
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-04-18
+last_verified: 2026-04-18
 update_frequency: monthly
 seo_title: "Claude: Features, Pricing & Review (2026)"
-meta_description: "Claude runs Opus 4.7 (released April 16, 2026) as flagship, Sonnet 4.6, and Haiku 4.5. 1M token context, same $5/$25 per MTok API pricing as 4.6. Free tier available; Pro $20/mo. Best for reasoning, long-form writing, and agentic coding."
+meta_description: "Claude runs Opus 4.7 (April 16, 2026) as flagship, Sonnet 4.6, Haiku 4.5. Claude Design (April 17) added for prompt-to-prototype. 1M context, $5/$25 per MTok API. Free tier; Pro $20/mo."
 author: "aipedia.wiki Editorial"
 affiliate:
   has_program: false
@@ -28,7 +28,7 @@ scores:
   value: 9
   moat: 9
   longevity: 10
-tags: [chatbot, ai-assistant, writing, coding, reasoning, analysis, long-context, artifacts, claude-code, extended-thinking, computer-use]
+tags: [chatbot, ai-assistant, writing, coding, reasoning, analysis, long-context, artifacts, claude-code, claude-design, extended-thinking, computer-use]
 best_for:
   - long-form writing and editing
   - complex reasoning and analysis
@@ -47,6 +47,10 @@ price_history:
     price: "$5 / $25 per MTok"
     note: "New flagship released · per-token pricing matches Opus 4.6; effective cost rises 1.0-1.35x due to new tokenizer"
   - date: 2026-04-17
+    plan: "Claude Design"
+    price: "Bundled in Pro+"
+    note: "New product: prompt-to-prototype tool for slides, mockups, one-pagers. Research preview. Available to Pro, Max, Team, Enterprise. Figma stock fell ~7% on the announcement."
+  - date: 2026-04-17
     plan: "Pro"
     price: "$20/mo"
     note: "Verified, unchanged"
@@ -55,6 +59,8 @@ price_history:
 # Claude
 
 Anthropic's AI assistant. **Opus 4.7** is the flagship as of **April 16, 2026**, narrowly retaking the lead for most powerful generally-available LLM on agentic coding, scaled tool use, computer use, and financial-analysis benchmarks. Sonnet 4.6 and Haiku 4.5 round out the lineup. The 1M token context window carries across Opus and Sonnet; Claude Code CLI handles agentic coding from the terminal; Constitutional AI training targets reduced sycophancy and harmful outputs.
+
+**Claude Design** (launched April 17, 2026) is the newest product: a prompt-to-prototype tool that produces slide decks, app mockups, marketing one-pagers, and pitch materials from text prompts. Powered by Opus 4.7. Reads a company's codebase and design files to apply the existing design system automatically, then hands off to Claude Code for production builds. Exports to PDF, PPTX, URL, or Canva. Available to Claude Pro, Max, Team, and Enterprise subscribers. The launch sent Figma stock down ~7% on the day. See the [full coverage](/news/2026-04-17-anthropic-launches-claude-design/).
 
 ## System Verdict
 
@@ -70,14 +76,16 @@ Anthropic's AI assistant. **Opus 4.7** is the flagship as of **April 16, 2026**,
 |---|---|
 | **Flagship model** | Claude Opus 4.7 (released April 16, 2026) |
 | **Other production models** | Sonnet 4.6 (speed/quality balance) · Haiku 4.5 (fast, high-volume) |
+| **Claude Design** | Prompt-to-prototype tool · launched April 17, 2026 · research preview · Pro/Max/Team/Enterprise only |
 | **Context window** | 1M tokens on Opus and Sonnet · 200K on Haiku |
 | **Max output** | 128K (Opus) · 64K (Sonnet) · 64K (Haiku) |
 | **API pricing** | Opus 4.7: $5 in / $25 out per MTok (new tokenizer = 1.0-1.35× more tokens vs 4.6) |
 | | Sonnet 4.6: $3 / $15 per MTok · Haiku 4.5: $1 / $5 per MTok |
 | **Subscription pricing** | Free · Pro $20 · Max 5x $100 · Max 20x $200 · Team $30/user · Enterprise custom |
 | **Agentic coding** | Claude Code CLI · strongest terminal coding agent available |
-| **Image generation** | None |
-| **Video generation** | None |
+| **Design tooling** | Claude Design · prompt-to-prototype · exports PDF, PPTX, URL, Canva · hands off to Claude Code for build |
+| **Image generation** | None (use Midjourney or GPT Image 1.5 alongside) |
+| **Video generation** | None (use Veo 3 or Kling alongside) |
 | **Separate frontier model** | Mythos Preview (cybersecurity, invitation-only via Project Glasswing) |
 
 ## What it actually is
@@ -168,6 +176,9 @@ Same $5/$25 per MTok pricing, but a new tokenizer generates 1.0-1.35× more toke
 
 **What is Claude Code?**
 A CLI coding agent that reads, writes, and manages full codebases from the terminal. Supports Ultraplan (cloud environment creation, early preview), the Monitor tool for watching running processes, and a Computer Use capability in research preview.
+
+**What is Claude Design?**
+A new (April 17, 2026) prompt-to-prototype product bundled with Claude Pro and higher tiers. Turns text prompts into slide decks, app mockups, one-pagers, and pitch materials. Reads your codebase and design files to extract the design system automatically, so outputs stay on-brand. Exports to PDF, PPTX, URL, or Canva. Hands off to Claude Code for production builds. Direct competition to Figma, Lovable, Bolt.new, and v0. Figma stock fell ~7% on launch. Currently research preview; not in the free tier.
 
 **What is Claude Mythos Preview?**
 A separate frontier model specialized for defensive cybersecurity, announced as part of Project Glasswing (a consortium including AWS, Apple, Google, and Microsoft). Not a general-release product. Access requires an invitation through the Glasswing program.
