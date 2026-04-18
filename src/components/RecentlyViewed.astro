@@ -8,22 +8,22 @@
 
 <section
   id="recently-viewed"
-  class="hidden mb-10"
+  class="hidden mb-6"
   aria-labelledby="recently-viewed-heading"
 >
-  <div class="flex items-baseline justify-between mb-3">
-    <h2 id="recently-viewed-heading" class="text-[11px] font-semibold uppercase tracking-[0.12em] text-[var(--accent-primary)] m-0">
-      Pick up where you left off
+  <div class="flex items-center gap-3 flex-wrap">
+    <h2 id="recently-viewed-heading" class="text-[10px] font-semibold uppercase tracking-[0.12em] text-[var(--accent-primary)] m-0 shrink-0">
+      Resume &rarr;
     </h2>
+    <div id="recently-viewed-list" class="flex gap-2 overflow-x-auto flex-1 min-w-0" style="scrollbar-width: thin;"></div>
     <button
       id="recently-viewed-clear"
       type="button"
-      class="text-[11px] text-[var(--text-muted)] hover:text-[var(--text-secondary)] transition-colors"
+      class="text-[10px] text-[var(--text-muted)] hover:text-[var(--text-secondary)] transition-colors shrink-0 ml-auto"
     >
-      Clear history
+      Clear
     </button>
   </div>
-  <div id="recently-viewed-list" class="flex gap-3 overflow-x-auto pb-1" style="scrollbar-width: thin;"></div>
 </section>
 
 <script is:inline>
@@ -56,9 +56,9 @@
         const title = String(e.title || slug).replace(/[<>"']/g, '');
         if (!slug) return '';
         const logoSrc = '/logos/tools/' + slug + '.png';
-        return '<a href="/tools/' + slug + '/" class="shrink-0 w-[128px] rounded-xl border border-[var(--border)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] hover:border-[rgba(167,139,250,0.35)] transition-colors p-2.5 no-underline group">' +
-          '<img src="' + logoSrc + '" alt="" width="28" height="28" loading="lazy" class="block mb-1.5 object-contain" style="width: 28px; height: 28px; border-radius: 6px; background: #fff; padding: 2px; box-sizing: border-box; box-shadow: 0 0 0 1px rgba(255,255,255,0.12);" onerror="this.style.display=\'none\'" />' +
-          '<div class="text-[13px] font-semibold text-[var(--text-primary)] group-hover:text-[var(--accent-primary)] truncate transition-colors">' + title + '</div>' +
+        return '<a href="/tools/' + slug + '/" class="shrink-0 inline-flex items-center gap-2 rounded-full border border-[var(--border)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] hover:border-[rgba(167,139,250,0.35)] transition-colors pl-1 pr-3 py-1 no-underline group">' +
+          '<img src="' + logoSrc + '" alt="" width="20" height="20" loading="lazy" class="shrink-0 object-contain" style="width: 20px; height: 20px; border-radius: 4px; background: #fff; padding: 1px; box-sizing: border-box;" onerror="this.style.display=\'none\'" />' +
+          '<span class="text-[12px] font-medium text-[var(--text-primary)] group-hover:text-[var(--accent-primary)] transition-colors">' + title + '</span>' +
         '</a>';
       }).join('');
       section.classList.remove('hidden');
