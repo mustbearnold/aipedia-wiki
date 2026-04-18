@@ -2,17 +2,17 @@
 type: tool
 slug: grok
 title: Grok
-tagline: xAI's AI assistant with a 4-agent architecture, 2M token context, and real-time X data access. Now operating under SpaceX ownership post-$1.25T merger.
+tagline: xAI's AI assistant. Grok 4.3 beta (April 17, 2026) adds native PDF/PPT/spreadsheet output + video input on 16-agent Heavy architecture. Now also has TTS API and Voice Mode on X. 2M token context, real-time X data.
 category: ai-chatbots
-secondary_categories: [ai-search]
+secondary_categories: [ai-search, ai-voice]
 company: xAI
 url: https://x.ai
 pricing_model: freemium
-price_range: "$0-$50/month"
+price_range: "$0-$300/month"
 status: active
 launched: 2023-11
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-04-18
+last_verified: 2026-04-18
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -27,7 +27,7 @@ scores:
   longevity: 6
 tags: [ai-assistant, xai, twitter-ai, real-time-search, grok, multi-agent, long-context]
 seo_title: "Grok: Features, Pricing & Review (April 2026)"
-meta_description: "Grok 4.20 Beta 2 is xAI's flagship: 4-agent architecture, 2M token context, ~4.2% hallucination rate. SuperGrok $30/mo. SpaceX acquired xAI for $1.25T in February 2026. Grok 5 in training (Q2 2026 target)."
+meta_description: "Grok 4.3 beta (April 17, 2026) adds PDF, PowerPoint, spreadsheet, and video-input on 16-agent Heavy architecture. SuperGrok Heavy $300/mo (beta access). TTS API + Voice Mode on X. 2M token context, real-time X data. SpaceX-owned post-$1.25T merger."
 author: "aipedia.wiki Editorial"
 best_for:
   - X (Twitter) power users needing real-time feed analysis
@@ -45,19 +45,29 @@ price_history:
     plan: "Ownership"
     price: "$1.25T merger"
     note: "SpaceX acquired xAI in all-stock deal. SpaceX $1T + xAI $250B."
+  - date: 2026-03-16
+    plan: "TTS API"
+    price: "$4.20/M chars"
+    note: "Grok Text-to-Speech API opened to developers. 5 voices, 20+ languages."
   - date: 2026-04-17
-    plan: "SuperGrok"
-    price: "$30/mo"
-    note: "Verified unchanged"
+    plan: "SuperGrok Heavy"
+    price: "$300/mo"
+    note: "Grok 4.3 beta early access gated to Heavy subscribers. 10x the $30 SuperGrok tier."
 ---
 
 # Grok
 
-xAI's AI assistant, tightly integrated with X (formerly Twitter) and running on the Colossus 2 supercluster. The current flagship is Grok 4.20 Beta 2, introduced in February 2026 with a 4-agent multi-agent architecture.
+xAI's AI assistant, tightly integrated with X (formerly Twitter) and running on the Colossus 2 supercluster. Two active production models as of April 2026:
 
-Four specialized sub-agents (Grok, Harper, Benjamin, Lucas) coordinate on each query with internal cross-verification. The result cut the measured hallucination rate from 12.09% on Grok 4.1 to approximately 4.2%. Context window is 2M tokens, the largest confirmed in any major commercial model.
+- **Grok 4.20 Beta 2** (the general-availability flagship, 4-agent architecture, ~4.2% hallucination rate vs Grok 4.1's 12.09%)
+- **Grok 4.3 beta** (April 17, 2026, Early Access on SuperGrok Heavy $300/mo only, 16-agent Heavy architecture, adds native PDF, PowerPoint, spreadsheet, and video-input output layer)
 
-On February 2, 2026, SpaceX acquired xAI for $1.25 trillion in an all-stock deal (SpaceX valued at $1T, xAI at $250B). Grok now runs under Elon Musk's consolidated aerospace and technology empire. Grok 5 (6T parameters, MoE) is training on Colossus 2 with a Q2 2026 target.
+Three major 2026 capability additions beyond the base models:
+- **Grok TTS API** (March 16): 5 voices, 20+ languages with auto-detect, inline speech tags, $4.20 per million characters
+- **Grok Voice Mode on X** (March 19): real-time voice chat bundled into X Premium on Android and web
+- **Grok Computer** (2026): autonomous desktop-agent integration, currently rolling out; Grok 4.3 routes to it
+
+Context window is 2M tokens, the largest confirmed in any major commercial model. On February 2, 2026, SpaceX acquired xAI for $1.25 trillion in an all-stock deal (SpaceX valued at $1T, xAI at $250B). Grok now runs under Elon Musk's consolidated aerospace and technology empire. Grok 5 (6T parameters, MoE) is training on Colossus 2 with a Q2 2026 target.
 
 ## System Verdict
 
@@ -65,25 +75,31 @@ On February 2, 2026, SpaceX acquired xAI for $1.25 trillion in an all-stock deal
 >
 > **Skip it for predictable governance or strongest general reasoning.** The SpaceX merger concentrated Grok's roadmap, content policy, and platform continuity inside a single Musk-controlled conglomerate. That is a concentration risk users of OpenAI, Anthropic, and Alphabet-backed tools do not carry. On raw reasoning, [Claude Opus 4.7](/tools/claude/) and [GPT-5.4](/tools/chatgpt/) beat Grok 4.20 outside X-data tasks. For structured web research without X data, [Perplexity](/tools/perplexity/) produces cleaner outputs than DeepSearch.
 >
-> **Who pays which tier:** Free for X account holders (limited daily queries), X Premium ~$8/mo for bundled Grok access, SuperGrok $30/mo for standalone full access to Grok 4.20, SuperGrok Heavy ~$50/mo for higher rate limits and priority access.
+> **Who pays which tier:** Free for X account holders (limited daily queries), X Premium ~$8/mo for bundled Grok + Voice Mode, SuperGrok Lite $10/mo, SuperGrok $30/mo for Grok 4.20 + Grok 4 Heavy + ~1,000 msg/day, SuperGrok Heavy **$300/mo** for Grok 4.3 beta Early Access + ~4,000 msg/day + 360 min Deep Search + max compute priority + multi-agent. The 10x jump from $30 to $300 is xAI's professional tier; most individuals should stay at $30 unless they hit caps regularly or need 4.3-exclusive output features.
 
 ## Key Facts
 
 | | |
 |---|---|
-| **Current flagship** | Grok 4.20 Beta 2 (also marketed as Grok 4.20 0309 v2) |
-| **Architecture** | 4-agent multi-agent system · Grok · Harper · Benjamin · Lucas |
-| **Hallucination rate** | ~4.2% (down from 12.09% on Grok 4.1) |
+| **GA flagship** | Grok 4.20 Beta 2 (also marketed as Grok 4.20 0309 v2) |
+| **Early Access flagship** | Grok 4.3 beta (April 17, 2026) · SuperGrok Heavy only |
+| **4.20 architecture** | 4-agent multi-agent · Grok · Harper · Benjamin · Lucas |
+| **4.3 architecture** | 16-agent Heavy mode · longer training run |
+| **Hallucination rate** | ~4.2% on 4.20 (down from 12.09% on Grok 4.1) |
 | **Context window** | 2M tokens · largest confirmed in commercial models |
-| **Higher-tier variant** | Grok 4 Heavy · 100% AIME 2025 · 88.4% GPQA Diamond |
+| **Grok 4.3 new capabilities** | PDF creation · PowerPoint slides · spreadsheets · video input · Grok Computer integration |
+| **Voice capabilities** | Grok TTS API (March 16) · Voice Mode on X (March 19) · 5 voices (Ara, Eve, Leo, Rex, Sal) · 20+ languages |
+| **Grok 4 Heavy benchmarks** | 100% AIME 2025 · 88.4% GPQA Diamond · 75% SWE-bench Verified |
 | **Next model** | Grok 5 · 6T parameters · MoE · training on Colossus 2 · Q2 2026 target |
 | **Ownership** | SpaceX (acquired xAI Feb 2, 2026 for $1.25T all-stock) |
 | **Compute** | Colossus 2 supercluster · 1.5GW since April 2026 |
-| **Subscription tiers** | Free (X account) · X Premium ~$8 · SuperGrok $30 · SuperGrok Heavy ~$50 |
+| **Subscription tiers** | Free (X account) · X Premium ~$8 · SuperGrok Lite $10 · SuperGrok $30 · SuperGrok Heavy **$300** |
+| **TTS API pricing** | $4.20 per 1M characters (Beta) |
 | **API pricing: Grok 4.1 Fast** | $0.20/M input · $0.50/M output · 2M context |
 | **API pricing: Grok 4.20 Reasoning** | $3.00 blended (per third-party tracking) |
 | **Image generation** | Aurora / Grok Imagine · restricted and geoblocked after 2026 deepfake controversies |
-| **Video generation** | None |
+| **Video generation** | None (video *input* yes on 4.3; output no) |
+| **Persistent memory** | **None** (frequent user complaint vs ChatGPT Memory, Gemini Saved Info, Claude Projects) |
 
 Every data point verified on 2026-04-17 against [x.ai](https://x.ai), [docs.x.ai](https://docs.x.ai), and [Artificial Analysis](https://artificialanalysis.ai/models/grok-4-20/providers).
 
@@ -120,10 +136,11 @@ Consumer tier pricing for SuperGrok tiers is not uniformly disclosed on xAI's pu
 
 | Plan | Price | Who's it for |
 |---|---|---|
-| Free (X account) | $0 | Limited daily queries via the X app |
-| X Premium | ~$8/mo | Existing X subscribers · Grok access bundled |
-| SuperGrok | $30/mo | Standalone full Grok 4.20 access · DeepSearch · Think mode |
-| SuperGrok Heavy | ~$50/mo | Higher rate limits · priority access · Grok 4 Heavy variant |
+| Free (X account) | $0 | Limited daily queries via the X app; Grok 4.1 |
+| X Premium | ~$8/mo | Existing X subscribers · Grok + Voice Mode bundled |
+| SuperGrok Lite | $10/mo | Entry paid tier, basic access |
+| SuperGrok | $30/mo | Grok 4.20 · Grok 4 Heavy · DeepSearch · Think mode · ~1,000 msg/day |
+| **SuperGrok Heavy** | **$300/mo** | Grok 4.3 beta Early Access · ~4,000 msg/day · 360 min Deep Search · max compute priority · multi-agent |
 
 **API pricing (per 1M tokens):**
 
@@ -149,12 +166,15 @@ Consumer tier pricing for SuperGrok tiers is not uniformly disclosed on xAI's pu
 
 ## Failure modes
 
+- **No persistent memory, full stop.** Every competitor (ChatGPT, Gemini, Claude) has had cross-session memory for 18+ months. Grok still resets every conversation. The sharpest community complaint against the $300/mo Heavy tier.
 - **SpaceX ownership is a governance concentration risk.** The February 2026 $1.25T merger placed Grok's roadmap, content policy, and platform continuity inside a single Musk-controlled conglomerate. Production dependencies on Grok carry a platform-continuity variable no major competitor does.
-- **Consumer tier pricing is opaque.** SuperGrok and SuperGrok Heavy rates are not uniformly posted on xAI's public pages. Confirm before subscribing.
-- **Content policy is inconsistent.** Less restrictive than ChatGPT or Claude but with no clearly documented boundary. Unpredictable for enterprise deployments where consistent policy behavior matters.
+- **Response latency is slow.** User reports of 10-15 second waits for responses that competitors return in 2-3. Noticeable on 4.20 Heavy; not yet measured on 4.3 beta.
+- **Creative writing is weak.** Prose is literal and robotic per user reports. Grok wins on math, logic, and coding; Claude Opus 4.7 wins on long-form writing.
+- **SuperGrok Heavy $300/mo is the beta paywall.** Users who want Grok 4.3 features before mid-to-late May 2026 (estimated wider rollout) must pay 10x the SuperGrok rate for Early Access.
+- **Content policy is inconsistent.** January 2026 tightening surprised users who switched from ChatGPT expecting fewer filters. Less restrictive overall but with no clearly documented boundary.
 - **DeepSearch is weaker than Perplexity for structured non-X research.** Grok's web search integration lacks Perplexity's source management, relevance ranking, and clean report formatting.
 - **Aurora image gen is restricted and geoblocked.** Post-2026 deepfake controversies forced restrictions that vary by jurisdiction. Less reliable than Midjourney or Ideogram for image-critical workflows.
-- **No video generation.** Gemini's Veo 3 and Kling handle that. Grok is text + limited image only.
+- **No video generation.** Gemini's Veo 3 and Kling handle that. Grok 4.3 adds video *input* but not output.
 - **Grok 5 is unreleased.** Current state is a transitional lineup between 4.x and 5. Enterprise adoption decisions should factor that in.
 - **Advertising pressure.** Musk has publicly pressured SpaceX IPO banks to buy Grok subscriptions and advertise on X. That pressure shapes the commercial roadmap in ways external users cannot see.
 - **Benchmark numbers for Grok 4 Heavy do not apply to SuperGrok.** Heavy's 100% AIME 2025 / 88.4% GPQA Diamond scores are for the top-tier variant. Default SuperGrok subscribers access Grok 4.20, not Grok 4 Heavy.
@@ -166,7 +186,13 @@ This page was produced by the aipedia.wiki editorial pipeline, an automated syst
 ## FAQ
 
 **Is Grok free?**
-Any X account gets limited free queries per day. X Premium (~$8/mo) bundles meaningful Grok access for existing X subscribers. SuperGrok ($30/mo) is the standalone full-access tier. SuperGrok Heavy (~$50/mo) adds higher rate limits and priority access. Subscription rates should be confirmed at [x.ai](https://x.ai).
+Any X account gets limited free queries per day. X Premium (~$8/mo) bundles meaningful Grok access plus Voice Mode for existing X subscribers. SuperGrok Lite ($10/mo) is the entry paid tier. SuperGrok ($30/mo) is the standard full-access tier covering Grok 4.20 and Grok 4 Heavy. SuperGrok Heavy ($300/mo) adds Grok 4.3 beta Early Access, ~4,000 msg/day, 360 min Deep Search, max compute priority, and multi-agent capabilities.
+
+**What's new in Grok 4.3 beta?**
+Released April 17, 2026 exclusively to SuperGrok Heavy subscribers. Adds an output layer Grok 4.20 didn't have: native PDF, PowerPoint, spreadsheet generation, plus video input. Also includes Grok Computer desktop-agent integration and longer training runs suggesting a larger base model. Broader rollout to the $30 SuperGrok tier is estimated mid-to-late May 2026 based on Grok 4.20's precedent (xAI has not publicly confirmed). See the [full rundown](/news/2026-04-17-grok-4-3-beta-supergrok-heavy/).
+
+**Does Grok do voice?**
+Yes, as of March 2026. Grok TTS API launched March 16 with 5 voices (Ara, Eve, Leo, Rex, Sal), 20+ languages, and inline speech tags for pauses/laughter/whispers/emphasis, priced at $4.20 per 1M characters. Grok Voice Mode went live on X for Android and web on March 19, bundled into X Premium at no extra cost.
 
 **What happened with the SpaceX acquisition?**
 SpaceX acquired xAI on February 2, 2026 in a $1.25T all-stock deal (SpaceX $1T, xAI $250B). Grok now runs under Elon Musk's consolidated aerospace and technology empire alongside X and Neuralink. Compute runs on Colossus 2 (1.5GW since April 2026). The governance implication is that product decisions and platform continuity sit inside a single private conglomerate.
