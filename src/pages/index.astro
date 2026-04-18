@@ -224,19 +224,19 @@ const featuredComparisons = comparisons
     </a>
 
     <a
-      href="/tool-finder/"
+      href="/compare/"
       class="group block rounded-xl border border-[var(--border)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] hover:border-[rgba(167,139,250,0.4)] transition-colors p-4 no-underline"
     >
       <div class="flex items-start gap-3">
         <span class="shrink-0 inline-flex items-center justify-center w-9 h-9 rounded-lg" style="background: linear-gradient(135deg, rgba(74,222,128,0.2), rgba(96,165,250,0.15)); border: 1px solid rgba(74,222,128,0.25);">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-[var(--accent-success)]" aria-hidden="true"><path d="M15 4V2"/><path d="M15 16v-2"/><path d="M8 9h2"/><path d="M20 9h2"/><path d="M17.8 11.8 19 13"/><path d="M15 9h0"/><path d="M17.8 6.2 19 5"/><path d="m3 21 9-9"/><path d="M12.2 6.2 11 5"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-[var(--accent-success)]" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="3" y1="20" x2="21" y2="20"/></svg>
         </span>
         <div class="min-w-0 flex-1">
           <div class="flex items-center gap-1 mb-0.5">
-            <h3 class="text-sm font-semibold text-[var(--text-primary)] m-0 group-hover:text-[var(--accent-primary)] transition-colors">Tool Finder</h3>
+            <h3 class="text-sm font-semibold text-[var(--text-primary)] m-0 group-hover:text-[var(--accent-primary)] transition-colors">Compare</h3>
             <span class="text-[var(--text-muted)] group-hover:text-[var(--accent-primary)] group-hover:translate-x-0.5 transition-all">&rarr;</span>
           </div>
-          <p class="text-xs text-[var(--text-muted)] m-0 leading-snug">Answer a few prompts, get a match</p>
+          <p class="text-xs text-[var(--text-muted)] m-0 leading-snug">{comparisons.length} head-to-head reviews</p>
         </div>
       </div>
     </a>
