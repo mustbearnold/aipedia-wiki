@@ -27,15 +27,26 @@ const REGISTRY = join(ROOT, 'src/data/_meta/tools-registry.json');
 const TOOLS_MD_DIR = join(ROOT, 'src/content/tools');
 const OUT_DIR = join(ROOT, 'public/og/tools');
 const LOGO_DIR = join(ROOT, 'public/logos/tools');
-const BRAND_LOGO = join(ROOT, 'public/brand/aipedia-logo.png');
+// Two brand logo sizes: a small one for the top-left corner of each
+// tool card (rendered at 56x56), and a large one for the default card
+// centerpiece (rendered at 200x200). Embedding the full 1666x1666
+// source in every SVG would bloat the repo by ~20MB total.
+const BRAND_LOGO_SMALL = join(ROOT, 'public/brand/aipedia-logo-128.png');
+const BRAND_LOGO_LARGE = join(ROOT, 'public/brand/aipedia-logo-512.png');
 const DEFAULT_SVG = join(ROOT, 'public/og-default.svg');
 const DEFAULT_PNG = join(ROOT, 'public/og-default.png');
 
-// Cache the brand logo as a data URL once per run so every card embeds it
-// without re-reading from disk.
-const brandLogoData = existsSync(BRAND_LOGO)
-  ? `data:image/png;base64,${readFileSync(BRAND_LOGO).toString('base64')}`
-  : null;
+// Cache brand logos as data URLs once per run. Fall back to the master
+// source if the pre-sized variants haven't been generated yet (run
+// scripts/prep-favicons.mjs to produce them).
+function toDataUrl(path) {
+  if (!existsSync(path)) return null;
+  return `data:image/png;base64,${readFileSync(path).toString('base64')}`;
+}
+const brandLogoSmall =
+  toDataUrl(BRAND_LOGO_SMALL) ?? toDataUrl(join(ROOT, 'public/brand/aipedia-logo.png'));
+const brandLogoLarge =
+  toDataUrl(BRAND_LOGO_LARGE) ?? toDataUrl(join(ROOT, 'public/brand/aipedia-logo.png'));
 
 /**
  * Read a tool's tagline + description directly from its markdown
@@ -208,12 +219,12 @@ function svgFor(tool) {
   <rect width="1200" height="630" fill="url(#bg)"/>
   <rect x="0" y="0" width="1200" height="6" fill="url(#accent)"/>
   ${
-    brandLogoData
-      ? `<image href="${brandLogoData}" x="60" y="60" width="56" height="56" preserveAspectRatio="xMidYMid meet"/>`
+    brandLogoSmall
+      ? `<image href="${brandLogoSmall}" x="60" y="60" width="56" height="56" preserveAspectRatio="xMidYMid meet"/>`
       : ''
   }
-  <text x="${brandLogoData ? 132 : 80}" y="100" font-family="Inter, system-ui, sans-serif" font-size="26" font-weight="700" fill="#a78bfa" letter-spacing="1">aipedia.wiki</text>
-  <text x="${brandLogoData ? 132 : 80}" y="124" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="500" fill="#9ca3af">${category}</text>
+  <text x="${brandLogoSmall ? 132 : 80}" y="100" font-family="Inter, system-ui, sans-serif" font-size="26" font-weight="700" fill="#a78bfa" letter-spacing="1">aipedia.wiki</text>
+  <text x="${brandLogoSmall ? 132 : 80}" y="124" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="500" fill="#9ca3af">${category}</text>
   ${logoBlock}
   <text x="${titleX}" y="270" font-family="Inter, system-ui, sans-serif" font-size="76" font-weight="800" fill="#fafafa">${title}</text>
   <text x="${titleX}" y="310" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="500" fill="#9ca3af">${company}</text>
@@ -280,8 +291,8 @@ function main() {
   if (existsSync(DEFAULT_SVG)) {
     try {
       let svg = readFileSync(DEFAULT_SVG, 'utf8');
-      if (brandLogoData) {
-        svg = svg.replace('BRAND_LOGO_DATA_URL', brandLogoData);
+      if (brandLogoLarge) {
+        svg = svg.replace('BRAND_LOGO_DATA_URL', brandLogoLarge);
       } else {
         // If no brand logo is available on disk, strip the <image> tag
         // so resvg doesn't fail on a missing href.

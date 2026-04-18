@@ -29,7 +29,12 @@ const ogImageUrl = ogImage
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalURL.href} />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!-- Favicons: PNG-first, multiple sizes so browsers pick the best
+         fit (16 for tab, 32 for retina tab, 180 for iOS home, 192/512
+         for Android / PWA). favicon.ico kept as legacy fallback. -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" href="/favicon.ico" />
 
     <!-- Geist: Vercel's sans-serif, the current default for modern
