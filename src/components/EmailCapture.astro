@@ -6,12 +6,15 @@
 //   variant: 'inline' | 'hero' | 'footer' (controls surrounding spacing/prominence)
 //   source: optional string passed to the API so we know where the signup came from
 
+import { getCollection } from 'astro:content';
+
 export interface Props {
   variant?: 'inline' | 'hero' | 'footer';
   source?: string;
 }
 
 const { variant = 'inline', source = 'unknown' } = Astro.props;
+const toolCount = (await getCollection('tools')).length;
 const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY ?? '';
 
 // Unique id suffix so multiple instances on one page don't collide
@@ -41,7 +44,7 @@ const containerClasses = {
       Get the monthly AI tools digest
     </h2>
     <p class="text-sm text-[var(--text-secondary)] leading-relaxed m-0">
-      What changed across 132 tools, honest. No fluff.
+      What changed across {toolCount} tools, honest. No fluff.
     </p>
   </div>
 

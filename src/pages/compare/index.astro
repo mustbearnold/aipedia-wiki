@@ -2,8 +2,24 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 import Breadcrumb from '../../components/Breadcrumb.astro';
+import logoManifest from '../../data/logo-manifest.json';
 
 const allComparisons = await getCollection('comparisons');
+const allTools = await getCollection('tools');
+
+// Build tool lookup: slug -> { title, score, logo }
+type ToolInfo = { title: string; score: number; logo: string };
+const toolLookup: Record<string, ToolInfo> = {};
+for (const t of allTools) {
+  const slug = t.data.slug || t.id.replace(/\.md$/, '');
+  const s = t.data.scores ?? { utility: 0, value: 0, moat: 0, longevity: 0 };
+  const score = Math.round((((s.utility ?? 0) + (s.value ?? 0) + (s.moat ?? 0) + (s.longevity ?? 0)) / 4) * 10) / 10;
+  toolLookup[slug] = {
+    title: t.data.title || slug,
+    score,
+    logo: (logoManifest as Record<string, string>)[slug] ?? `/logos/tools/${slug}.png`,
+  };
+}
 
 const categoryEmojiMap: Record<string, string> = {
   'ai-chatbots': '\uD83D\uDCAC',
@@ -23,25 +39,64 @@ const categoryLabels: Record<string, string> = {
   'ai-presentation': 'Presentation', 'ai-research': 'Research',
 };
 
-// Group comparisons by category
-const byCategory: Record<string, typeof allComparisons> = {};
-for (const c of allComparisons) {
-  const cat = c.data.category || 'other';
-  if (!byCategory[cat]) byCategory[cat] = [];
-  byCategory[cat].push(c);
+// Build enriched comparison data: pull tools + scores for each pair
+interface EnrichedComparison {
+  slug: string;
+  title: string;
+  category: string;
+  toolA: ToolInfo | null;
+  toolB: ToolInfo | null;
+  slugA: string;
+  slugB: string;
+  sumScore: number;
+  dataAttr: string; // lowercase search string for the filter
 }
 
-// Sort categories by how many comparisons they have
+const enriched: EnrichedComparison[] = allComparisons.map((c) => {
+  const slug = c.data.slug || c.id.replace(/\.md$/, '');
+  const tools = Array.isArray(c.data.tools) ? c.data.tools : [];
+  const slugA = String(tools[0] || '');
+  const slugB = String(tools[1] || '');
+  const toolA = toolLookup[slugA] || null;
+  const toolB = toolLookup[slugB] || null;
+  const sumScore = (toolA?.score || 0) + (toolB?.score || 0);
+  const title = c.data.title || '';
+  return {
+    slug,
+    title,
+    category: c.data.category || 'other',
+    toolA,
+    toolB,
+    slugA,
+    slugB,
+    sumScore,
+    dataAttr: `${title} ${slugA} ${slugB} ${toolA?.title || ''} ${toolB?.title || ''}`.toLowerCase(),
+  };
+});
+
+// Featured: top 6 by sum of tool scores
+const featured = [...enriched].sort((a, b) => b.sumScore - a.sumScore).slice(0, 6);
+
+// Group by category (for the main listing below featured)
+const byCategory: Record<string, EnrichedComparison[]> = {};
+for (const c of enriched) {
+  if (!byCategory[c.category]) byCategory[c.category] = [];
+  byCategory[c.category].push(c);
+}
+// Sort each category internally by score desc
+for (const cat of Object.keys(byCategory)) {
+  byCategory[cat].sort((a, b) => b.sumScore - a.sumScore);
+}
 const categoriesOrdered = Object.keys(byCategory).sort((a, b) => byCategory[b].length - byCategory[a].length);
 ---
 
 <BaseLayout
-  title="Compare AI Tools — Head-to-Head Reviews"
+  title="Compare AI Tools: Head-to-Head Reviews (2026), aipedia.wiki"
   description={`${allComparisons.length} editorial head-to-head comparisons between the most-searched AI tool pairs. ChatGPT vs Claude, Cursor vs Windsurf, Midjourney vs Flux, and more.`}
 >
   <Breadcrumb items={[{ label: 'Compare' }]} />
 
-  <section class="mb-10 pt-2">
+  <section class="mb-6 pt-2">
     <h1 class="text-3xl sm:text-4xl font-bold mb-3 leading-tight">
       Compare <span class="bg-gradient-to-r from-[#a78bfa] to-[#60a5fa] bg-clip-text text-transparent">AI Tools Head-to-Head</span>
     </h1>
@@ -50,36 +105,126 @@ const categoriesOrdered = Object.keys(byCategory).sort((a, b) => byCategory[b].l
     </p>
   </section>
 
-  {categoriesOrdered.map((cat) => (
-    <section class="mb-10">
-      <div class="flex items-center gap-2 mb-4">
-        <span class="text-xl">{categoryEmojiMap[cat] || '🔧'}</span>
-        <h2 class="text-lg font-semibold text-[var(--text-primary)]">{categoryLabels[cat] || cat}</h2>
-        <span class="text-xs text-[var(--text-muted)]">({byCategory[cat].length})</span>
-      </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-        {byCategory[cat].map((c) => {
-          const slug = c.data.slug || c.id.replace(/\.md$/, '');
-          const tools = c.data.tools || [];
-          const toolsStr = Array.isArray(tools) ? tools.join(' vs ').replace(/-/g, ' ') : '';
-          return (
-            <a
-              href={`/compare/${slug}/`}
-              class="group p-4 rounded-xl border border-[var(--border)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] hover:border-[rgba(167,139,250,0.3)] transition-all no-underline"
-            >
-              <div class="flex items-start justify-between gap-3">
-                <div class="min-w-0 flex-1">
-                  <h3 class="font-semibold text-[var(--text-primary)] text-sm mb-1 truncate">{c.data.title}</h3>
-                  {toolsStr && <p class="text-xs text-[var(--text-muted)] truncate capitalize">{toolsStr}</p>}
-                </div>
-                <svg class="w-4 h-4 text-[var(--text-muted)] group-hover:text-[var(--accent-primary)] group-hover:translate-x-0.5 transition-all shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                </svg>
+  <!-- Filter bar -->
+  <div class="mb-6 flex items-center gap-2">
+    <div class="flex-1 relative">
+      <svg class="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-[var(--text-muted)] pointer-events-none" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+      </svg>
+      <input
+        id="compare-filter"
+        type="search"
+        placeholder="Filter by tool or comparison..."
+        class="w-full pl-9 pr-3 py-2 rounded-lg border border-[var(--border)] bg-[var(--bg-card)] text-sm text-[var(--text-primary)] placeholder:text-[var(--text-muted)] focus:outline-none focus:border-[var(--accent-primary)] transition-colors"
+      />
+    </div>
+    <span id="compare-count" class="text-xs text-[var(--text-muted)] tabular-nums shrink-0">{allComparisons.length}</span>
+  </div>
+
+  <!-- Featured row: top 6 by sum of tool scores -->
+  <section class="mb-10" id="featured-section">
+    <div class="flex items-center gap-2 mb-3">
+      <span class="text-[10px] font-semibold uppercase tracking-[0.12em] text-[var(--accent-primary)]">Top comparisons</span>
+      <span class="text-xs text-[var(--text-muted)]">Highest-scoring pairs</span>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+      {featured.map((c) => (
+        <a
+          href={`/compare/${c.slug}/`}
+          class="compare-card group block p-3 rounded-xl border border-[rgba(167,139,250,0.25)] bg-gradient-to-br from-[rgba(167,139,250,0.06)] to-[rgba(96,165,250,0.03)] hover:border-[rgba(167,139,250,0.5)] hover:from-[rgba(167,139,250,0.10)] transition-colors no-underline"
+          data-search={c.dataAttr}
+        >
+          <div class="flex items-center gap-3">
+            <div class="flex items-center -space-x-2 shrink-0">
+              {c.toolA && (
+                <img src={c.toolA.logo} alt="" width="32" height="32" loading="lazy"
+                     class="shrink-0 rounded-lg border-2 border-[var(--bg-base)]"
+                     style="width: 32px; height: 32px; background: #fff; padding: 2px; box-sizing: border-box;" />
+              )}
+              {c.toolB && (
+                <img src={c.toolB.logo} alt="" width="32" height="32" loading="lazy"
+                     class="shrink-0 rounded-lg border-2 border-[var(--bg-base)]"
+                     style="width: 32px; height: 32px; background: #fff; padding: 2px; box-sizing: border-box;" />
+              )}
+            </div>
+            <div class="min-w-0 flex-1">
+              <h3 class="text-sm font-semibold text-[var(--text-primary)] group-hover:text-[var(--accent-primary)] m-0 truncate">
+                {c.toolA?.title || '?'} <span class="text-[var(--text-muted)] font-normal">vs</span> {c.toolB?.title || '?'}
+              </h3>
+              <div class="text-[11px] text-[var(--text-muted)] tabular-nums">
+                {c.toolA?.score.toFixed(1) || '-'} <span class="opacity-50">|</span> {c.toolB?.score.toFixed(1) || '-'}
               </div>
-            </a>
-          );
-        })}
+            </div>
+            <span class="text-[var(--text-muted)] group-hover:text-[var(--accent-primary)] group-hover:translate-x-0.5 transition-all shrink-0">&rarr;</span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- Per-category listings -->
+  {categoriesOrdered.map((cat) => (
+    <section class="mb-10 category-block" data-category={cat}>
+      <div class="flex items-center gap-2 mb-3">
+        <span class="text-lg">{categoryEmojiMap[cat] || '🔧'}</span>
+        <h2 class="text-lg font-semibold text-[var(--text-primary)] m-0">{categoryLabels[cat] || cat}</h2>
+        <span class="text-xs text-[var(--text-muted)] tabular-nums">({byCategory[cat].length})</span>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+        {byCategory[cat].map((c) => (
+          <a
+            href={`/compare/${c.slug}/`}
+            class="compare-card group flex items-center gap-3 p-2.5 rounded-lg border border-[var(--border)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] hover:border-[rgba(167,139,250,0.3)] transition-colors no-underline"
+            data-search={c.dataAttr}
+          >
+            <div class="flex items-center -space-x-1.5 shrink-0">
+              {c.toolA && (
+                <img src={c.toolA.logo} alt="" width="26" height="26" loading="lazy"
+                     class="rounded-md border-2 border-[var(--bg-base)]"
+                     style="width: 26px; height: 26px; background: #fff; padding: 2px; box-sizing: border-box;" />
+              )}
+              {c.toolB && (
+                <img src={c.toolB.logo} alt="" width="26" height="26" loading="lazy"
+                     class="rounded-md border-2 border-[var(--bg-base)]"
+                     style="width: 26px; height: 26px; background: #fff; padding: 2px; box-sizing: border-box;" />
+              )}
+            </div>
+            <div class="min-w-0 flex-1">
+              <div class="text-sm font-medium text-[var(--text-primary)] group-hover:text-[var(--accent-primary)] truncate">
+                {c.toolA?.title || '?'} <span class="text-[var(--text-muted)] font-normal text-xs">vs</span> {c.toolB?.title || '?'}
+              </div>
+            </div>
+            <span class="text-[var(--text-muted)] group-hover:text-[var(--accent-primary)] group-hover:translate-x-0.5 transition-all shrink-0 text-sm">&rarr;</span>
+          </a>
+        ))}
       </div>
     </section>
   ))}
+
+  <script is:inline>
+    (function () {
+      const input = document.getElementById('compare-filter');
+      const counter = document.getElementById('compare-count');
+      const featuredSec = document.getElementById('featured-section');
+      if (!input) return;
+      const total = document.querySelectorAll('.compare-card').length;
+      input.addEventListener('input', () => {
+        const q = input.value.trim().toLowerCase();
+        let visible = 0;
+        document.querySelectorAll('.compare-card').forEach((card) => {
+          const match = q === '' || card.dataset.search?.includes(q);
+          card.style.display = match ? '' : 'none';
+          if (match) visible++;
+        });
+        // Hide entire category block if every card inside is filtered out
+        document.querySelectorAll('.category-block').forEach((block) => {
+          const anyVisible = block.querySelectorAll('.compare-card:not([style*="display: none"])').length > 0;
+          block.style.display = anyVisible ? '' : 'none';
+        });
+        // Hide featured when filtering (duplicates with main list)
+        if (featuredSec) featuredSec.style.display = q === '' ? '' : 'none';
+        if (counter) counter.textContent = q === '' ? String(total) : String(visible);
+      });
+    })();
+  </script>
 </BaseLayout>

@@ -127,15 +127,51 @@ const categoryRail = categories
 
 // Featured comparisons: rank by sum of scores of the compared tools, show top 12.
 const scoreMap = new Map(scoredTools.map((t) => [t.tool.data.slug || t.tool.id.replace(/\.md$/, ''), t.score]));
+const titleMap = new Map(scoredTools.map((t) => [t.tool.data.slug || t.tool.id.replace(/\.md$/, ''), t.tool.data.title]));
+function toolMeta(slug: string) {
+  return {
+    slug,
+    title: titleMap.get(slug) || slug,
+    score: scoreMap.get(slug) ?? 0,
+    logo: (logoManifest as Record<string, string>)[slug] ?? `/logos/tools/${slug}.png`,
+  };
+}
 const featuredComparisons = comparisons
   .map((c) => {
     const slug = c.data.slug || c.id.replace(/\.md$/, '').replace(/\\/g, '/');
     const toolSlugs = Array.isArray(c.data.tools) ? c.data.tools : [];
     const totalScore = toolSlugs.reduce((sum: number, s: string) => sum + (scoreMap.get(s) ?? 0), 0);
-    return { slug, title: c.data.title, totalScore, category: c.data.category ?? '' };
+    const compareTools = toolSlugs.slice(0, 2).map(toolMeta);
+    return { slug, title: c.data.title, totalScore, category: c.data.category ?? '', compareTools };
   })
   .sort((a, b) => b.totalScore - a.totalScore)
-  .slice(0, 12);
+  .slice(0, 9);
+
+// What's New feed: pull the 5 most recent news items instead of hardcoding.
+const recentNewsForHome = newsEntries
+  .map(n => {
+    const slug = n.data.slug || n.id.replace(/\.md$/, '');
+    const affects = Array.isArray(n.data.affects) ? n.data.affects : [];
+    const primaryTool = affects[0];
+    return {
+      slug,
+      title: n.data.title || '',
+      summary: n.data.summary || '',
+      date: String(n.data.date).slice(0, 10),
+      severity: String(n.data.severity || 'minor'),
+      toolSlug: primaryTool,
+      logo: primaryTool ? ((logoManifest as Record<string, string>)[primaryTool] ?? `/logos/tools/${primaryTool}.png`) : null,
+    };
+  })
+  .sort((a, b) => b.date.localeCompare(a.date))
+  .slice(0, 5);
+
+function shortDate(iso: string): string {
+  if (!iso || !/^\d{4}-\d{2}-\d{2}$/.test(iso)) return iso;
+  const [, m, d] = iso.split('-');
+  const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  return `${months[Number(m) - 1]} ${Number(d)}`;
+}
 ---
 
 <BaseLayout
@@ -430,7 +466,7 @@ const featuredComparisons = comparisons
 
   <!-- Trending -->
   <section class="mb-10">
-    <h2 class="text-xl font-bold text-[var(--text-primary)] mb-6">Trending</h2>
+    <h2 class="text-xl font-bold text-[var(--text-primary)] mb-4">Trending</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
       {trends.map(trend => {
         const slug = trend.data.slug || trend.id.replace(/\.md$/, '').replace(/\\/g, '/');
@@ -439,18 +475,18 @@ const featuredComparisons = comparisons
         return (
           <a
             href={`/trends/${slug}/`}
-            class="block bg-[var(--bg-card)] border border-[var(--border)] rounded-xl p-4 hover:bg-[var(--bg-card-hover)] hover:border-[rgba(255,255,255,0.1)] transition-all no-underline group"
+            class="block bg-[var(--bg-card)] border border-[var(--border)] rounded-xl p-3 hover:bg-[var(--bg-card-hover)] hover:border-[rgba(167,139,250,0.25)] transition-all no-underline group"
           >
-            <div class="flex items-center gap-2 mb-2">
-              <span class={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium border ${impactClass}`}>
-                {impact.charAt(0).toUpperCase() + impact.slice(1)}
+            <div class="flex items-center gap-2 mb-1.5">
+              <span class={`inline-flex items-center px-1.5 py-0.5 rounded-md text-[10px] font-semibold uppercase tracking-wider border ${impactClass}`}>
+                {impact}
               </span>
             </div>
-            <h3 class="text-sm font-semibold text-[var(--text-primary)] mb-1 group-hover:text-[var(--text-primary)]">
+            <h3 class="text-[13.5px] font-semibold text-[var(--text-primary)] mb-1 leading-snug group-hover:text-[var(--accent-primary)] transition-colors">
               {trend.data.title}
             </h3>
             {trend.data.description && (
-              <p class="text-xs text-[var(--text-muted)] line-clamp-2 m-0">{trend.data.description}</p>
+              <p class="text-[11.5px] text-[var(--text-muted)] line-clamp-2 m-0 leading-snug">{trend.data.description}</p>
             )}
           </a>
         );
@@ -458,94 +494,70 @@ const featuredComparisons = comparisons
     </div>
   </section>
 
-  <!-- What's New -->
+  <!-- What's New — dynamic, pulls 5 most recent news items with the affected tool's logo -->
   <section class="mb-10">
-    <h2 class="text-xl font-bold text-[var(--text-primary)] mb-6">What's New</h2>
+    <div class="flex items-baseline justify-between mb-4">
+      <h2 class="text-xl font-bold text-[var(--text-primary)] m-0">What's New</h2>
+      <a href="/news/" class="text-xs text-[var(--accent-primary)] no-underline hover:underline">All news &rarr;</a>
+    </div>
     <div class="space-y-2">
-      <!-- Shutdown: red accent -->
-      <a href="/dead/sora/" class="flex items-center gap-4 bg-[var(--bg-card)] border border-[var(--border)] rounded-xl px-4 py-3 hover:bg-[var(--bg-card-hover)] hover:border-[rgba(255,255,255,0.1)] transition-all no-underline group">
-        <span class="shrink-0 text-xs text-[var(--text-muted)] w-24">Apr 13, 2026</span>
-        <span class="flex-1 text-sm text-[var(--text-secondary)] group-hover:text-[var(--text-primary)] transition-colors">
-          <span class="inline-block w-2 h-2 rounded-full bg-red-400 mr-2 align-middle"></span>
-          Sora 2 shut down. OpenAI discontinued its AI video generator.
-        </span>
-        <span class="text-[var(--text-muted)] group-hover:text-red-400 transition-colors shrink-0">&rarr;</span>
-      </a>
-      <!-- New tool: green accent -->
-      <a href="/tools/seedance/" class="flex items-center gap-4 bg-[var(--bg-card)] border border-[var(--border)] rounded-xl px-4 py-3 hover:bg-[var(--bg-card-hover)] hover:border-[rgba(255,255,255,0.1)] transition-all no-underline group">
-        <span class="shrink-0 text-xs text-[var(--text-muted)] w-24">Apr 13, 2026</span>
-        <span class="flex-1 text-sm text-[var(--text-secondary)] group-hover:text-[var(--text-primary)] transition-colors">
-          <span class="inline-block w-2 h-2 rounded-full bg-green-400 mr-2 align-middle"></span>
-          Seedance 2.0 added. ByteDance's new AI video generator with free tier.
-        </span>
-        <span class="text-[var(--text-muted)] group-hover:text-green-400 transition-colors shrink-0">&rarr;</span>
-      </a>
-      <!-- New tool: green accent -->
-      <a href="/tools/fish-audio/" class="flex items-center gap-4 bg-[var(--bg-card)] border border-[var(--border)] rounded-xl px-4 py-3 hover:bg-[var(--bg-card-hover)] hover:border-[rgba(255,255,255,0.1)] transition-all no-underline group">
-        <span class="shrink-0 text-xs text-[var(--text-muted)] w-24">Apr 13, 2026</span>
-        <span class="flex-1 text-sm text-[var(--text-secondary)] group-hover:text-[var(--text-primary)] transition-colors">
-          <span class="inline-block w-2 h-2 rounded-full bg-green-400 mr-2 align-middle"></span>
-          Fish Audio S2 added. Open-source TTS challenging ElevenLabs.
-        </span>
-        <span class="text-[var(--text-muted)] group-hover:text-green-400 transition-colors shrink-0">&rarr;</span>
-      </a>
-      <!-- New guides: blue accent -->
-      <a href="/guides/cursor-alternatives/" class="flex items-center gap-4 bg-[var(--bg-card)] border border-[var(--border)] rounded-xl px-4 py-3 hover:bg-[var(--bg-card-hover)] hover:border-[rgba(255,255,255,0.1)] transition-all no-underline group">
-        <span class="shrink-0 text-xs text-[var(--text-muted)] w-24">Apr 13, 2026</span>
-        <span class="flex-1 text-sm text-[var(--text-secondary)] group-hover:text-[var(--text-primary)] transition-colors">
-          <span class="inline-block w-2 h-2 rounded-full bg-blue-400 mr-2 align-middle"></span>
-          New: Cursor Alternatives guide — Windsurf, Copilot, Claude Code compared.
-        </span>
-        <span class="text-[var(--text-muted)] group-hover:text-blue-400 transition-colors shrink-0">&rarr;</span>
-      </a>
-      <!-- Milestone: purple accent -->
-      <a href="/tools/" class="flex items-center gap-4 bg-[var(--bg-card)] border border-[var(--border)] rounded-xl px-4 py-3 hover:bg-[var(--bg-card-hover)] hover:border-[rgba(255,255,255,0.1)] transition-all no-underline group">
-        <span class="shrink-0 text-xs text-[var(--text-muted)] w-24">Apr 18, 2026</span>
-        <span class="flex-1 text-sm text-[var(--text-secondary)] group-hover:text-[var(--text-primary)] transition-colors">
-          <span class="inline-block w-2 h-2 rounded-full bg-purple-400 mr-2 align-middle"></span>
-          {allTools.length} tool reviews live. Coverage across 14 AI categories.
-        </span>
-        <span class="text-[var(--text-muted)] group-hover:text-purple-400 transition-colors shrink-0">&rarr;</span>
-      </a>
+      {recentNewsForHome.map((n) => {
+        const sevColor = n.severity === 'major' ? 'bg-[var(--accent-warning)]' : n.severity === 'breaking' ? 'bg-[var(--accent-danger)]' : 'bg-[var(--accent-primary)]';
+        return (
+          <a href={`/news/${n.slug}/`} class="flex items-center gap-3 bg-[var(--bg-card)] border border-[var(--border)] rounded-xl px-3 py-2.5 hover:bg-[var(--bg-card-hover)] hover:border-[rgba(167,139,250,0.25)] transition-all no-underline group">
+            {n.logo ? (
+              <img src={n.logo} alt="" width="28" height="28" loading="lazy" class="shrink-0 rounded-md"
+                   style="width: 28px; height: 28px; background: #fff; padding: 2px; box-sizing: border-box;" />
+            ) : (
+              <span class={`shrink-0 w-2 h-2 rounded-full ${sevColor}`}></span>
+            )}
+            <span class="shrink-0 text-[11px] text-[var(--text-muted)] tabular-nums w-10 sm:w-14">{shortDate(n.date)}</span>
+            <span class="flex-1 text-[13px] text-[var(--text-secondary)] group-hover:text-[var(--text-primary)] transition-colors truncate">
+              {n.title}
+            </span>
+            <span class="text-[var(--text-muted)] group-hover:text-[var(--accent-primary)] transition-colors shrink-0 text-sm">&rarr;</span>
+          </a>
+        );
+      })}
     </div>
   </section>
 
   <!-- Best Of Guides -->
   <section class="mb-10">
-    <h2 class="text-xl font-bold text-[var(--text-primary)] mb-6">Best Of</h2>
+    <h2 class="text-xl font-bold text-[var(--text-primary)] mb-4">Best Of</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
       <a href="/guides/best-ai-voice-youtube/" class="block rounded-xl p-[1px] bg-gradient-to-br from-[#a78bfa] to-[#60a5fa] hover:from-[#c4b5fd] hover:to-[#93c5fd] transition-all no-underline group">
-        <div class="bg-[var(--bg-card)] rounded-[11px] p-4 h-full">
+        <div class="bg-[var(--bg-card)] rounded-[11px] p-3 h-full">
           <h3 class="text-sm font-semibold text-[var(--text-primary)] mb-1">Best AI Voice for YouTube</h3>
           <p class="text-xs text-[var(--text-muted)] m-0">Top picks compared and ranked</p>
         </div>
       </a>
       <a href="/guides/best-ai-coding-assistant/" class="block rounded-xl p-[1px] bg-gradient-to-br from-[#34d399] to-[#60a5fa] hover:from-[#6ee7b7] hover:to-[#93c5fd] transition-all no-underline group">
-        <div class="bg-[var(--bg-card)] rounded-[11px] p-4 h-full">
+        <div class="bg-[var(--bg-card)] rounded-[11px] p-3 h-full">
           <h3 class="text-sm font-semibold text-[var(--text-primary)] mb-1">Best AI Coding Assistant</h3>
           <p class="text-xs text-[var(--text-muted)] m-0">Top picks compared and ranked</p>
         </div>
       </a>
       <a href="/guides/best-ai-video-generator/" class="block rounded-xl p-[1px] bg-gradient-to-br from-[#f472b6] to-[#a78bfa] hover:from-[#f9a8d4] hover:to-[#c4b5fd] transition-all no-underline group">
-        <div class="bg-[var(--bg-card)] rounded-[11px] p-4 h-full">
+        <div class="bg-[var(--bg-card)] rounded-[11px] p-3 h-full">
           <h3 class="text-sm font-semibold text-[var(--text-primary)] mb-1">Best AI Video Generator</h3>
           <p class="text-xs text-[var(--text-muted)] m-0">Top picks compared and ranked</p>
         </div>
       </a>
       <a href="/guides/best-ai-automation-platform/" class="block rounded-xl p-[1px] bg-gradient-to-br from-[#fbbf24] to-[#f472b6] hover:from-[#fcd34d] hover:to-[#f9a8d4] transition-all no-underline group">
-        <div class="bg-[var(--bg-card)] rounded-[11px] p-4 h-full">
+        <div class="bg-[var(--bg-card)] rounded-[11px] p-3 h-full">
           <h3 class="text-sm font-semibold text-[var(--text-primary)] mb-1">Best Automation Platform</h3>
           <p class="text-xs text-[var(--text-muted)] m-0">Top picks compared and ranked</p>
         </div>
       </a>
       <a href="/guides/best-ai-seo-tool/" class="block rounded-xl p-[1px] bg-gradient-to-br from-[#60a5fa] to-[#34d399] hover:from-[#93c5fd] hover:to-[#6ee7b7] transition-all no-underline group">
-        <div class="bg-[var(--bg-card)] rounded-[11px] p-4 h-full">
+        <div class="bg-[var(--bg-card)] rounded-[11px] p-3 h-full">
           <h3 class="text-sm font-semibold text-[var(--text-primary)] mb-1">Best AI SEO Tool</h3>
           <p class="text-xs text-[var(--text-muted)] m-0">Top picks compared and ranked</p>
         </div>
       </a>
       <a href="/guides/best-ai-music-generator/" class="block rounded-xl p-[1px] bg-gradient-to-br from-[#a78bfa] to-[#f472b6] hover:from-[#c4b5fd] hover:to-[#f9a8d4] transition-all no-underline group">
-        <div class="bg-[var(--bg-card)] rounded-[11px] p-4 h-full">
+        <div class="bg-[var(--bg-card)] rounded-[11px] p-3 h-full">
           <h3 class="text-sm font-semibold text-[var(--text-primary)] mb-1">Best AI Music Generator</h3>
           <p class="text-xs text-[var(--text-muted)] m-0">Suno vs Udio vs Mubert</p>
         </div>
@@ -555,22 +567,22 @@ const featuredComparisons = comparisons
 
   <!-- Alternatives Guides -->
   <section class="mb-10">
-    <h2 class="text-xl font-bold text-[var(--text-primary)] mb-6">Alternatives</h2>
+    <h2 class="text-xl font-bold text-[var(--text-primary)] mb-4">Alternatives</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
       <a href="/guides/cursor-alternatives/" class="block rounded-xl p-[1px] bg-gradient-to-br from-[#60a5fa] to-[#a78bfa] hover:from-[#93c5fd] hover:to-[#c4b5fd] transition-all no-underline group">
-        <div class="bg-[var(--bg-card)] rounded-[11px] p-4 h-full">
+        <div class="bg-[var(--bg-card)] rounded-[11px] p-3 h-full">
           <h3 class="text-sm font-semibold text-[var(--text-primary)] mb-1">Cursor Alternatives</h3>
           <p class="text-xs text-[var(--text-muted)] m-0">Windsurf, Copilot, Claude Code &amp; more</p>
         </div>
       </a>
       <a href="/guides/chatgpt-alternatives/" class="block rounded-xl p-[1px] bg-gradient-to-br from-[#34d399] to-[#60a5fa] hover:from-[#6ee7b7] hover:to-[#93c5fd] transition-all no-underline group">
-        <div class="bg-[var(--bg-card)] rounded-[11px] p-4 h-full">
+        <div class="bg-[var(--bg-card)] rounded-[11px] p-3 h-full">
           <h3 class="text-sm font-semibold text-[var(--text-primary)] mb-1">ChatGPT Alternatives</h3>
           <p class="text-xs text-[var(--text-muted)] m-0">Claude, Gemini, Perplexity &amp; more</p>
         </div>
       </a>
       <a href="/guides/midjourney-alternatives/" class="block rounded-xl p-[1px] bg-gradient-to-br from-[#f472b6] to-[#fbbf24] hover:from-[#f9a8d4] hover:to-[#fcd34d] transition-all no-underline group">
-        <div class="bg-[var(--bg-card)] rounded-[11px] p-4 h-full">
+        <div class="bg-[var(--bg-card)] rounded-[11px] p-3 h-full">
           <h3 class="text-sm font-semibold text-[var(--text-primary)] mb-1">Midjourney Alternatives</h3>
           <p class="text-xs text-[var(--text-muted)] m-0">Flux, Ideogram, Firefly &amp; more</p>
         </div>
@@ -578,26 +590,33 @@ const featuredComparisons = comparisons
     </div>
   </section>
 
-  <!-- Featured comparisons (top 12 by combined tool score; full list at /compare/) -->
+  <!-- Featured comparisons (top 9 by combined tool score; full list at /compare/) -->
   <section class="mb-10">
-    <div class="flex items-baseline justify-between mb-6">
+    <div class="flex items-baseline justify-between mb-4">
       <h2 class="text-xl font-bold text-[var(--text-primary)] m-0">Featured comparisons</h2>
       <a href="/compare/" class="text-xs text-[var(--accent-primary)] no-underline hover:underline">
-        All {comparisons.length} comparisons &rarr;
+        All {comparisons.length} &rarr;
       </a>
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
       {featuredComparisons.map((comp) => (
         <a
           href={`/compare/${comp.slug}/`}
-          class="flex items-center justify-between px-4 py-3 rounded-lg bg-[var(--bg-card)] border border-[var(--border)] hover:bg-[var(--bg-card-hover)] hover:border-[rgba(167,139,250,0.35)] transition-colors no-underline group"
+          class="flex items-center gap-3 p-2.5 rounded-lg bg-[var(--bg-card)] border border-[var(--border)] hover:bg-[var(--bg-card-hover)] hover:border-[rgba(167,139,250,0.35)] transition-colors no-underline group"
         >
-          <span class="text-sm text-[var(--text-secondary)] group-hover:text-[var(--text-primary)] transition-colors truncate">
-            {comp.title}
-          </span>
-          <span class="text-[var(--text-muted)] group-hover:text-[var(--accent-primary)] transition-colors ml-2 shrink-0">
-            &rarr;
-          </span>
+          <div class="flex items-center -space-x-1.5 shrink-0">
+            {comp.compareTools.map((t) => (
+              <img src={t.logo} alt="" width="26" height="26" loading="lazy"
+                   class="rounded-md border-2 border-[var(--bg-base)]"
+                   style="width: 26px; height: 26px; background: #fff; padding: 2px; box-sizing: border-box;" />
+            ))}
+          </div>
+          <div class="min-w-0 flex-1">
+            <div class="text-sm font-medium text-[var(--text-primary)] group-hover:text-[var(--accent-primary)] truncate">
+              {comp.compareTools[0]?.title || '?'} <span class="text-[var(--text-muted)] font-normal text-xs">vs</span> {comp.compareTools[1]?.title || '?'}
+            </div>
+          </div>
+          <span class="text-[var(--text-muted)] group-hover:text-[var(--accent-primary)] group-hover:translate-x-0.5 transition-all shrink-0 text-sm">&rarr;</span>
         </a>
       ))}
     </div>
