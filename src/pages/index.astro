@@ -123,7 +123,7 @@ const featuredComparisons = comparisons
   />
 
   <!-- Hero -->
-  <section class="text-center py-16 md:py-24">
+  <section class="text-center pt-4 pb-8 md:pt-14 md:pb-20">
     <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-4">
       <span class="count-up tabular-nums" data-target={allTools.length}>{allTools.length}</span> AI tools, <span class="bg-gradient-to-r from-[#a78bfa] to-[#60a5fa] bg-clip-text text-transparent whitespace-nowrap">agent&#8209;scored</span>
     </h1>
@@ -141,7 +141,8 @@ const featuredComparisons = comparisons
         <svg class="w-4 h-4 shrink-0 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
         </svg>
-        <span>Search tools, categories, comparisons...</span>
+        <span class="truncate sm:hidden">Search the wiki...</span>
+        <span class="truncate hidden sm:inline">Search tools, categories, comparisons...</span>
         <span class="ml-auto text-xs opacity-40">⌘K</span>
       </button>
     </div>
@@ -216,9 +217,9 @@ const featuredComparisons = comparisons
   </section>
 
   <!-- Toolbar: section heading + filter dropdown + count + page size all on one row -->
-  <div class="flex items-center justify-between mb-6 gap-3 flex-wrap">
-    <div class="flex items-center gap-4 flex-wrap">
-      <h2 id="tools-grid-heading" class="text-xl font-bold text-[var(--text-primary)] m-0">All Tools</h2>
+  <div class="flex items-center justify-between mb-6 gap-x-3 gap-y-2 flex-wrap">
+    <div class="flex items-center gap-2 sm:gap-4 flex-wrap">
+      <h2 id="tools-grid-heading" class="text-lg sm:text-xl font-bold text-[var(--text-primary)] m-0">All Tools</h2>
       <section id="category-pills" class="relative" aria-label="Filter tool grid">
         <button
           id="filter-trigger"
@@ -226,9 +227,12 @@ const featuredComparisons = comparisons
           aria-haspopup="listbox"
           aria-expanded="false"
           aria-controls="filter-popover"
-          class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-[12px] font-medium bg-[var(--bg-card)] border border-[var(--border)] text-[var(--text-secondary)] hover:bg-[var(--bg-card-hover)] hover:border-[rgba(167,139,250,0.3)] hover:text-[var(--text-primary)] transition-colors cursor-pointer"
+          class="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1.5 rounded-lg text-[12px] font-medium bg-[var(--bg-card)] border border-[var(--border)] text-[var(--text-secondary)] hover:bg-[var(--bg-card-hover)] hover:border-[rgba(167,139,250,0.3)] hover:text-[var(--text-primary)] transition-colors cursor-pointer"
         >
-          <span class="text-[10px] font-semibold uppercase tracking-[0.12em] text-[var(--text-muted)]">Filter</span>
+          <span class="hidden sm:inline text-[10px] font-semibold uppercase tracking-[0.12em] text-[var(--text-muted)]">Filter</span>
+          <svg class="sm:hidden w-3 h-3 opacity-70" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2a1 1 0 01-.293.707L15 12.414V19a1 1 0 01-.553.894l-4 2A1 1 0 019 21v-8.586L3.293 6.707A1 1 0 013 6V4z" />
+          </svg>
           <span id="filter-current-label" class="text-[var(--text-primary)]">All</span>
           <svg id="filter-chevron" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" class="transition-transform" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
@@ -267,16 +271,16 @@ const featuredComparisons = comparisons
           </div>
         </div>
       </section>
-      <p id="filter-count" class="text-xs text-[var(--text-muted)]">Showing {Math.min(30, scoredTools.length)} of {scoredTools.length} tools</p>
+      <p id="filter-count" class="hidden sm:block text-xs text-[var(--text-muted)]">Showing {Math.min(30, scoredTools.length)} of {scoredTools.length} tools</p>
     </div>
     <div class="flex items-center gap-3">
       <div class="flex items-center gap-1.5">
         <span class="text-xs text-[var(--text-muted)] hidden sm:inline">Show</span>
         <div class="flex items-center gap-0.5 bg-[var(--bg-card)] border border-[var(--border)] rounded-lg p-0.5">
-          <button data-pagesize="30"  class="page-size-btn px-2.5 py-1 text-xs rounded-md font-medium transition-colors" style="background: rgba(167,139,250,0.15); color: var(--accent-primary);">30</button>
-          <button data-pagesize="60"  class="page-size-btn px-2.5 py-1 text-xs rounded-md font-medium text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors">60</button>
-          <button data-pagesize="120" class="page-size-btn px-2.5 py-1 text-xs rounded-md font-medium text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors">120</button>
-          <button data-pagesize="all" class="page-size-btn px-2.5 py-1 text-xs rounded-md font-medium text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors">All</button>
+          <button data-pagesize="30"  class="page-size-btn px-1.5 sm:px-2.5 py-1 text-[11px] sm:text-xs rounded-md font-medium transition-colors" style="background: rgba(167,139,250,0.15); color: var(--accent-primary);">30</button>
+          <button data-pagesize="60"  class="page-size-btn px-1.5 sm:px-2.5 py-1 text-[11px] sm:text-xs rounded-md font-medium text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors">60</button>
+          <button data-pagesize="120" class="page-size-btn px-1.5 sm:px-2.5 py-1 text-[11px] sm:text-xs rounded-md font-medium text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors">120</button>
+          <button data-pagesize="all" class="page-size-btn px-1.5 sm:px-2.5 py-1 text-[11px] sm:text-xs rounded-md font-medium text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors">All</button>
         </div>
       </div>
       <a id="category-link" href="#" class="text-xs text-[var(--accent-primary)] no-underline hover:underline hidden">View all &rarr;</a>
