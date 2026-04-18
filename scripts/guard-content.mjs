@@ -36,7 +36,6 @@ const FLOORS = {
   dead:          3,
   glossary:      1,
   news:          3,
-  benchmarks:    2,
   workflows:     3,
   reports:       1,
 };

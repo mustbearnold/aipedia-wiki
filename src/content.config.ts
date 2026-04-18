@@ -255,24 +255,11 @@ const news = defineCollection({
   }).passthrough(),
 });
 
-const benchmarks = defineCollection({
-  loader: glob({ pattern: '**/*.md', base: 'src/content/benchmarks' }),
-  schema: z.object({
-    type: z.string().optional(),
-    slug: z.string().optional(),
-    title: z.string(),
-    seo_title: z.string().optional(),
-    meta_description: z.string().optional(),
-    description: z.string().optional(),
-    tools_tested: z.array(z.string()).optional(),
-    category: z.string().optional(),
-    methodology_version: z.string().optional(),
-    author: z.string().optional(),
-    last_updated: dateish,
-    last_verified: dateish,
-    update_frequency: z.string().optional(),
-  }).passthrough(),
-});
+/* Benchmarks collection retired 2026-04-18. The three seed benchmark files
+   (coding-same-task, image-generator-grid, tts-blind-comparison) presented
+   detailed timing and scoring data that was never actually produced. Removed
+   along with the /benchmarks/ routes. If real benchmark infrastructure is
+   ever built, this collection can be re-added. */
 
 /* ------------------------------------------------------------------ */
 /*  Export                                                              */
@@ -289,6 +276,5 @@ export const collections = {
   glossary,
   reports,
   workflows,
-  benchmarks,
   news,
 };
