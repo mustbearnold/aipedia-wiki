@@ -2,7 +2,7 @@
 type: tool
 slug: qwen
 title: Qwen
-tagline: Alibaba Cloud's open-weight LLM family covering chat, coding, vision, and reasoning across 119 languages, with Qwen3.6 Plus at 1M context.
+tagline: Alibaba Cloud's open-weight LLM family. Qwen3.6 Plus (Apr 2, 2026) is the 1M-context proprietary flagship; Qwen3.6-35B-A3B (Apr 16, 2026) is the open-source sparse MoE with 3B active params under Apache 2.0.
 category: ai-chatbots
 secondary_categories: [ai-coding, ai-research]
 company: Alibaba Cloud
@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "Free (open weights) / API from ~$0.15/M tokens"
 status: active
 launched: 2023-09
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-04-18
+last_verified: 2026-04-18
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -48,6 +48,8 @@ Alibaba Cloud's open-weight LLM family, developed by the Qwen team and spanning 
 
 The current surface includes **Qwen3.6 Plus** (released April 2, 2026) as the flagship proprietary model with 1M native context and always-on chain-of-thought. **Qwen3-Max** is Alibaba's trillion-parameter closed model. Open-weight releases from the Qwen3 line ship under Apache 2.0 on [Hugging Face](https://huggingface.co/Qwen). Qwen3-Coder (480B MoE with 35B active) leads coding tasks among Alibaba releases.
 
+**Qwen3.6-35B-A3B** (released April 16, 2026) is the newest open-source addition: a sparse MoE with 35B total params but only ~3B active per token via 256 experts (8 routed + 1 shared per forward pass). Native context is 262,144 tokens, extensible to ~1M via YaRN. Apache 2.0 licensed. Benchmarks aggregate ~82% of Claude Opus 4.7 performance, meaningful gap on agentic tool-use (62% on MCP Atlas) but close to parity on knowledge tasks. See the [full coverage](/news/2026-04-16-qwen-3-6-35b-a3b-release/).
+
 ## System Verdict
 
 > **Pick Qwen if you need open-weight frontier models with multilingual reach.** Apache 2.0 across most sizes gives real commercial flexibility. 119-language coverage, strongest among major open-weight families. Qwen3-Coder handles agentic coding at frontier-adjacent quality. Cost-per-token on Alibaba Cloud undercuts OpenAI and Anthropic by 5-10x for equivalent capability.
@@ -63,6 +65,7 @@ The current surface includes **Qwen3.6 Plus** (released April 2, 2026) as the fl
 | **Flagship (proprietary)** | Qwen3.6 Plus (released April 2, 2026, 1M context) |
 | **Trillion-parameter model** | Qwen3-Max (pricing cut up to 50% in 2026 price war) |
 | **Open-weight line** | Qwen3 series on Apache 2.0 (0.6B through 235B MoE) |
+| **Newest open-source MoE** | Qwen3.6-35B-A3B (April 16, 2026): 35B total, ~3B active, 262k native / 1M YaRN context, Apache 2.0 |
 | **Coding flagship** | Qwen3-Coder (480B MoE, 35B active) |
 | **Vision flagship** | Qwen3.5-Omni (multimodal) |
 | **Language coverage** | 119 languages, pre-trained on ~36T tokens |
@@ -150,6 +153,9 @@ Largely yes. The Qwen3 open-weight line ships under Apache 2.0 on Hugging Face, 
 
 **What is Qwen3.6 Plus?**
 Alibaba's current proprietary flagship, released April 2, 2026. Supports 1M native context, always-on chain-of-thought, and agentic coding. Priced at $0.325/M input and $1.95/M output through Alibaba Cloud Model Studio.
+
+**What is Qwen3.6-35B-A3B (the April 16 open-source release)?**
+The newest open-source addition. Sparse Mixture-of-Experts architecture: 35B total parameters, ~3B active per token via 256 experts (8 routed + 1 shared activated per forward pass). Native 262,144 token context, extensible to ~1M via YaRN. Apache 2.0 license permits full commercial use. Benchmarks aggregate around 82% of Claude Opus 4.7 performance at zero license cost. Gap widens on agentic tool-use (62% on MCP Atlas) but closes on knowledge tasks (97%). Runs locally via Ollama, LM Studio, Jan.ai, llama.cpp, vLLM. Day-0 support from AMD Instinct GPUs.
 
 **How does Qwen3 compare to Claude Opus 4.7?**
 Qwen3-235B-A22B and Qwen3.6 Plus are competitive on coding and math benchmarks but trail Claude Opus 4.7 on long-form English reasoning. At roughly 10-15x lower API cost, Qwen wins on value for multilingual and coding workloads.
