@@ -20,7 +20,17 @@
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { join } from 'node:path';
-import { Resvg } from '@resvg/resvg-js';
+
+// Lazy-load resvg so build machines that can't install native modules
+// (e.g. some Cloudflare Workers build environments) still produce SVG
+// output, they just skip the PNG rasterization step. Committed PNGs
+// in public/og/tools/ stay authoritative in that case.
+let Resvg = null;
+try {
+  ({ Resvg } = await import('@resvg/resvg-js'));
+} catch (err) {
+  console.warn('resvg unavailable, will emit SVG-only:', err.message);
+}
 
 const ROOT = fileURLToPath(new URL('../', import.meta.url));
 const REGISTRY = join(ROOT, 'src/data/_meta/tools-registry.json');
@@ -242,8 +252,10 @@ function svgFor(tool) {
  * Rasterize an SVG string to a 1200x630 PNG buffer using resvg.
  * System fonts fall back to what's installed on the build machine
  * (Inter is preferred; if absent, Geist/Arial look fine).
+ * Returns null if resvg wasn't available at module load.
  */
 function rasterize(svgString) {
+  if (!Resvg) return null;
   const resvg = new Resvg(svgString, {
     background: '#0b0a14',
     fitTo: { mode: 'width', value: 1200 },
@@ -275,8 +287,10 @@ function main() {
     svgs++;
     try {
       const png = rasterize(svg);
-      writeFileSync(join(OUT_DIR, `${tool.slug}.png`), png);
-      pngs++;
+      if (png) {
+        writeFileSync(join(OUT_DIR, `${tool.slug}.png`), png);
+        pngs++;
+      }
     } catch (err) {
       console.warn(`PNG raster failed for ${tool.slug}:`, err.message);
     }
@@ -298,8 +312,11 @@ function main() {
         // so resvg doesn't fail on a missing href.
         svg = svg.replace(/<image[^>]*BRAND_LOGO_DATA_URL[^>]*\/>/g, '');
       }
-      writeFileSync(DEFAULT_PNG, rasterize(svg));
-      console.log('Rasterized public/og-default.svg -> og-default.png');
+      const png = rasterize(svg);
+      if (png) {
+        writeFileSync(DEFAULT_PNG, png);
+        console.log('Rasterized public/og-default.svg -> og-default.png');
+      }
     } catch (err) {
       console.warn('Default OG PNG raster failed:', err.message);
     }
