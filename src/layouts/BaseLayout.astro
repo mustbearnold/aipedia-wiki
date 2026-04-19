@@ -81,10 +81,13 @@ const ogImageUrl = ogImage
     <ClientRouter />
   </head>
   <body class="min-h-screen">
+    <!-- Skip-to-main-content: hidden off-screen until keyboard focus. Lets
+         screen-reader + keyboard users bypass the sticky nav on every page. -->
+    <a href="#main-content" class="skip-to-main">Skip to main content</a>
     <div id="bg-gradient" class="fixed inset-0 -z-10" style="background: linear-gradient(160deg, var(--bg-base) 0%, #0d0d1a 50%, #0f0a14 100%);" transition:persist></div>
     <Nav transition:persist="nav" />
     <SearchModal transition:persist="search-modal" />
-    <main class="max-w-6xl mx-auto px-4" data-pagefind-body>
+    <main id="main-content" class="max-w-6xl mx-auto px-4" data-pagefind-body>
       <slot />
     </main>
     <Footer transition:persist="footer" />
