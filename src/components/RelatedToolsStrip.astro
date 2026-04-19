@@ -1,0 +1,84 @@
+---
+// Horizontal tool-card strip surfaced at the top of a news article when
+// `related_tools: [slug, ...]` is set in frontmatter. Pulls tool metadata
+// directly from the tools collection so titles, taglines, scores, and
+// logos all stay in sync with the canonical tool page.
+//
+// Distinct from `affects:` (which drives the news-to-tool xref audit in
+// scripts/audit-news-xrefs.mjs). Use `affects:` when the tool has a
+// dedicated page that should cascade the news link; use `related_tools:`
+// when you want a visible visual rail at the top of the article.
+import { getCollection } from 'astro:content';
+import ToolLogo from './ToolLogo.astro';
+
+interface Props {
+  slugs: string[];
+}
+
+const { slugs } = Astro.props;
+
+const tools = await getCollection('tools');
+const bySlug = new Map<string, any>();
+for (const t of tools) {
+  const s = t.data.slug || t.id.replace(/\.md$/, '');
+  bySlug.set(s, t.data);
+}
+
+interface ResolvedTool {
+  slug: string;
+  title: string;
+  tagline?: string;
+  price_range?: string;
+  score?: number;
+}
+
+const resolved: ResolvedTool[] = slugs
+  .map((slug): ResolvedTool | null => {
+    const t = bySlug.get(slug);
+    if (!t) return null;
+    const s = t.scores ?? {};
+    const overall =
+      s.utility || s.value || s.moat || s.longevity
+        ? Math.round((((s.utility ?? 0) + (s.value ?? 0) + (s.moat ?? 0) + (s.longevity ?? 0)) / 4) * 10) / 10
+        : undefined;
+    return {
+      slug,
+      title: t.title,
+      tagline: t.tagline,
+      price_range: t.price_range,
+      score: overall,
+    };
+  })
+  .filter((t): t is ResolvedTool => t !== null);
+---
+
+{resolved.length > 0 && (
+  <aside class="not-prose mb-6 rounded-xl border border-[rgba(167,139,250,0.28)] bg-gradient-to-br from-[rgba(167,139,250,0.08)] via-[rgba(96,165,250,0.04)] to-transparent p-4">
+    <div class="text-[10px] font-semibold uppercase tracking-wider text-[var(--accent-primary)] mb-2">
+      Tools in this story
+    </div>
+    <div class="flex gap-2 flex-wrap">
+      {resolved.map((t) => (
+        <a
+          href={`/tools/${t.slug}/`}
+          class="flex items-center gap-2 rounded-lg border border-[var(--border)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] hover:border-[rgba(167,139,250,0.45)] px-3 py-2 no-underline transition-colors min-w-[180px] sm:min-w-[220px]"
+        >
+          <ToolLogo slug={t.slug} title={t.title} size={28} />
+          <div class="flex-1 min-w-0">
+            <div class="text-[13px] font-semibold text-[var(--text-primary)] truncate">
+              {t.title}
+            </div>
+            <div class="flex items-center gap-2 text-[11px] text-[var(--text-muted)]">
+              {typeof t.score === 'number' && (
+                <span class="text-[var(--accent-primary)] font-semibold tabular-nums">{t.score}/10</span>
+              )}
+              {t.price_range && (
+                <span class="truncate" title={t.price_range}>{t.price_range}</span>
+              )}
+            </div>
+          </div>
+        </a>
+      ))}
+    </div>
+  </aside>
+)}

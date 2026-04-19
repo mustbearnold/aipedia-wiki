@@ -1,6 +1,7 @@
 ---
 import { getCollection, render } from 'astro:content';
 import ArticlePlusLayout from '../../layouts/ArticlePlusLayout.astro';
+import RelatedToolsStrip from '../../components/RelatedToolsStrip.astro';
 
 export async function getStaticPaths() {
   const entries = await getCollection('news');
@@ -59,5 +60,13 @@ const badge = severityBadge[sev] ?? severityBadge.minor;
       )}
     </figure>
   )}
+  {(() => {
+    // Prefer explicit related_tools; fall back to affects list (first 4)
+    // so existing articles with no related_tools still get a strip.
+    const explicit = Array.isArray(entry.data.related_tools) ? entry.data.related_tools : [];
+    const affects = Array.isArray(entry.data.affects) ? entry.data.affects : [];
+    const slugs = (explicit.length > 0 ? explicit : affects).slice(0, 4);
+    return slugs.length > 0 ? <RelatedToolsStrip slugs={slugs} /> : null;
+  })()}
   <Content />
 </ArticlePlusLayout>
