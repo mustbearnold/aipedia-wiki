@@ -190,7 +190,7 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
 ---
 
 <BaseLayout
-  title="AI Stack Builder — Find Your Perfect AI Tool Stack (April 2026)"
+  title="AI Stack Builder: Find Your Perfect AI Tool Stack (April 2026)"
   description="Pick your role, set your budget, get a curated AI tool stack. Multi-role support, swap any tool, share the result. Recently-updated badges flag tools that shipped in the last 14 days."
 >
   <Breadcrumb items={[{ label: 'Stack Builder' }]} />
@@ -522,7 +522,7 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
                     <div class="flex-1 min-w-0">
                       <div class="text-sm font-semibold truncate flex items-center gap-1.5">
                         <a href="${t.url}" class="text-[var(--text-primary)] hover:text-[var(--accent-primary)] no-underline truncate">${escapeHtml(t.title)}</a>
-                        ${updated ? `<a href="/news/${updated}/" class="shrink-0 inline-flex items-center text-[9px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded bg-[rgba(52,211,153,0.12)] border border-[rgba(52,211,153,0.3)] text-[var(--accent-success)] no-underline" title="Recently updated — see news">New</a>` : ''}
+                        ${updated ? `<a href="/news/${updated}/" class="shrink-0 inline-flex items-center text-[9px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded bg-[rgba(52,211,153,0.12)] border border-[rgba(52,211,153,0.3)] text-[var(--accent-success)] no-underline" title="Recently updated. See news.">New</a>` : ''}
                       </div>
                       <a href="${t.url}" class="block text-xs text-[var(--text-muted)] truncate no-underline hover:text-[var(--text-secondary)]">${escapeHtml(t.tagline || '')}</a>
                     </div>
@@ -545,7 +545,7 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
           <div>
             <div class="text-xs text-[var(--text-muted)] uppercase tracking-wider mb-1">Estimated stack cost</div>
             <div class="text-2xl font-bold bg-gradient-to-r from-[#a78bfa] to-[#60a5fa] bg-clip-text text-transparent">
-              $${Math.round(totalLow)}${totalHigh > totalLow ? ` – $${Math.round(totalHigh)}` : ''} <span class="text-sm font-normal text-[var(--text-muted)]">/month</span>
+              $${Math.round(totalLow)}${totalHigh > totalLow ? ` - $${Math.round(totalHigh)}` : ''} <span class="text-sm font-normal text-[var(--text-muted)]">/month</span>
             </div>
           </div>
           <div class="text-sm text-[var(--text-secondary)]">
@@ -683,11 +683,11 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
         for (const t of picks) {
           const { low, high } = parsePrice(t.price);
           totalLow += low; totalHigh += high;
-          md += `- **[${t.title}](${siteBase}tools/${t.slug}/)** — ${t.tagline || ''} (${t.priceDisplay || 'Free'})\n`;
+          md += `- **[${t.title}](${siteBase}tools/${t.slug}/)** ${t.tagline ? ': ' + t.tagline : ''} (${t.priceDisplay || 'Free'})\n`;
         }
         md += '\n';
       }
-      md += `---\n\n**Estimated cost:** $${Math.round(totalLow)}${totalHigh > totalLow ? `–$${Math.round(totalHigh)}` : ''}/month\n`;
+      md += `---\n\n**Estimated cost:** $${Math.round(totalLow)}${totalHigh > totalLow ? `-$${Math.round(totalHigh)}` : ''}/month\n`;
       return md;
     }
 
