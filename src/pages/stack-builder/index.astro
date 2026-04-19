@@ -87,9 +87,12 @@ const STACKS: Record<string, Record<string, { budget: string[]; standard: string
 const toolLookup = new Map(allTools.map(t => [t.data.slug || t.id.replace(/\.md$/, ''), t]));
 
 // Resolve a slug into the stack-builder's compact ToolItem shape.
+// Includes vendor URL + affiliate link so each rendered row can render
+// a "Try" CTA that earns on the user-has-intent moment.
 function resolveSlug(slug: string) {
   const t = toolLookup.get(slug);
   if (!t) return null;
+  const affiliate = (t.data as any).affiliate ?? {};
   return {
     slug,
     title: t.data.title,
@@ -98,11 +101,25 @@ function resolveSlug(slug: string) {
     price: t.data.price_range,
     priceDisplay: shortenPrice(t.data.price_range ?? ''),
     url: `/tools/${slug}/`,
+    vendorUrl: (t.data as any).url ?? null,
+    affiliateLink: affiliate?.link ?? null,
+    hasProgram: !!affiliate?.has_program,
   };
 }
 
 // Resolve full stacks to an indexable object keyed by role, category, tier.
-interface ResolvedTool { slug: string; title: string; tagline?: string; category?: string; price?: string; priceDisplay?: string; url: string; }
+interface ResolvedTool {
+  slug: string;
+  title: string;
+  tagline?: string;
+  category?: string;
+  price?: string;
+  priceDisplay?: string;
+  url: string;
+  vendorUrl?: string | null;
+  affiliateLink?: string | null;
+  hasProgram?: boolean;
+}
 const resolvedStacks: Record<string, Record<string, Record<string, ResolvedTool[]>>> = {};
 for (const [role, cats] of Object.entries(STACKS)) {
   resolvedStacks[role] = {};
@@ -511,12 +528,20 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
                 const updated = RECENT[t.slug];
                 const role = state.roles.find(r => (STACKS[r]?.[catName]?.[state.budget] || []).some(x => x.slug === t.slug)) || state.roles[0];
                 // Tool row. Title + news-badge + tagline are rendered as
-                // SIBLING anchors rather than nested — HTML forbids nesting
-                // <a> inside <a>, and browsers auto-close the outer when
-                // they see the inner, which breaks the layout.
+                // SIBLING anchors rather than nested (HTML forbids nesting
+                // <a> inside <a>; browsers auto-close the outer when they
+                // see the inner, which breaks the layout).
+                //
+                // The "Try" CTA uses the affiliate link when a program
+                // exists, else the canonical vendor URL. Opens in a new
+                // tab with rel=noopener (and sponsored when affiliate) so
+                // we earn on the intent moment without hijacking nav.
+                const tryUrl = t.affiliateLink || t.vendorUrl || '';
+                const tryRel = t.affiliateLink ? 'noopener nofollow sponsored' : 'noopener';
+                const tryLabel = t.affiliateLink ? 'Try' : 'Open';
                 return `
                   <div class="flex items-center gap-3 p-3 rounded-lg hover:bg-[var(--bg-card-hover)] transition-colors">
-                    <a href="${t.url}" class="w-9 h-9 rounded-lg flex items-center justify-center text-base flex-shrink-0 no-underline" style="background:linear-gradient(135deg,rgba(167,139,250,0.15),rgba(96,165,250,0.15));" aria-label="Open ${escapeHtml(t.title)}">
+                    <a href="${t.url}" class="w-9 h-9 rounded-lg flex items-center justify-center text-base flex-shrink-0 no-underline" style="background:linear-gradient(135deg,rgba(167,139,250,0.15),rgba(96,165,250,0.15));" aria-label="Open ${escapeHtml(t.title)} review">
                       ${categoryEmoji[t.category] || '🔧'}
                     </a>
                     <div class="flex-1 min-w-0">
@@ -527,6 +552,9 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
                       <a href="${t.url}" class="block text-xs text-[var(--text-muted)] truncate no-underline hover:text-[var(--text-secondary)]">${escapeHtml(t.tagline || '')}</a>
                     </div>
                     <div class="hidden sm:block text-xs text-[var(--text-muted)] shrink-0 whitespace-nowrap" title="${escapeHtml(t.price || '')}">${escapeHtml(t.priceDisplay || 'Free')}</div>
+                    ${tryUrl ? `<a href="${escapeHtml(tryUrl)}" target="_blank" rel="${tryRel}" class="shrink-0 inline-flex items-center gap-1 text-[11px] font-semibold px-2.5 py-1 rounded-md bg-[rgba(167,139,250,0.12)] border border-[rgba(167,139,250,0.35)] text-[var(--accent-primary)] hover:bg-[rgba(167,139,250,0.2)] no-underline transition-colors" aria-label="${tryLabel} ${escapeHtml(t.title)} on vendor site">
+                      ${tryLabel} <span aria-hidden="true">→</span>
+                    </a>` : ''}
                     <button type="button" data-swap-role="${escapeHtml(role)}" data-swap-cat="${escapeHtml(catName)}" data-swap-slug="${t.slug}" class="shrink-0 text-[11px] font-medium px-2 py-0.5 rounded-md bg-transparent border border-[var(--border)] text-[var(--text-muted)] hover:text-[var(--accent-primary)] hover:border-[rgba(167,139,250,0.4)] cursor-pointer transition-colors" aria-label="Swap ${escapeHtml(t.title)} for an alternative">
                       Swap
                     </button>
@@ -540,18 +568,66 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
       catsEl.innerHTML = html || '<p class="text-sm text-[var(--text-muted)]">No recommendations for this combination yet.</p>';
       if (countChip) countChip.textContent = `${toolCount} tool${toolCount !== 1 ? 's' : ''} · ${catCount} categor${catCount !== 1 ? 'ies' : 'y'}`;
 
+      // Build the "Try the whole stack" CTA grid. Every tool with a URL
+      // gets a chip; affiliate links are preferred + flagged with sponsored
+      // rel. This is the primary conversion path for the builder.
+      const allPicks = [];
+      for (const [catName, tiers] of Object.entries(merged)) {
+        (tiers[state.budget] || []).forEach(t => {
+          const picked = toolAfterSwap(
+            state.roles.find(r => (STACKS[r]?.[catName]?.[state.budget] || []).some(x => x.slug === t.slug)) || state.roles[0],
+            catName, t
+          );
+          if (!allPicks.find(p => p.slug === picked.slug)) allPicks.push(picked);
+        });
+      }
+
+      const ctaGrid = allPicks.map(t => {
+        const tryUrl = t.affiliateLink || t.vendorUrl || '';
+        if (!tryUrl) return '';
+        const rel = t.affiliateLink ? 'noopener nofollow sponsored' : 'noopener';
+        return `
+          <a href="${escapeHtml(tryUrl)}" target="_blank" rel="${rel}" class="group flex items-center gap-2 p-2.5 rounded-lg bg-[var(--bg-base)] border border-[var(--border)] hover:border-[rgba(167,139,250,0.4)] hover:bg-[var(--bg-card-hover)] no-underline transition-colors" title="Open ${escapeHtml(t.title)} in a new tab">
+            <span class="shrink-0 w-7 h-7 rounded-md flex items-center justify-center text-sm" style="background:linear-gradient(135deg,rgba(167,139,250,0.15),rgba(96,165,250,0.15));" aria-hidden="true">${categoryEmoji[t.category] || '🔧'}</span>
+            <span class="flex-1 min-w-0 text-[12px] font-semibold text-[var(--text-primary)] truncate">${escapeHtml(t.title)}</span>
+            <span class="shrink-0 text-[10px] text-[var(--accent-primary)] font-bold tracking-wider uppercase opacity-70 group-hover:opacity-100 transition-opacity">${t.affiliateLink ? 'Try' : 'Open'} <span aria-hidden="true">→</span></span>
+          </a>
+        `;
+      }).filter(Boolean).join('');
+
+      const hasAffiliate = allPicks.some(t => t.affiliateLink);
+
+      // "From $X" uses summed LOW prices — the realistic entry cost.
+      // High-range ceiling was confusing ($29-$2745) because seat-based
+      // tools like Intercom blew the top out. Entry cost is the actionable
+      // number for "what's this going to cost me to start?".
       totalEl.innerHTML = `
-        <div class="flex items-center justify-between gap-4 flex-wrap">
+        <div class="flex items-center justify-between gap-4 flex-wrap mb-4">
           <div>
-            <div class="text-xs text-[var(--text-muted)] uppercase tracking-wider mb-1">Estimated stack cost</div>
+            <div class="text-xs text-[var(--text-muted)] uppercase tracking-wider mb-1">Starts at</div>
             <div class="text-2xl font-bold bg-gradient-to-r from-[#a78bfa] to-[#60a5fa] bg-clip-text text-transparent">
-              $${Math.round(totalLow)}${totalHigh > totalLow ? ` - $${Math.round(totalHigh)}` : ''} <span class="text-sm font-normal text-[var(--text-muted)]">/month</span>
+              $${Math.round(totalLow)}<span class="text-sm font-normal text-[var(--text-muted)]">/month</span>
+            </div>
+            <div class="text-[11px] text-[var(--text-muted)] mt-0.5">Entry-tier cost across all picks. Scale plans go higher.</div>
+          </div>
+          <div class="text-right">
+            <div class="text-xs text-[var(--text-muted)] uppercase tracking-wider mb-1">Stack</div>
+            <div class="text-sm font-semibold text-[var(--text-secondary)]">${toolCount} tool${toolCount !== 1 ? 's' : ''} . ${catCount} categor${catCount !== 1 ? 'ies' : 'y'}</div>
+            <div class="text-[11px] text-[var(--text-muted)] mt-0.5">${state.roles.length} role${state.roles.length !== 1 ? 's' : ''}</div>
+          </div>
+        </div>
+        ${ctaGrid ? `
+          <div class="pt-4 border-t border-[var(--border)]">
+            <div class="flex items-center justify-between gap-3 mb-3 flex-wrap">
+              <div class="text-xs font-semibold uppercase tracking-wider text-[var(--text-muted)]">Try the whole stack</div>
+              ${hasAffiliate ? '<div class="text-[10px] text-[var(--text-muted)]">Some links are affiliate; no extra cost to you.</div>' : ''}
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
+              ${ctaGrid}
             </div>
           </div>
-          <div class="text-sm text-[var(--text-secondary)]">
-            Across ${state.roles.length} role${state.roles.length !== 1 ? 's' : ''}
-          </div>
-        </div>`;
+        ` : ''}
+      `;
     }
 
     // ---------- Swap modal ----------
