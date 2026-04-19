@@ -89,38 +89,38 @@ const toolOptions = Object.entries(toolCounts)
     </div>
   )}
 
-  {/* Filter UI: severity tabs + tool dropdown. URL params: ?severity=breaking&tool=claude
-      Filters run client-side via simple querystring + display:none toggles so the
-      static build stays cacheable and the page still works with JS disabled. */}
+  {/* Filter UI: severity tabs + tool dropdown on a single row. Horizontally
+      scrollable on narrow viewports so everything stays accessible without
+      wrapping onto multiple lines. URL-synced (?severity=breaking&tool=claude)
+      so filtered views are bookmarkable. */}
   {sorted.length > 0 && (
-    <section id="news-filters" class="mb-6 flex items-center gap-3 flex-wrap" data-pagefind-ignore>
-      <div class="flex items-center gap-1 flex-wrap">
-        <span class="text-[11px] uppercase tracking-wider text-[var(--text-muted)] mr-1">Severity</span>
-        <button type="button" data-severity-filter="all" class="severity-tab severity-tab-active inline-flex items-center gap-1 px-2.5 py-1 rounded-md text-[12px] font-medium bg-[var(--bg-card)] border border-[var(--border)] text-[var(--text-secondary)] hover:bg-[var(--bg-card-hover)] transition-colors cursor-pointer">
+    <section id="news-filters" class="mb-6 -mx-4 sm:mx-0 px-4 sm:px-0" data-pagefind-ignore>
+      <div class="flex items-center gap-1.5 overflow-x-auto pb-1 no-scrollbar">
+        <button type="button" data-severity-filter="all" class="severity-tab severity-tab-active shrink-0 inline-flex items-center gap-1 px-2.5 py-1 rounded-md text-[12px] font-medium bg-[var(--bg-card)] border border-[var(--border)] text-[var(--text-secondary)] hover:bg-[var(--bg-card-hover)] transition-colors cursor-pointer">
           All <span class="text-[10px] text-[var(--text-muted)] tabular-nums">{sorted.length}</span>
         </button>
         {(['breaking', 'major', 'minor'] as const).map((sev) => severityCounts[sev] ? (
-          <button type="button" data-severity-filter={sev} class="severity-tab inline-flex items-center gap-1 px-2.5 py-1 rounded-md text-[12px] font-medium bg-[var(--bg-card)] border border-[var(--border)] text-[var(--text-secondary)] hover:bg-[var(--bg-card-hover)] transition-colors cursor-pointer capitalize">
+          <button type="button" data-severity-filter={sev} class="severity-tab shrink-0 inline-flex items-center gap-1 px-2.5 py-1 rounded-md text-[12px] font-medium bg-[var(--bg-card)] border border-[var(--border)] text-[var(--text-secondary)] hover:bg-[var(--bg-card-hover)] transition-colors cursor-pointer capitalize">
             {sev} <span class="text-[10px] text-[var(--text-muted)] tabular-nums">{severityCounts[sev]}</span>
           </button>
         ) : null)}
+
+        {toolOptions.length > 0 && (
+          <>
+            <span class="shrink-0 mx-1 h-4 w-px bg-[var(--border)]" aria-hidden="true"></span>
+            <select id="tool-filter" aria-label="Filter by affected tool" class="shrink-0 text-[12px] bg-[var(--bg-card)] border border-[var(--border)] rounded-md px-2 py-1 text-[var(--text-secondary)] hover:bg-[var(--bg-card-hover)] transition-colors cursor-pointer max-w-[160px]">
+              <option value="all">All tools</option>
+              {toolOptions.map(({ slug, count }) => (
+                <option value={slug}>{slug} ({count})</option>
+              ))}
+            </select>
+          </>
+        )}
+
+        <button type="button" id="clear-filters" class="hidden shrink-0 ml-1 text-[12px] text-[var(--accent-primary)] hover:brightness-110 cursor-pointer">
+          Clear
+        </button>
       </div>
-
-      {toolOptions.length > 0 && (
-        <div class="flex items-center gap-2 ml-auto">
-          <label for="tool-filter" class="text-[11px] uppercase tracking-wider text-[var(--text-muted)]">Affects tool</label>
-          <select id="tool-filter" class="text-[12px] bg-[var(--bg-card)] border border-[var(--border)] rounded-md px-2 py-1 text-[var(--text-secondary)] hover:bg-[var(--bg-card-hover)] transition-colors cursor-pointer">
-            <option value="all">All tools</option>
-            {toolOptions.map(({ slug, count }) => (
-              <option value={slug}>{slug} ({count})</option>
-            ))}
-          </select>
-        </div>
-      )}
-
-      <button type="button" id="clear-filters" class="hidden text-[12px] text-[var(--accent-primary)] hover:brightness-110 cursor-pointer">
-        Clear
-      </button>
     </section>
   )}
 
@@ -244,6 +244,15 @@ const toolOptions = Object.entries(toolCounts)
       background: rgba(167, 139, 250, 0.15) !important;
       border-color: rgba(167, 139, 250, 0.4) !important;
       color: var(--accent-primary) !important;
+    }
+    /* Filter row scrolls horizontally on narrow viewports without showing a
+       scrollbar. Preserves the "single line" look on desktop and mobile. */
+    #news-filters .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    #news-filters .no-scrollbar::-webkit-scrollbar {
+      display: none;
     }
   </style>
 </BaseLayout>
