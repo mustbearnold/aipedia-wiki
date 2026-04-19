@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: $0-$990/month
 status: active
 launched: 2023-01
-last_updated: 2026-04-18
-last_verified: 2026-04-18
+last_updated: 2026-04-19
+last_verified: 2026-04-19
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -19,6 +19,9 @@ affiliate:
   cookie_days: 30
   network: direct
   link: 'https://try.elevenlabs.io/9qle5pnma4ze'
+  application_status: applied
+  applied_date: 2026-04-19
+  notes: "Applied via elevenlabs.io/affiliates; direct URL submitted to https://aipedia.wiki/tools/elevenlabs/"
 scores:
   utility: 10
   value: 8
@@ -58,6 +61,14 @@ price_history:
     plan: "Business"
     price: "$990/mo"
     note: "Verified, unchanged"
+  - date: 2026-04-19
+    plan: "Scale"
+    price: "$299/mo (was $330)"
+    note: "Scale plan cut from $330 to $299/mo; credits reduced from 2M to 1.8M. Creator credits bumped from 100K to 121K, Pro credits from 500K to 600K."
+  - date: 2026-04-19
+    plan: "API · v3 / Multilingual v2"
+    price: "$0.10 / 1K chars (was $0.12)"
+    note: "API pricing cut ~17% across v3 and Multilingual v2. Flash and Turbo cut from $0.06 to $0.05 / 1K chars. Scribe v2 Realtime raised from $0.28 to $0.39 / hour."
 ---
 
 # ElevenLabs
@@ -70,7 +81,7 @@ The top-ranked AI voice generation platform in April 2026. Eleven v3 is generall
 >
 > **Skip it if you need self-hosted weights, rock-bottom API pricing, or open-source.** [Fish Audio](/tools/fish-audio/) offers open-source models with near-ElevenLabs quality for self-hosting. [Voxtral](/tools/voxtral/) undercuts API pricing when quality-per-dollar matters more than peak quality. [Cartesia](/tools/cartesia/) wins on sub-40ms latency for ultra-responsive agents. For corporate narration on simpler interfaces at lower cost, [Murf](/tools/murf/), [WellSaid](/tools/wellsaid/), or [Lovo](/tools/lovo/) cover the basics.
 >
-> **Who pays which tier:** Free for tinkering (no commercial rights), Starter $6/mo for hobbyist creators needing commercial use + Instant Voice Cloning, Creator $22/mo for most YouTube/podcast creators (Professional Voice Cloning + 192kbps unlocks here), Pro $99/mo for developers shipping production voice features (44.1kHz PCM via API), Scale $330/mo for agency/studio workloads, Business $990/mo for teams needing 10 seats and 6M credits.
+> **Who pays which tier:** Free for tinkering (no commercial rights), Starter $6/mo for hobbyist creators needing commercial use + Instant Voice Cloning, Creator $22/mo for most YouTube/podcast creators (Professional Voice Cloning + 192kbps unlocks here), Pro $99/mo for developers shipping production voice features (44.1kHz PCM via API), Scale $299/mo for agency/studio workloads, Business $990/mo for teams needing 10 seats and 6M credits.
 
 ## Key Facts
 
@@ -80,16 +91,16 @@ The top-ranked AI voice generation platform in April 2026. Eleven v3 is generall
 | **Real-time model** | Flash v2.5 (32 languages, ~75ms) · Flash v2 (English, ~75ms) |
 | **Narration model** | Multilingual v2 (29 languages, emotionally-aware) |
 | **Voice cloning** | Instant (IVC, 1-5 min sample) · Professional (PVC, 30+ min, fine-tuned) |
-| **Subscription pricing** | Free · Starter $6 · Creator $22 · Pro $99 · Scale $330 · Business $990 · Enterprise custom |
-| **API pricing** | v3 / Multilingual v2: $0.12 / 1K chars · Flash / Turbo: $0.06 / 1K chars |
+| **Subscription pricing** | Free · Starter $6 · Creator $22 · Pro $99 · Scale $299 · Business $990 · Enterprise custom |
+| **API pricing** | v3 / Multilingual v2: $0.10 / 1K chars · Flash / Turbo: $0.05 / 1K chars |
 | **Commercial rights** | Included from Starter ($6) and above |
 | **Conversational AI** | ElevenAgents (GA) · bring-your-own-LLM, RAG, Twilio/Vonage/SIP, JS/Python/Swift/React SDKs |
 | **Long-form audio** | Studio (GA) · multi-voice audiobooks from ePub/PDF |
-| **Speech-to-text** | Scribe v2 (GA, Jan 2026) · Scribe v2 Realtime (~150ms, $0.28/hr) |
+| **Speech-to-text** | Scribe v2 (GA, 90+ languages, $0.22/hr) · Scribe v2 Realtime (~150ms, $0.39/hr) |
 | **Music & SFX** | Eleven Music (GA, Aug 2025, licensed training data) · Sound Effects |
 | **Self-hosted option** | None (cloud-only) |
 
-Every data point above verified against ElevenLabs' published sources on 2026-04-15. See Sources.
+Every data point above verified against ElevenLabs' published sources on 2026-04-19. See Sources.
 
 ## What it actually is
 
@@ -125,9 +136,9 @@ Subscription pricing via [elevenlabs.io/pricing](https://elevenlabs.io/pricing):
 |---|---|---|---|---|---|
 | Free | $0 | 10K (~10 min) | None | 128 kbps | Tinkering, no commercial rights |
 | Starter | $6/mo | 30K (~30 min) | Instant Voice Cloning | 128 kbps | Hobbyist creators needing commercial rights |
-| Creator | $22/mo | 100K (~100 min) | Professional Voice Cloning | **192 kbps** | **Most YouTube / podcast creators should land here** |
-| Pro | $99/mo | 500K (~500 min) | PVC | **44.1 kHz PCM via API** | Devs shipping production voice features |
-| Scale | $330/mo | 2M (~1,800 min) | PVC · 3 seats | 44.1 kHz PCM | Agency / studio workloads |
+| Creator | $22/mo | 121K (~120 min) | Professional Voice Cloning | **192 kbps** | **Most YouTube / podcast creators should land here** |
+| Pro | $99/mo | 600K (~600 min) | PVC | **44.1 kHz PCM via API** | Devs shipping production voice features |
+| Scale | $299/mo | 1.8M (~1,600 min) | PVC · 3 seats | 44.1 kHz PCM | Agency / studio workloads |
 | Business | $990/mo | 6M (~6,000 min) | PVC · 10 seats · low-latency TTS | 44.1 kHz PCM | Teams needing volume + seats |
 | Enterprise | Custom | Custom | PVC · custom seats · SLA / SSO / HIPAA BAA | Custom | Compliance-heavy orgs |
 
@@ -135,14 +146,14 @@ API pricing (billed separately on top of subscription or pay-as-you-go):
 
 | Model | $ per 1K chars | Notes |
 |---|---|---|
-| Eleven v3 | $0.12 | GA; most expressive; 70+ languages |
-| Multilingual v2 | $0.12 | Polished narration; 29 languages |
-| Flash v2.5 | $0.06 | Real-time; ~75ms; 32 languages |
-| Flash v2 | $0.06 | Real-time; ~75ms; English only |
-| Scribe v2 (STT) | $0.22 / hour | Transcription |
-| Scribe v2 Realtime | $0.28 / hour | ~150ms streaming STT |
+| Eleven v3 | $0.10 | GA; most expressive; 70+ languages |
+| Multilingual v2 | $0.10 | Polished narration; 29 languages |
+| Flash v2.5 | $0.05 | Real-time; ~75ms; 32 languages |
+| Flash v2 | $0.05 | Real-time; ~75ms; English only |
+| Scribe v2 (STT) | $0.22 / hour | Transcription; 90+ languages; speaker diarization up to 32 speakers |
+| Scribe v2 Realtime | $0.39 / hour | ~150ms streaming STT; 90+ languages |
 
-Prices verified 2026-04-15 via [ElevenLabs pricing](https://elevenlabs.io/pricing), [ElevenLabs API pricing](https://elevenlabs.io/pricing/api), and the [Models documentation](https://elevenlabs.io/docs/overview/models). Creator plan currently shows a 50%-off first-month promotion ($22 → $11) on the public pricing page.
+Prices verified 2026-04-19 via [ElevenLabs pricing](https://elevenlabs.io/pricing), [ElevenLabs API pricing](https://elevenlabs.io/pricing/api), and the [Models documentation](https://elevenlabs.io/docs/overview/models). Creator plan currently shows a 50%-off first-month promotion ($22 to $11) on the public pricing page. The April 19 re-verification caught a material Scale-tier price cut ($330 to $299) plus API-rate reductions of ~17% on v3 / Multilingual v2 and ~17% on Flash.
 
 ## Against the alternatives
 
@@ -153,13 +164,13 @@ Prices verified 2026-04-15 via [ElevenLabs pricing](https://elevenlabs.io/pricin
 | **Real-time latency** | ~75ms on Flash v2.5 | Varies by deployment | Sub-40ms (leads the field) |
 | **Commercial rights** | From $6 Starter | Open-source license terms apply | Commercial from paid tier |
 | **Open source / self-host** | None · cloud-only | Yes · open weights | None |
-| **API pricing (Multilingual)** | $0.12 / 1K chars | Lower on self-host | Competitive |
+| **API pricing (Multilingual)** | $0.10 / 1K chars | Lower on self-host | Competitive |
 | **Language coverage** | 70+ (v3) · 32 (Flash v2.5) | Narrower multilingual range | 15+ |
 | **Best viewed as** | Quality + coverage leader | Open-source alternative | Latency specialist |
 
 ## Failure modes
 
-- **Credit exhaustion is the dominant cost surprise.** Plans are capped in credits per month; overages either block generation or bill separately depending on plan. Long-form audio projects can exhaust Creator (100K) or even Pro (500K) credits faster than expected. 500K credits is ~8 hours of audio at typical speaking rate.
+- **Credit exhaustion is the dominant cost surprise.** Plans are capped in credits per month; overages either block generation or bill separately depending on plan. Long-form audio projects can exhaust Creator (121K) or even Pro (600K) credits faster than expected. 600K credits is ~10 hours of audio at typical speaking rate.
 - **Instant Voice Cloning consent gate is minimal.** IVC accepts a 1-minute sample with self-attestation. Easy to misuse; ElevenLabs has consent verification on PVC but not IVC. Clone-without-permission remains a real moderation and legal risk.
 - **Audio tags and emotion control are v3-specific.** Flash v2.5 and Multilingual v2 don't expose the same inline audio-tag markup. Switching models for latency forfeits expressiveness. The lineup forces a quality-vs-latency tradeoff per project.
 - **API rate limits bite on bulk workloads.** Credit caps and per-plan concurrency limits can stall batch generation. High-volume API users regularly escalate to Business or Enterprise for predictable throughput.
@@ -170,7 +181,7 @@ Prices verified 2026-04-15 via [ElevenLabs pricing](https://elevenlabs.io/pricin
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-15 against [ElevenLabs pricing](https://elevenlabs.io/pricing), [ElevenLabs API pricing](https://elevenlabs.io/pricing/api), the [Models documentation](https://elevenlabs.io/docs/overview/models), the [Voice Cloning documentation](https://elevenlabs.io/docs/creative-platform/voices/voice-cloning), and the [Conversational AI overview](https://elevenlabs.io/conversational-ai).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-19 against [ElevenLabs pricing](https://elevenlabs.io/pricing), [ElevenLabs API pricing](https://elevenlabs.io/pricing/api), the [Models documentation](https://elevenlabs.io/docs/overview/models), the [Voice Cloning documentation](https://elevenlabs.io/docs/creative-platform/voices/voice-cloning), and the [Conversational AI overview](https://elevenlabs.io/conversational-ai).
 
 ## FAQ
 
@@ -178,7 +189,7 @@ This page was produced by the aipedia.wiki editorial pipeline, an automated syst
 Yes. The Free tier gives 10,000 credits per month (~10 minutes of TTS) but does not include commercial rights or voice cloning. For monetized content, the $6/mo Starter plan is the lowest tier with commercial rights and Instant Voice Cloning.
 
 **What is Eleven v3 and is it production-ready?**
-Eleven v3 is ElevenLabs' most expressive TTS model, covering 70+ languages with audio tags that control emotion, pacing, and style inline. It is generally available as of early 2026. For real-time conversational use cases ElevenLabs still recommends Flash v2.5 or Turbo v2.5. A real-time-optimized v3 variant is in development.
+Eleven v3 is ElevenLabs' most expressive TTS model, covering 70+ languages with audio tags that control emotion, pacing, and style inline. It is generally available as of early 2026. For real-time conversational use cases ElevenLabs recommends Flash v2.5 (Turbo v2 and v2.5 are on a deprecation path; migrate workloads to Flash). A real-time-optimized v3 variant is in development.
 
 **What's the difference between Instant and Professional Voice Cloning?**
 Instant Voice Cloning (IVC) generates a usable clone from 1-5 minutes of audio near-instantaneously, with minimal consent gating. Professional Voice Cloning (PVC) requires 30+ minutes of source audio, fine-tunes the model on the target voice, and produces near-indistinguishable replicas. IVC is available from the Starter plan; PVC unlocks at Creator ($22/mo) and above.
@@ -187,7 +198,7 @@ Instant Voice Cloning (IVC) generates a usable clone from 1-5 minutes of audio n
 Use Eleven v3 for expressive narration, audiobooks, character voiceovers, and trailers. Use Multilingual v2 for polished professional narration where consistent emotional tone matters more than maximum expressiveness. Use Flash v2.5 for real-time conversational agents and any workflow where ~75ms latency matters more than peak quality.
 
 **Does ElevenLabs offer speech-to-text?**
-Yes. Scribe v2 (launched January 2026) is the transcription model at $0.22/hr; Scribe v2 Realtime streams at ~150ms for $0.28/hr. Both are part of the standard platform.
+Yes. Scribe v2 is the transcription model at $0.22/hr with 90+ languages, word-level timestamps, and speaker diarization up to 32 speakers. Scribe v2 Realtime streams at ~150ms for $0.39/hr across the same 90+ languages. Both are part of the standard platform.
 
 **Can I self-host ElevenLabs models?**
 No. ElevenLabs is cloud-only with no on-premise or open-weights option. For self-hosted deployments, [Fish Audio](/tools/fish-audio/) is the strongest open-source alternative.
