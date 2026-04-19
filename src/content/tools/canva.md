@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$20/user/month"
 status: active
 launched: 2013-01
-last_updated: 2026-04-18
-last_verified: 2026-04-18
+last_updated: 2026-04-19
+last_verified: 2026-04-19
 update_frequency: monthly
 seo_title: "Canva: Features, Pricing & Review (April 2026)"
 meta_description: "Canva is the 200M+ user design platform for non-designers. Magic Studio covers 25+ AI tools including Magic Design, Write, Media, and Grab. Free tier generous; Pro $15/mo unlocks unlimited AI."
@@ -57,7 +57,7 @@ Canva is the design platform that non-designers actually complete work in. 200M+
 
 Magic Studio wraps 25+ AI tools across text, image, video, and audio into the editor. Pricing runs free to $20/user per month on Teams monthly billing.
 
-> **April 17, 2026:** [Claude Design exports directly to Canva](/news/2026-04-17-anthropic-launches-claude-design/). Anthropic's new prompt-to-prototype product ships with Canva as one of its four native export targets (alongside PDF, PPTX, URL). This is additive for Canva users: a new upstream source of AI-generated prototypes that arrive fully editable in the Canva workspace.
+> **April 17, 2026:** [Claude Design exports directly to Canva](/news/2026-04-17-anthropic-launches-claude-design/). Anthropic's new prompt-to-prototype product ships with Canva as one of its four native export targets (alongside PDF, PPTX, URL). See the [Claude Design tool page](/tools/claude-design/). This is additive for Canva users: a new upstream source of AI-generated prototypes that arrive fully editable in the Canva workspace.
 
 ## System Verdict
 

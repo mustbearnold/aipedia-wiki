@@ -5,7 +5,7 @@ title: "Anthropic Launches Claude Design, Figma Stock Drops 7%"
 date: 2026-04-17
 severity: breaking
 summary: "Anthropic launched Claude Design on April 17, 2026, a research-preview product that turns text prompts into prototypes, slide decks, one-pagers, and mockups. Powered by Claude Opus 4.7. Reads codebases and design files to apply a team's design system automatically. Exports to PDF, PPTX, URL, and Canva. Hands off to Claude Code for production builds. Figma stock fell ~7% on the news; Mike Krieger (Anthropic CPO) had resigned from Figma's board April 14, three days before the launch."
-affects: [claude, claude-code, figma, canva, lovable]
+affects: [claude, claude-code, claude-design, figma, canva, lovable]
 categories: [ai-design, ai-chatbots]
 author: "aipedia.wiki Editorial"
 last_updated: 2026-04-18

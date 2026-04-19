@@ -60,7 +60,7 @@ price_history:
 
 Anthropic's AI assistant. **Opus 4.7** is the flagship as of **April 16, 2026**, narrowly retaking the lead for most powerful generally-available LLM on agentic coding, scaled tool use, computer use, and financial-analysis benchmarks. Sonnet 4.6 and Haiku 4.5 round out the lineup. The 1M token context window carries across Opus and Sonnet; Claude Code CLI handles agentic coding from the terminal; Constitutional AI training targets reduced sycophancy and harmful outputs.
 
-**Claude Design** (launched April 17, 2026) is the newest product: a prompt-to-prototype tool that produces slide decks, app mockups, marketing one-pagers, and pitch materials from text prompts. Powered by Opus 4.7. Reads a company's codebase and design files to apply the existing design system automatically, then hands off to Claude Code for production builds. Exports to PDF, PPTX, URL, or Canva. Available to Claude Pro, Max, Team, and Enterprise subscribers. The launch sent Figma stock down ~7% on the day. See the [full coverage](/news/2026-04-17-anthropic-launches-claude-design/).
+**[Claude Design](/tools/claude-design/)** (launched April 17, 2026) is the newest product: a prompt-to-prototype tool that produces slide decks, app mockups, marketing one-pagers, and pitch materials from text prompts. Powered by Opus 4.7. Reads a company's codebase and design files to apply the existing design system automatically, then hands off to Claude Code for production builds. Exports to PDF, PPTX, URL, or Canva. Available to Claude Pro, Max, Team, and Enterprise subscribers. The launch sent Figma stock down ~7% on the day. See the [dedicated tool page](/tools/claude-design/) or the [launch coverage](/news/2026-04-17-anthropic-launches-claude-design/).
 
 ## Recent developments
 
@@ -191,7 +191,7 @@ Same $5/$25 per MTok pricing, but a new tokenizer generates 1.0-1.35× more toke
 A CLI coding agent that reads, writes, and manages full codebases from the terminal. Supports Ultraplan (cloud environment creation, early preview), the Monitor tool for watching running processes, and a Computer Use capability in research preview.
 
 **What is Claude Design?**
-A new (April 17, 2026) prompt-to-prototype product bundled with Claude Pro and higher tiers. Turns text prompts into slide decks, app mockups, one-pagers, and pitch materials. Reads your codebase and design files to extract the design system automatically, so outputs stay on-brand. Exports to PDF, PPTX, URL, or Canva. Hands off to Claude Code for production builds. Direct competition to Figma, Lovable, Bolt.new, and v0. Figma stock fell ~7% on launch. Currently research preview; not in the free tier.
+A new (April 17, 2026) prompt-to-prototype product bundled with Claude Pro and higher tiers. Turns text prompts into slide decks, app mockups, one-pagers, and pitch materials. Reads your codebase and design files to extract the design system automatically, so outputs stay on-brand. Exports to PDF, PPTX, URL, or Canva. Hands off to Claude Code for production builds. Direct competition to Figma, Lovable, Bolt.new, and v0. Figma stock fell ~7% on launch. Currently research preview; not in the free tier. See the full [Claude Design tool page](/tools/claude-design/).
 
 **What is Claude Mythos Preview?**
 A separate frontier model specialized for defensive cybersecurity, announced as part of Project Glasswing (a consortium including AWS, Apple, Google, and Microsoft). Not a general-release product. Access requires an invitation through the Glasswing program.
