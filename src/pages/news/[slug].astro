@@ -39,5 +39,25 @@ const badge = severityBadge[sev] ?? severityBadge.minor;
   lastVerified={entry.data.last_verified ? String(entry.data.last_verified) : (entry.data.date ? String(entry.data.date) : undefined)}
   badge={badge}
 >
+  {entry.data.hero && (
+    <figure class="not-prose mb-6 -mx-4 sm:mx-0">
+      <img
+        src={entry.data.hero.url}
+        alt={entry.data.hero.alt}
+        loading="eager"
+        decoding="async"
+        class="w-full max-h-[420px] object-cover rounded-none sm:rounded-xl border-y sm:border border-[var(--border)]"
+      />
+      {entry.data.hero.credit && (
+        <figcaption class="text-[11px] text-[var(--text-muted)] mt-2 px-4 sm:px-0">
+          {entry.data.hero.credit_url ? (
+            <a href={entry.data.hero.credit_url} target="_blank" rel="noopener" class="text-[var(--text-muted)] hover:text-[var(--accent-primary)] underline decoration-dotted">
+              {entry.data.hero.credit}
+            </a>
+          ) : entry.data.hero.credit}
+        </figcaption>
+      )}
+    </figure>
+  )}
   <Content />
 </ArticlePlusLayout>

@@ -248,6 +248,23 @@ const news = defineCollection({
     author: z.string().optional(),
     last_updated: dateish,
     last_verified: dateish,
+    // Optional hero image URL shown at the top of the article. Use real
+    // source images only (vendor screenshots, chart embeds, official press
+    // photos). Never stock photos. Accepts absolute URLs or /-rooted
+    // paths; /og/tools/<slug>.png is a reasonable default when the tool
+    // page's OG card is thematically relevant.
+    hero: z.object({
+      url: z.string(),
+      alt: z.string(),
+      credit: z.string().optional(),
+      credit_url: z.string().optional(),
+    }).optional(),
+    // Optional list of tool slugs to surface as a visual card strip at the
+    // top of the article. Distinct from `affects:` which drives the news
+    // xref audit. Use `related_tools` when you want a visible "these are
+    // the tools to know for this story" rail without triggering the
+    // xref cascade discipline.
+    related_tools: z.array(z.string()).optional(),
     sources: z.array(z.object({
       url: z.string(),
       title: z.string().optional(),
