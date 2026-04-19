@@ -403,17 +403,72 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
         }
       });
 
-      if (copyBtn) {
-        copyBtn.addEventListener('click', async () => {
+      // Copy-link handler. Uses the async Clipboard API when available
+      // (requires secure context + user gesture), falls back to the
+      // legacy execCommand approach for older browsers or edge cases
+      // where clipboard permission is declined.
+      function copyShareLink() {
+        const url = location.href;
+        const success = () => {
+          if (copyLabel) copyLabel.textContent = 'Copied!';
+          setTimeout(() => { if (copyLabel) copyLabel.textContent = 'Copy share link'; }, 1600);
+        };
+        const failure = () => {
+          if (copyLabel) copyLabel.textContent = 'Copy failed';
+          setTimeout(() => { if (copyLabel) copyLabel.textContent = 'Copy share link'; }, 1600);
+        };
+        const fallback = () => {
           try {
-            await navigator.clipboard.writeText(location.href);
-            if (copyLabel) copyLabel.textContent = 'Copied!';
-            setTimeout(() => { if (copyLabel) copyLabel.textContent = 'Copy share link'; }, 1600);
+            const ta = document.createElement('textarea');
+            ta.value = url;
+            ta.setAttribute('readonly', '');
+            ta.style.position = 'absolute';
+            ta.style.left = '-9999px';
+            document.body.appendChild(ta);
+            const prevSelection = document.getSelection()?.rangeCount ? document.getSelection().getRangeAt(0) : null;
+            ta.select();
+            const ok = document.execCommand('copy');
+            document.body.removeChild(ta);
+            if (prevSelection) {
+              const sel = document.getSelection();
+              sel?.removeAllRanges();
+              sel?.addRange(prevSelection);
+            }
+            return ok;
           } catch (_) {
-            if (copyLabel) copyLabel.textContent = 'Copy failed';
+            return false;
           }
+        };
+        if (navigator.clipboard && window.isSecureContext) {
+          navigator.clipboard.writeText(url).then(success).catch(() => {
+            if (fallback()) success(); else failure();
+          });
+        } else {
+          if (fallback()) success(); else failure();
+        }
+      }
+
+      // Attach directly AND via delegation so the button works whether
+      // the page is visited fresh or via Astro view transitions (which
+      // can swap the DOM without re-running the direct binding).
+      if (copyBtn) {
+        copyBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          copyShareLink();
         });
       }
+      document.addEventListener('click', (e) => {
+        const btn = e.target.closest && e.target.closest('#copy-url-btn');
+        if (btn && e.isTrusted) {
+          // Let the direct listener above handle this when it exists;
+          // this delegation is the safety net for post-view-transition.
+          // Don't double-fire by checking a flag we set below.
+          if (btn.__copyBound) return;
+          btn.__copyBound = true;
+          copyShareLink();
+          setTimeout(() => { btn.__copyBound = false; }, 200);
+        }
+      });
 
       // React to back/forward navigation
       window.addEventListener('popstate', () => {

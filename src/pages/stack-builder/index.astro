@@ -1,17 +1,19 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
 import { getCollection } from 'astro:content';
 import { shortenPrice } from '../../utils/shorten-price';
 
 const allTools = await getCollection('tools');
+const newsEntries = await getCollection('news');
 
-// Build stack recommendations: role → category → tool slug (with budget tier)
-// Picks are editorial — not algorithmic. These are what the editorial team actually recommends.
-
+// Editorial stacks: role → category → { budget, standard, premium } → [tool slugs]
+// Hand-curated picks. Not algorithmic. Revisited as new tools launch.
 const STACKS: Record<string, Record<string, { budget: string[]; standard: string[]; premium: string[] }>> = {
   'solo-founder': {
     'Product & Coding':    { budget: ['lovable'],         standard: ['cursor','lovable'],       premium: ['cursor','claude-code','lovable'] },
     'Writing & Content':   { budget: ['chatgpt'],         standard: ['claude'],                 premium: ['claude','chatgpt'] },
+    'Design & Prototypes': { budget: [],                  standard: ['claude-design'],          premium: ['claude-design','figma'] },
     'Automation':          { budget: ['n8n'],             standard: ['n8n'],                    premium: ['n8n','zapier'] },
     'Research':            { budget: ['perplexity'],      standard: ['perplexity'],             premium: ['perplexity','notebooklm'] },
     'Customer Support':    { budget: [],                  standard: ['intercom'],               premium: ['intercom'] },
@@ -29,11 +31,11 @@ const STACKS: Record<string, Record<string, { budget: string[]; standard: string
   },
   'developer': {
     'IDE Assistant':       { budget: ['github-copilot'],  standard: ['cursor'],                 premium: ['cursor','claude-code'] },
-    'Agentic Coding':      { budget: ['aider'],           standard: ['claude-code'],            premium: ['claude-code','devin'] },
+    'Agentic Coding':      { budget: ['aider'],           standard: ['claude-code'],            premium: ['claude-code','codex','devin'] },
     'Architecture':        { budget: ['claude'],          standard: ['claude'],                 premium: ['claude'] },
     'Code Review':         { budget: [],                  standard: ['cody'],                   premium: ['cody','continue'] },
     'Docs & Notes':        { budget: ['obsidian'],        standard: ['obsidian'],               premium: ['obsidian','notion-ai'] },
-    'Research':            { budget: ['perplexity'],      standard: ['perplexity'],             premium: ['perplexity','phind'] },
+    'Research':            { budget: ['perplexity'],      standard: ['perplexity'],             premium: ['perplexity'] },
   },
   'marketer': {
     'Writing':             { budget: ['copy-ai'],         standard: ['jasper'],                 premium: ['claude','jasper'] },
@@ -55,52 +57,124 @@ const STACKS: Record<string, Record<string, { budget: string[]; standard: string
   'designer': {
     'Image Generation':    { budget: ['stable-diffusion'],standard: ['midjourney'],             premium: ['midjourney','flux'] },
     'UI / UX':             { budget: ['figma'],           standard: ['figma','v0'],             premium: ['figma','v0','lovable'] },
+    'Prompt-to-Prototype': { budget: [],                  standard: ['claude-design'],          premium: ['claude-design','v0','lovable'] },
     'Prototyping':         { budget: ['bolt'],            standard: ['bolt','lovable'],         premium: ['lovable','v0'] },
     'Mood & Ideation':     { budget: ['leonardo'],        standard: ['midjourney','ideogram'],  premium: ['midjourney','ideogram','flux'] },
     'Stock & Brand':       { budget: ['freepik'],         standard: ['canva','adobe-firefly'],  premium: ['adobe-firefly','canva'] },
     'Presentations':       { budget: [],                  standard: ['gamma'],                  premium: ['gamma','beautiful-ai'] },
   },
+  // New April 2026 roles
+  'agency': {
+    'Creative Direction':  { budget: ['canva'],           standard: ['canva','adobe-firefly'],  premium: ['adobe-firefly','midjourney','canva'] },
+    'Client Decks':        { budget: [],                  standard: ['claude-design','gamma'],  premium: ['claude-design','gamma','beautiful-ai'] },
+    'Copywriting':         { budget: ['chatgpt'],         standard: ['claude','jasper'],        premium: ['claude','jasper'] },
+    'Video Production':    { budget: ['pika'],            standard: ['runway','heygen'],        premium: ['runway','kling','heygen'] },
+    'Social & Ads':        { budget: ['canva'],           standard: ['canva','opusclip'],       premium: ['canva','opusclip','adobe-firefly'] },
+    'Client Comms':        { budget: ['fathom'],          standard: ['fathom','otter-ai'],      premium: ['fathom','otter-ai','fireflies'] },
+    'Project Ops':         { budget: ['n8n'],             standard: ['n8n','zapier'],           premium: ['n8n','zapier','make'] },
+  },
+  'data-analyst': {
+    'Reasoning Model':     { budget: ['chatgpt'],         standard: ['claude'],                 premium: ['claude','chatgpt'] },
+    'Code in Notebooks':   { budget: ['github-copilot'],  standard: ['cursor'],                 premium: ['cursor','claude-code'] },
+    'Research':            { budget: ['perplexity'],      standard: ['perplexity'],             premium: ['perplexity','elicit'] },
+    'Docs & Reports':      { budget: ['obsidian'],        standard: ['notion-ai'],              premium: ['notion-ai','claude'] },
+    'Meeting Notes':       { budget: ['otter-ai'],        standard: ['otter-ai'],               premium: ['otter-ai','fireflies'] },
+    'Presentations':       { budget: [],                  standard: ['gamma'],                  premium: ['gamma','beautiful-ai'] },
+  },
 };
 
-// Build a lookup: slug → tool data
+// Lookup: slug -> tool entry
 const toolLookup = new Map(allTools.map(t => [t.data.slug || t.id.replace(/\.md$/, ''), t]));
 
-// Resolve stacks into full tool objects (server-side)
-const resolvedStacks: Record<string, Record<string, Record<string, any[]>>> = {};
+// Resolve a slug into the stack-builder's compact ToolItem shape.
+function resolveSlug(slug: string) {
+  const t = toolLookup.get(slug);
+  if (!t) return null;
+  return {
+    slug,
+    title: t.data.title,
+    tagline: t.data.tagline,
+    category: t.data.category,
+    price: t.data.price_range,
+    priceDisplay: shortenPrice(t.data.price_range ?? ''),
+    url: `/tools/${slug}/`,
+  };
+}
+
+// Resolve full stacks to an indexable object keyed by role, category, tier.
+interface ResolvedTool { slug: string; title: string; tagline?: string; category?: string; price?: string; priceDisplay?: string; url: string; }
+const resolvedStacks: Record<string, Record<string, Record<string, ResolvedTool[]>>> = {};
 for (const [role, cats] of Object.entries(STACKS)) {
   resolvedStacks[role] = {};
-  for (const [catName, budgets] of Object.entries(cats)) {
+  for (const [catName, tiers] of Object.entries(cats)) {
     resolvedStacks[role][catName] = {};
-    for (const [tier, slugs] of Object.entries(budgets)) {
-      resolvedStacks[role][catName][tier] = (slugs as string[])
-        .map(s => toolLookup.get(s))
-        .filter(Boolean)
-        .map((t: any) => ({
-          slug: t.data.slug || t.id.replace(/\.md$/, ''),
-          title: t.data.title,
-          tagline: t.data.tagline,
-          category: t.data.category,
-          price: t.data.price_range,
-          priceDisplay: shortenPrice(t.data.price_range ?? ''),
-          url: `/tools/${t.data.slug || t.id.replace(/\.md$/, '')}/`,
-        }));
+    for (const [tier, slugs] of Object.entries(tiers)) {
+      const resolved = (slugs as string[]).map(resolveSlug).filter(Boolean) as ResolvedTool[];
+      resolvedStacks[role][catName][tier] = resolved;
     }
   }
 }
 
+// Build an alternatives map: slug -> top 3 same-category tools by score (excl self).
+function avgScore(s: any) {
+  if (!s) return 0;
+  return ((s.utility ?? 0) + (s.value ?? 0) + (s.moat ?? 0) + (s.longevity ?? 0)) / 4;
+}
+const alternativesMap: Record<string, ResolvedTool[]> = {};
+for (const t of allTools) {
+  const slug = t.data.slug || t.id.replace(/\.md$/, '');
+  const cat = t.data.category;
+  if (!cat || t.data.status === 'dead' || t.data.status === 'acquired') continue;
+  const peers = allTools
+    .filter(p => {
+      const ps = p.data.slug || p.id.replace(/\.md$/, '');
+      return p.data.category === cat
+        && ps !== slug
+        && p.data.status !== 'dead'
+        && p.data.status !== 'acquired';
+    })
+    .map(p => ({ p, score: avgScore(p.data.scores) }))
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 4);
+  alternativesMap[slug] = peers
+    .map(({ p }) => resolveSlug(p.data.slug || p.id.replace(/\.md$/, '')))
+    .filter(Boolean) as ResolvedTool[];
+}
+
+// "Recently updated" detection: tool slug → true if any news item in the
+// last 14 days has it in `affects`. Surface as a small badge so users see
+// which picks ship to frontier-current product state.
+const now = Date.now();
+const FOURTEEN_DAYS_MS = 14 * 86400000;
+const recentlyUpdated: Record<string, string> = {}; // slug -> latest news slug
+for (const n of newsEntries) {
+  const dateVal = n.data.date instanceof Date ? n.data.date.toISOString() : String(n.data.date);
+  const d = new Date(dateVal);
+  if (isNaN(d.getTime())) continue;
+  if (now - d.getTime() > FOURTEEN_DAYS_MS) continue;
+  const affects = Array.isArray(n.data.affects) ? n.data.affects : [];
+  const newsSlug = n.data.slug || n.id.replace(/\.md$/, '');
+  for (const slug of affects) {
+    // Keep the most recent news per tool
+    if (!recentlyUpdated[slug]) recentlyUpdated[slug] = newsSlug;
+  }
+}
+
 const roles = [
-  { id: 'solo-founder',    label: 'Solo Founder',     emoji: '🚀', desc: 'Building and running a startup alone' },
-  { id: 'content-creator', label: 'Content Creator',  emoji: '🎬', desc: 'YouTube, TikTok, podcasts, social' },
-  { id: 'developer',       label: 'Developer',        emoji: '💻', desc: 'Software engineer shipping code daily' },
-  { id: 'marketer',        label: 'Marketer',         emoji: '📈', desc: 'B2B or B2C growth & demand gen' },
+  { id: 'solo-founder',    label: 'Solo Founder',         emoji: '🚀', desc: 'Shipping and selling a startup alone' },
+  { id: 'content-creator', label: 'Content Creator',      emoji: '🎬', desc: 'YouTube, TikTok, podcasts, social' },
+  { id: 'developer',       label: 'Developer',            emoji: '💻', desc: 'Software engineer shipping daily' },
+  { id: 'marketer',        label: 'Marketer',             emoji: '📈', desc: 'B2B or B2C growth + demand gen' },
   { id: 'student',         label: 'Student / Researcher', emoji: '🎓', desc: 'Academic work, papers, thesis' },
-  { id: 'designer',        label: 'Designer',         emoji: '🎨', desc: 'Product, brand, or UI/UX design' },
+  { id: 'designer',        label: 'Designer',             emoji: '🎨', desc: 'Product, brand, or UI/UX design' },
+  { id: 'agency',          label: 'Agency / Freelancer',  emoji: '🏢', desc: 'Client work across creative + ops' },
+  { id: 'data-analyst',    label: 'Data Analyst',         emoji: '📊', desc: 'Analytics, reporting, research' },
 ];
 
 const budgets = [
-  { id: 'budget',   label: 'Budget',   price: '$0-50/mo',   desc: 'Free tiers and cheap essentials' },
-  { id: 'standard', label: 'Standard', price: '$50-150/mo', desc: 'The practical working stack' },
-  { id: 'premium',  label: 'Premium',  price: '$150-500/mo',desc: 'Everything, no compromises' },
+  { id: 'budget',   label: 'Budget',   price: '$0-50/mo',    desc: 'Free tiers and cheap essentials' },
+  { id: 'standard', label: 'Standard', price: '$50-150/mo',  desc: 'The practical working stack' },
+  { id: 'premium',  label: 'Premium',  price: '$150-500/mo', desc: 'Everything, no compromises' },
 ];
 
 const categoryEmoji: Record<string, string> = {
@@ -111,33 +185,43 @@ const categoryEmoji: Record<string, string> = {
   'ai-design': '🖌️', 'ai-music': '🎵', 'ai-presentation': '📊',
   'ai-research': '🔬',
 };
+
+const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
 ---
 
 <BaseLayout
-  title="AI Stack Builder — Find Your Perfect AI Tool Stack"
-  description="Pick your role and budget. Get a curated AI tool stack recommended by the aipedia.wiki editorial team. Covers product, content, code, marketing, and research."
+  title="AI Stack Builder — Find Your Perfect AI Tool Stack (April 2026)"
+  description="Pick your role, set your budget, get a curated AI tool stack. Multi-role support, swap any tool, share the result. Recently-updated badges flag tools that shipped in the last 14 days."
 >
+  <Breadcrumb items={[{ label: 'Stack Builder' }]} />
 
-  <section class="mb-10 pt-6">
-    <h1 class="text-3xl sm:text-4xl font-bold mb-3 leading-tight">
-      Build Your AI Stack
-    </h1>
+  <section class="mb-8 pt-2">
+    <div class="flex items-baseline gap-3 mb-3 flex-wrap">
+      <h1 class="text-3xl sm:text-4xl font-bold leading-tight m-0">
+        Build your <span class="bg-gradient-to-r from-[#a78bfa] to-[#60a5fa] bg-clip-text text-transparent">AI stack</span>
+      </h1>
+      <span class="text-[11px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-[rgba(167,139,250,0.15)] text-[var(--accent-primary)] border border-[rgba(167,139,250,0.3)]">April 2026</span>
+    </div>
     <p class="text-[var(--text-secondary)] text-sm sm:text-base max-w-2xl leading-relaxed">
-      Tell us your role and budget. We'll assemble the exact stack the editorial team would recommend — across writing, coding, design, research, and operations. Picks are hand-curated, not algorithmic.
+      Pick up to 3 roles and a budget. We assemble the stack the aipedia editorial team would recommend — across writing, coding, design, research, and operations. Swap any pick. Share or export the result.
     </p>
   </section>
 
-  <!-- Step 1: Role -->
+  <!-- Step 1: Roles (multi-select up to 3) -->
   <section class="mb-8">
-    <div class="flex items-baseline gap-3 mb-4">
-      <span class="text-xs font-semibold uppercase tracking-wider text-[var(--accent-primary)]">Step 1</span>
-      <h2 class="text-lg font-semibold">Pick your role</h2>
+    <div class="flex items-baseline justify-between gap-3 mb-3 flex-wrap">
+      <div class="flex items-baseline gap-3">
+        <span class="text-xs font-semibold uppercase tracking-wider text-[var(--accent-primary)]">Step 1</span>
+        <h2 class="text-lg font-semibold">Pick up to 3 roles</h2>
+      </div>
+      <span id="role-counter" class="text-[11.5px] text-[var(--text-muted)]">0 / 3 selected</span>
     </div>
-    <div class="grid grid-cols-2 md:grid-cols-3 gap-3" id="role-grid">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-3" id="role-grid">
       {roles.map(r => (
         <button
           type="button"
           data-role={r.id}
+          aria-pressed="false"
           class="sb-role-btn text-left p-4 rounded-xl border border-[var(--border)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] hover:border-[rgba(167,139,250,0.4)] transition-all cursor-pointer"
         >
           <div class="text-2xl mb-2">{r.emoji}</div>
@@ -150,7 +234,7 @@ const categoryEmoji: Record<string, string> = {
 
   <!-- Step 2: Budget -->
   <section class="mb-10">
-    <div class="flex items-baseline gap-3 mb-4">
+    <div class="flex items-baseline gap-3 mb-3">
       <span class="text-xs font-semibold uppercase tracking-wider text-[var(--accent-primary)]">Step 2</span>
       <h2 class="text-lg font-semibold">Pick your budget</h2>
     </div>
@@ -159,6 +243,7 @@ const categoryEmoji: Record<string, string> = {
         <button
           type="button"
           data-budget={b.id}
+          aria-pressed="false"
           class="sb-budget-btn text-left p-4 rounded-xl border border-[var(--border)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] hover:border-[rgba(167,139,250,0.4)] transition-all cursor-pointer"
         >
           <div class="flex items-center justify-between mb-1">
@@ -174,8 +259,19 @@ const categoryEmoji: Record<string, string> = {
   <!-- Results -->
   <section id="stack-output" style="display:none" class="mb-16">
     <div class="flex items-baseline gap-3 mb-4 flex-wrap">
-      <h2 class="text-2xl font-bold">Your Recommended Stack</h2>
-      <button id="sb-reset" class="text-xs text-[var(--text-muted)] hover:text-[var(--accent-primary)] underline cursor-pointer bg-transparent border-none">Reset</button>
+      <h2 class="text-2xl font-bold m-0">Your stack</h2>
+      <span id="sb-count-chip" class="text-[11px] px-2 py-0.5 rounded bg-[var(--bg-card)] border border-[var(--border)] text-[var(--text-muted)]"></span>
+      <div class="ml-auto flex items-center gap-2 flex-wrap">
+        <button id="sb-share" type="button" class="inline-flex items-center gap-1.5 text-[12px] font-medium px-2.5 py-1 rounded-md bg-[var(--bg-card)] border border-[var(--border)] text-[var(--text-secondary)] hover:bg-[var(--bg-card-hover)] hover:text-[var(--text-primary)] transition-colors cursor-pointer" aria-label="Copy share link">
+          <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M10 14a5 5 0 007.07 0l1.41-1.41a5 5 0 00-7.07-7.07L10 7m4 3a5 5 0 00-7.07 0L5.5 11.41a5 5 0 007.07 7.07L14 17"/></svg>
+          <span id="sb-share-label">Share</span>
+        </button>
+        <button id="sb-export-md" type="button" class="inline-flex items-center gap-1.5 text-[12px] font-medium px-2.5 py-1 rounded-md bg-[var(--bg-card)] border border-[var(--border)] text-[var(--text-secondary)] hover:bg-[var(--bg-card-hover)] hover:text-[var(--text-primary)] transition-colors cursor-pointer" aria-label="Copy stack as Markdown">
+          <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h10"/></svg>
+          <span id="sb-export-md-label">Copy Markdown</span>
+        </button>
+        <button id="sb-reset" type="button" class="text-[11.5px] text-[var(--text-muted)] hover:text-[var(--accent-primary)] underline cursor-pointer bg-transparent border-none">Reset</button>
+      </div>
     </div>
     <p id="sb-summary" class="text-sm text-[var(--text-secondary)] mb-6"></p>
     <div id="sb-categories" class="space-y-6"></div>
@@ -188,115 +284,253 @@ const categoryEmoji: Record<string, string> = {
   <section id="stack-placeholder" class="mb-16 p-8 rounded-xl border border-dashed border-[var(--border)] text-center">
     <div class="text-4xl mb-3">✨</div>
     <p class="text-sm text-[var(--text-muted)]">
-      Pick a role and budget above. Your stack appears here.
+      Pick at least one role and a budget above. Your stack appears here.
     </p>
   </section>
+
+  <!-- Swap-tool modal -->
+  <div id="swap-modal" class="hidden fixed inset-0 z-[100]">
+    <div id="swap-backdrop" class="absolute inset-0 bg-black/60"></div>
+    <div class="relative mx-auto my-16 max-w-md bg-[var(--bg-card)] border border-[var(--border)] rounded-xl shadow-2xl overflow-hidden" style="background: #1a1625;">
+      <div class="flex items-center justify-between px-5 py-3 border-b border-[var(--border)]">
+        <h3 class="text-sm font-semibold text-[var(--text-primary)] m-0">Swap for an alternative</h3>
+        <button id="swap-close" type="button" class="w-7 h-7 rounded-md hover:bg-[var(--bg-card-hover)] inline-flex items-center justify-center text-[var(--text-muted)] cursor-pointer" aria-label="Close swap modal">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <div id="swap-context" class="px-5 py-3 text-[11.5px] text-[var(--text-muted)] border-b border-[var(--border)]"></div>
+      <div id="swap-options" class="max-h-[60vh] overflow-y-auto py-1"></div>
+    </div>
+  </div>
 
   <!-- Disclaimer -->
   <section class="mb-10 text-xs text-[var(--text-muted)] border-t border-[var(--border)] pt-6">
     <p class="leading-relaxed">
       <strong class="text-[var(--text-secondary)]">How these picks are made:</strong>
-      Recommendations are curated by the aipedia.wiki editorial team based on our {allTools.length} tool reviews and hands-on use. Rankings use the same <a href="/about/scoring/" class="text-[var(--accent-primary)] no-underline hover:underline">scoring methodology</a> as the individual tool pages. Affiliate relationships do not influence placement. If you'd swap one pick for another, <a href="/about/#corrections--contact" class="text-[var(--accent-primary)] no-underline hover:underline">tell us why</a>.
+      Editorial-curated from our {allTools.length} tool reviews and hands-on use. Rankings follow the <a href="/about/scoring/" class="text-[var(--accent-primary)] no-underline hover:underline">scoring methodology</a>. Affiliate relationships do not influence placement. "Recently updated" badges flag tools with news in the last 14 days. Disagree with a pick? <a href="/about/#corrections--contact" class="text-[var(--accent-primary)] no-underline hover:underline">Tell us why</a>.
     </p>
   </section>
 
-  <script define:vars={{ resolvedStacks, categoryEmoji }}>
+  <script is:inline define:vars={{ resolvedStacks, categoryEmoji, alternativesMap, recentlyUpdated, siteBase }}>
   (function () {
-    let selectedRole = null;
-    let selectedBudget = null;
+    const STACKS = resolvedStacks;
+    const ALTS = alternativesMap;
+    const RECENT = recentlyUpdated;
+
+    // State: up to 3 roles + 1 budget. "swaps" is a map of "role:category:slug" → replacementSlug
+    // so that per-stack swaps don't apply across roles that happen to share a tool.
+    const state = {
+      roles: /** @type {string[]} */ ([]),
+      budget: /** @type {string|null} */ (null),
+      swaps: /** @type {Record<string,string>} */ ({}),
+    };
+    const MAX_ROLES = 3;
+
     const output = document.getElementById('stack-output');
     const placeholder = document.getElementById('stack-placeholder');
     const summary = document.getElementById('sb-summary');
-    const catsEl  = document.getElementById('sb-categories');
+    const catsEl = document.getElementById('sb-categories');
     const totalEl = document.getElementById('sb-total');
+    const countChip = document.getElementById('sb-count-chip');
+    const roleCounter = document.getElementById('role-counter');
 
-    function onRole(btn) {
-      selectedRole = btn.dataset.role;
+    // ---------- URL sync ----------
+    function readURL() {
+      const p = new URLSearchParams(location.search);
+      const roles = (p.get('roles') || p.get('role') || '')
+        .split(',').map(s => s.trim()).filter(Boolean)
+        .filter(r => STACKS[r])
+        .slice(0, MAX_ROLES);
+      const budget = p.get('budget');
+      const validBudget = ['budget','standard','premium'].includes(budget) ? budget : null;
+      // Swaps format: swaps=role:category:slug=newSlug|role:category:slug=newSlug
+      const swaps = {};
+      const raw = p.get('swaps');
+      if (raw) {
+        raw.split('|').forEach(pair => {
+          const [k, v] = pair.split('=');
+          if (k && v) swaps[k] = v;
+        });
+      }
+      return { roles, budget: validBudget, swaps };
+    }
+    function writeURL() {
+      const p = new URLSearchParams();
+      if (state.roles.length) p.set('roles', state.roles.join(','));
+      if (state.budget) p.set('budget', state.budget);
+      const swapEntries = Object.entries(state.swaps);
+      if (swapEntries.length) {
+        p.set('swaps', swapEntries.map(([k, v]) => `${k}=${v}`).join('|'));
+      }
+      const qs = p.toString();
+      history.replaceState(null, '', location.pathname + (qs ? '?' + qs : ''));
+    }
+
+    // ---------- Role + budget button state ----------
+    function paintRoleButtons() {
       document.querySelectorAll('.sb-role-btn').forEach(b => {
-        const active = b === btn;
+        const r = b.dataset.role;
+        const active = state.roles.includes(r);
         b.style.borderColor = active ? 'var(--accent-primary)' : '';
         b.style.background  = active ? 'rgba(167,139,250,0.08)' : '';
+        b.setAttribute('aria-pressed', active ? 'true' : 'false');
       });
-      maybeRender();
+      if (roleCounter) roleCounter.textContent = `${state.roles.length} / ${MAX_ROLES} selected`;
     }
-    function onBudget(btn) {
-      selectedBudget = btn.dataset.budget;
+    function paintBudgetButtons() {
       document.querySelectorAll('.sb-budget-btn').forEach(b => {
-        const active = b === btn;
+        const active = b.dataset.budget === state.budget;
         b.style.borderColor = active ? 'var(--accent-primary)' : '';
         b.style.background  = active ? 'rgba(167,139,250,0.08)' : '';
+        b.setAttribute('aria-pressed', active ? 'true' : 'false');
       });
-      maybeRender();
     }
 
-    document.querySelectorAll('.sb-role-btn').forEach(b => b.addEventListener('click', () => onRole(b)));
-    document.querySelectorAll('.sb-budget-btn').forEach(b => b.addEventListener('click', () => onBudget(b)));
+    function toggleRole(role) {
+      const i = state.roles.indexOf(role);
+      if (i >= 0) {
+        state.roles.splice(i, 1);
+      } else if (state.roles.length < MAX_ROLES) {
+        state.roles.push(role);
+      } else {
+        // At cap — drop the first one to make room
+        state.roles.shift();
+        state.roles.push(role);
+      }
+      paintRoleButtons();
+      writeURL();
+      renderStack();
+    }
+    function setBudget(budget) {
+      state.budget = budget;
+      paintBudgetButtons();
+      writeURL();
+      renderStack();
+    }
 
-    document.getElementById('sb-reset')?.addEventListener('click', () => {
-      selectedRole = null; selectedBudget = null;
-      document.querySelectorAll('.sb-role-btn, .sb-budget-btn').forEach(b => {
-        b.style.borderColor = ''; b.style.background = '';
-      });
-      output.style.display = 'none';
-      placeholder.style.display = '';
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+    document.querySelectorAll('.sb-role-btn').forEach(b => {
+      b.addEventListener('click', () => toggleRole(b.dataset.role));
+    });
+    document.querySelectorAll('.sb-budget-btn').forEach(b => {
+      b.addEventListener('click', () => setBudget(b.dataset.budget));
     });
 
-    function parsePrice(p) {
-      // naive extraction: first dollar number found
-      if (!p) return 0;
-      const m = String(p).match(/\$(\d+(?:\.\d+)?)/);
-      return m ? parseFloat(m[1]) : 0;
+    // ---------- Merge stacks across roles ----------
+    // For each category that appears in any selected role's stack, take the
+    // union of its tier picks (deduped by slug, preserving insertion order).
+    function mergedStack() {
+      const merged = {}; // category -> { budget:[], standard:[], premium:[] }
+      state.roles.forEach(role => {
+        const stack = STACKS[role];
+        if (!stack) return;
+        for (const [cat, tiers] of Object.entries(stack)) {
+          if (!merged[cat]) merged[cat] = { budget: [], standard: [], premium: [] };
+          for (const tier of ['budget','standard','premium']) {
+            const existingSlugs = new Set(merged[cat][tier].map(t => t.slug));
+            (tiers[tier] || []).forEach(t => {
+              if (!existingSlugs.has(t.slug)) {
+                merged[cat][tier].push(t);
+                existingSlugs.add(t.slug);
+              }
+            });
+          }
+        }
+      });
+      return merged;
     }
 
-    function maybeRender() {
-      if (!selectedRole || !selectedBudget) return;
-      const stack = resolvedStacks[selectedRole];
-      if (!stack) return;
+    function toolAfterSwap(role, catName, tool) {
+      const k = `${role}:${catName}:${tool.slug}`;
+      const replacement = state.swaps[k];
+      if (!replacement) return tool;
+      // Resolve replacement from ALTS
+      const peers = ALTS[tool.slug] || [];
+      return peers.find(p => p.slug === replacement) || tool;
+    }
 
+    function parsePrice(p) {
+      if (!p) return { low: 0, high: 0 };
+      const s = String(p);
+      if (/free/i.test(s) && !/\$/.test(s)) return { low: 0, high: 0 };
+      const nums = (s.match(/\$([\d.]+)/g) || []).map(n => parseFloat(n.replace('$', ''))).filter(n => !isNaN(n));
+      if (nums.length === 0) return { low: 0, high: 0 };
+      if (nums.length === 1) return { low: nums[0], high: nums[0] };
+      return { low: Math.min(...nums), high: Math.max(...nums) };
+    }
+
+    function escapeHtml(s) {
+      if (typeof s !== 'string') return '';
+      return s.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+    }
+
+    function renderStack() {
+      if (!state.roles.length || !state.budget) {
+        output.style.display = 'none';
+        placeholder.style.display = '';
+        return;
+      }
       placeholder.style.display = 'none';
       output.style.display = '';
 
-      const roleLabel = document.querySelector(`.sb-role-btn[data-role="${selectedRole}"] .font-semibold`).textContent;
-      const budgetLabel = document.querySelector(`.sb-budget-btn[data-budget="${selectedBudget}"] .font-semibold`).textContent;
-      summary.textContent = `For a ${roleLabel.toLowerCase()} on a ${budgetLabel.toLowerCase()} budget.`;
+      const merged = mergedStack();
+      const roleLabels = state.roles.map(r => document.querySelector(`.sb-role-btn[data-role="${r}"] .font-semibold`)?.textContent || r);
+      const budgetLabel = document.querySelector(`.sb-budget-btn[data-budget="${state.budget}"] .font-semibold`)?.textContent || state.budget;
+      summary.textContent = state.roles.length === 1
+        ? `For a ${roleLabels[0].toLowerCase()} on a ${budgetLabel.toLowerCase()} budget.`
+        : `For ${roleLabels.join(' + ').toLowerCase()} on a ${budgetLabel.toLowerCase()} budget.`;
 
       let html = '';
-      let totalLow = 0, totalHigh = 0, toolCount = 0;
+      let totalLow = 0, totalHigh = 0, toolCount = 0, catCount = 0;
 
-      for (const [catName, tiers] of Object.entries(stack)) {
-        const picks = tiers[selectedBudget] || [];
+      for (const [catName, tiers] of Object.entries(merged)) {
+        const picks = (tiers[state.budget] || []).map(t =>
+          // Apply swap per role where the tool appears. We use the first
+          // role in state.roles that contains this cat+slug as the swap key.
+          toolAfterSwap(
+            state.roles.find(r => (STACKS[r]?.[catName]?.[state.budget] || []).some(x => x.slug === t.slug)) || state.roles[0],
+            catName,
+            t
+          )
+        );
         if (!picks.length) continue;
+        catCount++;
         toolCount += picks.length;
 
         html += `
           <div class="p-4 rounded-xl border border-[var(--border)] bg-[var(--bg-card)]">
-            <h3 class="text-sm font-semibold text-[var(--text-primary)] mb-3 uppercase tracking-wider">${catName}</h3>
+            <h3 class="text-sm font-semibold text-[var(--text-primary)] mb-3 uppercase tracking-wider">${escapeHtml(catName)}</h3>
             <div class="grid gap-2">
               ${picks.map(t => {
-                const lowP = parsePrice(t.price);
-                totalLow += lowP;
-                // try to get a high price too
-                const hm = String(t.price || '').match(/\$(\d+(?:\.\d+)?)[^\d]*\$?(\d+(?:\.\d+)?)/);
-                const highP = hm ? parseFloat(hm[2]) : lowP;
-                totalHigh += highP;
+                const { low, high } = parsePrice(t.price);
+                totalLow += low;
+                totalHigh += high;
+                const updated = RECENT[t.slug];
+                const role = state.roles.find(r => (STACKS[r]?.[catName]?.[state.budget] || []).some(x => x.slug === t.slug)) || state.roles[0];
                 return `
-                  <a href="${t.url}" class="flex items-center gap-3 p-3 rounded-lg hover:bg-[var(--bg-card-hover)] transition-colors no-underline">
-                    <div class="w-9 h-9 rounded-lg flex items-center justify-center text-base flex-shrink-0" style="background:linear-gradient(135deg,rgba(167,139,250,0.15),rgba(96,165,250,0.15));">
+                  <div class="flex items-center gap-3 p-3 rounded-lg hover:bg-[var(--bg-card-hover)] transition-colors">
+                    <a href="${t.url}" class="w-9 h-9 rounded-lg flex items-center justify-center text-base flex-shrink-0 no-underline" style="background:linear-gradient(135deg,rgba(167,139,250,0.15),rgba(96,165,250,0.15));">
                       ${categoryEmoji[t.category] || '🔧'}
-                    </div>
-                    <div class="flex-1 min-w-0">
-                      <div class="text-sm font-semibold text-[var(--text-primary)] truncate">${t.title}</div>
-                      <div class="text-xs text-[var(--text-muted)] truncate">${t.tagline || ''}</div>
-                    </div>
-                    <div class="text-xs text-[var(--text-muted)] flex-shrink-0 whitespace-nowrap" title="${t.price || ''}">${t.priceDisplay || 'Free'}</div>
-                  </a>`;
+                    </a>
+                    <a href="${t.url}" class="flex-1 min-w-0 no-underline">
+                      <div class="text-sm font-semibold text-[var(--text-primary)] truncate flex items-center gap-1.5">
+                        ${escapeHtml(t.title)}
+                        ${updated ? `<a href="/news/${updated}/" class="inline-flex items-center gap-0.5 text-[9px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded bg-[rgba(52,211,153,0.12)] border border-[rgba(52,211,153,0.3)] text-[var(--accent-success)] no-underline" title="Recently updated — see news" onclick="event.stopPropagation()">New</a>` : ''}
+                      </div>
+                      <div class="text-xs text-[var(--text-muted)] truncate">${escapeHtml(t.tagline || '')}</div>
+                    </a>
+                    <div class="text-xs text-[var(--text-muted)] flex-shrink-0 whitespace-nowrap" title="${escapeHtml(t.price || '')}">${escapeHtml(t.priceDisplay || 'Free')}</div>
+                    <button type="button" data-swap-role="${escapeHtml(role)}" data-swap-cat="${escapeHtml(catName)}" data-swap-slug="${t.slug}" class="shrink-0 text-[11px] font-medium px-2 py-0.5 rounded-md bg-transparent border border-[var(--border)] text-[var(--text-muted)] hover:text-[var(--accent-primary)] hover:border-[rgba(167,139,250,0.4)] cursor-pointer transition-colors" aria-label="Swap ${escapeHtml(t.title)} for an alternative">
+                      Swap
+                    </button>
+                  </div>
+                `;
               }).join('')}
             </div>
           </div>`;
       }
 
       catsEl.innerHTML = html || '<p class="text-sm text-[var(--text-muted)]">No recommendations for this combination yet.</p>';
+      if (countChip) countChip.textContent = `${toolCount} tool${toolCount !== 1 ? 's' : ''} · ${catCount} categor${catCount !== 1 ? 'ies' : 'y'}`;
 
       totalEl.innerHTML = `
         <div class="flex items-center justify-between gap-4 flex-wrap">
@@ -307,13 +541,187 @@ const categoryEmoji: Record<string, string> = {
             </div>
           </div>
           <div class="text-sm text-[var(--text-secondary)]">
-            ${toolCount} tool${toolCount !== 1 ? 's' : ''} across ${Object.keys(stack).filter(c => (stack[c][selectedBudget] || []).length).length} categories
+            Across ${state.roles.length} role${state.roles.length !== 1 ? 's' : ''}
           </div>
         </div>`;
-
-      // Smooth scroll to results
-      setTimeout(() => output.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100);
     }
+
+    // ---------- Swap modal ----------
+    const swapModal = document.getElementById('swap-modal');
+    const swapBackdrop = document.getElementById('swap-backdrop');
+    const swapClose = document.getElementById('swap-close');
+    const swapContext = document.getElementById('swap-context');
+    const swapOptions = document.getElementById('swap-options');
+    let swapRole = null, swapCat = null, swapSlug = null;
+
+    function openSwap(role, cat, slug) {
+      swapRole = role; swapCat = cat; swapSlug = slug;
+      const current = (STACKS[role]?.[cat]?.[state.budget] || []).find(t => t.slug === slug);
+      const existingSwap = state.swaps[`${role}:${cat}:${slug}`];
+      const displayed = existingSwap
+        ? (ALTS[slug] || []).find(p => p.slug === existingSwap)
+        : current;
+      const alts = (ALTS[slug] || []).filter(p => p.slug !== (displayed?.slug || slug));
+      swapContext.innerHTML = `Replacing <strong class="text-[var(--text-secondary)]">${escapeHtml(displayed?.title || slug)}</strong> in <strong class="text-[var(--text-secondary)]">${escapeHtml(cat)}</strong>`;
+      swapOptions.innerHTML = [
+        current ? `<button type="button" data-choose="__reset" class="swap-option w-full text-left px-4 py-3 text-[13px] hover:bg-[var(--bg-card-hover)] cursor-pointer flex items-center justify-between gap-3">
+          <div class="min-w-0">
+            <div class="text-[var(--text-primary)] font-semibold truncate">Keep original: ${escapeHtml(current.title)}</div>
+            <div class="text-[11px] text-[var(--text-muted)] truncate">${escapeHtml(current.tagline || '')}</div>
+          </div>
+          <span class="text-[11px] text-[var(--text-muted)] shrink-0">${escapeHtml(current.priceDisplay || 'Free')}</span>
+        </button>` : '',
+        ...alts.map(p => `
+          <button type="button" data-choose="${p.slug}" class="swap-option w-full text-left px-4 py-3 text-[13px] hover:bg-[var(--bg-card-hover)] cursor-pointer flex items-center justify-between gap-3">
+            <div class="min-w-0">
+              <div class="text-[var(--text-primary)] font-semibold truncate">${escapeHtml(p.title)}</div>
+              <div class="text-[11px] text-[var(--text-muted)] truncate">${escapeHtml(p.tagline || '')}</div>
+            </div>
+            <span class="text-[11px] text-[var(--text-muted)] shrink-0">${escapeHtml(p.priceDisplay || 'Free')}</span>
+          </button>
+        `),
+        alts.length === 0 && !current ? '<p class="px-4 py-3 text-[12px] text-[var(--text-muted)]">No alternatives in this category.</p>' : '',
+      ].join('');
+      swapModal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeSwap() {
+      swapModal.classList.add('hidden');
+      document.body.style.overflow = '';
+      swapRole = swapCat = swapSlug = null;
+    }
+    function chooseSwap(targetSlug) {
+      if (!swapRole || !swapCat || !swapSlug) return closeSwap();
+      const k = `${swapRole}:${swapCat}:${swapSlug}`;
+      if (targetSlug === '__reset') {
+        delete state.swaps[k];
+      } else {
+        state.swaps[k] = targetSlug;
+      }
+      closeSwap();
+      writeURL();
+      renderStack();
+    }
+
+    document.addEventListener('click', (e) => {
+      const swapBtn = e.target.closest && e.target.closest('[data-swap-slug]');
+      if (swapBtn) {
+        openSwap(
+          swapBtn.getAttribute('data-swap-role'),
+          swapBtn.getAttribute('data-swap-cat'),
+          swapBtn.getAttribute('data-swap-slug')
+        );
+        return;
+      }
+      const choose = e.target.closest && e.target.closest('[data-choose]');
+      if (choose) {
+        chooseSwap(choose.getAttribute('data-choose'));
+        return;
+      }
+      if (e.target === swapBackdrop) closeSwap();
+    });
+    swapClose.addEventListener('click', closeSwap);
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !swapModal.classList.contains('hidden')) closeSwap();
+    });
+
+    // ---------- Share + Export ----------
+    function copyText(text, btnLabelEl, okText = 'Copied!', failText = 'Copy failed') {
+      const originalText = btnLabelEl?.textContent;
+      const onOk = () => {
+        if (btnLabelEl) btnLabelEl.textContent = okText;
+        setTimeout(() => { if (btnLabelEl && originalText) btnLabelEl.textContent = originalText; }, 1600);
+      };
+      const onFail = () => {
+        if (btnLabelEl) btnLabelEl.textContent = failText;
+        setTimeout(() => { if (btnLabelEl && originalText) btnLabelEl.textContent = originalText; }, 1600);
+      };
+      const fallback = () => {
+        try {
+          const ta = document.createElement('textarea');
+          ta.value = text;
+          ta.setAttribute('readonly', '');
+          ta.style.position = 'absolute';
+          ta.style.left = '-9999px';
+          document.body.appendChild(ta);
+          ta.select();
+          const ok = document.execCommand('copy');
+          document.body.removeChild(ta);
+          return ok;
+        } catch (_) { return false; }
+      };
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(text).then(onOk).catch(() => {
+          if (fallback()) onOk(); else onFail();
+        });
+      } else {
+        if (fallback()) onOk(); else onFail();
+      }
+    }
+
+    function buildMarkdown() {
+      const merged = mergedStack();
+      const roleLabels = state.roles.map(r => document.querySelector(`.sb-role-btn[data-role="${r}"] .font-semibold`)?.textContent || r);
+      const budgetLabel = document.querySelector(`.sb-budget-btn[data-budget="${state.budget}"] .font-semibold`)?.textContent || state.budget;
+      let md = `# My AI stack (${roleLabels.join(' + ')}, ${budgetLabel})\n\nBuilt on [aipedia.wiki](${siteBase})stack-builder/\n\n`;
+      let totalLow = 0, totalHigh = 0;
+      for (const [catName, tiers] of Object.entries(merged)) {
+        const picks = (tiers[state.budget] || []).map(t => toolAfterSwap(
+          state.roles.find(r => (STACKS[r]?.[catName]?.[state.budget] || []).some(x => x.slug === t.slug)) || state.roles[0],
+          catName, t
+        ));
+        if (!picks.length) continue;
+        md += `## ${catName}\n\n`;
+        for (const t of picks) {
+          const { low, high } = parsePrice(t.price);
+          totalLow += low; totalHigh += high;
+          md += `- **[${t.title}](${siteBase}tools/${t.slug}/)** — ${t.tagline || ''} (${t.priceDisplay || 'Free'})\n`;
+        }
+        md += '\n';
+      }
+      md += `---\n\n**Estimated cost:** $${Math.round(totalLow)}${totalHigh > totalLow ? `–$${Math.round(totalHigh)}` : ''}/month\n`;
+      return md;
+    }
+
+    document.getElementById('sb-share').addEventListener('click', () => {
+      copyText(location.href, document.getElementById('sb-share-label'), 'Copied!');
+    });
+    document.getElementById('sb-export-md').addEventListener('click', () => {
+      copyText(buildMarkdown(), document.getElementById('sb-export-md-label'), 'Copied!');
+    });
+    document.getElementById('sb-reset').addEventListener('click', () => {
+      state.roles = []; state.budget = null; state.swaps = {};
+      paintRoleButtons(); paintBudgetButtons();
+      writeURL(); renderStack();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Delegated fallback for share/export (survives view transitions)
+    document.addEventListener('click', (e) => {
+      const shareBtn = e.target.closest && e.target.closest('#sb-share');
+      if (shareBtn && !shareBtn.__sbBound) {
+        shareBtn.__sbBound = true;
+        setTimeout(() => { shareBtn.__sbBound = false; }, 200);
+      }
+    });
+
+    // ---------- Init ----------
+    const initial = readURL();
+    state.roles = initial.roles;
+    state.budget = initial.budget;
+    state.swaps = initial.swaps;
+    paintRoleButtons();
+    paintBudgetButtons();
+    renderStack();
+    window.addEventListener('popstate', () => {
+      const next = readURL();
+      state.roles = next.roles;
+      state.budget = next.budget;
+      state.swaps = next.swaps;
+      paintRoleButtons();
+      paintBudgetButtons();
+      renderStack();
+    });
   })();
   </script>
 </BaseLayout>
