@@ -44,6 +44,20 @@ const sorted = entries
     categories: e.data.categories || [],
   }))
   .sort((a, b) => (b.date || '').localeCompare(a.date || ''));
+
+// Unique sorted lists for the filter UI. Tool filter shows every tool
+// that has at least one news item referencing it in `affects:`.
+const severityCounts = sorted.reduce<Record<string, number>>((acc, n) => {
+  acc[n.severity] = (acc[n.severity] ?? 0) + 1;
+  return acc;
+}, {});
+const toolCounts = sorted.reduce<Record<string, number>>((acc, n) => {
+  for (const t of n.affects) acc[t] = (acc[t] ?? 0) + 1;
+  return acc;
+}, {});
+const toolOptions = Object.entries(toolCounts)
+  .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+  .map(([slug, count]) => ({ slug, count }));
 ---
 
 <BaseLayout
@@ -75,11 +89,48 @@ const sorted = entries
     </div>
   )}
 
-  <section class="space-y-3 mb-16">
+  {/* Filter UI: severity tabs + tool dropdown. URL params: ?severity=breaking&tool=claude
+      Filters run client-side via simple querystring + display:none toggles so the
+      static build stays cacheable and the page still works with JS disabled. */}
+  {sorted.length > 0 && (
+    <section id="news-filters" class="mb-6 flex items-center gap-3 flex-wrap" data-pagefind-ignore>
+      <div class="flex items-center gap-1 flex-wrap">
+        <span class="text-[11px] uppercase tracking-wider text-[var(--text-muted)] mr-1">Severity</span>
+        <button type="button" data-severity-filter="all" class="severity-tab severity-tab-active inline-flex items-center gap-1 px-2.5 py-1 rounded-md text-[12px] font-medium bg-[var(--bg-card)] border border-[var(--border)] text-[var(--text-secondary)] hover:bg-[var(--bg-card-hover)] transition-colors cursor-pointer">
+          All <span class="text-[10px] text-[var(--text-muted)] tabular-nums">{sorted.length}</span>
+        </button>
+        {(['breaking', 'major', 'minor'] as const).map((sev) => severityCounts[sev] ? (
+          <button type="button" data-severity-filter={sev} class="severity-tab inline-flex items-center gap-1 px-2.5 py-1 rounded-md text-[12px] font-medium bg-[var(--bg-card)] border border-[var(--border)] text-[var(--text-secondary)] hover:bg-[var(--bg-card-hover)] transition-colors cursor-pointer capitalize">
+            {sev} <span class="text-[10px] text-[var(--text-muted)] tabular-nums">{severityCounts[sev]}</span>
+          </button>
+        ) : null)}
+      </div>
+
+      {toolOptions.length > 0 && (
+        <div class="flex items-center gap-2 ml-auto">
+          <label for="tool-filter" class="text-[11px] uppercase tracking-wider text-[var(--text-muted)]">Affects tool</label>
+          <select id="tool-filter" class="text-[12px] bg-[var(--bg-card)] border border-[var(--border)] rounded-md px-2 py-1 text-[var(--text-secondary)] hover:bg-[var(--bg-card-hover)] transition-colors cursor-pointer">
+            <option value="all">All tools</option>
+            {toolOptions.map(({ slug, count }) => (
+              <option value={slug}>{slug} ({count})</option>
+            ))}
+          </select>
+        </div>
+      )}
+
+      <button type="button" id="clear-filters" class="hidden text-[12px] text-[var(--accent-primary)] hover:brightness-110 cursor-pointer">
+        Clear
+      </button>
+    </section>
+  )}
+
+  <section id="news-list" class="space-y-3 mb-16">
     {sorted.map((n) => (
       <a
         href={`/news/${n.slug}/`}
-        class="group block rounded-xl border border-[var(--border)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] hover:border-[rgba(167,139,250,0.35)] p-5 no-underline transition-colors"
+        class="news-item group block rounded-xl border border-[var(--border)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] hover:border-[rgba(167,139,250,0.35)] p-5 no-underline transition-colors"
+        data-severity={n.severity}
+        data-affects={n.affects.join(',')}
       >
         <div class="flex items-center gap-2 mb-2 flex-wrap">
           <span class={`inline-flex items-center px-2 py-0.5 rounded-md text-[10px] font-semibold uppercase tracking-wider border ${severityStyles[n.severity] ?? severityStyles.minor}`}>
@@ -102,5 +153,97 @@ const sorted = entries
     ))}
   </section>
 
+  <p id="no-matches" class="hidden text-sm text-[var(--text-muted)] mb-16">
+    No news items match these filters. <a href="/news/" class="text-[var(--accent-primary)] no-underline hover:underline">Clear filters</a> to see everything.
+  </p>
+
   <EmailCapture variant="footer" source="news-index" />
+
+  <script is:inline>
+    // News filter: severity tabs + tool dropdown, synced with URL params
+    // so a filtered view is bookmarkable / shareable.
+    (function () {
+      const root = document.getElementById('news-filters');
+      const list = document.getElementById('news-list');
+      if (!root || !list) return;
+
+      const tabs = root.querySelectorAll('.severity-tab');
+      const toolSelect = document.getElementById('tool-filter');
+      const clearBtn = document.getElementById('clear-filters');
+      const noMatches = document.getElementById('no-matches');
+      const items = Array.from(list.querySelectorAll('.news-item'));
+
+      const activeClass = 'severity-tab-active';
+
+      function readParams() {
+        const p = new URLSearchParams(location.search);
+        return {
+          severity: p.get('severity') || 'all',
+          tool: p.get('tool') || 'all',
+        };
+      }
+      function writeParams(state) {
+        const p = new URLSearchParams();
+        if (state.severity !== 'all') p.set('severity', state.severity);
+        if (state.tool !== 'all') p.set('tool', state.tool);
+        const qs = p.toString();
+        const url = location.pathname + (qs ? '?' + qs : '') + location.hash;
+        history.replaceState(null, '', url);
+      }
+      function apply(state) {
+        let visible = 0;
+        items.forEach((el) => {
+          const sev = el.getAttribute('data-severity') || 'minor';
+          const affects = (el.getAttribute('data-affects') || '').split(',').filter(Boolean);
+          const sevOk = state.severity === 'all' || sev === state.severity;
+          const toolOk = state.tool === 'all' || affects.includes(state.tool);
+          const show = sevOk && toolOk;
+          el.style.display = show ? '' : 'none';
+          if (show) visible++;
+        });
+        tabs.forEach((tab) => {
+          const v = tab.getAttribute('data-severity-filter');
+          if (v === state.severity) tab.classList.add(activeClass);
+          else tab.classList.remove(activeClass);
+        });
+        if (toolSelect) toolSelect.value = state.tool;
+        const anyFilter = state.severity !== 'all' || state.tool !== 'all';
+        if (clearBtn) clearBtn.classList.toggle('hidden', !anyFilter);
+        if (noMatches) noMatches.classList.toggle('hidden', visible !== 0);
+      }
+
+      let state = readParams();
+      apply(state);
+
+      tabs.forEach((tab) => {
+        tab.addEventListener('click', () => {
+          state = { ...state, severity: tab.getAttribute('data-severity-filter') || 'all' };
+          writeParams(state);
+          apply(state);
+        });
+      });
+      if (toolSelect) {
+        toolSelect.addEventListener('change', () => {
+          state = { ...state, tool: toolSelect.value };
+          writeParams(state);
+          apply(state);
+        });
+      }
+      if (clearBtn) {
+        clearBtn.addEventListener('click', () => {
+          state = { severity: 'all', tool: 'all' };
+          writeParams(state);
+          apply(state);
+        });
+      }
+    })();
+  </script>
+
+  <style is:global>
+    .severity-tab-active {
+      background: rgba(167, 139, 250, 0.15) !important;
+      border-color: rgba(167, 139, 250, 0.4) !important;
+      color: var(--accent-primary) !important;
+    }
+  </style>
 </BaseLayout>
