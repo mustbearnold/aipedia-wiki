@@ -35,6 +35,12 @@ const tools = defineCollection({
       cookie_days: z.number().optional().nullable(),
       network: z.string().optional().nullable(),
       link: z.string().optional().nullable(),
+      // Internal application pipeline tracking. Never surfaced in UI;
+      // lets us audit who we've applied to, who approved, who rejected.
+      application_status: z.enum(['none', 'applied', 'approved', 'rejected', 'paused']).optional().nullable(),
+      applied_date: z.union([z.string(), z.date()]).optional().nullable(),
+      approved_date: z.union([z.string(), z.date()]).optional().nullable(),
+      notes: z.string().optional().nullable(),
     }).optional().nullable(),
     scores: z.object({
       utility: z.number().optional(),

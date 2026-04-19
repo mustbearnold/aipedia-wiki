@@ -17,11 +17,13 @@ seo_title: "Canva: Features, Pricing & Review (April 2026)"
 meta_description: "Canva is the 200M+ user design platform for non-designers. Magic Studio covers 25+ AI tools including Magic Design, Write, Media, and Grab. Free tier generous; Pro $15/mo unlocks unlimited AI."
 author: "aipedia.wiki Editorial"
 affiliate:
-  has_program: true
-  commission: "~$36 per referral (one-time)"
-  cookie_days: 30
-  network: "Impact"
-  link: "https://www.canva.com/affiliates/"
+  has_program: false
+  commission: null
+  cookie_days: null
+  network: null
+  link: null
+  application_status: paused
+  notes: "Canva closed the traditional Impact affiliate path in favor of the Canvassador Program (canva.com/canvassador), which requires active tutorial / course / workshop content creation, not just a publisher relationship. Gate doesn't fit an encyclopedia-style site without a dedicated Canva-tutorials section. Revisit if/when aipedia.wiki adds Canva-specific educational content, or if Canva reopens Impact publisher access."
 scores:
   utility: 8
   value: 9

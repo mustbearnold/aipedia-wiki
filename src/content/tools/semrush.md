@@ -19,6 +19,9 @@ affiliate:
   cookie_days: 120
   network: impact
   link: https://www.semrush.com/lp/affiliate-program/
+  application_status: applied
+  applied_date: 2026-04-19
+  notes: "Applied via Impact on 2026-04-19. Waiting on approval. $200/sale + 120d cookie is one of the best SEO-niche payouts available."
 scores:
   utility: 10
   value: 6
