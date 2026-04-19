@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2022-11
-last_updated: 2026-04-18
-last_verified: 2026-04-18
+last_updated: 2026-04-19
+last_verified: 2026-04-19
 update_frequency: monthly
 seo_title: "ChatGPT: Features, Pricing & Review (April 2026)"
 meta_description: "ChatGPT runs on GPT-5.3 and GPT-5.4 models as of April 2026. Free tier includes ads; Plus is $20/mo ad-free; Pro plans at $100 and $200/mo add Codex coding agent. DALL-E and Sora are retired."
@@ -80,6 +80,7 @@ No video generation. Sora was shut down in March 2026.
 
 ## Recent developments (March-April 2026)
 
+- **April 19, 2026:** [US courts split on AI chatbot privilege](/news/2026-04-19-ai-chatbot-privilege-court-rulings/). Patti (E.D. Mich) protected a pro-se plaintiff's ChatGPT chats as work product, but Rakoff (SDNY) ruled Claude-generated docs are discoverable. Consumer ChatGPT chats discoverable by default; ChatGPT Enterprise / Zero Data Retention API offer stronger protection.
 - **April 16, 2026:** [Systemic MCP vulnerability exposes 200k servers](/news/2026-04-16-mcp-vulnerability-200k-servers/). Codex Desktop's 90+ plugins and MCP tool access all inherit the exposure. Audit third-party servers; prefer first-party.
 - **April 16, 2026:** [Codex Desktop ships as OpenAI "super app"](/news/2026-04-16-openai-codex-desktop-super-app/): computer use, memory, gpt-image-1.5, in-app browser, 90+ plugins, multi-agent. Biggest Codex surface expansion since launch.
 - **April 16, 2026:** [Agents SDK ships native sandbox execution](/news/2026-04-16-openai-agents-sdk-sandbox-update/) + model-native harness + configurable memory + snapshotting. Python first, TypeScript coming.

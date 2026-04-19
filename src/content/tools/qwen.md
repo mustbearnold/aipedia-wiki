@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "Free (open weights) / API from ~$0.15/M tokens"
 status: active
 launched: 2023-09
-last_updated: 2026-04-18
-last_verified: 2026-04-18
+last_updated: 2026-04-19
+last_verified: 2026-04-19
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -49,6 +49,12 @@ Alibaba Cloud's open-weight LLM family, developed by the Qwen team and spanning 
 The current surface includes **Qwen3.6 Plus** (released April 2, 2026) as the flagship proprietary model with 1M native context and always-on chain-of-thought. **Qwen3-Max** is Alibaba's trillion-parameter closed model. Open-weight releases from the Qwen3 line ship under Apache 2.0 on [Hugging Face](https://huggingface.co/Qwen). Qwen3-Coder (480B MoE with 35B active) leads coding tasks among Alibaba releases.
 
 **Qwen3.6-35B-A3B** (released April 16, 2026) is the newest open-source addition: a sparse MoE with 35B total params but only ~3B active per token via 256 experts (8 routed + 1 shared per forward pass). Native context is 262,144 tokens, extensible to ~1M via YaRN. Apache 2.0 licensed. Benchmarks aggregate ~82% of Claude Opus 4.7 performance, meaningful gap on agentic tool-use (62% on MCP Atlas) but close to parity on knowledge tasks. See the [full coverage](/news/2026-04-16-qwen-3-6-35b-a3b-release/).
+
+## Recent developments
+
+- **April 19, 2026:** [Alibaba Amap debuts first embodied robot at Beijing Humanoid Robot Half Marathon](/news/2026-04-19-beijing-humanoid-robot-half-marathon-alibaba-abot/). Quadruped from Amap's new embodied-intelligence division, powered by Alibaba's ABot-World model (leads AGIbot World Challenge and World Arena benchmarks). Moves Alibaba from Qwen-as-foundation into first-party robotics alongside the model family.
+- **April 16, 2026:** [Qwen3.6-35B-A3B released open-source](/news/2026-04-16-qwen-3-6-35b-a3b-release/) on Apache 2.0. Sparse MoE (35B total / 3B active) at ~82% of Claude Opus 4.7 aggregate performance; 62% on MCP Atlas tool-use.
+- **April 2, 2026:** Qwen3.6 Plus released as the new proprietary flagship with 1M context, always-on CoT, and agentic coding emphasis.
 
 ## System Verdict
 
