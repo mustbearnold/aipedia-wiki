@@ -420,6 +420,41 @@ function shortDate(iso: string): string {
           </div>
         </div>
       </section>
+      <section id="sort-dropdown" class="relative" aria-label="Sort tool grid">
+        <button
+          id="sort-trigger"
+          type="button"
+          aria-haspopup="listbox"
+          aria-expanded="false"
+          aria-controls="sort-popover"
+          class="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1.5 rounded-lg text-[12px] font-medium bg-[var(--bg-card)] border border-[var(--border)] text-[var(--text-secondary)] hover:bg-[var(--bg-card-hover)] hover:border-[rgba(167,139,250,0.3)] hover:text-[var(--text-primary)] transition-colors cursor-pointer"
+        >
+          <span class="hidden sm:inline text-[10px] font-semibold uppercase tracking-[0.12em] text-[var(--text-muted)]">Sort</span>
+          <svg class="sm:hidden w-3 h-3 opacity-70" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 7h18M6 12h12M10 17h4" />
+          </svg>
+          <span id="sort-current-label" class="text-[var(--text-primary)]">Overall</span>
+          <svg id="sort-chevron" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" class="transition-transform" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
+          </svg>
+        </button>
+
+        <div
+          id="sort-popover"
+          role="listbox"
+          aria-label="Sort by"
+          class="absolute left-0 top-full mt-2 z-50 min-w-[180px] rounded-lg border border-[var(--border)] shadow-[0_12px_32px_-8px_rgba(0,0,0,0.6)] opacity-0 invisible translate-y-1 transition-all duration-150 origin-top-left py-1"
+          style="background: #1a1625;"
+          data-open="false"
+        >
+          <button type="button" data-sort="overall"   role="option" aria-selected="true"  class="sort-option active w-full text-left px-3 py-2 text-[12px] text-[var(--text-secondary)] hover:bg-[var(--bg-card-hover)] cursor-pointer">Overall score</button>
+          <button type="button" data-sort="utility"   role="option" aria-selected="false" class="sort-option w-full text-left px-3 py-2 text-[12px] text-[var(--text-secondary)] hover:bg-[var(--bg-card-hover)] cursor-pointer">Utility</button>
+          <button type="button" data-sort="value"     role="option" aria-selected="false" class="sort-option w-full text-left px-3 py-2 text-[12px] text-[var(--text-secondary)] hover:bg-[var(--bg-card-hover)] cursor-pointer">Value</button>
+          <button type="button" data-sort="moat"      role="option" aria-selected="false" class="sort-option w-full text-left px-3 py-2 text-[12px] text-[var(--text-secondary)] hover:bg-[var(--bg-card-hover)] cursor-pointer">Moat</button>
+          <button type="button" data-sort="longevity" role="option" aria-selected="false" class="sort-option w-full text-left px-3 py-2 text-[12px] text-[var(--text-secondary)] hover:bg-[var(--bg-card-hover)] cursor-pointer">Longevity</button>
+          <button type="button" data-sort="verified"  role="option" aria-selected="false" class="sort-option w-full text-left px-3 py-2 text-[12px] text-[var(--text-secondary)] hover:bg-[var(--bg-card-hover)] cursor-pointer">Last verified</button>
+        </div>
+      </section>
       <p id="filter-count" class="hidden sm:block text-xs text-[var(--text-muted)]">Showing {Math.min(30, scoredTools.length)} of {scoredTools.length} tools</p>
     </div>
     <div class="flex items-center gap-3">
@@ -443,11 +478,27 @@ function shortDate(iso: string): string {
     <div id="tools-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
       {scoredTools.map(({ tool, score }, idx) => {
         const cat = tool.data.category ?? '';
+        const s = tool.data.scores ?? {};
+        const verifiedRaw = tool.data.last_verified ?? tool.data.last_updated ?? '';
+        const verifiedStr = verifiedRaw instanceof Date
+          ? verifiedRaw.toISOString().slice(0, 10)
+          : String(verifiedRaw).slice(0, 10);
+        // Epoch-ms timestamp for client-side numeric sort; 0 if no date.
+        const verifiedTs = (() => {
+          const d = new Date(verifiedStr);
+          return isNaN(d.getTime()) ? 0 : d.getTime();
+        })();
         return (
           <div
             class="tool-card-wrapper"
             data-category={cat}
             data-index={idx}
+            data-sort-overall={score}
+            data-sort-utility={s.utility ?? 0}
+            data-sort-value={s.value ?? 0}
+            data-sort-moat={s.moat ?? 0}
+            data-sort-longevity={s.longevity ?? 0}
+            data-sort-verified={verifiedTs}
             style={`transition: opacity 0.2s ease; ${idx >= 30 ? 'display:none;' : ''}`}
           >
             <ToolCard
@@ -457,6 +508,7 @@ function shortDate(iso: string): string {
               score={score}
               priceRange={tool.data.price_range ?? 'Free'}
               emoji={categoryEmojiMap[cat] ?? '\uD83D\uDD27'}
+              scores={tool.data.scores}
             />
           </div>
         );
@@ -926,6 +978,126 @@ function shortDate(iso: string): string {
     })();
   </script>
 
+  <script is:inline>
+    // Sort dropdown: trigger + popover + click-to-sort + URL state.
+    // Re-orders .tool-card-wrapper elements by data-sort-<key> descending.
+    // Persists the selected sort key in localStorage so a revisit keeps
+    // the user's preference.
+    (function () {
+      if (window.__sortDropdownBound) return;
+      window.__sortDropdownBound = true;
+
+      const SORT_KEY = 'homepage-sort';
+      const SORT_LABELS = {
+        overall:   'Overall',
+        utility:   'Utility',
+        value:     'Value',
+        moat:      'Moat',
+        longevity: 'Longevity',
+        verified:  'Last verified',
+      };
+
+      function getEls() {
+        return {
+          trigger: document.getElementById('sort-trigger'),
+          popover: document.getElementById('sort-popover'),
+          chevron: document.getElementById('sort-chevron'),
+          label:   document.getElementById('sort-current-label'),
+        };
+      }
+      function isOpen() { return getEls().popover?.getAttribute('data-open') === 'true'; }
+      function openIt() {
+        const { popover, trigger, chevron } = getEls();
+        if (!popover || !trigger) return;
+        popover.setAttribute('data-open', 'true');
+        popover.classList.remove('opacity-0', 'invisible', 'translate-y-1');
+        trigger.setAttribute('aria-expanded', 'true');
+        if (chevron) chevron.style.transform = 'rotate(180deg)';
+      }
+      function closeIt() {
+        const { popover, trigger, chevron } = getEls();
+        if (!popover || !trigger) return;
+        popover.setAttribute('data-open', 'false');
+        popover.classList.add('opacity-0', 'invisible', 'translate-y-1');
+        trigger.setAttribute('aria-expanded', 'false');
+        if (chevron) chevron.style.transform = '';
+      }
+
+      function applySort(key) {
+        const grid = document.getElementById('tools-grid');
+        if (!grid) return;
+        const cards = Array.from(grid.children);
+        const attr = `data-sort-${key}`;
+        cards.sort((a, b) => {
+          const av = parseFloat(a.getAttribute(attr) || '0') || 0;
+          const bv = parseFloat(b.getAttribute(attr) || '0') || 0;
+          return bv - av; // descending
+        });
+        // Reattach in new order. Using a fragment to minimize reflow.
+        const frag = document.createDocumentFragment();
+        cards.forEach((c, i) => {
+          c.setAttribute('data-index', String(i));
+          frag.appendChild(c);
+        });
+        grid.appendChild(frag);
+        // Let the page-size logic re-run so the first N stay visible and the
+        // rest hide. Fire a synthetic click on the currently-active page size.
+        const activeSize = document.querySelector('.page-size-btn[data-pagesize][style*="background"]');
+        if (activeSize) (activeSize).click();
+      }
+
+      function setActive(key) {
+        document.querySelectorAll('.sort-option').forEach((opt) => {
+          const k = opt.getAttribute('data-sort');
+          const selected = k === key;
+          opt.setAttribute('aria-selected', selected ? 'true' : 'false');
+          opt.classList.toggle('active', selected);
+        });
+        const { label } = getEls();
+        if (label) label.textContent = SORT_LABELS[key] || 'Overall';
+      }
+
+      // Restore saved sort on load
+      const saved = localStorage.getItem(SORT_KEY);
+      if (saved && SORT_LABELS[saved] && saved !== 'overall') {
+        setActive(saved);
+        // Defer sort until after the filter / page-size init has bound so
+        // our reattach doesn't race with the initial render.
+        setTimeout(() => applySort(saved), 50);
+      }
+
+      document.addEventListener('click', (e) => {
+        const { trigger, popover } = getEls();
+        if (!trigger || !popover) return;
+        const target = e.target;
+        if (trigger.contains(target)) {
+          e.preventDefault();
+          e.stopPropagation();
+          isOpen() ? closeIt() : openIt();
+          return;
+        }
+        if (popover.contains(target)) {
+          const opt = target.closest('.sort-option');
+          if (opt) {
+            const key = opt.getAttribute('data-sort') || 'overall';
+            localStorage.setItem(SORT_KEY, key);
+            setActive(key);
+            applySort(key);
+            closeIt();
+          }
+          return;
+        }
+        closeIt();
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && isOpen()) {
+          closeIt();
+          document.getElementById('sort-trigger')?.focus();
+        }
+      });
+    })();
+  </script>
+
   <script>
     function initCategoryFilter() {
       const pills = document.querySelectorAll<HTMLButtonElement>('.category-pill');
@@ -946,7 +1118,9 @@ function shortDate(iso: string): string {
       });
       if (!pills.length || !cards.length) return; // not on homepage
 
-      let activeFilter = 'all';
+      // Multi-select filter state. Empty set OR containing 'all' means "show all tools".
+      // Specific category slugs mean "show tools in ANY of these categories" (union).
+      let activeFilters = new Set<string>();
       // Load saved page size from localStorage, default to 30
       let pageSize: number | 'all' = (() => {
         const saved = localStorage.getItem('homepage-page-size');
@@ -980,22 +1154,26 @@ function shortDate(iso: string): string {
           pageSize = val === 'all' ? 'all' : parseInt(val, 10);
           localStorage.setItem('homepage-page-size', val);
           updatePageSizeButtons();
-          setFilter(activeFilter);
+          applyFilter();
         });
       });
 
-      function setFilter(filter: string) {
-        activeFilter = filter;
+      function isShowAll(): boolean {
+        return activeFilters.size === 0 || activeFilters.has('all');
+      }
+
+      function applyFilter() {
         let visible = 0;
         let shownInView = 0;
         const limit = pageSize === 'all' ? Infinity : pageSize;
+        const showAll = isShowAll();
 
         const toHide: HTMLElement[] = [];
         const toShow: HTMLElement[] = [];
 
         cards.forEach(card => {
           const cat = card.getAttribute('data-category') ?? '';
-          const matchesFilter = filter === 'all' || cat === filter;
+          const matchesFilter = showAll || activeFilters.has(cat);
           const withinLimit = matchesFilter && shownInView < limit;
           if (matchesFilter) visible++;
           if (withinLimit) shownInView++;
@@ -1026,18 +1204,21 @@ function shortDate(iso: string): string {
 
         pills.forEach(pill => {
           const f = pill.getAttribute('data-filter') ?? '';
-          const isActive = f === filter;
+          const isActive = f === 'all' ? showAll : activeFilters.has(f);
           pill.classList.toggle('active', isActive);
           pill.setAttribute('aria-selected', String(isActive));
         });
 
-        // Sync the trigger label with the current filter
+        // Sync the trigger label with the current filter state.
         if (currentLabelEl) {
-          if (filter === 'all') {
+          if (showAll) {
             currentLabelEl.textContent = 'All';
-          } else {
-            const label = pillLabelMap[filter] ?? filter.replace(/^ai-/, '');
+          } else if (activeFilters.size === 1) {
+            const only = Array.from(activeFilters)[0];
+            const label = pillLabelMap[only] ?? only.replace(/^ai-/, '');
             currentLabelEl.textContent = label;
+          } else {
+            currentLabelEl.textContent = `${activeFilters.size} categories`;
           }
         }
 
@@ -1048,9 +1229,11 @@ function shortDate(iso: string): string {
             : `Showing ${visible} tool${visible !== 1 ? 's' : ''}`;
         }
 
+        // Show "View all" link only when exactly one category is selected
         if (linkEl) {
-          if (filter !== 'all') {
-            linkEl.href = `/categories/${filter}/`;
+          if (!showAll && activeFilters.size === 1) {
+            const only = Array.from(activeFilters)[0];
+            linkEl.href = `/categories/${only}/`;
             linkEl.classList.remove('hidden');
           } else {
             linkEl.classList.add('hidden');
@@ -1058,24 +1241,46 @@ function shortDate(iso: string): string {
         }
 
         if (headingEl) {
-          if (filter === 'all') {
+          if (showAll) {
             headingEl.textContent = 'All Tools';
-          } else {
-            const label = pillLabelMap[filter] ?? filter.replace(/^ai-/, '');
+          } else if (activeFilters.size === 1) {
+            const only = Array.from(activeFilters)[0];
+            const label = pillLabelMap[only] ?? only.replace(/^ai-/, '');
             headingEl.textContent = `${label} Tools`;
+          } else {
+            headingEl.textContent = `${activeFilters.size} Categories`;
           }
         }
       }
 
       pills.forEach(pill => {
-        pill.addEventListener('click', () => {
+        pill.addEventListener('click', (e) => {
           const filter = pill.getAttribute('data-filter') ?? 'all';
-          setFilter(filter);
-          // Close the popover after any option pick
-          const pop = document.getElementById('filter-popover');
-          const trg = document.getElementById('filter-trigger');
-          pop?.setAttribute('data-open', 'false');
-          trg?.setAttribute('aria-expanded', 'false');
+          // "All tools" pill resets multi-select to the empty state
+          if (filter === 'all') {
+            activeFilters.clear();
+            applyFilter();
+            // Close popover — one-shot action
+            const pop = document.getElementById('filter-popover');
+            const trg = document.getElementById('filter-trigger');
+            pop?.setAttribute('data-open', 'false');
+            trg?.setAttribute('aria-expanded', 'false');
+            return;
+          }
+          // Modifier keys (cmd/ctrl/shift) OR any subsequent click toggles
+          // the pill in/out of the active set. First click on a category pill
+          // when nothing is selected picks just that category (the common case).
+          const shouldToggle = e.metaKey || e.ctrlKey || e.shiftKey || activeFilters.size >= 1;
+          if (shouldToggle) {
+            if (activeFilters.has(filter)) activeFilters.delete(filter);
+            else activeFilters.add(filter);
+          } else {
+            activeFilters.clear();
+            activeFilters.add(filter);
+          }
+          applyFilter();
+          // Keep popover open so users can add more categories. Only close
+          // on the "All tools" reset above.
         });
       });
     }

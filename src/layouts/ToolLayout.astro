@@ -10,6 +10,7 @@ import BreadcrumbLD from '../components/seo/BreadcrumbLD.astro';
 import SoftwareApplicationLD from '../components/seo/SoftwareApplicationLD.astro';
 import FAQPageLD from '../components/seo/FAQPageLD.astro';
 import RelatedTools from '../components/RelatedTools.astro';
+import TopAlternatives from '../components/TopAlternatives.astro';
 import QuickAnswer from '../components/QuickAnswer.astro';
 import ToolCTA from '../components/ToolCTA.astro';
 import TableOfContents from '../components/TableOfContents.astro';
@@ -227,6 +228,8 @@ const breadcrumbLdItems = [
         outboundUrl={(affiliate?.link && affiliate.link.length > 0 ? affiliate.link : (frontmatter.url ?? '#'))}
         isAffiliate={Boolean(affiliate?.link && affiliate.link.length > 0)}
       />
+
+      <TopAlternatives currentSlug={toolSlug} category={catSlug} limit={3} />
 
       <RelatedComparisons toolSlug={toolSlug} toolTitle={frontmatter.title} />
 

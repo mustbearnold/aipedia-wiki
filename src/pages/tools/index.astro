@@ -50,6 +50,7 @@ const categoryEmojiMap: Record<string, string> = {
           score={score}
           priceRange={tool.data.price_range ?? 'Free'}
           emoji={categoryEmojiMap[cat] ?? '\uD83D\uDD27'}
+          scores={tool.data.scores}
         />
       );
     })}

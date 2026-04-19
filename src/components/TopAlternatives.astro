@@ -1,0 +1,101 @@
+---
+// In-body "Top alternatives" card strip for tool pages. Derives the top
+// 3 same-category tools by overall score (excluding the current tool)
+// and renders them as clickable cards with logo + score + price range.
+//
+// Distinct from the <RelatedTools> sidebar block which shows a compact
+// list. This component is horizontal cards meant for the main content
+// column, where it's more prominent on mobile (the sidebar is
+// desktop-only).
+import { getCollection } from 'astro:content';
+import ToolLogo from './ToolLogo.astro';
+
+interface Props {
+  currentSlug: string;
+  category: string;
+  limit?: number;
+}
+
+const { currentSlug, category, limit = 3 } = Astro.props;
+
+const allTools = await getCollection('tools');
+
+function avgScore(scores: any) {
+  if (!scores) return 0;
+  const { utility = 0, value = 0, moat = 0, longevity = 0 } = scores;
+  return Math.round(((utility + value + moat + longevity) / 4) * 10) / 10;
+}
+
+interface Alt {
+  slug: string;
+  title: string;
+  tagline?: string;
+  price_range?: string;
+  score: number;
+}
+
+const alternatives: Alt[] = allTools
+  .filter((t) => {
+    const slug = t.data.slug || t.id.replace(/\.md$/, '');
+    return t.data.category === category
+      && slug !== currentSlug
+      && t.data.status !== 'dead'
+      && t.data.status !== 'acquired';
+  })
+  .map((t) => {
+    const slug = t.data.slug || t.id.replace(/\.md$/, '');
+    return {
+      slug,
+      title: t.data.title,
+      tagline: t.data.tagline,
+      price_range: t.data.price_range,
+      score: avgScore(t.data.scores),
+    };
+  })
+  .sort((a, b) => b.score - a.score)
+  .slice(0, limit);
+
+const categoryLabel = category.replace('ai-', '').replace(/-/g, ' ')
+  .replace(/\b\w/g, (c) => c.toUpperCase());
+---
+
+{alternatives.length > 0 && (
+  <section class="not-prose my-8" data-pagefind-ignore>
+    <div class="flex items-baseline justify-between mb-3 flex-wrap gap-2">
+      <h2 class="text-lg font-bold m-0 text-[var(--text-primary)]">Top {categoryLabel} alternatives</h2>
+      <a href={`/categories/${category}/`} class="text-xs text-[var(--accent-primary)] no-underline hover:underline">
+        See all {categoryLabel} tools →
+      </a>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+      {alternatives.map((alt) => (
+        <a
+          href={`/tools/${alt.slug}/`}
+          class="group flex items-start gap-3 rounded-xl border border-[var(--border)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] hover:border-[rgba(167,139,250,0.4)] p-3 no-underline transition-colors"
+        >
+          <ToolLogo slug={alt.slug} title={alt.title} size={36} className="shrink-0" />
+          <div class="flex-1 min-w-0">
+            <div class="flex items-center justify-between gap-2">
+              <div class="text-[14px] font-semibold text-[var(--text-primary)] group-hover:text-[var(--accent-primary)] transition-colors truncate">
+                {alt.title}
+              </div>
+              <span class="text-[13px] font-bold bg-gradient-to-r from-[#a78bfa] to-[#60a5fa] bg-clip-text text-transparent tabular-nums shrink-0">
+                {alt.score}
+              </span>
+            </div>
+            {alt.tagline && (
+              <div class="text-[11.5px] text-[var(--text-muted)] leading-snug mt-1 line-clamp-2">
+                {alt.tagline}
+              </div>
+            )}
+            {alt.price_range && (
+              <div class="text-[11px] text-[var(--text-muted)] mt-1 truncate" title={alt.price_range}>
+                {alt.price_range}
+              </div>
+            )}
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+)}
