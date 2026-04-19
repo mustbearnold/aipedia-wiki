@@ -99,7 +99,7 @@ Context window is 2M tokens, the largest confirmed in any major commercial model
 | **Next model** | Grok 5 · 6T parameters · MoE · training on Colossus 2 · Q2 2026 target |
 | **Ownership** | SpaceX (acquired xAI Feb 2, 2026 for $1.25T all-stock) |
 | **Compute** | Colossus 2 supercluster · 1.5GW since April 2026 |
-| **Subscription tiers** | Free (X account) · X Premium ~$8 · SuperGrok Lite $10 · SuperGrok $30 · SuperGrok Heavy **$300** |
+| **Subscription tiers** | Free (X account) · X Premium ~$8 · SuperGrok Lite $10 · SuperGrok $30 · X Premium+ ~$40 · SuperGrok Heavy **$300** |
 | **TTS API pricing** | $4.20 per 1M characters (Beta) |
 | **API pricing: Grok 4.1 Fast** | $0.20/M input · $0.50/M output · 2M context |
 | **API pricing: Grok 4.20 Reasoning** | $3.00 blended (per third-party tracking) |
