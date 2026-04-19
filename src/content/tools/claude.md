@@ -64,6 +64,7 @@ Anthropic's AI assistant. **Opus 4.7** is the flagship as of **April 16, 2026**,
 
 ## Recent developments
 
+- **April 17:** [Dario Amodei meets White House Chief of Staff over Mythos](/news/2026-04-17-amodei-white-house-mythos/). Federal cybersecurity use of Anthropic's restricted Mythos model on the table; first formal sit-down since the Pentagon's "supply chain risk" designation. White House calls talks "productive and constructive."
 - **April 19:** [US courts split on AI chatbot privilege](/news/2026-04-19-ai-chatbot-privilege-court-rulings/). Rakoff (SDNY) compelled production of 31 Claude-generated documents in US v. Heppner. Consumer Claude chats are discoverable by default. Enterprise tiers with zero-retention offer more protection.
 - **April 16:** [Systemic MCP vulnerability exposes 200k servers](/news/2026-04-16-mcp-vulnerability-200k-servers/) to arbitrary command execution. OX Security disclosure; Anthropic says behavior is by design, ships only documentation update advising STDIO adapter caution.
 - **April 14:** [Anthropic fielding $800B valuation offers](/news/2026-04-14-anthropic-800b-valuation-offers/), more than double February's $350B round. Revenue at $30B annualised, 1,400% YoY. Early IPO talks with Goldman, JPM, Morgan Stanley for possible October 2026 listing.

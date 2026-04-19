@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "$20-$200/month"
 status: active
 launched: 2025-02
-last_updated: 2026-04-18
-last_verified: 2026-04-18
+last_updated: 2026-04-19
+last_verified: 2026-04-19
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -62,6 +62,7 @@ Claude Opus 4.7 (released April 16, 2026) is the default backing model. Access i
 
 ## Recent developments (April 2026)
 
+- **April 17:** [Dario Amodei meets White House Chief of Staff over Mythos](/news/2026-04-17-amodei-white-house-mythos/). Sign of a thaw in Anthropic's federal relationship. Outcome shapes long-term enterprise trajectory for Claude Code + Claude at scale.
 - **April 16:** [Systemic MCP vulnerability exposes 200k servers](/news/2026-04-16-mcp-vulnerability-200k-servers/) to arbitrary command execution. Affects every MCP server Claude Code invokes. Treat third-party MCP servers as shell-access risk; prefer first-party or sandbox via container.
 - **April 16:** [OpenAI ships Codex Desktop as "super app"](/news/2026-04-16-openai-codex-desktop-super-app/): computer use, memory, gpt-image-1.5, 90+ plugins, multi-agent. Desktop-agent surface competes directly with Claude Code's CLI-native workflow.
 - **April 14:** [Anthropic receiving $800B valuation offers](/news/2026-04-14-anthropic-800b-valuation-offers/), more than double February's $350B round. Supports continued Claude Code investment and enterprise roadmap.
