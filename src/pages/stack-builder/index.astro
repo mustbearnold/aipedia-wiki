@@ -258,10 +258,12 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
 
   <!-- Results -->
   <section id="stack-output" style="display:none" class="mb-16">
-    <div class="flex items-baseline gap-3 mb-4 flex-wrap">
-      <h2 class="text-2xl font-bold m-0">Your stack</h2>
-      <span id="sb-count-chip" class="text-[11px] px-2 py-0.5 rounded bg-[var(--bg-card)] border border-[var(--border)] text-[var(--text-muted)]"></span>
-      <div class="ml-auto flex items-center gap-2 flex-wrap">
+    <div class="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-3 mb-4 flex-wrap">
+      <div class="flex items-baseline gap-3 flex-wrap">
+        <h2 class="text-2xl font-bold m-0">Your stack</h2>
+        <span id="sb-count-chip" class="text-[11px] px-2 py-0.5 rounded bg-[var(--bg-card)] border border-[var(--border)] text-[var(--text-muted)]"></span>
+      </div>
+      <div class="flex items-center gap-2 flex-wrap sm:ml-auto">
         <button id="sb-share" type="button" class="inline-flex items-center gap-1.5 text-[12px] font-medium px-2.5 py-1 rounded-md bg-[var(--bg-card)] border border-[var(--border)] text-[var(--text-secondary)] hover:bg-[var(--bg-card-hover)] hover:text-[var(--text-primary)] transition-colors cursor-pointer" aria-label="Copy share link">
           <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M10 14a5 5 0 007.07 0l1.41-1.41a5 5 0 00-7.07-7.07L10 7m4 3a5 5 0 00-7.07 0L5.5 11.41a5 5 0 007.07 7.07L14 17"/></svg>
           <span id="sb-share-label">Share</span>
@@ -506,19 +508,23 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
                 totalHigh += high;
                 const updated = RECENT[t.slug];
                 const role = state.roles.find(r => (STACKS[r]?.[catName]?.[state.budget] || []).some(x => x.slug === t.slug)) || state.roles[0];
+                // Tool row. Title + news-badge + tagline are rendered as
+                // SIBLING anchors rather than nested — HTML forbids nesting
+                // <a> inside <a>, and browsers auto-close the outer when
+                // they see the inner, which breaks the layout.
                 return `
                   <div class="flex items-center gap-3 p-3 rounded-lg hover:bg-[var(--bg-card-hover)] transition-colors">
-                    <a href="${t.url}" class="w-9 h-9 rounded-lg flex items-center justify-center text-base flex-shrink-0 no-underline" style="background:linear-gradient(135deg,rgba(167,139,250,0.15),rgba(96,165,250,0.15));">
+                    <a href="${t.url}" class="w-9 h-9 rounded-lg flex items-center justify-center text-base flex-shrink-0 no-underline" style="background:linear-gradient(135deg,rgba(167,139,250,0.15),rgba(96,165,250,0.15));" aria-label="Open ${escapeHtml(t.title)}">
                       ${categoryEmoji[t.category] || '🔧'}
                     </a>
-                    <a href="${t.url}" class="flex-1 min-w-0 no-underline">
-                      <div class="text-sm font-semibold text-[var(--text-primary)] truncate flex items-center gap-1.5">
-                        ${escapeHtml(t.title)}
-                        ${updated ? `<a href="/news/${updated}/" class="inline-flex items-center gap-0.5 text-[9px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded bg-[rgba(52,211,153,0.12)] border border-[rgba(52,211,153,0.3)] text-[var(--accent-success)] no-underline" title="Recently updated — see news" onclick="event.stopPropagation()">New</a>` : ''}
+                    <div class="flex-1 min-w-0">
+                      <div class="text-sm font-semibold truncate flex items-center gap-1.5">
+                        <a href="${t.url}" class="text-[var(--text-primary)] hover:text-[var(--accent-primary)] no-underline truncate">${escapeHtml(t.title)}</a>
+                        ${updated ? `<a href="/news/${updated}/" class="shrink-0 inline-flex items-center text-[9px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded bg-[rgba(52,211,153,0.12)] border border-[rgba(52,211,153,0.3)] text-[var(--accent-success)] no-underline" title="Recently updated — see news">New</a>` : ''}
                       </div>
-                      <div class="text-xs text-[var(--text-muted)] truncate">${escapeHtml(t.tagline || '')}</div>
-                    </a>
-                    <div class="text-xs text-[var(--text-muted)] flex-shrink-0 whitespace-nowrap" title="${escapeHtml(t.price || '')}">${escapeHtml(t.priceDisplay || 'Free')}</div>
+                      <a href="${t.url}" class="block text-xs text-[var(--text-muted)] truncate no-underline hover:text-[var(--text-secondary)]">${escapeHtml(t.tagline || '')}</a>
+                    </div>
+                    <div class="hidden sm:block text-xs text-[var(--text-muted)] shrink-0 whitespace-nowrap" title="${escapeHtml(t.price || '')}">${escapeHtml(t.priceDisplay || 'Free')}</div>
                     <button type="button" data-swap-role="${escapeHtml(role)}" data-swap-cat="${escapeHtml(catName)}" data-swap-slug="${t.slug}" class="shrink-0 text-[11px] font-medium px-2 py-0.5 rounded-md bg-transparent border border-[var(--border)] text-[var(--text-muted)] hover:text-[var(--accent-primary)] hover:border-[rgba(167,139,250,0.4)] cursor-pointer transition-colors" aria-label="Swap ${escapeHtml(t.title)} for an alternative">
                       Swap
                     </button>
