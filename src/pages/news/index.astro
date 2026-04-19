@@ -89,12 +89,11 @@ const toolOptions = Object.entries(toolCounts)
     </div>
   )}
 
-  {/* Filter UI: severity tabs + tool dropdown on a single row. Horizontally
-      scrollable on narrow viewports so everything stays accessible without
-      wrapping onto multiple lines. URL-synced (?severity=breaking&tool=claude)
-      so filtered views are bookmarkable. */}
+  {/* Filter UI: severity tabs row on top, tool dropdown + clear on a second
+      row below on mobile. On sm+ they sit side by side. URL-synced
+      (?severity=breaking&tool=claude) so filtered views are bookmarkable. */}
   {sorted.length > 0 && (
-    <section id="news-filters" class="mb-6 -mx-4 sm:mx-0 px-4 sm:px-0" data-pagefind-ignore>
+    <section id="news-filters" class="mb-6 flex flex-col sm:flex-row sm:items-center gap-2" data-pagefind-ignore>
       <div class="flex items-center gap-1.5 overflow-x-auto pb-1 no-scrollbar">
         <button type="button" data-severity-filter="all" class="severity-tab severity-tab-active shrink-0 inline-flex items-center gap-1 px-2.5 py-1 rounded-md text-[12px] font-medium bg-[var(--bg-card)] border border-[var(--border)] text-[var(--text-secondary)] hover:bg-[var(--bg-card-hover)] transition-colors cursor-pointer">
           All <span class="text-[10px] text-[var(--text-muted)] tabular-nums">{sorted.length}</span>
@@ -104,20 +103,49 @@ const toolOptions = Object.entries(toolCounts)
             {sev} <span class="text-[10px] text-[var(--text-muted)] tabular-nums">{severityCounts[sev]}</span>
           </button>
         ) : null)}
+      </div>
 
+      <div class="flex items-center gap-2 sm:ml-auto">
         {toolOptions.length > 0 && (
-          <>
-            <span class="shrink-0 mx-1 h-4 w-px bg-[var(--border)]" aria-hidden="true"></span>
-            <select id="tool-filter" aria-label="Filter by affected tool" class="shrink-0 text-[12px] bg-[var(--bg-card)] border border-[var(--border)] rounded-md px-2 py-1 text-[var(--text-secondary)] hover:bg-[var(--bg-card-hover)] transition-colors cursor-pointer max-w-[160px]">
-              <option value="all">All tools</option>
+          <div class="relative">
+            <button
+              id="tool-filter-trigger"
+              type="button"
+              aria-haspopup="listbox"
+              aria-expanded="false"
+              aria-controls="tool-filter-popover"
+              class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[12px] font-medium bg-[var(--bg-card)] border border-[var(--border)] text-[var(--text-secondary)] hover:bg-[var(--bg-card-hover)] hover:border-[rgba(167,139,250,0.3)] hover:text-[var(--text-primary)] transition-colors cursor-pointer"
+            >
+              <span class="text-[10px] font-semibold uppercase tracking-[0.12em] text-[var(--text-muted)]">Tool</span>
+              <span id="tool-filter-label" class="text-[var(--text-primary)]">All</span>
+              <svg id="tool-filter-chevron" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" class="transition-transform" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
+              </svg>
+            </button>
+
+            <div
+              id="tool-filter-popover"
+              role="listbox"
+              aria-label="Filter by affected tool"
+              class="absolute left-0 sm:left-auto sm:right-0 top-full mt-2 z-50 min-w-[200px] max-h-[60vh] overflow-y-auto rounded-lg border border-[var(--border)] shadow-[0_12px_32px_-8px_rgba(0,0,0,0.6)] opacity-0 invisible translate-y-1 transition-all duration-150 py-1"
+              style="background: #1a1625;"
+              data-open="false"
+            >
+              <button type="button" role="option" aria-selected="true" data-tool-filter="all" class="tool-filter-option active w-full text-left px-3 py-2 text-[12px] text-[var(--text-secondary)] hover:bg-[var(--bg-card-hover)] transition-colors cursor-pointer flex items-center justify-between gap-4">
+                <span>All tools</span>
+                <span class="text-[10px] text-[var(--text-muted)] tabular-nums">{sorted.length}</span>
+              </button>
               {toolOptions.map(({ slug, count }) => (
-                <option value={slug}>{slug} ({count})</option>
+                <button type="button" role="option" aria-selected="false" data-tool-filter={slug} class="tool-filter-option w-full text-left px-3 py-2 text-[12px] text-[var(--text-secondary)] hover:bg-[var(--bg-card-hover)] transition-colors cursor-pointer flex items-center justify-between gap-4">
+                  <span>{slug}</span>
+                  <span class="text-[10px] text-[var(--text-muted)] tabular-nums">{count}</span>
+                </button>
               ))}
-            </select>
-          </>
+            </div>
+          </div>
         )}
 
-        <button type="button" id="clear-filters" class="hidden shrink-0 ml-1 text-[12px] text-[var(--accent-primary)] hover:brightness-110 cursor-pointer">
+        <button type="button" id="clear-filters" class="hidden text-[12px] text-[var(--accent-primary)] hover:brightness-110 cursor-pointer">
           Clear
         </button>
       </div>
@@ -168,7 +196,11 @@ const toolOptions = Object.entries(toolCounts)
       if (!root || !list) return;
 
       const tabs = root.querySelectorAll('.severity-tab');
-      const toolSelect = document.getElementById('tool-filter');
+      const toolTrigger = document.getElementById('tool-filter-trigger');
+      const toolPopover = document.getElementById('tool-filter-popover');
+      const toolLabel = document.getElementById('tool-filter-label');
+      const toolChevron = document.getElementById('tool-filter-chevron');
+      const toolOptionButtons = root.querySelectorAll('.tool-filter-option');
       const clearBtn = document.getElementById('clear-filters');
       const noMatches = document.getElementById('no-matches');
       const items = Array.from(list.querySelectorAll('.news-item'));
@@ -190,6 +222,25 @@ const toolOptions = Object.entries(toolCounts)
         const url = location.pathname + (qs ? '?' + qs : '') + location.hash;
         history.replaceState(null, '', url);
       }
+      function openToolPopover() {
+        if (!toolPopover || !toolTrigger) return;
+        toolPopover.setAttribute('data-open', 'true');
+        toolPopover.classList.remove('opacity-0', 'invisible', 'translate-y-1');
+        toolTrigger.setAttribute('aria-expanded', 'true');
+        if (toolChevron) toolChevron.style.transform = 'rotate(180deg)';
+      }
+      function closeToolPopover() {
+        if (!toolPopover || !toolTrigger) return;
+        toolPopover.setAttribute('data-open', 'false');
+        toolPopover.classList.add('opacity-0', 'invisible', 'translate-y-1');
+        toolTrigger.setAttribute('aria-expanded', 'false');
+        if (toolChevron) toolChevron.style.transform = '';
+      }
+      function toggleToolPopover() {
+        if (!toolPopover) return;
+        if (toolPopover.getAttribute('data-open') === 'true') closeToolPopover();
+        else openToolPopover();
+      }
       function apply(state) {
         let visible = 0;
         items.forEach((el) => {
@@ -206,7 +257,13 @@ const toolOptions = Object.entries(toolCounts)
           if (v === state.severity) tab.classList.add(activeClass);
           else tab.classList.remove(activeClass);
         });
-        if (toolSelect) toolSelect.value = state.tool;
+        toolOptionButtons.forEach((opt) => {
+          const v = opt.getAttribute('data-tool-filter');
+          const selected = v === state.tool;
+          opt.setAttribute('aria-selected', selected ? 'true' : 'false');
+          opt.classList.toggle('active', selected);
+        });
+        if (toolLabel) toolLabel.textContent = state.tool === 'all' ? 'All' : state.tool;
         const anyFilter = state.severity !== 'all' || state.tool !== 'all';
         if (clearBtn) clearBtn.classList.toggle('hidden', !anyFilter);
         if (noMatches) noMatches.classList.toggle('hidden', visible !== 0);
@@ -222,13 +279,37 @@ const toolOptions = Object.entries(toolCounts)
           apply(state);
         });
       });
-      if (toolSelect) {
-        toolSelect.addEventListener('change', () => {
-          state = { ...state, tool: toolSelect.value };
-          writeParams(state);
-          apply(state);
+
+      if (toolTrigger) {
+        toolTrigger.addEventListener('click', (e) => {
+          e.stopPropagation();
+          toggleToolPopover();
         });
       }
+      toolOptionButtons.forEach((opt) => {
+        opt.addEventListener('click', () => {
+          state = { ...state, tool: opt.getAttribute('data-tool-filter') || 'all' };
+          writeParams(state);
+          apply(state);
+          closeToolPopover();
+        });
+      });
+      // Click outside to close
+      document.addEventListener('click', (e) => {
+        if (!toolPopover || toolPopover.getAttribute('data-open') !== 'true') return;
+        const target = e.target;
+        if (toolTrigger && toolTrigger.contains(target)) return;
+        if (toolPopover.contains(target)) return;
+        closeToolPopover();
+      });
+      // Escape closes
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && toolPopover?.getAttribute('data-open') === 'true') {
+          closeToolPopover();
+          toolTrigger?.focus();
+        }
+      });
+
       if (clearBtn) {
         clearBtn.addEventListener('click', () => {
           state = { severity: 'all', tool: 'all' };
@@ -245,14 +326,21 @@ const toolOptions = Object.entries(toolCounts)
       border-color: rgba(167, 139, 250, 0.4) !important;
       color: var(--accent-primary) !important;
     }
-    /* Filter row scrolls horizontally on narrow viewports without showing a
-       scrollbar. Preserves the "single line" look on desktop and mobile. */
+    /* Severity tabs scroll horizontally on narrow viewports without a
+       scrollbar; tool dropdown sits outside that scroll zone so it
+       never gets clipped. */
     #news-filters .no-scrollbar {
       -ms-overflow-style: none;
       scrollbar-width: none;
     }
     #news-filters .no-scrollbar::-webkit-scrollbar {
       display: none;
+    }
+    /* Active tool option in the popover: accent-tinted background */
+    #news-filters .tool-filter-option.active {
+      background: rgba(167, 139, 250, 0.15);
+      color: var(--accent-primary);
+      font-weight: 600;
     }
   </style>
 </BaseLayout>
