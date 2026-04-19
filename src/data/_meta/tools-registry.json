@@ -7203,6 +7203,49 @@
         "link": null
       },
       "page_path": "src/content/tools/claude-design.md"
+    },
+    "codex": {
+      "slug": "codex",
+      "status": "active",
+      "title": "OpenAI Codex",
+      "category": "ai-coding",
+      "secondary_categories": [
+        "ai-chatbots"
+      ],
+      "company": "openai",
+      "url": "https://openai.com/codex/",
+      "pricing_model": "freemium",
+      "price_range": "Bundled with ChatGPT Plus ($20/mo) through Pro 20x ($200/mo)",
+      "launched": "2025-05",
+      "last_updated": "2026-04-19T01:12:15.271Z",
+      "last_verified": "2026-04-19T01:12:15.271Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 9,
+        "value": 8,
+        "moat": 8,
+        "longevity": 9
+      },
+      "tags": [
+        "agentic-coding",
+        "cloud-agent",
+        "desktop-app",
+        "cli",
+        "openai",
+        "gpt-5",
+        "computer-use",
+        "memory",
+        "plugins",
+        "multi-agent"
+      ],
+      "affiliate": {
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null
+      },
+      "page_path": "src/content/tools/codex.md"
     }
   }
 }
