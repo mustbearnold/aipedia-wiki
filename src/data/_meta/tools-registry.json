@@ -7159,6 +7159,50 @@
       "last_updated": "2026-04-15T00:00:00.000Z",
       "last_verified": null,
       "page_path": "wikis/ai-tools/pages/dead/stability-ai-clipdrop.md"
+    },
+    "claude-design": {
+      "slug": "claude-design",
+      "status": "active",
+      "title": "Claude Design",
+      "category": "ai-design",
+      "secondary_categories": [
+        "ai-coding",
+        "ai-presentation"
+      ],
+      "company": "anthropic",
+      "url": "https://claude.ai/design",
+      "pricing_model": "freemium",
+      "price_range": "Bundled with Claude Pro ($20/mo) and up",
+      "launched": "2026-04",
+      "last_updated": "2026-04-19T00:34:20.622Z",
+      "last_verified": "2026-04-19T00:34:20.622Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 8,
+        "value": 9,
+        "moat": 7,
+        "longevity": 8
+      },
+      "tags": [
+        "design",
+        "prototyping",
+        "prompt-to-prototype",
+        "slide-decks",
+        "mockups",
+        "claude",
+        "anthropic",
+        "opus-4-7",
+        "non-designer",
+        "research-preview"
+      ],
+      "affiliate": {
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null
+      },
+      "page_path": "src/content/tools/claude-design.md"
     }
   }
 }
