@@ -79,12 +79,32 @@ html, body {
     background-color: var(--bg-base);
     color: var(--text-secondary);
     font-family: 'Geist', 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    /* 14px on desktop for density; bump to 15.5px on narrow viewports so
+       reading length stays comfortable on phones. Applies to anything
+       inheriting body font-size including prose content. */
     font-size: 14px;
     line-height: 1.7;
     font-feature-settings: 'ss01', 'cv11';
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
+  }
+  @media (max-width: 639px) {
+    body {
+      font-size: 15.5px;
+    }
+    /* Tailwind typography's prose-sm is 0.875em (14px) against body. With
+       a 15.5px body on mobile that bumps reading prose to ~13.6px which
+       is too tight. Force prose paragraphs and list items up for mobile
+       readability without changing desktop density. */
+    .wiki-prose p,
+    .wiki-prose li,
+    .wiki-prose blockquote p {
+      font-size: 15.5px;
+      line-height: 1.65;
+    }
+    .wiki-prose h2 { font-size: 1.3rem; }
+    .wiki-prose h3 { font-size: 1.1rem; }
   }
 
   /* Geist Mono for code, keyboard keys, and tabular figures */
