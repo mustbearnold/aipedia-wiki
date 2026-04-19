@@ -536,9 +536,13 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
                 // exists, else the canonical vendor URL. Opens in a new
                 // tab with rel=noopener (and sponsored when affiliate) so
                 // we earn on the intent moment without hijacking nav.
+                // Label is "Try" for every tool — consistent UX. The rel
+                // value still flips to "sponsored" for affiliate links so
+                // Google + FTC see the disclosure, but users see a single
+                // action verb instead of a confusing Try/Open mix.
                 const tryUrl = t.affiliateLink || t.vendorUrl || '';
                 const tryRel = t.affiliateLink ? 'noopener nofollow sponsored' : 'noopener';
-                const tryLabel = t.affiliateLink ? 'Try' : 'Open';
+                const tryLabel = 'Try';
                 return `
                   <div class="flex items-center gap-3 p-3 rounded-lg hover:bg-[var(--bg-card-hover)] transition-colors">
                     <a href="${t.url}" class="w-9 h-9 rounded-lg flex items-center justify-center text-base flex-shrink-0 no-underline" style="background:linear-gradient(135deg,rgba(167,139,250,0.15),rgba(96,165,250,0.15));" aria-label="Open ${escapeHtml(t.title)} review">
@@ -590,7 +594,7 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
           <a href="${escapeHtml(tryUrl)}" target="_blank" rel="${rel}" class="group flex items-center gap-2 p-2.5 rounded-lg bg-[var(--bg-base)] border border-[var(--border)] hover:border-[rgba(167,139,250,0.4)] hover:bg-[var(--bg-card-hover)] no-underline transition-colors" title="Open ${escapeHtml(t.title)} in a new tab">
             <span class="shrink-0 w-7 h-7 rounded-md flex items-center justify-center text-sm" style="background:linear-gradient(135deg,rgba(167,139,250,0.15),rgba(96,165,250,0.15));" aria-hidden="true">${categoryEmoji[t.category] || '🔧'}</span>
             <span class="flex-1 min-w-0 text-[12px] font-semibold text-[var(--text-primary)] truncate">${escapeHtml(t.title)}</span>
-            <span class="shrink-0 text-[10px] text-[var(--accent-primary)] font-bold tracking-wider uppercase opacity-70 group-hover:opacity-100 transition-opacity">${t.affiliateLink ? 'Try' : 'Open'} <span aria-hidden="true">→</span></span>
+            <span class="shrink-0 text-[10px] text-[var(--accent-primary)] font-bold tracking-wider uppercase opacity-70 group-hover:opacity-100 transition-opacity">Try <span aria-hidden="true">→</span></span>
           </a>
         `;
       }).filter(Boolean).join('');
