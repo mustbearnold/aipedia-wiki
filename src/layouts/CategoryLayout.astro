@@ -5,6 +5,7 @@ import BreadcrumbLD from '../components/seo/BreadcrumbLD.astro';
 import ItemListLD from '../components/seo/ItemListLD.astro';
 import ShareButtons from '../components/ShareButtons.astro';
 import FeedbackForm from '../components/FeedbackForm.astro';
+import ToolLogo from '../components/ToolLogo.astro';
 import { shortenPrice } from '../utils/shorten-price';
 
 interface ToolData {
@@ -121,8 +122,11 @@ const itemListItems = sorted.map((t) => ({
             const rankLabel = i === 0 ? 'Best overall' : i === 1 ? 'Runner-up' : 'Best value';
             return (
               <div class="rounded-xl border border-[var(--border)] bg-[var(--bg-card)] p-4">
-                <div class="text-[10px] font-bold uppercase tracking-wider text-[var(--accent-primary)] mb-1">{rankLabel}</div>
-                <a href={`/tools/${t.slug}/`} class="block text-[15px] font-semibold text-[var(--text-primary)] hover:text-[var(--accent-primary)] no-underline mb-1">{t.title}</a>
+                <div class="text-[10px] font-bold uppercase tracking-wider text-[var(--accent-primary)] mb-2">{rankLabel}</div>
+                <a href={`/tools/${t.slug}/`} class="flex items-center gap-2.5 mb-1 no-underline hover:no-underline group">
+                  <ToolLogo slug={t.slug} title={t.title} size={32} />
+                  <span class="text-[15px] font-semibold text-[var(--text-primary)] group-hover:text-[var(--accent-primary)] transition-colors">{t.title}</span>
+                </a>
                 {score > 0 && (
                   <div class="text-[12px] text-[var(--text-muted)] mb-3">
                     <span class="text-[var(--accent-primary)] font-bold tabular-nums">{score}/10</span>
@@ -164,9 +168,10 @@ const itemListItems = sorted.map((t) => ({
             const label = ctaLabel(t);
             return (
               <li class="rounded-lg border border-[var(--border)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] p-3 flex items-center gap-3 flex-wrap transition-colors">
-                <div class="shrink-0 w-8 h-8 rounded-md flex items-center justify-center text-[12px] font-bold text-[var(--text-secondary)] bg-[var(--bg-base)] border border-[var(--border)] tabular-nums">
+                <div class="shrink-0 w-6 flex items-center justify-center text-[11px] font-bold text-[var(--text-muted)] tabular-nums">
                   {i + 1}
                 </div>
+                <ToolLogo slug={t.slug} title={t.title} size={32} />
                 <div class="flex-1 min-w-0">
                   <a href={`/tools/${t.slug}/`} class="text-[14.5px] font-semibold text-[var(--text-primary)] hover:text-[var(--accent-primary)] no-underline">{t.title}</a>
                   {t.tagline && (
