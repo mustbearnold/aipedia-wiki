@@ -1,0 +1,425 @@
+---
+// Dynamic head-to-head comparison builder. Takes 2-4 tool slugs via
+// `?tools=slug1,slug2,...` and renders them side-by-side with logos,
+// scores, price, best_for / not_best_for, and category metadata.
+//
+// If no valid tools in the URL, shows a picker UI with search to
+// assemble a comparison from any tool in the catalog.
+//
+// All data is pre-loaded into a single JSON blob at build time so the
+// comparison renders instantly on the client without additional
+// fetches. The catalog is small enough (~200 tools) that this is
+// well under any pageweight budget.
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import BreadcrumbLD from '../../components/seo/BreadcrumbLD.astro';
+import { getCollection } from 'astro:content';
+
+const allTools = await getCollection('tools');
+
+interface ToolDatum {
+  slug: string;
+  title: string;
+  tagline?: string;
+  category?: string;
+  company?: string;
+  url?: string;
+  price_range?: string;
+  pricing_model?: string;
+  status?: string;
+  scores?: { utility?: number; value?: number; moat?: number; longevity?: number };
+  best_for?: string[];
+  not_best_for?: string[];
+  overall: number;
+}
+
+function overall(scores: any) {
+  if (!scores) return 0;
+  const { utility = 0, value = 0, moat = 0, longevity = 0 } = scores;
+  return Math.round(((utility + value + moat + longevity) / 4) * 10) / 10;
+}
+
+const catalog: ToolDatum[] = allTools
+  .filter((t) => t.data.status !== 'dead' && t.data.status !== 'acquired')
+  .map((t) => {
+    const slug = t.data.slug || t.id.replace(/\.md$/, '');
+    return {
+      slug,
+      title: t.data.title,
+      tagline: t.data.tagline,
+      category: t.data.category,
+      company: t.data.company,
+      url: t.data.url,
+      price_range: t.data.price_range,
+      pricing_model: t.data.pricing_model,
+      status: t.data.status,
+      scores: t.data.scores,
+      best_for: t.data.best_for,
+      not_best_for: t.data.not_best_for,
+      overall: overall(t.data.scores),
+    };
+  })
+  .sort((a, b) => b.overall - a.overall);
+
+const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
+---
+
+<BaseLayout
+  title="Build a head-to-head comparison, aipedia.wiki"
+  description="Pick any 2 to 4 AI tools from the aipedia.wiki catalog and compare them side by side: scores across Utility, Value, Moat, Longevity, plus pricing, best-for, and skip-if."
+>
+  <BreadcrumbLD items={[
+    { name: 'Home', url: siteBase },
+    { name: 'Compare', url: `${siteBase}compare/` },
+    { name: 'Build', url: `${siteBase}compare/build/` },
+  ]} />
+  <Breadcrumb items={[
+    { label: 'Compare', href: '/compare/' },
+    { label: 'Build your own' },
+  ]} />
+
+  <section class="mb-8 pt-2">
+    <h1 class="text-3xl sm:text-4xl font-bold leading-tight m-0 mb-3">
+      Build a <span class="bg-gradient-to-r from-[#a78bfa] to-[#60a5fa] bg-clip-text text-transparent">head-to-head</span>
+    </h1>
+    <p class="text-[var(--text-secondary)] text-sm sm:text-base max-w-2xl leading-relaxed">
+      Pick 2 to 4 tools. Compare scores across Utility, Value, Moat, Longevity, plus pricing and use-case fit. Share the URL to send someone a specific comparison.
+    </p>
+  </section>
+
+  {/* Tool picker + selected strip. Both work client-side from the
+      embedded catalog JSON so the URL bar can round-trip any valid
+      slug set without a rebuild. */}
+  <section id="picker-section" class="mb-8" data-pagefind-ignore>
+    <div class="flex items-center justify-between flex-wrap gap-2 mb-3">
+      <h2 class="text-sm font-semibold uppercase tracking-wider text-[var(--text-muted)] m-0">Selection</h2>
+      <button id="copy-url-btn" type="button" class="inline-flex items-center gap-1.5 text-[12px] font-medium px-2.5 py-1 rounded-md bg-[var(--bg-card)] border border-[var(--border)] text-[var(--text-secondary)] hover:bg-[var(--bg-card-hover)] hover:text-[var(--text-primary)] transition-colors cursor-pointer" aria-label="Copy shareable URL">
+        <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M10 14a5 5 0 007.07 0l1.41-1.41a5 5 0 00-7.07-7.07L10 7m4 3a5 5 0 00-7.07 0L5.5 11.41a5 5 0 007.07 7.07L14 17" />
+        </svg>
+        <span id="copy-url-label">Copy share link</span>
+      </button>
+    </div>
+    <div id="selected-strip" class="flex flex-wrap gap-2 mb-4 min-h-[44px]"></div>
+
+    <div class="relative">
+      <label for="picker-input" class="sr-only">Add a tool to the comparison</label>
+      <input
+        id="picker-input"
+        type="search"
+        placeholder="Search the catalog to add a tool..."
+        autocomplete="off"
+        class="w-full px-4 py-2.5 rounded-lg bg-[var(--bg-card)] border border-[var(--border)] text-[var(--text-primary)] placeholder:text-[var(--text-muted)] focus:outline-none focus:border-[rgba(167,139,250,0.5)] transition-colors"
+      />
+      <div id="picker-results" class="hidden absolute left-0 right-0 top-full mt-1 z-50 max-h-[320px] overflow-y-auto rounded-lg border border-[var(--border)] shadow-[0_12px_32px_-8px_rgba(0,0,0,0.6)] py-1" style="background: #1a1625;">
+      </div>
+    </div>
+    <p id="picker-help" class="text-[11.5px] text-[var(--text-muted)] mt-2">
+      Pick at least 2 tools (up to 4) to see the comparison. Cap matches the research on head-to-head decisions.
+    </p>
+  </section>
+
+  {/* Comparison view. Hidden until >= 2 selected. */}
+  <section id="comparison-section" class="hidden mb-10" data-pagefind-ignore>
+    <h2 class="text-lg font-semibold mb-4 m-0 text-[var(--text-primary)]">Side-by-side</h2>
+
+    <div id="comparison-cards" class="grid gap-3 mb-6"></div>
+
+    <div class="overflow-x-auto">
+      <table id="comparison-table" class="w-full text-[13px] border-collapse">
+        <thead></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+
+  {/* Empty-state suggestions when no selection yet. */}
+  <section id="empty-state" class="mb-10" data-pagefind-ignore>
+    <h2 class="text-sm font-semibold uppercase tracking-wider text-[var(--text-muted)] mb-3">Popular comparisons</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+      <a href="/compare/build/?tools=claude,chatgpt,gemini" class="block rounded-lg border border-[var(--border)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] p-3 no-underline">
+        <div class="text-[13px] font-semibold text-[var(--text-primary)]">Claude vs ChatGPT vs Gemini</div>
+        <div class="text-[11px] text-[var(--text-muted)] mt-0.5">Frontier assistant trio</div>
+      </a>
+      <a href="/compare/build/?tools=cursor,claude-code,codex,windsurf" class="block rounded-lg border border-[var(--border)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] p-3 no-underline">
+        <div class="text-[13px] font-semibold text-[var(--text-primary)]">Cursor vs Claude Code vs Codex vs Windsurf</div>
+        <div class="text-[11px] text-[var(--text-muted)] mt-0.5">AI coding agents head-to-head</div>
+      </a>
+      <a href="/compare/build/?tools=midjourney,adobe-firefly,flux,ideogram" class="block rounded-lg border border-[var(--border)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] p-3 no-underline">
+        <div class="text-[13px] font-semibold text-[var(--text-primary)]">Midjourney vs Adobe Firefly vs Flux vs Ideogram</div>
+        <div class="text-[11px] text-[var(--text-muted)] mt-0.5">Image generators</div>
+      </a>
+      <a href="/compare/build/?tools=perplexity,exa,you-com" class="block rounded-lg border border-[var(--border)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] p-3 no-underline">
+        <div class="text-[13px] font-semibold text-[var(--text-primary)]">Perplexity vs Exa vs You.com</div>
+        <div class="text-[11px] text-[var(--text-muted)] mt-0.5">AI search engines</div>
+      </a>
+      <a href="/compare/build/?tools=figma,claude-design,lovable,v0" class="block rounded-lg border border-[var(--border)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] p-3 no-underline">
+        <div class="text-[13px] font-semibold text-[var(--text-primary)]">Figma vs Claude Design vs Lovable vs v0</div>
+        <div class="text-[11px] text-[var(--text-muted)] mt-0.5">Prompt-to-prototype tools</div>
+      </a>
+      <a href="/compare/build/?tools=elevenlabs,cartesia,resemble-ai" class="block rounded-lg border border-[var(--border)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] p-3 no-underline">
+        <div class="text-[13px] font-semibold text-[var(--text-primary)]">ElevenLabs vs Cartesia vs Resemble AI</div>
+        <div class="text-[11px] text-[var(--text-muted)] mt-0.5">AI voice generators</div>
+      </a>
+    </div>
+  </section>
+
+  <script is:inline define:vars={{ catalog }}>
+    (function () {
+      const TOOLS = catalog;
+      const TOOL_MAP = Object.fromEntries(TOOLS.map((t) => [t.slug, t]));
+      const MAX = 4;
+
+      const input = document.getElementById('picker-input');
+      const results = document.getElementById('picker-results');
+      const strip = document.getElementById('selected-strip');
+      const comparisonSection = document.getElementById('comparison-section');
+      const emptyState = document.getElementById('empty-state');
+      const cardsEl = document.getElementById('comparison-cards');
+      const tableEl = document.getElementById('comparison-table');
+      const helpEl = document.getElementById('picker-help');
+      const copyBtn = document.getElementById('copy-url-btn');
+      const copyLabel = document.getElementById('copy-url-label');
+
+      let selected = [];
+
+      function readSelectionFromURL() {
+        const p = new URLSearchParams(location.search);
+        const t = (p.get('tools') || '').split(',').map((s) => s.trim()).filter(Boolean);
+        const valid = t.filter((s) => TOOL_MAP[s]).slice(0, MAX);
+        return valid;
+      }
+
+      function writeSelectionToURL() {
+        const p = new URLSearchParams();
+        if (selected.length > 0) p.set('tools', selected.join(','));
+        const qs = p.toString();
+        const url = location.pathname + (qs ? '?' + qs : '');
+        history.replaceState(null, '', url);
+      }
+
+      function renderStrip() {
+        strip.innerHTML = '';
+        if (selected.length === 0) {
+          const empty = document.createElement('div');
+          empty.className = 'text-[12px] text-[var(--text-muted)] italic py-2';
+          empty.textContent = 'No tools selected yet. Search below to add the first one.';
+          strip.appendChild(empty);
+          return;
+        }
+        selected.forEach((slug) => {
+          const t = TOOL_MAP[slug];
+          if (!t) return;
+          const chip = document.createElement('div');
+          chip.className = 'inline-flex items-center gap-2 pl-2 pr-1 py-1 rounded-full bg-[var(--bg-card)] border border-[rgba(167,139,250,0.3)]';
+          chip.innerHTML = `
+            <a href="/tools/${slug}/" class="text-[12px] font-semibold text-[var(--text-primary)] hover:text-[var(--accent-primary)] no-underline">${escapeHtml(t.title)}</a>
+            <span class="text-[10px] font-bold tabular-nums text-[var(--accent-primary)]">${t.overall}</span>
+            <button type="button" data-remove="${slug}" class="ml-1 w-5 h-5 rounded-full hover:bg-[var(--bg-card-hover)] inline-flex items-center justify-center text-[var(--text-muted)] hover:text-[var(--text-primary)] cursor-pointer" aria-label="Remove ${escapeHtml(t.title)}">
+              <svg width="10" height="10" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
+          `;
+          strip.appendChild(chip);
+        });
+      }
+
+      function renderComparison() {
+        if (selected.length < 2) {
+          comparisonSection.classList.add('hidden');
+          if (emptyState) emptyState.classList.remove('hidden');
+          return;
+        }
+        if (emptyState) emptyState.classList.add('hidden');
+        comparisonSection.classList.remove('hidden');
+
+        // Cards row
+        const colsClass = selected.length === 2 ? 'grid-cols-2'
+                        : selected.length === 3 ? 'grid-cols-1 md:grid-cols-3'
+                        : 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-4';
+        cardsEl.className = 'grid gap-3 mb-6 ' + colsClass;
+        cardsEl.innerHTML = '';
+        selected.forEach((slug) => {
+          const t = TOOL_MAP[slug];
+          if (!t) return;
+          const card = document.createElement('a');
+          card.href = '/tools/' + slug + '/';
+          card.className = 'block rounded-xl border border-[var(--border)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] hover:border-[rgba(167,139,250,0.4)] p-4 no-underline transition-colors';
+          card.innerHTML = `
+            <div class="flex items-center justify-between mb-2">
+              <div class="text-[15px] font-bold text-[var(--text-primary)] truncate">${escapeHtml(t.title)}</div>
+              <div class="text-[18px] font-bold tabular-nums bg-gradient-to-r from-[#a78bfa] to-[#60a5fa] bg-clip-text text-transparent">${t.overall}</div>
+            </div>
+            ${t.company ? `<div class="text-[11px] text-[var(--text-muted)] mb-2">${escapeHtml(t.company)}</div>` : ''}
+            ${t.tagline ? `<div class="text-[12px] text-[var(--text-secondary)] leading-snug mb-3 line-clamp-3">${escapeHtml(t.tagline)}</div>` : ''}
+            <div class="flex items-center gap-1 flex-wrap">
+              ${scorePill('U', t.scores && t.scores.utility)}
+              ${scorePill('V', t.scores && t.scores.value)}
+              ${scorePill('M', t.scores && t.scores.moat)}
+              ${scorePill('L', t.scores && t.scores.longevity)}
+            </div>
+            ${t.price_range ? `<div class="text-[11px] text-[var(--text-muted)] mt-3 truncate" title="${escapeHtml(t.price_range)}">${escapeHtml(t.price_range)}</div>` : ''}
+          `;
+          cardsEl.appendChild(card);
+        });
+
+        // Table
+        const rows = [
+          { label: 'Overall score', get: (t) => `<span class="font-bold text-[var(--accent-primary)] tabular-nums">${t.overall}</span>` },
+          { label: 'Utility',   get: (t) => axisCell(t.scores && t.scores.utility) },
+          { label: 'Value',     get: (t) => axisCell(t.scores && t.scores.value) },
+          { label: 'Moat',      get: (t) => axisCell(t.scores && t.scores.moat) },
+          { label: 'Longevity', get: (t) => axisCell(t.scores && t.scores.longevity) },
+          { label: 'Category',  get: (t) => t.category ? `<span class="capitalize">${escapeHtml(t.category.replace('ai-', ''))}</span>` : '—' },
+          { label: 'Company',   get: (t) => escapeHtml(t.company || '—') },
+          { label: 'Price range', get: (t) => escapeHtml(t.price_range || '—') },
+          { label: 'Pricing model', get: (t) => escapeHtml(t.pricing_model || '—') },
+          { label: 'Best for',  get: (t) => listCell(t.best_for) },
+          { label: 'Skip if',   get: (t) => listCell(t.not_best_for) },
+        ];
+
+        const thead = tableEl.querySelector('thead');
+        const tbody = tableEl.querySelector('tbody');
+        thead.innerHTML = '<tr>'
+          + '<th class="text-left py-2 px-3 text-[11px] font-semibold uppercase tracking-wider text-[var(--text-muted)] border-b border-[var(--border)]">Dimension</th>'
+          + selected.map((slug) => `<th class="text-left py-2 px-3 text-[12px] font-semibold text-[var(--text-primary)] border-b border-[var(--border)]"><a href="/tools/${slug}/" class="text-[var(--text-primary)] hover:text-[var(--accent-primary)] no-underline">${escapeHtml(TOOL_MAP[slug].title)}</a></th>`).join('')
+          + '</tr>';
+        tbody.innerHTML = rows.map((r) => {
+          return '<tr>'
+            + `<td class="py-2 px-3 text-[11px] uppercase tracking-wider text-[var(--text-muted)] border-b border-[var(--border)] align-top">${r.label}</td>`
+            + selected.map((slug) => `<td class="py-2 px-3 text-[12.5px] text-[var(--text-secondary)] border-b border-[var(--border)] align-top">${r.get(TOOL_MAP[slug])}</td>`).join('')
+            + '</tr>';
+        }).join('');
+      }
+
+      function scorePill(letter, n) {
+        const v = typeof n === 'number' ? n : 0;
+        const cls = v >= 8 ? 'text-emerald-400 bg-emerald-400/10 border-emerald-400/30'
+                  : v >= 7 ? 'text-sky-400 bg-sky-400/10 border-sky-400/30'
+                  : v >= 6 ? 'text-amber-400 bg-amber-400/10 border-amber-400/30'
+                  :          'text-rose-400 bg-rose-400/10 border-rose-400/30';
+        return `<span class="inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded text-[10px] font-semibold border tabular-nums ${cls}"><span class="opacity-70">${letter}</span>${v}</span>`;
+      }
+
+      function axisCell(n) {
+        const v = typeof n === 'number' ? n : 0;
+        const cls = v >= 8 ? 'text-emerald-400'
+                  : v >= 7 ? 'text-sky-400'
+                  : v >= 6 ? 'text-amber-400'
+                  :          'text-rose-400';
+        return `<span class="font-semibold tabular-nums ${cls}">${v || '—'}</span>`;
+      }
+
+      function listCell(arr) {
+        if (!Array.isArray(arr) || arr.length === 0) return '—';
+        return '<ul class="list-disc ml-4 space-y-0.5">' + arr.slice(0, 4).map((item) => `<li class="text-[11.5px]">${escapeHtml(item)}</li>`).join('') + '</ul>';
+      }
+
+      function escapeHtml(s) {
+        if (typeof s !== 'string') return '';
+        return s.replace(/[&<>"']/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+      }
+
+      function renderResults(q) {
+        const query = q.toLowerCase().trim();
+        if (!query) {
+          results.classList.add('hidden');
+          return;
+        }
+        const matches = TOOLS
+          .filter((t) => {
+            if (selected.includes(t.slug)) return false;
+            const hay = `${t.title} ${t.slug} ${t.category || ''} ${t.company || ''} ${t.tagline || ''}`.toLowerCase();
+            return hay.includes(query);
+          })
+          .slice(0, 12);
+        if (matches.length === 0) {
+          results.innerHTML = '<div class="px-3 py-2 text-[12px] text-[var(--text-muted)]">No matches.</div>';
+          results.classList.remove('hidden');
+          return;
+        }
+        results.innerHTML = matches.map((t) => `
+          <button type="button" data-add="${t.slug}" class="w-full text-left px-3 py-2 text-[12.5px] hover:bg-[var(--bg-card-hover)] cursor-pointer flex items-center justify-between gap-3">
+            <div class="min-w-0">
+              <div class="text-[var(--text-primary)] font-semibold truncate">${escapeHtml(t.title)}</div>
+              <div class="text-[10.5px] text-[var(--text-muted)] truncate">${escapeHtml(t.category || '')} ${t.company ? '· ' + escapeHtml(t.company) : ''}</div>
+            </div>
+            <span class="text-[12px] font-bold tabular-nums text-[var(--accent-primary)] shrink-0">${t.overall}</span>
+          </button>
+        `).join('');
+        results.classList.remove('hidden');
+      }
+
+      function updateAll() {
+        writeSelectionToURL();
+        renderStrip();
+        renderComparison();
+        if (helpEl) {
+          if (selected.length === 0) {
+            helpEl.textContent = 'Pick at least 2 tools (up to 4) to see the comparison. Cap matches the research on head-to-head decisions.';
+          } else if (selected.length === 1) {
+            helpEl.textContent = 'Add at least 1 more tool to see the comparison.';
+          } else if (selected.length < MAX) {
+            helpEl.textContent = `${selected.length} selected. You can add up to ${MAX - selected.length} more.`;
+          } else {
+            helpEl.textContent = `Max selection reached (${MAX}). Remove a tool to add a different one.`;
+          }
+        }
+      }
+
+      function addSlug(slug) {
+        if (!TOOL_MAP[slug]) return;
+        if (selected.includes(slug)) return;
+        if (selected.length >= MAX) return;
+        selected.push(slug);
+        input.value = '';
+        results.classList.add('hidden');
+        updateAll();
+      }
+      function removeSlug(slug) {
+        selected = selected.filter((s) => s !== slug);
+        updateAll();
+      }
+
+      // Init from URL
+      selected = readSelectionFromURL();
+      updateAll();
+
+      input.addEventListener('input', () => renderResults(input.value));
+      input.addEventListener('focus', () => { if (input.value) renderResults(input.value); });
+      document.addEventListener('click', (e) => {
+        const target = e.target;
+        const add = target.closest('[data-add]');
+        if (add) {
+          addSlug(add.getAttribute('data-add'));
+          return;
+        }
+        const rem = target.closest('[data-remove]');
+        if (rem) {
+          removeSlug(rem.getAttribute('data-remove'));
+          return;
+        }
+        if (!results.contains(target) && target !== input) {
+          results.classList.add('hidden');
+        }
+      });
+
+      if (copyBtn) {
+        copyBtn.addEventListener('click', async () => {
+          try {
+            await navigator.clipboard.writeText(location.href);
+            if (copyLabel) copyLabel.textContent = 'Copied!';
+            setTimeout(() => { if (copyLabel) copyLabel.textContent = 'Copy share link'; }, 1600);
+          } catch (_) {
+            if (copyLabel) copyLabel.textContent = 'Copy failed';
+          }
+        });
+      }
+
+      // React to back/forward navigation
+      window.addEventListener('popstate', () => {
+        selected = readSelectionFromURL();
+        updateAll();
+      });
+    })();
+  </script>
+</BaseLayout>
