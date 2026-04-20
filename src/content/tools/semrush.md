@@ -19,9 +19,9 @@ affiliate:
   cookie_days: 120
   network: impact
   link: https://www.semrush.com/lp/affiliate-program/
-  application_status: applied
+  application_status: rejected
   applied_date: 2026-04-19
-  notes: "Applied via Impact on 2026-04-19. Waiting on approval. $200/sale + 120d cookie is one of the best SEO-niche payouts available."
+  notes: "Applied via Impact 2026-04-19, declined 2026-04-20. Likely reason: new site with low baseline traffic. Reapply in 90-120 days once organic traffic exceeds 5K monthly unique visitors. Alternative SEO affiliates to prioritize meanwhile: Ahrefs, Surfer SEO (already applied), SE Ranking."
 scores:
   utility: 10
   value: 6
