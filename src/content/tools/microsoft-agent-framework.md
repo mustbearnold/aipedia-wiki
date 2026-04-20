@@ -6,6 +6,7 @@ tagline: Microsoft's open-source agentic AI engine, merging Semantic Kernel and 
 category: ai-automation
 company: microsoft
 url: https://learn.microsoft.com/en-us/agent-framework/overview/
+github_url: https://github.com/microsoft/agent-framework
 pricing_model: open-source
 price_range: "Free (open source)"
 status: active

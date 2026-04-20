@@ -6,6 +6,7 @@ tagline: The default way to run open-weight LLMs locally. Free desktop runtime w
 category: ai-chatbots
 company: ollama
 url: https://ollama.com
+github_url: https://github.com/ollama/ollama
 pricing_model: freemium
 price_range: "$0 local / $20-$100/mo cloud"
 status: active

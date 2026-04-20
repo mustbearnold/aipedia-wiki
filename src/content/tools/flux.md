@@ -6,6 +6,7 @@ tagline: Black Forest Labs' image model family. Flux.2 Pro/Flex for API photorea
 category: ai-image
 company: black-forest-labs
 url: https://bfl.ai
+github_url: https://github.com/black-forest-labs/flux
 pricing_model: freemium
 price_range: "$0 self-hosted / ~$0.003-$0.10 per image via API"
 status: active

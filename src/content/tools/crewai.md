@@ -6,6 +6,7 @@ tagline: Open-source Python framework for orchestrating role-based multi-agent t
 category: ai-automation
 company: crewai
 url: 'https://www.crewai.com'
+github_url: https://github.com/crewAIInc/crewAI
 pricing_model: open-source
 price_range: "Free (MIT) · Enterprise from $99/mo"
 status: active

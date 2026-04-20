@@ -6,6 +6,7 @@ tagline: Open-source all-in-one AI desktop app with document chat, agents, and m
 category: ai-chatbots
 company: mintplex-labs
 url: https://anythingllm.com
+github_url: https://github.com/Mintplex-Labs/anything-llm
 pricing_model: freemium
 price_range: "$0 self-hosted / $25-$99/mo cloud"
 status: active

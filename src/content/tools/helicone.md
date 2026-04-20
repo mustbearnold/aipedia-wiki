@@ -6,6 +6,7 @@ tagline: Open-source LLM observability in one line of code. Free 10k requests/mo
 category: ai-automation
 company: helicone
 url: https://www.helicone.ai
+github_url: https://github.com/Helicone/helicone
 pricing_model: freemium
 price_range: "Free 10k req/mo / paid tiers scale with volume"
 status: active

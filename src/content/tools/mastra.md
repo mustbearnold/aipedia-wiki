@@ -6,6 +6,7 @@ tagline: TypeScript framework for building AI agents. From the Gatsby team. Open
 category: ai-coding
 company: mastra
 url: https://mastra.ai
+github_url: https://github.com/mastra-ai/mastra
 pricing_model: freemium
 price_range: "$0 free / $250/team/month"
 status: active

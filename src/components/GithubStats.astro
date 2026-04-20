@@ -71,7 +71,7 @@ function activityClass(iso: string | null): { label: string; tone: 'green' | 'am
 ---
 
 {stats && (
-  <section class="gh-stats not-prose my-8" data-pagefind-ignore>
+  <section class="gh-stats not-prose my-6" data-pagefind-ignore>
     <a
       href={stats.url}
       target="_blank"
@@ -97,11 +97,21 @@ function activityClass(iso: string | null): { label: string; tone: 'green' | 'am
 
       <div class="gh-stats-metrics">
         <div class="gh-stats-metric">
-          <span class="gh-stats-metric-value">★ {formatStars(stats.stars)}</span>
+          <span class="gh-stats-metric-value">
+            <svg class="gh-stats-icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+            </svg>
+            {formatStars(stats.stars)}
+          </span>
           <span class="gh-stats-metric-label">stars</span>
         </div>
         <div class="gh-stats-metric">
-          <span class="gh-stats-metric-value">⑂ {formatStars(stats.forks)}</span>
+          <span class="gh-stats-metric-value">
+            <svg class="gh-stats-icon" width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+              <path d="M5 5.372v.878c0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75v-.878a2.25 2.25 0 1 1 1.5 0v.878a2.25 2.25 0 0 1-2.25 2.25h-1.5v2.128a2.251 2.251 0 1 1-1.5 0V8.5h-1.5A2.25 2.25 0 0 1 3.5 6.25v-.878a2.25 2.25 0 1 1 1.5 0ZM5 3.25a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Zm6.75.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm-3 8.75a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Z"/>
+            </svg>
+            {formatStars(stats.forks)}
+          </span>
           <span class="gh-stats-metric-label">forks</span>
         </div>
         {stats.language && (
@@ -111,12 +121,12 @@ function activityClass(iso: string | null): { label: string; tone: 'green' | 'am
           </div>
         )}
         {stats.license && (
-          <div class="gh-stats-metric">
+          <div class="gh-stats-metric gh-stats-metric-license">
             <span class="gh-stats-metric-value">{stats.license}</span>
             <span class="gh-stats-metric-label">license</span>
           </div>
         )}
-        <div class="gh-stats-metric">
+        <div class="gh-stats-metric gh-stats-metric-commit">
           <span class="gh-stats-metric-value">{humanAgo(stats.pushed_at)}</span>
           <span class="gh-stats-metric-label">last commit</span>
         </div>
@@ -142,13 +152,19 @@ function activityClass(iso: string | null): { label: string; tone: 'green' | 'am
 
   .gh-stats-card {
     display: block;
-    padding: 1.125rem 1.25rem;
+    padding: 1rem 1.125rem;
     background: linear-gradient(135deg, rgba(167, 139, 250, 0.05) 0%, rgba(96, 165, 250, 0.03) 100%);
     border: 1px solid rgba(167, 139, 250, 0.2);
     border-radius: 0.875rem;
     text-decoration: none;
     color: inherit;
     transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+  }
+
+  @media (min-width: 640px) {
+    .gh-stats-card {
+      padding: 1.125rem 1.25rem;
+    }
   }
 
   .gh-stats-card:hover {
@@ -159,11 +175,19 @@ function activityClass(iso: string | null): { label: string; tone: 'green' | 'am
 
   .gh-stats-header {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
     gap: 0.5rem;
-    flex-wrap: wrap;
-    margin-bottom: 0.875rem;
+    margin-bottom: 0.75rem;
+  }
+
+  @media (min-width: 560px) {
+    .gh-stats-header {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
   }
 
   .gh-stats-title-group {
@@ -234,26 +258,50 @@ function activityClass(iso: string | null): { label: string; tone: 'green' | 'am
 
   .gh-stats-metrics {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
-    gap: 0.75rem;
+    /* Mobile: 3 columns so stars/forks/language fit on row 1, license/commit
+       on row 2. Cleaner than auto-fit which sometimes wraps unevenly. */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.875rem 0.75rem;
     padding: 0.75rem 0;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    margin-bottom: 0.875rem;
+    margin-bottom: 0.75rem;
+  }
+
+  /* Tablet and above: 5 columns so all metrics fit on one line. */
+  @media (min-width: 720px) {
+    .gh-stats-metrics {
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 0.75rem;
+    }
   }
 
   .gh-stats-metric {
     display: flex;
     flex-direction: column;
-    gap: 0.25rem;
+    gap: 0.2rem;
+    min-width: 0;
   }
 
   .gh-stats-metric-value {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3125rem;
     font-size: 0.9375rem;
     font-weight: 600;
     color: var(--text-primary, #e5e7eb);
     line-height: 1.2;
     font-variant-numeric: tabular-nums;
+    /* Truncate long language or license strings on narrow viewports. */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .gh-stats-icon {
+    flex-shrink: 0;
+    color: var(--accent-primary, #a78bfa);
+    opacity: 0.85;
   }
 
   .gh-stats-metric-label {

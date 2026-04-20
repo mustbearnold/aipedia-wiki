@@ -6,6 +6,7 @@ tagline: Open-source LLM engineering platform with observability, evals, and pro
 category: ai-automation
 company: langfuse
 url: https://langfuse.com
+github_url: https://github.com/langfuse/langfuse
 pricing_model: freemium
 price_range: "$0 free / $29/mo Core / scale via units"
 status: active

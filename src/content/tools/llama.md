@@ -7,6 +7,7 @@ category: ai-chatbots
 secondary_categories: [ai-coding]
 company: meta
 url: https://llama.com
+github_url: https://github.com/meta-llama/llama-models
 pricing_model: open-source
 price_range: "$0-$0.85/1M tokens"
 status: active

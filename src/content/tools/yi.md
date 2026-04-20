@@ -7,6 +7,7 @@ category: ai-research
 secondary_categories: [ai-chatbots, ai-coding]
 company: 01.AI
 url: https://www.01.ai/
+github_url: https://github.com/01-ai/Yi
 pricing_model: open-source
 price_range: "Free (open-weight); Yi-Lightning ~$0.14/M tokens"
 status: active

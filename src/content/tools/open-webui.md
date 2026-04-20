@@ -6,6 +6,7 @@ tagline: Self-hosted ChatGPT-style interface that runs entirely offline. Ships e
 category: ai-chatbots
 company: open-webui
 url: https://openwebui.com
+github_url: https://github.com/open-webui/open-webui
 pricing_model: freemium
 price_range: "$0 self-hosted / $9.99+ managed"
 status: active

@@ -6,6 +6,7 @@ tagline: Open-source TTS that beats ElevenLabs on naturalness at a fraction of t
 category: ai-voice
 company: fish-audio
 url: https://fish.audio
+github_url: https://github.com/fishaudio/fish-speech
 pricing_model: freemium
 price_range: "$0-$75/month"
 status: active

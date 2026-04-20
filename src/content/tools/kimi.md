@@ -7,6 +7,7 @@ category: ai-chatbots
 secondary_categories: [ai-coding, ai-research]
 company: Moonshot AI
 url: https://www.kimi.com/
+github_url: https://github.com/MoonshotAI/Kimi-K2
 pricing_model: freemium
 price_range: "Free (chat) / API from $0.60/M input tokens"
 status: active

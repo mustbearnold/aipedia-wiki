@@ -6,6 +6,7 @@ tagline: Native Rust code editor with GPU rendering, real-time multiplayer, and 
 category: ai-coding
 company: zed-industries
 url: https://zed.dev
+github_url: https://github.com/zed-industries/zed
 pricing_model: freemium
 price_range: "$0-$20/month"
 status: active

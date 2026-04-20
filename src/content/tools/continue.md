@@ -6,6 +6,7 @@ tagline: Open-source AI coding extension for VS Code and JetBrains. BYOK for any
 category: ai-coding
 company: continue-dev
 url: https://continue.dev
+github_url: https://github.com/continuedev/continue
 pricing_model: freemium
 price_range: "$0-$20/seat/month"
 status: active

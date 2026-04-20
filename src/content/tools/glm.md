@@ -7,6 +7,7 @@ category: ai-chatbots
 secondary_categories: [ai-coding, ai-research]
 company: Zhipu AI (Z.ai)
 url: https://www.zhipuai.cn/en
+github_url: https://github.com/zai-org/GLM-4.5
 pricing_model: freemium
 price_range: "Free (GLM-4.7-Flash) / API from $1.00/M tokens (GLM-5)"
 status: active

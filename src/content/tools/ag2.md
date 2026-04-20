@@ -6,6 +6,7 @@ tagline: Community-forked AutoGen continuation. Open-source multi-agent framewor
 category: ai-automation
 company: ag2ai
 url: https://www.ag2.ai
+github_url: https://github.com/ag2ai/ag2
 pricing_model: open-source
 price_range: "Free (open source)"
 status: active

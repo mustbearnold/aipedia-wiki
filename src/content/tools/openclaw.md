@@ -6,6 +6,7 @@ tagline: Self-hosted open-source personal AI agent that controls your computer, 
 category: ai-automation
 company: openclaw-foundation
 url: https://openclaw.ai/
+github_url: https://github.com/openclaw/openclaw
 pricing_model: open-source
 price_range: "Free (MIT) · BYOK API costs · server hosting on you"
 status: active

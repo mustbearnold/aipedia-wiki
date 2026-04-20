@@ -7,6 +7,7 @@ category: ai-image
 secondary_categories: [ai-design]
 company: 'Stability AI (model); ecosystem includes Automatic1111, ComfyUI, InvokeAI'
 url: 'https://stability.ai'
+github_url: https://github.com/Stability-AI/generative-models
 pricing_model: free
 price_range: Free (self-host) or ~$0.03-$0.08 per API image
 status: active

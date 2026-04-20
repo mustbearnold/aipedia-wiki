@@ -6,6 +6,7 @@ tagline: Andrej Karpathy's minimal, readable LLM training framework. Learn the f
 category: ai-research
 company: karpathy
 url: https://github.com/karpathy/nanochat
+github_url: https://github.com/karpathy/nanochat
 pricing_model: open-source
 price_range: "Free (MIT open-source)"
 status: active

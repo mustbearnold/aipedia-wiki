@@ -6,6 +6,7 @@ tagline: Free open-source ChatGPT alternative that runs 100% offline on your com
 category: ai-chatbots
 company: janhq
 url: https://www.jan.ai
+github_url: https://github.com/menloresearch/jan
 pricing_model: free
 price_range: "$0 (one optional $24 Mac voice pack)"
 status: active

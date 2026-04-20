@@ -6,6 +6,7 @@ tagline: Open-source workflow automation with native AI Agent nodes, self-host o
 category: ai-automation
 company: n8n-gmbh
 url: https://n8n.io
+github_url: https://github.com/n8n-io/n8n
 pricing_model: freemium
 price_range: "$0 (self-host) - $800+/month (Business cloud)"
 status: active

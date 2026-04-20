@@ -8,6 +8,7 @@ tagline: >-
 category: ai-automation
 company: Activepieces Inc.
 url: 'https://www.activepieces.com'
+github_url: https://github.com/activepieces/activepieces
 pricing_model: open-source
 price_range: Free self-host / $5 per active flow (cloud)
 status: active

@@ -6,6 +6,7 @@ tagline: Open-source visual canvas for LangChain-based LLM workflows, agents, an
 category: ai-automation
 company: langflow
 url: https://langflow.org
+github_url: https://github.com/langflow-ai/langflow
 pricing_model: open-source
 price_range: "$0 (self-host) · cloud pricing via hosting partner"
 status: active

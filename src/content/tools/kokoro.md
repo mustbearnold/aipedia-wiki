@@ -6,6 +6,7 @@ tagline: Open-source text-to-speech model with 82M parameters that runs locally 
 category: ai-voice
 company: hexgrad (open-source)
 url: https://huggingface.co/hexgrad/Kokoro-82M
+github_url: https://github.com/hexgrad/kokoro
 pricing_model: open-source
 price_range: "Free (open-source)"
 status: active

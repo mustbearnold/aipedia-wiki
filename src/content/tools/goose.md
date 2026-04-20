@@ -6,6 +6,7 @@ tagline: Open-source AI agent originally from Block, now governed by the Linux F
 category: ai-automation
 company: agentic-ai-foundation
 url: https://block.github.io/goose/
+github_url: https://github.com/block/goose
 pricing_model: open-source
 price_range: "Free (Apache-2.0; BYOK LLM costs)"
 status: active

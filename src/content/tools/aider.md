@@ -6,6 +6,7 @@ tagline: Free open-source CLI pair-programmer. Edits real files in your git repo
 category: ai-coding
 company: Paul Gauthier (open source)
 url: https://aider.chat
+github_url: https://github.com/Aider-AI/aider
 pricing_model: free
 price_range: "$0 + API costs"
 status: active

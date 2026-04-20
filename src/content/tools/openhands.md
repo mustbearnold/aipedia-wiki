@@ -6,6 +6,7 @@ tagline: Open-source AI software engineer (formerly OpenDevin). MIT-licensed CLI
 category: ai-coding
 company: all-hands-ai
 url: https://docs.openhands.dev/
+github_url: https://github.com/All-Hands-AI/OpenHands
 pricing_model: open-source
 price_range: "Free (MIT, BYOK) · Cloud free tier · Pro $20/mo · Enterprise custom"
 status: active

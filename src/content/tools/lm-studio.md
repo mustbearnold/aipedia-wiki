@@ -6,6 +6,7 @@ tagline: Free desktop app for running open-weight LLMs locally. Visual model bro
 category: ai-chatbots
 company: lm-studio
 url: https://lmstudio.ai
+github_url: https://github.com/lmstudio-ai/lms
 pricing_model: free
 price_range: "$0 personal use"
 status: active

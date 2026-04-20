@@ -7,6 +7,7 @@ category: ai-search
 secondary_categories: [ai-chatbots]
 company: morphic
 url: https://morphic.sh
+github_url: https://github.com/miurla/morphic
 pricing_model: free
 price_range: "$0 (self-host) + provider API costs"
 status: active

@@ -6,6 +6,7 @@ tagline: Stateful agent platform (formerly MemGPT) with persistent, portable mem
 category: ai-automation
 company: letta-ai
 url: https://www.letta.com/
+github_url: https://github.com/letta-ai/letta
 pricing_model: open-source
 price_range: "Free (open-source) · Hosted from $0 · Letta Max tier for heavy workloads"
 status: active

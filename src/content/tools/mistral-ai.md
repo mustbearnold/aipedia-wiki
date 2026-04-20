@@ -7,6 +7,7 @@ category: ai-chatbots
 secondary_categories: [ai-search]
 company: 'Mistral AI (Paris, France)'
 url: 'https://mistral.ai'
+github_url: https://github.com/mistralai/mistral-inference
 pricing_model: freemium
 price_range: "€0-€14.99/month"
 status: active

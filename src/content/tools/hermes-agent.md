@@ -6,6 +6,7 @@ tagline: Self-improving open-source AI agent from Nous Research. Persistent memo
 category: ai-automation
 company: nous-research
 url: https://hermes-agent.nousresearch.com/
+github_url: https://github.com/NousResearch/atropos
 pricing_model: open-source
 price_range: "Free (MIT license; BYOK API costs)"
 status: active
