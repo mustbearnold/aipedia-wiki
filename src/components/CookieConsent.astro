@@ -1,0 +1,203 @@
+---
+// CookieConsent.astro
+//
+// GDPR / CCPA-compliant cookie consent banner with conditional GA4 loading.
+//
+// Behaviour:
+//   - First visit: banner shows at bottom. No GA4 loads until consent given.
+//   - User clicks Accept: GA4 loads, decision persists in localStorage.
+//   - User clicks Reject: no GA4 ever loads, decision persists in localStorage.
+//   - Returning visitor: banner hidden, GA4 auto-loads if previously accepted.
+//
+// Astro view-transitions compatible: the banner DOM persists across route
+// changes; the script attaches listeners once and dispatches a page_view
+// event on each astro:after-swap so SPA navigation is tracked.
+//
+// Privacy posture:
+//   - anonymize_ip: true (truncates last IP octet before storage)
+//   - No third-party sharing beyond Google Analytics (no ad remarketing)
+//   - Full policy at /privacy/
+
+const GA_MEASUREMENT_ID = 'G-WCPX3D1S05';
+---
+
+<div id="cookie-consent" class="cookie-consent-banner" hidden>
+  <div class="cookie-consent-inner">
+    <p class="cookie-consent-text">
+      aipedia.wiki uses analytics cookies to understand site usage. No ads, no tracking across sites, no third-party sharing beyond Google Analytics. <a href="/privacy/">Privacy policy</a>.
+    </p>
+    <div class="cookie-consent-buttons">
+      <button id="cookie-reject" class="cookie-btn cookie-btn-ghost" type="button">Reject</button>
+      <button id="cookie-accept" class="cookie-btn cookie-btn-primary" type="button">Accept</button>
+    </div>
+  </div>
+</div>
+
+<script is:inline define:vars={{ GA_MEASUREMENT_ID }}>
+  (function () {
+    var STORAGE_KEY = 'aipedia-cookie-consent';
+
+    function loadGA4() {
+      if (window.__aipediaGa4Loaded) return;
+      window.__aipediaGa4Loaded = true;
+
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_MEASUREMENT_ID;
+      document.head.appendChild(s);
+
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function () { window.dataLayer.push(arguments); };
+      window.gtag('js', new Date());
+      window.gtag('config', GA_MEASUREMENT_ID, {
+        anonymize_ip: true,
+        allow_google_signals: false,
+        allow_ad_personalization_signals: false,
+      });
+    }
+
+    function setup() {
+      var banner = document.getElementById('cookie-consent');
+      if (!banner) return;
+      if (banner.dataset.bound === '1') return;
+      banner.dataset.bound = '1';
+
+      var acceptBtn = document.getElementById('cookie-accept');
+      var rejectBtn = document.getElementById('cookie-reject');
+      var consent;
+      try { consent = localStorage.getItem(STORAGE_KEY); } catch (_) { consent = null; }
+
+      if (!consent) {
+        banner.hidden = false;
+      } else if (consent === 'accepted') {
+        loadGA4();
+      }
+
+      if (acceptBtn) {
+        acceptBtn.addEventListener('click', function () {
+          try { localStorage.setItem(STORAGE_KEY, 'accepted'); } catch (_) {}
+          banner.hidden = true;
+          loadGA4();
+        });
+      }
+      if (rejectBtn) {
+        rejectBtn.addEventListener('click', function () {
+          try { localStorage.setItem(STORAGE_KEY, 'rejected'); } catch (_) {}
+          banner.hidden = true;
+        });
+      }
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', setup);
+    } else {
+      setup();
+    }
+
+    // Astro view-transitions: fire a page_view on every SPA navigation.
+    document.addEventListener('astro:after-swap', function () {
+      if (window.__aipediaGa4Loaded && window.gtag) {
+        window.gtag('event', 'page_view', {
+          page_path: window.location.pathname,
+          page_title: document.title,
+          page_location: window.location.href,
+        });
+      }
+    });
+  })();
+</script>
+
+<style>
+  .cookie-consent-banner {
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+    right: 1rem;
+    z-index: 9999;
+    max-width: 720px;
+    margin: 0 auto;
+    background: rgba(15, 10, 20, 0.96);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(167, 139, 250, 0.28);
+    border-radius: 0.875rem;
+    padding: 1rem 1.25rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.55);
+    animation: cookie-consent-slide-up 0.35s ease-out;
+  }
+
+  @keyframes cookie-consent-slide-up {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .cookie-consent-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  @media (min-width: 640px) {
+    .cookie-consent-inner {
+      flex-direction: row;
+      align-items: center;
+      gap: 1.25rem;
+    }
+  }
+
+  .cookie-consent-text {
+    font-size: 0.8125rem;
+    color: var(--text-secondary, #a0a0c0);
+    line-height: 1.55;
+    margin: 0;
+    flex: 1;
+  }
+
+  .cookie-consent-text a {
+    color: var(--accent-primary, #a78bfa);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    text-decoration-color: rgba(167, 139, 250, 0.45);
+  }
+
+  .cookie-consent-text a:hover {
+    text-decoration-color: var(--accent-primary, #a78bfa);
+  }
+
+  .cookie-consent-buttons {
+    display: flex;
+    gap: 0.5rem;
+    flex-shrink: 0;
+  }
+
+  .cookie-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    border: none;
+    transition: filter 0.15s, background-color 0.15s, border-color 0.15s, color 0.15s;
+    font-family: inherit;
+  }
+
+  .cookie-btn-ghost {
+    background: transparent;
+    border: 1px solid var(--border, rgba(255, 255, 255, 0.1));
+    color: var(--text-secondary, #a0a0c0);
+  }
+
+  .cookie-btn-ghost:hover {
+    color: var(--text-primary, #ffffff);
+    border-color: rgba(255, 255, 255, 0.25);
+  }
+
+  .cookie-btn-primary {
+    background: var(--accent-primary, #a78bfa);
+    color: #0b0a14;
+  }
+
+  .cookie-btn-primary:hover {
+    filter: brightness(1.1);
+  }
+</style>
