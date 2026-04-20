@@ -6,6 +6,7 @@ tagline: Free open-source autonomous coding agent for VS Code and JetBrains. Pla
 category: ai-coding
 company: cline
 url: https://cline.bot/
+github_url: https://github.com/cline/cline
 pricing_model: open-source
 price_range: "Free (BYOK API costs)"
 status: active

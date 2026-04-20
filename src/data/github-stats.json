@@ -1,0 +1,20 @@
+{
+  "cline": {
+    "url": "https://github.com/cline/cline",
+    "full_name": "cline/cline",
+    "description": "Autonomous coding agent right in your IDE, capable of creating/editing files, executing commands, using the browser, and more with your permission every step of the way.",
+    "stars": 60471,
+    "forks": 6182,
+    "open_issues": 687,
+    "watchers": 274,
+    "language": "TypeScript",
+    "license": "Apache-2.0",
+    "pushed_at": "2026-04-20T02:11:03Z",
+    "updated_at": "2026-04-20T09:54:34Z",
+    "created_at": "2024-07-06T07:28:10Z",
+    "default_branch": "main",
+    "archived": false,
+    "topics": [],
+    "fetched_at": "2026-04-20T10:08:52.247Z"
+  }
+}

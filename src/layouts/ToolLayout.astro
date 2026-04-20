@@ -28,6 +28,7 @@ import BadgeEmbed from '../components/BadgeEmbed.astro';
 import CiteThisPage from '../components/CiteThisPage.astro';
 import PriceHistory from '../components/PriceHistory.astro';
 import ToolLogo from '../components/ToolLogo.astro';
+import GithubStats from '../components/GithubStats.astro';
 
 interface Props {
   frontmatter: Record<string, any>;
@@ -214,6 +215,8 @@ const breadcrumbLdItems = [
         pricingModel={frontmatter.pricing_model}
         priceRange={frontmatter.price_range}
       />
+
+      {frontmatter.github_url && <GithubStats slug={toolSlug} />}
 
       <ProsCons pros={frontmatter.best_for} cons={frontmatter.not_best_for} />
 

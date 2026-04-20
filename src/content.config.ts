@@ -22,6 +22,10 @@ const tools = defineCollection({
     secondary_categories: z.array(z.string()).optional(),
     company: z.string().optional(),
     url: z.string().optional(),
+    // Optional GitHub repository URL. When present, scripts/fetch-github-stats.mjs
+    // populates src/data/github-stats.json with live stars/forks/last-push data
+    // rendered by components/GithubStats.astro on the tool page.
+    github_url: z.string().url().optional(),
     pricing_model: z.enum(['free', 'freemium', 'paid', 'enterprise', 'open-source']).optional(),
     price_range: z.string().optional(),
     status: z.enum(['active', 'beta', 'dead', 'acquired']).optional(),

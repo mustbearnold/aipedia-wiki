@@ -1,0 +1,282 @@
+---
+/**
+ * GithubStats.astro
+ *
+ * Renders a compact "Open Source" card showing live GitHub metrics for
+ * any tool with a `github_url` field. Reads from src/data/github-stats.json,
+ * which is populated at prebuild by scripts/fetch-github-stats.mjs.
+ *
+ * Props:
+ *   slug: the tool slug (matches the key in github-stats.json)
+ */
+import githubStatsRaw from '../data/github-stats.json';
+
+interface GithubStatsEntry {
+  url: string;
+  full_name: string;
+  description: string | null;
+  stars: number;
+  forks: number;
+  open_issues: number;
+  watchers: number | null;
+  language: string | null;
+  license: string | null;
+  pushed_at: string | null;
+  updated_at: string | null;
+  created_at: string | null;
+  default_branch: string;
+  archived: boolean;
+  topics: string[];
+  fetched_at: string;
+  stale?: boolean;
+}
+
+interface Props {
+  slug: string;
+}
+
+const { slug } = Astro.props;
+const stats = (githubStatsRaw as Record<string, GithubStatsEntry>)[slug];
+
+function formatStars(n: number): string {
+  if (n >= 100000) return `${(n / 1000).toFixed(0)}k`;
+  if (n >= 10000) return `${(n / 1000).toFixed(1)}k`.replace('.0k', 'k');
+  if (n >= 1000) return n.toLocaleString('en-US');
+  return String(n);
+}
+
+function humanAgo(iso: string | null): string {
+  if (!iso) return 'unknown';
+  const date = new Date(iso);
+  const now = new Date();
+  const days = Math.floor((now.getTime() - date.getTime()) / (1000 * 60 * 60 * 24));
+  if (days < 1) return 'today';
+  if (days === 1) return 'yesterday';
+  if (days < 7) return `${days} days ago`;
+  if (days < 30) return `${Math.floor(days / 7)} week${Math.floor(days / 7) === 1 ? '' : 's'} ago`;
+  if (days < 365) return `${Math.floor(days / 30)} month${Math.floor(days / 30) === 1 ? '' : 's'} ago`;
+  return `${Math.floor(days / 365)} year${Math.floor(days / 365) === 1 ? '' : 's'} ago`;
+}
+
+// Activity classification: a repo pushed in the last 14 days is "actively
+// maintained"; 14-60 days is "current"; 60+ days starts to drift.
+function activityClass(iso: string | null): { label: string; tone: 'green' | 'amber' | 'rose' } {
+  if (!iso) return { label: 'No push data', tone: 'amber' };
+  const days = Math.floor((Date.now() - new Date(iso).getTime()) / (1000 * 60 * 60 * 24));
+  if (days <= 14) return { label: 'Actively maintained', tone: 'green' };
+  if (days <= 60) return { label: 'Recent activity', tone: 'green' };
+  if (days <= 180) return { label: 'Slowing', tone: 'amber' };
+  return { label: 'Dormant', tone: 'rose' };
+}
+---
+
+{stats && (
+  <section class="gh-stats not-prose my-8" data-pagefind-ignore>
+    <a
+      href={stats.url}
+      target="_blank"
+      rel="noopener"
+      class="gh-stats-card"
+      aria-label={`View ${stats.full_name} on GitHub`}
+    >
+      <div class="gh-stats-header">
+        <div class="gh-stats-title-group">
+          <span class="gh-stats-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+            </svg>
+            Open Source
+          </span>
+          <span class={`gh-stats-activity gh-stats-activity-${activityClass(stats.pushed_at).tone}`}>
+            <span class="gh-stats-dot"></span>
+            {activityClass(stats.pushed_at).label}
+          </span>
+        </div>
+        <span class="gh-stats-repo">{stats.full_name}</span>
+      </div>
+
+      <div class="gh-stats-metrics">
+        <div class="gh-stats-metric">
+          <span class="gh-stats-metric-value">★ {formatStars(stats.stars)}</span>
+          <span class="gh-stats-metric-label">stars</span>
+        </div>
+        <div class="gh-stats-metric">
+          <span class="gh-stats-metric-value">⑂ {formatStars(stats.forks)}</span>
+          <span class="gh-stats-metric-label">forks</span>
+        </div>
+        {stats.language && (
+          <div class="gh-stats-metric">
+            <span class="gh-stats-metric-value">{stats.language}</span>
+            <span class="gh-stats-metric-label">language</span>
+          </div>
+        )}
+        {stats.license && (
+          <div class="gh-stats-metric">
+            <span class="gh-stats-metric-value">{stats.license}</span>
+            <span class="gh-stats-metric-label">license</span>
+          </div>
+        )}
+        <div class="gh-stats-metric">
+          <span class="gh-stats-metric-value">{humanAgo(stats.pushed_at)}</span>
+          <span class="gh-stats-metric-label">last commit</span>
+        </div>
+      </div>
+
+      <div class="gh-stats-footer">
+        <span>View on GitHub</span>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="7" y1="17" x2="17" y2="7"></line>
+          <polyline points="7 7 17 7 17 17"></polyline>
+        </svg>
+      </div>
+    </a>
+  </section>
+)}
+
+<style>
+  .gh-stats {
+    --gh-green: #34d399;
+    --gh-amber: #fbbf24;
+    --gh-rose: #fb7185;
+  }
+
+  .gh-stats-card {
+    display: block;
+    padding: 1.125rem 1.25rem;
+    background: linear-gradient(135deg, rgba(167, 139, 250, 0.05) 0%, rgba(96, 165, 250, 0.03) 100%);
+    border: 1px solid rgba(167, 139, 250, 0.2);
+    border-radius: 0.875rem;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+  }
+
+  .gh-stats-card:hover {
+    border-color: rgba(167, 139, 250, 0.45);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(167, 139, 250, 0.08);
+  }
+
+  .gh-stats-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.875rem;
+  }
+
+  .gh-stats-title-group {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    flex-wrap: wrap;
+  }
+
+  .gh-stats-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    padding: 0.2rem 0.55rem;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--accent-primary, #a78bfa);
+    background: rgba(167, 139, 250, 0.1);
+    border: 1px solid rgba(167, 139, 250, 0.2);
+    border-radius: 0.375rem;
+  }
+
+  .gh-stats-activity {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    font-size: 0.6875rem;
+    font-weight: 500;
+    color: var(--text-muted, #9ca3af);
+  }
+
+  .gh-stats-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--text-muted, #9ca3af);
+  }
+
+  .gh-stats-activity-green {
+    color: var(--gh-green);
+  }
+  .gh-stats-activity-green .gh-stats-dot {
+    background: var(--gh-green);
+    box-shadow: 0 0 6px var(--gh-green);
+  }
+
+  .gh-stats-activity-amber {
+    color: var(--gh-amber);
+  }
+  .gh-stats-activity-amber .gh-stats-dot {
+    background: var(--gh-amber);
+  }
+
+  .gh-stats-activity-rose {
+    color: var(--gh-rose);
+  }
+  .gh-stats-activity-rose .gh-stats-dot {
+    background: var(--gh-rose);
+  }
+
+  .gh-stats-repo {
+    font-family: 'Geist Mono', ui-monospace, monospace;
+    font-size: 0.75rem;
+    color: var(--text-muted, #9ca3af);
+  }
+
+  .gh-stats-metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    gap: 0.75rem;
+    padding: 0.75rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    margin-bottom: 0.875rem;
+  }
+
+  .gh-stats-metric {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .gh-stats-metric-value {
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: var(--text-primary, #e5e7eb);
+    line-height: 1.2;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .gh-stats-metric-label {
+    font-size: 0.6875rem;
+    color: var(--text-muted, #9ca3af);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .gh-stats-footer {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--accent-primary, #a78bfa);
+  }
+
+  .gh-stats-card:hover .gh-stats-footer svg {
+    transform: translate(2px, -2px);
+  }
+
+  .gh-stats-footer svg {
+    transition: transform 0.2s;
+  }
+</style>
