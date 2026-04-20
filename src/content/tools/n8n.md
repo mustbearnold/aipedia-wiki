@@ -19,7 +19,9 @@ affiliate:
   cookie_days: 90
   network: direct
   link: null
-  application_status: declined-2026-04-15
+  application_status: rejected
+  applied_date: 2026-04-15
+  notes: "Declined 2026-04-15. Do not retry unless vendor policy changes."
 scores:
   utility: 9
   value: 10
