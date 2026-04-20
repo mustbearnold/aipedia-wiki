@@ -3,7 +3,7 @@ type: news
 slug: 2026-04-20-ai-industry-roundup
 title: "AI Industry Roundup: April 20, 2026 Partnerships, Tools, Policy, and Notable Launches"
 date: 2026-04-20
-severity: notable
+severity: minor
 summary: "One-day snapshot of AI industry activity across partnerships, tool launches, policy, and buzz. Covered: Postman-Microsoft collaboration on AI model choice and API governance, Google Cloud-Avid AI integration for Hollywood editors, Retell AI voice-agent feature expansion (in-call SMS plus client-side JS execution), Infopercept Invinsense 7.0 with Regiment AI for cybersecurity operations, German Chancellor Merz calling for EU AI regulatory easing, Google Interactions API framework, and social-buzz items around Claude agent-building speed, Codex workflow expansion beyond engineering, iQIYI World Conference 100+ artist AI-likeness deals, and ongoing Financial Times discussion of AI liability."
 affects: []
 categories: [ai-business, ai-industry, ai-policy]

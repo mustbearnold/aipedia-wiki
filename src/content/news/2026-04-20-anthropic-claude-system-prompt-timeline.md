@@ -3,7 +3,7 @@ type: news
 slug: 2026-04-20-anthropic-claude-system-prompt-timeline
 title: "Simon Willison Builds Git-Based Timeline of Every Claude System Prompt from 3.0 to Opus 4.7"
 date: 2026-04-20
-severity: notable
+severity: minor
 summary: "Researcher Simon Willison published a git-commit-based archive tracing every published Anthropic system prompt from Claude 3.0 (July 2024) through Opus 4.7 (April 2026). The methodology converts Anthropic's monolithic markdown documentation into per-model files with synthetic commit dates, enabling diff-by-diff review of how the system prompt evolved between versions. Anthropic remains the only major AI lab that publishes system prompts for its user-facing chat systems."
 affects: [claude]
 categories: [ai-research, ai-transparency]

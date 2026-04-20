@@ -3,7 +3,7 @@ type: news
 slug: 2026-04-20-google-marvell-custom-ai-chips-talks
 title: "Google in Talks with Marvell to Build Two Custom AI Chips for Inference, per The Information"
 date: 2026-04-20
-severity: notable
+severity: minor
 summary: "Google is in talks with Marvell Technology to co-develop two custom AI chips, per The Information's April 19 report picked up by Reuters and broader industry trackers. One is a memory processing unit designed to pair with Google's TPU; the second is a new dedicated TPU optimized for inference efficiency. The talks signal Google's continued diversification away from sole reliance on Broadcom for TPU co-design and extend Google's in-house silicon strategy deeper into the inference layer where AI economics are shifting."
 affects: []
 categories: [ai-infrastructure, ai-business]

@@ -3,7 +3,7 @@ type: news
 slug: 2026-04-20-nvidia-lyra-2-open-source-3d-scene-generation
 title: "NVIDIA Releases Lyra 2.0 Open-Source: Explorable Generative 3D Worlds from a Single Image"
 date: 2026-04-20
-severity: notable
+severity: minor
 summary: "NVIDIA's Spatial Intelligence Lab released Lyra 2.0 on April 15, 2026 under Apache 2.0 license. The framework generates explorable 3D worlds from a single image or short video with long-horizon, 3D-consistent scene generation. Traction is picking up in mid-to-late April across games, film previsualization, and robotics simulation communities. Model weights and code are on GitHub and Hugging Face."
 affects: []
 categories: [ai-research, ai-open-source]

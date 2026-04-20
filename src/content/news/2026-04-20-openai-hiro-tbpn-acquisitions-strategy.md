@@ -3,7 +3,7 @@ type: news
 slug: 2026-04-20-openai-hiro-tbpn-acquisitions-strategy
 title: "OpenAI Acquires Hiro (Personal Finance) and TBPN (Business Talk Show) as Strategy Shifts Toward Consumer Revenue + Public Image Repair"
 date: 2026-04-20
-severity: notable
+severity: minor
 summary: "OpenAI acquired Hiro, a personal finance startup, and TBPN, a business talk show, per TechCrunch reporting April 19. Analysts characterize the moves as a two-front response: Hiro is an acqui-hire to build consumer products with monetization hooks beyond ChatGPT; TBPN is a reputation-repair vehicle after recent New Yorker coverage of CEO Sam Altman. The reporting highlights OpenAI's sustained fixation on Anthropic's enterprise-coding traction with Claude Code, which the team sees as the real revenue story, not consumer chatbots."
 affects: [chatgpt]
 categories: [ai-business, ai-industry]
