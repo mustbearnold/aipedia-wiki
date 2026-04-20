@@ -26,3 +26,28 @@
 
 /pagefind/*
   Cache-Control: public, max-age=86400
+
+# Favicons + brand assets: shorter cache so future brand refreshes
+# propagate to the edge without requiring a manual Purge Everything.
+# 1 hour is long enough to be efficient, short enough that updates
+# show up on their own within a reasonable window.
+/favicon.ico
+  Cache-Control: public, max-age=3600, must-revalidate
+
+/favicon-16.png
+  Cache-Control: public, max-age=3600, must-revalidate
+
+/favicon-32.png
+  Cache-Control: public, max-age=3600, must-revalidate
+
+/favicon-192.png
+  Cache-Control: public, max-age=3600, must-revalidate
+
+/favicon-512.png
+  Cache-Control: public, max-age=3600, must-revalidate
+
+/apple-touch-icon.png
+  Cache-Control: public, max-age=3600, must-revalidate
+
+/brand/*
+  Cache-Control: public, max-age=3600, must-revalidate
