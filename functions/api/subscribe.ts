@@ -64,6 +64,19 @@ async function checkRateLimit(env: Env, ipHash: string): Promise<boolean> {
   }
 }
 
+// GET requests (bots, Google crawler, direct-URL visitors) get a 301 to the
+// homepage rather than a 404. Clean up for GSC and removes a noisy 404 from
+// the crawl report. The endpoint itself is POST-only for actual signups.
+export const onRequestGet: PagesFunction<Env> = async () => {
+  return new Response(null, {
+    status: 301,
+    headers: {
+      location: 'https://aipedia.wiki/#subscribe',
+      'cache-control': 'public, max-age=3600',
+    },
+  });
+};
+
 export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
   if (!env.DB) {
     return new Response(JSON.stringify({ error: 'subscribe_disabled', detail: 'DB not bound' }), {

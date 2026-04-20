@@ -1,0 +1,38 @@
+# Cloudflare Pages redirects for aipedia.wiki
+# Format: [source] [destination] [status]
+# Reference: https://developers.cloudflare.com/pages/configuration/redirects/
+
+# Catch common .md extension slips from internal markdown links or Google-
+# cached historical URLs. These redirect to the canonical extension-less
+# Astro route with trailing slash.
+
+# Deep nested forms like /tools/suno/mubert.md -> /tools/mubert/
+/tools/:any/:slug.md /tools/:slug/ 301
+/compare/:any/:slug.md /compare/:slug/ 301
+/comparisons/:any/:slug.md /compare/:slug/ 301
+
+# Direct forms like /tools/claude.md -> /tools/claude/
+/tools/:slug.md /tools/:slug/ 301
+/compare/:slug.md /compare/:slug/ 301
+/comparisons/:slug.md /compare/:slug/ 301
+/categories/:slug.md /categories/:slug/ 301
+/guides/:slug.md /guides/:slug/ 301
+/use-cases/:slug.md /guides/:slug/ 301
+/companies/:slug.md /companies/:slug/ 301
+/trends/:slug.md /trends/:slug/ 301
+/dead/:slug.md /dead/:slug/ 301
+/news/:slug.md /news/:slug/ 301
+
+# Path-only migrations: the old wiki structure used /comparisons/ while the
+# Astro site uses /compare/. Internal links rewrite automatically but cached
+# external links and older content outside our control may still use the old
+# path. Redirect them.
+/comparisons/:slug/ /compare/:slug/ 301
+/comparisons/:slug /compare/:slug/ 301
+/use-cases/:slug/ /guides/:slug/ 301
+/use-cases/:slug /guides/:slug/ 301
+
+# API subscribe GET: redirect crawlers to the homepage signup section.
+# The function handler also handles this, but having the redirect at the
+# edge layer is belt-and-suspenders against cold-start 404s.
+/api/subscribe /#subscribe 301
