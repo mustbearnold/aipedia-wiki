@@ -125,7 +125,10 @@ const containerClasses = {
       const turnstile_token = fd.get('cf-turnstile-response') || undefined;
 
       try {
-        const res = await fetch('/api/subscribe', {
+        // Astro's trailingSlash: 'always' redirects /api/subscribe to
+        // /api/subscribe/, and POST bodies are dropped across 301s in
+        // most browsers. Hit the canonical trailing-slash URL directly.
+        const res = await fetch('/api/subscribe/', {
           method: 'POST',
           headers: { 'content-type': 'application/json' },
           body: JSON.stringify({ email, source, turnstile_token }),

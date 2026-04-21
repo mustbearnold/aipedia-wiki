@@ -1,12 +1,22 @@
 // POST /api/subscribe
 // Accepts an email address and stores it in the subscribers table.
 //
+// Astro API route (not a Cloudflare Pages Function): when the site uses
+// @astrojs/cloudflare with the Worker entrypoint in wrangler.jsonc, the
+// Astro worker claims every request including /api/*, so the legacy
+// functions/api/subscribe.ts was unreachable (returned 404).
+//
 // Flow:
 //   1. Turnstile CAPTCHA check (unless TURNSTILE_SECRET_KEY unset, dev mode)
 //   2. Rate limit per IP hash (max 5 signups per IP per day)
 //   3. Validate email format (simple regex, reject obvious junk)
 //   4. INSERT OR IGNORE into subscribers table on unique email conflict
 //   5. Return { ok: true, already?: boolean } or error JSON
+
+import type { APIRoute } from 'astro';
+
+// Disable static prerendering so this runs as an SSR endpoint on the worker.
+export const prerender = false;
 
 interface Env {
   TURNSTILE_SECRET_KEY?: string;
@@ -64,10 +74,9 @@ async function checkRateLimit(env: Env, ipHash: string): Promise<boolean> {
   }
 }
 
-// GET requests (bots, Google crawler, direct-URL visitors) get a 301 to the
-// homepage rather than a 404. Clean up for GSC and removes a noisy 404 from
-// the crawl report. The endpoint itself is POST-only for actual signups.
-export const onRequestGet: PagesFunction<Env> = async () => {
+// GET: redirect crawlers / direct visitors to the homepage signup section.
+// Keeps GSC / Bing from flagging the endpoint as a 4xx error.
+export const GET: APIRoute = () => {
   return new Response(null, {
     status: 301,
     headers: {
@@ -77,8 +86,11 @@ export const onRequestGet: PagesFunction<Env> = async () => {
   });
 };
 
-export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
-  if (!env.DB) {
+export const POST: APIRoute = async ({ request, locals }) => {
+  // Astro Cloudflare adapter exposes the Worker env as locals.runtime.env.
+  const env = (locals as any)?.runtime?.env as Env | undefined;
+
+  if (!env?.DB) {
     return new Response(JSON.stringify({ error: 'subscribe_disabled', detail: 'DB not bound' }), {
       status: 503,
       headers: { 'content-type': 'application/json' },
