@@ -58,6 +58,48 @@ const toolCounts = sorted.reduce<Record<string, number>>((acc, n) => {
 const toolOptions = Object.entries(toolCounts)
   .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
   .map(([slug, count]) => ({ slug, count }));
+
+// Same pattern for categories - pull every category referenced by at
+// least one news item and rank by count for the dropdown UI.
+const categoryCounts = sorted.reduce<Record<string, number>>((acc, n) => {
+  for (const c of n.categories) acc[c] = (acc[c] ?? 0) + 1;
+  return acc;
+}, {});
+const categoryOptions = Object.entries(categoryCounts)
+  .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+  .map(([slug, count]) => ({ slug, count }));
+
+// Human-readable labels for known categories. Falls back to the raw
+// slug for any category not mapped here.
+const CATEGORY_LABEL: Record<string, string> = {
+  'ai-business': 'AI Business',
+  'ai-industry': 'AI Industry',
+  'ai-research': 'AI Research',
+  'ai-security': 'AI Security',
+  'ai-infrastructure': 'AI Infrastructure',
+  'ai-open-source': 'AI Open Source',
+  'ai-transparency': 'AI Transparency',
+  'ai-policy': 'AI Policy',
+  'ai-models': 'AI Models',
+  'ai-tools': 'AI Tools',
+  'ai-hardware': 'AI Hardware',
+  'ai-coding': 'AI Coding',
+  'ai-voice': 'AI Voice',
+  'ai-video': 'AI Video',
+  'ai-image': 'AI Image',
+  'ai-writing': 'AI Writing',
+  'ai-design': 'AI Design',
+  'ai-seo': 'AI SEO',
+  'ai-automation': 'AI Automation',
+  'ai-search': 'AI Search',
+  'ai-notes': 'AI Notes',
+  'ai-music': 'AI Music',
+  'ai-presentation': 'AI Presentation',
+  'ai-chatbots': 'AI Chatbots',
+};
+function catLabel(slug: string): string {
+  return CATEGORY_LABEL[slug] ?? slug;
+}
 ---
 
 <BaseLayout
@@ -105,7 +147,46 @@ const toolOptions = Object.entries(toolCounts)
         ) : null)}
       </div>
 
-      <div class="flex items-center gap-2 sm:ml-auto">
+      <div class="flex items-center gap-2 sm:ml-auto flex-wrap">
+        {categoryOptions.length > 0 && (
+          <div class="relative">
+            <button
+              id="category-filter-trigger"
+              type="button"
+              aria-haspopup="listbox"
+              aria-expanded="false"
+              aria-controls="category-filter-popover"
+              class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[12px] font-medium bg-[var(--bg-card)] border border-[var(--border)] text-[var(--text-secondary)] hover:bg-[var(--bg-card-hover)] hover:border-[rgba(167,139,250,0.3)] hover:text-[var(--text-primary)] transition-colors cursor-pointer"
+            >
+              <span class="text-[10px] font-semibold uppercase tracking-[0.12em] text-[var(--text-muted)]">Category</span>
+              <span id="category-filter-label" class="text-[var(--text-primary)]">All</span>
+              <svg id="category-filter-chevron" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" class="transition-transform" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
+              </svg>
+            </button>
+
+            <div
+              id="category-filter-popover"
+              role="listbox"
+              aria-label="Filter by category"
+              class="absolute left-0 sm:right-0 sm:left-auto top-full mt-2 z-50 min-w-[220px] max-h-[60vh] overflow-y-auto rounded-lg border border-[var(--border)] shadow-[0_12px_32px_-8px_rgba(0,0,0,0.6)] opacity-0 invisible translate-y-1 transition-all duration-150 py-1"
+              style="background: #1a1625;"
+              data-open="false"
+            >
+              <button type="button" role="option" aria-selected="true" data-category-filter="all" class="category-filter-option active w-full text-left px-3 py-2 text-[12px] text-[var(--text-secondary)] hover:bg-[var(--bg-card-hover)] transition-colors cursor-pointer flex items-center justify-between gap-4">
+                <span>All categories</span>
+                <span class="text-[10px] text-[var(--text-muted)] tabular-nums">{sorted.length}</span>
+              </button>
+              {categoryOptions.map(({ slug, count }) => (
+                <button type="button" role="option" aria-selected="false" data-category-filter={slug} class="category-filter-option w-full text-left px-3 py-2 text-[12px] text-[var(--text-secondary)] hover:bg-[var(--bg-card-hover)] transition-colors cursor-pointer flex items-center justify-between gap-4">
+                  <span>{catLabel(slug)}</span>
+                  <span class="text-[10px] text-[var(--text-muted)] tabular-nums">{count}</span>
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
+
         {toolOptions.length > 0 && (
           <div class="relative">
             <button
@@ -159,24 +240,40 @@ const toolOptions = Object.entries(toolCounts)
         class="news-item group block rounded-xl border border-[var(--border)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] hover:border-[rgba(167,139,250,0.35)] p-5 no-underline transition-colors"
         data-severity={n.severity}
         data-affects={n.affects.join(',')}
+        data-categories={n.categories.join(',')}
       >
-        <div class="flex items-center gap-2 mb-2 flex-wrap">
-          <span class={`inline-flex items-center px-2 py-0.5 rounded-md text-[10px] font-semibold uppercase tracking-wider border ${severityStyles[n.severity] ?? severityStyles.minor}`}>
-            {n.severity}
-          </span>
-          <time datetime={n.date} class="text-[11px] text-[var(--text-muted)] tabular-nums">{relativeDate(n.date)}</time>
-          {n.affects.length > 0 && (
-            <span class="text-[11px] text-[var(--text-muted)]">· affects {n.affects.slice(0, 3).join(', ')}{n.affects.length > 3 ? ` +${n.affects.length - 3}` : ''}</span>
-          )}
+        <div class="flex gap-5 items-start">
+          <div class="flex-1 min-w-0">
+            <div class="flex items-center gap-2 mb-2 flex-wrap">
+              <span class={`inline-flex items-center px-2 py-0.5 rounded-md text-[10px] font-semibold uppercase tracking-wider border ${severityStyles[n.severity] ?? severityStyles.minor}`}>
+                {n.severity}
+              </span>
+              <time datetime={n.date} class="text-[11px] text-[var(--text-muted)] tabular-nums">{relativeDate(n.date)}</time>
+              {n.affects.length > 0 && (
+                <span class="text-[11px] text-[var(--text-muted)]">· affects {n.affects.slice(0, 3).join(', ')}{n.affects.length > 3 ? ` +${n.affects.length - 3}` : ''}</span>
+              )}
+            </div>
+            <h2 class="text-[18px] sm:text-[17px] font-bold text-[var(--text-primary)] group-hover:text-[var(--accent-primary)] m-0 mb-2 transition-colors leading-snug">
+              {n.title}
+            </h2>
+            {n.summary && (
+              <p class="text-[14.5px] sm:text-[13.5px] leading-relaxed text-[var(--text-secondary)] m-0 line-clamp-3 sm:line-clamp-none">
+                {n.summary}
+              </p>
+            )}
+          </div>
+          <div class="hidden sm:block shrink-0 w-[180px] lg:w-[200px]">
+            <img
+              src={`/og/news/${n.slug}.png`}
+              alt=""
+              loading="lazy"
+              decoding="async"
+              width="1200"
+              height="630"
+              class="w-full aspect-[1200/630] rounded-lg border border-[var(--border)] group-hover:border-[rgba(167,139,250,0.35)] transition-colors"
+            />
+          </div>
         </div>
-        <h2 class="text-[18px] sm:text-[17px] font-bold text-[var(--text-primary)] group-hover:text-[var(--accent-primary)] m-0 mb-2 transition-colors leading-snug">
-          {n.title}
-        </h2>
-        {n.summary && (
-          <p class="text-[14.5px] sm:text-[13.5px] leading-relaxed text-[var(--text-secondary)] m-0">
-            {n.summary}
-          </p>
-        )}
       </a>
     ))}
   </section>
@@ -188,8 +285,8 @@ const toolOptions = Object.entries(toolCounts)
   <EmailCapture variant="footer" source="news-index" />
 
   <script is:inline>
-    // News filter: severity tabs + tool dropdown, synced with URL params
-    // so a filtered view is bookmarkable / shareable.
+    // News filter: severity tabs + category dropdown + tool dropdown,
+    // synced with URL params so any filtered view is bookmarkable.
     (function () {
       const root = document.getElementById('news-filters');
       const list = document.getElementById('news-list');
@@ -201,54 +298,85 @@ const toolOptions = Object.entries(toolCounts)
       const toolLabel = document.getElementById('tool-filter-label');
       const toolChevron = document.getElementById('tool-filter-chevron');
       const toolOptionButtons = root.querySelectorAll('.tool-filter-option');
+      const catTrigger = document.getElementById('category-filter-trigger');
+      const catPopover = document.getElementById('category-filter-popover');
+      const catLabelEl = document.getElementById('category-filter-label');
+      const catChevron = document.getElementById('category-filter-chevron');
+      const catOptionButtons = root.querySelectorAll('.category-filter-option');
       const clearBtn = document.getElementById('clear-filters');
       const noMatches = document.getElementById('no-matches');
       const items = Array.from(list.querySelectorAll('.news-item'));
 
       const activeClass = 'severity-tab-active';
 
+      // Humanize a category slug for the dropdown label when no match
+      // exists in the server-rendered CATEGORY_LABEL map.
+      function humanize(slug) {
+        return slug
+          .split('-')
+          .map((w) => (w === 'ai' ? 'AI' : (w[0] || '').toUpperCase() + w.slice(1)))
+          .join(' ');
+      }
+
       function readParams() {
         const p = new URLSearchParams(location.search);
         return {
           severity: p.get('severity') || 'all',
           tool: p.get('tool') || 'all',
+          category: p.get('category') || 'all',
         };
       }
       function writeParams(state) {
         const p = new URLSearchParams();
         if (state.severity !== 'all') p.set('severity', state.severity);
         if (state.tool !== 'all') p.set('tool', state.tool);
+        if (state.category !== 'all') p.set('category', state.category);
         const qs = p.toString();
         const url = location.pathname + (qs ? '?' + qs : '') + location.hash;
         history.replaceState(null, '', url);
       }
-      function openToolPopover() {
-        if (!toolPopover || !toolTrigger) return;
-        toolPopover.setAttribute('data-open', 'true');
-        toolPopover.classList.remove('opacity-0', 'invisible', 'translate-y-1');
-        toolTrigger.setAttribute('aria-expanded', 'true');
-        if (toolChevron) toolChevron.style.transform = 'rotate(180deg)';
+
+      function openPopover(popover, trigger, chevron) {
+        if (!popover || !trigger) return;
+        popover.setAttribute('data-open', 'true');
+        popover.classList.remove('opacity-0', 'invisible', 'translate-y-1');
+        trigger.setAttribute('aria-expanded', 'true');
+        if (chevron) chevron.style.transform = 'rotate(180deg)';
       }
-      function closeToolPopover() {
-        if (!toolPopover || !toolTrigger) return;
-        toolPopover.setAttribute('data-open', 'false');
-        toolPopover.classList.add('opacity-0', 'invisible', 'translate-y-1');
-        toolTrigger.setAttribute('aria-expanded', 'false');
-        if (toolChevron) toolChevron.style.transform = '';
+      function closePopover(popover, trigger, chevron) {
+        if (!popover || !trigger) return;
+        popover.setAttribute('data-open', 'false');
+        popover.classList.add('opacity-0', 'invisible', 'translate-y-1');
+        trigger.setAttribute('aria-expanded', 'false');
+        if (chevron) chevron.style.transform = '';
       }
-      function toggleToolPopover() {
-        if (!toolPopover) return;
-        if (toolPopover.getAttribute('data-open') === 'true') closeToolPopover();
-        else openToolPopover();
+      function closeAllPopovers(except) {
+        if (except !== 'tool') closePopover(toolPopover, toolTrigger, toolChevron);
+        if (except !== 'category') closePopover(catPopover, catTrigger, catChevron);
       }
+      function togglePopover(name) {
+        const popover = name === 'tool' ? toolPopover : catPopover;
+        const trigger = name === 'tool' ? toolTrigger : catTrigger;
+        const chevron = name === 'tool' ? toolChevron : catChevron;
+        if (!popover) return;
+        if (popover.getAttribute('data-open') === 'true') {
+          closePopover(popover, trigger, chevron);
+        } else {
+          closeAllPopovers(name);
+          openPopover(popover, trigger, chevron);
+        }
+      }
+
       function apply(state) {
         let visible = 0;
         items.forEach((el) => {
           const sev = el.getAttribute('data-severity') || 'minor';
           const affects = (el.getAttribute('data-affects') || '').split(',').filter(Boolean);
+          const cats = (el.getAttribute('data-categories') || '').split(',').filter(Boolean);
           const sevOk = state.severity === 'all' || sev === state.severity;
           const toolOk = state.tool === 'all' || affects.includes(state.tool);
-          const show = sevOk && toolOk;
+          const catOk = state.category === 'all' || cats.includes(state.category);
+          const show = sevOk && toolOk && catOk;
           el.style.display = show ? '' : 'none';
           if (show) visible++;
         });
@@ -263,8 +391,15 @@ const toolOptions = Object.entries(toolCounts)
           opt.setAttribute('aria-selected', selected ? 'true' : 'false');
           opt.classList.toggle('active', selected);
         });
+        catOptionButtons.forEach((opt) => {
+          const v = opt.getAttribute('data-category-filter');
+          const selected = v === state.category;
+          opt.setAttribute('aria-selected', selected ? 'true' : 'false');
+          opt.classList.toggle('active', selected);
+        });
         if (toolLabel) toolLabel.textContent = state.tool === 'all' ? 'All' : state.tool;
-        const anyFilter = state.severity !== 'all' || state.tool !== 'all';
+        if (catLabelEl) catLabelEl.textContent = state.category === 'all' ? 'All' : humanize(state.category);
+        const anyFilter = state.severity !== 'all' || state.tool !== 'all' || state.category !== 'all';
         if (clearBtn) clearBtn.classList.toggle('hidden', !anyFilter);
         if (noMatches) noMatches.classList.toggle('hidden', visible !== 0);
       }
@@ -283,7 +418,13 @@ const toolOptions = Object.entries(toolCounts)
       if (toolTrigger) {
         toolTrigger.addEventListener('click', (e) => {
           e.stopPropagation();
-          toggleToolPopover();
+          togglePopover('tool');
+        });
+      }
+      if (catTrigger) {
+        catTrigger.addEventListener('click', (e) => {
+          e.stopPropagation();
+          togglePopover('category');
         });
       }
       toolOptionButtons.forEach((opt) => {
@@ -291,28 +432,46 @@ const toolOptions = Object.entries(toolCounts)
           state = { ...state, tool: opt.getAttribute('data-tool-filter') || 'all' };
           writeParams(state);
           apply(state);
-          closeToolPopover();
+          closePopover(toolPopover, toolTrigger, toolChevron);
         });
       });
-      // Click outside to close
-      document.addEventListener('click', (e) => {
-        if (!toolPopover || toolPopover.getAttribute('data-open') !== 'true') return;
-        const target = e.target;
-        if (toolTrigger && toolTrigger.contains(target)) return;
-        if (toolPopover.contains(target)) return;
-        closeToolPopover();
+      catOptionButtons.forEach((opt) => {
+        opt.addEventListener('click', () => {
+          state = { ...state, category: opt.getAttribute('data-category-filter') || 'all' };
+          writeParams(state);
+          apply(state);
+          closePopover(catPopover, catTrigger, catChevron);
+        });
       });
-      // Escape closes
+      // Click outside any open popover closes it
+      document.addEventListener('click', (e) => {
+        const target = e.target;
+        if (toolPopover && toolPopover.getAttribute('data-open') === 'true') {
+          if (!(toolTrigger && toolTrigger.contains(target)) && !toolPopover.contains(target)) {
+            closePopover(toolPopover, toolTrigger, toolChevron);
+          }
+        }
+        if (catPopover && catPopover.getAttribute('data-open') === 'true') {
+          if (!(catTrigger && catTrigger.contains(target)) && !catPopover.contains(target)) {
+            closePopover(catPopover, catTrigger, catChevron);
+          }
+        }
+      });
+      // Escape closes whichever popover is open
       document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && toolPopover?.getAttribute('data-open') === 'true') {
-          closeToolPopover();
+        if (e.key !== 'Escape') return;
+        if (toolPopover?.getAttribute('data-open') === 'true') {
+          closePopover(toolPopover, toolTrigger, toolChevron);
           toolTrigger?.focus();
+        } else if (catPopover?.getAttribute('data-open') === 'true') {
+          closePopover(catPopover, catTrigger, catChevron);
+          catTrigger?.focus();
         }
       });
 
       if (clearBtn) {
         clearBtn.addEventListener('click', () => {
-          state = { severity: 'all', tool: 'all' };
+          state = { severity: 'all', tool: 'all', category: 'all' };
           writeParams(state);
           apply(state);
         });
@@ -337,7 +496,8 @@ const toolOptions = Object.entries(toolCounts)
       display: none;
     }
     /* Active tool option in the popover: accent-tinted background */
-    #news-filters .tool-filter-option.active {
+    #news-filters .tool-filter-option.active,
+    #news-filters .category-filter-option.active {
       background: rgba(167, 139, 250, 0.15);
       color: var(--accent-primary);
       font-weight: 600;

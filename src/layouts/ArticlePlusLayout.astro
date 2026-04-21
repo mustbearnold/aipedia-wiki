@@ -28,6 +28,7 @@ interface Props {
   articleType?: 'Article' | 'NewsArticle' | 'BlogPosting';
   articleSection?: string;
   datePublished?: string;
+  ogImage?: string;
 }
 
 const {
@@ -37,6 +38,7 @@ const {
   articleType = 'Article',
   articleSection,
   datePublished,
+  ogImage,
 } = Astro.props;
 
 const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
@@ -85,7 +87,7 @@ function relativeDays(d: Date): string {
 const verifiedRelative = verifiedIsValid ? relativeDays(verifiedDate!) : null;
 ---
 
-<BaseLayout title={seoTitle ?? title} description={description}>
+<BaseLayout title={seoTitle ?? title} description={description} ogImage={ogImage}>
   {breadcrumbLdItems && <BreadcrumbLD items={breadcrumbLdItems} />}
   <ArticleLD
     headline={title}

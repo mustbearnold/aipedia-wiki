@@ -39,8 +39,9 @@ const badge = severityBadge[sev] ?? severityBadge.minor;
   readingMinutes={readingMinutes}
   lastVerified={entry.data.last_verified ? String(entry.data.last_verified) : (entry.data.date ? String(entry.data.date) : undefined)}
   badge={badge}
+  ogImage={`/og/news/${slug}.png`}
 >
-  {entry.data.hero && (
+  {entry.data.hero ? (
     <figure class="not-prose mb-6 -mx-4 sm:mx-0">
       <img
         src={entry.data.hero.url}
@@ -58,6 +59,18 @@ const badge = severityBadge[sev] ?? severityBadge.minor;
           ) : entry.data.hero.credit}
         </figcaption>
       )}
+    </figure>
+  ) : (
+    <figure class="not-prose mb-6">
+      <img
+        src={`/og/news/${slug}.png`}
+        alt={entry.data.title}
+        loading="eager"
+        decoding="async"
+        width="1200"
+        height="630"
+        class="w-full h-auto rounded-xl border border-[var(--border)] shadow-[0_10px_40px_rgba(0,0,0,0.45)]"
+      />
     </figure>
   )}
   {(() => {

@@ -7,7 +7,7 @@
   },
   "scripts": {
     "predev": "node scripts/guard-content.mjs",
-    "prebuild": "node scripts/guard-content.mjs && node scripts/fetch-github-stats.mjs",
+    "prebuild": "node scripts/guard-content.mjs && node scripts/fetch-github-stats.mjs && node scripts/generate-og-news.mjs",
     "dev": "node scripts/copy-content.mjs && astro dev",
     "build": "node scripts/copy-content.mjs && astro build && npx pagefind --site dist && node -e \"const fs=require('fs'),path=require('path');function cp(s,d){fs.mkdirSync(d,{recursive:true});for(const e of fs.readdirSync(s,{withFileTypes:true})){const S=path.join(s,e.name),D=path.join(d,e.name);e.isDirectory()?cp(S,D):fs.copyFileSync(S,D)}}cp('dist/pagefind','public/pagefind')\"",
     "preview": "npm run build && wrangler dev",
