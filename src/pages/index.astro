@@ -182,188 +182,121 @@ function shortDate(iso: string): string {
     toolCount={allTools.length}
     comparisonCount={comparisons.length}
     categoryCount={categories.length}
-    lastUpdated="2026-04-16"
+    lastUpdated="2026-04-21"
   />
 
-  <!-- Hero -->
-  <section class="text-center pt-4 pb-4 md:pt-14 md:pb-10">
-    <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-4">
-      <span class="count-up tabular-nums" data-target={allTools.length}>{allTools.length}</span> AI tools, <span class="bg-gradient-to-r from-[#a78bfa] to-[#60a5fa] bg-clip-text text-transparent whitespace-nowrap">agent&#8209;scored</span>
+  <!-- Scoped homepage design tokens. Establishes one violet accent,
+       strict grayscale for everything else, consistent radius + spacing
+       + type scale. Only active under the .p2-canvas wrapper below so
+       other pages are unaffected. -->
+  <style is:global>
+    /* Apply only while this page is mounted */
+    body:has(main .p2-canvas) {
+      /* Subtle ambient tint, no multi-stop gradients */
+      background:
+        radial-gradient(ellipse 80% 50% at 50% 0%, rgba(167,139,250,0.06) 0%, transparent 60%),
+        #0b0a14;
+      /* Smooth anchor scroll + comfortable offset for fixed nav */
+      scroll-behavior: smooth;
+    }
+    /* Accent-colored selection highlight across the whole demo page */
+    body:has(main .p2-canvas) ::selection {
+      background: rgba(167, 139, 250, 0.32);
+      color: #ffffff;
+    }
+    /* Accessible focus rings only on keyboard focus */
+    body:has(main .p2-canvas) :focus-visible {
+      outline: 2px solid #a78bfa;
+      outline-offset: 2px;
+      border-radius: 4px;
+    }
+    /* Respect the user's motion preference */
+    @media (prefers-reduced-motion: reduce) {
+      body:has(main .p2-canvas) { scroll-behavior: auto; }
+      body:has(main .p2-canvas) *,
+      body:has(main .p2-canvas) *::before,
+      body:has(main .p2-canvas) *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+
+  <!-- Canvas wrapper. Scopes all the disciplined restyling in the
+       style block at the bottom of this file. Every redesigned
+       section lives inside this wrapper. -->
+  <div class="p2-canvas">
+
+  <!-- Hero. Title + one-line editorial statement + search. Generous
+       vertical rhythm. No gradient text. Accent used sparingly on
+       the count and the "agent-scored" qualifier only. -->
+  <section class="p2-hero">
+    <h1 class="p2-h1">
+      <span class="tabular-nums">{allTools.length}</span> AI tools,
+      <span class="p2-accent-word">agent-scored</span>
     </h1>
-    <p class="text-sm sm:text-base text-[var(--text-muted)] mb-4 max-w-2xl mx-auto px-4">
-      Scored on Utility, Value, Moat, and Longevity. <span class="count-up tabular-nums" data-target={comparisons.length}>{comparisons.length}</span> comparisons. Verified monthly.
+    <p class="p2-subtitle">
+      Independent reviews. Four-axis scoring. Verified monthly. No paid placements.
     </p>
 
-    <!-- Freshness bar: latest news + new-this-week signal -->
-    <div class="flex flex-wrap items-center justify-center gap-2 mb-5 px-4">
-      {latestNews && (
-        <a
-          href={`/news/${latestNews.slug}/`}
-          class="inline-flex items-center gap-2 rounded-lg border border-[rgba(167,139,250,0.3)] bg-[rgba(167,139,250,0.06)] px-3 py-1.5 text-[11px] sm:text-xs text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[rgba(167,139,250,0.12)] hover:border-[rgba(167,139,250,0.5)] no-underline transition-colors group max-w-full"
-          title={latestNews.title}
-        >
-          <span class="relative flex h-2 w-2 shrink-0">
-            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[var(--accent-primary)] opacity-60"></span>
-            <span class="relative inline-flex rounded-full h-2 w-2 bg-[var(--accent-primary)]"></span>
-          </span>
-          <span class="font-semibold text-[var(--accent-primary)] shrink-0">Just shipped:</span>
-          <span class="truncate">{latestNews.title}</span>
-          <span class="shrink-0 text-[var(--text-muted)] group-hover:text-[var(--accent-primary)] transition-colors">&rarr;</span>
-        </a>
-      )}
-      {recentNewsCount > 1 && (
-        <a
-          href="/news/"
-          class="inline-flex items-center gap-1.5 rounded-lg border border-[var(--border)] bg-[var(--bg-card)] px-3 py-1.5 text-[11px] sm:text-xs text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:border-[rgba(167,139,250,0.35)] no-underline transition-colors shrink-0"
-        >
-          <span class="tabular-nums font-semibold text-[var(--accent-primary)]">{recentNewsCount}</span>
-          <span class="text-[var(--text-muted)]">updates this fortnight</span>
-        </a>
-      )}
-    </div>
-
-    <!-- Search bar -->
-    <div class="max-w-xl mx-auto px-4 sm:px-0">
-      <button
-        id="homepage-search-bar"
-        type="button"
-        class="w-full flex items-center gap-3 bg-[var(--bg-card)] border border-[var(--border)] rounded-xl px-4 py-3 text-sm text-[var(--text-muted)] hover:bg-[var(--bg-card-hover)] hover:border-[var(--accent-primary)] transition-colors cursor-pointer text-left"
-      >
-        <svg class="w-4 h-4 shrink-0 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <div class="p2-search-wrap">
+      <button id="homepage-search-bar" type="button" class="p2-search">
+        <svg class="p2-search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
         </svg>
-        <span class="truncate sm:hidden">Search the wiki...</span>
-        <span class="truncate hidden sm:inline">Search tools, categories, comparisons...</span>
-        <span class="ml-auto text-xs opacity-40">⌘K</span>
+        <span class="p2-search-placeholder sm:hidden">Search aipedia</span>
+        <span class="p2-search-placeholder hidden sm:inline">Search aipedia</span>
+        <span class="p2-search-kbd">&#8984;K</span>
       </button>
     </div>
   </section>
 
-  <!-- Triple-CTA row: three primary paths into the wiki, equal weight -->
-  <section class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-8" aria-label="How to explore">
-    <a
-      href="/tools/"
-      class="group block rounded-xl border border-[var(--border)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] hover:border-[rgba(167,139,250,0.4)] transition-colors p-4 no-underline"
-    >
-      <div class="flex items-start gap-3">
-        <span class="shrink-0 inline-flex items-center justify-center w-9 h-9 rounded-lg" style="background: linear-gradient(135deg, rgba(96,165,250,0.2), rgba(167,139,250,0.15)); border: 1px solid rgba(167,139,250,0.25);">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-[var(--accent-primary)]" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
-        </span>
-        <div class="min-w-0 flex-1">
-          <div class="flex items-center gap-1 mb-0.5">
-            <h3 class="text-sm font-semibold text-[var(--text-primary)] m-0 group-hover:text-[var(--accent-primary)] transition-colors">Browse Tools</h3>
-            <span class="text-[var(--text-muted)] group-hover:text-[var(--accent-primary)] group-hover:translate-x-0.5 transition-all">&rarr;</span>
-          </div>
-          <p class="text-xs text-[var(--text-muted)] m-0 leading-snug">{allTools.length} reviews across {categories.length} categories</p>
-        </div>
-      </div>
+  <!-- Dual CTA. One solid accent (primary), one ghost (secondary).
+       Zero gradients. Icons match stroke-width 1.75 for consistency. -->
+  <section class="p2-ctas" aria-label="How to explore">
+    <a href="/tools/" class="p2-cta p2-cta-primary">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+      <span class="p2-cta-label">Browse tools</span>
+      <span class="p2-cta-meta">{allTools.length} reviews</span>
+      <span class="p2-cta-arrow" aria-hidden="true">&rarr;</span>
     </a>
-
-    <a
-      href="/compare/"
-      class="group block rounded-xl border border-[var(--border)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] hover:border-[rgba(167,139,250,0.4)] transition-colors p-4 no-underline"
-    >
-      <div class="flex items-start gap-3">
-        <span class="shrink-0 inline-flex items-center justify-center w-9 h-9 rounded-lg" style="background: linear-gradient(135deg, rgba(74,222,128,0.2), rgba(96,165,250,0.15)); border: 1px solid rgba(74,222,128,0.25);">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-[var(--accent-success)]" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="3" y1="20" x2="21" y2="20"/></svg>
-        </span>
-        <div class="min-w-0 flex-1">
-          <div class="flex items-center gap-1 mb-0.5">
-            <h3 class="text-sm font-semibold text-[var(--text-primary)] m-0 group-hover:text-[var(--accent-primary)] transition-colors">Compare</h3>
-            <span class="text-[var(--text-muted)] group-hover:text-[var(--accent-primary)] group-hover:translate-x-0.5 transition-all">&rarr;</span>
-          </div>
-          <p class="text-xs text-[var(--text-muted)] m-0 leading-snug">{comparisons.length} head-to-head reviews</p>
-        </div>
-      </div>
-    </a>
-
-    <a
-      href="/stack-builder/"
-      class="group block rounded-xl border border-[rgba(167,139,250,0.3)] bg-gradient-to-br from-[rgba(167,139,250,0.08)] to-[rgba(96,165,250,0.05)] hover:border-[rgba(167,139,250,0.5)] hover:from-[rgba(167,139,250,0.12)] transition-colors p-4 no-underline"
-    >
-      <div class="flex items-start gap-3">
-        <span class="shrink-0 inline-flex items-center justify-center w-9 h-9 rounded-lg" style="background: linear-gradient(135deg, rgba(167,139,250,0.3), rgba(96,165,250,0.2)); border: 1px solid rgba(167,139,250,0.4);">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-[var(--accent-primary)]" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
-        </span>
-        <div class="min-w-0 flex-1">
-          <div class="flex items-center gap-1 mb-0.5">
-            <h3 class="text-sm font-semibold text-[var(--text-primary)] m-0 group-hover:text-[var(--accent-primary)] transition-colors">Stack Builder</h3>
-            <span class="text-[9px] px-1.5 py-0.5 rounded bg-[rgba(167,139,250,0.15)] border border-[rgba(167,139,250,0.3)] uppercase tracking-wider text-[var(--accent-primary)] font-semibold">New</span>
-            <span class="text-[var(--text-muted)] group-hover:text-[var(--accent-primary)] group-hover:translate-x-0.5 transition-all ml-auto">&rarr;</span>
-          </div>
-          <p class="text-xs text-[var(--text-muted)] m-0 leading-snug">Compose a multi-tool workflow</p>
-        </div>
-      </div>
+    <a href="/compare/" class="p2-cta p2-cta-secondary">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="3" y1="20" x2="21" y2="20"/></svg>
+      <span class="p2-cta-label">Compare</span>
+      <span class="p2-cta-meta">{comparisons.length} head-to-heads</span>
+      <span class="p2-cta-arrow" aria-hidden="true">&rarr;</span>
     </a>
   </section>
 
-  <!-- Browse by category — horizontal scroll rail with rich cards -->
-  <section class="mb-8" aria-labelledby="browse-by-cat-heading">
-    <div class="flex items-baseline justify-between mb-4">
-      <h2 id="browse-by-cat-heading" class="text-xl font-bold text-[var(--text-primary)] m-0">Browse by category</h2>
-      <div class="flex items-center gap-2">
-        <button id="cat-rail-prev" type="button" class="hidden md:inline-flex items-center justify-center w-8 h-8 rounded-full border border-[var(--border)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors" aria-label="Scroll categories left">
-          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
-        </button>
-        <button id="cat-rail-next" type="button" class="hidden md:inline-flex items-center justify-center w-8 h-8 rounded-full border border-[var(--border)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors" aria-label="Scroll categories right">
-          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
-        </button>
-      </div>
-    </div>
-
-    <div id="cat-rail" class="cat-rail -mx-4 px-4 md:mx-0 md:px-0 overflow-x-auto overflow-y-visible">
-      <div id="cat-rail-track" class="cat-rail-track flex gap-3">
-      <a href="/tools/" class="cat-card shrink-0 w-[168px] rounded-xl overflow-hidden no-underline group relative" style="background: linear-gradient(135deg, rgba(167,139,250,0.18), rgba(96,165,250,0.12)); border: 1px solid rgba(167,139,250,0.28);">
-        <div class="px-3 py-2 flex flex-col gap-1">
-          <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-[var(--accent-primary)]">All tools</div>
-          <div class="text-[18px] font-bold text-[var(--text-primary)] leading-tight">{allTools.length} tools</div>
-          <div class="text-[11px] text-[var(--text-muted)] group-hover:text-[var(--text-secondary)] transition-colors">
-            Browse the catalog &rarr;
-          </div>
-        </div>
-      </a>
-
-      {categoryRail.map((cat) => (
-        <a
-          href={`/categories/${cat.slug}/`}
-          class="cat-card shrink-0 w-[168px] rounded-xl no-underline group relative overflow-hidden"
-          style={`background: var(--bg-card); border: 1px solid var(--border); --cat-grad: ${cat.gradient};`}
-        >
-          <span class="cat-card-accent" aria-hidden="true" style={`background: ${cat.gradient};`}></span>
-          <span class="cat-card-glow" aria-hidden="true" style={`background: ${cat.gradient};`}></span>
-          <div class="relative px-3 py-2 flex flex-col gap-1.5">
-            <div class="flex items-center gap-2">
-              <span
-                class="shrink-0 inline-flex items-center justify-center rounded-md text-[14px] leading-none"
-                style={`width: 24px; height: 24px; background: ${cat.gradient}; box-shadow: inset 0 1px 0 rgba(255,255,255,0.25), 0 2px 4px -2px rgba(0,0,0,0.3);`}
-                aria-hidden="true"
-              >
-                {cat.emoji}
-              </span>
-              <span class="text-[13px] font-bold text-[var(--text-primary)] group-hover:text-[var(--accent-primary)] transition-colors truncate">{cat.label}</span>
-              <span class="ml-auto text-[10px] font-semibold text-[var(--text-muted)] tabular-nums shrink-0">{cat.count}</span>
-            </div>
-            <div class="flex items-center gap-1 min-h-[22px]">
-              {cat.tools.slice(0, 5).map((t) => (
-                <img
-                  src={t.logo}
-                  alt=""
-                  width="22"
-                  height="22"
-                  loading="lazy"
-                  class="cat-tool-logo block object-contain"
-                  style="width: 22px; height: 22px; border-radius: 5px; background: #fff; padding: 1px; box-sizing: border-box;"
-                  title={t.title}
-                  onerror="this.style.display='none'"
-                />
-              ))}
-            </div>
-          </div>
+  <!-- Freshness strip. One line. Static dot, no animation. Neutral
+       text with a single accent dot as anchor. -->
+  {(latestNews || recentNewsCount > 1) && (
+    <div class="p2-freshness">
+      <span class="p2-freshness-dot" aria-hidden="true"></span>
+      <span class="p2-freshness-label">Last verified</span>
+      <time class="p2-freshness-date">Apr 21, 2026</time>
+      {recentNewsCount > 1 && (
+        <>
+          <span class="p2-freshness-sep" aria-hidden="true">&middot;</span>
+          <a href="/news/" class="p2-freshness-count no-underline">
+            <span class="tabular-nums">{recentNewsCount}</span> updates this fortnight
+          </a>
+        </>
+      )}
+      {latestNews && (
+        <a href={`/news/${latestNews.slug}/`} class="p2-freshness-latest no-underline" title={latestNews.title}>
+          <span class="p2-freshness-latest-label">Latest:</span>
+          <span class="p2-freshness-latest-title">{latestNews.title}</span>
+          <span class="p2-freshness-latest-arrow" aria-hidden="true">&rarr;</span>
         </a>
-      ))}
-      </div>
+      )}
     </div>
-  </section>
+  )}
+
+  <!-- NOTE: "Browse by category" section moved below "All Tools" in this
+       demo. The flat catalog grid is now the authoritative first-look;
+       the category rail is a secondary discovery aid further down. -->
 
   <!-- Toolbar: section heading + filter dropdown + count + page size all on one row -->
   <div class="flex items-center justify-between mb-6 gap-x-3 gap-y-2 flex-wrap">
@@ -509,6 +442,7 @@ function shortDate(iso: string): string {
               priceRange={tool.data.price_range ?? 'Free'}
               emoji={categoryEmojiMap[cat] ?? '\uD83D\uDD27'}
               scores={tool.data.scores}
+              variant="clean"
             />
           </div>
         );
@@ -516,408 +450,250 @@ function shortDate(iso: string): string {
     </div>
   </section>
 
-  <!-- Trending -->
-  <section class="mb-10">
-    <h2 class="text-xl font-bold text-[var(--text-primary)] mb-4">Trending</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-      {trends.map(trend => {
-        const slug = trend.data.slug || trend.id.replace(/\.md$/, '').replace(/\\/g, '/');
-        const impact = trend.data.impact ?? 'medium';
-        const impactClass = impactColors[impact] ?? impactColors.medium;
-        return (
-          <a
-            href={`/trends/${slug}/`}
-            class="block bg-[var(--bg-card)] border border-[var(--border)] rounded-xl p-3 hover:bg-[var(--bg-card-hover)] hover:border-[rgba(167,139,250,0.25)] transition-all no-underline group"
-          >
-            <div class="flex items-center gap-2 mb-1.5">
-              <span class={`inline-flex items-center px-1.5 py-0.5 rounded-md text-[10px] font-semibold uppercase tracking-wider border ${impactClass}`}>
-                {impact}
-              </span>
-            </div>
-            <h3 class="text-[13.5px] font-semibold text-[var(--text-primary)] mb-1 leading-snug group-hover:text-[var(--accent-primary)] transition-colors">
-              {trend.data.title}
-            </h3>
-            {trend.data.description && (
-              <p class="text-[11.5px] text-[var(--text-muted)] line-clamp-2 m-0 leading-snug">{trend.data.description}</p>
-            )}
-          </a>
-        );
-      })}
+  <!-- Categories. A calm 4-column grid (desktop) of name + count tiles.
+       Zero emoji, zero per-category gradients, zero tool logos inside
+       tiles. Differentiation comes from content, not chrome. -->
+  <section class="p2-cats" aria-labelledby="browse-by-cat-heading">
+    <div class="p2-section-head">
+      <h2 id="browse-by-cat-heading">Categories</h2>
+      <a href="/categories/" class="p2-section-link">All 14 &rarr;</a>
     </div>
-  </section>
-
-  <!-- What's New — dynamic, pulls 5 most recent news items with the affected tool's logo -->
-  <section class="mb-10">
-    <div class="flex items-baseline justify-between mb-4">
-      <h2 class="text-xl font-bold text-[var(--text-primary)] m-0">What's New</h2>
-      <a href="/news/" class="text-xs text-[var(--accent-primary)] no-underline hover:underline">All news &rarr;</a>
-    </div>
-    <div class="space-y-2">
-      {recentNewsForHome.map((n) => {
-        const sevColor = n.severity === 'major' ? 'bg-[var(--accent-warning)]' : n.severity === 'breaking' ? 'bg-[var(--accent-danger)]' : 'bg-[var(--accent-primary)]';
-        return (
-          <a href={`/news/${n.slug}/`} class="flex items-center gap-3 bg-[var(--bg-card)] border border-[var(--border)] rounded-xl px-3 py-2.5 hover:bg-[var(--bg-card-hover)] hover:border-[rgba(167,139,250,0.25)] transition-all no-underline group">
-            {n.logo ? (
-              <img src={n.logo} alt="" width="28" height="28" loading="lazy" class="shrink-0 rounded-md"
-                   style="width: 28px; height: 28px; background: #fff; padding: 2px; box-sizing: border-box;" />
-            ) : (
-              <span class={`shrink-0 w-2 h-2 rounded-full ${sevColor}`}></span>
-            )}
-            <span class="shrink-0 text-[11px] text-[var(--text-muted)] tabular-nums w-10 sm:w-14">{shortDate(n.date)}</span>
-            <span class="flex-1 text-[13px] text-[var(--text-secondary)] group-hover:text-[var(--text-primary)] transition-colors truncate">
-              {n.title}
-            </span>
-            <span class="text-[var(--text-muted)] group-hover:text-[var(--accent-primary)] transition-colors shrink-0 text-sm">&rarr;</span>
-          </a>
-        );
-      })}
-    </div>
-  </section>
-
-  <!-- Best Of Guides -->
-  <section class="mb-10">
-    <h2 class="text-xl font-bold text-[var(--text-primary)] mb-4">Best Of</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-      <a href="/guides/best-ai-voice-youtube/" class="block rounded-xl p-3 bg-gradient-to-br from-[rgba(167,139,250,0.14)] to-[rgba(96,165,250,0.14)] border border-[rgba(167,139,250,0.3)] hover:from-[rgba(167,139,250,0.26)] hover:to-[rgba(96,165,250,0.26)] hover:border-[rgba(167,139,250,0.55)] transition-all no-underline group">
-        <h3 class="text-[15px] font-semibold text-[var(--text-primary)] mb-1 leading-snug">Best AI Voice for YouTube</h3>
-        <p class="text-xs text-[var(--text-secondary)] m-0 leading-snug">Top picks compared and ranked</p>
-      </a>
-      <a href="/guides/best-ai-coding-assistant/" class="block rounded-xl p-3 bg-gradient-to-br from-[rgba(52,211,153,0.14)] to-[rgba(96,165,250,0.14)] border border-[rgba(52,211,153,0.3)] hover:from-[rgba(52,211,153,0.26)] hover:to-[rgba(96,165,250,0.26)] hover:border-[rgba(52,211,153,0.55)] transition-all no-underline group">
-        <h3 class="text-[15px] font-semibold text-[var(--text-primary)] mb-1 leading-snug">Best AI Coding Assistant</h3>
-        <p class="text-xs text-[var(--text-secondary)] m-0 leading-snug">Top picks compared and ranked</p>
-      </a>
-      <a href="/guides/best-ai-video-generator/" class="block rounded-xl p-3 bg-gradient-to-br from-[rgba(244,114,182,0.14)] to-[rgba(167,139,250,0.14)] border border-[rgba(244,114,182,0.3)] hover:from-[rgba(244,114,182,0.26)] hover:to-[rgba(167,139,250,0.26)] hover:border-[rgba(244,114,182,0.55)] transition-all no-underline group">
-        <h3 class="text-[15px] font-semibold text-[var(--text-primary)] mb-1 leading-snug">Best AI Video Generator</h3>
-        <p class="text-xs text-[var(--text-secondary)] m-0 leading-snug">Top picks compared and ranked</p>
-      </a>
-      <a href="/guides/best-ai-automation-platform/" class="block rounded-xl p-3 bg-gradient-to-br from-[rgba(251,191,36,0.14)] to-[rgba(244,114,182,0.14)] border border-[rgba(251,191,36,0.3)] hover:from-[rgba(251,191,36,0.26)] hover:to-[rgba(244,114,182,0.26)] hover:border-[rgba(251,191,36,0.55)] transition-all no-underline group">
-        <h3 class="text-[15px] font-semibold text-[var(--text-primary)] mb-1 leading-snug">Best Automation Platform</h3>
-        <p class="text-xs text-[var(--text-secondary)] m-0 leading-snug">Top picks compared and ranked</p>
-      </a>
-      <a href="/guides/best-ai-seo-tool/" class="block rounded-xl p-3 bg-gradient-to-br from-[rgba(96,165,250,0.14)] to-[rgba(52,211,153,0.14)] border border-[rgba(96,165,250,0.3)] hover:from-[rgba(96,165,250,0.26)] hover:to-[rgba(52,211,153,0.26)] hover:border-[rgba(96,165,250,0.55)] transition-all no-underline group">
-        <h3 class="text-[15px] font-semibold text-[var(--text-primary)] mb-1 leading-snug">Best AI SEO Tool</h3>
-        <p class="text-xs text-[var(--text-secondary)] m-0 leading-snug">Top picks compared and ranked</p>
-      </a>
-      <a href="/guides/best-ai-music-generator/" class="block rounded-xl p-3 bg-gradient-to-br from-[rgba(167,139,250,0.14)] to-[rgba(244,114,182,0.14)] border border-[rgba(167,139,250,0.3)] hover:from-[rgba(167,139,250,0.26)] hover:to-[rgba(244,114,182,0.26)] hover:border-[rgba(167,139,250,0.55)] transition-all no-underline group">
-        <h3 class="text-[15px] font-semibold text-[var(--text-primary)] mb-1 leading-snug">Best AI Music Generator</h3>
-        <p class="text-xs text-[var(--text-secondary)] m-0 leading-snug">Suno vs Udio vs Mubert</p>
-      </a>
-    </div>
-  </section>
-
-  <!-- Alternatives Guides -->
-  <section class="mb-10">
-    <h2 class="text-xl font-bold text-[var(--text-primary)] mb-4">Alternatives</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-      <a href="/guides/cursor-alternatives/" class="block rounded-xl p-3 bg-gradient-to-br from-[rgba(96,165,250,0.14)] to-[rgba(167,139,250,0.14)] border border-[rgba(96,165,250,0.3)] hover:from-[rgba(96,165,250,0.26)] hover:to-[rgba(167,139,250,0.26)] hover:border-[rgba(96,165,250,0.55)] transition-all no-underline group">
-        <h3 class="text-[15px] font-semibold text-[var(--text-primary)] mb-1 leading-snug">Cursor Alternatives</h3>
-        <p class="text-xs text-[var(--text-secondary)] m-0 leading-snug">Windsurf, Copilot, Claude Code &amp; more</p>
-      </a>
-      <a href="/guides/chatgpt-alternatives/" class="block rounded-xl p-3 bg-gradient-to-br from-[rgba(52,211,153,0.14)] to-[rgba(96,165,250,0.14)] border border-[rgba(52,211,153,0.3)] hover:from-[rgba(52,211,153,0.26)] hover:to-[rgba(96,165,250,0.26)] hover:border-[rgba(52,211,153,0.55)] transition-all no-underline group">
-        <h3 class="text-[15px] font-semibold text-[var(--text-primary)] mb-1 leading-snug">ChatGPT Alternatives</h3>
-        <p class="text-xs text-[var(--text-secondary)] m-0 leading-snug">Claude, Gemini, Perplexity &amp; more</p>
-      </a>
-      <a href="/guides/midjourney-alternatives/" class="block rounded-xl p-3 bg-gradient-to-br from-[rgba(244,114,182,0.14)] to-[rgba(251,191,36,0.14)] border border-[rgba(244,114,182,0.3)] hover:from-[rgba(244,114,182,0.26)] hover:to-[rgba(251,191,36,0.26)] hover:border-[rgba(244,114,182,0.55)] transition-all no-underline group">
-        <h3 class="text-[15px] font-semibold text-[var(--text-primary)] mb-1 leading-snug">Midjourney Alternatives</h3>
-        <p class="text-xs text-[var(--text-secondary)] m-0 leading-snug">Flux, Ideogram, Firefly &amp; more</p>
-      </a>
-    </div>
-  </section>
-
-  <!-- Featured comparisons (top 9 by combined tool score; full list at /compare/) -->
-  <section class="mb-10">
-    <div class="flex items-baseline justify-between mb-4">
-      <h2 class="text-xl font-bold text-[var(--text-primary)] m-0">Featured comparisons</h2>
-      <a href="/compare/" class="text-xs text-[var(--accent-primary)] no-underline hover:underline">
-        All {comparisons.length} &rarr;
-      </a>
-    </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
-      {featuredComparisons.map((comp) => (
-        <a
-          href={`/compare/${comp.slug}/`}
-          class="flex items-center gap-3 p-2.5 rounded-lg bg-[var(--bg-card)] border border-[var(--border)] hover:bg-[var(--bg-card-hover)] hover:border-[rgba(167,139,250,0.35)] transition-colors no-underline group"
-        >
-          <div class="flex items-center -space-x-1.5 shrink-0">
-            {comp.compareTools.map((t) => (
-              <img src={t.logo} alt="" width="26" height="26" loading="lazy"
-                   class="rounded-md border-2 border-[var(--bg-base)]"
-                   style="width: 26px; height: 26px; background: #fff; padding: 2px; box-sizing: border-box;" />
-            ))}
-          </div>
-          <div class="min-w-0 flex-1">
-            <div class="text-sm font-medium text-[var(--text-primary)] group-hover:text-[var(--accent-primary)] truncate">
-              {comp.compareTools[0]?.title || '?'} <span class="text-[var(--text-muted)] font-normal text-xs">vs</span> {comp.compareTools[1]?.title || '?'}
-            </div>
-          </div>
-          <span class="text-[var(--text-muted)] group-hover:text-[var(--accent-primary)] group-hover:translate-x-0.5 transition-all shrink-0 text-sm">&rarr;</span>
+    <div class="p2-cats-grid">
+      {categoryRail.slice(0, 12).map((cat) => (
+        <a href={`/categories/${cat.slug}/`} class="p2-cat-tile no-underline">
+          <span class="p2-cat-tile-name">{cat.label}</span>
+          <span class="p2-cat-tile-count">{cat.count}</span>
         </a>
       ))}
     </div>
   </section>
 
-  <!-- Email capture (monthly digest) -->
-  <EmailCapture variant="footer" source="homepage" />
+  <!-- Trends. Impact badges removed: a trend page is already an editorial
+       take, the impact rating was decorative. Title + short description
+       + arrow is enough. -->
+  <section class="p2-trends">
+    <div class="p2-section-head">
+      <h2>Trends</h2>
+      <a href="/trends/" class="p2-section-link">All trends &rarr;</a>
+    </div>
+    <div class="p2-trends-grid">
+      {trends.slice(0, 6).map(trend => {
+        const slug = trend.data.slug || trend.id.replace(/\.md$/, '').replace(/\\/g, '/');
+        return (
+          <a href={`/trends/${slug}/`} class="p2-trend-card no-underline">
+            <h3 class="p2-trend-title">{trend.data.title}</h3>
+            {trend.data.description && (
+              <p class="p2-trend-desc">{trend.data.description}</p>
+            )}
+            <span class="p2-trend-arrow" aria-hidden="true">&rarr;</span>
+          </a>
+        );
+      })}
+    </div>
+  </section>
 
-  <!-- FAQ (visible; paired with FAQPage schema in HomepageLD) -->
-  <section class="max-w-3xl mx-auto mb-10 px-4" aria-labelledby="faq-heading">
-    <h2 id="faq-heading" class="text-2xl font-bold text-[var(--text-primary)] mb-6">Frequently asked</h2>
-    <div class="space-y-3">
-      <details class="group rounded-xl border border-[var(--border)] bg-[var(--bg-card)] p-4 hover:bg-[var(--bg-card-hover)] transition-colors">
-        <summary class="cursor-pointer text-[15px] font-semibold text-[var(--text-primary)] list-none flex items-center justify-between">
-          How are AI tools scored on aipedia.wiki?
-          <span class="text-[var(--text-muted)] group-open:rotate-45 transition-transform">+</span>
-        </summary>
-        <p class="mt-3 text-[14px] leading-relaxed text-[var(--text-secondary)]">
-          Every tool is scored 1 to 10 across four dimensions: Utility (how well it does its core job), Value (quality per dollar), Moat (defensibility against competitors), and Longevity (likelihood the product still exists in 2 years). Methodology is published at <a href="/about/scoring/" class="text-[var(--accent-primary)] no-underline hover:underline">/about/scoring/</a>. Rankings are reviewed monthly and revised when a product ships a flagship model, changes pricing, or is acquired or discontinued.
-        </p>
+  <!-- News. Clean list: date - title - arrow. No white logo squares
+       behind the icons, no severity color coding (editorial copy carries
+       meaning, badges don't). Dividers between items instead of borders
+       around each row. -->
+  <section class="p2-news">
+    <div class="p2-section-head">
+      <h2>News</h2>
+      <a href="/news/" class="p2-section-link">All news &rarr;</a>
+    </div>
+    <div class="p2-news-list">
+      {recentNewsForHome.map((n) => (
+        <a href={`/news/${n.slug}/`} class="p2-news-row no-underline">
+          <time class="p2-news-date">{shortDate(n.date)}</time>
+          <span class="p2-news-title">{n.title}</span>
+          <span class="p2-news-arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- Guides. Merges Best-Of + Alternatives into one calm neutral grid.
+       Every card is the same visual weight; no per-card rainbow gradient
+       borders. Small category label on top, guide title, one-line
+       subtitle, arrow. -->
+  <section class="p2-guides">
+    <div class="p2-section-head">
+      <h2>Guides</h2>
+      <a href="/guides/" class="p2-section-link">All guides &rarr;</a>
+    </div>
+    <div class="p2-guides-grid">
+      <a href="/guides/best-ai-coding-assistant/" class="p2-guide-card no-underline">
+        <span class="p2-guide-kicker">Best of</span>
+        <h3 class="p2-guide-title">Best AI Coding Assistant</h3>
+        <p class="p2-guide-desc">Cursor, Claude Code, Copilot, Windsurf</p>
+        <span class="p2-guide-arrow" aria-hidden="true">&rarr;</span>
+      </a>
+      <a href="/guides/best-ai-voice-youtube/" class="p2-guide-card no-underline">
+        <span class="p2-guide-kicker">Best of</span>
+        <h3 class="p2-guide-title">Best AI Voice for YouTube</h3>
+        <p class="p2-guide-desc">ElevenLabs, PlayHT, OpenAI TTS</p>
+        <span class="p2-guide-arrow" aria-hidden="true">&rarr;</span>
+      </a>
+      <a href="/guides/best-ai-video-generator/" class="p2-guide-card no-underline">
+        <span class="p2-guide-kicker">Best of</span>
+        <h3 class="p2-guide-title">Best AI Video Generator</h3>
+        <p class="p2-guide-desc">Kling, Runway, Sora, Wan</p>
+        <span class="p2-guide-arrow" aria-hidden="true">&rarr;</span>
+      </a>
+      <a href="/guides/cursor-alternatives/" class="p2-guide-card no-underline">
+        <span class="p2-guide-kicker">Alternatives</span>
+        <h3 class="p2-guide-title">Cursor Alternatives</h3>
+        <p class="p2-guide-desc">Windsurf, Copilot, Claude Code</p>
+        <span class="p2-guide-arrow" aria-hidden="true">&rarr;</span>
+      </a>
+      <a href="/guides/chatgpt-alternatives/" class="p2-guide-card no-underline">
+        <span class="p2-guide-kicker">Alternatives</span>
+        <h3 class="p2-guide-title">ChatGPT Alternatives</h3>
+        <p class="p2-guide-desc">Claude, Gemini, Perplexity</p>
+        <span class="p2-guide-arrow" aria-hidden="true">&rarr;</span>
+      </a>
+      <a href="/guides/midjourney-alternatives/" class="p2-guide-card no-underline">
+        <span class="p2-guide-kicker">Alternatives</span>
+        <h3 class="p2-guide-title">Midjourney Alternatives</h3>
+        <p class="p2-guide-desc">Flux, Ideogram, Firefly</p>
+        <span class="p2-guide-arrow" aria-hidden="true">&rarr;</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Head-to-heads. Top 6 by combined tool score; logos without
+       white-square chrome; clean "A vs B" copy. -->
+  <section class="p2-compare">
+    <div class="p2-section-head">
+      <h2>Head-to-heads</h2>
+      <a href="/compare/" class="p2-section-link">All {comparisons.length} &rarr;</a>
+    </div>
+    <div class="p2-compare-grid">
+      {featuredComparisons.slice(0, 6).map((comp) => (
+        <a href={`/compare/${comp.slug}/`} class="p2-compare-card no-underline">
+          <div class="p2-compare-logos">
+            {comp.compareTools.map((t) => (
+              <img src={t.logo} alt="" width="22" height="22" loading="lazy" class="p2-compare-logo" />
+            ))}
+          </div>
+          <div class="p2-compare-title">
+            <span>{comp.compareTools[0]?.title || '?'}</span>
+            <span class="p2-compare-vs">vs</span>
+            <span>{comp.compareTools[1]?.title || '?'}</span>
+          </div>
+          <span class="p2-compare-arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- Newsletter. Flattened: plain card, one heading, one paragraph,
+       inline form (email + button). No amber marketing border.
+       JS below handles XHR submit so the reader never leaves the page. -->
+  <section class="p2-newsletter">
+    <div class="p2-newsletter-inner">
+      <div class="p2-newsletter-copy">
+        <h2 class="p2-newsletter-title">Monthly AI tools digest</h2>
+        <p class="p2-newsletter-desc">New reviews, price changes, and flagship model launches, delivered once a month. Unsubscribe anytime.</p>
+      </div>
+      <form id="p2-newsletter-form" class="p2-newsletter-form" novalidate>
+        <input
+          type="email"
+          name="email"
+          id="p2-newsletter-email"
+          required
+          autocomplete="email"
+          placeholder="you@yourcompany.com"
+          class="p2-newsletter-input"
+          aria-label="Email address"
+        />
+        <button type="submit" class="p2-newsletter-btn" id="p2-newsletter-submit">Subscribe</button>
+        <p id="p2-newsletter-status" class="p2-newsletter-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+  <script is:inline>
+    (function () {
+      var form = document.getElementById('p2-newsletter-form');
+      if (!form) return;
+      var email = document.getElementById('p2-newsletter-email');
+      var submit = document.getElementById('p2-newsletter-submit');
+      var status = document.getElementById('p2-newsletter-status');
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var value = (email.value || '').trim();
+        // Minimal client-side check - server still validates
+        if (!value || !/.+@.+\..+/.test(value)) {
+          status.textContent = 'Enter a valid email address.';
+          status.dataset.state = 'error';
+          email.focus();
+          return;
+        }
+        submit.disabled = true;
+        var originalLabel = submit.textContent;
+        submit.textContent = 'Subscribing...';
+        status.textContent = '';
+        status.dataset.state = '';
+
+        fetch('/api/subscribe/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded', 'Accept': 'application/json' },
+          body: 'email=' + encodeURIComponent(value) + '&source=homepage-demo',
+        })
+          .then(function (r) { return r.json().catch(function () { return {}; }).then(function (j) { return { ok: r.ok, j: j }; }); })
+          .then(function (res) {
+            if (res.ok) {
+              status.textContent = "Subscribed. We'll send the next digest.";
+              status.dataset.state = 'success';
+              form.reset();
+            } else {
+              status.textContent = (res.j && res.j.error) || 'Something went wrong. Try again.';
+              status.dataset.state = 'error';
+            }
+          })
+          .catch(function () {
+            status.textContent = 'Network error. Check your connection and try again.';
+            status.dataset.state = 'error';
+          })
+          .finally(function () {
+            submit.disabled = false;
+            submit.textContent = originalLabel;
+          });
+      });
+    })();
+  </script>
+
+  <!-- FAQ. Flat borderless dividers instead of boxed cards. -->
+  <section class="p2-faq" aria-labelledby="faq-heading">
+    <h2 id="faq-heading">FAQ</h2>
+    <div class="p2-faq-list">
+      <details class="p2-faq-item">
+        <summary>How are AI tools scored on aipedia.wiki?</summary>
+        <p>Every tool is scored 1 to 10 across four dimensions: Utility (how well it does its core job), Value (quality per dollar), Moat (defensibility against competitors), and Longevity (likelihood the product still exists in 2 years). Methodology is published at <a href="/about/scoring/">/about/scoring/</a>. Rankings are reviewed monthly and revised when a product ships a flagship model, changes pricing, or is acquired or discontinued.</p>
       </details>
-      <details class="group rounded-xl border border-[var(--border)] bg-[var(--bg-card)] p-4 hover:bg-[var(--bg-card-hover)] transition-colors">
-        <summary class="cursor-pointer text-[15px] font-semibold text-[var(--text-primary)] list-none flex items-center justify-between">
-          How often is aipedia.wiki updated?
-          <span class="text-[var(--text-muted)] group-open:rotate-45 transition-transform">+</span>
-        </summary>
-        <p class="mt-3 text-[14px] leading-relaxed text-[var(--text-secondary)]">
-          Tool pages are re-verified monthly for pricing and flagship model references. Comparison pages are refreshed quarterly or whenever a compared tool ships a material update. The current content pass covers flagship models as of April 2026 including GPT-5.4, Claude Opus 4.7, Gemini 3.1 Pro, Midjourney v8 alpha, Flux 2, and Kling 3.0.
-        </p>
+      <details class="p2-faq-item">
+        <summary>How often is aipedia.wiki updated?</summary>
+        <p>Tool pages are re-verified monthly for pricing and flagship model references. Comparison pages are refreshed quarterly or whenever a compared tool ships a material update. The current content pass covers flagship models as of April 2026 including GPT-5.4, Claude Opus 4.7, Gemini 3.1 Pro, Midjourney v8 alpha, Flux 2, and Kling 3.0.</p>
       </details>
-      <details class="group rounded-xl border border-[var(--border)] bg-[var(--bg-card)] p-4 hover:bg-[var(--bg-card-hover)] transition-colors">
-        <summary class="cursor-pointer text-[15px] font-semibold text-[var(--text-primary)] list-none flex items-center justify-between">
-          Is aipedia.wiki affiliate spam?
-          <span class="text-[var(--text-muted)] group-open:rotate-45 transition-transform">+</span>
-        </summary>
-        <p class="mt-3 text-[14px] leading-relaxed text-[var(--text-secondary)]">
-          No. Editorial copy never mentions affiliate programs and never positions a product based on commission. Some outbound links are affiliate links where a program exists, but the presence or absence of an affiliate program has no effect on a tool's score or placement. Discontinued and failed products are covered honestly in the Dead Tools section.
-        </p>
+      <details class="p2-faq-item">
+        <summary>Is aipedia.wiki affiliate spam?</summary>
+        <p>No. Editorial copy never mentions affiliate programs and never positions a product based on commission. Some outbound links are affiliate links where a program exists, but the presence or absence of an affiliate program has no effect on a tool's score or placement. Discontinued and failed products are covered honestly in the Dead Tools section.</p>
       </details>
-      <details class="group rounded-xl border border-[var(--border)] bg-[var(--bg-card)] p-4 hover:bg-[var(--bg-card-hover)] transition-colors">
-        <summary class="cursor-pointer text-[15px] font-semibold text-[var(--text-primary)] list-none flex items-center justify-between">
-          Which AI tool is best in 2026?
-          <span class="text-[var(--text-muted)] group-open:rotate-45 transition-transform">+</span>
-        </summary>
-        <p class="mt-3 text-[14px] leading-relaxed text-[var(--text-secondary)]">
-          There is no single best AI tool because different workflows have different winners. For long-form writing and nuanced reasoning: <a href="/tools/claude/" class="text-[var(--accent-primary)] no-underline hover:underline">Claude Opus 4.7</a>. For multimodal generalist use with plugins and image generation: <a href="/tools/chatgpt/" class="text-[var(--accent-primary)] no-underline hover:underline">ChatGPT with GPT-5.4</a>. For deep Google Workspace integration: <a href="/tools/gemini/" class="text-[var(--accent-primary)] no-underline hover:underline">Gemini 3.1 Pro</a>. For agentic coding from the CLI: <a href="/tools/claude-code/" class="text-[var(--accent-primary)] no-underline hover:underline">Claude Code</a>. See <a href="/compare/" class="text-[var(--accent-primary)] no-underline hover:underline">/compare/</a> for head-to-head breakdowns.
-        </p>
+      <details class="p2-faq-item">
+        <summary>Which AI tool is best in 2026?</summary>
+        <p>There is no single best AI tool because different workflows have different winners. For long-form writing and nuanced reasoning: <a href="/tools/claude/">Claude Opus 4.7</a>. For multimodal generalist use with plugins and image generation: <a href="/tools/chatgpt/">ChatGPT with GPT-5.4</a>. For deep Google Workspace integration: <a href="/tools/gemini/">Gemini 3.1 Pro</a>. For agentic coding from the CLI: <a href="/tools/claude-code/">Claude Code</a>. See <a href="/compare/">/compare/</a> for head-to-head breakdowns.</p>
       </details>
-      <details class="group rounded-xl border border-[var(--border)] bg-[var(--bg-card)] p-4 hover:bg-[var(--bg-card-hover)] transition-colors">
-        <summary class="cursor-pointer text-[15px] font-semibold text-[var(--text-primary)] list-none flex items-center justify-between">
-          How many AI tools and comparisons are covered?
-          <span class="text-[var(--text-muted)] group-open:rotate-45 transition-transform">+</span>
-        </summary>
-        <p class="mt-3 text-[14px] leading-relaxed text-[var(--text-secondary)]">
-          {allTools.length} AI tools across {categories.length} categories, with {comparisons.length} head-to-head comparison pages. Categories include Chatbots, Coding, Writing, Image, Video, Voice, Music, Design, SEO, Research, Notes, Search, Automation, and Presentation.
-        </p>
+      <details class="p2-faq-item">
+        <summary>How many AI tools and comparisons are covered?</summary>
+        <p>{allTools.length} AI tools across {categories.length} categories, with {comparisons.length} head-to-head comparison pages. Categories include Chatbots, Coding, Writing, Image, Video, Voice, Music, Design, SEO, Research, Notes, Search, Automation, and Presentation.</p>
       </details>
     </div>
   </section>
 
-  <script is:inline>
-    // Category rail: true 60fps seamless carousel via GPU-accelerated
-    // transform: translateX on an inner track (not scrollLeft, which
-    // rounds to integer pixels and stutters at low speeds).
-    //
-    // - Cards cloned once into the track so the track is 2x width.
-    // - RAF loop decrements a float `offset` by SPEED * dt each frame.
-    // - When offset <= -halfWidth, we add halfWidth back. Clones align
-    //   with originals so the jump is visually invisible.
-    // - Hover pauses; wheel injects offset delta; arrows animate to offset.
-    (function () {
-      const rail  = document.getElementById('cat-rail');
-      const track = document.getElementById('cat-rail-track');
-      const prev  = document.getElementById('cat-rail-prev');
-      const next  = document.getElementById('cat-rail-next');
-      if (!rail || !track || !prev || !next) return;
+  </div>
+  <!-- /.p2-canvas -->
 
-      const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      const isTouchPrimary = window.matchMedia('(hover: none) and (pointer: coarse)').matches;
-      const SPEED = 36; // px per second — bumped for visible motion
-      const MANUAL_PAUSE_MS = 1400;
-
-      // Clone track contents once. Using inert clones (no IDs, no event
-      // targets) keeps behaviour clean.
-      const originals = Array.from(track.children);
-      originals.forEach((c) => {
-        const clone = c.cloneNode(true);
-        clone.setAttribute('aria-hidden', 'true');
-        clone.setAttribute('tabindex', '-1');
-        track.appendChild(clone);
-      });
-
-      // Touch-primary devices: use native horizontal scroll. The transform
-      // animation and drag handlers are desktop-only. Native scroll gives
-      // us momentum, rubber-band, and accessibility for free — and more
-      // importantly, it actually works on iOS.
-      if (isTouchPrimary) {
-        track.style.transform = 'none';
-        // Hide scrollbar (already done in CSS via scrollbar-width: none)
-        return;
-      }
-
-      // Split offset and target so user input feels smooth instead of jumpy.
-      // target: where we WANT the track (updated by auto-drift OR wheel OR arrow).
-      // offset: where the track ACTUALLY is (eases toward target each frame).
-      // Mouse wheel fires 100px per notch on desktop — jumping offset by 100
-      // looks jerky. Jumping target by 100 and letting offset chase it
-      // produces a smooth inertial slide.
-      let offset = 0;
-      let target = 0;
-      let paused = false;
-      let manualPauseUntil = 0;
-      let lastTs = 0;
-      let halfWidth = 0;
-
-      function measure() {
-        halfWidth = track.scrollWidth / 2;
-      }
-      measure();
-      window.addEventListener('resize', measure);
-      setTimeout(measure, 400);
-      setTimeout(measure, 1500);
-
-      function wrap(v) {
-        if (halfWidth <= 0) return v;
-        if (v <= -halfWidth) return v + halfWidth;
-        if (v > 0) return v - halfWidth;
-        return v;
-      }
-
-      function apply() {
-        track.style.transform = 'translate3d(' + offset.toFixed(2) + 'px, 0, 0)';
-      }
-
-      function tick(ts) {
-        const dt = lastTs ? Math.min(0.05, (ts - lastTs) / 1000) : 0;
-        lastTs = ts;
-        const autoDriftOn = !paused && Date.now() >= manualPauseUntil && !document.hidden && halfWidth > 0;
-
-        if (autoDriftOn) target -= SPEED * dt;
-
-        // Exponential ease: offset catches ~63% of the gap each 1/EASE_RATE seconds.
-        // Higher EASE_RATE = snappier; lower = floatier. 14 feels native.
-        const EASE_RATE = 14;
-        const k = 1 - Math.exp(-EASE_RATE * dt);
-        offset += (target - offset) * k;
-
-        // Wrap both so they stay in [-halfWidth, 0]
-        target = wrap(target);
-        // Keep offset within one half of target so the wrap doesn't jump visually
-        if (Math.abs(target - offset) > halfWidth) {
-          if (target < offset) offset -= halfWidth;
-          else offset += halfWidth;
-        }
-        offset = wrap(offset);
-
-        apply();
-        requestAnimationFrame(tick);
-      }
-      if (!reduced) requestAnimationFrame(tick);
-      else apply();
-
-      function step(dir) {
-        measure();
-        const cards = track.querySelectorAll('.cat-card');
-        if (!cards.length) return;
-        const cardWidth = cards[0].getBoundingClientRect().width + 12;
-        target -= dir * cardWidth * 2;
-        manualPauseUntil = Date.now() + MANUAL_PAUSE_MS;
-      }
-
-      prev.addEventListener('click', () => step(-1));
-      next.addEventListener('click', () => step(1));
-
-      rail.addEventListener('mouseenter', () => { paused = true; });
-      rail.addEventListener('mouseleave', () => { paused = false; });
-
-      rail.addEventListener('wheel', (e) => {
-        if (!e.deltaY) return;
-        if (Math.abs(e.deltaY) <= Math.abs(e.deltaX)) return;
-        e.preventDefault();
-        // Move the target, not the offset. The RAF loop eases offset toward
-        // target every frame so the motion stays continuous and smooth.
-        target -= e.deltaY;
-        manualPauseUntil = Date.now() + MANUAL_PAUSE_MS;
-      }, { passive: false });
-
-      // Touch / pointer drag support for mobile. Uses Pointer Events so
-      // both touch and mouse drag work with one code path.
-      let dragging = false;
-      let dragStartX = 0;
-      let dragStartOffset = 0;
-      let dragStartTarget = 0;
-      let dragMoved = false;
-      let dragPointerId = null;
-      let lastDragX = 0;
-      let lastDragTs = 0;
-      let dragVelocity = 0; // px/ms
-
-      rail.addEventListener('pointerdown', (e) => {
-        // Only touch + primary mouse; ignore right-click etc.
-        if (e.pointerType === 'mouse' && e.button !== 0) return;
-        dragging = true;
-        dragMoved = false;
-        dragPointerId = e.pointerId;
-        dragStartX = e.clientX;
-        lastDragX = e.clientX;
-        lastDragTs = e.timeStamp;
-        dragStartOffset = offset;
-        dragStartTarget = target;
-        dragVelocity = 0;
-        paused = true;
-        manualPauseUntil = Date.now() + MANUAL_PAUSE_MS;
-      });
-
-      rail.addEventListener('pointermove', (e) => {
-        if (!dragging || e.pointerId !== dragPointerId) return;
-        const dx = e.clientX - dragStartX;
-        if (!dragMoved && Math.abs(dx) > 4) {
-          dragMoved = true;
-          try { rail.setPointerCapture(e.pointerId); } catch (_) {}
-        }
-        if (dragMoved) {
-          e.preventDefault();
-          // Follow the finger 1:1 — move both offset and target so the
-          // easing doesn't lag behind the finger.
-          offset = dragStartOffset + dx;
-          target = dragStartTarget + dx;
-          const nowTs = e.timeStamp;
-          const dt = nowTs - lastDragTs;
-          if (dt > 0) dragVelocity = (e.clientX - lastDragX) / dt;
-          lastDragX = e.clientX;
-          lastDragTs = nowTs;
-        }
-      }, { passive: false });
-
-      function endDrag(e) {
-        if (!dragging || (e && e.pointerId !== dragPointerId)) return;
-        dragging = false;
-        dragPointerId = null;
-        // Flick: carry recent velocity forward as target delta. Capped so a
-        // fast swipe doesn't send it spinning forever.
-        if (dragMoved) {
-          const flick = Math.max(-600, Math.min(600, dragVelocity * 280));
-          target += flick;
-        }
-        paused = false;
-        manualPauseUntil = Date.now() + MANUAL_PAUSE_MS;
-        // If the pointer didn't move, let the click bubble normally.
-        // If it did move, swallow the next click so we don't navigate
-        // when the user meant to pan.
-        if (dragMoved) {
-          const swallow = (ev) => { ev.preventDefault(); ev.stopPropagation(); };
-          rail.addEventListener('click', swallow, { capture: true, once: true });
-        }
-      }
-      rail.addEventListener('pointerup', endDrag);
-      rail.addEventListener('pointercancel', endDrag);
-      rail.addEventListener('pointerleave', endDrag);
-
-      // touch-action is set via CSS (pan-x) now, so the browser handles
-      // horizontal pan natively on touch. Desktop pointer drag still works
-      // through the handlers above since touch-action doesn't affect mouse.
-
-      document.addEventListener('visibilitychange', () => { lastTs = 0; });
-    })();
-  </script>
 
   <script is:inline>
     // Filter dropdown: trigger + popover + outside-click + Escape.
@@ -1289,4 +1065,712 @@ function shortDate(iso: string): string {
     // Re-initialise after every view transition (the homepage DOM gets re-rendered)
     document.addEventListener('astro:page-load', initCategoryFilter);
   </script>
+
+<!-- =========================================================
+     Scoped $10k-site design tokens for /demo-home/ only.
+     Nothing here escapes the .p2-canvas wrapper.
+     ========================================================= -->
+<style is:global>
+.p2-canvas {
+  --p2-accent: #a78bfa;
+  --p2-accent-hover: #c4b5fd;
+  --p2-fg: rgba(255, 255, 255, 0.92);
+  --p2-fg-strong: #ffffff;
+  --p2-muted: rgba(255, 255, 255, 0.55);
+  --p2-subtle: rgba(255, 255, 255, 0.35);
+  --p2-line: rgba(255, 255, 255, 0.08);
+  --p2-line-strong: rgba(255, 255, 255, 0.14);
+  --p2-surface: rgba(255, 255, 255, 0.025);
+  --p2-surface-hover: rgba(255, 255, 255, 0.045);
+  --p2-radius: 10px;
+  --p2-radius-sm: 6px;
+
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+/* Recently-viewed component: stays hidden by default via its own
+   .hidden class; JS removes that class when localStorage has items.
+   We only restyle how it looks WHEN shown, matching the p2 tokens. */
+.p2-canvas #recently-viewed {
+  margin: 32px 0 16px !important;
+  padding: 0 16px;
+}
+@media (min-width: 640px) { .p2-canvas #recently-viewed { padding: 0; } }
+.p2-canvas #recently-viewed-heading {
+  font-size: 10px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  color: var(--p2-subtle) !important;
+}
+.p2-canvas #recently-viewed-clear {
+  font-size: 11px !important;
+  color: var(--p2-subtle) !important;
+}
+.p2-canvas #recently-viewed-clear:hover { color: var(--p2-fg) !important; }
+
+/* -------- hero ---------------------------------------------------- */
+.p2-hero {
+  text-align: center;
+  padding: 40px 16px 24px;
+}
+@media (min-width: 768px) {
+  .p2-hero { padding: 80px 0 40px; }
+}
+.p2-h1 {
+  font-size: 40px;
+  line-height: 1.04;
+  letter-spacing: -0.018em;
+  font-weight: 600;
+  color: var(--p2-fg-strong);
+  margin: 0 0 18px;
+}
+@media (min-width: 768px) {
+  .p2-h1 { font-size: 56px; }
+}
+.p2-h1 .count-up { font-weight: 600; }
+.p2-accent-word { color: var(--p2-accent); font-weight: 600; }
+.p2-subtitle {
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--p2-muted);
+  max-width: 540px;
+  margin: 0 auto 32px;
+}
+@media (min-width: 768px) { .p2-subtitle { font-size: 16px; } }
+.p2-search-wrap { max-width: 520px; margin: 0 auto; padding: 0 16px; }
+.p2-search {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border-radius: var(--p2-radius);
+  border: 1px solid var(--p2-line);
+  background: var(--p2-surface);
+  color: var(--p2-muted);
+  font-size: 14px;
+  text-align: left;
+  cursor: pointer;
+  transition: background 120ms ease, border-color 120ms ease;
+}
+.p2-search:hover {
+  background: var(--p2-surface-hover);
+  border-color: var(--p2-line-strong);
+}
+.p2-search-icon { width: 16px; height: 16px; flex: none; opacity: 0.55; }
+.p2-search-placeholder { flex: 1; }
+.p2-search-kbd { font-size: 12px; opacity: 0.4; font-variant-numeric: tabular-nums; }
+
+/* -------- CTAs ---------------------------------------------------- */
+.p2-ctas {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  margin: 16px 0 24px;
+  padding: 0 16px;
+}
+@media (min-width: 640px) {
+  .p2-ctas { grid-template-columns: 1fr 1fr; padding: 0; margin: 40px 0 24px; }
+}
+.p2-cta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  border-radius: var(--p2-radius);
+  text-decoration: none;
+  transition: background 120ms ease, border-color 120ms ease, transform 120ms ease;
+}
+.p2-cta svg { width: 18px; height: 18px; flex: none; }
+.p2-cta-label { font-size: 14px; font-weight: 500; }
+.p2-cta-meta { font-size: 13px; opacity: 0.65; }
+.p2-cta-arrow { margin-left: auto; transition: transform 120ms ease; font-size: 15px; }
+.p2-cta:hover .p2-cta-arrow { transform: translateX(2px); }
+.p2-cta-primary {
+  background: var(--p2-accent);
+  color: #0b0a14;
+}
+.p2-cta-primary:hover { background: var(--p2-accent-hover); }
+.p2-cta-primary .p2-cta-meta { color: rgba(11, 10, 20, 0.6); }
+.p2-cta-secondary {
+  border: 1px solid var(--p2-line);
+  background: var(--p2-surface);
+  color: var(--p2-fg);
+}
+.p2-cta-secondary:hover {
+  background: var(--p2-surface-hover);
+  border-color: var(--p2-line-strong);
+}
+
+/* -------- freshness strip ---------------------------------------- */
+.p2-freshness {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px 12px;
+  margin: 0 16px 56px;
+  padding: 14px 0;
+  border-top: 1px solid var(--p2-line);
+  border-bottom: 1px solid var(--p2-line);
+  font-size: 13px;
+  color: var(--p2-muted);
+}
+@media (min-width: 640px) { .p2-freshness { margin-left: 0; margin-right: 0; } }
+.p2-freshness-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--p2-accent);
+  flex: none;
+}
+.p2-freshness-label { color: var(--p2-subtle); }
+.p2-freshness-date { color: var(--p2-fg); font-variant-numeric: tabular-nums; }
+.p2-freshness-sep { color: var(--p2-subtle); }
+.p2-freshness-count { color: var(--p2-muted); transition: color 120ms ease; }
+.p2-freshness-count:hover { color: var(--p2-fg); }
+.p2-freshness-count span { color: var(--p2-fg); }
+.p2-freshness-latest {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: auto;
+  color: var(--p2-muted);
+  transition: color 120ms ease;
+  min-width: 0;
+  max-width: 100%;
+}
+@media (min-width: 768px) { .p2-freshness-latest { max-width: 50%; } }
+.p2-freshness-latest:hover { color: var(--p2-fg); }
+.p2-freshness-latest-label { color: var(--p2-subtle); flex: none; }
+.p2-freshness-latest-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+}
+.p2-freshness-latest-arrow { flex: none; }
+
+/* -------- section heads ------------------------------------------ */
+.p2-canvas .p2-section-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 18px;
+  padding: 0 16px;
+}
+@media (min-width: 640px) { .p2-canvas .p2-section-head { padding: 0; } }
+.p2-canvas .p2-section-head h2,
+.p2-canvas section > h2,
+.p2-canvas h2 {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--p2-fg);
+  margin: 0;
+}
+.p2-section-link {
+  font-size: 13px;
+  color: var(--p2-subtle);
+  text-decoration: none;
+  transition: color 120ms ease;
+}
+.p2-section-link:hover { color: var(--p2-accent); }
+
+/* Generous section rhythm. 96px on desktop = Linear/Vercel breathing
+   room. Mobile keeps a tighter 64px so content still reads. */
+.p2-trends, .p2-cats, .p2-news, .p2-guides, .p2-compare,
+.p2-newsletter, .p2-faq { margin-bottom: 64px; padding: 0; }
+@media (min-width: 768px) {
+  .p2-trends, .p2-cats, .p2-news, .p2-guides, .p2-compare,
+  .p2-newsletter, .p2-faq { margin-bottom: 96px; }
+}
+.p2-trends-grid, .p2-cats-grid, .p2-guides-grid, .p2-compare-grid,
+.p2-news-list, .p2-faq-list { padding: 0 16px; }
+@media (min-width: 640px) {
+  .p2-trends-grid, .p2-cats-grid, .p2-guides-grid,
+  .p2-compare-grid, .p2-news-list, .p2-faq-list { padding: 0; }
+}
+
+/* -------- All Tools toolbar overrides ---------------------------- */
+/* Restyle the existing toolbar without changing its JS-bound IDs. */
+.p2-canvas #tools-grid-heading {
+  font-size: 18px !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.01em !important;
+  color: var(--p2-fg) !important;
+}
+.p2-canvas #filter-trigger,
+.p2-canvas #sort-trigger {
+  background: var(--p2-surface) !important;
+  border-color: var(--p2-line) !important;
+  color: var(--p2-muted) !important;
+  border-radius: var(--p2-radius-sm) !important;
+}
+.p2-canvas #filter-trigger:hover,
+.p2-canvas #sort-trigger:hover {
+  background: var(--p2-surface-hover) !important;
+  border-color: var(--p2-line-strong) !important;
+  color: var(--p2-fg) !important;
+}
+/* Flatten the page-size pill bar - no outer box, no purple fill. */
+.p2-canvas .flex.items-center.gap-0\.5.bg-\[var\(--bg-card\)\] {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  gap: 2px !important;
+}
+.p2-canvas .page-size-btn {
+  background: transparent !important;
+  color: var(--p2-subtle) !important;
+  font-weight: 500 !important;
+  border-radius: var(--p2-radius-sm) !important;
+}
+.p2-canvas .page-size-btn:hover {
+  color: var(--p2-fg) !important;
+}
+.p2-canvas .page-size-btn[style*="background"] {
+  color: var(--p2-accent) !important;
+}
+
+/* Harmonize filter + sort popover panels to p2 surface tokens so they
+   don't pop open in a slightly different dark tone than the rest of
+   the page. */
+.p2-canvas #filter-popover,
+.p2-canvas #sort-popover {
+  background: #15131f !important;
+  border-color: var(--p2-line-strong) !important;
+  border-radius: var(--p2-radius) !important;
+  box-shadow: 0 16px 48px -12px rgba(0, 0, 0, 0.65),
+              0 0 0 1px rgba(255, 255, 255, 0.04) !important;
+}
+.p2-canvas #filter-popover .category-pill,
+.p2-canvas #filter-popover .filter-option,
+.p2-canvas #sort-popover .sort-option {
+  color: var(--p2-muted) !important;
+  font-size: 13px !important;
+  padding: 9px 14px !important;
+  border-radius: var(--p2-radius-sm) !important;
+  margin: 2px 4px !important;
+  width: calc(100% - 8px) !important;
+  transition: background 100ms ease, color 100ms ease !important;
+}
+.p2-canvas #filter-popover .category-pill:hover,
+.p2-canvas #filter-popover .filter-option:hover,
+.p2-canvas #sort-popover .sort-option:hover {
+  background: var(--p2-surface-hover) !important;
+  color: var(--p2-fg) !important;
+}
+.p2-canvas #filter-popover .filter-option.active,
+.p2-canvas #sort-popover .sort-option.active {
+  color: var(--p2-accent) !important;
+  background: rgba(167, 139, 250, 0.08) !important;
+}
+
+/* Count-up animation respects motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .p2-canvas .count-up { animation: none !important; }
+}
+
+/* -------- tool-card grid spacing --------------------------------- */
+.p2-canvas #tools-grid { gap: 8px !important; }
+.p2-canvas .tool-card {
+  border-color: var(--p2-line) !important;
+  background: var(--p2-surface) !important;
+  border-radius: var(--p2-radius) !important;
+}
+.p2-canvas .tool-card:hover {
+  background: var(--p2-surface-hover) !important;
+  border-color: var(--p2-line-strong) !important;
+}
+
+/* -------- categories --------------------------------------------- */
+.p2-cats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6px;
+}
+@media (min-width: 640px) { .p2-cats-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 900px) { .p2-cats-grid { grid-template-columns: repeat(4, 1fr); } }
+.p2-cat-tile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 14px 14px 14px 16px;
+  border-radius: var(--p2-radius);
+  border: 1px solid var(--p2-line);
+  background: var(--p2-surface);
+  transition: background 120ms ease, border-color 120ms ease;
+  position: relative;
+  overflow: hidden;
+}
+/* Subtle always-on left edge so the grid reads as a purposeful series
+   and not a flat wall. Intensifies on hover. */
+.p2-cat-tile::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 8px; bottom: 8px;
+  width: 2px;
+  border-radius: 0 2px 2px 0;
+  background: var(--p2-accent);
+  opacity: 0.25;
+  transition: opacity 120ms ease, top 120ms ease, bottom 120ms ease;
+}
+.p2-cat-tile:hover {
+  background: var(--p2-surface-hover);
+  border-color: var(--p2-line-strong);
+}
+.p2-cat-tile:hover::before { opacity: 1; top: 0; bottom: 0; }
+.p2-cat-tile-name { font-size: 14px; font-weight: 500; color: var(--p2-fg); }
+.p2-cat-tile-count {
+  font-size: 12px;
+  color: var(--p2-subtle);
+  font-variant-numeric: tabular-nums;
+}
+
+/* -------- trends ------------------------------------------------- */
+.p2-trends-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 6px;
+}
+@media (min-width: 640px) { .p2-trends-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 900px) { .p2-trends-grid { grid-template-columns: repeat(3, 1fr); } }
+.p2-trend-card {
+  display: block;
+  padding: 16px;
+  border-radius: var(--p2-radius);
+  border: 1px solid var(--p2-line);
+  background: var(--p2-surface);
+  position: relative;
+  transition: background 120ms ease, border-color 120ms ease;
+}
+.p2-trend-card:hover {
+  background: var(--p2-surface-hover);
+  border-color: var(--p2-line-strong);
+}
+.p2-trend-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--p2-fg);
+  margin: 0 0 6px;
+  line-height: 1.35;
+}
+.p2-trend-desc {
+  font-size: 13px;
+  color: var(--p2-muted);
+  margin: 0;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.p2-trend-arrow {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  color: var(--p2-subtle);
+  font-size: 14px;
+  transition: transform 120ms ease, color 120ms ease;
+}
+.p2-trend-card:hover .p2-trend-arrow { transform: translateX(2px); color: var(--p2-accent); }
+
+/* -------- news --------------------------------------------------- */
+.p2-news-list {
+  border-top: 1px solid var(--p2-line);
+  border-bottom: 1px solid var(--p2-line);
+}
+.p2-news-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--p2-line);
+  transition: color 120ms ease;
+}
+.p2-news-row:last-child { border-bottom: none; }
+.p2-news-row:hover { background: var(--p2-surface); }
+.p2-news-date {
+  font-size: 12px;
+  color: var(--p2-subtle);
+  font-variant-numeric: tabular-nums;
+  width: 44px;
+  flex: none;
+}
+.p2-news-title {
+  flex: 1;
+  min-width: 0;
+  font-size: 13px;
+  color: var(--p2-muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  transition: color 120ms ease;
+}
+.p2-news-row:hover .p2-news-title { color: var(--p2-fg); }
+.p2-news-arrow { color: var(--p2-subtle); font-size: 13px; flex: none; transition: transform 120ms ease, color 120ms ease; }
+.p2-news-row:hover .p2-news-arrow { transform: translateX(2px); color: var(--p2-accent); }
+
+/* -------- guides (best of + alternatives merged) ----------------- */
+.p2-guides-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 6px;
+}
+@media (min-width: 640px) { .p2-guides-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 900px) { .p2-guides-grid { grid-template-columns: repeat(3, 1fr); } }
+.p2-guide-card {
+  display: block;
+  padding: 18px;
+  border-radius: var(--p2-radius);
+  border: 1px solid var(--p2-line);
+  background: var(--p2-surface);
+  position: relative;
+  transition: background 120ms ease, border-color 120ms ease;
+}
+.p2-guide-card:hover {
+  background: var(--p2-surface-hover);
+  border-color: var(--p2-line-strong);
+}
+.p2-guide-kicker {
+  display: block;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--p2-accent);
+  margin-bottom: 10px;
+}
+.p2-guide-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--p2-fg);
+  margin: 0 0 6px;
+  line-height: 1.3;
+}
+.p2-guide-desc { font-size: 13px; color: var(--p2-muted); margin: 0; line-height: 1.5; }
+.p2-guide-arrow {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  color: var(--p2-subtle);
+  font-size: 14px;
+  transition: transform 120ms ease, color 120ms ease;
+}
+.p2-guide-card:hover .p2-guide-arrow { transform: translateX(2px); color: var(--p2-accent); }
+
+/* -------- head-to-heads ------------------------------------------ */
+.p2-compare-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 6px;
+}
+@media (min-width: 640px) { .p2-compare-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 900px) { .p2-compare-grid { grid-template-columns: repeat(3, 1fr); } }
+.p2-compare-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: var(--p2-radius);
+  border: 1px solid var(--p2-line);
+  background: var(--p2-surface);
+  transition: background 120ms ease, border-color 120ms ease;
+}
+.p2-compare-card:hover {
+  background: var(--p2-surface-hover);
+  border-color: var(--p2-line-strong);
+}
+.p2-compare-logos { display: flex; align-items: center; gap: -4px; flex: none; }
+.p2-compare-logos > img + img { margin-left: -6px; }
+.p2-compare-logo {
+  width: 22px; height: 22px;
+  border-radius: 4px;
+  background: #fff;
+  padding: 1px;
+  box-sizing: border-box;
+  border: 2px solid #0b0a14;
+}
+.p2-compare-title {
+  flex: 1;
+  min-width: 0;
+  font-size: 13px;
+  color: var(--p2-fg);
+  display: flex;
+  gap: 6px;
+  overflow: hidden;
+}
+.p2-compare-title > span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.p2-compare-vs { color: var(--p2-subtle); font-size: 12px; flex: none; }
+.p2-compare-arrow { color: var(--p2-subtle); font-size: 13px; flex: none; transition: transform 120ms ease, color 120ms ease; }
+.p2-compare-card:hover .p2-compare-arrow { transform: translateX(2px); color: var(--p2-accent); }
+
+/* -------- newsletter --------------------------------------------- */
+.p2-newsletter {
+  padding: 0 16px;
+}
+@media (min-width: 640px) { .p2-newsletter { padding: 0; } }
+.p2-newsletter-inner {
+  padding: 36px;
+  border-radius: var(--p2-radius);
+  border: 1px solid var(--p2-line);
+  background: var(--p2-surface);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .p2-newsletter-inner { grid-template-columns: 1fr 1fr; gap: 40px; padding: 48px; }
+}
+.p2-newsletter-title {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: var(--p2-fg);
+  margin: 0 0 10px;
+}
+.p2-newsletter-desc {
+  font-size: 14px;
+  color: var(--p2-muted);
+  line-height: 1.55;
+  margin: 0;
+}
+.p2-newsletter-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  width: 100%;
+}
+.p2-newsletter-input {
+  flex: 1;
+  min-width: 0;
+  padding: 12px 14px;
+  border-radius: var(--p2-radius-sm);
+  border: 1px solid var(--p2-line);
+  background: rgba(0,0,0,0.25);
+  color: var(--p2-fg);
+  font-size: 14px;
+  outline: none;
+  transition: border-color 120ms ease;
+}
+.p2-newsletter-input::placeholder { color: var(--p2-subtle); }
+.p2-newsletter-input:focus { border-color: var(--p2-accent); }
+.p2-newsletter-btn {
+  padding: 12px 18px;
+  border-radius: var(--p2-radius-sm);
+  border: none;
+  background: var(--p2-accent);
+  color: #0b0a14;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 120ms ease, opacity 120ms ease;
+  flex: none;
+}
+.p2-newsletter-btn:hover { background: var(--p2-accent-hover); }
+.p2-newsletter-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+.p2-newsletter-status {
+  grid-column: 1 / -1;
+  flex-basis: 100%;
+  font-size: 13px;
+  color: var(--p2-muted);
+  margin: 8px 0 0;
+  min-height: 1em;
+}
+.p2-newsletter-status[data-state="success"] { color: #34d399; }
+.p2-newsletter-status[data-state="error"] { color: #fb7185; }
+
+/* -------- FAQ ---------------------------------------------------- */
+.p2-faq {
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.p2-faq > h2 {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+@media (min-width: 640px) { .p2-faq > h2 { padding: 0; } }
+.p2-faq-list {
+  border-top: 1px solid var(--p2-line);
+}
+.p2-faq-item {
+  border-bottom: 1px solid var(--p2-line);
+  padding: 18px 0;
+}
+.p2-faq-item summary {
+  cursor: pointer;
+  list-style: none;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--p2-fg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+.p2-faq-item summary::-webkit-details-marker { display: none; }
+.p2-faq-item summary::after {
+  content: '+';
+  color: var(--p2-subtle);
+  font-size: 20px;
+  line-height: 1;
+  transition: transform 160ms ease, color 160ms ease;
+  flex: none;
+}
+.p2-faq-item[open] summary::after {
+  content: '-';
+  color: var(--p2-accent);
+}
+.p2-faq-item p {
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--p2-muted);
+  margin: 14px 0 0;
+}
+.p2-faq-item a {
+  color: var(--p2-accent);
+  text-decoration: none;
+}
+.p2-faq-item a:hover { text-decoration: underline; }
+
+/* -------- "Showing X of Y tools" ---------------------------------
+   Default state on the homepage shows 30 of 211; that count isn't
+   useful when all tools are unfiltered. Hide it, show again only when
+   a category filter is active (via the dynamic JS that updates this
+   element's text). */
+.p2-canvas #filter-count { display: none !important; }
+
+/* -------- filter / sort label micro-size ------------------------- */
+.p2-canvas #filter-trigger > span.hidden.sm\:inline,
+.p2-canvas #sort-trigger > span.hidden.sm\:inline {
+  font-size: 9px !important;
+  letter-spacing: 0.14em !important;
+}
+
+/* Search trigger in the nav gets the same visual treatment as the
+   hero search button for a consistent look on the homepage. This is
+   the only nav tweak that remains scoped to the homepage - everything
+   else lives in Nav.astro directly now. */
+body:has(main .p2-canvas) nav #search-trigger {
+  background: rgba(255, 255, 255, 0.025) !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+  color: rgba(255, 255, 255, 0.55) !important;
+  font-size: 13px !important;
+}
+body:has(main .p2-canvas) nav #search-trigger:hover {
+  background: rgba(255, 255, 255, 0.045) !important;
+  border-color: rgba(255, 255, 255, 0.14) !important;
+  color: rgba(255, 255, 255, 0.92) !important;
+}
+</style>
 </BaseLayout>

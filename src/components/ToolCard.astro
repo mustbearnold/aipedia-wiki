@@ -15,9 +15,17 @@ interface Props {
   // coded pills (U / V / M / L). Omit to keep cards compact on pages
   // that don't want them (e.g. constrained sidebars).
   scores?: { utility?: number; value?: number; moat?: number; longevity?: number };
+  // Card variant:
+  //   'clean'   (default) - 4-bar sparkbar, no tier pill, solid-violet score.
+  //                         Used on homepage + /tools/ + categories + any
+  //                         grid view.
+  //   'default' (legacy)  - original ScoreTier + colored U/V/M/L chip rail.
+  //                         Kept for any embedded strip that wants denser
+  //                         per-axis info; pass variant="default" to opt in.
+  variant?: 'clean' | 'default';
 }
 
-const { title, slug, category, score, priceRange, emoji = '🔧', scores } = Astro.props;
+const { title, slug, category, score, priceRange, emoji = '🔧', scores, variant = 'clean' } = Astro.props;
 
 const displayPrice = shortenPrice(priceRange);
 
@@ -34,6 +42,41 @@ function axisColor(n: number | undefined): string {
   if (v >= 6) return 'text-amber-400 bg-amber-400/10 border-amber-400/30';
   return 'text-rose-400 bg-rose-400/10 border-rose-400/30';
 }
+
+// Sparkbar-fill colour (solid, no border/bg). Same breakpoints as
+// axisColor so the two variants convey identical information.
+function barColor(n: number | undefined): string {
+  const v = typeof n === 'number' ? n : 0;
+  if (v >= 8) return '#34d399'; // emerald-400
+  if (v >= 7) return '#38bdf8'; // sky-400
+  if (v >= 6) return '#fbbf24'; // amber-400
+  return '#fb7185';             // rose-400
+}
+
+// Sparkbar builder: 4 bars scaled to score/10 with a 15% floor so even
+// a 0 is visible. Returns array of {pct, color, label} for the template.
+const sparkbarBars = scores ? [
+  { score: scores.utility,   letter: 'U', name: 'Utility' },
+  { score: scores.value,     letter: 'V', name: 'Value' },
+  { score: scores.moat,      letter: 'M', name: 'Moat' },
+  { score: scores.longevity, letter: 'L', name: 'Longevity' },
+].map(b => ({
+  ...b,
+  pct: Math.max(15, Math.min(100, ((typeof b.score === 'number' ? b.score : 0) / 10) * 100)),
+  color: barColor(b.score),
+})) : [];
+
+const sparkbarTitle = sparkbarBars.length
+  ? sparkbarBars.map(b => `${b.name} ${b.score ?? 0}/10`).join(' · ')
+  : '';
+
+// In the clean variant, the tier pill ("Category Leader", "Strong
+// Choice", etc.) is always suppressed. It's a qualitative restatement
+// of the score number the reader already sees right next to the title;
+// the sparkbar carries the 4-axis signal. Tier label lives on the
+// tool detail page where it can be explained, not on a grid card
+// scan.
+const showTierPill = variant === 'clean' ? false : true;
 
 const hasAxisScores = !!scores && (
   typeof scores.utility === 'number' ||
@@ -71,18 +114,38 @@ const categoryLabel = category.replace('ai-', 'AI ').replace(/\b\w/g, (c) => c.t
         <h3 class="text-sm font-semibold text-[var(--text-primary)] truncate group-hover:text-[var(--text-primary)]">
           {title}
         </h3>
-        <span class="text-sm font-bold bg-gradient-to-r from-[#a78bfa] to-[#60a5fa] bg-clip-text text-transparent shrink-0">
-          {score}
-        </span>
+        {variant === 'clean' ? (
+          <span class="text-sm font-bold text-[#a78bfa] shrink-0 tabular-nums">{score}</span>
+        ) : (
+          <span class="text-sm font-bold bg-gradient-to-r from-[#a78bfa] to-[#60a5fa] bg-clip-text text-transparent shrink-0">{score}</span>
+        )}
       </div>
       <div class="flex items-center gap-2 text-xs text-[var(--text-muted)] min-w-0">
-        <ScoreTier score={score} size="sm" />
-        <span class="shrink-0">&middot;</span>
+        {showTierPill && <ScoreTier score={score} size="sm" />}
+        {showTierPill && <span class="shrink-0">&middot;</span>}
         <span class="marquee-hover flex-1 min-w-0" title={priceRange}>
           <span class="marquee-hover-inner">{displayPrice}</span>
         </span>
+        {/* Clean variant: sparkbar sits inline with price so we don't add
+           an extra row. Takes ~36px of width, half the footprint of the
+           old 4-chip row. */}
+        {variant === 'clean' && hasAxisScores && (
+          <span
+            class="shrink-0 inline-flex items-end gap-[2px] h-3 ml-auto"
+            title={sparkbarTitle}
+            aria-label={sparkbarTitle}
+          >
+            {sparkbarBars.map(b => (
+              <span
+                class="block w-[3px] rounded-[1px]"
+                style={`height: ${b.pct}%; background: ${b.color};`}
+              />
+            ))}
+          </span>
+        )}
       </div>
-      {hasAxisScores && (
+      {/* Default variant keeps the original 4-chip row. */}
+      {variant === 'default' && hasAxisScores && (
         <div class="flex items-center gap-1 mt-2" aria-label="Four-dimension scores: utility, value, moat, longevity">
           <span class={`inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded text-[10px] font-semibold border tabular-nums ${axisColor(scores!.utility)}`} title={`Utility: ${scores!.utility ?? 0}/10`}>
             <span class="opacity-70">U</span>{scores!.utility ?? 0}
