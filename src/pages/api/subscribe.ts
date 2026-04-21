@@ -77,7 +77,11 @@ export const GET: APIRoute = () =>
 export const POST: APIRoute = async ({ request, clientAddress }) => {
   try {
     const workerEnv: any = env ?? {};
-    const db: any = workerEnv?.DB ?? null;
+    // The D1 binding's variable name can be either `DB` (conventional)
+    // or `D1` (default when using the "Add D1 binding" UI without
+    // customizing the variable name). Accept either so the handler
+    // isn't brittle against dashboard naming choices.
+    const db: any = workerEnv?.DB ?? workerEnv?.D1 ?? null;
 
     if (!db) {
       return json(
