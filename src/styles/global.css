@@ -84,6 +84,26 @@ html, body {
     --accent-primary-text: #6d28d9;
   }
 
+  /* Accent gradient text utility. Dark mode: violet-to-blue gradient
+     clipped to text for decorative headline words. Light mode falls
+     back to solid violet-700 because the gradient (both ends are
+     light hues) has insufficient contrast on the paper background.
+     Use anywhere you had
+        bg-gradient-to-r from-[#a78bfa] to-[#60a5fa] bg-clip-text text-transparent
+     and it will auto-adapt per theme. */
+  .accent-gradient-text {
+    background-image: linear-gradient(to right, #a78bfa, #60a5fa);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+  .light .accent-gradient-text {
+    background-image: none;
+    color: var(--accent-primary-text);
+    -webkit-text-fill-color: var(--accent-primary-text);
+  }
+
   /* Skip-to-main link: visually hidden until keyboard focus, then slides
      into the top-left corner above the sticky nav. Standard a11y pattern
      from WCAG 2.4.1 (Bypass Blocks). */

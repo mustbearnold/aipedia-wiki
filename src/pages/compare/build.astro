@@ -80,7 +80,7 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
 
   <section class="mb-8 pt-2">
     <h1 class="text-3xl sm:text-4xl font-bold leading-tight m-0 mb-3">
-      Build a <span class="bg-gradient-to-r from-[#a78bfa] to-[#60a5fa] bg-clip-text text-transparent">head-to-head</span>
+      Build a <span class="accent-gradient-text">head-to-head</span>
     </h1>
     <p class="text-[var(--text-secondary)] text-sm sm:text-base max-w-2xl leading-relaxed">
       Pick 2 to 4 tools. Compare scores across Utility, Value, Moat, Longevity, plus pricing and use-case fit. Share the URL to send someone a specific comparison.
@@ -247,7 +247,7 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
           card.innerHTML = `
             <div class="flex items-center justify-between mb-2">
               <div class="text-[15px] font-bold text-[var(--text-primary)] truncate">${escapeHtml(t.title)}</div>
-              <div class="text-[18px] font-bold tabular-nums bg-gradient-to-r from-[#a78bfa] to-[#60a5fa] bg-clip-text text-transparent">${t.overall}</div>
+              <div class="text-[18px] font-bold tabular-nums accent-gradient-text">${t.overall}</div>
             </div>
             ${t.company ? `<div class="text-[11px] text-[var(--text-muted)] mb-2">${escapeHtml(t.company)}</div>` : ''}
             ${t.tagline ? `<div class="text-[12px] text-[var(--text-secondary)] leading-snug mb-3 line-clamp-3">${escapeHtml(t.tagline)}</div>` : ''}
