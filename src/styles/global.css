@@ -59,6 +59,12 @@ html, body {
     --text-secondary: rgba(255, 255, 255, 0.6);
     --text-muted: rgba(255, 255, 255, 0.35);
     --accent-primary: #a78bfa;
+    /* Text-on-background variant of accent-primary. Same color in dark
+       mode (text on dark bg has ~5.5:1 contrast) but shifted to a
+       deeper violet in light mode so text on warm paper still clears
+       WCAG AA. Use this any time the accent color is rendered as
+       text / icon stroke, not as a surface or tint. */
+    --accent-primary-text: #a78bfa;
     --accent-secondary: #60a5fa;
     --accent-success: #4ade80;
     --accent-warning: #fbbf24;
@@ -73,6 +79,9 @@ html, body {
     --text-primary: #1a1a1f;
     --text-secondary: #4a4a55;
     --text-muted: #8a8a95;
+    /* #a78bfa on paper #f7f6f3 is only ~1.85:1; use violet-700 for
+       adequate contrast on light backgrounds. */
+    --accent-primary-text: #6d28d9;
   }
 
   /* Skip-to-main link: visually hidden until keyboard focus, then slides

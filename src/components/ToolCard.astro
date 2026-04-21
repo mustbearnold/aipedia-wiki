@@ -115,7 +115,7 @@ const categoryLabel = category.replace('ai-', 'AI ').replace(/\b\w/g, (c) => c.t
           {title}
         </h3>
         {variant === 'clean' ? (
-          <span class="text-sm font-bold text-[#a78bfa] shrink-0 tabular-nums">{score}</span>
+          <span class="tool-card-score text-sm font-bold shrink-0 tabular-nums">{score}</span>
         ) : (
           <span class="text-sm font-bold bg-gradient-to-r from-[#a78bfa] to-[#60a5fa] bg-clip-text text-transparent shrink-0">{score}</span>
         )}
@@ -164,3 +164,9 @@ const categoryLabel = category.replace('ai-', 'AI ').replace(/\b\w/g, (c) => c.t
     </div>
   </div>
 </a>
+
+<style>
+  /* Score number uses the theme-aware accent-text token so it has
+     adequate contrast on both dark (#a78bfa) and light (#6d28d9) bgs. */
+  .tool-card-score { color: var(--accent-primary-text); }
+</style>

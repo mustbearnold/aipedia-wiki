@@ -190,19 +190,27 @@ function shortDate(iso: string): string {
        + type scale. Only active under the .p2-canvas wrapper below so
        other pages are unaffected. -->
   <style is:global>
-    /* Apply only while this page is mounted */
+    /* Scoped body background - a subtle violet ambient tint layered on
+       top of whichever theme base color is active. Works in both dark
+       and light because it uses var(--bg-base). */
     body:has(main .p2-canvas) {
-      /* Subtle ambient tint, no multi-stop gradients */
       background:
         radial-gradient(ellipse 80% 50% at 50% 0%, rgba(167,139,250,0.06) 0%, transparent 60%),
-        #0b0a14;
-      /* Smooth anchor scroll + comfortable offset for fixed nav */
+        var(--bg-base);
       scroll-behavior: smooth;
     }
-    /* Accent-colored selection highlight across the whole demo page */
+    /* Light-mode ambient tint is even more restrained - the paper bg
+       is already warm, a strong violet wash would muddy it. */
+    .light body:has(main .p2-canvas) {
+      background:
+        radial-gradient(ellipse 80% 50% at 50% 0%, rgba(167,139,250,0.035) 0%, transparent 60%),
+        var(--bg-base);
+    }
+    /* Accent-colored selection highlight; text stays readable because
+       browsers auto-invert selection text when alpha is low enough. */
     body:has(main .p2-canvas) ::selection {
       background: rgba(167, 139, 250, 0.32);
-      color: #ffffff;
+      color: var(--text-primary);
     }
     /* Accessible focus rings only on keyboard focus */
     body:has(main .p2-canvas) :focus-visible {
@@ -1071,22 +1079,35 @@ function shortDate(iso: string): string {
      Nothing here escapes the .p2-canvas wrapper.
      ========================================================= -->
 <style is:global>
+/* Design tokens derive from the site's existing theme vars so every
+   surface auto-flips when .light is applied to <html>. Only tokens
+   that don't map cleanly to existing theme vars are hardcoded, and
+   those get a .light override below. */
 .p2-canvas {
-  --p2-accent: #a78bfa;
+  --p2-accent: var(--accent-primary);        /* for surfaces, borders, dots */
+  --p2-accent-text: var(--accent-primary-text); /* for text, auto-flips */
   --p2-accent-hover: #c4b5fd;
-  --p2-fg: rgba(255, 255, 255, 0.92);
-  --p2-fg-strong: #ffffff;
-  --p2-muted: rgba(255, 255, 255, 0.55);
-  --p2-subtle: rgba(255, 255, 255, 0.35);
-  --p2-line: rgba(255, 255, 255, 0.08);
-  --p2-line-strong: rgba(255, 255, 255, 0.14);
-  --p2-surface: rgba(255, 255, 255, 0.025);
-  --p2-surface-hover: rgba(255, 255, 255, 0.045);
+  --p2-fg: var(--text-primary);
+  --p2-fg-strong: var(--text-primary);
+  --p2-muted: var(--text-secondary);
+  --p2-subtle: var(--text-muted);
+  --p2-line: var(--border);
+  --p2-line-strong: rgba(255, 255, 255, 0.14); /* dark-mode default */
+  --p2-surface: var(--bg-card);
+  --p2-surface-hover: var(--bg-card-hover);
+  --p2-input-bg: rgba(0, 0, 0, 0.25);   /* dark-mode default */
+  --p2-cta-primary-text: #0b0a14;       /* black-ish on violet, both modes */
   --p2-radius: 10px;
   --p2-radius-sm: 6px;
 
   max-width: 1080px;
   margin: 0 auto;
+}
+/* Light-mode overrides for tokens without light equivalents in the
+   global theme layer. */
+.light .p2-canvas {
+  --p2-line-strong: #c9c3b8;   /* warm greige, stronger than --border */
+  --p2-input-bg: #ffffff;
 }
 
 /* Recently-viewed component: stays hidden by default via its own
@@ -1130,7 +1151,7 @@ function shortDate(iso: string): string {
   .p2-h1 { font-size: 56px; }
 }
 .p2-h1 .count-up { font-weight: 600; }
-.p2-accent-word { color: var(--p2-accent); font-weight: 600; }
+.p2-accent-word { color: var(--p2-accent-text); font-weight: 600; }
 .p2-subtitle {
   font-size: 15px;
   line-height: 1.55;
@@ -1190,7 +1211,7 @@ function shortDate(iso: string): string {
 .p2-cta:hover .p2-cta-arrow { transform: translateX(2px); }
 .p2-cta-primary {
   background: var(--p2-accent);
-  color: #0b0a14;
+  color: var(--p2-cta-primary-text);
 }
 .p2-cta-primary:hover { background: var(--p2-accent-hover); }
 .p2-cta-primary .p2-cta-meta { color: rgba(11, 10, 20, 0.6); }
@@ -1277,7 +1298,7 @@ function shortDate(iso: string): string {
   text-decoration: none;
   transition: color 120ms ease;
 }
-.p2-section-link:hover { color: var(--p2-accent); }
+.p2-section-link:hover { color: var(--p2-accent-text); }
 
 /* Generous section rhythm. 96px on desktop = Linear/Vercel breathing
    room. Mobile keeps a tighter 64px so content still reads. */
@@ -1332,17 +1353,26 @@ function shortDate(iso: string): string {
   color: var(--p2-fg) !important;
 }
 .p2-canvas .page-size-btn[style*="background"] {
-  color: var(--p2-accent) !important;
+  color: var(--p2-accent-text) !important;
 }
 
 /* Harmonize filter + sort popover panels to p2 surface tokens so they
-   don't pop open in a slightly different dark tone than the rest of
-   the page. */
+   don't pop open in a slightly different tone than the rest of the
+   page. Uses --bg-card (auto-flipping) with an opaque fallback so the
+   popover is always visually grounded. */
 .p2-canvas #filter-popover,
 .p2-canvas #sort-popover {
-  background: #15131f !important;
+  background: var(--bg-card) !important;
   border-color: var(--p2-line-strong) !important;
   border-radius: var(--p2-radius) !important;
+  box-shadow: 0 16px 48px -12px rgba(0, 0, 0, 0.35),
+              0 0 0 1px var(--p2-line) !important;
+}
+/* Dark mode needs a slightly richer panel color than the transparent
+   card surface, so layers above hero gradient don't show through. */
+:root:not(.light) .p2-canvas #filter-popover,
+:root:not(.light) .p2-canvas #sort-popover {
+  background: #15131f !important;
   box-shadow: 0 16px 48px -12px rgba(0, 0, 0, 0.65),
               0 0 0 1px rgba(255, 255, 255, 0.04) !important;
 }
@@ -1365,7 +1395,7 @@ function shortDate(iso: string): string {
 }
 .p2-canvas #filter-popover .filter-option.active,
 .p2-canvas #sort-popover .sort-option.active {
-  color: var(--p2-accent) !important;
+  color: var(--p2-accent-text) !important;
   background: rgba(167, 139, 250, 0.08) !important;
 }
 
@@ -1477,7 +1507,7 @@ function shortDate(iso: string): string {
   font-size: 14px;
   transition: transform 120ms ease, color 120ms ease;
 }
-.p2-trend-card:hover .p2-trend-arrow { transform: translateX(2px); color: var(--p2-accent); }
+.p2-trend-card:hover .p2-trend-arrow { transform: translateX(2px); color: var(--p2-accent-text); }
 
 /* -------- news --------------------------------------------------- */
 .p2-news-list {
@@ -1513,7 +1543,7 @@ function shortDate(iso: string): string {
 }
 .p2-news-row:hover .p2-news-title { color: var(--p2-fg); }
 .p2-news-arrow { color: var(--p2-subtle); font-size: 13px; flex: none; transition: transform 120ms ease, color 120ms ease; }
-.p2-news-row:hover .p2-news-arrow { transform: translateX(2px); color: var(--p2-accent); }
+.p2-news-row:hover .p2-news-arrow { transform: translateX(2px); color: var(--p2-accent-text); }
 
 /* -------- guides (best of + alternatives merged) ----------------- */
 .p2-guides-grid {
@@ -1542,7 +1572,7 @@ function shortDate(iso: string): string {
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--p2-accent);
+  color: var(--p2-accent-text);
   margin-bottom: 10px;
 }
 .p2-guide-title {
@@ -1561,7 +1591,7 @@ function shortDate(iso: string): string {
   font-size: 14px;
   transition: transform 120ms ease, color 120ms ease;
 }
-.p2-guide-card:hover .p2-guide-arrow { transform: translateX(2px); color: var(--p2-accent); }
+.p2-guide-card:hover .p2-guide-arrow { transform: translateX(2px); color: var(--p2-accent-text); }
 
 /* -------- head-to-heads ------------------------------------------ */
 .p2-compare-grid {
@@ -1593,7 +1623,9 @@ function shortDate(iso: string): string {
   background: #fff;
   padding: 1px;
   box-sizing: border-box;
-  border: 2px solid #0b0a14;
+  /* Ring color = page bg so the stacked logos look like cutouts from
+     the card background. Auto-flips with theme. */
+  border: 2px solid var(--bg-base);
 }
 .p2-compare-title {
   flex: 1;
@@ -1611,7 +1643,7 @@ function shortDate(iso: string): string {
 }
 .p2-compare-vs { color: var(--p2-subtle); font-size: 12px; flex: none; }
 .p2-compare-arrow { color: var(--p2-subtle); font-size: 13px; flex: none; transition: transform 120ms ease, color 120ms ease; }
-.p2-compare-card:hover .p2-compare-arrow { transform: translateX(2px); color: var(--p2-accent); }
+.p2-compare-card:hover .p2-compare-arrow { transform: translateX(2px); color: var(--p2-accent-text); }
 
 /* -------- newsletter --------------------------------------------- */
 .p2-newsletter {
@@ -1656,20 +1688,20 @@ function shortDate(iso: string): string {
   padding: 12px 14px;
   border-radius: var(--p2-radius-sm);
   border: 1px solid var(--p2-line);
-  background: rgba(0,0,0,0.25);
+  background: var(--p2-input-bg);
   color: var(--p2-fg);
   font-size: 14px;
   outline: none;
   transition: border-color 120ms ease;
 }
 .p2-newsletter-input::placeholder { color: var(--p2-subtle); }
-.p2-newsletter-input:focus { border-color: var(--p2-accent); }
+.p2-newsletter-input:focus { border-color: var(--p2-accent-text); }
 .p2-newsletter-btn {
   padding: 12px 18px;
   border-radius: var(--p2-radius-sm);
   border: none;
   background: var(--p2-accent);
-  color: #0b0a14;
+  color: var(--p2-cta-primary-text);
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
@@ -1729,7 +1761,7 @@ function shortDate(iso: string): string {
 }
 .p2-faq-item[open] summary::after {
   content: '-';
-  color: var(--p2-accent);
+  color: var(--p2-accent-text);
 }
 .p2-faq-item p {
   font-size: 14px;
@@ -1738,7 +1770,7 @@ function shortDate(iso: string): string {
   margin: 14px 0 0;
 }
 .p2-faq-item a {
-  color: var(--p2-accent);
+  color: var(--p2-accent-text);
   text-decoration: none;
 }
 .p2-faq-item a:hover { text-decoration: underline; }
@@ -1758,19 +1790,18 @@ function shortDate(iso: string): string {
 }
 
 /* Search trigger in the nav gets the same visual treatment as the
-   hero search button for a consistent look on the homepage. This is
-   the only nav tweak that remains scoped to the homepage - everything
-   else lives in Nav.astro directly now. */
+   hero search button for a consistent look on the homepage. Uses
+   theme variables so it auto-flips in light mode. */
 body:has(main .p2-canvas) nav #search-trigger {
-  background: rgba(255, 255, 255, 0.025) !important;
-  border-color: rgba(255, 255, 255, 0.08) !important;
-  color: rgba(255, 255, 255, 0.55) !important;
+  background: var(--bg-card) !important;
+  border-color: var(--border) !important;
+  color: var(--text-secondary) !important;
   font-size: 13px !important;
 }
 body:has(main .p2-canvas) nav #search-trigger:hover {
-  background: rgba(255, 255, 255, 0.045) !important;
-  border-color: rgba(255, 255, 255, 0.14) !important;
-  color: rgba(255, 255, 255, 0.92) !important;
+  background: var(--bg-card-hover) !important;
+  border-color: var(--p2-line-strong) !important;
+  color: var(--text-primary) !important;
 }
 </style>
 </BaseLayout>
