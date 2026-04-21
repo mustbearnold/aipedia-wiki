@@ -1,0 +1,720 @@
+---
+/**
+ * Tool-page redesign demo. Renders /tools/claude/ content with the same
+ * $10k-site discipline applied to the homepage: single accent, zero
+ * decorative gradients, theme-aware tokens, generous section rhythm,
+ * quiet motion, unified card language.
+ *
+ * Lives at /demo-claude/. Noindex. Paired with the live /tools/claude/
+ * for A/B comparison via the banner link at the top.
+ *
+ * Implementation strategy:
+ *   - Read the tool entry + rendered content + headings
+ *   - Custom hero built from frontmatter (logo, title, status, tagline,
+ *     score card, chip strip, primary CTA)
+ *   - Rendered markdown flows below, styled via scoped .t2-canvas CSS
+ *   - Floating TOC on desktop
+ *   - All tokens derive from existing theme variables so the page
+ *     flips correctly between dark and light
+ */
+import { getEntry, render } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ToolLogo from '../components/ToolLogo.astro';
+
+const entry = await getEntry('tools', 'claude');
+if (!entry) throw new Error('Could not load tool entry: claude');
+const { Content, headings } = await render(entry);
+
+const f = entry.data;
+const scores = f.scores ?? { utility: 0, value: 0, moat: 0, longevity: 0 };
+const overall = Math.round(((scores.utility ?? 0) + (scores.value ?? 0) + (scores.moat ?? 0) + (scores.longevity ?? 0)) / 4 * 10) / 10;
+
+const categoryLabels: Record<string, string> = {
+  'ai-chatbots': 'Chatbots',
+  'ai-voice': 'Voice',
+  'ai-video': 'Video',
+  'ai-coding': 'Coding',
+  'ai-image': 'Image',
+  'ai-writing': 'Writing',
+  'ai-automation': 'Automation',
+  'ai-seo': 'SEO',
+  'ai-design': 'Design',
+  'ai-search': 'Search',
+  'ai-notes': 'Notes',
+  'ai-music': 'Music',
+  'ai-presentation': 'Presentation',
+  'ai-research': 'Research',
+};
+const catLabel = categoryLabels[f.category ?? ''] ?? (f.category ?? '');
+
+// Sparkbar helper: height = score * 10, color = same tier as homepage card
+function barColor(n: number): string {
+  if (n >= 8) return '#34d399';
+  if (n >= 7) return '#38bdf8';
+  if (n >= 6) return '#fbbf24';
+  return '#fb7185';
+}
+const sparkbars = [
+  { label: 'Utility', value: scores.utility ?? 0 },
+  { label: 'Value', value: scores.value ?? 0 },
+  { label: 'Moat', value: scores.moat ?? 0 },
+  { label: 'Longevity', value: scores.longevity ?? 0 },
+].map(b => ({ ...b, color: barColor(b.value), pct: Math.max(15, Math.min(100, (b.value / 10) * 100)) }));
+
+// TOC: only H2 headings, ignore depth > 2 for cleanliness
+const tocHeadings = (headings ?? []).filter(h => h.depth === 2).map(h => ({ slug: h.slug, text: h.text }));
+
+// Launched -> year label
+const launchedStr = f.launched ? String(f.launched).slice(0, 4) : '';
+const verifiedStr = f.last_verified
+  ? (() => { const d = new Date(String(f.last_verified)); const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']; return `${months[d.getUTCMonth()]} ${d.getUTCFullYear()}`; })()
+  : '';
+---
+
+<BaseLayout
+  title="Demo tool page (Phase 1) | aipedia.wiki"
+  description="Internal demo of tool-page redesign."
+  noindex={true}
+>
+  <!-- Compare-to-live banner. Thin, unobtrusive, lets the user flip
+       between this demo and /tools/claude/ to A/B the redesign. -->
+  <div class="mb-6 -mt-2 rounded-lg border border-[var(--border)] bg-[var(--bg-card)] px-3 py-2 text-[12px] flex items-center gap-2 flex-wrap">
+    <span class="font-semibold text-[var(--accent-primary-text)]">DEMO</span>
+    <span class="text-[var(--text-muted)]">Tool page redesign: unified palette, no pastel callouts, no teal score donut, quieter rhythm.</span>
+    <a href="/tools/claude/" class="ml-auto text-[var(--text-secondary)] hover:text-[var(--text-primary)] no-underline">Compare with live /tools/claude/</a>
+  </div>
+
+  <div class="t2-canvas">
+    <!-- Breadcrumb -->
+    <nav class="t2-breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span aria-hidden="true">/</span>
+      <a href={`/categories/${f.category}/`}>{catLabel}</a>
+      <span aria-hidden="true">/</span>
+      <span class="t2-breadcrumb-current" aria-current="page">{f.title}</span>
+    </nav>
+
+    <!-- Hero. Single row on desktop: logo + title block on left, score
+         card on right. Everything flat, single accent, no teal donut. -->
+    <header class="t2-hero">
+      <div class="t2-hero-main">
+        <div class="t2-logo-frame">
+          <ToolLogo slug={f.slug ?? 'claude'} title={f.title} size={64} className="rounded-lg" />
+        </div>
+        <div class="t2-hero-copy">
+          <div class="t2-title-row">
+            <h1 class="t2-title">{f.title}</h1>
+            {f.status === 'active' && (
+              <span class="t2-status-pill" aria-label="Status: active">
+                <span class="t2-status-dot" aria-hidden="true"></span>
+                Active
+              </span>
+            )}
+          </div>
+          {f.tagline && <p class="t2-tagline">{f.tagline}</p>}
+          <div class="t2-meta-line">
+            {f.company && <span>{f.company}</span>}
+            <span aria-hidden="true" class="t2-meta-sep">&middot;</span>
+            <a href="/about/editorial/" class="t2-meta-link">By aipedia.wiki Editorial</a>
+            {f.last_verified && (
+              <>
+                <span aria-hidden="true" class="t2-meta-sep">&middot;</span>
+                <span>Verified {verifiedStr}</span>
+              </>
+            )}
+          </div>
+        </div>
+      </div>
+
+      <!-- Score card. Flat violet number + 4-bar sparkbar + compact
+           legend. No teal, no donut, no pastel backing. -->
+      <aside class="t2-score" aria-label={`Overall score ${overall} out of 10`}>
+        <div class="t2-score-top">
+          <span class="t2-score-label">Score</span>
+          <span class="t2-score-value">{overall}<span class="t2-score-slash">/10</span></span>
+        </div>
+        <div class="t2-score-bars" title={sparkbars.map(b => `${b.label} ${b.value}/10`).join(' · ')}>
+          {sparkbars.map(b => (
+            <div class="t2-score-bar">
+              <div class="t2-score-bar-col">
+                <span class="t2-score-bar-fill" style={`height: ${b.pct}%; background: ${b.color};`}></span>
+              </div>
+              <span class="t2-score-bar-num tabular-nums">{b.value}</span>
+              <span class="t2-score-bar-label">{b.label}</span>
+            </div>
+          ))}
+        </div>
+      </aside>
+    </header>
+
+    <!-- Chip strip. Four labeled chips. Compact, scannable. -->
+    <div class="t2-chips">
+      {f.price_range && (
+        <div class="t2-chip">
+          <span class="t2-chip-label">Pricing</span>
+          <span class="t2-chip-value">{f.price_range}</span>
+        </div>
+      )}
+      {catLabel && (
+        <div class="t2-chip">
+          <span class="t2-chip-label">Category</span>
+          <span class="t2-chip-value">{catLabel}</span>
+        </div>
+      )}
+      {launchedStr && (
+        <div class="t2-chip">
+          <span class="t2-chip-label">Launched</span>
+          <span class="t2-chip-value">{launchedStr}</span>
+        </div>
+      )}
+      {verifiedStr && (
+        <div class="t2-chip">
+          <span class="t2-chip-label">Verified</span>
+          <span class="t2-chip-value">{verifiedStr}</span>
+        </div>
+      )}
+    </div>
+
+    <!-- Quick Answer. The editorial verdict, pulled straight from
+         frontmatter.quick_answer. No pastel gradient backing - flat
+         card with a left accent rule that stays violet in both modes. -->
+    {f.quick_answer && (
+      <section class="t2-verdict" aria-labelledby="t2-verdict-heading">
+        <h2 id="t2-verdict-heading" class="t2-verdict-heading">Quick answer</h2>
+        <p class="t2-verdict-body">{f.quick_answer}</p>
+      </section>
+    )}
+
+    <!-- CTAs. Primary violet solid, secondary outline. Same pattern as
+         homepage. -->
+    <div class="t2-ctas">
+      {f.url && (
+        <a href={f.url} target="_blank" rel="noopener" class="t2-cta t2-cta-primary">
+          Try {f.title} free
+          <span class="t2-cta-arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      )}
+      <a href={`/compare/`} class="t2-cta t2-cta-secondary">
+        Compare alternatives
+        <span class="t2-cta-arrow" aria-hidden="true">&rarr;</span>
+      </a>
+    </div>
+
+    <!-- Main content layout: prose + floating TOC on desktop. -->
+    <div class="t2-layout">
+      <article class="t2-prose">
+        <Content />
+      </article>
+
+      {tocHeadings.length > 0 && (
+        <aside class="t2-toc" aria-label="On this page">
+          <div class="t2-toc-label">On this page</div>
+          <ol class="t2-toc-list">
+            {tocHeadings.map(h => (
+              <li><a href={`#${h.slug}`}>{h.text}</a></li>
+            ))}
+          </ol>
+        </aside>
+      )}
+    </div>
+  </div>
+
+  <style is:global>
+    /* Scoped page background. Light + dark both flip via --bg-base. */
+    body:has(main .t2-canvas) {
+      background:
+        radial-gradient(ellipse 80% 50% at 50% 0%, rgba(167,139,250,0.06) 0%, transparent 60%),
+        var(--bg-base);
+      scroll-behavior: smooth;
+    }
+    .light body:has(main .t2-canvas) {
+      background:
+        radial-gradient(ellipse 80% 50% at 50% 0%, rgba(167,139,250,0.035) 0%, transparent 60%),
+        var(--bg-base);
+    }
+    body:has(main .t2-canvas) ::selection {
+      background: rgba(167, 139, 250, 0.32);
+      color: var(--text-primary);
+    }
+
+    .t2-canvas {
+      --t2-fg: var(--text-primary);
+      --t2-muted: var(--text-secondary);
+      --t2-subtle: var(--text-muted);
+      --t2-line: var(--border);
+      --t2-surface: var(--bg-card);
+      --t2-surface-hover: var(--bg-card-hover);
+      --t2-accent: var(--accent-primary);
+      --t2-accent-text: var(--accent-primary-text);
+      --t2-radius: 10px;
+      --t2-radius-sm: 6px;
+      --t2-line-strong: rgba(255, 255, 255, 0.14);
+
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 4px;
+    }
+    .light .t2-canvas {
+      --t2-line-strong: #c9c3b8;
+    }
+
+    /* -------- breadcrumb ------------------------------------------- */
+    .t2-breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 28px;
+      font-size: 13px;
+      color: var(--t2-subtle);
+    }
+    .t2-breadcrumb a {
+      color: var(--t2-muted);
+      text-decoration: none;
+      transition: color 120ms ease;
+    }
+    .t2-breadcrumb a:hover { color: var(--t2-fg); }
+    .t2-breadcrumb-current { color: var(--t2-muted); }
+
+    /* -------- hero ------------------------------------------------- */
+    .t2-hero {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+      margin-bottom: 28px;
+    }
+    @media (min-width: 900px) {
+      .t2-hero { grid-template-columns: 1fr 280px; gap: 40px; align-items: start; }
+    }
+    .t2-hero-main {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      min-width: 0;
+    }
+    .t2-logo-frame {
+      flex: none;
+      padding: 3px;
+      border-radius: 12px;
+      background: var(--t2-surface);
+      border: 1px solid var(--t2-line);
+    }
+    .t2-hero-copy {
+      min-width: 0;
+      flex: 1;
+    }
+    .t2-title-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 8px;
+    }
+    .t2-title {
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      color: var(--t2-fg);
+      margin: 0;
+    }
+    @media (min-width: 768px) { .t2-title { font-size: 40px; } }
+    .t2-status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 2px 8px 2px 7px;
+      border-radius: 999px;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #22c55e;
+      background: rgba(34, 197, 94, 0.10);
+      border: 1px solid rgba(34, 197, 94, 0.22);
+    }
+    .light .t2-status-pill {
+      color: #15803d;
+      background: rgba(34, 197, 94, 0.10);
+      border-color: rgba(34, 197, 94, 0.28);
+    }
+    .t2-status-dot {
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: currentColor;
+      flex: none;
+    }
+    .t2-tagline {
+      font-size: 15px;
+      line-height: 1.55;
+      color: var(--t2-muted);
+      margin: 0 0 10px;
+      max-width: 60ch;
+    }
+    .t2-meta-line {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      font-size: 12px;
+      color: var(--t2-subtle);
+    }
+    .t2-meta-sep { color: var(--t2-subtle); }
+    .t2-meta-link {
+      color: var(--t2-subtle);
+      text-decoration: none;
+      transition: color 120ms ease;
+    }
+    .t2-meta-link:hover { color: var(--t2-fg); }
+
+    /* -------- score card ------------------------------------------ */
+    .t2-score {
+      padding: 16px 18px;
+      border-radius: var(--t2-radius);
+      border: 1px solid var(--t2-line);
+      background: var(--t2-surface);
+    }
+    .t2-score-top {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 14px;
+    }
+    .t2-score-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--t2-subtle);
+    }
+    .t2-score-value {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--t2-accent-text);
+      font-variant-numeric: tabular-nums;
+      letter-spacing: -0.02em;
+    }
+    .t2-score-slash {
+      color: var(--t2-subtle);
+      font-size: 16px;
+      font-weight: 500;
+      margin-left: 2px;
+    }
+    .t2-score-bars {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 6px;
+    }
+    .t2-score-bar {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+    }
+    .t2-score-bar-col {
+      width: 100%;
+      height: 36px;
+      display: flex;
+      align-items: flex-end;
+      border-radius: 3px;
+      background: rgba(255,255,255,0.03);
+    }
+    .light .t2-score-bar-col { background: rgba(0,0,0,0.035); }
+    .t2-score-bar-fill {
+      display: block;
+      width: 100%;
+      border-radius: 3px 3px 0 0;
+    }
+    .t2-score-bar-num {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--t2-fg);
+    }
+    .t2-score-bar-label {
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--t2-subtle);
+    }
+
+    /* -------- chip strip ------------------------------------------ */
+    .t2-chips {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+      margin-bottom: 28px;
+    }
+    @media (min-width: 640px) {
+      .t2-chips { grid-template-columns: repeat(4, 1fr); }
+    }
+    .t2-chip {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      padding: 10px 12px;
+      border-radius: var(--t2-radius-sm);
+      border: 1px solid var(--t2-line);
+      background: var(--t2-surface);
+    }
+    .t2-chip-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--t2-subtle);
+    }
+    .t2-chip-value {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--t2-fg);
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* -------- quick answer / verdict ------------------------------ */
+    .t2-verdict {
+      padding: 24px 24px 24px 28px;
+      border-radius: var(--t2-radius);
+      background: var(--t2-surface);
+      border: 1px solid var(--t2-line);
+      border-left: 3px solid var(--t2-accent);
+      margin-bottom: 28px;
+    }
+    .t2-verdict-heading {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--t2-accent-text);
+      margin: 0 0 10px;
+    }
+    .t2-verdict-body {
+      font-size: 15px;
+      line-height: 1.6;
+      color: var(--t2-fg);
+      margin: 0;
+      max-width: 68ch;
+    }
+
+    /* -------- CTAs ------------------------------------------------- */
+    .t2-ctas {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+      margin-bottom: 56px;
+    }
+    @media (min-width: 640px) {
+      .t2-ctas {
+        grid-template-columns: auto auto;
+        justify-content: start;
+      }
+    }
+    .t2-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 18px;
+      border-radius: var(--t2-radius);
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: background 120ms ease, border-color 120ms ease;
+    }
+    .t2-cta-arrow { transition: transform 120ms ease; }
+    .t2-cta:hover .t2-cta-arrow { transform: translateX(2px); }
+    .t2-cta-primary {
+      background: var(--t2-accent);
+      color: #0b0a14;
+    }
+    .t2-cta-primary:hover { background: #c4b5fd; }
+    .t2-cta-secondary {
+      border: 1px solid var(--t2-line);
+      background: var(--t2-surface);
+      color: var(--t2-fg);
+    }
+    .t2-cta-secondary:hover {
+      background: var(--t2-surface-hover);
+      border-color: var(--t2-line-strong);
+    }
+
+    /* =========================================================
+       LAYOUT: prose + floating TOC
+       ========================================================= */
+    .t2-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
+    @media (min-width: 1024px) {
+      .t2-layout { grid-template-columns: 1fr 220px; gap: 64px; }
+    }
+
+    /* -------- prose ----------------------------------------------- */
+    .t2-prose {
+      min-width: 0;
+      max-width: 68ch;
+    }
+    .t2-prose > :first-child { margin-top: 0; }
+    .t2-prose h1 { display: none; } /* we render our own */
+    .t2-prose h2 {
+      font-size: 22px;
+      font-weight: 600;
+      letter-spacing: -0.015em;
+      color: var(--t2-fg);
+      margin: 80px 0 16px;
+      padding-top: 24px;
+      border-top: 1px solid var(--t2-line);
+      scroll-margin-top: 80px;
+    }
+    .t2-prose > h2:first-of-type {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: none;
+    }
+    .t2-prose h3 {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--t2-fg);
+      margin: 32px 0 8px;
+    }
+    .t2-prose p {
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--t2-muted);
+      margin: 0 0 16px;
+    }
+    .t2-prose p strong { color: var(--t2-fg); font-weight: 600; }
+    .t2-prose ul, .t2-prose ol {
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--t2-muted);
+      margin: 0 0 20px;
+      padding-left: 20px;
+    }
+    .t2-prose li { margin-bottom: 6px; }
+    .t2-prose li strong { color: var(--t2-fg); font-weight: 600; }
+    .t2-prose a {
+      color: var(--t2-accent-text);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(167, 139, 250, 0.25);
+      transition: border-color 120ms ease;
+    }
+    .light .t2-prose a {
+      border-bottom-color: rgba(109, 40, 217, 0.3);
+    }
+    .t2-prose a:hover { border-bottom-color: currentColor; }
+    .t2-prose code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.9em;
+      background: var(--t2-surface);
+      border: 1px solid var(--t2-line);
+      padding: 1px 5px;
+      border-radius: 4px;
+      color: var(--t2-fg);
+    }
+    .t2-prose blockquote {
+      border-left: 2px solid var(--t2-accent);
+      margin: 0 0 20px;
+      padding: 4px 0 4px 18px;
+      color: var(--t2-fg);
+    }
+    .t2-prose blockquote p { color: var(--t2-fg); }
+    .t2-prose table {
+      width: 100%;
+      font-size: 13.5px;
+      border-collapse: collapse;
+      margin: 0 0 24px;
+      display: block;
+      overflow-x: auto;
+    }
+    .t2-prose thead {
+      border-bottom: 1px solid var(--t2-line-strong);
+    }
+    .t2-prose th {
+      padding: 10px 12px;
+      text-align: left;
+      font-weight: 600;
+      color: var(--t2-fg);
+      font-size: 12px;
+      letter-spacing: 0.02em;
+    }
+    .t2-prose td {
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--t2-line);
+      color: var(--t2-muted);
+      vertical-align: top;
+    }
+    .t2-prose td strong { color: var(--t2-fg); }
+    .t2-prose tbody tr:last-child td { border-bottom: none; }
+    .t2-prose hr {
+      border: none;
+      border-top: 1px solid var(--t2-line);
+      margin: 48px 0;
+    }
+
+    /* Force-hide any old FAQ-answer details styling from the global
+       .wiki-prose that might bleed through. */
+    .t2-prose details {
+      border: 1px solid var(--t2-line);
+      border-radius: var(--t2-radius-sm);
+      padding: 14px 16px;
+      margin-bottom: 8px;
+      background: var(--t2-surface);
+    }
+    .t2-prose details summary {
+      cursor: pointer;
+      font-weight: 600;
+      color: var(--t2-fg);
+      list-style: none;
+    }
+    .t2-prose details[open] summary {
+      margin-bottom: 8px;
+    }
+    .t2-prose details p { margin: 0; }
+
+    /* -------- floating TOC ---------------------------------------- */
+    .t2-toc {
+      display: none;
+    }
+    @media (min-width: 1024px) {
+      .t2-toc {
+        display: block;
+        position: sticky;
+        top: 80px;
+        align-self: start;
+        font-size: 13px;
+      }
+    }
+    .t2-toc-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--t2-subtle);
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--t2-line);
+    }
+    .t2-toc-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+    }
+    .t2-toc-list li { margin: 0; }
+    .t2-toc-list a {
+      color: var(--t2-muted);
+      text-decoration: none;
+      transition: color 120ms ease;
+      line-height: 1.35;
+      display: block;
+    }
+    .t2-toc-list a:hover { color: var(--t2-accent-text); }
+
+    /* Respect motion preferences */
+    @media (prefers-reduced-motion: reduce) {
+      body:has(main .t2-canvas) * { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+    }
+  </style>
+</BaseLayout>
