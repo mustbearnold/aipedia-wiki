@@ -1,10 +1,16 @@
 // POST /api/subscribe
 // Accepts an email address and stores it in the subscribers table.
 //
-// Astro API route running on the Cloudflare worker (prerender = false).
-// Bindings come from locals.runtime.env per @astrojs/cloudflare adapter.
+// Astro v6 moved Cloudflare binding access from locals.runtime.env to
+// a direct module import from 'cloudflare:workers'. The binding object
+// is typed from wrangler.jsonc + the Pages dashboard bindings.
 
 import type { APIRoute } from 'astro';
+// @ts-expect-error - cloudflare:workers is a Worker runtime module
+// provided by the Cloudflare environment at runtime, not a normal npm
+// package, so TypeScript's module resolver doesn't find it at build
+// time. Runtime resolves it correctly on the worker.
+import { env } from 'cloudflare:workers';
 
 export const prerender = false;
 
@@ -48,13 +54,12 @@ async function checkRateLimit(db: any, ipHash: string): Promise<boolean> {
   }
 }
 
-function json(body: unknown, status: number, extra?: Record<string, string>): Response {
+function json(body: unknown, status: number): Response {
   return new Response(JSON.stringify(body), {
     status,
     headers: {
       'content-type': 'application/json',
       'cache-control': 'no-store',
-      ...(extra ?? {}),
     },
   });
 }
@@ -69,30 +74,17 @@ export const GET: APIRoute = () =>
     },
   });
 
-// Wrap the entire POST in a top-level try/catch so any thrown error
-// becomes a JSON response with error detail, never an opaque 500 with
-// an empty body from the Worker runtime.
-export const POST: APIRoute = async ({ request, locals, clientAddress }) => {
+export const POST: APIRoute = async ({ request, clientAddress }) => {
   try {
-    // @astrojs/cloudflare exposes bindings via locals.runtime.env.
-    // Fall back to scanning locals for anything that looks like a DB
-    // (handles future adapter changes gracefully).
-    const runtime: any = (locals as any)?.runtime;
-    const env: any = runtime?.env ?? (locals as any)?.env ?? {};
-    const db: any = env?.DB ?? (locals as any)?.DB ?? null;
+    const workerEnv: any = env ?? {};
+    const db: any = workerEnv?.DB ?? null;
 
     if (!db) {
       return json(
         {
           error: 'subscribe_disabled',
           detail: 'DB not bound',
-          diag: {
-            hasLocals: !!locals,
-            hasRuntime: !!runtime,
-            localsKeys: locals ? Object.keys(locals) : [],
-            runtimeKeys: runtime ? Object.keys(runtime) : [],
-            envKeys: env ? Object.keys(env).slice(0, 20) : [],
-          },
+          envKeys: workerEnv ? Object.keys(workerEnv).slice(0, 20) : [],
         },
         503,
       );
@@ -115,13 +107,13 @@ export const POST: APIRoute = async ({ request, locals, clientAddress }) => {
       request.headers.get('CF-Connecting-IP') ??
       (typeof clientAddress === 'string' ? clientAddress : '0.0.0.0');
 
-    const tsSecret = String(env?.TURNSTILE_SECRET_KEY ?? '');
+    const tsSecret = String(workerEnv?.TURNSTILE_SECRET_KEY ?? '');
     const tsOk = await verifyTurnstile(String(payload?.turnstile_token ?? ''), ip, tsSecret);
     if (!tsOk) {
       return json({ error: 'captcha_failed' }, 403);
     }
 
-    const ipHash = await sha256(`${ip}|${env?.IP_HASH_SECRET ?? ''}`);
+    const ipHash = await sha256(`${ip}|${workerEnv?.IP_HASH_SECRET ?? ''}`);
 
     const underLimit = await checkRateLimit(db, ipHash);
     if (!underLimit) {
@@ -144,20 +136,16 @@ export const POST: APIRoute = async ({ request, locals, clientAddress }) => {
         {
           error: 'db_failed',
           detail: String(err?.message ?? err).slice(0, 300),
-          hint: 'Verify the subscribers table exists: CREATE TABLE IF NOT EXISTS subscribers (id INTEGER PRIMARY KEY AUTOINCREMENT, email TEXT UNIQUE NOT NULL, ip_hash TEXT NOT NULL, source TEXT DEFAULT \'unknown\', created_at INTEGER DEFAULT (unixepoch()));',
+          hint: 'Run: CREATE TABLE IF NOT EXISTS subscribers (id INTEGER PRIMARY KEY AUTOINCREMENT, email TEXT UNIQUE NOT NULL, ip_hash TEXT NOT NULL, source TEXT DEFAULT \'unknown\', created_at INTEGER DEFAULT (unixepoch()));',
         },
         500,
       );
     }
   } catch (err: any) {
-    // Top-level safety net - catches anything that slips past inner handlers
-    // (locals shape mismatch, runtime hiccups, etc.) so the browser gets a
-    // parseable JSON response instead of an empty-body 500.
     return json(
       {
         error: 'unhandled',
         detail: String(err?.message ?? err).slice(0, 300),
-        stack: String(err?.stack ?? '').slice(0, 500),
       },
       500,
     );
