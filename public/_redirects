@@ -32,7 +32,8 @@
 /use-cases/:slug/ /guides/:slug/ 301
 /use-cases/:slug /guides/:slug/ 301
 
-# API subscribe GET: redirect crawlers to the homepage signup section.
-# The function handler also handles this, but having the redirect at the
-# edge layer is belt-and-suspenders against cold-start 404s.
-/api/subscribe /#subscribe 301
+# Note: /api/subscribe redirect removed 2026-04-21. The _redirects rule
+# was method-blind and intercepted POSTs from the newsletter form, which
+# caused silent signup failures. functions/api/subscribe.ts handles GET
+# via onRequestGet (crawler-friendly 301 to /#subscribe) and POST via
+# onRequestPost (actual signup logic). No edge-layer redirect needed.
