@@ -1,34 +1,35 @@
 ---
+/**
+ * ToolLayout — production tool-page template.
+ *
+ * Visual system promoted from the /demo-claude/ redesign: single-accent
+ * palette, flat score card with sparkbars, compact chip strip, inline
+ * Quick Answer block from frontmatter, floating TOC, <details> FAQ
+ * accordion, and the "strip redundant System Verdict" script. SEO
+ * JSON-LD, sticky mobile CTA, reviews, related comparisons, and
+ * recently-viewed tracking are preserved from the prior layout.
+ */
+import { getCollection } from 'astro:content';
 import BaseLayout from './BaseLayout.astro';
 import ReadingProgress from '../components/ReadingProgress.astro';
-import Breadcrumb from '../components/Breadcrumb.astro';
-import ScoreBadge from '../components/ScoreBadge.astro';
-import ScoreGrid from '../components/ScoreGrid.astro';
-import FreshnessBadge from '../components/FreshnessBadge.astro';
-import AffiliateCTA from '../components/AffiliateCTA.astro';
 import BreadcrumbLD from '../components/seo/BreadcrumbLD.astro';
 import SoftwareApplicationLD from '../components/seo/SoftwareApplicationLD.astro';
 import FAQPageLD from '../components/seo/FAQPageLD.astro';
-import RelatedTools from '../components/RelatedTools.astro';
-import TopAlternatives from '../components/TopAlternatives.astro';
-import QuickAnswer from '../components/QuickAnswer.astro';
+import ToolLogo from '../components/ToolLogo.astro';
 import ToolCTA from '../components/ToolCTA.astro';
-import TableOfContents from '../components/TableOfContents.astro';
-import FAQAccordionScript from '../components/FAQAccordionScript.astro';
-import ShareButtons from '../components/ShareButtons.astro';
-import PostBodyEnhancements from '../components/PostBodyEnhancements.astro';
+import StickyMobileCTA from '../components/StickyMobileCTA.astro';
+import GithubStats from '../components/GithubStats.astro';
+import ProsCons from '../components/ProsCons.astro';
 import RelatedComparisons from '../components/RelatedComparisons.astro';
 import ReviewsBlock from '../components/ReviewsBlock.astro';
-import StickyMobileCTA from '../components/StickyMobileCTA.astro';
-import ProsCons from '../components/ProsCons.astro';
+import ShareButtons from '../components/ShareButtons.astro';
+import FAQAccordionScript from '../components/FAQAccordionScript.astro';
+import PostBodyEnhancements from '../components/PostBodyEnhancements.astro';
+import HelpfulVote from '../components/HelpfulVote.astro';
 import FeedbackForm from '../components/FeedbackForm.astro';
 import ReportOutdatedButton from '../components/ReportOutdatedButton.astro';
-import HelpfulVote from '../components/HelpfulVote.astro';
 import BadgeEmbed from '../components/BadgeEmbed.astro';
 import CiteThisPage from '../components/CiteThisPage.astro';
-import PriceHistory from '../components/PriceHistory.astro';
-import ToolLogo from '../components/ToolLogo.astro';
-import GithubStats from '../components/GithubStats.astro';
 
 interface Props {
   frontmatter: Record<string, any>;
@@ -38,249 +39,335 @@ interface Props {
 }
 
 const { frontmatter, faqItems = [], headings = [], readingMinutes = 0 } = Astro.props;
+const f = frontmatter;
 
-const scores = frontmatter.scores ?? { utility: 0, value: 0, moat: 0, longevity: 0 };
-const overallScore = Math.round(((scores.utility ?? 0) + (scores.value ?? 0) + (scores.moat ?? 0) + (scores.longevity ?? 0)) / 4 * 10) / 10;
+const scores = f.scores ?? { utility: 0, value: 0, moat: 0, longevity: 0 };
+const overall = Math.round(((scores.utility ?? 0) + (scores.value ?? 0) + (scores.moat ?? 0) + (scores.longevity ?? 0)) / 4 * 10) / 10;
 
-const categoryMap: Record<string, { emoji: string; label: string }> = {
-  'ai-chatbots': { emoji: '\u{1F4AC}', label: 'Chatbots' },
-  'ai-voice': { emoji: '\u{1F399}\uFE0F', label: 'Voice' },
-  'ai-video': { emoji: '\u{1F3AC}', label: 'Video' },
-  'ai-coding': { emoji: '\u{1F4BB}', label: 'Coding' },
-  'ai-image': { emoji: '\u{1F3A8}', label: 'Image' },
-  'ai-writing': { emoji: '\u270D\uFE0F', label: 'Writing' },
-  'ai-automation': { emoji: '\u26A1', label: 'Automation' },
-  'ai-seo': { emoji: '\u{1F4C8}', label: 'SEO' },
-  'ai-design': { emoji: '\u{1F58C}\uFE0F', label: 'Design' },
-  'ai-search': { emoji: '\u{1F50D}', label: 'Search' },
-  'ai-notes': { emoji: '\u{1F4DD}', label: 'Notes' },
-  'ai-music': { emoji: '\u{1F3B5}', label: 'Music' },
-  'ai-presentation': { emoji: '\uD83D\uDCCA', label: 'Presentation' },
-  'ai-research': { emoji: '\uD83D\uDD2C', label: 'Research' },
+const categoryLabels: Record<string, string> = {
+  'ai-chatbots': 'Chatbots',
+  'ai-voice': 'Voice',
+  'ai-video': 'Video',
+  'ai-coding': 'Coding',
+  'ai-image': 'Image',
+  'ai-writing': 'Writing',
+  'ai-automation': 'Automation',
+  'ai-seo': 'SEO',
+  'ai-design': 'Design',
+  'ai-search': 'Search',
+  'ai-notes': 'Notes',
+  'ai-music': 'Music',
+  'ai-presentation': 'Presentation',
+  'ai-research': 'Research',
 };
+const catSlug = f.category ?? '';
+const catLabel = categoryLabels[catSlug] ?? catSlug;
 
-const catSlug = frontmatter.category ?? '';
-const catInfo = categoryMap[catSlug] ?? { emoji: '\u{1F527}', label: catSlug };
-
-const affiliate = frontmatter.affiliate ?? {};
-const hasProgram = affiliate?.has_program ?? false;
-const tags = frontmatter.tags ?? [];
-
+const toolSlug = f.slug ?? '';
 const siteBase = Astro.site?.href ?? 'https://aipedia.wiki';
-const toolSlug = frontmatter.slug ?? '';
-
-const breadcrumbItems = [
-  { label: catInfo.label, href: `/categories/${catSlug}/` },
-  { label: frontmatter.title },
-];
+const affiliate = f.affiliate ?? {};
 
 const breadcrumbLdItems = [
   { name: 'Home', url: `${siteBase}` },
-  { name: catInfo.label, url: `${siteBase}categories/${catSlug}/` },
-  { name: frontmatter.title, url: `${siteBase}tools/${toolSlug}/` },
+  { name: catLabel, url: `${siteBase}categories/${catSlug}/` },
+  { name: f.title, url: `${siteBase}tools/${toolSlug}/` },
 ];
+
+// Peer alternatives for the in-prose "Top alternatives" section: same
+// primary category, sorted by overall score descending. Excludes self.
+const allTools = await getCollection('tools');
+const peers = allTools
+  .filter(t => t.data.category === f.category && (t.data.slug ?? t.id) !== (f.slug ?? toolSlug))
+  .map(t => {
+    const s = t.data.scores ?? { utility: 0, value: 0, moat: 0, longevity: 0 };
+    const avg = Math.round(((s.utility ?? 0) + (s.value ?? 0) + (s.moat ?? 0) + (s.longevity ?? 0)) / 4 * 10) / 10;
+    return {
+      slug: t.data.slug ?? t.id,
+      title: t.data.title,
+      tagline: t.data.tagline ?? '',
+      score: avg,
+      price: t.data.price_range ?? '',
+    };
+  })
+  .sort((a, b) => b.score - a.score);
+
+// Price history: newest first for display.
+const priceHistory = Array.isArray(f.price_history) ? [...f.price_history].reverse() : [];
+const monthShort = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+function formatHistoryDate(v: unknown): string {
+  if (!v) return '';
+  const d = v instanceof Date ? v : new Date(String(v));
+  if (isNaN(d.getTime())) return String(v);
+  return `${monthShort[d.getUTCMonth()]} ${d.getUTCDate()}, ${d.getUTCFullYear()}`;
+}
+
+// Sparkbars: tier colors match the homepage card treatment.
+function barColor(n: number): string {
+  if (n >= 8) return '#34d399';
+  if (n >= 7) return '#38bdf8';
+  if (n >= 6) return '#fbbf24';
+  return '#fb7185';
+}
+const sparkbars = [
+  { label: 'Utility', value: scores.utility ?? 0 },
+  { label: 'Value', value: scores.value ?? 0 },
+  { label: 'Moat', value: scores.moat ?? 0 },
+  { label: 'Longevity', value: scores.longevity ?? 0 },
+].map(b => ({ ...b, color: barColor(b.value), pct: Math.max(15, Math.min(100, (b.value / 10) * 100)) }));
+
+// TOC: markdown H2s + the two extra sections we render in Astro below.
+// Extras are inserted before the final "Related" section if present,
+// otherwise appended. System Verdict is filtered out because it is
+// removed from the DOM by a script below (content is redundant with
+// the Quick Answer block that sits above the article).
+const markdownH2s = (headings ?? [])
+  .filter(h => h.depth === 2 && h.slug !== 'system-verdict')
+  .map(h => ({ slug: h.slug, text: h.text }));
+const extraTocItems = [] as Array<{ slug: string; text: string }>;
+if (priceHistory.length > 0) extraTocItems.push({ slug: 'price-history', text: 'Price history' });
+if (peers.length > 0) extraTocItems.push({ slug: 'top-alternatives', text: 'Top alternatives' });
+const relatedIdx = markdownH2s.findIndex(h => h.slug === 'related');
+const tocHeadings = relatedIdx >= 0
+  ? [...markdownH2s.slice(0, relatedIdx), ...extraTocItems, ...markdownH2s.slice(relatedIdx)]
+  : [...markdownH2s, ...extraTocItems];
+
+const launchedStr = f.launched ? String(f.launched).slice(0, 4) : '';
+const verifiedStr = f.last_verified
+  ? (() => { const d = new Date(String(f.last_verified)); const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']; return `${months[d.getUTCMonth()]} ${d.getUTCFullYear()}`; })()
+  : '';
 ---
 
 <BaseLayout
-  title={frontmatter.seo_title ?? frontmatter.title}
-  description={frontmatter.meta_description ?? frontmatter.tagline ?? ''}
+  title={f.seo_title ?? f.title}
+  description={f.meta_description ?? f.tagline ?? ''}
   ogImage={`/og/tools/${toolSlug}.png`}
 >
   <ReadingProgress />
   <BreadcrumbLD items={breadcrumbLdItems} />
   {faqItems.length > 0 && <FAQPageLD questions={faqItems} />}
   <SoftwareApplicationLD
-    name={frontmatter.title}
-    url={frontmatter.url ?? ''}
-    category={catInfo.label}
-    priceRange={frontmatter.price_range ?? 'Free'}
-    score={overallScore}
-    description={frontmatter.meta_description ?? frontmatter.tagline ?? ''}
-    publisher={frontmatter.company ?? ''}
-    reviewBody={frontmatter.tagline ?? frontmatter.meta_description ?? ''}
+    name={f.title}
+    url={f.url ?? ''}
+    category={catLabel}
+    priceRange={f.price_range ?? 'Free'}
+    score={overall}
+    description={f.meta_description ?? f.tagline ?? ''}
+    publisher={f.company ?? ''}
+    reviewBody={f.tagline ?? f.meta_description ?? ''}
     pageUrl={`${siteBase}tools/${toolSlug}/`}
-    datePublished={frontmatter.last_updated ? String(frontmatter.last_updated) : undefined}
-    dateModified={frontmatter.last_verified ? String(frontmatter.last_verified) : undefined}
+    datePublished={f.last_updated ? String(f.last_updated) : undefined}
+    dateModified={f.last_verified ? String(f.last_verified) : undefined}
     slug={toolSlug}
   />
 
-  <Breadcrumb items={breadcrumbItems} />
+  <div class="t2-canvas">
+    <!-- Breadcrumb -->
+    <nav class="t2-breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span aria-hidden="true">/</span>
+      <a href={`/categories/${catSlug}/`}>{catLabel}</a>
+      <span aria-hidden="true">/</span>
+      <span class="t2-breadcrumb-current" aria-current="page">{f.title}</span>
+    </nav>
 
-  <!-- Mobile compact summary intentionally removed: Quick Answer + body CTA + sticky bottom CTA cover the same info on mobile without redundancy. -->
-  <div class="hidden lg:hidden flex items-center gap-3 mb-6 flex-wrap">
-    <ScoreBadge score={overallScore} />
-    <AffiliateCTA
-      title={frontmatter.title}
-      url={affiliate?.link ?? frontmatter.url ?? '#'}
-      hasProgram={hasProgram}
-      commission={affiliate?.commission}
-    />
-    {frontmatter.price_range && (
-      <span class="text-xs text-[var(--text-muted)] bg-[var(--bg-card)] border border-[var(--border)] rounded-lg px-3 py-1.5">
-        {frontmatter.price_range}
-      </span>
-    )}
-  </div>
-
-  <!-- Two-column grid -->
-  <div class="lg:grid lg:grid-cols-[1fr_280px] lg:gap-8">
-    <!-- Left column: main content -->
-    <div>
-      <!-- Hero grid: title block (left) + radial score card (right on desktop) -->
-      <div class="grid md:grid-cols-[1fr_auto] gap-5 md:gap-6 mb-6 items-start" data-pagefind-ignore>
-        <div class="flex items-start gap-5 min-w-0">
-          <div class="shrink-0 rounded-2xl p-1 ring-1 ring-white/5"
-               style="background: linear-gradient(135deg, rgba(167,139,250,0.14), rgba(96,165,250,0.08));">
-            <ToolLogo slug={toolSlug} title={frontmatter.title} size={72} className="rounded-xl" />
-          </div>
-          <div class="min-w-0 flex-1">
-            <div class="flex items-center gap-2.5 flex-wrap mb-2">
-              <h1 class="text-3xl sm:text-[2.25rem] font-bold leading-[1.05] m-0 text-[var(--text-primary)]" style="letter-spacing:-0.025em;">{frontmatter.title}</h1>
-              {frontmatter.status === 'active' && (
-                <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-semibold uppercase tracking-wider bg-[rgba(74,222,128,0.12)] text-[var(--accent-success)] border border-[rgba(74,222,128,0.25)]">
-                  <span class="w-1.5 h-1.5 rounded-full bg-[var(--accent-success)]"></span>
-                  Active
-                </span>
-              )}
-            </div>
-            {frontmatter.tagline && (
-              <p class="text-[15px] text-[var(--text-secondary)] leading-relaxed m-0 mb-3 max-w-[60ch]">
-                {frontmatter.tagline}
-              </p>
-            )}
-            <div class="flex items-center gap-x-3 gap-y-1 text-xs text-[var(--text-muted)] flex-wrap">
-              {frontmatter.company && (
-                <span class="inline-flex items-center gap-1.5">
-                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-                    <polyline points="9 22 9 12 15 12 15 22"/>
-                  </svg>
-                  {frontmatter.company}
-                </span>
-              )}
-              <span aria-hidden="true">·</span>
-              <a href="/about/editorial/" class="inline-flex items-center gap-1.5 no-underline hover:text-[var(--accent-primary)] transition-colors">
-                By aipedia.wiki Editorial
-              </a>
-              {readingMinutes > 0 && (
-                <>
-                  <span aria-hidden="true">·</span>
-                  <span>{readingMinutes} min read</span>
-                </>
-              )}
-              {frontmatter.last_verified && (
-                <FreshnessBadge lastVerified={String(frontmatter.last_verified)} />
-              )}
-            </div>
-          </div>
+    <!-- Hero: logo + title + tagline (no meta line — company/verified
+         already surface in the chip strip below), score card on right. -->
+    <header class="t2-hero">
+      <div class="t2-hero-main">
+        <div class="t2-logo-frame">
+          <ToolLogo slug={toolSlug} title={f.title} size={64} className="rounded-lg" />
         </div>
-        <!-- Radial score card: right-aligned on desktop, full-width below on mobile -->
-        <div class="md:w-[280px] w-full">
-          <ScoreBadge score={overallScore} variant="hero" />
+        <div class="t2-hero-copy">
+          <div class="t2-title-row">
+            <h1 class="t2-title">{f.title}</h1>
+            {f.status === 'active' && (
+              <span class="t2-status-pill" aria-label="Status: active">
+                <span class="t2-status-dot" aria-hidden="true"></span>
+                Active
+              </span>
+            )}
+          </div>
+          {f.tagline && <p class="t2-tagline">{f.tagline}</p>}
         </div>
       </div>
 
-      <!-- Topic tags (category is in breadcrumb already, so drop the dup) -->
-      {tags.length > 0 && (
-        <div class="flex items-center gap-2 flex-wrap mb-6" data-pagefind-ignore>
-          <span class="text-[10px] uppercase tracking-wider font-semibold text-[var(--text-muted)] mr-1">Tags:</span>
-          {tags.slice(0, 6).map((tag: string) => (
-            <span class="inline-flex items-center px-2.5 py-0.5 rounded-md text-[11px] font-medium bg-[var(--bg-card)] border border-[var(--border)] text-[var(--text-muted)] hover:text-[var(--text-secondary)] hover:border-[var(--accent-primary)]/30 transition-colors">
-              {tag}
-            </span>
+      <aside class="t2-score" aria-label={`Overall score ${overall} out of 10`}>
+        <div class="t2-score-top">
+          <span class="t2-score-label">Score</span>
+          <span class="t2-score-value">{overall}<span class="t2-score-slash">/10</span></span>
+        </div>
+        <div class="t2-score-bars" title={sparkbars.map(b => `${b.label} ${b.value}/10`).join(' · ')}>
+          {sparkbars.map(b => (
+            <div class="t2-score-bar">
+              <div class="t2-score-bar-col">
+                <span class="t2-score-bar-fill" style={`height: ${b.pct}%; background: ${b.color};`}></span>
+              </div>
+              <span class="t2-score-bar-num tabular-nums">{b.value}</span>
+              <span class="t2-score-bar-label">{b.label}</span>
+            </div>
           ))}
         </div>
+      </aside>
+    </header>
+
+    <!-- Chip strip -->
+    <div class="t2-chips">
+      {f.price_range && (
+        <div class="t2-chip">
+          <span class="t2-chip-label">Pricing</span>
+          <span class="t2-chip-value">{f.price_range}</span>
+        </div>
       )}
-
-      <QuickAnswer
-        name={frontmatter.title}
-        company={frontmatter.company}
-        category={catInfo.label}
-        score={overallScore}
-        priceRange={frontmatter.price_range}
-        pricingModel={frontmatter.pricing_model}
-        launched={frontmatter.launched ? String(frontmatter.launched) : undefined}
-        tagline={frontmatter.tagline}
-        metaDescription={frontmatter.meta_description}
-        quickAnswer={frontmatter.quick_answer}
-        bestFor={frontmatter.best_for}
-        notBestFor={frontmatter.not_best_for}
-        lastVerified={frontmatter.last_verified ? String(frontmatter.last_verified) : undefined}
-      />
-
-      <ToolCTA
-        name={frontmatter.title}
-        canonicalUrl={frontmatter.url}
-        affiliateUrl={affiliate?.link}
-        pricingModel={frontmatter.pricing_model}
-        priceRange={frontmatter.price_range}
-      />
-
-      {frontmatter.github_url && <GithubStats slug={toolSlug} />}
-
-      <ProsCons pros={frontmatter.best_for} cons={frontmatter.not_best_for} />
-
-      <!-- Markdown content -->
-      <article class="prose prose-invert prose-sm max-w-none wiki-prose">
-        <slot />
-      </article>
-
-      <FAQAccordionScript />
-
-      <PostBodyEnhancements
-        outboundUrl={(affiliate?.link && affiliate.link.length > 0 ? affiliate.link : (frontmatter.url ?? '#'))}
-        isAffiliate={Boolean(affiliate?.link && affiliate.link.length > 0)}
-      />
-
-      <TopAlternatives currentSlug={toolSlug} category={catSlug} limit={3} />
-
-      <RelatedComparisons toolSlug={toolSlug} toolTitle={frontmatter.title} />
-
-      <ReviewsBlock toolSlug={toolSlug} toolTitle={frontmatter.title} />
-
-      <ShareButtons title={frontmatter.title} pageUrl={`${siteBase}tools/${toolSlug}/`} />
-
-      <PriceHistory history={frontmatter.price_history} toolName={frontmatter.title} />
-
-      <HelpfulVote pageSlug={toolSlug} pageType="tool" />
-
-      <BadgeEmbed slug={toolSlug} title={frontmatter.title} />
-
-      <CiteThisPage title={`${frontmatter.title} — Editorial Review`} pageUrl={`${siteBase}tools/${toolSlug}/`} pageType="tool-review" />
-
-      <FeedbackForm toolName={frontmatter.title} />
-
-      <ReportOutdatedButton pageTitle={frontmatter.title} pageSlug={toolSlug} pageType="tool" />
+      {catLabel && (
+        <div class="t2-chip">
+          <span class="t2-chip-label">Category</span>
+          <span class="t2-chip-value">{catLabel}</span>
+        </div>
+      )}
+      {launchedStr && (
+        <div class="t2-chip">
+          <span class="t2-chip-label">Launched</span>
+          <span class="t2-chip-value">{launchedStr}</span>
+        </div>
+      )}
+      {verifiedStr && (
+        <div class="t2-chip">
+          <span class="t2-chip-label">Verified</span>
+          <span class="t2-chip-value">{verifiedStr}</span>
+        </div>
+      )}
     </div>
 
-    <!-- Right column: sidebar (desktop only) -->
-    <aside class="hidden lg:block">
-      <div class="sticky top-20 space-y-4">
-        <TableOfContents headings={headings} />
+    <!-- Primary + secondary CTAs -->
+    <div class="t2-ctas">
+      {f.url && (
+        <a
+          href={(affiliate?.link && affiliate.link.length > 0) ? affiliate.link : f.url}
+          target="_blank"
+          rel={affiliate?.link && affiliate.link.length > 0 ? 'noopener sponsored' : 'noopener'}
+          class="t2-cta t2-cta-primary"
+        >
+          Try {f.title} free
+          <span class="t2-cta-arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      )}
+      <a href={`/compare/`} class="t2-cta t2-cta-secondary">
+        Compare alternatives
+        <span class="t2-cta-arrow" aria-hidden="true">&rarr;</span>
+      </a>
+    </div>
 
-        <ScoreBadge score={overallScore} fullWidth />
+    <!-- Quick Answer (from frontmatter). Replaces the redundant inline
+         "System Verdict" block, which is stripped from the markdown via
+         script below. -->
+    {f.quick_answer && (
+      <aside class="t2-verdict" aria-labelledby="quick-answer-label">
+        <p id="quick-answer-label" class="t2-verdict-heading">Quick Answer</p>
+        <p class="t2-verdict-body">{f.quick_answer}</p>
+      </aside>
+    )}
 
-        <ScoreGrid
-          utility={scores.utility ?? 0}
-          value={scores.value ?? 0}
-          moat={scores.moat ?? 0}
-          longevity={scores.longevity ?? 0}
+    {f.github_url && (
+      <div class="t2-githubstats">
+        <GithubStats slug={toolSlug} />
+      </div>
+    )}
+
+    <ProsCons pros={f.best_for} cons={f.not_best_for} />
+
+    <!-- Main layout: prose + floating TOC -->
+    <div class="t2-layout">
+      <article class="t2-prose">
+        <slot />
+
+        {priceHistory.length > 0 && (
+          <section aria-labelledby="price-history">
+            <h2 id="price-history">Price history</h2>
+            <ul class="t2-price-history">
+              {priceHistory.map((h: any) => (
+                <li class="t2-price-history-item">
+                  <time class="t2-price-history-date">{formatHistoryDate(h.date)}</time>
+                  <div class="t2-price-history-body">
+                    <div class="t2-price-history-headline">
+                      <span class="t2-price-history-plan">{h.plan}</span>
+                      <span class="t2-price-history-price">{h.price}</span>
+                    </div>
+                    {h.note && <div class="t2-price-history-note">{h.note}</div>}
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+
+        {peers.length > 0 && (
+          <section aria-labelledby="top-alternatives">
+            <h2 id="top-alternatives">Top alternatives</h2>
+            <ul class="t2-alt-list">
+              {peers.slice(0, 10).map((p) => (
+                <li class="t2-alt-item">
+                  <a href={`/tools/${p.slug}/`} class="t2-alt-link">
+                    <div class="t2-alt-main">
+                      <span class="t2-alt-title">{p.title}</span>
+                      {p.tagline && <span class="t2-alt-tagline">{p.tagline}</span>}
+                    </div>
+                    <span class="t2-alt-meta">
+                      {p.price && <span class="t2-alt-price">{p.price}</span>}
+                      <span class="t2-alt-score tabular-nums">{p.score}</span>
+                    </span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+
+        <FAQAccordionScript />
+
+        <PostBodyEnhancements
+          outboundUrl={(affiliate?.link && affiliate.link.length > 0 ? affiliate.link : (f.url ?? '#'))}
+          isAffiliate={Boolean(affiliate?.link && affiliate.link.length > 0)}
         />
 
-        <RelatedTools currentSlug={toolSlug} category={catSlug} limit={4} />
-      </div>
-    </aside>
+        <RelatedComparisons toolSlug={toolSlug} toolTitle={f.title} />
+
+        <ReviewsBlock toolSlug={toolSlug} toolTitle={f.title} />
+
+        <ShareButtons title={f.title} pageUrl={`${siteBase}tools/${toolSlug}/`} />
+
+        <HelpfulVote pageSlug={toolSlug} pageType="tool" />
+
+        <BadgeEmbed slug={toolSlug} title={f.title} />
+
+        <CiteThisPage title={`${f.title} — Editorial Review`} pageUrl={`${siteBase}tools/${toolSlug}/`} pageType="tool-review" />
+
+        <FeedbackForm toolName={f.title} />
+
+        <ReportOutdatedButton pageTitle={f.title} pageSlug={toolSlug} pageType="tool" />
+      </article>
+
+      {tocHeadings.length > 0 && (
+        <aside class="t2-toc" aria-label="On this page">
+          <div class="t2-toc-label">On this page</div>
+          <ol class="t2-toc-list">
+            {tocHeadings.map(h => (
+              <li><a href={`#${h.slug}`}>{h.text}</a></li>
+            ))}
+          </ol>
+        </aside>
+      )}
+    </div>
   </div>
 
   <StickyMobileCTA
-    name={frontmatter.title}
-    canonicalUrl={frontmatter.url}
+    name={f.title}
+    canonicalUrl={f.url}
     affiliateUrl={affiliate?.link}
-    pricingModel={frontmatter.pricing_model}
-    priceRange={frontmatter.price_range}
+    pricingModel={f.pricing_model}
+    priceRange={f.price_range}
   />
 
-  <script is:inline define:vars={{ toolSlug, toolTitle: frontmatter.title }}>
+  <script is:inline define:vars={{ toolSlug, toolTitle: f.title }}>
     (function () {
       const KEY = 'recently-viewed-tools';
       const MAX = 10;
@@ -293,6 +380,838 @@ const breadcrumbLdItems = [
         list = list.slice(0, MAX);
         localStorage.setItem(KEY, JSON.stringify(list));
       } catch (_) {}
+    })();
+  </script>
+
+  <style is:global>
+    /* Page background: violet-tinted radial over the base color. */
+    body:has(main .t2-canvas) {
+      background:
+        radial-gradient(ellipse 80% 50% at 50% 0%, rgba(167,139,250,0.06) 0%, transparent 60%),
+        var(--bg-base);
+      scroll-behavior: smooth;
+    }
+    .light body:has(main .t2-canvas) {
+      background:
+        radial-gradient(ellipse 80% 50% at 50% 0%, rgba(167,139,250,0.035) 0%, transparent 60%),
+        var(--bg-base);
+    }
+    body:has(main .t2-canvas) ::selection {
+      background: rgba(167, 139, 250, 0.32);
+      color: var(--text-primary);
+    }
+
+    .t2-canvas {
+      --t2-fg: var(--text-primary);
+      --t2-muted: var(--text-secondary);
+      --t2-subtle: var(--text-muted);
+      --t2-line: var(--border);
+      --t2-surface: var(--bg-card);
+      --t2-surface-hover: var(--bg-card-hover);
+      --t2-accent: var(--accent-primary);
+      --t2-accent-text: var(--accent-primary-text);
+      --t2-radius: 10px;
+      --t2-radius-sm: 6px;
+      --t2-line-strong: rgba(255, 255, 255, 0.14);
+
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 4px;
+    }
+    .light .t2-canvas {
+      --t2-line-strong: #c9c3b8;
+    }
+
+    /* -------- breadcrumb ------------------------------------------- */
+    .t2-breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 28px;
+      font-size: 13px;
+      color: var(--t2-subtle);
+    }
+    .t2-breadcrumb a {
+      color: var(--t2-muted);
+      text-decoration: none;
+      transition: color 120ms ease;
+    }
+    .t2-breadcrumb a:hover { color: var(--t2-fg); }
+    .t2-breadcrumb-current { color: var(--t2-muted); }
+
+    /* -------- hero ------------------------------------------------- */
+    .t2-hero {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+      margin-bottom: 28px;
+    }
+    @media (min-width: 900px) {
+      .t2-hero { grid-template-columns: 1fr 280px; gap: 40px; align-items: start; }
+    }
+    .t2-hero-main {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      min-width: 0;
+    }
+    .t2-logo-frame {
+      flex: none;
+      padding: 3px;
+      border-radius: 12px;
+      background: var(--t2-surface);
+      border: 1px solid var(--t2-line);
+    }
+    .t2-hero-copy {
+      min-width: 0;
+      flex: 1;
+    }
+    .t2-title-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 8px;
+    }
+    .t2-title {
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      color: var(--t2-fg);
+      margin: 0;
+    }
+    @media (min-width: 768px) { .t2-title { font-size: 40px; } }
+    .t2-status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 2px 8px 2px 7px;
+      border-radius: 999px;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #22c55e;
+      background: rgba(34, 197, 94, 0.10);
+      border: 1px solid rgba(34, 197, 94, 0.22);
+    }
+    .light .t2-status-pill {
+      color: #15803d;
+      background: rgba(34, 197, 94, 0.10);
+      border-color: rgba(34, 197, 94, 0.28);
+    }
+    .t2-status-dot {
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: currentColor;
+      flex: none;
+    }
+    .t2-tagline {
+      font-size: 15px;
+      line-height: 1.55;
+      color: var(--t2-muted);
+      margin: 0 0 10px;
+      max-width: 60ch;
+    }
+
+    /* -------- score card ------------------------------------------ */
+    .t2-score {
+      padding: 16px 18px;
+      border-radius: var(--t2-radius);
+      border: 1px solid var(--t2-line);
+      background: var(--t2-surface);
+    }
+    .t2-score-top {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 14px;
+    }
+    .t2-score-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--t2-subtle);
+    }
+    .t2-score-value {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--t2-accent-text);
+      font-variant-numeric: tabular-nums;
+      letter-spacing: -0.02em;
+    }
+    .t2-score-slash {
+      color: var(--t2-subtle);
+      font-size: 16px;
+      font-weight: 500;
+      margin-left: 2px;
+    }
+    .t2-score-bars {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 6px;
+    }
+    .t2-score-bar {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+    }
+    .t2-score-bar-col {
+      width: 100%;
+      height: 36px;
+      display: flex;
+      align-items: flex-end;
+      border-radius: 3px;
+      background: rgba(255,255,255,0.03);
+    }
+    .light .t2-score-bar-col { background: rgba(0,0,0,0.035); }
+    .t2-score-bar-fill {
+      display: block;
+      width: 100%;
+      border-radius: 3px 3px 0 0;
+    }
+    .t2-score-bar-num {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--t2-fg);
+    }
+    .t2-score-bar-label {
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--t2-subtle);
+    }
+
+    /* -------- chip strip ------------------------------------------ */
+    .t2-chips {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+      margin-bottom: 28px;
+    }
+    @media (min-width: 640px) {
+      .t2-chips { grid-template-columns: repeat(4, 1fr); }
+    }
+    .t2-chip {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      padding: 10px 12px;
+      border-radius: var(--t2-radius-sm);
+      border: 1px solid var(--t2-line);
+      background: var(--t2-surface);
+    }
+    .t2-chip-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--t2-subtle);
+    }
+    .t2-chip-value {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--t2-fg);
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* -------- quick answer block ---------------------------------- */
+    .t2-verdict {
+      padding: 24px 24px 24px 28px;
+      border-radius: var(--t2-radius);
+      background: var(--t2-surface);
+      border: 1px solid var(--t2-line);
+      border-left: 3px solid var(--t2-accent);
+      margin-bottom: 28px;
+    }
+    .t2-verdict-heading {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--t2-accent-text);
+      margin: 0 0 10px;
+    }
+    .t2-verdict-body {
+      font-size: 15px;
+      line-height: 1.6;
+      color: var(--t2-fg);
+      margin: 0;
+      max-width: 68ch;
+    }
+
+    /* -------- CTAs ------------------------------------------------- */
+    .t2-ctas {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+      margin-bottom: 40px;
+    }
+    @media (min-width: 640px) {
+      .t2-ctas {
+        grid-template-columns: auto auto;
+        justify-content: start;
+      }
+    }
+    .t2-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 18px;
+      border-radius: var(--t2-radius);
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: background 120ms ease, border-color 120ms ease;
+    }
+    .t2-cta-arrow { transition: transform 120ms ease; }
+    .t2-cta:hover .t2-cta-arrow { transform: translateX(2px); }
+    .t2-cta-primary {
+      background: var(--t2-accent);
+      color: #0b0a14;
+    }
+    .t2-cta-primary:hover { background: #c4b5fd; }
+    .t2-cta-secondary {
+      border: 1px solid var(--t2-line);
+      background: var(--t2-surface);
+      color: var(--t2-fg);
+    }
+    .t2-cta-secondary:hover {
+      background: var(--t2-surface-hover);
+      border-color: var(--t2-line-strong);
+    }
+
+    /* GithubStats + ProsCons spacing under CTAs */
+    .t2-githubstats { margin-bottom: 28px; }
+
+    /* =========================================================
+       LAYOUT: prose + floating TOC
+       ========================================================= */
+    .t2-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
+    @media (min-width: 1024px) {
+      .t2-layout { grid-template-columns: 1fr 220px; gap: 64px; }
+    }
+
+    .t2-prose {
+      min-width: 0;
+      max-width: 68ch;
+    }
+    .t2-prose > :first-child { margin-top: 0; }
+    .t2-prose h1 { display: none; }
+    .t2-prose h2 {
+      font-size: 22px;
+      font-weight: 600;
+      letter-spacing: -0.015em;
+      color: var(--t2-fg);
+      margin: 80px 0 16px;
+      padding-top: 24px;
+      border-top: 1px solid var(--t2-line);
+      scroll-margin-top: 80px;
+    }
+    .t2-prose > h2:first-of-type {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: none;
+    }
+    .t2-prose h3 {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--t2-fg);
+      margin: 32px 0 8px;
+    }
+    .t2-prose p {
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--t2-muted);
+      margin: 0 0 16px;
+    }
+    .t2-prose p strong { color: var(--t2-fg); font-weight: 600; }
+    .t2-prose ul, .t2-prose ol {
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--t2-muted);
+      margin: 0 0 20px;
+      padding-left: 20px;
+    }
+    .t2-prose li { margin-bottom: 6px; }
+    .t2-prose li strong { color: var(--t2-fg); font-weight: 600; }
+    .t2-prose a {
+      color: var(--t2-accent-text);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(167, 139, 250, 0.25);
+      transition: border-color 120ms ease;
+    }
+    .light .t2-prose a {
+      border-bottom-color: rgba(109, 40, 217, 0.3);
+    }
+    .t2-prose a:hover { border-bottom-color: currentColor; }
+    .t2-prose code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.9em;
+      background: var(--t2-surface);
+      border: 1px solid var(--t2-line);
+      padding: 1px 5px;
+      border-radius: 4px;
+      color: var(--t2-fg);
+    }
+    .t2-prose blockquote {
+      border-left: 2px solid var(--t2-accent);
+      margin: 0 0 20px;
+      padding: 4px 0 4px 18px;
+      color: var(--t2-fg);
+    }
+    .t2-prose blockquote p { color: var(--t2-fg); }
+    .t2-prose table {
+      width: 100%;
+      font-size: 13.5px;
+      border-collapse: collapse;
+      margin: 0 0 24px;
+      display: block;
+      overflow-x: auto;
+      overscroll-behavior-x: contain;
+    }
+    .t2-prose thead { border-bottom: 1px solid var(--t2-line-strong); }
+    .t2-prose th {
+      padding: 10px 12px;
+      text-align: left;
+      font-weight: 600;
+      color: var(--t2-fg);
+      font-size: 12px;
+      letter-spacing: 0.02em;
+    }
+    .t2-prose td {
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--t2-line);
+      color: var(--t2-muted);
+      vertical-align: top;
+    }
+    .t2-prose td strong { color: var(--t2-fg); }
+    .t2-prose tbody tr:last-child td { border-bottom: none; }
+
+    @media (max-width: 767px) {
+      .t2-prose table {
+        scrollbar-width: thin;
+        scrollbar-color: var(--t2-line-strong) transparent;
+      }
+      .t2-prose table::-webkit-scrollbar { height: 8px; }
+      .t2-prose table::-webkit-scrollbar-track { background: transparent; }
+      .t2-prose table::-webkit-scrollbar-thumb {
+        background: var(--t2-line-strong);
+        border-radius: 4px;
+        border: 2px solid transparent;
+        background-clip: content-box;
+      }
+      .t2-prose table th,
+      .t2-prose table td { min-width: 150px; }
+      .t2-prose table thead th:first-child,
+      .t2-prose table tbody td:first-child {
+        position: sticky;
+        left: 0;
+        z-index: 1;
+        min-width: 110px;
+        max-width: 140px;
+        background: var(--bg-base);
+        box-shadow: 1px 0 0 var(--t2-line);
+      }
+      .t2-prose table {
+        background-image: linear-gradient(to right, transparent calc(100% - 24px), var(--bg-base));
+        background-repeat: no-repeat;
+        background-attachment: local;
+        background-size: 100% 100%;
+      }
+    }
+    @media print {
+      .t2-prose table {
+        display: table;
+        overflow: visible;
+        background-image: none;
+      }
+      .t2-prose table thead th:first-child,
+      .t2-prose table tbody td:first-child {
+        position: static;
+        box-shadow: none;
+      }
+    }
+    .t2-prose hr {
+      border: none;
+      border-top: 1px solid var(--t2-line);
+      margin: 48px 0;
+    }
+
+    /* -------- FAQ accordion -------------------------------------- */
+    .t2-faq {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin: 0 0 24px;
+    }
+    .t2-prose details {
+      border: 1px solid var(--t2-line);
+      border-radius: var(--t2-radius-sm);
+      background: var(--t2-surface);
+      transition: background 120ms ease, border-color 120ms ease;
+    }
+    .t2-prose details + details { margin-top: 0; }
+    .t2-prose details[open] {
+      background: var(--t2-surface-hover);
+      border-color: var(--t2-line-strong);
+    }
+    .t2-prose details summary {
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 15px;
+      color: var(--t2-fg);
+      list-style: none;
+      padding: 12px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .t2-prose details summary::-webkit-details-marker { display: none; }
+    .t2-prose details summary::marker { content: ''; display: none; }
+    .t2-prose details summary::after {
+      content: '+';
+      flex: none;
+      width: 18px;
+      height: 18px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 1;
+      color: var(--t2-subtle);
+      transition: transform 150ms ease, color 150ms ease;
+    }
+    .t2-prose details[open] summary::after {
+      transform: rotate(45deg);
+      color: var(--t2-accent-text);
+    }
+    .t2-prose details > *:not(summary) { padding: 0 14px 14px; }
+    .t2-prose details p {
+      margin: 0 0 10px;
+      font-size: 14px;
+      color: var(--t2-muted);
+    }
+    .t2-prose details p:last-child { margin-bottom: 0; }
+
+    /* -------- floating TOC ---------------------------------------- */
+    .t2-toc { display: none; }
+    @media (min-width: 1024px) {
+      .t2-toc {
+        display: block;
+        position: sticky;
+        top: 80px;
+        align-self: start;
+        font-size: 13px;
+      }
+    }
+    .t2-toc-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--t2-subtle);
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--t2-line);
+    }
+    .t2-toc-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+    }
+    .t2-toc-list li { margin: 0; }
+    .t2-toc-list a {
+      color: var(--t2-muted);
+      text-decoration: none;
+      transition: color 120ms ease;
+      line-height: 1.35;
+      display: block;
+    }
+    .t2-toc-list a:hover { color: var(--t2-accent-text); }
+
+    @media (prefers-reduced-motion: reduce) {
+      body:has(main .t2-canvas) * { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+    }
+
+    /* Scrollbox: applied by the boxOne script below */
+    .t2-scrollbox {
+      max-height: 260px;
+      overflow-y: auto;
+      overscroll-behavior: contain;
+      padding: 12px 14px 12px 0;
+      margin: 0 0 20px;
+      border-top: 1px solid var(--t2-line);
+      border-bottom: 1px solid var(--t2-line);
+      scrollbar-width: thin;
+      scrollbar-color: var(--t2-line-strong) transparent;
+      border-radius: 2px;
+    }
+    @media (min-width: 768px) {
+      .t2-scrollbox { max-height: 340px; }
+    }
+    .t2-scrollbox:focus-visible {
+      outline: 2px solid var(--t2-accent);
+      outline-offset: 2px;
+    }
+    .t2-scrollbox::-webkit-scrollbar { width: 8px; }
+    .t2-scrollbox::-webkit-scrollbar-track { background: transparent; }
+    .t2-scrollbox::-webkit-scrollbar-thumb {
+      background: var(--t2-line-strong);
+      border-radius: 4px;
+      border: 2px solid transparent;
+      background-clip: content-box;
+    }
+    .t2-scrollbox::-webkit-scrollbar-thumb:hover {
+      background: var(--t2-muted);
+      background-clip: content-box;
+    }
+    .t2-scrollbox > ul,
+    .t2-scrollbox > ol {
+      margin: 0 !important;
+      padding-left: 20px;
+    }
+    .t2-scrollbox > ul > li:last-child,
+    .t2-scrollbox > ol > li:last-child { margin-bottom: 0; }
+    .t2-scrollbox > .t2-list-plain {
+      list-style: none;
+      padding-left: 0;
+    }
+    @media print {
+      .t2-scrollbox { max-height: none; overflow: visible; border: none; }
+    }
+
+    /* -------- Price history list -------------------------------- */
+    .t2-price-history {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .t2-price-history-item {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 16px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--t2-line);
+    }
+    .t2-price-history-item:last-child { border-bottom: none; }
+    .t2-price-history-date {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--t2-subtle);
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+    .t2-price-history-body { min-width: 0; }
+    .t2-price-history-headline {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 4px;
+    }
+    .t2-price-history-plan {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--t2-fg);
+    }
+    .t2-price-history-price {
+      font-size: 13px;
+      color: var(--t2-accent-text);
+      font-variant-numeric: tabular-nums;
+    }
+    .t2-price-history-note {
+      font-size: 13px;
+      line-height: 1.55;
+      color: var(--t2-muted);
+    }
+    .t2-scrollbox > .t2-price-history { padding-left: 0; }
+
+    /* -------- Top alternatives list ----------------------------- */
+    .t2-alt-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 20px;
+    }
+    .t2-alt-item { margin: 0; }
+    .t2-alt-link {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 16px;
+      align-items: center;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--t2-line);
+      text-decoration: none;
+      border-left: none !important;
+      transition: background 120ms ease;
+    }
+    .t2-alt-item:last-child .t2-alt-link { border-bottom: none; }
+    .t2-alt-link:hover { background: var(--t2-surface); }
+    .t2-prose .t2-alt-link { border-bottom: 1px solid var(--t2-line); }
+    .t2-alt-main { min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+    .t2-alt-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--t2-fg);
+    }
+    .t2-alt-tagline {
+      font-size: 13px;
+      color: var(--t2-muted);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      line-height: 1.4;
+    }
+    .t2-alt-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+    .t2-alt-price {
+      font-size: 12px;
+      color: var(--t2-subtle);
+      font-variant-numeric: tabular-nums;
+    }
+    .t2-alt-score {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--t2-accent-text);
+      min-width: 28px;
+      text-align: right;
+    }
+    .t2-scrollbox > .t2-alt-list { padding-left: 0; }
+    .t2-scrollbox .t2-alt-link { padding-left: 4px; padding-right: 4px; }
+  </style>
+
+  <!-- Generic scrollbox wrapping for long lists (recent developments,
+       price history, top alternatives, reviews). -->
+  <script is:inline>
+    (function () {
+      var SCROLLBOX_CONFIG = [
+        { id: 'recent-developments', threshold: 5, itemSelector: ':scope > li',
+          label: function (n) { return n + ' recent developments, scroll to read more'; } },
+        { id: 'price-history', threshold: 6, itemSelector: ':scope > li',
+          label: function (n) { return n + ' price changes, scroll to read more'; } },
+        { id: 'top-alternatives', threshold: 8, itemSelector: ':scope > li',
+          label: function (n) { return n + ' alternative tools, scroll to read more'; } },
+        { id: 'reader-reviews', threshold: 5, itemSelector: ':scope > *',
+          label: function (n) { return n + ' reader reviews, scroll to read more'; } },
+      ];
+
+      function findListAfterHeading(h) {
+        var el = h.nextElementSibling;
+        while (el && !(el.tagName === 'UL' || el.tagName === 'OL' || el.tagName === 'DIV' || el.tagName === 'SECTION')) {
+          el = el.nextElementSibling;
+        }
+        if (!el) return null;
+        if (el.tagName === 'SECTION' || (el.tagName === 'DIV' && !el.matches('ul, ol'))) {
+          var inner = el.querySelector(':scope > ul, :scope > ol');
+          if (inner) return inner;
+        }
+        return (el.tagName === 'UL' || el.tagName === 'OL') ? el : null;
+      }
+
+      function boxOne(cfg) {
+        var targetSection = document.getElementById(cfg.id);
+        if (!targetSection) return;
+        var list;
+        if (targetSection.tagName === 'H2') {
+          list = findListAfterHeading(targetSection);
+        } else {
+          list = targetSection.querySelector('ul, ol');
+        }
+        if (!list) return;
+        var items = list.querySelectorAll(cfg.itemSelector);
+        if (items.length < cfg.threshold) return;
+        if (list.parentNode && list.parentNode.classList.contains('t2-scrollbox')) return;
+
+        var wrap = document.createElement('div');
+        wrap.className = 't2-scrollbox';
+        wrap.setAttribute('tabindex', '0');
+        wrap.setAttribute('role', 'region');
+        wrap.setAttribute('aria-label', cfg.label(items.length));
+        list.parentNode.insertBefore(wrap, list);
+        wrap.appendChild(list);
+      }
+
+      function init() { SCROLLBOX_CONFIG.forEach(boxOne); }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+      } else {
+        init();
+      }
+      document.addEventListener('astro:page-load', init);
+    })();
+  </script>
+
+  <!-- Strip redundant inline "System Verdict" section; the Quick Answer
+       block at the top of the page already carries the verdict. -->
+  <script is:inline>
+    (function () {
+      function stripSystemVerdict() {
+        var h = document.getElementById('system-verdict');
+        if (!h) return;
+        var next = h.nextElementSibling;
+        while (next && next.tagName !== 'H2') {
+          var toRemove = next;
+          next = next.nextElementSibling;
+          toRemove.remove();
+        }
+        h.remove();
+      }
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', stripSystemVerdict);
+      } else {
+        stripSystemVerdict();
+      }
+      document.addEventListener('astro:page-load', stripSystemVerdict);
+    })();
+  </script>
+
+  <!-- Group consecutive <details> blocks under the FAQ heading into a
+       single wrapper for consistent rhythm. Purely presentational. -->
+  <script is:inline>
+    (function () {
+      function groupFaq() {
+        var h = document.getElementById('faq');
+        if (!h || h.dataset.faqGrouped === '1') return;
+        var items = [];
+        var n = h.nextElementSibling;
+        while (n && n.tagName !== 'H2') {
+          if (n.tagName === 'DETAILS') items.push(n);
+          n = n.nextElementSibling;
+        }
+        if (items.length === 0) return;
+        var wrap = document.createElement('div');
+        wrap.className = 't2-faq';
+        items[0].parentNode.insertBefore(wrap, items[0]);
+        items.forEach(function (d) { wrap.appendChild(d); });
+        h.dataset.faqGrouped = '1';
+      }
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', groupFaq);
+      } else {
+        groupFaq();
+      }
+      document.addEventListener('astro:page-load', groupFaq);
     })();
   </script>
 </BaseLayout>

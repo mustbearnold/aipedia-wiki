@@ -2394,6 +2394,49 @@
       },
       "page_path": "wikis/ai-tools/pages/tools/goose.md"
     },
+    "gpt-image-2": {
+      "slug": "gpt-image-2",
+      "status": "active",
+      "title": "GPT Image 2",
+      "category": "ai-image",
+      "secondary_categories": [
+        "ai-design"
+      ],
+      "company": "openai",
+      "url": "https://openai.com/index/introducing-chatgpt-images-2-0/",
+      "pricing_model": "freemium",
+      "price_range": "$0-$200/month (ChatGPT) · API from $0.01/image",
+      "launched": "2026-04",
+      "last_updated": "2026-04-22T00:00:00.000Z",
+      "last_verified": "2026-04-22T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 10,
+        "value": 9,
+        "moat": 9,
+        "longevity": 9
+      },
+      "tags": [
+        "ai-image",
+        "image-generation",
+        "text-to-image",
+        "openai",
+        "gpt-image",
+        "reasoning",
+        "multilingual",
+        "4k",
+        "infographics",
+        "api"
+      ],
+      "affiliate": {
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null
+      },
+      "page_path": "aipedia-wiki/src/content/tools/gpt-image-2.md"
+    },
     "grammarly": {
       "slug": "grammarly",
       "status": "active",
@@ -7159,93 +7202,6 @@
       "last_updated": "2026-04-15T00:00:00.000Z",
       "last_verified": null,
       "page_path": "wikis/ai-tools/pages/dead/stability-ai-clipdrop.md"
-    },
-    "claude-design": {
-      "slug": "claude-design",
-      "status": "active",
-      "title": "Claude Design",
-      "category": "ai-design",
-      "secondary_categories": [
-        "ai-coding",
-        "ai-presentation"
-      ],
-      "company": "anthropic",
-      "url": "https://claude.ai/design",
-      "pricing_model": "freemium",
-      "price_range": "Bundled with Claude Pro ($20/mo) and up",
-      "launched": "2026-04",
-      "last_updated": "2026-04-19T00:34:20.622Z",
-      "last_verified": "2026-04-19T00:34:20.622Z",
-      "update_frequency": "monthly",
-      "scores": {
-        "utility": 8,
-        "value": 9,
-        "moat": 7,
-        "longevity": 8
-      },
-      "tags": [
-        "design",
-        "prototyping",
-        "prompt-to-prototype",
-        "slide-decks",
-        "mockups",
-        "claude",
-        "anthropic",
-        "opus-4-7",
-        "non-designer",
-        "research-preview"
-      ],
-      "affiliate": {
-        "has_program": false,
-        "commission": null,
-        "cookie_days": null,
-        "network": null,
-        "link": null
-      },
-      "page_path": "src/content/tools/claude-design.md"
-    },
-    "codex": {
-      "slug": "codex",
-      "status": "active",
-      "title": "OpenAI Codex",
-      "category": "ai-coding",
-      "secondary_categories": [
-        "ai-chatbots"
-      ],
-      "company": "openai",
-      "url": "https://openai.com/codex/",
-      "pricing_model": "freemium",
-      "price_range": "Bundled with ChatGPT Plus ($20/mo) through Pro 20x ($200/mo)",
-      "launched": "2025-05",
-      "last_updated": "2026-04-19T01:12:15.271Z",
-      "last_verified": "2026-04-19T01:12:15.271Z",
-      "update_frequency": "monthly",
-      "scores": {
-        "utility": 9,
-        "value": 8,
-        "moat": 8,
-        "longevity": 9
-      },
-      "tags": [
-        "agentic-coding",
-        "cloud-agent",
-        "desktop-app",
-        "cli",
-        "openai",
-        "gpt-5",
-        "computer-use",
-        "memory",
-        "plugins",
-        "multi-agent"
-      ],
-      "affiliate": {
-        "has_program": false,
-        "commission": null,
-        "cookie_days": null,
-        "network": null,
-        "link": null
-      },
-      "page_path": "src/content/tools/codex.md"
     }
   }
 }
