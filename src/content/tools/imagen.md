@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$249.99/month"
 status: active
 launched: 2025-05
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-04-22
+last_verified: 2026-04-22
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -102,7 +102,7 @@ The moat is integration depth. No other image model ships native inside Docs, Sl
 - **Maximum aesthetic quality for cinematic, stylized, or illustrative work:** [Midjourney](/tools/midjourney/). Still the reference point for visual polish.
 - **Open weights, LoRA fine-tuning, or self-hosting:** [Flux](/tools/flux/). Imagen 4 offers none of those.
 - **Dense text rendering for logos and posters:** [Ideogram](/tools/ideogram/) remains the safer pick for text-critical production.
-- **Image generation bundled with a chat assistant you already pay for:** GPT Image 1.5 inside [ChatGPT](/tools/chatgpt/).
+- **Image generation bundled with a chat assistant you already pay for:** GPT Image 2 inside [ChatGPT](/tools/chatgpt/).
 - **Video generation alongside images:** [Runway](/tools/runway/) for production control, or Veo 3.1 inside [Gemini](/tools/gemini/) Ultra.
 
 ## Pricing
@@ -129,7 +129,7 @@ API and enterprise pricing via [ai.google.dev/gemini-api/docs/models/imagen](htt
 
 ## Against the alternatives
 
-| | Imagen 4 | Midjourney V7 | GPT Image 1.5 |
+| | Imagen 4 | Midjourney V7 | GPT Image 2 |
 |---|---|---|---|
 | **Aesthetic ceiling** | Strong photoreal, mid on stylized | **Strongest** stylized/cinematic | Strong, softer look |
 | **Text rendering** | Materially improved, not Ideogram-grade | Improved on V7 | Good |

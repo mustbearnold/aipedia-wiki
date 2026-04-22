@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$48/month"
 status: active
 launched: 2022-12
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-04-22
+last_verified: 2026-04-22
 update_frequency: monthly
 seo_title: "Recraft: Features, Pricing & Review (2026)"
 meta_description: "Recraft V3 is the vector-native AI image generator with best-in-market legible text rendering. Free tier with 50 daily credits. Paid plans $10 to $48/month. API at $0.04 per raster image, $0.08 per vector."
@@ -105,7 +105,7 @@ The other moat is **typography**. Most generalist image models still hallucinate
 ## When to pick something else
 
 - **Cinematic photorealism:** [Midjourney](/tools/midjourney/) still leads on painterly and photoreal output. [Flux](/tools/flux/) is the top open-weight alternative.
-- **Integrated chat workflow:** [ChatGPT](/tools/chatgpt/) bundles GPT Image 1.5 with text chat, which is faster for one-off images.
+- **Integrated chat workflow:** [ChatGPT](/tools/chatgpt/) bundles GPT Image 2 with text chat, which is faster for one-off images.
 - **Video generation:** [Kling](/tools/kling/) or Veo 3 via [Gemini](/tools/gemini/). Recraft has none.
 - **Maximum model variety on one canvas:** [Krea](/tools/krea/) aggregates Flux, Kling, Sora, and Veo 3 in one interface.
 - **Free commercial use:** [Ideogram](/tools/ideogram/) and [Leonardo](/tools/leonardo/) have friendlier free tiers for commercial work.

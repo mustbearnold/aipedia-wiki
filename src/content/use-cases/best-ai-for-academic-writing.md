@@ -7,8 +7,8 @@ meta_description: "Top AI tools for academic writing include Claude for long-for
 description: "This page recommends AI tools for academic writing tasks like drafting papers, analyzing documents, and research synthesis, with pricing, pros, and cons verified as of April 2026."
 tools_mentioned: ["claude", "chatgpt", "gemini"]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-18
-last_verified: 2026-04-18
+last_updated: 2026-04-22
+last_verified: 2026-04-22
 update_frequency: monthly
 ---
 
@@ -42,7 +42,7 @@ Limitations include occasional verbosity requiring editing and no native real-ti
 
 ### 2. ChatGPT
 
-ChatGPT, using OpenAI's GPT-5.4 model, handles diverse academic tasks from brainstorming outlines to code for data analysis in papers. It generates text, analyzes images of charts, and supports voice for dictating ideas. Native GPT Image 1.5 aids figure creation, though text remains core. It formats references in APA or MLA and checks plagiarism phrasing.[2][5]
+ChatGPT, using OpenAI's GPT-5.4 model, handles diverse academic tasks from brainstorming outlines to code for data analysis in papers. It generates text, analyzes images of charts, and supports voice for dictating ideas. Native GPT Image 2 aids figure creation, though text remains core. It formats references in APA or MLA and checks plagiarism phrasing.[2][5]
 
 Pricing: Free tier with GPT-5.4 access (limited queries), Plus $20/month for more usage and file uploads, Pro $200/month for unlimited advanced features. API at $2.50/million input tokens, $10/million output.[1][2]
 

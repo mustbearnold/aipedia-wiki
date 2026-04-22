@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "$10-$120/month"
 status: active
 launched: 2022-07
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-04-22
+last_verified: 2026-04-22
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -56,6 +56,10 @@ Black Forest Labs' aesthetic-quality leader in AI image generation. **V7** is to
 
 Pricing runs $10-$120/month. No free tier. No generally-available public API.
 
+## Recent developments
+
+- **April 21, 2026:** [OpenAI launches ChatGPT Images 2.0 and gpt-image-2](/news/2026-04-21-openai-chatgpt-images-2-gpt-image-2/) with native reasoning, 4K output, and multilingual text rendering across 12+ languages. gpt-image-2 is the closest challenger to V7's artistic lead to date, especially on infographics and text-heavy generation. Midjourney retains the cinematic-composition crown; OpenAI bundle-economics pressure the $10/mo Basic tier's entry-point case.
+
 ## System Verdict
 
 > **Pick Midjourney if visual quality is the single axis you cannot compromise on.** Still the reference point for cinematic composition, lighting, and stylized illustration.
@@ -95,7 +99,7 @@ The moats: Midjourney's aesthetic prior (cinematic composition, lighting, color 
 
 ## When to pick Midjourney
 
-- **You need the strongest "does this look good" output.** Midjourney still tops blind preference tests for cinematic and stylized work. Flux and GPT Image 1.5 are closer on photoreal than they were a year ago, but not on mood and composition.
+- **You need the strongest "does this look good" output.** Midjourney still tops blind preference tests for cinematic and stylized work. Flux and GPT Image 2 are closer on photoreal than they were a year ago, but not on mood and composition.
 - **You work on moodboards, concept art, or marketing visuals.** The web editor's Organize page (folders, bulk actions, search across prompts and parameters) is the closest thing to a proper asset library in any image generator.
 - **You shoot anime or illustrative styles regularly.** Niji 7 is bundled in the same subscription. No second tool required.
 - **You need Stealth mode for client work.** Pro and Mega keep generations off the public feed, which matters for agencies and freelance designers under NDA.
@@ -105,9 +109,9 @@ The moats: Midjourney's aesthetic prior (cinematic composition, lighting, color 
 
 - **Open weights, self-hosting, or LoRA fine-tuning:** [Flux](/tools/flux/) (Flux.1 Kontext is the current instruction-editing family from Black Forest Labs, available via API and as open-weight Dev checkpoints).
 - **Text-in-image reliability (logos, thumbnails, posters):** [Ideogram](/tools/ideogram/) still beats V7 here; V8 Alpha narrows the gap but is alpha-only.
-- **Image gen bundled with a chatbot:** GPT Image 1.5 inside [ChatGPT](/tools/chatgpt/) (replaced DALL-E in March 2025). One subscription covers text + image.
+- **Image gen bundled with a chatbot:** GPT Image 2 inside [ChatGPT](/tools/chatgpt/) (replaced DALL-E in March 2025). One subscription covers text + image.
 - **Free tier as a starting point:** [Leonardo](/tools/leonardo/) or [Stable Diffusion](/tools/stable-diffusion/) (self-hosted). Midjourney has no free tier.
-- **Programmatic API for production workflows:** Flux, GPT Image 1.5, or Stable Diffusion. Midjourney's Enterprise API is invitation-only; unofficial third-party wrappers violate Midjourney's ToS and risk account bans.
+- **Programmatic API for production workflows:** Flux, GPT Image 2, or Stable Diffusion. Midjourney's Enterprise API is invitation-only; unofficial third-party wrappers violate Midjourney's ToS and risk account bans.
 
 ## Pricing
 
@@ -124,7 +128,7 @@ Subscription pricing via [midjourney.com pricing](https://docs.midjourney.com/hc
 
 ## Against the alternatives
 
-| | Midjourney V7 | Flux.1 Kontext [Pro] | GPT Image 1.5 |
+| | Midjourney V7 | Flux.1 Kontext [Pro] | GPT Image 2 |
 |---|---|---|---|
 | **Photoreal quality** | Strong; V8 Alpha stronger still | Strong, more neutral prior | Strong, slightly softer |
 | **Stylized / cinematic output** | **Strongest** | Mid · tuned for edit-fidelity | Mid |

@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$10/1M tokens"
 status: active
 launched: 2019-06
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-04-22
+last_verified: 2026-04-22
 update_frequency: monthly
 seo_title: "Cohere: Features, Pricing & Review (April 2026)"
 meta_description: "Cohere's Command A (256K context) is the agentic flagship; Command R+ runs at $2.50/$10 per 1M tokens. North workspace and Model Vault ship private deployment. Enterprise-first LLM platform built around RAG, Rerank, and Aya multilingual."
@@ -107,7 +107,7 @@ Tiny Aya, released by Cohere Labs in February 2026, ships 3.35B-parameter open-w
 
 ## When to pick something else
 
-- **Consumer chat or image gen:** [ChatGPT](/tools/chatgpt/). Largest ecosystem, GPT Image 1.5, Codex agent, custom-GPT marketplace.
+- **Consumer chat or image gen:** [ChatGPT](/tools/chatgpt/). Largest ecosystem, GPT Image 2, Codex agent, custom-GPT marketplace.
 - **Peak reasoning or agentic coding:** [Claude](/tools/claude/). Opus 4.7 leads on long-form reasoning, document coherence, and Claude Code CLI.
 - **Google Workspace integration:** [Gemini](/tools/gemini/). Native Docs, Sheets, Gmail hooks Cohere cannot match.
 - **Open-weight self-hosting with permissive license:** [Llama](/tools/llama/) or [DeepSeek](/tools/deepseek/). Cohere's Command weights are not open; only Aya ships free.
@@ -149,7 +149,7 @@ Command A pricing is not listed on the public page; contact sales for rates. Ent
 | **Dedicated retrieval stack** | Embed v4 + Rerank 4 (strongest) | OpenAI embeddings (basic) | None (use third-party) |
 | **Multilingual** | 100+ languages (best-in-class) | Strong | Strong |
 | **Consumer app** | None | ChatGPT | Claude.ai |
-| **Image / video gen** | None | GPT Image 1.5 | None |
+| **Image / video gen** | None | GPT Image 2 | None |
 | **Agent platform** | North workspace | Operator / GPT Store | Claude Code CLI |
 | **Best viewed as** | Enterprise RAG + sovereignty | Generalist + consumer | Reasoning + coding specialist |
 

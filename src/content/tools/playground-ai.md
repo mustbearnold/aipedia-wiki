@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: $0-$45/month
 status: active
 launched: 2022-07
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-04-22
+last_verified: 2026-04-22
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -108,7 +108,7 @@ Social templates (Instagram, LinkedIn, TikTok, YouTube) sit inside the canvas wi
 - **Text-in-image reliability for logos and thumbnails:** [Ideogram](/tools/ideogram/).
 - **Open weights and self-hosting:** [Flux](/tools/flux/) or [Stable Diffusion](/tools/stable-diffusion/) (direct).
 - **Vector output or enterprise indemnification:** [Adobe Firefly](/tools/adobe-firefly/).
-- **Image gen bundled with a chatbot:** [ChatGPT](/tools/chatgpt/) (GPT Image 1.5).
+- **Image gen bundled with a chatbot:** [ChatGPT](/tools/chatgpt/) (GPT Image 2).
 - **Stock library plus generation:** [Freepik](/tools/freepik/).
 
 ## Pricing

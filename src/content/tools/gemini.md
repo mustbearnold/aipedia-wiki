@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$249.99/month"
 status: active
 launched: 2023-12
-last_updated: 2026-04-18
-last_verified: 2026-04-18
+last_updated: 2026-04-22
+last_verified: 2026-04-22
 update_frequency: monthly
 seo_title: "Gemini: Features, Pricing & Review (April 2026)"
 meta_description: "Gemini 3.1 Pro is Google's flagship (Feb 2026, 1M token context). Google AI Pro $19.99/mo bundles 5TB storage, Veo 3.1, and Nano Banana 2. Ultra $249.99/mo unlocks Deep Think 3.1 and Nano Banana Pro. Best AI for Google Workspace users."
@@ -64,6 +64,8 @@ Google DeepMind's multimodal AI assistant. **Gemini 3.1 Pro** is the flagship as
 
 ## Recent developments (April 2026)
 
+- **April 22:** [Google unveils Ironwood TPU at Cloud Next 2026](/news/2026-04-22-google-ironwood-tpu-cloud-next-2026/): 7th-gen, inference-first, 10x peak perf vs TPU v5p, 192 GB HBM3E per chip. Generally available on Google Cloud; expected to power Gemini serving migration through 2026 with downward pricing pressure on Flash and Pro tiers.
+- **April 22:** [Google formalizes four-partner silicon coalition](/news/2026-04-22-google-four-partner-inference-chip-coalition/) (Broadcom, MediaTek, Marvell, TSMC). Roadmap to TPU v8 on TSMC 2nm by late 2027. MediaTek "Zebrafish" inference chip targets 20-30% lower per-token cost than Ironwood.
 - **April 17:** [Chrome AI Mode launches desktop side-by-side view](/news/2026-04-17-google-chrome-ai-mode-side-by-side/). Click a link in AI Mode, Chrome opens the page beside the AI pane instead of replacing it. Plus menu pulls content from open tabs into queries. Distributes Gemini to Chrome's massive install base as the default browser AI.
 - **April 16:** [Google in talks to deploy Gemini on Pentagon classified networks](/news/2026-04-16-google-pentagon-gemini-classified/). "All lawful purposes" framing similar to OpenAI's February DoD deal. Google proposed safeguards against domestic surveillance and autonomous weapons use. Reversal of post-Maven 2018 posture.
 - **April 17:** [Google Photos ↔ Gemini integration](/news/2026-04-17-google-photos-gemini-nano-banana/) goes live as an opt-in. Paid subscribers can generate images with their own faces and locations via Nano Banana without manually uploading reference photos. First major consumer integration where one toggle unlocks broad library access for generative models.
@@ -152,7 +154,7 @@ Prices verified 2026-04-17 via [Google AI subscription page](https://one.google.
 | | Gemini 3.1 Pro (AI Pro $19.99) | Claude Opus 4.7 (Pro $20) | ChatGPT Plus ($20) |
 |---|---|---|---|
 | **Agentic coding** | No native agent | Claude Code (strongest CLI) | Codex (Pro tier only) |
-| **Image generation** | Nano Banana 2 (built-in) | None | GPT Image 1.5 (built-in) |
+| **Image generation** | Nano Banana 2 (built-in) | None | GPT Image 2 (built-in) |
 | **Video generation** | Veo 3.1 Fast (built-in) | None | None (Sora shut down) |
 | **Long-context** | 1M tokens (surcharge >200K) | 1M tokens, flat rate | Undisclosed window |
 | **Workspace integration** | Best · native Docs, Sheets, Gmail | Narrower | Broader plugin ecosystem |

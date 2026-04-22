@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0.01-$0.08 per image / hourly GPUs $2.90-$9.00"
 status: active
 launched: 2022-10
-last_updated: 2026-04-18
-last_verified: 2026-04-18
+last_updated: 2026-04-22
+last_verified: 2026-04-22
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -76,7 +76,7 @@ A cloud-hosted, serverless inference platform built specifically for generative 
 
 ## When to pick something else
 
-- **Consumer image gen without building an app:** [Leonardo](/tools/leonardo/), [Midjourney](/tools/midjourney/), or [ChatGPT Plus](/tools/chatgpt/) (GPT Image 1.5 bundled).
+- **Consumer image gen without building an app:** [Leonardo](/tools/leonardo/), [Midjourney](/tools/midjourney/), or [ChatGPT Plus](/tools/chatgpt/) (GPT Image 2 bundled).
 - **Replicate users who like community models:** Stay on [Replicate](https://replicate.com) for its deep community-contributed catalog.
 - **Google-native workflows:** Use [Gemini](/tools/gemini/) with built-in Nano Banana directly.
 - **Self-hosted for privacy:** [ComfyUI](https://github.com/comfyanonymous/ComfyUI) + Stable Diffusion or Flux via local GPU.

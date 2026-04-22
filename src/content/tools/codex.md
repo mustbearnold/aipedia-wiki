@@ -2,7 +2,7 @@
 type: tool
 slug: codex
 title: OpenAI Codex
-tagline: OpenAI's agentic coding product. Cloud-async coding agent, Codex Desktop app (macOS first, Windows rolling), CLI, and IDE extensions. April 16, 2026 super-app update added Computer Use, Memory, gpt-image-1.5, in-app browser, 90+ plugins, and multi-agent workflows.
+tagline: OpenAI's agentic coding product. Cloud-async coding agent, Codex Desktop app (macOS first, Windows rolling), CLI, and IDE extensions. April 16, 2026 super-app update added Computer Use, Memory, gpt-image-2, in-app browser, 90+ plugins, and multi-agent workflows.
 category: ai-coding
 secondary_categories: [ai-chatbots]
 company: openai
@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "Bundled with ChatGPT Plus ($20/mo) through Pro 20x ($200/mo)"
 status: active
 launched: 2025-05
-last_updated: 2026-04-19
-last_verified: 2026-04-19
+last_updated: 2026-04-22
+last_verified: 2026-04-22
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -62,18 +62,18 @@ price_history:
   - date: 2026-04-16
     plan: "Super-app update"
     price: "Same"
-    note: "Codex Desktop gained Computer Use, Memory, gpt-image-1.5, in-app browser, 90+ plugins, multi-agent workflows. Biggest surface expansion since launch."
+    note: "Codex Desktop gained Computer Use, Memory, gpt-image-2, in-app browser, 90+ plugins, multi-agent workflows. Biggest surface expansion since launch."
 ---
 
 # OpenAI Codex
 
 OpenAI's **agentic coding** product. A coding agent that works either **async in the cloud** (fire a task, come back to a PR) or **locally** via the Codex Desktop app, CLI, and IDE extensions. Backed by GPT-5.4 and the faster GPT-5.3-Codex-Spark.
 
-Bundled with every paid ChatGPT tier. Pro tiers get 5x to 20x the Codex usage of Plus. The April 16, 2026 super-app update turned Codex Desktop into the most capable OpenAI product surface to date: Computer Use, persistent Memory, gpt-image-1.5 for visuals, an in-app browser, 90+ plugins, and multi-agent workflows running in parallel.
+Bundled with every paid ChatGPT tier. Pro tiers get 5x to 20x the Codex usage of Plus. The April 16, 2026 super-app update turned Codex Desktop into the most capable OpenAI product surface to date: Computer Use, persistent Memory, gpt-image-2 for visuals, an in-app browser, 90+ plugins, and multi-agent workflows running in parallel.
 
 ## Recent developments (March-April 2026)
 
-- **April 16, 2026:** [Codex Desktop ships as OpenAI "super app"](/news/2026-04-16-openai-codex-desktop-super-app/). Computer Use, Memory, gpt-image-1.5, in-app browser, 90+ plugins, multi-agent workflows. macOS first; Windows and EU/UK rolling out.
+- **April 16, 2026:** [Codex Desktop ships as OpenAI "super app"](/news/2026-04-16-openai-codex-desktop-super-app/). Computer Use, Memory, gpt-image-2, in-app browser, 90+ plugins, multi-agent workflows. macOS first; Windows and EU/UK rolling out.
 - **April 16, 2026:** [Systemic MCP vulnerability exposes 200k servers](/news/2026-04-16-mcp-vulnerability-200k-servers/). Codex Desktop's 90+ plugins + MCP tool access all inherit the exposure. Audit third-party servers; prefer first-party.
 - **April 16, 2026:** [Agents SDK ships native sandbox execution](/news/2026-04-16-openai-agents-sdk-sandbox-update/), model-native harness, configurable memory, snapshotting. Python first, TypeScript coming.
 - **April 9, 2026:** [$100/mo Pro tier launched](/news/2026-04-09-chatgpt-pro-100-tier-launch/). Between ChatGPT Plus ($20) and the former $200 Pro (now Pro 20x). 5x Codex vs Plus; 10x promo through May 31.
@@ -97,7 +97,7 @@ Bundled with every paid ChatGPT tier. Pro tiers get 5x to 20x the Codex usage of
 | **Async cloud execution** | Yes. Sandboxed VM spins up per task; Codex returns a diff or PR |
 | **Computer Use** | Yes (new April 16, macOS first). Codex operates desktop apps with a virtual cursor |
 | **Memory** | Persistent across sessions (new April 16). Remembers preferences, corrections, setup context |
-| **Image generation** | gpt-image-1.5 bundled in Codex Desktop (new April 16) |
+| **Image generation** | gpt-image-2 bundled in Codex Desktop (new April 16) |
 | **In-app browser** | Yes (new April 16). Research, form-fill, scrape without leaving the app |
 | **Plugins** | 90+ (new April 16). Combines skills, app integrations, MCP servers |
 | **Multi-agent** | Yes. Run multiple Codex agents concurrently across different tasks or modules |
@@ -112,7 +112,7 @@ Three related surfaces united by the same underlying agent:
 
 **1. Async cloud agent (the original Codex).** From inside ChatGPT, you describe a task ("add a new settings page to this repo, tests included"). Codex spins up a sandboxed VM with your codebase cloned in, works through the task independently over minutes or hours, and returns a diff or pull request. You continue with other work meanwhile.
 
-**2. Codex Desktop (the April 16 super-app).** A standalone macOS app (Windows rolling out) that runs multiple Codex agents in parallel, uses Computer Use to operate applications directly, holds persistent Memory across sessions, generates images with gpt-image-1.5, browses the web in-app, and orchestrates 90+ plugins including first-party app integrations and third-party MCP servers.
+**2. Codex Desktop (the April 16 super-app).** A standalone macOS app (Windows rolling out) that runs multiple Codex agents in parallel, uses Computer Use to operate applications directly, holds persistent Memory across sessions, generates images with gpt-image-2, browses the web in-app, and orchestrates 90+ plugins including first-party app integrations and third-party MCP servers.
 
 **3. Codex CLI + IDE extensions.** Local-first developers use Codex as a terminal CLI (similar shape to Claude Code) or via IDE extensions in VS Code, JetBrains, and others. IDE extensions hit the same GPT-5.4 / Codex-Spark models that back the cloud and desktop surfaces.
 
@@ -163,7 +163,7 @@ Prices verified 2026-04-18 via [OpenAI Codex pricing](https://developers.openai.
 | **Backing model(s)** | GPT-5.4 + GPT-5.3-Codex-Spark | Claude Opus 4.7 + Sonnet 4.6 | User-selectable (Claude, GPT, Gemini, Grok, Composer 2) | Proprietary Cognition models |
 | **Computer Use** | Yes (April 16, macOS first) | Research preview in Claude Code | No native computer use | Yes, agent-native |
 | **Memory** | Yes (April 16, persistent cross-session) | Projects + session scope | Via `.cursorrules` + rules | Agent-native memory |
-| **Image generation** | gpt-image-1.5 bundled | None native | None native | None native |
+| **Image generation** | gpt-image-2 bundled | None native | None native | None native |
 | **Plugins / ecosystem** | 90+ (April 16) | MCP registry + Anthropic Skills | Extensions + custom commands | Built-in toolset |
 | **Platform support** | macOS now; Windows + EU/UK rolling; Linux via CLI | macOS, Windows, Linux | macOS, Windows, Linux | Web (cross-platform) |
 | **Pricing model** | Bundled with ChatGPT Plus+ | Bundled with Claude Pro+ | $20/mo Cursor Pro + API | $500/mo Teams |

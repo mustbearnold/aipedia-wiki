@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: $0-$48/month
 status: active
 launched: 2023-01
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-04-22
+last_verified: 2026-04-22
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -108,7 +108,7 @@ The moat is the free tier plus the beginner-friendly UI. No Discord, no CLI, no 
 - **Peak aesthetic ceiling:** [Midjourney](/tools/midjourney/) V7. Still the reference for cinematic work.
 - **Text-in-image reliability:** [Ideogram](/tools/ideogram/). Logos and thumbnails need it.
 - **Open weights and self-hosting:** [Flux](/tools/flux/) or [Stable Diffusion](/tools/stable-diffusion/).
-- **Image gen bundled with a chatbot:** [ChatGPT](/tools/chatgpt/) (GPT Image 1.5).
+- **Image gen bundled with a chatbot:** [ChatGPT](/tools/chatgpt/) (GPT Image 2).
 - **Long-form video generation:** [Runway](/tools/runway/) or Kling. Motion Studio tops out at 4 seconds.
 - **Commercially indemnified outputs:** [Adobe Firefly](/tools/adobe-firefly/). Adobe indemnifies paid users; Leonardo does not.
 

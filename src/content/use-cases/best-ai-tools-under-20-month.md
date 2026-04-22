@@ -7,8 +7,8 @@ meta_description: "40+ AI tools priced at $20/month or less, hand-curated by cat
 author: "aipedia.wiki Editorial"
 description: Hand-picked AI tools priced at $20 per month or less, across every major category. Real paid plans with real value, no throwaway free tiers.
 tools_mentioned: [claude, chatgpt, gemini, grok, mistral-ai, github-copilot, windsurf, supermaven, cursor, rytr, quillbot, grammarly, freepik, playground-ai, flux, stable-diffusion, kling, decktopus, gamma, mubert, suno, notion-ai, obsidian, frase, kokoro, fish-audio, ideogram, elevenlabs]
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-04-22
+last_verified: 2026-04-22
 update_frequency: monthly
 ---
 
@@ -36,7 +36,7 @@ Claude Pro at $20/month tops the list for general reasoning, coding, and writing
 ### AI Chatbot / General Reasoning
 
 **Claude Pro ($20/mo)**  
-Claude Pro provides access to Claude Opus 4.7 and Sonnet models, up to 1M token context on higher tiers, and Claude Code CLI for development tasks. At $20/month ($16.67 annual), it handles reasoning, coding, and long documents better than GPT-5.4 in depth-focused work. Compared to Gemini 3.1 Pro (2M tokens in Google AI Advanced at $19.99/mo), Claude excels in analysis; Grok 4.20 via X Premium ($8/mo) suits real-time data but lacks context depth.[1][3][6] Limitations: No native images (use ChatGPT Plus for GPT Image 1.5). Ideal for users needing one tool over specialists.[1]
+Claude Pro provides access to Claude Opus 4.7 and Sonnet models, up to 1M token context on higher tiers, and Claude Code CLI for development tasks. At $20/month ($16.67 annual), it handles reasoning, coding, and long documents better than GPT-5.4 in depth-focused work. Compared to Gemini 3.1 Pro (2M tokens in Google AI Advanced at $19.99/mo), Claude excels in analysis; Grok 4.20 via X Premium ($8/mo) suits real-time data but lacks context depth.[1][3][6] Limitations: No native images (use ChatGPT Plus for GPT Image 2). Ideal for users needing one tool over specialists.[1]
 
 **Mistral Le Chat Pro ($14.99/mo)**  
 Mistral AI's Le Chat Pro uses DeepSeek V3.2 for reasoning and coding at $14.99/month. Stronger than Claude on multilingual tasks, weaker on long context. Good for non-English workflows.[1]
@@ -60,7 +60,7 @@ Rytr Unlimited at $7.50/month annual covers short-form tasks like ad copy with t
 ### AI Image Generation
 
 **Freepik Essential ($5.75/mo)**  
-Freepik Essential at $5.75/month gives 8,000 AI credits via Flux 2 and full stock library. Beats Playground AI Pro ($15/mo), Ideogram Plus ($15/mo) on cost/volume. Free: Flux/Stable Diffusion self-host, Gemini free Imagen.[1][7] GPT Image 1.5 in ChatGPT Plus ($20) as alternative.[2][5]
+Freepik Essential at $5.75/month gives 8,000 AI credits via Flux 2 and full stock library. Beats Playground AI Pro ($15/mo), Ideogram Plus ($15/mo) on cost/volume. Free: Flux/Stable Diffusion self-host, Gemini free Imagen.[1][7] GPT Image 2 in ChatGPT Plus ($20) as alternative.[2][5]
 
 ### AI Video
 

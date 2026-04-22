@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0 self-hosted / ~$0.003-$0.10 per image via API"
 status: active
 launched: 2024-08
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-04-22
+last_verified: 2026-04-22
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -61,7 +61,7 @@ The entire line is API-first. BFL does not ship a consumer web app. Access runs 
 
 > **Pick Flux if you are building image generation into a product, need open weights for on-prem deployment, or want instruction-based edits that preserve subject identity.** Flux.2 Pro delivers the strongest open-ecosystem photoreal quality available. Flux.1 Kontext is the best widely-available instruction editor: ask for "put sunglasses on the same person" and the person stays the same. Open-weight Flux.2 Dev and Klein ship under developer-friendly licenses, and the LoRA ecosystem on Civitai and Hugging Face is the largest outside legacy Stable Diffusion.
 >
-> **Skip it if you want to type prompts into a nice web app.** BFL ships no consumer UI. You need API skills, ComfyUI, or a third-party front-end. [Midjourney](/tools/midjourney/) still wins on default aesthetic polish with zero setup; [Ideogram](/tools/ideogram/) still wins decisively on text-in-image; [ChatGPT](/tools/chatgpt/)'s GPT Image 1.5 wins for users who already pay for a chat subscription and don't want a separate image bill.
+> **Skip it if you want to type prompts into a nice web app.** BFL ships no consumer UI. You need API skills, ComfyUI, or a third-party front-end. [Midjourney](/tools/midjourney/) still wins on default aesthetic polish with zero setup; [Ideogram](/tools/ideogram/) still wins decisively on text-in-image; [ChatGPT](/tools/chatgpt/)'s GPT Image 2 wins for users who already pay for a chat subscription and don't want a separate image bill.
 >
 > **Who pays which tier:** open-weight Dev/Klein for researchers and self-hosters with a 24GB+ GPU; Replicate pay-per-image for ad-hoc use (Schnell $0.003, Dev $0.025, Pro $0.05); BFL API for production pipelines and Kontext editing (credits from ~$0.014/megapixel); fal.ai for the cheapest sustained production on hosted infra.
 
@@ -88,7 +88,7 @@ A set of diffusion / flow-matching image models sold through APIs and, for the D
 
 The moats:
 
-- **Open weights for Dev and Klein.** Nobody else at frontier photoreal quality ships downloadable weights. Midjourney and GPT Image 1.5 are fully closed.
+- **Open weights for Dev and Klein.** Nobody else at frontier photoreal quality ships downloadable weights. Midjourney and GPT Image 2 are fully closed.
 - **Kontext edit capability.** Instruction-based editing that preserves subject identity across multiple edits is rare. It is the single feature competitors have not matched at parity.
 - **Photoreal ceiling.** Flux.2 Pro is the strongest photoreal open-ecosystem model at 4MP. Skin, lighting, and product shots consistently read as real.
 - **LoRA ecosystem.** Civitai and Hugging Face host thousands of community Flux LoRAs; training a new one takes hours on consumer hardware.
@@ -105,7 +105,7 @@ The moats:
 
 - **Default aesthetic polish with zero setup:** [Midjourney](/tools/midjourney/). Wins on out-of-the-box composition and color.
 - **Text-in-image (posters, thumbnails, UI mocks):** [Ideogram](/tools/ideogram/) v3. ~90-95% text rendering accuracy vs Flux's "decent on short phrases."
-- **You already pay for a chat subscription and don't want a separate image bill:** [ChatGPT](/tools/chatgpt/) with GPT Image 1.5. Bundled, no API integration work.
+- **You already pay for a chat subscription and don't want a separate image bill:** [ChatGPT](/tools/chatgpt/) with GPT Image 2. Bundled, no API integration work.
 - **The legacy open-source ecosystem (SDXL checkpoints, ControlNet zoo):** [Stable Diffusion](/tools/stable-diffusion/). Larger historical checkpoint library; quality ceiling is below Flux.2.
 - **Free-tier-friendly web app for beginners:** [Leonardo](/tools/leonardo/). Better onboarding than raw Flux; less power.
 

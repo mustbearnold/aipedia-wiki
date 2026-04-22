@@ -2,7 +2,7 @@
 type: tool
 slug: kimi
 title: Kimi
-tagline: Moonshot AI's chatbot and model family, anchored by Kimi K2.5 with a 256K-token context window and agent swarm mode.
+tagline: Moonshot AI's chatbot and model family, anchored by Kimi K2.6 with strong open-weights coding and agentic benchmarks plus Agent Swarm mode.
 category: ai-chatbots
 secondary_categories: [ai-coding, ai-research]
 company: Moonshot AI
@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: "Free (chat) / API from $0.60/M input tokens"
 status: active
 launched: 2023-10
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-04-22
+last_verified: 2026-04-22
 update_frequency: quarterly
 affiliate:
   has_program: false
@@ -47,7 +47,11 @@ quick_answer: >-
 
 Moonshot AI's chatbot and LLM family, built in Beijing by Tsinghua alumni and backed by Alibaba, Tencent, and IDG Capital at a reported $10B valuation. Alibaba holds a 36% stake after a $1B round in February 2024. Kimi launched October 2023.
 
-The current surface runs two flagship models. **Kimi K2.5** (released January 27, 2026) is a 1T-parameter MoE with 32B active parameters, native multimodal, and a 256K context window available free to chat users. **Kimi K2 Thinking** is the open-weight reasoning model that tops Humanity's Last Exam at 44.9% with tools (51.0% in heavy mode), with up to 300 sequential tool calls.
+The current flagship is **Kimi K2.6**, released April 21, 2026 as open-weights with four operating modes: Instant, Thinking, Agent, and Agent Swarm. K2.6 posts the strongest published coding and agentic benchmarks for any open-weights model on release day: HLE with tools 54.0, SWE-Bench Pro 58.6, SWE-bench Multilingual 76.7. **Kimi K2 Thinking** remains in the lineup as the prior open-weight reasoning flagship (HLE 44.9% with tools).
+
+## Recent developments
+
+- **April 21, 2026:** [Kimi K2.6 released](/news/2026-04-21-moonshot-kimi-k2-6-agent-swarm/) with four modes including Agent Swarm (multi-instance parallel execution with planner/executor/verifier/critic roles). Benchmarks: HLE-with-tools 54.0, SWE-Bench Pro 58.6, SWE-bench Multilingual 76.7. Strongest open-weights coding and agentic model as of release.
 
 ## System Verdict
 
@@ -61,12 +65,15 @@ The current surface runs two flagship models. **Kimi K2.5** (released January 27
 
 | | |
 |---|---|
-| **Flagship model** | Kimi K2.5 (released January 27, 2026) |
-| **Reasoning flagship** | Kimi K2 Thinking (open weights, modified MIT) |
-| **Architecture** | 1T parameter MoE, 32B active per request |
+| **Flagship model** | Kimi K2.6 (released April 21, 2026, open-weights) |
+| **Prior reasoning flagship** | Kimi K2 Thinking (open weights, modified MIT) |
+| **Architecture** | 1T parameter MoE, 32B active per request (K2.5 lineage; K2.6 architecture details per Moonshot release notes) |
 | **Context window** | 256K tokens (262,144) on chat and API |
 | **Multimodal** | Native vision + text training |
-| **HLE benchmark** | 44.9% with tools, 51.0% heavy mode (K2 Thinking) |
+| **HLE with tools (K2.6)** | 54.0 |
+| **SWE-Bench Pro (K2.6)** | 58.6 |
+| **SWE-bench Multilingual (K2.6)** | 76.7 |
+| **HLE with tools (K2 Thinking)** | 44.9%, 51.0% heavy mode |
 | **Sequential tool calls** | 200-300 per agent task |
 | **Chat pricing** | Free tier with 256K context, paid memberships available |
 | **API pricing** | $0.60/M input (cache miss), $2.50-$3.00/M output |

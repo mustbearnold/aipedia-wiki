@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: $0-$199.99/month
 status: active
 launched: 2023-03
-last_updated: 2026-04-18
-last_verified: 2026-04-18
+last_updated: 2026-04-22
+last_verified: 2026-04-22
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -64,11 +64,13 @@ Trained only on licensed Adobe Stock and public domain content. Paid plans inclu
 
 ## Recent developments
 
+- **April 21, 2026:** [Adobe + NVIDIA ship agentic creative workflow at Adobe Summit](/news/2026-04-21-adobe-nvidia-agents-adobe-summit-wpp/). Agents built on NVIDIA's Agent Toolkit and Nemotron models drive end-to-end production across Firefly, Photoshop, and Premiere. Live WPP advertising demo; Verizon 5G powers on-set media capture. Reframes Firefly as the execution step inside a Nemotron-driven creative pipeline.
+- **April 21, 2026:** [OpenAI launches ChatGPT Images 2.0 and gpt-image-2](/news/2026-04-21-openai-chatgpt-images-2-gpt-image-2/) with native reasoning, 4K output, multilingual text rendering across 12+ languages. Direct pressure on Firefly's text-in-image and infographic capabilities; Firefly's IP-indemnification and Adobe-stack integration differentiators remain intact.
 - **April 15, 2026:** [Firefly AI Assistant launches](/news/2026-04-15-adobe-firefly-ai-assistant/). Conversational agent orchestrates multi-step tasks across Photoshop, Premiere, Lightroom, Illustrator, Express, and Firefly. Third-party Claude integration confirmed. Precision Flow, AI Markup, Audio Enhance Speech live same day. Public beta in the coming weeks; full demos at Adobe Summit April 19-22 Las Vegas.
 
 ## System Verdict
 
-> **Pick Firefly if the output ships to a paying client, a regulated industry, or an enterprise legal team.** Adobe indemnifies paid users against copyright claims. [Midjourney](/tools/midjourney/), [Flux](/tools/flux/), and [ChatGPT](/tools/chatgpt/) GPT Image 1.5 do not.
+> **Pick Firefly if the output ships to a paying client, a regulated industry, or an enterprise legal team.** Adobe indemnifies paid users against copyright claims. [Midjourney](/tools/midjourney/), [Flux](/tools/flux/), and [ChatGPT](/tools/chatgpt/) GPT Image 2 do not.
 >
 > **Skip it if peak aesthetic quality is the axis that matters.** Firefly trails Midjourney V7 on cinematic composition and stylized output. Flux leads on instruction-edit fidelity. The training-data ceiling keeps Firefly in "clean and commercial" territory.
 >
@@ -111,7 +113,7 @@ The moat is legal, not aesthetic. Adobe's training-data sourcing creates the onl
 - **Peak aesthetic quality for concept art or mood:** [Midjourney](/tools/midjourney/) V7. Still the reference for cinematic work.
 - **Text-in-image reliability:** [Ideogram](/tools/ideogram/). Firefly's typography trails.
 - **Open weights or LoRA training:** [Flux](/tools/flux/) or [Stable Diffusion](/tools/stable-diffusion/).
-- **Image gen bundled with a chatbot:** [ChatGPT](/tools/chatgpt/) (GPT Image 1.5).
+- **Image gen bundled with a chatbot:** [ChatGPT](/tools/chatgpt/) (GPT Image 2).
 - **Stock imagery with AI generation on top:** [Freepik](/tools/freepik/). Integrated library plus multi-model gen.
 
 ## Pricing
@@ -130,7 +132,7 @@ Subscription pricing via [firefly.adobe.com/pricing](https://firefly.adobe.com/p
 
 ## Against the alternatives
 
-| | Adobe Firefly Image 5 | Midjourney V7 | ChatGPT GPT Image 1.5 |
+| | Adobe Firefly Image 5 | Midjourney V7 | ChatGPT GPT Image 2 |
 |---|---|---|---|
 | **Aesthetic ceiling** | Mid, "clean commercial" | **Strongest** cinematic | Mid-strong |
 | **Photoreal quality** | Strong at 4MP native | Strong | Strong, softer |

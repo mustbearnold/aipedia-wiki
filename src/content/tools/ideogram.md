@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: $0-$48/month
 status: active
 launched: 2023-08
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-04-22
+last_verified: 2026-04-22
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -66,7 +66,7 @@ Free tier covers 10 prompts per day (4 images per prompt). Paid plans run $7 to 
 
 > **Pick Ideogram if the image needs readable text on the first generation.** Best-in-class typography rendering for logos, YouTube thumbnails, posters, and merch. The free tier is usable. Paid tiers are the cheapest in the category.
 >
-> **Skip it if overall aesthetic quality outranks typography.** [Midjourney](/tools/midjourney/) still leads on cinematic composition and photoreal detail. [Flux](/tools/flux/) wins on instruction-edit fidelity and open weights. [ChatGPT](/tools/chatgpt/) bundles GPT Image 1.5 with text chat for casual integrated use.
+> **Skip it if overall aesthetic quality outranks typography.** [Midjourney](/tools/midjourney/) still leads on cinematic composition and photoreal detail. [Flux](/tools/flux/) wins on instruction-edit fidelity and open weights. [ChatGPT](/tools/chatgpt/) bundles GPT Image 2 with text chat for casual integrated use.
 >
 > **Who pays which tier:** Free for evaluation, Basic $7/mo for solo creators, Plus $15/mo for thumbnail shops and small agencies, Pro $48/mo for production marketing teams running the API.
 
@@ -106,7 +106,7 @@ The moat is narrow but concrete. Ideogram 3.0 spells "GRAND OPENING" correctly t
 
 - **Peak aesthetic quality or cinematic mood:** [Midjourney](/tools/midjourney/) V7. Still the reference for lighting and composition.
 - **Open weights, self-hosting, or LoRA training:** [Flux](/tools/flux/). Flux.1 Kontext is the current instruction-editing family.
-- **Image gen bundled with a chatbot:** [ChatGPT](/tools/chatgpt/) (GPT Image 1.5).
+- **Image gen bundled with a chatbot:** [ChatGPT](/tools/chatgpt/) (GPT Image 2).
 - **Commercially indemnified outputs for enterprise:** [Adobe Firefly](/tools/adobe-firefly/). Adobe indemnifies paid users against IP claims.
 - **Generous free daily volume:** [Leonardo](/tools/leonardo/) offers 150 tokens/day on the free tier.
 

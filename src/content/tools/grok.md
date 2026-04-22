@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$300/month"
 status: active
 launched: 2023-11
-last_updated: 2026-04-19
-last_verified: 2026-04-19
+last_updated: 2026-04-22
+last_verified: 2026-04-22
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -165,7 +165,7 @@ Consumer tier pricing for SuperGrok tiers is not uniformly disclosed on xAI's pu
 | **Context window** | 2M tokens (largest) | Undisclosed | 1M tokens |
 | **Live X / social data** | Yes · unreplicable | No | No |
 | **General reasoning** | Strong; 4-agent cuts hallucinations | Broadest feature suite | Strongest on long-form |
-| **Image generation** | Aurora (restricted) | GPT Image 1.5 | None |
+| **Image generation** | Aurora (restricted) | GPT Image 2 | None |
 | **Video generation** | None | None | None |
 | **Content policy** | Less restrictive | Moderate | More restrictive |
 | **Ownership / governance** | SpaceX (Musk conglomerate) | Microsoft-backed OpenAI | Anthropic (independent) |

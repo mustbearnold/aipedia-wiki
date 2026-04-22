@@ -12,8 +12,8 @@ pricing_model: open-source
 price_range: "$0-$0.85/1M tokens"
 status: active
 launched: 2023-02
-last_updated: 2026-04-18
-last_verified: 2026-04-18
+last_updated: 2026-04-22
+last_verified: 2026-04-22
 update_frequency: monthly
 seo_title: "Llama: Features, Pricing & Review (April 2026)"
 meta_description: "Meta's Llama 4 Maverick (400B total, 17B active, 1M context) is the flagship open-weight LLM. Scout offers 10M tokens. Free weights under the Llama 4 Community License. Hosted pricing from $0.15 per 1M input tokens on Groq."
@@ -108,7 +108,7 @@ The weaknesses: no native image generation, no video, no consumer app with the r
 ## When to pick something else
 
 - **Best-in-class reasoning or long-form writing:** [Claude Opus 4.7](/tools/claude/). Leads on agentic coding, scaled tool use, and document coherence.
-- **Image generation bundled with chat:** [ChatGPT](/tools/chatgpt/) with GPT Image 1.5 or [Gemini](/tools/gemini/) with Imagen 4. Llama has no image output.
+- **Image generation bundled with chat:** [ChatGPT](/tools/chatgpt/) with GPT Image 2 or [Gemini](/tools/gemini/) with Imagen 4. Llama has no image output.
 - **Video generation:** [Gemini](/tools/gemini/) with Veo 3. Llama has none.
 - **Fully permissive Apache-style license:** [Mistral AI](/tools/mistral-ai/) (Mistral-Small and Pixtral) or [DeepSeek](/tools/deepseek/) V3.2. Llama's Community License restricts EU entities and 700M+ MAU orgs.
 - **Chinese-market or local-deployment open weights:** [Qwen](/tools/qwen/) or [GLM](/tools/glm/). Better Mandarin performance and fewer geopolitical frictions.

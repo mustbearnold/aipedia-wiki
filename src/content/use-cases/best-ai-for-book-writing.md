@@ -7,8 +7,8 @@ meta_description: "Top AI tools for book writing include Claude for long-form st
 description: "This page recommends 3 AI tools for book writing, matched to outlining, drafting, editing, and research, with pricing, pros, and cons verified as of April 2026."
 tools_mentioned: ["claude", "chatgpt", "gemini"]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-18
-last_verified: 2026-04-18
+last_updated: 2026-04-22
+last_verified: 2026-04-22
 update_frequency: monthly
 ---
 
@@ -42,7 +42,7 @@ Limitations include weaker multimodal features compared to ChatGPT; it focuses o
 
 ### 2. ChatGPT (GPT-5.4)
 
-ChatGPT, powered by OpenAI's GPT-5.4, supports end-to-end book creation from idea generation to final polish, including text, images via GPT Image 1.5, and voice for dictation.[1][2][5] It brainstorms plots, writes sample chapters, and iterates based on feedback in one interface.
+ChatGPT, powered by OpenAI's GPT-5.4, supports end-to-end book creation from idea generation to final polish, including text, images via GPT Image 2, and voice for dictation.[1][2][5] It brainstorms plots, writes sample chapters, and iterates based on feedback in one interface.
 
 GPT-5.4 wins for book writing through its versatility; authors generate dialogue, describe settings, or create cover art prompts without switching apps.[1][7] Pricing: Free (GPT-5.4 with limits), Plus $20/month (higher caps, faster responses), Pro $200/month (unlimited access, advanced tools).[1][2] Verified 2026-04-15, it includes real-time browsing for fact-checking research.[5]
 

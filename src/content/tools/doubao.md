@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "Free (consumer); API from ~$0.47/M input tokens"
 status: active
 launched: 2023-08
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-04-22
+last_verified: 2026-04-22
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -45,6 +45,10 @@ quick_answer: >-
 ByteDance's consumer AI assistant, launched August 2023 and the most-used AI product in China by daily active users. Runs **Doubao Seed 2.0** as of February 14, 2026, with text, image (Seedream), video (Seedance), voice, and document analysis in one app.
 
 No direct US app store presence. International users access similar capability through the Cici / Dola app in supported markets. API access runs through ByteDance's Volcano Engine cloud.
+
+## Recent developments
+
+- **April 21, 2026:** [ByteDance profit down more than 70% on AI infrastructure capex](/news/2026-04-21-bytedance-profit-drop-ai-capex/). Doubao's aggressive free-tier and low-cost Volcano Engine pricing were enabled by ad-revenue subsidy; profit pressure may tighten free-tier caps and push toward usage-based monetization through 2026.
 
 ## System Verdict
 

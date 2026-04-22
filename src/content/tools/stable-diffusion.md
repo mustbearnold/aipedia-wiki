@@ -12,8 +12,8 @@ pricing_model: free
 price_range: Free (self-host) or ~$0.03-$0.08 per API image
 status: active
 launched: 2022-08
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-04-22
+last_verified: 2026-04-22
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -64,7 +64,7 @@ Model weights are publicly downloadable under the Stability AI Community License
 
 > **Pick Stable Diffusion if you need open weights, deep customization, or unlimited volume.** Nothing else lets you self-host the model, fine-tune with LoRA or DreamBooth, condition with ControlNet, and generate without caps or content filters. The Civitai checkpoint ecosystem and ComfyUI node graph together form a moat no closed tool has matched. SD 3.5 Large with NVIDIA NIM and TensorRT optimizations is roughly 2x faster than SDXL with ~40% less VRAM.
 >
-> **Skip it if you need best-in-class default photoreal or minimal setup.** Flux 2 Pro and Midjourney v7 beat SD 3.5 Large on out-of-the-box aesthetic quality. ChatGPT's GPT Image 1.5 is faster to reach for casual use. Hand and text rendering remain weak across the SD family. Self-hosting demands an 8GB+ NVIDIA GPU and comfort with Python environments.
+> **Skip it if you need best-in-class default photoreal or minimal setup.** Flux 2 Pro and Midjourney v7 beat SD 3.5 Large on out-of-the-box aesthetic quality. ChatGPT's GPT Image 2 is faster to reach for casual use. Hand and text rendering remain weak across the SD family. Self-hosting demands an 8GB+ NVIDIA GPU and comfort with Python environments.
 >
 > **Who pays which tier:** Self-host free on any 8GB+ VRAM GPU (sub-$1M revenue). Stability API for occasional cloud calls at $0.03-$0.08 per image. Third-party hosts (Replicate, Fal) for managed infrastructure without the Stability credit system. Enterprise license only above $1M annual revenue.
 
@@ -94,7 +94,7 @@ An open-weight text-to-image model family published by Stability AI, paired with
 
 Three moats compound over time:
 
-- **Open weights.** Every other frontier image tool (Midjourney, Flux Pro, GPT Image 1.5, Firefly) gates access behind an API. SD weights are downloadable, forkable, and fine-tunable by anyone. This is the reason SD survived Stability AI's 2024 leadership upheaval: the community kept shipping regardless.
+- **Open weights.** Every other frontier image tool (Midjourney, Flux Pro, GPT Image 2, Firefly) gates access behind an API. SD weights are downloadable, forkable, and fine-tunable by anyone. This is the reason SD survived Stability AI's 2024 leadership upheaval: the community kept shipping regardless.
 - **Civitai checkpoint ecosystem.** Tens of thousands of community-trained checkpoints and LoRAs cover photorealism, anime, architecture, product photography, and niches no vendor would build. Downloadable free. This library is the real competitive advantage vs. Flux or closed tools. No one has replicated it.
 - **ComfyUI workflow flexibility.** The node-based graph UI lets users chain ControlNet, IP-Adapter, regional prompting, upscaling, and inpainting into reproducible pipelines. Production studios use ComfyUI workflows as serializable assets. Automatic1111 and InvokeAI cover less technical users but lose pipeline-as-code depth.
 
@@ -102,7 +102,7 @@ Three moats compound over time:
 
 - **Self-hosting is a hard requirement.** Air-gapped environments, privacy-sensitive workloads, regulatory constraints, or teams unwilling to send prompts to a third-party API.
 - **Fine-tuning on a custom subject or style.** LoRA training on 10-20 images produces a consistent face, product, or aesthetic that no closed tool exposes. DreamBooth for heavier personalization.
-- **ControlNet-style spatial conditioning.** Depth maps, Canny edges, OpenPose skeletons, and lineart conditioning for precise composition control, unmatched by Midjourney or GPT Image 1.5.
+- **ControlNet-style spatial conditioning.** Depth maps, Canny edges, OpenPose skeletons, and lineart conditioning for precise composition control, unmatched by Midjourney or GPT Image 2.
 - **High-volume generation without per-image cost.** Studios producing thousands of variants a day: self-host amortizes faster than API billing past a few hundred images.
 - **Unrestricted content (within legal limits).** No built-in content filter when self-hosted. Users retain responsibility under the Acceptable Use Policy.
 - **Production pipelines in ComfyUI.** Reproducible node graphs beat prompt-only workflows for clients and teams that need deterministic output.
@@ -113,7 +113,7 @@ Three moats compound over time:
 - **Fastest path to polished output:** [Midjourney](/tools/midjourney/). v7's aesthetic baseline is higher with zero setup.
 - **Text rendering and typography in images:** [Ideogram](/tools/ideogram/). Still the leader for poster, logo, and UI text generation.
 - **Balanced web UI with training built in:** [Leonardo](/tools/leonardo/). Hosted UI with LoRA training and style consistency for creators who want SD-adjacent control without local setup.
-- **Bundled with chat and broad ecosystem:** [ChatGPT](/tools/chatgpt/). GPT Image 1.5 is adequate for most casual generation and integrated with text workflows.
+- **Bundled with chat and broad ecosystem:** [ChatGPT](/tools/chatgpt/). GPT Image 2 is adequate for most casual generation and integrated with text workflows.
 - **Commercial indemnification:** Adobe Firefly. Trained on licensed content, comes with IP safe-harbor terms Stability does not offer.
 
 ## Pricing
@@ -209,7 +209,7 @@ Yes. SDXL remains widely used in the community. Stability AI no longer positions
 - [Ideogram](/tools/ideogram/) · text-in-image specialist
 - [Leonardo](/tools/leonardo/) · hosted SD-adjacent UI with LoRA training
 - [Adobe Firefly](/tools/adobe-firefly/) · commercial indemnification alternative
-- [ChatGPT](/tools/chatgpt/) · GPT Image 1.5 for bundled text+image workflows
+- [ChatGPT](/tools/chatgpt/) · GPT Image 2 for bundled text+image workflows
 - **Category:** [AI Image](/categories/ai-image/) · [AI Design](/categories/ai-design/)
 
 ## Sources
