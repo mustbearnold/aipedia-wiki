@@ -58,8 +58,14 @@ The price-performance implication: Google can push Gemini API pricing lower (esp
 
 Ironwood ships as the centerpiece of Google's broader [four-partner custom-silicon strategy](/news/2026-04-22-google-four-partner-inference-chip-coalition/) involving Broadcom, MediaTek, Marvell, and TSMC. That coalition extends Google's silicon roadmap to TPU v8 on TSMC 2nm in late 2027, with MediaTek's "Zebrafish" targeting 20-30% lower inference cost than Ironwood.
 
+## Day 2 sidebar: 8th-gen already on the board
+
+One day after the Ironwood GA announcement, Google's Cloud Next 2026 Day 2 keynote unveiled the **8th-generation TPU family**: [TPU 8t for training and TPU 8i for inference](/news/2026-04-23-google-tpu-8t-8i-cloud-next-day2/). TPU 8t delivers 3x Ironwood's processing power per superpod; TPU 8i triples on-chip SRAM for agent-serving workloads. Ironwood stays GA today and remains the production inference TPU. The 8th-gen is a roadmap reveal with staged availability through 2026-2027.
+
 ## Related
 
+- [TPU 8t/8i unveiled on Cloud Next Day 2](/news/2026-04-23-google-tpu-8t-8i-cloud-next-day2/)
+- [Anthropic commits multi-GW capacity on Alphabet-Broadcom TPUs starting 2027](/news/2026-04-22-anthropic-alphabet-broadcom-tpu-commitment-2027/)
 - [Amazon commits up to $25B more to Anthropic](/news/2026-04-20-amazon-anthropic-25b-infrastructure-pact/)
 - [Google in talks with Marvell on custom AI chips](/news/2026-04-20-google-marvell-custom-ai-chips-talks/)
 - [Anthropic locks in 3.5GW Google TPU capacity](/news/2026-04-07-anthropic-google-broadcom-tpu-deal/)

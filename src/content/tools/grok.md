@@ -173,6 +173,7 @@ Consumer tier pricing for SuperGrok tiers is not uniformly disclosed on xAI's pu
 
 ## Failure modes
 
+- **Demand-driven outages.** On [April 23, 2026](/news/2026-04-23-grok-outages-high-demand/), Grok experienced intermittent connectivity issues and response delays across web, mobile, and X integration for several hours. Free-tier and lighter-subscription users absorbed most of the friction; SuperGrok and Premium+ subscribers noticed fewer interruptions. Second congestion episode in April 2026 after the 4.3 beta expansion to $30 and $40 tiers grew the traffic pool ~50x while Colossus 2 is still ramping to 1.5 GW.
 - **No persistent memory, full stop.** Every competitor (ChatGPT, Gemini, Claude) has had cross-session memory for 18+ months. Grok still resets every conversation. The sharpest community complaint against the $300/mo Heavy tier.
 - **SpaceX ownership is a governance concentration risk.** The February 2026 $1.25T merger placed Grok's roadmap, content policy, and platform continuity inside a single Musk-controlled conglomerate. Production dependencies on Grok carry a platform-continuity variable no major competitor does.
 - **Response latency is slow.** User reports of 10-15 second waits for responses that competitors return in 2-3. Noticeable on 4.20 Heavy; not yet measured on 4.3 beta.

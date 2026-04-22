@@ -64,6 +64,7 @@ Anthropic's AI assistant. **Opus 4.7** is the flagship as of **April 16, 2026**,
 
 ## Recent developments
 
+- **April 22:** [Anthropic commits multi-gigawatt capacity on next-gen Alphabet-Broadcom TPUs starting 2027](/news/2026-04-22-anthropic-alphabet-broadcom-tpu-commitment-2027/). Extends the Ironwood 1M-TPU commitment into the 8th-generation silicon roadmap. Anthropic now has 10 GW+ of multi-cloud compute committed across AWS, Google, and Nvidia through 2030.
 - **April 22:** [Anthropic commits to up to 1M Google Ironwood TPUs](/news/2026-04-22-google-ironwood-tpu-cloud-next-2026/) as Google launches the 7th-gen inference-first TPU at Cloud Next 2026. Combined with the AWS pact, Anthropic now has 8.5 GW+ of multi-cloud compute committed for Claude.
 - **April 21:** [Anthropic outspent OpenAI on federal lobbying in Q1 2026](/news/2026-04-21-anthropic-lobbying-q1-2026/): $1.6M vs $1M. First quarter Anthropic has topped the frontier-lab Washington spend table.
 - **April 20:** [Amazon commits up to $25B more to Anthropic](/news/2026-04-20-amazon-anthropic-25b-infrastructure-pact/), tied to a $100B+ AWS spend pledge and up to 5 GW of dedicated compute for Claude training and serving. One of the largest AI infrastructure pacts ever disclosed.

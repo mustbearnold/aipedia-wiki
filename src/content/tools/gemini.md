@@ -64,6 +64,11 @@ Google DeepMind's multimodal AI assistant. **Gemini 3.1 Pro** is the flagship as
 
 ## Recent developments (April 2026)
 
+- **April 23:** [Gemini Enterprise Agent Platform launches](/news/2026-04-23-gemini-enterprise-agent-platform/) with Agent Studio, A2A Orchestration, Registry, Identity, Gateway, and Observability. Google's most complete enterprise-agent stack to date, built on Vertex AI.
+- **April 23:** [Agentic Data Cloud ships](/news/2026-04-23-google-agentic-data-cloud-knowledge-catalog/): Knowledge Catalog, Data Agent Kit, cross-cloud AI-native Lakehouse. Solves the agent-grounding problem that stalled most 2025 agent pilots.
+- **April 23:** [8th-gen TPU 8t (training) and TPU 8i (inference) unveiled](/news/2026-04-23-google-tpu-8t-8i-cloud-next-day2/) on Cloud Next Day 2. TPU 8t delivers 3x Ironwood performance per superpod; TPU 8i triples on-chip SRAM for agent-serving. Staged availability 2026-2027.
+- **April 23:** [Google + Wiz ship Agentic Defense](/news/2026-04-23-google-wiz-agentic-defense/): first post-acquisition Wiz integration. Threat detection, detection engineering, and remediation agents on the Gemini Enterprise Agent Platform.
+- **April 23:** [$750M partner budget](/news/2026-04-23-google-750m-agent-partner-fund/) for SIs, consultancies, and startup resellers to distribute Gemini Agents through 2027.
 - **April 22:** [Google unveils Ironwood TPU at Cloud Next 2026](/news/2026-04-22-google-ironwood-tpu-cloud-next-2026/): 7th-gen, inference-first, 10x peak perf vs TPU v5p, 192 GB HBM3E per chip. Generally available on Google Cloud; expected to power Gemini serving migration through 2026 with downward pricing pressure on Flash and Pro tiers.
 - **April 22:** [Google formalizes four-partner silicon coalition](/news/2026-04-22-google-four-partner-inference-chip-coalition/) (Broadcom, MediaTek, Marvell, TSMC). Roadmap to TPU v8 on TSMC 2nm by late 2027. MediaTek "Zebrafish" inference chip targets 20-30% lower per-token cost than Ironwood.
 - **April 17:** [Chrome AI Mode launches desktop side-by-side view](/news/2026-04-17-google-chrome-ai-mode-side-by-side/). Click a link in AI Mode, Chrome opens the page beside the AI pane instead of replacing it. Plus menu pulls content from open tabs into queries. Distributes Gemini to Chrome's massive install base as the default browser AI.
