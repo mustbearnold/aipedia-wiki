@@ -839,3 +839,188 @@ a, button, [role="button"], .tool-card, .category-pill, .helpful-btn, .copy-btn 
 @media (prefers-reduced-motion: reduce) {
   .cat-card, .cat-card:hover, .cat-card:active { transform: none; }
 }
+
+/* =========================================================
+   Premium sticky nav. Scoped to .nav-root + children.
+   Scroll-aware: densifies (stronger blur, subtle shadow)
+   once the user moves past the first viewport.
+   ========================================================= */
+.nav-root {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background-color: color-mix(in srgb, var(--bg-base) 72%, transparent);
+  border-bottom: 1px solid transparent;
+  transition: backdrop-filter 200ms ease, background-color 200ms ease, border-color 200ms ease, box-shadow 240ms ease;
+}
+.nav-root.nav-scrolled {
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  background-color: color-mix(in srgb, var(--bg-base) 86%, transparent);
+  border-bottom-color: var(--border);
+  box-shadow: 0 8px 30px -20px rgba(0, 0, 0, 0.45);
+}
+
+/* Brand lockup */
+.nav-brand {
+  text-decoration: none;
+  color: var(--text-primary);
+  position: relative;
+}
+.nav-logo-frame {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  transition: border-color 160ms ease, background 160ms ease, transform 240ms cubic-bezier(.2,.7,.2,1);
+}
+.nav-logo-frame img { display: block; }
+.nav-brand:hover .nav-logo-frame {
+  border-color: rgba(167, 139, 250, 0.35);
+  background: var(--bg-card-hover);
+  transform: rotate(-4deg);
+}
+.nav-wordmark {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.012em;
+  line-height: 1;
+}
+.nav-wordmark-name { color: var(--text-primary); }
+.nav-wordmark-tld {
+  color: var(--text-muted);
+  font-weight: 500;
+  transition: color 180ms ease;
+}
+.nav-brand:hover .nav-wordmark-tld {
+  color: var(--accent-primary-text, #c4b5fd);
+}
+.nav-livedot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #34d399;
+  margin-left: 2px;
+  flex: none;
+  box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.55);
+  animation: nav-pulse 2.4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+@keyframes nav-pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.55); }
+  70%  { box-shadow: 0 0 0 6px rgba(52, 211, 153, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(52, 211, 153, 0); }
+}
+
+/* Desktop nav links with underline-slide + active accent */
+.nav-link {
+  position: relative;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: color 150ms ease, background 150ms ease;
+}
+.nav-link:hover {
+  color: var(--text-primary);
+  text-decoration: none;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 3px;
+  height: 1.5px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #a78bfa, #60a5fa);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 220ms cubic-bezier(.2,.7,.2,1);
+}
+.nav-link:hover::after { transform: scaleX(1); }
+.nav-link-active {
+  color: var(--text-primary);
+}
+.nav-link-active::after {
+  transform: scaleX(1);
+  background: linear-gradient(90deg, #a78bfa, #60a5fa, #34d399);
+}
+
+/* Search button: shows live tool count inline with ⌘K shortcut */
+.nav-search {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 4px;
+  padding: 6px 8px 6px 10px;
+  font-size: 13px;
+  color: var(--text-muted);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 160ms ease, border-color 160ms ease, color 160ms ease;
+}
+.nav-search:hover {
+  background: var(--bg-card-hover);
+  border-color: rgba(167, 139, 250, 0.35);
+  color: var(--text-primary);
+}
+.nav-search-icon {
+  color: var(--text-muted);
+  flex: none;
+  transition: color 160ms ease;
+}
+.nav-search:hover .nav-search-icon { color: var(--accent-primary-text, #c4b5fd); }
+.nav-search-text {
+  letter-spacing: -0.005em;
+  font-weight: 500;
+}
+.nav-search-kbd {
+  padding: 2px 6px;
+  font-size: 10.5px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  color: var(--text-secondary);
+  background: var(--bg-card-hover);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  flex: none;
+}
+
+/* Mobile icon buttons */
+.nav-icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: background 140ms ease, color 140ms ease;
+}
+.nav-icon-btn:hover {
+  background: var(--bg-card-hover);
+  color: var(--text-primary);
+}
+
+/* Hide the live dot on small screens where horizontal space is tight */
+@media (max-width: 420px) {
+  .nav-livedot { display: none; }
+  .nav-wordmark { font-size: 14.5px; }
+  .nav-logo-frame { width: 28px; height: 28px; }
+}
+
+/* Reduced-motion users get a static dot */
+@media (prefers-reduced-motion: reduce) {
+  .nav-livedot { animation: none; }
+  .nav-brand:hover .nav-logo-frame { transform: none; }
+  .nav-link::after { transition: none; }
+}

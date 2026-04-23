@@ -1,53 +1,68 @@
 ---
+import { getCollection } from 'astro:content';
 import ThemeToggle from './ThemeToggle.astro';
+
+// Live tool count for the search-button placeholder.
+// Excludes retired/dead/acquired so the figure matches the homepage stat.
+const allTools = await getCollection('tools');
+const liveToolCount = allTools.filter(
+  (t) => t.data.status !== 'dead' && t.data.status !== 'retired' && t.data.status !== 'acquired'
+).length;
+
+// Active-page detection. Tree-based: any pathname starting with /news/
+// highlights News; /compare/ highlights Compare; /categories/ or /tools/
+// highlights Explore. Kept conservative so unrelated pages stay neutral.
+const path = Astro.url.pathname;
+function isActive(prefixes: string[]): boolean {
+  return prefixes.some((p) => path === p || path.startsWith(p));
+}
+const activeExplore = isActive(['/categories/', '/tools/', '/guides/', '/use-cases/']);
+const activeCompare = isActive(['/compare/']);
+const activeNews = isActive(['/news/', '/reports/', '/benchmarks/']);
 ---
 
-<nav class="sticky top-0 z-50 backdrop-blur-xl border-b border-[var(--border)]" style="background-color: color-mix(in srgb, var(--bg-base) 80%, transparent);">
+<nav id="site-nav" class="nav-root sticky top-0 z-50">
   <div class="max-w-6xl mx-auto px-4 h-12 md:h-14 flex items-center justify-between">
-    <!-- Logo. Solid white wordmark reads more confident than a gradient;
-         the accent color is reserved for meaningful signals elsewhere. -->
-    <a href="/" class="inline-flex items-center gap-2 no-underline hover:no-underline">
-      <img src="/brand/aipedia-logo-48.png" alt="aipedia.wiki" width="24" height="24" class="shrink-0" loading="eager" decoding="sync" />
-      <span class="font-semibold text-[var(--text-primary)]" style="letter-spacing: -0.01em;">aipedia.wiki</span>
+    <!-- Brand lockup. Slightly larger logo (26px) + wordmark with a
+         subtle live-dot after the TLD. The dot reinforces the homepage
+         "verified today" trust signal right in the header. -->
+    <a href="/" class="nav-brand inline-flex items-center gap-2.5 no-underline hover:no-underline" aria-label="aipedia.wiki home">
+      <span class="nav-logo-frame" aria-hidden="true">
+        <img src="/brand/aipedia-logo-48.png" alt="" width="26" height="26" loading="eager" decoding="sync" />
+      </span>
+      <span class="nav-wordmark">
+        <span class="nav-wordmark-name">aipedia</span><span class="nav-wordmark-tld">.wiki</span>
+      </span>
+      <span class="nav-livedot" aria-hidden="true" title="Verified today"></span>
     </a>
 
-    <!-- Desktop links. Reduced to 3 content links + search + theme.
-         Stack Builder, Workflows, and Reports live at their URLs and in
-         the mobile drawer / footer; removing them from the top nav
-         increases scan speed for first-time visitors. -->
-    <div class="hidden sm:flex items-center gap-4">
-      <a href="/categories/" class="text-sm text-[var(--text-secondary)] hover:text-[var(--text-primary)] no-underline transition-colors">Explore</a>
-      <a href="/compare/" class="text-sm text-[var(--text-secondary)] hover:text-[var(--text-primary)] no-underline transition-colors">Compare</a>
-      <a href="/news/" class="text-sm text-[var(--text-secondary)] hover:text-[var(--text-primary)] no-underline transition-colors">News</a>
-      <button
-        id="search-trigger"
-        type="button"
-        class="inline-flex items-center gap-1.5 text-sm text-[var(--text-muted)] bg-[var(--bg-card)] border border-[var(--border)] rounded-lg px-3 py-1.5 hover:bg-[var(--bg-card-hover)] transition-colors cursor-pointer"
-      >
-        <span class="text-xs">&#8984;K</span>
-        <span>Search</span>
+    <!-- Desktop links. Underline-slide on hover; active page shows the
+         accent bar. Kept to 3 content links + search + theme for scan
+         speed; Stack Builder / Workflows / Reports live in the drawer. -->
+    <div class="hidden sm:flex items-center gap-1">
+      <a href="/categories/" class:list={['nav-link', activeExplore && 'nav-link-active']}>Explore</a>
+      <a href="/compare/" class:list={['nav-link', activeCompare && 'nav-link-active']}>Compare</a>
+      <a href="/news/" class:list={['nav-link', activeNews && 'nav-link-active']}>News</a>
+
+      <button id="search-trigger" type="button" class="nav-search">
+        <svg class="nav-search-icon" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+        </svg>
+        <span class="nav-search-text">Search <span class="tabular-nums">{liveToolCount}</span> tools</span>
+        <kbd class="nav-search-kbd">⌘K</kbd>
       </button>
+
       <ThemeToggle />
     </div>
 
     <!-- Mobile: search icon + menu + theme -->
     <div class="sm:hidden flex items-center gap-1">
-      <button
-        id="search-trigger-mobile"
-        type="button"
-        aria-label="Search"
-        class="inline-flex items-center justify-center w-9 h-9 rounded-lg hover:bg-[var(--bg-card-hover)] transition-colors cursor-pointer text-[var(--text-secondary)]"
-      >
+      <button id="search-trigger-mobile" type="button" aria-label="Search" class="nav-icon-btn">
         <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
         </svg>
       </button>
-      <button
-        id="mobile-menu-btn"
-        type="button"
-        aria-label="Open menu"
-        class="inline-flex items-center justify-center w-9 h-9 rounded-lg hover:bg-[var(--bg-card-hover)] transition-colors cursor-pointer text-[var(--text-secondary)]"
-      >
+      <button id="mobile-menu-btn" type="button" aria-label="Open menu" class="nav-icon-btn">
         <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
         </svg>
@@ -60,7 +75,7 @@ import ThemeToggle from './ThemeToggle.astro';
 <!-- Mobile drawer -->
 <div id="mobile-menu" class="fixed inset-0 z-[90] sm:hidden" style="display:none">
   <div id="mobile-menu-backdrop" class="absolute inset-0 bg-black/60"></div>
-  <div id="mobile-menu-panel" class="absolute top-0 right-0 bottom-0 w-[78%] max-w-xs bg-[var(--bg-card)] border-l border-[var(--border)] shadow-2xl overflow-y-auto"
+  <div id="mobile-menu-panel" class="absolute top-0 right-0 bottom-0 w-[78%] max-w-xs border-l border-[var(--border)] shadow-2xl overflow-y-auto"
        style="background: var(--bg-base);">
     <div class="flex items-center justify-between px-4 h-14 border-b border-[var(--border)]">
       <span class="text-xs font-semibold uppercase tracking-[0.15em] text-[var(--text-muted)]">Menu</span>
@@ -115,13 +130,23 @@ import ThemeToggle from './ThemeToggle.astro';
     if (e.target.closest('#mobile-menu-btn')) { openMenu(); return; }
     if (e.target.closest('#mobile-menu-close')) { closeMenu(); return; }
     if (e.target.id === 'mobile-menu-backdrop') { closeMenu(); return; }
-    // Close menu when a link inside is clicked
     if (e.target.closest('#mobile-menu-panel a')) { closeMenu(); }
   });
 
-  // Close drawer on Escape (the SearchModal component handles #search-trigger-mobile directly)
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closeMenu();
   });
+
+  // Scroll-aware nav: add .nav-scrolled once the user moves past the
+  // first viewport so the bar densifies (stronger blur, subtle shadow).
+  function onScroll() {
+    const nav = document.getElementById('site-nav');
+    if (!nav) return;
+    if (window.scrollY > 16) nav.classList.add('nav-scrolled');
+    else nav.classList.remove('nav-scrolled');
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+  document.addEventListener('astro:after-swap', onScroll);
 })();
 </script>
