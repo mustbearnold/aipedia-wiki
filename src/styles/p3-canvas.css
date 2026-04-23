@@ -340,6 +340,126 @@ body:has(main .p3-canvas) {
   border-bottom-color: rgba(167, 139, 250, 0.35);
 }
 
+/* =========================================================
+   Jump chips: primary destinations under the hero search.
+   Replaces flat text links. Each chip has a tiny mono icon,
+   a label, a live count, and an arrow affordance.
+   ========================================================= */
+.p3-jumps {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  margin-top: 20px;
+  max-width: 560px;
+}
+@media (min-width: 720px) {
+  .p3-jumps { grid-template-columns: repeat(4, 1fr); }
+}
+.p3-jump {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--p3-line);
+  background: var(--p3-surface);
+  text-decoration: none;
+  color: var(--p3-fg);
+  transition: background 150ms ease, border-color 150ms ease, transform 150ms ease, box-shadow 150ms ease;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  min-width: 0;
+}
+.p3-jump::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(ellipse 120% 120% at 100% 0%, rgba(167, 139, 250, 0.12), transparent 65%);
+  opacity: 0;
+  transition: opacity 180ms ease;
+  pointer-events: none;
+  z-index: -1;
+}
+.p3-jump:hover {
+  border-color: rgba(167, 139, 250, 0.35);
+  background: var(--p3-surface-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px -14px rgba(167, 139, 250, 0.28);
+}
+.p3-jump:hover::before { opacity: 1; }
+.p3-jump:focus-visible {
+  outline: 2px solid rgba(167, 139, 250, 0.5);
+  outline-offset: 2px;
+}
+
+.p3-jump-icon {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background: var(--p3-surface-hover);
+  border: 1px solid var(--p3-line);
+  color: var(--p3-accent-text);
+  transition: background 160ms ease, color 160ms ease, transform 200ms ease;
+}
+.p3-jump:hover .p3-jump-icon {
+  background: rgba(167, 139, 250, 0.12);
+  border-color: rgba(167, 139, 250, 0.28);
+  transform: rotate(-4deg) scale(1.05);
+}
+
+.p3-jump-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  min-width: 0;
+  flex: 1;
+}
+.p3-jump-title {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--p3-fg);
+  line-height: 1.2;
+  letter-spacing: -0.005em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.p3-jump-count {
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--p3-subtle);
+  white-space: nowrap;
+}
+
+.p3-jump-arrow {
+  flex: none;
+  font-size: 14px;
+  color: var(--p3-subtle);
+  transition: color 160ms ease, transform 160ms ease;
+  opacity: 0.6;
+}
+.p3-jump:hover .p3-jump-arrow {
+  color: var(--p3-accent-text);
+  transform: translateX(3px);
+  opacity: 1;
+}
+
+@media (max-width: 420px) {
+  .p3-jump { padding: 9px 10px; gap: 8px; }
+  .p3-jump-icon { width: 28px; height: 28px; }
+  .p3-jump-title { font-size: 12px; }
+  .p3-jump-count { font-size: 10px; }
+  .p3-jump-arrow { display: none; }
+}
+
+
 /* ---------- cover story (homepage) ---------- */
 .p3-hero-right { min-width: 0; }
 .p3-cover {
