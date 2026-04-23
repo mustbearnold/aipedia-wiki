@@ -49,7 +49,7 @@ const activeNews = isActive(['/news/', '/reports/', '/benchmarks/']);
           <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
         </svg>
         <span class="nav-search-text">Search <span class="tabular-nums">{liveToolCount}</span> tools</span>
-        <kbd class="nav-search-kbd">⌘K</kbd>
+        <kbd class="nav-search-kbd" id="nav-search-kbd" aria-label="Keyboard shortcut">Ctrl K</kbd>
       </button>
 
       <ThemeToggle />
@@ -148,5 +148,20 @@ const activeNews = isActive(['/news/', '/reports/', '/benchmarks/']);
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
   document.addEventListener('astro:after-swap', onScroll);
+
+  // Platform-aware keyboard shortcut label. Default HTML is "Ctrl K"
+  // (majority user base on Windows/Linux); swap to "⌘ K" on macOS so
+  // Mac users see their Command-key glyph. Detection uses userAgentData
+  // with a UA-string fallback for older browsers.
+  function setShortcutLabel() {
+    const kbd = document.getElementById('nav-search-kbd');
+    if (!kbd) return;
+    const ua = (navigator.userAgentData && navigator.userAgentData.platform) || navigator.platform || navigator.userAgent || '';
+    const isMac = /Mac|iPhone|iPad|iPod/i.test(ua);
+    kbd.textContent = isMac ? '⌘ K' : 'Ctrl K';
+    kbd.setAttribute('aria-label', isMac ? 'Keyboard shortcut Command K' : 'Keyboard shortcut Control K');
+  }
+  setShortcutLabel();
+  document.addEventListener('astro:after-swap', setShortcutLabel);
 })();
 </script>
