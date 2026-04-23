@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated": "2026-04-17T23:05:28.446Z",
-  "total_active": 179,
+  "generated": "2026-04-23T08:49:06.119Z",
+  "total_active": 217,
   "total_dead": 8,
   "tools": {
     "activepieces": {
@@ -15,8 +15,8 @@
       "pricing_model": "open-source",
       "price_range": "Free self-host / $5 per active flow (cloud)",
       "launched": "2022-06",
-      "last_updated": "2026-04-17T00:00:00.000Z",
-      "last_verified": "2026-04-17T00:00:00.000Z",
+      "last_updated": "2026-04-23T00:00:00.000Z",
+      "last_verified": "2026-04-23T00:00:00.000Z",
       "update_frequency": "monthly",
       "scores": {
         "utility": 8,
@@ -136,8 +136,8 @@
       "pricing_model": "freemium",
       "price_range": "$0-$199.99/month",
       "launched": "2023-03",
-      "last_updated": "2026-04-17T00:00:00.000Z",
-      "last_verified": "2026-04-17T00:00:00.000Z",
+      "last_updated": "2026-04-22T00:00:00.000Z",
+      "last_verified": "2026-04-22T00:00:00.000Z",
       "update_frequency": "monthly",
       "scores": {
         "utility": 7,
@@ -161,6 +161,43 @@
         "link": null
       },
       "page_path": "wikis/ai-tools/pages/tools/adobe-firefly.md"
+    },
+    "ag2": {
+      "slug": "ag2",
+      "status": "active",
+      "title": "AG2",
+      "category": "ai-automation",
+      "secondary_categories": [],
+      "company": "ag2ai",
+      "url": "https://www.ag2.ai",
+      "pricing_model": "open-source",
+      "price_range": "Free (open source)",
+      "launched": "2024-10",
+      "last_updated": "2026-04-18T00:00:00.000Z",
+      "last_verified": "2026-04-18T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 8,
+        "value": 10,
+        "moat": 6,
+        "longevity": 7
+      },
+      "tags": [
+        "agent-framework",
+        "autogen-successor",
+        "python",
+        "multi-agent",
+        "open-source",
+        "community"
+      ],
+      "affiliate": {
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null
+      },
+      "page_path": "wikis/ai-tools/pages/tools/ag2.md"
     },
     "ahrefs": {
       "slug": "ahrefs",
@@ -321,6 +358,46 @@
       },
       "page_path": "wikis/ai-tools/pages/tools/amazon-q.md"
     },
+    "amplemarket": {
+      "slug": "amplemarket",
+      "status": "active",
+      "title": "Amplemarket",
+      "category": "ai-automation",
+      "secondary_categories": [],
+      "company": "Amplemarket",
+      "url": "https://amplemarket.com",
+      "pricing_model": "paid",
+      "price_range": "$600-$2000+/month",
+      "launched": "2019-01",
+      "last_updated": "2026-04-23T00:00:00.000Z",
+      "last_verified": "2026-04-23T00:00:00.000Z",
+      "update_frequency": "quarterly",
+      "scores": {
+        "utility": 8,
+        "value": 6,
+        "moat": 7,
+        "longevity": 8
+      },
+      "tags": [
+        "ai-sdr",
+        "sales-intelligence",
+        "lead-generation",
+        "sales-automation",
+        "cold-email",
+        "sales-engagement",
+        "outbound"
+      ],
+      "affiliate": {
+        "has_program": true,
+        "commission": null,
+        "cookie_days": null,
+        "network": "direct",
+        "application_status": "approved",
+        "approved_date": "2026-04-23T00:00:00.000Z",
+        "link": "https://grow.amplemarket.com/aipediawiki"
+      },
+      "page_path": "wikis/ai-tools/pages/tools/amplemarket.md"
+    },
     "antigravity": {
       "slug": "antigravity",
       "status": "active",
@@ -332,8 +409,8 @@
       "pricing_model": "freemium",
       "price_range": "$0-$249.99/month",
       "launched": "2025-11",
-      "last_updated": "2026-04-17T00:00:00.000Z",
-      "last_verified": "2026-04-17T00:00:00.000Z",
+      "last_updated": "2026-04-18T00:00:00.000Z",
+      "last_verified": "2026-04-18T00:00:00.000Z",
       "update_frequency": "monthly",
       "scores": {
         "utility": 8,
@@ -360,6 +437,45 @@
         "link": null
       },
       "page_path": "wikis/ai-tools/pages/tools/antigravity.md"
+    },
+    "anythingllm": {
+      "slug": "anythingllm",
+      "status": "active",
+      "title": "AnythingLLM",
+      "category": "ai-chatbots",
+      "secondary_categories": [],
+      "company": "mintplex-labs",
+      "url": "https://anythingllm.com",
+      "pricing_model": "freemium",
+      "price_range": "$0 self-hosted / $25-$99/mo cloud",
+      "launched": "2023-06",
+      "last_updated": "2026-04-18T00:00:00.000Z",
+      "last_verified": "2026-04-18T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 9,
+        "value": 10,
+        "moat": 7,
+        "longevity": 8
+      },
+      "tags": [
+        "rag",
+        "self-hosted",
+        "open-source",
+        "document-chat",
+        "agents",
+        "privacy",
+        "enterprise",
+        "mit-licensed"
+      ],
+      "affiliate": {
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null
+      },
+      "page_path": "wikis/ai-tools/pages/tools/anythingllm.md"
     },
     "apollo": {
       "slug": "apollo",
@@ -555,6 +671,44 @@
       },
       "page_path": "wikis/ai-tools/pages/tools/bolt.md"
     },
+    "boomy": {
+      "slug": "boomy",
+      "status": "active",
+      "title": "Boomy",
+      "category": "ai-music",
+      "secondary_categories": [],
+      "company": "boomy",
+      "url": "https://boomy.com",
+      "pricing_model": "freemium",
+      "price_range": "$0 free / $9.99-$29.99/mo",
+      "launched": "2021-03",
+      "last_updated": "2026-04-18T00:00:00.000Z",
+      "last_verified": "2026-04-18T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 7,
+        "value": 7,
+        "moat": 5,
+        "longevity": 6
+      },
+      "tags": [
+        "music-generation",
+        "beginner-friendly",
+        "distribution",
+        "streaming",
+        "spotify",
+        "royalty",
+        "content-creator"
+      ],
+      "affiliate": {
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null
+      },
+      "page_path": "wikis/ai-tools/pages/tools/boomy.md"
+    },
     "canva": {
       "slug": "canva",
       "status": "active",
@@ -566,8 +720,8 @@
       "pricing_model": "freemium",
       "price_range": "$0-$20/user/month",
       "launched": "2013-01",
-      "last_updated": "2026-04-17T00:00:00.000Z",
-      "last_verified": "2026-04-17T00:00:00.000Z",
+      "last_updated": "2026-04-19T00:00:00.000Z",
+      "last_verified": "2026-04-19T00:00:00.000Z",
       "update_frequency": "monthly",
       "scores": {
         "utility": 8,
@@ -587,11 +741,13 @@
         "non-designer"
       ],
       "affiliate": {
-        "has_program": true,
-        "commission": "~$36 per referral (one-time)",
-        "cookie_days": 30,
-        "network": "Impact",
-        "link": "https://www.canva.com/affiliates/"
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null,
+        "application_status": "paused",
+        "notes": "Canva closed the traditional Impact affiliate path in favor of the Canvassador Program (canva.com/canvassador), which requires active tutorial / course / workshop content creation, not just a publisher relationship. Gate doesn't fit an encyclopedia-style site without a dedicated Canva-tutorials section. Revisit if/when aipedia.wiki adds Canva-specific educational content, or if Canva reopens Impact publisher access."
       },
       "page_path": "wikis/ai-tools/pages/tools/canva.md"
     },
@@ -713,6 +869,44 @@
       },
       "page_path": "wikis/ai-tools/pages/tools/cartesia.md"
     },
+    "character-ai": {
+      "slug": "character-ai",
+      "status": "active",
+      "title": "Character AI",
+      "category": "ai-chatbots",
+      "secondary_categories": [],
+      "company": "character-ai",
+      "url": "https://character.ai",
+      "pricing_model": "freemium",
+      "price_range": "$0 free / $9.99/mo c.ai+",
+      "launched": "2022-09",
+      "last_updated": "2026-04-18T00:00:00.000Z",
+      "last_verified": "2026-04-18T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 8,
+        "value": 9,
+        "moat": 8,
+        "longevity": 7
+      },
+      "tags": [
+        "ai-chat",
+        "roleplay",
+        "character",
+        "companion",
+        "entertainment",
+        "creative-writing",
+        "community"
+      ],
+      "affiliate": {
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null
+      },
+      "page_path": "wikis/ai-tools/pages/tools/character-ai.md"
+    },
     "chatgpt": {
       "slug": "chatgpt",
       "status": "active",
@@ -727,8 +921,8 @@
       "pricing_model": "freemium",
       "price_range": "$0-$200/month",
       "launched": "2022-11",
-      "last_updated": "2026-04-17T00:00:00.000Z",
-      "last_verified": "2026-04-17T00:00:00.000Z",
+      "last_updated": "2026-04-22T00:00:00.000Z",
+      "last_verified": "2026-04-22T00:00:00.000Z",
       "update_frequency": "monthly",
       "scores": {
         "utility": 9,
@@ -758,6 +952,43 @@
       },
       "page_path": "wikis/ai-tools/pages/tools/chatgpt.md"
     },
+    "chatpdf": {
+      "slug": "chatpdf",
+      "status": "active",
+      "title": "ChatPDF",
+      "category": "ai-research",
+      "secondary_categories": [],
+      "company": "chatpdf",
+      "url": "https://www.chatpdf.com",
+      "pricing_model": "freemium",
+      "price_range": "$0 free / $19.99/mo Plus",
+      "launched": "2023-03",
+      "last_updated": "2026-04-18T00:00:00.000Z",
+      "last_verified": "2026-04-18T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 8,
+        "value": 7,
+        "moat": 6,
+        "longevity": 6
+      },
+      "tags": [
+        "pdf",
+        "document-chat",
+        "research",
+        "rag",
+        "citations",
+        "study-aid"
+      ],
+      "affiliate": {
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null
+      },
+      "page_path": "wikis/ai-tools/pages/tools/chatpdf.md"
+    },
     "claude-code": {
       "slug": "claude-code",
       "status": "active",
@@ -769,8 +1000,8 @@
       "pricing_model": "paid",
       "price_range": "$20-$200/month",
       "launched": "2025-02",
-      "last_updated": "2026-04-17T00:00:00.000Z",
-      "last_verified": "2026-04-17T00:00:00.000Z",
+      "last_updated": "2026-04-22T00:00:00.000Z",
+      "last_verified": "2026-04-22T00:00:00.000Z",
       "update_frequency": "monthly",
       "scores": {
         "utility": 10,
@@ -800,6 +1031,50 @@
       },
       "page_path": "wikis/ai-tools/pages/tools/claude-code.md"
     },
+    "claude-design": {
+      "slug": "claude-design",
+      "status": "beta",
+      "title": "Claude Design",
+      "category": "ai-design",
+      "secondary_categories": [
+        "ai-coding",
+        "ai-presentation"
+      ],
+      "company": "anthropic",
+      "url": "https://claude.ai/design",
+      "pricing_model": "freemium",
+      "price_range": "Bundled with Claude Pro ($20/mo) and up",
+      "launched": "2026-04",
+      "last_updated": "2026-04-19T00:00:00.000Z",
+      "last_verified": "2026-04-19T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 8,
+        "value": 9,
+        "moat": 7,
+        "longevity": 8
+      },
+      "tags": [
+        "design",
+        "prototyping",
+        "prompt-to-prototype",
+        "slide-decks",
+        "mockups",
+        "claude",
+        "anthropic",
+        "opus-4-7",
+        "non-designer",
+        "research-preview"
+      ],
+      "affiliate": {
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null
+      },
+      "page_path": "wikis/ai-tools/pages/tools/claude-design.md"
+    },
     "claude": {
       "slug": "claude",
       "status": "active",
@@ -807,15 +1082,16 @@
       "category": "ai-chatbots",
       "secondary_categories": [
         "ai-writing",
-        "ai-coding"
+        "ai-coding",
+        "ai-design"
       ],
       "company": "anthropic",
       "url": "https://claude.ai",
       "pricing_model": "freemium",
       "price_range": "$0-$200/month",
       "launched": "2023-03",
-      "last_updated": "2026-04-17T00:00:00.000Z",
-      "last_verified": "2026-04-17T00:00:00.000Z",
+      "last_updated": "2026-04-22T00:00:00.000Z",
+      "last_verified": "2026-04-22T00:00:00.000Z",
       "update_frequency": "monthly",
       "scores": {
         "utility": 10,
@@ -833,6 +1109,7 @@
         "long-context",
         "artifacts",
         "claude-code",
+        "claude-design",
         "extended-thinking",
         "computer-use"
       ],
@@ -919,6 +1196,49 @@
       },
       "page_path": "wikis/ai-tools/pages/tools/clearscope.md"
     },
+    "clickup": {
+      "slug": "clickup",
+      "status": "active",
+      "title": "ClickUp",
+      "category": "ai-automation",
+      "secondary_categories": [],
+      "company": "clickup",
+      "url": "https://clickup.com",
+      "pricing_model": "freemium",
+      "price_range": "$0-$40/user/month",
+      "launched": "2017-01",
+      "last_updated": "2026-04-19T00:00:00.000Z",
+      "last_verified": "2026-04-19T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 8,
+        "value": 8,
+        "moat": 5,
+        "longevity": 8
+      },
+      "tags": [
+        "project-management",
+        "productivity",
+        "workspace",
+        "tasks",
+        "docs",
+        "whiteboards",
+        "ai-agents",
+        "automations",
+        "clickup-brain"
+      ],
+      "affiliate": {
+        "has_program": true,
+        "commission": "$25 / $12.50 / $5 per signup (T1/T2/T3 countries)",
+        "cookie_days": 90,
+        "network": "PartnerStack",
+        "link": null,
+        "application_status": "applied",
+        "applied_date": "2026-04-19T00:00:00.000Z",
+        "notes": "Applied via PartnerStack marketplace 2026-04-19; review time quoted >5 days."
+      },
+      "page_path": "wikis/ai-tools/pages/tools/clickup.md"
+    },
     "cline": {
       "slug": "cline",
       "status": "active",
@@ -961,6 +1281,44 @@
       },
       "page_path": "wikis/ai-tools/pages/tools/cline.md"
     },
+    "clipdrop": {
+      "slug": "clipdrop",
+      "status": "active",
+      "title": "Clipdrop",
+      "category": "ai-image",
+      "secondary_categories": [],
+      "company": "jasper-ai",
+      "url": "https://clipdrop.co",
+      "pricing_model": "freemium",
+      "price_range": "$0 free / $9/mo Pro",
+      "launched": "2020-09",
+      "last_updated": "2026-04-18T00:00:00.000Z",
+      "last_verified": "2026-04-18T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 8,
+        "value": 9,
+        "moat": 6,
+        "longevity": 7
+      },
+      "tags": [
+        "image-editing",
+        "background-removal",
+        "upscaling",
+        "relight",
+        "uncrop",
+        "stable-diffusion",
+        "photoshop-alternative"
+      ],
+      "affiliate": {
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null
+      },
+      "page_path": "wikis/ai-tools/pages/tools/clipdrop.md"
+    },
     "codeium": {
       "slug": "codeium",
       "status": "active",
@@ -1000,6 +1358,49 @@
         "link": null
       },
       "page_path": "wikis/ai-tools/pages/tools/codeium.md"
+    },
+    "codex": {
+      "slug": "codex",
+      "status": "active",
+      "title": "OpenAI Codex",
+      "category": "ai-coding",
+      "secondary_categories": [
+        "ai-chatbots"
+      ],
+      "company": "openai",
+      "url": "https://openai.com/codex/",
+      "pricing_model": "freemium",
+      "price_range": "Bundled with ChatGPT Plus ($20/mo) through Pro 20x ($200/mo)",
+      "launched": "2025-05",
+      "last_updated": "2026-04-23T00:00:00.000Z",
+      "last_verified": "2026-04-23T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 9,
+        "value": 8,
+        "moat": 8,
+        "longevity": 9
+      },
+      "tags": [
+        "agentic-coding",
+        "cloud-agent",
+        "desktop-app",
+        "cli",
+        "openai",
+        "gpt-5",
+        "computer-use",
+        "memory",
+        "plugins",
+        "multi-agent"
+      ],
+      "affiliate": {
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null
+      },
+      "page_path": "wikis/ai-tools/pages/tools/codex.md"
     },
     "cody": {
       "slug": "cody",
@@ -1052,8 +1453,8 @@
       "pricing_model": "freemium",
       "price_range": "$0-$10/1M tokens",
       "launched": "2019-06",
-      "last_updated": "2026-04-17T00:00:00.000Z",
-      "last_verified": "2026-04-17T00:00:00.000Z",
+      "last_updated": "2026-04-22T00:00:00.000Z",
+      "last_verified": "2026-04-22T00:00:00.000Z",
       "update_frequency": "monthly",
       "scores": {
         "utility": 8,
@@ -1167,8 +1568,8 @@
       "pricing_model": "freemium",
       "price_range": "$0-$20/seat/month",
       "launched": "2023-05",
-      "last_updated": "2026-04-17T00:00:00.000Z",
-      "last_verified": "2026-04-17T00:00:00.000Z",
+      "last_updated": "2026-04-18T00:00:00.000Z",
+      "last_verified": "2026-04-18T00:00:00.000Z",
       "update_frequency": "monthly",
       "scores": {
         "utility": 8,
@@ -1281,8 +1682,8 @@
       "pricing_model": "freemium",
       "price_range": "$0-$200/month",
       "launched": "2023-03",
-      "last_updated": "2026-04-17T00:00:00.000Z",
-      "last_verified": "2026-04-17T00:00:00.000Z",
+      "last_updated": "2026-04-23T00:00:00.000Z",
+      "last_verified": "2026-04-23T00:00:00.000Z",
       "update_frequency": "monthly",
       "scores": {
         "utility": 9,
@@ -1360,8 +1761,8 @@
       "pricing_model": "free",
       "price_range": "Retired",
       "launched": "2022-04",
-      "last_updated": "2026-04-17T00:00:00.000Z",
-      "last_verified": "2026-04-17T00:00:00.000Z",
+      "last_updated": "2026-04-22T00:00:00.000Z",
+      "last_verified": "2026-04-22T00:00:00.000Z",
       "update_frequency": "quarterly",
       "scores": {
         "utility": 0,
@@ -1521,8 +1922,8 @@
       "pricing_model": "freemium",
       "price_range": "$0-$65/user/month",
       "launched": "2017-01",
-      "last_updated": "2026-04-17T00:00:00.000Z",
-      "last_verified": "2026-04-17T00:00:00.000Z",
+      "last_updated": "2026-04-23T00:00:00.000Z",
+      "last_verified": "2026-04-23T00:00:00.000Z",
       "update_frequency": "monthly",
       "scores": {
         "utility": 9,
@@ -1597,8 +1998,8 @@
       "pricing_model": "freemium",
       "price_range": "Free (consumer); API from ~$0.47/M input tokens",
       "launched": "2023-08",
-      "last_updated": "2026-04-17T00:00:00.000Z",
-      "last_verified": "2026-04-17T00:00:00.000Z",
+      "last_updated": "2026-04-22T00:00:00.000Z",
+      "last_verified": "2026-04-22T00:00:00.000Z",
       "update_frequency": "monthly",
       "scores": {
         "utility": 7,
@@ -1635,8 +2036,8 @@
       "pricing_model": "freemium",
       "price_range": "$0-$990/month",
       "launched": "2023-01",
-      "last_updated": "2026-04-17T00:00:00.000Z",
-      "last_verified": "2026-04-17T00:00:00.000Z",
+      "last_updated": "2026-04-19T00:00:00.000Z",
+      "last_verified": "2026-04-19T00:00:00.000Z",
       "update_frequency": "monthly",
       "scores": {
         "utility": 10,
@@ -1659,7 +2060,10 @@
         "commission": "22% recurring",
         "cookie_days": 30,
         "network": "direct",
-        "link": "https://try.elevenlabs.io/9qle5pnma4ze"
+        "link": "https://try.elevenlabs.io/9qle5pnma4ze",
+        "application_status": "applied",
+        "applied_date": "2026-04-19T00:00:00.000Z",
+        "notes": "Applied via elevenlabs.io/affiliates; direct URL submitted to https://aipedia.wiki/tools/elevenlabs/"
       },
       "page_path": "wikis/ai-tools/pages/tools/elevenlabs.md"
     },
@@ -1740,6 +2144,45 @@
       },
       "page_path": "wikis/ai-tools/pages/tools/exa.md"
     },
+    "fal-ai": {
+      "slug": "fal-ai",
+      "status": "active",
+      "title": "Fal.ai",
+      "category": "ai-image",
+      "secondary_categories": [],
+      "company": "fal-ai",
+      "url": "https://fal.ai",
+      "pricing_model": "freemium",
+      "price_range": "$0.01-$0.08 per image / hourly GPUs $2.90-$9.00",
+      "launched": "2022-10",
+      "last_updated": "2026-04-22T00:00:00.000Z",
+      "last_verified": "2026-04-22T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 9,
+        "value": 9,
+        "moat": 8,
+        "longevity": 8
+      },
+      "tags": [
+        "inference",
+        "image-generation",
+        "video-generation",
+        "flux",
+        "nano-banana",
+        "serverless",
+        "api",
+        "fast"
+      ],
+      "affiliate": {
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null
+      },
+      "page_path": "wikis/ai-tools/pages/tools/fal-ai.md"
+    },
     "fathom": {
       "slug": "fathom",
       "status": "active",
@@ -1790,8 +2233,8 @@
       "pricing_model": "freemium",
       "price_range": "$0-$90/month",
       "launched": "2016-09",
-      "last_updated": "2026-04-17T00:00:00.000Z",
-      "last_verified": "2026-04-17T00:00:00.000Z",
+      "last_updated": "2026-04-18T00:00:00.000Z",
+      "last_verified": "2026-04-18T00:00:00.000Z",
       "update_frequency": "monthly",
       "scores": {
         "utility": 9,
@@ -1856,6 +2299,43 @@
       },
       "page_path": "wikis/ai-tools/pages/tools/fireflies.md"
     },
+    "fireworks-ai": {
+      "slug": "fireworks-ai",
+      "status": "active",
+      "title": "Fireworks AI",
+      "category": "ai-chatbots",
+      "secondary_categories": [],
+      "company": "fireworks-ai",
+      "url": "https://fireworks.ai",
+      "pricing_model": "paid",
+      "price_range": "$0.10-$0.90/M tokens serverless / $2.90-$9/hr on-demand GPU",
+      "launched": "2022-09",
+      "last_updated": "2026-04-18T00:00:00.000Z",
+      "last_verified": "2026-04-18T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 9,
+        "value": 9,
+        "moat": 7,
+        "longevity": 8
+      },
+      "tags": [
+        "inference",
+        "serverless",
+        "open-source-models",
+        "fine-tuning",
+        "nvidia-blackwell",
+        "enterprise"
+      ],
+      "affiliate": {
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null
+      },
+      "page_path": "wikis/ai-tools/pages/tools/fireworks-ai.md"
+    },
     "fish-audio": {
       "slug": "fish-audio",
       "status": "active",
@@ -1908,8 +2388,8 @@
       "pricing_model": "freemium",
       "price_range": "$0 self-hosted / ~$0.003-$0.10 per image via API",
       "launched": "2024-08",
-      "last_updated": "2026-04-17T00:00:00.000Z",
-      "last_verified": "2026-04-17T00:00:00.000Z",
+      "last_updated": "2026-04-22T00:00:00.000Z",
+      "last_verified": "2026-04-22T00:00:00.000Z",
       "update_frequency": "monthly",
       "scores": {
         "utility": 9,
@@ -2148,8 +2628,8 @@
       "pricing_model": "freemium",
       "price_range": "$0-$249.99/month",
       "launched": "2023-12",
-      "last_updated": "2026-04-17T00:00:00.000Z",
-      "last_verified": "2026-04-17T00:00:00.000Z",
+      "last_updated": "2026-04-22T00:00:00.000Z",
+      "last_verified": "2026-04-22T00:00:00.000Z",
       "update_frequency": "monthly",
       "scores": {
         "utility": 8,
@@ -2221,6 +2701,49 @@
         "link": null
       },
       "page_path": "wikis/ai-tools/pages/tools/genspark.md"
+    },
+    "getresponse": {
+      "slug": "getresponse",
+      "status": "active",
+      "title": "GetResponse",
+      "category": "ai-automation",
+      "secondary_categories": [],
+      "company": "getresponse",
+      "url": "https://www.getresponse.com",
+      "pricing_model": "paid",
+      "price_range": "$15-$69/month",
+      "launched": "1998-09",
+      "last_updated": "2026-04-19T00:00:00.000Z",
+      "last_verified": "2026-04-19T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 7,
+        "value": 7,
+        "moat": 5,
+        "longevity": 8
+      },
+      "tags": [
+        "email-marketing",
+        "marketing-automation",
+        "landing-pages",
+        "webinars",
+        "ecommerce",
+        "course-creator",
+        "ai-email",
+        "newsletter"
+      ],
+      "affiliate": {
+        "has_program": true,
+        "commission": "40% to 60% recurring for 12 months",
+        "cookie_days": 120,
+        "network": "PartnerStack",
+        "link": null,
+        "application_status": "rejected",
+        "applied_date": "2026-04-19T00:00:00.000Z",
+        "declined_date": "2026-04-23T00:00:00.000Z",
+        "notes": "Application rejected (declined) 2026-04-23. Do not retry without explicit user instruction; revisit after meaningful traffic growth."
+      },
+      "page_path": "wikis/ai-tools/pages/tools/getresponse.md"
     },
     "github-copilot": {
       "slug": "github-copilot",
@@ -2435,81 +2958,7 @@
         "network": null,
         "link": null
       },
-      "page_path": "aipedia-wiki/src/content/tools/gpt-image-2.md"
-    },
-    "logseq": {
-      "slug": "logseq",
-      "status": "active",
-      "title": "Logseq",
-      "category": "ai-notes",
-      "company": "logseq",
-      "url": "https://logseq.com",
-      "pricing_model": "free",
-      "price_range": "Free (Sync add-on $5/mo)",
-      "launched": "2020-06",
-      "last_updated": "2026-04-23T00:00:00.000Z",
-      "last_verified": "2026-04-23T00:00:00.000Z",
-      "update_frequency": "monthly",
-      "scores": { "utility": 8, "value": 10, "moat": 7, "longevity": 8 },
-      "tags": ["notes","outliner","local-first","markdown","knowledge-base","zettelkasten","pkm","open-source","block-level","graph-view"],
-      "affiliate": { "has_program": false, "commission": null, "cookie_days": null, "network": null, "link": null },
-      "page_path": "aipedia-wiki/src/content/tools/logseq.md"
-    },
-    "riverside": {
-      "slug": "riverside",
-      "status": "active",
-      "title": "Riverside",
-      "category": "ai-voice",
-      "secondary_categories": ["ai-video"],
-      "company": "riverside-fm",
-      "url": "https://riverside.fm",
-      "pricing_model": "freemium",
-      "price_range": "$0-$29/month (annual) · $24/month Business (annual)",
-      "launched": "2020-01",
-      "last_updated": "2026-04-23T00:00:00.000Z",
-      "last_verified": "2026-04-23T00:00:00.000Z",
-      "update_frequency": "monthly",
-      "scores": { "utility": 9, "value": 8, "moat": 8, "longevity": 8 },
-      "tags": ["podcast-recording","remote-recording","video-podcast","multitrack","magic-editor","transcription","4k","studio-quality"],
-      "affiliate": { "has_program": false, "commission": null, "cookie_days": null, "network": null, "link": null },
-      "page_path": "aipedia-wiki/src/content/tools/riverside.md"
-    },
-    "whisper": {
-      "slug": "whisper",
-      "status": "active",
-      "title": "Whisper",
-      "category": "ai-voice",
-      "secondary_categories": ["ai-coding"],
-      "company": "openai",
-      "url": "https://openai.com/research/whisper",
-      "pricing_model": "freemium",
-      "price_range": "Free self-host / API $0.006 per minute",
-      "launched": "2022-09",
-      "last_updated": "2026-04-23T00:00:00.000Z",
-      "last_verified": "2026-04-23T00:00:00.000Z",
-      "update_frequency": "monthly",
-      "scores": { "utility": 9, "value": 10, "moat": 8, "longevity": 9 },
-      "tags": ["speech-to-text","transcription","open-weights","multilingual","self-hosted","openai","whisper","subtitles","dictation"],
-      "affiliate": { "has_program": false, "commission": null, "cookie_days": null, "network": null, "link": null },
-      "page_path": "aipedia-wiki/src/content/tools/whisper.md"
-    },
-    "workato": {
-      "slug": "workato",
-      "status": "active",
-      "title": "Workato",
-      "category": "ai-automation",
-      "company": "workato",
-      "url": "https://www.workato.com",
-      "pricing_model": "enterprise",
-      "price_range": "Annual contracts (roughly $10k+ starting)",
-      "launched": "2013-01",
-      "last_updated": "2026-04-23T00:00:00.000Z",
-      "last_verified": "2026-04-23T00:00:00.000Z",
-      "update_frequency": "monthly",
-      "scores": { "utility": 8, "value": 6, "moat": 8, "longevity": 9 },
-      "tags": ["ipaas","enterprise-automation","workflow","integration","governance","audit","rbac","sso","ai-agents","workbot"],
-      "affiliate": { "has_program": false, "commission": null, "cookie_days": null, "network": null, "link": null },
-      "page_path": "aipedia-wiki/src/content/tools/workato.md"
+      "page_path": "wikis/ai-tools/pages/tools/gpt-image-2.md"
     },
     "grammarly": {
       "slug": "grammarly",
@@ -2547,21 +2996,60 @@
       },
       "page_path": "wikis/ai-tools/pages/tools/grammarly.md"
     },
+    "granola": {
+      "slug": "granola",
+      "status": "active",
+      "title": "Granola",
+      "category": "ai-notes",
+      "secondary_categories": [],
+      "company": "granola",
+      "url": "https://www.granola.ai",
+      "pricing_model": "freemium",
+      "price_range": "$0 free / $14-$35/user/month",
+      "launched": "2024-05",
+      "last_updated": "2026-04-18T00:00:00.000Z",
+      "last_verified": "2026-04-18T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 9,
+        "value": 9,
+        "moat": 7,
+        "longevity": 8
+      },
+      "tags": [
+        "meeting-notes",
+        "ai-summary",
+        "productivity",
+        "notion",
+        "hubspot",
+        "integrations",
+        "macos"
+      ],
+      "affiliate": {
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null
+      },
+      "page_path": "wikis/ai-tools/pages/tools/granola.md"
+    },
     "grok": {
       "slug": "grok",
       "status": "active",
       "title": "Grok",
       "category": "ai-chatbots",
       "secondary_categories": [
-        "ai-search"
+        "ai-search",
+        "ai-voice"
       ],
       "company": "xAI",
       "url": "https://x.ai",
       "pricing_model": "freemium",
-      "price_range": "$0-$50/month",
+      "price_range": "$0-$300/month",
       "launched": "2023-11",
-      "last_updated": "2026-04-17T00:00:00.000Z",
-      "last_verified": "2026-04-17T00:00:00.000Z",
+      "last_updated": "2026-04-22T00:00:00.000Z",
+      "last_verified": "2026-04-22T00:00:00.000Z",
       "update_frequency": "monthly",
       "scores": {
         "utility": 7,
@@ -2586,6 +3074,45 @@
         "link": null
       },
       "page_path": "wikis/ai-tools/pages/tools/grok.md"
+    },
+    "groq": {
+      "slug": "groq",
+      "status": "active",
+      "title": "Groq",
+      "category": "ai-chatbots",
+      "secondary_categories": [],
+      "company": "groq",
+      "url": "https://groq.com",
+      "pricing_model": "freemium",
+      "price_range": "Free 30 req/min / paid usage-based",
+      "launched": "2020-01",
+      "last_updated": "2026-04-18T00:00:00.000Z",
+      "last_verified": "2026-04-18T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 9,
+        "value": 9,
+        "moat": 9,
+        "longevity": 8
+      },
+      "tags": [
+        "inference",
+        "lpu",
+        "fast",
+        "llama",
+        "qwen",
+        "deepseek",
+        "hardware",
+        "nvidia-acquisition"
+      ],
+      "affiliate": {
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null
+      },
+      "page_path": "wikis/ai-tools/pages/tools/groq.md"
     },
     "gumloop": {
       "slug": "gumloop",
@@ -2745,6 +3272,44 @@
       },
       "page_path": "wikis/ai-tools/pages/tools/hedra.md"
     },
+    "helicone": {
+      "slug": "helicone",
+      "status": "active",
+      "title": "Helicone",
+      "category": "ai-automation",
+      "secondary_categories": [],
+      "company": "helicone",
+      "url": "https://www.helicone.ai",
+      "pricing_model": "freemium",
+      "price_range": "Free 10k req/mo / paid tiers scale with volume",
+      "launched": "2023-03",
+      "last_updated": "2026-04-18T00:00:00.000Z",
+      "last_verified": "2026-04-18T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 9,
+        "value": 9,
+        "moat": 7,
+        "longevity": 8
+      },
+      "tags": [
+        "llm-observability",
+        "monitoring",
+        "ai-gateway",
+        "open-source",
+        "yc",
+        "dev-tools",
+        "langgraph"
+      ],
+      "affiliate": {
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null
+      },
+      "page_path": "wikis/ai-tools/pages/tools/helicone.md"
+    },
     "hermes-agent": {
       "slug": "hermes-agent",
       "status": "active",
@@ -2787,6 +3352,44 @@
         "link": null
       },
       "page_path": "wikis/ai-tools/pages/tools/hermes-agent.md"
+    },
+    "hex": {
+      "slug": "hex",
+      "status": "active",
+      "title": "Hex",
+      "category": "ai-notes",
+      "secondary_categories": [],
+      "company": "hex-technologies",
+      "url": "https://hex.tech",
+      "pricing_model": "freemium",
+      "price_range": "$0 free / $28-$199/user/mo",
+      "launched": "2020-10",
+      "last_updated": "2026-04-18T00:00:00.000Z",
+      "last_verified": "2026-04-18T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 9,
+        "value": 7,
+        "moat": 8,
+        "longevity": 8
+      },
+      "tags": [
+        "data-analysis",
+        "sql",
+        "python",
+        "notebook",
+        "ai-magic",
+        "collaboration",
+        "business-intelligence"
+      ],
+      "affiliate": {
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null
+      },
+      "page_path": "wikis/ai-tools/pages/tools/hex.md"
     },
     "heygen": {
       "slug": "heygen",
@@ -2867,6 +3470,129 @@
       },
       "page_path": "wikis/ai-tools/pages/tools/higgsfield.md"
     },
+    "humata": {
+      "slug": "humata",
+      "status": "active",
+      "title": "Humata",
+      "category": "ai-research",
+      "secondary_categories": [],
+      "company": "humata",
+      "url": "https://www.humata.ai",
+      "pricing_model": "freemium",
+      "price_range": "$0 free / $1.99-$49/user/mo",
+      "launched": "2023-02",
+      "last_updated": "2026-04-18T00:00:00.000Z",
+      "last_verified": "2026-04-18T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 8,
+        "value": 9,
+        "moat": 6,
+        "longevity": 7
+      },
+      "tags": [
+        "pdf",
+        "document-chat",
+        "research",
+        "rag",
+        "citations",
+        "student",
+        "soc2"
+      ],
+      "affiliate": {
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null
+      },
+      "page_path": "wikis/ai-tools/pages/tools/humata.md"
+    },
+    "hume-ai": {
+      "slug": "hume-ai",
+      "status": "active",
+      "title": "Hume AI",
+      "category": "ai-voice",
+      "secondary_categories": [],
+      "company": "hume-ai",
+      "url": "https://www.hume.ai",
+      "pricing_model": "freemium",
+      "price_range": "$0-$500/month",
+      "launched": "2021-01",
+      "last_updated": "2026-04-19T00:00:00.000Z",
+      "last_verified": "2026-04-19T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 8,
+        "value": 8,
+        "moat": 8,
+        "longevity": 7
+      },
+      "tags": [
+        "voice-ai",
+        "empathic-voice",
+        "emotion-ai",
+        "tts",
+        "text-to-speech",
+        "speech-to-speech",
+        "evi",
+        "octave",
+        "expression-measurement"
+      ],
+      "affiliate": {
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null,
+        "application_status": "none",
+        "notes": "No public affiliate program as of 2026-04-19. Coverage is editorial-only; placements do not earn commission."
+      },
+      "page_path": "wikis/ai-tools/pages/tools/hume-ai.md"
+    },
+    "hunyuan": {
+      "slug": "hunyuan",
+      "status": "active",
+      "title": "Hunyuan",
+      "category": "ai-chatbots",
+      "secondary_categories": [
+        "ai-video",
+        "ai-image"
+      ],
+      "company": "Tencent",
+      "url": "https://hunyuan.tencent.com",
+      "pricing_model": "freemium",
+      "price_range": "Free (open weights) / Tencent Cloud API variable",
+      "launched": "2023-09",
+      "last_updated": "2026-04-18T00:00:00.000Z",
+      "last_verified": "2026-04-18T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 8,
+        "value": 9,
+        "moat": 6,
+        "longevity": 7
+      },
+      "tags": [
+        "tencent",
+        "open-weights",
+        "hunyuan",
+        "3d-world-model",
+        "world-model",
+        "chinese-llm",
+        "video-gen",
+        "image-gen",
+        "gaussian-splatting"
+      ],
+      "affiliate": {
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null
+      },
+      "page_path": "wikis/ai-tools/pages/tools/hunyuan.md"
+    },
     "hyperwrite": {
       "slug": "hyperwrite",
       "status": "active",
@@ -2914,8 +3640,8 @@
       "pricing_model": "freemium",
       "price_range": "$0-$48/month",
       "launched": "2023-08",
-      "last_updated": "2026-04-17T00:00:00.000Z",
-      "last_verified": "2026-04-17T00:00:00.000Z",
+      "last_updated": "2026-04-22T00:00:00.000Z",
+      "last_verified": "2026-04-22T00:00:00.000Z",
       "update_frequency": "monthly",
       "scores": {
         "utility": 8,
@@ -2954,8 +3680,8 @@
       "pricing_model": "freemium",
       "price_range": "$0-$249.99/month",
       "launched": "2025-05",
-      "last_updated": "2026-04-17T00:00:00.000Z",
-      "last_verified": "2026-04-17T00:00:00.000Z",
+      "last_updated": "2026-04-22T00:00:00.000Z",
+      "last_verified": "2026-04-22T00:00:00.000Z",
       "update_frequency": "monthly",
       "scores": {
         "utility": 8,
@@ -3091,6 +3817,43 @@
         "link": null
       },
       "page_path": "wikis/ai-tools/pages/tools/invideo.md"
+    },
+    "jan-ai": {
+      "slug": "jan-ai",
+      "status": "active",
+      "title": "Jan.ai",
+      "category": "ai-chatbots",
+      "secondary_categories": [],
+      "company": "janhq",
+      "url": "https://www.jan.ai",
+      "pricing_model": "free",
+      "price_range": "$0 (one optional $24 Mac voice pack)",
+      "launched": "2023-10",
+      "last_updated": "2026-04-18T00:00:00.000Z",
+      "last_verified": "2026-04-18T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 8,
+        "value": 10,
+        "moat": 6,
+        "longevity": 7
+      },
+      "tags": [
+        "local-llm",
+        "open-source",
+        "desktop",
+        "privacy",
+        "offline",
+        "chatgpt-alternative"
+      ],
+      "affiliate": {
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null
+      },
+      "page_path": "wikis/ai-tools/pages/tools/jan-ai.md"
     },
     "jasper": {
       "slug": "jasper",
@@ -3310,8 +4073,8 @@
       "pricing_model": "freemium",
       "price_range": "Free (chat) / API from $0.60/M input tokens",
       "launched": "2023-10",
-      "last_updated": "2026-04-17T00:00:00.000Z",
-      "last_verified": "2026-04-17T00:00:00.000Z",
+      "last_updated": "2026-04-22T00:00:00.000Z",
+      "last_verified": "2026-04-22T00:00:00.000Z",
       "update_frequency": "quarterly",
       "scores": {
         "utility": 8,
@@ -3492,6 +4255,83 @@
       },
       "page_path": "wikis/ai-tools/pages/tools/langflow.md"
     },
+    "langfuse": {
+      "slug": "langfuse",
+      "status": "active",
+      "title": "Langfuse",
+      "category": "ai-automation",
+      "secondary_categories": [],
+      "company": "langfuse",
+      "url": "https://langfuse.com",
+      "pricing_model": "freemium",
+      "price_range": "$0 free / $29/mo Core / scale via units",
+      "launched": "2023-04",
+      "last_updated": "2026-04-18T00:00:00.000Z",
+      "last_verified": "2026-04-18T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 9,
+        "value": 9,
+        "moat": 8,
+        "longevity": 9
+      },
+      "tags": [
+        "llm-observability",
+        "prompt-management",
+        "evals",
+        "open-source",
+        "mit",
+        "clickhouse",
+        "yc"
+      ],
+      "affiliate": {
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null
+      },
+      "page_path": "wikis/ai-tools/pages/tools/langfuse.md"
+    },
+    "langgraph": {
+      "slug": "langgraph",
+      "status": "active",
+      "title": "LangGraph",
+      "category": "ai-automation",
+      "secondary_categories": [],
+      "company": "langchain",
+      "url": "https://www.langchain.com/langgraph",
+      "pricing_model": "freemium",
+      "price_range": "$0 library / LangSmith paid tiers",
+      "launched": "2024-01",
+      "last_updated": "2026-04-18T00:00:00.000Z",
+      "last_verified": "2026-04-18T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 9,
+        "value": 9,
+        "moat": 8,
+        "longevity": 9
+      },
+      "tags": [
+        "agent-framework",
+        "graph",
+        "python",
+        "typescript",
+        "langchain",
+        "stateful",
+        "production",
+        "langsmith"
+      ],
+      "affiliate": {
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null
+      },
+      "page_path": "wikis/ai-tools/pages/tools/langgraph.md"
+    },
     "leonardo": {
       "slug": "leonardo",
       "status": "active",
@@ -3503,8 +4343,8 @@
       "pricing_model": "freemium",
       "price_range": "$0-$48/month",
       "launched": "2023-01",
-      "last_updated": "2026-04-17T00:00:00.000Z",
-      "last_verified": "2026-04-17T00:00:00.000Z",
+      "last_updated": "2026-04-22T00:00:00.000Z",
+      "last_verified": "2026-04-22T00:00:00.000Z",
       "update_frequency": "monthly",
       "scores": {
         "utility": 8,
@@ -3623,8 +4463,8 @@
       "pricing_model": "open-source",
       "price_range": "$0-$0.85/1M tokens",
       "launched": "2023-02",
-      "last_updated": "2026-04-17T00:00:00.000Z",
-      "last_verified": "2026-04-17T00:00:00.000Z",
+      "last_updated": "2026-04-22T00:00:00.000Z",
+      "last_verified": "2026-04-22T00:00:00.000Z",
       "update_frequency": "monthly",
       "scores": {
         "utility": 8,
@@ -3652,6 +4492,85 @@
       },
       "page_path": "wikis/ai-tools/pages/tools/llama.md"
     },
+    "lm-studio": {
+      "slug": "lm-studio",
+      "status": "active",
+      "title": "LM Studio",
+      "category": "ai-chatbots",
+      "secondary_categories": [],
+      "company": "lm-studio",
+      "url": "https://lmstudio.ai",
+      "pricing_model": "free",
+      "price_range": "$0 personal use",
+      "launched": "2023-05",
+      "last_updated": "2026-04-18T00:00:00.000Z",
+      "last_verified": "2026-04-18T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 9,
+        "value": 10,
+        "moat": 7,
+        "longevity": 8
+      },
+      "tags": [
+        "local-llm",
+        "desktop-app",
+        "gui",
+        "open-source-models",
+        "inference",
+        "privacy",
+        "developer"
+      ],
+      "affiliate": {
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null
+      },
+      "page_path": "wikis/ai-tools/pages/tools/lm-studio.md"
+    },
+    "logseq": {
+      "slug": "logseq",
+      "status": "active",
+      "title": "Logseq",
+      "category": "ai-notes",
+      "secondary_categories": [],
+      "company": "logseq",
+      "url": "https://logseq.com",
+      "pricing_model": "free",
+      "price_range": "Free (Sync add-on $5/mo)",
+      "launched": "2020-06",
+      "last_updated": "2026-04-23T00:00:00.000Z",
+      "last_verified": "2026-04-23T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 8,
+        "value": 10,
+        "moat": 7,
+        "longevity": 8
+      },
+      "tags": [
+        "notes",
+        "outliner",
+        "local-first",
+        "markdown",
+        "knowledge-base",
+        "zettelkasten",
+        "pkm",
+        "open-source",
+        "block-level",
+        "graph-view"
+      ],
+      "affiliate": {
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null
+      },
+      "page_path": "wikis/ai-tools/pages/tools/logseq.md"
+    },
     "lovable": {
       "slug": "lovable",
       "status": "active",
@@ -3663,8 +4582,8 @@
       "pricing_model": "freemium",
       "price_range": "$0-$50/month",
       "launched": "2024-09",
-      "last_updated": "2026-04-17T00:00:00.000Z",
-      "last_verified": "2026-04-17T00:00:00.000Z",
+      "last_updated": "2026-04-19T00:00:00.000Z",
+      "last_verified": "2026-04-19T00:00:00.000Z",
       "update_frequency": "monthly",
       "scores": {
         "utility": 9,
@@ -3840,7 +4759,9 @@
         "cookie_days": null,
         "network": null,
         "link": null,
-        "application_status": "declined-2026-04-15"
+        "application_status": "rejected",
+        "applied_date": "2026-04-15T00:00:00.000Z",
+        "notes": "Declined 2026-04-15. Do not retry unless vendor policy changes."
       },
       "page_path": "wikis/ai-tools/pages/tools/make.md"
     },
@@ -3921,6 +4842,44 @@
       },
       "page_path": "wikis/ai-tools/pages/tools/marketmuse.md"
     },
+    "mastra": {
+      "slug": "mastra",
+      "status": "active",
+      "title": "Mastra",
+      "category": "ai-coding",
+      "secondary_categories": [],
+      "company": "mastra",
+      "url": "https://mastra.ai",
+      "pricing_model": "freemium",
+      "price_range": "$0 free / $250/team/month",
+      "launched": "2024-10",
+      "last_updated": "2026-04-18T00:00:00.000Z",
+      "last_verified": "2026-04-18T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 9,
+        "value": 9,
+        "moat": 7,
+        "longevity": 8
+      },
+      "tags": [
+        "agent-framework",
+        "typescript",
+        "open-source",
+        "rag",
+        "workflows",
+        "y-combinator",
+        "developer"
+      ],
+      "affiliate": {
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null
+      },
+      "page_path": "wikis/ai-tools/pages/tools/mastra.md"
+    },
     "mem": {
       "slug": "mem",
       "status": "active",
@@ -4000,6 +4959,44 @@
       },
       "page_path": "wikis/ai-tools/pages/tools/meshy.md"
     },
+    "microsoft-agent-framework": {
+      "slug": "microsoft-agent-framework",
+      "status": "active",
+      "title": "Microsoft Agent Framework",
+      "category": "ai-automation",
+      "secondary_categories": [],
+      "company": "microsoft",
+      "url": "https://learn.microsoft.com/en-us/agent-framework/overview/",
+      "pricing_model": "open-source",
+      "price_range": "Free (open source)",
+      "launched": "2026-04",
+      "last_updated": "2026-04-18T00:00:00.000Z",
+      "last_verified": "2026-04-18T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 9,
+        "value": 10,
+        "moat": 8,
+        "longevity": 9
+      },
+      "tags": [
+        "agent-framework",
+        "microsoft",
+        "open-source",
+        "autogen-successor",
+        "semantic-kernel",
+        "azure",
+        "enterprise"
+      ],
+      "affiliate": {
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null
+      },
+      "page_path": "wikis/ai-tools/pages/tools/microsoft-agent-framework.md"
+    },
     "midjourney": {
       "slug": "midjourney",
       "status": "active",
@@ -4011,8 +5008,8 @@
       "pricing_model": "paid",
       "price_range": "$10-$120/month",
       "launched": "2022-07",
-      "last_updated": "2026-04-17T00:00:00.000Z",
-      "last_verified": "2026-04-17T00:00:00.000Z",
+      "last_updated": "2026-04-22T00:00:00.000Z",
+      "last_verified": "2026-04-22T00:00:00.000Z",
       "update_frequency": "monthly",
       "scores": {
         "utility": 10,
@@ -4321,7 +5318,9 @@
         "cookie_days": 90,
         "network": "direct",
         "link": null,
-        "application_status": "declined-2026-04-15"
+        "application_status": "rejected",
+        "applied_date": "2026-04-15T00:00:00.000Z",
+        "notes": "Declined 2026-04-15. Do not retry unless vendor policy changes."
       },
       "page_path": "wikis/ai-tools/pages/tools/n8n.md"
     },
@@ -4416,8 +5415,8 @@
       "pricing_model": "freemium",
       "price_range": "$0-$49.99/month",
       "launched": "2019-11",
-      "last_updated": "2026-04-17T00:00:00.000Z",
-      "last_verified": "2026-04-17T00:00:00.000Z",
+      "last_updated": "2026-04-22T00:00:00.000Z",
+      "last_verified": "2026-04-22T00:00:00.000Z",
       "update_frequency": "monthly",
       "scores": {
         "utility": 7,
@@ -4538,8 +5537,8 @@
       "pricing_model": "freemium",
       "price_range": "$0-$8/month (add-ons) + $50/year commercial",
       "launched": "2020-03",
-      "last_updated": "2026-04-17T00:00:00.000Z",
-      "last_verified": "2026-04-17T00:00:00.000Z",
+      "last_updated": "2026-04-23T00:00:00.000Z",
+      "last_verified": "2026-04-23T00:00:00.000Z",
       "update_frequency": "monthly",
       "scores": {
         "utility": 8,
@@ -4567,6 +5566,127 @@
         "link": null
       },
       "page_path": "wikis/ai-tools/pages/tools/obsidian.md"
+    },
+    "ollama": {
+      "slug": "ollama",
+      "status": "active",
+      "title": "Ollama",
+      "category": "ai-chatbots",
+      "secondary_categories": [],
+      "company": "ollama",
+      "url": "https://ollama.com",
+      "pricing_model": "freemium",
+      "price_range": "$0 local / $20-$100/mo cloud",
+      "launched": "2023-07",
+      "last_updated": "2026-04-18T00:00:00.000Z",
+      "last_verified": "2026-04-18T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 9,
+        "value": 10,
+        "moat": 8,
+        "longevity": 9
+      },
+      "tags": [
+        "local-llm",
+        "open-source",
+        "inference",
+        "llm-runtime",
+        "privacy",
+        "self-hosted",
+        "developer",
+        "infrastructure"
+      ],
+      "affiliate": {
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null
+      },
+      "page_path": "wikis/ai-tools/pages/tools/ollama.md"
+    },
+    "omniseo": {
+      "slug": "omniseo",
+      "status": "active",
+      "title": "OmniSEO",
+      "category": "ai-seo",
+      "secondary_categories": [],
+      "company": "omniseo",
+      "url": "https://omniseo.com",
+      "pricing_model": "paid",
+      "price_range": "$45-$500+/month",
+      "launched": "2024-01",
+      "last_updated": "2026-04-19T00:00:00.000Z",
+      "last_verified": "2026-04-19T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 8,
+        "value": 7,
+        "moat": 7,
+        "longevity": 7
+      },
+      "tags": [
+        "ai-seo",
+        "ai-visibility",
+        "aeo",
+        "llm-visibility",
+        "geo",
+        "brand-monitoring",
+        "ai-search",
+        "citation-tracking"
+      ],
+      "affiliate": {
+        "has_program": true,
+        "commission": "50% for the first year",
+        "cookie_days": 60,
+        "network": "PartnerStack",
+        "link": "https://get.omniseo.com/aipediawiki",
+        "application_status": "approved",
+        "applied_date": "2026-04-19T00:00:00.000Z",
+        "approved_date": "2026-04-23T00:00:00.000Z",
+        "notes": "Approved 2026-04-23. 50% first-year commission is aggressive for a new-category vendor; conversion cycle depends on brand marketers' AI-search visibility as a tracked KPI."
+      },
+      "page_path": "wikis/ai-tools/pages/tools/omniseo.md"
+    },
+    "open-webui": {
+      "slug": "open-webui",
+      "status": "active",
+      "title": "Open WebUI",
+      "category": "ai-chatbots",
+      "secondary_categories": [],
+      "company": "open-webui",
+      "url": "https://openwebui.com",
+      "pricing_model": "freemium",
+      "price_range": "$0 self-hosted / $9.99+ managed",
+      "launched": "2023-11",
+      "last_updated": "2026-04-18T00:00:00.000Z",
+      "last_verified": "2026-04-18T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 9,
+        "value": 10,
+        "moat": 7,
+        "longevity": 8
+      },
+      "tags": [
+        "self-hosted",
+        "open-source",
+        "chat-ui",
+        "ollama",
+        "rag",
+        "enterprise",
+        "rbac",
+        "sso"
+      ],
+      "affiliate": {
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null
+      },
+      "page_path": "wikis/ai-tools/pages/tools/open-webui.md"
     },
     "openclaw": {
       "slug": "openclaw",
@@ -4743,8 +5863,8 @@
       "pricing_model": "freemium",
       "price_range": "$0-$325/user/month",
       "launched": "2022-12",
-      "last_updated": "2026-04-17T00:00:00.000Z",
-      "last_verified": "2026-04-17T00:00:00.000Z",
+      "last_updated": "2026-04-18T00:00:00.000Z",
+      "last_verified": "2026-04-18T00:00:00.000Z",
       "update_frequency": "monthly",
       "scores": {
         "utility": 9,
@@ -5015,8 +6135,8 @@
       "pricing_model": "freemium",
       "price_range": "$0-$45/month",
       "launched": "2022-07",
-      "last_updated": "2026-04-17T00:00:00.000Z",
-      "last_verified": "2026-04-17T00:00:00.000Z",
+      "last_updated": "2026-04-22T00:00:00.000Z",
+      "last_verified": "2026-04-22T00:00:00.000Z",
       "update_frequency": "monthly",
       "scores": {
         "utility": 8,
@@ -5040,6 +6160,43 @@
         "link": null
       },
       "page_path": "wikis/ai-tools/pages/tools/playground-ai.md"
+    },
+    "poe": {
+      "slug": "poe",
+      "status": "active",
+      "title": "Poe",
+      "category": "ai-chatbots",
+      "secondary_categories": [],
+      "company": "quora",
+      "url": "https://poe.com",
+      "pricing_model": "freemium",
+      "price_range": "$0 free / $4.99-$249.99/mo",
+      "launched": "2023-02",
+      "last_updated": "2026-04-18T00:00:00.000Z",
+      "last_verified": "2026-04-18T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 9,
+        "value": 8,
+        "moat": 7,
+        "longevity": 8
+      },
+      "tags": [
+        "ai-chat",
+        "aggregator",
+        "multi-model",
+        "quora",
+        "points-based",
+        "developer-api"
+      ],
+      "affiliate": {
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null
+      },
+      "page_path": "wikis/ai-tools/pages/tools/poe.md"
     },
     "presentations-ai": {
       "slug": "presentations-ai",
@@ -5078,6 +6235,47 @@
         "link": null
       },
       "page_path": "wikis/ai-tools/pages/tools/presentations-ai.md"
+    },
+    "prezi": {
+      "slug": "prezi",
+      "status": "active",
+      "title": "Prezi",
+      "category": "ai-presentation",
+      "secondary_categories": [],
+      "company": "prezi",
+      "url": "https://prezi.com",
+      "pricing_model": "freemium",
+      "price_range": "$0-$59/month",
+      "launched": "2009-01",
+      "last_updated": "2026-04-19T00:00:00.000Z",
+      "last_verified": "2026-04-19T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 7,
+        "value": 7,
+        "moat": 6,
+        "longevity": 7
+      },
+      "tags": [
+        "presentations",
+        "non-linear-presentation",
+        "prezi-ai",
+        "prezi-video",
+        "zoom-pan",
+        "storytelling",
+        "ai-presentation"
+      ],
+      "affiliate": {
+        "has_program": true,
+        "commission": "50% per new subscription (launch offer, valid until July 1, 2026)",
+        "cookie_days": 90,
+        "network": "PartnerStack",
+        "link": null,
+        "application_status": "applied",
+        "applied_date": "2026-04-19T00:00:00.000Z",
+        "notes": "Applied via PartnerStack 2026-04-19. 50% commission is a time-limited launch promotion ending July 1, 2026; commission rate post-offer TBD."
+      },
+      "page_path": "wikis/ai-tools/pages/tools/prezi.md"
     },
     "quillbot": {
       "slug": "quillbot",
@@ -5130,8 +6328,8 @@
       "pricing_model": "freemium",
       "price_range": "Free (open weights) / API from ~$0.15/M tokens",
       "launched": "2023-09",
-      "last_updated": "2026-04-17T00:00:00.000Z",
-      "last_verified": "2026-04-17T00:00:00.000Z",
+      "last_updated": "2026-04-19T00:00:00.000Z",
+      "last_verified": "2026-04-19T00:00:00.000Z",
       "update_frequency": "monthly",
       "scores": {
         "utility": 9,
@@ -5210,8 +6408,8 @@
       "pricing_model": "freemium",
       "price_range": "$0-$48/month",
       "launched": "2022-12",
-      "last_updated": "2026-04-17T00:00:00.000Z",
-      "last_verified": "2026-04-17T00:00:00.000Z",
+      "last_updated": "2026-04-22T00:00:00.000Z",
+      "last_verified": "2026-04-22T00:00:00.000Z",
       "update_frequency": "monthly",
       "scores": {
         "utility": 9,
@@ -5429,6 +6627,47 @@
         "link": null
       },
       "page_path": "wikis/ai-tools/pages/tools/resemble-ai.md"
+    },
+    "riverside": {
+      "slug": "riverside",
+      "status": "active",
+      "title": "Riverside",
+      "category": "ai-voice",
+      "secondary_categories": [
+        "ai-video"
+      ],
+      "company": "riverside-fm",
+      "url": "https://riverside.fm",
+      "pricing_model": "freemium",
+      "price_range": "$0-$29/month (annual) · $24/month Business (annual)",
+      "launched": "2020-01",
+      "last_updated": "2026-04-23T00:00:00.000Z",
+      "last_verified": "2026-04-23T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 9,
+        "value": 8,
+        "moat": 8,
+        "longevity": 8
+      },
+      "tags": [
+        "podcast-recording",
+        "remote-recording",
+        "video-podcast",
+        "multitrack",
+        "magic-editor",
+        "transcription",
+        "4k",
+        "studio-quality"
+      ],
+      "affiliate": {
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null
+      },
+      "page_path": "wikis/ai-tools/pages/tools/riverside.md"
     },
     "rodin": {
       "slug": "rodin",
@@ -5780,7 +7019,10 @@
         "commission": "up to $200 per sale",
         "cookie_days": 120,
         "network": "impact",
-        "link": "https://www.semrush.com/lp/affiliate-program/"
+        "link": "https://www.semrush.com/lp/affiliate-program/",
+        "application_status": "rejected",
+        "applied_date": "2026-04-19T00:00:00.000Z",
+        "notes": "Applied via Impact 2026-04-19, declined 2026-04-20. Likely reason: new site with low baseline traffic. Reapply in 90-120 days once organic traffic exceeds 5K monthly unique visitors. Alternative SEO affiliates to prioritize meanwhile: Ahrefs, Surfer SEO (already applied), SE Ranking."
       },
       "page_path": "wikis/ai-tools/pages/tools/semrush.md"
     },
@@ -5917,8 +7159,8 @@
       "pricing_model": "free",
       "price_range": "Free (self-host) or ~$0.03-$0.08 per API image",
       "launched": "2022-08",
-      "last_updated": "2026-04-17T00:00:00.000Z",
-      "last_verified": "2026-04-17T00:00:00.000Z",
+      "last_updated": "2026-04-22T00:00:00.000Z",
+      "last_verified": "2026-04-22T00:00:00.000Z",
       "update_frequency": "monthly",
       "scores": {
         "utility": 9,
@@ -6067,14 +7309,14 @@
       "company": "surfer",
       "url": "https://surferseo.com",
       "pricing_model": "paid",
-      "price_range": "$79-$999/month",
+      "price_range": "$49-$299/month",
       "launched": "2019-06",
-      "last_updated": "2026-04-17T00:00:00.000Z",
-      "last_verified": "2026-04-17T00:00:00.000Z",
+      "last_updated": "2026-04-19T00:00:00.000Z",
+      "last_verified": "2026-04-19T00:00:00.000Z",
       "update_frequency": "monthly",
       "scores": {
-        "utility": 8,
-        "value": 7,
+        "utility": 9,
+        "value": 8,
         "moat": 7,
         "longevity": 8
       },
@@ -6084,15 +7326,20 @@
         "on-page-seo",
         "content-editor",
         "serp-analysis",
+        "keyword-research",
+        "ai-tracker",
         "nlp",
-        "keyword-density"
+        "multilingual"
       ],
       "affiliate": {
         "has_program": true,
         "commission": "25% lifetime recurring",
         "cookie_days": 60,
-        "network": "direct",
-        "link": "https://surferseo.com/affiliate"
+        "network": "PartnerStack",
+        "link": "https://surferseo.com/affiliate",
+        "application_status": "applied",
+        "applied_date": "2026-04-19T00:00:00.000Z",
+        "notes": "Applied via PartnerStack network 2026-04-19. Direct URL submitted: https://aipedia.wiki/tools/surfer-seo/"
       },
       "page_path": "wikis/ai-tools/pages/tools/surfer-seo.md"
     },
@@ -6495,6 +7742,43 @@
       },
       "page_path": "wikis/ai-tools/pages/tools/typeface.md"
     },
+    "typingmind": {
+      "slug": "typingmind",
+      "status": "active",
+      "title": "TypingMind",
+      "category": "ai-chatbots",
+      "secondary_categories": [],
+      "company": "typingmind",
+      "url": "https://www.typingmind.com",
+      "pricing_model": "paid",
+      "price_range": "$49 one-time / $99-$299/mo teams",
+      "launched": "2023-04",
+      "last_updated": "2026-04-18T00:00:00.000Z",
+      "last_verified": "2026-04-18T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 8,
+        "value": 9,
+        "moat": 6,
+        "longevity": 7
+      },
+      "tags": [
+        "byok",
+        "chatgpt-alternative",
+        "multi-model",
+        "power-user",
+        "one-time-purchase",
+        "api-based"
+      ],
+      "affiliate": {
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null
+      },
+      "page_path": "wikis/ai-tools/pages/tools/typingmind.md"
+    },
     "udio": {
       "slug": "udio",
       "status": "active",
@@ -6571,6 +7855,48 @@
       },
       "page_path": "wikis/ai-tools/pages/tools/uizard.md"
     },
+    "unbounce": {
+      "slug": "unbounce",
+      "status": "active",
+      "title": "Unbounce",
+      "category": "ai-design",
+      "secondary_categories": [],
+      "company": "unbounce",
+      "url": "https://unbounce.com",
+      "pricing_model": "paid",
+      "price_range": "$22-$249/month",
+      "launched": "2009-08",
+      "last_updated": "2026-04-19T00:00:00.000Z",
+      "last_verified": "2026-04-19T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 8,
+        "value": 6,
+        "moat": 7,
+        "longevity": 7
+      },
+      "tags": [
+        "landing-pages",
+        "conversion-optimization",
+        "a-b-testing",
+        "smart-traffic",
+        "smart-copy",
+        "smart-builder",
+        "marketing",
+        "ai-copy"
+      ],
+      "affiliate": {
+        "has_program": true,
+        "commission": "20% recurring for 12 months",
+        "cookie_days": 90,
+        "network": "PartnerStack",
+        "link": null,
+        "application_status": "applied",
+        "applied_date": "2026-04-19T00:00:00.000Z",
+        "notes": "Applied via PartnerStack 2026-04-19 for Unbounce affiliate program. Program requires FTC-compliant disclosure; aipedia.wiki already meets via /disclosure/."
+      },
+      "page_path": "wikis/ai-tools/pages/tools/unbounce.md"
+    },
     "v0": {
       "slug": "v0",
       "status": "active",
@@ -6623,8 +7949,8 @@
       "pricing_model": "freemium",
       "price_range": "$0-$200+/month",
       "launched": "2023-01",
-      "last_updated": "2026-04-17T00:00:00.000Z",
-      "last_verified": "2026-04-17T00:00:00.000Z",
+      "last_updated": "2026-04-23T00:00:00.000Z",
+      "last_verified": "2026-04-23T00:00:00.000Z",
       "update_frequency": "monthly",
       "scores": {
         "utility": 8,
@@ -6701,8 +8027,8 @@
       "pricing_model": "freemium",
       "price_range": "$0-$99/month",
       "launched": "2024-07",
-      "last_updated": "2026-04-17T00:00:00.000Z",
-      "last_verified": "2026-04-17T00:00:00.000Z",
+      "last_updated": "2026-04-18T00:00:00.000Z",
+      "last_verified": "2026-04-18T00:00:00.000Z",
       "update_frequency": "monthly",
       "scores": {
         "utility": 8,
@@ -6883,6 +8209,48 @@
       },
       "page_path": "wikis/ai-tools/pages/tools/wellsaid.md"
     },
+    "whisper": {
+      "slug": "whisper",
+      "status": "active",
+      "title": "Whisper",
+      "category": "ai-voice",
+      "secondary_categories": [
+        "ai-coding"
+      ],
+      "company": "openai",
+      "url": "https://openai.com/research/whisper",
+      "pricing_model": "freemium",
+      "price_range": "Free self-host / API $0.006 per minute",
+      "launched": "2022-09",
+      "last_updated": "2026-04-23T00:00:00.000Z",
+      "last_verified": "2026-04-23T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 9,
+        "value": 10,
+        "moat": 8,
+        "longevity": 9
+      },
+      "tags": [
+        "speech-to-text",
+        "transcription",
+        "open-weights",
+        "multilingual",
+        "self-hosted",
+        "openai",
+        "whisper",
+        "subtitles",
+        "dictation"
+      ],
+      "affiliate": {
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null
+      },
+      "page_path": "wikis/ai-tools/pages/tools/whisper.md"
+    },
     "windsurf": {
       "slug": "windsurf",
       "status": "active",
@@ -6894,8 +8262,8 @@
       "pricing_model": "freemium",
       "price_range": "$0-$200/month",
       "launched": "2024-11",
-      "last_updated": "2026-04-17T00:00:00.000Z",
-      "last_verified": "2026-04-17T00:00:00.000Z",
+      "last_updated": "2026-04-18T00:00:00.000Z",
+      "last_verified": "2026-04-18T00:00:00.000Z",
       "update_frequency": "monthly",
       "scores": {
         "utility": 8,
@@ -6958,6 +8326,47 @@
         "link": null
       },
       "page_path": "wikis/ai-tools/pages/tools/wordtune.md"
+    },
+    "workato": {
+      "slug": "workato",
+      "status": "active",
+      "title": "Workato",
+      "category": "ai-automation",
+      "secondary_categories": [],
+      "company": "workato",
+      "url": "https://www.workato.com",
+      "pricing_model": "enterprise",
+      "price_range": "Annual contracts (roughly $10k+ starting)",
+      "launched": "2013-01",
+      "last_updated": "2026-04-23T00:00:00.000Z",
+      "last_verified": "2026-04-23T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 8,
+        "value": 6,
+        "moat": 8,
+        "longevity": 9
+      },
+      "tags": [
+        "ipaas",
+        "enterprise-automation",
+        "workflow",
+        "integration",
+        "governance",
+        "audit",
+        "rbac",
+        "sso",
+        "ai-agents",
+        "workbot"
+      ],
+      "affiliate": {
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null
+      },
+      "page_path": "wikis/ai-tools/pages/tools/workato.md"
     },
     "writer": {
       "slug": "writer",
@@ -7167,8 +8576,8 @@
       "pricing_model": "freemium",
       "price_range": "$0-$20/month",
       "launched": "2024-01",
-      "last_updated": "2026-04-17T00:00:00.000Z",
-      "last_verified": "2026-04-17T00:00:00.000Z",
+      "last_updated": "2026-04-18T00:00:00.000Z",
+      "last_verified": "2026-04-18T00:00:00.000Z",
       "update_frequency": "monthly",
       "scores": {
         "utility": 8,
