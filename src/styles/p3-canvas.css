@@ -816,7 +816,6 @@ body:has(main .p3-canvas) {
   z-index: 2;
 }
 .p3-catchip:hover::after { opacity: 1; }
-.p3-catchip-top::after { opacity: 1; }
 
 .p3-catchip-head {
   display: flex;
