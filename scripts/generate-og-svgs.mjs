@@ -254,14 +254,28 @@ function svgFor(tool) {
  * (Inter is preferred; if absent, Geist/Arial look fine).
  * Returns null if resvg wasn't available at module load.
  */
+// Bundle our own TTF files so rasterization is reproducible across envs
+// (dev Windows + Cloudflare Pages Linux). Without this, resvg's system
+// font fallback on Cloudflare produced Greek-glyph substitution for
+// Latin codepoints.
+const FONT_DIR = join(ROOT, 'fonts');
+const FONT_PATHS = [
+  'Inter-400.ttf',
+  'Inter-500.ttf',
+  'Inter-700.ttf',
+  'JetBrainsMono-400.ttf',
+  'JetBrainsMono-500.ttf',
+].map((f) => join(FONT_DIR, f)).filter((p) => existsSync(p));
+
 function rasterize(svgString) {
   if (!Resvg) return null;
   const resvg = new Resvg(svgString, {
     background: '#0b0a14',
     fitTo: { mode: 'width', value: 1200 },
     font: {
-      loadSystemFonts: true,
-      defaultFontFamily: 'Arial',
+      fontFiles: FONT_PATHS,
+      loadSystemFonts: false,
+      defaultFontFamily: 'Inter',
     },
   });
   return resvg.render().asPng();

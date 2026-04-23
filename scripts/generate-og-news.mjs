@@ -256,12 +256,30 @@ function svgForNews(news) {
 </svg>`;
 }
 
+// Bundle our own TTF files so the rasterization is reproducible across
+// environments (dev Windows, Cloudflare Pages Linux build). Without this,
+// resvg falls back to whatever the host system has installed, which on
+// Cloudflare Pages was producing Greek-glyph substitution for Latin
+// codepoints (likely a Cyrillic/Greek-only font fallback).
+const FONT_DIR = join(ROOT, 'fonts');
+const FONT_PATHS = [
+  'Inter-400.ttf',
+  'Inter-500.ttf',
+  'Inter-700.ttf',
+  'JetBrainsMono-400.ttf',
+  'JetBrainsMono-500.ttf',
+].map((f) => join(FONT_DIR, f)).filter((p) => existsSync(p));
+
 function rasterize(svg) {
   if (!Resvg) return null;
   const resvg = new Resvg(svg, {
     background: '#0b0a14',
     fitTo: { mode: 'width', value: 1200 },
-    font: { loadSystemFonts: true, defaultFontFamily: 'Arial' },
+    font: {
+      fontFiles: FONT_PATHS,
+      loadSystemFonts: false,
+      defaultFontFamily: 'Inter',
+    },
   });
   return resvg.render().asPng();
 }

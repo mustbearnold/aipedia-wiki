@@ -41,6 +41,8 @@
     "unist-util-visit": "^5.1.0"
   },
   "devDependencies": {
+    "@fontsource/inter": "^5.2.8",
+    "@fontsource/jetbrains-mono": "^5.2.8",
     "sharp": "^0.34.5",
     "wrangler": "^4.82.2"
   },
