@@ -160,8 +160,17 @@ const cats = allCategories
   })
   .sort((a, b) => b.count - a.count);
 
-// Featured comparisons (top 6 by combined score of the tool pair)
-type Cmp = { slug: string; title: string; slugs: string[]; sumScore: number };
+// Featured comparisons (top 6 by combined score of the tool pair).
+// Also capture per-tool titles + scores so the card can display the
+// inline "9.5 vs 9.3" score differential instead of just title text.
+type Cmp = {
+  slug: string;
+  title: string;
+  slugs: string[];
+  sumScore: number;
+  toolA: { title: string; score: number } | null;
+  toolB: { title: string; score: number } | null;
+};
 const featuredCompare: Cmp[] = allComparisons
   .map(c => {
     const tools = Array.isArray(c.data.tools) ? c.data.tools : [];
@@ -170,11 +179,17 @@ const featuredCompare: Cmp[] = allComparisons
       const t = scored.find(x => x.slug === slug);
       return s + (t?.score ?? 0);
     }, 0);
+    const resolveTool = (slug: string) => {
+      const t = scored.find(x => x.slug === slug);
+      return t ? { title: t.title, score: t.score } : null;
+    };
     return {
       slug: c.data.slug || c.id.replace(/\.md$/, ''),
       title: c.data.title || '',
       slugs,
       sumScore,
+      toolA: slugs[0] ? resolveTool(slugs[0]) : null,
+      toolB: slugs[1] ? resolveTool(slugs[1]) : null,
     };
   })
   .sort((a, b) => b.sumScore - a.sumScore)
@@ -401,12 +416,11 @@ const totalCompare = allComparisons.length;
           <a href={`/news/${heroNews.slug}/`} class="p3-newshero">
             <img src={`/og/news/${heroNews.slug}.png`} alt="" loading="lazy" decoding="async" width="1200" height="630" />
             <div class="p3-newshero-body">
-              <div class="p3-newshero-meta">
-                <span class={`p3-sev p3-sev-${heroNews.severity}`}>{heroNews.severity}</span>
-                <span class="p3-newshero-date">{relDate(heroNews.date)}</span>
-              </div>
+              {/* No meta row: the OG image above already shows severity + date.
+                  Title + summary is the body content. */}
               <h3 class="p3-newshero-title">{heroNews.title}</h3>
               <p class="p3-newshero-summary">{heroNews.summary.slice(0, 180)}{heroNews.summary.length > 180 ? '…' : ''}</p>
+              <span class="p3-newshero-readlink">Read story <span aria-hidden="true">→</span></span>
             </div>
           </a>
         )}
@@ -432,23 +446,31 @@ const totalCompare = allComparisons.length;
           <div class="p3-movers-empty">No movers yet. Check back tomorrow.</div>
         ) : (
           <ol class="p3-movers">
-            {movers.map((t, i) => (
-              <li>
-                <a href={`/tools/${t.slug}/`} class="p3-mover">
-                  <span class="p3-mover-rank tabular-nums">{i + 1}</span>
-                  <ToolLogo slug={t.slug} title={t.title} size={28} className="p3-mover-logo" />
-                  <div class="p3-mover-main">
-                    <div class="p3-mover-title">{t.title}</div>
-                    <div class="p3-mover-sub">
-                      <span class="tabular-nums">{t.score}/10</span>
-                      <span aria-hidden="true">·</span>
-                      <span>{t.mentions} news mention{t.mentions === 1 ? '' : 's'}</span>
+            {(() => {
+              const maxMentions = movers[0]?.mentions ?? 1;
+              return movers.map((t, i) => (
+                <li>
+                  <a href={`/tools/${t.slug}/`} class={`p3-mover ${i === 0 ? 'p3-mover-lead' : ''}`.trim()}>
+                    <span class="p3-mover-rank tabular-nums">{i + 1}</span>
+                    <ToolLogo slug={t.slug} title={t.title} size={28} className="p3-mover-logo" />
+                    <div class="p3-mover-main">
+                      <div class="p3-mover-title">{t.title}</div>
+                      <div class="p3-mover-bar-wrap" aria-hidden="true">
+                        <span class="p3-mover-bar-fill" style={`width: ${Math.round((t.mentions / maxMentions) * 100)}%;`}></span>
+                      </div>
+                      <div class="p3-mover-sub">
+                        <span class="tabular-nums p3-mover-score">{t.score}</span>
+                        <span class="p3-mover-sub-slash">/10</span>
+                        <span aria-hidden="true" class="p3-mover-dot">·</span>
+                        <span class="tabular-nums p3-mover-mentions">{t.mentions}</span>
+                        <span class="p3-mover-sub-label">mention{t.mentions === 1 ? '' : 's'}</span>
+                      </div>
                     </div>
-                  </div>
-                  <span class="p3-mover-arrow" aria-hidden="true">→</span>
-                </a>
-              </li>
-            ))}
+                    <span class="p3-mover-arrow" aria-hidden="true">→</span>
+                  </a>
+                </li>
+              ));
+            })()}
           </ol>
         )}
       </aside>
@@ -538,23 +560,67 @@ const totalCompare = allComparisons.length;
         <a href="/compare/" class="p3-sec-link">All comparisons →</a>
       </div>
       <div class="p3-cmp-strip">
-        {featuredCompare.map(c => (
-          <a href={`/compare/${c.slug}/`} class="p3-cmp-card">
-            <div class="p3-cmp-vs">
-              {c.slugs[0] && <ToolLogo slug={c.slugs[0]} title={c.slugs[0]} size={36} className="p3-cmp-logo" />}
-              <span class="p3-cmp-divider" aria-hidden="true">vs</span>
-              {c.slugs[1] && <ToolLogo slug={c.slugs[1]} title={c.slugs[1]} size={36} className="p3-cmp-logo" />}
-            </div>
-            <div class="p3-cmp-title">{c.title.replace(/,?\s*aipedia\.wiki.*$/, '')}</div>
-          </a>
-        ))}
+        {featuredCompare.map(c => {
+          const aWins = c.toolA && c.toolB ? c.toolA.score > c.toolB.score : false;
+          const bWins = c.toolA && c.toolB ? c.toolB!.score > c.toolA!.score : false;
+          return (
+            <a href={`/compare/${c.slug}/`} class="p3-cmp-card">
+              <div class="p3-cmp-vs">
+                {c.slugs[0] && <ToolLogo slug={c.slugs[0]} title={c.slugs[0]} size={36} className="p3-cmp-logo" />}
+                <span class="p3-cmp-divider" aria-hidden="true">vs</span>
+                {c.slugs[1] && <ToolLogo slug={c.slugs[1]} title={c.slugs[1]} size={36} className="p3-cmp-logo" />}
+              </div>
+              <div class="p3-cmp-body">
+                <div class="p3-cmp-title">{c.title.replace(/,?\s*aipedia\.wiki.*$/, '')}</div>
+                {c.toolA && c.toolB && (
+                  <div class="p3-cmp-scores">
+                    <span class={`p3-cmp-score tabular-nums ${aWins ? 'p3-cmp-score-lead' : ''}`.trim()}>{c.toolA.score}</span>
+                    <span class="p3-cmp-scores-sep" aria-hidden="true">·</span>
+                    <span class={`p3-cmp-score tabular-nums ${bWins ? 'p3-cmp-score-lead' : ''}`.trim()}>{c.toolB.score}</span>
+                  </div>
+                )}
+              </div>
+              <span class="p3-cmp-arrow" aria-hidden="true">→</span>
+            </a>
+          );
+        })}
       </div>
     </section>
 
-    <!-- =============== EMAIL CAPTURE =============== -->
-    <div class="p3-email">
-      <EmailCapture variant="footer" source="homepage" />
-    </div>
+    <!-- =============== EMAIL CAPTURE (bespoke p3 block) =============== -->
+    <section class="p3-newsletter" aria-labelledby="newsletter-heading">
+      <div class="p3-newsletter-inner">
+        <div class="p3-newsletter-text">
+          <div class="p3-newsletter-eyebrow">
+            <span class="p3-live-dot" aria-hidden="true"></span>
+            Monthly digest · next issue May 1
+          </div>
+          <h2 id="newsletter-heading" class="p3-newsletter-title">
+            What changed across <span class="p3-gradient">{totalTools} AI tools</span> this month.
+          </h2>
+          <p class="p3-newsletter-sub">
+            One email on the 1st. Price moves, model launches, deaths, score changes, and the one thing we would actually click. No fluff, no sponsored picks.
+          </p>
+        </div>
+        <div class="p3-newsletter-form-wrap">
+          <EmailCapture variant="footer" source="homepage" />
+          <div class="p3-newsletter-trust">
+            <span class="p3-newsletter-trust-item">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+              Unsubscribe anytime
+            </span>
+            <span class="p3-newsletter-trust-item">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+              No sharing with anyone
+            </span>
+            <span class="p3-newsletter-trust-item">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+              One email, no drip
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 
   <script is:inline>
