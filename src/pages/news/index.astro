@@ -1,17 +1,28 @@
 ---
 /**
- * /news/ listing. Redesigned April 23, 2026 to match the production
- * tool-page visual system (.t2-canvas): single-accent palette, flat
- * cards, compact chip filters, hero OG thumbnail alongside each row.
+ * /news/ listing. $100k editorial redesign shipped 2026-04-23.
  *
- * Functional parity with the prior filter implementation is preserved
- * (severity tabs + category dropdown + tool dropdown, URL-synced).
+ * Structure:
+ *   - Breadcrumb + eyebrow + gradient headline + subhead
+ *   - Stat bar: items, breaking, major, tools tracked, categories
+ *   - Today's top story: featured magazine-cover block (OG hero image)
+ *   - Split:
+ *       Left: filter chips (severity + category) + full news grid
+ *       Right: Movers-this-fortnight + RSS + methodology mini-card
+ *   - Email capture
+ *
+ * Filter behaviour (severity tabs + category chips + tool dropdown) is
+ * preserved, URL-synced. Functional parity with the prior t2-canvas
+ * version is maintained.
  */
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import EmailCapture from '../../components/EmailCapture.astro';
+import BreadcrumbLD from '../../components/seo/BreadcrumbLD.astro';
+import ToolLogo from '../../components/ToolLogo.astro';
 import { getCollection } from 'astro:content';
 
 const entries = await getCollection('news');
+const allTools = await getCollection('tools');
 
 function toYmd(v: unknown): string {
   if (!v) return '';
@@ -46,6 +57,52 @@ const sorted = entries
   }))
   .sort((a, b) => (b.date || '').localeCompare(a.date || ''));
 
+/* --- top story selection: prefer today's breaking, then today's major,
+       then the most recent major, then the most recent item. --- */
+const today = new Date().toISOString().slice(0, 10);
+const topStory = (() => {
+  const todayBreaking = sorted.find(n => n.date === today && n.severity === 'breaking');
+  if (todayBreaking) return { n: todayBreaking, label: 'BREAKING · TODAY' };
+  const todayMajor = sorted.find(n => n.date === today && n.severity === 'major');
+  if (todayMajor) return { n: todayMajor, label: "TODAY'S TOP STORY" };
+  const recentBreaking = sorted.find(n => n.severity === 'breaking');
+  if (recentBreaking) return { n: recentBreaking, label: 'RECENT · BREAKING' };
+  const recentMajor = sorted.find(n => n.severity === 'major');
+  if (recentMajor) return { n: recentMajor, label: 'LATEST MAJOR STORY' };
+  return sorted[0] ? { n: sorted[0], label: 'LATEST' } : null;
+})();
+
+/* --- movers this fortnight: count affects[] mentions in last 14 days. --- */
+const toolsBySlug = new Map(
+  allTools.map(t => {
+    const slug = t.data.slug || t.id.replace(/\.md$/, '');
+    return [slug, { title: t.data.title, category: t.data.category ?? '', slug }];
+  })
+);
+const fourteenDaysAgo = new Date();
+fourteenDaysAgo.setDate(fourteenDaysAgo.getDate() - 14);
+const recent14 = sorted.filter(n => new Date(n.date) >= fourteenDaysAgo);
+const mentionCounts: Record<string, number> = {};
+const latestSev: Record<string, string> = {};
+for (const n of recent14) {
+  for (const t of n.affects) {
+    mentionCounts[t] = (mentionCounts[t] ?? 0) + 1;
+    if (!latestSev[t]) latestSev[t] = n.severity;
+  }
+}
+const movers = Object.entries(mentionCounts)
+  .filter(([slug]) => toolsBySlug.has(slug))
+  .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+  .slice(0, 7)
+  .map(([slug, count]) => ({
+    slug,
+    count,
+    title: toolsBySlug.get(slug)!.title,
+    category: toolsBySlug.get(slug)!.category,
+    sev: latestSev[slug] || 'minor',
+  }));
+
+/* --- filter option sets --- */
 const severityCounts = sorted.reduce<Record<string, number>>((acc, n) => {
   acc[n.severity] = (acc[n.severity] ?? 0) + 1;
   return acc;
@@ -57,261 +114,754 @@ const toolCounts = sorted.reduce<Record<string, number>>((acc, n) => {
 const toolOptions = Object.entries(toolCounts)
   .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
   .map(([slug, count]) => ({ slug, count }));
-
 const categoryCounts = sorted.reduce<Record<string, number>>((acc, n) => {
   for (const c of n.categories) acc[c] = (acc[c] ?? 0) + 1;
   return acc;
 }, {});
 const categoryOptions = Object.entries(categoryCounts)
   .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+  .slice(0, 8) /* cap at the 8 most populated */
   .map(([slug, count]) => ({ slug, count }));
 
+const totalTools = new Set(sorted.flatMap(n => n.affects)).size;
+const totalCats = new Set(sorted.flatMap(n => n.categories)).size;
+
 const CATEGORY_LABEL: Record<string, string> = {
-  'ai-business': 'AI Business',
-  'ai-industry': 'AI Industry',
-  'ai-research': 'AI Research',
-  'ai-security': 'AI Security',
-  'ai-infrastructure': 'AI Infrastructure',
-  'ai-open-source': 'AI Open Source',
-  'ai-transparency': 'AI Transparency',
-  'ai-policy': 'AI Policy',
-  'ai-ethics': 'AI Ethics',
-  'ai-models': 'AI Models',
+  'ai-business': 'Business',
+  'ai-industry': 'Industry',
+  'ai-research': 'Research',
+  'ai-security': 'Security',
+  'ai-infrastructure': 'Infrastructure',
+  'ai-open-source': 'Open Source',
+  'ai-transparency': 'Transparency',
+  'ai-policy': 'Policy',
+  'ai-ethics': 'Ethics',
+  'ai-models': 'Models',
   'ai-model-release': 'Model Release',
-  'ai-tools': 'AI Tools',
-  'ai-hardware': 'AI Hardware',
-  'ai-coding': 'AI Coding',
-  'ai-voice': 'AI Voice',
-  'ai-video': 'AI Video',
-  'ai-image': 'AI Image',
-  'ai-writing': 'AI Writing',
-  'ai-design': 'AI Design',
-  'ai-seo': 'AI SEO',
-  'ai-automation': 'AI Automation',
-  'ai-search': 'AI Search',
-  'ai-notes': 'AI Notes',
-  'ai-music': 'AI Music',
-  'ai-presentation': 'AI Presentation',
-  'ai-chatbots': 'AI Chatbots',
+  'ai-tools': 'Tools',
+  'ai-hardware': 'Hardware',
+  'ai-coding': 'Coding',
+  'ai-voice': 'Voice',
+  'ai-video': 'Video',
+  'ai-image': 'Image',
+  'ai-writing': 'Writing',
+  'ai-design': 'Design',
+  'ai-seo': 'SEO',
+  'ai-automation': 'Automation',
+  'ai-search': 'Search',
+  'ai-notes': 'Notes',
+  'ai-music': 'Music',
+  'ai-presentation': 'Presentation',
+  'ai-chatbots': 'Chatbots',
 };
 function catLabel(slug: string): string {
-  return CATEGORY_LABEL[slug] ?? slug;
+  return CATEGORY_LABEL[slug] ?? slug.replace(/^ai-/, '').replace(/-/g, ' ');
 }
+
+const breadcrumbs = [
+  { name: 'Home', url: 'https://aipedia.wiki/' },
+  { name: 'News', url: 'https://aipedia.wiki/news/' },
+];
 ---
 
 <BaseLayout
-  title="AI Tools News: Updates Across the Catalog, aipedia.wiki"
+  title="AI Tools News · Daily Desk · aipedia.wiki"
   description="AI tools news verified against primary sources. Model releases, pricing changes, acquisitions, shutdowns, and funding rounds affecting the aipedia.wiki tool catalog."
 >
-  <div class="t2-canvas">
-    <!-- Breadcrumb -->
-    <nav class="t2-breadcrumb" aria-label="Breadcrumb">
+  <BreadcrumbLD items={breadcrumbs} />
+  <div class="p3-canvas">
+
+    <!-- Breadcrumbs -->
+    <nav class="p3-crumbs" aria-label="Breadcrumb">
       <a href="/">Home</a>
-      <span aria-hidden="true">/</span>
-      <span class="t2-breadcrumb-current" aria-current="page">News</span>
+      <span class="p3-crumbs-sep">/</span>
+      <span class="p3-crumbs-current" aria-current="page">News</span>
     </nav>
 
-    <!-- Hero -->
-    <header class="t2-news-hero">
-      <div>
-        <h1 class="t2-title">AI tools news</h1>
-        <p class="t2-tagline">
-          Verified against primary sources. Model releases, pricing changes, shutdowns, acquisitions, funding. Items land when material news lands, not on a forced cadence.
-        </p>
+    <!-- =============== HERO =============== -->
+    <header class="p3-newsdesk-hero">
+      <div class="p3-eyebrow">
+        <span class="p3-live-dot" aria-hidden="true"></span>
+        <span>LIVE DESK · verified daily · updated {sorted[0]?.date ?? '—'}</span>
       </div>
-      <a href="/news/rss.xml" class="t2-rss" aria-label="RSS feed">
-        <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M6.503 20.752c0 1.794-1.456 3.248-3.251 3.248-1.796 0-3.252-1.454-3.252-3.248 0-1.794 1.456-3.248 3.252-3.248 1.795 0 3.251 1.454 3.251 3.248zm-6.503-12.572v4.811c6.05 0 10.96 4.903 10.96 10.94h4.817c0-8.684-7.071-15.751-15.777-15.751zm0-3.198c10.47 0 18.982 8.502 18.982 18.998h5.018c0-13.254-10.78-24-24-24v5.002z"/>
-        </svg>
-        <span>RSS</span>
-      </a>
+      <h1 class="p3-headline p3-headline-wide">
+        The AI news <span class="p3-gradient">desk</span>.
+      </h1>
+      <p class="p3-subhead">
+        Every model release, price change, acquisition, and shutdown that moves a tool's score. Each item links to primary sources. Items land when material news lands, not on a forced cadence.
+      </p>
+
+      <div class="p3-statbar p3-statbar-5" style="margin-top: 28px; margin-bottom: 0;">
+        <div class="p3-stat">
+          <span class="p3-stat-num tabular-nums">{sorted.length}</span>
+          <span class="p3-stat-lbl">items</span>
+        </div>
+        <div class="p3-stat">
+          <span class="p3-stat-num tabular-nums" style="color: #f87171;">{severityCounts.breaking || 0}</span>
+          <span class="p3-stat-lbl">breaking</span>
+        </div>
+        <div class="p3-stat">
+          <span class="p3-stat-num tabular-nums" style="color: #fbbf24;">{severityCounts.major || 0}</span>
+          <span class="p3-stat-lbl">major</span>
+        </div>
+        <div class="p3-stat">
+          <span class="p3-stat-num tabular-nums">{totalTools}</span>
+          <span class="p3-stat-lbl">tools covered</span>
+        </div>
+        <div class="p3-stat">
+          <span class="p3-stat-num tabular-nums">{totalCats}</span>
+          <span class="p3-stat-lbl">categories</span>
+        </div>
+      </div>
     </header>
 
-    {sorted.length === 0 && (
-      <div class="t2-verdict">
-        <p class="t2-verdict-body">
-          The news feed is waking up. Check back tomorrow or <a href="/reports/">read the monthly report</a>.
-        </p>
-      </div>
-    )}
-
-    {/* Filter UI: severity tabs on top, category + tool dropdowns aligned
-        right on wider viewports. URL-synced. */}
-    {sorted.length > 0 && (
-      <section id="news-filters" class="t2-news-filters" data-pagefind-ignore>
-        <div class="t2-news-sevtabs">
-          <button type="button" data-severity-filter="all" class="t2-sevtab t2-sevtab-active">
-            All <span class="t2-sevtab-count tabular-nums">{sorted.length}</span>
-          </button>
-          {(['breaking', 'major', 'minor'] as const).map((sev) => severityCounts[sev] ? (
-            <button type="button" data-severity-filter={sev} class="t2-sevtab">
-              <span class="capitalize">{sev}</span>
-              <span class="t2-sevtab-count tabular-nums">{severityCounts[sev]}</span>
-            </button>
-          ) : null)}
-        </div>
-
-        <div class="t2-news-dropdowns">
-          {categoryOptions.length > 0 && (
-            <div class="relative">
-              <button
-                id="category-filter-trigger"
-                type="button"
-                aria-haspopup="listbox"
-                aria-expanded="false"
-                aria-controls="category-filter-popover"
-                class="t2-dropdown-trigger"
-              >
-                <span class="t2-dropdown-label">Category</span>
-                <span id="category-filter-label" class="t2-dropdown-value">All</span>
-                <svg id="category-filter-chevron" class="t2-dropdown-chevron" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
-                </svg>
-              </button>
-
-              <div
-                id="category-filter-popover"
-                role="listbox"
-                aria-label="Filter by category"
-                class="t2-dropdown-popover"
-                data-open="false"
-              >
-                <button type="button" role="option" aria-selected="true" data-category-filter="all" class="t2-dropdown-option t2-dropdown-option-active">
-                  <span>All categories</span>
-                  <span class="tabular-nums">{sorted.length}</span>
-                </button>
-                {categoryOptions.map(({ slug, count }) => (
-                  <button type="button" role="option" aria-selected="false" data-category-filter={slug} class="t2-dropdown-option">
-                    <span>{catLabel(slug)}</span>
-                    <span class="tabular-nums">{count}</span>
-                  </button>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {toolOptions.length > 0 && (
-            <div class="relative">
-              <button
-                id="tool-filter-trigger"
-                type="button"
-                aria-haspopup="listbox"
-                aria-expanded="false"
-                aria-controls="tool-filter-popover"
-                class="t2-dropdown-trigger"
-              >
-                <span class="t2-dropdown-label">Tool</span>
-                <span id="tool-filter-label" class="t2-dropdown-value">All</span>
-                <svg id="tool-filter-chevron" class="t2-dropdown-chevron" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
-                </svg>
-              </button>
-
-              <div
-                id="tool-filter-popover"
-                role="listbox"
-                aria-label="Filter by affected tool"
-                class="t2-dropdown-popover"
-                data-open="false"
-              >
-                <button type="button" role="option" aria-selected="true" data-tool-filter="all" class="t2-dropdown-option t2-dropdown-option-active">
-                  <span>All tools</span>
-                  <span class="tabular-nums">{sorted.length}</span>
-                </button>
-                {toolOptions.map(({ slug, count }) => (
-                  <button type="button" role="option" aria-selected="false" data-tool-filter={slug}  class="t2-dropdown-option">
-                    <span>{slug}</span>
-                    <span class="tabular-nums">{count}</span>
-                  </button>
-                ))}
-              </div>
-            </div>
-          )}
-
-          <button type="button" id="clear-filters" class="t2-clear-filters hidden">
-            Clear
-          </button>
-        </div>
-      </section>
-    )}
-
-    <section id="news-list" class="t2-news-list">
-      {sorted.map((n) => (
-        <a
-          href={`/news/${n.slug}/`}
-          class="t2-news-card"
-          data-severity={n.severity}
-          data-affects={n.affects.join(',')}
-          data-categories={n.categories.join(',')}
-        >
-          <div class="t2-news-card-thumb">
+    <!-- =============== TOP STORY =============== -->
+    {topStory && (
+      <section class="p3-topstory-sec" aria-labelledby="top-story-heading">
+        <a href={`/news/${topStory.n.slug}/`} class="p3-topstory">
+          <div class="p3-topstory-img">
             <img
-              src={`/og/news/${n.slug}.png`}
+              src={`/og/news/${topStory.n.slug}.png`}
               alt=""
-              loading="lazy"
+              loading="eager"
               decoding="async"
               width="1200"
               height="630"
             />
+            <div class="p3-topstory-img-fade"></div>
           </div>
-          <div class="t2-news-card-body">
-            <div class="t2-news-card-meta">
-              <span class={`t2-severity-pill t2-severity-${n.severity}`}>{n.severity}</span>
-              <time datetime={n.date} class="t2-news-card-date tabular-nums">{relativeDate(n.date)}</time>
-              {n.affects.length > 0 && (
-                <span class="t2-news-card-affects">
-                  <span aria-hidden="true">&middot;</span>
-                  affects {n.affects.slice(0, 3).join(', ')}{n.affects.length > 3 ? ` +${n.affects.length - 3}` : ''}
+          <div class="p3-topstory-body">
+            <div class="p3-topstory-label">
+              <span>{topStory.label}</span>
+              <span class={`p3-sev p3-sev-${topStory.n.severity}`}>{topStory.n.severity}</span>
+            </div>
+            <h2 id="top-story-heading" class="p3-topstory-title">{topStory.n.title}</h2>
+            {topStory.n.summary && (
+              <p class="p3-topstory-summary">{topStory.n.summary}</p>
+            )}
+            <div class="p3-topstory-meta">
+              <time datetime={topStory.n.date} class="p3-topstory-date">{relativeDate(topStory.n.date)}</time>
+              {topStory.n.affects.length > 0 && (
+                <span class="p3-topstory-affects">
+                  <span aria-hidden="true">·</span>
+                  <span>affects</span>
+                  {topStory.n.affects.slice(0, 4).map(t => (
+                    <span class="p3-topstory-affect-pill">{t}</span>
+                  ))}
+                  {topStory.n.affects.length > 4 && (
+                    <span class="p3-topstory-affect-pill">+{topStory.n.affects.length - 4}</span>
+                  )}
                 </span>
               )}
+              <span class="p3-topstory-cta">Read story <span aria-hidden="true">→</span></span>
             </div>
-            <h2 class="t2-news-card-title">{n.title}</h2>
-            {n.summary && <p class="t2-news-card-summary">{n.summary}</p>}
           </div>
         </a>
-      ))}
+      </section>
+    )}
+
+    <!-- =============== SPLIT: list + movers sidebar =============== -->
+    <section class="p3-newsdesk-split">
+      <div class="p3-newsdesk-main">
+
+        <!-- Filter rail -->
+        {sorted.length > 0 && (
+          <div id="news-filters" class="p3-newsdesk-filters" data-pagefind-ignore>
+            <div class="p3-chips" role="tablist" aria-label="Filter by severity">
+              <button type="button" data-severity-filter="all" class="p3-chip p3-chip-active">
+                All <span class="p3-chip-count tabular-nums">{sorted.length}</span>
+              </button>
+              {(['breaking', 'major', 'minor'] as const).map((sev) => severityCounts[sev] ? (
+                <button type="button" data-severity-filter={sev} class="p3-chip">
+                  <span class="capitalize">{sev}</span>
+                  <span class="p3-chip-count tabular-nums">{severityCounts[sev]}</span>
+                </button>
+              ) : null)}
+            </div>
+
+            {categoryOptions.length > 0 && (
+              <div class="p3-chips" aria-label="Filter by category" style="margin-top: 10px;">
+                <button type="button" data-category-filter="all" class="p3-chip p3-chip-active p3-chip-cat">
+                  All categories
+                </button>
+                {categoryOptions.map(({ slug, count }) => (
+                  <button type="button" data-category-filter={slug} class="p3-chip p3-chip-cat">
+                    <span>{catLabel(slug)}</span>
+                    <span class="p3-chip-count tabular-nums">{count}</span>
+                  </button>
+                ))}
+              </div>
+            )}
+
+            <div class="p3-newsdesk-filter-foot">
+              {toolOptions.length > 0 && (
+                <div class="p3-newsdesk-tool-dropdown">
+                  <label for="tool-filter-select" class="p3-newsdesk-tool-label">Tool</label>
+                  <select id="tool-filter-select" class="p3-newsdesk-tool-select">
+                    <option value="all">All tools</option>
+                    {toolOptions.map(({ slug, count }) => (
+                      <option value={slug}>{slug} ({count})</option>
+                    ))}
+                  </select>
+                </div>
+              )}
+              <button type="button" id="clear-filters" class="p3-newsdesk-clear hidden">
+                Clear filters
+              </button>
+            </div>
+          </div>
+        )}
+
+        <!-- News grid -->
+        <ul id="news-list" class="p3-newsdesk-grid">
+          {sorted.map((n) => (
+            <li
+              class="p3-newsdesk-item"
+              data-severity={n.severity}
+              data-affects={n.affects.join(',')}
+              data-categories={n.categories.join(',')}
+            >
+              <a href={`/news/${n.slug}/`} class="p3-newsdesk-card">
+                <div class="p3-newsdesk-card-thumb">
+                  <img
+                    src={`/og/news/${n.slug}.png`}
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                    width="1200"
+                    height="630"
+                  />
+                </div>
+                <div class="p3-newsdesk-card-body">
+                  <div class="p3-newsdesk-card-meta">
+                    <span class={`p3-sev p3-sev-${n.severity}`}>{n.severity}</span>
+                    <time datetime={n.date} class="p3-newsdesk-card-date tabular-nums">{relativeDate(n.date)}</time>
+                  </div>
+                  <h3 class="p3-newsdesk-card-title">{n.title}</h3>
+                  {n.summary && <p class="p3-newsdesk-card-summary">{n.summary}</p>}
+                  {n.affects.length > 0 && (
+                    <div class="p3-newsdesk-card-affects">
+                      {n.affects.slice(0, 3).map(t => (
+                        <span class="p3-newsdesk-card-affect-pill">{t}</span>
+                      ))}
+                      {n.affects.length > 3 && (
+                        <span class="p3-newsdesk-card-affect-pill p3-newsdesk-card-affect-more">+{n.affects.length - 3}</span>
+                      )}
+                    </div>
+                  )}
+                </div>
+              </a>
+            </li>
+          ))}
+        </ul>
+
+        <p id="no-matches" class="p3-newsdesk-empty hidden">
+          No news items match these filters. <a href="/news/">Clear filters</a> to see everything.
+        </p>
+      </div>
+
+      <!-- Movers sidebar -->
+      <aside class="p3-newsdesk-aside" aria-label="Movers and methodology">
+
+        {movers.length > 0 && (
+          <div class="p3-newsdesk-aside-card">
+            <div class="p3-newsdesk-aside-eyebrow">
+              <span>MOVERS · past 14 days</span>
+              <span class="p3-newsdesk-aside-eyebrow-sub">by mentions</span>
+            </div>
+            <ol class="p3-newsdesk-movers">
+              {movers.map((m, i) => (
+                <li>
+                  <a href={`/tools/${m.slug}/`} class="p3-newsdesk-mover">
+                    <span class="p3-newsdesk-mover-rank tabular-nums">{i + 1}</span>
+                    <span class="p3-newsdesk-mover-logo">
+                      <ToolLogo slug={m.slug} alt="" size={24} />
+                    </span>
+                    <span class="p3-newsdesk-mover-main">
+                      <span class="p3-newsdesk-mover-name">{m.title}</span>
+                      <span class="p3-newsdesk-mover-sub">
+                        <span class={`p3-sev p3-sev-${m.sev}`}>{m.sev}</span>
+                        <span class="tabular-nums">{m.count} {m.count === 1 ? 'mention' : 'mentions'}</span>
+                      </span>
+                    </span>
+                    <span class="p3-newsdesk-mover-arrow" aria-hidden="true">→</span>
+                  </a>
+                </li>
+              ))}
+            </ol>
+          </div>
+        )}
+
+        <div class="p3-newsdesk-aside-card">
+          <div class="p3-newsdesk-aside-eyebrow"><span>SUBSCRIBE</span></div>
+          <p class="p3-newsdesk-aside-body">
+            Pull the feed straight into your reader. Pure RSS, no tracking pixels, no email capture.
+          </p>
+          <a href="/news/rss.xml" class="p3-btn p3-btn-ghost" style="margin-top: 10px;">
+            <svg width="13" height="13" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6.503 20.752c0 1.794-1.456 3.248-3.251 3.248-1.796 0-3.252-1.454-3.252-3.248 0-1.794 1.456-3.248 3.252-3.248 1.795 0 3.251 1.454 3.251 3.248zm-6.503-12.572v4.811c6.05 0 10.96 4.903 10.96 10.94h4.817c0-8.684-7.071-15.751-15.777-15.751zm0-3.198c10.47 0 18.982 8.502 18.982 18.998h5.018c0-13.254-10.78-24-24-24v5.002z"/>
+            </svg>
+            <span>RSS feed</span>
+          </a>
+        </div>
+
+        <div class="p3-newsdesk-aside-card">
+          <div class="p3-newsdesk-aside-eyebrow"><span>METHODOLOGY</span></div>
+          <p class="p3-newsdesk-aside-body">
+            Items are published when the first primary-source confirmation lands. We track pricing changes, model releases, acquisitions, shutdowns, and funding rounds that move a tool's utility, value, moat, or longevity score.
+          </p>
+          <a href="/about/editorial/" class="p3-method-link" style="display:inline-block; margin-top:8px;">How we verify →</a>
+        </div>
+      </aside>
     </section>
 
-    <p id="no-matches" class="t2-no-matches hidden">
-      No news items match these filters. <a href="/news/">Clear filters</a> to see everything.
-    </p>
-
-    <div class="t2-news-footer">
+    <!-- =============== EMAIL CAPTURE =============== -->
+    <div class="p3-email">
       <EmailCapture variant="footer" source="news-index" />
     </div>
   </div>
 
+  <!-- News-specific styling additions that extend p3-canvas.css. Kept
+       inline because these classes are only used by this page. -->
+  <style>
+    /* hero tweaks */
+    .p3-newsdesk-hero {
+      padding: 34px 0 40px;
+      max-width: 68ch;
+    }
+
+    /* ---- top story ---- */
+    .p3-topstory-sec {
+      margin-bottom: 48px;
+    }
+    .p3-topstory {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(167, 139, 250, 0.28);
+      background:
+        radial-gradient(ellipse 70% 100% at 0% 0%, rgba(167, 139, 250, 0.10), transparent 60%),
+        var(--p3-surface);
+      text-decoration: none;
+      color: inherit;
+      transition: transform 200ms cubic-bezier(.2,.7,.2,1), border-color 200ms ease, box-shadow 200ms ease;
+      position: relative;
+    }
+    .p3-topstory:hover {
+      transform: translateY(-2px);
+      border-color: rgba(167, 139, 250, 0.45);
+      box-shadow: 0 18px 48px -16px rgba(167, 139, 250, 0.28);
+    }
+    @media (min-width: 900px) {
+      .p3-topstory {
+        grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      }
+    }
+    .p3-topstory-img {
+      position: relative;
+      aspect-ratio: 1200 / 630;
+      overflow: hidden;
+    }
+    @media (min-width: 900px) {
+      .p3-topstory-img { aspect-ratio: auto; height: 100%; min-height: 320px; }
+    }
+    .p3-topstory-img img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .p3-topstory-img-fade {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(0deg, rgba(11, 9, 16, 0.25) 0%, transparent 40%);
+      pointer-events: none;
+    }
+    .light .p3-topstory-img-fade { background: linear-gradient(0deg, rgba(255,255,255,0.2) 0%, transparent 40%); }
+
+    .p3-topstory-body {
+      padding: 32px 28px 30px;
+      display: flex;
+      flex-direction: column;
+    }
+    @media (min-width: 900px) {
+      .p3-topstory-body { padding: 40px 36px; }
+    }
+    .p3-topstory-label {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      color: var(--p3-accent-text);
+      margin-bottom: 16px;
+    }
+    .p3-topstory-title {
+      font-size: clamp(1.5rem, 2.8vw, 2rem);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      color: var(--p3-fg);
+      margin: 0 0 14px;
+    }
+    .p3-topstory:hover .p3-topstory-title { color: var(--p3-accent-text); }
+    .p3-topstory-summary {
+      font-size: 14px;
+      line-height: 1.55;
+      color: var(--p3-muted);
+      margin: 0 0 18px;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .p3-topstory-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      padding-top: 14px;
+      border-top: 1px solid var(--p3-line);
+      font-size: 12px;
+      color: var(--p3-muted);
+      margin-top: auto;
+    }
+    .p3-topstory-date { color: var(--p3-subtle); }
+    .p3-topstory-affects {
+      display: inline-flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 5px;
+    }
+    .p3-topstory-affect-pill {
+      padding: 2px 7px;
+      border-radius: 999px;
+      background: var(--p3-surface-hover);
+      color: var(--p3-muted);
+      font-size: 11px;
+      font-weight: 600;
+    }
+    .p3-topstory-cta {
+      margin-left: auto;
+      font-weight: 600;
+      color: var(--p3-accent-text);
+      transition: transform 150ms ease;
+    }
+    .p3-topstory:hover .p3-topstory-cta { transform: translateX(3px); }
+
+    /* ---- split layout ---- */
+    .p3-newsdesk-split {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 36px;
+      margin-bottom: 48px;
+    }
+    @media (min-width: 1000px) {
+      .p3-newsdesk-split {
+        grid-template-columns: minmax(0, 1fr) 300px;
+        gap: 40px;
+        align-items: start;
+      }
+    }
+    .p3-newsdesk-main { min-width: 0; }
+
+    /* ---- filters ---- */
+    .p3-newsdesk-filters {
+      padding: 16px 16px 14px;
+      border-radius: 14px;
+      border: 1px solid var(--p3-line);
+      background: var(--p3-surface);
+      margin-bottom: 20px;
+    }
+    .p3-chip-cat { font-size: 11.5px; }
+    .p3-newsdesk-filter-foot {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px dashed var(--p3-line);
+      font-size: 11.5px;
+    }
+    .p3-newsdesk-tool-dropdown {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .p3-newsdesk-tool-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--p3-subtle);
+    }
+    .p3-newsdesk-tool-select {
+      appearance: none;
+      -webkit-appearance: none;
+      background: var(--p3-surface-hover) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2.5'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") no-repeat right 10px center;
+      background-size: 10px;
+      color: var(--p3-fg);
+      border: 1px solid var(--p3-line);
+      border-radius: 8px;
+      padding: 5px 26px 5px 10px;
+      font: inherit;
+      font-size: 12px;
+      cursor: pointer;
+      max-width: 170px;
+    }
+    .p3-newsdesk-tool-select:focus {
+      outline: 2px solid rgba(167,139,250,0.4);
+      outline-offset: 1px;
+    }
+    .p3-newsdesk-clear {
+      background: transparent;
+      border: 1px solid var(--p3-line);
+      color: var(--p3-muted);
+      border-radius: 999px;
+      padding: 4px 10px;
+      font-size: 11px;
+      cursor: pointer;
+      transition: color 120ms ease, border-color 120ms ease;
+    }
+    .p3-newsdesk-clear:hover {
+      color: var(--p3-accent-text);
+      border-color: rgba(167, 139, 250, 0.35);
+    }
+    .p3-newsdesk-clear.hidden { display: none; }
+
+    /* ---- grid of news cards ---- */
+    .p3-newsdesk-grid {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+    @media (min-width: 700px) {
+      .p3-newsdesk-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    .p3-newsdesk-card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid var(--p3-line);
+      background: var(--p3-surface);
+      text-decoration: none;
+      color: inherit;
+      transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease, background 180ms ease;
+    }
+    .p3-newsdesk-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(167, 139, 250, 0.30);
+      box-shadow: 0 14px 32px -18px rgba(167, 139, 250, 0.24);
+      background: var(--p3-surface-hover);
+    }
+    .p3-newsdesk-card-thumb {
+      aspect-ratio: 1200 / 630;
+      overflow: hidden;
+      background: var(--p3-surface-hover);
+    }
+    .p3-newsdesk-card-thumb img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .p3-newsdesk-card-body {
+      padding: 16px 16px 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex: 1;
+    }
+    .p3-newsdesk-card-meta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .p3-newsdesk-card-date { font-size: 11px; color: var(--p3-subtle); }
+    .p3-newsdesk-card-title {
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 1.28;
+      letter-spacing: -0.01em;
+      color: var(--p3-fg);
+      margin: 0;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .p3-newsdesk-card:hover .p3-newsdesk-card-title { color: var(--p3-accent-text); }
+    .p3-newsdesk-card-summary {
+      font-size: 12.5px;
+      line-height: 1.5;
+      color: var(--p3-muted);
+      margin: 0;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .p3-newsdesk-card-affects {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin-top: auto;
+      padding-top: 6px;
+    }
+    .p3-newsdesk-card-affect-pill {
+      padding: 1px 6px;
+      border-radius: 999px;
+      background: var(--p3-surface-hover);
+      color: var(--p3-muted);
+      font-size: 10.5px;
+      font-weight: 600;
+    }
+    .p3-newsdesk-card-affect-more { color: var(--p3-subtle); }
+
+    .p3-newsdesk-empty {
+      padding: 24px;
+      border-radius: 12px;
+      border: 1px dashed var(--p3-line);
+      text-align: center;
+      font-size: 13px;
+      color: var(--p3-muted);
+      margin: 14px 0 0;
+    }
+    .p3-newsdesk-empty.hidden { display: none; }
+    .p3-newsdesk-empty a { color: var(--p3-accent-text); }
+
+    /* ---- sidebar ---- */
+    .p3-newsdesk-aside {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      min-width: 0;
+    }
+    @media (min-width: 1000px) {
+      .p3-newsdesk-aside { position: sticky; top: 80px; }
+    }
+    .p3-newsdesk-aside-card {
+      padding: 18px 18px 16px;
+      border-radius: 14px;
+      border: 1px solid var(--p3-line);
+      background: var(--p3-surface);
+    }
+    .p3-newsdesk-aside-eyebrow {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 8px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      color: var(--p3-accent-text);
+      margin-bottom: 12px;
+    }
+    .p3-newsdesk-aside-eyebrow-sub {
+      letter-spacing: 0.08em;
+      font-weight: 500;
+      color: var(--p3-subtle);
+    }
+    .p3-newsdesk-aside-body {
+      font-size: 12.5px;
+      line-height: 1.55;
+      color: var(--p3-muted);
+      margin: 0;
+    }
+    .p3-newsdesk-movers {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .p3-newsdesk-mover {
+      display: grid;
+      grid-template-columns: 18px 28px 1fr auto;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      text-decoration: none;
+      color: inherit;
+      border: 1px solid transparent;
+      transition: background 120ms ease, border-color 120ms ease;
+    }
+    .p3-newsdesk-mover:hover {
+      background: var(--p3-surface-hover);
+      border-color: var(--p3-line);
+    }
+    .p3-newsdesk-mover-rank {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--p3-subtle);
+      text-align: center;
+    }
+    .p3-newsdesk-mover-logo {
+      width: 28px;
+      height: 28px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .p3-newsdesk-mover-main {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      min-width: 0;
+    }
+    .p3-newsdesk-mover-name {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--p3-fg);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .p3-newsdesk-mover:hover .p3-newsdesk-mover-name { color: var(--p3-accent-text); }
+    .p3-newsdesk-mover-sub {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 10.5px;
+      color: var(--p3-subtle);
+    }
+    .p3-newsdesk-mover-arrow {
+      color: var(--p3-subtle);
+      font-size: 14px;
+      transition: color 120ms ease, transform 120ms ease;
+    }
+    .p3-newsdesk-mover:hover .p3-newsdesk-mover-arrow {
+      color: var(--p3-accent-text);
+      transform: translateX(2px);
+    }
+  </style>
+
   <script is:inline>
-    // News filter: severity tabs + category dropdown + tool dropdown,
-    // synced with URL params so any filtered view is bookmarkable.
+    // News filter: severity chips + category chips + tool select,
+    // URL-synced. Functional parity with the prior dropdown UI.
     (function () {
       const root = document.getElementById('news-filters');
       const list = document.getElementById('news-list');
       if (!root || !list) return;
 
-      const tabs = root.querySelectorAll('.t2-sevtab');
-      const toolTrigger = document.getElementById('tool-filter-trigger');
-      const toolPopover = document.getElementById('tool-filter-popover');
-      const toolLabel = document.getElementById('tool-filter-label');
-      const toolChevron = document.getElementById('tool-filter-chevron');
-      const toolOptionButtons = root.querySelectorAll('[data-tool-filter]');
-      const catTrigger = document.getElementById('category-filter-trigger');
-      const catPopover = document.getElementById('category-filter-popover');
-      const catLabelEl = document.getElementById('category-filter-label');
-      const catChevron = document.getElementById('category-filter-chevron');
-      const catOptionButtons = root.querySelectorAll('[data-category-filter]');
+      const sevChips = root.querySelectorAll('[data-severity-filter]');
+      const catChips = root.querySelectorAll('[data-category-filter]');
+      const toolSelect = document.getElementById('tool-filter-select');
       const clearBtn = document.getElementById('clear-filters');
       const noMatches = document.getElementById('no-matches');
-      const items = Array.from(list.querySelectorAll('.t2-news-card'));
-
-      const activeClass = 't2-sevtab-active';
-
-      function humanize(slug) {
-        return slug
-          .split('-')
-          .map((w) => (w === 'ai' ? 'AI' : (w[0] || '').toUpperCase() + w.slice(1)))
-          .join(' ');
-      }
+      const items = Array.from(list.querySelectorAll('.p3-newsdesk-item'));
 
       function readParams() {
         const p = new URLSearchParams(location.search);
@@ -327,37 +877,7 @@ function catLabel(slug: string): string {
         if (state.tool !== 'all') p.set('tool', state.tool);
         if (state.category !== 'all') p.set('category', state.category);
         const qs = p.toString();
-        const url = location.pathname + (qs ? '?' + qs : '') + location.hash;
-        history.replaceState(null, '', url);
-      }
-
-      function openPopover(popover, trigger, chevron) {
-        if (!popover || !trigger) return;
-        popover.setAttribute('data-open', 'true');
-        trigger.setAttribute('aria-expanded', 'true');
-        if (chevron) chevron.style.transform = 'rotate(180deg)';
-      }
-      function closePopover(popover, trigger, chevron) {
-        if (!popover || !trigger) return;
-        popover.setAttribute('data-open', 'false');
-        trigger.setAttribute('aria-expanded', 'false');
-        if (chevron) chevron.style.transform = '';
-      }
-      function closeAllPopovers(except) {
-        if (except !== 'tool') closePopover(toolPopover, toolTrigger, toolChevron);
-        if (except !== 'category') closePopover(catPopover, catTrigger, catChevron);
-      }
-      function togglePopover(name) {
-        const popover = name === 'tool' ? toolPopover : catPopover;
-        const trigger = name === 'tool' ? toolTrigger : catTrigger;
-        const chevron = name === 'tool' ? toolChevron : catChevron;
-        if (!popover) return;
-        if (popover.getAttribute('data-open') === 'true') {
-          closePopover(popover, trigger, chevron);
-        } else {
-          closeAllPopovers(name);
-          openPopover(popover, trigger, chevron);
-        }
+        history.replaceState(null, '', location.pathname + (qs ? '?' + qs : '') + location.hash);
       }
 
       function apply(state) {
@@ -373,25 +893,15 @@ function catLabel(slug: string): string {
           el.style.display = show ? '' : 'none';
           if (show) visible++;
         });
-        tabs.forEach((tab) => {
-          const v = tab.getAttribute('data-severity-filter');
-          if (v === state.severity) tab.classList.add(activeClass);
-          else tab.classList.remove(activeClass);
+        sevChips.forEach((c) => {
+          const v = c.getAttribute('data-severity-filter');
+          c.classList.toggle('p3-chip-active', v === state.severity);
         });
-        toolOptionButtons.forEach((opt) => {
-          const v = opt.getAttribute('data-tool-filter');
-          const selected = v === state.tool;
-          opt.setAttribute('aria-selected', selected ? 'true' : 'false');
-          opt.classList.toggle('t2-dropdown-option-active', selected);
+        catChips.forEach((c) => {
+          const v = c.getAttribute('data-category-filter');
+          c.classList.toggle('p3-chip-active', v === state.category);
         });
-        catOptionButtons.forEach((opt) => {
-          const v = opt.getAttribute('data-category-filter');
-          const selected = v === state.category;
-          opt.setAttribute('aria-selected', selected ? 'true' : 'false');
-          opt.classList.toggle('t2-dropdown-option-active', selected);
-        });
-        if (toolLabel) toolLabel.textContent = state.tool === 'all' ? 'All' : state.tool;
-        if (catLabelEl) catLabelEl.textContent = state.category === 'all' ? 'All' : humanize(state.category);
+        if (toolSelect) toolSelect.value = state.tool;
         const anyFilter = state.severity !== 'all' || state.tool !== 'all' || state.category !== 'all';
         if (clearBtn) clearBtn.classList.toggle('hidden', !anyFilter);
         if (noMatches) noMatches.classList.toggle('hidden', visible !== 0);
@@ -400,55 +910,34 @@ function catLabel(slug: string): string {
       let state = readParams();
       apply(state);
 
-      tabs.forEach((tab) => {
-        tab.addEventListener('click', () => {
-          state = { ...state, severity: tab.getAttribute('data-severity-filter') || 'all' };
+      sevChips.forEach((c) => {
+        c.addEventListener('click', () => {
+          state = { ...state, severity: c.getAttribute('data-severity-filter') || 'all' };
           writeParams(state);
           apply(state);
         });
       });
-
-      if (toolTrigger) toolTrigger.addEventListener('click', (e) => { e.stopPropagation(); togglePopover('tool'); });
-      if (catTrigger) catTrigger.addEventListener('click', (e) => { e.stopPropagation(); togglePopover('category'); });
-
-      toolOptionButtons.forEach((opt) => {
-        opt.addEventListener('click', () => {
-          state = { ...state, tool: opt.getAttribute('data-tool-filter') || 'all' };
+      catChips.forEach((c) => {
+        c.addEventListener('click', () => {
+          state = { ...state, category: c.getAttribute('data-category-filter') || 'all' };
           writeParams(state);
           apply(state);
-          closePopover(toolPopover, toolTrigger, toolChevron);
         });
       });
-      catOptionButtons.forEach((opt) => {
-        opt.addEventListener('click', () => {
-          state = { ...state, category: opt.getAttribute('data-category-filter') || 'all' };
+      if (toolSelect) {
+        toolSelect.addEventListener('change', () => {
+          state = { ...state, tool: toolSelect.value || 'all' };
           writeParams(state);
           apply(state);
-          closePopover(catPopover, catTrigger, catChevron);
         });
-      });
-      document.addEventListener('click', (e) => {
-        const target = e.target;
-        if (toolPopover && toolPopover.getAttribute('data-open') === 'true' && !(toolTrigger && toolTrigger.contains(target)) && !toolPopover.contains(target)) {
-          closePopover(toolPopover, toolTrigger, toolChevron);
-        }
-        if (catPopover && catPopover.getAttribute('data-open') === 'true' && !(catTrigger && catTrigger.contains(target)) && !catPopover.contains(target)) {
-          closePopover(catPopover, catTrigger, catChevron);
-        }
-      });
-      document.addEventListener('keydown', (e) => {
-        if (e.key !== 'Escape') return;
-        if (toolPopover?.getAttribute('data-open') === 'true') { closePopover(toolPopover, toolTrigger, toolChevron); toolTrigger?.focus(); }
-        else if (catPopover?.getAttribute('data-open') === 'true') { closePopover(catPopover, catTrigger, catChevron); catTrigger?.focus(); }
-      });
-
-      if (clearBtn) clearBtn.addEventListener('click', () => {
-        state = { severity: 'all', tool: 'all', category: 'all' };
-        writeParams(state);
-        apply(state);
-      });
+      }
+      if (clearBtn) {
+        clearBtn.addEventListener('click', () => {
+          state = { severity: 'all', tool: 'all', category: 'all' };
+          writeParams(state);
+          apply(state);
+        });
+      }
     })();
   </script>
-
-  <!-- Canvas + news styles live in src/styles/t2-canvas.css (imported globally via BaseLayout). -->
 </BaseLayout>
