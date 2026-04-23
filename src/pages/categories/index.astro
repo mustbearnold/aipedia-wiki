@@ -18,22 +18,48 @@ const categoryEmojiMap: Record<string, string> = {
   'ai-presentation': '\uD83D\uDCCA', 'ai-research': '\uD83D\uDD2C',
 };
 
-// Count tools per category from the actual collection
+// Count tools per category + capture top-scored active tool per category
+// so each card surfaces an editorial signal (top pick + score) instead
+// of just a count.
+function overall(s: { utility?: number; value?: number; moat?: number; longevity?: number } | undefined) {
+  if (!s) return 0;
+  return Math.round((((s.utility ?? 0) + (s.value ?? 0) + (s.moat ?? 0) + (s.longevity ?? 0)) / 4) * 10) / 10;
+}
 const toolCountBySlug: Record<string, number> = {};
+const catScoreSum: Record<string, number> = {};
+const topByCategory: Record<string, { title: string; slug: string; score: number }> = {};
 for (const t of allTools) {
   const cat = t.data.category;
-  if (cat) toolCountBySlug[cat] = (toolCountBySlug[cat] || 0) + 1;
+  if (!cat) continue;
+  if (t.data.status === 'dead' || t.data.status === 'retired' || t.data.status === 'acquired') continue;
+  toolCountBySlug[cat] = (toolCountBySlug[cat] || 0) + 1;
+  const score = overall(t.data.scores);
+  catScoreSum[cat] = (catScoreSum[cat] ?? 0) + score;
+  const prev = topByCategory[cat];
+  if (!prev || score > prev.score) {
+    topByCategory[cat] = {
+      title: t.data.title,
+      slug: t.data.slug || t.id.replace(/\.md$/, ''),
+      score,
+    };
+  }
 }
 
 // Sort categories by tool count (biggest first)
 const sorted = allCategories
-  .map(c => ({
-    slug: c.data.slug,
-    title: c.data.title,
-    description: c.data.description,
-    toolCount: toolCountBySlug[c.data.slug] || 0,
-    emoji: categoryEmojiMap[c.data.slug] || '\uD83D\uDD27',
-  }))
+  .map(c => {
+    const count = toolCountBySlug[c.data.slug] || 0;
+    const avg = count > 0 ? Math.round(((catScoreSum[c.data.slug] ?? 0) / count) * 10) / 10 : 0;
+    return {
+      slug: c.data.slug,
+      title: c.data.title,
+      description: c.data.description,
+      toolCount: count,
+      avg,
+      top: topByCategory[c.data.slug] ?? null,
+      emoji: categoryEmojiMap[c.data.slug] || '\uD83D\uDD27',
+    };
+  })
   .sort((a, b) => b.toolCount - a.toolCount);
 ---
 
@@ -64,16 +90,30 @@ const sorted = allCategories
     </section>
 
     <section class="t2-cat-index-grid">
-      {sorted.map((c) => (
-        <a href={`/categories/${c.slug}/`} class="t2-cat-index-card">
-          <div class="t2-cat-index-icon" aria-hidden="true">{c.emoji}</div>
-          <div class="t2-cat-index-body">
-            <div class="t2-cat-index-title-row">
+      {sorted.map((c, i) => (
+        <a href={`/categories/${c.slug}/`} class={`t2-cat-index-card ${i < 3 ? 't2-cat-index-card-top' : ''}`.trim()}>
+          <div class="t2-cat-index-head">
+            <div class="t2-cat-index-icon" aria-hidden="true">{c.emoji}</div>
+            <div class="t2-cat-index-head-text">
               <h2 class="t2-cat-index-title">{c.title}</h2>
-              <span class="t2-cat-index-count tabular-nums">{c.toolCount}</span>
+              {c.avg > 0 && (
+                <div class="t2-cat-index-meta">
+                  <span class="tabular-nums"><strong>{c.toolCount}</strong> tool{c.toolCount === 1 ? '' : 's'}</span>
+                  <span aria-hidden="true" class="t2-meta-dot">·</span>
+                  <span class="tabular-nums">avg <strong>{c.avg}</strong>/10</span>
+                </div>
+              )}
             </div>
-            <p class="t2-cat-index-desc">{c.description}</p>
+            <span class="t2-cat-index-arrow" aria-hidden="true">→</span>
           </div>
+          {c.description && <p class="t2-cat-index-desc">{c.description}</p>}
+          {c.top && (
+            <div class="t2-cat-index-top">
+              <span class="t2-cat-index-top-label">Top pick</span>
+              <span class="t2-cat-index-top-tool">{c.top.title}</span>
+              <span class="t2-cat-index-top-score tabular-nums">{c.top.score}<span class="t2-cat-index-top-score-slash">/10</span></span>
+            </div>
+          )}
         </a>
       ))}
     </section>
