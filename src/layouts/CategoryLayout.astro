@@ -1,6 +1,9 @@
 ---
+/**
+ * CategoryLayout - category pages, redesigned April 23, 2026 into the
+ * .t2-canvas system to match /tools/[slug]/ and /news/.
+ */
 import BaseLayout from './BaseLayout.astro';
-import Breadcrumb from '../components/Breadcrumb.astro';
 import BreadcrumbLD from '../components/seo/BreadcrumbLD.astro';
 import ItemListLD from '../components/seo/ItemListLD.astro';
 import ShareButtons from '../components/ShareButtons.astro';
@@ -16,6 +19,7 @@ interface ToolData {
   url?: string;
   price_range?: string;
   pricing_model?: string;
+  status?: string;
   affiliate?: { link?: string | null } | null;
   scores?: { utility?: number; value?: number; moat?: number; longevity?: number };
   tagline?: string;
@@ -59,9 +63,7 @@ function ctaRel(t: ToolData): string {
 
 const sorted = [...tools].sort((a, b) => overallScore(b) - overallScore(a));
 const top3 = sorted.slice(0, 3);
-const rest = sorted.slice(3);
 
-const breadcrumbItems = [{ label: title }];
 const breadcrumbLdItems = [
   { name: 'Home', url: siteBase },
   { name: title, url: `${siteBase}categories/${slug}/` },
@@ -79,6 +81,8 @@ const itemListItems = sorted.map((t) => ({
   score: overallScore(t) || undefined,
   status: t.status,
 }));
+
+const rankLabels = ['Best overall', 'Runner-up', 'Best value'];
 ---
 
 <BaseLayout title={seoTitle ?? title} description={description}>
@@ -86,52 +90,63 @@ const itemListItems = sorted.map((t) => ({
   {itemListItems.length > 0 && (
     <ItemListLD name={title} description={description} items={itemListItems} siteBase={siteBase} />
   )}
-  <Breadcrumb items={breadcrumbItems} />
 
-  <div class="max-w-5xl mx-auto">
+  <div class="t2-canvas">
+    <!-- Breadcrumb -->
+    <nav class="t2-breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span aria-hidden="true">/</span>
+      <a href="/categories/">Categories</a>
+      <span aria-hidden="true">/</span>
+      <span class="t2-breadcrumb-current" aria-current="page">{title}</span>
+    </nav>
+
     <!-- Hero -->
-    <div class="flex items-start gap-4 mb-5" data-pagefind-ignore>
-      <div class="w-14 h-14 rounded-xl flex items-center justify-center text-2xl shrink-0" style="background: linear-gradient(135deg, rgba(167,139,250,0.2), rgba(96,165,250,0.2));">
-        {emoji}
-      </div>
-      <div class="flex-1">
-        <h1 class="text-2xl font-bold leading-tight m-0">{title}</h1>
-        <div class="flex items-center gap-x-3 gap-y-1 mt-1 text-sm text-[var(--text-muted)] flex-wrap">
+    <header class="t2-cat-hero" data-pagefind-ignore>
+      <div class="t2-cat-hero-icon" aria-hidden="true">{emoji}</div>
+      <div>
+        <h1 class="t2-title">{title}</h1>
+        <div class="t2-cat-hero-meta">
           <span>{tools.length} tool{tools.length === 1 ? '' : 's'} ranked</span>
           {verifiedLabel && (
             <>
-              <span aria-hidden="true">·</span>
-              <span><span class="text-[var(--accent-success)]" aria-hidden="true">✓</span> Updated {verifiedLabel}</span>
+              <span aria-hidden="true" class="t2-meta-dot">·</span>
+              <span>
+                <span class="t2-cat-verified-tick" aria-hidden="true">✓</span>
+                Updated {verifiedLabel}
+              </span>
             </>
           )}
         </div>
       </div>
-    </div>
+    </header>
 
-    <!-- Quick Answer: top 3 -->
+    <!-- Top picks: three cards in the quick-answer band -->
     {top3.length > 0 && (
-      <aside class="not-prose mb-6 rounded-2xl border border-[rgba(167,139,250,0.28)] bg-gradient-to-br from-[rgba(167,139,250,0.10)] via-[rgba(96,165,250,0.06)] to-transparent p-5 sm:p-6">
-        <div class="text-[11px] font-semibold uppercase tracking-wider text-[var(--accent-primary)] mb-3">
-          Top picks
-        </div>
-        <div class="grid sm:grid-cols-3 gap-3">
+      <aside class="t2-cat-toppicks" aria-label="Top picks">
+        <p class="t2-verdict-heading">Top picks</p>
+        <div class="t2-cat-toppicks-grid">
           {top3.map((t, i) => {
             const score = overallScore(t);
             const href = ctaHref(t);
             const rel = ctaRel(t);
             const label = ctaLabel(t);
-            const rankLabel = i === 0 ? 'Best overall' : i === 1 ? 'Runner-up' : 'Best value';
             return (
-              <div class="rounded-xl border border-[var(--border)] bg-[var(--bg-card)] p-4">
-                <div class="text-[10px] font-bold uppercase tracking-wider text-[var(--accent-primary)] mb-2">{rankLabel}</div>
-                <a href={`/tools/${t.slug}/`} class="flex items-center gap-2.5 mb-1 no-underline hover:no-underline group">
+              <div class="t2-cat-toppick">
+                <div class="t2-cat-toppick-rank">{rankLabels[i] ?? 'Also consider'}</div>
+                <a href={`/tools/${t.slug}/`} class="t2-cat-toppick-title">
                   <ToolLogo slug={t.slug} title={t.title} size={32} />
-                  <span class="text-[15px] font-semibold text-[var(--text-primary)] group-hover:text-[var(--accent-primary)] transition-colors">{t.title}</span>
+                  <span>{t.title}</span>
                 </a>
                 {score > 0 && (
-                  <div class="text-[12px] text-[var(--text-muted)] mb-3">
-                    <span class="text-[var(--accent-primary)] font-bold tabular-nums">{score}/10</span>
-                    {t.price_range && <span title={t.price_range}> · {shortenPrice(t.price_range)}</span>}
+                  <div class="t2-cat-toppick-score">
+                    <span class="t2-cat-toppick-score-val tabular-nums">{score}/10</span>
+                    {t.price_range && (
+                      <>
+                        <span aria-hidden="true" class="t2-meta-dot">·</span>
+                        <span title={t.price_range}>{shortenPrice(t.price_range)}</span>
+                      </>
+                    )}
                   </div>
                 )}
                 {href !== '#' && (
@@ -139,10 +154,11 @@ const itemListItems = sorted.map((t) => ({
                     href={href}
                     target="_blank"
                     rel={rel}
-                    class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg text-[12px] font-semibold bg-[var(--accent-primary)] text-[#0b0a14] hover:brightness-110 no-underline"
+                    class="t2-cta t2-cta-primary t2-cat-toppick-cta"
                     data-category-cta={t.slug}
                   >
-                    {label} →
+                    {label}
+                    <span class="t2-cta-arrow" aria-hidden="true">→</span>
                   </a>
                 )}
               </div>
@@ -152,58 +168,56 @@ const itemListItems = sorted.map((t) => ({
       </aside>
     )}
 
-    <!-- Category description article -->
-    <article class="prose prose-invert prose-sm max-w-none wiki-prose mb-8">
-      <slot />
-    </article>
+    <!-- Category description (markdown slot) + full list + share/feedback -->
+    <div class="t2-layout">
+      <article class="t2-prose">
+        <slot />
 
-    <!-- Full ranked list -->
-    {sorted.length > 0 && (
-      <section class="not-prose mb-8">
-        <h2 id="all-tools" class="text-lg font-semibold m-0 mb-3">All {title.toLowerCase()} tools ranked</h2>
-        <ol class="list-none p-0 m-0 space-y-2">
-          {sorted.map((t, i) => {
-            const score = overallScore(t);
-            const href = ctaHref(t);
-            const rel = ctaRel(t);
-            const label = ctaLabel(t);
-            return (
-              <li class="rounded-lg border border-[var(--border)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] p-3 flex items-center gap-3 flex-wrap transition-colors">
-                <div class="shrink-0 w-6 flex items-center justify-center text-[11px] font-bold text-[var(--text-muted)] tabular-nums">
-                  {i + 1}
-                </div>
-                <ToolLogo slug={t.slug} title={t.title} size={32} />
-                <div class="flex-1 min-w-0">
-                  <a href={`/tools/${t.slug}/`} class="text-[14.5px] font-semibold text-[var(--text-primary)] hover:text-[var(--accent-primary)] no-underline">{t.title}</a>
-                  {t.tagline && (
-                    <div class="text-[12px] text-[var(--text-muted)] truncate">{t.tagline}</div>
-                  )}
-                </div>
-                {t.price_range && (
-                  <span class="hidden sm:inline shrink-0 text-[11px] text-[var(--text-muted)]" title={t.price_range}>{shortenPrice(t.price_range)}</span>
-                )}
-                {score > 0 && (
-                  <span class="shrink-0 text-[12.5px] font-bold tabular-nums text-[var(--accent-primary)] min-w-[40px] text-right">{score}</span>
-                )}
-                {href !== '#' && (
-                  <a
-                    href={href}
-                    target="_blank"
-                    rel={rel}
-                    class="shrink-0 inline-flex items-center gap-1 px-2.5 py-1 rounded-md text-[11.5px] font-semibold text-[var(--text-secondary)] border border-[var(--border)] hover:border-[rgba(167,139,250,0.45)] hover:text-[var(--accent-primary)] no-underline"
-                    data-category-list-cta={t.slug}
-                  >
-                    {label} →
-                  </a>
-                )}
-              </li>
-            );
-          })}
-        </ol>
-      </section>
-    )}
+        {sorted.length > 0 && (
+          <section aria-labelledby="all-tools">
+            <h2 id="all-tools">All {title.toLowerCase()} tools ranked</h2>
+            <ol class="t2-cat-list">
+              {sorted.map((t, i) => {
+                const score = overallScore(t);
+                const href = ctaHref(t);
+                const rel = ctaRel(t);
+                const label = ctaLabel(t);
+                return (
+                  <li class="t2-cat-row">
+                    <div class="t2-cat-row-rank tabular-nums">{i + 1}</div>
+                    <ToolLogo slug={t.slug} title={t.title} size={32} className="t2-cat-row-logo" />
+                    <div class="t2-cat-row-main">
+                      <a href={`/tools/${t.slug}/`} class="t2-cat-row-title">{t.title}</a>
+                      {t.tagline && <div class="t2-cat-row-tagline">{t.tagline}</div>}
+                    </div>
+                    {t.price_range && (
+                      <span class="t2-cat-row-price" title={t.price_range}>{shortenPrice(t.price_range)}</span>
+                    )}
+                    {score > 0 && (
+                      <span class="t2-cat-row-score tabular-nums">{score}</span>
+                    )}
+                    {href !== '#' && (
+                      <a
+                        href={href}
+                        target="_blank"
+                        rel={rel}
+                        class="t2-cat-row-cta"
+                        data-category-list-cta={t.slug}
+                      >
+                        {label}
+                        <span class="t2-cta-arrow" aria-hidden="true">→</span>
+                      </a>
+                    )}
+                  </li>
+                );
+              })}
+            </ol>
+          </section>
+        )}
 
-    <ShareButtons title={title} pageUrl={`${siteBase}categories/${slug}/`} />
-    <FeedbackForm toolName={title} />
+        <ShareButtons title={title} pageUrl={`${siteBase}categories/${slug}/`} />
+        <FeedbackForm toolName={title} />
+      </article>
+    </div>
   </div>
 </BaseLayout>
