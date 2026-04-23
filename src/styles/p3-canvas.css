@@ -792,16 +792,35 @@ body:has(main .p3-canvas) {
 }
 .p3-catchip:hover::before { opacity: 1; }
 
-/* Top-3 chips: thin gradient bar across the top edge. Signals that
-   these are the most-populated categories without shouting. */
-.p3-catchip-top::after {
+/* Every chip gets a top accent bar so the grid reads as a unified set.
+   Top-3 (most-populated) use the full system gradient; the rest use a
+   muted single-color line that ties into the surface palette. Two-tier
+   treatment keeps the editorial signal (top-3 stand out) without
+   leaving nine tiles looking "incomplete" next to three decorated ones. */
+.p3-catchip::after {
   content: '';
   position: absolute;
   top: 0; left: 0; right: 0;
   height: 2px;
   border-radius: 12px 12px 0 0;
-  background: linear-gradient(90deg, #a78bfa, #60a5fa, #34d399);
+  background: linear-gradient(90deg, rgba(148, 163, 184, 0.18), rgba(148, 163, 184, 0.28), rgba(148, 163, 184, 0.18));
   opacity: 0.9;
+  transition: opacity 200ms ease, background 200ms ease;
+}
+.light .p3-catchip::after {
+  background: linear-gradient(90deg, rgba(15, 23, 42, 0.06), rgba(15, 23, 42, 0.12), rgba(15, 23, 42, 0.06));
+}
+.p3-catchip:hover::after {
+  opacity: 1;
+  background: linear-gradient(90deg, rgba(167, 139, 250, 0.35), rgba(96, 165, 250, 0.35), rgba(52, 211, 153, 0.35));
+}
+.p3-catchip-top::after {
+  background: linear-gradient(90deg, #a78bfa, #60a5fa, #34d399);
+  opacity: 0.95;
+}
+.p3-catchip-top:hover::after {
+  background: linear-gradient(90deg, #a78bfa, #60a5fa, #34d399);
+  opacity: 1;
 }
 
 .p3-catchip-head {
