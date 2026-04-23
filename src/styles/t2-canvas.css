@@ -439,6 +439,50 @@ body:has(main .t2-canvas) ::selection {
   padding-top: 0;
   border-top: none;
 }
+
+/* Reset prose styling inside .not-prose callout boxes so embedded h2s
+   (like "Corrections & Contact") stop inheriting the 80px margin +
+   border-top divider that separates article sections. Tailwind Typography
+   uses this same opt-out pattern. Covers headings, paragraphs, links,
+   lists, and blockquotes so callout markup looks as designed. */
+.t2-prose .not-prose h2,
+.t2-prose .not-prose h3,
+.t2-prose .not-prose h4 {
+  margin: 0 0 8px;
+  padding: 0;
+  border: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  letter-spacing: normal;
+  color: inherit;
+  scroll-margin-top: 0;
+}
+.t2-prose .not-prose p {
+  margin: 0;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+}
+.t2-prose .not-prose p strong { color: inherit; }
+.t2-prose .not-prose ul,
+.t2-prose .not-prose ol {
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+}
+.t2-prose .not-prose li { margin-bottom: 0; }
+.t2-prose .not-prose a {
+  color: inherit;
+  border-bottom: 0;
+}
+.t2-prose .not-prose blockquote {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+}
 .t2-prose h3 {
   font-size: 16px;
   font-weight: 600;
