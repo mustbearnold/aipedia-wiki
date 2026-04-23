@@ -260,14 +260,15 @@ const totalCompare = allComparisons.length;
           <span class="p3-search-placeholder" aria-live="polite">
             <span class="p3-search-placeholder-full" data-hint-rotator>
               <span class="p3-search-hint p3-search-hint-default">Search {totalTools} tools, {totalCompare} comparisons, news</span>
-              <span class="p3-search-hint">Try "cursor vs windsurf"</span>
-              <span class="p3-search-hint">Try "cheapest voice clone"</span>
-              <span class="p3-search-hint">Try "solo founder stack"</span>
-              <span class="p3-search-hint">Ask "what moved this week?"</span>
+              <span class="p3-search-hint">Try "cursor"</span>
+              <span class="p3-search-hint">Try "midjourney"</span>
+              <span class="p3-search-hint">Try "elevenlabs"</span>
+              <span class="p3-search-hint">Try "claude"</span>
+              <span class="p3-search-hint">Try "video generation"</span>
             </span>
             <span class="p3-search-placeholder-short">Search {totalTools} tools, news</span>
           </span>
-          <kbd class="p3-kbd" aria-hidden="true">⌘ K</kbd>
+          <kbd id="homepage-search-kbd" class="p3-kbd" aria-hidden="true">Ctrl K</kbd>
         </button>
         <nav class="p3-jumps" aria-label="Primary destinations">
           <a href="/tools/" class="p3-jump">
@@ -667,16 +668,28 @@ const totalCompare = allComparisons.length;
         }, 3600);
       }
 
+      // Platform-aware kbd label: default HTML ships "Ctrl K"; swap to
+      // "⌘ K" on macOS so Mac users see their Command-key glyph.
+      function setHomepageShortcut() {
+        const kbd = document.getElementById('homepage-search-kbd');
+        if (!kbd) return;
+        const ua = (navigator.userAgentData && navigator.userAgentData.platform) || navigator.platform || navigator.userAgent || '';
+        const isMac = /Mac|iPhone|iPad|iPod/i.test(ua);
+        kbd.textContent = isMac ? '⌘ K' : 'Ctrl K';
+      }
+
       if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', startRotator);
+        document.addEventListener('DOMContentLoaded', () => { startRotator(); setHomepageShortcut(); });
       } else {
         startRotator();
+        setHomepageShortcut();
       }
       document.addEventListener('astro:after-swap', () => {
         // Clear + re-scan on SPA navigation
         const old = document.querySelector('[data-hint-rotator]');
         if (old) old.dataset.rotatorActive = '';
         startRotator();
+        setHomepageShortcut();
       });
     })();
   </script>
