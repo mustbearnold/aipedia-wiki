@@ -749,37 +749,129 @@ body:has(main .p3-canvas) {
 .p3-catgrid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 8px;
+  gap: 10px;
 }
-@media (min-width: 640px) { .p3-catgrid { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 640px) { .p3-catgrid { grid-template-columns: repeat(3, 1fr); gap: 12px; } }
 @media (min-width: 900px) { .p3-catgrid { grid-template-columns: repeat(4, 1fr); } }
 @media (min-width: 1100px) { .p3-catgrid { grid-template-columns: repeat(6, 1fr); } }
+
+/* Editorial category chip. Two rows: head (emoji + label + count) and
+   foot (top-tool + score). Top-3 chips get a subtle gradient top-bar
+   so the biggest categories read as "most active" at a glance. */
 .p3-catchip {
   display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 12px 14px;
-  border-radius: 10px;
+  flex-direction: column;
+  gap: 6px;
+  padding: 12px 12px 10px;
+  border-radius: 12px;
   border: 1px solid var(--p3-line);
   background: var(--p3-surface);
   text-decoration: none;
   color: var(--p3-fg);
-  transition: background 150ms ease, border-color 150ms ease, transform 150ms ease;
+  transition: background 160ms ease, border-color 160ms ease, transform 180ms ease, box-shadow 200ms ease;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+.p3-catchip::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(ellipse 120% 100% at 100% 100%, rgba(167, 139, 250, 0.10), transparent 60%);
+  opacity: 0;
+  transition: opacity 200ms ease;
+  pointer-events: none;
+  z-index: -1;
 }
 .p3-catchip:hover {
   background: var(--p3-surface-hover);
   border-color: rgba(167, 139, 250, 0.35);
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px -18px rgba(167, 139, 250, 0.30);
 }
-.p3-catchip-emoji { font-size: 16px; }
+.p3-catchip:hover::before { opacity: 1; }
+
+/* Top-3 chips: thin gradient bar across the top edge. Signals that
+   these are the most-populated categories without shouting. */
+.p3-catchip-top::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  border-radius: 12px 12px 0 0;
+  background: linear-gradient(90deg, #a78bfa, #60a5fa, #34d399);
+  opacity: 0.9;
+}
+
+.p3-catchip-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+.p3-catchip-emoji {
+  font-size: 16px;
+  flex: none;
+  filter: grayscale(0);
+  transition: transform 220ms cubic-bezier(.2,.7,.2,1);
+}
+.p3-catchip:hover .p3-catchip-emoji { transform: rotate(-6deg) scale(1.08); }
 .p3-catchip-label {
   flex: 1;
-  font-size: 13px;
+  font-size: 13.5px;
   font-weight: 600;
+  letter-spacing: -0.005em;
+  color: var(--p3-fg);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .p3-catchip-count {
   font-size: 11px;
+  font-weight: 600;
   color: var(--p3-subtle);
+  padding: 1px 7px;
+  border-radius: 999px;
+  background: var(--p3-surface-hover);
+  flex: none;
+}
+.p3-catchip:hover .p3-catchip-count {
+  background: rgba(167, 139, 250, 0.14);
+  color: var(--p3-accent-text);
+}
+
+.p3-catchip-foot {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  padding-top: 6px;
+  border-top: 1px dashed var(--p3-line);
+  font-size: 11px;
+  color: var(--p3-subtle);
+  min-width: 0;
+}
+.p3-catchip-top-label {
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--p3-subtle);
+  font-size: 9.5px;
+  flex: none;
+}
+.p3-catchip-top-tool {
+  flex: 1;
+  color: var(--p3-muted);
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.p3-catchip:hover .p3-catchip-top-tool { color: var(--p3-fg); }
+.p3-catchip-top-score {
+  color: var(--p3-fg);
+  font-weight: 700;
+  flex: none;
 }
 
 /* ---------- news + movers split (homepage) ---------- */

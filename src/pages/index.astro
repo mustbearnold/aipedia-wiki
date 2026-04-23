@@ -128,13 +128,36 @@ const catLabel: Record<string, string> = {
 };
 const catCounts: Record<string, number> = {};
 for (const t of scored) if (t.category) catCounts[t.category] = (catCounts[t.category] ?? 0) + 1;
+// Top-scored tool per category — surfaced on every chip as editorial
+// signal ("Top: Cursor 9.4") so the catrail reads as a leaderboard,
+// not a plain directory.
+const topByCategory: Record<string, { title: string; slug: string; score: number }> = {};
+for (const t of scored) {
+  if (!t.category) continue;
+  const prev = topByCategory[t.category];
+  if (!prev || t.score > prev.score) {
+    topByCategory[t.category] = { title: t.title, slug: t.slug, score: t.score };
+  }
+}
+// Average score per category (visual-only signal on the chip).
+const catScoreSum: Record<string, number> = {};
+for (const t of scored) {
+  if (!t.category) continue;
+  catScoreSum[t.category] = (catScoreSum[t.category] ?? 0) + t.score;
+}
 const cats = allCategories
-  .map(c => ({
-    slug: c.data.slug,
-    label: catLabel[c.data.slug] ?? c.data.slug,
-    emoji: catEmoji[c.data.slug] ?? '🔧',
-    count: catCounts[c.data.slug] ?? 0,
-  }))
+  .map(c => {
+    const count = catCounts[c.data.slug] ?? 0;
+    const avg = count > 0 ? Math.round(((catScoreSum[c.data.slug] ?? 0) / count) * 10) / 10 : 0;
+    return {
+      slug: c.data.slug,
+      label: catLabel[c.data.slug] ?? c.data.slug,
+      emoji: catEmoji[c.data.slug] ?? '🔧',
+      count,
+      avg,
+      top: topByCategory[c.data.slug] ?? null,
+    };
+  })
   .sort((a, b) => b.count - a.count);
 
 // Featured comparisons (top 6 by combined score of the tool pair)
@@ -348,11 +371,20 @@ const totalCompare = allComparisons.length;
         <a href="/categories/" class="p3-sec-link">All {cats.length} categories →</a>
       </div>
       <div class="p3-catgrid">
-        {cats.slice(0, 12).map(c => (
-          <a href={`/categories/${c.slug}/`} class="p3-catchip">
-            <span class="p3-catchip-emoji" aria-hidden="true">{c.emoji}</span>
-            <span class="p3-catchip-label">{c.label}</span>
-            <span class="p3-catchip-count tabular-nums">{c.count}</span>
+        {cats.slice(0, 12).map((c, i) => (
+          <a href={`/categories/${c.slug}/`} class={`p3-catchip ${i < 3 ? 'p3-catchip-top' : ''}`.trim()}>
+            <span class="p3-catchip-head">
+              <span class="p3-catchip-emoji" aria-hidden="true">{c.emoji}</span>
+              <span class="p3-catchip-label">{c.label}</span>
+              <span class="p3-catchip-count tabular-nums">{c.count}</span>
+            </span>
+            {c.top && (
+              <span class="p3-catchip-foot">
+                <span class="p3-catchip-top-label">Top</span>
+                <span class="p3-catchip-top-tool">{c.top.title}</span>
+                <span class="p3-catchip-top-score tabular-nums">{c.top.score}</span>
+              </span>
+            )}
           </a>
         ))}
       </div>
