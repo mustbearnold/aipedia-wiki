@@ -31,7 +31,11 @@ const jsonLd: Record<string, unknown> = {
       operatingSystem: 'Web',
     };
     if (tool.category) item.applicationCategory = tool.category;
-    if (typeof tool.score === 'number') {
+    // Only emit aggregateRating when the score falls inside the
+    // [worstRating, bestRating] band. Dead or unscored tools carry a 0
+    // score and would otherwise trigger Google's "rating value is out of
+    // range" flag in Search Console.
+    if (typeof tool.score === 'number' && isFinite(tool.score) && tool.score >= 1 && tool.score <= 10) {
       item.aggregateRating = {
         '@type': 'AggregateRating',
         ratingValue: tool.score,
