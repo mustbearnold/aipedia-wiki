@@ -93,18 +93,25 @@ const categoriesOrdered = Object.keys(byCategory).sort((a, b) => byCategory[b].l
       <span class="t2-breadcrumb-current" aria-current="page">Compare</span>
     </nav>
 
-    <header class="t2-article-hero">
-      <h1 class="t2-title">Compare AI tools head-to-head</h1>
-      <p class="t2-tagline">
+    <section class="idx-hero" data-pagefind-ignore>
+      <div class="idx-eyebrow">
+        <span class="idx-eyebrow-chip idx-eyebrow-accent">Directory</span>
+        <span class="idx-eyebrow-chip"><span class="tabular-nums">{allComparisons.length}</span> comparisons</span>
+        <span class="idx-eyebrow-trust">Every verdict sourced. Editorial only.</span>
+      </div>
+      <h1 class="idx-headline">
+        Compare AI tools <span class="idx-gradient">head-to-head</span>.
+      </h1>
+      <p class="idx-subhead">
         {allComparisons.length} editorial comparisons of the most-searched AI tool pairs. Honest verdicts, scoring breakdowns, clear recommendations.
       </p>
-      <div class="t2-ctas" style="margin-top: 16px;">
+      <div class="t2-ctas" style="margin-top: 18px;">
         <a href="/compare/build/" class="t2-cta t2-cta-primary">
           Build your own comparison
           <span class="t2-cta-arrow" aria-hidden="true">&rarr;</span>
         </a>
       </div>
-    </header>
+    </section>
 
     <div class="t2-compare-filter">
       <input

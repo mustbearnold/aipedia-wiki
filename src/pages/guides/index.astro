@@ -53,12 +53,19 @@ const groupMeta: Record<string, { label: string; emoji: string; description: str
       <span class="t2-breadcrumb-current" aria-current="page">Guides</span>
     </nav>
 
-    <header class="t2-article-hero">
-      <h1 class="t2-title">Guides &amp; best-of lists</h1>
-      <p class="t2-tagline">
+    <section class="idx-hero" data-pagefind-ignore>
+      <div class="idx-eyebrow">
+        <span class="idx-eyebrow-chip idx-eyebrow-accent">Editorial guides</span>
+        <span class="idx-eyebrow-chip"><span class="tabular-nums">{allGuides.length}</span> guides</span>
+        <span class="idx-eyebrow-trust">Every claim sourced. Zero sponsored picks.</span>
+      </div>
+      <h1 class="idx-headline">
+        Guides &amp; <span class="idx-gradient">best-of lists</span>.
+      </h1>
+      <p class="idx-subhead">
         {allGuides.length} editorial guides covering category roundups, tool alternatives, workflow stacks, and in-depth comparisons.
       </p>
-    </header>
+    </section>
 
     {Object.entries(groups).map(([groupKey, items]) => items.length > 0 && (
       <section class="t2-index-group">

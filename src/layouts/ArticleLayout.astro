@@ -13,9 +13,11 @@ interface Props {
   description?: string;
   breadcrumbs?: Array<{ label: string; href?: string }>;
   badge?: { text: string; color: string };
+  eyebrow?: string;
+  subhead?: string;
 }
 
-const { title, seoTitle, description = '', breadcrumbs, badge } = Astro.props;
+const { title, seoTitle, description = '', breadcrumbs, badge, eyebrow, subhead } = Astro.props;
 
 const siteBase = Astro.site?.href ?? 'https://aipedia.wiki';
 
@@ -61,11 +63,20 @@ const breadcrumbLdItems = breadcrumbs
       </nav>
     )}
 
+    <!-- Editorial eyebrow, optional -->
+    {(eyebrow || badge) && (
+      <div class="t2-eyebrow" data-pagefind-ignore>
+        {eyebrow && <span class="t2-eyebrow-chip t2-eyebrow-accent">{eyebrow}</span>}
+        {badge && (
+          <span class={`t2-article-badge ${badgeClass}`.trim()}>{badge.text}</span>
+        )}
+        <span class="t2-eyebrow-trust">Editorial only, no paid placements</span>
+      </div>
+    )}
+
     <header class="t2-article-hero">
       <h1 class="t2-title">{title}</h1>
-      {badge && (
-        <span class={`t2-article-badge ${badgeClass}`.trim()}>{badge.text}</span>
-      )}
+      {subhead && <p class="t2-tagline">{subhead}</p>}
     </header>
 
     <article class="t2-prose t2-article-prose">

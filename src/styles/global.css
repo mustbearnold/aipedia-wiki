@@ -1024,3 +1024,103 @@ a, button, [role="button"], .tool-card, .category-pill, .helpful-btn, .copy-btn 
   .nav-brand:hover .nav-logo-frame { transform: none; }
   .nav-link::after { transition: none; }
 }
+
+/* =========================================================
+   Editorial index-page hero. Reused across /tools/, /compare/,
+   /categories/, /guides/, /trends/, /reports/, /workflows/,
+   /companies/, /dead/, /glossary/ so they share a common
+   opening gesture: eyebrow chips + gradient headline + subhead.
+   ========================================================= */
+.idx-hero {
+  padding: 18px 0 38px;
+  margin-bottom: 26px;
+  max-width: 860px;
+}
+.idx-eyebrow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 18px;
+  font-size: 11px;
+}
+.idx-eyebrow-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+.idx-eyebrow-fresh {
+  color: #4ade80;
+  background: rgba(52, 211, 153, 0.08);
+  border-color: rgba(52, 211, 153, 0.22);
+}
+.light .idx-eyebrow-fresh { color: #047857; }
+.idx-eyebrow-accent {
+  color: #c4b5fd;
+  background: rgba(167, 139, 250, 0.08);
+  border-color: rgba(167, 139, 250, 0.22);
+}
+.light .idx-eyebrow-accent { color: #6d28d9; }
+.idx-eyebrow-livedot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: #34d399;
+  box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.55);
+  animation: idx-pulse 2.4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+@keyframes idx-pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.55); }
+  70%  { box-shadow: 0 0 0 6px rgba(52, 211, 153, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(52, 211, 153, 0); }
+}
+.idx-eyebrow-trust {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text-muted);
+  letter-spacing: 0.005em;
+  padding-left: 4px;
+}
+@media (max-width: 640px) {
+  .idx-eyebrow-trust { display: none; }
+}
+.idx-headline {
+  font-size: clamp(2.25rem, 4.5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.04;
+  letter-spacing: -0.025em;
+  color: var(--text-primary);
+  margin: 0 0 18px;
+  max-width: 22ch;
+}
+.idx-gradient {
+  background: linear-gradient(100deg, #a78bfa 0%, #60a5fa 60%, #34d399 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  animation: idx-gradient-flow 8s ease-in-out infinite;
+}
+@keyframes idx-gradient-flow {
+  0%, 100% { background-position: 0% 50%; }
+  50%      { background-position: 100% 50%; }
+}
+.idx-subhead {
+  font-size: clamp(0.95rem, 1.2vw, 1.05rem);
+  line-height: 1.55;
+  color: var(--text-secondary);
+  max-width: 62ch;
+  margin: 0;
+}
+@media (prefers-reduced-motion: reduce) {
+  .idx-eyebrow-livedot { animation: none; }
+  .idx-gradient { animation: none; }
+}

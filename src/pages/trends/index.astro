@@ -37,12 +37,21 @@ const impactColors: Record<string, string> = {
 >
   <Breadcrumb items={[{ label: 'Trending' }]} />
 
-  <section class="mb-10 pt-2">
-    <h1 class="text-3xl sm:text-4xl font-bold mb-3 leading-tight">
-      What's <span class="accent-gradient-text">Changing Now</span>
+  <section class="idx-hero" data-pagefind-ignore>
+    <div class="idx-eyebrow">
+      <span class="idx-eyebrow-chip idx-eyebrow-fresh">
+        <span class="idx-eyebrow-livedot" aria-hidden="true"></span>
+        Live analysis
+      </span>
+      <span class="idx-eyebrow-chip idx-eyebrow-accent">Trend reports</span>
+      <span class="idx-eyebrow-chip"><span class="tabular-nums">{sorted.length}</span> tracked</span>
+      <span class="idx-eyebrow-trust">Every shift sourced. Editorial only.</span>
+    </div>
+    <h1 class="idx-headline">
+      What is <span class="idx-gradient">changing now</span>.
     </h1>
-    <p class="text-[var(--text-secondary)] text-sm sm:text-base max-w-2xl leading-relaxed">
-      Editorial analysis of the shifts reshaping the AI tools landscape — new model classes, category consolidations, pricing wars, and the tools being left behind.
+    <p class="idx-subhead">
+      Editorial analysis of the shifts reshaping the AI tools landscape. New model classes, category consolidations, pricing wars, and the tools being left behind.
     </p>
   </section>
 

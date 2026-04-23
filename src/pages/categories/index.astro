@@ -48,12 +48,20 @@ const sorted = allCategories
       <span class="t2-breadcrumb-current" aria-current="page">Categories</span>
     </nav>
 
-    <header class="t2-article-hero">
-      <h1 class="t2-title">Explore {allCategories.length} categories</h1>
-      <p class="t2-tagline">
-        {allTools.length} AI tools reviewed. Click a category to see top picks, category leaders, and editorial comparison tables.
+    <section class="idx-hero" data-pagefind-ignore>
+      <div class="idx-eyebrow">
+        <span class="idx-eyebrow-chip idx-eyebrow-accent">Directory</span>
+        <span class="idx-eyebrow-chip"><span class="tabular-nums">{allCategories.length}</span> categories</span>
+        <span class="idx-eyebrow-chip"><span class="tabular-nums">{allTools.length}</span> tools</span>
+        <span class="idx-eyebrow-trust">Editorial only, no paid placements</span>
+      </div>
+      <h1 class="idx-headline">
+        Explore every <span class="idx-gradient">AI category</span>.
+      </h1>
+      <p class="idx-subhead">
+        {allTools.length} tools across {allCategories.length} categories. Click a category to see top picks, category leaders, and editorial comparison tables.
       </p>
-    </header>
+    </section>
 
     <section class="t2-cat-index-grid">
       {sorted.map((c) => (

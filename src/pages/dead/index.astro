@@ -58,16 +58,18 @@ const total = sorted.length;
 >
   <Breadcrumb items={[{ label: 'Dead Tools' }]} />
 
-  <section class="mb-8 pt-2">
-    <h1 class="text-3xl sm:text-4xl font-bold mb-3 leading-tight">
-      <span class="accent-gradient-text">Dead Tools</span> Archive
-    </h1>
-    <p class="text-[var(--text-secondary)] text-sm sm:text-base max-w-2xl leading-relaxed mb-2">
-      AI tools that shut down, were acquired, pivoted, or rebranded. We archive these so readers stop chasing products that no longer exist, and so the industry has a working memory.
-    </p>
-    <div class="text-xs text-[var(--text-muted)]">
-      {total} tool{total === 1 ? '' : 's'} archived · sorted by most recent death
+  <section class="idx-hero" data-pagefind-ignore>
+    <div class="idx-eyebrow">
+      <span class="idx-eyebrow-chip idx-eyebrow-accent">Archive</span>
+      <span class="idx-eyebrow-chip"><span class="tabular-nums">{total}</span> tool{total === 1 ? '' : 's'} archived</span>
+      <span class="idx-eyebrow-trust">Industry memory. Sorted by most recent death.</span>
     </div>
+    <h1 class="idx-headline">
+      <span class="idx-gradient">Dead tools</span> archive.
+    </h1>
+    <p class="idx-subhead">
+      AI tools that shut down, were acquired, pivoted, or rebranded. Archived so readers stop chasing products that no longer exist, and so the industry has a working memory.
+    </p>
   </section>
 
   <section class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-16">

@@ -38,12 +38,17 @@ const sorted = entries
 >
   <Breadcrumb items={[{ label: 'Reports' }]} />
 
-  <section class="mb-10 pt-2">
-    <h1 class="text-3xl sm:text-4xl font-bold mb-3 leading-tight">
-      State of <span class="accent-gradient-text">AI Tools</span>
+  <section class="idx-hero" data-pagefind-ignore>
+    <div class="idx-eyebrow">
+      <span class="idx-eyebrow-chip idx-eyebrow-accent">Monthly digest</span>
+      <span class="idx-eyebrow-chip"><span class="tabular-nums">{sorted.length}</span> report{sorted.length === 1 ? '' : 's'}</span>
+      <span class="idx-eyebrow-trust">Published on the 1st. Editorial only.</span>
+    </div>
+    <h1 class="idx-headline">
+      State of <span class="idx-gradient">AI tools</span>.
     </h1>
-    <p class="text-[var(--text-secondary)] text-sm sm:text-base max-w-2xl leading-relaxed">
-      A monthly report covering what actually changed across the AI tools catalog. New launches, score movements, pricing shifts, deaths, and what to watch next. Published by aipedia.wiki Editorial on the 1st of each month.
+    <p class="idx-subhead">
+      A monthly report covering what actually changed across the AI tools catalog. New launches, score movements, pricing shifts, deaths, and what to watch next.
     </p>
   </section>
 

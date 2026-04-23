@@ -40,16 +40,18 @@ const total = sorted.length;
 >
   <Breadcrumb items={[{ label: 'Companies' }]} />
 
-  <section class="mb-8 pt-2">
-    <h1 class="text-3xl sm:text-4xl font-bold mb-3 leading-tight">
-      AI <span class="accent-gradient-text">Companies</span>
+  <section class="idx-hero" data-pagefind-ignore>
+    <div class="idx-eyebrow">
+      <span class="idx-eyebrow-chip idx-eyebrow-accent">Company profiles</span>
+      <span class="idx-eyebrow-chip"><span class="tabular-nums">{total}</span> compan{total === 1 ? 'y' : 'ies'}</span>
+      <span class="idx-eyebrow-trust">Funding + founding verified against primary sources.</span>
+    </div>
+    <h1 class="idx-headline">
+      AI <span class="idx-gradient">companies</span>.
     </h1>
-    <p class="text-[var(--text-secondary)] text-sm sm:text-base max-w-2xl leading-relaxed mb-2">
+    <p class="idx-subhead">
       Profiles of the companies shipping the AI tools we review. Founded dates, funding, headquarters, and the products each one has launched.
     </p>
-    <div class="text-xs text-[var(--text-muted)]">
-      {total} compan{total === 1 ? 'y' : 'ies'} profiled
-    </div>
   </section>
 
   <section class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-16">

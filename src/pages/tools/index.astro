@@ -30,12 +30,21 @@ const categoryEmojiMap: Record<string, string> = {
 >
   <Breadcrumb items={[{ label: 'All Tools' }]} />
 
-  <section class="mb-10 pt-2">
-    <h1 class="text-3xl sm:text-4xl font-bold mb-3 leading-tight">
-      Every AI Tool <span class="accent-gradient-text">We've Reviewed</span>
+  <section class="idx-hero" data-pagefind-ignore>
+    <div class="idx-eyebrow">
+      <span class="idx-eyebrow-chip idx-eyebrow-fresh">
+        <span class="idx-eyebrow-livedot" aria-hidden="true"></span>
+        Updated today
+      </span>
+      <span class="idx-eyebrow-chip idx-eyebrow-accent">Editorial directory</span>
+      <span class="idx-eyebrow-chip"><span class="tabular-nums">{scoredTools.length}</span> tools</span>
+      <span class="idx-eyebrow-trust">Every claim sourced. Zero sponsored placements.</span>
+    </div>
+    <h1 class="idx-headline">
+      Every AI tool <span class="idx-gradient">we have reviewed</span>.
     </h1>
-    <p class="text-[var(--text-secondary)] text-sm sm:text-base max-w-2xl leading-relaxed">
-      All {scoredTools.length} tools sorted by our editorial score. Each review covers what the tool does, who it's for, verified pricing, honest strengths and limitations, and clear alternatives.
+    <p class="idx-subhead">
+      All {scoredTools.length} tools sorted by editorial score. Each review covers what the tool does, who it is for, verified pricing, honest strengths and limitations, and clear alternatives.
     </p>
   </section>
 
