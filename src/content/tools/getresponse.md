@@ -20,9 +20,10 @@ affiliate:
   cookie_days: 120
   network: PartnerStack
   link: null
-  application_status: applied
+  application_status: declined-2026-04-23
   applied_date: 2026-04-19
-  notes: "Applied via PartnerStack 2026-04-19. Tiered commission: 40% standard, up to 60% for higher-performing partners."
+  declined_date: 2026-04-23
+  notes: "Application declined 2026-04-23. Do not retry without explicit user instruction; revisit after meaningful traffic growth."
 scores:
   utility: 7
   value: 7
