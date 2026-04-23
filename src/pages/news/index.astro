@@ -267,7 +267,8 @@ const breadcrumbs = [
         <!-- Filter rail -->
         {sorted.length > 0 && (
           <div id="news-filters" class="p3-newsdesk-filters" data-pagefind-ignore>
-            <div class="p3-chips" role="tablist" aria-label="Filter by severity">
+            <div class="p3-newsdesk-filter-label">Severity</div>
+            <div class="p3-newsdesk-chips-row" role="tablist" aria-label="Filter by severity">
               <button type="button" data-severity-filter="all" class="p3-chip p3-chip-active">
                 All <span class="p3-chip-count tabular-nums">{sorted.length}</span>
               </button>
@@ -280,17 +281,36 @@ const breadcrumbs = [
             </div>
 
             {categoryOptions.length > 0 && (
-              <div class="p3-chips" aria-label="Filter by category" style="margin-top: 10px;">
-                <button type="button" data-category-filter="all" class="p3-chip p3-chip-active p3-chip-cat">
-                  All categories
-                </button>
-                {categoryOptions.map(({ slug, count }) => (
-                  <button type="button" data-category-filter={slug} class="p3-chip p3-chip-cat">
-                    <span>{catLabel(slug)}</span>
-                    <span class="p3-chip-count tabular-nums">{count}</span>
+              <>
+                <div class="p3-newsdesk-filter-label">Category</div>
+                <div id="category-chips" class="p3-newsdesk-chips-row p3-newsdesk-chips-cat" aria-label="Filter by category" data-expanded="false">
+                  <button type="button" data-category-filter="all" class="p3-chip p3-chip-active p3-chip-cat">
+                    All
                   </button>
-                ))}
-              </div>
+                  {categoryOptions.map(({ slug, count }, i) => (
+                    <button
+                      type="button"
+                      data-category-filter={slug}
+                      class={`p3-chip p3-chip-cat ${i >= 5 ? 'p3-chip-overflow' : ''}`.trim()}
+                    >
+                      <span>{catLabel(slug)}</span>
+                      <span class="p3-chip-count tabular-nums">{count}</span>
+                    </button>
+                  ))}
+                  {categoryOptions.length > 5 && (
+                    <button
+                      type="button"
+                      id="category-expand-toggle"
+                      class="p3-chip p3-chip-cat p3-chip-more"
+                      aria-expanded="false"
+                      aria-controls="category-chips"
+                    >
+                      <span class="p3-chip-more-label">+{categoryOptions.length - 5} more</span>
+                      <span class="p3-chip-less-label" hidden>Show less</span>
+                    </button>
+                  )}
+                </div>
+              </>
             )}
 
             <div class="p3-newsdesk-filter-foot">
@@ -571,13 +591,78 @@ const breadcrumbs = [
 
     /* ---- filters ---- */
     .p3-newsdesk-filters {
-      padding: 16px 16px 14px;
+      padding: 14px 14px 12px;
       border-radius: 14px;
       border: 1px solid var(--p3-line);
       background: var(--p3-surface);
       margin-bottom: 20px;
     }
+    .p3-newsdesk-filter-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--p3-subtle);
+      margin-bottom: 8px;
+    }
+    .p3-newsdesk-filter-label + .p3-newsdesk-chips-row {
+      margin-bottom: 14px;
+    }
+    .p3-newsdesk-chips-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
     .p3-chip-cat { font-size: 11.5px; }
+    /* Overflow categories hidden by default; revealed when parent is expanded */
+    .p3-newsdesk-chips-cat .p3-chip-overflow { display: none; }
+    .p3-newsdesk-chips-cat[data-expanded="true"] .p3-chip-overflow { display: inline-flex; }
+    .p3-newsdesk-chips-cat[data-expanded="true"] .p3-chip-more .p3-chip-more-label { display: none; }
+    .p3-newsdesk-chips-cat[data-expanded="true"] .p3-chip-more .p3-chip-less-label {
+      display: inline !important;
+    }
+    .p3-chip-more {
+      color: var(--p3-accent-text);
+      background: rgba(167, 139, 250, 0.08);
+      border-color: rgba(167, 139, 250, 0.28);
+    }
+    .p3-chip-more:hover {
+      background: rgba(167, 139, 250, 0.16);
+      color: var(--p3-accent-text);
+    }
+
+    /* Mobile: severity chips never wrap. They sit in a horizontal-scroll
+       row with subtle edge-fade so 4 chips fit in one line on narrow
+       viewports without the screen getting dumped full of chips. */
+    @media (max-width: 640px) {
+      .p3-newsdesk-filters { padding: 12px 12px 10px; }
+      .p3-newsdesk-filter-label + .p3-newsdesk-chips-row { margin-bottom: 10px; }
+      .p3-newsdesk-chips-row {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scroll-snap-type: x proximity;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 4px;
+        margin-right: -12px;
+        padding-right: 12px;
+        mask-image: linear-gradient(90deg, #000 0, #000 calc(100% - 24px), transparent);
+      }
+      .p3-newsdesk-chips-row::-webkit-scrollbar { display: none; }
+      .p3-newsdesk-chips-row { scrollbar-width: none; }
+      .p3-newsdesk-chips-row .p3-chip {
+        flex: none;
+        scroll-snap-align: start;
+        padding: 5px 10px;
+      }
+      /* Category chips DO wrap but visible set is 5 + "more" toggle,
+         so the block stays compact until expanded. */
+      .p3-newsdesk-chips-cat {
+        flex-wrap: wrap;
+        overflow: visible;
+        mask-image: none;
+      }
+    }
+
     .p3-newsdesk-filter-foot {
       display: flex;
       justify-content: space-between;
@@ -863,6 +948,19 @@ const breadcrumbs = [
       const noMatches = document.getElementById('no-matches');
       const items = Array.from(list.querySelectorAll('.p3-newsdesk-item'));
 
+      // Category overflow: tap "+N more" to reveal the long tail, tap
+      // "Show less" to collapse. If a hidden chip is selected via URL,
+      // auto-expand so the active chip is visible.
+      const catContainer = document.getElementById('category-chips');
+      const catToggle = document.getElementById('category-expand-toggle');
+      if (catToggle && catContainer) {
+        catToggle.addEventListener('click', () => {
+          const expanded = catContainer.getAttribute('data-expanded') === 'true';
+          catContainer.setAttribute('data-expanded', expanded ? 'false' : 'true');
+          catToggle.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+        });
+      }
+
       function readParams() {
         const p = new URLSearchParams(location.search);
         return {
@@ -908,6 +1006,15 @@ const breadcrumbs = [
       }
 
       let state = readParams();
+      // If the initial URL-selected category is hidden in the overflow
+      // set, expand the overflow row so the active chip is visible.
+      if (catContainer && state.category !== 'all') {
+        const selected = root.querySelector(`[data-category-filter="${CSS.escape(state.category)}"]`);
+        if (selected && selected.classList.contains('p3-chip-overflow')) {
+          catContainer.setAttribute('data-expanded', 'true');
+          if (catToggle) catToggle.setAttribute('aria-expanded', 'true');
+        }
+      }
       apply(state);
 
       sevChips.forEach((c) => {
