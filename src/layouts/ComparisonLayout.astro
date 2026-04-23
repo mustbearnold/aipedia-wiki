@@ -123,6 +123,7 @@ const itemListItems = tools
     slug: t.slug,
     category: t.category,
     score: overallScore(t) || undefined,
+    status: t.status,
   }));
 
 const winningTool = winner && winner !== 'depends' ? tools.find((t) => t.slug === winner) : null;

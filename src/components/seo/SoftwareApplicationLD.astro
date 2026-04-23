@@ -17,6 +17,7 @@ interface Props {
   datePublished?: string;
   dateModified?: string;
   slug?: string;
+  status?: string;
 }
 
 const {
@@ -32,6 +33,7 @@ const {
   datePublished,
   dateModified,
   slug,
+  status,
 } = Astro.props;
 
 // Resolve logo URL via static manifest (avoids node:fs which breaks
@@ -82,11 +84,20 @@ const reviewer = {
   },
 };
 
-// Rating blocks are only emitted when the score is a valid number in the
-// [worstRating, bestRating] range (1-10). Dead or unscored tools carry a
-// 0 score and must not emit Review/AggregateRating JSON-LD, otherwise
-// Google Search Console flags "Rating value is out of range" for them.
-const hasValidRating = typeof score === 'number' && isFinite(score) && score >= 1 && score <= 10;
+// Rating blocks are only emitted when:
+//   1. The score is a valid number in the [worstRating, bestRating]
+//      range (1-10).
+//   2. The tool is NOT marked status: 'dead' (or any retired/acquired
+//      variant). Review snippets for discontinued products are
+//      editorially inappropriate and Google Search Console flags the
+//      zero-score pages as "Rating value is out of range" anyway.
+const isRetired = typeof status === 'string' && ['dead', 'retired', 'acquired'].includes(status.toLowerCase());
+const hasValidRating =
+  typeof score === 'number' &&
+  isFinite(score) &&
+  score >= 1 &&
+  score <= 10 &&
+  !isRetired;
 
 const review: Record<string, unknown> | null = hasValidRating
   ? {
