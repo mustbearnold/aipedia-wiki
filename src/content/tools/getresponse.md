@@ -20,10 +20,10 @@ affiliate:
   cookie_days: 120
   network: PartnerStack
   link: null
-  application_status: declined-2026-04-23
+  application_status: rejected
   applied_date: 2026-04-19
   declined_date: 2026-04-23
-  notes: "Application declined 2026-04-23. Do not retry without explicit user instruction; revisit after meaningful traffic growth."
+  notes: "Application rejected (declined) 2026-04-23. Do not retry without explicit user instruction; revisit after meaningful traffic growth."
 scores:
   utility: 7
   value: 7
