@@ -792,36 +792,31 @@ body:has(main .p3-canvas) {
 }
 .p3-catchip:hover::before { opacity: 1; }
 
-/* Every chip gets a top accent bar so the grid reads as a unified set.
-   Top-3 (most-populated) use the full system gradient; the rest use a
-   muted single-color line that ties into the surface palette. Two-tier
-   treatment keeps the editorial signal (top-3 stand out) without
-   leaving nine tiles looking "incomplete" next to three decorated ones. */
+/* Every chip gets a visible top accent bar so the grid reads as a
+   unified set. Two tiers, both use the identical gradient (same stops,
+   same angle) so the three top-3 chips look byte-identical to each
+   other and the remaining nine look byte-identical to each other.
+   Only opacity differs between tiers. Explicit color stops at 0/50/100
+   lock the gradient so rendering is identical across chips of any
+   text width. */
 .p3-catchip::after {
   content: '';
   position: absolute;
   top: 0; left: 0; right: 0;
   height: 2px;
   border-radius: 12px 12px 0 0;
-  background: linear-gradient(90deg, rgba(148, 163, 184, 0.18), rgba(148, 163, 184, 0.28), rgba(148, 163, 184, 0.18));
-  opacity: 0.9;
-  transition: opacity 200ms ease, background 200ms ease;
+  background: linear-gradient(90deg,
+    #a78bfa 0%,
+    #60a5fa 50%,
+    #34d399 100%);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  transition: opacity 200ms ease;
+  z-index: 2;
 }
-.light .p3-catchip::after {
-  background: linear-gradient(90deg, rgba(15, 23, 42, 0.06), rgba(15, 23, 42, 0.12), rgba(15, 23, 42, 0.06));
-}
-.p3-catchip:hover::after {
-  opacity: 1;
-  background: linear-gradient(90deg, rgba(167, 139, 250, 0.35), rgba(96, 165, 250, 0.35), rgba(52, 211, 153, 0.35));
-}
-.p3-catchip-top::after {
-  background: linear-gradient(90deg, #a78bfa, #60a5fa, #34d399);
-  opacity: 0.95;
-}
-.p3-catchip-top:hover::after {
-  background: linear-gradient(90deg, #a78bfa, #60a5fa, #34d399);
-  opacity: 1;
-}
+.p3-catchip:hover::after { opacity: 1; }
+.p3-catchip-top::after { opacity: 1; }
 
 .p3-catchip-head {
   display: flex;
