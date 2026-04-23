@@ -22,6 +22,7 @@ import ToolLogo from '../components/ToolLogo.astro';
 import HomepageLD from '../components/seo/HomepageLD.astro';
 import RecentlyViewed from '../components/RecentlyViewed.astro';
 import EmailCapture from '../components/EmailCapture.astro';
+import logoManifest from '../data/logo-manifest.json';
 
 const allTools = await getCollection('tools');
 const allComparisons = await getCollection('comparisons');
@@ -68,6 +69,46 @@ const scored: ToolView[] = allTools
 
 const topTool = scored[0];
 const topGrid = scored.slice(0, 9);
+
+// Category leaders for the rotating cover card. One entry per category:
+// the highest-scored active tool in it. Sorted by score so the strongest
+// categories cycle first. Frontmatter-safe object payload; the client
+// rotator reads this as JSON at runtime.
+const catLeadersMap: Record<string, typeof scored[number]> = {};
+for (const t of scored) {
+  if (!t.category) continue;
+  const prev = catLeadersMap[t.category];
+  if (!prev || t.score > prev.score) catLeadersMap[t.category] = t;
+}
+const catLeaders = Object.values(catLeadersMap)
+  .sort((a, b) => b.score - a.score)
+  .slice(0, 10);
+
+// Serialisable payload for the client-side cover-card rotator. Pre-computes
+// bar percentages + colours so the rotator doesn't need access to sparkbars()
+// at runtime. Logo URL comes from the static manifest (miniflare-safe).
+function barColorClient(n: number): string {
+  if (n >= 8) return '#34d399';
+  if (n >= 7) return '#38bdf8';
+  if (n >= 6) return '#fbbf24';
+  return '#fb7185';
+}
+const logoMap = logoManifest as Record<string, string>;
+const coverSlides = catLeaders.map((t) => ({
+  slug: t.slug,
+  title: t.title,
+  tagline: t.tagline,
+  score: t.score,
+  priceRange: t.priceRange,
+  category: catLabel[t.category] ?? t.category,
+  logoUrl: logoMap[t.slug] ?? `/logos/tools/${t.slug}.png`,
+  bars: [
+    { label: 'UTI', v: t.scores.utility, pct: Math.max(15, Math.min(100, (t.scores.utility / 10) * 100)), color: barColorClient(t.scores.utility) },
+    { label: 'VAL', v: t.scores.value, pct: Math.max(15, Math.min(100, (t.scores.value / 10) * 100)), color: barColorClient(t.scores.value) },
+    { label: 'MOA', v: t.scores.moat, pct: Math.max(15, Math.min(100, (t.scores.moat / 10) * 100)), color: barColorClient(t.scores.moat) },
+    { label: 'LON', v: t.scores.longevity, pct: Math.max(15, Math.min(100, (t.scores.longevity / 10) * 100)), color: barColorClient(t.scores.longevity) },
+  ],
+}));
 
 // Tools with news mentions in the last 14 days (signal: "movers")
 const recentNewsMentions: Record<string, number> = {};
@@ -324,13 +365,16 @@ const totalCompare = allComparisons.length;
       </div>
 
       <aside class="p3-hero-right" aria-label="Today's top pick">
-        <a href={`/tools/${topTool.slug}/`} class="p3-cover">
-          <div class="p3-cover-label">Today's top pick <span class="p3-cover-badge">No. 1</span></div>
+        <a id="p3-cover-card" href={`/tools/${topTool.slug}/`} class="p3-cover" data-rotator-enabled>
+          <div class="p3-cover-label">
+            <span class="p3-cover-label-text">Top pick in <span class="p3-cover-label-cat">{catLabel[topTool.category] ?? topTool.category}</span></span>
+            <span class="p3-cover-badge">#1</span>
+          </div>
           <div class="p3-cover-title-row">
             <div class="p3-cover-logo-frame">
-              <ToolLogo slug={topTool.slug} title={topTool.title} size={56} className="p3-cover-logo" />
+              <img class="p3-cover-logo tool-logo" src={(logoManifest as Record<string, string>)[topTool.slug] ?? `/logos/tools/${topTool.slug}.png`} alt={`${topTool.title} logo`} width="56" height="56" loading="eager" decoding="async" style="width:56px;height:56px;border-radius:12px;" />
             </div>
-            <div>
+            <div class="p3-cover-titleblock">
               <div class="p3-cover-title">{topTool.title}</div>
               <div class="p3-cover-tagline">{topTool.tagline}</div>
             </div>
@@ -349,10 +393,14 @@ const totalCompare = allComparisons.length;
             </div>
           </div>
           <div class="p3-cover-foot">
-            <span>{topTool.priceRange}</span>
+            <span class="p3-cover-price">{topTool.priceRange}</span>
             <span class="p3-cover-arrow">Read the review →</span>
           </div>
         </a>
+        {/* Data payload for the cover rotator. Injected as JSON so the
+             script can cycle through category leaders without rebuilding
+             the server. */}
+        <script id="p3-cover-slides" type="application/json" set:html={JSON.stringify(coverSlides)}></script>
       </aside>
     </section>
 
@@ -690,6 +738,107 @@ const totalCompare = allComparisons.length;
         if (old) old.dataset.rotatorActive = '';
         startRotator();
         setHomepageShortcut();
+      });
+    })();
+  </script>
+
+  <script is:inline>
+    /* Cover-card rotator + mouse-tilt. Cycles through each category's
+       highest-scored tool every ~5.5s with a crossfade. Pauses on hover
+       and when the tab is hidden. Respects prefers-reduced-motion by
+       disabling the rotation (static first slide) and the tilt. */
+    (function () {
+      const card = document.getElementById('p3-cover-card');
+      const data = document.getElementById('p3-cover-slides');
+      if (!card || !data) return;
+
+      let slides = [];
+      try { slides = JSON.parse(data.textContent || '[]'); } catch (_) { /* noop */ }
+      if (!slides.length) return;
+
+      const label    = card.querySelector('.p3-cover-label-cat');
+      const logoImg  = card.querySelector('.p3-cover-logo');
+      const title    = card.querySelector('.p3-cover-title');
+      const tagline  = card.querySelector('.p3-cover-tagline');
+      const scoreEl  = card.querySelector('.p3-cover-score-num');
+      const bars     = card.querySelectorAll('.p3-cover-bar');
+      const priceEl  = card.querySelector('.p3-cover-price');
+
+      let idx = 0;
+      function apply(slide, instant) {
+        card.href = '/tools/' + slide.slug + '/';
+        if (label)   label.textContent = slide.category;
+        if (logoImg) {
+          logoImg.src = slide.logoUrl;
+          logoImg.alt = slide.title + ' logo';
+        }
+        if (title)   title.textContent = slide.title;
+        if (tagline) tagline.textContent = slide.tagline;
+        if (scoreEl) scoreEl.innerHTML = slide.score + '<span class="p3-cover-score-slash">/10</span>';
+        if (priceEl) priceEl.textContent = slide.priceRange;
+
+        bars.forEach((bar, i) => {
+          const b = slide.bars[i];
+          if (!b) return;
+          const fill = bar.querySelector('.p3-cover-bar-fill');
+          const lbl  = bar.querySelector('.p3-cover-bar-label');
+          bar.setAttribute('title', b.label + ' ' + b.v + '/10');
+          if (fill) {
+            if (instant) fill.style.transition = 'none';
+            fill.style.setProperty('--h', b.pct + '%');
+            fill.style.setProperty('--c', b.color);
+            if (instant) {
+              /* force reflow to flush the transition:none before restoring */
+              void fill.offsetHeight;
+              fill.style.transition = '';
+            }
+          }
+          if (lbl) lbl.textContent = b.label;
+        });
+      }
+
+      function next() {
+        idx = (idx + 1) % slides.length;
+        card.classList.add('p3-cover-fading');
+        setTimeout(() => {
+          apply(slides[idx], false);
+          card.classList.remove('p3-cover-fading');
+        }, 180);
+      }
+
+      /* Start on first slide, then rotate. */
+      apply(slides[0], true);
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      if (slides.length < 2) return;
+
+      let paused = false;
+      card.addEventListener('mouseenter', () => { paused = true; });
+      card.addEventListener('mouseleave', () => { paused = false; });
+      card.addEventListener('focus', () => { paused = true; });
+      card.addEventListener('blur', () => { paused = false; });
+      document.addEventListener('visibilitychange', () => {
+        paused = document.hidden;
+      });
+
+      setInterval(() => { if (!paused) next(); }, 5500);
+
+      /* Mouse-tilt: subtle 3D perspective rotation that follows the
+         cursor. Max ~6deg on each axis. Resets on mouseleave. Works
+         with the existing hover translateY lift (composed in CSS). */
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width - 0.5;   /* -0.5 .. 0.5 */
+        const y = (e.clientY - rect.top) / rect.height - 0.5;
+        const tiltY = x * 6;     /* rotateY: left/right */
+        const tiltX = -y * 6;    /* rotateX: up/down (inverted) */
+        card.style.setProperty('--tilt-x', tiltX.toFixed(2) + 'deg');
+        card.style.setProperty('--tilt-y', tiltY.toFixed(2) + 'deg');
+        card.classList.add('p3-cover-tilting');
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.setProperty('--tilt-x', '0deg');
+        card.style.setProperty('--tilt-y', '0deg');
+        card.classList.remove('p3-cover-tilting');
       });
     })();
   </script>
