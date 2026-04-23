@@ -19,10 +19,11 @@ affiliate:
   commission: 50% for the first year
   cookie_days: 60
   network: PartnerStack
-  link: null
-  application_status: applied
+  link: https://get.omniseo.com/aipediawiki
+  application_status: approved
   applied_date: 2026-04-19
-  notes: "Applied via PartnerStack 2026-04-19. 50% first-year commission is aggressive for a new-category vendor; conversion cycle depends on brand marketers' AI-search visibility as a tracked KPI."
+  approved_date: 2026-04-23
+  notes: "Approved 2026-04-23. 50% first-year commission is aggressive for a new-category vendor; conversion cycle depends on brand marketers' AI-search visibility as a tracked KPI."
 scores:
   utility: 8
   value: 7
