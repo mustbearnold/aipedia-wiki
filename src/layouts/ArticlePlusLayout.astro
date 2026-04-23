@@ -83,7 +83,24 @@ const verifiedRelative = verifiedIsValid ? relativeDays(verifiedDate!) : null;
 const tocHeadings = (headings ?? []).filter((h) => h.depth === 2).map((h) => ({ slug: h.slug, text: h.text }));
 ---
 
-<BaseLayout title={seoTitle ?? title} description={description} ogImage={ogImage}>
+<BaseLayout
+  title={seoTitle ?? title}
+  description={description}
+  ogImage={ogImage}
+  ogType="article"
+  articlePublishedTime={(() => {
+    const v = datePublished ?? lastVerified;
+    if (!v) return undefined;
+    const d = new Date(String(v));
+    return isNaN(d.getTime()) ? String(v) : d.toISOString();
+  })()}
+  articleModifiedTime={(() => {
+    if (!lastVerified) return undefined;
+    const d = new Date(String(lastVerified));
+    return isNaN(d.getTime()) ? String(lastVerified) : d.toISOString();
+  })()}
+  articleSection={articleSection}
+>
   {breadcrumbLdItems && <BreadcrumbLD items={breadcrumbLdItems} />}
   <ArticleLD
     headline={title}

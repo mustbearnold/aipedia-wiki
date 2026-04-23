@@ -21,7 +21,7 @@
   </g>
   <text x="210" y="270" font-family="Inter, system-ui, sans-serif" font-size="76" font-weight="800" fill="#fafafa">Kimi</text>
   <text x="210" y="310" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="500" fill="#9ca3af">Moonshot AI</text>
-  <text x="80" y="400" font-family="Inter, system-ui, sans-serif" font-size="26" font-weight="500" fill="#d1d5db"><tspan x="80" dy="0">Moonshot AI&apos;s chatbot and model family, anchored by Kimi</tspan><tspan x="80" dy="36">K2.5 with a 256K-token context window and agent swarm</tspan><tspan x="80" dy="36">mode…</tspan></text>
+  <text x="80" y="400" font-family="Inter, system-ui, sans-serif" font-size="26" font-weight="500" fill="#d1d5db"><tspan x="80" dy="0">Moonshot AI&apos;s chatbot and model family, anchored by Kimi</tspan><tspan x="80" dy="36">K2.6 with strong open-weights coding and agentic</tspan><tspan x="80" dy="36">benchmarks plus Agent Swarm mode…</tspan></text>
   <g transform="translate(960, 80)">
     <rect x="0" y="0" width="160" height="160" rx="20" fill="rgba(167,139,250,0.10)" stroke="rgba(167,139,250,0.35)" stroke-width="2"/>
     <text x="80" y="100" font-family="Inter, system-ui, sans-serif" font-size="64" font-weight="800" text-anchor="middle" fill="#fbbf24">7</text>

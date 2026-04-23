@@ -1,11 +1,13 @@
 ---
+/**
+ * /guides/ index. Lists all editorial guides grouped by type.
+ * Redesigned April 23, 2026 into the .t2-canvas system.
+ */
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import Breadcrumb from '../../components/Breadcrumb.astro';
 import { getCollection } from 'astro:content';
 
 const allGuides = await getCollection('use-cases');
 
-// Classify guides by type based on slug patterns
 type GuideType = 'best-of' | 'alternatives' | 'stack' | 'comparison' | 'other';
 function guideType(slug: string): GuideType {
   if (slug.startsWith('best-')) return 'best-of';
@@ -33,7 +35,7 @@ const groups: Record<string, typeof guides> = {
 
 const groupMeta: Record<string, { label: string; emoji: string; description: string }> = {
   'best-of':      { label: 'Best Of Guides', emoji: '\uD83C\uDFC6', description: 'Category-leading tools for specific use cases' },
-  'alternatives': { label: 'Alternatives',   emoji: '\uD83D\uDD04', description: 'Swap out one tool — find the right substitute' },
+  'alternatives': { label: 'Alternatives',   emoji: '\uD83D\uDD04', description: 'Swap out one tool. Find the right substitute.' },
   'stack':        { label: 'Workflow Stacks',emoji: '\uD83C\uDFD7\uFE0F', description: 'Complete tool stacks by role and budget' },
   'comparison':   { label: 'Comparisons',    emoji: '\u2696\uFE0F', description: 'Head-to-head analysis of tool pairs' },
   'other':        { label: 'Other Guides',   emoji: '\uD83D\uDCD6', description: '' },
@@ -41,41 +43,42 @@ const groupMeta: Record<string, { label: string; emoji: string; description: str
 ---
 
 <BaseLayout
-  title="Guides & Best-Of Lists — aipedia.wiki"
+  title="Guides & Best-Of Lists, aipedia.wiki"
   description={`${allGuides.length} editorial guides covering best-of roundups, alternatives, workflow stacks, and head-to-head comparisons of AI tools.`}
 >
-  <Breadcrumb items={[{ label: 'Guides' }]} />
+  <div class="t2-canvas">
+    <nav class="t2-breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span aria-hidden="true">/</span>
+      <span class="t2-breadcrumb-current" aria-current="page">Guides</span>
+    </nav>
 
-  <section class="mb-10 pt-2">
-    <h1 class="text-3xl sm:text-4xl font-bold mb-3 leading-tight">
-      <span class="accent-gradient-text">Guides</span> & Best-Of Lists
-    </h1>
-    <p class="text-[var(--text-secondary)] text-sm sm:text-base max-w-2xl leading-relaxed">
-      {allGuides.length} editorial guides covering category roundups, tool alternatives, workflow stacks, and in-depth comparisons.
-    </p>
-  </section>
+    <header class="t2-article-hero">
+      <h1 class="t2-title">Guides &amp; best-of lists</h1>
+      <p class="t2-tagline">
+        {allGuides.length} editorial guides covering category roundups, tool alternatives, workflow stacks, and in-depth comparisons.
+      </p>
+    </header>
 
-  {Object.entries(groups).map(([groupKey, items]) => items.length > 0 && (
-    <section class="mb-10">
-      <div class="flex items-center gap-2 mb-4">
-        <span class="text-xl">{groupMeta[groupKey].emoji}</span>
-        <h2 class="text-lg font-semibold text-[var(--text-primary)]">{groupMeta[groupKey].label}</h2>
-        <span class="text-xs text-[var(--text-muted)]">({items.length})</span>
-      </div>
-      {groupMeta[groupKey].description && (
-        <p class="text-xs text-[var(--text-muted)] mb-4">{groupMeta[groupKey].description}</p>
-      )}
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-        {items.map(g => (
-          <a
-            href={`/guides/${g.slug}/`}
-            class="group block p-4 rounded-xl border border-[var(--border)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] hover:border-[rgba(167,139,250,0.3)] transition-all no-underline"
-          >
-            <h3 class="font-semibold text-[var(--text-primary)] text-sm mb-1 group-hover:text-[var(--accent-primary)] transition-colors">{g.title}</h3>
-            {g.description && <p class="text-xs text-[var(--text-muted)] leading-relaxed line-clamp-2">{g.description}</p>}
-          </a>
-        ))}
-      </div>
-    </section>
-  ))}
+    {Object.entries(groups).map(([groupKey, items]) => items.length > 0 && (
+      <section class="t2-index-group">
+        <div class="t2-index-group-head">
+          <span class="t2-index-group-emoji" aria-hidden="true">{groupMeta[groupKey].emoji}</span>
+          <h2 class="t2-index-group-title">{groupMeta[groupKey].label}</h2>
+          <span class="t2-index-group-count">{items.length}</span>
+        </div>
+        {groupMeta[groupKey].description && (
+          <p class="t2-index-group-desc">{groupMeta[groupKey].description}</p>
+        )}
+        <div class="t2-index-grid">
+          {items.map(g => (
+            <a href={`/guides/${g.slug}/`} class="t2-index-card">
+              <h3 class="t2-index-card-title">{g.title}</h3>
+              {g.description && <p class="t2-index-card-desc">{g.description}</p>}
+            </a>
+          ))}
+        </div>
+      </section>
+    ))}
+  </div>
 </BaseLayout>

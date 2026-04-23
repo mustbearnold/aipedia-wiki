@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "Bundled with ChatGPT Plus ($20/mo) through Pro 20x ($200/mo)"
 status: active
 launched: 2025-05
-last_updated: 2026-04-22
-last_verified: 2026-04-22
+last_updated: 2026-04-23
+last_verified: 2026-04-23
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -65,6 +65,9 @@ Bundled with every paid ChatGPT tier. Pro tiers get 5x to 20x the Codex usage of
 
 ## Recent developments (March-April 2026)
 
+- **April 23, 2026:** [Google discloses 75% of internal new code is AI-generated](/news/2026-04-23-google-75-percent-internal-code-ai-generated/). Signals agentic-coding adoption inside hyperscalers has crossed the "production default" threshold. Codex sits in the same category as Gemini Code Assist for this cohort.
+- **April 23, 2026:** [Gemini Enterprise Agent Platform launches](/news/2026-04-23-gemini-enterprise-agent-platform/). Google now ships a full enterprise agent stack (Studio, Registry, Identity, Gateway, Observability) competing with Codex for governed-agent use cases. Codex counter is the April 16 super-app update's plugin ecosystem and Computer Use.
+- **April 21, 2026:** [Moonshot Kimi K2.6 ships with Agent Swarm mode](/news/2026-04-21-moonshot-kimi-k2-6-agent-swarm/), posting SWE-bench Pro 58.6 as the strongest open-weights baseline. Raises the ceiling for self-hosted alternatives to Codex.
 - **April 16, 2026:** [Codex Desktop ships as OpenAI "super app"](/news/2026-04-16-openai-codex-desktop-super-app/). Computer Use, Memory, gpt-image-2, in-app browser, 90+ plugins, multi-agent workflows. macOS first; Windows and EU/UK rolling out.
 - **April 16, 2026:** [Systemic MCP vulnerability exposes 200k servers](/news/2026-04-16-mcp-vulnerability-200k-servers/). Codex Desktop's 90+ plugins + MCP tool access all inherit the exposure. Audit third-party servers; prefer first-party.
 - **April 16, 2026:** [Agents SDK ships native sandbox execution](/news/2026-04-16-openai-agents-sdk-sandbox-update/), model-native harness, configurable memory, snapshotting. Python first, TypeScript coming.

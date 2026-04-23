@@ -31,13 +31,16 @@ const badge = severityBadge[sev] ?? severityBadge.minor;
 
 <ArticlePlusLayout
   title={entry.data.title}
-  seoTitle={`${entry.data.title} — aipedia.wiki News`}
+  seoTitle={`${entry.data.title}, aipedia.wiki News`}
   description={entry.data.summary ?? ''}
   pageUrl={`${siteBase}news/${slug}/`}
   breadcrumbs={[{ label: 'News', href: '/news/' }, { label: entry.data.title }]}
   headings={headings}
   readingMinutes={readingMinutes}
+  datePublished={entry.data.date ? String(entry.data.date) : undefined}
   lastVerified={entry.data.last_verified ? String(entry.data.last_verified) : (entry.data.date ? String(entry.data.date) : undefined)}
+  articleType="NewsArticle"
+  articleSection="AI Industry News"
   badge={badge}
   ogImage={`/og/news/${slug}.png`}
 >

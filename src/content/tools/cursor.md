@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2023-03
-last_updated: 2026-04-18
-last_verified: 2026-04-18
+last_updated: 2026-04-23
+last_verified: 2026-04-23
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -60,6 +60,8 @@ Anysphere's AI-native code editor. A VS Code fork with LLMs wired into autocompl
 
 ## Recent developments
 
+- **April 23, 2026:** [Google discloses 75% of internal new code is AI-generated](/news/2026-04-23-google-75-percent-internal-code-ai-generated/). Hyperscaler benchmark for agentic-coding adoption; validates Cursor's position as mainstream IDE default.
+- **April 21, 2026:** [Moonshot Kimi K2.6 ships with Agent Swarm mode](/news/2026-04-21-moonshot-kimi-k2-6-agent-swarm/). Strong open-weights coding scores (SWE-Bench Pro 58.6, HLE-with-tools 54.0) make Kimi a viable BYO-key backbone for self-hosted enterprise Cursor deployments.
 - **April 17:** [Cursor in talks for $2B+ round at $50B valuation](/news/2026-04-17-cursor-2b-at-50b-valuation/). Nearly doubles the $29.3B valuation from 6 months ago. $2B ARR in Feb 2026. Thrive and a16z co-lead; Nvidia and Battery participating.
 - **April 16:** [Systemic MCP vulnerability exposes 200k servers](/news/2026-04-16-mcp-vulnerability-200k-servers/). Cursor's MCP plugin layer inherits the exposure. Audit installed MCP servers; prefer first-party or sandboxed.
 - **April 16:** [OpenAI Codex Desktop ships as "super app"](/news/2026-04-16-openai-codex-desktop-super-app/) with computer use, memory, image gen, 90+ plugins. Desktop-agent surface, not an IDE, but the Computer Use plus Memory combo is the long-term threat to IDE-as-home paradigm.
