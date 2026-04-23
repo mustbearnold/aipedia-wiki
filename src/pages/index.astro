@@ -84,31 +84,8 @@ const catLeaders = Object.values(catLeadersMap)
   .sort((a, b) => b.score - a.score)
   .slice(0, 10);
 
-// Serialisable payload for the client-side cover-card rotator. Pre-computes
-// bar percentages + colours so the rotator doesn't need access to sparkbars()
-// at runtime. Logo URL comes from the static manifest (miniflare-safe).
-function barColorClient(n: number): string {
-  if (n >= 8) return '#34d399';
-  if (n >= 7) return '#38bdf8';
-  if (n >= 6) return '#fbbf24';
-  return '#fb7185';
-}
-const logoMap = logoManifest as Record<string, string>;
-const coverSlides = catLeaders.map((t) => ({
-  slug: t.slug,
-  title: t.title,
-  tagline: t.tagline,
-  score: t.score,
-  priceRange: t.priceRange,
-  category: catLabel[t.category] ?? t.category,
-  logoUrl: logoMap[t.slug] ?? `/logos/tools/${t.slug}.png`,
-  bars: [
-    { label: 'UTI', v: t.scores.utility, pct: Math.max(15, Math.min(100, (t.scores.utility / 10) * 100)), color: barColorClient(t.scores.utility) },
-    { label: 'VAL', v: t.scores.value, pct: Math.max(15, Math.min(100, (t.scores.value / 10) * 100)), color: barColorClient(t.scores.value) },
-    { label: 'MOA', v: t.scores.moat, pct: Math.max(15, Math.min(100, (t.scores.moat / 10) * 100)), color: barColorClient(t.scores.moat) },
-    { label: 'LON', v: t.scores.longevity, pct: Math.max(15, Math.min(100, (t.scores.longevity / 10) * 100)), color: barColorClient(t.scores.longevity) },
-  ],
-}));
+// coverSlides is constructed further down, after catLabel is declared,
+// so it can map t.category -> display label.
 
 // Tools with news mentions in the last 14 days (signal: "movers")
 const recentNewsMentions: Record<string, number> = {};
@@ -167,6 +144,33 @@ const catLabel: Record<string, string> = {
   'ai-search': 'Search', 'ai-notes': 'Notes', 'ai-music': 'Music',
   'ai-presentation': 'Presentation', 'ai-research': 'Research',
 };
+
+// Serialisable payload for the client-side cover-card rotator. Pre-computes
+// bar percentages + colours so the rotator doesn't need access to sparkbars()
+// at runtime. Logo URL comes from the static manifest (miniflare-safe).
+// Declared after catLabel so catLabel[t.category] resolves in-bounds.
+function barColorClient(n: number): string {
+  if (n >= 8) return '#34d399';
+  if (n >= 7) return '#38bdf8';
+  if (n >= 6) return '#fbbf24';
+  return '#fb7185';
+}
+const logoMap = logoManifest as Record<string, string>;
+const coverSlides = catLeaders.map((t) => ({
+  slug: t.slug,
+  title: t.title,
+  tagline: t.tagline,
+  score: t.score,
+  priceRange: t.priceRange,
+  category: catLabel[t.category] ?? t.category,
+  logoUrl: logoMap[t.slug] ?? `/logos/tools/${t.slug}.png`,
+  bars: [
+    { label: 'UTI', v: t.scores.utility, pct: Math.max(15, Math.min(100, (t.scores.utility / 10) * 100)), color: barColorClient(t.scores.utility) },
+    { label: 'VAL', v: t.scores.value, pct: Math.max(15, Math.min(100, (t.scores.value / 10) * 100)), color: barColorClient(t.scores.value) },
+    { label: 'MOA', v: t.scores.moat, pct: Math.max(15, Math.min(100, (t.scores.moat / 10) * 100)), color: barColorClient(t.scores.moat) },
+    { label: 'LON', v: t.scores.longevity, pct: Math.max(15, Math.min(100, (t.scores.longevity / 10) * 100)), color: barColorClient(t.scores.longevity) },
+  ],
+}));
 const catCounts: Record<string, number> = {};
 for (const t of scored) if (t.category) catCounts[t.category] = (catCounts[t.category] ?? 0) + 1;
 // Top-scored tool per category — surfaced on every chip as editorial
