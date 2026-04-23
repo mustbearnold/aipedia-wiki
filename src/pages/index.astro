@@ -405,21 +405,21 @@ const totalCompare = allComparisons.length;
     </section>
 
     <!-- =============== STATS BAR =============== -->
-    <section class="p3-statbar" aria-label="Catalog at a glance">
+    <section class="p3-statbar" aria-label="Catalog at a glance" data-reveal>
       <div class="p3-stat">
-        <span class="p3-stat-num tabular-nums">{totalTools}</span>
+        <span class="p3-stat-num count-up tabular-nums" data-target={totalTools}>{totalTools}</span>
         <span class="p3-stat-lbl">Tools scored</span>
       </div>
       <div class="p3-stat">
-        <span class="p3-stat-num tabular-nums">{totalCompare}</span>
+        <span class="p3-stat-num count-up tabular-nums" data-target={totalCompare}>{totalCompare}</span>
         <span class="p3-stat-lbl">Comparisons</span>
       </div>
       <div class="p3-stat">
-        <span class="p3-stat-num tabular-nums">{totalNews}</span>
+        <span class="p3-stat-num count-up tabular-nums" data-target={totalNews}>{totalNews}</span>
         <span class="p3-stat-lbl">News items</span>
       </div>
       <div class="p3-stat">
-        <span class="p3-stat-num tabular-nums">4</span>
+        <span class="p3-stat-num count-up tabular-nums" data-target="4">4</span>
         <span class="p3-stat-lbl">Scoring axes</span>
       </div>
       <div class="p3-stat">
@@ -429,14 +429,14 @@ const totalCompare = allComparisons.length;
     </section>
 
     <!-- =============== CATEGORY RAIL =============== -->
-    <section class="p3-catrail" aria-label="Browse by category">
+    <section class="p3-catrail" aria-label="Browse by category" data-reveal>
       <div class="p3-sec-head">
         <h2 class="p3-sec-title">Browse by category</h2>
         <a href="/categories/" class="p3-sec-link">All {cats.length} categories →</a>
       </div>
       <div class="p3-catgrid">
         {cats.slice(0, 12).map((c, i) => (
-          <a href={`/categories/${c.slug}/`} class={`p3-catchip ${i < 3 ? 'p3-catchip-top' : ''}`.trim()}>
+          <a href={`/categories/${c.slug}/`} class={`p3-catchip ${i < 3 ? 'p3-catchip-top' : ''}`.trim()} data-reveal style={`--reveal-delay: ${Math.min(i * 45, 450)}ms`}>
             <span class="p3-catchip-head">
               <span class="p3-catchip-emoji" aria-hidden="true">{c.emoji}</span>
               <span class="p3-catchip-label">{c.label}</span>
@@ -455,7 +455,7 @@ const totalCompare = allComparisons.length;
     </section>
 
     <!-- =============== NEWS + MOVERS SPLIT =============== -->
-    <section class="p3-split" aria-label="Latest news and movers">
+    <section class="p3-split" aria-label="Latest news and movers" data-reveal>
       <div class="p3-split-news">
         <div class="p3-sec-head">
           <h2 class="p3-sec-title">From the newsroom</h2>
@@ -474,8 +474,8 @@ const totalCompare = allComparisons.length;
           </a>
         )}
         <ul class="p3-newslist">
-          {latestNews.slice(1).map(n => (
-            <li>
+          {latestNews.slice(1).map((n, i) => (
+            <li data-reveal style={`--reveal-delay: ${i * 70}ms`}>
               <a href={`/news/${n.slug}/`} class="p3-newsrow">
                 <span class={`p3-sev p3-sev-${n.severity}`}>{n.severity}</span>
                 <span class="p3-newsrow-title">{n.title}</span>
@@ -498,7 +498,7 @@ const totalCompare = allComparisons.length;
             {(() => {
               const maxMentions = movers[0]?.mentions ?? 1;
               return movers.map((t, i) => (
-                <li>
+                <li data-reveal style={`--reveal-delay: ${i * 65}ms`}>
                   <a href={`/tools/${t.slug}/`} class={`p3-mover ${i === 0 ? 'p3-mover-lead' : ''}`.trim()}>
                     <span class="p3-mover-rank tabular-nums">{i + 1}</span>
                     <ToolLogo slug={t.slug} title={t.title} size={28} className="p3-mover-logo" />
@@ -526,14 +526,14 @@ const totalCompare = allComparisons.length;
     </section>
 
     <!-- =============== TOP TOOLS GRID =============== -->
-    <section class="p3-grid-sec" aria-label="Top tools">
+    <section class="p3-grid-sec" aria-label="Top tools" data-reveal>
       <div class="p3-sec-head">
         <h2 class="p3-sec-title">The top of the catalog</h2>
         <a href="/tools/" class="p3-sec-link">All {totalTools} tools →</a>
       </div>
       <div class="p3-grid">
         {topGrid.map((t, i) => (
-          <a href={`/tools/${t.slug}/`} class={`p3-tile ${i < 3 ? 'p3-tile-featured' : ''}`.trim()}>
+          <a href={`/tools/${t.slug}/`} class={`p3-tile ${i < 3 ? 'p3-tile-featured' : ''}`.trim()} data-reveal style={`--reveal-delay: ${Math.min(i * 60, 480)}ms`}>
             <div class="p3-tile-top">
               <div class="p3-tile-logo-frame">
                 <ToolLogo slug={t.slug} title={t.title} size={40} className="p3-tile-logo" />
@@ -564,7 +564,7 @@ const totalCompare = allComparisons.length;
     <RecentlyViewed />
 
     <!-- =============== METHODOLOGY CALLOUT =============== -->
-    <section class="p3-method">
+    <section class="p3-method" data-reveal>
       <div class="p3-method-inner">
         <div class="p3-method-eyebrow">Editorial standard</div>
         <h2 class="p3-method-title">Every tool scored on the same four axes.</h2>
@@ -603,17 +603,17 @@ const totalCompare = allComparisons.length;
     </section>
 
     <!-- =============== COMPARISONS STRIP =============== -->
-    <section class="p3-cmp-sec" aria-label="Featured comparisons">
+    <section class="p3-cmp-sec" aria-label="Featured comparisons" data-reveal>
       <div class="p3-sec-head">
         <h2 class="p3-sec-title">Head-to-head</h2>
         <a href="/compare/" class="p3-sec-link">All comparisons →</a>
       </div>
       <div class="p3-cmp-strip">
-        {featuredCompare.map(c => {
+        {featuredCompare.map((c, i) => {
           const aWins = c.toolA && c.toolB ? c.toolA.score > c.toolB.score : false;
           const bWins = c.toolA && c.toolB ? c.toolB!.score > c.toolA!.score : false;
           return (
-            <a href={`/compare/${c.slug}/`} class="p3-cmp-card">
+            <a href={`/compare/${c.slug}/`} class="p3-cmp-card" data-reveal style={`--reveal-delay: ${Math.min(i * 55, 330)}ms`}>
               <div class="p3-cmp-vs">
                 {c.slugs[0] && <ToolLogo slug={c.slugs[0]} title={c.slugs[0]} size={36} className="p3-cmp-logo" />}
                 <span class="p3-cmp-divider" aria-hidden="true">vs</span>
@@ -637,7 +637,7 @@ const totalCompare = allComparisons.length;
     </section>
 
     <!-- =============== EMAIL CAPTURE (bespoke p3 block) =============== -->
-    <section class="p3-newsletter" aria-labelledby="newsletter-heading">
+    <section class="p3-newsletter" aria-labelledby="newsletter-heading" data-reveal>
       <div class="p3-newsletter-inner">
         <div class="p3-newsletter-text">
           <div class="p3-newsletter-eyebrow">

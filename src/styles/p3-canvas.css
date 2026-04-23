@@ -669,8 +669,16 @@ body:has(main .p3-canvas) {
   height: 0;
   border-radius: 3px 3px 0 0;
   background: var(--c);
+}
+/* Bars rise only once the cover (or any ancestor with data-reveal) has
+   entered the viewport. The IntersectionObserver in BaseLayout adds
+   .is-revealed on intersect. If the cover has no data-reveal (always
+   visible on load in the hero), start playing immediately. */
+.p3-cover .p3-cover-bar-fill,
+.p3-cover.is-revealed .p3-cover-bar-fill,
+[data-reveal].is-revealed .p3-cover-bar-fill {
   animation: p3-bar-rise 900ms cubic-bezier(.22,.61,.36,1) forwards;
-  animation-delay: 180ms;
+  animation-delay: 220ms;
 }
 @keyframes p3-bar-rise {
   from { height: 0; opacity: 0.4; }
@@ -1269,7 +1277,13 @@ body:has(main .p3-canvas) {
   height: 0;
   background: var(--c);
   border-radius: 2px 2px 0 0;
+}
+/* Tile bars rise when the tile (as a [data-reveal] target) enters the
+   viewport. Falls through to play-on-load for tiles without data-reveal. */
+.p3-tile.is-revealed .p3-tile-bar-fill,
+.p3-tile:not([data-reveal]) .p3-tile-bar-fill {
   animation: p3-bar-rise 700ms cubic-bezier(.22,.61,.36,1) forwards;
+  animation-delay: 160ms;
 }
 .p3-tile-foot {
   display: flex;
