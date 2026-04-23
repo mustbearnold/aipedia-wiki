@@ -50,11 +50,18 @@ const standards = [
 <footer class="border-t border-[var(--border)] mt-16">
   <div class="max-w-6xl mx-auto px-4 py-10">
 
-    <!-- Brand -->
+    <!-- Brand. Matches the .nav-brand lockup exactly so header and
+         footer read as the same brand. Same logo frame, same split
+         wordmark, same live-dot. -->
     <div class="mb-10 pb-10 border-b border-[var(--border)]">
-      <a href="/" class="inline-flex items-center gap-2 no-underline">
-        <img src="/brand/aipedia-logo-48.png" alt="aipedia.wiki" width="28" height="28" class="shrink-0" loading="lazy" decoding="async" />
-        <span class="text-lg font-semibold accent-gradient-text">aipedia.wiki</span>
+      <a href="/" class="nav-brand inline-flex items-center gap-2.5 no-underline hover:no-underline" aria-label="aipedia.wiki home">
+        <span class="nav-logo-frame" aria-hidden="true">
+          <img src="/brand/aipedia-logo-48.png" alt="" width="26" height="26" loading="lazy" decoding="async" />
+        </span>
+        <span class="nav-wordmark">
+          <span class="nav-wordmark-name">aipedia</span><span class="nav-wordmark-tld">.wiki</span>
+        </span>
+        <span class="nav-livedot" aria-hidden="true" title="Verified today"></span>
       </a>
       <p class="text-sm text-[var(--text-muted)] mt-3 max-w-md leading-relaxed">
         The AI Tools Encyclopedia. Independent, agentically operated. Reviews, comparisons, and scoring across 14 categories.
