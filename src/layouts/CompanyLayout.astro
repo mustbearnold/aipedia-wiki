@@ -87,6 +87,9 @@ const verifiedDate = lastVerified ? new Date(lastVerified) : null;
 const verifiedLabel = verifiedDate && !isNaN(verifiedDate.getTime())
   ? verifiedDate.toLocaleDateString('en-US', { month: 'short', year: 'numeric' })
   : null;
+const verifiedRecently = verifiedDate && !isNaN(verifiedDate.getTime())
+  ? Math.floor((Date.now() - verifiedDate.getTime()) / 86400000) <= 60
+  : false;
 
 const tocHeadings = (headings ?? []).filter((h) => h.depth === 2).map((h) => ({ slug: h.slug, text: h.text }));
 ---
@@ -105,19 +108,30 @@ const tocHeadings = (headings ?? []).filter((h) => h.depth === 2).map((h) => ({ 
       <span class="t2-breadcrumb-current" aria-current="page">{title}</span>
     </nav>
 
+    <!-- Editorial eyebrow -->
+    <div class="t2-eyebrow" data-pagefind-ignore>
+      {verifiedRecently && verifiedLabel && (
+        <span class="t2-eyebrow-chip t2-eyebrow-fresh">
+          <span class="t2-eyebrow-livedot" aria-hidden="true"></span>
+          Updated {verifiedLabel}
+        </span>
+      )}
+      {!verifiedRecently && verifiedLabel && (
+        <span class="t2-eyebrow-chip">Updated {verifiedLabel}</span>
+      )}
+      <span class={`t2-eyebrow-chip ${companyType === 'dead' || companyType === 'acquired' ? '' : 't2-eyebrow-accent'}`}>{typeStyle.label}</span>
+      <span class="t2-eyebrow-trust">Editorial only, no paid placements</span>
+    </div>
+
     <header class="t2-article-hero" data-pagefind-ignore>
       <div class="t2-article-title-row">
         <h1 class="t2-title">{title}</h1>
-        <span class={`t2-company-type ${typeStyle.cls}`}>{typeStyle.label}</span>
       </div>
       <div class="t2-article-byline">
-        {founded && (<><span>Founded {founded}</span><span aria-hidden="true" class="t2-meta-dot">·</span></>)}
-        {hq && (<><span>{hq}</span><span aria-hidden="true" class="t2-meta-dot">·</span></>)}
-        {funding && (<><span>{funding} raised</span><span aria-hidden="true" class="t2-meta-dot">·</span></>)}
-        {readingMinutes > 0 && (<><span>{readingMinutes} min read</span><span aria-hidden="true" class="t2-meta-dot">·</span></>)}
-        {verifiedLabel && (
-          <span><span class="t2-cat-verified-tick" aria-hidden="true">✓</span> Updated {verifiedLabel}</span>
-        )}
+        {founded && (<><span>Founded {founded}</span></>)}
+        {hq && (<><span aria-hidden="true" class="t2-meta-dot">·</span><span>{hq}</span></>)}
+        {funding && (<><span aria-hidden="true" class="t2-meta-dot">·</span><span>{funding} raised</span></>)}
+        {readingMinutes > 0 && (<><span aria-hidden="true" class="t2-meta-dot">·</span><span>{readingMinutes} min read</span></>)}
       </div>
     </header>
 

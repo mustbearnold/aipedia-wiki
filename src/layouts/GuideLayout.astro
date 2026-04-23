@@ -79,6 +79,9 @@ const verifiedDate = lastVerified ? new Date(lastVerified) : null;
 const verifiedLabel = verifiedDate && !isNaN(verifiedDate.getTime())
   ? verifiedDate.toLocaleDateString('en-US', { month: 'short', year: 'numeric' })
   : null;
+const verifiedRecently = verifiedDate && !isNaN(verifiedDate.getTime())
+  ? Math.floor((Date.now() - verifiedDate.getTime()) / 86400000) <= 60
+  : false;
 
 const itemListItems = rankedTools.map((t) => ({
   name: t.title,
@@ -116,6 +119,24 @@ const tocHeadings = (headings ?? []).filter((h) => h.depth === 2).map((h) => ({ 
       <span class="t2-breadcrumb-current" aria-current="page">{title}</span>
     </nav>
 
+    <!-- Editorial eyebrow -->
+    <div class="t2-eyebrow" data-pagefind-ignore>
+      {verifiedRecently && verifiedLabel && (
+        <span class="t2-eyebrow-chip t2-eyebrow-fresh">
+          <span class="t2-eyebrow-livedot" aria-hidden="true"></span>
+          Updated {verifiedLabel}
+        </span>
+      )}
+      {!verifiedRecently && verifiedLabel && (
+        <span class="t2-eyebrow-chip">Updated {verifiedLabel}</span>
+      )}
+      <span class="t2-eyebrow-chip t2-eyebrow-accent">Best-of guide</span>
+      {rankedTools.length > 0 && (
+        <span class="t2-eyebrow-chip">{rankedTools.length} tool{rankedTools.length === 1 ? '' : 's'} ranked</span>
+      )}
+      <span class="t2-eyebrow-trust">Editorial only, no paid placements</span>
+    </div>
+
     <header class="t2-article-hero" data-pagefind-ignore>
       <h1 class="t2-title">{title}</h1>
       <div class="t2-article-byline">
@@ -124,12 +145,6 @@ const tocHeadings = (headings ?? []).filter((h) => h.depth === 2).map((h) => ({ 
           <>
             <span aria-hidden="true" class="t2-meta-dot">·</span>
             <span>{readingMinutes} min read</span>
-          </>
-        )}
-        {verifiedLabel && (
-          <>
-            <span aria-hidden="true" class="t2-meta-dot">·</span>
-            <span><span class="t2-cat-verified-tick" aria-hidden="true">✓</span> Verified {verifiedLabel}</span>
           </>
         )}
       </div>

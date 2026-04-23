@@ -64,6 +64,13 @@ function ctaRel(t: ToolData): string {
 const sorted = [...tools].sort((a, b) => overallScore(b) - overallScore(a));
 const top3 = sorted.slice(0, 3);
 
+// Category stats: surface in a tight stat bar under the hero.
+const activeTools = tools.filter((t) => t.status !== 'dead' && t.status !== 'retired' && t.status !== 'acquired');
+const avgScore = activeTools.length > 0
+  ? Math.round(activeTools.reduce((acc, t) => acc + overallScore(t), 0) / activeTools.length * 10) / 10
+  : 0;
+const topScore = activeTools.length > 0 ? overallScore(sorted[0]) : 0;
+
 const breadcrumbLdItems = [
   { name: 'Home', url: siteBase },
   { name: title, url: `${siteBase}categories/${slug}/` },
@@ -73,6 +80,9 @@ const verifiedDate = lastVerified ? new Date(lastVerified) : null;
 const verifiedLabel = verifiedDate && !isNaN(verifiedDate.getTime())
   ? verifiedDate.toLocaleDateString('en-US', { month: 'short', year: 'numeric' })
   : null;
+const verifiedRecently = verifiedDate && !isNaN(verifiedDate.getTime())
+  ? Math.floor((Date.now() - verifiedDate.getTime()) / 86400000) <= 30
+  : false;
 
 const itemListItems = sorted.map((t) => ({
   name: t.title,
@@ -101,6 +111,21 @@ const rankLabels = ['Best overall', 'Runner-up', 'Best value'];
       <span class="t2-breadcrumb-current" aria-current="page">{title}</span>
     </nav>
 
+    <!-- Editorial eyebrow -->
+    <div class="t2-eyebrow" data-pagefind-ignore>
+      {verifiedRecently && (
+        <span class="t2-eyebrow-chip t2-eyebrow-fresh">
+          <span class="t2-eyebrow-livedot" aria-hidden="true"></span>
+          Updated {verifiedLabel}
+        </span>
+      )}
+      {!verifiedRecently && verifiedLabel && (
+        <span class="t2-eyebrow-chip">Updated {verifiedLabel}</span>
+      )}
+      <span class="t2-eyebrow-chip t2-eyebrow-accent">Category</span>
+      <span class="t2-eyebrow-trust">Editorial only, no paid placements</span>
+    </div>
+
     <!-- Hero -->
     <header class="t2-cat-hero" data-pagefind-ignore>
       <div class="t2-cat-hero-icon" aria-hidden="true">{emoji}</div>
@@ -108,13 +133,12 @@ const rankLabels = ['Best overall', 'Runner-up', 'Best value'];
         <h1 class="t2-title">{title}</h1>
         <div class="t2-cat-hero-meta">
           <span>{tools.length} tool{tools.length === 1 ? '' : 's'} ranked</span>
-          {verifiedLabel && (
+          {activeTools.length > 0 && (
             <>
               <span aria-hidden="true" class="t2-meta-dot">·</span>
-              <span>
-                <span class="t2-cat-verified-tick" aria-hidden="true">✓</span>
-                Updated {verifiedLabel}
-              </span>
+              <span class="tabular-nums">Avg {avgScore}/10</span>
+              <span aria-hidden="true" class="t2-meta-dot">·</span>
+              <span class="tabular-nums">Top {topScore}/10</span>
             </>
           )}
         </div>

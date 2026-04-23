@@ -140,6 +140,36 @@ const tocHeadings = (headings ?? []).filter((h) => h.depth === 2).map((h) => ({ 
       <span class="t2-breadcrumb-current" aria-current="page">{title}</span>
     </nav>
 
+    <!-- Versus banner: dual-logo hero with a gradient divider and
+         inline scores. Magazine-cover moment that sets up the page
+         before the title + meta row. Only renders for 2-tool compares;
+         3+ tool compares skip straight to the title. -->
+    {tools.length === 2 && (
+      <div class="t2-vs-banner" data-pagefind-ignore>
+        <div class="t2-vs-side">
+          <a href={`/tools/${tools[0].slug}/`} class="t2-vs-logo">
+            <ToolLogo slug={tools[0].slug} title={tools[0].title} size={72} />
+          </a>
+          <span class="t2-vs-name">{tools[0].title}</span>
+          {overallScore(tools[0]) > 0 && (
+            <span class="t2-vs-score tabular-nums">{overallScore(tools[0])}<span class="t2-vs-score-slash">/10</span></span>
+          )}
+        </div>
+        <div class="t2-vs-divider" aria-hidden="true">
+          <span class="t2-vs-label">VS</span>
+        </div>
+        <div class="t2-vs-side">
+          <a href={`/tools/${tools[1].slug}/`} class="t2-vs-logo">
+            <ToolLogo slug={tools[1].slug} title={tools[1].title} size={72} />
+          </a>
+          <span class="t2-vs-name">{tools[1].title}</span>
+          {overallScore(tools[1]) > 0 && (
+            <span class="t2-vs-score tabular-nums">{overallScore(tools[1])}<span class="t2-vs-score-slash">/10</span></span>
+          )}
+        </div>
+      </div>
+    )}
+
     <!-- Hero -->
     <header class="t2-cmp-hero" data-pagefind-ignore>
       <h1 class="t2-title">{title}</h1>
@@ -157,6 +187,15 @@ const tocHeadings = (headings ?? []).filter((h) => h.depth === 2).map((h) => ({ 
             <span>
               <span class="t2-cat-verified-tick" aria-hidden="true">✓</span>
               Verified {verifiedLabel}
+            </span>
+          </>
+        )}
+        {winningTool && (
+          <>
+            <span aria-hidden="true" class="t2-meta-dot">·</span>
+            <span class="t2-cmp-winner-chip">
+              <span class="t2-cmp-winner-star" aria-hidden="true">★</span>
+              Editorial pick: {winningTool.title}
             </span>
           </>
         )}
