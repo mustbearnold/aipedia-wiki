@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$200+/month"
 status: active
 launched: 2023-01
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-04-23
+last_verified: 2026-04-23
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -99,7 +99,7 @@ The moats are narrow but real. The community val registry, the browser-first wor
 
 ## When to pick something else
 
-- **Complex full-stack apps:** [Bolt.new](/tools/bolt-new/), [v0](/tools/v0/), or traditional Vercel deployments.
+- **Complex full-stack apps:** [Bolt.new](/tools/bolt/), [v0](/tools/v0/), or traditional Vercel deployments.
 - **Python, Go, or non-JS runtimes:** Vercel Functions, Cloudflare Workers (Python beta), or AWS Lambda.
 - **Long-running compute:** Traditional cloud providers. Val Town caps execution per tier.
 - **Frontend-heavy projects:** [Cursor](/tools/cursor/) plus Vercel handle this cleanly.

@@ -1,12 +1,15 @@
 ---
+/**
+ * CompanyLayout - company profile pages. Redesigned April 23, 2026
+ * into .t2-canvas.
+ */
 import BaseLayout from './BaseLayout.astro';
 import ReadingProgress from '../components/ReadingProgress.astro';
-import Breadcrumb from '../components/Breadcrumb.astro';
 import BreadcrumbLD from '../components/seo/BreadcrumbLD.astro';
 import CompanyOrganizationLD from '../components/seo/CompanyOrganizationLD.astro';
-import TableOfContents from '../components/TableOfContents.astro';
 import ShareButtons from '../components/ShareButtons.astro';
 import FeedbackForm from '../components/FeedbackForm.astro';
+import ToolLogo from '../components/ToolLogo.astro';
 import { shortenPrice } from '../utils/shorten-price';
 
 interface ToolData {
@@ -66,15 +69,14 @@ function ctaRel(t: ToolData): string {
   return affUrl && affUrl.length > 0 ? 'sponsored noopener' : 'noopener';
 }
 
-const typeColors: Record<string, { bg: string; text: string; border: string; label: string }> = {
-  startup:  { bg: 'bg-[rgba(74,222,128,0.10)]', text: 'text-[var(--accent-success)]', border: 'border-[rgba(74,222,128,0.25)]', label: 'Startup' },
-  bigtech:  { bg: 'bg-[rgba(96,165,250,0.10)]', text: 'text-blue-400', border: 'border-[rgba(96,165,250,0.25)]', label: 'Big Tech' },
-  acquired: { bg: 'bg-[rgba(251,191,36,0.10)]', text: 'text-[var(--accent-warning)]', border: 'border-[rgba(251,191,36,0.25)]', label: 'Acquired' },
-  dead:     { bg: 'bg-[rgba(248,113,113,0.10)]', text: 'text-rose-400', border: 'border-[rgba(248,113,113,0.25)]', label: 'Discontinued' },
+const typePill: Record<string, { cls: string; label: string }> = {
+  startup:  { cls: 't2-company-type-startup',  label: 'Startup' },
+  bigtech:  { cls: 't2-company-type-bigtech',  label: 'Big Tech' },
+  acquired: { cls: 't2-company-type-acquired', label: 'Acquired' },
+  dead:     { cls: 't2-company-type-dead',     label: 'Discontinued' },
 };
-const typeStyle = typeColors[companyType] ?? typeColors.startup;
+const typeStyle = typePill[companyType] ?? typePill.startup;
 
-const breadcrumbItems = [{ label: 'Companies', href: '/companies/' }, { label: title }];
 const breadcrumbLdItems = [
   { name: 'Home', url: siteBase },
   { name: 'Companies', url: `${siteBase}companies/` },
@@ -85,79 +87,93 @@ const verifiedDate = lastVerified ? new Date(lastVerified) : null;
 const verifiedLabel = verifiedDate && !isNaN(verifiedDate.getTime())
   ? verifiedDate.toLocaleDateString('en-US', { month: 'short', year: 'numeric' })
   : null;
+
+const tocHeadings = (headings ?? []).filter((h) => h.depth === 2).map((h) => ({ slug: h.slug, text: h.text }));
 ---
 
 <BaseLayout title={seoTitle ?? title} description={description}>
   <ReadingProgress />
   <BreadcrumbLD items={breadcrumbLdItems} />
   <CompanyOrganizationLD name={title} description={description} founded={founded} hq={hq} pageUrl={`${siteBase}companies/${slug}/`} />
-  <Breadcrumb items={breadcrumbItems} />
 
-  <div class="lg:grid lg:grid-cols-[1fr_280px] lg:gap-8">
-    <div>
-      <div class="mb-5" data-pagefind-ignore>
-        <div class="flex items-center gap-3 flex-wrap mb-2">
-          <h1 class="text-2xl font-bold leading-tight m-0">{title}</h1>
-          <span class={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium border ${typeStyle.bg} ${typeStyle.text} ${typeStyle.border}`}>
-            {typeStyle.label}
-          </span>
-        </div>
-        <div class="flex items-center gap-x-3 gap-y-1 text-sm text-[var(--text-muted)] flex-wrap">
-          {founded && (<><span>Founded {founded}</span><span aria-hidden="true">·</span></>)}
-          {hq && (<><span>{hq}</span><span aria-hidden="true">·</span></>)}
-          {funding && (<><span>{funding} raised</span><span aria-hidden="true">·</span></>)}
-          {readingMinutes > 0 && (<><span>{readingMinutes} min read</span><span aria-hidden="true">·</span></>)}
-          {verifiedLabel && (
-            <span><span class="text-[var(--accent-success)]" aria-hidden="true">✓</span> Updated {verifiedLabel}</span>
-          )}
-        </div>
+  <div class="t2-canvas">
+    <nav class="t2-breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span aria-hidden="true">/</span>
+      <a href="/companies/">Companies</a>
+      <span aria-hidden="true">/</span>
+      <span class="t2-breadcrumb-current" aria-current="page">{title}</span>
+    </nav>
+
+    <header class="t2-article-hero" data-pagefind-ignore>
+      <div class="t2-article-title-row">
+        <h1 class="t2-title">{title}</h1>
+        <span class={`t2-company-type ${typeStyle.cls}`}>{typeStyle.label}</span>
       </div>
+      <div class="t2-article-byline">
+        {founded && (<><span>Founded {founded}</span><span aria-hidden="true" class="t2-meta-dot">·</span></>)}
+        {hq && (<><span>{hq}</span><span aria-hidden="true" class="t2-meta-dot">·</span></>)}
+        {funding && (<><span>{funding} raised</span><span aria-hidden="true" class="t2-meta-dot">·</span></>)}
+        {readingMinutes > 0 && (<><span>{readingMinutes} min read</span><span aria-hidden="true" class="t2-meta-dot">·</span></>)}
+        {verifiedLabel && (
+          <span><span class="t2-cat-verified-tick" aria-hidden="true">✓</span> Updated {verifiedLabel}</span>
+        )}
+      </div>
+    </header>
 
-      {keyProducts.length > 0 && (
-        <section class="not-prose mb-6" aria-label="Products">
-          <div class="text-[11px] font-semibold uppercase tracking-wider text-[var(--text-muted)] mb-2">Products by {title}</div>
-          <div class="grid sm:grid-cols-2 gap-2">
-            {keyProducts.map((t) => {
-              const score = overallScore(t);
-              const href = ctaHref(t);
-              const rel = ctaRel(t);
-              const label = ctaLabel(t);
-              return (
-                <div class="rounded-xl border border-[var(--border)] bg-[var(--bg-card)] p-4 flex flex-col gap-2">
-                  <div class="flex items-start justify-between gap-2">
-                    <a href={`/tools/${t.slug}/`} class="text-[15px] font-semibold text-[var(--text-primary)] hover:text-[var(--accent-primary)] no-underline">{t.title}</a>
-                    {score > 0 && (
-                      <span class="shrink-0 text-[12px] font-bold tabular-nums text-[var(--accent-primary)]">{score}<span class="text-[var(--text-muted)] font-normal">/10</span></span>
-                    )}
-                  </div>
-                  {t.tagline && (<div class="text-[12px] text-[var(--text-muted)] leading-snug">{t.tagline}</div>)}
-                  <div class="flex items-center gap-2 flex-wrap">
-                    {t.price_range && (<span class="text-[11px] text-[var(--text-muted)]" title={t.price_range}>{shortenPrice(t.price_range)}</span>)}
-                    {href && (
-                      <a href={href} target="_blank" rel={rel} class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md text-[11.5px] font-semibold text-[var(--text-secondary)] border border-[var(--border)] hover:border-[rgba(167,139,250,0.45)] hover:text-[var(--accent-primary)] no-underline" data-company-product-cta={t.slug}>
-                        {label} →
-                      </a>
-                    )}
-                  </div>
+    {keyProducts.length > 0 && (
+      <section class="t2-company-products" aria-label="Products">
+        <p class="t2-verdict-heading">Products by {title}</p>
+        <div class="t2-company-products-grid">
+          {keyProducts.map((t) => {
+            const score = overallScore(t);
+            const href = ctaHref(t);
+            const rel = ctaRel(t);
+            const label = ctaLabel(t);
+            return (
+              <div class="t2-company-product">
+                <a href={`/tools/${t.slug}/`} class="t2-company-product-title">
+                  <ToolLogo slug={t.slug} title={t.title} size={28} />
+                  <span>{t.title}</span>
+                  {score > 0 && (
+                    <span class="t2-company-product-score tabular-nums">
+                      {score}<span class="t2-company-product-score-slash">/10</span>
+                    </span>
+                  )}
+                </a>
+                {t.tagline && <div class="t2-company-product-tagline">{t.tagline}</div>}
+                <div class="t2-company-product-meta">
+                  {t.price_range && <span class="t2-company-product-price" title={t.price_range}>{shortenPrice(t.price_range)}</span>}
+                  {href && (
+                    <a href={href} target="_blank" rel={rel} class="t2-company-product-cta" data-company-product-cta={t.slug}>
+                      {label} <span class="t2-cta-arrow" aria-hidden="true">→</span>
+                    </a>
+                  )}
                 </div>
-              );
-            })}
-          </div>
-        </section>
-      )}
+              </div>
+            );
+          })}
+        </div>
+      </section>
+    )}
 
-      <article class="prose prose-invert prose-sm max-w-none wiki-prose">
+    <div class="t2-layout">
+      <article class="t2-prose">
         <slot />
+        <ShareButtons title={title} pageUrl={`${siteBase}companies/${slug}/`} />
+        <FeedbackForm toolName={title} />
       </article>
 
-      <ShareButtons title={title} pageUrl={`${siteBase}companies/${slug}/`} />
-      <FeedbackForm toolName={title} />
+      {tocHeadings.length > 0 && (
+        <aside class="t2-toc" aria-label="On this page">
+          <div class="t2-toc-label">On this page</div>
+          <ol class="t2-toc-list">
+            {tocHeadings.map((h) => (
+              <li><a href={`#${h.slug}`}>{h.text}</a></li>
+            ))}
+          </ol>
+        </aside>
+      )}
     </div>
-
-    <aside class="hidden lg:block">
-      <div class="sticky top-20 space-y-4">
-        <TableOfContents headings={headings} />
-      </div>
-    </aside>
   </div>
 </BaseLayout>

@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$8/month (add-ons) + $50/year commercial"
 status: active
 launched: 2020-03
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-04-23
+last_verified: 2026-04-23
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -108,8 +108,8 @@ The moat is data ownership and file portability. Every competing note tool locks
 - **Team collaboration or real-time editing:** [Notion AI](/tools/notion-ai/). Obsidian is single-user by design.
 - **Zero-config AI:** [Notion AI](/tools/notion-ai/) bundles models into the subscription. Obsidian requires API keys and plugin setup.
 - **Free single-document Q&A:** [NotebookLM](/tools/notebooklm/). Better for focused research sessions on specific source sets.
-- **Outliner-style notes:** [Logseq](/tools/logseq/). Similar local-first ethos with a block-level outliner interface.
-- **Polished mobile-first note-taking:** [Apple Notes](/tools/apple-notes/) or [Bear](/tools/bear/). Obsidian mobile is functional but less polished.
+- **Outliner-style notes:** Logseq. Similar local-first ethos with a block-level outliner interface.
+- **Polished mobile-first note-taking:** Apple Notes or Bear. Obsidian mobile is functional but less polished.
 
 ## Pricing
 

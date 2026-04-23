@@ -25,8 +25,12 @@ const newsSlugs = slugsIn(NEWS_DIR);
 
 const subdirs = ['tools', 'news', 'comparisons', 'use-cases', 'categories', 'reports', 'trends', 'companies', 'workflows', 'benchmarks', 'glossary'];
 
-const toolLinkRe = /\/tools\/([a-z0-9][a-z0-9-]*)\/?(?=[^a-z0-9-]|$)/g;
-const newsLinkRe = /\/news\/(\d{4}-\d{2}-\d{2}-[a-z0-9][a-z0-9-]*)\/?(?=[^a-z0-9-]|$)/g;
+// Match only first-party internal links, not embedded URLs (which carry
+// a scheme:// or a host before the path). The lookbehind rejects the
+// character immediately before /tools/ or /news/ if it is alphanumeric,
+// a dot, or a colon (e.g. "captions.ai/tools/" or "example.com:443/news/").
+const toolLinkRe = /(?<![a-zA-Z0-9.:])\/tools\/([a-z0-9][a-z0-9-]*)\/?(?=[^a-z0-9-]|$)/g;
+const newsLinkRe = /(?<![a-zA-Z0-9.:])\/news\/(\d{4}-\d{2}-\d{2}-[a-z0-9][a-z0-9-]*)\/?(?=[^a-z0-9-]|$)/g;
 
 const brokenTools = new Map();
 const brokenNews = new Map();

@@ -1,15 +1,12 @@
 ---
 /**
- * Enhanced article layout for "narrative" pages (trends, dead tools).
- * Adds sticky TOC sidebar, byline, share buttons, feedback form.
- * Use this instead of the plain ArticleLayout when the page has
- * markdown headings worth navigating.
+ * ArticlePlusLayout - narrative article pages (trends, dead-tool
+ * eulogies) with sticky TOC, byline, share, feedback. Redesigned
+ * April 23, 2026 into .t2-canvas.
  */
 import BaseLayout from './BaseLayout.astro';
-import Breadcrumb from '../components/Breadcrumb.astro';
 import BreadcrumbLD from '../components/seo/BreadcrumbLD.astro';
 import ArticleLD from '../components/seo/ArticleLD.astro';
-import TableOfContents from '../components/TableOfContents.astro';
 import ShareButtons from '../components/ShareButtons.astro';
 import FAQAccordionScript from '../components/FAQAccordionScript.astro';
 import FeedbackForm from '../components/FeedbackForm.astro';
@@ -43,15 +40,16 @@ const {
 
 const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
 
-const badgeColors: Record<string, string> = {
-  red: 'bg-[rgba(239,68,68,0.1)] text-red-400 border-[rgba(239,68,68,0.2)]',
-  green: 'bg-[rgba(74,222,128,0.1)] text-[var(--accent-success)] border-[rgba(74,222,128,0.2)]',
-  yellow: 'bg-[rgba(251,191,36,0.1)] text-[var(--accent-warning)] border-[rgba(251,191,36,0.2)]',
-  blue: 'bg-[rgba(96,165,250,0.1)] text-blue-400 border-[rgba(96,165,250,0.2)]',
-  purple: 'bg-[rgba(167,139,250,0.1)] text-[var(--accent-primary)] border-[rgba(167,139,250,0.2)]',
-  gray: 'bg-[rgba(156,163,175,0.1)] text-gray-400 border-[rgba(156,163,175,0.2)]',
-};
-const badgeClass = badge ? (badgeColors[badge.color] ?? badgeColors.gray) : '';
+const badgeClass = badge
+  ? ({
+      red: 't2-badge-red',
+      green: 't2-badge-green',
+      yellow: 't2-badge-yellow',
+      blue: 't2-badge-blue',
+      purple: 't2-badge-purple',
+      gray: 't2-badge-gray',
+    }[badge.color] ?? 't2-badge-gray')
+  : '';
 
 const breadcrumbLdItems = breadcrumbs
   ? [
@@ -65,14 +63,10 @@ const breadcrumbLdItems = breadcrumbs
 
 const verifiedDate = lastVerified ? new Date(lastVerified) : null;
 const verifiedIsValid = verifiedDate && !isNaN(verifiedDate.getTime());
-// Full precise date like "April 17, 2026" for the on-page byline. Readers
-// who want the exact verification date should see it, not a truncated
-// "Apr 2026." ISO for <time datetime=""> comes from the raw string.
 const verifiedLabel = verifiedIsValid
   ? verifiedDate!.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })
   : null;
 const verifiedIso = verifiedIsValid ? verifiedDate!.toISOString().split('T')[0] : null;
-// Relative distance shown in parens for quick orientation ("(2 days ago)").
 function relativeDays(d: Date): string {
   const now = new Date();
   const days = Math.floor((now.getTime() - d.getTime()) / 86400000);
@@ -85,6 +79,8 @@ function relativeDays(d: Date): string {
   return `${Math.round(days / 365)} years ago`;
 }
 const verifiedRelative = verifiedIsValid ? relativeDays(verifiedDate!) : null;
+
+const tocHeadings = (headings ?? []).filter((h) => h.depth === 2).map((h) => ({ slug: h.slug, text: h.text }));
 ---
 
 <BaseLayout title={seoTitle ?? title} description={description} ogImage={ogImage}>
@@ -99,50 +95,76 @@ const verifiedRelative = verifiedIsValid ? relativeDays(verifiedDate!) : null;
     articleSection={articleSection}
     wordCount={readingMinutes ? Math.round(readingMinutes * 230) : undefined}
   />
-  {breadcrumbs && <Breadcrumb items={breadcrumbs} />}
 
-  <div class="lg:grid lg:grid-cols-[1fr_280px] lg:gap-8">
-    <div>
-      <div class="mb-5" data-pagefind-ignore>
-        <div class="flex items-center gap-3 flex-wrap mb-2">
-          <h1 class="text-2xl font-bold leading-tight m-0">{title}</h1>
-          {badge && (
-            <span class={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium border ${badgeClass}`}>
-              {badge.text}
-            </span>
-          )}
-        </div>
-        <div class="flex items-center gap-x-3 gap-y-1 text-sm text-[var(--text-muted)] flex-wrap">
-          <span>By <span class="text-[var(--text-secondary)]">aipedia.wiki Editorial</span></span>
-          {readingMinutes > 0 && (<><span aria-hidden="true">·</span><span>{readingMinutes} min read</span></>)}
-          {metaExtra && (<><span aria-hidden="true">·</span><span>{metaExtra}</span></>)}
-          {verifiedLabel && (
-            <>
-              <span aria-hidden="true">·</span>
-              <span>
-                <span class="text-[var(--accent-success)]" aria-hidden="true">✓</span> Updated
-                {' '}
-                <time datetime={verifiedIso!} title={`Verified ${verifiedLabel}`}>{verifiedLabel}</time>
-                {verifiedRelative && <span class="text-[var(--text-muted)]"> ({verifiedRelative})</span>}
-              </span>
-            </>
-          )}
-        </div>
+  <div class="t2-canvas">
+    {breadcrumbs && (
+      <nav class="t2-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        {breadcrumbs.map((b, i) => (
+          <>
+            <span aria-hidden="true">/</span>
+            {b.href && i < breadcrumbs.length - 1 ? (
+              <a href={b.href}>{b.label}</a>
+            ) : (
+              <span class="t2-breadcrumb-current" aria-current="page">{b.label}</span>
+            )}
+          </>
+        ))}
+      </nav>
+    )}
+
+    <header class="t2-article-hero" data-pagefind-ignore>
+      <div class="t2-article-title-row">
+        <h1 class="t2-title">{title}</h1>
+        {badge && <span class={`t2-article-badge ${badgeClass}`.trim()}>{badge.text}</span>}
       </div>
+      <div class="t2-article-byline">
+        <span>By <span class="t2-article-author">aipedia.wiki Editorial</span></span>
+        {readingMinutes > 0 && (
+          <>
+            <span aria-hidden="true" class="t2-meta-dot">·</span>
+            <span>{readingMinutes} min read</span>
+          </>
+        )}
+        {metaExtra && (
+          <>
+            <span aria-hidden="true" class="t2-meta-dot">·</span>
+            <span>{metaExtra}</span>
+          </>
+        )}
+        {verifiedLabel && (
+          <>
+            <span aria-hidden="true" class="t2-meta-dot">·</span>
+            <span>
+              <span class="t2-cat-verified-tick" aria-hidden="true">✓</span> Updated
+              {' '}
+              <time datetime={verifiedIso!} title={`Verified ${verifiedLabel}`}>{verifiedLabel}</time>
+              {verifiedRelative && <span class="t2-article-verified-rel"> ({verifiedRelative})</span>}
+            </span>
+          </>
+        )}
+      </div>
+    </header>
 
-      <article class="prose prose-invert prose-sm max-w-none wiki-prose">
+    <div class="t2-layout">
+      <article class="t2-prose">
         <slot />
+
+        <FAQAccordionScript />
+        <ShareButtons title={title} pageUrl={pageUrl} />
+        <FeedbackForm toolName={title} />
       </article>
 
-      <FAQAccordionScript />
-      <ShareButtons title={title} pageUrl={pageUrl} />
-      <FeedbackForm toolName={title} />
+      {tocHeadings.length > 0 && (
+        <aside class="t2-toc" aria-label="On this page">
+          <div class="t2-toc-label">On this page</div>
+          <ol class="t2-toc-list">
+            {tocHeadings.map((h) => (
+              <li><a href={`#${h.slug}`}>{h.text}</a></li>
+            ))}
+          </ol>
+        </aside>
+      )}
     </div>
-
-    <aside class="hidden lg:block">
-      <div class="sticky top-20 space-y-4">
-        <TableOfContents headings={headings} />
-      </div>
-    </aside>
   </div>
 </BaseLayout>

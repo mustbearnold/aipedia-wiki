@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$65/user/month"
 status: active
 launched: 2017-01
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-04-23
+last_verified: 2026-04-23
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -42,7 +42,7 @@ Descript is the transcript-first audio and video editor built by Descript Inc., 
 
 > **Pick Descript when post-production is the bottleneck on spoken-word content.** Podcast editors, YouTube talking-head creators, and course producers collapse hours of waveform scrubbing into text edits. Overdub and Studio Sound handle the fix-a-flub and denoise passes that otherwise force a re-record.
 >
-> **Skip it for multi-cam productions, color grading, or VFX-heavy work.** Premiere Pro and DaVinci Resolve still win there. Skip it for remote recording sessions: [Riverside](/tools/riverside/) captures cleaner source material, and Descript is the editor downstream.
+> **Skip it for multi-cam productions, color grading, or VFX-heavy work.** Premiere Pro and DaVinci Resolve still win there. Skip it for remote recording sessions: Riverside captures cleaner source material, and Descript is the editor downstream.
 >
 > **Who pays which tier:** Free for evaluation (60 minutes, 100 credits, watermarked). Hobbyist $24/mo for occasional solo creators. Creator $35/mo for most working podcasters and YouTubers (30 hours, 800 credits, 4K export). Business $65/user/mo for teams with admin and brand controls. Enterprise for SSO and custom onboarding.
 
@@ -80,7 +80,7 @@ Collaboration runs through shared projects with real-time editing and comments. 
 
 ## When to pick something else
 
-- **Remote recording sessions with separate per-speaker tracks:** [Riverside](/tools/riverside/) captures cleaner source. Use Descript as the editor downstream.
+- **Remote recording sessions with separate per-speaker tracks:** Riverside captures cleaner source. Use Descript as the editor downstream.
 - **Higher-fidelity voice cloning for narration or character work:** [ElevenLabs](/tools/elevenlabs/). Overdub is optimized for fix-a-flub, not long-form synthesis.
 - **Multi-camera productions, color grading, VFX:** Premiere Pro or DaVinci Resolve. Descript is not a professional NLE.
 - **Short-form vertical video with gaze correction and captions as the core workflow:** [Captions](/tools/captions/).
@@ -102,7 +102,7 @@ Subscription pricing via [descript.com/pricing](https://www.descript.com/pricing
 
 ## Against the alternatives
 
-| | Descript (Creator) | [Riverside](/tools/riverside/) | Premiere Pro | [ElevenLabs](/tools/elevenlabs/) |
+| | Descript (Creator) | Riverside | Premiere Pro | [ElevenLabs](/tools/elevenlabs/) |
 |---|---|---|---|---|
 | **Primary workflow** | Transcript-driven editing | Remote recording | Timeline NLE | Voice synthesis |
 | **Voice cloning** | Overdub (fix-a-flub) | None | None | **Highest fidelity** |
@@ -141,7 +141,7 @@ Overdub is Descript's voice cloning for typed fixes. It trains on clean audio sa
 Yes on Creator and above. 4K import and export are supported with proxy editing. Complex color grading and VFX still require DaVinci Resolve or Premiere Pro.
 
 **How does Descript compare to Riverside?**
-Different roles in the same pipeline. [Riverside](/tools/riverside/) captures cleaner remote recordings with per-speaker tracks. Descript is the editor downstream. Many podcasters run both.
+Different roles in the same pipeline. Riverside captures cleaner remote recordings with per-speaker tracks. Descript is the editor downstream. Many podcasters run both.
 
 **What does Studio Sound actually do?**
 One-click noise reduction, compression, and EQ. It lifts mobile and untreated-room recordings into broadcast quality. Each application costs roughly 10 credits from the plan's monthly pool.

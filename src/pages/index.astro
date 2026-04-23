@@ -13,14 +13,17 @@ const comparisons = await getCollection('comparisons');
 const categories = await getCollection('categories');
 const newsEntries = await getCollection('news');
 
-// Latest news: used in the freshness bar above the hero. Sort by date desc, take most recent.
-const latestNews = newsEntries
+// Latest news: used in the freshness bar above the hero. Sort by date desc.
+// Show top 3 in a rotating ticker for more surface area (was single item).
+const latestNewsList = newsEntries
   .map(n => ({
     slug: n.data.slug || n.id.replace(/\.md$/, ''),
     title: n.data.title,
     date: String(n.data.date).slice(0, 10),
   }))
-  .sort((a, b) => b.date.localeCompare(a.date))[0];
+  .sort((a, b) => b.date.localeCompare(a.date))
+  .slice(0, 3);
+const latestNews = latestNewsList[0] ?? null;
 
 // "N updates this fortnight" chip: count news items dated within the last 14 days.
 // Using news instead of tool last_updated because the stamping hook touches every
@@ -292,12 +295,23 @@ function shortDate(iso: string): string {
           </a>
         </>
       )}
-      {latestNews && (
-        <a href={`/news/${latestNews.slug}/`} class="p2-freshness-latest no-underline" title={latestNews.title}>
+      {latestNewsList.length > 0 && (
+        <div class="p2-freshness-ticker" aria-label="Latest news" data-pagefind-ignore>
           <span class="p2-freshness-latest-label">Latest:</span>
-          <span class="p2-freshness-latest-title">{latestNews.title}</span>
-          <span class="p2-freshness-latest-arrow" aria-hidden="true">&rarr;</span>
-        </a>
+          <div class="p2-freshness-ticker-track">
+            {latestNewsList.map((n, i) => (
+              <a
+                href={`/news/${n.slug}/`}
+                class={`p2-freshness-ticker-item no-underline ${i === 0 ? 'is-active' : ''}`.trim()}
+                data-ticker-index={i}
+                title={n.title}
+              >
+                <span class="p2-freshness-latest-title">{n.title}</span>
+                <span class="p2-freshness-latest-arrow" aria-hidden="true">&rarr;</span>
+              </a>
+            ))}
+          </div>
+        </div>
       )}
     </div>
   )}
@@ -1072,6 +1086,45 @@ function shortDate(iso: string): string {
     initCategoryFilter();
     // Re-initialise after every view transition (the homepage DOM gets re-rendered)
     document.addEventListener('astro:page-load', initCategoryFilter);
+
+    // ---- Latest news ticker rotation ---------------------------------
+    // Cycles the 3 most recent news headlines in the freshness bar. Pauses
+    // on hover, respects prefers-reduced-motion, and cleans up on
+    // astro:before-preparation so we don't leak intervals across
+    // view-transition nav.
+    function initNewsTicker() {
+      const track = document.querySelector('.p2-freshness-ticker-track');
+      if (!track) return;
+      const items = Array.from(track.querySelectorAll('.p2-freshness-ticker-item'));
+      if (items.length <= 1) return;
+      const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduced) return;
+
+      let idx = 0;
+      let timer = null;
+      function step() {
+        items[idx].classList.remove('is-active');
+        idx = (idx + 1) % items.length;
+        items[idx].classList.add('is-active');
+      }
+      function start() {
+        if (timer) return;
+        timer = setInterval(step, 5000);
+      }
+      function stop() {
+        if (!timer) return;
+        clearInterval(timer);
+        timer = null;
+      }
+      track.addEventListener('mouseenter', stop);
+      track.addEventListener('mouseleave', start);
+      track.addEventListener('focusin', stop);
+      track.addEventListener('focusout', start);
+      document.addEventListener('astro:before-preparation', stop, { once: true });
+      start();
+    }
+    initNewsTicker();
+    document.addEventListener('astro:page-load', initNewsTicker);
   </script>
 
 <!-- =========================================================
@@ -1252,6 +1305,45 @@ function shortDate(iso: string): string {
 .p2-freshness-count { color: var(--p2-muted); transition: color 120ms ease; }
 .p2-freshness-count:hover { color: var(--p2-fg); }
 .p2-freshness-count span { color: var(--p2-fg); }
+/* Ticker: rotates through up to 3 latest news items. */
+.p2-freshness-ticker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  flex: 1 1 auto;
+  max-width: 100%;
+}
+@media (min-width: 768px) { .p2-freshness-ticker { max-width: 60%; } }
+.p2-freshness-ticker-track {
+  position: relative;
+  min-width: 0;
+  flex: 1 1 auto;
+  overflow: hidden;
+  height: 1.35em;
+}
+.p2-freshness-ticker-item {
+  position: absolute;
+  inset: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  color: var(--p2-muted);
+  transition: opacity 240ms ease, transform 240ms ease;
+  opacity: 0;
+  transform: translateY(4px);
+  pointer-events: none;
+}
+.p2-freshness-ticker-item.is-active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.p2-freshness-ticker-item:hover .p2-freshness-latest-title {
+  color: var(--p2-fg);
+}
+
 .p2-freshness-latest {
   display: inline-flex;
   align-items: center;

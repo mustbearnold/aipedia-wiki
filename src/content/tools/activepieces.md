@@ -13,8 +13,8 @@ pricing_model: open-source
 price_range: Free self-host / $5 per active flow (cloud)
 status: active
 launched: 2022-06
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-04-23
+last_verified: 2026-04-23
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -108,7 +108,7 @@ The moats are thin. Code is MIT-licensed, so any competitor can fork. Differenti
 - **Broadest connector catalog:** [Zapier](/tools/zapier/) ships 7,000+ integrations. Activepieces lists ~400.
 - **Managed cloud with deep node library:** [n8n](/tools/n8n/) offers a similar open-source story plus cloud. Self-host n8n if the team prefers Node-flavored workflows over drag-and-drop.
 - **Visual workflow builder with generous free tier:** [Make](/tools/make/) remains the best pick for non-technical users who will never self-host.
-- **Enterprise SSO, SCIM, audit out of the box without a custom contract:** Zapier Enterprise or [Workato](/tools/workato/).
+- **Enterprise SSO, SCIM, audit out of the box without a custom contract:** Zapier Enterprise or Workato.
 - **Coding the agent logic directly:** LangGraph or the MCP SDK. Activepieces is a GUI-first product.
 
 ## Pricing

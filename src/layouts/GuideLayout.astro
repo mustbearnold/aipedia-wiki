@@ -1,13 +1,16 @@
 ---
+/**
+ * GuideLayout - multi-tool use-case / "best of" guide pages. Redesigned
+ * April 23, 2026 into .t2-canvas.
+ */
 import BaseLayout from './BaseLayout.astro';
-import Breadcrumb from '../components/Breadcrumb.astro';
 import BreadcrumbLD from '../components/seo/BreadcrumbLD.astro';
 import ItemListLD from '../components/seo/ItemListLD.astro';
 import ArticleLD from '../components/seo/ArticleLD.astro';
-import TableOfContents from '../components/TableOfContents.astro';
 import ShareButtons from '../components/ShareButtons.astro';
 import FAQAccordionScript from '../components/FAQAccordionScript.astro';
 import FeedbackForm from '../components/FeedbackForm.astro';
+import ToolLogo from '../components/ToolLogo.astro';
 
 interface ToolData {
   slug: string;
@@ -17,6 +20,7 @@ interface ToolData {
   url?: string;
   price_range?: string;
   pricing_model?: string;
+  status?: string;
   affiliate?: { link?: string | null } | null;
   scores?: { utility?: number; value?: number; moat?: number; longevity?: number };
   tagline?: string;
@@ -34,31 +38,17 @@ interface Props {
 }
 
 const {
-  title,
-  seoTitle,
-  description = '',
-  slug,
-  tools,
-  headings = [],
-  lastVerified,
-  readingMinutes = 0,
+  title, seoTitle, description = '',
+  slug, tools, headings = [],
+  lastVerified, readingMinutes = 0,
 } = Astro.props;
 
 const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
-
-const CATEGORY_EMOJI: Record<string, string> = {
-  'ai-chatbots': '\u{1F4AC}', 'ai-voice': '\u{1F399}\uFE0F', 'ai-video': '\u{1F3AC}',
-  'ai-coding': '\u{1F4BB}', 'ai-image': '\u{1F3A8}', 'ai-writing': '\u270D\uFE0F',
-  'ai-automation': '\u26A1', 'ai-seo': '\u{1F4C8}', 'ai-design': '\u{1F58C}\uFE0F',
-  'ai-search': '\u{1F50D}', 'ai-notes': '\u{1F4DD}', 'ai-music': '\u{1F3B5}',
-  'ai-presentation': '\u{1F4CA}', 'ai-research': '\u{1F52C}',
-};
 
 function overallScore(t: ToolData): number {
   const s = t.scores ?? {};
   return Math.round((((s.utility ?? 0) + (s.value ?? 0) + (s.moat ?? 0) + (s.longevity ?? 0)) / 4) * 10) / 10;
 }
-
 function ctaLabel(t: ToolData): string {
   const model = (t.pricing_model ?? '').toLowerCase();
   const price = (t.price_range ?? '').toLowerCase();
@@ -77,13 +67,8 @@ function ctaRel(t: ToolData): string {
   return affUrl && affUrl.length > 0 ? 'sponsored noopener' : 'noopener';
 }
 
-// Rank by overall score descending.
 const rankedTools = [...tools].sort((a, b) => overallScore(b) - overallScore(a));
 
-const breadcrumbItems = [
-  { label: 'Guides', href: '/guides/' },
-  { label: title },
-];
 const breadcrumbLdItems = [
   { name: 'Home', url: siteBase },
   { name: 'Guides', url: `${siteBase}guides/` },
@@ -102,6 +87,8 @@ const itemListItems = rankedTools.map((t) => ({
   score: overallScore(t) || undefined,
   status: t.status,
 }));
+
+const tocHeadings = (headings ?? []).filter((h) => h.depth === 2).map((h) => ({ slug: h.slug, text: h.text }));
 ---
 
 <BaseLayout title={seoTitle ?? title} description={description}>
@@ -119,88 +106,96 @@ const itemListItems = rankedTools.map((t) => ({
     articleSection="Use Cases"
     about={rankedTools.map((t) => t.title)}
   />
-  <Breadcrumb items={breadcrumbItems} />
 
-  <div class="lg:grid lg:grid-cols-[1fr_280px] lg:gap-8">
-    <div>
-      <div class="mb-5" data-pagefind-ignore>
-        <h1 class="text-2xl font-bold leading-tight m-0 mb-2">{title}</h1>
-        <div class="flex items-center gap-x-3 gap-y-1 text-sm text-[var(--text-muted)] flex-wrap">
-          <span>By <span class="text-[var(--text-secondary)]">aipedia.wiki Editorial</span></span>
-          {readingMinutes > 0 && (<><span aria-hidden="true">·</span><span>{readingMinutes} min read</span></>)}
-          {verifiedLabel && (
-            <>
-              <span aria-hidden="true">·</span>
-              <span><span class="text-[var(--accent-success)]" aria-hidden="true">✓</span> Verified {verifiedLabel}</span>
-            </>
-          )}
-        </div>
+  <div class="t2-canvas">
+    <nav class="t2-breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span aria-hidden="true">/</span>
+      <a href="/guides/">Guides</a>
+      <span aria-hidden="true">/</span>
+      <span class="t2-breadcrumb-current" aria-current="page">{title}</span>
+    </nav>
+
+    <header class="t2-article-hero" data-pagefind-ignore>
+      <h1 class="t2-title">{title}</h1>
+      <div class="t2-article-byline">
+        <span>By <span class="t2-article-author">aipedia.wiki Editorial</span></span>
+        {readingMinutes > 0 && (
+          <>
+            <span aria-hidden="true" class="t2-meta-dot">·</span>
+            <span>{readingMinutes} min read</span>
+          </>
+        )}
+        {verifiedLabel && (
+          <>
+            <span aria-hidden="true" class="t2-meta-dot">·</span>
+            <span><span class="t2-cat-verified-tick" aria-hidden="true">✓</span> Verified {verifiedLabel}</span>
+          </>
+        )}
       </div>
+    </header>
 
-      {rankedTools.length > 0 && (
-        <section class="not-prose mb-6" aria-label="Ranked picks">
-          <div class="text-[11px] font-semibold uppercase tracking-wider text-[var(--text-muted)] mb-2 px-1">
-            Our ranked picks
-          </div>
-          <ol class="list-none p-0 m-0 space-y-2">
-            {rankedTools.map((t, i) => {
-              const score = overallScore(t);
-              const emoji = CATEGORY_EMOJI[t.category ?? ''] ?? '\u{1F527}';
-              const href = ctaHref(t);
-              const rel = ctaRel(t);
-              const label = ctaLabel(t);
-              const isTop = i === 0;
-              return (
-                <li class={`rounded-xl border ${isTop ? 'border-[rgba(167,139,250,0.45)] bg-[rgba(167,139,250,0.06)]' : 'border-[var(--border)] bg-[var(--bg-card)]'} p-4 flex items-center gap-3 flex-wrap`}>
-                  <div class="shrink-0 w-8 h-8 rounded-lg flex items-center justify-center text-[13px] font-bold text-[var(--text-secondary)] bg-[var(--bg-card-hover)] border border-[var(--border)] tabular-nums">
-                    {i + 1}
-                  </div>
-                  <span class="text-lg shrink-0" aria-hidden="true">{emoji}</span>
-                  <div class="flex-1 min-w-0">
-                    <a href={`/tools/${t.slug}/`} class="text-[15px] font-semibold text-[var(--text-primary)] hover:text-[var(--accent-primary)] no-underline">
-                      {t.title}
-                    </a>
-                    {t.price_range && (
-                      <div class="text-[12px] text-[var(--text-muted)] mt-0.5">{t.price_range}</div>
-                    )}
-                  </div>
-                  {score > 0 && (
-                    <span class="shrink-0 text-[13px] font-bold tabular-nums text-[var(--accent-primary)]">
-                      {score}<span class="text-[var(--text-muted)] font-normal">/10</span>
-                    </span>
-                  )}
-                  {href !== '#' && (
-                    <a
-                      href={href}
-                      target="_blank"
-                      rel={rel}
-                      class="shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-[12.5px] font-semibold bg-[var(--accent-primary)] text-[#0b0a14] hover:brightness-110 no-underline"
-                      data-guide-cta={t.slug}
-                    >
-                      {label}
-                      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-                    </a>
-                  )}
-                </li>
-              );
-            })}
-          </ol>
-        </section>
-      )}
+    {rankedTools.length > 0 && (
+      <section class="t2-guide-picks" aria-label="Ranked picks">
+        <p class="t2-verdict-heading">Ranked picks</p>
+        <ol class="t2-guide-list">
+          {rankedTools.map((t, i) => {
+            const score = overallScore(t);
+            const href = ctaHref(t);
+            const rel = ctaRel(t);
+            const label = ctaLabel(t);
+            const isTop = i === 0;
+            return (
+              <li class={`t2-guide-row ${isTop ? 't2-guide-row-top' : ''}`.trim()}>
+                <div class="t2-guide-row-rank tabular-nums">{i + 1}</div>
+                <ToolLogo slug={t.slug} title={t.title} size={32} />
+                <div class="t2-guide-row-main">
+                  <a href={`/tools/${t.slug}/`} class="t2-guide-row-title">{t.title}</a>
+                  {t.price_range && <div class="t2-guide-row-price">{t.price_range}</div>}
+                </div>
+                {score > 0 && (
+                  <span class="t2-guide-row-score tabular-nums">
+                    {score}<span class="t2-guide-row-score-slash">/10</span>
+                  </span>
+                )}
+                {href !== '#' && (
+                  <a
+                    href={href}
+                    target="_blank"
+                    rel={rel}
+                    class="t2-cta t2-cta-primary t2-guide-row-cta"
+                    data-guide-cta={t.slug}
+                  >
+                    {label}
+                    <span class="t2-cta-arrow" aria-hidden="true">→</span>
+                  </a>
+                )}
+              </li>
+            );
+          })}
+        </ol>
+      </section>
+    )}
 
-      <article class="prose prose-invert prose-sm max-w-none wiki-prose">
+    <div class="t2-layout">
+      <article class="t2-prose">
         <slot />
+
+        <FAQAccordionScript />
+        <ShareButtons title={title} pageUrl={`${siteBase}guides/${slug}/`} />
+        <FeedbackForm toolName={title} />
       </article>
 
-      <FAQAccordionScript />
-      <ShareButtons title={title} pageUrl={`${siteBase}guides/${slug}/`} />
-      <FeedbackForm toolName={title} />
+      {tocHeadings.length > 0 && (
+        <aside class="t2-toc" aria-label="On this page">
+          <div class="t2-toc-label">On this page</div>
+          <ol class="t2-toc-list">
+            {tocHeadings.map((h) => (
+              <li><a href={`#${h.slug}`}>{h.text}</a></li>
+            ))}
+          </ol>
+        </aside>
+      )}
     </div>
-
-    <aside class="hidden lg:block">
-      <div class="sticky top-20 space-y-4">
-        <TableOfContents headings={headings} />
-      </div>
-    </aside>
   </div>
 </BaseLayout>
