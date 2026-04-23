@@ -42,22 +42,6 @@ not_best_for:
 quick_answer: >-
   ChatGPT is the broadest AI assistant in a single subscription. Pick it for text, image gen, Codex coding agent, Operator mode, and the largest custom-GPT marketplace. Skip it for best-in-class reasoning (Claude Opus 4.7), Google Workspace depth (Gemini), or video generation.
 price_history:
-  - date: 2026-03-09
-    plan: "Acquisition"
-    price: "Promptfoo"
-    note: "OpenAI acquires Promptfoo, AI security testing platform. Feeds into OpenAI Frontier. Open-source license preserved."
-  - date: 2026-03-31
-    plan: "Company funding"
-    price: "$122B round / $852B valuation"
-    note: "Largest private raise in history. Anchored by SoftBank, Amazon, Nvidia, a16z, D. E. Shaw. $3B from retail investors."
-  - date: 2026-04-09
-    plan: "Pro"
-    price: "$100/mo"
-    note: "New $100 Pro tier launched with 5x Codex (10x promo to May 31 2026)"
-  - date: 2026-04-14
-    plan: "Acquisition"
-    price: "Hiro Finance"
-    note: "OpenAI acquires personal finance startup (acqui-hire). Hiro product sunsets April 20; second fintech buy after Roi."
   - date: 2026-04-15
     plan: "Plus"
     price: "$20/mo"

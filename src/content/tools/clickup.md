@@ -58,10 +58,6 @@ price_history:
     plan: "ClickUp Brain"
     price: "$9/user/mo"
     note: "AI add-on. Unlimited assistant, @Brain Agent, premium model routing (ChatGPT/Gemini/Claude), 1,500 AI Super Credits."
-  - date: 2026-04-19
-    plan: "Everything AI"
-    price: "$28/user/mo"
-    note: "Full AI bundle: ambient answers, talk-to-text, notetaker, image gen, AI fields, AI automations & dashboards, 5,000 AI Super Credits."
 ---
 
 # ClickUp

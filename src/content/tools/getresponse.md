@@ -58,10 +58,6 @@ price_history:
     plan: "Creator"
     price: "$69/mo ($56.58 annual)"
     note: "Most Popular tier. Adds webinars (100 attendees), website builder, course creator (500 students). 18% annual savings."
-  - date: 2026-04-19
-    plan: "Enterprise"
-    price: "Custom"
-    note: "Custom pricing with demo. 500-attendee webinars, 40K-student course creator, white-label options, dedicated success manager."
 ---
 
 # GetResponse

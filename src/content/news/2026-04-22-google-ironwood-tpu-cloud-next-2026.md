@@ -8,8 +8,8 @@ summary: "Google's Cloud Next 2026 keynote announced Ironwood, the seventh-gener
 affects: [gemini, claude]
 categories: [ai-infrastructure, ai-business]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-22
-last_verified: 2026-04-22
+last_updated: 2026-04-23
+last_verified: 2026-04-23
 sources:
   - url: "https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/ironwood-tpu-age-of-inference/"
     title: "Ironwood: The first Google TPU for the age of inference - Google Blog"
@@ -20,6 +20,8 @@ sources:
 ---
 
 **Google** unveiled **Ironwood**, its seventh-generation TPU, at **Cloud Next 2026** on April 22, 2026. It is the first Google TPU architected specifically for inference rather than training.
+
+> **Generational context:** Ironwood (TPU v7) is GA today. One day later on Cloud Next Day 2, Google revealed the **8th-gen TPU 8t (training) and TPU 8i (inference)** as the follow-on. See [TPU 8t/8i coverage](/news/2026-04-23-google-tpu-8t-8i-cloud-next-day2/). Ironwood remains the production inference chip; the 8th-gen ships progressively through 2026-2027.
 
 ## The chip
 

@@ -41,10 +41,6 @@ not_best_for:
 quick_answer: >-
   Grok is xAI's AI assistant, now SpaceX-owned after the February 2026 $1.25T merger. Grok 4.20 Beta's 4-agent architecture cut hallucinations to ~4.2% with a 2M token context. Pick for real-time X data access (unreplicable); skip for predictable governance or strongest general reasoning.
 price_history:
-  - date: 2026-02-02
-    plan: "Ownership"
-    price: "$1.25T merger"
-    note: "SpaceX acquired xAI in all-stock deal. SpaceX $1T + xAI $250B."
   - date: 2026-03-16
     plan: "TTS API"
     price: "$4.20/M chars"

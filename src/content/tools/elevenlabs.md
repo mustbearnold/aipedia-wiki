@@ -45,22 +45,10 @@ not_best_for:
 quick_answer: >-
   ElevenLabs is the market-leading AI voice generation platform as of April 2026. Pick it for top-quality narration, multilingual content in 70+ languages, or real-time voice agents via Flash v2.5. Skip for self-hosted weights or rock-bottom API pricing.
 price_history:
-  - date: 2026-02-01
-    plan: "Eleven v3"
-    price: "GA"
-    note: "v3 exited alpha to general availability; recommended for narration and audiobooks"
-  - date: 2026-03-16
-    plan: "Competitive landscape"
-    price: "Grok TTS API launched"
-    note: "xAI shipped Grok TTS at $4.20/1M chars with 5 voices + 20+ languages. First major TTS-API competitor to ElevenLabs since 2023. ElevenLabs still leads on voice cloning depth + language breadth + expressiveness, but the pricing floor moved."
   - date: 2026-04-15
     plan: "Starter"
     price: "$6/mo"
     note: "Starter plan verified at $6/mo (30K credits + commercial rights + IVC)"
-  - date: 2026-04-15
-    plan: "Business"
-    price: "$990/mo"
-    note: "Verified, unchanged"
   - date: 2026-04-19
     plan: "Scale"
     price: "$299/mo (was $330)"

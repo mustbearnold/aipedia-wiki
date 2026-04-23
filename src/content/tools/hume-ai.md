@@ -57,14 +57,6 @@ price_history:
     plan: "Pro"
     price: "$70/mo"
     note: "1M TTS chars (~1,000 min), 1,200 min EVI, 3,000 projects, 10 concurrent connections."
-  - date: 2026-04-19
-    plan: "Business"
-    price: "$500/mo"
-    note: "10M TTS chars, 12,500 min EVI, 30 concurrent connections, 20,000 projects, 5 team seats."
-  - date: 2026-04-19
-    plan: "EVI versioning"
-    price: "EVI 3 / EVI 4 mini"
-    note: "Current production EVI models referenced in pricing: EVI 3 (full) and EVI 4 mini (smaller / faster). Overage billed at $0.04 to $0.07 per minute depending on plan."
 ---
 
 # Hume AI

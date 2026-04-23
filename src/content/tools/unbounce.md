@@ -58,10 +58,6 @@ price_history:
     plan: "Experiment"
     price: "$149/mo ($112 annual)"
     note: "Most Popular tier. Unlimited pages, 30K traffic/month, 3 users, 2 domains, unlimited A/B testing."
-  - date: 2026-04-19
-    plan: "Optimize"
-    price: "$249/mo ($187 annual)"
-    note: "50K traffic/month, 5 users, 3 domains, AI traffic optimization (Smart Traffic) included."
 ---
 
 # Unbounce

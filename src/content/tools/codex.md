@@ -43,14 +43,6 @@ not_best_for:
 quick_answer: >-
   Codex is OpenAI's agentic coding product. Works async in the cloud or locally via CLI and Codex Desktop. Best for fire-and-forget tasks, multi-file refactors, and teams already inside the OpenAI ecosystem. Bundled with ChatGPT Plus and up; Pro tiers get 5-20x Codex usage. Skip it if you need a Linux desktop GUI or want the tightest IDE daily driver (Cursor) or tightest terminal agent (Claude Code).
 price_history:
-  - date: 2025-05-01
-    plan: "Codex launch"
-    price: "Bundled in ChatGPT Plus"
-    note: "Initial launch as a cloud-async coding agent inside ChatGPT."
-  - date: 2026-02-01
-    plan: "Codex Desktop"
-    price: "Bundled"
-    note: "Standalone macOS desktop app launched February 2026."
   - date: 2026-04-02
     plan: "API-aligned billing"
     price: "Credits per MTok"

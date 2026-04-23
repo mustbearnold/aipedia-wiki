@@ -58,14 +58,6 @@ price_history:
     plan: "Pro"
     price: "$182/mo annual"
     note: "360 documents, 5 seats, AI Tracker (50 prompts/day), 5 brand workspaces, 200 pages tracked."
-  - date: 2026-04-19
-    plan: "Peace of Mind"
-    price: "$299/mo annual"
-    note: "Unlimited documents, 10 seats, AI Tracker (100 prompts/day), unlimited workspaces, 500 pages tracked."
-  - date: 2026-04-19
-    plan: "Full pricing rebuild"
-    price: "Old tiers retired"
-    note: "Previous tiers (Essential $79, Scale $175, Enterprise $999) replaced with five-tier ladder: Discovery $49, Standard $99, Pro $182, Peace of Mind $299, Enterprise custom. Keyword research now included across all paid tiers (historically required Ahrefs or Semrush pairing)."
 ---
 
 # Surfer SEO

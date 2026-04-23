@@ -58,10 +58,6 @@ price_history:
     plan: "Individual tiers"
     price: "~$15 to $25/mo annual"
     note: "Individual paid tiers cover private prezis, offline access, Prezi Video, and advanced features. Exact current monthly rates may vary with active promotions; re-verify against prezi.com/pricing before each major citation."
-  - date: 2026-04-19
-    plan: "Teams / Education / Business"
-    price: "Custom (quote)"
-    note: "Team tier with seat licensing, education tier discounted for students/teachers, Business tier with admin controls and analytics."
 ---
 
 # Prezi
