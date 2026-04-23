@@ -141,6 +141,61 @@ body:has(main .p3-canvas) {
   margin: 0 0 28px;
 }
 
+/* Trust line: three declarative beats, each with a tiny green
+   check-mark. Beats separated by vertical dividers on wider
+   viewports, stacked on mobile. Reads like credentials, not prose. */
+.p3-trustline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 14px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--p3-muted);
+  letter-spacing: -0.002em;
+}
+.p3-trust {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  white-space: nowrap;
+}
+.p3-trust-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: rgba(52, 211, 153, 0.14);
+  color: #34d399;
+  font-size: 10px;
+  font-weight: 800;
+  flex: none;
+  border: 1px solid rgba(52, 211, 153, 0.28);
+}
+.p3-trust-num {
+  font-weight: 700;
+  color: var(--p3-fg);
+  padding: 0 1px;
+}
+.p3-trust-sep {
+  display: inline-block;
+  width: 1px;
+  height: 14px;
+  background: var(--p3-line-strong);
+  opacity: 0.7;
+}
+@media (max-width: 640px) {
+  .p3-trustline {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 13.5px;
+  }
+  .p3-trust-sep { display: none; }
+}
+
 .p3-search {
   position: relative;
   display: flex;
@@ -344,22 +399,26 @@ body:has(main .p3-canvas) {
    Jump chips: primary destinations under the hero search.
    Replaces flat text links. Each chip has a tiny mono icon,
    a label, a live count, and an arrow affordance.
+
+   Layout: 2x2 grid aligned to the search bar width (560px).
+   Only goes 4-across on very wide viewports where the hero-left
+   column is big enough to fit every title without truncation.
    ========================================================= */
 .p3-jumps {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 8px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
   margin-top: 20px;
   max-width: 560px;
 }
-@media (min-width: 720px) {
-  .p3-jumps { grid-template-columns: repeat(4, 1fr); }
+@media (min-width: 1400px) {
+  .p3-jumps { grid-template-columns: repeat(4, minmax(0, 1fr)); max-width: 960px; }
 }
 .p3-jump {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 10px 12px;
+  gap: 12px;
+  padding: 12px 14px;
   border-radius: 12px;
   border: 1px solid var(--p3-line);
   background: var(--p3-surface);
@@ -416,22 +475,22 @@ body:has(main .p3-canvas) {
 .p3-jump-body {
   display: flex;
   flex-direction: column;
-  gap: 1px;
+  gap: 2px;
   min-width: 0;
   flex: 1;
 }
 .p3-jump-title {
-  font-size: 12.5px;
+  font-size: 13px;
   font-weight: 600;
   color: var(--p3-fg);
-  line-height: 1.2;
+  line-height: 1.25;
   letter-spacing: -0.005em;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 .p3-jump-count {
-  font-size: 10.5px;
+  font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.02em;
   color: var(--p3-subtle);
