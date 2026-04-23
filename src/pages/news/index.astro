@@ -773,26 +773,30 @@ const breadcrumbs = [
       gap: 10px;
     }
     .p3-newsdesk-card-date { font-size: 11px; color: var(--p3-subtle); }
+    /* Title exists for a11y, SEO, and image-fails-to-load fallback, but
+       the OG image above already carries the headline visually. Demoted
+       to caption-weight (13.5/600 + muted) so it doesn't fight the image. */
     .p3-newsdesk-card-title {
-      font-size: 15px;
-      font-weight: 700;
-      line-height: 1.28;
-      letter-spacing: -0.01em;
-      color: var(--p3-fg);
-      margin: 0;
-      display: -webkit-box;
-      -webkit-line-clamp: 3;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-    .p3-newsdesk-card:hover .p3-newsdesk-card-title { color: var(--p3-accent-text); }
-    .p3-newsdesk-card-summary {
-      font-size: 12.5px;
-      line-height: 1.5;
+      font-size: 13.5px;
+      font-weight: 600;
+      line-height: 1.35;
+      letter-spacing: -0.005em;
       color: var(--p3-muted);
       margin: 0;
       display: -webkit-box;
       -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .p3-newsdesk-card:hover .p3-newsdesk-card-title { color: var(--p3-accent-text); }
+    /* Summary becomes the primary body text for each card. */
+    .p3-newsdesk-card-summary {
+      font-size: 13px;
+      line-height: 1.5;
+      color: var(--p3-fg);
+      margin: 0;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
       overflow: hidden;
     }
