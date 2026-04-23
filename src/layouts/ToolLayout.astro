@@ -135,6 +135,40 @@ const launchedStr = f.launched ? String(f.launched).slice(0, 4) : '';
 const verifiedStr = f.last_verified
   ? (() => { const d = new Date(String(f.last_verified)); const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']; return `${months[d.getUTCMonth()]} ${d.getUTCFullYear()}`; })()
   : '';
+
+// Category rank + percentile. Surfaces "Top pick in {category}" for the
+// highest-scoring tool in a category and "#N in {category}" for the rest.
+// Based on the same score as the homepage rail, so the signals match.
+const categoryPeers = allTools
+  .filter(t => t.data.category === f.category && t.data.status !== 'dead' && t.data.status !== 'retired' && t.data.status !== 'acquired')
+  .map(t => {
+    const s = t.data.scores ?? {};
+    return {
+      slug: t.data.slug ?? t.id,
+      score: Math.round(((s.utility ?? 0) + (s.value ?? 0) + (s.moat ?? 0) + (s.longevity ?? 0)) / 4 * 10) / 10,
+    };
+  })
+  .sort((a, b) => b.score - a.score);
+const categorySize = categoryPeers.length;
+const categoryRank = categoryPeers.findIndex(p => p.slug === (f.slug ?? toolSlug)) + 1;
+// Top pick only if score ties or beats the highest, AND the tool is active.
+const isTopPick = f.status !== 'dead' && f.status !== 'retired' && f.status !== 'acquired' && categoryRank === 1 && overall >= 7.5;
+const isHighRank = categoryRank > 1 && categoryRank <= 3 && categorySize >= 6 && overall >= 7;
+const rankLabel = isTopPick
+  ? `Top pick in ${catLabel}`
+  : isHighRank ? `#${categoryRank} in ${catLabel}` : '';
+
+// "Verified" freshness badge. Anything verified within 30 days reads as
+// fresh; 30-90 days as recent; older is hidden so it doesn't read stale.
+function daysSince(v: unknown): number {
+  if (!v) return Infinity;
+  const d = new Date(String(v));
+  if (isNaN(d.getTime())) return Infinity;
+  return Math.floor((Date.now() - d.getTime()) / 86400000);
+}
+const verifiedDays = daysSince(f.last_verified);
+const isFreshVerified = verifiedDays <= 30;
+const isRecentVerified = verifiedDays > 30 && verifiedDays <= 90;
 ---
 
 <BaseLayout
@@ -170,6 +204,34 @@ const verifiedStr = f.last_verified
       <span aria-hidden="true">/</span>
       <span class="t2-breadcrumb-current" aria-current="page">{f.title}</span>
     </nav>
+
+    <!-- Editorial eyebrow row. Premium-product-page pattern: tiny live-dot
+         + verification state + category rank. Sits above the logo/title
+         block so visitors register "this is a current, scored, ranked
+         editorial entry" before the brand name. -->
+    <div class="t2-eyebrow" data-pagefind-ignore>
+      {isFreshVerified && (
+        <span class="t2-eyebrow-chip t2-eyebrow-fresh">
+          <span class="t2-eyebrow-livedot" aria-hidden="true"></span>
+          Verified {verifiedStr}
+        </span>
+      )}
+      {isRecentVerified && (
+        <span class="t2-eyebrow-chip">
+          Verified {verifiedStr}
+        </span>
+      )}
+      {catLabel && (
+        <a href={`/categories/${catSlug}/`} class="t2-eyebrow-chip t2-eyebrow-link">{catLabel}</a>
+      )}
+      {rankLabel && (
+        <span class={`t2-eyebrow-chip ${isTopPick ? 't2-eyebrow-gold' : 't2-eyebrow-accent'}`}>
+          {isTopPick && <span class="t2-eyebrow-star" aria-hidden="true">★</span>}
+          {rankLabel}
+        </span>
+      )}
+      <span class="t2-eyebrow-trust">Editorial only, no paid placements</span>
+    </div>
 
     <!-- Hero: logo + title + tagline (no meta line — company/verified
          already surface in the chip strip below), score card on right. -->

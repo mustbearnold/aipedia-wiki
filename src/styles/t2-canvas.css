@@ -70,6 +70,83 @@ body:has(main .t2-canvas) ::selection {
 .t2-breadcrumb-current { color: var(--t2-muted); }
 
 /* -------- hero ------------------------------------------------- */
+/* Editorial eyebrow row. Above the hero, signals verification + rank. */
+.t2-eyebrow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 10px 0 22px;
+  font-size: 11px;
+  letter-spacing: 0.01em;
+}
+.t2-eyebrow-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  background: var(--t2-surface);
+  border: 1px solid var(--t2-line);
+  color: var(--t2-muted);
+  white-space: nowrap;
+  text-decoration: none;
+  transition: background 150ms ease, border-color 150ms ease, color 150ms ease;
+}
+.t2-eyebrow-link:hover {
+  background: var(--t2-surface-hover);
+  border-color: rgba(167, 139, 250, 0.32);
+  color: var(--t2-fg);
+}
+.t2-eyebrow-fresh {
+  color: #4ade80;
+  background: rgba(52, 211, 153, 0.08);
+  border-color: rgba(52, 211, 153, 0.22);
+}
+.light .t2-eyebrow-fresh { color: #047857; }
+.t2-eyebrow-livedot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: #34d399;
+  box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.55);
+  animation: t2-eyebrow-pulse 2.4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+@keyframes t2-eyebrow-pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.55); }
+  70%  { box-shadow: 0 0 0 6px rgba(52, 211, 153, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(52, 211, 153, 0); }
+}
+.t2-eyebrow-accent {
+  color: #c4b5fd;
+  background: rgba(167, 139, 250, 0.08);
+  border-color: rgba(167, 139, 250, 0.22);
+}
+.light .t2-eyebrow-accent { color: #6d28d9; }
+.t2-eyebrow-gold {
+  color: #fbbf24;
+  background: rgba(251, 191, 36, 0.08);
+  border-color: rgba(251, 191, 36, 0.28);
+}
+.light .t2-eyebrow-gold { color: #a16207; background: rgba(251, 191, 36, 0.14); }
+.t2-eyebrow-star { font-size: 10px; }
+.t2-eyebrow-trust {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--t2-subtle);
+  letter-spacing: 0.005em;
+  padding-left: 4px;
+}
+@media (max-width: 640px) {
+  .t2-eyebrow-trust { display: none; }
+  .t2-eyebrow { gap: 6px; margin-bottom: 18px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .t2-eyebrow-livedot { animation: none; }
+}
+
 .t2-hero {
   display: grid;
   grid-template-columns: 1fr;
@@ -294,17 +371,29 @@ body:has(main .t2-canvas) ::selection {
   padding: 12px 18px;
   border-radius: var(--t2-radius);
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
   text-decoration: none;
-  transition: background 120ms ease, border-color 120ms ease;
+  transition: background 140ms ease, border-color 140ms ease, transform 160ms ease, box-shadow 160ms ease, color 140ms ease;
+  position: relative;
+  isolation: isolate;
 }
-.t2-cta-arrow { transition: transform 120ms ease; }
-.t2-cta:hover .t2-cta-arrow { transform: translateX(2px); }
+.t2-cta-arrow { transition: transform 160ms ease; }
+.t2-cta:hover .t2-cta-arrow { transform: translateX(3px); }
 .t2-cta-primary {
-  background: var(--t2-accent);
+  background: linear-gradient(100deg, #a78bfa 0%, #8b5cf6 55%, #7c3aed 100%);
   color: #0b0a14;
+  border: 1px solid rgba(167, 139, 250, 0.4);
+  box-shadow: 0 10px 28px -16px rgba(167, 139, 250, 0.55);
 }
-.t2-cta-primary:hover { background: #c4b5fd; }
+.t2-cta-primary:hover {
+  background: linear-gradient(100deg, #b7a1fb 0%, #9a71f7 55%, #8a3eef 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 18px 40px -18px rgba(167, 139, 250, 0.75);
+}
+.t2-cta-primary:focus-visible {
+  outline: 2px solid rgba(196, 181, 253, 0.8);
+  outline-offset: 3px;
+}
 .t2-cta-secondary {
   border: 1px solid var(--t2-line);
   background: var(--t2-surface);
