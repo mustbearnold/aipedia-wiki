@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="wmDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="wmMid" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a78bfa"/>
+      <stop offset="100%" stop-color="#60a5fa"/>
+    </linearGradient>
+  </defs>
+  <!-- "ai" top, deep gradient -->
+  <text x="256" y="210" text-anchor="middle"
+        font-family="Arial Black, Arial, sans-serif"
+        font-size="150" font-weight="900" fill="url(#wmDark)">ai</text>
+  <!-- "pedia" middle, mid gradient -->
+  <text x="256" y="320" text-anchor="middle"
+        font-family="Arial Black, Arial, sans-serif"
+        font-size="110" font-weight="900" fill="url(#wmMid)">pedia</text>
+  <!-- ".wiki" in lighter gradient -->
+  <text x="256" y="400" text-anchor="middle"
+        font-family="Arial, sans-serif"
+        font-size="70" font-weight="700" fill="url(#wmMid)" opacity="0.85"
+        letter-spacing="6">.WIKI</text>
+  <!-- gradient underline -->
+  <rect x="176" y="420" width="160" height="6" rx="3" fill="url(#wmMid)"/>
+</svg>

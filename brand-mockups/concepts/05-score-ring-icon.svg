@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a78bfa"/>
+      <stop offset="100%" stop-color="#60a5fa"/>
+    </linearGradient>
+  </defs>
+  <!-- dim background ring (unscored portion) -->
+  <circle cx="256" cy="256" r="180"
+          fill="none" stroke="#ffffff" stroke-opacity="0.15" stroke-width="44"/>
+  <!-- scored arc (starts top, sweeps ~85% / 306 deg) -->
+  <circle cx="256" cy="256" r="180"
+          fill="none" stroke="url(#ringGrad)" stroke-width="44"
+          stroke-linecap="round"
+          stroke-dasharray="961 1131"
+          transform="rotate(-90 256 256)"/>
+  <!-- center score text -->
+  <text x="256" y="250" text-anchor="middle"
+        font-family="Arial Black, Arial, sans-serif"
+        font-size="180" font-weight="900" fill="url(#ringGrad)"
+        dominant-baseline="middle">8.5</text>
+  <text x="256" y="360" text-anchor="middle"
+        font-family="Arial, sans-serif"
+        font-size="38" font-weight="700" fill="#ffffff" opacity="0.65"
+        letter-spacing="4">SCORED</text>
+</svg>

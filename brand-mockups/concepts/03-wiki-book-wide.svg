@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 400" width="1600" height="400">
+  <defs>
+    <linearGradient id="bpL" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a78bfa"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <linearGradient id="bpR" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+    <linearGradient id="bwG" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#a78bfa"/>
+      <stop offset="100%" stop-color="#60a5fa"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(80,80) scale(0.58)">
+    <path d="M 80 140 Q 80 120 100 120 L 248 120 L 256 140 L 256 400 L 248 420 L 100 420 Q 80 420 80 400 Z" fill="url(#bpL)"/>
+    <path d="M 432 140 Q 432 120 412 120 L 264 120 L 256 140 L 256 400 L 264 420 L 412 420 Q 432 420 432 400 Z" fill="url(#bpR)"/>
+    <g fill="#ffffff" opacity="0.55">
+      <rect x="110" y="180" width="120" height="6" rx="3"/>
+      <rect x="110" y="205" width="100" height="6" rx="3"/>
+      <rect x="110" y="230" width="130" height="6" rx="3"/>
+      <rect x="110" y="265" width="110" height="6" rx="3"/>
+      <rect x="110" y="290" width="125" height="6" rx="3"/>
+      <rect x="282" y="180" width="120" height="6" rx="3"/>
+      <rect x="282" y="205" width="100" height="6" rx="3"/>
+      <rect x="282" y="230" width="130" height="6" rx="3"/>
+      <rect x="282" y="265" width="110" height="6" rx="3"/>
+      <rect x="282" y="290" width="125" height="6" rx="3"/>
+    </g>
+    <rect x="250" y="120" width="12" height="300" fill="#000000" opacity="0.15"/>
+  </g>
+  <text x="420" y="240" font-family="Arial Black, Arial, sans-serif"
+        font-size="140" font-weight="900" fill="url(#bwG)">aipedia<tspan font-family="Arial, sans-serif" font-weight="400" opacity="0.7">.wiki</tspan></text>
+  <text x="424" y="290" font-family="Arial, sans-serif"
+        font-size="32" font-weight="500" fill="#64748b"
+        letter-spacing="4">THE AI TOOLS ENCYCLOPEDIA</text>
+</svg>

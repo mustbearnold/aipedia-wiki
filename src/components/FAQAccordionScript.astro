@@ -54,13 +54,7 @@
           'cursor-pointer list-none px-4 py-3 font-medium text-[15px] text-[var(--text-primary)] flex items-center justify-between gap-3';
         const qSpan = document.createElement('span');
         qSpan.textContent = question;
-        const plus = document.createElement('span');
-        plus.setAttribute('aria-hidden', 'true');
-        plus.className =
-          'text-[var(--text-muted)] text-lg leading-none transition-transform group-open:rotate-45';
-        plus.textContent = '+';
         summary.appendChild(qSpan);
-        summary.appendChild(plus);
 
         details.appendChild(summary);
         details.appendChild(answerHost);

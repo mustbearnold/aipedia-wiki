@@ -66,6 +66,8 @@ const catLabel = categoryLabels[catSlug] ?? catSlug;
 const toolSlug = f.slug ?? '';
 const siteBase = Astro.site?.href ?? 'https://aipedia.wiki';
 const affiliate = f.affiliate ?? {};
+const pageMode = f.page_mode ?? 'dossier';
+const showSupplementalSections = pageMode !== 'dossier';
 
 const breadcrumbLdItems = [
   { name: 'Home', url: `${siteBase}` },
@@ -124,8 +126,8 @@ const markdownH2s = (headings ?? [])
   .filter(h => h.depth === 2 && h.slug !== 'system-verdict')
   .map(h => ({ slug: h.slug, text: h.text }));
 const extraTocItems = [] as Array<{ slug: string; text: string }>;
-if (priceHistory.length > 0) extraTocItems.push({ slug: 'price-history', text: 'Price history' });
-if (peers.length > 0) extraTocItems.push({ slug: 'top-alternatives', text: 'Top alternatives' });
+if (showSupplementalSections && priceHistory.length > 0) extraTocItems.push({ slug: 'price-history', text: 'Price history' });
+if (showSupplementalSections && peers.length > 0) extraTocItems.push({ slug: 'top-alternatives', text: 'Top alternatives' });
 const relatedIdx = markdownH2s.findIndex(h => h.slug === 'related');
 const tocHeadings = relatedIdx >= 0
   ? [...markdownH2s.slice(0, relatedIdx), ...extraTocItems, ...markdownH2s.slice(relatedIdx)]
@@ -157,6 +159,64 @@ const isHighRank = categoryRank > 1 && categoryRank <= 3 && categorySize >= 6 &&
 const rankLabel = isTopPick
   ? `Top pick in ${catLabel}`
   : isHighRank ? `#${categoryRank} in ${catLabel}` : '';
+
+const decisionBrief = f.decision_brief && Array.isArray(f.decision_brief.items)
+  ? f.decision_brief
+  : null;
+
+function cleanSnippet(value: unknown, fallback = ''): string {
+  if (!value) return fallback;
+  const text = String(value)
+    .replace(/\s+/g, ' ')
+    .replace(/\.$/, '')
+    .trim();
+  if (!text) return fallback;
+  return text.charAt(0).toUpperCase() + text.slice(1);
+}
+
+const firstBestFor = Array.isArray(f.best_for) && f.best_for.length > 0
+  ? cleanSnippet(f.best_for[0])
+  : catLabel ? `${catLabel} workflows` : 'Primary workflow';
+const firstNotBestFor = Array.isArray(f.not_best_for) && f.not_best_for.length > 0
+  ? cleanSnippet(f.not_best_for[0])
+  : 'Narrow edge cases';
+const pricingGlance = cleanSnippet(f.price_range, f.pricing_model ? cleanSnippet(f.pricing_model) : 'Check pricing');
+const modelLabels: Record<string, string> = {
+  free: 'Free product',
+  freemium: 'Free + paid plans',
+  paid: 'Paid product',
+  enterprise: 'Enterprise product',
+  'open-source': 'Open-source + cloud',
+};
+const modelGlance = f.pricing_model ? modelLabels[f.pricing_model] ?? cleanSnippet(f.pricing_model) : 'Verified tool';
+const generatedHeroGlance = {
+  items: [
+    { label: 'Model', value: modelGlance, detail: pricingGlance },
+    { label: 'Best for', value: firstBestFor, detail: catLabel },
+    { label: 'Watch', value: firstNotBestFor, detail: 'Check fit before switching' },
+  ],
+};
+const heroGlance = f.hero_glance && Array.isArray(f.hero_glance.items)
+  ? f.hero_glance
+  : generatedHeroGlance;
+const generatedDecisionBrief = {
+  items: [
+    { label: 'Use it for', value: firstBestFor, detail: catLabel ? `Best-fit ${catLabel.toLowerCase()} use case.` : '' },
+    { label: 'Watch for', value: firstNotBestFor, detail: 'Not every stack needs this tool.' },
+    { label: 'Pricing signal', value: pricingGlance, detail: 'Verify limits before committing.' },
+  ],
+};
+const effectiveDecisionBrief = decisionBrief ?? (f.quick_answer ? generatedDecisionBrief : null);
+const scoreBand = overall >= 9
+  ? 'Top-tier score'
+  : overall >= 8
+    ? 'Strong score'
+    : overall >= 6.5
+      ? 'Useful, with tradeoffs'
+      : 'Niche score';
+const scoreNote = f.score_note ?? decisionBrief?.score_note ?? '';
+const primaryCtaLabel = f.primary_cta_label
+  ?? (f.pricing_model === 'freemium' ? `Open ${f.title}` : f.pricing_model === 'free' ? `Open ${f.title}` : `Visit ${f.title}`);
 
 // "Verified" freshness badge. Anything verified within 30 days reads as
 // fresh; 30-90 days as recent; older is hidden so it doesn't read stale.
@@ -197,7 +257,7 @@ const isRecentVerified = verifiedDays > 30 && verifiedDays <= 90;
 
   <div class="t2-canvas">
     <!-- Breadcrumb -->
-    <nav class="t2-breadcrumb" aria-label="Breadcrumb">
+    <nav class="t2-breadcrumb" aria-label="Breadcrumb" data-reveal>
       <a href="/">Home</a>
       <span aria-hidden="true">/</span>
       <a href={`/categories/${catSlug}/`}>{catLabel}</a>
@@ -209,7 +269,7 @@ const isRecentVerified = verifiedDays > 30 && verifiedDays <= 90;
          + verification state + category rank. Sits above the logo/title
          block so visitors register "this is a current, scored, ranked
          editorial entry" before the brand name. -->
-    <div class="t2-eyebrow" data-pagefind-ignore>
+    <div class="t2-eyebrow" data-pagefind-ignore data-reveal style="--reveal-delay: 70ms">
       {isFreshVerified && (
         <span class="t2-eyebrow-chip t2-eyebrow-fresh">
           <span class="t2-eyebrow-livedot" aria-hidden="true"></span>
@@ -236,7 +296,7 @@ const isRecentVerified = verifiedDays > 30 && verifiedDays <= 90;
     <!-- Hero: logo + title + tagline (no meta line — company/verified
          already surface in the chip strip below), score card on right. -->
     <header class="t2-hero">
-      <div class="t2-hero-main">
+      <div class="t2-hero-main" data-reveal style="--reveal-delay: 120ms">
         <div class="t2-logo-frame">
           <ToolLogo slug={toolSlug} title={f.title} size={64} className="rounded-lg" />
         </div>
@@ -252,13 +312,25 @@ const isRecentVerified = verifiedDays > 30 && verifiedDays <= 90;
           </div>
           {f.tagline && <p class="t2-tagline">{f.tagline}</p>}
         </div>
+        {heroGlance && (
+          <div class="t2-hero-glance" aria-label={`${f.title} at a glance`}>
+            {heroGlance.items.map((item: any) => (
+              <div class={`t2-hero-glance-item ${item.tone ? `t2-hero-glance-${item.tone}` : ''}`.trim()}>
+                <span class="t2-hero-glance-label">{item.label}</span>
+                <strong>{item.value}</strong>
+                {item.detail && <span class="t2-hero-glance-detail">{item.detail}</span>}
+              </div>
+            ))}
+          </div>
+        )}
       </div>
 
-      <aside class="t2-score" aria-label={`Overall score ${overall} out of 10`}>
+      <aside class="t2-score" aria-label={`Overall score ${overall} out of 10`} data-reveal="right" style="--reveal-delay: 180ms">
         <div class="t2-score-top">
           <span class="t2-score-label">Score</span>
           <span class="t2-score-value">{overall}<span class="t2-score-slash">/10</span></span>
         </div>
+        <div class="t2-score-band">{scoreBand}</div>
         <div class="t2-score-bars" title={sparkbars.map(b => `${b.label} ${b.value}/10`).join(' · ')}>
           {sparkbars.map(b => (
             <div class="t2-score-bar">
@@ -270,21 +342,16 @@ const isRecentVerified = verifiedDays > 30 && verifiedDays <= 90;
             </div>
           ))}
         </div>
+        {scoreNote && <p class="t2-score-note">{scoreNote}</p>}
       </aside>
     </header>
 
     <!-- Chip strip -->
-    <div class="t2-chips">
+    <div class="t2-chips" data-reveal style="--reveal-delay: 220ms">
       {f.price_range && (
         <div class="t2-chip">
           <span class="t2-chip-label">Pricing</span>
           <span class="t2-chip-value">{f.price_range}</span>
-        </div>
-      )}
-      {catLabel && (
-        <div class="t2-chip">
-          <span class="t2-chip-label">Category</span>
-          <span class="t2-chip-value">{catLabel}</span>
         </div>
       )}
       {launchedStr && (
@@ -293,16 +360,10 @@ const isRecentVerified = verifiedDays > 30 && verifiedDays <= 90;
           <span class="t2-chip-value">{launchedStr}</span>
         </div>
       )}
-      {verifiedStr && (
-        <div class="t2-chip">
-          <span class="t2-chip-label">Verified</span>
-          <span class="t2-chip-value">{verifiedStr}</span>
-        </div>
-      )}
     </div>
 
     <!-- Primary + secondary CTAs -->
-    <div class="t2-ctas">
+    <div class="t2-ctas" data-reveal style="--reveal-delay: 260ms">
       {f.url && (
         <a
           href={(affiliate?.link && affiliate.link.length > 0) ? affiliate.link : f.url}
@@ -310,7 +371,7 @@ const isRecentVerified = verifiedDays > 30 && verifiedDays <= 90;
           rel={affiliate?.link && affiliate.link.length > 0 ? 'noopener sponsored' : 'noopener'}
           class="t2-cta t2-cta-primary"
         >
-          Try {f.title} free
+          {primaryCtaLabel}
           <span class="t2-cta-arrow" aria-hidden="true">&rarr;</span>
         </a>
       )}
@@ -323,27 +384,40 @@ const isRecentVerified = verifiedDays > 30 && verifiedDays <= 90;
     <!-- Quick Answer (from frontmatter). Replaces the redundant inline
          "System Verdict" block, which is stripped from the markdown via
          script below. -->
-    {f.quick_answer && (
-      <aside class="t2-verdict" aria-labelledby="quick-answer-label">
+    {(f.quick_answer || effectiveDecisionBrief) && (
+      <aside class="t2-verdict" aria-labelledby="quick-answer-label" data-reveal style="--reveal-delay: 120ms">
         <p id="quick-answer-label" class="t2-verdict-heading">Quick Answer</p>
-        <p class="t2-verdict-body">{f.quick_answer}</p>
+        {f.quick_answer && <p class="t2-verdict-body">{f.quick_answer}</p>}
+        {effectiveDecisionBrief && (
+          <div class="t2-verdict-points" aria-label={`${f.title} decision notes`}>
+            {effectiveDecisionBrief.items.map((item: any) => (
+              <div class="t2-verdict-point">
+                <span class="t2-verdict-point-label">{item.label}</span>
+                <strong>{item.value}</strong>
+                {item.detail && <span class="t2-verdict-point-detail">{item.detail}</span>}
+              </div>
+            ))}
+          </div>
+        )}
       </aside>
     )}
 
     {f.github_url && (
-      <div class="t2-githubstats">
+      <div class="t2-githubstats" data-reveal>
         <GithubStats slug={toolSlug} />
       </div>
     )}
 
-    <ProsCons pros={f.best_for} cons={f.not_best_for} />
+    <div data-reveal>
+      <ProsCons pros={f.best_for} cons={f.not_best_for} />
+    </div>
 
     <!-- Main layout: prose + floating TOC -->
     <div class="t2-layout">
       <article class="t2-prose">
         <slot />
 
-        {priceHistory.length > 0 && (
+        {showSupplementalSections && priceHistory.length > 0 && (
           <section aria-labelledby="price-history">
             <h2 id="price-history">Price history</h2>
             <ul class="t2-price-history">
@@ -363,7 +437,7 @@ const isRecentVerified = verifiedDays > 30 && verifiedDays <= 90;
           </section>
         )}
 
-        {peers.length > 0 && (
+        {showSupplementalSections && peers.length > 0 && (
           <section aria-labelledby="top-alternatives">
             <h2 id="top-alternatives">Top alternatives</h2>
             <ul class="t2-alt-list">
@@ -392,9 +466,13 @@ const isRecentVerified = verifiedDays > 30 && verifiedDays <= 90;
           isAffiliate={Boolean(affiliate?.link && affiliate.link.length > 0)}
         />
 
-        <RelatedComparisons toolSlug={toolSlug} toolTitle={f.title} />
+        {showSupplementalSections && (
+          <RelatedComparisons toolSlug={toolSlug} toolTitle={f.title} />
+        )}
 
-        <ReviewsBlock toolSlug={toolSlug} toolTitle={f.title} />
+        {showSupplementalSections && (
+          <ReviewsBlock toolSlug={toolSlug} toolTitle={f.title} />
+        )}
 
         <ShareButtons title={f.title} pageUrl={`${siteBase}tools/${toolSlug}/`} />
 
@@ -410,7 +488,7 @@ const isRecentVerified = verifiedDays > 30 && verifiedDays <= 90;
       </article>
 
       {tocHeadings.length > 0 && (
-        <aside class="t2-toc" aria-label="On this page">
+        <aside class="t2-toc" aria-label="On this page" data-reveal="right">
           <div class="t2-toc-label">On this page</div>
           <ol class="t2-toc-list">
             {tocHeadings.map(h => (
@@ -507,6 +585,116 @@ const isRecentVerified = verifiedDays > 30 && verifiedDays <= 90;
         init();
       }
       document.addEventListener('astro:page-load', init);
+    })();
+  </script>
+
+  <!-- Tool-page scroll reveals. The homepage already uses the global
+       [data-reveal] system from BaseLayout; this opts generated markdown
+       sections into the same motion without changing content files. -->
+  <script is:inline>
+    (function () {
+      var SELECTOR = [
+        '.t2-prose > h2',
+        '.t2-prose > h3',
+        '.t2-prose > p',
+        '.t2-prose > blockquote',
+        '.t2-prose > table',
+        '.t2-prose > ul',
+        '.t2-prose > ol',
+        '.t2-prose > .not-prose',
+        '.t2-prose > .faq-accordion',
+        '.t2-prose > .sources-callout'
+      ].join(',');
+
+      function mark() {
+        var nodes = Array.prototype.slice.call(document.querySelectorAll(SELECTOR));
+        nodes.forEach(function (el, index) {
+          if (el.closest('.not-prose') && !el.classList.contains('not-prose')) return;
+          if (!el.hasAttribute('data-reveal')) {
+            el.setAttribute('data-reveal', '');
+            el.style.setProperty('--reveal-delay', Math.min(index % 3, 2) * 45 + 'ms');
+          }
+        });
+        observe(nodes.concat(Array.prototype.slice.call(document.querySelectorAll('.t2-canvas [data-reveal]:not(.is-revealed)'))));
+      }
+
+      function observe(nodes) {
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) {
+          nodes.forEach(function (el) { el.classList.add('is-revealed'); });
+          return;
+        }
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add('is-revealed');
+            io.unobserve(entry.target);
+          });
+        }, { threshold: 0.10, rootMargin: '0px 0px -64px 0px' });
+        nodes.forEach(function (el) {
+          if (!el.classList.contains('is-revealed')) io.observe(el);
+        });
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', mark);
+      } else {
+        mark();
+      }
+      document.addEventListener('astro:page-load', mark);
+    })();
+  </script>
+
+  <!-- Active section marker for the sticky tool-page TOC. -->
+  <script is:inline>
+    (function () {
+      function initActiveToc() {
+        var toc = document.querySelector('.t2-toc');
+        if (!toc || toc.dataset.activeBound === '1') return;
+        var links = Array.prototype.slice.call(toc.querySelectorAll('a[href^="#"]'));
+        var pairs = links.map(function (link) {
+          var id = decodeURIComponent(link.getAttribute('href').slice(1));
+          return { link: link, target: document.getElementById(id) };
+        }).filter(function (pair) { return pair.target; });
+        if (!pairs.length) return;
+        toc.dataset.activeBound = '1';
+
+        function setActive(activeLink) {
+          links.forEach(function (link) {
+            link.classList.toggle('is-active', link === activeLink);
+          });
+        }
+
+        if (!('IntersectionObserver' in window)) {
+          setActive(pairs[0].link);
+          return;
+        }
+
+        var visible = new Map();
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              visible.set(entry.target.id, entry.boundingClientRect.top);
+            } else {
+              visible.delete(entry.target.id);
+            }
+          });
+          if (visible.size === 0) return;
+          var active = pairs
+            .filter(function (pair) { return visible.has(pair.target.id); })
+            .sort(function (a, b) { return visible.get(a.target.id) - visible.get(b.target.id); })[0];
+          if (active) setActive(active.link);
+        }, { rootMargin: '-96px 0px -62% 0px', threshold: [0, 0.1, 0.5] });
+
+        pairs.forEach(function (pair) { io.observe(pair.target); });
+        setActive(pairs[0].link);
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initActiveToc);
+      } else {
+        initActiveToc();
+      }
+      document.addEventListener('astro:page-load', initActiveToc);
     })();
   </script>
 

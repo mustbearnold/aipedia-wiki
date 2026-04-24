@@ -21,7 +21,7 @@
   </g>
   <text x="210" y="270" font-family="Inter, system-ui, sans-serif" font-size="76" font-weight="800" fill="#fafafa">OpenAI Codex</text>
   <text x="210" y="310" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="500" fill="#9ca3af">openai</text>
-  <text x="80" y="400" font-family="Inter, system-ui, sans-serif" font-size="26" font-weight="500" fill="#d1d5db"><tspan x="80" dy="0">OpenAI&apos;s agentic coding product. Cloud-async coding</tspan><tspan x="80" dy="36">agent, Codex Desktop app (macOS first, Windows rolling),</tspan><tspan x="80" dy="36">CLI, and IDE extensions. April 16, 2026 super-app update…</tspan></text>
+  <text x="80" y="400" font-family="Inter, system-ui, sans-serif" font-size="26" font-weight="500" fill="#d1d5db"><tspan x="80" dy="0">OpenAI&apos;s agentic coding product. Cloud-async coding</tspan><tspan x="80" dy="36">agent, Codex Desktop app (macOS first, Windows rolling),</tspan><tspan x="80" dy="36">CLI, and IDE extensions. GPT-5.5 rolled into Codex on…</tspan></text>
   <g transform="translate(960, 80)">
     <rect x="0" y="0" width="160" height="160" rx="20" fill="rgba(167,139,250,0.10)" stroke="rgba(167,139,250,0.35)" stroke-width="2"/>
     <text x="80" y="100" font-family="Inter, system-ui, sans-serif" font-size="64" font-weight="800" text-anchor="middle" fill="#a78bfa">8.5</text>

@@ -6,8 +6,9 @@ interface Props {
 
 const { pros = [], cons = [] } = Astro.props;
 
-function titleCase(s: string): string {
-  return s.replace(/\b\w/g, (c) => c.toUpperCase());
+function sentenceCase(s: string): string {
+  const trimmed = s.trim();
+  return trimmed ? trimmed.charAt(0).toUpperCase() + trimmed.slice(1) : trimmed;
 }
 ---
 
@@ -23,7 +24,7 @@ function titleCase(s: string): string {
           {pros.map((p) => (
             <li class="text-[14px] leading-snug text-[var(--text-primary)] flex items-start gap-2">
               <span class="text-[var(--accent-success)] mt-0.5" aria-hidden="true">✓</span>
-              <span>{titleCase(p)}</span>
+              <span>{sentenceCase(p)}</span>
             </li>
           ))}
         </ul>
@@ -39,7 +40,7 @@ function titleCase(s: string): string {
           {cons.map((c) => (
             <li class="text-[14px] leading-snug text-[var(--text-primary)] flex items-start gap-2">
               <span class="text-[var(--accent-danger)] mt-0.5" aria-hidden="true">✗</span>
-              <span>{titleCase(c)}</span>
+              <span>{sentenceCase(c)}</span>
             </li>
           ))}
         </ul>

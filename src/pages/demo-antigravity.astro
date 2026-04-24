@@ -1,0 +1,515 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const allTools = await getCollection('tools');
+const scoredTools = allTools
+  .map(tool => {
+    const s = tool.data.scores ?? { utility: 0, value: 0, moat: 0, longevity: 0 };
+    const avg = ((s.utility ?? 0) + (s.value ?? 0) + (s.moat ?? 0) + (s.longevity ?? 0)) / 4;
+    return { tool, score: Math.round(avg * 10) / 10 };
+  })
+  .sort((a, b) => b.score - a.score)
+  .slice(0, 6);
+---
+
+<BaseLayout 
+  title="Aipedia Wiki: Antigravity Design Demo"
+  description="Experience a premium, glassmorphic redesign of aipedia.wiki"
+>
+<style is:inline>
+  @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+  :root {
+    --ag-bg: #050508;
+    --ag-accent: #8b5cf6;
+    --ag-secondary: #0ea5e9;
+    --ag-surface: rgba(255, 255, 255, 0.03);
+    --ag-surface-hv: rgba(255, 255, 255, 0.06);
+    --ag-border: rgba(255, 255, 255, 0.08);
+  }
+
+  html, body {
+    font-family: 'Outfit', system-ui, sans-serif !important;
+    background-color: var(--ag-bg) !important;
+    background-image: none !important;
+    color: #ffffff;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Hide the default header/nav from BaseLayout temporarily to showcase true edge-to-edge bg */
+  header {
+    background: transparent !important;
+    border-bottom: 1px solid rgba(255,255,255,0.05) !important;
+    backdrop-filter: blur(20px) !important;
+  }
+
+  /* Animated Mesh Background */
+  .ag-mesh-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background-color: var(--ag-bg);
+    overflow: hidden;
+  }
+  
+  .ag-mesh-blob {
+    position: absolute;
+    filter: blur(100px);
+    opacity: 0.5;
+    border-radius: 50%;
+    animation: drift 25s infinite alternate cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .blob-1 {
+    width: 70vw; height: 70vw;
+    max-width: 800px; max-height: 800px;
+    background: radial-gradient(circle, var(--ag-accent) 0%, transparent 70%);
+    top: -20vh; left: -10vw;
+  }
+  
+  .blob-2 {
+    width: 60vw; height: 60vw;
+    max-width: 700px; max-height: 700px;
+    background: radial-gradient(circle, var(--ag-secondary) 0%, transparent 70%);
+    bottom: -20vh; right: -10vw;
+    animation-delay: -5s;
+  }
+  
+  .blob-3 {
+    width: 50vw; height: 50vw;
+    max-width: 600px; max-height: 600px;
+    background: radial-gradient(circle, #ec4899 0%, transparent 70%);
+    top: 30vh; left: 30vw;
+    animation-delay: -12s;
+  }
+
+  @keyframes drift {
+    0% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(5vw, -5vh) scale(1.1); }
+    66% { transform: translate(-3vw, 4vh) scale(0.9); }
+    100% { transform: translate(0, 0) scale(1); }
+  }
+
+  /* Hero Section */
+  .ag-hero {
+    position: relative;
+    padding: 140px 20px 80px;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    z-index: 10;
+  }
+
+  .ag-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 20px;
+    border-radius: 9999px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    animation: fadeInDown 0.8s ease-out forwards;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.8);
+    box-shadow: 0 4px 20px -5px rgba(0,0,0,0.5);
+  }
+
+  .ag-title {
+    font-size: clamp(3.5rem, 8vw, 5.5rem);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+    margin-bottom: 28px;
+    background: linear-gradient(135deg, #ffffff 0%, rgba(255,255,255,0.7) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: fadeInUp 0.8s ease-out 0.2s forwards;
+    opacity: 0;
+  }
+
+  .ag-title-accent {
+    background: linear-gradient(135deg, #a78bfa 0%, #38bdf8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+  }
+
+  .ag-subtitle {
+    font-size: 1.35rem;
+    color: rgba(255, 255, 255, 0.65);
+    max-width: 650px;
+    margin: 0 auto 50px;
+    line-height: 1.6;
+    font-weight: 400;
+    animation: fadeInUp 0.8s ease-out 0.4s forwards;
+    opacity: 0;
+  }
+
+  .ag-search-container {
+    position: relative;
+    max-width: 640px;
+    margin: 0 auto;
+    animation: fadeInUp 0.8s ease-out 0.6s forwards;
+    opacity: 0;
+  }
+
+  .ag-search-input {
+    width: 100%;
+    padding: 24px 32px 24px 64px;
+    font-size: 1.15rem;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 9999px;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    outline: none;
+    font-family: inherit;
+    box-shadow: 0 10px 40px -10px rgba(0,0,0,0.5);
+  }
+
+  .ag-search-input::placeholder {
+    color: rgba(255,255,255,0.4);
+    font-weight: 400;
+  }
+
+  .ag-search-input:focus {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(167, 139, 250, 0.5);
+    box-shadow: 0 0 0 4px rgba(167, 139, 250, 0.15), 0 20px 40px -10px rgba(167, 139, 250, 0.3);
+    transform: translateY(-2px);
+  }
+
+  .ag-search-icon {
+    position: absolute;
+    left: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.5);
+    width: 24px;
+    height: 24px;
+    pointer-events: none;
+    transition: color 0.3s ease;
+  }
+  
+  .ag-search-input:focus + .ag-search-icon,
+  .ag-search-container:focus-within .ag-search-icon {
+    color: #a78bfa;
+  }
+
+  .ag-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 30px;
+    padding: 0 20px 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+    animation: fadeInUp 1s ease-out 0.8s forwards;
+    opacity: 0;
+    z-index: 10;
+    position: relative;
+  }
+
+  .ag-card {
+    position: relative;
+    padding: 1px;
+    border-radius: 24px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.15), rgba(255,255,255,0.02));
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    overflow: hidden;
+  }
+
+  .ag-card-inner {
+    background: rgba(12, 12, 18, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 23px;
+    padding: 30px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+  }
+
+  .ag-card-hover-bg {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 0%, rgba(167, 139, 250, 0.15), transparent 70%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .ag-card-glow {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(167, 139, 250, 0.5), transparent 70%);
+    border-radius: 50%;
+    filter: blur(40px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+  }
+
+  .ag-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .ag-card:hover .ag-card-hover-bg {
+    opacity: 1;
+  }
+
+  .ag-card-header {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 24px;
+    position: relative;
+    z-index: 3;
+  }
+
+  .ag-card-logo-placeholder {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #1e1e2d, #252538);
+    border: 1px solid rgba(255,255,255,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4), inset 0 2px 4px rgba(255,255,255,0.05);
+    overflow: hidden;
+  }
+  
+  .ag-card-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 6px 0;
+    letter-spacing: -0.01em;
+  }
+
+  .ag-card-meta {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: rgba(255,255,255,0.5);
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .ag-card-meta-pill {
+    background: rgba(255,255,255,0.06);
+    padding: 4px 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.05);
+  }
+
+  .ag-card-body {
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.65);
+    line-height: 1.6;
+    margin: 0 0 30px 0;
+    flex-grow: 1;
+    position: relative;
+    z-index: 3;
+    font-weight: 400;
+  }
+
+  .ag-btn {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: #fff;
+    padding: 14px 24px;
+    border-radius: 14px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-decoration: none;
+    width: 100%;
+    position: relative;
+    z-index: 3;
+    overflow: hidden;
+  }
+  
+  .ag-btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
+  }
+
+  .ag-btn:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: rgba(167, 139, 250, 0.4);
+    box-shadow: 0 8px 24px rgba(167, 139, 250, 0.15);
+  }
+  
+  .ag-btn:hover::before {
+    transform: translateX(100%);
+  }
+
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Remove prose max widths and custom text styles */
+  .wiki-prose { max-width: none !important; }
+</style>
+
+<div class="ag-mesh-bg">
+  <div class="ag-mesh-blob blob-1"></div>
+  <div class="ag-mesh-blob blob-2"></div>
+  <div class="ag-mesh-blob blob-3"></div>
+</div>
+
+<div style="position: relative; z-index: 10; min-height: 100vh;">
+  <section class="ag-hero">
+    <div class="ag-badge">
+      <span style="color: #a78bfa; margin-right: 10px; font-size: 16px;">✨</span> 
+      Designed by Antigravity
+    </div>
+    <h1 class="ag-title">
+      Discover the AI tools that <br/><span class="ag-title-accent">matter most.</span>
+    </h1>
+    <p class="ag-subtitle">
+      Honest, unapologetic reviews of the AI landscape. Scored on utility, value, moat, and longevity.
+      Because most AI directories are just affiliate spam.
+    </p>
+    
+    <div class="ag-search-container">
+      <svg class="ag-search-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+      </svg>
+      <input type="text" class="ag-search-input" placeholder="Search the future of software..." />
+    </div>
+  </section>
+
+  <section style="position:relative; z-index: 10;">
+    <div style="text-align: center; margin-bottom: 50px;">
+      <h2 style="font-size: 2.2rem; font-weight: 800; margin-bottom: 12px; color: #fff; letter-spacing: -0.02em;">Featured Top Ranked</h2>
+      <p style="color: rgba(255,255,255,0.5); font-size: 1.1rem;">The highest scoring tools across all categories.</p>
+    </div>
+    
+    <div class="ag-grid">
+      {scoredTools.map(({ tool, score }) => {
+        const title = tool.data.title;
+        const slug = tool.data.slug || tool.id.replace(/\.md$/, '').replace(/\\/g, '/');
+        const desc = tool.data.description || 'A flagship AI tool shaping the future of productivity and creativity.';
+        const cat = (tool.data.category || '').replace('ai-', '').toUpperCase();
+        
+        return (
+          <div class="ag-card" data-tilt>
+            <div class="ag-card-glow"></div>
+            <div class="ag-card-inner">
+              <div class="ag-card-hover-bg"></div>
+              
+              <div class="ag-card-header">
+                <div class="ag-card-logo-placeholder">
+                  <img 
+                    src={`/logos/tools/${slug}.png`} 
+                    alt={title}
+                    style="width: 100%; height: 100%; object-fit: contain; padding: 4px;"
+                    onerror="this.style.display='none'; this.parentElement.innerHTML = '🤖';"
+                  />
+                </div>
+                <div>
+                  <h3 class="ag-card-title">{title}</h3>
+                  <div class="ag-card-meta">
+                    <span class="ag-card-meta-pill" style="color: #4ade80;">★ {score}</span>
+                    <span class="ag-card-meta-pill">{cat || 'TOOL'}</span>
+                  </div>
+                </div>
+              </div>
+              
+              <p class="ag-card-body">
+                {desc}
+              </p>
+              
+              <a href={`/tools/${slug}/`} class="ag-btn">
+                Read Review <span style="font-size: 1.2em; transition: transform 0.2s;">→</span>
+              </a>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  </section>
+  
+  <footer style="text-align: center; padding: 80px 20px 40px; color: rgba(255,255,255,0.4); font-size: 0.95rem; position: relative; z-index: 10;">
+    Aipedia Wiki is scored independently. No affiliate bias.<br/>
+    <a href="/" style="color: #8b5cf6; text-decoration: none; margin-top: 16px; display: inline-block; font-weight: 500; padding: 8px 16px; border-radius: 8px; background: rgba(139, 92, 246, 0.1);">← Return to Original Site</a>
+  </footer>
+</div>
+
+<script is:inline>
+  // Add interactive glowing hover effects to cards
+  document.querySelectorAll('.ag-card').forEach(card => {
+    const glow = card.querySelector('.ag-card-glow');
+    const inner = card.querySelector('.ag-card-inner');
+    const arrow = card.querySelector('.ag-btn span');
+    
+    card.addEventListener('mousemove', e => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      
+      // Update glow position
+      if (glow) {
+        glow.style.left = `${x}px`;
+        glow.style.top = `${y}px`;
+      }
+      
+      // Optional 3D tilt effect on the inner content
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      const rotateX = ((y - centerY) / centerY) * -3;
+      const rotateY = ((x - centerX) / centerX) * 3;
+      
+      inner.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+      inner.style.transition = 'transform 0.1s ease';
+    });
+    
+    card.addEventListener('mouseenter', () => {
+      if (glow) glow.style.opacity = '1';
+      if (arrow) arrow.style.transform = 'translateX(4px)';
+    });
+    
+    card.addEventListener('mouseleave', () => {
+      if (glow) glow.style.opacity = '0';
+      if (arrow) arrow.style.transform = 'translateX(0)';
+      inner.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+      inner.style.transition = 'transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+    });
+  });
+</script>
+</BaseLayout>

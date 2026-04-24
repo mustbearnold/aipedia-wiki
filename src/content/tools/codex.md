@@ -2,7 +2,7 @@
 type: tool
 slug: codex
 title: OpenAI Codex
-tagline: OpenAI's agentic coding product. Cloud-async coding agent, Codex Desktop app (macOS first, Windows rolling), CLI, and IDE extensions. April 16, 2026 super-app update added Computer Use, Memory, gpt-image-2, in-app browser, 90+ plugins, and multi-agent workflows.
+tagline: OpenAI's agentic coding product. Cloud-async coding agent, Codex Desktop app (macOS first, Windows rolling), CLI, and IDE extensions. GPT-5.5 rolled into Codex on April 23, 2026 after the April 16 super-app update added Computer Use, Memory, gpt-image-2, in-app browser, 90+ plugins, and multi-agent workflows.
 category: ai-coding
 secondary_categories: [ai-chatbots]
 company: openai
@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "Bundled with ChatGPT Plus ($20/mo) through Pro 20x ($200/mo)"
 status: active
 launched: 2025-05
-last_updated: 2026-04-23
-last_verified: 2026-04-23
+last_updated: 2026-04-24
+last_verified: 2026-04-24
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -27,7 +27,7 @@ scores:
   longevity: 9
 tags: [agentic-coding, cloud-agent, desktop-app, cli, openai, gpt-5, computer-use, memory, plugins, multi-agent]
 seo_title: "OpenAI Codex: Features, Pricing & Review (April 2026)"
-meta_description: "OpenAI Codex is the cloud-async coding agent bundled with ChatGPT. Codex Desktop (macOS, Windows rolling), CLI, and IDE extensions. April 16 update added Computer Use, Memory, 90+ plugins. Plans $20-$200/mo via ChatGPT tiers."
+meta_description: "OpenAI Codex is the cloud-async coding agent bundled with ChatGPT. GPT-5.5 rolled into Codex April 23, 2026. Codex Desktop, CLI, and IDE extensions span cloud and local workflows. Plans $20-$200/mo via ChatGPT tiers."
 author: "aipedia.wiki Editorial"
 best_for:
   - async background coding (fire a task, return to a PR)
@@ -55,16 +55,22 @@ price_history:
     plan: "Super-app update"
     price: "Same"
     note: "Codex Desktop gained Computer Use, Memory, gpt-image-2, in-app browser, 90+ plugins, multi-agent workflows. Biggest surface expansion since launch."
+  - date: 2026-04-23
+    plan: "GPT-5.5"
+    price: "Bundled with paid ChatGPT tiers"
+    note: "GPT-5.5 rolled out to Codex for longer-running coding, research, data, documents, spreadsheets, and tool-use tasks."
 ---
 
 # OpenAI Codex
 
-OpenAI's **agentic coding** product. A coding agent that works either **async in the cloud** (fire a task, come back to a PR) or **locally** via the Codex Desktop app, CLI, and IDE extensions. Backed by GPT-5.4 and the faster GPT-5.3-Codex-Spark.
+OpenAI's **agentic coding** product. A coding agent that works either **async in the cloud** (fire a task, come back to a PR) or **locally** via the Codex Desktop app, CLI, and IDE extensions. Backed by GPT-5.5, GPT-5.4, and the faster GPT-5.3-Codex-Spark.
 
 Bundled with every paid ChatGPT tier. Pro tiers get 5x to 20x the Codex usage of Plus. The April 16, 2026 super-app update turned Codex Desktop into the most capable OpenAI product surface to date: Computer Use, persistent Memory, gpt-image-2 for visuals, an in-app browser, 90+ plugins, and multi-agent workflows running in parallel.
 
 ## Recent developments (March-April 2026)
 
+- **April 23, 2026:** [GPT-5.5 rolls out to ChatGPT and Codex](/news/2026-04-23-openai-gpt-55-release/). OpenAI positions it for longer-running coding, research, data analysis, documents, spreadsheets, and tool-use tasks.
+- **April 22, 2026:** [Responses API adds WebSockets](/news/2026-04-22-openai-responses-api-websockets/). Relevant to Codex-style agent loops because lower-latency bidirectional sessions make browser/IDE agent workflows feel less stop-start.
 - **April 23, 2026:** [Google discloses 75% of internal new code is AI-generated](/news/2026-04-23-google-75-percent-internal-code-ai-generated/). Signals agentic-coding adoption inside hyperscalers has crossed the "production default" threshold. Codex sits in the same category as Gemini Code Assist for this cohort.
 - **April 23, 2026:** [Gemini Enterprise Agent Platform launches](/news/2026-04-23-gemini-enterprise-agent-platform/). Google now ships a full enterprise agent stack (Studio, Registry, Identity, Gateway, Observability) competing with Codex for governed-agent use cases. Codex counter is the April 16 super-app update's plugin ecosystem and Computer Use.
 - **April 21, 2026:** [Moonshot Kimi K2.6 ships with Agent Swarm mode](/news/2026-04-21-moonshot-kimi-k2-6-agent-swarm/), posting SWE-bench Pro 58.6 as the strongest open-weights baseline. Raises the ceiling for self-hosted alternatives to Codex.
@@ -86,7 +92,7 @@ Bundled with every paid ChatGPT tier. Pro tiers get 5x to 20x the Codex usage of
 
 | | |
 |---|---|
-| **Default model** | GPT-5.4 |
+| **Default model** | GPT-5.5 / GPT-5.4 depending on task surface and rollout status |
 | **Fast model** | GPT-5.3-Codex-Spark (research preview, faster daily-coding) |
 | **Primary surfaces** | Codex Desktop (macOS, Windows rolling) · ChatGPT web · Codex CLI · IDE extensions |
 | **Async cloud execution** | Yes. Sandboxed VM spins up per task; Codex returns a diff or PR |

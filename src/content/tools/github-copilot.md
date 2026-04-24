@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$39/user/month"
 status: active
 launched: 2021-06
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-04-24
+last_verified: 2026-04-24
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -36,6 +36,7 @@ best_for:
 not_best_for:
   - pure terminal / CLI autonomous agent loops
   - power users who burn through 300 premium requests in a week
+  - individual users who do not want Copilot Free, Pro, or Pro+ interaction data used for model training
   - GitLab or Bitbucket-centric teams
 quick_answer: >-
   GitHub Copilot is the cheapest credible AI coding stack, native to VS Code, JetBrains, Xcode, and Neovim. Pro $10/mo is unmatched entry pricing; Pro+ $39/mo unlocks Claude Opus 4.7 plus the full model picker. Skip for pure CLI autonomous loops (Claude Code) or a GUI multi-agent workbench (Cursor).
@@ -52,6 +53,10 @@ price_history:
     plan: "Pro"
     price: "$10/mo"
     note: "Verified, unchanged"
+  - date: 2026-04-24
+    plan: "Free / Pro / Pro+ data policy"
+    price: "Opt-out available"
+    note: "GitHub begins using Copilot interaction data from individual tiers for model training unless users opt out. Business and Enterprise are excluded."
 ---
 
 # GitHub Copilot
@@ -59,6 +64,8 @@ price_history:
 GitHub's AI pair programmer, built by Microsoft and GitHub on top of the largest code-and-repo graph in the world. Ships as a first-party extension inside VS Code, Visual Studio, JetBrains, Xcode, and Neovim. The GA Coding Agent runs asynchronously on GitHub Actions to turn issues into pull requests.
 
 Claude Opus 4.7 went generally available inside Copilot on April 16, 2026, within hours of Anthropic's release.
+
+On April 24, 2026, GitHub's Copilot interaction-data policy took effect for Free, Pro, and Pro+ accounts: prompts, outputs, code snippets, and associated context may be used for model training unless individual users opt out. Copilot Business and Enterprise remain excluded from that training path.
 
 ## System Verdict
 
@@ -86,6 +93,7 @@ Claude Opus 4.7 went generally available inside Copilot on April 16, 2026, withi
 | **Subscription pricing** | Free · Pro $10 · Pro+ $39 · Business $19/seat · Enterprise $39/seat |
 | **Premium request caps** | Free 50 · Pro 300 · Pro+ 1,500 · Business 300/seat · Enterprise 1,000/seat · overage $0.04 each |
 | **Copilot Spaces** | Context-scoping feature accessible via the GitHub MCP server |
+| **Data-training policy** | Free / Pro / Pro+ interaction data may be used for model training unless opted out; Business / Enterprise excluded |
 | **Recent shipments (12 mo)** | Coding Agent GA · Agent mode GA (Mar 2026) · MCP support GA · Copilot CLI GA (Apr 2026) · Opus 4.7 GA (Apr 16, 2026) · Agentic code review (Mar 2026) |
 
 ## What it actually is
@@ -154,12 +162,13 @@ Prices verified 2026-04-17 via [GitHub Copilot plans](https://github.com/feature
 - **GitHub lock-in is real.** Coding Agent, PR review, Spaces, and org knowledge all assume GitHub is your forge. GitLab and Bitbucket teams get the extension but lose the agent graph.
 - **Enterprise admin surface is complex.** Policy controls, per-model allow/deny lists, content exclusions, and SKU combinations (Copilot Enterprise + GitHub Enterprise Cloud) take real time to configure correctly.
 - **Auth quirks on multi-account setups.** Users with multiple GitHub accounts (personal plus corporate) regularly hit sign-in confusion across the VS Code, JetBrains, and Copilot CLI surfaces; the fix is usually signing out of all GitHub integrations and signing back in on the intended account.
+- **Free / Pro / Pro+ data-training opt-out is now a real buying criterion.** As of [April 24, 2026](/news/2026-04-24-github-copilot-interaction-data-training/), individual-tier interaction data can feed model training unless users opt out. Teams with sensitive code should prefer Business or Enterprise policy controls.
 - **Pro+ rate limits exist beyond the 1,500-request quota.** Community reports of `user_weekly_rate_limited` errors suggest undocumented per-week caps; heavy users should monitor for this.
 - **Coding Agent needs well-scoped issues.** Vague tickets produce bad PRs. Works best when the issue has acceptance criteria, file hints, and a reproduction: essentially the same hygiene that makes a junior engineer productive.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, normalizes factual claims, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [github.com/features/copilot](https://github.com/features/copilot), [github.com/features/copilot/plans](https://github.com/features/copilot/plans), [docs.github.com/en/copilot](https://docs.github.com/en/copilot), the [Opus 4.7 GA changelog](https://github.blog/changelog/2026-04-16-claude-opus-4-7-is-generally-available/), and the [Copilot feature matrix](https://docs.github.com/en/copilot/reference/copilot-feature-matrix).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, normalizes factual claims, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-24 against [github.com/features/copilot](https://github.com/features/copilot), [github.com/features/copilot/plans](https://github.com/features/copilot/plans), [docs.github.com/en/copilot](https://docs.github.com/en/copilot), the [Opus 4.7 GA changelog](https://github.blog/changelog/2026-04-16-claude-opus-4-7-is-generally-available/), the [Copilot feature matrix](https://docs.github.com/en/copilot/reference/copilot-feature-matrix), and the [April 24 data-policy update](/news/2026-04-24-github-copilot-interaction-data-training/).
 
 ## FAQ
 

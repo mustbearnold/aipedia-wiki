@@ -23,14 +23,6 @@ for (const t of allTools) {
   };
 }
 
-const categoryEmojiMap: Record<string, string> = {
-  'ai-chatbots': '\uD83D\uDCAC',
-  'ai-voice': '\uD83D\uDD0A', 'ai-video': '\uD83C\uDFAC', 'ai-coding': '\uD83D\uDCBB',
-  'ai-automation': '\u26A1', 'ai-seo': '\uD83D\uDCC8', 'ai-design': '\uD83C\uDFA8',
-  'ai-writing': '\u270D\uFE0F', 'ai-image': '\uD83D\uDDBC', 'ai-search': '\uD83D\uDD0D',
-  'ai-notes': '\uD83D\uDCDD', 'ai-music': '\uD83C\uDFB5',
-  'ai-presentation': '\uD83D\uDCCA', 'ai-research': '\uD83D\uDD2C',
-};
 const categoryLabels: Record<string, string> = {
   'ai-chatbots': 'Chatbots',
   'ai-voice': 'Voice', 'ai-video': 'Video', 'ai-coding': 'Coding',
@@ -80,6 +72,22 @@ for (const cat of Object.keys(byCategory)) {
   byCategory[cat].sort((a, b) => b.sumScore - a.sumScore);
 }
 const categoriesOrdered = Object.keys(byCategory).sort((a, b) => byCategory[b].length - byCategory[a].length);
+const comparedToolCount = new Set(enriched.flatMap((c) => [c.slugA, c.slugB]).filter(Boolean)).size;
+const topCategory = categoriesOrdered[0] || 'other';
+const topCategoryLabel = categoryLabels[topCategory] || topCategory.replace(/^ai-/, '').replace(/-/g, ' ');
+const strongestPair = featured[0];
+const strongestPairScore = strongestPair ? Math.round((strongestPair.sumScore / 2) * 10) / 10 : 0;
+const categorySignals = categoriesOrdered.slice(0, 4).map((cat) => ({
+  slug: cat,
+  label: categoryLabels[cat] || cat.replace(/^ai-/, '').replace(/-/g, ' '),
+  count: byCategory[cat].length,
+}));
+const heroSignals = [
+  { label: 'Editorial pairs', value: allComparisons.length, note: 'sourced head-to-heads' },
+  { label: 'Tools covered', value: comparedToolCount, note: 'across comparison pages' },
+  { label: 'Leading lane', value: topCategoryLabel, note: `${byCategory[topCategory]?.length ?? 0} comparisons` },
+  { label: 'Strongest pair avg', value: strongestPairScore.toFixed(1), note: 'highest combined score' },
+];
 ---
 
 <BaseLayout
@@ -87,61 +95,116 @@ const categoriesOrdered = Object.keys(byCategory).sort((a, b) => byCategory[b].l
   description={`${allComparisons.length} editorial head-to-head comparisons between the most-searched AI tool pairs.`}
 >
   <div class="t2-canvas">
-    <nav class="t2-breadcrumb" aria-label="Breadcrumb">
+    <nav class="t2-breadcrumb" aria-label="Breadcrumb" data-reveal>
       <a href="/">Home</a>
       <span aria-hidden="true">/</span>
       <span class="t2-breadcrumb-current" aria-current="page">Compare</span>
     </nav>
 
-    <section class="idx-hero" data-pagefind-ignore>
-      <div class="idx-eyebrow">
-        <span class="idx-eyebrow-chip idx-eyebrow-accent">Directory</span>
-        <span class="idx-eyebrow-chip"><span class="tabular-nums">{allComparisons.length}</span> comparisons</span>
-        <span class="idx-eyebrow-trust">Every verdict sourced. Editorial only.</span>
+    <section class="compare-hero" data-pagefind-ignore data-reveal style="--reveal-delay: 60ms;">
+      <div class="compare-hero-main">
+        <div class="idx-eyebrow compare-eyebrow">
+          <span class="idx-eyebrow-chip idx-eyebrow-accent">Compare desk</span>
+          <span class="idx-eyebrow-chip"><span class="tabular-nums">{allComparisons.length}</span> verdicts</span>
+          <span class="idx-eyebrow-trust">Editorial only. No paid placements.</span>
+        </div>
+        <h1 class="idx-headline compare-headline">
+          Choose the right AI tool <span class="idx-gradient">before switching</span>.
+        </h1>
+        <p class="idx-subhead compare-subhead">
+          Head-to-head verdicts for the tool pairs people actually search. Compare score gaps, category fit, pricing pressure, and the tradeoffs that decide which product belongs in the stack.
+        </p>
+        <div class="t2-ctas compare-ctas">
+          <a href="/compare/build/" class="t2-cta t2-cta-primary">
+            Build your own comparison
+            <span class="t2-cta-arrow" aria-hidden="true">&rarr;</span>
+          </a>
+          <a href="#featured-section" class="t2-cta t2-cta-secondary">
+            Browse top pairs
+            <span class="t2-cta-arrow" aria-hidden="true">&rarr;</span>
+          </a>
+        </div>
       </div>
-      <h1 class="idx-headline">
-        Compare AI tools <span class="idx-gradient">head-to-head</span>.
-      </h1>
-      <p class="idx-subhead">
-        {allComparisons.length} editorial comparisons of the most-searched AI tool pairs. Honest verdicts, scoring breakdowns, clear recommendations.
-      </p>
-      <div class="t2-ctas" style="margin-top: 18px;">
-        <a href="/compare/build/" class="t2-cta t2-cta-primary">
-          Build your own comparison
-          <span class="t2-cta-arrow" aria-hidden="true">&rarr;</span>
-        </a>
-      </div>
+
+      <aside class="compare-hero-panel" aria-label="Compare directory signal">
+        <div class="compare-panel-kicker">April 2026 comparison map</div>
+        <div class="compare-panel-score">
+          <span class="tabular-nums">{strongestPairScore.toFixed(1)}</span>
+          <small>/10 top pair average</small>
+        </div>
+        <div class="compare-panel-pair">
+          {strongestPair?.toolA?.title ?? 'Top tool'} <span>vs</span> {strongestPair?.toolB?.title ?? 'Top alternative'}
+        </div>
+        <div class="compare-panel-lines">
+          {categorySignals.map((cat) => (
+            <a href={`#cat-${cat.slug}`} class="compare-panel-line">
+              <span>{cat.label}</span>
+              <strong class="tabular-nums">{cat.count}</strong>
+            </a>
+          ))}
+        </div>
+      </aside>
     </section>
 
-    <div class="t2-compare-filter">
-      <input
-        id="compare-filter"
-        type="search"
-        placeholder="Filter by tool or comparison..."
-        class="t2-compare-filter-input"
-      />
-      <span id="compare-count" class="t2-compare-filter-count tabular-nums">{allComparisons.length}</span>
+    <section class="compare-signal-grid" aria-label="Compare directory signals" data-reveal style="--reveal-delay: 120ms;">
+      {heroSignals.map((signal) => (
+        <div class="compare-signal">
+          <span class="compare-signal-label">{signal.label}</span>
+          <strong class="compare-signal-value tabular-nums">{signal.value}</strong>
+          <span class="compare-signal-note">{signal.note}</span>
+        </div>
+      ))}
+    </section>
+
+    <div class="t2-compare-filter compare-filter-premium" data-reveal>
+      <label for="compare-filter" class="compare-filter-label">Find a verdict</label>
+      <div class="compare-filter-control">
+        <input
+          id="compare-filter"
+          type="search"
+          placeholder="Search by tool, pair, or category..."
+          class="t2-compare-filter-input"
+        />
+        <span id="compare-count" class="t2-compare-filter-count tabular-nums">{allComparisons.length}</span>
+      </div>
+      <div class="compare-lane-chips" aria-label="Popular comparison lanes">
+        {categorySignals.map((cat) => (
+          <a href={`#cat-${cat.slug}`} class="compare-lane-chip">
+            <span>{cat.label}</span>
+            <strong class="tabular-nums">{cat.count}</strong>
+          </a>
+        ))}
+      </div>
     </div>
 
-    <section class="t2-index-group" id="featured-section">
-      <div class="t2-index-group-head">
-        <span class="t2-index-group-emoji" aria-hidden="true">⭐</span>
-        <h2 class="t2-index-group-title">Top comparisons</h2>
+    <section class="t2-index-group compare-featured-group" id="featured-section" data-reveal>
+      <div class="t2-index-group-head compare-group-head">
+        <span class="compare-group-mark" aria-hidden="true"></span>
+        <div>
+          <p class="compare-group-kicker">Highest-signal verdicts</p>
+          <h2 class="t2-index-group-title">Top comparisons</h2>
+        </div>
         <span class="t2-index-group-count">{featured.length}</span>
       </div>
-      <div class="t2-compare-grid">
-        {featured.map((c) => (
-          <a href={`/compare/${c.slug}/`} class="compare-card t2-compare-card t2-compare-card-featured" data-search={c.dataAttr}>
-            <div class="t2-compare-card-logos">
-              {c.toolA && <img src={c.toolA.logo} alt="" width="30" height="30" loading="lazy" />}
-              {c.toolB && <img src={c.toolB.logo} alt="" width="30" height="30" loading="lazy" />}
+      <div class="t2-compare-grid compare-featured-grid">
+        {featured.map((c, i) => (
+          <a href={`/compare/${c.slug}/`} class="compare-card t2-compare-card t2-compare-card-featured compare-card-premium" data-search={c.dataAttr} style={`--reveal-delay: ${(i % 3) * 55}ms;`}>
+            <div class="t2-compare-card-logos compare-logo-pair">
+              {c.toolA && <img src={c.toolA.logo} alt="" width="36" height="36" loading="lazy" />}
+              {c.toolB && <img src={c.toolB.logo} alt="" width="36" height="36" loading="lazy" />}
             </div>
             <div class="t2-compare-card-body">
+              <div class="compare-card-kicker">
+                <span>{categoryLabels[c.category] || c.category.replace(/^ai-/, '').replace(/-/g, ' ')}</span>
+                <span class="tabular-nums">{Math.round((c.sumScore / 2) * 10) / 10}/10 avg</span>
+              </div>
               <div class="t2-compare-card-title">
                 {c.toolA?.title || '?'} <span class="t2-compare-card-vs">vs</span> {c.toolB?.title || '?'}
               </div>
               <div class="t2-compare-card-scores tabular-nums">
-                {c.toolA?.score.toFixed(1) || '-'} <span aria-hidden="true">|</span> {c.toolB?.score.toFixed(1) || '-'}
+                <span>{c.toolA?.score.toFixed(1) || '-'}</span>
+                <span aria-hidden="true">/</span>
+                <span>{c.toolB?.score.toFixed(1) || '-'}</span>
               </div>
             </div>
             <span class="t2-compare-card-arrow" aria-hidden="true">&rarr;</span>
@@ -151,22 +214,30 @@ const categoriesOrdered = Object.keys(byCategory).sort((a, b) => byCategory[b].l
     </section>
 
     {categoriesOrdered.map((cat) => (
-      <section class="t2-index-group category-block" data-category={cat}>
-        <div class="t2-index-group-head">
-          <span class="t2-index-group-emoji" aria-hidden="true">{categoryEmojiMap[cat] || '\uD83D\uDD27'}</span>
-          <h2 class="t2-index-group-title">{categoryLabels[cat] || cat}</h2>
+      <section class="t2-index-group category-block compare-category-block" id={`cat-${cat}`} data-category={cat} data-reveal>
+        <div class="t2-index-group-head compare-group-head">
+          <span class="compare-group-mark" aria-hidden="true"></span>
+          <div>
+            <p class="compare-group-kicker">Comparison lane</p>
+            <h2 class="t2-index-group-title">{categoryLabels[cat] || cat.replace(/^ai-/, '').replace(/-/g, ' ')}</h2>
+          </div>
           <span class="t2-index-group-count">{byCategory[cat].length}</span>
         </div>
         <div class="t2-compare-grid t2-compare-grid-dense">
-          {byCategory[cat].map((c) => (
-            <a href={`/compare/${c.slug}/`} class="compare-card t2-compare-card" data-search={c.dataAttr}>
-              <div class="t2-compare-card-logos">
-                {c.toolA && <img src={c.toolA.logo} alt="" width="24" height="24" loading="lazy" />}
-                {c.toolB && <img src={c.toolB.logo} alt="" width="24" height="24" loading="lazy" />}
+          {byCategory[cat].map((c, i) => (
+            <a href={`/compare/${c.slug}/`} class="compare-card t2-compare-card compare-card-premium compare-card-compact" data-search={c.dataAttr} style={`--reveal-delay: ${(i % 4) * 35}ms;`}>
+              <div class="t2-compare-card-logos compare-logo-pair">
+                {c.toolA && <img src={c.toolA.logo} alt="" width="30" height="30" loading="lazy" />}
+                {c.toolB && <img src={c.toolB.logo} alt="" width="30" height="30" loading="lazy" />}
               </div>
               <div class="t2-compare-card-body">
                 <div class="t2-compare-card-title">
                   {c.toolA?.title || '?'} <span class="t2-compare-card-vs">vs</span> {c.toolB?.title || '?'}
+                </div>
+                <div class="t2-compare-card-scores tabular-nums">
+                  <span>{c.toolA?.score.toFixed(1) || '-'}</span>
+                  <span aria-hidden="true">/</span>
+                  <span>{c.toolB?.score.toFixed(1) || '-'}</span>
                 </div>
               </div>
               <span class="t2-compare-card-arrow" aria-hidden="true">&rarr;</span>

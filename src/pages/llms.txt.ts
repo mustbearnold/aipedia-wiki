@@ -25,7 +25,7 @@ export const GET: APIRoute = async () => {
   lines.push('- [All Tools A-Z](https://aipedia.wiki/tools/): every active AI tool page');
   lines.push('- [All Categories](https://aipedia.wiki/categories/): hubs grouping tools by domain');
   lines.push('- [All Comparisons](https://aipedia.wiki/compare/): head-to-head tool vs tool articles');
-  lines.push('- [All Use-Case Guides](https://aipedia.wiki/guides/): "best AI for X" problem-first guides');
+  lines.push('- [Use Cases](https://aipedia.wiki/guides/): problem-first pages for choosing AI tools by workflow, budget, and risk');
   lines.push('- [Glossary](https://aipedia.wiki/glossary/): defined terms used across the site');
   lines.push('');
   lines.push('## Editorial and methodology');

@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2023-03
-last_updated: 2026-04-22
-last_verified: 2026-04-22
+last_updated: 2026-04-24
+last_verified: 2026-04-24
 update_frequency: monthly
 seo_title: "Claude: Features, Pricing & Review (2026)"
 meta_description: "Claude runs Opus 4.7 (April 16, 2026) as flagship, Sonnet 4.6, Haiku 4.5. Claude Design (April 17) added for prompt-to-prototype. 1M context, $5/$25 per MTok API. Free tier; Pro $20/mo."
@@ -64,6 +64,7 @@ Anthropic's AI assistant. **Opus 4.7** is the flagship as of **April 16, 2026**,
 
 ## Recent developments
 
+- **April 24:** [Anthropic and NEC announce a 30,000-employee Claude rollout](/news/2026-04-24-anthropic-nec-ai-engineering-workforce/). NEC will make Claude available across its global workforce and package Claude into NEC BluStellar offers and cybersecurity services.
 - **April 22:** [Anthropic commits multi-gigawatt capacity on next-gen Alphabet-Broadcom TPUs starting 2027](/news/2026-04-22-anthropic-alphabet-broadcom-tpu-commitment-2027/). Extends the Ironwood 1M-TPU commitment into the 8th-generation silicon roadmap. Anthropic now has 10 GW+ of multi-cloud compute committed across AWS, Google, and Nvidia through 2030.
 - **April 22:** [Anthropic commits to up to 1M Google Ironwood TPUs](/news/2026-04-22-google-ironwood-tpu-cloud-next-2026/) as Google launches the 7th-gen inference-first TPU at Cloud Next 2026. Combined with the AWS pact, Anthropic now has 8.5 GW+ of multi-cloud compute committed for Claude.
 - **April 21:** [Anthropic outspent OpenAI on federal lobbying in Q1 2026](/news/2026-04-21-anthropic-lobbying-q1-2026/): $1.6M vs $1M. First quarter Anthropic has topped the frontier-lab Washington spend table.
@@ -101,6 +102,7 @@ Anthropic's AI assistant. **Opus 4.7** is the flagship as of **April 16, 2026**,
 | | Sonnet 4.6: $3 / $15 per MTok · Haiku 4.5: $1 / $5 per MTok |
 | **Subscription pricing** | Free · Pro $20 · Max 5x $100 · Max 20x $200 · Team $30/user · Enterprise custom |
 | **Agentic coding** | Claude Code CLI · strongest terminal coding agent available |
+| **Enterprise distribution** | NEC partnership announced April 24, 2026 · about 30,000 NEC employees plus BluStellar and cybersecurity services |
 | **Design tooling** | Claude Design · prompt-to-prototype · exports PDF, PPTX, URL, Canva · hands off to Claude Code for build |
 | **Image generation** | None (use Midjourney or GPT Image 2 alongside) |
 | **Video generation** | None (use Veo 3 or Kling alongside) |
@@ -182,7 +184,7 @@ Prices verified 2026-04-17 via [Anthropic pricing docs](https://platform.claude.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against Anthropic's [pricing docs](https://platform.claude.com/docs/en/about-claude/pricing), [model docs](https://platform.claude.com/docs/en/about-claude/models), the [Opus 4.7 release coverage](https://venturebeat.com/technology/anthropic-releases-claude-opus-4-7-narrowly-retaking-lead-for-most-powerful-generally-available-llm), and the [GitHub Copilot changelog](https://github.blog/changelog/2026-04-16-claude-opus-4-7-is-generally-available/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-24 against Anthropic's [pricing docs](https://platform.claude.com/docs/en/about-claude/pricing), [model docs](https://platform.claude.com/docs/en/about-claude/models), the [Opus 4.7 release coverage](https://venturebeat.com/technology/anthropic-releases-claude-opus-4-7-narrowly-retaking-lead-for-most-powerful-generally-available-llm), the [GitHub Copilot changelog](https://github.blog/changelog/2026-04-16-claude-opus-4-7-is-generally-available/), and the [NEC partnership](/news/2026-04-24-anthropic-nec-ai-engineering-workforce/).
 
 ## FAQ
 

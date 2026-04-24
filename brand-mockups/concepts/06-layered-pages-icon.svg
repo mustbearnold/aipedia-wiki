@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="p1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c4b5fd"/>
+      <stop offset="100%" stop-color="#93c5fd"/>
+    </linearGradient>
+    <linearGradient id="p2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a78bfa"/>
+      <stop offset="100%" stop-color="#60a5fa"/>
+    </linearGradient>
+    <linearGradient id="p3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+  </defs>
+  <!-- back page (offset up-left, lightest) -->
+  <rect x="80" y="100" width="320" height="320" rx="40" ry="40"
+        fill="url(#p1)" opacity="0.85"
+        transform="rotate(-6 240 260)"/>
+  <!-- middle page -->
+  <rect x="100" y="120" width="320" height="320" rx="40" ry="40"
+        fill="url(#p2)"
+        transform="rotate(0 260 280)"/>
+  <!-- front page (offset down-right, darkest) -->
+  <rect x="120" y="140" width="320" height="320" rx="40" ry="40"
+        fill="url(#p3)"
+        transform="rotate(6 280 300)"/>
+  <!-- content lines on front page -->
+  <g fill="#ffffff" opacity="0.55" transform="rotate(6 280 300)">
+    <rect x="150" y="200" width="160" height="10" rx="5"/>
+    <rect x="150" y="240" width="220" height="10" rx="5"/>
+    <rect x="150" y="280" width="180" height="10" rx="5"/>
+    <rect x="150" y="320" width="200" height="10" rx="5"/>
+    <rect x="150" y="360" width="140" height="10" rx="5"/>
+  </g>
+</svg>

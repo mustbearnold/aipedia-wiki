@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 400" width="1600" height="400">
+  <defs>
+    <linearGradient id="mG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a78bfa"/>
+      <stop offset="100%" stop-color="#60a5fa"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(80,80) scale(0.47)">
+    <rect x="40" y="40" width="432" height="432" rx="96" ry="96" fill="none" stroke="url(#mG)" stroke-width="20"/>
+    <text x="138" y="352" font-family="Arial Black, Arial, sans-serif" font-size="280" font-weight="900" fill="url(#mG)" text-anchor="middle">a</text>
+    <circle cx="256" cy="338" r="20" fill="url(#mG)"/>
+    <text x="374" y="352" font-family="Arial Black, Arial, sans-serif" font-size="220" font-weight="900" fill="url(#mG)" text-anchor="middle">w</text>
+  </g>
+  <text x="400" y="240" font-family="Arial Black, Arial, sans-serif"
+        font-size="140" font-weight="900" fill="url(#mG)">aipedia<tspan font-family="Arial, sans-serif" font-weight="400" opacity="0.7">.wiki</tspan></text>
+  <text x="404" y="290" font-family="Arial, sans-serif"
+        font-size="32" font-weight="500" fill="#64748b"
+        letter-spacing="4">AI TOOLS, REVIEWED HONESTLY</text>
+</svg>

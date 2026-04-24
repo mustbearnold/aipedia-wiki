@@ -21,7 +21,7 @@
   </g>
   <text x="210" y="270" font-family="Inter, system-ui, sans-serif" font-size="76" font-weight="800" fill="#fafafa">Grok</text>
   <text x="210" y="310" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="500" fill="#9ca3af">xAI</text>
-  <text x="80" y="400" font-family="Inter, system-ui, sans-serif" font-size="26" font-weight="500" fill="#d1d5db"><tspan x="80" dy="0">xAI&apos;s AI assistant. Grok 4.3 beta expanded April 19,</tspan><tspan x="80" dy="36">2026 to X Premium+ ($40/mo) and SuperGrok ($30/mo) users</tspan><tspan x="80" dy="36">(was Heavy-only April 17). 1T params, 2M context, native…</tspan></text>
+  <text x="80" y="400" font-family="Inter, system-ui, sans-serif" font-size="26" font-weight="500" fill="#d1d5db"><tspan x="80" dy="0">xAI&apos;s AI assistant. Grok 4.3 beta expanded April 19,</tspan><tspan x="80" dy="36">2026 to X Premium+ ($40/mo) and SuperGrok ($30/mo); Grok</tspan><tspan x="80" dy="36">Voice Think Fast 1.0 launched April 23 for enterprise…</tspan></text>
   <g transform="translate(960, 80)">
     <rect x="0" y="0" width="160" height="160" rx="20" fill="rgba(167,139,250,0.10)" stroke="rgba(167,139,250,0.35)" stroke-width="2"/>
     <text x="80" y="100" font-family="Inter, system-ui, sans-serif" font-size="64" font-weight="800" text-anchor="middle" fill="#fbbf24">6.5</text>

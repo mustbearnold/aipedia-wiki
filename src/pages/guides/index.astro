@@ -1,7 +1,6 @@
 ---
 /**
- * /guides/ index. Lists all editorial guides grouped by type.
- * Redesigned April 23, 2026 into the .t2-canvas system.
+ * /guides/ index. Problem-first use-case library over src/content/use-cases.
  */
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
@@ -9,6 +8,16 @@ import { getCollection } from 'astro:content';
 const allGuides = await getCollection('use-cases');
 
 type GuideType = 'best-of' | 'alternatives' | 'stack' | 'comparison' | 'other';
+type Guide = {
+  slug: string;
+  title: string;
+  description: string;
+  type: GuideType;
+  lastUpdated: unknown;
+  lastVerified: unknown;
+  tools: string[];
+};
+
 function guideType(slug: string): GuideType {
   if (slug.startsWith('best-')) return 'best-of';
   if (slug.endsWith('-alternatives')) return 'alternatives';
@@ -17,75 +26,524 @@ function guideType(slug: string): GuideType {
   return 'other';
 }
 
-const guides = allGuides.map(g => ({
-  slug: g.data.slug || g.id.replace(/\.md$/, ''),
-  title: g.data.title,
-  description: g.data.meta_description || g.data.description || '',
-  type: guideType(g.data.slug || g.id),
-  lastUpdated: g.data.last_updated,
+const guides: Guide[] = allGuides.map(g => {
+  const slug = g.data.slug || g.id.replace(/\.md$/, '');
+  return {
+    slug,
+    title: g.data.title,
+    description: g.data.meta_description || g.data.description || '',
+    type: guideType(slug),
+    lastUpdated: g.data.last_updated,
+    lastVerified: g.data.last_verified,
+    tools: g.data.tools_mentioned || [],
+  };
+});
+
+function textForGuide(g: Guide): string {
+  return `${g.slug} ${g.title} ${g.description} ${g.tools.join(' ')}`.toLowerCase();
+}
+
+function dateLabel(value: unknown): string {
+  if (!value) return 'Review queued';
+  const iso = value instanceof Date ? value.toISOString().slice(0, 10) : String(value).slice(0, 10);
+  return `Verified ${iso}`;
+}
+
+const lanes = [
+  {
+    label: 'Coding',
+    deck: 'Agents, IDEs, code review, debugging, tests, docs.',
+    href: '/categories/ai-coding/',
+    match: (g: Guide) => /coding|code|debug|unit-test|api-documentation|developer|cursor|copilot|claude-code|aider|devin/.test(textForGuide(g)),
+  },
+  {
+    label: 'Automation',
+    deck: 'Workflows, lead gen, support, agencies, operations.',
+    href: '/categories/ai-automation/',
+    match: (g: Guide) => /automation|workflow|agent|lead|support|agency|sales|n8n|zapier|make|crm/.test(textForGuide(g)),
+  },
+  {
+    label: 'Research',
+    deck: 'Search, citations, academic writing, analysis, notes.',
+    href: '/categories/ai-research/',
+    match: (g: Guide) => /research|academic|citation|data-analysis|notes|notebook|perplexity|elicit|consensus/.test(textForGuide(g)),
+  },
+  {
+    label: 'Writing',
+    deck: 'Blogs, books, email, ads, resumes, content pipelines.',
+    href: '/categories/ai-writing/',
+    match: (g: Guide) => /writing|blog|book|copy|email|resume|cover-letter|content|seo|grammar|jasper/.test(textForGuide(g)),
+  },
+  {
+    label: 'Creative',
+    deck: 'Image, video, music, design, presentations, creators.',
+    href: '/categories/ai-image/',
+    match: (g: Guide) => /image|video|music|design|presentation|creator|thumbnail|voice|suno|runway|midjourney|canva/.test(textForGuide(g)),
+  },
+];
+
+const guideBySlug = new Map(guides.map(g => [g.slug, g]));
+const featuredSlugs = [
+  'best-ai-coding-assistant',
+  'ai-solo-founder-stack',
+  'best-ai-automation-platform',
+  'best-ai-research-tool',
+  'best-ai-for-data-analysis',
+  'ai-content-creator-stack',
+  'best-ai-tools-under-20-month',
+  'chatgpt-alternatives',
+];
+const featured = featuredSlugs.map(slug => guideBySlug.get(slug)).filter(Boolean) as Guide[];
+
+const laneGroups = lanes.map(lane => ({
+  ...lane,
+  items: guides
+    .filter(lane.match)
+    .sort((a, b) => String(b.lastVerified || b.lastUpdated || '').localeCompare(String(a.lastVerified || a.lastUpdated || '')))
+    .slice(0, 8),
 }));
 
-const groups: Record<string, typeof guides> = {
-  'best-of':       guides.filter(g => g.type === 'best-of'),
-  'alternatives':  guides.filter(g => g.type === 'alternatives'),
-  'stack':         guides.filter(g => g.type === 'stack'),
-  'comparison':    guides.filter(g => g.type === 'comparison'),
-  'other':         guides.filter(g => g.type === 'other'),
+const archiveGroups: Record<string, Guide[]> = {
+  'best-of': guides.filter(g => g.type === 'best-of'),
+  'stack': guides.filter(g => g.type === 'stack'),
+  'alternatives': guides.filter(g => g.type === 'alternatives'),
+  'comparison': guides.filter(g => g.type === 'comparison'),
+  'other': guides.filter(g => g.type === 'other'),
 };
 
-const groupMeta: Record<string, { label: string; emoji: string; description: string }> = {
-  'best-of':      { label: 'Best Of Guides', emoji: '\uD83C\uDFC6', description: 'Category-leading tools for specific use cases' },
-  'alternatives': { label: 'Alternatives',   emoji: '\uD83D\uDD04', description: 'Swap out one tool. Find the right substitute.' },
-  'stack':        { label: 'Workflow Stacks',emoji: '\uD83C\uDFD7\uFE0F', description: 'Complete tool stacks by role and budget' },
-  'comparison':   { label: 'Comparisons',    emoji: '\u2696\uFE0F', description: 'Head-to-head analysis of tool pairs' },
-  'other':        { label: 'Other Guides',   emoji: '\uD83D\uDCD6', description: '' },
+const archiveMeta: Record<string, { label: string; description: string }> = {
+  'best-of': { label: 'Best Picks', description: 'Ranked choices by job, budget, and workflow.' },
+  'stack': { label: 'Stacks', description: 'Complete tool combinations for real work.' },
+  'alternatives': { label: 'Alternatives', description: 'Swap one tool for a better fit.' },
+  'comparison': { label: 'Comparisons', description: 'Use-case pages with direct tradeoffs.' },
+  'other': { label: 'Reference', description: 'Useful pages that do not fit a single lane.' },
 };
+
+const verifiedThisWeek = guides.filter(g => String(g.lastVerified || g.lastUpdated || '').startsWith('2026-04-2')).length;
+const toolMentions = new Set(guides.flatMap(g => g.tools)).size;
 ---
 
 <BaseLayout
-  title="Guides & Best-Of Lists, aipedia.wiki"
-  description={`${allGuides.length} editorial guides covering best-of roundups, alternatives, workflow stacks, and head-to-head comparisons of AI tools.`}
+  title="AI Tool Use Cases, aipedia.wiki"
+  description={`${allGuides.length} use-case pages for choosing AI tools by job: coding, automation, research, writing, creative work, and budget.`}
 >
-  <div class="t2-canvas">
+  <div class="t2-canvas guides-canvas">
     <nav class="t2-breadcrumb" aria-label="Breadcrumb">
       <a href="/">Home</a>
       <span aria-hidden="true">/</span>
-      <span class="t2-breadcrumb-current" aria-current="page">Guides</span>
+      <span class="t2-breadcrumb-current" aria-current="page">Use Cases</span>
     </nav>
 
-    <section class="idx-hero" data-pagefind-ignore>
-      <div class="idx-eyebrow">
-        <span class="idx-eyebrow-chip idx-eyebrow-accent">Editorial guides</span>
-        <span class="idx-eyebrow-chip"><span class="tabular-nums">{allGuides.length}</span> guides</span>
-        <span class="idx-eyebrow-trust">Every claim sourced. Zero sponsored picks.</span>
+    <section class="guides-hero" data-pagefind-ignore data-reveal>
+      <div class="guides-kicker">
+        <span class="guides-dot" aria-hidden="true"></span>
+        <span>Use-case library</span>
+        <span class="guides-pill"><span class="tabular-nums">{allGuides.length}</span> pages</span>
       </div>
-      <h1 class="idx-headline">
-        Guides &amp; <span class="idx-gradient">best-of lists</span>.
-      </h1>
-      <p class="idx-subhead">
-        {allGuides.length} editorial guides covering category roundups, tool alternatives, workflow stacks, and in-depth comparisons.
+      <h1 class="guides-title">Pick the AI tool for the job.</h1>
+      <p class="guides-subhead">
+        Problem-first pages for when a tool dossier is too narrow and a comparison is too specific. Use these to choose by workflow, budget, and risk.
       </p>
+      <div class="guides-stats" aria-label="Use-case library stats">
+        <div>
+          <strong class="tabular-nums">{allGuides.length}</strong>
+          <span>use cases</span>
+        </div>
+        <div>
+          <strong class="tabular-nums">{verifiedThisWeek}</strong>
+          <span>verified this week</span>
+        </div>
+        <div>
+          <strong class="tabular-nums">{toolMentions}</strong>
+          <span>tools mentioned</span>
+        </div>
+      </div>
     </section>
 
-    {Object.entries(groups).map(([groupKey, items]) => items.length > 0 && (
-      <section class="t2-index-group">
-        <div class="t2-index-group-head">
-          <span class="t2-index-group-emoji" aria-hidden="true">{groupMeta[groupKey].emoji}</span>
-          <h2 class="t2-index-group-title">{groupMeta[groupKey].label}</h2>
-          <span class="t2-index-group-count">{items.length}</span>
+    {featured.length > 0 && (
+      <section class="guides-section" data-reveal>
+        <div class="guides-section-head">
+          <div>
+            <p class="guides-section-kicker">Start here</p>
+            <h2>Highest-signal use cases</h2>
+          </div>
+          <span>Reviewed, useful, and central to the site.</span>
         </div>
-        {groupMeta[groupKey].description && (
-          <p class="t2-index-group-desc">{groupMeta[groupKey].description}</p>
-        )}
-        <div class="t2-index-grid">
-          {items.map(g => (
-            <a href={`/guides/${g.slug}/`} class="t2-index-card">
-              <h3 class="t2-index-card-title">{g.title}</h3>
-              {g.description && <p class="t2-index-card-desc">{g.description}</p>}
+        <div class="guides-featured-grid">
+          {featured.map(g => (
+            <a href={`/guides/${g.slug}/`} class="guides-featured-card">
+              <span class="guides-card-meta">{dateLabel(g.lastVerified || g.lastUpdated)}</span>
+              <h3>{g.title}</h3>
+              {g.description && <p>{g.description}</p>}
             </a>
           ))}
         </div>
       </section>
-    ))}
+    )}
+
+    <section class="guides-section" data-reveal>
+      <div class="guides-section-head">
+        <div>
+          <p class="guides-section-kicker">Browse by work</p>
+          <h2>Problem lanes</h2>
+        </div>
+        <span>Fast paths into the library.</span>
+      </div>
+      <div class="guides-lanes">
+        {laneGroups.map(lane => lane.items.length > 0 && (
+          <section class="guides-lane">
+            <div class="guides-lane-head">
+              <div>
+                <h3>{lane.label}</h3>
+                <p>{lane.deck}</p>
+              </div>
+              <a href={lane.href} aria-label={`${lane.label} category`}>Category</a>
+            </div>
+            <div class="guides-lane-links">
+              {lane.items.map(g => (
+                <a href={`/guides/${g.slug}/`}>
+                  <span>{g.title}</span>
+                  <small>{dateLabel(g.lastVerified || g.lastUpdated)}</small>
+                </a>
+              ))}
+            </div>
+          </section>
+        ))}
+      </div>
+    </section>
+
+    <section class="guides-section guides-archive" data-reveal>
+      <div class="guides-section-head">
+        <div>
+          <p class="guides-section-kicker">Full archive</p>
+          <h2>All use-case pages</h2>
+        </div>
+        <span>Kept for long-tail discovery and internal linking.</span>
+      </div>
+      {Object.entries(archiveGroups).map(([groupKey, items]) => items.length > 0 && (
+        <details class="guides-archive-group" open={groupKey === 'best-of' || groupKey === 'stack'}>
+          <summary>
+            <span>
+              <strong>{archiveMeta[groupKey].label}</strong>
+              <small>{archiveMeta[groupKey].description}</small>
+            </span>
+            <span class="tabular-nums">{items.length}</span>
+          </summary>
+          <div class="guides-archive-grid">
+            {items.map(g => (
+              <a href={`/guides/${g.slug}/`}>
+                <span>{g.title}</span>
+                <small>{dateLabel(g.lastVerified || g.lastUpdated)}</small>
+              </a>
+            ))}
+          </div>
+        </details>
+      ))}
+    </section>
   </div>
+
+  <style>
+    .guides-canvas {
+      --guide-line: rgba(148, 163, 184, 0.18);
+      --guide-surface: rgba(15, 23, 42, 0.62);
+      --guide-surface-strong: rgba(15, 23, 42, 0.88);
+      --guide-muted: var(--text-secondary);
+      --guide-subtle: var(--text-muted);
+    }
+    .guides-hero {
+      padding: clamp(34px, 6vw, 72px) 0 34px;
+      border-bottom: 1px solid var(--guide-line);
+    }
+    .guides-kicker {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      color: var(--guide-subtle);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+    .guides-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent-success);
+      box-shadow: 0 0 18px rgba(94, 234, 212, 0.45);
+    }
+    .guides-pill {
+      padding: 5px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(94, 234, 212, 0.2);
+      background: rgba(94, 234, 212, 0.06);
+      color: var(--accent-success);
+      letter-spacing: 0.04em;
+      text-transform: none;
+    }
+    .guides-title {
+      margin: 0;
+      max-width: 930px;
+      font-size: clamp(2.5rem, 7vw, 5.6rem);
+      line-height: 0.95;
+      font-weight: 800;
+      letter-spacing: 0;
+      color: var(--text-primary);
+    }
+    .guides-subhead {
+      margin: 22px 0 0;
+      max-width: 760px;
+      font-size: clamp(1.02rem, 2vw, 1.28rem);
+      line-height: 1.55;
+      color: var(--guide-muted);
+    }
+    .guides-stats {
+      margin-top: 34px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      max-width: 780px;
+      border: 1px solid var(--guide-line);
+      border-radius: 8px;
+      overflow: hidden;
+      background: var(--guide-surface);
+    }
+    .guides-stats div {
+      padding: 18px 20px;
+      border-right: 1px solid var(--guide-line);
+    }
+    .guides-stats div:last-child { border-right: 0; }
+    .guides-stats strong {
+      display: block;
+      font-size: clamp(1.65rem, 3vw, 2.3rem);
+      line-height: 1;
+      color: var(--text-primary);
+    }
+    .guides-stats span {
+      display: block;
+      margin-top: 8px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--guide-subtle);
+    }
+    .guides-section {
+      margin-top: 42px;
+    }
+    .guides-section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 18px;
+      margin-bottom: 16px;
+    }
+    .guides-section-kicker {
+      margin: 0 0 7px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent-primary);
+    }
+    .guides-section-head h2 {
+      margin: 0;
+      color: var(--text-primary);
+      font-size: clamp(1.45rem, 2.7vw, 2.1rem);
+      line-height: 1.05;
+      letter-spacing: 0;
+    }
+    .guides-section-head > span {
+      max-width: 360px;
+      text-align: right;
+      color: var(--guide-subtle);
+      font-size: 13px;
+      line-height: 1.4;
+    }
+    .guides-featured-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .guides-featured-card,
+    .guides-lane,
+    .guides-archive-group {
+      border: 1px solid var(--guide-line);
+      border-radius: 8px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.025), transparent), var(--guide-surface);
+    }
+    .guides-featured-card {
+      min-height: 180px;
+      padding: 20px;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+    }
+    .guides-featured-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(94, 234, 212, 0.32);
+      background: var(--guide-surface-strong);
+    }
+    .guides-card-meta {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--guide-subtle);
+    }
+    .guides-featured-card h3 {
+      margin: 16px 0 10px;
+      color: var(--text-primary);
+      font-size: clamp(1.12rem, 2vw, 1.42rem);
+      line-height: 1.16;
+      letter-spacing: 0;
+    }
+    .guides-featured-card p {
+      margin: 0;
+      color: var(--guide-muted);
+      font-size: 14px;
+      line-height: 1.48;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .guides-lanes {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .guides-lane {
+      padding: 18px;
+    }
+    .guides-lane-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--guide-line);
+    }
+    .guides-lane h3 {
+      margin: 0;
+      color: var(--text-primary);
+      font-size: 1.05rem;
+      letter-spacing: 0;
+    }
+    .guides-lane p {
+      margin: 6px 0 0;
+      color: var(--guide-subtle);
+      font-size: 13px;
+      line-height: 1.42;
+    }
+    .guides-lane-head a {
+      flex: none;
+      height: 30px;
+      display: inline-flex;
+      align-items: center;
+      padding: 0 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(167, 139, 250, 0.26);
+      color: var(--accent-primary);
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .guides-lane-links,
+    .guides-archive-grid {
+      display: grid;
+      gap: 2px;
+      margin-top: 10px;
+    }
+    .guides-lane-links a,
+    .guides-archive-grid a {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 9px 8px;
+      border-radius: 6px;
+      color: var(--guide-muted);
+      text-decoration: none;
+      font-size: 13px;
+      line-height: 1.3;
+    }
+    .guides-lane-links a:hover,
+    .guides-archive-grid a:hover {
+      background: rgba(255,255,255,0.035);
+      color: var(--text-primary);
+    }
+    .guides-lane-links small,
+    .guides-archive-grid small {
+      flex: none;
+      color: var(--guide-subtle);
+      font-size: 11px;
+      white-space: nowrap;
+    }
+    .guides-archive {
+      padding-top: 8px;
+    }
+    .guides-archive-group {
+      margin-bottom: 10px;
+      overflow: hidden;
+    }
+    .guides-archive-group summary {
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      padding: 16px 18px;
+      color: var(--text-primary);
+    }
+    .guides-archive-group summary::-webkit-details-marker { display: none; }
+    .guides-archive-group summary strong {
+      display: block;
+      font-size: 15px;
+    }
+    .guides-archive-group summary small {
+      display: block;
+      margin-top: 4px;
+      color: var(--guide-subtle);
+      font-size: 12px;
+    }
+    .guides-archive-group summary > .tabular-nums {
+      color: var(--accent-primary);
+      font-weight: 800;
+    }
+    .guides-archive-grid {
+      padding: 0 10px 12px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      border-top: 1px solid var(--guide-line);
+    }
+    .guides-archive-grid a {
+      padding: 10px 8px;
+    }
+    @media (max-width: 760px) {
+      .guides-stats,
+      .guides-featured-grid,
+      .guides-lanes,
+      .guides-archive-grid {
+        grid-template-columns: 1fr;
+      }
+      .guides-stats div {
+        border-right: 0;
+        border-bottom: 1px solid var(--guide-line);
+      }
+      .guides-stats div:last-child { border-bottom: 0; }
+      .guides-section-head {
+        align-items: start;
+        flex-direction: column;
+      }
+      .guides-section-head > span {
+        text-align: left;
+      }
+      .guides-lane-links a,
+      .guides-archive-grid a {
+        flex-direction: column;
+        gap: 3px;
+      }
+    }
+  </style>
 </BaseLayout>

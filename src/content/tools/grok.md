@@ -2,7 +2,7 @@
 type: tool
 slug: grok
 title: Grok
-tagline: xAI's AI assistant. Grok 4.3 beta expanded April 19, 2026 to X Premium+ ($40/mo) and SuperGrok ($30/mo) users (was Heavy-only April 17). 1T params, 2M context, native PDF/PPT/spreadsheet output + video input. Plus TTS API and Voice Mode on X. Real-time X data.
+tagline: xAI's AI assistant. Grok 4.3 beta expanded April 19, 2026 to X Premium+ ($40/mo) and SuperGrok ($30/mo); Grok Voice Think Fast 1.0 launched April 23 for enterprise voice agents. 1T params, 2M context, native PDF/PPT/spreadsheet output + video input. Real-time X data.
 category: ai-chatbots
 secondary_categories: [ai-search, ai-voice]
 company: xAI
@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$300/month"
 status: active
 launched: 2023-11
-last_updated: 2026-04-22
-last_verified: 2026-04-22
+last_updated: 2026-04-24
+last_verified: 2026-04-24
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -53,6 +53,10 @@ price_history:
     plan: "SuperGrok + X Premium+"
     price: "$30/mo and $40/mo"
     note: "Grok 4.3 beta access expanded 48 hours after Heavy-only launch. Premium+ and SuperGrok users now get the 1T-param model + all six new output capabilities. Heavy retains the 16-agent Heavy architecture and priority rate limits. See the [expansion coverage](/news/2026-04-19-grok-4-3-beta-premium-plus-supergrok/)."
+  - date: 2026-04-23
+    plan: "Grok Voice Think Fast 1.0"
+    price: "Enterprise / deployment pricing not disclosed"
+    note: "Real-time voice-agent model for customer support, sales, and enterprise workflows. xAI says it supports 25+ languages and powers Starlink's phone sales and support line."
 ---
 
 # Grok
@@ -67,6 +71,7 @@ xAI's AI assistant, tightly integrated with X (formerly Twitter) and running on 
 Three major 2026 capability additions beyond the base models:
 - **Grok TTS API** (March 16): 5 voices, 20+ languages with auto-detect, inline speech tags, $4.20 per million characters
 - **Grok Voice Mode on X** (March 19): real-time voice chat bundled into X Premium on Android and web
+- **Grok Voice Think Fast 1.0** (April 23): enterprise real-time voice-agent model for customer support, sales, and workflows
 - **Grok Computer** (2026): autonomous desktop-agent integration, currently rolling out; Grok 4.3 routes to it
 
 Context window is 2M tokens, the largest confirmed in any major commercial model. On February 2, 2026, SpaceX acquired xAI for $1.25 trillion in an all-stock deal (SpaceX valued at $1T, xAI at $250B). Grok now runs under Elon Musk's consolidated aerospace and technology empire. Grok 5 (6T parameters, MoE) is training on Colossus 2 with a Q2 2026 target.
@@ -91,6 +96,7 @@ Context window is 2M tokens, the largest confirmed in any major commercial model
 | **Context window** | 2M tokens · largest confirmed in commercial models |
 | **Grok 4.3 new capabilities** | PDF creation · PowerPoint slides · spreadsheets · video input · Grok Computer integration |
 | **Voice capabilities** | Grok TTS API (March 16) · Voice Mode on X (March 19) · 5 voices (Ara, Eve, Leo, Rex, Sal) · 20+ languages |
+| **Voice agent model** | Grok Voice Think Fast 1.0 · launched April 23, 2026 · 25+ languages claimed · enterprise voice workflows |
 | **Grok 4 Heavy benchmarks** | 100% AIME 2025 · 88.4% GPQA Diamond · 75% SWE-bench Verified |
 | **Next model** | Grok 5 · 6T parameters · MoE · training on Colossus 2 · Q2 2026 target |
 | **Ownership** | SpaceX (acquired xAI Feb 2, 2026 for $1.25T all-stock) |
@@ -170,6 +176,7 @@ Consumer tier pricing for SuperGrok tiers is not uniformly disclosed on xAI's pu
 ## Failure modes
 
 - **Demand-driven outages.** On [April 23, 2026](/news/2026-04-23-grok-outages-high-demand/), Grok experienced intermittent connectivity issues and response delays across web, mobile, and X integration for several hours. Free-tier and lighter-subscription users absorbed most of the friction; SuperGrok and Premium+ subscribers noticed fewer interruptions. Second congestion episode in April 2026 after the 4.3 beta expansion to $30 and $40 tiers grew the traffic pool ~50x while Colossus 2 is still ramping to 1.5 GW.
+- **Voice-agent rollout is enterprise-first.** [Grok Voice Think Fast 1.0](/news/2026-04-23-xai-grok-voice-think-fast-10/) matters for xAI's commercial surface, but public pricing, SLA, latency distributions, and deployment limits still need more documentation.
 - **No persistent memory, full stop.** Every competitor (ChatGPT, Gemini, Claude) has had cross-session memory for 18+ months. Grok still resets every conversation. The sharpest community complaint against the $300/mo Heavy tier.
 - **SpaceX ownership is a governance concentration risk.** The February 2026 $1.25T merger placed Grok's roadmap, content policy, and platform continuity inside a single Musk-controlled conglomerate. Production dependencies on Grok carry a platform-continuity variable no major competitor does.
 - **Response latency is slow.** User reports of 10-15 second waits for responses that competitors return in 2-3. Noticeable on 4.20 Heavy; not yet measured on 4.3 beta.
@@ -185,7 +192,7 @@ Consumer tier pricing for SuperGrok tiers is not uniformly disclosed on xAI's pu
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [x.ai](https://x.ai), [docs.x.ai reasoning docs](https://docs.x.ai/developers/model-capabilities/text/reasoning), and [Artificial Analysis](https://artificialanalysis.ai/models/grok-4-20/providers).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-24 against [x.ai](https://x.ai), [docs.x.ai reasoning docs](https://docs.x.ai/developers/model-capabilities/text/reasoning), [Artificial Analysis](https://artificialanalysis.ai/models/grok-4-20/providers), and the [Grok Voice Think Fast 1.0 launch](/news/2026-04-23-xai-grok-voice-think-fast-10/).
 
 ## FAQ
 
@@ -200,6 +207,8 @@ Released April 17, 2026 to SuperGrok Heavy first, then [expanded April 19, 2026]
 
 **Does Grok do voice?**
 Yes, as of March 2026. Grok TTS API launched March 16 with 5 voices (Ara, Eve, Leo, Rex, Sal), 20+ languages, and inline speech tags for pauses/laughter/whispers/emphasis, priced at $4.20 per 1M characters. Grok Voice Mode went live on X for Android and web on March 19, bundled into X Premium at no extra cost.
+
+Grok Voice Think Fast 1.0 launched April 23, 2026 as xAI's enterprise voice-agent model for phone support, sales, and workflow automation. xAI says it supports 25+ languages and is already used by Starlink's phone sales and support line.
 
 **What happened with the SpaceX acquisition?**
 SpaceX acquired xAI on February 2, 2026 in a $1.25T all-stock deal (SpaceX $1T, xAI $250B). Grok now runs under Elon Musk's consolidated aerospace and technology empire alongside X and Neuralink. Compute runs on Colossus 2 (1.5GW since April 2026). The governance implication is that product decisions and platform continuity sit inside a single private conglomerate.
@@ -218,6 +227,7 @@ Musk has publicly targeted Q2 2026. Training is in progress on Colossus 2. Archi
 - [xAI](https://x.ai): product and company information
 - [xAI reasoning docs](https://docs.x.ai/developers/model-capabilities/text/reasoning): multi-agent architecture and reasoning parameter
 - [Artificial Analysis · Grok 4.20 Providers](https://artificialanalysis.ai/models/grok-4-20/providers): API rate tracking
+- [Grok Voice Think Fast 1.0](/news/2026-04-23-xai-grok-voice-think-fast-10/): April 23, 2026 voice-agent launch
 - [CNBC · SpaceX / xAI merger](https://www.cnbc.com/2026/02/03/musk-xai-spacex-biggest-merger-ever.html): February 2026 $1.25T acquisition coverage
 
 ## Related
