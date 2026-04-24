@@ -202,7 +202,7 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY ?? '';
         ev.preventDefault();
         const rating = parseInt(ratingInput?.value || '0', 10);
         if (!rating) {
-          if (statusEl) { statusEl.textContent = 'Pick a star rating first.'; statusEl.style.color = '#f87171'; }
+          if (statusEl) { statusEl.textContent = 'Pick a star rating first.'; statusEl.style.color = '#fb7185'; }
           return;
         }
         const fd = new FormData(form);
@@ -235,10 +235,10 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY ?? '';
               already_reviewed: 'You already reviewed this tool. Email editorial@aipedia.wiki to update.',
               captcha_failed: 'Captcha failed. Refresh and try again.',
             }[data.error] || 'Something went wrong. Try again in a minute.';
-            if (statusEl) { statusEl.textContent = msg; statusEl.style.color = '#f87171'; }
+            if (statusEl) { statusEl.textContent = msg; statusEl.style.color = '#fb7185'; }
           }
         } catch (e) {
-          if (statusEl) { statusEl.textContent = 'Network error. Try again.'; statusEl.style.color = '#f87171'; }
+          if (statusEl) { statusEl.textContent = 'Network error. Try again.'; statusEl.style.color = '#fb7185'; }
         }
       });
 

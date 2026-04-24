@@ -15,11 +15,11 @@ const resolvedVariant = variant ?? (fullWidth ? 'sidebar' : 'pill');
 // Score-to-color palette (shared across variants). Higher scores skew emerald/violet,
 // lower scores amber/rose.
 const palette =
-  score >= 9 ? { from: '#34d399', to: '#10b981', label: 'Category Leader' } :
-  score >= 8 ? { from: '#a78bfa', to: '#60a5fa', label: 'Strong Choice' } :
-  score >= 6.5 ? { from: '#60a5fa', to: '#38bdf8', label: 'Solid' } :
-  score >= 5 ? { from: '#fbbf24', to: '#f97316', label: 'Mixed' } :
-  { from: '#f87171', to: '#e11d48', label: 'Weak' };
+  score >= 9 ? { from: '#5eead4', to: '#14b8a6', label: 'Category Leader' } :
+  score >= 8 ? { from: '#a78bfa', to: '#38bdf8', label: 'Strong Choice' } :
+  score >= 6.5 ? { from: '#38bdf8', to: '#38bdf8', label: 'Solid' } :
+  score >= 5 ? { from: '#fbbf24', to: '#fb7185', label: 'Mixed' } :
+  { from: '#fb7185', to: '#e11d48', label: 'Weak' };
 
 const tierLabel = tier ?? palette.label;
 
@@ -82,7 +82,7 @@ const gradId = `score-grad-${Math.random().toString(36).slice(2, 8)}`;
 {resolvedVariant === 'sidebar' && (
   <div
     class="flex items-baseline justify-between w-full rounded-xl border border-[var(--border)] px-5 py-3"
-    style="background: linear-gradient(135deg, rgba(167,139,250,0.10), rgba(96,165,250,0.08));"
+    style="background: linear-gradient(135deg, rgba(167,139,250,0.10), rgba(56,189,248,0.08));"
   >
     <span class="text-[11px] font-semibold uppercase tracking-wider text-[var(--text-muted)]">
       Score
@@ -96,7 +96,7 @@ const gradId = `score-grad-${Math.random().toString(36).slice(2, 8)}`;
 {resolvedVariant === 'pill' && (
   <div
     class="inline-flex flex-col items-center justify-center rounded-xl border border-[var(--border)] px-5 py-3"
-    style="background: linear-gradient(135deg, rgba(167,139,250,0.1), rgba(96,165,250,0.1));"
+    style="background: linear-gradient(135deg, rgba(167,139,250,0.1), rgba(56,189,248,0.1));"
   >
     <span class="text-3xl font-bold accent-gradient-text leading-none">
       {score}

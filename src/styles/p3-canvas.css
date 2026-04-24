@@ -101,14 +101,14 @@ body:has(main .p3-canvas) {
 .p3-live-dot {
   width: 7px; height: 7px;
   border-radius: 50%;
-  background: #34d399;
-  box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.55);
+  background: #5eead4;
+  box-shadow: 0 0 0 0 rgba(94, 234, 212, 0.55);
   animation: p3-pulse 2.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
 @keyframes p3-pulse {
-  0%   { box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.55); }
-  70%  { box-shadow: 0 0 0 8px rgba(52, 211, 153, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(52, 211, 153, 0); }
+  0%   { box-shadow: 0 0 0 0 rgba(94, 234, 212, 0.55); }
+  70%  { box-shadow: 0 0 0 8px rgba(94, 234, 212, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(94, 234, 212, 0); }
 }
 
 .p3-headline {
@@ -122,7 +122,7 @@ body:has(main .p3-canvas) {
 }
 .p3-headline-wide { max-width: none; }
 .p3-gradient {
-  background: linear-gradient(100deg, #a78bfa 0%, #38bdf8 60%, #34d399 100%);
+  background: linear-gradient(100deg, #a78bfa 0%, #38bdf8 60%, #5eead4 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -167,12 +167,12 @@ body:has(main .p3-canvas) {
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background: rgba(52, 211, 153, 0.14);
-  color: #34d399;
+  background: rgba(94, 234, 212, 0.14);
+  color: #5eead4;
   font-size: 10px;
   font-weight: 800;
   flex: none;
-  border: 1px solid rgba(52, 211, 153, 0.28);
+  border: 1px solid rgba(94, 234, 212, 0.28);
 }
 .p3-trust-num {
   font-weight: 700;
@@ -566,7 +566,7 @@ body:has(main .p3-canvas) {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: radial-gradient(ellipse 80% 70% at 0% 100%, rgba(96, 165, 250, 0.08), transparent 60%);
+  background: radial-gradient(ellipse 80% 70% at 0% 100%, rgba(56, 189, 248, 0.08), transparent 60%);
 }
 .p3-cover:hover {
   /* Lift composed with the tilt: translate + rotate share the same
@@ -843,7 +843,7 @@ body:has(main .p3-canvas) {
   background: linear-gradient(90deg,
     #a78bfa 0%,
     #38bdf8 50%,
-    #34d399 100%);
+    #5eead4 100%);
   background-size: 100% 100%;
   background-repeat: no-repeat;
   opacity: 0.5;
@@ -1042,7 +1042,7 @@ body:has(main .p3-canvas) {
   text-transform: uppercase;
   border: 1px solid;
 }
-.p3-sev-breaking { color: #fb7185; background: rgba(239,68,68,0.10); border-color: rgba(239,68,68,0.28); }
+.p3-sev-breaking { color: #fb7185; background: rgba(251,113,133,0.10); border-color: rgba(251,113,133,0.28); }
 .p3-sev-major { color: #fbbf24; background: rgba(251,191,36,0.10); border-color: rgba(251,191,36,0.28); }
 .p3-sev-minor { color: var(--p3-subtle); background: rgba(148,163,184,0.08); border-color: var(--p3-line); }
 
@@ -1211,7 +1211,7 @@ body:has(main .p3-canvas) {
   top: -1px; left: -1px; right: -1px;
   height: 2px;
   border-radius: 14px 14px 0 0;
-  background: linear-gradient(90deg, #a78bfa, #38bdf8, #34d399);
+  background: linear-gradient(90deg, #a78bfa, #38bdf8, #5eead4);
 }
 .p3-tile-top {
   display: flex;
@@ -1464,7 +1464,7 @@ body:has(main .p3-canvas) {
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background: #34d399;
+  background: #5eead4;
   margin-left: 5px;
   vertical-align: middle;
 }
@@ -1498,7 +1498,7 @@ body:has(main .p3-canvas) {
   border-radius: 20px;
   border: 1px solid rgba(167, 139, 250, 0.32);
   background:
-    radial-gradient(ellipse 80% 120% at 100% 0%, rgba(96, 165, 250, 0.14), transparent 55%),
+    radial-gradient(ellipse 80% 120% at 100% 0%, rgba(56, 189, 248, 0.14), transparent 55%),
     radial-gradient(ellipse 70% 100% at 0% 100%, rgba(167, 139, 250, 0.14), transparent 55%),
     linear-gradient(180deg, rgba(167, 139, 250, 0.04), transparent 60%),
     var(--p3-surface);
@@ -1515,7 +1515,7 @@ body:has(main .p3-canvas) {
   top: -1px; left: -1px; right: -1px;
   height: 2px;
   border-radius: 20px 20px 0 0;
-  background: linear-gradient(90deg, #a78bfa, #38bdf8, #34d399);
+  background: linear-gradient(90deg, #a78bfa, #38bdf8, #5eead4);
   z-index: 1;
 }
 @media (min-width: 820px) {
@@ -1594,7 +1594,7 @@ body:has(main .p3-canvas) {
   gap: 5px;
 }
 .p3-newsletter-trust-item svg {
-  color: #34d399;
+  color: #5eead4;
   flex: none;
 }
 @media (prefers-reduced-motion: reduce) {

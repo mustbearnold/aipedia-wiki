@@ -617,7 +617,7 @@ html, body {
   .tool-card:hover {
     transform: translateY(-2px);
     box-shadow: 0 10px 24px -12px rgba(167, 139, 250, 0.35),
-                0 4px 10px -4px rgba(96, 165, 250, 0.18);
+                0 4px 10px -4px rgba(56, 189, 248, 0.18);
   }
 }
 /* Mobile tap feedback: brief press-down on :active instead of sticky hover */
@@ -822,7 +822,7 @@ a, button, [role="button"], .tool-card, .category-pill, .helpful-btn, .copy-btn 
   .cat-card:hover {
     transform: translateY(-3px);
     box-shadow: 0 12px 24px -12px rgba(167, 139, 250, 0.4),
-                0 4px 10px -4px rgba(96, 165, 250, 0.2);
+                0 4px 10px -4px rgba(56, 189, 248, 0.2);
     border-color: rgba(167, 139, 250, 0.35);
   }
 }
@@ -904,16 +904,16 @@ a, button, [role="button"], .tool-card, .category-pill, .helpful-btn, .copy-btn 
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: #34d399;
+  background: #5eead4;
   margin-left: 2px;
   flex: none;
-  box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.55);
+  box-shadow: 0 0 0 0 rgba(94, 234, 212, 0.55);
   animation: nav-pulse 2.4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
 @keyframes nav-pulse {
-  0%   { box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.55); }
-  70%  { box-shadow: 0 0 0 6px rgba(52, 211, 153, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(52, 211, 153, 0); }
+  0%   { box-shadow: 0 0 0 0 rgba(94, 234, 212, 0.55); }
+  70%  { box-shadow: 0 0 0 6px rgba(94, 234, 212, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(94, 234, 212, 0); }
 }
 
 /* Desktop nav links with underline-slide + active accent */
@@ -950,7 +950,7 @@ a, button, [role="button"], .tool-card, .category-pill, .helpful-btn, .copy-btn 
 }
 .nav-link-active::after {
   transform: scaleX(1);
-  background: linear-gradient(90deg, #a78bfa, #38bdf8, #34d399);
+  background: linear-gradient(90deg, #a78bfa, #38bdf8, #5eead4);
 }
 
 /* Search button: shows live tool count inline with ⌘K shortcut */
@@ -1075,7 +1075,7 @@ a, button, [role="button"], .tool-card, .category-pill, .helpful-btn, .copy-btn 
   height: 2px;
   transform: scaleX(0);
   transform-origin: left center;
-  background: linear-gradient(90deg, #a78bfa 0%, #38bdf8 50%, #34d399 100%);
+  background: linear-gradient(90deg, #a78bfa 0%, #38bdf8 50%, #5eead4 100%);
   z-index: 60;
   pointer-events: none;
   opacity: 0;
@@ -1121,8 +1121,8 @@ a, button, [role="button"], .tool-card, .category-pill, .helpful-btn, .copy-btn 
 }
 .idx-eyebrow-fresh {
   color: #5eead4;
-  background: rgba(52, 211, 153, 0.08);
-  border-color: rgba(52, 211, 153, 0.22);
+  background: rgba(94, 234, 212, 0.08);
+  border-color: rgba(94, 234, 212, 0.22);
 }
 .light .idx-eyebrow-fresh { color: #047857; }
 .idx-eyebrow-accent {
@@ -1134,14 +1134,14 @@ a, button, [role="button"], .tool-card, .category-pill, .helpful-btn, .copy-btn 
 .idx-eyebrow-livedot {
   width: 6px; height: 6px;
   border-radius: 50%;
-  background: #34d399;
-  box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.55);
+  background: #5eead4;
+  box-shadow: 0 0 0 0 rgba(94, 234, 212, 0.55);
   animation: idx-pulse 2.4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
 @keyframes idx-pulse {
-  0%   { box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.55); }
-  70%  { box-shadow: 0 0 0 6px rgba(52, 211, 153, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(52, 211, 153, 0); }
+  0%   { box-shadow: 0 0 0 0 rgba(94, 234, 212, 0.55); }
+  70%  { box-shadow: 0 0 0 6px rgba(94, 234, 212, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(94, 234, 212, 0); }
 }
 .idx-eyebrow-trust {
   font-size: 11px;
@@ -1163,7 +1163,7 @@ a, button, [role="button"], .tool-card, .category-pill, .helpful-btn, .copy-btn 
   max-width: 22ch;
 }
 .idx-gradient {
-  background: linear-gradient(100deg, #a78bfa 0%, #38bdf8 60%, #34d399 100%);
+  background: linear-gradient(100deg, #a78bfa 0%, #38bdf8 60%, #5eead4 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

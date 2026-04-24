@@ -51,7 +51,7 @@ export const GET: APIRoute = ({ props }) => {
     return `
       <g transform="translate(24, ${y})">
         <text x="0" y="0" font-size="14" font-weight="${isWinner ? '700' : '500'}" fill="${isWinner ? '#a78bfa' : '#ffffff'}">${escapeXml(truncate(t.title, 24))}</text>
-        ${isWinner ? '<text x="' + (t.title.length * 7 + 8) + '" y="-1" font-size="10" fill="#10b981">WINNER</text>' : ''}
+        ${isWinner ? '<text x="' + (t.title.length * 7 + 8) + '" y="-1" font-size="10" fill="#14b8a6">WINNER</text>' : ''}
         <text x="352" y="0" font-size="14" font-weight="700" fill="${isWinner ? '#a78bfa' : '#cbd5e1'}" text-anchor="end">${scoreStr}<tspan font-size="10" fill="#64748b" font-weight="400">/10</tspan></text>
       </g>`;
   }).join('');

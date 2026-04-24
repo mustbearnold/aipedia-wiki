@@ -19,10 +19,10 @@ const sorted = allCompanies
   .sort((a, b) => a.title.localeCompare(b.title));
 
 const typeColors: Record<string, string> = {
-  startup:  'bg-[rgba(74,222,128,0.10)] text-[var(--accent-success)] border-[rgba(74,222,128,0.25)]',
-  bigtech:  'bg-[rgba(96,165,250,0.10)] text-blue-400 border-[rgba(96,165,250,0.25)]',
+  startup:  'bg-[rgba(94,234,212,0.10)] text-[var(--accent-success)] border-[rgba(94,234,212,0.25)]',
+  bigtech:  'bg-[rgba(56,189,248,0.10)] text-[var(--accent-secondary)] border-[rgba(56,189,248,0.25)]',
   acquired: 'bg-[rgba(251,191,36,0.10)] text-[var(--accent-warning)] border-[rgba(251,191,36,0.25)]',
-  dead:     'bg-[rgba(248,113,113,0.10)] text-rose-400 border-[rgba(248,113,113,0.25)]',
+  dead:     'bg-[rgba(251,113,133,0.10)] text-[var(--accent-danger)] border-[rgba(251,113,133,0.25)]',
 };
 const typeLabel: Record<string, string> = {
   startup: 'Startup',

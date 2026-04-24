@@ -89,9 +89,9 @@ const verifiedLabel = verifiedDate && !isNaN(verifiedDate.getTime())
   ? verifiedDate.toLocaleDateString('en-US', { month: 'short', year: 'numeric' })
   : null;
 
-const scoreColor = score >= 9 ? 'text-emerald-400' : score >= 8 ? 'text-[var(--accent-primary)]' : score >= 6 ? 'text-amber-400' : 'text-rose-400';
-const scoreBg = score >= 9 ? 'rgba(52,211,153,0.12)' : score >= 8 ? 'rgba(167,139,250,0.14)' : score >= 6 ? 'rgba(251,191,36,0.12)' : 'rgba(244,63,94,0.12)';
-const scoreBorder = score >= 9 ? 'rgba(52,211,153,0.3)' : score >= 8 ? 'rgba(167,139,250,0.3)' : score >= 6 ? 'rgba(251,191,36,0.3)' : 'rgba(244,63,94,0.3)';
+const scoreColor = score >= 9 ? 'text-[var(--accent-success)]' : score >= 8 ? 'text-[var(--accent-primary)]' : score >= 6 ? 'text-[var(--accent-warning)]' : 'text-[var(--accent-danger)]';
+const scoreBg = score >= 9 ? 'rgba(94,234,212,0.12)' : score >= 8 ? 'rgba(167,139,250,0.14)' : score >= 6 ? 'rgba(251,191,36,0.12)' : 'rgba(251,113,133,0.12)';
+const scoreBorder = score >= 9 ? 'rgba(94,234,212,0.3)' : score >= 8 ? 'rgba(167,139,250,0.3)' : score >= 6 ? 'rgba(251,191,36,0.3)' : 'rgba(251,113,133,0.3)';
 
 const launchedLabel = launched ? (() => {
   const m = String(launched).match(/^(\d{4})/);
@@ -113,7 +113,7 @@ if (verifiedLabel) chips.push({ label: 'Verified', value: verifiedLabel, icon: '
 ---
 
 <aside
-  class="not-prose mb-6 rounded-2xl border border-[rgba(167,139,250,0.28)] bg-gradient-to-br from-[rgba(167,139,250,0.10)] via-[rgba(96,165,250,0.06)] to-transparent p-5 sm:p-6 shadow-[0_1px_0_rgba(255,255,255,0.04)_inset]"
+  class="not-prose mb-6 rounded-2xl border border-[rgba(167,139,250,0.28)] bg-gradient-to-br from-[rgba(167,139,250,0.10)] via-[rgba(56,189,248,0.06)] to-transparent p-5 sm:p-6 shadow-[0_1px_0_rgba(255,255,255,0.04)_inset]"
   aria-label="Quick answer"
   data-pagefind-meta="quick-answer"
 >
@@ -130,7 +130,7 @@ if (verifiedLabel) chips.push({ label: 'Verified', value: verifiedLabel, icon: '
   <div class="flex flex-wrap gap-1.5 mb-4">
     {chips.slice(1).map((c) => {
       const toneBg = c.tone === 'price'
-        ? 'bg-[rgba(52,211,153,0.10)] border-[rgba(52,211,153,0.28)] text-emerald-300'
+        ? 'bg-[rgba(94,234,212,0.10)] border-[rgba(94,234,212,0.28)] text-[var(--accent-success)]'
         : 'bg-[var(--bg-card)] border-[var(--border)] text-[var(--text-secondary)]';
       return (
         <span class={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-medium border ${toneBg} tabular-nums`}>

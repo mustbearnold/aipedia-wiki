@@ -28,11 +28,11 @@ export const GET: APIRoute = ({ props }) => {
 
   // Color by score
   let color = '#94a3b8'; // slate
-  if (score >= 9) color = '#10b981'; // emerald
+  if (score >= 9) color = '#14b8a6'; // emerald
   else if (score >= 7.5) color = '#a78bfa'; // violet
-  else if (score >= 6) color = '#60a5fa'; // blue
+  else if (score >= 6) color = '#38bdf8'; // blue
   else if (score >= 4) color = '#fbbf24'; // amber
-  else color = '#ef4444'; // red
+  else color = '#fb7185'; // rose
 
   const truncated = title.length > 22 ? title.slice(0, 20) + '...' : title;
 

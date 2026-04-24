@@ -26,9 +26,9 @@ const submitId = `email-capture-submit-${uid}`;
 const submitLabelId = `email-capture-submit-label-${uid}`;
 
 const containerClasses = {
-  hero: 'rounded-2xl border border-[rgba(167,139,250,0.28)] bg-gradient-to-br from-[rgba(167,139,250,0.10)] via-[rgba(96,165,250,0.06)] to-transparent p-6 sm:p-8',
+  hero: 'rounded-2xl border border-[rgba(167,139,250,0.28)] bg-gradient-to-br from-[rgba(167,139,250,0.10)] via-[rgba(56,189,248,0.06)] to-transparent p-6 sm:p-8',
   inline: 'rounded-2xl border border-[var(--border)] bg-[var(--bg-card)] p-5 sm:p-6',
-  footer: 'rounded-2xl border border-[rgba(167,139,250,0.28)] bg-gradient-to-br from-[rgba(167,139,250,0.10)] via-[rgba(96,165,250,0.06)] to-transparent p-6 sm:p-8',
+  footer: 'rounded-2xl border border-[rgba(167,139,250,0.28)] bg-gradient-to-br from-[rgba(167,139,250,0.10)] via-[rgba(56,189,248,0.06)] to-transparent p-6 sm:p-8',
 }[variant];
 ---
 
@@ -112,7 +112,7 @@ const containerClasses = {
       const email = (inputEl.value || '').trim();
       if (!email) {
         statusEl.textContent = 'Enter your email to subscribe.';
-        statusEl.style.color = '#f87171';
+        statusEl.style.color = '#fb7185';
         return;
       }
 
@@ -141,20 +141,20 @@ const containerClasses = {
           } else {
             statusEl.textContent = "Thanks. We'll send you the next digest.";
           }
-          statusEl.style.color = '#34d399';
+          statusEl.style.color = '#5eead4';
           inputEl.value = '';
           submitLabel.textContent = 'Subscribed';
           // Keep button disabled on success so users don't spam-click
         } else {
           const msg = ERROR_MESSAGES[data.error] || 'Something went wrong. Try again.';
           statusEl.textContent = msg;
-          statusEl.style.color = '#f87171';
+          statusEl.style.color = '#fb7185';
           submitBtn.disabled = false;
           submitLabel.textContent = 'Subscribe';
         }
       } catch (err) {
         statusEl.textContent = 'Network error. Try again.';
-        statusEl.style.color = '#f87171';
+        statusEl.style.color = '#fb7185';
         submitBtn.disabled = false;
         submitLabel.textContent = 'Subscribe';
       } finally {

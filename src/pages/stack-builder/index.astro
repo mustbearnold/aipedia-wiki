@@ -545,13 +545,13 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
                 const tryLabel = 'Try';
                 return `
                   <div class="flex items-center gap-3 p-3 rounded-lg hover:bg-[var(--bg-card-hover)] transition-colors">
-                    <a href="${t.url}" class="w-9 h-9 rounded-lg flex items-center justify-center text-base flex-shrink-0 no-underline" style="background:linear-gradient(135deg,rgba(167,139,250,0.15),rgba(96,165,250,0.15));" aria-label="Open ${escapeHtml(t.title)} review">
+                    <a href="${t.url}" class="w-9 h-9 rounded-lg flex items-center justify-center text-base flex-shrink-0 no-underline" style="background:linear-gradient(135deg,rgba(167,139,250,0.15),rgba(56,189,248,0.15));" aria-label="Open ${escapeHtml(t.title)} review">
                       ${categoryEmoji[t.category] || '🔧'}
                     </a>
                     <div class="flex-1 min-w-0">
                       <div class="text-sm font-semibold truncate flex items-center gap-1.5">
                         <a href="${t.url}" class="text-[var(--text-primary)] hover:text-[var(--accent-primary)] no-underline truncate">${escapeHtml(t.title)}</a>
-                        ${updated ? `<a href="/news/${updated}/" class="shrink-0 inline-flex items-center text-[9px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded bg-[rgba(52,211,153,0.12)] border border-[rgba(52,211,153,0.3)] text-[var(--accent-success)] no-underline" title="Recently updated. See news.">New</a>` : ''}
+                        ${updated ? `<a href="/news/${updated}/" class="shrink-0 inline-flex items-center text-[9px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded bg-[rgba(94,234,212,0.12)] border border-[rgba(94,234,212,0.3)] text-[var(--accent-success)] no-underline" title="Recently updated. See news.">New</a>` : ''}
                       </div>
                       <a href="${t.url}" class="block text-xs text-[var(--text-muted)] truncate no-underline hover:text-[var(--text-secondary)]">${escapeHtml(t.tagline || '')}</a>
                     </div>
@@ -592,7 +592,7 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
         const rel = t.affiliateLink ? 'noopener nofollow sponsored' : 'noopener';
         return `
           <a href="${escapeHtml(tryUrl)}" target="_blank" rel="${rel}" class="group flex items-center gap-2 p-2.5 rounded-lg bg-[var(--bg-base)] border border-[var(--border)] hover:border-[rgba(167,139,250,0.4)] hover:bg-[var(--bg-card-hover)] no-underline transition-colors" title="Open ${escapeHtml(t.title)} in a new tab">
-            <span class="shrink-0 w-7 h-7 rounded-md flex items-center justify-center text-sm" style="background:linear-gradient(135deg,rgba(167,139,250,0.15),rgba(96,165,250,0.15));" aria-hidden="true">${categoryEmoji[t.category] || '🔧'}</span>
+            <span class="shrink-0 w-7 h-7 rounded-md flex items-center justify-center text-sm" style="background:linear-gradient(135deg,rgba(167,139,250,0.15),rgba(56,189,248,0.15));" aria-hidden="true">${categoryEmoji[t.category] || '🔧'}</span>
             <span class="flex-1 min-w-0 text-[12px] font-semibold text-[var(--text-primary)] truncate">${escapeHtml(t.title)}</span>
             <span class="shrink-0 text-[10px] text-[var(--accent-primary)] font-bold tracking-wider uppercase opacity-70 group-hover:opacity-100 transition-opacity">Try <span aria-hidden="true">→</span></span>
           </a>
