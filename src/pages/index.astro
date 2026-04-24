@@ -143,6 +143,22 @@ const catLabel: Record<string, string> = {
   'ai-search': 'Search', 'ai-notes': 'Notes', 'ai-music': 'Music',
   'ai-presentation': 'Presentation', 'ai-research': 'Research',
 };
+const coverPalette: Record<string, { a: string; b: string }> = {
+  'ai-automation': { a: '#fb923c', b: '#22d3ee' },
+  'ai-chatbots': { a: '#c4b5fd', b: '#5eead4' },
+  'ai-coding': { a: '#60a5fa', b: '#5eead4' },
+  'ai-design': { a: '#f472b6', b: '#22d3ee' },
+  'ai-image': { a: '#5eead4', b: '#38bdf8' },
+  'ai-music': { a: '#a78bfa', b: '#38bdf8' },
+  'ai-notes': { a: '#fca5a5', b: '#a78bfa' },
+  'ai-presentation': { a: '#38bdf8', b: '#5eead4' },
+  'ai-research': { a: '#93c5fd', b: '#5eead4' },
+  'ai-search': { a: '#67e8f9', b: '#a78bfa' },
+  'ai-seo': { a: '#86efac', b: '#22d3ee' },
+  'ai-video': { a: '#c084fc', b: '#38bdf8' },
+  'ai-voice': { a: '#7dd3fc', b: '#5eead4' },
+  'ai-writing': { a: '#fbbf24', b: '#a78bfa' },
+};
 
 // Serialisable payload for the client-side cover-card rotator. Pre-computes
 // bar percentages + colours so the rotator doesn't need access to sparkbars()
@@ -187,6 +203,9 @@ const coverSlides = catLeaders.map((t) => ({
   priceRange: t.priceRange,
   checkedLabel: lastCheckedLabel(t),
   category: catLabel[t.category] ?? t.category,
+  categorySlug: t.category,
+  colorA: coverPalette[t.category]?.a ?? '#38bdf8',
+  colorB: coverPalette[t.category]?.b ?? '#5eead4',
   logoUrl: logoMap[t.slug] ?? `/logos/tools/${t.slug}.png`,
   bars: [
     { label: 'UTI', v: t.scores.utility, pct: Math.max(15, Math.min(100, (t.scores.utility / 10) * 100)), color: barColorClient(t.scores.utility) },
@@ -503,45 +522,56 @@ const verificationLedger = [
       </div>
 
       <aside class="p3-hero-right" aria-label="Editorial top pick">
-        <a id="p3-cover-card" href={`/tools/${topTool.slug}/`} class="p3-cover p3-premium-cover" data-rotator-enabled>
-          <div class="p3-cover-label">
-            <span class="p3-cover-label-text">Category: <span class="p3-cover-label-cat">{catLabel[topTool.category] ?? topTool.category}</span></span>
-            <span class="p3-cover-badge">Current pick</span>
-          </div>
-          <div class="p3-cover-title-row">
-            <div class="p3-cover-logo-frame">
-              <img class="p3-cover-logo tool-logo" src={(logoManifest as Record<string, string>)[topTool.slug] ?? `/logos/tools/${topTool.slug}.png`} alt={`${topTool.title} logo`} width="56" height="56" loading="eager" decoding="async" style="width:56px;height:56px;border-radius:12px;" />
+        <a
+          id="p3-cover-card"
+          href={`/tools/${topTool.slug}/`}
+          class="p3-cover p3-premium-cover"
+          data-rotator-enabled
+          data-handoff-style="moat-signal"
+          style={`--cover-accent:${coverPalette[topTool.category]?.a ?? '#38bdf8'};--cover-accent-2:${coverPalette[topTool.category]?.b ?? '#5eead4'};--cover-next-accent:${coverPalette[topTool.category]?.b ?? '#5eead4'};`}
+        >
+          <span class="p3-cover-scan" aria-hidden="true"></span>
+          <span class="p3-cover-signal" aria-hidden="true"></span>
+          <div class="p3-cover-stage">
+            <div class="p3-cover-label">
+              <span class="p3-cover-label-text">Category: <span class="p3-cover-label-cat">{catLabel[topTool.category] ?? topTool.category}</span></span>
+              <span class="p3-cover-badge">Current pick</span>
             </div>
-            <div class="p3-cover-titleblock">
-              <div class="p3-cover-title">{topTool.title}</div>
-              <div class="p3-cover-tagline">{topTool.tagline}</div>
+            <div class="p3-cover-title-row">
+              <div class="p3-cover-logo-frame">
+                <img class="p3-cover-logo tool-logo" src={(logoManifest as Record<string, string>)[topTool.slug] ?? `/logos/tools/${topTool.slug}.png`} alt={`${topTool.title} logo`} width="56" height="56" loading="eager" decoding="async" style="width:56px;height:56px;border-radius:12px;" />
+              </div>
+              <div class="p3-cover-titleblock">
+                <div class="p3-cover-title">{topTool.title}</div>
+                <div class="p3-cover-tagline">{topTool.tagline}</div>
+              </div>
             </div>
-          </div>
-          <p class="p3-cover-verdict">{coverVerdict(topTool)}</p>
-          <div class="p3-cover-score">
-            <div class="p3-cover-score-main">
-              <span class="p3-cover-score-label">Wiki score</span>
-              <span class="p3-cover-score-num tabular-nums">{topTool.score}<span class="p3-cover-score-slash">/10</span></span>
-            </div>
-            <div class="p3-cover-bars" aria-label={`Score breakdown: ${sparkbars(topTool.scores).map(b => b.label + ' ' + b.v).join(', ')}`}>
-              {sparkbars(topTool.scores).map(b => (
-                <div class="p3-cover-bar" title={`${b.label} ${b.v}/10`}>
-                  <div class="p3-cover-bar-col">
-                    <span class="p3-cover-bar-fill" style={`--h:${b.pct}%;--c:${b.color};`}></span>
+            <p class="p3-cover-verdict">{coverVerdict(topTool)}</p>
+            <div class="p3-cover-score">
+              <div class="p3-cover-score-main">
+                <span class="p3-cover-score-label">Wiki score</span>
+                <span class="p3-cover-score-num tabular-nums">{topTool.score}<span class="p3-cover-score-slash">/10</span></span>
+              </div>
+              <div class="p3-cover-bars" aria-label={`Score breakdown: ${sparkbars(topTool.scores).map(b => b.label + ' ' + b.v).join(', ')}`}>
+                {sparkbars(topTool.scores).map(b => (
+                  <div class="p3-cover-bar" title={`${b.label} ${b.v}/10`}>
+                    <div class="p3-cover-bar-col">
+                      <span class="p3-cover-bar-fill" style={`--h:${b.pct}%;--c:${b.color};`}></span>
+                    </div>
+                    <span class="p3-cover-bar-label">{b.label.slice(0, 3).toUpperCase()}</span>
                   </div>
-                  <span class="p3-cover-bar-label">{b.label.slice(0, 3).toUpperCase()}</span>
-                </div>
+                ))}
+              </div>
+            </div>
+            <div class="p3-cover-reasons" aria-label="Why this is featured">
+              {coverReasons(topTool).map(reason => (
+                <span class="p3-cover-reason">{reason}</span>
               ))}
             </div>
-          </div>
-          <div class="p3-cover-reasons" aria-label="Why this is featured">
-            {coverReasons(topTool).map(reason => (
-              <span class="p3-cover-reason">{reason}</span>
-            ))}
-          </div>
-          <div class="p3-cover-foot">
-            <span class="p3-cover-price">{lastCheckedLabel(topTool)}</span>
-            <span class="p3-cover-arrow">Open review →</span>
+            <div class="p3-cover-foot">
+              <span class="p3-cover-price">{lastCheckedLabel(topTool)}</span>
+              <span class="p3-cover-arrow">Open review →</span>
+            </div>
           </div>
         </a>
         {/* Data payload for the cover rotator. Injected as JSON so the
@@ -966,7 +996,7 @@ const verificationLedger = [
 
   <script is:inline>
     /* Cover-card rotator + mouse-tilt. Cycles through each category's
-       highest-scored tool every ~5.5s with a crossfade. Pauses on hover
+       highest-scored tool every ~5.5s with a moat-signal handoff. Pauses on hover
        and when the tab is hidden. Respects prefers-reduced-motion by
        disabling the rotation (static first slide) and the tilt. */
     (function () {
@@ -989,8 +1019,70 @@ const verificationLedger = [
       const priceEl  = card.querySelector('.p3-cover-price');
 
       let idx = 0;
+      let busy = false;
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      function wait(ms) {
+        return new Promise((resolve) => setTimeout(resolve, ms));
+      }
+
+      function scoreNumber() {
+        if (!scoreEl) return 0;
+        const raw = scoreEl.textContent || '';
+        const match = raw.match(/[\d.]+/);
+        return match ? Number(match[0]) : 0;
+      }
+
+      function scoreText(n) {
+        return Math.abs(n - Math.round(n)) < 0.04 ? String(Math.round(n)) : n.toFixed(1);
+      }
+
+      function setScore(n) {
+        if (!scoreEl) return;
+        scoreEl.innerHTML = scoreText(n) + '<span class="p3-cover-score-slash">/10</span>';
+      }
+
+      function animateScore(from, to) {
+        if (!scoreEl || prefersReducedMotion) {
+          setScore(to);
+          return;
+        }
+        const duration = 540;
+        const start = performance.now();
+        function tick(now) {
+          const p = Math.min(1, (now - start) / duration);
+          const eased = 1 - Math.pow(1 - p, 3);
+          setScore(from + (to - from) * eased);
+          if (p < 1) requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick);
+      }
+
+      function setCategoryColor(slide) {
+        card.style.setProperty('--cover-accent', slide.colorA || '#38bdf8');
+        card.style.setProperty('--cover-accent-2', slide.colorB || '#5eead4');
+      }
+
+      function preloadLogo(slide) {
+        return new Promise((resolve) => {
+          if (!slide.logoUrl) {
+            resolve();
+            return;
+          }
+          const img = new Image();
+          const done = () => resolve();
+          img.onload = done;
+          img.onerror = done;
+          img.src = slide.logoUrl;
+          setTimeout(done, 360);
+        });
+      }
+
       function apply(slide, instant) {
+        const oldScore = scoreNumber();
         card.href = '/tools/' + slide.slug + '/';
+        card.dataset.category = slide.categorySlug || '';
+        setCategoryColor(slide);
         if (label)   label.textContent = slide.category;
         if (logoImg) {
           logoImg.src = slide.logoUrl;
@@ -999,7 +1091,8 @@ const verificationLedger = [
         if (title)   title.textContent = slide.title;
         if (tagline) tagline.textContent = slide.tagline;
         if (verdict) verdict.textContent = slide.verdict;
-        if (scoreEl) scoreEl.innerHTML = slide.score + '<span class="p3-cover-score-slash">/10</span>';
+        if (instant) setScore(slide.score);
+        else animateScore(oldScore, slide.score);
         if (priceEl) priceEl.textContent = slide.checkedLabel || 'Last checked today';
         reasons.forEach((reason, i) => {
           reason.textContent = slide.reasons && slide.reasons[i] ? slide.reasons[i] : '';
@@ -1025,18 +1118,26 @@ const verificationLedger = [
         });
       }
 
-      function next() {
+      async function next() {
+        if (busy) return;
         idx = (idx + 1) % slides.length;
-        card.classList.add('p3-cover-fading');
-        setTimeout(() => {
-          apply(slides[idx], false);
-          card.classList.remove('p3-cover-fading');
-        }, 180);
+        const slide = slides[idx];
+        busy = true;
+        card.style.setProperty('--cover-next-accent', slide.colorB || '#5eead4');
+        card.classList.add('p3-cover-handoff', 'p3-cover-phase-out');
+        await Promise.race([preloadLogo(slide), wait(360)]);
+        await wait(190);
+        apply(slide, false);
+        card.classList.remove('p3-cover-phase-out');
+        card.classList.add('p3-cover-phase-in');
+        await wait(760);
+        card.classList.remove('p3-cover-phase-in', 'p3-cover-handoff');
+        busy = false;
       }
 
       /* Start on first slide, then rotate. */
       apply(slides[0], true);
-      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      if (prefersReducedMotion) return;
       if (slides.length < 2) return;
 
       let paused = false;
@@ -1213,16 +1314,16 @@ const verificationLedger = [
     .p3-home-premium .p3-premium-cover {
       padding: 28px;
       border-radius: 16px;
-      border-color: rgba(var(--p3-intel-rgb), 0.26);
+      border-color: color-mix(in srgb, var(--cover-accent-2) 28%, rgba(255,255,255,0.08));
       background:
-        linear-gradient(135deg, rgba(var(--p3-intel-rgb), 0.11), transparent 38%),
-        radial-gradient(ellipse 90% 70% at 100% 0%, var(--p3-action-glow), transparent 58%),
+        linear-gradient(135deg, color-mix(in srgb, var(--cover-accent-2) 13%, transparent), transparent 38%),
+        radial-gradient(ellipse 90% 70% at 100% 0%, color-mix(in srgb, var(--cover-accent) 18%, transparent), transparent 58%),
         linear-gradient(180deg, rgba(248, 250, 252, 0.062), rgba(248, 250, 252, 0.016));
       box-shadow: var(--p3-panel-shadow), 0 22px 70px -54px var(--p3-brand-glow), inset 0 1px 0 rgba(248, 250, 252, 0.08);
     }
     .p3-home-premium .p3-premium-cover:hover {
-      border-color: rgba(var(--p3-intel-rgb), 0.42);
-      box-shadow: var(--p3-panel-shadow), 0 26px 82px -54px rgba(var(--p3-action-rgb), 0.34), inset 0 1px 0 rgba(248, 250, 252, 0.10);
+      border-color: color-mix(in srgb, var(--cover-accent-2) 46%, rgba(255,255,255,0.12));
+      box-shadow: var(--p3-panel-shadow), 0 26px 82px -54px color-mix(in srgb, var(--cover-accent) 36%, transparent), inset 0 1px 0 rgba(248, 250, 252, 0.10);
     }
     .p3-home-premium .p3-cover-label {
       margin-bottom: 20px;

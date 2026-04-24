@@ -522,6 +522,9 @@ body:has(main .p3-canvas) {
 /* ---------- cover story (homepage) ---------- */
 .p3-hero-right { min-width: 0; perspective: 1200px; }
 .p3-cover {
+  --cover-accent: #38bdf8;
+  --cover-accent-2: #5eead4;
+  --cover-next-accent: #5eead4;
   display: block;
   padding: 24px;
   border-radius: 18px;
@@ -532,7 +535,7 @@ body:has(main .p3-canvas) {
     var(--p3-surface);
   text-decoration: none;
   color: inherit;
-  transition: transform 200ms cubic-bezier(.2,.7,.2,1), border-color 200ms ease, box-shadow 200ms ease, opacity 180ms ease;
+  transition: transform 200ms cubic-bezier(.2,.7,.2,1), border-color 200ms ease, box-shadow 200ms ease, opacity 180ms ease, background 620ms ease;
   position: relative;
   overflow: hidden;
   transform-style: preserve-3d;
@@ -544,9 +547,111 @@ body:has(main .p3-canvas) {
 .p3-cover-tilting {
   transition: transform 90ms cubic-bezier(.2,.7,.2,1), border-color 200ms ease, box-shadow 200ms ease, opacity 180ms ease;
 }
-.p3-cover-fading {
-  opacity: 0.15;
-  transition: opacity 180ms ease, transform 200ms cubic-bezier(.2,.7,.2,1), border-color 200ms ease, box-shadow 200ms ease;
+.p3-cover-stage {
+  position: relative;
+  z-index: 1;
+}
+.p3-cover-scan,
+.p3-cover-signal {
+  position: absolute;
+  pointer-events: none;
+  z-index: 3;
+}
+.p3-cover-scan {
+  inset: 0;
+  opacity: 0;
+  transform: translateX(-125%);
+  background:
+    linear-gradient(90deg,
+      transparent 0%,
+      color-mix(in srgb, var(--cover-accent) 72%, transparent) 48%,
+      color-mix(in srgb, var(--cover-next-accent) 72%, transparent) 52%,
+      transparent 100%);
+  mix-blend-mode: screen;
+}
+.p3-cover-scan::before,
+.p3-cover-scan::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(180deg, transparent, rgba(255,255,255,0.78), transparent);
+  box-shadow:
+    0 0 18px color-mix(in srgb, var(--cover-next-accent) 78%, transparent),
+    0 0 42px color-mix(in srgb, var(--cover-accent) 42%, transparent);
+}
+.p3-cover-scan::before { left: 48%; }
+.p3-cover-scan::after { left: 54%; opacity: 0.55; }
+.p3-cover-signal {
+  right: 28px;
+  top: 28px;
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  opacity: 0;
+  background: var(--cover-next-accent);
+  box-shadow:
+    0 0 0 0 color-mix(in srgb, var(--cover-next-accent) 36%, transparent),
+    0 0 22px color-mix(in srgb, var(--cover-next-accent) 68%, transparent);
+}
+.p3-cover-handoff {
+  border-color: color-mix(in srgb, var(--cover-next-accent) 46%, rgba(255,255,255,0.08));
+}
+.p3-cover-handoff .p3-cover-scan {
+  animation: p3-cover-scan-handoff 960ms cubic-bezier(.16, 1, .3, 1) both;
+}
+.p3-cover-handoff .p3-cover-signal {
+  animation: p3-cover-signal-handoff 960ms cubic-bezier(.16, 1, .3, 1) both;
+}
+.p3-cover-phase-out :is(
+  .p3-cover-label,
+  .p3-cover-logo-frame,
+  .p3-cover-titleblock,
+  .p3-cover-verdict,
+  .p3-cover-score,
+  .p3-cover-reasons,
+  .p3-cover-foot
+) {
+  opacity: 0;
+  filter: blur(4px);
+  transform: translateY(10px);
+  transition:
+    opacity 210ms ease,
+    filter 210ms ease,
+    transform 260ms cubic-bezier(.4, 0, .2, 1);
+}
+.p3-cover-phase-in .p3-cover-label,
+.p3-cover-phase-in .p3-cover-logo-frame,
+.p3-cover-phase-in .p3-cover-titleblock,
+.p3-cover-phase-in .p3-cover-verdict,
+.p3-cover-phase-in .p3-cover-score,
+.p3-cover-phase-in .p3-cover-reasons,
+.p3-cover-phase-in .p3-cover-foot {
+  animation: p3-cover-content-handoff 620ms cubic-bezier(.16, 1, .3, 1) both;
+}
+.p3-cover-phase-in .p3-cover-label { animation-delay: 0ms; }
+.p3-cover-phase-in .p3-cover-logo-frame { animation-delay: 0ms; }
+.p3-cover-phase-in .p3-cover-titleblock { animation-delay: 45ms; }
+.p3-cover-phase-in .p3-cover-verdict { animation-delay: 105ms; }
+.p3-cover-phase-in .p3-cover-score { animation-delay: 155ms; }
+.p3-cover-phase-in .p3-cover-reasons { animation-delay: 215ms; }
+.p3-cover-phase-in .p3-cover-foot { animation-delay: 265ms; }
+@keyframes p3-cover-scan-handoff {
+  0%   { opacity: 0; transform: translateX(-125%) skewX(-8deg); }
+  18%  { opacity: 0.42; }
+  56%  { opacity: 0.74; }
+  100% { opacity: 0; transform: translateX(125%) skewX(-8deg); }
+}
+@keyframes p3-cover-signal-handoff {
+  0%   { opacity: 0; transform: translate(-420px, 170px) scale(0.7); box-shadow: 0 0 0 0 color-mix(in srgb, var(--cover-next-accent) 38%, transparent); }
+  22%  { opacity: 0.9; }
+  56%  { opacity: 1; transform: translate(-120px, 88px) scale(1); box-shadow: 0 0 0 18px color-mix(in srgb, var(--cover-next-accent) 0%, transparent); }
+  100% { opacity: 0; transform: translate(0, 0) scale(0.55); box-shadow: 0 0 0 34px color-mix(in srgb, var(--cover-next-accent) 0%, transparent); }
+}
+@keyframes p3-cover-content-handoff {
+  0%   { opacity: 0; filter: blur(5px); transform: translateY(14px) scale(0.985); }
+  100% { opacity: 1; filter: blur(0); transform: translateY(0) scale(1); }
 }
 .p3-cover-label-cat {
   color: var(--p3-accent-text);
@@ -555,10 +660,18 @@ body:has(main .p3-canvas) {
 .p3-cover-titleblock { min-width: 0; flex: 1; }
 
 @media (prefers-reduced-motion: reduce) {
-  .p3-cover, .p3-cover-tilting, .p3-cover-fading {
+  .p3-cover,
+  .p3-cover-tilting,
+  .p3-cover-handoff,
+  .p3-cover-phase-out,
+  .p3-cover-phase-in {
     transform: none !important;
     transition: none !important;
     opacity: 1 !important;
+  }
+  .p3-cover-scan,
+  .p3-cover-signal {
+    display: none !important;
   }
 }
 .p3-cover::before {
@@ -666,9 +779,10 @@ body:has(main .p3-canvas) {
 .p3-cover-bar-fill {
   display: block;
   width: 100%;
-  height: 0;
+  height: var(--h, 0%);
   border-radius: 3px 3px 0 0;
   background: var(--c);
+  transition: height 640ms cubic-bezier(.16, 1, .3, 1), background 420ms ease, opacity 220ms ease;
 }
 /* Bars rise only once the cover (or any ancestor with data-reveal) has
    entered the viewport. The IntersectionObserver in BaseLayout adds
@@ -677,8 +791,7 @@ body:has(main .p3-canvas) {
 .p3-cover .p3-cover-bar-fill,
 .p3-cover.is-revealed .p3-cover-bar-fill,
 [data-reveal].is-revealed .p3-cover-bar-fill {
-  animation: p3-bar-rise 900ms cubic-bezier(.22,.61,.36,1) forwards;
-  animation-delay: 220ms;
+  animation: none;
 }
 @keyframes p3-bar-rise {
   from { height: 0; opacity: 0.4; }
