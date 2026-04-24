@@ -1,7 +1,7 @@
 ---
 /**
- * Homepage (/). Editorial-tier layout promoted from /demo-home-100k/ on
- * April 23, 2026. Scoped under .p3-canvas with .p3- prefixed classes so
+ * Homepage (/). Editorial-tier layout promoted on April 24, 2026.
+ * Scoped under .p3-canvas with .p3- prefixed classes so
  * it cannot collide with older homepage tokens.
  *
  * Structure:
@@ -41,6 +41,7 @@ type ToolView = {
   score: number;
   category: string;
   priceRange: string;
+  lastVerified: string;
   scores: { utility: number; value: number; moat: number; longevity: number };
   status: string;
 };
@@ -56,6 +57,7 @@ const scored: ToolView[] = allTools
       score: overallScore(s),
       category: t.data.category ?? '',
       priceRange: t.data.price_range ?? '',
+      lastVerified: String(t.data.last_verified ?? t.data.last_updated ?? ''),
       scores: {
         utility: s.utility ?? 0,
         value: s.value ?? 0,
@@ -114,10 +116,12 @@ const latestNews = allNews
     summary: n.data.summary ?? '',
     date: String(n.data.date).slice(0, 10),
     severity: (n.data.severity as string) || 'minor',
+    affects: Array.isArray(n.data.affects) ? n.data.affects.map(String) : [],
   }))
   .sort((a, b) => b.date.localeCompare(a.date))
   .slice(0, 4);
 const heroNews = latestNews[0];
+const homepageHeroNewsImage = '/home-news-ai-tools-intelligence.webp';
 
 function relDate(iso: string): string {
   if (!iso) return '';
@@ -150,18 +154,43 @@ const catLabel: Record<string, string> = {
 // at runtime. Logo URL comes from the static manifest (miniflare-safe).
 // Declared after catLabel so catLabel[t.category] resolves in-bounds.
 function barColorClient(n: number): string {
-  if (n >= 8) return '#34d399';
-  if (n >= 7) return '#38bdf8';
-  if (n >= 6) return '#fbbf24';
-  return '#fb7185';
+  if (n >= 8) return 'var(--p3-score-high)';
+  if (n >= 7) return 'var(--p3-score-good)';
+  if (n >= 6) return 'var(--p3-score-watch)';
+  return 'var(--p3-score-low)';
+}
+function coverReasons(t: ToolView) {
+  const axes = [
+    { label: 'Utility', value: t.scores.utility },
+    { label: 'Value', value: t.scores.value },
+    { label: 'Moat', value: t.scores.moat },
+    { label: 'Longevity', value: t.scores.longevity },
+  ].sort((a, b) => b.value - a.value);
+  return [
+    `${axes[0].label} ${axes[0].value}/10`,
+    `${axes[1].label} ${axes[1].value}/10`,
+    t.priceRange || 'Pricing tracked',
+  ];
+}
+function lastCheckedLabel(t: ToolView) {
+  if (!t.lastVerified) return 'Last checked: date pending';
+  return `Last checked ${relDate(t.lastVerified).toLowerCase()}`;
+}
+function coverVerdict(t: ToolView) {
+  const label = (catLabel[t.category] ?? t.category) || 'AI tool';
+  const axis = coverReasons(t)[0].replace('/10', '');
+  return `${label} leader by wiki score. Strength: ${axis}. Compare pricing and alternatives before choosing.`;
 }
 const logoMap = logoManifest as Record<string, string>;
 const coverSlides = catLeaders.map((t) => ({
   slug: t.slug,
   title: t.title,
   tagline: t.tagline,
+  verdict: coverVerdict(t),
+  reasons: coverReasons(t),
   score: t.score,
   priceRange: t.priceRange,
+  checkedLabel: lastCheckedLabel(t),
   category: catLabel[t.category] ?? t.category,
   logoUrl: logoMap[t.slug] ?? `/logos/tools/${t.slug}.png`,
   bars: [
@@ -241,10 +270,10 @@ const featuredCompare: Cmp[] = allComparisons
   .slice(0, 6);
 
 function barColor(n: number): string {
-  if (n >= 8) return '#34d399';
-  if (n >= 7) return '#38bdf8';
-  if (n >= 6) return '#fbbf24';
-  return '#fb7185';
+  if (n >= 8) return 'var(--p3-score-high)';
+  if (n >= 7) return 'var(--p3-score-good)';
+  if (n >= 6) return 'var(--p3-score-watch)';
+  return 'var(--p3-score-low)';
 }
 function sparkbars(s: { utility: number; value: number; moat: number; longevity: number }) {
   return [
@@ -258,11 +287,122 @@ function sparkbars(s: { utility: number; value: number; moat: number; longevity:
 const totalTools = scored.length;
 const totalNews = allNews.length;
 const totalCompare = allComparisons.length;
+
+const usedSignalTools = new Set<string>([topTool.slug]);
+function pickDistinct(candidates: ToolView[], fallback: ToolView) {
+  const picked = candidates.find((t) => !usedSignalTools.has(t.slug)) ?? fallback;
+  usedSignalTools.add(picked.slug);
+  return picked;
+}
+const balancedCandidates = [...scored]
+  .sort((a, b) => {
+    const minB = Math.min(b.scores.utility, b.scores.value, b.scores.moat, b.scores.longevity);
+    const minA = Math.min(a.scores.utility, a.scores.value, a.scores.moat, a.scores.longevity);
+    return minB - minA || b.score - a.score;
+  });
+const mostBalanced = pickDistinct(balancedCandidates, balancedCandidates[0] ?? topTool);
+const liveMover = pickDistinct(movers.length ? movers : scored, scored[1] ?? topTool);
+const priceWatch = latestNews.find((n) => /price|pricing|tier|subscription|plan|cost/i.test(`${n.title} ${n.summary}`)) ?? heroNews;
+const signalCards = [
+  {
+    label: 'Top scored',
+    title: topTool.title,
+    metric: `${topTool.score}/10`,
+    body: `Highest four-axis score among active tool pages.`,
+    href: `/tools/${topTool.slug}/`,
+  },
+  {
+    label: 'Best floor',
+    title: mostBalanced.title,
+    metric: `${Math.min(mostBalanced.scores.utility, mostBalanced.scores.value, mostBalanced.scores.moat, mostBalanced.scores.longevity)}/10 floor`,
+    body: `Strongest minimum score across the four scoring axes.`,
+    href: `/tools/${mostBalanced.slug}/`,
+  },
+  {
+    label: 'Most mentioned',
+    title: liveMover.title,
+    metric: movers[0] ? `${liveMover.mentions} news mentions` : `${liveMover.score}/10`,
+    body: movers[0] ? `Most mentions in news items from the last 14 days.` : `Shown from scores while the news window is quiet.`,
+    href: `/tools/${liveMover.slug}/`,
+  },
+  {
+    label: 'Pricing note',
+    title: priceWatch?.title ?? 'Pricing signals',
+    metric: priceWatch ? relDate(priceWatch.date) : 'Live',
+    body: priceWatch?.summary ? priceWatch.summary.slice(0, 110) + (priceWatch.summary.length > 110 ? '...' : '') : 'Recent pricing and plan changes from the news feed.',
+    href: priceWatch ? `/news/${priceWatch.slug}/` : '/news/',
+  },
+];
+const decisionRoutes = [
+  {
+    label: 'For builders',
+    title: 'Code, ship, and debug',
+    body: 'Coding agents, IDE assistants, app builders, and repo automation.',
+    href: '/categories/ai-coding/',
+    metric: `${catCounts['ai-coding'] ?? 0} tools`,
+  },
+  {
+    label: 'For operators',
+    title: 'Automate the work',
+    body: 'Agent workflows, integration layers, and back-office automation.',
+    href: '/categories/ai-automation/',
+    metric: `${catCounts['ai-automation'] ?? 0} tools`,
+  },
+  {
+    label: 'For creators',
+    title: 'Generate media',
+    body: 'Image, video, voice, and music systems ranked by real utility.',
+    href: '/categories/ai-image/',
+    metric: `${(catCounts['ai-image'] ?? 0) + (catCounts['ai-video'] ?? 0) + (catCounts['ai-voice'] ?? 0)} tools`,
+  },
+  {
+    label: 'For decisions',
+    title: 'Compare before buying',
+    body: 'Head-to-head pages with score gaps, tradeoffs, and current pricing.',
+    href: '/compare/',
+    metric: `${totalCompare} comparisons`,
+  },
+];
+const heroNewsBrief = heroNews ? [
+  { label: 'Signal age', value: relDate(heroNews.date) || 'Live' },
+  { label: 'Severity', value: heroNews.severity },
+  { label: 'Tools touched', value: String(heroNews.affects.length) },
+] : [];
+const verificationLedger = [
+  {
+    label: 'Catalog depth',
+    value: totalTools,
+    suffix: 'tools',
+    body: 'Live tool pages with category, pricing, status, and scoring metadata.',
+    href: '/tools/',
+  },
+  {
+    label: 'Buying evidence',
+    value: totalCompare,
+    suffix: 'comparisons',
+    body: 'Head-to-head pages built for tradeoff checks before a subscription.',
+    href: '/compare/',
+  },
+  {
+    label: 'Market movement',
+    value: totalNews,
+    suffix: 'news items',
+    body: 'Launches, pricing changes, benchmarks, and vendor updates tracked as signals.',
+    href: '/news/',
+  },
+  {
+    label: 'Editorial controls',
+    value: 0,
+    suffix: 'paid placements',
+    body: 'The homepage ranking is computed from wiki data, not sponsorship slots.',
+    href: '/about/editorial/',
+  },
+];
 ---
 
 <BaseLayout
   title={`Best AI Tools 2026: ${totalTools} Reviewed, Scored & Verified`}
-  description={`Independent AI tools encyclopedia. ${totalTools} tools agent-scored on Utility, Value, Moat & Longevity. ${totalCompare} head-to-head comparisons. Verified. No paid placements.`}
+  description={`Independent AI tools encyclopedia. ${totalTools} tools scored on Utility, Value, Moat and Longevity. ${totalCompare} comparisons, current news, and transparent editorial signals.`}
 >
   <HomepageLD
     toolCount={allTools.length}
@@ -271,25 +411,25 @@ const totalCompare = allComparisons.length;
     lastUpdated="2026-04-23"
   />
 
-  <div class="p3-canvas">
+  <div class="p3-canvas p3-home-premium">
     <!-- =============== HERO =============== -->
     <section class="p3-hero">
       <div class="p3-hero-left">
-        <div class="p3-eyebrow" title={`Verified today. ${totalNews} news items tracked. No paid placements.`}>
+        <div class="p3-eyebrow" title={`${totalTools} tools. ${totalCompare} comparisons. Updated today.`}>
           <span class="p3-live-dot" aria-hidden="true"></span>
-          <span class="p3-eyebrow-full">Verified today · {totalNews} news items · no paid placements</span>
-          <span class="p3-eyebrow-short">Verified today · no paid placements</span>
+          <span class="p3-eyebrow-full">{totalTools} tools · {totalCompare} comparisons · updated today</span>
+          <span class="p3-eyebrow-short">{totalTools} tools · updated today</span>
         </div>
         <h1 class="p3-headline">
-          The honest <span class="p3-gradient">encyclopedia</span> of AI tools.
+          Find the <span class="p3-gradient">right AI tool</span>.
         </h1>
         <p class="p3-subhead">
           <span class="p3-trustline">
-            <span class="p3-trust"><span class="p3-trust-mark" aria-hidden="true">✓</span>Every claim linked to its source</span>
+            <span class="p3-trust"><span class="p3-trust-mark" aria-hidden="true">✓</span>Source-linked pages</span>
             <span class="p3-trust-sep" aria-hidden="true"></span>
-            <span class="p3-trust"><span class="p3-trust-mark" aria-hidden="true">✓</span>Scored on <span class="p3-trust-num tabular-nums">4</span> axes</span>
+            <span class="p3-trust"><span class="p3-trust-mark" aria-hidden="true">✓</span><span class="p3-trust-num tabular-nums">4</span>-axis scoring</span>
             <span class="p3-trust-sep" aria-hidden="true"></span>
-            <span class="p3-trust"><span class="p3-trust-mark" aria-hidden="true">✓</span>Zero sponsored placements</span>
+            <span class="p3-trust"><span class="p3-trust-mark" aria-hidden="true">✓</span>No paid placements</span>
           </span>
         </p>
         <button
@@ -368,11 +508,11 @@ const totalCompare = allComparisons.length;
         </nav>
       </div>
 
-      <aside class="p3-hero-right" aria-label="Today's top pick">
-        <a id="p3-cover-card" href={`/tools/${topTool.slug}/`} class="p3-cover" data-rotator-enabled>
+      <aside class="p3-hero-right" aria-label="Editorial top pick">
+        <a id="p3-cover-card" href={`/tools/${topTool.slug}/`} class="p3-cover p3-premium-cover" data-rotator-enabled>
           <div class="p3-cover-label">
-            <span class="p3-cover-label-text">Top pick in <span class="p3-cover-label-cat">{catLabel[topTool.category] ?? topTool.category}</span></span>
-            <span class="p3-cover-badge">#1</span>
+            <span class="p3-cover-label-text">Category: <span class="p3-cover-label-cat">{catLabel[topTool.category] ?? topTool.category}</span></span>
+            <span class="p3-cover-badge">Current pick</span>
           </div>
           <div class="p3-cover-title-row">
             <div class="p3-cover-logo-frame">
@@ -383,8 +523,12 @@ const totalCompare = allComparisons.length;
               <div class="p3-cover-tagline">{topTool.tagline}</div>
             </div>
           </div>
+          <p class="p3-cover-verdict">{coverVerdict(topTool)}</p>
           <div class="p3-cover-score">
-            <span class="p3-cover-score-num tabular-nums">{topTool.score}<span class="p3-cover-score-slash">/10</span></span>
+            <div class="p3-cover-score-main">
+              <span class="p3-cover-score-label">Wiki score</span>
+              <span class="p3-cover-score-num tabular-nums">{topTool.score}<span class="p3-cover-score-slash">/10</span></span>
+            </div>
             <div class="p3-cover-bars" aria-label={`Score breakdown: ${sparkbars(topTool.scores).map(b => b.label + ' ' + b.v).join(', ')}`}>
               {sparkbars(topTool.scores).map(b => (
                 <div class="p3-cover-bar" title={`${b.label} ${b.v}/10`}>
@@ -396,9 +540,14 @@ const totalCompare = allComparisons.length;
               ))}
             </div>
           </div>
+          <div class="p3-cover-reasons" aria-label="Why this is featured">
+            {coverReasons(topTool).map(reason => (
+              <span class="p3-cover-reason">{reason}</span>
+            ))}
+          </div>
           <div class="p3-cover-foot">
-            <span class="p3-cover-price">{topTool.priceRange}</span>
-            <span class="p3-cover-arrow">Read the review →</span>
+            <span class="p3-cover-price">{lastCheckedLabel(topTool)}</span>
+            <span class="p3-cover-arrow">Open review →</span>
           </div>
         </a>
         {/* Data payload for the cover rotator. Injected as JSON so the
@@ -432,6 +581,75 @@ const totalCompare = allComparisons.length;
       </div>
     </section>
 
+    <!-- =============== SIGNAL DESK =============== -->
+    <section class="p3-signal-desk" aria-label="Current AI tool signals" data-reveal>
+      <div class="p3-signal-head">
+        <div>
+          <div class="p3-signal-eyebrow">Current signals</div>
+          <h2 class="p3-signal-title">Tools to check first.</h2>
+        </div>
+        <a href="/news/" class="p3-sec-link">News feed -></a>
+      </div>
+      <div class="p3-signal-grid">
+        {signalCards.map((card, i) => (
+          <a href={card.href} class="p3-signal-card" data-reveal style={`--reveal-delay: ${Math.min(i * 65, 260)}ms`}>
+            <span class="p3-signal-card-label">{card.label}</span>
+            <span class="p3-signal-card-title">{card.title}</span>
+            <span class="p3-signal-card-body">{card.body}</span>
+            <span class="p3-signal-card-foot">
+              <span class="p3-signal-card-metric tabular-nums">{card.metric}</span>
+              <span class="p3-signal-card-arrow" aria-hidden="true">-></span>
+            </span>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <!-- =============== DECISION ROUTES =============== -->
+    <section class="p3-route-board" aria-label="Decision routes" data-reveal>
+      <div class="p3-route-intro">
+        <div class="p3-route-eyebrow">Use case routes</div>
+        <h2 class="p3-route-title">Start with the job.</h2>
+      </div>
+      <div class="p3-route-grid">
+        {decisionRoutes.map((route, i) => (
+          <a href={route.href} class="p3-route-card" data-reveal style={`--reveal-delay: ${Math.min(i * 55, 220)}ms`}>
+            <span class="p3-route-label">{route.label}</span>
+            <span class="p3-route-title-sm">{route.title}</span>
+            <span class="p3-route-body">{route.body}</span>
+            <span class="p3-route-foot">
+              <span class="p3-route-metric tabular-nums">{route.metric}</span>
+              <span aria-hidden="true">-></span>
+            </span>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <!-- =============== VERIFICATION LEDGER =============== -->
+    <section class="p3-ledger" aria-label="Verification ledger" data-reveal>
+      <div class="p3-ledger-copy">
+        <div class="p3-ledger-eyebrow">Verification ledger</div>
+        <h2 class="p3-ledger-title">How this wiki is built.</h2>
+        <p class="p3-ledger-body">
+          Rankings, category routes, and news signals come from the same content graph that powers the tool pages. Each entry keeps its status, pricing, sources, and score history close to the surface.
+        </p>
+        <a href="/about/editorial/" class="p3-ledger-link">Read the editorial policy -></a>
+      </div>
+      <div class="p3-ledger-grid">
+        {verificationLedger.map((item, i) => (
+          <a href={item.href} class="p3-ledger-item" data-reveal style={`--reveal-delay: ${Math.min(i * 55, 220)}ms`}>
+            <span class="p3-ledger-item-label">{item.label}</span>
+            <span class="p3-ledger-item-value">
+              <span class="tabular-nums">{item.value}</span>
+              <span>{item.suffix}</span>
+            </span>
+            <span class="p3-ledger-item-body">{item.body}</span>
+          </a>
+        ))}
+      </div>
+    </section>
+
     <!-- =============== CATEGORY RAIL =============== -->
     <section class="p3-catrail" aria-label="Browse by category" data-reveal>
       <div class="p3-sec-head">
@@ -462,18 +680,24 @@ const totalCompare = allComparisons.length;
     <section class="p3-split" aria-label="Latest news and movers" data-reveal>
       <div class="p3-split-news">
         <div class="p3-sec-head">
-          <h2 class="p3-sec-title">From the newsroom</h2>
-          <a href="/news/" class="p3-sec-link">All news →</a>
+          <h2 class="p3-sec-title">Latest updates</h2>
+          <a href="/news/" class="p3-sec-link">All updates →</a>
         </div>
         {heroNews && (
           <a href={`/news/${heroNews.slug}/`} class="p3-newshero">
-            <img src={`/og/news/${heroNews.slug}.png`} alt="" loading="lazy" decoding="async" width="1200" height="630" />
+            <img src={homepageHeroNewsImage} alt="" loading="lazy" decoding="async" width="1400" height="700" />
             <div class="p3-newshero-body">
-              {/* No meta row: the OG image above already shows severity + date.
-                  Title + summary is the body content. */}
               <h3 class="p3-newshero-title">{heroNews.title}</h3>
               <p class="p3-newshero-summary">{heroNews.summary.slice(0, 180)}{heroNews.summary.length > 180 ? '…' : ''}</p>
-              <span class="p3-newshero-readlink">Read story <span aria-hidden="true">→</span></span>
+              <div class="p3-newshero-brief" aria-label="Story brief">
+                {heroNewsBrief.map((item) => (
+                  <span class="p3-newshero-brief-item">
+                    <span>{item.label}</span>
+                    <strong class="tabular-nums">{item.value}</strong>
+                  </span>
+                ))}
+              </div>
+              <span class="p3-newshero-readlink">Open update <span aria-hidden="true">→</span></span>
             </div>
           </a>
         )}
@@ -492,8 +716,8 @@ const totalCompare = allComparisons.length;
 
       <aside class="p3-split-movers" aria-label="Tools in the news this fortnight">
         <div class="p3-sec-head">
-          <h2 class="p3-sec-title">Movers this fortnight</h2>
-          <span class="p3-sec-sub">Tools mentioned in news last 14 days</span>
+          <h2 class="p3-sec-title">Mentioned recently</h2>
+          <span class="p3-sec-sub">News mentions from the last 14 days</span>
         </div>
         {movers.length === 0 ? (
           <div class="p3-movers-empty">No movers yet. Check back tomorrow.</div>
@@ -574,28 +798,28 @@ const totalCompare = allComparisons.length;
         <h2 class="p3-method-title">Every tool scored on the same four axes.</h2>
         <div class="p3-method-grid">
           <div class="p3-method-axis">
-            <span class="p3-method-axis-dot" style="--c:#34d399"></span>
+            <span class="p3-method-axis-dot" style="--c:var(--p3-score-high)"></span>
             <div>
               <div class="p3-method-axis-name">Utility</div>
               <div class="p3-method-axis-desc">Does it do the job, reliably, today.</div>
             </div>
           </div>
           <div class="p3-method-axis">
-            <span class="p3-method-axis-dot" style="--c:#38bdf8"></span>
+            <span class="p3-method-axis-dot" style="--c:var(--p3-score-good)"></span>
             <div>
               <div class="p3-method-axis-name">Value</div>
               <div class="p3-method-axis-desc">Output quality per dollar.</div>
             </div>
           </div>
           <div class="p3-method-axis">
-            <span class="p3-method-axis-dot" style="--c:#fbbf24"></span>
+            <span class="p3-method-axis-dot" style="--c:var(--p3-score-watch)"></span>
             <div>
               <div class="p3-method-axis-name">Moat</div>
               <div class="p3-method-axis-desc">How defensible is the differentiation.</div>
             </div>
           </div>
           <div class="p3-method-axis">
-            <span class="p3-method-axis-dot" style="--c:#fb7185"></span>
+            <span class="p3-method-axis-dot" style="--c:var(--p3-score-low)"></span>
             <div>
               <div class="p3-method-axis-name">Longevity</div>
               <div class="p3-method-axis-desc">Odds the vendor is still shipping in 24 months.</div>
@@ -764,8 +988,10 @@ const totalCompare = allComparisons.length;
       const logoImg  = card.querySelector('.p3-cover-logo');
       const title    = card.querySelector('.p3-cover-title');
       const tagline  = card.querySelector('.p3-cover-tagline');
+      const verdict  = card.querySelector('.p3-cover-verdict');
       const scoreEl  = card.querySelector('.p3-cover-score-num');
       const bars     = card.querySelectorAll('.p3-cover-bar');
+      const reasons  = card.querySelectorAll('.p3-cover-reason');
       const priceEl  = card.querySelector('.p3-cover-price');
 
       let idx = 0;
@@ -778,8 +1004,12 @@ const totalCompare = allComparisons.length;
         }
         if (title)   title.textContent = slide.title;
         if (tagline) tagline.textContent = slide.tagline;
+        if (verdict) verdict.textContent = slide.verdict;
         if (scoreEl) scoreEl.innerHTML = slide.score + '<span class="p3-cover-score-slash">/10</span>';
-        if (priceEl) priceEl.textContent = slide.priceRange;
+        if (priceEl) priceEl.textContent = slide.checkedLabel || 'Last checked today';
+        reasons.forEach((reason, i) => {
+          reason.textContent = slide.reasons && slide.reasons[i] ? slide.reasons[i] : '';
+        });
 
         bars.forEach((bar, i) => {
           const b = slide.bars[i];
@@ -846,5 +1076,696 @@ const totalCompare = allComparisons.length;
       });
     })();
   </script>
+
+  <style>
+    body:has(main .p3-home-premium) {
+      background:
+        radial-gradient(ellipse 88% 42% at 50% -14%, rgba(167, 139, 250, 0.085) 0%, transparent 62%),
+        radial-gradient(ellipse 52% 32% at 92% 8%, rgba(56, 189, 248, 0.075) 0%, transparent 70%),
+        linear-gradient(180deg, #05060d 0%, #070811 48%, #05060d 100%);
+    }
+
+    .p3-home-premium {
+      --p3-ink-0: #05060d;
+      --p3-ink-1: #090b14;
+      --p3-ink-2: #0e1320;
+      --p3-surface: rgba(13, 18, 31, 0.78);
+      --p3-surface-2: rgba(18, 24, 39, 0.78);
+      --p3-surface-soft: rgba(248, 250, 252, 0.035);
+      --p3-border: rgba(226, 232, 240, 0.10);
+      --p3-border-strong: rgba(226, 232, 240, 0.16);
+      --p3-fg: #f8fafc;
+      --p3-muted: rgba(203, 213, 225, 0.72);
+      --p3-subtle: rgba(148, 163, 184, 0.88);
+      --p3-action: #a78bfa;
+      --p3-action-strong: #c4b5fd;
+      --p3-action-rgb: 167, 139, 250;
+      --p3-intel: #38bdf8;
+      --p3-intel-soft: #7dd3fc;
+      --p3-intel-rgb: 56, 189, 248;
+      --p3-verified: #5eead4;
+      --p3-verified-strong: #99f6e4;
+      --p3-verified-rgb: 94, 234, 212;
+      --p3-score-high: #34d399;
+      --p3-score-good: #38bdf8;
+      --p3-score-watch: #fbbf24;
+      --p3-score-low: #fb7185;
+      --p3-brand-glow: rgba(56, 189, 248, 0.20);
+      --p3-action-glow: rgba(167, 139, 250, 0.18);
+      --p3-panel-shadow: 0 28px 80px -54px rgba(0, 0, 0, 0.88);
+      --p3-line: var(--p3-border);
+      --p3-line-strong: var(--p3-border-strong);
+      --p3-accent: var(--p3-action);
+      --p3-accent-text: var(--p3-action-strong);
+      --p3-surface-hover: var(--p3-surface-2);
+      color-scheme: dark;
+    }
+
+    .p3-home-premium .p3-gradient {
+      background: linear-gradient(100deg, var(--p3-action) 0%, var(--p3-intel) 58%, var(--p3-verified) 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .p3-home-premium .p3-live-dot {
+      background: var(--p3-verified);
+      box-shadow: 0 0 0 0 rgba(var(--p3-verified-rgb), 0.50);
+    }
+
+    .p3-home-premium .p3-trust-mark {
+      background: rgba(var(--p3-verified-rgb), 0.12);
+      border-color: rgba(var(--p3-verified-rgb), 0.28);
+      color: var(--p3-verified);
+    }
+
+    .p3-home-premium .p3-search-btn::before {
+      background: linear-gradient(
+        100deg,
+        rgba(var(--p3-action-rgb), 0.36),
+        rgba(var(--p3-intel-rgb), 0.32) 58%,
+        rgba(var(--p3-verified-rgb), 0.24)
+      );
+    }
+
+    .p3-home-premium .p3-search-btn-glow {
+      background:
+        radial-gradient(ellipse 70% 140% at 50% 50%, rgba(var(--p3-intel-rgb), 0.18), transparent 60%),
+        radial-gradient(ellipse 70% 140% at 28% 50%, rgba(var(--p3-action-rgb), 0.16), transparent 62%);
+    }
+
+    .p3-home-premium .p3-search-btn:focus-visible {
+      box-shadow: 0 0 0 4px rgba(var(--p3-action-rgb), 0.18);
+    }
+
+    .p3-home-premium .p3-jump::before {
+      background: radial-gradient(ellipse 120% 120% at 100% 0%, rgba(var(--p3-intel-rgb), 0.11), transparent 65%);
+    }
+
+    .p3-home-premium .p3-jump:hover {
+      border-color: rgba(var(--p3-action-rgb), 0.34);
+      box-shadow: 0 10px 24px -16px rgba(var(--p3-intel-rgb), 0.24);
+    }
+
+    .p3-home-premium .p3-jump:focus-visible {
+      outline-color: rgba(var(--p3-action-rgb), 0.5);
+    }
+
+    .p3-home-premium .p3-jump:hover .p3-jump-icon {
+      background: rgba(var(--p3-action-rgb), 0.12);
+      border-color: rgba(var(--p3-action-rgb), 0.28);
+    }
+
+    .p3-home-premium .p3-statbar {
+      background:
+        linear-gradient(90deg, rgba(var(--p3-intel-rgb), 0.045), transparent 36%),
+        var(--p3-surface);
+    }
+
+    .p3-home-premium .p3-catchip::before {
+      background: radial-gradient(ellipse 120% 100% at 100% 100%, rgba(var(--p3-intel-rgb), 0.09), transparent 60%);
+    }
+
+    .p3-home-premium .p3-catchip::after {
+      background: linear-gradient(90deg, var(--p3-action) 0%, var(--p3-intel) 55%, var(--p3-verified) 100%);
+    }
+
+    .p3-home-premium .p3-catchip:hover,
+    .p3-home-premium .p3-newshero:hover,
+    .p3-home-premium .p3-mover:hover {
+      border-color: rgba(var(--p3-action-rgb), 0.34);
+    }
+
+    .p3-home-premium .p3-catchip:hover,
+    .p3-home-premium .p3-mover:hover {
+      box-shadow: 0 14px 32px -20px rgba(var(--p3-intel-rgb), 0.28);
+    }
+
+    .p3-home-premium .p3-mover::before,
+    .p3-home-premium .p3-mover-lead .p3-mover-rank {
+      background: linear-gradient(180deg, var(--p3-action), var(--p3-intel));
+    }
+
+    .p3-home-premium .p3-mover-bar-fill {
+      background: linear-gradient(90deg, var(--p3-action), var(--p3-intel));
+    }
+
+    @keyframes p3-pulse {
+      0%   { box-shadow: 0 0 0 0 rgba(var(--p3-verified-rgb), 0.50); }
+      70%  { box-shadow: 0 0 0 8px rgba(var(--p3-verified-rgb), 0); }
+      100% { box-shadow: 0 0 0 0 rgba(var(--p3-verified-rgb), 0); }
+    }
+
+    .p3-home-premium .p3-premium-cover {
+      padding: 28px;
+      border-radius: 16px;
+      border-color: rgba(var(--p3-intel-rgb), 0.26);
+      background:
+        linear-gradient(135deg, rgba(var(--p3-intel-rgb), 0.11), transparent 38%),
+        radial-gradient(ellipse 90% 70% at 100% 0%, var(--p3-action-glow), transparent 58%),
+        linear-gradient(180deg, rgba(248, 250, 252, 0.062), rgba(248, 250, 252, 0.016));
+      box-shadow: var(--p3-panel-shadow), 0 22px 70px -54px var(--p3-brand-glow), inset 0 1px 0 rgba(248, 250, 252, 0.08);
+    }
+    .p3-home-premium .p3-premium-cover:hover {
+      border-color: rgba(var(--p3-intel-rgb), 0.42);
+      box-shadow: var(--p3-panel-shadow), 0 26px 82px -54px rgba(var(--p3-action-rgb), 0.34), inset 0 1px 0 rgba(248, 250, 252, 0.10);
+    }
+    .p3-home-premium .p3-cover-label {
+      margin-bottom: 20px;
+      color: var(--p3-verified-strong);
+    }
+    .p3-home-premium .p3-cover-badge {
+      border-color: rgba(var(--p3-action-rgb), 0.34);
+      background: rgba(var(--p3-action-rgb), 0.13);
+      color: var(--p3-action-strong);
+    }
+    .p3-home-premium .p3-cover-title-row {
+      align-items: center;
+      margin-bottom: 18px;
+    }
+    .p3-home-premium .p3-cover-logo-frame {
+      background: rgba(248, 250, 252, 0.08);
+      border-color: var(--p3-border-strong);
+      box-shadow: 0 16px 40px -24px rgba(0, 0, 0, 0.9);
+    }
+    .p3-home-premium .p3-cover-title {
+      font-size: clamp(30px, 4vw, 44px);
+      font-weight: 800;
+      line-height: 0.98;
+      letter-spacing: 0;
+    }
+    .p3-home-premium .p3-cover-tagline {
+      max-width: 34rem;
+      margin-top: 8px;
+      font-size: 14px;
+      color: var(--p3-muted);
+    }
+    .p3-home-premium .p3-cover-verdict {
+      margin: 0 0 20px;
+      padding: 15px 16px;
+      border: 1px solid var(--p3-border);
+      border-radius: 10px;
+      background: rgba(5, 6, 13, 0.52);
+      color: rgba(248, 250, 252, 0.93);
+      font-size: 15px;
+      font-weight: 650;
+      line-height: 1.45;
+    }
+    .p3-home-premium .p3-cover-score {
+      align-items: stretch;
+      padding: 18px 0;
+      gap: 18px;
+      margin-bottom: 14px;
+    }
+    .p3-home-premium .p3-cover-score-main {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      min-width: 118px;
+    }
+    .p3-home-premium .p3-cover-score-label {
+      margin-bottom: 7px;
+      color: var(--p3-subtle);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+    .p3-home-premium .p3-cover-bars {
+      align-items: end;
+      gap: 8px;
+    }
+    .p3-home-premium .p3-cover-bar-col {
+      height: 48px;
+      border-radius: 5px;
+      background: rgba(248, 250, 252, 0.055);
+    }
+    .p3-home-premium .p3-cover-reasons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+    .p3-home-premium .p3-cover-reason {
+      min-height: 30px;
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 10px;
+      border: 1px solid var(--p3-border);
+      border-radius: 999px;
+      background: rgba(248, 250, 252, 0.045);
+      color: rgba(226, 232, 240, 0.82);
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .p3-home-premium .p3-cover-foot {
+      padding-top: 14px;
+      border-top: 1px solid var(--p3-border);
+    }
+    .p3-home-premium .p3-cover-price {
+      color: var(--p3-subtle);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .p3-home-premium .p3-signal-desk {
+      margin: 26px 0 66px;
+      padding: 22px;
+      border: 1px solid var(--p3-border);
+      border-radius: 16px;
+      background:
+        linear-gradient(135deg, rgba(var(--p3-verified-rgb), 0.07), transparent 34%),
+        linear-gradient(180deg, rgba(248, 250, 252, 0.042), rgba(248, 250, 252, 0.016));
+      box-shadow: inset 0 1px 0 rgba(248, 250, 252, 0.06);
+    }
+    .p3-home-premium .p3-signal-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 18px;
+    }
+    .p3-home-premium .p3-signal-eyebrow {
+      margin-bottom: 6px;
+      color: var(--p3-verified);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+    .p3-home-premium .p3-signal-title {
+      margin: 0;
+      color: var(--p3-fg);
+      font-size: clamp(23px, 3vw, 34px);
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: 0;
+    }
+    .p3-home-premium .p3-signal-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .p3-home-premium .p3-signal-card {
+      min-height: 158px;
+      display: flex;
+      flex-direction: column;
+      padding: 16px;
+      border: 1px solid var(--p3-border);
+      border-radius: 12px;
+      background: rgba(5, 6, 13, 0.46);
+      text-decoration: none;
+      transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+    }
+    .p3-home-premium .p3-signal-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(var(--p3-action-rgb), 0.36);
+      background: var(--p3-surface-2);
+    }
+    .p3-home-premium .p3-signal-card-label {
+      margin-bottom: 18px;
+      color: var(--p3-action);
+      font-size: 10px;
+      font-weight: 850;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+    .p3-home-premium .p3-signal-card-title {
+      color: rgba(248, 250, 252, 0.96);
+      font-size: 18px;
+      font-weight: 780;
+      line-height: 1.14;
+    }
+    .p3-home-premium .p3-signal-card-body {
+      margin-top: 10px;
+      color: var(--p3-muted);
+      font-size: 13px;
+      line-height: 1.45;
+    }
+    .p3-home-premium .p3-signal-card-foot {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: auto;
+      padding-top: 16px;
+    }
+    .p3-home-premium .p3-signal-card-metric {
+      color: var(--p3-verified-strong);
+      font-size: 13px;
+      font-weight: 800;
+    }
+    .p3-home-premium .p3-signal-card-arrow {
+      color: var(--p3-action);
+      font-weight: 800;
+      transition: transform 150ms ease;
+    }
+    .p3-home-premium .p3-signal-card:hover .p3-signal-card-arrow {
+      transform: translateX(3px);
+    }
+    .p3-home-premium .p3-route-board {
+      display: grid;
+      grid-template-columns: minmax(220px, 0.72fr) minmax(0, 1.6fr);
+      gap: 18px;
+      margin: -34px 0 58px;
+      align-items: stretch;
+    }
+    .p3-home-premium .p3-route-intro {
+      padding: 14px 0;
+    }
+    .p3-home-premium .p3-route-eyebrow {
+      margin-bottom: 8px;
+      color: var(--p3-action);
+      font-size: 11px;
+      font-weight: 850;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+    .p3-home-premium .p3-route-title {
+      max-width: 12ch;
+      margin: 0;
+      color: var(--p3-fg);
+      font-size: clamp(25px, 3.4vw, 40px);
+      font-weight: 850;
+      line-height: 1.02;
+      letter-spacing: 0;
+    }
+    .p3-home-premium .p3-route-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 0;
+      border-top: 1px solid var(--p3-border);
+      border-bottom: 1px solid var(--p3-border);
+    }
+    .p3-home-premium .p3-route-card {
+      min-height: 136px;
+      display: flex;
+      flex-direction: column;
+      padding: 14px 16px;
+      border: 0;
+      border-left: 1px solid var(--p3-border);
+      border-radius: 0;
+      background: transparent;
+      text-decoration: none;
+      transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
+    }
+    .p3-home-premium .p3-route-card:first-child {
+      border-left: 0;
+    }
+    .p3-home-premium .p3-route-card:hover {
+      transform: translateY(-1px);
+      background: var(--p3-surface-soft);
+    }
+    .p3-home-premium .p3-route-label {
+      margin-bottom: 16px;
+      color: var(--p3-verified);
+      font-size: 10px;
+      font-weight: 850;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+    }
+    .p3-home-premium .p3-route-title-sm {
+      color: rgba(248, 250, 252, 0.96);
+      font-size: 17px;
+      font-weight: 800;
+      line-height: 1.15;
+    }
+    .p3-home-premium .p3-route-body {
+      margin-top: 8px;
+      color: rgba(203, 213, 225, 0.68);
+      font-size: 12px;
+      line-height: 1.45;
+    }
+    .p3-home-premium .p3-route-foot {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      margin-top: auto;
+      padding-top: 14px;
+      color: var(--p3-action);
+      font-size: 12px;
+      font-weight: 800;
+    }
+    .p3-home-premium .p3-route-metric {
+      color: rgba(226, 232, 240, 0.82);
+    }
+    .p3-home-premium .p3-ledger {
+      display: grid;
+      grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1.55fr);
+      gap: 24px;
+      margin: 0 0 66px;
+      padding: 24px;
+      border: 1px solid var(--p3-border);
+      border-radius: 16px;
+      background:
+        linear-gradient(135deg, rgba(var(--p3-action-rgb), 0.105), transparent 33%),
+        radial-gradient(ellipse 75% 70% at 100% 0%, rgba(var(--p3-intel-rgb), 0.08), transparent 55%),
+        linear-gradient(180deg, rgba(14, 19, 32, 0.62), rgba(5, 6, 13, 0.38));
+      box-shadow: inset 0 1px 0 rgba(248, 250, 252, 0.06);
+    }
+    .p3-home-premium .p3-ledger-copy {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-width: 0;
+    }
+    .p3-home-premium .p3-ledger-eyebrow {
+      margin-bottom: 10px;
+      color: var(--p3-verified);
+      font-size: 11px;
+      font-weight: 850;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+    .p3-home-premium .p3-ledger-title {
+      max-width: 12ch;
+      margin: 0;
+      color: var(--p3-fg);
+      font-size: clamp(26px, 3.2vw, 42px);
+      font-weight: 850;
+      line-height: 1.02;
+      letter-spacing: 0;
+    }
+    .p3-home-premium .p3-ledger-body {
+      max-width: 46ch;
+      margin: 16px 0 0;
+      color: var(--p3-muted);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    .p3-home-premium .p3-ledger-link {
+      width: fit-content;
+      margin-top: 18px;
+      color: var(--p3-action);
+      font-size: 13px;
+      font-weight: 800;
+      text-decoration: none;
+    }
+    .p3-home-premium .p3-ledger-link:hover {
+      color: var(--p3-action-strong);
+    }
+    .p3-home-premium .p3-ledger-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+    .p3-home-premium .p3-ledger-item {
+      min-height: 150px;
+      display: flex;
+      flex-direction: column;
+      padding: 16px;
+      border: 1px solid var(--p3-border);
+      border-radius: 12px;
+      background: rgba(5, 6, 13, 0.42);
+      text-decoration: none;
+      transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+    }
+    .p3-home-premium .p3-ledger-item:hover {
+      transform: translateY(-2px);
+      border-color: rgba(var(--p3-intel-rgb), 0.30);
+      background: var(--p3-surface-2);
+    }
+    .p3-home-premium .p3-ledger-item-label {
+      color: var(--p3-action);
+      font-size: 10px;
+      font-weight: 850;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    .p3-home-premium .p3-ledger-item-value {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      margin-top: 14px;
+      color: rgba(248, 250, 252, 0.98);
+      font-size: 28px;
+      font-weight: 850;
+      line-height: 1;
+    }
+    .p3-home-premium .p3-ledger-item-value span:last-child {
+      color: rgba(var(--p3-verified-rgb), 0.88);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .p3-home-premium .p3-ledger-item-body {
+      margin-top: auto;
+      padding-top: 16px;
+      color: rgba(203, 213, 225, 0.7);
+      font-size: 12px;
+      line-height: 1.45;
+    }
+    .p3-home-premium .p3-newshero {
+      display: grid;
+      grid-template-columns: minmax(220px, 0.74fr) minmax(0, 1fr);
+      align-items: stretch;
+      overflow: hidden;
+    }
+    .p3-home-premium .p3-newshero > img {
+      width: 100%;
+      height: 100%;
+      min-height: 260px;
+      max-height: 360px;
+      object-fit: cover;
+    }
+    .p3-home-premium .p3-newshero-body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 20px;
+    }
+    .p3-home-premium .p3-newshero-title {
+      font-size: clamp(20px, 2.2vw, 27px);
+      line-height: 1.12;
+    }
+    .p3-home-premium .p3-newshero-brief {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 8px;
+      margin: 16px 0 4px;
+    }
+    .p3-home-premium .p3-newshero-brief-item {
+      min-height: 58px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 6px;
+      padding: 10px;
+      border: 1px solid var(--p3-border);
+      border-radius: 10px;
+      background: var(--p3-surface-soft);
+    }
+    .p3-home-premium .p3-newshero-brief-item span {
+      color: var(--p3-subtle);
+      font-size: 10px;
+      font-weight: 850;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .p3-home-premium .p3-newshero-brief-item strong {
+      color: rgba(var(--p3-verified-rgb), 0.94);
+      font-size: 13px;
+      font-weight: 850;
+      line-height: 1.1;
+      text-transform: capitalize;
+    }
+    @media (max-width: 720px) {
+      .p3-home-premium .p3-premium-cover {
+        padding: 22px;
+      }
+      .p3-home-premium .p3-cover-score {
+        display: block;
+      }
+      .p3-home-premium .p3-cover-score-main {
+        margin-bottom: 14px;
+      }
+      .p3-home-premium .p3-signal-desk {
+        margin-bottom: 44px;
+        padding: 18px;
+      }
+      .p3-home-premium .p3-signal-head {
+        display: block;
+      }
+      .p3-home-premium .p3-signal-head .p3-sec-link {
+        display: inline-flex;
+        margin-top: 12px;
+      }
+      .p3-home-premium .p3-signal-grid {
+        grid-template-columns: 1fr;
+      }
+      .p3-home-premium .p3-signal-card {
+        min-height: 0;
+      }
+      .p3-home-premium .p3-route-board {
+        display: block;
+        margin: -18px 0 44px;
+      }
+      .p3-home-premium .p3-route-title {
+        max-width: none;
+      }
+      .p3-home-premium .p3-route-grid {
+        grid-template-columns: 1fr;
+        border-top: 1px solid var(--p3-border);
+        border-bottom: 1px solid var(--p3-border);
+      }
+      .p3-home-premium .p3-route-card {
+        border-left: 0;
+        border-top: 1px solid var(--p3-border);
+        min-height: 0;
+      }
+      .p3-home-premium .p3-route-card:first-child {
+        border-top: 0;
+      }
+      .p3-home-premium .p3-ledger {
+        grid-template-columns: 1fr;
+        margin-bottom: 44px;
+        padding: 18px;
+      }
+      .p3-home-premium .p3-ledger-title {
+        max-width: none;
+      }
+      .p3-home-premium .p3-ledger-grid {
+        grid-template-columns: 1fr;
+      }
+      .p3-home-premium .p3-ledger-item {
+        min-height: 0;
+      }
+      .p3-home-premium .p3-newshero-brief {
+        grid-template-columns: 1fr;
+      }
+      .p3-home-premium .p3-newshero {
+        grid-template-columns: 1fr;
+      }
+      .p3-home-premium .p3-newshero > img {
+        min-height: 0;
+        max-height: 260px;
+      }
+    }
+    @media (min-width: 721px) and (max-width: 980px) {
+      .p3-home-premium .p3-signal-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .p3-home-premium .p3-route-board {
+        grid-template-columns: 1fr;
+      }
+      .p3-home-premium .p3-route-title {
+        max-width: none;
+      }
+      .p3-home-premium .p3-route-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .p3-home-premium .p3-route-card:nth-child(odd) {
+        border-left: 0;
+      }
+      .p3-home-premium .p3-route-card:nth-child(n + 3) {
+        border-top: 1px solid var(--p3-border);
+      }
+      .p3-home-premium .p3-ledger {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 
 </BaseLayout>

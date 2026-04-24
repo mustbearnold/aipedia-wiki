@@ -51,37 +51,38 @@ html, body {
 
 @layer base {
   :root {
-    --bg-base: #0a0a0f;
-    --bg-card: rgba(255, 255, 255, 0.025);
-    --bg-card-hover: rgba(255, 255, 255, 0.04);
-    --border: rgba(255, 255, 255, 0.06);
-    --text-primary: #fafafa;
-    --text-secondary: rgba(255, 255, 255, 0.6);
-    --text-muted: rgba(255, 255, 255, 0.35);
+    --bg-base: #05060d;
+    --bg-card: rgba(13, 18, 31, 0.78);
+    --bg-card-hover: rgba(18, 24, 39, 0.82);
+    --border: rgba(226, 232, 240, 0.10);
+    --text-primary: #f8fafc;
+    --text-secondary: rgba(203, 213, 225, 0.72);
+    --text-muted: rgba(148, 163, 184, 0.88);
     --accent-primary: #a78bfa;
-    /* Text-on-background variant of accent-primary. Same color in dark
-       mode (text on dark bg has ~5.5:1 contrast) but shifted to a
-       deeper violet in light mode so text on warm paper still clears
-       WCAG AA. Use this any time the accent color is rendered as
-       text / icon stroke, not as a surface or tint. */
-    --accent-primary-text: #a78bfa;
-    --accent-secondary: #60a5fa;
-    --accent-success: #4ade80;
+    /* Text-on-background variant of accent-primary. Tuned brighter for
+       dark graphite surfaces and deeper for light surfaces so links,
+       icons, and small labels keep adequate contrast. */
+    --accent-primary-text: #c4b5fd;
+    --accent-secondary: #38bdf8;
+    --accent-success: #5eead4;
     --accent-warning: #fbbf24;
-    --accent-danger: #f87171;
+    --accent-danger: #fb7185;
   }
 
   .light {
-    --bg-base: #f7f6f3;        /* warm paper tone instead of pure white */
-    --bg-card: #ffffff;        /* cards "pop" against the page */
-    --bg-card-hover: #f1efeb;  /* subtle warm hover */
-    --border: #e3dfd8;         /* warm greige border */
-    --text-primary: #1a1a1f;
-    --text-secondary: #4a4a55;
-    --text-muted: #8a8a95;
-    /* #a78bfa on paper #f7f6f3 is only ~1.85:1; use violet-700 for
-       adequate contrast on light backgrounds. */
+    --bg-base: #f6f8fb;
+    --bg-card: rgba(255, 255, 255, 0.88);
+    --bg-card-hover: #eef3f8;
+    --border: #d9e2ec;
+    --text-primary: #111827;
+    --text-secondary: #475569;
+    --text-muted: #64748b;
+    --accent-primary: #7c3aed;
     --accent-primary-text: #6d28d9;
+    --accent-secondary: #0284c7;
+    --accent-success: #0f766e;
+    --accent-warning: #b45309;
+    --accent-danger: #be123c;
   }
 
   /* Accent gradient text utility. Dark mode: violet-to-blue gradient
@@ -89,10 +90,10 @@ html, body {
      back to solid violet-700 because the gradient (both ends are
      light hues) has insufficient contrast on the paper background.
      Use anywhere you had
-        bg-gradient-to-r from-[#a78bfa] to-[#60a5fa] bg-clip-text text-transparent
+       bg-gradient-to-r from-[#a78bfa] to-[#38bdf8] bg-clip-text text-transparent
      and it will auto-adapt per theme. */
   .accent-gradient-text {
-    background-image: linear-gradient(to right, #a78bfa, #60a5fa);
+    background-image: linear-gradient(to right, #a78bfa, #38bdf8);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -233,7 +234,7 @@ html, body {
   bottom: 0.25rem;
   width: 4px;
   border-radius: 2px;
-  background: linear-gradient(180deg, var(--accent-primary), rgba(96,165,250,0.8));
+  background: linear-gradient(180deg, var(--accent-primary), rgba(56, 189, 248, 0.8));
 }
 
 /* Section-specific callouts. Heading IDs are auto-slugified from the text,
@@ -248,11 +249,11 @@ html, body {
   margin-top: 1rem;
 }
 .wiki-prose h2#system-verdict::before {
-  background: linear-gradient(180deg, rgb(167,139,250), rgb(96,165,250), rgb(52,211,153));
+  background: linear-gradient(180deg, var(--accent-primary), var(--accent-secondary), var(--accent-success));
   width: 6px;
 }
 .wiki-prose h2#system-verdict + blockquote {
-  background: linear-gradient(135deg, rgba(167,139,250,0.12) 0%, rgba(96,165,250,0.06) 50%, rgba(52,211,153,0.06) 100%);
+  background: linear-gradient(135deg, rgba(167, 139, 250, 0.12) 0%, rgba(56, 189, 248, 0.06) 50%, rgba(94, 234, 212, 0.06) 100%);
   border: 1px solid rgba(167,139,250,0.35);
   border-radius: 1rem;
   padding: 1.25rem 1.5rem;
@@ -300,7 +301,7 @@ html, body {
 .wiki-prose h2#bottom-line + p,
 .wiki-prose h2#the-bottom-line + p,
 .wiki-prose h2#verdict + p {
-  background: linear-gradient(135deg, rgba(167,139,250,0.10), rgba(96,165,250,0.06));
+  background: linear-gradient(135deg, rgba(167, 139, 250, 0.10), rgba(56, 189, 248, 0.06));
   border: 1px solid rgba(167,139,250,0.28);
   border-radius: 1rem;
   padding: 1.25rem 1.5rem;
@@ -313,22 +314,22 @@ html, body {
 .wiki-prose h2#limitations::before,
 .wiki-prose h2#known-limitations::before,
 .wiki-prose h2#caveats::before {
-  background: linear-gradient(180deg, rgb(251,191,36), rgb(239,68,68));
+  background: linear-gradient(180deg, var(--accent-warning), var(--accent-danger));
 }
 
 .wiki-prose h2#who-its-for::before,
 .wiki-prose h2#who-it-s-for::before,
 .wiki-prose h2#best-for::before {
-  background: linear-gradient(180deg, rgb(34,197,94), rgb(16,185,129));
+  background: linear-gradient(180deg, var(--accent-success), rgb(20, 184, 166));
 }
 
 .wiki-prose h2#pricing::before {
-  background: linear-gradient(180deg, rgb(245,158,11), rgb(234,179,8));
+  background: linear-gradient(180deg, var(--accent-warning), rgb(234, 179, 8));
 }
 
 .wiki-prose h2#what-it-does::before,
 .wiki-prose h2#overview::before {
-  background: linear-gradient(180deg, rgb(96,165,250), rgb(59,130,246));
+  background: linear-gradient(180deg, var(--accent-secondary), rgb(14, 165, 233));
 }
 
 /* Label-rows: `**Writers and editors** who need...` become chip cards.
@@ -372,7 +373,7 @@ html, body {
 .wiki-prose h2#who-its-for + ul li:has(> strong:first-child),
 .wiki-prose h2#who-it-s-for + ul li:has(> strong:first-child),
 .wiki-prose h2#best-for + ul li:has(> strong:first-child) {
-  border-left-color: rgba(34,197,94,0.6);
+  border-left-color: rgba(94, 234, 212, 0.6);
 }
 .wiki-prose h2#who-its-for + ul li:has(> strong:first-child) > strong:first-child,
 .wiki-prose h2#who-it-s-for + ul li:has(> strong:first-child) > strong:first-child,
@@ -386,7 +387,7 @@ html, body {
   border-left: none;
   padding: 1rem 1.25rem;
   margin: 1.5rem 0;
-  background: linear-gradient(135deg, rgba(167,139,250,0.08), rgba(96,165,250,0.04));
+  background: linear-gradient(135deg, rgba(167, 139, 250, 0.08), rgba(56, 189, 248, 0.04));
   border-radius: 0.75rem;
   font-size: 1.0625rem;
   font-style: normal;
@@ -938,7 +939,7 @@ a, button, [role="button"], .tool-card, .category-pill, .helpful-btn, .copy-btn 
   bottom: 3px;
   height: 1.5px;
   border-radius: 2px;
-  background: linear-gradient(90deg, #a78bfa, #60a5fa);
+  background: linear-gradient(90deg, #a78bfa, #38bdf8);
   transform: scaleX(0);
   transform-origin: left center;
   transition: transform 220ms cubic-bezier(.2,.7,.2,1);
@@ -949,7 +950,7 @@ a, button, [role="button"], .tool-card, .category-pill, .helpful-btn, .copy-btn 
 }
 .nav-link-active::after {
   transform: scaleX(1);
-  background: linear-gradient(90deg, #a78bfa, #60a5fa, #34d399);
+  background: linear-gradient(90deg, #a78bfa, #38bdf8, #34d399);
 }
 
 /* Search button: shows live tool count inline with ⌘K shortcut */
@@ -1074,7 +1075,7 @@ a, button, [role="button"], .tool-card, .category-pill, .helpful-btn, .copy-btn 
   height: 2px;
   transform: scaleX(0);
   transform-origin: left center;
-  background: linear-gradient(90deg, #a78bfa 0%, #60a5fa 50%, #34d399 100%);
+  background: linear-gradient(90deg, #a78bfa 0%, #38bdf8 50%, #34d399 100%);
   z-index: 60;
   pointer-events: none;
   opacity: 0;
@@ -1119,7 +1120,7 @@ a, button, [role="button"], .tool-card, .category-pill, .helpful-btn, .copy-btn 
   white-space: nowrap;
 }
 .idx-eyebrow-fresh {
-  color: #4ade80;
+  color: #5eead4;
   background: rgba(52, 211, 153, 0.08);
   border-color: rgba(52, 211, 153, 0.22);
 }
@@ -1162,7 +1163,7 @@ a, button, [role="button"], .tool-card, .category-pill, .helpful-btn, .copy-btn 
   max-width: 22ch;
 }
 .idx-gradient {
-  background: linear-gradient(100deg, #a78bfa 0%, #60a5fa 60%, #34d399 100%);
+  background: linear-gradient(100deg, #a78bfa 0%, #38bdf8 60%, #34d399 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

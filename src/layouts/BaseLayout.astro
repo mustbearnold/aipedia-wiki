@@ -117,7 +117,7 @@ const ogImageUrl = ogImage
          of the viewport. Scales horizontally with scroll position. Hidden
          via opacity when not scrolled so it doesn't flash on short pages. -->
     <div id="read-progress" aria-hidden="true" transition:persist="read-progress"></div>
-    <div id="bg-gradient" class="fixed inset-0 -z-10" style="background: linear-gradient(160deg, var(--bg-base) 0%, #0d0d1a 50%, #0f0a14 100%);" transition:persist></div>
+    <div id="bg-gradient" class="fixed inset-0 -z-10" style="background: linear-gradient(160deg, var(--bg-base) 0%, #070811 52%, #05060d 100%);" transition:persist></div>
     <Nav transition:persist="nav" />
     <SearchModal transition:persist="search-modal" />
     <main id="main-content" class="max-w-6xl mx-auto px-4" data-pagefind-body>
@@ -134,7 +134,7 @@ const ogImageUrl = ogImage
         const isLight = document.documentElement.classList.contains('light');
         bg.style.background = isLight
           ? 'var(--bg-base)'
-          : 'linear-gradient(160deg, var(--bg-base) 0%, #0d0d1a 50%, #0f0a14 100%)';
+          : 'linear-gradient(160deg, var(--bg-base) 0%, #070811 52%, #05060d 100%)';
       }
       updateBg();
       // Watch for class changes on html element
