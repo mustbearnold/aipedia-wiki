@@ -9,6 +9,7 @@ import ItemListLD from '../components/seo/ItemListLD.astro';
 import ShareButtons from '../components/ShareButtons.astro';
 import FeedbackForm from '../components/FeedbackForm.astro';
 import ToolLogo from '../components/ToolLogo.astro';
+import CategoryIcon from '../components/CategoryIcon.astro';
 import { shortenPrice } from '../utils/shorten-price';
 
 interface ToolData {
@@ -128,7 +129,7 @@ const rankLabels = ['Best overall', 'Runner-up', 'Best value'];
 
     <!-- Hero -->
     <header class="t2-cat-hero" data-pagefind-ignore>
-      <div class="t2-cat-hero-icon" aria-hidden="true">{emoji}</div>
+      <CategoryIcon slug={slug} label={title} class="t2-cat-hero-icon" />
       <div>
         <h1 class="t2-title">{title}</h1>
         <div class="t2-cat-hero-meta">

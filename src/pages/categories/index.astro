@@ -4,19 +4,11 @@
  * April 23, 2026 into the .t2-canvas system.
  */
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import CategoryIcon from '../../components/CategoryIcon.astro';
 import { getCollection } from 'astro:content';
 
 const allCategories = await getCollection('categories');
 const allTools = await getCollection('tools');
-
-const categoryEmojiMap: Record<string, string> = {
-  'ai-chatbots': '\uD83D\uDCAC',
-  'ai-voice': '\uD83D\uDD0A', 'ai-video': '\uD83C\uDFAC', 'ai-coding': '\uD83D\uDCBB',
-  'ai-automation': '\u26A1', 'ai-seo': '\uD83D\uDCC8', 'ai-design': '\uD83C\uDFA8',
-  'ai-writing': '\u270D\uFE0F', 'ai-image': '\uD83D\uDDBC', 'ai-search': '\uD83D\uDD0D',
-  'ai-notes': '\uD83D\uDCDD', 'ai-music': '\uD83C\uDFB5',
-  'ai-presentation': '\uD83D\uDCCA', 'ai-research': '\uD83D\uDD2C',
-};
 
 // Count tools per category + capture top-scored active tool per category
 // so each card surfaces an editorial signal (top pick + score) instead
@@ -57,7 +49,6 @@ const sorted = allCategories
       toolCount: count,
       avg,
       top: topByCategory[c.data.slug] ?? null,
-      emoji: categoryEmojiMap[c.data.slug] || '\uD83D\uDD27',
     };
   })
   .sort((a, b) => b.toolCount - a.toolCount);
@@ -93,7 +84,7 @@ const sorted = allCategories
       {sorted.map((c, i) => (
         <a href={`/categories/${c.slug}/`} class={`t2-cat-index-card ${i < 3 ? 't2-cat-index-card-top' : ''}`.trim()}>
           <div class="t2-cat-index-head">
-            <div class="t2-cat-index-icon" aria-hidden="true">{c.emoji}</div>
+            <CategoryIcon slug={c.slug} label={c.title} class="t2-cat-index-icon" />
             <div class="t2-cat-index-head-text">
               <h2 class="t2-cat-index-title">{c.title}</h2>
               {c.avg > 0 && (

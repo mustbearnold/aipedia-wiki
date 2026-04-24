@@ -19,6 +19,7 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ToolLogo from '../components/ToolLogo.astro';
+import CategoryIcon from '../components/CategoryIcon.astro';
 import HomepageLD from '../components/seo/HomepageLD.astro';
 import RecentlyViewed from '../components/RecentlyViewed.astro';
 import EmailCapture from '../components/EmailCapture.astro';
@@ -135,12 +136,6 @@ function relDate(iso: string): string {
   return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
 }
 
-const catEmoji: Record<string, string> = {
-  'ai-chatbots': '💬', 'ai-voice': '🔊', 'ai-video': '🎬', 'ai-coding': '💻',
-  'ai-automation': '⚡', 'ai-seo': '📈', 'ai-design': '🎨', 'ai-writing': '✍️',
-  'ai-image': '🖼️', 'ai-search': '🔍', 'ai-notes': '📝', 'ai-music': '🎵',
-  'ai-presentation': '📊', 'ai-research': '🔬',
-};
 const catLabel: Record<string, string> = {
   'ai-chatbots': 'Chatbots', 'ai-voice': 'Voice', 'ai-video': 'Video',
   'ai-coding': 'Coding', 'ai-automation': 'Automation', 'ai-seo': 'SEO',
@@ -226,7 +221,6 @@ const cats = allCategories
     return {
       slug: c.data.slug,
       label: catLabel[c.data.slug] ?? c.data.slug,
-      emoji: catEmoji[c.data.slug] ?? '🔧',
       count,
       avg,
       top: topByCategory[c.data.slug] ?? null,
@@ -660,7 +654,7 @@ const verificationLedger = [
         {cats.slice(0, 12).map((c, i) => (
           <a href={`/categories/${c.slug}/`} class={`p3-catchip ${i < 3 ? 'p3-catchip-top' : ''}`.trim()} data-reveal style={`--reveal-delay: ${Math.min(i * 45, 450)}ms`}>
             <span class="p3-catchip-head">
-              <span class="p3-catchip-emoji" aria-hidden="true">{c.emoji}</span>
+              <CategoryIcon slug={c.slug} label={c.label} class="p3-catchip-icon" />
               <span class="p3-catchip-label">{c.label}</span>
               <span class="p3-catchip-count tabular-nums">{c.count}</span>
             </span>

@@ -1,4 +1,6 @@
 ---
+import CategoryIcon from './CategoryIcon.astro';
+
 interface Props {
   category: string;
   active?: boolean;
@@ -6,20 +8,24 @@ interface Props {
 
 const { category, active = false } = Astro.props;
 
-const categoryMap: Record<string, { emoji: string; label: string }> = {
-  'ai-voice': { emoji: '🎙️', label: 'Voice' },
-  'ai-video': { emoji: '🎬', label: 'Video' },
-  'ai-coding': { emoji: '💻', label: 'Coding' },
-  'ai-image': { emoji: '🎨', label: 'Image' },
-  'ai-writing': { emoji: '✍️', label: 'Writing' },
-  'ai-automation': { emoji: '⚡', label: 'Automation' },
-  'ai-seo': { emoji: '📈', label: 'SEO' },
-  'ai-design': { emoji: '🖌️', label: 'Design' },
-  'ai-search': { emoji: '🔍', label: 'Search' },
-  'ai-notes': { emoji: '📝', label: 'Notes' },
+const categoryMap: Record<string, string> = {
+  'ai-chatbots': 'Chatbots',
+  'ai-voice': 'Voice',
+  'ai-video': 'Video',
+  'ai-coding': 'Coding',
+  'ai-image': 'Image',
+  'ai-writing': 'Writing',
+  'ai-automation': 'Automation',
+  'ai-seo': 'SEO',
+  'ai-design': 'Design',
+  'ai-search': 'Search',
+  'ai-notes': 'Notes',
+  'ai-music': 'Music',
+  'ai-presentation': 'Presentation',
+  'ai-research': 'Research',
 };
 
-const info = categoryMap[category] ?? { emoji: '🔧', label: category };
+const label = categoryMap[category] ?? category;
 ---
 
 <span
@@ -30,6 +36,6 @@ const info = categoryMap[category] ?? { emoji: '🔧', label: category };
       : 'bg-[var(--bg-card)] border border-[var(--border)] text-[var(--text-secondary)]',
   ]}
 >
-  <span>{info.emoji}</span>
-  <span>{info.label}</span>
+  <CategoryIcon slug={category} label={label} class="w-4 h-4 rounded" />
+  <span>{label}</span>
 </span>

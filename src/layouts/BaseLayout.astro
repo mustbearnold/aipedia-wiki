@@ -3,6 +3,7 @@ import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 import SearchModal from '../components/SearchModal.astro';
 import CookieConsent from '../components/CookieConsent.astro';
+import MoatLayer from '../components/MoatLayer.astro';
 import { ClientRouter } from 'astro:transitions';
 import '../styles/global.css';
 import '../styles/t2-canvas.css';
@@ -118,6 +119,7 @@ const ogImageUrl = ogImage
          via opacity when not scrolled so it doesn't flash on short pages. -->
     <div id="read-progress" aria-hidden="true" transition:persist="read-progress"></div>
     <div id="bg-gradient" class="fixed inset-0 -z-10" style="background: linear-gradient(160deg, var(--bg-base) 0%, #070811 52%, #05060d 100%);" transition:persist></div>
+    <MoatLayer />
     <Nav transition:persist="nav" />
     <SearchModal transition:persist="search-modal" />
     <main id="main-content" class="max-w-6xl mx-auto px-4" data-pagefind-body>
