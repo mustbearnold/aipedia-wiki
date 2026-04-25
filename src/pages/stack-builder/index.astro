@@ -1414,15 +1414,16 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
       let totalLow = 0, totalHigh = 0, toolCount = 0, catCount = 0;
 
       for (const [catName, tiers] of Object.entries(merged)) {
-        const picks = (tiers[state.budget] || []).map(t =>
-          // Apply swap per role where the tool appears. We use the first
-          // role in state.roles that contains this cat+slug as the swap key.
-          toolAfterSwap(
-            state.roles.find(r => (STACKS[r]?.[catName]?.[state.budget] || []).some(x => x.slug === t.slug)) || state.roles[0],
-            catName,
-            t
-          )
-        );
+        const picks = (tiers[state.budget] || []).map(original => {
+          // Keep the curated pick stable for swap state, while rendering any
+          // selected replacement as the displayed tool in this row.
+          const role = state.roles.find(r => (STACKS[r]?.[catName]?.[state.budget] || []).some(x => x.slug === original.slug)) || state.roles[0];
+          return {
+            original,
+            role,
+            displayed: toolAfterSwap(role, catName, original),
+          };
+        });
         if (!picks.length) continue;
         catCount++;
         toolCount += picks.length;
@@ -1437,13 +1438,12 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
               <span class="sb-category-count">${picks.length} pick${picks.length !== 1 ? 's' : ''}</span>
             </header>
             <div class="sb-stack-rows">
-              ${picks.map(t => {
+              ${picks.map(({ original, role, displayed: t }) => {
                 const { low, high } = parsePrice(t.price);
                 totalLow += low;
                 totalHigh += high;
                 const updated = RECENT[t.slug];
-                const role = state.roles.find(r => (STACKS[r]?.[catName]?.[state.budget] || []).some(x => x.slug === t.slug)) || state.roles[0];
-                const alts = (ALTS[t.slug] || []).slice(0, 3);
+                const alts = (ALTS[original.slug] || []).slice(0, 3);
                 const altText = alts.length
                   ? alts.map(a => escapeHtml(a.title)).join(', ')
                   : 'No close substitutes ranked yet';
@@ -1487,7 +1487,7 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
                       <span class="sb-field-label">Swap alternatives</span>
                       <div class="sb-swap-line">
                         <span title="${altText}">${altText}</span>
-                        <button type="button" data-swap-role="${escapeHtml(role)}" data-swap-cat="${escapeHtml(catName)}" data-swap-slug="${t.slug}" aria-label="Swap ${escapeHtml(t.title)} for an alternative">
+                        <button type="button" data-swap-role="${escapeHtml(role)}" data-swap-cat="${escapeHtml(catName)}" data-swap-slug="${escapeHtml(original.slug)}" aria-label="Swap ${escapeHtml(t.title)} for an alternative">
                           Swap
                         </button>
                       </div>
