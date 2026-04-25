@@ -14,8 +14,8 @@ const quickSearchGroups = [
 <BaseLayout title="Search - aipedia.wiki" description="Search across AI tools, comparisons, news, companies, workflows, and use-case guides.">
   <link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
 
-  <main class="search-command not-prose">
-    <section class="search-command__hero" aria-labelledby="search-title">
+  <div class="search-command not-prose">
+    <div class="search-command__hero" aria-labelledby="search-title">
       <div class="search-command__copy">
         <p class="search-command__eyebrow">Aipedia Index</p>
         <h1 id="search-title">Search the AI tools wiki.</h1>
@@ -67,8 +67,8 @@ const quickSearchGroups = [
           </div>
         </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </div>
 
   <script is:inline src="/pagefind/pagefind-ui.js"></script>
   <script is:inline>
@@ -83,6 +83,8 @@ const quickSearchGroups = [
       const root = document.querySelector('.search-command');
       const emptyState = document.getElementById('search-empty-state');
       const input = document.querySelector('.pagefind-ui__search-input');
+      let querySyncTimer;
+      let isProgrammaticInput = false;
 
       function updateEmptyState() {
         const hasQuery = Boolean(input && input.value.trim());
@@ -90,16 +92,34 @@ const quickSearchGroups = [
         if (emptyState) emptyState.hidden = hasQuery;
       }
 
+      function replaceQueryParam(term) {
+        const url = new URL(window.location.href);
+        const query = term.trim();
+        if (query) {
+          url.searchParams.set('q', query);
+        } else {
+          url.searchParams.delete('q');
+        }
+        window.history.replaceState({}, '', url);
+      }
+
+      function scheduleQuerySync() {
+        if (!input) return;
+        clearTimeout(querySyncTimer);
+        querySyncTimer = setTimeout(() => replaceQueryParam(input.value), 250);
+      }
+
       function runSearch(term, updateUrl = true) {
         if (!input) return false;
+        isProgrammaticInput = true;
         input.value = term;
         input.dispatchEvent(new Event('input', { bubbles: true }));
+        isProgrammaticInput = false;
         input.focus();
         updateEmptyState();
         if (updateUrl) {
-          const url = new URL(window.location.href);
-          url.searchParams.set('q', term);
-          window.history.replaceState({}, '', url);
+          clearTimeout(querySyncTimer);
+          replaceQueryParam(term);
         }
         return true;
       }
@@ -112,7 +132,10 @@ const quickSearchGroups = [
         });
       });
 
-      input?.addEventListener('input', updateEmptyState);
+      input?.addEventListener('input', () => {
+        updateEmptyState();
+        if (!isProgrammaticInput) scheduleQuerySync();
+      });
 
       const initialQuery = new URLSearchParams(window.location.search).get('q');
       if (initialQuery) {
