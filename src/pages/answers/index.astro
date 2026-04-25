@@ -6,19 +6,39 @@ import EmailCapture from '../../components/EmailCapture.astro';
 // Hand-curated list mirroring the individual answer pages.
 // Kept here (rather than auto-discovered) so the order and copy
 // can be editorial, not alphabetical.
-const ANSWERS = [
-  { slug: 'best-ai-chatbot-2026', q: 'What is the best AI chatbot in 2026?' },
-  { slug: 'chatgpt-vs-claude-which-is-better', q: 'ChatGPT vs Claude: which is better?' },
-  { slug: 'best-ai-coding-tool-2026', q: 'What is the best AI coding tool in 2026?' },
-  { slug: 'is-midjourney-worth-it', q: 'Is Midjourney worth it in 2026?' },
-  { slug: 'best-free-ai-tools-2026', q: 'What are the best free AI tools in 2026?' },
-  { slug: 'best-ai-for-writing-2026', q: 'What is the best AI for writing in 2026?' },
-  { slug: 'best-ai-image-generator-2026', q: 'What is the best AI image generator in 2026?' },
-  { slug: 'best-ai-video-generator-2026', q: 'What is the best AI video generator in 2026?' },
-  { slug: 'best-ai-voice-generator-2026', q: 'What is the best AI voice generator in 2026?' },
-  { slug: 'chatgpt-alternatives-2026', q: 'What are the best ChatGPT alternatives in 2026?' },
-  { slug: 'is-cursor-worth-it', q: 'Is Cursor worth the money?' },
-  { slug: 'best-ai-for-students', q: 'What is the best AI for students in 2026?' },
+const ANSWER_GROUPS = [
+  {
+    title: 'Best tools',
+    items: [
+      { slug: 'best-ai-chatbot-2026', q: 'What is the best AI chatbot in 2026?' },
+      { slug: 'best-ai-coding-tool-2026', q: 'What is the best AI coding tool in 2026?' },
+      { slug: 'best-ai-for-writing-2026', q: 'What is the best AI for writing in 2026?' },
+      { slug: 'best-ai-image-generator-2026', q: 'What is the best AI image generator in 2026?' },
+      { slug: 'best-ai-video-generator-2026', q: 'What is the best AI video generator in 2026?' },
+      { slug: 'best-ai-voice-generator-2026', q: 'What is the best AI voice generator in 2026?' },
+    ],
+  },
+  {
+    title: 'Tool comparisons',
+    items: [
+      { slug: 'chatgpt-vs-claude-which-is-better', q: 'ChatGPT vs Claude: which is better?' },
+      { slug: 'chatgpt-alternatives-2026', q: 'What are the best ChatGPT alternatives in 2026?' },
+    ],
+  },
+  {
+    title: 'Buying decisions',
+    items: [
+      { slug: 'is-midjourney-worth-it', q: 'Is Midjourney worth it in 2026?' },
+      { slug: 'is-cursor-worth-it', q: 'Is Cursor worth the money?' },
+    ],
+  },
+  {
+    title: 'Free and budget',
+    items: [
+      { slug: 'best-free-ai-tools-2026', q: 'What are the best free AI tools in 2026?' },
+      { slug: 'best-ai-for-students', q: 'What is the best AI for students in 2026?' },
+    ],
+  },
 ];
 ---
 
@@ -37,16 +57,25 @@ const ANSWERS = [
     </p>
   </section>
 
-  <section class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-16">
-    {ANSWERS.map((a) => (
-      <a
-        href={`/answers/${a.slug}/`}
-        class="group block rounded-xl border border-[var(--border)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] hover:border-[rgba(167,139,250,0.4)] p-5 no-underline transition-colors"
-      >
-        <h2 class="text-[17px] font-bold text-[var(--text-primary)] group-hover:text-[var(--accent-primary)] m-0 transition-colors">
-          {a.q}
+  <section class="space-y-8 mb-16">
+    {ANSWER_GROUPS.map((group) => (
+      <div>
+        <h2 class="text-[11px] font-semibold uppercase tracking-[0.14em] text-[var(--text-muted)] mb-3">
+          {group.title}
         </h2>
-      </a>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {group.items.map((a) => (
+            <a
+              href={`/answers/${a.slug}/`}
+              class="group block rounded-xl border border-[var(--border)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] hover:border-[rgba(167,139,250,0.4)] p-5 no-underline transition-colors"
+            >
+              <h3 class="text-[17px] font-bold text-[var(--text-primary)] group-hover:text-[var(--accent-primary)] m-0 transition-colors">
+                {a.q}
+              </h3>
+            </a>
+          ))}
+        </div>
+      </div>
     ))}
   </section>
 

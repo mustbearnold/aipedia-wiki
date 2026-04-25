@@ -4,6 +4,8 @@ import Breadcrumb from '../../components/Breadcrumb.astro';
 import { getCollection } from 'astro:content';
 
 const allCompanies = await getCollection('companies');
+const allTools = await getCollection('tools');
+const allNews = await getCollection('news');
 
 const sorted = allCompanies
   .map((c) => ({
@@ -32,6 +34,11 @@ const typeLabel: Record<string, string> = {
 };
 
 const total = sorted.length;
+const statStrip = [
+  { label: 'tracked companies', value: total },
+  { label: 'reviewed products', value: allTools.length },
+  { label: 'news items linked', value: allNews.length },
+];
 ---
 
 <BaseLayout
@@ -46,12 +53,21 @@ const total = sorted.length;
       <span class="idx-eyebrow-chip"><span class="tabular-nums">{total}</span> compan{total === 1 ? 'y' : 'ies'}</span>
       <span class="idx-eyebrow-trust">Funding + founding verified against primary sources.</span>
     </div>
-    <h1 class="idx-headline">
-      AI <span class="idx-gradient">companies</span>.
-    </h1>
+    <h1 class="idx-headline">Tracked <span class="idx-gradient">AI companies</span>.</h1>
     <p class="idx-subhead">
-      Profiles of the companies shipping the AI tools we review. Founded dates, funding, headquarters, and the products each one has launched.
+      Only companies with reviewed products, funding notes, and source-backed product links are listed here.
     </p>
+  </section>
+
+  <section class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-8" aria-label="Company coverage stats">
+    {statStrip.map((stat) => (
+      <div class="rounded-xl border border-[var(--border)] bg-[var(--bg-card)] p-4">
+        <div class="text-2xl font-bold tabular-nums text-[var(--text-primary)]">{stat.value}</div>
+        <div class="mt-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-[var(--text-muted)]">
+          {stat.label}
+        </div>
+      </div>
+    ))}
   </section>
 
   <section class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-16">

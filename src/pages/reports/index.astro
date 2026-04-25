@@ -30,6 +30,8 @@ const sorted = entries
     monthLabel: formatMonth(e.data.slug || e.id.replace(/\.md$/, '')),
   }))
   .sort((a, b) => (b.slug || '').localeCompare(a.slug || ''));
+
+const hasSingleReport = sorted.length === 1;
 ---
 
 <BaseLayout
@@ -40,15 +42,15 @@ const sorted = entries
 
   <section class="idx-hero" data-pagefind-ignore>
     <div class="idx-eyebrow">
-      <span class="idx-eyebrow-chip idx-eyebrow-accent">Monthly digest</span>
+      <span class="idx-eyebrow-chip idx-eyebrow-accent">Report archive</span>
       <span class="idx-eyebrow-chip"><span class="tabular-nums">{sorted.length}</span> report{sorted.length === 1 ? '' : 's'}</span>
-      <span class="idx-eyebrow-trust">Published on the 1st. Editorial only.</span>
+      <span class="idx-eyebrow-trust">Editorial only. Sources reviewed before publication.</span>
     </div>
     <h1 class="idx-headline">
-      State of <span class="idx-gradient">AI tools</span>.
+      Monthly <span class="idx-gradient">field reports</span>.
     </h1>
     <p class="idx-subhead">
-      A monthly report covering what actually changed across the AI tools catalog. New launches, score movements, pricing shifts, deaths, and what to watch next.
+      Long-form summaries of score movement, launches, and pricing changes.
     </p>
   </section>
 
@@ -58,8 +60,33 @@ const sorted = entries
     </div>
   )}
 
-  <section class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-16">
-    {sorted.map((r) => (
+  {hasSingleReport ? (
+    <section class="mb-16">
+      {sorted.map((r) => (
+        <a
+          href={`/reports/${r.slug}/`}
+          class="group grid gap-4 md:grid-cols-[minmax(0,0.38fr)_minmax(0,1fr)] rounded-xl border border-[var(--border)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] hover:border-[rgba(167,139,250,0.4)] p-5 no-underline transition-colors"
+        >
+          <div>
+            <div class="text-[11px] font-semibold uppercase tracking-[0.12em] text-[var(--accent-primary)] mb-2">
+              Featured report
+            </div>
+            <div class="text-sm text-[var(--text-muted)]">{r.monthLabel}</div>
+          </div>
+          <div>
+            <h2 class="text-xl font-bold text-[var(--text-primary)] group-hover:text-[var(--accent-primary)] mb-2 transition-colors">
+              {r.title}
+            </h2>
+            <p class="text-sm leading-relaxed text-[var(--text-secondary)] m-0">
+              {r.description}
+            </p>
+          </div>
+        </a>
+      ))}
+    </section>
+  ) : (
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-16">
+      {sorted.map((r) => (
       <a
         href={`/reports/${r.slug}/`}
         class="group block rounded-xl border border-[var(--border)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] hover:border-[rgba(167,139,250,0.4)] p-5 no-underline transition-colors"
@@ -74,8 +101,9 @@ const sorted = entries
           {r.description}
         </p>
       </a>
-    ))}
-  </section>
+      ))}
+    </section>
+  )}
 
   <EmailCapture variant="footer" source="reports-index" />
 </BaseLayout>
