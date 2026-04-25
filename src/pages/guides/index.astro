@@ -6,8 +6,10 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 
 const allGuides = await getCollection('use-cases');
+const allTools = await getCollection('tools');
 
 type GuideType = 'best-of' | 'alternatives' | 'stack' | 'comparison' | 'other';
+type IntentLane = 'Build software' | 'Create media' | 'Grow a business' | 'Research and study' | 'Operate workflows';
 type Guide = {
   slug: string;
   title: string;
@@ -49,38 +51,84 @@ function dateLabel(value: unknown): string {
   return `Verified ${iso}`;
 }
 
+const toolCategoryBySlug = new Map(
+  allTools.map(tool => [tool.data.slug || tool.id.replace(/\.md$/, ''), tool.data.category])
+);
+
+const intentBySlug: Partial<Record<string, IntentLane>> = {
+  'ai-agency-stack': 'Grow a business',
+  'ai-content-creator-stack': 'Create media',
+  'ai-content-pipeline': 'Create media',
+  'ai-customer-support': 'Grow a business',
+  'ai-lead-generation': 'Grow a business',
+  'ai-solo-founder-stack': 'Grow a business',
+  'best-ai-automation-platform': 'Operate workflows',
+  'best-ai-for-brainstorming': 'Operate workflows',
+  'best-ai-for-excel': 'Operate workflows',
+  'best-ai-for-meeting-notes': 'Operate workflows',
+  'best-ai-for-summarization': 'Research and study',
+  'best-ai-for-translation': 'Operate workflows',
+  'best-ai-tools-under-10-month': 'Operate workflows',
+  'best-ai-tools-under-20-month': 'Operate workflows',
+  'best-ai-tools-under-50-month': 'Operate workflows',
+  'best-free-ai-tools': 'Operate workflows',
+  'best-open-source-ai-tools': 'Build software',
+  'best-pay-as-you-go-ai-tools': 'Operate workflows',
+  'chatgpt-alternatives': 'Operate workflows',
+  'claude-alternatives': 'Operate workflows',
+  'deepseek-alternatives': 'Operate workflows',
+  'gemini-alternatives': 'Operate workflows',
+  'notion-ai-alternatives': 'Operate workflows',
+  'perplexity-alternatives': 'Research and study',
+};
+
+function intentLaneForGuide(g: Guide): IntentLane {
+  const explicitLane = intentBySlug[g.slug];
+  if (explicitLane) return explicitLane;
+
+  const text = textForGuide(g);
+  if (/coding|code|debug|unit-test|api-documentation|developer|cursor|copilot|devin|sql/.test(text)) {
+    return 'Build software';
+  }
+  if (/image|video|music|design|presentation|creator|podcast|youtube|tiktok|instagram|headshot|logo|photo|voice|suno|runway|midjourney|canva|elevenlabs|synthesia/.test(text)) {
+    return 'Create media';
+  }
+  if (/marketing|marketer|sales|lead|customer-support|support|agency|consultant|ecommerce|small-business|real-estate|recruiter|cold-email|ad-copy|seo|linkedin|nonprofit/.test(text)) {
+    return 'Grow a business';
+  }
+  if (/research|academic|citation|medical|legal|student|teacher|journalist|data-analysis|researcher|interview-prep/.test(text)) {
+    return 'Research and study';
+  }
+  return 'Operate workflows';
+}
+
 const lanes = [
   {
-    label: 'Coding',
+    label: 'Build software',
     deck: 'Agents, IDEs, code review, debugging, tests, docs.',
     href: '/categories/ai-coding/',
-    match: (g: Guide) => /coding|code|debug|unit-test|api-documentation|developer|cursor|copilot|claude-code|aider|devin/.test(textForGuide(g)),
   },
   {
-    label: 'Automation',
-    deck: 'Workflows, lead gen, support, agencies, operations.',
-    href: '/categories/ai-automation/',
-    match: (g: Guide) => /automation|workflow|agent|lead|support|agency|sales|n8n|zapier|make|crm/.test(textForGuide(g)),
-  },
-  {
-    label: 'Research',
-    deck: 'Search, citations, academic writing, analysis, notes.',
-    href: '/categories/ai-research/',
-    match: (g: Guide) => /research|academic|citation|data-analysis|notes|notebook|perplexity|elicit|consensus/.test(textForGuide(g)),
-  },
-  {
-    label: 'Writing',
-    deck: 'Blogs, books, email, ads, resumes, content pipelines.',
-    href: '/categories/ai-writing/',
-    match: (g: Guide) => /writing|blog|book|copy|email|resume|cover-letter|content|seo|grammar|jasper/.test(textForGuide(g)),
-  },
-  {
-    label: 'Creative',
-    deck: 'Image, video, music, design, presentations, creators.',
+    label: 'Create media',
+    deck: 'Writing, design, images, video, audio, and creator workflows.',
     href: '/categories/ai-image/',
-    match: (g: Guide) => /image|video|music|design|presentation|creator|thumbnail|voice|suno|runway|midjourney|canva/.test(textForGuide(g)),
   },
-];
+  {
+    label: 'Grow a business',
+    deck: 'Marketing, sales, support, agencies, ecommerce, and founders.',
+    href: '/categories/ai-seo/',
+  },
+  {
+    label: 'Research and study',
+    deck: 'Search, citations, academic writing, analysis, and notes.',
+    href: '/categories/ai-research/',
+  },
+  {
+    label: 'Operate workflows',
+    deck: 'Automation, notes, transcription, budgeting, and daily utility.',
+    href: '/categories/ai-automation/',
+  },
+] satisfies Array<{ label: IntentLane; deck: string; href: string }>;
 
 const guideBySlug = new Map(guides.map(g => [g.slug, g]));
 const featuredSlugs = [
@@ -98,7 +146,7 @@ const featured = featuredSlugs.map(slug => guideBySlug.get(slug)).filter(Boolean
 const laneGroups = lanes.map(lane => ({
   ...lane,
   items: guides
-    .filter(lane.match)
+    .filter(g => intentLaneForGuide(g) === lane.label)
     .sort((a, b) => String(b.lastVerified || b.lastUpdated || '').localeCompare(String(a.lastVerified || a.lastUpdated || '')))
     .slice(0, 8),
 }));
@@ -112,20 +160,25 @@ const archiveGroups: Record<string, Guide[]> = {
 };
 
 const archiveMeta: Record<string, { label: string; description: string }> = {
-  'best-of': { label: 'Best Picks', description: 'Ranked choices by job, budget, and workflow.' },
+  'best-of': { label: 'Ranked use cases', description: 'Ranked choices by job, budget, and workflow.' },
   'stack': { label: 'Stacks', description: 'Complete tool combinations for real work.' },
   'alternatives': { label: 'Alternatives', description: 'Swap one tool for a better fit.' },
-  'comparison': { label: 'Comparisons', description: 'Use-case pages with direct tradeoffs.' },
+  'comparison': { label: 'Comparisons', description: 'Use case pages with direct tradeoffs.' },
   'other': { label: 'Reference', description: 'Useful pages that do not fit a single lane.' },
 };
 
-const verifiedThisWeek = guides.filter(g => String(g.lastVerified || g.lastUpdated || '').startsWith('2026-04-2')).length;
 const toolMentions = new Set(guides.flatMap(g => g.tools)).size;
+const categoriesCovered = new Set(
+  guides
+    .flatMap(g => g.tools)
+    .map(slug => toolCategoryBySlug.get(slug))
+    .filter((category): category is string => Boolean(category))
+).size;
 ---
 
 <BaseLayout
   title="AI Tool Use Cases, aipedia.wiki"
-  description={`${allGuides.length} use-case pages for choosing AI tools by job: coding, automation, research, writing, creative work, and budget.`}
+  description={`${allGuides.length} use cases for picking AI tools by workflow, budget, and risk.`}
 >
   <div class="t2-canvas guides-canvas">
     <nav class="t2-breadcrumb" aria-label="Breadcrumb">
@@ -137,25 +190,28 @@ const toolMentions = new Set(guides.flatMap(g => g.tools)).size;
     <section class="guides-hero" data-pagefind-ignore data-reveal>
       <div class="guides-kicker">
         <span class="guides-dot" aria-hidden="true"></span>
-        <span>Use-case library</span>
+        <span>Use Cases</span>
         <span class="guides-pill"><span class="tabular-nums">{allGuides.length}</span> pages</span>
       </div>
-      <h1 class="guides-title">Pick the AI tool for the job.</h1>
+      <h1 class="guides-title">Use Cases</h1>
       <p class="guides-subhead">
-        Problem-first pages for when a tool dossier is too narrow and a comparison is too specific. Use these to choose by workflow, budget, and risk.
+        Problem-first pages for picking tools by workflow, budget, and risk.
       </p>
-      <div class="guides-stats" aria-label="Use-case library stats">
+      <p class="guides-confidence">
+        Each use case ranks tools from the same sourced catalog as the tool pages. No sponsored placements.
+      </p>
+      <div class="guides-stats" aria-label="Use cases stats">
         <div>
           <strong class="tabular-nums">{allGuides.length}</strong>
           <span>use cases</span>
         </div>
         <div>
-          <strong class="tabular-nums">{verifiedThisWeek}</strong>
-          <span>verified this week</span>
-        </div>
-        <div>
           <strong class="tabular-nums">{toolMentions}</strong>
           <span>tools mentioned</span>
+        </div>
+        <div>
+          <strong class="tabular-nums">{categoriesCovered}</strong>
+          <span>categories covered</span>
         </div>
       </div>
     </section>
@@ -185,7 +241,7 @@ const toolMentions = new Set(guides.flatMap(g => g.tools)).size;
       <div class="guides-section-head">
         <div>
           <p class="guides-section-kicker">Browse by work</p>
-          <h2>Problem lanes</h2>
+          <h2>Intent lanes</h2>
         </div>
         <span>Fast paths into the library.</span>
       </div>
@@ -216,7 +272,7 @@ const toolMentions = new Set(guides.flatMap(g => g.tools)).size;
       <div class="guides-section-head">
         <div>
           <p class="guides-section-kicker">Full archive</p>
-          <h2>All use-case pages</h2>
+          <h2>All use cases</h2>
         </div>
         <span>Kept for long-tail discovery and internal linking.</span>
       </div>
@@ -297,6 +353,15 @@ const toolMentions = new Set(guides.flatMap(g => g.tools)).size;
       font-size: clamp(1.02rem, 2vw, 1.28rem);
       line-height: 1.55;
       color: var(--guide-muted);
+    }
+    .guides-confidence {
+      margin: 18px 0 0;
+      max-width: 680px;
+      padding-left: 14px;
+      border-left: 2px solid rgba(94, 234, 212, 0.48);
+      color: var(--guide-subtle);
+      font-size: 14px;
+      line-height: 1.5;
     }
     .guides-stats {
       margin-top: 34px;
