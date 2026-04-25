@@ -31,6 +31,14 @@ interface ToolData {
   tagline?: string;
 }
 
+interface NewsSignal {
+  slug: string;
+  title: string;
+  date?: string;
+  severity?: string;
+  summary?: string;
+}
+
 interface Props {
   title: string;
   seoTitle?: string;
@@ -41,6 +49,7 @@ interface Props {
   winner?: string;
   lastVerified?: string;
   readingMinutes?: number;
+  relatedNews?: NewsSignal[];
 }
 
 const {
@@ -53,6 +62,7 @@ const {
   winner,
   lastVerified,
   readingMinutes = 0,
+  relatedNews = [],
 } = Astro.props;
 
 const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
@@ -86,6 +96,21 @@ function ctaRel(t: ToolData): string {
   return affUrl && affUrl.length > 0 ? 'sponsored noopener' : 'noopener';
 }
 
+function axisValue(t: ToolData, axis: 'utility' | 'value' | 'moat' | 'longevity'): number {
+  return t.scores?.[axis] ?? 0;
+}
+
+function scoreLabel(score: number): string {
+  return score > 0 ? `${score}/10` : 'unscored';
+}
+
+function formatNewsDate(date?: string): string {
+  if (!date) return 'recent';
+  const d = new Date(date);
+  if (Number.isNaN(d.getTime())) return date;
+  return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+}
+
 const breadcrumbLdItems = [
   { name: 'Home', url: siteBase },
   { name: 'Compare', url: `${siteBase}compare/` },
@@ -109,6 +134,42 @@ const itemListItems = tools
   }));
 
 const winningTool = winner && winner !== 'depends' ? tools.find((t) => t.slug === winner) : null;
+const scoredTools = tools
+  .map((t) => ({ tool: t, score: overallScore(t) }))
+  .filter((x) => x.score > 0)
+  .sort((a, b) => b.score - a.score);
+const scoreLeader = winningTool ?? scoredTools[0]?.tool ?? null;
+const topScore = scoredTools[0]?.score ?? 0;
+const secondScore = scoredTools[1]?.score ?? 0;
+const scoreSpread = topScore && secondScore ? Math.round((topScore - secondScore) * 10) / 10 : 0;
+const verdictLabel =
+  winningTool
+    ? `${winningTool.title} leads`
+    : winner === 'depends'
+      ? 'Split decision'
+      : scoreLeader
+        ? `${scoreLeader.title} has the score edge`
+        : 'Decision brief';
+const verdictCopy =
+  winningTool
+    ? `${winningTool.title} is the editorial pick for this head-to-head, but the fit still depends on workflow, price, and current product momentum.`
+    : winner === 'depends'
+      ? 'There is no universal winner. Use the score spread, price signals, and latest product changes below before choosing.'
+      : scoreLeader
+        ? `${scoreLeader.title} leads the current scorecard by ${scoreSpread > 0 ? `${scoreSpread} points` : 'a narrow margin'}. Read the detailed tradeoffs before treating that as a blanket answer.`
+        : 'Use the scorecard, recent changes, and editorial notes below to decide which tool fits the job.';
+const axisRows = tools.length === 2
+  ? [
+      { key: 'utility', label: 'Utility' },
+      { key: 'value', label: 'Value' },
+      { key: 'moat', label: 'Moat' },
+      { key: 'longevity', label: 'Longevity' },
+    ].map((axis) => ({
+      ...axis,
+      left: axisValue(tools[0], axis.key as 'utility' | 'value' | 'moat' | 'longevity'),
+      right: axisValue(tools[1], axis.key as 'utility' | 'value' | 'moat' | 'longevity'),
+    }))
+  : [];
 
 // Build TOC headings (markdown H2s only, we don't add synthetic entries here)
 const tocHeadings = (headings ?? []).filter((h) => h.depth === 2).map((h) => ({ slug: h.slug, text: h.text }));
@@ -242,6 +303,69 @@ const tocHeadings = (headings ?? []).filter((h) => h.depth === 2).map((h) => ({ 
           </div>
         );
       })}
+    </section>
+
+    <section class="t2-cmp-brief" aria-label="Decision brief">
+      <div class="t2-cmp-brief-panel t2-cmp-brief-verdict">
+        <div class="t2-cmp-brief-kicker">Verdict</div>
+        <h2>{verdictLabel}</h2>
+        <p>{verdictCopy}</p>
+        {scoreLeader && (
+          <a href={`/tools/${scoreLeader.slug}/`} class="t2-cmp-brief-link">
+            Open {scoreLeader.title} review
+            <span aria-hidden="true">→</span>
+          </a>
+        )}
+      </div>
+
+      {tools.length === 2 && (
+        <div class="t2-cmp-brief-panel t2-cmp-axis-panel">
+          <div class="t2-cmp-brief-kicker">Score race</div>
+          <div class="t2-cmp-axis-tools">
+            <span>{tools[0].title}</span>
+            <span>{tools[1].title}</span>
+          </div>
+          <div class="t2-cmp-axis-list">
+            {axisRows.map((row) => {
+              const leftPct = Math.max(0, Math.min(100, row.left * 10));
+              const rightPct = Math.max(0, Math.min(100, row.right * 10));
+              const leftWins = row.left >= row.right;
+              const rightWins = row.right >= row.left;
+              return (
+                <div class="t2-cmp-axis-row">
+                  <div class={`t2-cmp-axis-score ${leftWins ? 'is-leading' : ''}`}>{scoreLabel(row.left)}</div>
+                  <div class="t2-cmp-axis-mid">
+                    <span>{row.label}</span>
+                    <div class="t2-cmp-axis-bars" aria-hidden="true">
+                      <i style={`width: ${leftPct}%`}></i>
+                      <b style={`width: ${rightPct}%`}></b>
+                    </div>
+                  </div>
+                  <div class={`t2-cmp-axis-score ${rightWins ? 'is-leading' : ''}`}>{scoreLabel(row.right)}</div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      )}
+
+      <div class="t2-cmp-brief-panel t2-cmp-news-panel">
+        <div class="t2-cmp-brief-kicker">Latest signals</div>
+        {relatedNews.length > 0 ? (
+          <ol class="t2-cmp-news-list">
+            {relatedNews.slice(0, 3).map((n) => (
+              <li>
+                <a href={`/news/${n.slug}/`}>
+                  <span class="t2-cmp-news-date">{formatNewsDate(n.date)}</span>
+                  <span>{n.title}</span>
+                </a>
+              </li>
+            ))}
+          </ol>
+        ) : (
+          <p>No recent news signal is attached to these tools yet.</p>
+        )}
+      </div>
     </section>
 
     <!-- Main layout: prose + floating TOC -->

@@ -39,6 +39,23 @@ const tools = toolEntries
     tagline: t.data.tagline,
   }));
 
+const newsEntries = await getCollection('news');
+const relatedNews = newsEntries
+  .filter((n) => (n.data.affects ?? []).some((slug) => toolSlugs.includes(slug)))
+  .sort((a, b) => {
+    const dateA = new Date(a.data.date ?? a.data.last_updated ?? 0).getTime();
+    const dateB = new Date(b.data.date ?? b.data.last_updated ?? 0).getTime();
+    return dateB - dateA;
+  })
+  .slice(0, 4)
+  .map((n) => ({
+    slug: n.data.slug ?? n.id.replace(/\.md$/, ''),
+    title: n.data.title,
+    date: String(n.data.date ?? ''),
+    severity: n.data.severity,
+    summary: n.data.summary,
+  }));
+
 const wordCount = entry.body ? entry.body.split(/\s+/).filter(Boolean).length : 0;
 const readingMinutes = Math.max(1, Math.round(wordCount / 230));
 ---
@@ -53,6 +70,7 @@ const readingMinutes = Math.max(1, Math.round(wordCount / 230));
   winner={entry.data.winner}
   lastVerified={entry.data.last_verified ? String(entry.data.last_verified) : undefined}
   readingMinutes={readingMinutes}
+  relatedNews={relatedNews}
 >
   <Content />
 </ComparisonLayout>

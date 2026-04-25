@@ -1745,6 +1745,165 @@ body:has(main .t2-canvas) ::selection {
   justify-content: center;
 }
 
+.t2-cmp-brief {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin: -12px 0 34px;
+}
+@media (min-width: 920px) {
+  .t2-cmp-brief {
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr) minmax(0, 0.95fr);
+    align-items: stretch;
+  }
+}
+.t2-cmp-brief-panel {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+  padding: 18px;
+  border-radius: var(--t2-radius);
+  border: 1px solid var(--t2-line);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.025), transparent),
+    rgba(12, 18, 34, 0.72);
+}
+.light .t2-cmp-brief-panel {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.5)),
+    var(--t2-surface);
+}
+.t2-cmp-brief-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse 78% 86% at 14% 0%, rgba(94, 234, 212, 0.075), transparent 64%);
+  opacity: 0.78;
+}
+.t2-cmp-brief-panel > * {
+  position: relative;
+  z-index: 1;
+}
+.t2-cmp-brief-kicker {
+  margin-bottom: 12px;
+  color: var(--t2-accent-text);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+.t2-cmp-brief h2 {
+  margin: 0 0 10px;
+  color: var(--t2-fg);
+  font-size: clamp(1.25rem, 2.1vw, 1.75rem);
+  line-height: 1.08;
+  letter-spacing: 0;
+}
+.t2-cmp-brief p {
+  margin: 0;
+  color: var(--t2-muted);
+  font-size: 13.5px;
+  line-height: 1.55;
+}
+.t2-cmp-brief-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 16px;
+  color: var(--t2-accent-text);
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+}
+.t2-cmp-brief-link:hover { color: var(--t2-fg); }
+.t2-cmp-axis-tools {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 12px;
+  color: var(--t2-subtle);
+  font-size: 11px;
+  font-weight: 750;
+}
+.t2-cmp-axis-tools span:last-child { text-align: right; }
+.t2-cmp-axis-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.t2-cmp-axis-row {
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr) 48px;
+  align-items: center;
+  gap: 10px;
+}
+.t2-cmp-axis-score {
+  color: var(--t2-subtle);
+  font-size: 12px;
+  font-weight: 750;
+  white-space: nowrap;
+}
+.t2-cmp-axis-score:last-child { text-align: right; }
+.t2-cmp-axis-score.is-leading { color: var(--t2-fg); }
+.t2-cmp-axis-mid span {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--t2-muted);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+.t2-cmp-axis-bars {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+  height: 6px;
+}
+.t2-cmp-axis-bars i,
+.t2-cmp-axis-bars b {
+  display: block;
+  height: 6px;
+  max-width: 100%;
+  border-radius: 999px;
+  opacity: 0.92;
+}
+.t2-cmp-axis-bars i {
+  justify-self: end;
+  background: linear-gradient(90deg, #a78bfa, #38bdf8);
+}
+.t2-cmp-axis-bars b {
+  justify-self: start;
+  background: linear-gradient(90deg, #38bdf8, #5eead4);
+}
+.t2-cmp-news-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.t2-cmp-news-list a {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 10px;
+  align-items: start;
+  color: var(--t2-muted);
+  font-size: 12.5px;
+  line-height: 1.35;
+  text-decoration: none;
+}
+.t2-cmp-news-list a:hover { color: var(--t2-fg); }
+.t2-cmp-news-date {
+  color: var(--t2-accent-text);
+  font-size: 10px;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
 /* "Comparing" panel in the TOC aside */
 .t2-cmp-toc-compared {
   margin-top: 28px;

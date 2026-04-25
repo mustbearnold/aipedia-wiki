@@ -18,7 +18,9 @@ affiliate:
   commission: "15%"
   cookie_days: 30
   network: ShareASale
-  link: null
+  link: "https://get.descript.com/p7xdoj5mc0de"
+  application_status: approved
+  approved_date: 2026-04-25
 scores:
   utility: 9
   value: 8

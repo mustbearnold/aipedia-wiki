@@ -1,15 +1,15 @@
 ---
 type: news
 slug: 2026-04-23-openai-gpt-55-release
-title: "OpenAI releases GPT-5.5 for ChatGPT and Codex, with API access coming soon"
+title: "OpenAI releases GPT-5.5 for ChatGPT, Codex, and the API"
 date: 2026-04-23
 severity: breaking
-summary: "OpenAI released GPT-5.5 on April 23, 2026, positioning it as its strongest model for agentic coding, computer use, research, data analysis, documents, spreadsheets, and long-running tool work. It is rolling out to Plus, Pro, Business, and Enterprise users in ChatGPT and Codex; GPT-5.5 Pro is rolling out to Pro, Business, and Enterprise users in ChatGPT. API access is announced as coming soon at $5/M input and $30/M output for gpt-5.5, and $30/M input and $180/M output for gpt-5.5-pro."
+summary: "OpenAI released GPT-5.5 on April 23, 2026, positioning it as its strongest model for agentic coding, computer use, research, data analysis, documents, spreadsheets, and long-running tool work. It is rolling out to Plus, Pro, Business, and Enterprise users in ChatGPT and Codex; GPT-5.5 Pro is rolling out to Pro, Business, and Enterprise users in ChatGPT. API access followed on April 24 at $5/M input and $30/M output for gpt-5.5, and $30/M input and $180/M output for gpt-5.5-pro."
 affects: [chatgpt, codex]
 categories: [ai-model-release, ai-coding, ai-business]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-24
-last_verified: 2026-04-24
+last_updated: 2026-04-25
+last_verified: 2026-04-25
 sources:
   - url: "https://openai.com/index/introducing-gpt-5-5/"
     title: "Introducing GPT-5.5 - OpenAI"
@@ -35,11 +35,11 @@ Key claims from the launch:
 - **ChatGPT:** GPT-5.5 Thinking is rolling out to Plus, Pro, Business, and Enterprise.
 - **ChatGPT Pro:** GPT-5.5 Pro is rolling out to Pro, Business, and Enterprise.
 - **Codex:** GPT-5.5 is available to Plus, Pro, Business, Enterprise, Edu, and Go plans with a 400K context window.
-- **API:** announced as coming soon.
+- **API:** available as of April 24, 2026.
 
-## API pricing announced
+## API pricing
 
-OpenAI said API pricing will be:
+OpenAI lists API pricing at:
 
 | Model | Input | Output | Context |
 |---|---:|---:|---:|

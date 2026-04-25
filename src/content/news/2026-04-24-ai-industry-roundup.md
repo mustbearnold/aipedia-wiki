@@ -78,6 +78,7 @@ Why it matters: Grok now has a stronger enterprise voice-agent story, not just a
 OpenAI's late April 22-23 stack was dense:
 
 - [GPT-5.5 released for ChatGPT and Codex](/news/2026-04-23-openai-gpt-55-release/)
+- GPT-5.5 API access became available on April 24 at the published launch pricing
 - [GPT-5.5 system card and Bio Bug Bounty published](/news/2026-04-23-openai-gpt-55-system-card-bio-bounty/)
 - [OpenAI Privacy Filter released](/news/2026-04-22-openai-privacy-filter/)
 - [ChatGPT for Clinicians and HealthBench Professional launched](/news/2026-04-22-chatgpt-for-clinicians-healthbench/)
@@ -88,7 +89,6 @@ Why it matters: OpenAI is not just shipping one flagship model. It is filling in
 ## Watch next
 
 - DeepSeek V4 technical report, pricing, and open-weight status.
-- Whether GPT-5.5 API launches before the weekend.
 - Grok outage follow-up if xAI acknowledges the weeklong congestion.
 - Whether GitHub's Copilot training policy triggers enterprise-policy changes in small teams.
 - Whether Google's reported Anthropic commitment closes on the reported cash-and-compute terms.
