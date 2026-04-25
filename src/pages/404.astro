@@ -52,7 +52,7 @@ const latestNews = allNews
       <div class="t2-404-code" aria-hidden="true">404</div>
       <h1 class="t2-title">Page not found</h1>
       <p class="t2-tagline">
-        That URL doesn't match anything in the catalog. Try one of these paths, or hit <kbd class="t2-404-kbd">⌘ K</kbd> to search.
+        That URL doesn't match anything in the catalog. Try one of these paths, or hit <kbd class="t2-404-kbd">Ctrl K</kbd> to search.
       </p>
       <div class="t2-ctas" style="margin-top: 16px;">
         <a href="/" class="t2-cta t2-cta-primary">
@@ -72,7 +72,7 @@ const latestNews = allNews
 
     <section class="t2-index-group">
       <div class="t2-index-group-head">
-        <span class="t2-index-group-emoji" aria-hidden="true">🏆</span>
+        <span class="t2-index-dot" aria-hidden="true"></span>
         <h2 class="t2-index-group-title">Top-rated AI tools</h2>
       </div>
       <div class="t2-index-grid">
@@ -88,7 +88,7 @@ const latestNews = allNews
     {latestNews.length > 0 && (
       <section class="t2-index-group">
         <div class="t2-index-group-head">
-          <span class="t2-index-group-emoji" aria-hidden="true">📰</span>
+          <span class="t2-index-dot t2-index-dot-secondary" aria-hidden="true"></span>
           <h2 class="t2-index-group-title">Latest news</h2>
         </div>
         <div class="t2-index-grid">
@@ -128,6 +128,18 @@ const latestNews = allNews
       font-weight: 700;
       font-size: 12px;
       margin-left: 8px;
+    }
+    .t2-index-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: var(--t2-accent-text);
+      box-shadow: 0 0 0 4px color-mix(in srgb, var(--t2-accent-text) 14%, transparent);
+      flex: 0 0 auto;
+    }
+    .t2-index-dot-secondary {
+      background: var(--t2-fg-muted);
+      box-shadow: 0 0 0 4px color-mix(in srgb, var(--t2-fg-muted) 14%, transparent);
     }
   </style>
 </BaseLayout>
