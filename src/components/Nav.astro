@@ -21,7 +21,7 @@ const activeCompare = isActive(['/compare/']);
 const activeNews = isActive(['/news/', '/reports/', '/benchmarks/']);
 ---
 
-<nav id="site-nav" class="nav-root sticky top-0 z-50">
+<nav id="site-nav" class="nav-root fixed inset-x-0 top-0 z-50">
   <div class="max-w-6xl mx-auto px-4 h-12 md:h-14 flex items-center justify-between">
     <!-- Brand lockup. Slightly larger logo (26px) + wordmark with a
          subtle live-dot after the TLD. The dot reinforces the homepage
@@ -71,6 +71,7 @@ const activeNews = isActive(['/news/', '/reports/', '/benchmarks/']);
     </div>
   </div>
 </nav>
+<div class="nav-spacer h-12 md:h-14" aria-hidden="true"></div>
 
 <!-- Mobile drawer -->
 <div id="mobile-menu" class="fixed inset-0 z-[90] sm:hidden" style="display:none">
