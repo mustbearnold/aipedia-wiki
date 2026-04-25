@@ -41,10 +41,6 @@ const guides: Guide[] = allGuides.map(g => {
   };
 });
 
-function textForGuide(g: Guide): string {
-  return `${g.slug} ${g.title} ${g.description} ${g.tools.join(' ')}`.toLowerCase();
-}
-
 function dateLabel(value: unknown): string {
   if (!value) return 'Review queued';
   const iso = value instanceof Date ? value.toISOString().slice(0, 10) : String(value).slice(0, 10);
@@ -54,6 +50,62 @@ function dateLabel(value: unknown): string {
 const toolCategoryBySlug = new Map(
   allTools.map(tool => [tool.data.slug || tool.id.replace(/\.md$/, ''), tool.data.category])
 );
+const toolSlugAliases: Record<string, string> = {
+  'canva-magic-studio': 'canva',
+  'chatgpt-gpt-5': 'chatgpt',
+  'chatgpt-gpt5': 'chatgpt',
+  'claude-4-6': 'claude',
+  'claude-api': 'claude',
+  'claude-opus-46': 'claude',
+  'cursor-ai': 'cursor',
+  'deepseek-v32': 'deepseek',
+  'fireflies-ai': 'fireflies',
+  'gemini-3-pro': 'gemini',
+  'gemini-31-pro': 'gemini',
+  'gemini-advanced': 'gemini',
+  'google-gemini': 'gemini',
+  'gpt-5': 'chatgpt',
+  'japer': 'jasper',
+  'luma-dream-machine': 'luma',
+  'microsoft-365-copilot': 'chatgpt',
+  'microsoft-copilot': 'chatgpt',
+  'openai-api': 'chatgpt',
+  'openai-gpt': 'chatgpt',
+  'perplexity-ai': 'perplexity',
+  'perplexity-enterprise': 'perplexity',
+  'perplexity-pro': 'perplexity',
+  'replit-ghostwriter': 'replit-agent',
+};
+const toolCategoryAliases: Record<string, string> = {
+  'capcut': 'ai-video',
+  'castmagic': 'ai-notes',
+  'colossyan': 'ai-video',
+  'deepbrain': 'ai-video',
+  'eightfold-ai': 'ai-automation',
+  'elai': 'ai-video',
+  'genmo': 'ai-video',
+  'gohighlevel': 'ai-automation',
+  'gong': 'ai-automation',
+  'google-translate': 'ai-writing',
+  'gorgias': 'ai-automation',
+  'help-scout': 'ai-automation',
+  'hireez': 'ai-automation',
+  'paradox-olivia': 'ai-automation',
+  'podcastle': 'ai-voice',
+  'resume-io': 'ai-writing',
+  'salesforce-einstein': 'ai-automation',
+  'vercel': 'ai-coding',
+  'zendesk': 'ai-automation',
+};
+
+function categoryForToolMention(slug: string): string | undefined {
+  const canonicalSlug = toolSlugAliases[slug] || slug;
+  return toolCategoryBySlug.get(canonicalSlug) || toolCategoryAliases[slug];
+}
+
+function metadataTextForGuide(g: Guide): string {
+  return `${g.slug} ${g.title} ${g.description}`.toLowerCase();
+}
 
 const intentBySlug: Partial<Record<string, IntentLane>> = {
   'ai-agency-stack': 'Grow a business',
@@ -62,32 +114,102 @@ const intentBySlug: Partial<Record<string, IntentLane>> = {
   'ai-customer-support': 'Grow a business',
   'ai-lead-generation': 'Grow a business',
   'ai-solo-founder-stack': 'Grow a business',
+
   'best-ai-automation-platform': 'Operate workflows',
+  'best-ai-coding-assistant': 'Build software',
+  'best-ai-for-academic-writing': 'Research and study',
+  'best-ai-for-ad-copy': 'Grow a business',
+  'best-ai-for-api-documentation': 'Build software',
+  'best-ai-for-blog-writing': 'Create media',
+  'best-ai-for-book-writing': 'Create media',
   'best-ai-for-brainstorming': 'Operate workflows',
+  'best-ai-for-citations': 'Research and study',
+  'best-ai-for-code-review': 'Build software',
+  'best-ai-for-cold-email': 'Grow a business',
+  'best-ai-for-cover-letters': 'Operate workflows',
+  'best-ai-for-data-analysis': 'Research and study',
+  'best-ai-for-debugging': 'Build software',
+  'best-ai-for-email-writing': 'Operate workflows',
   'best-ai-for-excel': 'Operate workflows',
+  'best-ai-for-headshots': 'Create media',
+  'best-ai-for-instagram': 'Create media',
+  'best-ai-for-interview-prep': 'Research and study',
+  'best-ai-for-legal-research': 'Research and study',
+  'best-ai-for-linkedin': 'Grow a business',
+  'best-ai-for-logo-design': 'Create media',
+  'best-ai-for-medical-research': 'Research and study',
   'best-ai-for-meeting-notes': 'Operate workflows',
+  'best-ai-for-newsletter-writers': 'Create media',
+  'best-ai-for-photo-editing': 'Create media',
+  'best-ai-for-podcasters': 'Create media',
+  'best-ai-for-presentations': 'Create media',
+  'best-ai-for-resume-writing': 'Operate workflows',
+  'best-ai-for-seo-content': 'Grow a business',
+  'best-ai-for-social-media-posts': 'Grow a business',
+  'best-ai-for-sql-queries': 'Build software',
   'best-ai-for-summarization': 'Research and study',
+  'best-ai-for-tiktok': 'Create media',
+  'best-ai-for-transcription': 'Create media',
   'best-ai-for-translation': 'Operate workflows',
+  'best-ai-for-unit-tests': 'Build software',
+  'best-ai-for-youtube-creators': 'Create media',
+  'best-ai-music-generator': 'Create media',
+  'best-ai-seo-tool': 'Grow a business',
+  'best-ai-tools-for-accountants': 'Grow a business',
+  'best-ai-tools-for-agencies': 'Grow a business',
+  'best-ai-tools-for-consultants': 'Grow a business',
+  'best-ai-tools-for-customer-support': 'Grow a business',
+  'best-ai-tools-for-designers': 'Create media',
+  'best-ai-tools-for-developers': 'Build software',
+  'best-ai-tools-for-ecommerce': 'Grow a business',
+  'best-ai-tools-for-freelancers': 'Grow a business',
+  'best-ai-tools-for-journalists': 'Research and study',
+  'best-ai-tools-for-lawyers': 'Research and study',
+  'best-ai-tools-for-marketers': 'Grow a business',
+  'best-ai-tools-for-nonprofits': 'Grow a business',
+  'best-ai-tools-for-product-managers': 'Grow a business',
+  'best-ai-tools-for-real-estate-agents': 'Grow a business',
+  'best-ai-tools-for-recruiters': 'Grow a business',
+  'best-ai-tools-for-researchers': 'Research and study',
+  'best-ai-tools-for-sales-teams': 'Grow a business',
+  'best-ai-tools-for-small-business': 'Grow a business',
+  'best-ai-tools-for-students': 'Research and study',
+  'best-ai-tools-for-teachers': 'Research and study',
+  'best-ai-tools-for-writers': 'Create media',
   'best-ai-tools-under-10-month': 'Operate workflows',
   'best-ai-tools-under-20-month': 'Operate workflows',
   'best-ai-tools-under-50-month': 'Operate workflows',
+  'best-ai-video-generator': 'Create media',
+  'best-ai-voice-youtube': 'Create media',
   'best-free-ai-tools': 'Operate workflows',
-  'best-open-source-ai-tools': 'Build software',
+  'best-open-source-ai-tools': 'Operate workflows',
   'best-pay-as-you-go-ai-tools': 'Operate workflows',
+
+  'canva-ai-alternatives': 'Create media',
   'chatgpt-alternatives': 'Operate workflows',
   'claude-alternatives': 'Operate workflows',
+  'cursor-alternatives': 'Build software',
   'deepseek-alternatives': 'Operate workflows',
+  'elevenlabs-alternatives': 'Create media',
   'gemini-alternatives': 'Operate workflows',
+  'github-copilot-alternatives': 'Build software',
+  'grammarly-alternatives': 'Create media',
+  'jasper-alternatives': 'Grow a business',
+  'midjourney-alternatives': 'Create media',
   'notion-ai-alternatives': 'Operate workflows',
+  'otter-ai-alternatives': 'Operate workflows',
   'perplexity-alternatives': 'Research and study',
+  'runway-alternatives': 'Create media',
+  'suno-alternatives': 'Create media',
+  'synthesia-alternatives': 'Create media',
 };
 
 function intentLaneForGuide(g: Guide): IntentLane {
   const explicitLane = intentBySlug[g.slug];
   if (explicitLane) return explicitLane;
 
-  const text = textForGuide(g);
-  if (/coding|code|debug|unit-test|api-documentation|developer|cursor|copilot|devin|sql/.test(text)) {
+  const text = metadataTextForGuide(g);
+  if (/coding-assistant|code-review|debugging|unit-tests?|api-documentation|sql-queries|developers?|cursor-alternatives|github-copilot-alternatives/.test(text)) {
     return 'Build software';
   }
   if (/image|video|music|design|presentation|creator|podcast|youtube|tiktok|instagram|headshot|logo|photo|voice|suno|runway|midjourney|canva|elevenlabs|synthesia/.test(text)) {
@@ -171,7 +293,7 @@ const toolMentions = new Set(guides.flatMap(g => g.tools)).size;
 const categoriesCovered = new Set(
   guides
     .flatMap(g => g.tools)
-    .map(slug => toolCategoryBySlug.get(slug))
+    .map(categoryForToolMention)
     .filter((category): category is string => Boolean(category))
 ).size;
 ---
