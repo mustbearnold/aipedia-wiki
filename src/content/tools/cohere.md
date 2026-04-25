@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$10/1M tokens"
 status: active
 launched: 2019-06
-last_updated: 2026-04-22
-last_verified: 2026-04-22
+last_updated: 2026-04-25
+last_verified: 2026-04-25
 update_frequency: monthly
 seo_title: "Cohere: Features, Pricing & Review (April 2026)"
 meta_description: "Cohere's Command A (256K context) is the agentic flagship; Command R+ runs at $2.50/$10 per 1M tokens. North workspace and Model Vault ship private deployment. Enterprise-first LLM platform built around RAG, Rerank, and Aya multilingual."
@@ -51,6 +51,10 @@ price_history:
     plan: "Command R+ 08-2024"
     price: "$2.50 / $10 per 1M tok"
     note: "Verified unchanged; enterprise tier from $1/$3"
+  - date: 2026-04-24
+    plan: "Aleph Alpha deal"
+    price: "Reported acquisition / merger"
+    note: "TechCrunch reports Cohere is moving to combine with German AI startup Aleph Alpha, strengthening European enterprise and sovereign-AI positioning."
 ---
 
 # Cohere
@@ -58,6 +62,8 @@ price_history:
 Enterprise-first LLM platform. **Command A** (256K context, released March 2025) is the agentic and multilingual flagship. **Command R+** handles production RAG workloads at $2.50 input / $10 output per million tokens. **Command R7B** runs locally for edge cases. **Embed v4** and **Rerank 4** power the strongest dedicated retrieval stack in the industry.
 
 No consumer chat app. No image or video generation. Cohere sells to enterprise buyers: regulated industries, multilingual organizations, and teams that need private VPC or on-prem deployment.
+
+On April 24, 2026, TechCrunch reported that Cohere is moving to acquire or merge with German AI startup Aleph Alpha. The reported deal does not change public API pricing, but it strengthens Cohere's European enterprise and sovereign-AI narrative.
 
 ## System Verdict
 
@@ -82,8 +88,9 @@ No consumer chat app. No image or video generation. Cohere sells to enterprise b
 | **API pricing (R+)** | $2.50 input / $10 output per 1M tokens · Enterprise from $1 / $3 |
 | **Consumer chat** | None |
 | **Image / video gen** | None |
+| **Recent business move** | Reported Aleph Alpha acquisition / merger on April 24, 2026 |
 
-Every data point above was verified against vendor sources on 2026-04-17. See Sources.
+Every data point above was verified against vendor sources on 2026-04-24. See Sources.
 
 ## What it actually is
 
@@ -102,6 +109,7 @@ Tiny Aya, released by Cohere Labs in February 2026, ships 3.35B-parameter open-w
 - **You build production RAG and retrieval accuracy is the bottleneck.** Embed v4 and Rerank 4 outperform OpenAI embeddings on cross-lingual and long-document retrieval benchmarks.
 - **You operate in 10+ languages.** Command A and Aya are trained explicitly for multilingual use; non-English performance tops GPT and Claude on published evaluations.
 - **You need VPC, on-prem, or sovereign-cloud deployment.** Model Vault puts the full Command + Embed + Rerank stack inside your infrastructure. Data never crosses Cohere's network.
+- **You sell into Europe or regulated markets.** The reported Aleph Alpha combination gives Cohere a stronger European enterprise and sovereign-AI story.
 - **You build enterprise agents on internal data.** North gives HR, finance, customer support, and IT teams a workspace for deploying Cohere-powered agents against proprietary documents.
 - **Your compliance team already approves Oracle, AWS, or Azure.** Cohere partners across those marketplaces and ships with SOC 2 and related controls pre-negotiated.
 
@@ -162,11 +170,11 @@ Command A pricing is not listed on the public page; contact sales for rates. Ent
 - **Pricing opacity on Command A.** Public pricing page lists Command R and R+ only. Command A requires sales contact, which slows prototyping.
 - **Model Vault pricing is per-instance, not per-token.** $2,500-$3,250/mo per model per tier. Economical only for workloads that justify dedicated infrastructure.
 - **No image or video output.** Workflows needing multimodal generation need a second tool alongside Cohere.
-- **Region and residency caveats.** Availability of Model Vault in specific sovereign clouds depends on partner contracts; confirm your target region before signing.
+- **Region and residency caveats.** Availability of Model Vault in specific sovereign clouds depends on partner contracts; confirm your target region before signing. The reported Aleph Alpha deal could improve the Europe story, but buyers still need written deployment terms.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [Cohere pricing](https://cohere.com/pricing), [Cohere models docs](https://docs.cohere.com/docs/models), [Cohere release notes](https://docs.cohere.com/changelog), and the [Embed v4 announcement](https://cohere.com/embed).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-24 against [Cohere pricing](https://cohere.com/pricing), [Cohere models docs](https://docs.cohere.com/docs/models), [Cohere release notes](https://docs.cohere.com/changelog), the [Embed v4 announcement](https://cohere.com/embed), and [reported Aleph Alpha deal coverage](/news/2026-04-24-cohere-aleph-alpha/).
 
 ## FAQ
 
@@ -193,6 +201,7 @@ Cohere's dedicated retrieval stack (Embed v4 + Rerank 4) outperforms OpenAI embe
 - [Cohere Embed v4 page](https://cohere.com/embed): Multimodal embedding model specifications
 - [Cohere Command page](https://cohere.com/command): Command A agentic features and benchmarks
 - [Cohere pricing docs](https://docs.cohere.com/docs/how-does-cohere-pricing-work): Token counting and billing mechanics
+- [Cohere-Aleph Alpha deal coverage](/news/2026-04-24-cohere-aleph-alpha/): Reported enterprise-AI consolidation
 
 ## Related
 

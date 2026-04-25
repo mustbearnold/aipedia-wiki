@@ -2,7 +2,7 @@
 type: tool
 slug: github-copilot
 title: GitHub Copilot
-tagline: Microsoft/GitHub's AI pair programmer. Claude Opus 4.7 GA across Pro+/Business/Enterprise (April 16, 2026), Agent/Edit/Ask modes, and an autonomous Coding Agent that turns issues into PRs, all native to the GitHub graph.
+tagline: Microsoft/GitHub's AI pair programmer. GPT-5.5 and Claude Opus 4.7 run across Pro+/Business/Enterprise, with Agent/Edit/Ask modes and an autonomous Coding Agent that turns issues into PRs.
 category: ai-coding
 company: microsoft-github
 url: https://github.com/features/copilot
@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$39/user/month"
 status: active
 launched: 2021-06
-last_updated: 2026-04-24
-last_verified: 2026-04-24
+last_updated: 2026-04-25
+last_verified: 2026-04-25
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -24,9 +24,9 @@ scores:
   value: 9
   moat: 9
   longevity: 10
-tags: [ide, autocomplete, ai-coding, vscode, jetbrains, xcode, neovim, github, microsoft, agent-mode, coding-agent, mcp, claude-opus-4-7]
+tags: [ide, autocomplete, ai-coding, vscode, jetbrains, xcode, neovim, github, microsoft, agent-mode, coding-agent, mcp, gpt-5-5, claude-opus-4-7]
 seo_title: "GitHub Copilot: Features, Pricing & Review (April 2026)"
-meta_description: "GitHub Copilot runs Claude Opus 4.7 (GA April 16, 2026) plus GPT-5.4 and Gemini 3.1 Pro across VS Code, Visual Studio, JetBrains, Xcode, and Neovim. Free, Pro $10, Pro+ $39, Business $19/seat, Enterprise $39/seat. Agent mode, Coding Agent, and MCP all native to the GitHub graph."
+meta_description: "GitHub Copilot runs GPT-5.5 and Claude Opus 4.7 on Pro+/Business/Enterprise, plus GPT-5.4 and Gemini 3.1 Pro across VS Code, Visual Studio, JetBrains, Xcode, and Neovim. Free, Pro $10, Pro+ $39, Business $19/seat, Enterprise $39/seat."
 author: "aipedia.wiki Editorial"
 best_for:
   - developers already in the GitHub ecosystem
@@ -39,12 +39,16 @@ not_best_for:
   - individual users who do not want Copilot Free, Pro, or Pro+ interaction data used for model training
   - GitLab or Bitbucket-centric teams
 quick_answer: >-
-  GitHub Copilot is the cheapest credible AI coding stack, native to VS Code, JetBrains, Xcode, and Neovim. Pro $10/mo is unmatched entry pricing; Pro+ $39/mo unlocks Claude Opus 4.7 plus the full model picker. Skip for pure CLI autonomous loops (Claude Code) or a GUI multi-agent workbench (Cursor).
+  GitHub Copilot is the cheapest credible AI coding stack, native to VS Code, JetBrains, Xcode, and Neovim. Pro $10/mo is unmatched entry pricing; Pro+ $39/mo unlocks GPT-5.5, Claude Opus 4.7, and the full model picker. Skip for pure CLI autonomous loops (Claude Code) or a GUI multi-agent workbench (Cursor).
 price_history:
   - date: 2026-04-16
     plan: "Pro+"
     price: "$39/mo"
     note: "Claude Opus 4.7 GA on Pro+/Business/Enterprise at 7.5x promotional multiplier through April 30, 2026; Opus 4.5 and 4.6 being retired from the picker"
+  - date: 2026-04-24
+    plan: "GPT-5.5"
+    price: "7.5x premium requests"
+    note: "GPT-5.5 generally available for Copilot Pro+, Business, and Enterprise users"
   - date: 2026-04-10
     plan: "Pro+"
     price: "$39/mo"
@@ -63,13 +67,13 @@ price_history:
 
 GitHub's AI pair programmer, built by Microsoft and GitHub on top of the largest code-and-repo graph in the world. Ships as a first-party extension inside VS Code, Visual Studio, JetBrains, Xcode, and Neovim. The GA Coding Agent runs asynchronously on GitHub Actions to turn issues into pull requests.
 
-Claude Opus 4.7 went generally available inside Copilot on April 16, 2026, within hours of Anthropic's release.
+Claude Opus 4.7 went generally available inside Copilot on April 16, 2026, within hours of Anthropic's release. GPT-5.5 followed on April 24 for Pro+, Business, and Enterprise users at a 7.5x premium-request multiplier.
 
 On April 24, 2026, GitHub's Copilot interaction-data policy took effect for Free, Pro, and Pro+ accounts: prompts, outputs, code snippets, and associated context may be used for model training unless individual users opt out. Copilot Business and Enterprise remain excluded from that training path.
 
 ## System Verdict
 
-> **Pick GitHub Copilot if you're already inside the GitHub ecosystem and want AI inside your current IDE at the lowest credible price.** Pro at $10/mo is the cheapest entry point in serious AI coding. The model picker hands you Claude Opus 4.7, GPT-5.4, Gemini 3.1 Pro, and Grok from a single bill.
+> **Pick GitHub Copilot if you're already inside the GitHub ecosystem and want AI inside your current IDE at the lowest credible price.** Pro at $10/mo is the cheapest entry point in serious AI coding. The paid model picker hands you GPT-5.5, Claude Opus 4.7, GPT-5.4, Gemini 3.1 Pro, and Grok from a single bill.
 >
 > The autonomous Coding Agent accepts a GitHub issue, spins up a cloud dev environment via Actions, self-reviews the patch, and opens a PR. No direct equivalent in Cursor or Claude Code. IDE coverage is unmatched: JetBrains, Xcode, and Neovim developers have no Cursor path.
 >
@@ -83,7 +87,7 @@ On April 24, 2026, GitHub's Copilot interaction-data policy took effect for Free
 
 | | |
 |---|---|
-| **Flagship model (GA April 16, 2026)** | Claude Opus 4.7 (Pro+, Business, Enterprise) at 7.5x premium-request multiplier through April 30, 2026 |
+| **Flagship models** | GPT-5.5 (GA April 24, 2026) · Claude Opus 4.7 (GA April 16, 2026) on Pro+, Business, Enterprise |
 | **Other models in picker** | GPT-5.4 · GPT-5-Codex · Claude Sonnet 4.6 · Gemini 3.1 Pro · Gemini 2.5 Pro · Grok · Claude Haiku 4.5 |
 | **Free-tier models** | Claude Sonnet 4.6 · GPT-4.1 only |
 | **Modes** | Ask · Edit · Agent · Coding Agent (autonomous, cloud) · Code Review · Copilot CLI |
@@ -94,7 +98,7 @@ On April 24, 2026, GitHub's Copilot interaction-data policy took effect for Free
 | **Premium request caps** | Free 50 · Pro 300 · Pro+ 1,500 · Business 300/seat · Enterprise 1,000/seat · overage $0.04 each |
 | **Copilot Spaces** | Context-scoping feature accessible via the GitHub MCP server |
 | **Data-training policy** | Free / Pro / Pro+ interaction data may be used for model training unless opted out; Business / Enterprise excluded |
-| **Recent shipments (12 mo)** | Coding Agent GA · Agent mode GA (Mar 2026) · MCP support GA · Copilot CLI GA (Apr 2026) · Opus 4.7 GA (Apr 16, 2026) · Agentic code review (Mar 2026) |
+| **Recent shipments (12 mo)** | GPT-5.5 GA (Apr 24, 2026) · Coding Agent GA · Agent mode GA (Mar 2026) · MCP support GA · Copilot CLI GA (Apr 2026) · Opus 4.7 GA (Apr 16, 2026) · Agentic code review (Mar 2026) |
 
 ## What it actually is
 
@@ -134,9 +138,9 @@ Subscription tiers via [github.com/features/copilot/plans](https://github.com/fe
 |---|---|---|---|---|
 | Free | $0 | 50/mo | Sonnet 4.6 · GPT-4.1 · 2,000 completions | Students, evaluation, OSS maintainers |
 | Pro | $10/mo | 300/mo | Full picker (Opus 4.7 not included; see note) · agent mode · unlimited completions | **Most individuals should land here** |
-| Pro+ | $39/mo | 1,500/mo | Full picker **including Opus 4.7** · GitHub Spark · early access | AI power users burning Pro limits weekly |
-| Business | $19/user/mo | 300/user/mo | Full picker including Opus 4.7 · org policy · IP indemnity · audit | 2+ seat teams on GitHub Enterprise |
-| Enterprise | $39/user/mo | 1,000/user/mo | Full picker including Opus 4.7 · org knowledge · SSO · SCIM · audit logs | Compliance-heavy orgs (also needs GitHub Enterprise Cloud at $21/user/mo) |
+| Pro+ | $39/mo | 1,500/mo | Full picker **including GPT-5.5 and Opus 4.7** · GitHub Spark · early access | AI power users burning Pro limits weekly |
+| Business | $19/user/mo | 300/user/mo | Full picker including GPT-5.5 and Opus 4.7 · org policy · IP indemnity · audit | 2+ seat teams on GitHub Enterprise |
+| Enterprise | $39/user/mo | 1,000/user/mo | Full picker including GPT-5.5 and Opus 4.7 · org knowledge · SSO · SCIM · audit logs | Compliance-heavy orgs (also needs GitHub Enterprise Cloud at $21/user/mo) |
 
 Overage: $0.04 per premium request on every paid tier. Opus 4.7 is billed from the same pool at a **7.5x promotional multiplier** through April 30, 2026. On Pro+'s 1,500-request pool, that works out to roughly 200 Opus 4.7 turns per month. The post-promotion multiplier has not been announced.
 
@@ -147,7 +151,7 @@ Prices verified 2026-04-17 via [GitHub Copilot plans](https://github.com/feature
 | | GitHub Copilot Pro $10 | Cursor Pro $20 | Claude Code (via Claude Max 5x $100) |
 |---|---|---|---|
 | **IDE integration** | Native extension in VS Code, Visual Studio, JetBrains, Xcode, Neovim | VS Code fork only | Terminal-first, no IDE |
-| **Model access** | Picker: Opus 4.7 (Pro+ and above) · GPT-5.4 · Gemini 3.1 Pro · Grok · Sonnet 4.6 | Picker: Opus 4.7 · GPT-5.4 · Gemini 3.1 Pro · Grok · Kimi · Composer 2 | Opus 4.7 · Sonnet 4.6 · Haiku 4.5 only |
+| **Model access** | Picker: GPT-5.5 and Opus 4.7 (Pro+ and above) · GPT-5.4 · Gemini 3.1 Pro · Grok · Sonnet 4.6 | Picker: Opus 4.7 · GPT-5.4 · Gemini 3.1 Pro · Grok · Kimi · Composer 2 | Opus 4.7 · Sonnet 4.6 · Haiku 4.5 only |
 | **Agent quality** | Agent mode (IDE) + Coding Agent (async, GitHub-native) | Agents Window + Cloud Agents (supervised workbench) | Strongest autonomous CLI loop |
 | **GitHub-native features** | Issue-to-PR via Coding Agent · PR review agent · Actions integration · Spaces · IP indemnity | None beyond a repo connection | None native |
 | **Pricing** | $10/mo flat + 300 premium requests (Opus locked to Pro+ at 7.5x) | $20/mo + $20 usage pool at API rates | $100/mo flat for Max 5x |
@@ -155,7 +159,7 @@ Prices verified 2026-04-17 via [GitHub Copilot plans](https://github.com/feature
 
 ## Failure modes
 
-- **Premium request quota burns fast on Opus 4.7.** At the 7.5x multiplier, Pro+'s 1,500 requests yield ~200 Opus turns. Heavy Opus users should pin Sonnet 4.6 or GPT-5.4 for routine work and reserve Opus for hard problems, or plan for overage at $0.04/request.
+- **Premium request quota burns fast on GPT-5.5 and Opus 4.7.** At the 7.5x multiplier, Pro+'s 1,500 requests yield ~200 top-model turns. Heavy users should pin Sonnet 4.6 or GPT-5.4 for routine work and reserve GPT-5.5 / Opus for hard problems, or plan for overage at $0.04/request.
 - **Opus 4.7 is not in Pro ($10).** Access requires Pro+ ($39), Business, or Enterprise. Pro is GPT-5.4 + Gemini + Sonnet 4.6 by default.
 - **Post-April 30 Opus 4.7 multiplier is unannounced.** Budget accordingly: the 7.5x figure is explicitly "promotional."
 - **Autocomplete latency varies by language.** Strongest on Python, TypeScript, JavaScript, Go. Noticeably weaker than dedicated IDE stacks on niche languages and on large cold files.
@@ -174,6 +178,9 @@ This page was produced by the aipedia.wiki editorial pipeline, an automated syst
 
 **Is GitHub Copilot free?**
 Yes. The Free tier gives 2,000 code completions and 50 premium requests per month on Claude Sonnet 4.6 and GPT-4.1. Students, teachers, and maintainers of popular open-source projects get Copilot Pro at no cost. Agent mode and the full model picker require Pro or above.
+
+**Does GitHub Copilot include GPT-5.5?**
+Yes, on Pro+, Business, and Enterprise. GPT-5.5 became generally available inside Copilot on [April 24, 2026](https://github.blog/changelog/2026-04-24-gpt-5-5-is-generally-available-for-github-copilot) and uses premium requests at a 7.5x multiplier. Pro ($10) does not include GPT-5.5.
 
 **Does GitHub Copilot include Claude Opus 4.7?**
 Yes, but not on every tier. Opus 4.7 went GA inside Copilot on [April 16, 2026](https://github.blog/changelog/2026-04-16-claude-opus-4-7-is-generally-available/) for Pro+, Business, and Enterprise. It is billed from the premium-request pool at a 7.5x multiplier through April 30, 2026. Pro ($10) does not include Opus 4.7. Upgrade to Pro+ ($39) or Business/Enterprise for access.
