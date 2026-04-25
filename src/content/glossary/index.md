@@ -1,5 +1,4 @@
 ---
----
 type: glossary
 slug: glossary-index
 title: AI Tools Glossary
