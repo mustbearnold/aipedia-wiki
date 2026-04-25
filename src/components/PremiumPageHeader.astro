@@ -21,7 +21,7 @@ const {
 <section class="p3-pagehead">
   {eyebrow && <div class:list={['p3-pagehead-eyebrow', `is-${eyebrowTone}`]}>{eyebrow}</div>}
   <h1 class="p3-pagehead-title">
-    {title}{accent && <span>{accent}</span>}
+    {title}{accent && <> <span>{accent}</span></>}
   </h1>
   {description && <p class="p3-pagehead-copy">{description}</p>}
   {meta?.length ? (
