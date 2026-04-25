@@ -62,6 +62,14 @@ const catalog: ToolDatum[] = allTools
   .sort((a, b) => b.overall - a.overall);
 
 const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
+
+const popularComparisons = [
+  { title: 'Claude vs ChatGPT vs Gemini', lane: 'Frontier assistants', slugs: ['claude', 'chatgpt', 'gemini'] },
+  { title: 'Cursor vs Claude Code vs Codex vs Windsurf', lane: 'AI coding agents', slugs: ['cursor', 'claude-code', 'codex', 'windsurf'] },
+  { title: 'Midjourney vs Adobe Firefly vs Flux vs Ideogram', lane: 'Image generators', slugs: ['midjourney', 'adobe-firefly', 'flux', 'ideogram'] },
+  { title: 'Perplexity vs Exa vs You.com', lane: 'AI search engines', slugs: ['perplexity', 'exa', 'you-com'] },
+  { title: 'ElevenLabs vs Cartesia vs Resemble AI', lane: 'Voice generators', slugs: ['elevenlabs', 'cartesia', 'resemble-ai'] },
+];
 ---
 
 <BaseLayout
@@ -101,6 +109,7 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
       </button>
     </div>
     <div id="selected-strip" class="flex flex-wrap gap-2 mb-4 min-h-[44px]"></div>
+    <div id="score-rail" class="hidden mb-4 rounded-lg border border-[rgba(167,139,250,0.26)] bg-[linear-gradient(135deg,rgba(167,139,250,0.10),rgba(20,184,166,0.07))] p-3"></div>
 
     <div class="relative">
       <label for="picker-input" class="sr-only">Add a tool to the comparison</label>
@@ -135,32 +144,35 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
 
   {/* Empty-state suggestions when no selection yet. */}
   <section id="empty-state" class="mb-10" data-pagefind-ignore>
-    <h2 class="text-sm font-semibold uppercase tracking-wider text-[var(--text-muted)] mb-3">Popular comparisons</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
-      <a href="/compare/build/?tools=claude,chatgpt,gemini" class="block rounded-lg border border-[var(--border)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] p-3 no-underline">
-        <div class="text-[13px] font-semibold text-[var(--text-primary)]">Claude vs ChatGPT vs Gemini</div>
-        <div class="text-[11px] text-[var(--text-muted)] mt-0.5">Frontier assistant trio</div>
-      </a>
-      <a href="/compare/build/?tools=cursor,claude-code,codex,windsurf" class="block rounded-lg border border-[var(--border)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] p-3 no-underline">
-        <div class="text-[13px] font-semibold text-[var(--text-primary)]">Cursor vs Claude Code vs Codex vs Windsurf</div>
-        <div class="text-[11px] text-[var(--text-muted)] mt-0.5">AI coding agents head-to-head</div>
-      </a>
-      <a href="/compare/build/?tools=midjourney,adobe-firefly,flux,ideogram" class="block rounded-lg border border-[var(--border)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] p-3 no-underline">
-        <div class="text-[13px] font-semibold text-[var(--text-primary)]">Midjourney vs Adobe Firefly vs Flux vs Ideogram</div>
-        <div class="text-[11px] text-[var(--text-muted)] mt-0.5">Image generators</div>
-      </a>
-      <a href="/compare/build/?tools=perplexity,exa,you-com" class="block rounded-lg border border-[var(--border)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] p-3 no-underline">
-        <div class="text-[13px] font-semibold text-[var(--text-primary)]">Perplexity vs Exa vs You.com</div>
-        <div class="text-[11px] text-[var(--text-muted)] mt-0.5">AI search engines</div>
-      </a>
-      <a href="/compare/build/?tools=figma,claude-design,lovable,v0" class="block rounded-lg border border-[var(--border)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] p-3 no-underline">
-        <div class="text-[13px] font-semibold text-[var(--text-primary)]">Figma vs Claude Design vs Lovable vs v0</div>
-        <div class="text-[11px] text-[var(--text-muted)] mt-0.5">Prompt-to-prototype tools</div>
-      </a>
-      <a href="/compare/build/?tools=elevenlabs,cartesia,resemble-ai" class="block rounded-lg border border-[var(--border)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] p-3 no-underline">
-        <div class="text-[13px] font-semibold text-[var(--text-primary)]">ElevenLabs vs Cartesia vs Resemble AI</div>
-        <div class="text-[11px] text-[var(--text-muted)] mt-0.5">AI voice generators</div>
-      </a>
+    <div class="flex items-end justify-between gap-3 mb-3">
+      <div>
+        <h2 class="text-sm font-semibold uppercase tracking-wider text-[var(--text-muted)] m-0">Popular comparisons</h2>
+        <p class="text-[12px] text-[var(--text-secondary)] mt-1 mb-0">Start from a high-signal lane, then swap any tool.</p>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3">
+      {popularComparisons.map((comparison) => (
+        <a
+          href={`/compare/build/?tools=${comparison.slugs.join(',')}`}
+          class="group block rounded-lg border border-[var(--border)] bg-[linear-gradient(135deg,rgba(255,255,255,0.045),rgba(167,139,250,0.055))] hover:bg-[var(--bg-card-hover)] hover:border-[rgba(167,139,250,0.45)] p-4 no-underline transition-colors"
+        >
+          <div class="flex items-start justify-between gap-3 mb-5">
+            <div class="min-w-0">
+              <div class="text-[15px] font-bold leading-snug text-[var(--text-primary)]">{comparison.title}</div>
+              <div class="text-[11px] uppercase tracking-wider text-[var(--accent-primary)] mt-2">{comparison.lane}</div>
+            </div>
+            <div class="shrink-0 rounded-md border border-[rgba(94,234,212,0.24)] bg-[rgba(94,234,212,0.08)] px-2 py-1 text-[11px] font-semibold tabular-nums text-[var(--accent-success)]">
+              {comparison.slugs.length} tools
+            </div>
+          </div>
+          <div class="inline-flex items-center gap-2 text-[12px] font-semibold text-[var(--text-primary)] group-hover:text-[var(--accent-primary)]">
+            Open comparison
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6" />
+            </svg>
+          </div>
+        </a>
+      ))}
     </div>
   </section>
 
@@ -178,6 +190,7 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
       const cardsEl = document.getElementById('comparison-cards');
       const tableEl = document.getElementById('comparison-table');
       const helpEl = document.getElementById('picker-help');
+      const scoreRail = document.getElementById('score-rail');
       const copyBtn = document.getElementById('copy-url-btn');
       const copyLabel = document.getElementById('copy-url-label');
 
@@ -202,8 +215,11 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
         strip.innerHTML = '';
         if (selected.length === 0) {
           const empty = document.createElement('div');
-          empty.className = 'text-[12px] text-[var(--text-muted)] italic py-2';
-          empty.textContent = 'No tools selected yet. Search below to add the first one.';
+          empty.className = 'py-1';
+          empty.innerHTML = `
+            <div class="text-[13px] font-semibold text-[var(--text-primary)]">Start a comparison.</div>
+            <div class="text-[12px] text-[var(--text-muted)] mt-0.5">Add two to four tools. The builder will line up scores, pricing, category fit, and tradeoffs.</div>
+          `;
           strip.appendChild(empty);
           return;
         }
@@ -221,6 +237,34 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
           `;
           strip.appendChild(chip);
         });
+      }
+
+      function renderScoreRail() {
+        if (!scoreRail) return;
+        if (selected.length === 0) {
+          scoreRail.classList.add('hidden');
+          scoreRail.innerHTML = '';
+          return;
+        }
+        scoreRail.classList.remove('hidden');
+        const ready = selected.length >= 2;
+        const axes = ready ? ['Utility', 'Value', 'Moat', 'Longevity', 'Pricing'] : ['Utility', 'Value', 'Moat', 'Longevity', 'Pricing'];
+        scoreRail.innerHTML = `
+          <div class="flex items-center justify-between gap-3 flex-wrap">
+            <div>
+              <div class="text-[12px] font-bold text-[var(--text-primary)]">${ready ? 'Comparison ready' : `${selected.length} selected`}</div>
+              <div class="text-[11.5px] text-[var(--text-muted)] mt-0.5">${ready ? axes.join(', ') : 'Add one more to unlock score comparison.'}</div>
+            </div>
+            <div class="flex items-center gap-1.5" aria-hidden="true">
+              ${axes.map((axis, index) => `
+                <span
+                  title="${axis}"
+                  class="block h-1.5 w-8 rounded-full ${ready ? 'bg-[var(--accent-primary)]' : index === 0 ? 'bg-[rgba(167,139,250,0.65)]' : 'bg-[rgba(255,255,255,0.14)]'}"
+                ></span>
+              `).join('')}
+            </div>
+          </div>
+        `;
       }
 
       function renderComparison() {
@@ -352,6 +396,7 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
       function updateAll() {
         writeSelectionToURL();
         renderStrip();
+        renderScoreRail();
         renderComparison();
         if (helpEl) {
           if (selected.length === 0) {
