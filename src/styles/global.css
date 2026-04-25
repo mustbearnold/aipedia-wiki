@@ -847,6 +847,11 @@ a, button, [role="button"], .tool-card, .category-pill, .helpful-btn, .copy-btn 
    once the user moves past the first viewport.
    ========================================================= */
 .nav-root {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   background-color: color-mix(in srgb, var(--bg-base) 72%, transparent);
@@ -1150,14 +1155,10 @@ a, button, [role="button"], .tool-card, .category-pill, .helpful-btn, .copy-btn 
 .moat-layer[data-mode="home"] .moat-canvas { opacity: 0.78; }
 .moat-layer[data-mode="detail"] .moat-canvas { opacity: 0.52; }
 .moat-layer[data-mode="inner"] .moat-canvas { opacity: 0.58; }
-body > nav,
 body > main,
-body > footer,
-body > #read-progress,
-body > .skip-to-main {
+body > footer {
   position: relative;
 }
-body > nav,
 body > main,
 body > footer {
   z-index: 1;
