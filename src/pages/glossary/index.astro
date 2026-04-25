@@ -1,15 +1,13 @@
 ---
 import { getCollection } from 'astro:content';
-import { readFileSync } from 'node:fs';
-import { fileURLToPath } from 'node:url';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import BreadcrumbLD from '../../components/seo/BreadcrumbLD.astro';
+import glossaryRaw from '../../content/glossary/index.md?raw';
 
 export const prerender = true;
 
 const entries = await getCollection('glossary');
 const entry = entries[0];
-const glossaryRaw = readFileSync(fileURLToPath(new URL('../../content/glossary/index.md', import.meta.url)), 'utf-8');
 const body = glossaryRaw.replace(/^---\s*[\s\S]*?\s*---\s*/, '');
 const title = entry.data.title ?? 'AI Tools Glossary';
 const description = entry.data.description ?? 'Definitions of key AI terms used throughout the AI tools wiki.';
