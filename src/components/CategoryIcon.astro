@@ -2,10 +2,11 @@
 interface Props {
   slug: string;
   label?: string;
+  size?: 'sm' | 'md' | 'lg';
   class?: string;
 }
 
-const { slug, label = 'AI category', class: className = '' } = Astro.props;
+const { slug, label = 'AI category', size = 'md', class: className = '' } = Astro.props;
 
 const icons: Record<string, string> = {
   'ai-automation': '<path d="M12 2 5 13h6l-1 9 7-12h-6l1-8Z"/><path d="M5 13H2m20-3h-5M10 22H7"/>',
@@ -27,7 +28,7 @@ const icons: Record<string, string> = {
 const body = icons[slug] ?? '<path d="M12 3v18M3 12h18"/><circle cx="12" cy="12" r="7"/>';
 ---
 
-<span class={`cat-icon cat-icon-${slug.replace(/[^a-z0-9-]/g, '')} ${className}`.trim()} aria-hidden="true">
+<span class={`cat-icon cat-icon-${slug.replace(/[^a-z0-9-]/g, '')} is-${size} ${className}`.trim()} aria-hidden="true">
   <svg viewBox="0 0 24 24" role="img" aria-label={label} fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
     <Fragment set:html={body} />
   </svg>
@@ -38,10 +39,12 @@ const body = icons[slug] ?? '<path d="M12 3v18M3 12h18"/><circle cx="12" cy="12"
     --cat-a: #22d3ee;
     --cat-b: #5eead4;
     --cat-bg: rgba(20, 184, 166, 0.10);
+    --cat-size: 24px;
+    --cat-glyph: 16px;
     display: inline-grid;
     place-items: center;
-    width: 24px;
-    height: 24px;
+    width: var(--cat-size);
+    height: var(--cat-size);
     flex: none;
     border-radius: 7px;
     color: var(--cat-b);
@@ -53,9 +56,12 @@ const body = icons[slug] ?? '<path d="M12 3v18M3 12h18"/><circle cx="12" cy="12"
       0 8px 18px rgba(0, 0, 0, 0.18);
   }
   .cat-icon svg {
-    width: 16px;
-    height: 16px;
+    width: var(--cat-glyph);
+    height: var(--cat-glyph);
   }
+  .cat-icon.is-sm { --cat-size: 20px; --cat-glyph: 13px; border-radius: 6px; }
+  .cat-icon.is-md { --cat-size: 24px; --cat-glyph: 16px; }
+  .cat-icon.is-lg { --cat-size: 44px; --cat-glyph: 24px; border-radius: 8px; }
   .cat-icon-ai-automation { --cat-b: #fb923c; --cat-bg: rgba(251, 146, 60, 0.10); }
   .cat-icon-ai-chatbots { --cat-b: #c4b5fd; --cat-bg: rgba(196, 181, 253, 0.10); }
   .cat-icon-ai-coding { --cat-b: #60a5fa; --cat-bg: rgba(96, 165, 250, 0.10); }
