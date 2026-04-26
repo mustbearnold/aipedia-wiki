@@ -162,15 +162,24 @@ Prices verified 2026-04-17 via [OpenAI pricing](https://chatgpt.com/pricing/), [
 
 - **April 26, 2026:** [OpenAI introduces workspace agents in ChatGPT](/news/2026-04-26-chatgpt-workspace-agents/), shifting the product further toward shared team-level agents with permission, memory, and audit-boundary questions.
 - **April 26, 2026:** [OpenAI apologizes for Tumbler Ridge travel hallucinations](/news/2026-04-26-openai-tumbler-ridge-apology/), a reminder that itinerary and local-search outputs still need source checks before users act on them.
+- **April 25, 2026:** [AI News Desk, April 25](/news/2026-04-25-ai-news-catchup/) tracked GPT-5.5 API access, Copilot distribution, Anthropic Project Deal, and the Google-Anthropic financing report around the broader ChatGPT competitive map.
+- **April 24, 2026:** [AI Industry Roundup, April 24](/news/2026-04-24-ai-industry-roundup/) covered DeepSeek V4, GPT-5.5 in Copilot, Anthropic funding pressure, and Cohere-Aleph Alpha; [GitHub Copilot added GPT-5.5](/news/2026-04-24-github-copilot-gpt-55/) for Pro+, Business, and Enterprise users.
 - **April 23, 2026:** [GPT-5.5 rolls out to ChatGPT and Codex](/news/2026-04-23-openai-gpt-55-release/). Paid ChatGPT users get the new long-running work model; GPT-5.5 Pro is rolling to Pro, Business, and Enterprise.
+- **April 23, 2026:** [AI Industry Roundup, April 23](/news/2026-04-23-ai-industry-roundup/) put GPT-5.5 next to Cloud Next, Grok Voice, Grok outages, and the EU AI fund for cross-market context.
 - **April 23, 2026:** [GPT-5.5 system card and bio bug bounty published](/news/2026-04-23-openai-gpt-55-system-card-bio-bounty/). OpenAI marked biological/chemical and cybersecurity capability as High under its Preparedness Framework.
+- **April 22, 2026:** [OpenAI added WebSockets to the Responses API](/news/2026-04-22-openai-responses-api-websockets/), improving the lower-latency path for agent loops around ChatGPT and Codex-style workflows.
 - **April 22, 2026:** [OpenAI releases Privacy Filter](/news/2026-04-22-openai-privacy-filter/), an open-weight PII-redaction model for stripping sensitive data before model calls.
 - **April 22, 2026:** [ChatGPT for Clinicians launches in the US](/news/2026-04-22-chatgpt-for-clinicians-healthbench/), alongside HealthBench Professional for clinician-grade evals.
 - **April 21, 2026:** [ChatGPT Images 2.0 and gpt-image-2 launch](/news/2026-04-21-openai-chatgpt-images-2-gpt-image-2/). Image generation moved closer to a first-class ChatGPT feature.
+- **April 21, 2026:** [AI Industry Roundup, April 21](/news/2026-04-21-ai-industry-roundup/) covered OpenAI Agent SDK improvements and Google ecosystem moves; [recursive-superintelligence safety analysis](/news/2026-04-21-recursive-superintelligence-safety-analysis/) tracked governance questions around self-improving AI systems.
+- **April 20, 2026:** [OpenAI's Hiro and TBPN acquisition strategy](/news/2026-04-20-openai-hiro-tbpn-acquisitions-strategy/) signaled a stronger push toward consumer revenue and public-image repair.
 - **April 19, 2026:** [US courts split on AI chatbot privilege](/news/2026-04-19-ai-chatbot-privilege-court-rulings/). Treat consumer chats as discoverable unless your workspace, API, or enterprise settings say otherwise.
 - **April 16, 2026:** [Codex Desktop ships as OpenAI "super app"](/news/2026-04-16-openai-codex-desktop-super-app/). Computer use, memory, gpt-image-2, in-app browser, plugins, and multi-agent workflows widened the Codex surface.
+- **April 16, 2026:** [Systemic MCP vulnerability coverage](/news/2026-04-16-mcp-vulnerability-200k-servers/), [Agents SDK sandbox updates](/news/2026-04-16-openai-agents-sdk-sandbox-update/), and [GPT-Rosalind](/news/2026-04-16-openai-gpt-rosalind-drug-discovery/) widened the OpenAI platform-risk and specialist-model picture.
+- **April 14, 2026:** [OpenAI acquired Hiro Finance](/news/2026-04-14-openai-acquires-hiro-finance/) as a fintech acqui-hire.
 - **April 9, 2026:** [$100/mo Pro tier launched](/news/2026-04-09-chatgpt-pro-100-tier-launch/). The real question is whether Codex usage justifies the jump above Plus.
 - **April 1, 2026:** [Sora 2 model retired](/news/2026-04-01-openai-retires-sora-2-model/). ChatGPT has no native video generation path in this review.
+- **March 31, 2026:** [OpenAI closed a $122B round at an $852B valuation](/news/2026-03-31-openai-122b-round-852b-valuation/), one of the largest private financings in the category.
 
 ## Fit & tradeoffs
 

@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$300/month"
 status: active
 launched: 2023-11
-last_updated: 2026-04-24
-last_verified: 2026-04-24
+last_updated: 2026-04-26
+last_verified: 2026-04-26
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -75,6 +75,11 @@ Three major 2026 capability additions beyond the base models:
 - **Grok Computer** (2026): autonomous desktop-agent integration, currently rolling out; Grok 4.3 routes to it
 
 Context window is 2M tokens, the largest confirmed in any major commercial model. On February 2, 2026, SpaceX acquired xAI for $1.25 trillion in an all-stock deal (SpaceX valued at $1T, xAI at $250B). Grok now runs under Elon Musk's consolidated aerospace and technology empire. Grok 5 (6T parameters, MoE) is training on Colossus 2 with a Q2 2026 target.
+
+## Recent developments (April 2026)
+
+- **April 24:** [AI Industry Roundup, April 24](/news/2026-04-24-ai-industry-roundup/) kept Grok in the broader frontier-lab watchlist alongside DeepSeek V4, GPT-5.5 in Copilot, Anthropic capital pressure, and Cohere-Aleph Alpha.
+- **April 23:** [AI Industry Roundup, April 23](/news/2026-04-23-ai-industry-roundup/) covered Grok Voice and Grok outages next to GPT-5.5 and Cloud Next announcements.
 
 ## System Verdict
 

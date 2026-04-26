@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "Bundled with Claude Pro ($20/mo) and up"
 status: beta
 launched: 2026-04
-last_updated: 2026-04-19
-last_verified: 2026-04-19
+last_updated: 2026-04-26
+last_verified: 2026-04-26
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -57,6 +57,9 @@ The differentiator: Claude Design reads your **existing codebase and design file
 
 ## Recent developments
 
+- **April 25, 2026:** [AI News Desk, April 25](/news/2026-04-25-ai-news-catchup/) tracked Project Deal and Google-Anthropic financing signals around Claude's broader product ecosystem.
+- **April 24, 2026:** [Google reportedly plans up to $40B in cash and compute investment for Anthropic](/news/2026-04-24-google-anthropic-40b-investment/), which would expand the compute base behind Claude products including Claude Design.
+- **April 20, 2026:** [Amazon commits up to $25B more to Anthropic](/news/2026-04-20-amazon-anthropic-25b-infrastructure-pact/), reinforcing the infrastructure story behind Claude's design and coding surfaces.
 - **April 17, 2026:** [Claude Design launches](/news/2026-04-17-anthropic-launches-claude-design/) as a research preview bundled with Claude Pro+. Figma stock fell ~7% on the news. Mike Krieger (Anthropic CPO) resigned from Figma's board three days earlier.
 - **April 16, 2026:** [Claude Opus 4.7 ships](/news/2026-04-16-anthropic-claude-opus-47/) as the backing model. Opus 4.7 powers the design reasoning and codebase analysis behind every Claude Design generation.
 

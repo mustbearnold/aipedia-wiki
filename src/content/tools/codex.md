@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "Bundled with ChatGPT Plus ($20/mo) through Pro 20x ($200/mo)"
 status: active
 launched: 2025-05
-last_updated: 2026-04-24
-last_verified: 2026-04-24
+last_updated: 2026-04-26
+last_verified: 2026-04-26
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -69,7 +69,10 @@ Bundled with every paid ChatGPT tier. Pro tiers get 5x to 20x the Codex usage of
 
 ## Recent developments (March-April 2026)
 
+- **April 25, 2026:** [AI News Desk, April 25](/news/2026-04-25-ai-news-catchup/) grouped GPT-5.5 API access, Copilot distribution, Project Deal, and Google-Anthropic financing as the weekend signals around Codex's market.
+- **April 24, 2026:** [AI Industry Roundup, April 24](/news/2026-04-24-ai-industry-roundup/) tracked GPT-5.5's spread into Copilot; [GitHub Copilot adds GPT-5.5](/news/2026-04-24-github-copilot-gpt-55/) is the direct competing-coding-surface rollout.
 - **April 23, 2026:** [GPT-5.5 rolls out to ChatGPT and Codex](/news/2026-04-23-openai-gpt-55-release/). OpenAI positions it for longer-running coding, research, data analysis, documents, spreadsheets, and tool-use tasks.
+- **April 23, 2026:** [AI Industry Roundup, April 23](/news/2026-04-23-ai-industry-roundup/) covered GPT-5.5, Cloud Next, Grok Voice, Grok outages, and EU AI funding; [GPT-5.5 system card and bio bounty](/news/2026-04-23-openai-gpt-55-system-card-bio-bounty/) added safety context for Codex's backing model.
 - **April 22, 2026:** [Responses API adds WebSockets](/news/2026-04-22-openai-responses-api-websockets/). Relevant to Codex-style agent loops because lower-latency bidirectional sessions make browser/IDE agent workflows feel less stop-start.
 - **April 23, 2026:** [Google discloses 75% of internal new code is AI-generated](/news/2026-04-23-google-75-percent-internal-code-ai-generated/). Signals agentic-coding adoption inside hyperscalers has crossed the "production default" threshold. Codex sits in the same category as Gemini Code Assist for this cohort.
 - **April 23, 2026:** [Gemini Enterprise Agent Platform launches](/news/2026-04-23-gemini-enterprise-agent-platform/). Google now ships a full enterprise agent stack (Studio, Registry, Identity, Gateway, Observability) competing with Codex for governed-agent use cases. Codex counter is the April 16 super-app update's plugin ecosystem and Computer Use.

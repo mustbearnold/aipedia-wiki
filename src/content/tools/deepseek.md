@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "Free (chat) / Usage-based (API from $0.28/M tokens)"
 status: active
 launched: 2023-07
-last_updated: 2026-04-24
-last_verified: 2026-04-24
+last_updated: 2026-04-26
+last_verified: 2026-04-26
 update_frequency: quarterly
 affiliate:
   has_program: false
@@ -60,6 +60,8 @@ price_history:
 Chinese AI lab founded under High-Flyer Capital Management in Hangzhou. Releases open-weight frontier models alongside a free chat interface and a pay-per-token API that undercuts GPT-5.4 by roughly 9x.
 
 DeepSeek-V4 preview launched on April 24, 2026, according to AP, with pro and flash versions described as improving knowledge, reasoning, and agentic capabilities. DeepSeek-V3.2 remains the verified public API pricing baseline until DeepSeek publishes full V4 endpoint details. DeepSeek-R1 (released January 2025) remains the standalone reasoning model.
+
+Related coverage: [AI Industry Roundup, April 24](/news/2026-04-24-ai-industry-roundup/) tracked the DeepSeek V4 preview alongside GPT-5.5 in Copilot, Anthropic capital pressure, and Cohere-Aleph Alpha.
 
 ## System Verdict
 

@@ -441,7 +441,7 @@ git commit -m "ci: verify guards audits and build"
 - Modify: affected files under `src/content/tools/`
 - Modify: `scripts/audit-news-xrefs.mjs` only if the audit needs clearer output
 
-- [ ] **Step 1: Generate the current gap list**
+- [x] **Step 1: Generate the current gap list**
 
 Run:
 
@@ -451,7 +451,7 @@ node scripts/audit-news-xrefs.mjs
 
 Expected: reports the current gap table.
 
-- [ ] **Step 2: Add a "Recent signals" section to high-traffic affected tools**
+- [x] **Step 2: Add a "Recent signals" section to high-traffic affected tools**
 
 For each affected high-traffic tool (`chatgpt`, `claude`, `claude-code`, `claude-design`, `codex`, `gemini`, `github-copilot`, `deepseek`, `grok`, `cohere`), add or update a section in the body:
 
@@ -463,7 +463,7 @@ For each affected high-traffic tool (`chatgpt`, `claude`, `claude-code`, `claude
 
 Use the exact news slug reported by `node scripts/audit-news-xrefs.mjs`. Keep each bullet factual and short.
 
-- [ ] **Step 3: Re-run the audit after each tool**
+- [x] **Step 3: Re-run the audit after each tool**
 
 Run:
 
@@ -473,7 +473,7 @@ node scripts/audit-news-xrefs.mjs
 
 Expected: the gap count decreases after each edited tool.
 
-- [ ] **Step 4: Finish with a clean audit**
+- [x] **Step 4: Finish with a clean audit**
 
 Run:
 
@@ -484,7 +484,7 @@ npm run guard:check
 
 Expected: both commands pass.
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 Run:
 

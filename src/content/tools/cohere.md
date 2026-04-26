@@ -65,6 +65,8 @@ No consumer chat app. No image or video generation. Cohere sells to enterprise b
 
 On April 24, 2026, TechCrunch reported that Cohere is moving to acquire or merge with German AI startup Aleph Alpha. The reported deal does not change public API pricing, but it strengthens Cohere's European enterprise and sovereign-AI narrative.
 
+Related coverage: [AI Industry Roundup, April 24](/news/2026-04-24-ai-industry-roundup/) and [AI News Desk, April 25](/news/2026-04-25-ai-news-catchup/) both tracked the Cohere-Aleph Alpha report as a sovereignty and enterprise-positioning signal.
+
 ## System Verdict
 
 > **Pick Cohere if you build production RAG, need multilingual retrieval, or require a VPC / on-prem / sovereign deployment your compliance team will approve.** Embed v4 and Rerank 4 are the best dedicated retrieval models shipping. Command A's 256K context and North workspace let you stand up agentic workflows inside a SOC 2 perimeter. Model Vault runs the stack on isolated infrastructure, and the reported Aleph Alpha move strengthens Cohere's European enterprise story.

@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "$20-$200/month"
 status: active
 launched: 2025-02
-last_updated: 2026-04-24
-last_verified: 2026-04-24
+last_updated: 2026-04-26
+last_verified: 2026-04-26
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -62,7 +62,11 @@ Claude Opus 4.7 (released April 16, 2026) is the default backing model. Access i
 
 ## Recent developments (April 2026)
 
+- **April 25:** [AI News Desk, April 25](/news/2026-04-25-ai-news-catchup/) tied Claude Code's backdrop to GPT-5.5 API access, Copilot distribution, Project Deal, and Google-Anthropic financing.
 - **April 24:** [Anthropic and NEC announce a 30,000-employee Claude rollout](/news/2026-04-24-anthropic-nec-ai-engineering-workforce/). Claude Code is part of the partnership surface for software-engineering productivity, alongside Claude and Claude Cowork.
+- **April 24:** [Google reportedly plans up to $40B in Anthropic cash and compute investment](/news/2026-04-24-google-anthropic-40b-investment/), expanding the multi-cloud capacity story behind Claude Code if completed.
+- **April 21:** [Kimi K2.6 Agent Swarm ships](/news/2026-04-21-moonshot-kimi-k2-6-agent-swarm/) with strong open-weight SWE-bench and HLE-with-tools results, raising the self-hosted baseline Claude Code competes against.
+- **April 20:** [Amazon commits up to $25B more to Anthropic](/news/2026-04-20-amazon-anthropic-25b-infrastructure-pact/), adding compute capacity behind Claude and Claude Code workloads.
 - **April 17:** [Dario Amodei meets White House Chief of Staff over Mythos](/news/2026-04-17-amodei-white-house-mythos/). Sign of a thaw in Anthropic's federal relationship. Outcome shapes long-term enterprise trajectory for Claude Code + Claude at scale.
 - **April 16:** [Systemic MCP vulnerability exposes 200k servers](/news/2026-04-16-mcp-vulnerability-200k-servers/) to arbitrary command execution. Affects every MCP server Claude Code invokes. Treat third-party MCP servers as shell-access risk; prefer first-party or sandbox via container.
 - **April 16:** [OpenAI ships Codex Desktop as "super app"](/news/2026-04-16-openai-codex-desktop-super-app/): computer use, memory, gpt-image-2, 90+ plugins, multi-agent. Desktop-agent surface competes directly with Claude Code's CLI-native workflow.

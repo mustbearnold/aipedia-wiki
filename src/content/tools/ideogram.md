@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: $0-$48/month
 status: active
 launched: 2023-08
-last_updated: 2026-04-22
-last_verified: 2026-04-22
+last_updated: 2026-04-26
+last_verified: 2026-04-26
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -61,6 +61,8 @@ price_history:
 Ideogram Inc.'s text-in-image specialist. **Ideogram 3.0** is the production flagship, delivering roughly 90-95% text accuracy on logos, thumbnails, and posters where Midjourney V7 and Flux still fumble letters.
 
 Free tier covers 10 prompts per day (4 images per prompt). Paid plans run $7 to $48/month.
+
+Competitive signal: [OpenAI launched ChatGPT Images 2.0 and gpt-image-2](/news/2026-04-21-openai-chatgpt-images-2-gpt-image-2/), raising pressure on standalone text-in-image specialists like Ideogram even though Ideogram remains the typography-first pick.
 
 ## System Verdict
 
