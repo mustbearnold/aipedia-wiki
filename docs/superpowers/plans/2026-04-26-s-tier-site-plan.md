@@ -84,7 +84,7 @@ Verification files:
 
 - No source files changed in this task.
 
-- [ ] **Step 1: Confirm the working branch**
+- [x] **Step 1: Confirm the working branch**
 
 Run:
 
@@ -94,7 +94,7 @@ git branch --show-current
 
 Expected: `master`.
 
-- [ ] **Step 2: Capture current verification failures**
+- [x] **Step 2: Capture current verification failures**
 
 Run:
 
@@ -116,7 +116,7 @@ Expected current state:
 - `node scripts/audit-internal-links.mjs` passes.
 - `node scripts/audit-news-xrefs.mjs` fails with 43 gaps.
 
-- [ ] **Step 3: Confirm no source changes from baseline capture**
+- [x] **Step 3: Confirm no source changes from baseline capture**
 
 Run:
 
@@ -134,7 +134,7 @@ Expected: only intentionally added plan files are changed.
 
 - Modify: `scripts/guard-stale-facts.mjs`
 
-- [ ] **Step 1: Verify the current CRLF failure**
+- [x] **Step 1: Verify the current CRLF failure**
 
 Run:
 
@@ -144,7 +144,7 @@ npm run guard:check
 
 Expected: fails and reports missing `facts.*.value` for `src/content/tools/chatgpt.md`.
 
-- [ ] **Step 2: Patch frontmatter splitting**
+- [x] **Step 2: Patch frontmatter splitting**
 
 In `scripts/guard-stale-facts.mjs`, replace the frontmatter extraction inside `readMarkdownFiles` with CRLF-safe logic:
 
@@ -153,7 +153,7 @@ In `scripts/guard-stale-facts.mjs`, replace the frontmatter extraction inside `r
       const body = frontmatter ? raw.slice(frontmatter[0].length) : raw;
 ```
 
-- [ ] **Step 3: Run the guard again**
+- [x] **Step 3: Run the guard again**
 
 Run:
 
@@ -163,7 +163,7 @@ npm run guard:check
 
 Expected: `guard-content` passes and `guard-stale-facts` reports canonical ChatGPT facts present.
 
-- [ ] **Step 4: Check that no content files changed**
+- [x] **Step 4: Check that no content files changed**
 
 Run:
 
@@ -173,7 +173,7 @@ git status --short
 
 Expected: only `scripts/guard-stale-facts.mjs` is changed.
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 Run:
 
@@ -192,7 +192,7 @@ git commit -m "fix: make stale fact guard crlf safe"
 - Modify: `package.json`
 - Modify: `package-lock.json` only if npm changes it during script normalization
 
-- [ ] **Step 1: Measure current output size**
+- [x] **Step 1: Measure current output size**
 
 Run:
 
@@ -202,7 +202,7 @@ node -e "const fs=require('fs'),path=require('path');function walk(d){let a=[];i
 
 Expected current signal: `public/pagefind` and `dist/client/pagefind` are far larger than fresh `dist/pagefind`.
 
-- [ ] **Step 2: Create the clean Pagefind script**
+- [x] **Step 2: Create the clean Pagefind script**
 
 Create `scripts/build-pagefind.mjs` with this content:
 
@@ -251,14 +251,10 @@ if (!existsSync(DIST_CLIENT)) {
 removeDir(DIST_PAGEFIND);
 removeDir(join(PROJECT_DIR, 'dist', 'pagefind'));
 
-const pagefindBin = process.platform === 'win32'
-  ? join(PROJECT_DIR, 'node_modules', '.bin', 'pagefind.cmd')
-  : join(PROJECT_DIR, 'node_modules', '.bin', 'pagefind');
-
-const result = spawnSync(pagefindBin, ['--site', DIST_CLIENT, '--output-path', DIST_PAGEFIND], {
+const pagefindRunner = join(PROJECT_DIR, 'node_modules', 'pagefind', 'lib', 'runner', 'bin.cjs');
+const result = spawnSync(process.execPath, [pagefindRunner, '--site', DIST_CLIENT, '--output-path', DIST_PAGEFIND], {
   stdio: 'inherit',
   cwd: PROJECT_DIR,
-  shell: false,
 });
 
 if (result.status !== 0) process.exit(result.status ?? 1);
@@ -271,7 +267,7 @@ const mb = Math.round(dirBytes(DIST_PAGEFIND) / 1024 / 1024);
 console.log(`[build-pagefind] wrote dist/client/pagefind and public/pagefind (${mb}MB)`);
 ```
 
-- [ ] **Step 3: Replace the build script**
+- [x] **Step 3: Replace the build script**
 
 In `package.json`, replace the `build` script with:
 
@@ -279,7 +275,7 @@ In `package.json`, replace the `build` script with:
 "build": "node scripts/copy-content.mjs && astro build && node scripts/build-pagefind.mjs"
 ```
 
-- [ ] **Step 4: Run the build**
+- [x] **Step 4: Run the build**
 
 Run:
 
@@ -289,7 +285,7 @@ npm run build
 
 Expected: build completes and Pagefind reports output under `dist/client/pagefind`.
 
-- [ ] **Step 5: Verify output size**
+- [x] **Step 5: Verify output size**
 
 Run:
 
@@ -299,7 +295,7 @@ node -e "const fs=require('fs'),path=require('path');function walk(d){let a=[];i
 
 Expected: both directories are fresh and roughly the same size.
 
-- [ ] **Step 6: Commit**
+- [x] **Step 6: Commit**
 
 Run:
 
