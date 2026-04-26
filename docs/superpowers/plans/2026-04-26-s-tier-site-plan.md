@@ -1087,7 +1087,7 @@ git commit -m "content: deepen priority comparisons"
 - Modify: `package.json`
 - Modify: `.github/workflows/ci.yml`
 
-- [ ] **Step 1: Create the budget script**
+- [x] **Step 1: Create the budget script**
 
 Create `scripts/check-dist-budget.mjs`:
 
@@ -1126,7 +1126,7 @@ for (const budget of budgets) {
 if (failed) process.exit(2);
 ```
 
-- [ ] **Step 2: Add the script alias**
+- [x] **Step 2: Add the script alias**
 
 In `package.json`, add:
 
@@ -1134,7 +1134,7 @@ In `package.json`, add:
 "check:dist": "node scripts/check-dist-budget.mjs"
 ```
 
-- [ ] **Step 3: Run after build in CI**
+- [x] **Step 3: Run after build in CI**
 
 In `.github/workflows/ci.yml`, add:
 
@@ -1143,7 +1143,7 @@ In `.github/workflows/ci.yml`, add:
         run: npm run check:dist
 ```
 
-- [ ] **Step 4: Verify locally**
+- [x] **Step 4: Verify locally**
 
 Run:
 
@@ -1154,7 +1154,7 @@ npm run check:dist
 
 Expected: budgets pass.
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 Run:
 

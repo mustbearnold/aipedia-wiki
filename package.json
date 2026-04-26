@@ -15,6 +15,7 @@
     "check:links": "node scripts/audit-internal-links.mjs",
     "check:news": "node scripts/audit-news-xrefs.mjs",
     "check:security": "npm audit --audit-level=moderate",
+    "check:dist": "node scripts/check-dist-budget.mjs",
     "check": "npm run guard:check && npm run check:links && npm run check:news && npm run check:security",
     "guard:baseline": "node scripts/guard-content.mjs --baseline",
     "astro": "astro",
