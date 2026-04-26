@@ -1280,7 +1280,7 @@ git commit -m "test: add visual smoke coverage"
 - Create: `scripts/benchmark-manifest.mjs`
 - Modify: `src/content.config.ts` only after benchmark artifacts exist
 
-- [ ] **Step 1: Document benchmark rules**
+- [x] **Step 1: Document benchmark rules**
 
 Create `docs/benchmarks/methodology.md`:
 
@@ -1303,7 +1303,7 @@ Benchmarks must include:
 No benchmark page ships from memory, vendor marketing, or unsaved manual observation.
 ```
 
-- [ ] **Step 2: Create fixture README**
+- [x] **Step 2: Create fixture README**
 
 Create `benchmarks/fixtures/README.md`:
 
@@ -1313,7 +1313,7 @@ Create `benchmarks/fixtures/README.md`:
 Store reusable prompts, input files, images, documents, and task descriptions here. Each benchmark result must point to the fixture it used.
 ```
 
-- [ ] **Step 3: Create manifest script**
+- [x] **Step 3: Create manifest script**
 
 Create `scripts/benchmark-manifest.mjs`:
 
@@ -1334,11 +1334,11 @@ console.log(`[benchmark-manifest] ${files.length} result file(s)`);
 for (const file of files) console.log(`- ${file}`);
 ```
 
-- [ ] **Step 4: Add no public benchmark pages yet**
+- [x] **Step 4: Add no public benchmark pages yet**
 
 Do not re-enable the retired benchmark collection until at least one complete benchmark result exists.
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 Run:
 
