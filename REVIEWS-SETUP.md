@@ -2,6 +2,13 @@
 
 One-time setup for the Cloudflare D1-backed reviews system.
 
+## Current status
+
+- Review API functions live under `functions/api/reviews/`.
+- Moderation UI lives at `/admin/reviews/`.
+- Review submission requires the D1 `DB` binding, `TURNSTILE_SECRET_KEY`, `IP_HASH_SECRET`, and `ADMIN_PASSWORD`.
+- Tool Finder setup is tracked separately in `SETUP-D1-AND-FINDER.md`.
+
 ## 1. Create the D1 database
 
 ```bash
@@ -27,7 +34,7 @@ npx wrangler d1 execute aipedia-reviews --local --file=./migrations/0001_reviews
 
 1. Sign in to https://dash.cloudflare.com → Turnstile → Add site.
 2. Domain: `aipedia.wiki` (+ `localhost` for dev).
-3. Copy the **site key** into `wrangler.jsonc` `vars.TURNSTILE_SITE_KEY` AND into `.env.production` as `PUBLIC_TURNSTILE_SITE_KEY`.
+3. Copy the **site key** into the public environment variable `PUBLIC_TURNSTILE_SITE_KEY`.
 4. Copy the **secret key** as a Cloudflare Pages secret:
 
 ```bash

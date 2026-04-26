@@ -505,7 +505,7 @@ git commit -m "content: link recent news signals from tool pages"
 - Modify: `REVIEWS-SETUP.md`
 - Modify: `SAFETY.md` if floors or retired collections changed
 
-- [ ] **Step 1: Replace hardcoded corpus counts in `llms.txt.ts`**
+- [x] **Step 1: Replace hardcoded corpus counts in `llms.txt.ts`**
 
 In `src/pages/llms.txt.ts`, after collections are loaded, add:
 
@@ -521,7 +521,7 @@ Then replace the static summary line with:
   lines.push(`> Independent AI tools encyclopedia maintained by aipedia.wiki Editorial. ${tools.length} tool pages across ${activeCategories.length} categories, ${comparisons.length} head-to-head comparisons, ${useCases.length} use-case guides. Public pages carry verification metadata and editorial sourcing controls.`);
 ```
 
-- [ ] **Step 2: Fix stale setup claims**
+- [x] **Step 2: Fix stale setup claims**
 
 Update `SETUP-D1-AND-FINDER.md` so it says:
 
@@ -535,7 +535,7 @@ Update `SETUP-D1-AND-FINDER.md` so it says:
 - Newsletter signup is implemented at `src/pages/api/subscribe.ts`.
 ```
 
-- [ ] **Step 3: Replace starter README content**
+- [x] **Step 3: Replace starter README content**
 
 Replace the Astro starter README with a short project README:
 
@@ -558,7 +558,7 @@ npm run check
 Edit editorial content directly in `src/content/`. Do not edit the retired legacy backup tree.
 ```
 
-- [ ] **Step 4: Build and inspect manifests**
+- [x] **Step 4: Build and inspect manifests**
 
 Run:
 
@@ -569,7 +569,7 @@ Get-Content dist/client/llms.txt -TotalCount 20
 
 Expected: `/llms.txt` reports live counts, not old rounded counts.
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 Run:
 

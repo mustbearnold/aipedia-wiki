@@ -8,6 +8,9 @@ import { getCollection } from 'astro:content';
 
 export const GET: APIRoute = async () => {
   const categories = await getCollection('categories').catch(() => []);
+  const tools = await getCollection('tools').catch(() => []);
+  const comparisons = await getCollection('comparisons').catch(() => []);
+  const useCases = await getCollection('use-cases').catch(() => []);
   const activeCategories = categories
     .filter((c: any) => c.data.status !== 'dead')
     .sort((a: any, b: any) => (a.data.title || '').localeCompare(b.data.title || ''));
@@ -15,7 +18,7 @@ export const GET: APIRoute = async () => {
   const lines: string[] = [];
   lines.push('# aipedia.wiki');
   lines.push('');
-  lines.push('> Independent AI tools encyclopedia maintained by aipedia.wiki Editorial. 130+ tool pages across 14 categories, 90+ head-to-head comparisons, 90+ use-case guides. Every page is verified against primary vendor sources on a recurring schedule.');
+  lines.push(`> Independent AI tools encyclopedia maintained by aipedia.wiki Editorial. ${tools.length} tool pages across ${activeCategories.length} categories, ${comparisons.length} head-to-head comparisons, ${useCases.length} use-case guides. Public pages carry verification metadata and editorial sourcing controls.`);
   lines.push('');
   lines.push('Editorial positioning: no individual-author bylines, no fabricated hands-on testing claims. Pages cite vendor-published sources. Scoring is four-dimension (utility, value, moat, longevity) and is not influenced by affiliate commissions.');
   lines.push('');

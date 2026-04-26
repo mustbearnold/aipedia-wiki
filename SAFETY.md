@@ -30,18 +30,17 @@ aborts with a loud error and the recovery step (`git restore src/content/`).
 Bypass is possible with `CONTENT_GUARD_SKIP=1 npm run dev` — do not
 use this unless you have a specific, understood reason.
 
-### Floors (as of 2026-04-17)
+### Floors (as of 2026-04-26)
 ```
-tools:       100  (actual 132)
+tools:       100  (actual 217)
 comparisons: 200  (actual 280)
 use-cases:    50  (actual 92)
 categories:   10  (actual 14)
-trends:        3  (actual 5)
+trends:        3  (actual 8)
 companies:     3  (actual 5)
 dead:          3  (actual 8)
 glossary:      1  (actual 1)
-news:          3  (actual 8)
-benchmarks:    2  (actual 3)
+news:          3  (actual 122)
 workflows:     3  (actual 7)
 reports:       1  (actual 1)
 ```

@@ -1,7 +1,14 @@
 # Activation checklist: Reviews + Tool Finder
 
-Two features are coded and deployed but need one-time setup from your side
-(Cloudflare dashboard + wrangler) before they go live.
+Reviews are shipped behind Cloudflare D1, Turnstile, and admin secrets. The Tool Finder API exists, but the public Tool Finder UI is not present until `src/pages/tool-finder.astro` is added.
+
+## Current status
+
+- Reviews API functions exist under `functions/api/reviews/`.
+- Reviews UI exists at `/admin/reviews/`.
+- Tool Finder API exists at `functions/api/tool-finder.ts`.
+- Public Tool Finder UI is not present until `src/pages/tool-finder.astro` is added.
+- Newsletter signup is implemented at `src/pages/api/subscribe.ts`.
 
 ## 1. Reviews system
 
@@ -37,7 +44,7 @@ In the Cloudflare dashboard: Pages > aipedia-wiki > Settings > Environment varia
 - Submit a test review. It should accept, then hide pending moderation.
 - Visit `/admin/reviews/` (you'll be prompted for the password). Approve the test review. It should appear on the tool page.
 
-## 2. AI Tool Finder
+## 2. AI Tool Finder API
 
 ### 2a. Set the Perplexity secret
 
@@ -49,18 +56,8 @@ Same place as above — Pages > Settings > Environment variables > Production:
 
 ### 2b. Verify
 
-- Visit `/tool-finder/`. You should see a textarea and "Find my tools" button.
-- Type: "I need to transcribe 2 hours of interviews per week, under $30/month."
-- You should get 3 to 5 matches with fit scores and links to tool pages.
-- Rate limit is 20 queries per IP per day (tracked in the same D1 DB via a `finder_usage` table that auto-creates on first call).
+- API smoke test with a local Pages Functions preview or deployed endpoint: POST a JSON body with `query` and `turnstile_token` to `/api/tool-finder`.
+- Expected response is 3 to 5 matches with fit scores and links to tool pages.
+- Rate limit is 20 queries per IP per day when the D1 `DB` binding is present.
 
-## Status
-
-- `functions/api/reviews.ts` — POST (submit), GET (list approved), PATCH (approve, requires admin) — wired
-- `functions/api/tool-finder.ts` — POST (match tools via Perplexity sonar-pro) — wired
-- `src/pages/tool-finder.astro` — public UI — wired
-- `src/pages/admin/reviews.astro` — moderation UI — wired
-- `migrations/0001_reviews.sql` — D1 schema — ready to apply
-- Nav entry for Tool Finder — wired
-
-Once secrets are set and the D1 migration runs, both features are live with zero code deploys needed.
+Once secrets are set and the D1 migration runs, reviews can go live. Tool Finder still needs a public page and production security review before being promoted to users.
