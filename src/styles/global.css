@@ -1,4 +1,11 @@
 @import 'tailwindcss';
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/600.css';
+@import '@fontsource/inter/700.css';
+@import '@fontsource/inter/800.css';
+@import '@fontsource/jetbrains-mono/400.css';
+@import '@fontsource/jetbrains-mono/500.css';
 
 /* Reserve scrollbar space always. Prevents layout jut when modals lock body scroll. */
 html {
@@ -160,7 +167,7 @@ html, body {
   body {
     background-color: var(--bg-base);
     color: var(--text-secondary);
-    font-family: 'Geist', 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
     /* 14px on desktop for density; bump to 15.5px on narrow viewports so
        reading length stays comfortable on phones. Applies to anything
        inheriting body font-size including prose content. */
@@ -189,9 +196,9 @@ html, body {
     .wiki-prose h3 { font-size: 1.1rem; }
   }
 
-  /* Geist Mono for code, keyboard keys, and tabular figures */
+  /* JetBrains Mono for code, keyboard keys, and tabular figures */
   code, pre, kbd, samp, .font-mono, .tabular-nums {
-    font-family: 'Geist Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   }
 
   h1, h2, h3, h4 {

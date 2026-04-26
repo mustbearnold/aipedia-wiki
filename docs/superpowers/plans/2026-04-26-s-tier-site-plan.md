@@ -587,12 +587,13 @@ git commit -m "docs: align trust surfaces with current site"
 - Modify: `src/layouts/BaseLayout.astro`
 - Modify: `src/styles/global.css`
 - Modify: `public/_headers`
+- Modify: `src/pages/privacy.astro`
 
-- [ ] **Step 1: Remove Google font network calls**
+- [x] **Step 1: Remove Google font network calls**
 
 In `src/layouts/BaseLayout.astro`, remove the two preconnect tags and the Google Fonts stylesheet tag.
 
-- [ ] **Step 2: Import local fonts**
+- [x] **Step 2: Import local fonts**
 
 At the top of `src/styles/global.css`, below `@import 'tailwindcss';`, add:
 
@@ -612,7 +613,7 @@ Keep the existing `font-family: 'Geist', 'Inter', ...` temporarily only if visua
 font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
 ```
 
-- [ ] **Step 3: Keep CSP strict**
+- [x] **Step 3: Keep CSP strict**
 
 In `public/_headers`, keep:
 
@@ -623,7 +624,7 @@ style-src 'self' 'unsafe-inline';
 
 Do not add Google font domains after removing Google Fonts.
 
-- [ ] **Step 4: Build and inspect generated CSS**
+- [x] **Step 4: Build and inspect generated CSS**
 
 Run:
 
@@ -634,7 +635,7 @@ Select-String -Path dist/client/**/*.html -Pattern "fonts.googleapis|fonts.gstat
 
 Expected: no matches.
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 Run:
 
