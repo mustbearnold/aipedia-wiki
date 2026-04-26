@@ -23,8 +23,13 @@ async function sha256(text: string): Promise<string> {
   return [...new Uint8Array(hash)].map((b) => b.toString(16).padStart(2, '0')).join('');
 }
 
-async function verifyTurnstile(token: string, ip: string, secret: string): Promise<boolean> {
-  if (!secret) return true; // dev mode
+function isLocalRequest(request: Request): boolean {
+  const host = new URL(request.url).hostname;
+  return host === 'localhost' || host === '127.0.0.1' || host === '::1';
+}
+
+async function verifyTurnstile(token: string, ip: string, secret: string, request: Request): Promise<boolean> {
+  if (!secret) return isLocalRequest(request);
   if (!token) return false;
   const form = new FormData();
   form.append('secret', secret);
@@ -75,7 +80,7 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
   const ip = request.headers.get('CF-Connecting-IP') ?? '0.0.0.0';
   const userAgent = request.headers.get('user-agent')?.slice(0, 200) ?? '';
 
-  const tsOk = await verifyTurnstile(turnstile_token ?? '', ip, env.TURNSTILE_SECRET_KEY);
+  const tsOk = await verifyTurnstile(turnstile_token ?? '', ip, env.TURNSTILE_SECRET_KEY, request);
   if (!tsOk) {
     return new Response(JSON.stringify({ error: 'captcha_failed' }), { status: 403 });
   }

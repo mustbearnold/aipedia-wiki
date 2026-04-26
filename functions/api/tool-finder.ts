@@ -3,8 +3,8 @@
 // from the aipedia.wiki corpus with reasoning.
 //
 // Flow:
-//   1. Turnstile CAPTCHA check (unless TURNSTILE_SECRET_KEY unset — dev mode)
-//   2. Rate limit per IP (D1 if available; falls back to in-request cache)
+//   1. Turnstile CAPTCHA check (local-only bypass when secret is unset)
+//   2. Rate limit per IP (D1 required outside local development)
 //   3. Query Perplexity sonar-pro with the user's prompt + the wiki's
 //      tool corpus as context, constrained to aipedia.wiki domain
 //   4. Parse response → return array of {slug, title, reason, score}
@@ -34,8 +34,13 @@ async function sha256(text: string): Promise<string> {
   return [...new Uint8Array(hash)].map((b) => b.toString(16).padStart(2, '0')).join('');
 }
 
-async function verifyTurnstile(token: string, ip: string, secret: string): Promise<boolean> {
-  if (!secret) return true; // dev mode
+function isLocalRequest(request: Request): boolean {
+  const host = new URL(request.url).hostname;
+  return host === 'localhost' || host === '127.0.0.1' || host === '::1';
+}
+
+async function verifyTurnstile(token: string, ip: string, secret: string, request: Request): Promise<boolean> {
+  if (!secret) return isLocalRequest(request);
   if (!token) return false;
   const form = new FormData();
   form.append('secret', secret);
@@ -49,12 +54,10 @@ async function verifyTurnstile(token: string, ip: string, secret: string): Promi
   return !!data.success;
 }
 
-// Rate limit: if DB is bound, track per-IP usage in a lightweight
-// finder_usage table. Falls back to permissive if no DB.
-async function checkRateLimit(env: Env, ipHash: string): Promise<boolean> {
-  if (!env.DB) return true;
+// Rate limit: track per-IP usage in D1 outside local development.
+async function checkRateLimit(env: Env, ipHash: string, request: Request): Promise<boolean> {
+  if (!env.DB) return isLocalRequest(request);
   try {
-    // Ensure table exists (no-op after first call)
     await env.DB
       .prepare(
         `CREATE TABLE IF NOT EXISTS finder_usage (
@@ -70,14 +73,11 @@ async function checkRateLimit(env: Env, ipHash: string): Promise<boolean> {
       )
       .bind(ipHash)
       .first<{ n: number }>();
-    if ((recent?.n ?? 0) >= 20) return false; // 20 queries per IP per day
-    await env.DB
-      .prepare('INSERT INTO finder_usage (ip_hash) VALUES (?)')
-      .bind(ipHash)
-      .run();
+    if ((recent?.n ?? 0) >= 20) return false;
+    await env.DB.prepare('INSERT INTO finder_usage (ip_hash) VALUES (?)').bind(ipHash).run();
     return true;
   } catch {
-    return true; // fail open if DB misconfigured
+    return false;
   }
 }
 
@@ -86,10 +86,10 @@ const SYSTEM_PROMPT = `You are the aipedia.wiki Tool Finder. Your job is to reco
 RULES:
 - Only recommend tools that actually exist in the aipedia.wiki catalog (search the site to check)
 - Rank by fit to the user's specific need, not generic popularity
-- Be concrete: name the tool, cite the flagship version (as of 2026-04-15), mention the key differentiator and approximate pricing
+- Be concrete: name the tool, mention the key differentiator and approximate pricing when supported by aipedia.wiki pages
 - If the user's need is too vague, pick 3-5 category-leading tools and flag the ambiguity
-- Never recommend retired products (DALL-E retired March 2025, Sora discontinued March 2026, GPT-4o retired Feb 13 2026)
-- Current flagship models to reference where relevant: GPT-5.4, Claude Opus 4.6, Gemini 3.1 Pro, Grok 4.20, DeepSeek V3.2, Midjourney v7/v8 alpha, Flux 2, Hailuo 2.3, Kling 3.0
+- Never recommend retired products unless the aipedia.wiki page is explicitly about a retired product
+- Use aipedia.wiki pages and citations for model, pricing, and feature facts. Do not invent current flagship versions or context windows.
 
 OUTPUT FORMAT — strictly JSON, no prose wrapper:
 {
@@ -127,13 +127,13 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
 
   const ip = request.headers.get('CF-Connecting-IP') ?? '0.0.0.0';
 
-  const tsOk = await verifyTurnstile(payload.turnstile_token ?? '', ip, env.TURNSTILE_SECRET_KEY ?? '');
+  const tsOk = await verifyTurnstile(payload.turnstile_token ?? '', ip, env.TURNSTILE_SECRET_KEY ?? '', request);
   if (!tsOk) {
     return new Response(JSON.stringify({ error: 'captcha_failed' }), { status: 403 });
   }
 
   const ipHash = await sha256(`${ip}|${env.IP_HASH_SECRET ?? ''}`);
-  const underLimit = await checkRateLimit(env, ipHash);
+  const underLimit = await checkRateLimit(env, ipHash, request);
   if (!underLimit) {
     return new Response(JSON.stringify({ error: 'rate_limited', detail: '20 queries per IP per day' }), { status: 429 });
   }

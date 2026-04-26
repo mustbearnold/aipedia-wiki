@@ -654,7 +654,7 @@ git commit -m "perf: self host site fonts"
 - Modify: `functions/api/reviews/submit.ts`
 - Modify: `functions/api/tool-finder.ts`
 
-- [ ] **Step 1: Add a shared local-host check in each API file**
+- [x] **Step 1: Add a shared local-host check in each API file**
 
 Use this helper in each file:
 
@@ -665,7 +665,7 @@ function isLocalRequest(request: Request): boolean {
 }
 ```
 
-- [ ] **Step 2: Update Turnstile verification**
+- [x] **Step 2: Update Turnstile verification**
 
 Replace permissive CAPTCHA bypass logic with:
 
@@ -688,7 +688,7 @@ async function verifyTurnstile(token: string, ip: string, secret: string, reques
 
 Update call sites to pass `request`.
 
-- [ ] **Step 3: Make Tool Finder rate limiting fail closed outside local development**
+- [x] **Step 3: Make Tool Finder rate limiting fail closed outside local development**
 
 In `functions/api/tool-finder.ts`, replace DB-missing and DB-error fallbacks:
 
@@ -720,7 +720,7 @@ async function checkRateLimit(env: Env, ipHash: string, request: Request): Promi
 }
 ```
 
-- [ ] **Step 4: Remove hardcoded volatile model facts from Tool Finder**
+- [x] **Step 4: Remove hardcoded volatile model facts from Tool Finder**
 
 In `functions/api/tool-finder.ts`, replace the `Current flagship models...` rule with:
 
@@ -728,7 +728,7 @@ In `functions/api/tool-finder.ts`, replace the `Current flagship models...` rule
 - Use aipedia.wiki pages and citations for model, pricing, and feature facts. Do not invent current flagship versions or context windows.
 ```
 
-- [ ] **Step 5: Build**
+- [x] **Step 5: Build**
 
 Run:
 
@@ -738,7 +738,7 @@ npm run build
 
 Expected: build passes.
 
-- [ ] **Step 6: Commit**
+- [x] **Step 6: Commit**
 
 Run:
 

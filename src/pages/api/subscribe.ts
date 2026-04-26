@@ -22,8 +22,13 @@ async function sha256(text: string): Promise<string> {
   return [...new Uint8Array(hash)].map((b) => b.toString(16).padStart(2, '0')).join('');
 }
 
-async function verifyTurnstile(token: string, ip: string, secret: string): Promise<boolean> {
-  if (!secret) return true;
+function isLocalRequest(request: Request): boolean {
+  const host = new URL(request.url).hostname;
+  return host === 'localhost' || host === '127.0.0.1' || host === '::1';
+}
+
+async function verifyTurnstile(token: string, ip: string, secret: string, request: Request): Promise<boolean> {
+  if (!secret) return isLocalRequest(request);
   if (!token) return false;
   const form = new FormData();
   form.append('secret', secret);
@@ -112,7 +117,7 @@ export const POST: APIRoute = async ({ request, clientAddress }) => {
       (typeof clientAddress === 'string' ? clientAddress : '0.0.0.0');
 
     const tsSecret = String(workerEnv?.TURNSTILE_SECRET_KEY ?? '');
-    const tsOk = await verifyTurnstile(String(payload?.turnstile_token ?? ''), ip, tsSecret);
+    const tsOk = await verifyTurnstile(String(payload?.turnstile_token ?? ''), ip, tsSecret, request);
     if (!tsOk) {
       return json({ error: 'captcha_failed' }, 403);
     }
