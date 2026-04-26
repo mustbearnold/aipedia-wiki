@@ -108,6 +108,38 @@ test('homepage lead mover shows its rank as text', async ({ page }) => {
   expect(rankPaint.webkitTextFillColor).toBe('rgba(0, 0, 0, 0)');
 });
 
+test('homepage rotating cover card keeps warm orange accents out of the corner glow', async ({ page }) => {
+  await page.goto('/');
+
+  const warmAccents = await page.locator('#p3-cover-slides').evaluate((node) => {
+    const hexToHue = (hex) => {
+      const raw = String(hex || '').replace('#', '');
+      if (!/^[0-9a-f]{6}$/i.test(raw)) return null;
+
+      const r = parseInt(raw.slice(0, 2), 16) / 255;
+      const g = parseInt(raw.slice(2, 4), 16) / 255;
+      const b = parseInt(raw.slice(4, 6), 16) / 255;
+      const max = Math.max(r, g, b);
+      const min = Math.min(r, g, b);
+      const delta = max - min;
+      if (!delta) return 0;
+
+      let hue = 0;
+      if (max === r) hue = ((g - b) / delta) % 6;
+      else if (max === g) hue = (b - r) / delta + 2;
+      else hue = (r - g) / delta + 4;
+      return Math.round((hue * 60 + 360) % 360);
+    };
+
+    const slides = JSON.parse(node.textContent || '[]');
+    return slides
+      .flatMap((slide) => [slide.colorA, slide.colorB].map((color) => ({ title: slide.title, color, hue: hexToHue(color) })))
+      .filter(({ hue }) => hue !== null && (hue <= 65 || hue >= 350));
+  });
+
+  expect(warmAccents).toEqual([]);
+});
+
 test('compare featured cards use the cyan catalog palette', async ({ page }) => {
   await page.goto('/compare/');
 
