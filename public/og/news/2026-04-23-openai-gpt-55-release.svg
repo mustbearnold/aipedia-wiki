@@ -56,10 +56,10 @@
   <line x1="76" y1="128" x2="888" y2="128" stroke="rgba(148,163,184,0.13)" stroke-width="1"/>
 
   <!-- Headline -->
-  <text x="76" y="211" font-family="Geist, Inter, system-ui, sans-serif"
-        font-size="47" font-weight="800" fill="#f8fafc"
+  <text x="76" y="230" font-family="Geist, Inter, system-ui, sans-serif"
+        font-size="54" font-weight="800" fill="#f8fafc"
         style="letter-spacing:-0.01em;">
-    <tspan x="76" dy="0">OpenAI releases GPT-5.5</tspan><tspan x="76" dy="54">for ChatGPT and Codex,</tspan><tspan x="76" dy="54">with API access coming</tspan><tspan x="76" dy="54">soon…</tspan>
+    <tspan x="76" dy="0">OpenAI releases GPT-5.5</tspan><tspan x="76" dy="62">for ChatGPT, Codex, and</tspan><tspan x="76" dy="62">the API</tspan>
   </text>
 
   <!-- Footer signal -->
