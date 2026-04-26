@@ -112,7 +112,7 @@ const breadcrumbItems = [
 <BaseLayout title="AI Glossary | aipedia.wiki" description={description}>
   <BreadcrumbLD items={breadcrumbItems} />
 
-  <div class="glossary-desk" data-glossary-desk>
+  <div class="glossary-desk" data-glossary-desk data-refresh-surface="home-adjacent">
     <nav class="glossary-desk__breadcrumb" aria-label="Breadcrumb" data-pagefind-ignore>
       <a href="/">Home</a>
       <span aria-hidden="true">/</span>
@@ -128,7 +128,7 @@ const breadcrumbItems = [
         </p>
       </div>
 
-      <div class="glossary-desk__status" aria-label="Glossary status">
+      <div class="glossary-desk__status ref-hero-card" aria-label="Glossary status">
         <div>
           <span class="glossary-desk__metric">{terms.length}</span>
           <span class="glossary-desk__label">terms tracked</span>
@@ -337,7 +337,7 @@ const breadcrumbItems = [
       grid-template-columns: minmax(0, 1fr) minmax(280px, 430px);
       gap: 28px;
       align-items: end;
-      padding: 36px 0 28px;
+      padding: 28px 0 26px;
       border-bottom: 1px solid var(--glossary-line);
     }
 
@@ -361,10 +361,10 @@ const breadcrumbItems = [
     }
 
     .glossary-desk h1 {
-      max-width: 10ch;
+      max-width: 12ch;
       margin: 14px 0 0;
       color: var(--text-primary);
-      font-size: 76px;
+      font-size: clamp(48px, 6vw, 68px);
       font-weight: 850;
       letter-spacing: 0;
       line-height: 0.92;
@@ -385,7 +385,7 @@ const breadcrumbItems = [
       border: 1px solid var(--glossary-line);
       border-radius: 8px;
       background:
-        linear-gradient(135deg, rgba(94, 234, 212, 0.08), rgba(167, 139, 250, 0.08)),
+        linear-gradient(135deg, rgba(94, 234, 212, 0.09), rgba(56, 189, 248, 0.05)),
         var(--glossary-panel);
       overflow: hidden;
       box-shadow: 0 24px 70px rgba(0, 0, 0, 0.22);

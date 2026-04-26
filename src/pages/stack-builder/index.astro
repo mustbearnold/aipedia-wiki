@@ -351,12 +351,13 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
 
   <!-- Placeholder before selection -->
   <section id="stack-placeholder" class="sb-empty">
-    <div class="sb-empty-grid" aria-hidden="true">
-      <span></span><span></span><span></span>
+    <div id="sb-empty-grid" class="sb-empty-grid" aria-label="Selected roles">
+      <span data-empty-slot></span><span data-empty-slot></span><span data-empty-slot></span>
     </div>
-    <p class="sb-empty-kicker">Awaiting inputs</p>
-    <h2>Pick a role and budget to generate the stack.</h2>
-    <p>The result will show categories, recommended tools, price range, and safer alternatives.</p>
+    <div id="sb-empty-selection" class="sb-empty-selection" aria-live="polite"></div>
+    <p id="sb-empty-kicker" class="sb-empty-kicker">Awaiting inputs</p>
+    <h2 id="sb-empty-title">Pick a role and budget to generate the stack.</h2>
+    <p id="sb-empty-copy">The result will show categories, recommended tools, price range, and safer alternatives.</p>
   </section>
 
   <!-- Swap-tool modal -->
@@ -864,10 +865,69 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
       margin: 0 auto 1.25rem;
     }
     .sb-empty-grid span {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.35rem;
       min-height: 4.25rem;
       border: 1px dashed rgba(94, 234, 212, 0.24);
       border-radius: 8px;
       background: rgba(88, 242, 220, 0.05);
+      color: var(--text-muted);
+      font-size: 0.72rem;
+      line-height: 1.15;
+      overflow: hidden;
+      padding: 0.55rem;
+      text-align: center;
+    }
+    .sb-empty-grid span.is-filled {
+      border-style: solid;
+      border-color: rgba(94, 234, 212, 0.38);
+      background:
+        linear-gradient(135deg, rgba(94, 234, 212, 0.12), rgba(56, 189, 248, 0.05)),
+        rgba(88, 242, 220, 0.06);
+      color: var(--text-primary);
+    }
+    .sb-empty-grid strong {
+      display: block;
+      max-width: 100%;
+      overflow: hidden;
+      font-size: 0.8rem;
+      font-weight: 800;
+      text-overflow: ellipsis;
+    }
+    .sb-empty-grid small {
+      display: block;
+      color: var(--accent-primary);
+      font-family: var(--font-mono);
+      font-size: 0.62rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    .sb-empty-selection {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.45rem;
+      min-height: 1.8rem;
+      margin: -0.25rem auto 0.8rem;
+    }
+    .sb-empty-selection:empty {
+      display: none;
+    }
+    .sb-empty-chip {
+      display: inline-flex;
+      align-items: center;
+      min-height: 1.8rem;
+      border: 1px solid rgba(94, 234, 212, 0.25);
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.6);
+      color: var(--text-secondary);
+      font-size: 0.74rem;
+      font-weight: 750;
+      line-height: 1;
+      padding: 0 0.65rem;
     }
     .sb-empty-kicker {
       margin: 0;
@@ -1256,6 +1316,11 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
     const totalEl = document.getElementById('sb-total');
     const countChip = document.getElementById('sb-count-chip');
     const roleCounter = document.getElementById('role-counter');
+    const placeholderSlots = Array.from(document.querySelectorAll('[data-empty-slot]'));
+    const placeholderSelection = document.getElementById('sb-empty-selection');
+    const placeholderKicker = document.getElementById('sb-empty-kicker');
+    const placeholderTitle = document.getElementById('sb-empty-title');
+    const placeholderCopy = document.getElementById('sb-empty-copy');
 
     // ---------- URL sync ----------
     function readURL() {
@@ -1303,6 +1368,52 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
         const active = b.dataset.budget === state.budget;
         b.setAttribute('aria-pressed', active ? 'true' : 'false');
       });
+    }
+
+    function roleLabel(role) {
+      return document.querySelector(`.sb-role-btn[data-role="${role}"] .sb-role-title`)?.textContent?.trim() || role;
+    }
+    function budgetLabel(budget) {
+      return document.querySelector(`.sb-budget-btn[data-budget="${budget}"] .sb-budget-title`)?.textContent?.trim() || budget;
+    }
+    function renderPlaceholder() {
+      const roleLabels = state.roles.map(roleLabel);
+      placeholderSlots.forEach((slot, index) => {
+        const label = roleLabels[index];
+        if (label) {
+          slot.classList.add('is-filled');
+          slot.innerHTML = `<small>Role ${index + 1}</small><strong>${escapeHtml(label)}</strong>`;
+        } else {
+          slot.classList.remove('is-filled');
+          slot.textContent = '';
+        }
+      });
+
+      if (placeholderSelection) {
+        placeholderSelection.innerHTML = roleLabels
+          .map(label => `<span class="sb-empty-chip">${escapeHtml(label)}</span>`)
+          .join('');
+        if (state.budget) {
+          placeholderSelection.insertAdjacentHTML('beforeend', `<span class="sb-empty-chip">${escapeHtml(budgetLabel(state.budget))}</span>`);
+        }
+      }
+
+      if (!placeholderKicker || !placeholderTitle || !placeholderCopy) return;
+      if (state.roles.length && !state.budget) {
+        placeholderKicker.textContent = `${state.roles.length} / ${MAX_ROLES} roles selected`;
+        placeholderTitle.textContent = 'Choose a budget to generate the stack.';
+        placeholderCopy.textContent = `${roleLabels.join(' + ')} is ready. The budget tier controls which tools appear in each category.`;
+        return;
+      }
+      if (!state.roles.length && state.budget) {
+        placeholderKicker.textContent = `${budgetLabel(state.budget)} selected`;
+        placeholderTitle.textContent = 'Choose at least one role to generate the stack.';
+        placeholderCopy.textContent = 'Roles define the work pattern; budget controls the recommended tier.';
+        return;
+      }
+      placeholderKicker.textContent = 'Awaiting inputs';
+      placeholderTitle.textContent = 'Pick a role and budget to generate the stack.';
+      placeholderCopy.textContent = 'The result will show categories, recommended tools, price range, and safer alternatives.';
     }
 
     function toggleRole(role) {
@@ -1398,6 +1509,7 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
       if (!state.roles.length || !state.budget) {
         output.style.display = 'none';
         placeholder.style.display = '';
+        renderPlaceholder();
         return;
       }
       placeholder.style.display = 'none';

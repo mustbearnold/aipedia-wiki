@@ -56,7 +56,8 @@ const impactColors: Record<string, string> = {
     {sorted.map(t => (
       <a
         href={`/trends/${t.slug}/`}
-        class="group block p-5 rounded-xl border border-[var(--border)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] hover:border-[rgba(167,139,250,0.3)] transition-all no-underline"
+        class="group block p-5 rounded-xl border border-[var(--border)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] hover:border-[rgba(94,234,212,0.34)] transition-all no-underline"
+        data-trend-card
       >
         <div class="flex items-start gap-3 mb-3">
           <span class={`inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-medium uppercase tracking-wider border ${impactColors[t.impact] || impactColors.medium}`}>

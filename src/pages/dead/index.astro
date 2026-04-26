@@ -50,6 +50,9 @@ const causeColors: Record<string, string> = {
 };
 
 const total = sorted.length;
+const recent = sorted[0];
+const shutdownCount = sorted.filter((tool) => tool.cause === 'shutdown').length;
+const nonShutdownCount = sorted.filter((tool) => tool.cause !== 'shutdown').length;
 ---
 
 <BaseLayout
@@ -58,7 +61,7 @@ const total = sorted.length;
 >
   <Breadcrumb items={[{ label: 'Dead Tools' }]} />
 
-  <section class="idx-hero" data-pagefind-ignore>
+  <section class="idx-hero" data-pagefind-ignore data-refresh-surface="home-adjacent">
     <div class="idx-eyebrow">
       <span class="idx-eyebrow-chip idx-eyebrow-accent">Archive</span>
       <span class="idx-eyebrow-chip"><span class="tabular-nums">{total}</span> tool{total === 1 ? '' : 's'} archived</span>
@@ -70,6 +73,24 @@ const total = sorted.length;
     <p class="idx-subhead">
       AI tools that shut down, were acquired, pivoted, or rebranded. Archived so readers stop chasing products that no longer exist, and so the industry has a working memory.
     </p>
+  </section>
+
+  <section class="ref-signal-strip" aria-label="Archive status" data-pagefind-ignore>
+    <div class="ref-hero-card">
+      <span>Latest archive</span>
+      <strong>{recent?.diedYmd ? prettyDate(recent.diedYmd) : 'Tracked'}</strong>
+      <p>{recent?.title ?? 'Dead tools'} is the newest archived record.</p>
+    </div>
+    <div class="ref-hero-card">
+      <span>Shutdowns</span>
+      <strong class="tabular-nums">{shutdownCount}</strong>
+      <p>Products fully closed or discontinued for readers.</p>
+    </div>
+    <div class="ref-hero-card">
+      <span>Transitions</span>
+      <strong class="tabular-nums">{nonShutdownCount}</strong>
+      <p>Acquisitions, pivots, and rebrands kept in memory.</p>
+    </div>
   </section>
 
   <section class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-16">

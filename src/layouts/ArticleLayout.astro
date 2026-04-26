@@ -51,7 +51,7 @@ const breadcrumbLdItems = breadcrumbs
     <span data-pagefind-filter="Type">{type}</span>
   </div>
 
-  <div class="t2-canvas">
+  <div class="t2-canvas ref-surface" data-refresh-surface="home-adjacent">
     {breadcrumbs && (
       <nav class="t2-breadcrumb" aria-label="Breadcrumb">
         <a href="/">Home</a>
@@ -79,13 +79,52 @@ const breadcrumbLdItems = breadcrumbs
       </div>
     )}
 
-    <header class="t2-article-hero">
-      <h1 class="t2-title">{title}</h1>
-      {subhead && <p class="t2-tagline">{subhead}</p>}
+    <header class="t2-article-hero ref-article-hero">
+      <div class="ref-article-copy">
+        <h1 class="t2-title">{title}</h1>
+        {subhead && <p class="t2-tagline">{subhead}</p>}
+      </div>
+      <aside class="ref-hero-card ref-hero-ledger" aria-label="Editorial trust signals" data-pagefind-ignore>
+        <p class="ref-kicker">Editorial ledger</p>
+        <div class="ref-ledger-row">
+          <span>Placement</span>
+          <strong>Unpaid</strong>
+        </div>
+        <div class="ref-ledger-row">
+          <span>Claims</span>
+          <strong>Source checked</strong>
+        </div>
+        <div class="ref-ledger-row">
+          <span>Route type</span>
+          <strong>{type}</strong>
+        </div>
+      </aside>
     </header>
 
-    <article class="t2-prose t2-article-prose">
-      <slot />
-    </article>
+    <div class="ref-article-shell">
+      <article class="t2-prose t2-article-prose">
+        <slot />
+      </article>
+
+      <aside class="ref-hero-card ref-side-rail" aria-label="Reference routes" data-pagefind-ignore>
+        <p class="ref-kicker">Reference routes</p>
+        <a href="/about/editorial/">
+          <span>Editorial policy</span>
+          <strong>Standards</strong>
+        </a>
+        <a href="/about/scoring/">
+          <span>Scoring method</span>
+          <strong>4 axes</strong>
+        </a>
+        <a href="/trends/">
+          <span>Trend reports</span>
+          <strong>Current</strong>
+        </a>
+        <a href="/dead/">
+          <span>Dead tools</span>
+          <strong>Archive</strong>
+        </a>
+      </aside>
+    </div>
   </div>
 </BaseLayout>

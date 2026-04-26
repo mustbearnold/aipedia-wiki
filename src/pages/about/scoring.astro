@@ -254,7 +254,7 @@ const pageDesc =
 
   <h2>Score Benchmarks</h2>
 
-  <div class="not-prose my-6 border border-[var(--border)] rounded-lg overflow-hidden">
+  <div class="not-prose score-benchmarks my-6 border border-[var(--border)] rounded-lg overflow-hidden">
     <table class="w-full text-sm">
       <thead class="bg-[var(--bg-card)]">
         <tr>
@@ -447,5 +447,67 @@ const pageDesc =
   details summary::marker {
     content: '';
     display: none;
+  }
+
+  @media (max-width: 560px) {
+    .score-benchmarks {
+      border: 0;
+      overflow: visible;
+    }
+
+    .score-benchmarks table,
+    .score-benchmarks thead,
+    .score-benchmarks tbody,
+    .score-benchmarks tr,
+    .score-benchmarks th,
+    .score-benchmarks td {
+      display: block;
+      width: auto;
+    }
+
+    .score-benchmarks thead {
+      display: none;
+    }
+
+    .score-benchmarks tbody {
+      display: grid;
+      gap: 0.75rem;
+    }
+
+    .score-benchmarks tr {
+      padding: 0.9rem;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-card);
+    }
+
+    .score-benchmarks td {
+      padding: 0;
+    }
+
+    .score-benchmarks td + td {
+      margin-top: 0.45rem;
+    }
+
+    .score-benchmarks td::before {
+      display: block;
+      margin-bottom: 0.15rem;
+      color: var(--text-muted);
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .score-benchmarks td:nth-child(1)::before {
+      content: 'Score';
+    }
+
+    .score-benchmarks td:nth-child(2)::before {
+      content: 'Label';
+    }
+
+    .score-benchmarks td:nth-child(3)::before {
+      content: 'Interpretation';
+    }
   }
 </style>
