@@ -47,7 +47,7 @@ function readMarkdownFiles(dir) {
     .map((name) => {
       const path = join(dir, name);
       const raw = readFileSync(path, 'utf8');
-      const frontmatter = raw.match(/^---\n([\s\S]*?)\n---/);
+      const frontmatter = raw.match(/^---\r?\n([\s\S]*?)\r?\n---/);
       const body = frontmatter ? raw.slice(frontmatter[0].length) : raw;
       return { name, path, raw, frontmatter: frontmatter?.[1] ?? '', body };
     });
@@ -89,7 +89,7 @@ function parseToolList(frontmatter) {
 
 function parseFacts(frontmatter) {
   const facts = {};
-  const lines = frontmatter.split('\n');
+  const lines = frontmatter.split(/\r?\n/);
   let inFacts = false;
   let currentKey = '';
 
