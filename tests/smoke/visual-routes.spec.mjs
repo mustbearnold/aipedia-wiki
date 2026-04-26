@@ -46,3 +46,39 @@ test('homepage lead mover shows its rank as text', async ({ page }) => {
   ).toBe(true);
   expect(rankPaint.webkitTextFillColor).toBe('rgba(0, 0, 0, 0)');
 });
+
+test('compare featured cards use the cyan catalog palette', async ({ page }) => {
+  await page.goto('/compare/');
+
+  const featuredCards = page.locator('.compare-featured-grid .compare-card');
+  await expect(featuredCards).toHaveCount(6);
+
+  const cardPaint = await featuredCards.first().evaluate((node) => {
+    const style = window.getComputedStyle(node);
+    return {
+      borderColor: style.borderColor,
+      backgroundImage: style.backgroundImage,
+    };
+  });
+
+  expect(cardPaint.borderColor).not.toContain('167, 139, 250');
+  expect(cardPaint.backgroundImage).not.toContain('167, 139, 250');
+  expect(cardPaint.backgroundImage).toMatch(/34, 211, 238|94, 234, 212/);
+});
+
+test('tool finder matches the static catalog without an AI API call', async ({ page }) => {
+  const apiRequests = [];
+  page.on('request', (request) => {
+    if (request.url().includes('/api/tool-finder')) apiRequests.push(request.url());
+  });
+
+  await page.goto('/tool-finder/');
+  await expect(page.locator('.finder-note')).toContainText('No AI model');
+
+  await page.locator('[data-finder-query]').fill('I need a coding tool for TypeScript, VS Code, and pull request reviews.');
+  await page.locator('[data-finder-submit]').click();
+
+  await expect(page.locator('.finder-result')).not.toHaveCount(0);
+  await expect(page.locator('[data-finder-meta]')).toContainText('catalog match');
+  expect(apiRequests).toEqual([]);
+});

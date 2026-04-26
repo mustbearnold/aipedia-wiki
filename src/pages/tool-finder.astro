@@ -1,28 +1,92 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
 
-const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY ?? '';
 const exampleQueries = [
-  'I need an AI coding assistant for a small TypeScript team.',
+  'I need a coding assistant for a small TypeScript team.',
   'Find tools for turning podcast clips into short videos.',
   'I need a research workflow with citations and saved notes.',
 ];
+
+const categoryLabels: Record<string, string> = {
+  'ai-chatbots': 'Chatbots',
+  'ai-voice': 'Voice',
+  'ai-video': 'Video',
+  'ai-coding': 'Coding',
+  'ai-automation': 'Automation',
+  'ai-seo': 'SEO',
+  'ai-design': 'Design',
+  'ai-writing': 'Writing',
+  'ai-image': 'Image',
+  'ai-search': 'Search',
+  'ai-notes': 'Notes',
+  'ai-music': 'Music',
+  'ai-presentation': 'Presentation',
+  'ai-research': 'Research',
+};
+
+function averageScore(scores: Record<string, number | undefined> | undefined): number {
+  if (!scores) return 0;
+  const values = ['utility', 'value', 'moat', 'longevity'].map((key) => Number(scores[key] ?? 0));
+  return Math.round((values.reduce((sum, value) => sum + value, 0) / values.length) * 10) / 10;
+}
+
+const allTools = await getCollection('tools');
+const finderTools = allTools
+  .map((tool) => {
+    const data = tool.data;
+    const slug = data.slug || tool.id.replace(/\.md$/, '');
+    const category = data.category || '';
+    const categoryLabel = categoryLabels[category] || category.replace(/^ai-/, '').replace(/-/g, ' ');
+    const tags = Array.isArray(data.tags) ? data.tags : [];
+    const bestFor = Array.isArray(data.best_for) ? data.best_for : [];
+    const score = averageScore(data.scores);
+    const searchable = [
+      data.title,
+      data.tagline,
+      data.meta_description,
+      data.quick_answer,
+      category,
+      categoryLabel,
+      data.company,
+      data.pricing_model,
+      data.price_range,
+      ...tags,
+      ...bestFor,
+    ].filter(Boolean).join(' ');
+    return {
+      slug,
+      title: data.title,
+      tagline: data.tagline || data.meta_description || '',
+      category,
+      categoryLabel,
+      company: data.company || '',
+      pricingModel: data.pricing_model || '',
+      priceRange: data.price_range || '',
+      status: data.status || 'active',
+      score,
+      tags,
+      searchText: searchable,
+    };
+  })
+  .filter((tool) => tool.status !== 'dead' && tool.status !== 'acquired')
+  .sort((a, b) => b.score - a.score || a.title.localeCompare(b.title));
 ---
 
 <BaseLayout
   title="Tool Finder - aipedia.wiki"
-  description="Describe a workflow and get matched to AI tools in the aipedia.wiki catalog."
+  description="Search the aipedia.wiki catalog with a browser-side matcher. No model call required."
 >
-  <div class="finder-shell" data-finder-root data-has-turnstile={turnstileSiteKey ? 'true' : 'false'}>
+  <div class="finder-shell" data-finder-root>
     <section class="finder-head" aria-labelledby="finder-title">
       <p class="finder-eyebrow">Aipedia Index</p>
       <h1 id="finder-title">Tool Finder</h1>
-      <p class="finder-lede">Describe the job. Get a short list of matching AI tools from the catalog.</p>
+      <p class="finder-lede">Search by workflow, category, tool, or feature. Matches are scored from the static catalog in your browser.</p>
     </section>
 
-    <section class="finder-workspace" aria-label="Find AI tools">
+    <section class="finder-workspace" aria-label="Find tools">
       <form class="finder-form" data-finder-form>
-        <label class="finder-label" for="finder-query">What are you trying to do?</label>
+        <label class="finder-label" for="finder-query">What are you trying to find?</label>
         <textarea
           id="finder-query"
           name="query"
@@ -30,7 +94,7 @@ const exampleQueries = [
           maxlength="600"
           rows="8"
           required
-          placeholder="Example: I need an AI coding tool that can work inside VS Code, review pull requests, and handle a larger existing codebase."
+          placeholder="Example: coding tool that works inside VS Code, reviews pull requests, and handles a larger existing codebase."
           data-finder-query
         ></textarea>
 
@@ -40,13 +104,9 @@ const exampleQueries = [
           ))}
         </div>
 
-        {turnstileSiteKey && (
-          <div class="cf-turnstile finder-turnstile" data-sitekey={turnstileSiteKey} data-theme="dark"></div>
-        )}
-
         <div class="finder-actions">
           <button type="submit" class="finder-submit" data-finder-submit>Find tools</button>
-          <p class="finder-note">Results are generated, then checked against live aipedia.wiki tool pages.</p>
+          <p class="finder-note">No AI model call. No prompt leaves this page; matches are scored from static catalog metadata.</p>
         </div>
 
         <p class="finder-status" data-finder-status role="status" aria-live="polite"></p>
@@ -67,12 +127,47 @@ const exampleQueries = [
     </section>
   </div>
 
-  {turnstileSiteKey && (
-    <script is:inline async src="https://challenges.cloudflare.com/turnstile/v0/api.js" defer></script>
-  )}
-
-  <script is:inline>
+  <script is:inline define:vars={{ finderTools }}>
     (function () {
+      const CATALOG = Array.isArray(finderTools) ? finderTools : [];
+      const STOP_WORDS = new Set([
+        'about', 'after', 'also', 'and', 'are', 'can', 'for', 'from', 'get',
+        'have', 'inside', 'into', 'need', 'that', 'the', 'this', 'tool',
+        'tools', 'use', 'want', 'with', 'work', 'works',
+      ]);
+      const INTENTS = [
+        {
+          label: 'coding',
+          categories: ['ai-coding'],
+          terms: ['code', 'coding', 'developer', 'development', 'typescript', 'javascript', 'vscode', 'vs code', 'pull request', 'github', 'repo', 'ide'],
+        },
+        {
+          label: 'video',
+          categories: ['ai-video'],
+          terms: ['video', 'clip', 'clips', 'podcast', 'short', 'shorts', 'reels', 'tiktok', 'youtube', 'editing'],
+        },
+        {
+          label: 'research',
+          categories: ['ai-search', 'ai-research', 'ai-notes'],
+          terms: ['research', 'citation', 'citations', 'source', 'sources', 'notes', 'saved', 'paper', 'study', 'pdf'],
+        },
+        {
+          label: 'writing',
+          categories: ['ai-writing'],
+          terms: ['write', 'writing', 'copy', 'blog', 'email', 'draft', 'editor'],
+        },
+        {
+          label: 'image',
+          categories: ['ai-image', 'ai-design'],
+          terms: ['image', 'images', 'design', 'logo', 'art', 'photo', 'picture', 'mockup'],
+        },
+        {
+          label: 'automation',
+          categories: ['ai-automation'],
+          terms: ['automation', 'automate', 'workflow', 'zapier', 'agent', 'agents'],
+        },
+      ];
+
       function init() {
         const root = document.querySelector('[data-finder-root]');
         if (!root || root.dataset.bound === '1') return;
@@ -84,7 +179,6 @@ const exampleQueries = [
         const status = root.querySelector('[data-finder-status]');
         const results = root.querySelector('[data-finder-results]');
         const meta = root.querySelector('[data-finder-meta]');
-        const hasTurnstile = root.getAttribute('data-has-turnstile') === 'true';
 
         function escapeHtml(value) {
           return String(value).replace(/[&<>"']/g, (char) => ({
@@ -109,28 +203,117 @@ const exampleQueries = [
           }
         }
 
-        function errorMessage(error) {
+        function normalize(value) {
+          return String(value || '')
+            .toLowerCase()
+            .replace(/&/g, ' and ')
+            .replace(/[^a-z0-9+#.]+/g, ' ')
+            .replace(/\s+/g, ' ')
+            .trim();
+        }
+
+        function termsFromQuery(query) {
+          const terms = new Set();
+          normalize(query).split(' ').forEach((term) => {
+            if (term.length > 2 && !STOP_WORDS.has(term)) terms.add(term);
+          });
+          INTENTS.forEach((intent) => {
+            if (intent.terms.some((term) => normalize(query).includes(term))) {
+              terms.add(intent.label);
+              intent.terms.forEach((term) => {
+                if (term.length > 2 && !term.includes(' ')) terms.add(term);
+              });
+            }
+          });
+          return [...terms];
+        }
+
+        function scoreTool(tool, query) {
+          const normalizedQuery = normalize(query);
+          const haystack = normalize(tool.searchText);
+          const title = normalize(tool.title);
+          const category = normalize(`${tool.category} ${tool.categoryLabel}`);
+          const tags = normalize((tool.tags || []).join(' '));
+          const terms = termsFromQuery(query);
+          const matched = [];
+          let relevance = 0;
+
+          if (title && normalizedQuery.includes(title)) {
+            relevance += 18;
+            matched.push(tool.title);
+          }
+
+          for (const term of terms) {
+            if (!term) continue;
+            let termScore = 0;
+            if (title.includes(term)) termScore += 8;
+            if (tags.includes(term)) termScore += 5;
+            if (category.includes(term)) termScore += 5;
+            if (haystack.includes(term)) termScore += 2;
+            if (termScore > 0) {
+              relevance += termScore;
+              if (!matched.includes(term)) matched.push(term);
+            }
+          }
+
+          INTENTS.forEach((intent) => {
+            if (!intent.terms.some((term) => normalizedQuery.includes(term))) return;
+            if (intent.categories.includes(tool.category)) {
+              relevance += 14;
+              if (!matched.includes(intent.label)) matched.push(intent.label);
+            } else if (intent.terms.some((term) => haystack.includes(term))) {
+              relevance += 4;
+            }
+          });
+
+          if (normalizedQuery.includes('free') && ['free', 'freemium', 'open-source'].includes(tool.pricingModel)) {
+            relevance += 5;
+            matched.push('free');
+          }
+          if ((normalizedQuery.includes('team') || normalizedQuery.includes('enterprise')) && tool.searchText.toLowerCase().includes('team')) {
+            relevance += 3;
+            matched.push('team');
+          }
+
           return {
-            finder_disabled: 'Tool Finder is not enabled on this deployment yet.',
-            validation_failed: 'Describe the workflow in 8 to 600 characters.',
-            captcha_failed: 'Captcha verification failed. Refresh and try again.',
-            rate_limited: 'This network reached the daily Tool Finder limit.',
-            upstream_failed: 'The recommendation service is temporarily unavailable.',
-            parse_failed: 'The recommendation service returned an unreadable response.',
-            no_valid_matches: 'No verified tool matches came back. Try a more specific workflow.',
-            api_unavailable: 'Tool Finder API is unavailable in this preview.',
-            request_failed: 'The Tool Finder request could not be completed.',
-          }[error] || 'Something went wrong. Try again in a minute.';
+            ...tool,
+            relevance,
+            matched,
+            fit: Math.max(1, Math.min(10, Math.round((Math.min(relevance, 34) / 34) * 4 + Number(tool.score || 0) * 0.6))),
+          };
+        }
+
+        function reasonFor(match) {
+          const signals = match.matched.slice(0, 3).join(', ');
+          const price = match.priceRange || match.pricingModel;
+          const tagline = match.tagline ? match.tagline.replace(/\s+/g, ' ').slice(0, 130) : '';
+          const intro = signals ? `Catalog match for ${signals}.` : `Strong ${match.categoryLabel || 'catalog'} score.`;
+          const context = [match.categoryLabel, price].filter(Boolean).join(' · ');
+          return [intro, tagline || context].filter(Boolean).join(' ');
+        }
+
+        function findMatches(query) {
+          return CATALOG
+            .map((tool) => scoreTool(tool, query))
+            .filter((tool) => tool.relevance > 0)
+            .sort((a, b) => b.relevance - a.relevance || b.score - a.score || a.title.localeCompare(b.title))
+            .slice(0, 5)
+            .map((match) => ({
+              slug: match.slug,
+              title: match.title,
+              reason: reasonFor(match),
+              fit: match.fit,
+            }));
         }
 
         function renderMatches(matches) {
           if (!results || !meta) return;
           if (!matches.length) {
-            meta.textContent = 'No matches returned.';
-            results.innerHTML = '<div class="finder-empty"><span class="finder-empty-mark" aria-hidden="true"></span><p>No verified matches came back. Try naming the workflow, budget, and output you need.</p></div>';
+            meta.textContent = 'No catalog matches.';
+            results.innerHTML = '<div class="finder-empty"><span class="finder-empty-mark" aria-hidden="true"></span><p>No catalog matches came back. Try naming the workflow, budget, and output you need.</p></div>';
             return;
           }
-          meta.textContent = `${matches.length} verified match${matches.length === 1 ? '' : 'es'}.`;
+          meta.textContent = `${matches.length} catalog match${matches.length === 1 ? '' : 'es'}.`;
           results.innerHTML = matches.map((match, index) => {
             const slug = String(match.slug || '').toLowerCase().replace(/[^a-z0-9-]/g, '');
             const title = escapeHtml(match.title || slug);
@@ -169,39 +352,15 @@ const exampleQueries = [
             return;
           }
 
-          const fd = new FormData(form);
-          const turnstileToken = fd.get('cf-turnstile-response') || undefined;
-          if (hasTurnstile && !turnstileToken) {
-            setStatus('Complete the captcha before searching.', 'error');
-            return;
-          }
-
           setBusy(true);
           setStatus('Searching the catalog...', '');
           if (meta) meta.textContent = 'Searching.';
 
-          try {
-            const response = await fetch('/api/tool-finder', {
-              method: 'POST',
-              headers: { 'content-type': 'application/json' },
-              body: JSON.stringify({ query, turnstile_token: turnstileToken }),
-            });
-            const data = await response.json().catch(() => ({}));
-            if (!response.ok) {
-              throw new Error(data.error || (response.status === 404 ? 'api_unavailable' : 'request_failed'));
-            }
-            renderMatches(Array.isArray(data.matches) ? data.matches : []);
+          window.requestAnimationFrame(() => {
+            renderMatches(findMatches(query));
             setStatus('', '');
-            if (window.turnstile) {
-              try { window.turnstile.reset(); } catch (_) {}
-            }
-          } catch (error) {
-            const code = error instanceof Error ? error.message : 'request_failed';
-            setStatus(errorMessage(code), 'error');
-            if (meta) meta.textContent = 'Search failed.';
-          } finally {
             setBusy(false);
-          }
+          });
         });
       }
 

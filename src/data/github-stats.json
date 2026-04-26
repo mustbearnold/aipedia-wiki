@@ -3,14 +3,14 @@
     "url": "https://github.com/activepieces/activepieces",
     "full_name": "activepieces/activepieces",
     "description": "AI Agents & MCPs & AI Workflow Automation • (~400 MCP servers for AI agents) • AI Automation / AI Agent with MCPs • AI Workflows & AI Agents • MCPs for AI Agents",
-    "stars": 21917,
+    "stars": 21918,
     "forks": 3591,
     "open_issues": 488,
     "watchers": 124,
     "language": "TypeScript",
     "license": "NOASSERTION",
     "pushed_at": "2026-04-26T23:30:00Z",
-    "updated_at": "2026-04-27T01:10:44Z",
+    "updated_at": "2026-04-27T02:26:31Z",
     "created_at": "2022-12-03T02:52:46Z",
     "default_branch": "main",
     "archived": false,
@@ -29,7 +29,7 @@
       "workflow-automation",
       "workflows"
     ],
-    "fetched_at": "2026-04-26T13:51:28.508Z"
+    "fetched_at": "2026-04-26T14:46:21.657Z"
   },
   "ag2": {
     "url": "https://github.com/ag2ai/ag2",
@@ -64,20 +64,20 @@
       "open-source",
       "python"
     ],
-    "fetched_at": "2026-04-26T13:51:28.862Z"
+    "fetched_at": "2026-04-26T14:46:21.995Z"
   },
   "aider": {
     "url": "https://github.com/Aider-AI/aider",
     "full_name": "Aider-AI/aider",
     "description": "aider is AI pair programming in your terminal",
-    "stars": 43981,
+    "stars": 43982,
     "forks": 4301,
     "open_issues": 1499,
     "watchers": 243,
     "language": "Python",
     "license": "Apache-2.0",
     "pushed_at": "2026-04-25T16:44:33Z",
-    "updated_at": "2026-04-27T01:43:31Z",
+    "updated_at": "2026-04-27T02:20:16Z",
     "created_at": "2023-05-09T18:57:49Z",
     "default_branch": "main",
     "archived": false,
@@ -96,20 +96,20 @@
       "openai",
       "sonnet"
     ],
-    "fetched_at": "2026-04-26T13:51:29.197Z"
+    "fetched_at": "2026-04-26T14:46:22.347Z"
   },
   "anythingllm": {
     "url": "https://github.com/Mintplex-Labs/anything-llm",
     "full_name": "Mintplex-Labs/anything-llm",
     "description": "The all-in-one AI productivity accelerator. On device and privacy first with no annoying setup or configuration.",
-    "stars": 59046,
+    "stars": 59052,
     "forks": 6381,
     "open_issues": 342,
     "watchers": 384,
     "language": "JavaScript",
     "license": "MIT",
     "pushed_at": "2026-04-25T00:05:35Z",
-    "updated_at": "2026-04-27T01:46:40Z",
+    "updated_at": "2026-04-27T02:41:35Z",
     "created_at": "2023-06-04T02:29:14Z",
     "default_branch": "master",
     "archived": false,
@@ -134,25 +134,25 @@
       "vector-database",
       "web-scraping"
     ],
-    "fetched_at": "2026-04-26T13:51:29.562Z"
+    "fetched_at": "2026-04-26T14:46:22.703Z"
   },
   "cline": {
     "url": "https://github.com/cline/cline",
     "full_name": "cline/cline",
     "description": "Autonomous coding agent right in your IDE, capable of creating/editing files, executing commands, using the browser, and more with your permission every step of the way.",
-    "stars": 61032,
-    "forks": 6289,
+    "stars": 61035,
+    "forks": 6290,
     "open_issues": 732,
     "watchers": 272,
     "language": "TypeScript",
     "license": "Apache-2.0",
     "pushed_at": "2026-04-26T22:45:45Z",
-    "updated_at": "2026-04-27T01:33:47Z",
+    "updated_at": "2026-04-27T02:44:27Z",
     "created_at": "2024-07-06T07:28:10Z",
     "default_branch": "main",
     "archived": false,
     "topics": [],
-    "fetched_at": "2026-04-26T13:51:29.903Z"
+    "fetched_at": "2026-04-26T14:46:23.075Z"
   },
   "continue": {
     "url": "https://github.com/continuedev/continue",
@@ -165,7 +165,7 @@
     "language": "TypeScript",
     "license": "Apache-2.0",
     "pushed_at": "2026-04-26T08:47:26Z",
-    "updated_at": "2026-04-27T01:02:58Z",
+    "updated_at": "2026-04-27T02:36:28Z",
     "created_at": "2023-05-24T03:39:39Z",
     "default_branch": "main",
     "archived": false,
@@ -179,20 +179,20 @@
       "open-source",
       "vs-code-extenstion"
     ],
-    "fetched_at": "2026-04-26T13:51:30.265Z"
+    "fetched_at": "2026-04-26T14:46:23.440Z"
   },
   "crewai": {
     "url": "https://github.com/crewAIInc/crewAI",
     "full_name": "crewAIInc/crewAI",
     "description": "Framework for orchestrating role-playing, autonomous AI agents. By fostering collaborative intelligence, CrewAI empowers agents to work together seamlessly, tackling complex tasks.",
-    "stars": 49999,
-    "forks": 6881,
-    "open_issues": 418,
+    "stars": 50005,
+    "forks": 6880,
+    "open_issues": 417,
     "watchers": 361,
     "language": "Python",
     "license": "MIT",
-    "pushed_at": "2026-04-27T01:18:40Z",
-    "updated_at": "2026-04-27T00:48:02Z",
+    "pushed_at": "2026-04-27T01:59:13Z",
+    "updated_at": "2026-04-27T02:43:54Z",
     "created_at": "2023-10-27T03:26:59Z",
     "default_branch": "main",
     "archived": false,
@@ -203,20 +203,20 @@
       "aiagentframework",
       "llms"
     ],
-    "fetched_at": "2026-04-26T13:51:30.661Z"
+    "fetched_at": "2026-04-26T14:46:23.791Z"
   },
   "fish-audio": {
     "url": "https://github.com/fishaudio/fish-speech",
     "full_name": "fishaudio/fish-speech",
     "description": "SOTA Open Source TTS",
-    "stars": 29961,
+    "stars": 29962,
     "forks": 2524,
     "open_issues": 31,
     "watchers": 153,
     "language": "Python",
     "license": "NOASSERTION",
     "pushed_at": "2026-04-06T19:09:42Z",
-    "updated_at": "2026-04-27T01:41:27Z",
+    "updated_at": "2026-04-27T02:28:49Z",
     "created_at": "2023-10-10T03:16:51Z",
     "default_branch": "main",
     "archived": false,
@@ -229,7 +229,7 @@
       "vqgan",
       "vqvae"
     ],
-    "fetched_at": "2026-04-26T13:51:31.057Z"
+    "fetched_at": "2026-04-26T14:46:24.164Z"
   },
   "flux": {
     "url": "https://github.com/black-forest-labs/flux",
@@ -247,7 +247,7 @@
     "default_branch": "main",
     "archived": false,
     "topics": [],
-    "fetched_at": "2026-04-26T13:51:31.442Z"
+    "fetched_at": "2026-04-26T14:46:24.527Z"
   },
   "glm": {
     "url": "https://github.com/zai-org/GLM-4.5",
@@ -271,20 +271,20 @@
       "moe",
       "reasoning-language-models"
     ],
-    "fetched_at": "2026-04-26T13:51:31.790Z"
+    "fetched_at": "2026-04-26T14:46:24.887Z"
   },
   "goose": {
     "url": "https://github.com/block/goose",
     "full_name": "aaif-goose/goose",
     "description": "an open source, extensible AI agent that goes beyond code suggestions - install, execute, edit, and test with any LLM",
-    "stars": 43325,
+    "stars": 43330,
     "forks": 4412,
-    "open_issues": 405,
+    "open_issues": 389,
     "watchers": 219,
     "language": "Rust",
     "license": "Apache-2.0",
-    "pushed_at": "2026-04-27T01:13:40Z",
-    "updated_at": "2026-04-27T01:03:43Z",
+    "pushed_at": "2026-04-27T02:33:49Z",
+    "updated_at": "2026-04-27T02:39:39Z",
     "created_at": "2024-08-23T19:03:36Z",
     "default_branch": "main",
     "archived": false,
@@ -294,7 +294,7 @@
       "ai-agents",
       "mcp"
     ],
-    "fetched_at": "2026-04-26T13:51:32.528Z"
+    "fetched_at": "2026-04-26T14:46:25.659Z"
   },
   "helicone": {
     "url": "https://github.com/Helicone/helicone",
@@ -332,25 +332,25 @@
       "prompt-management",
       "ycombinator"
     ],
-    "fetched_at": "2026-04-26T13:51:32.893Z"
+    "fetched_at": "2026-04-26T14:46:26.000Z"
   },
   "hermes-agent": {
     "url": "https://github.com/NousResearch/atropos",
     "full_name": "NousResearch/atropos",
     "description": "Atropos is a Language Model Reinforcement Learning Environments framework for collecting and evaluating LLM trajectories through diverse environments",
-    "stars": 1126,
+    "stars": 1127,
     "forks": 347,
     "open_issues": 79,
     "watchers": 13,
     "language": "Python",
     "license": "MIT",
     "pushed_at": "2026-04-20T16:40:18Z",
-    "updated_at": "2026-04-26T23:02:11Z",
+    "updated_at": "2026-04-27T02:12:58Z",
     "created_at": "2025-04-29T19:02:06Z",
     "default_branch": "main",
     "archived": false,
     "topics": [],
-    "fetched_at": "2026-04-26T13:51:33.226Z"
+    "fetched_at": "2026-04-26T14:46:26.343Z"
   },
   "jan-ai": {
     "url": "https://github.com/menloresearch/jan",
@@ -377,25 +377,25 @@
       "self-hosted",
       "tauri"
     ],
-    "fetched_at": "2026-04-26T13:51:33.901Z"
+    "fetched_at": "2026-04-26T14:46:27.016Z"
   },
   "kimi": {
     "url": "https://github.com/MoonshotAI/Kimi-K2",
     "full_name": "MoonshotAI/Kimi-K2",
     "description": "Kimi K2 is the large language model series developed by Moonshot AI team",
-    "stars": 10687,
+    "stars": 10688,
     "forks": 822,
     "open_issues": 64,
     "watchers": 88,
     "language": null,
     "license": "NOASSERTION",
     "pushed_at": "2026-01-21T05:33:12Z",
-    "updated_at": "2026-04-26T20:25:24Z",
+    "updated_at": "2026-04-27T02:13:07Z",
     "created_at": "2025-07-03T12:28:22Z",
     "default_branch": "main",
     "archived": false,
     "topics": [],
-    "fetched_at": "2026-04-26T13:51:34.240Z"
+    "fetched_at": "2026-04-26T14:46:27.367Z"
   },
   "kokoro": {
     "url": "https://github.com/hexgrad/kokoro",
@@ -413,20 +413,20 @@
     "default_branch": "main",
     "archived": false,
     "topics": [],
-    "fetched_at": "2026-04-26T13:51:34.616Z"
+    "fetched_at": "2026-04-26T14:46:27.716Z"
   },
   "langflow": {
     "url": "https://github.com/langflow-ai/langflow",
     "full_name": "langflow-ai/langflow",
     "description": "Langflow is a powerful tool for building and deploying AI-powered agents and workflows.",
-    "stars": 147390,
-    "forks": 8853,
-    "open_issues": 959,
+    "stars": 147394,
+    "forks": 8854,
+    "open_issues": 961,
     "watchers": 467,
     "language": "Python",
     "license": "MIT",
-    "pushed_at": "2026-04-27T00:48:17Z",
-    "updated_at": "2026-04-27T01:35:54Z",
+    "pushed_at": "2026-04-27T02:42:47Z",
+    "updated_at": "2026-04-27T02:39:14Z",
     "created_at": "2023-02-08T22:28:03Z",
     "default_branch": "main",
     "archived": false,
@@ -438,20 +438,20 @@
       "multiagent",
       "react-flow"
     ],
-    "fetched_at": "2026-04-26T13:51:34.960Z"
+    "fetched_at": "2026-04-26T14:46:28.080Z"
   },
   "langfuse": {
     "url": "https://github.com/langfuse/langfuse",
     "full_name": "langfuse/langfuse",
     "description": "🪢 Open source LLM engineering platform: LLM Observability, metrics, evals, prompt management, playground, datasets. Integrates with OpenTelemetry, Langchain, OpenAI SDK, LiteLLM, and more. 🍊YC W23 ",
-    "stars": 26117,
+    "stars": 26123,
     "forks": 2645,
-    "open_issues": 590,
+    "open_issues": 588,
     "watchers": 92,
     "language": "TypeScript",
     "license": "NOASSERTION",
-    "pushed_at": "2026-04-27T01:01:44Z",
-    "updated_at": "2026-04-27T01:01:46Z",
+    "pushed_at": "2026-04-27T02:36:08Z",
+    "updated_at": "2026-04-27T02:44:56Z",
     "created_at": "2023-05-18T17:47:09Z",
     "default_branch": "main",
     "archived": false,
@@ -476,7 +476,7 @@
       "self-hosted",
       "ycombinator"
     ],
-    "fetched_at": "2026-04-26T13:51:35.306Z"
+    "fetched_at": "2026-04-26T14:46:28.425Z"
   },
   "letta": {
     "url": "https://github.com/letta-ai/letta",
@@ -489,7 +489,7 @@
     "language": "Python",
     "license": "Apache-2.0",
     "pushed_at": "2026-04-12T20:54:54Z",
-    "updated_at": "2026-04-27T00:33:22Z",
+    "updated_at": "2026-04-27T02:26:20Z",
     "created_at": "2023-10-11T07:38:37Z",
     "default_branch": "main",
     "archived": false,
@@ -499,7 +499,7 @@
       "llm",
       "llm-agent"
     ],
-    "fetched_at": "2026-04-26T13:51:35.628Z"
+    "fetched_at": "2026-04-26T14:46:28.772Z"
   },
   "llama": {
     "url": "https://github.com/meta-llama/llama-models",
@@ -517,7 +517,8 @@
     "default_branch": "main",
     "archived": false,
     "topics": [],
-    "fetched_at": "2026-04-26T13:51:36.013Z"
+    "fetched_at": "2026-04-26T13:51:36.013Z",
+    "stale": true
   },
   "lm-studio": {
     "url": "https://github.com/lmstudio-ai/lms",
@@ -540,7 +541,8 @@
       "nodejs",
       "typescript"
     ],
-    "fetched_at": "2026-04-26T13:51:36.356Z"
+    "fetched_at": "2026-04-26T13:51:36.356Z",
+    "stale": true
   },
   "logseq": {
     "url": "https://github.com/logseq/logseq",
@@ -570,7 +572,8 @@
       "org-mode",
       "pkm"
     ],
-    "fetched_at": "2026-04-26T13:51:36.698Z"
+    "fetched_at": "2026-04-26T13:51:36.698Z",
+    "stale": true
   },
   "mastra": {
     "url": "https://github.com/mastra-ai/mastra",
@@ -602,7 +605,8 @@
       "typescript",
       "workflows"
     ],
-    "fetched_at": "2026-04-26T13:51:37.049Z"
+    "fetched_at": "2026-04-26T13:51:37.049Z",
+    "stale": true
   },
   "microsoft-agent-framework": {
     "url": "https://github.com/microsoft/agent-framework",
@@ -631,7 +635,8 @@
       "sdk",
       "workflows"
     ],
-    "fetched_at": "2026-04-26T13:51:37.405Z"
+    "fetched_at": "2026-04-26T13:51:37.405Z",
+    "stale": true
   },
   "mistral-ai": {
     "url": "https://github.com/mistralai/mistral-inference",
@@ -653,7 +658,8 @@
       "llm-inference",
       "mistralai"
     ],
-    "fetched_at": "2026-04-26T13:51:37.769Z"
+    "fetched_at": "2026-04-26T13:51:37.769Z",
+    "stale": true
   },
   "morphic": {
     "url": "https://github.com/miurla/morphic",
@@ -686,7 +692,8 @@
       "upstash",
       "vercel-ai-sdk"
     ],
-    "fetched_at": "2026-04-26T13:51:38.113Z"
+    "fetched_at": "2026-04-26T13:51:38.113Z",
+    "stale": true
   },
   "n8n": {
     "url": "https://github.com/n8n-io/n8n",
@@ -725,7 +732,8 @@
       "workflow",
       "workflow-automation"
     ],
-    "fetched_at": "2026-04-26T13:51:38.440Z"
+    "fetched_at": "2026-04-26T13:51:38.440Z",
+    "stale": true
   },
   "nanochat": {
     "url": "https://github.com/karpathy/nanochat",
@@ -743,7 +751,8 @@
     "default_branch": "master",
     "archived": false,
     "topics": [],
-    "fetched_at": "2026-04-26T13:51:38.765Z"
+    "fetched_at": "2026-04-26T13:51:38.765Z",
+    "stale": true
   },
   "ollama": {
     "url": "https://github.com/ollama/ollama",
@@ -777,7 +786,8 @@
       "ollama",
       "qwen"
     ],
-    "fetched_at": "2026-04-26T13:51:39.125Z"
+    "fetched_at": "2026-04-26T13:51:39.125Z",
+    "stale": true
   },
   "open-webui": {
     "url": "https://github.com/open-webui/open-webui",
@@ -811,7 +821,8 @@
       "ui",
       "webui"
     ],
-    "fetched_at": "2026-04-26T13:51:39.488Z"
+    "fetched_at": "2026-04-26T13:51:39.488Z",
+    "stale": true
   },
   "openclaw": {
     "url": "https://github.com/openclaw/openclaw",
@@ -837,7 +848,8 @@
       "own-your-data",
       "personal"
     ],
-    "fetched_at": "2026-04-26T13:51:39.812Z"
+    "fetched_at": "2026-04-26T13:51:39.812Z",
+    "stale": true
   },
   "openhands": {
     "url": "https://github.com/All-Hands-AI/OpenHands",
@@ -865,7 +877,8 @@
       "llm",
       "openai"
     ],
-    "fetched_at": "2026-04-26T13:51:40.629Z"
+    "fetched_at": "2026-04-26T13:51:40.629Z",
+    "stale": true
   },
   "stable-diffusion": {
     "url": "https://github.com/Stability-AI/generative-models",
@@ -883,7 +896,8 @@
     "default_branch": "main",
     "archived": false,
     "topics": [],
-    "fetched_at": "2026-04-26T13:51:40.965Z"
+    "fetched_at": "2026-04-26T13:51:40.965Z",
+    "stale": true
   },
   "whisper": {
     "url": "https://github.com/openai/whisper",
@@ -901,7 +915,8 @@
     "default_branch": "main",
     "archived": false,
     "topics": [],
-    "fetched_at": "2026-04-26T13:51:41.324Z"
+    "fetched_at": "2026-04-26T13:51:41.324Z",
+    "stale": true
   },
   "yi": {
     "url": "https://github.com/01-ai/Yi",
@@ -921,7 +936,8 @@
     "topics": [
       "large-language-models"
     ],
-    "fetched_at": "2026-04-26T13:51:41.680Z"
+    "fetched_at": "2026-04-26T13:51:41.680Z",
+    "stale": true
   },
   "zed": {
     "url": "https://github.com/zed-industries/zed",
@@ -944,6 +960,7 @@
       "text-editor",
       "zed"
     ],
-    "fetched_at": "2026-04-26T13:51:42.064Z"
+    "fetched_at": "2026-04-26T13:51:42.064Z",
+    "stale": true
   }
 }
