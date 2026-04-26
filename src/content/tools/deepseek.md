@@ -25,6 +25,27 @@ scores:
   value: 10
   moat: 5
   longevity: 7
+facts:
+  flagship_model:
+    value: "DeepSeek-V4 preview; V3.2 verified API baseline"
+    source: "/news/2026-04-24-deepseek-v4-preview-release/"
+    source_label: "DeepSeek V4 preview coverage"
+    verified_at: 2026-04-26
+  context_window:
+    value: "128K tokens"
+    source: "/tools/deepseek/"
+    source_label: "AIpedia DeepSeek review"
+    verified_at: 2026-04-26
+  best_paid_tier:
+    value: "Usage-based API; free chat"
+    source: "/tools/deepseek/"
+    source_label: "AIpedia DeepSeek review"
+    verified_at: 2026-04-26
+  best_for:
+    value: "Cost-sensitive API reasoning, open-weight baselines, and self-hosting"
+    source: "/tools/deepseek/"
+    source_label: "AIpedia DeepSeek review"
+    verified_at: 2026-04-26
 tags: [open-weights, reasoning, chinese-llm, coding, math, api, free-tier, deepseek-v3, deepseek-v4, r1]
 seo_title: "DeepSeek: Features, Pricing & Review (April 2026)"
 meta_description: "DeepSeek launched V4 preview models on April 24, 2026, with pro and flash versions reported by AP. API from $0.28/M input tokens remains the verified public pricing baseline until DeepSeek publishes V4 endpoint pricing."

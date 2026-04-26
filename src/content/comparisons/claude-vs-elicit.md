@@ -8,9 +8,10 @@ winner: depends
 seo_title: "Claude vs Elicit: Which Is Better in 2026?"
 meta_description: "Honest head-to-head of Claude and Elicit as of April 2026. Flagship models, current pricing, and which tool fits your workflow."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-04-26
+last_verified: 2026-04-26
 update_frequency: quarterly
+canonical_fact_table: true
 ---
 
 # Claude vs Elicit
@@ -21,9 +22,7 @@ update_frequency: quarterly
 
 Claude suits general tasks like writing and coding; Elicit excels in academic research and paper synthesis. Choice depends on whether you need broad AI assistance or specialized literature tools.
 
-## At a Glance
 
-| | Claude | Elicit |
 |---|---|---|
 | **Flagship** | Claude Opus 4.7, Sonnet 4.6 | Elicit 3.0 (powered by mixed models incl. Claude Sonnet 4.6, GPT-5.4)[2][3] |
 | **Price** | Free / Pro $20/mo / Max $200/mo | Free (limited) / Plus $12/mo / Enterprise custom |

@@ -24,6 +24,32 @@ scores:
   value: 8
   moat: 7
   longevity: 9
+facts:
+  flagship_model:
+    value: "Claude Opus 4.7, GPT-5.4, Gemini 3.1 Pro, Composer 2"
+    source: "/tools/cursor/"
+    source_label: "AIpedia Cursor review"
+    verified_at: 2026-04-23
+  coding_agent:
+    value: "Agents Window, Cloud Agents, Composer 2, and Bugbot add-on"
+    source: "/news/2026-04-02-cursor-3-agent-first-release/"
+    source_label: "Cursor 3 release coverage"
+    verified_at: 2026-04-23
+  context_window:
+    value: "Model-dependent; Opus 4.7 up to 1M tokens"
+    source: "/tools/cursor/"
+    source_label: "AIpedia Cursor review"
+    verified_at: 2026-04-23
+  best_paid_tier:
+    value: "Pro ($20/mo); Pro+ ($60/mo) for heavier frontier-model use"
+    source: "/tools/cursor/"
+    source_label: "AIpedia Cursor review"
+    verified_at: 2026-04-23
+  best_for:
+    value: "GUI-first multi-agent coding inside a VS Code fork"
+    source: "/tools/cursor/"
+    source_label: "AIpedia Cursor review"
+    verified_at: 2026-04-23
 tags: [code-editor, ide, autocomplete, ai-coding, vscode-fork, agentic-coding, cloud-agents, mcp, composer, claude-opus-4-7]
 seo_title: "Cursor: Features, Pricing & Review (April 2026)"
 meta_description: "Cursor is an AI-native VS Code fork. Claude Opus 4.7 added at launch (April 16, 2026). Cursor 3.0 (April 2, 2026) ships the Agents Window with Cloud Agents, Design Mode, and parallel agent orchestration. Hobby free; Pro $20; Pro+ $60; Ultra $200; Teams $40/user."

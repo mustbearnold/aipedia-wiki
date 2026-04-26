@@ -6,7 +6,7 @@
 // those values from being hardcoded into ChatGPT comparison prose/tables.
 
 import { existsSync, readdirSync, readFileSync } from 'node:fs';
-import { basename, dirname, join } from 'node:path';
+import { dirname, join, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const PROJECT_DIR = dirname(dirname(fileURLToPath(import.meta.url)));
@@ -22,7 +22,24 @@ const REQUIRED_FACTS = {
     'web_browsing',
     'best_paid_tier',
   ],
+  claude: ['flagship_model', 'context_window', 'best_paid_tier', 'coding_agent'],
+  gemini: [
+    'flagship_model',
+    'context_window',
+    'image_generation',
+    'video_generation',
+    'best_paid_tier',
+  ],
+  grok: ['flagship_model', 'context_window', 'real_time_voice', 'best_paid_tier'],
+  deepseek: ['flagship_model', 'context_window', 'best_for'],
+  midjourney: ['flagship_model', 'image_generation', 'best_paid_tier'],
+  runway: ['video_generation', 'best_paid_tier', 'best_for'],
+  elevenlabs: ['real_time_voice', 'best_paid_tier', 'best_for'],
+  cursor: ['coding_agent', 'best_paid_tier', 'best_for'],
+  'github-copilot': ['coding_agent', 'best_paid_tier', 'best_for'],
 };
+
+const CANONICAL_FACT_TOOL_SLUGS = new Set(Object.keys(REQUIRED_FACTS));
 
 const STALE_FACT_PATTERNS = [
   { re: /\bGPT-5\.4\b/g, label: 'GPT-5.4' },
@@ -129,6 +146,10 @@ function findLine(text, index) {
   return text.slice(0, index).split('\n').length;
 }
 
+function projectPath(path) {
+  return relative(PROJECT_DIR, path).replace(/\\/g, '/');
+}
+
 const failures = [];
 const warnings = [];
 
@@ -156,27 +177,33 @@ for (const [slug, keys] of Object.entries(REQUIRED_FACTS)) {
 const comparisons = readMarkdownFiles(COMPARISONS_DIR);
 for (const file of comparisons) {
   const toolSlugs = parseToolList(file.frontmatter);
-  if (!toolSlugs.includes('chatgpt')) continue;
+  const needsCanonicalFacts = toolSlugs.some((slug) => CANONICAL_FACT_TOOL_SLUGS.has(slug));
 
-  if (!/^canonical_fact_table:\s*true\s*$/m.test(file.frontmatter)) {
-    failures.push(
-      `${file.path.replace(PROJECT_DIR + '/', '')}: ChatGPT comparisons must set canonical_fact_table: true so the layout renders canonical facts`
-    );
-  }
-
-  if (/^##\s+At a Glance\s*$/m.test(file.body)) {
-    failures.push(
-      `${file.path.replace(PROJECT_DIR + '/', '')}: contains manual "## At a Glance"; ChatGPT comparisons must use the generated canonical fact table`
-    );
-  }
-
-  for (const pattern of STALE_FACT_PATTERNS) {
-    pattern.re.lastIndex = 0;
-    let match;
-    while ((match = pattern.re.exec(file.raw)) !== null) {
+  if (needsCanonicalFacts) {
+    if (!/^canonical_fact_table:\s*true\s*$/m.test(file.frontmatter)) {
       failures.push(
-        `${file.path.replace(PROJECT_DIR + '/', '')}:${findLine(file.raw, match.index)} hardcodes stale ChatGPT fact "${pattern.label}"`
+        `${projectPath(file.path)}: comparisons involving ${toolSlugs
+          .filter((slug) => CANONICAL_FACT_TOOL_SLUGS.has(slug))
+          .join(', ')} must set canonical_fact_table: true so the layout renders canonical facts`
       );
+    }
+
+    if (/^##\s+At a Glance\s*$/m.test(file.body)) {
+      failures.push(
+        `${projectPath(file.path)}: contains manual "## At a Glance"; comparisons with canonical facts must use the generated fact table`
+      );
+    }
+  }
+
+  if (toolSlugs.includes('chatgpt')) {
+    for (const pattern of STALE_FACT_PATTERNS) {
+      pattern.re.lastIndex = 0;
+      let match;
+      while ((match = pattern.re.exec(file.raw)) !== null) {
+        failures.push(
+          `${projectPath(file.path)}:${findLine(file.raw, match.index)} hardcodes stale ChatGPT fact "${pattern.label}"`
+        );
+      }
     }
   }
 
@@ -187,7 +214,7 @@ for (const file of comparisons) {
     const value = toolFactsBySlug.get(slug)?.[key]?.value;
     if (!value) {
       failures.push(
-        `${file.path.replace(PROJECT_DIR + '/', '')}:${findLine(file.raw, token.index)} references missing fact token {{fact:${slug}.${key}}}`
+        `${projectPath(file.path)}:${findLine(file.raw, token.index)} references missing fact token {{fact:${slug}.${key}}}`
       );
     }
   }
@@ -204,4 +231,6 @@ if (failures.length > 0) {
 }
 
 for (const warning of warnings) console.warn(`  ! ${warning}`);
-console.log('[guard-stale-facts] ✓ canonical ChatGPT facts present; ChatGPT comparisons avoid stale hardcoded facts.');
+console.log(
+  `[guard-stale-facts] ✓ canonical facts present for ${Object.keys(REQUIRED_FACTS).length} volatile tools; covered comparisons use generated fact tables.`
+);

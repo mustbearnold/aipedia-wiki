@@ -27,6 +27,37 @@ scores:
   value: 8
   moat: 9
   longevity: 10
+facts:
+  flagship_model:
+    value: "Eleven v3"
+    source: "/tools/elevenlabs/"
+    source_label: "AIpedia ElevenLabs review"
+    verified_at: 2026-04-19
+  real_time_voice:
+    value: "Flash v2.5 (~75ms) and ElevenAgents"
+    source: "/tools/elevenlabs/"
+    source_label: "AIpedia ElevenLabs review"
+    verified_at: 2026-04-19
+  image_generation:
+    value: "No"
+    source: "/tools/elevenlabs/"
+    source_label: "AIpedia ElevenLabs review"
+    verified_at: 2026-04-19
+  video_generation:
+    value: "No native video generation"
+    source: "/tools/elevenlabs/"
+    source_label: "AIpedia ElevenLabs review"
+    verified_at: 2026-04-19
+  best_paid_tier:
+    value: "Creator ($22/mo) for creators; Pro ($99/mo) for production"
+    source: "/tools/elevenlabs/"
+    source_label: "AIpedia ElevenLabs review"
+    verified_at: 2026-04-19
+  best_for:
+    value: "High-quality TTS, voice cloning, dubbing, audiobooks, and voice agents"
+    source: "/tools/elevenlabs/"
+    source_label: "AIpedia ElevenLabs review"
+    verified_at: 2026-04-19
 tags: [tts, voice-cloning, text-to-speech, voice-ai, audio, dubbing, voice-agents, conversational-ai]
 seo_title: 'ElevenLabs: Features, Pricing & Review (April 2026)'
 meta_description: >-

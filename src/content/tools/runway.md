@@ -25,6 +25,32 @@ scores:
   value: 7
   moat: 9
   longevity: 10
+facts:
+  flagship_model:
+    value: "Gen-4 / Gen-4 Turbo"
+    source: "/tools/runway/"
+    source_label: "AIpedia Runway review"
+    verified_at: 2026-04-17
+  video_generation:
+    value: "Gen-4 / Gen-4 Turbo, Aleph, Act-Two"
+    source: "/tools/runway/"
+    source_label: "AIpedia Runway review"
+    verified_at: 2026-04-17
+  image_generation:
+    value: "Image-to-video, not a still-image specialist"
+    source: "/tools/runway/"
+    source_label: "AIpedia Runway review"
+    verified_at: 2026-04-17
+  best_paid_tier:
+    value: "Pro ($35/mo) or Unlimited ($95/mo)"
+    source: "/tools/runway/"
+    source_label: "AIpedia Runway review"
+    verified_at: 2026-04-17
+  best_for:
+    value: "Production AI video, in-context editing, motion capture, and API workflows"
+    source: "/tools/runway/"
+    source_label: "AIpedia Runway review"
+    verified_at: 2026-04-17
 tags: [ai-video, video-generation, text-to-video, image-to-video, video-editing, filmmaking, runway, gen-4, gwm-1, aleph, act-two, professional]
 seo_title: "Runway: Features, Pricing & Review (April 2026)"
 meta_description: "Runway is the professional AI video platform with Gen-4 Turbo, Aleph video editing, Act-Two motion capture, and GWM-1 world models. Plans from $15 to $95/month. Best for studios and API-driven production."

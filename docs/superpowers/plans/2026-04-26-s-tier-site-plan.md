@@ -924,7 +924,7 @@ git commit -m "chore: remove unshipped tool finder api"
 - Modify: selected files in `src/content/tools/`
 - Modify: selected files in `src/content/comparisons/`
 
-- [ ] **Step 1: Pick the first canonical-facts cohort**
+- [x] **Step 1: Pick the first canonical-facts cohort**
 
 Use this first cohort:
 
@@ -941,7 +941,7 @@ cursor
 github-copilot
 ```
 
-- [ ] **Step 2: Add required fact keys per cohort**
+- [x] **Step 2: Add required fact keys per cohort**
 
 In `scripts/guard-stale-facts.mjs`, expand `REQUIRED_FACTS`:
 
@@ -960,7 +960,7 @@ const REQUIRED_FACTS = {
 };
 ```
 
-- [ ] **Step 3: Add facts to tool frontmatter**
+- [x] **Step 3: Add facts to tool frontmatter**
 
 For each cohort tool file in `src/content/tools/`, add frontmatter like:
 
@@ -975,7 +975,7 @@ facts:
 
 Use official vendor docs, official pricing pages, official changelogs, or existing aipedia news pages. Do not use third-party summaries for pricing or flagship model facts.
 
-- [ ] **Step 4: Convert cohort comparisons**
+- [x] **Step 4: Convert cohort comparisons**
 
 For every comparison whose `tools:` includes a cohort slug, set:
 
@@ -985,7 +985,7 @@ canonical_fact_table: true
 
 Remove manual `## At a Glance` sections when they duplicate volatile facts.
 
-- [ ] **Step 5: Run guards and sample build**
+- [x] **Step 5: Run guards and sample build**
 
 Run:
 
@@ -996,7 +996,7 @@ npm run build
 
 Expected: guard passes and comparison pages render canonical fact tables.
 
-- [ ] **Step 6: Commit**
+- [x] **Step 6: Commit**
 
 Run:
 

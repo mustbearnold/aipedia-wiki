@@ -24,6 +24,32 @@ scores:
   value: 9
   moat: 9
   longevity: 10
+facts:
+  flagship_model:
+    value: "GPT-5.5 and Claude Opus 4.7 on Pro+, Business, and Enterprise"
+    source: "/news/2026-04-24-github-copilot-gpt-55/"
+    source_label: "Copilot GPT-5.5 rollout coverage"
+    verified_at: 2026-04-26
+  coding_agent:
+    value: "Agent mode and GitHub Coding Agent"
+    source: "/tools/github-copilot/"
+    source_label: "AIpedia GitHub Copilot review"
+    verified_at: 2026-04-26
+  context_window:
+    value: "Model-dependent"
+    source: "/tools/github-copilot/"
+    source_label: "AIpedia GitHub Copilot review"
+    verified_at: 2026-04-26
+  best_paid_tier:
+    value: "Pro+ ($39/mo) for top models; Business/Enterprise for teams"
+    source: "/tools/github-copilot/"
+    source_label: "AIpedia GitHub Copilot review"
+    verified_at: 2026-04-26
+  best_for:
+    value: "GitHub-native IDE assistance, agent mode, and issue-to-PR workflows"
+    source: "/tools/github-copilot/"
+    source_label: "AIpedia GitHub Copilot review"
+    verified_at: 2026-04-26
 tags: [ide, autocomplete, ai-coding, vscode, jetbrains, xcode, neovim, github, microsoft, agent-mode, coding-agent, mcp, gpt-5-5, claude-opus-4-7]
 seo_title: "GitHub Copilot: Features, Pricing & Review (April 2026)"
 meta_description: "GitHub Copilot runs GPT-5.5 and Claude Opus 4.7 on Pro+/Business/Enterprise, plus GPT-5.4 and Gemini 3.1 Pro across VS Code, Visual Studio, JetBrains, Xcode, and Neovim. Free, Pro $10, Pro+ $39, Business $19/seat, Enterprise $39/seat."

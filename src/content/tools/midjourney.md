@@ -24,6 +24,32 @@ scores:
   value: 8
   moat: 9
   longevity: 10
+facts:
+  flagship_model:
+    value: "V7 production default; V8.1 Alpha on alpha.midjourney.com"
+    source: "/tools/midjourney/"
+    source_label: "AIpedia Midjourney review"
+    verified_at: 2026-04-22
+  image_generation:
+    value: "Yes (image generation specialist)"
+    source: "/tools/midjourney/"
+    source_label: "AIpedia Midjourney review"
+    verified_at: 2026-04-22
+  video_generation:
+    value: "No native video generation"
+    source: "/tools/midjourney/"
+    source_label: "AIpedia Midjourney review"
+    verified_at: 2026-04-22
+  best_paid_tier:
+    value: "Standard ($30/mo); Pro/Mega for stealth or heavy usage"
+    source: "/tools/midjourney/"
+    source_label: "AIpedia Midjourney review"
+    verified_at: 2026-04-22
+  best_for:
+    value: "Cinematic, stylized, and moodboard-quality image generation"
+    source: "/tools/midjourney/"
+    source_label: "AIpedia Midjourney review"
+    verified_at: 2026-04-22
 tags: [ai-image, image-generation, text-to-image, midjourney, art, design, creative, v7, v8]
 seo_title: "Midjourney: Features, Pricing & Review (April 2026)"
 meta_description: "Midjourney V7 is the production default; V8 Alpha (March 17, 2026) and V8.1 Alpha (April 14, 2026) run on alpha.midjourney.com. Plans $10-$120/mo, no free tier. Web app now leads Discord in feature depth."

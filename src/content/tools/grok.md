@@ -25,6 +25,42 @@ scores:
   value: 6
   moat: 7
   longevity: 6
+facts:
+  flagship_model:
+    value: "Grok 4.20 Beta 2; Grok 4.3 beta on paid tiers"
+    source: "/tools/grok/"
+    source_label: "AIpedia Grok review"
+    verified_at: 2026-04-26
+  context_window:
+    value: "2M tokens"
+    source: "/tools/grok/"
+    source_label: "AIpedia Grok review"
+    verified_at: 2026-04-26
+  real_time_voice:
+    value: "Yes (Voice Mode and Grok Voice Think Fast 1.0)"
+    source: "/news/2026-04-23-xai-grok-voice-think-fast-10/"
+    source_label: "Grok Voice launch coverage"
+    verified_at: 2026-04-26
+  image_generation:
+    value: "Aurora / Grok Imagine, restricted"
+    source: "/tools/grok/"
+    source_label: "AIpedia Grok review"
+    verified_at: 2026-04-26
+  video_generation:
+    value: "No video generation; video input on Grok 4.3"
+    source: "/tools/grok/"
+    source_label: "AIpedia Grok review"
+    verified_at: 2026-04-26
+  best_paid_tier:
+    value: "SuperGrok ($30/mo) or X Premium+ (~$40/mo)"
+    source: "/news/2026-04-19-grok-4-3-beta-premium-plus-supergrok/"
+    source_label: "Grok 4.3 expansion coverage"
+    verified_at: 2026-04-26
+  best_for:
+    value: "Live X data, long-context API work, and less restrictive social-intelligence queries"
+    source: "/tools/grok/"
+    source_label: "AIpedia Grok review"
+    verified_at: 2026-04-26
 tags: [ai-assistant, xai, twitter-ai, real-time-search, grok, multi-agent, long-context]
 seo_title: "Grok (xAI): Features, Pricing & Review (April 2026)"
 meta_description: "Grok is xAI's AI chatbot (not Groq, the LPU inference provider). Grok 4.3 beta now open to X Premium+ ($40/mo) and SuperGrok ($30/mo) as of April 19, 2026. 1T params, 2M context, PDF/PPT/spreadsheet output, video input. Heavy ($300/mo) adds 16-agent architecture."

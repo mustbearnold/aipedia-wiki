@@ -28,6 +28,37 @@ scores:
   value: 9
   moat: 8
   longevity: 9
+facts:
+  flagship_model:
+    value: "Gemini 3.1 Pro"
+    source: "/tools/gemini/"
+    source_label: "AIpedia Gemini review"
+    verified_at: 2026-04-26
+  context_window:
+    value: "1,048,576 tokens"
+    source: "/tools/gemini/"
+    source_label: "AIpedia Gemini review"
+    verified_at: 2026-04-26
+  image_generation:
+    value: "Nano Banana 2 / Nano Banana Pro"
+    source: "/tools/gemini/"
+    source_label: "AIpedia Gemini review"
+    verified_at: 2026-04-26
+  video_generation:
+    value: "Veo 3.1 and Veo 3.1 Fast"
+    source: "/tools/gemini/"
+    source_label: "AIpedia Gemini review"
+    verified_at: 2026-04-26
+  best_paid_tier:
+    value: "AI Pro ($19.99/mo)"
+    source: "/tools/gemini/"
+    source_label: "AIpedia Gemini review"
+    verified_at: 2026-04-26
+  best_for:
+    value: "Google Workspace, Android, long-context, and bundled multimodal output"
+    source: "/tools/gemini/"
+    source_label: "AIpedia Gemini review"
+    verified_at: 2026-04-26
 tags: [chatbot, ai-assistant, writing, search, multimodal, google-workspace, deep-research, deep-think, long-context, nano-banana, veo, android]
 best_for:
   - google workspace power users
