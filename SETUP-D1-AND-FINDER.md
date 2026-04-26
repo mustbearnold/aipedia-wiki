@@ -1,13 +1,13 @@
 # Activation checklist: Reviews + Tool Finder
 
-Reviews are shipped behind Cloudflare D1, Turnstile, and admin secrets. The Tool Finder API exists, but the public Tool Finder UI is not present until `src/pages/tool-finder.astro` is added.
+Reviews are shipped behind Cloudflare D1, Turnstile, and admin secrets. Tool Finder is shipped at `/tool-finder/` behind Turnstile, D1 rate limiting, and the Perplexity API secret.
 
 ## Current status
 
 - Reviews API functions exist under `functions/api/reviews/`.
 - Reviews UI exists at `/admin/reviews/`.
 - Tool Finder API exists at `functions/api/tool-finder.ts`.
-- Public Tool Finder UI is not present until `src/pages/tool-finder.astro` is added.
+- Public Tool Finder UI exists at `/tool-finder/`.
 - Newsletter signup is implemented at `src/pages/api/subscribe.ts`.
 
 ## 1. Reviews system
@@ -56,8 +56,10 @@ Same place as above — Pages > Settings > Environment variables > Production:
 
 ### 2b. Verify
 
+- Visit `/tool-finder/`, complete Turnstile, and submit a workflow query.
 - API smoke test with a local Pages Functions preview or deployed endpoint: POST a JSON body with `query` and `turnstile_token` to `/api/tool-finder`.
 - Expected response is 3 to 5 matches with fit scores and links to tool pages.
 - Rate limit is 20 queries per IP per day when the D1 `DB` binding is present.
+- Returned slugs are checked against live `/tools/<slug>/` pages before the API responds.
 
-Once secrets are set and the D1 migration runs, reviews can go live. Tool Finder still needs a public page and production security review before being promoted to users.
+Once secrets are set and the D1 migration runs, reviews and Tool Finder can go live. Keep `/tool-finder/` out of primary promotion until production Turnstile and Perplexity smoke tests pass.

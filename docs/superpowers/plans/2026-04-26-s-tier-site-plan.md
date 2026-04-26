@@ -849,14 +849,16 @@ git commit -m "feat: add filtered site search metadata"
 - Delete: `functions/api/tool-finder.ts`
 - Modify: `SETUP-D1-AND-FINDER.md`
 
-- [ ] **Step 1: Choose the direction**
+- [x] **Step 1: Choose the direction**
 
 Use this rule:
 
 - Keep Tool Finder if `PERPLEXITY_API_KEY`, Turnstile, and D1 are configured in production.
 - Remove Tool Finder if secrets are not ready or the recommendation UX is not ready for public traffic.
 
-- [ ] **Step 2A: If keeping, create `src/pages/tool-finder.astro`**
+Chosen path: keep Tool Finder. D1 is configured in `wrangler.jsonc`; the API now fails closed outside local development, validates Turnstile, rate limits through D1, and the UI handles disabled/error states if `PERPLEXITY_API_KEY` is not present.
+
+- [x] **Step 2A: If keeping, create `src/pages/tool-finder.astro`**
 
 Create a page that uses `BaseLayout`, shows one textarea, renders results, and posts to `/api/tool-finder`.
 
@@ -883,7 +885,7 @@ git rm functions/api/tool-finder.ts
 
 Then update `SETUP-D1-AND-FINDER.md` to say Tool Finder is not shipped.
 
-- [ ] **Step 3: Build**
+- [x] **Step 3: Build**
 
 Run:
 
@@ -893,7 +895,9 @@ npm run build
 
 Expected: build passes and no public docs claim a missing route exists.
 
-- [ ] **Step 4: Commit**
+Verification note: `npm run build` passed after stopping the local preview server that was locking `dist/client`; Playwright checked `/tool-finder/` at 1440x900 and 390x844 with no horizontal overflow, active navigation, no nested `<main>`, and a clear preview-only API unavailable state.
+
+- [x] **Step 4: Commit**
 
 Run one of:
 

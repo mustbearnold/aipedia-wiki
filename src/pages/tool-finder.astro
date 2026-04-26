@@ -1,0 +1,528 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY ?? '';
+const exampleQueries = [
+  'I need an AI coding assistant for a small TypeScript team.',
+  'Find tools for turning podcast clips into short videos.',
+  'I need a research workflow with citations and saved notes.',
+];
+---
+
+<BaseLayout
+  title="Tool Finder - aipedia.wiki"
+  description="Describe a workflow and get matched to AI tools in the aipedia.wiki catalog."
+>
+  <div class="finder-shell" data-finder-root data-has-turnstile={turnstileSiteKey ? 'true' : 'false'}>
+    <section class="finder-head" aria-labelledby="finder-title">
+      <p class="finder-eyebrow">Aipedia Index</p>
+      <h1 id="finder-title">Tool Finder</h1>
+      <p class="finder-lede">Describe the job. Get a short list of matching AI tools from the catalog.</p>
+    </section>
+
+    <section class="finder-workspace" aria-label="Find AI tools">
+      <form class="finder-form" data-finder-form>
+        <label class="finder-label" for="finder-query">What are you trying to do?</label>
+        <textarea
+          id="finder-query"
+          name="query"
+          minlength="8"
+          maxlength="600"
+          rows="8"
+          required
+          placeholder="Example: I need an AI coding tool that can work inside VS Code, review pull requests, and handle a larger existing codebase."
+          data-finder-query
+        ></textarea>
+
+        <div class="finder-examples" aria-label="Example searches">
+          {exampleQueries.map((query) => (
+            <button type="button" class="finder-example" data-query={query}>{query}</button>
+          ))}
+        </div>
+
+        {turnstileSiteKey && (
+          <div class="cf-turnstile finder-turnstile" data-sitekey={turnstileSiteKey} data-theme="dark"></div>
+        )}
+
+        <div class="finder-actions">
+          <button type="submit" class="finder-submit" data-finder-submit>Find tools</button>
+          <p class="finder-note">Results are generated, then checked against live aipedia.wiki tool pages.</p>
+        </div>
+
+        <p class="finder-status" data-finder-status role="status" aria-live="polite"></p>
+      </form>
+
+      <div class="finder-results" aria-live="polite">
+        <div class="finder-results-head">
+          <p class="finder-results-kicker">Matches</p>
+          <p class="finder-results-meta" data-finder-meta>Waiting for a query.</p>
+        </div>
+        <div class="finder-result-list" data-finder-results>
+          <div class="finder-empty">
+            <span class="finder-empty-mark" aria-hidden="true"></span>
+            <p>Useful matches will appear here with fit scores and direct tool links.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  {turnstileSiteKey && (
+    <script is:inline async src="https://challenges.cloudflare.com/turnstile/v0/api.js" defer></script>
+  )}
+
+  <script is:inline>
+    (function () {
+      function init() {
+        const root = document.querySelector('[data-finder-root]');
+        if (!root || root.dataset.bound === '1') return;
+        root.dataset.bound = '1';
+
+        const form = root.querySelector('[data-finder-form]');
+        const queryInput = root.querySelector('[data-finder-query]');
+        const submitButton = root.querySelector('[data-finder-submit]');
+        const status = root.querySelector('[data-finder-status]');
+        const results = root.querySelector('[data-finder-results]');
+        const meta = root.querySelector('[data-finder-meta]');
+        const hasTurnstile = root.getAttribute('data-has-turnstile') === 'true';
+
+        function escapeHtml(value) {
+          return String(value).replace(/[&<>"']/g, (char) => ({
+            '&': '&amp;',
+            '<': '&lt;',
+            '>': '&gt;',
+            '"': '&quot;',
+            "'": '&#39;',
+          }[char]));
+        }
+
+        function setStatus(message, tone) {
+          if (!status) return;
+          status.textContent = message || '';
+          status.dataset.tone = tone || '';
+        }
+
+        function setBusy(isBusy) {
+          if (submitButton) {
+            submitButton.disabled = isBusy;
+            submitButton.textContent = isBusy ? 'Finding...' : 'Find tools';
+          }
+        }
+
+        function errorMessage(error) {
+          return {
+            finder_disabled: 'Tool Finder is not enabled on this deployment yet.',
+            validation_failed: 'Describe the workflow in 8 to 600 characters.',
+            captcha_failed: 'Captcha verification failed. Refresh and try again.',
+            rate_limited: 'This network reached the daily Tool Finder limit.',
+            upstream_failed: 'The recommendation service is temporarily unavailable.',
+            parse_failed: 'The recommendation service returned an unreadable response.',
+            no_valid_matches: 'No verified tool matches came back. Try a more specific workflow.',
+            api_unavailable: 'Tool Finder API is unavailable in this preview.',
+            request_failed: 'The Tool Finder request could not be completed.',
+          }[error] || 'Something went wrong. Try again in a minute.';
+        }
+
+        function renderMatches(matches) {
+          if (!results || !meta) return;
+          if (!matches.length) {
+            meta.textContent = 'No matches returned.';
+            results.innerHTML = '<div class="finder-empty"><span class="finder-empty-mark" aria-hidden="true"></span><p>No verified matches came back. Try naming the workflow, budget, and output you need.</p></div>';
+            return;
+          }
+          meta.textContent = `${matches.length} verified match${matches.length === 1 ? '' : 'es'}.`;
+          results.innerHTML = matches.map((match, index) => {
+            const slug = String(match.slug || '').toLowerCase().replace(/[^a-z0-9-]/g, '');
+            const title = escapeHtml(match.title || slug);
+            const reason = escapeHtml(match.reason || '');
+            const fit = Math.max(1, Math.min(10, Math.round(Number(match.fit) || 0)));
+            return `
+              <a class="finder-result" href="/tools/${slug}/">
+                <span class="finder-rank">${index + 1}</span>
+                <span class="finder-result-logo" aria-hidden="true">
+                  <img src="/logos/tools/${slug}.png" alt="" loading="lazy" decoding="async" onerror="this.style.display='none'; this.parentElement.dataset.empty='true';" />
+                </span>
+                <span class="finder-result-body">
+                  <span class="finder-result-title">${title}</span>
+                  <span class="finder-result-reason">${reason}</span>
+                </span>
+                <span class="finder-fit">${fit}/10</span>
+              </a>
+            `;
+          }).join('');
+        }
+
+        root.querySelectorAll('[data-query]').forEach((button) => {
+          button.addEventListener('click', () => {
+            if (!queryInput) return;
+            queryInput.value = button.getAttribute('data-query') || '';
+            queryInput.focus();
+            setStatus('', '');
+          });
+        });
+
+        form?.addEventListener('submit', async (event) => {
+          event.preventDefault();
+          const query = (queryInput?.value || '').trim();
+          if (query.length < 8 || query.length > 600) {
+            setStatus('Describe the workflow in 8 to 600 characters.', 'error');
+            return;
+          }
+
+          const fd = new FormData(form);
+          const turnstileToken = fd.get('cf-turnstile-response') || undefined;
+          if (hasTurnstile && !turnstileToken) {
+            setStatus('Complete the captcha before searching.', 'error');
+            return;
+          }
+
+          setBusy(true);
+          setStatus('Searching the catalog...', '');
+          if (meta) meta.textContent = 'Searching.';
+
+          try {
+            const response = await fetch('/api/tool-finder', {
+              method: 'POST',
+              headers: { 'content-type': 'application/json' },
+              body: JSON.stringify({ query, turnstile_token: turnstileToken }),
+            });
+            const data = await response.json().catch(() => ({}));
+            if (!response.ok) {
+              throw new Error(data.error || (response.status === 404 ? 'api_unavailable' : 'request_failed'));
+            }
+            renderMatches(Array.isArray(data.matches) ? data.matches : []);
+            setStatus('', '');
+            if (window.turnstile) {
+              try { window.turnstile.reset(); } catch (_) {}
+            }
+          } catch (error) {
+            const code = error instanceof Error ? error.message : 'request_failed';
+            setStatus(errorMessage(code), 'error');
+            if (meta) meta.textContent = 'Search failed.';
+          } finally {
+            setBusy(false);
+          }
+        });
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+      } else {
+        init();
+      }
+      document.addEventListener('astro:page-load', init);
+    })();
+  </script>
+
+  <style>
+    .finder-shell {
+      color: var(--text-primary);
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 48px 20px 40px;
+    }
+
+    .finder-head {
+      display: grid;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .finder-eyebrow,
+    .finder-results-kicker {
+      margin: 0;
+      color: var(--accent-primary-text, #c4b5fd);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    .finder-head h1 {
+      margin: 0;
+      color: var(--text-primary);
+      font-size: 46px;
+      font-weight: 850;
+      letter-spacing: 0;
+      line-height: 1;
+    }
+
+    .finder-lede {
+      max-width: 680px;
+      margin: 0;
+      color: var(--text-secondary);
+      font-size: 17px;
+      line-height: 1.55;
+    }
+
+    .finder-workspace {
+      display: grid;
+      grid-template-columns: minmax(0, 0.94fr) minmax(360px, 1.06fr);
+      gap: 18px;
+      align-items: start;
+    }
+
+    .finder-form,
+    .finder-results {
+      min-width: 0;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-card);
+    }
+
+    .finder-form {
+      display: grid;
+      gap: 14px;
+      padding: 18px;
+    }
+
+    .finder-label {
+      color: var(--text-primary);
+      font-size: 14px;
+      font-weight: 750;
+    }
+
+    .finder-form textarea {
+      width: 100%;
+      min-height: 180px;
+      resize: vertical;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-base);
+      color: var(--text-primary);
+      font: inherit;
+      font-size: 15px;
+      line-height: 1.55;
+      padding: 13px 14px;
+      outline: none;
+    }
+
+    .finder-form textarea:focus {
+      border-color: var(--accent-primary);
+      box-shadow: 0 0 0 1px var(--accent-primary);
+    }
+
+    .finder-form textarea::placeholder {
+      color: var(--text-muted);
+    }
+
+    .finder-examples {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .finder-example {
+      max-width: 100%;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: var(--bg-base);
+      color: var(--text-secondary);
+      cursor: pointer;
+      font: inherit;
+      font-size: 12px;
+      line-height: 1.35;
+      padding: 7px 10px;
+      text-align: left;
+    }
+
+    .finder-example:hover {
+      border-color: rgba(167, 139, 250, 0.5);
+      color: var(--text-primary);
+    }
+
+    .finder-turnstile {
+      min-height: 65px;
+    }
+
+    .finder-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .finder-submit {
+      border: 0;
+      border-radius: 8px;
+      background: var(--accent-primary);
+      color: #0b0a14;
+      cursor: pointer;
+      font: inherit;
+      font-size: 14px;
+      font-weight: 800;
+      min-height: 42px;
+      padding: 0 16px;
+    }
+
+    .finder-submit:disabled {
+      cursor: progress;
+      opacity: 0.7;
+    }
+
+    .finder-note,
+    .finder-status,
+    .finder-results-meta {
+      margin: 0;
+      color: var(--text-muted);
+      font-size: 12px;
+      line-height: 1.45;
+    }
+
+    .finder-status[data-tone="error"] {
+      color: #fb7185;
+    }
+
+    .finder-results {
+      overflow: hidden;
+    }
+
+    .finder-results-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      border-bottom: 1px solid var(--border);
+      padding: 16px 18px;
+    }
+
+    .finder-result-list {
+      display: grid;
+      gap: 0;
+    }
+
+    .finder-empty {
+      display: grid;
+      place-items: center;
+      min-height: 320px;
+      padding: 34px;
+      text-align: center;
+    }
+
+    .finder-empty p {
+      max-width: 300px;
+      margin: 14px 0 0;
+      color: var(--text-muted);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .finder-empty-mark {
+      width: 46px;
+      height: 46px;
+      border: 1px solid rgba(167, 139, 250, 0.5);
+      border-radius: 50%;
+      background:
+        linear-gradient(90deg, transparent 48%, rgba(167, 139, 250, 0.8) 48%, rgba(167, 139, 250, 0.8) 52%, transparent 52%),
+        linear-gradient(0deg, transparent 48%, rgba(167, 139, 250, 0.8) 48%, rgba(167, 139, 250, 0.8) 52%, transparent 52%);
+    }
+
+    .finder-result {
+      display: grid;
+      grid-template-columns: 28px 42px minmax(0, 1fr) auto;
+      gap: 12px;
+      align-items: center;
+      min-height: 92px;
+      border-bottom: 1px solid var(--border);
+      color: inherit;
+      padding: 14px 18px;
+      text-decoration: none;
+    }
+
+    .finder-result:last-child {
+      border-bottom: 0;
+    }
+
+    .finder-result:hover {
+      background: var(--bg-card-hover);
+      text-decoration: none;
+    }
+
+    .finder-rank,
+    .finder-fit {
+      color: var(--text-muted);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .finder-result-logo {
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-base);
+      overflow: hidden;
+    }
+
+    .finder-result-logo[data-empty="true"]::before {
+      content: "";
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: var(--accent-primary);
+      opacity: 0.65;
+    }
+
+    .finder-result-logo img {
+      width: 28px;
+      height: 28px;
+      object-fit: contain;
+      border-radius: 6px;
+    }
+
+    .finder-result-body {
+      display: grid;
+      gap: 5px;
+      min-width: 0;
+    }
+
+    .finder-result-title {
+      color: var(--text-primary);
+      font-size: 15px;
+      font-weight: 800;
+      line-height: 1.25;
+    }
+
+    .finder-result-reason {
+      color: var(--text-secondary);
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .finder-fit {
+      border: 1px solid rgba(94, 234, 212, 0.35);
+      border-radius: 999px;
+      color: #5eead4;
+      padding: 5px 8px;
+      white-space: nowrap;
+    }
+
+    @media (max-width: 860px) {
+      .finder-shell {
+        padding: 34px 16px 30px;
+      }
+
+      .finder-head h1 {
+        font-size: 36px;
+      }
+
+      .finder-workspace {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .finder-result {
+        grid-template-columns: 24px 36px minmax(0, 1fr);
+      }
+
+      .finder-fit {
+        grid-column: 3;
+        justify-self: start;
+      }
+    }
+  </style>
+</BaseLayout>

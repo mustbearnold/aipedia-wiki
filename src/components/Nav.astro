@@ -18,6 +18,7 @@ function isActive(prefixes: string[]): boolean {
 }
 const activeExplore = isActive(['/categories/', '/tools/', '/guides/', '/use-cases/']);
 const activeCompare = isActive(['/compare/']);
+const activeFinder = isActive(['/tool-finder/']);
 const activeNews = isActive(['/news/', '/reports/', '/benchmarks/']);
 ---
 
@@ -37,11 +38,12 @@ const activeNews = isActive(['/news/', '/reports/', '/benchmarks/']);
     </a>
 
     <!-- Desktop links. Underline-slide on hover; active page shows the
-         accent bar. Kept to 3 content links + search + theme for scan
-         speed; Stack Builder / Workflows / Reports live in the drawer. -->
+         accent bar. Core navigation stays compact; deeper workflow
+         routes live in the drawer. -->
     <div class="hidden sm:flex items-center gap-1">
       <a href="/categories/" class:list={['nav-link', activeExplore && 'nav-link-active']}>Explore</a>
       <a href="/compare/" class:list={['nav-link', activeCompare && 'nav-link-active']}>Compare</a>
+      <a href="/tool-finder/" class:list={['nav-link', activeFinder && 'nav-link-active']}>Finder</a>
       <a href="/news/" class:list={['nav-link', activeNews && 'nav-link-active']}>News</a>
 
       <button id="search-trigger" type="button" class="nav-search">
@@ -90,6 +92,7 @@ const activeNews = isActive(['/news/', '/reports/', '/benchmarks/']);
     <nav class="py-3">
       <a href="/categories/" class="block px-5 py-3 text-sm text-[var(--text-primary)] no-underline hover:bg-[var(--bg-card-hover)]">Explore Categories</a>
       <a href="/compare/" class="block px-5 py-3 text-sm text-[var(--text-primary)] no-underline hover:bg-[var(--bg-card-hover)]">Compare Tools</a>
+      <a href="/tool-finder/" class="block px-5 py-3 text-sm text-[var(--text-primary)] no-underline hover:bg-[var(--bg-card-hover)]">Tool Finder</a>
       <a href="/news/" class="block px-5 py-3 text-sm text-[var(--text-primary)] no-underline hover:bg-[var(--bg-card-hover)]">Daily News</a>
       <a href="/trends/" class="block px-5 py-3 text-sm text-[var(--text-primary)] no-underline hover:bg-[var(--bg-card-hover)]">Trend Analysis</a>
       <a href="/guides/" class="block px-5 py-3 text-sm text-[var(--text-primary)] no-underline hover:bg-[var(--bg-card-hover)]">Use Cases</a>

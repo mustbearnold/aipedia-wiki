@@ -39,6 +39,15 @@ function isLocalRequest(request: Request): boolean {
   return host === 'localhost' || host === '127.0.0.1' || host === '::1';
 }
 
+async function isKnownToolSlug(slug: string, request: Request): Promise<boolean> {
+  const url = new URL(`/tools/${slug}/`, request.url).toString();
+  const head = await fetch(url, { method: 'HEAD' }).catch(() => null);
+  if (head?.ok) return true;
+  if (head && head.status !== 405) return false;
+  const get = await fetch(url, { method: 'GET' }).catch(() => null);
+  return !!get?.ok;
+}
+
 async function verifyTurnstile(token: string, ip: string, secret: string, request: Request): Promise<boolean> {
   if (!secret) return isLocalRequest(request);
   if (!token) return false;
@@ -200,7 +209,7 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
     });
   }
 
-  const matches = (parsed.matches ?? [])
+  const normalizedMatches = (parsed.matches ?? [])
     .filter((m) => m?.slug && m?.title && m?.reason && typeof m?.fit === 'number')
     .map((m) => ({
       slug: String(m.slug).toLowerCase().replace(/[^a-z0-9-]/g, ''),
@@ -209,6 +218,23 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
       fit: Math.max(1, Math.min(10, Math.round(m.fit))),
     }))
     .slice(0, 5);
+
+  const seen = new Set<string>();
+  const matches: ToolMatch[] = [];
+  for (const match of normalizedMatches) {
+    if (!match.slug || seen.has(match.slug)) continue;
+    seen.add(match.slug);
+    if (await isKnownToolSlug(match.slug, request)) {
+      matches.push(match);
+    }
+  }
+
+  if (matches.length === 0) {
+    return new Response(JSON.stringify({ error: 'no_valid_matches' }), {
+      status: 502,
+      headers: { 'content-type': 'application/json' },
+    });
+  }
 
   return new Response(
     JSON.stringify({ matches, citations: data.citations ?? [] }),
