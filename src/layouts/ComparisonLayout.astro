@@ -11,6 +11,7 @@ import ShareButtons from '../components/ShareButtons.astro';
 import FAQAccordionScript from '../components/FAQAccordionScript.astro';
 import FeedbackForm from '../components/FeedbackForm.astro';
 import ToolLogo from '../components/ToolLogo.astro';
+import ComparisonFactTable from '../components/comparison/ComparisonFactTable.astro';
 
 interface ToolData {
   slug: string;
@@ -28,6 +29,16 @@ interface ToolData {
     moat?: number;
     longevity?: number;
   };
+  facts?: Record<string, {
+    value?: string;
+    source?: string;
+    source_label?: string;
+    verified_at?: string | Date;
+    note?: string;
+    status?: string;
+  } | string | undefined>;
+  best_for?: string[];
+  tags?: string[];
   tagline?: string;
 }
 
@@ -50,6 +61,7 @@ interface Props {
   lastVerified?: string;
   readingMinutes?: number;
   relatedNews?: NewsSignal[];
+  canonicalFactTable?: boolean;
 }
 
 const {
@@ -63,6 +75,7 @@ const {
   lastVerified,
   readingMinutes = 0,
   relatedNews = [],
+  canonicalFactTable = false,
 } = Astro.props;
 
 const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
@@ -367,6 +380,8 @@ const tocHeadings = (headings ?? []).filter((h) => h.depth === 2).map((h) => ({ 
         )}
       </div>
     </section>
+
+    {canonicalFactTable && <ComparisonFactTable tools={tools} />}
 
     <!-- Main layout: prose + floating TOC -->
     <div class="t2-layout">

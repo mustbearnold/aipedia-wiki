@@ -11,6 +11,7 @@ author: "aipedia.wiki Editorial"
 last_updated: 2026-04-15
 last_verified: 2026-04-15
 update_frequency: quarterly
+canonical_fact_table: true
 ---
 
 # ChatGPT vs Elicit
@@ -21,15 +22,6 @@ update_frequency: quarterly
 
 Choose **ChatGPT** if you need a versatile all-in-one tool for mixed knowledge work, content generation, and real-time web search. Choose **Elicit** if your primary need is extracting insights from academic papers and research databases with structured evidence synthesis.
 
-## At a Glance
-
-| | ChatGPT | Elicit |
-|---|---|---|
-| **Flagship Model** | GPT-5.4[2] | Elicit (proprietary) |
-| **Free Tier** | Yes[2] | Yes |
-| **Paid Pricing** | Plus $20/mo; Pro $200/mo[2] | Research plan (pricing not publicly listed in current sources) |
-| **Context Window** | Not specified in current sources | Optimized for document/paper analysis |
-| **Best For** | Text generation, image creation, voice, web browsing, code execution, plugin ecosystem[2] | Academic research synthesis, evidence extraction, literature review |
 
 ## Where ChatGPT Wins
 

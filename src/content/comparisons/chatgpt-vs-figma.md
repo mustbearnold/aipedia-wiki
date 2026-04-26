@@ -11,6 +11,7 @@ author: "aipedia.wiki Editorial"
 last_updated: 2026-04-15
 last_verified: 2026-04-15
 update_frequency: quarterly
+canonical_fact_table: true
 ---
 
 # ChatGPT vs Figma AI
@@ -19,23 +20,15 @@ update_frequency: quarterly
 
 ## Quick Answer
 
-ChatGPT suits general tasks and mixed workflows at $20 per month for Plus access to GPT-5.4. Figma AI fits design teams via Figma's $12 per editor per month Professional plan.
+ChatGPT suits general tasks and mixed workflows at $20 per month for Plus access to GPT-5.5. Figma AI fits design teams via Figma's $12 per editor per month Professional plan.
 
-## At a Glance
-
-| | ChatGPT | Figma AI |
-|---|---|---|
-| **Flagship** | GPT-5.4 | Figma AI features (integrated in Figma) [3] |
-| **Price** | Free / Plus $20/mo / Pro $200/mo [3] | Free Starter / Professional $12/editor/mo [2] |
-| **Context Window** | 128K tokens | Design file-based (no fixed token limit) |
-| **Best For** | Versatile text, code, images | UI/UX prototyping, design assets |
 
 ## Where ChatGPT Wins
 
 - Handles text generation, code writing, document analysis, and image creation in one interface.[3]
 - Supports real-time web browsing, voice conversations, and plugin ecosystem for broad use.[3]
 - Pro plan at $200 per month adds advanced reasoning modes for complex queries.[3]
-- Free tier provides useful access to base GPT-5.4 capabilities.[3]
+- Free tier provides useful access to base GPT-5.5 capabilities.[3]
 - Processes mixed inputs like text and images for general knowledge work.[2]
 
 ## Where Figma AI Wins
@@ -48,7 +41,7 @@ ChatGPT suits general tasks and mixed workflows at $20 per month for Plus access
 
 ## Key Differences
 
-ChatGPT's GPT-5.4 model processes 128K token contexts for text-heavy tasks like analysis or coding, with pricing tiers from free to $200 per month.[3] Figma AI applies generative features to design files, supporting unlimited collaborators in paid plans starting at $12 per editor per month, but lacks general text or code tools.[2] ChatGPT works standalone across devices; Figma AI requires the Figma app for browser or desktop use.
+ChatGPT's GPT-5.5 model processes 1M-token API context (ChatGPT tier windows not fully published) for text-heavy tasks like analysis or coding, with pricing tiers from free to $200 per month.[3] Figma AI applies generative features to design files, supporting unlimited collaborators in paid plans starting at $12 per editor per month, but lacks general text or code tools.[2] ChatGPT works standalone across devices; Figma AI requires the Figma app for browser or desktop use.
 
 ## Who should choose ChatGPT
 

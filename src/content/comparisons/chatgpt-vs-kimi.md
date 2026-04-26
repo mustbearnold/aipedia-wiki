@@ -11,6 +11,7 @@ author: "aipedia.wiki Editorial"
 last_updated: 2026-04-15
 last_verified: 2026-04-15
 update_frequency: quarterly
+canonical_fact_table: true
 ---
 
 # ChatGPT vs Kimi
@@ -21,14 +22,6 @@ update_frequency: quarterly
 
 ChatGPT suits general users needing versatility across tasks; Kimi fits workflows heavy on large documents and extended reasoning.
 
-## At a Glance
-
-| | ChatGPT | Kimi |
-|---|---|---|
-| **Flagship** | GPT-5.4 | Moonshot V1-32B |
-| **Price** | Free / Plus $20/mo / Pro $200/mo | Free / Pro 5.8 RMB/mo (~$0.80/mo) |
-| **Context Window** | 128K tokens input / 16K output | 2M tokens |
-| **Best For** | Mixed tasks in one tool | Long documents, analysis |
 
 ## Where ChatGPT Wins
 
@@ -48,7 +41,7 @@ ChatGPT suits general users needing versatility across tasks; Kimi fits workflow
 
 ## Key Differences
 
-ChatGPT's GPT-5.4 emphasizes multimodal input/output (text, image, audio, video) with 128K context, priced from free to $200/mo for Pro, making it versatile but higher cost for premium access.[2] Kimi uses Moonshot V1-32B with 2M context at 5.8 RMB/mo Pro (~$0.80), excelling in document-heavy tasks but lacks ChatGPT's image/voice features.[web:8][web:9] ChatGPT leads in benchmark versatility; Kimi offers better value for context size.[1][3]
+ChatGPT's GPT-5.5 emphasizes multimodal input/output (text, image, audio, video), with 1M-token API context while ChatGPT tier windows are not fully published; pricing runs from free to $200/mo for Pro, making it versatile but higher cost for premium access.[2] Kimi uses Moonshot V1-32B with 2M context at 5.8 RMB/mo Pro (~$0.80), excelling in document-heavy tasks but lacks ChatGPT's image/voice features.[web:8][web:9] ChatGPT leads in benchmark versatility; Kimi offers better value for context size.[1][3]
 
 ## Who should choose ChatGPT
 

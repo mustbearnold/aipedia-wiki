@@ -28,6 +28,48 @@ scores:
   value: 8
   moat: 10
   longevity: 10
+facts:
+  flagship_model:
+    value: "GPT-5.5"
+    source: "/news/2026-04-23-openai-gpt-55-release/"
+    source_label: "GPT-5.5 rollout coverage"
+    verified_at: 2026-04-26
+  context_window:
+    value: "1M tokens in API; ChatGPT tier windows not fully published"
+    source: "/tools/chatgpt/"
+    source_label: "AIpedia ChatGPT review"
+    verified_at: 2026-04-26
+    note: "Use this nuanced wording in comparisons instead of hardcoded ChatGPT tier limits."
+  image_generation:
+    value: "Yes (gpt-image-2)"
+    source: "/news/2026-04-21-openai-chatgpt-images-2-gpt-image-2/"
+    source_label: "ChatGPT Images 2.0 launch coverage"
+    verified_at: 2026-04-26
+  real_time_voice:
+    value: "Yes"
+    source: "/tools/chatgpt/"
+    verified_at: 2026-04-26
+  web_browsing:
+    value: "Yes"
+    source: "/tools/chatgpt/"
+    verified_at: 2026-04-26
+  best_paid_tier:
+    value: "Plus ($20/mo)"
+    source: "/tools/chatgpt/"
+    verified_at: 2026-04-26
+  best_for:
+    value: "Broad daily work: text, research, data, images, browsing, voice, Codex, and agents"
+    source: "/tools/chatgpt/"
+    verified_at: 2026-04-26
+  video_generation:
+    value: "No native video generation"
+    source: "/news/2026-04-01-openai-retires-sora-2-model/"
+    source_label: "Sora retirement coverage"
+    verified_at: 2026-04-26
+  coding_agent:
+    value: "Codex on Plus and Pro tiers"
+    source: "/tools/chatgpt/"
+    verified_at: 2026-04-26
 tags: [chatbot, ai-assistant, writing, search, code-interpreter, image-generation, gpt-5, codex, agent-mode, voice, memory]
 best_for:
   - General-purpose AI work

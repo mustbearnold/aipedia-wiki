@@ -28,6 +28,44 @@ scores:
   value: 8
   moat: 9
   longevity: 10
+facts:
+  flagship_model:
+    value: "Claude Opus 4.7"
+    source: "/news/2026-04-16-anthropic-claude-opus-47/"
+    source_label: "Claude Opus 4.7 launch coverage"
+    verified_at: 2026-04-26
+  context_window:
+    value: "1M tokens"
+    source: "/tools/claude/"
+    verified_at: 2026-04-26
+  image_generation:
+    value: "No native image generation"
+    source: "/tools/claude/"
+    verified_at: 2026-04-26
+  real_time_voice:
+    value: "Limited"
+    source: "/tools/claude/"
+    verified_at: 2026-04-26
+  web_browsing:
+    value: "Yes"
+    source: "/tools/claude/"
+    verified_at: 2026-04-26
+  best_paid_tier:
+    value: "Pro ($20/mo)"
+    source: "/tools/claude/"
+    verified_at: 2026-04-26
+  best_for:
+    value: "Long-form writing, deep analysis, Claude Code, and large documents"
+    source: "/tools/claude/"
+    verified_at: 2026-04-26
+  video_generation:
+    value: "No native video generation"
+    source: "/tools/claude/"
+    verified_at: 2026-04-26
+  coding_agent:
+    value: "Claude Code CLI"
+    source: "/tools/claude/"
+    verified_at: 2026-04-26
 tags: [chatbot, ai-assistant, writing, coding, reasoning, analysis, long-context, artifacts, claude-code, claude-design, extended-thinking, computer-use]
 best_for:
   - long-form writing and editing

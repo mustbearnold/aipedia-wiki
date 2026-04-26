@@ -36,6 +36,9 @@ const tools = toolEntries
     pricing_model: t.data.pricing_model,
     affiliate: t.data.affiliate,
     scores: t.data.scores,
+    facts: t.data.facts,
+    best_for: t.data.best_for,
+    tags: t.data.tags,
     tagline: t.data.tagline,
   }));
 
@@ -71,6 +74,7 @@ const readingMinutes = Math.max(1, Math.round(wordCount / 230));
   lastVerified={entry.data.last_verified ? String(entry.data.last_verified) : undefined}
   readingMinutes={readingMinutes}
   relatedNews={relatedNews}
+  canonicalFactTable={entry.data.canonical_fact_table === true}
 >
   <Content />
 </ComparisonLayout>

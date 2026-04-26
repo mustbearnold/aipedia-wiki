@@ -11,6 +11,7 @@ author: "aipedia.wiki Editorial"
 last_updated: 2026-04-15
 last_verified: 2026-04-15
 update_frequency: quarterly
+canonical_fact_table: true
 ---
 
 # ChatGPT vs Runway
@@ -21,14 +22,6 @@ update_frequency: quarterly
 
 ChatGPT suits general tasks like writing and analysis. Runway fits video creation workflows.
 
-## At a Glance
-
-| | ChatGPT | Runway |
-|---|---|---|
-| **Flagship** | GPT-5.4 | Gen-4.5 + GWM-1 |
-| **Price** | Free / Plus $20/mo / Pro $200/mo | Free / Standard $15/mo / Pro $35/mo |
-| **Context Window / Output Specs** | 128K tokens | 10s video clips at 1080p |
-| **Best For** | Versatile text and multimodal tasks | Video generation and editing |
 
 ## Where ChatGPT Wins
 
@@ -48,7 +41,7 @@ ChatGPT suits general tasks like writing and analysis. Runway fits video creatio
 
 ## Key Differences
 
-ChatGPT's GPT-5.4 model processes 128K token contexts for long documents or conversations, while Runway's Gen-4.5 emphasizes video synthesis with GWM-1 for motion control.[1][2] ChatGPT pricing scales to $200/mo for Pro access; Runway starts at $15/mo for Standard with video credits.[2][5] ChatGPT covers text, code, and multimodal inputs broadly; Runway specializes in video output and lacks general reasoning.[4][5]
+ChatGPT's GPT-5.5 model processes 1M-token API context (ChatGPT tier windows not fully published) for long documents or conversations, while Runway's Gen-4.5 emphasizes video synthesis with GWM-1 for motion control.[1][2] ChatGPT pricing scales to $200/mo for Pro access; Runway starts at $15/mo for Standard with video credits.[2][5] ChatGPT covers text, code, and multimodal inputs broadly; Runway specializes in video output and lacks general reasoning.[4][5]
 
 ## Who should choose ChatGPT
 

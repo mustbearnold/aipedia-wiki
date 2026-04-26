@@ -7,6 +7,27 @@ import { glob } from 'astro/loaders';
 
 const dateish = z.union([z.string(), z.date()]).optional();
 
+const toolFact = z.object({
+  value: z.string(),
+  source: z.string().optional(),
+  source_label: z.string().optional(),
+  verified_at: dateish,
+  note: z.string().optional(),
+  status: z.enum(['current', 'unclear', 'deprecated']).optional(),
+}).passthrough();
+
+const toolFacts = z.object({
+  flagship_model: toolFact.optional(),
+  context_window: toolFact.optional(),
+  image_generation: toolFact.optional(),
+  real_time_voice: toolFact.optional(),
+  web_browsing: toolFact.optional(),
+  best_paid_tier: toolFact.optional(),
+  best_for: toolFact.optional(),
+  video_generation: toolFact.optional(),
+  coding_agent: toolFact.optional(),
+}).passthrough().optional();
+
 /* ------------------------------------------------------------------ */
 /*  Tools                                                              */
 /* ------------------------------------------------------------------ */
@@ -52,6 +73,7 @@ const tools = defineCollection({
       moat: z.number().optional(),
       longevity: z.number().optional(),
     }).optional(),
+    facts: toolFacts,
     tags: z.array(z.string()).optional(),
     seo_title: z.string().optional(),
     meta_description: z.string().optional(),
@@ -108,6 +130,7 @@ const comparisons = defineCollection({
     last_updated: dateish,
     last_verified: dateish,
     update_frequency: z.string().optional(),
+    canonical_fact_table: z.boolean().optional(),
   }).passthrough(),
 });
 
