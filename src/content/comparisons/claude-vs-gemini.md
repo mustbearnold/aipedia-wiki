@@ -16,72 +16,78 @@ canonical_fact_table: true
 
 # Claude vs Gemini
 
-[Claude](../tools/claude.md) and [Gemini](../tools/gemini.md) are two leading options in the chatbots category as of April 2026. Both released major updates in February 2026, reshaping the competitive landscape. This comparison covers current flagship versions, pricing, and which tool fits which workflow.
+[Claude](../tools/claude.md) and [Gemini](../tools/gemini.md) are both frontier assistants, but they serve different defaults. Claude is strongest for long-form writing, careful reasoning, Claude Code, and large-document work. Gemini is strongest for Google Workspace, Android, long-context multimodal workflows, and bundled image/video capabilities.
 
 ## Quick Answer
 
-**Claude Opus 4.7** excels at long-form analysis and document-heavy work with a 1M context window, while **Gemini 3.1 Pro** leads on benchmark performance and offers the best value per token. Your choice depends on whether you prioritize output quality for expert work (Claude) or raw capability at the lowest cost (Gemini).
+Choose Claude if you want the better writing and reasoning partner, especially for long documents and codebase analysis. Choose Gemini if your work lives in Google products or needs bundled multimodal output such as Nano Banana image generation and Veo video generation. Claude feels like a specialist for deep text work; Gemini feels like the AI layer for Google users.
 
+## Scorecard
 
+| Dimension | Better choice | Why |
 |---|---|---|
-| **Flagship Model** | Claude Opus 4.7 | Gemini 3.1 Pro |
-| **Input Pricing** | $5 per million tokens | $2 per million tokens |
-| **Output Pricing** | $25 per million tokens | $12 per million tokens |
-| **Context Window** | 1M tokens | Not specified in sources |
-| **Released** | April 16, 2026 | February 19, 2026 |
-| **Best For** | Long-form writing, analysis, code, client work | Developers, agentic systems, benchmarks |
+| Long-form writing | Claude | It is more disciplined for editing and analysis. |
+| Google ecosystem | Gemini | Workspace and Android integration are the point. |
+| Native image/video | Gemini | Claude has no native image or video generation. |
+| Agentic coding | Claude | Claude Code is the clearer coding-agent path. |
+| Bundled consumer value | Gemini | AI Pro combines assistant features with Google storage and apps. |
 
 ## Where Claude Wins
 
-- **Output quality for expert work**: Claude Opus 4.7 leads on real expert-level tasks and is reliable enough in production to trust across a wide range of client deliverables.
-- **1M context window**: Processes entire datasets, lengthy documents, and complex codebases without token constraints that affect competitors.
-- **Long-form thinking**: Excels at sustained analysis, detailed writing, and document-heavy workflows that require coherent multi-step reasoning.
-- **Production reliability**: Agencies and professionals default to Claude for client-facing work due to consistent output quality.
+Claude wins when the work is text-heavy and judgment-heavy. Opus 4.7, a 1M token context window, Claude Code, and Anthropic's more conservative assistant style make it strong for reports, strategy documents, code review, policy analysis, and long-form editing.
+
+Claude is also easier to trust for users who want pushback. It tends to be less eager to simply validate a premise, which matters when the task is diagnosis, critique, or planning.
 
 ## Where Gemini Wins
 
-- **Benchmark performance**: Gemini 3.1 Pro reclaimed the top spot on raw benchmark scores across the most tests as of February 2026.
-- **Price per token**: At $2/$12 per million tokens, Gemini offers the best value of any frontier model right now.
-- **Agentic systems**: Strongest general-purpose model for multi-step reasoning, agentic work, and large-context tasks.
-- **No price increase**: Google kept pricing identical to Gemini 3 Pro, delivering a major upgrade at no extra cost.
-- **Google Workspace integration**: Tight integration with Gmail, Docs, Sheets, Drive, and Meet for users already in Google's ecosystem.
+Gemini wins when the user is already in Google. Gmail, Docs, Drive, Android, and Workspace integration turn Gemini into an ambient productivity layer rather than a separate assistant. It also has a broader native media story: Nano Banana for images and Veo for video are central product advantages.
 
-## Key Differences
+Gemini is the better pick for multimodal research and production work that starts in Google files or ends in Google apps. Claude can analyze uploads, but Gemini can be closer to the user's actual workspace.
 
-Claude Opus 4.7 and Gemini 3.1 Pro represent different optimization priorities. Claude prioritizes output quality and reliability for professional work; Anthropic markets it as the default for agency and professional tasks. Gemini prioritizes benchmark performance and cost efficiency; Google positions it for developers building agentic systems and organizations seeking the best value per token.
+## Pricing and Limits
 
-Claude's 1M context window is a structural advantage for document-heavy workflows. Gemini's pricing advantage ($1 cheaper per million input tokens) compounds across high-volume usage. Both models released in February 2026 represent significant capability jumps from their predecessors.
+Claude Pro is $20/mo, with higher Max and team options. Gemini AI Pro is $19.99/mo. Claude's canonical context window is 1M tokens. Gemini's canonical table lists 1,048,576 tokens, with multimodal strengths through Nano Banana and Veo. Claude has no native image or video generation.
 
-For ecosystem fit, Gemini integrates natively with Google Workspace, making it the natural choice for organizations already using Gmail, Docs, and Sheets. Claude requires a separate interface but offers superior output quality for standalone expert work.
+## Current Product Signals
 
-## Who Should Choose Claude
+Anthropic's current signal is Opus 4.7 and Claude Code depth. Google's current signal is Gemini 3.1 Pro plus a wider multimodal stack and enterprise-agent push. Claude is improving as a thinking and coding partner. Gemini is improving as a platform layer across Google surfaces.
 
-Choose Claude Opus 4.7 if you need production-grade output for client work, long-form analysis, or complex document processing. The 1M context window and proven reliability make it the standard for agencies and professional teams.
+## Best Choice by User Type
 
-## Who Should Choose Gemini
-
-Choose Gemini 3.1 Pro if you are building agentic systems, need the best benchmark performance, or want to minimize per-token costs at scale. It is also the natural choice if your team already lives in Google Workspace.
+Pick Claude for writers, analysts, lawyers, researchers, and developers who value Claude Code. Pick Gemini for Google Workspace power users, Android users, teams creating images or video, and users who want AI bundled into the apps they already use. Pick both if writing quality and Google-native workflows are both central.
 
 ## Bottom Line
 
-Both tools are frontier-class models. Opus 4.7 released April 2026; Gemini 3.1 Pro released February 2026. Claude Opus 4.7 wins on output quality and context window size, making it the default for professional and agency work. Gemini 3.1 Pro wins on benchmarks and price, making it the choice for developers and cost-conscious organizations. The best tool depends on whether your workflow prioritizes output quality (Claude) or capability-per-dollar (Gemini).
+Claude is the better deep-work assistant. Gemini is the better Google-native multimodal assistant. The choice depends less on benchmark charts and more on where your documents, code, and media already live.
 
-## FAQ
+## Evaluation Notes
 
-**Which is cheaper?**
+The decision usually comes down to document judgment versus ecosystem gravity. Claude is the cleaner pick when the work is a long memo, policy review, research synthesis, legal-style analysis, or codebase reasoning task. Gemini is the cleaner pick when the work already lives in Google and the assistant should touch email, docs, storage, Android, images, and video.
 
-Gemini 3.1 Pro costs $2/$12 per million tokens, while Claude Opus 4.7 costs $5/$25 per million tokens. Gemini is $3 cheaper per million input tokens and $13 cheaper per million output tokens. At scale, Gemini's pricing advantage compounds significantly.
+The first evaluation test is where the user's files live. If the important files are in Google Drive and the user collaborates in Docs or Sheets, Gemini's integration can beat a stronger standalone answer. If the important work is a long argument, complex edit, or careful critique, Claude often feels more useful even without Google's distribution.
 
-**Which has better output quality?**
+The second test is media output. Claude can analyze images, but Gemini's native image and video stack changes the buying decision for creative and marketing teams. A writer may prefer Claude; a creator working across text, images, and video may prefer Gemini.
 
-Claude Opus 4.7 leads on expert-level work and is the standard for client-facing deliverables. Gemini 3.1 Pro leads on benchmark scores. For most professional tasks, Claude's output quality justifies the higher cost; for agentic systems and high-volume applications, Gemini's performance-per-dollar is superior.
+The third test is coding style. Claude Code gives Claude a distinct developer workflow, especially for terminal-native users. Gemini can still code, but Claude's coding-agent story is more explicit.
 
-**Can I use both?**
+## Common Mistakes
 
-Yes. Many teams use Claude for high-stakes writing and analysis, and Gemini for research, Google Workspace integration, and cost-sensitive batch processing. The choice is not binary; organizations often maintain both subscriptions for different use cases.
+A common mistake is choosing Gemini only because it is bundled into Google services. Convenience matters, but output quality still matters for final work. Another mistake is choosing Claude for every Google-heavy team even when the real bottleneck is workflow integration.
+
+The best trial is not a prompt contest. Give both tools the same week of real documents, emails, code tasks, and media needs, then compare saved time and review burden.
+
+## Buying Checklist
+
+Before deciding on Claude vs Gemini, answer four practical questions. First, where does the source context live today: documents, code, Google files, GitHub issues, X posts, or an API pipeline? Second, who reviews the output, and how costly is a mistake? Third, does the tool need to be used by one power user, a whole team, or non-technical colleagues? Fourth, will the work happen once in a chat, or repeatedly inside a workflow that needs logging, permissions, tests, and fallback behavior?
+
+The best choice is usually obvious after those answers. A broader assistant wins when people need a shared place to think. A specialist wins when the workflow has a fixed surface, such as an editor, repository, social feed, or model API. Price matters, but only after the workflow fit is clear. A cheaper tool that adds review burden can cost more than it saves.
 
 ## Sources
 
-- [Design for Online: The Best AI Models So Far in 2026](https://designforonline.com/the-best-ai-models-so-far-in-2026/)
-- [NxCode: Best AI Tools 2026 Complete Ranking Guide](https://www.nxcode.io/resources/news/best-ai-tools-2026-complete-ranking-guide)
-- [ALM Corp: Top Generative AI Tools in 2026](https://almcorp.com/blog/top-generative-ai-tools-2026/)
+- [Claude review](../tools/claude.md)
+- [Gemini review](../tools/gemini.md)
+- [Claude Opus 4.7 launch coverage](../news/2026-04-16-anthropic-claude-opus-47.md)
+- [Gemini Enterprise agent platform coverage](../news/2026-04-23-gemini-enterprise-agent-platform.md)
+- [Claude](https://claude.ai)
+- [Anthropic](https://www.anthropic.com)
+- [Gemini](https://gemini.google.com)

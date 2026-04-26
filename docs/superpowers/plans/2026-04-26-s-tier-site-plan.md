@@ -1014,7 +1014,7 @@ git commit -m "content: expand canonical volatile facts"
 - Modify: selected files under `src/content/comparisons/`
 - Modify: `scripts/guard-content.mjs` if comparison floors should enforce stronger quality
 
-- [ ] **Step 1: Identify priority comparisons**
+- [x] **Step 1: Identify priority comparisons**
 
 Run:
 
@@ -1024,7 +1024,7 @@ node -e "const fs=require('fs'),path=require('path');const dir='src/content/comp
 
 Expected: prints low-depth or low-source comparisons.
 
-- [ ] **Step 2: For each priority comparison, add the full structure**
+- [x] **Step 2: For each priority comparison, add the full structure**
 
 Each upgraded comparison must have:
 
@@ -1046,7 +1046,7 @@ Each upgraded comparison must have:
 ## Sources
 ```
 
-- [ ] **Step 3: Preserve editorial rules**
+- [x] **Step 3: Preserve editorial rules**
 
 For each edited comparison:
 
@@ -1056,7 +1056,7 @@ For each edited comparison:
 - Sentences stay short.
 - Verdict is practical, not promotional.
 
-- [ ] **Step 4: Run checks after every 10 comparisons**
+- [x] **Step 4: Run checks after every 10 comparisons**
 
 Run:
 
@@ -1068,7 +1068,7 @@ node scripts/audit-news-xrefs.mjs
 
 Expected: all pass.
 
-- [ ] **Step 5: Commit per batch**
+- [x] **Step 5: Commit per batch**
 
 Run:
 
