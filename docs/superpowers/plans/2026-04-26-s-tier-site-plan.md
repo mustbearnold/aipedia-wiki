@@ -365,7 +365,7 @@ git commit -m "chore: upgrade patched astro dependencies"
 - Create: `.github/workflows/ci.yml`
 - Modify: `package.json`
 
-- [ ] **Step 1: Add script aliases**
+- [x] **Step 1: Add script aliases**
 
 In `package.json`, add:
 
@@ -376,7 +376,7 @@ In `package.json`, add:
 "check": "npm run guard:check && npm run check:links && npm run check:news && npm run check:security"
 ```
 
-- [ ] **Step 2: Create GitHub Actions workflow**
+- [x] **Step 2: Create GitHub Actions workflow**
 
 Create `.github/workflows/ci.yml`:
 
@@ -412,7 +412,7 @@ jobs:
         run: npm run build
 ```
 
-- [ ] **Step 3: Run the CI command locally**
+- [x] **Step 3: Run the CI command locally**
 
 Run:
 
@@ -423,7 +423,7 @@ npm run build
 
 Expected: both pass before the workflow is committed. If `check:news` still fails, move Task 7 before this task and commit CI after news crossrefs are fixed.
 
-- [ ] **Step 4: Commit**
+- [x] **Step 4: Commit**
 
 Run:
 
