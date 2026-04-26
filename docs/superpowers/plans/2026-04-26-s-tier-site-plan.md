@@ -1174,7 +1174,7 @@ git commit -m "ci: enforce distribution budgets"
 - Create: `tests/smoke/visual-routes.spec.mjs`
 - Modify: `.github/workflows/ci.yml`
 
-- [ ] **Step 1: Add Playwright**
+- [x] **Step 1: Add Playwright**
 
 Run:
 
@@ -1183,7 +1183,7 @@ npm install -D @playwright/test
 npx playwright install chromium
 ```
 
-- [ ] **Step 2: Create smoke test file**
+- [x] **Step 2: Create smoke test file**
 
 Create `tests/smoke/visual-routes.spec.mjs`:
 
@@ -1212,7 +1212,7 @@ for (const route of routes) {
 }
 ```
 
-- [ ] **Step 3: Add scripts**
+- [x] **Step 3: Add scripts**
 
 In `package.json`, add:
 
@@ -1237,7 +1237,7 @@ export default {
 };
 ```
 
-- [ ] **Step 4: Run the smoke test locally**
+- [x] **Step 4: Run the smoke test locally**
 
 Run:
 
@@ -1247,7 +1247,7 @@ npm run smoke:visual
 
 Expected: all listed routes pass with no horizontal overflow.
 
-- [ ] **Step 5: Add CI only after it is stable locally**
+- [x] **Step 5: Add CI only after it is stable locally**
 
 In `.github/workflows/ci.yml`, add:
 
@@ -1259,7 +1259,7 @@ In `.github/workflows/ci.yml`, add:
         run: npm run smoke:visual
 ```
 
-- [ ] **Step 6: Commit**
+- [x] **Step 6: Commit**
 
 Run:
 

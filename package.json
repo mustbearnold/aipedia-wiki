@@ -16,6 +16,7 @@
     "check:news": "node scripts/audit-news-xrefs.mjs",
     "check:security": "npm audit --audit-level=moderate",
     "check:dist": "node scripts/check-dist-budget.mjs",
+    "smoke:visual": "playwright test tests/smoke/visual-routes.spec.mjs --config=playwright.config.mjs",
     "check": "npm run guard:check && npm run check:links && npm run check:news && npm run check:security",
     "guard:baseline": "node scripts/guard-content.mjs --baseline",
     "astro": "astro",
@@ -48,6 +49,7 @@
   "devDependencies": {
     "@fontsource/inter": "^5.2.8",
     "@fontsource/jetbrains-mono": "^5.2.8",
+    "@playwright/test": "^1.59.1",
     "sharp": "^0.34.5",
     "wrangler": "^4.85.0"
   },
