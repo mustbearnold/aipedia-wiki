@@ -24,3 +24,25 @@ for (const route of routes) {
     await expect(h1).toBeVisible();
   });
 }
+
+test('homepage lead mover shows its rank as text', async ({ page }) => {
+  await page.goto('/');
+
+  const rank = page.locator('.p3-mover-lead .p3-mover-rank');
+  await expect(rank).toHaveCount(1);
+  await expect(rank).toHaveText('1');
+
+  const rankPaint = await rank.evaluate((node) => {
+    const style = window.getComputedStyle(node);
+    return {
+      backgroundClip: style.backgroundClip,
+      webkitBackgroundClip: style.webkitBackgroundClip,
+      webkitTextFillColor: style.webkitTextFillColor,
+    };
+  });
+
+  expect(
+    [rankPaint.backgroundClip, rankPaint.webkitBackgroundClip].includes('text')
+  ).toBe(true);
+  expect(rankPaint.webkitTextFillColor).toBe('rgba(0, 0, 0, 0)');
+});
