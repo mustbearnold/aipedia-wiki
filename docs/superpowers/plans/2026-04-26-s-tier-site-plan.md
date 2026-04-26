@@ -758,7 +758,7 @@ git commit -m "security: fail closed for protected api routes"
 - Modify: `src/layouts/ArticleLayout.astro`
 - Modify: `src/pages/search.astro`
 
-- [ ] **Step 1: Add metadata to tool pages**
+- [x] **Step 1: Add metadata to tool pages**
 
 Inside `ToolLayout.astro`, within the page body and marked `data-pagefind-ignore`, add:
 
@@ -774,7 +774,7 @@ Inside `ToolLayout.astro`, within the page body and marked `data-pagefind-ignore
 </div>
 ```
 
-- [ ] **Step 2: Add metadata to comparison pages**
+- [x] **Step 2: Add metadata to comparison pages**
 
 Inside `ComparisonLayout.astro`, add:
 
@@ -786,7 +786,7 @@ Inside `ComparisonLayout.astro`, add:
 </div>
 ```
 
-- [ ] **Step 3: Add metadata to article pages**
+- [x] **Step 3: Add metadata to article pages**
 
 Inside `ArticleLayout.astro`, add a `type` prop defaulting to `Article` and render:
 
@@ -798,7 +798,7 @@ Inside `ArticleLayout.astro`, add a `type` prop defaulting to `Article` and rend
 
 Pass `type="News"`, `type="Guide"`, or `type="Company"` from relevant pages in a later pass only where the page layout already knows the type.
 
-- [ ] **Step 4: Configure filters in the full search page**
+- [x] **Step 4: Configure filters in the full search page**
 
 In `src/pages/search.astro`, update PagefindUI config:
 
@@ -812,7 +812,7 @@ const search = new PagefindUI({
 });
 ```
 
-- [ ] **Step 5: Rebuild Pagefind and verify filters**
+- [x] **Step 5: Rebuild Pagefind and verify filters**
 
 Run:
 
@@ -823,7 +823,9 @@ Select-String -Path dist/client/pagefind/pagefind-entry.json -Pattern "filters"
 
 Expected: Pagefind output contains filter metadata.
 
-- [ ] **Step 6: Commit**
+Verification note: Pagefind 1.5.2 writes filter metadata into `pagefind/filter/*.pf_filter`; the build summary reported `Indexed 7 filters`, and the generated filter files include Type, Category, Pricing, Status, Score, Tool, and Editorial Pick.
+
+- [x] **Step 6: Commit**
 
 Run:
 

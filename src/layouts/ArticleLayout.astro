@@ -15,9 +15,10 @@ interface Props {
   badge?: { text: string; color: string };
   eyebrow?: string;
   subhead?: string;
+  type?: string;
 }
 
-const { title, seoTitle, description = '', breadcrumbs, badge, eyebrow, subhead } = Astro.props;
+const { title, seoTitle, description = '', breadcrumbs, badge, eyebrow, subhead, type = 'Article' } = Astro.props;
 
 const siteBase = Astro.site?.href ?? 'https://aipedia.wiki';
 
@@ -45,6 +46,10 @@ const breadcrumbLdItems = breadcrumbs
 
 <BaseLayout title={seoTitle ?? title} description={description}>
   {breadcrumbLdItems && <BreadcrumbLD items={breadcrumbLdItems} />}
+
+  <div class="sr-only" data-pagefind-ignore>
+    <span data-pagefind-filter="Type">{type}</span>
+  </div>
 
   <div class="t2-canvas">
     {breadcrumbs && (
