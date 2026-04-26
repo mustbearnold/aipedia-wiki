@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$39/user/month"
 status: active
 launched: 2021-06
-last_updated: 2026-04-25
-last_verified: 2026-04-25
+last_updated: 2026-04-26
+last_verified: 2026-04-26
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -71,6 +71,8 @@ Claude Opus 4.7 went generally available inside Copilot on April 16, 2026, withi
 
 On April 24, 2026, GitHub's Copilot interaction-data policy took effect for Free, Pro, and Pro+ accounts: prompts, outputs, code snippets, and associated context may be used for model training unless individual users opt out. Copilot Business and Enterprise remain excluded from that training path.
 
+The April 26 news scan added five Copilot-specific updates: [BYOK in VS Code](/news/2026-04-26-github-copilot-byok-vscode/), [cloud-agent metrics](/news/2026-04-26-github-copilot-cloud-agent-metrics/), [Jira-agent controls](/news/2026-04-26-github-copilot-jira-agent-controls/), [PR chat improvements](/news/2026-04-26-github-copilot-pr-chat-improvements/), and [web debugging](/news/2026-04-26-github-copilot-web-debugging/). Together, they make Copilot look less like autocomplete plus chat and more like an admin-governed coding-agent system: managers get metrics, admins get controls, developers get PR/debugging workflow improvements, and power users get more model-key flexibility in VS Code.
+
 ## System Verdict
 
 > **Pick GitHub Copilot if you're already inside the GitHub ecosystem and want AI inside your current IDE at the lowest credible price.** Pro at $10/mo is the cheapest entry point in serious AI coding. The paid model picker hands you GPT-5.5, Claude Opus 4.7, GPT-5.4, Gemini 3.1 Pro, and Grok from a single bill.
@@ -90,7 +92,7 @@ On April 24, 2026, GitHub's Copilot interaction-data policy took effect for Free
 | **Flagship models** | GPT-5.5 (GA April 24, 2026) · Claude Opus 4.7 (GA April 16, 2026) on Pro+, Business, Enterprise |
 | **Other models in picker** | GPT-5.4 · GPT-5-Codex · Claude Sonnet 4.6 · Gemini 3.1 Pro · Gemini 2.5 Pro · Grok · Claude Haiku 4.5 |
 | **Free-tier models** | Claude Sonnet 4.6 · GPT-4.1 only |
-| **Modes** | Ask · Edit · Agent · Coding Agent (autonomous, cloud) · Code Review · Copilot CLI |
+| **Modes** | Ask · Edit · Agent · Coding Agent (autonomous, cloud) · Code Review · Copilot CLI · PR chat/debugging workflows |
 | **IDE support** | VS Code · Visual Studio · JetBrains · Xcode · Neovim (chat limited to first three) |
 | **Agent mode status** | GA on VS Code and JetBrains since March 2026; MCP tool use supported |
 | **Coding Agent status** | GA for all paid Copilot subscribers; runs in GitHub Actions sandbox, self-reviews, runs security scans |
@@ -98,7 +100,7 @@ On April 24, 2026, GitHub's Copilot interaction-data policy took effect for Free
 | **Premium request caps** | Free 50 · Pro 300 · Pro+ 1,500 · Business 300/seat · Enterprise 1,000/seat · overage $0.04 each |
 | **Copilot Spaces** | Context-scoping feature accessible via the GitHub MCP server |
 | **Data-training policy** | Free / Pro / Pro+ interaction data may be used for model training unless opted out; Business / Enterprise excluded |
-| **Recent shipments (12 mo)** | GPT-5.5 GA (Apr 24, 2026) · Coding Agent GA · Agent mode GA (Mar 2026) · MCP support GA · Copilot CLI GA (Apr 2026) · Opus 4.7 GA (Apr 16, 2026) · Agentic code review (Mar 2026) |
+| **Recent shipments (12 mo)** | GPT-5.5 GA (Apr 24, 2026) · BYOK in VS Code · cloud-agent metrics · Jira controls · PR chat/debugging improvements · Coding Agent GA · Agent mode GA (Mar 2026) · MCP support GA · Copilot CLI GA (Apr 2026) · Opus 4.7 GA (Apr 16, 2026) · Agentic code review (Mar 2026) |
 
 ## What it actually is
 
@@ -110,13 +112,13 @@ First, GitHub-native integration. Coding Agent assigns to a GitHub issue like a 
 
 Second, enterprise distribution. Copilot is already a line item in every Microsoft/GitHub enterprise agreement. IP indemnification on Business and Enterprise is a lawyer-tested feature Cursor and Claude Code don't match.
 
-Third, IDE breadth. JetBrains, Xcode, and Neovim developers only have Copilot among first-tier AI coding tools with OAuth-simple setup.
+Third, IDE breadth. JetBrains, Xcode, and Neovim developers only have Copilot among first-tier AI coding tools with OAuth-simple setup. VS Code now also matters as a control plane for advanced users: BYOK, web debugging, PR chat, and cloud-agent visibility all reinforce Copilot as a workflow layer around the repo, not just an inline completion engine.
 
 ## When to pick GitHub Copilot
 
 - **You already pay for GitHub.** Copilot inherits your OAuth, your SSO, and your repo permissions. Setup is a VS Code extension install.
 - **You use JetBrains, Xcode, or Neovim.** Cursor is a VS Code fork with no path to those editors. Copilot is the only first-tier AI coding tool shipping native extensions for all of them.
-- **You want issue-to-PR automation.** Coding Agent turns an assigned GitHub issue into a self-reviewed PR autonomously. No equivalent exists in Cursor or Claude Code.
+- **You want issue-to-PR automation with governance.** Coding Agent turns an assigned GitHub issue into a self-reviewed PR autonomously, while Jira controls and cloud-agent metrics make it easier for teams to supervise work in flight. No equivalent exists in Cursor or Claude Code.
 - **You want $10/mo entry pricing with a real model picker.** Pro at $10 includes Opus 4.7 (via premium requests on qualifying tiers), GPT-5.4, Gemini 3.1 Pro, and agent mode. Cheapest serious AI coding subscription on the market.
 - **You need IP indemnification.** Business and Enterprise tiers include Microsoft-backed IP indemnity for Copilot suggestions. No direct analog from Cursor or Anthropic.
 - **You want MCP tool use without leaving the IDE.** Agent mode autonomously invokes MCP servers once configured, and the GitHub MCP server now exposes Copilot Spaces for scoped context.
@@ -172,7 +174,7 @@ Prices verified 2026-04-17 via [GitHub Copilot plans](https://github.com/feature
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, normalizes factual claims, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-24 against [github.com/features/copilot](https://github.com/features/copilot), [github.com/features/copilot/plans](https://github.com/features/copilot/plans), [docs.github.com/en/copilot](https://docs.github.com/en/copilot), the [Opus 4.7 GA changelog](https://github.blog/changelog/2026-04-16-claude-opus-4-7-is-generally-available/), the [Copilot feature matrix](https://docs.github.com/en/copilot/reference/copilot-feature-matrix), and the [April 24 data-policy update](/news/2026-04-24-github-copilot-interaction-data-training/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, normalizes factual claims, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-26 against [github.com/features/copilot](https://github.com/features/copilot), [github.com/features/copilot/plans](https://github.com/features/copilot/plans), [docs.github.com/en/copilot](https://docs.github.com/en/copilot), the [Opus 4.7 GA changelog](https://github.blog/changelog/2026-04-16-claude-opus-4-7-is-generally-available/), the [Copilot feature matrix](https://docs.github.com/en/copilot/reference/copilot-feature-matrix), and the [April 24 data-policy update](/news/2026-04-24-github-copilot-interaction-data-training/).
 
 ## FAQ
 

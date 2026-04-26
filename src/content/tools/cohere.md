@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$10/1M tokens"
 status: active
 launched: 2019-06
-last_updated: 2026-04-25
-last_verified: 2026-04-25
+last_updated: 2026-04-26
+last_verified: 2026-04-26
 update_frequency: monthly
 seo_title: "Cohere: Features, Pricing & Review (April 2026)"
 meta_description: "Cohere's Command A (256K context) is the agentic flagship; Command R+ runs at $2.50/$10 per 1M tokens. North workspace and Model Vault ship private deployment. Enterprise-first LLM platform built around RAG, Rerank, and Aya multilingual."
@@ -61,13 +61,13 @@ price_history:
 
 Enterprise-first LLM platform. **Command A** (256K context, released March 2025) is the agentic and multilingual flagship. **Command R+** handles production RAG workloads at $2.50 input / $10 output per million tokens. **Command R7B** runs locally for edge cases. **Embed v4** and **Rerank 4** power the strongest dedicated retrieval stack in the industry.
 
-No consumer chat app. No image or video generation. Cohere sells to enterprise buyers: regulated industries, multilingual organizations, and teams that need private VPC or on-prem deployment.
+No consumer chat app. No image or video generation. Cohere sells to enterprise buyers: regulated industries, multilingual organizations, and teams that need private VPC, on-prem, or sovereign deployment. The reported Aleph Alpha combination turns that sovereignty angle from a side note into one of the main reasons to consider Cohere in Europe.
 
 On April 24, 2026, TechCrunch reported that Cohere is moving to acquire or merge with German AI startup Aleph Alpha. The reported deal does not change public API pricing, but it strengthens Cohere's European enterprise and sovereign-AI narrative.
 
 ## System Verdict
 
-> **Pick Cohere if you build production RAG, need multilingual retrieval, or require a VPC / on-prem deployment your compliance team will approve.** Embed v4 and Rerank 4 are the best dedicated retrieval models shipping. Command A's 256K context and North workspace let you stand up agentic workflows inside a SOC 2 perimeter. Model Vault runs the stack on isolated infrastructure.
+> **Pick Cohere if you build production RAG, need multilingual retrieval, or require a VPC / on-prem / sovereign deployment your compliance team will approve.** Embed v4 and Rerank 4 are the best dedicated retrieval models shipping. Command A's 256K context and North workspace let you stand up agentic workflows inside a SOC 2 perimeter. Model Vault runs the stack on isolated infrastructure, and the reported Aleph Alpha move strengthens Cohere's European enterprise story.
 >
 > **Skip it if you want a consumer chat app, image or video generation, or a broad plugin ecosystem.** Cohere has no consumer UI competitive with [ChatGPT](/tools/chatgpt/) or [Claude](/tools/claude/). No image gen, no video. Smaller developer community than OpenAI or Anthropic. Command A trails [Claude Opus 4.7](/tools/claude/) and [GPT-5.4](/tools/chatgpt/) on peak reasoning benchmarks.
 >
@@ -90,7 +90,7 @@ On April 24, 2026, TechCrunch reported that Cohere is moving to acquire or merge
 | **Image / video gen** | None |
 | **Recent business move** | Reported Aleph Alpha acquisition / merger on April 24, 2026 |
 
-Every data point above was verified against vendor sources on 2026-04-24. See Sources.
+Every data point above was verified against vendor sources and the April 26 news scan. See Sources.
 
 ## What it actually is
 
@@ -98,7 +98,7 @@ One enterprise LLM platform covering generation (Command family), retrieval (Emb
 
 Command A is the agentic flagship: 256K context window, strong tool use, best-in-class multilingual performance across 100+ languages. Command R+ remains the production RAG workhorse at a lower price point. Command R7B runs on modest hardware for on-device or edge inference.
 
-The retrieval stack is the real moat. Embed v4 ships as a multimodal embedding model with Matryoshka dimensions (256, 512, 1024, 1536) across 100+ languages. Rerank 4 extends context to 32K tokens and leads public benchmarks on cross-lingual retrieval. No OpenAI or Anthropic product matches Cohere's dedicated retrieval stack.
+The retrieval stack is the real moat. Embed v4 ships as a multimodal embedding model with Matryoshka dimensions (256, 512, 1024, 1536) across 100+ languages. Rerank 4 extends context to 32K tokens and leads public benchmarks on cross-lingual retrieval. No OpenAI or Anthropic product matches Cohere's dedicated retrieval stack; the Aleph Alpha report adds a second moat around European enterprise relationships and sovereign-AI deployment credibility.
 
 Model Vault, launched September 2025, runs Command, Embed, and Rerank inside isolated VPCs or on-prem infrastructure. Data never leaves the customer network. This is the deployment model regulated buyers actually sign.
 
@@ -174,7 +174,7 @@ Command A pricing is not listed on the public page; contact sales for rates. Ent
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-24 against [Cohere pricing](https://cohere.com/pricing), [Cohere models docs](https://docs.cohere.com/docs/models), [Cohere release notes](https://docs.cohere.com/changelog), the [Embed v4 announcement](https://cohere.com/embed), and [reported Aleph Alpha deal coverage](/news/2026-04-24-cohere-aleph-alpha/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-26 against [Cohere pricing](https://cohere.com/pricing), [Cohere models docs](https://docs.cohere.com/docs/models), [Cohere release notes](https://docs.cohere.com/changelog), the [Embed v4 announcement](https://cohere.com/embed), and [reported Aleph Alpha deal coverage](/news/2026-04-24-cohere-aleph-alpha/).
 
 ## FAQ
 

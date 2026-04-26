@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$249.99/month"
 status: active
 launched: 2023-12
-last_updated: 2026-04-22
-last_verified: 2026-04-22
+last_updated: 2026-04-26
+last_verified: 2026-04-26
 update_frequency: monthly
 seo_title: "Gemini: Features, Pricing & Review (April 2026)"
 meta_description: "Gemini 3.1 Pro is Google's flagship (Feb 2026, 1M token context). Google AI Pro $19.99/mo bundles 5TB storage, Veo 3.1, and Nano Banana 2. Ultra $249.99/mo unlocks Deep Think 3.1 and Nano Banana Pro. Best AI for Google Workspace users."
@@ -60,10 +60,14 @@ price_history:
 
 Google DeepMind's multimodal AI assistant. **Gemini 3.1 Pro** is the flagship as of February 19, 2026: 1M token context, 77.1% on ARC-AGI-2, native support for text, images, audio, video, and full code repositories.
 
-**Gemini 3.1 Deep Think** handles science, math, and research-grade reasoning for Ultra subscribers. The same subscription covers Workspace integration, Nano Banana image generation, Veo 3.1 video, and the default Android assistant.
+**Gemini 3.1 Deep Think** handles science, math, and research-grade reasoning for Ultra subscribers. The same subscription covers Workspace integration, Nano Banana image generation, Veo 3.1 video, and the default Android assistant. April 26 updates deepen the enterprise and builder side of the story: Gemini Embedding 2 is now GA for retrieval, AI Studio is moving toward a clearer paid app-building path, Deep Research is being pushed harder on Max/Ultra, and Google's TPU follow-up keeps cost-controlled agent serving central to Gemini's moat.
 
 ## Recent developments (April 2026)
 
+- **April 26:** [Gemini Embedding 2 reaches GA](/news/2026-04-26-gemini-embedding-2-ga/), strengthening Google's RAG and semantic-search stack around Gemini.
+- **April 26:** [Google AI Studio gets a vibe-coding subscription signal](/news/2026-04-26-google-ai-studio-vibe-coding-subscription/), pointing to a more explicit paid path for app-building workflows.
+- **April 26:** [Google expands Deep Research on Max](/news/2026-04-26-google-deep-research-max/), reinforcing Ultra/Max as the tier for heavier autonomous research workloads.
+- **April 26:** [Google follows up on TPU infrastructure for the agentic era](/news/2026-04-26-google-tpu-agentic-era-followup/), keeping Gemini's compute-cost story central to its enterprise-agent push.
 - **April 23:** [Gemini Enterprise Agent Platform launches](/news/2026-04-23-gemini-enterprise-agent-platform/) with Agent Studio, A2A Orchestration, Registry, Identity, Gateway, and Observability. Google's most complete enterprise-agent stack to date, built on Vertex AI.
 - **April 23:** [Agentic Data Cloud ships](/news/2026-04-23-google-agentic-data-cloud-knowledge-catalog/): Knowledge Catalog, Data Agent Kit, cross-cloud AI-native Lakehouse. Solves the agent-grounding problem that stalled most 2025 agent pilots.
 - **April 23:** [8th-gen TPU 8t (training) and TPU 8i (inference) unveiled](/news/2026-04-23-google-tpu-8t-8i-cloud-next-day2/) on Cloud Next Day 2. TPU 8t delivers 3x Ironwood performance per superpod; TPU 8i triples on-chip SRAM for agent-serving. Staged availability 2026-2027.
@@ -98,9 +102,10 @@ Google DeepMind's multimodal AI assistant. **Gemini 3.1 Pro** is the flagship as
 | **Image generation** | Nano Banana 2 (Pro) · Nano Banana Pro (Ultra) |
 | **Video generation** | Veo 3.1, Veo 3.1 Fast (Pro) · Veo 3.1 Lite (API) |
 | **Workspace integration** | Native in Docs, Sheets, Gmail, Drive, Meet, Chrome |
-| **Deep Research** | Autonomous multi-source report generation with citations |
+| **Deep Research** | Autonomous multi-source report generation with citations; Max/Ultra positioned for heavier research usage |
 | **Android** | Default assistant as of March 2026, replacing Google Assistant |
 | **Storage bundled** | 2TB (Plus) · 5TB (Pro) · 30TB (Ultra) via Google One |
+| **Developer / RAG stack** | Gemini Embedding 2 GA and AI Studio app-building subscriptions strengthen builder workflows |
 
 Every data point above verified against vendor sources on 2026-04-15. See Sources.
 
@@ -108,7 +113,7 @@ Every data point above verified against vendor sources on 2026-04-15. See Source
 
 A single consumer + API product spanning text chat, multimodal analysis (images, audio, video, full repos), autonomous Deep Research, native image generation (Nano Banana 2 / Pro), native video generation (Veo 3.1), real-time voice (Gemini Live), and in-app workflow integration across Docs, Sheets, Gmail, Drive, and Chrome. The subscription bundles Google One storage (5TB at AI Pro), which no other mainstream AI assistant matches at the same price.
 
-The real moats are ecosystem and multimodal breadth. Gemini 3.1 Pro is the only flagship frontier model natively embedded inside Google Workspace, the default assistant on Android, and the only consumer AI tier that ships best-in-class image gen (Nano Banana Pro) and video gen (Veo 3.1) inside the same subscription.
+The real moats are ecosystem, multimodal breadth, and vertically integrated infrastructure. Gemini 3.1 Pro is the only flagship frontier model natively embedded inside Google Workspace, the default assistant on Android, and the only consumer AI tier that ships best-in-class image gen (Nano Banana Pro) and video gen (Veo 3.1) inside the same subscription. Gemini Embedding 2 and TPU-backed serving make Google's case stronger for enterprise RAG and agent workloads where retrieval quality and per-token cost matter together.
 
 For Google-stack users, switching cost to ChatGPT or Claude isn't about model quality. It's about giving up native Docs/Sheets/Gmail integration and the storage bundle.
 
@@ -116,7 +121,7 @@ For Google-stack users, switching cost to ChatGPT or Claude isn't about model qu
 
 - **You live in Google Workspace.** Draft in Docs, analyze in Sheets, summarize in Gmail, organize in Drive. All native, no context switching, no copy-paste.
 - **You want multimodal output in one subscription.** Nano Banana 2 image gen and Veo 3.1 Fast video inside AI Pro at $19.99/mo is the cheapest all-in-one multimodal bundle on the market.
-- **You run autonomous research reports.** Deep Research browses dozens of sources and synthesizes into cited reports. Ultra gets high-volume daily access.
+- **You run autonomous research reports.** Deep Research browses dozens of sources and synthesizes into cited reports. Max/Ultra is increasingly the intended tier for heavier research usage; AI Pro is still best for occasional reports.
 - **You need a 1M-token context at flat per-token rates.** Gemini 3.1 Pro handles full-repo code analysis, book-length documents, or multi-hour video transcripts in one pass.
 - **You're on Android.** Gemini became the default assistant in March 2026 across Android Auto and is rolling out to replace Google Assistant on all Android devices.
 - **You value bundled storage.** 5TB at AI Pro replaces standalone Google One. Effectively the AI tier costs ~$10/mo after netting out the storage value.
@@ -180,7 +185,7 @@ Prices verified 2026-04-17 via [Google AI subscription page](https://one.google.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against the [Gemini 3.1 Pro model card](https://deepmind.google/models/model-cards/gemini-3-1-pro/), [Google AI subscription page](https://one.google.com/about/ai-premium/), [Gemini API pricing docs](https://ai.google.dev/gemini-api/docs/pricing), [9to5Google's April 2026 tier breakdown](https://9to5google.com/2026/04/11/google-ai-pro-ultra-features/), and the [Nano Banana Personal Intelligence launch coverage](https://techcrunch.com/2026/04/16/google-adds-nano-banana-powered-image-generation-to-geminis-personal-intelligence/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-26 against the [Gemini 3.1 Pro model card](https://deepmind.google/models/model-cards/gemini-3-1-pro/), [Google AI subscription page](https://one.google.com/about/ai-premium/), [Gemini API pricing docs](https://ai.google.dev/gemini-api/docs/pricing), [9to5Google's April 2026 tier breakdown](https://9to5google.com/2026/04/11/google-ai-pro-ultra-features/), and the [Nano Banana Personal Intelligence launch coverage](https://techcrunch.com/2026/04/16/google-adds-nano-banana-powered-image-generation-to-geminis-personal-intelligence/).
 
 ## FAQ
 

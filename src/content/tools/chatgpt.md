@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2022-11
-last_updated: 2026-04-24
-last_verified: 2026-04-24
+last_updated: 2026-04-26
+last_verified: 2026-04-26
 update_frequency: monthly
 seo_title: "ChatGPT: Features, Pricing & Review (April 2026)"
 meta_description: "ChatGPT runs GPT-5.5 on paid tiers as of April 2026, with GPT-5.3/GPT-5.4 still present across lower-latency modes. Plus is $20/mo; Pro plans at $100 and $200/mo add heavier Codex coding-agent usage. DALL-E and Sora are retired."
@@ -24,9 +24,9 @@ affiliate:
   network: null
   link: null
 scores:
-  utility: 9
+  utility: 10
   value: 8
-  moat: 9
+  moat: 10
   longevity: 10
 tags: [chatbot, ai-assistant, writing, search, code-interpreter, image-generation, gpt-5, codex, agent-mode, voice, memory]
 best_for:
@@ -38,13 +38,13 @@ best_for:
 not_best_for:
   - Video generation
   - Free users who dislike ads
-  - Deep long-form reasoning vs. Claude Opus 4.7
+  - users who specifically prefer Claude's long-form writing style or conservative safety posture
 quick_answer: >-
-  ChatGPT is the broadest AI assistant in a single subscription. Pick it for text, image gen, Codex coding agent, Operator mode, and the largest custom-GPT marketplace. Skip it for best-in-class reasoning (Claude Opus 4.7), Google Workspace depth (Gemini), or video generation.
+  ChatGPT is the best default AI assistant overall after GPT-5.5: strongest breadth across text, research, data analysis, image generation, Codex coding, agents, and the custom-GPT marketplace. Pick Claude instead when you specifically want Anthropic's long-form writing style, Claude Code workflow, or stricter enterprise safety posture; pick Gemini for Google Workspace depth or video generation.
 primary_cta_label: Open ChatGPT
 page_mode: dossier
 score_note: >-
-  Breadth, ecosystem, and longevity carry the score; ads on low tiers and expensive Pro plans hold value back.
+  GPT-5.5 restores ChatGPT's default-assistant lead: breadth, Codex, agents, image generation, and ecosystem justify top utility and moat scores. Value stays at 8 because ads on low tiers, expensive Pro plans, and factuality risk still matter.
 hero_glance:
   items:
     - label: Best tier
@@ -84,20 +84,21 @@ price_history:
 
 # ChatGPT
 
-OpenAI's general-purpose AI assistant for text, images, web browsing, sandboxed code execution, voice, Codex coding work, and agent mode. It is the most complete single-subscription AI product in this category, but it is not the best specialist for every job.
+OpenAI's general-purpose AI assistant for text, images, web browsing, sandboxed code execution, voice, Codex coding work, and agent mode. It is increasingly a workspace agent platform, not just a solo chatbot: the April 26 workspace-agent update pushes ChatGPT toward shared team agents where memory, permissions, and audit boundaries matter. GPT-5.5 also makes ChatGPT the strongest default choice for most users again, especially when Codex, research, data work, image generation, and general assistant breadth all matter in one subscription. Its travel and local-search mistakes still show why factual outputs need source checks before users act on them.
 
 ## Key facts
 
 | | |
 |---|---|
 | **Default model** | GPT-5.3 Instant on all tiers; paid tiers add GPT-5.4 Thinking / Pro and GPT-5.5 access |
+| **Editorial position** | Best default AI assistant overall after GPT-5.5; Claude remains a specialist for long-form writing style, Claude Code, and stricter safety posture |
 | **Best paid tier** | Plus at $20/mo for most individuals |
 | **Coding agent** | Codex is included on Plus and scales on Pro tiers |
 | **Image generation** | GPT Image 2 |
 | **Video generation** | None; Sora shut down in March-April 2026 |
-| **Agent mode** | Operator / Agent Mode on Plus and above |
+| **Agent mode** | Operator / Agent Mode on Plus and above; workspace agents add team-level permission and audit questions |
 | **Context window** | GPT-5.5 API supports 1M context; ChatGPT tier windows are not fully published |
-| **Score** | Utility 9 · Value 8 · Moat 9 · Longevity 10 |
+| **Score** | Utility 10 · Value 8 · Moat 10 · Longevity 10 |
 
 Every data point above was last verified against vendor pages, local news entries, or named sources in April 2026.
 
@@ -117,6 +118,8 @@ Prices verified 2026-04-17 via [OpenAI pricing](https://chatgpt.com/pricing/), [
 
 ## Recent changes
 
+- **April 26, 2026:** [OpenAI introduces workspace agents in ChatGPT](/news/2026-04-26-chatgpt-workspace-agents/), shifting the product further toward shared team-level agents with permission, memory, and audit-boundary questions.
+- **April 26, 2026:** [OpenAI apologizes for Tumbler Ridge travel hallucinations](/news/2026-04-26-openai-tumbler-ridge-apology/), a reminder that itinerary and local-search outputs still need source checks before users act on them.
 - **April 23, 2026:** [GPT-5.5 rolls out to ChatGPT and Codex](/news/2026-04-23-openai-gpt-55-release/). Paid ChatGPT users get the new long-running work model; GPT-5.5 Pro is rolling to Pro, Business, and Enterprise.
 - **April 23, 2026:** [GPT-5.5 system card and bio bug bounty published](/news/2026-04-23-openai-gpt-55-system-card-bio-bounty/). OpenAI marked biological/chemical and cybersecurity capability as High under its Preparedness Framework.
 - **April 22, 2026:** [OpenAI releases Privacy Filter](/news/2026-04-22-openai-privacy-filter/), an open-weight PII-redaction model for stripping sensitive data before model calls.
@@ -134,10 +137,10 @@ Prices verified 2026-04-17 via [OpenAI pricing](https://chatgpt.com/pricing/), [
 | One subscription for text, images, browsing, code execution, voice, and agent workflows | Free and Go include ads; Plus users can still hit Thinking caps |
 | Codex inside the OpenAI / ChatGPT ecosystem | Pro pricing only makes sense if agentic coding is real weekly work |
 | The largest mainstream assistant ecosystem and custom-GPT surface | GPT-5 context limits are not published, unlike Claude and Gemini |
-| A default assistant for users who do not know which specialist they need yet | Niche research still needs source verification; citations reduce but do not remove hallucination risk |
+| A default assistant for users who do not know which specialist they need yet | Niche research, travel planning, and local recommendations still need source verification; citations reduce but do not remove hallucination risk |
 | Fast everyday writing, planning, analysis, and image generation | Claude, Gemini, Perplexity, Midjourney, and video tools each win on narrower jobs |
 
-The score is high because breadth, ecosystem, Codex access, and product velocity all compound. Value is lower than utility because ads, caps, and Pro pricing make the lower and upper tiers less clean than Plus.
+The score is highest overall because GPT-5.5, Codex, image generation, workspace agents, custom GPTs, and product velocity compound into the strongest default assistant. Value is lower than utility because ads, caps, factuality risk, and Pro pricing make the lower and upper tiers less clean than Plus. Claude can still win narrower long-form writing, Claude Code, and conservative enterprise-safety comparisons, but ChatGPT is no longer accurately described as second-best overall.
 
 ## Alternatives
 
@@ -174,4 +177,4 @@ ChatGPT wins on breadth, image generation, and agent integrations. Claude remain
 - [MacRumors: OpenAI Adds New $100/Month ChatGPT Subscription Tier](https://www.macrumors.com/2026/04/09/openai-pro-subscription-tiers/): April 9, 2026 Pro tier launch details
 - [TechCrunch: ChatGPT finally offers $100/month Pro plan](https://techcrunch.com/2026/04/09/chatgpt-pro-plan-100-month-codex/): Codex usage tiers and promo details
 
-This review follows the aipedia.wiki four-axis scoring model: Utility, Value, Moat, and Longevity. Last verified 2026-04-24.
+This review follows the aipedia.wiki four-axis scoring model: Utility, Value, Moat, and Longevity. Last verified 2026-04-26.

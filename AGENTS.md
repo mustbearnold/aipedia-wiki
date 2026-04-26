@@ -33,10 +33,10 @@ Notes:
 
 ## Demo Page Policy
 
-- Homepage experiments should live in `src/pages/demo-*.astro`.
-- Demo pages must use `noindex={true}`.
+- Do not add public demo routes unless the user explicitly asks for a temporary experiment.
+- Temporary demo pages must live in `src/pages/demo-*.astro` and use `noindex={true}`.
+- Remove demo pages when the experiment is finished or promoted.
 - Do not replace `src/pages/index.astro` unless the user explicitly asks to promote a demo.
-- The current homepage experiment is `src/pages/demo-homepage-clone.astro`.
 
 ## Editorial Rules
 

@@ -531,8 +531,10 @@ const isRecentVerified = verifiedDays > 30 && verifiedDays <= 90;
   <script is:inline>
     (function () {
       var SCROLLBOX_CONFIG = [
-        { id: 'recent-developments', threshold: 5, itemSelector: ':scope > li',
+        { id: 'recent-developments', threshold: 4, maxVisibleItems: 3, itemSelector: ':scope > li',
           label: function (n) { return n + ' recent developments, scroll to read more'; } },
+        { id: 'recent-changes', threshold: 4, maxVisibleItems: 3, itemSelector: ':scope > li',
+          label: function (n) { return n + ' recent changes, scroll to read more'; } },
         { id: 'price-history', threshold: 6, itemSelector: ':scope > li',
           label: function (n) { return n + ' price changes, scroll to read more'; } },
         { id: 'top-alternatives', threshold: 8, itemSelector: ':scope > li',
@@ -575,6 +577,18 @@ const isRecentVerified = verifiedDays > 30 && verifiedDays <= 90;
         wrap.setAttribute('aria-label', cfg.label(items.length));
         list.parentNode.insertBefore(wrap, list);
         wrap.appendChild(list);
+
+        if (cfg.maxVisibleItems && items.length > cfg.maxVisibleItems) {
+          window.requestAnimationFrame(function () {
+            var visible = Array.prototype.slice.call(items, 0, cfg.maxVisibleItems);
+            var last = visible[visible.length - 1];
+            if (!last) return;
+            var top = list.offsetTop;
+            var bottom = last.offsetTop + last.offsetHeight;
+            var buffer = 18;
+            wrap.style.maxHeight = Math.max(180, bottom - top + buffer) + 'px';
+          });
+        }
       }
 
       function init() { SCROLLBOX_CONFIG.forEach(boxOne); }
