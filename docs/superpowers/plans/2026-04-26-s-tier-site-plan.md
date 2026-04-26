@@ -313,7 +313,7 @@ git commit -m "fix: generate pagefind deterministically"
 - Modify: `package.json`
 - Modify: `package-lock.json`
 
-- [ ] **Step 1: Confirm current advisories**
+- [x] **Step 1: Confirm current advisories**
 
 Run:
 
@@ -323,7 +323,7 @@ npm audit --audit-level=moderate
 
 Expected: advisories for Astro, PostCSS, and `@astrojs/cloudflare`.
 
-- [ ] **Step 2: Apply safe patch upgrades**
+- [x] **Step 2: Apply safe patch upgrades**
 
 Run:
 
@@ -333,7 +333,9 @@ npm install astro@^6.1.6 @astrojs/cloudflare@^13.1.10 postcss@^8.5.10
 
 Expected: lockfile updates without changing the framework family.
 
-- [ ] **Step 3: Re-run audit and build**
+Implemented with current compatible floors: `astro@^6.1.9`, `@astrojs/cloudflare@^13.2.1`, `@tailwindcss/vite@^4.2.4`, `tailwindcss@^4.2.4`, and `wrangler@^4.85.0`; `npm audit fix` lifted transitive `postcss` to a safe version.
+
+- [x] **Step 3: Re-run audit and build**
 
 Run:
 
@@ -345,7 +347,7 @@ npm run build
 
 Expected: audit reports zero moderate-or-higher vulnerabilities; guards and build pass.
 
-- [ ] **Step 4: Commit**
+- [x] **Step 4: Commit**
 
 Run:
 
