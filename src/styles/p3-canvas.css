@@ -66,6 +66,7 @@ body:has(main .p3-canvas) {
     padding: 48px 0 56px;
   }
 }
+.p3-hero-left { min-width: 0; }
 
 .p3-eyebrow {
   display: inline-flex;
@@ -400,9 +401,8 @@ body:has(main .p3-canvas) {
    Replaces flat text links. Each chip has a tiny mono icon,
    a label, a live count, and an arrow affordance.
 
-   Layout: 2x2 grid aligned to the search bar width (560px).
-   Only goes 4-across on very wide viewports where the hero-left
-   column is big enough to fit every title without truncation.
+   Layout: 2x2 grid aligned to the search bar width (560px), including
+   wide desktop where the current-pick card occupies the right column.
    ========================================================= */
 .p3-jumps {
   display: grid;
@@ -410,9 +410,6 @@ body:has(main .p3-canvas) {
   gap: 10px;
   margin-top: 20px;
   max-width: 560px;
-}
-@media (min-width: 1400px) {
-  .p3-jumps { grid-template-columns: repeat(4, minmax(178px, 1fr)); max-width: 980px; }
 }
 .p3-jump {
   display: flex;
