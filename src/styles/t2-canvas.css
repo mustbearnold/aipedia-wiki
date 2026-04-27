@@ -1956,8 +1956,9 @@ body:has(main .t2-canvas) ::selection {
   margin-bottom: 18px;
 }
 .ref-article-hero {
+  --ref-rail-width: minmax(280px, 320px);
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(250px, 320px);
+  grid-template-columns: minmax(0, 1fr) var(--ref-rail-width);
   gap: 28px;
   align-items: end;
   padding: 22px 0 30px;
@@ -1981,6 +1982,8 @@ body:has(main .t2-canvas) ::selection {
 }
 .ref-hero-card {
   min-width: 0;
+  width: 100%;
+  justify-self: end;
   border: 1px solid rgba(94, 234, 212, 0.22);
   border-radius: 8px;
   background:
@@ -2021,8 +2024,9 @@ body:has(main .t2-canvas) ::selection {
   text-align: right;
 }
 .ref-article-shell {
+  --ref-rail-width: minmax(280px, 320px);
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(250px, 320px);
+  grid-template-columns: minmax(0, 1fr) var(--ref-rail-width);
   gap: 28px;
   align-items: start;
 }

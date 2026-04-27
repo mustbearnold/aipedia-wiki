@@ -402,3 +402,25 @@ for (const route of ['/about/', '/about/editorial/', '/about/scoring/', '/media-
     await expect(page.locator('.ref-hero-card').first()).toBeVisible();
   });
 }
+
+for (const route of ['/about/editorial/', '/about/scoring/', '/media-kit/']) {
+  test(`article reference rail aligns with editorial ledger: ${route}`, async ({ page }) => {
+    await page.goto(route);
+
+    const alignment = await page.evaluate(() => {
+      const ledger = document.querySelector('.ref-hero-ledger')?.getBoundingClientRect();
+      const rail = document.querySelector('.ref-side-rail')?.getBoundingClientRect();
+      if (!ledger || !rail) return null;
+      return {
+        leftDelta: Math.abs(ledger.left - rail.left),
+        rightDelta: Math.abs(ledger.right - rail.right),
+        widthDelta: Math.abs(ledger.width - rail.width),
+      };
+    });
+
+    expect(alignment).not.toBeNull();
+    expect(alignment.leftDelta).toBeLessThanOrEqual(1);
+    expect(alignment.rightDelta).toBeLessThanOrEqual(1);
+    expect(alignment.widthDelta).toBeLessThanOrEqual(1);
+  });
+}
