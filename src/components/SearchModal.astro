@@ -2,7 +2,9 @@
 import { getCollection } from 'astro:content';
 
 const allTools = await getCollection('tools');
-const toolsCount = allTools.filter(t => t.data.type === 'tool' && t.data.status !== 'dead').length;
+const toolsCount = allTools.filter(
+  (t) => t.data.status !== 'dead' && t.data.status !== 'retired' && t.data.status !== 'acquired'
+).length;
 ---
 
 <style is:global>

@@ -5,6 +5,9 @@ import { getCollection } from 'astro:content';
 
 const allCompanies = await getCollection('companies');
 const allTools = await getCollection('tools');
+const activeToolCount = allTools.filter(
+  (t) => t.data.status !== 'dead' && t.data.status !== 'retired' && t.data.status !== 'acquired'
+).length;
 const allNews = await getCollection('news');
 
 const sorted = allCompanies
@@ -36,7 +39,7 @@ const typeLabel: Record<string, string> = {
 const total = sorted.length;
 const statStrip = [
   { label: 'tracked companies', value: total },
-  { label: 'reviewed products', value: allTools.length },
+  { label: 'reviewed products', value: activeToolCount },
   { label: 'news items linked', value: allNews.length },
 ];
 ---

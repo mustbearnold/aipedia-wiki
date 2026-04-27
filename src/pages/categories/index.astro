@@ -9,6 +9,9 @@ import { getCollection } from 'astro:content';
 
 const allCategories = await getCollection('categories');
 const allTools = await getCollection('tools');
+const activeTools = allTools.filter(
+  (t) => t.data.status !== 'dead' && t.data.status !== 'retired' && t.data.status !== 'acquired'
+);
 
 // Count tools per category + capture top-scored active tool per category
 // so each card surfaces an editorial signal (top pick + score) instead
@@ -20,10 +23,9 @@ function overall(s: { utility?: number; value?: number; moat?: number; longevity
 const toolCountBySlug: Record<string, number> = {};
 const catScoreSum: Record<string, number> = {};
 const topByCategory: Record<string, { title: string; slug: string; score: number }> = {};
-for (const t of allTools) {
+for (const t of activeTools) {
   const cat = t.data.category;
   if (!cat) continue;
-  if (t.data.status === 'dead' || t.data.status === 'retired' || t.data.status === 'acquired') continue;
   toolCountBySlug[cat] = (toolCountBySlug[cat] || 0) + 1;
   const score = overall(t.data.scores);
   catScoreSum[cat] = (catScoreSum[cat] ?? 0) + score;
@@ -56,7 +58,7 @@ const sorted = allCategories
 
 <BaseLayout
   title="Explore AI Tool Categories, aipedia.wiki"
-  description={`Browse all ${allCategories.length} AI tool categories: coding assistants, writing tools, image generators, video tools, voice synthesis, automation, and more. ${allTools.length} tools reviewed.`}
+  description={`Browse all ${allCategories.length} AI tool categories: coding assistants, writing tools, image generators, video tools, voice synthesis, automation, and more. ${activeTools.length} active tools reviewed.`}
 >
   <div class="t2-canvas">
     <nav class="t2-breadcrumb" aria-label="Breadcrumb">
@@ -69,14 +71,14 @@ const sorted = allCategories
       <div class="idx-eyebrow">
         <span class="idx-eyebrow-chip idx-eyebrow-accent">Directory</span>
         <span class="idx-eyebrow-chip"><span class="tabular-nums">{allCategories.length}</span> categories</span>
-        <span class="idx-eyebrow-chip"><span class="tabular-nums">{allTools.length}</span> tools</span>
+        <span class="idx-eyebrow-chip"><span class="tabular-nums">{activeTools.length}</span> active tools</span>
         <span class="idx-eyebrow-trust">Editorial only, no paid placements</span>
       </div>
       <h1 class="idx-headline">
         Explore every <span class="idx-gradient">AI category</span>.
       </h1>
       <p class="idx-subhead">
-        {allTools.length} tools across {allCategories.length} categories. Click a category to see top picks, category leaders, and editorial comparison tables.
+        {activeTools.length} active tools across {allCategories.length} categories. Click a category to see top picks, category leaders, and editorial comparison tables.
       </p>
     </section>
 

@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "$139.95-$499.95/month"
 status: active
 launched: 2008-01
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-04-27
+last_verified: 2026-04-27
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -187,6 +187,6 @@ Guru at $249.95/mo includes ContentShake AI natively. Pro users can add it as a 
 ## Related
 
 - **Category:** [AI SEO](/categories/ai-seo/)
-- **Comparisons:** [Surfer vs Semrush vs Ahrefs](/comparisons/surfer-vs-semrush-vs-ahrefs/) · [Semrush vs Surfer SEO](/comparisons/semrush-vs-surfer-seo/) · [ChatGPT vs Semrush](/comparisons/chatgpt-vs-semrush/) · [Frase vs Semrush](/comparisons/frase-vs-semrush/) · [MarketMuse vs Semrush](/comparisons/marketmuse-vs-semrush/)
+- **Comparisons:** [Surfer vs Semrush vs Ahrefs](/comparisons/surfer-vs-semrush-vs-ahrefs/) · [Semrush vs Surfer SEO](/comparisons/semrush-vs-surfer-seo/) · [Frase vs Semrush](/comparisons/frase-vs-semrush/) · [MarketMuse vs Semrush](/comparisons/marketmuse-vs-semrush/)
 
 *Some links on this page are affiliate links. We earn a commission at no extra cost to you. This does not influence our ratings or recommendations.*

@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0 (self-host) - $800+/month (Business cloud)"
 status: active
 launched: 2019-06
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-04-27
+last_verified: 2026-04-27
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -172,4 +172,4 @@ AI workflows count as regular executions. There is no separate AI pricing tier. 
 ## Related
 
 - **Category:** [AI Automation](/categories/ai-automation/)
-- **Comparisons:** [n8n vs Make vs Zapier](/comparisons/n8n-vs-make-vs-zapier/) · [ChatGPT vs n8n](/comparisons/chatgpt-vs-n8n/)
+- **Comparisons:** [n8n vs Make vs Zapier](/comparisons/n8n-vs-make-vs-zapier/)

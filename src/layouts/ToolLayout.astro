@@ -380,9 +380,10 @@ const isRecentVerified = verifiedDays > 30 && verifiedDays <= 90;
           target="_blank"
           rel={affiliate?.link && affiliate.link.length > 0 ? 'noopener sponsored' : 'noopener'}
           class="t2-cta t2-cta-primary"
+          aria-label={`${primaryCtaLabel} on the official site`}
         >
           {primaryCtaLabel}
-          <span class="t2-cta-arrow" aria-hidden="true">&rarr;</span>
+          <span class="t2-cta-arrow" aria-hidden="true">↗</span>
         </a>
       )}
       <a href={`/compare/`} class="t2-cta t2-cta-secondary">

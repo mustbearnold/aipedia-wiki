@@ -53,11 +53,13 @@ const enriched: EnrichedComparison[] = allComparisons.map((c) => {
   const toolB = toolLookup[slugB] || null;
   const sumScore = (toolA?.score || 0) + (toolB?.score || 0);
   const title = c.data.title || '';
+  const category = c.data.category || 'other';
+  const categoryLabel = categoryLabels[category] || category.replace(/^ai-/, '').replace(/-/g, ' ');
   return {
     slug, title,
-    category: c.data.category || 'other',
+    category,
     toolA, toolB, slugA, slugB, sumScore,
-    dataAttr: `${title} ${slugA} ${slugB} ${toolA?.title || ''} ${toolB?.title || ''}`.toLowerCase(),
+    dataAttr: `${title} ${slugA} ${slugB} ${toolA?.title || ''} ${toolB?.title || ''} ${category} ${categoryLabel}`.toLowerCase(),
   };
 });
 
@@ -78,6 +80,11 @@ const topCategoryLabel = categoryLabels[topCategory] || topCategory.replace(/^ai
 const strongestPair = featured[0];
 const strongestPairScore = strongestPair ? Math.round((strongestPair.sumScore / 2) * 10) / 10 : 0;
 const categorySignals = categoriesOrdered.slice(0, 4).map((cat) => ({
+  slug: cat,
+  label: categoryLabels[cat] || cat.replace(/^ai-/, '').replace(/-/g, ' '),
+  count: byCategory[cat].length,
+}));
+const laneSignals = categoriesOrdered.map((cat) => ({
   slug: cat,
   label: categoryLabels[cat] || cat.replace(/^ai-/, '').replace(/-/g, ' '),
   count: byCategory[cat].length,
@@ -168,10 +175,10 @@ const heroSignals = [
         <span id="compare-count" class="t2-compare-filter-count tabular-nums">{allComparisons.length}</span>
       </div>
       <div class="compare-lane-chips" aria-label="Popular comparison lanes">
-        {categorySignals.map((cat) => (
-          <a href={`#cat-${cat.slug}`} class="compare-lane-chip">
+        {laneSignals.map((cat) => (
+          <a href={`#cat-${cat.slug}`} class="compare-lane-chip" data-lane-chip={cat.slug}>
             <span>{cat.label}</span>
-            <strong class="tabular-nums">{cat.count}</strong>
+            <strong class="tabular-nums" data-lane-count>{cat.count}</strong>
           </a>
         ))}
       </div>
@@ -221,11 +228,11 @@ const heroSignals = [
             <p class="compare-group-kicker">Comparison lane</p>
             <h2 class="t2-index-group-title">{categoryLabels[cat] || cat.replace(/^ai-/, '').replace(/-/g, ' ')}</h2>
           </div>
-          <span class="t2-index-group-count">{byCategory[cat].length}</span>
+          <span class="t2-index-group-count" data-category-count>{byCategory[cat].length}</span>
         </div>
         <div class="t2-compare-grid t2-compare-grid-dense">
           {byCategory[cat].map((c, i) => (
-            <a href={`/compare/${c.slug}/`} class="compare-card t2-compare-card compare-card-premium compare-card-compact" data-search={c.dataAttr} style={`--reveal-delay: ${(i % 4) * 35}ms;`}>
+            <a href={`/compare/${c.slug}/`} class="compare-card t2-compare-card compare-card-premium compare-card-compact" data-search={c.dataAttr} data-category={c.category} style={`--reveal-delay: ${(i % 4) * 35}ms;`}>
               <div class="t2-compare-card-logos compare-logo-pair">
                 {c.toolA && <img src={c.toolA.logo} alt="" width="30" height="30" loading="lazy" />}
                 {c.toolB && <img src={c.toolB.logo} alt="" width="30" height="30" loading="lazy" />}
@@ -254,22 +261,46 @@ const heroSignals = [
       const counter = document.getElementById('compare-count');
       const featuredSec = document.getElementById('featured-section');
       if (!input) return;
-      const total = document.querySelectorAll('.compare-card').length;
-      input.addEventListener('input', () => {
+      const categoryCards = Array.from(document.querySelectorAll('.category-block .compare-card'));
+      const categoryBlocks = Array.from(document.querySelectorAll('.category-block'));
+      const laneChips = Array.from(document.querySelectorAll('[data-lane-chip]'));
+      const total = categoryCards.length;
+      function isMatch(card, q) {
+        return q === '' || (card.dataset.search && card.dataset.search.includes(q));
+      }
+      function applyFilter() {
         const q = input.value.trim().toLowerCase();
         let visible = 0;
-        document.querySelectorAll('.compare-card').forEach((card) => {
-          const match = q === '' || (card.dataset.search && card.dataset.search.includes(q));
+        const countsByCategory = new Map();
+        categoryCards.forEach((card) => {
+          const match = isMatch(card, q);
           card.style.display = match ? '' : 'none';
-          if (match) visible++;
+          if (match) {
+            visible++;
+            const cat = card.dataset.category || 'other';
+            countsByCategory.set(cat, (countsByCategory.get(cat) || 0) + 1);
+          }
         });
-        document.querySelectorAll('.category-block').forEach((block) => {
-          const anyVisible = block.querySelectorAll('.compare-card:not([style*="display: none"])').length > 0;
-          block.style.display = anyVisible ? '' : 'none';
+        categoryBlocks.forEach((block) => {
+          const cat = block.dataset.category || 'other';
+          const count = q === '' ? block.querySelectorAll('.compare-card').length : (countsByCategory.get(cat) || 0);
+          const countEl = block.querySelector('[data-category-count]');
+          if (countEl) countEl.textContent = String(count);
+          block.style.display = count > 0 ? '' : 'none';
+        });
+        laneChips.forEach((chip) => {
+          const cat = chip.dataset.laneChip || 'other';
+          const fullCount = chip.getAttribute('data-full-count') || chip.querySelector('[data-lane-count]')?.textContent || '0';
+          if (!chip.hasAttribute('data-full-count')) chip.setAttribute('data-full-count', fullCount);
+          const count = q === '' ? Number(fullCount) : (countsByCategory.get(cat) || 0);
+          const countEl = chip.querySelector('[data-lane-count]');
+          if (countEl) countEl.textContent = String(count);
+          chip.style.display = count > 0 ? '' : 'none';
         });
         if (featuredSec) featuredSec.style.display = q === '' ? '' : 'none';
         if (counter) counter.textContent = q === '' ? String(total) : String(visible);
-      });
+      }
+      input.addEventListener('input', applyFilter);
     })();
   </script>
 </BaseLayout>

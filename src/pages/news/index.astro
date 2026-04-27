@@ -775,8 +775,9 @@ const breadcrumbs = [
         scroll-snap-type: x proximity;
         -webkit-overflow-scrolling: touch;
         padding-bottom: 4px;
-        margin-right: -12px;
-        padding-right: 12px;
+        margin-right: 0;
+        padding-right: 0;
+        max-width: 100%;
         mask-image: linear-gradient(90deg, #000 0, #000 calc(100% - 24px), transparent);
       }
       .p3-newsdesk-chips-row::-webkit-scrollbar { display: none; }
@@ -784,7 +785,8 @@ const breadcrumbs = [
       .p3-newsdesk-chips-row .p3-chip {
         flex: none;
         scroll-snap-align: start;
-        padding: 5px 10px;
+        min-height: 44px;
+        padding: 8px 12px;
       }
       /* Category chips DO wrap but visible set is 5 + "more" toggle,
          so the block stays compact until expanded. */
@@ -830,6 +832,7 @@ const breadcrumbs = [
       font-size: 12px;
       cursor: pointer;
       max-width: 170px;
+      min-height: 44px;
     }
     .p3-newsdesk-tool-select:focus {
       outline: 2px solid rgba(34, 211, 238,0.4);
@@ -841,6 +844,7 @@ const breadcrumbs = [
       color: var(--p3-muted);
       border-radius: 999px;
       padding: 4px 10px;
+      min-height: 44px;
       font-size: 11px;
       cursor: pointer;
       transition: color 120ms ease, border-color 120ms ease;

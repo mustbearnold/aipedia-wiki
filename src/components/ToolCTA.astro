@@ -42,10 +42,7 @@ const rel = isAffiliate ? 'sponsored noopener' : 'noopener';
       data-tool-cta={name}
     >
       <span>{label}</span>
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="transition-transform group-hover:translate-x-0.5">
-        <line x1="5" y1="12" x2="19" y2="12"></line>
-        <polyline points="12 5 19 12 12 19"></polyline>
-      </svg>
+      <span aria-hidden="true" class="transition-transform group-hover:translate-x-0.5">↗</span>
     </a>
     {priceRange && (
       <span class="inline-flex items-center gap-1.5 text-xs text-[var(--text-muted)]">

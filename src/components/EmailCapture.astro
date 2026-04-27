@@ -14,7 +14,9 @@ export interface Props {
 }
 
 const { variant = 'inline', source = 'unknown' } = Astro.props;
-const toolCount = (await getCollection('tools')).length;
+const toolCount = (await getCollection('tools')).filter(
+  (t) => t.data.status !== 'dead' && t.data.status !== 'retired' && t.data.status !== 'acquired'
+).length;
 const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY ?? '';
 
 // Unique id suffix so multiple instances on one page don't collide
@@ -185,11 +187,15 @@ const containerClasses = {
 
 <style>
   .email-capture-hp {
-    position: absolute;
-    left: -9999px;
+    position: fixed;
+    inset: auto;
     width: 1px;
     height: 1px;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    overflow: hidden;
     opacity: 0;
     pointer-events: none;
+    white-space: nowrap;
   }
 </style>

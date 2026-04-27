@@ -122,10 +122,11 @@ export const POST: APIRoute = async ({ request, clientAddress }) => {
       (typeof clientAddress === 'string' ? clientAddress : '0.0.0.0');
 
     const tsSecret = String(workerEnv?.TURNSTILE_SECRET_KEY ?? '');
-    const tsSiteKey = String(workerEnv?.PUBLIC_TURNSTILE_SITE_KEY ?? workerEnv?.TURNSTILE_SITE_KEY ?? '');
+    const requireTurnstile = String(workerEnv?.SUBSCRIBE_REQUIRE_TURNSTILE ?? '').toLowerCase() === 'true';
     const turnstileToken = String(payload?.turnstile_token ?? '');
-    // A secret without a rendered public widget rejects every real signup.
-    const shouldVerifyTurnstile = !!tsSecret && (!!tsSiteKey || !!turnstileToken);
+    // Do not reject real readers when the public widget was not rendered.
+    // Set SUBSCRIBE_REQUIRE_TURNSTILE=true to make the token mandatory.
+    const shouldVerifyTurnstile = !!tsSecret && (!!turnstileToken || requireTurnstile);
     if (shouldVerifyTurnstile) {
       const tsOk = await verifyTurnstile(turnstileToken, ip, tsSecret, request);
       if (!tsOk) {

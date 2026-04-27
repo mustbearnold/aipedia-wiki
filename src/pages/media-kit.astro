@@ -3,6 +3,9 @@ import ArticleLayout from '../layouts/ArticleLayout.astro';
 import { getCollection } from 'astro:content';
 
 const allTools = await getCollection('tools');
+const activeTools = allTools.filter(
+  (t) => t.data.status !== 'dead' && t.data.status !== 'retired' && t.data.status !== 'acquired'
+);
 const allComparisons = await getCollection('comparisons');
 const allCategories = await getCollection('categories');
 const allUseCases = await getCollection('use-cases');
@@ -102,7 +105,7 @@ const brandNotes = [
 
   <div class="not-prose my-6 grid grid-cols-2 md:grid-cols-3 gap-3">
     <div class="rounded-xl border border-[var(--border)] bg-[var(--bg-card)] p-4">
-      <div class="text-2xl font-bold text-[var(--text-primary)] tabular-nums">{allTools.length}</div>
+      <div class="text-2xl font-bold text-[var(--text-primary)] tabular-nums">{activeTools.length}</div>
       <div class="text-xs text-[var(--text-muted)] uppercase tracking-[0.1em] mt-1">Tool reviews</div>
     </div>
     <div class="rounded-xl border border-[var(--border)] bg-[var(--bg-card)] p-4">
@@ -244,7 +247,7 @@ const brandNotes = [
     <dl class="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-6 text-sm">
       <div><dt class="text-[var(--text-muted)] text-xs uppercase tracking-[0.1em]">Name</dt><dd class="text-[var(--text-primary)] m-0">aipedia.wiki</dd></div>
       <div><dt class="text-[var(--text-muted)] text-xs uppercase tracking-[0.1em]">Category</dt><dd class="text-[var(--text-primary)] m-0">AI tools review and reference</dd></div>
-      <div><dt class="text-[var(--text-muted)] text-xs uppercase tracking-[0.1em]">Tools reviewed</dt><dd class="text-[var(--text-primary)] m-0 tabular-nums">{allTools.length}</dd></div>
+      <div><dt class="text-[var(--text-muted)] text-xs uppercase tracking-[0.1em]">Active tools reviewed</dt><dd class="text-[var(--text-primary)] m-0 tabular-nums">{activeTools.length}</dd></div>
       <div><dt class="text-[var(--text-muted)] text-xs uppercase tracking-[0.1em]">Categories</dt><dd class="text-[var(--text-primary)] m-0 tabular-nums">{allCategories.length}</dd></div>
       <div><dt class="text-[var(--text-muted)] text-xs uppercase tracking-[0.1em]">Comparisons</dt><dd class="text-[var(--text-primary)] m-0 tabular-nums">{allComparisons.length}</dd></div>
       <div><dt class="text-[var(--text-muted)] text-xs uppercase tracking-[0.1em]">Use-case guides</dt><dd class="text-[var(--text-primary)] m-0 tabular-nums">{allUseCases.length}</dd></div>

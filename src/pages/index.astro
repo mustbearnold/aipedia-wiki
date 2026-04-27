@@ -418,7 +418,7 @@ const verificationLedger = [
   description={`Independent AI tools encyclopedia. ${totalTools} tools scored on Utility, Value, Moat and Longevity. ${totalCompare} comparisons, current news, and transparent editorial signals.`}
 >
   <HomepageLD
-    toolCount={allTools.length}
+    toolCount={totalTools}
     comparisonCount={totalCompare}
     categoryCount={allCategories.length}
     lastUpdated="2026-04-23"
@@ -1135,25 +1135,15 @@ const verificationLedger = [
         busy = false;
       }
 
-      /* Start on first slide, then rotate. */
+      /* Start on the top-scored slide and keep it stable. The card used
+         to auto-rotate through category leaders, but that made "current
+         pick" feel inconsistent across visits and viewport checks. */
       apply(slides[0], true);
-      if (prefersReducedMotion) return;
-      if (slides.length < 2) return;
-
-      let paused = false;
-      card.addEventListener('mouseenter', () => { paused = true; });
-      card.addEventListener('mouseleave', () => { paused = false; });
-      card.addEventListener('focus', () => { paused = true; });
-      card.addEventListener('blur', () => { paused = false; });
-      document.addEventListener('visibilitychange', () => {
-        paused = document.hidden;
-      });
-
-      setInterval(() => { if (!paused) next(); }, 5500);
 
       /* Mouse-tilt: subtle 3D perspective rotation that follows the
          cursor. Max ~6deg on each axis. Resets on mouseleave. Works
          with the existing hover translateY lift (composed in CSS). */
+      if (prefersReducedMotion) return;
       card.addEventListener('mousemove', (e) => {
         const rect = card.getBoundingClientRect();
         const x = (e.clientX - rect.left) / rect.width - 0.5;   /* -0.5 .. 0.5 */

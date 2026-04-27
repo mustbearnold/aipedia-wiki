@@ -507,6 +507,7 @@ body:has(main .t2-canvas) ::selection {
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  min-height: 44px;
   padding: 12px 18px;
   border-radius: var(--t2-radius);
   font-size: 14px;
@@ -1436,6 +1437,7 @@ body:has(main .t2-canvas) ::selection {
   margin-top: 2px;
   padding: 8px 12px;
   font-size: 12px;
+  min-height: 44px;
 }
 
 /* Full ranked list inside .t2-prose */
@@ -1743,6 +1745,7 @@ body:has(main .t2-canvas) ::selection {
   padding: 10px 14px;
   font-size: 13px;
   justify-content: center;
+  min-height: 44px;
 }
 
 .t2-cmp-brief {
@@ -2915,7 +2918,7 @@ body:has(main .t2-canvas) ::selection {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  min-height: 30px;
+  min-height: 34px;
   padding: 5px 10px;
   border: 1px solid var(--t2-line);
   border-radius: 999px;
@@ -2933,6 +2936,16 @@ body:has(main .t2-canvas) ::selection {
   transform: translateY(-1px);
 }
 .compare-lane-chip strong { color: #67e8f9; }
+@media (max-width: 640px) {
+  .t2-cat-row-cta,
+  .t2-company-product-cta {
+    min-height: 44px;
+  }
+  .compare-lane-chip {
+    min-height: 44px;
+    padding: 8px 12px;
+  }
+}
 .compare-featured-group { margin-top: 0; }
 .compare-group-head {
   align-items: center;

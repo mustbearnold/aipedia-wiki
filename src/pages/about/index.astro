@@ -6,6 +6,9 @@ import FAQPageLD from '../../components/seo/FAQPageLD.astro';
 import { getCollection } from 'astro:content';
 
 const allTools = await getCollection('tools');
+const activeTools = allTools.filter(
+  (t) => t.data.status !== 'dead' && t.data.status !== 'retired' && t.data.status !== 'acquired'
+);
 const allComparisons = await getCollection('comparisons');
 const allCategories = await getCollection('categories');
 const allDead = await getCollection('dead');
@@ -16,7 +19,7 @@ const LAST_REVIEWED = '2026-04-15';
 const LAST_REVIEWED_HUMAN = 'April 15, 2026';
 
 const stats = [
-  { value: allTools.length, label: 'Tool reviews' },
+  { value: activeTools.length, label: 'Active tool reviews' },
   { value: allCategories.length, label: 'Categories' },
   { value: allComparisons.length, label: 'Comparisons' },
   { value: allUseCases.length, label: 'Use-case guides' },
@@ -107,7 +110,7 @@ const faqs = [
 
 const pageUrl = 'https://aipedia.wiki/about/';
 const pageName = 'About aipedia.wiki: Editorial Standards & Methodology';
-const pageDesc = `aipedia.wiki is an independent AI tools encyclopedia covering ${allTools.length} tool reviews across ${allCategories.length} categories. Learn our editorial process, four-dimension scoring methodology, monthly verification cadence, and corrections policy.`;
+const pageDesc = `aipedia.wiki is an independent AI tools encyclopedia covering ${activeTools.length} active tool reviews across ${allCategories.length} categories. Learn our editorial process, four-dimension scoring methodology, monthly verification cadence, and corrections policy.`;
 ---
 
 <OrganizationLD />

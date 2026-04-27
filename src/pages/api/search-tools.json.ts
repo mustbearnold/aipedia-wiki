@@ -8,7 +8,13 @@ export const GET: APIRoute = async () => {
   const allTools = await getCollection('tools');
 
   const tools = allTools
-    .filter((tool) => tool.data.type === 'tool' && tool.data.status !== 'dead')
+    .filter(
+      (tool) =>
+        tool.data.type === 'tool' &&
+        tool.data.status !== 'dead' &&
+        tool.data.status !== 'retired' &&
+        tool.data.status !== 'acquired'
+    )
     .map((tool) => {
       const slug = tool.data.slug || tool.id.replace(/\.md$/, '').replace(/\\/g, '/');
       return {

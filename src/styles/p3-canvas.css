@@ -1702,6 +1702,9 @@ body:has(main .p3-canvas) {
   display: inline-flex;
   align-items: center;
   gap: 5px;
+  min-width: 0;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
 }
 .p3-newsletter-trust-item svg {
   color: #5eead4;
@@ -1748,7 +1751,7 @@ body:has(main .p3-canvas) {
   .p3-newsletter-form-wrap .email-capture form {
     gap: 10px;
   }
-  .p3-newsletter-form-wrap .email-capture input,
+  .p3-newsletter-form-wrap .email-capture input:not(.email-capture-hp),
   .p3-newsletter-form-wrap .email-capture button {
     width: 100%;
     min-height: 48px;
@@ -1770,7 +1773,10 @@ body:has(main .p3-canvas) {
   }
   .p3-newsletter-trust-item {
     min-width: 0;
+    align-items: flex-start;
+    flex-wrap: wrap;
   }
+  .p3-newsletter-trust-item svg { margin-top: 2px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .p3-newsletter-inner::before { transition: none; }
@@ -1795,6 +1801,7 @@ body:has(main .p3-canvas) {
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  min-height: 44px;
   padding: 10px 16px;
   border-radius: 10px;
   font-size: 13.5px;
@@ -1866,6 +1873,12 @@ body:has(main .p3-canvas) {
 .p3-chip-active .p3-chip-count {
   background: rgba(34, 211, 238, 0.15);
   color: var(--p3-accent-text);
+}
+@media (max-width: 640px) {
+  .p3-chip {
+    min-height: 44px;
+    padding: 8px 12px;
+  }
 }
 
 /* ---------- page hero (non-homepage) ---------- */

@@ -5,6 +5,9 @@ import { getCollection } from 'astro:content';
 import { shortenPrice } from '../../utils/shorten-price';
 
 const allTools = await getCollection('tools');
+const activeToolCount = allTools.filter(
+  (t) => t.data.status !== 'dead' && t.data.status !== 'retired' && t.data.status !== 'acquired'
+).length;
 const newsEntries = await getCollection('news');
 
 // Editorial stacks: role → category → { budget, standard, premium } → [tool slugs]
@@ -379,7 +382,7 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
   <section class="mb-10 text-xs text-[var(--text-muted)] border-t border-[var(--border)] pt-6">
     <p class="leading-relaxed">
       <strong class="text-[var(--text-secondary)]">How these picks are made:</strong>
-      Editorial-curated from our {allTools.length} tool reviews and hands-on use. Rankings follow the <a href="/about/scoring/" class="text-[var(--accent-primary)] no-underline hover:underline">scoring methodology</a>. Affiliate relationships do not influence placement. "Recently updated" badges flag tools with news in the last 14 days. Disagree with a pick? <a href="/about/#corrections--contact" class="text-[var(--accent-primary)] no-underline hover:underline">Tell us why</a>.
+      Editorial-curated from our {activeToolCount} active tool reviews and hands-on use. Rankings follow the <a href="/about/scoring/" class="text-[var(--accent-primary)] no-underline hover:underline">scoring methodology</a>. Affiliate relationships do not influence placement. "Recently updated" badges flag tools with news in the last 14 days. Disagree with a pick? <a href="/about/#corrections--contact" class="text-[var(--accent-primary)] no-underline hover:underline">Tell us why</a>.
     </p>
   </section>
 
