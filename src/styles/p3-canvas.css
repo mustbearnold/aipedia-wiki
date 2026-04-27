@@ -412,12 +412,12 @@ body:has(main .p3-canvas) {
   max-width: 560px;
 }
 @media (min-width: 1400px) {
-  .p3-jumps { grid-template-columns: repeat(4, minmax(0, 1fr)); max-width: 960px; }
+  .p3-jumps { grid-template-columns: repeat(4, minmax(178px, 1fr)); max-width: 980px; }
 }
 .p3-jump {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   padding: 12px 14px;
   border-radius: 12px;
   border: 1px solid var(--p3-line);
@@ -480,20 +480,18 @@ body:has(main .p3-canvas) {
   flex: 1;
 }
 .p3-jump-title {
-  font-size: 13px;
-  font-weight: 600;
+  font-size: 14px;
+  font-weight: 750;
   color: var(--p3-fg);
-  line-height: 1.25;
-  letter-spacing: -0.005em;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  line-height: 1.15;
+  letter-spacing: 0;
+  overflow-wrap: anywhere;
 }
 .p3-jump-count {
-  font-size: 11px;
-  font-weight: 600;
+  font-size: 12px;
+  font-weight: 750;
   letter-spacing: 0.02em;
-  color: var(--p3-subtle);
+  color: var(--p3-muted);
   white-space: nowrap;
 }
 

@@ -175,6 +175,31 @@ test('homepage lead mover shows its rank as text', async ({ page }) => {
   expect(rankPaint.webkitTextFillColor).toBe('rgba(0, 0, 0, 0)');
 });
 
+test('homepage primary destination labels are readable', async ({ page }) => {
+  await page.goto('/');
+
+  const labels = page.locator('.p3-jumps .p3-jump-title');
+  await expect(labels).toHaveCount(4);
+
+  for (const expected of ['All tools', 'Head-to-head', 'News feed', 'How we score']) {
+    await expect(labels.filter({ hasText: expected })).toHaveCount(1);
+  }
+
+  const clippedLabels = await labels.evaluateAll((nodes) => nodes
+    .map((node) => {
+      const rect = node.getBoundingClientRect();
+      return {
+        text: node.textContent?.trim(),
+        clipped: node.scrollWidth > node.clientWidth + 1 || node.scrollHeight > node.clientHeight + 1,
+        width: rect.width,
+        height: rect.height,
+      };
+    })
+    .filter((entry) => entry.clipped));
+
+  expect(clippedLabels).toEqual([]);
+});
+
 test('homepage rotating cover card keeps warm orange accents out of the corner glow', async ({ page }) => {
   await page.goto('/');
 
@@ -226,6 +251,44 @@ test('source styles stay inside the Signal Cyan palette', () => {
 
 test('brand logo raster stays inside the Signal Cyan palette', async () => {
   const { data, info } = await sharp('public/brand/aipedia-logo-crystal-cyan-512.png')
+    .ensureAlpha()
+    .raw()
+    .toBuffer({ resolveWithObject: true });
+
+  const violations = [];
+  for (let i = 0; i < data.length; i += info.channels) {
+    const alpha = data[i + 3] / 255;
+    if (alpha < 0.2) continue;
+
+    const r = data[i];
+    const g = data[i + 1];
+    const b = data[i + 2];
+    const max = Math.max(r, g, b) / 255;
+    const min = Math.min(r, g, b) / 255;
+    const delta = max - min;
+    if (max < 0.16 || delta < 0.04) continue;
+
+    const nr = r / 255;
+    const ng = g / 255;
+    const nb = b / 255;
+    let hue = 0;
+    if (max === nr) hue = ((ng - nb) / delta) % 6;
+    else if (max === ng) hue = (nb - nr) / delta + 2;
+    else hue = (nr - ng) / delta + 4;
+    hue = (hue * 60 + 360) % 360;
+    const saturation = delta / (1 - Math.abs(max + min - 1));
+
+    if (saturation > 0.2 && (hue < 160 || hue > 205)) {
+      violations.push({ r, g, b, hue: Math.round(hue), saturation: Math.round(saturation * 100) / 100 });
+      if (violations.length >= 12) break;
+    }
+  }
+
+  expect(violations).toEqual([]);
+});
+
+test('browser tab icon raster stays inside the Signal Cyan palette', async () => {
+  const { data, info } = await sharp('public/favicon-512.png')
     .ensureAlpha()
     .raw()
     .toBuffer({ resolveWithObject: true });

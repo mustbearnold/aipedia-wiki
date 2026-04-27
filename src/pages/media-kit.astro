@@ -15,6 +15,64 @@ const LAST_UPDATED_HUMAN = 'April 18, 2026';
 const pageName = 'Media Kit & Partnerships, aipedia.wiki';
 const pageDesc =
   'aipedia.wiki media kit for partnerships and affiliate programs. Site description, audience, content inventory, editorial standards, review methodology, partnership contact.';
+
+const brandAssets = [
+  {
+    title: 'Primary logo',
+    meta: '512x512 PNG with alpha',
+    href: '/brand/aipedia-logo-crystal-cyan-512.png',
+    preview: '/brand/aipedia-logo-crystal-cyan-512.png',
+    type: 'logo',
+  },
+  {
+    title: 'Profile logo',
+    meta: '128x128 PNG',
+    href: '/brand/aipedia-logo-crystal-cyan-128.png',
+    preview: '/brand/aipedia-logo-crystal-cyan-128.png',
+    type: 'logo',
+  },
+  {
+    title: 'Compact UI logo',
+    meta: '48x48 PNG',
+    href: '/brand/aipedia-logo-crystal-cyan-48.png',
+    preview: '/brand/aipedia-logo-crystal-cyan-48.png',
+    type: 'logo',
+  },
+  {
+    title: 'Browser tab icon',
+    meta: '32x32 PNG',
+    href: '/favicon-32.png',
+    preview: '/favicon-32.png',
+    type: 'logo',
+  },
+  {
+    title: 'iOS home icon',
+    meta: '180x180 PNG',
+    href: '/apple-touch-icon.png',
+    preview: '/apple-touch-icon.png',
+    type: 'logo',
+  },
+  {
+    title: 'Press preview card',
+    meta: '1200x630 PNG',
+    href: '/brand/aipedia-media-kit-preview.png',
+    preview: '/brand/aipedia-media-kit-preview.png',
+    type: 'wide',
+  },
+  {
+    title: 'Default social card',
+    meta: '1200x630 PNG',
+    href: '/og-default.png',
+    preview: '/og-default.png',
+    type: 'wide',
+  },
+];
+
+const brandNotes = [
+  { label: 'Site name', value: 'aipedia.wiki' },
+  { label: 'Typeface', value: 'Geist' },
+  { label: 'Palette', value: 'Signal Cyan' },
+];
 ---
 
 <ArticleLayout
@@ -136,17 +194,49 @@ const pageDesc =
   <h2>Brand assets</h2>
 
   <p>
-    Logo, favicon, and OG images are available under the paths below. Partners may use these for partner-directory pages, press coverage, and integration announcements.
+    Current Signal Cyan logo, favicon, and preview images are available under the paths below. Partners may use these for partner-directory pages, press coverage, and integration announcements.
   </p>
 
-  <ul>
-    <li><a href="/brand/aipedia-logo-512.png">brand/aipedia-logo-512.png</a> (master logo, 512x512 PNG with alpha)</li>
-    <li><a href="/favicon-32.png">favicon-32.png</a> (browser tab, 32x32)</li>
-    <li><a href="/apple-touch-icon.png">apple-touch-icon.png</a> (iOS home screen, 180x180)</li>
-    <li><a href="/og-default.png">og-default.png</a> (default 1200x630 OG card, raster for social networks)</li>
-    <li>Site name: <code>aipedia.wiki</code> (lowercase, no space, no "the")</li>
-    <li>Typeface: Geist</li>
-  </ul>
+  <div class="not-prose media-brand-kit my-6">
+    <div class="media-brand-hero">
+      <img
+        src="/brand/aipedia-media-kit-preview.png"
+        alt="aipedia.wiki Signal Cyan media kit preview"
+        width="1200"
+        height="630"
+        loading="lazy"
+      />
+      <div>
+        <span>Press card</span>
+        <strong>Signal Cyan brand preview</strong>
+        <a href="/brand/aipedia-media-kit-preview.png">Open PNG -&gt;</a>
+      </div>
+    </div>
+
+    <div class="media-brand-grid" aria-label="Brand asset downloads">
+      {brandAssets.map((asset) => (
+        <a class={`media-brand-card media-brand-card--${asset.type}`} href={asset.href}>
+          <span class="media-brand-preview">
+            <img src={asset.preview} alt="" loading="lazy" />
+          </span>
+          <span class="media-brand-copy">
+            <strong>{asset.title}</strong>
+            <span>{asset.meta}</span>
+          </span>
+          <span class="media-brand-action" aria-hidden="true">Open</span>
+        </a>
+      ))}
+    </div>
+
+    <dl class="media-brand-notes">
+      {brandNotes.map((note) => (
+        <div>
+          <dt>{note.label}</dt>
+          <dd>{note.value}</dd>
+        </div>
+      ))}
+    </dl>
+  </div>
 
   <h2>Fact sheet</h2>
 
@@ -165,3 +255,191 @@ const pageDesc =
     </dl>
   </div>
 </ArticleLayout>
+
+<style>
+  .media-brand-kit {
+    display: grid;
+    gap: 14px;
+  }
+
+  .media-brand-hero {
+    display: grid;
+    overflow: hidden;
+    border: 1px solid rgba(34, 211, 238, 0.24);
+    border-radius: 8px;
+    background: var(--bg-card);
+  }
+
+  .media-brand-hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .media-brand-hero > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    border-top: 1px solid var(--border);
+    padding: 14px 16px;
+  }
+
+  .media-brand-hero span,
+  .media-brand-copy span,
+  .media-brand-notes dt {
+    color: var(--text-muted);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    line-height: 1.1;
+    text-transform: uppercase;
+  }
+
+  .media-brand-hero strong,
+  .media-brand-copy strong,
+  .media-brand-notes dd {
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    font-weight: 800;
+    line-height: 1.2;
+  }
+
+  .media-brand-hero a,
+  .media-brand-action {
+    color: var(--accent-primary);
+    font-size: 0.82rem;
+    font-weight: 800;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .media-brand-hero a:hover,
+  .media-brand-card:hover .media-brand-action {
+    text-decoration: underline;
+  }
+
+  .media-brand-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .media-brand-card {
+    display: grid;
+    grid-template-columns: 74px minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 14px;
+    min-height: 104px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: rgba(8, 13, 24, 0.66);
+    color: var(--text-primary);
+    padding: 14px;
+    text-decoration: none;
+    transition: border-color 150ms ease, background 150ms ease, transform 150ms ease;
+  }
+
+  .media-brand-card:hover {
+    border-color: rgba(34, 211, 238, 0.36);
+    background: var(--bg-card-hover);
+    transform: translateY(-1px);
+  }
+
+  .media-brand-preview {
+    display: grid;
+    place-items: center;
+    width: 74px;
+    height: 74px;
+    overflow: hidden;
+    border: 1px solid rgba(34, 211, 238, 0.2);
+    border-radius: 8px;
+    background:
+      radial-gradient(circle at 50% 40%, rgba(34, 211, 238, 0.13), transparent 62%),
+      rgba(2, 6, 23, 0.62);
+  }
+
+  .media-brand-preview img {
+    display: block;
+    width: 58px;
+    height: 58px;
+    object-fit: contain;
+  }
+
+  .media-brand-card--wide {
+    grid-column: span 2;
+    grid-template-columns: minmax(160px, 220px) minmax(0, 1fr) auto;
+  }
+
+  .media-brand-card--wide .media-brand-preview {
+    width: 100%;
+    height: 98px;
+  }
+
+  .media-brand-card--wide .media-brand-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .media-brand-copy {
+    display: grid;
+    gap: 6px;
+    min-width: 0;
+  }
+
+  .media-brand-notes {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin: 2px 0 0;
+  }
+
+  .media-brand-notes div {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: rgba(8, 13, 24, 0.52);
+    padding: 14px;
+  }
+
+  .media-brand-notes dt,
+  .media-brand-notes dd {
+    margin: 0;
+  }
+
+  .media-brand-notes dd {
+    margin-top: 7px;
+  }
+
+  .light .media-brand-card,
+  .light .media-brand-notes div {
+    background: rgba(248, 250, 252, 0.76);
+  }
+
+  @media (max-width: 760px) {
+    .media-brand-hero > div,
+    .media-brand-card,
+    .media-brand-card--wide {
+      grid-template-columns: 1fr;
+    }
+
+    .media-brand-hero > div {
+      align-items: start;
+      display: grid;
+    }
+
+    .media-brand-grid,
+    .media-brand-notes {
+      grid-template-columns: 1fr;
+    }
+
+    .media-brand-card--wide {
+      grid-column: auto;
+    }
+
+    .media-brand-card--wide .media-brand-preview {
+      height: auto;
+      aspect-ratio: 1200 / 630;
+    }
+  }
+</style>
