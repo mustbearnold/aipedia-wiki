@@ -2,20 +2,20 @@
 type: tool
 slug: manus
 title: Manus
-tagline: General-purpose autonomous agent that researches, codes, builds spreadsheets, and operates the web in a sandboxed VM. Acquired by Meta in December 2025.
+tagline: General-purpose autonomous agent that researches, codes, builds spreadsheets, and operates the web in a sandboxed VM. Meta announced an acquisition in December 2025, but China blocked the deal on April 27, 2026.
 category: ai-automation
 secondary_categories: [ai-coding, ai-search]
-company: Butterfly Effect Inc. (Meta subsidiary)
+company: Butterfly Effect Inc. (Meta acquisition blocked by China)
 url: https://manus.im
 pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2025-03
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-04-27
+last_verified: 2026-04-27
 update_frequency: monthly
 seo_title: "Manus: Features, Pricing & Review (2026)"
-meta_description: "Manus is Butterfly Effect's general-purpose autonomous agent, now a Meta subsidiary. Free tier includes 1,000 starter credits plus 300 daily. Pro from $20/mo, Team $40/seat, Extended $200/mo. Runs research, coding, and web operations in a sandboxed VM."
+meta_description: "Manus is Butterfly Effect's general-purpose autonomous agent. Meta announced an acquisition in December 2025, but China blocked the deal on April 27, 2026. Free tier includes 1,000 starter credits plus 300 daily. Pro from $20/mo."
 author: "aipedia.wiki Editorial"
 affiliate:
   has_program: false
@@ -40,7 +40,7 @@ not_best_for:
   - cost-predictable budgets (credit burn varies wildly per task)
   - workflows needing tight SaaS integrations out of the box
 quick_answer: >-
-  Manus is an autonomous general-purpose agent that runs research, code, and web tasks inside its own sandboxed VM. Free tier ships 1,000 starter credits plus 300 daily; Pro from $20/mo. Pick it for multi-step research and one-off automations. Skip for deep coding or cost-predictable workflows.
+  Manus is an autonomous general-purpose agent that runs research, code, and web tasks inside its own sandboxed VM. Free tier ships 1,000 starter credits plus 300 daily; Pro from $20/mo. Pick it for multi-step research and one-off automations. Skip for deep coding, sensitive data, or cost-predictable workflows.
 price_history:
   - date: 2025-07
     plan: "Pro (Standard)"
@@ -58,7 +58,7 @@ price_history:
 
 # Manus
 
-**Manus** is a general-purpose autonomous agent from Butterfly Effect Inc., the Singapore-incorporated team that also built Monica.im. The product launched invite-only in **March 2025**, opened to broader access through late 2025, and became a Meta subsidiary in **December 2025** in a deal valued above $2B.
+**Manus** is a general-purpose autonomous agent from Butterfly Effect Inc., the Singapore-incorporated team that also built Monica.im. The product launched invite-only in **March 2025** and opened to broader access through late 2025. Meta announced an acquisition in **December 2025**, but China blocked the deal on **April 27, 2026**, leaving the ownership path unsettled.
 
 Manus runs tasks inside its own sandboxed cloud VM. It browses, writes code, builds slides, operates spreadsheets, and returns a finished artifact. The agent keeps working while the browser tab is closed.
 
@@ -66,7 +66,7 @@ Manus runs tasks inside its own sandboxed cloud VM. It browses, writes code, bui
 
 > **Pick Manus if you want a general agent that chews through multi-step tasks in the background while you do other work.** The sandboxed VM handles research, data scraping, slide and spreadsheet assembly, and basic web operations without a local runner. The free tier's 1,000 starter credits plus 300 daily refresh is generous enough to test serious workflows.
 >
-> **Skip it if you care about data residency, production-grade coding, or predictable unit costs.** The original stack came out of China, the company now sits inside Meta, and credit burn per task varies from ~50 for simple queries to 900+ for deep research runs. Production coding workflows get more mileage from [Claude Code](/tools/claude-code/) or [Devin](/tools/devin/).
+> **Skip it if you care about data residency, production-grade coding, or predictable unit costs.** The original stack came out of China, Meta's announced acquisition is now blocked by Chinese regulators, and credit burn per task varies from ~50 for simple queries to 900+ for deep research runs. Production coding workflows get more mileage from [Claude Code](/tools/claude-code/) or [Devin](/tools/devin/).
 >
 > **Who pays which tier:** Free for casual testing. Pro Standard $20/mo covers most solo operators at 4,000 monthly credits. Pro Customizable $40/mo for steady weekly use. Extended $200/mo for power users running Manus as a daily driver. Team $40/seat (2-seat min) for small groups with shared credit pools.
 
@@ -75,9 +75,9 @@ Manus runs tasks inside its own sandboxed cloud VM. It browses, writes code, bui
 | | |
 |---|---|
 | **Product type** | Autonomous general-purpose agent with sandboxed cloud VM |
-| **Company** | Butterfly Effect Inc. (now a Meta subsidiary) |
+| **Company** | Butterfly Effect Inc. (Meta acquisition blocked by China) |
 | **Launched** | March 2025 invite-only, broader access late 2025 |
-| **Acquisition** | Meta, December 2025, reported above $2B |
+| **Acquisition** | Meta announced a December 2025 deal reported above $2B; China blocked the acquisition on April 27, 2026 |
 | **Pricing model** | Credit-based, refreshes daily plus monthly pool |
 | **Free tier** | 1,000 starter credits, 300 daily refresh, 1 concurrent task, 1 scheduled task |
 | **Pro Standard** | $20/mo, 4,000 monthly credits, up to 20 concurrent tasks |
@@ -139,7 +139,7 @@ Prices verified 2026-04-18 via [Manus Plans documentation](https://manus.im/docs
 ## Failure modes
 
 - **Credit burn opacity.** The same prompt can cost 50 or 900 credits depending on depth. Budget monitoring requires watching the run in real time.
-- **Data residency questions.** Stack origin is China, the company is now a Meta subsidiary, and compute still runs in remote sandboxes. Regulated workloads should verify before using.
+- **Data residency questions.** Stack origin is China, Meta's announced acquisition is now blocked by Chinese regulators, and compute still runs in remote sandboxes. Regulated workloads should verify before using.
 - **Brittle on niche sites.** Anti-bot protection, SSO portals, and heavily dynamic apps break the browser agent. Manus reports failure and moves on, which still burns credits.
 - **Code output is prototype-grade.** Functional for small scripts, unreliable for production changes to a real repo. Pair with a coding specialist for anything shipped.
 - **Support quality varies.** Meta integration is still early. Escalation paths for paid tiers are not as mature as Anthropic or OpenAI.
