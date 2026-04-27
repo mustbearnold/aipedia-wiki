@@ -277,9 +277,9 @@ const brandNotes = [
   }
 
   .media-brand-hero > div {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
     align-items: center;
-    justify-content: space-between;
     gap: 14px;
     border-top: 1px solid var(--border);
     padding: 14px 16px;
@@ -303,6 +303,8 @@ const brandNotes = [
     font-size: 0.95rem;
     font-weight: 800;
     line-height: 1.2;
+    min-width: 0;
+    overflow-wrap: anywhere;
   }
 
   .media-brand-hero a,
@@ -312,6 +314,11 @@ const brandNotes = [
     font-weight: 800;
     text-decoration: none;
     white-space: nowrap;
+  }
+
+  .media-brand-hero a,
+  .media-brand-action {
+    justify-self: end;
   }
 
   .media-brand-hero a:hover,
@@ -327,10 +334,11 @@ const brandNotes = [
 
   .media-brand-card {
     display: grid;
-    grid-template-columns: 74px minmax(0, 1fr) auto;
+    grid-template-columns: 74px minmax(0, 1fr) min-content;
     align-items: center;
     gap: 14px;
     min-height: 104px;
+    overflow: hidden;
     border: 1px solid var(--border);
     border-radius: 8px;
     background: rgba(8, 13, 24, 0.66);
@@ -368,7 +376,7 @@ const brandNotes = [
 
   .media-brand-card--wide {
     grid-column: span 2;
-    grid-template-columns: minmax(160px, 220px) minmax(0, 1fr) auto;
+    grid-template-columns: minmax(160px, 220px) minmax(0, 1fr) min-content;
   }
 
   .media-brand-card--wide .media-brand-preview {
@@ -386,6 +394,12 @@ const brandNotes = [
     display: grid;
     gap: 6px;
     min-width: 0;
+  }
+
+  .media-brand-copy span,
+  .media-brand-notes dt,
+  .media-brand-notes dd {
+    overflow-wrap: anywhere;
   }
 
   .media-brand-notes {
@@ -416,6 +430,16 @@ const brandNotes = [
     background: rgba(248, 250, 252, 0.76);
   }
 
+  @media (max-width: 980px) {
+    .media-brand-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .media-brand-card--wide {
+      grid-column: auto;
+    }
+  }
+
   @media (max-width: 760px) {
     .media-brand-hero > div,
     .media-brand-card,
@@ -425,16 +449,15 @@ const brandNotes = [
 
     .media-brand-hero > div {
       align-items: start;
-      display: grid;
     }
 
-    .media-brand-grid,
+    .media-brand-hero a,
+    .media-brand-action {
+      justify-self: start;
+    }
+
     .media-brand-notes {
       grid-template-columns: 1fr;
-    }
-
-    .media-brand-card--wide {
-      grid-column: auto;
     }
 
     .media-brand-card--wide .media-brand-preview {
