@@ -2,9 +2,11 @@
 /**
  * Generate per-tool OG social-share images at build time.
  *
- * Writes BOTH:
- *   - public/og/tools/<slug>.svg  (for internal/debug use)
+ * Writes:
  *   - public/og/tools/<slug>.png  (the one social networks actually render)
+ *
+ * Set AIPEDIA_WRITE_OG_SVG=1 to also keep public/og/tools/<slug>.svg
+ * debug files. Runtime pages only reference PNGs.
  *
  * Twitter/X, LinkedIn, Facebook, Slack, iMessage all refuse SVG for
  * link previews. PNG/JPG/WebP only. That is why we rasterize here.
@@ -37,6 +39,7 @@ const REGISTRY = join(ROOT, 'src/data/_meta/tools-registry.json');
 const TOOLS_MD_DIR = join(ROOT, 'src/content/tools');
 const OUT_DIR = join(ROOT, 'public/og/tools');
 const LOGO_DIR = join(ROOT, 'public/logos/tools');
+const WRITE_DEBUG_SVG = process.env.AIPEDIA_WRITE_OG_SVG === '1';
 // Two brand logo sizes: a small one for the top-left corner of each
 // tool card (rendered at 56x56), and a large one for the default card
 // centerpiece (rendered at 200x200). Embedding the full 1666x1666
@@ -297,8 +300,10 @@ function main() {
   let pngs = 0;
   for (const tool of tools) {
     const svg = svgFor(tool);
-    writeFileSync(join(OUT_DIR, `${tool.slug}.svg`), svg, 'utf8');
-    svgs++;
+    if (WRITE_DEBUG_SVG || !Resvg) {
+      writeFileSync(join(OUT_DIR, `${tool.slug}.svg`), svg, 'utf8');
+      svgs++;
+    }
     try {
       const png = rasterize(svg);
       if (png) {
@@ -309,7 +314,8 @@ function main() {
       console.warn(`PNG raster failed for ${tool.slug}:`, err.message);
     }
   }
-  console.log(`Generated ${svgs} OG SVGs + ${pngs} PNGs in public/og/tools/`);
+  const svgSummary = svgs > 0 ? ` + ${svgs} debug SVGs` : '';
+  console.log(`Generated ${pngs} OG PNGs${svgSummary} in public/og/tools/`);
 
   // Also rasterize the site-wide default card so it works as a social
   // fallback. Without a PNG version, X/LinkedIn/etc show a blank card

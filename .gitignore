@@ -16,6 +16,10 @@ pnpm-debug.log*
 test-results/
 playwright-report/
 
+# generated OG debug sources
+public/og/news/*.svg
+public/og/tools/*.svg
+
 
 # environment variables
 .env
