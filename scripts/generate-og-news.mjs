@@ -3,8 +3,10 @@
  * Generate per-news-item OG social-share cards.
  *
  * Writes:
- *   - public/og/news/<slug>.svg  (debug)
  *   - public/og/news/<slug>.png  (the actual social share)
+ *
+ * Set AIPEDIA_WRITE_OG_SVG=1 to also keep public/og/news/<slug>.svg
+ * debug files. Runtime pages only reference PNGs.
  *
  * Style: "site-native" — dark near-black background matching the site,
  * hex cell pattern echoing the brand logo, Geist-family typography, tool
@@ -26,6 +28,7 @@ const ROOT = fileURLToPath(new URL('../', import.meta.url));
 const NEWS_DIR = join(ROOT, 'src/content/news');
 const OUT_DIR = join(ROOT, 'public/og/news');
 const LOGO_DIR = join(ROOT, 'public/logos/tools');
+const WRITE_DEBUG_SVG = process.env.AIPEDIA_WRITE_OG_SVG === '1';
 const BRAND_LOGO_SMALL = existsSync(join(ROOT, 'public/brand/aipedia-logo-demo-gpt-128.png'))
   ? join(ROOT, 'public/brand/aipedia-logo-demo-gpt-128.png')
   : join(ROOT, 'public/brand/aipedia-logo-128.png');
@@ -339,8 +342,10 @@ function main() {
     const slug = news.slug || file.replace(/\.md$/, '');
 
     const svg = svgForNews(news).replace(/[ \t]+$/gm, '');
-    writeFileSync(join(OUT_DIR, `${slug}.svg`), svg, 'utf8');
-    svgs++;
+    if (WRITE_DEBUG_SVG || !Resvg) {
+      writeFileSync(join(OUT_DIR, `${slug}.svg`), svg, 'utf8');
+      svgs++;
+    }
     try {
       const png = rasterize(svg);
       if (png) {
@@ -352,7 +357,8 @@ function main() {
     }
   }
 
-  console.log(`[news-og] generated ${svgs} SVGs and ${pngs} PNGs in public/og/news/`);
+  const svgSummary = svgs > 0 ? ` and ${svgs} debug SVGs` : '';
+  console.log(`[news-og] generated ${pngs} PNGs${svgSummary} in public/og/news/`);
 }
 
 main();

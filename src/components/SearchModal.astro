@@ -1,31 +1,8 @@
 ---
 import { getCollection } from 'astro:content';
-import { shortenPrice } from '../utils/shorten-price';
 
 const allTools = await getCollection('tools');
-const toolsIndex = allTools
-  .filter(t => t.data.type === 'tool' && t.data.status !== 'dead')
-  .map(t => {
-    const slug = t.data.slug || t.id.replace(/\.md$/, '').replace(/\\/g, '/');
-    return {
-      slug,
-      title: t.data.title ?? '',
-      tagline: t.data.tagline ?? '',
-      category: t.data.category ?? '',
-      price: shortenPrice(t.data.price_range ?? ''),
-      url: `/tools/${slug}/`,
-    };
-  })
-  .sort((a, b) => a.title.localeCompare(b.title));
-
-const categoryEmoji: Record<string, string> = {
-  'ai-chatbots': 'AI',
-  'ai-coding': 'CD', 'ai-writing': 'WR', 'ai-image': 'IM',
-  'ai-video': 'VD', 'ai-voice': 'VO', 'ai-notes': 'NT',
-  'ai-search': 'SR', 'ai-seo': 'SE', 'ai-automation': 'AU',
-  'ai-design': 'DS', 'ai-music': 'MU', 'ai-presentation': 'PR',
-  'ai-research': 'RS',
-};
+const toolsCount = allTools.filter(t => t.data.type === 'tool' && t.data.status !== 'dead').length;
 ---
 
 <style is:global>
@@ -558,7 +535,7 @@ const categoryEmoji: Record<string, string> = {
           <span class="s-panel-name">Search the AI tools wiki</span>
         </div>
         <div class="s-panel-meta" aria-hidden="true">
-          <span>{toolsIndex.length} tools</span>
+          <span>{toolsCount} tools</span>
           <span>All pages</span>
         </div>
       </div>
@@ -573,7 +550,7 @@ const categoryEmoji: Record<string, string> = {
       </div>
       <!-- Tabs -->
       <div class="s-tabs">
-        <button class="s-tab active" data-tab="tools">Tools <span class="s-count">{toolsIndex.length}</span></button>
+        <button class="s-tab active" data-tab="tools">Tools <span class="s-count">{toolsCount}</span></button>
         <button class="s-tab" data-tab="general">All Pages</button>
       </div>
       <!-- Results -->
@@ -591,19 +568,39 @@ const categoryEmoji: Record<string, string> = {
   </div>
 </div>
 
-<!-- Embed tools data at build time -->
-<script define:vars={{ toolsIndex, categoryEmoji }}>
+<script>
 (function () {
-  // Data is fresh every run — always overwrite. But listeners must only bind once.
-  window.__aipediaSearchData = { TOOLS: toolsIndex, EMOJI: categoryEmoji };
+  const SEARCH_INDEX_URL = '/api/search-tools.json';
+  const EMOJI = {
+    'ai-chatbots': 'AI',
+    'ai-coding': 'CD',
+    'ai-writing': 'WR',
+    'ai-image': 'IM',
+    'ai-video': 'VD',
+    'ai-voice': 'VO',
+    'ai-notes': 'NT',
+    'ai-search': 'SR',
+    'ai-seo': 'SE',
+    'ai-automation': 'AU',
+    'ai-design': 'DS',
+    'ai-music': 'MU',
+    'ai-presentation': 'PR',
+    'ai-research': 'RS',
+  };
+
+  window.__aipediaSearchData = window.__aipediaSearchData || { TOOLS: [], EMOJI };
+  window.__aipediaSearchData.EMOJI = EMOJI;
+  let TOOLS = Array.isArray(window.__aipediaSearchData.TOOLS)
+    ? window.__aipediaSearchData.TOOLS
+    : [];
+  let toolsPromise = null;
+  let toolsLoadFailed = false;
 
   // If we've already initialised on this document, bail out (prevents duplicate listeners
   // across Astro view transitions, which was causing the search to stop opening).
   if (window.__aipediaSearchInit) return;
   window.__aipediaSearchInit = true;
 
-  const TOOLS = toolsIndex;
-  const EMOJI = categoryEmoji;
   let pagefind = null;
   let activeTab = 'tools';
   let debounceTimer;
@@ -621,6 +618,43 @@ const categoryEmoji: Record<string, string> = {
     };
   }
 
+  async function loadTools() {
+    if (TOOLS.length) return TOOLS;
+    if (toolsPromise) return toolsPromise;
+
+    toolsPromise = fetch(SEARCH_INDEX_URL, { credentials: 'same-origin' })
+      .then((res) => {
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        return res.json();
+      })
+      .then((data) => {
+        TOOLS = Array.isArray(data.tools) ? data.tools : [];
+        toolsLoadFailed = false;
+        window.__aipediaSearchData.TOOLS = TOOLS;
+        return TOOLS;
+      })
+      .catch((err) => {
+        toolsLoadFailed = true;
+        toolsPromise = null;
+        console.warn('[aipedia-search] tool index unavailable:', err);
+        return TOOLS;
+      });
+
+    return toolsPromise;
+  }
+
+  function queueToolRender(q) {
+    const { results } = els();
+    if (results && !TOOLS.length) {
+      results.innerHTML = '<p class="s-hint">Loading tools...</p>';
+    }
+    loadTools().then(() => {
+      if (q) searchTools(q);
+      else showHint();
+      preselectFirst();
+    });
+  }
+
   // Tab clicks (delegated on document so new tab buttons are always handled)
   document.addEventListener('click', (e) => {
     const tab = e.target.closest('.s-tab');
@@ -633,7 +667,11 @@ const categoryEmoji: Record<string, string> = {
       input.placeholder = activeTab === 'tools' ? 'Search tools...' : 'Search all pages...';
       const q = input.value.trim();
       if (q) runSearch(q);
-      else { showHint(); preselectFirst(); }
+      else {
+        showHint();
+        preselectFirst();
+        if (activeTab === 'tools' && !TOOLS.length) queueToolRender('');
+      }
     }
   });
 
@@ -693,6 +731,7 @@ const categoryEmoji: Record<string, string> = {
     setTimeout(() => input.focus(), 50);
     showHint();
     preselectFirst();
+    if (activeTab === 'tools' && !TOOLS.length) queueToolRender('');
   }
 
   function closeModal() {
@@ -724,6 +763,10 @@ const categoryEmoji: Record<string, string> = {
     const { results, input } = els();
     if (!results) return;
     if (activeTab === 'tools') {
+      if (!TOOLS.length) {
+        results.innerHTML = `<p class="s-hint">${toolsLoadFailed ? 'Tool search unavailable.' : 'Loading tools...'}</p>`;
+        return;
+      }
       const featured = FEATURED
         .map(slug => TOOLS.find(t => t.slug === slug))
         .filter(Boolean);
@@ -764,6 +807,10 @@ const categoryEmoji: Record<string, string> = {
   function searchTools(q) {
     const { results } = els();
     if (!results) return;
+    if (!TOOLS.length) {
+      results.innerHTML = `<p class="s-hint">${toolsLoadFailed ? 'Tool search unavailable.' : 'Loading tools...'}</p>`;
+      return;
+    }
     const lq = q.toLowerCase();
     const hits = TOOLS.filter(t =>
       t.title.toLowerCase().includes(lq) ||
@@ -790,7 +837,8 @@ const categoryEmoji: Record<string, string> = {
   async function initPagefind() {
     if (pagefind) return;
     try {
-      pagefind = await import('/pagefind/pagefind.js');
+      const runtimeImport = new Function('specifier', 'return import(specifier)');
+      pagefind = await runtimeImport('/pagefind/pagefind.js');
       await pagefind.options({ excerptLength: 20 });
     } catch(e) {
       pagefind = null;
@@ -825,7 +873,7 @@ const categoryEmoji: Record<string, string> = {
   }
 
   function runSearch(q) {
-    if (activeTab === 'tools') { searchTools(q); preselectFirst(); }
+    if (activeTab === 'tools') queueToolRender(q);
     else searchGeneral(q);
   }
 
@@ -848,7 +896,7 @@ const categoryEmoji: Record<string, string> = {
     clearTimeout(debounceTimer);
     const q = e.target.value.trim();
     if (!q) { showHint(); preselectFirst(); return; }
-    if (activeTab === 'tools') { searchTools(q); preselectFirst(); }
+    if (activeTab === 'tools') queueToolRender(q);
     else { debounceTimer = setTimeout(() => { searchGeneral(q).then(preselectFirst); }, 200); }
   });
 

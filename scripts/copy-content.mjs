@@ -32,9 +32,11 @@ function runNode(script, label) {
   }
 }
 
-// 1. Regenerate per-tool OG SVGs so social share previews stay in sync with
-//    current titles, scores, and taglines.
+// 1. Regenerate per-tool OG share images so social previews stay in sync with
+//    current titles, scores, and taglines. Then recompress all generated OG
+//    PNGs, including news cards from prebuild.
 runNode("generate-og-svgs.mjs", "OG SVG generation");
+runNode("optimize-og-images.mjs", "OG PNG optimization");
 
 // 2. Generate the logo manifest so components can resolve logo extensions at
 //    build time without calling node:fs from Astro frontmatter (Cloudflare
