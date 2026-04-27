@@ -1654,7 +1654,7 @@ body:has(main .p3-canvas) {
   font-size: clamp(1.65rem, 3.2vw, 2.5rem);
   font-weight: 700;
   line-height: 1.1;
-  letter-spacing: -0.022em;
+  letter-spacing: 0;
   color: var(--p3-fg);
   margin: 0 0 14px;
   max-width: 18ch;
@@ -1706,6 +1706,71 @@ body:has(main .p3-canvas) {
 .p3-newsletter-trust-item svg {
   color: #5eead4;
   flex: none;
+}
+@media (max-width: 640px) {
+  .p3-newsletter {
+    margin-top: 12px;
+    padding: 28px 0;
+  }
+  .p3-newsletter-inner {
+    gap: 22px;
+    padding: 24px 18px;
+    border-radius: 18px;
+  }
+  .p3-newsletter-eyebrow {
+    max-width: 100%;
+    padding: 6px 10px;
+    font-size: 9.5px;
+    line-height: 1.25;
+    letter-spacing: 0.075em;
+    white-space: normal;
+  }
+  .p3-newsletter-title {
+    max-width: none;
+    font-size: 1.85rem;
+    line-height: 1.12;
+  }
+  .p3-newsletter-sub {
+    max-width: none;
+    font-size: 14px;
+  }
+  .p3-newsletter-form-wrap {
+    gap: 12px;
+    min-width: 0;
+  }
+  .p3-newsletter-form-wrap .email-capture {
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    backdrop-filter: none;
+  }
+  .p3-newsletter-form-wrap .email-capture form {
+    gap: 10px;
+  }
+  .p3-newsletter-form-wrap .email-capture input,
+  .p3-newsletter-form-wrap .email-capture button {
+    width: 100%;
+    min-height: 48px;
+  }
+  .p3-newsletter-form-wrap .email-capture [role='status'] {
+    min-height: 0;
+    margin-top: 10px !important;
+    font-size: 12px;
+    line-height: 1.45;
+  }
+  .p3-newsletter-form-wrap .email-capture > p {
+    display: none !important;
+  }
+  .p3-newsletter-trust {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 9px;
+    font-size: 12px;
+  }
+  .p3-newsletter-trust-item {
+    min-width: 0;
+  }
 }
 @media (prefers-reduced-motion: reduce) {
   .p3-newsletter-inner::before { transition: none; }

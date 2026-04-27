@@ -14,6 +14,7 @@
     "guard:check": "node scripts/guard-content.mjs && node scripts/guard-stale-facts.mjs",
     "check:links": "node scripts/audit-internal-links.mjs",
     "check:news": "node scripts/audit-news-xrefs.mjs",
+    "audit:comparisons": "node scripts/audit-comparison-fit.mjs",
     "check:security": "npm audit --audit-level=moderate",
     "check:dist": "node scripts/check-dist-budget.mjs",
     "smoke:visual": "playwright test tests/smoke/visual-routes.spec.mjs --config=playwright.config.mjs",

@@ -51,6 +51,14 @@ const containerClasses = {
   <form id={formId} class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
     <label for={inputId} class="sr-only">Email address</label>
     <input
+      type="text"
+      name="website"
+      tabindex="-1"
+      autocomplete="off"
+      aria-hidden="true"
+      class="email-capture-hp"
+    />
+    <input
       id={inputId}
       type="email"
       name="email"
@@ -101,7 +109,7 @@ const containerClasses = {
     const ERROR_MESSAGES = {
       invalid_email: "That doesn't look like a valid email. Double-check and try again.",
       rate_limited: 'Too many signups from this network today. Try again tomorrow.',
-      captcha_failed: 'Captcha failed. Refresh the page and try again.',
+      captcha_failed: 'Spam check did not complete. Refresh the page and try again.',
       subscribe_disabled: 'Signups are temporarily unavailable. Try again later.',
       db_failed: 'Something went wrong on our end. Try again in a minute.',
       invalid_json: 'Something went wrong. Try again.',
@@ -122,7 +130,16 @@ const containerClasses = {
       statusEl.style.color = '';
 
       const fd = new FormData(form);
+      const turnstileEl = form.querySelector('.cf-turnstile');
       const turnstile_token = fd.get('cf-turnstile-response') || undefined;
+
+      if (turnstileEl && !turnstile_token) {
+        statusEl.textContent = 'Spam check is still loading. Try again in a second.';
+        statusEl.style.color = '#67e8f9';
+        submitBtn.disabled = false;
+        submitLabel.textContent = 'Subscribe';
+        return;
+      }
 
       try {
         // Astro's trailingSlash: 'always' redirects /api/subscribe to
@@ -131,7 +148,7 @@ const containerClasses = {
         const res = await fetch('/api/subscribe/', {
           method: 'POST',
           headers: { 'content-type': 'application/json' },
-          body: JSON.stringify({ email, source, turnstile_token }),
+          body: JSON.stringify({ email, source, turnstile_token, website: fd.get('website') || '' }),
         });
         const data = await res.json().catch(() => ({}));
 
@@ -165,3 +182,14 @@ const containerClasses = {
     });
   })();
 </script>
+
+<style>
+  .email-capture-hp {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    pointer-events: none;
+  }
+</style>

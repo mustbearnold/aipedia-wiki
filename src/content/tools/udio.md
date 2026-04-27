@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$30/month"
 status: active
 launched: 2024-04
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-04-27
+last_verified: 2026-04-27
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -165,6 +165,6 @@ Yes on Standard and Pro without attribution. Free tier requires attribution. Buy
 ## Related
 
 - **Category:** [AI Music](/categories/ai-music/)
-- **Comparisons:** [Suno vs Udio](/comparisons/suno-vs-udio/) · [Mubert vs Udio](/comparisons/mubert-vs-udio/) · [ChatGPT vs Udio](/comparisons/chatgpt-vs-udio/)
+- **Comparisons:** [Suno vs Udio](/comparisons/suno-vs-udio/) · [Mubert vs Udio](/comparisons/mubert-vs-udio/)
 
 *Udio does not currently have an affiliate program. No affiliate relationship exists between aipedia.wiki and Udio.*

@@ -2,14 +2,14 @@
 type: comparison
 slug: lovable-vs-bolt-vs-v0
 title: "Lovable vs Bolt.new vs v0"
-tools: [lovable, bolt-new, v0]
+tools: [lovable, bolt, v0]
 category: ai-app-builders
 winner: lovable
 seo_title: "Lovable vs Bolt vs v0: Best App Builder (2026)"
 meta_description: "Lovable wins for full-stack apps with backend. Bolt.new is best for prototyping. v0 generates the cleanest UI components. Full comparison updated April 2026."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-15
-last_verified: 2026-04-15
+last_updated: 2026-04-27
+last_verified: 2026-04-27
 update_frequency: quarterly
 ---
 

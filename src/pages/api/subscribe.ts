@@ -107,6 +107,11 @@ export const POST: APIRoute = async ({ request, clientAddress }) => {
     }
 
     const email = String(payload?.email ?? '').trim().toLowerCase();
+    const website = String(payload?.website ?? '').trim();
+    if (website) {
+      return json({ ok: true, already: false }, 200);
+    }
+
     if (!email || email.length > 254 || !EMAIL_RE.test(email)) {
       return json({ error: 'invalid_email' }, 400);
     }
@@ -117,9 +122,15 @@ export const POST: APIRoute = async ({ request, clientAddress }) => {
       (typeof clientAddress === 'string' ? clientAddress : '0.0.0.0');
 
     const tsSecret = String(workerEnv?.TURNSTILE_SECRET_KEY ?? '');
-    const tsOk = await verifyTurnstile(String(payload?.turnstile_token ?? ''), ip, tsSecret, request);
-    if (!tsOk) {
-      return json({ error: 'captcha_failed' }, 403);
+    const tsSiteKey = String(workerEnv?.PUBLIC_TURNSTILE_SITE_KEY ?? workerEnv?.TURNSTILE_SITE_KEY ?? '');
+    const turnstileToken = String(payload?.turnstile_token ?? '');
+    // A secret without a rendered public widget rejects every real signup.
+    const shouldVerifyTurnstile = !!tsSecret && (!!tsSiteKey || !!turnstileToken);
+    if (shouldVerifyTurnstile) {
+      const tsOk = await verifyTurnstile(turnstileToken, ip, tsSecret, request);
+      if (!tsOk) {
+        return json({ error: 'captcha_failed' }, 403);
+      }
     }
 
     const ipHash = await sha256(`${ip}|${workerEnv?.IP_HASH_SECRET ?? ''}`);
