@@ -29,8 +29,10 @@ const NEWS_DIR = join(ROOT, 'src/content/news');
 const OUT_DIR = join(ROOT, 'public/og/news');
 const LOGO_DIR = join(ROOT, 'public/logos/tools');
 const WRITE_DEBUG_SVG = process.env.AIPEDIA_WRITE_OG_SVG === '1';
-const BRAND_LOGO_SMALL = existsSync(join(ROOT, 'public/brand/aipedia-logo-demo-gpt-128.png'))
-  ? join(ROOT, 'public/brand/aipedia-logo-demo-gpt-128.png')
+const BRAND_LOGO_SMALL = existsSync(join(ROOT, 'public/brand/aipedia-logo-crystal-cyan-128.png'))
+  ? join(ROOT, 'public/brand/aipedia-logo-crystal-cyan-128.png')
+  : existsSync(join(ROOT, 'public/brand/aipedia-logo-crystal-128.png'))
+  ? join(ROOT, 'public/brand/aipedia-logo-crystal-128.png')
   : join(ROOT, 'public/brand/aipedia-logo-128.png');
 
 function toDataUrl(path) {
@@ -121,12 +123,12 @@ function fmtDate(iso) {
 function severityStyle(sev) {
   switch ((sev || 'minor').toLowerCase()) {
     case 'breaking':
-      return { label: 'BREAKING', bg: 'rgba(244, 63, 94, 0.16)', fg: '#fb7185', border: 'rgba(251, 113, 133, 0.48)' };
+      return { label: 'BREAKING', bg: 'rgba(103, 232, 249, 0.10)', fg: '#67e8f9', border: 'rgba(103, 232, 249, 0.28)' };
     case 'major':
-      return { label: 'MAJOR', bg: 'rgba(251, 191, 36, 0.13)', fg: '#fbbf24', border: 'rgba(251, 191, 36, 0.38)' };
+      return { label: 'MAJOR', bg: 'rgba(103, 232, 249, 0.10)', fg: '#67e8f9', border: 'rgba(103, 232, 249, 0.28)' };
     case 'minor':
     default:
-      return { label: 'MINOR', bg: 'rgba(34, 211, 238, 0.10)', fg: '#67e8f9', border: 'rgba(34, 211, 238, 0.30)' };
+      return { label: 'MINOR', bg: 'rgba(148, 163, 184, 0.08)', fg: '#94a3b8', border: 'rgba(148, 163, 184, 0.22)' };
   }
 }
 
@@ -204,7 +206,7 @@ function svgForNews(news) {
       return `
         <g transform="translate(1016, ${y})">
           <rect x="0" y="0" width="70" height="70" rx="18" fill="rgba(255,255,255,0.055)" stroke="rgba(34,211,238,0.18)" stroke-width="1"/>
-          <rect x="1" y="1" width="68" height="68" rx="17" fill="none" stroke="rgba(167,139,250,0.10)" stroke-width="1"/>
+          <rect x="1" y="1" width="68" height="68" rx="17" fill="none" stroke="rgba(94,234,212,0.12)" stroke-width="1"/>
           <image href="${data}" x="13" y="13" width="44" height="44" preserveAspectRatio="xMidYMid meet"/>
         </g>`;
     })
@@ -220,12 +222,12 @@ function svgForNews(news) {
       <stop offset="100%" stop-color="rgba(11,10,20,0)"/>
     </radialGradient>
     <radialGradient id="bloomB" cx="16%" cy="86%" r="55%">
-      <stop offset="0%" stop-color="rgba(167,139,250,0.18)"/>
-      <stop offset="64%" stop-color="rgba(167,139,250,0.035)"/>
+      <stop offset="0%" stop-color="rgba(94,234,212,0.16)"/>
+      <stop offset="64%" stop-color="rgba(94,234,212,0.035)"/>
       <stop offset="100%" stop-color="rgba(5,6,13,0)"/>
     </radialGradient>
     <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#a78bfa"/>
+      <stop offset="0%" stop-color="#22d3ee"/>
       <stop offset="50%" stop-color="#38bdf8"/>
       <stop offset="100%" stop-color="#5eead4"/>
     </linearGradient>
