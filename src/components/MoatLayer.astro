@@ -27,20 +27,20 @@ for (const tool of activeTools) {
 }
 
 const palette: Record<string, { a: string; b: string }> = {
-  'ai-automation': { a: '#fb923c', b: '#22d3ee' },
-  'ai-chatbots': { a: '#c4b5fd', b: '#5eead4' },
-  'ai-coding': { a: '#60a5fa', b: '#5eead4' },
-  'ai-design': { a: '#f472b6', b: '#22d3ee' },
+  'ai-automation': { a: '#38bdf8', b: '#22d3ee' },
+  'ai-chatbots': { a: '#67e8f9', b: '#5eead4' },
+  'ai-coding': { a: '#38bdf8', b: '#5eead4' },
+  'ai-design': { a: '#67e8f9', b: '#22d3ee' },
   'ai-image': { a: '#5eead4', b: '#38bdf8' },
-  'ai-music': { a: '#a78bfa', b: '#38bdf8' },
-  'ai-notes': { a: '#fca5a5', b: '#a78bfa' },
+  'ai-music': { a: '#22d3ee', b: '#38bdf8' },
+  'ai-notes': { a: '#67e8f9', b: '#22d3ee' },
   'ai-presentation': { a: '#38bdf8', b: '#5eead4' },
-  'ai-research': { a: '#93c5fd', b: '#5eead4' },
-  'ai-search': { a: '#67e8f9', b: '#a78bfa' },
-  'ai-seo': { a: '#86efac', b: '#22d3ee' },
-  'ai-video': { a: '#c084fc', b: '#38bdf8' },
+  'ai-research': { a: '#67e8f9', b: '#5eead4' },
+  'ai-search': { a: '#67e8f9', b: '#22d3ee' },
+  'ai-seo': { a: '#5eead4', b: '#22d3ee' },
+  'ai-video': { a: '#38bdf8', b: '#38bdf8' },
   'ai-voice': { a: '#7dd3fc', b: '#5eead4' },
-  'ai-writing': { a: '#fbbf24', b: '#a78bfa' },
+  'ai-writing': { a: '#67e8f9', b: '#22d3ee' },
 };
 
 const categories = allCategories
@@ -213,7 +213,7 @@ const data = {
         y3: clamp(y + (rand() - 0.5) * 0.16, 0.06, 0.92),
         offset: rand(),
         speed: 0.00009 + rand() * 0.00008,
-        colorA: category.colorA || '#a78bfa',
+        colorA: category.colorA || '#22d3ee',
         colorB: category.colorB || '#5eead4',
         width: 0.7 + rand() * 0.8,
       };

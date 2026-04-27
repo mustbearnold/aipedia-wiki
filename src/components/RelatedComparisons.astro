@@ -28,7 +28,7 @@ const matches = comparisons
       {matches.map((c) => (
         <a
           href={`/compare/${c.data.slug ?? c.id.replace(/\.md$/, '')}/`}
-          class="block rounded-lg border border-[var(--border)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] hover:border-[rgba(167,139,250,0.4)] px-4 py-3 no-underline transition-colors"
+          class="block rounded-lg border border-[var(--border)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] hover:border-[rgba(34, 211, 238,0.4)] px-4 py-3 no-underline transition-colors"
         >
           <div class="text-sm font-medium text-[var(--text-primary)] leading-tight">
             {c.data.title}

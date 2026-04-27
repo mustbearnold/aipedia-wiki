@@ -9,20 +9,20 @@ const { score, size = 'sm' } = Astro.props;
 // Tier thresholds
 function getTier(s: number) {
   if (s >= 9.0) return { label: 'Category Leader', color: 'gold' };
-  if (s >= 7.5) return { label: 'Strong Choice',   color: 'green' };
+  if (s >= 7.5) return { label: 'Strong Choice',   color: 'teal' };
   if (s >= 6.0) return { label: 'Solid Pick',      color: 'blue' };
   if (s >= 5.0) return { label: 'Niche Use',       color: 'grey' };
-  return { label: 'Fading', color: 'red' };
+  return { label: 'Fading', color: 'cyan' };
 }
 
 const tier = getTier(score);
 
 const styles: Record<string, string> = {
-  gold:  'background: rgba(251,191,36,0.12); color: #fbbf24; border-color: rgba(251,191,36,0.25);',
-  green: 'background: rgba(94,234,212,0.10); color: #5eead4; border-color: rgba(94,234,212,0.22);',
+  gold:  'background: rgba(103, 232, 249,0.12); color: #67e8f9; border-color: rgba(103, 232, 249,0.25);',
+  teal: 'background: rgba(94,234,212,0.10); color: #5eead4; border-color: rgba(94,234,212,0.22);',
   blue:  'background: rgba(56,189,248,0.10); color: #38bdf8; border-color: rgba(56,189,248,0.22);',
   grey:  'background: rgba(148,163,184,0.10); color: #94a3b8; border-color: rgba(148,163,184,0.22);',
-  red:   'background: rgba(251,113,133,0.10); color: #fb7185; border-color: rgba(251,113,133,0.22);',
+  cyan:   'background: rgba(103, 232, 249,0.10); color: #67e8f9; border-color: rgba(103, 232, 249,0.22);',
 };
 
 const sizing = size === 'sm'

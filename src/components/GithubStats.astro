@@ -60,13 +60,13 @@ function humanAgo(iso: string | null): string {
 
 // Activity classification: a repo pushed in the last 14 days is "actively
 // maintained"; 14-60 days is "current"; 60+ days starts to drift.
-function activityClass(iso: string | null): { label: string; tone: 'green' | 'amber' | 'rose' } {
-  if (!iso) return { label: 'No push data', tone: 'amber' };
+function activityClass(iso: string | null): { label: string; tone: 'teal' | 'cyan' } {
+  if (!iso) return { label: 'No push data', tone: 'cyan' };
   const days = Math.floor((Date.now() - new Date(iso).getTime()) / (1000 * 60 * 60 * 24));
-  if (days <= 14) return { label: 'Actively maintained', tone: 'green' };
-  if (days <= 60) return { label: 'Recent activity', tone: 'green' };
-  if (days <= 180) return { label: 'Slowing', tone: 'amber' };
-  return { label: 'Dormant', tone: 'rose' };
+  if (days <= 14) return { label: 'Actively maintained', tone: 'teal' };
+  if (days <= 60) return { label: 'Recent activity', tone: 'teal' };
+  if (days <= 180) return { label: 'Slowing', tone: 'cyan' };
+  return { label: 'Dormant', tone: 'cyan' };
 }
 ---
 
@@ -145,16 +145,15 @@ function activityClass(iso: string | null): { label: string; tone: 'green' | 'am
 
 <style>
   .gh-stats {
-    --gh-green: #5eead4;
-    --gh-amber: #fbbf24;
-    --gh-rose: #fb7185;
+    --gh-teal: #5eead4;
+    --gh-cyan: #67e8f9;
   }
 
   .gh-stats-card {
     display: block;
     padding: 1rem 1.125rem;
-    background: linear-gradient(135deg, rgba(167, 139, 250, 0.05) 0%, rgba(56, 189, 248, 0.03) 100%);
-    border: 1px solid rgba(167, 139, 250, 0.2);
+    background: linear-gradient(135deg, rgba(34, 211, 238, 0.05) 0%, rgba(56, 189, 248, 0.03) 100%);
+    border: 1px solid rgba(34, 211, 238, 0.2);
     border-radius: 0.875rem;
     text-decoration: none;
     color: inherit;
@@ -168,9 +167,9 @@ function activityClass(iso: string | null): { label: string; tone: 'green' | 'am
   }
 
   .gh-stats-card:hover {
-    border-color: rgba(167, 139, 250, 0.45);
+    border-color: rgba(34, 211, 238, 0.45);
     transform: translateY(-1px);
-    box-shadow: 0 6px 18px rgba(167, 139, 250, 0.08);
+    box-shadow: 0 6px 18px rgba(34, 211, 238, 0.08);
   }
 
   .gh-stats-header {
@@ -206,9 +205,9 @@ function activityClass(iso: string | null): { label: string; tone: 'green' | 'am
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.06em;
-    color: var(--accent-primary, #a78bfa);
-    background: rgba(167, 139, 250, 0.1);
-    border: 1px solid rgba(167, 139, 250, 0.2);
+    color: var(--accent-primary, #22d3ee);
+    background: rgba(34, 211, 238, 0.1);
+    border: 1px solid rgba(34, 211, 238, 0.2);
     border-radius: 0.375rem;
   }
 
@@ -228,26 +227,19 @@ function activityClass(iso: string | null): { label: string; tone: 'green' | 'am
     background: var(--text-muted, #9ca3af);
   }
 
-  .gh-stats-activity-green {
-    color: var(--gh-green);
+  .gh-stats-activity-teal {
+    color: var(--gh-teal);
   }
-  .gh-stats-activity-green .gh-stats-dot {
-    background: var(--gh-green);
-    box-shadow: 0 0 6px var(--gh-green);
-  }
-
-  .gh-stats-activity-amber {
-    color: var(--gh-amber);
-  }
-  .gh-stats-activity-amber .gh-stats-dot {
-    background: var(--gh-amber);
+  .gh-stats-activity-teal .gh-stats-dot {
+    background: var(--gh-teal);
+    box-shadow: 0 0 6px var(--gh-teal);
   }
 
-  .gh-stats-activity-rose {
-    color: var(--gh-rose);
+  .gh-stats-activity-cyan {
+    color: var(--gh-cyan);
   }
-  .gh-stats-activity-rose .gh-stats-dot {
-    background: var(--gh-rose);
+  .gh-stats-activity-cyan .gh-stats-dot {
+    background: var(--gh-cyan);
   }
 
   .gh-stats-repo {
@@ -300,7 +292,7 @@ function activityClass(iso: string | null): { label: string; tone: 'green' | 'am
 
   .gh-stats-icon {
     flex-shrink: 0;
-    color: var(--accent-primary, #a78bfa);
+    color: var(--accent-primary, #22d3ee);
     opacity: 0.85;
   }
 
@@ -317,7 +309,7 @@ function activityClass(iso: string | null): { label: string; tone: 'green' | 'am
     gap: 0.375rem;
     font-size: 0.75rem;
     font-weight: 500;
-    color: var(--accent-primary, #a78bfa);
+    color: var(--accent-primary, #22d3ee);
   }
 
   .gh-stats-card:hover .gh-stats-footer svg {

@@ -25,8 +25,8 @@ const sorted = allTrends
   .sort((a, b) => (b.lastUpdated || '').localeCompare(a.lastUpdated || ''));
 
 const impactColors: Record<string, string> = {
-  high:   'bg-[rgba(251,113,133,0.1)] text-[var(--accent-danger)] border-[rgba(251,113,133,0.25)]',
-  medium: 'bg-[rgba(251,191,36,0.1)] text-[var(--accent-warning)] border-[rgba(251,191,36,0.25)]',
+  high:   'bg-[rgba(103, 232, 249,0.1)] text-[var(--accent-danger)] border-[rgba(103, 232, 249,0.25)]',
+  medium: 'bg-[rgba(103, 232, 249,0.1)] text-[var(--accent-warning)] border-[rgba(103, 232, 249,0.25)]',
   low:    'bg-[rgba(56,189,248,0.1)] text-[var(--accent-secondary)] border-[rgba(56,189,248,0.25)]',
 };
 ---

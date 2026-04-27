@@ -71,7 +71,7 @@ const categoryLabel = category.replace('ai-', '').replace(/-/g, ' ')
       {alternatives.map((alt) => (
         <a
           href={`/tools/${alt.slug}/`}
-          class="group flex items-start gap-3 rounded-xl border border-[var(--border)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] hover:border-[rgba(167,139,250,0.4)] p-3 no-underline transition-colors"
+          class="group flex items-start gap-3 rounded-xl border border-[var(--border)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] hover:border-[rgba(34, 211, 238,0.4)] p-3 no-underline transition-colors"
         >
           <ToolLogo slug={alt.slug} title={alt.title} size={36} className="shrink-0" />
           <div class="flex-1 min-w-0">

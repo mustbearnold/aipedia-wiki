@@ -1,4 +1,7 @@
 import { expect, test } from '@playwright/test';
+import { readFileSync, readdirSync } from 'node:fs';
+import { extname, join } from 'node:path';
+import sharp from 'sharp';
 
 const routes = [
   '/',
@@ -27,6 +30,70 @@ const mobileRoutes = [
   '/glossary/',
   '/dead/',
 ];
+
+const paletteRoutes = [
+  '/',
+  '/compare/',
+  '/trends/',
+  '/about/',
+  '/about/editorial/',
+  '/about/scoring/',
+  '/media-kit/',
+  '/glossary/',
+  '/dead/',
+  '/stack-builder/?roles=solo-founder%2Ccontent-creator%2Cdeveloper',
+];
+
+const allowedPalette = [
+  '#05060d',
+  '#05070d',
+  '#070811',
+  '#080d18',
+  '#0b1020',
+  '#0b1324',
+  '#0d121f',
+  '#111827',
+  '#1e293b',
+  '#334155',
+  '#475569',
+  '#64748b',
+  '#94a3b8',
+  '#cbd5e1',
+  '#e2e8f0',
+  '#e6edf7',
+  '#eef3f8',
+  '#f1f5f9',
+  '#f6f8fb',
+  '#f8fafc',
+  '#ffffff',
+  '#22d3ee',
+  '#38bdf8',
+  '#67e8f9',
+  '#5eead4',
+  '#99f6e4',
+];
+
+const bannedDecorativeColorPatterns = [
+  /#(?:a78bfa|c4b5fd|7c3aed|6d28d9|8b5cf6|c084fc|f472b6|fb923c|fca5a5|fbbf24|fb7185|be123c|b45309|a16207|0f766e|047857|86efac|93c5fd|60a5fa|34d399)\b/i,
+  /(?:rgba?\(\s*)?(?:167\s*,\s*139\s*,\s*250|196\s*,\s*181\s*,\s*253|124\s*,\s*58\s*,\s*237|139\s*,\s*92\s*,\s*246|192\s*,\s*132\s*,\s*252|244\s*,\s*114\s*,\s*182|251\s*,\s*146\s*,\s*60|252\s*,\s*165\s*,\s*165|251\s*,\s*191\s*,\s*36|251\s*,\s*113\s*,\s*133|20\s*,\s*184\s*,\s*166|14\s*,\s*165\s*,\s*233|147\s*,\s*197\s*,\s*253|96\s*,\s*165\s*,\s*250|52\s*,\s*211\s*,\s*153)/i,
+  /\b(?:violet|purple|pink|orange|amber|yellow|green|emerald|lime|rose|red)\b/i,
+];
+
+const colorSourceExtensions = new Set(['.astro', '.css', '.mjs', '.js', '.ts']);
+const colorSourceRoots = ['src/components', 'src/layouts', 'src/pages', 'src/styles'];
+
+function collectColorSourceFiles(dir) {
+  const files = [];
+  for (const entry of readdirSync(dir, { withFileTypes: true })) {
+    const file = join(dir, entry.name);
+    if (entry.isDirectory()) {
+      files.push(...collectColorSourceFiles(file));
+    } else if (colorSourceExtensions.has(extname(entry.name))) {
+      files.push(file);
+    }
+  }
+  return files;
+}
 
 for (const route of routes) {
   test(`route renders without obvious breakage: ${route}`, async ({ page }) => {
@@ -140,6 +207,133 @@ test('homepage rotating cover card keeps warm orange accents out of the corner g
   expect(warmAccents).toEqual([]);
 });
 
+test('source styles stay inside the Signal Cyan palette', () => {
+  const violations = [];
+  for (const root of colorSourceRoots) {
+    for (const file of collectColorSourceFiles(root)) {
+      const text = readFileSync(file, 'utf8');
+      for (const pattern of bannedDecorativeColorPatterns) {
+        const match = text.match(pattern);
+        if (match) {
+          violations.push(`${file}: ${match[0]}`);
+        }
+      }
+    }
+  }
+
+  expect(violations).toEqual([]);
+});
+
+test('brand logo raster stays inside the Signal Cyan palette', async () => {
+  const { data, info } = await sharp('public/brand/aipedia-logo-crystal-cyan-512.png')
+    .ensureAlpha()
+    .raw()
+    .toBuffer({ resolveWithObject: true });
+
+  const violations = [];
+  for (let i = 0; i < data.length; i += info.channels) {
+    const alpha = data[i + 3] / 255;
+    if (alpha < 0.2) continue;
+
+    const r = data[i];
+    const g = data[i + 1];
+    const b = data[i + 2];
+    const max = Math.max(r, g, b) / 255;
+    const min = Math.min(r, g, b) / 255;
+    const delta = max - min;
+    if (max < 0.16 || delta < 0.04) continue;
+
+    const nr = r / 255;
+    const ng = g / 255;
+    const nb = b / 255;
+    let hue = 0;
+    if (max === nr) hue = ((ng - nb) / delta) % 6;
+    else if (max === ng) hue = (nb - nr) / delta + 2;
+    else hue = (nr - ng) / delta + 4;
+    hue = (hue * 60 + 360) % 360;
+    const saturation = delta / (1 - Math.abs(max + min - 1));
+
+    if (saturation > 0.2 && (hue < 160 || hue > 205)) {
+      violations.push({ r, g, b, hue: Math.round(hue), saturation: Math.round(saturation * 100) / 100 });
+      if (violations.length >= 12) break;
+    }
+  }
+
+  expect(violations).toEqual([]);
+});
+
+test.describe('Signal Cyan palette', () => {
+  for (const route of paletteRoutes) {
+    test(`decorative surfaces avoid off-palette hues: ${route}`, async ({ page }) => {
+      await page.goto(route);
+
+      const violations = await page.evaluate((allowedHexes) => {
+        const allowed = new Set(allowedHexes.map((hex) => hex.toLowerCase()));
+        const hexToRgb = (hex) => {
+          const raw = hex.replace('#', '');
+          return {
+            r: parseInt(raw.slice(0, 2), 16),
+            g: parseInt(raw.slice(2, 4), 16),
+            b: parseInt(raw.slice(4, 6), 16),
+          };
+        };
+        const palette = allowedHexes.map((hex) => ({ hex, ...hexToRgb(hex) }));
+        const rgbMatchesPalette = (r, g, b) => palette.some((color) => (
+          Math.abs(color.r - r) <= 4 && Math.abs(color.g - g) <= 4 && Math.abs(color.b - b) <= 4
+        ));
+        const bannedHue = (r, g, b) => {
+          const max = Math.max(r, g, b) / 255;
+          const min = Math.min(r, g, b) / 255;
+          const delta = max - min;
+          if (max < 0.16) return false;
+          if (delta < 0.04) return false;
+          let hue = 0;
+          const nr = r / 255;
+          const ng = g / 255;
+          const nb = b / 255;
+          if (max === nr) hue = ((ng - nb) / delta) % 6;
+          else if (max === ng) hue = (nb - nr) / delta + 2;
+          else hue = (nr - ng) / delta + 4;
+          hue = (hue * 60 + 360) % 360;
+          const saturation = delta / (1 - Math.abs(max + min - 1));
+          return saturation > 0.2 && (hue < 160 || hue > 205);
+        };
+
+        const found = [];
+        const colorPattern = /rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*([0-9.]+))?\)/g;
+        const props = ['color', 'backgroundColor', 'borderTopColor', 'borderRightColor', 'borderBottomColor', 'borderLeftColor', 'outlineColor'];
+        for (const el of document.querySelectorAll('main *')) {
+          if (found.length >= 20) break;
+          const style = getComputedStyle(el);
+          for (const prop of props) {
+            const value = style[prop];
+            colorPattern.lastIndex = 0;
+            let match;
+            while ((match = colorPattern.exec(value))) {
+              const alpha = match[4] === undefined ? 1 : Number(match[4]);
+              if (alpha < 0.2) continue;
+              const r = Number(match[1]);
+              const g = Number(match[2]);
+              const b = Number(match[3]);
+              if (rgbMatchesPalette(r, g, b) || !bannedHue(r, g, b)) continue;
+              found.push({
+                tag: el.tagName,
+                className: typeof el.className === 'string' ? el.className : '',
+                prop,
+                value,
+              });
+              break;
+            }
+          }
+        }
+        return found;
+      }, allowedPalette);
+
+      expect(violations).toEqual([]);
+    });
+  }
+});
+
 test('compare featured cards use the cyan catalog palette', async ({ page }) => {
   await page.goto('/compare/');
 
@@ -159,21 +353,28 @@ test('compare featured cards use the cyan catalog palette', async ({ page }) => 
   expect(cardPaint.backgroundImage).toMatch(/34, 211, 238|94, 234, 212/);
 });
 
-test('tool finder matches the static catalog without an AI API call', async ({ page }) => {
-  const apiRequests = [];
-  page.on('request', (request) => {
-    if (request.url().includes('/api/tool-finder')) apiRequests.push(request.url());
-  });
-
+test('tool finder is retired in favor of catalog search', async ({ page }) => {
   await page.goto('/tool-finder/');
-  await expect(page.locator('.finder-note')).toContainText('No AI model');
+  await expect(page).toHaveURL(/\/search\/$/);
+  await expect(page.locator('h1')).toContainText('Search');
 
-  await page.locator('[data-finder-query]').fill('I need a coding tool for TypeScript, VS Code, and pull request reviews.');
-  await page.locator('[data-finder-submit]').click();
+  await page.goto('/');
+  await expect(page.locator('#site-nav a[href="/tool-finder/"]')).toHaveCount(0);
+});
 
-  await expect(page.locator('.finder-result')).not.toHaveCount(0);
-  await expect(page.locator('[data-finder-meta]')).toContainText('catalog match');
-  expect(apiRequests).toEqual([]);
+test('search page shows the full catalog and filters it in place', async ({ page }) => {
+  await page.goto('/search/');
+
+  await expect(page.locator('.search-index-control.p3-search.p3-search-btn')).toBeVisible();
+  const totalCards = await page.locator('[data-tool-card]').count();
+  expect(totalCards).toBeGreaterThan(200);
+  await expect(page.locator('[data-visible-count]').first()).toHaveText(String(totalCards));
+
+  await page.locator('[data-tool-search]').fill('claude');
+  const visibleCards = await page.locator('[data-tool-card]:visible').count();
+  expect(visibleCards).toBeGreaterThan(0);
+  expect(visibleCards).toBeLessThan(totalCards);
+  await expect(page.locator('[data-tool-card]:visible').first()).toContainText(/Claude/i);
 });
 
 test('stack builder shows selected roles before budget is chosen', async ({ page }) => {

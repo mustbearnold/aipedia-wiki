@@ -21,8 +21,8 @@ const wordCount = entry.body ? entry.body.split(/\s+/).filter(Boolean).length : 
 const readingMinutes = Math.max(1, Math.round(wordCount / 230));
 
 const severityBadge: Record<string, { text: string; color: string }> = {
-  breaking: { text: 'Breaking', color: 'red' },
-  major:    { text: 'Major',    color: 'yellow' },
+  breaking: { text: 'Breaking', color: 'cyan' },
+  major:    { text: 'Major',    color: 'cyan' },
   minor:    { text: 'Update',   color: 'gray' },
 };
 const sev = (entry.data.severity as string) || 'minor';

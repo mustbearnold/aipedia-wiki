@@ -145,19 +145,19 @@ const catLabel: Record<string, string> = {
 };
 const coverPalette: Record<string, { a: string; b: string }> = {
   'ai-automation': { a: '#38bdf8', b: '#5eead4' },
-  'ai-chatbots': { a: '#c4b5fd', b: '#5eead4' },
-  'ai-coding': { a: '#60a5fa', b: '#5eead4' },
-  'ai-design': { a: '#f472b6', b: '#22d3ee' },
+  'ai-chatbots': { a: '#67e8f9', b: '#5eead4' },
+  'ai-coding': { a: '#38bdf8', b: '#5eead4' },
+  'ai-design': { a: '#67e8f9', b: '#22d3ee' },
   'ai-image': { a: '#5eead4', b: '#38bdf8' },
-  'ai-music': { a: '#a78bfa', b: '#38bdf8' },
-  'ai-notes': { a: '#67e8f9', b: '#93c5fd' },
+  'ai-music': { a: '#22d3ee', b: '#38bdf8' },
+  'ai-notes': { a: '#67e8f9', b: '#67e8f9' },
   'ai-presentation': { a: '#38bdf8', b: '#5eead4' },
-  'ai-research': { a: '#93c5fd', b: '#5eead4' },
-  'ai-search': { a: '#67e8f9', b: '#a78bfa' },
-  'ai-seo': { a: '#86efac', b: '#22d3ee' },
-  'ai-video': { a: '#c084fc', b: '#38bdf8' },
+  'ai-research': { a: '#67e8f9', b: '#5eead4' },
+  'ai-search': { a: '#67e8f9', b: '#22d3ee' },
+  'ai-seo': { a: '#5eead4', b: '#22d3ee' },
+  'ai-video': { a: '#38bdf8', b: '#38bdf8' },
   'ai-voice': { a: '#7dd3fc', b: '#5eead4' },
-  'ai-writing': { a: '#60a5fa', b: '#5eead4' },
+  'ai-writing': { a: '#38bdf8', b: '#5eead4' },
 };
 
 // Serialisable payload for the client-side cover-card rotator. Pre-computes
@@ -1175,7 +1175,7 @@ const verificationLedger = [
   <style>
     body:has(main .p3-home-premium) {
       background:
-        radial-gradient(ellipse 88% 42% at 50% -14%, rgba(167, 139, 250, 0.085) 0%, transparent 62%),
+        radial-gradient(ellipse 88% 42% at 50% -14%, rgba(34, 211, 238, 0.085) 0%, transparent 62%),
         radial-gradient(ellipse 52% 32% at 92% 8%, rgba(56, 189, 248, 0.075) 0%, transparent 70%),
         linear-gradient(180deg, #05060d 0%, #070811 48%, #05060d 100%);
     }
@@ -1192,9 +1192,9 @@ const verificationLedger = [
       --p3-fg: #f8fafc;
       --p3-muted: rgba(203, 213, 225, 0.72);
       --p3-subtle: rgba(148, 163, 184, 0.88);
-      --p3-action: #a78bfa;
-      --p3-action-strong: #c4b5fd;
-      --p3-action-rgb: 167, 139, 250;
+      --p3-action: #22d3ee;
+      --p3-action-strong: #67e8f9;
+      --p3-action-rgb: 34, 211, 238;
       --p3-intel: #38bdf8;
       --p3-intel-soft: #7dd3fc;
       --p3-intel-rgb: 56, 189, 248;
@@ -1203,10 +1203,10 @@ const verificationLedger = [
       --p3-verified-rgb: 94, 234, 212;
       --p3-score-high: #5eead4;
       --p3-score-good: #38bdf8;
-      --p3-score-watch: #fbbf24;
-      --p3-score-low: #fb7185;
+      --p3-score-watch: #67e8f9;
+      --p3-score-low: #67e8f9;
       --p3-brand-glow: rgba(56, 189, 248, 0.20);
-      --p3-action-glow: rgba(167, 139, 250, 0.18);
+      --p3-action-glow: rgba(34, 211, 238, 0.18);
       --p3-panel-shadow: 0 28px 80px -54px rgba(0, 0, 0, 0.88);
       --p3-line: var(--p3-border);
       --p3-line-strong: var(--p3-border-strong);

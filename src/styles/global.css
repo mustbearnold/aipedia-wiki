@@ -65,15 +65,15 @@ html, body {
     --text-primary: #f8fafc;
     --text-secondary: rgba(203, 213, 225, 0.72);
     --text-muted: rgba(148, 163, 184, 0.88);
-    --accent-primary: #a78bfa;
+    --accent-primary: #22d3ee;
     /* Text-on-background variant of accent-primary. Tuned brighter for
        dark graphite surfaces and deeper for light surfaces so links,
        icons, and small labels keep adequate contrast. */
-    --accent-primary-text: #c4b5fd;
+    --accent-primary-text: #67e8f9;
     --accent-secondary: #38bdf8;
     --accent-success: #5eead4;
-    --accent-warning: #fbbf24;
-    --accent-danger: #fb7185;
+    --accent-warning: #67e8f9;
+    --accent-danger: #67e8f9;
   }
 
   .light {
@@ -84,23 +84,23 @@ html, body {
     --text-primary: #111827;
     --text-secondary: #475569;
     --text-muted: #64748b;
-    --accent-primary: #7c3aed;
-    --accent-primary-text: #6d28d9;
+    --accent-primary: #0891b2;
+    --accent-primary-text: #0e7490;
     --accent-secondary: #0284c7;
-    --accent-success: #0f766e;
-    --accent-warning: #b45309;
-    --accent-danger: #be123c;
+    --accent-success: #0e7490;
+    --accent-warning: #0e7490;
+    --accent-danger: #0e7490;
   }
 
-  /* Accent gradient text utility. Dark mode: violet-to-blue gradient
+  /* Accent gradient text utility. Dark mode: cyan-to-blue gradient
      clipped to text for decorative headline words. Light mode falls
-     back to solid violet-700 because the gradient (both ends are
+     back to solid cyan-700 because the gradient (both ends are
      light hues) has insufficient contrast on the paper background.
      Use anywhere you had
-       bg-gradient-to-r from-[#a78bfa] to-[#38bdf8] bg-clip-text text-transparent
+       bg-gradient-to-r from-[#22d3ee] to-[#38bdf8] bg-clip-text text-transparent
      and it will auto-adapt per theme. */
   .accent-gradient-text {
-    background-image: linear-gradient(to right, #a78bfa, #38bdf8);
+    background-image: linear-gradient(to right, #22d3ee, #38bdf8);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -128,7 +128,7 @@ html, body {
     border-radius: 8px;
     text-decoration: none;
     transition: top 150ms ease;
-    box-shadow: 0 4px 12px rgba(167, 139, 250, 0.35);
+    box-shadow: 0 4px 12px rgba(34, 211, 238, 0.35);
   }
   .skip-to-main:focus,
   .skip-to-main:focus-visible {
@@ -260,8 +260,8 @@ html, body {
   width: 6px;
 }
 .wiki-prose h2#system-verdict + blockquote {
-  background: linear-gradient(135deg, rgba(167, 139, 250, 0.12) 0%, rgba(56, 189, 248, 0.06) 50%, rgba(94, 234, 212, 0.06) 100%);
-  border: 1px solid rgba(167,139,250,0.35);
+  background: linear-gradient(135deg, rgba(34, 211, 238, 0.12) 0%, rgba(56, 189, 248, 0.06) 50%, rgba(94, 234, 212, 0.06) 100%);
+  border: 1px solid rgba(34, 211, 238,0.35);
   border-radius: 1rem;
   padding: 1.25rem 1.5rem;
   margin: 0.75rem 0 1.75rem 0;
@@ -281,9 +281,9 @@ html, body {
   letter-spacing: 0.1em;
   padding: 0.25rem 0.5rem;
   background: #0b0a14;
-  border: 1px solid rgba(167,139,250,0.45);
+  border: 1px solid rgba(34, 211, 238,0.45);
   border-radius: 0.25rem;
-  color: rgb(167,139,250);
+  color: rgb(34,211,238);
 }
 .wiki-prose h2#system-verdict + blockquote p:first-child {
   margin-top: 0;
@@ -301,15 +301,15 @@ html, body {
 .wiki-prose h2#bottom-line::before,
 .wiki-prose h2#the-bottom-line::before,
 .wiki-prose h2#verdict::before {
-  background: linear-gradient(180deg, rgb(167,139,250), rgb(236,72,153));
+  background: linear-gradient(180deg, rgb(34,211,238), rgb(103,232,249));
   width: 6px;
 }
 /* The FIRST paragraph under a "Bottom Line" heading becomes a verdict card. */
 .wiki-prose h2#bottom-line + p,
 .wiki-prose h2#the-bottom-line + p,
 .wiki-prose h2#verdict + p {
-  background: linear-gradient(135deg, rgba(167, 139, 250, 0.10), rgba(56, 189, 248, 0.06));
-  border: 1px solid rgba(167,139,250,0.28);
+  background: linear-gradient(135deg, rgba(34, 211, 238, 0.10), rgba(56, 189, 248, 0.06));
+  border: 1px solid rgba(34, 211, 238,0.28);
   border-radius: 1rem;
   padding: 1.25rem 1.5rem;
   font-size: 1.0625rem;
@@ -327,16 +327,16 @@ html, body {
 .wiki-prose h2#who-its-for::before,
 .wiki-prose h2#who-it-s-for::before,
 .wiki-prose h2#best-for::before {
-  background: linear-gradient(180deg, var(--accent-success), rgb(20, 184, 166));
+  background: linear-gradient(180deg, var(--accent-success), rgb(94, 234, 212));
 }
 
 .wiki-prose h2#pricing::before {
-  background: linear-gradient(180deg, var(--accent-warning), rgb(234, 179, 8));
+  background: linear-gradient(180deg, var(--accent-warning), rgb(103, 232, 249));
 }
 
 .wiki-prose h2#what-it-does::before,
 .wiki-prose h2#overview::before {
-  background: linear-gradient(180deg, var(--accent-secondary), rgb(14, 165, 233));
+  background: linear-gradient(180deg, var(--accent-secondary), rgb(34, 211, 238));
 }
 
 /* Label-rows: `**Writers and editors** who need...` become chip cards.
@@ -350,7 +350,7 @@ html, body {
   margin-bottom: 0.5rem;
   background: var(--bg-card);
   border: 1px solid var(--border);
-  border-left: 3px solid rgba(167,139,250,0.5);
+  border-left: 3px solid rgba(34, 211, 238,0.5);
   border-radius: 0.5rem;
   transition: border-color 0.15s, transform 0.15s;
 }
@@ -365,18 +365,18 @@ html, body {
   font-weight: 600;
 }
 
-/* Amber variant for limitations/caveats sections. */
+/* cyan variant for limitations/caveats sections. */
 .wiki-prose h2#limitations + ul li:has(> strong:first-child),
 .wiki-prose h2#known-limitations + ul li:has(> strong:first-child),
 .wiki-prose h2#caveats + ul li:has(> strong:first-child) {
-  border-left-color: rgba(251,191,36,0.6);
+  border-left-color: rgba(103, 232, 249,0.6);
 }
 .wiki-prose h2#limitations + ul li:has(> strong:first-child) > strong:first-child,
 .wiki-prose h2#known-limitations + ul li:has(> strong:first-child) > strong:first-child,
 .wiki-prose h2#caveats + ul li:has(> strong:first-child) > strong:first-child {
   color: var(--accent-warning);
 }
-/* Green variant for Who It's For / Best For. */
+/* teal variant for Who It's For / Best For. */
 .wiki-prose h2#who-its-for + ul li:has(> strong:first-child),
 .wiki-prose h2#who-it-s-for + ul li:has(> strong:first-child),
 .wiki-prose h2#best-for + ul li:has(> strong:first-child) {
@@ -394,7 +394,7 @@ html, body {
   border-left: none;
   padding: 1rem 1.25rem;
   margin: 1.5rem 0;
-  background: linear-gradient(135deg, rgba(167, 139, 250, 0.08), rgba(56, 189, 248, 0.04));
+  background: linear-gradient(135deg, rgba(34, 211, 238, 0.08), rgba(56, 189, 248, 0.04));
   border-radius: 0.75rem;
   font-size: 1.0625rem;
   font-style: normal;
@@ -408,7 +408,7 @@ html, body {
   left: 0.75rem;
   font-size: 3rem;
   font-weight: 700;
-  color: rgba(167,139,250,0.35);
+  color: rgba(34, 211, 238,0.35);
   line-height: 1;
 }
 
@@ -449,7 +449,7 @@ html, body {
 /* Escape hatch: let Tailwind's text-* classes win inside .not-prose blocks.
    Without this, .wiki-prose a wins on specificity and every link inside a
    .not-prose wrapper picks up --accent-primary, which kills contrast on
-   solid-purple buttons (empty-looking text). */
+   solid-cyan buttons (empty-looking text). */
 .wiki-prose .not-prose a {
   color: inherit;
   border-bottom: none;
@@ -579,7 +579,7 @@ html, body {
   transition: background 0.5s ease-out;
 }
 .wiki-prose .fn-entry:target {
-  background: rgba(167, 139, 250, 0.12);
+  background: rgba(34, 211, 238, 0.12);
   border-radius: 0.375rem;
   padding: 0.25rem 0.5rem;
   margin-left: -0.5rem;
@@ -623,7 +623,7 @@ html, body {
 @media (hover: hover) and (pointer: fine) {
   .tool-card:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 24px -12px rgba(167, 139, 250, 0.35),
+    box-shadow: 0 10px 24px -12px rgba(34, 211, 238, 0.35),
                 0 4px 10px -4px rgba(56, 189, 248, 0.18);
   }
 }
@@ -638,7 +638,7 @@ html, body {
 }
 
 /* Filter dropdown options: flat rows inside a popover. Row has a soft
-   violet wash that slides in from the left on hover, and the label
+   cyan wash that slides in from the left on hover, and the label
    shifts right 4px in sync. Selected row keeps the wash permanently. */
 .filter-option {
   position: relative;
@@ -659,7 +659,7 @@ html, body {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(167, 139, 250, 0.18), rgba(167, 139, 250, 0.06) 70%, transparent);
+  background: linear-gradient(90deg, rgba(34, 211, 238, 0.18), rgba(34, 211, 238, 0.06) 70%, transparent);
   transform: translateX(-100%);
   transition: transform 220ms cubic-bezier(0.22, 1, 0.36, 1);
   z-index: 0;
@@ -689,23 +689,23 @@ html, body {
   transform: translateX(4px);
 }
 .filter-option:focus-visible {
-  outline: 2px solid rgba(167, 139, 250, 0.5);
+  outline: 2px solid rgba(34, 211, 238, 0.5);
   outline-offset: -2px;
 }
 
 /* Themed slim scrollbar on the popover list */
 .filter-popover-scroll {
   scrollbar-width: thin;
-  scrollbar-color: rgba(167, 139, 250, 0.35) transparent;
+  scrollbar-color: rgba(34, 211, 238, 0.35) transparent;
 }
 .filter-popover-scroll::-webkit-scrollbar { width: 6px; }
 .filter-popover-scroll::-webkit-scrollbar-track { background: transparent; }
 .filter-popover-scroll::-webkit-scrollbar-thumb {
-  background: rgba(167, 139, 250, 0.3);
+  background: rgba(34, 211, 238, 0.3);
   border-radius: 3px;
 }
 .filter-popover-scroll::-webkit-scrollbar-thumb:hover {
-  background: rgba(167, 139, 250, 0.55);
+  background: rgba(34, 211, 238, 0.55);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -744,7 +744,7 @@ html {
 
 /* Better tap response: remove 300ms tap delay and dim flash on touch */
 a, button, [role="button"], .tool-card, .category-pill, .helpful-btn, .copy-btn {
-  -webkit-tap-highlight-color: rgba(167, 139, 250, 0.15);
+  -webkit-tap-highlight-color: rgba(34, 211, 238, 0.15);
   touch-action: manipulation;
 }
 
@@ -828,9 +828,9 @@ a, button, [role="button"], .tool-card, .category-pill, .helpful-btn, .copy-btn 
 @media (hover: hover) and (pointer: fine) {
   .cat-card:hover {
     transform: translateY(-3px);
-    box-shadow: 0 12px 24px -12px rgba(167, 139, 250, 0.4),
+    box-shadow: 0 12px 24px -12px rgba(34, 211, 238, 0.4),
                 0 4px 10px -4px rgba(56, 189, 248, 0.2);
-    border-color: rgba(167, 139, 250, 0.35);
+    border-color: rgba(34, 211, 238, 0.35);
   }
 }
 .cat-card:active {
@@ -892,7 +892,7 @@ a, button, [role="button"], .tool-card, .category-pill, .helpful-btn, .copy-btn 
 }
 .nav-logo-frame img { display: block; }
 .nav-brand:hover .nav-logo-frame {
-  border-color: rgba(167, 139, 250, 0.35);
+  border-color: rgba(34, 211, 238, 0.35);
   background: var(--bg-card-hover);
   transform: rotate(-4deg);
 }
@@ -909,7 +909,7 @@ a, button, [role="button"], .tool-card, .category-pill, .helpful-btn, .copy-btn 
   transition: color 180ms ease;
 }
 .nav-brand:hover .nav-wordmark-tld {
-  color: var(--accent-primary-text, #c4b5fd);
+  color: var(--accent-primary-text, #67e8f9);
 }
 .nav-livedot {
   display: inline-block;
@@ -951,7 +951,7 @@ a, button, [role="button"], .tool-card, .category-pill, .helpful-btn, .copy-btn 
   bottom: 3px;
   height: 1.5px;
   border-radius: 2px;
-  background: linear-gradient(90deg, #a78bfa, #38bdf8);
+  background: linear-gradient(90deg, #22d3ee, #38bdf8);
   transform: scaleX(0);
   transform-origin: left center;
   transition: transform 220ms cubic-bezier(.2,.7,.2,1);
@@ -962,7 +962,7 @@ a, button, [role="button"], .tool-card, .category-pill, .helpful-btn, .copy-btn 
 }
 .nav-link-active::after {
   transform: scaleX(1);
-  background: linear-gradient(90deg, #a78bfa, #38bdf8, #5eead4);
+  background: linear-gradient(90deg, #22d3ee, #38bdf8, #5eead4);
 }
 
 /* Search button: shows live tool count inline with ⌘K shortcut */
@@ -982,7 +982,7 @@ a, button, [role="button"], .tool-card, .category-pill, .helpful-btn, .copy-btn 
 }
 .nav-search:hover {
   background: var(--bg-card-hover);
-  border-color: rgba(167, 139, 250, 0.35);
+  border-color: rgba(34, 211, 238, 0.35);
   color: var(--text-primary);
 }
 .nav-search-icon {
@@ -990,7 +990,7 @@ a, button, [role="button"], .tool-card, .category-pill, .helpful-btn, .copy-btn 
   flex: none;
   transition: color 160ms ease;
 }
-.nav-search:hover .nav-search-icon { color: var(--accent-primary-text, #c4b5fd); }
+.nav-search:hover .nav-search-icon { color: var(--accent-primary-text, #67e8f9); }
 .nav-search-text {
   letter-spacing: -0.005em;
   font-weight: 500;
@@ -1087,7 +1087,7 @@ a, button, [role="button"], .tool-card, .category-pill, .helpful-btn, .copy-btn 
   height: 2px;
   transform: scaleX(0);
   transform-origin: left center;
-  background: linear-gradient(90deg, #a78bfa 0%, #38bdf8 50%, #5eead4 100%);
+  background: linear-gradient(90deg, #22d3ee 0%, #38bdf8 50%, #5eead4 100%);
   z-index: 60;
   pointer-events: none;
   opacity: 0;
@@ -1113,7 +1113,7 @@ a, button, [role="button"], .tool-card, .category-pill, .helpful-btn, .copy-btn 
   overflow: hidden;
   background:
     radial-gradient(ellipse 62% 42% at 56% 0%, rgba(34, 211, 238, 0.07), transparent 72%),
-    radial-gradient(ellipse 46% 36% at 92% 18%, rgba(167, 139, 250, 0.055), transparent 74%);
+    radial-gradient(ellipse 46% 36% at 92% 18%, rgba(34, 211, 238, 0.055), transparent 74%);
   opacity: 1;
   contain: strict;
 }
@@ -1157,7 +1157,7 @@ a, button, [role="button"], .tool-card, .category-pill, .helpful-btn, .copy-btn 
   background:
     radial-gradient(circle at 18% 22%, rgba(94, 234, 212, 0.08), transparent 28%),
     radial-gradient(circle at 78% 12%, rgba(56, 189, 248, 0.075), transparent 32%),
-    radial-gradient(circle at 82% 72%, rgba(167, 139, 250, 0.052), transparent 30%);
+    radial-gradient(circle at 82% 72%, rgba(34, 211, 238, 0.052), transparent 30%);
 }
 .moat-layer[data-mode="home"] .moat-canvas { opacity: 0.78; }
 .moat-layer[data-mode="detail"] .moat-canvas { opacity: 0.52; }
@@ -1173,7 +1173,7 @@ body > footer {
 .light .moat-layer {
   background:
     radial-gradient(ellipse 60% 38% at 55% 0%, rgba(2, 132, 199, 0.08), transparent 72%),
-    radial-gradient(ellipse 42% 32% at 92% 16%, rgba(124, 58, 237, 0.06), transparent 72%);
+    radial-gradient(ellipse 42% 32% at 92% 16%, rgba(8, 145, 178, 0.06), transparent 72%);
 }
 .light .moat-layer::before {
   background:
@@ -1245,13 +1245,13 @@ body > footer {
   background: rgba(94, 234, 212, 0.08);
   border-color: rgba(94, 234, 212, 0.22);
 }
-.light .idx-eyebrow-fresh { color: #047857; }
+.light .idx-eyebrow-fresh { color: #0e7490; }
 .idx-eyebrow-accent {
-  color: #c4b5fd;
-  background: rgba(167, 139, 250, 0.08);
-  border-color: rgba(167, 139, 250, 0.22);
+  color: #67e8f9;
+  background: rgba(34, 211, 238, 0.08);
+  border-color: rgba(34, 211, 238, 0.22);
 }
-.light .idx-eyebrow-accent { color: #6d28d9; }
+.light .idx-eyebrow-accent { color: #0e7490; }
 .idx-eyebrow-livedot {
   width: 6px; height: 6px;
   border-radius: 50%;
@@ -1284,7 +1284,7 @@ body > footer {
   max-width: 22ch;
 }
 .idx-gradient {
-  background: linear-gradient(100deg, #a78bfa 0%, #38bdf8 60%, #5eead4 100%);
+  background: linear-gradient(100deg, #22d3ee 0%, #38bdf8 60%, #5eead4 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

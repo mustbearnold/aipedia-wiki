@@ -16,7 +16,7 @@ interface Props {
   // that don't want them (e.g. constrained sidebars).
   scores?: { utility?: number; value?: number; moat?: number; longevity?: number };
   // Card variant:
-  //   'clean'   (default) - 4-bar sparkbar, no tier pill, solid-violet score.
+  //   'clean'   (default) - 4-bar sparkbar, no tier pill, solid-cyan score.
   //                         Used on homepage + /tools/ + categories + any
   //                         grid view.
   //   'default' (legacy)  - original ScoreTier + colored U/V/M/L chip rail.
@@ -33,24 +33,24 @@ const displayPrice = shortenPrice(priceRange);
 // so the cards stay visually consistent with tool-page score callouts:
 //   >= 8.0  teal   (strong)
 //   7.0-7.9 cyan   (good)
-//   6.0-6.9 yellow (fair)
-//   <  6.0  red    (weak)
+//   6.0-6.9 cyan (fair)
+//   <  6.0  cyan    (weak)
 function axisColor(n: number | undefined): string {
   const v = typeof n === 'number' ? n : 0;
   if (v >= 8) return 'text-[var(--accent-success)] bg-[rgba(94,234,212,0.10)] border-[rgba(94,234,212,0.30)]';
   if (v >= 7) return 'text-[var(--accent-secondary)] bg-[rgba(56,189,248,0.10)] border-[rgba(56,189,248,0.30)]';
-  if (v >= 6) return 'text-[var(--accent-warning)] bg-[rgba(251,191,36,0.10)] border-[rgba(251,191,36,0.30)]';
-  return 'text-[var(--accent-danger)] bg-[rgba(251,113,133,0.10)] border-[rgba(251,113,133,0.30)]';
+  if (v >= 6) return 'text-[var(--accent-warning)] bg-[rgba(103, 232, 249,0.10)] border-[rgba(103, 232, 249,0.30)]';
+  return 'text-[var(--accent-danger)] bg-[rgba(103, 232, 249,0.10)] border-[rgba(103, 232, 249,0.30)]';
 }
 
 // Sparkbar-fill colour (solid, no border/bg). Same breakpoints as
 // axisColor so the two variants convey identical information.
 function barColor(n: number | undefined): string {
   const v = typeof n === 'number' ? n : 0;
-  if (v >= 8) return '#5eead4'; // emerald-400
+  if (v >= 8) return '#5eead4'; // teal-400
   if (v >= 7) return '#38bdf8'; // sky-400
-  if (v >= 6) return '#fbbf24'; // amber-400
-  return '#fb7185';             // rose-400
+  if (v >= 6) return '#67e8f9'; // cyan-400
+  return '#67e8f9';             // cyan-400
 }
 
 // Sparkbar builder: 4 bars scaled to score/10 with a 15% floor so even
@@ -86,26 +86,26 @@ const hasAxisScores = !!scores && (
 );
 
 const categoryGradients: Record<string, string> = {
-  'ai-chatbots': 'linear-gradient(135deg, #a78bfa, #38bdf8)',
-  'ai-voice': 'linear-gradient(135deg, #8b5cf6, #38bdf8)',
-  'ai-video': 'linear-gradient(135deg, #a78bfa, #fb7185)',
+  'ai-chatbots': 'linear-gradient(135deg, #22d3ee, #38bdf8)',
+  'ai-voice': 'linear-gradient(135deg, #22d3ee, #38bdf8)',
+  'ai-video': 'linear-gradient(135deg, #22d3ee, #67e8f9)',
   'ai-coding': 'linear-gradient(135deg, #5eead4, #14b8a6)',
   'ai-automation': 'linear-gradient(135deg, #38bdf8, #0284c7)',
-  'ai-seo': 'linear-gradient(135deg, #a78bfa, #7c3aed)',
-  'ai-design': 'linear-gradient(135deg, #a78bfa, #fb7185)',
+  'ai-seo': 'linear-gradient(135deg, #22d3ee, #0891b2)',
+  'ai-design': 'linear-gradient(135deg, #22d3ee, #67e8f9)',
   'ai-writing': 'linear-gradient(135deg, #38bdf8, #0284c7)',
-  'ai-image': 'linear-gradient(135deg, #fbbf24, #fb7185)',
+  'ai-image': 'linear-gradient(135deg, #67e8f9, #67e8f9)',
   'ai-search': 'linear-gradient(135deg, #5eead4, #14b8a6)',
   'ai-notes': 'linear-gradient(135deg, #6b7280, #9ca3af)',
 };
 
-const gradient = categoryGradients[category] ?? 'linear-gradient(135deg, #a78bfa, #38bdf8)';
+const gradient = categoryGradients[category] ?? 'linear-gradient(135deg, #22d3ee, #38bdf8)';
 const categoryLabel = category.replace('ai-', 'AI ').replace(/\b\w/g, (c) => c.toUpperCase());
 ---
 
 <a
   href={`/tools/${slug}/`}
-  class="tool-card block bg-[var(--bg-card)] border border-[var(--border)] rounded-xl p-3 hover:bg-[var(--bg-card-hover)] hover:border-[rgba(167,139,250,0.35)] transition-all duration-200 no-underline group"
+  class="tool-card block bg-[var(--bg-card)] border border-[var(--border)] rounded-xl p-3 hover:bg-[var(--bg-card-hover)] hover:border-[rgba(34, 211, 238,0.35)] transition-all duration-200 no-underline group"
 >
   <div class="flex items-start gap-3">
     <ToolLogo slug={slug} title={title} size={36} className="shrink-0" />
@@ -167,6 +167,6 @@ const categoryLabel = category.replace('ai-', 'AI ').replace(/\b\w/g, (c) => c.t
 
 <style>
   /* Score number uses the theme-aware accent-text token so it has
-     adequate contrast on both dark (#a78bfa) and light (#6d28d9) bgs. */
+     adequate contrast on both dark (#22d3ee) and light (#0e7490) bgs. */
   .tool-card-score { color: var(--accent-primary-text); }
 </style>

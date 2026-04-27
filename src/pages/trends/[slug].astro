@@ -17,8 +17,8 @@ const slug = entry.data.slug ?? entry.id.replace(/\.md$/, '');
 const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
 
 const impactColors: Record<string, string> = {
-  high: 'red',
-  medium: 'yellow',
+  high: 'cyan',
+  medium: 'cyan',
   low: 'blue',
 };
 const impact = entry.data.impact ?? 'medium';

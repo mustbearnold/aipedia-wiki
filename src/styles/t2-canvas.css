@@ -14,20 +14,20 @@
  *   - /compare/*           (comparison pages, via ComparisonLayout)
  * ============================================================ */
 
-/* Page background: violet-tinted radial over the base color. */
+/* Page background: cyan-tinted radial over the base color. */
 body:has(main .t2-canvas) {
   background:
-    radial-gradient(ellipse 80% 50% at 50% 0%, rgba(167,139,250,0.06) 0%, transparent 60%),
+    radial-gradient(ellipse 80% 50% at 50% 0%, rgba(34, 211, 238,0.06) 0%, transparent 60%),
     var(--bg-base);
   scroll-behavior: smooth;
 }
 .light body:has(main .t2-canvas) {
   background:
-    radial-gradient(ellipse 80% 50% at 50% 0%, rgba(167,139,250,0.035) 0%, transparent 60%),
+    radial-gradient(ellipse 80% 50% at 50% 0%, rgba(34, 211, 238,0.035) 0%, transparent 60%),
     var(--bg-base);
 }
 body:has(main .t2-canvas) ::selection {
-  background: rgba(167, 139, 250, 0.32);
+  background: rgba(34, 211, 238, 0.32);
   color: var(--text-primary);
 }
 
@@ -98,7 +98,7 @@ body:has(main .t2-canvas) ::selection {
 }
 .t2-eyebrow-link:hover {
   background: var(--t2-surface-hover);
-  border-color: rgba(167, 139, 250, 0.32);
+  border-color: rgba(34, 211, 238, 0.32);
   color: var(--t2-fg);
 }
 .t2-eyebrow-fresh {
@@ -106,7 +106,7 @@ body:has(main .t2-canvas) ::selection {
   background: rgba(94, 234, 212, 0.08);
   border-color: rgba(94, 234, 212, 0.22);
 }
-.light .t2-eyebrow-fresh { color: #047857; }
+.light .t2-eyebrow-fresh { color: #0e7490; }
 .t2-eyebrow-livedot {
   width: 6px; height: 6px;
   border-radius: 50%;
@@ -120,17 +120,17 @@ body:has(main .t2-canvas) ::selection {
   100% { box-shadow: 0 0 0 0 rgba(94, 234, 212, 0); }
 }
 .t2-eyebrow-accent {
-  color: #c4b5fd;
-  background: rgba(167, 139, 250, 0.08);
-  border-color: rgba(167, 139, 250, 0.22);
+  color: #67e8f9;
+  background: rgba(34, 211, 238, 0.08);
+  border-color: rgba(34, 211, 238, 0.22);
 }
-.light .t2-eyebrow-accent { color: #6d28d9; }
+.light .t2-eyebrow-accent { color: #0e7490; }
 .t2-eyebrow-gold {
-  color: #fbbf24;
-  background: rgba(251, 191, 36, 0.08);
-  border-color: rgba(251, 191, 36, 0.28);
+  color: #67e8f9;
+  background: rgba(103, 232, 249, 0.08);
+  border-color: rgba(103, 232, 249, 0.28);
 }
-.light .t2-eyebrow-gold { color: #a16207; background: rgba(251, 191, 36, 0.14); }
+.light .t2-eyebrow-gold { color: #0e7490; background: rgba(103, 232, 249, 0.14); }
 .t2-eyebrow-star { font-size: 10px; }
 .t2-eyebrow-trust {
   font-size: 11px;
@@ -284,7 +284,7 @@ body:has(main .t2-canvas) ::selection {
   transition: border-color 180ms ease, background 180ms ease, transform 180ms ease;
 }
 .t2-score:hover {
-  border-color: rgba(167, 139, 250, 0.28);
+  border-color: rgba(34, 211, 238, 0.28);
   background: var(--t2-surface-hover);
   transform: translateY(-1px);
 }
@@ -320,8 +320,8 @@ body:has(main .t2-canvas) ::selection {
   margin: -6px 0 14px;
   padding: 4px 8px;
   border-radius: 999px;
-  border: 1px solid rgba(167, 139, 250, 0.24);
-  background: rgba(167, 139, 250, 0.10);
+  border: 1px solid rgba(34, 211, 238, 0.24);
+  background: rgba(34, 211, 238, 0.10);
   color: var(--t2-accent-text);
   font-size: 10px;
   font-weight: 700;
@@ -408,7 +408,7 @@ body:has(main .t2-canvas) ::selection {
 }
 .t2-chip:hover {
   background: var(--t2-surface-hover);
-  border-color: rgba(167, 139, 250, 0.22);
+  border-color: rgba(34, 211, 238, 0.22);
 }
 .t2-chip-label {
   font-size: 10px;
@@ -435,7 +435,7 @@ body:has(main .t2-canvas) ::selection {
   transition: border-color 180ms ease, background 180ms ease;
 }
 .t2-verdict:hover {
-  border-color: rgba(167, 139, 250, 0.26);
+  border-color: rgba(34, 211, 238, 0.26);
   background: var(--t2-surface-hover);
 }
 .t2-verdict-heading {
@@ -519,18 +519,18 @@ body:has(main .t2-canvas) ::selection {
 .t2-cta-arrow { transition: transform 160ms ease; }
 .t2-cta:hover .t2-cta-arrow { transform: translateX(3px); }
 .t2-cta-primary {
-  background: linear-gradient(100deg, #a78bfa 0%, #38bdf8 58%, #5eead4 100%);
+  background: linear-gradient(100deg, #22d3ee 0%, #38bdf8 58%, #5eead4 100%);
   color: #0b0a14;
-  border: 1px solid rgba(167, 139, 250, 0.4);
+  border: 1px solid rgba(34, 211, 238, 0.4);
   box-shadow: 0 10px 28px -16px rgba(56, 189, 248, 0.55);
 }
 .t2-cta-primary:hover {
-  background: linear-gradient(100deg, #c4b5fd 0%, #7dd3fc 58%, #99f6e4 100%);
+  background: linear-gradient(100deg, #67e8f9 0%, #7dd3fc 58%, #99f6e4 100%);
   transform: translateY(-1px);
   box-shadow: 0 18px 40px -18px rgba(56, 189, 248, 0.75);
 }
 .t2-cta-primary:focus-visible {
-  outline: 2px solid rgba(196, 181, 253, 0.8);
+  outline: 2px solid rgba(103, 232, 249, 0.8);
   outline-offset: 3px;
 }
 .t2-cta-secondary {
@@ -651,7 +651,7 @@ body:has(main .t2-canvas) ::selection {
 .t2-prose a {
   color: var(--t2-accent-text);
   text-decoration: none;
-  border-bottom: 1px solid rgba(167, 139, 250, 0.25);
+  border-bottom: 1px solid rgba(34, 211, 238, 0.25);
   transition: border-color 120ms ease;
 }
 .light .t2-prose a {
@@ -786,7 +786,7 @@ body:has(main .t2-canvas) ::selection {
 }
 .t2-prose details:hover {
   background: var(--t2-surface-hover);
-  border-color: rgba(167, 139, 250, 0.22);
+  border-color: rgba(34, 211, 238, 0.22);
 }
 .t2-prose details summary::-webkit-details-marker { display: none; }
 .t2-prose details summary::marker { content: ''; display: none; }
@@ -1089,8 +1089,8 @@ body:has(main .t2-canvas) ::selection {
   color: var(--t2-fg);
 }
 .t2-sevtab-active {
-  background: rgba(167, 139, 250, 0.12);
-  border-color: rgba(167, 139, 250, 0.35);
+  background: rgba(34, 211, 238, 0.12);
+  border-color: rgba(34, 211, 238, 0.35);
   color: var(--t2-accent-text);
 }
 .t2-sevtab-count {
@@ -1180,7 +1180,7 @@ body:has(main .t2-canvas) ::selection {
   color: var(--t2-fg);
 }
 .t2-dropdown-option-active {
-  background: rgba(167, 139, 250, 0.12);
+  background: rgba(34, 211, 238, 0.12);
   color: var(--t2-accent-text);
   font-weight: 600;
 }
@@ -1248,7 +1248,7 @@ body:has(main .t2-canvas) ::selection {
   transition: border-color 120ms ease;
 }
 .t2-news-card:hover .t2-news-card-thumb img {
-  border-color: rgba(167, 139, 250, 0.35);
+  border-color: rgba(34, 211, 238, 0.35);
 }
 .t2-news-card-body { min-width: 0; }
 .t2-news-card-meta {
@@ -1270,14 +1270,14 @@ body:has(main .t2-canvas) ::selection {
   border: 1px solid;
 }
 .t2-severity-breaking {
-  color: #fb7185;
-  background: rgba(251, 113, 133, 0.10);
-  border-color: rgba(251, 113, 133, 0.28);
+  color: #67e8f9;
+  background: rgba(103, 232, 249, 0.10);
+  border-color: rgba(103, 232, 249, 0.28);
 }
 .t2-severity-major {
-  color: var(--accent-warning, #fbbf24);
-  background: rgba(251, 191, 36, 0.10);
-  border-color: rgba(251, 191, 36, 0.28);
+  color: var(--accent-warning, #67e8f9);
+  background: rgba(103, 232, 249, 0.10);
+  border-color: rgba(103, 232, 249, 0.28);
 }
 .t2-severity-minor {
   color: var(--t2-subtle);
@@ -1328,7 +1328,7 @@ body:has(main .t2-canvas) ::selection {
 .t2-no-matches a {
   color: var(--t2-accent-text);
   text-decoration: none;
-  border-bottom: 1px solid rgba(167, 139, 250, 0.25);
+  border-bottom: 1px solid rgba(34, 211, 238, 0.25);
 }
 
 .t2-news-footer { margin-bottom: 56px; }
@@ -1378,9 +1378,9 @@ body:has(main .t2-canvas) ::selection {
 .t2-cat-toppicks {
   padding: 20px 20px 22px;
   border-radius: var(--t2-radius);
-  border: 1px solid rgba(167, 139, 250, 0.25);
+  border: 1px solid rgba(34, 211, 238, 0.25);
   background:
-    linear-gradient(135deg, rgba(167,139,250,0.08), rgba(56,189,248,0.04) 60%, transparent),
+    linear-gradient(135deg, rgba(34, 211, 238,0.08), rgba(56,189,248,0.04) 60%, transparent),
     var(--t2-surface);
   margin-bottom: 40px;
 }
@@ -1523,7 +1523,7 @@ body:has(main .t2-canvas) ::selection {
 }
 .t2-cat-row-cta:hover {
   color: var(--t2-accent-text);
-  border-color: rgba(167, 139, 250, 0.45) !important;
+  border-color: rgba(34, 211, 238, 0.45) !important;
   background: var(--t2-surface-hover);
 }
 
@@ -1543,7 +1543,7 @@ body:has(main .t2-canvas) ::selection {
   border-radius: 18px;
   border: 1px solid var(--t2-line);
   background:
-    radial-gradient(ellipse 60% 120% at 0% 50%, rgba(167, 139, 250, 0.09), transparent 60%),
+    radial-gradient(ellipse 60% 120% at 0% 50%, rgba(34, 211, 238, 0.09), transparent 60%),
     radial-gradient(ellipse 60% 120% at 100% 50%, rgba(56, 189, 248, 0.08), transparent 60%),
     var(--t2-surface);
   position: relative;
@@ -1555,7 +1555,7 @@ body:has(main .t2-canvas) ::selection {
   top: -1px; left: -1px; right: -1px;
   height: 2px;
   border-radius: 18px 18px 0 0;
-  background: linear-gradient(90deg, #a78bfa, #38bdf8, #5eead4);
+  background: linear-gradient(90deg, #22d3ee, #38bdf8, #5eead4);
 }
 .t2-vs-side {
   display: flex;
@@ -1581,8 +1581,8 @@ body:has(main .t2-canvas) ::selection {
 }
 .t2-vs-logo:hover {
   transform: translateY(-2px) rotate(-2deg);
-  border-color: rgba(167, 139, 250, 0.35);
-  box-shadow: 0 12px 24px -12px rgba(167, 139, 250, 0.35);
+  border-color: rgba(34, 211, 238, 0.35);
+  box-shadow: 0 12px 24px -12px rgba(34, 211, 238, 0.35);
 }
 .t2-vs-name {
   font-size: 18px;
@@ -1615,7 +1615,7 @@ body:has(main .t2-canvas) ::selection {
   height: 64px;
   border-radius: 50%;
   background:
-    radial-gradient(ellipse 100% 100% at 50% 50%, rgba(167, 139, 250, 0.16), transparent 60%),
+    radial-gradient(ellipse 100% 100% at 50% 50%, rgba(34, 211, 238, 0.16), transparent 60%),
     var(--t2-surface-hover);
   border: 1px solid var(--t2-line);
 }
@@ -1623,7 +1623,7 @@ body:has(main .t2-canvas) ::selection {
   font-size: 18px;
   font-weight: 800;
   letter-spacing: 0.05em;
-  background: linear-gradient(100deg, #a78bfa, #38bdf8);
+  background: linear-gradient(100deg, #22d3ee, #38bdf8);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1660,11 +1660,11 @@ body:has(main .t2-canvas) ::selection {
   border-radius: 999px;
   font-size: 11px;
   font-weight: 600;
-  color: #fbbf24;
-  background: rgba(251, 191, 36, 0.09);
-  border: 1px solid rgba(251, 191, 36, 0.28);
+  color: #67e8f9;
+  background: rgba(103, 232, 249, 0.09);
+  border: 1px solid rgba(103, 232, 249, 0.28);
 }
-.light .t2-cmp-winner-chip { color: #a16207; background: rgba(251, 191, 36, 0.14); }
+.light .t2-cmp-winner-chip { color: #0e7490; background: rgba(103, 232, 249, 0.14); }
 .t2-cmp-winner-star { font-size: 10px; }
 
 .t2-cmp-cards {
@@ -1690,9 +1690,9 @@ body:has(main .t2-canvas) ::selection {
   position: relative;
 }
 .t2-cmp-card-winner {
-  border-color: rgba(167, 139, 250, 0.45);
+  border-color: rgba(34, 211, 238, 0.45);
   background:
-    linear-gradient(135deg, rgba(167,139,250,0.10), rgba(56,189,248,0.04) 60%, transparent),
+    linear-gradient(135deg, rgba(34, 211, 238,0.10), rgba(56,189,248,0.04) 60%, transparent),
     var(--t2-surface);
 }
 .t2-cmp-card-badge {
@@ -1870,7 +1870,7 @@ body:has(main .t2-canvas) ::selection {
 }
 .t2-cmp-axis-bars i {
   justify-self: end;
-  background: linear-gradient(90deg, #a78bfa, #38bdf8);
+  background: linear-gradient(90deg, #22d3ee, #38bdf8);
 }
 .t2-cmp-axis-bars b {
   justify-self: start;
@@ -2022,8 +2022,8 @@ body:has(main .t2-canvas) ::selection {
 }
 .ref-article-shell {
   display: grid;
-  grid-template-columns: minmax(0, 68ch) minmax(230px, 280px);
-  gap: 44px;
+  grid-template-columns: minmax(0, 1fr) minmax(250px, 320px);
+  gap: 28px;
   align-items: start;
 }
 .ref-surface .t2-article-prose {
@@ -2098,7 +2098,7 @@ body:has(main .t2-canvas) ::selection {
 }
 .light .ref-hero-card {
   background:
-    linear-gradient(135deg, rgba(20, 184, 166, 0.10), rgba(14, 165, 233, 0.06) 58%, transparent),
+    linear-gradient(135deg, rgba(94, 234, 212, 0.10), rgba(34, 211, 238, 0.06) 58%, transparent),
     rgba(255, 255, 255, 0.82);
   box-shadow: 0 20px 50px rgba(15, 23, 42, 0.08);
 }
@@ -2159,11 +2159,9 @@ body:has(main .t2-canvas) ::selection {
 }
 .t2-article-prose { max-width: 68ch; }
 
-.t2-badge-red    { color: #fb7185; background: rgba(251, 113, 133, 0.10); border-color: rgba(251, 113, 133, 0.28); }
-.t2-badge-green  { color: var(--accent-success, #5eead4); background: rgba(94, 234, 212, 0.10); border-color: rgba(94, 234, 212, 0.28); }
-.t2-badge-yellow { color: var(--accent-warning, #fbbf24); background: rgba(251, 191, 36, 0.10); border-color: rgba(251, 191, 36, 0.28); }
+.t2-badge-teal  { color: var(--accent-success, #5eead4); background: rgba(94, 234, 212, 0.10); border-color: rgba(94, 234, 212, 0.28); }
 .t2-badge-blue   { color: #38bdf8; background: rgba(56, 189, 248, 0.10); border-color: rgba(56, 189, 248, 0.28); }
-.t2-badge-purple { color: var(--t2-accent-text); background: rgba(167, 139, 250, 0.10); border-color: rgba(167, 139, 250, 0.28); }
+.t2-badge-cyan { color: var(--t2-accent-text); background: rgba(34, 211, 238, 0.10); border-color: rgba(34, 211, 238, 0.28); }
 .t2-badge-gray   { color: var(--t2-muted); background: rgba(148, 163, 184, 0.08); border-color: var(--t2-line); }
 
 /* Company type pills */
@@ -2178,8 +2176,8 @@ body:has(main .t2-canvas) ::selection {
 }
 .t2-company-type-startup  { color: var(--accent-success, #5eead4); background: rgba(94, 234, 212, 0.10); border-color: rgba(94, 234, 212, 0.28); }
 .t2-company-type-bigtech  { color: #38bdf8; background: rgba(56, 189, 248, 0.10); border-color: rgba(56, 189, 248, 0.28); }
-.t2-company-type-acquired { color: var(--accent-warning, #fbbf24); background: rgba(251, 191, 36, 0.10); border-color: rgba(251, 191, 36, 0.28); }
-.t2-company-type-dead     { color: #fb7185; background: rgba(251, 113, 133, 0.10); border-color: rgba(251, 113, 133, 0.28); }
+.t2-company-type-acquired { color: var(--accent-warning, #67e8f9); background: rgba(103, 232, 249, 0.10); border-color: rgba(103, 232, 249, 0.28); }
+.t2-company-type-dead     { color: #67e8f9; background: rgba(103, 232, 249, 0.10); border-color: rgba(103, 232, 249, 0.28); }
 
 .t2-company-products {
   padding: 18px 20px 20px;
@@ -2255,7 +2253,7 @@ body:has(main .t2-canvas) ::selection {
 }
 .t2-company-product-cta:hover {
   color: var(--t2-accent-text);
-  border-color: rgba(167, 139, 250, 0.45);
+  border-color: rgba(34, 211, 238, 0.45);
   background: var(--t2-surface-hover);
 }
 
@@ -2287,9 +2285,9 @@ body:has(main .t2-canvas) ::selection {
   border-color: var(--t2-line-strong);
 }
 .t2-guide-row-top {
-  border-color: rgba(167, 139, 250, 0.35);
+  border-color: rgba(34, 211, 238, 0.35);
   background:
-    linear-gradient(135deg, rgba(167, 139, 250, 0.08), transparent 60%),
+    linear-gradient(135deg, rgba(34, 211, 238, 0.08), transparent 60%),
     var(--t2-surface);
 }
 .t2-guide-row-rank {
@@ -2436,7 +2434,7 @@ body:has(main .t2-canvas) ::selection {
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  background: radial-gradient(ellipse 80% 120% at 100% 0%, rgba(167, 139, 250, 0.10), transparent 60%);
+  background: radial-gradient(ellipse 80% 120% at 100% 0%, rgba(34, 211, 238, 0.10), transparent 60%);
   opacity: 0;
   transition: opacity 220ms ease;
   pointer-events: none;
@@ -2448,7 +2446,7 @@ body:has(main .t2-canvas) ::selection {
   top: 0; left: 0; right: 0;
   height: 2px;
   border-radius: 14px 14px 0 0;
-  background: linear-gradient(90deg, #a78bfa 0%, #38bdf8 50%, #5eead4 100%);
+  background: linear-gradient(90deg, #22d3ee 0%, #38bdf8 50%, #5eead4 100%);
   opacity: 0.5;
   transition: opacity 200ms ease;
   z-index: 2;
@@ -2456,9 +2454,9 @@ body:has(main .t2-canvas) ::selection {
 .t2-cat-index-card-top::after { opacity: 1; }
 .t2-cat-index-card:hover {
   background: var(--t2-surface-hover);
-  border-color: rgba(167, 139, 250, 0.35);
+  border-color: rgba(34, 211, 238, 0.35);
   transform: translateY(-2px);
-  box-shadow: 0 14px 32px -18px rgba(167, 139, 250, 0.32);
+  box-shadow: 0 14px 32px -18px rgba(34, 211, 238, 0.32);
 }
 .t2-cat-index-card:hover::before { opacity: 1; }
 .t2-cat-index-card:hover::after { opacity: 1; }
@@ -2609,7 +2607,7 @@ body:has(main .t2-canvas) ::selection {
 .t2-compare-filter-input::placeholder { color: var(--t2-subtle); }
 .t2-compare-filter-input:focus {
   outline: none;
-  border-color: rgba(167, 139, 250, 0.5);
+  border-color: rgba(34, 211, 238, 0.5);
 }
 .t2-compare-filter-count {
   font-size: 11px;
