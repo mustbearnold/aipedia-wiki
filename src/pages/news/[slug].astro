@@ -27,6 +27,16 @@ const severityBadge: Record<string, { text: string; color: string }> = {
 };
 const sev = (entry.data.severity as string) || 'minor';
 const badge = severityBadge[sev] ?? severityBadge.minor;
+const sources = Array.isArray(entry.data.sources) ? entry.data.sources.filter((source) => source?.url) : [];
+
+function sourceLabel(source: { url: string; title?: string }): string {
+  if (source.title) return source.title;
+  try {
+    return new URL(source.url).hostname.replace(/^www\./, '');
+  } catch {
+    return source.url;
+  }
+}
 ---
 
 <ArticlePlusLayout
@@ -43,6 +53,7 @@ const badge = severityBadge[sev] ?? severityBadge.minor;
   articleSection="AI Industry News"
   badge={badge}
   ogImage={`/og/news/${slug}.png`}
+  citations={sources}
 >
   {entry.data.hero ? (
     <figure class="not-prose mb-6 -mx-4 sm:mx-0">
@@ -66,12 +77,12 @@ const badge = severityBadge[sev] ?? severityBadge.minor;
   ) : (
     <figure class="not-prose mb-6">
       <img
-        src={`/og/news/${slug}.png`}
+        src={`/og/news/thumbs/${slug}.webp`}
         alt={entry.data.title}
         loading="eager"
         decoding="async"
-        width="1200"
-        height="630"
+        width="960"
+        height="504"
         class="w-full h-auto rounded-xl border border-[var(--border)] shadow-[0_10px_40px_rgba(0,0,0,0.45)]"
       />
     </figure>
@@ -85,4 +96,28 @@ const badge = severityBadge[sev] ?? severityBadge.minor;
     return slugs.length > 0 ? <RelatedToolsStrip slugs={slugs} /> : null;
   })()}
   <Content />
+  {sources.length > 0 && (
+    <section class="sources-callout not-prose mt-8 rounded-xl border border-[var(--border)] bg-[var(--bg-card)] p-5" aria-labelledby="sources">
+      <div class="flex flex-wrap items-center justify-between gap-3">
+        <div>
+          <h2 id="sources" class="m-0 text-base font-semibold text-[var(--text-primary)]">Sources</h2>
+          <p class="mt-1 text-xs text-[var(--text-muted)]">
+            Primary and corroborating references used for this news item.
+          </p>
+        </div>
+        <span class="rounded-full border border-[var(--border)] px-3 py-1 text-xs text-[var(--text-muted)]">
+          {sources.length} cited source{sources.length === 1 ? '' : 's'}
+        </span>
+      </div>
+      <ol class="mt-4 space-y-2 pl-5 text-sm text-[var(--text-secondary)]">
+        {sources.map((source) => (
+          <li>
+            <a href={source.url} target="_blank" rel="noopener noreferrer" class="text-[var(--accent-primary)] underline decoration-dotted underline-offset-4 hover:decoration-solid">
+              {sourceLabel(source)}
+            </a>
+          </li>
+        ))}
+      </ol>
+    </section>
+  )}
 </ArticlePlusLayout>

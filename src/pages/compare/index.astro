@@ -4,6 +4,8 @@
  * Redesigned April 23, 2026 into the .t2-canvas system.
  */
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import BreadcrumbLD from '../../components/seo/BreadcrumbLD.astro';
+import CollectionPageLD from '../../components/seo/CollectionPageLD.astro';
 import { getCollection } from 'astro:content';
 import logoManifest from '../../data/logo-manifest.json';
 
@@ -35,6 +37,7 @@ const categoryLabels: Record<string, string> = {
 interface EnrichedComparison {
   slug: string;
   title: string;
+  description: string;
   category: string;
   toolA: ToolInfo | null;
   toolB: ToolInfo | null;
@@ -53,10 +56,11 @@ const enriched: EnrichedComparison[] = allComparisons.map((c) => {
   const toolB = toolLookup[slugB] || null;
   const sumScore = (toolA?.score || 0) + (toolB?.score || 0);
   const title = c.data.title || '';
+  const description = c.data.description || c.data.summary || '';
   const category = c.data.category || 'other';
   const categoryLabel = categoryLabels[category] || category.replace(/^ai-/, '').replace(/-/g, ' ');
   return {
-    slug, title,
+    slug, title, description,
     category,
     toolA, toolB, slugA, slugB, sumScore,
     dataAttr: `${title} ${slugA} ${slugB} ${toolA?.title || ''} ${toolB?.title || ''} ${category} ${categoryLabel}`.toLowerCase(),
@@ -95,12 +99,31 @@ const heroSignals = [
   { label: 'Leading lane', value: topCategoryLabel, note: `${byCategory[topCategory]?.length ?? 0} comparisons` },
   { label: 'Strongest pair avg', value: strongestPairScore.toFixed(1), note: 'highest combined score' },
 ];
+
+const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
+const compareDescription = `${allComparisons.length} editorial head-to-head comparisons between the most-searched AI tool pairs.`;
+const comparisonItems = enriched.map((comparison) => ({
+  name: comparison.title || `${comparison.toolA?.title ?? comparison.slugA} vs ${comparison.toolB?.title ?? comparison.slugB}`,
+  url: new URL(`/compare/${comparison.slug}/`, siteBase).href,
+  description: comparison.description,
+}));
 ---
 
 <BaseLayout
   title="Compare AI Tools: Head-to-Head Reviews (2026), aipedia.wiki"
-  description={`${allComparisons.length} editorial head-to-head comparisons between the most-searched AI tool pairs.`}
+  description={compareDescription}
 >
+  <BreadcrumbLD items={[
+    { name: 'Home', url: new URL('/', siteBase).href },
+    { name: 'Compare AI Tools', url: new URL('/compare/', siteBase).href },
+  ]} />
+  <CollectionPageLD
+    name="Compare AI Tools"
+    description={compareDescription}
+    pageUrl={new URL('/compare/', siteBase).href}
+    items={comparisonItems}
+    itemType="Article"
+  />
   <div class="t2-canvas">
     <nav class="t2-breadcrumb" aria-label="Breadcrumb" data-reveal>
       <a href="/">Home</a>
@@ -197,8 +220,8 @@ const heroSignals = [
         {featured.map((c, i) => (
           <a href={`/compare/${c.slug}/`} class="compare-card t2-compare-card t2-compare-card-featured compare-card-premium" data-search={c.dataAttr} style={`--reveal-delay: ${(i % 3) * 55}ms;`}>
             <div class="t2-compare-card-logos compare-logo-pair">
-              {c.toolA && <img src={c.toolA.logo} alt="" width="36" height="36" loading="lazy" />}
-              {c.toolB && <img src={c.toolB.logo} alt="" width="36" height="36" loading="lazy" />}
+              {c.toolA && <img src={c.toolA.logo} alt="" width="36" height="36" loading="lazy" decoding="async" fetchpriority="low" />}
+              {c.toolB && <img src={c.toolB.logo} alt="" width="36" height="36" loading="lazy" decoding="async" fetchpriority="low" />}
             </div>
             <div class="t2-compare-card-body">
               <div class="compare-card-kicker">
@@ -234,8 +257,8 @@ const heroSignals = [
           {byCategory[cat].map((c, i) => (
             <a href={`/compare/${c.slug}/`} class="compare-card t2-compare-card compare-card-premium compare-card-compact" data-search={c.dataAttr} data-category={c.category} style={`--reveal-delay: ${(i % 4) * 35}ms;`}>
               <div class="t2-compare-card-logos compare-logo-pair">
-                {c.toolA && <img src={c.toolA.logo} alt="" width="30" height="30" loading="lazy" />}
-                {c.toolB && <img src={c.toolB.logo} alt="" width="30" height="30" loading="lazy" />}
+                {c.toolA && <img src={c.toolA.logo} alt="" width="30" height="30" loading="lazy" decoding="async" fetchpriority="low" />}
+                {c.toolB && <img src={c.toolB.logo} alt="" width="30" height="30" loading="lazy" decoding="async" fetchpriority="low" />}
               </div>
               <div class="t2-compare-card-body">
                 <div class="t2-compare-card-title">

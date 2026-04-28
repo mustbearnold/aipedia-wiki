@@ -18,6 +18,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import EmailCapture from '../../components/EmailCapture.astro';
 import BreadcrumbLD from '../../components/seo/BreadcrumbLD.astro';
+import CollectionPageLD from '../../components/seo/CollectionPageLD.astro';
 import ToolLogo from '../../components/ToolLogo.astro';
 import { getCollection } from 'astro:content';
 
@@ -135,6 +136,8 @@ const categoryOptions = Object.entries(categoryCounts)
 
 const totalTools = new Set(sorted.flatMap(n => n.affects)).size;
 const totalCats = new Set(sorted.flatMap(n => n.categories)).size;
+const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
+const newsDescription = "AI tools news verified against primary sources. Model releases, pricing changes, acquisitions, shutdowns, and funding rounds affecting the aipedia.wiki tool catalog.";
 
 const CATEGORY_LABEL: Record<string, string> = {
   'ai-business': 'Business',
@@ -195,16 +198,28 @@ const signalCards = [
 ];
 
 const breadcrumbs = [
-  { name: 'Home', url: 'https://aipedia.wiki/' },
-  { name: 'News', url: 'https://aipedia.wiki/news/' },
+  { name: 'Home', url: new URL('/', siteBase).href },
+  { name: 'News', url: new URL('/news/', siteBase).href },
 ];
+const newsItems = sorted.slice(0, 100).map((item) => ({
+  name: item.title,
+  url: new URL(`/news/${item.slug}/`, siteBase).href,
+  description: item.summary,
+}));
 ---
 
 <BaseLayout
   title="AI Tools News · Daily Desk · aipedia.wiki"
-  description="AI tools news verified against primary sources. Model releases, pricing changes, acquisitions, shutdowns, and funding rounds affecting the aipedia.wiki tool catalog."
+  description={newsDescription}
 >
   <BreadcrumbLD items={breadcrumbs} />
+  <CollectionPageLD
+    name="AI Tools News"
+    description={newsDescription}
+    pageUrl={new URL('/news/', siteBase).href}
+    items={newsItems}
+    itemType="NewsArticle"
+  />
   <div class="p3-canvas">
 
     <!-- Breadcrumbs -->
@@ -267,12 +282,12 @@ const breadcrumbs = [
         <a href={`/news/${topStory.n.slug}/`} class="p3-topstory">
           <div class="p3-topstory-img">
             <img
-              src={`/og/news/${topStory.n.slug}.png`}
+              src={`/og/news/thumbs/${topStory.n.slug}.webp`}
               alt=""
               loading="eager"
               decoding="async"
-              width="1200"
-              height="630"
+              width="960"
+              height="504"
             />
             <div class="p3-topstory-img-fade"></div>
           </div>
@@ -400,12 +415,12 @@ const breadcrumbs = [
               <a href={`/news/${n.slug}/`} class="p3-newsdesk-card">
                 <div class="p3-newsdesk-card-thumb">
                   <img
-                    src={`/og/news/${n.slug}.png`}
+                    src={`/og/news/thumbs/${n.slug}.webp`}
                     alt=""
                     loading="lazy"
                     decoding="async"
-                    width="1200"
-                    height="630"
+                    width="960"
+                    height="504"
                   />
                 </div>
                 <div class="p3-newsdesk-card-body">

@@ -3,7 +3,8 @@
  * Generate per-news-item OG social-share cards.
  *
  * Writes:
- *   - public/og/news/<slug>.png  (the actual social share)
+ *   - public/og/news/<slug>.png          (the actual social share)
+ *   - public/og/news/thumbs/<slug>.webp  (lightweight on-site card image)
  *
  * Set AIPEDIA_WRITE_OG_SVG=1 to also keep public/og/news/<slug>.svg
  * debug files. Runtime pages only reference PNGs.
@@ -16,6 +17,7 @@
 import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { join } from 'node:path';
+import sharp from 'sharp';
 
 let Resvg = null;
 try {
@@ -27,6 +29,7 @@ try {
 const ROOT = fileURLToPath(new URL('../', import.meta.url));
 const NEWS_DIR = join(ROOT, 'src/content/news');
 const OUT_DIR = join(ROOT, 'public/og/news');
+const THUMB_DIR = join(OUT_DIR, 'thumbs');
 const LOGO_DIR = join(ROOT, 'public/logos/tools');
 const WRITE_DEBUG_SVG = process.env.AIPEDIA_WRITE_OG_SVG === '1';
 const BRAND_LOGO_SMALL = existsSync(join(ROOT, 'public/brand/aipedia-logo-crystal-cyan-128.png'))
@@ -327,8 +330,9 @@ function rasterize(svg) {
   return resvg.render().asPng();
 }
 
-function main() {
+async function main() {
   if (!existsSync(OUT_DIR)) mkdirSync(OUT_DIR, { recursive: true });
+  if (!existsSync(THUMB_DIR)) mkdirSync(THUMB_DIR, { recursive: true });
 
   const requested = new Set(process.argv.slice(2).map((arg) => arg.replace(/\.md$/, '')));
   const files = readdirSync(NEWS_DIR)
@@ -336,6 +340,7 @@ function main() {
     .filter((f) => requested.size === 0 || requested.has(f.replace(/\.md$/, '')));
   let svgs = 0;
   let pngs = 0;
+  let thumbs = 0;
 
   for (const file of files) {
     const src = readFileSync(join(NEWS_DIR, file), 'utf8');
@@ -353,6 +358,12 @@ function main() {
       if (png) {
         writeFileSync(join(OUT_DIR, `${slug}.png`), png);
         pngs++;
+        const thumb = await sharp(png)
+          .resize({ width: 960, withoutEnlargement: true })
+          .webp({ quality: 82, effort: 6 })
+          .toBuffer();
+        writeFileSync(join(THUMB_DIR, `${slug}.webp`), thumb);
+        thumbs++;
       }
     } catch (err) {
       console.warn(`[news-og] PNG raster failed for ${slug}:`, err.message);
@@ -360,7 +371,7 @@ function main() {
   }
 
   const svgSummary = svgs > 0 ? ` and ${svgs} debug SVGs` : '';
-  console.log(`[news-og] generated ${pngs} PNGs${svgSummary} in public/og/news/`);
+  console.log(`[news-og] generated ${pngs} PNGs, ${thumbs} WebP thumbnails${svgSummary} in public/og/news/`);
 }
 
-main();
+await main();
