@@ -55,3 +55,6 @@ trust_cleanup_task.md
 # network account handles, application status, and decline reasons.
 # Internal only.
 affiliate_tracker.md
+ 
+# generated Pagefind search index 
+public/pagefind/ 
