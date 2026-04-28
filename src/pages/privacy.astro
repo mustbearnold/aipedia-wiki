@@ -1,8 +1,8 @@
 ---
 import ArticleLayout from '../layouts/ArticleLayout.astro';
 
-const LAST_UPDATED = '2026-04-26';
-const LAST_UPDATED_HUMAN = 'April 26, 2026';
+const LAST_UPDATED = '2026-04-28';
+const LAST_UPDATED_HUMAN = 'April 28, 2026';
 
 const pageName = 'Privacy Policy, aipedia.wiki';
 const pageDesc =
@@ -37,6 +37,7 @@ const pageDesc =
   <ul>
     <li><strong>Server request logs.</strong> The Cloudflare edge records each request (IP address, user agent, requested URL, referrer, timestamp). These are retained by Cloudflare under its standard policy and are not exported to any other system.</li>
     <li><strong>Aggregated traffic analytics.</strong> Cloudflare Web Analytics measures pageviews, device type, and country at an aggregated level. No cookies. No cross-site tracking. No individual reader profile is built.</li>
+    <li><strong>Optional Google Analytics.</strong> Google Analytics 4 only loads after you click "Allow analytics" in the privacy controls banner. It measures site usage such as pageviews, referral source, browser, device, country/region, and approximate engagement. We disable Google signals and ad personalization signals.</li>
     <li><strong>Search queries.</strong> The on-site search (Pagefind) runs entirely in the reader's browser. Queries are never sent to any server.</li>
     <li><strong>Email you send.</strong> If you email <a href="mailto:editorial@aipedia.wiki">editorial@aipedia.wiki</a> through a feedback form or correction link, the message is delivered to an editorial inbox. Content is read, actioned where relevant, and retained for correspondence history.</li>
   </ul>
@@ -53,7 +54,11 @@ const pageDesc =
   <h2>Cookies</h2>
 
   <p>
-    aipedia.wiki does not set any first-party tracking cookies. A small <code>theme</code> preference is stored in <code>localStorage</code> (not a cookie) so the site remembers whether you picked light or dark mode. That value never leaves your browser.
+    aipedia.wiki does not set first-party tracking cookies unless you consent to analytics. A small <code>theme</code> preference and your analytics consent choice are stored in <code>localStorage</code> so the site remembers whether you picked light or dark mode and whether you allowed or rejected analytics. Those preference values never leave your browser.
+  </p>
+
+  <p>
+    If you click "Allow analytics", Google Analytics may set analytics cookies such as <code>_ga</code> to distinguish visits and produce aggregate reports. If you click "Reject", Google Analytics does not load. You can change your choice by clearing site data for aipedia.wiki in your browser.
   </p>
 
   <p>
@@ -64,6 +69,7 @@ const pageDesc =
 
   <ul>
     <li><strong>Cloudflare Pages</strong> hosts the site and delivers pages via a global CDN. <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Cloudflare privacy policy</a>.</li>
+    <li><strong>Google Analytics 4</strong> provides consent-based aggregate traffic analytics. Google Analytics is not loaded unless you allow analytics in the privacy controls banner. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google privacy policy</a>.</li>
     <li><strong>Affiliate networks</strong> (Impact, PartnerStack, Rewardful, FirstPromoter, ShareASale, others) may drop a click-tracking cookie when you click through an affiliate link. Each network runs under its own privacy policy, linked from the destination site.</li>
   </ul>
 

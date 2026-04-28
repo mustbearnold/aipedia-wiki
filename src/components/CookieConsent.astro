@@ -18,7 +18,7 @@
 //   - No third-party sharing beyond Google Analytics (no ad remarketing)
 //   - Full policy at /privacy/
 
-const GA_MEASUREMENT_ID = 'G-WCPX3D1S05';
+const GA_MEASUREMENT_ID = import.meta.env.PUBLIC_GA_MEASUREMENT_ID || 'G-WCPX3D1S05';
 ---
 
 <div id="cookie-consent" class="cookie-consent-banner" hidden>
@@ -42,6 +42,7 @@ const GA_MEASUREMENT_ID = 'G-WCPX3D1S05';
     var STORAGE_KEY = 'aipedia-cookie-consent';
 
     function loadGA4() {
+      if (!GA_MEASUREMENT_ID) return;
       if (window.__aipediaGa4Loaded) return;
       window.__aipediaGa4Loaded = true;
 
