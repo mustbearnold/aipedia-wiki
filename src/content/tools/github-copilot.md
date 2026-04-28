@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$39/user/month"
 status: active
 launched: 2021-06
-last_updated: 2026-04-26
-last_verified: 2026-04-26
+last_updated: 2026-04-28
+last_verified: 2026-04-28
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -96,6 +96,8 @@ GitHub's AI pair programmer, built by Microsoft and GitHub on top of the largest
 Claude Opus 4.7 went generally available inside Copilot on April 16, 2026, within hours of Anthropic's release. GPT-5.5 followed on April 24 for Pro+, Business, and Enterprise users at a 7.5x premium-request multiplier.
 
 On April 24, 2026, GitHub's Copilot interaction-data policy took effect for Free, Pro, and Pro+ accounts: prompts, outputs, code snippets, and associated context may be used for model training unless individual users opt out. Copilot Business and Enterprise remain excluded from that training path.
+
+On April 27, 2026, GitHub announced that [Copilot will move to usage-based billing on June 1](/news/2026-04-27-github-copilot-usage-based-billing/). Premium requests are being replaced by GitHub AI Credits, and private-repo Copilot code review will begin consuming GitHub Actions minutes.
 
 The April 26 news scan added five Copilot-specific updates: [BYOK in VS Code](/news/2026-04-26-github-copilot-byok-vscode/), [cloud-agent metrics](/news/2026-04-26-github-copilot-cloud-agent-metrics/), [Jira-agent controls](/news/2026-04-26-github-copilot-jira-agent-controls/), [PR chat improvements](/news/2026-04-26-github-copilot-pr-chat-improvements/), and [web debugging](/news/2026-04-26-github-copilot-web-debugging/). Together, they make Copilot look less like autocomplete plus chat and more like an admin-governed coding-agent system: managers get metrics, admins get controls, developers get PR/debugging workflow improvements, and power users get more model-key flexibility in VS Code.
 

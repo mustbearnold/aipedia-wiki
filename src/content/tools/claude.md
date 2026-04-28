@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2023-03
-last_updated: 2026-04-26
-last_verified: 2026-04-26
+last_updated: 2026-04-28
+last_verified: 2026-04-28
 update_frequency: monthly
 seo_title: "Claude: Features, Pricing & Review (2026)"
 meta_description: "Claude runs Opus 4.7 (April 16, 2026) as flagship, Sonnet 4.6, Haiku 4.5. Claude Design (April 17) added for prompt-to-prototype. 1M context, $5/$25 per MTok API. Free tier; Pro $20/mo."
@@ -102,6 +102,7 @@ Anthropic's AI assistant. **Opus 4.7** is the flagship as of **April 16, 2026**,
 
 ## Recent developments
 
+- **April 27:** [Cursor and Claude were named in a reported PocketOS database-deletion incident](/news/2026-04-27-cursor-claude-database-deletion-incident/). The lesson is production guardrails: scoped credentials, immutable backups, and human approval for destructive actions.
 - **April 26:** [Anthropic presses agent-commerce controls in the press](/news/2026-04-26-anthropic-agent-commerce-press/), keeping permissions, merchant boundaries, and user accountability central to Claude's agent story.
 - **April 26:** [Anthropic outlines election-safeguard work](/news/2026-04-26-anthropic-election-safeguards/), reinforcing safety and policy posture as part of Claude's enterprise trust pitch.
 - **April 25:** [AI News Desk, April 25](/news/2026-04-25-ai-news-catchup/) grouped GPT-5.5 API, Copilot, Project Deal, and Google-Anthropic financing as the main frontier-lab weekend signals.

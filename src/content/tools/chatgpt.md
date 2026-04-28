@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2022-11
-last_updated: 2026-04-26
-last_verified: 2026-04-26
+last_updated: 2026-04-28
+last_verified: 2026-04-28
 update_frequency: monthly
 seo_title: "ChatGPT: Features, Pricing & Review (April 2026)"
 meta_description: "ChatGPT runs GPT-5.5 on paid tiers as of April 2026, with GPT-5.3/GPT-5.4 still present across lower-latency modes. Plus is $20/mo; Pro plans at $100 and $200/mo add heavier Codex coding-agent usage. DALL-E and Sora are retired."
@@ -160,6 +160,10 @@ Prices verified 2026-04-17 via [OpenAI pricing](https://chatgpt.com/pricing/), [
 
 ## Recent changes
 
+- **April 27, 2026:** [OpenAI and Microsoft made their model partnership non-exclusive](/news/2026-04-27-openai-microsoft-nonexclusive-partnership/). ChatGPT still ships through the Microsoft relationship, but OpenAI can now serve products across any cloud provider.
+- **April 27, 2026:** [Musk v. OpenAI trial opens with fraud claims dismissed](/news/2026-04-27-musk-openai-fraud-claims-dismissed/). No immediate product change, but governance risk remains relevant for enterprise buyers building on ChatGPT and the OpenAI API.
+- **April 27, 2026:** [OpenAI is reportedly exploring a 2028 AI agent phone](/news/2026-04-27-openai-ai-phone-2028-report/). Treat it as a supply-chain report, not a confirmed product, but it points to ChatGPT becoming a deeper device-level agent layer.
+- **April 27, 2026:** [OpenAI publishes new principles for the next AGI phase](/news/2026-04-27-openai-principles-agi-governance/). The principles matter because future ChatGPT access rules, safety behavior, and enterprise controls will be judged against them.
 - **April 26, 2026:** [OpenAI introduces workspace agents in ChatGPT](/news/2026-04-26-chatgpt-workspace-agents/), shifting the product further toward shared team-level agents with permission, memory, and audit-boundary questions.
 - **April 26, 2026:** [OpenAI apologizes for Tumbler Ridge travel hallucinations](/news/2026-04-26-openai-tumbler-ridge-apology/), a reminder that itinerary and local-search outputs still need source checks before users act on them.
 - **April 25, 2026:** [AI News Desk, April 25](/news/2026-04-25-ai-news-catchup/) tracked GPT-5.5 API access, Copilot distribution, Anthropic Project Deal, and the Google-Anthropic financing report around the broader ChatGPT competitive map.
@@ -228,4 +232,4 @@ ChatGPT wins on breadth, image generation, and agent integrations. Claude remain
 - [MacRumors: OpenAI Adds New $100/Month ChatGPT Subscription Tier](https://www.macrumors.com/2026/04/09/openai-pro-subscription-tiers/): April 9, 2026 Pro tier launch details
 - [TechCrunch: ChatGPT finally offers $100/month Pro plan](https://techcrunch.com/2026/04/09/chatgpt-pro-plan-100-month-codex/): Codex usage tiers and promo details
 
-This review follows the aipedia.wiki four-axis scoring model: Utility, Value, Moat, and Longevity. Last verified 2026-04-26.
+This review follows the aipedia.wiki four-axis scoring model: Utility, Value, Moat, and Longevity. Last verified 2026-04-27.

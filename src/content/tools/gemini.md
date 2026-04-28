@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$249.99/month"
 status: active
 launched: 2023-12
-last_updated: 2026-04-26
-last_verified: 2026-04-26
+last_updated: 2026-04-28
+last_verified: 2026-04-28
 update_frequency: monthly
 seo_title: "Gemini: Features, Pricing & Review (April 2026)"
 meta_description: "Gemini 3.1 Pro is Google's flagship (Feb 2026, 1M token context). Google AI Pro $19.99/mo bundles 5TB storage, Veo 3.1, and Nano Banana 2. Ultra $249.99/mo unlocks Deep Think 3.1 and Nano Banana Pro. Best AI for Google Workspace users."
@@ -95,6 +95,8 @@ Google DeepMind's multimodal AI assistant. **Gemini 3.1 Pro** is the flagship as
 
 ## Recent developments (April 2026)
 
+- **April 27:** [Pentagon users gained access to Gemini 3.1 Pro through GenAI.mil](/news/2026-04-27-pentagon-gemini-genai-mil/) as Defense One reported more than 1.3 million active users and more than 100,000 agents built on the platform.
+- **April 27:** [Google DeepMind announced a South Korea AI-for-science partnership](/news/2026-04-27-google-deepmind-korea-ai-science/), including an AI Campus in Seoul and work with Korean research institutions on life sciences, energy, weather, and climate.
 - **April 26:** [Gemini Embedding 2 reaches GA](/news/2026-04-26-gemini-embedding-2-ga/), strengthening Google's RAG and semantic-search stack around Gemini.
 - **April 26:** [Google AI Studio gets a vibe-coding subscription signal](/news/2026-04-26-google-ai-studio-vibe-coding-subscription/), pointing to a more explicit paid path for app-building workflows.
 - **April 26:** [Google expands Deep Research on Max](/news/2026-04-26-google-deep-research-max/), reinforcing Ultra/Max as the tier for heavier autonomous research workloads.

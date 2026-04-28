@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "$20-$200/month"
 status: active
 launched: 2025-02
-last_updated: 2026-04-26
-last_verified: 2026-04-26
+last_updated: 2026-04-28
+last_verified: 2026-04-28
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -62,6 +62,7 @@ Claude Opus 4.7 (released April 16, 2026) is the default backing model. Access i
 
 ## Recent developments (April 2026)
 
+- **April 27:** [Cursor and Claude were named in a reported PocketOS database-deletion incident](/news/2026-04-27-cursor-claude-database-deletion-incident/). Claude Code users should treat it as a reminder that prompt rules are not a security boundary for production infrastructure.
 - **April 25:** [AI News Desk, April 25](/news/2026-04-25-ai-news-catchup/) tied Claude Code's backdrop to GPT-5.5 API access, Copilot distribution, Project Deal, and Google-Anthropic financing.
 - **April 24:** [Anthropic and NEC announce a 30,000-employee Claude rollout](/news/2026-04-24-anthropic-nec-ai-engineering-workforce/). Claude Code is part of the partnership surface for software-engineering productivity, alongside Claude and Claude Cowork.
 - **April 24:** [Google reportedly plans up to $40B in Anthropic cash and compute investment](/news/2026-04-24-google-anthropic-40b-investment/), expanding the multi-cloud capacity story behind Claude Code if completed.

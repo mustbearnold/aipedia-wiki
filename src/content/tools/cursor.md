@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2023-03
-last_updated: 2026-04-23
-last_verified: 2026-04-23
+last_updated: 2026-04-28
+last_verified: 2026-04-28
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -86,6 +86,8 @@ Anysphere's AI-native code editor. A VS Code fork with LLMs wired into autocompl
 
 ## Recent developments
 
+- **April 27, 2026:** [Cursor and Claude were named in a reported PocketOS database-deletion incident](/news/2026-04-27-cursor-claude-database-deletion-incident/). Treat it as an agent-permissions and backup-design warning, not proof that AI coding tools should never touch infrastructure.
+- **April 22, 2026:** [SpaceX and xAI lined up a $60B option to buy Cursor](/news/2026-04-22-spacex-xai-cursor-acquisition-option/). It is an option and partnership, not a completed acquisition, but it makes Cursor's long-term independence a live strategic question.
 - **April 23, 2026:** [Google discloses 75% of internal new code is AI-generated](/news/2026-04-23-google-75-percent-internal-code-ai-generated/). Hyperscaler benchmark for agentic-coding adoption; validates Cursor's position as mainstream IDE default.
 - **April 21, 2026:** [Moonshot Kimi K2.6 ships with Agent Swarm mode](/news/2026-04-21-moonshot-kimi-k2-6-agent-swarm/). Strong open-weights coding scores (SWE-Bench Pro 58.6, HLE-with-tools 54.0) make Kimi a viable BYO-key backbone for self-hosted enterprise Cursor deployments.
 - **April 17:** [Cursor in talks for $2B+ round at $50B valuation](/news/2026-04-17-cursor-2b-at-50b-valuation/). Nearly doubles the $29.3B valuation from 6 months ago. $2B ARR in Feb 2026. Thrive and a16z co-lead; Nvidia and Battery participating.

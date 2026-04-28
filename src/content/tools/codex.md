@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "Bundled with ChatGPT Plus ($20/mo) through Pro 20x ($200/mo)"
 status: active
 launched: 2025-05
-last_updated: 2026-04-26
-last_verified: 2026-04-26
+last_updated: 2026-04-28
+last_verified: 2026-04-28
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -69,6 +69,9 @@ Bundled with every paid ChatGPT tier. Pro tiers get 5x to 20x the Codex usage of
 
 ## Recent developments (March-April 2026)
 
+- **April 27, 2026:** [OpenAI and Microsoft made their model partnership non-exclusive](/news/2026-04-27-openai-microsoft-nonexclusive-partnership/). Codex remains part of the OpenAI product stack, but enterprise deployment optionality around OpenAI products now matters more than Azure exclusivity alone.
+- **April 27, 2026:** [Musk v. OpenAI trial opens with fraud claims dismissed](/news/2026-04-27-musk-openai-fraud-claims-dismissed/). No immediate Codex feature changes, but governance disclosures and remedies could still affect OpenAI's operating model.
+- **April 27, 2026:** [OpenAI publishes new principles for the next AGI phase](/news/2026-04-27-openai-principles-agi-governance/). Developers should watch how those principles translate into model access, safety gates, enterprise controls, and Codex release notes.
 - **April 25, 2026:** [AI News Desk, April 25](/news/2026-04-25-ai-news-catchup/) grouped GPT-5.5 API access, Copilot distribution, Project Deal, and Google-Anthropic financing as the weekend signals around Codex's market.
 - **April 24, 2026:** [AI Industry Roundup, April 24](/news/2026-04-24-ai-industry-roundup/) tracked GPT-5.5's spread into Copilot; [GitHub Copilot adds GPT-5.5](/news/2026-04-24-github-copilot-gpt-55/) is the direct competing-coding-surface rollout.
 - **April 23, 2026:** [GPT-5.5 rolls out to ChatGPT and Codex](/news/2026-04-23-openai-gpt-55-release/). OpenAI positions it for longer-running coding, research, data analysis, documents, spreadsheets, and tool-use tasks.
@@ -185,7 +188,7 @@ Prices verified 2026-04-18 via [OpenAI Codex pricing](https://developers.openai.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation and multi-source news coverage, verifies facts against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-04-18 against OpenAI's Codex docs, the Codex rate card, and multi-source coverage including the April 16 super-app update announcement.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation and multi-source news coverage, verifies facts against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-04-27 against OpenAI's Codex docs, the Codex rate card, and multi-source coverage including the April 16 super-app update announcement.
 
 ## FAQ
 

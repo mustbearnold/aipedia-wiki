@@ -32,17 +32,20 @@ function toYmd(v: unknown): string {
   return isNaN(d.getTime()) ? s : d.toISOString().slice(0, 10);
 }
 
-function relativeDate(iso: string): string {
+function formatNewsDate(iso: string): string {
   if (!iso) return '';
-  const now = new Date();
+  const parts = iso.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+  if (parts) {
+    const [, year, month, day] = parts;
+    return `${Number(month)}/${Number(day)}/${year}`;
+  }
   const then = new Date(iso);
   if (isNaN(then.getTime())) return iso;
-  const days = Math.floor((now.getTime() - then.getTime()) / 86400000);
-  if (days <= 0) return 'Today';
-  if (days === 1) return 'Yesterday';
-  if (days < 7) return `${days} days ago`;
-  if (days < 30) return `${Math.round(days / 7)} weeks ago`;
-  return then.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+  return then.toLocaleDateString('en-US', {
+    month: 'numeric',
+    day: 'numeric',
+    year: 'numeric',
+  });
 }
 
 const sorted = entries
@@ -283,7 +286,7 @@ const breadcrumbs = [
               <p class="p3-topstory-summary">{topStory.n.summary}</p>
             )}
             <div class="p3-topstory-meta">
-              <time datetime={topStory.n.date} class="p3-topstory-date">{relativeDate(topStory.n.date)}</time>
+              <time datetime={topStory.n.date} class="p3-topstory-date">{formatNewsDate(topStory.n.date)}</time>
               {topStory.n.affects.length > 0 && (
                 <span class="p3-topstory-affects">
                   <span aria-hidden="true">·</span>
@@ -408,7 +411,7 @@ const breadcrumbs = [
                 <div class="p3-newsdesk-card-body">
                   <div class="p3-newsdesk-card-meta">
                     <span class={`p3-sev p3-sev-${n.severity}`}>{n.severity}</span>
-                    <time datetime={n.date} class="p3-newsdesk-card-date tabular-nums">{relativeDate(n.date)}</time>
+                    <time datetime={n.date} class="p3-newsdesk-card-date tabular-nums">{formatNewsDate(n.date)}</time>
                   </div>
                   <h3 class="p3-newsdesk-card-title">{n.title}</h3>
                   {n.summary && <p class="p3-newsdesk-card-summary">{n.summary}</p>}
