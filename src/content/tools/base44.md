@@ -9,7 +9,7 @@ company: Wix
 url: https://base44.com
 pricing_model: freemium
 price_range: "$0-$200/month"
-status: acquired
+status: active
 launched: 2025
 last_updated: 2026-04-28
 last_verified: 2026-04-28

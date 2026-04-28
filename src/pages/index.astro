@@ -1199,6 +1199,7 @@ const verificationLedger = [
       --p3-brand-glow: rgba(56, 189, 248, 0.20);
       --p3-action-glow: rgba(34, 211, 238, 0.18);
       --p3-panel-shadow: 0 28px 80px -54px rgba(0, 0, 0, 0.88);
+      --p3-panel-shadow-hover: 0 34px 90px -52px rgba(0, 0, 0, 0.94);
       --p3-line: var(--p3-border);
       --p3-line-strong: var(--p3-border-strong);
       --p3-accent: var(--p3-action);
@@ -1310,11 +1311,19 @@ const verificationLedger = [
         linear-gradient(135deg, color-mix(in srgb, var(--cover-accent-2) 13%, transparent), transparent 38%),
         radial-gradient(ellipse 90% 70% at 100% 0%, color-mix(in srgb, var(--cover-accent) 18%, transparent), transparent 58%),
         linear-gradient(180deg, rgba(248, 250, 252, 0.062), rgba(248, 250, 252, 0.016));
-      box-shadow: var(--p3-panel-shadow), 0 22px 70px -54px var(--p3-brand-glow), inset 0 1px 0 rgba(248, 250, 252, 0.08);
+      box-shadow:
+        var(--p3-panel-shadow),
+        0 22px 70px -54px var(--p3-brand-glow),
+        0 10px 30px -24px rgba(var(--p3-action-rgb), 0.22),
+        inset 0 1px 0 rgba(248, 250, 252, 0.08);
     }
     .p3-home-premium .p3-premium-cover:hover {
       border-color: color-mix(in srgb, var(--cover-accent-2) 46%, rgba(255,255,255,0.12));
-      box-shadow: var(--p3-panel-shadow), 0 26px 82px -54px color-mix(in srgb, var(--cover-accent) 36%, transparent), inset 0 1px 0 rgba(248, 250, 252, 0.10);
+      box-shadow:
+        var(--p3-panel-shadow-hover),
+        0 30px 92px -54px color-mix(in srgb, var(--cover-accent) 42%, transparent),
+        0 12px 34px -22px rgba(var(--p3-action-rgb), 0.3),
+        inset 0 1px 0 rgba(248, 250, 252, 0.10);
     }
     .p3-home-premium .p3-cover-label {
       margin-bottom: 20px;
@@ -1423,7 +1432,9 @@ const verificationLedger = [
       background:
         linear-gradient(135deg, rgba(var(--p3-verified-rgb), 0.07), transparent 34%),
         linear-gradient(180deg, rgba(248, 250, 252, 0.042), rgba(248, 250, 252, 0.016));
-      box-shadow: inset 0 1px 0 rgba(248, 250, 252, 0.06);
+      box-shadow:
+        var(--p3-panel-shadow),
+        inset 0 1px 0 rgba(248, 250, 252, 0.06);
     }
     .p3-home-premium .p3-signal-head {
       display: flex;
@@ -1462,12 +1473,16 @@ const verificationLedger = [
       border-radius: 12px;
       background: rgba(5, 6, 13, 0.46);
       text-decoration: none;
-      transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+      box-shadow: 0 18px 40px -34px rgba(0, 0, 0, 0.78);
+      transition: transform 180ms ease, border-color 180ms ease, background 180ms ease, box-shadow 180ms ease;
     }
     .p3-home-premium .p3-signal-card:hover {
       transform: translateY(-2px);
       border-color: rgba(var(--p3-action-rgb), 0.36);
       background: var(--p3-surface-2);
+      box-shadow:
+        0 24px 54px -36px rgba(0, 0, 0, 0.9),
+        0 14px 32px -26px rgba(var(--p3-action-rgb), 0.28);
     }
     .p3-home-premium .p3-signal-card-label {
       margin-bottom: 18px;
@@ -1756,6 +1771,132 @@ const verificationLedger = [
       font-weight: 850;
       line-height: 1.1;
       text-transform: capitalize;
+    }
+    html.light body:has(main .p3-home-premium) {
+      background:
+        radial-gradient(ellipse 86% 42% at 50% -14%, rgba(8, 145, 178, 0.055) 0%, transparent 62%),
+        radial-gradient(ellipse 52% 32% at 92% 8%, rgba(2, 132, 199, 0.045) 0%, transparent 70%),
+        linear-gradient(180deg, #eef4f8 0%, #e7eef4 48%, #eef4f8 100%);
+    }
+    html.light .p3-home-premium {
+      --p3-ink-0: #eef4f8;
+      --p3-ink-1: #e7eef4;
+      --p3-ink-2: #ffffff;
+      --p3-surface: rgba(249, 252, 254, 0.84);
+      --p3-surface-2: rgba(232, 240, 246, 0.92);
+      --p3-surface-soft: rgba(8, 145, 178, 0.045);
+      --p3-border: #cfdbe7;
+      --p3-border-strong: #bfcedd;
+      --p3-fg: #111827;
+      --p3-muted: #475569;
+      --p3-subtle: #64748b;
+      --p3-action: #0891b2;
+      --p3-action-strong: #0e7490;
+      --p3-action-rgb: 8, 145, 178;
+      --p3-intel: #0284c7;
+      --p3-intel-soft: #0369a1;
+      --p3-intel-rgb: 2, 132, 199;
+      --p3-verified: #0f766e;
+      --p3-verified-strong: #0f766e;
+      --p3-verified-rgb: 15, 118, 110;
+      --p3-score-high: #0f766e;
+      --p3-score-good: #0284c7;
+      --p3-score-watch: #0891b2;
+      --p3-score-low: #0e7490;
+      --p3-brand-glow: rgba(2, 132, 199, 0.09);
+      --p3-action-glow: rgba(8, 145, 178, 0.08);
+      --p3-panel-shadow: 0 24px 64px -54px rgba(15, 23, 42, 0.28);
+      --p3-panel-shadow-hover: 0 30px 78px -52px rgba(15, 23, 42, 0.34);
+      color-scheme: light;
+    }
+    html.light .moat-layer[data-mode="home"] {
+      background:
+        radial-gradient(ellipse 60% 38% at 55% 0%, rgba(2, 132, 199, 0.045), transparent 72%),
+        radial-gradient(ellipse 42% 32% at 92% 16%, rgba(8, 145, 178, 0.035), transparent 72%);
+    }
+    html.light .moat-layer[data-mode="home"]::after {
+      opacity: 0.26;
+    }
+    html.light .moat-layer[data-mode="home"] .moat-canvas {
+      opacity: 0.20;
+      filter: saturate(0.82);
+    }
+    html.light .moat-layer[data-mode="home"] .moat-static {
+      opacity: 0.58;
+    }
+    html.light .p3-home-premium .p3-premium-cover {
+      border-color: color-mix(in srgb, var(--cover-accent-2) 24%, var(--p3-border));
+      background:
+        linear-gradient(135deg, color-mix(in srgb, var(--cover-accent-2) 7%, transparent), transparent 38%),
+        radial-gradient(ellipse 90% 70% at 100% 0%, color-mix(in srgb, var(--cover-accent) 9%, transparent), transparent 58%),
+        var(--p3-surface);
+      box-shadow:
+        var(--p3-panel-shadow),
+        0 12px 30px -26px rgba(var(--p3-action-rgb), 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.72);
+    }
+    html.light .p3-home-premium .p3-premium-cover:hover {
+      border-color: color-mix(in srgb, var(--cover-accent-2) 42%, var(--p3-border));
+      box-shadow:
+        var(--p3-panel-shadow-hover),
+        0 24px 76px -58px color-mix(in srgb, var(--cover-accent) 34%, transparent),
+        0 14px 32px -26px rgba(var(--p3-action-rgb), 0.22),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    }
+    html.light .p3-home-premium .p3-cover-logo-frame {
+      background: #ffffff;
+      box-shadow: 0 16px 34px -26px rgba(15, 23, 42, 0.36);
+    }
+    html.light .p3-home-premium .p3-cover-verdict {
+      background: color-mix(in srgb, var(--p3-intel) 5%, #f4f8fb);
+      color: var(--p3-fg);
+    }
+    html.light .p3-home-premium .p3-cover-bar-col,
+    html.light .p3-home-premium .p3-cover-reason {
+      background: rgba(15, 23, 42, 0.045);
+      color: var(--p3-muted);
+    }
+    html.light .p3-home-premium .p3-signal-desk,
+    html.light .p3-home-premium .p3-ledger {
+      background:
+        linear-gradient(135deg, rgba(var(--p3-verified-rgb), 0.045), transparent 34%),
+        radial-gradient(ellipse 75% 70% at 100% 0%, rgba(var(--p3-intel-rgb), 0.05), transparent 55%),
+        var(--p3-surface);
+      box-shadow:
+        var(--p3-panel-shadow),
+        inset 0 1px 0 rgba(255, 255, 255, 0.74);
+    }
+    html.light .p3-home-premium .p3-signal-card,
+    html.light .p3-home-premium .p3-ledger-item {
+      background: rgba(249, 252, 254, 0.58);
+      box-shadow:
+        0 18px 42px -34px rgba(15, 23, 42, 0.2),
+        0 1px 0 rgba(255, 255, 255, 0.66) inset;
+    }
+    html.light .p3-home-premium .p3-signal-card:hover,
+    html.light .p3-home-premium .p3-ledger-item:hover {
+      background: var(--p3-surface-2);
+      box-shadow:
+        0 24px 56px -36px rgba(15, 23, 42, 0.26),
+        0 12px 30px -26px rgba(var(--p3-action-rgb), 0.18),
+        0 1px 0 rgba(255, 255, 255, 0.76) inset;
+    }
+    html.light .p3-home-premium .p3-signal-card-title,
+    html.light .p3-home-premium .p3-route-title-sm,
+    html.light .p3-home-premium .p3-route-metric,
+    html.light .p3-home-premium .p3-ledger-item-value {
+      color: var(--p3-fg);
+    }
+    html.light .p3-home-premium .p3-route-body,
+    html.light .p3-home-premium .p3-ledger-item-body {
+      color: var(--p3-muted);
+    }
+    html.light .p3-home-premium .p3-newshero-brief-item {
+      background: rgba(249, 252, 254, 0.58);
+    }
+    html.light .p3-home-premium .p3-newshero-brief-item strong,
+    html.light .p3-home-premium .p3-ledger-item-value span:last-child {
+      color: var(--p3-verified);
     }
     @media (max-width: 720px) {
       .p3-home-premium .p3-premium-cover {

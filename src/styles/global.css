@@ -39,6 +39,47 @@ html, body {
   animation: cc-fade-in 320ms cubic-bezier(0.22, 1, 0.36, 1) 120ms both;
 }
 
+/* Theme morph: same-page light/dark changes reveal from the pressed
+   toggle button. Navigation still uses the fade rules above. */
+html.theme-morphing::view-transition-group(root) {
+  animation-duration: 620ms;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+html.theme-morphing::view-transition-image-pair(root) {
+  isolation: isolate;
+}
+html.theme-morphing::view-transition-old(root),
+html.theme-morphing::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+html.theme-morphing::view-transition-old(root) {
+  z-index: 1;
+}
+html.theme-morphing::view-transition-new(root) {
+  z-index: 2;
+}
+
+html.theme-morph-fallback,
+html.theme-morph-fallback *,
+html.theme-morph-fallback *::before,
+html.theme-morph-fallback *::after {
+  transition-property: background-color, border-color, box-shadow, color, fill, opacity, stroke, filter;
+  transition-duration: 420ms;
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.theme-morphing::view-transition-old(root),
+  html.theme-morphing::view-transition-new(root),
+  html.theme-morph-fallback,
+  html.theme-morph-fallback *,
+  html.theme-morph-fallback *::before,
+  html.theme-morph-fallback *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
 
 @keyframes cc-fade-out {
   from { opacity: 1; }
@@ -143,6 +184,50 @@ html, body {
   a:focus-visible > *,
   button:focus-visible > * {
     outline: none;
+  }
+
+  .theme-toggle {
+    position: relative;
+    color: var(--text-secondary);
+    overflow: hidden;
+  }
+  .theme-toggle-orbit {
+    position: relative;
+    display: block;
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+  .theme-icon {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: 50% 50%;
+    transition:
+      opacity 220ms ease,
+      transform 520ms cubic-bezier(0.16, 1, 0.3, 1),
+      color 220ms ease;
+  }
+  html.light .theme-icon-sun,
+  html:not(.light) .theme-icon-moon {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+  }
+  html.light .theme-icon-moon {
+    opacity: 0;
+    transform: rotate(-92deg) scale(0.48);
+  }
+  html:not(.light) .theme-icon-sun {
+    opacity: 0;
+    transform: rotate(92deg) scale(0.48);
+  }
+  .theme-toggle:hover .theme-icon {
+    color: var(--accent-primary-text, var(--accent-primary));
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .theme-icon {
+      transition: none;
+    }
   }
   /* Screen-reader-only utility: visible only to assistive tech. */
   .sr-only {
@@ -971,12 +1056,28 @@ a, button, [role="button"], .tool-card, .category-pill, .helpful-btn, .copy-btn 
   border: 1px solid var(--border);
   border-radius: 10px;
   cursor: pointer;
-  transition: background 160ms ease, border-color 160ms ease, color 160ms ease;
+  box-shadow: 0 12px 26px -22px rgba(0, 0, 0, 0.7);
+  transition: background 160ms ease, border-color 160ms ease, color 160ms ease, box-shadow 180ms ease, transform 180ms ease;
 }
 .nav-search:hover {
   background: var(--bg-card-hover);
   border-color: rgba(34, 211, 238, 0.35);
   color: var(--text-primary);
+  transform: translateY(-1px);
+  box-shadow:
+    0 14px 30px -22px rgba(0, 0, 0, 0.72),
+    0 8px 22px -18px rgba(34, 211, 238, 0.36);
+}
+html.light .nav-search {
+  box-shadow:
+    0 14px 30px -24px rgba(15, 23, 42, 0.22),
+    0 1px 0 rgba(255, 255, 255, 0.72) inset;
+}
+html.light .nav-search:hover {
+  box-shadow:
+    0 18px 38px -26px rgba(15, 23, 42, 0.26),
+    0 10px 24px -22px rgba(8, 145, 178, 0.24),
+    0 1px 0 rgba(255, 255, 255, 0.82) inset;
 }
 .nav-search-icon {
   color: var(--text-muted);

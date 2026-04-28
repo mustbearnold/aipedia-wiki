@@ -3,15 +3,15 @@
   class="theme-toggle inline-flex items-center justify-center w-11 h-11 sm:w-8 sm:h-8 rounded-lg hover:bg-[var(--bg-card-hover)] transition-colors cursor-pointer"
   aria-label="Toggle theme"
 >
-  <!-- Sun icon (shown in light mode) -->
-  <svg class="theme-icon-sun hidden w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-    <circle cx="12" cy="12" r="5" />
-    <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
-  </svg>
-  <!-- Moon icon (shown in dark mode) -->
-  <svg class="theme-icon-moon w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
-  </svg>
+  <span class="theme-toggle-orbit" aria-hidden="true">
+    <svg class="theme-icon theme-icon-sun" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+      <circle cx="12" cy="12" r="5" />
+      <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+    </svg>
+    <svg class="theme-icon theme-icon-moon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+    </svg>
+  </span>
 </button>
 
 <script is:inline>
@@ -22,13 +22,20 @@
     }
     window.__themeToggleBound = true;
 
+    function applyTheme(isLight) {
+      document.documentElement.classList.toggle('light', isLight);
+      try { localStorage.setItem('theme', isLight ? 'light' : 'dark'); } catch (_) {}
+      updateIcons();
+    }
+
     function updateIcons() {
       var isLight = document.documentElement.classList.contains('light');
       document.querySelectorAll('.theme-toggle').forEach(function (btn) {
         var sun = btn.querySelector('.theme-icon-sun');
         var moon = btn.querySelector('.theme-icon-moon');
-        if (sun) sun.classList.toggle('hidden', !isLight);
-        if (moon) moon.classList.toggle('hidden', isLight);
+        btn.setAttribute('aria-label', isLight ? 'Switch to dark theme' : 'Switch to light theme');
+        if (sun) sun.setAttribute('aria-hidden', isLight ? 'false' : 'true');
+        if (moon) moon.setAttribute('aria-hidden', isLight ? 'true' : 'false');
       });
     }
     window.__themeToggleUpdate = updateIcons;
@@ -38,10 +45,57 @@
       var btn = e.target.closest && e.target.closest('.theme-toggle');
       if (!btn) return;
       e.preventDefault();
-      document.documentElement.classList.toggle('light');
-      var isLight = document.documentElement.classList.contains('light');
-      try { localStorage.setItem('theme', isLight ? 'light' : 'dark'); } catch (_) {}
-      updateIcons();
+      if (window.__themeToggleBusy) return;
+
+      var root = document.documentElement;
+      var nextIsLight = !root.classList.contains('light');
+      var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      if (!document.startViewTransition || reduceMotion) {
+        root.classList.add('theme-morph-fallback');
+        applyTheme(nextIsLight);
+        window.setTimeout(function () {
+          root.classList.remove('theme-morph-fallback');
+        }, reduceMotion ? 0 : 460);
+        return;
+      }
+
+      var rect = btn.getBoundingClientRect();
+      var x = rect.left + rect.width / 2;
+      var y = rect.top + rect.height / 2;
+      var endRadius = Math.hypot(
+        Math.max(x, window.innerWidth - x),
+        Math.max(y, window.innerHeight - y)
+      ) + 48;
+
+      window.__themeToggleBusy = true;
+      root.classList.add('theme-morphing');
+      root.style.setProperty('--theme-morph-x', x + 'px');
+      root.style.setProperty('--theme-morph-y', y + 'px');
+
+      var transition = document.startViewTransition(function () {
+        applyTheme(nextIsLight);
+      });
+
+      transition.ready.then(function () {
+        var clipStart = 'circle(0px at ' + x + 'px ' + y + 'px)';
+        var clipEnd = 'circle(' + endRadius + 'px at ' + x + 'px ' + y + 'px)';
+        root.animate(
+          { clipPath: [clipStart, clipEnd] },
+          {
+            duration: 620,
+            easing: 'cubic-bezier(0.16, 1, 0.3, 1)',
+            pseudoElement: '::view-transition-new(root)',
+          }
+        );
+      }).catch(function () {});
+
+      transition.finished.finally(function () {
+        root.classList.remove('theme-morphing');
+        root.style.removeProperty('--theme-morph-x');
+        root.style.removeProperty('--theme-morph-y');
+        window.__themeToggleBusy = false;
+      });
     });
 
     // Initial icon sync + after view transitions

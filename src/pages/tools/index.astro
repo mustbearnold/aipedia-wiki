@@ -4,6 +4,7 @@ import ToolCard from '../../components/ToolCard.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
 import BreadcrumbLD from '../../components/seo/BreadcrumbLD.astro';
 import ItemListLD from '../../components/seo/ItemListLD.astro';
+import { categoryLabel } from '../../utils/tool-metadata';
 import { getCollection } from 'astro:content';
 
 const allTools = await getCollection('tools');
@@ -28,6 +29,39 @@ const toolsItemList = scoredTools.map(({ tool, score }) => ({
   score,
   status: tool.data.status,
 }));
+
+const categoryCounts = new Map<string, number>();
+for (const { tool } of scoredTools) {
+  const categories = new Set([
+    tool.data.category,
+    ...(tool.data.secondary_categories ?? []),
+  ].filter(Boolean));
+  for (const category of categories) {
+    categoryCounts.set(category, (categoryCounts.get(category) ?? 0) + 1);
+  }
+}
+
+const categoryOptions = Array.from(categoryCounts.entries())
+  .map(([slug, count]) => ({ slug, label: categoryLabel(slug), count }))
+  .sort((a, b) => a.label.localeCompare(b.label));
+
+const pricingLabels: Record<string, string> = {
+  free: 'Free',
+  freemium: 'Freemium',
+  paid: 'Paid',
+  enterprise: 'Enterprise',
+  'open-source': 'Open source',
+};
+
+const pricingCounts = new Map<string, number>();
+for (const { tool } of scoredTools) {
+  const pricing = tool.data.pricing_model ?? 'paid';
+  pricingCounts.set(pricing, (pricingCounts.get(pricing) ?? 0) + 1);
+}
+
+const pricingOptions = Array.from(pricingCounts.entries())
+  .map(([slug, count]) => ({ slug, label: pricingLabels[slug] ?? slug, count }))
+  .sort((a, b) => a.label.localeCompare(b.label));
 
 const categoryEmojiMap: Record<string, string> = {
   'ai-chatbots': '\uD83D\uDCAC', 'ai-voice': '\uD83D\uDD0A', 'ai-video': '\uD83C\uDFAC',
@@ -72,20 +106,694 @@ const categoryEmojiMap: Record<string, string> = {
     </p>
   </section>
 
-  <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mb-16">
+  <section class="tools-filter-panel" data-tools-controls data-pagefind-ignore>
+    <div class="tools-filter-row tools-filter-row-primary">
+      <label class="tools-search" for="tools-page-search">
+        <svg class="tools-search-icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M10.8 18.1a7.3 7.3 0 1 1 0-14.6 7.3 7.3 0 0 1 0 14.6Zm5.1-2 4.6 4.6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </svg>
+        <input
+          id="tools-page-search"
+          type="search"
+          autocomplete="off"
+          spellcheck="false"
+          placeholder="Search tools, use cases, tags"
+          data-tools-search
+        />
+      </label>
+
+      <div class="tools-select-field" data-tools-select="sort" data-value="score-desc">
+        <span class="tools-select-caption" id="tools-sort-label">Sort</span>
+        <button
+          class="tools-select-trigger"
+          type="button"
+          aria-haspopup="listbox"
+          aria-expanded="false"
+          aria-labelledby="tools-sort-label tools-sort-value"
+          data-tools-select-trigger
+        >
+          <span id="tools-sort-value" data-tools-select-text>Highest score</span>
+          <svg class="tools-select-chevron" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+        <div class="tools-select-menu" role="listbox" aria-labelledby="tools-sort-label" data-tools-select-menu hidden>
+          <button class="tools-option is-selected" type="button" role="option" aria-selected="true" data-tools-option data-value="score-desc" data-label="Highest score">Highest score</button>
+          <button class="tools-option" type="button" role="option" aria-selected="false" data-tools-option data-value="title-asc" data-label="A-Z">A-Z</button>
+          <button class="tools-option" type="button" role="option" aria-selected="false" data-tools-option data-value="utility-desc" data-label="Utility">Utility</button>
+          <button class="tools-option" type="button" role="option" aria-selected="false" data-tools-option data-value="value-desc" data-label="Value">Value</button>
+          <button class="tools-option" type="button" role="option" aria-selected="false" data-tools-option data-value="recent-desc" data-label="Recently verified">Recently verified</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="tools-filter-row tools-filter-row-secondary">
+      <div class="tools-select-field" data-tools-select="category" data-value="">
+        <span class="tools-select-caption" id="tools-category-label">Category</span>
+        <button
+          class="tools-select-trigger"
+          type="button"
+          aria-haspopup="listbox"
+          aria-expanded="false"
+          aria-labelledby="tools-category-label tools-category-value"
+          data-tools-select-trigger
+        >
+          <span id="tools-category-value" data-tools-select-text>All categories</span>
+          <svg class="tools-select-chevron" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+        <div class="tools-select-menu" role="listbox" aria-labelledby="tools-category-label" data-tools-select-menu hidden>
+          <button class="tools-option is-selected" type="button" role="option" aria-selected="true" data-tools-option data-value="" data-label="All categories">All categories</button>
+          {categoryOptions.map((option) => (
+            <button class="tools-option" type="button" role="option" aria-selected="false" data-tools-option data-value={option.slug} data-label={option.label}>
+              <span>{option.label}</span>
+              <span class="tools-option-count">{option.count}</span>
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <div class="tools-select-field" data-tools-select="pricing" data-value="">
+        <span class="tools-select-caption" id="tools-pricing-label">Pricing</span>
+        <button
+          class="tools-select-trigger"
+          type="button"
+          aria-haspopup="listbox"
+          aria-expanded="false"
+          aria-labelledby="tools-pricing-label tools-pricing-value"
+          data-tools-select-trigger
+        >
+          <span id="tools-pricing-value" data-tools-select-text>All pricing</span>
+          <svg class="tools-select-chevron" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+        <div class="tools-select-menu" role="listbox" aria-labelledby="tools-pricing-label" data-tools-select-menu hidden>
+          <button class="tools-option is-selected" type="button" role="option" aria-selected="true" data-tools-option data-value="" data-label="All pricing">All pricing</button>
+          {pricingOptions.map((option) => (
+            <button class="tools-option" type="button" role="option" aria-selected="false" data-tools-option data-value={option.slug} data-label={option.label}>
+              <span>{option.label}</span>
+              <span class="tools-option-count">{option.count}</span>
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <label class="tools-score-toggle">
+        <input type="checkbox" data-tools-strong />
+        <span>8.0+ only</span>
+      </label>
+
+      <button class="tools-reset" type="button" data-tools-reset hidden>Reset</button>
+    </div>
+
+    <div class="tools-filter-status" aria-live="polite">
+      <span><strong data-tools-visible>{scoredTools.length}</strong> of <span>{scoredTools.length}</span> tools shown</span>
+      <span data-tools-active-summary>All categories, all pricing</span>
+    </div>
+  </section>
+
+  <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mb-16" data-tools-grid>
     {scoredTools.map(({ tool, score }) => {
       const cat = tool.data.category ?? '';
+      const secondaryCategories = tool.data.secondary_categories ?? [];
+      const categories = Array.from(new Set([cat, ...secondaryCategories].filter(Boolean)));
+      const scores = tool.data.scores ?? {};
+      const slug = tool.data.slug || tool.id.replace(/\.md$/, '').replace(/\\/g, '/');
+      const searchText = [
+        tool.data.title,
+        tool.data.company,
+        tool.data.tagline,
+        tool.data.meta_description,
+        tool.data.price_range,
+        tool.data.pricing_model,
+        tool.data.status,
+        ...categories,
+        ...categories.map((category) => categoryLabel(category)),
+        ...(tool.data.tags ?? []),
+        ...(tool.data.best_for ?? []),
+        ...(tool.data.not_best_for ?? []),
+      ].filter(Boolean).join(' ').toLowerCase();
+      const verifiedTime = Date.parse(String(tool.data.last_verified ?? tool.data.last_updated ?? '')) || 0;
       return (
-        <ToolCard
-          title={tool.data.title}
-          slug={tool.data.slug || tool.id.replace(/\.md$/, '').replace(/\\/g, '/')}
-          category={cat}
-          score={score}
-          priceRange={tool.data.price_range ?? 'Free'}
-          emoji={categoryEmojiMap[cat] ?? '\uD83D\uDD27'}
-          scores={tool.data.scores}
-        />
+        <div
+          data-tools-item
+          data-title={tool.data.title.toLowerCase()}
+          data-category={cat}
+          data-categories={categories.join(' ')}
+          data-pricing={tool.data.pricing_model ?? ''}
+          data-score={score}
+          data-utility={scores.utility ?? 0}
+          data-value={scores.value ?? 0}
+          data-recent={verifiedTime}
+          data-search={searchText}
+        >
+          <ToolCard
+            title={tool.data.title}
+            slug={slug}
+            category={cat}
+            score={score}
+            priceRange={tool.data.price_range ?? 'Free'}
+            emoji={categoryEmojiMap[cat] ?? '\uD83D\uDD27'}
+            scores={tool.data.scores}
+          />
+        </div>
       );
     })}
   </section>
+
+  <div class="tools-empty-state" data-tools-empty hidden>
+    <p>No tools match those filters.</p>
+    <button class="tools-reset" type="button" data-tools-empty-reset>Reset</button>
+  </div>
+
+  <script is:inline>
+    (() => {
+      const root = document.querySelector('[data-tools-controls]');
+      const grid = document.querySelector('[data-tools-grid]');
+      if (!root || !grid) return;
+
+      const input = root.querySelector('[data-tools-search]');
+      const selects = Array.from(root.querySelectorAll('[data-tools-select]'));
+      const category = root.querySelector('[data-tools-select="category"]');
+      const pricing = root.querySelector('[data-tools-select="pricing"]');
+      const sort = root.querySelector('[data-tools-select="sort"]');
+      const strong = root.querySelector('[data-tools-strong]');
+      const reset = root.querySelector('[data-tools-reset]');
+      const visibleCount = root.querySelector('[data-tools-visible]');
+      const summary = root.querySelector('[data-tools-active-summary]');
+      const empty = document.querySelector('[data-tools-empty]');
+      const emptyReset = document.querySelector('[data-tools-empty-reset]');
+      const items = Array.from(grid.querySelectorAll('[data-tools-item]'));
+
+      const numberFrom = (item, key) => Number(item.getAttribute(key) || 0);
+      const normalize = (value) => String(value || '').trim().toLowerCase();
+      const selectValue = (select) => select?.dataset.value || '';
+      const selectedText = (select) => select?.querySelector('[data-tools-option].is-selected')?.dataset.label || '';
+      const optionList = (select) => Array.from(select?.querySelectorAll('[data-tools-option]') || []);
+      const closeSelect = (select) => {
+        const trigger = select?.querySelector('[data-tools-select-trigger]');
+        const menu = select?.querySelector('[data-tools-select-menu]');
+        if (!trigger || !menu) return;
+        trigger.setAttribute('aria-expanded', 'false');
+        menu.hidden = true;
+        select.classList.remove('is-open');
+      };
+      const closeAllSelects = (except) => {
+        selects.forEach((select) => {
+          if (select !== except) closeSelect(select);
+        });
+      };
+      const openSelect = (select, focusSelected = false) => {
+        const trigger = select?.querySelector('[data-tools-select-trigger]');
+        const menu = select?.querySelector('[data-tools-select-menu]');
+        if (!trigger || !menu) return;
+        closeAllSelects(select);
+        trigger.setAttribute('aria-expanded', 'true');
+        menu.hidden = false;
+        select.classList.add('is-open');
+        if (focusSelected) {
+          const selected = select.querySelector('[data-tools-option].is-selected') || select.querySelector('[data-tools-option]');
+          selected?.focus();
+        }
+      };
+      const setSelectValue = (select, value) => {
+        if (!select) return;
+        const options = optionList(select);
+        const option = options.find((item) => item.dataset.value === value) || options[0];
+        if (!option) return;
+        const nextValue = option.dataset.value || '';
+        select.dataset.value = nextValue;
+        select.querySelector('[data-tools-select-text]').textContent = option.dataset.label || option.textContent.trim();
+        options.forEach((item) => {
+          const selected = item === option;
+          item.classList.toggle('is-selected', selected);
+          item.setAttribute('aria-selected', selected ? 'true' : 'false');
+        });
+      };
+
+      const updateUrl = () => {
+        const url = new URL(window.location.href);
+        const values = {
+          q: input?.value.trim() || '',
+          category: selectValue(category),
+          pricing: selectValue(pricing),
+          sort: selectValue(sort) === 'score-desc' ? '' : selectValue(sort),
+          strong: strong?.checked ? '1' : '',
+        };
+        Object.entries(values).forEach(([key, value]) => {
+          if (value) url.searchParams.set(key, value);
+          else url.searchParams.delete(key);
+        });
+        window.history.replaceState({}, '', url);
+      };
+
+      const sortItems = (visibleItems) => {
+        const mode = selectValue(sort) || 'score-desc';
+        const sorted = [...visibleItems].sort((a, b) => {
+          if (mode === 'title-asc') {
+            return (a.getAttribute('data-title') || '').localeCompare(b.getAttribute('data-title') || '');
+          }
+          if (mode === 'utility-desc') return numberFrom(b, 'data-utility') - numberFrom(a, 'data-utility');
+          if (mode === 'value-desc') return numberFrom(b, 'data-value') - numberFrom(a, 'data-value');
+          if (mode === 'recent-desc') return numberFrom(b, 'data-recent') - numberFrom(a, 'data-recent');
+          return numberFrom(b, 'data-score') - numberFrom(a, 'data-score');
+        });
+        sorted.forEach((item, index) => {
+          item.style.order = String(index);
+        });
+      };
+
+      const apply = (syncUrl = true) => {
+        const terms = normalize(input?.value).split(/\s+/).filter(Boolean);
+        const categoryValue = selectValue(category);
+        const pricingValue = selectValue(pricing);
+        const strongOnly = !!strong?.checked;
+        const visibleItems = [];
+
+        items.forEach((item) => {
+          const haystack = item.getAttribute('data-search') || '';
+          const categories = (item.getAttribute('data-categories') || '').split(/\s+/).filter(Boolean);
+          const matchesTerms = terms.every((term) => haystack.includes(term));
+          const matchesCategory = !categoryValue || categories.includes(categoryValue);
+          const matchesPricing = !pricingValue || item.getAttribute('data-pricing') === pricingValue;
+          const matchesScore = !strongOnly || numberFrom(item, 'data-score') >= 8;
+          const visible = matchesTerms && matchesCategory && matchesPricing && matchesScore;
+          item.hidden = !visible;
+          if (visible) visibleItems.push(item);
+        });
+
+        sortItems(visibleItems);
+
+        if (visibleCount) visibleCount.textContent = String(visibleItems.length);
+        if (empty) empty.hidden = visibleItems.length !== 0;
+        if (reset) reset.hidden = !terms.length && !categoryValue && !pricingValue && !strongOnly && (selectValue(sort) || 'score-desc') === 'score-desc';
+
+        const parts = [
+          selectedText(category) || 'All categories',
+          selectedText(pricing) || 'all pricing',
+          strongOnly ? '8.0+ only' : '',
+        ].filter(Boolean);
+        if (summary) summary.textContent = parts.join(', ');
+
+        if (syncUrl) updateUrl();
+      };
+
+      const resetAll = () => {
+        if (input) input.value = '';
+        setSelectValue(category, '');
+        setSelectValue(pricing, '');
+        setSelectValue(sort, 'score-desc');
+        if (strong) strong.checked = false;
+        apply();
+      };
+
+      selects.forEach((select) => {
+        const trigger = select.querySelector('[data-tools-select-trigger]');
+        trigger?.addEventListener('click', () => {
+          const expanded = trigger.getAttribute('aria-expanded') === 'true';
+          if (expanded) closeSelect(select);
+          else openSelect(select);
+        });
+        trigger?.addEventListener('keydown', (event) => {
+          if (event.key === 'ArrowDown' || event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            openSelect(select, true);
+          }
+        });
+        optionList(select).forEach((option, index, options) => {
+          option.addEventListener('click', () => {
+            setSelectValue(select, option.dataset.value || '');
+            closeSelect(select);
+            trigger?.focus();
+            apply();
+          });
+          option.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter' || event.key === ' ') {
+              event.preventDefault();
+              option.click();
+              return;
+            }
+            if (event.key === 'Escape') {
+              event.preventDefault();
+              closeSelect(select);
+              trigger?.focus();
+              return;
+            }
+            if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
+              event.preventDefault();
+              const direction = event.key === 'ArrowDown' ? 1 : -1;
+              const next = (index + direction + options.length) % options.length;
+              options[next]?.focus();
+              return;
+            }
+            if (event.key === 'Home') {
+              event.preventDefault();
+              options[0]?.focus();
+              return;
+            }
+            if (event.key === 'End') {
+              event.preventDefault();
+              options[options.length - 1]?.focus();
+            }
+          });
+        });
+      });
+
+      document.addEventListener('click', (event) => {
+        if (!root.contains(event.target)) closeAllSelects();
+      });
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') closeAllSelects();
+      });
+
+      input?.addEventListener('input', () => apply());
+      strong?.addEventListener('change', () => apply());
+      reset?.addEventListener('click', resetAll);
+      emptyReset?.addEventListener('click', resetAll);
+
+      const params = new URLSearchParams(window.location.search);
+      if (input) input.value = params.get('q') || '';
+      if (category && params.has('category')) setSelectValue(category, params.get('category') || '');
+      if (pricing && params.has('pricing')) setSelectValue(pricing, params.get('pricing') || '');
+      if (sort) setSelectValue(sort, params.get('sort') || 'score-desc');
+      if (strong) strong.checked = params.get('strong') === '1';
+      apply(false);
+    })();
+  </script>
+
+  <style>
+    .tools-filter-panel {
+      display: grid;
+      gap: 12px;
+      margin: 0 0 18px;
+      padding: 14px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-card);
+      background: color-mix(in srgb, var(--bg-card) 88%, transparent);
+    }
+
+    .tools-filter-row {
+      display: grid;
+      gap: 10px;
+    }
+
+    .tools-filter-row-primary {
+      grid-template-columns: minmax(0, 1fr) minmax(180px, 240px);
+    }
+
+    .tools-filter-row-secondary {
+      grid-template-columns: minmax(160px, 1fr) minmax(150px, 220px) auto auto;
+      align-items: end;
+    }
+
+    .tools-search,
+    .tools-select-field,
+    .tools-score-toggle {
+      min-width: 0;
+    }
+
+    .tools-search {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-height: 46px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-primary);
+      padding: 0 13px;
+    }
+
+    .tools-search:focus-within {
+      border-color: rgba(34, 211, 238, 0.45);
+      box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.08);
+    }
+
+    .tools-search-icon {
+      flex: 0 0 auto;
+      color: var(--accent-primary-text);
+    }
+
+    .tools-search input,
+    .tools-select-trigger {
+      width: 100%;
+      color: var(--text-primary);
+      font: inherit;
+      letter-spacing: 0;
+    }
+
+    .tools-search input {
+      min-width: 0;
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .tools-search input::placeholder {
+      color: var(--text-muted);
+      opacity: 0.82;
+    }
+
+    .tools-select-field {
+      position: relative;
+      display: grid;
+      gap: 6px;
+    }
+
+    .tools-select-caption {
+      color: var(--text-muted);
+      font-size: 11px;
+      font-weight: 850;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    .tools-select-trigger {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      min-height: 40px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-primary);
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 750;
+      padding: 0 11px;
+      text-align: left;
+    }
+
+    .tools-select-trigger:hover,
+    .tools-select-trigger:focus-visible,
+    .tools-select-field.is-open .tools-select-trigger {
+      border-color: rgba(34, 211, 238, 0.45);
+      box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.08);
+      outline: none;
+    }
+
+    .tools-select-trigger span {
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .tools-select-chevron {
+      flex: 0 0 auto;
+      color: var(--text-muted);
+      transition: transform 140ms ease, color 140ms ease;
+    }
+
+    .tools-select-field.is-open .tools-select-chevron {
+      color: var(--accent-primary-text);
+      transform: rotate(180deg);
+    }
+
+    .tools-select-menu {
+      position: absolute;
+      z-index: 40;
+      top: calc(100% + 7px);
+      right: 0;
+      left: 0;
+      display: grid;
+      gap: 3px;
+      max-height: min(340px, 58vh);
+      overflow-y: auto;
+      border: 1px solid rgba(34, 211, 238, 0.26);
+      border-radius: 8px;
+      background: rgba(8, 13, 24, 0.98);
+      box-shadow: 0 22px 50px rgba(0, 0, 0, 0.42), 0 0 0 1px rgba(255, 255, 255, 0.04);
+      padding: 6px;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(94, 234, 212, 0.36) transparent;
+    }
+
+    .tools-select-menu[hidden] {
+      display: none;
+    }
+
+    .tools-option {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      width: 100%;
+      min-height: 36px;
+      border: 0;
+      border-radius: 6px;
+      background: transparent;
+      color: var(--text-secondary);
+      cursor: pointer;
+      font: inherit;
+      font-size: 13px;
+      font-weight: 780;
+      letter-spacing: 0;
+      padding: 0 10px;
+      text-align: left;
+    }
+
+    .tools-option:hover,
+    .tools-option:focus-visible {
+      background: rgba(34, 211, 238, 0.10);
+      color: var(--text-primary);
+      outline: none;
+    }
+
+    .tools-option.is-selected {
+      background: rgba(34, 211, 238, 0.16);
+      color: var(--accent-primary-text);
+    }
+
+    .tools-option-count {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 26px;
+      height: 22px;
+      border: 1px solid rgba(94, 234, 212, 0.22);
+      border-radius: 999px;
+      color: var(--text-muted);
+      font-size: 11px;
+      font-weight: 850;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .tools-option.is-selected .tools-option-count {
+      color: var(--accent-primary-text);
+      border-color: rgba(94, 234, 212, 0.42);
+      background: rgba(94, 234, 212, 0.10);
+    }
+
+    html.light .tools-select-menu {
+      border-color: rgba(14, 116, 144, 0.24);
+      background: rgba(255, 255, 255, 0.98);
+      box-shadow: 0 22px 42px rgba(15, 23, 42, 0.16), 0 0 0 1px rgba(15, 23, 42, 0.04);
+    }
+
+    html.light .tools-option:hover,
+    html.light .tools-option:focus-visible,
+    html.light .tools-option.is-selected {
+      background: rgba(14, 116, 144, 0.09);
+    }
+
+    .tools-score-toggle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 40px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 800;
+      padding: 0 12px;
+      white-space: nowrap;
+    }
+
+    .tools-score-toggle input {
+      width: 16px;
+      height: 16px;
+      accent-color: var(--accent-primary-text);
+    }
+
+    .tools-reset {
+      min-height: 40px;
+      border: 1px solid rgba(34, 211, 238, 0.28);
+      border-radius: 8px;
+      background: rgba(34, 211, 238, 0.08);
+      color: var(--accent-primary-text);
+      cursor: pointer;
+      font: inherit;
+      font-size: 13px;
+      font-weight: 850;
+      padding: 0 13px;
+    }
+
+    .tools-reset:hover,
+    .tools-reset:focus-visible {
+      border-color: rgba(34, 211, 238, 0.48);
+      background: rgba(34, 211, 238, 0.13);
+      outline: none;
+    }
+
+    .tools-filter-status {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 12px;
+      font-weight: 750;
+      line-height: 1.35;
+      padding-top: 12px;
+    }
+
+    .tools-filter-status strong {
+      color: var(--accent-primary-text);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .tools-empty-state {
+      margin: -44px 0 64px;
+      border: 1px dashed rgba(34, 211, 238, 0.3);
+      border-radius: 8px;
+      color: var(--text-muted);
+      padding: 24px;
+      text-align: center;
+    }
+
+    .tools-empty-state p {
+      margin: 0 0 14px;
+      font-weight: 750;
+    }
+
+    @media (max-width: 920px) {
+      .tools-filter-row-primary,
+      .tools-filter-row-secondary {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .tools-filter-panel {
+        padding: 12px;
+      }
+
+      .tools-filter-row-primary,
+      .tools-filter-row-secondary {
+        grid-template-columns: 1fr;
+      }
+
+      .tools-filter-status {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+  </style>
 </BaseLayout>

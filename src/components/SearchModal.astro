@@ -624,7 +624,7 @@ const toolsCount = allTools.filter(
     if (TOOLS.length) return TOOLS;
     if (toolsPromise) return toolsPromise;
 
-    toolsPromise = fetch(SEARCH_INDEX_URL, { credentials: 'same-origin' })
+    toolsPromise = fetch(SEARCH_INDEX_URL, { credentials: 'same-origin', cache: 'no-cache' })
       .then((res) => {
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         return res.json();
