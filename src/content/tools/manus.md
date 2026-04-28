@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2025-03
-last_updated: 2026-04-27
-last_verified: 2026-04-27
+last_updated: 2026-04-28
+last_verified: 2026-04-28
 update_frequency: monthly
 seo_title: "Manus: Features, Pricing & Review (2026)"
 meta_description: "Manus is Butterfly Effect's general-purpose autonomous agent. Meta announced an acquisition in December 2025, but China blocked the deal on April 27, 2026. Free tier includes 1,000 starter credits plus 300 daily. Pro from $20/mo."
@@ -58,7 +58,7 @@ price_history:
 
 # Manus
 
-**Manus** is a general-purpose autonomous agent from Butterfly Effect Inc., the Singapore-incorporated team that also built Monica.im. The product launched invite-only in **March 2025** and opened to broader access through late 2025. Meta announced an acquisition in **December 2025**, but China blocked the deal on **April 27, 2026**, leaving the ownership path unsettled.
+**Manus** is a general-purpose autonomous agent from Butterfly Effect Inc., the Singapore-incorporated team that also built Monica.im. The product launched invite-only in **March 2025** and opened to broader access through late 2025. Meta announced an acquisition in **December 2025**, but [China blocked the deal on April 27, 2026](/news/2026-04-27-china-blocks-meta-manus-acquisition/), leaving the ownership path unsettled.
 
 Manus runs tasks inside its own sandboxed cloud VM. It browses, writes code, builds slides, operates spreadsheets, and returns a finished artifact. The agent keeps working while the browser tab is closed.
 
@@ -77,7 +77,7 @@ Manus runs tasks inside its own sandboxed cloud VM. It browses, writes code, bui
 | **Product type** | Autonomous general-purpose agent with sandboxed cloud VM |
 | **Company** | Butterfly Effect Inc. (Meta acquisition blocked by China) |
 | **Launched** | March 2025 invite-only, broader access late 2025 |
-| **Acquisition** | Meta announced a December 2025 deal reported above $2B; China blocked the acquisition on April 27, 2026 |
+| **Acquisition** | Meta announced a December 2025 deal reported above $2B; [China blocked the acquisition on April 27, 2026](/news/2026-04-27-china-blocks-meta-manus-acquisition/) |
 | **Pricing model** | Credit-based, refreshes daily plus monthly pool |
 | **Free tier** | 1,000 starter credits, 300 daily refresh, 1 concurrent task, 1 scheduled task |
 | **Pro Standard** | $20/mo, 4,000 monthly credits, up to 20 concurrent tasks |
@@ -92,7 +92,7 @@ Manus runs tasks inside its own sandboxed cloud VM. It browses, writes code, bui
 
 A hosted agent that takes a natural-language goal, spins up a sandboxed VM, and works the problem end-to-end. Manus browses the web, writes and runs code, parses PDFs, fills spreadsheets, and hands back a deliverable rather than a chat reply.
 
-The product went viral in 2025 for genuinely autonomous multi-step runs that most agents of the era could not complete. Meta acquired Butterfly Effect in late December 2025, and Manus continues to operate its subscription service under the Meta umbrella.
+The product went viral in 2025 for genuinely autonomous multi-step runs that most agents of the era could not complete. Meta's late-2025 acquisition plan is now blocked by Chinese regulators, so Manus continues operating while the transaction path is unresolved.
 
 ## When to pick Manus
 
@@ -154,7 +154,7 @@ This page was produced by the aipedia.wiki editorial pipeline, an automated syst
 Yes. The free tier ships 1,000 one-time starter credits plus 300 refreshing daily credits. That covers several simple tasks or one mid-size research run per day.
 
 **Who owns Manus now?**
-Meta completed its acquisition of Butterfly Effect Inc. in December 2025 for a reported $2B+. Founder Xiao Hong moved into a VP role at Meta. The service continues to operate its existing subscription tiers.
+Butterfly Effect Inc. still operates Manus while Meta's proposed acquisition is blocked by Chinese regulators. Treat ownership, roadmap, data-residency commitments, and enterprise procurement assumptions as unsettled until the parties announce a final resolution.
 
 **Can Manus code?**
 Yes, but it is a general agent, not a coding specialist. Simple scripts and prototypes land fine. For repo-scale work, pair Manus with [Claude Code](/tools/claude-code/) or [Devin](/tools/devin/).

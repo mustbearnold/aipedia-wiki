@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "Free (chat) / Usage-based (API from $0.28/M tokens)"
 status: active
 launched: 2023-07
-last_updated: 2026-04-26
-last_verified: 2026-04-26
+last_updated: 2026-04-28
+last_verified: 2026-04-28
 update_frequency: quarterly
 affiliate:
   has_program: false
@@ -74,6 +74,10 @@ price_history:
     plan: "V4 preview"
     price: "Pricing not yet verified"
     note: "AP reports pro and flash V4 preview models with improved knowledge, reasoning, and agentic capabilities."
+  - date: 2026-04-27
+    plan: "V4-Pro promo"
+    price: "75% discount until May 5"
+    note: "Reuters reported a temporary V4-Pro developer discount plus lower cache-hit pricing across the API lineup."
 ---
 
 # DeepSeek
@@ -82,7 +86,7 @@ Chinese AI lab founded under High-Flyer Capital Management in Hangzhou. Releases
 
 DeepSeek-V4 preview launched on April 24, 2026, according to AP, with pro and flash versions described as improving knowledge, reasoning, and agentic capabilities. DeepSeek-V3.2 remains the verified public API pricing baseline until DeepSeek publishes full V4 endpoint details. DeepSeek-R1 (released January 2025) remains the standalone reasoning model.
 
-Related coverage: [AI Industry Roundup, April 24](/news/2026-04-24-ai-industry-roundup/) tracked the DeepSeek V4 preview alongside GPT-5.5 in Copilot, Anthropic capital pressure, and Cohere-Aleph Alpha.
+Related coverage: [AI Industry Roundup, April 24](/news/2026-04-24-ai-industry-roundup/) tracked the DeepSeek V4 preview alongside GPT-5.5 in Copilot, Anthropic capital pressure, and Cohere-Aleph Alpha. On April 27, [DeepSeek cut V4-Pro pricing by 75%](/news/2026-04-27-deepseek-v4-pro-price-cut/) in a developer adoption push.
 
 ## System Verdict
 
@@ -165,7 +169,7 @@ API pricing via [api-docs.deepseek.com](https://api-docs.deepseek.com/quick_star
 
 ## Failure modes
 
-- **V4 details are still thin.** Preview availability is reported, but license, endpoint names, context window, benchmark table, and pricing are not yet fully documented. Do not plan migrations until DeepSeek publishes technical docs.
+- **V4 details are still thin.** Preview availability and a time-boxed V4-Pro discount are reported, but license, endpoint names, context window, benchmark table, and durable pricing are not yet fully documented. Do not plan migrations until DeepSeek publishes technical docs.
 - **No R2 announced.** R1 (January 2025) remains the standalone reasoning product. Capability-wise it still holds, but the gap to Opus 4.7 on agentic coding is widening.
 - **Regulatory posture is hostile in EU and U.S.** Berlin DPA has flagged the service as non-compliant with GDPR. House Select Committee reports cite export-control violations. Banking, healthcare, government, and most EU enterprise workloads cannot deploy this.
 - **No SLA or uptime guarantee.** The service hit heavy rate-limiting during the January 2025 R1 launch spike. Stability has improved but is not contractually backed.
@@ -176,7 +180,7 @@ API pricing via [api-docs.deepseek.com](https://api-docs.deepseek.com/quick_star
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-24 against [DeepSeek API docs](https://api-docs.deepseek.com/quick_start/pricing), the [DeepSeek-R1 paper](https://arxiv.org/abs/2501.12948), [chat.deepseek.com](https://chat.deepseek.com), and the [V4 preview coverage](/news/2026-04-24-deepseek-v4-preview-release/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-27 against [DeepSeek API docs](https://api-docs.deepseek.com/quick_start/pricing), the [DeepSeek-R1 paper](https://arxiv.org/abs/2501.12948), [chat.deepseek.com](https://chat.deepseek.com), [V4 preview coverage](/news/2026-04-24-deepseek-v4-preview-release/), and [Reuters price-cut coverage](/news/2026-04-27-deepseek-v4-pro-price-cut/).
 
 ## FAQ
 
@@ -201,6 +205,7 @@ For regulated industries, no. The Berlin DPA flagged the app as non-compliant wi
 - [DeepSeek-R1 ArXiv paper](https://arxiv.org/abs/2501.12948): benchmark results and architecture
 - [chat.deepseek.com](https://chat.deepseek.com): consumer chat interface
 - [DeepSeek V4 preview coverage](/news/2026-04-24-deepseek-v4-preview-release/): April 24, 2026 preview release note
+- [DeepSeek V4-Pro price-cut coverage](/news/2026-04-27-deepseek-v4-pro-price-cut/): April 27, 2026 temporary discount and cache-hit pricing signal
 - [DeepSeek Wikipedia](https://en.wikipedia.org/wiki/DeepSeek): company and regulatory background
 
 ## Related

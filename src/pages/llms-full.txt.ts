@@ -5,15 +5,29 @@
 import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
 
+const inactiveStatuses = new Set(['dead', 'retired', 'acquired']);
+
+function isActive(item: any): boolean {
+  return !inactiveStatuses.has(String(item?.data?.status ?? '').toLowerCase());
+}
+
+function excerpt(value: unknown, max = 180): string {
+  const text = String(value ?? '').replace(/\s+/g, ' ').trim();
+  if (text.length <= max) return text;
+  const clipped = text.slice(0, max);
+  const boundary = clipped.lastIndexOf(' ');
+  return `${clipped.slice(0, boundary > 110 ? boundary : max).trim()}...`;
+}
+
 export const GET: APIRoute = async () => {
   const tools = await getCollection('tools').catch(() => []);
   const categories = await getCollection('categories').catch(() => []);
   const comparisons = await getCollection('comparisons').catch(() => []);
-  const useCases = await getCollection('useCases').catch(() => []);
+  const useCases = await getCollection('use-cases').catch(() => []);
   const companies = await getCollection('companies').catch(() => []);
 
   const activeTools = tools
-    .filter((t: any) => t.data.status !== 'dead')
+    .filter(isActive)
     .sort((a: any, b: any) => (a.data.title || '').localeCompare(b.data.title || ''));
 
   const toolsByCategory = new Map<string, any[]>();
@@ -24,7 +38,7 @@ export const GET: APIRoute = async () => {
   }
 
   const activeCategories = categories
-    .filter((c: any) => c.data.status !== 'dead')
+    .filter(isActive)
     .sort((a: any, b: any) => (a.data.title || '').localeCompare(b.data.title || ''));
 
   const lines: string[] = [];
@@ -53,7 +67,7 @@ export const GET: APIRoute = async () => {
     lines.push('');
     for (const cat of activeCategories) {
       const slug = cat.slug || cat.id?.replace(/\.md$/, '');
-      const desc = (cat.data.description || cat.data.tagline || '').toString().slice(0, 150);
+      const desc = excerpt(cat.data.description || cat.data.tagline || '', 160);
       lines.push(`- [${cat.data.title}](https://aipedia.wiki/categories/${slug}/)${desc ? `: ${desc}` : ''}`);
     }
     lines.push('');
@@ -69,7 +83,7 @@ export const GET: APIRoute = async () => {
       lines.push('');
       for (const t of catTools) {
         const slug = t.slug || t.id?.replace(/\.md$/, '');
-        const tagline = (t.data.tagline || '').toString().slice(0, 180);
+        const tagline = excerpt(t.data.tagline || '', 180);
         lines.push(`- [${t.data.title}](https://aipedia.wiki/tools/${slug}/)${tagline ? `: ${tagline}` : ''}`);
       }
       lines.push('');

@@ -6,6 +6,15 @@
 # cached historical URLs. These redirect to the canonical extension-less
 # Astro route with trailing slash.
 
+# Removed low-intent comparison pages. Send users to the more relevant
+# canonical tool review rather than leaving thin or mismatched verdict URLs.
+/compare/ahrefs-vs-chatgpt/ /tools/ahrefs/ 301
+/compare/ahrefs-vs-chatgpt /tools/ahrefs/ 301
+/compare/chatgpt-vs-n8n/ /tools/n8n/ 301
+/compare/chatgpt-vs-n8n /tools/n8n/ 301
+/compare/chatgpt-vs-semrush/ /tools/semrush/ 301
+/compare/chatgpt-vs-semrush /tools/semrush/ 301
+
 # Deep nested forms like /tools/suno/mubert.md -> /tools/mubert/
 /tools/:any/:slug.md /tools/:slug/ 301
 /compare/:any/:slug.md /compare/:slug/ 301

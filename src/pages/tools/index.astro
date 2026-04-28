@@ -2,18 +2,32 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ToolCard from '../../components/ToolCard.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
+import BreadcrumbLD from '../../components/seo/BreadcrumbLD.astro';
+import ItemListLD from '../../components/seo/ItemListLD.astro';
 import { getCollection } from 'astro:content';
 
 const allTools = await getCollection('tools');
+const inactiveStatuses = new Set(['dead', 'retired', 'acquired']);
+const activeTools = allTools.filter(t => !inactiveStatuses.has(String(t.data.status ?? '').toLowerCase()));
 
-const scoredTools = allTools
-  .filter(t => t.data.status !== 'dead')
+const scoredTools = activeTools
   .map(tool => {
     const s = tool.data.scores ?? { utility: 0, value: 0, moat: 0, longevity: 0 };
     const avg = ((s.utility ?? 0) + (s.value ?? 0) + (s.moat ?? 0) + (s.longevity ?? 0)) / 4;
     return { tool, score: Math.round(avg * 10) / 10 };
   })
   .sort((a, b) => b.score - a.score);
+
+const activeCategoryCount = new Set(scoredTools.map(({ tool }) => tool.data.category).filter(Boolean)).size;
+const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
+const toolsDescription = `Complete index of all ${scoredTools.length} active AI tools reviewed on aipedia.wiki. Sorted by editorial score across ${activeCategoryCount} categories.`;
+const toolsItemList = scoredTools.map(({ tool, score }) => ({
+  name: tool.data.title,
+  slug: tool.data.slug || tool.id.replace(/\.md$/, '').replace(/\\/g, '/'),
+  category: tool.data.category,
+  score,
+  status: tool.data.status,
+}));
 
 const categoryEmojiMap: Record<string, string> = {
   'ai-chatbots': '\uD83D\uDCAC', 'ai-voice': '\uD83D\uDD0A', 'ai-video': '\uD83C\uDFAC',
@@ -26,8 +40,18 @@ const categoryEmojiMap: Record<string, string> = {
 
 <BaseLayout
   title="All AI Tools — Complete A-Z Index — aipedia.wiki"
-  description={`Complete index of all ${scoredTools.length} AI tools reviewed on aipedia.wiki. Sorted by editorial score across 14 categories.`}
+  description={toolsDescription}
 >
+  <BreadcrumbLD items={[
+    { name: 'Home', url: new URL('/', siteBase).href },
+    { name: 'All AI Tools', url: new URL('/tools/', siteBase).href },
+  ]} />
+  <ItemListLD
+    name="All AI Tools"
+    description={toolsDescription}
+    items={toolsItemList}
+    siteBase={siteBase}
+  />
   <Breadcrumb items={[{ label: 'All Tools' }]} />
 
   <section class="idx-hero" data-pagefind-ignore>

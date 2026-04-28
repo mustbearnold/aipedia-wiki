@@ -6,19 +6,34 @@
 import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
 
+const inactiveStatuses = new Set(['dead', 'retired', 'acquired']);
+
+function isActive(item: any): boolean {
+  return !inactiveStatuses.has(String(item?.data?.status ?? '').toLowerCase());
+}
+
+function excerpt(value: unknown, max = 140): string {
+  const text = String(value ?? '').replace(/\s+/g, ' ').trim();
+  if (text.length <= max) return text;
+  const clipped = text.slice(0, max);
+  const boundary = clipped.lastIndexOf(' ');
+  return `${clipped.slice(0, boundary > 80 ? boundary : max).trim()}...`;
+}
+
 export const GET: APIRoute = async () => {
   const categories = await getCollection('categories').catch(() => []);
   const tools = await getCollection('tools').catch(() => []);
   const comparisons = await getCollection('comparisons').catch(() => []);
   const useCases = await getCollection('use-cases').catch(() => []);
+  const activeTools = tools.filter(isActive);
   const activeCategories = categories
-    .filter((c: any) => c.data.status !== 'dead')
+    .filter(isActive)
     .sort((a: any, b: any) => (a.data.title || '').localeCompare(b.data.title || ''));
 
   const lines: string[] = [];
   lines.push('# aipedia.wiki');
   lines.push('');
-  lines.push(`> Independent AI tools encyclopedia maintained by aipedia.wiki Editorial. ${tools.length} tool pages across ${activeCategories.length} categories, ${comparisons.length} head-to-head comparisons, ${useCases.length} use-case guides. Public pages carry verification metadata and editorial sourcing controls.`);
+  lines.push(`> Independent AI tools encyclopedia maintained by aipedia.wiki Editorial. ${activeTools.length} active tool pages across ${activeCategories.length} categories, ${comparisons.length} head-to-head comparisons, ${useCases.length} use-case guides. Public pages carry verification metadata and editorial sourcing controls.`);
   lines.push('');
   lines.push('Editorial positioning: no individual-author bylines, no fabricated hands-on testing claims. Pages cite vendor-published sources. Scoring is four-dimension (utility, value, moat, longevity) and is not influenced by affiliate commissions.');
   lines.push('');
@@ -42,7 +57,7 @@ export const GET: APIRoute = async () => {
     lines.push('');
     for (const cat of activeCategories) {
       const slug = cat.slug || cat.id?.replace(/\.md$/, '');
-      const desc = (cat.data.description || cat.data.tagline || '').toString().slice(0, 120);
+      const desc = excerpt(cat.data.description || cat.data.tagline || '', 140);
       lines.push(`- [${cat.data.title}](https://aipedia.wiki/categories/${slug}/)${desc ? `: ${desc}` : ''}`);
     }
     lines.push('');

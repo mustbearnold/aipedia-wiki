@@ -1,0 +1,13 @@
+---
+import { createMarkdownProcessor } from '@astrojs/markdown-remark';
+
+interface Props {
+  content: string;
+}
+
+const { content } = Astro.props;
+const processor = await createMarkdownProcessor({});
+const rendered = await processor.render(content.trim());
+---
+
+<div class="prose prose-invert prose-sm max-w-none wiki-prose" set:html={rendered.code} />

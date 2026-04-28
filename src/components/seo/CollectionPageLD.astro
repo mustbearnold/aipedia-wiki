@@ -1,0 +1,54 @@
+---
+interface DirectoryItem {
+  name: string;
+  url: string;
+  description?: string;
+}
+
+interface Props {
+  name: string;
+  description?: string;
+  pageUrl: string;
+  items?: DirectoryItem[];
+  itemType?: 'Article' | 'CollectionPage' | 'NewsArticle' | 'SoftwareApplication' | 'WebPage';
+}
+
+const {
+  name,
+  description,
+  pageUrl,
+  items = [],
+  itemType = 'WebPage',
+} = Astro.props;
+
+const jsonLd: Record<string, unknown> = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name,
+  url: pageUrl,
+};
+
+if (description) jsonLd.description = description;
+
+if (items.length > 0) {
+  jsonLd.mainEntity = {
+    '@type': 'ItemList',
+    numberOfItems: items.length,
+    itemListElement: items.map((item, index) => {
+      const itemNode: Record<string, unknown> = {
+        '@type': itemType,
+        name: item.name,
+        url: item.url,
+      };
+      if (item.description) itemNode.description = item.description;
+      return {
+        '@type': 'ListItem',
+        position: index + 1,
+        item: itemNode,
+      };
+    }),
+  };
+}
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />

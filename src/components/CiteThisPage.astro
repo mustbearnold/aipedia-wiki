@@ -21,24 +21,28 @@ const {
 
 const today = new Date();
 const accessDate = today.toLocaleDateString('en-US', { day: 'numeric', month: 'long', year: 'numeric' });
-const year = today.getFullYear();
+const publishedDate = datePublished ? new Date(datePublished) : null;
+const year = publishedDate && !Number.isNaN(publishedDate.getTime())
+  ? publishedDate.getFullYear()
+  : today.getFullYear();
+const citationAuthor = author || 'aipedia.wiki Editorial';
 
-// APA: Marsh, E. (2026). Title. aipedia.wiki. Retrieved April 16, 2026, from URL
-const apa = `Marsh, E. (${year}). ${title}. aipedia.wiki. Retrieved ${accessDate}, from ${pageUrl}`;
+// APA: aipedia.wiki Editorial. (2026). Title. aipedia.wiki. Retrieved April 28, 2026, from URL
+const apa = `${citationAuthor}. (${year}). ${title}. aipedia.wiki. Retrieved ${accessDate}, from ${pageUrl}`;
 
-// MLA 9: Marsh, Eli. "Title." aipedia.wiki, 2026, URL. Accessed 16 April 2026.
-const mla = `Marsh, Eli. "${title}." aipedia.wiki, ${year}, ${pageUrl}. Accessed ${accessDate}.`;
+// MLA 9: aipedia.wiki Editorial. "Title." aipedia.wiki, 2026, URL. Accessed 28 April 2026.
+const mla = `${citationAuthor}. "${title}." aipedia.wiki, ${year}, ${pageUrl}. Accessed ${accessDate}.`;
 
-// Chicago author-date: Marsh, Eli. 2026. "Title." aipedia.wiki. URL.
-const chicago = `Marsh, Eli. ${year}. "${title}." aipedia.wiki. ${pageUrl}.`;
+// Chicago author-date: aipedia.wiki Editorial. 2026. "Title." aipedia.wiki. URL.
+const chicago = `${citationAuthor}. ${year}. "${title}." aipedia.wiki. ${pageUrl}.`;
 
 // Plain text for news writers
-const news = `According to ${author}, editor-in-chief of aipedia.wiki (${pageUrl})`;
+const news = `According to ${citationAuthor} at aipedia.wiki (${pageUrl})`;
 
 // BibTeX
 const bibKey = title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 40) + `-${year}`;
 const bibtex = `@misc{${bibKey},
-  author = {Marsh, Eli},
+  author = {{${citationAuthor}}},
   title = {${title}},
   year = {${year}},
   publisher = {aipedia.wiki},

@@ -17,6 +17,7 @@ interface Props {
   wordCount?: number;
   keywords?: string[];
   about?: string[];
+  citations?: Array<{ url: string; title?: string }>;
 }
 
 const {
@@ -31,6 +32,7 @@ const {
   wordCount,
   keywords,
   about,
+  citations,
 } = Astro.props;
 
 const publisher = {
@@ -72,6 +74,17 @@ if (wordCount && wordCount > 0) jsonLd.wordCount = wordCount;
 if (keywords && keywords.length > 0) jsonLd.keywords = keywords.join(', ');
 if (about && about.length > 0) {
   jsonLd.about = about.map((entity) => ({ '@type': 'Thing', name: entity }));
+}
+if (citations && citations.length > 0) {
+  const uniqueCitations = citations.filter((source, index, all) =>
+    source?.url && all.findIndex((candidate) => candidate?.url === source.url) === index
+  );
+  jsonLd.citation = uniqueCitations.map((source) => source.url);
+  jsonLd.isBasedOn = uniqueCitations.map((source) => ({
+    '@type': 'CreativeWork',
+    ...(source.title ? { name: source.title } : {}),
+    url: source.url,
+  }));
 }
 ---
 

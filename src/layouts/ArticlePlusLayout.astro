@@ -27,6 +27,7 @@ interface Props {
   articleSection?: string;
   datePublished?: string;
   ogImage?: string;
+  citations?: Array<{ url: string; title?: string }>;
 }
 
 const {
@@ -37,6 +38,7 @@ const {
   articleSection,
   datePublished,
   ogImage,
+  citations = [],
 } = Astro.props;
 
 const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
@@ -116,6 +118,7 @@ const tocHeadings = (headings ?? []).filter((h) => h.depth === 2).map((h) => ({ 
     articleType={articleType}
     articleSection={articleSection}
     wordCount={readingMinutes ? Math.round(readingMinutes * 230) : undefined}
+    citations={citations}
   />
 
   <div class="t2-canvas">

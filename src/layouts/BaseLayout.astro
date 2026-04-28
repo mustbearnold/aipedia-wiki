@@ -26,6 +26,14 @@ const {
   articleSection,
 } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? 'https://aipedia.wiki');
+function clampMetaDescription(value: string): string {
+  const normalized = String(value || '').replace(/\s+/g, ' ').trim();
+  if (normalized.length <= 160) return normalized;
+  const clipped = normalized.slice(0, 157);
+  const boundary = Math.max(clipped.lastIndexOf('.'), clipped.lastIndexOf(';'), clipped.lastIndexOf(','), clipped.lastIndexOf(' '));
+  return `${clipped.slice(0, boundary > 110 ? boundary : 157).trim()}...`;
+}
+const metaDescription = clampMetaDescription(description);
 // Social networks (X, LinkedIn, Facebook, Slack, iMessage) reject SVG
 // for link previews — PNG/JPG/WebP only. All OG images must be raster.
 // generate-og-svgs.mjs rasterizes each SVG to PNG at build time.
@@ -39,7 +47,7 @@ const ogImageUrl = ogImage
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <title>{title}</title>
-    <meta name="description" content={description} />
+    <meta name="description" content={metaDescription} />
     <link rel="canonical" href={canonicalURL.href} />
     <!-- Favicons: PNG-first, multiple sizes so browsers pick the best
          fit (16 for tab, 32 for retina tab, 180 for iOS home, 192/512
@@ -60,7 +68,7 @@ const ogImageUrl = ogImage
     <!-- Open Graph -->
     <meta property="og:type" content={ogType} />
     <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
+    <meta property="og:description" content={metaDescription} />
     <meta property="og:url" content={canonicalURL.href} />
     <meta property="og:site_name" content="aipedia.wiki" />
     <meta property="og:locale" content="en_US" />
@@ -83,7 +91,7 @@ const ogImageUrl = ogImage
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@aipediawiki" />
     <meta name="twitter:title" content={title} />
-    <meta name="twitter:description" content={description} />
+    <meta name="twitter:description" content={metaDescription} />
     <meta name="twitter:image" content={ogImageUrl} />
     <meta name="twitter:image:alt" content={title} />
 
