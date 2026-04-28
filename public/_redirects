@@ -15,6 +15,46 @@
 /compare/chatgpt-vs-semrush/ /tools/semrush/ 301
 /compare/chatgpt-vs-semrush /tools/semrush/ 301
 
+# Retired design/demo routes that were visible during early site iteration.
+# Redirect them to canonical public pages so Search Console stops reporting
+# the custom noindex 404 page for these stale URLs.
+/demo-claude/ /tools/claude/ 301
+/demo-claude /tools/claude/ 301
+/demo-homepage/ / 301
+/demo-homepage / 301
+/homepage-clone/ / 301
+/homepage-clone / 301
+/glass-demo/ / 301
+/glass-demo / 301
+/glass-demo-v2/ / 301
+/glass-demo-v2 / 301
+/100k-homepage/ / 301
+/100k-homepage / 301
+
+# Search Console 404 cleanup: retired comparison/use-case slugs. Keep these
+# before the generic /comparisons/:slug migration so removed comparison pages
+# land on a useful builder state or category instead of /compare/<missing>/.
+/comparisons/deepseek-vs-glm/ /compare/build/?tools=deepseek,glm 301
+/comparisons/deepseek-vs-glm /compare/build/?tools=deepseek,glm 301
+/comparisons/claude-vs-glm/ /compare/build/?tools=claude,glm 301
+/comparisons/claude-vs-glm /compare/build/?tools=claude,glm 301
+/comparisons/tripo3d-vs-rodin/ /compare/build/?tools=tripo3d,rodin 301
+/comparisons/tripo3d-vs-rodin /compare/build/?tools=tripo3d,rodin 301
+/comparisons/luma-vs-runway/ /compare/build/?tools=luma,runway 301
+/comparisons/luma-vs-runway /compare/build/?tools=luma,runway 301
+/comparisons/kling-vs-luma/ /compare/build/?tools=kling,luma 301
+/comparisons/kling-vs-luma /compare/build/?tools=kling,luma 301
+/comparisons/luma-vs-pika/ /compare/build/?tools=luma,pika 301
+/comparisons/luma-vs-pika /compare/build/?tools=luma,pika 301
+/comparisons/rodin-vs-meshy/ /compare/build/?tools=rodin,meshy 301
+/comparisons/rodin-vs-meshy /compare/build/?tools=rodin,meshy 301
+/comparisons/tripo3d-vs-meshy/ /compare/build/?tools=tripo3d,meshy 301
+/comparisons/tripo3d-vs-meshy /compare/build/?tools=tripo3d,meshy 301
+/tools/anthropic/ /companies/anthropic/ 301
+/tools/anthropic /companies/anthropic/ 301
+/use-cases/best-ai-for-voice-agents/ /categories/ai-voice/ 301
+/use-cases/best-ai-for-voice-agents /categories/ai-voice/ 301
+
 # Deep nested forms like /tools/suno/mubert.md -> /tools/mubert/
 /tools/:any/:slug.md /tools/:slug/ 301
 /compare/:any/:slug.md /compare/:slug/ 301
