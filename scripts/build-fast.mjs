@@ -1,0 +1,21 @@
+#!/usr/bin/env node
+
+import { spawnSync } from 'node:child_process';
+import { dirname, join } from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const PROJECT_DIR = dirname(dirname(fileURLToPath(import.meta.url)));
+const astroBin = join(PROJECT_DIR, 'node_modules', 'astro', 'bin', 'astro.mjs');
+
+console.log('[build-fast] Building to dist-fast; skipping GitHub stats refresh, OG generation, and Pagefind.');
+
+const result = spawnSync(process.execPath, [astroBin, 'build'], {
+  cwd: PROJECT_DIR,
+  env: {
+    ...process.env,
+    AIPEDIA_FAST_BUILD: '1',
+  },
+  stdio: 'inherit',
+});
+
+process.exit(result.status ?? 1);
