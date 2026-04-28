@@ -8,7 +8,7 @@
  *   - Today's top story: featured magazine-cover block (OG hero image)
  *   - Split:
  *       Left: filter chips (severity + category) + full news grid
- *       Right: Movers-this-fortnight + RSS + methodology mini-card
+ *       Right: Movers-this-fortnight + methodology mini-card
  *   - Email capture
  *
  * Filter behaviour (severity tabs + category chips + tool dropdown) is
@@ -485,19 +485,6 @@ const newsItems = sorted.slice(0, 100).map((item) => ({
         )}
 
         <div class="p3-newsdesk-aside-card" data-reveal="right" style="--reveal-delay: 70ms;">
-          <div class="p3-newsdesk-aside-eyebrow"><span>SUBSCRIBE</span></div>
-          <p class="p3-newsdesk-aside-body">
-            Pull the feed straight into your reader. Pure RSS, no tracking pixels, no email capture.
-          </p>
-          <a href="/news/rss.xml" class="p3-btn p3-btn-ghost" style="margin-top: 10px;">
-            <svg width="13" height="13" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M6.503 20.752c0 1.794-1.456 3.248-3.251 3.248-1.796 0-3.252-1.454-3.252-3.248 0-1.794 1.456-3.248 3.252-3.248 1.795 0 3.251 1.454 3.251 3.248zm-6.503-12.572v4.811c6.05 0 10.96 4.903 10.96 10.94h4.817c0-8.684-7.071-15.751-15.777-15.751zm0-3.198c10.47 0 18.982 8.502 18.982 18.998h5.018c0-13.254-10.78-24-24-24v5.002z"/>
-            </svg>
-            <span>RSS feed</span>
-          </a>
-        </div>
-
-        <div class="p3-newsdesk-aside-card" data-reveal="right" style="--reveal-delay: 140ms;">
           <div class="p3-newsdesk-aside-eyebrow"><span>METHODOLOGY</span></div>
           <p class="p3-newsdesk-aside-body">
             Items are published when the first primary-source confirmation lands. We track pricing changes, model releases, acquisitions, shutdowns, and funding rounds that move a tool's utility, value, moat, or longevity score.
