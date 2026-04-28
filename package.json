@@ -18,6 +18,7 @@
     "check:security": "npm audit --audit-level=moderate",
     "check:dist": "node scripts/check-dist-budget.mjs",
     "smoke:visual": "playwright test tests/smoke/visual-routes.spec.mjs --config=playwright.config.mjs",
+    "smoke:api": "playwright test tests/smoke/api-routes.spec.mjs --config=playwright.config.mjs",
     "check": "npm run guard:check && npm run check:links && npm run check:news && npm run check:security",
     "guard:baseline": "node scripts/guard-content.mjs --baseline",
     "astro": "astro",

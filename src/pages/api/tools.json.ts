@@ -1,5 +1,6 @@
 import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
+import { overallScore } from '../../utils/tool-metadata';
 
 export const GET: APIRoute = async () => {
   const allTools = await getCollection('tools');
@@ -8,13 +9,7 @@ export const GET: APIRoute = async () => {
     .map((tool) => {
       const d = tool.data;
       const scores = d.scores ?? {};
-      const avg =
-        [scores.utility, scores.value, scores.moat, scores.longevity]
-          .filter((v): v is number => typeof v === 'number')
-          .reduce((a, b) => a + b, 0) /
-        ([scores.utility, scores.value, scores.moat, scores.longevity].filter(
-          (v) => typeof v === 'number',
-        ).length || 1);
+      const avg = overallScore(scores);
 
       return {
         slug: d.slug ?? tool.id,
@@ -32,7 +27,7 @@ export const GET: APIRoute = async () => {
           value: scores.value ?? null,
           moat: scores.moat ?? null,
           longevity: scores.longevity ?? null,
-          overall: Math.round(avg * 10) / 10,
+          overall: avg,
         },
         best_for: d.best_for ?? [],
         not_best_for: d.not_best_for ?? [],

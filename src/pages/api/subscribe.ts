@@ -82,6 +82,7 @@ export const GET: APIRoute = () =>
 export const POST: APIRoute = async ({ request, clientAddress }) => {
   try {
     const workerEnv: any = env ?? {};
+    const debugApi = String(workerEnv?.AIPEDIA_DEBUG_API ?? '').toLowerCase() === 'true';
     // The D1 binding's variable name can be either `DB` (conventional)
     // or `D1` (default when using the "Add D1 binding" UI without
     // customizing the variable name). Accept either so the handler
@@ -92,8 +93,7 @@ export const POST: APIRoute = async ({ request, clientAddress }) => {
       return json(
         {
           error: 'subscribe_disabled',
-          detail: 'DB not bound',
-          envKeys: workerEnv ? Object.keys(workerEnv).slice(0, 20) : [],
+          ...(debugApi ? { detail: 'DB not bound', envKeys: Object.keys(workerEnv).slice(0, 20) } : {}),
         },
         503,
       );
@@ -156,8 +156,12 @@ export const POST: APIRoute = async ({ request, clientAddress }) => {
       return json(
         {
           error: 'db_failed',
-          detail: String(err?.message ?? err).slice(0, 300),
-          hint: 'Run: CREATE TABLE IF NOT EXISTS subscribers (id INTEGER PRIMARY KEY AUTOINCREMENT, email TEXT UNIQUE NOT NULL, ip_hash TEXT NOT NULL, source TEXT DEFAULT \'unknown\', created_at INTEGER DEFAULT (unixepoch()));',
+          ...(debugApi
+            ? {
+                detail: String(err?.message ?? err).slice(0, 300),
+                hint: 'Run: CREATE TABLE IF NOT EXISTS subscribers (id INTEGER PRIMARY KEY AUTOINCREMENT, email TEXT UNIQUE NOT NULL, ip_hash TEXT NOT NULL, source TEXT DEFAULT \'unknown\', created_at INTEGER DEFAULT (unixepoch()));',
+              }
+            : {}),
         },
         500,
       );
@@ -166,7 +170,9 @@ export const POST: APIRoute = async ({ request, clientAddress }) => {
     return json(
       {
         error: 'unhandled',
-        detail: String(err?.message ?? err).slice(0, 300),
+        ...(String((env as any)?.AIPEDIA_DEBUG_API ?? '').toLowerCase() === 'true'
+          ? { detail: String(err?.message ?? err).slice(0, 300) }
+          : {}),
       },
       500,
     );

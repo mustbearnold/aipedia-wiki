@@ -1,6 +1,7 @@
 import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
 import { shortenPrice } from '../../utils/shorten-price';
+import { isActiveToolStatus } from '../../utils/tool-metadata';
 
 export const prerender = true;
 
@@ -11,9 +12,7 @@ export const GET: APIRoute = async () => {
     .filter(
       (tool) =>
         tool.data.type === 'tool' &&
-        tool.data.status !== 'dead' &&
-        tool.data.status !== 'retired' &&
-        tool.data.status !== 'acquired'
+        isActiveToolStatus(tool.data.status)
     )
     .map((tool) => {
       const slug = tool.data.slug || tool.id.replace(/\.md$/, '').replace(/\\/g, '/');

@@ -31,6 +31,7 @@ import FeedbackForm from '../components/FeedbackForm.astro';
 import ReportOutdatedButton from '../components/ReportOutdatedButton.astro';
 import BadgeEmbed from '../components/BadgeEmbed.astro';
 import CiteThisPage from '../components/CiteThisPage.astro';
+import { categoryLabel, isActiveToolStatus, overallScore } from '../utils/tool-metadata';
 
 interface Props {
   frontmatter: Record<string, any>;
@@ -43,26 +44,9 @@ const { frontmatter, faqItems = [], headings = [], readingMinutes = 0 } = Astro.
 const f = frontmatter;
 
 const scores = f.scores ?? { utility: 0, value: 0, moat: 0, longevity: 0 };
-const overall = Math.round(((scores.utility ?? 0) + (scores.value ?? 0) + (scores.moat ?? 0) + (scores.longevity ?? 0)) / 4 * 10) / 10;
-
-const categoryLabels: Record<string, string> = {
-  'ai-chatbots': 'Chatbots',
-  'ai-voice': 'Voice',
-  'ai-video': 'Video',
-  'ai-coding': 'Coding',
-  'ai-image': 'Image',
-  'ai-writing': 'Writing',
-  'ai-automation': 'Automation',
-  'ai-seo': 'SEO',
-  'ai-design': 'Design',
-  'ai-search': 'Search',
-  'ai-notes': 'Notes',
-  'ai-music': 'Music',
-  'ai-presentation': 'Presentation',
-  'ai-research': 'Research',
-};
+const overall = overallScore(scores);
 const catSlug = f.category ?? '';
-const catLabel = categoryLabels[catSlug] ?? catSlug;
+const catLabel = categoryLabel(catSlug);
 
 const toolSlug = f.slug ?? '';
 const siteBase = Astro.site?.href ?? 'https://aipedia.wiki';
@@ -83,7 +67,7 @@ const peers = allTools
   .filter(t => t.data.category === f.category && (t.data.slug ?? t.id) !== (f.slug ?? toolSlug))
   .map(t => {
     const s = t.data.scores ?? { utility: 0, value: 0, moat: 0, longevity: 0 };
-    const avg = Math.round(((s.utility ?? 0) + (s.value ?? 0) + (s.moat ?? 0) + (s.longevity ?? 0)) / 4 * 10) / 10;
+    const avg = overallScore(s);
     return {
       slug: t.data.slug ?? t.id,
       title: t.data.title,
@@ -143,19 +127,19 @@ const verifiedStr = f.last_verified
 // highest-scoring tool in a category and "#N in {category}" for the rest.
 // Based on the same score as the homepage rail, so the signals match.
 const categoryPeers = allTools
-  .filter(t => t.data.category === f.category && t.data.status !== 'dead' && t.data.status !== 'retired' && t.data.status !== 'acquired')
+  .filter(t => t.data.category === f.category && isActiveToolStatus(t.data.status))
   .map(t => {
     const s = t.data.scores ?? {};
     return {
       slug: t.data.slug ?? t.id,
-      score: Math.round(((s.utility ?? 0) + (s.value ?? 0) + (s.moat ?? 0) + (s.longevity ?? 0)) / 4 * 10) / 10,
+      score: overallScore(s),
     };
   })
   .sort((a, b) => b.score - a.score);
 const categorySize = categoryPeers.length;
 const categoryRank = categoryPeers.findIndex(p => p.slug === (f.slug ?? toolSlug)) + 1;
 // Top pick only if score ties or beats the highest, AND the tool is active.
-const isTopPick = f.status !== 'dead' && f.status !== 'retired' && f.status !== 'acquired' && categoryRank === 1 && overall >= 7.5;
+const isTopPick = isActiveToolStatus(f.status) && categoryRank === 1 && overall >= 7.5;
 const isHighRank = categoryRank > 1 && categoryRank <= 3 && categorySize >= 6 && overall >= 7;
 const rankLabel = isTopPick
   ? `Top pick in ${catLabel}`
