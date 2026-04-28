@@ -26,7 +26,7 @@ const activeNews = isActive(['/news/', '/reports/', '/benchmarks/']);
     <!-- Brand lockup. Slightly larger logo (26px) + wordmark with a
          subtle live-dot after the TLD. The dot reinforces the homepage
          "verified today" trust signal right in the header. -->
-    <a href="/" class="nav-brand inline-flex items-center gap-2.5 no-underline hover:no-underline" aria-label="aipedia.wiki home">
+    <a href="/" class="nav-brand inline-flex items-center gap-2.5 no-underline hover:no-underline" aria-label="aipedia.wiki home" data-astro-prefetch="viewport">
       <span class="nav-logo-frame" aria-hidden="true">
         <img src="/brand/aipedia-logo-crystal-cyan-48.png" alt="" width="26" height="26" loading="eager" decoding="sync" />
       </span>
@@ -40,9 +40,9 @@ const activeNews = isActive(['/news/', '/reports/', '/benchmarks/']);
          accent bar. Core navigation stays compact; deeper workflow
          routes live in the drawer. -->
     <div class="hidden sm:flex items-center gap-1">
-      <a href="/categories/" class:list={['nav-link', activeExplore && 'nav-link-active']}>Explore</a>
-      <a href="/compare/" class:list={['nav-link', activeCompare && 'nav-link-active']}>Compare</a>
-      <a href="/news/" class:list={['nav-link', activeNews && 'nav-link-active']}>News</a>
+      <a href="/categories/" class:list={['nav-link', activeExplore && 'nav-link-active']} data-astro-prefetch="viewport">Explore</a>
+      <a href="/compare/" class:list={['nav-link', activeCompare && 'nav-link-active']} data-astro-prefetch="viewport">Compare</a>
+      <a href="/news/" class:list={['nav-link', activeNews && 'nav-link-active']} data-astro-prefetch="viewport">News</a>
 
       <button id="search-trigger" type="button" class="nav-search">
         <svg class="nav-search-icon" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true">
@@ -88,9 +88,9 @@ const activeNews = isActive(['/news/', '/reports/', '/benchmarks/']);
     </div>
 
     <nav class="py-3">
-      <a href="/categories/" class="block px-5 py-3 text-sm text-[var(--text-primary)] no-underline hover:bg-[var(--bg-card-hover)]">Explore Categories</a>
-      <a href="/compare/" class="block px-5 py-3 text-sm text-[var(--text-primary)] no-underline hover:bg-[var(--bg-card-hover)]">Compare Tools</a>
-      <a href="/news/" class="block px-5 py-3 text-sm text-[var(--text-primary)] no-underline hover:bg-[var(--bg-card-hover)]">Daily News</a>
+      <a href="/categories/" class="block px-5 py-3 text-sm text-[var(--text-primary)] no-underline hover:bg-[var(--bg-card-hover)]" data-astro-prefetch="viewport">Explore Categories</a>
+      <a href="/compare/" class="block px-5 py-3 text-sm text-[var(--text-primary)] no-underline hover:bg-[var(--bg-card-hover)]" data-astro-prefetch="viewport">Compare Tools</a>
+      <a href="/news/" class="block px-5 py-3 text-sm text-[var(--text-primary)] no-underline hover:bg-[var(--bg-card-hover)]" data-astro-prefetch="viewport">Daily News</a>
       <a href="/trends/" class="block px-5 py-3 text-sm text-[var(--text-primary)] no-underline hover:bg-[var(--bg-card-hover)]">Trend Analysis</a>
       <a href="/guides/" class="block px-5 py-3 text-sm text-[var(--text-primary)] no-underline hover:bg-[var(--bg-card-hover)]">Use Cases</a>
 

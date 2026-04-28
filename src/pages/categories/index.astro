@@ -6,6 +6,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import CategoryIcon from '../../components/CategoryIcon.astro';
 import { getCollection } from 'astro:content';
+import '../../styles/t2-canvas.css';
 
 const allCategories = await getCollection('categories');
 const allTools = await getCollection('tools');

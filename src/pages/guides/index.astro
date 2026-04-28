@@ -4,6 +4,7 @@
  */
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
+import '../../styles/t2-canvas.css';
 
 const allGuides = await getCollection('use-cases');
 const allTools = await getCollection('tools');

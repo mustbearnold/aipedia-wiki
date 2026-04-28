@@ -21,6 +21,7 @@ import BreadcrumbLD from '../../components/seo/BreadcrumbLD.astro';
 import CollectionPageLD from '../../components/seo/CollectionPageLD.astro';
 import ToolLogo from '../../components/ToolLogo.astro';
 import { getCollection } from 'astro:content';
+import '../../styles/p3-canvas.css';
 
 const entries = await getCollection('news');
 const allTools = await getCollection('tools');

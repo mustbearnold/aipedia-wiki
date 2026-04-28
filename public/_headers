@@ -27,6 +27,15 @@
 /pagefind/*
   Cache-Control: public, max-age=86400
 
+/logos/tools/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+/og/news/thumbs/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/home-news-ai-tools-intelligence.webp
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
 # Favicons + brand assets: shorter cache so future brand refreshes
 # propagate to the edge without requiring a manual Purge Everything.
 # 1 hour is long enough to be efficient, short enough that updates

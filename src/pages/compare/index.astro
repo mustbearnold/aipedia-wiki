@@ -8,6 +8,7 @@ import BreadcrumbLD from '../../components/seo/BreadcrumbLD.astro';
 import CollectionPageLD from '../../components/seo/CollectionPageLD.astro';
 import { getCollection } from 'astro:content';
 import logoManifest from '../../data/logo-manifest.json';
+import '../../styles/t2-canvas.css';
 
 const allComparisons = await getCollection('comparisons');
 const allTools = await getCollection('tools');
