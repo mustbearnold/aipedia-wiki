@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$69/month"
 status: active
 launched: 2017-08
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-04-29
+last_verified: 2026-04-29
 update_frequency: monthly
 seo_title: "DeepL: Features, Pricing & Review (April 2026)"
 meta_description: "DeepL Translator and DeepL Write run on a proprietary next-gen LLM as of April 2026. Free tier, Starter $10.49/mo, Advanced $34.49/mo, Ultimate $68.99/mo. API Free at 500K chars; API Pro pay-as-you-go. EU-based, no training on user data."
@@ -60,6 +60,10 @@ price_history:
 A Cologne-based translation and writing specialist. DeepL Translator handles text, document, and API translation across 33+ stable languages. DeepL Write refines grammar, tone, and phrasing in 19 languages. Both run on DeepL's proprietary next-gen LLM, trained specifically for translation rather than general chat.
 
 The moat is narrow but real. DeepL shows lower edit-distance than GPT-4 or Google Translate on Japanese, Chinese, and German pairs. The EU-hosted, no-training privacy posture also clears enterprise legal review without negotiation.
+
+## Recent developments
+
+- **April 28, 2026:** [Google Translate added AI pronunciation practice on Android](/news/2026-04-28-google-translate-ai-pronunciation-practice/). It is a consumer-language feature rather than a DeepL product change, but it raises the bar for translation tools that now compete on coaching, live conversation, and learning workflows, not only text conversion.
 
 ## System Verdict
 

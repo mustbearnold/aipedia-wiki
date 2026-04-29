@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2023-03
-last_updated: 2026-04-28
-last_verified: 2026-04-28
+last_updated: 2026-04-29
+last_verified: 2026-04-29
 update_frequency: monthly
 seo_title: "Claude: Features, Pricing & Review (2026)"
 meta_description: "Claude runs Opus 4.7 (April 16, 2026) as flagship, Sonnet 4.6, Haiku 4.5. Claude Design (April 17) added for prompt-to-prototype. 1M context, $5/$25 per MTok API. Free tier; Pro $20/mo."
@@ -102,6 +102,8 @@ Anthropic's AI assistant. **Opus 4.7** is the flagship as of **April 16, 2026**,
 
 ## Recent developments
 
+- **April 28:** [Claude for Creative Work adds connectors for Adobe, Blender, Ableton, Autodesk, and more](/news/2026-04-28-claude-creative-tool-connectors/). The update moves Claude deeper into design, 3D, audio, and live-visual production software through first-party connector surfaces.
+- **April 27:** [Adobe Firefly AI Assistant entered public beta](/news/2026-04-27-adobe-firefly-ai-assistant-public-beta/), with Adobe saying it is also working to bring its pro-grade creative tools into third-party AI surfaces such as Claude.
 - **April 27:** [Cursor and Claude were named in a reported PocketOS database-deletion incident](/news/2026-04-27-cursor-claude-database-deletion-incident/). The lesson is production guardrails: scoped credentials, immutable backups, and human approval for destructive actions.
 - **April 26:** [Anthropic presses agent-commerce controls in the press](/news/2026-04-26-anthropic-agent-commerce-press/), keeping permissions, merchant boundaries, and user accountability central to Claude's agent story.
 - **April 26:** [Anthropic outlines election-safeguard work](/news/2026-04-26-anthropic-election-safeguards/), reinforcing safety and policy posture as part of Claude's enterprise trust pitch.

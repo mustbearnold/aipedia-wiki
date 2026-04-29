@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2022-11
-last_updated: 2026-04-28
-last_verified: 2026-04-28
+last_updated: 2026-04-29
+last_verified: 2026-04-29
 update_frequency: monthly
 seo_title: "ChatGPT: Features, Pricing & Review (April 2026)"
 meta_description: "ChatGPT runs GPT-5.5 on paid tiers as of April 2026, with GPT-5.3/GPT-5.4 still present across lower-latency modes. Plus is $20/mo; Pro plans at $100 and $200/mo add heavier Codex coding-agent usage. DALL-E and Sora are retired."
@@ -160,6 +160,7 @@ Prices verified 2026-04-17 via [OpenAI pricing](https://chatgpt.com/pricing/), [
 
 ## Recent changes
 
+- **April 28, 2026:** [OpenAI brings GPT-5.5, Codex, and managed agents to Amazon Bedrock](/news/2026-04-28-openai-models-codex-managed-agents-aws/). ChatGPT remains the consumer surface, but OpenAI's enterprise model distribution now reaches AWS through limited previews.
 - **April 27, 2026:** [OpenAI and Microsoft made their model partnership non-exclusive](/news/2026-04-27-openai-microsoft-nonexclusive-partnership/). ChatGPT still ships through the Microsoft relationship, but OpenAI can now serve products across any cloud provider.
 - **April 27, 2026:** [Musk v. OpenAI trial opens with fraud claims dismissed](/news/2026-04-27-musk-openai-fraud-claims-dismissed/). No immediate product change, but governance risk remains relevant for enterprise buyers building on ChatGPT and the OpenAI API.
 - **April 27, 2026:** [OpenAI is reportedly exploring a 2028 AI agent phone](/news/2026-04-27-openai-ai-phone-2028-report/). Treat it as a supply-chain report, not a confirmed product, but it points to ChatGPT becoming a deeper device-level agent layer.

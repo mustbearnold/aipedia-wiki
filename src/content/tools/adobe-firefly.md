@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: $0-$199.99/month
 status: active
 launched: 2023-03
-last_updated: 2026-04-27
-last_verified: 2026-04-27
+last_updated: 2026-04-29
+last_verified: 2026-04-29
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -64,6 +64,8 @@ Trained only on licensed Adobe Stock and public domain content. Paid plans inclu
 
 ## Recent developments
 
+- **April 28, 2026:** [Anthropic adds Claude creative-tool connectors](/news/2026-04-28-claude-creative-tool-connectors/), including an Adobe for creativity connector that draws from 50+ Creative Cloud tools. This strengthens Firefly's role as an execution layer for chat-first creative workflows, but also means some Adobe work may begin inside Claude rather than Firefly itself.
+- **April 27, 2026:** [Firefly AI Assistant enters public beta](/news/2026-04-27-adobe-firefly-ai-assistant-public-beta/). Eligible Creative Cloud Pro and paid Firefly users can now test Adobe's creative agent for multi-step workflows across Firefly, Photoshop, Lightroom, Premiere, and Express.
 - **April 21, 2026:** [Adobe + NVIDIA ship agentic creative workflow at Adobe Summit](/news/2026-04-21-adobe-nvidia-agents-adobe-summit-wpp/). Agents built on NVIDIA's Agent Toolkit and Nemotron models drive end-to-end production across Firefly, Photoshop, and Premiere. Live WPP advertising demo; Verizon 5G powers on-set media capture. Reframes Firefly as the execution step inside a Nemotron-driven creative pipeline.
 - **April 21, 2026:** [OpenAI launches ChatGPT Images 2.0 and gpt-image-2](/news/2026-04-21-openai-chatgpt-images-2-gpt-image-2/) with native reasoning, 4K output, multilingual text rendering across 12+ languages. Direct pressure on Firefly's text-in-image and infographic capabilities; Firefly's IP-indemnification and Adobe-stack integration differentiators remain intact.
 - **April 15, 2026:** [Firefly AI Assistant launches](/news/2026-04-15-adobe-firefly-ai-assistant/). Conversational agent orchestrates multi-step tasks across Photoshop, Premiere, Lightroom, Illustrator, Express, and Firefly. Third-party Claude integration confirmed. Precision Flow, AI Markup, Audio Enhance Speech live same day. Public beta in the coming weeks; full demos at Adobe Summit April 19-22 Las Vegas.
