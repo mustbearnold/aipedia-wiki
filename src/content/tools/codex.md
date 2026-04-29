@@ -69,6 +69,7 @@ Bundled with every paid ChatGPT tier. Pro tiers get 5x to 20x the Codex usage of
 
 ## Recent developments (March-April 2026)
 
+- **April 29, 2026:** [Agent skill libraries are becoming the new coding-agent workflow layer](/news/2026-04-29-agent-skills-ecosystem-github-trending/). Codex benefits from the same shift toward reusable local skills, templates, and MCP-aware workflow modules instead of one-off prompts.
 - **April 28, 2026:** [Codex comes to Amazon Bedrock as part of the expanded OpenAI/AWS partnership](/news/2026-04-28-openai-models-codex-managed-agents-aws/). Limited preview starts with Codex CLI, the desktop app, and the VS Code extension configured to use Bedrock as the provider.
 - **April 27, 2026:** [OpenAI and Microsoft made their model partnership non-exclusive](/news/2026-04-27-openai-microsoft-nonexclusive-partnership/). Codex remains part of the OpenAI product stack, but enterprise deployment optionality around OpenAI products now matters more than Azure exclusivity alone.
 - **April 27, 2026:** [Musk v. OpenAI trial opens with fraud claims dismissed](/news/2026-04-27-musk-openai-fraud-claims-dismissed/). No immediate Codex feature changes, but governance disclosures and remedies could still affect OpenAI's operating model.

@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: Free hub access; Pro/Team plans and paid compute/storage
 status: active
 launched: 2016
-last_updated: 2026-04-27
-last_verified: 2026-04-27
+last_updated: 2026-04-29
+last_verified: 2026-04-29
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -47,6 +47,11 @@ quick_answer: >-
 Hugging Face is the collaboration layer for open AI. The hub hosts models, datasets, papers, demos, evaluations, and production deployment options. It is part GitHub for AI artifacts, part model marketplace, part infrastructure platform.
 
 If a model matters in open AI, it usually has a Hugging Face page. That makes the site hard to avoid for researchers, developers, and product teams comparing model options.
+
+## Recent developments
+
+- **April 28, 2026:** [NVIDIA launched Nemotron 3 Nano Omni](/news/2026-04-28-nvidia-nemotron-3-nano-omni/), with Hugging Face serving as one of the primary model-distribution surfaces for the open multimodal agent model.
+- **April 28, 2026:** [Mistral 3 shipped with Large 3 and new Ministral models](/news/2026-04-28-mistral-3-open-model-release/), reinforcing Hugging Face's role as the discovery layer for open model releases before teams choose an inference provider.
 
 ## System Verdict
 

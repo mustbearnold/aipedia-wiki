@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "$0.10-$0.90/M tokens serverless / $2.90-$9/hr on-demand GPU"
 status: active
 launched: 2022-09
-last_updated: 2026-04-18
-last_verified: 2026-04-18
+last_updated: 2026-04-29
+last_verified: 2026-04-29
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -44,6 +44,10 @@ quick_answer: >-
 # Fireworks AI
 
 A production-grade inference cloud for open-source generative AI. 400+ models across LLM, image, vision, audio, and embeddings. Serverless endpoints with no cold starts; on-demand GPU deployment for dedicated capacity. Built on Nvidia Blackwell silicon for 10× better cost-per-token economics than prior-gen platforms.
+
+## Recent developments
+
+- **April 28, 2026:** [Mistral 3 shipped with Large 3 and new Ministral models](/news/2026-04-28-mistral-3-open-model-release/). Mistral listed Fireworks among the platforms where the new family is available, which matters for teams benchmarking open models on managed inference.
 
 ## System Verdict
 

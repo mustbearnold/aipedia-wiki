@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2020-11
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-04-29
+last_verified: 2026-04-29
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -49,6 +49,10 @@ quick_answer: >-
 You.com is an AI search platform that pivoted toward enterprise research agents in 2025-2026. The consumer search surface remains, but the strategic product is now ARI (Advanced Research and Insights), a research agent that produces multi-step cited reports.
 
 Enterprise AI Solutions combines internal data with live web intelligence. Custom agents, private RAG, and permission controls ship to orgs that contract for it.
+
+## Recent developments
+
+- **April 24, 2026:** [A retrieval-poisoning demo showed how fake web evidence can make AI search systems repeat false claims](/news/2026-04-24-retrieval-poisoning-world-championship-demo/). You.com's ARI and cited-search positioning depends on provenance quality, especially when enterprise users research low-coverage topics.
 
 ## System Verdict
 

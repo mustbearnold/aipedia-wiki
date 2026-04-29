@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: Free models plus per-token model pricing
 status: active
 launched: 2023
-last_updated: 2026-04-27
-last_verified: 2026-04-27
+last_updated: 2026-04-29
+last_verified: 2026-04-29
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -47,6 +47,11 @@ quick_answer: >-
 OpenRouter is a unified API layer for LLMs. Developers point an OpenAI-compatible client at OpenRouter, choose a model slug, and can route across providers without rewriting application code.
 
 The product is useful because the model market changes faster than most app code should. A team can compare [ChatGPT](/tools/chatgpt/), [Claude](/tools/claude/), [Gemini](/tools/gemini/), [DeepSeek](/tools/deepseek/), [Qwen](/tools/qwen/), and smaller open models behind one billing account and one request schema.
+
+## Recent developments
+
+- **April 28, 2026:** [NVIDIA launched Nemotron 3 Nano Omni](/news/2026-04-28-nvidia-nemotron-3-nano-omni/) with OpenRouter listed as one of the access routes for the open multimodal agent model.
+- **April 28, 2026:** [Mistral 3 shipped with Large 3 and new Ministral models](/news/2026-04-28-mistral-3-open-model-release/), giving OpenRouter users another open-model family to test against Llama, Qwen, DeepSeek, Gemma, and closed frontier models.
 
 ## System Verdict
 

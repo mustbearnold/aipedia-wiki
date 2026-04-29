@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: "€0-€14.99/month"
 status: active
 launched: 2023-09
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-04-29
+last_verified: 2026-04-29
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -59,6 +59,10 @@ Paris-based AI lab founded in 2023 by former DeepMind and Meta researchers. Ship
 EU-incorporated, EU-datacenter hosted, and governed under French law. For any European organization under GDPR Article 44 or the EU AI Act, Mistral is the default credible alternative to U.S.-based providers.
 
 The March 2026 product cycle was Mistral's busiest ever. Mistral Small 4 (March 16), Forge (March 17), Voxtral TTS (March 23), Leanstral, and Moderation 2603 all shipped within two weeks.
+
+## Recent developments
+
+- **April 28, 2026:** [Mistral 3 shipped with Mistral Large 3 and new Ministral edge models](/news/2026-04-28-mistral-3-open-model-release/). The release adds an Apache 2.0 model family across Mistral AI Studio, Hugging Face, OpenRouter, Fireworks, Together AI, Bedrock, Azure Foundry, and other platforms.
 
 ## System Verdict
 

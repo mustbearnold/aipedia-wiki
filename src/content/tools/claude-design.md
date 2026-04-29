@@ -57,6 +57,7 @@ The differentiator: Claude Design reads your **existing codebase and design file
 
 ## Recent developments
 
+- **April 29, 2026:** [Anthropic updated its Responsible Scaling Policy around external review](/news/2026-04-29-anthropic-rsp-external-review-update/). Claude Design is not a high-risk deployment surface by itself, but it inherits the broader Claude governance story that enterprise design and product teams will ask about.
 - **April 28, 2026:** [Claude for Creative Work adds connectors for Adobe, Blender, Ableton, Autodesk, and more](/news/2026-04-28-claude-creative-tool-connectors/). Claude Design remains the prompt-to-prototype surface, while the new connectors widen Claude's reach into the tools where finished creative assets and production scripts live.
 - **April 25, 2026:** [AI News Desk, April 25](/news/2026-04-25-ai-news-catchup/) tracked Project Deal and Google-Anthropic financing signals around Claude's broader product ecosystem.
 - **April 24, 2026:** [Google reportedly plans up to $40B in cash and compute investment for Anthropic](/news/2026-04-24-google-anthropic-40b-investment/), which would expand the compute base behind Claude products including Claude Design.

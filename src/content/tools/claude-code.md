@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "$20-$200/month"
 status: active
 launched: 2025-02
-last_updated: 2026-04-28
-last_verified: 2026-04-28
+last_updated: 2026-04-29
+last_verified: 2026-04-29
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -62,6 +62,8 @@ Claude Opus 4.7 (released April 16, 2026) is the default backing model. Access i
 
 ## Recent developments (April 2026)
 
+- **April 29:** [Agent skill libraries are becoming a coding-agent workflow layer](/news/2026-04-29-agent-skills-ecosystem-github-trending/). Claude Code is one of the clearest beneficiaries because its users already treat local instructions, skills, hooks, and MCP integrations as versioned engineering assets.
+- **April 29:** [Anthropic updated its Responsible Scaling Policy around external review](/news/2026-04-29-anthropic-rsp-external-review-update/). Claude Code buyers should track these governance changes because coding agents increasingly operate with filesystem, terminal, and tool permissions.
 - **April 27:** [Cursor and Claude were named in a reported PocketOS database-deletion incident](/news/2026-04-27-cursor-claude-database-deletion-incident/). Claude Code users should treat it as a reminder that prompt rules are not a security boundary for production infrastructure.
 - **April 25:** [AI News Desk, April 25](/news/2026-04-25-ai-news-catchup/) tied Claude Code's backdrop to GPT-5.5 API access, Copilot distribution, Project Deal, and Google-Anthropic financing.
 - **April 24:** [Anthropic and NEC announce a 30,000-employee Claude rollout](/news/2026-04-24-anthropic-nec-ai-engineering-workforce/). Claude Code is part of the partnership surface for software-engineering productivity, alongside Claude and Claude Cowork.

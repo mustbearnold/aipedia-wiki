@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$39/user/month"
 status: active
 launched: 2021-06
-last_updated: 2026-04-28
-last_verified: 2026-04-28
+last_updated: 2026-04-29
+last_verified: 2026-04-29
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -98,6 +98,8 @@ Claude Opus 4.7 went generally available inside Copilot on April 16, 2026, withi
 On April 24, 2026, GitHub's Copilot interaction-data policy took effect for Free, Pro, and Pro+ accounts: prompts, outputs, code snippets, and associated context may be used for model training unless individual users opt out. Copilot Business and Enterprise remain excluded from that training path.
 
 On April 27, 2026, GitHub announced that [Copilot will move to usage-based billing on June 1](/news/2026-04-27-github-copilot-usage-based-billing/). Premium requests are being replaced by GitHub AI Credits, and private-repo Copilot code review will begin consuming GitHub Actions minutes.
+
+Also on April 27, GitHub said [Copilot cloud agent now starts 20% faster when repositories use Actions custom images](/news/2026-04-27-github-copilot-cloud-agent-faster-start/). On April 29, [the rise of agent skill libraries](/news/2026-04-29-agent-skills-ecosystem-github-trending/) showed the workflow layer Copilot now competes in: reusable instructions, agent templates, and versioned team habits rather than one-off prompts.
 
 The April 26 news scan added five Copilot-specific updates: [BYOK in VS Code](/news/2026-04-26-github-copilot-byok-vscode/), [cloud-agent metrics](/news/2026-04-26-github-copilot-cloud-agent-metrics/), [Jira-agent controls](/news/2026-04-26-github-copilot-jira-agent-controls/), [PR chat improvements](/news/2026-04-26-github-copilot-pr-chat-improvements/), and [web debugging](/news/2026-04-26-github-copilot-web-debugging/). Together, they make Copilot look less like autocomplete plus chat and more like an admin-governed coding-agent system: managers get metrics, admins get controls, developers get PR/debugging workflow improvements, and power users get more model-key flexibility in VS Code.
 

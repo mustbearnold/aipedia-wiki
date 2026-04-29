@@ -102,6 +102,7 @@ Anthropic's AI assistant. **Opus 4.7** is the flagship as of **April 16, 2026**,
 
 ## Recent developments
 
+- **April 29:** [Anthropic updated its Responsible Scaling Policy around external review](/news/2026-04-29-anthropic-rsp-external-review-update/). This matters for Claude because enterprise buyers now judge the assistant not only by model quality, but by how Anthropic handles capability thresholds, external scrutiny, and deployment controls.
 - **April 28:** [Claude for Creative Work adds connectors for Adobe, Blender, Ableton, Autodesk, and more](/news/2026-04-28-claude-creative-tool-connectors/). The update moves Claude deeper into design, 3D, audio, and live-visual production software through first-party connector surfaces.
 - **April 27:** [Adobe Firefly AI Assistant entered public beta](/news/2026-04-27-adobe-firefly-ai-assistant-public-beta/), with Adobe saying it is also working to bring its pro-grade creative tools into third-party AI surfaces such as Claude.
 - **April 27:** [Cursor and Claude were named in a reported PocketOS database-deletion incident](/news/2026-04-27-cursor-claude-database-deletion-incident/). The lesson is production guardrails: scoped credentials, immutable backups, and human approval for destructive actions.

@@ -11,8 +11,8 @@ pricing_model: paid
 price_range: Serverless token pricing; dedicated H100 from $3.99/hr; Team/enterprise usage varies
 status: active
 launched: 2022
-last_updated: 2026-04-27
-last_verified: 2026-04-27
+last_updated: 2026-04-29
+last_verified: 2026-04-29
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -47,6 +47,10 @@ quick_answer: >-
 Together AI provides infrastructure for building on open and frontier-adjacent models: serverless inference APIs, dedicated GPU deployments, on-demand clusters, fine-tuning, and sandboxed code execution.
 
 It overlaps with [Fireworks AI](/tools/fireworks-ai/), [Groq](/tools/groq/), [Fal.ai](/tools/fal-ai/), [OpenRouter](/tools/openrouter/), and cloud GPU providers. The difference is breadth. Together is not only an inference endpoint. It is closer to an AI compute platform for teams that train, tune, evaluate, and serve models.
+
+## Recent developments
+
+- **April 28, 2026:** [Mistral 3 shipped with Large 3 and new Ministral models](/news/2026-04-28-mistral-3-open-model-release/). Mistral listed Together AI among the available platforms, adding another open-model family for teams to benchmark on production inference.
 
 ## System Verdict
 
