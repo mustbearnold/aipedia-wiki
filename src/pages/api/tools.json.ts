@@ -11,8 +11,10 @@ export const GET: APIRoute = async () => {
       const scores = d.scores ?? {};
       const avg = overallScore(scores);
 
+      const slug = d.slug ?? tool.id;
+
       return {
-        slug: d.slug ?? tool.id,
+        slug,
         title: d.title,
         tagline: d.tagline ?? null,
         category: d.category ?? null,
@@ -33,7 +35,9 @@ export const GET: APIRoute = async () => {
         not_best_for: d.not_best_for ?? [],
         last_updated: d.last_updated ?? null,
         last_verified: d.last_verified ?? null,
-        page_url: `https://aipedia.wiki/tools/${d.slug ?? tool.id}/`,
+        tags: d.tags ?? [],
+        logo_url: `/logos/tools/${slug}.png`,
+        page_url: `https://aipedia.wiki/tools/${slug}/`,
       };
     })
     .sort((a, b) => (b.scores.overall ?? 0) - (a.scores.overall ?? 0));

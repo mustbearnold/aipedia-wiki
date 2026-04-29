@@ -19,6 +19,7 @@ const tools = allTools
       company: tool.data.company ?? '',
       tagline: tool.data.tagline ?? tool.data.meta_description ?? '',
       priceRange: tool.data.price_range ?? tool.data.pricing_model ?? '',
+      pricingModel: tool.data.pricing_model ?? '',
       status: tool.data.status ?? 'active',
       score: Math.round(score * 10) / 10,
       tags: tool.data.tags ?? [],
@@ -107,20 +108,27 @@ const totalTools = tools.length;
           ].join(' ').toLowerCase();
 
           return (
-            <a
+            <article
               class="search-index-card"
-              href={`/tools/${tool.slug}/`}
               data-tool-card
               data-search-text={searchText}
             >
-              <ToolLogo slug={tool.slug} title={tool.title} size={44} />
-              <span class="search-index-card-copy">
-                <span class="search-index-card-meta">{tool.category || 'tool'} · {tool.score}/10</span>
-                <strong>{tool.title}</strong>
-                <span>{tool.tagline}</span>
-              </span>
-              <span class="search-index-card-end" aria-hidden="true">-&gt;</span>
-            </a>
+              <a class="search-index-card-link" href={`/tools/${tool.slug}/`}>
+                <ToolLogo slug={tool.slug} title={tool.title} size={44} />
+                <span class="search-index-card-copy">
+                  <span class="search-index-card-meta">{tool.category || 'tool'} · {tool.score}/10</span>
+                  <strong>{tool.title}</strong>
+                  <span>{tool.tagline}</span>
+                </span>
+                <span class="search-index-card-end" aria-hidden="true">-&gt;</span>
+              </a>
+              <div class="search-index-card-foot">
+                <span>{tool.priceRange || tool.pricingModel || 'Pricing varies'}</span>
+                <button type="button" data-compare-add={tool.slug} aria-pressed="false">
+                  <span data-compare-label>Compare</span>
+                </button>
+              </div>
+            </article>
           );
         })}
       </div>
@@ -412,18 +420,14 @@ const totalTools = tools.length;
 
     .search-index-card {
       position: relative;
-      display: grid;
-      grid-template-columns: 44px minmax(0, 1fr) auto;
-      gap: 14px;
-      align-items: center;
-      min-height: 118px;
+      display: flex;
+      flex-direction: column;
+      min-height: 144px;
       border: 1px solid var(--p3-line);
       border-radius: 8px;
       background: rgba(8, 13, 24, 0.62);
       color: var(--p3-fg);
       overflow: hidden;
-      padding: 18px;
-      text-decoration: none;
       transition: border-color 150ms ease, background 150ms ease, transform 150ms ease, box-shadow 150ms ease;
     }
 
@@ -438,17 +442,33 @@ const totalTools = tools.length;
     }
 
     .search-index-card:hover,
-    .search-index-card:focus-visible {
+    .search-index-card:focus-within {
       border-color: rgba(34, 211, 238, 0.36);
       background: var(--p3-surface-hover);
       box-shadow: 0 18px 38px -30px rgba(34, 211, 238, 0.55);
-      outline: none;
       transform: translateY(-1px);
     }
 
     .search-index-card:hover::before,
-    .search-index-card:focus-visible::before {
+    .search-index-card:focus-within::before {
       opacity: 1;
+    }
+
+    .search-index-card-link {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 44px minmax(0, 1fr) auto;
+      gap: 14px;
+      align-items: center;
+      color: inherit;
+      padding: 18px 18px 12px;
+      text-decoration: none;
+    }
+
+    .search-index-card-link:focus-visible {
+      outline: 2px solid rgba(34, 211, 238, 0.48);
+      outline-offset: -2px;
     }
 
     .search-index-card-copy {
@@ -493,6 +513,35 @@ const totalTools = tools.length;
       color: var(--p3-accent-text);
       font-size: 18px;
       font-weight: 900;
+    }
+
+    .search-index-card-foot {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-top: auto;
+      border-top: 1px solid var(--p3-line);
+      padding: 10px 12px 12px 18px;
+    }
+
+    .search-index-card-foot > span {
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      color: var(--p3-subtle);
+      font-size: 11.5px;
+      font-weight: 850;
+    }
+
+    .search-index-card-foot [data-compare-add] {
+      min-height: 30px;
+      border-radius: 7px;
+      font-size: 11.5px;
+      padding: 0 9px;
     }
 
     .search-index-empty {
@@ -575,9 +624,12 @@ const totalTools = tools.length;
       }
 
       .search-index-card {
-        grid-template-columns: 40px minmax(0, 1fr) auto;
         min-height: 104px;
-        padding: 14px;
+      }
+
+      .search-index-card-link {
+        grid-template-columns: 40px minmax(0, 1fr) auto;
+        padding: 14px 14px 10px;
       }
 
       .search-index-card strong {

@@ -5,6 +5,7 @@
  * noindex — not meant for public discovery.
  */
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
 
 // Use import.meta.glob so Vite/Rollup doesn't fail the build when these
 // generated files are absent. They populate locally via `npm run wiki:refresh`.
@@ -91,6 +92,16 @@ for (const t of allTools) {
 
 const urgentItems = queue?.items.filter(i => i.signal_triggered).slice(0, 10) ?? [];
 const stalestItems = queue?.items.slice(0, 15) ?? [];
+const contentTools = await getCollection('tools');
+const contentNews = await getCollection('news');
+const activeContentTools = contentTools.filter((tool) => !['dead', 'retired', 'acquired'].includes(String(tool.data.status ?? '').toLowerCase()));
+const contentHealth = {
+  missingFacts: activeContentTools.filter((tool) => !tool.data.facts || Object.keys(tool.data.facts).length === 0),
+  missingBestFor: activeContentTools.filter((tool) => !Array.isArray(tool.data.best_for) || tool.data.best_for.length === 0),
+  missingNotBestFor: activeContentTools.filter((tool) => !Array.isArray(tool.data.not_best_for) || tool.data.not_best_for.length === 0),
+  oldVerification: activeContentTools.filter((tool) => daysSince(tool.data.last_verified ? String(tool.data.last_verified) : null) > 90),
+  unsourcedNews: contentNews.filter((item) => !Array.isArray(item.data.sources) || item.data.sources.length === 0),
+};
 ---
 
 <BaseLayout title="Wiki Health — Admin" description="Internal truth-maintenance dashboard (noindex)">
@@ -126,6 +137,42 @@ const stalestItems = queue?.items.slice(0, 15) ?? [];
         <div class="text-xs opacity-60 mt-1">needs verification</div>
       </div>
     </div>
+
+    <section class="mb-10">
+      <h2 class="text-xl font-semibold mb-3">Live Content Health</h2>
+      <p class="text-sm opacity-70 mb-4">Computed from <code>src/content</code> during the build, independent of generated audit JSON.</p>
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-3 mb-4">
+        <div class="rounded-lg border p-4" style="border-color: var(--border);">
+          <div class="text-xs opacity-60 uppercase tracking-wide">No Facts</div>
+          <div class="text-2xl font-bold">{contentHealth.missingFacts.length}</div>
+        </div>
+        <div class="rounded-lg border p-4" style="border-color: var(--border);">
+          <div class="text-xs opacity-60 uppercase tracking-wide">No Best For</div>
+          <div class="text-2xl font-bold">{contentHealth.missingBestFor.length}</div>
+        </div>
+        <div class="rounded-lg border p-4" style="border-color: var(--border);">
+          <div class="text-xs opacity-60 uppercase tracking-wide">No Skip If</div>
+          <div class="text-2xl font-bold">{contentHealth.missingNotBestFor.length}</div>
+        </div>
+        <div class="rounded-lg border p-4" style="border-color: var(--border);">
+          <div class="text-xs opacity-60 uppercase tracking-wide">90d Verify</div>
+          <div class="text-2xl font-bold">{contentHealth.oldVerification.length}</div>
+        </div>
+        <div class="rounded-lg border p-4" style="border-color: var(--border);">
+          <div class="text-xs opacity-60 uppercase tracking-wide">Unsourced News</div>
+          <div class="text-2xl font-bold">{contentHealth.unsourcedNews.length}</div>
+        </div>
+      </div>
+      <div class="rounded-lg border p-4" style="border-color: var(--border);">
+        <div class="text-sm font-semibold mb-2">Next cleanup queue</div>
+        <div class="flex flex-wrap gap-2 text-xs">
+          {contentHealth.missingFacts.slice(0, 10).map((tool) => (
+            <a href={`/tools/${tool.data.slug || tool.id.replace(/\.md$/, '')}/`} class="rounded-full border px-3 py-1" style="border-color: var(--border);">{tool.data.title}</a>
+          ))}
+          {contentHealth.missingFacts.length === 0 && <span class="opacity-70">No missing fact ledgers in active tools.</span>}
+        </div>
+      </div>
+    </section>
 
     {/* Stale queue */}
     {queue && queue.total > 0 && (

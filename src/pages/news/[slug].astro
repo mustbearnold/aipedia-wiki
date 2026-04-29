@@ -2,6 +2,7 @@
 import { getCollection, render } from 'astro:content';
 import ArticlePlusLayout from '../../layouts/ArticlePlusLayout.astro';
 import RelatedToolsStrip from '../../components/RelatedToolsStrip.astro';
+import NewsImpactBox from '../../components/NewsImpactBox.astro';
 
 export async function getStaticPaths() {
   const entries = await getCollection('news');
@@ -28,6 +29,18 @@ const severityBadge: Record<string, { text: string; color: string }> = {
 const sev = (entry.data.severity as string) || 'minor';
 const badge = severityBadge[sev] ?? severityBadge.minor;
 const sources = Array.isArray(entry.data.sources) ? entry.data.sources.filter((source) => source?.url) : [];
+const allTools = await getCollection('tools');
+const toolsBySlug = new Map(
+  allTools.map((tool) => {
+    const toolSlug = tool.data.slug || tool.id.replace(/\.md$/, '').replace(/\\/g, '/');
+    return [toolSlug, { slug: toolSlug, title: tool.data.title }];
+  })
+);
+const affectedSlugs = Array.from(new Set([
+  ...(Array.isArray(entry.data.related_tools) ? entry.data.related_tools : []),
+  ...(Array.isArray(entry.data.affects) ? entry.data.affects : []),
+])).filter((toolSlug) => toolsBySlug.has(toolSlug));
+const affectedTools = affectedSlugs.map((toolSlug) => toolsBySlug.get(toolSlug)!);
 
 function sourceLabel(source: { url: string; title?: string }): string {
   if (source.title) return source.title;
@@ -36,6 +49,20 @@ function sourceLabel(source: { url: string; title?: string }): string {
   } catch {
     return source.url;
   }
+}
+
+function sourceHost(source: { url: string }): string {
+  try {
+    return new URL(source.url).hostname.replace(/^www\./, '');
+  } catch {
+    return '';
+  }
+}
+
+function newsDate(value: unknown): string {
+  if (!value) return '';
+  const d = value instanceof Date ? value : new Date(String(value));
+  return isNaN(d.getTime()) ? String(value) : d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
 }
 ---
 
@@ -95,6 +122,14 @@ function sourceLabel(source: { url: string; title?: string }): string {
     const slugs = (explicit.length > 0 ? explicit : affects).slice(0, 4);
     return slugs.length > 0 ? <RelatedToolsStrip slugs={slugs} /> : null;
   })()}
+  <NewsImpactBox
+    severity={sev}
+    date={newsDate(entry.data.date)}
+    summary={entry.data.summary ?? ''}
+    tools={affectedTools}
+    categories={entry.data.categories ?? []}
+    sources={sources}
+  />
   <Content />
   {sources.length > 0 && (
     <section class="sources-callout not-prose mt-8 rounded-xl border border-[var(--border)] bg-[var(--bg-card)] p-5" aria-labelledby="sources">
@@ -112,7 +147,16 @@ function sourceLabel(source: { url: string; title?: string }): string {
       <ol class="mt-4 space-y-2 pl-5 text-sm text-[var(--text-secondary)]">
         {sources.map((source) => (
           <li>
-            <a href={source.url} target="_blank" rel="noopener noreferrer" class="text-[var(--accent-primary)] underline decoration-dotted underline-offset-4 hover:decoration-solid">
+            <a
+              href={source.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-[var(--accent-primary)] underline decoration-dotted underline-offset-4 hover:decoration-solid"
+              data-source-preview
+              data-source-title={sourceLabel(source)}
+              data-source-host={sourceHost(source)}
+              data-source-kind="News source"
+            >
               {sourceLabel(source)}
             </a>
           </li>

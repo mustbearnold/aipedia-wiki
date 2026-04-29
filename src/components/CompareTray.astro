@@ -1,0 +1,331 @@
+---
+/**
+ * Persistent compare tray. Any button with data-compare-add="{slug}"
+ * adds a tool to the tray and points users into /compare/build/.
+ */
+---
+
+<aside id="compare-tray" class="compare-tray" aria-live="polite" aria-label="Comparison tray" data-pagefind-ignore hidden>
+  <div class="compare-tray-inner">
+    <div class="compare-tray-head">
+      <span class="compare-tray-kicker">Compare</span>
+      <strong><span data-compare-count>0</span>/4 selected</strong>
+    </div>
+    <div class="compare-tray-items" data-compare-items></div>
+    <div class="compare-tray-actions">
+      <button type="button" class="compare-tray-clear" data-compare-clear>Clear</button>
+      <a href="/compare/build/" class="compare-tray-open" data-compare-open>Open comparison</a>
+    </div>
+  </div>
+</aside>
+
+<style is:global>
+  .compare-tray {
+    position: fixed;
+    z-index: 110;
+    left: 50%;
+    bottom: max(16px, env(safe-area-inset-bottom));
+    width: min(920px, calc(100vw - 24px));
+    transform: translateX(-50%) translateY(14px);
+    opacity: 0;
+    transition: opacity 160ms ease, transform 160ms ease;
+  }
+
+  .compare-tray.is-visible {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  .compare-tray-inner {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    gap: 12px;
+    align-items: center;
+    border: 1px solid color-mix(in srgb, var(--accent-primary) 34%, var(--border));
+    border-radius: 8px;
+    background:
+      linear-gradient(135deg, rgba(34, 211, 238, 0.10), rgba(94, 234, 212, 0.07)),
+      color-mix(in srgb, var(--bg-card) 94%, #020617);
+    box-shadow: 0 18px 60px -30px rgba(0, 0, 0, 0.72);
+    padding: 10px;
+  }
+
+  .compare-tray-head {
+    display: grid;
+    gap: 2px;
+    padding-left: 4px;
+  }
+
+  .compare-tray-kicker {
+    color: var(--accent-primary-text);
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .compare-tray-head strong {
+    color: var(--text-primary);
+    font-size: 12px;
+  }
+
+  .compare-tray-items {
+    display: flex;
+    gap: 7px;
+    min-width: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .compare-tray-items::-webkit-scrollbar {
+    display: none;
+  }
+
+  .compare-tray-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    min-width: 0;
+    max-width: 180px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--bg-primary) 76%, transparent);
+    color: var(--text-primary);
+    padding: 5px 7px 5px 5px;
+  }
+
+  .compare-tray-pill img {
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+    object-fit: contain;
+    background: var(--bg-card);
+  }
+
+  .compare-tray-pill span {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 12px;
+    font-weight: 800;
+  }
+
+  .compare-tray-pill button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border: 0;
+    border-radius: 999px;
+    background: transparent;
+    color: var(--text-muted);
+    cursor: pointer;
+    font: inherit;
+    line-height: 1;
+  }
+
+  .compare-tray-pill button:hover,
+  .compare-tray-pill button:focus-visible {
+    background: var(--bg-card-hover);
+    color: var(--text-primary);
+    outline: none;
+  }
+
+  .compare-tray-actions {
+    display: inline-flex;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .compare-tray-clear,
+  .compare-tray-open,
+  [data-compare-add] {
+    min-height: 36px;
+    border-radius: 8px;
+    font: inherit;
+    font-size: 12px;
+    font-weight: 850;
+    letter-spacing: 0;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .compare-tray-clear {
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--text-secondary);
+    padding: 0 11px;
+  }
+
+  .compare-tray-open {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid rgba(34, 211, 238, 0.42);
+    background: var(--accent-primary);
+    color: #061017;
+    padding: 0 13px;
+  }
+
+  [data-compare-add] {
+    border: 1px solid rgba(34, 211, 238, 0.28);
+    background: rgba(34, 211, 238, 0.08);
+    color: var(--accent-primary-text);
+    padding: 0 11px;
+  }
+
+  [data-compare-add]:hover,
+  [data-compare-add]:focus-visible,
+  [data-compare-add].is-compared {
+    border-color: rgba(34, 211, 238, 0.52);
+    background: rgba(34, 211, 238, 0.16);
+    outline: none;
+  }
+
+  html.light .compare-tray-inner {
+    box-shadow: 0 18px 46px -28px rgba(15, 23, 42, 0.34);
+  }
+
+  @media (max-width: 760px) {
+    .compare-tray-inner {
+      grid-template-columns: 1fr;
+    }
+
+    .compare-tray-actions {
+      justify-content: stretch;
+    }
+
+    .compare-tray-clear,
+    .compare-tray-open {
+      flex: 1;
+      justify-content: center;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .compare-tray {
+      transition: none;
+    }
+  }
+</style>
+
+<script is:inline>
+  (function () {
+    const root = document.getElementById('compare-tray');
+    if (!root) return;
+
+    const KEY = 'aipedia-compare-tray';
+    const MAX = 4;
+    const countEl = root.querySelector('[data-compare-count]');
+    const itemsEl = root.querySelector('[data-compare-items]');
+    const openLink = root.querySelector('[data-compare-open]');
+    const clearBtn = root.querySelector('[data-compare-clear]');
+    let catalogPromise = null;
+    let catalog = new Map();
+    let slugs = read();
+
+    function read() {
+      try {
+        const raw = localStorage.getItem(KEY);
+        const parsed = raw ? JSON.parse(raw) : [];
+        return Array.isArray(parsed) ? parsed.filter(Boolean).slice(0, MAX) : [];
+      } catch (_) {
+        return [];
+      }
+    }
+
+    function write() {
+      try {
+        localStorage.setItem(KEY, JSON.stringify(slugs));
+      } catch (_) {}
+    }
+
+    function loadCatalog() {
+      if (catalogPromise) return catalogPromise;
+      catalogPromise = fetch('/api/tools.json', { credentials: 'same-origin' })
+        .then((res) => (res.ok ? res.json() : Promise.reject(new Error('tools api failed'))))
+        .then((data) => {
+          catalog = new Map((data.tools || []).map((tool) => [tool.slug, tool]));
+          return catalog;
+        })
+        .catch(() => catalog);
+      return catalogPromise;
+    }
+
+    function escapeHtml(value) {
+      return String(value || '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+    }
+
+    function add(slug) {
+      if (!slug) return;
+      slugs = slugs.filter((item) => item !== slug);
+      slugs.unshift(slug);
+      slugs = slugs.slice(0, MAX);
+      write();
+      render();
+    }
+
+    function remove(slug) {
+      slugs = slugs.filter((item) => item !== slug);
+      write();
+      render();
+    }
+
+    function buttonState() {
+      document.querySelectorAll('[data-compare-add]').forEach((btn) => {
+        const slug = btn.getAttribute('data-compare-add');
+        const selected = slugs.includes(slug);
+        btn.classList.toggle('is-compared', selected);
+        btn.setAttribute('aria-pressed', selected ? 'true' : 'false');
+        const label = btn.querySelector('[data-compare-label]');
+        if (label) label.textContent = selected ? 'In compare' : 'Compare';
+      });
+    }
+
+    function render() {
+      root.hidden = slugs.length === 0;
+      root.classList.toggle('is-visible', slugs.length > 0);
+      if (countEl) countEl.textContent = String(slugs.length);
+      if (openLink) openLink.href = `/compare/build/${slugs.length ? `?tools=${slugs.join(',')}` : ''}`;
+      buttonState();
+      loadCatalog().then((map) => {
+        if (!itemsEl) return;
+        itemsEl.innerHTML = slugs.map((slug) => {
+          const tool = map.get(slug);
+          const title = tool ? tool.title : slug;
+          return `
+            <span class="compare-tray-pill">
+              <img src="/logos/tools/${escapeHtml(slug)}.png" alt="" loading="lazy" decoding="async" onerror="this.style.display='none'" />
+              <span title="${escapeHtml(title)}">${escapeHtml(title)}</span>
+              <button type="button" data-compare-remove="${escapeHtml(slug)}" aria-label="Remove ${escapeHtml(title)}">x</button>
+            </span>
+          `;
+        }).join('');
+      });
+    }
+
+    document.addEventListener('click', (event) => {
+      const addBtn = event.target && event.target.closest ? event.target.closest('[data-compare-add]') : null;
+      if (addBtn) {
+        event.preventDefault();
+        add(addBtn.getAttribute('data-compare-add'));
+        return;
+      }
+      const removeBtn = event.target && event.target.closest ? event.target.closest('[data-compare-remove]') : null;
+      if (removeBtn) {
+        event.preventDefault();
+        remove(removeBtn.getAttribute('data-compare-remove'));
+      }
+    });
+
+    clearBtn?.addEventListener('click', () => {
+      slugs = [];
+      write();
+      render();
+    });
+
+    document.addEventListener('astro:page-load', buttonState);
+    render();
+  })();
+</script>

@@ -517,6 +517,10 @@ body:has(main .t2-canvas) ::selection {
   position: relative;
   isolation: isolate;
 }
+button.t2-cta {
+  cursor: pointer;
+  font-family: inherit;
+}
 .t2-cta-arrow { transition: transform 160ms ease; }
 .t2-cta:hover .t2-cta-arrow { transform: translateX(3px); }
 .t2-cta-primary {
@@ -542,6 +546,11 @@ body:has(main .t2-canvas) ::selection {
 .t2-cta-secondary:hover {
   background: var(--t2-surface-hover);
   border-color: var(--t2-line-strong);
+}
+.t2-cta-compare.is-compared {
+  border-color: rgba(94, 234, 212, 0.48);
+  background: rgba(94, 234, 212, 0.12);
+  color: var(--t2-accent);
 }
 
 .t2-githubstats { margin-bottom: 28px; }
@@ -1432,12 +1441,149 @@ body:has(main .t2-canvas) ::selection {
   color: var(--t2-accent-text);
   font-weight: 700;
 }
+.t2-cat-toppick-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 2px;
+}
 .t2-cat-toppick-cta {
   align-self: flex-start;
-  margin-top: 2px;
   padding: 8px 12px;
   font-size: 12px;
   min-height: 44px;
+}
+.t2-cat-toppick-compare {
+  align-self: flex-start;
+  min-height: 44px;
+  padding: 0 12px;
+  border-radius: var(--t2-radius-sm);
+}
+
+.t2-cat-controls {
+  margin: 0 0 16px;
+  padding: 14px;
+  border-radius: var(--t2-radius-sm);
+  border: 1px solid var(--t2-line);
+  background:
+    linear-gradient(135deg, rgba(34, 211, 238, 0.06), transparent 58%),
+    var(--t2-surface);
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.t2-cat-search {
+  display: flex;
+  flex: 1 1 240px;
+  flex-direction: column;
+  gap: 6px;
+  margin: 0;
+}
+.t2-cat-search span,
+.t2-cat-filter-summary {
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--t2-subtle);
+}
+.t2-cat-search input {
+  width: 100%;
+  min-height: 42px;
+  border-radius: var(--t2-radius-sm);
+  border: 1px solid var(--t2-line);
+  background: rgba(2, 6, 23, 0.28);
+  color: var(--t2-fg);
+  padding: 0 12px;
+  font: inherit;
+  font-size: 13px;
+  outline: none;
+  transition: border-color 140ms ease, background 140ms ease, box-shadow 140ms ease;
+}
+.t2-cat-search input:focus {
+  border-color: rgba(34, 211, 238, 0.58);
+  background: rgba(8, 15, 31, 0.72);
+  box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.12);
+}
+.t2-cat-filter-pills {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  flex: 999 1 300px;
+}
+.t2-cat-filter-pill,
+.t2-cat-toggle,
+.t2-cat-reset {
+  min-height: 42px;
+  border-radius: var(--t2-radius-sm);
+  border: 1px solid var(--t2-line);
+  background: rgba(15, 23, 42, 0.34);
+  color: var(--t2-muted);
+  font: inherit;
+  font-size: 12px;
+  font-weight: 750;
+  letter-spacing: 0;
+}
+.t2-cat-filter-pill,
+.t2-cat-reset {
+  cursor: pointer;
+  padding: 0 11px;
+}
+.t2-cat-filter-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+.t2-cat-filter-pill span {
+  color: var(--t2-subtle);
+  font-weight: 800;
+}
+.t2-cat-filter-pill:hover,
+.t2-cat-filter-pill:focus-visible,
+.t2-cat-reset:hover,
+.t2-cat-reset:focus-visible,
+.t2-cat-filter-pill.is-active {
+  border-color: rgba(34, 211, 238, 0.48);
+  background: rgba(34, 211, 238, 0.12);
+  color: var(--t2-accent-text);
+  outline: none;
+}
+.t2-cat-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 11px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.t2-cat-toggle input {
+  width: 15px;
+  height: 15px;
+  accent-color: var(--t2-accent-text);
+}
+.t2-cat-filter-summary {
+  flex: 1 0 100%;
+  margin: 0;
+  text-align: right;
+}
+.t2-cat-filter-summary strong {
+  color: var(--t2-accent-text);
+}
+.t2-cat-no-results {
+  margin: 0 0 28px;
+  padding: 16px;
+  border-radius: var(--t2-radius-sm);
+  border: 1px dashed rgba(148, 163, 184, 0.28);
+  color: var(--t2-subtle);
+  background: var(--t2-surface);
+}
+.t2-cat-row[hidden],
+.t2-cat-no-results[hidden],
+.t2-cat-reset[hidden] {
+  display: none !important;
 }
 
 /* Full ranked list inside .t2-prose */
@@ -1507,10 +1653,18 @@ body:has(main .t2-canvas) ::selection {
   min-width: 32px;
   text-align: right;
 }
-.t2-cat-row-cta {
+.t2-cat-row-actions {
   flex: none;
   display: inline-flex;
   align-items: center;
+  gap: 8px;
+  margin-left: auto;
+}
+.t2-cat-row-cta,
+.t2-cat-row-compare {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   gap: 6px;
   padding: 6px 10px;
   border-radius: var(--t2-radius-sm);
@@ -1523,10 +1677,31 @@ body:has(main .t2-canvas) ::selection {
   border-bottom: 1px solid var(--t2-line) !important;
   transition: color 120ms ease, border-color 120ms ease, background 120ms ease;
 }
-.t2-cat-row-cta:hover {
+.t2-cat-row-compare {
+  min-height: 32px;
+  cursor: pointer;
+}
+.t2-cat-row-cta:hover,
+.t2-cat-row-compare:hover {
   color: var(--t2-accent-text);
   border-color: rgba(34, 211, 238, 0.45) !important;
   background: var(--t2-surface-hover);
+}
+@media (max-width: 640px) {
+  .t2-cat-row-actions {
+    width: 100%;
+    margin-left: 34px;
+  }
+  .t2-cat-row-actions > * {
+    flex: 1;
+  }
+  .t2-cat-filter-summary {
+    text-align: left;
+  }
+}
+
+html.light .t2-cat-search input {
+  background: rgba(255, 255, 255, 0.72);
 }
 
 

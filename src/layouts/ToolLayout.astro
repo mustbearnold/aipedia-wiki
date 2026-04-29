@@ -31,6 +31,7 @@ import FeedbackForm from '../components/FeedbackForm.astro';
 import ReportOutdatedButton from '../components/ReportOutdatedButton.astro';
 import BadgeEmbed from '../components/BadgeEmbed.astro';
 import CiteThisPage from '../components/CiteThisPage.astro';
+import ToolIntelPanel from '../components/ToolIntelPanel.astro';
 import { categoryLabel, isActiveToolStatus, overallScore } from '../utils/tool-metadata';
 
 interface Props {
@@ -63,6 +64,7 @@ const breadcrumbLdItems = [
 // Peer alternatives for the in-prose "Top alternatives" section: same
 // primary category, sorted by overall score descending. Excludes self.
 const allTools = await getCollection('tools');
+const allNews = await getCollection('news');
 const peers = allTools
   .filter(t => t.data.category === f.category && (t.data.slug ?? t.id) !== (f.slug ?? toolSlug))
   .map(t => {
@@ -214,6 +216,27 @@ function daysSince(v: unknown): number {
 const verifiedDays = daysSince(f.last_verified);
 const isFreshVerified = verifiedDays <= 30;
 const isRecentVerified = verifiedDays > 30 && verifiedDays <= 90;
+
+function newsDate(value: unknown): string {
+  if (!value) return '';
+  const d = value instanceof Date ? value : new Date(String(value));
+  return isNaN(d.getTime()) ? String(value) : d.toISOString().slice(0, 10);
+}
+
+const relatedNews = allNews
+  .filter((entry) => {
+    const affects = Array.isArray(entry.data.affects) ? entry.data.affects : [];
+    const related = Array.isArray(entry.data.related_tools) ? entry.data.related_tools : [];
+    return affects.includes(toolSlug) || related.includes(toolSlug);
+  })
+  .map((entry) => ({
+    slug: entry.data.slug || entry.id.replace(/\.md$/, '').replace(/\\/g, '/'),
+    title: entry.data.title,
+    date: newsDate(entry.data.date),
+    severity: entry.data.severity,
+  }))
+  .sort((a, b) => (b.date || '').localeCompare(a.date || ''))
+  .slice(0, 6);
 ---
 
 <BaseLayout
@@ -375,6 +398,10 @@ const isRecentVerified = verifiedDays > 30 && verifiedDays <= 90;
         Compare alternatives
         <span class="t2-cta-arrow" aria-hidden="true">&rarr;</span>
       </a>
+      <button type="button" class="t2-cta t2-cta-secondary t2-cta-compare" data-compare-add={toolSlug} aria-pressed="false">
+        <span data-compare-label>Compare</span>
+        <span class="t2-cta-arrow" aria-hidden="true">+</span>
+      </button>
     </div>
 
     <!-- Quick Answer (from frontmatter). Replaces the redundant inline
@@ -397,6 +424,16 @@ const isRecentVerified = verifiedDays > 30 && verifiedDays <= 90;
         )}
       </aside>
     )}
+
+    <ToolIntelPanel
+      frontmatter={f}
+      slug={toolSlug}
+      overall={overall}
+      categoryLabel={catLabel}
+      peers={peers}
+      priceHistory={priceHistory}
+      relatedNews={relatedNews}
+    />
 
     {f.github_url && (
       <div class="t2-githubstats" data-reveal>

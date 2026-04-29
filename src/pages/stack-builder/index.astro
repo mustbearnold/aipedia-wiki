@@ -779,8 +779,16 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
       text-overflow: ellipsis;
       white-space: nowrap;
     }
+    .sb-row-actions {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      justify-content: flex-end;
+    }
     .sb-swap-line button,
-    .sb-try-link {
+    .sb-swap-action,
+    .sb-try-link,
+    .sb-compare-link {
       flex: none;
       min-height: 1.75rem;
       border: 1px solid rgba(94, 234, 212, 0.28);
@@ -796,14 +804,22 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
     .sb-swap-line button {
       padding: 0 0.55rem;
     }
+    .sb-swap-action {
+      padding: 0 0.65rem;
+    }
     .sb-try-link {
       display: inline-flex;
       align-items: center;
       justify-content: center;
       padding: 0 0.7rem;
     }
+    .sb-compare-link {
+      padding: 0 0.6rem;
+    }
     .sb-swap-line button:hover,
-    .sb-try-link:hover {
+    .sb-swap-action:hover,
+    .sb-try-link:hover,
+    .sb-compare-link:hover {
       background: rgba(88, 242, 220, 0.14);
     }
     .sb-total,
@@ -967,10 +983,12 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
         grid-template-columns: 44px minmax(120px, 1fr) minmax(160px, 1fr) minmax(88px, 0.5fr);
       }
       .sb-stack-swap,
-      .sb-try-link {
+      .sb-try-link,
+      .sb-row-actions {
         grid-column: 2 / -1;
       }
-      .sb-try-link {
+      .sb-try-link,
+      .sb-row-actions {
         justify-self: start;
       }
       .sb-cta-grid {
@@ -1018,7 +1036,8 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
       .sb-stack-why,
       .sb-stack-price,
       .sb-stack-swap,
-      .sb-try-link {
+      .sb-try-link,
+      .sb-row-actions {
         grid-column: 2 / -1;
       }
       .sb-stack-primary {
@@ -1178,8 +1197,16 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
       text-overflow: ellipsis;
       white-space: nowrap;
     }
+    .sb-row-actions {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      justify-content: flex-end;
+    }
     .sb-swap-line button,
-    .sb-try-link {
+    .sb-swap-action,
+    .sb-try-link,
+    .sb-compare-link {
       flex: none;
       min-height: 1.75rem;
       border: 1px solid rgba(94, 234, 212, 0.28);
@@ -1195,14 +1222,22 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
     .sb-swap-line button {
       padding: 0 0.55rem;
     }
+    .sb-swap-action {
+      padding: 0 0.65rem;
+    }
     .sb-try-link {
       display: inline-flex;
       align-items: center;
       justify-content: center;
       padding: 0 0.7rem;
     }
+    .sb-compare-link {
+      padding: 0 0.6rem;
+    }
     .sb-swap-line button:hover,
-    .sb-try-link:hover {
+    .sb-swap-action:hover,
+    .sb-try-link:hover,
+    .sb-compare-link:hover {
       background: rgba(88, 242, 220, 0.14);
     }
     .sb-cta-grid {
@@ -1249,10 +1284,12 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
         grid-template-columns: 44px minmax(120px, 1fr) minmax(160px, 1fr) minmax(88px, 0.5fr);
       }
       .sb-stack-swap,
-      .sb-try-link {
+      .sb-try-link,
+      .sb-row-actions {
         grid-column: 2 / -1;
       }
-      .sb-try-link {
+      .sb-try-link,
+      .sb-row-actions {
         justify-self: start;
       }
       .sb-cta-grid {
@@ -1275,7 +1312,8 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
       .sb-stack-why,
       .sb-stack-price,
       .sb-stack-swap,
-      .sb-try-link {
+      .sb-try-link,
+      .sb-row-actions {
         grid-column: 2 / -1;
       }
       .sb-stack-primary {
@@ -1602,12 +1640,15 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
                       <span class="sb-field-label">Swap alternatives</span>
                       <div class="sb-swap-line">
                         <span title="${altText}">${altText}</span>
-                        <button type="button" data-swap-role="${escapeHtml(role)}" data-swap-cat="${escapeHtml(catName)}" data-swap-slug="${escapeHtml(original.slug)}" aria-label="Swap ${escapeHtml(t.title)} for an alternative">
-                          Swap
-                        </button>
                       </div>
                     </div>
-                    ${tryUrl ? `<a href="${escapeHtml(tryUrl)}" target="_blank" rel="${tryRel}" class="sb-try-link" aria-label="${tryLabel} ${escapeHtml(t.title)} on vendor site">${tryLabel}</a>` : ''}
+                    <div class="sb-row-actions">
+                      <button type="button" class="sb-swap-action" data-swap-role="${escapeHtml(role)}" data-swap-cat="${escapeHtml(catName)}" data-swap-slug="${escapeHtml(original.slug)}" aria-label="Swap ${escapeHtml(t.title)} for an alternative">
+                        Swap
+                      </button>
+                      ${tryUrl ? `<a href="${escapeHtml(tryUrl)}" target="_blank" rel="${tryRel}" class="sb-try-link" aria-label="${tryLabel} ${escapeHtml(t.title)} on vendor site">${tryLabel}</a>` : ''}
+                      <button type="button" class="sb-compare-link" data-compare-add="${escapeHtml(t.slug)}" aria-pressed="false"><span data-compare-label>Compare</span></button>
+                    </div>
                   </article>
                 `;
               }).join('')}

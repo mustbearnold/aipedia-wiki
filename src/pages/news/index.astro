@@ -491,6 +491,17 @@ const newsItems = sorted.slice(0, 100).map((item) => ({
           </p>
           <a href="/about/editorial/" class="p3-method-link" style="display:inline-block; margin-top:8px;">How we verify →</a>
         </div>
+
+        <div class="p3-newsdesk-aside-card p3-newsdesk-since" data-news-since-card hidden>
+          <div class="p3-newsdesk-aside-eyebrow">
+            <span>Since last visit</span>
+            <span class="p3-newsdesk-aside-eyebrow-sub">local</span>
+          </div>
+          <p class="p3-newsdesk-aside-body">
+            <strong class="tabular-nums" data-news-since-count>0</strong> new item<span data-news-since-plural>s</span> landed since you last opened the news desk.
+          </p>
+          <a href="#news-list" class="p3-newsdesk-since-link">Jump to latest</a>
+        </div>
       </aside>
     </section>
 
@@ -1060,6 +1071,23 @@ const newsItems = sorted.slice(0, 100).map((item) => ({
       color: var(--p3-muted);
       margin: 0;
     }
+    .p3-newsdesk-aside-body strong {
+      color: var(--p3-accent-text);
+      font-size: 18px;
+      font-weight: 900;
+    }
+    .p3-newsdesk-since-link {
+      display: inline-flex;
+      margin-top: 10px;
+      color: var(--p3-accent-text);
+      font-size: 12px;
+      font-weight: 850;
+      text-decoration: none;
+    }
+    .p3-newsdesk-since-link:hover {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
     .p3-newsdesk-movers {
       list-style: none;
       padding: 0;
@@ -1256,6 +1284,34 @@ const newsItems = sorted.slice(0, 100).map((item) => ({
           apply(state);
         });
       }
+    })();
+  </script>
+
+  <script is:inline define:vars={{ newsDates: sorted.map((n) => n.date).filter(Boolean) }}>
+    (function () {
+      const KEY = 'aipedia-news-last-visit';
+      const card = document.querySelector('[data-news-since-card]');
+      if (!card) return;
+      const countEl = card.querySelector('[data-news-since-count]');
+      const pluralEl = card.querySelector('[data-news-since-plural]');
+      const dates = Array.isArray(newsDates) ? newsDates : [];
+      const last = Number(localStorage.getItem(KEY) || 0);
+      if (last > 0) {
+        const count = dates.filter((date) => {
+          const time = Date.parse(date);
+          return time && time > last;
+        }).length;
+        if (count > 0) {
+          if (countEl) countEl.textContent = String(count);
+          if (pluralEl) pluralEl.hidden = count === 1;
+          card.hidden = false;
+        }
+      }
+      window.setTimeout(() => {
+        try {
+          localStorage.setItem(KEY, String(Date.now()));
+        } catch (_) {}
+      }, 900);
     })();
   </script>
 </BaseLayout>

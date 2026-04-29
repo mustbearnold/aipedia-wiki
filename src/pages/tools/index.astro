@@ -63,6 +63,19 @@ const pricingOptions = Array.from(pricingCounts.entries())
   .map(([slug, count]) => ({ slug, label: pricingLabels[slug] ?? slug, count }))
   .sort((a, b) => a.label.localeCompare(b.label));
 
+const nowMs = Date.now();
+const thirtyDaysMs = 30 * 86400000;
+const signalCounts = scoredTools.reduce((acc, { tool }) => {
+  const pricing = tool.data.pricing_model ?? '';
+  const tags = tool.data.tags ?? [];
+  const verifiedTime = Date.parse(String(tool.data.last_verified ?? tool.data.last_updated ?? '')) || 0;
+  if (pricing === 'free' || pricing === 'freemium' || pricing === 'open-source') acc.freeStart += 1;
+  if (pricing === 'open-source' || tags.includes('open-source')) acc.openSource += 1;
+  if (tool.data.github_url) acc.github += 1;
+  if (verifiedTime && nowMs - verifiedTime <= thirtyDaysMs) acc.fresh += 1;
+  return acc;
+}, { freeStart: 0, openSource: 0, github: 0, fresh: 0 });
+
 const categoryEmojiMap: Record<string, string> = {
   'ai-chatbots': '\uD83D\uDCAC', 'ai-voice': '\uD83D\uDD0A', 'ai-video': '\uD83C\uDFAC',
   'ai-coding': '\uD83D\uDCBB', 'ai-automation': '\u26A1', 'ai-seo': '\uD83D\uDCC8',
@@ -208,6 +221,25 @@ const categoryEmojiMap: Record<string, string> = {
       <button class="tools-reset" type="button" data-tools-reset hidden>Reset</button>
     </div>
 
+    <div class="tools-filter-row tools-filter-row-signals" aria-label="Quick filters">
+      <label class="tools-chip-toggle">
+        <input type="checkbox" data-tools-free />
+        <span>Free start <strong>{signalCounts.freeStart}</strong></span>
+      </label>
+      <label class="tools-chip-toggle">
+        <input type="checkbox" data-tools-open-source />
+        <span>Open source <strong>{signalCounts.openSource}</strong></span>
+      </label>
+      <label class="tools-chip-toggle">
+        <input type="checkbox" data-tools-github />
+        <span>Public repo <strong>{signalCounts.github}</strong></span>
+      </label>
+      <label class="tools-chip-toggle">
+        <input type="checkbox" data-tools-fresh />
+        <span>Freshly verified <strong>{signalCounts.fresh}</strong></span>
+      </label>
+    </div>
+
     <div class="tools-filter-status" aria-live="polite">
       <span><strong data-tools-visible>{scoredTools.length}</strong> of <span>{scoredTools.length}</span> tools shown</span>
       <span data-tools-active-summary>All categories, all pricing</span>
@@ -236,17 +268,28 @@ const categoryEmojiMap: Record<string, string> = {
         ...(tool.data.not_best_for ?? []),
       ].filter(Boolean).join(' ').toLowerCase();
       const verifiedTime = Date.parse(String(tool.data.last_verified ?? tool.data.last_updated ?? '')) || 0;
+      const pricing = tool.data.pricing_model ?? '';
+      const tags = tool.data.tags ?? [];
+      const freeStart = pricing === 'free' || pricing === 'freemium' || pricing === 'open-source';
+      const openSource = pricing === 'open-source' || tags.includes('open-source');
+      const hasGithub = Boolean(tool.data.github_url);
+      const fresh = verifiedTime && nowMs - verifiedTime <= thirtyDaysMs;
       return (
         <div
           data-tools-item
+          class="tools-card-shell"
           data-title={tool.data.title.toLowerCase()}
           data-category={cat}
           data-categories={categories.join(' ')}
-          data-pricing={tool.data.pricing_model ?? ''}
+          data-pricing={pricing}
           data-score={score}
           data-utility={scores.utility ?? 0}
           data-value={scores.value ?? 0}
           data-recent={verifiedTime}
+          data-free-start={freeStart ? '1' : '0'}
+          data-open-source={openSource ? '1' : '0'}
+          data-github={hasGithub ? '1' : '0'}
+          data-fresh={fresh ? '1' : '0'}
           data-search={searchText}
         >
           <ToolCard
@@ -258,6 +301,9 @@ const categoryEmojiMap: Record<string, string> = {
             emoji={categoryEmojiMap[cat] ?? '\uD83D\uDD27'}
             scores={tool.data.scores}
           />
+          <button type="button" class="tools-card-compare" data-compare-add={slug} aria-pressed="false" aria-label={`Compare ${tool.data.title}`} title="Compare">
+            <span data-compare-label>Compare</span>
+          </button>
         </div>
       );
     })}
@@ -280,6 +326,10 @@ const categoryEmojiMap: Record<string, string> = {
       const pricing = root.querySelector('[data-tools-select="pricing"]');
       const sort = root.querySelector('[data-tools-select="sort"]');
       const strong = root.querySelector('[data-tools-strong]');
+      const freeStart = root.querySelector('[data-tools-free]');
+      const openSource = root.querySelector('[data-tools-open-source]');
+      const github = root.querySelector('[data-tools-github]');
+      const fresh = root.querySelector('[data-tools-fresh]');
       const reset = root.querySelector('[data-tools-reset]');
       const visibleCount = root.querySelector('[data-tools-visible]');
       const summary = root.querySelector('[data-tools-active-summary]');
@@ -341,6 +391,10 @@ const categoryEmojiMap: Record<string, string> = {
           pricing: selectValue(pricing),
           sort: selectValue(sort) === 'score-desc' ? '' : selectValue(sort),
           strong: strong?.checked ? '1' : '',
+          free: freeStart?.checked ? '1' : '',
+          oss: openSource?.checked ? '1' : '',
+          github: github?.checked ? '1' : '',
+          fresh: fresh?.checked ? '1' : '',
         };
         Object.entries(values).forEach(([key, value]) => {
           if (value) url.searchParams.set(key, value);
@@ -370,6 +424,10 @@ const categoryEmojiMap: Record<string, string> = {
         const categoryValue = selectValue(category);
         const pricingValue = selectValue(pricing);
         const strongOnly = !!strong?.checked;
+        const freeOnly = !!freeStart?.checked;
+        const openSourceOnly = !!openSource?.checked;
+        const githubOnly = !!github?.checked;
+        const freshOnly = !!fresh?.checked;
         const visibleItems = [];
 
         items.forEach((item) => {
@@ -379,7 +437,11 @@ const categoryEmojiMap: Record<string, string> = {
           const matchesCategory = !categoryValue || categories.includes(categoryValue);
           const matchesPricing = !pricingValue || item.getAttribute('data-pricing') === pricingValue;
           const matchesScore = !strongOnly || numberFrom(item, 'data-score') >= 8;
-          const visible = matchesTerms && matchesCategory && matchesPricing && matchesScore;
+          const matchesFree = !freeOnly || item.getAttribute('data-free-start') === '1';
+          const matchesOpenSource = !openSourceOnly || item.getAttribute('data-open-source') === '1';
+          const matchesGithub = !githubOnly || item.getAttribute('data-github') === '1';
+          const matchesFresh = !freshOnly || item.getAttribute('data-fresh') === '1';
+          const visible = matchesTerms && matchesCategory && matchesPricing && matchesScore && matchesFree && matchesOpenSource && matchesGithub && matchesFresh;
           item.hidden = !visible;
           if (visible) visibleItems.push(item);
         });
@@ -388,12 +450,16 @@ const categoryEmojiMap: Record<string, string> = {
 
         if (visibleCount) visibleCount.textContent = String(visibleItems.length);
         if (empty) empty.hidden = visibleItems.length !== 0;
-        if (reset) reset.hidden = !terms.length && !categoryValue && !pricingValue && !strongOnly && (selectValue(sort) || 'score-desc') === 'score-desc';
+        if (reset) reset.hidden = !terms.length && !categoryValue && !pricingValue && !strongOnly && !freeOnly && !openSourceOnly && !githubOnly && !freshOnly && (selectValue(sort) || 'score-desc') === 'score-desc';
 
         const parts = [
           selectedText(category) || 'All categories',
           selectedText(pricing) || 'all pricing',
           strongOnly ? '8.0+ only' : '',
+          freeOnly ? 'free start' : '',
+          openSourceOnly ? 'open source' : '',
+          githubOnly ? 'public repo' : '',
+          freshOnly ? 'freshly verified' : '',
         ].filter(Boolean);
         if (summary) summary.textContent = parts.join(', ');
 
@@ -406,6 +472,10 @@ const categoryEmojiMap: Record<string, string> = {
         setSelectValue(pricing, '');
         setSelectValue(sort, 'score-desc');
         if (strong) strong.checked = false;
+        if (freeStart) freeStart.checked = false;
+        if (openSource) openSource.checked = false;
+        if (github) github.checked = false;
+        if (fresh) fresh.checked = false;
         apply();
       };
 
@@ -470,6 +540,10 @@ const categoryEmojiMap: Record<string, string> = {
 
       input?.addEventListener('input', () => apply());
       strong?.addEventListener('change', () => apply());
+      freeStart?.addEventListener('change', () => apply());
+      openSource?.addEventListener('change', () => apply());
+      github?.addEventListener('change', () => apply());
+      fresh?.addEventListener('change', () => apply());
       reset?.addEventListener('click', resetAll);
       emptyReset?.addEventListener('click', resetAll);
 
@@ -479,6 +553,10 @@ const categoryEmojiMap: Record<string, string> = {
       if (pricing && params.has('pricing')) setSelectValue(pricing, params.get('pricing') || '');
       if (sort) setSelectValue(sort, params.get('sort') || 'score-desc');
       if (strong) strong.checked = params.get('strong') === '1';
+      if (freeStart) freeStart.checked = params.get('free') === '1';
+      if (openSource) openSource.checked = params.get('oss') === '1';
+      if (github) github.checked = params.get('github') === '1';
+      if (fresh) fresh.checked = params.get('fresh') === '1';
       apply(false);
     })();
   </script>
@@ -507,6 +585,13 @@ const categoryEmojiMap: Record<string, string> = {
     .tools-filter-row-secondary {
       grid-template-columns: minmax(160px, 1fr) minmax(150px, 220px) auto auto;
       align-items: end;
+    }
+
+    .tools-filter-row-signals {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding-top: 2px;
     }
 
     .tools-search,
@@ -721,6 +806,97 @@ const categoryEmojiMap: Record<string, string> = {
       accent-color: var(--accent-primary-text);
     }
 
+    .tools-chip-toggle {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: var(--bg-primary);
+      color: var(--text-secondary);
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: 800;
+      padding: 0 11px 0 9px;
+      transition: border-color 140ms ease, background 140ms ease, color 140ms ease;
+    }
+
+    .tools-chip-toggle input {
+      width: 14px;
+      height: 14px;
+      margin: 0 7px 0 0;
+      accent-color: var(--accent-primary-text);
+    }
+
+    .tools-chip-toggle strong {
+      color: var(--text-muted);
+      font-size: 11px;
+      font-variant-numeric: tabular-nums;
+      margin-left: 4px;
+    }
+
+    .tools-chip-toggle:has(input:checked) {
+      border-color: rgba(34, 211, 238, 0.42);
+      background: rgba(34, 211, 238, 0.10);
+      color: var(--accent-primary-text);
+    }
+
+    .tools-card-shell {
+      position: relative;
+      display: block;
+    }
+
+    .tools-card-shell .tools-card-compare {
+      position: absolute;
+      right: 44px;
+      bottom: 12px;
+      z-index: 2;
+      width: 30px;
+      min-height: 30px;
+      border-radius: 8px;
+      border-color: rgba(34, 211, 238, 0.18);
+      background: rgba(34, 211, 238, 0.06);
+      color: var(--text-muted);
+      font-size: 0;
+      line-height: 0;
+      padding: 0;
+      opacity: 0.72;
+      transform: none;
+      transition: opacity 140ms ease, transform 140ms ease, border-color 140ms ease, background 140ms ease, color 140ms ease;
+    }
+
+    .tools-card-shell .tools-card-compare::before {
+      content: '+';
+      font-size: 18px;
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    .tools-card-shell:hover .tools-card-compare,
+    .tools-card-shell:focus-within .tools-card-compare,
+    .tools-card-shell .tools-card-compare.is-compared {
+      opacity: 1;
+      transform: none;
+    }
+
+    .tools-card-shell .tools-card-compare.is-compared {
+      background: rgba(94, 234, 212, 0.13);
+      border-color: rgba(94, 234, 212, 0.42);
+      color: var(--accent-primary-text);
+    }
+
+    .tools-card-shell .tools-card-compare.is-compared::before {
+      content: '✓';
+      font-size: 15px;
+    }
+
+    @media (hover: none) {
+      .tools-card-shell .tools-card-compare {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
     .tools-reset {
       min-height: 40px;
       border: 1px solid rgba(34, 211, 238, 0.28);
@@ -778,6 +954,15 @@ const categoryEmojiMap: Record<string, string> = {
       .tools-filter-row-secondary {
         grid-template-columns: 1fr 1fr;
       }
+
+      .tools-filter-row-signals {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .tools-chip-toggle {
+        justify-content: center;
+      }
     }
 
     @media (max-width: 640px) {
@@ -793,6 +978,10 @@ const categoryEmojiMap: Record<string, string> = {
       .tools-filter-status {
         align-items: flex-start;
         flex-direction: column;
+      }
+
+      .tools-filter-row-signals {
+        grid-template-columns: 1fr;
       }
     }
   </style>

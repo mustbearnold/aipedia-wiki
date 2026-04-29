@@ -1,6 +1,8 @@
 ---
 import { getCollection, render } from 'astro:content';
 import ArticlePlusLayout from '../../layouts/ArticlePlusLayout.astro';
+import ToolLogo from '../../components/ToolLogo.astro';
+import { overallScore } from '../../utils/tool-metadata';
 
 export async function getStaticPaths() {
   const entries = await getCollection('dead');
@@ -15,6 +17,21 @@ const { Content, headings } = await render(entry);
 
 const slug = entry.data.slug ?? entry.id.replace(/\.md$/, '');
 const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
+const allTools = await getCollection('tools');
+const migrationPicks = allTools
+  .filter((tool) => tool.data.category === entry.data.category && !['dead', 'retired', 'acquired'].includes(String(tool.data.status ?? '').toLowerCase()))
+  .map((tool) => {
+    const toolSlug = tool.data.slug || tool.id.replace(/\.md$/, '').replace(/\\/g, '/');
+    return {
+      slug: toolSlug,
+      title: tool.data.title,
+      tagline: tool.data.tagline ?? '',
+      price: tool.data.price_range ?? '',
+      score: overallScore(tool.data.scores ?? {}),
+    };
+  })
+  .sort((a, b) => b.score - a.score)
+  .slice(0, 4);
 
 const wordCount = entry.body ? entry.body.split(/\s+/).filter(Boolean).length : 0;
 const readingMinutes = Math.max(1, Math.round(wordCount / 230));
@@ -52,5 +69,110 @@ const metaExtra = metaParts.length > 0 ? metaParts.join(' · ') : undefined;
   lastVerified={entry.data.last_updated ? String(entry.data.last_updated) : undefined}
   metaExtra={metaExtra}
 >
+  {migrationPicks.length > 0 && (
+    <aside class="dead-migration not-prose" aria-label={`Alternatives to ${entry.data.title}`}>
+      <div class="dead-migration-head">
+        <span>Migration picks</span>
+        <strong>Current alternatives</strong>
+      </div>
+      <div class="dead-migration-grid">
+        {migrationPicks.map((tool) => (
+          <a href={`/tools/${tool.slug}/`}>
+            <ToolLogo slug={tool.slug} title={tool.title} size={34} />
+            <span>
+              <strong>{tool.title}</strong>
+              <em>{tool.price || 'Pricing varies'} | {tool.score}/10</em>
+            </span>
+          </a>
+        ))}
+      </div>
+    </aside>
+  )}
   <Content />
+
+  <style>
+    .dead-migration {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background:
+        linear-gradient(135deg, rgba(34, 211, 238, 0.07), transparent 44%),
+        var(--bg-card);
+      margin: 0 0 24px;
+      padding: 18px;
+    }
+
+    .dead-migration-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .dead-migration-head span {
+      color: var(--accent-primary-text);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .dead-migration-head strong {
+      color: var(--text-primary);
+      font-size: 13px;
+    }
+
+    .dead-migration-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .dead-migration-grid a {
+      display: grid;
+      grid-template-columns: 34px minmax(0, 1fr);
+      gap: 10px;
+      align-items: center;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      padding: 10px;
+      text-decoration: none;
+    }
+
+    .dead-migration-grid a:hover {
+      border-color: rgba(34, 211, 238, 0.36);
+      color: var(--accent-primary-text);
+    }
+
+    .dead-migration-grid span {
+      display: grid;
+      min-width: 0;
+      gap: 2px;
+    }
+
+    .dead-migration-grid strong {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size: 13px;
+    }
+
+    .dead-migration-grid em {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      color: var(--text-muted);
+      font-size: 11.5px;
+      font-style: normal;
+      font-weight: 750;
+    }
+
+    @media (max-width: 640px) {
+      .dead-migration-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </ArticlePlusLayout>

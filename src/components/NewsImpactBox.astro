@@ -1,0 +1,226 @@
+---
+import ToolLogo from './ToolLogo.astro';
+
+interface ToolRef {
+  slug: string;
+  title: string;
+}
+
+interface SourceRef {
+  url: string;
+  title?: string;
+}
+
+interface Props {
+  severity?: string;
+  date?: string;
+  summary?: string;
+  tools?: ToolRef[];
+  categories?: string[];
+  sources?: SourceRef[];
+}
+
+const {
+  severity = 'minor',
+  date = '',
+  summary = '',
+  tools = [],
+  categories = [],
+  sources = [],
+} = Astro.props;
+
+const severityCopy: Record<string, string> = {
+  breaking: 'High urgency. This may change what readers should verify or compare next.',
+  major: 'Material update. Likely to affect buying, ranking, workflow, or trust decisions.',
+  minor: 'Context update. Useful to know, but low immediate switching pressure.',
+};
+
+function labelize(value: string): string {
+  return String(value || '').replace(/^ai-/, '').replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
+}
+
+function host(value: string): string {
+  try {
+    return new URL(value).hostname.replace(/^www\./, '');
+  } catch (_) {
+    return '';
+  }
+}
+
+const sourceHosts = Array.from(new Set(sources.map((source) => host(source.url)).filter(Boolean))).slice(0, 4);
+---
+
+<aside class="news-impact not-prose" aria-label="Story impact" data-reveal>
+  <div class="news-impact-head">
+    <span>Reader impact</span>
+    <strong class={`news-impact-severity news-impact-severity-${severity}`}>{severity}</strong>
+  </div>
+  <p>{severityCopy[severity] ?? severityCopy.minor}</p>
+
+  <div class="news-impact-grid">
+    <div>
+      <span>Why it matters</span>
+      <strong>{summary || 'This story was published because it changes the context around one or more AI tools.'}</strong>
+    </div>
+    <div>
+      <span>Source base</span>
+      <strong>{sources.length} source{sources.length === 1 ? '' : 's'}{sourceHosts.length ? ` | ${sourceHosts.join(', ')}` : ''}</strong>
+    </div>
+    <div>
+      <span>Date</span>
+      <strong>{date || 'Recent'}</strong>
+    </div>
+  </div>
+
+  {(tools.length > 0 || categories.length > 0) && (
+    <div class="news-impact-links">
+      {tools.length > 0 && (
+        <div>
+          <span>Affected tools</span>
+          <div>
+            {tools.map((tool) => (
+              <a href={`/tools/${tool.slug}/`}>
+                <ToolLogo slug={tool.slug} title={tool.title} size={22} />
+                <span>{tool.title}</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
+      {categories.length > 0 && (
+        <div>
+          <span>Categories</span>
+          <div>
+            {categories.map((category) => (
+              <a href={`/categories/${category}/`}>{labelize(category)}</a>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  )}
+</aside>
+
+<style>
+  .news-impact {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background:
+      linear-gradient(135deg, rgba(34, 211, 238, 0.07), transparent 44%),
+      var(--bg-card);
+    margin: 0 0 24px;
+    padding: 18px;
+  }
+
+  .news-impact-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+
+  .news-impact-head > span {
+    color: var(--accent-primary-text);
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  .news-impact-severity {
+    border: 1px solid rgba(34, 211, 238, 0.3);
+    border-radius: 999px;
+    color: var(--accent-primary-text);
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    padding: 5px 9px;
+    text-transform: uppercase;
+  }
+
+  .news-impact-severity-breaking,
+  .news-impact-severity-major {
+    background: rgba(34, 211, 238, 0.10);
+  }
+
+  .news-impact p {
+    margin: 0 0 14px;
+    color: var(--text-primary);
+    font-size: 14px;
+    font-weight: 760;
+    line-height: 1.5;
+  }
+
+  .news-impact-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr auto;
+    gap: 10px;
+  }
+
+  .news-impact-grid > div,
+  .news-impact-links > div {
+    min-width: 0;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: color-mix(in srgb, var(--bg-primary) 76%, transparent);
+    padding: 11px;
+  }
+
+  .news-impact-grid span,
+  .news-impact-links > div > span {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--text-muted);
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .news-impact-grid strong {
+    display: block;
+    color: var(--text-secondary);
+    font-size: 12.5px;
+    font-weight: 780;
+    line-height: 1.35;
+  }
+
+  .news-impact-links {
+    display: grid;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .news-impact-links > div > div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+  }
+
+  .news-impact-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    min-height: 30px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: var(--bg-card);
+    color: var(--text-primary);
+    font-size: 11.5px;
+    font-weight: 850;
+    text-decoration: none;
+    padding: 4px 9px 4px 5px;
+  }
+
+  .news-impact-links a:hover {
+    border-color: rgba(34, 211, 238, 0.38);
+    color: var(--accent-primary-text);
+  }
+
+  @media (max-width: 780px) {
+    .news-impact-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

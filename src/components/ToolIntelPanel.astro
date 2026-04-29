@@ -1,0 +1,631 @@
+---
+import ToolLogo from './ToolLogo.astro';
+
+interface RelatedNewsItem {
+  slug: string;
+  title: string;
+  date?: string;
+  severity?: string;
+}
+
+interface PeerItem {
+  slug: string;
+  title: string;
+  tagline?: string;
+  score?: number;
+  price?: string;
+}
+
+interface Props {
+  frontmatter: Record<string, any>;
+  slug: string;
+  overall: number;
+  categoryLabel: string;
+  peers?: PeerItem[];
+  priceHistory?: Array<Record<string, any>>;
+  relatedNews?: RelatedNewsItem[];
+}
+
+const {
+  frontmatter: f,
+  slug,
+  overall,
+  categoryLabel,
+  peers = [],
+  priceHistory = [],
+  relatedNews = [],
+} = Astro.props;
+
+const pricingLabels: Record<string, string> = {
+  free: 'Free',
+  freemium: 'Free tier',
+  paid: 'Paid',
+  enterprise: 'Enterprise',
+  'open-source': 'Open source',
+};
+
+function labelize(value: unknown): string {
+  return String(value || '')
+    .replace(/_/g, ' ')
+    .replace(/-/g, ' ')
+    .replace(/\b\w/g, (c) => c.toUpperCase());
+}
+
+function shortDate(value: unknown): string {
+  if (!value) return '';
+  const d = value instanceof Date ? value : new Date(String(value));
+  if (isNaN(d.getTime())) return String(value);
+  return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+}
+
+function hostFromUrl(value: unknown): string {
+  try {
+    const url = new URL(String(value), 'https://aipedia.wiki');
+    return url.hostname.replace(/^www\./, '');
+  } catch (_) {
+    return '';
+  }
+}
+
+function sourceLabel(source: any): string {
+  return source?.source_label || hostFromUrl(source?.source) || 'Source';
+}
+
+const factRows = [
+  { label: 'Company', value: f.company },
+  { label: 'Category', value: categoryLabel },
+  { label: 'Pricing model', value: pricingLabels[f.pricing_model] ?? labelize(f.pricing_model) },
+  { label: 'Price range', value: f.price_range },
+  { label: 'Status', value: labelize(f.status) },
+  { label: 'Last verified', value: shortDate(f.last_verified) },
+].filter((row) => row.value);
+
+const atomicFacts = Object.entries(f.facts ?? {})
+  .map(([key, raw]) => {
+    const item = raw as any;
+    if (!item || typeof item !== 'object') return null;
+    return {
+      key,
+      label: labelize(key),
+      value: item.value ?? '',
+      source: item.source ?? '',
+      sourceLabel: sourceLabel(item),
+      verifiedAt: shortDate(item.verified_at),
+      note: item.note ?? '',
+    };
+  })
+  .filter(Boolean)
+  .slice(0, 7) as Array<{
+    key: string;
+    label: string;
+    value: string;
+    source: string;
+    sourceLabel: string;
+    verifiedAt: string;
+    note?: string;
+  }>;
+
+const verifiedDays = (() => {
+  if (!f.last_verified) return Infinity;
+  const d = new Date(String(f.last_verified));
+  if (isNaN(d.getTime())) return Infinity;
+  return Math.floor((Date.now() - d.getTime()) / 86400000);
+})();
+
+const badges = [
+  { label: f.status === 'active' ? 'Active product' : labelize(f.status), tone: f.status === 'active' ? 'good' : 'neutral' },
+  { label: pricingLabels[f.pricing_model] ?? labelize(f.pricing_model), tone: f.pricing_model === 'free' || f.pricing_model === 'open-source' ? 'good' : 'neutral' },
+  { label: f.github_url ? 'Public repo listed' : 'No public repo listed', tone: f.github_url ? 'good' : 'muted' },
+  { label: verifiedDays <= 30 ? 'Verified this month' : verifiedDays <= 90 ? 'Recently verified' : 'Verify before buying', tone: verifiedDays <= 90 ? 'good' : 'warn' },
+  { label: `${labelize(f.update_frequency || 'monthly')} review cycle`, tone: 'neutral' },
+  { label: overall >= 8 ? 'Strong editorial score' : 'Niche or situational score', tone: overall >= 8 ? 'good' : 'neutral' },
+].filter((badge) => badge.label);
+
+const timeline = [
+  f.last_verified ? { type: 'Verified', date: shortDate(f.last_verified), title: 'Core pricing and product facts checked', href: '', meta: f.update_frequency ? `${labelize(f.update_frequency)} cadence` : '' } : null,
+  f.last_updated ? { type: 'Updated', date: shortDate(f.last_updated), title: 'Editorial page changed', href: '', meta: '' } : null,
+  ...priceHistory.slice(0, 2).map((h) => ({
+    type: 'Price',
+    date: shortDate(h.date),
+    title: [h.plan, h.price].filter(Boolean).join(' - '),
+    href: '',
+    meta: h.note ?? '',
+  })),
+  ...relatedNews.slice(0, 3).map((n) => ({
+    type: n.severity ? labelize(n.severity) : 'News',
+    date: shortDate(n.date),
+    title: n.title,
+    href: `/news/${n.slug}/`,
+    meta: 'Related news',
+  })),
+].filter(Boolean).slice(0, 6) as Array<{ type: string; date: string; title: string; href?: string; meta?: string }>;
+
+const graphPeers = peers.slice(0, 4);
+const graphNews = relatedNews.slice(0, 3);
+---
+
+<section class="tool-intel not-prose" aria-label={`${f.title} intelligence panel`} data-reveal>
+  <div class="tool-intel-card tool-intel-watch">
+    <div class="tool-intel-card-head">
+      <span>Watchlist</span>
+      <strong>{f.title}</strong>
+    </div>
+    <p>Save this page locally, then revisit it when pricing, score notes, or related news changes.</p>
+    <button type="button" data-watch-tool={slug} data-watch-title={f.title}>
+      <span data-watch-label>Watch this tool</span>
+    </button>
+  </div>
+
+  <div class="tool-intel-card tool-intel-badges">
+    <div class="tool-intel-card-head">
+      <span>Decision badges</span>
+      <strong>Readiness signals</strong>
+    </div>
+    <div class="tool-intel-badge-list">
+      {badges.map((badge) => (
+        <span class={`tool-intel-badge tool-intel-badge-${badge.tone}`}>{badge.label}</span>
+      ))}
+    </div>
+  </div>
+
+  <div class="tool-intel-card tool-intel-facts">
+    <div class="tool-intel-card-head">
+      <span>Fact ledger</span>
+      <strong>Verified fields</strong>
+    </div>
+    <dl>
+      {factRows.map((row) => (
+        <>
+          <dt>{row.label}</dt>
+          <dd>{row.value}</dd>
+        </>
+      ))}
+    </dl>
+    {atomicFacts.length > 0 && (
+      <div class="tool-intel-atomic">
+        {atomicFacts.map((fact) => (
+          <div class="tool-intel-atomic-row">
+            <span>{fact.label}</span>
+            <strong>{fact.value}</strong>
+            {fact.source && (
+              <a
+                href={fact.source}
+                data-source-preview
+                data-source-title={fact.sourceLabel}
+                data-source-host={hostFromUrl(fact.source)}
+                data-source-kind={fact.verifiedAt ? `Verified ${fact.verifiedAt}` : 'Fact source'}
+              >
+                {fact.sourceLabel}
+              </a>
+            )}
+          </div>
+        ))}
+      </div>
+    )}
+  </div>
+
+  <div class="tool-intel-card tool-intel-timeline">
+    <div class="tool-intel-card-head">
+      <span>Change timeline</span>
+      <strong>What moved recently</strong>
+    </div>
+    {timeline.length > 0 ? (
+      <ol>
+        {timeline.map((item) => (
+          <li>
+            <span class="tool-intel-time-type">{item.type}</span>
+            <div>
+              {item.href ? <a href={item.href}>{item.title}</a> : <strong>{item.title}</strong>}
+              <span>{[item.date, item.meta].filter(Boolean).join(' | ')}</span>
+            </div>
+          </li>
+        ))}
+      </ol>
+    ) : (
+      <p>No recent changes are attached to this record yet.</p>
+    )}
+  </div>
+
+  <div class="tool-intel-card tool-intel-graph">
+    <div class="tool-intel-card-head">
+      <span>Knowledge graph</span>
+      <strong>Adjacent context</strong>
+    </div>
+    <div class="tool-intel-graph-row">
+      <span>Company</span>
+      <strong>{f.company ?? 'Not listed'}</strong>
+    </div>
+    <div class="tool-intel-graph-row">
+      <span>Category</span>
+      <a href={`/categories/${f.category}/`}>{categoryLabel}</a>
+    </div>
+    {graphPeers.length > 0 && (
+      <div class="tool-intel-graph-cluster">
+        <span>Closest alternatives</span>
+        <div>
+          {graphPeers.map((peer) => (
+            <a href={`/tools/${peer.slug}/`}>
+              <ToolLogo slug={peer.slug} title={peer.title} size={22} />
+              <span>{peer.title}</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
+    {graphNews.length > 0 && (
+      <div class="tool-intel-graph-cluster">
+        <span>Recent news</span>
+        <div>
+          {graphNews.map((news) => (
+            <a href={`/news/${news.slug}/`}>{news.title}</a>
+          ))}
+        </div>
+      </div>
+    )}
+  </div>
+</section>
+
+<style>
+  .tool-intel {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: 12px;
+    margin: 18px 0 22px;
+  }
+
+  .tool-intel-card {
+    min-width: 0;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background:
+      linear-gradient(135deg, rgba(34, 211, 238, 0.055), transparent 48%),
+      var(--bg-card);
+    padding: 16px;
+  }
+
+  .tool-intel-facts,
+  .tool-intel-graph {
+    grid-row: span 2;
+  }
+
+  .tool-intel-card-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+
+  .tool-intel-card-head span {
+    color: var(--accent-primary-text);
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 0.14em;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  .tool-intel-card-head strong {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: var(--text-primary);
+    font-size: 13px;
+  }
+
+  .tool-intel p {
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: 12.5px;
+    font-weight: 650;
+    line-height: 1.5;
+  }
+
+  .tool-intel-watch button {
+    width: 100%;
+    margin-top: 14px;
+    min-height: 40px;
+    border: 1px solid rgba(34, 211, 238, 0.36);
+    border-radius: 8px;
+    background: rgba(34, 211, 238, 0.10);
+    color: var(--accent-primary-text);
+    cursor: pointer;
+    font: inherit;
+    font-size: 13px;
+    font-weight: 900;
+  }
+
+  .tool-intel-watch button.is-watched {
+    background: rgba(94, 234, 212, 0.15);
+    border-color: rgba(94, 234, 212, 0.44);
+  }
+
+  .tool-intel-badge-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+  }
+
+  .tool-intel-badge {
+    display: inline-flex;
+    align-items: center;
+    min-height: 28px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    color: var(--text-secondary);
+    font-size: 11.5px;
+    font-weight: 850;
+    padding: 0 10px;
+  }
+
+  .tool-intel-badge-good {
+    border-color: rgba(94, 234, 212, 0.28);
+    background: rgba(94, 234, 212, 0.09);
+    color: var(--accent-success);
+  }
+
+  .tool-intel-badge-warn {
+    border-color: rgba(103, 232, 249, 0.24);
+    background: rgba(103, 232, 249, 0.08);
+    color: var(--accent-warning);
+  }
+
+  .tool-intel-badge-muted {
+    color: var(--text-muted);
+  }
+
+  .tool-intel dl {
+    display: grid;
+    grid-template-columns: minmax(90px, 0.72fr) minmax(0, 1fr);
+    gap: 8px 12px;
+    margin: 0;
+  }
+
+  .tool-intel dt {
+    color: var(--text-muted);
+    font-size: 11px;
+    font-weight: 850;
+    text-transform: uppercase;
+  }
+
+  .tool-intel dd {
+    min-width: 0;
+    margin: 0;
+    color: var(--text-primary);
+    font-size: 12.5px;
+    font-weight: 800;
+    line-height: 1.35;
+  }
+
+  .tool-intel-atomic {
+    display: grid;
+    gap: 8px;
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid var(--border);
+  }
+
+  .tool-intel-atomic-row {
+    display: grid;
+    grid-template-columns: minmax(92px, 0.64fr) minmax(0, 1fr);
+    gap: 4px 12px;
+    align-items: baseline;
+  }
+
+  .tool-intel-atomic-row span {
+    color: var(--text-muted);
+    font-size: 11px;
+    font-weight: 850;
+  }
+
+  .tool-intel-atomic-row strong {
+    color: var(--text-primary);
+    font-size: 12px;
+    line-height: 1.35;
+  }
+
+  .tool-intel-atomic-row a {
+    grid-column: 2;
+    justify-self: start;
+    color: var(--accent-primary-text);
+    font-size: 11px;
+    font-weight: 800;
+    text-decoration: none;
+  }
+
+  .tool-intel-timeline ol {
+    display: grid;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .tool-intel-timeline li {
+    display: grid;
+    grid-template-columns: 72px minmax(0, 1fr);
+    gap: 10px;
+    align-items: start;
+  }
+
+  .tool-intel-time-type {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 24px;
+    border: 1px solid rgba(34, 211, 238, 0.28);
+    border-radius: 999px;
+    color: var(--accent-primary-text);
+    font-size: 10px;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+
+  .tool-intel-timeline strong,
+  .tool-intel-timeline a {
+    display: block;
+    color: var(--text-primary);
+    font-size: 12.5px;
+    font-weight: 850;
+    line-height: 1.3;
+    text-decoration: none;
+  }
+
+  .tool-intel-timeline a:hover {
+    color: var(--accent-primary-text);
+  }
+
+  .tool-intel-timeline li div span {
+    display: block;
+    margin-top: 3px;
+    color: var(--text-muted);
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1.35;
+  }
+
+  .tool-intel-graph-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    border-bottom: 1px solid var(--border);
+    padding: 9px 0;
+  }
+
+  .tool-intel-graph-row span,
+  .tool-intel-graph-cluster > span {
+    color: var(--text-muted);
+    font-size: 11px;
+    font-weight: 850;
+    text-transform: uppercase;
+  }
+
+  .tool-intel-graph-row strong,
+  .tool-intel-graph-row a {
+    color: var(--text-primary);
+    font-size: 12.5px;
+    font-weight: 850;
+    text-decoration: none;
+  }
+
+  .tool-intel-graph-row a:hover {
+    color: var(--accent-primary-text);
+  }
+
+  .tool-intel-graph-cluster {
+    display: grid;
+    gap: 8px;
+    margin-top: 14px;
+  }
+
+  .tool-intel-graph-cluster div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+  }
+
+  .tool-intel-graph-cluster a {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    min-height: 30px;
+    max-width: 100%;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-size: 11.5px;
+    font-weight: 850;
+    line-height: 1.2;
+    padding: 4px 9px 4px 5px;
+    text-decoration: none;
+  }
+
+  .tool-intel-graph-cluster a:hover {
+    border-color: rgba(34, 211, 238, 0.38);
+    color: var(--accent-primary-text);
+  }
+
+  @media (max-width: 900px) {
+    .tool-intel {
+      grid-template-columns: 1fr;
+    }
+
+    .tool-intel-facts,
+    .tool-intel-graph {
+      grid-row: auto;
+    }
+  }
+
+  @media (max-width: 560px) {
+    .tool-intel {
+      margin-top: 14px;
+    }
+
+    .tool-intel-card {
+      padding: 14px;
+    }
+
+    .tool-intel dl,
+    .tool-intel-atomic-row,
+    .tool-intel-timeline li {
+      grid-template-columns: 1fr;
+    }
+
+    .tool-intel-atomic-row a {
+      grid-column: auto;
+    }
+  }
+</style>
+
+<script is:inline>
+  (function () {
+    const KEY = 'aipedia-tool-watchlist';
+    const MAX = 40;
+
+    function read() {
+      try {
+        const parsed = JSON.parse(localStorage.getItem(KEY) || '[]');
+        return Array.isArray(parsed) ? parsed : [];
+      } catch (_) {
+        return [];
+      }
+    }
+
+    function write(list) {
+      try {
+        localStorage.setItem(KEY, JSON.stringify(list.slice(0, MAX)));
+      } catch (_) {}
+    }
+
+    function paint(btn) {
+      const slug = btn.getAttribute('data-watch-tool');
+      const watched = read().some((item) => item && item.slug === slug);
+      btn.classList.toggle('is-watched', watched);
+      btn.setAttribute('aria-pressed', watched ? 'true' : 'false');
+      const label = btn.querySelector('[data-watch-label]');
+      if (label) label.textContent = watched ? 'Watching' : 'Watch this tool';
+    }
+
+    function init() {
+      document.querySelectorAll('[data-watch-tool]').forEach((btn) => paint(btn));
+    }
+
+    document.addEventListener('click', (event) => {
+      const btn = event.target && event.target.closest ? event.target.closest('[data-watch-tool]') : null;
+      if (!btn) return;
+      const slug = btn.getAttribute('data-watch-tool');
+      const title = btn.getAttribute('data-watch-title') || slug;
+      let list = read().filter((item) => item && item.slug !== slug);
+      const wasWatching = btn.classList.contains('is-watched');
+      if (!wasWatching) list.unshift({ slug, title, at: Date.now() });
+      write(list);
+      paint(btn);
+    });
+
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+    else init();
+    document.addEventListener('astro:page-load', init);
+  })();
+</script>

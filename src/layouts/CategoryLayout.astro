@@ -95,6 +95,55 @@ const itemListItems = sorted.map((t) => ({
 }));
 
 const rankLabels = ['Best overall', 'Runner-up', 'Best value'];
+
+function lower(value?: string | null): string {
+  return String(value ?? '').toLowerCase();
+}
+
+function priceBucket(t: ToolData): string {
+  const model = lower(t.pricing_model).replace(/[_-]/g, ' ');
+  const price = lower(t.price_range);
+  if (model.includes('open source') || /open[\s-]?(source|weights)/.test(price)) return 'open-source';
+  if (model.includes('enterprise')) return 'enterprise';
+  if (model === 'free' || /\bfree\b/.test(price) || /\$0(?!\s*\(self)/.test(price)) return 'free';
+  if (model.includes('freemium')) return 'freemium';
+  if (model.includes('paid')) return 'paid';
+  return model || price ? 'paid' : 'other';
+}
+
+function filterText(t: ToolData): string {
+  return [
+    t.title,
+    t.company,
+    t.category,
+    t.tagline,
+    t.quick_answer,
+    t.pricing_model,
+    t.price_range,
+  ].filter(Boolean).join(' ').toLowerCase();
+}
+
+const priceLabels: Record<string, string> = {
+  free: 'Free',
+  freemium: 'Freemium',
+  'open-source': 'Open source',
+  paid: 'Paid',
+  enterprise: 'Enterprise',
+  other: 'Other',
+};
+
+const priceCounts = sorted.reduce<Record<string, number>>((acc, t) => {
+  const bucket = priceBucket(t);
+  acc[bucket] = (acc[bucket] ?? 0) + 1;
+  return acc;
+}, {});
+
+const pricingFilters = [
+  { value: 'all', label: 'All pricing', count: sorted.length },
+  ...Object.entries(priceLabels)
+    .map(([value, label]) => ({ value, label, count: priceCounts[value] ?? 0 }))
+    .filter((option) => option.count > 0),
+];
 ---
 
 <BaseLayout title={seoTitle ?? title} description={description}>
@@ -176,16 +225,26 @@ const rankLabels = ['Best overall', 'Runner-up', 'Best value'];
                   </div>
                 )}
                 {href !== '#' && (
-                  <a
-                    href={href}
-                    target="_blank"
-                    rel={rel}
-                    class="t2-cta t2-cta-primary t2-cat-toppick-cta"
-                    data-category-cta={t.slug}
-                  >
-                    {label}
-                    <span class="t2-cta-arrow" aria-hidden="true">↗</span>
-                  </a>
+                  <div class="t2-cat-toppick-actions">
+                    <a
+                      href={href}
+                      target="_blank"
+                      rel={rel}
+                      class="t2-cta t2-cta-primary t2-cat-toppick-cta"
+                      data-category-cta={t.slug}
+                    >
+                      {label}
+                      <span class="t2-cta-arrow" aria-hidden="true">↗</span>
+                    </a>
+                    <button type="button" class="t2-cat-toppick-compare" data-compare-add={t.slug} aria-pressed="false">
+                      <span data-compare-label>Compare</span>
+                    </button>
+                  </div>
+                )}
+                {href === '#' && (
+                  <button type="button" class="t2-cat-toppick-compare" data-compare-add={t.slug} aria-pressed="false">
+                    <span data-compare-label>Compare</span>
+                  </button>
                 )}
               </div>
             );
@@ -200,16 +259,51 @@ const rankLabels = ['Best overall', 'Runner-up', 'Best value'];
         <slot />
 
         {sorted.length > 0 && (
-          <section aria-labelledby="all-tools">
+          <section aria-labelledby="all-tools" data-cat-filter-root>
             <h2 id="all-tools">All {title.toLowerCase()} tools ranked</h2>
+            <div class="t2-cat-controls" data-pagefind-ignore>
+              <label class="t2-cat-search">
+                <span>Search this category</span>
+                <input type="search" placeholder={`Search ${sorted.length} tools`} data-cat-search autocomplete="off" />
+              </label>
+              <div class="t2-cat-filter-pills" role="group" aria-label="Pricing filter">
+                {pricingFilters.map((option) => (
+                  <button
+                    type="button"
+                    class={`t2-cat-filter-pill ${option.value === 'all' ? 'is-active' : ''}`}
+                    data-cat-price-filter={option.value}
+                    aria-pressed={option.value === 'all' ? 'true' : 'false'}
+                  >
+                    {option.label}
+                    <span class="tabular-nums">{option.count}</span>
+                  </button>
+                ))}
+              </div>
+              <label class="t2-cat-toggle">
+                <input type="checkbox" data-cat-strong />
+                <span>8.0+ only</span>
+              </label>
+              <button type="button" class="t2-cat-reset" data-cat-reset hidden>Reset</button>
+              <p class="t2-cat-filter-summary" aria-live="polite">
+                <strong class="tabular-nums" data-cat-visible-count>{sorted.length}</strong> of {sorted.length} tools shown
+              </p>
+            </div>
             <ol class="t2-cat-list">
               {sorted.map((t, i) => {
                 const score = overallScore(t);
                 const href = ctaHref(t);
                 const rel = ctaRel(t);
                 const label = ctaLabel(t);
+                const bucket = priceBucket(t);
                 return (
-                  <li class="t2-cat-row">
+                  <li
+                    class="t2-cat-row"
+                    data-cat-tool
+                    data-title={t.title.toLowerCase()}
+                    data-search={filterText(t)}
+                    data-price={bucket}
+                    data-score={score}
+                  >
                     <div class="t2-cat-row-rank tabular-nums">{i + 1}</div>
                     <ToolLogo slug={t.slug} title={t.title} size={32} className="t2-cat-row-logo" />
                     <div class="t2-cat-row-main">
@@ -222,22 +316,28 @@ const rankLabels = ['Best overall', 'Runner-up', 'Best value'];
                     {score > 0 && (
                       <span class="t2-cat-row-score tabular-nums">{score}</span>
                     )}
-                    {href !== '#' && (
-                      <a
-                        href={href}
-                        target="_blank"
-                        rel={rel}
-                        class="t2-cat-row-cta"
-                        data-category-list-cta={t.slug}
-                      >
-                        {label}
-                        <span class="t2-cta-arrow" aria-hidden="true">↗</span>
-                      </a>
-                    )}
+                    <div class="t2-cat-row-actions">
+                      <button type="button" class="t2-cat-row-compare" data-compare-add={t.slug} aria-pressed="false">
+                        <span data-compare-label>Compare</span>
+                      </button>
+                      {href !== '#' && (
+                        <a
+                          href={href}
+                          target="_blank"
+                          rel={rel}
+                          class="t2-cat-row-cta"
+                          data-category-list-cta={t.slug}
+                        >
+                          {label}
+                          <span class="t2-cta-arrow" aria-hidden="true">↗</span>
+                        </a>
+                      )}
+                    </div>
                   </li>
                 );
               })}
             </ol>
+            <p class="t2-cat-no-results" data-cat-no-results hidden>No matching tools in this category.</p>
           </section>
         )}
 
@@ -246,4 +346,97 @@ const rankLabels = ['Best overall', 'Runner-up', 'Best value'];
       </article>
     </div>
   </div>
+
+  <script is:inline>
+    (() => {
+      const root = document.querySelector('[data-cat-filter-root]');
+      if (!root) return;
+
+      const search = root.querySelector('[data-cat-search]');
+      const priceButtons = Array.from(root.querySelectorAll('[data-cat-price-filter]'));
+      const strong = root.querySelector('[data-cat-strong]');
+      const reset = root.querySelector('[data-cat-reset]');
+      const visibleCount = root.querySelector('[data-cat-visible-count]');
+      const noResults = root.querySelector('[data-cat-no-results]');
+      const tools = Array.from(root.querySelectorAll('[data-cat-tool]'));
+      const params = new URLSearchParams(window.location.search);
+
+      let state = {
+        q: params.get('q') || '',
+        price: params.get('price') || 'all',
+        strong: params.get('strong') === '1',
+      };
+
+      const syncInputs = () => {
+        if (search) search.value = state.q;
+        if (strong) strong.checked = state.strong;
+        priceButtons.forEach((button) => {
+          const selected = button.getAttribute('data-cat-price-filter') === state.price;
+          button.classList.toggle('is-active', selected);
+          button.setAttribute('aria-pressed', selected ? 'true' : 'false');
+        });
+      };
+
+      const updateUrl = () => {
+        const next = new URLSearchParams(window.location.search);
+        if (state.q) next.set('q', state.q);
+        else next.delete('q');
+        if (state.price && state.price !== 'all') next.set('price', state.price);
+        else next.delete('price');
+        if (state.strong) next.set('strong', '1');
+        else next.delete('strong');
+        const query = next.toString();
+        window.history.replaceState({}, '', `${window.location.pathname}${query ? `?${query}` : ''}${window.location.hash}`);
+      };
+
+      const apply = () => {
+        const q = state.q.trim().toLowerCase();
+        let shown = 0;
+        tools.forEach((tool) => {
+          const text = tool.getAttribute('data-search') || '';
+          const price = tool.getAttribute('data-price') || '';
+          const score = Number(tool.getAttribute('data-score') || '0');
+          const matchesQuery = !q || text.includes(q);
+          const matchesPrice = state.price === 'all' || price === state.price;
+          const matchesStrong = !state.strong || score >= 8;
+          const visible = matchesQuery && matchesPrice && matchesStrong;
+          tool.hidden = !visible;
+          if (visible) shown += 1;
+        });
+        if (visibleCount) visibleCount.textContent = String(shown);
+        if (noResults) noResults.hidden = shown !== 0;
+        if (reset) reset.hidden = !state.q && state.price === 'all' && !state.strong;
+        syncInputs();
+        updateUrl();
+      };
+
+      search?.addEventListener('input', () => {
+        state.q = search.value;
+        apply();
+      });
+
+      strong?.addEventListener('change', () => {
+        state.strong = strong.checked;
+        apply();
+      });
+
+      priceButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          state.price = button.getAttribute('data-cat-price-filter') || 'all';
+          apply();
+        });
+      });
+
+      reset?.addEventListener('click', () => {
+        state = { q: '', price: 'all', strong: false };
+        apply();
+        search?.focus();
+      });
+
+      if (!priceButtons.some((button) => button.getAttribute('data-cat-price-filter') === state.price)) {
+        state.price = 'all';
+      }
+      apply();
+    })();
+  </script>
 </BaseLayout>

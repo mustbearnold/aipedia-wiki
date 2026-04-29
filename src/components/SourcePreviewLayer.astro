@@ -1,0 +1,142 @@
+---
+/**
+ * Source preview tooltip for citation/source links carrying
+ * data-source-preview attributes.
+ */
+---
+
+<div id="source-preview-layer" class="source-preview-layer" role="tooltip" aria-hidden="true" data-pagefind-ignore>
+  <span class="source-preview-kicker">Source</span>
+  <strong class="source-preview-title"></strong>
+  <span class="source-preview-meta"></span>
+</div>
+
+<style is:global>
+  .source-preview-layer {
+    position: fixed;
+    z-index: 121;
+    width: min(300px, calc(100vw - 28px));
+    border: 1px solid color-mix(in srgb, var(--accent-primary) 26%, var(--border));
+    border-radius: 8px;
+    background: color-mix(in srgb, var(--bg-card) 96%, #020617);
+    box-shadow: 0 16px 44px -26px rgba(0, 0, 0, 0.65);
+    color: var(--text-primary);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(6px);
+    transition: opacity 120ms ease, transform 120ms ease;
+    padding: 12px;
+  }
+
+  .source-preview-layer.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .source-preview-kicker {
+    display: block;
+    color: var(--accent-primary-text);
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 0.13em;
+    line-height: 1;
+    text-transform: uppercase;
+    margin-bottom: 7px;
+  }
+
+  .source-preview-title {
+    display: block;
+    font-size: 13px;
+    line-height: 1.25;
+  }
+
+  .source-preview-meta {
+    display: block;
+    margin-top: 6px;
+    color: var(--text-muted);
+    font-size: 11.5px;
+    font-weight: 700;
+    line-height: 1.35;
+  }
+
+  html.light .source-preview-layer {
+    box-shadow: 0 16px 38px -26px rgba(15, 23, 42, 0.38);
+  }
+
+  @media (max-width: 720px), (hover: none) {
+    .source-preview-layer {
+      display: none;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .source-preview-layer {
+      transition: none;
+    }
+  }
+</style>
+
+<script is:inline>
+  (function () {
+    const layer = document.getElementById('source-preview-layer');
+    if (!layer) return;
+    const title = layer.querySelector('.source-preview-title');
+    const meta = layer.querySelector('.source-preview-meta');
+    let active = null;
+
+    function show(anchor) {
+      if (!anchor || !anchor.hasAttribute('data-source-preview')) return;
+      active = anchor;
+      const host = anchor.getAttribute('data-source-host') || '';
+      const kind = anchor.getAttribute('data-source-kind') || 'Reference';
+      const label = anchor.getAttribute('data-source-title') || anchor.textContent.trim() || anchor.href;
+      title.textContent = label;
+      meta.textContent = [kind, host].filter(Boolean).join(' | ');
+      layer.setAttribute('aria-hidden', 'false');
+      layer.classList.add('is-visible');
+
+      const rect = anchor.getBoundingClientRect();
+      const margin = 12;
+      const width = layer.offsetWidth || 300;
+      const height = layer.offsetHeight || 100;
+      let left = rect.left;
+      let top = rect.bottom + 9;
+      if (left + width + margin > window.innerWidth) left = window.innerWidth - width - margin;
+      if (left < margin) left = margin;
+      if (top + height + margin > window.innerHeight) top = rect.top - height - 9;
+      if (top < margin) top = margin;
+      layer.style.left = `${Math.round(left)}px`;
+      layer.style.top = `${Math.round(top)}px`;
+    }
+
+    function hide() {
+      active = null;
+      layer.classList.remove('is-visible');
+      layer.setAttribute('aria-hidden', 'true');
+    }
+
+    document.addEventListener('pointerover', (event) => {
+      const anchor = event.target && event.target.closest ? event.target.closest('[data-source-preview]') : null;
+      if (anchor) show(anchor);
+    });
+    document.addEventListener('pointerout', (event) => {
+      const anchor = event.target && event.target.closest ? event.target.closest('[data-source-preview]') : null;
+      if (!anchor) return;
+      if (event.relatedTarget && anchor.contains(event.relatedTarget)) return;
+      if (active === anchor) hide();
+    });
+    document.addEventListener('focusin', (event) => {
+      const anchor = event.target && event.target.closest ? event.target.closest('[data-source-preview]') : null;
+      if (anchor) show(anchor);
+    });
+    document.addEventListener('focusout', (event) => {
+      const anchor = event.target && event.target.closest ? event.target.closest('[data-source-preview]') : null;
+      if (anchor && active === anchor) hide();
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') hide();
+    });
+    window.addEventListener('scroll', hide, { passive: true });
+    window.addEventListener('resize', hide);
+  })();
+</script>
