@@ -41,15 +41,15 @@ For enterprise buyers, this is the most important change to AI procurement optio
 
 The old dynamic was simple: if you wanted deep OpenAI integration, including GPT models in your data pipeline, Codex agents on your infrastructure, or ChatGPT Enterprise with enterprise controls, you bought Azure. That bundling was efficient for Microsoft but limiting for customers who had invested in AWS or GCP.
 
-Now the calculus changes. AWS and Google Cloud customers can expect native ChatGPT and Codex product availability. Enterprise buyers who standardized on a non-Azure cloud can now deploy OpenAI's full product line without architecture compromises.
+Now the calculus changes. AWS and Google Cloud customers can ask for OpenAI products without the same Azure exclusivity blocker, but practical availability still depends on product-by-product launches, contracts, and Azure's first-ship role.
 
 For Amazon, the timing is notable. VentureBeat independently reported on April 29 that AWS hosted a "What's Next with AWS" event in San Francisco, where AWS announced OpenAI model availability, landing just 24 hours after the Microsoft deal restructuring.
 
 ## Tool impact
 
-**ChatGPT Enterprise** becomes a portable product that can run on any major cloud. Buyers evaluating productivity AI should check whether their Office 365 / Google Workspace / cloud provider relationship influences which version they get.
+**ChatGPT Enterprise** becomes less constrained by Azure exclusivity. Buyers evaluating productivity AI should check whether their Office 365, Google Workspace, or cloud-provider relationship changes the available deployment and support options.
 
-**Codex** gains broader cloud deployment options. Enterprise teams using AWS for their development infrastructure can now run Codex agents natively without Azure workarounds.
+**Codex** gains a clearer path to broader cloud deployment options. Enterprise teams using AWS or Google Cloud should watch for concrete Codex availability instead of assuming native deployment is live today.
 
 **Microsoft Copilot** loses some cloud exclusivity protection. Microsoft's suite of AI-assistant products still has deep integration with Office 365, Dynamics, and Azure, but the moat of exclusive model access is narrower.
 
@@ -59,10 +59,10 @@ For Amazon, the timing is notable. VentureBeat independently reported on April 2
 
 Do not rush to change cloud providers based on this announcement alone. The practical availability of OpenAI products on AWS and GCP will take time to materialize, and Azure remains the deepest integration path.
 
-However, start planning for a multi-cloud OpenAI strategy:
+However, start planning for a less Azure-bound OpenAI strategy:
 
 - If you are an AWS shop that avoided ChatGPT Enterprise because of Azure dependency, revisit that decision.
-- If you are negotiating an enterprise agreement with any cloud provider, note that OpenAI on your cloud is now a realistic ask.
+- If you are negotiating an enterprise agreement with any cloud provider, note that OpenAI products on your preferred cloud are now a realistic ask.
 - If you are a Microsoft shop, your Copilot roadmap is still secure through 2032. But the bundling advantage is weaker. Expect Microsoft to respond with deeper integration and better pricing rather than exclusivity.
 
 ## What to watch

@@ -11,7 +11,7 @@ pricing_model: freemium
 price_range: Free models plus per-token model pricing
 status: active
 launched: 2023
-last_updated: 2026-04-29
+last_updated: 2026-04-30
 last_verified: 2026-04-29
 update_frequency: monthly
 affiliate:
@@ -50,6 +50,7 @@ The product is useful because the model market changes faster than most app code
 
 ## Recent developments
 
+- **April 30, 2026:** [Poolside released Laguna XS.2 (33B MoE, Apache 2.0) for local agentic coding and Laguna M.1 (225B MoE) as a free-tier API](/news/2026-04-30-poolside-laguna-xs2-open-model-local-agentic-coding/). Both models are available through OpenRouter for testing, provider routing, and deployment alongside the other 300+ models.
 - **April 28, 2026:** [NVIDIA launched Nemotron 3 Nano Omni](/news/2026-04-28-nvidia-nemotron-3-nano-omni/) with OpenRouter listed as one of the access routes for the open multimodal agent model.
 - **April 28, 2026:** [Mistral 3 shipped with Large 3 and new Ministral models](/news/2026-04-28-mistral-3-open-model-release/), giving OpenRouter users another open-model family to test against Llama, Qwen, DeepSeek, Gemma, and closed frontier models.
 

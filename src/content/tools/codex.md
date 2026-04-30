@@ -11,7 +11,7 @@ pricing_model: freemium
 price_range: "Bundled with ChatGPT Plus ($20/mo) through Pro 20x ($200/mo)"
 status: active
 launched: 2025-05
-last_updated: 2026-04-29
+last_updated: 2026-04-30
 last_verified: 2026-04-29
 update_frequency: monthly
 affiliate:
@@ -69,6 +69,8 @@ Bundled with every paid ChatGPT tier. Pro tiers get 5x to 20x the Codex usage of
 
 ## Recent developments (March-April 2026)
 
+- **April 30, 2026:** [OpenAI and Microsoft gut exclusivity, freeing OpenAI to serve products across AWS and Google Cloud](/news/2026-04-30-openai-microsoft-gut-exclusive-deal/). Codex now has a clearer path to non-Azure enterprise distribution, but practical availability still depends on future product rollouts.
+- **April 30, 2026:** [OpenAI's DevDay 2026 is set for September 29](/news/2026-04-30-openai-devyday-2026-september-29/). Codex roadmap and product direction will likely be a centerpiece of the event.
 - **April 29, 2026:** [Agent skill libraries are becoming the new coding-agent workflow layer](/news/2026-04-29-agent-skills-ecosystem-github-trending/). Codex benefits from the same shift toward reusable local skills, templates, and MCP-aware workflow modules instead of one-off prompts.
 - **April 28, 2026:** [Codex comes to Amazon Bedrock as part of the expanded OpenAI/AWS partnership](/news/2026-04-28-openai-models-codex-managed-agents-aws/). Limited preview starts with Codex CLI, the desktop app, and the VS Code extension configured to use Bedrock as the provider.
 - **April 27, 2026:** [OpenAI and Microsoft made their model partnership non-exclusive](/news/2026-04-27-openai-microsoft-nonexclusive-partnership/). Codex remains part of the OpenAI product stack, but enterprise deployment optionality around OpenAI products now matters more than Azure exclusivity alone.

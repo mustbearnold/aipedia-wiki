@@ -11,7 +11,7 @@ pricing_model: freemium
 price_range: "$0 local / $20-$100/mo cloud"
 status: active
 launched: 2023-07
-last_updated: 2026-04-18
+last_updated: 2026-04-30
 last_verified: 2026-04-18
 update_frequency: monthly
 affiliate:
@@ -62,11 +62,15 @@ The most-downloaded local LLM runtime of 2026. Ollama is a single desktop binary
 | **Platforms** | macOS (Apple Silicon + Intel), Windows (including native ARM64), Linux |
 | **Cost to run locally** | $0 |
 | **API surface** | OpenAI-compatible HTTP (`/v1/chat/completions`, `/v1/embeddings`), native REST |
-| **Model library** | 150+ open-weight models. Llama 4 Maverick, Llama 4 Scout, Qwen 3, DeepSeek V3.2, Gemma 4, Mistral, Phi-4, and reasoning models like DeepSeek R1 |
+| **Model library** | 150+ open-weight models. Llama 4 Maverick, Llama 4 Scout, Qwen 3, DeepSeek V3.2, Poolside Laguna XS.2, Gemma 4, Mistral, Phi-4, and reasoning models like DeepSeek R1 |
 | **Multimodal** | Vision + text models supported (Llama 4 Scout, Qwen-VL) |
 | **Quantization** | Automatic Q4_K_M by default; Q2 through Q8 selectable |
 | **Monthly downloads** | 52M as of Q1 2026 (520× growth from 100k in Q1 2023) |
 | **Ollama Cloud tiers** | Free · Pro $20/mo · Max $100/mo |
+
+## Recent developments
+
+- **April 30, 2026:** [Poolside released Laguna XS.2 (33B MoE, Apache 2.0) for local agentic coding](/news/2026-04-30-poolside-laguna-xs2-open-model-local-agentic-coding/), trained from scratch using a Muon optimizer. Available through Ollama for local inference alongside the existing model library.
 
 ## When to pick Ollama
 

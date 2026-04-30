@@ -10,7 +10,7 @@ pricing_model: paid
 price_range: "$20-$200/month"
 status: active
 launched: 2025-02
-last_updated: 2026-04-29
+last_updated: 2026-04-30
 last_verified: 2026-04-29
 update_frequency: monthly
 affiliate:
@@ -62,6 +62,7 @@ Claude Opus 4.7 (released April 16, 2026) is the default backing model. Access i
 
 ## Recent developments (April 2026)
 
+- **April 30:** [Sources: Anthropic could raise $50B at $900B valuation](/news/2026-04-30-anthropic-50b-900b-valuation-round/). The round would dramatically expand resources for Claude Code's development, compute capacity, and enterprise roadmap, backed by a $30B+ revenue run rate.
 - **April 29:** [Agent skill libraries are becoming a coding-agent workflow layer](/news/2026-04-29-agent-skills-ecosystem-github-trending/). Claude Code is one of the clearest beneficiaries because its users already treat local instructions, skills, hooks, and MCP integrations as versioned engineering assets.
 - **April 29:** [Anthropic updated its Responsible Scaling Policy around external review](/news/2026-04-29-anthropic-rsp-external-review-update/). Claude Code buyers should track these governance changes because coding agents increasingly operate with filesystem, terminal, and tool permissions.
 - **April 27:** [Cursor and Claude were named in a reported PocketOS database-deletion incident](/news/2026-04-27-cursor-claude-database-deletion-incident/). Claude Code users should treat it as a reminder that prompt rules are not a security boundary for production infrastructure.
