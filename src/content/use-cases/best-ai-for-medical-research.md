@@ -7,8 +7,8 @@ meta_description: "Top AI tools for medical research as of April 2026: compare C
 description: "This page recommends 5 AI tools for medical research use cases including literature synthesis, dataset analysis, multimodal reasoning on scans and papers, and long-form hypothesis testing, with pricing, pros, cons as of April 2026."
 tools_mentioned: ["chatgpt", "claude", "gemini", "perplexity", "elicit"]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-04-30
+last_verified: 2026-04-30
 update_frequency: monthly
 ---
 

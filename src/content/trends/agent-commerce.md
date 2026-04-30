@@ -8,8 +8,8 @@ author: "aipedia.wiki Editorial"
 description: AI agents autonomously buying, selling, and transacting. Travel booking, ad management, and procurement going agent-first.
 timeframe: Conceptual in 2024, first real implementations in late 2025. Accelerating through 2026. Still early.
 impact: high
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-04-30
+last_verified: 2026-04-30
 update_frequency: monthly
 ---
 

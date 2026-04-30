@@ -8,8 +8,8 @@ summary: "CNBC reported that Nvidia stock closed at a record and pushed the comp
 affects: []
 categories: [ai-infrastructure, ai-business, semiconductors]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-26
-last_verified: 2026-04-26
+last_updated: 2026-04-30
+last_verified: 2026-04-30
 sources:
   - url: "https://www.cnbc.com/2026/04/24/nvidia-stock-closes-at-record-pushing-market-cap-past-5-trillion.html"
     title: "Nvidia stock closes at record, pushing market cap past $5 trillion - CNBC"

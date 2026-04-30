@@ -8,8 +8,8 @@ summary: "TechCrunch coverage of Anthropic Project Deal emphasized that AI agent
 affects: [claude]
 categories: [ai-agents, ai-business, ai-industry]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-26
-last_verified: 2026-04-26
+last_updated: 2026-04-30
+last_verified: 2026-04-30
 sources:
   - url: "https://techcrunch.com/2026/04/25/anthropic-created-a-test-marketplace-for-agent-on-agent-commerce/"
     title: "Anthropic created a test marketplace for agent-on-agent commerce - TechCrunch"

@@ -8,8 +8,8 @@ summary: "Anthropic published an update on election safeguards, adding another g
 affects: [claude]
 categories: [ai-policy, ai-safety, ai-industry]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-26
-last_verified: 2026-04-26
+last_updated: 2026-04-30
+last_verified: 2026-04-30
 sources:
   - url: "https://www.anthropic.com/news/election-safeguards-update"
     title: "An update on our election safeguards - Anthropic"

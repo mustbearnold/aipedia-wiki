@@ -8,8 +8,8 @@ summary: "Google News surfaced Google coverage of eighth-generation TPUs positio
 affects: [gemini]
 categories: [ai-infrastructure, ai-industry]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-26
-last_verified: 2026-04-26
+last_updated: 2026-04-30
+last_verified: 2026-04-30
 sources:
   - url: "https://news.google.com/rss/articles/CBMirwFBVV95cUxQNDdpOGpiZlhkZUpucVI1b1JoTDV4S0dQSmVQLTZaY1dHdkoxb3ZRbl9oa1BTZWgtdVhXN1U3TWFCN0t0WmI4eS1mdHp4X1o5Z0VUekJSbnF3NFU5YlgtTkMtX19yNXRUMi1odUluQ1dtbHktRXpoaTZUUmNvd1NsNlBlVEtybzgwQXI1aWJRUW4xNzVNdnBYTTFCV1kyWWNIMlViR3RicHpfTUtyNzJz?oc=5"
     title: "Our eighth generation TPUs: two chips for the agentic era - Google"

@@ -8,8 +8,8 @@ summary: "Meta and Overview Energy announced a capacity reservation agreement fo
 affects: []
 categories: [ai-infrastructure, ai-business, energy]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-27
-last_verified: 2026-04-27
+last_updated: 2026-04-30
+last_verified: 2026-04-30
 sources:
   - url: "https://www.prnewswire.com/news-releases/overview-energy-and-meta-announce-first-of-its-kind-agreement-to-bring-space-solar-energy-to-data-centers-302753490.html"
     title: "Overview Energy and Meta Announce First-of-Its-Kind Agreement to Bring Space Solar Energy to Data Centers - PR Newswire"

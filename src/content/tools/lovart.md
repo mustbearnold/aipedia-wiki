@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "Free + credit-based paid plans"
 status: active
 launched: 2025
-last_updated: 2026-04-28
-last_verified: 2026-04-28
+last_updated: 2026-04-30
+last_verified: 2026-04-30
 update_frequency: monthly
 seo_title: "Lovart: Features, Pricing & Review (2026)"
 meta_description: "Lovart is an AI design agent for brand visuals, marketing creative, mockups, and design direction. Best for founders and marketers who need fast creative iteration."

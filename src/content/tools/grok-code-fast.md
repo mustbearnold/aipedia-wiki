@@ -11,8 +11,8 @@ pricing_model: paid
 price_range: "API/token pricing varies by provider"
 status: active
 launched: 2025-08
-last_updated: 2026-04-28
-last_verified: 2026-04-28
+last_updated: 2026-04-30
+last_verified: 2026-04-30
 update_frequency: monthly
 seo_title: "Grok Code Fast 1: Features, Pricing & Review (2026)"
 meta_description: "Grok Code Fast is xAI's speed-oriented coding model for code agents and developer tools. Best for low-latency coding workflows where fast iteration matters."

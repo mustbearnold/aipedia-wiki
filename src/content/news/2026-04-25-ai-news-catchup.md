@@ -8,8 +8,8 @@ summary: "April 25 editorial catch-up: the biggest items found since the last ne
 affects: [github-copilot, claude, claude-code, claude-design, cohere, chatgpt, codex]
 categories: [ai-industry, ai-coding, ai-business, ai-infrastructure]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-25
-last_verified: 2026-04-25
+last_updated: 2026-04-30
+last_verified: 2026-04-30
 sources:
   - url: "https://openai.com/index/introducing-gpt-5-5/"
     title: "Introducing GPT-5.5 - OpenAI"

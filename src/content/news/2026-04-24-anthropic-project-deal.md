@@ -9,8 +9,8 @@ affects: [claude]
 categories: [ai-agents, ai-business, ai-research]
 related_tools: [claude]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-25
-last_verified: 2026-04-25
+last_updated: 2026-04-30
+last_verified: 2026-04-30
 sources:
   - url: "https://www.anthropic.com/features/project-deal"
     title: "Project Deal: our Claude-run marketplace experiment - Anthropic"

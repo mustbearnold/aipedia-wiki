@@ -8,8 +8,8 @@ winner: depends
 seo_title: "Freepik AI Image Generator vs Midjourney: Which Is Better in 2026?"
 meta_description: "Head-to-head comparison of Freepik AI Image Generator and Midjourney as of April 2026. Current pricing, capabilities, and which tool fits your workflow."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-26
-last_verified: 2026-04-26
+last_updated: 2026-04-30
+last_verified: 2026-04-30
 update_frequency: quarterly
 canonical_fact_table: true
 ---

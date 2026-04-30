@@ -8,8 +8,8 @@ summary: "GitHub made bring-your-own-language-model-key support available in VS 
 affects: [github-copilot]
 categories: [ai-tools, ai-coding, enterprise-ai]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-26
-last_verified: 2026-04-26
+last_updated: 2026-04-30
+last_verified: 2026-04-30
 sources:
   - url: "https://github.blog/changelog/2026-04-22-bring-your-own-language-model-key-in-vs-code-now-available/"
     title: "Bring your own language model key in VS Code now available - GitHub Changelog"

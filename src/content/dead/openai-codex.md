@@ -14,7 +14,8 @@ acquired_by: ""
 seo_title: "OpenAI Codex: What Happened? (Discontinued)"
 meta_description: "OpenAI Codex API was deprecated on March 23, 2023. Learn what it was, why OpenAI shut it down, and the best alternatives for AI coding today."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-15
+last_updated: 2026-04-30
+last_verified: 2026-04-30
 ---
 
 # OpenAI Codex (Discontinued)

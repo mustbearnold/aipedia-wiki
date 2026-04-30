@@ -8,8 +8,8 @@ summary: "A federal court dismissed Elon Musk's fraud and constructive fraud cla
 affects: [chatgpt, codex]
 categories: [ai-policy, ai-business, ai-legal]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-27
-last_verified: 2026-04-27
+last_updated: 2026-04-30
+last_verified: 2026-04-30
 sources:
   - url: "https://storage.courtlistener.com/recap/gov.uscourts.cand.433688/gov.uscourts.cand.433688.497.0.pdf"
     title: "Order deeming fraud and constructive fraud claims dismissed with prejudice - U.S. District Court, Northern District of California"

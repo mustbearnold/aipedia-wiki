@@ -8,8 +8,8 @@ winner: depends
 seo_title: "Cursor vs Windsurf: Which AI Coding IDE Is Better in 2026?"
 meta_description: "Cursor vs Windsurf: both are VS Code forks with AI agents. Cursor leads on ecosystem; Windsurf wins on price. Full 2026 comparison."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-26
-last_verified: 2026-04-26
+last_updated: 2026-04-30
+last_verified: 2026-04-30
 update_frequency: quarterly
 canonical_fact_table: true
 ---

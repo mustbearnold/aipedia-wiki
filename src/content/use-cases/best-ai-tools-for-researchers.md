@@ -7,8 +7,8 @@ meta_description: "Top AI tools for researchers in 2026 include Perplexity for s
 description: "This page recommends AI tools for researchers, covering literature review, data analysis, and hypothesis testing, with pricing, pros, and cons verified as of April 2026."
 tools_mentioned: ["perplexity", "claude", "gemini", "chatgpt"]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-18
-last_verified: 2026-04-18
+last_updated: 2026-04-30
+last_verified: 2026-04-30
 update_frequency: monthly
 ---
 

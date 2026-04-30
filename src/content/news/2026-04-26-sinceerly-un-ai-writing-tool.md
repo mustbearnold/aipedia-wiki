@@ -8,8 +8,8 @@ summary: "Mashable SEA covered Sinceerly, an AI tool that aims to make machine-g
 affects: []
 categories: [ai-tools, ai-writing, ai-media]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-26
-last_verified: 2026-04-26
+last_updated: 2026-04-30
+last_verified: 2026-04-30
 sources:
   - url: "https://news.google.com/rss/articles/CBMigAFBVV95cUxQektKcFhJbDN1RnNFdjJ1aVFJZFF3UEI3eFFNWVZGQzN5eHdzVEdXYk8tWW52SHI2aFVWYzF1OFZqUmtGSzU1cVlLVkdjdHpKTGtMY1IteVI3OWNBQV9uQkRQOXVteWlIbHgyeThmNUw3UHQwbF9DaEc2dERmZzFjQQ?oc=5"
     title: "New AI tool seeks to un-AI your writing - Mashable SEA"

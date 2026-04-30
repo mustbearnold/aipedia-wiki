@@ -14,7 +14,8 @@ acquired_by: ""
 seo_title: "Clipdrop: What Happened? (Discontinued)"
 meta_description: "Stability AI shut down Clipdrop in May 2024 amid financial difficulties. Here's what Clipdrop did, why it closed, and the best alternatives."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-15
+last_updated: 2026-04-30
+last_verified: 2026-04-30
 ---
 
 # Clipdrop (Discontinued)

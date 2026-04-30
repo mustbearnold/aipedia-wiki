@@ -8,8 +8,8 @@ summary: "Google surfaced a way to start vibe coding in AI Studio with a Google 
 affects: [gemini]
 categories: [ai-tools, ai-coding, developer-tools]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-26
-last_verified: 2026-04-26
+last_updated: 2026-04-30
+last_verified: 2026-04-30
 sources:
   - url: "https://news.google.com/rss/articles/CBMikAFBVV95cUxORkVpWFQ4TWx2ME5nQmxob1hoU00yXzBTaTVRVkxOb3hZYlRYd3N2ZkdkMVJuX1dSNzZlOFdPUlVxSE1yamlTaVJZUUMwVHJ3TTUzNzBSbVp4Tkw2ME1aQ3ViWkFXYnAtaDRzY19QWjlESUhMekRBeW5nb1VFUURVVWFxbWxYRnc4S01rUVJKem8?oc=5"
     title: "Start vibe coding in AI Studio with your Google AI subscription - Google"

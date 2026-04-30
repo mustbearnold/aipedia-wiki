@@ -7,8 +7,8 @@ meta_description: "The best AI tool stack for YouTube, TikTok, and social media 
 author: "aipedia.wiki Editorial"
 description: A practical AI tool stack for content creators, from script to video to distribution. Budget and premium versions with honest cost estimates.
 tools_mentioned: [chatgpt, claude, elevenlabs, heygen, runway, descript, capcut, suno, canva]
-last_updated: 2026-04-18
-last_verified: 2026-04-18
+last_updated: 2026-04-30
+last_verified: 2026-04-30
 update_frequency: monthly
 ---
 

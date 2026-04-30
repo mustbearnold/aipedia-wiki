@@ -8,8 +8,8 @@ summary: "Axios reported that the pope moved to police AI, adding religious and 
 affects: []
 categories: [ai-policy, ai-safety, ai-industry]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-26
-last_verified: 2026-04-26
+last_updated: 2026-04-30
+last_verified: 2026-04-30
 sources:
   - url: "https://news.google.com/rss/articles/CBMihgFBVV95cUxNdWdjSmplaXExSjFBbGZiWHdsUjlPYlF5UWpIUW1JYXlZa01hWWl2emFpOGY4cDQ1NElMQUd0bHppb3BRbUp6Nmt4Ull0SGV6TkJlTXNkdXVLeWFPSnptZmEtUE5zMnBiN09UdnI5dmMtMmtnQlhyMVhxNFZ0cnZRWlZfSFh4dw?oc=5"
     title: "The pope moves to police AI - Axios"

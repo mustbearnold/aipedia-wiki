@@ -10,8 +10,9 @@ founded: 2023
 hq: London, UK / Mountain View, USA
 funding: "Alphabet-funded (no external rounds)"
 key_products: [gemini, notebooklm, google-stitch]
-last_updated: 2026-04-15
+last_updated: 2026-04-30
 update_frequency: quarterly
+last_verified: 2026-04-30
 ---
 
 # Google DeepMind

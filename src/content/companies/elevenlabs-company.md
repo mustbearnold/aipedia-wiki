@@ -10,8 +10,9 @@ founded: 2022
 hq: New York, USA
 funding: "Series D (February 2026)"
 key_products: [elevenlabs]
-last_updated: 2026-04-15
+last_updated: 2026-04-30
 update_frequency: quarterly
+last_verified: 2026-04-30
 ---
 
 # ElevenLabs

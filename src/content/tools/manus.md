@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2025-03
-last_updated: 2026-04-28
-last_verified: 2026-04-28
+last_updated: 2026-04-30
+last_verified: 2026-04-30
 update_frequency: monthly
 seo_title: "Manus: Features, Pricing & Review (2026)"
 meta_description: "Manus is Butterfly Effect's general-purpose autonomous agent. Meta announced an acquisition in December 2025, but China blocked the deal on April 27, 2026. Free tier includes 1,000 starter credits plus 300 daily. Pro from $20/mo."

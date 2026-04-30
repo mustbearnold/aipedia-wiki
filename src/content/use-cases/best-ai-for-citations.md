@@ -7,8 +7,8 @@ meta_description: "Discover the top AI tools for generating accurate citations a
 description: "This page recommends 3-5 AI tools for citations and references, with details on versions, pricing, pros, and cons verified as of 2026-04-15."
 tools_mentioned: ["perplexity-ai", "notebooklm", "chatgpt", "gemini", "claude"]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-18
-last_verified: 2026-04-18
+last_updated: 2026-04-30
+last_verified: 2026-04-30
 update_frequency: monthly
 ---
 

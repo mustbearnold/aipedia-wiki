@@ -7,8 +7,8 @@ meta_description: "Top AI video generation tools as Runway alternatives include 
 description: "This page recommends 3-5 AI video generation tools as Runway alternatives matched to specific use cases with pricing, pros, and cons verified as of 2026-04-15."
 tools_mentioned: ["kling", "hailuo", "luma-dream-machine", "pika", "genmo"]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-15
-last_verified: 2026-04-15
+last_updated: 2026-04-30
+last_verified: 2026-04-30
 update_frequency: monthly
 ---
 

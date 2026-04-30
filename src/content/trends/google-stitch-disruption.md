@@ -8,8 +8,8 @@ author: "aipedia.wiki Editorial"
 description: Google's free AI design tool dropped Figma stock 12%. Design-by-conversation paradigm with voice canvas.
 timeframe: Google Stitch launched March 2026. Figma stock dropped 12% same day. Impact still unfolding.
 impact: medium
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-04-30
+last_verified: 2026-04-30
 update_frequency: monthly
 ---
 

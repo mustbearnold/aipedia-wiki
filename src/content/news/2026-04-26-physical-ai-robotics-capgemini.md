@@ -8,8 +8,8 @@ summary: "Capgemini published coverage on how physical AI is transforming roboti
 affects: []
 categories: [ai-robotics, ai-industry, enterprise-ai]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-26
-last_verified: 2026-04-26
+last_updated: 2026-04-30
+last_verified: 2026-04-30
 sources:
   - url: "https://news.google.com/rss/articles/CBMidkFVX3lxTFA1ZVM2Tlc1V0ZHZm5xSDkzdnJkd1RXZ2RNM2o2Z0wtWEIzOTNtWGxOekxHamhZY0pENTVZQXBJTlRPVGMzcGdRTWtxS2tpU0RhTDhrOHpPcjJJb2JYc1VFVzB4V0kwWXpEU3Q5MVM2U3c0RWF5Unc?oc=5"
     title: "How physical AI is transforming robotics across industries - Capgemini"

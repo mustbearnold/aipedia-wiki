@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$10/1M tokens"
 status: active
 launched: 2019-06
-last_updated: 2026-04-26
-last_verified: 2026-04-26
+last_updated: 2026-04-30
+last_verified: 2026-04-30
 update_frequency: monthly
 seo_title: "Cohere: Features, Pricing & Review (April 2026)"
 meta_description: "Cohere's Command A (256K context) is the agentic flagship; Command R+ runs at $2.50/$10 per 1M tokens. North workspace and Model Vault ship private deployment. Enterprise-first LLM platform built around RAG, Rerank, and Aya multilingual."

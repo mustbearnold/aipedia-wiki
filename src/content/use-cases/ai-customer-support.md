@@ -7,8 +7,8 @@ meta_description: "Compare top AI tools for automating customer support tickets:
 author: "aipedia.wiki Editorial"
 description: "n8n + Claude Opus 4.7 automates 70-80% of tickets via workflows and AI responses."
 tools_mentioned: [n8n, claude]
-last_updated: 2026-04-18
-last_verified: 2026-04-18
+last_updated: 2026-04-30
+last_verified: 2026-04-30
 update_frequency: quarterly
 ---
 

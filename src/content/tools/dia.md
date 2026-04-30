@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "Free download; account required for AI usage"
 status: active
 launched: 2025
-last_updated: 2026-04-28
-last_verified: 2026-04-28
+last_updated: 2026-04-30
+last_verified: 2026-04-30
 update_frequency: monthly
 seo_title: "Dia Browser: Features, Pricing & Review (2026)"
 meta_description: "Dia is The Browser Company's AI-native browser for contextual search, page-aware chat, and agentic browsing. Best for researchers and operators who want AI inside the browser, not a separate tab."

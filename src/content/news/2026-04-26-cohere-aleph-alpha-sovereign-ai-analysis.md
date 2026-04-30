@@ -8,8 +8,8 @@ summary: "TechCrunch framed Cohere taking over Germany-based Aleph Alpha as a so
 affects: [cohere]
 categories: [ai-business, ai-industry, ai-policy]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-26
-last_verified: 2026-04-26
+last_updated: 2026-04-30
+last_verified: 2026-04-30
 sources:
   - url: "https://techcrunch.com/2026/04/25/why-cohere-is-merging-with-aleph-alpha/"
     title: "Why Cohere is merging with Aleph Alpha - TechCrunch"

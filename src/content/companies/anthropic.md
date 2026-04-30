@@ -10,9 +10,9 @@ founded: 2021
 hq: San Francisco, USA
 funding: "$40B+"
 key_products: [claude, claude-code]
-last_updated: 2026-04-17
+last_updated: 2026-04-30
 update_frequency: quarterly
-last_verified: 2026-04-17
+last_verified: 2026-04-30
 ---
 
 # Anthropic

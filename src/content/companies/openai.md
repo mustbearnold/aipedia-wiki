@@ -10,9 +10,9 @@ founded: 2015
 hq: San Francisco, USA
 funding: "$133B+"
 key_products: [chatgpt, codex]
-last_updated: 2026-04-18
+last_updated: 2026-04-30
 update_frequency: quarterly
-last_verified: 2026-04-18
+last_verified: 2026-04-30
 ---
 
 # OpenAI

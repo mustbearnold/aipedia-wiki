@@ -8,8 +8,8 @@ summary: "Google surfaced Deep Research Max as a step change for autonomous rese
 affects: [gemini]
 categories: [ai-tools, ai-research, ai-agents]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-26
-last_verified: 2026-04-26
+last_updated: 2026-04-30
+last_verified: 2026-04-30
 sources:
   - url: "https://news.google.com/rss/articles/CBMirgFBVV95cUxQanRDUGY3YUZzNjg4dTZHNExRdzV3dVZiMXhqejg2RXNoenVQd0EtZVZ1UVNDRkFFQjZXRHBBbGREWFhSdXBPdnhBTVN5d1lfenBBTkMtLXRJanlSM2htSjBsQzBZVzI5ODJ6bmpIbGQwYmpsWHBlWVR5ZkRNVkJpY2hFbkRvbDdheW9peDJrc2R1V0VNXzdCdVFjclVYaGtrSTNxdGpFb2NudldHM1E?oc=5"
     title: "Deep Research Max: a step change for autonomous research agents - Google"

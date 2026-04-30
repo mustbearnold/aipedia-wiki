@@ -8,8 +8,8 @@ summary: "The New Yorker covered how AI is making influencer culture feel even l
 affects: []
 categories: [ai-media, ai-culture, ai-safety]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-26
-last_verified: 2026-04-26
+last_updated: 2026-04-30
+last_verified: 2026-04-30
 sources:
   - url: "https://news.google.com/rss/articles/CBMihAFBVV95cUxNaE5sT3hOSTVYR1FLSmVUcjdaLXJJeHZoRUZjeExqb0ZNRFFoN2VVYVRmMC04SzYwa3FXQ2U3ZUFULVRlcFBuQ3liRm4xeW9pOEt4dVR3WXRPZGRxMUNEaDNOdEZXbU80cHI0NENKNmVyRHU3c3g5WVBNbG9aclJVSC1fM00?oc=5"
     title: "A.I. Is Making Influencing Even Faker - The New Yorker"

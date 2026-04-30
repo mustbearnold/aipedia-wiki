@@ -7,8 +7,8 @@ meta_description: "Automate lead sourcing, enrichment, and AI-powered scoring us
 author: "aipedia.wiki Editorial"
 description: Scrape, enrich, and qualify leads automatically using n8n, Claude, and data enrichment tools.
 tools_mentioned: [n8n, claude]
-last_updated: 2026-04-18
-last_verified: 2026-04-18
+last_updated: 2026-04-30
+last_verified: 2026-04-30
 update_frequency: quarterly
 ---
 

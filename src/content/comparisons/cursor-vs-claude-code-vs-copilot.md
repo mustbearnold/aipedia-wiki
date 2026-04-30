@@ -8,8 +8,8 @@ winner: depends
 seo_title: "Cursor vs Claude Code vs Copilot: Best April 2026"
 meta_description: "Cursor leads IDE experience with Supermaven autocomplete, Claude Code dominates agentic autonomy, Copilot offers best value. Feature, pricing, and model comparison for April 2026."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-26
-last_verified: 2026-04-26
+last_updated: 2026-04-30
+last_verified: 2026-04-30
 update_frequency: quarterly
 canonical_fact_table: true
 ---

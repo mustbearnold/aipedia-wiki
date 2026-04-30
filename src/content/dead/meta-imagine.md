@@ -14,7 +14,8 @@ acquired_by: ""
 seo_title: "Meta Imagine: What Happened? (Merged into Meta AI)"
 meta_description: "Meta Imagine at imagine.meta.com was shut down in mid-2024 as Meta consolidated all AI features into Meta AI. Here's what changed and where to find it now."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-15
+last_updated: 2026-04-30
+last_verified: 2026-04-30
 ---
 
 # Meta Imagine (Discontinued)

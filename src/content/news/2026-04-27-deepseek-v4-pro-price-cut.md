@@ -8,8 +8,8 @@ summary: "Reuters reported that DeepSeek is offering developers a 75% discount o
 affects: [deepseek]
 categories: [ai-model-release, ai-business, ai-tools]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-27
-last_verified: 2026-04-27
+last_updated: 2026-04-30
+last_verified: 2026-04-30
 sources:
   - url: "https://ca.marketscreener.com/news/china-s-deepseek-slashes-prices-for-new-ai-model-ce7f59dcdd8fff24"
     title: "China's DeepSeek slashes prices for new AI model - Reuters via MarketScreener"

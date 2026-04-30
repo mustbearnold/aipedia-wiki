@@ -14,7 +14,8 @@ acquired_by: ""
 seo_title: "Microsoft Bing Chat: What Happened? (Shut Down After Rebrand)"
 meta_description: "Bing Chat launched in 2023, rebranded to Microsoft Copilot in November 2023, and shut down in August 2025 with Bing Search APIs. Details on its history, shutdown, and current alternatives."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-15
+last_updated: 2026-04-30
+last_verified: 2026-04-30
 ---
 
 # Microsoft Bing Chat (Discontinued)

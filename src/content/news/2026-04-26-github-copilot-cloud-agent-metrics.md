@@ -8,8 +8,8 @@ summary: "GitHub added a used_copilot_cloud_agent field to Copilot usage metrics
 affects: [github-copilot]
 categories: [ai-tools, ai-coding, enterprise-ai]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-26
-last_verified: 2026-04-26
+last_updated: 2026-04-30
+last_verified: 2026-04-30
 sources:
   - url: "https://github.blog/changelog/2026-04-23-copilot-cloud-agent-fields-added-to-usage-metrics/"
     title: "Copilot cloud agent fields added to usage metrics - GitHub Changelog"

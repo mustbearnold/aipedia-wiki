@@ -8,8 +8,8 @@ summary: "GitHub Copilot Chat on github.com now recognizes stack traces more rel
 affects: [github-copilot]
 categories: [ai-tools, ai-coding, developer-tools]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-26
-last_verified: 2026-04-26
+last_updated: 2026-04-30
+last_verified: 2026-04-30
 sources:
   - url: "https://github.blog/changelog/2026-04-23-better-debugging-with-github-copilot-on-the-web/"
     title: "Better debugging with GitHub Copilot on the web - GitHub Changelog"

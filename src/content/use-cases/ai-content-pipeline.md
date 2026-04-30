@@ -7,8 +7,8 @@ meta_description: "Build a semi-automated content pipeline producing SEO-optimiz
 author: "aipedia.wiki Editorial"
 description: Automate blog posts, social media, and newsletters using Claude Opus 4.7, Surfer SEO, n8n, and Canva with a human review step.
 tools_mentioned: [claude, surfer-seo, n8n, canva]
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-04-30
+last_verified: 2026-04-30
 update_frequency: quarterly
 ---
 

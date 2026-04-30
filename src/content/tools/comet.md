@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "Free browser; Pro/Max unlocks higher AI limits"
 status: active
 launched: 2025
-last_updated: 2026-04-28
-last_verified: 2026-04-28
+last_updated: 2026-04-30
+last_verified: 2026-04-30
 update_frequency: monthly
 seo_title: "Perplexity Comet: Features, Pricing & Review (2026)"
 meta_description: "Perplexity Comet is an AI browser that brings Perplexity search, page-aware assistance, and agentic browsing into one product. Best for research-first browsing."

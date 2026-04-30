@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$65/user/month"
 status: active
 launched: 2017-01
-last_updated: 2026-04-23
-last_verified: 2026-04-23
+last_updated: 2026-04-30
+last_verified: 2026-04-30
 update_frequency: monthly
 affiliate:
   has_program: true

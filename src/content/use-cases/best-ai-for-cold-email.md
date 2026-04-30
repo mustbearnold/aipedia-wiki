@@ -7,8 +7,8 @@ meta_description: "Top AI tools for cold email as of April 2026: Generate person
 description: "This page recommends 3-5 AI tools for cold email, matched to use cases with pricing, pros, and cons verified as of April 2026."
 tools_mentioned: ["chatgpt", "claude", "gemini", "perplexity", "japer"]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-15
-last_verified: 2026-04-15
+last_updated: 2026-04-30
+last_verified: 2026-04-30
 update_frequency: monthly
 ---
 

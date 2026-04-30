@@ -14,7 +14,8 @@ acquired_by: "Google (rebranded to Gemini)"
 seo_title: "Google Bard: What Happened? (Rebranded to Gemini)"
 meta_description: "Google Bard was rebranded to Google Gemini in February 2024. Learn what Bard was, why Google renamed it, and what changed in the transition."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-15
+last_updated: 2026-04-30
+last_verified: 2026-04-30
 ---
 
 # Google Bard (Discontinued)

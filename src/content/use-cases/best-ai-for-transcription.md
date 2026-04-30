@@ -7,8 +7,8 @@ meta_description: "Discover the top 3 AI transcription tools as of April 2026, i
 description: "This page recommends 3 AI tools for transcription matched to use cases like meetings, podcasts, and dictation, with pricing, pros, and cons verified as of April 2026."
 tools_mentioned: ["fathom", "descript", "elevenlabs"]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-18
-last_verified: 2026-04-18
+last_updated: 2026-04-30
+last_verified: 2026-04-30
 update_frequency: monthly
 ---
 

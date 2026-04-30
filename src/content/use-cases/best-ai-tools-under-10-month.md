@@ -7,8 +7,8 @@ meta_description: "Discover 5 AI tools under $10 per month as of April 2026, inc
 description: "This page recommends 5 AI tools under $10/month matched to budget use cases like writing, coding, and image generation, with details verified as of April 2026."
 tools_mentioned: ["deepseek", "gemini", "chatgpt", "claude", "perplexity"]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-18
-last_verified: 2026-04-18
+last_updated: 2026-04-30
+last_verified: 2026-04-30
 update_frequency: monthly
 ---
 

@@ -8,8 +8,8 @@ summary: "China blocked Meta's acquisition of the Singapore-based AI agent start
 affects: [manus]
 categories: [ai-agents, ai-business, ai-policy]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-27
-last_verified: 2026-04-27
+last_updated: 2026-04-30
+last_verified: 2026-04-30
 sources:
   - url: "https://apnews.com/article/5f8012791f86f719a24a3ebac06d9b0a"
     title: "China blocks Meta from acquiring AI startup Manus - AP"

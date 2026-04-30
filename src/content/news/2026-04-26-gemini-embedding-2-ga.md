@@ -8,8 +8,8 @@ summary: "Google surfaced Gemini Embedding 2 as generally available, giving deve
 affects: [gemini]
 categories: [ai-tools, developer-tools, ai-infrastructure]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-26
-last_verified: 2026-04-26
+last_updated: 2026-04-30
+last_verified: 2026-04-30
 sources:
   - url: "https://news.google.com/rss/articles/CBMisAFBVV95cUxNTjNKc3lEc2g0N25jb2hNZnphVENZLTgtZkc3TEZtcTFBLU0zQ0pJMWprbDhMTnJSVDFHaktDZ1ptbzZSNjhiUEdHeG45aGlqSm04VVRhR2FCQTNSWEU1Q0U1OC12TmlZVGxUSWxLT3JnVm1jQnBMSUl3WVkwTmtBQlNrWDZhSHYxUlNBTjV6WF91MXBNMko2XzNtVjZkOFR0aHM5dWNPbkE3YWUwbm0zZg?oc=5"
     title: "Gemini Embedding 2 is now generally available - Google"

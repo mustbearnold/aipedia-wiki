@@ -8,8 +8,8 @@ summary: "Daily roundup for April 24, 2026. DeepSeek launched V4 preview models;
 affects: [chatgpt, codex, claude, github-copilot, deepseek, grok, cohere]
 categories: [ai-industry, ai-model-release, ai-coding, ai-business, ai-infrastructure, ai-voice]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-25
-last_verified: 2026-04-25
+last_updated: 2026-04-30
+last_verified: 2026-04-30
 sources:
   - url: "https://openai.com/index/introducing-gpt-5-5/"
     title: "Introducing GPT-5.5 - OpenAI"

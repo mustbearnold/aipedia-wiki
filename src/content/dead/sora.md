@@ -7,7 +7,8 @@ meta_description: "Sora by OpenAI shut down in March 2026. Migration guide to Kl
 author: "aipedia.wiki Editorial"
 died: 2026-03-24
 cause: shutdown
-last_updated: 2026-04-15
+last_updated: 2026-04-30
+last_verified: 2026-04-30
 ---
 
 # Sora - Discontinued

@@ -8,8 +8,8 @@ summary: "GitHub Copilot for Jira gained controls for custom agents, Atlassian c
 affects: [github-copilot]
 categories: [ai-tools, ai-coding, ai-agents]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-26
-last_verified: 2026-04-26
+last_updated: 2026-04-30
+last_verified: 2026-04-30
 sources:
   - url: "https://github.blog/changelog/2026-04-23-github-copilot-for-jira-our-latest-enhancements/"
     title: "GitHub Copilot for Jira: Our latest enhancements - GitHub Changelog"

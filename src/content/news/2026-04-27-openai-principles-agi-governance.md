@@ -8,8 +8,8 @@ summary: "OpenAI published a new Sam Altman-authored principles post around demo
 affects: [chatgpt, codex]
 categories: [ai-policy, ai-safety, ai-industry]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-27
-last_verified: 2026-04-27
+last_updated: 2026-04-30
+last_verified: 2026-04-30
 sources:
   - url: "https://openai.com/index/our-principles/"
     title: "Our principles - OpenAI"

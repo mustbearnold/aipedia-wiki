@@ -8,8 +8,8 @@ author: "aipedia.wiki Editorial"
 description: Voice AI agents handle complex tasks with context awareness and emotion detection. ElevenLabs tops quality, Voxtral cuts costs, agentic systems drive enterprise use.
 timeframe: Enterprise surge in 2026. Agentic voice AI scales with multimodal capabilities through year.
 impact: high
-last_updated: 2026-04-15
-last_verified: 2026-04-15
+last_updated: 2026-04-30
+last_verified: 2026-04-30
 update_frequency: monthly
 ---
 

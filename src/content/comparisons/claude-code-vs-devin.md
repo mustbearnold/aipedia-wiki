@@ -8,8 +8,8 @@ winner: depends
 seo_title: "Claude Code vs Devin: Which Is Better in 2026?"
 meta_description: "Honest head-to-head of Claude Code and Devin as of April 2026. Flagship models, current pricing, and which tool fits your workflow."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-04-30
+last_verified: 2026-04-30
 update_frequency: quarterly
 ---
 

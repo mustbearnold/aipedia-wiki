@@ -10,9 +10,9 @@ founded: 2023
 hq: Paris, France
 funding: "$1B+"
 key_products: [voxtral, mistral-large-3, mistral-small-4]
-last_updated: 2026-04-17
+last_updated: 2026-04-30
 update_frequency: quarterly
-last_verified: 2026-04-17
+last_verified: 2026-04-30
 ---
 
 # Mistral AI

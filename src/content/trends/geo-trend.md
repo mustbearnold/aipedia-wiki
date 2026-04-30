@@ -8,8 +8,8 @@ author: "aipedia.wiki Editorial"
 description: The post-SEO paradigm. Optimizing content to be cited in AI-generated answers instead of ranked in link-based search results.
 timeframe: Emerged late 2024, accelerating through 2026. Will define content strategy for the next 3-5 years.
 impact: high
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-04-30
+last_verified: 2026-04-30
 update_frequency: monthly
 ---
 

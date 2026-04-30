@@ -8,8 +8,8 @@ summary: "OpenAI released GPT-5.5 on April 23, 2026, positioning it as its stron
 affects: [chatgpt, codex]
 categories: [ai-model-release, ai-coding, ai-business]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-25
-last_verified: 2026-04-25
+last_updated: 2026-04-30
+last_verified: 2026-04-30
 sources:
   - url: "https://openai.com/index/introducing-gpt-5-5/"
     title: "Introducing GPT-5.5 - OpenAI"

@@ -8,8 +8,8 @@ summary: "OpenAI CEO Sam Altman apologized to residents of Tumbler Ridge after r
 affects: [chatgpt]
 categories: [ai-safety, ai-industry, ai-policy]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-26
-last_verified: 2026-04-26
+last_updated: 2026-04-30
+last_verified: 2026-04-30
 sources:
   - url: "https://techcrunch.com/2026/04/25/openai-ceo-apologizes-to-tumbler-ridge-community/"
     title: "OpenAI CEO apologizes to Tumbler Ridge community - TechCrunch"

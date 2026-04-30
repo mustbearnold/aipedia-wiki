@@ -8,8 +8,8 @@ summary: "GitHub Copilot Chat now gives richer answers when users ask about diff
 affects: [github-copilot]
 categories: [ai-tools, ai-coding]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-26
-last_verified: 2026-04-26
+last_updated: 2026-04-30
+last_verified: 2026-04-30
 sources:
   - url: "https://github.blog/changelog/2026-04-23-copilot-chat-improvements-for-pull-requests/"
     title: "Copilot Chat improvements for pull requests - GitHub Changelog"

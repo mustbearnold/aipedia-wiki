@@ -7,8 +7,8 @@ meta_description: "Top AI tools for legal research as of April 2026: Perplexity 
 description: "This page recommends 4 AI tools for legal research with pricing, pros, cons as of April 2026: Perplexity for cited research, Claude for long documents, Gemini for free use, ChatGPT for multimodal tasks."
 tools_mentioned: ["perplexity-pro", "claude-4-6", "gemini-3-pro", "chatgpt-gpt-5"]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-04-30
+last_verified: 2026-04-30
 update_frequency: monthly
 ---
 

@@ -8,8 +8,8 @@ summary: "OpenAI introduced workspace agents in ChatGPT, extending ChatGPT from 
 affects: [chatgpt]
 categories: [ai-tools, ai-agents, productivity]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-26
-last_verified: 2026-04-26
+last_updated: 2026-04-30
+last_verified: 2026-04-30
 sources:
   - url: "https://news.google.com/rss/articles/CBMic0FVX3lxTE14N1RKNWtPajlOcGJKUUh4V2JpWl83OE1PSHpSOENDSE5scTlyYlhzQi1OZGxKOWc5VjRaY2c4MzNyS0x5azRXUkpxR2FScmVqTGN0LTN0ODEzdS1HZDE4aHhfeHVVbjgtZjZqVVIta3pYbm8?oc=5"
     title: "Introducing workspace agents in ChatGPT - OpenAI"

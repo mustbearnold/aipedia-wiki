@@ -11,8 +11,8 @@ pricing_model: paid
 price_range: "$0-$99/month + usage; custom scale"
 status: active
 launched: 2023
-last_updated: 2026-04-28
-last_verified: 2026-04-28
+last_updated: 2026-04-30
+last_verified: 2026-04-30
 update_frequency: monthly
 seo_title: "Browserbase: Features, Pricing & Review (2026)"
 meta_description: "Browserbase provides cloud browser infrastructure for AI agents, scraping, QA, and browser automation. Best for teams building reliable web agents instead of running Playwright infrastructure themselves."

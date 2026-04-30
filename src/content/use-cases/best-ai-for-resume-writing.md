@@ -7,8 +7,8 @@ meta_description: "Top AI tools for resume writing include ChatGPT with GPT-5.4,
 description: "This page recommends 3-5 AI tools for resume writing with pricing, pros, and cons as of April 2026."
 tools_mentioned: ["chatgpt", "claude", "gemini", "resume-io"]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-18
-last_verified: 2026-04-18
+last_updated: 2026-04-30
+last_verified: 2026-04-30
 update_frequency: monthly
 ---
 

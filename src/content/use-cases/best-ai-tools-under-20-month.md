@@ -7,8 +7,8 @@ meta_description: "40+ AI tools priced at $20/month or less, hand-curated by cat
 author: "aipedia.wiki Editorial"
 description: Hand-picked AI tools priced at $20 per month or less, across every major category. Real paid plans with real value, no throwaway free tiers.
 tools_mentioned: [claude, chatgpt, gemini, grok, mistral-ai, github-copilot, windsurf, supermaven, cursor, rytr, quillbot, grammarly, freepik, playground-ai, flux, stable-diffusion, kling, decktopus, gamma, mubert, suno, notion-ai, obsidian, frase, kokoro, fish-audio, ideogram, elevenlabs]
-last_updated: 2026-04-22
-last_verified: 2026-04-22
+last_updated: 2026-04-30
+last_verified: 2026-04-30
 update_frequency: monthly
 ---
 

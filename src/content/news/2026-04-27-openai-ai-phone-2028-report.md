@@ -8,8 +8,8 @@ summary: "Reports citing analyst Ming-Chi Kuo say OpenAI is exploring an AI-focu
 affects: [chatgpt]
 categories: [ai-hardware, ai-business, ai-tools]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-27
-last_verified: 2026-04-27
+last_updated: 2026-04-30
+last_verified: 2026-04-30
 sources:
   - url: "https://www.androidauthority.com/openai-smartphone-mediatek-qualcomm-chips-3660993/"
     title: "OpenAI may be planning a 2028 smartphone push with custom chips - Android Authority"

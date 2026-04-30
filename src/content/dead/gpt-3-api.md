@@ -14,7 +14,8 @@ acquired_by: ""
 seo_title: "GPT-3 API (text-davinci): What Happened? (Deprecated)"
 meta_description: "OpenAI deprecated GPT-3's text-davinci models on January 4, 2024. Learn what they were, what replaced them, and how to migrate."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-15
+last_updated: 2026-04-30
+last_verified: 2026-04-30
 ---
 
 # GPT-3 API (text-davinci Models) Shutdown

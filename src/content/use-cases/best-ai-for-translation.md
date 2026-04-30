@@ -7,8 +7,8 @@ meta_description: "Top AI tools for translation as of April 2026: DeepL Pro lead
 description: "This page recommends 3 AI tools for translation with pricing, pros, and cons as of April 2026. Tools ranked by accuracy, speed, and use case fit."
 tools_mentioned: ["deepl", "chatgpt", "google-translate"]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-15
-last_verified: 2026-04-15
+last_updated: 2026-04-30
+last_verified: 2026-04-30
 update_frequency: monthly
 ---
 
