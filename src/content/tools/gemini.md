@@ -95,6 +95,7 @@ Google DeepMind's multimodal AI assistant. **Gemini 3.1 Pro** is the flagship as
 
 ## Recent developments (April 2026)
 
+- **April 30:** [Gemini started rolling out to cars with Google built in](/news/2026-04-30-gemini-google-built-in-cars-rollout/), replacing the older Google Assistant car experience with a more conversational assistant surface. US English support begins first, with broader availability expected over time.
 - **April 30:** [EU preliminary findings could force Google to open Android AI integrations](/news/2026-04-30-eu-google-open-up-ai-android/). If final measures are adopted, Google may need to give rivals more access to Android assistant surfaces, potentially narrowing Gemini's default-assistant advantage.
 - **April 28:** [Google Translate added AI pronunciation practice on Android](/news/2026-04-28-google-translate-ai-pronunciation-practice/). The update shows Gemini-era language features spreading through high-volume Google products, not only the standalone Gemini app.
 - **April 27:** [Pentagon users gained access to Gemini 3.1 Pro through GenAI.mil](/news/2026-04-27-pentagon-gemini-genai-mil/) as Defense One reported more than 1.3 million active users and more than 100,000 agents built on the platform.

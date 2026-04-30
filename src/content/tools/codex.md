@@ -12,7 +12,7 @@ price_range: "Bundled with ChatGPT Plus ($20/mo) through Pro 20x ($200/mo)"
 status: active
 launched: 2025-05
 last_updated: 2026-04-30
-last_verified: 2026-04-29
+last_verified: 2026-04-30
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -69,6 +69,9 @@ Bundled with every paid ChatGPT tier. Pro tiers get 5x to 20x the Codex usage of
 
 ## Recent developments (March-April 2026)
 
+- **April 30, 2026:** [OpenAI added Advanced Account Security for ChatGPT and Codex](/news/2026-04-30-openai-advanced-account-security-yubikeys/). Hardware-key and passkey protection now matter more because Codex accounts can touch repos, terminals, plugins, and connected development workflows.
+- **April 30, 2026:** [OpenAI began rolling GPT-5.5 Cyber to critical defenders through Trusted Access](/news/2026-04-30-openai-gpt-55-cyber-trusted-access/). The relevant Codex angle is controlled access to cyber-permissive capabilities, not broad public availability.
+- **April 30, 2026:** [A coding-agent security roundup warned that attackers keep targeting credentials, not model weights](/news/2026-04-30-ai-coding-agent-credential-security-roundup/). Codex evaluations should include sandbox isolation, token scopes, account security, and audit trails alongside model quality.
 - **April 30, 2026:** [OpenAI and Microsoft gut exclusivity, freeing OpenAI to serve products across AWS and Google Cloud](/news/2026-04-30-openai-microsoft-gut-exclusive-deal/). Codex now has a clearer path to non-Azure enterprise distribution, but practical availability still depends on future product rollouts.
 - **April 30, 2026:** [OpenAI's DevDay 2026 is set for September 29](/news/2026-04-30-openai-devyday-2026-september-29/). Codex roadmap and product direction will likely be a centerpiece of the event.
 - **April 29, 2026:** [Agent skill libraries are becoming the new coding-agent workflow layer](/news/2026-04-29-agent-skills-ecosystem-github-trending/). Codex benefits from the same shift toward reusable local skills, templates, and MCP-aware workflow modules instead of one-off prompts.

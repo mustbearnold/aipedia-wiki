@@ -105,6 +105,8 @@ The April 26 news scan added five Copilot-specific updates: [BYOK in VS Code](/n
 
 Related April coverage: [AI Industry Roundup, April 24](/news/2026-04-24-ai-industry-roundup/) captured the GPT-5.5-in-Copilot signal; [GitHub Copilot adds GPT-5.5](/news/2026-04-24-github-copilot-gpt-55/) is the direct rollout note; [AI News Desk, April 25](/news/2026-04-25-ai-news-catchup/) folded that into the weekend GPT-5.5, Copilot, Project Deal, and Google-Anthropic catchup.
 
+April 30 security coverage added another practical caveat: [recent coding-agent exploits keep targeting credentials, not model weights](/news/2026-04-30-ai-coding-agent-credential-security-roundup/). Copilot's Coding Agent should be governed like CI infrastructure: least privilege, separated environments, secrets hygiene, and auditable action logs.
+
 ## System Verdict
 
 > **Pick GitHub Copilot if you're already inside the GitHub ecosystem and want AI inside your current IDE at the lowest credible price.** Pro at $10/mo is the cheapest entry point in serious AI coding. The paid model picker hands you GPT-5.5, Claude Opus 4.7, GPT-5.4, Gemini 3.1 Pro, and Grok from a single bill.

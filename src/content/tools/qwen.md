@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "Free (open weights) / API from ~$0.15/M tokens"
 status: active
 launched: 2023-09
-last_updated: 2026-04-19
-last_verified: 2026-04-19
+last_updated: 2026-04-30
+last_verified: 2026-04-30
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -52,6 +52,7 @@ The current surface includes **Qwen3.6 Plus** (released April 2, 2026) as the fl
 
 ## Recent developments
 
+- **April 30, 2026:** [Alibaba-linked Metis showed an 8B Qwen3-VL-based agent can improve by calling tools less](/news/2026-04-30-alibaba-metis-agent-tool-use-hdpo/). The HDPO-trained model reduces blind tool calls from 98% to 2% in the project reports, making tool abstention a useful Qwen ecosystem signal.
 - **April 19, 2026:** [Alibaba Amap debuts first embodied robot at Beijing Humanoid Robot Half Marathon](/news/2026-04-19-beijing-humanoid-robot-half-marathon-alibaba-abot/). Quadruped from Amap's new embodied-intelligence division, powered by Alibaba's ABot-World model (leads AGIbot World Challenge and World Arena benchmarks). Moves Alibaba from Qwen-as-foundation into first-party robotics alongside the model family.
 - **April 16, 2026:** [Qwen3.6-35B-A3B released open-source](/news/2026-04-16-qwen-3-6-35b-a3b-release/) on Apache 2.0. Sparse MoE (35B total / 3B active) at ~82% of Claude Opus 4.7 aggregate performance; 62% on MCP Atlas tool-use.
 - **April 2, 2026:** Qwen3.6 Plus released as the new proprietary flagship with 1M context, always-on CoT, and agentic coding emphasis.

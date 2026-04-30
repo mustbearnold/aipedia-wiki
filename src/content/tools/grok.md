@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$300/month"
 status: active
 launched: 2023-11
-last_updated: 2026-04-26
-last_verified: 2026-04-26
+last_updated: 2026-04-30
+last_verified: 2026-04-30
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -114,6 +114,7 @@ Context window is 2M tokens, the largest confirmed in any major commercial model
 
 ## Recent developments (April 2026)
 
+- **April 30:** [Musk testimony said xAI partly used OpenAI models to train Grok](/news/2026-04-30-xai-grok-openai-distillation-testimony/). Treat this as a model-provenance and governance caveat, not a feature change; the public record does not quantify the scope.
 - **April 24:** [AI Industry Roundup, April 24](/news/2026-04-24-ai-industry-roundup/) kept Grok in the broader frontier-lab watchlist alongside DeepSeek V4, GPT-5.5 in Copilot, Anthropic capital pressure, and Cohere-Aleph Alpha.
 - **April 23:** [AI Industry Roundup, April 23](/news/2026-04-23-ai-industry-roundup/) covered Grok Voice and Grok outages next to GPT-5.5 and Cloud Next announcements.
 

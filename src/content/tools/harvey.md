@@ -11,8 +11,8 @@ pricing_model: enterprise
 price_range: "Contact sales (reported ~$1,000-$1,200 per lawyer/month)"
 status: active
 launched: 2022-07
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-04-30
+last_verified: 2026-04-30
 update_frequency: quarterly
 seo_title: "Harvey AI: Features, Pricing & Review (2026)"
 meta_description: "Harvey is the enterprise AI platform for law firms. Workflows, Vault, Assistant, and Agents ground LLM output on firm documents. Used by majority of AmLaw 100. $11B valuation after March 2026 raise. Pricing is enterprise-only, reported around $1,000-$1,200 per lawyer/month."
@@ -64,6 +64,10 @@ Harvey is the enterprise AI platform built specifically for law firms and in-hou
 The company was founded in 2022 by Winston Weinberg, a former O'Melveny litigator, and Gabriel Pereyra, a former Google DeepMind and Meta researcher. By January 2026 Harvey hit $190M in annual recurring revenue. In March 2026 it raised $200M at an $11B valuation led by GIC and Sequoia, bringing total funding above $1B.
 
 As of April 2026, Harvey lists the majority of the AmLaw 100, over 500 in-house legal teams, and 50 asset managers across 60 countries as customers. More than 25,000 custom agents run on the platform.
+
+## Recent developments
+
+- **April 30, 2026:** [Legora added $50M from NVentures and Atlassian, reaching a $5.6B valuation](/news/2026-04-30-legora-56b-valuation-nvidia-atlassian/). Harvey remains the larger legal-AI platform by reported valuation, but Legora is now the clearest scaled challenger.
 
 ## System Verdict
 

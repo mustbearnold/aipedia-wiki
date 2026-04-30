@@ -160,6 +160,9 @@ Prices verified 2026-04-17 via [OpenAI pricing](https://chatgpt.com/pricing/), [
 
 ## Recent changes
 
+- **April 30, 2026:** [OpenAI added Advanced Account Security for ChatGPT and Codex](/news/2026-04-30-openai-advanced-account-security-yubikeys/), with passkey and hardware-key protection for high-risk accounts. Stronger phishing resistance comes with stricter recovery, so users should set up backup keys before enrolling.
+- **April 30, 2026:** [OpenAI began rolling GPT-5.5 Cyber to critical defenders through Trusted Access](/news/2026-04-30-openai-gpt-55-cyber-trusted-access/). This is a gated security-program rollout, not a normal ChatGPT tier feature.
+- **April 30, 2026:** [Musk testimony said xAI partly used OpenAI models to train Grok](/news/2026-04-30-xai-grok-openai-distillation-testimony/). The public record does not quantify the scope, but it keeps model-output provenance central to OpenAI's competitive and legal posture.
 - **April 30, 2026:** [OpenAI and Microsoft gut exclusivity in the most consequential partnership restructuring in AI](/news/2026-04-30-openai-microsoft-gut-exclusive-deal/). OpenAI can now serve products across cloud providers, while Azure remains the primary cloud and first-ship path. That gives ChatGPT Enterprise buyers more negotiating room, but concrete non-Azure availability still depends on product rollouts.
 - **April 30, 2026:** [OpenAI's DevDay 2026 is set for September 29](/news/2026-04-30-openai-devyday-2026-september-29/). Last year's event launched ChatGPT Apps; this year will set product direction for the next development cycle.
 - **April 28, 2026:** [OpenAI brings GPT-5.5, Codex, and managed agents to Amazon Bedrock](/news/2026-04-28-openai-models-codex-managed-agents-aws/). ChatGPT remains the consumer surface, but OpenAI's enterprise model distribution now reaches AWS through limited previews.

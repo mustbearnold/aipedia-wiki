@@ -11,8 +11,8 @@ pricing_model: paid
 price_range: "$29-$599/month"
 status: active
 launched: 2021-03
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-04-30
+last_verified: 2026-04-30
 update_frequency: quarterly
 seo_title: "AdCreative.ai: Features, Pricing & Review (April 2026)"
 meta_description: "AdCreative.ai generates banner, product, and video ads for Meta, Google, LinkedIn, and TikTok with conversion-tuned AI copy. Plans run $29-$599/mo, credit-based. Honest take on where it beats Canva and where Omneky still wins."
@@ -52,6 +52,11 @@ price_history:
 AI ad-creative generation aimed at performance marketers. One brand kit feeds banner ads, product photo ads, short-form video ads, and conversion-tuned copy across Meta, Google, LinkedIn, and TikTok.
 
 The value is volume and format coverage inside a single workflow.
+
+## Recent developments
+
+- **April 30, 2026:** [Meta said business AIs now handle more than 10M conversations per week and 8M advertisers use at least one GenAI ad creative tool](/news/2026-04-30-meta-business-ai-10m-weekly-conversations/). Native Meta AI raises the bar for standalone ad-creative tools on Meta-only campaigns.
+- **April 30, 2026:** [X began a phased rollout of a rebuilt AI-powered ads platform](/news/2026-04-30-x-ai-powered-ad-platform-rollout/). Platform-native AI is becoming the default competitor for ad creative, targeting, and campaign setup.
 
 ## System Verdict
 

@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: Free starter credits; Team $250/mo plus compute; GPU billed per second
 status: active
 launched: 2021
-last_updated: 2026-04-27
-last_verified: 2026-04-27
+last_updated: 2026-04-30
+last_verified: 2026-04-30
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -47,6 +47,10 @@ quick_answer: >-
 Modal is a serverless cloud platform for Python applications, AI jobs, GPU workloads, web endpoints, scheduled tasks, and sandboxes. It removes much of the container, queue, and Kubernetes work that normally sits between a notebook and a production AI service.
 
 The useful mental model: write Python, decorate functions, attach CPU/GPU/memory requirements, and deploy. Modal handles image builds, scale-out, secrets, queues, logs, and web endpoints.
+
+## Recent developments
+
+- **April 30, 2026:** [RunPod Flash went GA with a Python-to-GPU-endpoint workflow that skips container work](/news/2026-04-30-runpod-flash-open-source-python-ai-deploy/). Modal still has the more mature serverless Python platform in this catalog, but RunPod is now making a direct developer-experience push.
 
 ## System Verdict
 

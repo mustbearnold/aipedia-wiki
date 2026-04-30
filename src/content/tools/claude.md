@@ -102,6 +102,7 @@ Anthropic's AI assistant. **Opus 4.7** is the flagship as of **April 16, 2026**,
 
 ## Recent developments
 
+- **April 30:** [OpenAI began rolling GPT-5.5 Cyber to critical defenders through Trusted Access](/news/2026-04-30-openai-gpt-55-cyber-trusted-access/). This narrows the contrast with Anthropic's restricted Mythos access: both major labs are now gating advanced cyber-capable model access.
 - **April 30:** [Sources: Anthropic could raise $50B at $900B valuation](/news/2026-04-30-anthropic-50b-900b-valuation-round/), nearly 2.5x February's $380B price. Revenue run rate now exceeds $30B, driven by Claude Code and agentic products. Would be one of the largest single AI financing rounds ever.
 - **April 29:** [Anthropic updated its Responsible Scaling Policy around external review](/news/2026-04-29-anthropic-rsp-external-review-update/). This matters for Claude because enterprise buyers now judge the assistant not only by model quality, but by how Anthropic handles capability thresholds, external scrutiny, and deployment controls.
 - **April 28:** [Claude for Creative Work adds connectors for Adobe, Blender, Ableton, Autodesk, and more](/news/2026-04-28-claude-creative-tool-connectors/). The update moves Claude deeper into design, 3D, audio, and live-visual production software through first-party connector surfaces.

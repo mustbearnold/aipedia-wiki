@@ -11,8 +11,8 @@ pricing_model: open-source
 price_range: "Free (MIT) · BYOK API costs · server hosting on you"
 status: active
 launched: 2025-11
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-04-30
+last_verified: 2026-04-30
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -47,6 +47,10 @@ quick_answer: >-
 OpenClaw is the open-source personal AI agent built by Austrian developer Peter Steinberger, first published November 2025 as Clawdbot, renamed Moltbot after an Anthropic trademark complaint, then renamed OpenClaw three days later ([Wikipedia](https://en.wikipedia.org/wiki/OpenClaw)).
 
 It runs on your machine, controls your browser and shell, and is reachable from the messaging apps you already use. The repo carries 247K+ GitHub stars as of early March 2026 and continues to climb.
+
+## Recent developments
+
+- **April 30, 2026:** [Stripe turned Link into an agent wallet for approved AI purchases](/news/2026-04-30-stripe-link-agent-wallet/), explicitly naming personal AI agents such as OpenClaw as a use case. This gives OpenClaw-style local agents a safer payment path than exposing raw card details.
 
 ## System Verdict
 
