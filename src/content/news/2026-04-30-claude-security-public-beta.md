@@ -1,0 +1,65 @@
+---
+type: news
+slug: 2026-04-30-claude-security-public-beta
+title: "Claude Security enters public beta for Enterprise codebase vulnerability scans"
+date: 2026-04-30
+severity: major
+summary: "Anthropic made Claude Security publicly available in beta for Claude Enterprise customers. The Opus 4.7-powered tool scans repositories, validates findings, and proposes patches, while partners such as CrowdStrike, Palo Alto Networks, SentinelOne, TrendAI, and Wiz embed the same capabilities into security platforms."
+affects: [claude, claude-code]
+categories: [ai-security, ai-coding, ai-enterprise, ai-tools]
+author: "aipedia.wiki Editorial"
+last_updated: 2026-05-01
+last_verified: 2026-05-01
+related_tools: [claude, claude-code, codex, github-copilot]
+sources:
+  - url: "https://claude.com/blog/claude-security-public-beta"
+    title: "Claude Security is now in public beta - Anthropic"
+  - url: "https://claude.com/product/claude-security"
+    title: "Claude Security product page - Anthropic"
+  - url: "https://www.paloaltonetworks.com/blog/2026/04/ai-driven-defense-anthropics-claude-opus/"
+    title: "Enhancing AI-driven defense with Anthropic's Claude Opus 4.7 - Palo Alto Networks"
+  - url: "https://www.streetinsider.com/General%2BNews/CrowdStrike%2BHoldings%2BInc.%2B%28CRWD%29%2BIntegrates%2BAnthropics%2BClaude%2BSecurity%2Bto%2BScan%2BCodebases/26405284.html"
+    title: "CrowdStrike integrates Anthropic's Claude Security - StreetInsider"
+---
+
+Anthropic is moving Claude from code-writing assistant toward security-review system.
+
+On April 30, 2026, Anthropic announced that **Claude Security** is now in public beta for **Claude Enterprise** customers. The product was previously known as Claude Code Security, and Anthropic says it lets organizations scan codebases for vulnerabilities, validate findings, and generate proposed patches using **Claude Opus 4.7**.
+
+This is not a general chatbot feature. It is an Enterprise security surface inside Claude, with partner distribution through security vendors and services firms.
+
+## What changed
+
+Claude Security can be accessed from the Claude interface or at `claude.ai/security`. Enterprise users select a repository, directory, or branch, then launch a scan. Anthropic says Claude reasons across files and modules, traces data flows, and looks for context-dependent vulnerabilities instead of only matching known patterns.
+
+The public beta adds scheduled and targeted scans, better integration with audit systems, and improved tracking for triaged findings. Anthropic says access for Claude Team and Max customers is planned later, but Enterprise is the current entry point.
+
+The partner list matters. Anthropic named CrowdStrike, Microsoft Security, Palo Alto Networks, SentinelOne, TrendAI, and Wiz as platform partners embedding Opus 4.7 security capability. Accenture, BCG, Deloitte, Infosys, and PwC are services partners helping deploy Claude-integrated security programs.
+
+## Why it matters
+
+The AI coding race is creating a second race: who can review the code AI agents create.
+
+Traditional static analysis is good at known patterns. It is weaker when the bug depends on business logic, cross-file state, authorization paths, or data flow that only becomes dangerous after several pieces interact. Anthropic is positioning Claude Security exactly in that gap.
+
+The timing is not accidental. Anthropic has been warning that frontier models are becoming stronger at vulnerability discovery and exploitation. Claude Security is the safer commercial answer to the same capability curve that made **Claude Mythos Preview** too risky for broad release.
+
+## Tool impact
+
+For **Claude**, this strengthens the Enterprise story. Claude is no longer only a writing, reasoning, and coding assistant. It is becoming a governed work surface for security teams, with admin enablement, reviewable patches, and partner deployment paths.
+
+For **Claude Code**, the implication is more subtle. Claude Code remains the terminal coding agent, but Claude Security gives Anthropic a parallel product for security review and remediation. Teams using Claude Code to write production code now have a first-party Anthropic path for scanning that code before it merges.
+
+For **Codex** and **GitHub Copilot**, Claude Security raises the competitive bar. The next enterprise coding-agent bundle is not just "write code faster." It is write, review, patch, log, and prove that security teams stayed in control.
+
+## Buyer takeaway
+
+Claude Security is worth watching if your team already buys Claude Enterprise and has a backlog of code-security review work. The strongest fit is not commodity linting. It is deeper review of complex repositories where human security engineers are overloaded and traditional scanners produce too many low-signal tickets.
+
+Do not treat the proposed patches as autonomous fixes. Anthropic's own product language keeps humans in the approval loop, and that is the right posture. A security patch generated by an AI system still needs review, tests, and ownership.
+
+## What to watch
+
+Watch three things: whether Team and Max access arrives quickly, whether partner integrations become real workflow surfaces rather than branding, and whether Anthropic publishes enough evaluation data to separate genuine vulnerability discovery from polished demos.
+
+The bigger signal is clear already: frontier labs are turning cyber capability into controlled enterprise products, not merely safety-card footnotes.

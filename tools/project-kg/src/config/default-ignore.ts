@@ -1,0 +1,56 @@
+export const DEFAULT_IGNORE_DIRS = [
+  'node_modules',
+  '.git',
+  'dist',
+  'dist-fast',
+  'build',
+  '.astro',
+  '.vercel',
+  '.netlify',
+  'coverage',
+  'public/pagefind',
+  '.kg/project.db',
+  '.kg/project.db-shm',
+  '.kg/project.db-wal',
+  '.kg/cache',
+  '.kg/logs',
+  '.kg/embeddings',
+  '.kg/snapshots',
+  '.wrangler',
+  'test-results',
+  'playwright-report',
+];
+
+export const DEFAULT_TEXT_EXTENSIONS = new Set([
+  '.astro',
+  '.css',
+  '.html',
+  '.js',
+  '.jsx',
+  '.json',
+  '.md',
+  '.mdx',
+  '.mjs',
+  '.ts',
+  '.tsx',
+  '.txt',
+  '.yaml',
+  '.yml',
+]);
+
+export const ASSET_EXTENSIONS = new Set([
+  '.avif',
+  '.gif',
+  '.ico',
+  '.jpg',
+  '.jpeg',
+  '.png',
+  '.svg',
+  '.webp',
+  '.woff',
+  '.woff2',
+  '.ttf',
+  '.otf',
+]);
+
+export const INSPECTED_ASSET_DIRS = ['public/logos', 'public/og', 'public/icons', 'public/images'];

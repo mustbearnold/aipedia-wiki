@@ -1,0 +1,15 @@
+{
+  "name": "project-kg",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "description": "Local project knowledge graph tooling for aipedia.wiki.",
+  "bin": {
+    "project-kg": "bin/project-kg"
+  },
+  "scripts": {
+    "build": "npx --no-install tsc -p tsconfig.json",
+    "start": "node --no-warnings=ExperimentalWarning dist/src/cli.js",
+    "test": "npm run build --silent && node --test dist/tests/*.test.js"
+  }
+}

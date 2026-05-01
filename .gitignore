@@ -59,3 +59,12 @@ affiliate_tracker.md
  
 # generated Pagefind search index 
 public/pagefind/ 
+
+# Project Knowledge Graph runtime data
+.kg/project.db
+.kg/project.db-shm
+.kg/project.db-wal
+.kg/cache/
+.kg/logs/
+.kg/embeddings/
+.kg/snapshots/

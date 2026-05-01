@@ -5,10 +5,24 @@
    every page on aipedia.wiki can inherit the same tokens.
    ========================================================= */
 
+/* Global score color tokens — available everywhere, not just under .p3-canvas */
+:root {
+  --p3-score-high: #10b981;
+  --p3-score-good: #3b82f6;
+  --p3-score-watch: #f59e0b;
+  --p3-score-low: #ef4444;
+}
+.light {
+  --p3-score-high: #059669;
+  --p3-score-good: #2563eb;
+  --p3-score-watch: #d97706;
+  --p3-score-low: #dc2626;
+}
+
 body:has(main .p3-canvas) {
   background:
-    radial-gradient(ellipse 90% 40% at 50% -10%, rgba(34, 211, 238,0.10) 0%, transparent 60%),
-    radial-gradient(ellipse 50% 30% at 90% 10%, rgba(56,189,248,0.06) 0%, transparent 70%),
+    radial-gradient(ellipse 90% 40% at 50% -10%, rgba(34, 211, 238,0.18) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 30% at 90% 10%, rgba(56,189,248,0.12) 0%, transparent 70%),
     var(--bg-base);
 }
 
@@ -22,6 +36,10 @@ body:has(main .p3-canvas) {
   --p3-surface-hover: var(--bg-card-hover);
   --p3-accent: var(--accent-primary);
   --p3-accent-text: var(--accent-primary-text, #67e8f9);
+  --p3-score-high: #10b981;
+  --p3-score-good: #3b82f6;
+  --p3-score-watch: #f59e0b;
+  --p3-score-low: #ef4444;
   --p3-shadow-rest:
     0 18px 46px -38px rgba(0, 0, 0, 0.84),
     0 1px 0 rgba(248, 250, 252, 0.045) inset;
@@ -80,11 +98,50 @@ body:has(main .p3-canvas) {
 @media (min-width: 1024px) {
   .p3-hero {
     grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
-    gap: 56px;
-    padding: 48px 0 56px;
+    gap: 36px 56px;
+    padding: 48px 0 36px;
   }
 }
 .p3-hero-left { min-width: 0; }
+
+/* Compact 4-axis key in hero — sits below the jump nav so first-time
+   visitors immediately understand the scoring system. */
+.p3-axis-key {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+  font-size: 12px;
+  font-weight: 500;
+}
+.p3-axis-key-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--p3-subtle);
+  margin-right: 4px;
+}
+.p3-axis-key-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--p3-line);
+  background: var(--p3-surface);
+  color: var(--p3-muted);
+  white-space: nowrap;
+}
+.p3-axis-key-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--c);
+  flex: none;
+}
 
 .p3-eyebrow {
   display: inline-flex;
@@ -854,6 +911,10 @@ body:has(main .p3-canvas) {
   .p3-statbar-4 { grid-template-columns: repeat(4, 1fr); }
 }
 .p3-statbar-3 { grid-template-columns: repeat(1, 1fr); }
+.p3-statbar-hero {
+  grid-column: 1 / -1;
+  margin-bottom: 0;
+}
 @media (min-width: 640px) {
   .p3-statbar-3 { grid-template-columns: repeat(3, 1fr); }
 }
@@ -908,6 +969,97 @@ body:has(main .p3-canvas) {
 .p3-sec-sub {
   font-size: 12px;
   color: var(--p3-subtle);
+}
+
+/* Section eyebrow labels — the bold editorial voice for each section.
+   Applied across signal-desk, route-board, and ledger. */
+.p3-signal-eyebrow,
+.p3-route-eyebrow,
+.p3-ledger-eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--p3-accent-text);
+  margin-bottom: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.p3-signal-eyebrow::before,
+.p3-route-eyebrow::before,
+.p3-ledger-eyebrow::before,
+.p3-catrail-eyebrow::before,
+.p3-split-eyebrow::before,
+.p3-grid-eyebrow::before,
+.p3-cmp-eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 18px;
+  height: 2px;
+  border-radius: 2px;
+  background: currentColor;
+  opacity: 0.5;
+}
+
+/* Category rail eyebrow */
+.p3-catrail-eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--p3-accent-text, #67e8f9);
+  margin-bottom: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Section eyebrows for news, top tools, comparisons */
+.p3-split-eyebrow,
+.p3-grid-eyebrow,
+.p3-cmp-eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--p3-accent-text, #67e8f9);
+  margin-bottom: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.p3-split-eyebrow::before,
+.p3-grid-eyebrow::before,
+.p3-cmp-eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 18px;
+  height: 2px;
+  border-radius: 2px;
+  background: currentColor;
+  opacity: 0.5;
+  flex: none;
+}
+
+/* Micro-interactions: axis key chips pop on hover */
+.p3-axis-key-chip {
+  transition: transform 160ms ease, border-color 160ms ease, background 160ms ease, box-shadow 160ms ease;
+  cursor: default;
+}
+.p3-axis-key-chip:hover {
+  transform: translateY(-1px);
+  border-color: rgba(34, 211, 238, 0.4);
+  background: var(--p3-surface-hover);
+  box-shadow: 0 4px 12px rgba(34, 211, 238, 0.12);
+}
+
+/* Micro-interactions: stat bar items subtle glow on hover */
+.p3-stat {
+  transition: background 160ms ease;
+}
+.p3-stat:hover {
+  background: rgba(34, 211, 238, 0.03);
 }
 
 /* ---------- category rail ---------- */
@@ -1088,7 +1240,7 @@ body:has(main .p3-canvas) {
   aspect-ratio: 1200 / 630;
   object-fit: cover;
 }
-.p3-newshero-body { padding: 18px 20px 20px; }
+.p3-newshero-body { padding: 14px 16px 16px; }
 .p3-newshero-meta {
   display: flex;
   align-items: center;
@@ -1321,7 +1473,9 @@ body:has(main .p3-canvas) {
   gap: 12px;
 }
 @media (min-width: 640px) { .p3-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (min-width: 1000px) { .p3-grid { grid-template-columns: repeat(3, 1fr); } }
+/* 4 tiles look best in 2 columns — full-width single card reads as editorial,
+   not a catalog grid. */
+@media (min-width: 1000px) { .p3-grid { grid-template-columns: repeat(2, 1fr); } }
 .p3-tile {
   display: flex;
   flex-direction: column;

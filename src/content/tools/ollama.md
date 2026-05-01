@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0 local / $20-$100/mo cloud"
 status: active
 launched: 2023-07
-last_updated: 2026-04-30
-last_verified: 2026-04-18
+last_updated: 2026-05-01
+last_verified: 2026-05-01
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -70,6 +70,7 @@ The most-downloaded local LLM runtime of 2026. Ollama is a single desktop binary
 
 ## Recent developments
 
+- **April 30, 2026:** [Apple said AI and agentic tools helped drive unexpected Mac demand](/news/2026-04-30-apple-mac-ai-agent-demand/). More high-memory Apple Silicon machines in circulation expands the practical install base for local inference stacks such as Ollama.
 - **April 30, 2026:** [Poolside released Laguna XS.2 (33B MoE, Apache 2.0) for local agentic coding](/news/2026-04-30-poolside-laguna-xs2-open-model-local-agentic-coding/), trained from scratch using a Muon optimizer. Available through Ollama for local inference alongside the existing model library.
 
 ## When to pick Ollama

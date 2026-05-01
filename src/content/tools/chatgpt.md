@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2022-11
-last_updated: 2026-04-30
-last_verified: 2026-04-30
+last_updated: 2026-05-01
+last_verified: 2026-05-01
 update_frequency: monthly
 seo_title: "ChatGPT: Features, Pricing & Review (April 2026)"
 meta_description: "ChatGPT runs GPT-5.5 on paid tiers as of April 2026, with GPT-5.3/GPT-5.4 still present across lower-latency modes. Plus is $20/mo; Pro plans at $100 and $200/mo add heavier Codex coding-agent usage. DALL-E and Sora are retired."
@@ -160,6 +160,7 @@ Prices verified 2026-04-17 via [OpenAI pricing](https://chatgpt.com/pricing/), [
 
 ## Recent changes
 
+- **April 30, 2026:** [ChatGPT Images 2.0 found its strongest early demand in India](/news/2026-04-30-chatgpt-images-2-india-adoption/), with OpenAI telling TechCrunch that India is the largest user base while third-party data showed a more uneven global engagement lift. Treat image generation as a core ChatGPT feature, but test local-language workflows before assuming the same adoption pattern everywhere.
 - **April 30, 2026:** [OpenAI added Advanced Account Security for ChatGPT and Codex](/news/2026-04-30-openai-advanced-account-security-yubikeys/), with passkey and hardware-key protection for high-risk accounts. Stronger phishing resistance comes with stricter recovery, so users should set up backup keys before enrolling.
 - **April 30, 2026:** [OpenAI began rolling GPT-5.5 Cyber to critical defenders through Trusted Access](/news/2026-04-30-openai-gpt-55-cyber-trusted-access/). This is a gated security-program rollout, not a normal ChatGPT tier feature.
 - **April 30, 2026:** [Musk testimony said xAI partly used OpenAI models to train Grok](/news/2026-04-30-xai-grok-openai-distillation-testimony/). The public record does not quantify the scope, but it keeps model-output provenance central to OpenAI's competitive and legal posture.

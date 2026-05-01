@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2023-03
-last_updated: 2026-04-30
-last_verified: 2026-04-30
+last_updated: 2026-05-01
+last_verified: 2026-05-01
 update_frequency: monthly
 seo_title: "Claude: Features, Pricing & Review (2026)"
 meta_description: "Claude runs Opus 4.7 (April 16, 2026) as flagship, Sonnet 4.6, Haiku 4.5. Claude Design (April 17) added for prompt-to-prototype. 1M context, $5/$25 per MTok API. Free tier; Pro $20/mo."
@@ -102,6 +102,7 @@ Anthropic's AI assistant. **Opus 4.7** is the flagship as of **April 16, 2026**,
 
 ## Recent developments
 
+- **April 30:** [Claude Security entered public beta for Enterprise customers](/news/2026-04-30-claude-security-public-beta/). Claude can now scan repositories for vulnerabilities, validate findings, and propose patches with Opus 4.7, strengthening Anthropic's enterprise-security story beyond Mythos.
 - **April 30:** [OpenAI began rolling GPT-5.5 Cyber to critical defenders through Trusted Access](/news/2026-04-30-openai-gpt-55-cyber-trusted-access/). This narrows the contrast with Anthropic's restricted Mythos access: both major labs are now gating advanced cyber-capable model access.
 - **April 30:** [Sources: Anthropic could raise $50B at $900B valuation](/news/2026-04-30-anthropic-50b-900b-valuation-round/), nearly 2.5x February's $380B price. Revenue run rate now exceeds $30B, driven by Claude Code and agentic products. Would be one of the largest single AI financing rounds ever.
 - **April 29:** [Anthropic updated its Responsible Scaling Policy around external review](/news/2026-04-29-anthropic-rsp-external-review-update/). This matters for Claude because enterprise buyers now judge the assistant not only by model quality, but by how Anthropic handles capability thresholds, external scrutiny, and deployment controls.

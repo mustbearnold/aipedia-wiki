@@ -11,8 +11,8 @@ pricing_model: free
 price_range: "$0 personal use"
 status: active
 launched: 2023-05
-last_updated: 2026-04-18
-last_verified: 2026-04-18
+last_updated: 2026-05-01
+last_verified: 2026-05-01
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -45,6 +45,10 @@ quick_answer: >-
 # LM Studio
 
 A desktop application that wraps llama.cpp in a visual interface. Download from [lmstudio.ai](https://lmstudio.ai), install, search for a model, click to download, start chatting. For users who want local LLMs without a terminal, this is the category default.
+
+## Recent developments
+
+- **April 30, 2026:** [Apple said AI and agentic tools helped drive unexpected Mac demand](/news/2026-04-30-apple-mac-ai-agent-demand/). If more users buy Macs for local AI, GUI-first model runners like LM Studio become the easier on-ramp than terminal-only stacks.
 
 ## System Verdict
 

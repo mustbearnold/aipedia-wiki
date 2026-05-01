@@ -72,7 +72,7 @@ const scored: ToolView[] = allTools
   .sort((a, b) => b.score - a.score);
 
 const topTool = scored[0];
-const topGrid = scored.slice(0, 9);
+const topGrid = scored.slice(0, 4);
 
 // Category leaders for the rotating cover card. One entry per category:
 // the highest-scored active tool in it. Sorted by score so the strongest
@@ -281,7 +281,7 @@ const featuredCompare: Cmp[] = allComparisons
     };
   })
   .sort((a, b) => b.sumScore - a.sumScore)
-  .slice(0, 6);
+  .slice(0, 3);
 
 function barColor(n: number): string {
   if (n >= 8) return 'var(--p3-score-high)';
@@ -520,6 +520,14 @@ const verificationLedger = [
             <span class="p3-jump-arrow" aria-hidden="true">→</span>
           </a>
         </nav>
+        <!-- Compact 4-axis key — shows at a glance how tools are scored -->
+        <div class="p3-axis-key" aria-label="Scoring axes: Utility, Value, Moat, Longevity">
+          <span class="p3-axis-key-label">Scored on</span>
+          <span class="p3-axis-key-chip"><span class="p3-axis-key-dot" style="--c:var(--p3-score-high)"></span>Utility</span>
+          <span class="p3-axis-key-chip"><span class="p3-axis-key-dot" style="--c:var(--p3-score-good)"></span>Value</span>
+          <span class="p3-axis-key-chip"><span class="p3-axis-key-dot" style="--c:var(--p3-score-watch)"></span>Moat</span>
+          <span class="p3-axis-key-chip"><span class="p3-axis-key-dot" style="--c:var(--p3-score-low)"></span>Longevity</span>
+        </div>
       </div>
 
       <aside class="p3-hero-right" aria-label="Editorial top pick">
@@ -580,30 +588,30 @@ const verificationLedger = [
              the server. */}
         <script id="p3-cover-slides" type="application/json" set:html={JSON.stringify(coverSlides)}></script>
       </aside>
-    </section>
 
-    <!-- =============== STATS BAR =============== -->
-    <section class="p3-statbar" aria-label="Catalog at a glance" data-reveal>
-      <div class="p3-stat">
-        <span class="p3-stat-num count-up tabular-nums" data-target={totalTools}>{totalTools}</span>
-        <span class="p3-stat-lbl">Tools scored</span>
-      </div>
-      <div class="p3-stat">
-        <span class="p3-stat-num count-up tabular-nums" data-target={totalCompare}>{totalCompare}</span>
-        <span class="p3-stat-lbl">Comparisons</span>
-      </div>
-      <div class="p3-stat">
-        <span class="p3-stat-num count-up tabular-nums" data-target={totalNews}>{totalNews}</span>
-        <span class="p3-stat-lbl">News items</span>
-      </div>
-      <div class="p3-stat">
-        <span class="p3-stat-num count-up tabular-nums" data-target="4">4</span>
-        <span class="p3-stat-lbl">Scoring axes</span>
-      </div>
-      <div class="p3-stat">
-        <span class="p3-stat-num">0</span>
-        <span class="p3-stat-lbl">Paid placements</span>
-      </div>
+      <!-- =============== STATS BAR (moved into hero for above-fold visibility) =============== -->
+      <section class="p3-statbar p3-statbar-hero" aria-label="Catalog at a glance" data-reveal>
+        <div class="p3-stat">
+          <span class="p3-stat-num count-up tabular-nums" data-target={totalTools}>{totalTools}</span>
+          <span class="p3-stat-lbl">Tools scored</span>
+        </div>
+        <div class="p3-stat">
+          <span class="p3-stat-num count-up tabular-nums" data-target={totalCompare}>{totalCompare}</span>
+          <span class="p3-stat-lbl">Comparisons</span>
+        </div>
+        <div class="p3-stat">
+          <span class="p3-stat-num count-up tabular-nums" data-target={totalNews}>{totalNews}</span>
+          <span class="p3-stat-lbl">News items</span>
+        </div>
+        <div class="p3-stat">
+          <span class="p3-stat-num count-up tabular-nums" data-target="4">4</span>
+          <span class="p3-stat-lbl">Scoring axes</span>
+        </div>
+        <div class="p3-stat">
+          <span class="p3-stat-num count-up tabular-nums" data-target="0">0</span>
+          <span class="p3-stat-lbl">Paid placements</span>
+        </div>
+      </section>
     </section>
 
     <!-- =============== SIGNAL DESK =============== -->
@@ -630,8 +638,47 @@ const verificationLedger = [
       </div>
     </section>
 
+    <!-- =============== METHODOLOGY CALLOUT (moved up for visibility) =============== -->
+    <section class="p3-method" data-reveal>
+      <div class="p3-method-inner">
+        <div class="p3-method-eyebrow">Editorial standard</div>
+        <h2 class="p3-method-title">Every tool scored on the same four axes.</h2>
+        <div class="p3-method-grid">
+          <div class="p3-method-axis">
+            <span class="p3-method-axis-dot" style="--c:var(--p3-score-high)"></span>
+            <div>
+              <div class="p3-method-axis-name">Utility</div>
+              <div class="p3-method-axis-desc">Does it do the job, reliably, today.</div>
+            </div>
+          </div>
+          <div class="p3-method-axis">
+            <span class="p3-method-axis-dot" style="--c:var(--p3-score-good)"></span>
+            <div>
+              <div class="p3-method-axis-name">Value</div>
+              <div class="p3-method-axis-desc">Output quality per dollar.</div>
+            </div>
+          </div>
+          <div class="p3-method-axis">
+            <span class="p3-method-axis-dot" style="--c:var(--p3-score-watch)"></span>
+            <div>
+              <div class="p3-method-axis-name">Moat</div>
+              <div class="p3-method-axis-desc">How defensible is the differentiation.</div>
+            </div>
+          </div>
+          <div class="p3-method-axis">
+            <span class="p3-method-axis-dot" style="--c:var(--p3-score-low)"></span>
+            <div>
+              <div class="p3-method-axis-name">Longevity</div>
+              <div class="p3-method-axis-desc">Odds the vendor is still shipping in 24 months.</div>
+            </div>
+          </div>
+        </div>
+        <a href="/about/scoring/" class="p3-method-link">Full methodology →</a>
+      </div>
+    </section>
+
     <!-- =============== DECISION ROUTES =============== -->
-    <section class="p3-route-board" aria-label="Decision routes" data-reveal>
+    <section class="p3-route-board" aria-label="Decision routes" data-reveal">
       <div class="p3-route-intro">
         <div class="p3-route-eyebrow">Use case routes</div>
         <h2 class="p3-route-title">Start with the job.</h2>
@@ -678,8 +725,11 @@ const verificationLedger = [
     <!-- =============== CATEGORY RAIL =============== -->
     <section class="p3-catrail" aria-label="Browse by category" data-reveal>
       <div class="p3-sec-head">
-        <h2 class="p3-sec-title">Browse by category</h2>
-        <a href="/categories/" class="p3-sec-link">All {cats.length} categories →</a>
+          <div>
+            <div class="p3-catrail-eyebrow">Categories</div>
+            <h2 class="p3-sec-title">Browse by category</h2>
+          </div>
+          <a href="/categories/" class="p3-sec-link">All {cats.length} categories →</a>
       </div>
       <div class="p3-catgrid">
         {cats.slice(0, 12).map((c, i) => (
@@ -705,7 +755,10 @@ const verificationLedger = [
     <section class="p3-split" aria-label="Latest news and movers" data-reveal>
       <div class="p3-split-news">
         <div class="p3-sec-head">
-          <h2 class="p3-sec-title">Latest updates</h2>
+          <div>
+            <div class="p3-split-eyebrow">News</div>
+            <h2 class="p3-sec-title">Latest updates</h2>
+          </div>
           <a href="/news/" class="p3-sec-link">All updates →</a>
         </div>
         {heroNews && (
@@ -781,8 +834,11 @@ const verificationLedger = [
     <!-- =============== TOP TOOLS GRID =============== -->
     <section class="p3-grid-sec" aria-label="Top tools" data-reveal>
       <div class="p3-sec-head">
-        <h2 class="p3-sec-title">The top of the catalog</h2>
-        <a href="/tools/" class="p3-sec-link">All {totalTools} tools →</a>
+          <div>
+            <div class="p3-grid-eyebrow">Top tools</div>
+            <h2 class="p3-sec-title">The top of the catalog</h2>
+          </div>
+          <a href="/tools/" class="p3-sec-link">All {totalTools} tools →</a>
       </div>
       <div class="p3-grid">
         {topGrid.map((t, i) => (
@@ -816,50 +872,14 @@ const verificationLedger = [
     <!-- =============== RECENTLY VIEWED (client-side) =============== -->
     <RecentlyViewed />
 
-    <!-- =============== METHODOLOGY CALLOUT =============== -->
-    <section class="p3-method" data-reveal>
-      <div class="p3-method-inner">
-        <div class="p3-method-eyebrow">Editorial standard</div>
-        <h2 class="p3-method-title">Every tool scored on the same four axes.</h2>
-        <div class="p3-method-grid">
-          <div class="p3-method-axis">
-            <span class="p3-method-axis-dot" style="--c:var(--p3-score-high)"></span>
-            <div>
-              <div class="p3-method-axis-name">Utility</div>
-              <div class="p3-method-axis-desc">Does it do the job, reliably, today.</div>
-            </div>
-          </div>
-          <div class="p3-method-axis">
-            <span class="p3-method-axis-dot" style="--c:var(--p3-score-good)"></span>
-            <div>
-              <div class="p3-method-axis-name">Value</div>
-              <div class="p3-method-axis-desc">Output quality per dollar.</div>
-            </div>
-          </div>
-          <div class="p3-method-axis">
-            <span class="p3-method-axis-dot" style="--c:var(--p3-score-watch)"></span>
-            <div>
-              <div class="p3-method-axis-name">Moat</div>
-              <div class="p3-method-axis-desc">How defensible is the differentiation.</div>
-            </div>
-          </div>
-          <div class="p3-method-axis">
-            <span class="p3-method-axis-dot" style="--c:var(--p3-score-low)"></span>
-            <div>
-              <div class="p3-method-axis-name">Longevity</div>
-              <div class="p3-method-axis-desc">Odds the vendor is still shipping in 24 months.</div>
-            </div>
-          </div>
-        </div>
-        <a href="/about/scoring/" class="p3-method-link">Full methodology →</a>
-      </div>
-    </section>
-
     <!-- =============== COMPARISONS STRIP =============== -->
     <section class="p3-cmp-sec" aria-label="Featured comparisons" data-reveal>
       <div class="p3-sec-head">
-        <h2 class="p3-sec-title">Head-to-head</h2>
-        <a href="/compare/" class="p3-sec-link">All comparisons →</a>
+          <div>
+            <div class="p3-cmp-eyebrow">Compare</div>
+            <h2 class="p3-sec-title">Head-to-head</h2>
+          </div>
+          <a href="/compare/" class="p3-sec-link">All comparisons →</a>
       </div>
       <div class="p3-cmp-strip">
         {featuredCompare.map((c, i) => {
@@ -1192,10 +1212,10 @@ const verificationLedger = [
       --p3-verified: #5eead4;
       --p3-verified-strong: #99f6e4;
       --p3-verified-rgb: 94, 234, 212;
-      --p3-score-high: #5eead4;
-      --p3-score-good: #38bdf8;
-      --p3-score-watch: #67e8f9;
-      --p3-score-low: #67e8f9;
+      --p3-score-high: #10b981;
+      --p3-score-good: #3b82f6;
+      --p3-score-watch: #f59e0b;
+      --p3-score-low: #ef4444;
       --p3-brand-glow: rgba(56, 189, 248, 0.20);
       --p3-action-glow: rgba(34, 211, 238, 0.18);
       --p3-panel-shadow: 0 28px 80px -54px rgba(0, 0, 0, 0.88);
@@ -1267,6 +1287,7 @@ const verificationLedger = [
       background:
         linear-gradient(90deg, rgba(var(--p3-intel-rgb), 0.045), transparent 36%),
         var(--p3-surface);
+      box-shadow: var(--p3-panel-shadow);
     }
 
     .p3-home-premium .p3-catchip::before {
@@ -1313,16 +1334,15 @@ const verificationLedger = [
         linear-gradient(180deg, rgba(248, 250, 252, 0.062), rgba(248, 250, 252, 0.016));
       box-shadow:
         var(--p3-panel-shadow),
-        0 22px 70px -54px var(--p3-brand-glow),
-        0 10px 30px -24px rgba(var(--p3-action-rgb), 0.22),
+        0 14px 40px -28px rgba(var(--p3-action-rgb), 0.20),
         inset 0 1px 0 rgba(248, 250, 252, 0.08);
     }
     .p3-home-premium .p3-premium-cover:hover {
       border-color: color-mix(in srgb, var(--cover-accent-2) 46%, rgba(255,255,255,0.12));
       box-shadow:
         var(--p3-panel-shadow-hover),
-        0 30px 92px -54px color-mix(in srgb, var(--cover-accent) 42%, transparent),
-        0 12px 34px -22px rgba(var(--p3-action-rgb), 0.3),
+        0 20px 60px -34px rgba(var(--p3-action-rgb), 0.28),
+        inset 0 1px 0 rgba(248, 250, 252, 0.1),
         inset 0 1px 0 rgba(248, 250, 252, 0.10);
     }
     .p3-home-premium .p3-cover-label {
@@ -1425,7 +1445,7 @@ const verificationLedger = [
       letter-spacing: 0.08em;
     }
     .p3-home-premium .p3-signal-desk {
-      margin: 26px 0 66px;
+      margin: 12px 0 66px;
       padding: 22px;
       border: 1px solid var(--p3-border);
       border-radius: 16px;
@@ -1450,6 +1470,19 @@ const verificationLedger = [
       font-weight: 800;
       letter-spacing: 0.13em;
       text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .p3-home-premium .p3-signal-eyebrow::before {
+      content: '';
+      display: inline-block;
+      width: 18px;
+      height: 2px;
+      border-radius: 2px;
+      background: currentColor;
+      opacity: 0.5;
+      flex: none;
     }
     .p3-home-premium .p3-signal-title {
       margin: 0;
@@ -1465,10 +1498,10 @@ const verificationLedger = [
       gap: 12px;
     }
     .p3-home-premium .p3-signal-card {
-      min-height: 158px;
+      min-height: 130px;
       display: flex;
       flex-direction: column;
-      padding: 16px;
+      padding: 12px;
       border: 1px solid var(--p3-border);
       border-radius: 12px;
       background: rgba(5, 6, 13, 0.46);
@@ -1485,24 +1518,24 @@ const verificationLedger = [
         0 14px 32px -26px rgba(var(--p3-action-rgb), 0.28);
     }
     .p3-home-premium .p3-signal-card-label {
-      margin-bottom: 18px;
+      margin-bottom: 10px;
       color: var(--p3-action);
       font-size: 10px;
-      font-weight: 850;
-      letter-spacing: 0.13em;
+      font-weight: 800;
+      letter-spacing: 0.10em;
       text-transform: uppercase;
     }
     .p3-home-premium .p3-signal-card-title {
       color: rgba(248, 250, 252, 0.96);
-      font-size: 18px;
-      font-weight: 780;
+      font-size: 15px;
+      font-weight: 700;
       line-height: 1.14;
     }
     .p3-home-premium .p3-signal-card-body {
-      margin-top: 10px;
+      margin-top: 6px;
       color: var(--p3-muted);
-      font-size: 13px;
-      line-height: 1.45;
+      font-size: 12px;
+      line-height: 1.4;
     }
     .p3-home-premium .p3-signal-card-foot {
       display: flex;
@@ -1529,7 +1562,7 @@ const verificationLedger = [
       display: grid;
       grid-template-columns: minmax(220px, 0.72fr) minmax(0, 1.6fr);
       gap: 18px;
-      margin: -34px 0 58px;
+      margin: 0 0 58px;
       align-items: stretch;
     }
     .p3-home-premium .p3-route-intro {
@@ -1542,48 +1575,64 @@ const verificationLedger = [
       font-weight: 850;
       letter-spacing: 0.13em;
       text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .p3-home-premium .p3-route-eyebrow::before {
+      content: '';
+      display: inline-block;
+      width: 18px;
+      height: 2px;
+      border-radius: 2px;
+      background: currentColor;
+      opacity: 0.5;
+      flex: none;
     }
     .p3-home-premium .p3-route-title {
       max-width: 12ch;
       margin: 0;
       color: var(--p3-fg);
       font-size: clamp(25px, 3.4vw, 40px);
-      font-weight: 850;
+      font-weight: 800;
       line-height: 1.02;
-      letter-spacing: 0;
+      letter-spacing: -0.01em;
     }
     .p3-home-premium .p3-route-grid {
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 0;
-      border-top: 1px solid var(--p3-border);
-      border-bottom: 1px solid var(--p3-border);
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+    @media (min-width: 700px) {
+      .p3-home-premium .p3-route-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
     }
     .p3-home-premium .p3-route-card {
       min-height: 136px;
       display: flex;
       flex-direction: column;
       padding: 14px 16px;
-      border: 0;
-      border-left: 1px solid var(--p3-border);
-      border-radius: 0;
-      background: transparent;
+      border: 1px solid var(--p3-border);
+      border-radius: 12px;
+      background: rgba(13, 18, 31, 0.78);
       text-decoration: none;
+      box-shadow: 0 18px 46px -38px rgba(0, 0, 0, 0.84),
+                  0 1px 0 rgba(248, 250, 252, 0.045) inset;
       transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
     }
     .p3-home-premium .p3-route-card:first-child {
-      border-left: 0;
+      border-left: 1px solid var(--p3-border);
     }
     .p3-home-premium .p3-route-card:hover {
-      transform: translateY(-1px);
-      background: var(--p3-surface-soft);
+      transform: translateY(-2px);
+      border-color: rgba(var(--p3-action-rgb), 0.34);
+      background: var(--p3-surface-hover);
     }
     .p3-home-premium .p3-route-label {
       margin-bottom: 16px;
       color: var(--p3-verified);
       font-size: 10px;
-      font-weight: 850;
-      letter-spacing: 0.11em;
+      font-weight: 800;
+      letter-spacing: 0.10em;
       text-transform: uppercase;
     }
     .p3-home-premium .p3-route-title-sm {
@@ -1638,15 +1687,28 @@ const verificationLedger = [
       font-weight: 850;
       letter-spacing: 0.13em;
       text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .p3-home-premium .p3-ledger-eyebrow::before {
+      content: '';
+      display: inline-block;
+      width: 18px;
+      height: 2px;
+      border-radius: 2px;
+      background: currentColor;
+      opacity: 0.5;
+      flex: none;
     }
     .p3-home-premium .p3-ledger-title {
       max-width: 12ch;
       margin: 0;
       color: var(--p3-fg);
       font-size: clamp(26px, 3.2vw, 42px);
-      font-weight: 850;
+      font-weight: 800;
       line-height: 1.02;
-      letter-spacing: 0;
+      letter-spacing: -0.01em;
     }
     .p3-home-premium .p3-ledger-body {
       max-width: 46ch;
@@ -1799,10 +1861,10 @@ const verificationLedger = [
       --p3-verified: #0e7490;
       --p3-verified-strong: #0369a1;
       --p3-verified-rgb: 14, 116, 144;
-      --p3-score-high: #0e7490;
-      --p3-score-good: #0284c7;
-      --p3-score-watch: #0891b2;
-      --p3-score-low: #0e7490;
+      --p3-score-high: #059669;
+      --p3-score-good: #2563eb;
+      --p3-score-watch: #d97706;
+      --p3-score-low: #dc2626;
       --p3-brand-glow: rgba(2, 132, 199, 0.09);
       --p3-action-glow: rgba(8, 145, 178, 0.08);
       --p3-panel-shadow: 0 24px 64px -54px rgba(15, 23, 42, 0.28);
@@ -1939,11 +2001,11 @@ const verificationLedger = [
       }
       .p3-home-premium .p3-route-card {
         border-left: 0;
-        border-top: 1px solid var(--p3-border);
+        border-top: 0;
         min-height: 0;
       }
       .p3-home-premium .p3-route-card:first-child {
-        border-top: 0;
+        border-top: 1px solid var(--p3-border);
       }
       .p3-home-premium .p3-ledger {
         grid-template-columns: 1fr;

@@ -11,8 +11,8 @@ pricing_model: open-source
 price_range: "Free (MIT) · BYOK API costs · server hosting on you"
 status: active
 launched: 2025-11
-last_updated: 2026-04-30
-last_verified: 2026-04-30
+last_updated: 2026-05-01
+last_verified: 2026-05-01
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -50,6 +50,7 @@ It runs on your machine, controls your browser and shell, and is reachable from 
 
 ## Recent developments
 
+- **April 30, 2026:** [Apple said AI and agentic tools helped drive unexpected Mac demand](/news/2026-04-30-apple-mac-ai-agent-demand/). OpenClaw was named in coverage of Mac mini and Mac Studio demand, reinforcing the hardware reality behind local-first personal agents.
 - **April 30, 2026:** [Stripe turned Link into an agent wallet for approved AI purchases](/news/2026-04-30-stripe-link-agent-wallet/), explicitly naming personal AI agents such as OpenClaw as a use case. This gives OpenClaw-style local agents a safer payment path than exposing raw card details.
 
 ## System Verdict
