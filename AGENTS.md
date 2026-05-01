@@ -10,7 +10,10 @@ This repo is usually edited through the native Codex Windows app.
 - Prefer PowerShell-safe commands.
 - Do not assume Bash-only syntax, Unix paths, or Linux-only tools.
 - Run commands from the repo root unless a task clearly requires another directory.
-- Use the Codex in-app browser for UI verification when a local route is involved.
+- For UI work, start or reuse the local dev server yourself and open the relevant route in the operating system's default browser for the user.
+- On Ubuntu/Linux, prefer `xdg-open http://127.0.0.1:4321/<route>/` after the dev server is ready.
+- On Windows PowerShell, prefer `Start-Process "http://127.0.0.1:4321/<route>/"` after the dev server is ready.
+- Use the Codex in-app browser or Playwright screenshots as additional verification when a local route is involved, but do not treat them as a replacement for opening the user's default browser unless the OS browser cannot be launched.
 - Keep sandbox permissions project-scoped unless the user explicitly approves broader access.
 - If a command fails because a tool is missing, report the missing tool once and use a safe fallback. Do not repeatedly retry the same failing command.
 - If a command starts a long-running process, make sure it is intentionally needed for the task.

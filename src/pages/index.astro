@@ -1,2060 +1,1833 @@
 ---
-/**
- * Homepage (/). Editorial-tier layout promoted on April 24, 2026.
- * Scoped under .p3-canvas with .p3- prefixed classes so
- * it cannot collide with older homepage tokens.
- *
- * Structure:
- *   - Hero: gradient headline + eyebrow live-dot + search + today's top
- *     pick cover story (animated sparkbars).
- *   - Stat bar: tools, comparisons, news items, axes, paid placements.
- *   - Category rail: most-populated categories as chips.
- *   - News + movers split: OG-thumbnail hero news + 3-row latest list,
- *     movers-this-fortnight aside driven by news.affects[] mentions.
- *   - Top-tools grid: 9 tiles with animated bars, taglines, category pill.
- *   - Methodology callout: 4-axis legend with color-coded dots.
- *   - Comparisons strip: 6 featured head-to-heads with dual-logo cards.
- *   - Recently viewed (client-side) + email capture at bottom.
- */
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ToolLogo from '../components/ToolLogo.astro';
-import CategoryIcon from '../components/CategoryIcon.astro';
 import HomepageLD from '../components/seo/HomepageLD.astro';
-import RecentlyViewed from '../components/RecentlyViewed.astro';
-import EmailCapture from '../components/EmailCapture.astro';
-import logoManifest from '../data/logo-manifest.json';
-import '../styles/p3-canvas.css';
 
 const allTools = await getCollection('tools');
+const activeTools = allTools.filter((tool) => !['dead', 'retired', 'acquired'].includes(String(tool.data.status ?? 'active')));
 const allComparisons = await getCollection('comparisons');
 const allNews = await getCollection('news');
 const allCategories = await getCollection('categories');
 
-function overallScore(s?: { utility?: number; value?: number; moat?: number; longevity?: number }) {
-  const u = s?.utility ?? 0, v = s?.value ?? 0, m = s?.moat ?? 0, l = s?.longevity ?? 0;
-  return Math.round(((u + v + m + l) / 4) * 10) / 10;
+const toolCount = activeTools.length;
+const comparisonCount = allComparisons.length;
+const newsCount = allNews.length;
+
+function scoreFor(tool: (typeof activeTools)[number]): number {
+  const scores = tool.data.scores;
+  if (!scores) return 0;
+  const values = [scores.utility, scores.value, scores.moat, scores.longevity].filter((value): value is number => typeof value === 'number');
+  if (!values.length) return 0;
+  return values.reduce((sum, value) => sum + value, 0) / values.length;
 }
 
-type ToolView = {
-  slug: string;
-  title: string;
-  tagline: string;
-  score: number;
-  category: string;
-  priceRange: string;
-  lastVerified: string;
-  scores: { utility: number; value: number; moat: number; longevity: number };
-  status: string;
-};
-
-const scored: ToolView[] = allTools
-  .filter(t => t.data.status !== 'dead' && t.data.status !== 'retired' && t.data.status !== 'acquired')
-  .map(t => {
-    const s = t.data.scores ?? {};
-    return {
-      slug: t.data.slug || t.id.replace(/\.md$/, ''),
-      title: t.data.title,
-      tagline: t.data.tagline ?? '',
-      score: overallScore(s),
-      category: t.data.category ?? '',
-      priceRange: t.data.price_range ?? '',
-      lastVerified: String(t.data.last_verified ?? t.data.last_updated ?? ''),
-      scores: {
-        utility: s.utility ?? 0,
-        value: s.value ?? 0,
-        moat: s.moat ?? 0,
-        longevity: s.longevity ?? 0,
-      },
-      status: t.data.status ?? 'active',
-    };
-  })
-  .sort((a, b) => b.score - a.score);
-
-const topTool = scored[0];
-const topGrid = scored.slice(0, 4);
-
-// Category leaders for the rotating cover card. One entry per category:
-// the highest-scored active tool in it. Sorted by score so the strongest
-// categories cycle first. Frontmatter-safe object payload; the client
-// rotator reads this as JSON at runtime.
-const catLeadersMap: Record<string, typeof scored[number]> = {};
-for (const t of scored) {
-  if (!t.category) continue;
-  const prev = catLeadersMap[t.category];
-  if (!prev || t.score > prev.score) catLeadersMap[t.category] = t;
+function newsSlug(news: (typeof allNews)[number]): string {
+  return String(news.data.slug ?? news.id.replace(/\.md$/, ''));
 }
-const catLeaders = Object.values(catLeadersMap)
+
+const topTools = activeTools
+  .map((tool) => ({
+    slug: String(tool.data.slug ?? tool.id.replace(/\.md$/, '')),
+    title: tool.data.title,
+    category: tool.data.category ?? 'ai-tools',
+    tagline: tool.data.tagline ?? tool.data.meta_description ?? '',
+    score: scoreFor(tool),
+  }))
   .sort((a, b) => b.score - a.score)
-  .slice(0, 10);
+  .slice(0, 6);
 
-// coverSlides is constructed further down, after catLabel is declared,
-// so it can map t.category -> display label.
-
-// Tools with news mentions in the last 14 days (signal: "movers")
-const recentNewsMentions: Record<string, number> = {};
-const now = Date.now();
-for (const n of allNews) {
-  const d = new Date(String(n.data.date));
-  if (isNaN(d.getTime())) continue;
-  const ageDays = (now - d.getTime()) / 86400000;
-  if (ageDays > 14 || ageDays < 0) continue;
-  const affects = Array.isArray(n.data.affects) ? n.data.affects : [];
-  for (const slug of affects) {
-    recentNewsMentions[slug] = (recentNewsMentions[slug] ?? 0) + 1;
-  }
-}
-const movers = scored
-  .map(t => ({ ...t, mentions: recentNewsMentions[t.slug] ?? 0 }))
-  .filter(t => t.mentions >= 1)
-  .sort((a, b) => b.mentions - a.mentions)
-  .slice(0, 5);
-
-// Latest news items
 const latestNews = allNews
-  .map(n => ({
-    slug: n.data.slug || n.id.replace(/\.md$/, ''),
-    title: n.data.title,
-    summary: n.data.summary ?? '',
-    date: String(n.data.date).slice(0, 10),
-    severity: (n.data.severity as string) || 'minor',
-    affects: Array.isArray(n.data.affects) ? n.data.affects.map(String) : [],
+  .map((news) => ({
+    slug: newsSlug(news),
+    title: news.data.title,
+    summary: news.data.summary ?? news.data.description ?? '',
+    date: String(news.data.date),
+    severity: news.data.severity ?? 'minor',
   }))
   .sort((a, b) => b.date.localeCompare(a.date))
-  .slice(0, 4);
-const heroNews = latestNews[0];
-const homepageHeroNewsImage = '/home-news-ai-tools-intelligence.webp';
-
-function relDate(iso: string): string {
-  if (!iso) return '';
-  const d = new Date(iso);
-  if (isNaN(d.getTime())) return iso;
-  const days = Math.floor((now - d.getTime()) / 86400000);
-  if (days <= 0) return 'Today';
-  if (days === 1) return 'Yesterday';
-  if (days < 7) return `${days}d ago`;
-  if (days < 30) return `${Math.round(days / 7)}w ago`;
-  return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
-}
-
-const catLabel: Record<string, string> = {
-  'ai-chatbots': 'Chatbots', 'ai-voice': 'Voice', 'ai-video': 'Video',
-  'ai-coding': 'Coding', 'ai-automation': 'Automation', 'ai-seo': 'SEO',
-  'ai-design': 'Design', 'ai-writing': 'Writing', 'ai-image': 'Image',
-  'ai-search': 'Search', 'ai-notes': 'Notes', 'ai-music': 'Music',
-  'ai-presentation': 'Presentation', 'ai-research': 'Research',
-};
-const coverPalette: Record<string, { a: string; b: string }> = {
-  'ai-automation': { a: '#38bdf8', b: '#5eead4' },
-  'ai-chatbots': { a: '#67e8f9', b: '#5eead4' },
-  'ai-coding': { a: '#38bdf8', b: '#5eead4' },
-  'ai-design': { a: '#67e8f9', b: '#22d3ee' },
-  'ai-image': { a: '#5eead4', b: '#38bdf8' },
-  'ai-music': { a: '#22d3ee', b: '#38bdf8' },
-  'ai-notes': { a: '#67e8f9', b: '#67e8f9' },
-  'ai-presentation': { a: '#38bdf8', b: '#5eead4' },
-  'ai-research': { a: '#67e8f9', b: '#5eead4' },
-  'ai-search': { a: '#67e8f9', b: '#22d3ee' },
-  'ai-seo': { a: '#5eead4', b: '#22d3ee' },
-  'ai-video': { a: '#38bdf8', b: '#38bdf8' },
-  'ai-voice': { a: '#7dd3fc', b: '#5eead4' },
-  'ai-writing': { a: '#38bdf8', b: '#5eead4' },
-};
-
-// Serialisable payload for the client-side cover-card rotator. Pre-computes
-// bar percentages + colours so the rotator doesn't need access to sparkbars()
-// at runtime. Logo URL comes from the static manifest (miniflare-safe).
-// Declared after catLabel so catLabel[t.category] resolves in-bounds.
-function barColorClient(n: number): string {
-  if (n >= 8) return 'var(--p3-score-high)';
-  if (n >= 7) return 'var(--p3-score-good)';
-  if (n >= 6) return 'var(--p3-score-watch)';
-  return 'var(--p3-score-low)';
-}
-function coverReasons(t: ToolView) {
-  const axes = [
-    { label: 'Utility', value: t.scores.utility },
-    { label: 'Value', value: t.scores.value },
-    { label: 'Moat', value: t.scores.moat },
-    { label: 'Longevity', value: t.scores.longevity },
-  ].sort((a, b) => b.value - a.value);
-  return [
-    `${axes[0].label} ${axes[0].value}/10`,
-    `${axes[1].label} ${axes[1].value}/10`,
-    t.priceRange || 'Pricing tracked',
-  ];
-}
-function lastCheckedLabel(t: ToolView) {
-  if (!t.lastVerified) return 'Last checked: date pending';
-  return `Last checked ${relDate(t.lastVerified).toLowerCase()}`;
-}
-function coverVerdict(t: ToolView) {
-  const label = (catLabel[t.category] ?? t.category) || 'AI tool';
-  const axis = coverReasons(t)[0].replace('/10', '');
-  return `${label} leader by wiki score. Strength: ${axis}. Compare pricing and alternatives before choosing.`;
-}
-const logoMap = logoManifest as Record<string, string>;
-const coverSlides = catLeaders.map((t) => ({
-  slug: t.slug,
-  title: t.title,
-  tagline: t.tagline,
-  verdict: coverVerdict(t),
-  reasons: coverReasons(t),
-  score: t.score,
-  priceRange: t.priceRange,
-  checkedLabel: lastCheckedLabel(t),
-  category: catLabel[t.category] ?? t.category,
-  categorySlug: t.category,
-  colorA: coverPalette[t.category]?.a ?? '#38bdf8',
-  colorB: coverPalette[t.category]?.b ?? '#5eead4',
-  logoUrl: logoMap[t.slug] ?? `/logos/tools/${t.slug}.png`,
-  bars: [
-    { label: 'UTI', v: t.scores.utility, pct: Math.max(15, Math.min(100, (t.scores.utility / 10) * 100)), color: barColorClient(t.scores.utility) },
-    { label: 'VAL', v: t.scores.value, pct: Math.max(15, Math.min(100, (t.scores.value / 10) * 100)), color: barColorClient(t.scores.value) },
-    { label: 'MOA', v: t.scores.moat, pct: Math.max(15, Math.min(100, (t.scores.moat / 10) * 100)), color: barColorClient(t.scores.moat) },
-    { label: 'LON', v: t.scores.longevity, pct: Math.max(15, Math.min(100, (t.scores.longevity / 10) * 100)), color: barColorClient(t.scores.longevity) },
-  ],
-}));
-const catCounts: Record<string, number> = {};
-for (const t of scored) if (t.category) catCounts[t.category] = (catCounts[t.category] ?? 0) + 1;
-// Top-scored tool per category — surfaced on every chip as editorial
-// signal ("Top: Cursor 9.4") so the catrail reads as a leaderboard,
-// not a plain directory.
-const topByCategory: Record<string, { title: string; slug: string; score: number }> = {};
-for (const t of scored) {
-  if (!t.category) continue;
-  const prev = topByCategory[t.category];
-  if (!prev || t.score > prev.score) {
-    topByCategory[t.category] = { title: t.title, slug: t.slug, score: t.score };
-  }
-}
-// Average score per category (visual-only signal on the chip).
-const catScoreSum: Record<string, number> = {};
-for (const t of scored) {
-  if (!t.category) continue;
-  catScoreSum[t.category] = (catScoreSum[t.category] ?? 0) + t.score;
-}
-const cats = allCategories
-  .map(c => {
-    const count = catCounts[c.data.slug] ?? 0;
-    const avg = count > 0 ? Math.round(((catScoreSum[c.data.slug] ?? 0) / count) * 10) / 10 : 0;
-    return {
-      slug: c.data.slug,
-      label: catLabel[c.data.slug] ?? c.data.slug,
-      count,
-      avg,
-      top: topByCategory[c.data.slug] ?? null,
-    };
-  })
-  .sort((a, b) => b.count - a.count);
-
-// Featured comparisons (top 6 by combined score of the tool pair).
-// Also capture per-tool titles + scores so the card can display the
-// inline "9.5 vs 9.3" score differential instead of just title text.
-type Cmp = {
-  slug: string;
-  title: string;
-  slugs: string[];
-  sumScore: number;
-  toolA: { title: string; score: number } | null;
-  toolB: { title: string; score: number } | null;
-};
-const featuredCompare: Cmp[] = allComparisons
-  .map(c => {
-    const tools = Array.isArray(c.data.tools) ? c.data.tools : [];
-    const slugs = tools.map(String).slice(0, 2);
-    const sumScore = slugs.reduce((s, slug) => {
-      const t = scored.find(x => x.slug === slug);
-      return s + (t?.score ?? 0);
-    }, 0);
-    const resolveTool = (slug: string) => {
-      const t = scored.find(x => x.slug === slug);
-      return t ? { title: t.title, score: t.score } : null;
-    };
-    return {
-      slug: c.data.slug || c.id.replace(/\.md$/, ''),
-      title: c.data.title || '',
-      slugs,
-      sumScore,
-      toolA: slugs[0] ? resolveTool(slugs[0]) : null,
-      toolB: slugs[1] ? resolveTool(slugs[1]) : null,
-    };
-  })
-  .sort((a, b) => b.sumScore - a.sumScore)
   .slice(0, 3);
 
-function barColor(n: number): string {
-  if (n >= 8) return 'var(--p3-score-high)';
-  if (n >= 7) return 'var(--p3-score-good)';
-  if (n >= 6) return 'var(--p3-score-watch)';
-  return 'var(--p3-score-low)';
-}
-function sparkbars(s: { utility: number; value: number; moat: number; longevity: number }) {
-  return [
-    { label: 'Utility', v: s.utility },
-    { label: 'Value', v: s.value },
-    { label: 'Moat', v: s.moat },
-    { label: 'Longevity', v: s.longevity },
-  ].map(b => ({ ...b, color: barColor(b.v), pct: Math.max(12, Math.min(100, (b.v / 10) * 100)) }));
-}
-
-const totalTools = scored.length;
-const totalNews = allNews.length;
-const totalCompare = allComparisons.length;
-
-const usedSignalTools = new Set<string>([topTool.slug]);
-function pickDistinct(candidates: ToolView[], fallback: ToolView) {
-  const picked = candidates.find((t) => !usedSignalTools.has(t.slug)) ?? fallback;
-  usedSignalTools.add(picked.slug);
-  return picked;
-}
-const balancedCandidates = [...scored]
-  .sort((a, b) => {
-    const minB = Math.min(b.scores.utility, b.scores.value, b.scores.moat, b.scores.longevity);
-    const minA = Math.min(a.scores.utility, a.scores.value, a.scores.moat, a.scores.longevity);
-    return minB - minA || b.score - a.score;
-  });
-const mostBalanced = pickDistinct(balancedCandidates, balancedCandidates[0] ?? topTool);
-const liveMover = pickDistinct(movers.length ? movers : scored, scored[1] ?? topTool);
-const priceWatch = latestNews.find((n) => /price|pricing|tier|subscription|plan|cost/i.test(`${n.title} ${n.summary}`)) ?? heroNews;
-const signalCards = [
-  {
-    label: 'Top scored',
-    title: topTool.title,
-    metric: `${topTool.score}/10`,
-    body: `Highest four-axis score among active tool pages.`,
-    href: `/tools/${topTool.slug}/`,
-  },
-  {
-    label: 'Best floor',
-    title: mostBalanced.title,
-    metric: `${Math.min(mostBalanced.scores.utility, mostBalanced.scores.value, mostBalanced.scores.moat, mostBalanced.scores.longevity)}/10 floor`,
-    body: `Strongest minimum score across the four scoring axes.`,
-    href: `/tools/${mostBalanced.slug}/`,
-  },
-  {
-    label: 'Most mentioned',
-    title: liveMover.title,
-    metric: movers[0] ? `${liveMover.mentions} news mentions` : `${liveMover.score}/10`,
-    body: movers[0] ? `Most mentions in news items from the last 14 days.` : `Shown from scores while the news window is quiet.`,
-    href: `/tools/${liveMover.slug}/`,
-  },
-  {
-    label: 'Pricing note',
-    title: priceWatch?.title ?? 'Pricing signals',
-    metric: priceWatch ? relDate(priceWatch.date) : 'Live',
-    body: priceWatch?.summary ? priceWatch.summary.slice(0, 110) + (priceWatch.summary.length > 110 ? '...' : '') : 'Recent pricing and plan changes from the news feed.',
-    href: priceWatch ? `/news/${priceWatch.slug}/` : '/news/',
-  },
+const windowTools = topTools.slice(0, 3);
+const desktopShortcuts = [
+  { label: 'Packages', caption: `${toolCount} tools`, token: 'PK', window: 'tool-finder' },
+  { label: 'News Desk', caption: `${newsCount} dispatches`, token: 'NW', window: 'news' },
+  { label: 'Trust Graph', caption: '4 score axes', token: 'TM', window: 'monitor' },
+  { label: 'Ask Finder', caption: 'plain English', token: 'AI', window: 'terminal' },
 ];
-const decisionRoutes = [
-  {
-    label: 'For builders',
-    title: 'Code, ship, and debug',
-    body: 'Coding agents, IDE assistants, app builders, and repo automation.',
-    href: '/categories/ai-coding/',
-    metric: `${catCounts['ai-coding'] ?? 0} tools`,
-  },
-  {
-    label: 'For operators',
-    title: 'Automate the work',
-    body: 'Agent workflows, integration layers, and back-office automation.',
-    href: '/categories/ai-automation/',
-    metric: `${catCounts['ai-automation'] ?? 0} tools`,
-  },
-  {
-    label: 'For creators',
-    title: 'Generate media',
-    body: 'Image, video, voice, and music systems ranked by real utility.',
-    href: '/categories/ai-image/',
-    metric: `${(catCounts['ai-image'] ?? 0) + (catCounts['ai-video'] ?? 0) + (catCounts['ai-voice'] ?? 0)} tools`,
-  },
-  {
-    label: 'For decisions',
-    title: 'Compare before buying',
-    body: 'Head-to-head pages with score gaps, tradeoffs, and current pricing.',
-    href: '/compare/',
-    metric: `${totalCompare} comparisons`,
-  },
-];
-const heroNewsBrief = heroNews ? [
-  { label: 'Signal age', value: relDate(heroNews.date) || 'Live' },
-  { label: 'Severity', value: heroNews.severity },
-  { label: 'Tools touched', value: String(heroNews.affects.length) },
-] : [];
-const verificationLedger = [
-  {
-    label: 'Catalog depth',
-    value: totalTools,
-    suffix: 'tools',
-    body: 'Live tool pages with category, pricing, status, and scoring metadata.',
-    href: '/tools/',
-  },
-  {
-    label: 'Buying evidence',
-    value: totalCompare,
-    suffix: 'comparisons',
-    body: 'Head-to-head pages built for tradeoff checks before a subscription.',
-    href: '/compare/',
-  },
-  {
-    label: 'Market movement',
-    value: totalNews,
-    suffix: 'news items',
-    body: 'Launches, pricing changes, benchmarks, and vendor updates tracked as signals.',
-    href: '/news/',
-  },
-  {
-    label: 'Editorial controls',
-    value: 0,
-    suffix: 'paid placements',
-    body: 'The homepage ranking is computed from wiki data, not sponsorship slots.',
-    href: '/about/editorial/',
-  },
+const consoleQuickActions = [
+  { command: 'coding', label: 'Coding' },
+  { command: 'writing', label: 'Writing' },
+  { command: 'research', label: 'Research' },
+  { command: 'image', label: 'Images' },
+  { command: 'automation', label: 'Automation' },
+  { command: 'video', label: 'Video' },
+  { command: 'news', label: 'News' },
 ];
 ---
 
 <BaseLayout
-  title={`Best AI Tools 2026: ${totalTools} Reviewed, Scored & Verified`}
-  description={`Independent AI tools encyclopedia. ${totalTools} tools scored on Utility, Value, Moat and Longevity. ${totalCompare} comparisons, current news, and transparent editorial signals.`}
+  title={`Best AI Tools 2026: ${toolCount} Reviewed in a Virtual AI Desktop`}
+  description={`Use aipedia.wiki like a dark Linux-style AI tools desktop: ask for help, browse ${toolCount} tools, compare ${comparisonCount} packages, and follow ${newsCount} AI news items.`}
 >
   <HomepageLD
-    toolCount={totalTools}
-    comparisonCount={totalCompare}
+    toolCount={toolCount}
+    comparisonCount={comparisonCount}
     categoryCount={allCategories.length}
-    lastUpdated="2026-04-23"
+    lastUpdated="2026-05-01"
   />
 
-  <div class="p3-canvas p3-home-premium">
-    <!-- =============== HERO =============== -->
-    <section class="p3-hero">
-      <div class="p3-hero-left">
-        <div class="p3-eyebrow" title={`${totalTools} tools. ${totalCompare} comparisons. Updated today.`}>
-          <span class="p3-live-dot" aria-hidden="true"></span>
-          <span class="p3-eyebrow-full">{totalTools} tools · {totalCompare} comparisons · updated today</span>
-          <span class="p3-eyebrow-short">{totalTools} tools · updated today</span>
-        </div>
-        <h1 class="p3-headline">
-          Find the <span class="p3-gradient">right AI tool</span>.
-        </h1>
-        <p class="p3-subhead">
-          <span class="p3-trustline">
-            <span class="p3-trust"><span class="p3-trust-mark" aria-hidden="true">✓</span>Source-linked pages</span>
-            <span class="p3-trust-sep" aria-hidden="true"></span>
-            <span class="p3-trust"><span class="p3-trust-mark" aria-hidden="true">✓</span><span class="p3-trust-num tabular-nums">4</span>-axis scoring</span>
-            <span class="p3-trust-sep" aria-hidden="true"></span>
-            <span class="p3-trust"><span class="p3-trust-mark" aria-hidden="true">✓</span>No paid placements</span>
-          </span>
-        </p>
-        <button
-          type="button"
-          id="homepage-search-bar"
-          class="p3-search p3-search-btn"
-          aria-label={`Search ${totalTools} AI tools, ${totalCompare} comparisons, and ${totalNews} news items`}
-        >
-          <span class="p3-search-btn-glow" aria-hidden="true"></span>
-          <svg class="p3-search-icon" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
-            <circle cx="11" cy="11" r="7"/><path stroke-linecap="round" d="M21 21l-4.3-4.3"/>
-          </svg>
-          <span class="p3-search-placeholder" aria-live="polite">
-            <span class="p3-search-placeholder-full" data-hint-rotator>
-              <span class="p3-search-hint p3-search-hint-default">Search {totalTools} tools, {totalCompare} comparisons, news</span>
-              <span class="p3-search-hint">Try "cursor"</span>
-              <span class="p3-search-hint">Try "midjourney"</span>
-              <span class="p3-search-hint">Try "elevenlabs"</span>
-              <span class="p3-search-hint">Try "claude"</span>
-              <span class="p3-search-hint">Try "video generation"</span>
-            </span>
-            <span class="p3-search-placeholder-short">Search {totalTools} tools, news</span>
-          </span>
-          <kbd id="homepage-search-kbd" class="p3-kbd" aria-hidden="true">Ctrl K</kbd>
+  <section class="linux-demo" data-linux-demo>
+    <div class="os-wallpaper" aria-hidden="true">
+      <span class="os-grid"></span>
+      <span class="os-scanline"></span>
+      <span class="os-light-shelf os-light-shelf-one"></span>
+      <span class="os-light-shelf os-light-shelf-two"></span>
+    </div>
+
+    <div class="os-cursor" aria-hidden="true">
+      <span class="os-cursor-core"></span>
+    </div>
+
+    <header class="os-panel" aria-label="aipedia.wiki panel">
+      <div class="os-panel-left">
+        <button class="os-menu-button" type="button" data-menu-button aria-expanded="false" aria-controls="os-menu">
+          <img src="/brand/aipedia-logo-crystal-cyan-128.png" alt="" width="24" height="24" />
+          <span>aipedia.wiki</span>
         </button>
-        <nav class="p3-jumps" aria-label="Primary destinations">
-          <a href="/tools/" class="p3-jump">
-            <span class="p3-jump-icon" aria-hidden="true">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76Z"/>
-              </svg>
-            </span>
-            <span class="p3-jump-body">
-              <span class="p3-jump-title">All tools</span>
-              <span class="p3-jump-count tabular-nums">{totalTools}</span>
-            </span>
-            <span class="p3-jump-arrow" aria-hidden="true">→</span>
-          </a>
-          <a href="/compare/" class="p3-jump">
-            <span class="p3-jump-icon" aria-hidden="true">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M3 7h18"/><path d="M3 17h18"/><path d="M12 3v18"/>
-              </svg>
-            </span>
-            <span class="p3-jump-body">
-              <span class="p3-jump-title">Head-to-head</span>
-              <span class="p3-jump-count tabular-nums">{totalCompare}</span>
-            </span>
-            <span class="p3-jump-arrow" aria-hidden="true">→</span>
-          </a>
-          <a href="/news/" class="p3-jump">
-            <span class="p3-jump-icon" aria-hidden="true">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9h4"/>
-                <path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8V6Z"/>
-              </svg>
-            </span>
-            <span class="p3-jump-body">
-              <span class="p3-jump-title">News feed</span>
-              <span class="p3-jump-count tabular-nums">{totalNews}</span>
-            </span>
-            <span class="p3-jump-arrow" aria-hidden="true">→</span>
-          </a>
-          <a href="/about/scoring/" class="p3-jump">
-            <span class="p3-jump-icon" aria-hidden="true">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/>
-              </svg>
-            </span>
-            <span class="p3-jump-body">
-              <span class="p3-jump-title">How we score</span>
-              <span class="p3-jump-count">4 axes</span>
-            </span>
-            <span class="p3-jump-arrow" aria-hidden="true">→</span>
-          </a>
+        <nav class="os-workspaces" aria-label="Workspaces">
+          <a class="is-active" href="#workbench">Workbench</a>
+          <a href="#intel">Intel</a>
+          <a href="#catalog">Catalog</a>
         </nav>
-        <!-- Compact 4-axis key — shows at a glance how tools are scored -->
-        <div class="p3-axis-key" aria-label="Scoring axes: Utility, Value, Moat, Longevity">
-          <span class="p3-axis-key-label">Scored on</span>
-          <span class="p3-axis-key-chip"><span class="p3-axis-key-dot" style="--c:var(--p3-score-high)"></span>Utility</span>
-          <span class="p3-axis-key-chip"><span class="p3-axis-key-dot" style="--c:var(--p3-score-good)"></span>Value</span>
-          <span class="p3-axis-key-chip"><span class="p3-axis-key-dot" style="--c:var(--p3-score-watch)"></span>Moat</span>
-          <span class="p3-axis-key-chip"><span class="p3-axis-key-dot" style="--c:var(--p3-score-low)"></span>Longevity</span>
+      </div>
+      <div class="os-panel-right">
+        <button class="os-panel-chip" type="button" data-focus-window="terminal">Ask Finder</button>
+        <button class="os-panel-chip" type="button" data-focus-window="news">News</button>
+        <div class="os-clock" data-os-clock>--:--</div>
+      </div>
+      <div class="os-menu" id="os-menu" data-menu>
+        <div class="os-menu-title">Application launcher</div>
+        <label class="os-launcher-search">
+          <span>Search</span>
+          <input data-launcher-input value="best coding tool" autocomplete="off" />
+        </label>
+        <div class="os-launcher-grid">
+          <button type="button" data-focus-window="tool-finder"><span>PK</span><b>Tool Finder</b></button>
+          <button type="button" data-focus-window="terminal"><span>AI</span><b>Ask Finder</b></button>
+          <button type="button" data-focus-window="news"><span>NW</span><b>News Desk</b></button>
+          <button type="button" data-focus-window="monitor"><span>TM</span><b>Trust Monitor</b></button>
         </div>
+        <a href="/tools/" data-astro-prefetch="viewport">Browse all tools</a>
       </div>
+    </header>
 
-      <aside class="p3-hero-right" aria-label="Editorial top pick">
-        <a
-          id="p3-cover-card"
-          href={`/tools/${topTool.slug}/`}
-          class="p3-cover p3-premium-cover"
-          data-rotator-enabled
-          data-handoff-style="moat-signal"
-          style={`--cover-accent:${coverPalette[topTool.category]?.a ?? '#38bdf8'};--cover-accent-2:${coverPalette[topTool.category]?.b ?? '#5eead4'};--cover-next-accent:${coverPalette[topTool.category]?.b ?? '#5eead4'};`}
-        >
-          <span class="p3-cover-scan" aria-hidden="true"></span>
-          <span class="p3-cover-signal" aria-hidden="true"></span>
-          <div class="p3-cover-stage">
-            <div class="p3-cover-label">
-              <span class="p3-cover-label-text">Category: <span class="p3-cover-label-cat">{catLabel[topTool.category] ?? topTool.category}</span></span>
-              <span class="p3-cover-badge">Current pick</span>
-            </div>
-            <div class="p3-cover-title-row">
-              <div class="p3-cover-logo-frame">
-                <img class="p3-cover-logo tool-logo" src={(logoManifest as Record<string, string>)[topTool.slug] ?? `/logos/tools/${topTool.slug}.png`} alt={`${topTool.title} logo`} width="56" height="56" loading="eager" decoding="async" style="width:56px;height:56px;border-radius:12px;" />
-              </div>
-              <div class="p3-cover-titleblock">
-                <div class="p3-cover-title">{topTool.title}</div>
-                <div class="p3-cover-tagline">{topTool.tagline}</div>
-              </div>
-            </div>
-            <p class="p3-cover-verdict">{coverVerdict(topTool)}</p>
-            <div class="p3-cover-score">
-              <div class="p3-cover-score-main">
-                <span class="p3-cover-score-label">Wiki score</span>
-                <span class="p3-cover-score-num tabular-nums">{topTool.score}<span class="p3-cover-score-slash">/10</span></span>
-              </div>
-              <div class="p3-cover-bars" aria-label={`Score breakdown: ${sparkbars(topTool.scores).map(b => b.label + ' ' + b.v).join(', ')}`}>
-                {sparkbars(topTool.scores).map(b => (
-                  <div class="p3-cover-bar" title={`${b.label} ${b.v}/10`}>
-                    <div class="p3-cover-bar-col">
-                      <span class="p3-cover-bar-fill" style={`--h:${b.pct}%;--c:${b.color};`}></span>
-                    </div>
-                    <span class="p3-cover-bar-label">{b.label.slice(0, 3).toUpperCase()}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div class="p3-cover-reasons" aria-label="Why this is featured">
-              {coverReasons(topTool).map(reason => (
-                <span class="p3-cover-reason">{reason}</span>
-              ))}
-            </div>
-            <div class="p3-cover-foot">
-              <span class="p3-cover-price">{lastCheckedLabel(topTool)}</span>
-              <span class="p3-cover-arrow">Open review →</span>
-            </div>
+    <nav class="os-dock" aria-label="Window dock">
+      <button class="is-active" type="button" data-focus-window="terminal"><span>AI</span><b>Ask</b></button>
+      <button type="button" data-focus-window="tool-finder"><span>PK</span><b>Packages</b></button>
+      <button type="button" data-focus-window="news"><span>NW</span><b>News</b></button>
+      <button type="button" data-focus-window="monitor"><span>TM</span><b>Trust</b></button>
+    </nav>
+
+    <div class="os-context-menu" data-context-menu role="menu" aria-hidden="true" hidden>
+      <button type="button" role="menuitem" data-focus-window="terminal">Open Ask Finder</button>
+      <button type="button" role="menuitem" data-focus-window="tool-finder">Open packages</button>
+      <button type="button" role="menuitem" data-focus-window="news">Open news desk</button>
+      <button type="button" role="menuitem" data-focus-window="monitor">Open trust monitor</button>
+      <a href="/tools/" role="menuitem">Browse all tools</a>
+    </div>
+
+    <div class="os-stage" id="workbench">
+      <div class="os-left-rail">
+        <section class="os-hero">
+          <div class="os-prompt">
+            <span class="os-prompt-user">root@aipedia</span><span class="os-prompt-path">:~$</span>
+            <span class="os-prompt-command">find --best-ai-tool</span>
           </div>
-        </a>
-        {/* Data payload for the cover rotator. Injected as JSON so the
-             script can cycle through category leaders without rebuilding
-             the server. */}
-        <script id="p3-cover-slides" type="application/json" set:html={JSON.stringify(coverSlides)}></script>
-      </aside>
-
-      <!-- =============== STATS BAR (moved into hero for above-fold visibility) =============== -->
-      <section class="p3-statbar p3-statbar-hero" aria-label="Catalog at a glance" data-reveal>
-        <div class="p3-stat">
-          <span class="p3-stat-num count-up tabular-nums" data-target={totalTools}>{totalTools}</span>
-          <span class="p3-stat-lbl">Tools scored</span>
-        </div>
-        <div class="p3-stat">
-          <span class="p3-stat-num count-up tabular-nums" data-target={totalCompare}>{totalCompare}</span>
-          <span class="p3-stat-lbl">Comparisons</span>
-        </div>
-        <div class="p3-stat">
-          <span class="p3-stat-num count-up tabular-nums" data-target={totalNews}>{totalNews}</span>
-          <span class="p3-stat-lbl">News items</span>
-        </div>
-        <div class="p3-stat">
-          <span class="p3-stat-num count-up tabular-nums" data-target="4">4</span>
-          <span class="p3-stat-lbl">Scoring axes</span>
-        </div>
-        <div class="p3-stat">
-          <span class="p3-stat-num count-up tabular-nums" data-target="0">0</span>
-          <span class="p3-stat-lbl">Paid placements</span>
-        </div>
-      </section>
-    </section>
-
-    <!-- =============== SIGNAL DESK =============== -->
-    <section class="p3-signal-desk" aria-label="Current AI tool signals" data-reveal>
-      <div class="p3-signal-head">
-        <div>
-          <div class="p3-signal-eyebrow">Current signals</div>
-          <h2 class="p3-signal-title">Tools to check first.</h2>
-        </div>
-        <a href="/news/" class="p3-sec-link">News feed -></a>
-      </div>
-      <div class="p3-signal-grid">
-        {signalCards.map((card, i) => (
-          <a href={card.href} class="p3-signal-card" data-reveal style={`--reveal-delay: ${Math.min(i * 65, 260)}ms`}>
-            <span class="p3-signal-card-label">{card.label}</span>
-            <span class="p3-signal-card-title">{card.title}</span>
-            <span class="p3-signal-card-body">{card.body}</span>
-            <span class="p3-signal-card-foot">
-              <span class="p3-signal-card-metric tabular-nums">{card.metric}</span>
-              <span class="p3-signal-card-arrow" aria-hidden="true">-></span>
-            </span>
-          </a>
-        ))}
-      </div>
-    </section>
-
-    <!-- =============== METHODOLOGY CALLOUT (moved up for visibility) =============== -->
-    <section class="p3-method" data-reveal>
-      <div class="p3-method-inner">
-        <div class="p3-method-eyebrow">Editorial standard</div>
-        <h2 class="p3-method-title">Every tool scored on the same four axes.</h2>
-        <div class="p3-method-grid">
-          <div class="p3-method-axis">
-            <span class="p3-method-axis-dot" style="--c:var(--p3-score-high)"></span>
-            <div>
-              <div class="p3-method-axis-name">Utility</div>
-              <div class="p3-method-axis-desc">Does it do the job, reliably, today.</div>
-            </div>
-          </div>
-          <div class="p3-method-axis">
-            <span class="p3-method-axis-dot" style="--c:var(--p3-score-good)"></span>
-            <div>
-              <div class="p3-method-axis-name">Value</div>
-              <div class="p3-method-axis-desc">Output quality per dollar.</div>
-            </div>
-          </div>
-          <div class="p3-method-axis">
-            <span class="p3-method-axis-dot" style="--c:var(--p3-score-watch)"></span>
-            <div>
-              <div class="p3-method-axis-name">Moat</div>
-              <div class="p3-method-axis-desc">How defensible is the differentiation.</div>
-            </div>
-          </div>
-          <div class="p3-method-axis">
-            <span class="p3-method-axis-dot" style="--c:var(--p3-score-low)"></span>
-            <div>
-              <div class="p3-method-axis-name">Longevity</div>
-              <div class="p3-method-axis-desc">Odds the vendor is still shipping in 24 months.</div>
-            </div>
-          </div>
-        </div>
-        <a href="/about/scoring/" class="p3-method-link">Full methodology →</a>
-      </div>
-    </section>
-
-    <!-- =============== DECISION ROUTES =============== -->
-    <section class="p3-route-board" aria-label="Decision routes" data-reveal">
-      <div class="p3-route-intro">
-        <div class="p3-route-eyebrow">Use case routes</div>
-        <h2 class="p3-route-title">Start with the job.</h2>
-      </div>
-      <div class="p3-route-grid">
-        {decisionRoutes.map((route, i) => (
-          <a href={route.href} class="p3-route-card" data-reveal style={`--reveal-delay: ${Math.min(i * 55, 220)}ms`}>
-            <span class="p3-route-label">{route.label}</span>
-            <span class="p3-route-title-sm">{route.title}</span>
-            <span class="p3-route-body">{route.body}</span>
-            <span class="p3-route-foot">
-              <span class="p3-route-metric tabular-nums">{route.metric}</span>
-              <span aria-hidden="true">-></span>
-            </span>
-          </a>
-        ))}
-      </div>
-    </section>
-
-    <!-- =============== VERIFICATION LEDGER =============== -->
-    <section class="p3-ledger" aria-label="Verification ledger" data-reveal>
-      <div class="p3-ledger-copy">
-        <div class="p3-ledger-eyebrow">Verification ledger</div>
-        <h2 class="p3-ledger-title">How this wiki is built.</h2>
-        <p class="p3-ledger-body">
-          Rankings, category routes, and news signals come from the same content graph that powers the tool pages. Each entry keeps its status, pricing, sources, and score history close to the surface.
-        </p>
-        <a href="/about/editorial/" class="p3-ledger-link">Read the editorial policy -></a>
-      </div>
-      <div class="p3-ledger-grid">
-        {verificationLedger.map((item, i) => (
-          <a href={item.href} class="p3-ledger-item" data-reveal style={`--reveal-delay: ${Math.min(i * 55, 220)}ms`}>
-            <span class="p3-ledger-item-label">{item.label}</span>
-            <span class="p3-ledger-item-value">
-              <span class="tabular-nums">{item.value}</span>
-              <span>{item.suffix}</span>
-            </span>
-            <span class="p3-ledger-item-body">{item.body}</span>
-          </a>
-        ))}
-      </div>
-    </section>
-
-    <!-- =============== CATEGORY RAIL =============== -->
-    <section class="p3-catrail" aria-label="Browse by category" data-reveal>
-      <div class="p3-sec-head">
-          <div>
-            <div class="p3-catrail-eyebrow">Categories</div>
-            <h2 class="p3-sec-title">Browse by category</h2>
-          </div>
-          <a href="/categories/" class="p3-sec-link">All {cats.length} categories →</a>
-      </div>
-      <div class="p3-catgrid">
-        {cats.slice(0, 12).map((c, i) => (
-          <a href={`/categories/${c.slug}/`} class={`p3-catchip ${i < 3 ? 'p3-catchip-top' : ''}`.trim()} data-reveal style={`--reveal-delay: ${Math.min(i * 45, 450)}ms`}>
-            <span class="p3-catchip-head">
-              <CategoryIcon slug={c.slug} label={c.label} class="p3-catchip-icon" />
-              <span class="p3-catchip-label">{c.label}</span>
-              <span class="p3-catchip-count tabular-nums">{c.count}</span>
-            </span>
-            {c.top && (
-              <span class="p3-catchip-foot">
-                <span class="p3-catchip-top-label">Top</span>
-                <span class="p3-catchip-top-tool">{c.top.title}</span>
-                <span class="p3-catchip-top-score tabular-nums">{c.top.score}</span>
-              </span>
-            )}
-          </a>
-        ))}
-      </div>
-    </section>
-
-    <!-- =============== NEWS + MOVERS SPLIT =============== -->
-    <section class="p3-split" aria-label="Latest news and movers" data-reveal>
-      <div class="p3-split-news">
-        <div class="p3-sec-head">
-          <div>
-            <div class="p3-split-eyebrow">News</div>
-            <h2 class="p3-sec-title">Latest updates</h2>
-          </div>
-          <a href="/news/" class="p3-sec-link">All updates →</a>
-        </div>
-        {heroNews && (
-          <a href={`/news/${heroNews.slug}/`} class="p3-newshero">
-            <img src={homepageHeroNewsImage} alt="" loading="lazy" decoding="async" width="1400" height="700" />
-            <div class="p3-newshero-body">
-              <h3 class="p3-newshero-title">{heroNews.title}</h3>
-              <p class="p3-newshero-summary">{heroNews.summary.slice(0, 180)}{heroNews.summary.length > 180 ? '…' : ''}</p>
-              <div class="p3-newshero-brief" aria-label="Story brief">
-                {heroNewsBrief.map((item) => (
-                  <span class="p3-newshero-brief-item">
-                    <span>{item.label}</span>
-                    <strong class="tabular-nums">{item.value}</strong>
-                  </span>
-                ))}
-              </div>
-              <span class="p3-newshero-readlink">Open update <span aria-hidden="true">→</span></span>
-            </div>
-          </a>
-        )}
-        <ul class="p3-newslist">
-          {latestNews.slice(1).map((n, i) => (
-            <li data-reveal style={`--reveal-delay: ${i * 70}ms`}>
-              <a href={`/news/${n.slug}/`} class="p3-newsrow">
-                <span class={`p3-sev p3-sev-${n.severity}`}>{n.severity}</span>
-                <span class="p3-newsrow-title">{n.title}</span>
-                <span class="p3-newsrow-date tabular-nums">{relDate(n.date)}</span>
-              </a>
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      <aside class="p3-split-movers" aria-label="Tools in the news this fortnight">
-        <div class="p3-sec-head">
-          <h2 class="p3-sec-title">Mentioned recently</h2>
-          <span class="p3-sec-sub">News mentions from the last 14 days</span>
-        </div>
-        {movers.length === 0 ? (
-          <div class="p3-movers-empty">No movers yet. Check back tomorrow.</div>
-        ) : (
-          <ol class="p3-movers">
-            {(() => {
-              const maxMentions = movers[0]?.mentions ?? 1;
-              return movers.map((t, i) => (
-                <li data-reveal style={`--reveal-delay: ${i * 65}ms`}>
-                  <a href={`/tools/${t.slug}/`} class={`p3-mover ${i === 0 ? 'p3-mover-lead' : ''}`.trim()}>
-                    <span class="p3-mover-rank tabular-nums">{i + 1}</span>
-                    <ToolLogo slug={t.slug} title={t.title} size={28} className="p3-mover-logo" />
-                    <div class="p3-mover-main">
-                      <div class="p3-mover-title">{t.title}</div>
-                      <div class="p3-mover-bar-wrap" aria-hidden="true">
-                        <span class="p3-mover-bar-fill" style={`width: ${Math.round((t.mentions / maxMentions) * 100)}%;`}></span>
-                      </div>
-                      <div class="p3-mover-sub">
-                        <span class="tabular-nums p3-mover-score">{t.score}</span>
-                        <span class="p3-mover-sub-slash">/10</span>
-                        <span aria-hidden="true" class="p3-mover-dot">·</span>
-                        <span class="tabular-nums p3-mover-mentions">{t.mentions}</span>
-                        <span class="p3-mover-sub-label">mention{t.mentions === 1 ? '' : 's'}</span>
-                      </div>
-                    </div>
-                    <span class="p3-mover-arrow" aria-hidden="true">→</span>
-                  </a>
-                </li>
-              ));
-            })()}
-          </ol>
-        )}
-      </aside>
-    </section>
-
-    <!-- =============== TOP TOOLS GRID =============== -->
-    <section class="p3-grid-sec" aria-label="Top tools" data-reveal>
-      <div class="p3-sec-head">
-          <div>
-            <div class="p3-grid-eyebrow">Top tools</div>
-            <h2 class="p3-sec-title">The top of the catalog</h2>
-          </div>
-          <a href="/tools/" class="p3-sec-link">All {totalTools} tools →</a>
-      </div>
-      <div class="p3-grid">
-        {topGrid.map((t, i) => (
-          <a href={`/tools/${t.slug}/`} class={`p3-tile ${i < 3 ? 'p3-tile-featured' : ''}`.trim()} data-reveal style={`--reveal-delay: ${Math.min(i * 60, 480)}ms`}>
-            <div class="p3-tile-top">
-              <div class="p3-tile-logo-frame">
-                <ToolLogo slug={t.slug} title={t.title} size={40} className="p3-tile-logo" />
-              </div>
-              <div class="p3-tile-score tabular-nums">
-                {t.score}<span class="p3-tile-score-slash">/10</span>
-              </div>
-            </div>
-            <h3 class="p3-tile-title">{t.title}</h3>
-            {t.tagline && <p class="p3-tile-tagline">{t.tagline}</p>}
-            <div class="p3-tile-bars" aria-label="Score breakdown">
-              {sparkbars(t.scores).map(b => (
-                <div class="p3-tile-bar" title={`${b.label} ${b.v}/10`}>
-                  <span class="p3-tile-bar-fill" style={`--h:${b.pct}%;--c:${b.color};`}></span>
-                </div>
-              ))}
-            </div>
-            <div class="p3-tile-foot">
-              <span class="p3-tile-price">{t.priceRange}</span>
-              <span class="p3-tile-cat">{catLabel[t.category] ?? t.category}</span>
-            </div>
-          </a>
-        ))}
-      </div>
-    </section>
-
-    <!-- =============== RECENTLY VIEWED (client-side) =============== -->
-    <RecentlyViewed />
-
-    <!-- =============== COMPARISONS STRIP =============== -->
-    <section class="p3-cmp-sec" aria-label="Featured comparisons" data-reveal>
-      <div class="p3-sec-head">
-          <div>
-            <div class="p3-cmp-eyebrow">Compare</div>
-            <h2 class="p3-sec-title">Head-to-head</h2>
-          </div>
-          <a href="/compare/" class="p3-sec-link">All comparisons →</a>
-      </div>
-      <div class="p3-cmp-strip">
-        {featuredCompare.map((c, i) => {
-          const aWins = c.toolA && c.toolB ? c.toolA.score > c.toolB.score : false;
-          const bWins = c.toolA && c.toolB ? c.toolB!.score > c.toolA!.score : false;
-          return (
-            <a href={`/compare/${c.slug}/`} class="p3-cmp-card" data-reveal style={`--reveal-delay: ${Math.min(i * 55, 330)}ms`}>
-              <div class="p3-cmp-vs">
-                {c.slugs[0] && <ToolLogo slug={c.slugs[0]} title={c.slugs[0]} size={36} className="p3-cmp-logo" />}
-                <span class="p3-cmp-divider" aria-hidden="true">vs</span>
-                {c.slugs[1] && <ToolLogo slug={c.slugs[1]} title={c.slugs[1]} size={36} className="p3-cmp-logo" />}
-              </div>
-              <div class="p3-cmp-body">
-                <div class="p3-cmp-title">{c.title.replace(/,?\s*aipedia\.wiki.*$/, '')}</div>
-                {c.toolA && c.toolB && (
-                  <div class="p3-cmp-scores">
-                    <span class={`p3-cmp-score tabular-nums ${aWins ? 'p3-cmp-score-lead' : ''}`.trim()}>{c.toolA.score}</span>
-                    <span class="p3-cmp-scores-sep" aria-hidden="true">·</span>
-                    <span class={`p3-cmp-score tabular-nums ${bWins ? 'p3-cmp-score-lead' : ''}`.trim()}>{c.toolB.score}</span>
-                  </div>
-                )}
-              </div>
-              <span class="p3-cmp-arrow" aria-hidden="true">→</span>
-            </a>
-          );
-        })}
-      </div>
-    </section>
-
-    <!-- =============== EMAIL CAPTURE (bespoke p3 block) =============== -->
-    <section class="p3-newsletter" aria-labelledby="newsletter-heading" data-reveal>
-      <div class="p3-newsletter-inner">
-        <div class="p3-newsletter-text">
-          <div class="p3-newsletter-eyebrow">
-            <span class="p3-live-dot" aria-hidden="true"></span>
-            Monthly digest · next issue May 1
-          </div>
-          <h2 id="newsletter-heading" class="p3-newsletter-title">
-            What changed across <span class="p3-gradient">{totalTools} AI tools</span> this month.
-          </h2>
-          <p class="p3-newsletter-sub">
-            One email on the 1st. Price moves, model launches, deaths, score changes, and the one thing we would actually click. No fluff, no sponsored picks.
+          <h1>Operate the AI tools catalog like a desktop.</h1>
+          <p>
+            A virtual Linux shell for choosing AI tools: ask in plain English, open focused app windows,
+            compare tradeoffs, and follow recent changes without leaving the desktop.
           </p>
-        </div>
-        <div class="p3-newsletter-form-wrap">
-          <EmailCapture variant="footer" source="homepage" />
-          <div class="p3-newsletter-trust">
-            <span class="p3-newsletter-trust-item">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
-              Unsubscribe anytime
-            </span>
-            <span class="p3-newsletter-trust-item">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
-              No sharing with anyone
-            </span>
-            <span class="p3-newsletter-trust-item">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
-              One email, no drip
-            </span>
+          <div class="os-hero-actions">
+            <a class="os-action-primary" href="/tools/">Open package manager</a>
+            <a class="os-action-secondary" href="/compare/">Compare packages</a>
           </div>
-        </div>
+          <div class="os-shortcuts" aria-label="Desktop shortcuts">
+            {desktopShortcuts.map((shortcut) => (
+              <button type="button" data-focus-window={shortcut.window}>
+                <span>{shortcut.token}</span>
+                <b>{shortcut.label}</b>
+                <small>{shortcut.caption}</small>
+              </button>
+            ))}
+          </div>
+        </section>
+
+        <aside class="os-system-card" aria-label="System status">
+          <div class="os-system-head">
+            <span class="os-led"></span>
+            <span>kernel: wiki-verified</span>
+          </div>
+          <div class="os-meters">
+            <div>
+              <strong>{toolCount}</strong>
+              <span>tools</span>
+            </div>
+            <div>
+              <strong>{comparisonCount}</strong>
+              <span>comparisons</span>
+            </div>
+            <div>
+              <strong>{newsCount}</strong>
+              <span>news items</span>
+            </div>
+          </div>
+          <div class="os-boot-log">
+            <span>[ok] source links mounted</span>
+            <span>[ok] scoring axes online</span>
+            <span>[ok] paid placements disabled</span>
+          </div>
+        </aside>
       </div>
-    </section>
-  </div>
 
-  <script is:inline>
-    // Search bar rotating hint. Cycles through the hint <span> list
-    // every ~3.5s with a fade-y transition. Respects reduced motion
-    // (no rotation, first hint stays) and pauses on hover/focus so
-    // users can read the current hint.
-    (function () {
-      function startRotator() {
-        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-        const rotator = document.querySelector('[data-hint-rotator]');
-        if (!rotator || rotator.dataset.rotatorActive === '1') return;
-        const hints = Array.from(rotator.querySelectorAll('.p3-search-hint'));
-        if (hints.length < 2) return;
-        rotator.dataset.rotatorActive = '1';
+      <section class="os-desktop" aria-label="Virtual desktop windows">
+        <article class="os-window os-window-terminal is-active" data-window="terminal" data-draggable>
+          <div class="os-window-bar">
+            <div class="os-window-controls" aria-hidden="true"><span></span><span></span><span></span></div>
+            <strong>ask-finder</strong>
+            <span>plain English</span>
+          </div>
+          <div class="os-terminal os-decision-console">
+            <div class="os-console-intro">
+              <span>AI tool finder</span>
+              <h2>Tell me what you need. I will route you to the right page.</h2>
+              <p>Use this like a command palette for the wiki: pick a workflow, compare options, then open the source-backed page.</p>
+            </div>
+            <form class="os-terminal-form os-console-form" data-terminal-form>
+              <label for="ask-finder-input">Need</label>
+              <input id="ask-finder-input" name="command" value="I need a coding assistant for a large repo" autocomplete="off" />
+              <button type="submit">Find</button>
+            </form>
+            <div class="os-command-chips" aria-label="Workflow shortcuts">
+              {consoleQuickActions.map((action) => (
+                <button type="button" data-command={action.command}>{action.label}</button>
+              ))}
+            </div>
+            <div class="os-console-body">
+              <div class="os-terminal-output os-answer-card" data-terminal-output aria-live="polite">
+                <small>Suggested path</small>
+                <strong>Start with the coding guide, then compare the top agentic editors.</strong>
+                <p>Good for large repositories, multi-file changes, and agent workflows where context and safety checks matter.</p>
+                <a href="/answers/best-ai-coding-tool-2026/">Open coding guide</a>
+              </div>
+              <div class="os-console-results" aria-label="Top tool shortcuts">
+                <span>Top tools</span>
+                {windowTools.map((tool) => (
+                  <a href={`/tools/${tool.slug}/`}>
+                    <ToolLogo slug={tool.slug} title={tool.title} size={28} className="os-console-logo" />
+                    <b>{tool.title}</b>
+                    <small>{tool.category}</small>
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+        </article>
 
-        let i = 0;
-        let paused = false;
-        const bar = document.getElementById('homepage-search-bar');
-        if (bar) {
-          bar.addEventListener('mouseenter', () => { paused = true; });
-          bar.addEventListener('mouseleave', () => { paused = false; });
-          bar.addEventListener('focus', () => { paused = true; }, true);
-          bar.addEventListener('blur', () => { paused = false; }, true);
-        }
+        <article class="os-window os-window-tools" data-window="tool-finder" data-draggable id="catalog">
+          <div class="os-window-bar">
+            <div class="os-window-controls" aria-hidden="true"><span></span><span></span><span></span></div>
+            <strong>package-manager</strong>
+            <span>{toolCount} packages</span>
+          </div>
+          <div class="os-tool-list">
+            {windowTools.map((tool) => (
+              <a class="os-tool-row" href={`/tools/${tool.slug}/`}>
+                <ToolLogo slug={tool.slug} title={tool.title} size={36} className="os-tool-logo" />
+                <span>
+                  <strong>{tool.title}</strong>
+                  <small>{tool.category} / score {tool.score.toFixed(1)}</small>
+                </span>
+                <em>install</em>
+              </a>
+            ))}
+          </div>
+          <div class="os-window-status">
+            <span>repo://src/content/tools</span>
+            <a href="/tools/">Browse all</a>
+          </div>
+        </article>
 
-        setInterval(() => {
-          if (paused) return;
-          const current = hints[i];
-          const next = hints[(i + 1) % hints.length];
-          if (current) {
-            current.classList.remove('is-on');
-            if (current.classList.contains('p3-search-hint-default')) {
-              current.classList.add('is-off');
-            } else {
-              current.classList.add('is-out');
-            }
-          }
-          if (next) {
-            next.classList.remove('is-out', 'is-off');
-            next.classList.add('is-on');
-          }
-          i = (i + 1) % hints.length;
-        }, 3600);
-      }
+        <article class="os-window os-window-news" data-window="news" data-draggable id="intel">
+          <div class="os-window-bar">
+            <div class="os-window-controls" aria-hidden="true"><span></span><span></span><span></span></div>
+            <strong>news-daemon</strong>
+            <span>live feed</span>
+          </div>
+          <div class="os-news-list">
+            {latestNews.map((news) => (
+              <a class="os-news-row" href={`/news/${news.slug}/`}>
+                <span class:list={['os-severity', `is-${news.severity}`]}>{news.severity}</span>
+                <strong>{news.title}</strong>
+                <small>{news.date}</small>
+              </a>
+            ))}
+          </div>
+          <div class="os-window-status">
+            <span>tail -f /news/latest</span>
+            <a href="/news/">Open feed</a>
+          </div>
+        </article>
 
-      // Platform-aware kbd label: default HTML ships "Ctrl K"; swap to
-      // "⌘ K" on macOS so Mac users see their Command-key glyph.
-      function setHomepageShortcut() {
-        const kbd = document.getElementById('homepage-search-kbd');
-        if (!kbd) return;
-        const ua = (navigator.userAgentData && navigator.userAgentData.platform) || navigator.platform || navigator.userAgent || '';
-        const isMac = /Mac|iPhone|iPad|iPod/i.test(ua);
-        kbd.textContent = isMac ? '⌘ K' : 'Ctrl K';
-      }
-
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', () => { startRotator(); setHomepageShortcut(); });
-      } else {
-        startRotator();
-        setHomepageShortcut();
-      }
-      document.addEventListener('astro:after-swap', () => {
-        // Clear + re-scan on SPA navigation
-        const old = document.querySelector('[data-hint-rotator]');
-        if (old) old.dataset.rotatorActive = '';
-        startRotator();
-        setHomepageShortcut();
-      });
-    })();
-  </script>
-
-  <script is:inline>
-    /* Cover-card rotator + mouse-tilt. Cycles through each category's
-       highest-scored tool every ~5.5s with a moat-signal handoff. Pauses on hover
-       and when the tab is hidden. Respects prefers-reduced-motion by
-       disabling the rotation (static first slide) and the tilt. */
-    (function () {
-      const card = document.getElementById('p3-cover-card');
-      const data = document.getElementById('p3-cover-slides');
-      if (!card || !data) return;
-
-      let slides = [];
-      try { slides = JSON.parse(data.textContent || '[]'); } catch (_) { /* noop */ }
-      if (!slides.length) return;
-
-      const label    = card.querySelector('.p3-cover-label-cat');
-      const logoImg  = card.querySelector('.p3-cover-logo');
-      const title    = card.querySelector('.p3-cover-title');
-      const tagline  = card.querySelector('.p3-cover-tagline');
-      const verdict  = card.querySelector('.p3-cover-verdict');
-      const scoreEl  = card.querySelector('.p3-cover-score-num');
-      const bars     = card.querySelectorAll('.p3-cover-bar');
-      const reasons  = card.querySelectorAll('.p3-cover-reason');
-      const priceEl  = card.querySelector('.p3-cover-price');
-
-      let idx = 0;
-      let busy = false;
-      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-      function wait(ms) {
-        return new Promise((resolve) => setTimeout(resolve, ms));
-      }
-
-      function scoreNumber() {
-        if (!scoreEl) return 0;
-        const raw = scoreEl.textContent || '';
-        const match = raw.match(/[\d.]+/);
-        return match ? Number(match[0]) : 0;
-      }
-
-      function scoreText(n) {
-        return Math.abs(n - Math.round(n)) < 0.04 ? String(Math.round(n)) : n.toFixed(1);
-      }
-
-      function setScore(n) {
-        if (!scoreEl) return;
-        scoreEl.innerHTML = scoreText(n) + '<span class="p3-cover-score-slash">/10</span>';
-      }
-
-      function animateScore(from, to) {
-        if (!scoreEl || prefersReducedMotion) {
-          setScore(to);
-          return;
-        }
-        const duration = 540;
-        const start = performance.now();
-        function tick(now) {
-          const p = Math.min(1, (now - start) / duration);
-          const eased = 1 - Math.pow(1 - p, 3);
-          setScore(from + (to - from) * eased);
-          if (p < 1) requestAnimationFrame(tick);
-        }
-        requestAnimationFrame(tick);
-      }
-
-      function setCategoryColor(slide) {
-        card.style.setProperty('--cover-accent', slide.colorA || '#38bdf8');
-        card.style.setProperty('--cover-accent-2', slide.colorB || '#5eead4');
-      }
-
-      function preloadLogo(slide) {
-        return new Promise((resolve) => {
-          if (!slide.logoUrl) {
-            resolve();
-            return;
-          }
-          const img = new Image();
-          const done = () => resolve();
-          img.onload = done;
-          img.onerror = done;
-          img.src = slide.logoUrl;
-          setTimeout(done, 360);
-        });
-      }
-
-      function apply(slide, instant) {
-        const oldScore = scoreNumber();
-        card.href = '/tools/' + slide.slug + '/';
-        card.dataset.category = slide.categorySlug || '';
-        setCategoryColor(slide);
-        if (label)   label.textContent = slide.category;
-        if (logoImg) {
-          logoImg.src = slide.logoUrl;
-          logoImg.alt = slide.title + ' logo';
-        }
-        if (title)   title.textContent = slide.title;
-        if (tagline) tagline.textContent = slide.tagline;
-        if (verdict) verdict.textContent = slide.verdict;
-        if (instant) setScore(slide.score);
-        else animateScore(oldScore, slide.score);
-        if (priceEl) priceEl.textContent = slide.checkedLabel || 'Last checked today';
-        reasons.forEach((reason, i) => {
-          reason.textContent = slide.reasons && slide.reasons[i] ? slide.reasons[i] : '';
-        });
-
-        bars.forEach((bar, i) => {
-          const b = slide.bars[i];
-          if (!b) return;
-          const fill = bar.querySelector('.p3-cover-bar-fill');
-          const lbl  = bar.querySelector('.p3-cover-bar-label');
-          bar.setAttribute('title', b.label + ' ' + b.v + '/10');
-          if (fill) {
-            if (instant) fill.style.transition = 'none';
-            fill.style.setProperty('--h', b.pct + '%');
-            fill.style.setProperty('--c', b.color);
-            if (instant) {
-              /* force reflow to flush the transition:none before restoring */
-              void fill.offsetHeight;
-              fill.style.transition = '';
-            }
-          }
-          if (lbl) lbl.textContent = b.label;
-        });
-      }
-
-      async function next() {
-        if (busy) return;
-        idx = (idx + 1) % slides.length;
-        const slide = slides[idx];
-        busy = true;
-        card.style.setProperty('--cover-next-accent', slide.colorB || '#5eead4');
-        card.classList.add('p3-cover-handoff', 'p3-cover-phase-out');
-        await Promise.race([preloadLogo(slide), wait(360)]);
-        await wait(190);
-        apply(slide, false);
-        card.classList.remove('p3-cover-phase-out');
-        card.classList.add('p3-cover-phase-in');
-        await wait(760);
-        card.classList.remove('p3-cover-phase-in', 'p3-cover-handoff');
-        busy = false;
-      }
-
-      /* Start on the top-scored slide and keep it stable. The card used
-         to auto-rotate through category leaders, but that made "current
-         pick" feel inconsistent across visits and viewport checks. */
-      apply(slides[0], true);
-
-      /* Mouse-tilt: subtle 3D perspective rotation that follows the
-         cursor. Max ~6deg on each axis. Resets on mouseleave. Works
-         with the existing hover translateY lift (composed in CSS). */
-      if (prefersReducedMotion) return;
-      card.addEventListener('mousemove', (e) => {
-        const rect = card.getBoundingClientRect();
-        const x = (e.clientX - rect.left) / rect.width - 0.5;   /* -0.5 .. 0.5 */
-        const y = (e.clientY - rect.top) / rect.height - 0.5;
-        const tiltY = x * 6;     /* rotateY: left/right */
-        const tiltX = -y * 6;    /* rotateX: up/down (inverted) */
-        card.style.setProperty('--tilt-x', tiltX.toFixed(2) + 'deg');
-        card.style.setProperty('--tilt-y', tiltY.toFixed(2) + 'deg');
-        card.classList.add('p3-cover-tilting');
-      });
-      card.addEventListener('mouseleave', () => {
-        card.style.setProperty('--tilt-x', '0deg');
-        card.style.setProperty('--tilt-y', '0deg');
-        card.classList.remove('p3-cover-tilting');
-      });
-    })();
-  </script>
+        <article class="os-window os-window-monitor" data-window="monitor" data-draggable>
+          <div class="os-window-bar">
+            <div class="os-window-controls" aria-hidden="true"><span></span><span></span><span></span></div>
+            <strong>trust-monitor</strong>
+            <span>4 axes</span>
+          </div>
+          <div class="os-axis-grid">
+            <span><b>Utility</b><i style="--w: 94%"></i></span>
+            <span><b>Value</b><i style="--w: 82%"></i></span>
+            <span><b>Moat</b><i style="--w: 76%"></i></span>
+            <span><b>Longevity</b><i style="--w: 88%"></i></span>
+          </div>
+          <div class="os-window-status">
+            <span>sources required</span>
+            <a href="/about/scoring/">Scoring model</a>
+          </div>
+        </article>
+      </section>
+    </div>
+  </section>
 
   <style>
-    body:has(main .p3-home-premium) {
+    :global(body:has(.linux-demo)) {
+      background: #03060b;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+    }
+
+    :global(body:has(.linux-demo) #site-nav),
+    :global(body:has(.linux-demo) .nav-spacer),
+    :global(body:has(.linux-demo) footer),
+    :global(body:has(.linux-demo) #cookie-consent),
+    :global(body:has(.linux-demo) #bg-gradient),
+    :global(body:has(.linux-demo) #read-progress) {
+      display: none !important;
+    }
+
+    :global(body:has(.linux-demo) main#main-content) {
+      max-width: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .linux-demo {
+      --os-bg: #04070d;
+      --os-panel: rgba(8, 14, 24, 0.84);
+      --os-panel-strong: rgba(13, 24, 39, 0.94);
+      --os-glass: rgba(10, 20, 33, 0.72);
+      --os-line: rgba(148, 163, 184, 0.18);
+      --os-line-bright: rgba(103, 232, 249, 0.34);
+      --os-text: #f8fafc;
+      --os-muted: #a7b3c5;
+      --os-dim: #64748b;
+      --os-cyan: #22d3ee;
+      --os-teal: #5eead4;
+      --os-blue: #60a5fa;
+      --os-amber: #f59e0b;
+      --os-red: #fb7185;
+      position: relative;
+      min-height: 100vh;
+      width: 100vw;
+      margin-left: calc(50% - 50vw);
+      color: var(--os-text);
+      background: var(--os-bg);
+      isolation: isolate;
+      overflow: hidden;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      font-smooth: always;
+      text-rendering: geometricPrecision;
+    }
+
+    .linux-demo.is-cursor-ready,
+    .linux-demo.is-cursor-ready a,
+    .linux-demo.is-cursor-ready button,
+    .linux-demo.is-cursor-ready input {
+      cursor: none;
+    }
+
+    .os-wallpaper {
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      overflow: hidden;
       background:
-        radial-gradient(ellipse 88% 42% at 50% -14%, rgba(34, 211, 238, 0.085) 0%, transparent 62%),
-        radial-gradient(ellipse 52% 32% at 92% 8%, rgba(56, 189, 248, 0.075) 0%, transparent 70%),
-        linear-gradient(180deg, #05060d 0%, #070811 48%, #05060d 100%);
+        linear-gradient(118deg, rgba(34, 211, 238, 0.16) 0 1px, transparent 1px 37%),
+        linear-gradient(162deg, transparent 0 46%, rgba(245, 158, 11, 0.06) 46% 47%, transparent 47%),
+        linear-gradient(145deg, #05060b 0%, #07111c 46%, #02050a 100%);
     }
 
-    .p3-home-premium {
-      --p3-ink-0: #05060d;
-      --p3-ink-1: #090b14;
-      --p3-ink-2: #0e1320;
-      --p3-surface: rgba(13, 18, 31, 0.78);
-      --p3-surface-2: rgba(18, 24, 39, 0.78);
-      --p3-surface-soft: rgba(248, 250, 252, 0.035);
-      --p3-border: rgba(226, 232, 240, 0.10);
-      --p3-border-strong: rgba(226, 232, 240, 0.16);
-      --p3-fg: #f8fafc;
-      --p3-muted: rgba(203, 213, 225, 0.72);
-      --p3-subtle: rgba(148, 163, 184, 0.88);
-      --p3-action: #22d3ee;
-      --p3-action-strong: #67e8f9;
-      --p3-action-rgb: 34, 211, 238;
-      --p3-intel: #38bdf8;
-      --p3-intel-soft: #7dd3fc;
-      --p3-intel-rgb: 56, 189, 248;
-      --p3-verified: #5eead4;
-      --p3-verified-strong: #99f6e4;
-      --p3-verified-rgb: 94, 234, 212;
-      --p3-score-high: #10b981;
-      --p3-score-good: #3b82f6;
-      --p3-score-watch: #f59e0b;
-      --p3-score-low: #ef4444;
-      --p3-brand-glow: rgba(56, 189, 248, 0.20);
-      --p3-action-glow: rgba(34, 211, 238, 0.18);
-      --p3-panel-shadow: 0 28px 80px -54px rgba(0, 0, 0, 0.88);
-      --p3-panel-shadow-hover: 0 34px 90px -52px rgba(0, 0, 0, 0.94);
-      --p3-line: var(--p3-border);
-      --p3-line-strong: var(--p3-border-strong);
-      --p3-accent: var(--p3-action);
-      --p3-accent-text: var(--p3-action-strong);
-      --p3-surface-hover: var(--p3-surface-2);
-      color-scheme: dark;
+    .os-grid {
+      position: absolute;
+      inset: 0;
+      opacity: 0.42;
+      background-image:
+        linear-gradient(rgba(148, 163, 184, 0.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(148, 163, 184, 0.07) 1px, transparent 1px);
+      background-size: 42px 42px;
+      mask-image: linear-gradient(to bottom, black 0%, black 68%, transparent 100%);
     }
 
-    .p3-home-premium .p3-gradient {
-      background: linear-gradient(100deg, var(--p3-action) 0%, var(--p3-intel) 58%, var(--p3-verified) 100%);
-      background-clip: text;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .p3-home-premium .p3-live-dot {
-      background: var(--p3-verified);
-      box-shadow: 0 0 0 0 rgba(var(--p3-verified-rgb), 0.50);
-    }
-
-    .p3-home-premium .p3-trust-mark {
-      background: rgba(var(--p3-verified-rgb), 0.12);
-      border-color: rgba(var(--p3-verified-rgb), 0.28);
-      color: var(--p3-verified);
-    }
-
-    .p3-home-premium .p3-search-btn::before {
-      background: linear-gradient(
-        100deg,
-        rgba(var(--p3-action-rgb), 0.36),
-        rgba(var(--p3-intel-rgb), 0.32) 58%,
-        rgba(var(--p3-verified-rgb), 0.24)
+    .os-scanline {
+      position: absolute;
+      inset: 0;
+      opacity: 0.18;
+      background: repeating-linear-gradient(
+        to bottom,
+        rgba(248, 250, 252, 0.07) 0,
+        rgba(248, 250, 252, 0.07) 1px,
+        transparent 1px,
+        transparent 7px
       );
+      mix-blend-mode: screen;
+      pointer-events: none;
     }
 
-    .p3-home-premium .p3-search-btn-glow {
-      background:
-        radial-gradient(ellipse 70% 140% at 50% 50%, rgba(var(--p3-intel-rgb), 0.18), transparent 60%),
-        radial-gradient(ellipse 70% 140% at 28% 50%, rgba(var(--p3-action-rgb), 0.16), transparent 62%);
+    .os-light-shelf {
+      position: absolute;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(94, 234, 212, 0.34), transparent);
+      box-shadow: 0 0 36px rgba(34, 211, 238, 0.18);
+      transform: rotate(-17deg);
+      transform-origin: center;
     }
 
-    .p3-home-premium .p3-search-btn:focus-visible {
-      box-shadow: 0 0 0 4px rgba(var(--p3-action-rgb), 0.18);
+    .os-light-shelf-one {
+      width: 72vw;
+      left: -12vw;
+      top: 180px;
     }
 
-    .p3-home-premium .p3-jump::before {
-      background: radial-gradient(ellipse 120% 120% at 100% 0%, rgba(var(--p3-intel-rgb), 0.11), transparent 65%);
+    .os-light-shelf-two {
+      width: 62vw;
+      right: -10vw;
+      bottom: 80px;
     }
 
-    .p3-home-premium .p3-jump:hover {
-      border-color: rgba(var(--p3-action-rgb), 0.34);
-      box-shadow: 0 10px 24px -16px rgba(var(--p3-intel-rgb), 0.24);
+    .os-cursor {
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 1000;
+      pointer-events: none;
+      transform: translate3d(-120px, -120px, 0);
+      transition: opacity 120ms ease;
     }
 
-    .p3-home-premium .p3-jump:focus-visible {
-      outline-color: rgba(var(--p3-action-rgb), 0.5);
+    .os-cursor-core {
+      display: block;
+      width: 18px;
+      height: 18px;
+      clip-path: polygon(0 0, 0 100%, 36% 72%, 55% 100%, 72% 91%, 53% 62%, 100% 62%);
+      background: linear-gradient(135deg, #ffffff, var(--os-cyan));
+      filter: drop-shadow(0 10px 20px rgba(34, 211, 238, 0.45));
     }
 
-    .p3-home-premium .p3-jump:hover .p3-jump-icon {
-      background: rgba(var(--p3-action-rgb), 0.12);
-      border-color: rgba(var(--p3-action-rgb), 0.28);
-    }
-
-    .p3-home-premium .p3-statbar {
-      background:
-        linear-gradient(90deg, rgba(var(--p3-intel-rgb), 0.045), transparent 36%),
-        var(--p3-surface);
-      box-shadow: var(--p3-panel-shadow);
-    }
-
-    .p3-home-premium .p3-catchip::before {
-      background: radial-gradient(ellipse 120% 100% at 100% 100%, rgba(var(--p3-intel-rgb), 0.09), transparent 60%);
-    }
-
-    .p3-home-premium .p3-catchip::after {
-      background: linear-gradient(90deg, var(--p3-action) 0%, var(--p3-intel) 55%, var(--p3-verified) 100%);
-    }
-
-    .p3-home-premium .p3-catchip:hover,
-    .p3-home-premium .p3-newshero:hover,
-    .p3-home-premium .p3-mover:hover {
-      border-color: rgba(var(--p3-action-rgb), 0.34);
-    }
-
-    .p3-home-premium .p3-catchip:hover,
-    .p3-home-premium .p3-mover:hover {
-      box-shadow: 0 14px 32px -20px rgba(var(--p3-intel-rgb), 0.28);
-    }
-
-    .p3-home-premium .p3-mover::before,
-    .p3-home-premium .p3-mover-lead .p3-mover-rank {
-      background-image: linear-gradient(180deg, var(--p3-action), var(--p3-intel));
-    }
-
-    .p3-home-premium .p3-mover-bar-fill {
-      background: linear-gradient(90deg, var(--p3-action), var(--p3-intel));
-    }
-
-    @keyframes p3-pulse {
-      0%   { box-shadow: 0 0 0 0 rgba(var(--p3-verified-rgb), 0.50); }
-      70%  { box-shadow: 0 0 0 8px rgba(var(--p3-verified-rgb), 0); }
-      100% { box-shadow: 0 0 0 0 rgba(var(--p3-verified-rgb), 0); }
-    }
-
-    .p3-home-premium .p3-premium-cover {
-      padding: 28px;
-      border-radius: 16px;
-      border-color: color-mix(in srgb, var(--cover-accent-2) 28%, rgba(255,255,255,0.08));
-      background:
-        linear-gradient(135deg, color-mix(in srgb, var(--cover-accent-2) 13%, transparent), transparent 38%),
-        radial-gradient(ellipse 90% 70% at 100% 0%, color-mix(in srgb, var(--cover-accent) 18%, transparent), transparent 58%),
-        linear-gradient(180deg, rgba(248, 250, 252, 0.062), rgba(248, 250, 252, 0.016));
-      box-shadow:
-        var(--p3-panel-shadow),
-        0 14px 40px -28px rgba(var(--p3-action-rgb), 0.20),
-        inset 0 1px 0 rgba(248, 250, 252, 0.08);
-    }
-    .p3-home-premium .p3-premium-cover:hover {
-      border-color: color-mix(in srgb, var(--cover-accent-2) 46%, rgba(255,255,255,0.12));
-      box-shadow:
-        var(--p3-panel-shadow-hover),
-        0 20px 60px -34px rgba(var(--p3-action-rgb), 0.28),
-        inset 0 1px 0 rgba(248, 250, 252, 0.1),
-        inset 0 1px 0 rgba(248, 250, 252, 0.10);
-    }
-    .p3-home-premium .p3-cover-label {
-      margin-bottom: 20px;
-      color: var(--p3-verified-strong);
-    }
-    .p3-home-premium .p3-cover-badge {
-      border-color: rgba(var(--p3-action-rgb), 0.34);
-      background: rgba(var(--p3-action-rgb), 0.13);
-      color: var(--p3-action-strong);
-    }
-    .p3-home-premium .p3-cover-title-row {
+    .os-panel {
+      position: fixed;
+      inset: 14px 18px auto;
+      z-index: 50;
+      display: flex;
       align-items: center;
-      margin-bottom: 18px;
+      justify-content: space-between;
+      gap: 14px;
+      min-height: 52px;
+      padding: 8px 10px;
+      border: 1px solid var(--os-line);
+      border-radius: 18px;
+      background: rgba(5, 10, 18, 0.76);
+      box-shadow: 0 24px 70px rgba(0, 0, 0, 0.42);
+      backdrop-filter: blur(24px);
     }
-    .p3-home-premium .p3-cover-logo-frame {
-      background: rgba(248, 250, 252, 0.08);
-      border-color: var(--p3-border-strong);
-      box-shadow: 0 16px 40px -24px rgba(0, 0, 0, 0.9);
+
+    .os-panel-left,
+    .os-panel-right,
+    .os-workspaces,
+    .os-hero-actions,
+    .os-window-bar,
+    .os-window-controls,
+    .os-meters,
+    .os-dock {
+      display: flex;
+      align-items: center;
     }
-    .p3-home-premium .p3-cover-title {
-      font-size: clamp(30px, 4vw, 44px);
+
+    .os-panel-left,
+    .os-panel-right {
+      gap: 10px;
+      min-width: 0;
+    }
+
+    .os-menu-button,
+    .os-panel-chip,
+    .os-workspaces a,
+    .os-dock button,
+    .os-terminal-form button,
+    .os-shortcuts button,
+    .os-command-chips button {
+      border: 1px solid var(--os-line);
+      color: var(--os-text);
+      background: rgba(15, 23, 42, 0.58);
+      text-decoration: none;
+    }
+
+    .linux-demo :is(a, button, input):focus-visible {
+      outline: 2px solid rgba(94, 234, 212, 0.82);
+      outline-offset: 3px;
+    }
+
+    .os-menu-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      min-height: 36px;
+      padding: 6px 12px 6px 7px;
+      border-radius: 12px;
       font-weight: 800;
-      line-height: 0.98;
       letter-spacing: 0;
     }
-    .p3-home-premium .p3-cover-tagline {
-      max-width: 34rem;
-      margin-top: 8px;
-      font-size: 14px;
-      color: var(--p3-muted);
+
+    .os-menu-button img {
+      border-radius: 8px;
+      box-shadow: 0 0 24px rgba(34, 211, 238, 0.24);
     }
-    .p3-home-premium .p3-cover-verdict {
-      margin: 0 0 20px;
-      padding: 15px 16px;
-      border: 1px solid var(--p3-border);
-      border-radius: 10px;
-      background: rgba(5, 6, 13, 0.52);
-      color: rgba(248, 250, 252, 0.93);
-      font-size: 15px;
-      font-weight: 650;
-      line-height: 1.45;
+
+    .os-workspaces {
+      gap: 4px;
     }
-    .p3-home-premium .p3-cover-score {
-      align-items: stretch;
-      padding: 18px 0;
-      gap: 18px;
-      margin-bottom: 14px;
+
+    .os-workspaces a,
+    .os-panel-chip {
+      min-height: 34px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      color: var(--os-muted);
     }
-    .p3-home-premium .p3-cover-score-main {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      min-width: 118px;
+
+    .os-workspaces a.is-active,
+    .os-panel-chip:hover,
+    .os-menu-button:hover {
+      border-color: var(--os-line-bright);
+      color: var(--os-teal);
+      background: rgba(8, 47, 73, 0.42);
     }
-    .p3-home-premium .p3-cover-score-label {
-      margin-bottom: 7px;
-      color: var(--p3-subtle);
-      font-size: 10px;
+
+    .os-clock {
+      min-width: 72px;
+      padding: 8px 10px;
+      border: 1px solid rgba(94, 234, 212, 0.18);
+      border-radius: 12px;
+      color: var(--os-teal);
+      background: rgba(2, 6, 12, 0.5);
+      font-family: "JetBrains Mono", ui-monospace, monospace;
+      font-size: 12px;
+      text-align: center;
+    }
+
+    .os-menu {
+      position: absolute;
+      left: 10px;
+      top: 60px;
+      width: min(320px, calc(100vw - 36px));
+      padding: 10px;
+      border: 1px solid var(--os-line-bright);
+      border-radius: 16px;
+      background: rgba(4, 10, 18, 0.96);
+      box-shadow: 0 30px 90px rgba(0, 0, 0, 0.6);
+      transform: translateY(-8px);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 150ms ease, transform 150ms ease;
+    }
+
+    .os-menu.is-open {
+      transform: translateY(0);
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .os-menu-title {
+      padding: 8px 10px 10px;
+      color: var(--os-dim);
+      font-size: 11px;
       font-weight: 800;
-      letter-spacing: 0.14em;
       text-transform: uppercase;
+      letter-spacing: 0.12em;
     }
-    .p3-home-premium .p3-cover-bars {
-      align-items: end;
+
+    .os-launcher-search {
+      display: grid;
+      gap: 6px;
+      padding: 0 4px 10px;
+    }
+
+    .os-launcher-search span {
+      color: var(--os-dim);
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .os-launcher-search input {
+      width: 100%;
+      height: 38px;
+      border: 1px solid rgba(94, 234, 212, 0.22);
+      border-radius: 11px;
+      padding: 0 12px;
+      background: rgba(2, 6, 12, 0.72);
+      color: var(--os-text);
+      font: inherit;
+    }
+
+    .os-launcher-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       gap: 8px;
+      margin-bottom: 8px;
     }
-    .p3-home-premium .p3-cover-bar-col {
-      height: 48px;
-      border-radius: 5px;
-      background: rgba(248, 250, 252, 0.055);
+
+    .os-menu button,
+    .os-menu a {
+      display: block;
+      width: 100%;
+      padding: 11px 12px;
+      border: 0;
+      border-radius: 10px;
+      background: transparent;
+      color: var(--os-muted);
+      text-align: left;
+      text-decoration: none;
     }
-    .p3-home-premium .p3-cover-reasons {
+
+    .os-launcher-grid button {
+      display: grid;
+      min-height: 82px;
+      align-content: center;
+      justify-items: start;
+      gap: 6px;
+      border: 1px solid var(--os-line);
+      background: rgba(15, 23, 42, 0.44);
+    }
+
+    .os-launcher-grid span,
+    .os-shortcuts span {
+      display: grid;
+      place-items: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 9px;
+      background: rgba(34, 211, 238, 0.12);
+      color: var(--os-teal);
+      font-family: "JetBrains Mono", ui-monospace, monospace;
+      font-size: 11px;
+      font-weight: 900;
+    }
+
+    .os-launcher-grid b {
+      color: var(--os-text);
+      font-size: 12px;
+    }
+
+    .os-menu button:hover,
+    .os-menu a:hover {
+      background: rgba(34, 211, 238, 0.10);
+      color: var(--os-text);
+    }
+
+    .os-stage {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(0, 0.82fr) minmax(420px, 1.18fr);
+      gap: 28px;
+      min-height: 100vh;
+      padding: 112px 34px 96px 126px;
+    }
+
+    .os-left-rail {
+      align-self: start;
+      min-width: 0;
+      padding-top: clamp(18px, 2.6vh, 34px);
+    }
+
+    .os-hero {
+      max-width: 760px;
+      padding: 18px 0 24px;
+    }
+
+    .os-prompt {
+      display: inline-flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 26px;
+      padding: 10px 14px;
+      border: 1px solid var(--os-line);
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.62);
+      color: var(--os-muted);
+      font-family: "JetBrains Mono", ui-monospace, monospace;
+      font-size: 13px;
+    }
+
+    .os-prompt-user { color: var(--os-teal); }
+    .os-prompt-path { color: var(--os-blue); }
+    .os-prompt-command { color: var(--os-text); }
+
+    .os-hero h1 {
+      max-width: 780px;
+      margin: 0;
+      color: #fff;
+      font-size: 72px;
+      font-weight: 520;
+      line-height: 0.96;
+      letter-spacing: 0;
+      text-wrap: balance;
+    }
+
+    .os-hero p {
+      max-width: 660px;
+      margin: 24px 0 0;
+      color: var(--os-muted);
+      font-size: 18px;
+      line-height: 1.65;
+    }
+
+    .os-hero-actions {
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .os-shortcuts {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+      max-width: 620px;
+      margin-top: 22px;
+    }
+
+    .os-shortcuts button {
+      display: grid;
+      justify-items: start;
+      gap: 6px;
+      min-height: 96px;
+      padding: 12px;
+      border-radius: 16px;
+      background: rgba(8, 15, 27, 0.66);
+    }
+
+    .os-shortcuts button:hover {
+      border-color: var(--os-line-bright);
+      background: rgba(8, 47, 73, 0.34);
+    }
+
+    .os-shortcuts b {
+      overflow-wrap: anywhere;
+      font-size: 12px;
+    }
+
+    .os-shortcuts small {
+      color: var(--os-muted);
+      font-size: 11px;
+    }
+
+    .os-action-primary,
+    .os-action-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 18px;
+      border-radius: 12px;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .os-action-primary {
+      color: #031018;
+      background: linear-gradient(135deg, var(--os-teal), var(--os-cyan));
+      box-shadow: 0 18px 50px rgba(34, 211, 238, 0.24);
+    }
+
+    .os-action-secondary {
+      border: 1px solid var(--os-line);
+      color: var(--os-text);
+      background: rgba(15, 23, 42, 0.58);
+    }
+
+    .os-system-card,
+    .os-window {
+      border: 1px solid var(--os-line);
+      background:
+        linear-gradient(180deg, rgba(15, 23, 42, 0.88), rgba(4, 9, 16, 0.9)),
+        rgba(4, 9, 16, 0.84);
+      box-shadow: 0 34px 100px rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(22px);
+    }
+
+    .os-system-card {
+      width: min(520px, 100%);
+      margin-top: 18px;
+      padding: 18px;
+      border-radius: 22px;
+    }
+
+    .os-system-head {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--os-teal);
+      font-family: "JetBrains Mono", ui-monospace, monospace;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .os-led {
+      width: 9px;
+      height: 9px;
+      border-radius: 999px;
+      background: var(--os-teal);
+      box-shadow: 0 0 24px var(--os-teal);
+    }
+
+    .os-meters {
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .os-meters div {
+      flex: 1;
+      min-width: 0;
+      padding: 14px;
+      border: 1px solid var(--os-line);
+      border-radius: 16px;
+      background: rgba(2, 6, 12, 0.44);
+    }
+
+    .os-meters strong {
+      display: block;
+      font-size: 28px;
+      line-height: 1;
+    }
+
+    .os-meters span,
+    .os-boot-log span {
+      display: block;
+      margin-top: 7px;
+      color: var(--os-muted);
+      font-size: 12px;
+    }
+
+    .os-boot-log {
+      display: grid;
+      gap: 6px;
+      margin-top: 14px;
+      font-family: "JetBrains Mono", ui-monospace, monospace;
+    }
+
+    .os-desktop {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(280px, 0.92fr);
+      grid-auto-rows: min-content;
+      gap: 18px;
+      align-self: center;
+      min-width: 0;
+      perspective: 1800px;
+    }
+
+    .os-window {
+      position: relative;
+      z-index: 1;
+      min-width: 0;
+      border-radius: 18px;
+      overflow: hidden;
+      transform: translate(var(--tx, 0), var(--ty, 0));
+      transition: border-color 160ms ease, box-shadow 160ms ease, transform 80ms linear;
+    }
+
+    .os-window.is-active {
+      z-index: 10;
+      border-color: var(--os-line-bright);
+      box-shadow: 0 40px 110px rgba(0, 0, 0, 0.54), 0 0 0 1px rgba(34, 211, 238, 0.08) inset;
+    }
+
+    .os-window-bar {
+      justify-content: space-between;
+      gap: 12px;
+      min-height: 46px;
+      padding: 0 14px;
+      border-bottom: 1px solid var(--os-line);
+      background: rgba(2, 6, 12, 0.54);
+      color: var(--os-muted);
+      user-select: none;
+    }
+
+    .os-window-bar strong {
+      color: var(--os-text);
+      font-size: 13px;
+    }
+
+    .os-window-bar span:last-child {
+      font-family: "JetBrains Mono", ui-monospace, monospace;
+      font-size: 11px;
+    }
+
+    .os-window-controls {
+      gap: 6px;
+    }
+
+    .os-window-controls span {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--os-red);
+    }
+
+    .os-window-controls span:nth-child(2) { background: var(--os-amber); }
+    .os-window-controls span:nth-child(3) { background: var(--os-teal); }
+
+    .os-window-terminal {
+      grid-column: 1 / -1;
+      min-height: 320px;
+    }
+
+    .os-terminal {
+      padding: 18px;
+      background:
+        linear-gradient(rgba(94, 234, 212, 0.035) 50%, transparent 50%),
+        rgba(1, 6, 12, 0.7);
+      background-size: 100% 8px;
+      font-family: "JetBrains Mono", ui-monospace, monospace;
+    }
+
+    .os-decision-console {
+      display: grid;
+      gap: 14px;
+      font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+    }
+
+    .os-console-intro {
+      display: grid;
+      gap: 6px;
+    }
+
+    .os-console-intro span,
+    .os-answer-card small,
+    .os-console-results > span {
+      color: var(--os-teal);
+      font-size: 11px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .os-console-intro h2 {
+      max-width: 720px;
+      margin: 0;
+      color: var(--os-text);
+      font-size: 28px;
+      line-height: 1.12;
+      letter-spacing: 0;
+    }
+
+    .os-console-intro p {
+      max-width: 760px;
+      margin: 0;
+      color: var(--os-muted);
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .os-terminal p {
+      margin: 0 0 9px;
+      color: #d8f7ff;
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .os-terminal p span {
+      color: var(--os-teal);
+    }
+
+    .os-terminal-output {
+      margin-top: 16px;
+      padding-top: 14px;
+      border-top: 1px dashed rgba(148, 163, 184, 0.24);
+    }
+
+    .os-console-body {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(250px, 0.56fr);
+      gap: 12px;
+      align-items: stretch;
+    }
+
+    .os-answer-card,
+    .os-console-results {
+      border: 1px solid var(--os-line);
+      border-radius: 14px;
+      background: rgba(15, 23, 42, 0.46);
+    }
+
+    .os-answer-card {
+      display: grid;
+      gap: 8px;
+      margin-top: 0;
+      padding: 14px;
+      border-top-style: solid;
+    }
+
+    .os-answer-card strong {
+      color: var(--os-text);
+      font-size: 17px;
+      line-height: 1.35;
+    }
+
+    .os-answer-card p {
+      margin: 0;
+      color: var(--os-muted);
+      font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .os-answer-card a {
+      justify-self: start;
+      color: #031018;
+      border-radius: 10px;
+      background: var(--os-teal);
+      padding: 8px 11px;
+      font-size: 12px;
+      font-weight: 900;
+      text-decoration: none;
+    }
+
+    .os-terminal-output p {
+      color: var(--os-muted);
+    }
+
+    .os-terminal-form {
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr) auto;
+      gap: 8px;
+      align-items: center;
+      margin-top: 16px;
+    }
+
+    .os-console-form {
+      margin-top: 0;
+    }
+
+    .os-terminal-form label {
+      color: var(--os-dim);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .os-terminal-form input {
+      min-width: 0;
+      height: 38px;
+      border: 1px solid rgba(94, 234, 212, 0.22);
+      border-radius: 10px;
+      padding: 0 12px;
+      background: rgba(2, 6, 12, 0.78);
+      color: var(--os-text);
+      font: inherit;
+    }
+
+    .os-terminal-form button {
+      height: 38px;
+      border-radius: 10px;
+      padding: 0 14px;
+      color: #031018;
+      background: var(--os-teal);
+      font-weight: 800;
+    }
+
+    .os-command-chips {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
-      margin-bottom: 18px;
+      margin-top: 12px;
     }
-    .p3-home-premium .p3-cover-reason {
+
+    .os-command-chips button {
       min-height: 30px;
-      display: inline-flex;
-      align-items: center;
-      padding: 6px 10px;
-      border: 1px solid var(--p3-border);
+      padding: 0 10px;
       border-radius: 999px;
-      background: rgba(248, 250, 252, 0.045);
-      color: rgba(226, 232, 240, 0.82);
-      font-size: 12px;
-      font-weight: 700;
-    }
-    .p3-home-premium .p3-cover-foot {
-      padding-top: 14px;
-      border-top: 1px solid var(--p3-border);
-    }
-    .p3-home-premium .p3-cover-price {
-      color: var(--p3-subtle);
-      font-size: 12px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-    .p3-home-premium .p3-signal-desk {
-      margin: 12px 0 66px;
-      padding: 22px;
-      border: 1px solid var(--p3-border);
-      border-radius: 16px;
-      background:
-        linear-gradient(135deg, rgba(var(--p3-verified-rgb), 0.07), transparent 34%),
-        linear-gradient(180deg, rgba(248, 250, 252, 0.042), rgba(248, 250, 252, 0.016));
-      box-shadow:
-        var(--p3-panel-shadow),
-        inset 0 1px 0 rgba(248, 250, 252, 0.06);
-    }
-    .p3-home-premium .p3-signal-head {
-      display: flex;
-      align-items: end;
-      justify-content: space-between;
-      gap: 18px;
-      margin-bottom: 18px;
-    }
-    .p3-home-premium .p3-signal-eyebrow {
-      margin-bottom: 6px;
-      color: var(--p3-verified);
+      color: var(--os-muted);
+      font-family: "JetBrains Mono", ui-monospace, monospace;
       font-size: 11px;
-      font-weight: 800;
-      letter-spacing: 0.13em;
-      text-transform: uppercase;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
     }
-    .p3-home-premium .p3-signal-eyebrow::before {
-      content: '';
-      display: inline-block;
-      width: 18px;
-      height: 2px;
-      border-radius: 2px;
-      background: currentColor;
-      opacity: 0.5;
-      flex: none;
+
+    .os-command-chips button:hover {
+      border-color: var(--os-line-bright);
+      color: var(--os-teal);
     }
-    .p3-home-premium .p3-signal-title {
-      margin: 0;
-      color: var(--p3-fg);
-      font-size: clamp(23px, 3vw, 34px);
-      font-weight: 800;
-      line-height: 1.05;
-      letter-spacing: 0;
-    }
-    .p3-home-premium .p3-signal-grid {
+
+    .os-console-results {
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 12px;
-    }
-    .p3-home-premium .p3-signal-card {
-      min-height: 130px;
-      display: flex;
-      flex-direction: column;
+      gap: 8px;
       padding: 12px;
-      border: 1px solid var(--p3-border);
-      border-radius: 12px;
-      background: rgba(5, 6, 13, 0.46);
-      text-decoration: none;
-      box-shadow: 0 18px 40px -34px rgba(0, 0, 0, 0.78);
-      transition: transform 180ms ease, border-color 180ms ease, background 180ms ease, box-shadow 180ms ease;
     }
-    .p3-home-premium .p3-signal-card:hover {
-      transform: translateY(-2px);
-      border-color: rgba(var(--p3-action-rgb), 0.36);
-      background: var(--p3-surface-2);
-      box-shadow:
-        0 24px 54px -36px rgba(0, 0, 0, 0.9),
-        0 14px 32px -26px rgba(var(--p3-action-rgb), 0.28);
-    }
-    .p3-home-premium .p3-signal-card-label {
-      margin-bottom: 10px;
-      color: var(--p3-action);
-      font-size: 10px;
-      font-weight: 800;
-      letter-spacing: 0.10em;
-      text-transform: uppercase;
-    }
-    .p3-home-premium .p3-signal-card-title {
-      color: rgba(248, 250, 252, 0.96);
-      font-size: 15px;
-      font-weight: 700;
-      line-height: 1.14;
-    }
-    .p3-home-premium .p3-signal-card-body {
-      margin-top: 6px;
-      color: var(--p3-muted);
-      font-size: 12px;
-      line-height: 1.4;
-    }
-    .p3-home-premium .p3-signal-card-foot {
-      display: flex;
+
+    .os-console-results a {
+      display: grid;
+      grid-template-columns: 28px minmax(0, 1fr);
+      gap: 2px 9px;
       align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      margin-top: auto;
-      padding-top: 16px;
+      padding: 8px;
+      border: 1px solid rgba(148, 163, 184, 0.14);
+      border-radius: 12px;
+      color: var(--os-text);
+      background: rgba(2, 6, 12, 0.34);
+      text-decoration: none;
     }
-    .p3-home-premium .p3-signal-card-metric {
-      color: var(--p3-verified-strong);
+
+    .os-console-results a:hover {
+      border-color: var(--os-line-bright);
+      background: rgba(8, 47, 73, 0.28);
+    }
+
+    .os-console-results :global(.os-console-logo) {
+      grid-row: 1 / 3;
+      border-radius: 8px;
+      background: #fff;
+    }
+
+    .os-console-results b {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
       font-size: 13px;
-      font-weight: 800;
     }
-    .p3-home-premium .p3-signal-card-arrow {
-      color: var(--p3-action);
-      font-weight: 800;
-      transition: transform 150ms ease;
-    }
-    .p3-home-premium .p3-signal-card:hover .p3-signal-card-arrow {
-      transform: translateX(3px);
-    }
-    .p3-home-premium .p3-route-board {
-      display: grid;
-      grid-template-columns: minmax(220px, 0.72fr) minmax(0, 1.6fr);
-      gap: 18px;
-      margin: 0 0 58px;
-      align-items: stretch;
-    }
-    .p3-home-premium .p3-route-intro {
-      padding: 14px 0;
-    }
-    .p3-home-premium .p3-route-eyebrow {
-      margin-bottom: 8px;
-      color: var(--p3-action);
+
+    .os-console-results small {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      color: var(--os-muted);
       font-size: 11px;
-      font-weight: 850;
-      letter-spacing: 0.13em;
-      text-transform: uppercase;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
     }
-    .p3-home-premium .p3-route-eyebrow::before {
-      content: '';
-      display: inline-block;
-      width: 18px;
-      height: 2px;
-      border-radius: 2px;
-      background: currentColor;
-      opacity: 0.5;
-      flex: none;
-    }
-    .p3-home-premium .p3-route-title {
-      max-width: 12ch;
-      margin: 0;
-      color: var(--p3-fg);
-      font-size: clamp(25px, 3.4vw, 40px);
-      font-weight: 800;
-      line-height: 1.02;
-      letter-spacing: -0.01em;
-    }
-    .p3-home-premium .p3-route-grid {
+
+    .os-tool-list,
+    .os-news-list,
+    .os-axis-grid {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 12px;
-    }
-    @media (min-width: 700px) {
-      .p3-home-premium .p3-route-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-    }
-    .p3-home-premium .p3-route-card {
-      min-height: 136px;
-      display: flex;
-      flex-direction: column;
-      padding: 14px 16px;
-      border: 1px solid var(--p3-border);
-      border-radius: 12px;
-      background: rgba(13, 18, 31, 0.78);
-      text-decoration: none;
-      box-shadow: 0 18px 46px -38px rgba(0, 0, 0, 0.84),
-                  0 1px 0 rgba(248, 250, 252, 0.045) inset;
-      transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
-    }
-    .p3-home-premium .p3-route-card:first-child {
-      border-left: 1px solid var(--p3-border);
-    }
-    .p3-home-premium .p3-route-card:hover {
-      transform: translateY(-2px);
-      border-color: rgba(var(--p3-action-rgb), 0.34);
-      background: var(--p3-surface-hover);
-    }
-    .p3-home-premium .p3-route-label {
-      margin-bottom: 16px;
-      color: var(--p3-verified);
-      font-size: 10px;
-      font-weight: 800;
-      letter-spacing: 0.10em;
-      text-transform: uppercase;
-    }
-    .p3-home-premium .p3-route-title-sm {
-      color: rgba(248, 250, 252, 0.96);
-      font-size: 17px;
-      font-weight: 800;
-      line-height: 1.15;
-    }
-    .p3-home-premium .p3-route-body {
-      margin-top: 8px;
-      color: rgba(203, 213, 225, 0.68);
-      font-size: 12px;
-      line-height: 1.45;
-    }
-    .p3-home-premium .p3-route-foot {
-      display: flex;
-      justify-content: space-between;
       gap: 10px;
-      margin-top: auto;
-      padding-top: 14px;
-      color: var(--p3-action);
-      font-size: 12px;
-      font-weight: 800;
+      padding: 14px;
     }
-    .p3-home-premium .p3-route-metric {
-      color: rgba(226, 232, 240, 0.82);
-    }
-    .p3-home-premium .p3-ledger {
+
+    .os-tool-row,
+    .os-news-row {
       display: grid;
-      grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1.55fr);
-      gap: 24px;
-      margin: 0 0 66px;
-      padding: 24px;
-      border: 1px solid var(--p3-border);
-      border-radius: 16px;
-      background:
-        linear-gradient(135deg, rgba(var(--p3-action-rgb), 0.105), transparent 33%),
-        radial-gradient(ellipse 75% 70% at 100% 0%, rgba(var(--p3-intel-rgb), 0.08), transparent 55%),
-        linear-gradient(180deg, rgba(14, 19, 32, 0.62), rgba(5, 6, 13, 0.38));
-      box-shadow: inset 0 1px 0 rgba(248, 250, 252, 0.06);
-    }
-    .p3-home-premium .p3-ledger-copy {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+      align-items: center;
+      gap: 10px;
       min-width: 0;
+      border: 1px solid var(--os-line);
+      border-radius: 14px;
+      background: rgba(15, 23, 42, 0.42);
+      color: var(--os-text);
+      text-decoration: none;
     }
-    .p3-home-premium .p3-ledger-eyebrow {
-      margin-bottom: 10px;
-      color: var(--p3-verified);
-      font-size: 11px;
-      font-weight: 850;
-      letter-spacing: 0.13em;
-      text-transform: uppercase;
+
+    .os-tool-row {
+      grid-template-columns: 36px minmax(0, 1fr) auto;
+      padding: 10px;
+    }
+
+    .os-tool-row:hover,
+    .os-news-row:hover {
+      border-color: var(--os-line-bright);
+      background: rgba(8, 47, 73, 0.34);
+    }
+
+    .os-tool-row :global(.os-tool-logo) {
+      border-radius: 10px;
+      background: #fff;
+    }
+
+    .os-tool-row strong,
+    .os-news-row strong {
+      display: block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size: 14px;
+    }
+
+    .os-tool-row small,
+    .os-news-row small {
+      display: block;
+      margin-top: 4px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      color: var(--os-muted);
+      font-size: 12px;
+    }
+
+    .os-tool-row em {
+      color: var(--os-teal);
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 800;
+    }
+
+    .os-news-row {
+      grid-template-columns: auto minmax(0, 1fr);
+      padding: 12px;
+    }
+
+    .os-news-row small {
+      grid-column: 2;
+    }
+
+    .os-severity {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-    }
-    .p3-home-premium .p3-ledger-eyebrow::before {
-      content: '';
-      display: inline-block;
-      width: 18px;
-      height: 2px;
-      border-radius: 2px;
-      background: currentColor;
-      opacity: 0.5;
-      flex: none;
-    }
-    .p3-home-premium .p3-ledger-title {
-      max-width: 12ch;
-      margin: 0;
-      color: var(--p3-fg);
-      font-size: clamp(26px, 3.2vw, 42px);
-      font-weight: 800;
-      line-height: 1.02;
-      letter-spacing: -0.01em;
-    }
-    .p3-home-premium .p3-ledger-body {
-      max-width: 46ch;
-      margin: 16px 0 0;
-      color: var(--p3-muted);
-      font-size: 14px;
-      line-height: 1.6;
-    }
-    .p3-home-premium .p3-ledger-link {
-      width: fit-content;
-      margin-top: 18px;
-      color: var(--p3-action);
-      font-size: 13px;
-      font-weight: 800;
-      text-decoration: none;
-    }
-    .p3-home-premium .p3-ledger-link:hover {
-      color: var(--p3-action-strong);
-    }
-    .p3-home-premium .p3-ledger-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 10px;
-    }
-    .p3-home-premium .p3-ledger-item {
-      min-height: 150px;
-      display: flex;
-      flex-direction: column;
-      padding: 16px;
-      border: 1px solid var(--p3-border);
-      border-radius: 12px;
-      background: rgba(5, 6, 13, 0.42);
-      text-decoration: none;
-      transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
-    }
-    .p3-home-premium .p3-ledger-item:hover {
-      transform: translateY(-2px);
-      border-color: rgba(var(--p3-intel-rgb), 0.30);
-      background: var(--p3-surface-2);
-    }
-    .p3-home-premium .p3-ledger-item-label {
-      color: var(--p3-action);
+      justify-content: center;
+      min-width: 62px;
+      height: 24px;
+      border-radius: 999px;
+      color: #031018;
+      background: var(--os-teal);
       font-size: 10px;
-      font-weight: 850;
-      letter-spacing: 0.12em;
+      font-weight: 900;
       text-transform: uppercase;
     }
-    .p3-home-premium .p3-ledger-item-value {
-      display: flex;
-      align-items: baseline;
-      gap: 8px;
-      margin-top: 14px;
-      color: rgba(248, 250, 252, 0.98);
-      font-size: 28px;
-      font-weight: 850;
-      line-height: 1;
-    }
-    .p3-home-premium .p3-ledger-item-value span:last-child {
-      color: rgba(var(--p3-verified-rgb), 0.88);
-      font-size: 12px;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-    .p3-home-premium .p3-ledger-item-body {
-      margin-top: auto;
-      padding-top: 16px;
-      color: rgba(203, 213, 225, 0.7);
-      font-size: 12px;
-      line-height: 1.45;
-    }
-    .p3-home-premium .p3-newshero {
+
+    .os-severity.is-breaking { background: var(--os-red); color: white; }
+    .os-severity.is-major { background: var(--os-amber); }
+
+    .os-axis-grid span {
       display: grid;
-      grid-template-columns: minmax(220px, 0.74fr) minmax(0, 1fr);
-      align-items: stretch;
+      grid-template-columns: 92px minmax(0, 1fr);
+      align-items: center;
+      gap: 12px;
+      min-height: 38px;
+      color: var(--os-muted);
+      font-size: 12px;
+    }
+
+    .os-axis-grid b {
+      color: var(--os-text);
+    }
+
+    .os-axis-grid i {
+      position: relative;
+      height: 9px;
+      border-radius: 999px;
+      background: rgba(148, 163, 184, 0.16);
       overflow: hidden;
     }
-    .p3-home-premium .p3-newshero > img {
-      width: 100%;
-      height: 100%;
-      min-height: 260px;
-      max-height: 360px;
-      object-fit: cover;
+
+    .os-axis-grid i::before {
+      content: '';
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: var(--w);
+      border-radius: inherit;
+      background: linear-gradient(90deg, var(--os-teal), var(--os-blue));
     }
-    .p3-home-premium .p3-newshero-body {
+
+    .os-window-status {
       display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 10px 14px;
+      border-top: 1px solid var(--os-line);
+      color: var(--os-dim);
+      font-family: "JetBrains Mono", ui-monospace, monospace;
+      font-size: 11px;
+    }
+
+    .os-window-status a {
+      color: var(--os-teal);
+      font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+      font-weight: 800;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .os-dock {
+      position: fixed;
+      left: 18px;
+      top: 92px;
+      bottom: 18px;
+      z-index: 52;
       flex-direction: column;
-      justify-content: center;
-      padding: 20px;
-    }
-    .p3-home-premium .p3-newshero-title {
-      font-size: clamp(20px, 2.2vw, 27px);
-      line-height: 1.12;
-    }
-    .p3-home-premium .p3-newshero-brief {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 8px;
-      margin: 16px 0 4px;
+      width: 86px;
+      padding: 8px;
+      border: 1px solid var(--os-line);
+      border-radius: 20px;
+      background: rgba(5, 10, 18, 0.74);
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.46);
+      backdrop-filter: blur(24px);
     }
-    .p3-home-premium .p3-newshero-brief-item {
+
+    .os-dock button {
+      display: grid;
+      justify-items: center;
+      gap: 5px;
+      min-width: 72px;
       min-height: 58px;
+      padding: 8px 10px;
+      border-radius: 14px;
+      color: var(--os-muted);
+    }
+
+    .os-dock button:hover,
+    .os-dock button.is-active {
+      border-color: var(--os-line-bright);
+      color: var(--os-text);
+      background: rgba(34, 211, 238, 0.12);
+    }
+
+    .os-dock span {
+      display: grid;
+      place-items: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 9px;
+      background: rgba(34, 211, 238, 0.12);
+      color: var(--os-teal);
+      font-family: "JetBrains Mono", ui-monospace, monospace;
+      font-size: 11px;
+      font-weight: 900;
+    }
+
+    .os-dock b {
+      font-size: 11px;
+    }
+
+    .os-context-menu {
+      position: fixed;
+      left: var(--context-x, 24px);
+      top: var(--context-y, 120px);
+      z-index: 80;
+      width: min(230px, calc(100vw - 28px));
+      padding: 8px;
+      border: 1px solid var(--os-line-bright);
+      border-radius: 14px;
+      background: rgba(4, 10, 18, 0.96);
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.58);
+      backdrop-filter: blur(18px);
+    }
+
+    .os-context-menu button,
+    .os-context-menu a {
       display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 6px;
-      padding: 10px;
-      border: 1px solid var(--p3-border);
-      border-radius: 10px;
-      background: var(--p3-surface-soft);
-    }
-    .p3-home-premium .p3-newshero-brief-item span {
-      color: var(--p3-subtle);
-      font-size: 10px;
-      font-weight: 850;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-    }
-    .p3-home-premium .p3-newshero-brief-item strong {
-      color: rgba(var(--p3-verified-rgb), 0.94);
+      align-items: center;
+      width: 100%;
+      min-height: 36px;
+      padding: 0 10px;
+      border: 0;
+      border-radius: 9px;
+      background: transparent;
+      color: var(--os-muted);
+      font: inherit;
       font-size: 13px;
-      font-weight: 850;
-      line-height: 1.1;
-      text-transform: capitalize;
+      text-align: left;
+      text-decoration: none;
     }
-    html.light body:has(main .p3-home-premium) {
-      background:
-        radial-gradient(ellipse 86% 42% at 50% -14%, rgba(8, 145, 178, 0.055) 0%, transparent 62%),
-        radial-gradient(ellipse 52% 32% at 92% 8%, rgba(2, 132, 199, 0.045) 0%, transparent 70%),
-        linear-gradient(180deg, #eef4f8 0%, #e7eef4 48%, #eef4f8 100%);
+
+    .os-context-menu button:hover,
+    .os-context-menu a:hover {
+      background: rgba(34, 211, 238, 0.10);
+      color: var(--os-text);
     }
-    html.light .p3-home-premium {
-      --p3-ink-0: #eef4f8;
-      --p3-ink-1: #e7eef4;
-      --p3-ink-2: #ffffff;
-      --p3-surface: rgba(249, 252, 254, 0.84);
-      --p3-surface-2: rgba(232, 240, 246, 0.92);
-      --p3-surface-soft: rgba(8, 145, 178, 0.045);
-      --p3-border: #cfdbe7;
-      --p3-border-strong: #bfcedd;
-      --p3-fg: #111827;
-      --p3-muted: #475569;
-      --p3-subtle: #64748b;
-      --p3-action: #0891b2;
-      --p3-action-strong: #0e7490;
-      --p3-action-rgb: 8, 145, 178;
-      --p3-intel: #0284c7;
-      --p3-intel-soft: #0369a1;
-      --p3-intel-rgb: 2, 132, 199;
-      --p3-verified: #0e7490;
-      --p3-verified-strong: #0369a1;
-      --p3-verified-rgb: 14, 116, 144;
-      --p3-score-high: #059669;
-      --p3-score-good: #2563eb;
-      --p3-score-watch: #d97706;
-      --p3-score-low: #dc2626;
-      --p3-brand-glow: rgba(2, 132, 199, 0.09);
-      --p3-action-glow: rgba(8, 145, 178, 0.08);
-      --p3-panel-shadow: 0 24px 64px -54px rgba(15, 23, 42, 0.28);
-      --p3-panel-shadow-hover: 0 30px 78px -52px rgba(15, 23, 42, 0.34);
-      color-scheme: light;
+
+    .os-context-menu[hidden] {
+      display: none;
     }
-    html.light .moat-layer[data-mode="home"] {
-      background:
-        radial-gradient(ellipse 60% 38% at 55% 0%, rgba(2, 132, 199, 0.045), transparent 72%),
-        radial-gradient(ellipse 42% 32% at 92% 16%, rgba(8, 145, 178, 0.035), transparent 72%);
-    }
-    html.light .moat-layer[data-mode="home"]::after {
-      opacity: 0.26;
-    }
-    html.light .moat-layer[data-mode="home"] .moat-canvas {
-      opacity: 0.20;
-      filter: saturate(0.82);
-    }
-    html.light .moat-layer[data-mode="home"] .moat-static {
-      opacity: 0.58;
-    }
-    html.light .p3-home-premium .p3-premium-cover {
-      border-color: color-mix(in srgb, var(--cover-accent-2) 24%, var(--p3-border));
-      background:
-        linear-gradient(135deg, color-mix(in srgb, var(--cover-accent-2) 7%, transparent), transparent 38%),
-        radial-gradient(ellipse 90% 70% at 100% 0%, color-mix(in srgb, var(--cover-accent) 9%, transparent), transparent 58%),
-        var(--p3-surface);
-      box-shadow:
-        var(--p3-panel-shadow),
-        0 12px 30px -26px rgba(var(--p3-action-rgb), 0.18),
-        inset 0 1px 0 rgba(255, 255, 255, 0.72);
-    }
-    html.light .p3-home-premium .p3-premium-cover:hover {
-      border-color: color-mix(in srgb, var(--cover-accent-2) 42%, var(--p3-border));
-      box-shadow:
-        var(--p3-panel-shadow-hover),
-        0 24px 76px -58px color-mix(in srgb, var(--cover-accent) 34%, transparent),
-        0 14px 32px -26px rgba(var(--p3-action-rgb), 0.22),
-        inset 0 1px 0 rgba(255, 255, 255, 0.9);
-    }
-    html.light .p3-home-premium .p3-cover-logo-frame {
-      background: #ffffff;
-      box-shadow: 0 16px 34px -26px rgba(15, 23, 42, 0.36);
-    }
-    html.light .p3-home-premium .p3-cover-verdict {
-      background: color-mix(in srgb, var(--p3-intel) 5%, #f4f8fb);
-      color: var(--p3-fg);
-    }
-    html.light .p3-home-premium .p3-cover-bar-col,
-    html.light .p3-home-premium .p3-cover-reason {
-      background: rgba(15, 23, 42, 0.045);
-      color: var(--p3-muted);
-    }
-    html.light .p3-home-premium .p3-signal-desk,
-    html.light .p3-home-premium .p3-ledger {
-      background:
-        linear-gradient(135deg, rgba(var(--p3-verified-rgb), 0.045), transparent 34%),
-        radial-gradient(ellipse 75% 70% at 100% 0%, rgba(var(--p3-intel-rgb), 0.05), transparent 55%),
-        var(--p3-surface);
-      box-shadow:
-        var(--p3-panel-shadow),
-        inset 0 1px 0 rgba(255, 255, 255, 0.74);
-    }
-    html.light .p3-home-premium .p3-signal-card,
-    html.light .p3-home-premium .p3-ledger-item {
-      background: rgba(249, 252, 254, 0.58);
-      box-shadow:
-        0 18px 42px -34px rgba(15, 23, 42, 0.2),
-        0 1px 0 rgba(255, 255, 255, 0.66) inset;
-    }
-    html.light .p3-home-premium .p3-signal-card:hover,
-    html.light .p3-home-premium .p3-ledger-item:hover {
-      background: var(--p3-surface-2);
-      box-shadow:
-        0 24px 56px -36px rgba(15, 23, 42, 0.26),
-        0 12px 30px -26px rgba(var(--p3-action-rgb), 0.18),
-        0 1px 0 rgba(255, 255, 255, 0.76) inset;
-    }
-    html.light .p3-home-premium .p3-signal-card-title,
-    html.light .p3-home-premium .p3-route-title-sm,
-    html.light .p3-home-premium .p3-route-metric,
-    html.light .p3-home-premium .p3-ledger-item-value {
-      color: var(--p3-fg);
-    }
-    html.light .p3-home-premium .p3-route-body,
-    html.light .p3-home-premium .p3-ledger-item-body {
-      color: var(--p3-muted);
-    }
-    html.light .p3-home-premium .p3-newshero-brief-item {
-      background: rgba(249, 252, 254, 0.58);
-    }
-    html.light .p3-home-premium .p3-newshero-brief-item strong,
-    html.light .p3-home-premium .p3-ledger-item-value span:last-child {
-      color: var(--p3-verified);
-    }
-    @media (max-width: 720px) {
-      .p3-home-premium .p3-premium-cover {
-        padding: 22px;
-      }
-      .p3-home-premium .p3-cover-score {
-        display: block;
-      }
-      .p3-home-premium .p3-cover-score-main {
-        margin-bottom: 14px;
-      }
-      .p3-home-premium .p3-signal-desk {
-        margin-bottom: 44px;
-        padding: 18px;
-      }
-      .p3-home-premium .p3-signal-head {
-        display: block;
-      }
-      .p3-home-premium .p3-signal-head .p3-sec-link {
-        display: inline-flex;
-        margin-top: 12px;
-      }
-      .p3-home-premium .p3-signal-grid {
+
+    @media (max-width: 1180px) {
+      .os-stage {
         grid-template-columns: 1fr;
+        padding-top: 96px;
       }
-      .p3-home-premium .p3-signal-card {
-        min-height: 0;
-      }
-      .p3-home-premium .p3-route-board {
-        display: block;
-        margin: -18px 0 44px;
-      }
-      .p3-home-premium .p3-route-title {
+
+      .os-left-rail,
+      .os-hero {
         max-width: none;
       }
-      .p3-home-premium .p3-route-grid {
-        grid-template-columns: 1fr;
-        border-top: 1px solid var(--p3-border);
-        border-bottom: 1px solid var(--p3-border);
+
+      .os-hero h1 {
+        font-size: 56px;
       }
-      .p3-home-premium .p3-route-card {
+
+      .os-shortcuts {
+        max-width: none;
+      }
+
+      .os-system-card {
+        width: auto;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .linux-demo {
+        min-height: auto;
+        cursor: auto;
+        overflow: visible;
+      }
+
+      .os-cursor {
+        display: none;
+      }
+
+      .os-panel {
+        position: sticky;
+        inset: 0 0 auto;
+        border-radius: 0;
         border-left: 0;
-        border-top: 0;
-        min-height: 0;
+        border-right: 0;
       }
-      .p3-home-premium .p3-route-card:first-child {
-        border-top: 1px solid var(--p3-border);
+
+      .os-workspaces,
+      .os-panel-chip {
+        display: none;
       }
-      .p3-home-premium .p3-ledger {
+
+      .os-stage {
+        padding: 24px 16px 34px;
+        gap: 18px;
+      }
+
+      .os-hero {
+        padding-top: 18px;
+      }
+
+      .os-hero h1 {
+        font-size: 40px;
+        line-height: 1.02;
+      }
+
+      .os-hero p {
+        font-size: 16px;
+      }
+
+      .os-prompt {
+        border-radius: 16px;
+        font-size: 12px;
+      }
+
+      .os-meters,
+      .os-desktop {
         grid-template-columns: 1fr;
-        margin-bottom: 44px;
-        padding: 18px;
       }
-      .p3-home-premium .p3-ledger-title {
+
+      .os-meters {
+        display: grid;
+      }
+
+      .os-shortcuts {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         max-width: none;
       }
-      .p3-home-premium .p3-ledger-grid {
+
+      .os-shortcuts button {
+        min-width: 0;
+        min-height: 88px;
+      }
+
+      .os-window-terminal {
+        grid-column: auto;
+      }
+
+      .os-terminal-form {
         grid-template-columns: 1fr;
       }
-      .p3-home-premium .p3-ledger-item {
-        min-height: 0;
-      }
-      .p3-home-premium .p3-newshero-brief {
+
+      .os-console-body {
         grid-template-columns: 1fr;
       }
-      .p3-home-premium .p3-newshero {
-        grid-template-columns: 1fr;
+
+      .os-console-intro h2 {
+        font-size: 22px;
       }
-      .p3-home-premium .p3-newshero > img {
-        min-height: 0;
-        max-height: 260px;
+
+      .os-window {
+        transform: none !important;
+      }
+
+      .os-dock {
+        position: sticky;
+        top: 58px;
+        left: auto;
+        bottom: auto;
+        z-index: 49;
+        width: calc(100vw - 18px);
+        margin: 0 auto;
+        transform: none;
+        flex-direction: row;
+        overflow-x: auto;
+        justify-content: flex-start;
+        border-radius: 0 0 18px 18px;
+      }
+
+      .os-dock button {
+        min-width: 66px;
       }
     }
-    @media (min-width: 721px) and (max-width: 980px) {
-      .p3-home-premium .p3-signal-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    @media (pointer: coarse) {
+      .linux-demo,
+      .linux-demo * {
+        cursor: auto;
       }
-      .p3-home-premium .p3-route-board {
-        grid-template-columns: 1fr;
-      }
-      .p3-home-premium .p3-route-title {
-        max-width: none;
-      }
-      .p3-home-premium .p3-route-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-      .p3-home-premium .p3-route-card:nth-child(odd) {
-        border-left: 0;
-      }
-      .p3-home-premium .p3-route-card:nth-child(n + 3) {
-        border-top: 1px solid var(--p3-border);
-      }
-      .p3-home-premium .p3-ledger {
-        grid-template-columns: 1fr;
+
+      .os-cursor {
+        display: none;
       }
     }
   </style>
 
+  <script is:inline>
+    (() => {
+      const root = document.querySelector('[data-linux-demo]');
+      if (!root) return;
+
+      const cursor = root.querySelector('.os-cursor');
+      const isFinePointer = window.matchMedia('(pointer: fine)').matches && window.innerWidth >= 760;
+      if (cursor && isFinePointer) {
+        root.classList.add('is-cursor-ready');
+        window.addEventListener('pointermove', (event) => {
+          cursor.style.transform = `translate3d(${event.clientX}px, ${event.clientY}px, 0)`;
+        }, { passive: true });
+      }
+
+      const menuButton = root.querySelector('[data-menu-button]');
+      const menu = root.querySelector('[data-menu]');
+      const launcherInput = root.querySelector('[data-launcher-input]');
+      const contextMenu = root.querySelector('[data-context-menu]');
+      function closeMenu() {
+        menu?.classList.remove('is-open');
+        menuButton?.setAttribute('aria-expanded', 'false');
+      }
+
+      function closeContextMenu() {
+        if (!contextMenu) return;
+        contextMenu.hidden = true;
+        contextMenu.setAttribute('aria-hidden', 'true');
+      }
+
+      menuButton?.addEventListener('click', () => {
+        const next = !menu?.classList.contains('is-open');
+        menu?.classList.toggle('is-open', next);
+        menuButton.setAttribute('aria-expanded', String(next));
+        if (next) window.setTimeout(() => launcherInput?.select(), 70);
+      });
+
+      document.addEventListener('click', (event) => {
+        if (!root.contains(event.target)) return;
+        if (menu && menuButton && !menu.contains(event.target) && !menuButton.contains(event.target)) {
+          closeMenu();
+        }
+        if (contextMenu && !contextMenu.contains(event.target)) {
+          closeContextMenu();
+        }
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+          closeMenu();
+          closeContextMenu();
+        }
+      });
+
+      root.addEventListener('contextmenu', (event) => {
+        if (!contextMenu || window.innerWidth < 760) return;
+        const target = event.target;
+        if (target instanceof Element && target.closest('a, button, input')) return;
+        event.preventDefault();
+        const menuWidth = 230;
+        const menuHeight = 206;
+        const x = Math.min(event.clientX, window.innerWidth - menuWidth - 14);
+        const y = Math.min(event.clientY, window.innerHeight - menuHeight - 14);
+        contextMenu.style.setProperty('--context-x', `${Math.max(14, x)}px`);
+        contextMenu.style.setProperty('--context-y', `${Math.max(72, y)}px`);
+        contextMenu.hidden = false;
+        contextMenu.setAttribute('aria-hidden', 'false');
+        closeMenu();
+      });
+
+      let z = 20;
+      function focusWindow(name) {
+        const target = root.querySelector(`[data-window="${name}"]`);
+        if (!target) return;
+        root.querySelectorAll('[data-window]').forEach((win) => win.classList.remove('is-active'));
+        target.classList.add('is-active');
+        target.style.zIndex = String(++z);
+        root.querySelectorAll('[data-focus-window]').forEach((button) => {
+          button.classList.toggle('is-active', button.getAttribute('data-focus-window') === name);
+        });
+        target.scrollIntoView({ block: 'nearest', inline: 'nearest', behavior: 'smooth' });
+        closeMenu();
+        closeContextMenu();
+      }
+
+      root.querySelectorAll('[data-focus-window]').forEach((button) => {
+        button.addEventListener('click', () => focusWindow(button.getAttribute('data-focus-window')));
+      });
+
+      root.querySelectorAll('[data-window]').forEach((win) => {
+        win.addEventListener('pointerdown', () => {
+          const name = win.getAttribute('data-window');
+          if (name) focusWindow(name);
+        });
+      });
+
+      root.querySelectorAll('[data-draggable]').forEach((win) => {
+        const bar = win.querySelector('.os-window-bar');
+        let startX = 0;
+        let startY = 0;
+        let baseX = 0;
+        let baseY = 0;
+        bar?.addEventListener('pointerdown', (event) => {
+          if (!isFinePointer || window.innerWidth < 900) return;
+          event.preventDefault();
+          startX = event.clientX;
+          startY = event.clientY;
+          baseX = Number(win.dataset.tx || 0);
+          baseY = Number(win.dataset.ty || 0);
+          bar.setPointerCapture(event.pointerId);
+        });
+        bar?.addEventListener('pointermove', (event) => {
+          if (!bar.hasPointerCapture(event.pointerId)) return;
+          const nextX = Math.max(-120, Math.min(120, baseX + event.clientX - startX));
+          const nextY = Math.max(-120, Math.min(120, baseY + event.clientY - startY));
+          win.dataset.tx = String(nextX);
+          win.dataset.ty = String(nextY);
+          win.style.setProperty('--tx', `${nextX}px`);
+          win.style.setProperty('--ty', `${nextY}px`);
+        });
+        bar?.addEventListener('pointerup', (event) => {
+          if (bar.hasPointerCapture(event.pointerId)) bar.releasePointerCapture(event.pointerId);
+        });
+      });
+
+      const clock = root.querySelector('[data-os-clock]');
+      function tick() {
+        if (!clock) return;
+        const now = new Date();
+        clock.textContent = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+      }
+      tick();
+      window.setInterval(tick, 30000);
+
+      const terminalForm = root.querySelector('[data-terminal-form]');
+      const terminalOutput = root.querySelector('[data-terminal-output]');
+      const terminalInput = terminalForm?.querySelector('input');
+      const responses = {
+        coding: {
+          label: 'Coding workflow',
+          title: 'Start with the coding guide, then compare the top agentic editors.',
+          body: 'Good for large repositories, multi-file changes, and agent workflows where context and safety checks matter.',
+          href: '/answers/best-ai-coding-tool-2026/',
+          cta: 'Open coding guide',
+          query: 'I need a coding assistant for a large repo',
+        },
+        writing: {
+          label: 'Writing workflow',
+          title: 'Use the writing guide when tone, editing, and long-form drafts matter.',
+          body: 'It separates general chat tools from focused writing assistants so you can choose by workflow instead of brand.',
+          href: '/answers/best-ai-for-writing-2026/',
+          cta: 'Open writing guide',
+          query: 'I need help writing and editing long-form content',
+        },
+        research: {
+          label: 'Research workflow',
+          title: 'Open the research category for source-backed search, papers, and citation work.',
+          body: 'Best when the output needs links, traceable claims, or a fixed source set rather than generic brainstorming.',
+          href: '/categories/ai-research/',
+          cta: 'Open research tools',
+          query: 'I need source-backed research with citations',
+        },
+        image: {
+          label: 'Image workflow',
+          title: 'Start with the image generator guide, then compare creative control and licensing.',
+          body: 'Useful for ads, concept art, product visuals, thumbnails, and brand-safe image generation.',
+          href: '/answers/best-ai-image-generator-2026/',
+          cta: 'Open image guide',
+          query: 'I need an AI image generator for brand visuals',
+        },
+        news: {
+          label: 'Latest changes',
+          title: 'Open the news desk to see what changed before you pick a tool.',
+          body: `There are ${Number(root.querySelectorAll('.os-news-row').length)} latest dispatches pinned in this desktop view.`,
+          href: '/news/',
+          cta: 'Open news',
+          query: 'Show me the latest AI tool changes',
+        },
+        compare: {
+          label: 'Comparison workflow',
+          title: 'Use comparisons when two tools look similar but fit different jobs.',
+          body: 'The comparison pages are built for tradeoffs: pricing caveats, strengths, weaknesses, and practical verdicts.',
+          href: '/compare/',
+          cta: 'Open comparisons',
+          query: 'Help me compare two AI tools',
+        },
+        chat: {
+          label: 'General assistant workflow',
+          title: 'Start with the chatbot guide when you need a flexible everyday AI assistant.',
+          body: 'Good for broad questions, drafting, analysis, tutoring, lightweight coding, and mixed personal workflows.',
+          href: '/answers/best-ai-chatbot-2026/',
+          cta: 'Open chatbot guide',
+          query: 'I need a general-purpose AI assistant',
+        },
+        automation: {
+          label: 'Automation workflow',
+          title: 'Use the automation category for agents, workflows, triggers, and app-to-app handoffs.',
+          body: 'Best when the job is repeatable: moving data, routing leads, checking inboxes, or running business processes.',
+          href: '/categories/ai-automation/',
+          cta: 'Open automation tools',
+          query: 'I need to automate a recurring workflow',
+        },
+        video: {
+          label: 'Video workflow',
+          title: 'Open the video guide for generation, avatars, editing, and production tradeoffs.',
+          body: 'Useful for social clips, product videos, explainers, avatar-led training, and cinematic prompt-to-video tools.',
+          href: '/answers/best-ai-video-generator-2026/',
+          cta: 'Open video guide',
+          query: 'I need an AI video tool',
+        },
+        voice: {
+          label: 'Voice workflow',
+          title: 'Start with the voice guide for narration, cloning, dubbing, and low-latency speech.',
+          body: 'Good for podcasts, ads, training narration, app voices, localization, and creator voiceover workflows.',
+          href: '/answers/best-ai-voice-generator-2026/',
+          cta: 'Open voice guide',
+          query: 'I need an AI voice generator',
+        },
+        presentation: {
+          label: 'Presentation workflow',
+          title: 'Use presentation tools when the deliverable is a deck, pitch, lesson, or visual brief.',
+          body: 'These tools help turn outlines, docs, and rough ideas into slides faster, but still need human review.',
+          href: '/categories/ai-presentation/',
+          cta: 'Open presentation tools',
+          query: 'I need to make a presentation deck',
+        },
+        notes: {
+          label: 'Notes and meetings workflow',
+          title: 'Open notes tools for meeting summaries, transcripts, memory, and personal knowledge bases.',
+          body: 'Best for capturing conversations, summarizing calls, organizing research, and retrieving past decisions.',
+          href: '/categories/ai-notes/',
+          cta: 'Open notes tools',
+          query: 'I need meeting notes and summaries',
+        },
+        seo: {
+          label: 'SEO workflow',
+          title: 'Use SEO tools for content briefs, SERP research, optimization, and site content workflows.',
+          body: 'Helpful when the goal is ranking pages, refreshing articles, finding gaps, or improving search visibility.',
+          href: '/categories/ai-seo/',
+          cta: 'Open SEO tools',
+          query: 'I need an AI SEO content tool',
+        },
+        data: {
+          label: 'Data workflow',
+          title: 'Use data-analysis guides for spreadsheets, SQL, charts, and business reporting.',
+          body: 'Best when the work involves tables, files, dashboards, formulas, or turning messy data into a useful explanation.',
+          href: '/guides/best-ai-for-data-analysis/',
+          cta: 'Open data guide',
+          query: 'I need help analyzing spreadsheets or data',
+        },
+        highstakes: {
+          label: 'High-stakes workflow',
+          title: 'Use source-backed research tools, then verify the result with a qualified professional.',
+          body: 'For medical, legal, tax, hiring, financial, or safety-sensitive work, AI can help organize information but should not be the final authority.',
+          href: '/categories/ai-research/',
+          cta: 'Open research tools',
+          query: 'I need source-backed help for a high-stakes topic',
+        },
+        general: {
+          label: 'General fallback',
+          title: 'No exact match yet, so start with the guided tool finder.',
+          body: 'It is the safest default when the request is unusual, vague, or crosses multiple workflows. From there, filter by category, pricing, and use case.',
+          href: '/tool-finder/',
+          cta: 'Open tool finder',
+          query: 'Help me find the right AI tool',
+        },
+      };
+      const commandMatchers = [
+        ['highstakes', ['medical', 'doctor', 'health', 'clinical', 'legal', 'lawyer', 'contract', 'tax', 'accounting', 'finance', 'financial', 'hiring', 'recruit', 'safety', 'compliance']],
+        ['seo', ['seo', 'keyword', 'serp', 'rank', 'ranking', 'google traffic', 'search traffic', 'content brief']],
+        ['data', ['data', 'spreadsheet', 'excel', 'csv', 'sql', 'table', 'tables', 'dashboard', 'analytics', 'chart', 'charts', 'reporting']],
+        ['writing', ['write', 'writing', 'blog', 'email', 'copy', 'essay', 'book', 'newsletter', 'linkedin', 'resume', 'cover letter', 'grammar', 'edit']],
+        ['research', ['research', 'citation', 'paper', 'source', 'sources', 'study', 'academic', 'journal', 'summarize pdf', 'pdf']],
+        ['image', ['image', 'design', 'visual', 'logo', 'photo', 'picture', 'thumbnail', 'art', 'brand visuals']],
+        ['video', ['video', 'film', 'clip', 'avatar', 'youtube', 'tiktok', 'shorts', 'animation', 'b-roll']],
+        ['voice', ['voice', 'audio', 'speech', 'tts', 'dubbing', 'dub', 'podcast', 'narration', 'transcription', 'transcribe']],
+        ['automation', ['automation', 'automate', 'workflow', 'agent', 'zap', 'trigger', 'crm', 'lead', 'support', 'sales', 'ops']],
+        ['presentation', ['presentation', 'slides', 'slide', 'deck', 'pitch', 'powerpoint', 'ppt']],
+        ['notes', ['note', 'notes', 'meeting', 'meetings', 'transcript', 'memory', 'knowledge base', 'second brain']],
+        ['news', ['news', 'latest', 'changed', 'release', 'launch', 'update', 'announcement']],
+        ['compare', ['compare', 'comparison', 'versus', ' vs ', 'alternative', 'alternatives', 'replace']],
+        ['coding', ['code', 'coding', 'repo', 'developer', 'programming', 'debug', 'pull request', 'tests', 'github']],
+        ['chat', ['chat', 'chatbot', 'assistant', 'general', 'student', 'teacher', 'tutor', 'brainstorm']],
+      ];
+      function inferCommand(rawCommand) {
+        const raw = String(rawCommand || '').toLowerCase().replace(/\s+/g, ' ').trim();
+        if (!raw) return 'general';
+        if (responses[raw]) return raw;
+        const match = commandMatchers.find(([, terms]) => terms.some((term) => raw.includes(term)));
+        return match?.[0] || 'general';
+      }
+
+      function runCommand(rawCommand) {
+        const key = inferCommand(rawCommand);
+        const response = responses[key] || responses.general;
+        if (!terminalOutput) return;
+        terminalOutput.replaceChildren();
+        const label = document.createElement('small');
+        label.textContent = response.label;
+        const title = document.createElement('strong');
+        title.textContent = response.title;
+        const body = document.createElement('p');
+        body.textContent = response.body;
+        const link = document.createElement('a');
+        link.href = response.href;
+        link.textContent = response.cta;
+        terminalOutput.append(label, title, body, link);
+        if (terminalInput) terminalInput.value = response.query;
+      }
+
+      terminalForm?.addEventListener('submit', (event) => {
+        event.preventDefault();
+        runCommand(terminalInput?.value);
+      });
+
+      root.querySelectorAll('[data-command]').forEach((button) => {
+        button.addEventListener('click', () => {
+          const command = button.getAttribute('data-command') || 'scan';
+          if (terminalInput) terminalInput.value = command;
+          focusWindow('terminal');
+          runCommand(command);
+        });
+      });
+    })();
+  </script>
 </BaseLayout>
