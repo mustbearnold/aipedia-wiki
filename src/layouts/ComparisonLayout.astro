@@ -5,6 +5,7 @@
  */
 import BaseLayout from './BaseLayout.astro';
 import '../styles/t2-canvas.css';
+import OsPageShell from '../components/os/OsPageShell.astro';
 import BreadcrumbLD from '../components/seo/BreadcrumbLD.astro';
 import ItemListLD from '../components/seo/ItemListLD.astro';
 import ArticleLD from '../components/seo/ArticleLD.astro';
@@ -189,7 +190,7 @@ const axisRows = tools.length === 2
 const tocHeadings = (headings ?? []).filter((h) => h.depth === 2).map((h) => ({ slug: h.slug, text: h.text }));
 ---
 
-<BaseLayout title={seoTitle ?? title} description={description}>
+<BaseLayout title={seoTitle ?? title} description={description} chrome="os">
   <BreadcrumbLD items={breadcrumbLdItems} />
   {itemListItems.length > 0 && (
     <ItemListLD name={title} description={description} items={itemListItems} siteBase={siteBase} />
@@ -211,7 +212,14 @@ const tocHeadings = (headings ?? []).filter((h) => h.depth === 2).map((h) => ({ 
     {winningTool && <span data-pagefind-filter="Editorial Pick">{winningTool.title}</span>}
   </div>
 
-  <div class="t2-canvas">
+  <OsPageShell
+    activeApp="compare"
+    appTitle="diff-viewer"
+    appSubtitle={`${tools.length} package compare`}
+    command={`diff /compare/${slug}`}
+    density="article"
+  >
+    <div class="t2-canvas">
     <!-- Breadcrumb -->
     <nav class="t2-breadcrumb" aria-label="Breadcrumb">
       <a href="/">Home</a>
@@ -425,5 +433,6 @@ const tocHeadings = (headings ?? []).filter((h) => h.depth === 2).map((h) => ({ 
         </aside>
       )}
     </div>
-  </div>
+    </div>
+  </OsPageShell>
 </BaseLayout>

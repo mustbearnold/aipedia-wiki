@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import OsPageShell from '../../components/os/OsPageShell.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
 import { getCollection } from 'astro:content';
 
@@ -47,7 +48,14 @@ const statStrip = [
 <BaseLayout
   title="AI Companies Profiles — aipedia.wiki"
   description="Profiles of the companies behind the AI tools we review. Founded dates, funding, HQ, and product rollups for every major player."
+  chrome="os"
 >
+  <OsPageShell
+    activeApp="packages"
+    appTitle="company-registry"
+    appSubtitle={`${total} companies`}
+    command={`ls /companies --count=${total}`}
+  >
   <Breadcrumb items={[{ label: 'Companies' }]} />
 
   <section class="idx-hero" data-pagefind-ignore>
@@ -110,4 +118,5 @@ const statStrip = [
       </a>
     ))}
   </section>
+  </OsPageShell>
 </BaseLayout>

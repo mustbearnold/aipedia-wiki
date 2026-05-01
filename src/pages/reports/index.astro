@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import OsPageShell from '../../components/os/OsPageShell.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
 import EmailCapture from '../../components/EmailCapture.astro';
 import { getCollection } from 'astro:content';
@@ -37,7 +38,14 @@ const hasSingleReport = sorted.length === 1;
 <BaseLayout
   title="State of AI Tools — Monthly Reports — aipedia.wiki"
   description="Monthly editorial reports covering what changed across 132 AI tools. New launches, score movements, pricing shifts, deaths, and what to watch next."
+  chrome="os"
 >
+  <OsPageShell
+    activeApp="manual"
+    appTitle="report-archive"
+    appSubtitle={`${sorted.length} reports`}
+    command={`ls /reports --count=${sorted.length}`}
+  >
   <Breadcrumb items={[{ label: 'Reports' }]} />
 
   <section class="idx-hero" data-pagefind-ignore>
@@ -106,4 +114,5 @@ const hasSingleReport = sorted.length === 1;
   )}
 
   <EmailCapture variant="footer" source="reports-index" />
+  </OsPageShell>
 </BaseLayout>

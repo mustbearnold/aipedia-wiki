@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import OsPageShell from '../../components/os/OsPageShell.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
 import EmailCapture from '../../components/EmailCapture.astro';
 
@@ -40,12 +41,21 @@ const ANSWER_GROUPS = [
     ],
   },
 ];
+
+const answerCount = ANSWER_GROUPS.reduce((sum, group) => sum + group.items.length, 0);
 ---
 
 <BaseLayout
   title="Definitive AI Answers — Short Authoritative Guides — aipedia.wiki"
   description="Short definitive answers to the highest-volume AI questions. Best chatbot, best coder, ChatGPT vs Claude, free tools, and more. Updated monthly."
+  chrome="os"
 >
+  <OsPageShell
+    activeApp="ask"
+    appTitle="answer-index"
+    appSubtitle={`${answerCount} definitive answers`}
+    command={`ask --answers=${answerCount}`}
+  >
   <Breadcrumb items={[{ label: 'Answers' }]} />
 
   <section class="mb-10 pt-2">
@@ -80,4 +90,5 @@ const ANSWER_GROUPS = [
   </section>
 
   <EmailCapture variant="footer" source="answers-index" />
+  </OsPageShell>
 </BaseLayout>

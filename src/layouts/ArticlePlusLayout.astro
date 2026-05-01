@@ -5,6 +5,7 @@
  * April 23, 2026 into .t2-canvas.
  */
 import BaseLayout from './BaseLayout.astro';
+import OsPageShell from '../components/os/OsPageShell.astro';
 import '../styles/t2-canvas.css';
 import BreadcrumbLD from '../components/seo/BreadcrumbLD.astro';
 import ArticleLD from '../components/seo/ArticleLD.astro';
@@ -88,6 +89,20 @@ const verifiedIsFresh = verifiedIsValid && verifiedDaysSince <= 14;
 const verifiedIsRecent = verifiedIsValid && verifiedDaysSince > 14 && verifiedDaysSince <= 90;
 
 const tocHeadings = (headings ?? []).filter((h) => h.depth === 2).map((h) => ({ slug: h.slug, text: h.text }));
+const sectionKey = (articleSection ?? '').toLowerCase();
+const pathParts = Astro.url.pathname.split('/').filter(Boolean);
+const routeSlug = pathParts[pathParts.length - 1] ?? 'article';
+const osActiveApp = sectionKey.includes('news') ? 'news' : 'manual';
+const osAppTitle = sectionKey.includes('news')
+  ? 'news-reader'
+  : sectionKey.includes('trend')
+    ? 'trend-reader'
+    : sectionKey.includes('workflow')
+      ? 'workflow-manual'
+      : sectionKey.includes('report')
+        ? 'report-viewer'
+        : 'article-viewer';
+const osCommand = sectionKey.includes('news') ? `less /news/${routeSlug}` : `less ${Astro.url.pathname}`;
 ---
 
 <BaseLayout
@@ -107,6 +122,7 @@ const tocHeadings = (headings ?? []).filter((h) => h.depth === 2).map((h) => ({ 
     return isNaN(d.getTime()) ? String(lastVerified) : d.toISOString();
   })()}
   articleSection={articleSection}
+  chrome="os"
 >
   {breadcrumbLdItems && <BreadcrumbLD items={breadcrumbLdItems} />}
   <ArticleLD
@@ -121,6 +137,13 @@ const tocHeadings = (headings ?? []).filter((h) => h.depth === 2).map((h) => ({ 
     citations={citations}
   />
 
+  <OsPageShell
+    activeApp={osActiveApp}
+    appTitle={osAppTitle}
+    appSubtitle={articleSection ?? articleType}
+    command={osCommand}
+    density="article"
+  >
   <div class="t2-canvas">
     {breadcrumbs && (
       <nav class="t2-breadcrumb" aria-label="Breadcrumb">
@@ -204,4 +227,5 @@ const tocHeadings = (headings ?? []).filter((h) => h.depth === 2).map((h) => ({ 
       )}
     </div>
   </div>
+  </OsPageShell>
 </BaseLayout>

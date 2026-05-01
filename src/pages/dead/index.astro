@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import OsPageShell from '../../components/os/OsPageShell.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
 import { getCollection } from 'astro:content';
 
@@ -58,7 +59,14 @@ const nonShutdownCount = sorted.filter((tool) => tool.cause !== 'shutdown').leng
 <BaseLayout
   title="Dead AI Tools Archive — aipedia.wiki"
   description="Archive of discontinued AI tools. Track what shut down, when, and why — so readers stop chasing products that no longer exist."
+  chrome="os"
 >
+  <OsPageShell
+    activeApp="trust"
+    appTitle="archive-viewer"
+    appSubtitle={`${total} records`}
+    command={`grep --dead /tools --count=${total}`}
+  >
   <Breadcrumb items={[{ label: 'Dead Tools' }]} />
 
   <section class="idx-hero" data-pagefind-ignore data-refresh-surface="home-adjacent">
@@ -113,4 +121,5 @@ const nonShutdownCount = sorted.filter((tool) => tool.cause !== 'shutdown').leng
       </a>
     ))}
   </section>
+  </OsPageShell>
 </BaseLayout>

@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import OsPageShell from '../../components/os/OsPageShell.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
 import { getCollection } from 'astro:content';
 
@@ -34,7 +35,14 @@ const impactColors: Record<string, string> = {
 <BaseLayout
   title="Trending in AI Tools — What's Changing Now — aipedia.wiki"
   description="Editorial analysis of major shifts in the AI tools landscape. Model launches, market consolidations, pricing wars, and category emergences."
+  chrome="os"
 >
+  <OsPageShell
+    activeApp="manual"
+    appTitle="trend-monitor"
+    appSubtitle={`${sorted.length} tracked shifts`}
+    command={`tail -f /trends --items=${sorted.length}`}
+  >
   <Breadcrumb items={[{ label: 'Trending' }]} />
 
   <section class="idx-hero" data-pagefind-ignore>
@@ -70,4 +78,5 @@ const impactColors: Record<string, string> = {
       </a>
     ))}
   </section>
+  </OsPageShell>
 </BaseLayout>

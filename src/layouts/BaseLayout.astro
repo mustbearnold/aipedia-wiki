@@ -19,6 +19,7 @@ interface Props {
   articlePublishedTime?: string;
   articleModifiedTime?: string;
   articleSection?: string;
+  chrome?: 'site' | 'os';
 }
 
 const {
@@ -27,7 +28,9 @@ const {
   articlePublishedTime,
   articleModifiedTime,
   articleSection,
+  chrome = 'site',
 } = Astro.props;
+const isOsChrome = chrome === 'os';
 const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? 'https://aipedia.wiki');
 function clampMetaDescription(value: string): string {
   const normalized = String(value || '').replace(/\s+/g, ' ').trim();
@@ -111,24 +114,26 @@ const ogImageUrl = ogImage
     <!-- Smooth cross-page view transitions -->
     <ClientRouter />
   </head>
-  <body class="min-h-screen">
+  <body class:list={['min-h-screen', isOsChrome && 'os-chrome-body']}>
     <!-- Skip-to-main-content: hidden off-screen until keyboard focus. Lets
          screen-reader + keyboard users bypass the sticky nav on every page. -->
     <a href="#main-content" class="skip-to-main">Skip to main content</a>
     <!-- Reading-progress bar: thin gradient strip fixed at the very top
          of the viewport. Scales horizontally with scroll position. Hidden
          via opacity when not scrolled so it doesn't flash on short pages. -->
-    <div id="read-progress" aria-hidden="true" transition:persist="read-progress"></div>
-    <div id="bg-gradient" class="fixed inset-0 -z-10" style="background: linear-gradient(160deg, var(--bg-base) 0%, #070811 52%, #05060d 100%);" transition:persist></div>
-    <MoatLayer />
-    <Nav transition:persist="nav" />
+    {!isOsChrome && <div id="read-progress" aria-hidden="true" transition:persist="read-progress"></div>}
+    {!isOsChrome && (
+      <div id="bg-gradient" class="fixed inset-0 -z-10" style="background: linear-gradient(160deg, var(--bg-base) 0%, #070811 52%, #05060d 100%);" transition:persist></div>
+    )}
+    {!isOsChrome && <MoatLayer />}
+    {!isOsChrome && <Nav transition:persist="nav" />}
     <SearchModal transition:persist="search-modal" />
     <GlobalToolPreview transition:persist="tool-preview" />
     <SourcePreviewLayer transition:persist="source-preview" />
-    <main id="main-content" class="max-w-6xl mx-auto px-4" data-pagefind-body>
+    <main id="main-content" class:list={[isOsChrome ? 'os-main-content' : 'max-w-6xl mx-auto px-4']} data-pagefind-body>
       <slot />
     </main>
-    <Footer transition:persist="footer" />
+    {!isOsChrome && <Footer transition:persist="footer" />}
     <CookieConsent transition:persist="cookie-consent" />
     <CompareTray transition:persist="compare-tray" />
 

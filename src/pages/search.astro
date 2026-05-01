@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ToolLogo from '../components/ToolLogo.astro';
+import OsPageShell from '../components/os/OsPageShell.astro';
 import '../styles/p3-canvas.css';
 
 const allTools = await getCollection('tools');
@@ -34,8 +35,15 @@ const totalTools = tools.length;
 <BaseLayout
   title="Search - aipedia.wiki"
   description={`Search and browse all ${totalTools} AI tools reviewed on aipedia.wiki.`}
+  chrome="os"
 >
-  <div class="p3-canvas search-index not-prose" data-search-index>
+  <OsPageShell
+    activeApp="ask"
+    appTitle="ask-finder"
+    appSubtitle={`${totalTools} indexed tools`}
+    command="find --plain-english"
+  >
+    <div class="p3-canvas search-index not-prose" data-search-index>
     <section class="search-index-hero" aria-labelledby="search-title">
       <div class="search-index-copy">
         <p class="search-index-eyebrow">Aipedia Index</p>
@@ -137,7 +145,8 @@ const totalTools = tools.length;
         <p>No tools match that search.</p>
       </div>
     </section>
-  </div>
+    </div>
+  </OsPageShell>
 
   <script is:inline>
     (() => {

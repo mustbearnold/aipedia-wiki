@@ -1,11 +1,11 @@
 # Project Knowledge Graph Report
 
-Generated: 2026-05-01T06:01:33.248Z
+Generated: 2026-05-01T10:51:55.521Z
 
 ## Summary
 
-- Total files in graph: 3186
-- Total indexed bytes: 77.9 MB
+- Total files in graph: 3189
+- Total indexed bytes: 77.7 MB
 - Node types: 8
 - Edge types: 6
 
@@ -14,10 +14,10 @@ Generated: 2026-05-01T06:01:33.248Z
 | Type | Count |
 | --- | --- |
 | asset | 1173 |
-| astro_page | 50 |
+| astro_page | 51 |
 | config | 9 |
-| directory | 109 |
-| file | 219 |
+| directory | 110 |
+| file | 221 |
 | markdown_page | 853 |
 | observation | 959 |
 | script | 49 |
@@ -26,23 +26,23 @@ Generated: 2026-05-01T06:01:33.248Z
 
 | Type | Count |
 | --- | --- |
-| contains | 2411 |
+| contains | 2415 |
 | defines_script | 49 |
 | has_frontmatter | 833 |
-| imports | 226 |
-| links_to | 5312 |
-| uses_asset | 1558 |
+| imports | 259 |
+| links_to | 5330 |
+| uses_asset | 1561 |
 
 ## Largest Folders
 
 | Folder | Size |
 | --- | --- |
-| public | 55.2 MB |
-| public/og | 48.2 MB |
-| public/og/news | 34.1 MB |
+| public | 54.9 MB |
+| public/og | 47.8 MB |
+| public/og/news | 33.8 MB |
 | public/og/tools | 14.1 MB |
 | brand-mockups | 13.6 MB |
-| src | 6.9 MB |
+| src | 7.0 MB |
 | src/content | 5.3 MB |
 | brand-mockups/neural-bloom-variants | 2.8 MB |
 | src/content/tools | 2.7 MB |

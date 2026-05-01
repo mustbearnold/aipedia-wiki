@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ToolCard from '../../components/ToolCard.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
+import OsPageShell from '../../components/os/OsPageShell.astro';
 import BreadcrumbLD from '../../components/seo/BreadcrumbLD.astro';
 import ItemListLD from '../../components/seo/ItemListLD.astro';
 import { categoryLabel } from '../../utils/tool-metadata';
@@ -88,6 +89,7 @@ const categoryEmojiMap: Record<string, string> = {
 <BaseLayout
   title="All AI Tools — Complete A-Z Index — aipedia.wiki"
   description={toolsDescription}
+  chrome="os"
 >
   <BreadcrumbLD items={[
     { name: 'Home', url: new URL('/', siteBase).href },
@@ -99,7 +101,13 @@ const categoryEmojiMap: Record<string, string> = {
     items={toolsItemList}
     siteBase={siteBase}
   />
-  <Breadcrumb items={[{ label: 'All Tools' }]} />
+  <OsPageShell
+    activeApp="packages"
+    appTitle="package-manager"
+    appSubtitle={`${scoredTools.length} packages`}
+    command={`apt search --tools=${scoredTools.length}`}
+  >
+    <Breadcrumb items={[{ label: 'All Tools' }]} />
 
   <section class="idx-hero" data-pagefind-ignore>
     <div class="idx-eyebrow">
@@ -313,6 +321,7 @@ const categoryEmojiMap: Record<string, string> = {
     <p>No tools match those filters.</p>
     <button class="tools-reset" type="button" data-tools-empty-reset>Reset</button>
   </div>
+  </OsPageShell>
 
   <script is:inline>
     (() => {

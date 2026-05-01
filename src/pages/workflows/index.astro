@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import OsPageShell from '../../components/os/OsPageShell.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
 import EmailCapture from '../../components/EmailCapture.astro';
 import { getCollection } from 'astro:content';
@@ -28,7 +29,14 @@ const sorted = entries
 <BaseLayout
   title="AI Workflow Tutorials — Real Stacks That Ship — aipedia.wiki"
   description="Real workflow tutorials for solo operators and small teams. How to build a podcast, research pipeline, micro-SaaS, newsletter, and more using specific AI tool stacks."
+  chrome="os"
 >
+  <OsPageShell
+    activeApp="manual"
+    appTitle="workflow-manual"
+    appSubtitle={`${sorted.length} stacks`}
+    command={`man /workflows --stacks=${sorted.length}`}
+  >
   <Breadcrumb items={[{ label: 'Workflows' }]} />
 
   <section class="idx-hero" data-pagefind-ignore>
@@ -71,4 +79,5 @@ const sorted = entries
   </section>
 
   <EmailCapture variant="footer" source="workflows-index" />
+  </OsPageShell>
 </BaseLayout>

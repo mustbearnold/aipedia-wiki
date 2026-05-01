@@ -17,6 +17,7 @@
  */
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import EmailCapture from '../../components/EmailCapture.astro';
+import OsPageShell from '../../components/os/OsPageShell.astro';
 import BreadcrumbLD from '../../components/seo/BreadcrumbLD.astro';
 import CollectionPageLD from '../../components/seo/CollectionPageLD.astro';
 import ToolLogo from '../../components/ToolLogo.astro';
@@ -212,6 +213,7 @@ const newsItems = sorted.slice(0, 100).map((item) => ({
 <BaseLayout
   title="AI Tools News · Daily Desk · aipedia.wiki"
   description={newsDescription}
+  chrome="os"
 >
   <BreadcrumbLD items={breadcrumbs} />
   <CollectionPageLD
@@ -221,7 +223,13 @@ const newsItems = sorted.slice(0, 100).map((item) => ({
     items={newsItems}
     itemType="NewsArticle"
   />
-  <div class="p3-canvas">
+  <OsPageShell
+    activeApp="news"
+    appTitle="news-daemon"
+    appSubtitle={`${sorted.length} dispatches`}
+    command="tail -f /news/latest"
+  >
+    <div class="p3-canvas">
 
     <!-- Breadcrumbs -->
     <nav class="p3-crumbs" aria-label="Breadcrumb" data-reveal>
@@ -509,7 +517,8 @@ const newsItems = sorted.slice(0, 100).map((item) => ({
     <div class="p3-email" data-reveal>
       <EmailCapture variant="footer" source="news-index" />
     </div>
-  </div>
+    </div>
+  </OsPageShell>
 
   <!-- News-specific styling additions that extend p3-canvas.css. Kept
        inline because these classes are only used by this page. -->

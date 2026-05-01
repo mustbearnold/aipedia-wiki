@@ -5,6 +5,7 @@
  */
 import BaseLayout from './BaseLayout.astro';
 import '../styles/t2-canvas.css';
+import OsPageShell from '../components/os/OsPageShell.astro';
 import BreadcrumbLD from '../components/seo/BreadcrumbLD.astro';
 import ItemListLD from '../components/seo/ItemListLD.astro';
 import ShareButtons from '../components/ShareButtons.astro';
@@ -146,13 +147,20 @@ const pricingFilters = [
 ];
 ---
 
-<BaseLayout title={seoTitle ?? title} description={description}>
+<BaseLayout title={seoTitle ?? title} description={description} chrome="os">
   <BreadcrumbLD items={breadcrumbLdItems} />
   {itemListItems.length > 0 && (
     <ItemListLD name={title} description={description} items={itemListItems} siteBase={siteBase} />
   )}
 
-  <div class="t2-canvas">
+  <OsPageShell
+    activeApp="packages"
+    appTitle="category-workspace"
+    appSubtitle={`${tools.length} ranked tools`}
+    command={`open /categories/${slug}`}
+    density="article"
+  >
+    <div class="t2-canvas">
     <!-- Breadcrumb -->
     <nav class="t2-breadcrumb" aria-label="Breadcrumb">
       <a href="/">Home</a>
@@ -345,7 +353,8 @@ const pricingFilters = [
         <FeedbackForm toolName={title} />
       </article>
     </div>
-  </div>
+    </div>
+  </OsPageShell>
 
   <script is:inline>
     (() => {

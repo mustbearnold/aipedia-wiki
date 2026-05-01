@@ -12,6 +12,7 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from './BaseLayout.astro';
 import '../styles/t2-canvas.css';
+import OsPageShell from '../components/os/OsPageShell.astro';
 import ReadingProgress from '../components/ReadingProgress.astro';
 import BreadcrumbLD from '../components/seo/BreadcrumbLD.astro';
 import SoftwareApplicationLD from '../components/seo/SoftwareApplicationLD.astro';
@@ -243,6 +244,7 @@ const relatedNews = allNews
   title={f.seo_title ?? f.title}
   description={f.meta_description ?? f.tagline ?? ''}
   ogImage={`/og/tools/${toolSlug}.png`}
+  chrome="os"
 >
   <ReadingProgress />
   <BreadcrumbLD items={breadcrumbLdItems} />
@@ -273,7 +275,14 @@ const relatedNews = allNews
     {overall < 8 && <span data-pagefind-filter="Score">Below 8</span>}
   </div>
 
-  <div class="t2-canvas">
+  <OsPageShell
+    activeApp="packages"
+    appTitle="package-details"
+    appSubtitle={`${overall.toFixed(1)}/10 score`}
+    command={`inspect /tools/${toolSlug}`}
+    density="article"
+  >
+    <div class="t2-canvas">
     <!-- Breadcrumb -->
     <nav class="t2-breadcrumb" aria-label="Breadcrumb" data-reveal>
       <a href="/">Home</a>
@@ -531,7 +540,8 @@ const relatedNews = allNews
         </aside>
       )}
     </div>
-  </div>
+    </div>
+  </OsPageShell>
 
   <StickyMobileCTA
     name={f.title}

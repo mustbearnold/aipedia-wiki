@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import OsPageShell from '../../components/os/OsPageShell.astro';
 import BreadcrumbLD from '../../components/seo/BreadcrumbLD.astro';
 import glossaryRaw from '../../content/glossary/index.md?raw';
 
@@ -109,9 +110,15 @@ const breadcrumbItems = [
 ];
 ---
 
-<BaseLayout title="AI Glossary | aipedia.wiki" description={description}>
+<BaseLayout title="AI Glossary | aipedia.wiki" description={description} chrome="os">
   <BreadcrumbLD items={breadcrumbItems} />
 
+  <OsPageShell
+    activeApp="trust"
+    appTitle="glossary-viewer"
+    appSubtitle={`${terms.length} terms`}
+    command={`apropos ai --terms=${terms.length}`}
+  >
   <div class="glossary-desk" data-glossary-desk data-refresh-surface="home-adjacent">
     <nav class="glossary-desk__breadcrumb" aria-label="Breadcrumb" data-pagefind-ignore>
       <a href="/">Home</a>
@@ -233,6 +240,7 @@ const breadcrumbItems = [
       </section>
     </div>
   </div>
+  </OsPageShell>
 
   <script is:inline>
     function initGlossaryDesk() {

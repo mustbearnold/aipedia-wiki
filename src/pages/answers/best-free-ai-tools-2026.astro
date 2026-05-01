@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import OsPageShell from '../../components/os/OsPageShell.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
 import AnswerContent from '../../components/AnswerContent.astro';
 
@@ -29,8 +30,15 @@ const answerLD = JSON.stringify({
 });
 ---
 
-<BaseLayout title="Best Free AI Tools (2026): Definitive Answer" description="ChatGPT, Claude, Gemini, Perplexity, and NotebookLM are the strongest free AI tools in April 2026, with important limits to understand.">
+<BaseLayout title="Best Free AI Tools (2026): Definitive Answer" description="ChatGPT, Claude, Gemini, Perplexity, and NotebookLM are the strongest free AI tools in April 2026, with important limits to understand." chrome="os">
   <script type="application/ld+json" set:html={answerLD} />
+  <OsPageShell
+    activeApp="ask"
+    appTitle="answer-viewer"
+    appSubtitle="Definitive answer"
+    command={`ask ${Astro.url.pathname}`}
+    density="article"
+  >
   <Breadcrumb items={[{ label: 'Answers', href: '/answers/' }, { label: 'What are the best free AI tools in 2026?' }]} />
 
   <article class="max-w-2xl mx-auto py-6">
@@ -49,4 +57,5 @@ const answerLD = JSON.stringify({
       <p>This answer reflects flagship models and pricing as of April 2026. See our <a href="/about/scoring/" class="text-[var(--accent-primary)] no-underline hover:underline">scoring methodology</a> for how we evaluate tools.</p>
     </div>
   </article>
+  </OsPageShell>
 </BaseLayout>

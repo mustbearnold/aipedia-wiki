@@ -11,6 +11,7 @@
 // fetches. The catalog is small enough (~200 tools) that this is
 // well under any pageweight budget.
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import OsPageShell from '../../components/os/OsPageShell.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
 import BreadcrumbLD from '../../components/seo/BreadcrumbLD.astro';
 import { getCollection } from 'astro:content';
@@ -75,12 +76,19 @@ const popularComparisons = [
 <BaseLayout
   title="Build a head-to-head comparison, aipedia.wiki"
   description="Pick any 2 to 4 AI tools from the aipedia.wiki catalog and compare them side by side: scores across Utility, Value, Moat, Longevity, plus pricing, best-for, and skip-if."
+  chrome="os"
 >
   <BreadcrumbLD items={[
     { name: 'Home', url: siteBase },
     { name: 'Compare', url: `${siteBase}compare/` },
     { name: 'Build', url: `${siteBase}compare/build/` },
   ]} />
+  <OsPageShell
+    activeApp="compare"
+    appTitle="diff-builder"
+    appSubtitle={`${catalog.length} available packages`}
+    command={`diff --interactive --catalog=${catalog.length}`}
+  >
   <Breadcrumb items={[
     { label: 'Compare', href: '/compare/' },
     { label: 'Build your own' },
@@ -522,4 +530,5 @@ const popularComparisons = [
       });
     })();
   </script>
+  </OsPageShell>
 </BaseLayout>

@@ -1,0 +1,108 @@
+---
+import '../../styles/os-shell.css';
+
+type ActiveApp = 'ask' | 'packages' | 'compare' | 'news' | 'manual' | 'stack' | 'trust';
+type Density = 'wide' | 'article';
+
+interface Props {
+  activeApp?: ActiveApp;
+  appTitle?: string;
+  appSubtitle?: string;
+  command?: string;
+  density?: Density;
+}
+
+const {
+  activeApp = 'packages',
+  appTitle = 'package-manager',
+  appSubtitle = 'wiki app',
+  command = 'open --workspace=current',
+  density = 'wide',
+} = Astro.props;
+
+const apps: Array<{ id: ActiveApp; token: string; label: string; href: string }> = [
+  { id: 'ask', token: 'AI', label: 'Ask', href: '/search/' },
+  { id: 'packages', token: 'PK', label: 'Packages', href: '/tools/' },
+  { id: 'compare', token: 'DF', label: 'Compare', href: '/compare/' },
+  { id: 'news', token: 'NW', label: 'News', href: '/news/' },
+  { id: 'manual', token: 'MN', label: 'Manual', href: '/guides/' },
+  { id: 'stack', token: 'SB', label: 'Stack', href: '/stack-builder/' },
+  { id: 'trust', token: 'TM', label: 'Trust', href: '/about/scoring/' },
+];
+---
+
+<div class="os-page-shell" data-os-page-shell>
+  <div class="os-page-wallpaper" aria-hidden="true">
+    <span class="os-page-grid"></span>
+    <span class="os-page-scanline"></span>
+    <span class="os-page-beam os-page-beam-one"></span>
+    <span class="os-page-beam os-page-beam-two"></span>
+  </div>
+
+  <header class="os-page-panel" aria-label="aipedia.wiki desktop panel">
+    <div class="os-page-panel-left">
+      <a class="os-page-brand" href="/" data-astro-prefetch="viewport" aria-label="aipedia.wiki home">
+        <img src="/brand/aipedia-logo-crystal-cyan-128.png" alt="" width="24" height="24" />
+        <span>aipedia.wiki</span>
+      </a>
+      <nav class="os-page-workspaces" aria-label="Primary workspaces">
+        <a class:list={[activeApp === 'packages' && 'is-active']} href="/tools/">Packages</a>
+        <a class:list={[activeApp === 'compare' && 'is-active']} href="/compare/">Diff</a>
+        <a class:list={[activeApp === 'news' && 'is-active']} href="/news/">Intel</a>
+        <a class:list={[activeApp === 'manual' && 'is-active']} href="/guides/">Manual</a>
+      </nav>
+    </div>
+    <div class="os-page-panel-right">
+      <a class:list={['os-page-panel-chip', activeApp === 'ask' && 'is-active']} href="/search/">Ask Finder</a>
+      <a class:list={['os-page-panel-chip', activeApp === 'news' && 'is-active']} href="/news/">News</a>
+      <div class="os-page-clock" data-os-page-clock>--:--</div>
+    </div>
+  </header>
+
+  <nav class="os-page-dock" aria-label="Application dock">
+    {apps.map((app) => (
+      <a class:list={[activeApp === app.id && 'is-active']} href={app.href} data-astro-prefetch="viewport">
+        <span>{app.token}</span>
+        <b>{app.label}</b>
+      </a>
+    ))}
+  </nav>
+
+  <div class:list={['os-page-stage', density === 'article' && 'is-article']}>
+    <div class="os-page-prompt" aria-hidden="true">
+      <span class="os-page-prompt-user">root@aipedia</span><span class="os-page-prompt-path">:~$</span>
+      <span class="os-page-prompt-command">{command}</span>
+    </div>
+
+    <section class="os-page-window" aria-label={appTitle}>
+      <div class="os-page-window-bar">
+        <div class="os-page-window-controls" aria-hidden="true"><span></span><span></span><span></span></div>
+        <strong>{appTitle}</strong>
+        <span>{appSubtitle}</span>
+      </div>
+      <div class="os-page-window-body">
+        <slot />
+      </div>
+    </section>
+  </div>
+</div>
+
+<script is:inline>
+  (() => {
+    const clocks = document.querySelectorAll('[data-os-page-clock]');
+    if (!clocks.length) return;
+
+    const tick = () => {
+      const now = new Date();
+      const time = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+      clocks.forEach((clock) => {
+        clock.textContent = time;
+      });
+    };
+
+    tick();
+    if (!window.__aipediaOsClock) {
+      window.__aipediaOsClock = window.setInterval(tick, 30000);
+    }
+  })();
+</script>

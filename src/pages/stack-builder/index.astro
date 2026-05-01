@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
+import OsPageShell from '../../components/os/OsPageShell.astro';
 import { getCollection } from 'astro:content';
 import { shortenPrice } from '../../utils/shorten-price';
 
@@ -249,8 +250,15 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
 <BaseLayout
   title="AI Stack Builder: Find Your Perfect AI Tool Stack (April 2026)"
   description="Pick your role, set your budget, get a curated AI tool stack. Multi-role support, swap any tool, share the result. Recently-updated badges flag tools that shipped in the last 14 days."
+  chrome="os"
 >
-  <Breadcrumb items={[{ label: 'Stack Builder' }]} />
+  <OsPageShell
+    activeApp="stack"
+    appTitle="stack-installer"
+    appSubtitle={`${roles.length} roles`}
+    command="install --stack --guided"
+  >
+    <Breadcrumb items={[{ label: 'Stack Builder' }]} />
 
   <section class="sb-hero">
     <div class="sb-hero-copy">
@@ -385,6 +393,7 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
       Editorial-curated from our {activeToolCount} active tool reviews and hands-on use. Rankings follow the <a href="/about/scoring/" class="text-[var(--accent-primary)] no-underline hover:underline">scoring methodology</a>. Affiliate relationships do not influence placement. "Recently updated" badges flag tools with news in the last 14 days. Disagree with a pick? <a href="/about/#corrections--contact" class="text-[var(--accent-primary)] no-underline hover:underline">Tell us why</a>.
     </p>
   </section>
+  </OsPageShell>
 
   <style>
     .sb-hero {
