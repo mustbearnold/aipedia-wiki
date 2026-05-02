@@ -41,8 +41,13 @@ const panelApps = [
 
 <div class="os-page-shell" data-os-page-shell>
   <div class="os-page-wallpaper" aria-hidden="true">
+    <span class="os-page-depth"></span>
     <span class="os-page-grid"></span>
+    <span class="os-page-lattice"></span>
     <span class="os-page-scanline"></span>
+    <span class="os-page-telemetry"></span>
+    <span class="os-page-ribbon os-page-ribbon-one"></span>
+    <span class="os-page-ribbon os-page-ribbon-two"></span>
     <span class="os-page-beam os-page-beam-one"></span>
     <span class="os-page-beam os-page-beam-two"></span>
   </div>
@@ -121,5 +126,158 @@ const panelApps = [
     if (!window.__aipediaOsClock) {
       window.__aipediaOsClock = window.setInterval(tick, 30000);
     }
+  })();
+
+  (() => {
+    const shell = document.querySelector('[data-os-page-shell]');
+    if (!shell) return;
+
+    const reducedMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)');
+    const props = [
+      '--os-wallpaper-shift',
+      '--os-grid-shift-x',
+      '--os-grid-shift-y',
+      '--os-depth-shift-x',
+      '--os-depth-shift-y',
+      '--os-lattice-shift-x',
+      '--os-lattice-shift-y',
+      '--os-telemetry-shift-x',
+      '--os-telemetry-shift-y',
+      '--os-ribbon-one-x',
+      '--os-ribbon-one-y',
+      '--os-ribbon-two-x',
+      '--os-ribbon-two-y',
+      '--os-beam-one-x',
+      '--os-beam-one-y',
+      '--os-beam-two-x',
+      '--os-beam-two-y',
+    ];
+
+    const clearMotion = () => {
+      props.forEach((prop) => shell.style.removeProperty(prop));
+    };
+
+    if (reducedMotion?.matches) {
+      clearMotion();
+      return;
+    }
+
+    const px = (value) => `${value.toFixed(2)}px`;
+    const target = {};
+    const current = {};
+    const response = {
+      '--os-wallpaper-shift': 0.74,
+      '--os-grid-shift-x': 0.92,
+      '--os-grid-shift-y': 0.92,
+      '--os-depth-shift-x': 0.58,
+      '--os-depth-shift-y': 0.58,
+      '--os-lattice-shift-x': 0.46,
+      '--os-lattice-shift-y': 0.46,
+      '--os-telemetry-shift-x': 0.42,
+      '--os-telemetry-shift-y': 0.42,
+      '--os-ribbon-one-x': 0.68,
+      '--os-ribbon-one-y': 0.68,
+      '--os-ribbon-two-x': 0.62,
+      '--os-ribbon-two-y': 0.62,
+      '--os-beam-one-x': 0.84,
+      '--os-beam-one-y': 0.84,
+      '--os-beam-two-x': 0.78,
+      '--os-beam-two-y': 0.78,
+    };
+
+    const setTarget = () => {
+      const scrollY = Math.max(0, window.scrollY || document.documentElement.scrollTop || 0);
+      const wallpaper = Math.min(36, scrollY * 0.035);
+      const gridY = Math.min(30, scrollY * 0.055);
+      const drift = Math.min(18, scrollY * 0.018);
+      const depth = Math.min(44, scrollY * 0.04);
+      const lattice = Math.min(32, scrollY * 0.026);
+      const telemetry = Math.min(42, scrollY * 0.034);
+
+      target['--os-wallpaper-shift'] = -wallpaper;
+      target['--os-grid-shift-x'] = -drift;
+      target['--os-grid-shift-y'] = -gridY;
+      target['--os-depth-shift-x'] = -depth * 0.7;
+      target['--os-depth-shift-y'] = -depth;
+      target['--os-lattice-shift-x'] = lattice * 0.55;
+      target['--os-lattice-shift-y'] = -lattice;
+      target['--os-telemetry-shift-x'] = -telemetry;
+      target['--os-telemetry-shift-y'] = telemetry * 0.42;
+      target['--os-ribbon-one-x'] = drift * 2.1;
+      target['--os-ribbon-one-y'] = -wallpaper * 0.78;
+      target['--os-ribbon-two-x'] = -drift * 2.3;
+      target['--os-ribbon-two-y'] = wallpaper * 0.62;
+      target['--os-beam-one-x'] = drift * 1.15;
+      target['--os-beam-one-y'] = -wallpaper * 0.42;
+      target['--os-beam-two-x'] = -drift * 1.3;
+      target['--os-beam-two-y'] = wallpaper * 0.34;
+    };
+
+    const applyMotion = (values) => {
+      props.forEach((prop) => {
+        shell.style.setProperty(prop, px(values[prop] || 0));
+      });
+    };
+
+    setTarget();
+    props.forEach((prop) => {
+      current[prop] = target[prop] || 0;
+    });
+    applyMotion(current);
+
+    let frame = 0;
+    let lastTime = 0;
+
+    const tick = (time) => {
+      const dt = Math.min(48, Math.max(8, time - (lastTime || time)));
+      lastTime = time;
+      const baseBlend = 1 - Math.pow(0.78, dt / 16.67);
+      let moving = false;
+
+      props.forEach((prop) => {
+        const goal = target[prop] || 0;
+        const value = current[prop] || 0;
+        const delta = goal - value;
+
+        if (Math.abs(delta) > 0.02) {
+          const blend = baseBlend * (response[prop] || 0.7);
+          current[prop] = value + delta * blend;
+          moving = true;
+        } else {
+          current[prop] = goal;
+        }
+      });
+
+      applyMotion(current);
+
+      if (moving) {
+        frame = requestAnimationFrame(tick);
+      } else {
+        frame = 0;
+        lastTime = 0;
+      }
+    };
+
+    const requestUpdate = () => {
+      setTarget();
+      if (!frame) frame = requestAnimationFrame(tick);
+    };
+
+    window.addEventListener('scroll', requestUpdate, { passive: true });
+    window.addEventListener('resize', requestUpdate, { passive: true });
+    reducedMotion?.addEventListener?.('change', (event) => {
+      if (event.matches) {
+        if (frame) cancelAnimationFrame(frame);
+        frame = 0;
+        lastTime = 0;
+        clearMotion();
+      } else {
+        setTarget();
+        props.forEach((prop) => {
+          current[prop] = target[prop] || 0;
+        });
+        applyMotion(current);
+      }
+    });
   })();
 </script>

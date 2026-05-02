@@ -21,13 +21,14 @@ affiliate:
   application_status: approved
   approved_date: 2026-04-23
   link: https://grow.amplemarket.com/aipediawiki
+  notes: "Approved link configured. Internal monetization terms should not be surfaced in public editorial copy."
 scores:
   utility: 8
   value: 6
   moat: 7
   longevity: 8
 tags: [ai-sdr, sales-intelligence, lead-generation, sales-automation, cold-email, sales-engagement, outbound]
-seo_title: "Amplemarket: AI SDR Platform Features, Pricing & Review (April 2026)"
+seo_title: "Amplemarket Review: AI SDR Features, Pricing & Limits (May 2026)"
 meta_description: "Amplemarket bundles a 200M+ contact database, multichannel sequences, and the Duo AI agent suite (Copilot, Copywriter, Voice, Inbox). Startup plan $600/mo for 2 users on annual billing. Growth and Elite are custom-priced."
 author: "aipedia.wiki Editorial"
 best_for:
@@ -80,7 +81,7 @@ Every plan is annual only. The entry Startup tier is $600/month for 2 users. Gro
 | **CRM integrations** | Salesforce, HubSpot, Pipedrive (native) |
 | **Onboarding** | Community (Startup) or personalised CSM (Growth, Elite) |
 
-Every data point above was verified against Amplemarket's pricing page on 2026-04-23. See Sources.
+Every data point above was rechecked against Amplemarket's pricing page and pricing explainer on 2026-05-02. See Sources.
 
 ## What it actually is
 
@@ -121,7 +122,7 @@ Pricing via [amplemarket.com/pricing](https://amplemarket.com/pricing). Annual o
 | Growth | Custom (typical $1-2K/mo) | 4 | 70,000 | 1,500 | + Voice | **Working mid-market SDR teams** |
 | Elite | Custom | 10 | 100,000 | 3,600 | + Inbox (auto-reply) | Formal sales orgs at scale |
 
-Prices verified 2026-04-23 via [amplemarket.com/pricing](https://amplemarket.com/pricing) and the [Amplemarket pricing explainer](https://www.amplemarket.com/blog/amplemarket-pricing). Every plan requires an annual commitment; no monthly billing. Additional seats purchasable at a per-seat rate quoted with the plan.
+Prices verified 2026-05-02 via [amplemarket.com/pricing](https://amplemarket.com/pricing) and the [Amplemarket pricing explainer](https://www.amplemarket.com/blog/amplemarket-pricing). Every plan requires an annual commitment; no monthly billing. Additional seats purchasable at a per-seat rate quoted with the plan.
 
 ## Against the alternatives
 
@@ -149,7 +150,7 @@ Prices verified 2026-04-23 via [amplemarket.com/pricing](https://amplemarket.com
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-23 against [Amplemarket pricing](https://amplemarket.com/pricing), the [Amplemarket pricing explainer](https://www.amplemarket.com/blog/amplemarket-pricing), and independent reviews including [MarketBetter](https://www.marketbetter.ai/blog/amplemarket-pricing-breakdown-2026/) and [G2](https://www.g2.com/products/amplemarket/reviews).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-02 against [Amplemarket pricing](https://amplemarket.com/pricing), the [Amplemarket pricing explainer](https://www.amplemarket.com/blog/amplemarket-pricing), and independent reviews including [MarketBetter](https://www.marketbetter.ai/blog/amplemarket-pricing-breakdown-2026/) and [G2](https://www.g2.com/products/amplemarket/reviews).
 
 ## FAQ
 
@@ -177,7 +178,7 @@ Duo is Amplemarket's AI agent suite. Four specialised agents share prospect and 
 <details>
 <summary>Does Amplemarket offer monthly billing?</summary>
 
-No. Every tier is annual-only. Monthly billing is not available at any price point as of April 2026. Apollo, Instantly, and Clay all offer monthly plans if that flexibility is required.
+No. Every tier is annual-only. Monthly billing is not available at any price point as of 2026-05-02. Apollo, Instantly, and Clay all offer monthly plans if that flexibility is required.
 
 </details>
 

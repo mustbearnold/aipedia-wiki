@@ -82,99 +82,6 @@ const decisionPaths = [
   },
 ];
 
-const homeSearchItems = [
-  ...activeTools.map((tool) => {
-    const slug = entrySlug(tool);
-    const score = scoreFor(tool);
-    const categories = Array.from(new Set([
-      tool.data.category,
-      ...(tool.data.secondary_categories ?? []),
-    ].filter(Boolean)));
-    const categoryLabels = categories.map((category) => categoryLabel(category));
-    return {
-      kind: 'Tool',
-      title: tool.data.title,
-      href: `/tools/${slug}/`,
-      meta: `${categoryLabels[0] || 'AI tool'} · ${score.toFixed(1)}/10`,
-      detail: tool.data.tagline ?? tool.data.meta_description ?? '',
-      badge: tool.data.price_range ?? tool.data.pricing_model ?? '',
-      priority: Math.round(score * 10) + 60,
-      search: [
-        tool.data.title,
-        tool.data.company,
-        slug,
-        tool.data.tagline,
-        tool.data.meta_description,
-        tool.data.price_range,
-        tool.data.pricing_model,
-        ...categories,
-        ...categoryLabels,
-        ...(tool.data.tags ?? []),
-        ...(tool.data.best_for ?? []),
-        ...(tool.data.not_best_for ?? []),
-      ].filter(Boolean).join(' ').toLowerCase(),
-    };
-  }),
-  ...allComparisons.map((comparison) => {
-    const slug = entrySlug(comparison);
-    const comparedTools = comparison.data.tools ?? [];
-    return {
-      kind: 'Compare',
-      title: comparison.data.title,
-      href: `/compare/${slug}/`,
-      meta: 'Comparison guide',
-      detail: comparison.data.meta_description ?? (comparedTools.length ? comparedTools.join(' vs ') : ''),
-      badge: comparedTools.length ? `${comparedTools.length} tools` : '',
-      priority: 54,
-      search: [
-        comparison.data.title,
-        comparison.data.category,
-        comparison.data.winner,
-        comparison.data.meta_description,
-        ...comparedTools,
-      ].filter(Boolean).join(' ').toLowerCase(),
-    };
-  }),
-  ...allNews.map((news) => {
-    const slug = entrySlug(news);
-    return {
-      kind: 'News',
-      title: news.data.title,
-      href: `/news/${slug}/`,
-      meta: String(news.data.date),
-      detail: news.data.summary ?? news.data.description ?? '',
-      badge: news.data.severity ?? '',
-      priority: 46,
-      search: [
-        news.data.title,
-        news.data.summary,
-        news.data.description,
-        news.data.severity,
-        String(news.data.date),
-      ].filter(Boolean).join(' ').toLowerCase(),
-    };
-  }),
-  ...allCategories.map((category) => {
-    const slug = entrySlug(category);
-    return {
-      kind: 'Category',
-      title: category.data.title,
-      href: `/categories/${slug}/`,
-      meta: 'Category',
-      detail: category.data.description ?? category.data.meta_description ?? '',
-      badge: category.data.tool_count ? `${category.data.tool_count} tools` : '',
-      priority: 42,
-      search: [
-        category.data.title,
-        slug,
-        category.data.description,
-        category.data.meta_description,
-      ].filter(Boolean).join(' ').toLowerCase(),
-    };
-  }),
-];
-
-const homeSearchData = JSON.stringify(homeSearchItems).replace(/</g, '\\u003c');
 ---
 
 <BaseLayout
@@ -348,14 +255,46 @@ const homeSearchData = JSON.stringify(homeSearchItems).replace(/</g, '\\u003c');
       --home-line: var(--os-line, rgba(148, 163, 184, 0.18));
       --home-line-strong: var(--os-line-bright, rgba(94, 234, 212, 0.38));
       --home-text: var(--os-text, #f8fafc);
+      --home-heading: var(--os-heading, #fff);
       --home-muted: var(--os-muted, #a7b3c5);
       --home-dim: var(--os-dim, #6b7b91);
       --home-teal: var(--os-teal, #5eead4);
       --home-cyan: var(--os-cyan, #22d3ee);
+      --home-inverse: var(--os-inverse-text, #031018);
+      --home-search-bg:
+        linear-gradient(180deg, rgba(15, 23, 42, 0.52), rgba(2, 6, 12, 0.78)),
+        rgba(2, 6, 12, 0.82);
+      --home-search-shadow: 0 24px 90px rgba(34, 211, 238, 0.12);
+      --home-search-focus-shadow: 0 24px 90px rgba(34, 211, 238, 0.18);
+      --home-results-bg:
+        linear-gradient(180deg, rgb(12, 22, 36), rgb(4, 8, 16)),
+        #080d18;
+      --home-results-shadow: 0 26px 70px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.04);
+      --home-chip-bg: rgba(15, 23, 42, 0.58);
+      --home-inner-panel: rgba(2, 6, 12, 0.45);
+      --home-input-bg: rgba(2, 6, 12, 0.62);
+      --home-logo-bg: #fff;
       width: 100%;
       margin: 0;
       padding: 0;
       color: var(--home-text);
+    }
+
+    :global(html.light) .home-page {
+      --home-panel: rgba(255, 255, 255, 0.72);
+      --home-panel-strong: rgba(255, 255, 255, 0.92);
+      --home-search-bg:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(241, 247, 252, 0.92)),
+        rgba(255, 255, 255, 0.88);
+      --home-search-shadow: 0 24px 90px rgba(8, 145, 178, 0.10);
+      --home-search-focus-shadow: 0 24px 90px rgba(8, 145, 178, 0.14);
+      --home-results-bg:
+        linear-gradient(180deg, rgb(255, 255, 255), rgb(241, 247, 252)),
+        #ffffff;
+      --home-results-shadow: 0 26px 70px rgba(15, 23, 42, 0.14), 0 0 0 1px rgba(15, 23, 42, 0.04);
+      --home-chip-bg: rgba(255, 255, 255, 0.7);
+      --home-inner-panel: rgba(241, 245, 249, 0.76);
+      --home-input-bg: rgba(255, 255, 255, 0.78);
     }
 
     .home-hero {
@@ -379,7 +318,7 @@ const homeSearchData = JSON.stringify(homeSearchItems).replace(/</g, '\\u003c');
     .home-hero h1 {
       max-width: 760px;
       margin: 18px 0 0;
-      color: #fff;
+      color: var(--home-heading);
       font-size: clamp(46px, 6.4vw, 86px);
       font-weight: 680;
       letter-spacing: 0;
@@ -422,16 +361,14 @@ const homeSearchData = JSON.stringify(homeSearchItems).replace(/</g, '\\u003c');
       padding: 10px 10px 10px 18px;
       border: 1px solid var(--home-line-strong);
       border-radius: 18px;
-      background:
-        linear-gradient(180deg, rgba(15, 23, 42, 0.52), rgba(2, 6, 12, 0.78)),
-        rgba(2, 6, 12, 0.82);
-      box-shadow: 0 24px 90px rgba(34, 211, 238, 0.12);
+      background: var(--home-search-bg);
+      box-shadow: var(--home-search-shadow);
       color: var(--home-teal);
     }
 
     .home-search-box:focus-within {
       border-color: rgba(94, 234, 212, 0.78);
-      box-shadow: 0 24px 90px rgba(34, 211, 238, 0.18);
+      box-shadow: var(--home-search-focus-shadow);
     }
 
     .home-search-box input,
@@ -460,7 +397,7 @@ const homeSearchData = JSON.stringify(homeSearchItems).replace(/</g, '\\u003c');
       padding: 0 18px;
       border: 0;
       border-radius: 13px;
-      color: #031018;
+      color: var(--home-inverse);
       background: linear-gradient(135deg, var(--home-teal), var(--home-cyan));
       font: inherit;
       font-weight: 900;
@@ -475,10 +412,8 @@ const homeSearchData = JSON.stringify(homeSearchItems).replace(/</g, '\\u003c');
       overflow: hidden;
       border: 1px solid rgba(94, 234, 212, 0.34);
       border-radius: 14px;
-      background:
-        linear-gradient(180deg, rgb(12, 22, 36), rgb(4, 8, 16)),
-        #080d18;
-      box-shadow: 0 26px 70px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.04);
+      background: var(--home-results-bg);
+      box-shadow: var(--home-results-shadow);
       color: var(--home-text);
       opacity: 1;
       transform: translateY(0) scale(1);
@@ -582,7 +517,7 @@ const homeSearchData = JSON.stringify(homeSearchItems).replace(/</g, '\\u003c');
     }
 
     :global(.home-search-result-main strong) {
-      color: #fff;
+      color: var(--home-heading);
       font-size: 15px;
       font-weight: 900;
     }
@@ -633,7 +568,7 @@ const homeSearchData = JSON.stringify(homeSearchItems).replace(/</g, '\\u003c');
       border: 1px solid var(--home-line);
       border-radius: 999px;
       color: var(--home-muted);
-      background: rgba(15, 23, 42, 0.58);
+      background: var(--home-chip-bg);
       font: inherit;
       font-size: 13px;
       font-weight: 800;
@@ -659,12 +594,12 @@ const homeSearchData = JSON.stringify(homeSearchItems).replace(/</g, '\\u003c');
       padding: 16px;
       border: 1px solid var(--home-line);
       border-radius: 14px;
-      background: rgba(2, 6, 12, 0.45);
+      background: var(--home-inner-panel);
     }
 
     .home-summary strong {
       display: block;
-      color: #fff;
+      color: var(--home-heading);
       font-size: 34px;
       line-height: 1;
     }
@@ -693,7 +628,7 @@ const homeSearchData = JSON.stringify(homeSearchItems).replace(/</g, '\\u003c');
     .home-trust h2 {
       max-width: 720px;
       margin: 8px 0 0;
-      color: #fff;
+      color: var(--home-heading);
       font-size: clamp(28px, 4vw, 46px);
       font-weight: 720;
       letter-spacing: 0;
@@ -771,7 +706,7 @@ const homeSearchData = JSON.stringify(homeSearchItems).replace(/</g, '\\u003c');
       padding: 0 13px;
       border: 1px solid var(--home-line);
       border-radius: 12px;
-      background: rgba(2, 6, 12, 0.62);
+      background: var(--home-input-bg);
     }
 
     .home-tools {
@@ -791,7 +726,7 @@ const homeSearchData = JSON.stringify(homeSearchItems).replace(/</g, '\\u003c');
 
     .home-tool :global(.home-tool-logo) {
       border-radius: 11px;
-      background: #fff;
+      background: var(--home-logo-bg);
     }
 
     .home-tool span {
@@ -859,7 +794,7 @@ const homeSearchData = JSON.stringify(homeSearchItems).replace(/</g, '\\u003c');
       min-width: 66px;
       min-height: 24px;
       border-radius: 999px;
-      color: #031018;
+      color: var(--home-inverse);
       background: var(--home-teal);
       font-size: 10px;
       font-weight: 900;
@@ -978,14 +913,11 @@ const homeSearchData = JSON.stringify(homeSearchItems).replace(/</g, '\\u003c');
     }
   </style>
 
-  <script type="application/json" id="home-search-data" set:html={homeSearchData}></script>
-
   <script is:inline>
     (() => {
       const root = document.querySelector('[data-home-page]');
       if (!root) return;
 
-      const searchData = JSON.parse(document.getElementById('home-search-data')?.textContent || '[]');
       const searchForm = root.querySelector('[data-home-search]');
       const searchInput = root.querySelector('[data-home-search-input]');
       const searchPanel = root.querySelector('[data-home-search-panel]');
@@ -993,6 +925,11 @@ const homeSearchData = JSON.stringify(homeSearchItems).replace(/</g, '\\u003c');
       const searchHeading = root.querySelector('[data-home-search-heading]');
       const searchCount = root.querySelector('[data-home-search-count]');
       const reducedMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)');
+      const SEARCH_INDEX_URL = '/api/home-search.json';
+      let searchData = [];
+      let searchDataLoaded = false;
+      let searchDataFailed = false;
+      let searchDataPromise;
       let searchHasFocus = false;
 
       const normalize = (value) => String(value || '').trim().toLowerCase();
@@ -1012,6 +949,36 @@ const homeSearchData = JSON.stringify(homeSearchItems).replace(/</g, '\\u003c');
         if (!searchPanel) return;
         searchPanel.hidden = false;
         searchInput?.setAttribute('aria-expanded', 'true');
+      };
+      const setSearchMessage = (message) => {
+        if (!searchResults) return;
+        searchResults.innerHTML = `
+          <div class="home-search-no-results" role="option" aria-disabled="true">
+            ${escapeHtml(message)}
+          </div>
+        `;
+      };
+      const loadSearchData = () => {
+        if (searchDataPromise) return searchDataPromise;
+        searchDataPromise = fetch(SEARCH_INDEX_URL, {
+          headers: { Accept: 'application/json' },
+        })
+          .then((response) => {
+            if (!response.ok) throw new Error(`Search index failed: ${response.status}`);
+            return response.json();
+          })
+          .then((payload) => {
+            searchData = Array.isArray(payload.items) ? payload.items : [];
+            searchDataLoaded = true;
+            return searchData;
+          })
+          .catch(() => {
+            searchDataFailed = true;
+            searchDataLoaded = true;
+            searchData = [];
+            return searchData;
+          });
+        return searchDataPromise;
       };
       const rankSearchItem = (item, terms, query) => {
         const title = normalize(item.title);
@@ -1055,6 +1022,23 @@ const homeSearchData = JSON.stringify(homeSearchItems).replace(/</g, '\\u003c');
           return;
         }
 
+        if (!searchDataLoaded) {
+          if (searchHeading) searchHeading.textContent = 'Loading search';
+          if (searchCount) searchCount.textContent = '';
+          setSearchMessage('Loading matches...');
+          openSearchResults();
+          loadSearchData().then(renderSearchResults);
+          return;
+        }
+
+        if (searchDataFailed) {
+          if (searchHeading) searchHeading.textContent = 'Search unavailable';
+          if (searchCount) searchCount.textContent = '';
+          setSearchMessage('Press Search to open the full search page.');
+          openSearchResults();
+          return;
+        }
+
         const { terms, matches } = matchingSearchItems();
         const shown = matches.slice(0, 7);
         const hasQuery = terms.length > 0;
@@ -1062,11 +1046,7 @@ const homeSearchData = JSON.stringify(homeSearchItems).replace(/</g, '\\u003c');
         if (searchCount) searchCount.textContent = `${shown.length} shown`;
 
         if (!shown.length) {
-          searchResults.innerHTML = `
-            <div class="home-search-no-results" role="option" aria-disabled="true">
-              No matches yet. Press Search to check every page.
-            </div>
-          `;
+          setSearchMessage('No matches yet. Press Search to check every page.');
           openSearchResults();
           return;
         }

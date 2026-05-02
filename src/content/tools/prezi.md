@@ -3,35 +3,36 @@ type: tool
 slug: prezi
 title: Prezi
 tagline: >-
-  Non-linear presentation platform with Prezi AI prompt-to-deck generation, zoom-and-pan storytelling, Prezi Video for on-camera presentations, and 1M+ media library. Basic free to Premium $25/mo individual plus Teams, Education, Business tiers.
+  Non-linear presentation platform with Prezi AI prompt-to-deck generation, zoom-and-pan storytelling, Prezi Video for on-camera presentations, and 1M+ media library. Free evaluation plus Standard, Plus, Premium, Teams, and Education plans.
 category: ai-presentation
 company: prezi
 url: 'https://prezi.com'
 pricing_model: freemium
-price_range: $0-$59/month
+price_range: $0-$39/user/month
 status: active
 launched: 2009-01
-last_updated: 2026-04-19
-last_verified: 2026-04-19
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: true
-  commission: 50% per new subscription (launch offer, valid until July 1, 2026)
+  commission: null
   cookie_days: 90
   network: PartnerStack
-  link: null
-  application_status: applied
+  link: 'https://try.prezi.com/tf9h58whimhz'
+  application_status: approved
   applied_date: 2026-04-19
-  notes: "Applied via PartnerStack 2026-04-19. 50% commission is a time-limited launch promotion ending July 1, 2026; commission rate post-offer TBD."
+  approved_date: 2026-05-02
+  notes: "Applied via PartnerStack 2026-04-19; approved link added 2026-05-02. Internal monetization terms should not be surfaced in public editorial copy."
 scores:
   utility: 7
   value: 7
   moat: 6
   longevity: 7
 tags: [presentations, non-linear-presentation, prezi-ai, prezi-video, zoom-pan, storytelling, ai-presentation]
-seo_title: 'Prezi: Features, Pricing & Review (April 2026)'
+seo_title: 'Prezi: Features, Pricing & Review (May 2026)'
 meta_description: >-
-  Prezi is the non-linear presentation platform. Prezi AI generates full presentations from a prompt; Prezi Video puts presenters on-screen alongside content; the zoom-and-pan canvas breaks the slide format. Basic free to Premium $25/mo, plus Teams, Education, Business tiers.
+  Prezi is the non-linear presentation platform. Prezi AI generates full presentations from a prompt; Prezi Video puts presenters on-screen alongside content; the zoom-and-pan canvas breaks the slide format. Standard starts at $7/mo annually, with Plus, Premium, Teams, and Education plans.
 author: "aipedia.wiki Editorial"
 best_for:
   - sales teams and presenters who want memorable non-linear storytelling
@@ -46,18 +47,18 @@ not_best_for:
 quick_answer: >-
   Prezi is the non-linear presentation platform. Instead of linear slides, you build one big canvas and zoom to sections. Prezi AI generates a full deck from a prompt, Prezi Video puts your face alongside content on screen, and the 1M+ image library fills in visuals. Pick it for memorable sales pitches and storytelling-first presentations. Skip for straightforward business decks where Google Slides or PowerPoint do the job faster.
 price_history:
-  - date: 2026-04-19
-    plan: "Affiliate launch offer"
-    price: "50% commission on new subscriptions"
-    note: "Launch offer through July 1, 2026. Post-offer commission rate not disclosed yet."
-  - date: 2026-04-19
+  - date: 2026-05-02
     plan: "Basic"
     price: "Free"
-    note: "Free tier: limited features, public prezis only."
-  - date: 2026-04-19
+    note: "Free evaluation tier with limited controls; paid plans unlock stronger privacy, export, recording, and presentation features."
+  - date: 2026-05-02
     plan: "Individual tiers"
-    price: "~$15 to $25/mo annual"
-    note: "Individual paid tiers cover private prezis, offline access, Prezi Video, and advanced features. Exact current monthly rates may vary with active promotions; re-verify against prezi.com/pricing before each major citation."
+    price: "$7 / $19 / $29 per month billed annually"
+    note: "Standard, Plus, and Premium pricing verified against Prezi's public pricing page/search crawl."
+  - date: 2026-05-02
+    plan: "Teams"
+    price: "$39/user/month billed annually"
+    note: "Business team tier with collaboration, analytics, custom brand kit, and SSO features."
 ---
 
 # Prezi
@@ -72,7 +73,7 @@ The 2024-2026 era brought **Prezi AI**, a prompt-to-deck generator that builds a
 >
 > **Skip it if your audience expects Google Slides or PowerPoint.** Internal corporate decks, quarterly reviews, investor updates in standard formats, and any presentation that will be printed or read offline pass through better with linear tools. [Gamma](/tools/gamma/) wins if you want AI-first prompt-to-deck speed in a linear format; [Beautiful.ai](/tools/beautiful-ai/) wins for template-driven designer polish; Canva wins for visual-first shareable one-pagers.
 >
-> **Who pays which tier:** Basic free for evaluation (public prezis only). Individual Plus for solo creators needing private prezis + offline access (~$15/mo annual). Premium for presenters wanting Prezi Video + full AI features (~$25/mo annual). Teams for small groups with seat licensing. Education for students and teachers (discounted). Business for admin controls + analytics at enterprise scale.
+> **Who pays which tier:** Basic/free for evaluation. Standard $7/mo annually for personal use with privacy controls and 500 Prezi AI credits. Plus $19/mo annually for business individuals who need unlimited Prezi AI, PowerPoint import, presentation recording, PDF export, and offline access. Premium $29/mo annually adds presentation analytics and advanced support. Teams $39/user/mo annually adds collaboration, brand kit, SSO, and team administration. Education plans are discounted for verified students and educators.
 
 ## Key Facts
 
@@ -82,17 +83,18 @@ The 2024-2026 era brought **Prezi AI**, a prompt-to-deck generator that builds a
 | **AI features** | Prezi AI (prompt-to-deck) · personalized template recommendations · document import (PDF / Word / PPT to Prezi) |
 | **Video product** | Prezi Video (presenter-on-camera alongside content) |
 | **Media library** | 1M+ images, GIFs, icons |
-| **Tiers** | Basic (free) · Individual (Plus / Premium) · Teams · Education · Business |
-| **Individual paid price band** | ~$15 to $25/mo (annual billing) |
-| **Offline access** | Paid individual tiers and above |
+| **Tiers** | Basic/free · Standard · Plus · Premium · Teams · Education |
+| **Individual paid price band** | $7 to $29/mo (annual billing) |
+| **Teams price** | $39/user/mo (annual billing) |
+| **Offline access** | Plus and above |
 | **Privacy controls** | Private prezis on paid tiers only |
-| **Analytics** | Included on paid individual tiers; advanced on Business |
+| **Analytics** | Premium and Teams/Business tiers |
 | **Exports** | PDF · video · PowerPoint (conversion) |
 | **Integrations** | Zoom · Microsoft Teams · Google Meet · Slack |
 | **Accessibility** | Collaborative editing, commenting, presentation sharing |
-| **Compliance** | GDPR · SOC 2 (Business tier) |
+| **Team controls** | Brand kit · SSO · admin controls on Teams/Business |
 
-Every data point above verified against Prezi's published sources on 2026-04-19. Exact monthly rates on individual tiers may vary during promotional periods; verify against [prezi.com/pricing](https://prezi.com/pricing) before committing.
+Every data point above verified against Prezi's published pricing and support sources on 2026-05-02. Exact checkout totals can vary by country, currency, tax, billing cycle, and promotional treatment.
 
 ## What it actually is
 
@@ -130,16 +132,16 @@ Subscription pricing via [prezi.com/pricing](https://prezi.com/pricing):
 
 | Plan | Annual monthly | Best for |
 |---|---|---|
-| Basic | Free | Evaluation, public-only prezis |
-| Individual Plus | ~$15/mo | Solo creators wanting private prezis + offline |
-| Individual Premium | ~$25/mo | Presenters wanting Prezi Video + full AI features |
-| Teams | Custom | Small teams, per-seat licensing, collaboration |
+| Basic / Free | $0 | Evaluation and lightweight public sharing |
+| Standard | $7/mo | Personal use, privacy controls, 500 Prezi AI credits |
+| Plus | $19/mo | Business individuals needing unlimited Prezi AI, recording, PDF export, desktop/offline access |
+| Premium | $29/mo | Presenters who need analytics, advanced training, and stronger support |
+| Teams | $39/user/mo | Collaboration, analytics, brand kit, SSO, and team administration |
 | Education | Discounted | Students, teachers, educators (verification required) |
-| Business | Custom | Admin controls, SSO, analytics, brand management |
 
-Actual monthly rates on individual tiers shift with promotional periods; the PartnerStack launch offer through July 1, 2026 gives referred customers first-subscription discounts. Verify current exact rates against [prezi.com/pricing](https://prezi.com/pricing) before major pricing citations.
+Actual checkout rates can vary with monthly billing, annual billing, region, taxes, and promotional periods. Verify current exact rates against [prezi.com/pricing](https://prezi.com/pricing) before major pricing citations.
 
-Prices verified 2026-04-19 via [Prezi homepage](https://prezi.com/) references and public materials. Specific monthly rates on individual tiers re-verify against Prezi's pricing dropdown, which is personalized and behind login.
+Prices verified 2026-05-02 via Prezi's public pricing pages and support materials.
 
 ## Against the alternatives
 
@@ -149,7 +151,7 @@ Prices verified 2026-04-19 via [Prezi homepage](https://prezi.com/) references a
 | **AI generation** | Prezi AI (prompt-to-deck) | **Gamma AI (fastest)** | Assistant-style | Copilot |
 | **Presenter-on-camera** | **Prezi Video** | None native | None | None native |
 | **Template breadth** | Good | Good | **Strongest** | Good |
-| **Entry price (annual)** | ~$25/mo | ~$16/mo | ~$12/mo | ~$6.99/mo (M365) |
+| **Entry price (annual)** | $7/mo Standard; $19/mo Plus | ~$16/mo | ~$12/mo | ~$6.99/mo (M365) |
 | **Free tier** | Yes (public only) | Yes | Yes | No (comes with M365) |
 | **Collaboration** | Real-time | Real-time | Real-time | Real-time (M365) |
 | **Export to PDF / PPT** | Yes | Yes | Yes | Native |
@@ -161,14 +163,14 @@ Prices verified 2026-04-19 via [Prezi homepage](https://prezi.com/) references a
 - **Non-linear format is not always wanted.** Audiences expecting slides get disoriented by zoom-pan if the presenter does not set the expectation.
 - **Export to PDF flattens the interaction.** Prezis that rely on the zoom-pan storytelling lose their distinctiveness when exported as linear PDFs.
 - **Prezi Video requires practice.** Presenter alignment with on-screen content takes rehearsal; the first couple of recordings tend to feel awkward.
-- **Pricing on individual tiers is not public.** Prezi's pricing dropdown is personalized and behind login; exact monthly rates vary with active promotions.
+- **Pricing can vary by checkout context.** Prezi publishes annual monthly rates, but final checkout can still vary by region, currency, billing cycle, tax, and active promotions.
 - **AI generation is not best-in-class.** Prezi AI is competitive but not at Gamma's speed or Beautiful.ai's design polish. The AI is a supporting feature, not the lead differentiator.
 - **Mobile authoring is limited.** Editing a Prezi on mobile is functional but not where most authoring happens.
 - **Teams tier starts small.** Seat-based Teams pricing starts at low seat counts; enterprise-scale Prezi deployments move to Business tier.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-19 against the [Prezi homepage](https://prezi.com/) and public affiliate-program materials. Individual-tier monthly rates re-verify against the live pricing dropdown (personalized, behind login).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-02 against the [Prezi homepage](https://prezi.com/), [Prezi pricing](https://prezi.com/pricing/), and Prezi support materials.
 
 ## FAQ
 
@@ -184,9 +186,6 @@ A presenter-overlay video product unique to Prezi. While presenting on Zoom, Tea
 **How does Prezi compare to Gamma?**
 Gamma is linear and AI-first with fastest prompt-to-deck generation. Prezi is non-linear and storytelling-first with AI bolted onto the zoom-pan canvas. Presenters who want memorable, interactive, workshop-style delivery land on Prezi; presenters who want fast AI-built linear decks for standard business use land on Gamma.
 
-**What's the affiliate commission?**
-50% per new subscription referred as a launch offer through July 1, 2026. Post-offer commission rate has not been publicly announced. Managed through PartnerStack.
-
 **Does Prezi work offline?**
 Paid individual tiers and above include offline access. Basic tier is browser-only.
 
@@ -199,8 +198,8 @@ No, not really. Prezi's value is in the presentation interaction. Exporting a Pr
 ## Sources
 
 - [Prezi homepage](https://prezi.com/): product descriptions, AI features, Prezi Video
-- [Prezi pricing](https://prezi.com/pricing): plan tiers (individual-tier exact monthly rates behind login)
-- [Prezi partner program](https://prezi.com/partners): affiliate terms
+- [Prezi pricing](https://prezi.com/pricing/): public plan tiers, annual monthly rates, and trial framing
+- [Guide to Prezi plans](https://support.prezi.com/hc/en-us/articles/360003478934): support-center explanation of plan differences
 
 ## Related
 

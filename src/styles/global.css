@@ -1439,8 +1439,7 @@ body.os-chrome-body .os-page-shell::before {
   left: 0;
   height: var(--os-top-shield-height);
   pointer-events: none;
-  background:
-    linear-gradient(180deg, rgba(3, 6, 11, 0.99) 0%, rgba(3, 6, 11, 0.97) 62%, rgba(3, 6, 11, 0.74) 84%, transparent 100%);
+  background: var(--os-top-shield);
   backdrop-filter: blur(10px);
 }
 
@@ -1450,9 +1449,7 @@ body.os-chrome-body .os-page-panel {
   height: var(--os-panel-height);
   min-height: var(--os-panel-height);
   overflow: hidden;
-  background:
-    linear-gradient(180deg, rgba(8, 14, 24, 0.97), rgba(5, 10, 18, 0.94)),
-    rgba(5, 10, 18, 0.96);
+  background: var(--os-panel-bg);
 }
 
 body.os-chrome-body .os-page-panel-left {
@@ -1532,9 +1529,11 @@ body.os-chrome-body .os-page-stage {
 }
 
 body.os-chrome-body .os-page-stage.is-article {
-  width: min(1180px, calc(100vw - 188px));
-  margin-right: 0;
-  margin-left: max(94px, calc((100vw - 1180px) / 2));
+  width: min(var(--os-stage-article-max), calc(100vw - var(--os-stage-left-clearance) - var(--os-stage-right-gutter)));
+  margin-left: max(
+    var(--os-stage-left-clearance),
+    calc(var(--os-stage-left-clearance) + (100vw - var(--os-stage-left-clearance) - var(--os-stage-article-max)) / 2)
+  );
 }
 
 @media (max-width: 900px) {

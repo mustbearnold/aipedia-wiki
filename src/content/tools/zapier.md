@@ -7,7 +7,7 @@ category: ai-automation
 company: zapier
 url: 'https://zapier.com'
 pricing_model: freemium
-price_range: $0-$103.50+/month
+price_range: $0-$69+/month
 status: active
 launched: 2012-01
 last_updated: 2026-05-02
@@ -15,19 +15,20 @@ last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: true
-  commission: 15% recurring
+  commission: null
   cookie_days: 90
   network: In-house / PartnerStack
-  link: 'https://zapier.com/platform/partner-program'
+  link: null
+  notes: "Program page found, but no tracked publisher signup link is configured. Do not use the partner-program application page as a reader CTA."
 scores:
   utility: 8
   value: 6
   moat: 9
   longevity: 9
 tags: [automation, workflow, integrations, no-code, zaps, ai-actions, triggers, agents, central]
-seo_title: 'Zapier: Features, Pricing & Review (April 2026)'
+seo_title: 'Zapier: Features, Pricing & Review (May 2026)'
 meta_description: >-
-  Zapier is the no-code automation incumbent with 9,000+ app integrations, Agents, Tables, Interfaces, Chatbots, and Central for AI-driven orchestration. Free tier plus paid plans from $19.99 to $103.50+/month.
+  Zapier is the no-code automation incumbent with 9,000+ app integrations, Zaps, Tables, Forms, MCP, Copilot, and AI orchestration. Free tier, Professional from $19.99/mo annually, Team from $69/mo annually, Enterprise custom.
 author: aipedia.wiki Editorial
 best_for:
   - non-technical teams needing broad integrations
@@ -41,21 +42,21 @@ not_best_for:
 quick_answer: >-
   Zapier is the automation incumbent. Pick it for the widest integration library and lowest learning curve. Skip for high-volume workflows (Make is cheaper), self-hosting (n8n is free), or complex branching (Make handles it cleaner).
 price_history:
-  - date: 2025-01-15
-    plan: "Starter"
+  - date: 2026-05-02
+    plan: "Professional"
     price: "$19.99/mo"
-    note: "Rounded to ~$20"
-  - date: 2026-04-15
-    plan: "Starter"
-    price: "$19.99/mo"
-    note: "Verified unchanged"
+    note: "Starting annual price for Professional plan with 750 tasks/month."
+  - date: 2026-05-02
+    plan: "Team"
+    price: "$69/mo"
+    note: "Starting annual price for Team plan with collaboration, shared folders, and SAML SSO."
 ---
 
 # Zapier
 
 Zapier is the no-code automation incumbent. Zaps connect 9,000+ apps through trigger-action workflows. Tables, Interfaces, Chatbots, and Agents now ship in the same subscription. **Central** is the AI-driven orchestration layer that manages all of it from one dashboard.
 
-Pricing runs $0 to $103.50+/month per user. Free tier is capped at 100 tasks.
+Pricing runs from Free to Professional, Team, and Enterprise. Professional starts at $19.99/mo billed annually with 750 tasks; Team starts at $69/mo billed annually.
 
 ## System Verdict
 
@@ -63,23 +64,23 @@ Pricing runs $0 to $103.50+/month per user. Free tier is capped at 100 tasks.
 >
 > **Skip it if volume is high or workflows branch heavily.** Task billing counts every action separately, so a 5-step Zap burns 5 tasks per trigger. [Make](/tools/make/) costs roughly a third as much at scale. [n8n](/tools/n8n/) is free self-hosted and handles loops better.
 >
-> **Who pays which tier:** Free for 100-task hobby use, Starter $19.99/mo for small-business multi-step flows, Professional $49/mo for paths and custom logic, Team $69.50/user for shared workspaces, Company $103.50+/user for SSO and high task volumes.
+> **Who pays which tier:** Free for 100-task testing, Professional from $19.99/mo annually for multi-step Zaps and premium apps, Team from $69/mo annually for collaboration and SAML SSO, Enterprise custom for advanced admin, governance, observability, and larger task commitments.
 
 ## Key Facts
 
 | | |
 |---|---|
 | **Core product** | Zaps (trigger-action workflows) |
-| **Adjacent products** | Tables · Interfaces · Chatbots · Agents · Central |
+| **Adjacent products** | Tables · Forms · Chatbots · Agents · Canvas · MCP |
 | **Integration count** | 9,000+ apps |
-| **AI orchestration** | Central manages Zaps + Agents + Chatbots from one dashboard |
+| **AI orchestration** | Zaps, Tables, Forms, MCP, Copilot, and Agents in one automation stack |
 | **AI Copilot** | Builds Zaps from natural-language prompts |
-| **Pricing** | Free · Starter $19.99 · Professional $49 · Team $69.50/user · Company $103.50+/user |
-| **Free tier** | 100 tasks/mo · unlimited Zaps/Tables/Forms · includes Agents and Chatbots |
+| **Pricing** | Free · Professional from $19.99/mo annually · Team from $69/mo annually · Enterprise custom |
+| **Free tier** | 100 tasks/mo · unlimited Zaps/Tables/Forms · two-step Zaps |
 | **Self-host** | None |
 | **Data residency** | Cloud only, Zapier servers |
 
-Every data point above was verified against vendor documentation on 2026-04-17. See Sources.
+Every data point above was verified against vendor documentation on 2026-05-02. See Sources.
 
 ## What it actually is
 
@@ -112,12 +113,11 @@ Subscription pricing via [zapier.com/pricing](https://zapier.com/pricing). Annua
 | Plan | Monthly | Tasks | Key limits | Who's it for |
 |------|---------|-------|-----------|--------------|
 | Free | $0 | 100 | Unlimited Zaps, Tables, Forms, Agents, Chatbots | Hobby testing |
-| Starter | $19.99 | 750 | Multi-step Zaps, 3 premium apps | **Small teams land here** |
-| Professional | $49 | 2,000 | Paths, custom logic, unlimited premium apps | Serious ops work |
-| Team | $69.50/user | 2,000 shared | Shared workspaces, SSO, premier support | Collaborative teams |
-| Company | $103.50+/user | 50,000+ | Advanced admin, custom data retention, SOC 2 | Enterprise governance |
+| Professional | $19.99+ | 750+ | Multi-step Zaps, unlimited premium apps, webhooks, AI fields | **Small teams land here** |
+| Team | $69+ | Shared task tier | Shared Zaps/folders/connections, SAML SSO, premier support | Collaborative teams |
+| Enterprise | Custom | Annual task limits | Advanced admin, observability, governance, technical account manager | Enterprise governance |
 
-*Prices verified 2026-04-17 via [Zapier pricing](https://zapier.com/pricing). Monthly billing runs higher than the annual rates shown. Task counts scale with add-on packs.*
+*Prices verified 2026-05-02 via [Zapier pricing](https://zapier.com/pricing). Monthly billing runs higher than the annual rates shown. Task counts scale with selected task tier and add-ons.*
 
 ## Against the alternatives
 
@@ -125,7 +125,7 @@ Subscription pricing via [zapier.com/pricing](https://zapier.com/pricing). Annua
 |---|---|---|---|
 | **Integration count** | 9,000+ | 2,000+ | 500+ |
 | **Pricing model** | Task-based (per action) | Credit-based (per operation) | Execution-based (cloud) or free (self-host) |
-| **Cost at 10,000 tasks** | ~$103.50+/mo | ~$10.59/mo Core | Free self-host / $24/mo Starter |
+| **Cost at 10,000 tasks** | Higher task tier required | ~$10.59/mo Core | Free self-host / $24/mo Starter |
 | **Branching and loops** | Paths on Professional | Routers, iterators, native | Native, cleaner at scale |
 | **Self-host** | None | None | Yes, free |
 | **AI agents** | Agents + Central | LLM modules (no native agents) | Native AI Agent nodes |
@@ -139,20 +139,20 @@ Subscription pricing via [zapier.com/pricing](https://zapier.com/pricing). Annua
 - **Cloud-only.** Data passes through Zapier servers. No self-host option. Regulated industries with data-residency rules hit a wall.
 - **Free tier is a teaser.** 100 tasks/month covers testing, not real work. Upgrade pressure kicks in within days of live use.
 - **Complex branching is awkward.** Paths exist but the UI gets unwieldy past 3-4 branches. Make's router model handles this cleaner.
-- **Premium-app gating.** Salesforce, QuickBooks, HubSpot Sales Hub, and other common enterprise connectors require Starter or higher. Free tier excludes them entirely.
+- **Premium-app gating.** Salesforce, QuickBooks, HubSpot Sales Hub, and other common enterprise connectors require Professional or higher. Free tier excludes them entirely.
 - **Agent cost surfaces on usage.** Zapier Agents run on the task meter. An Agent that makes three tool calls burns three tasks per run. High-frequency agents eat task allowance quickly.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against the [Zapier pricing page](https://zapier.com/pricing), the [Zapier Agents guide](https://zapier.com/blog/zapier-agents-guide/), and Zapier's [AI orchestration overview](https://zapier.com/ai).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-02 against the [Zapier pricing page](https://zapier.com/pricing), Zapier pricing documentation, and Zapier's AI orchestration materials.
 
 ## FAQ
 
 **Is Zapier free?**
-Yes. The Free plan gives 100 tasks/month with unlimited Zaps, Tables, Forms, Agents, and Chatbots. Enough for testing, not for production ([Zapier pricing](https://zapier.com/pricing)).
+Yes. The Free plan gives 100 tasks/month with unlimited Zaps, Tables, and Forms, plus two-step Zaps. Enough for testing, not for production ([Zapier pricing](https://zapier.com/pricing)).
 
 **How much does Zapier cost at volume?**
-Starter is $19.99/mo for 750 tasks. Professional jumps to $49/mo for 2,000 tasks with paths and custom logic. Company plans start at $103.50+/user for 50,000+ tasks ([Zapier pricing](https://zapier.com/pricing)).
+Professional starts at $19.99/mo billed annually for 750 tasks. Team starts at $69/mo billed annually for collaboration. Larger task tiers and Enterprise pricing depend on selected usage and sales terms ([Zapier pricing](https://zapier.com/pricing)).
 
 **What is Zapier Central?**
 Central is Zapier's AI orchestration layer. It manages Zaps, Agents, Tables, Interfaces, and Chatbots from one dashboard, so deterministic automation and AI judgment live in the same workflow view.

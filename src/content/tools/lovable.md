@@ -18,10 +18,11 @@ meta_description: "Lovable builds deployed full-stack React apps from plain-Engl
 author: "aipedia.wiki Editorial"
 affiliate:
   has_program: true
-  commission: "20% recurring for 12 months"
+  commission: null
   cookie_days: 60
   network: "Lovable Affiliate Program (in-house)"
-  link: "https://lovable.dev/affiliates"
+  link: null
+  notes: "Affiliate application page found, but no tracked publisher signup link is configured. Do not use the affiliate-program page as a reader CTA."
 scores:
   utility: 9
   value: 8

@@ -19,10 +19,10 @@ affiliate:
   commission: 25% lifetime recurring
   cookie_days: 60
   network: PartnerStack
-  link: 'https://surferseo.com/affiliate'
-  application_status: applied
+  link: null
+  application_status: rejected
   applied_date: 2026-04-19
-  notes: "Applied via PartnerStack network 2026-04-19. Direct URL submitted: https://aipedia.wiki/tools/surfer-seo/"
+  notes: "Applied via PartnerStack network 2026-04-19; declined per publisher dashboard/user report on 2026-05-02. Removed affiliate program URL so public CTAs use the canonical vendor link."
 scores:
   utility: 9
   value: 8

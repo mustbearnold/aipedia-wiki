@@ -2,164 +2,201 @@
 type: tool
 slug: magnific
 title: Magnific AI
-tagline: Generative upscaler that hallucinates believable detail instead of just sharpening. Freepik acquired it May 2024; it still ships as a standalone product at magnific.ai.
+tagline: >-
+  Magnific is now the AI creative platform formerly known as Freepik, with the original prompt-guided Magnific upscaler, image/video/audio models, stock assets, collaboration, and API access under the same brand.
 category: ai-image
 secondary_categories: [ai-design]
-company: freepik
-url: https://magnific.ai
-pricing_model: paid
-price_range: "$39-$599/month"
+company: magnific
+url: https://www.magnific.com
+pricing_model: freemium
+price_range: "Free; paid platform plans vary by region and billing cycle; API usage-based"
 status: active
 launched: 2023-09
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
-seo_title: "Magnific AI: Features, Pricing & Review (2026)"
-meta_description: "Magnific AI is Freepik's creative upscaler. Pro $39/mo (200 upscales), Premium $99/mo (800 upscales), Business $299/mo. No free tier. API billed per output pixel area via Freepik API. Verified April 18, 2026."
+seo_title: "Magnific AI: Features, Pricing & Review (May 2026)"
+meta_description: "Magnific is the AI creative platform formerly known as Freepik, with the original creative upscaler, stock assets, image/video/audio tools, and usage-based API access. Best for premium creative production, not faithful restoration."
 author: "aipedia.wiki Editorial"
 affiliate:
-  has_program: false
+  has_program: true
   commission: null
   cookie_days: null
   network: null
-  link: null
+  link: https://referral.magnific.com/mQThv9h
+  notes: "Affiliate link supplied by publisher on 2026-05-02. Internal monetization terms should not be surfaced in public editorial copy."
 scores:
   utility: 8
-  value: 6
+  value: 7
   moat: 7
-  longevity: 7
-tags: [image-upscaling, ai-image, image-enhancement, creative-upscaler, magnific]
+  longevity: 8
+tags: [image-upscaling, ai-image, ai-design, ai-creative-suite, image-enhancement, creative-upscaler, magnific, freepik, magnific-api]
 best_for:
-  - creative upscaling that hallucinates new detail
-  - preparing AI images for print or large display
-  - turning low-res reference into hero marketing assets
-  - face and skin restoration on old photos
+  - creative teams that want upscaling, generation, stock assets, and editing in one platform
+  - designers preparing AI images for hero creative, print, ads, and client presentation
+  - agencies that need image, video, audio, and asset workflows under one commercial platform
+  - developers who need prompt-guided upscaling through an API
 not_best_for:
-  - users on a free tier
-  - faithful photo restoration (Magnific invents detail)
-  - bulk programmatic workflows on a tight budget
+  - faithful restoration where invented detail is unacceptable
+  - users who only need a free local upscaler
+  - buyers who want a simple standalone upscaler price without platform credits
+  - teams that need deterministic API costs before testing typical image sizes
 quick_answer: >-
-  Magnific produces the strongest creative upscaler on the market and invents plausible detail instead of simply sharpening. Pro $39/mo buys 200 upscales; Premium $99/mo buys 800. No free tier, and outputs will hallucinate, so pick it for hero creative work and skip for faithful restoration.
+  Magnific now means two things: the original creative upscaler and the broader AI creative platform formerly known as Freepik. Pick it when you want premium-looking creative output, stock assets, image/video/audio generation, and the Magnific upscaler in one workflow. Skip it for faithful restoration, cheap occasional upscaling, or simple local processing.
 price_history:
-  - date: 2024-05
+  - date: 2024-05-07
     plan: "Acquisition"
     price: "n/a"
-    note: "Freepik acquired Magnific in May 2024. Pricing held steady post-acquisition."
-  - date: 2026-04-18
-    plan: "Pro / Premium / Business"
-    price: "$39 / $99 / $299"
-    note: "Verified unchanged on the standalone Magnific site."
+    note: "Freepik announced it had acquired Magnific and would integrate the upscaler into its creative platform."
+  - date: 2026-04-28
+    plan: "Rebrand"
+    price: "n/a"
+    note: "Freepik relaunched as Magnific, unifying stock assets, AI generation, upscaling, audio, video, and collaboration under one brand."
+  - date: 2026-05-02
+    plan: "Magnific platform"
+    price: "Localized by region and billing cycle"
+    note: "Public pricing now routes through magnific.com/pricing with Free, Essential, Premium, Premium+, Pro, Business, and Enterprise-style plan families."
+  - date: 2026-05-02
+    plan: "Magnific Upscaler Creative API"
+    price: "Usage-based by output image area"
+    note: "API docs price each upscale by output dimensions and upscale factor."
 ---
 
 # Magnific AI
 
-Magnific is a generative upscaler and image enhancer. The flagship capability is **creative upscaling**, which hallucinates plausible detail rather than sharpening existing pixels. Freepik acquired Magnific in May 2024, and the product still ships as a standalone subscription at [magnific.ai](https://magnific.ai).
+Magnific is no longer just the viral creative upscaler from 2023. As of the April 28, 2026 relaunch, **Freepik is now Magnific**: a broader AI creative platform for image, video, audio, stock assets, collaboration, and production workflows.
 
-The API is hosted through [Freepik's developer platform](https://www.freepik.com/api/pricing) with per-request billing based on output pixel area. The Freepik Premium and Premium+ consumer plans now bundle Magnific upscaling alongside Freepik's other AI tools on a shared credit balance.
+That rebrand matters because older Magnific reviews are now half-wrong. The original **Magnific creative upscaler** still matters, and the standalone `magnific.ai` upscaler flow continues for existing subscribers, but the main public buyer journey now points to [magnific.com](https://www.magnific.com) and [magnific.com/pricing](https://www.magnific.com/pricing).
 
-Pricing for the standalone subscription runs $39 to $299 per month. No free tier.
+This review focuses on the buyer decision: should you use Magnific for creative upscaling and AI production, or should you pick a narrower upscaler, image generator, or local tool?
 
 ## System Verdict
 
-> **Pick Magnific if you need a creative upscaler that invents believable detail.** The creativity, HDR, and resemblance sliders control how much new information the model adds. That's useful for turning AI-generated hero images into print-ready assets, enlarging cropped stock photos, or recovering skin and fabric texture on low-resolution portraits.
+> **Pick Magnific when creative finish is the job.** The original Magnific upscaler is still the reference point for prompt-guided creative upscaling: it can add plausible texture, skin, fabric, architecture, and lighting detail rather than merely sharpening pixels. The broader Magnific platform now makes more sense for creators and agencies that also want stock assets, image generation, video generation, audio tools, and collaborative production in one place.
 >
-> **Skip Magnific if you need faithful photo restoration or a free tier.** The model hallucinates, so archival and evidentiary work will not stay true to the source. There is no free plan, no trial, and the cheapest tier is $39/mo. [Topaz Gigapixel](https://www.topazlabs.com/gigapixel) and [Upscayl](https://upscayl.org) are the honest-upscaling alternatives, and [Freepik's own bundled upscaler](/tools/freepik/) costs less if you already pay for Freepik.
+> **Skip it when fidelity matters more than perceived quality.** Magnific Creative can invent detail. That is useful for ads, hero images, concept art, and moodboards, but wrong for archival restoration, legal evidence, product accuracy, medical imagery, or any workflow where new detail is a liability. Use Topaz Gigapixel, Upscayl, or Magnific Precision for more faithful super-resolution.
 >
-> **Who pays which tier:** Pro $39/mo for 200 upscales covers solo designers or hobbyists. Premium $99/mo (800 upscales) fits working freelancers. Business $299/mo suits agencies running sustained client work. API pricing is per output pixel area and billed through the Freepik developer console, not the standalone subscription.
+> **Buying rule:** new users should evaluate the current Magnific platform pricing page rather than relying on old standalone Magnific AI price tables. Developers should price the API from output pixel area, because a 2x upscale and a 16x upscale are economically different jobs.
 
 ## Key Facts
 
 | | |
 |---|---|
-| **Owner** | Freepik (acquired May 2024) |
-| **Flagship feature** | Creative upscaler that hallucinates plausible detail |
-| **Max upscale** | Up to 16× resolution |
-| **Key controls** | Creativity · HDR · Resemblance · natural-language prompt guidance |
-| **Video upscaling** | Available on Freepik bundle, up to 4K |
-| **Subscription pricing** | Pro $39 · Premium $99 · Business $299 per month |
-| **Annual billing** | Two months free on annual subscriptions |
-| **Free tier** | None |
-| **API** | Hosted via [Freepik API](https://docs.freepik.com/api-reference/image-upscaler-creative/image-upscaler), per-request billing by output pixel area |
-| **Bundled access** | Freepik Premium / Premium+ consumer plans include Magnific on a shared credit balance |
+| **Current identity** | Magnific, formerly Freepik |
+| **Original product** | Prompt-guided creative upscaler from magnific.ai |
+| **Current platform** | AI image, video, audio, stock assets, collaboration, and editing tools |
+| **Main buyer URL** | [magnific.com](https://www.magnific.com) |
+| **Legacy upscaler URL** | `magnific.ai` redirects into the Magnific ecosystem; existing upscaler subscriptions continue through their term |
+| **Flagship upscaling mode** | Creative upscaler that can introduce or infer new detail |
+| **Faithful upscaling path** | Magnific Precision / non-generative alternatives |
+| **API** | [Magnific Upscaler Creative API](https://docs.magnific.com/api-reference/image-upscaler-creative/image-upscaler) |
+| **API pricing model** | Usage-based by output image area and upscale factor |
+| **Platform pricing** | Free plus paid plans; prices localize by region, currency, billing cycle, seats, credits, and plan family |
+| **Commercial use** | Magnific says created content belongs to the user, subject to its license terms and AI-product terms |
+
+Every data point above was verified against Magnific, Freepik/Magnific, and Magnific API sources on 2026-05-02. See Sources.
 
 ## What it actually is
 
-A generative upscaler. The model reads the input image plus an optional prompt and produces a higher-resolution output with new detail filled in. That is the defining behaviour. Traditional upscalers interpolate between existing pixels. Magnific invents texture, pores, stitching, foliage, and background detail that was never in the source.
+There are three Magnific surfaces now.
 
-Three sliders control how much invention happens. **Creativity** governs how far outputs drift from the source. **HDR** sharpens contrast and surface detail. **Resemblance** pulls outputs back toward the original composition when creativity runs too hot.
+**Magnific.com** is the current creative platform. It is the renamed Freepik product: stock assets, AI image models, AI video models, audio tools, editing, Spaces-style collaboration, and paid plan families under the Magnific brand.
 
-The moat is taste. Magnific's default prior produces outputs that read as plausible rather than obviously synthetic. That aesthetic instinct is why it became the reference creative upscaler. Freepik's 2024 acquisition brought Magnific into the larger creative-suite ecosystem without collapsing the standalone product.
+**Magnific upscaling** is the original reason the brand matters. Creative mode takes an input image plus optional prompt guidance and produces a larger image with inferred detail. It is not a neutral resize. It is a generative enhancement model.
+
+**Magnific API** is the developer route. The Creative Upscaler API exposes prompt-guided 2x, 4x, 8x, and 16x upscaling. The docs explicitly separate Creative mode from Precision mode: Creative can add or infer detail, while Precision is the safer route for faithful super-resolution.
+
+That split is the entire review. Magnific is strongest when the output should look expensive. It is weakest when the output must stay objectively faithful.
 
 ## When to pick Magnific
 
-- **AI image upres for hero work.** Midjourney or Flux outputs in the 1K-2K range can become 8K print-ready assets with believable grain, fabric, and background texture.
-- **Portrait and face restoration.** Skin pores, hair strands, and fabric threads reappear cleanly even when the source is 512 pixels wide.
-- **Concept art and moodboards.** The creativity slider lets you push stylized renders further without losing composition.
-- **Old or low-resolution photos that need to look modern.** Useful for marketing use; not for archival or legal use, where hallucinated detail is a liability.
-- **Clients who care about "does this look expensive."** Magnific's outputs consistently win blind preference tests against straight sharpening or Real-ESRGAN pipelines.
+- **AI image upres for hero work.** Midjourney, Flux, or other generated images often need larger, richer outputs for landing pages, posters, and ad creative.
+- **Creative direction with prompt control.** Prompt-guided upscaling lets designers push style, material, lighting, and surface detail instead of accepting a generic resize.
+- **Agency and campaign production.** The platform side makes sense if the same team needs generation, stock, upscaling, editing, and collaboration.
+- **Portrait and fashion cleanup.** Creative upscaling can recover perceived detail in hair, skin, fabric, and product textures when the source is visually weak.
+- **Developers building image workflows.** The API route is useful when upscaling is one step in a larger pipeline and cost can be modeled by output size.
 
 ## When to pick something else
 
-- **Honest photo restoration (no hallucination):** [Topaz Gigapixel](https://www.topazlabs.com/gigapixel) is the professional standard for faithful upscaling and does not invent detail.
-- **Free upscaling:** [Upscayl](https://upscayl.org) is open-source and runs locally.
-- **Cheaper bundled access:** [Freepik](/tools/freepik/) Premium and Premium+ include Magnific upscales on a shared credit balance. If you already need Freepik's stock library, the bundle beats Magnific's standalone tiers on cost-per-upscale.
-- **Image generation as well as upscaling:** [Midjourney](/tools/midjourney/), [Flux](/tools/flux/), [Ideogram](/tools/ideogram/), [Leonardo](/tools/leonardo/), or [Playground AI](/tools/playground-ai/). Magnific does not generate images from scratch.
+- **Faithful photo restoration:** Topaz Gigapixel, Magnific Precision, or a conservative super-resolution workflow. Creative upscaling invents detail.
+- **Free local upscaling:** Upscayl. It is less magical, but it is free, local, and less likely to introduce surprising new content.
+- **Image generation as the main job:** [Midjourney](/tools/midjourney/), [Flux](/tools/flux/), [Ideogram](/tools/ideogram/), [Leonardo](/tools/leonardo/), or [Playground AI](/tools/playground-ai/), depending on the style and control you need.
+- **One narrow tool with predictable one-time cost:** Topaz Gigapixel is cleaner for buyers who dislike credits, localized subscriptions, and platform bundles.
+- **Compliance-sensitive imagery:** Any workflow where hallucinated details could mislead viewers should avoid Creative mode.
 
 ## Pricing
 
-Standalone subscription pricing via [magnific.ai](https://magnific.ai):
+Magnific pricing is now best understood by surface:
 
-| Plan | Monthly | Upscales/mo | Max output | Commercial rights | Who's it for |
-|------|---------|-------------|------------|-------------------|--------------|
-| Pro | $39 | 200 | Up to 16× | Yes | Solo designers, hobbyists |
-| Premium | $99 | 800 | Up to 16× | Yes | **Working freelancers land here** |
-| Business | $299 | Much higher | Up to 16× | Yes | Agencies and studios |
+| Surface | Pricing shape | Best for |
+|---|---|---|
+| Magnific platform | Free plus paid plan families; localized by region, currency, billing cycle, credits, seats, and plan | Creators and teams who want stock assets, AI generation, upscaling, editing, and collaboration together |
+| Existing magnific.ai upscaler subscriptions | Existing plans continue through their term according to Magnific's relaunch FAQ | Existing standalone upscaler users |
+| Magnific Upscaler Creative API | Usage-based by output image area and upscale factor | Developers embedding upscaling in apps or pipelines |
 
-*Annual billing saves two months across every tier. No free trial.*
+The old standalone Magnific AI price table is no longer the safest public citation for new buyers. Use [magnific.com/pricing](https://www.magnific.com/pricing) for current platform checkout pricing, and use the [API docs](https://docs.magnific.com/api-reference/image-upscaler-creative/image-upscaler) for developer costs.
 
-API pricing via the [Freepik developer platform](https://www.freepik.com/api/pricing) is usage-based. Cost per upscale scales with output pixel area, billed monthly with no fixed platform fee. API keys provision through the Freepik developer console rather than the Magnific dashboard.
+API docs give example upscale costs such as 640x480 to 1280x960 at 2x for €0.10, 640x480 to 2560x1920 at 4x for €0.20, and 640x480 to 5120x3840 at 8x for €0.50. The practical lesson is simple: input size and upscale factor drive the final price.
 
-Bundled access: Freepik Premium starts around $7.50/mo billed annually, with 96,000 credits/yr. Premium+ ships 240,000 credits/yr. Both bundles include Magnific upscales on a shared Freepik credit balance.
-
-Prices verified 2026-04-18 via [magnific.ai](https://magnific.ai), [Freepik API pricing](https://www.freepik.com/api/pricing), and [Freepik plans](https://www.freepik.com/pricing).
+Prices and pricing structure verified 2026-05-02 against Magnific pricing and API documentation. Checkout totals may vary by region, tax, currency, billing cycle, and promotional state.
 
 ## Against the alternatives
 
-| | Magnific | Topaz Gigapixel | Upscayl | Freepik bundled |
+| | Magnific Creative | Magnific Precision | Topaz Gigapixel | Upscayl |
 |---|---|---|---|---|
-| **Upscaling approach** | Generative, hallucinates detail | Faithful, interpolative | Faithful, interpolative | Same engine as Magnific |
-| **Max upscale** | Up to 16× | Up to 6× | Up to 16× | Up to 16× |
-| **Price floor** | $39/mo | One-time $99 license | Free (open source) | $7.50/mo (annual Premium) |
-| **API access** | Via Freepik API | None | None | Via Freepik API |
-| **Commercial rights** | All paid tiers | Yes | Yes | All paid tiers |
-| **Best viewed as** | Creative hero-asset tool | Archival restoration tool | Free local utility | Cheaper bundled access |
+| **Upscaling approach** | Generative, prompt-guided, can add detail | Faithful super-resolution | Faithful/pro restoration | Free local super-resolution |
+| **Best use** | Hero assets, concept art, marketing creative | Product photos, UI, logos, text-sensitive images | Photo restoration and print prep | No-cost local enlargement |
+| **Risk** | Hallucination and likeness drift | Less dramatic output | Paid desktop workflow | Quality varies by model/GPU |
+| **API route** | Yes | Yes | No mainstream hosted API | No |
+| **Platform bundle** | Yes, through Magnific | Yes, through Magnific | No | No |
+| **Best viewed as** | Premium creative finishing tool | Safer production upscaler | Specialist restoration app | Free utility |
 
 ## Failure modes
 
-- **Outputs hallucinate.** That is the feature, not a bug, but it means Magnific is unsuitable for evidentiary, forensic, or archival work where fabricated detail is a problem.
-- **Faces can drift.** High creativity settings push portraits away from the original likeness. Pull the resemblance slider up when subject fidelity matters.
-- **Credits expire monthly.** Unused Pro or Premium upscales do not roll over, so occasional users waste their allocation.
-- **No free tier or trial.** Entry cost is $39/mo. Readers who want to evaluate the engine first should start with the Freepik Premium bundle, which costs less per credit.
-- **Pricing floor is steep vs local alternatives.** Upscayl runs free on your own GPU; Topaz Gigapixel is a one-time purchase. Magnific's subscription maths only works if you upscale regularly.
-- **API billing lives in a different dashboard.** API usage is invoiced through the Freepik developer platform, not through magnific.ai. That is a surprise for developers who bought the standalone subscription expecting API access to be included.
-- **Acquisition changed little on the surface but the roadmap is Freepik's.** Features that matter to the standalone product now compete with Freepik's broader creative-suite priorities, which introduces concentration risk.
+- **Brand transition confusion.** Magnific.ai, Freepik, Magnific.com, and Magnific API now overlap. New buyers should check which surface they are actually paying for.
+- **Creative mode hallucinates.** Added detail can look better than the source while being factually false. That is a feature for advertising and a flaw for evidence.
+- **Faces can drift.** High creative settings may alter likeness, age, texture, or identity cues. Use more conservative settings when subject fidelity matters.
+- **Pricing is not one simple table anymore.** Platform pricing localizes by country and plan. API pricing depends on output image area. Legacy standalone upscaler pricing is not the best new-buyer reference.
+- **Credits and "unlimited" rules require reading.** Magnific's platform pricing uses credits, model availability, and plan-specific limits. Heavy users should test the exact models they rely on before annual billing.
+- **API costs grow with resolution.** A large source image at 8x or 16x can cost materially more than a small 2x upscale.
+- **Platform breadth can be overkill.** If all you need is a few occasional upscales, Magnific's broader creative suite may be more product than you need.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-18 against [magnific.ai](https://magnific.ai), the [Freepik API pricing page](https://www.freepik.com/api/pricing), [Freepik plan pricing](https://www.freepik.com/pricing), and [Freepik's Magnific Creative Upscaler API docs](https://docs.freepik.com/api-reference/image-upscaler-creative/image-upscaler).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average).
+
+Last verified 2026-05-02 against Magnific's homepage, Magnific pricing, Magnific API documentation, Freepik's May 2024 acquisition announcement, and the April 2026 Freepik-to-Magnific relaunch announcement.
 
 ## FAQ
 
-**Is Magnific AI free?**
-No. There is no free tier and no free trial. The cheapest plan is Pro at $39/month for 200 upscales. Free alternatives include [Upscayl](https://upscayl.org) for local upscaling, though its approach is faithful rather than generative.
+**Is Magnific the same as Freepik now?**
+Yes. Freepik relaunched as Magnific on April 28, 2026. The broader platform now uses the Magnific brand, while the original Magnific upscaler remains part of that ecosystem.
 
-**Did Freepik buy Magnific?**
-Yes. Freepik acquired Magnific in May 2024. The product still ships as a standalone subscription at [magnific.ai](https://magnific.ai). Magnific upscaling is now also bundled into Freepik's Premium and Premium+ consumer plans via shared credits.
+**What happened to the original Magnific AI upscaler?**
+Magnific says existing `magnific.ai` upscaler subscriptions continue with no disruption until the current plan expires. The upscaling technology also appears in the broader platform and API.
+
+**Is Magnific free?**
+The current Magnific platform has a free entry point plus paid plans. The original standalone Magnific upscaler historically had no free tier, so check the current buyer surface before comparing prices.
+
+**Does Magnific invent details?**
+Creative mode can add or infer new detail. That is why it looks impressive for hero creative work, and why it is risky for faithful restoration. Use Precision mode or a conservative alternative when accuracy matters.
 
 **How is Magnific different from Topaz Gigapixel?**
-Topaz Gigapixel interpolates existing pixels and refuses to invent detail. Magnific hallucinates believable new detail using a diffusion model. Topaz is the better pick for archival or evidentiary work. Magnific is better for hero creative output where perceived quality matters more than pixel-level fidelity.
+Topaz Gigapixel is better for faithful enlargement and restoration. Magnific Creative is better when the image should look richer, more stylized, or more premium, even if that means the model adds details that were not in the source.
+
+**How does Magnific API pricing work?**
+The Creative Upscaler API charges by output image area, which depends on the input dimensions and the upscale factor. Higher-resolution outputs cost more.
+
+## Sources
+
+- [Magnific homepage](https://www.magnific.com): current platform positioning, Freepik-to-Magnific identity, relaunch FAQ
+- [Magnific pricing](https://www.magnific.com/pricing): current public plan families, credit model, billing structure, and pricing FAQ
+- [Magnific Upscaler Creative API docs](https://docs.magnific.com/api-reference/image-upscaler-creative/image-upscaler): creative upscaler behavior, 2x/4x/8x/16x support, and output-area pricing examples
+- [Freepik becomes Magnific press release](https://www.prnewswire.com/news-releases/freepik-becomes-magnific-hits-230m-arr-and-introduces-the-no-collar-creative-economy-302755376.html): April 28, 2026 rebrand and platform scope
+- [Freepik and Magnific announcement](https://www.freepik.com/blog/magnific/): May 2024 acquisition context
 
 ## Related
 
 - **Category:** [AI Image Generation](/categories/ai-image/) · [AI Design](/categories/ai-design/)
-- **Alternatives:** [Freepik](/tools/freepik/) · [Midjourney](/tools/midjourney/) · [Flux](/tools/flux/) · [Ideogram](/tools/ideogram/) · [Leonardo](/tools/leonardo/) · [Playground AI](/tools/playground-ai/)
+- **Legacy context:** [Freepik](/tools/freepik/)
+- **Alternatives:** [Midjourney](/tools/midjourney/) · [Flux](/tools/flux/) · [Ideogram](/tools/ideogram/) · [Leonardo](/tools/leonardo/) · [Playground AI](/tools/playground-ai/)

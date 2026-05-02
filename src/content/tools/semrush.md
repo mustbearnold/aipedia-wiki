@@ -15,13 +15,13 @@ last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: true
-  commission: "up to $200 per sale"
+  commission: null
   cookie_days: 120
   network: impact
-  link: https://www.semrush.com/lp/affiliate-program/
+  link: null
   application_status: rejected
   applied_date: 2026-04-19
-  notes: "Applied via Impact 2026-04-19, declined 2026-04-20. Likely reason: new site with low baseline traffic. Reapply in 90-120 days once organic traffic exceeds 5K monthly unique visitors. Alternative SEO affiliates to prioritize meanwhile: Ahrefs, Surfer SEO (already applied), SE Ranking."
+  notes: "Applied via Impact 2026-04-19, declined 2026-04-20. No public affiliate CTA should be configured while application_status is rejected."
 scores:
   utility: 10
   value: 6

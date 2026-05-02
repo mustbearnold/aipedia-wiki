@@ -24,9 +24,9 @@ affiliate:
   cookie_days: 90
   network: PartnerStack
   link: null
-  application_status: applied
+  application_status: rejected
   applied_date: 2026-04-19
-  notes: "Applied via PartnerStack marketplace 2026-04-19; review time quoted >5 days."
+  notes: "Applied via PartnerStack marketplace 2026-04-19; declined per publisher dashboard/user report on 2026-05-02. Revisit after organic traffic grows."
 scores:
   utility: 8
   value: 8

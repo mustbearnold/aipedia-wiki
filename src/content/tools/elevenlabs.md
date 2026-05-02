@@ -18,10 +18,10 @@ affiliate:
   commission: 22% recurring
   cookie_days: 30
   network: direct
-  link: 'https://try.elevenlabs.io/9qle5pnma4ze'
-  application_status: applied
+  link: null
+  application_status: rejected
   applied_date: 2026-04-19
-  notes: "Applied via elevenlabs.io/affiliates; direct URL submitted to https://aipedia.wiki/tools/elevenlabs/"
+  notes: "Applied via elevenlabs.io/affiliates 2026-04-19; declined per publisher dashboard/user report on 2026-05-02. Removed affiliate URL so public CTAs use the canonical vendor link."
 scores:
   utility: 10
   value: 8

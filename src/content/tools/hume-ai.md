@@ -15,20 +15,21 @@ last_updated: 2026-05-02
 last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
-  has_program: false
+  has_program: true
   commission: null
   cookie_days: null
-  network: null
-  link: null
-  application_status: none
-  notes: "No public affiliate program as of 2026-04-19. Coverage is editorial-only; placements do not earn commission."
+  network: PartnerStack
+  link: 'https://try.hume.ai/zyy4g71xojh4'
+  application_status: approved
+  approved_date: 2026-05-02
+  notes: "Approved in PartnerStack per publisher dashboard/user report on 2026-05-02. Marketing-site affiliate link: https://try.hume.ai/zyy4g71xojh4. Direct signup affiliate link: https://try.hume.ai/qj7878adktnk-r9s6xi."
 scores:
   utility: 8
   value: 8
   moat: 8
   longevity: 7
 tags: [voice-ai, empathic-voice, emotion-ai, tts, text-to-speech, speech-to-speech, evi, octave, expression-measurement]
-seo_title: 'Hume AI: Features, Pricing & Review (April 2026)'
+seo_title: 'Hume AI: Features, Pricing & Review (May 2026)'
 meta_description: >-
   Hume AI ships EVI empathic speech-to-speech, Octave TTS with emotional nuance, and Expression Measurement for audio / video / text / image emotion analysis. Free through $500/mo Business, Enterprise custom.
 author: "aipedia.wiki Editorial"
@@ -45,15 +46,15 @@ not_best_for:
 quick_answer: >-
   Hume AI builds empathic voice AI. EVI handles speech-to-speech with emotional awareness (interruptions, back-channeling, prosody-aware responses); Octave is the TTS model with emotional nuance; Expression Measurement scores emotion in audio, video, text, and images. Pick it for voice agents where emotion matters. Skip for pure-performance TTS (ElevenLabs leads on quality) or enterprise self-host.
 price_history:
-  - date: 2026-04-19
+  - date: 2026-05-02
     plan: "Starter"
     price: "$3/mo"
     note: "Entry paid tier: 30K TTS chars (~30 min), 40 min EVI, 5 concurrent connections, 20 projects."
-  - date: 2026-04-19
+  - date: 2026-05-02
     plan: "Creator"
     price: "$7/mo (first month $3.50)"
     note: "Popular creator tier: 140K TTS chars (~140 min), 200 min EVI, 1,000 projects. 50% off first month on public pricing page."
-  - date: 2026-04-19
+  - date: 2026-05-02
     plan: "Pro"
     price: "$70/mo"
     note: "1M TTS chars (~1,000 min), 1,200 min EVI, 3,000 projects, 10 concurrent connections."
@@ -97,7 +98,7 @@ Supporting services: Human Feedback API (survey templates + participant pools), 
 | **Voice cloning** | Included on all tiers (create + use) |
 | **Self-hosted** | None on EVI / Octave · TADA is open-source |
 
-Every data point above verified against Hume's published sources on 2026-04-19.
+Every data point above verified against Hume's published sources on 2026-05-02.
 
 ## What it actually is
 
@@ -153,7 +154,7 @@ Usage-based rates (overages or custom workflows):
 | Expression Measurement: images | $0.00204 each |
 | Expression Measurement: text | $0.00024 / word |
 
-Prices verified 2026-04-19 via [Hume pricing](https://www.hume.ai/pricing) and the [Hume homepage](https://www.hume.ai/). Voice cloning (create and use) is included on all tiers. Enterprise adds API voice access, SOC 2 / GDPR / HIPAA compliance, Slack support, and custom rate limits.
+Prices verified 2026-05-02 via [Hume pricing](https://www.hume.ai/pricing) and the [Hume homepage](https://www.hume.ai/). Voice cloning (create and use) is included on all tiers. Enterprise adds API voice access, SOC 2 / GDPR / HIPAA compliance, Slack support, and custom rate limits.
 
 ## Against the alternatives
 
@@ -177,12 +178,11 @@ Prices verified 2026-04-19 via [Hume pricing](https://www.hume.ai/pricing) and t
 - **Multiple quota types can surprise.** TTS characters, EVI minutes, concurrent connections, and projects all scale independently per tier. Heavy usage on one dimension can force a tier upgrade even if others have headroom.
 - **Expression Measurement pricing varies by modality.** Video+audio is ~3x audio-only cost; text is essentially free at $0.00024/word. Budget modelling requires thinking in terms of which modality drives volume.
 - **Self-hosting is limited.** EVI and Octave are cloud-only. TADA is open-source but it is an LLM-TTS architecture, not a drop-in replacement for EVI or Octave.
-- **No affiliate program currently.** Publisher monetization on Hume coverage has to come from editorial-audience value, not commission.
 - **Research-voice positioning cuts both ways.** The academic heritage gives Hume credibility on emotion but slows mainstream adoption versus flashier category leaders.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-19 against [Hume pricing](https://www.hume.ai/pricing), the [Hume homepage](https://www.hume.ai/), and the [Hume platform docs](https://dev.hume.ai/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-02 against [Hume pricing](https://www.hume.ai/pricing), the [Hume homepage](https://www.hume.ai/), and the [Hume platform docs](https://dev.hume.ai/).
 
 ## FAQ
 
@@ -200,9 +200,6 @@ Octave is Hume's text-to-speech model with voice design, modulation, cloning, an
 
 **What is Expression Measurement?**
 An API for scoring emotion in audio, video, text, or images. Trained on curated datasets covering 48 distinct emotions. Used in UX research, wellness apps, accessibility tools, and market research. Pricing varies by modality: $0.0828/min for video+audio, down to $0.00024/word for text.
-
-**Does Hume have an affiliate program?**
-Not currently. Editorial coverage on aipedia.wiki is independent; there is no commission relationship as of April 2026.
 
 **What is TADA?**
 Hume's open-source LLM-TTS system that streams text and audio together, reducing hallucinations and latency. Useful as a research-friendly alternative to proprietary TTS architectures but not a drop-in EVI or Octave replacement.

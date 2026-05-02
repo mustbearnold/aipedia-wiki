@@ -20,10 +20,11 @@ meta_description: >-
 author: aipedia.wiki Editorial
 affiliate:
   has_program: true
-  commission: 30% recurring for 12 months
+  commission: null
   cookie_days: 30
   network: Jasper Affiliate Program (in-house)
-  link: 'https://jasper.ai/partners'
+  link: null
+  notes: "Program page found, but no tracked publisher signup link is configured. Do not use the partner-program application page as a reader CTA."
 scores:
   utility: 6
   value: 5

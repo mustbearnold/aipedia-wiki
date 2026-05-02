@@ -16,10 +16,11 @@ last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: true
-  commission: "35% recurring"
+  commission: null
   cookie_days: 30
   network: direct
-  link: https://heygen.com/affiliate
+  link: null
+  notes: "Affiliate application page found, but no tracked publisher signup link is configured. Do not use the affiliate-program page as a reader CTA."
 scores:
   utility: 8
   value: 8

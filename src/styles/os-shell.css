@@ -3,10 +3,17 @@
 body.os-chrome-body {
   background: #03060b;
   color: var(--text-primary);
+  color-scheme: dark;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  transition: background var(--motion-slow, 420ms) var(--motion-ease, cubic-bezier(0.16, 1, 0.3, 1));
+}
+
+html.light body.os-chrome-body {
+  background: #edf4fb;
+  color-scheme: light;
 }
 
 body.os-chrome-body #bg-gradient,
@@ -28,13 +35,81 @@ body.os-chrome-body #read-progress {
   --os-line: rgba(148, 163, 184, 0.18);
   --os-line-bright: rgba(103, 232, 249, 0.34);
   --os-text: #f8fafc;
+  --os-heading: #ffffff;
   --os-muted: #a7b3c5;
   --os-dim: #64748b;
+  --os-inverse-text: #031018;
   --os-cyan: #22d3ee;
   --os-teal: #5eead4;
   --os-blue: #60a5fa;
   --os-amber: #f59e0b;
   --os-red: #fb7185;
+  --os-top-shield: linear-gradient(180deg, rgba(3, 6, 11, 0.99) 0%, rgba(3, 6, 11, 0.97) 62%, rgba(3, 6, 11, 0.74) 84%, transparent 100%);
+  --os-wallpaper-bg:
+    linear-gradient(118deg, rgba(34, 211, 238, 0.14) 0 1px, transparent 1px 37%),
+    linear-gradient(162deg, transparent 0 46%, rgba(94, 234, 212, 0.045) 46% 47%, transparent 47%),
+    linear-gradient(145deg, #05060b 0%, #07111c 46%, #02050a 100%);
+  --os-grid-line: rgba(148, 163, 184, 0.07);
+  --os-scanline-bg: repeating-linear-gradient(
+    to bottom,
+    rgba(248, 250, 252, 0.07) 0,
+    rgba(248, 250, 252, 0.07) 1px,
+    transparent 1px,
+    transparent 7px
+  );
+  --os-scanline-blend: screen;
+  --os-beam-bg: linear-gradient(90deg, transparent, rgba(94, 234, 212, 0.34), transparent);
+  --os-beam-shadow: 0 0 36px rgba(34, 211, 238, 0.18);
+  --os-depth-line: rgba(34, 211, 238, 0.11);
+  --os-depth-line-soft: rgba(96, 165, 250, 0.055);
+  --os-lattice-line: rgba(148, 163, 184, 0.085);
+  --os-lattice-accent: rgba(94, 234, 212, 0.11);
+  --os-ribbon-core: rgba(94, 234, 212, 0.54);
+  --os-ribbon-soft: rgba(34, 211, 238, 0.13);
+  --os-ribbon-tick: rgba(248, 250, 252, 0.32);
+  --os-telemetry-line: rgba(103, 232, 249, 0.14);
+  --os-telemetry-line-strong: rgba(94, 234, 212, 0.2);
+  --os-panel-bg:
+    linear-gradient(180deg, rgba(8, 14, 24, 0.97), rgba(5, 10, 18, 0.94)),
+    rgba(5, 10, 18, 0.96);
+  --os-panel-shadow: 0 24px 70px rgba(0, 0, 0, 0.42);
+  --os-control-bg: rgba(15, 23, 42, 0.58);
+  --os-control-hover-bg: rgba(34, 211, 238, 0.12);
+  --os-control-hover-shadow: 0 12px 28px rgba(34, 211, 238, 0.10);
+  --os-clock-bg: rgba(5, 14, 22, 0.72);
+  --os-dock-bg: rgba(5, 10, 18, 0.74);
+  --os-dock-shadow: 0 24px 70px rgba(0, 0, 0, 0.34);
+  --os-dock-icon-bg: rgba(34, 211, 238, 0.13);
+  --os-dock-icon-active-bg: rgba(34, 211, 238, 0.2);
+  --os-prompt-bg: rgba(15, 23, 42, 0.62);
+  --os-prompt-shadow: 0 16px 44px rgba(0, 0, 0, 0.24);
+  --os-window-bg:
+    linear-gradient(180deg, rgba(10, 15, 26, 0.94), rgba(6, 10, 17, 0.92)),
+    rgba(5, 10, 18, 0.84);
+  --os-window-bar-bg: rgba(8, 13, 24, 0.96);
+  --os-window-shadow: 0 28px 80px rgba(0, 0, 0, 0.42), inset 0 1px 0 rgba(255, 255, 255, 0.045);
+  --os-focus-ring: rgba(94, 234, 212, 0.82);
+  --os-checkbox-bg:
+    linear-gradient(180deg, rgba(15, 23, 42, 0.92), rgba(6, 11, 20, 0.92)),
+    rgba(8, 13, 24, 0.95);
+  --os-checkbox-check: #021016;
+  --os-wallpaper-shift: 0px;
+  --os-grid-shift-x: 0px;
+  --os-grid-shift-y: 0px;
+  --os-depth-shift-x: 0px;
+  --os-depth-shift-y: 0px;
+  --os-lattice-shift-x: 0px;
+  --os-lattice-shift-y: 0px;
+  --os-telemetry-shift-x: 0px;
+  --os-telemetry-shift-y: 0px;
+  --os-ribbon-one-x: 0px;
+  --os-ribbon-one-y: 0px;
+  --os-ribbon-two-x: 0px;
+  --os-ribbon-two-y: 0px;
+  --os-beam-one-x: 0px;
+  --os-beam-one-y: 0px;
+  --os-beam-two-x: 0px;
+  --os-beam-two-y: 0px;
   --os-ease: var(--motion-ease, cubic-bezier(0.16, 1, 0.3, 1));
   --os-ease-soft: var(--motion-ease-soft, cubic-bezier(0.22, 1, 0.36, 1));
   --os-ease-press: var(--motion-ease-press, cubic-bezier(0.2, 0, 0, 1));
@@ -46,6 +121,13 @@ body.os-chrome-body #read-progress {
   --os-panel-height: 56px;
   --os-panel-clearance: 42px;
   --os-top-shield-height: calc(var(--os-panel-top) + var(--os-panel-height) + 18px);
+  --os-dock-left: 18px;
+  --os-dock-width: 86px;
+  --os-stage-dock-gap: 24px;
+  --os-stage-right-gutter: 24px;
+  --os-stage-left-clearance: calc(var(--os-dock-left) + var(--os-dock-width) + var(--os-stage-dock-gap));
+  --os-stage-max: 1580px;
+  --os-stage-article-max: 1180px;
   position: relative;
   min-height: 100vh;
   width: 100%;
@@ -54,6 +136,74 @@ body.os-chrome-body #read-progress {
   isolation: isolate;
   overflow: hidden;
   font-family: var(--font-sans);
+}
+
+html.light .os-page-shell {
+  --os-bg: #edf4fb;
+  --os-panel: rgba(255, 255, 255, 0.78);
+  --os-panel-strong: rgba(255, 255, 255, 0.94);
+  --os-glass: rgba(255, 255, 255, 0.74);
+  --os-line: rgba(15, 23, 42, 0.14);
+  --os-line-bright: rgba(8, 145, 178, 0.36);
+  --os-text: #0f172a;
+  --os-heading: #07111f;
+  --os-muted: #475569;
+  --os-dim: #64748b;
+  --os-inverse-text: #f8fafc;
+  --os-cyan: #0891b2;
+  --os-teal: #0f766e;
+  --os-blue: #2563eb;
+  --os-amber: #b45309;
+  --os-red: #e11d48;
+  --os-top-shield: linear-gradient(180deg, rgba(239, 246, 251, 0.98) 0%, rgba(239, 246, 251, 0.94) 62%, rgba(239, 246, 251, 0.72) 84%, transparent 100%);
+  --os-wallpaper-bg:
+    linear-gradient(118deg, rgba(8, 145, 178, 0.18) 0 1px, transparent 1px 37%),
+    linear-gradient(162deg, transparent 0 46%, rgba(14, 116, 144, 0.08) 46% 47%, transparent 47%),
+    linear-gradient(145deg, #edf4fb 0%, #f8fbff 44%, #e5edf7 100%);
+  --os-grid-line: rgba(15, 23, 42, 0.055);
+  --os-scanline-bg: repeating-linear-gradient(
+    to bottom,
+    rgba(8, 47, 73, 0.045) 0,
+    rgba(8, 47, 73, 0.045) 1px,
+    transparent 1px,
+    transparent 8px
+  );
+  --os-scanline-blend: multiply;
+  --os-beam-bg: linear-gradient(90deg, transparent, rgba(14, 116, 144, 0.26), transparent);
+  --os-beam-shadow: 0 0 34px rgba(8, 145, 178, 0.12);
+  --os-depth-line: rgba(8, 145, 178, 0.13);
+  --os-depth-line-soft: rgba(37, 99, 235, 0.045);
+  --os-lattice-line: rgba(15, 23, 42, 0.06);
+  --os-lattice-accent: rgba(8, 145, 178, 0.11);
+  --os-ribbon-core: rgba(14, 116, 144, 0.36);
+  --os-ribbon-soft: rgba(8, 145, 178, 0.1);
+  --os-ribbon-tick: rgba(15, 23, 42, 0.22);
+  --os-telemetry-line: rgba(8, 145, 178, 0.12);
+  --os-telemetry-line-strong: rgba(14, 116, 144, 0.18);
+  --os-panel-bg:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(241, 247, 252, 0.86)),
+    rgba(255, 255, 255, 0.9);
+  --os-panel-shadow: 0 24px 70px rgba(15, 23, 42, 0.12);
+  --os-control-bg: rgba(255, 255, 255, 0.62);
+  --os-control-hover-bg: rgba(8, 145, 178, 0.12);
+  --os-control-hover-shadow: 0 12px 28px rgba(8, 145, 178, 0.10);
+  --os-clock-bg: rgba(255, 255, 255, 0.7);
+  --os-dock-bg: rgba(255, 255, 255, 0.68);
+  --os-dock-shadow: 0 24px 70px rgba(15, 23, 42, 0.12);
+  --os-dock-icon-bg: rgba(8, 145, 178, 0.11);
+  --os-dock-icon-active-bg: rgba(8, 145, 178, 0.18);
+  --os-prompt-bg: rgba(255, 255, 255, 0.66);
+  --os-prompt-shadow: 0 16px 44px rgba(15, 23, 42, 0.10);
+  --os-window-bg:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(247, 250, 253, 0.92)),
+    rgba(255, 255, 255, 0.88);
+  --os-window-bar-bg: rgba(248, 251, 254, 0.94);
+  --os-window-shadow: 0 28px 80px rgba(15, 23, 42, 0.14), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  --os-focus-ring: rgba(8, 145, 178, 0.72);
+  --os-checkbox-bg:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(241, 245, 249, 0.92)),
+    rgba(255, 255, 255, 0.92);
+  --os-checkbox-check: #f8fafc;
 }
 
 .os-page-shell::before {
@@ -65,8 +215,7 @@ body.os-chrome-body #read-progress {
   left: 0;
   height: var(--os-top-shield-height);
   pointer-events: none;
-  background:
-    linear-gradient(180deg, rgba(3, 6, 11, 0.99) 0%, rgba(3, 6, 11, 0.97) 62%, rgba(3, 6, 11, 0.74) 84%, transparent 100%);
+  background: var(--os-top-shield);
   backdrop-filter: blur(10px);
 }
 
@@ -80,10 +229,41 @@ body.os-chrome-body #read-progress {
   inset: 0;
   z-index: -2;
   overflow: hidden;
-  background:
-    linear-gradient(118deg, rgba(34, 211, 238, 0.14) 0 1px, transparent 1px 37%),
-    linear-gradient(162deg, transparent 0 46%, rgba(94, 234, 212, 0.045) 46% 47%, transparent 47%),
-    linear-gradient(145deg, #05060b 0%, #07111c 46%, #02050a 100%);
+  background: var(--os-wallpaper-bg);
+  transform: translate3d(0, var(--os-wallpaper-shift), 0);
+  transition: background var(--os-slow) var(--os-ease);
+  will-change: transform;
+}
+
+.os-page-depth,
+.os-page-lattice,
+.os-page-telemetry,
+.os-page-ribbon {
+  position: absolute;
+  pointer-events: none;
+}
+
+.os-page-depth {
+  inset: -18vh -10vw;
+  opacity: 0.58;
+  background-image:
+    repeating-linear-gradient(
+      116deg,
+      transparent 0 112px,
+      var(--os-depth-line-soft) 112px 113px,
+      transparent 113px 224px
+    ),
+    repeating-linear-gradient(
+      27deg,
+      transparent 0 168px,
+      var(--os-depth-line) 168px 169px,
+      transparent 169px 338px
+    );
+  mask-image:
+    linear-gradient(90deg, transparent 0%, black 12%, black 78%, transparent 100%),
+    linear-gradient(to bottom, black 0%, black 70%, transparent 100%);
+  transform: translate3d(var(--os-depth-shift-x), var(--os-depth-shift-y), 0);
+  will-change: transform;
 }
 
 .os-page-grid {
@@ -91,34 +271,116 @@ body.os-chrome-body #read-progress {
   inset: 0;
   opacity: 0.4;
   background-image:
-    linear-gradient(rgba(148, 163, 184, 0.07) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(148, 163, 184, 0.07) 1px, transparent 1px);
+    linear-gradient(var(--os-grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--os-grid-line) 1px, transparent 1px);
   background-size: 42px 42px;
   mask-image: linear-gradient(to bottom, black 0%, black 76%, transparent 100%);
+  transform: translate3d(var(--os-grid-shift-x), var(--os-grid-shift-y), 0);
+  will-change: transform;
+}
+
+.os-page-lattice {
+  inset: -8vh -8vw;
+  opacity: 0.24;
+  background-image:
+    linear-gradient(var(--os-lattice-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--os-lattice-line) 1px, transparent 1px),
+    repeating-linear-gradient(
+      135deg,
+      transparent 0 92px,
+      var(--os-lattice-accent) 92px 93px,
+      transparent 93px 184px
+    );
+  background-size: 84px 84px, 84px 84px, 184px 184px;
+  mask-image: linear-gradient(120deg, transparent 0%, black 18%, black 82%, transparent 100%);
+  transform: translate3d(var(--os-lattice-shift-x), var(--os-lattice-shift-y), 0);
+  will-change: transform;
 }
 
 .os-page-scanline {
   position: absolute;
   inset: 0;
   opacity: 0.16;
-  background: repeating-linear-gradient(
-    to bottom,
-    rgba(248, 250, 252, 0.07) 0,
-    rgba(248, 250, 252, 0.07) 1px,
-    transparent 1px,
-    transparent 7px
-  );
-  mix-blend-mode: screen;
+  background: var(--os-scanline-bg);
+  mix-blend-mode: var(--os-scanline-blend);
   pointer-events: none;
+}
+
+.os-page-telemetry {
+  top: 18vh;
+  right: -4vw;
+  width: min(46vw, 720px);
+  height: 62vh;
+  opacity: 0.36;
+  background-image:
+    repeating-linear-gradient(
+      90deg,
+      transparent 0 24px,
+      var(--os-telemetry-line) 24px 52px,
+      transparent 52px 128px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent 0 72px,
+      var(--os-telemetry-line-strong) 72px 116px,
+      transparent 116px 240px
+    );
+  background-size: 180px 26px, 260px 58px;
+  mask-image:
+    linear-gradient(90deg, transparent 0%, black 24%, black 86%, transparent 100%),
+    linear-gradient(to bottom, transparent 0%, black 14%, black 76%, transparent 100%);
+  transform: translate3d(var(--os-telemetry-shift-x), var(--os-telemetry-shift-y), 0) skewY(-17deg);
+  will-change: transform;
+}
+
+.os-page-ribbon {
+  height: 22px;
+  border-top: 1px solid var(--os-ribbon-soft);
+  border-bottom: 1px solid var(--os-ribbon-soft);
+  background:
+    linear-gradient(90deg, transparent 0%, var(--os-ribbon-soft) 18%, var(--os-ribbon-core) 52%, var(--os-ribbon-soft) 78%, transparent 100%);
+  box-shadow: 0 0 34px rgba(34, 211, 238, 0.08);
+  overflow: hidden;
+  transform-origin: center;
+  will-change: transform;
+}
+
+.os-page-ribbon::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent 0 30px,
+    var(--os-ribbon-tick) 30px 32px,
+    transparent 32px 72px
+  );
+  animation: os-ribbon-signal 18s linear infinite;
+}
+
+.os-page-ribbon-one {
+  width: 56vw;
+  left: 42vw;
+  top: 112px;
+  transform: translate3d(var(--os-ribbon-one-x), var(--os-ribbon-one-y), 0) rotate(-17deg);
+}
+
+.os-page-ribbon-two {
+  width: 76vw;
+  right: -18vw;
+  bottom: 150px;
+  opacity: 0.68;
+  transform: translate3d(var(--os-ribbon-two-x), var(--os-ribbon-two-y), 0) rotate(-17deg);
 }
 
 .os-page-beam {
   position: absolute;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(94, 234, 212, 0.34), transparent);
-  box-shadow: 0 0 36px rgba(34, 211, 238, 0.18);
-  transform: rotate(-17deg);
+  background: var(--os-beam-bg);
+  box-shadow: var(--os-beam-shadow);
+  transform: translate3d(var(--os-beam-one-x), var(--os-beam-one-y), 0) rotate(-17deg);
   transform-origin: center;
+  will-change: transform;
 }
 
 .os-page-beam-one {
@@ -128,9 +390,15 @@ body.os-chrome-body #read-progress {
 }
 
 .os-page-beam-two {
+  transform: translate3d(var(--os-beam-two-x), var(--os-beam-two-y), 0) rotate(-17deg);
   width: 62vw;
   right: -10vw;
   bottom: 80px;
+}
+
+@keyframes os-ribbon-signal {
+  from { transform: translate3d(-96px, 0, 0); }
+  to { transform: translate3d(96px, 0, 0); }
 }
 
 .os-page-panel {
@@ -147,10 +415,8 @@ body.os-chrome-body #read-progress {
   padding: 8px 10px;
   border: 1px solid var(--os-line);
   border-radius: 18px;
-  background:
-    linear-gradient(180deg, rgba(8, 14, 24, 0.97), rgba(5, 10, 18, 0.94)),
-    rgba(5, 10, 18, 0.96);
-  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.42);
+  background: var(--os-panel-bg);
+  box-shadow: var(--os-panel-shadow);
   backdrop-filter: blur(24px);
   transition:
     background var(--os-slow) var(--os-ease),
@@ -189,7 +455,7 @@ body.os-chrome-body #read-progress {
 .os-page-dock a {
   border: 1px solid var(--os-line);
   color: var(--os-text);
-  background: rgba(15, 23, 42, 0.58);
+  background: var(--os-control-bg);
   text-decoration: none;
   transition:
     background var(--os-base) var(--os-ease),
@@ -255,9 +521,9 @@ body.os-chrome-body #read-progress {
 .os-page-panel-chip:hover,
 .os-page-panel-chip.is-active {
   border-color: var(--os-line-bright);
-  background: rgba(34, 211, 238, 0.12);
+  background: var(--os-control-hover-bg);
   color: var(--os-teal);
-  box-shadow: 0 12px 28px rgba(34, 211, 238, 0.10);
+  box-shadow: var(--os-control-hover-shadow);
 }
 
 .os-page-workspaces a:hover,
@@ -285,7 +551,7 @@ body.os-chrome-body #read-progress {
   min-width: 90px;
   border: 1px solid var(--os-line);
   border-radius: 12px;
-  background: rgba(5, 14, 22, 0.72);
+  background: var(--os-clock-bg);
   color: var(--os-teal);
   font: 750 12px/1 var(--font-mono);
   font-variant-numeric: tabular-nums;
@@ -302,18 +568,18 @@ body.os-chrome-body #read-progress {
 .os-page-dock {
   position: fixed;
   z-index: 75;
-  left: 18px;
+  left: var(--os-dock-left);
   top: calc(var(--os-panel-top) + var(--os-panel-height) + 22px);
   bottom: auto;
-  width: 86px;
+  width: var(--os-dock-width);
   height: auto;
   flex-direction: column;
   gap: 8px;
   padding: 8px 6px 0;
   border: 1px solid var(--os-line);
   border-radius: 18px;
-  background: rgba(5, 10, 18, 0.74);
-  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.34);
+  background: var(--os-dock-bg);
+  box-shadow: var(--os-dock-shadow);
   backdrop-filter: blur(20px);
   transition:
     background var(--os-slow) var(--os-ease),
@@ -344,9 +610,9 @@ body.os-chrome-body #read-progress {
 .os-page-dock a.is-active {
   transform: translateX(2px);
   border-color: var(--os-line-bright);
-  background: rgba(34, 211, 238, 0.12);
+  background: var(--os-control-hover-bg);
   color: var(--os-text);
-  box-shadow: 0 16px 28px rgba(34, 211, 238, 0.10);
+  box-shadow: var(--os-control-hover-shadow);
 }
 
 .os-page-dock-icon {
@@ -355,14 +621,14 @@ body.os-chrome-body #read-progress {
   width: 28px;
   height: 28px;
   border-radius: 10px;
-  background: rgba(34, 211, 238, 0.13);
+  background: var(--os-dock-icon-bg);
   color: var(--os-teal);
   transition: background var(--os-base) var(--os-ease), transform var(--os-base) var(--os-ease);
 }
 
 .os-page-dock a:hover .os-page-dock-icon,
 .os-page-dock a.is-active .os-page-dock-icon {
-  background: rgba(34, 211, 238, 0.2);
+  background: var(--os-dock-icon-active-bg);
   transform: translateY(-1px);
 }
 
@@ -379,16 +645,21 @@ body.os-chrome-body #read-progress {
 }
 
 .os-page-stage {
-  width: min(1580px, calc(100vw - 142px));
+  width: min(var(--os-stage-max), calc(100vw - var(--os-stage-left-clearance) - var(--os-stage-right-gutter)));
   min-height: 100vh;
-  margin-left: 118px;
+  margin-left: max(
+    var(--os-stage-left-clearance),
+    calc(var(--os-stage-left-clearance) + (100vw - var(--os-stage-left-clearance) - var(--os-stage-max)) / 2)
+  );
   padding: calc(var(--os-panel-top) + var(--os-panel-height) + var(--os-panel-clearance)) 24px 48px;
 }
 
 .os-page-stage.is-article {
-  width: min(1180px, calc(100vw - 188px));
-  margin-right: 0;
-  margin-left: max(94px, calc((100vw - 1180px) / 2));
+  width: min(var(--os-stage-article-max), calc(100vw - var(--os-stage-left-clearance) - var(--os-stage-right-gutter)));
+  margin-left: max(
+    var(--os-stage-left-clearance),
+    calc(var(--os-stage-left-clearance) + (100vw - var(--os-stage-left-clearance) - var(--os-stage-article-max)) / 2)
+  );
 }
 
 .os-page-prompt {
@@ -401,10 +672,10 @@ body.os-chrome-body #read-progress {
   padding: 8px 14px;
   border: 1px solid var(--os-line);
   border-radius: 999px;
-  background: rgba(15, 23, 42, 0.62);
+  background: var(--os-prompt-bg);
   color: var(--os-text);
   font: 700 13px/1.15 var(--font-sans);
-  box-shadow: 0 16px 44px rgba(0, 0, 0, 0.24);
+  box-shadow: var(--os-prompt-shadow);
   transition:
     background var(--os-slow) var(--os-ease),
     border-color var(--os-base) var(--os-ease),
@@ -426,10 +697,8 @@ body.os-chrome-body #read-progress {
   overflow: hidden;
   border: 1px solid var(--os-line-bright);
   border-radius: 18px;
-  background:
-    linear-gradient(180deg, rgba(10, 15, 26, 0.94), rgba(6, 10, 17, 0.92)),
-    rgba(5, 10, 18, 0.84);
-  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.42), inset 0 1px 0 rgba(255, 255, 255, 0.045);
+  background: var(--os-window-bg);
+  box-shadow: var(--os-window-shadow);
   transition:
     background var(--os-slow) var(--os-ease),
     border-color var(--os-base) var(--os-ease),
@@ -442,7 +711,7 @@ body.os-chrome-body #read-progress {
   min-height: 46px;
   padding: 0 16px;
   border-bottom: 1px solid var(--os-line);
-  background: rgba(8, 13, 24, 0.96);
+  background: var(--os-window-bar-bg);
   color: var(--os-muted);
   font: 750 12px/1 var(--font-mono);
 }
@@ -453,7 +722,7 @@ body.os-chrome-body #read-progress {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  color: var(--os-text);
+  color: var(--os-heading);
   font-size: 12px;
   text-align: center;
 }
@@ -503,7 +772,7 @@ body.os-chrome-body #read-progress {
 }
 
 .os-page-shell :is(a, button, input, textarea, select):focus-visible {
-  outline: 2px solid rgba(94, 234, 212, 0.82);
+  outline: 2px solid var(--os-focus-ring);
   outline-offset: 3px;
 }
 
@@ -518,9 +787,7 @@ body.os-chrome-body #read-progress {
   margin: 0;
   border: 1px solid rgba(94, 234, 212, 0.42);
   border-radius: 5px;
-  background:
-    linear-gradient(180deg, rgba(15, 23, 42, 0.92), rgba(6, 11, 20, 0.92)),
-    rgba(8, 13, 24, 0.95);
+  background: var(--os-checkbox-bg);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 0 0 1px rgba(34, 211, 238, 0.06);
   cursor: pointer;
   transition:
@@ -534,8 +801,8 @@ body.os-chrome-body #read-progress {
   content: "";
   width: 8px;
   height: 5px;
-  border-bottom: 2px solid #021016;
-  border-left: 2px solid #021016;
+  border-bottom: 2px solid var(--os-checkbox-check);
+  border-left: 2px solid var(--os-checkbox-check);
   transform: rotate(-45deg) scale(0);
   transform-origin: center;
   transition: transform var(--os-fast) var(--os-ease);
@@ -581,8 +848,22 @@ body.os-chrome-body .cookie-consent-banner {
     bottom: calc(max(0.75rem, env(safe-area-inset-bottom)) + 76px);
   }
 
+  .os-page-ribbon,
+  .os-page-telemetry,
   .os-page-beam {
     display: none;
+  }
+
+  .os-page-depth {
+    right: 0;
+    left: 0;
+    opacity: 0.34;
+  }
+
+  .os-page-lattice {
+    right: 0;
+    left: 0;
+    opacity: 0.16;
   }
 
   .os-page-panel {
@@ -689,6 +970,22 @@ body.os-chrome-body .cookie-consent-banner {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .os-page-wallpaper,
+  .os-page-depth,
+  .os-page-grid,
+  .os-page-lattice,
+  .os-page-telemetry {
+    transform: none !important;
+    will-change: auto;
+  }
+
+  .os-page-ribbon,
+  .os-page-beam,
+  .os-page-beam-two {
+    transform: rotate(-17deg) !important;
+    will-change: auto;
+  }
+
   .os-page-shell *,
   .os-page-shell *::before,
   .os-page-shell *::after {

@@ -15,17 +15,18 @@ last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: true
-  commission: "20%"
+  commission: null
   cookie_days: 30
   network: null
-  link: null
+  link: https://fireflies.ai?fpr=aipediawiki
+  notes: "Affiliate link supplied by publisher on 2026-05-02. Internal monetization terms should not be surfaced in public editorial copy."
 scores:
   utility: 8
   value: 8
   moat: 6
   longevity: 7
 tags: [meeting-transcription, ai-notes, meeting-summary, productivity, zoom-integration]
-seo_title: "Fireflies.ai: Features, Pricing & Review (April 2026)"
+seo_title: "Fireflies.ai: Features, Pricing & Review (May 2026)"
 meta_description: "Fireflies.ai records and transcribes meetings across Zoom, Teams, Meet, and Webex, with AskFred AI search. Plans run Free, Pro $10, Business $19, Enterprise from $39/seat (annual)."
 author: "aipedia.wiki Editorial"
 best_for:
@@ -69,7 +70,7 @@ Pricing runs Free, Pro $10/seat/mo, Business $19/seat/mo, and Enterprise from $3
 | **AI credits** | Unlimited transcription on paid tiers · AskFred and advanced summaries are metered |
 | **Compliance** | SSO, HIPAA, private storage on Enterprise |
 
-Every data point above was verified against vendor pages on 2026-04-17. See Sources.
+Every data point above was verified against vendor pages on 2026-05-02. See Sources.
 
 ## What it actually is
 
@@ -106,7 +107,7 @@ Subscription pricing via [fireflies.ai/pricing](https://fireflies.ai/pricing):
 | Business | $19 | $29 | Unlimited | Yes | Salesforce, HubSpot, Pipedrive | **Sales teams with CRM workflows** |
 | Enterprise | $39+ | Custom | Unlimited | Yes | All + custom | SSO, HIPAA, compliance |
 
-*Prices verified 2026-04-17 via [fireflies.ai/pricing](https://fireflies.ai/pricing). Annual billing is the posted rate. AskFred, advanced summaries, action item detection, and meeting highlights all consume AI credits that cap monthly even on paid plans; heavy users may hit throttles.*
+*Prices verified 2026-05-02 via [fireflies.ai/pricing](https://fireflies.ai/pricing). Annual billing is the posted rate. AskFred, advanced summaries, action item detection, and meeting highlights all consume AI credits that cap monthly even on paid plans; heavy users may hit throttles.*
 
 ## Against the alternatives
 
@@ -132,7 +133,7 @@ Subscription pricing via [fireflies.ai/pricing](https://fireflies.ai/pricing):
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [Fireflies pricing](https://fireflies.ai/pricing), the [Fireflies pricing guide](https://guide.fireflies.ai/articles/3734844560-learn-about-the-fireflies-pricing-plans), and [G2 Fireflies reviews](https://www.g2.com/products/fireflies-ai/reviews).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-02 against [Fireflies pricing](https://fireflies.ai/pricing), the [Fireflies pricing guide](https://guide.fireflies.ai/articles/3734844560-learn-about-the-fireflies-pricing-plans), and [G2 Fireflies reviews](https://www.g2.com/products/fireflies-ai/reviews).
 
 ## FAQ
 

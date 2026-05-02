@@ -157,32 +157,28 @@ test.describe('mobile layout', () => {
   }
 });
 
-test('homepage OS shell exposes the package manager and news workspaces', async ({ page }) => {
+test('homepage search shell exposes the main catalog workspaces', async ({ page }) => {
   await page.goto('/');
 
-  await expect(page.locator('[data-linux-demo]')).toBeVisible();
-  await expect(page.locator('[data-window="tool-finder"]')).toBeVisible();
-  await expect(page.locator('[data-window="news"]')).toBeVisible();
-  await expect(page.locator('[data-window="terminal"]')).toBeVisible();
-  await expect(page.locator('h1')).toContainText('Operate the AI tools catalog');
+  await expect(page.locator('[data-os-page-shell]')).toBeVisible();
+  await expect(page.locator('[data-home-page]')).toBeVisible();
+  await expect(page.locator('[data-home-search]')).toBeVisible();
+  await expect(page.locator('.home-tools')).toBeVisible();
+  await expect(page.locator('.home-news-list')).toBeVisible();
+  await expect(page.locator('h1')).toContainText('Find the right AI tool faster');
 });
 
 test('homepage primary destination labels are readable', async ({ page }) => {
   await page.goto('/');
 
-  const labels = page.locator([
-    '.os-hero-actions a',
-    '.os-shortcuts button[data-focus-window="tool-finder"] b',
-    '.os-shortcuts button[data-focus-window="news"] b',
-  ].join(', '));
-  await expect(labels).toHaveCount(4);
+  const labels = page.locator('.home-path span');
+  await expect(labels).toHaveCount(3);
 
   const labelText = await labels.allTextContents();
   expect(labelText.map((text) => text.trim())).toEqual([
-    'Open package manager',
-    'Compare packages',
-    'Packages',
-    'News Desk',
+    'Browse tools',
+    'Compare options',
+    'Track changes',
   ]);
 
   const clippedLabels = await labels.evaluateAll((nodes) => nodes
@@ -203,7 +199,7 @@ test('homepage primary destination labels are readable', async ({ page }) => {
 test('homepage OS wallpaper keeps warm accents out of decorative beams', async ({ page }) => {
   await page.goto('/');
 
-  const wallpaperPaint = await page.locator('.os-wallpaper').evaluate((node) => {
+  const wallpaperPaint = await page.locator('.os-page-wallpaper').evaluate((node) => {
     const style = getComputedStyle(node);
     return {
       backgroundImage: style.backgroundImage,

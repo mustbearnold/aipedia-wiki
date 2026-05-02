@@ -3,150 +3,154 @@ type: tool
 slug: decktopus
 title: Decktopus AI
 tagline: >-
-  Automated presentation builder that combines AI deck generation with built-in
-  form and Q&A functionality for presenter workflows.
+  AI presentation builder with prompt-to-deck generation, AI credits, PDF/PPT-style export, slide analytics, custom domains, and built-in audience forms for presenter workflows.
 category: ai-presentation
 company: Decktopus Inc.
 url: 'https://decktopus.com'
-pricing_model: freemium
-price_range: $0-$39/month
+pricing_model: paid
+price_range: $14.99-$34.99/user/month
 status: active
 launched: 2018-01
-last_updated: 2026-04-30
-last_verified: 2026-04-30
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: true
-  commission: 25% recurring
+  commission: null
   cookie_days: null
   network: Direct
   link: 'https://www.decktopus.com?via=aipediawiki'
+  notes: "Affiliate link configured. Internal monetization terms should not be surfaced in public editorial copy."
 scores:
   utility: 7
   value: 6
   moat: 5
   longevity: 6
 tags: [presentations, slides, ai-generation, forms, speaker-notes, automation, prompt-to-deck]
-seo_title: 'Decktopus AI: Features, Pricing & Review (2026)'
+seo_title: 'Decktopus AI: Features, Pricing & Review (May 2026)'
 meta_description: >-
-  Decktopus AI generates presentations and includes built-in forms and Q&A. Free
-  tier available; Pro costs $39/mo. Full review updated April 2026.
+  Decktopus AI generates presentations from prompts and adds forms, Q&A, analytics, custom domains, and AI credits. Pro is $14.99/mo annually; Business is $34.99/user/mo annually.
 author: aipedia.wiki Editorial
+best_for:
+  - educators and trainers collecting audience responses
+  - consultants building interactive proposal decks
+  - sales teams that want presentations plus lead capture
+  - small teams that need simple AI deck generation with analytics
+not_best_for:
+  - users who only want the most polished AI-generated decks
+  - teams that need real-time collaborative slide editing
+  - buyers looking for the cheapest general presentation generator
 quick_answer: >-
-  Decktopus AI is an automated presentation builder developed by Decktopus Inc. (founded 2018) that generates decks from prompts and adds built-in form and Q&A widgets for collecting audience responses within the presentation itself. That embedded form layer is the single feature separating it from every other AI presentation tool, making it genuinely useful for educators, trainers, and sales professionals who run interactive sessions. The free tier is tightly restricted; Pro costs $39/month. Best for educators and coaches who need slides plus data collection in one tool, not for general AI presentation work where Gamma at $10/month produces better-quality output with a stronger feature set. The AI generation quality and template variety both trail Gamma and Beautiful.ai.
+  Decktopus AI is best when the presentation itself needs to collect responses. It generates decks from prompts and pairs them with forms, Q&A, analytics, and custom-domain sharing. Pick it for trainers, educators, consultants, and sales decks with built-in data capture. Skip it for general AI slide generation where Gamma or Beautiful.ai is more polished.
+price_history:
+  - date: 2026-05-02
+    plan: "Pro"
+    price: "$14.99/mo billed annually"
+    note: "9,000 AI credits/year, about 300 AI presentations/year, PDF export, AI assistance."
+  - date: 2026-05-02
+    plan: "Business"
+    price: "$34.99/user/mo billed annually"
+    note: "12,000 AI credits/year, about 400 AI presentations/year for the organization, custom domain, slide analytics, webhook, team and organization features."
 ---
 
 # Decktopus AI
 
-Decktopus AI is an automated presentation builder developed by Decktopus Inc., founded in 2018. It generates complete presentations from a prompt and includes built-in form and Q&A functionality designed for presenters who collect responses from audiences, and is primarily used by educators, trainers, and professionals who combine presentation delivery with audience interaction. Its key differentiator is the embedded form and Q&A layer: presentations can include response collection, audience polling, and feedback forms without needing separate tools. As of April 2026, Decktopus offers a limited free tier with Pro at $39 per month ([Decktopus](https://decktopus.com/pricing)).
+Decktopus AI is an AI presentation builder for people who do more than show slides. It generates decks from prompts, but its more specific advantage is presenter workflow: forms, Q&A, analytics, custom domains, webhooks, and audience-response collection live beside the deck.
 
-Decktopus predates most AI presentation tools by several years, launching in 2018 with a template-first approach before adding AI generation powered by models like GPT-5.4 and Claude Opus 4.7. The product has evolved toward AI-assisted deck creation while retaining its original form and interaction features. This combination is differentiated from pure AI generation tools: a Decktopus presentation can serve as both the slide content and the data collection mechanism in a single workflow, useful for trainers running post-session surveys, educators assigning interactive homework, and sales reps collecting qualification data during a presentation.
-
-The competitive position is niche. Gamma is a stronger general-purpose AI presentation tool at a lower price point, and Pitch is stronger for team collaboration. Decktopus earns its place for specific workflows where presentation plus form integration is the requirement.
-
+That makes it less of a pure Gamma competitor and more of a "presentation plus lead capture / feedback / training response" tool.
 
 ## System Verdict
 
-Decktopus is a niche pick. Its differentiator is the embedded form and Q&A widget: any slide can collect responses from the audience in real time without routing traffic to Google Forms or Typeform. That lands cleanly for classroom polls, sales qualification mid-pitch, and workshop data capture.
+> **Pick Decktopus when slides need to collect data.** Trainers can gather feedback, educators can run interactive assignments, consultants can collect intake responses, and sales teams can route interested viewers from a deck into a follow-up workflow.
+>
+> **Skip it for pure deck quality.** [Gamma](/tools/gamma/) is stronger for fast AI-generated docs and decks. [Beautiful.ai](/tools/beautiful-ai/) is stronger for polished business templates. Decktopus earns its keep when the form/Q&A/analytics layer matters.
+>
+> **Who pays which tier:** Pro $14.99/mo annually is the solo creator tier with 9,000 AI credits/year. Business $34.99/user/mo annually adds team features, custom domain, slide analytics, webhook, and organization controls. Enterprise is custom for corporate-branded slide systems.
 
-Prompt-to-deck generation on GPT-5.4 takes roughly 45 seconds for a 10-slide draft, faster than Gamma's occasional 90-second lag but behind Gamma on visual polish and editing speed.
+## Key Facts
 
-Pick Decktopus only when the workflow requires slides plus inline data capture in a single file. Skip it for general presentation work. Gamma at $10/month produces better-looking decks, and Beautiful.ai has the stronger template library. Decktopus's $39/month Pro tier is hard to justify outside the form use case.
+| | |
+|---|---|
+| **Core job** | Prompt-to-deck generation plus presenter workflow tools |
+| **Differentiator** | Forms, Q&A, analytics, custom domain, and lead/response capture |
+| **AI credit model** | Pro: 9,000 credits/year · Business: 12,000 credits/year |
+| **Deck cost** | Decktopus says AI deck creation costs 30 credits |
+| **Pro plan** | $14.99/mo billed annually · about 300 AI presentations/year |
+| **Business plan** | $34.99/user/mo billed annually · about 400 AI presentations/year for the organization |
+| **Enterprise** | Custom, including corporate-branded slides and branded AI setup |
+| **Cloud product** | Yes, Decktopus says it works on the cloud |
 
-## What It Does
+Every data point above was verified against Decktopus's official pricing page on 2026-05-02. See Sources.
 
-Decktopus generates a complete presentation from a topic prompt, applying a visual theme and generating structured slide content with speaker notes ([Decktopus](https://decktopus.com)). Users can edit the generated content, swap themes, add or remove slides, and customize text and images. The distinctive addition is the form widget: any slide can include a form element that collects text responses, multiple choice answers, or file uploads from audience members during or after the presentation.
+## What it actually is
 
-An AI assistant powered by GPT-5.4 is available for inline text rewriting and content suggestions. Presentations export to PDF and PPTX, and share as live URLs with analytics on views and form responses. Recent updates include integration with Gemini 3.1 Pro for image suggestions and improved form analytics dashboards.
+Decktopus starts with a prompt and returns a structured presentation. Users edit the deck, apply themes, add slides, and export or share it.
 
-## Who It's For
+The reason to care is the interaction layer. A Decktopus presentation can include forms and Q&A so the audience can submit answers, feedback, files, or lead information without leaving the presentation flow. Business adds analytics and a custom domain, which makes it more useful for externally shared sales, training, or consulting materials.
 
-- **Educators and corporate trainers** running sessions where post-presentation surveys or interactive exercises are needed
-- **Sales professionals** who want to embed qualification forms within proposal decks
-- **Coaches and consultants** collecting client intake information within an onboarding presentation
-- **Marketers** running webinar-style presentations with embedded registration or feedback forms
-- **Small business owners** who need a simple all-in-one presentation and form tool
-- **Event organizers** using presentations for live polls and attendee feedback collection
+The AI-credit model is important. Pro includes 9,000 credits per year; Business includes 12,000 credits per year per organization, multiplied by seats according to the pricing page. Deck creation costs 30 credits, so annual capacity is easier to understand than a vague "unlimited AI" claim.
+
+## When to pick Decktopus
+
+- **Training decks with feedback loops.** Built-in forms reduce the need for a separate survey tool.
+- **Sales proposals with lead capture.** A shared proposal can collect qualification data or follow-up requests.
+- **Consulting onboarding.** Client intake forms can live inside the presentation rather than in a separate Typeform.
+- **Education workflows.** Q&A and response collection make sense for lessons, workshops, and assignments.
+- **Simple hosted deck analytics.** Business users can track views and responses without building a reporting stack.
+
+## When to pick something else
+
+- **Best AI deck generation quality:** [Gamma](/tools/gamma/) is the stronger general-purpose AI deck/doc builder.
+- **Polished business templates:** [Beautiful.ai](/tools/beautiful-ai/) has stronger design automation and template consistency.
+- **Team slide collaboration:** Pitch, Google Slides, or PowerPoint remain better collaborative slide workspaces.
+- **Visual-first marketing assets:** Canva Presentations is stronger when design breadth matters more than form capture.
 
 ## Pricing
 
-| Plan | Price | Key Limits |
-|------|-------|-----------|
-| Free | $0/month | 10 presentations lifetime, basic themes, Decktopus branding, limited AI credits |
-| Pro | $39/month | Unlimited presentations, all themes, unlimited forms, PPTX/PDF export, analytics, no branding |
-| Business | $99/month | Team seats, advanced analytics, custom branding, priority support |
+Subscription pricing via [decktopus.com/pricing](https://www.decktopus.com/pricing):
 
-> Pricing verified at [decktopus.com/pricing](https://decktopus.com/pricing) as of 2026-04-15.
+| Plan | Annual effective price | AI credits | Best for |
+|---|---:|---:|---|
+| Pro | $14.99/mo | 9,000/year | Solo creators, educators, consultants |
+| Business | $34.99/user/mo | 12,000/year | Teams needing analytics, custom domain, webhook, and organization controls |
+| Enterprise | Custom | Custom | Corporate-branded decks, custom layouts, branded AI setup |
 
-## Key Features
+Prices verified 2026-05-02. Monthly billing, promotions, taxes, and currency localization can change checkout totals.
 
-- **AI presentation generation:** Generate complete decks from prompts using GPT-5.4 and Claude Opus 4.7 with themed layouts, text, and images
-- **Built-in form widgets:** Add response collection, polls, and feedback forms to slides with real-time response dashboards
-- **Speaker notes generation:** AI generates presenter notes for each slide
-- **Q&A mode:** Live Q&A slide with audience question collection and moderation
-- **Theme library:** 100+ visual themes for business, education, marketing
-- **AI text assistant:** Inline rewrite, expand, summarize using integrated LLMs
-- **Analytics dashboard:** Track views, engagement, form submissions with exportable reports
-- **Multi-format export:** PDF, PPTX, video recording on Pro tier
+## Failure Modes
 
-## Limitations
+- **Not the visual-quality leader.** Decktopus is useful, but Gamma and Beautiful.ai are stronger for general deck polish.
+- **Credits require planning.** AI generation is metered through annual credits, and heavy deck generation can exhaust credits faster than expected.
+- **Interaction layer is niche.** If you do not need forms, Q&A, analytics, or lead capture, the differentiator disappears.
+- **Cloud-only workflow.** Decktopus says it works in the cloud; teams wanting fully offline deck authoring should use PowerPoint or Keynote.
+- **Collaboration is not the main moat.** Team features exist, but this is not a replacement for deep collaborative presentation suites.
 
-- **AI generation trails leaders:** Output quality lags Gamma and Presentations.AI which use optimized fine-tuned models
-- **Free tier restrictions:** Only 10 lifetime presentations; forces quick upgrade for regular use
-- **Niche form focus:** Core differentiation irrelevant for non-interactive presentation needs
-- **Limited collaboration:** No real-time team editing; basic sharing only
-- **Template variety:** Smaller library than Canva or Beautiful.ai
+## Methodology
 
-## Bottom Line
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that verifies tool details against primary sources and then applies the site scoring rubric. Scoring follows Utility, Value, Moat, and Longevity as explained at [/about/scoring/](https://aipedia.wiki/about/scoring/).
 
-Decktopus AI suits educators, trainers, and professionals who need presentation plus embedded form functionality in one tool ([Decktopus](https://decktopus.com)). For general AI presentation generation, Gamma offers better quality at lower cost. The form integration justifies the price premium only for specific interactive workflows.
-
-## Best Alternatives
-
-| Tool | Price | Key Difference |
-|------|-------|----------------|
-| Gamma | $10/mo | Superior AI generation quality, unlimited free tier, broader features |
-| Presentations.AI | $25/mo | Pure prompt-to-deck focus with GPT-5.4 optimization, no forms |
-| Beautiful.ai | $15/mo | Advanced auto-layouts, larger template library |
+Last verified 2026-05-02 against Decktopus's official pricing page and public product materials.
 
 ## FAQ
 
-**What makes Decktopus different from Gamma?**  
-Decktopus includes built-in forms and live Q&A for audience interaction, absent in Gamma. Gamma excels in pure AI slide generation quality ([Decktopus](https://decktopus.com)).
+**What makes Decktopus different from Gamma?**
+Decktopus includes forms, Q&A, analytics, and lead/response capture inside the presentation workflow. Gamma is stronger for general AI deck and document generation.
 
-**Is the free tier usable?**  
-The free tier allows 10 lifetime presentations with branding and limited AI credits. Pro at $39/month unlocks unlimited use ([Decktopus Pricing](https://decktopus.com/pricing)).
+**How much does Decktopus cost?**
+Pro is $14.99/mo billed annually. Business is $34.99/user/mo billed annually. Enterprise is custom.
 
-**What AI models power Decktopus?**  
-Generation uses GPT-5.4 and Claude Opus 4.7; image suggestions leverage Gemini 3.1 Pro ([Product Hunt](https://www.producthunt.com/products/decktopus)).
+**How do Decktopus AI credits work?**
+The official pricing page lists 9,000 AI credits/year on Pro and 12,000 AI credits/year on Business. Decktopus says AI deck creation costs 30 credits.
 
+**Is Decktopus good for sales decks?**
+Yes, if the sales deck should collect lead data, feedback, or qualification responses. If the deck is purely visual, Gamma, Beautiful.ai, or PowerPoint may be better.
 
-
-
-
-## Review History
-
-- **2026-04-13:** Pricing re-checked against the official pricing page. No change since last verification.
-- **2026-02-16:** Flagship version bumped after the most recent model release.
-- **2025-12-16:** Pricing verified. Minor copy edits.
-- **2024-01-15:** Initial review added to the catalog.
-
-## Related Guides
-
-- [Best AI Tools Under $20/Month (2026)](../use-cases/best-ai-tools-under-20-month.md)
-
-## Related Comparisons
-
-- [Beautiful.ai vs Decktopus AI](../comparisons/beautiful-ai-vs-decktopus.md)
-- [Decktopus AI vs Gamma](../comparisons/decktopus-vs-gamma.md)
-- [Decktopus AI vs Pitch](../comparisons/decktopus-vs-pitch.md)
-- [Decktopus AI vs Presentations.AI](../comparisons/decktopus-vs-presentations-ai.md)
-- [Decktopus AI vs Tome](../comparisons/decktopus-vs-tome.md)
 ## Sources
 
-- [Decktopus Official Site](https://decktopus.com): Product features and pricing
-- [Product Hunt - Decktopus](https://www.producthunt.com/products/decktopus): User reviews and update history
+- [Decktopus pricing](https://www.decktopus.com/pricing): plan prices, credits, deck-generation cost, Business features, Enterprise positioning
+- [Decktopus official site](https://decktopus.com): product positioning and presentation workflow
 
 ## Related
 
-- **Category:** [AI Presentation Tools](../categories/ai-presentation.md)
+- **Category:** [AI Presentation](/categories/ai-presentation/)
+- **Alternatives:** [Gamma](/tools/gamma/) · [Beautiful.ai](/tools/beautiful-ai/) · [Pitch](/tools/pitch/) · [Prezi](/tools/prezi/)

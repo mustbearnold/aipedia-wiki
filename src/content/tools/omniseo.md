@@ -3,202 +3,191 @@ type: tool
 slug: omniseo
 title: OmniSEO
 tagline: >-
-  AI Visibility Platform. Monitors brand mentions across ChatGPT, Google AI Overviews, Perplexity, Gemini, Claude, Copilot, Grok, and Meta AI. Prompt tracking, competitor analysis, citation mapping, optimization recommendations. Plans from $89/mo.
+  AI Visibility Platform for tracking brand mentions, citations, competitors, and recommendations across AI Overviews, AI Mode, ChatGPT, Perplexity, Gemini, Copilot, Claude, Meta AI, Grok, and DeepSeek.
 category: ai-seo
 company: omniseo
 url: 'https://omniseo.com'
 pricing_model: paid
-price_range: $45-$500+/month
+price_range: $89-$899+/month
 status: active
 launched: 2024-01
-last_updated: 2026-04-19
-last_verified: 2026-04-19
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: true
-  commission: 50% for the first year
+  commission: null
   cookie_days: 60
   network: PartnerStack
   link: https://get.omniseo.com/aipediawiki
   application_status: approved
   applied_date: 2026-04-19
   approved_date: 2026-04-23
-  notes: "Approved 2026-04-23. 50% first-year commission is aggressive for a new-category vendor; conversion cycle depends on brand marketers' AI-search visibility as a tracked KPI."
+  notes: "Approved 2026-04-23. Internal monetization terms should not be surfaced in public editorial copy."
 scores:
   utility: 8
   value: 7
   moat: 7
   longevity: 7
 tags: [ai-seo, ai-visibility, aeo, llm-visibility, geo, brand-monitoring, ai-search, citation-tracking]
-seo_title: 'OmniSEO: Features, Pricing & Review (April 2026)'
+seo_title: 'OmniSEO: Features, Pricing & Review (May 2026)'
 meta_description: >-
-  OmniSEO is the AI Visibility Platform. Tracks brand mentions across ChatGPT, Google AI Overview, Perplexity, Gemini, Claude, Copilot, Grok, and Meta AI. Prompt-level monitoring, competitor analysis, citation tracking, actionable insights. Plans from $89/mo with 50%-off promos running.
+  OmniSEO is an AI Visibility Platform. Essentials starts at $89/mo for 4 AI channels; Professional is $349/mo for 10 channels; Enterprise starts at $899+/mo. Best for brands tracking AI-search visibility.
 author: "aipedia.wiki Editorial"
 best_for:
   - brand managers tracking AI-search visibility as a KPI
   - SEO teams extending coverage to Answer Engine Optimization (AEO)
-  - marketing leaders at B2B SaaS where buyers research via ChatGPT
+  - marketing leaders at B2B SaaS where buyers research via ChatGPT or Perplexity
   - agencies adding AI-visibility audits to client deliverables
   - PR teams measuring AI-driven brand perception
 not_best_for:
-  - teams without established brand mentions (nothing to track yet)
-  - pure on-page SEO workflows (Surfer or Frase win that lane)
-  - sub-$50/mo budget (entry is $89/mo standard)
-  - teams that only care about Google organic
+  - teams without established brand mentions
+  - pure on-page SEO workflows
+  - sub-$50/mo budgets
+  - teams that only care about Google organic rankings
 quick_answer: >-
-  OmniSEO is the AI Visibility Platform. Tracks where your brand appears across 8 AI engines (ChatGPT, Google AI Overview, Perplexity, Gemini, Claude, Copilot, Grok, Meta AI), compares against competitors, maps citations, and recommends optimizations to increase AI-driven recommendations. Pick it for brand managers measuring AI-search presence. Skip for on-page SEO only or sub-$50 budgets.
+  OmniSEO tracks where a brand appears in AI-generated search and recommendation answers. Essentials starts at $89/mo for 4 channels; Professional is the practical working tier at $349/mo for the full 10-channel set. Pick it when AI visibility is a real marketing KPI. Skip it if you only need on-page SEO scoring or traditional keyword/backlink research.
 price_history:
-  - date: 2026-04-19
-    plan: "Entry plan"
-    price: "$89/mo (published starting price)"
-    note: "PartnerStack affiliate listing states 'plans start at $89/mo'. Active promotion: 50% off first month drops entry to $45."
-  - date: 2026-04-19
-    plan: "Launch promo"
-    price: "$45 first month"
-    note: "50% off first-month promotion advertised on the live pricing page. Extends to all tiers per site copy."
-  - date: 2026-04-19
-    plan: "Higher tiers"
-    price: "Custom / not disclosed"
-    note: "Full tier ladder is behind signup / sales contact. Starting rate $89/mo confirmed via PartnerStack and omniseo.com; tier-specific prices re-verify on next cycle."
+  - date: 2026-05-02
+    plan: "Essentials"
+    price: "$89/mo"
+    note: "4 AI channels, 50 saved prompts/month, 5 competitors, 5 seats. First month shown as $45 during 50%-off promotion."
+  - date: 2026-05-02
+    plan: "Professional"
+    price: "$349/mo"
+    note: "10 AI channels, 100 saved prompts/month, 5 competitors, 10 seats. First month shown as $175 during 50%-off promotion."
+  - date: 2026-05-02
+    plan: "Enterprise"
+    price: "$899+/mo"
+    note: "10+ channels, custom regions/model cohorts, 500+ saved prompts/month, monthly AEO/GEO consultations, unlimited seats."
 ---
 
 # OmniSEO
 
-OmniSEO is an AI Visibility Platform that measures and improves brand presence in generative AI search. The product category is new: as buyers and consumers increasingly use ChatGPT, Google AI Overviews, Perplexity, and Gemini to research purchases rather than Google organic search, brands need visibility into which AI answers mention them, which prompts trigger those mentions, and how to influence future AI outputs.
+OmniSEO is an AI Visibility Platform for brands that need to know how often they appear in generative AI answers. Instead of tracking only Google rankings, it monitors prompts, citations, competitors, and placement recommendations across AI search and answer surfaces.
 
-OmniSEO tracks **8 AI engines**: ChatGPT, Google AI Overview, Perplexity, Gemini AI Mode, Claude, Copilot, Grok, and Meta AI. The platform runs prompt-level monitoring, competitor visibility comparison, citation mapping, and delivers optimization recommendations.
+The product category is still young. The practical question is not "does OmniSEO replace SEO?" It does not. The question is: if buyers ask ChatGPT, Perplexity, Gemini, or Google AI surfaces for recommendations in your category, do they mention your brand, cite current sources, and describe you accurately?
 
 ## System Verdict
 
-> **Pick OmniSEO when AI-search visibility is a tracked KPI.** Brand managers, B2B SaaS marketing leaders, PR teams, and agencies all increasingly need to answer "what does ChatGPT say about our brand?" and "when a buyer asks Perplexity for alternatives to our category, do we get mentioned?" OmniSEO is purpose-built for this question and monitors more engines than any SEO-adjacent tool currently offers (Surfer's AI Tracker covers 4 engines in beta; OmniSEO covers 8 in production).
+> **Pick OmniSEO when AI-search visibility has become a real KPI.** Brand managers, B2B SaaS marketers, PR teams, and agencies need a way to answer "what does AI say about us?" with repeatable data rather than screenshots from one-off prompts. OmniSEO is built for that monitoring workflow.
 >
-> **Skip it for on-page SEO workflows or sub-$50 budgets.** [Surfer](/tools/surfer-seo/) still leads on content-editor scoring and now includes AI Tracker as a bundled feature. [Frase](/tools/frase/), [NeuronWriter](/tools/neuronwriter/), and [MarketMuse](/tools/marketmuse/) cover on-page content optimization. If your primary SEO motion is "write optimized content and rank on Google", pair OmniSEO only when AI-visibility is an additional workflow, not a replacement.
+> **Skip it when the job is traditional SEO execution.** [Surfer SEO](/tools/surfer-seo/) is stronger for content scoring and on-page optimization. [Ahrefs](/tools/ahrefs/) and [Semrush](/tools/semrush/) are stronger for backlinks, keyword databases, and classic SEO research. OmniSEO sits beside those tools when AI visibility becomes a separate reporting lane.
 >
-> **Who pays which tier:** Entry at $89/mo (with 50%-off first month to $45) targets brand managers and small marketing teams monitoring a single brand. Higher tiers and Enterprise handle agency workflows, multi-brand monitoring, and increased prompt-tracking volumes. Exact higher-tier rates are behind sales contact.
+> **Who pays which tier:** Essentials $89/mo is for a small team checking core AI channels. Professional $349/mo is the real working tier if you need the full 10-channel set. Enterprise $899+/mo is for larger brands, custom regions/model cohorts, higher prompt volume, and consultation support.
 
 ## Key Facts
 
 | | |
 |---|---|
-| **Core capability** | AI Visibility Platform · track brand mentions across 8 generative AI engines |
-| **AI engines tracked** | ChatGPT · Perplexity · Google AI Overview · Gemini AI Mode · Claude · Copilot · Grok · Meta AI |
-| **Core features** | Prompt Tracking · Competitor Analysis · Citation Tracking · Actionable Insights · AI Brand Research (free tool) |
-| **Entry price** | $89/mo published starting price · $45 first-month with 50%-off promo |
-| **Affiliate commission** | 50% first year (launch offer) |
-| **Category** | Answer Engine Optimization (AEO) · Generative Engine Optimization (GEO) · AI Visibility |
-| **Target users** | Brand managers · SEO teams extending to AEO · B2B SaaS marketing · agencies · PR |
-| **Integrations** | Reporting dashboards and data export (full integrations TBD per signup) |
-| **Free tool** | AI Brand Research (shows how AI describes a brand) |
-| **Status** | Active · growing product · AI-visibility category new as of 2024-2025 |
+| **Core capability** | AI Visibility Platform for brand mentions, citations, competitors, and recommendations |
+| **Essentials coverage** | 4 AI channels, 50 saved prompts/month, 5 competitors, 5 seats |
+| **Professional coverage** | 10 AI channels, 100 saved prompts/month, 5 competitors, 10 seats |
+| **Enterprise coverage** | 10+ channels, custom regions/model cohorts, 500+ saved prompts/month, unlimited seats |
+| **Full channel set** | AI Overviews · AI Mode · ChatGPT · Perplexity · Gemini · Copilot · Claude · Meta AI · Grok · DeepSeek |
+| **Core workflows** | Prompt tracking · competitor analysis · citation analytics · placement recommendations · AI Brand Research |
+| **Pricing** | Essentials $89/mo · Professional $349/mo · Enterprise $899+/mo |
+| **Annual billing** | Two months free listed on public pricing page |
+| **First-month promo** | 50% off Essentials and Professional shown on 2026-05-02 |
+| **Free tool** | AI Brand Research lookup |
 
-Every data point above verified against OmniSEO's published materials on 2026-04-19. Tier-specific higher-tier rates sit behind the signup flow and sales contact and re-verify on the next cycle.
+Every data point above was verified against OmniSEO's published pages on 2026-05-02. See Sources.
 
 ## What it actually is
 
-A vertical SaaS product focused on a single question: "How often, and in what contexts, does AI mention your brand?" The assumption driving the category is that buyer behavior is shifting from Google organic search to AI-search, and that brands that don't get mentioned in AI answers lose visibility they previously had through SEO.
+OmniSEO answers one operational question: "How visible is this brand inside AI answers?"
 
-**Prompt Tracking** is the core feature. Define a set of prompts a buyer in your category might ask an AI engine (e.g. "best project management tool for small teams", "alternatives to Monday.com", "affordable AI coding assistant"). OmniSEO runs those prompts across the 8 AI engines on a schedule and tracks when your brand appears in the answers.
+**Prompt tracking** monitors saved prompts that match buyer research intent: "best sales tools for startups," "alternatives to Monday.com," "which AI writing tool is best for agencies," and similar category questions.
 
-**Competitor Analysis** overlays your brand's visibility against direct competitors. Shows which prompts your competitor wins that you lose, where the mention gap sits, and which engines drive the most citations.
+**Competitor analysis** shows whether your brand appears, where competitors appear instead, and which prompts create the biggest visibility gaps.
 
-**Citation Tracking** maps where the AI engines source their information about your brand. Shows which URLs from your owned content, third-party mentions, and news articles feed the LLM responses. Used for content strategy: if Perplexity cites a 2023 review site for your brand, you know you need to get a current mention on that property.
+**Citation analytics** tracks which pages and sources AI systems cite when they describe the brand or category. That matters because weak, stale, or third-party citations can shape how a product is summarized.
 
-**Actionable Insights** converts the monitoring data into optimization recommendations: what content to produce, which keywords to target, and which competitor mentions to benchmark against.
+**Placement recommendations** turn the monitoring layer into action: which engines, query intents, and topic clusters deserve content or PR work first.
 
-**AI Brand Research** is the free on-site tool. Enter a brand name, see how each AI engine describes the brand. A lead magnet that also provides immediate value for casual users.
+**AI Brand Research** is the free lead-in tool that shows how AI describes a brand before the user buys a monitoring plan.
 
 ## When to pick OmniSEO
 
-- **AI-search visibility is an executive-level KPI.** CMOs, heads of marketing, and brand leads increasingly report to the C-suite on "AI presence." OmniSEO produces the audit-ready data for that reporting.
-- **B2B SaaS buyers research via ChatGPT or Perplexity.** If your buyers are asking ChatGPT "best tool for X", your OmniSEO data tells you whether you win, lose, or aren't mentioned at all.
-- **Agencies adding AEO / GEO to SEO deliverables.** AI-visibility audits add a premium deliverable to existing SEO retainers. Aggregated client reporting justifies agency-tier usage.
-- **Existing brand with content to analyse.** The citation-tracking feature needs an owned content footprint to map; early-stage brands without mentions yet won't get the full value.
-- **Competitive categories where visibility gaps move revenue.** If a buyer asking ChatGPT about your category gets five alternatives and you're not one of them, you lose that deal. OmniSEO quantifies those losses.
-- **PR and brand-perception monitoring.** Beyond SEO, OmniSEO doubles as AI-era brand monitoring: how does AI describe your brand, your founders, your product?
+- **Your buyers use AI tools for category research.** If prospects ask ChatGPT or Perplexity for vendor recommendations, AI visibility has real funnel value.
+- **The CMO wants AI-search reporting.** OmniSEO turns scattered prompts into dashboards and tracked metrics.
+- **You run an agency.** AI-visibility audits are a natural extension to SEO and PR retainers.
+- **Competitors are getting recommended instead of you.** Prompt tracking and citation analytics help identify where the gap is coming from.
+- **You already have content and PR assets.** OmniSEO is most useful when there is enough brand footprint for AI systems to cite and summarize.
 
 ## When to pick something else
 
-- **On-page SEO only:** [Surfer](/tools/surfer-seo/) leads on content-editor scoring and now includes AI Tracker for 4 engines. If on-page work is 80% of the job, Surfer plus occasional OmniSEO runs is cheaper than OmniSEO-primary.
-- **Content brief generation:** [Frase](/tools/frase/), [NeuronWriter](/tools/neuronwriter/), or [MarketMuse](/tools/marketmuse/) are purpose-built for that workflow.
-- **Traditional Google-focused SEO:** [Ahrefs](/tools/ahrefs/) or [Semrush](/tools/semrush/) dominate keyword and backlink analysis; OmniSEO does not replace them.
-- **Sub-$50 budget:** Wait for the AI-visibility category to mature and commoditise. Entry at $89/mo standard is not hobbyist-priced.
-- **Brands without established content footprint:** Build content first, measure AI visibility second. OmniSEO needs something to track.
+- **On-page SEO scoring:** [Surfer SEO](/tools/surfer-seo/), Frase, NeuronWriter, or MarketMuse.
+- **Keyword and backlink research:** [Ahrefs](/tools/ahrefs/) or [Semrush](/tools/semrush/).
+- **Budget below $50/mo:** wait for AI-visibility tools to commoditize, or use manual spot checks.
+- **No brand footprint yet:** build content, customer proof, reviews, and third-party mentions before paying for monitoring.
+- **Only Google organic matters:** classic SEO tools remain the better primary stack.
 
 ## Pricing
 
-Via [omniseo.com](https://omniseo.com):
+Subscription pricing via [omniseo.com/pricing](https://omniseo.com/pricing/):
 
-| Tier | Starting rate | Notes |
+| Tier | Monthly price | What it includes |
 |---|---|---|
-| Entry plan | $89/mo (published starting price) | 50%-off first month drops to $45 |
-| Higher tiers | Custom / behind signup | Tier-specific rates re-verify on next cycle |
-| Enterprise | Custom | Multi-brand, agency, custom prompt volumes |
+| Essentials | $89/mo | 4 AI channels, 50 saved prompts/month, 5 competitors, 5 seats |
+| Professional | $349/mo | 10 AI channels, 100 saved prompts/month, 5 competitors, 10 seats |
+| Enterprise | $899+/mo | 10+ channels, custom regions/model cohorts, 500+ saved prompts/month, monthly AEO/GEO consultations, unlimited seats |
 
-The active 50%-off first-month promotion applies to new customers and is referenced on the live pricing page. Exact tier breakdown (plan names, prompt-tracking volumes per tier, competitor-tracking slot counts, seat counts) is behind the signup flow.
-
-Prices verified 2026-04-19 via [OmniSEO](https://omniseo.com) and the PartnerStack affiliate listing. Re-verification cycle: 2026-05-19.
+The public pricing page showed 50% off the first month for Essentials ($45) and Professional ($175) on 2026-05-02. Annual billing is listed as two months free. Verify checkout totals before purchase because promotions can change.
 
 ## Against the alternatives
 
-| | OmniSEO | Surfer AI Tracker | Ahrefs Brand Monitor |
+| | OmniSEO | Surfer AI Tracker | Semrush AI Visibility |
 |---|---|---|---|
-| **Engines tracked** | **8 (ChatGPT, Perplexity, AI Overview, Gemini, Claude, Copilot, Grok, Meta)** | 4 (Google AI Overviews, Gemini, ChatGPT, Perplexity) | Google SERP only |
-| **Category** | AI-visibility (AEO / GEO) dedicated | SEO tool with AI Tracker add-on | Traditional SEO brand monitor |
-| **Prompt tracking** | **Core feature** | Beta, tier-scaled | Not applicable |
-| **Citation mapping** | **Yes** | Limited | No |
-| **Competitor gap analysis** | **Yes** | Yes (SERP-driven) | Yes (SERP) |
-| **Actionable optimization** | Yes (AI-recommendations) | Yes (SEO-recommendations) | Yes (SEO / backlink) |
-| **Entry price** | $89/mo | Surfer Standard $99/mo includes AI Tracker | Ahrefs starts $99/mo |
-| **Free tool** | AI Brand Research | None equivalent | Limited free tier |
-| **Best viewed as** | **AI-visibility pure-play** | SEO tool with AI add-on | Traditional SEO brand tracker |
+| **Primary job** | AI-search visibility monitoring | SEO content workflow with AI tracking | Broad SEO suite with AI visibility toolkit |
+| **Channel coverage** | 4 to 10+ depending on plan | 4 engines in the AI Tracker lane | AI search + broader SEO toolkit |
+| **Prompt tracking** | Core workflow | Add-on workflow | Toolkit workflow |
+| **Citation mapping** | Core workflow | Limited compared with pure-play tools | Available in Semrush AI toolkit |
+| **Content editor** | No | Strong | Semrush content tools available separately |
+| **Classic SEO database** | No | Limited | Strong |
+| **Best viewed as** | AI-visibility pure-play | SEO optimizer with AI add-on | Broad SEO platform with AI visibility module |
 
 ## Failure modes
 
-- **New category means limited validation data.** AEO / GEO / AI-visibility is a 2024-2026-era category. ROI benchmarks are evolving; buyers should budget for learning curve on interpretation.
-- **AI engine output is non-deterministic.** The same prompt on different days can return different brand mentions. OmniSEO handles this via repeated polling, but noisy-signal tolerance is required.
-- **8-engine coverage depends on engine API access.** Some engines (Grok, Meta AI) may have inconsistent API access; tracking quality varies by engine.
-- **Citation mapping needs discoverable content.** If your brand sits in dark-social channels (Slack, Discord, private forums), the citation tracker cannot see those mentions.
-- **$89/mo entry price can look steep vs established SEO tools.** Surfer Standard at $99/mo includes AI Tracker. The case for OmniSEO-primary vs Surfer-with-AI-Tracker-add is about 8-engine depth and pure-play focus.
-- **Higher-tier pricing is opaque.** Behind signup / sales contact. Agencies and larger brands should request a quote before committing.
-- **Results require optimization cycles.** Tracking is just the start; improving AI visibility means content strategy adjustments, review-site outreach, and ongoing brand-narrative work. OmniSEO does not do that work for you.
+- **The category is early.** AEO/GEO/AI visibility is still a 2024-2026-era budget line, and ROI benchmarks are not as mature as SEO.
+- **AI answers are noisy.** Prompt outputs vary by model, date, region, and product surface. Repeated monitoring helps, but it does not make AI answers deterministic.
+- **The full channel set is not entry-tier.** Essentials covers 4 channels; Professional is the practical tier for teams that need all 10.
+- **Citation data depends on discoverable sources.** If your brand reputation lives in private communities, sales calls, or dark social, OmniSEO will not see all of it.
+- **Monitoring is not optimization by itself.** Improving AI visibility still requires content updates, PR, review-site work, citations, and ongoing brand positioning.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-19 against [OmniSEO](https://omniseo.com) and the PartnerStack affiliate marketplace listing. Higher-tier pricing re-verifies once accessible publicly.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average).
+
+Last verified 2026-05-02 against OmniSEO's homepage, pricing page, and AI Brand Research page.
 
 ## FAQ
 
 **What is OmniSEO?**
-An AI Visibility Platform. It tracks how often and in what contexts a brand gets mentioned by generative AI engines (ChatGPT, Google AI Overview, Perplexity, Gemini AI Mode, Claude, Copilot, Grok, Meta AI). Used by brand managers, SEO teams, agencies, and PR leads to measure and improve AI-era brand presence.
+OmniSEO is an AI Visibility Platform. It tracks how often and in what contexts a brand gets mentioned by generative AI engines and AI search surfaces.
+
+**Which AI channels does OmniSEO monitor?**
+Essentials covers 4 channels. Professional covers 10: AI Overviews, AI Mode, ChatGPT, Perplexity, Gemini, Copilot, Claude, Meta AI, Grok, and DeepSeek. Enterprise adds custom regions and model cohorts.
 
 **How is this different from traditional SEO?**
-Traditional SEO focuses on ranking in Google's organic results. AI Visibility focuses on whether AI engines mention your brand in their answers. As buyers shift from Google to AI for research, AI visibility becomes a distinct workflow. OmniSEO is purpose-built for that workflow; traditional SEO tools are not.
-
-**Which AI engines does OmniSEO monitor?**
-Eight, as of April 2026: ChatGPT, Perplexity, Google AI Overview, Gemini AI Mode, Claude, Copilot, Grok, and Meta AI. Coverage is broader than SEO-adjacent tools (Surfer's AI Tracker covers 4 engines).
+Traditional SEO tracks search rankings, keywords, backlinks, and content optimization. OmniSEO tracks whether AI systems mention, cite, and recommend your brand in generated answers.
 
 **How does OmniSEO compare to Surfer AI Tracker?**
-Surfer's AI Tracker is an add-on to an SEO content-optimization tool. OmniSEO is a pure-play AI-visibility product. OmniSEO tracks 8 engines vs Surfer's 4, and goes deeper on citation mapping and competitive analysis. Surfer wins if you also need on-page content scoring; OmniSEO wins if AI-visibility is the primary concern.
+Surfer's AI Tracker is an add-on to an SEO content-optimization workflow. OmniSEO is a pure-play AI-visibility product with broader monitoring on Professional and above. Surfer wins when content optimization is the main job; OmniSEO wins when AI visibility reporting is the main job.
 
 **Is there a free trial?**
-The AI Brand Research tool on the homepage is free and shows how AI engines describe a given brand. A first-month 50%-off promo on paid tiers is advertised ($45 first month). Verify current promo terms on the live pricing page.
+OmniSEO advertises a free AI Brand Research tool and showed a first-month discount on Essentials and Professional when this page was verified. Check the live pricing page for current trial or promo terms.
 
-**What's the affiliate commission?**
-50% of the first year of every new customer as a launch offer. Managed through PartnerStack.
-
-**Is AI visibility actually worth tracking yet?**
-Increasingly yes. As of April 2026, generative AI engines handle a meaningful share of B2B buyer research queries in software, SaaS, and consumer categories. For brands whose buyers use ChatGPT or Perplexity as first-pass research, AI visibility has revenue implications. For brands whose buyers do not, AI visibility is a leading-indicator signal rather than a current-quarter KPI.
-
-**How often does OmniSEO poll the AI engines?**
-Product documentation does not publish exact polling cadence; it is tier-dependent. Entry plan covers sufficient cadence for brand-level monitoring; higher tiers add real-time or daily tracking for agency and enterprise use.
+**Is AI visibility worth tracking yet?**
+It is worth tracking for categories where buyers already use ChatGPT, Perplexity, Gemini, or AI search as a first-pass research tool. It is less urgent for categories where purchase discovery still happens almost entirely through Google, marketplaces, referrals, or sales-led outbound.
 
 ## Sources
 
-- [OmniSEO homepage](https://omniseo.com): product description, AI engine coverage, core features
-- [OmniSEO AI Brand Research](https://omniseo.com/brand-research): free AI-visibility lookup tool
-- PartnerStack affiliate marketplace listing: commission terms, starting price
+- [OmniSEO homepage](https://omniseo.com): product description, AI visibility positioning, and core workflows
+- [OmniSEO pricing](https://omniseo.com/pricing/): plan names, prices, channel counts, prompts, competitors, seats, and promotions
+- [OmniSEO AI Brand Research](https://omniseo.com/brand-research): free brand visibility lookup
 
 ## Related
 
 - **Category:** [AI SEO](/categories/ai-seo/)
-- **Alternatives:** [Surfer SEO](/tools/surfer-seo/) (AI Tracker add-on) · [Ahrefs](/tools/ahrefs/) · [Semrush](/tools/semrush/)
+- **Alternatives:** [Surfer SEO](/tools/surfer-seo/) · [Ahrefs](/tools/ahrefs/) · [Semrush](/tools/semrush/)
