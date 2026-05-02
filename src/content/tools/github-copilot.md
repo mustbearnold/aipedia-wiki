@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$39/user/month"
 status: active
 launched: 2021-06
-last_updated: 2026-04-30
-last_verified: 2026-04-30
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -237,4 +237,4 @@ Yes. Agent mode in VS Code and the Coding Agent both support the Model Context P
 
 - **Category:** [AI Coding](/categories/ai-coding/)
 - **Alternatives:** [Cursor](/tools/cursor/) · [Claude Code](/tools/claude-code/) · [Cline](/tools/cline/) · [Aider](/tools/aider/) · [Windsurf](/tools/windsurf/) · [Continue](/tools/continue/)
-- **Comparisons:** [Cursor vs Claude Code vs GitHub Copilot](/comparisons/cursor-vs-claude-code-vs-copilot/) · [Cursor vs GitHub Copilot](/comparisons/cursor-vs-github-copilot/) · [Claude Code vs GitHub Copilot](/comparisons/claude-code-vs-github-copilot/) · [Continue vs GitHub Copilot](/comparisons/continue-vs-github-copilot/)
+- **Comparisons:** [Cursor vs Claude Code vs GitHub Copilot](/compare/cursor-vs-claude-code-vs-copilot/) · [Cursor vs GitHub Copilot](/compare/cursor-vs-github-copilot/) · [Claude Code vs GitHub Copilot](/compare/claude-code-vs-github-copilot/) · [Continue vs GitHub Copilot](/compare/continue-vs-github-copilot/)

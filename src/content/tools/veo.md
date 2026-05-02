@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "$19.99-$249.99/month (consumer) · $0.10+/sec (Vertex AI)"
 status: active
 launched: 2024-12
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -170,4 +170,3 @@ The cost-efficient tier on Vertex AI, introduced April 3, 2026. It trades genera
 ## Related
 
 - **Category:** [AI Video Generation](/categories/ai-video/)
-- **Comparisons:** [Veo vs Runway](/comparisons/runway-vs-veo/) · [Veo vs Kling](/comparisons/kling-vs-veo/) · [Veo vs Seedance](/comparisons/seedance-vs-veo/)

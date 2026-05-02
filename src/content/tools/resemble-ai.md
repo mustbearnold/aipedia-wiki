@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$30-$60/month + Business tier"
 status: active
 launched: 2019-06
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -176,4 +176,4 @@ The current generation voice model family behind Generate. Handles streaming TTS
 ## Related
 
 - **Category:** [AI Voice / TTS](/categories/ai-voice/)
-- **Comparisons:** [Cartesia vs Resemble AI](/comparisons/cartesia-vs-resemble-ai/), [ElevenLabs vs Resemble AI](/comparisons/elevenlabs-vs-resemble-ai/), [Fish Audio vs Resemble AI](/comparisons/fish-audio-vs-resemble-ai/), [Resemble AI vs Voxtral](/comparisons/resemble-ai-vs-voxtral/)
+- **Comparisons:** [Cartesia vs Resemble AI](/compare/cartesia-vs-resemble-ai/), [ElevenLabs vs Resemble AI](/compare/elevenlabs-vs-resemble-ai/), [Fish Audio vs Resemble AI](/compare/fish-audio-vs-resemble-ai/), [Resemble AI vs Voxtral](/compare/resemble-ai-vs-voxtral/)

@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: $0-$199.99/month
 status: active
 launched: 2023-03
-last_updated: 2026-04-29
-last_verified: 2026-04-29
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -190,6 +190,6 @@ Creative Cloud All Apps at $59.99/month includes 1,000+ Firefly credits and the 
 ## Related
 
 - **Category:** [AI Image Generation](/categories/ai-image/)
-- **Comparisons:** [Adobe Firefly vs Midjourney](/comparisons/adobe-firefly-vs-midjourney/) · [Adobe Firefly vs Flux](/comparisons/adobe-firefly-vs-flux/) · [Adobe Firefly vs Ideogram](/comparisons/adobe-firefly-vs-ideogram/) · [Adobe Firefly vs Canva AI](/comparisons/adobe-firefly-vs-canva/)
+- **Comparisons:** [Adobe Firefly vs Midjourney](/compare/adobe-firefly-vs-midjourney/) · [Adobe Firefly vs Flux](/compare/adobe-firefly-vs-flux/) · [Adobe Firefly vs Ideogram](/compare/adobe-firefly-vs-ideogram/) · [Adobe Firefly vs Canva AI](/compare/adobe-firefly-vs-canva/)
 
 *Some links on this page are affiliate links. Commissions do not influence ratings or recommendations.*

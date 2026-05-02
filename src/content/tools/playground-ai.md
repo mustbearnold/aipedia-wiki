@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: $0-$45/month
 status: active
 launched: 2022-07
-last_updated: 2026-04-22
-last_verified: 2026-04-22
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -180,4 +180,3 @@ Turbo at $45/mo supports shared workspaces and basic team features. Enterprise S
 ## Related
 
 - **Category:** [AI Image Generation](/categories/ai-image/)
-- **Comparisons:** [Midjourney vs Playground](/comparisons/midjourney-vs-playground/) · [Flux vs Playground](/comparisons/flux-vs-playground/) · [Freepik vs Playground](/comparisons/freepik-vs-playground/)

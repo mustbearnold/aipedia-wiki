@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$249.99/month"
 status: active
 launched: 2024-06
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -178,4 +178,3 @@ Eric Jing and Kay Zhu, both former Baidu search leadership. The company raised f
 ## Related
 
 - **Category:** [AI Search](/categories/ai-search/) · [AI Automation](/categories/ai-automation/)
-- **Comparisons:** [Perplexity vs Genspark](/comparisons/perplexity-vs-genspark/) · [ChatGPT vs Genspark](/comparisons/chatgpt-vs-genspark/)

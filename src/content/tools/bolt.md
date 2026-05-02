@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$2000/month"
 status: active
 launched: 2024-10
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 seo_title: "Bolt.new: Features, Pricing & Review (April 2026)"
 meta_description: "Bolt.new by StackBlitz builds full-stack web apps in the browser via WebContainers. Token-metered pricing: Free 1M tokens/month, Pro $25 for 10M with rollover, Teams $30/member, Enterprise custom. Enhance prompt button, multi-model support."
@@ -151,4 +151,4 @@ React, Next.js, and Vite-based projects get the strongest generation quality. Ot
 ## Related
 
 - **Category:** [AI Design](/categories/ai-design/)
-- **Comparisons:** [Bolt.new vs ChatGPT](/comparisons/bolt-vs-chatgpt/) · [Bolt.new vs Cursor](/comparisons/bolt-vs-cursor/) · [Bolt.new vs Figma AI](/comparisons/bolt-vs-figma/) · [Bolt.new vs Google Stitch](/comparisons/bolt-vs-google-stitch/) · [Lovable vs Bolt.new vs v0](/comparisons/lovable-vs-bolt-vs-v0/)
+- **Comparisons:** [Bolt.new vs ChatGPT](/compare/bolt-vs-chatgpt/) · [Bolt.new vs Cursor](/compare/bolt-vs-cursor/) · [Bolt.new vs Figma AI](/compare/bolt-vs-figma/) · [Bolt.new vs Google Stitch](/compare/bolt-vs-google-stitch/) · [Lovable vs Bolt.new vs v0](/compare/lovable-vs-bolt-vs-v0/)

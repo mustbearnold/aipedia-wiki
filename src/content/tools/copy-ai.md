@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$1,000+/month"
 status: active
 launched: 2020-10
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -168,4 +168,4 @@ Copy.ai repositioned from standalone copywriting tool to GTM AI platform. Advanc
 ## Related
 
 - **Category:** [AI Writing](/categories/ai-writing/)
-- **Comparisons:** [ChatGPT vs Copy.ai](/comparisons/chatgpt-vs-copy-ai/), [Copy.ai vs Grammarly](/comparisons/copy-ai-vs-grammarly/), [Copy.ai vs HyperWrite](/comparisons/copy-ai-vs-hyperwrite/), [Copy.ai vs QuillBot](/comparisons/copy-ai-vs-quillbot/), [Copy.ai vs Sudowrite](/comparisons/copy-ai-vs-sudowrite/), [Copy.ai vs Wordtune](/comparisons/copy-ai-vs-wordtune/)
+- **Comparisons:** [ChatGPT vs Copy.ai](/compare/chatgpt-vs-copy-ai/), [Copy.ai vs Grammarly](/compare/copy-ai-vs-grammarly/), [Copy.ai vs HyperWrite](/compare/copy-ai-vs-hyperwrite/), [Copy.ai vs QuillBot](/compare/copy-ai-vs-quillbot/), [Copy.ai vs Sudowrite](/compare/copy-ai-vs-sudowrite/), [Copy.ai vs Wordtune](/compare/copy-ai-vs-wordtune/)

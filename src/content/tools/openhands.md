@@ -11,8 +11,8 @@ pricing_model: open-source
 price_range: "Free (MIT, BYOK) · Cloud free tier · Pro $20/mo · Enterprise custom"
 status: active
 launched: 2024-03
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -164,4 +164,3 @@ Yes. Native GitHub and GitLab integration. It clones a repo, reads issues, imple
 ## Related
 
 - **Category:** [AI Coding](/categories/ai-coding/)
-- **Comparisons:** [OpenHands vs Claude Code](/comparisons/openhands-vs-claude-code/) · [OpenHands vs Cursor](/comparisons/openhands-vs-cursor/) · [OpenHands vs Devin](/comparisons/openhands-vs-devin/)

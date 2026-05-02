@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: $0-$500/month
 status: active
 launched: 2021-01
-last_updated: 2026-04-19
-last_verified: 2026-04-19
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -220,4 +220,4 @@ Yes, voice cloning (create and use) is included on all tiers, including Free. Th
 
 - **Category:** [AI Voice](/categories/ai-voice/)
 - **Alternatives:** [ElevenLabs](/tools/elevenlabs/) · [Cartesia](/tools/cartesia/) · [Fish Audio](/tools/fish-audio/) · [Lovo](/tools/lovo/) · [Murf](/tools/murf/)
-- **Use cases:** [Best AI for Voice Agents](/use-cases/best-ai-for-voice-agents/)
+- **Use cases:** [Best AI for Voice Agents](/categories/ai-voice/)

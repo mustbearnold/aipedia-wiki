@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$89/month"
 status: active
 launched: 2017-01
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -154,4 +154,4 @@ Only on Enterprise. Starter and Creator plans have no programmatic access, which
 ## Related
 
 - **Category:** [AI Video Generation](/categories/ai-video/)
-- **Comparisons:** [HeyGen vs Synthesia](/comparisons/heygen-vs-synthesia/) · [Synthesia vs D-ID](/comparisons/synthesia-vs-d-id/) · [Runway vs Synthesia](/comparisons/runway-vs-synthesia/) · [Kling 3.0 vs Synthesia](/comparisons/kling-vs-synthesia/) · [ElevenLabs vs Synthesia](/comparisons/elevenlabs-vs-synthesia/)
+- **Comparisons:** [HeyGen vs Synthesia](/compare/heygen-vs-synthesia/) · [Runway vs Synthesia](/compare/runway-vs-synthesia/) · [Kling 3.0 vs Synthesia](/compare/kling-vs-synthesia/) · [ElevenLabs vs Synthesia](/compare/elevenlabs-vs-synthesia/)

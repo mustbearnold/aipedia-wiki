@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$25/user/month"
 status: active
 launched: 2020-09
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -166,4 +166,4 @@ Reflect costs less ($10/mo), adds end-to-end encryption, and relies on manual ba
 ## Related
 
 - **Category:** [AI Notes](/categories/ai-notes/)
-- **Comparisons:** [ChatGPT vs Mem](/comparisons/chatgpt-vs-mem/)
+- **Comparisons:** [ChatGPT vs Mem](/compare/chatgpt-vs-mem/)

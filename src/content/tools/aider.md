@@ -11,8 +11,8 @@ pricing_model: free
 price_range: "$0 + API costs"
 status: active
 launched: 2023-05
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -178,4 +178,4 @@ Yes. Every accepted change becomes a git commit with an AI-generated descriptive
 ## Related
 
 - **Category:** [AI Coding](/categories/ai-coding/)
-- **Comparisons:** [Aider vs Claude Code](/comparisons/aider-vs-claude-code/) · [Aider vs Cursor](/comparisons/aider-vs-cursor/) · [Aider vs GitHub Copilot](/comparisons/aider-vs-github-copilot/)
+- **Comparisons:** [Aider vs Claude Code](/compare/aider-vs-claude-code/) · [Aider vs Cursor](/compare/aider-vs-cursor/) · [Aider vs GitHub Copilot](/compare/aider-vs-github-copilot/)

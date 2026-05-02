@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$39+/user/month"
 status: active
 launched: 2019-01
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -149,4 +149,4 @@ Yes, on Enterprise. Turnkey Dell PowerEdge GPU bundles run offline clusters with
 ## Related
 
 - **Category:** [AI Coding](/categories/ai-coding/)
-- **Comparisons:** [Cursor vs Tabnine](/comparisons/cursor-vs-tabnine/) · [GitHub Copilot vs Tabnine](/comparisons/github-copilot-vs-tabnine/)
+- **Comparisons:** [Cursor vs Tabnine](/compare/cursor-vs-tabnine/) · [GitHub Copilot vs Tabnine](/compare/github-copilot-vs-tabnine/)

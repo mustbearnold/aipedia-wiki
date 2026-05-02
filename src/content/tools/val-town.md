@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$200+/month"
 status: active
 launched: 2023-01
-last_updated: 2026-04-23
-last_verified: 2026-04-23
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -168,4 +168,4 @@ Deno. Val Town uses Deno's official TypeScript language server and supports npm 
 ## Related
 
 - **Category:** [AI Coding](/categories/ai-coding/)
-- **Comparisons:** [Val Town vs Cursor](/comparisons/cursor-vs-val-town/), [Val Town vs Claude Code](/comparisons/claude-code-vs-val-town/), [Val Town vs GitHub Copilot](/comparisons/github-copilot-vs-val-town/)
+- **Comparisons:** [Val Town vs Cursor](/compare/cursor-vs-val-town/), [Val Town vs Claude Code](/compare/claude-code-vs-val-town/), [Val Town vs GitHub Copilot](/compare/github-copilot-vs-val-town/)

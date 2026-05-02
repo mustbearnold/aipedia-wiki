@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$800/month"
 status: active
 launched: 2021-01
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -172,4 +172,4 @@ A typical multi-source enrichment (5-8 columns plus one Claygent research task) 
 ## Related
 
 - **Category:** [AI Automation](/categories/ai-automation/)
-- **Comparisons:** [Apollo vs Clay](/comparisons/apollo-vs-clay/) · [Clay vs Instantly](/comparisons/clay-vs-instantly/) · [Clay vs Intercom](/comparisons/clay-vs-intercom/) · [Clay vs Make](/comparisons/clay-vs-make/) · [Clay vs Zapier](/comparisons/clay-vs-zapier/)
+- **Comparisons:** [Apollo vs Clay](/compare/apollo-vs-clay/) · [Clay vs Instantly](/compare/clay-vs-instantly/) · [Clay vs Intercom](/compare/clay-vs-intercom/) · [Clay vs Make](/compare/clay-vs-make/) · [Clay vs Zapier](/compare/clay-vs-zapier/)

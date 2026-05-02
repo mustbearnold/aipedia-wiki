@@ -11,8 +11,8 @@ pricing_model: paid
 price_range: $49-$299/month
 status: active
 launched: 2019-06
-last_updated: 2026-04-19
-last_verified: 2026-04-19
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -196,6 +196,6 @@ The Content Editor scores in English, Spanish, French, German, Dutch, Swedish, D
 ## Related
 
 - **Category:** [AI SEO](/categories/ai-seo/)
-- **Comparisons:** [Frase vs Surfer SEO](/comparisons/frase-vs-surfer-seo/) · [NeuronWriter vs Surfer SEO](/comparisons/neuronwriter-vs-surfer-seo/) · [Semrush vs Surfer SEO](/comparisons/semrush-vs-surfer-seo/) · [Ahrefs vs Surfer SEO](/comparisons/ahrefs-vs-surfer-seo/) · [MarketMuse vs Surfer SEO](/comparisons/marketmuse-vs-surfer-seo/)
+- **Comparisons:** [Frase vs Surfer SEO](/compare/frase-vs-surfer-seo/) · [NeuronWriter vs Surfer SEO](/compare/neuronwriter-vs-surfer-seo/) · [Semrush vs Surfer SEO](/compare/semrush-vs-surfer-seo/) · [Ahrefs vs Surfer SEO](/compare/ahrefs-vs-surfer-seo/) · [MarketMuse vs Surfer SEO](/compare/marketmuse-vs-surfer-seo/)
 
 *Some links on this page are affiliate links. We earn a commission at no extra cost to you. This does not influence our ratings or recommendations.*

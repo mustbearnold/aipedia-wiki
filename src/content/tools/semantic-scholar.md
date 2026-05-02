@@ -10,8 +10,8 @@ pricing_model: free
 price_range: "Free"
 status: active
 launched: 2015-11
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -167,4 +167,4 @@ No. It finds and summarizes individual papers. For cross-paper synthesis or meta
 ## Related
 
 - **Category:** [AI Research](/categories/ai-research/)
-- **Comparisons:** [Semantic Scholar vs Consensus](/comparisons/consensus-vs-semantic-scholar/) | [Scite vs Semantic Scholar](/comparisons/scite-vs-semantic-scholar/) | [Elicit vs Semantic Scholar](/comparisons/elicit-vs-semantic-scholar/) | [Connected Papers vs Semantic Scholar](/comparisons/connected-papers-vs-semantic-scholar/)
+- **Comparisons:** [Semantic Scholar vs Consensus](/compare/consensus-vs-semantic-scholar/) | [Scite vs Semantic Scholar](/compare/scite-vs-semantic-scholar/) | [Elicit vs Semantic Scholar](/compare/elicit-vs-semantic-scholar/) | [Connected Papers vs Semantic Scholar](/compare/connected-papers-vs-semantic-scholar/)

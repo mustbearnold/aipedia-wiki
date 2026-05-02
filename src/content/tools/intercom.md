@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "$29-$132/seat/month"
 status: active
 launched: 2011-08
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -164,4 +164,4 @@ Yes for supported patterns (refunds through connected systems, account lookups, 
 ## Related
 
 - **Category:** [AI Automation](/categories/ai-automation/)
-- **Comparisons:** [Apollo vs Intercom](/comparisons/apollo-vs-intercom/) · [Clay vs Intercom](/comparisons/clay-vs-intercom/) · [Instantly vs Intercom](/comparisons/instantly-vs-intercom/) · [Intercom vs Make](/comparisons/intercom-vs-make/) · [Intercom vs Zapier](/comparisons/intercom-vs-zapier/)
+- **Comparisons:** [Apollo vs Intercom](/compare/apollo-vs-intercom/) · [Clay vs Intercom](/compare/clay-vs-intercom/) · [Instantly vs Intercom](/compare/instantly-vs-intercom/) · [Intercom vs Make](/compare/intercom-vs-make/) · [Intercom vs Zapier](/compare/intercom-vs-zapier/)

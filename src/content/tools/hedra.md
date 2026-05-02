@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$60/month"
 status: active
 launched: 2024-05
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 seo_title: "Hedra: Features, Pricing & Review (April 2026)"
 meta_description: "Hedra Character-3 turns one image plus one audio file into a talking, singing, moving character video. Omnia Fast Alpha adds scene control. Free tier (300 credits) through Professional at $60/mo. Real-time avatar streaming at $0.05/minute."
@@ -180,4 +180,3 @@ Access is available through Enterprise. Most self-serve users interact through t
 ## Related
 
 - **Category:** [AI Video](/categories/ai-video/) · [AI Voice](/categories/ai-voice/)
-- **Comparisons:** [Hedra vs HeyGen](/comparisons/hedra-vs-heygen/) · [Hedra vs Synthesia](/comparisons/hedra-vs-synthesia/) · [Hedra vs D-ID](/comparisons/hedra-vs-d-id/) · [Hedra vs Tavus](/comparisons/hedra-vs-tavus/)

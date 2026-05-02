@@ -11,8 +11,8 @@ pricing_model: paid
 price_range: $49-$199/month
 status: active
 launched: 2018
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: quarterly
 affiliate:
   has_program: false
@@ -164,4 +164,4 @@ No. The voice catalog is tuned for narration, not conversational or character wo
 ## Related
 
 - **Category:** [AI Voice](/categories/ai-voice/)
-- **Comparisons:** [ElevenLabs vs WellSaid](/comparisons/elevenlabs-vs-wellsaid/) · [Murf vs WellSaid](/comparisons/murf-vs-wellsaid/) · [LOVO vs WellSaid](/comparisons/lovo-vs-wellsaid/)
+- **Comparisons:** [ElevenLabs vs WellSaid](/compare/elevenlabs-vs-wellsaid/)

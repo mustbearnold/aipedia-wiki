@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$149/month+ seats"
 status: active
 launched: 2022-11
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -155,4 +155,4 @@ No. HeyGen renders talking-head output with avatars. For scene generation, use [
 ## Related
 
 - **Category:** [AI Video Generation](/categories/ai-video/)
-- **Comparisons:** [HeyGen vs Synthesia](/comparisons/heygen-vs-synthesia/) · [HeyGen vs D-ID](/comparisons/heygen-vs-d-id/) · [HeyGen vs Runway](/comparisons/heygen-vs-runway/) · [HeyGen vs Kling 3.0](/comparisons/heygen-vs-kling/) · [ElevenLabs vs HeyGen](/comparisons/elevenlabs-vs-heygen/)
+- **Comparisons:** [HeyGen vs Synthesia](/compare/heygen-vs-synthesia/) · [HeyGen vs Runway](/compare/heygen-vs-runway/) · [HeyGen vs Kling 3.0](/compare/heygen-vs-kling/) · [ElevenLabs vs HeyGen](/compare/elevenlabs-vs-heygen/)

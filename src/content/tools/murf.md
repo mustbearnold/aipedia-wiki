@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: $0-$99/month
 status: active
 launched: 2020-10
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -168,4 +168,4 @@ Only on Enterprise. Teams needing programmatic TTS on mid-tier plans should pick
 ## Related
 
 - **Category:** [AI Voice](/categories/ai-voice/)
-- **Comparisons:** [ElevenLabs vs Murf](/comparisons/elevenlabs-vs-murf/) · [Murf vs LOVO](/comparisons/murf-vs-lovo/) · [Murf vs WellSaid](/comparisons/murf-vs-wellsaid/)
+- **Comparisons:** [ElevenLabs vs Murf](/compare/elevenlabs-vs-murf/)

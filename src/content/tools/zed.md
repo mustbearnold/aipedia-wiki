@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$20/month"
 status: active
 launched: 2024-01
-last_updated: 2026-04-18
-last_verified: 2026-04-18
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -175,4 +175,3 @@ Zed wins on native performance, multiplayer, and open-source ethics. Cursor wins
 ## Related
 
 - **Category:** [AI Coding](/categories/ai-coding/)
-- **Comparisons:** [Zed vs Cursor](/comparisons/zed-vs-cursor/), [Zed vs VS Code](/comparisons/zed-vs-vscode/)

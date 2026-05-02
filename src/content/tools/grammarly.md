@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: $0-$30/user/month
 status: active
 launched: 2009-07
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -172,4 +172,4 @@ No public API. Enterprise customers negotiate limited integration scopes, but th
 ## Related
 
 - **Category:** [AI Writing](/categories/ai-writing/)
-- **Comparisons:** [ChatGPT vs Grammarly](/comparisons/chatgpt-vs-grammarly/) · [Claude vs Grammarly](/comparisons/claude-vs-grammarly/) · [Grammarly vs QuillBot](/comparisons/grammarly-vs-quillbot/) · [Grammarly vs Wordtune](/comparisons/grammarly-vs-wordtune/) · [Grammarly vs Sudowrite](/comparisons/grammarly-vs-sudowrite/)
+- **Comparisons:** [ChatGPT vs Grammarly](/compare/chatgpt-vs-grammarly/) · [Claude vs Grammarly](/compare/claude-vs-grammarly/) · [Grammarly vs QuillBot](/compare/grammarly-vs-quillbot/) · [Grammarly vs Wordtune](/compare/grammarly-vs-wordtune/) · [Grammarly vs Sudowrite](/compare/grammarly-vs-sudowrite/)

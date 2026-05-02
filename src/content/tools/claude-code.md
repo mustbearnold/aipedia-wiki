@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "$20-$200/month"
 status: active
 launched: 2025-02
-last_updated: 2026-05-01
-last_verified: 2026-05-01
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -212,4 +212,4 @@ Claude Code is terminal-only with deeper autonomous execution across full codeba
 ## Related
 
 - **Category:** [AI Coding](/categories/ai-coding/)
-- **Comparisons:** [Cursor vs Claude Code vs Copilot](/comparisons/cursor-vs-claude-code-vs-copilot/) · [Claude Code vs GitHub Copilot](/comparisons/claude-code-vs-github-copilot/) · [Claude Code vs Devin](/comparisons/claude-code-vs-devin/) · [Aider vs Claude Code](/comparisons/aider-vs-claude-code/) · [Claude Code vs Continue](/comparisons/claude-code-vs-continue/)
+- **Comparisons:** [Cursor vs Claude Code vs Copilot](/compare/cursor-vs-claude-code-vs-copilot/) · [Claude Code vs GitHub Copilot](/compare/claude-code-vs-github-copilot/) · [Claude Code vs Devin](/compare/claude-code-vs-devin/) · [Aider vs Claude Code](/compare/aider-vs-claude-code/) · [Claude Code vs Continue](/compare/claude-code-vs-continue/)

@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$99/user/month"
 status: active
 launched: 2017-01
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -181,4 +181,3 @@ Enterprise-grade compliance details should be confirmed with Taskade sales. SSO 
 ## Related
 
 - **Category:** [AI Automation](/categories/ai-automation/) · [AI Notes](/categories/ai-notes/)
-- **Comparisons:** [Notion AI vs Taskade](/comparisons/notion-ai-vs-taskade/) · [ClickUp vs Taskade](/comparisons/clickup-vs-taskade/) · [Monday vs Taskade](/comparisons/monday-vs-taskade/)

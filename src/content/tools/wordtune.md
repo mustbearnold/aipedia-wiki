@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: $0-$24.99/month
 status: active
 launched: 2020-10
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -173,4 +173,4 @@ AI-generated inline inserts that extend a selected passage with an example, coun
 ## Related
 
 - **Category:** [AI Writing](/categories/ai-writing/)
-- **Comparisons:** [ChatGPT vs Wordtune](/comparisons/chatgpt-vs-wordtune/) · [Grammarly vs Wordtune](/comparisons/grammarly-vs-wordtune/) · [QuillBot vs Wordtune](/comparisons/quillbot-vs-wordtune/) · [Sudowrite vs Wordtune](/comparisons/sudowrite-vs-wordtune/) · [Copy.ai vs Wordtune](/comparisons/copy-ai-vs-wordtune/)
+- **Comparisons:** [ChatGPT vs Wordtune](/compare/chatgpt-vs-wordtune/) · [Grammarly vs Wordtune](/compare/grammarly-vs-wordtune/) · [QuillBot vs Wordtune](/compare/quillbot-vs-wordtune/) · [Sudowrite vs Wordtune](/compare/sudowrite-vs-wordtune/) · [Copy.ai vs Wordtune](/compare/copy-ai-vs-wordtune/)

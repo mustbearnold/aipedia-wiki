@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2024-12
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -175,4 +175,4 @@ Cognition replaced the old $500 Team-only tier with self-serve Pro at $20/mo in 
 ## Related
 
 - **Category:** [AI Coding](/categories/ai-coding/)
-- **Comparisons:** [Claude Code vs Devin](/comparisons/claude-code-vs-devin/) · [Continue vs Devin](/comparisons/continue-vs-devin/) · [Cursor vs Devin](/comparisons/cursor-vs-devin/) · [Devin vs GitHub Copilot](/comparisons/devin-vs-github-copilot/) · [Devin vs Val Town](/comparisons/devin-vs-val-town/)
+- **Comparisons:** [Claude Code vs Devin](/compare/claude-code-vs-devin/) · [Continue vs Devin](/compare/continue-vs-devin/) · [Cursor vs Devin](/compare/cursor-vs-devin/) · [Devin vs GitHub Copilot](/compare/devin-vs-github-copilot/) · [Devin vs Val Town](/compare/devin-vs-val-town/)

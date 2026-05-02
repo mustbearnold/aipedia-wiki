@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$300/month"
 status: active
 launched: 2024-06
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -177,4 +177,3 @@ Yes. Per-generation pricing is available for developers who want programmatic vi
 ## Related
 
 - **Category:** [AI Video Generation](/categories/ai-video/)
-- **Comparisons:** [Luma vs Runway](/comparisons/luma-vs-runway/) · [Luma vs Kling](/comparisons/kling-vs-luma/) · [Luma vs Pika](/comparisons/luma-vs-pika/)

@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "Free (consumer); API from ~$0.47/M input tokens"
 status: active
 launched: 2023-08
-last_updated: 2026-04-22
-last_verified: 2026-04-22
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -168,4 +168,3 @@ Yes, bundled in the consumer app. Images via Seedream, video via Seedance. No su
 ## Related
 
 - **Category:** [AI Chatbots](/categories/ai-chatbots/)
-- **Comparisons:** [ChatGPT vs Doubao](/comparisons/chatgpt-vs-doubao/) · [DeepSeek vs Doubao](/comparisons/deepseek-vs-doubao/) · [Qwen vs Doubao](/comparisons/qwen-vs-doubao/)

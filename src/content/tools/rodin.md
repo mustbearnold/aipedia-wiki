@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$60/month"
 status: active
 launched: 2024-05
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -173,4 +173,3 @@ Rodin if surface detail is your priority and your pipeline can absorb retopology
 ## Related
 
 - **Category:** [AI Image Generation](/categories/ai-image/)
-- **Comparisons:** [Rodin vs Meshy](/comparisons/rodin-vs-meshy/) · [Rodin vs Tripo3D](/comparisons/tripo3d-vs-rodin/) · [Meshy vs Tripo3D](/comparisons/tripo3d-vs-meshy/)

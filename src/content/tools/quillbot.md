@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$19.95/month"
 status: active
 launched: 2017-10
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -166,4 +166,4 @@ QuillBot gives mode-based controls and a word flipper that cycles alternatives p
 ## Related
 
 - **Category:** [AI Writing](/categories/ai-writing/)
-- **Comparisons:** [ChatGPT vs QuillBot](/comparisons/chatgpt-vs-quillbot/) · [Grammarly vs QuillBot](/comparisons/grammarly-vs-quillbot/) · [QuillBot vs Wordtune](/comparisons/quillbot-vs-wordtune/) · [QuillBot vs Sudowrite](/comparisons/quillbot-vs-sudowrite/) · [Copy.ai vs QuillBot](/comparisons/copy-ai-vs-quillbot/)
+- **Comparisons:** [ChatGPT vs QuillBot](/compare/chatgpt-vs-quillbot/) · [Grammarly vs QuillBot](/compare/grammarly-vs-quillbot/) · [QuillBot vs Wordtune](/compare/quillbot-vs-wordtune/) · [QuillBot vs Sudowrite](/compare/quillbot-vs-sudowrite/) · [Copy.ai vs QuillBot](/compare/copy-ai-vs-quillbot/)

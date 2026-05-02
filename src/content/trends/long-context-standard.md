@@ -8,8 +8,8 @@ author: "aipedia.wiki Editorial"
 description: 1M+ token context is table stakes for flagship models in 2026. Llama 4 Scout ships 10M. The RAG-first architecture pattern is no longer a default.
 timeframe: Claude 100K in 2023. Gemini 1M in 2024. Claude 1M + Llama 4 Scout 10M in 2026. Next frontier is retrieval-quality over raw window size.
 impact: high
-last_updated: 2026-04-18
-last_verified: 2026-04-18
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 ---
 
@@ -47,7 +47,7 @@ The practical effect is that retrieval-augmented generation, the dominant 2023-2
 
 **Caching strategies.** Prompt caching (Anthropic shipped this in 2024, OpenAI and Google followed) changes the economics of long-context workloads. Loading 500K tokens once and asking 50 questions against it is now viable.
 
-**Agent memory.** Long context is not the same as persistent memory. Agents that need state across sessions still need a memory layer. See the [AI Memory Layer](./ai-memory-layer/) trend.
+**Agent memory.** Long context is not the same as persistent memory. Agents that need state across sessions still need a memory layer. See the [AI Memory Layer](./ai-memory-layer.md) trend.
 
 **Security and prompt injection.** Longer windows mean more surface area for adversarial input. Expect injection attacks and sandboxing frameworks to become a recurring topic.
 

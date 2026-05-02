@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$499/month + credits"
 status: active
 launched: 2023-09
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -173,4 +173,4 @@ Yes. The free plan provides limited credits and Sonic 3 access for prototyping. 
 ## Related
 
 - **Category:** [AI Voice / TTS](/categories/ai-voice/)
-- **Comparisons:** [Cartesia vs ElevenLabs](/comparisons/cartesia-vs-elevenlabs/), [Cartesia vs Fish Audio](/comparisons/cartesia-vs-fish-audio/), [Cartesia vs Voxtral](/comparisons/cartesia-vs-voxtral/), [Cartesia vs Resemble AI](/comparisons/cartesia-vs-resemble-ai/)
+- **Comparisons:** [Cartesia vs ElevenLabs](/compare/cartesia-vs-elevenlabs/), [Cartesia vs Fish Audio](/compare/cartesia-vs-fish-audio/), [Cartesia vs Voxtral](/compare/cartesia-vs-voxtral/), [Cartesia vs Resemble AI](/compare/cartesia-vs-resemble-ai/)

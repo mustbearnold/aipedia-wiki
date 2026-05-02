@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$90/month"
 status: active
 launched: 2016-09
-last_updated: 2026-04-18
-last_verified: 2026-04-18
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -179,4 +179,4 @@ Thinly. CMYK support is basic and prepress workflows assume Illustrator or InDes
 ## Related
 
 - **Category:** [AI Design](/categories/ai-design/)
-- **Comparisons:** [Figma vs v0](/comparisons/figma-vs-v0/) · [Canva vs Figma](/comparisons/canva-vs-figma/) · [Figma vs Lovable](/comparisons/figma-vs-lovable/) · [Figma vs Google Stitch](/comparisons/figma-vs-google-stitch/) · [Bolt vs Figma](/comparisons/bolt-vs-figma/)
+- **Comparisons:** [Figma vs v0](/compare/figma-vs-v0/) · [Canva vs Figma](/compare/canva-vs-figma/) · [Figma vs Lovable](/compare/figma-vs-lovable/) · [Figma vs Google Stitch](/compare/figma-vs-google-stitch/) · [Bolt vs Figma](/compare/bolt-vs-figma/)

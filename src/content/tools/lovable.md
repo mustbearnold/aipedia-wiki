@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$50/month"
 status: active
 launched: 2024-09
-last_updated: 2026-04-29
-last_verified: 2026-04-29
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 seo_title: "Lovable: Features, Pricing & Review (April 2026)"
 meta_description: "Lovable builds deployed full-stack React apps from plain-English prompts. Supabase provisioned automatically for Postgres, auth, and real-time. Free $25 workspace credit (through May 2026), Starter $20/mo, Launch $50/mo. Dev Mode edits code directly."
@@ -157,6 +157,6 @@ Claude Sonnet is the default generation model after a switch in early 2026. Lova
 ## Related
 
 - **Category:** [AI Design](/categories/ai-design/)
-- **Comparisons:** [ChatGPT vs Lovable](/comparisons/chatgpt-vs-lovable/) · [Cursor vs Lovable](/comparisons/cursor-vs-lovable/) · [Figma AI vs Lovable](/comparisons/figma-vs-lovable/) · [Google Stitch vs Lovable](/comparisons/google-stitch-vs-lovable/) · [Lovable vs Bolt.new vs v0](/comparisons/lovable-vs-bolt-vs-v0/)
+- **Comparisons:** [ChatGPT vs Lovable](/compare/chatgpt-vs-lovable/) · [Cursor vs Lovable](/compare/cursor-vs-lovable/) · [Figma AI vs Lovable](/compare/figma-vs-lovable/) · [Google Stitch vs Lovable](/compare/google-stitch-vs-lovable/) · [Lovable vs Bolt.new vs v0](/compare/lovable-vs-bolt-vs-v0/)
 
 *Some links on this page are affiliate links. We earn a commission at no extra cost to you. This doesn't influence our ratings or recommendations.*

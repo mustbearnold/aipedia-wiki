@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$249.99/month"
 status: active
 launched: 2025-05
-last_updated: 2026-04-22
-last_verified: 2026-04-22
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -184,4 +184,3 @@ No. The model is served only through Google surfaces: Gemini app, AI Studio, Gem
 ## Related
 
 - **Category:** [AI Image Generation](/categories/ai-image/)
-- **Comparisons:** [Imagen vs Midjourney](/comparisons/imagen-vs-midjourney/) · [Imagen vs Flux](/comparisons/imagen-vs-flux/) · [Imagen vs ChatGPT](/comparisons/imagen-vs-chatgpt/)

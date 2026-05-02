@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "$10-$59/month"
 status: active
 launched: 2020-11
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -174,4 +174,4 @@ Mainstream AI detection tools flag LLM-generated prose, including Muse output. M
 ## Related
 
 - **Category:** [AI Writing](/categories/ai-writing/)
-- **Comparisons:** [ChatGPT vs Sudowrite](/comparisons/chatgpt-vs-sudowrite/) · [Claude vs Sudowrite](/comparisons/claude-vs-sudowrite/) · [Grammarly vs Sudowrite](/comparisons/grammarly-vs-sudowrite/) · [QuillBot vs Sudowrite](/comparisons/quillbot-vs-sudowrite/) · [Sudowrite vs Wordtune](/comparisons/sudowrite-vs-wordtune/)
+- **Comparisons:** [ChatGPT vs Sudowrite](/compare/chatgpt-vs-sudowrite/) · [Claude vs Sudowrite](/compare/claude-vs-sudowrite/) · [Grammarly vs Sudowrite](/compare/grammarly-vs-sudowrite/) · [QuillBot vs Sudowrite](/compare/quillbot-vs-sudowrite/) · [Sudowrite vs Wordtune](/compare/sudowrite-vs-wordtune/)

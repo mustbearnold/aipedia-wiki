@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$20/user/month"
 status: active
 launched: 2013-01
-last_updated: 2026-04-19
-last_verified: 2026-04-19
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 seo_title: "Canva: Features, Pricing & Review (April 2026)"
 meta_description: "Canva is the 200M+ user design platform for non-designers. Magic Studio covers 25+ AI tools including Magic Design, Write, Media, and Grab. Free tier generous; Pro $15/mo unlocks unlimited AI."
@@ -177,6 +177,6 @@ Custom pricing only. Industry estimates place per-user cost at $8-$20/month depe
 ## Related
 
 - **Category:** [AI Design](/categories/ai-design/)
-- **Comparisons:** [Canva vs Figma](/comparisons/canva-vs-figma/) · [Adobe Firefly vs Canva](/comparisons/adobe-firefly-vs-canva/) · [Canva vs ChatGPT](/comparisons/canva-vs-chatgpt/) · [Canva vs Midjourney](/comparisons/canva-vs-midjourney/) · [Canva vs Google Stitch](/comparisons/canva-vs-google-stitch/)
+- **Comparisons:** [Canva vs Figma](/compare/canva-vs-figma/) · [Adobe Firefly vs Canva](/compare/adobe-firefly-vs-canva/) · [Canva vs ChatGPT](/compare/canva-vs-chatgpt/) · [Canva vs Midjourney](/compare/canva-vs-midjourney/) · [Canva vs Google Stitch](/compare/canva-vs-google-stitch/)
 
 *Some links on this page are affiliate links. We earn a commission at no extra cost to you. This does not influence our ratings or recommendations.*

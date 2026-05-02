@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$30/month"
 status: active
 launched: 2023-12
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -168,4 +168,3 @@ No. Model choice is the same on Pro and Ultimate. Ultimate ships more credits pe
 ## Related
 
 - **Category:** [AI Coding](/categories/ai-coding/)
-- **Comparisons:** [JetBrains AI vs Cursor](/comparisons/jetbrains-ai-vs-cursor/), [JetBrains AI vs GitHub Copilot](/comparisons/jetbrains-ai-vs-github-copilot/)

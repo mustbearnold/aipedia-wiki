@@ -11,8 +11,8 @@ pricing_model: open-source
 price_range: "Free (MIT) · BYOK API costs · server hosting on you"
 status: active
 launched: 2025-11
-last_updated: 2026-05-01
-last_verified: 2026-05-01
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -167,4 +167,3 @@ Yes. Dedicated Chrome/Chromium browser automation, shell command execution, and 
 ## Related
 
 - **Category:** [AI Automation](/categories/ai-automation/)
-- **Comparisons:** [OpenClaw vs ChatGPT Operator](/comparisons/openclaw-vs-chatgpt/) · [OpenClaw vs Claude Code](/comparisons/openclaw-vs-claude-code/) · [OpenClaw vs n8n](/comparisons/openclaw-vs-n8n/)

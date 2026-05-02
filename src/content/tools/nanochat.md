@@ -11,8 +11,8 @@ pricing_model: open-source
 price_range: "Free (MIT open-source)"
 status: active
 launched: 2025-10
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: occasional
 affiliate:
   has_program: false
@@ -156,4 +156,4 @@ Not in the modern assistant sense. The speedrun output is a GPT-2-grade model su
 ## Related
 
 - **Category:** [AI Research](/categories/ai-research/) · [AI Coding](/categories/ai-coding/)
-- **Comparisons:** [Connected Papers vs nanochat](/comparisons/connected-papers-vs-nanochat/) · [Consensus vs nanochat](/comparisons/consensus-vs-nanochat/) · [Elicit vs nanochat](/comparisons/elicit-vs-nanochat/)
+- **Comparisons:** [Connected Papers vs nanochat](/compare/connected-papers-vs-nanochat/) · [Consensus vs nanochat](/compare/consensus-vs-nanochat/) · [Elicit vs nanochat](/compare/elicit-vs-nanochat/)

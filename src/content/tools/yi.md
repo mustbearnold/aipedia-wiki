@@ -12,8 +12,8 @@ pricing_model: open-source
 price_range: "Free (open-weight); Yi-Lightning ~$0.14/M tokens"
 status: active
 launched: 2023-11
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: irregular
 affiliate:
   has_program: false
@@ -168,4 +168,3 @@ Only if you specifically need a frozen-weight research baseline or already have 
 ## Related
 
 - **Category:** [AI Research](/categories/ai-research/)
-- **Comparisons:** [DeepSeek vs Yi](/comparisons/deepseek-vs-yi/) · [Qwen vs Yi](/comparisons/qwen-vs-yi/)

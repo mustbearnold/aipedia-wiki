@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$75/month"
 status: active
 launched: 2024-03
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -171,4 +171,4 @@ Yes. Both S1 and S2 support cloning from short reference samples. Quality improv
 ## Related
 
 - **Category:** [AI Voice / TTS](/categories/ai-voice/)
-- **Comparisons:** [ElevenLabs vs Fish Audio](/comparisons/elevenlabs-vs-fish-audio/), [Cartesia vs Fish Audio](/comparisons/cartesia-vs-fish-audio/), [Fish Audio vs Voxtral](/comparisons/fish-audio-vs-voxtral/), [Fish Audio vs Resemble AI](/comparisons/fish-audio-vs-resemble-ai/)
+- **Comparisons:** [ElevenLabs vs Fish Audio](/compare/elevenlabs-vs-fish-audio/), [Cartesia vs Fish Audio](/compare/cartesia-vs-fish-audio/), [Fish Audio vs Voxtral](/compare/fish-audio-vs-voxtral/), [Fish Audio vs Resemble AI](/compare/fish-audio-vs-resemble-ai/)

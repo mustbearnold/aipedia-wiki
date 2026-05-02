@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$30/seat/month"
 status: active
 launched: 2019-01
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -164,4 +164,4 @@ Yes. Overage credits run $0.004 per credit across all paid plans.
 ## Related
 
 - **Category:** [AI Presentation Tools](/categories/ai-presentation/)
-- **Comparisons:** [Gamma vs Pitch](/comparisons/gamma-vs-pitch/) · [Beautiful.ai vs Pitch](/comparisons/beautiful-ai-vs-pitch/) · [Pitch vs Tome](/comparisons/pitch-vs-tome/) · [Pitch vs Presentations.AI](/comparisons/pitch-vs-presentations-ai/) · [Decktopus AI vs Pitch](/comparisons/decktopus-vs-pitch/)
+- **Comparisons:** [Gamma vs Pitch](/compare/gamma-vs-pitch/) · [Beautiful.ai vs Pitch](/compare/beautiful-ai-vs-pitch/) · [Pitch vs Tome](/compare/pitch-vs-tome/) · [Pitch vs Presentations.AI](/compare/pitch-vs-presentations-ai/) · [Decktopus AI vs Pitch](/compare/decktopus-vs-pitch/)

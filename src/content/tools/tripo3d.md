@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$60/month"
 status: active
 launched: 2024-02
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -172,4 +172,3 @@ Meshy if you want the deepest editor workspace and a 500+ animation library in o
 ## Related
 
 - **Category:** [AI Image Generation](/categories/ai-image/)
-- **Comparisons:** [Tripo3D vs Meshy](/comparisons/tripo3d-vs-meshy/) · [Tripo3D vs Rodin](/comparisons/tripo3d-vs-rodin/) · [Meshy vs Rodin](/comparisons/meshy-vs-rodin/)

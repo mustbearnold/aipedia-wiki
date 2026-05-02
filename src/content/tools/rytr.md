@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$29/month"
 status: active
 launched: 2021-04
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -158,6 +158,6 @@ For drafts, yes. For published content, treat Rytr output as a first pass. Edit 
 ## Related
 
 - **Category:** [AI Writing](/categories/ai-writing/)
-- **Comparisons:** [ChatGPT vs Rytr](/comparisons/chatgpt-vs-rytr/)
+- **Comparisons:** [ChatGPT vs Rytr](/compare/chatgpt-vs-rytr/)
 
 *Some links on this page may be affiliate links. We earn a commission at no extra cost to you. This does not influence our ratings or recommendations.*

@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: "Free (chat) / API from $0.60/M input tokens"
 status: active
 launched: 2023-10
-last_updated: 2026-04-22
-last_verified: 2026-04-22
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: quarterly
 affiliate:
   has_program: false
@@ -175,4 +175,4 @@ Yes. Point your OpenAI SDK at api.moonshot by changing the base URL and plugging
 ## Related
 
 - **Category:** [AI Chatbots](/categories/ai-chatbots/) · [AI Research](/categories/ai-research/)
-- **Comparisons:** [ChatGPT vs Kimi](/comparisons/chatgpt-vs-kimi/) · [Claude vs Kimi](/comparisons/claude-vs-kimi/) · [DeepSeek vs Kimi](/comparisons/deepseek-vs-kimi/)
+- **Comparisons:** [ChatGPT vs Kimi](/compare/chatgpt-vs-kimi/) · [Claude vs Kimi](/compare/claude-vs-kimi/)

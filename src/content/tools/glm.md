@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: "Free (GLM-4.7-Flash) / API from $1.00/M tokens (GLM-5)"
 status: active
 launched: 2022-08
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: quarterly
 affiliate:
   has_program: false
@@ -170,4 +170,4 @@ Inference latency depends on the deployment. Self-hosted GLM-5.1 on modern hardw
 ## Related
 
 - **Category:** [AI Chatbots](/categories/ai-chatbots/) · [AI Coding](/categories/ai-coding/)
-- **Comparisons:** [ChatGPT vs GLM](/comparisons/chatgpt-vs-glm/) · [Claude vs GLM](/comparisons/claude-vs-glm/) · [DeepSeek vs GLM](/comparisons/deepseek-vs-glm/)
+- **Comparisons:** [ChatGPT vs GLM](/compare/chatgpt-vs-glm/)

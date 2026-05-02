@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: $0-$49.99/month
 status: active
 launched: 2025-06
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -173,4 +173,4 @@ Yes, via BytePlus ModelArk (public beta, April 14, 2026) and third-party routing
 ## Related
 
 - **Category:** [AI Video Generation](/categories/ai-video/)
-- **Comparisons:** [Kling vs Seedance vs Runway](/comparisons/kling-vs-seedance-vs-runway/) · [Pika vs Seedance](/comparisons/pika-vs-seedance/) · [HeyGen vs Seedance](/comparisons/heygen-vs-seedance/) · [Seedance vs Synthesia](/comparisons/seedance-vs-synthesia/)
+- **Comparisons:** [Kling vs Seedance vs Runway](/compare/kling-vs-seedance-vs-runway/) · [Pika vs Seedance](/compare/pika-vs-seedance/) · [HeyGen vs Seedance](/compare/heygen-vs-seedance/) · [Seedance vs Synthesia](/compare/seedance-vs-synthesia/)

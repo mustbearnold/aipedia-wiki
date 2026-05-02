@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "$600-$2000+/month"
 status: active
 launched: 2019-01
-last_updated: 2026-04-23
-last_verified: 2026-04-23
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: quarterly
 affiliate:
   has_program: true
@@ -212,4 +212,3 @@ Independent reviews accept the 5-6x productivity claim for the research and copy
 ## Related
 
 - **Category:** [AI Automation](/categories/ai-automation/)
-- **Comparisons:** [Apollo vs Amplemarket](/comparisons/apollo-vs-amplemarket/) · [Amplemarket vs Clay](/comparisons/amplemarket-vs-clay/) · [Amplemarket vs Instantly](/comparisons/amplemarket-vs-instantly/)

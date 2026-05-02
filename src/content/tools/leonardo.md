@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: $0-$48/month
 status: active
 launched: 2023-01
-last_updated: 2026-04-22
-last_verified: 2026-04-22
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -183,4 +183,3 @@ Yes, on Artisan ($24/mo) and Maestro ($48/mo). The API is functional but less ma
 ## Related
 
 - **Category:** [AI Image Generation](/categories/ai-image/)
-- **Comparisons:** [Midjourney vs Leonardo](/comparisons/midjourney-vs-leonardo/) · [Flux vs Leonardo](/comparisons/flux-vs-leonardo/) · [Ideogram vs Leonardo](/comparisons/ideogram-vs-leonardo/)

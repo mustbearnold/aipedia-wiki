@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$24/user/month"
 status: active
 launched: 2023-02
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -175,4 +175,4 @@ Notion AI wins on workspace context: it searches your pages and databases automa
 ## Related
 
 - **Category:** [AI Notes & Knowledge](/categories/ai-notes/)
-- **Comparisons:** [ChatGPT vs Notion AI](/comparisons/chatgpt-vs-notion-ai/) · [Claude vs Notion AI](/comparisons/claude-vs-notion-ai/) · [Notion AI vs Obsidian](/comparisons/notion-ai-vs-obsidian/)
+- **Comparisons:** [ChatGPT vs Notion AI](/compare/chatgpt-vs-notion-ai/) · [Claude vs Notion AI](/compare/claude-vs-notion-ai/) · [Notion AI vs Obsidian](/compare/notion-ai-vs-obsidian/)

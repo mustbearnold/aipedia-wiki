@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "Free (open weights) / API from ~$0.15/M tokens"
 status: active
 launched: 2023-09
-last_updated: 2026-04-30
-last_verified: 2026-04-30
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -186,4 +186,4 @@ Yes. Sizes start at 0.6B for single CPU, with 7B and 14B practical on consumer G
 ## Related
 
 - **Category:** [AI Chatbots](/categories/ai-chatbots/) · [AI Coding](/categories/ai-coding/)
-- **Comparisons:** [ChatGPT vs Qwen](/comparisons/chatgpt-vs-qwen/) · [Claude vs Qwen](/comparisons/claude-vs-qwen/) · [DeepSeek vs Qwen](/comparisons/deepseek-vs-qwen/) · [Gemini vs Qwen](/comparisons/gemini-vs-qwen/) · [Mistral AI vs Qwen](/comparisons/mistral-ai-vs-qwen/)
+- **Comparisons:** [ChatGPT vs Qwen](/compare/chatgpt-vs-qwen/) · [Claude vs Qwen](/compare/claude-vs-qwen/) · [DeepSeek vs Qwen](/compare/deepseek-vs-qwen/) · [Gemini vs Qwen](/compare/gemini-vs-qwen/) · [Mistral AI vs Qwen](/compare/mistral-ai-vs-qwen/)

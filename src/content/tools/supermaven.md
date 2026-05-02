@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$10/month"
 status: active
 launched: 2023-10
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -167,4 +167,4 @@ Not much. Projects under 100k tokens see minimal uplift. The advantage compounds
 ## Related
 
 - **Category:** [AI Coding](/categories/ai-coding/)
-- **Comparisons:** [Supermaven vs GitHub Copilot](/comparisons/github-copilot-vs-supermaven/), [Supermaven vs Cursor](/comparisons/cursor-vs-supermaven/)
+- **Comparisons:** [Supermaven vs GitHub Copilot](/compare/github-copilot-vs-supermaven/)

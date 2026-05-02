@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: $0-$103.50+/month
 status: active
 launched: 2012-01
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -173,4 +173,4 @@ No. Zapier is cloud-only. Data passes through Zapier servers. [n8n](/tools/n8n/)
 ## Related
 
 - **Category:** [AI Automation](/categories/ai-automation/)
-- **Comparisons:** [n8n vs Make vs Zapier](/comparisons/n8n-vs-make-vs-zapier/) · [ChatGPT vs Zapier](/comparisons/chatgpt-vs-zapier/) · [Clay vs Zapier](/comparisons/clay-vs-zapier/)
+- **Comparisons:** [n8n vs Make vs Zapier](/compare/n8n-vs-make-vs-zapier/) · [ChatGPT vs Zapier](/compare/chatgpt-vs-zapier/) · [Clay vs Zapier](/compare/clay-vs-zapier/)

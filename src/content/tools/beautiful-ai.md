@@ -11,8 +11,8 @@ pricing_model: paid
 price_range: $12-$40/user/month
 status: active
 launched: 2015-01
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -159,4 +159,4 @@ SOC 2 Type II, GDPR, CCPA, PCI, plus SSO, priority support, dedicated onboarding
 ## Related
 
 - **Category:** [AI Presentation Tools](/categories/ai-presentation/)
-- **Comparisons:** [Beautiful.ai vs Gamma](/comparisons/beautiful-ai-vs-gamma/) · [Beautiful.ai vs Pitch](/comparisons/beautiful-ai-vs-pitch/) · [Beautiful.ai vs Tome](/comparisons/beautiful-ai-vs-tome/) · [Beautiful.ai vs Presentations.AI](/comparisons/beautiful-ai-vs-presentations-ai/) · [Beautiful.ai vs Decktopus AI](/comparisons/beautiful-ai-vs-decktopus/)
+- **Comparisons:** [Beautiful.ai vs Gamma](/compare/beautiful-ai-vs-gamma/) · [Beautiful.ai vs Pitch](/compare/beautiful-ai-vs-pitch/) · [Beautiful.ai vs Tome](/compare/beautiful-ai-vs-tome/) · [Beautiful.ai vs Presentations.AI](/compare/beautiful-ai-vs-presentations-ai/) · [Beautiful.ai vs Decktopus AI](/compare/beautiful-ai-vs-decktopus/)

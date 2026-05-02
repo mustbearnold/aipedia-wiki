@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$44.99/month"
 status: active
 launched: 2021-06
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -160,4 +160,4 @@ A mix of third-party frontier APIs routed per task. No proprietary base model. O
 ## Related
 
 - **Category:** [AI Writing](/categories/ai-writing/)
-- **Comparisons:** [Copy.ai vs HyperWrite](/comparisons/copy-ai-vs-hyperwrite/), [Grammarly vs HyperWrite](/comparisons/grammarly-vs-hyperwrite/), [HyperWrite vs QuillBot](/comparisons/hyperwrite-vs-quillbot/), [HyperWrite vs Sudowrite](/comparisons/hyperwrite-vs-sudowrite/), [HyperWrite vs Wordtune](/comparisons/hyperwrite-vs-wordtune/)
+- **Comparisons:** [Copy.ai vs HyperWrite](/compare/copy-ai-vs-hyperwrite/), [Grammarly vs HyperWrite](/compare/grammarly-vs-hyperwrite/), [HyperWrite vs QuillBot](/compare/hyperwrite-vs-quillbot/), [HyperWrite vs Sudowrite](/compare/hyperwrite-vs-sudowrite/), [HyperWrite vs Wordtune](/compare/hyperwrite-vs-wordtune/)

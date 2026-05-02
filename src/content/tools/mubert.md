@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$149/month"
 status: active
 launched: 2017-01
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -161,6 +161,6 @@ Only on Pro ($32.49/mo) and Business ($149.29/mo). Creator covers digital video 
 ## Related
 
 - **Category:** [AI Music](/categories/ai-music/)
-- **Comparisons:** [Mubert vs Suno](/comparisons/mubert-vs-suno/) · [Mubert vs Udio](/comparisons/mubert-vs-udio/)
+- **Comparisons:** [Mubert vs Suno](/compare/mubert-vs-suno/) · [Mubert vs Udio](/compare/mubert-vs-udio/)
 
 *Some links on this page are affiliate links. We earn a commission at no extra cost to you. This does not influence ratings or recommendations.*

@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$249/year (consumer) + separate Studio and API tiers"
 status: active
 launched: 2017-01
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -195,4 +195,3 @@ The current flagship voice model. Released in late 2025, it maintains naturalnes
 ## Related
 
 - **Category:** [AI Voice / TTS](/categories/ai-voice/)
-- **Comparisons:** [ElevenLabs vs Speechify](/comparisons/elevenlabs-vs-speechify/), [Speechify vs Natural Reader](/comparisons/speechify-vs-natural-reader/), [Murf vs Speechify](/comparisons/murf-vs-speechify/)

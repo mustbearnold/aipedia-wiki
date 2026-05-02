@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$39/seat/month"
 status: active
 launched: 2016-01
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -163,4 +163,4 @@ No. Fred is a visible participant during live capture. Teams forbidden from havi
 ## Related
 
 - **Category:** [AI Notes](/categories/ai-notes/)
-- **Comparisons:** [Capacities vs Fireflies](/comparisons/capacities-vs-fireflies/) · [ChatGPT vs Fireflies](/comparisons/chatgpt-vs-fireflies/) · [Fireflies vs NotebookLM](/comparisons/fireflies-vs-notebooklm/) · [Fireflies vs Obsidian](/comparisons/fireflies-vs-obsidian/) · [Fireflies vs Otter.ai](/comparisons/fireflies-vs-otter-ai/) · [Fireflies vs Readwise](/comparisons/fireflies-vs-readwise/)
+- **Comparisons:** [Capacities vs Fireflies](/compare/capacities-vs-fireflies/) · [ChatGPT vs Fireflies](/compare/chatgpt-vs-fireflies/) · [Fireflies vs NotebookLM](/compare/fireflies-vs-notebooklm/) · [Fireflies vs Obsidian](/compare/fireflies-vs-obsidian/) · [Fireflies vs Otter.ai](/compare/fireflies-vs-otter-ai/) · [Fireflies vs Readwise](/compare/fireflies-vs-readwise/)

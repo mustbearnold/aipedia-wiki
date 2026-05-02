@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: "$0-$449/month"
 status: active
 launched: 2022-03
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -164,4 +164,4 @@ Exa is the rebrand of Metaphor Systems from 2023. Same neural search API, broade
 ## Related
 
 - **Category:** [AI Search](/categories/ai-search/)
-- **Comparisons:** [Exa AI vs Kagi](/comparisons/exa-vs-kagi/) | [Exa AI vs Perplexity](/comparisons/exa-vs-perplexity/) | [Exa AI vs Phind](/comparisons/exa-vs-phind/) | [Exa AI vs You.com](/comparisons/exa-vs-you-com/)
+- **Comparisons:** [Exa AI vs Kagi](/compare/exa-vs-kagi/) | [Exa AI vs Perplexity](/compare/exa-vs-perplexity/) | [Exa AI vs Phind](/compare/exa-vs-phind/) | [Exa AI vs You.com](/compare/exa-vs-you-com/)

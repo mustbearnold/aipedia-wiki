@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$999+/month"
 status: active
 launched: 2015-01
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -166,4 +166,4 @@ For single-brief work, generalist models like [Claude](/tools/claude/) Opus 4.7 
 ## Related
 
 - **Category:** [AI SEO](/categories/ai-seo/)
-- **Comparisons:** [Ahrefs vs MarketMuse](/comparisons/ahrefs-vs-marketmuse/), [ChatGPT vs MarketMuse](/comparisons/chatgpt-vs-marketmuse/), [Frase vs MarketMuse](/comparisons/frase-vs-marketmuse/), [MarketMuse vs NeuronWriter](/comparisons/marketmuse-vs-neuronwriter/), [MarketMuse vs Semrush](/comparisons/marketmuse-vs-semrush/), [MarketMuse vs Surfer SEO](/comparisons/marketmuse-vs-surfer-seo/)
+- **Comparisons:** [Ahrefs vs MarketMuse](/compare/ahrefs-vs-marketmuse/), [ChatGPT vs MarketMuse](/compare/chatgpt-vs-marketmuse/), [Frase vs MarketMuse](/compare/frase-vs-marketmuse/), [MarketMuse vs NeuronWriter](/compare/marketmuse-vs-neuronwriter/), [MarketMuse vs Semrush](/compare/marketmuse-vs-semrush/), [MarketMuse vs Surfer SEO](/compare/marketmuse-vs-surfer-seo/)

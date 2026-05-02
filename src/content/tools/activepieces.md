@@ -13,8 +13,8 @@ pricing_model: open-source
 price_range: Free self-host / $5 per active flow (cloud)
 status: active
 launched: 2022-06
-last_updated: 2026-04-23
-last_verified: 2026-04-23
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -177,4 +177,3 @@ GPT-5.4, Claude Opus 4.7, Gemini 3.1 Pro, plus OpenRouter, vector-store, and age
 ## Related
 
 - **Category:** [AI Automation](/categories/ai-automation/)
-- **Comparisons:** [Activepieces vs Zapier](/comparisons/activepieces-vs-zapier/) · [Activepieces vs n8n](/comparisons/activepieces-vs-n8n/) · [Activepieces vs Make](/comparisons/activepieces-vs-make/)

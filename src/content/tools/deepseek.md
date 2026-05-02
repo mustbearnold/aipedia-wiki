@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "Free (chat) / Usage-based (API from $0.28/M tokens)"
 status: active
 launched: 2023-07
-last_updated: 2026-04-28
-last_verified: 2026-04-28
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: quarterly
 affiliate:
   has_program: false
@@ -211,4 +211,4 @@ For regulated industries, no. The Berlin DPA flagged the app as non-compliant wi
 ## Related
 
 - **Category:** [AI Chatbots](/categories/ai-chatbots/) · [AI Coding](/categories/ai-coding/)
-- **Comparisons:** [ChatGPT vs DeepSeek](/comparisons/chatgpt-vs-deepseek/) · [Claude vs DeepSeek](/comparisons/claude-vs-deepseek/) · [DeepSeek vs Gemini](/comparisons/deepseek-vs-gemini/) · [DeepSeek vs Mistral AI](/comparisons/deepseek-vs-mistral-ai/) · [DeepSeek vs Qwen](/comparisons/deepseek-vs-qwen/)
+- **Comparisons:** [ChatGPT vs DeepSeek](/compare/chatgpt-vs-deepseek/) · [Claude vs DeepSeek](/compare/claude-vs-deepseek/) · [DeepSeek vs Gemini](/compare/deepseek-vs-gemini/) · [DeepSeek vs Mistral AI](/compare/deepseek-vs-mistral-ai/) · [DeepSeek vs Qwen](/compare/deepseek-vs-qwen/)

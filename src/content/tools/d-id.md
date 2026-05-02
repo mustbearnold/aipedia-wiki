@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "$4.70-$108/month annual"
 status: active
 launched: 2017-01
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -153,4 +153,3 @@ GPT-5.4, Claude Opus 4.7, and other frontier models are supported through the Ag
 ## Related
 
 - **Category:** [AI Video Generation](/categories/ai-video/)
-- **Comparisons:** [HeyGen vs D-ID](/comparisons/heygen-vs-d-id/) · [Synthesia vs D-ID](/comparisons/synthesia-vs-d-id/) · [D-ID vs Runway](/comparisons/d-id-vs-runway/) · [Captions vs D-ID](/comparisons/captions-vs-d-id/)

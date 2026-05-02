@@ -10,8 +10,8 @@ pricing_model: enterprise
 price_range: "$59/user/month"
 status: active
 launched: 2023-07
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -164,4 +164,4 @@ Only if cross-repo context pays for itself. Shops with 50+ repos and heavy inter
 ## Related
 
 - **Category:** [AI Coding](/categories/ai-coding/)
-- **Comparisons:** [Cody vs Cursor](/comparisons/cody-vs-cursor/), [Claude vs Cody](/comparisons/claude-vs-cody/)
+- **Comparisons:** [Cody vs Cursor](/compare/cody-vs-cursor/), [Claude vs Cody](/compare/claude-vs-cody/)

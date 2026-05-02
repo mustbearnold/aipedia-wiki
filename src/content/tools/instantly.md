@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "$30-$286/month"
 status: active
 launched: 2021-10
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -168,4 +168,4 @@ Yes. 14-day trial includes unlimited accounts, warmup, sequences, and basic anal
 ## Related
 
 - **Category:** [AI Automation](/categories/ai-automation/)
-- **Comparisons:** [Apollo vs Instantly](/comparisons/apollo-vs-instantly/) · [Clay vs Instantly](/comparisons/clay-vs-instantly/) · [Instantly vs Intercom](/comparisons/instantly-vs-intercom/) · [Instantly vs Make](/comparisons/instantly-vs-make/) · [Instantly vs Zapier](/comparisons/instantly-vs-zapier/)
+- **Comparisons:** [Apollo vs Instantly](/compare/apollo-vs-instantly/) · [Clay vs Instantly](/compare/clay-vs-instantly/) · [Instantly vs Intercom](/compare/instantly-vs-intercom/) · [Instantly vs Make](/compare/instantly-vs-make/) · [Instantly vs Zapier](/compare/instantly-vs-zapier/)

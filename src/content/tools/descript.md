@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$65/user/month"
 status: active
 launched: 2017-01
-last_updated: 2026-04-30
-last_verified: 2026-04-30
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -157,4 +157,4 @@ One-click noise reduction, compression, and EQ. It lifts mobile and untreated-ro
 ## Related
 
 - **Category:** [AI Voice](/categories/ai-voice/)
-- **Comparisons:** [Descript vs ElevenLabs](/comparisons/descript-vs-elevenlabs/) · [Descript vs Riverside](/comparisons/descript-vs-riverside/) · [Descript vs Resemble AI](/comparisons/descript-vs-resemble-ai/) · [Cartesia vs Descript](/comparisons/cartesia-vs-descript/) · [Descript vs Fish Audio](/comparisons/descript-vs-fish-audio/)
+- **Comparisons:** [Descript vs ElevenLabs](/compare/descript-vs-elevenlabs/) · [Descript vs Resemble AI](/compare/descript-vs-resemble-ai/) · [Cartesia vs Descript](/compare/cartesia-vs-descript/) · [Descript vs Fish Audio](/compare/descript-vs-fish-audio/)

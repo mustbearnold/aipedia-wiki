@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: "$0-$49.99/month"
 status: active
 launched: 2019-11
-last_updated: 2026-04-22
-last_verified: 2026-04-22
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -182,4 +182,3 @@ No. The platform is consumer-only. Developers needing programmatic image generat
 ## Related
 
 - **Category:** [AI Image Generation](/categories/ai-image/)
-- **Comparisons:** [Midjourney vs NightCafe](/comparisons/midjourney-vs-nightcafe/) · [Leonardo vs NightCafe](/comparisons/leonardo-vs-nightcafe/) · [Ideogram vs NightCafe](/comparisons/ideogram-vs-nightcafe/)

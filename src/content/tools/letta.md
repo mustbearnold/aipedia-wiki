@@ -11,8 +11,8 @@ pricing_model: open-source
 price_range: "Free (open-source) · Hosted from $0 · Letta Max tier for heavy workloads"
 status: active
 launched: 2023-10
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -165,4 +165,3 @@ Yes. Memory lives outside the model. Switch from OpenAI to Anthropic or a local 
 ## Related
 
 - **Category:** [AI Automation](/categories/ai-automation/)
-- **Comparisons:** [Letta vs CrewAI](/comparisons/letta-vs-crewai/) · [Letta vs LangChain](/comparisons/letta-vs-langchain/)

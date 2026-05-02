@@ -11,8 +11,8 @@ pricing_model: free
 price_range: "Discontinued"
 status: dead
 launched: 2020-01
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: quarterly
 affiliate:
   has_program: false
@@ -150,4 +150,4 @@ For narrative-first decks: [Gamma](/tools/gamma/). For polished business slides:
 ## Related
 
 - **Category:** [AI Presentation Tools](/categories/ai-presentation/)
-- **Comparisons:** [Gamma vs Tome](/comparisons/gamma-vs-tome/) · [Beautiful.ai vs Tome](/comparisons/beautiful-ai-vs-tome/) · [Pitch vs Tome](/comparisons/pitch-vs-tome/) · [Presentations.AI vs Tome](/comparisons/presentations-ai-vs-tome/) · [Decktopus AI vs Tome](/comparisons/decktopus-vs-tome/)
+- **Comparisons:** [Gamma vs Tome](/compare/gamma-vs-tome/) · [Beautiful.ai vs Tome](/compare/beautiful-ai-vs-tome/) · [Pitch vs Tome](/compare/pitch-vs-tome/) · [Presentations.AI vs Tome](/compare/presentations-ai-vs-tome/) · [Decktopus AI vs Tome](/compare/decktopus-vs-tome/)

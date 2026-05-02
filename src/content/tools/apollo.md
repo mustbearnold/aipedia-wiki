@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$149/user/month"
 status: active
 launched: 2015-01
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -165,4 +165,4 @@ Email credits cover verified email reveals (1 credit each). Mobile credits cover
 ## Related
 
 - **Category:** [AI Automation](/categories/ai-automation/)
-- **Comparisons:** [Apollo vs Clay](/comparisons/apollo-vs-clay/) · [Apollo vs Instantly](/comparisons/apollo-vs-instantly/) · [Apollo vs Intercom](/comparisons/apollo-vs-intercom/) · [Apollo vs Make](/comparisons/apollo-vs-make/) · [Apollo vs Zapier](/comparisons/apollo-vs-zapier/)
+- **Comparisons:** [Apollo vs Clay](/compare/apollo-vs-clay/) · [Apollo vs Instantly](/compare/apollo-vs-instantly/) · [Apollo vs Intercom](/compare/apollo-vs-intercom/) · [Apollo vs Make](/compare/apollo-vs-make/) · [Apollo vs Zapier](/compare/apollo-vs-zapier/)

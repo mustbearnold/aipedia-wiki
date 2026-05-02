@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "Free - $199.99/month"
 status: active
 launched: 2024-03
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -172,4 +172,4 @@ Yes, through the MiniMax developer platform. Per-generation rates are $0.28 for 
 - **Category:** [AI Video](/categories/ai-video/)
 - **Parent company:** [MiniMax](/tools/minimax/)
 - **Compare:** [Kling](/tools/kling/) · [Runway](/tools/runway/) · [Veo](/tools/veo/) · [Pika](/tools/pika/)
-- **Comparisons:** [Hailuo AI vs Kling 3.0](/comparisons/hailuo-vs-kling/)
+- **Comparisons:** [Hailuo AI vs Kling 3.0](/compare/hailuo-vs-kling/)

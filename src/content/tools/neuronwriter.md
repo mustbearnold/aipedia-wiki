@@ -12,8 +12,8 @@ pricing_model: paid
 price_range: $19-$97/month
 status: active
 launched: 2021-01
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -166,4 +166,4 @@ Yes. A 7-day Gold trial exposes plagiarism checks, integrations, and team collab
 ## Related
 
 - **Category:** [AI SEO](/categories/ai-seo/)
-- **Comparisons:** [NeuronWriter vs Surfer SEO](/comparisons/neuronwriter-vs-surfer-seo/) · [Frase vs NeuronWriter](/comparisons/frase-vs-neuronwriter/) · [MarketMuse vs NeuronWriter](/comparisons/marketmuse-vs-neuronwriter/) · [NeuronWriter vs Semrush](/comparisons/neuronwriter-vs-semrush/) · [Ahrefs vs NeuronWriter](/comparisons/ahrefs-vs-neuronwriter/)
+- **Comparisons:** [NeuronWriter vs Surfer SEO](/compare/neuronwriter-vs-surfer-seo/) · [Frase vs NeuronWriter](/compare/frase-vs-neuronwriter/) · [MarketMuse vs NeuronWriter](/compare/marketmuse-vs-neuronwriter/) · [NeuronWriter vs Semrush](/compare/neuronwriter-vs-semrush/) · [Ahrefs vs NeuronWriter](/compare/ahrefs-vs-neuronwriter/)

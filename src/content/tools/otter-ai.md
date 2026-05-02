@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$30/user/month"
 status: active
 launched: 2016-02
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -174,4 +174,4 @@ Only on Business ($30/user/mo) and Enterprise. Basic and Pro capture audio trans
 ## Related
 
 - **Category:** [AI Notes](/categories/ai-notes/)
-- **Comparisons:** [Otter.ai vs Fireflies](/comparisons/fireflies-vs-otter-ai/) | [ChatGPT vs Otter.ai](/comparisons/chatgpt-vs-otter-ai/) | [Google NotebookLM vs Otter.ai](/comparisons/notebooklm-vs-otter-ai/) | [Otter.ai vs Readwise Reader](/comparisons/otter-ai-vs-readwise/) | [ElevenLabs vs Otter.ai](/comparisons/elevenlabs-vs-otter-ai/)
+- **Comparisons:** [Otter.ai vs Fireflies](/compare/fireflies-vs-otter-ai/) | [ChatGPT vs Otter.ai](/compare/chatgpt-vs-otter-ai/) | [Google NotebookLM vs Otter.ai](/compare/notebooklm-vs-otter-ai/) | [Otter.ai vs Readwise Reader](/compare/otter-ai-vs-readwise/) | [ElevenLabs vs Otter.ai](/compare/elevenlabs-vs-otter-ai/)

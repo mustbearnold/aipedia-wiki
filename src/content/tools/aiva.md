@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: "$0-$33/month"
 status: active
 launched: 2016-02
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -188,4 +188,4 @@ Different jobs. AIVA is a composition engine for orchestral and cinematic work, 
 ## Related
 
 - **Category:** [AI Music](/categories/ai-music/)
-- **Comparisons:** [Suno vs Udio](/comparisons/suno-vs-udio/)
+- **Comparisons:** [Suno vs Udio](/compare/suno-vs-udio/)

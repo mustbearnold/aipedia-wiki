@@ -11,8 +11,8 @@ pricing_model: paid
 price_range: '$39-$69/month (Business: custom)'
 status: active
 launched: 2021-01
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 seo_title: 'Jasper: Features, Pricing & Review (April 2026)'
 meta_description: >-
@@ -176,4 +176,4 @@ Jasper targets enterprise marketing teams with heavier brand workflow, campaign 
 ## Related
 
 - **Category:** [AI Writing](/categories/ai-writing/)
-- **Comparisons:** [ChatGPT vs Jasper](/comparisons/chatgpt-vs-jasper/) · [Claude vs Jasper](/comparisons/claude-vs-jasper/) · [Copy.ai vs Jasper](/comparisons/copy-ai-vs-jasper/) · [Jasper vs Writesonic](/comparisons/jasper-vs-writesonic/) · [Jasper vs Rytr](/comparisons/jasper-vs-rytr/)
+- **Comparisons:** [ChatGPT vs Jasper](/compare/chatgpt-vs-jasper/) · [Claude vs Jasper](/compare/claude-vs-jasper/)

@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$100/month"
 status: active
 launched: 2019-07
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -175,4 +175,3 @@ Access is similar but rate-limited. Kling 3.0 via ChatGPT Pro at $200/mo gives p
 ## Related
 
 - **Category:** [AI Video](/categories/ai-video/)
-- **Comparisons:** [InVideo vs Runway](/comparisons/invideo-vs-runway/) · [InVideo vs Pictory](/comparisons/invideo-vs-pictory/) · [InVideo vs Synthesia](/comparisons/invideo-vs-synthesia/)

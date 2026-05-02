@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$11.99/month"
 status: active
 launched: 2021-11
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -164,4 +164,4 @@ Yes. Consensus ships Teams for research groups and Enterprise for 200+ seat inst
 ## Related
 
 - **Category:** [AI Research](/categories/ai-research/)
-- **Comparisons:** [Connected Papers vs Consensus](/comparisons/connected-papers-vs-consensus/) | [Consensus vs Elicit](/comparisons/consensus-vs-elicit/) | [Consensus vs Scite](/comparisons/consensus-vs-scite/) | [Consensus vs Semantic Scholar](/comparisons/consensus-vs-semantic-scholar/)
+- **Comparisons:** [Connected Papers vs Consensus](/compare/connected-papers-vs-consensus/) | [Consensus vs Elicit](/compare/consensus-vs-elicit/) | [Consensus vs Scite](/compare/consensus-vs-scite/) | [Consensus vs Semantic Scholar](/compare/consensus-vs-semantic-scholar/)

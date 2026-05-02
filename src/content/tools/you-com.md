@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2020-11
-last_updated: 2026-04-29
-last_verified: 2026-04-29
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -165,4 +165,4 @@ Yes. You.com offers usage-based API access with volume discounts. Enterprise pri
 ## Related
 
 - **Category:** [AI Search](/categories/ai-search/)
-- **Comparisons:** [ChatGPT vs You.com](/comparisons/chatgpt-vs-you-com/) | [Exa AI vs You.com](/comparisons/exa-vs-you-com/) | [Kagi vs You.com](/comparisons/kagi-vs-you-com/) | [Perplexity vs You.com](/comparisons/perplexity-vs-you-com/) | [Phind vs You.com](/comparisons/phind-vs-you-com/)
+- **Comparisons:** [ChatGPT vs You.com](/compare/chatgpt-vs-you-com/) | [Exa AI vs You.com](/compare/exa-vs-you-com/) | [Kagi vs You.com](/compare/kagi-vs-you-com/) | [Perplexity vs You.com](/compare/perplexity-vs-you-com/) | [Phind vs You.com](/compare/phind-vs-you-com/)

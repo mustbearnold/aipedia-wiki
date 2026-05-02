@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: "€0-€14.99/month"
 status: active
 launched: 2023-09
-last_updated: 2026-04-29
-last_verified: 2026-04-29
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -198,4 +198,4 @@ Not under the default license. CC BY-NC 4.0 restricts commercial use. Internal t
 ## Related
 
 - **Category:** [AI Chatbots](/categories/ai-chatbots/)
-- **Comparisons:** [ChatGPT vs Mistral AI](/comparisons/chatgpt-vs-mistral-ai/) · [Claude vs Mistral AI](/comparisons/claude-vs-mistral-ai/) · [DeepSeek vs Mistral AI](/comparisons/deepseek-vs-mistral-ai/) · [Gemini vs Mistral AI](/comparisons/gemini-vs-mistral-ai/) · [Mistral AI vs Qwen](/comparisons/mistral-ai-vs-qwen/)
+- **Comparisons:** [ChatGPT vs Mistral AI](/compare/chatgpt-vs-mistral-ai/) · [Claude vs Mistral AI](/compare/claude-vs-mistral-ai/) · [DeepSeek vs Mistral AI](/compare/deepseek-vs-mistral-ai/) · [Gemini vs Mistral AI](/compare/gemini-vs-mistral-ai/) · [Mistral AI vs Qwen](/compare/mistral-ai-vs-qwen/)

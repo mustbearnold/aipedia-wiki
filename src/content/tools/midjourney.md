@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "$10-$120/month"
 status: active
 launched: 2022-07
-last_updated: 2026-04-27
-last_verified: 2026-04-27
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -216,4 +216,4 @@ Ideogram still edges V7 on reliability for dense typography (logos, posters, thu
 ## Related
 
 - **Category:** [AI Image Generation](/categories/ai-image/)
-- **Comparisons:** [Midjourney vs Flux](/comparisons/midjourney-vs-flux/) · [Ideogram vs Midjourney](/comparisons/ideogram-vs-midjourney/) · [Adobe Firefly vs Midjourney](/comparisons/adobe-firefly-vs-midjourney/) · [Canva AI vs Midjourney](/comparisons/canva-vs-midjourney/)
+- **Comparisons:** [Midjourney vs Flux](/compare/midjourney-vs-flux/) · [Ideogram vs Midjourney](/compare/ideogram-vs-midjourney/) · [Adobe Firefly vs Midjourney](/compare/adobe-firefly-vs-midjourney/) · [Canva AI vs Midjourney](/compare/canva-vs-midjourney/)

@@ -1,11 +1,11 @@
 # Project Knowledge Graph Report
 
-Generated: 2026-05-01T10:51:55.521Z
+Generated: 2026-05-02T03:46:15.101Z
 
 ## Summary
 
-- Total files in graph: 3189
-- Total indexed bytes: 77.7 MB
+- Total files in graph: 3190
+- Total indexed bytes: 58.6 MB
 - Node types: 8
 - Edge types: 6
 
@@ -18,28 +18,28 @@ Generated: 2026-05-01T10:51:55.521Z
 | config | 9 |
 | directory | 110 |
 | file | 221 |
-| markdown_page | 853 |
-| observation | 959 |
+| markdown_page | 854 |
+| observation | 856 |
 | script | 49 |
 
 ## Edge Counts
 
 | Type | Count |
 | --- | --- |
-| contains | 2415 |
+| contains | 2416 |
 | defines_script | 49 |
 | has_frontmatter | 833 |
-| imports | 259 |
-| links_to | 5330 |
-| uses_asset | 1561 |
+| imports | 260 |
+| links_to | 5337 |
+| uses_asset | 1562 |
 
 ## Largest Folders
 
 | Folder | Size |
 | --- | --- |
-| public | 54.9 MB |
-| public/og | 47.8 MB |
-| public/og/news | 33.8 MB |
+| public | 35.8 MB |
+| public/og | 28.7 MB |
+| public/og/news | 14.6 MB |
 | public/og/tools | 14.1 MB |
 | brand-mockups | 13.6 MB |
 | src | 7.0 MB |
@@ -79,108 +79,7 @@ No missing required frontmatter detected by the MVP rules.
 
 ## Broken Internal Links
 
-| Path | Line | Href |
-| --- | --- | --- |
-| src/content/trends/long-context-standard.md | 50 | ./ai-memory-layer/ |
-| src/content/tools/activepieces.md | 180 | /comparisons/activepieces-vs-make/ |
-| src/content/tools/activepieces.md | 180 | /comparisons/activepieces-vs-n8n/ |
-| src/content/tools/activepieces.md | 180 | /comparisons/activepieces-vs-zapier/ |
-| src/content/tools/amazon-q.md | 173 | /comparisons/amazon-q-vs-cursor/ |
-| src/content/tools/amazon-q.md | 173 | /comparisons/amazon-q-vs-github-copilot/ |
-| src/content/tools/amplemarket.md | 215 | /comparisons/amplemarket-vs-clay/ |
-| src/content/tools/amplemarket.md | 215 | /comparisons/amplemarket-vs-instantly/ |
-| src/content/tools/amplemarket.md | 215 | /comparisons/apollo-vs-amplemarket/ |
-| src/content/tools/captions.md | 159 | /comparisons/captions-vs-d-id/ |
-| src/content/tools/d-id.md | 156 | /comparisons/captions-vs-d-id/ |
-| src/content/tools/captions.md | 159 | /comparisons/captions-vs-descript/ |
-| src/content/tools/captions.md | 159 | /comparisons/captions-vs-heygen/ |
-| src/content/tools/captions.md | 159 | /comparisons/captions-vs-runway/ |
-| src/content/tools/doubao.md | 171 | /comparisons/chatgpt-vs-doubao/ |
-| src/content/tools/genspark.md | 181 | /comparisons/chatgpt-vs-genspark/ |
-| src/content/tools/glm.md | 173 | /comparisons/claude-vs-glm/ |
-| src/content/tools/taskade.md | 184 | /comparisons/clickup-vs-taskade/ |
-| src/content/tools/jasper.md | 179 | /comparisons/copy-ai-vs-jasper/ |
-| src/content/tools/crewai.md | 166 | /comparisons/crewai-vs-langchain/ |
-| src/content/tools/crewai.md | 166 | /comparisons/crewai-vs-n8n/ |
-| src/content/tools/crewai.md | 166 | /comparisons/crewai-vs-zapier/ |
-| src/content/tools/supermaven.md | 170 | /comparisons/cursor-vs-supermaven/ |
-| src/content/tools/d-id.md | 156 | /comparisons/d-id-vs-runway/ |
-| src/content/tools/doubao.md | 171 | /comparisons/deepseek-vs-doubao/ |
-| src/content/tools/glm.md | 173 | /comparisons/deepseek-vs-glm/ |
-| src/content/tools/kimi.md | 178 | /comparisons/deepseek-vs-kimi/ |
-| src/content/tools/yi.md | 171 | /comparisons/deepseek-vs-yi/ |
-| src/content/tools/descript.md | 160 | /comparisons/descript-vs-riverside/ |
-| src/content/tools/lovo.md | 167 | /comparisons/elevenlabs-vs-lovo/ |
-| src/content/tools/speechify.md | 198 | /comparisons/elevenlabs-vs-speechify/ |
-| src/content/tools/leonardo.md | 186 | /comparisons/flux-vs-leonardo/ |
-| src/content/tools/playground-ai.md | 183 | /comparisons/flux-vs-playground/ |
-| src/content/tools/playground-ai.md | 183 | /comparisons/freepik-vs-playground/ |
-| src/content/tools/hedra.md | 183 | /comparisons/hedra-vs-d-id/ |
-| src/content/tools/hedra.md | 183 | /comparisons/hedra-vs-heygen/ |
-| src/content/tools/hedra.md | 183 | /comparisons/hedra-vs-synthesia/ |
-| src/content/tools/hedra.md | 183 | /comparisons/hedra-vs-tavus/ |
-| src/content/tools/d-id.md | 156 | /comparisons/heygen-vs-d-id/ |
-| src/content/tools/heygen.md | 158 | /comparisons/heygen-vs-d-id/ |
-| src/content/tools/leonardo.md | 186 | /comparisons/ideogram-vs-leonardo/ |
-| src/content/tools/nightcafe.md | 185 | /comparisons/ideogram-vs-nightcafe/ |
-| src/content/tools/imagen.md | 187 | /comparisons/imagen-vs-chatgpt/ |
-| src/content/tools/imagen.md | 187 | /comparisons/imagen-vs-flux/ |
-| src/content/tools/imagen.md | 187 | /comparisons/imagen-vs-midjourney/ |
-| src/content/tools/invideo.md | 178 | /comparisons/invideo-vs-pictory/ |
-| src/content/tools/invideo.md | 178 | /comparisons/invideo-vs-runway/ |
-| src/content/tools/invideo.md | 178 | /comparisons/invideo-vs-synthesia/ |
-| src/content/tools/jasper.md | 179 | /comparisons/jasper-vs-rytr/ |
-| src/content/tools/jasper.md | 179 | /comparisons/jasper-vs-writesonic/ |
-| src/content/tools/jetbrains-ai.md | 171 | /comparisons/jetbrains-ai-vs-cursor/ |
-| src/content/tools/jetbrains-ai.md | 171 | /comparisons/jetbrains-ai-vs-github-copilot/ |
-| src/content/tools/jimeng.md | 198 | /comparisons/jimeng-vs-doubao/ |
-| src/content/tools/jimeng.md | 198 | /comparisons/jimeng-vs-flux/ |
-| src/content/tools/jimeng.md | 198 | /comparisons/jimeng-vs-midjourney/ |
-| src/content/tools/jimeng.md | 198 | /comparisons/jimeng-vs-seedance/ |
-| src/content/tools/luma.md | 180 | /comparisons/kling-vs-luma/ |
-| src/content/tools/veo.md | 173 | /comparisons/kling-vs-veo/ |
-| src/content/tools/nightcafe.md | 185 | /comparisons/leonardo-vs-nightcafe/ |
-| src/content/tools/letta.md | 168 | /comparisons/letta-vs-crewai/ |
-| src/content/tools/letta.md | 168 | /comparisons/letta-vs-langchain/ |
-| src/content/tools/lovo.md | 167 | /comparisons/lovo-vs-wellsaid/ |
-| src/content/tools/wellsaid.md | 167 | /comparisons/lovo-vs-wellsaid/ |
-| src/content/tools/luma.md | 180 | /comparisons/luma-vs-pika/ |
-| src/content/tools/luma.md | 180 | /comparisons/luma-vs-runway/ |
-| src/content/tools/tripo3d.md | 175 | /comparisons/meshy-vs-rodin/ |
-| src/content/tools/leonardo.md | 186 | /comparisons/midjourney-vs-leonardo/ |
-| src/content/tools/nightcafe.md | 185 | /comparisons/midjourney-vs-nightcafe/ |
-| src/content/tools/playground-ai.md | 183 | /comparisons/midjourney-vs-playground/ |
-| src/content/tools/taskade.md | 184 | /comparisons/monday-vs-taskade/ |
-| src/content/tools/lovo.md | 167 | /comparisons/murf-vs-lovo/ |
-| src/content/tools/murf.md | 171 | /comparisons/murf-vs-lovo/ |
-| src/content/tools/speechify.md | 198 | /comparisons/murf-vs-speechify/ |
-| src/content/tools/murf.md | 171 | /comparisons/murf-vs-wellsaid/ |
-| src/content/tools/wellsaid.md | 167 | /comparisons/murf-vs-wellsaid/ |
-| src/content/tools/taskade.md | 184 | /comparisons/notion-ai-vs-taskade/ |
-| src/content/tools/openclaw.md | 170 | /comparisons/openclaw-vs-chatgpt/ |
-| src/content/tools/openclaw.md | 170 | /comparisons/openclaw-vs-claude-code/ |
-| src/content/tools/openclaw.md | 170 | /comparisons/openclaw-vs-n8n/ |
-| src/content/tools/openhands.md | 167 | /comparisons/openhands-vs-claude-code/ |
-| src/content/tools/openhands.md | 167 | /comparisons/openhands-vs-cursor/ |
-| src/content/tools/openhands.md | 167 | /comparisons/openhands-vs-devin/ |
-| src/content/tools/genspark.md | 181 | /comparisons/perplexity-vs-genspark/ |
-| src/content/tools/pieces.md | 168 | /comparisons/pieces-vs-cursor/ |
-| src/content/tools/pieces.md | 168 | /comparisons/pieces-vs-github-copilot/ |
-| src/content/tools/doubao.md | 171 | /comparisons/qwen-vs-doubao/ |
-| src/content/tools/yi.md | 171 | /comparisons/qwen-vs-yi/ |
-| src/content/tools/relevance-ai.md | 165 | /comparisons/relevance-ai-vs-crewai/ |
-| src/content/tools/relevance-ai.md | 165 | /comparisons/relevance-ai-vs-n8n/ |
-| src/content/tools/relevance-ai.md | 165 | /comparisons/relevance-ai-vs-zapier/ |
-| src/content/tools/rodin.md | 176 | /comparisons/rodin-vs-meshy/ |
-| src/content/tools/veo.md | 173 | /comparisons/runway-vs-veo/ |
-| src/content/tools/veo.md | 173 | /comparisons/seedance-vs-veo/ |
-| src/content/tools/speechify.md | 198 | /comparisons/speechify-vs-natural-reader/ |
-| src/content/tools/d-id.md | 156 | /comparisons/synthesia-vs-d-id/ |
-| src/content/tools/synthesia.md | 157 | /comparisons/synthesia-vs-d-id/ |
-| src/content/tools/rodin.md | 176 | /comparisons/tripo3d-vs-meshy/ |
-| src/content/tools/tripo3d.md | 175 | /comparisons/tripo3d-vs-meshy/ |
-| src/content/tools/rodin.md | 176 | /comparisons/tripo3d-vs-rodin/ |
-| src/content/tools/tripo3d.md | 175 | /comparisons/tripo3d-vs-rodin/ |
+No broken internal links detected by the graph scan.
 
 ## Unused Assets
 

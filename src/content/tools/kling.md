@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: $0-$64.99/month
 status: active
 launched: 2024-06
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -174,4 +174,4 @@ Seedance 2.0 (public beta April 14, 2026) leads on multimodal audio-video in a s
 ## Related
 
 - **Category:** [AI Video Generation](/categories/ai-video/)
-- **Comparisons:** [Kling vs Runway](/comparisons/kling-vs-seedance-vs-runway/) · [Kling vs Pika](/comparisons/kling-vs-pika/) · [Hailuo vs Kling](/comparisons/hailuo-vs-kling/) · [HeyGen vs Kling](/comparisons/heygen-vs-kling/) · [Kling vs Synthesia](/comparisons/kling-vs-synthesia/)
+- **Comparisons:** [Kling vs Runway](/compare/kling-vs-seedance-vs-runway/) · [Kling vs Pika](/compare/kling-vs-pika/) · [Hailuo vs Kling](/compare/hailuo-vs-kling/) · [HeyGen vs Kling](/compare/heygen-vs-kling/) · [Kling vs Synthesia](/compare/kling-vs-synthesia/)

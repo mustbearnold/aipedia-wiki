@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$14.99/month"
 status: active
 launched: 2021-06
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -169,4 +169,4 @@ No. Capacities is solo-focused. No shared workspaces or real-time collaboration.
 ## Related
 
 - **Category:** [AI Notes](/categories/ai-notes/)
-- **Comparisons:** [Capacities vs NotebookLM](/comparisons/capacities-vs-notebooklm/) · [Capacities vs Obsidian](/comparisons/capacities-vs-obsidian/) · [Capacities vs Readwise](/comparisons/capacities-vs-readwise/) · [Capacities vs Fireflies](/comparisons/capacities-vs-fireflies/) · [Capacities vs Otter.ai](/comparisons/capacities-vs-otter-ai/)
+- **Comparisons:** [Capacities vs NotebookLM](/compare/capacities-vs-notebooklm/) · [Capacities vs Obsidian](/compare/capacities-vs-obsidian/) · [Capacities vs Readwise](/compare/capacities-vs-readwise/) · [Capacities vs Fireflies](/compare/capacities-vs-fireflies/) · [Capacities vs Otter.ai](/compare/capacities-vs-otter-ai/)

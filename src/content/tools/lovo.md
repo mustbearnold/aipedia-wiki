@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: $0-$149/month
 status: active
 launched: 2019-01
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -164,4 +164,3 @@ Different jobs. LOVO wins on bundled video workflow for narrated explainers. Ele
 ## Related
 
 - **Category:** [AI Voice](/categories/ai-voice/)
-- **Comparisons:** [ElevenLabs vs LOVO](/comparisons/elevenlabs-vs-lovo/) · [Murf vs LOVO](/comparisons/murf-vs-lovo/) · [LOVO vs WellSaid](/comparisons/lovo-vs-wellsaid/)

@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$1,499/month"
 status: active
 launched: 2020-12
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -166,4 +166,4 @@ Writesonic wins on integrated dashboard, 150+ templates, and GEO tracking. [Chat
 ## Related
 
 - **Category:** [AI Writing](/categories/ai-writing/)
-- **Comparisons:** [ChatGPT vs Writesonic](/comparisons/chatgpt-vs-writesonic/)
+- **Comparisons:** [ChatGPT vs Writesonic](/compare/chatgpt-vs-writesonic/)

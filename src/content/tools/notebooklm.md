@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$250/month"
 status: active
 launched: 2023-07
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -168,4 +168,4 @@ NotebookLM wins on citation precision and refuses to fabricate outside sources. 
 ## Related
 
 - **Category:** [AI Notes](/categories/ai-notes/) · [AI Search](/categories/ai-search/)
-- **Comparisons:** [Capacities vs NotebookLM](/comparisons/capacities-vs-notebooklm/) · [NotebookLM vs Obsidian](/comparisons/notebooklm-vs-obsidian/) · [NotebookLM vs Otter.ai](/comparisons/notebooklm-vs-otter-ai/) · [NotebookLM vs Readwise](/comparisons/notebooklm-vs-readwise/) · [Fireflies vs NotebookLM](/comparisons/fireflies-vs-notebooklm/)
+- **Comparisons:** [Capacities vs NotebookLM](/compare/capacities-vs-notebooklm/) · [NotebookLM vs Obsidian](/compare/notebooklm-vs-obsidian/) · [NotebookLM vs Otter.ai](/compare/notebooklm-vs-otter-ai/) · [NotebookLM vs Readwise](/compare/notebooklm-vs-readwise/) · [Fireflies vs NotebookLM](/compare/fireflies-vs-notebooklm/)

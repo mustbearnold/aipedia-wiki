@@ -10,8 +10,8 @@ pricing_model: free
 price_range: "Free while in Google Labs (350 Standard + 200 Pro generations/mo)"
 status: active
 launched: 2025-05
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 seo_title: "Google Stitch: Features, Pricing & Review (April 2026)"
 meta_description: "Google Stitch is Google Labs' AI-native UI design tool. Generates Material Design 3 UIs from text prompts. Currently free: 350 Standard + 200 Pro (Gemini 2.5 Pro) generations per month. Paid tiers expected Q4 2026."
@@ -172,4 +172,4 @@ Gemini-powered prompt handling is reliable for layout, theme, and component-leve
 ## Related
 
 - **Category:** [AI Design](/categories/ai-design/)
-- **Comparisons:** [Figma vs Google Stitch](/comparisons/figma-vs-google-stitch/) · [Google Stitch vs Lovable](/comparisons/google-stitch-vs-lovable/) · [Google Stitch vs v0](/comparisons/google-stitch-vs-v0/) · [Canva AI vs Google Stitch](/comparisons/canva-vs-google-stitch/) · [Bolt vs Google Stitch](/comparisons/bolt-vs-google-stitch/)
+- **Comparisons:** [Figma vs Google Stitch](/compare/figma-vs-google-stitch/) · [Google Stitch vs Lovable](/compare/google-stitch-vs-lovable/) · [Google Stitch vs v0](/compare/google-stitch-vs-v0/) · [Canva AI vs Google Stitch](/compare/canva-vs-google-stitch/) · [Bolt vs Google Stitch](/compare/bolt-vs-google-stitch/)

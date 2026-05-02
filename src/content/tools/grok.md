@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$300/month"
 status: active
 launched: 2023-11
-last_updated: 2026-04-30
-last_verified: 2026-04-30
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -275,4 +275,4 @@ Musk has publicly targeted Q2 2026. Training is in progress on Colossus 2. Archi
 ## Related
 
 - **Category:** [AI Chatbots](/categories/ai-chatbots/) · [AI Search](/categories/ai-search/)
-- **Comparisons:** [ChatGPT vs Grok](/comparisons/chatgpt-vs-grok/) · [Claude vs Grok](/comparisons/claude-vs-grok/) · [Gemini vs Grok](/comparisons/gemini-vs-grok/)
+- **Comparisons:** [ChatGPT vs Grok](/compare/chatgpt-vs-grok/) · [Claude vs Grok](/compare/claude-vs-grok/) · [Gemini vs Grok](/compare/gemini-vs-grok/)

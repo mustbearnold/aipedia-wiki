@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "Free (open-weight, non-commercial) / $0.016/1K chars API"
 status: active
 launched: 2026-03
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -171,4 +171,4 @@ Yes. Voxtral is a unified TTS + STT model. STT pricing runs around $0.002 per mi
 ## Related
 
 - **Category:** [AI Voice / TTS](/categories/ai-voice/)
-- **Comparisons:** [ElevenLabs vs Voxtral](/comparisons/elevenlabs-vs-voxtral/), [Cartesia vs Voxtral](/comparisons/cartesia-vs-voxtral/), [Fish Audio vs Voxtral](/comparisons/fish-audio-vs-voxtral/), [Resemble AI vs Voxtral](/comparisons/resemble-ai-vs-voxtral/)
+- **Comparisons:** [ElevenLabs vs Voxtral](/compare/elevenlabs-vs-voxtral/), [Cartesia vs Voxtral](/compare/cartesia-vs-voxtral/), [Fish Audio vs Voxtral](/compare/fish-audio-vs-voxtral/), [Resemble AI vs Voxtral](/compare/resemble-ai-vs-voxtral/)

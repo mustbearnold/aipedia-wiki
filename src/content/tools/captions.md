@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$69.99/month"
 status: active
 launched: 2021-01
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -156,4 +156,3 @@ Pro at $9.99/mo fits most solo creators posting 3+ times per week on TikTok, Ree
 ## Related
 
 - **Category:** [AI Video Generation](/categories/ai-video/)
-- **Comparisons:** [Captions vs Descript](/comparisons/captions-vs-descript/) · [Captions vs HeyGen](/comparisons/captions-vs-heygen/) · [Captions vs Runway](/comparisons/captions-vs-runway/) · [Captions vs D-ID](/comparisons/captions-vs-d-id/)

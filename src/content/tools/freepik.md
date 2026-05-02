@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$158/month"
 status: active
 launched: 2023-06
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -178,4 +178,4 @@ Different tools. Freepik is an ensemble platform bundling many models plus a sto
 ## Related
 
 - **Category:** [AI Image Generation](/categories/ai-image/)
-- **Comparisons:** [Freepik vs Midjourney](/comparisons/freepik-vs-midjourney/) · [Freepik vs Flux](/comparisons/flux-vs-freepik/) · [Adobe Firefly vs Freepik](/comparisons/adobe-firefly-vs-freepik/) · [Freepik vs Ideogram](/comparisons/freepik-vs-ideogram/)
+- **Comparisons:** [Freepik vs Midjourney](/compare/freepik-vs-midjourney/) · [Freepik vs Flux](/compare/flux-vs-freepik/) · [Adobe Firefly vs Freepik](/compare/adobe-firefly-vs-freepik/) · [Freepik vs Ideogram](/compare/freepik-vs-ideogram/)

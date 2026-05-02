@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "$29-$1,499/month"
 status: active
 launched: 2011-01
-last_updated: 2026-04-27
-last_verified: 2026-04-27
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -184,4 +184,4 @@ Yes. Ahrefs applies a 2-months-free discount on annual plans across every tier, 
 ## Related
 
 - **Category:** [AI SEO](/categories/ai-seo/)
-- **Comparisons:** [Ahrefs vs Surfer SEO](/comparisons/ahrefs-vs-surfer-seo/) · [Surfer vs Semrush vs Ahrefs](/comparisons/surfer-vs-semrush-vs-ahrefs/) · [Ahrefs vs Frase](/comparisons/ahrefs-vs-frase/) · [Ahrefs vs MarketMuse](/comparisons/ahrefs-vs-marketmuse/)
+- **Comparisons:** [Ahrefs vs Surfer SEO](/compare/ahrefs-vs-surfer-seo/) · [Surfer vs Semrush vs Ahrefs](/compare/surfer-vs-semrush-vs-ahrefs/) · [Ahrefs vs Frase](/compare/ahrefs-vs-frase/) · [Ahrefs vs MarketMuse](/compare/ahrefs-vs-marketmuse/)

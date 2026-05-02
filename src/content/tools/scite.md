@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$20/month"
 status: active
 launched: 2018-01
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -166,4 +166,4 @@ Yes, via the Enterprise tier. API access and SSO are bundled. Personal and Team 
 ## Related
 
 - **Category:** [AI Research](/categories/ai-research/)
-- **Comparisons:** [Scite vs Consensus](/comparisons/consensus-vs-scite/) | [Scite vs Semantic Scholar](/comparisons/scite-vs-semantic-scholar/) | [Elicit vs Scite](/comparisons/elicit-vs-scite/) | [Connected Papers vs Scite](/comparisons/connected-papers-vs-scite/) | [ChatGPT vs Scite](/comparisons/chatgpt-vs-scite/)
+- **Comparisons:** [Scite vs Consensus](/compare/consensus-vs-scite/) | [Scite vs Semantic Scholar](/compare/scite-vs-semantic-scholar/) | [Elicit vs Scite](/compare/elicit-vs-scite/) | [Connected Papers vs Scite](/compare/connected-papers-vs-scite/) | [ChatGPT vs Scite](/compare/chatgpt-vs-scite/)

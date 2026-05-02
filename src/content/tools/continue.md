@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$20/seat/month"
 status: active
 launched: 2023-05
-last_updated: 2026-04-18
-last_verified: 2026-04-18
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -177,4 +177,4 @@ A shared registry for agents, slash commands, rules, and MCP servers. Publish on
 ## Related
 
 - **Category:** [AI Coding](/categories/ai-coding/)
-- **Comparisons:** [Claude Code vs Continue](/comparisons/claude-code-vs-continue/) · [Continue vs Cursor](/comparisons/continue-vs-cursor/) · [Continue vs Devin](/comparisons/continue-vs-devin/) · [Continue vs GitHub Copilot](/comparisons/continue-vs-github-copilot/) · [Continue vs Val Town](/comparisons/continue-vs-val-town/)
+- **Comparisons:** [Claude Code vs Continue](/compare/claude-code-vs-continue/) · [Continue vs Cursor](/compare/continue-vs-cursor/) · [Continue vs Devin](/compare/continue-vs-devin/) · [Continue vs GitHub Copilot](/compare/continue-vs-github-copilot/) · [Continue vs Val Town](/compare/continue-vs-val-town/)

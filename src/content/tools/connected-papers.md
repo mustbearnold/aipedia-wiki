@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$3/month"
 status: active
 launched: 2020-06
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -166,4 +166,4 @@ Minimal. Single-user workflow by design. Teams needing shared literature librari
 ## Related
 
 - **Category:** [AI Research](/categories/ai-research/)
-- **Comparisons:** [Connected Papers vs Semantic Scholar](/comparisons/connected-papers-vs-semantic-scholar/) | [Connected Papers vs Elicit](/comparisons/connected-papers-vs-elicit/) | [Connected Papers vs Consensus](/comparisons/connected-papers-vs-consensus/) | [Connected Papers vs Scite](/comparisons/connected-papers-vs-scite/)
+- **Comparisons:** [Connected Papers vs Semantic Scholar](/compare/connected-papers-vs-semantic-scholar/) | [Connected Papers vs Elicit](/compare/connected-papers-vs-elicit/) | [Connected Papers vs Consensus](/compare/connected-papers-vs-consensus/) | [Connected Papers vs Scite](/compare/connected-papers-vs-scite/)

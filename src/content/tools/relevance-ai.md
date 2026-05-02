@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0 · Pro from $19/mo (annual) · Team from $234/mo · Enterprise custom"
 status: active
 launched: 2023-06
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -162,4 +162,3 @@ Yes. Multi-model routing lets a single agent call Claude Opus 4.7 for reasoning,
 ## Related
 
 - **Category:** [AI Automation](/categories/ai-automation/)
-- **Comparisons:** [Relevance AI vs CrewAI](/comparisons/relevance-ai-vs-crewai/) · [Relevance AI vs Zapier](/comparisons/relevance-ai-vs-zapier/) · [Relevance AI vs n8n](/comparisons/relevance-ai-vs-n8n/)

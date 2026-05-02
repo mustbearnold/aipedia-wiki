@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: $0-$48/month
 status: active
 launched: 2023-08
-last_updated: 2026-04-27
-last_verified: 2026-04-27
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -181,4 +181,4 @@ Paid plans (Basic, Plus, Pro) include commercial rights. The free tier is non-co
 ## Related
 
 - **Category:** [AI Image Generation](/categories/ai-image/)
-- **Comparisons:** [Ideogram vs Midjourney](/comparisons/ideogram-vs-midjourney/) · [Flux vs Ideogram](/comparisons/flux-vs-ideogram/) · [Adobe Firefly vs Ideogram](/comparisons/adobe-firefly-vs-ideogram/) · [Ideogram vs Stable Diffusion](/comparisons/ideogram-vs-stable-diffusion/)
+- **Comparisons:** [Ideogram vs Midjourney](/compare/ideogram-vs-midjourney/) · [Flux vs Ideogram](/compare/flux-vs-ideogram/) · [Adobe Firefly vs Ideogram](/compare/adobe-firefly-vs-ideogram/) · [Ideogram vs Stable Diffusion](/compare/ideogram-vs-stable-diffusion/)

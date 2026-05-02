@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$600/year"
 status: active
 launched: 2022-01
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -164,4 +164,4 @@ Yes. Enterprise ships SOC 2 Type II compliance with data encrypted in transit an
 ## Related
 
 - **Category:** [AI Presentation Tools](/categories/ai-presentation/)
-- **Comparisons:** [Gamma vs Presentations.AI](/comparisons/gamma-vs-presentations-ai/) · [Beautiful.ai vs Presentations.AI](/comparisons/beautiful-ai-vs-presentations-ai/) · [Pitch vs Presentations.AI](/comparisons/pitch-vs-presentations-ai/) · [Presentations.AI vs Tome](/comparisons/presentations-ai-vs-tome/) · [Decktopus AI vs Presentations.AI](/comparisons/decktopus-vs-presentations-ai/)
+- **Comparisons:** [Gamma vs Presentations.AI](/compare/gamma-vs-presentations-ai/) · [Beautiful.ai vs Presentations.AI](/compare/beautiful-ai-vs-presentations-ai/) · [Pitch vs Presentations.AI](/compare/pitch-vs-presentations-ai/) · [Presentations.AI vs Tome](/compare/presentations-ai-vs-tome/) · [Decktopus AI vs Presentations.AI](/compare/decktopus-vs-presentations-ai/)

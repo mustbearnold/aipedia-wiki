@@ -11,8 +11,8 @@ pricing_model: open-source
 price_range: "Free (MIT license; BYOK API costs)"
 status: active
 launched: 2026-02
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -172,4 +172,4 @@ Nous Research, an AI research lab focused on open-weight models and agent archit
 ## Related
 
 - **Category:** [AI Automation](/categories/ai-automation/)
-- **Comparisons:** [ChatGPT vs Hermes Agent](/comparisons/chatgpt-vs-hermes-agent/)
+- **Comparisons:** [ChatGPT vs Hermes Agent](/compare/chatgpt-vs-hermes-agent/)

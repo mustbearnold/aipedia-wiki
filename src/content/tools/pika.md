@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: $0-$58/month
 status: active
 launched: 2023-11
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -173,4 +173,4 @@ Yes, through the Enterprise tier only. Basic and Pro users access Pika through t
 ## Related
 
 - **Category:** [AI Video Generation](/categories/ai-video/)
-- **Comparisons:** [Pika vs Runway](/comparisons/pika-vs-runway/) · [Kling vs Pika](/comparisons/kling-vs-pika/) · [Pika vs Seedance](/comparisons/pika-vs-seedance/) · [HeyGen vs Pika](/comparisons/heygen-vs-pika/) · [Pika vs Synthesia](/comparisons/pika-vs-synthesia/)
+- **Comparisons:** [Pika vs Runway](/compare/pika-vs-runway/) · [Kling vs Pika](/compare/kling-vs-pika/) · [Pika vs Seedance](/compare/pika-vs-seedance/) · [HeyGen vs Pika](/compare/heygen-vs-pika/) · [Pika vs Synthesia](/compare/pika-vs-synthesia/)

@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: $0-$34.12+/month
 status: active
 launched: 2012-01
-last_updated: 2026-04-27
-last_verified: 2026-04-27
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -177,4 +177,4 @@ No. Make is cloud-only. [n8n](/tools/n8n/) is the standard pick for self-hosted 
 ## Related
 
 - **Category:** [AI Automation](/categories/ai-automation/)
-- **Comparisons:** [n8n vs Make vs Zapier](/comparisons/n8n-vs-make-vs-zapier/) · [Clay vs Make](/comparisons/clay-vs-make/)
+- **Comparisons:** [n8n vs Make vs Zapier](/compare/n8n-vs-make-vs-zapier/) · [Clay vs Make](/compare/clay-vs-make/)

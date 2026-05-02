@@ -11,8 +11,8 @@ pricing_model: open-source
 price_range: "Free (MIT) · Enterprise from $99/mo"
 status: active
 launched: 2023-12
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 seo_title: "CrewAI: Features, Pricing & Review (April 2026)"
 meta_description: "CrewAI 1.14 is the current open-source release. Framework is free under MIT; Enterprise plans start at $99/mo and scale to a $120K/year Ultra tier. Role-based multi-agent orchestration for Python teams."
@@ -163,4 +163,3 @@ A four-agent crew on GPT-5.4 Thinking can hit several dollars per run without to
 ## Related
 
 - **Category:** [AI Automation](/categories/ai-automation/)
-- **Comparisons:** [CrewAI vs LangChain](/comparisons/crewai-vs-langchain/) · [CrewAI vs n8n](/comparisons/crewai-vs-n8n/) · [CrewAI vs Zapier](/comparisons/crewai-vs-zapier/)

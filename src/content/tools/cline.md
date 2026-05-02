@@ -11,8 +11,8 @@ pricing_model: open-source
 price_range: "Free (BYOK API costs)"
 status: active
 launched: 2024-07
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -186,4 +186,4 @@ Cursor is a polished VS Code fork with a bundled model subscription and less set
 ## Related
 
 - **Category:** [AI Coding](/categories/ai-coding/)
-- **Comparisons:** [Claude vs Cline](/comparisons/claude-vs-cline/) · [Cline vs Cursor](/comparisons/cline-vs-cursor/)
+- **Comparisons:** [Claude vs Cline](/compare/claude-vs-cline/) · [Cline vs Cursor](/compare/cline-vs-cursor/)

@@ -10,8 +10,8 @@ pricing_model: free
 price_range: "N/A (discontinued)"
 status: dead
 launched: 2022-04
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: quarterly
 affiliate:
   has_program: false
@@ -149,4 +149,4 @@ Public reporting indicates closure roughly one month after a $10M funding round.
 ## Related
 
 - **Category:** [AI Search](/categories/ai-search/)
-- **Comparisons:** [ChatGPT vs Phind](/comparisons/chatgpt-vs-phind/) | [Exa AI vs Phind](/comparisons/exa-vs-phind/) | [Kagi vs Phind](/comparisons/kagi-vs-phind/) | [Perplexity vs Phind](/comparisons/perplexity-vs-phind/) | [Phind vs You.com](/comparisons/phind-vs-you-com/)
+- **Comparisons:** [ChatGPT vs Phind](/compare/chatgpt-vs-phind/) | [Exa AI vs Phind](/compare/exa-vs-phind/) | [Kagi vs Phind](/compare/kagi-vs-phind/) | [Perplexity vs Phind](/compare/perplexity-vs-phind/) | [Phind vs You.com](/compare/phind-vs-you-com/)

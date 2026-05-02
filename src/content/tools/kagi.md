@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "$5-$25/month"
 status: active
 launched: 2017-06
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -161,4 +161,4 @@ No behavioral tracking, no ad profiles, no data sold to third parties. IP is not
 ## Related
 
 - **Category:** [AI Search](/categories/ai-search/)
-- **Comparisons:** [ChatGPT vs Kagi](/comparisons/chatgpt-vs-kagi/) | [Exa AI vs Kagi](/comparisons/exa-vs-kagi/) | [Kagi vs Perplexity](/comparisons/kagi-vs-perplexity/) | [Kagi vs Phind](/comparisons/kagi-vs-phind/) | [Kagi vs You.com](/comparisons/kagi-vs-you-com/)
+- **Comparisons:** [ChatGPT vs Kagi](/compare/chatgpt-vs-kagi/) | [Exa AI vs Kagi](/compare/exa-vs-kagi/) | [Kagi vs Perplexity](/compare/kagi-vs-perplexity/) | [Kagi vs Phind](/compare/kagi-vs-phind/) | [Kagi vs You.com](/compare/kagi-vs-you-com/)

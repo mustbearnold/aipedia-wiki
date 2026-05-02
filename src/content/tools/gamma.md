@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: $0-$100/month
 status: active
 launched: 2020-01
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -162,4 +162,4 @@ Claude Opus 4.7 and GPT-5.4 are both selectable as the generation model inside t
 ## Related
 
 - **Category:** [AI Presentation Tools](/categories/ai-presentation/)
-- **Comparisons:** [Beautiful.ai vs Gamma](/comparisons/beautiful-ai-vs-gamma/) · [Gamma vs Pitch](/comparisons/gamma-vs-pitch/) · [Gamma vs Tome](/comparisons/gamma-vs-tome/) · [Gamma vs Presentations.AI](/comparisons/gamma-vs-presentations-ai/) · [ChatGPT vs Gamma](/comparisons/chatgpt-vs-gamma/)
+- **Comparisons:** [Beautiful.ai vs Gamma](/compare/beautiful-ai-vs-gamma/) · [Gamma vs Pitch](/compare/gamma-vs-pitch/) · [Gamma vs Tome](/compare/gamma-vs-tome/) · [Gamma vs Presentations.AI](/compare/gamma-vs-presentations-ai/) · [ChatGPT vs Gamma](/compare/chatgpt-vs-gamma/)

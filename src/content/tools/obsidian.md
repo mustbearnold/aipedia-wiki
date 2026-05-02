@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$8/month (add-ons) + $50/year commercial"
 status: active
 launched: 2020-03
-last_updated: 2026-04-23
-last_verified: 2026-04-23
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -179,4 +179,4 @@ Yes, if you use Obsidian for business purposes and your organization has more th
 ## Related
 
 - **Category:** [AI Notes & Knowledge](/categories/ai-notes/)
-- **Comparisons:** [Capacities vs Obsidian](/comparisons/capacities-vs-obsidian/) · [Fireflies.ai vs Obsidian](/comparisons/fireflies-vs-obsidian/) · [Google NotebookLM vs Obsidian](/comparisons/notebooklm-vs-obsidian/) · [Notion AI vs Obsidian](/comparisons/notion-ai-vs-obsidian/) · [Obsidian vs Otter.ai](/comparisons/obsidian-vs-otter-ai/) · [Obsidian vs Readwise Reader](/comparisons/obsidian-vs-readwise/)
+- **Comparisons:** [Capacities vs Obsidian](/compare/capacities-vs-obsidian/) · [Fireflies.ai vs Obsidian](/compare/fireflies-vs-obsidian/) · [Google NotebookLM vs Obsidian](/compare/notebooklm-vs-obsidian/) · [Notion AI vs Obsidian](/compare/notion-ai-vs-obsidian/) · [Obsidian vs Otter.ai](/compare/obsidian-vs-otter-ai/) · [Obsidian vs Readwise Reader](/compare/obsidian-vs-readwise/)

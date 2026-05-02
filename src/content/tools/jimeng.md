@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$9.60-$84/month"
 status: active
 launched: 2024-08
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 seo_title: "Jimeng AI: Features, Pricing & Review (April 2026)"
 meta_description: "Jimeng (即梦) is ByteDance's Chinese-market creative app for image and video, powered by Seedream 5.0 and Seedance 2.0. Dreamina is the international rebrand. China tier from 69 RMB/mo (~$9.60), international from $18/mo. CapCut integrated."
@@ -195,4 +195,3 @@ Yes on both sides. Jimeng gives 260 starter credits plus a daily quota in China.
 ## Related
 
 - **Category:** [AI Image Generation](/categories/ai-image/) · [AI Video](/categories/ai-video/)
-- **Comparisons:** [Jimeng vs Midjourney](/comparisons/jimeng-vs-midjourney/) · [Jimeng vs Doubao](/comparisons/jimeng-vs-doubao/) · [Jimeng vs Seedance](/comparisons/jimeng-vs-seedance/) · [Jimeng vs Flux](/comparisons/jimeng-vs-flux/)

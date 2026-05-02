@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$4.99-$12.99/month"
 status: active
 launched: 2018-01
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -170,4 +170,4 @@ For active knowledge-base builders, yes. Passive highlighting rarely survives pa
 ## Related
 
 - **Category:** [AI Notes](/categories/ai-notes/)
-- **Comparisons:** [Capacities vs Readwise](/comparisons/capacities-vs-readwise/) · [NotebookLM vs Readwise](/comparisons/notebooklm-vs-readwise/) · [Obsidian vs Readwise](/comparisons/obsidian-vs-readwise/) · [Fireflies vs Readwise](/comparisons/fireflies-vs-readwise/) · [Otter.ai vs Readwise](/comparisons/otter-ai-vs-readwise/)
+- **Comparisons:** [Capacities vs Readwise](/compare/capacities-vs-readwise/) · [NotebookLM vs Readwise](/compare/notebooklm-vs-readwise/) · [Obsidian vs Readwise](/compare/obsidian-vs-readwise/) · [Fireflies vs Readwise](/compare/fireflies-vs-readwise/) · [Otter.ai vs Readwise](/compare/otter-ai-vs-readwise/)

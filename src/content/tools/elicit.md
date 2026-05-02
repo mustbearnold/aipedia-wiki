@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: $0-$79/user/month
 status: active
 launched: 2021-01
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -172,4 +172,4 @@ No. It compresses the search and initial-screening phases. Final inclusion decis
 ## Related
 
 - **Category:** [AI Research](/categories/ai-research/)
-- **Comparisons:** [Elicit vs Consensus](/comparisons/consensus-vs-elicit/) | [Elicit vs Scite](/comparisons/elicit-vs-scite/) | [Elicit vs Semantic Scholar](/comparisons/elicit-vs-semantic-scholar/) | [Elicit vs Perplexity](/comparisons/elicit-vs-perplexity/) | [Connected Papers vs Elicit](/comparisons/connected-papers-vs-elicit/)
+- **Comparisons:** [Elicit vs Consensus](/compare/consensus-vs-elicit/) | [Elicit vs Scite](/compare/elicit-vs-scite/) | [Elicit vs Semantic Scholar](/compare/elicit-vs-semantic-scholar/) | [Elicit vs Perplexity](/compare/elicit-vs-perplexity/) | [Connected Papers vs Elicit](/compare/connected-papers-vs-elicit/)

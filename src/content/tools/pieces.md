@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: $0-$18.99/month
 status: active
 launched: 2022-04
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -165,4 +165,3 @@ No. Pieces manages existing code and context. Copilot and Cursor generate new co
 ## Related
 
 - **Category:** [AI Coding](/categories/ai-coding/)
-- **Comparisons:** [Pieces vs GitHub Copilot](/comparisons/pieces-vs-github-copilot/) · [Pieces vs Cursor](/comparisons/pieces-vs-cursor/)

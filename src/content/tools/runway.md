@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$95/month"
 status: active
 launched: 2023-03
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -210,5 +210,5 @@ Not for serious work. Free gives 125 one-time credits, watermarked output, no Ge
 ## Related
 
 - **Category:** [AI Video Generation](/categories/ai-video/)
-- **Compare:** [Kling 3.0 vs Seedance 2.0 vs Runway](/comparisons/kling-vs-seedance-vs-runway/) · [Pika vs Runway](/comparisons/pika-vs-runway/) · [Runway vs Synthesia](/comparisons/runway-vs-synthesia/) · [HeyGen vs Runway](/comparisons/heygen-vs-runway/)
+- **Compare:** [Kling 3.0 vs Seedance 2.0 vs Runway](/compare/kling-vs-seedance-vs-runway/) · [Pika vs Runway](/compare/pika-vs-runway/) · [Runway vs Synthesia](/compare/runway-vs-synthesia/) · [HeyGen vs Runway](/compare/heygen-vs-runway/)
 - **Alternatives:** [Veo](/tools/veo/) · [Kling](/tools/kling/) · [Pika](/tools/pika/) · [Hailuo](/tools/hailuo/) · [Seedance](/tools/seedance/) · [Luma](/tools/luma/) · [Minimax](/tools/minimax/)
