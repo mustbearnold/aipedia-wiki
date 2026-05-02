@@ -5,10 +5,10 @@ title: "Best AI for Citations and References (2026)"
 seo_title: "Best AI for Citations and References (2026)"
 meta_description: "Discover the top AI tools for generating accurate citations and references as of April 2026, including pricing, strengths, and limitations for researchers and writers."
 description: "This page recommends 3-5 AI tools for citations and references, with details on versions, pricing, pros, and cons verified as of 2026-04-15."
-tools_mentioned: ["perplexity-ai", "notebooklm", "chatgpt", "gemini", "claude"]
+tools_mentioned: ["perplexity", "notebooklm", "chatgpt", "gemini", "claude"]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-30
-last_verified: 2026-04-30
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 ---
 

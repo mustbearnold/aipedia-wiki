@@ -6,9 +6,9 @@ seo_title: "Best AI Stack for Content Creators in 2026, Tools, Budget, Workflow"
 meta_description: "The best AI tool stack for YouTube, TikTok, and social media creators in 2026. Budget and premium options, step-by-step workflow, estimated cost."
 author: "aipedia.wiki Editorial"
 description: A practical AI tool stack for content creators, from script to video to distribution. Budget and premium versions with honest cost estimates.
-tools_mentioned: [chatgpt, claude, elevenlabs, heygen, runway, descript, capcut, suno, canva]
-last_updated: 2026-04-30
-last_verified: 2026-04-30
+tools_mentioned: [chatgpt, claude, elevenlabs, heygen, runway, descript, jimeng, suno, canva]
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 ---
 

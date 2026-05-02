@@ -5,10 +5,10 @@ title: "Best Runway Alternatives (2026)"
 seo_title: "Best Runway Alternatives (2026)"
 meta_description: "Top AI video generation tools as Runway alternatives include Kling 3.0, Hailuo 2.3, and Luma Dream Machine 2.1 with current pricing and features as of April 2026."
 description: "This page recommends 3-5 AI video generation tools as Runway alternatives matched to specific use cases with pricing, pros, and cons verified as of 2026-04-15."
-tools_mentioned: ["kling", "hailuo", "luma-dream-machine", "pika", "genmo"]
+tools_mentioned: ["kling", "hailuo", "luma", "pika"]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-30
-last_verified: 2026-04-30
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 ---
 

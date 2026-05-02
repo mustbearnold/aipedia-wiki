@@ -5,10 +5,10 @@ title: "Best AI Tools for Recruiters (2026)"
 seo_title: "Best AI Tools for Recruiters (2026)"
 meta_description: "Top AI tools for recruiters in 2026 include Paradox, Eightfold AI, and HireEZ for sourcing candidates, screening resumes, and automating interviews with current pricing and features as of April 2026."
 description: "This page recommends AI tools for recruiters to source candidates, screen resumes, match skills, and schedule interviews, with pricing, pros, and cons verified as of April 2026."
-tools_mentioned: ["paradox-olivia", "eightfold-ai", "hireez", "chatgpt"]
+tools_mentioned: ["chatgpt"]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-30
-last_verified: 2026-04-30
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 ---
 

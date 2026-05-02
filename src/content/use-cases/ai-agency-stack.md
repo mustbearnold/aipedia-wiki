@@ -3,7 +3,7 @@ type: use-case
 slug: ai-agency-stack
 title: AI Automation Agency Tech Stack
 description: Complete tech stack for building and selling AI automation solutions to business clients.
-tools_mentioned: [n8n, claude-api, elevenlabs, gohighlevel, lovable, vercel]
+tools_mentioned: [n8n, claude, elevenlabs, lovable, v0]
 last_updated: 2026-04-13
 last_verified: 2026-04-13
 update_frequency: quarterly

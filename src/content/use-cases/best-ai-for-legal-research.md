@@ -5,10 +5,10 @@ title: "Best AI for Legal Research (2026)"
 seo_title: "Best AI for Legal Research (2026)"
 meta_description: "Top AI tools for legal research as of April 2026: Perplexity Pro, Claude Opus 4.7, Gemini 3 Pro, ChatGPT GPT-5, with pricing, pros, cons matched to case law search, statute review, contract analysis."
 description: "This page recommends 4 AI tools for legal research with pricing, pros, cons as of April 2026: Perplexity for cited research, Claude for long documents, Gemini for free use, ChatGPT for multimodal tasks."
-tools_mentioned: ["perplexity-pro", "claude-4-6", "gemini-3-pro", "chatgpt-gpt-5"]
+tools_mentioned: ["perplexity", "claude", "gemini", "chatgpt"]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-30
-last_verified: 2026-04-30
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 ---
 
