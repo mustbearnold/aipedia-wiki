@@ -1,15 +1,15 @@
 ---
 type: news
 slug: 2026-04-17-cerebras-ipo-filing
-title: "Cerebras Files for IPO on Nasdaq (CBRS), Targeting $22-25B Valuation After OpenAI + Amazon Deals"
+title: "Cerebras IPO Filing: Nasdaq CBRS, 2025 Revenue and OpenAI Deal"
 date: 2026-04-17
 severity: major
-summary: "AI wafer-scale chip maker Cerebras Systems filed its S-1 on April 17, 2026 to list on Nasdaq under the ticker CBRS. Targeting a $22-25B valuation and ~$2B raise in Q2 2026. 2025 results: $510M revenue (up 76% YoY) and $87.9M net income, turning profitable after a $485M loss in 2024. The filing follows a $20B+ multi-year OpenAI compute deal (750 MW through 2028) that includes a $1B OpenAI loan to Cerebras plus 33.4M Class N warrants, and a March Amazon partnership with $270M in equity purchases. Refiled after scrapping a prior IPO attempt in 2024. Market reaction expected Monday."
+summary: "Cerebras Systems filed its S-1 on April 17, 2026 to list on Nasdaq under CBRS. The filing spotlights $510M in 2025 revenue, 76% year-over-year growth, reported profitability, and a large OpenAI compute deal that changes the Nvidia-alternative story."
 affects: []
 categories: [ai-research]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-19
-last_verified: 2026-04-19
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 sources:
   - url: "https://techcrunch.com/2026/04/18/ai-chip-startup-cerebras-files-for-ipo/"
     title: "AI chip startup Cerebras files for IPO - TechCrunch"
@@ -24,6 +24,10 @@ sources:
 ---
 
 **Cerebras Systems** filed its S-1 on April 17, 2026 to list on Nasdaq under the ticker **CBRS**. Target: **$22-25B valuation** and **~$2B raise** in Q2 2026. The filing lands after a transformational 2025 anchored by OpenAI and Amazon compute deals.
+
+## Fast answer
+
+Cerebras is trying to become the first public pure-play wafer-scale AI chip stock. The IPO filing matters because it pairs **$510M in 2025 revenue**, **76% year-over-year growth**, a reported swing to profitability, and a major OpenAI compute relationship under one Nasdaq ticker: **CBRS**.
 
 ## Key financial numbers (from S-1)
 

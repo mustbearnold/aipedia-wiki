@@ -11,7 +11,7 @@ pricing_model: freemium
 price_range: "$0 free tier / $0.03-$0.05 per 1K chars"
 status: active
 launched: 2025-04
-last_updated: 2026-04-17
+last_updated: 2026-05-02
 last_verified: 2026-04-17
 update_frequency: quarterly
 affiliate:
@@ -26,8 +26,8 @@ scores:
   moat: 4
   longevity: 6
 tags: [tts, voice-cloning, chinese-ai, multilingual, minimax, speech-02, api]
-seo_title: "MiniMax Speech: TTS + Voice Cloning Review (2026)"
-meta_description: "MiniMax Speech offers Speech-02-HD, Speech-02-Turbo, and Speech 2.6 TTS with 300+ voices, 40 languages, and voice cloning at $0.03-$0.05/1K chars."
+seo_title: "MiniMax Speech Review: Cheap TTS, Voice Cloning and ElevenLabs Alternative"
+meta_description: "MiniMax Speech is a low-cost TTS and voice-cloning API with Speech-02-HD, Speech-02-Turbo, 300+ voices, 40 languages, and pricing far below ElevenLabs."
 author: "aipedia.wiki Editorial"
 best_for:
   - cost-sensitive production tts workloads
@@ -39,7 +39,18 @@ not_best_for:
   - teams reliant on a large curated third-party voice marketplace
   - developers requiring a mature plugin ecosystem
 quick_answer: >-
-  MiniMax Speech is a multilingual TTS and voice-cloning API. Speech-02-Turbo runs $0.03 per 1K chars; Speech-02-HD runs $0.05 per 1K chars. Covers 40 languages and 300+ voices with 5-second voice cloning. Up to 85% cheaper than ElevenLabs; trails on peak quality.
+  MiniMax Speech is the budget ElevenLabs alternative for multilingual TTS and voice cloning. Pick Speech-02-Turbo or HD when price-per-character matters, especially for apps, IVR, dubbing, or bulk narration. Choose ElevenLabs when the highest voice quality, marketplace breadth, and integrations matter more.
+decision_brief:
+  items:
+    - label: Best use
+      value: "High-volume TTS"
+      detail: "The pricing makes sense when character volume is the budget driver."
+    - label: Choose HD for
+      value: "Voiceovers"
+      detail: "Use Turbo for latency and HD for fidelity-sensitive output."
+    - label: Compare against
+      value: "ElevenLabs"
+      detail: "MiniMax is cheaper; ElevenLabs is more mature and polished."
 ---
 
 # MiniMax Speech

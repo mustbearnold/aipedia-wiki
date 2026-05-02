@@ -11,7 +11,7 @@ pricing_model: freemium
 price_range: "Bundled with Claude Pro ($20/mo) and up"
 status: beta
 launched: 2026-04
-last_updated: 2026-04-29
+last_updated: 2026-05-02
 last_verified: 2026-04-29
 update_frequency: monthly
 affiliate:
@@ -26,8 +26,8 @@ scores:
   moat: 7
   longevity: 8
 tags: [design, prototyping, prompt-to-prototype, slide-decks, mockups, claude, anthropic, opus-4-7, non-designer, research-preview]
-seo_title: "Claude Design: Features, Pricing & Review (April 2026)"
-meta_description: "Claude Design is Anthropic's prompt-to-prototype tool launched April 17, 2026. Generates app mockups, slide decks, and one-pagers from text. Reads your codebase for design-system consistency. Bundled with Claude Pro+."
+seo_title: "Claude Design Review: Release Date, Pricing, Figma Comparison and Use Cases"
+meta_description: "Claude Design is Anthropic's prompt-to-prototype tool for mockups, decks, and one-pagers. Compare release date, Claude Pro pricing, codebase-aware design, and Figma alternatives."
 author: "aipedia.wiki Editorial"
 best_for:
   - product managers pitching ideas
@@ -41,7 +41,18 @@ not_best_for:
   - users without a Claude Pro subscription
   - collaborative real-time design editing
 quick_answer: >-
-  Claude Design turns prompts into prototypes, slide decks, and mockups. Reads your codebase and design files to apply your existing design system automatically. Exports to PDF, PPTX, URL, and Canva. Hands off to Claude Code for production builds. Bundled free with Claude Pro. Pick it for non-designer prototyping. Skip it for professional design work (use Figma).
+  Claude Design is Anthropic's prompt-to-prototype tool for people who already use Claude and need mockups, decks, or one-pagers quickly. Pick it for non-designer prototyping, design-system-aware drafts, and Claude Code handoff. Use Figma when pixel-perfect editing, real-time collaboration, and mature design-system management matter more.
+decision_brief:
+  items:
+    - label: Best use
+      value: "Fast visual drafts"
+      detail: "PMs, founders, marketers, and developers get reviewable artifacts quickly."
+    - label: Included with
+      value: "Claude Pro+"
+      detail: "No separate subscription, but no free Claude tier access."
+    - label: Compare against
+      value: "Figma"
+      detail: "Claude Design drafts; Figma remains the professional design workspace."
 price_history:
   - date: 2026-04-17
     plan: "Launch"

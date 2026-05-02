@@ -1,19 +1,38 @@
 ---
 type: category
 slug: ai-voice
-title: AI Voice / Text-to-Speech
-description: AI voice generation, cloning, and text-to-speech. ElevenLabs, Cartesia, WellSaid, Fish Audio S2, Murf, LOVO, Resemble, MiniMax Speech, Speechify, Voxtral, Kokoro.
-tool_count: 12
-seo_title: "Best AI Voice Tools (2026), aipedia.wiki"
-meta_description: "ElevenLabs, Cartesia, and WellSaid lead AI voice in 2026. Compare 12 TTS tools including Fish Audio S2, Murf, Resemble, and Voxtral for quality, latency, pricing, and self-hosting. Updated April 2026."
+title: AI Voice and Text-to-Speech Tools
+description: Compare AI voice generation, voice cloning, text-to-speech, speech-to-text, dubbing, and voice-agent tools including ElevenLabs, MiniMax Speech, Cartesia, Fish Audio, Hume AI, Murf, Deepgram, AssemblyAI, and Kokoro.
+tool_count: 23
+seo_title: "Best AI Voice Tools 2026: TTS, Voice Cloning, Dubbing and Voice Agents"
+meta_description: "Compare 23 AI voice tools for TTS, voice cloning, dubbing, speech-to-text, and voice agents. ElevenLabs, MiniMax Speech, Cartesia, Fish Audio, Hume AI, Deepgram, AssemblyAI, and more."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 ---
 
+## Fast answer
+
+Start with **ElevenLabs** if you want the most polished voice quality and a mature creator workflow. Look at **MiniMax Speech** when API price-per-character is the main constraint. Use **Cartesia** for low-latency conversational voice, **Fish Audio** or **Kokoro** for open-source and local options, and **Deepgram** or **AssemblyAI** when the job is speech-to-text rather than voice generation.
+
+AI voice is not one category anymore. The market now splits into five buying decisions: narrated voiceover, voice cloning, real-time voice agents, speech-to-text transcription, and local/open-source TTS. Pick by workflow first, then compare price.
+
+## Best by use case
+
+| Use case | Start with | Why |
+|---|---|---|
+| Best overall TTS quality | ElevenLabs | Strongest polish, cloning, dubbing, and creator ecosystem |
+| Cheapest hosted multilingual TTS | MiniMax Speech | Low per-character API pricing with broad language coverage |
+| Real-time voice agents | Cartesia or Retell AI | Built for low-latency conversational turns |
+| Open-source or local TTS | Fish Audio or Kokoro | Better fit when privacy, control, or self-hosting matter |
+| Speech-to-text API | Deepgram or AssemblyAI | Transcription, diarization, and developer API workflows |
+| Podcast/video editing with voice | Descript or Riverside | Voice tools bundled with editing and publishing workflows |
+| Corporate narration | WellSaid or Murf | Safer team workflows, approvals, and brand voice management |
+
 ## Overview
-AI voice generation and text-to-speech tools have consolidated as of April 2026, with ElevenLabs dominating on quality, Fish Audio S2 leading the open-source self-hosting market, and Mistral's Voxtral emerging as the cheapest API option at 47 percent less than ElevenLabs. ElevenLabs remains the gold standard for voice quality, offering natural-sounding speech with voice cloning, dubbing, and a conversational AI platform starting at $5 per month ([ElevenLabs](https://elevenlabs.io)). Fish Audio S2 delivers roughly 85-90 percent of ElevenLabs quality in English and can be fully self-hosted at zero cost, making it the best choice for privacy-sensitive or high-volume deployments ([Fish Audio](https://fish.audio)). Voxtral launched in March 2026 at $0.016 per 1K characters, undercutting all competitors on API pricing ([Mistral AI](https://mistral.ai)). Play.ht is dead, shut down December 31, 2025 after Meta's acquisition. The remaining players, Murf AI and LOVO AI, serve niche corporate narration and video editing use cases respectively.
+
+AI voice generation and text-to-speech tools have consolidated as of April 2026, with ElevenLabs dominating on quality, MiniMax Speech competing hard on hosted API pricing, Fish Audio and Kokoro covering open-source/self-hosted needs, and Cartesia pushing low-latency voice-agent workflows. Play.ht is dead, shut down December 31, 2025 after Meta's acquisition. The surviving tools are less interchangeable than they look: a YouTube narrator, a call-center voice agent, a medical transcription app, and a local privacy workflow should not all choose the same provider.
 
 ## The Players
 
@@ -29,8 +48,9 @@ AI voice generation and text-to-speech tools have consolidated as of April 2026,
 
 ## Our Picks
 - **Best quality:** ElevenLabs Creator ($22/mo). 100K characters/month (~75-90 min audio), voice cloning.
-- **Best open-source:** Fish Audio S2. Open-source model, self-hostable, near-ElevenLabs quality with ultra-low latency. Multilingual. Free tier available on fish.audio, or run locally with full control.
-- **Cheapest API:** Voxtral ($0.016/1K chars). 47% cheaper than ElevenLabs.
+- **Best budget hosted TTS:** MiniMax Speech. Strong when API volume is high and ElevenLabs pricing is too expensive.
+- **Best open-source:** Fish Audio S2 or Kokoro. Better for privacy-sensitive and self-hosted workflows.
+- **Best transcription API:** Deepgram or AssemblyAI. Use these when the input is audio and the output is text.
 
 ## For YouTube Specifically
 - ElevenLabs Creator ($22/mo) = 6-10 videos of 8-12 minutes each per month

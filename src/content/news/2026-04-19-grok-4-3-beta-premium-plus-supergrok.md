@@ -1,15 +1,15 @@
 ---
 type: news
 slug: 2026-04-19-grok-4-3-beta-premium-plus-supergrok
-title: "Grok 4.3 Beta Rolls Out to Premium+ and SuperGrok Users, 48 Hours After Heavy-Only Launch"
+title: "Grok 4.3 Beta: Access, Pricing, Rate Limits and SuperGrok Rollout"
 date: 2026-04-19
 severity: major
-summary: "xAI expanded Grok 4.3 beta access on April 19, 2026 from SuperGrok Heavy ($300/mo) only to include X Premium+ ($40/mo) and SuperGrok ($30/mo) subscribers. The expansion lands 48 hours after the initial April 17 Heavy-gated beta launch, matching xAI's Grok 4.20 rollout pattern of narrow-to-broad in days rather than weeks. The 1T-parameter model ships with native PDF/PowerPoint/spreadsheet output, video input, and sharper reasoning. Free and non-subscribed users still do not have access."
+summary: "Current Grok 4.3 beta access guide: xAI expanded access on April 19, 2026 from SuperGrok Heavy ($300/mo) to X Premium+ ($40/mo) and SuperGrok ($30/mo). This page tracks who gets access, how Premium+, SuperGrok, and Heavy differ, what is known about rate limits, and why free users still do not have access."
 affects: [grok]
 categories: [ai-chatbots, ai-search]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-19
-last_verified: 2026-04-19
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 sources:
   - url: "https://x.ai/news"
     title: "xAI News - Official announcements"
@@ -25,6 +25,10 @@ sources:
 
 xAI expanded Grok 4.3 beta access on **April 19, 2026** from SuperGrok Heavy ($300/mo) only to include **X Premium+ ($40/mo)** and **SuperGrok ($30/mo)** subscribers. The broader rollout lands **48 hours after** the initial April 17 Heavy-gated launch.
 
+## Fast answer
+
+Grok 4.3 beta is no longer limited to SuperGrok Heavy. As of the April 19 rollout, **X Premium+**, **SuperGrok**, and **SuperGrok Heavy** users can access the beta. Heavy remains the high-limit, priority tier; Premium+ and SuperGrok are the cheaper entry points for trying the 4.3 model.
+
 ## Who gets it now
 
 | Tier | Monthly | Grok 4.3 beta access |
@@ -35,7 +39,11 @@ xAI expanded Grok 4.3 beta access on **April 19, 2026** from SuperGrok Heavy ($3
 | **SuperGrok** | **$30/mo** | **Yes (new April 19)** |
 | **SuperGrok Heavy** | **$300/mo** | **Yes (since April 17)** |
 
-Heavy still gets priority access, higher rate limits, and 16-agent architecture. Premium+ and SuperGrok get access to the 1T-parameter model but with standard rate limits.
+## Rate limits: what is known
+
+Heavy still gets priority access, higher rate limits, and 16-agent architecture. Premium+ and SuperGrok get access to the 1T-parameter model but with standard beta limits.
+
+xAI has not published exact per-tier Grok 4.3 beta message caps in the sources reviewed for this article. Treat any specific cap screenshots as volatile until xAI publishes a stable tier table.
 
 ## Rollout pattern matches Grok 4.20 exactly
 

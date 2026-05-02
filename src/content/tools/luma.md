@@ -25,8 +25,8 @@ scores:
   moat: 7
   longevity: 7
 tags: [ai-video, video-generation, text-to-video, image-to-video, camera-controls, ray3]
-seo_title: "Luma Dream Machine: Features, Pricing & Review (April 2026)"
-meta_description: "Luma Dream Machine runs on Ray3 with explicit pan, tilt, zoom, dolly, and orbit camera controls. Plans Plus $30, Pro $90, Ultra $300. Reviewed April 2026."
+seo_title: "Luma Dream Machine Review: Ray3 Pricing, Camera Controls and Alternatives"
+meta_description: "Luma Dream Machine is an AI video generator built around Ray3 camera controls. Compare Luma pricing, free tier limits, 720p output, API access, and Luma vs Kling/Runway."
 author: "aipedia.wiki Editorial"
 best_for:
   - explicit camera motion control
@@ -38,7 +38,18 @@ not_best_for:
   - audio-native output (Luma is silent)
   - users needing 1080p on every tier
 quick_answer: >-
-  Luma Dream Machine runs on Ray3 with explicit pan, tilt, zoom, dolly, and orbit camera controls. Plus at $30/mo is the paid entry. Pick it for cinematography-focused workflows. Skip it for benchmark-topping raw quality or audio-native output.
+  Luma Dream Machine is the AI video generator to try when camera movement is the job. Ray3 handles pan, tilt, zoom, dolly, and orbit prompts better than most rivals. Pick it for animatics, previz, and image-to-video shots. Choose Kling, Seedance, or Runway when raw quality, higher resolution, or native audio matters more.
+decision_brief:
+  items:
+    - label: Best use
+      value: "Camera-controlled shots"
+      detail: "Pan, tilt, zoom, dolly, and orbit controls are Luma's main edge."
+    - label: Paid entry
+      value: "Plus ($30/mo)"
+      detail: "Free is for evaluation; commercial use starts on paid plans."
+    - label: Compare against
+      value: "Kling and Runway"
+      detail: "Kling wins value and resolution; Runway wins production tooling."
 price_history:
   - date: 2026-03-01
     plan: "Ray3 model"

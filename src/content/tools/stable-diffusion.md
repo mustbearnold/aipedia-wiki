@@ -12,7 +12,7 @@ pricing_model: free
 price_range: Free (self-host) or ~$0.03-$0.08 per API image
 status: active
 launched: 2022-08
-last_updated: 2026-04-22
+last_updated: 2026-05-02
 last_verified: 2026-04-22
 update_frequency: monthly
 affiliate:
@@ -27,8 +27,8 @@ scores:
   moat: 7
   longevity: 9
 tags: [ai-image, open-source, stable-diffusion, local-ai, fine-tuning, comfyui, civitai, lora, controlnet]
-seo_title: "Stable Diffusion: SD 3.5 Features, Pricing & Review (April 2026)"
-meta_description: "Stable Diffusion SD 3.5 Large is Stability AI's flagship open-weight image model as of April 2026. Free self-host under Community License (up to $1M revenue); Stability API from 3 credits ($0.03) per Core image to 8 credits for Ultra. SD 4 has not launched."
+seo_title: "Stable Diffusion Review: SD 3.5, Local Setup, Pricing and Alternatives"
+meta_description: "Stable Diffusion is the open-weight image model family for local generation, LoRA fine-tuning, ControlNet, and ComfyUI workflows. Compare SD 3.5, API pricing, Flux, and Midjourney."
 author: "aipedia.wiki Editorial"
 best_for:
   - open-weight self-hosting
@@ -42,7 +42,18 @@ not_best_for:
   - hand and text rendering
   - Adobe-style IP indemnification
 quick_answer: >-
-  Stable Diffusion is Stability AI's open-weight image model family, flagship SD 3.5 Large. Pick it for self-hosting, LoRA fine-tuning, ControlNet conditioning, or unlimited volume on your own GPU. Skip for best default photoreal (Flux wins) or minimal setup (Midjourney wins).
+  Stable Diffusion is the best AI image option when you need local control, open weights, LoRA fine-tuning, ControlNet, or ComfyUI pipelines. Pick it for customization and high-volume self-hosting. Choose Flux or Midjourney if you want stronger default photoreal output with less setup.
+decision_brief:
+  items:
+    - label: Start here
+      value: "SD 3.5 + ComfyUI"
+      detail: "Best route for serious local workflows and repeatable pipelines."
+    - label: Choose it for
+      value: "Control and volume"
+      detail: "Self-hosting removes per-image caps once hardware is in place."
+    - label: Skip if
+      value: "You want instant polish"
+      detail: "Flux and Midjourney need less setup for strong default images."
 price_history:
   - date: 2026-01-29
     plan: "SD 3.5 Large ControlNet"

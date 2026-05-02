@@ -26,8 +26,8 @@ scores:
   moat: 5
   longevity: 8
 tags: [open-source, byok, local-model, ai-coding, vscode, jetbrains, self-hosted, continue-hub]
-seo_title: "Continue: Open-Source AI Coding Extension Review (April 2026)"
-meta_description: "Continue is a free, MIT-licensed AI coding extension for VS Code and JetBrains. Solo free + BYOK, Team $20/seat with $10 credits, Company custom. Use Claude Opus 4.7, GPT-5.4, Gemini, or local Ollama models. Verified April 2026."
+seo_title: "Continue.dev Review: Open-Source Copilot Alternative for VS Code & JetBrains"
+meta_description: "Continue.dev is a free MIT-licensed AI coding extension for VS Code, JetBrains, and Vim. Compare BYOK setup, Team pricing, local Ollama support, and Copilot/Cursor tradeoffs."
 author: "aipedia.wiki Editorial"
 best_for:
   - BYOK developers
@@ -40,7 +40,18 @@ not_best_for:
   - users wanting bundled frontier models
   - individuals who just want autocomplete
 quick_answer: >-
-  Pick Continue for a free, MIT-licensed AI coding extension with full model choice across VS Code, JetBrains, and Vim. Skip it if you want plug-and-play day-one setup, where GitHub Copilot at $10/mo is simpler. Team tier at $20/seat adds shared agents and governance.
+  Continue.dev is the open-source Copilot alternative for developers who want BYOK model choice across VS Code, JetBrains, and Vim. Pick it for local Ollama workflows, Bedrock/Azure/Vertex routing, or team-shared agents. Skip it if you want the easiest first-day setup, where GitHub Copilot or Cursor is simpler.
+decision_brief:
+  items:
+    - label: Start here
+      value: "Solo + BYOK"
+      detail: "Best for developers who already have model keys or want local Ollama."
+    - label: Upgrade when
+      value: "Agents need governance"
+      detail: "Team adds shared agents, private sharing, and usage controls."
+    - label: Compare against
+      value: "Copilot and Cursor"
+      detail: "Copilot is easier; Cursor is more polished; Continue is more controllable."
 price_history:
   - date: 2026-03-01
     plan: "Team"
