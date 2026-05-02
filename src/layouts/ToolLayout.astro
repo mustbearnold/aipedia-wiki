@@ -93,10 +93,10 @@ function formatHistoryDate(v: unknown): string {
 
 // Sparkbars: tier colors match the homepage card treatment.
 function barColor(n: number): string {
-  if (n >= 8) return '#5eead4';
+  if (n >= 8) return '#34d399';
   if (n >= 7) return '#38bdf8';
-  if (n >= 6) return '#67e8f9';
-  return '#67e8f9';
+  if (n >= 6) return '#fbbf24';
+  return '#fb7185';
 }
 const sparkbars = [
   { label: 'Utility', value: scores.utility ?? 0 },
@@ -162,6 +162,17 @@ function cleanSnippet(value: unknown, fallback = ''): string {
   return text.charAt(0).toUpperCase() + text.slice(1);
 }
 
+function signalTone(label: unknown, value?: unknown): 'positive' | 'negative' | 'neutral' {
+  const text = `${label ?? ''} ${value ?? ''}`.toLowerCase();
+  if (/\b(watch|avoid|not best|not ideal|limitation|risk|weak|caps?|ads?|no video|verify before buying)\b/.test(text)) {
+    return 'negative';
+  }
+  if (/\b(best|top pick|start here|use it|verified|active|strong|free|open source)\b/.test(text)) {
+    return 'positive';
+  }
+  return 'neutral';
+}
+
 const firstBestFor = Array.isArray(f.best_for) && f.best_for.length > 0
   ? cleanSnippet(f.best_for[0])
   : catLabel ? `${catLabel} workflows` : 'Primary workflow';
@@ -179,9 +190,9 @@ const modelLabels: Record<string, string> = {
 const modelGlance = f.pricing_model ? modelLabels[f.pricing_model] ?? cleanSnippet(f.pricing_model) : 'Verified tool';
 const generatedHeroGlance = {
   items: [
-    { label: 'Model', value: modelGlance, detail: pricingGlance },
-    { label: 'Best for', value: firstBestFor, detail: catLabel },
-    { label: 'Watch', value: firstNotBestFor, detail: 'Check fit before switching' },
+    { label: 'Model', value: modelGlance, detail: pricingGlance, tone: 'neutral' },
+    { label: 'Best for', value: firstBestFor, detail: catLabel, tone: 'positive' },
+    { label: 'Watch', value: firstNotBestFor, detail: 'Check fit before switching', tone: 'negative' },
   ],
 };
 const heroGlance = f.hero_glance && Array.isArray(f.hero_glance.items)
@@ -189,8 +200,8 @@ const heroGlance = f.hero_glance && Array.isArray(f.hero_glance.items)
   : generatedHeroGlance;
 const generatedDecisionBrief = {
   items: [
-    { label: 'Use it for', value: firstBestFor, detail: catLabel ? `Best-fit ${catLabel.toLowerCase()} use case.` : '' },
-    { label: 'Watch for', value: firstNotBestFor, detail: 'Not every workflow needs this tool.' },
+    { label: 'Use it for', value: firstBestFor, detail: catLabel ? `Best-fit ${catLabel.toLowerCase()} use case.` : '', tone: 'positive' },
+    { label: 'Watch for', value: firstNotBestFor, detail: 'Not every workflow needs this tool.', tone: 'negative' },
     { label: 'Pricing note', value: pricingGlance, detail: 'Verify limits before committing.' },
   ],
 };
@@ -202,6 +213,7 @@ const scoreBand = overall >= 9
     : overall >= 6.5
       ? 'Useful, with tradeoffs'
       : 'Niche score';
+const scoreTone = overall >= 8 ? 'positive' : overall >= 6.5 ? 'neutral' : 'negative';
 const scoreNote = f.score_note ?? decisionBrief?.score_note ?? '';
 const primaryCtaLabel = f.primary_cta_label
   ?? (f.pricing_model === 'freemium' ? `Open ${f.title}` : f.pricing_model === 'free' ? `Open ${f.title}` : `Visit ${f.title}`);
@@ -342,7 +354,7 @@ const relatedNews = allNews
         {heroGlance && (
           <div class="t2-hero-glance" aria-label={`${f.title} at a glance`}>
             {heroGlance.items.map((item: any) => (
-              <div class={`t2-hero-glance-item ${item.tone ? `t2-hero-glance-${item.tone}` : ''}`.trim()}>
+              <div class={`t2-hero-glance-item t2-hero-glance-${item.tone ?? signalTone(item.label, item.value)}`.trim()}>
                 <span class="t2-hero-glance-label">{item.label}</span>
                 <strong>{item.value}</strong>
                 {item.detail && <span class="t2-hero-glance-detail">{item.detail}</span>}
@@ -350,6 +362,44 @@ const relatedNews = allNews
             ))}
           </div>
         )}
+
+        <div class="t2-chips" data-reveal style="--reveal-delay: 220ms">
+          {f.price_range && (
+            <div class="t2-chip">
+              <span class="t2-chip-label">Pricing</span>
+              <span class="t2-chip-value">{f.price_range}</span>
+            </div>
+          )}
+          {launchedStr && (
+            <div class="t2-chip">
+              <span class="t2-chip-label">Launched</span>
+              <span class="t2-chip-value">{launchedStr}</span>
+            </div>
+          )}
+        </div>
+
+        <div class="t2-ctas" data-reveal style="--reveal-delay: 260ms">
+          {f.url && (
+            <a
+              href={(affiliate?.link && affiliate.link.length > 0) ? affiliate.link : f.url}
+              target="_blank"
+              rel={affiliate?.link && affiliate.link.length > 0 ? 'noopener sponsored' : 'noopener'}
+              class="t2-cta t2-cta-primary"
+              aria-label={`${primaryCtaLabel} on the official site`}
+            >
+              {primaryCtaLabel}
+              <span class="t2-cta-arrow" aria-hidden="true">↗</span>
+            </a>
+          )}
+          <a href={`/compare/`} class="t2-cta t2-cta-secondary">
+            Compare alternatives
+            <span class="t2-cta-arrow" aria-hidden="true">&rarr;</span>
+          </a>
+          <button type="button" class="t2-cta t2-cta-secondary t2-cta-compare" data-compare-add={toolSlug} aria-pressed="false">
+            <span data-compare-label>Compare</span>
+            <span class="t2-cta-arrow" aria-hidden="true">+</span>
+          </button>
+        </div>
       </div>
 
       <aside class="t2-score" aria-label={`Overall score ${overall} out of 10`} data-reveal="right" style="--reveal-delay: 180ms">
@@ -357,7 +407,7 @@ const relatedNews = allNews
           <span class="t2-score-label">Score</span>
           <span class="t2-score-value">{overall}<span class="t2-score-slash">/10</span></span>
         </div>
-        <div class="t2-score-band">{scoreBand}</div>
+        <div class={`t2-score-band t2-score-band-${scoreTone}`}>{scoreBand}</div>
         <div class="t2-score-bars" title={sparkbars.map(b => `${b.label} ${b.value}/10`).join(' · ')}>
           {sparkbars.map(b => (
             <div class="t2-score-bar">
@@ -373,46 +423,6 @@ const relatedNews = allNews
       </aside>
     </header>
 
-    <!-- Chip strip -->
-    <div class="t2-chips" data-reveal style="--reveal-delay: 220ms">
-      {f.price_range && (
-        <div class="t2-chip">
-          <span class="t2-chip-label">Pricing</span>
-          <span class="t2-chip-value">{f.price_range}</span>
-        </div>
-      )}
-      {launchedStr && (
-        <div class="t2-chip">
-          <span class="t2-chip-label">Launched</span>
-          <span class="t2-chip-value">{launchedStr}</span>
-        </div>
-      )}
-    </div>
-
-    <!-- Primary + secondary CTAs -->
-    <div class="t2-ctas" data-reveal style="--reveal-delay: 260ms">
-      {f.url && (
-        <a
-          href={(affiliate?.link && affiliate.link.length > 0) ? affiliate.link : f.url}
-          target="_blank"
-          rel={affiliate?.link && affiliate.link.length > 0 ? 'noopener sponsored' : 'noopener'}
-          class="t2-cta t2-cta-primary"
-          aria-label={`${primaryCtaLabel} on the official site`}
-        >
-          {primaryCtaLabel}
-          <span class="t2-cta-arrow" aria-hidden="true">↗</span>
-        </a>
-      )}
-      <a href={`/compare/`} class="t2-cta t2-cta-secondary">
-        Compare alternatives
-        <span class="t2-cta-arrow" aria-hidden="true">&rarr;</span>
-      </a>
-      <button type="button" class="t2-cta t2-cta-secondary t2-cta-compare" data-compare-add={toolSlug} aria-pressed="false">
-        <span data-compare-label>Compare</span>
-        <span class="t2-cta-arrow" aria-hidden="true">+</span>
-      </button>
-    </div>
-
     <!-- Quick Answer (from frontmatter). Replaces the redundant inline
          "System Verdict" block, which is stripped from the markdown via
          script below. -->
@@ -423,7 +433,7 @@ const relatedNews = allNews
         {effectiveDecisionBrief && (
           <div class="t2-verdict-points" aria-label={`${f.title} decision notes`}>
             {effectiveDecisionBrief.items.map((item: any) => (
-              <div class="t2-verdict-point">
+              <div class={`t2-verdict-point t2-verdict-point-${item.tone ?? signalTone(item.label, item.value)}`}>
                 <span class="t2-verdict-point-label">{item.label}</span>
                 <strong>{item.value}</strong>
                 {item.detail && <span class="t2-verdict-point-detail">{item.detail}</span>}

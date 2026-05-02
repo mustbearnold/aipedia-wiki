@@ -304,11 +304,12 @@ body.os-chrome-body #read-progress {
   z-index: 75;
   left: 18px;
   top: calc(var(--os-panel-top) + var(--os-panel-height) + 22px);
-  bottom: 18px;
+  bottom: auto;
   width: 86px;
+  height: auto;
   flex-direction: column;
   gap: 8px;
-  padding: 8px 6px;
+  padding: 8px 6px 0;
   border: 1px solid var(--os-line);
   border-radius: 18px;
   background: rgba(5, 10, 18, 0.74);
@@ -385,7 +386,9 @@ body.os-chrome-body #read-progress {
 }
 
 .os-page-stage.is-article {
-  width: min(1180px, calc(100vw - 142px));
+  width: min(1180px, calc(100vw - 188px));
+  margin-right: 0;
+  margin-left: max(94px, calc((100vw - 1180px) / 2));
 }
 
 .os-page-prompt {
@@ -608,6 +611,7 @@ body.os-chrome-body .cookie-consent-banner {
     left: 10px;
     width: auto;
     height: 70px;
+    padding: 8px 6px;
     flex-direction: row;
     justify-content: space-between;
     border-radius: 18px;

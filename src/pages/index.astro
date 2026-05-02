@@ -81,6 +81,100 @@ const decisionPaths = [
     meta: `${newsCount} news items`,
   },
 ];
+
+const homeSearchItems = [
+  ...activeTools.map((tool) => {
+    const slug = entrySlug(tool);
+    const score = scoreFor(tool);
+    const categories = Array.from(new Set([
+      tool.data.category,
+      ...(tool.data.secondary_categories ?? []),
+    ].filter(Boolean)));
+    const categoryLabels = categories.map((category) => categoryLabel(category));
+    return {
+      kind: 'Tool',
+      title: tool.data.title,
+      href: `/tools/${slug}/`,
+      meta: `${categoryLabels[0] || 'AI tool'} · ${score.toFixed(1)}/10`,
+      detail: tool.data.tagline ?? tool.data.meta_description ?? '',
+      badge: tool.data.price_range ?? tool.data.pricing_model ?? '',
+      priority: Math.round(score * 10) + 60,
+      search: [
+        tool.data.title,
+        tool.data.company,
+        slug,
+        tool.data.tagline,
+        tool.data.meta_description,
+        tool.data.price_range,
+        tool.data.pricing_model,
+        ...categories,
+        ...categoryLabels,
+        ...(tool.data.tags ?? []),
+        ...(tool.data.best_for ?? []),
+        ...(tool.data.not_best_for ?? []),
+      ].filter(Boolean).join(' ').toLowerCase(),
+    };
+  }),
+  ...allComparisons.map((comparison) => {
+    const slug = entrySlug(comparison);
+    const comparedTools = comparison.data.tools ?? [];
+    return {
+      kind: 'Compare',
+      title: comparison.data.title,
+      href: `/compare/${slug}/`,
+      meta: 'Comparison guide',
+      detail: comparison.data.meta_description ?? (comparedTools.length ? comparedTools.join(' vs ') : ''),
+      badge: comparedTools.length ? `${comparedTools.length} tools` : '',
+      priority: 54,
+      search: [
+        comparison.data.title,
+        comparison.data.category,
+        comparison.data.winner,
+        comparison.data.meta_description,
+        ...comparedTools,
+      ].filter(Boolean).join(' ').toLowerCase(),
+    };
+  }),
+  ...allNews.map((news) => {
+    const slug = entrySlug(news);
+    return {
+      kind: 'News',
+      title: news.data.title,
+      href: `/news/${slug}/`,
+      meta: String(news.data.date),
+      detail: news.data.summary ?? news.data.description ?? '',
+      badge: news.data.severity ?? '',
+      priority: 46,
+      search: [
+        news.data.title,
+        news.data.summary,
+        news.data.description,
+        news.data.severity,
+        String(news.data.date),
+      ].filter(Boolean).join(' ').toLowerCase(),
+    };
+  }),
+  ...allCategories.map((category) => {
+    const slug = entrySlug(category);
+    return {
+      kind: 'Category',
+      title: category.data.title,
+      href: `/categories/${slug}/`,
+      meta: 'Category',
+      detail: category.data.description ?? category.data.meta_description ?? '',
+      badge: category.data.tool_count ? `${category.data.tool_count} tools` : '',
+      priority: 42,
+      search: [
+        category.data.title,
+        slug,
+        category.data.description,
+        category.data.meta_description,
+      ].filter(Boolean).join(' ').toLowerCase(),
+    };
+  }),
+];
+
+const homeSearchData = JSON.stringify(homeSearchItems).replace(/</g, '\\u003c');
 ---
 
 <BaseLayout
@@ -113,20 +207,33 @@ const decisionPaths = [
 
           <form class="home-search" data-home-search role="search" action="/search/" method="get">
             <label for="home-search-input">Search aipedia.wiki</label>
-            <div class="home-search-box">
-              <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M10.8 18.1a7.3 7.3 0 1 1 0-14.6 7.3 7.3 0 0 1 0 14.6Zm5.1-2 4.6 4.6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-              </svg>
-              <input
-                id="home-search-input"
-                name="q"
-                type="search"
-                autocomplete="off"
-                spellcheck="false"
-                placeholder="Search tools, jobs, categories, news..."
-                data-home-search-input
-              />
-              <button type="submit">Search</button>
+            <div class="home-search-combo">
+              <div class="home-search-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M10.8 18.1a7.3 7.3 0 1 1 0-14.6 7.3 7.3 0 0 1 0 14.6Zm5.1-2 4.6 4.6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                </svg>
+                <input
+                  id="home-search-input"
+                  name="q"
+                  type="search"
+                  autocomplete="off"
+                  spellcheck="false"
+                  placeholder="Search tools, jobs, categories, news..."
+                  role="combobox"
+                  aria-autocomplete="list"
+                  aria-expanded="false"
+                  aria-controls="home-search-results"
+                  data-home-search-input
+                />
+                <button type="submit">Search</button>
+              </div>
+              <div class="home-search-results" id="home-search-results" role="listbox" data-home-search-panel hidden>
+                <div class="home-search-results-head">
+                  <span data-home-search-heading>Top matches</span>
+                  <strong data-home-search-count></strong>
+                </div>
+                <div class="home-search-results-list" data-home-search-results></div>
+              </div>
             </div>
           </form>
 
@@ -292,6 +399,11 @@ const decisionPaths = [
       margin-top: 28px;
     }
 
+    .home-search-combo {
+      position: relative;
+      z-index: 30;
+    }
+
     .home-search label,
     .home-tool-filter label {
       display: block;
@@ -352,6 +464,159 @@ const decisionPaths = [
       background: linear-gradient(135deg, var(--home-teal), var(--home-cyan));
       font: inherit;
       font-weight: 900;
+    }
+
+    .home-search-results {
+      position: absolute;
+      z-index: 80;
+      top: calc(100% + 10px);
+      right: 0;
+      left: 0;
+      overflow: hidden;
+      border: 1px solid rgba(94, 234, 212, 0.34);
+      border-radius: 14px;
+      background:
+        linear-gradient(180deg, rgb(12, 22, 36), rgb(4, 8, 16)),
+        #080d18;
+      box-shadow: 0 26px 70px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.04);
+      color: var(--home-text);
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      transform-origin: top center;
+      transition:
+        opacity var(--motion-fast, 160ms) var(--motion-ease, cubic-bezier(0.16, 1, 0.3, 1)),
+        transform var(--motion-base, 240ms) var(--motion-ease, cubic-bezier(0.16, 1, 0.3, 1)),
+        border-color var(--motion-base, 240ms) var(--motion-ease, cubic-bezier(0.16, 1, 0.3, 1));
+    }
+
+    .home-search-results[hidden] {
+      display: none;
+    }
+
+    @starting-style {
+      .home-search-results:not([hidden]) {
+        opacity: 0;
+        transform: translateY(-8px) scale(0.985);
+      }
+    }
+
+    .home-search-results-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      min-height: 36px;
+      padding: 0 13px;
+      border-bottom: 1px solid var(--home-line);
+      color: var(--home-muted);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .home-search-results-head strong {
+      color: var(--home-teal);
+      font-variant-numeric: tabular-nums;
+      letter-spacing: 0;
+      text-transform: none;
+    }
+
+    .home-search-results-list {
+      display: grid;
+      max-height: min(390px, 54vh);
+      overflow-y: auto;
+      padding: 7px;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(94, 234, 212, 0.36) transparent;
+    }
+
+    :global(.home-search-result) {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 14px;
+      min-height: 62px;
+      padding: 9px 11px;
+      border-radius: 10px;
+      color: var(--home-text);
+      text-decoration: none;
+      transition:
+        background var(--motion-fast, 160ms) var(--motion-ease, cubic-bezier(0.16, 1, 0.3, 1)),
+        color var(--motion-fast, 160ms) var(--motion-ease, cubic-bezier(0.16, 1, 0.3, 1)),
+        transform var(--motion-base, 240ms) var(--motion-ease, cubic-bezier(0.16, 1, 0.3, 1));
+    }
+
+    :global(.home-search-result:hover),
+    :global(.home-search-result:focus-visible) {
+      background: rgba(34, 211, 238, 0.12);
+      outline: none;
+      transform: translateX(2px);
+    }
+
+    :global(.home-search-result-main),
+    :global(.home-search-result-meta) {
+      min-width: 0;
+    }
+
+    :global(.home-search-result-main) {
+      display: grid;
+      gap: 3px;
+    }
+
+    :global(.home-search-result-kind) {
+      color: var(--home-teal);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: 0.1em;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    :global(.home-search-result-main strong),
+    :global(.home-search-result-main small),
+    :global(.home-search-result-meta span) {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    :global(.home-search-result-main strong) {
+      color: #fff;
+      font-size: 15px;
+      font-weight: 900;
+    }
+
+    :global(.home-search-result-main small) {
+      color: var(--home-muted);
+      font-size: 12px;
+      font-weight: 650;
+    }
+
+    :global(.home-search-result-meta) {
+      display: grid;
+      justify-items: end;
+      gap: 4px;
+      max-width: 190px;
+      color: var(--home-muted);
+      font-size: 12px;
+      font-weight: 750;
+      text-align: right;
+    }
+
+    :global(.home-search-result-meta b) {
+      color: var(--home-teal);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    :global(.home-search-no-results) {
+      padding: 15px 13px;
+      color: var(--home-muted);
+      font-size: 13px;
+      font-weight: 750;
     }
 
     .home-quick {
@@ -665,11 +930,26 @@ const decisionPaths = [
 	        grid-template-columns: 1fr;
 	      }
 
-	      .home-search-box {
-	        min-height: 64px;
-	        gap: 12px;
-	        padding: 14px;
-	      }
+      .home-search-box {
+        min-height: 64px;
+        gap: 12px;
+        padding: 14px;
+      }
+
+      .home-search-results {
+        border-radius: 12px;
+      }
+
+      :global(.home-search-result) {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+
+      :global(.home-search-result-meta) {
+        justify-items: start;
+        max-width: none;
+        text-align: left;
+      }
 
       .home-search-box svg {
         display: none;
@@ -698,18 +978,175 @@ const decisionPaths = [
     }
   </style>
 
+  <script type="application/json" id="home-search-data" set:html={homeSearchData}></script>
+
   <script is:inline>
     (() => {
       const root = document.querySelector('[data-home-page]');
       if (!root) return;
 
+      const searchData = JSON.parse(document.getElementById('home-search-data')?.textContent || '[]');
+      const searchForm = root.querySelector('[data-home-search]');
       const searchInput = root.querySelector('[data-home-search-input]');
+      const searchPanel = root.querySelector('[data-home-search-panel]');
+      const searchResults = root.querySelector('[data-home-search-results]');
+      const searchHeading = root.querySelector('[data-home-search-heading]');
+      const searchCount = root.querySelector('[data-home-search-count]');
+      const reducedMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)');
+      let searchHasFocus = false;
+
+      const normalize = (value) => String(value || '').trim().toLowerCase();
+      const termsFor = (value) => normalize(value).split(/\s+/).filter(Boolean);
+      const escapeHtml = (value) => String(value || '').replace(/[&<>"']/g, (char) => ({
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#39;',
+      }[char]));
+      const closeSearchResults = () => {
+        if (searchPanel) searchPanel.hidden = true;
+        searchInput?.setAttribute('aria-expanded', 'false');
+      };
+      const openSearchResults = () => {
+        if (!searchPanel) return;
+        searchPanel.hidden = false;
+        searchInput?.setAttribute('aria-expanded', 'true');
+      };
+      const rankSearchItem = (item, terms, query) => {
+        const title = normalize(item.title);
+        const kind = normalize(item.kind);
+        const haystack = normalize(item.search);
+        let rank = Number(item.priority || 0);
+        if (!terms.length) return rank;
+        if (title === query) rank += 1000;
+        else if (title.startsWith(query)) rank += 720;
+        else if (terms.every((term) => title.split(/[^a-z0-9]+/).includes(term))) rank += 640;
+        else if (terms.every((term) => title.includes(term))) rank += 520;
+        if (terms.every((term) => kind.includes(term))) rank += 80;
+        terms.forEach((term) => {
+          if (title.startsWith(term)) rank += 90;
+          else if (title.includes(term)) rank += 65;
+          else if (haystack.includes(term)) rank += 20;
+        });
+        return rank;
+      };
+      const matchingSearchItems = () => {
+        const terms = termsFor(searchInput?.value);
+        const query = terms.join(' ');
+        const matches = searchData
+          .map((item) => ({ item, rank: rankSearchItem(item, terms, query) }))
+          .filter(({ item, rank }) => {
+            if (!terms.length) return item.kind === 'Tool';
+            const haystack = `${normalize(item.title)} ${normalize(item.search)}`;
+            return rank > Number(item.priority || 0) && terms.every((term) => haystack.includes(term));
+          })
+          .sort((a, b) => {
+            if (b.rank !== a.rank) return b.rank - a.rank;
+            return normalize(a.item.title).localeCompare(normalize(b.item.title));
+          })
+          .map(({ item }) => item);
+        return { terms, matches };
+      };
+      const renderSearchResults = () => {
+        if (!searchPanel || !searchResults || !searchInput) return;
+        if (!searchHasFocus) {
+          closeSearchResults();
+          return;
+        }
+
+        const { terms, matches } = matchingSearchItems();
+        const shown = matches.slice(0, 7);
+        const hasQuery = terms.length > 0;
+        if (searchHeading) searchHeading.textContent = hasQuery ? 'Top matches' : 'Popular tools';
+        if (searchCount) searchCount.textContent = `${shown.length} shown`;
+
+        if (!shown.length) {
+          searchResults.innerHTML = `
+            <div class="home-search-no-results" role="option" aria-disabled="true">
+              No matches yet. Press Search to check every page.
+            </div>
+          `;
+          openSearchResults();
+          return;
+        }
+
+        searchResults.innerHTML = shown.map((item, index) => `
+          <a class="home-search-result" href="${escapeHtml(item.href)}" role="option" id="home-search-result-${index}" tabindex="-1" data-no-tool-preview>
+            <span class="home-search-result-main">
+              <span class="home-search-result-kind">${escapeHtml(item.kind)}</span>
+              <strong>${escapeHtml(item.title)}</strong>
+              <small>${escapeHtml(item.detail || item.meta || '')}</small>
+            </span>
+            <span class="home-search-result-meta">
+              <span>${escapeHtml(item.meta || '')}</span>
+              ${item.badge ? `<b>${escapeHtml(item.badge)}</b>` : ''}
+            </span>
+          </a>
+        `).join('');
+        openSearchResults();
+      };
+
       root.querySelectorAll('[data-home-query]').forEach((button) => {
         button.addEventListener('click', () => {
           if (!searchInput) return;
           searchInput.value = button.getAttribute('data-home-query') || '';
           searchInput.focus();
+          searchHasFocus = true;
+          renderSearchResults();
         });
+      });
+
+      searchInput?.addEventListener('focus', () => {
+        searchHasFocus = true;
+        renderSearchResults();
+      });
+      searchInput?.addEventListener('input', renderSearchResults);
+      searchInput?.addEventListener('keydown', (event) => {
+        if (event.key === 'ArrowDown' && searchPanel && !searchPanel.hidden) {
+          const first = searchPanel.querySelector('.home-search-result');
+          if (first) {
+            event.preventDefault();
+            first.focus();
+          }
+        }
+        if (event.key === 'Escape') {
+          event.preventDefault();
+          searchHasFocus = false;
+          closeSearchResults();
+        }
+      });
+      searchPanel?.addEventListener('keydown', (event) => {
+        const links = Array.from(searchPanel.querySelectorAll('.home-search-result'));
+        const index = links.indexOf(document.activeElement);
+        if (event.key === 'Escape') {
+          event.preventDefault();
+          searchHasFocus = false;
+          closeSearchResults();
+          searchInput?.focus();
+          return;
+        }
+        if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
+          event.preventDefault();
+          const direction = event.key === 'ArrowDown' ? 1 : -1;
+          const next = index === -1 ? 0 : (index + direction + links.length) % links.length;
+          links[next]?.focus();
+        }
+      });
+      searchForm?.addEventListener('submit', (event) => {
+        if (!searchInput?.value.trim()) {
+          event.preventDefault();
+          searchInput?.focus();
+          searchHasFocus = true;
+          renderSearchResults();
+        }
+      });
+      document.addEventListener('click', (event) => {
+        const target = event.target instanceof Element ? event.target : null;
+        if (target && !searchForm?.contains(target) && !target.closest('[data-home-query]')) {
+          searchHasFocus = false;
+          closeSearchResults();
+        }
       });
 
       const filterInput = root.querySelector('[data-home-tool-filter]');
@@ -730,6 +1167,8 @@ const decisionPaths = [
 
       filterInput?.addEventListener('input', filterTools);
       filterTools();
+
+      if (reducedMotion?.matches) root.classList.add('home-reduced-motion');
     })();
   </script>
 </BaseLayout>

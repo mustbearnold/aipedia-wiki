@@ -113,10 +113,10 @@ const verifiedDays = (() => {
 })();
 
 const badges = [
-  { label: f.status === 'active' ? 'Active product' : labelize(f.status), tone: f.status === 'active' ? 'good' : 'neutral' },
+  { label: f.status === 'active' ? 'Active product' : labelize(f.status), tone: f.status === 'active' ? 'good' : 'bad' },
   { label: pricingLabels[f.pricing_model] ?? labelize(f.pricing_model), tone: f.pricing_model === 'free' || f.pricing_model === 'open-source' ? 'good' : 'neutral' },
-  { label: f.github_url ? 'Public repo listed' : 'No public repo listed', tone: f.github_url ? 'good' : 'muted' },
-  { label: verifiedDays <= 30 ? 'Verified this month' : verifiedDays <= 90 ? 'Recently verified' : 'Verify before buying', tone: verifiedDays <= 90 ? 'good' : 'warn' },
+  { label: f.github_url ? 'Public repo listed' : 'No public repo listed', tone: f.github_url ? 'good' : 'bad' },
+  { label: verifiedDays <= 30 ? 'Verified this month' : verifiedDays <= 90 ? 'Recently verified' : 'Verify before buying', tone: verifiedDays <= 90 ? 'good' : 'bad' },
   { label: `${labelize(f.update_frequency || 'monthly')} review cycle`, tone: 'neutral' },
   { label: overall >= 8 ? 'Strong editorial score' : 'Niche or situational score', tone: overall >= 8 ? 'good' : 'neutral' },
 ].filter((badge) => badge.label);
@@ -336,8 +336,8 @@ const graphNews = relatedNews.slice(0, 3);
   }
 
   .tool-intel-watch button.is-watched {
-    background: rgba(94, 234, 212, 0.15);
-    border-color: rgba(94, 234, 212, 0.44);
+    background: rgba(52, 211, 153, 0.15);
+    border-color: rgba(52, 211, 153, 0.44);
   }
 
   .tool-intel-badge-list {
@@ -359,8 +359,8 @@ const graphNews = relatedNews.slice(0, 3);
   }
 
   .tool-intel-badge-good {
-    border-color: rgba(94, 234, 212, 0.28);
-    background: rgba(94, 234, 212, 0.09);
+    border-color: rgba(52, 211, 153, 0.28);
+    background: rgba(52, 211, 153, 0.09);
     color: var(--accent-success);
   }
 
@@ -368,6 +368,12 @@ const graphNews = relatedNews.slice(0, 3);
     border-color: rgba(103, 232, 249, 0.24);
     background: rgba(103, 232, 249, 0.08);
     color: var(--accent-warning);
+  }
+
+  .tool-intel-badge-bad {
+    border-color: rgba(251, 113, 133, 0.28);
+    background: rgba(251, 113, 133, 0.09);
+    color: var(--accent-danger);
   }
 
   .tool-intel-badge-muted {

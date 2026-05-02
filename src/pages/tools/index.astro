@@ -613,7 +613,7 @@ const categoryEmojiMap: Record<string, string> = {
           const score = Number(item.getAttribute('data-score') || 0).toFixed(1);
           const subline = [company, category].filter(Boolean).join(' · ');
           return `
-            <a class="tools-search-result" href="${escapeHtml(url)}" role="option" id="tools-search-result-${index}" tabindex="-1">
+            <a class="tools-search-result" href="${escapeHtml(url)}" role="option" id="tools-search-result-${index}" tabindex="-1" data-no-tool-preview>
               <span class="tools-search-result-main">
                 <strong>${escapeHtml(title)}</strong>
                 <small>${escapeHtml(subline || category)}</small>

@@ -40,6 +40,10 @@ body:has(main .t2-canvas) ::selection {
   --t2-surface-hover: var(--bg-card-hover);
   --t2-accent: var(--accent-primary);
   --t2-accent-text: var(--accent-primary-text);
+  --t2-positive: var(--accent-success);
+  --t2-positive-rgb: 52, 211, 153;
+  --t2-negative: var(--accent-danger);
+  --t2-negative-rgb: 251, 113, 133;
   --t2-radius: 10px;
   --t2-radius-sm: 6px;
   --t2-line-strong: rgba(255, 255, 255, 0.14);
@@ -102,22 +106,22 @@ body:has(main .t2-canvas) ::selection {
   color: var(--t2-fg);
 }
 .t2-eyebrow-fresh {
-  color: #5eead4;
-  background: rgba(94, 234, 212, 0.08);
-  border-color: rgba(94, 234, 212, 0.22);
+  color: var(--t2-positive);
+  background: rgba(var(--t2-positive-rgb), 0.08);
+  border-color: rgba(var(--t2-positive-rgb), 0.24);
 }
-.light .t2-eyebrow-fresh { color: #0e7490; }
+.light .t2-eyebrow-fresh { color: var(--accent-success); }
 .t2-eyebrow-livedot {
   width: 6px; height: 6px;
   border-radius: 50%;
-  background: #5eead4;
-  box-shadow: 0 0 0 0 rgba(94, 234, 212, 0.55);
+  background: var(--t2-positive);
+  box-shadow: 0 0 0 0 rgba(var(--t2-positive-rgb), 0.55);
   animation: t2-eyebrow-pulse 2.4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
 @keyframes t2-eyebrow-pulse {
-  0%   { box-shadow: 0 0 0 0 rgba(94, 234, 212, 0.55); }
-  70%  { box-shadow: 0 0 0 6px rgba(94, 234, 212, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(94, 234, 212, 0); }
+  0%   { box-shadow: 0 0 0 0 rgba(var(--t2-positive-rgb), 0.55); }
+  70%  { box-shadow: 0 0 0 6px rgba(var(--t2-positive-rgb), 0); }
+  100% { box-shadow: 0 0 0 0 rgba(var(--t2-positive-rgb), 0); }
 }
 .t2-eyebrow-accent {
   color: #67e8f9;
@@ -126,11 +130,11 @@ body:has(main .t2-canvas) ::selection {
 }
 .light .t2-eyebrow-accent { color: #0e7490; }
 .t2-eyebrow-gold {
-  color: #67e8f9;
-  background: rgba(103, 232, 249, 0.08);
-  border-color: rgba(103, 232, 249, 0.28);
+  color: var(--t2-positive);
+  background: rgba(var(--t2-positive-rgb), 0.08);
+  border-color: rgba(var(--t2-positive-rgb), 0.28);
 }
-.light .t2-eyebrow-gold { color: #0e7490; background: rgba(103, 232, 249, 0.14); }
+.light .t2-eyebrow-gold { color: var(--accent-success); background: rgba(var(--t2-positive-rgb), 0.12); }
 .t2-eyebrow-star { font-size: 10px; }
 .t2-eyebrow-trust {
   font-size: 11px;
@@ -200,14 +204,14 @@ body:has(main .t2-canvas) ::selection {
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--accent-success);
-  background: rgba(94, 234, 212, 0.10);
-  border: 1px solid rgba(94, 234, 212, 0.22);
+  color: var(--t2-positive);
+  background: rgba(var(--t2-positive-rgb), 0.10);
+  border: 1px solid rgba(var(--t2-positive-rgb), 0.24);
 }
 .light .t2-status-pill {
-  color: #15803d;
-  background: rgba(94, 234, 212, 0.10);
-  border-color: rgba(94, 234, 212, 0.28);
+  color: var(--accent-success);
+  background: rgba(var(--t2-positive-rgb), 0.10);
+  border-color: rgba(var(--t2-positive-rgb), 0.28);
 }
 .t2-status-dot {
   width: 5px; height: 5px;
@@ -244,6 +248,16 @@ body:has(main .t2-canvas) ::selection {
 }
 .t2-hero-glance-item:hover { background: var(--t2-surface-hover); }
 .t2-hero-glance-item:first-child { border-top: 0; }
+.t2-hero-glance-positive {
+  background: linear-gradient(180deg, rgba(var(--t2-positive-rgb), 0.075), transparent 72%);
+  box-shadow: inset 0 2px 0 rgba(var(--t2-positive-rgb), 0.42);
+}
+.t2-hero-glance-negative {
+  background: linear-gradient(180deg, rgba(var(--t2-negative-rgb), 0.075), transparent 72%);
+  box-shadow: inset 0 2px 0 rgba(var(--t2-negative-rgb), 0.38);
+}
+.t2-hero-glance-positive .t2-hero-glance-label { color: var(--t2-positive); }
+.t2-hero-glance-negative .t2-hero-glance-label { color: var(--t2-negative); }
 @media (min-width: 720px) {
   .t2-hero-glance-item {
     border-top: 0;
@@ -273,6 +287,21 @@ body:has(main .t2-canvas) ::selection {
   color: var(--t2-muted);
   font-size: 12px;
   line-height: 1.45;
+}
+
+.t2-hero-main > .t2-chips,
+.t2-hero-main > .t2-ctas {
+  grid-column: 1 / -1;
+}
+
+.t2-hero-main > .t2-chips {
+  margin-top: 12px;
+  margin-bottom: 0;
+}
+
+.t2-hero-main > .t2-ctas {
+  margin-top: 12px;
+  margin-bottom: 0;
 }
 
 /* -------- score card ------------------------------------------ */
@@ -327,6 +356,16 @@ body:has(main .t2-canvas) ::selection {
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
+}
+.t2-score-band-positive {
+  border-color: rgba(var(--t2-positive-rgb), 0.28);
+  background: rgba(var(--t2-positive-rgb), 0.10);
+  color: var(--t2-positive);
+}
+.t2-score-band-negative {
+  border-color: rgba(var(--t2-negative-rgb), 0.26);
+  background: rgba(var(--t2-negative-rgb), 0.10);
+  color: var(--t2-negative);
 }
 .t2-score-bars {
   display: grid;
@@ -478,6 +517,8 @@ body:has(main .t2-canvas) ::selection {
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
+.t2-verdict-point-positive .t2-verdict-point-label { color: var(--t2-positive); }
+.t2-verdict-point-negative .t2-verdict-point-label { color: var(--t2-negative); }
 .t2-verdict-point strong {
   display: block;
   color: var(--t2-fg);
@@ -499,19 +540,23 @@ body:has(main .t2-canvas) ::selection {
 }
 @media (min-width: 640px) {
   .t2-ctas {
-    grid-template-columns: auto auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     justify-content: start;
   }
 }
 .t2-cta {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   min-height: 44px;
   padding: 12px 18px;
   border-radius: var(--t2-radius);
   font-size: 14px;
   font-weight: 600;
+  white-space: nowrap;
   text-decoration: none;
   transition: background 140ms ease, border-color 140ms ease, transform 160ms ease, box-shadow 160ms ease, color 140ms ease;
   position: relative;
@@ -548,12 +593,29 @@ button.t2-cta {
   border-color: var(--t2-line-strong);
 }
 .t2-cta-compare.is-compared {
-  border-color: rgba(94, 234, 212, 0.48);
-  background: rgba(94, 234, 212, 0.12);
-  color: var(--t2-accent);
+  border-color: rgba(var(--t2-positive-rgb), 0.48);
+  background: rgba(var(--t2-positive-rgb), 0.12);
+  color: var(--t2-positive);
 }
 
 .t2-githubstats { margin-bottom: 28px; }
+
+.t2-canvas .tool-intel-watch button.is-watched {
+  background: rgba(var(--t2-positive-rgb), 0.15);
+  border-color: rgba(var(--t2-positive-rgb), 0.44);
+}
+
+.t2-canvas .tool-intel-badge.tool-intel-badge-good {
+  border-color: rgba(var(--t2-positive-rgb), 0.28);
+  background: rgba(var(--t2-positive-rgb), 0.09);
+  color: var(--t2-positive);
+}
+
+.t2-canvas .tool-intel-badge.tool-intel-badge-bad {
+  border-color: rgba(var(--t2-negative-rgb), 0.28);
+  background: rgba(var(--t2-negative-rgb), 0.09);
+  color: var(--t2-negative);
+}
 
 /* ============================================================
  * LAYOUT: prose + floating TOC
@@ -2339,7 +2401,7 @@ html.light .t2-cat-search input {
 }
 .t2-article-prose { max-width: 68ch; }
 
-.t2-badge-teal  { color: var(--accent-success, #5eead4); background: rgba(94, 234, 212, 0.10); border-color: rgba(94, 234, 212, 0.28); }
+.t2-badge-teal  { color: var(--accent-success, #34d399); background: rgba(52, 211, 153, 0.10); border-color: rgba(52, 211, 153, 0.28); }
 .t2-badge-blue   { color: #38bdf8; background: rgba(56, 189, 248, 0.10); border-color: rgba(56, 189, 248, 0.28); }
 .t2-badge-cyan { color: var(--t2-accent-text); background: rgba(34, 211, 238, 0.10); border-color: rgba(34, 211, 238, 0.28); }
 .t2-badge-gray   { color: var(--t2-muted); background: rgba(148, 163, 184, 0.08); border-color: var(--t2-line); }
@@ -2354,10 +2416,10 @@ html.light .t2-cat-search input {
   font-weight: 600;
   border: 1px solid;
 }
-.t2-company-type-startup  { color: var(--accent-success, #5eead4); background: rgba(94, 234, 212, 0.10); border-color: rgba(94, 234, 212, 0.28); }
+.t2-company-type-startup  { color: var(--accent-success, #34d399); background: rgba(52, 211, 153, 0.10); border-color: rgba(52, 211, 153, 0.28); }
 .t2-company-type-bigtech  { color: #38bdf8; background: rgba(56, 189, 248, 0.10); border-color: rgba(56, 189, 248, 0.28); }
 .t2-company-type-acquired { color: var(--accent-warning, #67e8f9); background: rgba(103, 232, 249, 0.10); border-color: rgba(103, 232, 249, 0.28); }
-.t2-company-type-dead     { color: #67e8f9; background: rgba(103, 232, 249, 0.10); border-color: rgba(103, 232, 249, 0.28); }
+.t2-company-type-dead     { color: var(--accent-danger, #fb7185); background: rgba(251, 113, 133, 0.10); border-color: rgba(251, 113, 133, 0.28); }
 
 .t2-company-products {
   padding: 18px 20px 20px;

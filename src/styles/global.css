@@ -114,9 +114,9 @@ html.theme-morph-fallback *::after {
        icons, and small labels keep adequate contrast. */
     --accent-primary-text: #67e8f9;
     --accent-secondary: #38bdf8;
-    --accent-success: #5eead4;
+    --accent-success: #34d399;
     --accent-warning: #67e8f9;
-    --accent-danger: #67e8f9;
+    --accent-danger: #fb7185;
   }
 
   .light {
@@ -130,9 +130,9 @@ html.theme-morph-fallback *::after {
     --accent-primary: #0891b2;
     --accent-primary-text: #0e7490;
     --accent-secondary: #0284c7;
-    --accent-success: #0e7490;
+    --accent-success: #047857;
     --accent-warning: #0e7490;
-    --accent-danger: #0e7490;
+    --accent-danger: #dc2626;
   }
 
   /* Accent gradient text utility. Dark mode: cyan-to-blue gradient
@@ -1503,6 +1503,8 @@ body.os-chrome-body .os-page-clock {
 body.os-chrome-body .os-page-dock {
   z-index: 75;
   top: calc(var(--os-panel-top) + var(--os-panel-height) + 22px);
+  bottom: auto;
+  height: auto;
 }
 
 body.os-chrome-body .os-page-dock a {
@@ -1529,6 +1531,12 @@ body.os-chrome-body .os-page-stage {
   padding-top: calc(var(--os-panel-top) + var(--os-panel-height) + var(--os-panel-clearance));
 }
 
+body.os-chrome-body .os-page-stage.is-article {
+  width: min(1180px, calc(100vw - 188px));
+  margin-right: 0;
+  margin-left: max(94px, calc((100vw - 1180px) / 2));
+}
+
 @media (max-width: 900px) {
   body.os-chrome-body .os-page-shell {
     --os-panel-top: 10px;
@@ -1549,10 +1557,18 @@ body.os-chrome-body .os-page-stage {
 
   body.os-chrome-body .os-page-dock {
     top: auto;
+    right: 10px;
+    bottom: 10px;
+    left: 10px;
+    width: auto;
+    height: 70px;
   }
 
   body.os-chrome-body .os-page-stage,
   body.os-chrome-body .os-page-stage.is-article {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
     padding-top: calc(var(--os-panel-top) + var(--os-panel-height) + var(--os-panel-clearance));
   }
 }
