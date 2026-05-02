@@ -217,7 +217,6 @@ test('source styles stay inside the Signal Cyan palette', () => {
   const violations = [];
   for (const root of colorSourceRoots) {
     for (const file of collectColorSourceFiles(root)) {
-      if (file.endsWith('src/pages/demo-linux-os.astro')) continue;
       const text = readFileSync(file, 'utf8');
       for (const pattern of bannedDecorativeColorPatterns) {
         const match = text.match(pattern);
