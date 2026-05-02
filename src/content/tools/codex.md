@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "Bundled with ChatGPT Plus ($20/mo) through Pro 20x ($200/mo)"
 status: active
 launched: 2025-05
-last_updated: 2026-04-30
-last_verified: 2026-04-30
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -67,8 +67,9 @@ OpenAI's **agentic coding** product. A coding agent that works either **async in
 
 Bundled with every paid ChatGPT tier. Pro tiers get 5x to 20x the Codex usage of Plus. The April 16, 2026 super-app update turned Codex Desktop into the most capable OpenAI product surface to date: Computer Use, persistent Memory, gpt-image-2 for visuals, an in-app browser, 90+ plugins, and multi-agent workflows running in parallel.
 
-## Recent developments (March-April 2026)
+## Recent developments (March-May 2026)
 
+- **May 1, 2026:** [The Pentagon expanded classified-network AI access to eight major vendors](/news/2026-05-01-pentagon-classified-ai-network-deals/), including OpenAI. This is a government deployment story rather than a public Codex feature, but it reinforces why account security, network boundaries, and audit controls matter for agentic OpenAI products.
 - **April 30, 2026:** [OpenAI added Advanced Account Security for ChatGPT and Codex](/news/2026-04-30-openai-advanced-account-security-yubikeys/). Hardware-key and passkey protection now matter more because Codex accounts can touch repos, terminals, plugins, and connected development workflows.
 - **April 30, 2026:** [OpenAI began rolling GPT-5.5 Cyber to critical defenders through Trusted Access](/news/2026-04-30-openai-gpt-55-cyber-trusted-access/). The relevant Codex angle is controlled access to cyber-permissive capabilities, not broad public availability.
 - **April 30, 2026:** [A coding-agent security roundup warned that attackers keep targeting credentials, not model weights](/news/2026-04-30-ai-coding-agent-credential-security-roundup/). Codex evaluations should include sandbox isolation, token scopes, account security, and audit trails alongside model quality.

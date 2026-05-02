@@ -1,11 +1,11 @@
 # Project Knowledge Graph Report
 
-Generated: 2026-05-02T03:46:15.101Z
+Generated: 2026-05-02T03:54:01.011Z
 
 ## Summary
 
-- Total files in graph: 3190
-- Total indexed bytes: 58.6 MB
+- Total files in graph: 3206
+- Total indexed bytes: 59.4 MB
 - Node types: 8
 - Edge types: 6
 
@@ -13,33 +13,33 @@ Generated: 2026-05-02T03:46:15.101Z
 
 | Type | Count |
 | --- | --- |
-| asset | 1173 |
+| asset | 1181 |
 | astro_page | 51 |
 | config | 9 |
 | directory | 110 |
 | file | 221 |
-| markdown_page | 854 |
-| observation | 856 |
+| markdown_page | 858 |
+| observation | 860 |
 | script | 49 |
 
 ## Edge Counts
 
 | Type | Count |
 | --- | --- |
-| contains | 2416 |
+| contains | 2428 |
 | defines_script | 49 |
-| has_frontmatter | 833 |
+| has_frontmatter | 837 |
 | imports | 260 |
-| links_to | 5337 |
-| uses_asset | 1562 |
+| links_to | 5342 |
+| uses_asset | 1570 |
 
 ## Largest Folders
 
 | Folder | Size |
 | --- | --- |
-| public | 35.8 MB |
-| public/og | 28.7 MB |
-| public/og/news | 14.6 MB |
+| public | 36.6 MB |
+| public/og | 29.5 MB |
+| public/og/news | 15.4 MB |
 | public/og/tools | 14.1 MB |
 | brand-mockups | 13.6 MB |
 | src | 7.0 MB |

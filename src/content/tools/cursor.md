@@ -86,6 +86,7 @@ Anysphere's AI-native code editor. A VS Code fork with LLMs wired into autocompl
 
 ## Recent developments
 
+- **May 1, 2026:** [Replit argued for independence as Cursor deal talk reshaped AI coding](/news/2026-05-01-replit-cursor-deal-independence/). Cursor's reported SpaceX/xAI acquisition option keeps strategic-owner risk and infrastructure upside central to how enterprises evaluate the IDE.
 - **April 27, 2026:** [Cursor and Claude were named in a reported PocketOS database-deletion incident](/news/2026-04-27-cursor-claude-database-deletion-incident/). Treat it as an agent-permissions and backup-design warning, not proof that AI coding tools should never touch infrastructure.
 - **April 22, 2026:** [SpaceX and xAI lined up a $60B option to buy Cursor](/news/2026-04-22-spacex-xai-cursor-acquisition-option/). It is an option and partnership, not a completed acquisition, but it makes Cursor's long-term independence a live strategic question.
 - **April 23, 2026:** [Google discloses 75% of internal new code is AI-generated](/news/2026-04-23-google-75-percent-internal-code-ai-generated/). Hyperscaler benchmark for agentic-coding adoption; validates Cursor's position as mainstream IDE default.

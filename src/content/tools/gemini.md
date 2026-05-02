@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$249.99/month"
 status: active
 launched: 2023-12
-last_updated: 2026-04-30
-last_verified: 2026-04-30
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 seo_title: "Gemini: Features, Pricing & Review (April 2026)"
 meta_description: "Gemini 3.1 Pro is Google's flagship (Feb 2026, 1M token context). Google AI Pro $19.99/mo bundles 5TB storage, Veo 3.1, and Nano Banana 2. Ultra $249.99/mo unlocks Deep Think 3.1 and Nano Banana Pro. Best AI for Google Workspace users."
@@ -93,8 +93,9 @@ Google DeepMind's multimodal AI assistant. **Gemini 3.1 Pro** is the flagship as
 
 **Gemini 3.1 Deep Think** handles science, math, and research-grade reasoning for Ultra subscribers. The same subscription covers Workspace integration, Nano Banana image generation, Veo 3.1 video, and the default Android assistant. April 26 updates deepen the enterprise and builder side of the story: Gemini Embedding 2 is now GA for retrieval, AI Studio is moving toward a clearer paid app-building path, Deep Research is being pushed harder on Max/Ultra, and Google's TPU follow-up keeps cost-controlled agent serving central to Gemini's moat.
 
-## Recent developments (April 2026)
+## Recent developments (April-May 2026)
 
+- **May 1:** [The Pentagon expanded classified-network AI access to eight major vendors](/news/2026-05-01-pentagon-classified-ai-network-deals/), including Google. For Gemini, the enterprise-government story is increasingly about approved deployment environments, not only model quality.
 - **April 30:** [Gemini started rolling out to cars with Google built in](/news/2026-04-30-gemini-google-built-in-cars-rollout/), replacing the older Google Assistant car experience with a more conversational assistant surface. US English support begins first, with broader availability expected over time.
 - **April 30:** [EU preliminary findings could force Google to open Android AI integrations](/news/2026-04-30-eu-google-open-up-ai-android/). If final measures are adopted, Google may need to give rivals more access to Android assistant surfaces, potentially narrowing Gemini's default-assistant advantage.
 - **April 28:** [Google Translate added AI pronunciation practice on Android](/news/2026-04-28-google-translate-ai-pronunciation-practice/). The update shows Gemini-era language features spreading through high-volume Google products, not only the standalone Gemini app.

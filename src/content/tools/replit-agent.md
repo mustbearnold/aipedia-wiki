@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$100+/month"
 status: active
 launched: 2024-09
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-02
+last_verified: 2026-05-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -47,6 +47,10 @@ not_best_for:
 Replit's browser-based AI app builder at [replit.com](https://replit.com). Agent 3 generates frontend, backend, and database, then deploys to Replit hosting, all from a prompt.
 
 Agent 3 runs autonomous sessions up to 200 minutes (Agent 1 capped at 2 minutes, Agent 2 at 20). It tests its own code, spawns subagents for specialized tasks, and operates across three effort modes: Economy, Power, and Turbo.
+
+## Recent developments
+
+- **May 1, 2026:** [Replit argued for independence as Cursor deal talk reshaped AI coding](/news/2026-05-01-replit-cursor-deal-independence/). CEO Amjad Masad told TechCrunch the company is gross-margin positive and wants to remain an end-to-end app platform, not just another AI coding assistant.
 
 ## System Verdict
 
