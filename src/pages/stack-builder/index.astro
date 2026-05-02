@@ -194,7 +194,7 @@ const roles = [
 
 const budgets = [
   { id: 'budget',   label: 'Budget',   price: '$0-50/mo',    desc: 'Free tiers and cheap essentials' },
-  { id: 'standard', label: 'Standard', price: '$50-150/mo',  desc: 'The practical working stack' },
+  { id: 'standard', label: 'Standard', price: '$50-150/mo',  desc: 'The practical daily tool set' },
   { id: 'premium',  label: 'Premium',  price: '$150-500/mo', desc: 'Everything, no compromises' },
 ];
 
@@ -248,33 +248,33 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
 ---
 
 <BaseLayout
-  title="AI Stack Builder: Find Your Perfect AI Tool Stack (April 2026)"
-  description="Pick your role, set your budget, get a curated AI tool stack. Multi-role support, swap any tool, share the result. Recently-updated badges flag tools that shipped in the last 14 days."
+  title="AI Tool Set Builder: Find Your Best AI Tools (April 2026)"
+  description="Pick your role, set your budget, get a suggested AI tool set, swap any tool, and share the result. Recently-updated badges flag tools that shipped in the last 14 days."
   chrome="os"
 >
   <OsPageShell
     activeApp="stack"
-    appTitle="stack-installer"
-    appSubtitle={`${roles.length} roles`}
-    command="install --stack --guided"
+    appTitle="Tool set builder"
+    appSubtitle={`${roles.length} starting points`}
+    command="Build a tool set step by step"
   >
-    <Breadcrumb items={[{ label: 'Stack Builder' }]} />
+    <Breadcrumb items={[{ label: 'Tool Set Builder' }]} />
 
   <section class="sb-hero">
     <div class="sb-hero-copy">
-      <p class="sb-eyebrow">April 2026 stack builder</p>
-      <h1>Build a working AI stack.</h1>
+      <p class="sb-eyebrow">April 2026 tool builder</p>
+      <h1>Build a working AI tool set.</h1>
       <p>
-        Choose a role, budget, and workflow. aipedia assembles a sourced stack from reviewed tools, then lets you swap individual picks.
+        Choose a role, budget, and workflow. aipedia suggests a sourced set of reviewed tools, then lets you swap individual picks.
       </p>
     </div>
-    <aside class="sb-logic" aria-label="Stack logic">
-      <h2>Stack logic</h2>
+    <aside class="sb-logic" aria-label="How the tool set is chosen">
+      <h2>How we choose</h2>
       <ol>
-        <li><span>1.</span> Role need</li>
-        <li><span>2.</span> Budget ceiling</li>
-        <li><span>3.</span> Recent product movement</li>
-        <li><span>4.</span> Substitution risk</li>
+        <li><span>1.</span> What you need</li>
+        <li><span>2.</span> Your budget</li>
+        <li><span>3.</span> Recent updates</li>
+        <li><span>4.</span> Easy alternatives</li>
       </ol>
     </aside>
   </section>
@@ -338,7 +338,7 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
   <section id="stack-output" style="display:none" class="sb-results">
     <div class="sb-results-head">
       <div>
-        <h2>Your stack</h2>
+        <h2>Your tool set</h2>
         <p id="sb-summary"></p>
       </div>
       <div class="sb-results-actions">
@@ -347,16 +347,16 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
           <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M10 14a5 5 0 007.07 0l1.41-1.41a5 5 0 00-7.07-7.07L10 7m4 3a5 5 0 00-7.07 0L5.5 11.41a5 5 0 007.07 7.07L14 17"/></svg>
           <span id="sb-share-label">Share</span>
         </button>
-        <button id="sb-export-md" type="button" class="sb-tool-btn" aria-label="Copy stack as Markdown">
+        <button id="sb-export-md" type="button" class="sb-tool-btn" aria-label="Copy tool set summary">
           <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h10"/></svg>
-          <span id="sb-export-md-label">Copy Markdown</span>
+          <span id="sb-export-md-label">Copy summary</span>
         </button>
         <button id="sb-reset" type="button" class="sb-reset">Reset</button>
       </div>
     </div>
     <div id="sb-categories" class="sb-category-list"></div>
 
-    <!-- Stack price summary -->
+    <!-- Tool set price summary -->
     <div id="sb-total" class="sb-total"></div>
   </section>
 
@@ -366,8 +366,8 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
       <span data-empty-slot></span><span data-empty-slot></span><span data-empty-slot></span>
     </div>
     <div id="sb-empty-selection" class="sb-empty-selection" aria-live="polite"></div>
-    <p id="sb-empty-kicker" class="sb-empty-kicker">Awaiting inputs</p>
-    <h2 id="sb-empty-title">Pick a role and budget to generate the stack.</h2>
+    <p id="sb-empty-kicker" class="sb-empty-kicker">Ready when you are</p>
+    <h2 id="sb-empty-title">Pick a role and budget to build your tool set.</h2>
     <p id="sb-empty-copy">The result will show categories, recommended tools, price range, and safer alternatives.</p>
   </section>
 
@@ -1451,18 +1451,18 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
       if (!placeholderKicker || !placeholderTitle || !placeholderCopy) return;
       if (state.roles.length && !state.budget) {
         placeholderKicker.textContent = `${state.roles.length} / ${MAX_ROLES} roles selected`;
-        placeholderTitle.textContent = 'Choose a budget to generate the stack.';
+        placeholderTitle.textContent = 'Choose a budget to build your tool set.';
         placeholderCopy.textContent = `${roleLabels.join(' + ')} is ready. The budget tier controls which tools appear in each category.`;
         return;
       }
       if (!state.roles.length && state.budget) {
         placeholderKicker.textContent = `${budgetLabel(state.budget)} selected`;
-        placeholderTitle.textContent = 'Choose at least one role to generate the stack.';
+        placeholderTitle.textContent = 'Choose at least one role to build your tool set.';
         placeholderCopy.textContent = 'Roles define the work pattern; budget controls the recommended tier.';
         return;
       }
-      placeholderKicker.textContent = 'Awaiting inputs';
-      placeholderTitle.textContent = 'Pick a role and budget to generate the stack.';
+      placeholderKicker.textContent = 'Ready when you are';
+      placeholderTitle.textContent = 'Pick a role and budget to build your tool set.';
       placeholderCopy.textContent = 'The result will show categories, recommended tools, price range, and safer alternatives.';
     }
 
@@ -1708,10 +1708,10 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
             <div class="text-2xl font-bold accent-gradient-text">
               $${Math.round(totalLow)}<span class="text-sm font-normal text-[var(--text-muted)]">/month</span>
             </div>
-            <div class="text-[11px] text-[var(--text-muted)] mt-0.5">Entry-tier cost across all picks. Scale plans go higher.</div>
+            <div class="text-[11px] text-[var(--text-muted)] mt-0.5">Starter cost across all picks. Bigger plans cost more.</div>
           </div>
           <div class="text-right">
-            <div class="text-xs text-[var(--text-muted)] uppercase tracking-wider mb-1">Stack</div>
+            <div class="text-xs text-[var(--text-muted)] uppercase tracking-wider mb-1">Tool set</div>
             <div class="text-sm font-semibold text-[var(--text-secondary)]">${toolCount} tool${toolCount !== 1 ? 's' : ''} / ${catCount} categor${catCount !== 1 ? 'ies' : 'y'}</div>
             <div class="text-[11px] text-[var(--text-muted)] mt-0.5">${state.roles.length} role${state.roles.length !== 1 ? 's' : ''}</div>
           </div>
@@ -1719,7 +1719,7 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
         ${ctaGrid ? `
           <div class="pt-4 border-t border-[var(--border)]">
             <div class="flex items-center justify-between gap-3 mb-3 flex-wrap">
-              <div class="text-xs font-semibold uppercase tracking-wider text-[var(--text-muted)]">Try the whole stack</div>
+              <div class="text-xs font-semibold uppercase tracking-wider text-[var(--text-muted)]">Try the whole tool set</div>
               ${hasAffiliate ? '<div class="text-[10px] text-[var(--text-muted)]">Some links are affiliate; no extra cost to you.</div>' : ''}
             </div>
             <div class="sb-cta-grid">
@@ -1847,7 +1847,7 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
       const merged = mergedStack();
       const roleLabels = state.roles.map(r => document.querySelector(`.sb-role-btn[data-role="${r}"] .sb-role-title`)?.textContent || r);
       const budgetLabel = document.querySelector(`.sb-budget-btn[data-budget="${state.budget}"] .sb-budget-title`)?.textContent || state.budget;
-      let md = `# My AI stack (${roleLabels.join(' + ')}, ${budgetLabel})\n\nBuilt on [aipedia.wiki](${siteBase})stack-builder/\n\n`;
+      let md = `# My AI tool set (${roleLabels.join(' + ')}, ${budgetLabel})\n\nBuilt on [aipedia.wiki](${siteBase})stack-builder/\n\n`;
       let totalLow = 0, totalHigh = 0;
       for (const [catName, tiers] of Object.entries(merged)) {
         const picks = (tiers[state.budget] || []).map(t => toolAfterSwap(

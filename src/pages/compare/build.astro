@@ -85,9 +85,9 @@ const popularComparisons = [
   ]} />
   <OsPageShell
     activeApp="compare"
-    appTitle="diff-builder"
-    appSubtitle={`${catalog.length} available packages`}
-    command={`diff --interactive --catalog=${catalog.length}`}
+    appTitle="Custom comparison"
+    appSubtitle={`${catalog.length} tools available`}
+    command="Choose tools to compare"
   >
   <Breadcrumb items={[
     { label: 'Compare', href: '/compare/' },
@@ -155,7 +155,7 @@ const popularComparisons = [
     <div class="flex items-end justify-between gap-3 mb-3">
       <div>
         <h2 class="text-sm font-semibold uppercase tracking-wider text-[var(--text-muted)] m-0">Popular comparisons</h2>
-        <p class="text-[12px] text-[var(--text-secondary)] mt-1 mb-0">Start from a high-signal lane, then swap any tool.</p>
+        <p class="text-[12px] text-[var(--text-secondary)] mt-1 mb-0">Start from a popular category, then swap any tool.</p>
       </div>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3">

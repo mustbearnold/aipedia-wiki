@@ -190,8 +190,8 @@ const heroGlance = f.hero_glance && Array.isArray(f.hero_glance.items)
 const generatedDecisionBrief = {
   items: [
     { label: 'Use it for', value: firstBestFor, detail: catLabel ? `Best-fit ${catLabel.toLowerCase()} use case.` : '' },
-    { label: 'Watch for', value: firstNotBestFor, detail: 'Not every stack needs this tool.' },
-    { label: 'Pricing signal', value: pricingGlance, detail: 'Verify limits before committing.' },
+    { label: 'Watch for', value: firstNotBestFor, detail: 'Not every workflow needs this tool.' },
+    { label: 'Pricing note', value: pricingGlance, detail: 'Verify limits before committing.' },
   ],
 };
 const effectiveDecisionBrief = decisionBrief ?? (f.quick_answer ? generatedDecisionBrief : null);
@@ -277,9 +277,9 @@ const relatedNews = allNews
 
   <OsPageShell
     activeApp="packages"
-    appTitle="package-details"
-    appSubtitle={`${overall.toFixed(1)}/10 score`}
-    command={`inspect /tools/${toolSlug}`}
+    appTitle="Tool review"
+    appSubtitle={`${overall.toFixed(1)}/10 review score`}
+    command={`Review ${f.title}`}
     density="article"
   >
     <div class="t2-canvas">

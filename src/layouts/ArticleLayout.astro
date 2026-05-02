@@ -42,7 +42,7 @@ const breadcrumbLdItems = breadcrumbs
       })),
     ]
   : undefined;
-const osAppTitle = type.toLowerCase().includes('glossary') ? 'glossary-viewer' : 'reference-viewer';
+const osAppTitle = type.toLowerCase().includes('glossary') ? 'Glossary' : 'Reference guide';
 ---
 
 <BaseLayout title={seoTitle ?? title} description={description} chrome="os">
@@ -56,7 +56,7 @@ const osAppTitle = type.toLowerCase().includes('glossary') ? 'glossary-viewer' :
     activeApp="trust"
     appTitle={osAppTitle}
     appSubtitle={type}
-    command={`less ${Astro.url.pathname}`}
+    command={`Read ${title}`}
     density="article"
   >
   <div class="t2-canvas ref-surface" data-refresh-surface="home-adjacent">

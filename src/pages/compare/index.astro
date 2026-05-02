@@ -96,9 +96,9 @@ const laneSignals = categoriesOrdered.map((cat) => ({
   count: byCategory[cat].length,
 }));
 const heroSignals = [
-  { label: 'Editorial pairs', value: allComparisons.length, note: 'sourced head-to-heads' },
+  { label: 'Comparison guides', value: allComparisons.length, note: 'source-backed pages' },
   { label: 'Tools covered', value: comparedToolCount, note: 'across comparison pages' },
-  { label: 'Leading lane', value: topCategoryLabel, note: `${byCategory[topCategory]?.length ?? 0} comparisons` },
+  { label: 'Most covered area', value: topCategoryLabel, note: `${byCategory[topCategory]?.length ?? 0} comparisons` },
   { label: 'Strongest pair avg', value: strongestPairScore.toFixed(1), note: 'highest combined score' },
 ];
 
@@ -129,9 +129,9 @@ const comparisonItems = enriched.map((comparison) => ({
   />
   <OsPageShell
     activeApp="compare"
-    appTitle="diff-index"
-    appSubtitle={`${allComparisons.length} verdicts`}
-    command={`diff --list --pairs=${allComparisons.length}`}
+    appTitle="Compare tools"
+    appSubtitle={`${allComparisons.length} comparisons`}
+    command={`Browse ${allComparisons.length} side-by-side comparisons`}
   >
     <div class="t2-canvas">
     <nav class="t2-breadcrumb" aria-label="Breadcrumb" data-reveal>
@@ -143,15 +143,15 @@ const comparisonItems = enriched.map((comparison) => ({
     <section class="compare-hero" data-pagefind-ignore data-reveal style="--reveal-delay: 60ms;">
       <div class="compare-hero-main">
         <div class="idx-eyebrow compare-eyebrow">
-          <span class="idx-eyebrow-chip idx-eyebrow-accent">Compare desk</span>
-          <span class="idx-eyebrow-chip"><span class="tabular-nums">{allComparisons.length}</span> verdicts</span>
+          <span class="idx-eyebrow-chip idx-eyebrow-accent">Compare tools</span>
+          <span class="idx-eyebrow-chip"><span class="tabular-nums">{allComparisons.length}</span> guides</span>
           <span class="idx-eyebrow-trust">Editorial only. No paid placements.</span>
         </div>
         <h1 class="idx-headline compare-headline">
           Choose the right AI tool <span class="idx-gradient">before switching</span>.
         </h1>
         <p class="idx-subhead compare-subhead">
-          Head-to-head verdicts for the tool pairs people actually search. Compare score gaps, category fit, pricing pressure, and the tradeoffs that decide which product belongs in the stack.
+          Side-by-side guides for the tool pairs people actually search. See scores, pricing notes, strengths, weaknesses, and which tool fits your work.
         </p>
         <div class="t2-ctas compare-ctas">
           <a href="/compare/build/" class="t2-cta t2-cta-primary">
@@ -159,14 +159,14 @@ const comparisonItems = enriched.map((comparison) => ({
             <span class="t2-cta-arrow" aria-hidden="true">&rarr;</span>
           </a>
           <a href="#featured-section" class="t2-cta t2-cta-secondary">
-            Browse top pairs
+            Browse popular comparisons
             <span class="t2-cta-arrow" aria-hidden="true">&rarr;</span>
           </a>
         </div>
       </div>
 
-      <aside class="compare-hero-panel" aria-label="Compare directory signal">
-        <div class="compare-panel-kicker">April 2026 comparison map</div>
+      <aside class="compare-hero-panel" aria-label="Comparison highlights">
+        <div class="compare-panel-kicker">April 2026 comparison guide</div>
         <div class="compare-panel-score">
           <span class="tabular-nums">{strongestPairScore.toFixed(1)}</span>
           <small>/10 top pair average</small>
@@ -185,7 +185,7 @@ const comparisonItems = enriched.map((comparison) => ({
       </aside>
     </section>
 
-    <section class="compare-signal-grid" aria-label="Compare directory signals" data-reveal style="--reveal-delay: 120ms;">
+    <section class="compare-signal-grid" aria-label="Comparison summary" data-reveal style="--reveal-delay: 120ms;">
       {heroSignals.map((signal) => (
         <div class="compare-signal">
           <span class="compare-signal-label">{signal.label}</span>
@@ -196,7 +196,7 @@ const comparisonItems = enriched.map((comparison) => ({
     </section>
 
     <div class="t2-compare-filter compare-filter-premium" data-reveal>
-      <label for="compare-filter" class="compare-filter-label">Find a verdict</label>
+      <label for="compare-filter" class="compare-filter-label">Find a comparison</label>
       <div class="compare-filter-control">
         <input
           id="compare-filter"
@@ -206,7 +206,7 @@ const comparisonItems = enriched.map((comparison) => ({
         />
         <span id="compare-count" class="t2-compare-filter-count tabular-nums">{allComparisons.length}</span>
       </div>
-      <div class="compare-lane-chips" aria-label="Popular comparison lanes">
+      <div class="compare-lane-chips" aria-label="Popular comparison categories">
         {laneSignals.map((cat) => (
           <a href={`#cat-${cat.slug}`} class="compare-lane-chip" data-lane-chip={cat.slug}>
             <span>{cat.label}</span>
@@ -220,7 +220,7 @@ const comparisonItems = enriched.map((comparison) => ({
       <div class="t2-index-group-head compare-group-head">
         <span class="compare-group-mark" aria-hidden="true"></span>
         <div>
-          <p class="compare-group-kicker">Highest-signal verdicts</p>
+          <p class="compare-group-kicker">Popular comparisons</p>
           <h2 class="t2-index-group-title">Top comparisons</h2>
         </div>
         <span class="t2-index-group-count">{featured.length}</span>
@@ -257,7 +257,7 @@ const comparisonItems = enriched.map((comparison) => ({
         <div class="t2-index-group-head compare-group-head">
           <span class="compare-group-mark" aria-hidden="true"></span>
           <div>
-            <p class="compare-group-kicker">Comparison lane</p>
+            <p class="compare-group-kicker">Category</p>
             <h2 class="t2-index-group-title">{categoryLabels[cat] || cat.replace(/^ai-/, '').replace(/-/g, ' ')}</h2>
           </div>
           <span class="t2-index-group-count" data-category-count>{byCategory[cat].length}</span>

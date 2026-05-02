@@ -1,3 +1,4 @@
+@import './fonts.css';
 @import 'tailwindcss';
 
 /* Reserve scrollbar space always. Prevents layout jut when modals lock body scroll. */
@@ -92,6 +93,14 @@ html.theme-morph-fallback *::after {
 
 @layer base {
   :root {
+    --font-sans: 'Metropolis', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    --motion-ease: cubic-bezier(0.16, 1, 0.3, 1);
+    --motion-ease-soft: cubic-bezier(0.22, 1, 0.36, 1);
+    --motion-ease-press: cubic-bezier(0.2, 0, 0, 1);
+    --motion-fast: 160ms;
+    --motion-base: 240ms;
+    --motion-slow: 420ms;
     --bg-base: #05060d;
     --bg-card: rgba(13, 18, 31, 0.78);
     --bg-card-hover: rgba(18, 24, 39, 0.82);
@@ -179,6 +188,15 @@ html.theme-morph-fallback *::after {
     outline-offset: 2px;
     border-radius: 4px;
   }
+
+  :where(.transition-colors, .transition-opacity, .transition-transform, .transition-all) {
+    transition-duration: var(--motion-base);
+    transition-timing-function: var(--motion-ease);
+  }
+
+  :where(a, button, summary, label, input, textarea, select, .tool-card) {
+    -webkit-tap-highlight-color: transparent;
+  }
   /* Anchors inside buttons / cards inherit the focus ring on the
      outer container; don't double-ring them. */
   a:focus-visible > *,
@@ -245,7 +263,7 @@ html.theme-morph-fallback *::after {
   body {
     background-color: var(--bg-base);
     color: var(--text-secondary);
-    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    font-family: var(--font-sans);
     /* 14px on desktop for density; bump to 15.5px on narrow viewports so
        reading length stays comfortable on phones. Applies to anything
        inheriting body font-size including prose content. */
@@ -276,7 +294,7 @@ html.theme-morph-fallback *::after {
 
   /* System mono avoids extra font downloads for small code, kbd, and numeric labels. */
   code, pre, kbd, samp, .font-mono, .tabular-nums {
-    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-family: var(--font-mono);
   }
 
   h1, h2, h3, h4 {
@@ -696,19 +714,21 @@ html.theme-morph-fallback *::after {
 /* Tool card hover lift — subtle translateY + tinted shadow so the card
    feels tactile when hovered. Respects reduced-motion preference. */
 .tool-card {
-  will-change: transform;
+  will-change: transform, box-shadow, border-color, background;
+  transition-duration: var(--motion-base);
+  transition-timing-function: var(--motion-ease);
 }
 @media (hover: hover) and (pointer: fine) {
   .tool-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 24px -12px rgba(34, 211, 238, 0.35),
-                0 4px 10px -4px rgba(56, 189, 248, 0.18);
+    transform: translateY(-3px);
+    box-shadow: 0 18px 34px -18px rgba(34, 211, 238, 0.42),
+                0 8px 18px -12px rgba(56, 189, 248, 0.24);
   }
 }
 /* Mobile tap feedback: brief press-down on :active instead of sticky hover */
 .tool-card:active {
-  transform: translateY(0) scale(0.98);
-  transition: transform 80ms ease-out;
+  transform: translateY(0) scale(0.985);
+  transition: transform 120ms var(--motion-ease-press);
 }
 @media (prefers-reduced-motion: reduce) {
   .tool-card:hover,
@@ -731,7 +751,7 @@ html.theme-morph-fallback *::after {
   border: 0;
   cursor: pointer;
   overflow: hidden;
-  transition: color 140ms ease;
+  transition: color var(--motion-fast) var(--motion-ease);
 }
 .filter-option::before {
   content: "";
@@ -739,14 +759,14 @@ html.theme-morph-fallback *::after {
   inset: 0;
   background: linear-gradient(90deg, rgba(34, 211, 238, 0.18), rgba(34, 211, 238, 0.06) 70%, transparent);
   transform: translateX(-100%);
-  transition: transform 220ms cubic-bezier(0.22, 1, 0.36, 1);
+  transition: transform var(--motion-base) var(--motion-ease);
   z-index: 0;
 }
 .filter-option-label {
   position: relative;
   z-index: 1;
   display: inline-block;
-  transition: transform 220ms cubic-bezier(0.22, 1, 0.36, 1);
+  transition: transform var(--motion-base) var(--motion-ease);
 }
 .filter-option:hover {
   color: var(--text-primary);
@@ -1092,7 +1112,7 @@ html.light .nav-search:hover {
 .nav-search-kbd {
   padding: 2px 6px;
   font-size: 10.5px;
-  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-family: var(--font-mono);
   color: var(--text-secondary);
   background: var(--bg-card-hover);
   border: 1px solid var(--border);
@@ -1398,4 +1418,148 @@ body > footer {
 @media (prefers-reduced-motion: reduce) {
   .idx-eyebrow-livedot { animation: none; }
   .idx-gradient { animation: none; }
+}
+
+/* Keep the OS header stable when Astro swaps between route families. */
+body.os-chrome-body .os-page-shell {
+  --os-panel-top: 14px;
+  --os-panel-x: 18px;
+  --os-panel-height: 56px;
+  --os-panel-clearance: 42px;
+  --os-top-shield-height: calc(var(--os-panel-top) + var(--os-panel-height) + 18px);
+  font-family: var(--font-sans);
+}
+
+body.os-chrome-body .os-page-shell::before {
+  content: "";
+  position: fixed;
+  z-index: 82;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: var(--os-top-shield-height);
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(3, 6, 11, 0.99) 0%, rgba(3, 6, 11, 0.97) 62%, rgba(3, 6, 11, 0.74) 84%, transparent 100%);
+  backdrop-filter: blur(10px);
+}
+
+body.os-chrome-body .os-page-panel {
+  inset: var(--os-panel-top) var(--os-panel-x) auto;
+  z-index: 90;
+  height: var(--os-panel-height);
+  min-height: var(--os-panel-height);
+  overflow: hidden;
+  background:
+    linear-gradient(180deg, rgba(8, 14, 24, 0.97), rgba(5, 10, 18, 0.94)),
+    rgba(5, 10, 18, 0.96);
+}
+
+body.os-chrome-body .os-page-panel-left {
+  flex: 1 1 auto;
+}
+
+body.os-chrome-body .os-page-panel-right {
+  flex: 0 0 auto;
+}
+
+body.os-chrome-body .os-page-brand {
+  flex: 0 0 154px;
+  width: 154px;
+}
+
+body.os-chrome-body .os-page-workspaces {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+body.os-chrome-body .os-page-workspaces a,
+body.os-chrome-body .os-page-panel-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  min-height: 34px;
+  gap: 7px;
+  padding: 8px 12px;
+  font-size: 12px;
+  line-height: 1;
+}
+
+body.os-chrome-body .os-page-nav-icon {
+  display: block;
+  width: 16px;
+  height: 16px;
+  flex: 0 0 auto;
+}
+
+body.os-chrome-body .os-page-clock {
+  flex: 0 0 90px;
+  width: 90px;
+  min-width: 90px;
+  font-variant-numeric: tabular-nums;
+}
+
+body.os-chrome-body .os-page-dock {
+  z-index: 75;
+  top: calc(var(--os-panel-top) + var(--os-panel-height) + 22px);
+}
+
+body.os-chrome-body .os-page-dock a {
+  display: grid;
+  justify-items: center;
+  gap: 7px;
+}
+
+body.os-chrome-body .os-page-dock-icon {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 10px;
+}
+
+body.os-chrome-body .os-page-dock-icon img {
+  display: block;
+  width: 18px;
+  height: 18px;
+}
+
+body.os-chrome-body .os-page-stage {
+  padding-top: calc(var(--os-panel-top) + var(--os-panel-height) + var(--os-panel-clearance));
+}
+
+@media (max-width: 900px) {
+  body.os-chrome-body .os-page-shell {
+    --os-panel-top: 10px;
+    --os-panel-x: 10px;
+    --os-panel-height: 54px;
+    --os-panel-clearance: 24px;
+  }
+
+  body.os-chrome-body .os-page-panel {
+    inset: var(--os-panel-top) var(--os-panel-x) auto;
+    height: var(--os-panel-height);
+    min-height: var(--os-panel-height);
+  }
+
+  body.os-chrome-body .os-page-clock {
+    min-width: 70px;
+  }
+
+  body.os-chrome-body .os-page-dock {
+    top: auto;
+  }
+
+  body.os-chrome-body .os-page-stage,
+  body.os-chrome-body .os-page-stage.is-article {
+    padding-top: calc(var(--os-panel-top) + var(--os-panel-height) + var(--os-panel-clearance));
+  }
+}
+
+@media (max-width: 560px) {
+  body.os-chrome-body .os-page-brand {
+    flex-basis: 44px;
+    width: 44px;
+  }
 }

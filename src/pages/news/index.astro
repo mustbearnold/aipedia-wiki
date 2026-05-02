@@ -188,12 +188,12 @@ const signalCards = [
     note: 'fresh material changes',
   },
   {
-    label: 'Highest signal',
+    label: 'Biggest updates',
     value: (severityCounts.breaking || 0) + (severityCounts.major || 0),
     note: 'breaking or major items',
   },
   {
-    label: 'Most active lane',
+    label: 'Most active area',
     value: leadingCategory?.label ?? 'Tracking',
     note: leadingCategory ? `${leadingCategory.count} stories tagged` : 'category data pending',
   },
@@ -225,9 +225,9 @@ const newsItems = sorted.slice(0, 100).map((item) => ({
   />
   <OsPageShell
     activeApp="news"
-    appTitle="news-daemon"
-    appSubtitle={`${sorted.length} dispatches`}
-    command="tail -f /news/latest"
+    appTitle="AI news"
+    appSubtitle={`${sorted.length} stories`}
+    command="Read latest AI tool news"
   >
     <div class="p3-canvas">
 
@@ -274,7 +274,7 @@ const newsItems = sorted.slice(0, 100).map((item) => ({
         </div>
       </div>
 
-      <div class="p3-newsdesk-signal-grid" data-reveal style="--reveal-delay: 180ms;" aria-label="April 2026 news signals">
+      <div class="p3-newsdesk-signal-grid" data-reveal style="--reveal-delay: 180ms;" aria-label="April 2026 news summary">
         {signalCards.map((card) => (
           <div class="p3-newsdesk-signal-card">
             <span class="p3-newsdesk-signal-label">{card.label}</span>

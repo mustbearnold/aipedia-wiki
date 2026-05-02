@@ -448,7 +448,7 @@ body:has(main .p3-canvas) {
   border-radius: 6px;
   border: 1px solid var(--p3-line);
   background: var(--p3-surface-hover);
-  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-family: var(--font-mono);
   font-size: 11px;
   color: var(--p3-muted);
 }

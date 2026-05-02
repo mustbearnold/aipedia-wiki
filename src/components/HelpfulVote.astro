@@ -66,7 +66,7 @@ const storageKey = `helpful:${pageType}:${pageSlug}`;
       try { localStorage.setItem(key, JSON.stringify({ v: value, at: Date.now() })); } catch (_) {}
       var fb = wrap.querySelector('.helpful-feedback');
       if (fb) {
-        fb.textContent = value === 'yes' ? 'Thanks for the signal.' : 'Noted. Tell us what was off?';
+        fb.textContent = value === 'yes' ? 'Thanks for the feedback.' : 'Noted. Tell us what was off?';
         fb.classList.remove('hidden');
       }
       wrap.querySelectorAll('.helpful-btn').forEach(function (b) {

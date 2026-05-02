@@ -35,6 +35,17 @@ body.os-chrome-body #read-progress {
   --os-blue: #60a5fa;
   --os-amber: #f59e0b;
   --os-red: #fb7185;
+  --os-ease: var(--motion-ease, cubic-bezier(0.16, 1, 0.3, 1));
+  --os-ease-soft: var(--motion-ease-soft, cubic-bezier(0.22, 1, 0.36, 1));
+  --os-ease-press: var(--motion-ease-press, cubic-bezier(0.2, 0, 0, 1));
+  --os-fast: var(--motion-fast, 160ms);
+  --os-base: var(--motion-base, 240ms);
+  --os-slow: var(--motion-slow, 420ms);
+  --os-panel-top: 14px;
+  --os-panel-x: 18px;
+  --os-panel-height: 56px;
+  --os-panel-clearance: 42px;
+  --os-top-shield-height: calc(var(--os-panel-top) + var(--os-panel-height) + 18px);
   position: relative;
   min-height: 100vh;
   width: 100%;
@@ -42,7 +53,21 @@ body.os-chrome-body #read-progress {
   background: var(--os-bg);
   isolation: isolate;
   overflow: hidden;
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: var(--font-sans);
+}
+
+.os-page-shell::before {
+  content: "";
+  position: fixed;
+  z-index: 82;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: var(--os-top-shield-height);
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(3, 6, 11, 0.99) 0%, rgba(3, 6, 11, 0.97) 62%, rgba(3, 6, 11, 0.74) 84%, transparent 100%);
+  backdrop-filter: blur(10px);
 }
 
 .os-page-shell,
@@ -110,19 +135,28 @@ body.os-chrome-body #read-progress {
 
 .os-page-panel {
   position: fixed;
-  inset: 14px 18px auto;
-  z-index: 70;
+  inset: var(--os-panel-top) var(--os-panel-x) auto;
+  z-index: 90;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 14px;
-  min-height: 52px;
+  height: var(--os-panel-height);
+  min-height: var(--os-panel-height);
+  overflow: hidden;
   padding: 8px 10px;
   border: 1px solid var(--os-line);
   border-radius: 18px;
-  background: rgba(5, 10, 18, 0.78);
+  background:
+    linear-gradient(180deg, rgba(8, 14, 24, 0.97), rgba(5, 10, 18, 0.94)),
+    rgba(5, 10, 18, 0.96);
   box-shadow: 0 24px 70px rgba(0, 0, 0, 0.42);
   backdrop-filter: blur(24px);
+  transition:
+    background var(--os-slow) var(--os-ease),
+    border-color var(--os-base) var(--os-ease),
+    box-shadow var(--os-slow) var(--os-ease),
+    transform var(--os-base) var(--os-ease);
 }
 
 .os-page-panel-left,
@@ -141,6 +175,14 @@ body.os-chrome-body #read-progress {
   min-width: 0;
 }
 
+.os-page-panel-left {
+  flex: 1 1 auto;
+}
+
+.os-page-panel-right {
+  flex: 0 0 auto;
+}
+
 .os-page-brand,
 .os-page-panel-chip,
 .os-page-workspaces a,
@@ -149,12 +191,20 @@ body.os-chrome-body #read-progress {
   color: var(--os-text);
   background: rgba(15, 23, 42, 0.58);
   text-decoration: none;
+  transition:
+    background var(--os-base) var(--os-ease),
+    border-color var(--os-base) var(--os-ease),
+    box-shadow var(--os-base) var(--os-ease),
+    color var(--os-fast) var(--os-ease),
+    transform var(--os-base) var(--os-ease);
 }
 
 .os-page-brand {
   display: inline-flex;
   align-items: center;
   gap: 9px;
+  flex: 0 0 154px;
+  width: 154px;
   min-height: 36px;
   padding: 6px 12px 6px 7px;
   border-radius: 12px;
@@ -165,21 +215,39 @@ body.os-chrome-body #read-progress {
 .os-page-brand img {
   border-radius: 8px;
   box-shadow: 0 0 24px rgba(34, 211, 238, 0.24);
+  transition: transform var(--os-base) var(--os-ease), box-shadow var(--os-base) var(--os-ease);
+}
+
+.os-page-brand:hover img {
+  transform: scale(1.04);
+  box-shadow: 0 0 32px rgba(34, 211, 238, 0.34);
 }
 
 .os-page-workspaces {
+  flex: 1 1 auto;
   gap: 4px;
+  min-width: 0;
 }
 
 .os-page-workspaces a,
 .os-page-panel-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
   min-height: 34px;
+  gap: 7px;
   padding: 8px 12px;
   border-radius: 999px;
   font-size: 12px;
   font-weight: 650;
   color: var(--os-muted);
-  transition: border-color 160ms ease, background 160ms ease, color 160ms ease, transform 160ms ease;
+  transition:
+    border-color var(--os-base) var(--os-ease),
+    background var(--os-base) var(--os-ease),
+    box-shadow var(--os-base) var(--os-ease),
+    color var(--os-fast) var(--os-ease),
+    transform var(--os-base) var(--os-ease);
 }
 
 .os-page-workspaces a:hover,
@@ -189,25 +257,53 @@ body.os-chrome-body #read-progress {
   border-color: var(--os-line-bright);
   background: rgba(34, 211, 238, 0.12);
   color: var(--os-teal);
+  box-shadow: 0 12px 28px rgba(34, 211, 238, 0.10);
+}
+
+.os-page-workspaces a:hover,
+.os-page-panel-chip:hover {
+  transform: translateY(-1px);
+}
+
+.os-page-nav-icon {
+  display: block;
+  width: 16px;
+  height: 16px;
+  flex: 0 0 auto;
+  transition: transform var(--os-base) var(--os-ease), opacity var(--os-fast) var(--os-ease);
+}
+
+.os-page-workspaces a:hover .os-page-nav-icon,
+.os-page-panel-chip:hover .os-page-nav-icon,
+.os-page-dock a:hover .os-page-dock-icon img {
+  transform: scale(1.08);
 }
 
 .os-page-clock {
-  min-width: 82px;
+  flex: 0 0 90px;
+  width: 90px;
+  min-width: 90px;
   border: 1px solid var(--os-line);
   border-radius: 12px;
   background: rgba(5, 14, 22, 0.72);
   color: var(--os-teal);
-  font: 750 12px/1 JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace;
+  font: 750 12px/1 var(--font-mono);
+  font-variant-numeric: tabular-nums;
   letter-spacing: 0.08em;
   text-align: center;
   padding: 10px 12px;
+  transition:
+    background var(--os-base) var(--os-ease),
+    border-color var(--os-base) var(--os-ease),
+    box-shadow var(--os-base) var(--os-ease),
+    color var(--os-fast) var(--os-ease);
 }
 
 .os-page-dock {
   position: fixed;
-  z-index: 65;
+  z-index: 75;
   left: 18px;
-  top: 92px;
+  top: calc(var(--os-panel-top) + var(--os-panel-height) + 22px);
   bottom: 18px;
   width: 86px;
   flex-direction: column;
@@ -218,6 +314,10 @@ body.os-chrome-body #read-progress {
   background: rgba(5, 10, 18, 0.74);
   box-shadow: 0 24px 70px rgba(0, 0, 0, 0.34);
   backdrop-filter: blur(20px);
+  transition:
+    background var(--os-slow) var(--os-ease),
+    border-color var(--os-base) var(--os-ease),
+    box-shadow var(--os-slow) var(--os-ease);
 }
 
 .os-page-dock a {
@@ -231,7 +331,12 @@ body.os-chrome-body #read-progress {
   color: var(--os-muted);
   font-size: 11px;
   font-weight: 800;
-  transition: border-color 160ms ease, background 160ms ease, color 160ms ease, transform 160ms ease;
+  transition:
+    border-color var(--os-base) var(--os-ease),
+    background var(--os-base) var(--os-ease),
+    box-shadow var(--os-base) var(--os-ease),
+    color var(--os-fast) var(--os-ease),
+    transform var(--os-base) var(--os-ease);
 }
 
 .os-page-dock a:hover,
@@ -240,9 +345,10 @@ body.os-chrome-body #read-progress {
   border-color: var(--os-line-bright);
   background: rgba(34, 211, 238, 0.12);
   color: var(--os-text);
+  box-shadow: 0 16px 28px rgba(34, 211, 238, 0.10);
 }
 
-.os-page-dock span {
+.os-page-dock-icon {
   display: grid;
   place-items: center;
   width: 28px;
@@ -250,7 +356,20 @@ body.os-chrome-body #read-progress {
   border-radius: 10px;
   background: rgba(34, 211, 238, 0.13);
   color: var(--os-teal);
-  font: 850 11px/1 JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace;
+  transition: background var(--os-base) var(--os-ease), transform var(--os-base) var(--os-ease);
+}
+
+.os-page-dock a:hover .os-page-dock-icon,
+.os-page-dock a.is-active .os-page-dock-icon {
+  background: rgba(34, 211, 238, 0.2);
+  transform: translateY(-1px);
+}
+
+.os-page-dock-icon img {
+  display: block;
+  width: 18px;
+  height: 18px;
+  transition: transform var(--os-base) var(--os-ease);
 }
 
 .os-page-dock b {
@@ -262,7 +381,7 @@ body.os-chrome-body #read-progress {
   width: min(1580px, calc(100vw - 142px));
   min-height: 100vh;
   margin-left: 118px;
-  padding: 112px 24px 48px;
+  padding: calc(var(--os-panel-top) + var(--os-panel-height) + var(--os-panel-clearance)) 24px 48px;
 }
 
 .os-page-stage.is-article {
@@ -273,6 +392,7 @@ body.os-chrome-body #read-progress {
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  flex-wrap: wrap;
   min-height: 38px;
   margin-bottom: 14px;
   padding: 8px 14px;
@@ -280,11 +400,17 @@ body.os-chrome-body #read-progress {
   border-radius: 999px;
   background: rgba(15, 23, 42, 0.62);
   color: var(--os-text);
-  font: 700 13px/1 JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace;
+  font: 700 13px/1.15 var(--font-sans);
   box-shadow: 0 16px 44px rgba(0, 0, 0, 0.24);
+  transition:
+    background var(--os-slow) var(--os-ease),
+    border-color var(--os-base) var(--os-ease),
+    box-shadow var(--os-slow) var(--os-ease),
+    color var(--os-fast) var(--os-ease);
 }
 
-.os-page-prompt-user {
+.os-page-prompt-user,
+.os-page-prompt-label {
   color: var(--os-teal);
 }
 
@@ -301,6 +427,10 @@ body.os-chrome-body #read-progress {
     linear-gradient(180deg, rgba(10, 15, 26, 0.94), rgba(6, 10, 17, 0.92)),
     rgba(5, 10, 18, 0.84);
   box-shadow: 0 28px 80px rgba(0, 0, 0, 0.42), inset 0 1px 0 rgba(255, 255, 255, 0.045);
+  transition:
+    background var(--os-slow) var(--os-ease),
+    border-color var(--os-base) var(--os-ease),
+    box-shadow var(--os-slow) var(--os-ease);
 }
 
 .os-page-window-bar {
@@ -311,7 +441,7 @@ body.os-chrome-body #read-progress {
   border-bottom: 1px solid var(--os-line);
   background: rgba(8, 13, 24, 0.96);
   color: var(--os-muted);
-  font: 750 12px/1 JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace;
+  font: 750 12px/1 var(--font-mono);
 }
 
 .os-page-window-bar strong {
@@ -374,11 +504,76 @@ body.os-chrome-body #read-progress {
   outline-offset: 3px;
 }
 
+.os-page-shell input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  display: inline-grid;
+  place-content: center;
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
+  margin: 0;
+  border: 1px solid rgba(94, 234, 212, 0.42);
+  border-radius: 5px;
+  background:
+    linear-gradient(180deg, rgba(15, 23, 42, 0.92), rgba(6, 11, 20, 0.92)),
+    rgba(8, 13, 24, 0.95);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 0 0 1px rgba(34, 211, 238, 0.06);
+  cursor: pointer;
+  transition:
+    background var(--os-base) var(--os-ease),
+    border-color var(--os-fast) var(--os-ease),
+    box-shadow var(--os-base) var(--os-ease),
+    transform var(--os-fast) var(--os-ease-press);
+}
+
+.os-page-shell input[type="checkbox"]::before {
+  content: "";
+  width: 8px;
+  height: 5px;
+  border-bottom: 2px solid #021016;
+  border-left: 2px solid #021016;
+  transform: rotate(-45deg) scale(0);
+  transform-origin: center;
+  transition: transform var(--os-fast) var(--os-ease);
+}
+
+.os-page-shell input[type="checkbox"]:hover {
+  border-color: rgba(94, 234, 212, 0.72);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.09), 0 0 0 3px rgba(34, 211, 238, 0.09);
+}
+
+.os-page-shell input[type="checkbox"]:checked {
+  border-color: rgba(94, 234, 212, 0.94);
+  background: linear-gradient(135deg, var(--os-cyan), var(--os-teal));
+  box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.12), 0 0 18px rgba(45, 212, 191, 0.22);
+}
+
+.os-page-shell input[type="checkbox"]:checked::before {
+  transform: rotate(-45deg) scale(1);
+}
+
+.os-page-shell input[type="checkbox"]:active {
+  transform: scale(0.94);
+}
+
+.os-page-shell input[type="checkbox"]:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
 body.os-chrome-body .cookie-consent-banner {
   bottom: max(1rem, env(safe-area-inset-bottom));
 }
 
 @media (max-width: 900px) {
+  .os-page-shell {
+    --os-panel-top: 10px;
+    --os-panel-x: 10px;
+    --os-panel-height: 54px;
+    --os-panel-clearance: 24px;
+  }
+
   body.os-chrome-body .cookie-consent-banner {
     bottom: calc(max(0.75rem, env(safe-area-inset-bottom)) + 76px);
   }
@@ -388,8 +583,9 @@ body.os-chrome-body .cookie-consent-banner {
   }
 
   .os-page-panel {
-    inset: 10px 10px auto;
-    min-height: 50px;
+    inset: var(--os-panel-top) var(--os-panel-x) auto;
+    height: var(--os-panel-height);
+    min-height: var(--os-panel-height);
   }
 
   .os-page-workspaces {
@@ -437,7 +633,7 @@ body.os-chrome-body .cookie-consent-banner {
   .os-page-stage.is-article {
     width: 100%;
     margin-left: 0;
-    padding: 88px 10px 94px;
+    padding: calc(var(--os-panel-top) + var(--os-panel-height) + var(--os-panel-clearance)) 10px 94px;
   }
 
   .os-page-prompt {
@@ -468,6 +664,13 @@ body.os-chrome-body .cookie-consent-banner {
 }
 
 @media (max-width: 560px) {
+  .os-page-brand {
+    flex-basis: 44px;
+    width: 44px;
+    justify-content: center;
+    padding-right: 7px;
+  }
+
   .os-page-brand span {
     display: none;
   }

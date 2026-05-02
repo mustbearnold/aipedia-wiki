@@ -285,7 +285,7 @@ const archiveGroups: Record<string, Guide[]> = {
 
 const archiveMeta: Record<string, { label: string; description: string }> = {
   'best-of': { label: 'Ranked use cases', description: 'Ranked choices by job, budget, and workflow.' },
-  'stack': { label: 'Stacks', description: 'Complete tool combinations for real work.' },
+  'stack': { label: 'Tool sets', description: 'Complete tool combinations for real work.' },
   'alternatives': { label: 'Alternatives', description: 'Swap one tool for a better fit.' },
   'comparison': { label: 'Comparisons', description: 'Use case pages with direct tradeoffs.' },
   'other': { label: 'Reference', description: 'Useful pages that do not fit a single lane.' },
@@ -307,9 +307,9 @@ const categoriesCovered = new Set(
 >
   <OsPageShell
     activeApp="manual"
-    appTitle="manual-index"
+    appTitle="Use-case guides"
     appSubtitle={`${allGuides.length} use cases`}
-    command={`man --list --guides=${allGuides.length}`}
+    command="Browse AI tool guides"
   >
   <div class="t2-canvas guides-canvas">
     <nav class="t2-breadcrumb" aria-label="Breadcrumb">
@@ -352,7 +352,7 @@ const categoriesCovered = new Set(
         <div class="guides-section-head">
           <div>
             <p class="guides-section-kicker">Start here</p>
-            <h2>Highest-signal use cases</h2>
+            <h2>Most useful use cases</h2>
           </div>
           <span>Reviewed, useful, and central to the site.</span>
         </div>
@@ -372,7 +372,7 @@ const categoriesCovered = new Set(
       <div class="guides-section-head">
         <div>
           <p class="guides-section-kicker">Browse by work</p>
-          <h2>Intent lanes</h2>
+          <h2>Browse by goal</h2>
         </div>
         <span>Fast paths into the library.</span>
       </div>

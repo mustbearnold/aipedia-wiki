@@ -15,20 +15,27 @@ interface Props {
 
 const {
   activeApp = 'packages',
-  appTitle = 'package-manager',
-  appSubtitle = 'wiki app',
-  command = 'open --workspace=current',
+  appTitle = 'AI tools',
+  appSubtitle = 'Helpful pages',
+  command = 'Browse aipedia.wiki',
   density = 'wide',
 } = Astro.props;
 
-const apps: Array<{ id: ActiveApp; token: string; label: string; href: string }> = [
-  { id: 'ask', token: 'AI', label: 'Ask', href: '/search/' },
-  { id: 'packages', token: 'PK', label: 'Packages', href: '/tools/' },
-  { id: 'compare', token: 'DF', label: 'Compare', href: '/compare/' },
-  { id: 'news', token: 'NW', label: 'News', href: '/news/' },
-  { id: 'manual', token: 'MN', label: 'Manual', href: '/guides/' },
-  { id: 'stack', token: 'SB', label: 'Stack', href: '/stack-builder/' },
-  { id: 'trust', token: 'TM', label: 'Trust', href: '/about/scoring/' },
+const apps: Array<{ id: ActiveApp; icon: string; label: string; href: string }> = [
+  { id: 'ask', icon: '/icons/os/ask.svg', label: 'Search', href: '/search/' },
+  { id: 'packages', icon: '/icons/os/tools.svg', label: 'Tools', href: '/tools/' },
+  { id: 'compare', icon: '/icons/os/compare.svg', label: 'Compare', href: '/compare/' },
+  { id: 'news', icon: '/icons/os/news.svg', label: 'News', href: '/news/' },
+  { id: 'manual', icon: '/icons/os/guides.svg', label: 'Guides', href: '/guides/' },
+  { id: 'stack', icon: '/icons/os/build.svg', label: 'Build', href: '/stack-builder/' },
+  { id: 'trust', icon: '/icons/os/trust.svg', label: 'Trust', href: '/about/scoring/' },
+];
+
+const appMap = Object.fromEntries(apps.map(app => [app.id, app])) as Record<ActiveApp, typeof apps[number]>;
+const workspaceApps = [appMap.packages, appMap.compare, appMap.news, appMap.manual];
+const panelApps = [
+  { ...appMap.ask, label: 'Find Tools' },
+  appMap.news,
 ];
 ---
 
@@ -40,31 +47,39 @@ const apps: Array<{ id: ActiveApp; token: string; label: string; href: string }>
     <span class="os-page-beam os-page-beam-two"></span>
   </div>
 
-  <header class="os-page-panel" aria-label="aipedia.wiki desktop panel">
+  <header class="os-page-panel" aria-label="aipedia.wiki navigation">
     <div class="os-page-panel-left">
       <a class="os-page-brand" href="/" data-astro-prefetch="viewport" aria-label="aipedia.wiki home">
         <img src="/brand/aipedia-logo-crystal-cyan-128.png" alt="" width="24" height="24" />
         <span>aipedia.wiki</span>
       </a>
-      <nav class="os-page-workspaces" aria-label="Primary workspaces">
-        <a class:list={[activeApp === 'packages' && 'is-active']} href="/tools/">Packages</a>
-        <a class:list={[activeApp === 'compare' && 'is-active']} href="/compare/">Diff</a>
-        <a class:list={[activeApp === 'news' && 'is-active']} href="/news/">Intel</a>
-        <a class:list={[activeApp === 'manual' && 'is-active']} href="/guides/">Manual</a>
+      <nav class="os-page-workspaces" aria-label="Main pages">
+        {workspaceApps.map((app) => (
+          <a class:list={[activeApp === app.id && 'is-active']} href={app.href}>
+            <img class="os-page-nav-icon" src={app.icon} alt="" width="16" height="16" loading="eager" decoding="async" />
+            <span>{app.label}</span>
+          </a>
+        ))}
       </nav>
     </div>
     <div class="os-page-panel-right">
-      <a class:list={['os-page-panel-chip', activeApp === 'ask' && 'is-active']} href="/search/">Ask Finder</a>
-      <a class:list={['os-page-panel-chip', activeApp === 'news' && 'is-active']} href="/news/">News</a>
+      {panelApps.map((app) => (
+        <a class:list={['os-page-panel-chip', activeApp === app.id && 'is-active']} href={app.href}>
+          <img class="os-page-nav-icon" src={app.icon} alt="" width="16" height="16" loading="eager" decoding="async" />
+          <span>{app.label}</span>
+        </a>
+      ))}
       <ThemeToggle />
       <div class="os-page-clock" data-os-page-clock>--:--</div>
     </div>
   </header>
 
-  <nav class="os-page-dock" aria-label="Application dock">
+  <nav class="os-page-dock" aria-label="Main sections">
     {apps.map((app) => (
       <a class:list={[activeApp === app.id && 'is-active']} href={app.href} data-astro-prefetch="viewport">
-        <span>{app.token}</span>
+        <span class="os-page-dock-icon">
+          <img src={app.icon} alt="" width="18" height="18" loading="eager" decoding="async" />
+        </span>
         <b>{app.label}</b>
       </a>
     ))}
@@ -72,7 +87,7 @@ const apps: Array<{ id: ActiveApp; token: string; label: string; href: string }>
 
   <div class:list={['os-page-stage', density === 'article' && 'is-article']}>
     <div class="os-page-prompt" aria-hidden="true">
-      <span class="os-page-prompt-user">root@aipedia</span><span class="os-page-prompt-path">:~$</span>
+      <span class="os-page-prompt-label">Now viewing</span>
       <span class="os-page-prompt-command">{command}</span>
     </div>
 

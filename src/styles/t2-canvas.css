@@ -669,7 +669,7 @@ button.t2-cta {
 }
 .t2-prose a:hover { border-bottom-color: currentColor; }
 .t2-prose code {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-family: var(--font-mono);
   font-size: 0.9em;
   background: var(--t2-surface);
   border: 1px solid var(--t2-line);
@@ -1560,9 +1560,7 @@ button.t2-cta {
   white-space: nowrap;
 }
 .t2-cat-toggle input {
-  width: 15px;
-  height: 15px;
-  accent-color: var(--t2-accent-text);
+  flex: 0 0 16px;
 }
 .t2-cat-filter-summary {
   flex: 1 0 100%;

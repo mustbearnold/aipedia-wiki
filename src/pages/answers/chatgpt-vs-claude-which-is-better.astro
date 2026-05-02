@@ -30,9 +30,9 @@ const answerLD = JSON.stringify({
   <script type="application/ld+json" set:html={answerLD} />
   <OsPageShell
     activeApp="ask"
-    appTitle="answer-viewer"
+    appTitle="Answer"
     appSubtitle="Definitive answer"
-    command={`ask ${Astro.url.pathname}`}
+    command="Read this answer"
     density="article"
   >
   <Breadcrumb items={[{ label: 'Answers', href: '/answers/' }, { label: 'ChatGPT vs Claude: which is better?' }]} />

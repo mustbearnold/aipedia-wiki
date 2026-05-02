@@ -214,9 +214,9 @@ const tocHeadings = (headings ?? []).filter((h) => h.depth === 2).map((h) => ({ 
 
   <OsPageShell
     activeApp="compare"
-    appTitle="diff-viewer"
-    appSubtitle={`${tools.length} package compare`}
-    command={`diff /compare/${slug}`}
+    appTitle="Tool comparison"
+    appSubtitle={`${tools.length} tools compared`}
+    command={`Compare ${title}`}
     density="article"
   >
     <div class="t2-canvas">
@@ -391,7 +391,7 @@ const tocHeadings = (headings ?? []).filter((h) => h.depth === 2).map((h) => ({ 
             ))}
           </ol>
         ) : (
-          <p>No recent news signal is attached to these tools yet.</p>
+          <p>No recent news update is attached to these tools yet.</p>
         )}
       </div>
     </section>

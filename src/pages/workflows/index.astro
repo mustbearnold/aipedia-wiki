@@ -33,23 +33,23 @@ const sorted = entries
 >
   <OsPageShell
     activeApp="manual"
-    appTitle="workflow-manual"
-    appSubtitle={`${sorted.length} stacks`}
-    command={`man /workflows --stacks=${sorted.length}`}
+    appTitle="Workflow guides"
+    appSubtitle={`${sorted.length} tool sets`}
+    command="Browse workflow guides"
   >
   <Breadcrumb items={[{ label: 'Workflows' }]} />
 
   <section class="idx-hero" data-pagefind-ignore>
     <div class="idx-eyebrow">
       <span class="idx-eyebrow-chip idx-eyebrow-accent">Production workflows</span>
-      <span class="idx-eyebrow-chip"><span class="tabular-nums">{sorted.length}</span> stack{sorted.length === 1 ? '' : 's'}</span>
+      <span class="idx-eyebrow-chip"><span class="tabular-nums">{sorted.length}</span> tool set{sorted.length === 1 ? '' : 's'}</span>
       <span class="idx-eyebrow-trust">Costs and handoffs included.</span>
     </div>
     <h1 class="idx-headline">
       Workflow <span class="idx-gradient">tutorials</span>.
     </h1>
     <p class="idx-subhead">
-      Real stacks operators use to ship real things. Each tutorial names the specific tools, monthly cost, and manual review points.
+      Practical tool sets for real work. Each tutorial names the tools, monthly cost, and places where a person should check the result.
     </p>
   </section>
 

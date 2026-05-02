@@ -63,9 +63,9 @@ const nonShutdownCount = sorted.filter((tool) => tool.cause !== 'shutdown').leng
 >
   <OsPageShell
     activeApp="trust"
-    appTitle="archive-viewer"
-    appSubtitle={`${total} records`}
-    command={`grep --dead /tools --count=${total}`}
+    appTitle="Discontinued tools"
+    appSubtitle={`${total} closed tools`}
+    command="Browse discontinued AI tools"
   >
   <Breadcrumb items={[{ label: 'Dead Tools' }]} />
 

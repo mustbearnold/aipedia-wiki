@@ -90,19 +90,17 @@ const verifiedIsRecent = verifiedIsValid && verifiedDaysSince > 14 && verifiedDa
 
 const tocHeadings = (headings ?? []).filter((h) => h.depth === 2).map((h) => ({ slug: h.slug, text: h.text }));
 const sectionKey = (articleSection ?? '').toLowerCase();
-const pathParts = Astro.url.pathname.split('/').filter(Boolean);
-const routeSlug = pathParts[pathParts.length - 1] ?? 'article';
 const osActiveApp = sectionKey.includes('news') ? 'news' : 'manual';
 const osAppTitle = sectionKey.includes('news')
-  ? 'news-reader'
+  ? 'News article'
   : sectionKey.includes('trend')
-    ? 'trend-reader'
+    ? 'Trend guide'
     : sectionKey.includes('workflow')
-      ? 'workflow-manual'
+      ? 'Workflow guide'
       : sectionKey.includes('report')
-        ? 'report-viewer'
-        : 'article-viewer';
-const osCommand = sectionKey.includes('news') ? `less /news/${routeSlug}` : `less ${Astro.url.pathname}`;
+        ? 'Editorial report'
+        : 'Article';
+const osCommand = `Read ${title}`;
 ---
 
 <BaseLayout

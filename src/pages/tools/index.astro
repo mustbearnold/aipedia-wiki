@@ -6,6 +6,7 @@ import OsPageShell from '../../components/os/OsPageShell.astro';
 import BreadcrumbLD from '../../components/seo/BreadcrumbLD.astro';
 import ItemListLD from '../../components/seo/ItemListLD.astro';
 import { categoryLabel } from '../../utils/tool-metadata';
+import { shortenPrice } from '../../utils/shorten-price';
 import { getCollection } from 'astro:content';
 
 const allTools = await getCollection('tools');
@@ -64,6 +65,27 @@ const pricingOptions = Array.from(pricingCounts.entries())
   .map(([slug, count]) => ({ slug, label: pricingLabels[slug] ?? slug, count }))
   .sort((a, b) => a.label.localeCompare(b.label));
 
+const companyDisplayNames: Record<string, string> = {
+  anthropic: 'Anthropic',
+  google: 'Google',
+  groq: 'Groq',
+  microsoft: 'Microsoft',
+  'microsoft-github': 'Microsoft/GitHub',
+  ollama: 'Ollama',
+  openai: 'OpenAI',
+  xai: 'xAI',
+};
+
+const companyLabel = (value?: string | null) => {
+  const raw = String(value ?? '').trim();
+  if (!raw) return '';
+  const key = raw.toLowerCase();
+  return companyDisplayNames[key] ?? raw
+    .replace(/[-_]+/g, ' ')
+    .replace(/\b\w/g, letter => letter.toUpperCase())
+    .replace(/\bAi\b/g, 'AI');
+};
+
 const nowMs = Date.now();
 const thirtyDaysMs = 30 * 86400000;
 const signalCounts = scoredTools.reduce((acc, { tool }) => {
@@ -103,9 +125,9 @@ const categoryEmojiMap: Record<string, string> = {
   />
   <OsPageShell
     activeApp="packages"
-    appTitle="package-manager"
-    appSubtitle={`${scoredTools.length} packages`}
-    command={`apt search --tools=${scoredTools.length}`}
+    appTitle="AI tool directory"
+    appSubtitle={`${scoredTools.length} reviewed tools`}
+    command={`Browse ${scoredTools.length} reviewed tools`}
   >
     <Breadcrumb items={[{ label: 'All Tools' }]} />
 
@@ -129,19 +151,32 @@ const categoryEmojiMap: Record<string, string> = {
 
   <section class="tools-filter-panel" data-tools-controls data-pagefind-ignore>
     <div class="tools-filter-row tools-filter-row-primary">
-      <label class="tools-search" for="tools-page-search">
-        <svg class="tools-search-icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M10.8 18.1a7.3 7.3 0 1 1 0-14.6 7.3 7.3 0 0 1 0 14.6Zm5.1-2 4.6 4.6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-        </svg>
-        <input
-          id="tools-page-search"
-          type="search"
-          autocomplete="off"
-          spellcheck="false"
-          placeholder="Search tools, use cases, tags"
-          data-tools-search
-        />
-      </label>
+      <div class="tools-search-wrap">
+        <label class="tools-search" for="tools-page-search">
+          <svg class="tools-search-icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M10.8 18.1a7.3 7.3 0 1 1 0-14.6 7.3 7.3 0 0 1 0 14.6Zm5.1-2 4.6 4.6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
+          <input
+            id="tools-page-search"
+            type="search"
+            autocomplete="off"
+            spellcheck="false"
+            placeholder="Search tools, use cases, tags"
+            role="combobox"
+            aria-autocomplete="list"
+            aria-expanded="false"
+            aria-controls="tools-search-results"
+            data-tools-search
+          />
+        </label>
+        <div class="tools-search-results" id="tools-search-results" role="listbox" data-tools-search-panel hidden>
+          <div class="tools-search-results-head">
+            <span data-tools-search-heading>Top matches</span>
+            <strong data-tools-search-count></strong>
+          </div>
+          <div class="tools-search-results-list" data-tools-search-results></div>
+        </div>
+      </div>
 
       <div class="tools-select-field" data-tools-select="sort" data-value="score-desc">
         <span class="tools-select-caption" id="tools-sort-label">Sort</span>
@@ -298,7 +333,14 @@ const categoryEmojiMap: Record<string, string> = {
           data-open-source={openSource ? '1' : '0'}
           data-github={hasGithub ? '1' : '0'}
           data-fresh={fresh ? '1' : '0'}
+          data-status={tool.data.status}
+          data-search-primary={[tool.data.title, tool.data.company, slug].filter(Boolean).join(' ').toLowerCase()}
           data-search={searchText}
+          data-url={`/tools/${slug}/`}
+          data-display-title={tool.data.title}
+          data-company={companyLabel(tool.data.company)}
+          data-category-label={categoryLabel(cat)}
+          data-price-display={shortenPrice(tool.data.price_range ?? tool.data.pricing_model ?? 'Free')}
         >
           <ToolCard
             title={tool.data.title}
@@ -330,6 +372,11 @@ const categoryEmojiMap: Record<string, string> = {
       if (!root || !grid) return;
 
       const input = root.querySelector('[data-tools-search]');
+      const searchWrap = root.querySelector('.tools-search-wrap');
+      const searchPanel = root.querySelector('[data-tools-search-panel]');
+      const searchResults = root.querySelector('[data-tools-search-results]');
+      const searchHeading = root.querySelector('[data-tools-search-heading]');
+      const searchCount = root.querySelector('[data-tools-search-count]');
       const selects = Array.from(root.querySelectorAll('[data-tools-select]'));
       const category = root.querySelector('[data-tools-select="category"]');
       const pricing = root.querySelector('[data-tools-select="pricing"]');
@@ -345,12 +392,57 @@ const categoryEmojiMap: Record<string, string> = {
       const empty = document.querySelector('[data-tools-empty]');
       const emptyReset = document.querySelector('[data-tools-empty-reset]');
       const items = Array.from(grid.querySelectorAll('[data-tools-item]'));
+      const reducedMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)');
+      let gridHasAnimated = false;
 
       const numberFrom = (item, key) => Number(item.getAttribute(key) || 0);
       const normalize = (value) => String(value || '').trim().toLowerCase();
+      const genericSearchTerms = new Set(['ai', 'app', 'apps', 'tool', 'tools', 'agent', 'agents', 'chat', 'code', 'image', 'video', 'voice', 'audio', 'music', 'search', 'writing', 'design', 'automation', 'research', 'seo', 'data']);
+      const escapeHtml = (value) => String(value || '').replace(/[&<>"']/g, (char) => ({
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#39;',
+      }[char]));
       const selectValue = (select) => select?.dataset.value || '';
       const selectedText = (select) => select?.querySelector('[data-tools-option].is-selected')?.dataset.label || '';
       const optionList = (select) => Array.from(select?.querySelectorAll('[data-tools-option]') || []);
+      const titleFor = (item) => normalize(item.getAttribute('data-display-title'));
+      const primaryFor = (item) => item.getAttribute('data-search-primary') || '';
+      const exactPrimaryMatch = (item, terms) => {
+        const tokens = primaryFor(item).split(/[^a-z0-9]+/).filter(Boolean);
+        return terms.every((term) => tokens.includes(term));
+      };
+      const searchModeFor = (terms) => {
+        if (!terms.length) return 'none';
+        const query = terms.join(' ');
+        if (items.some((item) => titleFor(item) === query)) return 'exact-title';
+        const meaningfulTerms = terms.filter((term) => term.length >= 3 && !genericSearchTerms.has(term));
+        if (meaningfulTerms.length && items.some((item) => exactPrimaryMatch(item, meaningfulTerms))) return 'primary';
+        return 'broad';
+      };
+      const matchesSearchTerms = (item, terms, mode) => {
+        if (!terms.length) return true;
+        const query = terms.join(' ');
+        const title = titleFor(item);
+        if (mode === 'exact-title') {
+          if (title === query) return true;
+          return terms.length === 1 && title.startsWith(`${query} `) && item.getAttribute('data-status') !== 'beta';
+        }
+        const source = mode === 'primary' ? primaryFor(item) : item.getAttribute('data-search') || '';
+        return terms.every((term) => source.includes(term));
+      };
+      let searchHasFocus = false;
+      const closeSearchResults = () => {
+        if (searchPanel) searchPanel.hidden = true;
+        input?.setAttribute('aria-expanded', 'false');
+      };
+      const openSearchResults = () => {
+        if (!searchPanel) return;
+        searchPanel.hidden = false;
+        input?.setAttribute('aria-expanded', 'true');
+      };
       const closeSelect = (select) => {
         const trigger = select?.querySelector('[data-tools-select-trigger]');
         const menu = select?.querySelector('[data-tools-select-menu]');
@@ -426,10 +518,120 @@ const categoryEmojiMap: Record<string, string> = {
         sorted.forEach((item, index) => {
           item.style.order = String(index);
         });
+        return sorted;
+      };
+
+      const captureGridLayout = () => new Map(items
+        .filter((item) => !item.hidden)
+        .map((item) => [item, item.getBoundingClientRect()]));
+
+      const animateGridLayout = (beforeRects, visibleItems) => {
+        if (!gridHasAnimated) {
+          gridHasAnimated = true;
+          return;
+        }
+        if (reducedMotion?.matches || !visibleItems.length) return;
+
+        requestAnimationFrame(() => {
+          visibleItems.forEach((item) => {
+            item.getAnimations?.().forEach((animation) => animation.cancel());
+            const after = item.getBoundingClientRect();
+            const before = beforeRects.get(item);
+            if (!before) {
+              item.animate([
+                { opacity: 0, transform: 'translateY(8px) scale(0.985)' },
+                { opacity: 1, transform: 'translateY(0) scale(1)' },
+              ], {
+                duration: 240,
+                easing: 'cubic-bezier(0.16, 1, 0.3, 1)',
+              });
+              return;
+            }
+
+            const dx = before.left - after.left;
+            const dy = before.top - after.top;
+            if (Math.abs(dx) < 0.5 && Math.abs(dy) < 0.5) return;
+            item.animate([
+              { transform: `translate(${dx}px, ${dy}px)` },
+              { transform: 'translate(0, 0)' },
+            ], {
+              duration: 260,
+              easing: 'cubic-bezier(0.16, 1, 0.3, 1)',
+            });
+          });
+        });
+      };
+
+      const renderSearchResults = (visibleItems, terms) => {
+        if (!searchResults || !searchPanel || !input) return;
+        if (!searchHasFocus) {
+          closeSearchResults();
+          return;
+        }
+
+        const hasQuery = terms.length > 0;
+        const resultItems = hasQuery ? [...visibleItems].sort((a, b) => {
+          const rank = (item) => {
+            const title = titleFor(item);
+            const company = normalize(item.getAttribute('data-company'));
+            const category = normalize(item.getAttribute('data-category-label'));
+            const haystack = item.getAttribute('data-search') || '';
+            return terms.reduce((total, term) => {
+              if (title === term) return total + 140;
+              if (title.startsWith(term)) return total + 120;
+              if (title.includes(term)) return total + 90;
+              if (company.includes(term)) return total + 50;
+              if (category.includes(term)) return total + 25;
+              if (haystack.includes(term)) return total + 10;
+              return total;
+            }, 0);
+          };
+          const rankDelta = rank(b) - rank(a);
+          if (rankDelta !== 0) return rankDelta;
+          return numberFrom(b, 'data-score') - numberFrom(a, 'data-score');
+        }) : visibleItems;
+        const shown = resultItems.slice(0, 7);
+        if (searchHeading) searchHeading.textContent = hasQuery ? 'Top matches' : 'Popular tools';
+        if (searchCount) searchCount.textContent = `${shown.length} shown`;
+
+        if (!shown.length) {
+          searchResults.innerHTML = `
+            <div class="tools-search-no-results" role="option" aria-disabled="true">
+              No matching tools. Try a broader word or clear a filter.
+            </div>
+          `;
+          openSearchResults();
+          return;
+        }
+
+        searchResults.innerHTML = shown.map((item, index) => {
+          const title = item.getAttribute('data-display-title') || '';
+          const company = item.getAttribute('data-company') || '';
+          const category = item.getAttribute('data-category-label') || 'AI tool';
+          const price = item.getAttribute('data-price-display') || '';
+          const url = item.getAttribute('data-url') || '#';
+          const score = Number(item.getAttribute('data-score') || 0).toFixed(1);
+          const subline = [company, category].filter(Boolean).join(' · ');
+          return `
+            <a class="tools-search-result" href="${escapeHtml(url)}" role="option" id="tools-search-result-${index}" tabindex="-1">
+              <span class="tools-search-result-main">
+                <strong>${escapeHtml(title)}</strong>
+                <small>${escapeHtml(subline || category)}</small>
+              </span>
+              <span class="tools-search-result-meta">
+                <span>${escapeHtml(price)}</span>
+                <b>${escapeHtml(score)}</b>
+              </span>
+            </a>
+          `;
+        }).join('');
+        openSearchResults();
       };
 
       const apply = (syncUrl = true) => {
         const terms = normalize(input?.value).split(/\s+/).filter(Boolean);
+        const searchMode = searchModeFor(terms);
+        const beforeRects = captureGridLayout();
         const categoryValue = selectValue(category);
         const pricingValue = selectValue(pricing);
         const strongOnly = !!strong?.checked;
@@ -440,9 +642,8 @@ const categoryEmojiMap: Record<string, string> = {
         const visibleItems = [];
 
         items.forEach((item) => {
-          const haystack = item.getAttribute('data-search') || '';
           const categories = (item.getAttribute('data-categories') || '').split(/\s+/).filter(Boolean);
-          const matchesTerms = terms.every((term) => haystack.includes(term));
+          const matchesTerms = matchesSearchTerms(item, terms, searchMode);
           const matchesCategory = !categoryValue || categories.includes(categoryValue);
           const matchesPricing = !pricingValue || item.getAttribute('data-pricing') === pricingValue;
           const matchesScore = !strongOnly || numberFrom(item, 'data-score') >= 8;
@@ -455,7 +656,9 @@ const categoryEmojiMap: Record<string, string> = {
           if (visible) visibleItems.push(item);
         });
 
-        sortItems(visibleItems);
+        const orderedVisibleItems = sortItems(visibleItems);
+        animateGridLayout(beforeRects, orderedVisibleItems);
+        renderSearchResults(orderedVisibleItems, terms);
 
         if (visibleCount) visibleCount.textContent = String(visibleItems.length);
         if (empty) empty.hidden = visibleItems.length !== 0;
@@ -542,12 +745,55 @@ const categoryEmojiMap: Record<string, string> = {
 
       document.addEventListener('click', (event) => {
         if (!root.contains(event.target)) closeAllSelects();
+        if (searchWrap && !searchWrap.contains(event.target)) {
+          searchHasFocus = false;
+          closeSearchResults();
+        }
       });
       document.addEventListener('keydown', (event) => {
-        if (event.key === 'Escape') closeAllSelects();
+        if (event.key === 'Escape') {
+          closeAllSelects();
+          closeSearchResults();
+        }
       });
 
-      input?.addEventListener('input', () => apply());
+      input?.addEventListener('focus', () => {
+        searchHasFocus = true;
+        apply(false);
+      });
+      input?.addEventListener('input', () => {
+        searchHasFocus = true;
+        apply();
+      });
+      input?.addEventListener('keydown', (event) => {
+        if (event.key === 'ArrowDown' && searchPanel && !searchPanel.hidden) {
+          const first = searchPanel.querySelector('.tools-search-result');
+          if (first) {
+            event.preventDefault();
+            first.focus();
+          }
+        }
+        if (event.key === 'Escape') {
+          event.preventDefault();
+          closeSearchResults();
+        }
+      });
+      searchPanel?.addEventListener('keydown', (event) => {
+        const links = Array.from(searchPanel.querySelectorAll('.tools-search-result'));
+        const index = links.indexOf(document.activeElement);
+        if (event.key === 'Escape') {
+          event.preventDefault();
+          closeSearchResults();
+          input?.focus();
+          return;
+        }
+        if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
+          event.preventDefault();
+          const direction = event.key === 'ArrowDown' ? 1 : -1;
+          const next = index === -1 ? 0 : (index + direction + links.length) % links.length;
+          links[next]?.focus();
+        }
+      });
       strong?.addEventListener('change', () => apply());
       freeStart?.addEventListener('change', () => apply());
       openSource?.addEventListener('change', () => apply());
@@ -572,6 +818,10 @@ const categoryEmojiMap: Record<string, string> = {
 
   <style>
     .tools-filter-panel {
+      --tools-ease: var(--motion-ease, cubic-bezier(0.16, 1, 0.3, 1));
+      --tools-fast: var(--motion-fast, 160ms);
+      --tools-base: var(--motion-base, 240ms);
+      --tools-slow: var(--motion-slow, 420ms);
       display: grid;
       gap: 12px;
       margin: 0 0 18px;
@@ -580,6 +830,10 @@ const categoryEmojiMap: Record<string, string> = {
       border-radius: 8px;
       background: var(--bg-card);
       background: color-mix(in srgb, var(--bg-card) 88%, transparent);
+      transition:
+        background var(--tools-slow) var(--tools-ease),
+        border-color var(--tools-base) var(--tools-ease),
+        box-shadow var(--tools-base) var(--tools-ease);
     }
 
     .tools-filter-row {
@@ -603,10 +857,16 @@ const categoryEmojiMap: Record<string, string> = {
       padding-top: 2px;
     }
 
+    .tools-search-wrap,
     .tools-search,
     .tools-select-field,
     .tools-score-toggle {
       min-width: 0;
+    }
+
+    .tools-search-wrap {
+      position: relative;
+      z-index: 45;
     }
 
     .tools-search {
@@ -618,16 +878,27 @@ const categoryEmojiMap: Record<string, string> = {
       border-radius: 8px;
       background: var(--bg-primary);
       padding: 0 13px;
+      transition:
+        background var(--tools-base) var(--tools-ease),
+        border-color var(--tools-base) var(--tools-ease),
+        box-shadow var(--tools-base) var(--tools-ease),
+        transform var(--tools-base) var(--tools-ease);
     }
 
     .tools-search:focus-within {
       border-color: rgba(34, 211, 238, 0.45);
       box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.08);
+      transform: translateY(-1px);
     }
 
     .tools-search-icon {
       flex: 0 0 auto;
       color: var(--accent-primary-text);
+      transition: color var(--tools-fast) var(--tools-ease), transform var(--tools-base) var(--tools-ease);
+    }
+
+    .tools-search:focus-within .tools-search-icon {
+      transform: scale(1.08);
     }
 
     .tools-search input,
@@ -642,11 +913,165 @@ const categoryEmojiMap: Record<string, string> = {
       min-width: 0;
       font-size: 15px;
       font-weight: 700;
+      transition: color var(--tools-fast) var(--tools-ease);
     }
 
     .tools-search input::placeholder {
       color: var(--text-muted);
       opacity: 0.82;
+    }
+
+    .tools-search-results {
+      position: absolute;
+      z-index: 70;
+      top: calc(100% + 8px);
+      right: 0;
+      left: 0;
+      overflow: hidden;
+      border: 1px solid rgba(34, 211, 238, 0.28);
+      border-radius: 10px;
+      background: rgb(8, 13, 24);
+      box-shadow: 0 24px 58px rgba(0, 0, 0, 0.46), 0 0 0 1px rgba(255, 255, 255, 0.04);
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      transform-origin: top center;
+      transition:
+        opacity var(--tools-fast) var(--tools-ease),
+        transform var(--tools-base) var(--tools-ease),
+        border-color var(--tools-base) var(--tools-ease),
+        box-shadow var(--tools-slow) var(--tools-ease);
+    }
+
+    .tools-search-results[hidden] {
+      display: none;
+    }
+
+    @starting-style {
+      .tools-search-results:not([hidden]) {
+        opacity: 0;
+        transform: translateY(-8px) scale(0.985);
+      }
+    }
+
+    .tools-search-results-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      min-height: 34px;
+      border-bottom: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 11px;
+      font-weight: 850;
+      letter-spacing: 0.08em;
+      padding: 0 12px;
+      text-transform: uppercase;
+    }
+
+    .tools-search-results-head strong {
+      color: var(--accent-primary-text);
+      font-variant-numeric: tabular-nums;
+      letter-spacing: 0;
+      text-transform: none;
+    }
+
+    .tools-search-results-list {
+      display: grid;
+      max-height: min(390px, 58vh);
+      overflow-y: auto;
+      padding: 6px;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(94, 234, 212, 0.36) transparent;
+    }
+
+    :global(.tools-search-result) {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 14px;
+      min-height: 54px;
+      border-radius: 8px;
+      color: var(--text-secondary);
+      padding: 8px 10px;
+      text-decoration: none;
+      transition:
+        background var(--tools-fast) var(--tools-ease),
+        color var(--tools-fast) var(--tools-ease),
+        transform var(--tools-base) var(--tools-ease);
+    }
+
+    :global(.tools-search-result:hover),
+    :global(.tools-search-result:focus-visible) {
+      background: rgba(34, 211, 238, 0.11);
+      color: var(--text-primary);
+      outline: none;
+      transform: translateX(2px);
+    }
+
+    :global(.tools-search-result-main),
+    :global(.tools-search-result-meta) {
+      min-width: 0;
+    }
+
+    :global(.tools-search-result-main) {
+      display: grid;
+      gap: 2px;
+    }
+
+    :global(.tools-search-result-main strong),
+    :global(.tools-search-result-main small),
+    :global(.tools-search-result-meta span) {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    :global(.tools-search-result-main strong) {
+      color: var(--text-primary);
+      font-size: 14px;
+      font-weight: 850;
+    }
+
+    :global(.tools-search-result-main small) {
+      color: var(--text-muted);
+      font-size: 12px;
+      font-weight: 650;
+      transition: color var(--tools-fast) var(--tools-ease);
+    }
+
+    :global(.tools-search-result-meta) {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 8px;
+      color: var(--text-muted);
+      font-size: 11px;
+      font-weight: 750;
+      max-width: min(42vw, 360px);
+    }
+
+    :global(.tools-search-result-meta b) {
+      display: inline-grid;
+      place-items: center;
+      min-width: 38px;
+      height: 26px;
+      border: 1px solid rgba(94, 234, 212, 0.24);
+      border-radius: 999px;
+      color: var(--accent-primary-text);
+      font-size: 12px;
+      font-variant-numeric: tabular-nums;
+      transition:
+        background var(--tools-fast) var(--tools-ease),
+        border-color var(--tools-fast) var(--tools-ease),
+        color var(--tools-fast) var(--tools-ease),
+        transform var(--tools-base) var(--tools-ease);
+    }
+
+    :global(.tools-search-no-results) {
+      color: var(--text-muted);
+      font-size: 13px;
+      font-weight: 750;
+      padding: 18px 12px;
     }
 
     .tools-select-field {
@@ -677,6 +1102,12 @@ const categoryEmojiMap: Record<string, string> = {
       font-weight: 750;
       padding: 0 11px;
       text-align: left;
+      transition:
+        background var(--tools-base) var(--tools-ease),
+        border-color var(--tools-base) var(--tools-ease),
+        box-shadow var(--tools-base) var(--tools-ease),
+        color var(--tools-fast) var(--tools-ease),
+        transform var(--tools-base) var(--tools-ease);
     }
 
     .tools-select-trigger:hover,
@@ -685,6 +1116,7 @@ const categoryEmojiMap: Record<string, string> = {
       border-color: rgba(34, 211, 238, 0.45);
       box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.08);
       outline: none;
+      transform: translateY(-1px);
     }
 
     .tools-select-trigger span {
@@ -697,7 +1129,7 @@ const categoryEmojiMap: Record<string, string> = {
     .tools-select-chevron {
       flex: 0 0 auto;
       color: var(--text-muted);
-      transition: transform 140ms ease, color 140ms ease;
+      transition: transform var(--tools-base) var(--tools-ease), color var(--tools-fast) var(--tools-ease);
     }
 
     .tools-select-field.is-open .tools-select-chevron {
@@ -722,10 +1154,25 @@ const categoryEmojiMap: Record<string, string> = {
       padding: 6px;
       scrollbar-width: thin;
       scrollbar-color: rgba(94, 234, 212, 0.36) transparent;
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      transform-origin: top center;
+      transition:
+        opacity var(--tools-fast) var(--tools-ease),
+        transform var(--tools-base) var(--tools-ease),
+        border-color var(--tools-base) var(--tools-ease),
+        box-shadow var(--tools-slow) var(--tools-ease);
     }
 
     .tools-select-menu[hidden] {
       display: none;
+    }
+
+    @starting-style {
+      .tools-select-menu:not([hidden]) {
+        opacity: 0;
+        transform: translateY(-8px) scale(0.985);
+      }
     }
 
     .tools-option {
@@ -746,6 +1193,10 @@ const categoryEmojiMap: Record<string, string> = {
       letter-spacing: 0;
       padding: 0 10px;
       text-align: left;
+      transition:
+        background var(--tools-fast) var(--tools-ease),
+        color var(--tools-fast) var(--tools-ease),
+        transform var(--tools-base) var(--tools-ease);
     }
 
     .tools-option:hover,
@@ -753,6 +1204,7 @@ const categoryEmojiMap: Record<string, string> = {
       background: rgba(34, 211, 238, 0.10);
       color: var(--text-primary);
       outline: none;
+      transform: translateX(2px);
     }
 
     .tools-option.is-selected {
@@ -772,6 +1224,10 @@ const categoryEmojiMap: Record<string, string> = {
       font-size: 11px;
       font-weight: 850;
       font-variant-numeric: tabular-nums;
+      transition:
+        background var(--tools-fast) var(--tools-ease),
+        border-color var(--tools-fast) var(--tools-ease),
+        color var(--tools-fast) var(--tools-ease);
     }
 
     .tools-option.is-selected .tools-option-count {
@@ -780,15 +1236,18 @@ const categoryEmojiMap: Record<string, string> = {
       background: rgba(94, 234, 212, 0.10);
     }
 
-    html.light .tools-select-menu {
+    html.light .tools-select-menu,
+    html.light .tools-search-results {
       border-color: rgba(14, 116, 144, 0.24);
-      background: rgba(255, 255, 255, 0.98);
+      background: rgb(255, 255, 255);
       box-shadow: 0 22px 42px rgba(15, 23, 42, 0.16), 0 0 0 1px rgba(15, 23, 42, 0.04);
     }
 
     html.light .tools-option:hover,
     html.light .tools-option:focus-visible,
-    html.light .tools-option.is-selected {
+    html.light .tools-option.is-selected,
+    html.light :global(.tools-search-result:hover),
+    html.light :global(.tools-search-result:focus-visible) {
       background: rgba(14, 116, 144, 0.09);
     }
 
@@ -807,12 +1266,29 @@ const categoryEmojiMap: Record<string, string> = {
       font-weight: 800;
       padding: 0 12px;
       white-space: nowrap;
+      transition:
+        background var(--tools-base) var(--tools-ease),
+        border-color var(--tools-base) var(--tools-ease),
+        box-shadow var(--tools-base) var(--tools-ease),
+        color var(--tools-fast) var(--tools-ease),
+        transform var(--tools-base) var(--tools-ease);
+    }
+
+    .tools-score-toggle:hover,
+    .tools-score-toggle:focus-within {
+      border-color: rgba(34, 211, 238, 0.38);
+      box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.07);
+      transform: translateY(-1px);
     }
 
     .tools-score-toggle input {
-      width: 16px;
-      height: 16px;
-      accent-color: var(--accent-primary-text);
+      flex: 0 0 16px;
+    }
+
+    .tools-score-toggle:has(input:checked) {
+      border-color: rgba(34, 211, 238, 0.42);
+      background: rgba(34, 211, 238, 0.10);
+      color: var(--accent-primary-text);
     }
 
     .tools-chip-toggle {
@@ -827,14 +1303,23 @@ const categoryEmojiMap: Record<string, string> = {
       font-size: 12px;
       font-weight: 800;
       padding: 0 11px 0 9px;
-      transition: border-color 140ms ease, background 140ms ease, color 140ms ease;
+      transition:
+        background var(--tools-base) var(--tools-ease),
+        border-color var(--tools-base) var(--tools-ease),
+        box-shadow var(--tools-base) var(--tools-ease),
+        color var(--tools-fast) var(--tools-ease),
+        transform var(--tools-base) var(--tools-ease);
+    }
+
+    .tools-chip-toggle:hover,
+    .tools-chip-toggle:focus-within {
+      border-color: rgba(34, 211, 238, 0.36);
+      box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.06);
+      transform: translateY(-1px);
     }
 
     .tools-chip-toggle input {
-      width: 14px;
-      height: 14px;
       margin: 0 7px 0 0;
-      accent-color: var(--accent-primary-text);
     }
 
     .tools-chip-toggle strong {
@@ -853,6 +1338,8 @@ const categoryEmojiMap: Record<string, string> = {
     .tools-card-shell {
       position: relative;
       display: block;
+      transition: opacity var(--tools-base) var(--tools-ease), transform var(--tools-base) var(--tools-ease);
+      will-change: transform, opacity;
     }
 
     .tools-card-shell .tools-card-compare {
@@ -871,7 +1358,13 @@ const categoryEmojiMap: Record<string, string> = {
       padding: 0;
       opacity: 0.72;
       transform: none;
-      transition: opacity 140ms ease, transform 140ms ease, border-color 140ms ease, background 140ms ease, color 140ms ease;
+      transition:
+        opacity var(--tools-fast) var(--tools-ease),
+        transform var(--tools-base) var(--tools-ease),
+        border-color var(--tools-base) var(--tools-ease),
+        background var(--tools-base) var(--tools-ease),
+        color var(--tools-fast) var(--tools-ease),
+        box-shadow var(--tools-base) var(--tools-ease);
     }
 
     .tools-card-shell .tools-card-compare::before {
@@ -892,6 +1385,7 @@ const categoryEmojiMap: Record<string, string> = {
       background: rgba(94, 234, 212, 0.13);
       border-color: rgba(94, 234, 212, 0.42);
       color: var(--accent-primary-text);
+      box-shadow: 0 0 0 3px rgba(94, 234, 212, 0.08);
     }
 
     .tools-card-shell .tools-card-compare.is-compared::before {
@@ -917,6 +1411,12 @@ const categoryEmojiMap: Record<string, string> = {
       font-size: 13px;
       font-weight: 850;
       padding: 0 13px;
+      transition:
+        background var(--tools-base) var(--tools-ease),
+        border-color var(--tools-base) var(--tools-ease),
+        box-shadow var(--tools-base) var(--tools-ease),
+        color var(--tools-fast) var(--tools-ease),
+        transform var(--tools-base) var(--tools-ease);
     }
 
     .tools-reset:hover,
@@ -924,6 +1424,7 @@ const categoryEmojiMap: Record<string, string> = {
       border-color: rgba(34, 211, 238, 0.48);
       background: rgba(34, 211, 238, 0.13);
       outline: none;
+      transform: translateY(-1px);
     }
 
     .tools-filter-status {
@@ -951,6 +1452,12 @@ const categoryEmojiMap: Record<string, string> = {
       color: var(--text-muted);
       padding: 24px;
       text-align: center;
+      transition:
+        background var(--tools-base) var(--tools-ease),
+        border-color var(--tools-base) var(--tools-ease),
+        color var(--tools-fast) var(--tools-ease),
+        opacity var(--tools-base) var(--tools-ease),
+        transform var(--tools-base) var(--tools-ease);
     }
 
     .tools-empty-state p {
@@ -987,6 +1494,16 @@ const categoryEmojiMap: Record<string, string> = {
       .tools-filter-status {
         align-items: flex-start;
         flex-direction: column;
+      }
+
+      :global(.tools-search-result) {
+        grid-template-columns: 1fr;
+        gap: 6px;
+      }
+
+      :global(.tools-search-result-meta) {
+        justify-content: flex-start;
+        max-width: none;
       }
 
       .tools-filter-row-signals {

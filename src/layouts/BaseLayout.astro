@@ -111,8 +111,8 @@ const ogImageUrl = ogImage
       })();
     </script>
 
-    <!-- Smooth cross-page view transitions -->
-    <ClientRouter />
+    <!-- Smooth cross-page view transitions. OS chrome pages use full page loads so their fixed header never inherits stale route styles. -->
+    {!isOsChrome && <ClientRouter />}
   </head>
   <body class:list={['min-h-screen', isOsChrome && 'os-chrome-body']}>
     <!-- Skip-to-main-content: hidden off-screen until keyboard focus. Lets
