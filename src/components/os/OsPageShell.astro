@@ -1,5 +1,6 @@
 ---
 import '../../styles/os-shell.css';
+import ThemeToggle from '../ThemeToggle.astro';
 
 type ActiveApp = 'ask' | 'packages' | 'compare' | 'news' | 'manual' | 'stack' | 'trust';
 type Density = 'wide' | 'article';
@@ -55,6 +56,7 @@ const apps: Array<{ id: ActiveApp; token: string; label: string; href: string }>
     <div class="os-page-panel-right">
       <a class:list={['os-page-panel-chip', activeApp === 'ask' && 'is-active']} href="/search/">Ask Finder</a>
       <a class:list={['os-page-panel-chip', activeApp === 'news' && 'is-active']} href="/news/">News</a>
+      <ThemeToggle />
       <div class="os-page-clock" data-os-page-clock>--:--</div>
     </div>
   </header>

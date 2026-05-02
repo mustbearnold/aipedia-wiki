@@ -119,7 +119,7 @@ const GA_MEASUREMENT_ID = import.meta.env.PUBLIC_GA_MEASUREMENT_ID || 'G-WCPX3D1
     bottom: max(1rem, env(safe-area-inset-bottom));
     left: max(1rem, env(safe-area-inset-left));
     z-index: 9999;
-    max-width: 460px;
+    max-width: 380px;
     margin-left: auto;
     color: var(--text-secondary, rgba(203, 213, 225, 0.72));
     background:
@@ -128,9 +128,9 @@ const GA_MEASUREMENT_ID = import.meta.env.PUBLIC_GA_MEASUREMENT_ID || 'G-WCPX3D1
     backdrop-filter: blur(20px) saturate(1.12);
     -webkit-backdrop-filter: blur(20px) saturate(1.12);
     border: 1px solid var(--border, rgba(226, 232, 240, 0.10));
-    border-radius: 1.25rem;
+    border-radius: 0.9rem;
     box-shadow:
-      0 24px 70px rgba(0, 0, 0, 0.42),
+      0 18px 54px rgba(0, 0, 0, 0.34),
       inset 0 1px 0 rgba(255, 255, 255, 0.06);
     overflow: hidden;
     animation: cookie-consent-slide-up 0.42s cubic-bezier(0.22, 1, 0.36, 1);
@@ -150,14 +150,14 @@ const GA_MEASUREMENT_ID = import.meta.env.PUBLIC_GA_MEASUREMENT_ID || 'G-WCPX3D1
       linear-gradient(135deg, rgba(8, 145, 178, 0.10), rgba(2, 132, 199, 0.07) 48%, transparent 74%),
       rgba(255, 255, 255, 0.94);
     box-shadow:
-      0 24px 70px rgba(15, 23, 42, 0.16),
+      0 18px 54px rgba(15, 23, 42, 0.14),
       inset 0 1px 0 rgba(255, 255, 255, 0.85);
   }
 
   @media (min-width: 1024px) {
     .cookie-consent-banner {
       right: auto;
-      max-width: 500px;
+      max-width: 380px;
       margin-left: 0;
     }
   }
@@ -171,18 +171,18 @@ const GA_MEASUREMENT_ID = import.meta.env.PUBLIC_GA_MEASUREMENT_ID || 'G-WCPX3D1
     position: relative;
     display: grid;
     grid-template-columns: auto minmax(0, 1fr);
-    gap: 0.875rem 1rem;
+    gap: 0.65rem 0.75rem;
     align-items: start;
-    padding: 1rem;
+    padding: 0.8rem;
   }
 
   .cookie-consent-mark {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 2rem;
-    height: 2rem;
-    border-radius: 0.85rem;
+    width: 1.65rem;
+    height: 1.65rem;
+    border-radius: 0.65rem;
     color: var(--accent-success, #5eead4);
     background: rgba(94, 234, 212, 0.12);
     border: 1px solid rgba(94, 234, 212, 0.28);
@@ -198,7 +198,7 @@ const GA_MEASUREMENT_ID = import.meta.env.PUBLIC_GA_MEASUREMENT_ID || 'G-WCPX3D1
   .cookie-consent-kicker {
     margin: 0 0 0.25rem;
     color: var(--text-primary, #f8fafc);
-    font-size: 0.72rem;
+    font-size: 0.68rem;
     font-weight: 750;
     letter-spacing: 0.08em;
     line-height: 1.2;
@@ -207,8 +207,8 @@ const GA_MEASUREMENT_ID = import.meta.env.PUBLIC_GA_MEASUREMENT_ID || 'G-WCPX3D1
 
   .cookie-consent-text {
     color: var(--text-secondary, rgba(203, 213, 225, 0.72));
-    font-size: 0.85rem;
-    line-height: 1.55;
+    font-size: 0.78rem;
+    line-height: 1.45;
     margin: 0;
   }
 
@@ -239,12 +239,12 @@ const GA_MEASUREMENT_ID = import.meta.env.PUBLIC_GA_MEASUREMENT_ID || 'G-WCPX3D1
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-height: 2.25rem;
-    padding: 0.55rem 0.9rem;
+    min-height: 2rem;
+    padding: 0.45rem 0.78rem;
     border-radius: 999px;
     cursor: pointer;
     font: inherit;
-    font-size: 0.78rem;
+    font-size: 0.73rem;
     font-weight: 700;
     line-height: 1;
     letter-spacing: -0.005em;
@@ -280,14 +280,16 @@ const GA_MEASUREMENT_ID = import.meta.env.PUBLIC_GA_MEASUREMENT_ID || 'G-WCPX3D1
 
   @media (max-width: 560px) {
     .cookie-consent-banner {
+      right: max(0.75rem, env(safe-area-inset-right));
+      left: max(0.75rem, env(safe-area-inset-left));
       max-width: none;
-      border-radius: 1rem;
+      border-radius: 0.9rem;
     }
 
     .cookie-consent-inner {
       grid-template-columns: 1fr;
-      gap: 0.75rem;
-      padding: 0.95rem;
+      gap: 0.62rem;
+      padding: 0.78rem;
     }
 
     .cookie-consent-mark {

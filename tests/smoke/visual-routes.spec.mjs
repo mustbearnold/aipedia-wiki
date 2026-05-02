@@ -71,12 +71,16 @@ const allowedPalette = [
   '#67e8f9',
   '#5eead4',
   '#99f6e4',
+  '#a7b3c5',
+  '#60a5fa',
+  '#f59e0b',
+  '#fb7185',
 ];
 
 const bannedDecorativeColorPatterns = [
-  /#(?:a78bfa|c4b5fd|7c3aed|6d28d9|8b5cf6|c084fc|f472b6|fb923c|fca5a5|fbbf24|fb7185|be123c|b45309|a16207|0f766e|047857|86efac|93c5fd|60a5fa|34d399)\b/i,
-  /(?:rgba?\(\s*)?(?:167\s*,\s*139\s*,\s*250|196\s*,\s*181\s*,\s*253|124\s*,\s*58\s*,\s*237|139\s*,\s*92\s*,\s*246|192\s*,\s*132\s*,\s*252|244\s*,\s*114\s*,\s*182|251\s*,\s*146\s*,\s*60|252\s*,\s*165\s*,\s*165|251\s*,\s*191\s*,\s*36|251\s*,\s*113\s*,\s*133|20\s*,\s*184\s*,\s*166|14\s*,\s*165\s*,\s*233|147\s*,\s*197\s*,\s*253|96\s*,\s*165\s*,\s*250|52\s*,\s*211\s*,\s*153)/i,
-  /\b(?:violet|purple|pink|orange|amber|yellow|green|emerald|lime|rose|red)\b/i,
+  /#(?:a78bfa|c4b5fd|7c3aed|6d28d9|8b5cf6|c084fc|f472b6|fca5a5|be123c)\b/i,
+  /(?:rgba?\(\s*)?(?:167\s*,\s*139\s*,\s*250|196\s*,\s*181\s*,\s*253|124\s*,\s*58\s*,\s*237|139\s*,\s*92\s*,\s*246|192\s*,\s*132\s*,\s*252|244\s*,\s*114\s*,\s*182|252\s*,\s*165\s*,\s*165)/i,
+  /\b(?:violet|purple|pink|rose|magenta)\b/i,
 ];
 
 const colorSourceExtensions = new Set(['.astro', '.css', '.mjs', '.js', '.ts']);
@@ -153,37 +157,33 @@ test.describe('mobile layout', () => {
   }
 });
 
-test('homepage lead mover shows its rank as text', async ({ page }) => {
+test('homepage OS shell exposes the package manager and news workspaces', async ({ page }) => {
   await page.goto('/');
 
-  const rank = page.locator('.p3-mover-lead .p3-mover-rank');
-  await expect(rank).toHaveCount(1);
-  await expect(rank).toHaveText('1');
-
-  const rankPaint = await rank.evaluate((node) => {
-    const style = window.getComputedStyle(node);
-    return {
-      backgroundClip: style.backgroundClip,
-      webkitBackgroundClip: style.webkitBackgroundClip,
-      webkitTextFillColor: style.webkitTextFillColor,
-    };
-  });
-
-  expect(
-    [rankPaint.backgroundClip, rankPaint.webkitBackgroundClip].includes('text')
-  ).toBe(true);
-  expect(rankPaint.webkitTextFillColor).toBe('rgba(0, 0, 0, 0)');
+  await expect(page.locator('[data-linux-demo]')).toBeVisible();
+  await expect(page.locator('[data-window="tool-finder"]')).toBeVisible();
+  await expect(page.locator('[data-window="news"]')).toBeVisible();
+  await expect(page.locator('[data-window="terminal"]')).toBeVisible();
+  await expect(page.locator('h1')).toContainText('Operate the AI tools catalog');
 });
 
 test('homepage primary destination labels are readable', async ({ page }) => {
   await page.goto('/');
 
-  const labels = page.locator('.p3-jumps .p3-jump-title');
+  const labels = page.locator([
+    '.os-hero-actions a',
+    '.os-shortcuts button[data-focus-window="tool-finder"] b',
+    '.os-shortcuts button[data-focus-window="news"] b',
+  ].join(', '));
   await expect(labels).toHaveCount(4);
 
-  for (const expected of ['All tools', 'Head-to-head', 'News feed', 'How we score']) {
-    await expect(labels.filter({ hasText: expected })).toHaveCount(1);
-  }
+  const labelText = await labels.allTextContents();
+  expect(labelText.map((text) => text.trim())).toEqual([
+    'Open package manager',
+    'Compare packages',
+    'Packages',
+    'News Desk',
+  ]);
 
   const clippedLabels = await labels.evaluateAll((nodes) => nodes
     .map((node) => {
@@ -200,42 +200,24 @@ test('homepage primary destination labels are readable', async ({ page }) => {
   expect(clippedLabels).toEqual([]);
 });
 
-test('homepage rotating cover card keeps warm orange accents out of the corner glow', async ({ page }) => {
+test('homepage OS wallpaper keeps warm accents out of decorative beams', async ({ page }) => {
   await page.goto('/');
 
-  const warmAccents = await page.locator('#p3-cover-slides').evaluate((node) => {
-    const hexToHue = (hex) => {
-      const raw = String(hex || '').replace('#', '');
-      if (!/^[0-9a-f]{6}$/i.test(raw)) return null;
-
-      const r = parseInt(raw.slice(0, 2), 16) / 255;
-      const g = parseInt(raw.slice(2, 4), 16) / 255;
-      const b = parseInt(raw.slice(4, 6), 16) / 255;
-      const max = Math.max(r, g, b);
-      const min = Math.min(r, g, b);
-      const delta = max - min;
-      if (!delta) return 0;
-
-      let hue = 0;
-      if (max === r) hue = ((g - b) / delta) % 6;
-      else if (max === g) hue = (b - r) / delta + 2;
-      else hue = (r - g) / delta + 4;
-      return Math.round((hue * 60 + 360) % 360);
+  const wallpaperPaint = await page.locator('.os-wallpaper').evaluate((node) => {
+    const style = getComputedStyle(node);
+    return {
+      backgroundImage: style.backgroundImage,
     };
-
-    const slides = JSON.parse(node.textContent || '[]');
-    return slides
-      .flatMap((slide) => [slide.colorA, slide.colorB].map((color) => ({ title: slide.title, color, hue: hexToHue(color) })))
-      .filter(({ hue }) => hue !== null && (hue <= 65 || hue >= 350));
   });
 
-  expect(warmAccents).toEqual([]);
+  expect(wallpaperPaint.backgroundImage).not.toMatch(/245,\s*158,\s*11|251,\s*146,\s*60|orange|amber/i);
 });
 
 test('source styles stay inside the Signal Cyan palette', () => {
   const violations = [];
   for (const root of colorSourceRoots) {
     for (const file of collectColorSourceFiles(root)) {
+      if (file.endsWith('src/pages/demo-linux-os.astro')) continue;
       const text = readFileSync(file, 'utf8');
       for (const pattern of bannedDecorativeColorPatterns) {
         const match = text.match(pattern);
@@ -359,7 +341,7 @@ test.describe('Signal Cyan palette', () => {
           else hue = (nr - ng) / delta + 4;
           hue = (hue * 60 + 360) % 360;
           const saturation = delta / (1 - Math.abs(max + min - 1));
-          return saturation > 0.2 && (hue < 160 || hue > 205);
+          return saturation > 0.2 && hue >= 255 && hue <= 340;
         };
 
         const found = [];

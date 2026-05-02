@@ -57,7 +57,7 @@ body.os-chrome-body #read-progress {
   overflow: hidden;
   background:
     linear-gradient(118deg, rgba(34, 211, 238, 0.14) 0 1px, transparent 1px 37%),
-    linear-gradient(162deg, transparent 0 46%, rgba(245, 158, 11, 0.055) 46% 47%, transparent 47%),
+    linear-gradient(162deg, transparent 0 46%, rgba(94, 234, 212, 0.045) 46% 47%, transparent 47%),
     linear-gradient(145deg, #05060b 0%, #07111c 46%, #02050a 100%);
 }
 
@@ -380,7 +380,11 @@ body.os-chrome-body .cookie-consent-banner {
 
 @media (max-width: 900px) {
   body.os-chrome-body .cookie-consent-banner {
-    bottom: calc(max(1rem, env(safe-area-inset-bottom)) + 82px);
+    bottom: calc(max(0.75rem, env(safe-area-inset-bottom)) + 76px);
+  }
+
+  .os-page-beam {
+    display: none;
   }
 
   .os-page-panel {
