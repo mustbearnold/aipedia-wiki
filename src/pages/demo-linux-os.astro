@@ -1,0 +1,1825 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ToolLogo from '../components/ToolLogo.astro';
+
+const allTools = await getCollection('tools');
+const activeTools = allTools.filter((tool) => !['dead', 'retired', 'acquired'].includes(String(tool.data.status ?? 'active')));
+const allComparisons = await getCollection('comparisons');
+const allNews = await getCollection('news');
+
+const toolCount = activeTools.length;
+const comparisonCount = allComparisons.length;
+const newsCount = allNews.length;
+
+function scoreFor(tool: (typeof activeTools)[number]): number {
+  const scores = tool.data.scores;
+  if (!scores) return 0;
+  const values = [scores.utility, scores.value, scores.moat, scores.longevity].filter((value): value is number => typeof value === 'number');
+  if (!values.length) return 0;
+  return values.reduce((sum, value) => sum + value, 0) / values.length;
+}
+
+function newsSlug(news: (typeof allNews)[number]): string {
+  return String(news.data.slug ?? news.id.replace(/\.md$/, ''));
+}
+
+const topTools = activeTools
+  .map((tool) => ({
+    slug: String(tool.data.slug ?? tool.id.replace(/\.md$/, '')),
+    title: tool.data.title,
+    category: tool.data.category ?? 'ai-tools',
+    tagline: tool.data.tagline ?? tool.data.meta_description ?? '',
+    score: scoreFor(tool),
+  }))
+  .sort((a, b) => b.score - a.score)
+  .slice(0, 6);
+
+const latestNews = allNews
+  .map((news) => ({
+    slug: newsSlug(news),
+    title: news.data.title,
+    summary: news.data.summary ?? news.data.description ?? '',
+    date: String(news.data.date),
+    severity: news.data.severity ?? 'minor',
+  }))
+  .sort((a, b) => b.date.localeCompare(a.date))
+  .slice(0, 3);
+
+const windowTools = topTools.slice(0, 3);
+const desktopShortcuts = [
+  { label: 'Packages', caption: `${toolCount} tools`, token: 'PK', window: 'tool-finder' },
+  { label: 'News Desk', caption: `${newsCount} dispatches`, token: 'NW', window: 'news' },
+  { label: 'Trust Graph', caption: '4 score axes', token: 'TM', window: 'monitor' },
+  { label: 'Ask Finder', caption: 'plain English', token: 'AI', window: 'terminal' },
+];
+const consoleQuickActions = [
+  { command: 'coding', label: 'Coding' },
+  { command: 'writing', label: 'Writing' },
+  { command: 'research', label: 'Research' },
+  { command: 'image', label: 'Images' },
+  { command: 'automation', label: 'Automation' },
+  { command: 'video', label: 'Video' },
+  { command: 'news', label: 'News' },
+];
+---
+
+<BaseLayout
+  title="aipediaOS Homepage Demo | aipedia.wiki"
+  description="A noindex experimental homepage redesign for aipedia.wiki, presented as a premium dark virtual Linux operating system."
+  noindex={true}
+>
+  <section class="linux-demo" data-linux-demo data-pagefind-ignore>
+    <div class="os-wallpaper" aria-hidden="true">
+      <span class="os-grid"></span>
+      <span class="os-scanline"></span>
+      <span class="os-light-shelf os-light-shelf-one"></span>
+      <span class="os-light-shelf os-light-shelf-two"></span>
+    </div>
+
+    <div class="os-cursor" aria-hidden="true">
+      <span class="os-cursor-core"></span>
+    </div>
+
+    <header class="os-panel" aria-label="aipedia.wiki panel">
+      <div class="os-panel-left">
+        <button class="os-menu-button" type="button" data-menu-button aria-expanded="false" aria-controls="os-menu">
+          <img src="/brand/aipedia-logo-crystal-cyan-128.png" alt="" width="24" height="24" />
+          <span>aipedia.wiki</span>
+        </button>
+        <nav class="os-workspaces" aria-label="Workspaces">
+          <a class="is-active" href="#workbench">Workbench</a>
+          <a href="#intel">Intel</a>
+          <a href="#catalog">Catalog</a>
+        </nav>
+      </div>
+      <div class="os-panel-right">
+        <button class="os-panel-chip" type="button" data-focus-window="terminal">Ask Finder</button>
+        <button class="os-panel-chip" type="button" data-focus-window="news">News</button>
+        <div class="os-clock" data-os-clock>--:--</div>
+      </div>
+      <div class="os-menu" id="os-menu" data-menu>
+        <div class="os-menu-title">Application launcher</div>
+        <label class="os-launcher-search">
+          <span>Search</span>
+          <input data-launcher-input value="best coding tool" autocomplete="off" />
+        </label>
+        <div class="os-launcher-grid">
+          <button type="button" data-focus-window="tool-finder"><span>PK</span><b>Tool Finder</b></button>
+          <button type="button" data-focus-window="terminal"><span>AI</span><b>Ask Finder</b></button>
+          <button type="button" data-focus-window="news"><span>NW</span><b>News Desk</b></button>
+          <button type="button" data-focus-window="monitor"><span>TM</span><b>Trust Monitor</b></button>
+        </div>
+        <a href="/" data-astro-prefetch="viewport">Return to live homepage</a>
+      </div>
+    </header>
+
+    <nav class="os-dock" aria-label="Window dock">
+      <button class="is-active" type="button" data-focus-window="terminal"><span>AI</span><b>Ask</b></button>
+      <button type="button" data-focus-window="tool-finder"><span>PK</span><b>Packages</b></button>
+      <button type="button" data-focus-window="news"><span>NW</span><b>News</b></button>
+      <button type="button" data-focus-window="monitor"><span>TM</span><b>Trust</b></button>
+    </nav>
+
+    <div class="os-context-menu" data-context-menu role="menu" aria-hidden="true" hidden>
+      <button type="button" role="menuitem" data-focus-window="terminal">Open Ask Finder</button>
+      <button type="button" role="menuitem" data-focus-window="tool-finder">Open packages</button>
+      <button type="button" role="menuitem" data-focus-window="news">Open news desk</button>
+      <button type="button" role="menuitem" data-focus-window="monitor">Open trust monitor</button>
+      <a href="/" role="menuitem">Live homepage</a>
+    </div>
+
+    <div class="os-stage" id="workbench">
+      <div class="os-left-rail">
+        <section class="os-hero">
+          <div class="os-prompt">
+            <span class="os-prompt-user">root@aipedia</span><span class="os-prompt-path">:~$</span>
+            <span class="os-prompt-command">find --best-ai-tool</span>
+          </div>
+          <h1>Operate the AI tools catalog like a desktop.</h1>
+          <p>
+            A virtual Linux shell for choosing AI tools: ask in plain English, open focused app windows,
+            compare tradeoffs, and follow recent changes without leaving the desktop.
+          </p>
+          <div class="os-hero-actions">
+            <a class="os-action-primary" href="/tools/">Open package manager</a>
+            <a class="os-action-secondary" href="/compare/">Compare packages</a>
+          </div>
+          <div class="os-shortcuts" aria-label="Desktop shortcuts">
+            {desktopShortcuts.map((shortcut) => (
+              <button type="button" data-focus-window={shortcut.window}>
+                <span>{shortcut.token}</span>
+                <b>{shortcut.label}</b>
+                <small>{shortcut.caption}</small>
+              </button>
+            ))}
+          </div>
+        </section>
+
+        <aside class="os-system-card" aria-label="System status">
+          <div class="os-system-head">
+            <span class="os-led"></span>
+            <span>kernel: wiki-verified</span>
+          </div>
+          <div class="os-meters">
+            <div>
+              <strong>{toolCount}</strong>
+              <span>tools</span>
+            </div>
+            <div>
+              <strong>{comparisonCount}</strong>
+              <span>comparisons</span>
+            </div>
+            <div>
+              <strong>{newsCount}</strong>
+              <span>news items</span>
+            </div>
+          </div>
+          <div class="os-boot-log">
+            <span>[ok] source links mounted</span>
+            <span>[ok] scoring axes online</span>
+            <span>[ok] paid placements disabled</span>
+          </div>
+        </aside>
+      </div>
+
+      <section class="os-desktop" aria-label="Virtual desktop windows">
+        <article class="os-window os-window-terminal is-active" data-window="terminal" data-draggable>
+          <div class="os-window-bar">
+            <div class="os-window-controls" aria-hidden="true"><span></span><span></span><span></span></div>
+            <strong>ask-finder</strong>
+            <span>plain English</span>
+          </div>
+          <div class="os-terminal os-decision-console">
+            <div class="os-console-intro">
+              <span>AI tool finder</span>
+              <h2>Tell me what you need. I will route you to the right page.</h2>
+              <p>Use this like a command palette for the wiki: pick a workflow, compare options, then open the source-backed page.</p>
+            </div>
+            <form class="os-terminal-form os-console-form" data-terminal-form>
+              <label for="demo-terminal-input">Need</label>
+              <input id="demo-terminal-input" name="command" value="I need a coding assistant for a large repo" autocomplete="off" />
+              <button type="submit">Find</button>
+            </form>
+            <div class="os-command-chips" aria-label="Workflow shortcuts">
+              {consoleQuickActions.map((action) => (
+                <button type="button" data-command={action.command}>{action.label}</button>
+              ))}
+            </div>
+            <div class="os-console-body">
+              <div class="os-terminal-output os-answer-card" data-terminal-output aria-live="polite">
+                <small>Suggested path</small>
+                <strong>Start with the coding guide, then compare the top agentic editors.</strong>
+                <p>Good for large repositories, multi-file changes, and agent workflows where context and safety checks matter.</p>
+                <a href="/answers/best-ai-coding-tool-2026/">Open coding guide</a>
+              </div>
+              <div class="os-console-results" aria-label="Top tool shortcuts">
+                <span>Top tools</span>
+                {windowTools.map((tool) => (
+                  <a href={`/tools/${tool.slug}/`}>
+                    <ToolLogo slug={tool.slug} title={tool.title} size={28} className="os-console-logo" />
+                    <b>{tool.title}</b>
+                    <small>{tool.category}</small>
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="os-window os-window-tools" data-window="tool-finder" data-draggable id="catalog">
+          <div class="os-window-bar">
+            <div class="os-window-controls" aria-hidden="true"><span></span><span></span><span></span></div>
+            <strong>package-manager</strong>
+            <span>{toolCount} packages</span>
+          </div>
+          <div class="os-tool-list">
+            {windowTools.map((tool) => (
+              <a class="os-tool-row" href={`/tools/${tool.slug}/`}>
+                <ToolLogo slug={tool.slug} title={tool.title} size={36} className="os-tool-logo" />
+                <span>
+                  <strong>{tool.title}</strong>
+                  <small>{tool.category} / score {tool.score.toFixed(1)}</small>
+                </span>
+                <em>install</em>
+              </a>
+            ))}
+          </div>
+          <div class="os-window-status">
+            <span>repo://src/content/tools</span>
+            <a href="/tools/">Browse all</a>
+          </div>
+        </article>
+
+        <article class="os-window os-window-news" data-window="news" data-draggable id="intel">
+          <div class="os-window-bar">
+            <div class="os-window-controls" aria-hidden="true"><span></span><span></span><span></span></div>
+            <strong>news-daemon</strong>
+            <span>live feed</span>
+          </div>
+          <div class="os-news-list">
+            {latestNews.map((news) => (
+              <a class="os-news-row" href={`/news/${news.slug}/`}>
+                <span class:list={['os-severity', `is-${news.severity}`]}>{news.severity}</span>
+                <strong>{news.title}</strong>
+                <small>{news.date}</small>
+              </a>
+            ))}
+          </div>
+          <div class="os-window-status">
+            <span>tail -f /news/latest</span>
+            <a href="/news/">Open feed</a>
+          </div>
+        </article>
+
+        <article class="os-window os-window-monitor" data-window="monitor" data-draggable>
+          <div class="os-window-bar">
+            <div class="os-window-controls" aria-hidden="true"><span></span><span></span><span></span></div>
+            <strong>trust-monitor</strong>
+            <span>4 axes</span>
+          </div>
+          <div class="os-axis-grid">
+            <span><b>Utility</b><i style="--w: 94%"></i></span>
+            <span><b>Value</b><i style="--w: 82%"></i></span>
+            <span><b>Moat</b><i style="--w: 76%"></i></span>
+            <span><b>Longevity</b><i style="--w: 88%"></i></span>
+          </div>
+          <div class="os-window-status">
+            <span>sources required</span>
+            <a href="/about/scoring/">Scoring model</a>
+          </div>
+        </article>
+      </section>
+    </div>
+  </section>
+
+  <style>
+    :global(body:has(.linux-demo)) {
+      background: #03060b;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+    }
+
+    :global(body:has(.linux-demo) #site-nav),
+    :global(body:has(.linux-demo) .nav-spacer),
+    :global(body:has(.linux-demo) footer),
+    :global(body:has(.linux-demo) #cookie-consent),
+    :global(body:has(.linux-demo) #bg-gradient),
+    :global(body:has(.linux-demo) #read-progress) {
+      display: none !important;
+    }
+
+    :global(body:has(.linux-demo) main#main-content) {
+      max-width: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .linux-demo {
+      --os-bg: #04070d;
+      --os-panel: rgba(8, 14, 24, 0.84);
+      --os-panel-strong: rgba(13, 24, 39, 0.94);
+      --os-glass: rgba(10, 20, 33, 0.72);
+      --os-line: rgba(148, 163, 184, 0.18);
+      --os-line-bright: rgba(103, 232, 249, 0.34);
+      --os-text: #f8fafc;
+      --os-muted: #a7b3c5;
+      --os-dim: #64748b;
+      --os-cyan: #22d3ee;
+      --os-teal: #5eead4;
+      --os-blue: #60a5fa;
+      --os-amber: #f59e0b;
+      --os-red: #fb7185;
+      position: relative;
+      min-height: 100vh;
+      width: 100vw;
+      margin-left: calc(50% - 50vw);
+      color: var(--os-text);
+      background: var(--os-bg);
+      isolation: isolate;
+      overflow: hidden;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      font-smooth: always;
+      text-rendering: geometricPrecision;
+    }
+
+    .linux-demo.is-cursor-ready,
+    .linux-demo.is-cursor-ready a,
+    .linux-demo.is-cursor-ready button,
+    .linux-demo.is-cursor-ready input {
+      cursor: none;
+    }
+
+    .os-wallpaper {
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      overflow: hidden;
+      background:
+        linear-gradient(118deg, rgba(34, 211, 238, 0.16) 0 1px, transparent 1px 37%),
+        linear-gradient(162deg, transparent 0 46%, rgba(245, 158, 11, 0.06) 46% 47%, transparent 47%),
+        linear-gradient(145deg, #05060b 0%, #07111c 46%, #02050a 100%);
+    }
+
+    .os-grid {
+      position: absolute;
+      inset: 0;
+      opacity: 0.42;
+      background-image:
+        linear-gradient(rgba(148, 163, 184, 0.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(148, 163, 184, 0.07) 1px, transparent 1px);
+      background-size: 42px 42px;
+      mask-image: linear-gradient(to bottom, black 0%, black 68%, transparent 100%);
+    }
+
+    .os-scanline {
+      position: absolute;
+      inset: 0;
+      opacity: 0.18;
+      background: repeating-linear-gradient(
+        to bottom,
+        rgba(248, 250, 252, 0.07) 0,
+        rgba(248, 250, 252, 0.07) 1px,
+        transparent 1px,
+        transparent 7px
+      );
+      mix-blend-mode: screen;
+      pointer-events: none;
+    }
+
+    .os-light-shelf {
+      position: absolute;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(94, 234, 212, 0.34), transparent);
+      box-shadow: 0 0 36px rgba(34, 211, 238, 0.18);
+      transform: rotate(-17deg);
+      transform-origin: center;
+    }
+
+    .os-light-shelf-one {
+      width: 72vw;
+      left: -12vw;
+      top: 180px;
+    }
+
+    .os-light-shelf-two {
+      width: 62vw;
+      right: -10vw;
+      bottom: 80px;
+    }
+
+    .os-cursor {
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 1000;
+      pointer-events: none;
+      transform: translate3d(-120px, -120px, 0);
+      transition: opacity 120ms ease;
+    }
+
+    .os-cursor-core {
+      display: block;
+      width: 18px;
+      height: 18px;
+      clip-path: polygon(0 0, 0 100%, 36% 72%, 55% 100%, 72% 91%, 53% 62%, 100% 62%);
+      background: linear-gradient(135deg, #ffffff, var(--os-cyan));
+      filter: drop-shadow(0 10px 20px rgba(34, 211, 238, 0.45));
+    }
+
+    .os-panel {
+      position: fixed;
+      inset: 14px 18px auto;
+      z-index: 50;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      min-height: 52px;
+      padding: 8px 10px;
+      border: 1px solid var(--os-line);
+      border-radius: 18px;
+      background: rgba(5, 10, 18, 0.76);
+      box-shadow: 0 24px 70px rgba(0, 0, 0, 0.42);
+      backdrop-filter: blur(24px);
+    }
+
+    .os-panel-left,
+    .os-panel-right,
+    .os-workspaces,
+    .os-hero-actions,
+    .os-window-bar,
+    .os-window-controls,
+    .os-meters,
+    .os-dock {
+      display: flex;
+      align-items: center;
+    }
+
+    .os-panel-left,
+    .os-panel-right {
+      gap: 10px;
+      min-width: 0;
+    }
+
+    .os-menu-button,
+    .os-panel-chip,
+    .os-workspaces a,
+    .os-dock button,
+    .os-terminal-form button,
+    .os-shortcuts button,
+    .os-command-chips button {
+      border: 1px solid var(--os-line);
+      color: var(--os-text);
+      background: rgba(15, 23, 42, 0.58);
+      text-decoration: none;
+    }
+
+    .linux-demo :is(a, button, input):focus-visible {
+      outline: 2px solid rgba(94, 234, 212, 0.82);
+      outline-offset: 3px;
+    }
+
+    .os-menu-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      min-height: 36px;
+      padding: 6px 12px 6px 7px;
+      border-radius: 12px;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    .os-menu-button img {
+      border-radius: 8px;
+      box-shadow: 0 0 24px rgba(34, 211, 238, 0.24);
+    }
+
+    .os-workspaces {
+      gap: 4px;
+    }
+
+    .os-workspaces a,
+    .os-panel-chip {
+      min-height: 34px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      color: var(--os-muted);
+    }
+
+    .os-workspaces a.is-active,
+    .os-panel-chip:hover,
+    .os-menu-button:hover {
+      border-color: var(--os-line-bright);
+      color: var(--os-teal);
+      background: rgba(8, 47, 73, 0.42);
+    }
+
+    .os-clock {
+      min-width: 72px;
+      padding: 8px 10px;
+      border: 1px solid rgba(94, 234, 212, 0.18);
+      border-radius: 12px;
+      color: var(--os-teal);
+      background: rgba(2, 6, 12, 0.5);
+      font-family: "JetBrains Mono", ui-monospace, monospace;
+      font-size: 12px;
+      text-align: center;
+    }
+
+    .os-menu {
+      position: absolute;
+      left: 10px;
+      top: 60px;
+      width: min(320px, calc(100vw - 36px));
+      padding: 10px;
+      border: 1px solid var(--os-line-bright);
+      border-radius: 16px;
+      background: rgba(4, 10, 18, 0.96);
+      box-shadow: 0 30px 90px rgba(0, 0, 0, 0.6);
+      transform: translateY(-8px);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 150ms ease, transform 150ms ease;
+    }
+
+    .os-menu.is-open {
+      transform: translateY(0);
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .os-menu-title {
+      padding: 8px 10px 10px;
+      color: var(--os-dim);
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .os-launcher-search {
+      display: grid;
+      gap: 6px;
+      padding: 0 4px 10px;
+    }
+
+    .os-launcher-search span {
+      color: var(--os-dim);
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .os-launcher-search input {
+      width: 100%;
+      height: 38px;
+      border: 1px solid rgba(94, 234, 212, 0.22);
+      border-radius: 11px;
+      padding: 0 12px;
+      background: rgba(2, 6, 12, 0.72);
+      color: var(--os-text);
+      font: inherit;
+    }
+
+    .os-launcher-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+
+    .os-menu button,
+    .os-menu a {
+      display: block;
+      width: 100%;
+      padding: 11px 12px;
+      border: 0;
+      border-radius: 10px;
+      background: transparent;
+      color: var(--os-muted);
+      text-align: left;
+      text-decoration: none;
+    }
+
+    .os-launcher-grid button {
+      display: grid;
+      min-height: 82px;
+      align-content: center;
+      justify-items: start;
+      gap: 6px;
+      border: 1px solid var(--os-line);
+      background: rgba(15, 23, 42, 0.44);
+    }
+
+    .os-launcher-grid span,
+    .os-shortcuts span {
+      display: grid;
+      place-items: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 9px;
+      background: rgba(34, 211, 238, 0.12);
+      color: var(--os-teal);
+      font-family: "JetBrains Mono", ui-monospace, monospace;
+      font-size: 11px;
+      font-weight: 900;
+    }
+
+    .os-launcher-grid b {
+      color: var(--os-text);
+      font-size: 12px;
+    }
+
+    .os-menu button:hover,
+    .os-menu a:hover {
+      background: rgba(34, 211, 238, 0.10);
+      color: var(--os-text);
+    }
+
+    .os-stage {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(0, 0.82fr) minmax(420px, 1.18fr);
+      gap: 28px;
+      min-height: 100vh;
+      padding: 112px 34px 96px 126px;
+    }
+
+    .os-left-rail {
+      align-self: start;
+      min-width: 0;
+      padding-top: clamp(18px, 2.6vh, 34px);
+    }
+
+    .os-hero {
+      max-width: 760px;
+      padding: 18px 0 24px;
+    }
+
+    .os-prompt {
+      display: inline-flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 26px;
+      padding: 10px 14px;
+      border: 1px solid var(--os-line);
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.62);
+      color: var(--os-muted);
+      font-family: "JetBrains Mono", ui-monospace, monospace;
+      font-size: 13px;
+    }
+
+    .os-prompt-user { color: var(--os-teal); }
+    .os-prompt-path { color: var(--os-blue); }
+    .os-prompt-command { color: var(--os-text); }
+
+    .os-hero h1 {
+      max-width: 780px;
+      margin: 0;
+      color: #fff;
+      font-size: 72px;
+      font-weight: 520;
+      line-height: 0.96;
+      letter-spacing: 0;
+      text-wrap: balance;
+    }
+
+    .os-hero p {
+      max-width: 660px;
+      margin: 24px 0 0;
+      color: var(--os-muted);
+      font-size: 18px;
+      line-height: 1.65;
+    }
+
+    .os-hero-actions {
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .os-shortcuts {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+      max-width: 620px;
+      margin-top: 22px;
+    }
+
+    .os-shortcuts button {
+      display: grid;
+      justify-items: start;
+      gap: 6px;
+      min-height: 96px;
+      padding: 12px;
+      border-radius: 16px;
+      background: rgba(8, 15, 27, 0.66);
+    }
+
+    .os-shortcuts button:hover {
+      border-color: var(--os-line-bright);
+      background: rgba(8, 47, 73, 0.34);
+    }
+
+    .os-shortcuts b {
+      overflow-wrap: anywhere;
+      font-size: 12px;
+    }
+
+    .os-shortcuts small {
+      color: var(--os-muted);
+      font-size: 11px;
+    }
+
+    .os-action-primary,
+    .os-action-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 18px;
+      border-radius: 12px;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .os-action-primary {
+      color: #031018;
+      background: linear-gradient(135deg, var(--os-teal), var(--os-cyan));
+      box-shadow: 0 18px 50px rgba(34, 211, 238, 0.24);
+    }
+
+    .os-action-secondary {
+      border: 1px solid var(--os-line);
+      color: var(--os-text);
+      background: rgba(15, 23, 42, 0.58);
+    }
+
+    .os-system-card,
+    .os-window {
+      border: 1px solid var(--os-line);
+      background:
+        linear-gradient(180deg, rgba(15, 23, 42, 0.88), rgba(4, 9, 16, 0.9)),
+        rgba(4, 9, 16, 0.84);
+      box-shadow: 0 34px 100px rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(22px);
+    }
+
+    .os-system-card {
+      width: min(520px, 100%);
+      margin-top: 18px;
+      padding: 18px;
+      border-radius: 22px;
+    }
+
+    .os-system-head {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--os-teal);
+      font-family: "JetBrains Mono", ui-monospace, monospace;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .os-led {
+      width: 9px;
+      height: 9px;
+      border-radius: 999px;
+      background: var(--os-teal);
+      box-shadow: 0 0 24px var(--os-teal);
+    }
+
+    .os-meters {
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .os-meters div {
+      flex: 1;
+      min-width: 0;
+      padding: 14px;
+      border: 1px solid var(--os-line);
+      border-radius: 16px;
+      background: rgba(2, 6, 12, 0.44);
+    }
+
+    .os-meters strong {
+      display: block;
+      font-size: 28px;
+      line-height: 1;
+    }
+
+    .os-meters span,
+    .os-boot-log span {
+      display: block;
+      margin-top: 7px;
+      color: var(--os-muted);
+      font-size: 12px;
+    }
+
+    .os-boot-log {
+      display: grid;
+      gap: 6px;
+      margin-top: 14px;
+      font-family: "JetBrains Mono", ui-monospace, monospace;
+    }
+
+    .os-desktop {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(280px, 0.92fr);
+      grid-auto-rows: min-content;
+      gap: 18px;
+      align-self: center;
+      min-width: 0;
+      perspective: 1800px;
+    }
+
+    .os-window {
+      position: relative;
+      z-index: 1;
+      min-width: 0;
+      border-radius: 18px;
+      overflow: hidden;
+      transform: translate(var(--tx, 0), var(--ty, 0));
+      transition: border-color 160ms ease, box-shadow 160ms ease, transform 80ms linear;
+    }
+
+    .os-window.is-active {
+      z-index: 10;
+      border-color: var(--os-line-bright);
+      box-shadow: 0 40px 110px rgba(0, 0, 0, 0.54), 0 0 0 1px rgba(34, 211, 238, 0.08) inset;
+    }
+
+    .os-window-bar {
+      justify-content: space-between;
+      gap: 12px;
+      min-height: 46px;
+      padding: 0 14px;
+      border-bottom: 1px solid var(--os-line);
+      background: rgba(2, 6, 12, 0.54);
+      color: var(--os-muted);
+      user-select: none;
+    }
+
+    .os-window-bar strong {
+      color: var(--os-text);
+      font-size: 13px;
+    }
+
+    .os-window-bar span:last-child {
+      font-family: "JetBrains Mono", ui-monospace, monospace;
+      font-size: 11px;
+    }
+
+    .os-window-controls {
+      gap: 6px;
+    }
+
+    .os-window-controls span {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--os-red);
+    }
+
+    .os-window-controls span:nth-child(2) { background: var(--os-amber); }
+    .os-window-controls span:nth-child(3) { background: var(--os-teal); }
+
+    .os-window-terminal {
+      grid-column: 1 / -1;
+      min-height: 320px;
+    }
+
+    .os-terminal {
+      padding: 18px;
+      background:
+        linear-gradient(rgba(94, 234, 212, 0.035) 50%, transparent 50%),
+        rgba(1, 6, 12, 0.7);
+      background-size: 100% 8px;
+      font-family: "JetBrains Mono", ui-monospace, monospace;
+    }
+
+    .os-decision-console {
+      display: grid;
+      gap: 14px;
+      font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+    }
+
+    .os-console-intro {
+      display: grid;
+      gap: 6px;
+    }
+
+    .os-console-intro span,
+    .os-answer-card small,
+    .os-console-results > span {
+      color: var(--os-teal);
+      font-size: 11px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .os-console-intro h2 {
+      max-width: 720px;
+      margin: 0;
+      color: var(--os-text);
+      font-size: 28px;
+      line-height: 1.12;
+      letter-spacing: 0;
+    }
+
+    .os-console-intro p {
+      max-width: 760px;
+      margin: 0;
+      color: var(--os-muted);
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .os-terminal p {
+      margin: 0 0 9px;
+      color: #d8f7ff;
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .os-terminal p span {
+      color: var(--os-teal);
+    }
+
+    .os-terminal-output {
+      margin-top: 16px;
+      padding-top: 14px;
+      border-top: 1px dashed rgba(148, 163, 184, 0.24);
+    }
+
+    .os-console-body {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(250px, 0.56fr);
+      gap: 12px;
+      align-items: stretch;
+    }
+
+    .os-answer-card,
+    .os-console-results {
+      border: 1px solid var(--os-line);
+      border-radius: 14px;
+      background: rgba(15, 23, 42, 0.46);
+    }
+
+    .os-answer-card {
+      display: grid;
+      gap: 8px;
+      margin-top: 0;
+      padding: 14px;
+      border-top-style: solid;
+    }
+
+    .os-answer-card strong {
+      color: var(--os-text);
+      font-size: 17px;
+      line-height: 1.35;
+    }
+
+    .os-answer-card p {
+      margin: 0;
+      color: var(--os-muted);
+      font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .os-answer-card a {
+      justify-self: start;
+      color: #031018;
+      border-radius: 10px;
+      background: var(--os-teal);
+      padding: 8px 11px;
+      font-size: 12px;
+      font-weight: 900;
+      text-decoration: none;
+    }
+
+    .os-terminal-output p {
+      color: var(--os-muted);
+    }
+
+    .os-terminal-form {
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr) auto;
+      gap: 8px;
+      align-items: center;
+      margin-top: 16px;
+    }
+
+    .os-console-form {
+      margin-top: 0;
+    }
+
+    .os-terminal-form label {
+      color: var(--os-dim);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .os-terminal-form input {
+      min-width: 0;
+      height: 38px;
+      border: 1px solid rgba(94, 234, 212, 0.22);
+      border-radius: 10px;
+      padding: 0 12px;
+      background: rgba(2, 6, 12, 0.78);
+      color: var(--os-text);
+      font: inherit;
+    }
+
+    .os-terminal-form button {
+      height: 38px;
+      border-radius: 10px;
+      padding: 0 14px;
+      color: #031018;
+      background: var(--os-teal);
+      font-weight: 800;
+    }
+
+    .os-command-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .os-command-chips button {
+      min-height: 30px;
+      padding: 0 10px;
+      border-radius: 999px;
+      color: var(--os-muted);
+      font-family: "JetBrains Mono", ui-monospace, monospace;
+      font-size: 11px;
+    }
+
+    .os-command-chips button:hover {
+      border-color: var(--os-line-bright);
+      color: var(--os-teal);
+    }
+
+    .os-console-results {
+      display: grid;
+      gap: 8px;
+      padding: 12px;
+    }
+
+    .os-console-results a {
+      display: grid;
+      grid-template-columns: 28px minmax(0, 1fr);
+      gap: 2px 9px;
+      align-items: center;
+      padding: 8px;
+      border: 1px solid rgba(148, 163, 184, 0.14);
+      border-radius: 12px;
+      color: var(--os-text);
+      background: rgba(2, 6, 12, 0.34);
+      text-decoration: none;
+    }
+
+    .os-console-results a:hover {
+      border-color: var(--os-line-bright);
+      background: rgba(8, 47, 73, 0.28);
+    }
+
+    .os-console-results :global(.os-console-logo) {
+      grid-row: 1 / 3;
+      border-radius: 8px;
+      background: #fff;
+    }
+
+    .os-console-results b {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size: 13px;
+    }
+
+    .os-console-results small {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      color: var(--os-muted);
+      font-size: 11px;
+    }
+
+    .os-tool-list,
+    .os-news-list,
+    .os-axis-grid {
+      display: grid;
+      gap: 10px;
+      padding: 14px;
+    }
+
+    .os-tool-row,
+    .os-news-row {
+      display: grid;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+      border: 1px solid var(--os-line);
+      border-radius: 14px;
+      background: rgba(15, 23, 42, 0.42);
+      color: var(--os-text);
+      text-decoration: none;
+    }
+
+    .os-tool-row {
+      grid-template-columns: 36px minmax(0, 1fr) auto;
+      padding: 10px;
+    }
+
+    .os-tool-row:hover,
+    .os-news-row:hover {
+      border-color: var(--os-line-bright);
+      background: rgba(8, 47, 73, 0.34);
+    }
+
+    .os-tool-row :global(.os-tool-logo) {
+      border-radius: 10px;
+      background: #fff;
+    }
+
+    .os-tool-row strong,
+    .os-news-row strong {
+      display: block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size: 14px;
+    }
+
+    .os-tool-row small,
+    .os-news-row small {
+      display: block;
+      margin-top: 4px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      color: var(--os-muted);
+      font-size: 12px;
+    }
+
+    .os-tool-row em {
+      color: var(--os-teal);
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 800;
+    }
+
+    .os-news-row {
+      grid-template-columns: auto minmax(0, 1fr);
+      padding: 12px;
+    }
+
+    .os-news-row small {
+      grid-column: 2;
+    }
+
+    .os-severity {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 62px;
+      height: 24px;
+      border-radius: 999px;
+      color: #031018;
+      background: var(--os-teal);
+      font-size: 10px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .os-severity.is-breaking { background: var(--os-red); color: white; }
+    .os-severity.is-major { background: var(--os-amber); }
+
+    .os-axis-grid span {
+      display: grid;
+      grid-template-columns: 92px minmax(0, 1fr);
+      align-items: center;
+      gap: 12px;
+      min-height: 38px;
+      color: var(--os-muted);
+      font-size: 12px;
+    }
+
+    .os-axis-grid b {
+      color: var(--os-text);
+    }
+
+    .os-axis-grid i {
+      position: relative;
+      height: 9px;
+      border-radius: 999px;
+      background: rgba(148, 163, 184, 0.16);
+      overflow: hidden;
+    }
+
+    .os-axis-grid i::before {
+      content: '';
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: var(--w);
+      border-radius: inherit;
+      background: linear-gradient(90deg, var(--os-teal), var(--os-blue));
+    }
+
+    .os-window-status {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 10px 14px;
+      border-top: 1px solid var(--os-line);
+      color: var(--os-dim);
+      font-family: "JetBrains Mono", ui-monospace, monospace;
+      font-size: 11px;
+    }
+
+    .os-window-status a {
+      color: var(--os-teal);
+      font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+      font-weight: 800;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .os-dock {
+      position: fixed;
+      left: 18px;
+      top: 92px;
+      bottom: 18px;
+      z-index: 52;
+      flex-direction: column;
+      gap: 8px;
+      width: 86px;
+      padding: 8px;
+      border: 1px solid var(--os-line);
+      border-radius: 20px;
+      background: rgba(5, 10, 18, 0.74);
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.46);
+      backdrop-filter: blur(24px);
+    }
+
+    .os-dock button {
+      display: grid;
+      justify-items: center;
+      gap: 5px;
+      min-width: 72px;
+      min-height: 58px;
+      padding: 8px 10px;
+      border-radius: 14px;
+      color: var(--os-muted);
+    }
+
+    .os-dock button:hover,
+    .os-dock button.is-active {
+      border-color: var(--os-line-bright);
+      color: var(--os-text);
+      background: rgba(34, 211, 238, 0.12);
+    }
+
+    .os-dock span {
+      display: grid;
+      place-items: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 9px;
+      background: rgba(34, 211, 238, 0.12);
+      color: var(--os-teal);
+      font-family: "JetBrains Mono", ui-monospace, monospace;
+      font-size: 11px;
+      font-weight: 900;
+    }
+
+    .os-dock b {
+      font-size: 11px;
+    }
+
+    .os-context-menu {
+      position: fixed;
+      left: var(--context-x, 24px);
+      top: var(--context-y, 120px);
+      z-index: 80;
+      width: min(230px, calc(100vw - 28px));
+      padding: 8px;
+      border: 1px solid var(--os-line-bright);
+      border-radius: 14px;
+      background: rgba(4, 10, 18, 0.96);
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.58);
+      backdrop-filter: blur(18px);
+    }
+
+    .os-context-menu button,
+    .os-context-menu a {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      min-height: 36px;
+      padding: 0 10px;
+      border: 0;
+      border-radius: 9px;
+      background: transparent;
+      color: var(--os-muted);
+      font: inherit;
+      font-size: 13px;
+      text-align: left;
+      text-decoration: none;
+    }
+
+    .os-context-menu button:hover,
+    .os-context-menu a:hover {
+      background: rgba(34, 211, 238, 0.10);
+      color: var(--os-text);
+    }
+
+    .os-context-menu[hidden] {
+      display: none;
+    }
+
+    @media (max-width: 1180px) {
+      .os-stage {
+        grid-template-columns: 1fr;
+        padding-top: 96px;
+      }
+
+      .os-left-rail,
+      .os-hero {
+        max-width: none;
+      }
+
+      .os-hero h1 {
+        font-size: 56px;
+      }
+
+      .os-shortcuts {
+        max-width: none;
+      }
+
+      .os-system-card {
+        width: auto;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .linux-demo {
+        min-height: auto;
+        cursor: auto;
+        overflow: visible;
+      }
+
+      .os-cursor {
+        display: none;
+      }
+
+      .os-panel {
+        position: sticky;
+        inset: 0 0 auto;
+        border-radius: 0;
+        border-left: 0;
+        border-right: 0;
+      }
+
+      .os-workspaces,
+      .os-panel-chip {
+        display: none;
+      }
+
+      .os-stage {
+        padding: 24px 16px 34px;
+        gap: 18px;
+      }
+
+      .os-hero {
+        padding-top: 18px;
+      }
+
+      .os-hero h1 {
+        font-size: 40px;
+        line-height: 1.02;
+      }
+
+      .os-hero p {
+        font-size: 16px;
+      }
+
+      .os-prompt {
+        border-radius: 16px;
+        font-size: 12px;
+      }
+
+      .os-meters,
+      .os-desktop {
+        grid-template-columns: 1fr;
+      }
+
+      .os-meters {
+        display: grid;
+      }
+
+      .os-shortcuts {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        max-width: none;
+      }
+
+      .os-shortcuts button {
+        min-width: 0;
+        min-height: 88px;
+      }
+
+      .os-window-terminal {
+        grid-column: auto;
+      }
+
+      .os-terminal-form {
+        grid-template-columns: 1fr;
+      }
+
+      .os-console-body {
+        grid-template-columns: 1fr;
+      }
+
+      .os-console-intro h2 {
+        font-size: 22px;
+      }
+
+      .os-window {
+        transform: none !important;
+      }
+
+      .os-dock {
+        position: sticky;
+        top: 58px;
+        left: auto;
+        bottom: auto;
+        z-index: 49;
+        width: calc(100vw - 18px);
+        margin: 0 auto;
+        transform: none;
+        flex-direction: row;
+        overflow-x: auto;
+        justify-content: flex-start;
+        border-radius: 0 0 18px 18px;
+      }
+
+      .os-dock button {
+        min-width: 66px;
+      }
+    }
+
+    @media (pointer: coarse) {
+      .linux-demo,
+      .linux-demo * {
+        cursor: auto;
+      }
+
+      .os-cursor {
+        display: none;
+      }
+    }
+  </style>
+
+  <script is:inline>
+    (() => {
+      const root = document.querySelector('[data-linux-demo]');
+      if (!root) return;
+
+      const cursor = root.querySelector('.os-cursor');
+      const isFinePointer = window.matchMedia('(pointer: fine)').matches && window.innerWidth >= 760;
+      if (cursor && isFinePointer) {
+        root.classList.add('is-cursor-ready');
+        window.addEventListener('pointermove', (event) => {
+          cursor.style.transform = `translate3d(${event.clientX}px, ${event.clientY}px, 0)`;
+        }, { passive: true });
+      }
+
+      const menuButton = root.querySelector('[data-menu-button]');
+      const menu = root.querySelector('[data-menu]');
+      const launcherInput = root.querySelector('[data-launcher-input]');
+      const contextMenu = root.querySelector('[data-context-menu]');
+      function closeMenu() {
+        menu?.classList.remove('is-open');
+        menuButton?.setAttribute('aria-expanded', 'false');
+      }
+
+      function closeContextMenu() {
+        if (!contextMenu) return;
+        contextMenu.hidden = true;
+        contextMenu.setAttribute('aria-hidden', 'true');
+      }
+
+      menuButton?.addEventListener('click', () => {
+        const next = !menu?.classList.contains('is-open');
+        menu?.classList.toggle('is-open', next);
+        menuButton.setAttribute('aria-expanded', String(next));
+        if (next) window.setTimeout(() => launcherInput?.select(), 70);
+      });
+
+      document.addEventListener('click', (event) => {
+        if (!root.contains(event.target)) return;
+        if (menu && menuButton && !menu.contains(event.target) && !menuButton.contains(event.target)) {
+          closeMenu();
+        }
+        if (contextMenu && !contextMenu.contains(event.target)) {
+          closeContextMenu();
+        }
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+          closeMenu();
+          closeContextMenu();
+        }
+      });
+
+      root.addEventListener('contextmenu', (event) => {
+        if (!contextMenu || window.innerWidth < 760) return;
+        const target = event.target;
+        if (target instanceof Element && target.closest('a, button, input')) return;
+        event.preventDefault();
+        const menuWidth = 230;
+        const menuHeight = 206;
+        const x = Math.min(event.clientX, window.innerWidth - menuWidth - 14);
+        const y = Math.min(event.clientY, window.innerHeight - menuHeight - 14);
+        contextMenu.style.setProperty('--context-x', `${Math.max(14, x)}px`);
+        contextMenu.style.setProperty('--context-y', `${Math.max(72, y)}px`);
+        contextMenu.hidden = false;
+        contextMenu.setAttribute('aria-hidden', 'false');
+        closeMenu();
+      });
+
+      let z = 20;
+      function focusWindow(name) {
+        const target = root.querySelector(`[data-window="${name}"]`);
+        if (!target) return;
+        root.querySelectorAll('[data-window]').forEach((win) => win.classList.remove('is-active'));
+        target.classList.add('is-active');
+        target.style.zIndex = String(++z);
+        root.querySelectorAll('[data-focus-window]').forEach((button) => {
+          button.classList.toggle('is-active', button.getAttribute('data-focus-window') === name);
+        });
+        target.scrollIntoView({ block: 'nearest', inline: 'nearest', behavior: 'smooth' });
+        closeMenu();
+        closeContextMenu();
+      }
+
+      root.querySelectorAll('[data-focus-window]').forEach((button) => {
+        button.addEventListener('click', () => focusWindow(button.getAttribute('data-focus-window')));
+      });
+
+      root.querySelectorAll('[data-window]').forEach((win) => {
+        win.addEventListener('pointerdown', () => {
+          const name = win.getAttribute('data-window');
+          if (name) focusWindow(name);
+        });
+      });
+
+      root.querySelectorAll('[data-draggable]').forEach((win) => {
+        const bar = win.querySelector('.os-window-bar');
+        let startX = 0;
+        let startY = 0;
+        let baseX = 0;
+        let baseY = 0;
+        bar?.addEventListener('pointerdown', (event) => {
+          if (!isFinePointer || window.innerWidth < 900) return;
+          event.preventDefault();
+          startX = event.clientX;
+          startY = event.clientY;
+          baseX = Number(win.dataset.tx || 0);
+          baseY = Number(win.dataset.ty || 0);
+          bar.setPointerCapture(event.pointerId);
+        });
+        bar?.addEventListener('pointermove', (event) => {
+          if (!bar.hasPointerCapture(event.pointerId)) return;
+          const nextX = Math.max(-120, Math.min(120, baseX + event.clientX - startX));
+          const nextY = Math.max(-120, Math.min(120, baseY + event.clientY - startY));
+          win.dataset.tx = String(nextX);
+          win.dataset.ty = String(nextY);
+          win.style.setProperty('--tx', `${nextX}px`);
+          win.style.setProperty('--ty', `${nextY}px`);
+        });
+        bar?.addEventListener('pointerup', (event) => {
+          if (bar.hasPointerCapture(event.pointerId)) bar.releasePointerCapture(event.pointerId);
+        });
+      });
+
+      const clock = root.querySelector('[data-os-clock]');
+      function tick() {
+        if (!clock) return;
+        const now = new Date();
+        clock.textContent = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+      }
+      tick();
+      window.setInterval(tick, 30000);
+
+      const terminalForm = root.querySelector('[data-terminal-form]');
+      const terminalOutput = root.querySelector('[data-terminal-output]');
+      const terminalInput = terminalForm?.querySelector('input');
+      const responses = {
+        coding: {
+          label: 'Coding workflow',
+          title: 'Start with the coding guide, then compare the top agentic editors.',
+          body: 'Good for large repositories, multi-file changes, and agent workflows where context and safety checks matter.',
+          href: '/answers/best-ai-coding-tool-2026/',
+          cta: 'Open coding guide',
+          query: 'I need a coding assistant for a large repo',
+        },
+        writing: {
+          label: 'Writing workflow',
+          title: 'Use the writing guide when tone, editing, and long-form drafts matter.',
+          body: 'It separates general chat tools from focused writing assistants so you can choose by workflow instead of brand.',
+          href: '/answers/best-ai-for-writing-2026/',
+          cta: 'Open writing guide',
+          query: 'I need help writing and editing long-form content',
+        },
+        research: {
+          label: 'Research workflow',
+          title: 'Open the research category for source-backed search, papers, and citation work.',
+          body: 'Best when the output needs links, traceable claims, or a fixed source set rather than generic brainstorming.',
+          href: '/categories/ai-research/',
+          cta: 'Open research tools',
+          query: 'I need source-backed research with citations',
+        },
+        image: {
+          label: 'Image workflow',
+          title: 'Start with the image generator guide, then compare creative control and licensing.',
+          body: 'Useful for ads, concept art, product visuals, thumbnails, and brand-safe image generation.',
+          href: '/answers/best-ai-image-generator-2026/',
+          cta: 'Open image guide',
+          query: 'I need an AI image generator for brand visuals',
+        },
+        news: {
+          label: 'Latest changes',
+          title: 'Open the news desk to see what changed before you pick a tool.',
+          body: `There are ${Number(root.querySelectorAll('.os-news-row').length)} latest dispatches pinned in this desktop view.`,
+          href: '/news/',
+          cta: 'Open news',
+          query: 'Show me the latest AI tool changes',
+        },
+        compare: {
+          label: 'Comparison workflow',
+          title: 'Use comparisons when two tools look similar but fit different jobs.',
+          body: 'The comparison pages are built for tradeoffs: pricing caveats, strengths, weaknesses, and practical verdicts.',
+          href: '/compare/',
+          cta: 'Open comparisons',
+          query: 'Help me compare two AI tools',
+        },
+        chat: {
+          label: 'General assistant workflow',
+          title: 'Start with the chatbot guide when you need a flexible everyday AI assistant.',
+          body: 'Good for broad questions, drafting, analysis, tutoring, lightweight coding, and mixed personal workflows.',
+          href: '/answers/best-ai-chatbot-2026/',
+          cta: 'Open chatbot guide',
+          query: 'I need a general-purpose AI assistant',
+        },
+        automation: {
+          label: 'Automation workflow',
+          title: 'Use the automation category for agents, workflows, triggers, and app-to-app handoffs.',
+          body: 'Best when the job is repeatable: moving data, routing leads, checking inboxes, or running business processes.',
+          href: '/categories/ai-automation/',
+          cta: 'Open automation tools',
+          query: 'I need to automate a recurring workflow',
+        },
+        video: {
+          label: 'Video workflow',
+          title: 'Open the video guide for generation, avatars, editing, and production tradeoffs.',
+          body: 'Useful for social clips, product videos, explainers, avatar-led training, and cinematic prompt-to-video tools.',
+          href: '/answers/best-ai-video-generator-2026/',
+          cta: 'Open video guide',
+          query: 'I need an AI video tool',
+        },
+        voice: {
+          label: 'Voice workflow',
+          title: 'Start with the voice guide for narration, cloning, dubbing, and low-latency speech.',
+          body: 'Good for podcasts, ads, training narration, app voices, localization, and creator voiceover workflows.',
+          href: '/answers/best-ai-voice-generator-2026/',
+          cta: 'Open voice guide',
+          query: 'I need an AI voice generator',
+        },
+        presentation: {
+          label: 'Presentation workflow',
+          title: 'Use presentation tools when the deliverable is a deck, pitch, lesson, or visual brief.',
+          body: 'These tools help turn outlines, docs, and rough ideas into slides faster, but still need human review.',
+          href: '/categories/ai-presentation/',
+          cta: 'Open presentation tools',
+          query: 'I need to make a presentation deck',
+        },
+        notes: {
+          label: 'Notes and meetings workflow',
+          title: 'Open notes tools for meeting summaries, transcripts, memory, and personal knowledge bases.',
+          body: 'Best for capturing conversations, summarizing calls, organizing research, and retrieving past decisions.',
+          href: '/categories/ai-notes/',
+          cta: 'Open notes tools',
+          query: 'I need meeting notes and summaries',
+        },
+        seo: {
+          label: 'SEO workflow',
+          title: 'Use SEO tools for content briefs, SERP research, optimization, and site content workflows.',
+          body: 'Helpful when the goal is ranking pages, refreshing articles, finding gaps, or improving search visibility.',
+          href: '/categories/ai-seo/',
+          cta: 'Open SEO tools',
+          query: 'I need an AI SEO content tool',
+        },
+        data: {
+          label: 'Data workflow',
+          title: 'Use data-analysis guides for spreadsheets, SQL, charts, and business reporting.',
+          body: 'Best when the work involves tables, files, dashboards, formulas, or turning messy data into a useful explanation.',
+          href: '/guides/best-ai-for-data-analysis/',
+          cta: 'Open data guide',
+          query: 'I need help analyzing spreadsheets or data',
+        },
+        highstakes: {
+          label: 'High-stakes workflow',
+          title: 'Use source-backed research tools, then verify the result with a qualified professional.',
+          body: 'For medical, legal, tax, hiring, financial, or safety-sensitive work, AI can help organize information but should not be the final authority.',
+          href: '/categories/ai-research/',
+          cta: 'Open research tools',
+          query: 'I need source-backed help for a high-stakes topic',
+        },
+        general: {
+          label: 'General fallback',
+          title: 'No exact match yet, so start with the guided tool finder.',
+          body: 'It is the safest default when the request is unusual, vague, or crosses multiple workflows. From there, filter by category, pricing, and use case.',
+          href: '/tool-finder/',
+          cta: 'Open tool finder',
+          query: 'Help me find the right AI tool',
+        },
+      };
+      const commandMatchers = [
+        ['highstakes', ['medical', 'doctor', 'health', 'clinical', 'legal', 'lawyer', 'contract', 'tax', 'accounting', 'finance', 'financial', 'hiring', 'recruit', 'safety', 'compliance']],
+        ['seo', ['seo', 'keyword', 'serp', 'rank', 'ranking', 'google traffic', 'search traffic', 'content brief']],
+        ['data', ['data', 'spreadsheet', 'excel', 'csv', 'sql', 'table', 'tables', 'dashboard', 'analytics', 'chart', 'charts', 'reporting']],
+        ['writing', ['write', 'writing', 'blog', 'email', 'copy', 'essay', 'book', 'newsletter', 'linkedin', 'resume', 'cover letter', 'grammar', 'edit']],
+        ['research', ['research', 'citation', 'paper', 'source', 'sources', 'study', 'academic', 'journal', 'summarize pdf', 'pdf']],
+        ['image', ['image', 'design', 'visual', 'logo', 'photo', 'picture', 'thumbnail', 'art', 'brand visuals']],
+        ['video', ['video', 'film', 'clip', 'avatar', 'youtube', 'tiktok', 'shorts', 'animation', 'b-roll']],
+        ['voice', ['voice', 'audio', 'speech', 'tts', 'dubbing', 'dub', 'podcast', 'narration', 'transcription', 'transcribe']],
+        ['automation', ['automation', 'automate', 'workflow', 'agent', 'zap', 'trigger', 'crm', 'lead', 'support', 'sales', 'ops']],
+        ['presentation', ['presentation', 'slides', 'slide', 'deck', 'pitch', 'powerpoint', 'ppt']],
+        ['notes', ['note', 'notes', 'meeting', 'meetings', 'transcript', 'memory', 'knowledge base', 'second brain']],
+        ['news', ['news', 'latest', 'changed', 'release', 'launch', 'update', 'announcement']],
+        ['compare', ['compare', 'comparison', 'versus', ' vs ', 'alternative', 'alternatives', 'replace']],
+        ['coding', ['code', 'coding', 'repo', 'developer', 'programming', 'debug', 'pull request', 'tests', 'github']],
+        ['chat', ['chat', 'chatbot', 'assistant', 'general', 'student', 'teacher', 'tutor', 'brainstorm']],
+      ];
+      function inferCommand(rawCommand) {
+        const raw = String(rawCommand || '').toLowerCase().replace(/\s+/g, ' ').trim();
+        if (!raw) return 'general';
+        if (responses[raw]) return raw;
+        const match = commandMatchers.find(([, terms]) => terms.some((term) => raw.includes(term)));
+        return match?.[0] || 'general';
+      }
+
+      function runCommand(rawCommand) {
+        const key = inferCommand(rawCommand);
+        const response = responses[key] || responses.general;
+        if (!terminalOutput) return;
+        terminalOutput.replaceChildren();
+        const label = document.createElement('small');
+        label.textContent = response.label;
+        const title = document.createElement('strong');
+        title.textContent = response.title;
+        const body = document.createElement('p');
+        body.textContent = response.body;
+        const link = document.createElement('a');
+        link.href = response.href;
+        link.textContent = response.cta;
+        terminalOutput.append(label, title, body, link);
+        if (terminalInput) terminalInput.value = response.query;
+      }
+
+      terminalForm?.addEventListener('submit', (event) => {
+        event.preventDefault();
+        runCommand(terminalInput?.value);
+      });
+
+      root.querySelectorAll('[data-command]').forEach((button) => {
+        button.addEventListener('click', () => {
+          const command = button.getAttribute('data-command') || 'scan';
+          if (terminalInput) terminalInput.value = command;
+          focusWindow('terminal');
+          runCommand(command);
+        });
+      });
+    })();
+  </script>
+</BaseLayout>
