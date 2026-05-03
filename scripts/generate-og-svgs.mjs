@@ -22,6 +22,7 @@
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { join } from 'node:path';
+import sharp from 'sharp';
 
 // Lazy-load resvg so build machines that can't install native modules
 // (e.g. some Cloudflare Workers build environments) still produce SVG
@@ -257,15 +258,15 @@ function svgFor(tool) {
  * Returns null if resvg wasn't available at module load.
  */
 // Bundle our own TTF files so rasterization is reproducible across envs
-// (dev Windows + Cloudflare Pages Linux). Without this, resvg's system
-// font fallback on Cloudflare produced Greek-glyph substitution for
-// Latin codepoints.
+// (dev Windows + Cloudflare Pages Linux). resvg does not reliably rasterize
+// text from WOFF/WOFF2 files when system fonts are disabled, so these are
+// checked-in Metropolis TTF copies derived from the site's webfont source files.
 const FONT_DIR = join(ROOT, 'public/fonts/metropolis');
 const FONT_PATHS = [
-  'metropolis-latin-400-normal.woff2',
-  'metropolis-latin-500-normal.woff2',
-  'metropolis-latin-700-normal.woff2',
-  'metropolis-latin-800-normal.woff2',
+  'metropolis-latin-400-normal.ttf',
+  'metropolis-latin-500-normal.ttf',
+  'metropolis-latin-700-normal.ttf',
+  'metropolis-latin-800-normal.ttf',
 ].map((f) => join(FONT_DIR, f)).filter((p) => existsSync(p));
 
 function rasterize(svgString) {
@@ -282,12 +283,31 @@ function rasterize(svgString) {
   return resvg.render().asPng();
 }
 
-function main() {
+async function assertTextRendering() {
+  if (!Resvg) return;
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="400" height="200" viewBox="0 0 400 200">
+    <rect width="400" height="200" fill="#05060d"/>
+    <text x="32" y="122" font-family="Metropolis, sans-serif" font-size="72" font-weight="800" fill="#f8fafc">TEST</text>
+  </svg>`;
+  const png = rasterize(svg);
+  if (!png) return;
+  const { data, info } = await sharp(png).raw().toBuffer({ resolveWithObject: true });
+  let brightPixels = 0;
+  for (let i = 0; i < data.length; i += info.channels) {
+    if (data[i] > 180 && data[i + 1] > 180 && data[i + 2] > 180) brightPixels++;
+  }
+  if (brightPixels < 1000) {
+    throw new Error(`[tool-og] Metropolis text failed to rasterize. Check FONT_PATHS: ${FONT_PATHS.join(', ')}`);
+  }
+}
+
+async function main() {
   if (!existsSync(REGISTRY)) {
     console.error('tools-registry.json not found, skipping OG generation');
     process.exit(0);
   }
   if (!existsSync(OUT_DIR)) mkdirSync(OUT_DIR, { recursive: true });
+  await assertTextRendering();
 
   const data = JSON.parse(readFileSync(REGISTRY, 'utf8'));
   const tools = Object.values(data.tools ?? {}).filter(
@@ -341,4 +361,4 @@ function main() {
   }
 }
 
-main();
+await main();

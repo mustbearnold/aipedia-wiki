@@ -303,16 +303,16 @@ function svgForNews(news) {
 }
 
 // Bundle our own TTF files so the rasterization is reproducible across
-// environments (dev Windows, Cloudflare Pages Linux build). Without this,
-// resvg falls back to whatever the host system has installed, which on
-// Cloudflare Pages was producing Greek-glyph substitution for Latin
-// codepoints (likely a Cyrillic/Greek-only font fallback).
+// environments (dev Windows, Cloudflare Pages Linux build). resvg does not
+// reliably rasterize text from WOFF/WOFF2 files when system fonts are disabled,
+// so the generator uses checked-in Metropolis TTF copies derived from the same
+// webfont source files used by the site.
 const FONT_DIR = join(ROOT, 'public/fonts/metropolis');
 const FONT_PATHS = [
-  'metropolis-latin-400-normal.woff2',
-  'metropolis-latin-500-normal.woff2',
-  'metropolis-latin-700-normal.woff2',
-  'metropolis-latin-800-normal.woff2',
+  'metropolis-latin-400-normal.ttf',
+  'metropolis-latin-500-normal.ttf',
+  'metropolis-latin-700-normal.ttf',
+  'metropolis-latin-800-normal.ttf',
 ].map((f) => join(FONT_DIR, f)).filter((p) => existsSync(p));
 
 function rasterize(svg) {
@@ -329,9 +329,28 @@ function rasterize(svg) {
   return resvg.render().asPng();
 }
 
+async function assertTextRendering() {
+  if (!Resvg) return;
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="400" height="200" viewBox="0 0 400 200">
+    <rect width="400" height="200" fill="#05060d"/>
+    <text x="32" y="122" font-family="Metropolis, sans-serif" font-size="72" font-weight="800" fill="#f8fafc">TEST</text>
+  </svg>`;
+  const png = rasterize(svg);
+  if (!png) return;
+  const { data, info } = await sharp(png).raw().toBuffer({ resolveWithObject: true });
+  let brightPixels = 0;
+  for (let i = 0; i < data.length; i += info.channels) {
+    if (data[i] > 180 && data[i + 1] > 180 && data[i + 2] > 180) brightPixels++;
+  }
+  if (brightPixels < 1000) {
+    throw new Error(`[news-og] Metropolis text failed to rasterize. Check FONT_PATHS: ${FONT_PATHS.join(', ')}`);
+  }
+}
+
 async function main() {
   if (!existsSync(OUT_DIR)) mkdirSync(OUT_DIR, { recursive: true });
   if (!existsSync(THUMB_DIR)) mkdirSync(THUMB_DIR, { recursive: true });
+  await assertTextRendering();
 
   const requested = new Set(process.argv.slice(2).map((arg) => arg.replace(/\.md$/, '')));
   const files = readdirSync(NEWS_DIR)
