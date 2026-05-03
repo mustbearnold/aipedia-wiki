@@ -165,7 +165,7 @@ test('homepage search shell exposes the main catalog workspaces', async ({ page 
   await expect(page.locator('[data-home-search]')).toBeVisible();
   await expect(page.locator('.home-tools')).toBeVisible();
   await expect(page.locator('.home-news-list')).toBeVisible();
-  await expect(page.locator('h1')).toContainText('Find the right AI tool faster');
+  await expect(page.locator('#home-title')).toContainText('Find the right AI tool faster');
 });
 
 test('homepage primary destination labels are readable', async ({ page }) => {

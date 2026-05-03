@@ -10,7 +10,7 @@
 // This script only:
 //   1. Regenerates per-tool OG share images
 //   2. Regenerates the logo manifest (Cloudflare-miniflare-safe lookup table)
-//   3. Syncs truth-maintenance JSON from `wikis/_meta/` if present
+//   3. Syncs the public tools registry from `wikis/_meta/` if present
 //
 // It does NOT touch `src/content/`.
 
@@ -61,20 +61,14 @@ function countMarkdown(dir) {
 const total = countMarkdown(CONTENT_DIR);
 console.log(`Content: ${total} markdown files in src/content/ (source of truth).`);
 
-// 3. Optionally sync truth-maintenance JSON from wikis/_meta/ if that
-//    toolchain is still present. Admin dashboards render these at build time;
-//    the files can also be committed directly if _meta is retired.
+// 3. Optionally sync the public tools registry from wikis/_meta/ if that
+//    toolchain is still present. Other truth-maintenance/admin exports stay local-only.
 const META_SRC = path.join(path.dirname(PROJECT_DIR), "wikis", "_meta");
 const META_DEST = path.join(PROJECT_DIR, "src", "data", "_meta");
 
 if (fs.existsSync(META_SRC) && fs.statSync(META_SRC).isDirectory()) {
   fs.mkdirSync(META_DEST, { recursive: true });
-  const metaFiles = [
-    "tools-registry.json",
-    "claim-graph.json",
-    "stale-queue.json",
-    "signals.jsonl",
-  ];
+  const metaFiles = ["tools-registry.json"];
   let copied = 0;
   for (const name of metaFiles) {
     const src = path.join(META_SRC, name);
@@ -84,6 +78,6 @@ if (fs.existsSync(META_SRC) && fs.statSync(META_SRC).isDirectory()) {
     }
   }
   if (copied > 0) {
-    console.log(`Synced truth-maintenance data from ${META_SRC} -> src/data/_meta/.`);
+    console.log(`Synced public tools registry from ${META_SRC} -> src/data/_meta/.`);
   }
 }
