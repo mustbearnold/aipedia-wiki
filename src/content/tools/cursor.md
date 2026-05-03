@@ -86,6 +86,7 @@ Anysphere's AI-native code editor. A VS Code fork with LLMs wired into autocompl
 
 ## Recent developments
 
+- **May 1, 2026:** [The MCP STDIO command-execution flaw made Cursor's MCP layer part of the shell-access threat model](/news/2026-05-03-mcp-stdio-command-execution-flaw/). Cursor users should audit `mcp.json`, disable automatic registration where possible, and sandbox third-party servers.
 - **May 1, 2026:** [Replit argued for independence as Cursor deal talk reshaped AI coding](/news/2026-05-01-replit-cursor-deal-independence/). Cursor's reported SpaceX/xAI acquisition option keeps strategic-owner risk and infrastructure upside central to how enterprises evaluate the IDE.
 - **April 27, 2026:** [Cursor and Claude were named in a reported PocketOS database-deletion incident](/news/2026-04-27-cursor-claude-database-deletion-incident/). Treat it as an agent-permissions and backup-design warning, not proof that AI coding tools should never touch infrastructure.
 - **April 22, 2026:** [SpaceX and xAI lined up a $60B option to buy Cursor](/news/2026-04-22-spacex-xai-cursor-acquisition-option/). It is an option and partnership, not a completed acquisition, but it makes Cursor's long-term independence a live strategic question.
@@ -189,6 +190,7 @@ Prices verified 2026-04-17 via [cursor.com/pricing](https://cursor.com/pricing) 
 - **VS Code lock-in.** Cursor is a full editor fork. JetBrains, Vim/Neovim, Zed, and Emacs users have no entry path. Migrating out later means reinstalling extensions and settings on stock VS Code.
 - **Not a fully autonomous agent.** Cloud Agents iterate inside a sandbox, but the Agents Window is still a supervised workbench. Claude Code's terminal loop is more aggressive at self-correcting on test failures and build errors.
 - **Diff UI can desync on long agent runs.** Multi-agent sessions in worktrees occasionally surface stale diffs in the Agents Window; refresh or reopen the worktree to force-sync.
+- **MCP configs can become shell access.** The May 1 [MCP STDIO flaw](/news/2026-05-03-mcp-stdio-command-execution-flaw/) makes plugin/config hygiene a first-order security requirement for Cursor teams using MCP.
 - **Model-hopping inflates spend.** Users switch models mid-session ("try GPT-5.5 on this file, now Opus on the next") and burn more credits than they'd expect. Pin a default and deviate deliberately.
 - **Background/Cloud Agents rename is still confusing.** Cursor 2.0 (Oct 2025) renamed Background Agents to Cloud Agents. Documentation and third-party tutorials from late 2025 still use both names interchangeably.
 - **Privacy mode disables some features.** Cursor sends code to LLM providers by default. Privacy Mode (opt-in; on by default for Business/Enterprise) exempts code from training but disables a subset of indexing features. Sensitive codebases should evaluate trade-offs before adopting.

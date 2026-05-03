@@ -69,6 +69,8 @@ Bundled with every paid ChatGPT tier. Pro tiers get 5x to 20x the Codex usage of
 
 ## Recent developments (March-May 2026)
 
+- **May 2, 2026:** [Codex Desktop added Pets, Hatch custom pet generation, cross-agent config imports, and a dictation dictionary](/news/2026-05-03-openai-codex-pets-config-imports/). The playful overlay is less important than the config portability: Codex can now import conventions from tools such as Claude Code instead of forcing users to rewrite setup context.
+- **May 1, 2026:** [The MCP STDIO command-execution flaw put agent connectors back under security review](/news/2026-05-03-mcp-stdio-command-execution-flaw/). Codex Desktop's plugin/MCP layer should be treated as privileged tool access, not as harmless extension metadata.
 - **May 1, 2026:** [The Pentagon expanded classified-network AI access to eight major vendors](/news/2026-05-01-pentagon-classified-ai-network-deals/), including OpenAI. This is a government deployment story rather than a public Codex feature, but it reinforces why account security, network boundaries, and audit controls matter for agentic OpenAI products.
 - **April 30, 2026:** [OpenAI added Advanced Account Security for ChatGPT and Codex](/news/2026-04-30-openai-advanced-account-security-yubikeys/). Hardware-key and passkey protection now matter more because Codex accounts can touch repos, terminals, plugins, and connected development workflows.
 - **April 30, 2026:** [OpenAI began rolling GPT-5.5 Cyber to critical defenders through Trusted Access](/news/2026-04-30-openai-gpt-55-cyber-trusted-access/). The relevant Codex angle is controlled access to cyber-permissive capabilities, not broad public availability.
@@ -188,7 +190,7 @@ Prices verified 2026-04-18 via [OpenAI Codex pricing](https://developers.openai.
 
 - **macOS-first desktop app.** Windows + EU/UK rolling out but not yet universal. Linux developers use the CLI or wait.
 - **Async tasks can fail silently.** Cloud-sandboxed VMs sometimes error without a clear message. Check task status rather than assuming success.
-- **90+ plugin surface = larger attack surface.** The April 16 [MCP vulnerability](/news/2026-04-16-mcp-vulnerability-200k-servers/) affects every Codex MCP server. Audit third-party plugins before trusting them with shell access.
+- **90+ plugin surface = larger attack surface.** The April 16 [MCP vulnerability](/news/2026-04-16-mcp-vulnerability-200k-servers/) and the May 1 [MCP STDIO command-execution disclosure](/news/2026-05-03-mcp-stdio-command-execution-flaw/) affect every Codex MCP server. Audit third-party plugins and sandbox STDIO tools before trusting them with shell access.
 - **Pricing complexity.** Free / Go / Plus / Pro / Pro 20x / Business / Enterprise is a lot of tiers. Users often pay for the wrong one. Baseline recommendation: Plus for individuals, Pro for active coders, Pro 20x only for sustained daily use.
 - **Codex quality lags Claude Code on strict SWE-bench.** Claude Opus 4.7 leads SWE-bench Verified; Codex is close behind at ~80%. Codex wins on Terminal-Bench 2.0 at 77.3% for autonomous terminal ops.
 - **Computer Use is early.** Works for simple app operations; fragile for complex UI automation. Test your workflow before relying on it.
@@ -236,6 +238,7 @@ Yes. ChatGPT Business at $25/user/mo. Plus Codex-only seats with pay-as-you-go t
 - [OpenAI: Codex pricing](https://developers.openai.com/codex/pricing)
 - [OpenAI: Codex rate card](https://help.openai.com/en/articles/20001106-codex-rate-card)
 - [OpenAI: Codex flexible pricing for teams](https://openai.com/index/codex-flexible-pricing-for-teams/)
+- [Codex Desktop Pets and config-import update](/news/2026-05-03-openai-codex-pets-config-imports/)
 - [Codex Desktop super-app coverage](/news/2026-04-16-openai-codex-desktop-super-app/)
 - [Builder.io: Codex vs Claude Code comparison](https://www.builder.io/blog/codex-vs-claude-code)
 - [The New Stack: Cursor + Claude Code + Codex merging into one AI coding stack](https://thenewstack.io/ai-coding-tool-stack/)

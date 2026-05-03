@@ -60,8 +60,9 @@ Claude Code is Anthropic's terminal-based agentic coding CLI. It runs inside you
 
 Claude Opus 4.7 (released April 16, 2026) is the default backing model. Access is included with Claude Pro at $20/mo and scales through Max 5x at $100/mo and Max 20x at $200/mo. No free tier.
 
-## Recent developments (April 2026)
+## Recent developments (April-May 2026)
 
+- **May 1:** [The MCP STDIO command-execution flaw reframed MCP server configs as privileged shell-access surfaces](/news/2026-05-03-mcp-stdio-command-execution-flaw/). Claude Code teams should inventory MCP configs, sandbox STDIO tools, and treat config approval as a security event, not a routine plugin install.
 - **April 30:** [Claude Security entered public beta for Enterprise codebase scans](/news/2026-04-30-claude-security-public-beta/). It gives Anthropic a first-party vulnerability-review and patch-proposal surface next to Claude Code's terminal agent loop.
 - **April 30:** [A coding-agent security roundup warned that attackers keep targeting credentials, not model weights](/news/2026-04-30-ai-coding-agent-credential-security-roundup/). Claude Code teams should treat permissions, command approvals, secrets, and environment separation as first-order security controls.
 - **April 30:** [Sources: Anthropic could raise $50B at $900B valuation](/news/2026-04-30-anthropic-50b-900b-valuation-round/). The round would dramatically expand resources for Claude Code's development, compute capacity, and enterprise roadmap, backed by a $30B+ revenue run rate.
@@ -171,6 +172,7 @@ Subscription pricing via [claude.com/pricing](https://claude.com/pricing). Claud
 - **No free tier.** Requires Pro at minimum. API key access still costs money from the first token.
 - **Rate limits not fully published.** Pro caps hit faster than Max; Max 20x is the only tier with published "primary tool all day" framing. Heavy users discover limits by hitting them.
 - **Opus 4.7 tokenizer bump.** Same per-token rate as 4.6 but 1.0-1.35x more effective tokens. API workloads need re-benchmarking before migrating.
+- **MCP STDIO is privileged execution.** The May 1 [MCP STDIO disclosure](/news/2026-05-03-mcp-stdio-command-execution-flaw/) means third-party MCP server configs should be reviewed like shell scripts and sandboxed before use.
 - **Ultraplan is research preview.** Cloud planning is not production-ready and may change or be removed.
 - **Windows support is WSL only.** Native Windows is unsupported; WSL works but adds setup friction.
 - **Session context limits on long runs.** Even 1M tokens fills on sustained sessions. Checkpointing helps but does not eliminate the ceiling.

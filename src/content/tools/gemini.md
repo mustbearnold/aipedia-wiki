@@ -45,10 +45,10 @@ facts:
     source_label: "AIpedia Gemini review"
     verified_at: 2026-04-26
   video_generation:
-    value: "Veo 3.1 and Veo 3.1 Fast"
-    source: "/tools/gemini/"
-    source_label: "AIpedia Gemini review"
-    verified_at: 2026-04-26
+    value: "Veo 3.1 and Veo 3.1 Fast; Omni reported in testing but unconfirmed"
+    source: "/news/2026-05-03-google-gemini-omni-video-generation-test/"
+    source_label: "Reported Omni video-generation testing"
+    verified_at: 2026-05-03
   best_paid_tier:
     value: "AI Pro ($19.99/mo)"
     source: "/tools/gemini/"
@@ -95,7 +95,8 @@ Google DeepMind's multimodal AI assistant. **Gemini 3.1 Pro** is the flagship as
 
 ## Recent developments (April-May 2026)
 
-- **May 1:** [The Pentagon expanded classified-network AI access to eight major vendors](/news/2026-05-01-pentagon-classified-ai-network-deals/), including Google. For Gemini, the enterprise-government story is increasingly about approved deployment environments, not only model quality.
+- **May 2:** [A reported Gemini UI string points to a possible Omni video-generation surface ahead of Google I/O](/news/2026-05-03-google-gemini-omni-video-generation-test/). Treat Omni as speculative until Google confirms it; the strategic watch item is whether Gemini unifies Veo video and Nano Banana image generation under one media workflow.
+- **May 1:** [The Pentagon expanded classified-network AI access to eight major vendors](/news/2026-05-01-pentagon-classified-ai-network-deals/), including Google.
 - **April 30:** [Gemini started rolling out to cars with Google built in](/news/2026-04-30-gemini-google-built-in-cars-rollout/), replacing the older Google Assistant car experience with a more conversational assistant surface. US English support begins first, with broader availability expected over time.
 - **April 30:** [EU preliminary findings could force Google to open Android AI integrations](/news/2026-04-30-eu-google-open-up-ai-android/). If final measures are adopted, Google may need to give rivals more access to Android assistant surfaces, potentially narrowing Gemini's default-assistant advantage.
 - **April 28:** [Google Translate added AI pronunciation practice on Android](/news/2026-04-28-google-translate-ai-pronunciation-practice/). The update shows Gemini-era language features spreading through high-volume Google products, not only the standalone Gemini app.
@@ -140,7 +141,7 @@ Google DeepMind's multimodal AI assistant. **Gemini 3.1 Pro** is the flagship as
 | **API pricing** | $2 in / $12 out per MTok (≤200K context) · $4 / $18 (>200K) |
 | **Subscription pricing** | Free · AI Plus $7.99 · AI Pro $19.99 · AI Ultra $249.99 |
 | **Image generation** | Nano Banana 2 (Pro) · Nano Banana Pro (Ultra) |
-| **Video generation** | Veo 3.1, Veo 3.1 Fast (Pro) · Veo 3.1 Lite (API) |
+| **Video generation** | Veo 3.1, Veo 3.1 Fast (Pro) · Veo 3.1 Lite (API); reported Omni testing remains unconfirmed |
 | **Workspace integration** | Native in Docs, Sheets, Gmail, Drive, Meet, Chrome |
 | **Deep Research** | Autonomous multi-source report generation with citations; Max/Ultra positioned for heavier research usage |
 | **Android** | Default assistant as of March 2026, replacing Google Assistant |

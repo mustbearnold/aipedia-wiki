@@ -11,8 +11,8 @@ pricing_model: open-source
 price_range: "Free (open source)"
 status: active
 launched: 2026-04
-last_updated: 2026-04-18
-last_verified: 2026-04-18
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -45,6 +45,10 @@ quick_answer: >-
 # Microsoft Agent Framework
 
 Microsoft's consolidated answer to the agent-framework fragmentation of 2024-2025. Merges the orchestration strengths of Semantic Kernel with the multi-agent patterns of AutoGen into one framework. Version 1.0 shipped April 2026.
+
+## Recent developments
+
+- **May 1, 2026:** [Microsoft put a legal AI agent directly inside Word through its Frontier program](/news/2026-05-03-microsoft-word-legal-agent-frontier/). That is not the open-source Agent Framework itself, but it shows the same Microsoft pattern: domain-specific agents wrapped in structured workflows, approvals, and familiar enterprise surfaces.
 
 ## System Verdict
 

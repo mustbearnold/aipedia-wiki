@@ -97,6 +97,8 @@ Claude Opus 4.7 went generally available inside Copilot on April 16, 2026, withi
 
 On April 24, 2026, GitHub's Copilot interaction-data policy took effect for Free, Pro, and Pro+ accounts: prompts, outputs, code snippets, and associated context may be used for model training unless individual users opt out. Copilot Business and Enterprise remain excluded from that training path.
 
+On May 1, 2026, GitHub announced that [GPT-5.2 and GPT-5.2-Codex will be retired across most Copilot experiences on June 1](/news/2026-05-03-github-copilot-gpt-52-deprecation/), pushing users to GPT-5.5 and GPT-5.3-Codex. Enterprise admins should confirm model policies before the cutoff.
+
 On April 27, 2026, GitHub announced that [Copilot will move to usage-based billing on June 1](/news/2026-04-27-github-copilot-usage-based-billing/). Premium requests are being replaced by GitHub AI Credits, and private-repo Copilot code review will begin consuming GitHub Actions minutes.
 
 Also on April 27, GitHub said [Copilot cloud agent now starts 20% faster when repositories use Actions custom images](/news/2026-04-27-github-copilot-cloud-agent-faster-start/). On April 29, [the rise of agent skill libraries](/news/2026-04-29-agent-skills-ecosystem-github-trending/) showed the workflow layer Copilot now competes in: reusable instructions, agent templates, and versioned team habits rather than one-off prompts.
@@ -104,6 +106,8 @@ Also on April 27, GitHub said [Copilot cloud agent now starts 20% faster when re
 The April 26 news scan added five Copilot-specific updates: [BYOK in VS Code](/news/2026-04-26-github-copilot-byok-vscode/), [cloud-agent metrics](/news/2026-04-26-github-copilot-cloud-agent-metrics/), [Jira-agent controls](/news/2026-04-26-github-copilot-jira-agent-controls/), [PR chat improvements](/news/2026-04-26-github-copilot-pr-chat-improvements/), and [web debugging](/news/2026-04-26-github-copilot-web-debugging/). Together, they make Copilot look less like autocomplete plus chat and more like an admin-governed coding-agent system: managers get metrics, admins get controls, developers get PR/debugging workflow improvements, and power users get more model-key flexibility in VS Code.
 
 Related April coverage: [AI Industry Roundup, April 24](/news/2026-04-24-ai-industry-roundup/) captured the GPT-5.5-in-Copilot signal; [GitHub Copilot adds GPT-5.5](/news/2026-04-24-github-copilot-gpt-55/) is the direct rollout note; [AI News Desk, April 25](/news/2026-04-25-ai-news-catchup/) folded that into the weekend GPT-5.5, Copilot, Project Deal, and Google-Anthropic catchup.
+
+May 1 security coverage added a protocol-level caveat: [the MCP STDIO flaw turns default agent connectors into shell-access surfaces](/news/2026-05-03-mcp-stdio-command-execution-flaw/). Copilot teams using MCP should inventory configs, disable auto-registration where possible, sandbox tools, and treat every STDIO server as privileged execution.
 
 April 30 security coverage added another practical caveat: [recent coding-agent exploits keep targeting credentials, not model weights](/news/2026-04-30-ai-coding-agent-credential-security-roundup/). Copilot's Coding Agent should be governed like CI infrastructure: least privilege, separated environments, secrets hygiene, and auditable action logs.
 
@@ -195,6 +199,7 @@ Prices verified 2026-04-17 via [GitHub Copilot plans](https://github.com/feature
 
 ## Failure modes
 
+- **Model churn is now operational.** [GPT-5.2 and GPT-5.2-Codex retire from most Copilot experiences on June 1, 2026](/news/2026-05-03-github-copilot-gpt-52-deprecation/). Admins need model-policy owners, not just developer preference lists.
 - **Premium request quota burns fast on GPT-5.5 and Opus 4.7.** At the 7.5x multiplier, Pro+'s 1,500 requests yield ~200 top-model turns. Heavy users should pin Sonnet 4.6 or GPT-5-Codex for routine work and reserve GPT-5.5 / Opus for hard problems, or plan for overage at $0.04/request.
 - **Opus 4.7 is not in Pro ($10).** Access requires Pro+ ($39), Business, or Enterprise. Pro is oriented around lower-cost coding and Gemini/Sonnet models by default.
 - **Post-April 30 Opus 4.7 multiplier is unannounced.** Budget accordingly: the 7.5x figure is explicitly "promotional."

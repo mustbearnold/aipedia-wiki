@@ -56,6 +56,8 @@ Cognition AI's AI-native code editor. A VS Code fork with inline autocomplete, a
 
 Owned by Cognition since July 2025, after Google took a licensing deal and an earlier OpenAI acquisition collapsed. Now a sibling product to [Devin](/tools/devin/) inside the Cognition stack.
 
+> **May 1, 2026:** [The MCP STDIO command-execution disclosure named Windsurf in the highest-risk IDE bucket](/news/2026-05-03-mcp-stdio-command-execution-flaw/), with a reported zero-click prompt-injection path to local RCE. Treat MCP auto-registration and third-party servers as privileged shell access until patched and sandboxed.
+
 > **April 17, 2026:** [Windsurf shipped Claude Opus 4.7 support within 24 hours](/news/2026-04-17-opus-4-7-day-two-ide-adoption/) of Anthropic's release, alongside Cursor, Zed, and Continue.
 
 ## System Verdict
@@ -143,6 +145,7 @@ Pricing via [windsurf.com/pricing](https://windsurf.com/pricing). Paid tiers mov
 - **Cognition dependency.** Windsurf's roadmap now tracks Cognition's priorities. Devin-IDE integration is a feature, vendor-lock is the trade-off.
 - **SWE-1.5 quality is workload-dependent.** Fast on iterative edits. Frontier models still beat it on novel reasoning-heavy tasks.
 - **Free tier quotas are daily and weekly.** Heavy evaluation hits the ceiling quickly. Budget a Pro month to run a real benchmark.
+- **MCP zero-click risk is a watch item.** The May 1 [MCP STDIO report](/news/2026-05-03-mcp-stdio-command-execution-flaw/) says Windsurf had a reported zero-click path from prompt injection to local RCE. Disable auto-registration, review active MCP configs, and sandbox servers.
 - **Teams pricing is not bundled with Devin.** The two products bill separately. Multi-product teams should model total cost before switching.
 - **Post-acquisition leadership churn.** Founding leads moved to Google in 2025. Release cadence is stable so far but remains a watch item.
 - **Model pricing variance.** "Unlimited at API price" means heavy users on Opus 4.7 will see real API costs land on their Cognition invoice.
