@@ -8,8 +8,8 @@ author: "aipedia.wiki Editorial"
 description: AI agents autonomously buying, selling, and transacting. Travel booking, ad management, and procurement going agent-first.
 timeframe: Conceptual in 2024, first real implementations in late 2025. Accelerating through 2026. Still early.
 impact: high
-last_updated: 2026-04-30
-last_verified: 2026-04-30
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: monthly
 ---
 
@@ -35,7 +35,7 @@ API-first companies thrive, as agents integrate via direct calls; examples inclu
 Aggregators with broad APIs concentrate agent purchases. Consumers gain from optimized deals, while specialized AI tools in finance and manufacturing deliver ROI through tailored automation.[6]
 
 ## What To Watch Next
-Near-term focus shifts to agent efficiency in enterprises, with multimodal models like GPT-5.4 enhancing decision-making in procurement and shopping.[2] Physical AI integration, as in Amazon's DeepFleet coordinating robot fleets, may extend agent commerce to supply chains.[7] Expect maturation in travel and ads by late 2026, with agent-to-agent trading advancing via DeFi protocols.[1]
+Near-term focus shifts to agent efficiency in enterprises, with multimodal models like OpenAI frontier models enhancing decision-making in procurement and shopping.[2] Physical AI integration, as in Amazon's DeepFleet coordinating robot fleets, may extend agent commerce to supply chains.[7] Expect maturation in travel and ads by late 2026, with agent-to-agent trading advancing via DeFi protocols.[1]
 
 ## How This Affects You
 Builders should prioritize agent-accessible APIs to tap automated demand. Users delegate routine tasks like subscriptions to agents via Claude Opus 4.7 or Gemini 3.1 Pro for savings. Businesses ignoring this risk lost share to API-enabled competitors, while adopters gain efficiency in a market where 82% of users seek persistent AI.[5]

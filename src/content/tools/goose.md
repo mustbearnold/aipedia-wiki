@@ -11,8 +11,8 @@ pricing_model: open-source
 price_range: "Free (Apache-2.0; BYOK LLM costs)"
 status: active
 launched: 2025-01
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: frequent
 affiliate:
   has_program: false
@@ -133,7 +133,7 @@ Provider flexibility is the architectural commitment. Swap LLMs via config; work
 ## Failure modes
 
 - **No managed hosting.** Runs on user machines only. Teams wanting a cloud-hosted agent need a different tool.
-- **BYOK API costs.** No bundled LLM quota. Heavy use of Claude Opus 4.7 or GPT-5.4 accumulates real bills.
+- **BYOK API costs.** No bundled LLM quota. Heavy use of Claude Opus 4.7 or OpenAI frontier models accumulates real bills.
 - **No built-in long-term memory.** Session state resets unless a memory extension is wired in manually.
 - **MCP is a shared standard.** Provider flexibility and MCP are increasingly table-stakes across agent tools, so the moat is narrowing.
 - **Non-developer UX gaps.** Configuring providers, extensions, and recipes assumes comfort with env vars, YAML, and a terminal.

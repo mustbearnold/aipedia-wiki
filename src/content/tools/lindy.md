@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$199.99/month"
 status: active
 launched: 2022-12
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: monthly
 seo_title: "Lindy: Features, Pricing & Review (2026)"
 meta_description: "Lindy is a no-code AI agent builder for SMB workflows. Free tier with 400 credits, Plus $49.99/mo (5,000 credits), Pro $99.99/mo (3x Plus), Max $199.99/mo (7x Plus). Runs on GPT plus Claude. Strongest on inbox triage, meeting notes, and CRM updates."
@@ -139,7 +139,7 @@ Prices verified 2026-04-18 via [Lindy pricing page](https://www.lindy.ai/pricing
 ## Failure modes
 
 - **Credit burn on real workflows.** A lead generation run with knowledge-base lookup plus email plus call can hit 275 credits. At 5,000 Plus credits, that is about 18 leads before top-ups kick in at $10 per 1,000.
-- **Model tax surcharges.** Switching a step to GPT-4o or Claude Opus adds premium multipliers on top of base credit cost. Cost control requires per-step LLM selection discipline.
+- **Model tax surcharges.** Switching a step to premium OpenAI or Claude models adds multipliers on top of base credit cost. Cost control requires per-step LLM selection discipline.
 - **Phone agent is expensive.** Each call burns ~265 credits and telephony adds $10/mo per phone number. Volume voice work belongs on a specialist stack.
 - **Computer use is still rough.** Available on Pro and Max, but session drift and authentication walls break more than half of flows the first time.
 - **No on-prem option.** Regulated workloads that cannot send inbox content to a third party are stuck with Enterprise SSO and contractual SLAs rather than self-host.

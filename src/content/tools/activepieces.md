@@ -13,8 +13,8 @@ pricing_model: open-source
 price_range: Free self-host / $5 per active flow (cloud)
 status: active
 launched: 2022-06
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -80,7 +80,7 @@ Two deployment paths: self-host free on your own infrastructure, or use the clou
 | **Cloud Standard** | 10 active flows free, then $5 per active flow per month |
 | **Connectors ("pieces")** | ~400 (Gmail, Slack, Stripe, HubSpot, Notion, plus LLM providers) |
 | **MCP servers** | Every piece exposes as MCP automatically |
-| **AI actions** | Native pieces for GPT-5.4, Claude Opus 4.7, Gemini 3.1 Pro |
+| **AI actions** | Native pieces for OpenAI frontier models, Claude Opus 4.7, Gemini 3.1 Pro |
 | **Self-host stack** | Docker Compose, Postgres, Redis |
 | **Code steps** | JavaScript (Node-based) |
 | **Enterprise deploy** | Custom annual contract (SSO, audit, Git sync, private pieces) |
@@ -101,7 +101,7 @@ The moats are thin. Code is MIT-licensed, so any competitor can fork. Differenti
 - **Data cannot leave on-prem.** Self-hosted deployment keeps every webhook, payload, and log on infrastructure the team controls.
 - **The agent stack uses MCP.** Pieces expose as MCP servers natively; Claude Desktop or Cursor can invoke them without custom connectors.
 - **The team has Docker and Postgres comfort.** Self-host setup runs in 20 minutes. Updates, backups, and scaling are the team's job.
-- **Workflows need AI actions inline.** Native pieces for GPT-5.4, Claude Opus 4.7, and Gemini 3.1 Pro remove boilerplate OpenAI and Anthropic SDK calls.
+- **Workflows need AI actions inline.** Native pieces for OpenAI frontier models, Claude Opus 4.7, and Gemini 3.1 Pro remove boilerplate OpenAI and Anthropic SDK calls.
 
 ## When to pick something else
 
@@ -165,7 +165,7 @@ Yes. Every piece in the public catalog automatically exposes as a Model Context 
 Activepieces wins on cost, self-host option, and native MCP. Zapier wins on connector breadth (7,000+ vs ~400) and hands-off reliability.
 
 **Which AI models ship as native pieces?**
-GPT-5.4, Claude Opus 4.7, Gemini 3.1 Pro, plus OpenRouter, vector-store, and agent pieces. Switching provider is a config change.
+OpenAI frontier models, Claude Opus 4.7, Gemini 3.1 Pro, plus OpenRouter, vector-store, and agent pieces. Switching provider is a config change.
 
 ## Sources
 

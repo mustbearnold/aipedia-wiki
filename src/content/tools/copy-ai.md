@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$1,000+/month"
 status: active
 launched: 2020-10
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -98,7 +98,7 @@ The moats are workflow-specific: SOC 2 Type II certification, CRM integration de
 - **Solo copywriting:** [ChatGPT](/tools/chatgpt/) Plus at $20/month beats Copy.ai Starter on raw output at less than half the price.
 - **Pure brand-voice content:** [Jasper](/tools/jasper/) is still the stronger enterprise-copy suite with deeper brand-voice governance.
 - **Grammar and editing layer:** [Grammarly](/tools/grammarly/) for correction and polish, not generation.
-- **Direct frontier-model team use:** [Claude](/tools/claude/) Team at $30/user or ChatGPT Teams at $25/user for unmediated access to Opus 4.7 or GPT-5.4.
+- **Direct frontier-model team use:** [Claude](/tools/claude/) Team at $30/user or ChatGPT Teams at $25/user for unmediated access to Opus 4.7 or OpenAI frontier models.
 - **Data enrichment first, copy second:** Clay is the stronger specialist for prospect enrichment; pair with Copy.ai workflows or handle both inside Clay itself.
 
 ## Pricing
@@ -124,7 +124,7 @@ Subscription pricing via [copy.ai/prices](https://www.copy.ai/prices). Annual bi
 | **GTM workflow automation** | **Strongest** | None native | Via Zapier manually |
 | **CRM integrations** | HubSpot, Salesforce, Pipedrive | Limited | Via GPTs and Zapier |
 | **Brand voice** | Account-wide | **Strongest enforcement** | Per-GPT |
-| **Raw model quality** | Routed third-party | Routed third-party | Direct GPT-5.4 |
+| **Raw model quality** | Routed third-party | Routed third-party | Direct OpenAI model access |
 | **Compliance** | SOC 2 Type II | SOC 2 | SOC 2 |
 | **Best viewed as** | GTM AI platform | Enterprise copy suite | Generalist team default |
 

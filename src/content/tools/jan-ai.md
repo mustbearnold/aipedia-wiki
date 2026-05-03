@@ -11,8 +11,8 @@ pricing_model: free
 price_range: "$0 (one optional $24 Mac voice pack)"
 status: active
 launched: 2023-10
-last_updated: 2026-04-18
-last_verified: 2026-04-18
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -72,7 +72,7 @@ The open-source ChatGPT alternative that stays on your machine. Desktop-first, p
 
 - **Open-source purists.** You want the app itself to be open source, not just the models it runs. Jan is auditable end to end; LM Studio is not.
 - **Desktop-first privacy workflows.** Local models + local data = nothing leaves your machine. Safe for confidential work.
-- **Switching between local and cloud.** The same UI handles Llama 4 local and GPT-5.4 cloud. Useful when you want local for drafting and cloud for polishing.
+- **Switching between local and cloud.** The same UI handles Llama 4 local and OpenAI frontier models cloud. Useful when you want local for drafting and cloud for polishing.
 - **Mac-friendly voice input.** The optional $24 voice-to-text pack is a one-time buy for fluent voice-to-text on Apple Silicon.
 
 ## When to pick something else

@@ -8,8 +8,8 @@ description: "Go from blank page to published YouTube video with a single-person
 stack: [claude, midjourney, elevenlabs, descript, ideogram]
 tools_mentioned: [claude, midjourney, elevenlabs, descript, ideogram]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: quarterly
 ---
 
@@ -146,7 +146,7 @@ Skip it for photoreal video needs (Midjourney generates stylized images, not sto
 **Can the free tiers cover this workflow?**
 Partially, and not at a sustainable cadence. Claude Free caps at 30-100 daily messages depending on complexity. Midjourney has no free tier. ElevenLabs Free caps at 10,000 characters/month (~one short voiceover). Descript Free caps at 3 hours/month. Ceiling hits after one video. Paid tiers are necessary.
 
-**GPT-5.4 instead of Claude for scripts?**
+**OpenAI frontier models instead of Claude for scripts?**
 Both work equally well for a single script. Claude's advantage is the 1M-token context window for feeding full channel history as voice reference. For a one-off script, they are interchangeable.
 
 **How is the Creator voice trained?**

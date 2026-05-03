@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "$20-$200/developer/month"
 status: active
 launched: 2024
-last_updated: 2026-04-28
-last_verified: 2026-04-28
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: monthly
 seo_title: "Augment Code: Features, Pricing & Review (April 2026)"
 meta_description: "Augment Code is an AI coding platform for large codebases. Indie is $20/mo with 40,000 credits, Standard is $60/developer/mo, Max is $200/developer/mo, and Enterprise is custom."
@@ -29,7 +29,7 @@ scores:
   longevity: 8
 facts:
   flagship_model:
-    value: "Claude Opus 4.6, Claude Sonnet 4.6, Gemini 3.1 Pro, GPT-5.4, and other selectable models"
+    value: "Claude Opus 4.6, Claude Sonnet 4.6, Gemini 3.1 Pro, OpenAI frontier models, and other selectable models"
     source: "https://docs.augmentcode.com/models/available-models"
     source_label: "Augment available models"
     verified_at: 2026-04-28
@@ -81,7 +81,7 @@ Augment Code is an AI coding platform built around a codebase context engine. It
 
 The positioning is different from [Cursor](/tools/cursor/) or [Windsurf](/tools/windsurf/): Augment is not trying to replace your editor. It tries to understand a large repository deeply enough to make code changes, answer questions, and review pull requests without forcing a new IDE.
 
-The model menu matters. Augment documents selectable access to Anthropic Claude Haiku 4.5, Opus 4.5, Opus 4.6, Sonnet 4, Sonnet 4.5, Sonnet 4.6, Google Gemini 3.1 Pro, and OpenAI GPT-5.1, GPT-5.2, and GPT-5.4. Model choice applies to Agent in the current workspace; Auggie CLI exposes model selection through `/model` or `--model`.
+The model menu matters. Augment documents selectable access to Anthropic Claude Haiku 4.5, Opus 4.5, Opus 4.6, Sonnet 4, Sonnet 4.5, Sonnet 4.6, Google Gemini 3.1 Pro, and OpenAI GPT-5.1, GPT-5.2, and OpenAI frontier models. Model choice applies to Agent in the current workspace; Auggie CLI exposes model selection through `/model` or `--model`.
 
 ## System Verdict
 

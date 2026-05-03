@@ -11,8 +11,8 @@ pricing_model: open-source
 price_range: "Free (MIT license; BYOK API costs)"
 status: active
 launched: 2026-02
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -65,7 +65,7 @@ Three features set it apart from a standard chatbot: persistent memory across re
 >
 > **Skip it if the user wants plug-and-play.** There is no managed cloud. Setup means env vars, Docker, a model API key, and at least one platform integration. [ChatGPT](/tools/chatgpt/) or a hosted Zapier agent will be faster to stand up.
 >
-> **Who pays what:** Hermes itself is free under MIT. The real cost is the model API. Light use runs $5 to $30 per month through OpenRouter; frontier models on Claude Opus 4.7 or GPT-5.4 can run higher on heavy workloads.
+> **Who pays what:** Hermes itself is free under MIT. The real cost is the model API. Light use runs $5 to $30 per month through OpenRouter; frontier models from Anthropic or OpenAI can run higher on heavy workloads.
 
 ## Key Facts
 
@@ -134,7 +134,7 @@ The skill system is emergent, not pre-authored. After a multi-step task (typical
 
 - **Self-hosted only.** No managed cloud means the operator owns uptime, updates, and security patches.
 - **Setup is not plug-and-play.** Six platform bridges, a sandbox backend, and model API keys all need configuration. Comfortable with Docker is the baseline.
-- **API costs are unbounded by default.** No built-in spend caps. A runaway skill calling GPT-5.4 Pro can burn through credits fast.
+- **API costs are unbounded by default.** No built-in spend caps. A runaway skill calling OpenAI frontier models can burn through credits fast.
 - **Version churn.** Early-stage project; breaking changes to config format have shipped between releases.
 - **Low moat.** MIT license plus open architecture means forks are trivial. Differentiation depends on Nous Research staying active.
 - **No IDE integration.** Not a coding assistant for in-editor flows.
@@ -151,7 +151,7 @@ This page was produced by the aipedia.wiki editorial pipeline, an automated syst
 Yes. MIT license, full feature set in the open-source release. The only cost is whatever model API the operator configures.
 
 **Which models work?**
-OpenAI, Anthropic, OpenRouter (200+ models including Claude Opus 4.7 and GPT-5.4), Nous Portal, and custom endpoints. Switching is a config change.
+OpenAI, Anthropic, OpenRouter (200+ models including Claude Opus 4.7 and OpenAI frontier models), Nous Portal, and custom endpoints. Switching is a config change.
 
 **What makes it different from a Telegram bot?**
 Persistent cross-session memory, auto-generated skills that the agent writes from experience, natural language cron scheduling, and a single process that bridges Telegram, Discord, Slack, WhatsApp, Signal, Email, and CLI.

@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "$0.10-$0.90/M tokens serverless / $2.90-$9/hr on-demand GPU"
 status: active
 launched: 2022-09
-last_updated: 2026-04-29
-last_verified: 2026-04-29
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -36,7 +36,7 @@ best_for:
 not_best_for:
   - latency-critical real-time apps (Groq wins on speed)
   - users who just want consumer chat (no UI)
-  - frontier proprietary models (no GPT-5.4 / Claude)
+  - frontier proprietary models (no OpenAI frontier models / Claude)
 quick_answer: >-
   Fireworks AI is a serverless inference platform for open-source AI models. 400+ models covering LLM, image, vision, audio. Serverless pricing is $0.10/M tokens for small models scaling to $0.90/M for 16B+. On-demand GPUs $2.90 (A100) to $9.00 (B200). Nvidia Blackwell reduces cost per token up to 10×. New users get $1 free credits. Pick it for production open-weight inference with fine-tuning + compliance.
 ---
@@ -86,7 +86,7 @@ A production-grade inference cloud for open-source generative AI. 400+ models ac
 
 - **Speed over all:** [Groq](/tools/groq/). 300-1000 tok/sec on LPU hardware. Fireworks is faster than average; Groq is in another class.
 - **Image/video breadth:** [Fal.ai](/tools/fal-ai/) has 600+ models including deeper coverage of video and custom LoRAs.
-- **Frontier proprietary:** Go direct. Fireworks doesn't run GPT-5.4 or Claude Opus 4.7.
+- **Frontier proprietary:** Go direct. Fireworks doesn't run OpenAI frontier models or Claude Opus 4.7.
 - **Local / privacy-first:** [Ollama](/tools/ollama/) for single-machine deployments or [AnythingLLM](/tools/anythingllm/) + self-host for teams.
 
 ## Pricing

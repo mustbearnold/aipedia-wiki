@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "Free 10k req/mo / paid tiers scale with volume"
 status: active
 launched: 2023-03
-last_updated: 2026-04-18
-last_verified: 2026-04-18
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -70,7 +70,7 @@ Open-source observability for LLM applications. Drop one line into your OpenAI, 
 ## When to pick Helicone
 
 - **Production LLM apps.** Log every request, debug why a prompt degraded, catch cost runaways before the end-of-month bill.
-- **Multi-provider workloads.** Route between GPT-5.4 and Claude Opus 4.7 based on latency or cost; Helicone tracks both.
+- **Multi-provider workloads.** Route between OpenAI frontier models and Claude Opus 4.7 based on latency or cost; Helicone tracks both.
 - **Cost optimization.** Prompt caching alone typically saves 30-80% on repeated-prompt workloads. The gateway handles it.
 - **Agent workflow debugging.** LangGraph integration shows you exactly what each node in a graph did, including tool calls and state changes.
 - **Self-hosted preference.** Open-source core lets you run Helicone on your own infrastructure.

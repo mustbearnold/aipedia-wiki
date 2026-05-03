@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2023-03
-last_updated: 2026-05-01
-last_verified: 2026-05-01
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: monthly
 seo_title: "Claude: Features, Pricing & Review (2026)"
 meta_description: "Claude runs Opus 4.7 (April 16, 2026) as flagship, Sonnet 4.6, Haiku 4.5. Claude Design (April 17) added for prompt-to-prototype. 1M context, $5/$25 per MTok API. Free tier; Pro $20/mo."
@@ -136,9 +136,9 @@ Anthropic's AI assistant. **Opus 4.7** is the flagship as of **April 16, 2026**,
 
 ## System Verdict
 
-> **Pick Claude if you need long-form reasoning, writing coherence, Claude Code, or a controlled enterprise workflow more than broad assistant coverage.** Opus 4.7 (released April 16) took measurable leads against GPT-5.4 and Gemini 3.1 Pro on agentic coding, tool use, and financial analysis, but GPT-5.5 makes ChatGPT the stronger default all-purpose product again. Claude Code remains one of the strongest terminal coding agents on the market. The 1M context window on Opus and Sonnet is still a real advantage when you need whole-codebase or long-document work, and Anthropic is pushing harder than peers on explicit boundaries for agents that shop, transact, or interact with civic information.
+> **Pick Claude if you need long-form reasoning, writing coherence, Claude Code, or a controlled enterprise workflow more than broad assistant coverage.** Opus 4.7 (released April 16) took measurable leads against the prior OpenAI frontier and Gemini 3.1 Pro on agentic coding, tool use, and financial analysis, but GPT-5.5 makes ChatGPT the stronger default all-purpose product again. Claude Code remains one of the strongest terminal coding agents on the market. The 1M context window on Opus and Sonnet is still a real advantage when you need whole-codebase or long-document work, and Anthropic is pushing harder than peers on explicit boundaries for agents that shop, transact, or interact with civic information.
 >
-> **Skip it if your workload needs image generation, video, or a deep plugin / integration ecosystem.** Claude has no native image gen (use Midjourney or GPT Image 2), no video (Veo 3 or Kling), and a much smaller third-party tool marketplace than ChatGPT. Anthropic's conservative safety posture also refuses more requests than GPT-5.4 does.
+> **Skip it if your workload needs image generation, video, or a deep plugin / integration ecosystem.** Claude has no native image gen (use Midjourney or GPT Image 2), no video (Veo 3 or Kling), and a much smaller third-party tool marketplace than ChatGPT. Anthropic's conservative safety posture also refuses more requests than ChatGPT does.
 >
 > **Who pays which tier:** Free for casual Sonnet access, Pro $20/mo for most individuals needing Opus + extended thinking, Max 5x $100/mo for heavy solo coders, Max 20x $200/mo for teams or sustained agentic workloads. API developers should price against Opus 4.7's effective-token-count bump before migrating from 4.6.
 
@@ -169,15 +169,15 @@ A single consumer + API product covering text chat, long-form analysis, code, an
 
 Prompt caching drops cache-hit input costs to 10% of standard. The Batch API cuts both input and output by 50%, materially cheaper than OpenAI for bulk workloads.
 
-The real moats: the 1M token context at flat per-token rates (no long-context surcharge like GPT-5.4's), Constitutional AI training that produces more structurally coherent output on long documents, and Claude Code CLI, which autonomously reads and writes across full codebases from the terminal.
+The real moats: the 1M token context at flat per-token rates, Constitutional AI training that produces more structurally coherent output on long documents, and Claude Code CLI, which autonomously reads and writes across full codebases from the terminal.
 
 ## When to pick Claude
 
-- **Long-form writing or document analysis.** Better coherence on 10K+ word outputs than GPT-5.4; the 1M context means book-length inputs load in one session without chunking.
+- **Long-form writing or document analysis.** Better coherence on many 10K+ word outputs than ChatGPT; the 1M context means book-length inputs load in one session without chunking.
 - **Agentic coding from the terminal.** Claude Code is the strongest CLI agent; Ultraplan auto-creates cloud environments, the Monitor tool watches running processes.
-- **Legal, compliance, civic, or regulated workflows.** Constitutional AI training reduces sycophantic agreement with user-stated premises, and Anthropic is explicitly publishing safeguards around elections and transactional agents. That's the exact failure mode that kills premise-testing tasks on GPT-5.4.
+- **Legal, compliance, civic, or regulated workflows.** Constitutional AI training reduces sycophantic agreement with user-stated premises, and Anthropic is explicitly publishing safeguards around elections and transactional agents. That's the exact failure mode that can kill premise-testing tasks on more permissive assistants.
 - **Security research via Mythos Preview.** Scores 83.1% on vulnerability-reproduction benchmarks (vs Opus 4.6's 66.6%). Invitation-only via Project Glasswing consortium.
-- **API bulk workloads.** Batch API + prompt caching combine for genuinely cheaper Opus runs than equivalent GPT-5.4 Pro workloads.
+- **API bulk workloads.** Batch API + prompt caching combine for genuinely cheaper Opus runs than some equivalent GPT-5.5 Pro workloads.
 
 ## When to pick something else
 
@@ -216,7 +216,7 @@ Prices verified 2026-04-17 via [Anthropic pricing docs](https://platform.claude.
 
 ## Against the alternatives
 
-| | Claude Opus 4.7 | GPT-5.4 Pro | Gemini 3.1 Pro |
+| | Claude Opus 4.7 | GPT-5.5 Pro | Gemini 3.1 Pro |
 |---|---|---|---|
 | **Agentic coding** | Claude Code (strongest CLI) | Codex (strongest IDE integration) | No native agent |
 | **Image generation** | None | GPT Image 2 | Imagen 4 (built-in) |
@@ -228,7 +228,7 @@ Prices verified 2026-04-17 via [Anthropic pricing docs](https://platform.claude.
 
 ## Failure modes
 
-- **Conservative safety refusals.** Claude declines requests that are not actually harmful at a higher rate than GPT-5.4. Noticeable on red-team research, edgy creative writing, and some analysis of adversarial content.
+- **Conservative safety refusals.** Claude declines requests that are not actually harmful at a higher rate than ChatGPT. Noticeable on red-team research, edgy creative writing, and some analysis of adversarial content.
 - **No native image or video.** Workflows that need multimodal output need a second tool alongside Claude.
 - **Opus 4.7 tokenizer bump.** Same sticker price as 4.6, but 1.0-1.35× more effective tokens. At 1.2×+ inflation, GPT-5.5 can be as cheap or cheaper on effective cost despite Opus's lower output sticker price. API workloads need re-benchmarking before migrating.
 - **Computer Use is still a research preview.** Available inside Claude Code only, not in claude.ai chat. Not production-ready.
@@ -253,7 +253,7 @@ Yes. The free tier gives capped daily access to Sonnet. [Claude Pro](https://cla
 <details>
 <summary>What changed in Opus 4.7 vs 4.6?</summary>
 
-Same $5/$25 per MTok pricing, but a new tokenizer generates 1.0-1.35× more tokens per input. On benchmarks, 4.7 takes measurable leads on agentic coding, scaled tool use, computer use, and financial analysis over GPT-5.4 Pro and Gemini 3.1 Pro. Released [April 16, 2026](https://github.blog/changelog/2026-04-16-claude-opus-4-7-is-generally-available/).
+Same $5/$25 per MTok pricing, but a new tokenizer generates 1.0-1.35× more tokens per input. On benchmarks, 4.7 takes measurable leads on agentic coding, scaled tool use, computer use, and financial analysis over the prior OpenAI frontier and Gemini 3.1 Pro. Released [April 16, 2026](https://github.blog/changelog/2026-04-16-claude-opus-4-7-is-generally-available/).
 
 </details>
 
@@ -281,7 +281,7 @@ A separate frontier model specialized for defensive cybersecurity, announced as 
 <details>
 <summary>How does the 1M context compare?</summary>
 
-Opus 4.7 and Sonnet 4.6 both support 1M tokens at flat per-token pricing (no long-context surcharge). Gemini 3.1 Pro also offers 1M tokens. GPT-5.4 Pro does not publish its context window. At equivalent context lengths, Claude maintains strong coherence in published third-party evaluations.
+Opus 4.7 and Sonnet 4.6 both support 1M tokens at flat per-token pricing (no long-context surcharge). Gemini 3.1 Pro also offers 1M tokens. ChatGPT plan context windows differ from OpenAI API context windows, so compare the exact surface before buying. At equivalent context lengths, Claude maintains strong coherence in published third-party evaluations.
 
 </details>
 

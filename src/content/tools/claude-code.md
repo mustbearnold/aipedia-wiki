@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "$20-$200/month"
 status: active
 launched: 2025-02
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -84,7 +84,7 @@ Claude Opus 4.7 (released April 16, 2026) is the default backing model. Access i
 
 ## System Verdict
 
-> **Pick Claude Code if you run serious multi-file engineering from the terminal.** The agentic loop (plan, execute, validate, self-correct) is the deepest on the market as of April 2026. Opus 4.7 takes measurable leads on agentic coding benchmarks against GPT-5.4 Pro and Gemini 3.1 Pro. MCP server support, Skills, and Agent SDK hosting turn it into a production agent platform, not just a coding assistant.
+> **Pick Claude Code if you run serious multi-file engineering from the terminal.** The agentic loop (plan, execute, validate, self-correct) is the deepest on the market as of April 2026. Opus 4.7 takes measurable leads on agentic coding benchmarks against OpenAI frontier models and Gemini 3.1 Pro. MCP server support, Skills, and Agent SDK hosting turn it into a production agent platform, not just a coding assistant.
 >
 > **Skip it if you want IDE-integrated coding, visual editing, or a free tier.** [Cursor](/tools/cursor/) at $20/mo owns IDE-integrated AI coding with inline autocomplete and visual diffs. [GitHub Copilot](/tools/github-copilot/) at $10/mo is the cheapest entry for GitHub-centric teams. [Cline](/tools/cline/) is free open-source VS Code with BYOK. Claude Code is CLI-only and demands real terminal comfort.
 >
@@ -157,7 +157,7 @@ Subscription pricing via [claude.com/pricing](https://claude.com/pricing). Claud
 | | Claude Code | Cursor | GitHub Copilot |
 |---|---|---|---|
 | **Interface** | Terminal only | VS Code fork | VS Code / JetBrains / Neovim |
-| **Backing model** | Opus 4.7 / Sonnet 4.6 / Haiku 4.5 | Opus 4.7 / GPT-5.4 / Gemini 3.1 | Opus 4.7 agent mode, GPT-5.4 |
+| **Backing model** | Opus 4.7 / Sonnet 4.6 / Haiku 4.5 | Opus 4.7 / OpenAI frontier models / Gemini 3.1 | Opus 4.7 agent mode, OpenAI frontier models |
 | **Context depth** | 1M tokens (Opus) | Depends on model | Depends on model |
 | **Agent autonomy** | **Deepest** · full agentic loop | Strong · IDE-bounded | Growing · agent mode added |
 | **MCP support** | **First-class** | Emerging | Limited |

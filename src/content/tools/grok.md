@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$300/month"
 status: active
 launched: 2023-11
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -72,7 +72,7 @@ best_for:
   - long-context API workloads up to 2M tokens
 not_best_for:
   - users wanting predictable platform governance
-  - strongest general-purpose reasoning (Claude or GPT-5.4 better)
+  - strongest general-purpose reasoning (Claude or GPT-5.5 better)
   - organizations avoiding Musk-controlled infrastructure
 quick_answer: >-
   Grok is xAI's AI assistant, now SpaceX-owned after the February 2026 $1.25T merger. Grok 4.20 Beta's 4-agent architecture cut hallucinations to ~4.2% with a 2M token context. Pick for real-time X data access (unreplicable); skip for predictable governance or strongest general reasoning.
@@ -122,7 +122,7 @@ Context window is 2M tokens, the largest confirmed in any major commercial model
 
 > **Pick Grok if you are on X Premium already or need real-time X data access.** The live X firehose is the single non-replicable capability. No other frontier assistant reads live X posts, trending topics, and breaking discussions at query time. For social intelligence, political analysis, journalism, or any workflow tied to live X data, Grok is the only serious option.
 >
-> **Skip it for predictable governance or strongest general reasoning.** The SpaceX merger concentrated Grok's roadmap, content policy, and platform continuity inside a single Musk-controlled conglomerate. That is a concentration risk users of OpenAI, Anthropic, and Alphabet-backed tools do not carry. On raw reasoning, [Claude Opus 4.7](/tools/claude/) and [GPT-5.4](/tools/chatgpt/) beat Grok 4.20 outside X-data tasks. For structured web research without X data, [Perplexity](/tools/perplexity/) produces cleaner outputs than DeepSearch.
+> **Skip it for predictable governance or strongest general reasoning.** The SpaceX merger concentrated Grok's roadmap, content policy, and platform continuity inside a single Musk-controlled conglomerate. That is a concentration risk users of OpenAI, Anthropic, and Alphabet-backed tools do not carry. On raw reasoning, [Claude Opus 4.7](/tools/claude/) and [GPT-5.5](/tools/chatgpt/) beat Grok 4.20 outside X-data tasks. For structured web research without X data, [Perplexity](/tools/perplexity/) produces cleaner outputs than DeepSearch.
 >
 > **Who pays which tier:** Free for X account holders (limited daily queries), X Premium ~$8/mo for bundled Grok + Voice Mode, SuperGrok Lite $10/mo, **SuperGrok $30/mo or X Premium+ $40/mo for Grok 4.3 beta access** (expanded April 19, 2026), SuperGrok Heavy $300/mo for Grok 4.3 beta + 16-agent Heavy architecture + ~4,000 msg/day + 360 min Deep Search + max compute priority. Heavy is now justified only by the multi-agent architecture and priority rate limits; the 1T-param model itself is available at SuperGrok / Premium+ prices.
 
@@ -161,7 +161,7 @@ DeepSearch combines live web crawl and X content into cited answers. Think mode 
 
 Aurora (Grok Imagine) handles image generation inside the Grok interface. Post-2026 deepfake controversies forced restrictions: non-consensual real-person edits are blocked, and geoblocking applies in some jurisdictions. No video generation.
 
-The real differentiator is data, not architecture. Claude Opus 4.7 and GPT-5.4 match or exceed Grok 4.20 on most general reasoning benchmarks. What none of them can replicate is the live X firehose. For social analysis, journalism, political research, or any workflow where current X discourse is the input, Grok wins by default.
+The real differentiator is data, not architecture. Claude Opus 4.7 and GPT-5.5 match or exceed Grok 4.20 on most general reasoning benchmarks. What none of them can replicate is the live X firehose. For social analysis, journalism, political research, or any workflow where current X discourse is the input, Grok wins by default.
 
 ## When to pick Grok
 
@@ -169,7 +169,7 @@ The real differentiator is data, not architecture. Claude Opus 4.7 and GPT-5.4 m
 - **You're already on X Premium.** Grok access is bundled. Incremental cost is effectively zero.
 - **You need 2M-token context at commodity API pricing.** Grok 4.1 Fast Non-Reasoning handles 2M tokens at $0.20/$0.50 per M. Nothing else hits that ratio.
 - **You want a less restrictive content policy.** Grok declines fewer prompts than ChatGPT or Claude. Useful for certain research and creative workflows; also a liability for compliance-heavy deployments.
-- **You need cheap long-context enterprise tasks.** Grok 4.1 Fast handles long code, long documents, and long transcripts at a per-token rate below Claude or GPT-5.4.
+- **You need cheap long-context enterprise tasks.** Grok 4.1 Fast handles long code, long documents, and long transcripts at a per-token rate below Claude or GPT-5.5.
 
 ## When to pick something else
 
@@ -204,7 +204,7 @@ Consumer tier pricing for SuperGrok tiers is not uniformly disclosed on xAI's pu
 
 ## Against the alternatives
 
-| | Grok 4.20 | ChatGPT (GPT-5.4) | Claude Opus 4.7 |
+| | Grok 4.20 | ChatGPT (GPT-5.5) | Claude Opus 4.7 |
 |---|---|---|---|
 | **Context window** | 2M tokens (largest) | Undisclosed | 1M tokens |
 | **Live X / social data** | Yes · unreplicable | No | No |
@@ -258,8 +258,8 @@ SpaceX acquired xAI on February 2, 2026 in a $1.25T all-stock deal (SpaceX $1T, 
 **What is Grok 4.20 vs Grok 4 Heavy?**
 Grok 4.20 Beta 2 (also labeled 0309 v2) is the current production flagship using the 4-agent architecture. Grok 4 Heavy is the high-performance variant tuned for advanced benchmarks (100% AIME 2025, 88.4% GPQA Diamond). Heavy is positioned for enterprise and demanding reasoning tasks, not general consumer access.
 
-**How does Grok compare to GPT-5.4 and Claude Opus 4.7?**
-Grok 4 Heavy leads on math and science reasoning benchmarks. On general-purpose reasoning and writing, Claude Opus 4.7 and GPT-5.4 are broadly competitive and often ahead. Grok's real advantages are the 2M context window (largest available), live X data access, and cheap long-context API pricing. Neither Claude nor GPT-5.4 can replicate the X data firehose.
+**How does Grok compare to GPT-5.5 and Claude Opus 4.7?**
+Grok 4 Heavy leads on math and science reasoning benchmarks. On general-purpose reasoning and writing, Claude Opus 4.7 and GPT-5.5 are broadly competitive and often ahead. Grok's real advantages are the 2M context window (largest available), live X data access, and cheap long-context API pricing. Neither Claude nor GPT-5.5 can replicate the X data firehose.
 
 **When does Grok 5 launch?**
 Musk has publicly targeted Q2 2026. Training is in progress on Colossus 2. Architecture is 6 trillion parameters with Mixture-of-Experts. No confirmed release date at the time of writing.

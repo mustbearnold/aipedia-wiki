@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "$4.70-$108/month annual"
 status: active
 launched: 2017-01
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -52,7 +52,7 @@ D-ID is the real-time streaming AI avatar platform built by D-ID (Digital Humans
 |---|---|
 | **Core products** | Creative Reality Studio (scripted) · Agents (real-time) · Streaming API |
 | **Real-time streaming** | Live avatar conversations · typical 1 to 3 second response latency |
-| **LLM integrations** | GPT-5.4, Claude Opus 4.7, and other frontier models via Agents |
+| **LLM integrations** | OpenAI frontier models, Claude Opus 4.7, and other frontier models via Agents |
 | **AI presenters** | 150+ stock avatars · photo upload for custom animation |
 | **Languages** | 120+ with natural voice per language |
 | **Output resolution** | Standard 1280×1280 · Premium AI presenters at 1080p |
@@ -74,7 +74,7 @@ Credit cost is the main friction. Roughly 15 seconds of output per credit means 
 - **You build a live AI agent that needs a face.** Customer support, onboarding kiosks, AI companions, interactive education. No competitor ships a mature streaming avatar API.
 - **You embed avatars in apps via API.** Creative Reality Studio and the streaming interface are API-first; the platform is built for developers, not brand marketers.
 - **You need multilingual live conversation.** 120+ languages with natural voice per language.
-- **You connect avatars to your own LLM or knowledge base.** Plug GPT-5.4, Claude Opus 4.7, or a custom agent into the avatar layer.
+- **You connect avatars to your own LLM or knowledge base.** Plug OpenAI frontier models, Claude Opus 4.7, or a custom agent into the avatar layer.
 - **You want low-volume evaluation.** Lite at $4.70 annual makes prototype work cheap.
 
 ## When to pick something else
@@ -141,7 +141,7 @@ Roughly 1 credit per 15 seconds of output means 4 credits per minute. Lite at $4
 Limited. Enterprise L&D buyers looking for native SCORM, Workday, SAP, or Cornerstone integration should compare against [Synthesia](/tools/synthesia/), which builds around that pipeline.
 
 **What LLMs plug into D-ID Agents?**
-GPT-5.4, Claude Opus 4.7, and other frontier models are supported through the Agents integration layer. Custom agents and knowledge bases (PDFs, FAQs, websites) connect via the documented API.
+OpenAI frontier models, Claude Opus 4.7, and other frontier models are supported through the Agents integration layer. Custom agents and knowledge bases (PDFs, FAQs, websites) connect via the documented API.
 
 ## Sources
 

@@ -11,8 +11,8 @@ pricing_model: enterprise
 price_range: "$30K-$500K+/year"
 status: active
 launched: 2016-01
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: quarterly
 seo_title: "Ada (ada.cx): AI Customer Service Platform Review (2026)"
 meta_description: "Ada runs the ACX Platform for enterprise AI customer support: 80%+ autoresolution, voice + chat + email, Reasoning Engine, Playbooks. Contact-sales pricing from ~$30K/year. 350+ customers including Verizon, Monday.com, Pinterest, Square."
@@ -108,7 +108,7 @@ Integrations are built for CX-stack realities: Salesforce for customer data, Zen
 
 - **SMB or mid-market (<100K conversations/year):** [Intercom](/tools/intercom/) Fin AI Agent, Zendesk's built-in AI agent, or HubSpot are cheaper and faster to deploy. Ada's floor price makes no sense below this threshold.
 - **Self-serve chatbot building:** [Voiceflow](/tools/voiceflow/) gives teams a builder-first experience with transparent pricing. Ada expects CX ops configuration work.
-- **Developer-first agent framework:** Rasa, LangChain, or a custom build on [Claude](/tools/claude/) or [GPT-5.4](/tools/chatgpt/) gives engineering teams full control.
+- **Developer-first agent framework:** Rasa, LangChain, or a custom build on [Claude](/tools/claude/) or [ChatGPT](/tools/chatgpt/) gives engineering teams full control.
 - **Voice-only deployments without CX context:** Purpose-built voice-AI vendors (ElevenLabs Conversational AI, Retell, Vapi) can be cheaper for standalone voice bots that do not need full CX tooling.
 - **Transparent per-seat pricing:** Ada is contact-sales. If procurement needs a price page before demo, this will stall.
 

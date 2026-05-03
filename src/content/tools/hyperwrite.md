@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$44.99/month"
 status: active
 launched: 2021-06
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -51,7 +51,7 @@ Pricing runs $0 to $44.99/month. Free tier caps at 15 combined uses per day.
 
 > **Pick HyperWrite if a single Chrome extension has to cover both inline AI writing and routine browser automation.** The Personal Assistant agent is one of the few consumer browser agents priced below $50/month, and the writing suite works inside whatever editor is already open.
 >
-> **Skip it if [ChatGPT](/tools/chatgpt/) Plus already covers the workflow.** Operator on Plus at $20/month handles browser automation with deeper model backing, and GPT-5.4 beats HyperWrite's output ceiling on raw writing quality. For grammar-first editing, [Grammarly](/tools/grammarly/) is the stronger pick.
+> **Skip it if [ChatGPT](/tools/chatgpt/) Plus already covers the workflow.** Operator on Plus at $20/month handles browser automation with deeper model backing, and OpenAI frontier models beat HyperWrite's output ceiling on raw writing quality. For grammar-first editing, [Grammarly](/tools/grammarly/) is the stronger pick.
 >
 > **Who pays which tier:** Free for casual testers willing to live with 15 uses per day, Premium $19.99/mo for daily inline users who want unlimited AutoWrite and basic Personal Assistant, Ultra $44.99/mo for heavy browser-automation workloads and priority access.
 
@@ -92,7 +92,7 @@ The moats are narrow. Personal Assistant remains below ChatGPT Operator on relia
 ## When to pick something else
 
 - **Grammar-first editing:** [Grammarly](/tools/grammarly/) is stronger on sentence-level correction and brand-voice enforcement at comparable price.
-- **Raw writing quality:** [ChatGPT](/tools/chatgpt/) Plus at $20/mo with GPT-5.4 beats HyperWrite's ceiling on long-form and reasoning-heavy prose.
+- **Raw writing quality:** [ChatGPT](/tools/chatgpt/) Plus at $20/mo with OpenAI frontier models beats HyperWrite's ceiling on long-form and reasoning-heavy prose.
 - **Long-form document coherence:** [Claude](/tools/claude/) Pro at $20/mo with Opus 4.7 handles 10K-word drafts better than HyperWrite's routed models.
 - **Heavy browser automation:** ChatGPT Operator on Plus handles complex, unfamiliar sites more reliably than Personal Assistant today.
 - **Template-driven copy at volume:** [Jasper](/tools/jasper/) for brand-voice templates, or budget plays like Rytr for short-form output.
@@ -115,7 +115,7 @@ Subscription pricing via [hyperwriteai.com/pricing](https://www.hyperwriteai.com
 |---|---|---|---|
 | **Inline writing** | Strong, Chrome-native | Strong, needs copy-paste or GPTs | **Strongest for grammar** |
 | **Browser agent** | Personal Assistant included | Operator included | None |
-| **Raw model quality** | Routed third-party, mid ceiling | GPT-5.4, high ceiling | N/A (editor, not generator) |
+| **Raw model quality** | Routed third-party, mid ceiling | OpenAI frontier models, high ceiling | N/A (editor, not generator) |
 | **Price** | $19.99/mo | $20/mo | $12/mo |
 | **Desktop app** | None | Yes | Yes |
 | **Best viewed as** | Inline writing + light agent | Generalist AI + broader agent | Editor-first correction layer |
@@ -142,7 +142,7 @@ Yes. The free tier gives 15 combined writing-plus-agent uses per day. Premium at
 A browser agent that operates the active Chrome tab from plain-language instructions. Clicks buttons, fills forms, navigates pages, extracts data. Closest conceptual peers are ChatGPT Operator and Claude's computer-use preview.
 
 **HyperWrite or ChatGPT Plus?**
-Pick HyperWrite if inline writing plus a bundled browser agent in one Chrome extension is the workflow. Pick [ChatGPT](/tools/chatgpt/) Plus if output ceiling matters more than packaging. GPT-5.4 beats HyperWrite on raw writing, and Operator is more reliable on unfamiliar sites.
+Pick HyperWrite if inline writing plus a bundled browser agent in one Chrome extension is the workflow. Pick [ChatGPT](/tools/chatgpt/) Plus if output ceiling matters more than packaging. OpenAI frontier models beat HyperWrite on raw writing, and Operator is more reliable on unfamiliar sites.
 
 **Does HyperWrite run on desktop apps?**
 No. Chrome extension plus web app only. Users who live in Word, Notion desktop, or native clients will not see HyperWrite inline there.

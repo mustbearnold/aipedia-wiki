@@ -11,8 +11,8 @@ pricing_model: paid
 price_range: "$0.05-$6/MTok"
 status: active
 launched: 2022
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: quarterly
 seo_title: "Reka: Features, Pricing & Review (2026)"
 meta_description: "Reka ships Core, Flash, Edge, and Spark multimodal LLMs with native video, image, and audio. Core is $2/$6 per MTok. Edge (7B) launched March 2026 for on-device physical AI. API-only with on-prem deployment options. Unicorn valuation after $110M round."
@@ -37,7 +37,7 @@ best_for:
   - cost-sensitive API workloads where Claude or GPT pricing is prohibitive
 not_best_for:
   - consumer chat (no polished ChatGPT-style interface)
-  - the absolute top of reasoning benchmarks (Claude Opus and GPT-5.4 lead)
+  - the absolute top of reasoning benchmarks (Claude Opus and OpenAI frontier models lead)
   - image or video generation (Reka understands media, does not create it)
 quick_answer: >-
   Reka is a multimodal LLM lab shipping a four-tier lineup: Core (flagship), Flash, Edge, and Spark. Pick it for long-context video understanding and on-prem enterprise deployments where Claude and GPT cannot go. Skip it for consumer chat or when you need best-in-benchmark reasoning.
@@ -64,7 +64,7 @@ The company hit unicorn status in 2025 with a $110M round led by NVIDIA and Snow
 
 > **Pick Reka if your workload centers on video understanding, on-device multimodal inference, or enterprise deployments that must stay on-prem.** Core's four-modality context window handles hours of video natively at prices well below Claude Opus. Edge (7B, March 2026) runs on-device for physical AI, robotics, and privacy-sensitive embedded use. The on-prem and dedicated-deployment option is genuinely rare among frontier labs.
 >
-> **Skip it if you need consumer-grade chat, top-of-benchmark reasoning, or image/video generation.** Reka has no ChatGPT-style consumer product. On pure text reasoning, [Claude](/tools/claude/) Opus 4.7 and GPT-5.4 Pro lead. Reka also understands media but does not generate it, so image and video creation workflows need a separate tool.
+> **Skip it if you need consumer-grade chat, top-of-benchmark reasoning, or image/video generation.** Reka has no ChatGPT-style consumer product. On pure text reasoning, [Claude](/tools/claude/) Opus 4.7 and OpenAI frontier models lead. Reka also understands media but does not generate it, so image and video creation workflows need a separate tool.
 >
 > **Who pays which tier:** Spark at $0.05 per MTok for high-volume embedded use, Flash at $0.80 input / $2 output per MTok for balanced production workloads, Core at $2 input / $6 output per MTok for the heaviest multimodal reasoning, Edge via on-device licensing through partners, Research via flat $25-$60 per 1,000 request pricing for grounded search workflows.
 
@@ -134,7 +134,7 @@ Prices verified 2026-04-18 via [docs.reka.ai/pricing](https://docs.reka.ai/prici
 
 ## Against the alternatives
 
-| | Reka Core | Claude Opus 4.7 | Gemini 3.1 Pro | GPT-5.4 Pro |
+| | Reka Core | Claude Opus 4.7 | Gemini 3.1 Pro | OpenAI frontier models |
 |---|---|---|---|---|
 | **Video understanding** | Native long-context (hours) | None | Native, chunked extraction | None native |
 | **Image understanding** | Yes | Yes | Yes | Yes |
@@ -149,7 +149,7 @@ Prices verified 2026-04-18 via [docs.reka.ai/pricing](https://docs.reka.ai/prici
 
 - **No consumer chat interface.** Reka is API-first. Teams wanting a ChatGPT-style UI need to build it or pick a different provider.
 - **Smaller ecosystem.** Fewer third-party tools, SDKs, and community templates than OpenAI, Anthropic, or Google. Integration work is more DIY.
-- **Behind on pure text reasoning benchmarks.** Core's multimodal strength does not translate to chart-topping text-only scores. Claude Opus 4.7 and GPT-5.4 Pro lead those categories.
+- **Behind on pure text reasoning benchmarks.** Core's multimodal strength does not translate to chart-topping text-only scores. Claude Opus 4.7 and OpenAI frontier models lead those categories.
 - **No open weights.** If you need to fine-tune or self-host from model weights, Reka is not the answer. Use [Llama](/tools/llama/), [Qwen](/tools/qwen/), or [Mistral AI](/tools/mistral-ai/).
 - **Edge licensing is partner-gated.** The March 2026 Edge 7B model routes through partner integrations for on-device deployment. Direct self-serve access is less mature than the main API.
 - **No documented free tier.** Unlike OpenAI, Anthropic, or Google, there is no free monthly quota to evaluate Core before billing begins. Expect to set up billing from day one.

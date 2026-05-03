@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: "Free (GLM-4.7-Flash) / API from $1.00/M tokens (GLM-5)"
 status: active
 launched: 2022-08
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: quarterly
 affiliate:
   has_program: false
@@ -66,7 +66,7 @@ GLM-5.1 topped SWE-Bench Pro at 58.4% at launch. The proprietary GLM-5 (February
 | **Architecture** | 744-754B MoE, ~40B active parameters per token |
 | **Context window** | 200K tokens |
 | **Max output** | 128K tokens per response |
-| **SWE-Bench Pro** | 58.4% (GLM-5.1) · above GPT-5.4 at 57.7% and Claude Opus 4.6 at 57.3% |
+| **SWE-Bench Pro** | 58.4% (GLM-5.1) · above the cited OpenAI frontier baseline at 57.7% and Claude Opus 4.6 at 57.3% |
 | **SWE-bench Verified** | 77.8% (GLM-5) |
 | **Training hardware** | Huawei Ascend 910B, MindSpore framework, zero Nvidia |
 | **API pricing** | GLM-5 $1.00/M input · GLM-4.7 $0.60/M input |

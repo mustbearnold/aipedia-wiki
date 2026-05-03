@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$30/month"
 status: active
 launched: 2023-12
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -75,7 +75,7 @@ Two products in one SKU. AI Assistant handles chat, completion, and code actions
 | **AI Pro** | $10/mo individuals, $20/mo organizations, 10 credits/mo |
 | **AI Ultimate** | $30/mo individuals, $60/mo organizations, 35 credits/mo |
 | **All Products Pack** | $299/year, bundles AI Pro |
-| **Models** | Claude Opus 4.7, GPT-5.4, Gemini 3.1 Pro, JetBrains local model |
+| **Models** | Claude Opus 4.7, OpenAI frontier models, Gemini 3.1 Pro, JetBrains local model |
 | **Agent** | Junie, credit-metered |
 | **VS Code support** | None |
 

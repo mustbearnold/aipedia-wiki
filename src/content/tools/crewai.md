@@ -11,8 +11,8 @@ pricing_model: open-source
 price_range: "Free (MIT) · Enterprise from $99/mo"
 status: active
 launched: 2023-12
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: monthly
 seo_title: "CrewAI: Features, Pricing & Review (April 2026)"
 meta_description: "CrewAI 1.14 is the current open-source release. Framework is free under MIT; Enterprise plans start at $99/mo and scale to a $120K/year Ultra tier. Role-based multi-agent orchestration for Python teams."
@@ -109,7 +109,7 @@ The moat is thin. The role-based pattern is easy to copy and competing framework
 
 *Prices verified 2026-04-17 via [CrewAI pricing](https://crewai.com/pricing) and [Lindy CrewAI pricing breakdown](https://www.lindy.ai/blog/crew-ai-pricing). Full Enterprise tier cards require account signup.*
 
-LLM API costs are separate. A complex crew running Claude or GPT-5.4 can burn several dollars per execution without tight caps.
+LLM API costs are separate. A complex crew running Claude or OpenAI frontier models can burn several dollars per execution without tight caps.
 
 ## Against the alternatives
 
@@ -151,7 +151,7 @@ CrewAI uses role-based agents with goals and backstories. Faster to prototype. L
 Yes. CrewAI is model-agnostic through LiteLLM, so Ollama, vLLM, and local OpenAI-compatible endpoints all work without code changes.
 
 **How expensive does a CrewAI run get?**
-A four-agent crew on GPT-5.4 Thinking can hit several dollars per run without token budgets. Put hard caps on `max_iter` and enforce timeouts before shipping anything production-adjacent.
+A four-agent crew on OpenAI reasoning models can hit several dollars per run without token budgets. Put hard caps on `max_iter` and enforce timeouts before shipping anything production-adjacent.
 
 ## Sources
 

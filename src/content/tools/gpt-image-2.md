@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$200/month (ChatGPT) · API from $0.01/image"
 status: active
 launched: 2026-04
-last_updated: 2026-04-22
-last_verified: 2026-04-22
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -60,7 +60,7 @@ price_history:
 
 OpenAI's reasoning-native image generation model, released **April 21, 2026** alongside the **ChatGPT Images 2.0** consumer product. Model ID `gpt-image-2` on the OpenAI API and in Microsoft Foundry.
 
-The step change is reasoning inside the image model. GPT Image 2 thinks before it draws, handling multi-step compositional prompts (infographics, slides, annotated diagrams, maps, manga panels) that ripped its predecessor GPT Image 1.5 and DALL-E 3. It also renders readable text in 12+ languages, including Japanese, Korean, Chinese (Simplified and Traditional), Hindi, and Bengali, previously the weak point for every major image model.
+The step change is reasoning inside the image model. GPT Image 2 thinks before it draws, handling multi-step compositional prompts (infographics, slides, annotated diagrams, maps, manga panels) that tripped up OpenAI's older image models. It also renders readable text in 12+ languages, including Japanese, Korean, Chinese (Simplified and Traditional), Hindi, and Bengali, previously the weak point for every major image model.
 
 ## Recent developments
 

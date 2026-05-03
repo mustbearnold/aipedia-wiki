@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$8/month (add-ons) + $50/year commercial"
 status: active
 launched: 2020-03
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -54,13 +54,13 @@ price_history:
 
 Local-first markdown note-taking application. Every note is a plain `.md` file on your filesystem. No cloud requirement, no proprietary format, no vendor lock-in.
 
-The community plugin ecosystem hit 2,690+ entries by April 2026. AI is not built in; it arrives through plugins like Smart Connections and Copilot, which run against your own API keys (Claude, GPT-5.4, Gemini, or local models via Ollama).
+The community plugin ecosystem hit 2,690+ entries by April 2026. AI is not built in; it arrives through plugins like Smart Connections and Copilot, which run against your own API keys (Claude, OpenAI frontier models, Gemini, or local models via Ollama).
 
 Core app is free for personal use. Optional add-ons: Sync ($4/mo annual), Publish ($8/mo), Commercial license ($50/user/year).
 
 ## System Verdict
 
-> **Pick Obsidian if data ownership, privacy, and extensibility are hard requirements.** Notes stay as plain files on your disk. The graph view, backlinks, canvas, and Dataview queries remain the strongest PKM toolchain on the market. With Smart Connections and Copilot plus your own Claude or GPT-5.4 API key, you get semantic search and RAG chat grounded in your vault without paying a platform tax.
+> **Pick Obsidian if data ownership, privacy, and extensibility are hard requirements.** Notes stay as plain files on your disk. The graph view, backlinks, canvas, and Dataview queries remain the strongest PKM toolchain on the market. With Smart Connections and Copilot plus your own Claude or OpenAI API key, you get semantic search and RAG chat grounded in your vault without paying a platform tax.
 >
 > **Skip it if you want AI that works out of the box or real-time team collaboration.** [Notion AI](/tools/notion-ai/) is plug-and-play with workspace context for teams. [NotebookLM](/tools/notebooklm/) handles single-source document Q&A for free with no setup. Obsidian's learning curve is real; the plugin ecosystem requires configuration time most casual users won't invest.
 >
@@ -73,7 +73,7 @@ Core app is free for personal use. Optional add-ons: Sync ($4/mo annual), Publis
 | **Storage model** | Local plain-text `.md` files · any filesystem, any cloud drive |
 | **Plugin ecosystem** | 2,690+ community plugins (April 2026) · all free |
 | **Top AI plugins** | Smart Connections (semantic search + RAG chat) · Copilot (vault-wide LLM chat) · Text Generator (writing) |
-| **AI model access** | Bring your own API key · Claude · GPT-5.4 · Gemini · local Ollama · OpenRouter |
+| **AI model access** | Bring your own API key · Claude · OpenAI frontier models · Gemini · local Ollama · OpenRouter |
 | **Core pricing** | Free for personal use · no feature restrictions |
 | **Sync add-on** | $4/mo (annual) · $5/mo (monthly) · end-to-end encrypted · 10GB |
 | **Publish add-on** | $8/mo · publishes vault as a website |
@@ -99,7 +99,7 @@ The moat is data ownership and file portability. Every competing note tool locks
 
 - **Data ownership matters.** Notes stay as plain files. Works offline. Survives vendor shutdown. Back up with `rsync`.
 - **You run a PKM methodology.** Zettelkasten, PARA, MOC, evergreen notes: graph view and backlinks are purpose-built for linked-note workflows.
-- **You want AI on your own keys.** Smart Connections and Copilot plug into Claude, GPT-5.4, Gemini, or local Ollama. No per-seat platform fee.
+- **You want AI on your own keys.** Smart Connections and Copilot plug into Claude, OpenAI frontier models, Gemini, or local Ollama. No per-seat platform fee.
 - **You need a knowledge base that survives decades.** Markdown is a 20-year-old format. `.md` files will open in 2046.
 - **You're on JetBrains/Xcode/Neovim and prefer configurable tools.** Obsidian's plugin model fits power-user tastes the way Notion's WYSIWYG never will.
 
@@ -122,7 +122,7 @@ Pricing via [obsidian.md/pricing](https://obsidian.md/pricing).
 | Publish | $8/mo | Bloggers · researchers · anyone turning notes into a site |
 | Commercial | $50/user/year | Any business use · same features as Personal |
 
-*Prices verified 2026-04-17 via [obsidian.md/pricing](https://obsidian.md/pricing). AI plugin costs are separate: most plugins are free, but LLM API usage (Claude, GPT-5.4, Gemini) is billed by the model provider.*
+*Prices verified 2026-04-17 via [obsidian.md/pricing](https://obsidian.md/pricing). AI plugin costs are separate: most plugins are free, but LLM API usage (Claude, OpenAI frontier models, Gemini) is billed by the model provider.*
 
 ## Against the alternatives
 
@@ -158,7 +158,7 @@ This page was produced by the aipedia.wiki editorial pipeline, an automated syst
 Yes for personal use. All 2,690+ community plugins are free. Paid add-ons are Sync ($4/mo annual), Publish ($8/mo), and the Commercial license ($50/user/year) for business use.
 
 **Does Obsidian have built-in AI?**
-No. AI arrives through community plugins. Smart Connections provides semantic search and RAG chat. Copilot provides vault-wide LLM chat. Text Generator handles AI writing. All use your own API keys from providers like Anthropic (Claude), OpenAI (GPT-5.4), Google (Gemini), or local Ollama models.
+No. AI arrives through community plugins. Smart Connections provides semantic search and RAG chat. Copilot provides vault-wide LLM chat. Text Generator handles AI writing. All use your own API keys from providers like Anthropic (Claude), OpenAI (OpenAI frontier models), Google (Gemini), or local Ollama models.
 
 **How does Obsidian sync?**
 Obsidian Sync ($4/mo annual, $5/mo monthly) offers end-to-end encrypted sync across devices with 10GB storage. Free alternatives like iCloud, Dropbox, or Syncthing work but risk markdown file conflicts on concurrent edits.

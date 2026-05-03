@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0 free / $9.99/mo c.ai+"
 status: active
 launched: 2022-09
-last_updated: 2026-04-18
-last_verified: 2026-04-18
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -97,7 +97,7 @@ Prices verified 2026-04-18 via [character.ai/subscription/plus/pricing](https://
 - **Content moderation has tightened.** Post-2024 lawsuits, previously-allowed content categories now trigger filters. Users report unexpected blocks on long-running roleplays.
 - **Data handling concerns.** Chats are retained for model training by default. Read the privacy policy before discussing anything sensitive.
 - **Teen user safety history.** Character AI faced lawsuits in 2024-2025 alleging insufficient safeguards for minor users. The platform has added parental controls and time-use notifications, but the reputational overhang remains.
-- **Model does not match frontier quality.** Raw intelligence trails GPT-5.4 and Claude Opus 4.7. The moat is character library + roleplay tuning, not base model capability.
+- **Model does not match frontier quality.** Raw intelligence trails OpenAI frontier models and Claude Opus 4.7. The moat is character library + roleplay tuning, not base model capability.
 
 ## Methodology
 
@@ -112,7 +112,7 @@ Character AI now requires age verification and has added teen-specific safeguard
 No. Terms of service restrict commercial use. For commercial creative work use [ChatGPT](/tools/chatgpt/) or [Claude](/tools/claude/) where commercial rights are granted on paid plans.
 
 **What's the Imagine Gallery?**
-A conversational image generator added for c.ai+ subscribers in March 2026. Generates images contextual to the current roleplay. Quality roughly matches DALL-E 3, behind Midjourney or Flux.
+A conversational image generator added for c.ai+ subscribers in March 2026. Generates images contextual to the current roleplay. Quality is closer to older chat-integrated image tools than to Midjourney, Flux, or GPT Image 2.
 
 **Does Character AI train on my chats?**
 Yes by default. Some settings allow opting out, but the default is chat retention for model improvement. Treat conversations as non-private.

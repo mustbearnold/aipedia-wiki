@@ -10,9 +10,9 @@ founded: 2023
 hq: Paris, France
 funding: "$1B+"
 key_products: [mistral-ai, voxtral]
-last_updated: 2026-05-02
+last_updated: 2026-05-03
 update_frequency: quarterly
-last_verified: 2026-05-02
+last_verified: 2026-05-03
 ---
 
 # Mistral AI
@@ -53,7 +53,7 @@ Products include Le Chat chatbot and specialized tools like Spaces CLI for agent
 
 Mistral's moat lies in open-weight releases building developer ecosystems on Hugging Face, combined with EU-based operations for sovereignty. Competitive pricing undercuts US rivals; multilingual and multimodal features aid European adoption.[1][2]
 
-Threats include US leaders like GPT-5.4 (#1 ranking) and Claude Opus 4.7 in coding/agents. Opportunities in edge AI (Ministral) and partnerships like NVIDIA expand reach.[1][3][6]
+Threats include US frontier labs such as OpenAI and Anthropic in coding, agents, and enterprise distribution. Opportunities in edge AI (Ministral) and partnerships like NVIDIA expand reach.[1][3][6]
 
 ## Sources
 - [Mistral AI: Introducing Mistral 3](https://mistral.ai/news/mistral-3)[1]

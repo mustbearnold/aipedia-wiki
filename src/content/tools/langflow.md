@@ -11,8 +11,8 @@ pricing_model: open-source
 price_range: "$0 (self-host) · cloud pricing via hosting partner"
 status: active
 launched: 2023-04
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -74,7 +74,7 @@ Langflow is the open-source visual canvas for LangChain-based LLM workflows, age
 | **Deployment** | REST API · MCP server · Python export |
 | **DataStax cloud status** | Deprecated March 9, 2026 · shut down April 9, 2026 |
 | **Self-host** | Free · Docker · Python · unlimited |
-| **Supported models** | GPT-5.4 · Claude Opus 4.7 · Gemini 3.1 Pro · Llama 4 · local models |
+| **Supported models** | OpenAI frontier models · Claude Opus 4.7 · Gemini 3.1 Pro · Llama 4 · local models |
 | **LangGraph support** | Native (multi-agent, stateful memory, tool calling) |
 
 Every data point above was verified against vendor documentation on 2026-04-17. See Sources.

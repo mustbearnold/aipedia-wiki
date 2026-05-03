@@ -11,8 +11,8 @@ pricing_model: free
 price_range: "$0 personal use"
 status: active
 launched: 2023-05
-last_updated: 2026-05-01
-last_verified: 2026-05-01
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -80,7 +80,7 @@ A desktop application that wraps llama.cpp in a visual interface. Download from 
 ## When to pick something else
 
 - **Servers and scripting:** [Ollama](/tools/ollama/) is the better fit for headless deployments, Docker containers, and CI/CD.
-- **Frontier-model quality:** Open-weight models (even Llama 4 Scout with 10M context) still trail [GPT-5.4](/tools/chatgpt/) and [Claude Opus 4.7](/tools/claude/) on the hardest tasks.
+- **Frontier-model quality:** Open-weight models (even Llama 4 Scout with 10M context) still trail [ChatGPT](/tools/chatgpt/) and [Claude Opus 4.7](/tools/claude/) on the hardest tasks.
 - **Multi-user deployments:** LM Studio is single-user desktop. For teams, use [AnythingLLM](/tools/anythingllm/) or a hosted open-weight provider like Together AI.
 
 ## Pricing
@@ -95,7 +95,7 @@ Verified 2026-04-18 via [lmstudio.ai](https://lmstudio.ai).
 ## Failure modes
 
 - **Low-RAM machines struggle with big models.** 70B-parameter models need ~40GB at Q4. 16GB laptops max out around 13B models. Check the LM Studio resource monitor before downloading.
-- **Slower than cloud providers.** A local 70B model at Q4 on an M3 Max runs at roughly 15 tokens/second. GPT-5.4 via API runs at 60+. The privacy/cost tradeoff costs speed.
+- **Slower than cloud providers.** A local 70B model at Q4 on an M3 Max runs at roughly 15 tokens/second. OpenAI frontier models via API runs at 60+. The privacy/cost tradeoff costs speed.
 - **Commercial use requires a conversation.** Not pay-as-you-go. Enterprise integrations need sales contact.
 - **Not open source itself.** The LM Studio application is closed-source freeware, even though the models it runs are open-weight. Compare to Ollama, which is fully open source.
 

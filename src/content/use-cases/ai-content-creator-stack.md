@@ -7,8 +7,8 @@ meta_description: "The best AI tool stack for YouTube, TikTok, and social media 
 author: "aipedia.wiki Editorial"
 description: A practical AI tool stack for content creators, from script to video to distribution. Budget and premium versions with honest cost estimates.
 tools_mentioned: [chatgpt, claude, elevenlabs, heygen, runway, descript, jimeng, suno, canva]
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: monthly
 ---
 
@@ -39,7 +39,7 @@ Perplexity Pro handles research and ideation by pulling trending topics, statist
 
 ## Claude Pro ($20/mo)
 
-Claude Pro writes scripts from Perplexity research, matching specific voices with examples for 10-minute YouTube formats. Prompt: "Write script for [audience] on [topic], tone [style], hook in 30 seconds, use stats [paste]." It handles long context better than ChatGPT GPT-5 for non-formulaic output.[5][1] Pro tier ($20/mo) provides 200K token context, higher limits than free (limited daily use). Claude edges ChatGPT in instruction-following for multi-part scripts; GPT-5 excels in multimodal but repeats phrases more.[4] Limitations: No native image generation (use ChatGPT for that). Free alternative: ChatGPT GPT-4o free tier suffices for short scripts. For faceless channels, pair with HeyGen. DeepSeek V3.2 (free) trails in creative writing but works for basic outlines.[5] Creators report 2x faster iteration vs manual drafting. (172 words)
+Claude Pro writes scripts from Perplexity research, matching specific voices with examples for 10-minute YouTube formats. Prompt: "Write script for [audience] on [topic], tone [style], hook in 30 seconds, use stats [paste]." It handles long context better than ChatGPT GPT-5 for non-formulaic output.[5][1] Pro tier ($20/mo) provides 200K token context, higher limits than free (limited daily use). Claude edges ChatGPT in instruction-following for multi-part scripts; GPT-5 excels in multimodal but repeats phrases more.[4] Limitations: No native image generation (use ChatGPT for that). Free alternative: ChatGPT's free tier suffices for short scripts. For faceless channels, pair with HeyGen. DeepSeek V3.2 (free) trails in creative writing but works for basic outlines.[5] Creators report 2x faster iteration vs manual drafting. (172 words)
 
 ## ElevenLabs Creator ($22/mo)
 
@@ -59,7 +59,7 @@ Descript Hobbyist transcribes video, edits via text (remove "um"), adds captions
 
 ## Canva Pro ($13/mo)
 
-Canva Pro uses Flux 2 for thumbnail images from prompts, plus templates. Pro ($13/mo) includes unlimited AI generations. Midjourney v7 Standard ($30/mo) for custom faces, higher quality. GPT-4o image gen (ChatGPT Plus $20) conversational but less template-integrated.[7][1] Flux 2 renders text reliably. Free Canva suffices for basics. (162 words)
+Canva Pro uses Flux 2 for thumbnail images from prompts, plus templates. Pro ($13/mo) includes unlimited AI generations. Midjourney v7 Standard ($30/mo) for custom faces, higher quality. ChatGPT image generation is conversational but less template-integrated.[7][1] Flux 2 renders text reliably. Free Canva suffices for basics. (162 words)
 
 ## Suno Pro ($10/mo)
 

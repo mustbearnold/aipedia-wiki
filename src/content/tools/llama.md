@@ -12,8 +12,8 @@ pricing_model: open-source
 price_range: "$0-$0.85/1M tokens"
 status: active
 launched: 2023-02
-last_updated: 2026-04-22
-last_verified: 2026-04-22
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: monthly
 seo_title: "Llama: Features, Pricing & Review (April 2026)"
 meta_description: "Meta's Llama 4 Maverick (400B total, 17B active, 1M context) is the flagship open-weight LLM. Scout offers 10M tokens. Free weights under the Llama 4 Community License. Hosted pricing from $0.15 per 1M input tokens on Groq."
@@ -64,9 +64,9 @@ Weights ship free under the Llama 4 Community License. Hosted inference starts a
 
 ## System Verdict
 
-> **Pick Llama if you need an open-weight frontier LLM you can self-host, fine-tune, or run inside a VPC.** Maverick beats GPT-4o and Gemini 2.0 Flash on vendor-reported benchmarks, and Scout's 10M-token context outruns every closed model for long-document retrieval. Cheapest hosted pricing in the frontier tier.
+> **Pick Llama if you need an open-weight frontier LLM you can self-host, fine-tune, or run inside a VPC.** Meta's vendor-reported benchmarks put Maverick ahead of older closed-model baselines, and Scout's 10M-token context outruns most closed assistants for long-document retrieval. Cheapest hosted pricing in the frontier tier.
 >
-> **Skip it if you need best-in-class reasoning or bundled multimodal output.** [Claude Opus 4.7](/tools/claude/) leads on agentic coding and long-form reasoning. [GPT-5.4](/tools/chatgpt/) ships with image generation and the largest plugin marketplace. [Gemini 3.1 Pro](/tools/gemini/) bundles Veo 3 video. Llama provides none of these natively.
+> **Skip it if you need best-in-class reasoning or bundled multimodal output.** [Claude Opus 4.7](/tools/claude/) leads on agentic coding and long-form reasoning. [ChatGPT](/tools/chatgpt/) ships with image generation and the largest plugin marketplace. [Gemini 3.1 Pro](/tools/gemini/) bundles Veo 3 video. Llama provides none of these natively.
 >
 > **Who pays which tier:** Free self-hosted for developers with GPUs, Groq at $0.20 / $0.60 per 1M tokens for speed-sensitive APIs, Together or Fireworks for production fine-tuning, AWS Bedrock or Azure for compliance-heavy enterprise deployments. EU-based entities should read the license carefully before committing.
 
@@ -95,13 +95,13 @@ The 2025 Llama 4 generation switched the family to mixture-of-experts. Maverick 
 
 The moats: weights are actually free, the Community License permits commercial use for almost every company, and the hosted ecosystem (Groq's LPU hardware, Together's fine-tune infra, AWS Bedrock's enterprise SLAs) prices Maverick below every closed frontier model. Behemoth's role as a 2T-parameter teacher improves the smaller models through codistillation without ever shipping to the public.
 
-The weaknesses: no native image generation, no video, no consumer app with the reach of ChatGPT or Gemini. The license carves out EU-based entities and companies over 700M monthly active users. Reasoning and agentic coding still trail Claude Opus 4.7 and GPT-5.4 Pro on third-party leaderboards.
+The weaknesses: no native image generation, no video, no consumer app with the reach of ChatGPT or Gemini. The license carves out EU-based entities and companies over 700M monthly active users. Reasoning and agentic coding still trail Claude Opus 4.7 and OpenAI frontier models on third-party leaderboards.
 
 ## When to pick Llama
 
 - **You need full data sovereignty or VPC deployment.** Run weights inside your own network. No vendor sees your tokens. Closed frontier models cannot match this.
 - **You fine-tune on proprietary data.** Full weights plus LoRA and QLoRA adapters across Together, Fireworks, and AWS Bedrock. Closed models offer narrower fine-tune access at higher prices.
-- **Your workload is API cost-sensitive.** Groq at $0.20 / $0.60 per million tokens runs 3-5x cheaper than GPT-5.4 Pro or Claude Opus 4.7. Quality trade-off is small on most tasks.
+- **Your workload is API cost-sensitive.** Groq at $0.20 / $0.60 per million tokens runs 3-5x cheaper than OpenAI frontier models or Claude Opus 4.7. Quality trade-off is small on most tasks.
 - **You need 10M+ token context.** Scout is the only shipping model with a 10M window. Gemini 3.1 Pro and Claude Opus 4.7 stop at 1M.
 - **You build multilingual or global products.** Llama 4 trains on 200+ languages and ships with stronger non-English performance than most closed models at equivalent size.
 
@@ -139,7 +139,7 @@ Prices verified 2026-04-17 via [Together AI pricing](https://www.together.ai/pri
 | **Cheapest hosted in / out** | $0.15 / $0.50 | $0.14 / $0.28 | $2.00 / $6.00 |
 | **Multimodal input** | Text + image | Text only | Text + image (Pixtral sibling) |
 | **Self-host weights** | Yes | Yes | Yes (research only) |
-| **Vendor-reported coding** | Strong (beats GPT-4o) | Strongest open-weight | Mid |
+| **Vendor-reported coding** | Strong | Strongest open-weight | Mid |
 | **Best viewed as** | Open-weight default | Cheapest frontier API | Enterprise EU alternative |
 
 ## Failure modes
@@ -147,7 +147,7 @@ Prices verified 2026-04-17 via [Together AI pricing](https://www.together.ai/pri
 - **License is not Apache.** The Llama 4 Community License excludes EU-based entities from the license grant and requires a separate license for companies over 700M monthly active users. Read the terms before shipping to those markets.
 - **No native image or video output.** Llama is text-plus-vision-input only. Workflows needing image or video generation need a second tool.
 - **Behemoth is not public.** Meta's 2T-parameter model remains an internal teacher. Benchmarks citing Behemoth performance do not reflect anything you can actually use.
-- **Quality lag vs closed frontier.** Maverick beats GPT-4o and Gemini 2.0 Flash on vendor benchmarks but loses to Claude Opus 4.7, GPT-5.4 Pro, and Gemini 3.1 Pro on third-party leaderboards.
+- **Quality lag vs closed frontier.** Vendor benchmarks make Maverick look competitive with older closed baselines, but third-party leaderboards still favor Claude Opus 4.7, OpenAI frontier models, and Gemini 3.1 Pro.
 - **Hosted provider variance.** Same model, different providers, different quality: FP8 quantized endpoints (DeepInfra, Azure) run cheaper but sacrifice some output quality vs full-precision. Benchmark your specific workload before committing.
 - **No first-party consumer UI competitive with ChatGPT.** Meta AI at meta.ai is ad-adjacent, feature-thin, and not positioned as a daily-driver assistant.
 - **Self-hosting is expensive.** A single H100 runs Scout; Maverick needs multi-GPU setups. If you lack cluster access, hosted APIs are cheaper than building infrastructure.

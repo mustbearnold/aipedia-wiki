@@ -7,8 +7,8 @@ meta_description: "Top AI tools for legal research as of April 2026: Perplexity 
 description: "This page recommends 4 AI tools for legal research with pricing, pros, cons as of April 2026: Perplexity for cited research, Claude for long documents, Gemini for free use, ChatGPT for multimodal tasks."
 tools_mentioned: ["perplexity", "claude", "gemini", "chatgpt"]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: monthly
 ---
 
@@ -58,7 +58,7 @@ Gemini 3 Pro by Google offers generous free access for research queries, pulling
 ### 4. ChatGPT GPT-5 (chatgpt-gpt-5)
 ChatGPT with GPT-5 supports multimodal input: upload contracts, query cases, generate summaries.[2][4] Includes web browsing, code interpreter for data. Flagship as of 2026-04-15: GPT-5 on Plus/Pro tiers.[2][4][5]  
 **Why it fits legal research:** Handles images of scanned docs, voice for notes; ecosystem for custom legal GPTs.[2][4]  
-**Pricing (2026-04-15):** Free (GPT-4o mini limits), Plus $20/month (GPT-5), Pro $200/month (unlimited).[2][4]  
+**Pricing (2026-04-15):** Free (limited model access), Plus $20/month (OpenAI model access), Pro $200/month (expanded access).[2][4]  
 **Pros:** Versatile for analysis + generation; large context for filings.[4]  
 **Cons:** Knowledge cutoff risks outdated law; pricier Pro tier.[2][5]  
 (162 words)

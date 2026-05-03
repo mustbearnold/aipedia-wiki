@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$39/user/month"
 status: active
 launched: 2021-06
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -52,7 +52,7 @@ facts:
     verified_at: 2026-04-26
 tags: [ide, autocomplete, ai-coding, vscode, jetbrains, xcode, neovim, github, microsoft, agent-mode, coding-agent, mcp, gpt-5-5, claude-opus-4-7]
 seo_title: "GitHub Copilot: Features, Pricing & Review (April 2026)"
-meta_description: "GitHub Copilot runs GPT-5.5 and Claude Opus 4.7 on Pro+/Business/Enterprise, plus GPT-5.4 and Gemini 3.1 Pro across VS Code, Visual Studio, JetBrains, Xcode, and Neovim. Free, Pro $10, Pro+ $39, Business $19/seat, Enterprise $39/seat."
+meta_description: "GitHub Copilot runs GPT-5.5 and Claude Opus 4.7 on Pro+/Business/Enterprise, plus GPT-5-Codex and Gemini 3.1 Pro across VS Code, Visual Studio, JetBrains, Xcode, and Neovim. Free, Pro $10, Pro+ $39, Business $19/seat, Enterprise $39/seat."
 author: "aipedia.wiki Editorial"
 best_for:
   - developers already in the GitHub ecosystem
@@ -109,7 +109,7 @@ April 30 security coverage added another practical caveat: [recent coding-agent 
 
 ## System Verdict
 
-> **Pick GitHub Copilot if you're already inside the GitHub ecosystem and want AI inside your current IDE at the lowest credible price.** Pro at $10/mo is the cheapest entry point in serious AI coding. The paid model picker hands you GPT-5.5, Claude Opus 4.7, GPT-5.4, Gemini 3.1 Pro, and Grok from a single bill.
+> **Pick GitHub Copilot if you're already inside the GitHub ecosystem and want AI inside your current IDE at the lowest credible price.** Pro at $10/mo is the cheapest entry point in serious AI coding. The paid model picker hands you GPT-5.5, Claude Opus 4.7, GPT-5-Codex, Gemini 3.1 Pro, and Grok from a single bill.
 >
 > The autonomous Coding Agent accepts a GitHub issue, spins up a cloud dev environment via Actions, self-reviews the patch, and opens a PR. No direct equivalent in Cursor or Claude Code. IDE coverage is unmatched: JetBrains, Xcode, and Neovim developers have no Cursor path.
 >
@@ -124,7 +124,7 @@ April 30 security coverage added another practical caveat: [recent coding-agent 
 | | |
 |---|---|
 | **Flagship models** | GPT-5.5 (GA April 24, 2026) · Claude Opus 4.7 (GA April 16, 2026) on Pro+, Business, Enterprise |
-| **Other models in picker** | GPT-5.4 · GPT-5-Codex · Claude Sonnet 4.6 · Gemini 3.1 Pro · Gemini 2.5 Pro · Grok · Claude Haiku 4.5 |
+| **Other models in picker** | GPT-5-Codex · Claude Sonnet 4.6 · Gemini 3.1 Pro · Gemini 2.5 Pro · Grok · Claude Haiku 4.5 |
 | **Free-tier models** | Claude Sonnet 4.6 · GPT-4.1 only |
 | **Modes** | Ask · Edit · Agent · Coding Agent (autonomous, cloud) · Code Review · Copilot CLI · PR chat/debugging workflows |
 | **IDE support** | VS Code · Visual Studio · JetBrains · Xcode · Neovim (chat limited to first three) |
@@ -138,7 +138,7 @@ April 30 security coverage added another practical caveat: [recent coding-agent 
 
 ## What it actually is
 
-A first-party extension bundle covering autocomplete, inline edits, chat, agentic multi-file work, and an autonomous GitHub-native agent that runs in the cloud. One subscription buys access to a curated model picker (Opus 4.7, GPT-5.4, Gemini 3.1 Pro, Grok, Sonnet 4.6) billed via a single premium-request pool. No per-model setup. No BYO API keys.
+A first-party extension bundle covering autocomplete, inline edits, chat, agentic multi-file work, and an autonomous GitHub-native agent that runs in the cloud. One subscription buys access to a curated model picker (Opus 4.7, GPT-5.5, GPT-5-Codex, Gemini 3.1 Pro, Grok, Sonnet 4.6) billed via a single premium-request pool. No per-model setup. No BYO API keys.
 
 Three moats, none easy to replicate.
 
@@ -153,7 +153,7 @@ Third, IDE breadth. JetBrains, Xcode, and Neovim developers only have Copilot am
 - **You already pay for GitHub.** Copilot inherits your OAuth, your SSO, and your repo permissions. Setup is a VS Code extension install.
 - **You use JetBrains, Xcode, or Neovim.** Cursor is a VS Code fork with no path to those editors. Copilot is the only first-tier AI coding tool shipping native extensions for all of them.
 - **You want issue-to-PR automation with governance.** Coding Agent turns an assigned GitHub issue into a self-reviewed PR autonomously, while Jira controls and cloud-agent metrics make it easier for teams to supervise work in flight. No equivalent exists in Cursor or Claude Code.
-- **You want $10/mo entry pricing with a real model picker.** Pro at $10 includes Opus 4.7 (via premium requests on qualifying tiers), GPT-5.4, Gemini 3.1 Pro, and agent mode. Cheapest serious AI coding subscription on the market.
+- **You want $10/mo entry pricing with a real model picker.** Pro at $10 includes a curated model picker, Gemini 3.1 Pro, and agent mode; GPT-5.5 and Opus 4.7 require Pro+ or team tiers. Cheapest serious AI coding subscription on the market.
 - **You need IP indemnification.** Business and Enterprise tiers include Microsoft-backed IP indemnity for Copilot suggestions. No direct analog from Cursor or Anthropic.
 - **You want MCP tool use without leaving the IDE.** Agent mode autonomously invokes MCP servers once configured, and the GitHub MCP server now exposes Copilot Spaces for scoped context.
 
@@ -187,7 +187,7 @@ Prices verified 2026-04-17 via [GitHub Copilot plans](https://github.com/feature
 | | GitHub Copilot Pro $10 | Cursor Pro $20 | Claude Code (via Claude Max 5x $100) |
 |---|---|---|---|
 | **IDE integration** | Native extension in VS Code, Visual Studio, JetBrains, Xcode, Neovim | VS Code fork only | Terminal-first, no IDE |
-| **Model access** | Picker: GPT-5.5 and Opus 4.7 (Pro+ and above) · GPT-5.4 · Gemini 3.1 Pro · Grok · Sonnet 4.6 | Picker: Opus 4.7 · GPT-5.4 · Gemini 3.1 Pro · Grok · Kimi · Composer 2 | Opus 4.7 · Sonnet 4.6 · Haiku 4.5 only |
+| **Model access** | Picker: GPT-5.5 and Opus 4.7 (Pro+ and above) · GPT-5-Codex · Gemini 3.1 Pro · Grok · Sonnet 4.6 | Picker: Opus 4.7 · GPT-5.5 · Gemini 3.1 Pro · Grok · Kimi · Composer 2 | Opus 4.7 · Sonnet 4.6 · Haiku 4.5 only |
 | **Agent quality** | Agent mode (IDE) + Coding Agent (async, GitHub-native) | Agents Window + Cloud Agents (supervised workbench) | Strongest autonomous CLI loop |
 | **GitHub-native features** | Issue-to-PR via Coding Agent · PR review agent · Actions integration · Spaces · IP indemnity | None beyond a repo connection | None native |
 | **Pricing** | $10/mo flat + 300 premium requests (Opus locked to Pro+ at 7.5x) | $20/mo + $20 usage pool at API rates | $100/mo flat for Max 5x |
@@ -195,8 +195,8 @@ Prices verified 2026-04-17 via [GitHub Copilot plans](https://github.com/feature
 
 ## Failure modes
 
-- **Premium request quota burns fast on GPT-5.5 and Opus 4.7.** At the 7.5x multiplier, Pro+'s 1,500 requests yield ~200 top-model turns. Heavy users should pin Sonnet 4.6 or GPT-5.4 for routine work and reserve GPT-5.5 / Opus for hard problems, or plan for overage at $0.04/request.
-- **Opus 4.7 is not in Pro ($10).** Access requires Pro+ ($39), Business, or Enterprise. Pro is GPT-5.4 + Gemini + Sonnet 4.6 by default.
+- **Premium request quota burns fast on GPT-5.5 and Opus 4.7.** At the 7.5x multiplier, Pro+'s 1,500 requests yield ~200 top-model turns. Heavy users should pin Sonnet 4.6 or GPT-5-Codex for routine work and reserve GPT-5.5 / Opus for hard problems, or plan for overage at $0.04/request.
+- **Opus 4.7 is not in Pro ($10).** Access requires Pro+ ($39), Business, or Enterprise. Pro is oriented around lower-cost coding and Gemini/Sonnet models by default.
 - **Post-April 30 Opus 4.7 multiplier is unannounced.** Budget accordingly: the 7.5x figure is explicitly "promotional."
 - **Autocomplete latency varies by language.** Strongest on Python, TypeScript, JavaScript, Go. Noticeably weaker than dedicated IDE stacks on niche languages and on large cold files.
 - **GitHub lock-in is real.** Coding Agent, PR review, Spaces, and org knowledge all assume GitHub is your forge. GitLab and Bitbucket teams get the extension but lose the agent graph.

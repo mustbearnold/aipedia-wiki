@@ -11,8 +11,8 @@ pricing_model: free
 price_range: "$0 + API costs"
 status: active
 launched: 2023-05
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -27,7 +27,7 @@ scores:
   longevity: 7
 tags: [ai-coding, open-source, cli, git-integration, agentic-coding, byok, architect-mode, repo-map]
 seo_title: "Aider: Open-Source AI Coding Assistant Review (April 2026)"
-meta_description: "Aider is a free open-source CLI pair-programmer that edits real files in your git repo, auto-commits each change, and supports Claude Opus 4.7, GPT-5.4, Gemini, and Ollama via BYOK. Architect mode, repo-map, /ask /edit /architect chat modes. Verified April 2026."
+meta_description: "Aider is a free open-source CLI pair-programmer that edits real files in your git repo, auto-commits each change, and supports Claude Opus 4.7, OpenAI frontier models, Gemini, and Ollama via BYOK. Architect mode, repo-map, /ask /edit /architect chat modes. Verified April 2026."
 author: "aipedia.wiki Editorial"
 best_for:
   - CLI-comfortable developers
@@ -57,7 +57,7 @@ price_history:
 
 A free, open-source CLI pair-programmer. Runs in the terminal, reads the actual codebase, proposes multi-file edits, and commits each change to git with a descriptive message.
 
-Supports any LLM via API key: Claude Opus 4.7, GPT-5.4, Gemini 3.1 Pro, Mistral, plus local models through Ollama. Maintained by Paul Gauthier under Apache 2.0.
+Supports any LLM via API key: Claude Opus 4.7, OpenAI frontier models, Gemini 3.1 Pro, Mistral, plus local models through Ollama. Maintained by Paul Gauthier under Apache 2.0.
 
 ## System Verdict
 
@@ -78,7 +78,7 @@ Supports any LLM via API key: Claude Opus 4.7, GPT-5.4, Gemini 3.1 Pro, Mistral,
 | **Architect mode** | Two-model: architect plans, editor writes diffs |
 | **Repo-map** | Compact codebase summary, 1K-token default budget |
 | **Git integration** | Auto-commits every accepted change with descriptive message |
-| **Supported LLMs** | Claude Opus 4.7 · GPT-5.4 · Gemini 3.1 Pro · Mistral · Ollama · any OpenAI-compatible API |
+| **Supported LLMs** | Claude Opus 4.7 · OpenAI frontier models · Gemini 3.1 Pro · Mistral · Ollama · any OpenAI-compatible API |
 | **Voice coding** | Yes, via local speech-to-text |
 | **Watch mode** | Yes, auto-applies suggestions as files change |
 
@@ -88,7 +88,7 @@ Every data point above was verified against vendor documentation on 2026-04-17. 
 
 A terminal tool. Run `aider` in a project directory, add files to context with `/add`, then describe the change in plain English. Aider sends file contents plus the instruction to the chosen LLM, receives a structured diff, applies it to real files, and creates a git commit.
 
-Architect mode runs two models. A larger smart model (typically Opus 4.7) designs the approach. A faster cheaper model (typically Haiku 4.5 or GPT-5.4 mini) turns the plan into specific diffs. Quality stays high, cost stays low.
+Architect mode runs two models. A larger smart model (typically Opus 4.7) designs the approach. A faster cheaper model (typically Haiku 4.5 or lower-cost OpenAI models) turns the plan into specific diffs. Quality stays high, cost stays low.
 
 Repo-map builds a compact structural summary of the codebase: files, functions, classes, signatures. The LLM gets project context without every file loaded explicitly. Token budget defaults to 1K and tunes via `--map-tokens`.
 
@@ -118,7 +118,7 @@ Aider itself is free under Apache 2.0. You pay LLM API costs directly.
 |-------|---------------------------|-------|
 | Gemini 3.1 Pro | $0.02-$0.15/hr | Cheapest capable option, long context |
 | Claude Opus 4.7 (architect mode) | $0.05-$0.30/hr | Best quality-to-cost ratio |
-| GPT-5.4 | $0.10-$0.50/hr | Solid alternative, slightly weaker on multi-file edits |
+| OpenAI frontier models | $0.10-$0.50/hr | Solid alternative, slightly weaker on multi-file edits |
 | Claude Opus 4.7 (full sessions) | $0.50-$2.00/hr | Highest quality, expensive on large codebases |
 | Ollama (local) | $0 | Fully offline; quality below frontier models |
 
@@ -156,10 +156,10 @@ This page was produced by the aipedia.wiki editorial pipeline, an automated syst
 Yes. Apache 2.0 open source. Only cost is the API key you bring. Light sessions run pennies; large features on Opus reach $5. A local Ollama model costs nothing.
 
 **What is architect mode?**
-A two-model workflow. A larger smart model (typically Opus 4.7) proposes the approach. A faster cheaper model (typically Haiku 4.5 or GPT-5.4 mini) turns the plan into file-level diffs. Keeps quality high and session cost low.
+A two-model workflow. A larger smart model (typically Opus 4.7) proposes the approach. A faster cheaper model (typically Haiku 4.5 or lower-cost OpenAI models) turns the plan into file-level diffs. Keeps quality high and session cost low.
 
 **Which models does Aider support?**
-Any LLM reachable through an OpenAI-compatible API: Claude Opus 4.7, GPT-5.4, Gemini 3.1 Pro, Mistral, plus local models via Ollama. The `--model` flag sets the model at runtime. Model rankings live on the [Aider leaderboard](https://aider.chat/docs/leaderboards).
+Any LLM reachable through an OpenAI-compatible API: Claude Opus 4.7, OpenAI frontier models, Gemini 3.1 Pro, Mistral, plus local models via Ollama. The `--model` flag sets the model at runtime. Model rankings live on the [Aider leaderboard](https://aider.chat/docs/leaderboards).
 
 **Aider vs Cursor, which should I pick?**
 Cursor is a GUI VS Code fork with bundled models and inline diffs. Aider is a CLI with BYOK, auto-commit, and architect mode. Pick Cursor for visual polish; pick Aider for terminal workflow, git transparency, and lowest cost.

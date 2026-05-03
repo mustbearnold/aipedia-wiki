@@ -8,8 +8,8 @@ winner: depends
 seo_title: "Obsidian vs Readwise Reader: Which Is Better in 2026?"
 meta_description: "Honest head-to-head of Obsidian and Readwise Reader as of April 2026. Flagship models, current pricing, and which tool fits your workflow."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: quarterly
 ---
 
@@ -25,7 +25,7 @@ Obsidian suits users wanting a customizable, free note-taking vault with local s
 
 | | Obsidian | Readwise Reader |
 |---|---|---|
-| **Flagship** | Obsidian 1.8.0 (with AI plugins like Copilot using GPT-5.4, Claude Opus 4.7) | Readwise Reader (AI summaries via GPT-5.3, Claude Sonnet 4.6) |
+| **Flagship** | Obsidian 1.8.0 (with AI plugins like Copilot using OpenAI models, Claude Opus 4.7) | Readwise Reader (AI summaries via GPT-5.3, Claude Sonnet 4.6) |
 | **Price** | Free core; Sync $5/month; Publish $8/month; AI plugins $20-200/month via providers | $8/month or $72/year |
 | **Context Window/Output Specs** | Local Markdown files; AI context up to 2M tokens via Gemini 3.1 Pro plugins | Article processing; AI outputs up to 200K tokens via integrated models |
 | **Best For** | Long-term knowledge graphs, developer workflows | Reading highlights, quick article digestion |
@@ -33,7 +33,7 @@ Obsidian suits users wanting a customizable, free note-taking vault with local s
 ## Where Obsidian Wins
 
 - Free desktop app with no limits on notes or storage, runs entirely offline.[Obsidian site]
-- Plugin ecosystem supports graph views, Dataview queries, and AI integrations like Obsidian Copilot for local LLMs or cloud models such as GPT-5.4.[Obsidian plugins]
+- Plugin ecosystem supports graph views, Dataview queries, and AI integrations like Obsidian Copilot for local LLMs or cloud models such as OpenAI frontier models.[Obsidian plugins]
 - Local-first Markdown storage enables version control with Git and portability across devices without vendor lock-in.[Obsidian docs]
 - Canvas feature for visual note linking and mind-mapping outperforms Reader's linear organization.[Obsidian release notes]
 - Extensive community themes and templates for customized interfaces.

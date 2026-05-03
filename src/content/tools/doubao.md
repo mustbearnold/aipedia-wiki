@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "Free (consumer); API from ~$0.47/M input tokens"
 status: active
 launched: 2023-08
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -131,7 +131,7 @@ Consumer tiers are free. API pricing is pay-as-you-go on [Volcano Engine](https:
 - **No direct US app store presence.** "Doubao" does not ship in the US App Store or Google Play. International users go through Cici or Dola, which lags the Chinese product on features.
 - **Benchmark claims are vendor-published.** ByteDance's GPT-5.2 and Gemini 3 Pro parity numbers have not been independently verified at the depth Claude or GPT results have. Test on your own prompts before committing.
 - **Geopolitical exposure.** ByteDance is the TikTok parent. Enterprise buyers in the US, UK, and EU face the same regulatory review that has shadowed TikTok for four years.
-- **English output lags Chinese output materially.** The model handles English functionally but loses nuance, idiom, and technical precision against GPT-5.4 or Claude Opus 4.7.
+- **English output lags Chinese output materially.** The model handles English functionally but loses nuance, idiom, and technical precision against OpenAI frontier models or Claude Opus 4.7.
 - **Cici / Dola feature lag.** The international app reaches the latest model months after the Chinese Doubao app. Users abroad rarely run the real flagship.
 - **Data residency is on Chinese infrastructure.** Volcano Engine processes tokens in China. Healthcare, legal, and financial workloads subject to Western residency rules cannot use it.
 

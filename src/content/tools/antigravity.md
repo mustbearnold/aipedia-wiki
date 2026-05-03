@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$249.99/month"
 status: active
 launched: 2025-11
-last_updated: 2026-04-18
-last_verified: 2026-04-18
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: monthly
 seo_title: "Antigravity: Features, Pricing & Review (April 2026)"
 meta_description: "Google Antigravity is an agent-first IDE built on a VS Code fork. Gemini 3.1 Pro default, Claude Sonnet 4.6, Opus 4.6, and GPT-OSS 120B supported. Free tier with rate limits, AI Pro $20/mo, AI Ultra $249.99/mo, plus 2,500 credits for $25. Manager view runs parallel agents with Artifacts."
@@ -133,7 +133,7 @@ Prices verified 2026-04-18 via [Google AI subscriptions](https://gemini.google/s
 
 | | Antigravity AI Pro $20 | Cursor Pro $20 | Claude Code (via Claude Max $100) |
 |---|---|---|---|
-| **Default model** | Gemini 3.1 Pro | Opus 4.7 / GPT-5.4 / Gemini 3.1 Pro | Opus 4.7 |
+| **Default model** | Gemini 3.1 Pro | Opus 4.7 / OpenAI frontier models / Gemini 3.1 Pro | Opus 4.7 |
 | **Multi-agent surface** | Manager view with parallel agents | Agents Window (3.0+) | Single terminal agent |
 | **Browser control** | Native Chrome integration | Design Mode (browser preview) | None |
 | **Artifacts / deliverables** | Structured markdown, screenshots, recordings | Diffs, PRs, worktrees | File writes, terminal logs |

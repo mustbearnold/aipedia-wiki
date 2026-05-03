@@ -7,8 +7,8 @@ meta_description: "Discover the top AI tools for generating accurate citations a
 description: "This page recommends 3-5 AI tools for citations and references, with details on versions, pricing, pros, and cons verified as of 2026-04-15."
 tools_mentioned: ["perplexity", "notebooklm", "chatgpt", "gemini", "claude"]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: monthly
 ---
 
@@ -26,7 +26,7 @@ AI tools for citations and references assist with generating bibliographies, ver
 |---|---|---|---|
 | 1 | [Perplexity AI](../tools/perplexity.md) | Real-time web citations | Free; Pro $20/month |
 | 2 | [NotebookLM](../tools/notebooklm.md) | Document-specific references | Free |
-| 3 | [ChatGPT](../tools/chatgpt.md) | General citation generation (GPT-5.4) | Free; Plus $20/month |
+| 3 | [ChatGPT](../tools/chatgpt.md) | General citation generation (OpenAI frontier models) | Free; Plus $20/month |
 | 4 | [Gemini](../tools/gemini.md) | Long-context research (Gemini 3.1 Pro) | Free; Advanced $20/month |
 | 5 | [Claude](../tools/claude.md) | Analysis with large context | Free; Pro $20/month |
 
@@ -62,11 +62,11 @@ Upload up to 50 sources per notebook (500,000 words total); query for summaries,
 
 ### 3. ChatGPT - Best for General Citation Generation
 
-ChatGPT, powered by OpenAI's GPT-5.4 (paywalled) and GPT-5.3 Instant (free limited), analyzes documents and generates citations. It processes uploads for summaries with references or formats bibliographies.[1][6]
+ChatGPT, powered by OpenAI frontier models (paywalled) and GPT-5.3 Instant (free limited), analyzes documents and generates citations. It processes uploads for summaries with references or formats bibliographies.[1][6]
 
-Free tier offers GPT-5.3 for basic tasks; Plus unlocks GPT-5.4 for deep research across dozens of sources. Handles file analysis with trend highlights and citation strings.[1]
+Free tier offers GPT-5.3 for basic tasks; Plus unlocks OpenAI frontier models for deep research across dozens of sources. Handles file analysis with trend highlights and citation strings.[1]
 
-**Pricing:** Free (limited GPT-5.3); Plus $20/month for GPT-5.4.[6]
+**Pricing:** Free (limited GPT-5.3); Plus $20/month for OpenAI frontier models.[6]
 
 **Pros:** Multimodal uploads; chain-of-thought reduces errors; versatile formats.
 

@@ -8,8 +8,8 @@ winner: depends
 seo_title: "Claude vs Elicit: Which Is Better in 2026?"
 meta_description: "Honest head-to-head of Claude and Elicit as of April 2026. Flagship models, current pricing, and which tool fits your workflow."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-30
-last_verified: 2026-04-30
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: quarterly
 canonical_fact_table: true
 ---
@@ -24,7 +24,7 @@ Claude suits general tasks like writing and coding; Elicit excels in academic re
 
 
 |---|---|---|
-| **Flagship** | Claude Opus 4.7, Sonnet 4.6 | Elicit 3.0 (powered by mixed models incl. Claude Sonnet 4.6, GPT-5.4)[2][3] |
+| **Flagship** | Claude Opus 4.7, Sonnet 4.6 | Elicit 3.0 (powered by mixed models incl. Claude Sonnet 4.6, OpenAI frontier models)[2][3] |
 | **Price** | Free / Pro $20/mo / Max $200/mo | Free (limited) / Plus $12/mo / Enterprise custom |
 | **Context Window / Output** | 1M tokens input, 128K output (Opus 4.7) | 200K tokens effective (research-focused) |
 | **Best For** | Coding, analysis, long-form writing | Literature reviews, paper summarization |
@@ -47,7 +47,7 @@ Claude suits general tasks like writing and coding; Elicit excels in academic re
 
 ## Key Differences
 
-Claude acts as a general AI for diverse tasks including coding (preferred over prior versions 70% in tests) and analysis, with Opus 4.7 (April 2026) and Sonnet 4.6 leading proprietary models[1][2]. Elicit specializes in research, using models like Claude Sonnet 4.6 and GPT-5.4 under the hood to query papers, extract findings, and build workflows for academics[2][3][4]. Claude's 1M token context handles large docs; Elicit's effective 200K suits paper batches[3]. Pricing starts similar, but Claude scales to $200/mo Max for heavy use, while Elicit caps at $12/mo Plus for most researchers[3].
+Claude acts as a general AI for diverse tasks including coding (preferred over prior versions 70% in tests) and analysis, with Opus 4.7 (April 2026) and Sonnet 4.6 leading proprietary models[1][2]. Elicit specializes in research, using models like Claude Sonnet 4.6 and OpenAI frontier models under the hood to query papers, extract findings, and build workflows for academics[2][3][4]. Claude's 1M token context handles large docs; Elicit's effective 200K suits paper batches[3]. Pricing starts similar, but Claude scales to $200/mo Max for heavy use, while Elicit caps at $12/mo Plus for most researchers[3].
 
 ## Who should choose Claude
 
@@ -63,13 +63,13 @@ Pick Claude for everyday AI tasks like coding and writing; select Elicit for res
 
 ## FAQ
 
-**Can I use both?**  
+**Can I use both?**
 Yes, Claude handles general queries while Elicit focuses on papers; free tiers allow testing both without commitment[3].
 
-**Which is cheaper?**  
+**Which is cheaper?**
 Elicit Plus at $12/mo undercuts Claude Pro $20/mo, but Claude Free offers more general use[3].
 
-**Which one should I pick first?**  
+**Which one should I pick first?**
 Start with Elicit if research dominates your work; choose Claude for broader needs like coding or analysis[2][4].
 
 ## Sources

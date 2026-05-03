@@ -2,7 +2,7 @@
 type: tool
 slug: perplexity
 title: Perplexity
-tagline: AI search engine with cited answers, a Pro-tier model switcher across Sonar, GPT-5.4, Claude Opus 4.7, and Gemini 3.1 Pro, Deep Research that exports decks and spreadsheets, and the Comet browser across desktop and mobile.
+tagline: AI search engine with cited answers, a Pro-tier model switcher across Sonar, GPT-5.5, Claude Opus 4.7, and Gemini 3.1 Pro, Deep Research that exports decks and spreadsheets, and the Comet browser across desktop and mobile.
 category: ai-search
 secondary_categories: [ai-chatbots, ai-writing]
 company: perplexity
@@ -11,11 +11,11 @@ pricing_model: freemium
 price_range: "$0-$325/user/month"
 status: active
 launched: 2022-12
-last_updated: 2026-04-29
-last_verified: 2026-04-29
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: monthly
 seo_title: "Perplexity: Features, Pricing & Review (April 2026)"
-meta_description: "Perplexity runs Sonar plus switchable frontier models (GPT-5.4, Claude Opus 4.7, Gemini 3.1 Pro) in April 2026. Free tier; Pro $20/mo; Max $200/mo adds Model Council and Perplexity Computer; Enterprise $40-$325/user. Comet browser free on iOS, Android, Mac, and Windows."
+meta_description: "Perplexity runs Sonar plus switchable frontier models (GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro) in April 2026. Free tier; Pro $20/mo; Max $200/mo adds Model Council and Perplexity Computer; Enterprise $40-$325/user. Comet browser free on iOS, Android, Mac, and Windows."
 author: "aipedia.wiki Editorial"
 affiliate:
   has_program: false
@@ -57,7 +57,7 @@ price_history:
 
 Perplexity is an AI-native answer engine. Every response is synthesized from live web sources with numbered inline citations (no list of ten blue links, no scraped snippets stripped of attribution).
 
-The house model is **Sonar**, a Llama-tuned search model running on Cerebras infrastructure at ~1,200 tokens/sec. Pro subscribers can override it per query with GPT-5.4, Claude Opus 4.7, Gemini 3.1 Pro, or Grok.
+The house model is **Sonar**, a Llama-tuned search model running on Cerebras infrastructure at ~1,200 tokens/sec. Pro subscribers can override it per query with GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro, or Grok.
 
 ## Recent developments (March-April 2026)
 
@@ -80,7 +80,7 @@ Max adds Model Council and Perplexity Computer. The Comet browser is free on eve
 | | |
 |---|---|
 | **House model** | Sonar (Llama 3.3 70B-based, Cerebras inference, ~1,200 tok/s) |
-| **Switchable frontier models (Pro+)** | GPT-5.4 · GPT-5.4 Thinking · Claude Opus 4.7 · Claude Sonnet 4.6 · Gemini 3.1 Pro · Grok |
+| **Switchable frontier models (Pro+)** | GPT-5.5 · GPT-5.5 Thinking · Claude Opus 4.7 · Claude Sonnet 4.6 · Gemini 3.1 Pro · Grok |
 | **Deep Research** | Reads hundreds of sources, 2-5 min per query; exports to PowerPoint, spreadsheets, dashboards, and websites |
 | **Model Council (Max-only)** | Runs the same query across 3 frontier models; synthesizer (Claude Opus) resolves convergence/divergence |
 | **Perplexity Computer (Max-only)** | Cloud agent orchestrating 19 models across 400+ tools; 10,000 credits/mo included |
@@ -105,7 +105,7 @@ The open question is whether any of these survive once Google AI Overviews, Chat
 ## When to pick Perplexity
 
 - **You need verifiable answers with live citations.** Every sentence is traceable to a source. That's the exact behavior default ChatGPT and Claude chats do not produce without explicit browsing mode prompts.
-- **You want to A/B frontier models on the same question.** Pro's model switcher and Max's Model Council are the cleanest way to run GPT-5.4, Opus 4.7, and Gemini 3.1 Pro against the same prompt without three subscriptions.
+- **You want to A/B frontier models on the same question.** Pro's model switcher and Max's Model Council are the cleanest way to run GPT-5.5, Opus 4.7, and Gemini 3.1 Pro against the same prompt without three subscriptions.
 - **You run research-to-deliverable workflows.** Deep Research exports directly to PowerPoint, spreadsheets, and dashboards. That's the step that kills throughput when researchers use a chatbot and then paste into slides manually.
 - **You want a browser-layer AI assistant.** Comet is free on iOS, Android, Mac, and Windows; it reads the page, summarizes tabs, and answers in context without leaving the browser.
 - **You're building search-augmented LLM apps.** The Sonar and Sonar Pro APIs ship real-time web-wide research with citations as a primitive. Cheaper than stitching your own Bing/Brave + RAG stack.
@@ -126,7 +126,7 @@ Consumer pricing via [perplexity.ai/pro](https://perplexity.ai/pro):
 | Plan | Price | Pro Searches | Models | Deep Research | Who's it for |
 |---|---|---|---|---|---|
 | Free | $0 | ~3-5/day | Sonar only | Limited | Casual fact-checks |
-| Pro | $20/mo ($200/yr) | Unlimited | Sonar + GPT-5.4, Opus 4.7, Sonnet 4.6, Gemini 3.1 Pro, Grok | Full (+ deck/sheet export) | **Most individuals should land here** |
+| Pro | $20/mo ($200/yr) | Unlimited | Sonar + GPT-5.5, Opus 4.7, Sonnet 4.6, Gemini 3.1 Pro, Grok | Full (+ deck/sheet export) | **Most individuals should land here** |
 | Max | $200/mo ($2,000/yr) | Unlimited | Everything in Pro | Full | Model Council + Perplexity Computer users |
 
 Enterprise pricing via [perplexity.ai/enterprise/pricing](https://perplexity.ai/enterprise/pricing):
@@ -170,7 +170,7 @@ This page was produced by the aipedia.wiki editorial pipeline, an automated syst
 Yes. The free tier runs Sonar with roughly 3-5 Pro searches per day and full access to standard cited answers. Pro at $20/mo unlocks unlimited Pro searches, the frontier-model switcher, Deep Research with deck and spreadsheet export, Spaces, and Voice Mode.
 
 **Which frontier models can Pro users pick per query?**
-GPT-5.4, GPT-5.4 Thinking, Claude Opus 4.7, Claude Sonnet 4.6, Gemini 3.1 Pro, and Grok. Sonar is the default and auto-routes most queries. Free users are limited to Sonar.
+GPT-5.5, GPT-5.5 Thinking, Claude Opus 4.7, Claude Sonnet 4.6, Gemini 3.1 Pro, and Grok. Sonar is the default and auto-routes most queries. Free users are limited to Sonar.
 
 **What is Sonar?**
 Sonar is Perplexity's house search model: a Llama 3.3 70B variant further tuned for factuality and citation quality, served on Cerebras inference at roughly 1,200 tokens per second.
@@ -191,7 +191,7 @@ Spaces are file-grounded research workspaces, the renamed and expanded version o
 Pro users get up to 50 files per Space, Enterprise up to 500. Scheduled Tasks let a Space run recurring research automatically.
 
 **What is Model Council and who gets it?**
-Model Council runs the same query against three frontier models simultaneously (typically GPT-5.4, Claude Opus 4.7, and Gemini 3.1 Pro). A synthesizer (Claude Opus) then resolves agreements and disagreements into a unified answer.
+Model Council runs the same query against three frontier models simultaneously (typically GPT-5.5, Claude Opus 4.7, and Gemini 3.1 Pro). A synthesizer (Claude Opus) then resolves agreements and disagreements into a unified answer.
 
 It is **Max-only** (and Enterprise Max), web-only, not on mobile.
 

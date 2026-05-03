@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$24/user/month"
 status: active
 launched: 2023-02
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -35,7 +35,7 @@ best_for:
   - knowledge workers coordinating AI agents across workflows
 not_best_for:
   - individuals who just want AI writing help (Claude or ChatGPT cheaper)
-  - users needing GPT-5.4 or Claude Opus 4.7 output quality
+  - users needing OpenAI frontier models or Claude Opus 4.7 output quality
   - privacy-first workflows requiring local data
 quick_answer: >-
   Notion AI bundles LLM features into the Notion workspace. AI Agents, Ask Notion, AI Autofill, and meeting notes are included in Business at $18/user/mo (annual) or $20/user/mo (monthly). Pick for teams already in Notion with large wikis; skip solo (NotebookLM does Q&A free, Claude handles writing at $20).
@@ -60,7 +60,7 @@ Notion retired the standalone $10 AI add-on in May 2025. For new signups, AI acc
 
 > **Pick Notion AI if your team already runs Notion as its primary workspace and wiki.** Ask Notion searches across your docs, databases, and connected apps (Slack, Google Drive) with source citations. AI Autofill computes database properties in bulk. Custom Agents (Notion 3.3, February 2026) coordinate workflows across the workspace. None of this works without a Notion vault; none of it requires a second tool if you already have one.
 >
-> **Skip it if you're evaluating Notion only for the AI.** For solo users, [NotebookLM](/tools/notebooklm/) handles document Q&A free with better source management. [Claude](/tools/claude/) at $20/mo delivers stronger writing output than Notion AI's lighter models. [Obsidian](/tools/obsidian/) + Smart Connections gives you a local-first equivalent with your own API key. Notion's underlying LLMs skew toward Haiku and Gemini-class models, not Opus 4.7 or GPT-5.4.
+> **Skip it if you're evaluating Notion only for the AI.** For solo users, [NotebookLM](/tools/notebooklm/) handles document Q&A free with better source management. [Claude](/tools/claude/) at $20/mo delivers stronger writing output than Notion AI's lighter models. [Obsidian](/tools/obsidian/) + Smart Connections gives you a local-first equivalent with your own API key. Notion's underlying LLMs skew toward Haiku and Gemini-class models, not Opus 4.7 or OpenAI frontier models.
 >
 > **Who pays which tier:** Free for personal notes with no AI, Plus $10/user/mo (annual) for team workspaces without AI, Business $18/mo (annual) or $20/mo (monthly) for full AI access, Enterprise for SAML SSO, audit log, and advanced security.
 
@@ -89,7 +89,7 @@ AI Autofill turns database properties into computed columns. Summarize linked pa
 
 AI meeting notes capture via Cmd+K with custom instructions. Custom Agents (Notion 3.3, February 2026) coordinate multiple AI agents across workflows. Workers for Agents adds custom code execution.
 
-The underlying LLMs are not disclosed. Third-party reporting points to lighter models (Haiku class, Gemini variants, MiniMax) rather than flagship Opus 4.7 or GPT-5.4. Quality-sensitive writing tasks will notice the gap.
+The underlying LLMs are not disclosed. Third-party reporting points to lighter models (Haiku class, Gemini variants, MiniMax) rather than flagship Opus 4.7 or OpenAI frontier models. Quality-sensitive writing tasks will notice the gap.
 
 ## When to pick Notion AI
 
@@ -135,7 +135,7 @@ Pricing via [notion.so/pricing](https://www.notion.so/pricing).
 
 ## Failure modes
 
-- **Underlying models skew lighter.** Third-party reporting indicates Haiku, Gemini variants, and MiniMax power agent workflows. Users expecting Opus 4.7 or GPT-5.4 quality will notice the gap on complex writing, reasoning, or code tasks.
+- **Underlying models skew lighter.** Third-party reporting indicates Haiku, Gemini variants, and MiniMax power agent workflows. Users expecting Opus 4.7 or OpenAI frontier models quality will notice the gap on complex writing, reasoning, or code tasks.
 - **AI is Business-only for new signups.** The $10 Plus AI add-on was retired in May 2025. New teams wanting AI must commit to $18-$20/user/mo.
 - **Per-seat pricing scales fast.** A 20-person team on Business is $360-$400/mo minimum. For teams that only want AI features (not workspace), team Claude or ChatGPT is cheaper.
 - **Q&A accuracy degrades on messy workspaces.** Duplicate or outdated pages pull wrong answers. Good workspace hygiene is a prerequisite, not an optimization.
@@ -164,7 +164,7 @@ Yes. Ask Notion Q&A searches across integrated apps including Slack and Google D
 Launched with Notion 3.3 in February 2026, Custom Agents lets teams build specialized AI workflows inside Notion. Workers for Agents (April 2026) adds custom code execution inside agent pipelines. Both are included in Business and Enterprise AI access.
 
 **How does Notion AI compare to Claude or ChatGPT?**
-Notion AI wins on workspace context: it searches your pages and databases automatically without file uploads. On raw output quality, Claude Opus 4.7 and GPT-5.4 produce better writing and reasoning because Notion's underlying models are lighter. For teams already in Notion, the context advantage outweighs the model gap. For individuals who mainly want writing assistance, Claude Pro at $20/mo is a better fit.
+Notion AI wins on workspace context: it searches your pages and databases automatically without file uploads. On raw output quality, Claude Opus 4.7 and OpenAI frontier models produce better writing and reasoning because Notion's underlying models are lighter. For teams already in Notion, the context advantage outweighs the model gap. For individuals who mainly want writing assistance, Claude Pro at $20/mo is a better fit.
 
 ## Sources
 

@@ -3,9 +3,9 @@ type: glossary
 slug: glossary-index
 title: AI Tools Glossary
 description: Definitions of key terms used throughout the AI Tools wiki.
-last_updated: 2026-04-30
+last_updated: 2026-05-03
 update_frequency: quarterly
-last_verified: 2026-04-30
+last_verified: 2026-05-03
 ---
 
 # AI Tools Glossary
@@ -15,7 +15,7 @@ last_verified: 2026-04-30
 ---
 ## LLM
 
-**Large Language Model (LLM)** is a deep learning neural network trained on vast text datasets to understand, generate, and process human-like natural language. LLMs underpin modern AI tools by enabling text generation, summarization, translation, and reasoning at scale. Examples include GPT-5.4, Claude Opus 4.7, and Gemini 3.1 Pro.  
+**Large Language Model (LLM)** is a deep learning neural network trained on vast text datasets to understand, generate, and process human-like natural language. LLMs underpin modern AI tools by enabling text generation, summarization, translation, and reasoning at scale. Examples include GPT-5.5, Claude Opus 4.7, and Gemini 3.1 Pro.
 See also: [Foundation Model](#foundation-model), [Tokens](#tokens), [AI Writing Category](../categories/ai-writing.md)
 
 ---
@@ -26,7 +26,7 @@ A **foundation model** is a large AI model trained on broad data using self-supe
 
 These models form the base for specialized applications, enabling faster and cost-effective development.
 
-Examples include GPT-5.4, Claude Opus 4.7, and Gemini 3.1 Pro.
+Examples include GPT-5.5, Claude Opus 4.7, and Gemini 3.1 Pro.
 
 See also: [LLM](#llm), [Fine-tuning](#fine-tuning)
 
@@ -38,7 +38,7 @@ Fine-tuning is the process of adapting a pre-trained foundation model by further
 
 Fine-tuning leverages existing model knowledge to achieve superior results with less data and compute than training from scratch.
 
-For example, fine-tuning GPT-5.4 on company support tickets enhances customer service response accuracy.
+For example, fine-tuning a current GPT-5 family model on company support tickets can improve customer-service response accuracy.
 
 See also: [LoRA](#lora), [Foundation Model](#foundation-model), [Prompt Engineering](#prompt-engineering)
 
@@ -82,7 +82,7 @@ See also: [LLM](#llm), [Fine-tuning](#fine-tuning), [Tokens](#tokens)
 
 ## Agentic AI
 
-Agentic AI is an autonomous artificial intelligence system that accomplishes specific goals by reasoning, planning, and executing multi-step actions across tools and systems without continuous human intervention. This capability enables AI to operate proactively in complex, dynamic environments rather than simply responding to prompts or generating content. Claude Opus 4.7 with Computer Use, Gemini 3.1 Pro agents, and GPT-5.4 demonstrate agentic capabilities by autonomously breaking down tasks, making contextual decisions, and coordinating across multiple specialized agents to reach defined outcomes.
+Agentic AI is an autonomous artificial intelligence system that accomplishes specific goals by reasoning, planning, and executing multi-step actions across tools and systems without continuous human intervention. This capability enables AI to operate proactively in complex, dynamic environments rather than simply responding to prompts or generating content. Claude Opus 4.7 with Computer Use, Gemini 3.1 Pro agents, and GPT-5.5-class OpenAI agents demonstrate agentic capabilities by autonomously breaking down tasks, making contextual decisions, and coordinating across multiple specialized agents to reach defined outcomes.
 
 See also: [Multi-agent](#multi-agent), [Workflow Automation](#workflow-automation), [Large Language Model](#large-language-model), [Autonomous Agent](#autonomous-agent)
 
@@ -94,7 +94,7 @@ A **multi-agent system** is a computational architecture of multiple autonomous 
 
 Multi-agent systems divide tasks among specialized agents for superior efficiency, scalability, and resilience in production workflows.
 
-CrewAI 2 orchestrates a research agent using GPT-5.4, a writing agent with Claude Opus 4.7, and a review agent for report generation.
+CrewAI 2 can orchestrate a research agent using an OpenAI model, a writing agent with Claude Opus 4.7, and a review agent for report generation.
 
 See also: [Agentic AI](#agentic-ai), [Workflow Automation](#workflow-automation)
 
@@ -134,23 +134,23 @@ See also: [GEO](#geo), [Surfer SEO](../tools/surfer-seo.md)
 
 ## TTS (Text-to-Speech)
 
-**TTS (Text-to-Speech)** converts written text into spoken audio using speech synthesis technology.  
-Modern AI TTS enables scalable voice content creation for accessibility, audiobooks, virtual assistants, and customer service.  
-ElevenLabs v3 and OpenAI TTS-2 produce human-like speech with emotion and natural pacing.  
+**TTS (Text-to-Speech)** converts written text into spoken audio using speech synthesis technology.
+Modern AI TTS enables scalable voice content creation for accessibility, audiobooks, virtual assistants, and customer service.
+ElevenLabs v3 and OpenAI TTS-2 produce human-like speech with emotion and natural pacing.
 See also: [Voice Cloning](#voice-cloning), [ElevenLabs](../tools/elevenlabs.md), [Voxtral](../tools/voxtral.md)
 
 ---
 
 ## Voice Cloning
 
-Voice cloning replicates a specific person's voice using AI trained on audio samples to synthesize realistic speech matching their tone, accent, and inflections. This technology enables scalable content creation and accessibility tools while posing risks of fraud and deepfakes without consent safeguards. ElevenLabs PVC v2 clones voices from 30 minutes of audio, while instant methods like those in Claude Opus 4.7 use seconds-long clips.  
+Voice cloning replicates a specific person's voice using AI trained on audio samples to synthesize realistic speech matching their tone, accent, and inflections. This technology enables scalable content creation and accessibility tools while posing risks of fraud and deepfakes without consent safeguards. ElevenLabs PVC v2 clones voices from 30 minutes of audio, while instant methods like those in Claude Opus 4.7 use seconds-long clips.
 See also: [TTS](#tts-text-to-speech), [ElevenLabs](../tools/elevenlabs.md)
 
 ---
 
 ## Tokens
 
-Tokens are the discrete units of text that large language models break down and process, representing words, subwords, punctuation, or character combinations. Token count directly determines both computational cost and the maximum input length a model can accept within its context window. In GPT-5.4, approximately 750 English words equal 1,000 tokens, making token estimation essential for API budgeting and prompt design.
+Tokens are the discrete units of text that large language models break down and process, representing words, subwords, punctuation, or character combinations. Token count directly determines both computational cost and the maximum input length a model can accept within its context window. For common English text, roughly 750 words equal 1,000 tokens, making token estimation essential for API budgeting and prompt design.
 
 See also: [Context Window](#context-window), [Tokenization](#tokenization), [LLM](#llm), [API](#api)
 
@@ -158,7 +158,7 @@ See also: [Context Window](#context-window), [Tokenization](#tokenization), [LLM
 
 ## Context Window
 
-**Context window** is the maximum number of tokens a large language model processes at once, including prompts and conversation history, acting as its working memory. Larger windows enable handling of extended documents and sustained dialogues. As of 2026, Claude Opus 4.7 supports 1M tokens, Gemini 3.1 Pro supports 4M tokens, and GPT-5.4 supports 1M tokens.  
+**Context window** is the maximum number of tokens a large language model processes at once, including prompts and conversation history, acting as its working memory. Larger windows enable handling of extended documents and sustained dialogues. As of 2026, Claude Opus 4.7 supports 1M tokens, Gemini 3.1 Pro supports very long multimodal contexts, and GPT-5.5-class OpenAI API models support million-token scale contexts separate from ChatGPT plan limits.
 See also: [Tokens](#tokens), [LLM](#llm)
 
 ---
@@ -169,7 +169,7 @@ An **API** (Application Programming Interface) is a set of rules and protocols t
 
 APIs enable developers to integrate AI services into apps and workflows by sending programmatic requests for responses.
 
-OpenAI API processes prompts to GPT-5.4; Claude API handles queries to Claude Opus 4.7.
+The OpenAI API processes prompts to GPT-5.5-class models; the Claude API handles queries to Claude Opus 4.7.
 
 See also: [SDK](#sdk), [Tokens](#tokens), [Workflow Automation](#workflow-automation)
 
@@ -181,7 +181,7 @@ See also: [SDK](#sdk), [Tokens](#tokens), [Workflow Automation](#workflow-automa
 
 SDKs accelerate development and reduce errors for developers integrating AI services.
 
-Examples include Anthropic Python SDK for Claude Opus 4.7 and OpenAI Node SDK for GPT-5.4; the Claude Agent SDK adds frameworks for autonomous AI agents.
+Examples include Anthropic Python SDK for Claude Opus 4.7 and the OpenAI Node SDK for GPT-5.5-class models; the Claude Agent SDK adds frameworks for autonomous AI agents.
 
 See also: [API](#api), [Agentic AI](#agentic-ai)
 
@@ -193,7 +193,7 @@ See also: [API](#api), [Agentic AI](#agentic-ai)
 
 Open source enables self-hosting, fine-tuning, inspection, and privacy; closed source provides superior performance, updates, security, and ease of integration.
 
-Examples include open source **Llama 4**, **DeepSeek V3.2**, and **Mixtral 2** versus closed source **GPT-5.4** and **Claude Opus 4.7**.
+Examples include open source **Llama 4**, **DeepSeek V3.2**, and **Mixtral 2** versus closed source **GPT-5.5** and **Claude Opus 4.7**.
 
 See also: Mistral, [LoRA](#lora), [Fine-tuning](#fine-tuning)
 
@@ -203,7 +203,7 @@ See also: Mistral, [LoRA](#lora), [Fine-tuning](#fine-tuning)
 
 **SaaS** is a cloud computing model where providers host and deliver applications over the internet on a subscription basis, managing all infrastructure and updates.
 This model enables AI tool users to access compute-intensive services without local installation or maintenance costs.
-Examples include ChatGPT Plus with GPT-5.4 and Claude Opus 4.7 via browser APIs.
+Examples include ChatGPT Plus with GPT-5.5 access and Claude Pro with Claude Opus 4.7 via browser apps.
 See also: [ARR](#arr), [API](#api), [MaaS](#maas)
 
 ---
@@ -222,7 +222,7 @@ See also: [SaaS](#saas), [MRR](#mrr)
 
 ## Affiliate Marketing
 
-Affiliate marketing is earning commission by promoting third-party products or services, with compensation typically tied to sales, clicks, or conversions. In the AI tools ecosystem, this model creates financial incentives that can influence product recommendations and editorial objectivity. AI tool review platforms frequently rely on affiliate revenue from GPT-5.4, Claude Opus 4.7, Gemini 3.1 Pro, and other major vendors, making disclosure of these relationships essential for reader trust. See also: [Sponsored Content](#sponsored-content), [Disclosure Requirements](#disclosure-requirements), [Bias in AI Reviews](#bias-in-ai-reviews)
+Affiliate marketing is earning commission by promoting third-party products or services, with compensation typically tied to sales, clicks, or conversions. In the AI tools ecosystem, this model creates financial incentives that can influence product recommendations and editorial objectivity. AI tool review platforms frequently rely on affiliate revenue from major AI vendors and SaaS suites, making disclosure of these relationships essential for reader trust. See also: [Sponsored Content](#sponsored-content), [Disclosure Requirements](#disclosure-requirements), [Bias in AI Reviews](#bias-in-ai-reviews)
 
 ---
 
@@ -232,7 +232,7 @@ No-code and low-code platforms enable building applications using visual drag-an
 
 They accelerate development for developers and non-technical users, enabling rapid creation of custom software without deep programming expertise.
 
-Bubble supports no-code web apps, while Retool provides low-code dashboards integrated with GPT-5.4 APIs.
+Bubble supports no-code web apps, while Retool provides low-code dashboards integrated with OpenAI APIs.
 
 See also: [Workflow Automation](#workflow-automation), [n8n](../tools/n8n.md), Bubble
 
@@ -244,7 +244,7 @@ See also: [Workflow Automation](#workflow-automation), [n8n](../tools/n8n.md), B
 
 It enables faster operations, reduces errors, and frees teams for high-value work.
 
-For example, Zapier connects GPT-5.4 to generate social posts and schedules them via Make.
+For example, Zapier can call an OpenAI model to generate social posts, then schedule them via Make.
 
 See also: [No-code/Low-code](#no-codelow-code), [Agentic AI](#agentic-ai), [n8n](../tools/n8n.md)
 
@@ -256,7 +256,7 @@ See also: [No-code/Low-code](#no-codelow-code), [Agentic AI](#agentic-ai), [n8n]
 
 This enables machines to quantify similarity between data points by measuring vector proximity, powering semantic search and AI applications.
 
-For example, embeddings for "dog" and "puppy" cluster closely in GPT-5.4's vector space, while "dog" and "refrigerator" remain distant.
+For example, embeddings for "dog" and "puppy" cluster closely in vector space, while "dog" and "refrigerator" remain distant.
 
 See also: [Vector Database](#vector-database), [RAG](#rag)
 
@@ -268,7 +268,7 @@ A **vector database** stores, indexes, and queries high-dimensional vector embed
 
 Vector databases enable low-latency semantic retrieval essential for RAG systems and generative AI applications.
 
-Pinecone v2 stores embeddings from GPT-5.4 for querying relevant passages in enterprise RAG pipelines.
+Pinecone stores embeddings from OpenAI, Anthropic-compatible, or open-weight embedding models for querying relevant passages in enterprise RAG pipelines.
 
 See also: [Embedding](#embedding), [RAG](#rag)
 
@@ -280,7 +280,7 @@ See also: [Embedding](#embedding), [RAG](#rag)
 
 This undermines reliability in critical applications like healthcare, law, and education, where accuracy determines outcomes.
 
-For example, Claude Opus 4.7 might claim GPT-5.4 won two Nobel Prizes, though it won none.
+For example, a model might claim a current GPT release won two Nobel Prizes, though it won none.
 
 See also: [RAG](#rag), [LLM](#llm)
 
@@ -288,7 +288,7 @@ See also: [RAG](#rag), [LLM](#llm)
 
 ## Inference
 
-Inference is the execution phase where a trained AI model analyzes new data to produce predictions, decisions, or generated outputs without learning anything new. This is where AI delivers real-world value, transforming learned patterns into actionable results at scale. When you send a prompt to Claude Opus 4.7 and receive a response, or when GPT-5.4 generates text, that computational process is inference. Inference differs fundamentally from training: it requires only a forward pass through the model rather than parameter updates, making individual predictions far less computationally demanding than model development. Inference costs represent what users pay for API usage and depend on model size, input/output token length, and underlying hardware. Optimization techniques, including model quantization, prompt caching, and deploying smaller specialized models, have become critical for reducing inference expenses in production environments.
+Inference is the execution phase where a trained AI model analyzes new data to produce predictions, decisions, or generated outputs without learning anything new. This is where AI delivers real-world value, transforming learned patterns into actionable results at scale. When you send a prompt to Claude Opus 4.7 and receive a response, or when a GPT-5.5-class model generates text, that computational process is inference. Inference differs fundamentally from training: it requires only a forward pass through the model rather than parameter updates, making individual predictions far less computationally demanding than model development. Inference costs represent what users pay for API usage and depend on model size, input/output token length, and underlying hardware. Optimization techniques, including model quantization, prompt caching, and deploying smaller specialized models, have become critical for reducing inference expenses in production environments.
 
 See also: [Training](#training), [Tokens](#tokens), [Latency](#latency), [API](#api), [Quantization](#quantization)
 
@@ -296,7 +296,7 @@ See also: [Training](#training), [Tokens](#tokens), [Latency](#latency), [API](#
 
 ## Latency
 
-Latency is the time delay between when an AI system receives an input and generates the corresponding output. This metric directly impacts user experience, with low latency enabling real-time interactions in conversational interfaces and autonomous systems. In Claude Opus 4.7 and GPT-5.4, latency stems from data preprocessing, mathematical computations, data transfer between processing units, and postprocessing, with larger models typically exhibiting higher latency due to increased computational overhead. Reducing latency requires model compression, optimized inference code, hardware acceleration, and lower-precision numerical formats. Streaming responses decreases perceived latency by delivering tokens incrementally rather than waiting for complete generation.
+Latency is the time delay between when an AI system receives an input and generates the corresponding output. This metric directly impacts user experience, with low latency enabling real-time interactions in conversational interfaces and autonomous systems. In Claude Opus 4.7 and GPT-5.5-class models, latency stems from data preprocessing, mathematical computations, data transfer between processing units, and postprocessing, with larger models typically exhibiting higher latency due to increased computational overhead. Reducing latency requires model compression, optimized inference code, hardware acceleration, and lower-precision numerical formats. Streaming responses decreases perceived latency by delivering tokens incrementally rather than waiting for complete generation.
 
 See also: [Inference](#inference), [TTS](#tts-text-to-speech), [API](#api), [Model Compression](#model-compression)
 
@@ -326,7 +326,7 @@ Test-Time Compute allocates additional computational resources during model infe
 
 This scales performance on complex tasks by trading inference time and hardware for superior accuracy and reasoning.
 
-Examples include GPT-5.4 generating chain-of-thought reasoning and Claude Opus 4.7 using Monte Carlo Tree Search.
+Examples include GPT-5.5-class models allocating extra reasoning tokens and Claude Opus 4.7 using search-like deliberation patterns.
 
 See also: [Inference](#inference), [Reasoning Models](#reasoning-models)
 
@@ -334,6 +334,6 @@ See also: [Inference](#inference), [Reasoning Models](#reasoning-models)
 
 ## Reasoning Models
 
-**Reasoning models** are large language models trained to perform multi-step logical reasoning, breaking complex problems into chain-of-thought steps for superior accuracy on math, coding, and planning tasks. They enable reliable solutions to challenges beyond standard LLMs' pattern-matching capabilities. Examples include Claude Opus 4.7 Reasoning and Gemini 3.1 Pro Think.  
+**Reasoning models** are large language models trained to perform multi-step logical reasoning, breaking complex problems into chain-of-thought steps for superior accuracy on math, coding, and planning tasks. They enable reliable solutions to challenges beyond standard LLMs' pattern-matching capabilities. Examples include Claude Opus 4.7 Reasoning and Gemini 3.1 Pro Think.
 See also: [LLM](#llm), [Prompt Engineering](#prompt-engineering)
 

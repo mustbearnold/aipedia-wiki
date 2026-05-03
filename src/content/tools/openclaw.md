@@ -11,8 +11,8 @@ pricing_model: open-source
 price_range: "Free (MIT) · BYOK API costs · server hosting on you"
 status: active
 launched: 2025-11
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -107,7 +107,7 @@ The founder story matters. Steinberger joined OpenAI in February 2026; OpenClaw 
 | Tier | Cost | Notes |
 |------|------|-------|
 | OpenClaw (self-hosted) | Free | MIT license, BYOK API, BYO server |
-| LLM API costs | Usage-based | Typical Claude Opus 4.7 or GPT-5.4 use: $5-$30/month |
+| LLM API costs | Usage-based | Typical Claude Opus 4.7 or OpenAI frontier models use: $5-$30/month |
 | Server / VPS | ~$5-$10/mo | Any always-on machine works |
 
 *No subscription. No license fee. No managed cloud tier. Total cost equals LLM usage plus whatever you spend on hosting ([GitHub](https://github.com/openclaw/openclaw)).*

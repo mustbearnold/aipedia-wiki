@@ -8,8 +8,8 @@ description: "Answer deep research questions with sourced citations, organized n
 stack: [perplexity, claude, notion-ai]
 tools_mentioned: [perplexity, claude, notion-ai]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: quarterly
 ---
 
@@ -50,7 +50,7 @@ Hands-on time per task: 25 minutes, down from ~2 hours of manual research. Outpu
 
 ### [Perplexity Pro](/tools/perplexity/) ($20/mo)
 
-Owns discovery. Pulls real-time sources from 10-50 sites and synthesizes with inline citations via Claude Opus 4.7 and GPT-5.4.
+Owns discovery. Pulls real-time sources from 10-50 sites and synthesizes with inline citations via Claude Opus 4.7 and OpenAI frontier models.
 
 Deep Research mode supports 20 queries/day. Single-model tools without live web access cannot match citation depth here.
 
@@ -88,7 +88,7 @@ Folder convention: `Vault/Topic/[Perplexity Raw]/[Claude Project MD]/[Notion DB 
 
 ## Where it breaks
 
-Perplexity Deep Research hits the 20/day Pro limit. Overflow queries fall back to free-tier defaults (GPT-5.4) and lose model choice.
+Perplexity Deep Research hits the 20/day Pro limit. Overflow queries fall back to free-tier defaults (OpenAI frontier models) and lose model choice.
 
 Skipping Project instructions drops citations in ~40% of Claude outputs. The "cite inline only" rule is mandatory.
 

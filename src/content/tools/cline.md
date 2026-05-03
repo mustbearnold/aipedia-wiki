@@ -11,8 +11,8 @@ pricing_model: open-source
 price_range: "Free (BYOK API costs)"
 status: active
 launched: 2024-07
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -27,7 +27,7 @@ scores:
   longevity: 7
 tags: [open-source, vscode, jetbrains, byok, plan-act-mode, mcp, terminal-execution, browser-automation, checkpoints, cursor-alternative, claude-dev]
 seo_title: "Cline: Features, Pricing & Review (April 2026)"
-meta_description: "Cline is a free open-source AI coding agent for VS Code and JetBrains (formerly Claude Dev). Plan/Act modes, MCP tool creation, BYOK for Claude Opus 4.7, GPT-5.4, Gemini, or local models. No subscription. Verified April 2026."
+meta_description: "Cline is a free open-source AI coding agent for VS Code and JetBrains (formerly Claude Dev). Plan/Act modes, MCP tool creation, BYOK for Claude Opus 4.7, OpenAI frontier models, Gemini, or local models. No subscription. Verified April 2026."
 author: "aipedia.wiki Editorial"
 best_for:
   - VS Code or JetBrains devs wanting autonomous agents without a subscription
@@ -55,7 +55,7 @@ price_history:
 
 A free open-source AI coding agent for VS Code and JetBrains, formerly known as Claude Dev. Runs autonomously inside the IDE: reads the codebase, writes and edits files, runs terminal commands, controls a browser, and builds custom MCP tools with approval gates at each step.
 
-The extension itself costs nothing. Bring your own API key for Claude Opus 4.7, GPT-5.4, Gemini 3.1 Pro, or a local model via Ollama.
+The extension itself costs nothing. Bring your own API key for Claude Opus 4.7, OpenAI frontier models, Gemini 3.1 Pro, or a local model via Ollama.
 
 ## System Verdict
 
@@ -124,7 +124,7 @@ Typical session costs on BYOK (verified 2026-04-17):
 |-------|-----------------|-------|
 | Claude Haiku 4.5 | Pennies to under $1 | Fastest, cheapest |
 | Claude Opus 4.7 | $0.50-$5 | Best multi-file quality |
-| GPT-5.4 | $0.50-$5 | Strong alternative |
+| OpenAI frontier models | $0.50-$5 | Strong alternative |
 | Gemini 3.1 Pro | $0.02-$2 | Long context, lowest cost tier |
 | Ollama (local) | $0 | Hardware-bound quality |
 
@@ -162,7 +162,7 @@ This page was produced by the aipedia.wiki editorial pipeline, an automated syst
 The extension is free and MIT-licensed. You pay only for the API calls to your chosen provider. A local Ollama model brings total cost to zero.
 
 **What was Cline called before?**
-It launched as Claude Dev in mid-2024. Renamed to Cline to reflect model-agnostic support for Claude, GPT-5.4, Gemini 3.1 Pro, and local models.
+It launched as Claude Dev in mid-2024. Renamed to Cline to reflect model-agnostic support for Claude, OpenAI frontier models, Gemini 3.1 Pro, and local models.
 
 **How does Plan mode work?**
 Plan mode is read-only. Cline analyzes the codebase and task, then generates a step-by-step plan for your review. No code is written until you approve and switch to Act mode.

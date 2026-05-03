@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0 (self-host) - $800+/month (Business cloud)"
 status: active
 launched: 2019-06
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -73,7 +73,7 @@ n8n is the open-source workflow automation platform built by n8n GmbH. Visual ca
 | **License** | Fair-code (source-available, self-host permitted) |
 | **Core product** | Visual workflow canvas with code fallback |
 | **Integration count** | 500+ apps |
-| **AI Agent node** | Native · connects to Claude Opus 4.7, GPT-5.4, Gemini 3.1 Pro, Llama 4, local models |
+| **AI Agent node** | Native · connects to Claude Opus 4.7, OpenAI frontier models, Gemini 3.1 Pro, Llama 4, local models |
 | **Code nodes** | JavaScript · Python |
 | **Cloud pricing** | Starter €24 · Pro €60 · Business €800 · Enterprise custom |
 | **Self-host** | Free · unlimited workflows · unlimited executions |
@@ -151,7 +151,7 @@ This page was produced by the aipedia.wiki editorial pipeline, an automated syst
 Yes, self-hosted. The Community Edition runs on any Node.js host with unlimited workflows and unlimited executions. Hosting cost is the VPS bill (typically $5 to $20/month). Cloud plans start at €24/month ([n8n pricing](https://n8n.io/pricing)).
 
 **What does the AI Agent node do?**
-It runs autonomous multi-step reasoning with tool calling. Connect any LLM (Claude Opus 4.7, GPT-5.4, Gemini 3.1 Pro, local models), define tools, and the agent plans and executes tasks inside a workflow ([n8n Agent docs](https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/)).
+It runs autonomous multi-step reasoning with tool calling. Connect any LLM (Claude Opus 4.7, OpenAI frontier models, Gemini 3.1 Pro, local models), define tools, and the agent plans and executes tasks inside a workflow ([n8n Agent docs](https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/)).
 
 **n8n vs Zapier?**
 n8n wins on self-host, native AI agents, and cost at volume. [Zapier](/tools/zapier/) wins on integration breadth (9,000+ vs 500+) and onboarding speed for non-technical users.

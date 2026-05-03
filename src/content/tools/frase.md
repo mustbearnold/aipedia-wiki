@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: $15-$115/month
 status: active
 launched: 2018-01
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -119,7 +119,7 @@ The editor scores drafts in real time against competitors. The AI drafter fills 
 | **Monthly** | $45 | $99 ($79 annual) | $37 |
 | **Brief generation speed** | **Fastest** (under 1 min) | Functional | Functional |
 | **Optimization scoring depth** | Moderate, topic coverage | **Strongest** NLP + density | Strong NLP terms |
-| **AI drafter** | Native, $35/mo unlimited add-on | Surfer AI included | GPT-5.4 / Opus 4.7 fine-tunes |
+| **AI drafter** | Native, $35/mo unlimited add-on | Surfer AI included | OpenAI frontier models / Opus 4.7 fine-tunes |
 | **Questions / PAA extraction** | **Strongest** | Moderate | Moderate |
 | **Collaboration** | Team plan, 3-9 seats | Scale plan, 5 seats | Team on higher tiers |
 | **Best viewed as** | Brief-first workflow | Editor-first premium | Budget scoring pick |
@@ -151,8 +151,8 @@ Frase wins on brief generation speed and People Also Ask extraction. Surfer wins
 **Does Frase do keyword research?**
 No. Frase scores keywords you bring in. Use [Ahrefs](/tools/ahrefs/) or [Semrush](/tools/semrush/) for volume and difficulty.
 
-**Does Frase integrate with GPT-5.4 or Claude Opus 4.7?**
-Frase ships its own models. Enterprise and API access allow custom model wiring. No direct native GPT-5.4 or Claude Opus 4.7 integration on standard tiers.
+**Does Frase integrate with OpenAI frontier models or Claude Opus 4.7?**
+Frase ships its own models. Enterprise and API access allow custom model wiring. No direct native OpenAI frontier models or Claude Opus 4.7 integration on standard tiers.
 
 ## Sources
 

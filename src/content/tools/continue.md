@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$20/seat/month"
 status: active
 launched: 2023-05
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -67,7 +67,7 @@ price_history:
 
 An open-source AI coding extension for VS Code and JetBrains, developed by Continue.dev under the MIT license. Unlike Copilot or Cursor, Continue ships no model of its own. It is a flexible IDE layer that connects to any model you pick.
 
-Claude Opus 4.7, GPT-5.4, Gemini 3.1 Pro, Mistral Large, or local models via Ollama, LM Studio, or vLLM all route through the same extension interface.
+Claude Opus 4.7, OpenAI frontier models, Gemini 3.1 Pro, Mistral Large, or local models via Ollama, LM Studio, or vLLM all route through the same extension interface.
 
 > **April 17, 2026:** [Continue added Claude Opus 4.7 support within 24 hours](/news/2026-04-17-opus-4-7-day-two-ide-adoption/) of Anthropic's release, alongside Cursor, Windsurf, and Zed.
 

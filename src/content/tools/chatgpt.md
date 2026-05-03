@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2022-11
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: monthly
 seo_title: "ChatGPT: Features, Pricing & Review (May 2026)"
 meta_description: "ChatGPT runs GPT-5.3 Instant on all tiers, GPT-5.5 Thinking on Plus, and GPT-5.5 Pro on Pro, Business, and Enterprise plans. Plus is $20/mo; Pro plans at $100 and $200/mo add heavier Codex usage. DALL-E and Sora are retired."
@@ -125,7 +125,7 @@ price_history:
   - date: 2026-05-02
     plan: "GPT-5.5 pricing table refresh"
     price: "$0-$200/mo"
-    note: "Updated ChatGPT model-access rows from GPT-5.4 to GPT-5.5 Thinking and GPT-5.5 Pro."
+    note: "Updated ChatGPT model-access rows from OpenAI frontier models to GPT-5.5 Thinking and GPT-5.5 Pro."
 ---
 
 # ChatGPT

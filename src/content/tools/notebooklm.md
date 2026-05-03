@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$250/month"
 status: active
 launched: 2023-07
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -59,7 +59,7 @@ Free tier covers most individual use. Plus sits inside Google One AI Premium at 
 
 ## System Verdict
 
-> **Pick NotebookLM if citation precision is non-negotiable.** Strongest free tool for grounded document Q&A. Responses stay inside uploaded sources, so hallucination risk drops sharply against GPT-5.4 file uploads or Claude Projects.
+> **Pick NotebookLM if citation precision is non-negotiable.** Strongest free tool for grounded document Q&A. Responses stay inside uploaded sources, so hallucination risk drops sharply against OpenAI frontier models file uploads or Claude Projects.
 >
 > **Skip it if you need cross-domain reasoning, an API, or bulk export.** NotebookLM refuses to extrapolate beyond the uploaded material. That is a feature for compliance review and a wall for exploratory research.
 >

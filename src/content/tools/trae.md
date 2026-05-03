@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$100/month"
 status: active
 launched: 2025-01
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: monthly
 seo_title: "Trae: ByteDance's AI IDE Review & Pricing (2026)"
 meta_description: "Trae is ByteDance's VS Code fork with SOLO agent mode, Claude, GPT, DeepSeek and Gemini models, and token-based pricing from $0 free through $100 Ultra. Lite at $3/mo is the cheapest way to reach Claude and GPT inside an IDE."
@@ -57,7 +57,7 @@ price_history:
 
 # Trae
 
-ByteDance's **AI-first IDE**, shipped as a VS Code fork with extensions and keybindings that transfer in one import. Flagship agent is **SOLO mode**, which plans, edits files across the project, and shows live preview without step-by-step approvals. The multi-model backbone covers **Claude 3.7 Sonnet**, **GPT-4o**, **DeepSeek R1**, and **Gemini 2.5 Pro** on a single token-metered bill.
+ByteDance's **AI-first IDE**, shipped as a VS Code fork with extensions and keybindings that transfer in one import. Flagship agent is **SOLO mode**, which plans, edits files across the project, and shows live preview without step-by-step approvals. The multi-model backbone covers Claude, OpenAI, DeepSeek, and Gemini routes on a single token-metered bill.
 
 Pricing went from fully free through 2025 to token-based tiers in February 2026. Entry paid plan is **$3/mo Lite**, roughly an order of magnitude under Cursor and Windsurf. Free tier still exists with 5,000 autocompletes and 2 concurrent cloud tasks.
 
@@ -79,7 +79,7 @@ ByteDance's wider AI stack (Doubao, Jimeng, Seedance, Kling) sits behind the sam
 | **Launched** | January 2025 (public preview) |
 | **Pricing shift** | Token-based tiers since February 2026 |
 | **Platforms** | Windows, macOS, Linux (VS Code fork) |
-| **Models supported** | Claude 3.7 Sonnet · GPT-4o · DeepSeek R1 · Gemini 2.5 Pro |
+| **Models supported** | Claude · OpenAI · DeepSeek · Gemini routes |
 | **Agent mode** | SOLO (autonomous planner, multi-file edits, live preview) |
 | **Design import** | Figma screenshot to React component |
 | **Extensions** | Full VS Code marketplace compatibility |
@@ -128,7 +128,7 @@ Subscription pricing verified 2026-04-18 via [trae.ai/pricing](https://www.trae.
 
 **Pro includes a 7-day free trial.** Lite had a $3 first-month promo historically; verify current offers on the pricing page.
 
-Models available across paid tiers: Claude 3.7 Sonnet, GPT-4o, DeepSeek R1, Gemini 2.5 Pro. Free tier has limited model selection.
+Models available across paid tiers span Claude, OpenAI, DeepSeek, and Gemini routes. Free tier has limited model selection.
 
 Usage is metered on a token pool per tier, not unlimited. This shifted in February 2026 from the prior fully-free Pro feature set.
 
@@ -151,7 +151,7 @@ Prices verified 2026-04-18 via [Trae pricing page](https://www.trae.ai/pricing) 
 - **Telemetry concerns.** Security researchers have flagged continued data collection even with settings disabled. Regulated codebases should avoid.
 - **Token pool limits surprise users.** The February 2026 shift from fully-free Pro to token-based tiers caught heavy users mid-workflow. Budget the month.
 - **ByteDance geopolitical exposure.** US enterprise buyers in defence, finance, or government-adjacent work may be blocked by procurement policy regardless of the tool's merits.
-- **Model versions lag frontier.** Claude 3.7 and GPT-4o are the currently verified routing targets. Frontier users running Claude Opus 4.7 or GPT-5.4 on direct subscriptions will notice the gap.
+- **Model versions lag frontier.** Some currently verified routing targets lag current frontier model versions. Frontier users running Claude Opus 4.7 or OpenAI frontier models on direct subscriptions will notice the gap.
 - **SOLO mode drifts on complex codebases.** Autonomous agents still over-edit unrelated files when the spec is vague. Keep scope tight on legacy projects.
 - **Support is thin compared to Cursor.** Community docs exist, but first-party responsiveness has been uneven during the pricing transition.
 - **Cloud task limits are low on free and Lite.** 2 concurrent tasks is a hard ceiling at the lower tiers, which bottlenecks parallel agent work.
@@ -169,7 +169,7 @@ Yes. The free tier gives 5,000 autocompletes per month and 2 concurrent cloud ta
 ByteDance, the same parent company behind Doubao, Jimeng, Seedance, and Kling. TikTok is also ByteDance.
 
 **What models does Trae support?**
-Claude 3.7 Sonnet, GPT-4o, DeepSeek R1, and Gemini 2.5 Pro are the currently verified routing targets. Selection depends on plan tier.
+Claude, OpenAI, DeepSeek, and Gemini routes are the currently verified model families. Selection depends on plan tier.
 
 **What is SOLO mode?**
 Trae's autonomous agent. It plans a task, edits multiple files, runs terminal commands, and shows live preview without step-by-step approval. It is included on Pro and higher tiers.

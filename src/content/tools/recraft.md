@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$48/month"
 status: active
 launched: 2022-12
-last_updated: 2026-04-22
-last_verified: 2026-04-22
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: monthly
 seo_title: "Recraft: Features, Pricing & Review (2026)"
 meta_description: "Recraft V3 is the vector-native AI image generator with best-in-market legible text rendering. Free tier with 50 daily credits. Paid plans $10 to $48/month. API at $0.04 per raster image, $0.08 per vector."
@@ -100,7 +100,7 @@ The other moat is **typography**. Most generalist image models still hallucinate
 - **Posters and social graphics with text.** Typography renders legibly on Recraft V3 where Midjourney and Flux still produce garbled or hallucinated characters.
 - **Brand-consistent asset runs.** Style Library freezes a look and applies it across hundreds of generations, solving the drift problem that kills brand design on generalist models.
 - **Agentic design iteration.** The on-canvas conversational mode shortens the prompt, check, reprompt loop that slows single-shot tools.
-- **API-driven production pipelines.** $0.04 per raster image and $0.08 per vector is cost-competitive with Flux and under DALL-E 3 at scale.
+- **API-driven production pipelines.** $0.04 per raster image and $0.08 per vector is cost-competitive with Flux and easier to budget than many bundled chatbot image generators at scale.
 
 ## When to pick something else
 

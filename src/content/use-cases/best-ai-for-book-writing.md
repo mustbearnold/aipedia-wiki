@@ -7,8 +7,8 @@ meta_description: "Top AI tools for book writing include Claude for long-form st
 description: "This page recommends 3 AI tools for book writing, matched to outlining, drafting, editing, and research, with pricing, pros, and cons verified as of April 2026."
 tools_mentioned: ["claude", "chatgpt", "gemini"]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-30
-last_verified: 2026-04-30
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: monthly
 ---
 
@@ -18,7 +18,7 @@ AI tools assist book writing by generating outlines, drafting chapters, editing 
 
 ## Quick Verdict
 
-Claude (with Opus 4.7) is the top choice for book writing due to its strength in long-form analysis and document tasks.[3] ChatGPT (GPT-5.4) serves as runner-up for its all-in-one drafting and image integration.[1] Gemini (3.1 Pro) fits users needing extensive context for revisions.[3]
+Claude (with Opus 4.7) is the top choice for book writing due to its strength in long-form analysis and document tasks.[3] ChatGPT (OpenAI frontier models) serves as runner-up for its all-in-one drafting and image integration.[1] Gemini (3.1 Pro) fits users needing extensive context for revisions.[3]
 
 ## At a Glance
 
@@ -40,11 +40,11 @@ Limitations include weaker multimodal features compared to ChatGPT; it focuses o
 
 (168 words)
 
-### 2. ChatGPT (GPT-5.4)
+### 2. ChatGPT (OpenAI frontier models)
 
-ChatGPT, powered by OpenAI's GPT-5.4, supports end-to-end book creation from idea generation to final polish, including text, images via GPT Image 2, and voice for dictation.[1][2][5] It brainstorms plots, writes sample chapters, and iterates based on feedback in one interface.
+ChatGPT, powered by OpenAI frontier models, supports end-to-end book creation from idea generation to final polish, including text, images via GPT Image 2, and voice for dictation.[1][2][5] It brainstorms plots, writes sample chapters, and iterates based on feedback in one interface.
 
-GPT-5.4 wins for book writing through its versatility; authors generate dialogue, describe settings, or create cover art prompts without switching apps.[1][7] Pricing: Free (GPT-5.4 with limits), Plus $20/month (higher caps, faster responses), Pro $200/month (unlimited access, advanced tools).[1][2] Verified 2026-04-15, it includes real-time browsing for fact-checking research.[5]
+ChatGPT wins for book writing through its versatility; authors generate dialogue, describe settings, or create cover art prompts without switching apps.[1][7] Pricing: Free with model limits, Plus $20/month for higher caps and faster responses, Pro $200/month for heavier usage and advanced tools.[1][2] Verified 2026-04-15, it includes real-time browsing for fact-checking research.[5]
 
 Drawbacks: Less consistent on ultra-long contexts than Claude; outputs may need more editing for depth. Browsing relies on summaries, not always precise. Free tier limits image generations. Pro tier suits high-volume authors. Overall, it fits solo writers needing a single hub. See our [ChatGPT guide](../tools/chatgpt.md).
 
@@ -67,7 +67,7 @@ Tools were ranked by performance in long-form text generation, context handling,
 ## FAQ
 
 **Which is best for beginners?**  
-ChatGPT, due to its free GPT-5.4 access and simple interface for drafting.[1][2]
+ChatGPT, due to its free OpenAI model access and simple interface for drafting.[1][2]
 
 **Which has a free tier?**  
 All three: Claude free, ChatGPT free (with limits), Gemini free.[1][3]

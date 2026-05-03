@@ -11,8 +11,8 @@ pricing_model: paid
 price_range: $49-$299/month
 status: active
 launched: 2019-06
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -145,7 +145,7 @@ Prices verified 2026-04-19 via [Surfer SEO pricing](https://surferseo.com/pricin
 | **AI-search tracking** | **Yes** (AI Tracker beta, paid tiers) | None | None |
 | **Native keyword research** | **Yes** (included all paid tiers) | None | None |
 | **Brief generation** | Functional | **Fastest**, PAA-heavy | Functional |
-| **AI writer** | Surfy (built-in) | Native + $35/mo unlimited | GPT-5.4 / Opus 4.7 fine-tunes |
+| **AI writer** | Surfy (built-in) | Native + $35/mo unlimited | OpenAI frontier models / Opus 4.7 fine-tunes |
 | **Multilingual** | 8 languages | Limited | Limited |
 | **Best viewed as** | Editor + AI-search hybrid | Brief-first workflow | Budget scoring pick |
 

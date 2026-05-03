@@ -11,8 +11,8 @@ pricing_model: free
 price_range: "Free (Sync add-on $5/mo)"
 status: active
 launched: 2020-06
-last_updated: 2026-04-23
-last_verified: 2026-04-23
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -163,7 +163,7 @@ Both store plain-text markdown locally. Logseq is outliner-first (every bullet i
 <details>
 <summary>Does Logseq have AI features?</summary>
 
-Not in the core app. The plugin ecosystem ships AI integrations that use your own LLM API keys (Claude, GPT-5.4, Gemini). The community plugin `logseq-ai-assistant` is the common entry point.
+Not in the core app. The plugin ecosystem ships AI integrations that use your own LLM API keys (Claude, OpenAI frontier models, Gemini). The community plugin `logseq-ai-assistant` is the common entry point.
 
 </details>
 

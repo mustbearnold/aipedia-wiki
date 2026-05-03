@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0 free / $19.99/mo Plus"
 status: active
 launched: 2023-03
-last_updated: 2026-04-18
-last_verified: 2026-04-18
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -63,7 +63,7 @@ The first tool to make "talk to your PDF" a viable workflow. Upload a PDF, get a
 | **Languages supported** | 100+ |
 | **API** | Available on Plus tier |
 | **Launched** | March 2023 |
-| **Underlying model** | Proprietary (abstracted). Quality roughly matches GPT-4o-class on document Q&A. |
+| **Underlying model** | Proprietary (abstracted). Quality roughly matches modern general-purpose chat models on document Q&A. |
 
 ## When to pick ChatPDF
 
@@ -95,7 +95,7 @@ Prices verified 2026-04-18 via [chatpdf.com pricing](https://www.chatpdf.com).
 - **Image and figure handling is weak.** Charts, tables, and figures inside PDFs are often skipped or mis-interpreted. Pair with manual review for data-heavy documents.
 - **No multi-document support on free tier.** Each chat is scoped to one PDF. Use NotebookLM for cross-document synthesis.
 - **Privacy posture unclear for sensitive docs.** Uploaded content is processed by third-party LLM APIs. Do not upload confidential material without reviewing the privacy policy.
-- **Feature parity with frontier chatbots shrinking.** GPT-5.4, Claude Opus 4.7, and Gemini 3.1 Pro now handle PDFs natively at comparable quality. The standalone value proposition is weakening year over year.
+- **Feature parity with frontier chatbots shrinking.** OpenAI frontier models, Claude Opus 4.7, and Gemini 3.1 Pro now handle PDFs natively at comparable quality. The standalone value proposition is weakening year over year.
 
 ## Methodology
 
@@ -113,7 +113,7 @@ Yes, via OCR. Quality depends on scan resolution. Text-native PDFs are more reli
 Not on the free tier. Multi-document workflows are better served by [NotebookLM](/tools/notebooklm/) (free) or AnythingLLM.
 
 **How does ChatPDF compare to ChatGPT for PDFs?**
-ChatGPT with GPT-5.4 handles PDFs natively on the Plus plan. If you already pay for ChatGPT, it is the better choice. ChatPDF's advantage is the focused UX and lower entry price for PDF-only workflows.
+ChatGPT with OpenAI frontier models handles PDFs natively on the Plus plan. If you already pay for ChatGPT, it is the better choice. ChatPDF's advantage is the focused UX and lower entry price for PDF-only workflows.
 
 ## Related
 

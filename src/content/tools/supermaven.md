@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$10/month"
 status: active
 launched: 2023-10
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -131,7 +131,7 @@ The project indexes locally. Code does not ship to remote servers beyond what th
 
 - **Autocomplete only.** No chat panel, no agent, no codebase Q&A. A second tool is required for anything beyond completion.
 - **Low moat.** Autocomplete is a feature, not a category. Copilot, Cursor, and others can close the context and latency gap.
-- **Custom model, limited third-party benchmarks.** Babble is not benchmarked publicly the way GPT-5.4 or Claude Opus 4.7 are. Complex-code quality is harder to verify independently.
+- **Custom model, limited third-party benchmarks.** Babble is not benchmarked publicly the way OpenAI frontier models or Claude Opus 4.7 are. Complex-code quality is harder to verify independently.
 - **No enterprise controls.** No SSO, no audit logs, no IP indemnification. Large enterprises cannot buy this as-is.
 - **Startup risk.** Small team, recent funding, acquisition-target profile. Roadmap continuity is not guaranteed.
 - **Chat credits burn fast.** The $5/month allotment is a courtesy, not a real chat product. Heavy chat use still needs a separate tool.

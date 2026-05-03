@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: "€0-€14.99/month"
 status: active
 launched: 2023-09
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -66,7 +66,7 @@ The March 2026 product cycle was Mistral's busiest ever. Mistral Small 4 (March 
 
 ## System Verdict
 
-> **Pick Mistral if EU data sovereignty is non-negotiable or API cost must stay low without sacrificing frontier capability.** Mistral Large 3 ($0.50/$1.50 per M) competes with GPT-5.4 at ~60% lower cost. Mistral Small 4 (Apache 2.0, 256K context) unifies reasoning, vision, and agentic coding in a single openly-licensed model.
+> **Pick Mistral if EU data sovereignty is non-negotiable or API cost must stay low without sacrificing frontier capability.** Mistral Large 3 ($0.50/$1.50 per M) competes with OpenAI frontier models at ~60% lower cost. Mistral Small 4 (Apache 2.0, 256K context) unifies reasoning, vision, and agentic coding in a single openly-licensed model.
 >
 > **Skip it for the deepest ecosystem.** [ChatGPT](/tools/chatgpt/) has the largest plugin marketplace. [Gemini](/tools/gemini/) wins Google Workspace. [Claude](/tools/claude/) takes long-form reasoning. Mistral has none of those moats. Le Chat Pro at €14.99/mo is cheaper than ChatGPT Plus but the consumer UI is less polished.
 >
@@ -76,7 +76,7 @@ The March 2026 product cycle was Mistral's busiest ever. Mistral Small 4 (March 
 
 | | |
 |---|---|
-| **Closed flagship** | Mistral Large 3 · competes with GPT-5.4 on text benchmarks |
+| **Closed flagship** | Mistral Large 3 · competes with OpenAI frontier models on text benchmarks |
 | **Open flagship** | Mistral Small 4 (March 16, 2026) · Apache 2.0 · 256K context · 128-expert MoE |
 | **Code specialist** | Codestral · 80+ languages · function calling + JSON mode |
 | **Voice / TTS** | Voxtral TTS · 4B Ministral base · CC BY-NC 4.0 · 68.4% win rate vs ElevenLabs Flash v2.5 (internal) |
@@ -142,7 +142,7 @@ Consumer pricing via [mistral.ai/pricing](https://mistral.ai/pricing). API prici
 
 ## Against the alternatives
 
-| | Mistral Large 3 | GPT-5.4 | Claude Opus 4.7 |
+| | Mistral Large 3 | OpenAI frontier models | Claude Opus 4.7 |
 |---|---|---|---|
 | **Input price (per M tokens)** | $0.50 | ~$2.50 | $5 |
 | **Output price (per M tokens)** | $1.50 | ~$10 | $25 |
@@ -175,8 +175,8 @@ Yes, in two ways. The open-weight models (Mistral 7B, Mixtral 8x7B, 8x22B, Small
 **What is Mistral Small 4?**
 A single Apache 2.0 model released March 16, 2026 that merges reasoning (Magistral), multimodal vision (Pixtral), and agentic coding (Devstral). 256K context, 128-expert Mixture-of-Experts, 40% faster latency and 3x higher throughput than Small 3. Available via API, HuggingFace, AI Studio, and NVIDIA NIM/NeMo.
 
-**How does Mistral compare to GPT-5.4?**
-Mistral Large 3 is broadly competitive on text benchmarks at roughly 60% lower API cost (~$0.50/M vs ~$2.50/M input). GPT-5.4 wins on ecosystem, image generation, and multimodal breadth. For EU-regulated workloads Mistral is the default pick regardless of benchmark numbers because GDPR Article 44 third-country transfer rules apply.
+**How does Mistral compare to OpenAI frontier models?**
+Mistral Large 3 is broadly competitive on text benchmarks at roughly 60% lower API cost (~$0.50/M vs ~$2.50/M input). OpenAI frontier models win on ecosystem, image generation, and multimodal breadth. For EU-regulated workloads Mistral is the default pick regardless of benchmark numbers because GDPR Article 44 third-country transfer rules apply.
 
 **Why choose Mistral over OpenAI or Anthropic?**
 Three concrete reasons: lower per-token API cost, EU-native data residency for GDPR compliance, and open-weight self-hosting fallback via Apache 2.0 Small 4. U.S. developers without compliance constraints should weigh those against OpenAI's ecosystem or Anthropic's reasoning lead.

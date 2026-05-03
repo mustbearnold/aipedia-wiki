@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$20/month"
 status: active
 launched: 2024-01
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -27,7 +27,7 @@ scores:
   longevity: 8
 tags: [code-editor, rust, collaborative, ai-coding, performance, open-source, linux, macos, windows, zeta]
 seo_title: "Zed: Features, Pricing & Review (April 2026)"
-meta_description: "Zed is a native Rust code editor with GPU rendering, real-time multiplayer, and AI via Claude, GPT-5.4, and Gemini. Free tier runs the Zeta2 edit-prediction model. Pro $20/month with 500 prompts."
+meta_description: "Zed is a native Rust code editor with GPU rendering, real-time multiplayer, and AI via Claude, OpenAI frontier models, and Gemini. Free tier runs the Zeta2 edit-prediction model. Pro $20/month with 500 prompts."
 author: "aipedia.wiki Editorial"
 best_for:
   - developers who find VS Code sluggish
@@ -76,7 +76,7 @@ The editor is free and open-source (Apache 2.0). Runs on macOS, Linux, and Windo
 | **Platforms** | macOS, Linux, Windows (stable Q1 2026) |
 | **License** | Apache 2.0, open-source |
 | **Edit prediction** | Zeta2, open-source, 30% better than Zeta1 |
-| **AI models** | Claude Opus 4.7, GPT-5.4, Gemini 3.1 Pro, Grok, Ollama BYOK |
+| **AI models** | Claude Opus 4.7, OpenAI frontier models, Gemini 3.1 Pro, Grok, Ollama BYOK |
 | **Free tier** | Unlimited edit prediction, 50 prompts/month |
 | **Pro** | $20/month, 500 prompts/month, API list plus 10% overage |
 | **Student plan** | Pro, free |
@@ -89,7 +89,7 @@ Every data point above was verified against vendor sources on 2026-04-17. See So
 
 One native editor covering three jobs: a fast code editor, an AI assistant panel, and a real-time multiplayer surface. Tree-sitter powers syntax and structural parsing across 60+ languages.
 
-AI integration splits into two features. Zeta2 edit prediction runs locally-ish and predicts the next edit, not just the next token, so one tab accepts multi-line changes. The assistant panel handles chat, inline transformations, and multi-file context through Claude, GPT-5.4, Gemini, Grok, or a local Ollama model.
+AI integration splits into two features. Zeta2 edit prediction runs locally-ish and predicts the next edit, not just the next token, so one tab accepts multi-line changes. The assistant panel handles chat, inline transformations, and multi-file context through Claude, OpenAI frontier models, Gemini, Grok, or a local Ollama model.
 
 The Agent Client Protocol (ACP), launched January 2026 in collaboration with JetBrains, ships [Claude Code](/tools/claude-code/), Codex CLI, Gemini CLI, and OpenCode integrations inside the editor. Agent work still happens through these external CLIs, not a native Zed Composer.
 
@@ -98,7 +98,7 @@ The Agent Client Protocol (ACP), launched January 2026 in collaboration with Jet
 - **Editor responsiveness outranks every other factor.** Native Rust plus GPU rendering beats VS Code on startup, scroll, and input latency.
 - **Pair programming and remote collaboration are weekly workflows.** Multiplayer is first-class; no external plugin required.
 - **Vim bindings matter.** First-class Vim mode ships without plugins.
-- **Claude, GPT-5.4, or a local Ollama model is the target AI.** Swap freely. BYOK works on every tier.
+- **Claude, OpenAI frontier models, or a local Ollama model is the target AI.** Swap freely. BYOK works on every tier.
 - **Open-source editor ethics matter.** Apache 2.0 license, public repo, no telemetry-first product model.
 
 ## When to pick something else
@@ -160,7 +160,7 @@ Yes. Windows went stable in Q1 2026 and runs on macOS, Linux, and Windows.
 Zeta2 is Zed's open-source edit-prediction model, 30% better than Zeta1. It predicts the next edit rather than the next token, so one tab accepts multi-line changes. Unlimited use on every tier.
 
 **What AI models does Zed support?**
-Claude Opus 4.7, GPT-5.4, Gemini 3.1 Pro, and Grok via hosted billing. Local models work through Ollama. BYOK is supported on every tier.
+Claude Opus 4.7, OpenAI frontier models, Gemini 3.1 Pro, and Grok via hosted billing. Local models work through Ollama. BYOK is supported on every tier.
 
 **How does Zed compare to Cursor?**
 Zed wins on native performance, multiplayer, and open-source ethics. Cursor wins on the VS Code extension ecosystem and the Composer agent mode. Most buyers pick based on whether editor speed or agent depth matters more.

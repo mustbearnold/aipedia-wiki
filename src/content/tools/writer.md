@@ -11,8 +11,8 @@ pricing_model: enterprise
 price_range: "14-day trial · Starter ~$29/user (third-party) · Enterprise custom"
 status: active
 launched: 2020-03
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: quarterly
 seo_title: "Writer (Palmyra X5): Features, Pricing & Review (2026)"
 meta_description: "Writer is the enterprise AI platform running the Palmyra X5 model with 1M token context. Palmyra X5 API is $0.60 in / $6 out per MTok, about 75% cheaper than GPT-4.1. Starter offers a 14-day free trial; Enterprise is contact-sales. Used by Vanguard, Salesforce, Qualcomm, Uber, and Hilton."
@@ -69,7 +69,7 @@ Writer is a San Francisco based company founded in 2020. The 2024 Series C led b
 
 > **Pick Writer if the organization wants enterprise AI on models it does not rent from OpenAI or Anthropic.** Palmyra X5 lands near frontier quality on writing and reasoning at materially lower API cost, with a 1M context window. Palmyra-Med and Palmyra-Fin are real domain specialists, not prompt wrappers. AI Studio plus Knowledge Graph plus Agents covers most content and governance workflows end to end. Enterprise connectors and SAML SSO meet procurement bars at regulated firms.
 >
-> **Skip it if the use case is a consumer chatbot or agentic coding.** Writer is not a general-purpose chat product; casual users should use [ChatGPT](/tools/chatgpt/) or [Claude](/tools/claude/). It has no CLI coding agent equivalent to Claude Code. It also does not lead any frontier reasoning benchmark against Opus 4.7 or GPT-5.4.
+> **Skip it if the use case is a consumer chatbot or agentic coding.** Writer is not a general-purpose chat product; casual users should use [ChatGPT](/tools/chatgpt/) or [Claude](/tools/claude/). It has no CLI coding agent equivalent to Claude Code. It also does not lead any frontier reasoning benchmark against Opus 4.7 or OpenAI frontier models.
 >
 > **Who pays which tier:** start with the 14-day Starter trial for individuals or teams up to five. Enterprise is contact-sales, priced per seat plus API consumption, with mid-market deployments commonly reported in the $75K to $250K range and larger deals past $500K.
 
@@ -99,7 +99,7 @@ Second, **Knowledge Graph**. Enterprise-scoped retrieval against the customer's 
 
 Third, **domain specialists**. Palmyra-Med is tuned on medical content and evaluation sets. Palmyra-Fin targets financial-services analysis. These are not prompt wrappers; they are separate model weights trained on domain data.
 
-The API pricing gap matters. At $0.60 in / $6 out per MTok, Palmyra X5 is roughly 75% cheaper than GPT-4.1 for comparable enterprise tasks, with a 1M context window that neither GPT-5.4 Pro nor most mid-tier models match at that price.
+The API pricing gap matters. At $0.60 in / $6 out per MTok, Palmyra X5 is roughly 75% cheaper than GPT-4.1 for comparable enterprise tasks, with a 1M context window that neither OpenAI frontier models nor most mid-tier models match at that price.
 
 ## When to pick Writer
 
@@ -113,7 +113,7 @@ The API pricing gap matters. At $0.60 in / $6 out per MTok, Palmyra X5 is roughl
 
 - **Consumer chat or casual use:** [ChatGPT](/tools/chatgpt/) or [Claude](/tools/claude/). Writer is not designed for individuals.
 - **Agentic coding from the terminal:** [Claude](/tools/claude/) via Claude Code. Writer has no CLI coding agent.
-- **Frontier-level general reasoning:** [Claude](/tools/claude/) Opus 4.7, GPT-5.4 Pro, or [Gemini](/tools/gemini/) 3.1 Pro all lead published benchmarks.
+- **Frontier-level general reasoning:** [Claude](/tools/claude/) Opus 4.7, OpenAI frontier models, or [Gemini](/tools/gemini/) 3.1 Pro all lead published benchmarks.
 - **Marketing-copy tools with template libraries:** [Jasper](/tools/jasper/) or [Copy.ai](/tools/copy-ai/) are lighter and cheaper for small teams focused on short-form copy.
 - **Frontier open-weight deployment:** [Mistral AI](/tools/mistral-ai/) if the requirement is European-hosted open-weight models with permissive licensing.
 - **Third-party API-first development:** [Cohere](/tools/cohere/) for embeddings and Command models in developer-heavy stacks.
@@ -154,7 +154,7 @@ Prices verified 2026-04-18 via [writer.com/plans](https://writer.com/plans/) and
 ## Failure modes
 
 - **Not a consumer product.** Writer has no casual-use chat tier. Individual users looking for a personal assistant should choose [ChatGPT](/tools/chatgpt/) or [Claude](/tools/claude/).
-- **Palmyra X5 is strong but not frontier on every axis.** On general reasoning benchmarks, Opus 4.7 and GPT-5.4 Pro still lead. Writer's value is cost plus enterprise fit, not absolute top-of-leaderboard performance.
+- **Palmyra X5 is strong but not frontier on every axis.** On general reasoning benchmarks, Opus 4.7 and OpenAI frontier models still lead. Writer's value is cost plus enterprise fit, not absolute top-of-leaderboard performance.
 - **Starter pricing is no longer public.** Writer pulled the Starter paid price from its plans page. Third-party estimates vary. Budget planning requires a sales conversation.
 - **Enterprise contracts are opaque.** Reported mid-market deployments span $75K to $250K; large deals exceed $500K. Every deal is bespoke.
 - **No native coding agent.** Unlike Claude Code or Codex, Writer has no CLI or IDE agent for software engineering work.

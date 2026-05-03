@@ -10,9 +10,9 @@ founded: 2023
 hq: London, UK / Mountain View, USA
 funding: "Alphabet-funded (no external rounds)"
 key_products: [gemini, notebooklm, google-stitch]
-last_updated: 2026-04-30
+last_updated: 2026-05-03
 update_frequency: quarterly
-last_verified: 2026-04-30
+last_verified: 2026-05-03
 ---
 
 # Google DeepMind
@@ -49,7 +49,7 @@ Compute scale and data access from Google's ecosystem provide cost advantages, e
 - No new funding or leadership changes reported; remains Alphabet-funded.
 
 ## Strategic Position
-Google DeepMind leads in compute via TPUs and distribution across Google products, enabling low-cost scaling unmatched by startups. Gemini 3.1 Pro excels in reasoning benchmarks, positioning it against GPT-5.4 and Claude Sonnet 4.6.[https://blog.mean.ceo/new-ai-model-releases-news-april-2026/]
+Google DeepMind leads in compute via TPUs and distribution across Google products, enabling low-cost scaling unmatched by startups. Gemini 3.1 Pro excels in reasoning benchmarks, positioning it against OpenAI and Anthropic frontier models.[https://blog.mean.ceo/new-ai-model-releases-news-april-2026/]
 
 Threats include competition from Anthropic's Claude Mythos 5 and OpenAI's releases. Opportunities lie in enterprise via Vertex AI and agentic tools for science and design.[https://deepmind.google/models/gemini/]
 

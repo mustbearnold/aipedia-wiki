@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: $0-$34.12+/month
 status: active
 launched: 2012-01
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -75,7 +75,7 @@ Pricing runs $0 to $34.12+/month. Credits replaced operations as the billing uni
 |---|---|
 | **Core product** | Scenarios (visual multi-step workflows) |
 | **Integration count** | 2,000+ apps |
-| **AI modules** | OpenAI GPT-5.4 · Claude Opus 4.7 · Gemini 3.1 Pro · Stability AI |
+| **AI modules** | OpenAI OpenAI frontier models · Claude Opus 4.7 · Gemini 3.1 Pro · Stability AI |
 | **Billing unit** | Credits (replaced operations, August 2025) |
 | **Pricing** | Free · Core $10.59 · Pro $18.82 · Teams $34.12 · Enterprise custom |
 | **Free tier** | 1,000 credits/mo · 2 active scenarios · 15-min interval |
@@ -97,7 +97,7 @@ The moat is the pricing model, not the tool itself. Where [Zapier](/tools/zapier
 
 - **Workflows loop or branch more than twice.** Routers and iterators are first-class. [Zapier](/tools/zapier/) Paths feel bolted on past 3-4 branches.
 - **Monthly task volume passes 5,000.** [Zapier](/tools/zapier/) task pricing inflates fast. Make's Core plan covers 10,000 operations for $10.59.
-- **AI sits inside the workflow.** Native GPT-5.4, Claude Opus 4.7, and Gemini 3.1 Pro modules handle text generation, classification, and extraction without webhook gymnastics.
+- **AI sits inside the workflow.** Native OpenAI frontier models, Claude Opus 4.7, and Gemini 3.1 Pro modules handle text generation, classification, and extraction without webhook gymnastics.
 - **The operator is technical but not a developer.** The canvas assumes comfort with data structures and conditional logic, not code.
 - **Predictable cost matters.** Operations pricing stays flat as the workflow grows. Per-task models punish every new step.
 
@@ -140,7 +140,7 @@ Subscription pricing via [make.com/pricing](https://www.make.com/en/pricing). An
 
 - **Interface lag on large scenarios.** Canvases with 50+ modules slow the browser. Heavy users split long scenarios into sub-flows.
 - **Fewer integrations than [Zapier](/tools/zapier/).** 2,000+ covers mainstream SaaS. Niche tools may need HTTP modules and hand-built OAuth.
-- **AI modules burn credits faster.** A single GPT-5.4 call can consume several credits. Credit forecasts built on non-AI modules underestimate real cost.
+- **AI modules burn credits faster.** A single OpenAI frontier models call can consume several credits. Credit forecasts built on non-AI modules underestimate real cost.
 - **Credits model is newer than many guides.** Content published before August 2025 still references operations. Plan sizing needs to use current [pricing](https://www.make.com/en/pricing), not old articles.
 - **No native AI agents.** Modules call LLMs but do not run autonomous agent loops. [n8n](/tools/n8n/) ships true AI Agent nodes.
 - **Cloud only.** No self-host path. Data routes through Make servers.

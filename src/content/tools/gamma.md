@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: $0-$100/month
 status: active
 launched: 2020-01
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -66,7 +66,7 @@ The free tier includes 400 one-time AI credits. Paid tiers run $10 to $100 per m
 | **Company** | Gamma Tech (founded 2020) |
 | **Output formats** | Slide deck · scrollable doc · shareable web page (single source) |
 | **Generation time** | Under 20 seconds for a standard 8-15 card deck |
-| **AI models** | Claude Opus 4.7 and GPT-5.4 available for generation |
+| **AI models** | Claude Opus 4.7 and OpenAI frontier models available for generation |
 | **Free tier** | 400 one-time AI credits (not monthly) |
 | **Pricing (monthly)** | Plus $10 · Pro $20 · Ultra $100 |
 | **Team/Business** | Seat-based, per-user pricing |
@@ -79,7 +79,7 @@ Every data point above was verified against vendor documentation on 2026-04-17. 
 
 One product serving three outputs from a single generation. A Gamma card holds text, images, charts, and embeds; the same file renders as a 16:9 slide, a scroll-flow document, or a public URL.
 
-The AI layer handles layout, hierarchy, theme, and image selection from a prompt or outline. Claude Opus 4.7 and GPT-5.4 are both selectable as the generation model.
+The AI layer handles layout, hierarchy, theme, and image selection from a prompt or outline. Claude Opus 4.7 and OpenAI frontier models are selectable as the generation model.
 
 The moat is format, not model quality. Gamma's shareable URL output skips the download-and-attach loop entirely, which matters for client-facing async work.
 
@@ -152,7 +152,7 @@ Yes. PPTX export is available on all paid tiers. Fidelity is lossy on complex la
 Default generation produces 8-15 cards from a standard prompt. Users can specify card count in the prompt or add and delete cards after generation.
 
 **Which AI model does Gamma use?**
-Claude Opus 4.7 and GPT-5.4 are both selectable as the generation model inside the product. Higher tiers unlock advanced image models for visual generation.
+Claude Opus 4.7 and OpenAI frontier models are selectable as the generation model inside the product. Higher tiers unlock advanced image models for visual generation.
 
 ## Sources
 

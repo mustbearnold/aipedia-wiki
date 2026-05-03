@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0 self-hosted / $9.99+ managed"
 status: active
 launched: 2023-11
-last_updated: 2026-04-18
-last_verified: 2026-04-18
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -121,7 +121,7 @@ Produced by the aipedia.wiki editorial pipeline. Last verified 2026-04-18 agains
 **Is Open WebUI really free?**
 Yes, the software is open source. You pay only for your own infrastructure (a $5/mo VPS is fine for small teams) and for LLM API usage if you use cloud models. Managed hosting starts at $9.99/mo if you don't want to run it yourself.
 
-**Does Open WebUI work with frontier models like GPT-5.4 or Claude Opus 4.7?**
+**Does Open WebUI work with frontier models like OpenAI frontier models or Claude Opus 4.7?**
 Yes. Configure OpenAI or Anthropic as providers and you're chatting with those models through your self-hosted UI.
 
 **Can I use Open WebUI for a team of 50 people?**

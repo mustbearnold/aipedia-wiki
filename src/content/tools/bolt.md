@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$2000/month"
 status: active
 launched: 2024-10
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: monthly
 seo_title: "Bolt.new Review: Pricing, WebContainers, App Builder Features and Alternatives"
 meta_description: "Bolt.new by StackBlitz builds full-stack web apps in the browser with WebContainers. Compare token pricing, Enhance Prompt, deployment, Lovable, v0, and Cursor."
@@ -51,7 +51,7 @@ Token-metered billing. The Enhance prompt button rewrites your rough request int
 
 ## System Verdict
 
-> **Pick Bolt.new if you want to prototype a full-stack app in the browser without touching a local environment.** WebContainers run npm, Node servers, and Vite builds client-side, which makes it the only credible option for Chromebooks, locked-down work machines, or classroom settings. Multi-model routing across GPT-5.4, Claude Opus 4.7, and Gemini 3.1 Pro.
+> **Pick Bolt.new if you want to prototype a full-stack app in the browser without touching a local environment.** WebContainers run npm, Node servers, and Vite builds client-side, which makes it the only credible option for Chromebooks, locked-down work machines, or classroom settings. Multi-model routing across OpenAI frontier models, Claude Opus 4.7, and Gemini 3.1 Pro.
 >
 > **Skip it if your app needs a real backend or database out of the box.** [Lovable](/tools/lovable/) provisions Supabase with auth, Postgres, and real-time subscriptions from one prompt. Skip Bolt also if you want architectural control. [Cursor](/tools/cursor/) and [Claude](/tools/claude/) Code give you a full local environment with better code quality.
 >
@@ -63,7 +63,7 @@ Token-metered billing. The Enhance prompt button rewrites your rough request int
 |---|---|
 | **Product** | In-browser full-stack AI app builder |
 | **Runtime** | StackBlitz WebContainers. Node.js in WebAssembly, client-side |
-| **Models** | GPT-5.4, Claude Opus 4.7, Gemini 3.1 Pro. Multi-model routing |
+| **Models** | OpenAI frontier models, Claude Opus 4.7, Gemini 3.1 Pro. Multi-model routing |
 | **Billing** | Token-metered. Entire project file tree syncs to the model each message |
 | **Free tier** | 1M tokens per month |
 | **Pro** | $25/mo for 10M+ tokens, rollover, all models |

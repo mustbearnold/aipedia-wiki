@@ -7,8 +7,8 @@ meta_description: "Top AI tools for recruiters in 2026 include Paradox, Eightfol
 description: "This page recommends AI tools for recruiters to source candidates, screen resumes, match skills, and schedule interviews, with pricing, pros, and cons verified as of April 2026."
 tools_mentioned: ["chatgpt"]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: monthly
 ---
 
@@ -32,7 +32,7 @@ Recruiters use AI to source candidates from large databases, screen resumes for 
 ## Top Picks
 
 ### 1. Paradox (Flagship: Olivia 4.2)
-Paradox automates recruiting with conversational AI chatbots that screen candidates, answer questions, and schedule interviews 24/7. Its Olivia 4.2, released March 2026, uses GPT-5.4 integration for natural language processing of resumes and job descriptions, pulling from ATS like Workday or Greenhouse. Recruiters report 40% faster hiring cycles; it handles 1M+ interactions monthly for clients like McDonald's[1].
+Paradox automates recruiting with conversational AI chatbots that screen candidates, answer questions, and schedule interviews 24/7. Its Olivia 4.2, released March 2026, uses OpenAI model integration for natural language processing of resumes and job descriptions, pulling from ATS like Workday or Greenhouse. Recruiters report 40% faster hiring cycles; it handles 1M+ interactions monthly for clients like McDonald's[1].
 
 For recruiters, it excels at high-volume roles by qualifying leads via SMS or web chat, reducing manual reviews. Pair it with LinkedIn for sourcing. Pricing starts with a free trial, then enterprise plans from $5,000/year based on conversations (e.g., $0.50/screen). Limitations include setup time for custom flows and less strength in creative role matching[3]. Overall, it fits volume hiring best (175 words).
 
@@ -46,8 +46,8 @@ HireEZ sources from 800M+ profiles across LinkedIn, GitHub, and databases with A
 
 Best for agencies filling niche roles quickly; integrates with 50+ ATS. Pricing: Free (basic search), Pro $99/user/month (unlimited sourcing), Enterprise custom with CRM sync. Cons: outreach limits on free tier; occasional false positives in matches. Strong for proactive sourcing (152 words).
 
-### 4. ChatGPT (Flagship: GPT-5.4)
-ChatGPT with GPT-5.4 (2026 flagship) parses resumes, generates job descriptions, and simulates interviews via text/voice. Multimodal support handles PDF uploads and video analysis[1][2][4].
+### 4. ChatGPT (Flagship: OpenAI frontier models)
+ChatGPT with OpenAI frontier models (2026 flagship) parses resumes, generates job descriptions, and simulates interviews via text/voice. Multimodal support handles PDF uploads and video analysis[1][2][4].
 
 Recruiters use it for quick tasks like ranking candidates or writing emails. Free tier suffices for solos; Plus $20/month adds speed/memory. Pro $200/month for teams with API ($2.50/M input tokens). Limits: no native database sourcing; hallucinations in niche skills. Good starter tool (160 words).
 

@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "Free (open weights) / API from ~$0.15/M tokens"
 status: active
 launched: 2023-09
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -145,7 +145,7 @@ Hosted pricing via [Alibaba Cloud Model Studio](https://www.alibabacloud.com/hel
 - **Data residency on Alibaba Cloud.** Enterprise buyers in regulated industries need to evaluate the Chinese-cloud posture. Self-hosting the Apache 2.0 weights is the workaround.
 - **Thin moat on open-weight leaderboard.** DeepSeek, Kimi, GLM, and Qwen all iterate monthly. Leadership positions shift fast.
 - **English documentation lag.** Official docs translate from Chinese first. Some resources trail the Chinese original by weeks.
-- **Vision models lag best-in-class.** Qwen-VL and Qwen3.5-Omni are capable but trail GPT-4o Vision and Gemini 3.1 Pro on independent evaluations.
+- **Vision models lag best-in-class.** Qwen-VL and Qwen3.5-Omni are capable but trail the strongest closed vision models on independent evaluations.
 - **Hosted API rate limits vary by region.** Alibaba Cloud tier and regional load affect throughput. Production deployments should load-test.
 - **Qwen3-Max tier pricing is complex.** Tiered-by-context pricing is harder to budget than flat rates. Batch discounts help.
 

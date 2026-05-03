@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$10/1M tokens"
 status: active
 launched: 2019-06
-last_updated: 2026-04-30
-last_verified: 2026-04-30
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: monthly
 seo_title: "Cohere: Features, Pricing & Review (April 2026)"
 meta_description: "Cohere's Command A (256K context) is the agentic flagship; Command R+ runs at $2.50/$10 per 1M tokens. North workspace and Model Vault ship private deployment. Enterprise-first LLM platform built around RAG, Rerank, and Aya multilingual."
@@ -71,7 +71,7 @@ Related coverage: [AI Industry Roundup, April 24](/news/2026-04-24-ai-industry-r
 
 > **Pick Cohere if you build production RAG, need multilingual retrieval, or require a VPC / on-prem / sovereign deployment your compliance team will approve.** Embed v4 and Rerank 4 are the best dedicated retrieval models shipping. Command A's 256K context and North workspace let you stand up agentic workflows inside a SOC 2 perimeter. Model Vault runs the stack on isolated infrastructure, and the reported Aleph Alpha move strengthens Cohere's European enterprise story.
 >
-> **Skip it if you want a consumer chat app, image or video generation, or a broad plugin ecosystem.** Cohere has no consumer UI competitive with [ChatGPT](/tools/chatgpt/) or [Claude](/tools/claude/). No image gen, no video. Smaller developer community than OpenAI or Anthropic. Command A trails [Claude Opus 4.7](/tools/claude/) and [GPT-5.4](/tools/chatgpt/) on peak reasoning benchmarks.
+> **Skip it if you want a consumer chat app, image or video generation, or a broad plugin ecosystem.** Cohere has no consumer UI competitive with [ChatGPT](/tools/chatgpt/) or [Claude](/tools/claude/). No image gen, no video. Smaller developer community than OpenAI or Anthropic. Command A trails [Claude Opus 4.7](/tools/claude/) and [ChatGPT](/tools/chatgpt/) on peak reasoning benchmarks.
 >
 > **Who pays which tier:** Trial API key free for prototyping, Production API pay-as-you-go for most teams, Enterprise custom pricing for bulk workloads or private deployment, Model Vault dedicated instances ($2,500-$3,250/mo) for teams who need Embed or Rerank running on isolated hardware.
 
@@ -167,7 +167,7 @@ Command A pricing is not listed on the public page; contact sales for rates. Ent
 
 - **No consumer chat app.** Cohere does not publish a user-facing assistant. Teams evaluating for solo use should look elsewhere.
 - **Command weights are closed.** Only Aya ships open under a permissive license. Teams wanting self-hosted frontier weights should pick [Llama](/tools/llama/) or [Mistral AI](/tools/mistral-ai/).
-- **Peak reasoning trails closed frontier.** Command A is strong on retrieval and tool use but trails Claude Opus 4.7 and GPT-5.4 Pro on third-party reasoning benchmarks.
+- **Peak reasoning trails closed frontier.** Command A is strong on retrieval and tool use but trails Claude Opus 4.7 and OpenAI frontier models on third-party reasoning benchmarks.
 - **Developer ecosystem is smaller.** Fewer SDKs, fewer community integrations, and a narrower tutorial corpus than OpenAI or Anthropic.
 - **Pricing opacity on Command A.** Public pricing page lists Command R and R+ only. Command A requires sales contact, which slows prototyping.
 - **Model Vault pricing is per-instance, not per-token.** $2,500-$3,250/mo per model per tier. Economical only for workloads that justify dedicated infrastructure.

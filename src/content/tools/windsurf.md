@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2024-11
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -60,7 +60,7 @@ Owned by Cognition since July 2025, after Google took a licensing deal and an ea
 
 ## System Verdict
 
-> **Pick Windsurf for agentic multi-file editing with real model choice and Cognition-stack integration.** Cascade reads the repo, plans cross-file edits, runs terminal commands, and ships with access to GPT-5.4, Claude Opus 4.7, Gemini 3.1 Pro, and Cognition's own SWE-1.5.
+> **Pick Windsurf for agentic multi-file editing with real model choice and Cognition-stack integration.** Cascade reads the repo, plans cross-file edits, runs terminal commands, and ships with access to OpenAI frontier models, Claude Opus 4.7, Gemini 3.1 Pro, and Cognition's own SWE-1.5.
 >
 > SWE-1.5 is a fast proprietary coding model. Cognition claims it is roughly 13× faster than Sonnet 4.5 while approaching Claude 4.5-level benchmark performance. It is free for all users for three months at launch.
 >
@@ -76,7 +76,7 @@ Owned by Cognition since July 2025, after Google took a licensing deal and an ea
 | **Product class** | VS Code fork, AI-native IDE |
 | **Flagship agent** | Cascade, multi-file editor with repo awareness |
 | **Default model** | SWE-1.5, Cognition proprietary, free 3 months from launch |
-| **Other models** | GPT-5.4 · Claude Opus 4.7 · Gemini 3.1 Pro · local via Ollama |
+| **Other models** | OpenAI frontier models · Claude Opus 4.7 · Gemini 3.1 Pro · local via Ollama |
 | **Pro pricing** | $20/mo, unlimited at API price |
 | **Max pricing** | $200/mo, priority support, unlimited at API price |
 | **Teams pricing** | $40/user/mo with admin dashboard |
@@ -89,7 +89,7 @@ Every data point above was verified against vendor documentation on 2026-04-17. 
 
 A VS Code fork with AI baked into the editor shell. Tab autocomplete handles inline suggestions. A command bar (Cmd+I) takes natural-language edit requests. Cascade handles multi-file agentic edits with full codebase context.
 
-Model selection is global or per-session. SWE-1.5 is the fast default. Heavy reasoning work routes to Claude Opus 4.7 or GPT-5.4. Gemini 3.1 Pro is available for long-context runs. Ollama covers local models.
+Model selection is global or per-session. SWE-1.5 is the fast default. Heavy reasoning work routes to Claude Opus 4.7 or OpenAI frontier models. Gemini 3.1 Pro is available for long-context runs. Ollama covers local models.
 
 The Cognition acquisition closed the loop with Devin. Tickets delegated to Devin can round-trip through Windsurf. The IDE also consumes the MCP Marketplace from the Cognition platform.
 
@@ -97,7 +97,7 @@ VS Code extension compatibility holds. Keybindings, themes, and most extensions 
 
 ## When to pick Windsurf
 
-- **You want agentic multi-file edits with real model choice.** Cascade plans and executes across files. SWE-1.5 is fast; Opus 4.7 and GPT-5.4 cover the heavy work.
+- **You want agentic multi-file edits with real model choice.** Cascade plans and executes across files. SWE-1.5 is fast; Opus 4.7 and OpenAI frontier models cover the heavy work.
 - **You already use or plan to use Devin.** Cognition's Devin-to-Windsurf handoff is tighter than any competing IDE's third-party agent integration.
 - **You want VS Code compatibility with deeper AI than Copilot.** Extensions and keybindings port cleanly. Cascade outruns Copilot's agent mode on multi-file refactors.
 - **You value SWE-1.5's speed on iterative edits.** The proprietary model prioritizes latency for fast-turn refactors.
@@ -132,7 +132,7 @@ Pricing via [windsurf.com/pricing](https://windsurf.com/pricing). Paid tiers mov
 | **Price** | $20/mo | $20/mo | Free (BYOK API costs) |
 | **Form factor** | VS Code fork | VS Code fork | VS Code extension |
 | **Flagship agent** | Cascade | Composer / Agent | Plan/Act modes |
-| **Model choice** | SWE-1.5 · GPT-5.4 · Opus 4.7 · Gemini | Mostly bundled | Any BYOK provider |
+| **Model choice** | SWE-1.5 · OpenAI frontier models · Opus 4.7 · Gemini | Mostly bundled | Any BYOK provider |
 | **Extension ecosystem** | VS Code compatible | VS Code compatible | Native VS Code |
 | **Best viewed as** | Cognition-stack IDE | Polished default IDE | Free agentic extension |
 
@@ -160,7 +160,7 @@ Cognition AI acquired Windsurf in July 2025 after Google secured a licensing dea
 Cognition's proprietary coding model. Optimized for speed on iterative edits; vendor claims roughly 13× faster than Sonnet 4.5 at near Claude 4.5-level coding-benchmark performance. Free for all users for three months from launch.
 
 **Which external models does Windsurf support?**
-GPT-5.4 (OpenAI), Claude Opus 4.7 (Anthropic), Gemini 3.1 Pro (Google), plus local models via Ollama. Selectable per session or globally. See [Windsurf model docs](https://docs.windsurf.com/windsurf/models).
+OpenAI frontier models (OpenAI), Claude Opus 4.7 (Anthropic), Gemini 3.1 Pro (Google), plus local models via Ollama. Selectable per session or globally. See [Windsurf model docs](https://docs.windsurf.com/windsurf/models).
 
 **How does Windsurf compare to Cursor?**
 Same $20/mo Pro price. Cursor has more polish and a larger community; Windsurf has tighter Cognition-stack integration (Devin hand-off) and broader model choice inside Cascade. Most individuals see comparable agent depth on multi-file work.

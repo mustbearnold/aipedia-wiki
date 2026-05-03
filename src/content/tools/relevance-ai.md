@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0 · Pro from $19/mo (annual) · Team from $234/mo · Enterprise custom"
 status: active
 launched: 2023-06
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -44,7 +44,7 @@ quick_answer: >-
 
 # Relevance AI
 
-Relevance AI is a no-code AI workforce platform built by Relevance AI Pty Ltd. Drag-and-drop tools and agents run on Claude, GPT-5.4, or Gemini 3.1 Pro within the same workflow.
+Relevance AI is a no-code AI workforce platform built by Relevance AI Pty Ltd. Drag-and-drop tools and agents run on Claude, OpenAI frontier models, or Gemini 3.1 Pro within the same workflow.
 
 Since September 2025, pricing splits into Actions (what the agent does) and Vendor Credits (LLM model costs). That split changes the cost calculus versus flat-token platforms.
 
@@ -67,7 +67,7 @@ Since September 2025, pricing splits into Actions (what the agent does) and Vend
 | **Pro tier** | $19/mo billed annually · 30,000 actions/yr · $240 Vendor Credits/yr |
 | **Team tier** | $234/mo annually · 84,000 actions/yr · $840 Vendor Credits/yr · 5 build + 45 end users |
 | **Enterprise** | Custom · custom models, SSO, dedicated support |
-| **Model support** | Claude Opus 4.7 · GPT-5.4 · Gemini 3.1 Pro · multi-model routing |
+| **Model support** | Claude Opus 4.7 · OpenAI frontier models · Gemini 3.1 Pro · multi-model routing |
 | **Built-in tools** | OCR · Classify · Extract · web scrape · PDF parse · email |
 | **Annual discount** | ~33% off monthly rates |
 
@@ -87,7 +87,7 @@ The moat is the no-code UX and the opinionated agent primitives, not the underly
 - **Support triage with judgment.** Classify incoming tickets, draft responses, escalate when confidence is low.
 - **Agency client work.** Ship AI tools for a client without standing up infrastructure.
 - **Workforce agents that handle documents.** OCR plus Extract plus Classify is the backbone of invoice, contract, and resume workflows.
-- **Mixed model routing.** Single agent that calls Claude for analysis and GPT-5.4 for drafting without custom plumbing.
+- **Mixed model routing.** Single agent that calls Claude for analysis and OpenAI frontier models for drafting without custom plumbing.
 
 ## When to pick something else
 
@@ -150,7 +150,7 @@ Relevance AI targets non-technical teams through a drag-and-drop builder. [CrewA
 Yes. OCR, Classify, and Extract are built-in primitives. Combining them with a knowledge base RAG store covers most document-intelligence workflows without code.
 
 **Can Relevance AI use multiple LLMs in one agent?**
-Yes. Multi-model routing lets a single agent call Claude Opus 4.7 for reasoning, GPT-5.4 for generation, and Gemini 3.1 Pro for multimodal tasks within the same workflow.
+Yes. Multi-model routing lets a single agent call Claude Opus 4.7 for reasoning, OpenAI frontier models for generation, and Gemini 3.1 Pro for multimodal tasks within the same workflow.
 
 ## Sources
 

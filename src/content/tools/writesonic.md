@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$1,499/month"
 status: active
 launched: 2020-12
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -122,7 +122,7 @@ Subscription pricing via [writesonic.com/pricing](https://writesonic.com/pricing
 | **Brand voice** | Brand Voice 2.0 | **Strongest enforcement** | Custom GPTs |
 | **GEO / AI-search tracking** | Yes (at $199 tier) | No | No |
 | **Chatbot builder** | Botsonic included | None | Custom GPTs |
-| **Raw model quality** | Routed third-party | Routed third-party | Direct GPT-5.4 |
+| **Raw model quality** | Routed third-party | Routed third-party | Direct OpenAI model access |
 | **Best viewed as** | Integrated SEO content stack | Enterprise copy suite | Generalist team default |
 
 ## Failure modes

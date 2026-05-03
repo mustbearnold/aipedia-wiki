@@ -11,8 +11,8 @@ pricing_model: enterprise
 price_range: "Enterprise custom (contact sales)"
 status: active
 launched: 2022-02
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: quarterly
 seo_title: "Typeface: Enterprise AI Content Platform Review (2026)"
 meta_description: "Typeface is the Arc platform for enterprise marketing AI: Arc Agents (specialized marketing agents), Arc Graph (brand grounding), Arc Spaces (workflows), Arc Forge (custom agents via MCP). $165M+ raised at $1B valuation. Enterprise-only pricing."
@@ -111,7 +111,7 @@ The Salesforce Marketing Cloud integration is the most commercially meaningful c
 ## When to pick something else
 
 - **Solo creators or SMBs:** [Jasper](/tools/jasper/) has self-serve pricing and a broader template library. [Copy.ai](/tools/copy-ai/) and [Writesonic](/tools/writesonic/) are cheaper for quick ad and blog copy. Typeface's enterprise posture makes no sense under a real marketing-ops budget.
-- **Developer-first agentic content stacks:** Teams that want to wire a custom content pipeline from scratch can build directly on [Claude](/tools/claude/) or [GPT-5.4](/tools/chatgpt/) with their own brand grounding layer.
+- **Developer-first agentic content stacks:** Teams that want to wire a custom content pipeline from scratch can build directly on [Claude](/tools/claude/) or [ChatGPT](/tools/chatgpt/) with their own brand grounding layer.
 - **Long-form enterprise writing without image needs:** [Writer](/tools/writer/) is a more mature enterprise-writing-only competitor with stronger compliance positioning in regulated text workloads.
 - **Marketing teams with no brand governance requirement:** If brand voice is loose, Typeface's main moat disappears and cheaper generalist tools close the gap.
 - **Quick-turnaround short-form copy only:** [Rytr](/tools/rytr/) or Copy.ai ship drafts faster with lower setup cost.

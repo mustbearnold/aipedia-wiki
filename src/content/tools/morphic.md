@@ -12,8 +12,8 @@ pricing_model: free
 price_range: "$0 (self-host) + provider API costs"
 status: active
 launched: 2024-01
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: quarterly
 seo_title: "Morphic: Features, Pricing & Review (April 2026)"
 meta_description: "Morphic is an open-source, MIT-licensed AI answer engine, positioned as a Perplexity-style alternative you can self-host. Generative UI, multi-provider (OpenAI, Anthropic, Groq, Ollama), BYOK. Honest take on where it beats Perplexity and where it lags."
@@ -135,7 +135,7 @@ A realistic monthly cost for a small-team private deployment runs $15-$60 depend
 - **Setup friction is real.** Clone, configure keys, pick a search backend, deploy. Non-developers will not get past the first step.
 - **Community-scale maintenance.** One primary maintainer (miurla) plus contributors. Expect slower response times than a funded product. Check the last-commit date before committing to a fork.
 - **No first-party SLA.** Self-hosted means you own uptime. The hosted morphic.sh instance is not a product commitment.
-- **Quality follows provider choice.** Answers reflect whichever model you plug in. Cheap-and-fast Groq models lose accuracy vs Claude Opus or GPT-5.4.
+- **Quality follows provider choice.** Answers reflect whichever model you plug in. Cheap-and-fast Groq models lose accuracy vs Claude Opus or OpenAI frontier models.
 - **Search-backend cost surprises.** Tavily and similar APIs meter queries. Forgetting a rate-limit on a public instance can burn a month's budget in a day.
 - **Generative UI requires front-end skill to extend.** Adding new answer components is a React task, not a prompt task.
 - **Mobile gap.** No iOS or Android apps. Responsive web only. For users who need a Perplexity-style phone app, Morphic is not the answer.

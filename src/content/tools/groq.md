@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "Free 30 req/min / paid usage-based"
 status: active
 launched: 2020-01
-last_updated: 2026-04-18
-last_verified: 2026-04-18
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -34,7 +34,7 @@ best_for:
   - production apps needing consistent low-latency
   - open-weight model inference at scale
 not_best_for:
-  - users who need frontier-proprietary models (GPT-5.4, Claude Opus 4.7)
+  - users who need frontier-proprietary models (OpenAI frontier models, Claude Opus 4.7)
   - long-context or reasoning workloads (open-weight on Groq is capped)
   - users without API integration (consumer-facing UI is minimal)
 quick_answer: >-
@@ -51,9 +51,9 @@ The fastest LLM inference provider on the market in 2026. Custom silicon called 
 
 > **Pick Groq if your workload is latency-sensitive.** Real-time voice agents, streaming chat interfaces, interactive AI applications all feel qualitatively different at 500+ tokens/second. You notice the speed the first time you try it.
 >
-> **Skip Groq if you need frontier proprietary models.** Groq serves open-weight models (Llama 4, Qwen 3, DeepSeek V3.2, Gemma 4, Mixtral). For [GPT-5.4](/tools/chatgpt/), [Claude Opus 4.7](/tools/claude/), or [Gemini 3.1 Pro](/tools/gemini/), you go to the source.
+> **Skip Groq if you need frontier proprietary models.** Groq serves open-weight models (Llama 4, Qwen 3, DeepSeek V3.2, Gemma 4, Mixtral). For [ChatGPT](/tools/chatgpt/), [Claude Opus 4.7](/tools/claude/), or [Gemini 3.1 Pro](/tools/gemini/), you go to the source.
 >
-> **The 2026 context:** Open-weight flagships (Llama 4, GLM-5.1, Qwen 3) have closed the gap on many tasks. Running them on Groq at 500+ tok/s at $0.11-$0.34 per million tokens is a genuine alternative to paying OpenAI $2.50/$10 per M for GPT-5.4. The Nvidia acquisition signals this economics is only getting more competitive.
+> **The 2026 context:** Open-weight flagships (Llama 4, GLM-5.1, Qwen 3) have closed the gap on many tasks. Running them on Groq at 500+ tok/s at $0.11-$0.34 per million tokens is a genuine alternative to paying OpenAI frontier-model API rates. The Nvidia acquisition signals this economics is only getting more competitive.
 
 ## Key Facts
 
@@ -102,7 +102,7 @@ Verified 2026-04-18 via [groq.com/pricing](https://groq.com/pricing).
 
 ## Failure modes
 
-- **Open-weight only.** No GPT-5.4, no Claude, no Gemini on Groq. If your product needs a frontier model, Groq is complementary, not a replacement.
+- **Open-weight only.** No OpenAI frontier models, no Claude, no Gemini on Groq. If your product needs a frontier model, Groq is complementary, not a replacement.
 - **Free tier rate limits bite.** 30 req/min is enough for prototyping, not production. Plan upgrade.
 - **Model catalog is narrower than FLUX marketplaces.** Curated selection of flagship open-weight models, not every model on Hugging Face.
 - **Nvidia acquisition = integration risk.** Post-acquisition, Nvidia may shift pricing, access, or model support. Watch for changes over 2026-2027.

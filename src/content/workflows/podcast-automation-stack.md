@@ -8,8 +8,8 @@ description: "Turn a 60-minute interview into a polished episode plus five socia
 stack: [claude, elevenlabs, descript, fish-audio]
 tools_mentioned: [claude, elevenlabs, descript, fish-audio]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: quarterly
 ---
 
@@ -52,7 +52,7 @@ Hands-on time per episode: 1.5 hours, down from a conventional 8-hour manual edi
 
 Owns transcript cleanup, episode structuring, and content repurposing.
 
-Paste a raw Descript transcript; Claude removes filler, adds chapter timestamps, generates 200-word show notes, and extracts five 60-second clip scripts. GPT-5.4 hallucinates podcast formats more often on this prompt.
+Paste a raw Descript transcript; Claude removes filler, adds chapter timestamps, generates 200-word show notes, and extracts five 60-second clip scripts. OpenAI frontier models hallucinates podcast formats more often on this prompt.
 
 ### [ElevenLabs](/tools/elevenlabs/) ($22/mo)
 
@@ -132,7 +132,7 @@ Yes. Descript exports YouTube-ready MP4s with captions up to 4K.
 ElevenLabs premade voices work for the first episode. A host voice clone lifts listener retention by ~20% on this stack based on A/B tests.
 
 **Does it scale to daily podcasts?**
-No. Rate limits compound around ~10 episodes/week. Add GPT-5.4 for overflow scripting, or move to a managed studio.
+No. Rate limits compound around ~10 episodes/week. Add OpenAI frontier models for overflow scripting, or move to a managed studio.
 
 ## System Notes
 

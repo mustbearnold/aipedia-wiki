@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$249.99/month"
 status: active
 launched: 2023-12
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: monthly
 seo_title: "Gemini: Features, Pricing & Review (April 2026)"
 meta_description: "Gemini 3.1 Pro is Google's flagship (Feb 2026, 1M token context). Google AI Pro $19.99/mo bundles 5TB storage, Veo 3.1, and Nano Banana 2. Ultra $249.99/mo unlocks Deep Think 3.1 and Nano Banana Pro. Best AI for Google Workspace users."
@@ -124,7 +124,7 @@ Google DeepMind's multimodal AI assistant. **Gemini 3.1 Pro** is the flagship as
 
 ## System Verdict
 
-> **Pick Gemini if you live in Google Workspace, need video or image gen inside the same subscription, or want the widest multimodal surface at a single $19.99 price point.** Gemini 3.1 Pro matches GPT-5.4 and Claude Opus 4.7 on 1M-token context, beats both on Google Docs / Sheets / Gmail integration depth, and uniquely bundles Nano Banana 2 image generation and Veo 3.1 Fast video inside AI Pro. Deep Research on Pro and Ultra runs autonomously against live search with citations.
+> **Pick Gemini if you live in Google Workspace, need video or image gen inside the same subscription, or want the widest multimodal surface at a single $19.99 price point.** Gemini 3.1 Pro matches OpenAI frontier models and Claude Opus 4.7 on 1M-token context, beats both on Google Docs / Sheets / Gmail integration depth, and uniquely bundles Nano Banana 2 image generation and Veo 3.1 Fast video inside AI Pro. Deep Research on Pro and Ultra runs autonomously against live search with citations.
 >
 > **Skip it if your workload is agentic coding, nuanced long-form writing, or anything outside Google's ecosystem.** [Claude Opus 4.7](/tools/claude/) leads on agentic coding (Claude Code CLI), long-form reasoning, and prose voice; [ChatGPT](/tools/chatgpt/) leads on Codex, custom-GPT marketplace, and operator-style agent mode; [Midjourney](/tools/midjourney/) still beats Nano Banana 2 on stylized image quality; [Perplexity](/tools/perplexity/) produces tighter citation-first research than Deep Research.
 >
@@ -237,8 +237,8 @@ It takes minutes per response, is capped at a small daily quota, and is **only a
 **Is Gemini free?**
 Yes. The free tier gives access to Gemini 3.1 Pro with daily limits and limited Deep Research. [Google AI Plus](https://one.google.com/about/ai-premium/) at $7.99/mo adds higher quota and 2TB storage. [Google AI Pro](https://one.google.com/about/ai-premium/) at $19.99/mo is the main paid tier: full Deep Research, Veo 3.1 Fast, Nano Banana 2, Gemini Live, and 5TB storage.
 
-**How does Gemini 3.1 Pro compare to Claude Opus 4.7 and GPT-5.4?**
-On raw reasoning benchmarks, Claude Opus 4.7 and GPT-5.4 Pro lead. Gemini 3.1 Pro is competitive and leads on multimodal tasks, Google Workspace integration, and native video/image generation. For general chat, writing, and coding, pick Claude or ChatGPT. For Workspace-embedded workflows, multimodal bundles, or Android-first use, pick Gemini. Most power users run two.
+**How does Gemini 3.1 Pro compare to Claude Opus 4.7 and OpenAI frontier models?**
+On raw reasoning benchmarks, Claude Opus 4.7 and OpenAI frontier models lead. Gemini 3.1 Pro is competitive and leads on multimodal tasks, Google Workspace integration, and native video/image generation. For general chat, writing, and coding, pick Claude or ChatGPT. For Workspace-embedded workflows, multimodal bundles, or Android-first use, pick Gemini. Most power users run two.
 
 **What is Deep Research and how does it compare to Perplexity?**
 Deep Research is Gemini's autonomous research agent. It browses dozens of sources and compiles cited, structured reports. On AI Pro it's capped at 5 reports/month.

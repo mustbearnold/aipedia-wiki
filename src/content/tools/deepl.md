@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$69/month"
 status: active
 launched: 2017-08
-last_updated: 2026-04-29
-last_verified: 2026-04-29
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: monthly
 seo_title: "DeepL: Features, Pricing & Review (April 2026)"
 meta_description: "DeepL Translator and DeepL Write run on a proprietary next-gen LLM as of April 2026. Free tier, Starter $10.49/mo, Advanced $34.49/mo, Ultimate $68.99/mo. API Free at 500K chars; API Pro pay-as-you-go. EU-based, no training on user data."
@@ -142,7 +142,7 @@ API pricing via [DeepL API plans](https://support.deepl.com/hc/en-us/articles/36
 | | DeepL Pro | ChatGPT Plus | Google Translate API |
 |---|---|---|---|
 | **Primary use** | Translation + rewrite specialist | General assistant | Translation API |
-| **Flagship model** | Proprietary next-gen LLM | GPT-5.4 family | Google NMT + Gemini |
+| **Flagship model** | Proprietary next-gen LLM | OpenAI GPT family | Google NMT + Gemini |
 | **Document translation** | DOCX / PPTX / PDF round-trip | Paste-only | API only, no native docs |
 | **Glossary + TM** | First-class | None | Limited via AutoML |
 | **Languages** | 33 stable, 80+ beta | All covered via chat | 130+ |
@@ -151,7 +151,7 @@ API pricing via [DeepL API plans](https://support.deepl.com/hc/en-us/articles/36
 
 ## Failure modes
 
-- **Generalist chat models are catching up.** GPT-5.4 and Claude Opus 4.7 translate well enough for most casual or mixed-task workloads. The DeepL edge narrows to regulated or high-volume use cases.
+- **Generalist chat models are catching up.** OpenAI frontier models and Claude Opus 4.7 translate well enough for most casual or mixed-task workloads. The DeepL edge narrows to regulated or high-volume use cases.
 - **Language coverage is narrower than Google Translate.** 33 stable languages is well behind Google's 130+. Rare pairs like Swahili, Amharic, or Tagalog still route to Google.
 - **DeepL Write is English-biased.** Coverage is 19 languages vs Translator's 33+. Style and tone controls are deepest in English and German.
 - **API rate limits surprise users.** API Pro is pay-as-you-go but still has per-second request caps that production workloads hit without warning. Queue your requests.

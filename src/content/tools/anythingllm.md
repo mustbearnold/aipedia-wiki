@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0 self-hosted / $25-$99/mo cloud"
 status: active
 launched: 2023-06
-last_updated: 2026-04-18
-last_verified: 2026-04-18
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -95,7 +95,7 @@ Prices verified 2026-04-18 via [anythingllm.com/cloud](https://anythingllm.com/c
 
 - **Self-hosting has real ops overhead.** You manage Docker, updates, vector DB, LLM API keys, backups. If you don't have ops capacity, pay for cloud or pick a SaaS competitor.
 - **Setup is not one-click for server deployments.** Desktop app is easy; Docker server requires reading docs and configuring environment variables.
-- **Default LLM is whatever you configure.** Quality depends entirely on the backing model. Pair with a strong LLM (GPT-5.4, Claude Opus 4.7, or Llama 4) for good results.
+- **Default LLM is whatever you configure.** Quality depends entirely on the backing model. Pair with a strong LLM (OpenAI frontier models, Claude Opus 4.7, or Llama 4) for good results.
 - **Community support model.** Fewer paid support options than enterprise SaaS competitors. Discord + GitHub issues for most users.
 - **Vector DB choice affects performance.** Default LanceDB is fine for small corpora. For 100k+ documents, switch to Pinecone or Qdrant.
 
@@ -123,7 +123,7 @@ Yes, under MIT license. Full source on GitHub. You can use, modify, and deploy c
 Desktop app does not need Docker. Server deployments (for team workspaces) are Docker-based. Docker Compose file is published in the repo.
 
 **Which LLM should I use with it?**
-Depends on your workload. [Claude Opus 4.7](/tools/claude/) or [GPT-5.4](/tools/chatgpt/) for highest quality. [Ollama](/tools/ollama/) with Llama 4 for privacy or cost. [Groq](https://groq.com) for speed. AnythingLLM lets you switch per workspace.
+Depends on your workload. [Claude Opus 4.7](/tools/claude/) or [ChatGPT](/tools/chatgpt/) for highest quality. [Ollama](/tools/ollama/) with Llama 4 for privacy or cost. [Groq](https://groq.com) for speed. AnythingLLM lets you switch per workspace.
 
 **How does it compare to RAG frameworks like LlamaIndex or LangChain?**
 Those are libraries; AnythingLLM is an app. If you're building a custom RAG pipeline from scratch, use LlamaIndex or LangChain. If you want a working RAG product to configure and use, pick AnythingLLM.

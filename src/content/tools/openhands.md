@@ -11,8 +11,8 @@ pricing_model: open-source
 price_range: "Free (MIT, BYOK) · Cloud free tier · Pro $20/mo · Enterprise custom"
 status: active
 launched: 2024-03
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -46,7 +46,7 @@ quick_answer: >-
 
 OpenHands is the open-source AI software engineer previously known as OpenDevin, maintained by All Hands AI. It reads, writes, runs, and debugs code inside a Docker sandbox, accessible via CLI, GUI, Python SDK, or OpenHands Cloud ([docs.openhands.dev](https://docs.openhands.dev/)).
 
-The repo carries 71K+ GitHub stars as of April 2026. Model is bring-your-own: Claude Opus 4.7, GPT-5.4, Gemini 3.1 Pro, or any LiteLLM-compatible endpoint.
+The repo carries 71K+ GitHub stars as of April 2026. Model is bring-your-own: Claude Opus 4.7, OpenAI frontier models, Gemini 3.1 Pro, or any LiteLLM-compatible endpoint.
 
 ## System Verdict
 
@@ -85,7 +85,7 @@ The moat is low and the team knows it. The architecture is public, the model lay
 
 - **Devin-class capability without the Devin bill.** Self-hosting plus BYOK beats commercial Devin on price for most solo developers.
 - **Private infrastructure.** Code must not leave the company network. Self-host on Kubernetes with full audit control.
-- **Model-agnostic coding agent.** Benchmark Claude Opus 4.7 against GPT-5.4 on the same task without rewriting the agent.
+- **Model-agnostic coding agent.** Benchmark Claude Opus 4.7 against OpenAI frontier models on the same task without rewriting the agent.
 - **Autonomous PR workflows.** Feed an issue, get a reviewable pull request. Works on GitHub and GitLab natively.
 - **Research on agent architectures.** Open evaluation infrastructure and Theory-of-Mind tooling for measuring agent performance.
 
@@ -105,7 +105,7 @@ The moat is low and the team knows it. The architecture is public, the model lay
 | Cloud Free | Free | GitHub login, MiniMax model, limited tasks |
 | Cloud Pro | $20/mo | Covers runtime compute, BYO LLM keys |
 | Cloud Enterprise | Custom | Self-hosted Kubernetes, RBAC, Slack/Jira, support |
-| Model API costs | Usage-based | Typical session: $0.50-$5 on Claude Opus 4.7 or GPT-5.4 |
+| Model API costs | Usage-based | Typical session: $0.50-$5 on Claude Opus 4.7 or OpenAI frontier models |
 
 *Prices verified 2026-04-17 via [OpenHands pricing](https://openhands.dev/pricing) and [Pro subscription docs](https://docs.openhands.dev/openhands/usage/cloud/pro-subscription). Self-hosting remains fully free.*
 
@@ -145,7 +145,7 @@ Yes. OpenDevin was renamed OpenHands in 2024. All development and releases now s
 Self-hosting is fully free under MIT. OpenHands Cloud offers a free tier on MiniMax via GitHub login. Pro at $20/mo covers cloud runtime compute with bring-your-own LLM keys. Enterprise is custom-priced for on-prem Kubernetes.
 
 **Does OpenHands work with Claude?**
-Yes. OpenHands is model-agnostic. Claude Opus 4.7, GPT-5.4, Gemini 3.1 Pro, Llama 4, and any LiteLLM-compatible endpoint are supported via API key.
+Yes. OpenHands is model-agnostic. Claude Opus 4.7, OpenAI frontier models, Gemini 3.1 Pro, Llama 4, and any LiteLLM-compatible endpoint are supported via API key.
 
 **OpenHands vs Devin?**
 Both are autonomous software engineers that turn task descriptions into reviewable PRs. OpenHands is open-source, self-hostable, and model-agnostic. Devin is commercial, managed, and faster to onboard. OpenHands wins on price and control; Devin wins on reliability out of the box.

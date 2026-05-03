@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$999+/month"
 status: active
 launched: 2015-01
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -131,7 +131,7 @@ Subscription pricing via [marketmuse.com/pricing](https://www.marketmuse.com/pri
 - **High floor cost.** $149/month shuts out solo bloggers and most freelancers. Below that, the free tier at 10 queries per month is a demo, not a practical trial.
 - **Learning curve.** Authority modeling concepts (Personalized Difficulty, Topical Authority Score) take hours to learn. Standard is wasted without that investment.
 - **No native drafting.** Briefs need a separate writing tool. Plan the stack cost including [ChatGPT](/tools/chatgpt/) Plus, [Claude](/tools/claude/) Pro, or equivalent.
-- **AI commoditization pressure.** Generalist frontier models (GPT-5.4, Opus 4.7, Gemini 3.1 Pro) generate usable briefs at a fraction of the cost, which compresses MarketMuse's brief-generation moat over time.
+- **AI commoditization pressure.** Generalist frontier models (OpenAI frontier models, Opus 4.7, Gemini 3.1 Pro) generate usable briefs at a fraction of the cost, which compresses MarketMuse's brief-generation moat over time.
 - **Strategic output needs a strategist.** Prioritization model output requires an editorial director to act on. Handing MarketMuse data to a content writer without context wastes the spend.
 - **Pricing jumps are steep.** Standard $149 to Team $399 to Premium $999+ skips mid-market sweet spots. Small teams over 3 users sit awkwardly between Team and Premium.
 - **Not a replacement for SERP tools.** Keyword volume, backlink analysis, and rank tracking still need [Ahrefs](/tools/ahrefs/) or [Semrush](/tools/semrush/) alongside.
@@ -149,7 +149,7 @@ For site-wide audits and topical authority prioritization across 100+ pages. [Fr
 No. 10 queries per month is enough to demo the interface, not enough for real work. Standard at $149/month is the practical entry point.
 
 **Does MarketMuse write articles?**
-No. The platform generates briefs with subtopic lists, questions, and structure. Writers or AI tools like [Claude](/tools/claude/) Opus 4.7 or [ChatGPT](/tools/chatgpt/) GPT-5.4 produce the actual draft from the brief.
+No. The platform generates briefs with subtopic lists, questions, and structure. Writers or AI tools like [Claude](/tools/claude/) Opus 4.7 or [ChatGPT](/tools/chatgpt/) OpenAI frontier models produce the actual draft from the brief.
 
 **How does Premium pricing work?**
 Premium starts around $999/month and scales with seats and requirements. Unlocks unlimited queries, topic cluster management, and enterprise-tier features. Requires direct sales contact to finalize.

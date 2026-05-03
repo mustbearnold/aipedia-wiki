@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "Bundled with ChatGPT Plus ($20/mo) through Pro 20x ($200/mo)"
 status: active
 launched: 2025-05
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -63,7 +63,7 @@ price_history:
 
 # OpenAI Codex
 
-OpenAI's **agentic coding** product. A coding agent that works either **async in the cloud** (fire a task, come back to a PR) or **locally** via the Codex Desktop app, CLI, and IDE extensions. Backed by GPT-5.5, GPT-5.4, and the faster GPT-5.3-Codex-Spark.
+OpenAI's **agentic coding** product. A coding agent that works either **async in the cloud** (fire a task, come back to a PR) or **locally** via the Codex Desktop app, CLI, and IDE extensions. Backed by GPT-5.5 for harder work and GPT-5.3-Codex-Spark for faster routine coding.
 
 Bundled with every paid ChatGPT tier. Pro tiers get 5x to 20x the Codex usage of Plus. The April 16, 2026 super-app update turned Codex Desktop into the most capable OpenAI product surface to date: Computer Use, persistent Memory, gpt-image-2 for visuals, an in-app browser, 90+ plugins, and multi-agent workflows running in parallel.
 
@@ -106,7 +106,7 @@ Bundled with every paid ChatGPT tier. Pro tiers get 5x to 20x the Codex usage of
 
 | | |
 |---|---|
-| **Default model** | GPT-5.5 / GPT-5.4 depending on task surface and rollout status |
+| **Default model** | GPT-5.5 for harder work; GPT-5.3-Codex-Spark for faster routine coding on supported surfaces |
 | **Fast model** | GPT-5.3-Codex-Spark (research preview, faster daily-coding) |
 | **Primary surfaces** | Codex Desktop (macOS, Windows rolling) · ChatGPT web · Codex CLI · IDE extensions |
 | **Async cloud execution** | Yes. Sandboxed VM spins up per task; Codex returns a diff or PR |
@@ -129,7 +129,7 @@ Three related surfaces united by the same underlying agent:
 
 **2. Codex Desktop (the April 16 super-app).** A standalone macOS app (Windows rolling out) that runs multiple Codex agents in parallel, uses Computer Use to operate applications directly, holds persistent Memory across sessions, generates images with gpt-image-2, browses the web in-app, and orchestrates 90+ plugins including first-party app integrations and third-party MCP servers.
 
-**3. Codex CLI + IDE extensions.** Local-first developers use Codex as a terminal CLI (similar shape to Claude Code) or via IDE extensions in VS Code, JetBrains, and others. IDE extensions hit the same GPT-5.4 / Codex-Spark models that back the cloud and desktop surfaces.
+**3. Codex CLI + IDE extensions.** Local-first developers use Codex as a terminal CLI (similar shape to Claude Code) or via IDE extensions in VS Code, JetBrains, and others. IDE extensions hit the same GPT-5.5 and Codex-Spark model family that backs the cloud and desktop surfaces.
 
 The real moat is the **cross-surface consistency**. A task started in the desktop app can hand off to the cloud agent. Memory carries across sessions and surfaces. Plugins work everywhere. OpenAI is treating Codex as the front end of a developer-focused super app rather than a single product.
 
@@ -175,7 +175,7 @@ Prices verified 2026-04-18 via [OpenAI Codex pricing](https://developers.openai.
 |---|---|---|---|---|
 | **Primary surface** | Desktop app + cloud + CLI | Terminal CLI | VS Code fork IDE | Web app |
 | **Async cloud execution** | Yes (sandboxed VM) | Ultraplan cloud environments | Cloud sandboxes + parallel agents | Yes, cloud-native by default |
-| **Backing model(s)** | GPT-5.4 + GPT-5.3-Codex-Spark | Claude Opus 4.7 + Sonnet 4.6 | User-selectable (Claude, GPT, Gemini, Grok, Composer 2) | Proprietary Cognition models |
+| **Backing model(s)** | GPT-5.5 + GPT-5.3-Codex-Spark | Claude Opus 4.7 + Sonnet 4.6 | User-selectable (Claude, GPT, Gemini, Grok, Composer 2) | Proprietary Cognition models |
 | **Computer Use** | Yes (April 16, macOS first) | Research preview in Claude Code | No native computer use | Yes, agent-native |
 | **Memory** | Yes (April 16, persistent cross-session) | Projects + session scope | Via `.cursorrules` + rules | Agent-native memory |
 | **Image generation** | gpt-image-2 bundled | None native | None native | None native |
@@ -216,7 +216,7 @@ Both are agentic coding products. Codex works async in the cloud and via desktop
 Codex Desktop is macOS-first with Windows rolling out. Linux users access Codex via the Codex CLI or ChatGPT web. A native Linux desktop app has not been announced.
 
 **What's GPT-5.3-Codex-Spark?**
-A faster Codex-optimized model in research preview as of April 2026. Designed for day-to-day coding with lower latency than GPT-5.4. Available on Pro and Pro 20x tiers.
+A faster Codex-optimized model in research preview as of April 2026. Designed for day-to-day coding with lower latency than full GPT-5.5 reasoning runs. Available on Pro and Pro 20x tiers.
 
 **Does Codex support MCP?**
 Yes. Codex Desktop's plugin system uses MCP under the hood for tool access. Be aware of the [April 16 systemic MCP vulnerability](/news/2026-04-16-mcp-vulnerability-200k-servers/) before installing third-party MCP servers.

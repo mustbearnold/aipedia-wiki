@@ -3,55 +3,64 @@ type: company
 slug: openai
 title: OpenAI
 seo_title: "OpenAI Company Profile (2026), aipedia.wiki"
-meta_description: "OpenAI builds ChatGPT, GPT-5.4, DALL-E 4, and Codex. Founded 2015, valued at $1.2T, with 5,000+ employees and $133B+ in funding as of April 2026."
+meta_description: "OpenAI builds ChatGPT, Codex, GPT Image 2, API models, and open-weight gpt-oss models. Founded in 2015 and valued at $1.2T as of April 2026."
 author: "aipedia.wiki Editorial"
 company_type: startup
 founded: 2015
 hq: San Francisco, USA
 funding: "$133B+"
-key_products: [chatgpt, codex]
-last_updated: 2026-04-30
+key_products: [chatgpt, codex, gpt-image-2]
+last_updated: 2026-05-03
 update_frequency: quarterly
-last_verified: 2026-04-30
+last_verified: 2026-05-03
 ---
 
 # OpenAI
 
-OpenAI, co-founded by Sam Altman in 2015 and headquartered in San Francisco, develops foundation models and AI products including ChatGPT and its API. The company holds a $1.2 trillion valuation as of April 2026 following a $122 billion funding round [5](https://openai.com/index/accelerating-the-next-phase-ai/).
+OpenAI, co-founded by Sam Altman in 2015 and headquartered in San Francisco, develops foundation models and AI products including [ChatGPT](/tools/chatgpt/), [Codex](/tools/codex/), GPT Image 2, API models, and open-weight gpt-oss models. The company holds a $1.2 trillion valuation as of April 2026 following a $122 billion funding round [5](https://openai.com/index/accelerating-the-next-phase-ai/).
 
 ## Key Facts
+
 | | |
 |---|---|
 | **Founded** | 2015 |
 | **HQ** | San Francisco, USA |
 | **Funding** | $133B+ raised |
 | **Valuation** | $1.2T (April 2026) |
-| **Key products** | ChatGPT, GPT-5.4, Codex |
+| **Key products** | ChatGPT, Codex, GPT Image 2, OpenAI API, gpt-oss models |
 
 ## What They Do
-OpenAI trains large foundation models then deploys them through consumer products like ChatGPT and developer APIs. The strategy emphasizes multimodal capabilities, agentic workflows, and enterprise tools with models differentiated by use case: developer coding, complex reasoning, and open-weight options [1](https://i10x.ai/news/openai-2026-ai-roadmap-gpt-5-models).
 
-ChatGPT serves as the primary consumer interface with tiered subscriptions, while the API generates revenue from developers. OpenAI released open-weight models under gpt-oss for self-hosting, addressing demand for customizable options [6](https://openai.com/open-models/).
+OpenAI trains large foundation models and packages them through consumer products, developer APIs, enterprise deployments, and open-weight releases. ChatGPT is the main consumer interface. Codex is the coding-agent surface. GPT Image 2 is the current OpenAI image-generation model inside ChatGPT and the API. The open-weight gpt-oss line serves teams that need self-hosting or customization [6](https://openai.com/open-models/).
+
+The strategic pattern is clear: keep ChatGPT as the default user-facing assistant, push Codex and agents into developer and enterprise workflows, and distribute models beyond a single cloud or application surface. That makes OpenAI less dependent on one product route, but it also means buyers need to evaluate which surface they are actually using: ChatGPT tiers, the API, managed cloud deployments, or open-weight models.
 
 ## Current Flagship Products
-- [ChatGPT](../tools/chatgpt.md): Conversational interface powered by GPT-5.4 Thinking for Plus/Pro users.
-- GPT-5.4: Flagship multimodal model with native computer-use, configurable reasoning, and 1M+ token context. Supports text/image input, available via API and ChatGPT [3](https://developers.openai.com/api/docs/models)[4](https://codingscape.com/blog/most-powerful-llms-large-language-models)[7](https://openai.com/index/introducing-gpt-5-4/).
-- GPT-5.4 Pro: Premium variant for complex tasks, replacing GPT-5.2 in ChatGPT Pro [7](https://openai.com/index/introducing-gpt-5-4/).
-- DALL-E 4: Image generation model integrated in ChatGPT Images, with precise edits and 4x faster generation [8](https://openai.com/research/index/release/).
-- Codex: Agentic code system with GPT-5.3 Codex integration and Playwright skill for visual debugging. Powers GPT-5.4 coding [2](https://designforonline.com/the-best-ai-models-so-far-in-2026/)[7](https://openai.com/index/introducing-gpt-5-4/).
+
+- [ChatGPT](/tools/chatgpt/): General-purpose assistant for text, research, data analysis, images, browsing, voice, Codex, and agent workflows. AIpedia's ChatGPT record currently lists GPT-5.5 as the flagship model and tracks tier-specific context and pricing in canonical facts.
+- [Codex](/tools/codex/): Agentic coding workflow inside the OpenAI ecosystem, with higher usage on Pro and team plans.
+- [GPT Image 2](/tools/gpt-image-2/): Current OpenAI image-generation model for ChatGPT Images 2.0 and API use, replacing DALL-E as the current OpenAI image surface.
 - gpt-oss-120b: Open-weight model for data centers and customization [6](https://openai.com/open-models/).
 
 ## Recent News
-- February 2026: Released GPT-5.3 Codex and other GPT-5 family models [2](https://designforonline.com/the-best-ai-models-so-far-in-2026/).
-- April 2026: Launched GPT-5.4 and GPT-5.4 Pro, retiring GPT-5.2 Thinking by June 5 [7](https://openai.com/index/introducing-gpt-5-4/).
-- April 2026: Raised $122 billion for compute expansion and global AI deployment [5](https://openai.com/index/accelerating-the-next-phase-ai/).
-- 2026: Introduced gpt-oss open models and DALL-E 4 in ChatGPT Images [6](https://openai.com/open-models/)[8](https://openai.com/research/index/release/).
+
+- May 2026: [The Pentagon expanded classified-network AI access to eight major vendors](/news/2026-05-01-pentagon-classified-ai-network-deals/), including OpenAI. This increases the importance of enterprise auditability and government-access boundaries.
+- April 2026: [GPT-5.5 rolled out to ChatGPT and Codex](/news/2026-04-23-openai-gpt-55-release/), updating the current ChatGPT and OpenAI model-access picture.
+- April 2026: [ChatGPT Images 2.0 and gpt-image-2 launched](/news/2026-04-21-openai-chatgpt-images-2-gpt-image-2/), making GPT Image 2 the current OpenAI image-generation surface.
+- April 2026: OpenAI raised $122 billion for compute expansion and global AI deployment [5](https://openai.com/index/accelerating-the-next-phase-ai/).
+- 2026: OpenAI introduced gpt-oss open models for self-hosting and customization [6](https://openai.com/open-models/).
 
 ## Strategic Position
-OpenAI leads with GPT-5.4 topping benchmarks in coding (57.7% SWE-bench Pro) and reasoning, ahead of Gemini 3.1 Pro and Claude Opus 4.7 on select metrics [4](https://codingscape.com/blog/most-powerful-llms-large-language-models). Compute scale from Microsoft funding provides a moat, but threats include Anthropic's safety focus, Google's distribution, and open-source from Meta/Mistral. Opportunities lie in agentic tools and enterprise adoption, with open models countering customization demands [1](https://i10x.ai/news/openai-2026-ai-roadmap-gpt-5-models).
+
+OpenAI's moat is the combination of model velocity, ChatGPT distribution, Codex developer workflows, enterprise access, and capital for compute. The main buyer risk is not whether OpenAI matters. It is choosing the right surface and plan. Consumer ChatGPT, ChatGPT Business, the OpenAI API, managed cloud distribution, and gpt-oss deployments have different pricing, control, privacy, and integration tradeoffs.
+
+For AIpedia readers, OpenAI should be treated as the default benchmark vendor for general assistants and agentic workflows, not as the best fit for every narrow task. Claude still competes strongly on long-form writing and conservative enterprise safety posture. Gemini remains the deepest Google Workspace option. Midjourney and specialist image tools can still beat OpenAI on pure aesthetics. Perplexity remains a cleaner first stop for citation-first research.
 
 ## Sources
-- [OpenAI Official Website](https://openai.com/) -- Announcements on GPT-5.4, funding, and open models.
-- [OpenAI API Documentation](https://developers.openai.com/api/docs/models) -- Model details and capabilities.
-- [i10x.ai](https://i10x.ai/news/openai-2026-ai-roadmap-gpt-5-models) -- 2026 roadmap analysis.
-- [Codingscape](https://codingscape.com/blog/most-powerful-llms-large-language-models) -- LLM benchmarks 2026.
+
+- [OpenAI Official Website](https://openai.com/) for company and product announcements.
+- [ChatGPT](/tools/chatgpt/) for AIpedia's canonical ChatGPT facts and current tier notes.
+- [GPT Image 2](/tools/gpt-image-2/) for AIpedia's current OpenAI image-generation record.
+- [OpenAI API Documentation](https://developers.openai.com/api/docs/models) for model and API details.
+- [OpenAI funding announcement](https://openai.com/index/accelerating-the-next-phase-ai/) for the April 2026 funding and valuation context.
+- [OpenAI open models](https://openai.com/open-models/) for gpt-oss coverage.

@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "Free - $0.30/1M tokens (API)"
 status: active
 launched: 2021-12
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -34,7 +34,7 @@ best_for:
   - users of the Talkie AI companion app
   - teams building voice or video generation apps
 not_best_for:
-  - users who need deep English-language chat quality matching GPT-5.4
+  - users who need deep English-language chat quality matching OpenAI frontier models
   - enterprises requiring US-based data residency
 quick_answer: >-
   MiniMax is a Shanghai AI lab (founded 2021, listed on HKEX January 2026). Its M2.7 flagship text model runs at $0.30/$1.20 per 1M tokens with a 205K context. Its Talkie app hit 11M MAU by mid-2024. Hailuo handles video, Speech 2.6 handles voice. Cost-first, not quality-first.
@@ -50,7 +50,7 @@ The portfolio: the **M2** family of text models (flagship M2.7, released March 1
 
 > **Pick MiniMax if the work is voice, video, or companion apps where per-call cost matters more than peak English quality.** The M2 family, Speech 2.6, and Hailuo video sit under one token plan, which reduces integration overhead for multi-modal products.
 >
-> **Skip it for English-first reasoning.** M2.7 trails [Claude Opus 4.7](/tools/claude/) and GPT-5.4 on agentic coding, long-form coherence, and premise-testing tasks. US-facing production workloads with compliance requirements should evaluate data residency before committing.
+> **Skip it for English-first reasoning.** M2.7 trails [Claude Opus 4.7](/tools/claude/) and OpenAI frontier models on agentic coding, long-form coherence, and premise-testing tasks. US-facing production workloads with compliance requirements should evaluate data residency before committing.
 >
 > The Talkie app is the consumer flagship. 11M monthly active users by mid-2024. Character-chat is the use case, not general assistant. Copyright litigation from entertainment studios over celebrity simulations is ongoing.
 
@@ -89,7 +89,7 @@ Three product lines under one token plan.
 
 ## When to pick something else
 
-- **English-first reasoning and agentic coding:** [Claude](/tools/claude/) Opus 4.7 or [ChatGPT](/tools/chatgpt/) GPT-5.4. M2.7 lags on both.
+- **English-first reasoning and agentic coding:** [Claude](/tools/claude/) Opus 4.7 or [ChatGPT](/tools/chatgpt/) OpenAI frontier models. M2.7 lags on both.
 - **Google-stack integration:** [Gemini](/tools/gemini/) 3.1 Pro. MiniMax has no Workspace tie-in.
 - **US-based data residency:** OpenAI, Anthropic, Google. MiniMax hosts in China by default.
 - **Largest companion ecosystem:** [Character.AI](/tools/character-ai/). 17M MAU vs Talkie's 11M.
@@ -116,7 +116,7 @@ Three product lines under one token plan.
 
 ## Against the alternatives
 
-| | MiniMax M2.7 | Claude Opus 4.7 | GPT-5.4 Pro | Qwen 3 Max |
+| | MiniMax M2.7 | Claude Opus 4.7 | OpenAI frontier models | Qwen 3 Max |
 |---|---|---|---|---|
 | **Input $/1M** | $0.30 | $5.00 | Not disclosed | ~$0.40 |
 | **Output $/1M** | $1.20 | $25.00 | Not disclosed | ~$1.20 |
@@ -129,7 +129,7 @@ Three product lines under one token plan.
 
 ## Failure modes
 
-- **English reasoning trails the frontier.** M2.7 is usable, not competitive with Opus 4.7 or GPT-5.4 on complex chains.
+- **English reasoning trails the frontier.** M2.7 is usable, not competitive with Opus 4.7 or OpenAI frontier models on complex chains.
 - **Data residency is China by default.** Enterprise compliance in regulated US and EU sectors requires the private deployment option or a different vendor.
 - **Copyright litigation around Talkie.** Major entertainment studios have sued over celebrity simulations. Product risk is real.
 - **Moderation gaps in Talkie.** Public reviews have flagged inadequate content moderation on character interactions.

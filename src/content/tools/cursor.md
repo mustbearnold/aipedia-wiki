@@ -2,7 +2,7 @@
 type: tool
 slug: cursor
 title: Cursor
-tagline: AI-native code editor on a VS Code fork. Claude Opus 4.7, GPT-5.4, Gemini 3.1 Pro, and Cursor's own Composer 2 are first-class. Cursor 3.0 (April 2, 2026) turns the editor into an Agents Window for orchestrating fleets of parallel agents.
+tagline: AI-native code editor on a VS Code fork. Claude Opus 4.7, GPT-5.5, Gemini 3.1 Pro, and Cursor's own Composer 2 are first-class. Cursor 3.0 (April 2, 2026) turns the editor into an Agents Window for orchestrating fleets of parallel agents.
 category: ai-coding
 company: anysphere
 url: https://cursor.com
@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2023-03
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -26,7 +26,7 @@ scores:
   longevity: 9
 facts:
   flagship_model:
-    value: "Claude Opus 4.7, GPT-5.4, Gemini 3.1 Pro, Composer 2"
+    value: "Claude Opus 4.7, GPT-5.5, Gemini 3.1 Pro, Composer 2"
     source: "/tools/cursor/"
     source_label: "AIpedia Cursor review"
     verified_at: 2026-04-23
@@ -64,7 +64,7 @@ not_best_for:
   - JetBrains, Vim/Neovim, or Zed loyalists
   - extremely budget-conscious users (GitHub Copilot is cheaper)
 quick_answer: >-
-  Cursor is the strongest GUI-first AI IDE in April 2026, built as a VS Code fork with a multi-agent Agents Window. Pick it for parallel agents, Design Mode, and one bill covering Opus 4.7, GPT-5.4, and Gemini 3.1 Pro at API rates. Skip it for CLI agent loops (Claude Code) or budget-tier completions (GitHub Copilot at $10).
+  Cursor is the strongest GUI-first AI IDE in April 2026, built as a VS Code fork with a multi-agent Agents Window. Pick it for parallel agents, Design Mode, and one bill covering Opus 4.7, GPT-5.5, and Gemini 3.1 Pro at API rates. Skip it for CLI agent loops (Claude Code) or budget-tier completions (GitHub Copilot at $10).
 price_history:
   - date: 2026-04-16
     plan: "Pro"
@@ -97,7 +97,7 @@ Anysphere's AI-native code editor. A VS Code fork with LLMs wired into autocompl
 - **April 17:** [Cursor ships Opus 4.7 support on day two](/news/2026-04-17-opus-4-7-day-two-ide-adoption/) of Anthropic's release, alongside Windsurf, Zed, and Continue. Kept Cursor current with the April 2026 flagship within 24 hours.
 - **April 2:** [Cursor 3 release makes the Agents Window the primary interface](/news/2026-04-02-cursor-3-agent-first-release/). Agent-first IDE shift; traditional editor view moves to a background role for users opting into the new layout.
 
-Claude Opus 4.7, GPT-5.4, Gemini 3.1 Pro, Grok 4.20, Kimi K2.5, and Cursor's in-house Composer 2 are all first-class. Opus 4.7 landed in Cursor within minutes of Anthropic's April 16, 2026 release.
+Claude Opus 4.7, GPT-5.5, Gemini 3.1 Pro, Grok 4.20, Kimi K2.5, and Cursor's in-house Composer 2 are all first-class. Opus 4.7 landed in Cursor within minutes of Anthropic's April 16, 2026 release.
 
 ## System Verdict
 
@@ -113,8 +113,8 @@ Claude Opus 4.7, GPT-5.4, Gemini 3.1 Pro, Grok 4.20, Kimi K2.5, and Cursor's in-
 |---|---|
 | **Current release** | Cursor 3.1 (April 13, 2026) · Cursor 3.0 shipped April 2, 2026 |
 | **Base** | Fork of VS Code (all extensions, keybindings, settings portable) |
-| **Flagship models** | Claude Opus 4.7 · GPT-5.4 · Gemini 3.1 Pro · Composer 2 |
-| **Other supported models** | Claude Sonnet 4.6 / Haiku 4.5 · GPT-5.4 Mini/Nano · GPT-5-Codex · Gemini 3 Flash · Grok 4.20 · Kimi K2.5 |
+| **Flagship models** | Claude Opus 4.7 · GPT-5.5 · Gemini 3.1 Pro · Composer 2 |
+| **Other supported models** | Claude Sonnet 4.6 / Haiku 4.5 · GPT-5.3 Instant/Thinking Mini · GPT-5-Codex · Gemini 3 Flash · Grok 4.20 · Kimi K2.5 |
 | **Agent modes** | Tab (autocomplete) · Cmd+K (inline edit) · Agents Window (multi-agent) · Cloud Agents (remote sandboxes) · Design Mode · Bugbot (PR review, separate add-on) |
 | **Model pricing inside Cursor** | Base API rates (Opus 4.7 = $5/$25 per MTok; 1M context flat-rate, no long-context surcharge) |
 | **Subscription pricing** | Hobby $0 · Pro $20 · Pro+ $60 · Ultra $200 · Teams $40/user · Enterprise custom |
@@ -128,7 +128,7 @@ A single desktop editor that covers four autonomy levels on one "autonomy slider
 
 The real moats are three. First, editor integration: Cursor is a VS Code fork, so the LSP, extensions, keybindings, and debugger UX are already production-grade. AI features bolt onto an editor developers already use.
 
-Second, model coverage without per-model billing: one subscription buys Opus 4.7, GPT-5.4, Gemini 3.1 Pro, Grok, Kimi, and Composer 2 at API rates with no markup on 1M-token context.
+Second, model coverage without per-model billing: one subscription buys Opus 4.7, GPT-5.5, Gemini 3.1 Pro, Grok, Kimi, and Composer 2 at API rates with no markup on 1M-token context.
 
 Third, the Agents Window's orchestration surface (Best-of-N runs, worktree isolation, cloud handoff, Design Mode) doesn't exist in stock VS Code + Copilot or in Claude Code.
 
@@ -136,7 +136,7 @@ Third, the Agents Window's orchestration surface (Best-of-N runs, worktree isola
 
 - **You want a GUI-first multi-agent workbench.** Cursor 3.0's Agents Window runs parallel agents across local/worktree/cloud/SSH and lets you click UI elements in a live browser preview (Design Mode) instead of describing them in text.
 - **You're already on VS Code ergonomics.** Extensions, keybindings, settings, and LSP all carry over. The migration cost is a folder import.
-- **You want one bill for every frontier model.** Opus 4.7, GPT-5.4, Gemini 3.1 Pro, Grok 4.20, Kimi K2.5, and Composer 2 are all accessed at API rates from a single usage pool.
+- **You want one bill for every frontier model.** Opus 4.7, GPT-5.5, Gemini 3.1 Pro, Grok 4.20, Kimi K2.5, and Composer 2 are all accessed at API rates from a single usage pool.
 - **You run supervised multi-file refactors.** Composer 2 handles plan-and-implement across many files better than single-file extensions. The Agents Window lets you watch 8+ agents at once.
 - **You want to ship Claude Opus 4.7 immediately.** Cursor added Opus 4.7 within minutes of Anthropic's April 16, 2026 release and charges no long-context surcharge up to 1M tokens.
 
@@ -165,7 +165,7 @@ Subscription tiers via [cursor.com/pricing](https://cursor.com/pricing):
 
 Add-on: **Bugbot** at $40/user/mo for automated PR review (up to 200 PRs/mo on Pro trial, unlimited on Teams). Annual billing saves roughly 20% on all paid tiers.
 
-Model usage inside Cursor is billed at base API rates. Opus 4.7 runs $5 input / $25 output per MTok, GPT-5.4 $2.50 input, Gemini 3.1 Pro $2.00 input, Composer 2 $0.50 input.
+Model usage inside Cursor is billed at base API rates. Opus 4.7 runs $5 input / $25 output per MTok, GPT-5.5 $2.50 input, Gemini 3.1 Pro $2.00 input, Composer 2 $0.50 input.
 
 The 1M-token context is flat-rate with no long-context surcharge. "Auto" mode picks a cheaper model when intelligence isn't the binding constraint.
 
@@ -175,7 +175,7 @@ Prices verified 2026-04-17 via [cursor.com/pricing](https://cursor.com/pricing) 
 
 | | Cursor Pro $20 | Claude Code (via Claude Max $100) | GitHub Copilot $10 |
 |---|---|---|---|
-| **Model access** | Opus 4.7 · GPT-5.4 · Gemini 3.1 Pro · Grok · Kimi · Composer 2 | Opus 4.7 · Sonnet 4.6 · Haiku 4.5 | Opus 4.7 · GPT-5.4 · Gemini (curated) |
+| **Model access** | Opus 4.7 · GPT-5.5 · Gemini 3.1 Pro · Grok · Kimi · Composer 2 | Opus 4.7 · Sonnet 4.6 · Haiku 4.5 | Opus 4.7 · GPT-5.5 · Gemini (curated) |
 | **Agent mode** | Agents Window · Cloud Agents · Design Mode · Best-of-N | Claude Code CLI (terminal, autonomous loop) | Copilot Chat + Agent Mode (extension) |
 | **Multi-file edits** | Composer 2 + parallel agents in worktrees | Full codebase reads/writes from terminal | Single-repo, extension-bounded |
 | **IDE integration** | Native (VS Code fork) | None · terminal-first | Extension inside stock VS Code / JetBrains |
@@ -184,12 +184,12 @@ Prices verified 2026-04-17 via [cursor.com/pricing](https://cursor.com/pricing) 
 
 ## Failure modes
 
-- **Pro $20 credits burn fast.** The $20 usage pool runs out in 1-2 weeks for heavy users on Opus 4.7 or GPT-5.4. After that you get slow requests or overage at API rates. Power users skip straight to Pro+ or Ultra.
+- **Pro $20 credits burn fast.** The $20 usage pool runs out in 1-2 weeks for heavy users on Opus 4.7 or GPT-5.5. After that you get slow requests or overage at API rates. Power users skip straight to Pro+ or Ultra.
 - **Opus 4.7 is the most expensive model in the pool.** Cursor's own docs flag it as "most expensive, consumes usage limits faster than alternatives." Use Composer 2, Sonnet 4.6, or Auto mode for routine work and save Opus for hard problems.
 - **VS Code lock-in.** Cursor is a full editor fork. JetBrains, Vim/Neovim, Zed, and Emacs users have no entry path. Migrating out later means reinstalling extensions and settings on stock VS Code.
 - **Not a fully autonomous agent.** Cloud Agents iterate inside a sandbox, but the Agents Window is still a supervised workbench. Claude Code's terminal loop is more aggressive at self-correcting on test failures and build errors.
 - **Diff UI can desync on long agent runs.** Multi-agent sessions in worktrees occasionally surface stale diffs in the Agents Window; refresh or reopen the worktree to force-sync.
-- **Model-hopping inflates spend.** Users switch models mid-session ("try GPT-5.4 on this file, now Opus on the next") and burn more credits than they'd expect. Pin a default and deviate deliberately.
+- **Model-hopping inflates spend.** Users switch models mid-session ("try GPT-5.5 on this file, now Opus on the next") and burn more credits than they'd expect. Pin a default and deviate deliberately.
 - **Background/Cloud Agents rename is still confusing.** Cursor 2.0 (Oct 2025) renamed Background Agents to Cloud Agents. Documentation and third-party tutorials from late 2025 still use both names interchangeably.
 - **Privacy mode disables some features.** Cursor sends code to LLM providers by default. Privacy Mode (opt-in; on by default for Business/Enterprise) exempts code from training but disables a subset of indexing features. Sensitive codebases should evaluate trade-offs before adopting.
 

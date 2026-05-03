@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$150+/editor/month"
 status: active
 launched: 2019-01
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -71,7 +71,7 @@ Pricing runs $0 to $150+/editor/month. LLM API costs bill separately through the
 |---|---|
 | **Core product** | Visual conversation designer + knowledge-base RAG |
 | **Deployment channels** | Web chat · Slack · WhatsApp · Microsoft Teams · voice · API |
-| **LLM support** | OpenAI GPT-5.4 · Claude Opus 4.7 · Gemini 3.1 Pro · bring-your-own-key |
+| **LLM support** | OpenAI OpenAI frontier models · Claude Opus 4.7 · Gemini 3.1 Pro · bring-your-own-key |
 | **Knowledge base** | PDF · URL · document ingest · RAG grounding |
 | **Pricing** | Sandbox free · Pro $60/editor · Teams $150/editor · Enterprise custom |
 | **Credits (Pro)** | 10,000/mo (one credit per conversation turn) |
@@ -155,7 +155,7 @@ Pro is $60/editor/month with 10,000 credits. Teams is $150/editor/month with 30,
 Upload documents, PDFs, or URLs. When a user asks a question, Voiceflow retrieves relevant chunks and uses an LLM to generate a grounded answer. Retrieval-augmented generation reduces hallucination compared to pure LLM responses.
 
 **Voiceflow vs Dialogflow?**
-Voiceflow is LLM-native and ships modern RAG tooling. Dialogflow is Google's older intent-based platform, better suited to scripted bots and Google Cloud integration. Teams building GPT-5.4 or Claude Opus 4.7 agents usually pick Voiceflow.
+Voiceflow is LLM-native and ships modern RAG tooling. Dialogflow is Google's older intent-based platform, better suited to scripted bots and Google Cloud integration. Teams building OpenAI frontier models or Claude Opus 4.7 agents usually pick Voiceflow.
 
 **Can Voiceflow handle general workflow automation?**
 Not really. Voiceflow is purpose-built for conversation. For CRM sync, form processing, or cross-SaaS automation, pair Voiceflow with [n8n](/tools/n8n/) or [Make](/tools/make/).

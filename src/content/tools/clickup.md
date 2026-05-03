@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: $0-$40/user/month
 status: active
 launched: 2017-01
-last_updated: 2026-04-19
-last_verified: 2026-04-19
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: monthly
 seo_title: 'ClickUp: Features, Pricing & Review (April 2026)'
 meta_description: >-
@@ -157,7 +157,7 @@ Prices verified 2026-04-19 via [ClickUp pricing](https://clickup.com/pricing) an
 - **Performance on large workspaces.** Teams with 50K+ tasks report occasional slowdowns in list rendering and search. Enterprise tier helps but it's not instant.
 - **Mobile app is catching up.** Full feature parity with web is closer in 2026 but still not 1:1. Field users sometimes need laptop for admin tasks.
 - **Permissions model depth.** The Workspace → Space → Folder → List → Task hierarchy with per-level permissions is powerful but takes an admin to configure correctly. Easy to misconfigure early.
-- **AI Super Credits can surprise.** Brain includes 1,500 credits/mo; Everything AI includes 5,000. Heavy AI users (especially with multi-model routing to Claude Opus or GPT-5.4) can exhaust monthly allocations faster than expected.
+- **AI Super Credits can surprise.** Brain includes 1,500 credits/mo; Everything AI includes 5,000. Heavy AI users (especially with multi-model routing to Claude Opus or OpenAI frontier models) can exhaust monthly allocations faster than expected.
 - **Integration depth varies.** Native integrations are 1,000+ but many are read-only. Deep two-way sync often requires Zapier or Make in the middle.
 - **Migrating away is work.** Once a team has 10K+ tasks, 500+ docs, and a permissions model inside ClickUp, leaving takes a dedicated migration project. Standard affiliate-review caveat: this is true of any all-in-one workspace, not unique to ClickUp.
 

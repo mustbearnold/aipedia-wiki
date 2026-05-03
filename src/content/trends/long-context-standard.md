@@ -8,14 +8,14 @@ author: "aipedia.wiki Editorial"
 description: 1M+ token context is table stakes for flagship models in 2026. Llama 4 Scout ships 10M. The RAG-first architecture pattern is no longer a default.
 timeframe: Claude 100K in 2023. Gemini 1M in 2024. Claude 1M + Llama 4 Scout 10M in 2026. Next frontier is retrieval-quality over raw window size.
 impact: high
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: monthly
 ---
 
 ## What Is Happening
 
-Million-plus token context windows are now standard on flagship models. Gemini 3.1 Pro ships a 2M-token window. Claude Opus 4.7 ships 1M tokens. GPT-5.4 ships 400K in Pro. Llama 4 Scout, released April 5 2026, ships a 10M-token context window and runs on a single H100.
+Million-plus token context windows are now standard on flagship models. Gemini 3.1 Pro ships a 2M-token window. Claude Opus 4.7 ships 1M tokens. OpenAI's ChatGPT tier windows are model and plan dependent, while Llama 4 Scout, released April 5 2026, ships a 10M-token context window and runs on a single H100.
 
 At 1M tokens, a single prompt can hold an entire mid-sized codebase, a full book, a year of meeting transcripts, or a complete product spec plus customer research. At 10M tokens, it can hold all of the above combined.
 

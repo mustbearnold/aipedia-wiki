@@ -2,7 +2,7 @@
 type: tool
 slug: deepseek
 title: DeepSeek
-tagline: Open-weight Chinese LLM lab offering frontier reasoning and chat at fractions of GPT-5.4 pricing.
+tagline: Open-weight Chinese LLM lab offering frontier reasoning and chat at fractions of OpenAI frontier-model pricing.
 category: ai-chatbots
 secondary_categories: [ai-coding, ai-research]
 company: DeepSeek
@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "Free (chat) / Usage-based (API from $0.28/M tokens)"
 status: active
 launched: 2023-07
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: quarterly
 affiliate:
   has_program: false
@@ -82,7 +82,7 @@ price_history:
 
 # DeepSeek
 
-Chinese AI lab founded under High-Flyer Capital Management in Hangzhou. Releases open-weight frontier models alongside a free chat interface and a pay-per-token API that undercuts GPT-5.4 by roughly 9x.
+Chinese AI lab founded under High-Flyer Capital Management in Hangzhou. Releases open-weight frontier models alongside a free chat interface and a pay-per-token API that undercuts OpenAI frontier-model pricing by roughly 9x.
 
 DeepSeek-V4 preview launched on April 24, 2026, according to AP, with pro and flash versions described as improving knowledge, reasoning, and agentic capabilities. DeepSeek-V3.2 remains the verified public API pricing baseline until DeepSeek publishes full V4 endpoint details. DeepSeek-R1 (released January 2025) remains the standalone reasoning model.
 
@@ -90,7 +90,7 @@ Related coverage: [AI Industry Roundup, April 24](/news/2026-04-24-ai-industry-r
 
 ## System Verdict
 
-> **Pick DeepSeek if API cost is the hard constraint and frontier-class reasoning is the requirement.** At $0.28/M input tokens (cache miss) and $0.028/M (cache hit), it sits roughly 9x below GPT-5.4 and 5x below Claude Opus 4.7. R1 matched o1 on AIME 2024 at launch. V3.2 handles general chat, coding, and long-context work up to 128K tokens.
+> **Pick DeepSeek if API cost is the hard constraint and frontier-class reasoning is the requirement.** At $0.28/M input tokens (cache miss) and $0.028/M (cache hit), it sits roughly 9x below OpenAI frontier models and 5x below Claude Opus 4.7. R1 matched o1 on AIME 2024 at launch. V3.2 handles general chat, coding, and long-context work up to 128K tokens.
 >
 > **Skip it if compliance, polish, or uptime SLAs matter.** The Berlin Data Protection Authority flagged DeepSeek as non-compliant with GDPR in mid-2025, triggering DSA Article 16 notifications to Apple and Google. U.S. House Select Committee scrutiny over chip-export violations continues. EU enterprises under GDPR Article 44 and any U.S.-regulated industry should assume this is not deployable.
 >
@@ -131,7 +131,7 @@ The moats are narrow. Open weights mean any well-funded lab can reproduce the ar
 - **You self-host.** V3 family weights are public. Quantized distills run on single consumer GPUs via Ollama or LM Studio.
 - **You want repeatable-prompt workloads cheap.** Context caching drops cache-hit input tokens to $0.028/M (90% off).
 - **You're benchmarking against an open-weight baseline.** R1's paper and weights are the reference point for cost-efficient reasoning.
-- **You build in cost-sensitive markets.** The 9x delta vs GPT-5.4 is the product.
+- **You build in cost-sensitive markets.** The 9x cost gap versus OpenAI frontier-model pricing is the product.
 
 ## When to pick something else
 
@@ -156,7 +156,7 @@ API pricing via [api-docs.deepseek.com](https://api-docs.deepseek.com/quick_star
 
 ## Against the alternatives
 
-| | DeepSeek V3.2 | GPT-5.4 | Claude Opus 4.7 |
+| | DeepSeek V3.2 | OpenAI frontier models | Claude Opus 4.7 |
 |---|---|---|---|
 | **Input price (per M tokens)** | $0.28 | ~$2.50 | $5 |
 | **Output price (per M tokens)** | $0.42 | ~$10 | $25 |
@@ -191,7 +191,7 @@ Yes. The chat interface at [chat.deepseek.com](https://chat.deepseek.com) is fre
 Yes, but only as a preview according to AP's April 24, 2026 report. DeepSeek has not yet published enough technical detail to treat V4 as a fully verified production replacement for V3.2 in this review.
 
 **How does DeepSeek R1 compare to OpenAI o1?**
-At launch (January 2025), R1 matched o1 on AIME 2024 (79.8% vs 79.2%) and MATH-500 (97.3% vs 96.4%). R1 is open-weight and free via chat, or $0.28/M input via the `deepseek-reasoner` endpoint. On 2026 agentic-coding benchmarks, Claude Opus 4.7 and GPT-5.4 Codex have pulled ahead.
+At launch (January 2025), R1 matched o1 on AIME 2024 (79.8% vs 79.2%) and MATH-500 (97.3% vs 96.4%). R1 is open-weight and free via chat, or $0.28/M input via the `deepseek-reasoner` endpoint. On 2026 agentic-coding benchmarks, Claude Opus 4.7 and OpenAI Codex models have pulled ahead.
 
 **Can I run DeepSeek locally?**
 Yes. Weights for V3, V3.2, and R1 are on HuggingFace. Distilled R1 variants (7B, 14B, 32B) run on consumer GPUs via Ollama or LM Studio. Full V3.2 needs datacenter memory.

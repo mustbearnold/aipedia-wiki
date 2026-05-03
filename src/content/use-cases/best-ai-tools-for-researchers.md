@@ -7,8 +7,8 @@ meta_description: "Top AI tools for researchers in 2026 include Perplexity for s
 description: "This page recommends AI tools for researchers, covering literature review, data analysis, and hypothesis testing, with pricing, pros, and cons verified as of April 2026."
 tools_mentioned: ["perplexity", "claude", "gemini", "chatgpt"]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-30
-last_verified: 2026-04-30
+last_updated: 2026-05-03
+last_verified: 2026-05-03
 update_frequency: monthly
 ---
 
@@ -75,7 +75,7 @@ Gemini 3.1 Pro from Google processes text, images, audio, and video with a 2M to
 
 ### 4. ChatGPT (Best Versatile Backup)
 
-ChatGPT with GPT-5.4 offers broad capabilities including text analysis, code for stats, and image processing via integrated tools. Suitable for quick hypothesis brainstorming.[1][2]
+ChatGPT with OpenAI frontier models offers broad capabilities including text analysis, code for stats, and image processing via integrated tools. Suitable for quick hypothesis brainstorming.[1][2]
 
 **Why it fits researchers:** Multimodal inputs for mixed data; plugin ecosystem for stats software. Pro tier unlocks unlimited access.[4]
 
