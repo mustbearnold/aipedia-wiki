@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
   <rect width="256" height="256" rx="48" fill="#fbbf24"/>
-  <text x="128" y="128" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="110" font-weight="700" fill="#0b0a14" text-anchor="middle" dominant-baseline="central">CA</text>
+  <text x="128" y="128" font-family="Metropolis, sans-serif" font-size="110" font-weight="700" fill="#0b0a14" text-anchor="middle" dominant-baseline="central">CA</text>
 </svg>

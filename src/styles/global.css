@@ -93,8 +93,12 @@ html.theme-morph-fallback *::after {
 
 @layer base {
   :root {
-    --font-sans: 'Metropolis', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    --font-sans: 'Metropolis', sans-serif;
+    --font-mono: 'Metropolis', sans-serif;
+    --default-font-family: var(--font-sans);
+    --default-mono-font-family: var(--font-mono);
+    --pf-font: var(--font-sans);
+    --pagefind-ui-font: var(--font-sans);
     --motion-ease: cubic-bezier(0.16, 1, 0.3, 1);
     --motion-ease-soft: cubic-bezier(0.22, 1, 0.36, 1);
     --motion-ease-press: cubic-bezier(0.2, 0, 0, 1);

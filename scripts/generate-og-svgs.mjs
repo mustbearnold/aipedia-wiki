@@ -156,7 +156,7 @@ function escapeXml(s) {
 
 /**
  * Simple greedy char-count word wrap. resvg has no text-layout engine,
- * so we pre-wrap into multiple <tspan> lines. Inter at 26px on a 900px
+ * so we pre-wrap into multiple <tspan> lines. Metropolis at 26px on a 900px
  * box fits ~56 chars per line comfortably.
  */
 function wrapLines(text, maxChars, maxLines) {
@@ -236,38 +236,36 @@ function svgFor(tool) {
       ? `<image href="${brandLogoSmall}" x="60" y="60" width="56" height="56" preserveAspectRatio="xMidYMid meet"/>`
       : ''
   }
-  <text x="${brandLogoSmall ? 132 : 80}" y="100" font-family="Inter, system-ui, sans-serif" font-size="26" font-weight="700" fill="#a78bfa" letter-spacing="1">aipedia.wiki</text>
-  <text x="${brandLogoSmall ? 132 : 80}" y="124" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="500" fill="#9ca3af">${category}</text>
+  <text x="${brandLogoSmall ? 132 : 80}" y="100" font-family="Metropolis, sans-serif" font-size="26" font-weight="700" fill="#a78bfa" letter-spacing="1">aipedia.wiki</text>
+  <text x="${brandLogoSmall ? 132 : 80}" y="124" font-family="Metropolis, sans-serif" font-size="16" font-weight="500" fill="#9ca3af">${category}</text>
   ${logoBlock}
-  <text x="${titleX}" y="270" font-family="Inter, system-ui, sans-serif" font-size="76" font-weight="800" fill="#fafafa">${title}</text>
-  <text x="${titleX}" y="310" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="500" fill="#9ca3af">${company}</text>
-  <text x="80" y="400" font-family="Inter, system-ui, sans-serif" font-size="26" font-weight="500" fill="#d1d5db">${taglineTspans}</text>
+  <text x="${titleX}" y="270" font-family="Metropolis, sans-serif" font-size="76" font-weight="800" fill="#fafafa">${title}</text>
+  <text x="${titleX}" y="310" font-family="Metropolis, sans-serif" font-size="20" font-weight="500" fill="#9ca3af">${company}</text>
+  <text x="80" y="400" font-family="Metropolis, sans-serif" font-size="26" font-weight="500" fill="#d1d5db">${taglineTspans}</text>
   <g transform="translate(960, 80)">
     <rect x="0" y="0" width="160" height="160" rx="20" fill="rgba(167,139,250,0.10)" stroke="rgba(167,139,250,0.35)" stroke-width="2"/>
-    <text x="80" y="100" font-family="Inter, system-ui, sans-serif" font-size="64" font-weight="800" text-anchor="middle" fill="${scoreColor}">${overall}</text>
-    <text x="80" y="130" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="500" text-anchor="middle" fill="#9ca3af">/10 SCORE</text>
+    <text x="80" y="100" font-family="Metropolis, sans-serif" font-size="64" font-weight="800" text-anchor="middle" fill="${scoreColor}">${overall}</text>
+    <text x="80" y="130" font-family="Metropolis, sans-serif" font-size="16" font-weight="500" text-anchor="middle" fill="#9ca3af">/10 SCORE</text>
   </g>
-  <text x="80" y="570" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="500" fill="#6b7280">Independent editorial review. Verified Apr 2026</text>
+  <text x="80" y="570" font-family="Metropolis, sans-serif" font-size="18" font-weight="500" fill="#6b7280">Independent editorial review. Verified Apr 2026</text>
 </svg>`;
 }
 
 /**
  * Rasterize an SVG string to a 1200x630 PNG buffer using resvg.
- * System fonts fall back to what's installed on the build machine
- * (Inter is preferred; if absent, Geist/Arial look fine).
+ * Uses bundled Metropolis webfont files so cards match site typography.
  * Returns null if resvg wasn't available at module load.
  */
 // Bundle our own TTF files so rasterization is reproducible across envs
 // (dev Windows + Cloudflare Pages Linux). Without this, resvg's system
 // font fallback on Cloudflare produced Greek-glyph substitution for
 // Latin codepoints.
-const FONT_DIR = join(ROOT, 'fonts');
+const FONT_DIR = join(ROOT, 'public/fonts/metropolis');
 const FONT_PATHS = [
-  'Inter-400.ttf',
-  'Inter-500.ttf',
-  'Inter-700.ttf',
-  'JetBrainsMono-400.ttf',
-  'JetBrainsMono-500.ttf',
+  'metropolis-latin-400-normal.woff2',
+  'metropolis-latin-500-normal.woff2',
+  'metropolis-latin-700-normal.woff2',
+  'metropolis-latin-800-normal.woff2',
 ].map((f) => join(FONT_DIR, f)).filter((p) => existsSync(p));
 
 function rasterize(svgString) {
@@ -278,7 +276,7 @@ function rasterize(svgString) {
     font: {
       fontFiles: FONT_PATHS,
       loadSystemFonts: false,
-      defaultFontFamily: 'Inter',
+      defaultFontFamily: 'Metropolis',
     },
   });
   return resvg.render().asPng();

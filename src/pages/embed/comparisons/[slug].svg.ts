@@ -67,7 +67,7 @@ export const GET: APIRoute = ({ props }) => {
     </linearGradient>
   </defs>
   <rect width="384" height="${height}" rx="12" fill="url(#g)" stroke="#2a2640" stroke-width="1"/>
-  <g font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+  <g font-family="Metropolis, sans-serif">
     <text x="24" y="28" font-size="10" font-weight="600" fill="#22d3ee" letter-spacing="1.2">AIPEDIA.WIKI</text>
     <text x="24" y="50" font-size="14" font-weight="700" fill="#ffffff">${escapeXml(truncate(title, 40))}</text>
     ${rows}

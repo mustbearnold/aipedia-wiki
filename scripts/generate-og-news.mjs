@@ -10,7 +10,7 @@
  * debug files. Runtime pages only reference PNGs.
  *
  * Style: "site-native" — dark near-black background matching the site,
- * hex cell pattern echoing the brand logo, Geist-family typography, tool
+ * hex cell pattern echoing the brand logo, Metropolis typography, tool
  * logos embedded when news.affects[] lists them. Zero AI-generated
  * illustrations. Pure text + brand + real primary-source tool logos.
  */
@@ -194,7 +194,7 @@ function svgForNews(news) {
         <g transform="translate(${x}, 520)">
           <rect x="0" y="0" width="${Math.min(132, Math.max(84, c.length * 8 + 30))}" height="34" rx="17"
                 fill="rgba(255,255,255,0.035)" stroke="rgba(148,163,184,0.15)" stroke-width="1"/>
-          <text x="15" y="22" font-family="JetBrains Mono, Geist Mono, monospace"
+          <text x="15" y="22" font-family="Metropolis, sans-serif"
                 font-size="11" font-weight="500" letter-spacing="1.2" fill="#94a3b8">${escapeXml(c)}</text>
         </g>`;
     })
@@ -254,14 +254,14 @@ function svgForNews(news) {
   <!-- Top row -->
   <g transform="translate(76, 78)">
     <circle cx="8" cy="9" r="5" fill="#5eead4"/>
-    <text x="24" y="15" font-family="JetBrains Mono, Geist Mono, monospace"
+    <text x="24" y="15" font-family="Metropolis, sans-serif"
           font-size="15" font-weight="500" letter-spacing="1.8" fill="#94a3b8">AI TOOLS NEWS · ${escapeXml(date)}</text>
   </g>
 
   <g transform="translate(776, 66)">
     <rect x="0" y="0" width="112" height="40" rx="20"
           fill="${sev.bg}" stroke="${sev.border}" stroke-width="1"/>
-    <text x="56" y="26" font-family="Inter, Geist, system-ui, sans-serif"
+    <text x="56" y="26" font-family="Metropolis, sans-serif"
           font-size="13" font-weight="800" letter-spacing="1.8"
           text-anchor="middle" fill="${sev.fg}">${sev.label}</text>
   </g>
@@ -269,7 +269,7 @@ function svgForNews(news) {
   <line x1="76" y1="128" x2="888" y2="128" stroke="rgba(148,163,184,0.13)" stroke-width="1"/>
 
   <!-- Headline -->
-  <text x="76" y="${titleStartY}" font-family="Geist, Inter, system-ui, sans-serif"
+  <text x="76" y="${titleStartY}" font-family="Metropolis, sans-serif"
         font-size="${titleFontSize}" font-weight="800" fill="#f8fafc"
         style="letter-spacing:-0.01em;">
     ${titleTspans}
@@ -280,7 +280,7 @@ function svgForNews(news) {
   ${categoryPills}
 
   <!-- Right rail -->
-  <text x="976" y="126" font-family="JetBrains Mono, Geist Mono, monospace"
+  <text x="976" y="126" font-family="Metropolis, sans-serif"
         font-size="11" font-weight="600" letter-spacing="2.2" fill="#67e8f9">AFFECTED TOOLS</text>
   ${toolTiles || `
     <g transform="translate(1016, 208)">
@@ -295,9 +295,9 @@ function svgForNews(news) {
       ? `<image href="${brandLogo}" x="976" y="512" width="40" height="40" preserveAspectRatio="xMidYMid meet"/>`
       : ''
   }
-  <text x="1026" y="538" font-family="Geist, Inter, system-ui, sans-serif"
+  <text x="1026" y="538" font-family="Metropolis, sans-serif"
         font-size="19" font-weight="800" letter-spacing="0" fill="#e5e7eb">aipedia.wiki</text>
-  <text x="1027" y="558" font-family="JetBrains Mono, Geist Mono, monospace"
+  <text x="1027" y="558" font-family="Metropolis, sans-serif"
         font-size="9" font-weight="500" letter-spacing="1.5" fill="#64748b">APRIL 2026 DESK</text>
 </svg>`;
 }
@@ -307,13 +307,12 @@ function svgForNews(news) {
 // resvg falls back to whatever the host system has installed, which on
 // Cloudflare Pages was producing Greek-glyph substitution for Latin
 // codepoints (likely a Cyrillic/Greek-only font fallback).
-const FONT_DIR = join(ROOT, 'fonts');
+const FONT_DIR = join(ROOT, 'public/fonts/metropolis');
 const FONT_PATHS = [
-  'Inter-400.ttf',
-  'Inter-500.ttf',
-  'Inter-700.ttf',
-  'JetBrainsMono-400.ttf',
-  'JetBrainsMono-500.ttf',
+  'metropolis-latin-400-normal.woff2',
+  'metropolis-latin-500-normal.woff2',
+  'metropolis-latin-700-normal.woff2',
+  'metropolis-latin-800-normal.woff2',
 ].map((f) => join(FONT_DIR, f)).filter((p) => existsSync(p));
 
 function rasterize(svg) {
@@ -324,7 +323,7 @@ function rasterize(svg) {
     font: {
       fontFiles: FONT_PATHS,
       loadSystemFonts: false,
-      defaultFontFamily: 'Inter',
+      defaultFontFamily: 'Metropolis',
     },
   });
   return resvg.render().asPng();
