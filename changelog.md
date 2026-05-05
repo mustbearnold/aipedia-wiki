@@ -2,6 +2,18 @@
 
 Search format: each entry starts with `DD-MM-YYYY HH:MM TZ` so changes can be found by day, month, year, and time. Example search keys: `05-05-2026`, `05-2026`, `2026`, `11:29`.
 
+## 05-05-2026 19:11 NZST
+
+- Continued the thin-news cleanup in shortest-first order after the initial post-comparison batch.
+- Expanded fourteen more AI news articles with stronger procurement context, risk framing, tool impact, and evaluation checklists across privacy filtering, Claude computer use, Copilot PR review, robotics, Gemini visualizations, Opus 4.7 IDE adoption, OpenAI litigation, election safeguards, Meta energy infrastructure, PixVerse funding, Cohere sovereign AI, Gemini embeddings, Reka Edge, and Manus M&A controls.
+- Re-verified the added factual details against official OpenAI, Google, GitHub, Anthropic, Capgemini, Reka, Harvey-adjacent, AP, TechCrunch, and other reputable source coverage before editing.
+
+## 05-05-2026 19:05 NZST
+
+- Started the post-comparison news depth sprint from the shortest-news KPI queue.
+- Expanded ten thin AI news articles with stronger buyer context, governance caveats, workflow impact, and evaluation checklists.
+- Verified the GitHub Copilot, OpenAI clinician, DeepSeek V4, Nvidia market-cap, Sinceerly, and Vatican governance stories against available primary or reputable secondary sources before editing.
+
 ## 05-05-2026 18:42 NZST
 
 - Completed the site-wide comparison canonicalization pass across all remaining comparison pages.

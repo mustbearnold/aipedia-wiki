@@ -4,26 +4,40 @@ slug: 2026-04-17-opus-4-7-day-two-ide-adoption
 title: "Cursor, Windsurf, and Zed Ship Claude Opus 4.7 on Day Two"
 date: 2026-04-17
 severity: minor
-summary: "Twenty-four hours after Anthropic's release, Cursor, Windsurf, Zed, and Continue all rolled out Opus 4.7 as a selectable model. Antigravity has not yet added 4.7 and still routes to Opus 4.6. The speed of IDE adoption reflects how tightly coupled the coding-assistant market has become to Anthropic's release cadence."
+summary: "Claude Opus 4.7 reached GitHub Copilot immediately and appeared quickly across the coding-assistant ecosystem, including Cursor. The speed of model adoption shows how tightly AI IDEs are coupled to Anthropic's release cadence, but teams should still re-benchmark cost, latency, and reliability before making Opus 4.7 their default coding model."
 affects: [cursor, windsurf, zed, continue, antigravity, claude, claude-code]
 categories: [ai-coding]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-05
+last_verified: 2026-05-05
 sources:
   - url: "https://github.blog/changelog/2026-04-16-claude-opus-4-7-is-generally-available/"
     title: "Claude Opus 4.7 is generally available on GitHub Copilot"
+  - url: "https://forum.cursor.com/t/opus-4-7-out-now/158192"
+    title: "Opus 4.7 - Out Now! - Cursor Community Forum"
 ---
 
-Cursor, Windsurf, Zed, and Continue all added Opus 4.7 support within 24 hours of Anthropic's April 16 release. GitHub Copilot shipped same-day. Claude Code picked up 4.7 immediately through the Anthropic SDK.
+Claude Opus 4.7 moved quickly into coding products after Anthropic's April 16 release. GitHub Copilot announced same-day availability, and Cursor announced Opus 4.7 in its community forum the same day.
 
-The exception is Google Antigravity, which still routes coding requests to Opus 4.6. Google has not published a 4.7 adoption date for Antigravity.
+That matters because developers usually experience frontier coding models through IDEs, hosted coding agents, and review tools, not through raw API calls. Fast integration can turn a model release into a practical productivity shift within days.
 
-IDE-level availability matters more than model benchmarks for most developers. A 4.7 that ships as the default on day two means the measurable gains on agentic coding, tool use, and long-context reasoning reach working developers within the same week as the model release. Sonnet 4.6 and Haiku 4.5 remain the recommended defaults for latency-sensitive and batch workloads.
+IDE-level availability matters more than model benchmarks for most developers. If a model appears quickly in Copilot, Cursor, and similar tools, its gains in agentic coding, tool use, and long-context reasoning reach working teams in the same week as the model launch.
 
-API pricing on 4.7 stays at $5 input and $25 output per million tokens, unchanged from 4.6. The new tokenizer produces 1.0 to 1.35x more tokens per input, so budget-sensitive workloads should re-benchmark before migrating.
+## Pricing and rollout caveats
+
+GitHub said Opus 4.7 would roll out in Copilot with a 7.5x premium request multiplier as promotional pricing until April 30, 2026. That makes availability only half the story: a model can be in the picker and still be expensive for everyday agent loops.
+
+API pricing reporting around Opus 4.7 has generally described the same per-token rate card as Opus 4.6, but tokenizer changes can still alter real bills if the same prompts produce more tokens. Budget-sensitive teams should re-run their own workloads before migrating.
+
+## Tool impact
+
+For [GitHub Copilot](/tools/github-copilot/) and [Cursor](/tools/cursor/), rapid Opus 4.7 support is a competitive feature. For users, the decision is more practical: use Opus-class models for hard refactors, multi-file debugging, architecture work, and stubborn agent tasks; keep cheaper or faster models for routine edits and batch work.
+
+## Aipedia take
+
+The AI IDE market is becoming a model-distribution market. Products that integrate new frontier models quickly can feel better overnight, but the durable winners will also give teams pricing controls, model routing, evals, and visibility into failed agent work.
 
 ## Sources
 
 - [Claude Opus 4.7 GA on GitHub Copilot](https://github.blog/changelog/2026-04-16-claude-opus-4-7-is-generally-available/)
-- [Anthropic Opus 4.7 release coverage (VentureBeat)](https://venturebeat.com/technology/anthropic-releases-claude-opus-4-7-narrowly-retaking-lead-for-most-powerful-generally-available-llm)
+- [Opus 4.7 in Cursor](https://forum.cursor.com/t/opus-4-7-out-now/158192)
