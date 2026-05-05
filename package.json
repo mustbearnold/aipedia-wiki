@@ -3,16 +3,16 @@
   "type": "module",
   "version": "0.0.1",
   "engines": {
-    "node": ">=22.12.0"
+    "node": ">=24.0.0"
   },
   "scripts": {
     "predev": "node scripts/guard-content.mjs && node scripts/guard-stale-facts.mjs",
     "prebuild": "node scripts/guard-content.mjs && node scripts/guard-stale-facts.mjs && node scripts/fetch-github-stats.mjs && node scripts/generate-og-news.mjs",
     "dev": "node scripts/copy-content.mjs && astro dev",
-    "dev:codex": "npm exec --yes --package=node@22.12.0 -- node node_modules/astro/bin/astro.mjs dev",
+    "dev:codex": "npm exec --yes --package=node@24 -- node node_modules/astro/bin/astro.mjs dev",
     "build:astro": "astro build",
-    "build:fast": "npm run guard:check && npm exec --yes --package=node@22.12.0 -- node scripts/build-fast.mjs",
-    "build:full:node22": "npm exec --yes --package=node@22.12.0 -- node scripts/copy-content.mjs && npm exec --yes --package=node@22.12.0 -- node node_modules/astro/bin/astro.mjs build && npm exec --yes --package=node@22.12.0 -- node scripts/build-pagefind.mjs && npm exec --yes --package=node@22.12.0 -- node scripts/enforce-built-font-policy.mjs && npm exec --yes --package=node@22.12.0 -- node scripts/audit-font-policy.mjs --dist",
+    "build:fast": "npm run guard:check && npm exec --yes --package=node@24 -- node scripts/build-fast.mjs",
+    "build:full:node24": "npm exec --yes --package=node@24 -- node scripts/copy-content.mjs && npm exec --yes --package=node@24 -- node node_modules/astro/bin/astro.mjs build && npm exec --yes --package=node@24 -- node scripts/build-pagefind.mjs && npm exec --yes --package=node@24 -- node scripts/enforce-built-font-policy.mjs && npm exec --yes --package=node@24 -- node scripts/audit-font-policy.mjs --dist",
     "build": "node scripts/copy-content.mjs && astro build && node scripts/build-pagefind.mjs && node scripts/enforce-built-font-policy.mjs && node scripts/audit-font-policy.mjs --dist",
     "guard:check": "node scripts/guard-content.mjs && node scripts/guard-stale-facts.mjs && node scripts/audit-font-policy.mjs --source",
     "guard:baseline": "node scripts/guard-content.mjs --baseline",
