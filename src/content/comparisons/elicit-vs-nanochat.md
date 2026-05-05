@@ -11,6 +11,7 @@ author: "aipedia.wiki Editorial"
 last_updated: 2026-05-05
 last_verified: 2026-05-05
 update_frequency: quarterly
+canonical_fact_table: true
 ---
 
 # Elicit vs nanochat
@@ -21,8 +22,7 @@ update_frequency: quarterly
 
 Choose Elicit when the output needs to be a defensible research workflow: paper search, screening, extraction columns, evidence tables, and human review. Choose nanochat when the goal is educational or technical: reading and modifying a compact LLM training codebase. Elicit helps researchers process papers. nanochat helps engineers understand model training.
 
-## At a Glance
-
+## Decision Snapshot
 | | Elicit | nanochat |
 |---|---|---|
 | **Primary job** | Literature review and structured extraction | LLM training education |

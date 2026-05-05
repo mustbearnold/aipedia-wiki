@@ -11,6 +11,7 @@ author: "aipedia.wiki Editorial"
 last_updated: 2026-05-05
 last_verified: 2026-05-05
 update_frequency: quarterly
+canonical_fact_table: true
 ---
 
 # Mistral AI vs Qwen
@@ -21,8 +22,7 @@ update_frequency: quarterly
 
 Choose Mistral AI if European procurement, hosted deployment, and vendor accountability are central. Choose Qwen if open weights, Alibaba Cloud, multilingual coverage, or self-hosted model experimentation matter more.
 
-## At a Glance
-
+## Decision Snapshot
 | | Mistral AI | Qwen |
 |---|---|---|
 | **Center of gravity** | European hosted model platform | Open-weight Alibaba model family |

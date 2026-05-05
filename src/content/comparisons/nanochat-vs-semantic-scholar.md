@@ -11,6 +11,7 @@ author: "aipedia.wiki Editorial"
 last_updated: 2026-05-05
 last_verified: 2026-05-05
 update_frequency: quarterly
+canonical_fact_table: true
 ---
 
 # nanochat vs Semantic Scholar
@@ -21,8 +22,7 @@ update_frequency: quarterly
 
 Choose Semantic Scholar for literature discovery. Choose nanochat only if you are studying or experimenting with how a small chat model can be trained, not if you need a production research search tool.
 
-## At a Glance
-
+## Decision Snapshot
 | | nanochat | Semantic Scholar |
 |---|---|---|
 | **Primary job** | Educational LLM training reference | Scholarly paper discovery |

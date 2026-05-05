@@ -8,9 +8,10 @@ winner: depends
 seo_title: "Elicit vs Semantic Scholar: Which Is Better in 2026?"
 meta_description: "Honest head-to-head of Elicit and Semantic Scholar as of April 2026. Flagship models, current pricing, and which tool fits your workflow."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-30
-last_verified: 2026-04-30
+last_updated: 2026-05-05
+last_verified: 2026-05-05
 update_frequency: quarterly
+canonical_fact_table: true
 ---
 
 # Elicit vs Semantic Scholar
@@ -21,8 +22,7 @@ update_frequency: quarterly
 
 Semantic Scholar suits free, broad academic search needs; Elicit fits paid workflows requiring AI summarization and extraction from papers.
 
-## At a Glance
-
+## Decision Snapshot
 | | Elicit | Semantic Scholar |
 |---|---|---|
 | **Flagship** | Elicit 3.0 (Claude Sonnet 4.6 backend) | Semantic Scholar 2026 (open models) |

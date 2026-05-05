@@ -11,6 +11,7 @@ author: "aipedia.wiki Editorial"
 last_updated: 2026-05-05
 last_verified: 2026-05-05
 update_frequency: quarterly
+canonical_fact_table: true
 ---
 
 # Descript vs Fish Audio / Fish Speech S2
@@ -21,8 +22,7 @@ update_frequency: quarterly
 
 Choose Descript when the source material already exists and needs editing. Choose Fish Audio when the main job is generating synthetic speech, cloning voices with consent, or building a TTS workflow.
 
-## At a Glance
-
+## Decision Snapshot
 | | Descript | Fish Audio / Fish Speech S2 |
 |---|---|---|
 | **Primary job** | Edit recorded audio/video from a transcript | Generate synthetic speech and cloned voices |

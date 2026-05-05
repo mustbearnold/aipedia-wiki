@@ -8,9 +8,10 @@ winner: depends
 seo_title: "Connected Papers vs Elicit: Which Is Better in 2026?"
 meta_description: "Honest head-to-head of Connected Papers and Elicit as of April 2026. Flagship models, current pricing, and which tool fits your workflow."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-15
-last_verified: 2026-04-15
+last_updated: 2026-05-05
+last_verified: 2026-05-05
 update_frequency: quarterly
+canonical_fact_table: true
 ---
 
 # Connected Papers vs Elicit
@@ -21,8 +22,7 @@ update_frequency: quarterly
 
 Elicit suits workflows needing AI-driven extraction and synthesis from papers. Connected Papers fits visual exploration of citation networks.
 
-## At a Glance
-
+## Decision Snapshot
 | | Connected Papers | Elicit |
 |---|---|---|
 | **Flagship** | Graph-based similarity visualization (v1.4) | Elicit 3.0 with GPT-5.3 integration |

@@ -8,9 +8,10 @@ winner: depends
 seo_title: "Consensus vs Elicit: Which Is Better in 2026?"
 meta_description: "Honest head-to-head of Consensus and Elicit as of April 2026. Flagship models, current pricing, and which tool fits your workflow."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-30
-last_verified: 2026-04-30
+last_updated: 2026-05-05
+last_verified: 2026-05-05
 update_frequency: quarterly
+canonical_fact_table: true
 ---
 
 # Consensus vs Elicit
@@ -21,8 +22,7 @@ update_frequency: quarterly
 
 Elicit suits broader research workflows with extraction and summarization; Consensus excels for quick evidence checks on specific questions. Choice depends on need for speed versus depth.
 
-## At a Glance
-
+## Decision Snapshot
 | | Consensus | Elicit |
 |---|---|---|
 | **Flagship** | Consensus Pro (GPT-5.3 integration) | Elicit (Claude Sonnet 4.6 backend) |

@@ -2,6 +2,18 @@
 
 Search format: each entry starts with `DD-MM-YYYY HH:MM TZ` so changes can be found by day, month, year, and time. Example search keys: `05-05-2026`, `05-2026`, `2026`, `11:29`.
 
+## 05-05-2026 18:42 NZST
+
+- Completed the site-wide comparison canonicalization pass across all remaining comparison pages.
+- Added generated canonical fact-table rendering to every comparison page that was still missing it, bringing comparison coverage to 263 of 263 pages.
+- Renamed body-level manual `At a Glance` sections to `Decision Snapshot` so volatile model, pricing, and capability facts are owned by the generated canonical table.
+
+## 05-05-2026 18:21 NZST
+
+- Continued the comparison quality sprint across `mubert-vs-udio`, `chatgpt-vs-copy-ai`, and `kling-vs-synthesia`.
+- Added decision snapshots, buyer matrices, workflow-fit guidance, procurement checks, and test-before-buying sections for the new batch.
+- Moved `mubert-vs-udio` and `kling-vs-synthesia` onto generated canonical fact tables so volatile pricing, model, credit, and plan details come from verified tool facts instead of brittle hand-written comparison copy.
+
 ## 05-05-2026 16:44 NZST
 
 - Migrated the tracked project runtime pins from Node 22.12.0 to Node 24.
@@ -553,6 +565,18 @@ Notes:
 - Updated `src/content/tools/read-ai.md` after checking Read AI's official plans and pricing page.
 - Refreshed monthly and annual plan pricing for Free, Pro, Enterprise, and Enterprise+.
 - Added buyer-fit and rollout guidance covering meeting length, upload minutes, Search Copilot, playback, HIPAA/SSO controls, and coaching-metric governance.
+
+## 05-05-2026 18:12 NZST
+
+- Continued the comparison-quality sprint with `figma-vs-midjourney`, `ahrefs-vs-frase`, and `freepik-vs-ideogram`.
+- Added decision snapshots, use-case decision matrices, workflow-fit guidance, pricing/procurement context, and buyer test checklists.
+- Added canonical fact-table flags to `ahrefs-vs-frase` and `freepik-vs-ideogram`, and removed stale hardcoded Freepik/Ideogram pricing claims in favor of generated facts.
+
+## 05-05-2026 17:38 NZST
+
+- Started the comparison-quality sprint for high-intent "X vs Y" pages.
+- Expanded `seedance-vs-synthesia`, `instantly-vs-zapier`, `marketmuse-vs-semrush`, `claude-vs-cursor`, and `elevenlabs-vs-wellsaid` with decision matrices, pricing/procurement guidance, workflow-fit sections, and buyer test checklists.
+- Added missing canonical fact-table flags to three upgraded comparisons and corrected the Seedance comparison from 3.1 to current Seedance 2.0 naming.
 
 ## 05-05-2026 17:02 NZST
 

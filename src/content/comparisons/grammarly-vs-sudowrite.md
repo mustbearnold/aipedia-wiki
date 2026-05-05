@@ -11,6 +11,7 @@ author: "aipedia.wiki Editorial"
 last_updated: 2026-05-05
 last_verified: 2026-05-05
 update_frequency: quarterly
+canonical_fact_table: true
 ---
 
 # Grammarly vs Sudowrite
@@ -21,8 +22,7 @@ update_frequency: quarterly
 
 Choose Grammarly if you already have text and need it cleaner, clearer, or more professional. Choose Sudowrite if you are writing fiction and need help developing scenes, characters, prose, and story momentum.
 
-## At a Glance
-
+## Decision Snapshot
 | | Grammarly | Sudowrite |
 |---|---|---|
 | **Primary job** | Polish existing writing | Create and revise fiction |

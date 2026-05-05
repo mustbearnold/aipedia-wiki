@@ -11,6 +11,7 @@ author: "aipedia.wiki Editorial"
 last_updated: 2026-05-05
 last_verified: 2026-05-05
 update_frequency: quarterly
+canonical_fact_table: true
 ---
 
 # Fireflies.ai vs Obsidian
@@ -21,8 +22,7 @@ update_frequency: quarterly
 
 Obsidian suits offline note linking and customization; Fireflies.ai fits automated meeting capture. Choice depends on need for transcription versus personal knowledge management.
 
-## At a Glance
-
+## Decision Snapshot
 | | Fireflies.ai | Obsidian |
 |---|---|---|
 | **Primary job** | Capture and summarize meetings | Organize and connect knowledge |

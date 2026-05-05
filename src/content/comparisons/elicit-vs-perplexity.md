@@ -11,6 +11,7 @@ author: "aipedia.wiki Editorial"
 last_updated: 2026-05-05
 last_verified: 2026-05-05
 update_frequency: quarterly
+canonical_fact_table: true
 ---
 
 # Elicit vs Perplexity
@@ -21,8 +22,7 @@ update_frequency: quarterly
 
 Choose Elicit when the question should be answered from scholarly papers. Choose Perplexity when the question needs current web context, product information, news, or mixed-source synthesis.
 
-## At a Glance
-
+## Decision Snapshot
 | | Elicit | Perplexity |
 |---|---|---|
 | **Primary evidence** | Academic papers | Live web sources |

@@ -11,6 +11,7 @@ author: "aipedia.wiki Editorial"
 last_updated: 2026-05-05
 last_verified: 2026-05-05
 update_frequency: quarterly
+canonical_fact_table: true
 ---
 
 # Fish Audio / Fish Speech S2 vs Resemble AI
@@ -21,8 +22,7 @@ update_frequency: quarterly
 
 Choose Fish Audio if open-weight control, self-hosting, or low-cost TTS experimentation matters. Choose Resemble AI if the voice is a brand asset that needs approval, localization, governance, and production support.
 
-## At a Glance
-
+## Decision Snapshot
 | | Fish Audio / Fish Speech S2 | Resemble AI |
 |---|---|---|
 | **Primary job** | Open TTS and model control | Governed custom voice production |

@@ -11,6 +11,7 @@ author: "aipedia.wiki Editorial"
 last_updated: 2026-05-05
 last_verified: 2026-05-05
 update_frequency: quarterly
+canonical_fact_table: true
 ---
 
 # Elicit vs Scite
@@ -21,8 +22,7 @@ update_frequency: quarterly
 
 Choose Elicit when you are building a literature review or evidence table. Choose Scite when you need citation context and claim verification.
 
-## At a Glance
-
+## Decision Snapshot
 | | Elicit | Scite |
 |---|---|---|
 | **Primary job** | Literature discovery and extraction | Citation context and evidence checking |

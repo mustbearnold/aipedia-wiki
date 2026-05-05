@@ -11,6 +11,7 @@ author: "aipedia.wiki Editorial"
 last_updated: 2026-05-05
 last_verified: 2026-05-05
 update_frequency: quarterly
+canonical_fact_table: true
 ---
 
 # Connected Papers vs nanochat
@@ -23,8 +24,7 @@ That means this is not a normal "which research assistant is better?" comparison
 
 Choose Connected Papers for literature review scoping, citation-neighborhood mapping, and quickly finding foundational or adjacent papers from one known seed. Choose nanochat if you are an engineer, student, or educator trying to learn the full LLM training pipeline from inspectable Python code. Connected Papers is a usable research discovery app. nanochat is a learning and experimentation repo, not a hosted research assistant.
 
-## At a Glance
-
+## Decision Snapshot
 | | Connected Papers | nanochat |
 |---|---|---|
 | **Primary job** | Visual paper discovery from a seed paper | End-to-end LLM training education |
