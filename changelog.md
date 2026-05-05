@@ -554,6 +554,12 @@ Notes:
 - Refreshed monthly and annual plan pricing for Free, Pro, Enterprise, and Enterprise+.
 - Added buyer-fit and rollout guidance covering meeting length, upload minutes, Search Copilot, playback, HIPAA/SSO controls, and coaching-metric governance.
 
+## 05-05-2026 18:12 NZST
+
+- Continued the comparison-quality sprint with `figma-vs-midjourney`, `ahrefs-vs-frase`, and `freepik-vs-ideogram`.
+- Added decision snapshots, use-case decision matrices, workflow-fit guidance, pricing/procurement context, and buyer test checklists.
+- Added canonical fact-table flags to `ahrefs-vs-frase` and `freepik-vs-ideogram`, and removed stale hardcoded Freepik/Ideogram pricing claims in favor of generated facts.
+
 ## 05-05-2026 17:38 NZST
 
 - Started the comparison-quality sprint for high-intent "X vs Y" pages.
