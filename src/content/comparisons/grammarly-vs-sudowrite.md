@@ -53,6 +53,21 @@ Grammarly is a writing quality layer. Sudowrite is a creative drafting partner. 
 
 The tools can pair well. Draft in Sudowrite when the story is still forming, then use Grammarly later to catch mechanical issues, awkward phrasing, or tone problems in exported text.
 
+## Workflow Fit
+
+| Workflow | Better fit | Why |
+|---|---|---|
+| Professional emails | Grammarly | It catches clarity, tone, grammar, and style issues inline. |
+| Novel scene ideation | Sudowrite | It is designed around fiction momentum and alternatives. |
+| Team writing consistency | Grammarly | Style guides and shared writing rules matter. |
+| Character or plot exploration | Sudowrite | Creative expansion is the product. |
+| Academic or workplace drafts | Grammarly | It improves correctness without changing the whole workflow. |
+| First-pass fiction drafting | Sudowrite | It helps generate and reshape story material. |
+
+## Watchouts
+
+Grammarly can make writing cleaner without making the underlying idea stronger. Sudowrite can generate more prose without making the story better. In both cases, the writer still owns structure, accuracy, originality, and final judgment.
+
 ## Who should choose Grammarly
 
 Choose Grammarly for emails, reports, academic drafts, support replies, web copy, and workplace writing that needs fast, consistent editing.

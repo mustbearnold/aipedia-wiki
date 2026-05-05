@@ -2,6 +2,12 @@
 
 Search format: each entry starts with `DD-MM-YYYY HH:MM TZ` so changes can be found by day, month, year, and time. Example search keys: `05-05-2026`, `05-2026`, `2026`, `11:29`.
 
+## 05-05-2026 19:16 NZST
+
+- Started the comparison-depth sprint from the shortest-comparison KPI queue.
+- Expanded twelve thin comparison pages with workflow-fit tables, watchouts, buyer guidance, and more durable decision logic.
+- Removed brittle inline citation tokens and volatile hand-written pricing/model details from the affected comparison copy so generated fact tables remain the source of current facts.
+
 ## 05-05-2026 19:11 NZST
 
 - Continued the thin-news cleanup in shortest-first order after the initial post-comparison batch.
