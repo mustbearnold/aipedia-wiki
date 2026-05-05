@@ -16,7 +16,7 @@ canonical_fact_table: true
 
 # ChatGPT vs QuillBot
 
-[ChatGPT](../tools/chatgpt.md) provides general AI assistance for text generation, analysis, and multimodal tasks. [QuillBot](../tools/quillbot.md) focuses on writing tools like paraphrasing, grammar checking, and summarization. This comparison uses flagship versions and pricing as of April 15, 2026.
+[ChatGPT](../tools/chatgpt.md) provides general AI assistance for writing, research, analysis, coding, images, files, voice, and agent workflows. [QuillBot](../tools/quillbot.md) focuses on paraphrasing, grammar, summarization, citations, plagiarism checks, and mode-based rewriting.
 
 ## Quick Answer
 
@@ -45,6 +45,23 @@ The core split is creation versus transformation. ChatGPT is stronger when the t
 
 Academic users should be careful with both. ChatGPT can overstate or hallucinate unless sources are checked. QuillBot can create originality and citation issues if used to disguise source borrowing. Neither removes the need for disclosure, attribution, or human review.
 
+## Workflow Fit
+
+| Workflow | Better fit | Why |
+|---|---|---|
+| First draft from a prompt | ChatGPT | It can generate structure, arguments, and examples from scratch. |
+| Paraphrasing a paragraph | QuillBot | Mode controls make transformation faster and more predictable. |
+| Research planning | ChatGPT | It can compare sources, ask follow-up questions, and reason through gaps. |
+| Grammar and sentence cleanup | QuillBot | The interface is built around quick writing fixes. |
+| Data, code, or image tasks | ChatGPT | QuillBot is not designed for broad multimodal work. |
+| Citation formatting | QuillBot | Citation and writing utilities are closer to student workflows. |
+
+## Watchouts
+
+ChatGPT is more powerful, but that power can introduce new claims, invented citations, or excessive rewriting if the prompt is loose. QuillBot is narrower, but paraphrasing can still create academic integrity issues when used to hide source borrowing.
+
+For students, the safest workflow is to use either tool for clarity and structure only after the underlying research, citations, and argument are their own.
+
 ## Who should choose ChatGPT
 
 Choose ChatGPT if you want one assistant for writing, research, coding, analysis, image generation, brainstorming, and broader productivity.
@@ -63,7 +80,7 @@ Pick ChatGPT for creation and reasoning. Pick QuillBot for transformation and cl
 Yes, combine ChatGPT for drafting with QuillBot for rephrasing.
 
 **Which is cheaper?**
-QuillBot Premium at $9.95/mo undercuts ChatGPT Plus $20/mo.[3]
+Use the generated fact table and vendor pages for current pricing. QuillBot can be cheaper for pure rewriting; ChatGPT is better value when you need many AI tasks in one subscription.
 
 **Which one should I pick first?**
 ChatGPT for broad use; QuillBot if writing edits dominate your tasks.
