@@ -2,6 +2,11 @@
 
 Search format: each entry starts with `DD-MM-YYYY HH:MM TZ` so changes can be found by day, month, year, and time. Example search keys: `05-05-2026`, `05-2026`, `2026`, `11:29`.
 
+## 05-05-2026 22:06 NZST
+
+- Added `DESIGN.md` as the project-specific aipedia design doctrine so future UI work has a durable reference-product standard for page archetypes, layout rhythm, trust signals, mobile behavior, and external UI-skill usage.
+- Documented how third-party UI skills should be used as design reviewers without replacing aipedia's own product taste.
+
 ## 05-05-2026 21:42 NZST
 
 - Fixed OS chrome page scrolling by making the shell the deliberate vertical scroll viewport and preventing decorative overflow clipping from swallowing wheel input.
