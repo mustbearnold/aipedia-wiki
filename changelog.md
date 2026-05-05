@@ -554,6 +554,12 @@ Notes:
 - Refreshed monthly and annual plan pricing for Free, Pro, Enterprise, and Enterprise+.
 - Added buyer-fit and rollout guidance covering meeting length, upload minutes, Search Copilot, playback, HIPAA/SSO controls, and coaching-metric governance.
 
+## 05-05-2026 17:02 NZST
+
+- Added six post-May-3 AI news articles covering Sierra's funding round, Anthropic's enterprise AI services company, OpenAI's reported deployment venture, PwC/OpenAI finance agents, White House model-vetting talks, and Palantir's Q1 AI-platform demand signal.
+- Used official sources where available and reputable reporting for still-reported items.
+- Kept the new industry-wide news posts free of `affects` links to avoid false tool-page cross-reference obligations.
+
 ## 05-05-2026 12:37 NZST
 
 - Rewrote `src/content/use-cases/ai-agency-stack.md` into a practical AI automation agency stack guide.
