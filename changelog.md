@@ -2,6 +2,12 @@
 
 Search format: each entry starts with `DD-MM-YYYY HH:MM TZ` so changes can be found by day, month, year, and time. Example search keys: `05-05-2026`, `05-2026`, `2026`, `11:29`.
 
+## 05-05-2026 18:21 NZST
+
+- Continued the comparison quality sprint across `mubert-vs-udio`, `chatgpt-vs-copy-ai`, and `kling-vs-synthesia`.
+- Added decision snapshots, buyer matrices, workflow-fit guidance, procurement checks, and test-before-buying sections for the new batch.
+- Moved `mubert-vs-udio` and `kling-vs-synthesia` onto generated canonical fact tables so volatile pricing, model, credit, and plan details come from verified tool facts instead of brittle hand-written comparison copy.
+
 ## 05-05-2026 16:44 NZST
 
 - Migrated the tracked project runtime pins from Node 22.12.0 to Node 24.
