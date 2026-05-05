@@ -11,6 +11,7 @@ author: "aipedia.wiki Editorial"
 last_updated: 2026-05-05
 last_verified: 2026-05-05
 update_frequency: quarterly
+canonical_fact_table: true
 ---
 
 # Exa AI vs You.com
@@ -21,8 +22,7 @@ update_frequency: quarterly
 
 Choose Exa if you are building search into software. Choose You.com if you are doing research as an end user or team.
 
-## At a Glance
-
+## Decision Snapshot
 | | Exa AI | You.com |
 |---|---|---|
 | **Primary job** | Search/retrieval API | AI search and research interface |

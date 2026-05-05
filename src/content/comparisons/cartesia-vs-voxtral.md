@@ -11,6 +11,7 @@ author: "aipedia.wiki Editorial"
 last_updated: 2026-05-05
 last_verified: 2026-05-05
 update_frequency: quarterly
+canonical_fact_table: true
 ---
 
 # Cartesia vs Voxtral
@@ -21,8 +22,7 @@ update_frequency: quarterly
 
 Choose Cartesia when the product needs low-latency spoken output. Choose Voxtral when the priority is evaluating Mistral's audio model capabilities, API economics, or model-stack fit.
 
-## At a Glance
-
+## Decision Snapshot
 | | Cartesia | Voxtral |
 |---|---|---|
 | **Primary job** | Real-time TTS and voice agents | Mistral audio-model evaluation |

@@ -11,6 +11,7 @@ author: "aipedia.wiki Editorial"
 last_updated: 2026-05-05
 last_verified: 2026-05-05
 update_frequency: quarterly
+canonical_fact_table: true
 ---
 
 # Figma AI vs Google Stitch
@@ -21,8 +22,7 @@ update_frequency: quarterly
 
 Choose Figma for production design systems, collaboration, prototyping, and handoff. Choose Google Stitch for fast UI concept generation and early-stage experiments, then expect to refine the work elsewhere.
 
-## At a Glance
-
+## Decision Snapshot
 | | Figma AI | Google Stitch |
 |---|---|---|
 | **Primary job** | Collaborative product design | Prompt-to-UI concept generation |

@@ -11,6 +11,7 @@ author: "aipedia.wiki Editorial"
 last_updated: 2026-05-05
 last_verified: 2026-05-05
 update_frequency: quarterly
+canonical_fact_table: true
 ---
 
 # Consensus vs nanochat
@@ -21,8 +22,7 @@ update_frequency: quarterly
 
 Choose Consensus for paper-grounded answers. Choose nanochat only if your actual goal is learning from an inspectable chat-model training project.
 
-## At a Glance
-
+## Decision Snapshot
 | | Consensus | nanochat |
 |---|---|---|
 | **Primary job** | Academic evidence search | LLM training education |

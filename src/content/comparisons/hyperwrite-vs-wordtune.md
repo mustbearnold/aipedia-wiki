@@ -11,6 +11,7 @@ author: "aipedia.wiki Editorial"
 last_updated: 2026-05-05
 last_verified: 2026-05-05
 update_frequency: quarterly
+canonical_fact_table: true
 ---
 
 # HyperWrite vs Wordtune
@@ -21,8 +22,7 @@ update_frequency: quarterly
 
 Choose HyperWrite if you need help generating or expanding text from prompts. Choose Wordtune if you mostly need to rewrite, shorten, clarify, or adjust tone in text you already have.
 
-## At a Glance
-
+## Decision Snapshot
 | | HyperWrite | Wordtune |
 |---|---|---|
 | **Primary job** | Drafting and writing assistance | Rewriting and polishing |

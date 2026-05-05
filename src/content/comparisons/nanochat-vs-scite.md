@@ -11,6 +11,7 @@ author: "aipedia.wiki Editorial"
 last_updated: 2026-05-05
 last_verified: 2026-05-05
 update_frequency: quarterly
+canonical_fact_table: true
 ---
 
 # nanochat vs Scite
@@ -21,8 +22,7 @@ update_frequency: quarterly
 
 Choose Scite for citation context and evidence checking. Choose nanochat only if the goal is learning about LLM training or inspecting a model-building project.
 
-## At a Glance
-
+## Decision Snapshot
 | | nanochat | Scite |
 |---|---|---|
 | **Primary job** | LLM training education | Citation context and evidence checking |

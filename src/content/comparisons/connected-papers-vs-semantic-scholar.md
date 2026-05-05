@@ -8,9 +8,10 @@ winner: depends
 seo_title: "Connected Papers vs Semantic Scholar: Which Is Better in 2026?"
 meta_description: "Honest head-to-head of Connected Papers and Semantic Scholar as of April 2026. Flagship models, current pricing, and which tool fits your workflow."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-30
-last_verified: 2026-04-30
+last_updated: 2026-05-05
+last_verified: 2026-05-05
 update_frequency: quarterly
+canonical_fact_table: true
 ---
 
 # Connected Papers vs Semantic Scholar
@@ -21,8 +22,7 @@ update_frequency: quarterly
 
 Semantic Scholar suits broader literature searches and AI-assisted analysis; Connected Papers excels for visual exploration of paper clusters. Choice depends on whether you prioritize graph-based discovery or comprehensive search with summaries.
 
-## At a Glance
-
+## Decision Snapshot
 | | Connected Papers | Semantic Scholar |
 |---|---|---|
 | **Flagship** | Connected Papers (no model version; graph algorithm v2.1) | Semantic Scholar (AI Reader with Claude Sonnet 4.6 integration) [1][2] |

@@ -8,9 +8,10 @@ winner: depends
 seo_title: "Capacities vs Obsidian: Which Is Better in 2026?"
 meta_description: "Honest head-to-head of Capacities and Obsidian as of April 2026. Flagship models, current pricing, and which tool fits your workflow."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-03
-last_verified: 2026-05-03
+last_updated: 2026-05-05
+last_verified: 2026-05-05
 update_frequency: quarterly
+canonical_fact_table: true
 ---
 
 # Capacities vs Obsidian
@@ -21,8 +22,7 @@ update_frequency: quarterly
 
 Obsidian suits users prioritizing local control, customization, and free core functionality. Capacities fits structured workflows with built-in AI objects and collaboration.
 
-## At a Glance
-
+## Decision Snapshot
 | | Capacities | Obsidian |
 |---|---|---|
 | **Flagship** | Capacities AI Objects (OpenAI model integration) | Obsidian 1.8 (local AI plugins with OpenAI models/Claude Opus 4.7) |

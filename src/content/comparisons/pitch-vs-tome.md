@@ -11,6 +11,7 @@ author: "aipedia.wiki Editorial"
 last_updated: 2026-05-05
 last_verified: 2026-05-05
 update_frequency: quarterly
+canonical_fact_table: true
 ---
 
 # Pitch vs Tome
@@ -21,8 +22,7 @@ update_frequency: quarterly
 
 Choose Pitch when the deliverable is a team deck that needs branding, collaboration, and presentation polish. Choose Tome when the deliverable is a fast narrative, proposal, or idea page that benefits from AI-first generation.
 
-## At a Glance
-
+## Decision Snapshot
 | | Pitch | Tome |
 |---|---|---|
 | **Primary job** | Collaborative branded decks | AI-generated narrative pages |

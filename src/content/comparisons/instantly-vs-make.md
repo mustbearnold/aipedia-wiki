@@ -11,6 +11,7 @@ author: "aipedia.wiki Editorial"
 last_updated: 2026-05-05
 last_verified: 2026-05-05
 update_frequency: quarterly
+canonical_fact_table: true
 ---
 
 # Instantly vs Make
@@ -21,8 +22,7 @@ update_frequency: quarterly
 
 Choose Instantly if the workflow is outbound sales email: inbox rotation, warmup, deliverability, sequences, replies, and optional lead finding. Choose Make if the workflow is general automation: moving data between apps, branching logic, webhooks, API calls, AI modules, and operations across departments. Instantly is a sender layer. Make is a workflow orchestration canvas.
 
-## At a Glance
-
+## Decision Snapshot
 | | Instantly | Make |
 |---|---|---|
 | **Primary job** | Cold-email sending and deliverability | Visual multi-app automation |

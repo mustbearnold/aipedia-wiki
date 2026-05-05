@@ -2,6 +2,12 @@
 
 Search format: each entry starts with `DD-MM-YYYY HH:MM TZ` so changes can be found by day, month, year, and time. Example search keys: `05-05-2026`, `05-2026`, `2026`, `11:29`.
 
+## 05-05-2026 18:42 NZST
+
+- Completed the site-wide comparison canonicalization pass across all remaining comparison pages.
+- Added generated canonical fact-table rendering to every comparison page that was still missing it, bringing comparison coverage to 263 of 263 pages.
+- Renamed body-level manual `At a Glance` sections to `Decision Snapshot` so volatile model, pricing, and capability facts are owned by the generated canonical table.
+
 ## 05-05-2026 18:21 NZST
 
 - Continued the comparison quality sprint across `mubert-vs-udio`, `chatgpt-vs-copy-ai`, and `kling-vs-synthesia`.
