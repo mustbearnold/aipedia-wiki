@@ -2,6 +2,10 @@
 
 Search format: each entry starts with `DD-MM-YYYY HH:MM TZ` so changes can be found by day, month, year, and time. Example search keys: `05-05-2026`, `05-2026`, `2026`, `11:29`.
 
+## 05-05-2026 21:42 NZST
+
+- Fixed OS chrome page scrolling by making the shell the deliberate vertical scroll viewport and preventing decorative overflow clipping from swallowing wheel input.
+
 ## 05-05-2026 21:02 NZST
 
 - Started the page-padding consistency pass for the next PR.

@@ -4,11 +4,17 @@ body.os-chrome-body {
   background: #03060b;
   color: var(--text-primary);
   color-scheme: dark;
-  overflow-x: hidden;
+  overflow-x: visible;
+  overflow-y: visible;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   transition: background var(--motion-slow, 420ms) var(--motion-ease, cubic-bezier(0.16, 1, 0.3, 1));
+}
+
+html:has(body.os-chrome-body) {
+  overflow-x: auto;
+  overflow-y: auto;
 }
 
 html.light body.os-chrome-body {
@@ -130,12 +136,21 @@ body.os-chrome-body #read-progress {
   --os-stage-article-max: 1180px;
   position: relative;
   min-height: 100vh;
+  height: 100vh;
   width: 100%;
   color: var(--os-text);
   background: var(--os-bg);
   isolation: isolate;
-  overflow: hidden;
+  overflow-x: clip;
+  overflow-y: auto;
+  scrollbar-gutter: stable;
   font-family: var(--font-sans);
+}
+
+@supports (height: 100dvh) {
+  .os-page-shell {
+    height: 100dvh;
+  }
 }
 
 html.light .os-page-shell {
@@ -694,7 +709,7 @@ html.light .os-page-shell {
 }
 
 .os-page-window {
-  overflow: hidden;
+  overflow: clip;
   border: 1px solid var(--os-line-bright);
   border-radius: 18px;
   background: var(--os-window-bg);
