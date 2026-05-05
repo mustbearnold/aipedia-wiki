@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2020-11
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-04
+last_verified: 2026-05-04
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -26,6 +26,52 @@ scores:
   value: 7
   moat: 6
   longevity: 7
+facts:
+  product_scope:
+    value: "You.com combines AI search, chat, research, and productivity modes around web-grounded answers rather than a pure blue-link search engine."
+    source: "https://you.com/"
+    source_label: "You.com homepage"
+    source_id: you-com-official
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
+  pricing_anchor:
+    value: "Free access plus paid Pro/Team-style plans on the public pricing page; verify model, query, and team limits before standardizing."
+    source: "https://you.com/pricing"
+    source_label: "You.com pricing"
+    source_id: you-com-official
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
+  api_available:
+    value: "Yes — You.com docs expose API/developer documentation for integrating web-grounded answer capabilities."
+    source: "https://you.com/docs/welcome"
+    source_label: "You.com API docs"
+    source_id: you-com-docs
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: medium
+    confidence: high
+  best_for:
+    value: "Users who want an AI-search interface with answer synthesis, source grounding, and work modes without moving fully into ChatGPT or Perplexity."
+    source: "https://you.com/"
+    source_label: "You.com homepage"
+    source_id: you-com-official
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
+  watch_out_for:
+    value: "Compare current answer quality, citations, and model access directly against Perplexity, ChatGPT Search, and Kagi before buying a team plan."
+    source: "https://you.com/pricing"
+    source_label: "You.com pricing"
+    source_id: you-com-official
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: medium
 tags: [search-engine, ai-search, research, ari, research-agent, enterprise-ai, answer-engine]
 seo_title: 'You.com: ARI Research Agent Review & Pricing (April 2026)'
 meta_description: >-

@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2023-03
-last_updated: 2026-05-03
-last_verified: 2026-05-03
+last_updated: 2026-05-05
+last_verified: 2026-05-05
 update_frequency: monthly
 seo_title: "Claude: Features, Pricing & Review (2026)"
 meta_description: "Claude runs Opus 4.7 (April 16, 2026) as flagship, Sonnet 4.6, Haiku 4.5. Claude Design (April 17) added for prompt-to-prototype. 1M context, $5/$25 per MTok API. Free tier; Pro $20/mo."
@@ -31,41 +31,142 @@ scores:
 facts:
   flagship_model:
     value: "Claude Opus 4.7"
-    source: "/news/2026-04-16-anthropic-claude-opus-47/"
-    source_label: "Claude Opus 4.7 launch coverage"
-    verified_at: 2026-04-26
+    source: "https://platform.claude.com/docs/en/about-claude/models/overview"
+    source_label: "Anthropic model docs"
+    source_id: anthropic-docs
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
   context_window:
-    value: "1M tokens"
-    source: "/tools/claude/"
-    verified_at: 2026-04-26
-  image_generation:
-    value: "No native image generation"
-    source: "/tools/claude/"
-    verified_at: 2026-04-26
-  real_time_voice:
-    value: "Limited"
-    source: "/tools/claude/"
-    verified_at: 2026-04-26
-  web_browsing:
-    value: "Yes"
-    source: "/tools/claude/"
-    verified_at: 2026-04-26
+    value: "1M tokens on Opus 4.7 and Sonnet 4.6; 200K tokens on Haiku 4.5"
+    source: "https://platform.claude.com/docs/en/about-claude/models/overview"
+    source_label: "Anthropic model docs"
+    source_id: anthropic-docs
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  pricing_anchor:
+    value: "Free; Pro $20/mo or $17/mo annual; Max from $100/mo; Team/Enterprise custom; API Opus 4.7 is $5 input / $25 output per MTok"
+    source: "https://claude.com/pricing"
+    source_label: "Claude pricing"
+    source_id: claude-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  free_plan:
+    value: "Yes — web, mobile, and desktop chat with writing, code/data work, image analysis, web search, memory, file creation, connectors, MCP, and limits"
+    source: "https://claude.com/pricing"
+    source_label: "Claude pricing"
+    source_id: claude-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
   best_paid_tier:
-    value: "Pro ($20/mo)"
-    source: "/tools/claude/"
-    verified_at: 2026-04-26
-  best_for:
-    value: "Long-form writing, deep analysis, Claude Code, and large documents"
-    source: "/tools/claude/"
-    verified_at: 2026-04-26
+    value: "Pro for most individuals; Max for heavy Claude Code, high-output, or early-feature workloads"
+    source: "https://claude.com/pricing"
+    source_label: "Claude pricing"
+    source_id: claude-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  api_available:
+    value: "Yes — Claude API plus Amazon Bedrock, Google Vertex AI, and Microsoft Foundry availability"
+    source: "https://platform.claude.com/docs/en/about-claude/models/overview"
+    source_label: "Anthropic model docs"
+    source_id: anthropic-docs
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  image_generation:
+    value: "No native image generation; current Claude models support image input and vision"
+    source: "https://platform.claude.com/docs/en/about-claude/models/overview"
+    source_label: "Anthropic model docs"
+    source_id: anthropic-docs
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
   video_generation:
-    value: "No native video generation"
-    source: "/tools/claude/"
-    verified_at: 2026-04-26
+    value: "No native video generation in Claude plans or current model docs"
+    source: "https://platform.claude.com/docs/en/about-claude/models/overview"
+    source_label: "Anthropic model docs"
+    source_id: anthropic-docs
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  real_time_voice:
+    value: "Limited — Claude apps list Voice mode, but current Claude models are text/image input with text output"
+    source: "https://claude.com/pricing"
+    source_label: "Claude pricing"
+    source_id: claude-pricing
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  web_browsing:
+    value: "Yes — Claude web search gives real-time web access with citations"
+    source: "https://platform.claude.com/docs/en/agents-and-tools/tool-use/web-search-tool"
+    source_label: "Anthropic web search docs"
+    source_id: anthropic-docs
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
   coding_agent:
-    value: "Claude Code CLI"
-    source: "/tools/claude/"
-    verified_at: 2026-04-26
+    value: "Yes — Claude Code is included in Pro and higher plans and supported with commercial organization/API usage"
+    source: "https://claude.com/pricing"
+    source_label: "Claude pricing"
+    source_id: claude-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  enterprise_controls:
+    value: "SSO, domain capture, central billing/admin, connector controls, desktop deployment, RBAC, SCIM, audit logs, usage analytics, Compliance API, HIPAA-ready options, and custom retention"
+    source: "https://claude.com/pricing"
+    source_label: "Claude pricing"
+    source_id: claude-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  data_retention_or_privacy:
+    value: "API zero-data-retention scope is available; retained feature data is not used for model training without express permission"
+    source: "https://platform.claude.com/docs/en/build-with-claude/api-and-data-retention"
+    source_label: "Anthropic data-retention docs"
+    source_id: anthropic-docs
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  open_source_or_local:
+    value: "No — Claude is proprietary and hosted by Anthropic or managed cloud partners"
+    source: "https://platform.claude.com/docs/en/about-claude/models/overview"
+    source_label: "Anthropic model docs"
+    source_id: anthropic-docs
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  best_for:
+    value: "Long-form writing, deep analysis, long-context document/codebase work, Claude Code, and controlled enterprise workflows"
+    source: "https://platform.claude.com/docs/en/about-claude/models/overview"
+    source_label: "Anthropic model docs"
+    source_id: anthropic-docs
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  watch_out_for:
+    value: "No native image/video generation and a narrower consumer marketplace than ChatGPT or Gemini"
+    source: "https://claude.com/pricing"
+    source_label: "Claude pricing"
+    source_id: claude-pricing
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
 tags: [chatbot, ai-assistant, writing, coding, reasoning, analysis, long-context, artifacts, claude-code, claude-design, extended-thinking, computer-use]
 best_for:
   - long-form writing and editing
@@ -83,14 +184,26 @@ price_history:
   - date: 2026-04-16
     plan: "Opus 4.7"
     price: "$5 / $25 per MTok"
+    source: "https://claude.com/pricing"
+    source_id: claude-pricing
+    source_label: "Claude pricing"
+    verified_at: 2026-05-03
     note: "New flagship released · per-token pricing matches Opus 4.6; effective cost rises 1.0-1.35x due to new tokenizer"
   - date: 2026-04-17
     plan: "Claude Design"
     price: "Bundled in Pro+"
+    source: "https://claude.com/pricing"
+    source_id: claude-pricing
+    source_label: "Claude pricing"
+    verified_at: 2026-05-03
     note: "New product: prompt-to-prototype tool for slides, mockups, one-pagers. Research preview. Available to Pro, Max, Team, Enterprise. Figma stock fell ~7% on the announcement."
   - date: 2026-04-17
     plan: "Pro"
     price: "$20/mo"
+    source: "https://claude.com/pricing"
+    source_id: claude-pricing
+    source_label: "Claude pricing"
+    verified_at: 2026-05-03
     note: "Verified, unchanged"
 ---
 

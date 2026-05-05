@@ -27,29 +27,138 @@ scores:
 facts:
   flagship_model:
     value: "V7 production default; V8.1 Alpha on alpha.midjourney.com"
-    source: "/tools/midjourney/"
-    source_label: "AIpedia Midjourney review"
-    verified_at: 2026-04-22
-  image_generation:
-    value: "Yes (image generation specialist)"
-    source: "/tools/midjourney/"
-    source_label: "AIpedia Midjourney review"
-    verified_at: 2026-04-22
-  video_generation:
-    value: "No native video generation"
-    source: "/tools/midjourney/"
-    source_label: "AIpedia Midjourney review"
-    verified_at: 2026-04-22
+    source: "https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version"
+    source_label: "Midjourney version docs"
+    source_id: midjourney-version-docs
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  context_window:
+    value: "Not applicable — Midjourney is an image-generation system, not a text chat model with a published token context window"
+    source: "https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version"
+    source_label: "Midjourney version docs"
+    source_id: midjourney-version-docs
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+    next_review_at: 2026-06-03
+  pricing_anchor:
+    value: "Basic, Standard, Pro, and Mega plans range from $10 to $120 per month"
+    source: "https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans"
+    source_label: "Midjourney plan comparison docs"
+    source_id: midjourney-plans-docs
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  free_plan:
+    value: "No standard free tier in the current plan comparison"
+    source: "https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans"
+    source_label: "Midjourney plan comparison docs"
+    source_id: midjourney-plans-docs
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
   best_paid_tier:
     value: "Standard ($30/mo); Pro/Mega for stealth or heavy usage"
-    source: "/tools/midjourney/"
-    source_label: "AIpedia Midjourney review"
-    verified_at: 2026-04-22
+    source: "https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans"
+    source_label: "Midjourney plan comparison docs"
+    source_id: midjourney-plans-docs
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  api_available:
+    value: "No official self-serve public API in the core docs; Midjourney is primarily web and Discord based"
+    source: "https://docs.midjourney.com/hc/en-us/articles/33329300781837-Web-vs-Discord"
+    source_label: "Midjourney web vs Discord docs"
+    source_id: midjourney-version-docs
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  image_generation:
+    value: "Yes — image generation specialist"
+    source: "https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version"
+    source_label: "Midjourney version docs"
+    source_id: midjourney-version-docs
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  video_generation:
+    value: "No native video generation in the core Midjourney plan surface"
+    source: "https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans"
+    source_label: "Midjourney plan comparison docs"
+    source_id: midjourney-plans-docs
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  real_time_voice:
+    value: "No real-time voice generation; Midjourney is image-focused"
+    source: "https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version"
+    source_label: "Midjourney version docs"
+    source_id: midjourney-version-docs
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  web_browsing:
+    value: "No web-browsing assistant; Midjourney is an image-generation tool"
+    source: "https://docs.midjourney.com/hc/en-us/articles/33329300781837-Web-vs-Discord"
+    source_label: "Midjourney web vs Discord docs"
+    source_id: midjourney-version-docs
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  coding_agent:
+    value: "No coding agent; Midjourney is image-focused"
+    source: "https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version"
+    source_label: "Midjourney version docs"
+    source_id: midjourney-version-docs
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  enterprise_controls:
+    value: "Pro and Mega add stealth mode; Midjourney is not a conventional enterprise admin suite"
+    source: "https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans"
+    source_label: "Midjourney plan comparison docs"
+    source_id: midjourney-plans-docs
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  data_retention_or_privacy:
+    value: "Commercial and usage rights depend on Midjourney plan and terms; review terms before client-sensitive work"
+    source: "https://docs.midjourney.com/hc/en-us/articles/32083055291277-Terms-of-Service"
+    source_label: "Midjourney terms"
+    source_id: midjourney-terms
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  open_source_or_local:
+    value: "No — Midjourney is proprietary and hosted"
+    source: "https://docs.midjourney.com/hc/en-us/articles/32083055291277-Terms-of-Service"
+    source_label: "Midjourney terms"
+    source_id: midjourney-terms
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
   best_for:
     value: "Cinematic, stylized, and moodboard-quality image generation"
-    source: "/tools/midjourney/"
-    source_label: "AIpedia Midjourney review"
-    verified_at: 2026-04-22
+    source: "https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version"
+    source_label: "Midjourney version docs"
+    source_id: midjourney-version-docs
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  watch_out_for:
+    value: "No free tier or official self-serve API; output control is artistic rather than deterministic production design"
+    source: "https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans"
+    source_label: "Midjourney plan comparison docs"
+    source_id: midjourney-plans-docs
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
 tags: [ai-image, image-generation, text-to-image, midjourney, art, design, creative, v7, v8]
 seo_title: "Midjourney: Features, Pricing & Review (April 2026)"
 meta_description: "Midjourney V7 is the production default; V8 Alpha (March 17, 2026) and V8.1 Alpha (April 14, 2026) run on alpha.midjourney.com. Plans $10-$120/mo, no free tier. Web app now leads Discord in feature depth."
@@ -69,10 +178,16 @@ price_history:
   - date: 2024-01-15
     plan: "Mega"
     price: "$120/mo"
+    source: "https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans"
+    source_label: "Source"
+    source_id: midjourney-plans-docs
     note: "Mega plan introduced"
   - date: 2026-04-15
     plan: "Basic"
     price: "$10/mo"
+    source: "https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans"
+    source_label: "Source"
+    source_id: midjourney-plans-docs
     note: "Verified unchanged. All four tiers flat since 2024."
 ---
 

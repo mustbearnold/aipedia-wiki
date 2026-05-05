@@ -27,6 +27,33 @@ scores:
   value: 8
   moat: 7
   longevity: 6
+facts:
+  best_for:
+    value: "The category leader for AI 3D model generation. Meshy 5 Preview handles text-to-3D, image-to-3D, AI texturing, and rigging in one workspace. Best for image generation, editing, and visual-production workflows."
+    source: "https://www.meshy.ai/pricing"
+    source_label: "Source"
+    source_id: meshy-pricing
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: medium
+  pricing_anchor:
+    value: "Meshy 5 Preview; n/a; Meshy 5 Preview launched with multi-view image-to-3D, 500+ new character animations, and sharper geometry."
+    source: "https://www.meshy.ai/pricing"
+    source_label: "Source"
+    source_id: meshy-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
+  watch_out_for:
+    value: "Non-Tier-1 canonical profile: verify current pricing, usage limits, data policy, and integration details before procurement"
+    source: "https://www.meshy.ai/pricing"
+    source_label: "Source"
+    source_id: meshy-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
 tags: [3d-generation, text-to-3d, image-to-3d, ai-texturing, game-assets, ar-vr, rigging, animation, glb, fbx]
 best_for:
   - indie game developers needing fast asset prototyping
@@ -44,10 +71,16 @@ price_history:
   - date: 2025-07-28
     plan: "Meshy 5 Preview"
     price: "n/a"
+    source: "https://www.meshy.ai/pricing"
+    source_label: "Source"
+    source_id: meshy-pricing
     note: "Meshy 5 Preview launched with multi-view image-to-3D, 500+ new character animations, and sharper geometry."
   - date: 2026-04-15
     plan: "Pro"
     price: "$20/mo"
+    source: "https://www.meshy.ai/pricing"
+    source_label: "Source"
+    source_id: meshy-pricing
     note: "Verified unchanged. Studio remains $60/mo. Annual billing saves roughly 20%."
 ---
 

@@ -24,6 +24,48 @@ scores:
   value: 9
   moat: 8
   longevity: 9
+facts:
+  best_for:
+    value: "Obsidian is best for local-first personal knowledge management where notes remain plain Markdown files and users can extend the workspace through community plugins."
+    source: "https://help.obsidian.md/"
+    source_label: "Obsidian Help"
+    source_id: obsidian-help
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  pricing_anchor:
+    value: "Obsidian's core app is free for personal use, while paid decisions usually center on Sync, Publish, and commercial-use licensing rather than AI features."
+    source: "https://obsidian.md/pricing"
+    source_label: "Obsidian pricing"
+    source_id: obsidian-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: high
+  plugin_surface:
+    value: "The community plugin directory is Obsidian's main expansion layer, including AI and automation workflows that users assemble with their own models, APIs, and vault structure."
+    source: "https://obsidian.md/plugins"
+    source_label: "Obsidian community plugins"
+    source_id: obsidian-plugins
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  data_model:
+    value: "Obsidian's durable moat is file ownership and Markdown portability; buyers should compare it differently from cloud-first note apps with proprietary databases."
+    source: "https://help.obsidian.md/"
+    source_label: "Obsidian Help"
+    source_id: obsidian-help
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  watch_out_for:
+    value: "Obsidian can become complex when heavily customized; teams should standardize vault structure, sync strategy, and plugin policy before treating it as shared infrastructure."
+    source: "https://help.obsidian.md/"
+    source_label: "Obsidian Help"
+    source_id: obsidian-help
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
 tags: [notes, markdown, local-first, knowledge-base, pkm, zettelkasten, graph-view, plugins, ai-plugins, privacy]
 seo_title: 'Obsidian: Features, Pricing & Review (April 2026)'
 meta_description: "Obsidian is a free local-first markdown note app with 2,690+ community plugins. AI via Smart Connections and Copilot using your own API keys. Sync $4/mo, Publish $8/mo, Commercial $50/yr."
@@ -43,10 +85,16 @@ price_history:
   - date: 2024-01-15
     plan: "Sync"
     price: "$4/mo"
+    source: "https://obsidian.md/pricing"
+    source_label: "Source"
+    source_id: obsidian-pricing
     note: "Annual billing rate; monthly is $5/mo"
   - date: 2026-04-17
     plan: "Commercial"
     price: "$50/year per user"
+    source: "https://obsidian.md/pricing"
+    source_label: "Source"
+    source_id: obsidian-pricing
     note: "Verified unchanged"
 ---
 

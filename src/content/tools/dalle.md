@@ -2,16 +2,16 @@
 type: tool
 slug: dalle
 title: DALL-E
-tagline: OpenAI's retired image generation model. Replaced by GPT Image 2 inside ChatGPT in March 2025.
+tagline: OpenAI's older image generation model family. DALL-E 2 and DALL-E 3 are deprecated in the API and scheduled for removal on May 12, 2026.
 category: ai-image
 company: OpenAI
-url: https://openai.com/index/introducing-gpt-image-1-5/
-pricing_model: free
-price_range: "Retired"
-status: dead
+url: https://platform.openai.com/docs/guides/image-generation
+pricing_model: paid
+price_range: "Deprecated API models; use current GPT Image pricing"
+status: active
 launched: 2022-04
-last_updated: 2026-04-22
-last_verified: 2026-04-22
+last_updated: 2026-05-05
+last_verified: 2026-05-05
 update_frequency: quarterly
 affiliate:
   has_program: false
@@ -24,36 +24,117 @@ scores:
   value: 0
   moat: 0
   longevity: 0
+facts:
+  flagship_model:
+    value: "DALL-E 3, deprecated in favor of GPT Image models for new builds"
+    source: "https://platform.openai.com/docs/guides/image-generation"
+    source_id: dalle-best-for
+    verified_at: 2026-05-05
+    next_review_at: 2026-05-12
+    confidence: high
+    status: deprecated
+  image_generation:
+    value: "DALL-E 2 and DALL-E 3 remain documented image API models, but OpenAI recommends GPT Image for current image generation"
+    source: "https://platform.openai.com/docs/guides/image-generation"
+    source_label: "OpenAI image generation guide"
+    source_id: dalle-image-generation
+    verified_at: 2026-05-05
+    confidence: high
+    status: deprecated
+  best_paid_tier:
+    value: "Use current OpenAI GPT Image API pricing rather than starting new work on DALL-E"
+    source: "https://platform.openai.com/docs/pricing/"
+    source_id: dalle-best-paid-tier
+    verified_at: 2026-05-05
+    next_review_at: 2026-05-12
+    confidence: high
+    status: deprecated
+  best_for:
+    value: "Historical context and migration planning away from DALL-E API models"
+    source: "https://platform.openai.com/docs/deprecations/2023-03-20-codex-models%23.doc"
+    source_id: dalle-best-for
+    verified_at: 2026-05-05
+    confidence: high
+    status: deprecated
 tags: [ai-image, image-generation, openai, retired, chatgpt, historical]
-seo_title: "DALL-E (Retired): Replaced by GPT Image 2 (2026)"
-meta_description: "DALL-E was OpenAI's image generation model. Retired March 2025 and replaced by GPT Image 2 inside ChatGPT. API deprecation completes May 12, 2026."
+best_for:
+  - historical context on OpenAI image generation
+  - readers tracking DALL-E API deprecation and GPT Image migration
+  - users who need to understand old DALL-E references in comparisons
+  - teams planning migration away from DALL-E 2 or DALL-E 3 before removal
+not_best_for:
+  - anyone choosing a current image generation product
+  - new production API planning
+  - buyers comparing active image generators
+  - users who want the current ChatGPT image workflow
+seo_title: "DALL-E: Deprecated OpenAI Image Model Family (2026)"
+meta_description: "DALL-E 2 and DALL-E 3 are older OpenAI image models scheduled for API removal on May 12, 2026. New builds should use current GPT Image models."
 author: "aipedia.wiki Editorial"
 quick_answer: >-
-  DALL-E is discontinued. OpenAI retired it in March 2025 and replaced it with GPT Image 2 inside ChatGPT. Readers looking for OpenAI image generation should use ChatGPT.
+  DALL-E is OpenAI's older image model family. DALL-E 2 and DALL-E 3 are deprecated in the API and scheduled for removal on May 12, 2026. New OpenAI image work should use current GPT Image models instead.
 ---
 
 # DALL-E
 
-DALL-E was OpenAI's image generation model, retired in March 2025 and replaced by GPT Image 2 inside [ChatGPT](/tools/chatgpt/). The DALL-E 3 API remains available only until the OpenAI deprecation date of May 12, 2026.
+DALL-E is OpenAI's older image generation model family. DALL-E 2 and DALL-E 3 are still useful as historical labels, but they are not the path for new OpenAI image builds. OpenAI's current image-generation docs center GPT Image models, while the deprecation page lists DALL-E 2 and DALL-E 3 for removal from the API on May 12, 2026.
 
 ## System Verdict
 
-> **Discontinued as of March 2025.** If you arrived looking for OpenAI image generation, use [ChatGPT](/tools/chatgpt/) (GPT Image 2). The DALL-E brand is no longer a shipping product.
+> **Treat DALL-E as deprecated infrastructure.** If you arrived looking for current OpenAI image generation, evaluate GPT Image models through the OpenAI Image API or Responses API instead.
+>
+> **Do not start new API work on `dall-e-2` or `dall-e-3`.** They are scheduled for API removal on May 12, 2026, so any remaining use should be migration or compatibility work.
+>
+> **Keep the page for provenance.** DALL-E still appears in old docs, prompt libraries, vendor comparisons, and product copy. That does not make it the right model family for a new image workflow.
 
 ## What it was
 
-DALL-E launched in 2021 as OpenAI's first text-to-image model. DALL-E 2 followed in April 2022, and DALL-E 3 shipped in October 2023, wired into ChatGPT Plus as the bundled image generator.
+DALL-E launched in 2021 as OpenAI's first text-to-image model family. DALL-E 2 followed in 2022, and DALL-E 3 later became the better-known ChatGPT-era image model.
 
 Through 2023 and 2024 it served as the default OpenAI image surface, pitched against Midjourney and Stable Diffusion. Its strengths were prompt adherence and text rendering for a consumer chat product. Its weakness was aesthetic ceiling: Midjourney routinely beat it on stylized and cinematic output.
 
 ## What replaced it
 
-**gpt-image-2 is the current OpenAI image model as of April 21, 2026**, shipped alongside ChatGPT Images 2.0. See the [launch coverage](/news/2026-04-21-openai-chatgpt-images-2-gpt-image-2/). Features: native reasoning, 4K output, multilingual text rendering across 12+ languages, up to 8 variants per prompt. Image generation runs natively inside the GPT-5 model family rather than through a separate diffusion pipeline. Consumer entry point is the same ChatGPT subscription that covers text, voice, and Codex. Full review: [ChatGPT](/tools/chatgpt/).
+OpenAI's current developer path is GPT Image. The image-generation guide describes GPT Image as the latest and most advanced OpenAI image-generation model family, with better instruction following, text rendering, editing, and world-knowledge use than the DALL-E series.
 
-For the API path, DALL-E 3 endpoints remain callable until May 12, 2026, then retire. New builds should target `gpt-image-2` directly.
+For API work, that means choosing current GPT Image model IDs and endpoint behavior rather than preserving a DALL-E abstraction. The Image API supports GPT Image models as well as DALL-E 2 and DALL-E 3 during the transition period; the Responses API image-generation tool is designed around GPT Image.
+
+For broader site context on OpenAI's image-generation transition, see the local coverage of [ChatGPT Images 2.0 and gpt-image-2](/news/2026-04-21-openai-chatgpt-images-2-gpt-image-2/), but use the official OpenAI docs linked below as the source of truth for current API model IDs.
+
+## API status
+
+As verified on 2026-05-05:
+
+- The OpenAI image guide still documents DALL-E 2 and DALL-E 3 in the Image API.
+- OpenAI's deprecation page lists `dall-e-2` and `dall-e-3` for API removal on May 12, 2026.
+- OpenAI recommends GPT Image models as the current path for new image-generation work.
+- DALL-E 3 only supports image generation in the Image API, while GPT Image models support newer editing and output controls.
+- Current pricing should be read from OpenAI's pricing page because GPT Image costs depend on image tokens, quality, size, and input images.
+
+## Migration notes
+
+Treat DALL-E as a historical label when auditing old prompts, docs, and comparisons. If a vendor, workflow, or internal playbook still says "DALL-E," check whether it means the retired ChatGPT image surface, the DALL-E 3 API, or OpenAI image generation in general. Those are no longer the same operational choice.
+
+For buyers, the decision path is straightforward. If you want OpenAI's current image workflow inside a consumer or team assistant, evaluate [ChatGPT](/tools/chatgpt/) and the current GPT Image path. If you want a pure image model with a different aesthetic ceiling, compare [Midjourney](/tools/midjourney/), [Flux](/tools/flux/), Adobe Firefly, and other active image tools instead of ranking DALL-E as if it were a current buying option.
+
+For developers, the key risk is migration timing. New integrations should not be planned around the DALL-E brand. Update product copy, prompt libraries, tests, and API abstractions so they refer to current model IDs and a current source of truth. Keep this page for provenance, not as a buying recommendation.
+
+## Migration checklist
+
+- Inventory any `dall-e-2` or `dall-e-3` model strings in code, prompt tests, docs, examples, and customer-facing copy.
+- Replace product copy that says "DALL-E" when the real feature now means OpenAI image generation generally.
+- Re-test prompt libraries because GPT Image behavior, output controls, editing support, and moderation settings are not identical to DALL-E behavior.
+- Update pricing assumptions from fixed DALL-E-era per-image thinking to current GPT Image token, size, quality, and editing costs.
+- Keep compatibility notes for historical comparisons, but route new product decisions to the current OpenAI image docs.
+
+## Sources
+
+- [OpenAI image generation guide](https://platform.openai.com/docs/guides/image-generation)
+- [OpenAI image API reference](https://platform.openai.com/docs/api-reference/images/generate)
+- [OpenAI deprecations](https://platform.openai.com/docs/deprecations/2023-03-20-codex-models%23.doc)
+- [OpenAI GPT Image API announcement](https://openai.com/index/image-generation-api/)
 
 ## Related
 
-- [ChatGPT](/tools/chatgpt/): current OpenAI image surface (GPT Image 2)
+- [ChatGPT](/tools/chatgpt/): current OpenAI image surface
 - [Midjourney](/tools/midjourney/): aesthetic-quality leader
 - [Flux](/tools/flux/): open-weight alternative with a public API

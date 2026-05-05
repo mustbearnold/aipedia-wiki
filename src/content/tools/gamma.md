@@ -25,6 +25,48 @@ scores:
   value: 8
   moat: 6
   longevity: 8
+facts:
+  best_for:
+    value: "Gamma is best for quickly turning prompts, outlines, or documents into card-based presentations, docs, and lightweight webpages with less manual slide design than PowerPoint-style tools."
+    source: "https://gamma.app/features"
+    source_label: "Gamma features"
+    source_id: gamma-features
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  pricing_anchor:
+    value: "Gamma pricing is tied to seats and AI credits/features, so buyers should compare both export/collaboration needs and expected generation volume."
+    source: "https://gamma.app/pricing"
+    source_label: "Gamma pricing"
+    source_id: gamma-official
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: high
+  generation_surface:
+    value: "Gamma's AI presentation maker targets prompt-to-deck creation, outline expansion, and content restyling rather than pixel-perfect design-system production."
+    source: "https://gamma.app/ai-presentation-maker"
+    source_label: "Gamma AI presentation maker"
+    source_id: gamma-ai-presentation
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  output_model:
+    value: "Gamma's card format supports presentations, documents, and webpages, which makes it a better fit for narrative content packages than traditional slide-only workflows."
+    source: "https://gamma.app/features"
+    source_label: "Gamma features"
+    source_id: gamma-features
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  watch_out_for:
+    value: "Teams with strict brand systems, complex charts, or heavy PowerPoint handoff requirements should test export fidelity and template control before standardizing on Gamma."
+    source: "https://gamma.app/pricing"
+    source_label: "Gamma pricing"
+    source_id: gamma-official
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
 tags: [presentations, slides, ai-generation, documents, web-pages, pitch-decks, prompt-to-deck]
 seo_title: 'Gamma: Features, Pricing & Review (April 2026)'
 meta_description: >-

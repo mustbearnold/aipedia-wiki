@@ -11,8 +11,8 @@ pricing_model: open-source
 price_range: "Free (open source)"
 status: active
 launched: 2024-10
-last_updated: 2026-04-18
-last_verified: 2026-04-18
+last_updated: 2026-05-04
+last_verified: 2026-05-04
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -25,6 +25,65 @@ scores:
   value: 10
   moat: 6
   longevity: 7
+facts:
+  best_for:
+    value: Best for developers building multi-agent systems who want an open-source AgentOS-style framework descended from the
+      AutoGen ecosystem.
+    source: https://www.ag2.ai/
+    source_label: AG2 official site
+    source_id: ag2-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  pricing_anchor:
+    value: AG2 is open-source software; costs come from hosting, model/API usage, observability, and engineering time rather
+      than a vendor SaaS tier.
+    source: https://github.com/ag2ai/ag2
+    source_label: AG2 GitHub repository
+    source_id: ag2-repository
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  open_source_or_local:
+    value: AG2 is available as an open-source repository and can be installed for local or self-managed agent development.
+    source: https://docs.ag2.ai/latest/docs/user-guide/basic-concepts/installing-ag2/
+    source_label: AG2 install docs
+    source_id: ag2-install-docs
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  api_available:
+    value: AG2 is a developer framework, so its “API” is the programming surface and docs rather than a hosted inference API.
+    source: https://docs.ag2.ai/
+    source_label: AG2 docs
+    source_id: ag2-docs
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  enterprise_controls:
+    value: Enterprise readiness depends on the team’s own deployment, secrets management, evaluation, logging, and guardrail
+      stack around AG2.
+    source: https://docs.ag2.ai/
+    source_label: AG2 docs
+    source_id: ag2-docs
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  watch_out_for:
+    value: Do not compare AG2 as if it were a turnkey automation SaaS; it is a framework that requires engineering ownership
+      and production hardening.
+    source: https://github.com/ag2ai/ag2
+    source_label: AG2 GitHub repository
+    source_id: ag2-repository
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
 tags: [agent-framework, autogen-successor, python, multi-agent, open-source, community]
 seo_title: "AG2: Features & Review (April 2026)"
 meta_description: "AG2 is the community-forked continuation of Microsoft AutoGen. Open-source Python framework for multi-agent AI systems. Free. Best for AutoGen users staying off Azure."

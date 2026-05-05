@@ -28,6 +28,33 @@ scores:
   value: 6
   moat: 7
   longevity: 7
+facts:
+  best_for:
+    value: "AI-powered landing page builder with Smart Builder, Smart Traffic (ML visitor routing), Smart Copy (AI copywriting), and A/B testing. Starter $29/mo to Optimize $249/mo plus Concierge / Agency custom. Best for design, prototyping, UI, and creative-production workflows."
+    source: "https://unbounce.com/pricing/"
+    source_label: "Source"
+    source_id: unbounce-pricing
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: medium
+  pricing_anchor:
+    value: "Starter; $29/mo ($22 annual); Entry tier: 5 pages, 500 traffic/month, 1 user, 1 domain. 25% annual savings advertised."
+    source: "https://unbounce.com/pricing/"
+    source_label: "Source"
+    source_id: unbounce-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
+  watch_out_for:
+    value: "Non-Tier-1 canonical profile: verify current pricing, usage limits, data policy, and integration details before procurement"
+    source: "https://unbounce.com/pricing/"
+    source_label: "Source"
+    source_id: unbounce-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
 tags: [landing-pages, conversion-optimization, a-b-testing, smart-traffic, smart-copy, smart-builder, marketing, ai-copy]
 seo_title: 'Unbounce: Features, Pricing & Review (April 2026)'
 meta_description: >-
@@ -49,14 +76,23 @@ price_history:
   - date: 2026-04-19
     plan: "Starter"
     price: "$29/mo ($22 annual)"
+    source: "https://unbounce.com/pricing/"
+    source_label: "Source"
+    source_id: unbounce-pricing
     note: "Entry tier: 5 pages, 500 traffic/month, 1 user, 1 domain. 25% annual savings advertised."
   - date: 2026-04-19
     plan: "Build"
     price: "$99/mo ($74 annual)"
+    source: "https://unbounce.com/pricing/"
+    source_label: "Source"
+    source_id: unbounce-pricing
     note: "Unlimited pages, 20K traffic/month, 1 user, 1 domain. Practical floor for active use."
   - date: 2026-04-19
     plan: "Experiment"
     price: "$149/mo ($112 annual)"
+    source: "https://unbounce.com/pricing/"
+    source_label: "Source"
+    source_id: unbounce-pricing
     note: "Most Popular tier. Unlimited pages, 30K traffic/month, 3 users, 2 domains, unlimited A/B testing."
 ---
 

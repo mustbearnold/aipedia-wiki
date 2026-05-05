@@ -22,6 +22,9 @@ jobs:
       - name: Install
         run: npm ci
 
+      - name: Script tests and command surface
+        run: npm run test:scripts && npm run audit:commands
+
       - name: Guards and audits
         run: npm run check
 
@@ -33,6 +36,9 @@ jobs:
 
       - name: Install Playwright Chromium
         run: npx playwright install chromium
+
+      - name: API smoke
+        run: npm run smoke:api
 
       - name: Visual smoke
         run: npm run smoke:visual

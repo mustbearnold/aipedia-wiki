@@ -32,22 +32,32 @@ facts:
     value: "Claude Opus 4.6, Claude Sonnet 4.6, Gemini 3.1 Pro, OpenAI frontier models, and other selectable models"
     source: "https://docs.augmentcode.com/models/available-models"
     source_label: "Augment available models"
+    source_id: augment-code-flagship-model
     verified_at: 2026-04-28
+    next_review_at: 2026-06-03
+    confidence: high
   coding_agent:
     value: "Agent can edit files, run terminal/tool workflows, use MCP/native tools, and checkpoint changes"
     source: "https://docs.augmentcode.com/using-augment/agent"
     source_label: "Augment Agent docs"
+    source_id: augment-code-coding-agent
     verified_at: 2026-04-28
+    confidence: high
   best_paid_tier:
     value: "Standard ($60/developer/month) for teams; Indie ($20/month) for solo evaluation"
     source: "https://www.augmentcode.com/pricing"
     source_label: "Augment pricing"
+    source_id: augment-code-best-paid-tier
     verified_at: 2026-04-28
+    next_review_at: 2026-06-03
+    confidence: high
   best_for:
     value: "Large existing codebases where context quality matters more than editor replacement"
     source: "https://docs.augmentcode.com/introduction"
     source_label: "Augment docs"
+    source_id: augment-code-best-for
     verified_at: 2026-04-28
+    confidence: high
 tags: [ai-coding, coding-agent, codebase-context, vscode, jetbrains, cli, mcp, code-review]
 best_for:
   - teams working in large existing codebases
@@ -64,14 +74,23 @@ price_history:
   - date: 2026-04-28
     plan: "Indie"
     price: "$20/mo with 40,000 credits"
+    source: "https://www.augmentcode.com/pricing"
+    source_label: "Source"
+    source_id: augment-code-best-paid-tier
     note: "Verified on augmentcode.com/pricing"
   - date: 2026-04-28
     plan: "Standard"
     price: "$60/developer/mo with 130,000 credits"
+    source: "https://www.augmentcode.com/pricing"
+    source_label: "Source"
+    source_id: augment-code-best-paid-tier
     note: "Verified on augmentcode.com/pricing"
   - date: 2026-04-28
     plan: "Max"
     price: "$200/developer/mo with 450,000 credits"
+    source: "https://www.augmentcode.com/pricing"
+    source_label: "Source"
+    source_id: augment-code-best-paid-tier
     note: "Verified on augmentcode.com/pricing"
 ---
 

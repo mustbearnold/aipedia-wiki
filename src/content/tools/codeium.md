@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: $0-$60/user/month
 status: active
 launched: 2022-12
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-04
+last_verified: 2026-05-04
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -26,6 +26,57 @@ scores:
   value: 8
   moat: 5
   longevity: 6
+facts:
+  best_for:
+    value: Best for developers evaluating the Windsurf/Codeium lineage for IDE-native coding assistance, autocomplete, and agentic
+      editor workflows.
+    source: https://windsurf.com/
+    source_label: Windsurf official site
+    source_id: codeium-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  pricing_anchor:
+    value: Windsurf pricing includes free and paid developer plans plus team or enterprise options; check the live pricing page
+      because plan names and credits change frequently.
+    source: https://windsurf.com/pricing
+    source_label: Windsurf pricing
+    source_id: codeium-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  coding_agent:
+    value: The current product center is Windsurf, an agentic editor experience, while the Codeium name remains part of the
+      product lineage and enterprise code-assistant story.
+    source: https://docs.windsurf.com/
+    source_label: Windsurf docs
+    source_id: codeium-docs
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  enterprise_controls:
+    value: Enterprise evaluation should focus on admin controls, deployment posture, and data governance rather than only individual
+      autocomplete quality.
+    source: https://windsurf.com/pricing
+    source_label: Windsurf pricing
+    source_id: codeium-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  watch_out_for:
+    value: Brand and packaging changed from Codeium toward Windsurf, so old Codeium plan references should be verified before
+      procurement or comparison copy is reused.
+    source: https://windsurf.com/blog/windsurf-pricing-plans
+    source_label: Windsurf pricing plans blog
+    source_id: codeium-pricing-blog
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
 tags: [autocomplete, free, ai-coding, ide-plugin, enterprise, vscode, jetbrains, neovim, windsurf]
 seo_title: 'Codeium: Free AI Code Completion Review & Pricing (April 2026)'
 meta_description: >-

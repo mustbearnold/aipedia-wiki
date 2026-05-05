@@ -26,6 +26,52 @@ scores:
   value: 7
   moat: 6
   longevity: 7
+facts:
+  best_for:
+    value: "Best for creators and marketing teams that want AI voice generation plus a browser production workflow for narration, ads, training, and social video."
+    source: https://lovo.ai/
+    source_label: LOVO AI official site
+    source_id: lovo-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  pricing_anchor:
+    value: "LOVO pricing should be checked for current voice-generation minutes, download rights, voice-cloning limits, team seats, and commercial usage allowances."
+    source: https://lovo.ai/pricing
+    source_label: LOVO pricing
+    source_id: lovo-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  workflow_surface:
+    value: "LOVO/Genny is more than text-to-speech; its fit depends on editor workflow, stock/media features, pronunciation controls, and export requirements."
+    source: https://help.lovo.ai/
+    source_label: LOVO help center
+    source_id: lovo-help
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  voice_control:
+    value: "Evaluate voice catalog, language support, cloning policy, pronunciation editing, and output licensing before committing to a production voice stack."
+    source: https://lovo.ai/
+    source_label: LOVO AI official site
+    source_id: lovo-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  watch_out_for:
+    value: "Voice cloning and synthetic narration require consent, brand-safety review, and downstream rights checks, especially for ads or impersonation-sensitive use cases."
+    source: https://help.lovo.ai/
+    source_label: LOVO help center
+    source_id: lovo-help
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
 tags: [tts, text-to-speech, voice-generator, ai-voice, video-editor, e-learning, voiceover]
 seo_title: 'LOVO (Genny): Features, Pricing & Review (April 2026)'
 meta_description: >-

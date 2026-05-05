@@ -24,6 +24,33 @@ scores:
   value: 9
   moat: 6
   longevity: 7
+facts:
+  best_for:
+    value: "Power-user ChatGPT alternative. Bring your own API key, one-time $49 license, and you get a professional UI for OpenAI frontier models, Claude Opus 4.7, Gemini 3.1 Pro, and open-weight models in one place. Best for chat, research, assistant, and model-access workflows."
+    source: "https://www.typingmind.com/buy"
+    source_label: "typingmind.com/buy"
+    source_id: typingmind-official
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: medium
+  pricing_anchor:
+    value: "Pricing should be checked on the current TypingMind source before purchase; AIpedia has not promoted this page to a full Tier 1 pricing profile yet"
+    source: "https://www.typingmind.com/buy"
+    source_label: "typingmind.com/buy"
+    source_id: typingmind-official
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
+  watch_out_for:
+    value: "Non-Tier-1 canonical profile: verify current pricing, usage limits, data policy, and integration details before procurement"
+    source: "https://www.typingmind.com/buy"
+    source_label: "typingmind.com/buy"
+    source_id: typingmind-official
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
 tags: [byok, chatgpt-alternative, multi-model, power-user, one-time-purchase, api-based]
 seo_title: "TypingMind: Features, Pricing & Review (April 2026)"
 meta_description: "TypingMind is a BYOK (bring-your-own-key) power-user UI for OpenAI frontier models, Claude Opus 4.7, Gemini Pro, and open-weight models. One-time $49 license; teams $99-$299/mo. API calls billed by provider."

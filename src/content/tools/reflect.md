@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "$10/month"
 status: active
 launched: 2022-03
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-04
+last_verified: 2026-05-04
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -24,6 +24,43 @@ scores:
   value: 6
   moat: 6
   longevity: 7
+facts:
+  product_scope:
+    value: "Networked notes app with backlinks, encrypted sync, calendar/review workflows, and an embedded AI assistant for note retrieval and drafting."
+    source: "https://reflect.app/"
+    source_label: "Reflect homepage"
+    source_id: reflect-official
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: medium
+    confidence: high
+  pricing_anchor:
+    value: "Paid note app with a simple consumer/prosumer subscription model surfaced through Reflect; verify the current monthly/annual price before switching."
+    source: "https://reflect.app/"
+    source_label: "Reflect homepage"
+    source_id: reflect-pricing
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: medium
+    confidence: medium
+  best_for:
+    value: "Personal knowledge management users who want fast notes, backlinks, AI help, and less workspace complexity than Notion or Obsidian plugins."
+    source: "https://reflect.app/"
+    source_label: "Reflect homepage"
+    source_id: reflect-official
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: medium
+    confidence: high
+  watch_out_for:
+    value: "Not ideal for large team docs, heavy databases, or fully local markdown vault ownership; compare Obsidian and Notion for those cases."
+    source: "https://reflect.app/"
+    source_label: "Reflect homepage"
+    source_id: reflect-official
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: medium
+    confidence: medium
 tags: [notes, pkm, networked-notes, backlinks, ai-writing, encrypted]
 seo_title: "Reflect: Networked Notes App Review & Pricing (April 2026)"
 meta_description: "Reflect combines bidirectional linking, daily notes, end-to-end encrypted sync, and a GPT-backed AI assistant. Single $10/mo tier after a 14-day trial. No free tier."
@@ -44,10 +81,16 @@ price_history:
   - date: 2025-09-01
     plan: "Pro"
     price: "$10/mo"
+    source: "https://reflect.app"
+    source_label: "Source"
+    source_id: reflect-pricing
     note: "Dropped from $12 on annual renewal track"
   - date: 2026-04-15
     plan: "Pro"
     price: "$10/mo"
+    source: "https://reflect.app"
+    source_label: "Source"
+    source_id: reflect-pricing
     note: "Verified unchanged on reflect.app"
 ---
 

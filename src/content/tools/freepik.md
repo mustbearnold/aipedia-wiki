@@ -24,6 +24,52 @@ scores:
   value: 9
   moat: 7
   longevity: 8
+facts:
+  best_for:
+    value: "Design and marketing teams that want AI image generation alongside Freepik's stock-asset library, templates, and commercial creative workflow."
+    source: "https://www.freepik.com/ai/image-generator"
+    source_label: "Freepik AI image generator"
+    source_id: freepik-official
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
+  creative_surface:
+    value: "Freepik's advantage is bundling generation with asset discovery and editing, which makes it useful for production marketing assets rather than one-off model testing."
+    source: "https://www.freepik.com/ai/image-generator"
+    source_label: "Freepik AI image generator"
+    source_id: freepik-official
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: medium
+  pricing_anchor:
+    value: "Freepik uses plan and credit packaging; verify the pricing page before committing a team because AI generation allowances can change."
+    source: "https://www.freepik.com/pricing"
+    source_label: "Freepik pricing"
+    source_id: freepik-pricing
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: medium
+  workflow_surface:
+    value: "Best for teams already using stock assets, brand visuals, and image generation in one production flow. Pure model evaluators should compare underlying model access separately."
+    source: "https://www.freepik.com/ai/image-generator"
+    source_label: "Freepik AI image generator"
+    source_id: freepik-official
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: medium
+  watch_out_for:
+    value: "Check rights, attribution rules, credit burn, and whether the specific model or feature you need is included in the selected plan."
+    source: "https://www.freepik.com/pricing"
+    source_label: "Freepik pricing"
+    source_id: freepik-pricing
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
 tags: [ai-image, image-generation, commercial-license, stock-assets, flux, freepik, mystic, ensemble]
 seo_title: "Freepik: Features, Pricing & Review (April 2026)"
 meta_description: "Freepik is an ensemble AI image platform. Mystic, Flux, Imagen, Seedream, GPT Image, and Nano Banana Pro live under one credit system. Plans $0-$158/mo. Stock library of 190M+ assets bundled in."
@@ -43,10 +89,16 @@ price_history:
   - date: 2026-04-17
     plan: "Premium"
     price: "$12/mo"
+    source: "https://freepik.com/pricing"
+    source_label: "Source"
+    source_id: freepik-pricing
     note: "Verified unchanged at freepik.com/pricing (annual billing)"
   - date: 2026-04-17
     plan: "Premium+"
     price: "$24.50/mo"
+    source: "https://freepik.com/pricing"
+    source_label: "Source"
+    source_id: freepik-pricing
     note: "Verified, bundle of 20+ AI models plus stock library"
 ---
 

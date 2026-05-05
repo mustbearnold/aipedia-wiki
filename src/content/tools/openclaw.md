@@ -25,6 +25,33 @@ scores:
   value: 10
   moat: 3
   longevity: 7
+facts:
+  best_for:
+    value: "Self-hosted open-source personal AI agent that controls your computer, browser, and shell from 24+ messaging apps. Now governed by an independent foundation. Best for workflow automation, agentic operations, and business-process automation."
+    source: "https://github.com/openclaw/openclaw"
+    source_label: "openclaw/openclaw GitHub"
+    source_id: openclaw-official
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: medium
+  pricing_anchor:
+    value: "Pricing should be checked on the current OpenClaw source before purchase; AIpedia has not promoted this page to a full Tier 1 pricing profile yet"
+    source: "https://github.com/openclaw/openclaw"
+    source_label: "openclaw/openclaw GitHub"
+    source_id: openclaw-official
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
+  watch_out_for:
+    value: "Non-Tier-1 canonical profile: verify current pricing, usage limits, data policy, and integration details before procurement"
+    source: "https://github.com/openclaw/openclaw"
+    source_label: "openclaw/openclaw GitHub"
+    source_id: openclaw-official
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
 tags: [open-source, self-hosted, personal-assistant, browser-automation, multi-platform, local-first, whatsapp, telegram, discord, slack, signal, imessage]
 seo_title: "OpenClaw: Features, Pricing & Review (April 2026)"
 meta_description: "OpenClaw is a free, open-source personal AI agent that runs locally and reaches your AI from WhatsApp, Telegram, Discord, Slack, Signal, or iMessage. MIT license, 247K+ GitHub stars, governed by an independent foundation with OpenAI sponsorship."

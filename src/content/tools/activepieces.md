@@ -13,8 +13,8 @@ pricing_model: open-source
 price_range: Free self-host / $5 per active flow (cloud)
 status: active
 launched: 2022-06
-last_updated: 2026-05-03
-last_verified: 2026-05-03
+last_updated: 2026-05-04
+last_verified: 2026-05-04
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -27,6 +27,66 @@ scores:
   value: 9
   moat: 6
   longevity: 7
+facts:
+  best_for:
+    value: Best for teams that want open-source workflow automation with AI agents, MCP-style integrations, and self-hosting
+      options.
+    source: https://github.com/activepieces/activepieces
+    source_label: Activepieces GitHub repository
+    source_id: activepieces-repository
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  pricing_anchor:
+    value: Activepieces combines a free self-host path with cloud pricing; check the current flow, task, user, and enterprise
+      limits before standardizing.
+    source: https://www.activepieces.com/pricing
+    source_label: Activepieces pricing
+    source_id: activepieces-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  open_source_or_local:
+    value: The project is open source and self-hostable, which is the main reason to compare it against Zapier, Make, and closed
+      automation suites.
+    source: https://github.com/activepieces/activepieces
+    source_label: Activepieces GitHub repository
+    source_id: activepieces-repository
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  api_available:
+    value: Docs cover setup and workflow-building concepts for teams using Activepieces beyond the hosted UI.
+    source: https://www.activepieces.com/docs
+    source_label: Activepieces docs
+    source_id: activepieces-docs
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  enterprise_controls:
+    value: Enterprise fit depends on self-hosting, governance, connector coverage, and support, not just the headline cloud
+      price.
+    source: https://www.activepieces.com/pricing
+    source_label: Activepieces pricing
+    source_id: activepieces-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  watch_out_for:
+    value: 'Open-source flexibility comes with operator responsibility: teams need to own hosting, connector maintenance, secrets,
+      and workflow reliability if they self-host.'
+    source: https://www.activepieces.com/docs
+    source_label: Activepieces docs
+    source_id: activepieces-docs
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
 tags: [automation, open-source, zapier-alternative, no-code, workflow, self-hosted, mcp]
 seo_title: 'Activepieces Review: Open-Source Zapier Alternative (April 2026)'
 meta_description: >-
@@ -49,10 +109,16 @@ price_history:
   - date: 2026-02-01
     plan: "Standard"
     price: "$5/flow/mo"
+    source: "https://www.activepieces.com/pricing"
+    source_label: "Source"
+    source_id: activepieces-pricing
     note: "Per-flow pricing replaces per-task metering; 10 flows included free."
   - date: 2026-04-17
     plan: "Self-hosted"
     price: "Free"
+    source: "https://www.activepieces.com/pricing"
+    source_label: "Source"
+    source_id: activepieces-pricing
     note: "Verified unchanged. MIT license, unlimited runs."
 ---
 

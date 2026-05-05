@@ -24,6 +24,52 @@ scores:
   value: 10
   moat: 8
   longevity: 8
+facts:
+  best_for:
+    value: "Creators and marketers comparing AI video models for short cinematic clips, image-to-video, and social-video experimentation."
+    source: "https://klingai.com"
+    source_label: "Kling AI official site"
+    source_id: kling-official
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
+  model_surface:
+    value: "Kling is best evaluated as a fast-moving video-generation product where model version, clip length, resolution, and effects availability can change quickly."
+    source: "https://klingai.com"
+    source_label: "Kling AI official site"
+    source_id: kling-official
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: medium
+  pricing_anchor:
+    value: "Freemium and paid creator plans are published on the Kling pricing page; check current credit rules before production use."
+    source: "https://klingai.com/pricing"
+    source_label: "Kling AI pricing"
+    source_id: kling-pricing
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
+  workflow_surface:
+    value: "Use it for concepting, social clips, and visual tests where iteration speed matters; compare against Runway, Pika, Hailuo, and Veo for controlled production pipelines."
+    source: "https://klingai.com"
+    source_label: "Kling AI official site"
+    source_id: kling-official
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: medium
+  watch_out_for:
+    value: "Video model quality varies by prompt, motion type, generation length, and plan limits. Test with real brand-safe prompts before committing to a campaign workflow."
+    source: "https://klingai.com/pricing"
+    source_label: "Kling AI pricing"
+    source_id: kling-pricing
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
 tags: [ai-video, video-generation, text-to-video, image-to-video, video-ai, kuaishou, kling]
 seo_title: 'Kling 3.0: Features, Pricing & Review (April 2026)'
 meta_description: >-
@@ -44,10 +90,16 @@ price_history:
   - date: 2024-06-06
     plan: "Standard"
     price: "$10/mo"
+    source: "https://klingai.com/pricing"
+    source_label: "Source"
+    source_id: kling-pricing
     note: "Standard at launch"
   - date: 2026-04-17
     plan: "Standard"
     price: "$10/mo"
+    source: "https://klingai.com/pricing"
+    source_label: "Source"
+    source_id: kling-pricing
     note: "Verified, unchanged"
 ---
 

@@ -30,34 +30,141 @@ scores:
 facts:
   flagship_model:
     value: "Eleven v3"
-    source: "/tools/elevenlabs/"
-    source_label: "AIpedia ElevenLabs review"
-    verified_at: 2026-04-19
-  real_time_voice:
-    value: "Flash v2.5 (~75ms) and ElevenAgents"
-    source: "/tools/elevenlabs/"
-    source_label: "AIpedia ElevenLabs review"
-    verified_at: 2026-04-19
-  image_generation:
-    value: "No"
-    source: "/tools/elevenlabs/"
-    source_label: "AIpedia ElevenLabs review"
-    verified_at: 2026-04-19
-  video_generation:
-    value: "No native video generation"
-    source: "/tools/elevenlabs/"
-    source_label: "AIpedia ElevenLabs review"
-    verified_at: 2026-04-19
+    source: "https://elevenlabs.io/docs/overview/models"
+    source_label: "ElevenLabs model docs"
+    source_id: elevenlabs-model-docs
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  context_window:
+    value: "Not applicable — ElevenLabs is a speech/audio platform rather than a text chat model with a published token context window"
+    source: "https://elevenlabs.io/docs/overview/models"
+    source_label: "ElevenLabs model docs"
+    source_id: elevenlabs-model-docs
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+    next_review_at: 2026-06-03
+  pricing_anchor:
+    value: "Free, Starter, Creator, Pro, Scale, Business, and Enterprise-style tiers; API pricing is usage-based"
+    source: "https://elevenlabs.io/pricing"
+    source_label: "ElevenLabs pricing"
+    source_id: elevenlabs-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  free_plan:
+    value: "Yes — free tier available with monthly character/credit limits"
+    source: "https://elevenlabs.io/pricing"
+    source_label: "ElevenLabs pricing"
+    source_id: elevenlabs-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
   best_paid_tier:
     value: "Creator ($22/mo) for creators; Pro ($99/mo) for production"
-    source: "/tools/elevenlabs/"
-    source_label: "AIpedia ElevenLabs review"
-    verified_at: 2026-04-19
+    source: "https://elevenlabs.io/pricing"
+    source_label: "ElevenLabs pricing"
+    source_id: elevenlabs-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  api_available:
+    value: "Yes — API pricing and model docs are public"
+    source: "https://elevenlabs.io/pricing/api"
+    source_label: "ElevenLabs API pricing"
+    source_id: elevenlabs-api-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  image_generation:
+    value: "No native image generation; ElevenLabs is audio and voice focused"
+    source: "https://elevenlabs.io/docs/overview/models"
+    source_label: "ElevenLabs model docs"
+    source_id: elevenlabs-model-docs
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  video_generation:
+    value: "No native video generation; ElevenLabs is audio and voice focused"
+    source: "https://elevenlabs.io/docs/overview/models"
+    source_label: "ElevenLabs model docs"
+    source_id: elevenlabs-model-docs
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  real_time_voice:
+    value: "Flash v2.5 and Conversational AI support low-latency voice agents"
+    source: "https://elevenlabs.io/conversational-ai"
+    source_label: "ElevenLabs Conversational AI"
+    source_id: elevenlabs-model-docs
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  web_browsing:
+    value: "No web-browsing assistant; ElevenLabs is audio and voice focused"
+    source: "https://elevenlabs.io/docs/overview/models"
+    source_label: "ElevenLabs model docs"
+    source_id: elevenlabs-model-docs
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  coding_agent:
+    value: "No coding agent; ElevenLabs is audio and voice focused"
+    source: "https://elevenlabs.io/docs/overview/models"
+    source_label: "ElevenLabs model docs"
+    source_id: elevenlabs-model-docs
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  enterprise_controls:
+    value: "Business and enterprise options are available for higher-volume and organizational voice workflows"
+    source: "https://elevenlabs.io/pricing"
+    source_label: "ElevenLabs pricing"
+    source_id: elevenlabs-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  data_retention_or_privacy:
+    value: "Voice cloning and production use require attention to consent, rights, and workspace policy before enterprise deployment"
+    source: "https://elevenlabs.io/docs/creative-platform/voices/voice-cloning"
+    source_label: "ElevenLabs voice cloning docs"
+    source_id: elevenlabs-model-docs
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  open_source_or_local:
+    value: "No — ElevenLabs is proprietary and hosted"
+    source: "https://elevenlabs.io"
+    source_label: "ElevenLabs product page"
+    source_id: elevenlabs-model-docs
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
   best_for:
     value: "High-quality TTS, voice cloning, dubbing, audiobooks, and voice agents"
-    source: "/tools/elevenlabs/"
-    source_label: "AIpedia ElevenLabs review"
-    verified_at: 2026-04-19
+    source: "https://elevenlabs.io/docs/overview/models"
+    source_label: "ElevenLabs model docs"
+    source_id: elevenlabs-model-docs
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  watch_out_for:
+    value: "Usage scales by credits/characters and voice cloning requires consent and rights discipline"
+    source: "https://elevenlabs.io/pricing"
+    source_label: "ElevenLabs pricing"
+    source_id: elevenlabs-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
 tags: [tts, voice-cloning, text-to-speech, voice-ai, audio, dubbing, voice-agents, conversational-ai]
 seo_title: 'ElevenLabs: Features, Pricing & Review (April 2026)'
 meta_description: >-
@@ -79,14 +186,23 @@ price_history:
   - date: 2026-04-15
     plan: "Starter"
     price: "$6/mo"
+    source: "https://elevenlabs.io/pricing"
+    source_label: "Source"
+    source_id: elevenlabs-pricing
     note: "Starter plan verified at $6/mo (30K credits + commercial rights + IVC)"
   - date: 2026-04-19
     plan: "Scale"
     price: "$299/mo (was $330)"
+    source: "https://elevenlabs.io/pricing"
+    source_label: "Source"
+    source_id: elevenlabs-pricing
     note: "Scale plan cut from $330 to $299/mo; credits reduced from 2M to 1.8M. Creator credits bumped from 100K to 121K, Pro credits from 500K to 600K."
   - date: 2026-04-19
     plan: "API · v3 / Multilingual v2"
     price: "$0.10 / 1K chars (was $0.12)"
+    source: "https://elevenlabs.io/pricing"
+    source_label: "Source"
+    source_id: elevenlabs-pricing
     note: "API pricing cut ~17% across v3 and Multilingual v2. Flash and Turbo cut from $0.06 to $0.05 / 1K chars. Scribe v2 Realtime raised from $0.28 to $0.39 / hour."
 ---
 

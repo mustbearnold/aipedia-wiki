@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0 self-hosted / $25-$99/mo cloud"
 status: active
 launched: 2023-06
-last_updated: 2026-05-03
-last_verified: 2026-05-03
+last_updated: 2026-05-04
+last_verified: 2026-05-04
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -25,6 +25,56 @@ scores:
   value: 10
   moat: 7
   longevity: 8
+facts:
+  best_for:
+    value: Best for teams that want a local-first or self-hostable document-chat, RAG, and agent workspace with broad model-provider
+      choice.
+    source: https://anythingllm.com/
+    source_label: AnythingLLM official site
+    source_id: anythingllm-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  pricing_anchor:
+    value: AnythingLLM has hosted cloud pricing, but self-hosting changes the real cost model to infrastructure, model/API spend,
+      and admin time.
+    source: https://anythingllm.com/pricing
+    source_label: AnythingLLM hosted cloud pricing
+    source_id: anythingllm-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  open_source_or_local:
+    value: The GitHub repository is the key proof point for open-source/self-managed evaluation.
+    source: https://github.com/Mintplex-Labs/anything-llm
+    source_label: AnythingLLM GitHub repository
+    source_id: anythingllm-repository
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  runtime_architecture:
+    value: Docs should be checked for connector, workspace, vector database, agent, and deployment assumptions before enterprise
+      rollout.
+    source: https://docs.anythingllm.com/
+    source_label: AnythingLLM docs
+    source_id: anythingllm-docs
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  watch_out_for:
+    value: AnythingLLM is attractive when data locality matters, but buyers must own model selection, retrieval quality, permissions,
+      backups, and security hardening if self-hosting.
+    source: https://docs.anythingllm.com/
+    source_label: AnythingLLM docs
+    source_id: anythingllm-docs
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
 tags: [rag, self-hosted, open-source, document-chat, agents, privacy, enterprise, mit-licensed]
 seo_title: "AnythingLLM: Features, Pricing & Review (April 2026)"
 meta_description: "AnythingLLM is an MIT-licensed open-source AI desktop + server app with document chat, agents, and multi-user support. Free self-hosted; cloud $25-$99/mo. Best for privacy-first enterprise RAG."

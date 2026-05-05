@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "Free 30 req/min / paid usage-based"
 status: active
 launched: 2020-01
-last_updated: 2026-05-03
-last_verified: 2026-05-03
+last_updated: 2026-05-04
+last_verified: 2026-05-04
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -24,6 +24,56 @@ scores:
   value: 9
   moat: 9
   longevity: 8
+facts:
+  best_for:
+    value: Best for developers who need very low-latency hosted inference for supported open models through an API.
+    source: https://groq.com/
+    source_label: Groq official site
+    source_id: groq-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  pricing_anchor:
+    value: Groq on-demand pricing is token/model dependent; verify current per-model rates, rate limits, and enterprise deployment
+      terms before projecting spend.
+    source: https://groq.com/pricing/
+    source_label: Groq pricing
+    source_id: groq-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  api_available:
+    value: Groq is API-first; the docs define authentication, chat/completions behavior, streaming, tool use, and production
+      integration assumptions.
+    source: https://console.groq.com/docs/overview
+    source_label: Groq docs
+    source_id: groq-docs
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  model_control:
+    value: Supported model availability is a high-volatility decision fact because Groq’s value depends on whether your target
+      model is on the current supported list.
+    source: https://console.groq.com/docs/models
+    source_label: Groq supported models
+    source_id: groq-models
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  watch_out_for:
+    value: Benchmark Groq on your own prompts for latency, context length, model quality, rate limits, and fallback strategy
+      rather than buying only on speed positioning.
+    source: https://console.groq.com/docs/models
+    source_label: Groq supported models
+    source_id: groq-models
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
 tags: [inference, lpu, fast, llama, qwen, deepseek, hardware, nvidia-acquisition]
 seo_title: "Groq (LPU Inference): Features, Pricing & Review (April 2026)"
 meta_description: "Groq is the fastest LLM inference provider in 2026 (not Grok, xAI's chatbot). Custom LPU silicon pushes 300-1,000 tokens/sec on open-weight models. Free 30 req/min. Llama 4 Scout $0.11/$0.34 per M tokens. Acquired by Nvidia for $20B."

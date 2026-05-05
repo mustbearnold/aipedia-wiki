@@ -32,17 +32,23 @@ facts:
     value: accountants, bookkeepers, SMB finance teams, and business owners who need financial document capture before accounting software
     source: 'https://help.dext.com/en/articles/105688-what-is-dext-and-who-is-it-for'
     source_label: 'Dext Help: What is Dext, and who is it for?'
+    source_id: dext-accounting-integrations
     verified_at: 2026-05-02
+    confidence: high
   pricing:
     value: 14-day free trial; Dext Business scales by users and monthly document volume; practice plans are priced per client
     source: 'https://help.dext.com/en/articles/647776-dext-plans-for-businesses'
     source_label: 'Dext Help: Dext plans for businesses'
+    source_id: dext-pricing
     verified_at: 2026-05-02
+    confidence: high
   accounting_integrations:
     value: publishes to accounting software including Xero, QuickBooks, Sage, and other integrations
     source: 'https://help.dext.com/en/articles/105688-what-is-dext-and-who-is-it-for'
     source_label: 'Dext Help: What is Dext, and who is it for?'
+    source_id: dext-accounting-integrations
     verified_at: 2026-05-02
+    confidence: high
 tags: [bookkeeping, accounting, expenses, invoices, receipts, automation, document-capture, bank-statements, xero, quickbooks, sage]
 seo_title: 'Dext: Features, Pricing & Review (May 2026)'
 meta_description: >-
@@ -64,10 +70,16 @@ price_history:
   - date: 2026-05-02
     plan: Dext Business
     price: Region- and usage-dependent
+    source: "https://help.dext.com/en/articles/647776-dext-plans-for-businesses"
+    source_label: "Source"
+    source_id: dext-pricing
     note: "Dext says Business pricing scales by users and monthly document volume, with a free 14-day trial and no payment details required upfront."
   - date: 2026-05-02
     plan: Practice accounts
     price: Per-client pricing
+    source: "https://help.dext.com/en/articles/647776-dext-plans-for-businesses"
+    source_label: "Source"
+    source_id: dext-pricing
     note: "Dext says Practice Essentials and Practice Advanced are priced per client, with Advanced adding team, workflow, and practice-performance tools."
 ---
 

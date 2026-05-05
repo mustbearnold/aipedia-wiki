@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2022-11
-last_updated: 2026-05-03
-last_verified: 2026-05-03
+last_updated: 2026-05-05
+last_verified: 2026-05-05
 update_frequency: monthly
 seo_title: "ChatGPT: Features, Pricing & Review (May 2026)"
 meta_description: "ChatGPT runs GPT-5.3 Instant on all tiers, GPT-5.5 Thinking on Plus, and GPT-5.5 Pro on Pro, Business, and Enterprise plans. Plus is $20/mo; Pro plans at $100 and $200/mo add heavier Codex usage. DALL-E and Sora are retired."
@@ -31,45 +31,145 @@ scores:
 facts:
   flagship_model:
     value: "GPT-5.5"
-    source: "https://openai.com/index/introducing-gpt-5-5/"
-    source_label: "OpenAI GPT-5.5 release"
-    verified_at: 2026-05-02
+    source: "https://platform.openai.com/docs/models"
+    source_label: "OpenAI model docs"
+    source_id: openai-model-docs
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
   context_window:
-    value: "ChatGPT reasoning context: 256K on Go, Plus, Business, and Enterprise; 400K on Pro"
+    value: "ChatGPT reasoning context varies by tier; GPT-5.5 API supports a 1M-token context window"
+    source: "https://platform.openai.com/docs/models"
+    source_label: "OpenAI model docs"
+    source_id: openai-model-docs
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  pricing_anchor:
+    value: "Free, Go, Plus, Pro, Business, and Enterprise; Plus remains the default paid tier for most individuals"
     source: "https://chatgpt.com/pricing/"
     source_label: "ChatGPT pricing"
-    verified_at: 2026-05-02
-    note: "ChatGPT context windows differ by model family and plan; API context should be described separately."
-  image_generation:
-    value: "Yes (gpt-image-2)"
-    source: "/news/2026-04-21-openai-chatgpt-images-2-gpt-image-2/"
-    source_label: "ChatGPT Images 2.0 launch coverage"
-    verified_at: 2026-04-26
-  real_time_voice:
-    value: "Yes"
-    source: "/tools/chatgpt/"
-    verified_at: 2026-04-26
-  web_browsing:
-    value: "Yes"
-    source: "/tools/chatgpt/"
-    verified_at: 2026-04-26
+    source_id: openai-chatgpt-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  free_plan:
+    value: "Yes — limited GPT-5.3 access, uploads, image generation, deep research, memory, context, and Codex access"
+    source: "https://chatgpt.com/pricing/"
+    source_label: "ChatGPT pricing"
+    source_id: openai-chatgpt-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
   best_paid_tier:
-    value: "Plus ($20/mo)"
-    source: "/tools/chatgpt/"
-    verified_at: 2026-04-26
-  best_for:
-    value: "Broad daily work: text, research, data, images, browsing, voice, Codex, and agents"
-    source: "/tools/chatgpt/"
-    verified_at: 2026-04-26
+    value: "Plus for most individuals; Pro only when high Codex, deep research, or agent usage is weekly work"
+    source: "https://chatgpt.com/pricing/"
+    source_label: "ChatGPT pricing"
+    source_id: openai-chatgpt-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  api_available:
+    value: "Yes — OpenAI API includes GPT-5.5, web search, file search, computer use, GPT Image, and realtime models"
+    source: "https://platform.openai.com/docs/models"
+    source_label: "OpenAI model docs"
+    source_id: openai-model-docs
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  image_generation:
+    value: "Yes — GPT Image 2 / gpt-image-2 generation and editing"
+    source: "https://platform.openai.com/docs/models"
+    source_label: "OpenAI model docs"
+    source_id: openai-model-docs
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
   video_generation:
-    value: "No native video generation"
-    source: "/news/2026-04-01-openai-retires-sora-2-model/"
-    source_label: "Sora retirement coverage"
-    verified_at: 2026-04-26
+    value: "No first-party ChatGPT video-generation tier in the current ChatGPT pricing surface"
+    source: "https://chatgpt.com/pricing/"
+    source_label: "ChatGPT pricing"
+    source_id: openai-chatgpt-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  real_time_voice:
+    value: "Yes — ChatGPT voice plus OpenAI realtime speech-to-speech models"
+    source: "https://platform.openai.com/docs/models"
+    source_label: "OpenAI model docs"
+    source_id: openai-model-docs
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  web_browsing:
+    value: "Yes — ChatGPT browsing and OpenAI web search tools"
+    source: "https://platform.openai.com/docs/models"
+    source_label: "OpenAI model docs"
+    source_id: openai-model-docs
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
   coding_agent:
-    value: "Codex on Plus and Pro tiers"
-    source: "/tools/chatgpt/"
-    verified_at: 2026-04-26
+    value: "Yes — Codex is included on paid ChatGPT tiers and scales on Pro/Business/Enterprise"
+    source: "https://chatgpt.com/pricing/"
+    source_label: "ChatGPT pricing"
+    source_id: openai-chatgpt-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  enterprise_controls:
+    value: "Business and Enterprise include SAML SSO/MFA; Enterprise adds SCIM, EKM, analytics, domain verification, RBAC, retention, residency, and SLAs"
+    source: "https://chatgpt.com/pricing/"
+    source_label: "ChatGPT pricing"
+    source_id: openai-chatgpt-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  data_retention_or_privacy:
+    value: "Business, Enterprise, Edu, Healthcare, and API data is not trained on by default; Enterprise admins control retention"
+    source: "https://openai.com/enterprise-privacy/"
+    source_label: "OpenAI enterprise privacy"
+    source_id: openai-enterprise-privacy
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  open_source_or_local:
+    value: "No — ChatGPT and GPT-5.5 are proprietary hosted OpenAI products"
+    source: "https://platform.openai.com/docs/models"
+    source_label: "OpenAI model docs"
+    source_id: openai-model-docs
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  best_for:
+    value: "Best default assistant for broad text, research, data analysis, image generation, voice, Codex, and agent workflows"
+    source: "https://chatgpt.com/pricing/"
+    source_label: "ChatGPT pricing"
+    source_id: openai-chatgpt-pricing
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  watch_out_for:
+    value: "Plan limits, Codex/agent caps, source-checking for factual tasks, and no dedicated video-generation tier"
+    source: "https://chatgpt.com/pricing/"
+    source_label: "ChatGPT pricing"
+    source_id: openai-chatgpt-pricing
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
 tags: [chatbot, ai-assistant, writing, search, code-interpreter, image-generation, gpt-5, codex, agent-mode, voice, memory]
 best_for:
   - General-purpose AI work
@@ -113,18 +213,34 @@ price_history:
   - date: 2026-04-15
     plan: "Plus"
     price: "$20/mo"
+    source: "https://chatgpt.com/pricing/"
+    source_id: openai-chatgpt-pricing
+    source_label: "ChatGPT pricing"
+    verified_at: 2026-05-03
     note: "Verified, unchanged"
   - date: 2026-04-16
     plan: "Agents SDK update"
     price: "Same"
+    source: "https://chatgpt.com/pricing/"
+    source_id: openai-chatgpt-pricing
+    source_label: "ChatGPT pricing"
+    verified_at: 2026-05-03
     note: "Native sandbox execution, model-native harness, configurable memory, snapshotting. Python first, TypeScript coming."
   - date: 2026-04-16
     plan: "GPT-Rosalind"
     price: "Research preview"
+    source: "https://chatgpt.com/pricing/"
+    source_id: openai-chatgpt-pricing
+    source_label: "ChatGPT pricing"
+    verified_at: 2026-05-03
     note: "Life sciences reasoning model for biology, drug discovery, translational medicine. Plus Codex research plugin with 50+ tools."
   - date: 2026-05-02
     plan: "GPT-5.5 pricing table refresh"
     price: "$0-$200/mo"
+    source: "https://chatgpt.com/pricing/"
+    source_id: openai-chatgpt-pricing
+    source_label: "ChatGPT pricing"
+    verified_at: 2026-05-03
     note: "Updated ChatGPT model-access rows from OpenAI frontier models to GPT-5.5 Thinking and GPT-5.5 Pro."
 ---
 

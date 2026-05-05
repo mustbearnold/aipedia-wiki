@@ -25,6 +25,49 @@ scores:
   value: 10
   moat: 7
   longevity: 8
+facts:
+  best_for:
+    value: "Voice teams that want expressive text-to-speech, voice cloning, or speech generation without starting from a purely enterprise voice stack."
+    source: "https://fish.audio"
+    source_label: "Fish Audio official site"
+    source_id: fish-audio-official
+    verified_at: 2026-05-04
+    volatility: medium
+    confidence: high
+  model_surface:
+    value: "Fish Audio is useful when the evaluation is voice quality and expressive generation, not only transcript accuracy or call-center automation."
+    source: "https://fish.audio"
+    source_label: "Fish Audio official site"
+    source_id: fish-audio-official
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: medium
+  pricing_anchor:
+    value: "Public pricing and credit details should be verified from the live Fish Audio product surface before volume usage."
+    source: "https://fish.audio"
+    source_label: "Fish Audio official site"
+    source_id: fish-audio-pricing
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: medium
+  workflow_surface:
+    value: "Best evaluated with your own scripts, languages, and target delivery channel because voice quality varies by speaker, emotion, and post-processing needs."
+    source: "https://fish.audio"
+    source_label: "Fish Audio official site"
+    source_id: fish-audio-official
+    verified_at: 2026-05-04
+    volatility: medium
+    confidence: medium
+  watch_out_for:
+    value: "Voice cloning and synthetic speech create consent, rights, and disclosure risk. Confirm licensing and speaker authorization before publishing generated voices."
+    source: "https://fish.audio"
+    source_label: "Fish Audio official site"
+    source_id: fish-audio-official
+    verified_at: 2026-05-04
+    volatility: medium
+    confidence: high
 tags: [tts, text-to-speech, voice-ai, open-source, self-hosted, voice-cloning, openaudio, fish-speech, low-latency, multilingual]
 seo_title: "Fish Audio (OpenAudio S1 + S2): Features, Pricing & Review (April 2026)"
 meta_description: "Fish Audio ships OpenAudio S1 and the S2 Pro flagship, the top-ranked TTS in 2026 blind tests. Free self-hosting, cloud from $11/mo, API at $15 per 1M chars."
@@ -44,10 +87,16 @@ price_history:
   - date: 2026-03-01
     plan: "Plus"
     price: "$11/mo"
+    source: "https://fish.audio"
+    source_label: "Source"
+    source_id: fish-audio-pricing
     note: "S2 cloud tiers restructured around minutes of generation"
   - date: 2026-04-15
     plan: "API"
     price: "$15/1M chars"
+    source: "https://fish.audio"
+    source_label: "Source"
+    source_id: fish-audio-pricing
     note: "Verified unchanged"
 ---
 

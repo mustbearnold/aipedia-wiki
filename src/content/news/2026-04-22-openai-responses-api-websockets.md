@@ -8,8 +8,8 @@ summary: "OpenAI announced WebSockets support for the Responses API on April 22,
 affects: [chatgpt, codex]
 categories: [ai-coding, ai-business, ai-infrastructure]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-24
-last_verified: 2026-04-24
+last_updated: 2026-05-05
+last_verified: 2026-05-05
 sources:
   - url: "https://openai.com/index/speeding-up-agentic-workflows-with-websockets/"
     title: "Speeding up agentic workflows with WebSockets in the Responses API - OpenAI"
@@ -34,11 +34,17 @@ OpenAI says OpenAI models in Cursor became up to **30% faster** with the new Web
 
 That matters because speed is now a user-facing quality dimension for coding agents. A model that is slightly smarter but noticeably slower can still lose daily-driver status.
 
+The architectural point is broader than Cursor. Tool-heavy agents often spend meaningful time waiting on round trips, especially when they stream intermediate reasoning, invoke tools, and resume generation many times in a single task. A persistent connection gives agent builders a cleaner transport for that loop.
+
 ## Who should care
 
 - Agent framework builders.
 - Coding tools like Cursor, Codex-style IDE agents, and autonomous QA systems.
 - Teams with high-frequency tool-calling workflows.
+
+## Buyer caveat
+
+WebSockets reduce overhead, but they do not solve orchestration quality by themselves. Teams still need good tool schemas, bounded permissions, retry behavior, observability, and cost controls. The feature is best understood as infrastructure that makes well-designed agents feel faster, not as a shortcut around agent design.
 
 ## Related
 

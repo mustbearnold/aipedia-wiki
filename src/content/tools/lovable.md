@@ -28,7 +28,59 @@ scores:
   value: 8
   moat: 6
   longevity: 8
+facts:
+  best_for:
+    value: "Lovable is best for turning natural-language app specs into deployed full-stack web apps, especially prototypes that can use Supabase, GitHub sync, and iterative browser-based editing."
+    source: "https://docs.lovable.dev/"
+    source_label: "Lovable docs"
+    source_id: lovable-docs
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  pricing_anchor:
+    value: "Lovable pricing should be evaluated against message/credit volume, private-project needs, seats, and whether the project will need Supabase and GitHub workflows."
+    source: "https://lovable.dev/pricing"
+    source_label: "lovable.dev/pricing"
+    source_id: lovable-official
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: high
+  backend_path:
+    value: "Lovable documents Supabase integration for database/auth/backend features, which makes it stronger for app prototypes than design-only UI generators."
+    source: "https://docs.lovable.dev/integrations/supabase"
+    source_label: "Lovable Supabase integration"
+    source_id: lovable-supabase
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  code_handoff:
+    value: "Lovable's GitHub integration is important for handoff: teams can connect generated projects to a repository instead of leaving work trapped in a no-code canvas."
+    source: "https://docs.lovable.dev/integrations/github"
+    source_label: "Lovable GitHub integration"
+    source_id: lovable-github
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  watch_out_for:
+    value: "Lovable can move prototypes fast, but production apps still need code review, auth/security checks, data-model review, and observability before launch."
+    source: "https://docs.lovable.dev/"
+    source_label: "Lovable docs"
+    source_id: lovable-docs
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
 tags: [app-builder, no-code, full-stack, supabase, deployment, prototyping, vibe-coding, ai-design]
+best_for:
+  - founders turning product ideas into deployed full-stack apps
+  - apps that need Supabase auth, Postgres, and row-level security from the first prompt
+  - nontechnical builders who still want GitHub sync and editable code
+  - teams validating internal tools before assigning engineers
+not_best_for:
+  - pure component generation without a backend
+  - complex backend architecture or regulated production systems without engineer review
+  - offline or self-hosted development workflows
+  - teams that want complete framework and infrastructure control
 quick_answer: >-
   Lovable turns plain-English prompts into deployed full-stack React apps with Supabase backend, Postgres, and auth. Pick it for non-technical founders shipping MVPs with a real backend in hours. Skip it for frontend-only prototyping (use Bolt.new) or production apps that will need rewriting at scale.
 ---

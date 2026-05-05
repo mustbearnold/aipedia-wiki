@@ -25,6 +25,33 @@ scores:
   value: 10
   moat: 7
   longevity: 8
+facts:
+  best_for:
+    value: "Self-hosted ChatGPT-style interface that runs entirely offline. Ships enterprise features (RBAC, SSO, LDAP) free. Costs $0-$5/month self-hosted or $9.99+/month managed. Best for chat, research, assistant, and model-access workflows."
+    source: "https://openwebui.com"
+    source_label: "openwebui.com"
+    source_id: open-webui-official
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: medium
+  pricing_anchor:
+    value: "Pricing should be checked on the current Open WebUI source before purchase; AIpedia has not promoted this page to a full Tier 1 pricing profile yet"
+    source: "https://openwebui.com"
+    source_label: "openwebui.com"
+    source_id: open-webui-official
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
+  watch_out_for:
+    value: "Non-Tier-1 canonical profile: verify current pricing, usage limits, data policy, and integration details before procurement"
+    source: "https://openwebui.com"
+    source_label: "openwebui.com"
+    source_id: open-webui-official
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
 tags: [self-hosted, open-source, chat-ui, ollama, rag, enterprise, rbac, sso]
 seo_title: "Open WebUI: Features, Pricing & Review (April 2026)"
 meta_description: "Open WebUI is a self-hosted ChatGPT alternative. Free open source with RBAC, SSO, LDAP, 15+ search providers, 9+ vector DBs. Managed hosting from $9.99/mo. HIPAA/GDPR/SOC2-ready."

@@ -28,6 +28,50 @@ scores:
   value: 9
   moat: 7
   longevity: 8
+facts:
+  best_for:
+    value: "Make is best for teams that want visual, multi-step automation across SaaS apps, APIs, routers, iterators, and data transformation without owning custom orchestration code."
+    source: "https://www.make.com/en/help"
+    source_label: "Make Help Center"
+    source_id: make-help
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  pricing_anchor:
+    value: "Make pricing is credit-based, so cost governance should model scenario frequency, module count, and AI-module usage rather than only the number of workflows."
+    source: "https://www.make.com/en/pricing"
+    source_label: "Make pricing"
+    source_id: make-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: high
+  integration_surface:
+    value: "Make publishes a broad integration catalog and is strongest when buyers need packaged app connectors plus custom HTTP/API steps in the same scenario."
+    source: "https://www.make.com/en/integrations"
+    source_label: "Make app integrations"
+    source_id: make-apps
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  ai_agent_surface:
+    value: "Make now positions AI agents as part of its automation platform, so comparisons should distinguish deterministic scenarios from agentic workflows that can consume extra credits."
+    source: "https://www.make.com/en/ai-agents"
+    source_label: "Make AI Agents"
+    source_id: make-ai-agents
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: medium
+    confidence: high
+  watch_out_for:
+    value: "The main buyer risk is underestimating credit burn from high-frequency scenarios, nested routes, polling, retries, and AI steps; audit operations before migrating mission-critical workflows."
+    source: "https://www.make.com/en/pricing"
+    source_label: "Make pricing"
+    source_id: make-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: medium
+    confidence: high
 tags: [automation, workflow, integrations, no-code, visual-builder, integromat, api, operations]
 seo_title: 'Make (Integromat): Features, Pricing & Review (April 2026)'
 meta_description: >-
@@ -48,10 +92,16 @@ price_history:
   - date: 2025-08-01
     plan: "Billing unit"
     price: "Credits replace operations"
+    source: "https://www.make.com/en/pricing"
+    source_label: "Source"
+    source_id: make-pricing
     note: "Credits now the billing unit to accommodate AI modules"
   - date: 2026-04-15
     plan: "Core"
     price: "$10.59/mo"
+    source: "https://www.make.com/en/pricing"
+    source_label: "Source"
+    source_id: make-pricing
     note: "Verified unchanged"
 ---
 

@@ -33,17 +33,24 @@ facts:
     value: "Droid agent platform across CLI, desktop, Droid Exec, code review, automated QA, missions, GitHub, Linear, Slack, IDEs, and enterprise deployment"
     source: "https://docs.factory.ai/welcome"
     source_label: "Factory docs"
+    source_id: factory-best-for
     verified_at: 2026-04-28
+    confidence: high
   best_paid_tier:
     value: "Pro ($20/month) for individuals; Max ($200/month) for 10x usage and cloud Droid Computers"
     source: "https://docs.factory.ai/pricing"
     source_label: "Factory plans and models"
+    source_id: factory-best-paid-tier
     verified_at: 2026-04-28
+    next_review_at: 2026-06-03
+    confidence: high
   best_for:
     value: "Engineering teams that want agentic development across local, cloud, CI, review, and enterprise governance surfaces"
     source: "https://docs.factory.ai/welcome"
     source_label: "Factory docs"
+    source_id: factory-best-for
     verified_at: 2026-04-28
+    confidence: high
 tags: [ai-coding, coding-agent, software-development, cli, desktop, code-review, qa, linear, slack, github]
 best_for:
   - developers who want an agent across CLI, desktop, and cloud workflows
@@ -60,14 +67,23 @@ price_history:
   - date: 2026-04-28
     plan: "Pro"
     price: "$20/month"
+    source: "https://docs.factory.ai/pricing"
+    source_label: "Source"
+    source_id: factory-best-paid-tier
     note: "Individual and small-team coding agent workspace"
   - date: 2026-04-28
     plan: "Max"
     price: "$200/month"
+    source: "https://docs.factory.ai/pricing"
+    source_label: "Source"
+    source_id: factory-best-paid-tier
     note: "10x Pro usage, Droid Computers, early access"
   - date: 2026-04-28
     plan: "Enterprise"
     price: "Custom"
+    source: "https://docs.factory.ai/pricing"
+    source_label: "Source"
+    source_id: factory-best-paid-tier
     note: "SSO, SAML/SCIM, audit logs, compliance reporting, deployment options"
 ---
 

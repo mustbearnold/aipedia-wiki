@@ -25,6 +25,33 @@ scores:
   value: 9
   moat: 4
   longevity: 7
+facts:
+  best_for:
+    value: "Open-source AI software engineer (formerly OpenDevin). MIT-licensed CLI, GUI, and SDK that autonomously write and test code in a Docker sandbox with any LLM. Best for software development and code-assistant workflows."
+    source: "https://docs.openhands.dev/"
+    source_label: "OpenHands documentation"
+    source_id: openhands-official
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: medium
+  pricing_anchor:
+    value: "Pricing should be checked on the current OpenHands source before purchase; AIpedia has not promoted this page to a full Tier 1 pricing profile yet"
+    source: "https://openhands.dev/pricing"
+    source_label: "OpenHands pricing"
+    source_id: openhands-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
+  watch_out_for:
+    value: "Non-Tier-1 canonical profile: verify current pricing, usage limits, data policy, and integration details before procurement"
+    source: "https://openhands.dev/pricing"
+    source_label: "OpenHands pricing"
+    source_id: openhands-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
 tags: [open-source, ai-software-engineer, docker, sandboxed, devin-alternative, multi-model, python, typescript, github-integration, self-hosted, openhands-cloud]
 seo_title: "OpenHands: Features, Pricing & Review (April 2026)"
 meta_description: "OpenHands (formerly OpenDevin) is a free, MIT-licensed AI software engineer maintained by All Hands AI. Self-host free; OpenHands Cloud offers a free MiniMax tier, a $20/mo Pro subscription, and Enterprise self-hosted options."

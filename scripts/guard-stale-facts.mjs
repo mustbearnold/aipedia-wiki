@@ -12,6 +12,7 @@ import { fileURLToPath } from 'node:url';
 const PROJECT_DIR = dirname(dirname(fileURLToPath(import.meta.url)));
 const TOOLS_DIR = join(PROJECT_DIR, 'src', 'content', 'tools');
 const COMPARISONS_DIR = join(PROJECT_DIR, 'src', 'content', 'comparisons');
+const JSON_MODE = process.argv.includes('--json');
 
 const REQUIRED_FACTS = {
   chatgpt: [
@@ -154,7 +155,12 @@ const failures = [];
 const warnings = [];
 
 if (!existsSync(TOOLS_DIR) || !existsSync(COMPARISONS_DIR)) {
-  console.error('[guard-stale-facts] missing src/content tools or comparisons directory');
+  const message = '[guard-stale-facts] missing src/content tools or comparisons directory';
+  if (JSON_MODE) {
+    console.log(JSON.stringify({ ok: false, failures: [message], warnings: [], totals: { required_tools: Object.keys(REQUIRED_FACTS).length, comparisons_scanned: 0 } }, null, 2));
+  } else {
+    console.error(message);
+  }
   process.exit(2);
 }
 
@@ -220,17 +226,39 @@ for (const file of comparisons) {
   }
 }
 
+const result = {
+  ok: failures.length === 0,
+  mode: 'guard',
+  totals: {
+    required_tools: Object.keys(REQUIRED_FACTS).length,
+    comparisons_scanned: comparisons.length,
+    failures: failures.length,
+    warnings: warnings.length,
+  },
+  required_facts: REQUIRED_FACTS,
+  failures,
+  warnings,
+};
+
 if (failures.length > 0) {
-  console.error('\n\x1b[41;97m STALE FACT GUARD FAILED \x1b[0m\n');
-  console.error('Volatile tool facts are hardcoded or missing canonical sources.');
-  console.error('Move current facts into src/content/tools/<slug>.md frontmatter under `facts:` and let comparison pages render/generated-tokenize them.\n');
-  for (const failure of failures.slice(0, 120)) console.error(`  ✗ ${failure}`);
-  if (failures.length > 120) console.error(`  … ${failures.length - 120} more failure(s) omitted`);
-  console.error('');
+  if (JSON_MODE) {
+    console.log(JSON.stringify(result, null, 2));
+  } else {
+    console.error('\n\x1b[41;97m STALE FACT GUARD FAILED \x1b[0m\n');
+    console.error('Volatile tool facts are hardcoded or missing canonical sources.');
+    console.error('Move current facts into src/content/tools/<slug>.md frontmatter under `facts:` and let comparison pages render/generated-tokenize them.\n');
+    for (const failure of failures.slice(0, 120)) console.error(`  ✗ ${failure}`);
+    if (failures.length > 120) console.error(`  … ${failures.length - 120} more failure(s) omitted`);
+    console.error('');
+  }
   process.exit(2);
 }
 
-for (const warning of warnings) console.warn(`  ! ${warning}`);
-console.log(
-  `[guard-stale-facts] ✓ canonical facts present for ${Object.keys(REQUIRED_FACTS).length} volatile tools; covered comparisons use generated fact tables.`
-);
+if (JSON_MODE) {
+  console.log(JSON.stringify(result, null, 2));
+} else {
+  for (const warning of warnings) console.warn(`  ! ${warning}`);
+  console.log(
+    `[guard-stale-facts] ✓ canonical facts present for ${Object.keys(REQUIRED_FACTS).length} volatile tools; covered comparisons use generated fact tables.`
+  );
+}

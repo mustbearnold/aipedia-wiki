@@ -24,6 +24,50 @@ scores:
   value: 7
   moat: 9
   longevity: 9
+facts:
+  best_for:
+    value: "Collaborative product design teams that need AI inside the same workspace as Design, Dev Mode, FigJam, Slides, Sites, Buzz, and Make."
+    source: "https://www.figma.com/pricing/"
+    source_label: "Figma Plans & Pricing"
+    source_id: figma-pricing
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  pricing_anchor:
+    value: "Figma pricing is seat and product-tier based, with AI usage governed by monthly AI credit allocations and overage rules."
+    source: "https://www.figma.com/pricing/"
+    source_label: "Figma Plans & Pricing"
+    source_id: figma-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-08-03
+  ai_credits:
+    value: "AI credits are metered separately by plan and user type; teams should model credit usage before rolling AI features across large design orgs."
+    source: "https://help.figma.com/hc/en-us/articles/33459875669015-How-AI-credits-work"
+    source_label: "Figma AI credits documentation"
+    source_id: figma-ai-credits
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-08-03
+  figma_make_model:
+    value: "Figma Make exposes model selection, with Claude Opus documented as one of the available/default model options for prompt-to-app work."
+    source: "https://help.figma.com/hc/en-us/articles/36400680326551-Select-an-AI-model-to-use-in-Figma-Make"
+    source_label: "Figma Make model selection documentation"
+    source_id: figma-make-models
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  watch_out_for:
+    value: "The AI value is strongest for teams already living in Figma. If the buyer only needs one-off image generation or copy, a cheaper specialist may be simpler."
+    source: "https://help.figma.com/hc/en-us/articles/33459875669015-How-AI-credits-work"
+    source_label: "Figma AI credits documentation"
+    source_id: figma-ai-credits
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-08-03
 tags: [design, ui-ux, prototyping, collaboration, design-system, figma-make, figma-sites, figma-slides, figma-buzz, dev-mode]
 seo_title: "Figma: Features, Pricing & Review (April 2026)"
 meta_description: "Figma's design suite now spans Design, Dev Mode, FigJam, Slides, Draw, Buzz, Sites, and Make. Figma Make generates apps from prompts via Claude Opus. Plans run $0-$90/editor/mo."
@@ -43,14 +87,23 @@ price_history:
   - date: 2026-03-18
     plan: "AI credits"
     price: "3,000/mo Pro"
+    source: "https://www.figma.com/pricing/"
+    source_label: "Source"
+    source_id: figma-pricing
     note: "AI credit enforcement activated March 18, 2026 across all tiers."
   - date: 2026-04-15
     plan: "Professional"
     price: "$16/editor/mo"
+    source: "https://www.figma.com/pricing/"
+    source_label: "Source"
+    source_id: figma-pricing
     note: "Verified unchanged on annual billing."
   - date: 2026-04-17
     plan: "Competitive landscape"
     price: "~7% stock drop"
+    source: "https://www.figma.com/pricing/"
+    source_label: "Source"
+    source_id: figma-pricing
     note: "Anthropic launched [Claude Design](/tools/claude-design/) targeting the non-designer segment. Figma stock fell ~7% on the announcement. Mike Krieger (Anthropic CPO) resigned from Figma's board on April 14, three days before the launch. See [news](/news/2026-04-17-anthropic-launches-claude-design/)."
 ---
 

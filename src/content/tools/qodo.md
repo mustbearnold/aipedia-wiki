@@ -33,17 +33,24 @@ facts:
     value: "AI review across pull requests, IDE, CLI, Git workflows, multi-repo context, rules, and enterprise governance"
     source: "https://www.qodo.ai/pricing/"
     source_label: "Qodo pricing"
+    source_id: qodo-best-paid-tier
     verified_at: 2026-04-28
+    confidence: high
   best_paid_tier:
     value: "Teams ($38/user/month monthly or $30/user/month annual) for private teams that need PR review plus IDE and CLI credits"
     source: "https://www.qodo.ai/pricing/"
     source_label: "Qodo pricing"
+    source_id: qodo-best-paid-tier
     verified_at: 2026-04-28
+    next_review_at: 2026-06-03
+    confidence: high
   best_for:
     value: "Teams that want AI code review quality control around AI-generated code, not just faster code generation"
     source: "https://docs.qodo.ai/v1/qodo-merge"
     source_label: "Qodo Git Integration docs"
+    source_id: qodo-best-for
     verified_at: 2026-04-28
+    confidence: high
 tags: [ai-coding, code-review, pull-requests, ide-plugin, cli, governance, pr-review, context-engine]
 best_for:
   - teams that need AI review on pull requests
@@ -60,14 +67,23 @@ price_history:
   - date: 2026-04-28
     plan: "Developer"
     price: "$0"
+    source: "https://www.qodo.ai/pricing/"
+    source_label: "Source"
+    source_id: qodo-best-paid-tier
     note: "Free individual tier with PR review, IDE plugin, and limited IDE/CLI credits"
   - date: 2026-04-28
     plan: "Teams"
     price: "$38/user/month monthly or $30/user/month annual"
+    source: "https://www.qodo.ai/pricing/"
+    source_label: "Source"
+    source_id: qodo-best-paid-tier
     note: "Includes 20 PRs/user/month and 2,500 IDE/CLI credits per user"
   - date: 2026-04-28
     plan: "Enterprise"
     price: "Custom"
+    source: "https://www.qodo.ai/pricing/"
+    source_label: "Source"
+    source_id: qodo-best-paid-tier
     note: "Adds dashboards, admin, SSO, MCP tools, and private deployment options"
 ---
 

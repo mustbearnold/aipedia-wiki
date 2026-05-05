@@ -24,6 +24,52 @@ scores:
   value: 9
   moat: 8
   longevity: 9
+facts:
+  best_for:
+    value: "Best for developers building reliable stateful agents, multi-step workflows, human-in-the-loop flows, and durable graph-based orchestration in code."
+    source: https://www.langchain.com/langgraph
+    source_label: LangGraph official site
+    source_id: langgraph-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  pricing_anchor:
+    value: "LangGraph is an open-source framework; paid spend usually comes from LangSmith/LangGraph Platform hosting, observability, or enterprise deployment rather than the library itself."
+    source: https://www.langchain.com/pricing
+    source_label: langchain.com/pricing
+    source_id: langgraph-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  runtime_architecture:
+    value: "LangGraph models agents as graphs with state, persistence, streaming, and controllable edges, which makes it better for long-running agent systems than one-shot prompt chains."
+    source: https://docs.langchain.com/oss/python/langgraph/overview
+    source_label: LangGraph documentation
+    source_id: langgraph-docs
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  open_source:
+    value: "The repository is the source of truth for Python/TypeScript package support, license, examples, and release activity."
+    source: https://github.com/langchain-ai/langgraph
+    source_label: LangGraph GitHub repository
+    source_id: langgraph-repository
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  watch_out_for:
+    value: "LangGraph is a developer framework, not a finished business app; teams need engineering capacity to design state, tools, persistence, deployment, and evaluations."
+    source: https://docs.langchain.com/oss/python/langgraph/overview
+    source_label: LangGraph documentation
+    source_id: langgraph-docs
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
 tags: [agent-framework, graph, python, typescript, langchain, stateful, production, langsmith]
 seo_title: "LangGraph: Features, Pricing & Review (April 2026)"
 meta_description: "LangGraph is LangChain's graph-based agent framework for stateful production agents. MIT-licensed free library. Used by Klarna, Replit, Elastic. Paired with LangSmith for observability."

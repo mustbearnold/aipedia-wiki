@@ -25,6 +25,33 @@ scores:
   value: 9
   moat: 6
   longevity: 7
+facts:
+  best_for:
+    value: "Browser-side AI meeting transcription for Google Meet, Zoom, and Microsoft Teams that runs without a bot in the room, with instant AI summaries and action items. Best for notes, meetings, personal knowledge, and recall workflows."
+    source: "https://tactiq.io/pricing"
+    source_label: "Source"
+    source_id: tactiq-pricing
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: medium
+  pricing_anchor:
+    value: "Pro; $8/user/mo annual; Verified. Monthly billing is $12/user."
+    source: "https://tactiq.io/pricing"
+    source_label: "Source"
+    source_id: tactiq-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
+  watch_out_for:
+    value: "Non-Tier-1 canonical profile: verify current pricing, usage limits, data policy, and integration details before procurement"
+    source: "https://tactiq.io/pricing"
+    source_label: "Source"
+    source_id: tactiq-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
 tags: [meeting-transcription, ai-notes, meeting-summary, chrome-extension, no-bot, zoom, google-meet, teams]
 best_for:
   - founders and consultants who hate bots joining calls
@@ -45,10 +72,16 @@ price_history:
   - date: 2026-04-17
     plan: "Pro"
     price: "$8/user/mo annual"
+    source: "https://tactiq.io/pricing"
+    source_label: "Source"
+    source_id: tactiq-pricing
     note: "Verified. Monthly billing is $12/user."
   - date: 2026-04-17
     plan: "Team"
     price: "$16.67/user/mo annual"
+    source: "https://tactiq.io/pricing"
+    source_label: "Source"
+    source_id: tactiq-pricing
     note: "Verified. Monthly billing is $20/user."
 ---
 

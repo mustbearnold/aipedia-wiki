@@ -25,6 +25,33 @@ scores:
   value: 9
   moat: 4
   longevity: 6
+facts:
+  best_for:
+    value: "Multilingual TTS and voice cloning API with a 40-language model family that undercuts ElevenLabs pricing by up to 85%. Best for speech, voice, transcription, or audio-agent workflows."
+    source: "https://www.minimax.io/audio"
+    source_label: "MiniMax Audio product page"
+    source_id: minimax-speech-official
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: medium
+  pricing_anchor:
+    value: "Pricing should be checked on the current MiniMax Speech source before purchase; AIpedia has not promoted this page to a full Tier 1 pricing profile yet"
+    source: "https://platform.minimax.io/docs/guides/pricing-speech"
+    source_label: "MiniMax Speech pricing docs"
+    source_id: minimax-speech-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
+  watch_out_for:
+    value: "Non-Tier-1 canonical profile: verify current pricing, usage limits, data policy, and integration details before procurement"
+    source: "https://platform.minimax.io/docs/guides/pricing-speech"
+    source_label: "MiniMax Speech pricing docs"
+    source_id: minimax-speech-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
 tags: [tts, voice-cloning, chinese-ai, multilingual, minimax, speech-02, api]
 seo_title: "MiniMax Speech Review: Cheap TTS, Voice Cloning and ElevenLabs Alternative"
 meta_description: "MiniMax Speech is a low-cost TTS and voice-cloning API with Speech-02-HD, Speech-02-Turbo, 300+ voices, 40 languages, and pricing far below ElevenLabs."

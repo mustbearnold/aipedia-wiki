@@ -28,6 +28,33 @@ scores:
   value: 10
   moat: 6
   longevity: 7
+facts:
+  best_for:
+    value: "ByteDance's AI-first IDE. VS Code fork with SOLO autonomous agent, multi-model backbone (Claude, GPT, DeepSeek, Gemini), and aggressive $3-$10 pricing that undercuts Cursor and Windsurf. Best for software development and code-assistant workflows."
+    source: "https://www.trae.ai/pricing"
+    source_label: "Source"
+    source_id: trae-pricing
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: medium
+  pricing_anchor:
+    value: "Pricing model; Shift to token-based plans; Trae moved from fully-free Pro features to tiered token allowances in February 2026."
+    source: "https://www.trae.ai/pricing"
+    source_label: "Source"
+    source_id: trae-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
+  watch_out_for:
+    value: "Non-Tier-1 canonical profile: verify current pricing, usage limits, data policy, and integration details before procurement"
+    source: "https://www.trae.ai/pricing"
+    source_label: "Source"
+    source_id: trae-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
 tags: [ai-coding, ide, bytedance, trae, agentic-coding, vscode-fork, solo-mode, builder-mode]
 best_for:
   - budget-conscious developers wanting Claude or GPT inside an IDE
@@ -44,14 +71,23 @@ price_history:
   - date: 2026-02
     plan: "Pricing model"
     price: "Shift to token-based plans"
+    source: "https://www.trae.ai/pricing"
+    source_label: "Source"
+    source_id: trae-pricing
     note: "Trae moved from fully-free Pro features to tiered token allowances in February 2026."
   - date: 2026-04-18
     plan: "Lite"
     price: "$3/mo"
+    source: "https://www.trae.ai/pricing"
+    source_label: "Source"
+    source_id: trae-pricing
     note: "Verified entry paid tier with premium model access."
   - date: 2026-04-18
     plan: "Pro"
     price: "$10/mo"
+    source: "https://www.trae.ai/pricing"
+    source_label: "Source"
+    source_id: trae-pricing
     note: "Verified, SOLO mode included."
 ---
 

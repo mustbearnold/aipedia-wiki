@@ -25,6 +25,33 @@ scores:
   value: 8
   moat: 5
   longevity: 6
+facts:
+  best_for:
+    value: "Shanghai AI lab behind the Talkie companion app, Hailuo video, and the M2 family of multimodal foundation models. Best for chat, research, assistant, and model-access workflows."
+    source: "https://www.minimax.io/"
+    source_label: "MiniMax official site"
+    source_id: minimax-official
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: medium
+  pricing_anchor:
+    value: "Pricing should be checked on the current MiniMax source before purchase; AIpedia has not promoted this page to a full Tier 1 pricing profile yet"
+    source: "https://platform.minimax.io/docs/pricing/overview"
+    source_label: "MiniMax platform pricing"
+    source_id: minimax-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
+  watch_out_for:
+    value: "Non-Tier-1 canonical profile: verify current pricing, usage limits, data policy, and integration details before procurement"
+    source: "https://platform.minimax.io/docs/pricing/overview"
+    source_label: "MiniMax platform pricing"
+    source_id: minimax-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
 tags: [chinese-ai, multimodal, llm, talkie, hailuo, companion-ai, api, foundation-models]
 seo_title: "MiniMax AI: Features, Pricing & Review (2026)"
 meta_description: "MiniMax is the Shanghai AI lab behind Talkie, Hailuo video, and the M2 LLM family. M2.7 flagship at $0.30/$1.20 per 1M tokens. Honest 2026 review."

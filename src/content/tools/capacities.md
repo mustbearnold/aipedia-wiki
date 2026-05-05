@@ -24,6 +24,48 @@ scores:
   value: 8
   moat: 7
   longevity: 7
+facts:
+  best_for:
+    value: "Capacities is best for personal knowledge management built around typed objects, properties, backlinks, and graph-like organization rather than folders or freeform note piles."
+    source: "https://capacities.io/product"
+    source_label: "Capacities product"
+    source_id: capacities-product
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  pricing_anchor:
+    value: "Capacities pricing should be evaluated against Pro features, AI usage, sync needs, and whether the object-based model will become a daily workflow."
+    source: "https://capacities.io/pricing"
+    source_label: "Capacities pricing"
+    source_id: capacities-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: high
+  data_model:
+    value: "The defining product choice is object-based notes: people, books, projects, meetings, and other entity types can carry properties and reusable views."
+    source: "https://docs.capacities.io/"
+    source_label: "Capacities docs"
+    source_id: capacities-docs
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  ai_surface:
+    value: "Capacities includes AI as an assistant layer on top of structured personal knowledge rather than as a standalone chatbot replacement."
+    source: "https://capacities.io/product"
+    source_label: "Capacities product"
+    source_id: capacities-product
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  watch_out_for:
+    value: "The object-first model has a learning curve; users who mainly want plain Markdown files or maximum plugin extensibility may prefer Obsidian."
+    source: "https://docs.capacities.io/"
+    source_label: "Capacities docs"
+    source_id: capacities-docs
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
 tags: [ai-notes, note-taking, pkm, object-based, knowledge-management]
 seo_title: "Capacities Review: Object-Based PKM with AI (April 2026)"
 meta_description: "Capacities is an object-based PKM app where every note is a typed object. Free tier is unlimited; Pro at $9.99/mo annual adds AI assistant; Believer at $12.49/mo supports the project."
@@ -43,10 +85,16 @@ price_history:
   - date: 2025-11-01
     plan: "Pro"
     price: "$9.99/mo (annual)"
+    source: "https://capacities.io/pricing"
+    source_label: "Source"
+    source_id: capacities-pricing
     note: "Added AI assistant to Pro tier"
   - date: 2026-04-15
     plan: "Believer"
     price: "$12.49/mo (annual)"
+    source: "https://capacities.io/pricing"
+    source_label: "Source"
+    source_id: capacities-pricing
     note: "Verified unchanged"
 ---
 

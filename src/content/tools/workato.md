@@ -24,6 +24,33 @@ scores:
   value: 6
   moat: 8
   longevity: 9
+facts:
+  best_for:
+    value: "Enterprise iPaaS with the deepest governance and audit story. 1,200+ connectors, native AI agents, priced per recipe run on annual contracts. Best for workflow automation, agentic operations, and business-process automation."
+    source: "https://www.workato.com"
+    source_label: "Source"
+    source_id: workato-pricing
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: medium
+  pricing_anchor:
+    value: "Enterprise; Custom annual contract; No public per-seat or per-task pricing; engagement required for quote"
+    source: "https://www.workato.com"
+    source_label: "Source"
+    source_id: workato-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
+  watch_out_for:
+    value: "Non-Tier-1 canonical profile: verify current pricing, usage limits, data policy, and integration details before procurement"
+    source: "https://www.workato.com"
+    source_label: "Source"
+    source_id: workato-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
 tags: [ipaas, enterprise-automation, workflow, integration, governance, audit, rbac, sso, ai-agents, workbot]
 seo_title: "Workato: Features, Pricing & Review (April 2026)"
 meta_description: "Workato is enterprise iPaaS with 1,200+ connectors, native AI agents, RBAC, SSO, and audit logs. Annual contracts only, typically $10k+ starting. Built for companies with compliance requirements."
@@ -45,6 +72,9 @@ price_history:
   - date: 2026-04-17
     plan: "Enterprise"
     price: "Custom annual contract"
+    source: "https://www.workato.com"
+    source_label: "Source"
+    source_id: workato-pricing
     note: "No public per-seat or per-task pricing; engagement required for quote"
 ---
 

@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$30/month"
 status: active
 launched: 2023-12
-last_updated: 2026-05-03
-last_verified: 2026-05-03
+last_updated: 2026-05-04
+last_verified: 2026-05-04
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -24,6 +24,56 @@ scores:
   value: 7
   moat: 7
   longevity: 8
+facts:
+  best_for:
+    value: Best for JetBrains IDE users who want AI coding assistance integrated directly into IntelliJ-based development workflows.
+    source: https://www.jetbrains.com/ai-assistant/
+    source_label: JetBrains AI Assistant
+    source_id: jetbrains-ai-assistant
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  pricing_anchor:
+    value: JetBrains AI access is tied to JetBrains product/subscription packaging and can change by IDE, plan, organization,
+      and region; verify current account terms on official pages.
+    source: https://www.jetbrains.com/ai/
+    source_label: JetBrains AI official site
+    source_id: jetbrains-ai-official
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  workflow_surface:
+    value: The value is IDE-native assistance for code explanation, generation, refactoring, tests, docs, and project context
+      rather than a standalone agent IDE.
+    source: https://www.jetbrains.com/help/ai-assistant/
+    source_label: JetBrains AI Assistant docs
+    source_id: jetbrains-ai-docs
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  integration_surface:
+    value: Docs are the source of truth for enabling AI Assistant, provider/model behavior, data sharing controls, and supported
+      IDE features.
+    source: https://www.jetbrains.com/help/ai-assistant/
+    source_label: JetBrains AI Assistant docs
+    source_id: jetbrains-ai-docs
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  watch_out_for:
+    value: Evaluate JetBrains AI inside the target IDE and repo, including context quality, privacy settings, enterprise controls,
+      and whether it overlaps with Copilot/Cursor seats.
+    source: https://www.jetbrains.com/ai-assistant/
+    source_label: JetBrains AI Assistant
+    source_id: jetbrains-ai-assistant
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
 tags: [ai-coding, jetbrains, intellij, pycharm, webstorm, ide, autocomplete, junie, agent]
 seo_title: "JetBrains AI Assistant: Features, Pricing & Review (April 2026)"
 meta_description: "JetBrains AI Assistant plus Junie agent run inside IntelliJ, PyCharm, WebStorm, and the rest of the IDE family. AI Pro $10/mo, AI Ultimate $30/mo, bundled with the All Products Pack."
@@ -44,10 +94,16 @@ price_history:
   - date: 2026-04-15
     plan: "AI Ultimate"
     price: "$30/mo"
+    source: "https://www.jetbrains.com/help/ai-assistant/licensing-and-subscriptions.html"
+    source_label: "Source"
+    source_id: jetbrains-ai-pricing
     note: "Individual tier; 35 credits/mo; Junie access."
   - date: 2026-04-15
     plan: "AI Pro"
     price: "$10/mo"
+    source: "https://www.jetbrains.com/help/ai-assistant/licensing-and-subscriptions.html"
+    source_label: "Source"
+    source_id: jetbrains-ai-pricing
     note: "Individual tier; 10 credits/mo; bundled free with All Products Pack."
 ---
 

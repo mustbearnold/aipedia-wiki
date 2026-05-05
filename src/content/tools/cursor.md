@@ -26,30 +26,141 @@ scores:
   longevity: 9
 facts:
   flagship_model:
-    value: "Claude Opus 4.7, GPT-5.5, Gemini 3.1 Pro, Composer 2"
-    source: "/tools/cursor/"
-    source_label: "AIpedia Cursor review"
-    verified_at: 2026-04-23
-  coding_agent:
-    value: "Agents Window, Cloud Agents, Composer 2, and Bugbot add-on"
-    source: "/news/2026-04-02-cursor-3-agent-first-release/"
-    source_label: "Cursor 3 release coverage"
-    verified_at: 2026-04-23
+    value: "Claude Opus 4.7, GPT-5.5, Gemini 3.1 Pro, and Composer 2"
+    source: "https://cursor.com/docs/models"
+    source_label: "Cursor model docs"
+    source_id: cursor-model-docs
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
   context_window:
-    value: "Model-dependent; Opus 4.7 up to 1M tokens"
-    source: "/tools/cursor/"
-    source_label: "AIpedia Cursor review"
-    verified_at: 2026-04-23
+    value: "Model-dependent; long-context limits follow the selected provider/model inside Cursor"
+    source: "https://cursor.com/docs/models"
+    source_label: "Cursor model docs"
+    source_id: cursor-model-docs
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  pricing_anchor:
+    value: "Hobby free; Pro $20/mo; Pro+ $60/mo; Ultra $200/mo; team and enterprise plans available"
+    source: "https://cursor.com/pricing"
+    source_label: "Cursor pricing"
+    source_id: cursor-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  free_plan:
+    value: "Yes — Hobby tier with limited completions and requests"
+    source: "https://cursor.com/pricing"
+    source_label: "Cursor pricing"
+    source_id: cursor-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
   best_paid_tier:
     value: "Pro ($20/mo); Pro+ ($60/mo) for heavier frontier-model use"
-    source: "/tools/cursor/"
-    source_label: "AIpedia Cursor review"
-    verified_at: 2026-04-23
+    source: "https://cursor.com/pricing"
+    source_label: "Cursor pricing"
+    source_id: cursor-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  api_available:
+    value: "No general Cursor model API; Cursor is an editor product that connects to supported model providers"
+    source: "https://cursor.com/docs/models"
+    source_label: "Cursor model docs"
+    source_id: cursor-model-docs
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  image_generation:
+    value: "No native image generation; Cursor is focused on software development workflows"
+    source: "https://cursor.com"
+    source_label: "Cursor product page"
+    source_id: cursor-docs
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  video_generation:
+    value: "No native video generation; Cursor is focused on software development workflows"
+    source: "https://cursor.com"
+    source_label: "Cursor product page"
+    source_id: cursor-docs
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  real_time_voice:
+    value: "No real-time voice assistant surface in the core Cursor product"
+    source: "https://cursor.com"
+    source_label: "Cursor product page"
+    source_id: cursor-docs
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  web_browsing:
+    value: "Limited — Cursor is codebase/editor-centered rather than a general web-browsing assistant"
+    source: "https://cursor.com/docs"
+    source_label: "Cursor documentation"
+    source_id: cursor-docs
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  coding_agent:
+    value: "Agents Window, Cloud Agents, Composer 2, and Bugbot add-on"
+    source: "https://cursor.com/changelog/2-0"
+    source_label: "Cursor 3 release coverage"
+    source_id: company-newsrooms
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  enterprise_controls:
+    value: "Team and Enterprise plans add centralized billing and organization controls"
+    source: "https://cursor.com/pricing"
+    source_label: "Cursor pricing"
+    source_id: cursor-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  data_retention_or_privacy:
+    value: "Privacy and retention posture depends on Cursor plan and model-provider settings; review Cursor docs before regulated use"
+    source: "https://cursor.com/docs"
+    source_label: "Cursor documentation"
+    source_id: cursor-docs
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  open_source_or_local:
+    value: "No — Cursor is a proprietary VS Code fork"
+    source: "https://cursor.com"
+    source_label: "Cursor product page"
+    source_id: cursor-docs
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
   best_for:
     value: "GUI-first multi-agent coding inside a VS Code fork"
-    source: "/tools/cursor/"
-    source_label: "AIpedia Cursor review"
-    verified_at: 2026-04-23
+    source: "https://cursor.com"
+    source_label: "Cursor product page"
+    source_id: cursor-docs
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  watch_out_for:
+    value: "Costs rise with frontier-model and agent usage; best fit is teams willing to standardize on Cursor as the primary editor"
+    source: "https://cursor.com/pricing"
+    source_label: "Cursor pricing"
+    source_id: cursor-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
 tags: [code-editor, ide, autocomplete, ai-coding, vscode-fork, agentic-coding, cloud-agents, mcp, composer, claude-opus-4-7]
 seo_title: "Cursor: Features, Pricing & Review (April 2026)"
 meta_description: "Cursor is an AI-native VS Code fork. Claude Opus 4.7 added at launch (April 16, 2026). Cursor 3.0 (April 2, 2026) ships the Agents Window with Cloud Agents, Design Mode, and parallel agent orchestration. Hobby free; Pro $20; Pro+ $60; Ultra $200; Teams $40/user."
@@ -69,14 +180,23 @@ price_history:
   - date: 2026-04-16
     plan: "Pro"
     price: "$20/mo"
+    source: "https://cursor.com/pricing"
+    source_label: "Source"
+    source_id: cursor-pricing
     note: "Claude Opus 4.7 added within minutes of Anthropic release; billed at $5/$25 per MTok from the usage pool"
   - date: 2026-04-02
     plan: "Pro / Pro+ / Ultra / Teams"
     price: "$20 / $60 / $200 / $40-user"
+    source: "https://cursor.com/pricing"
+    source_label: "Source"
+    source_id: cursor-pricing
     note: "Cursor 3.0 ships the Agents Window · pricing structure unchanged"
   - date: 2026-04-17
     plan: "Pro"
     price: "$20/mo"
+    source: "https://cursor.com/pricing"
+    source_label: "Source"
+    source_id: cursor-pricing
     note: "Verified, unchanged"
 ---
 

@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2022-03
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-04
+last_verified: 2026-05-04
 update_frequency: monthly
 seo_title: "Krea: Features, Pricing & Review (2026)"
 meta_description: "Krea is the real-time creative suite that unifies Flux, Sora, Veo 3, Kling, and in-house models in one canvas. Free tier with 100 daily compute units. Basic $9, Pro $35, Max $70/mo. Video access unlocks at Pro."
@@ -28,6 +28,55 @@ scores:
   value: 8
   moat: 7
   longevity: 7
+facts:
+  best_for:
+    value: Best for creatives using one AI suite for real-time image generation, video generation, enhancement, and design experimentation.
+    source: https://www.krea.ai/
+    source_label: Krea official site
+    source_id: krea-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  pricing_anchor:
+    value: Krea pricing is plan/credit dependent; verify current image/video limits, generation speed, commercial rights, and
+      feature access before production use.
+    source: https://www.krea.ai/pricing
+    source_label: Krea pricing
+    source_id: krea-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  workflow_surface:
+    value: Krea combines image, video, and realtime creative workflows rather than acting as a narrow single-model image generator.
+    source: https://www.krea.ai/realtime
+    source_label: Krea realtime image generation
+    source_id: krea-realtime
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  model_control:
+    value: Video generation should be evaluated separately for duration, prompt/image conditioning, artifact rate, export formats,
+      and credit consumption.
+    source: https://www.krea.ai/video
+    source_label: Krea video generator
+    source_id: krea-video
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  watch_out_for:
+    value: Creative teams should compare Krea by controllability, consistency, rights, moderation, and pipeline fit against
+      Midjourney, Runway, Pika, and Higgsfield.
+    source: https://www.krea.ai/pricing
+    source_label: Krea pricing
+    source_id: krea-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
 tags: [image-generation, real-time-ai, video-generation, creative-tools, krea]
 best_for:
   - real-time visual iteration
@@ -46,10 +95,16 @@ price_history:
   - date: 2026-04-18
     plan: "Basic"
     price: "$9/mo · 5,000 compute units"
+    source: "https://www.krea.ai/pricing"
+    source_label: "Source"
+    source_id: krea-pricing
     note: "Verified on krea.ai/pricing"
   - date: 2026-04-18
     plan: "Pro"
     price: "$35/mo · 20,000 compute units"
+    source: "https://www.krea.ai/pricing"
+    source_label: "Source"
+    source_id: krea-pricing
     note: "Unlocks Veo 3, Sora, Kling video access"
 ---
 

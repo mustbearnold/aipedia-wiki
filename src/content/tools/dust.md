@@ -11,8 +11,8 @@ pricing_model: paid
 price_range: Pro 29 EUR/user/month; Enterprise custom
 status: active
 launched: 2023
-last_updated: 2026-04-27
-last_verified: 2026-04-27
+last_updated: 2026-05-05
+last_verified: 2026-05-05
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -25,8 +25,57 @@ scores:
   value: 8
   moat: 7
   longevity: 8
+facts:
+  best_for:
+    value: Best for organizations building internal AI agents over company knowledge, apps, and workflows with enterprise controls.
+    source: https://dust.tt/
+    source_label: Dust official site
+    source_id: dust-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  pricing_anchor:
+    value: Dust pricing is plan and seat based across Pro and Enterprise packaging; verify current seats, limits, connectors,
+      and admin/security features before rollout.
+    source: https://dust.tt/pricing
+    source_label: Dust pricing
+    source_id: dust-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  workflow_surface:
+    value: Dust’s surface is custom workplace agents and shared assistant workflows, not a generic consumer chatbot.
+    source: https://docs.dust.tt/
+    source_label: Dust docs
+    source_id: dust-docs
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  enterprise_controls:
+    value: Security review should cover workspace permissions, data connectors, admin controls, retention, SOC evidence, and
+      model/provider configuration.
+    source: https://dust.tt/security
+    source_label: Dust security
+    source_id: dust-security
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  watch_out_for:
+    value: Dust creates value when agents are grounded in real company systems; weak connector hygiene or unclear permissions
+      can turn it into another chat UI.
+    source: https://docs.dust.tt/
+    source_label: Dust docs
+    source_id: dust-docs
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
 tags: [ai-agents, enterprise-ai, internal-tools, slack, data-sources, automation, assistants]
-seo_title: "Dust Review: Team AI Agents, Data Sources & Pricing (April 2026)"
+seo_title: "Dust Review: Team AI Agents, Data Sources & Pricing (2026)"
 meta_description: "Dust is a team AI agent platform for custom assistants that search company data, execute actions, connect tools, and run in Slack, Chrome, Zendesk, APIs, and more."
 author: aipedia.wiki Editorial
 best_for:
@@ -65,7 +114,8 @@ It sits between no-code automation and enterprise search. Compared with [Glean](
 | **Data sources** | GitHub, Google Drive, Notion, Slack and more |
 | **Integrations** | Slack, Zendesk, Chrome Extension, API, GSheet, Zapier |
 | **Security** | SOC 2, zero data retention positioning, private spaces |
-| **Pricing** | Pro per user; Enterprise custom |
+| **Pricing** | Pro 29 EUR/user/month; Enterprise custom from larger teams |
+| **Pro limits** | Fair-use messages, programmatic credits, up to 1GB/user data sources, one private space |
 | **Best fit** | Internal agents for teams |
 
 ## When to pick Dust
@@ -75,6 +125,7 @@ It sits between no-code automation and enterprise search. Compared with [Glean](
 - **You work in Slack.** Native Slack integration makes agents reachable where teams already ask questions.
 - **You want model choice.** Dust exposes multiple frontier providers rather than betting on one model.
 - **You want a builder surface.** Non-infra teams can create repeatable agents without owning vector database plumbing.
+- **You need programmatic usage.** API, Google Sheets, and Zapier credits make Dust useful beyond chat-style assistant surfaces.
 
 ## When to pick something else
 
@@ -85,9 +136,26 @@ It sits between no-code automation and enterprise search. Compared with [Glean](
 
 ## Pricing
 
-Dust publishes a Pro plan at 29 EUR per user per month, excluding tax, with a 14-day trial. Enterprise is custom and starts at larger teams, adding advanced security, larger storage/file limits, SSO, SCIM, priority support, and hosting options.
+Dust publishes a Pro plan at 29 EUR per user per month, excluding tax, with a 14-day trial. As verified on 2026-05-05, Pro starts from one user and includes advanced models, custom action-capable agents, core connections, native integrations, privacy/security features, fair-use unlimited messages, programmatic credits, fixed pricing on additional programmatic usage, up to 1GB per user of data sources, and one private space.
+
+Enterprise is custom and starts from larger teams, with Dust's pricing page positioning it from 100 members. It adds advanced security and controls, larger storage and file limits, custom programmatic pricing, SSO, flexible payment options, priority support and account management, priority access to new features, US/EU data hosting, SCIM, and Salesforce tooling.
 
 The pricing is reasonable for team workflows if agents replace repeated internal support, research, or support-answering labor. It is expensive if used like a casual chatbot.
+
+## Buyer fit
+
+Dust is strongest when a team can name repeatable internal jobs: answer support questions from product docs, summarize account history, draft customer responses, search engineering knowledge, pull context from Slack and GitHub, or run an approved action from a shared assistant.
+
+It is weaker when the organization only wants a general chatbot. The value depends on connective tissue: clean source permissions, useful data sources, well-scoped agents, and teams willing to move repeated questions into shared workflows instead of one-off chats.
+
+## Rollout checklist
+
+- Start with one department and one high-frequency workflow.
+- Connect only the sources needed for that workflow.
+- Define which tools an agent may execute and which actions require human review.
+- Decide who owns assistant prompts, source hygiene, and regression testing.
+- Check whether Pro storage, private space, and programmatic usage limits match the pilot.
+- Move to Enterprise review before broad rollout, SSO, SCIM, hosting requirements, or regulated data.
 
 ## Failure Modes
 
@@ -96,10 +164,11 @@ The pricing is reasonable for team workflows if agents replace repeated internal
 - **Action permissions need care.** Tool-executing agents require governance.
 - **Not a full workflow engine.** Complex deterministic automation may still belong in n8n or Zapier.
 - **Enterprise features are custom.** SSO, SCIM, hosting, and bigger limits require sales.
+- **Fair-use language needs review.** "Unlimited" messages still depend on fair-use limits and programmatic usage terms.
 
 ## Methodology
 
-Last verified 2026-04-28 against Dust pricing, product, and documentation pages. Scoring emphasizes team utility, action-capable agents, integrations, pricing, and enterprise readiness.
+Last verified 2026-05-05 against Dust pricing, product, and documentation pages. Scoring emphasizes team utility, action-capable agents, integrations, pricing, and enterprise readiness.
 
 ## FAQ
 

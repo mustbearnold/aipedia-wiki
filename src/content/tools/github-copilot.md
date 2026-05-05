@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$39/user/month"
 status: active
 launched: 2021-06
-last_updated: 2026-05-03
-last_verified: 2026-05-03
+last_updated: 2026-05-05
+last_verified: 2026-05-05
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -27,29 +27,139 @@ scores:
 facts:
   flagship_model:
     value: "GPT-5.5 and Claude Opus 4.7 on Pro+, Business, and Enterprise"
-    source: "/news/2026-04-24-github-copilot-gpt-55/"
+    source: "https://github.blog/changelog/2026-04-24-gpt-5-5-is-generally-available-for-github-copilot"
     source_label: "Copilot GPT-5.5 rollout coverage"
-    verified_at: 2026-04-26
-  coding_agent:
-    value: "Agent mode and GitHub Coding Agent"
-    source: "/tools/github-copilot/"
-    source_label: "AIpedia GitHub Copilot review"
-    verified_at: 2026-04-26
+    source_id: company-newsrooms
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
   context_window:
-    value: "Model-dependent"
-    source: "/tools/github-copilot/"
-    source_label: "AIpedia GitHub Copilot review"
-    verified_at: 2026-04-26
+    value: "Model-dependent and IDE/workspace-dependent"
+    source: "https://docs.github.com/en/copilot"
+    source_label: "GitHub Copilot documentation"
+    source_id: github-copilot-docs
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  pricing_anchor:
+    value: "Free, Pro, Pro+, Business, and Enterprise plans; Pro+ is the individual tier for the broadest frontier-model access"
+    source: "https://github.com/features/copilot/plans"
+    source_label: "GitHub Copilot plans"
+    source_id: github-copilot-plans
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  free_plan:
+    value: "Yes — GitHub Copilot Free is available with monthly limits"
+    source: "https://github.com/features/copilot/plans"
+    source_label: "GitHub Copilot plans"
+    source_id: github-copilot-plans
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
   best_paid_tier:
     value: "Pro+ ($39/mo) for top models; Business/Enterprise for teams"
-    source: "/tools/github-copilot/"
-    source_label: "AIpedia GitHub Copilot review"
-    verified_at: 2026-04-26
+    source: "https://github.com/features/copilot/plans"
+    source_label: "GitHub Copilot plans"
+    source_id: github-copilot-plans
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  api_available:
+    value: "No standalone general Copilot model API; Copilot features are delivered through GitHub, IDEs, CLI, and enterprise integrations"
+    source: "https://docs.github.com/en/copilot/reference/copilot-feature-matrix"
+    source_label: "GitHub Copilot feature matrix"
+    source_id: github-copilot-feature-matrix
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  image_generation:
+    value: "No native image generation; Copilot is focused on software development"
+    source: "https://docs.github.com/en/copilot"
+    source_label: "GitHub Copilot documentation"
+    source_id: github-copilot-docs
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  video_generation:
+    value: "No native video generation; Copilot is focused on software development"
+    source: "https://docs.github.com/en/copilot"
+    source_label: "GitHub Copilot documentation"
+    source_id: github-copilot-docs
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  real_time_voice:
+    value: "No native real-time voice assistant surface in Copilot plans"
+    source: "https://docs.github.com/en/copilot/reference/copilot-feature-matrix"
+    source_label: "GitHub Copilot feature matrix"
+    source_id: github-copilot-feature-matrix
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  web_browsing:
+    value: "Limited — Copilot works from repository, IDE, GitHub, and configured tool context rather than general web browsing"
+    source: "https://docs.github.com/en/copilot/reference/copilot-feature-matrix"
+    source_label: "GitHub Copilot feature matrix"
+    source_id: github-copilot-feature-matrix
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  coding_agent:
+    value: "Agent mode and GitHub Coding Agent"
+    source: "https://docs.github.com/en/copilot"
+    source_label: "GitHub Copilot documentation"
+    source_id: github-copilot-docs
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  enterprise_controls:
+    value: "Business and Enterprise plans add organizational controls, policy management, and enterprise governance features"
+    source: "https://docs.github.com/en/copilot/reference/copilot-feature-matrix"
+    source_label: "GitHub Copilot feature matrix"
+    source_id: github-copilot-feature-matrix
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  data_retention_or_privacy:
+    value: "Enterprise posture depends on GitHub plan and Copilot policy settings; review GitHub Copilot docs before regulated use"
+    source: "https://docs.github.com/en/copilot"
+    source_label: "GitHub Copilot documentation"
+    source_id: github-copilot-docs
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  open_source_or_local:
+    value: "No — GitHub Copilot is a proprietary hosted service"
+    source: "https://github.com/features/copilot"
+    source_label: "GitHub Copilot product page"
+    source_id: github-copilot-docs
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
   best_for:
     value: "GitHub-native IDE assistance, agent mode, and issue-to-PR workflows"
-    source: "/tools/github-copilot/"
-    source_label: "AIpedia GitHub Copilot review"
-    verified_at: 2026-04-26
+    source: "https://docs.github.com/en/copilot"
+    source_label: "GitHub Copilot documentation"
+    source_id: github-copilot-docs
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  watch_out_for:
+    value: "Best inside GitHub and supported IDE workflows; less useful for non-code knowledge work"
+    source: "https://docs.github.com/en/copilot/reference/copilot-feature-matrix"
+    source_label: "GitHub Copilot feature matrix"
+    source_id: github-copilot-feature-matrix
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
 tags: [ide, autocomplete, ai-coding, vscode, jetbrains, xcode, neovim, github, microsoft, agent-mode, coding-agent, mcp, gpt-5-5, claude-opus-4-7]
 seo_title: "GitHub Copilot: Features, Pricing & Review (April 2026)"
 meta_description: "GitHub Copilot runs GPT-5.5 and Claude Opus 4.7 on Pro+/Business/Enterprise, plus GPT-5-Codex and Gemini 3.1 Pro across VS Code, Visual Studio, JetBrains, Xcode, and Neovim. Free, Pro $10, Pro+ $39, Business $19/seat, Enterprise $39/seat."
@@ -70,22 +180,37 @@ price_history:
   - date: 2026-04-16
     plan: "Pro+"
     price: "$39/mo"
+    source: "https://github.com/features/copilot/plans"
+    source_label: "Source"
+    source_id: github-copilot-plans
     note: "Claude Opus 4.7 GA on Pro+/Business/Enterprise at 7.5x promotional multiplier through April 30, 2026; Opus 4.5 and 4.6 being retired from the picker"
   - date: 2026-04-24
     plan: "GPT-5.5"
     price: "7.5x premium requests"
+    source: "https://github.com/features/copilot/plans"
+    source_label: "Source"
+    source_id: github-copilot-plans
     note: "GPT-5.5 generally available for Copilot Pro+, Business, and Enterprise users"
   - date: 2026-04-10
     plan: "Pro+"
     price: "$39/mo"
+    source: "https://github.com/features/copilot/plans"
+    source_label: "Source"
+    source_id: github-copilot-plans
     note: "Opus 4.6 Fast retired from Pro+; new per-model limits enforced"
   - date: 2026-04-17
     plan: "Pro"
     price: "$10/mo"
+    source: "https://github.com/features/copilot/plans"
+    source_label: "Source"
+    source_id: github-copilot-plans
     note: "Verified, unchanged"
   - date: 2026-04-24
     plan: "Free / Pro / Pro+ data policy"
     price: "Opt-out available"
+    source: "https://github.com/features/copilot/plans"
+    source_label: "Source"
+    source_id: github-copilot-plans
     note: "GitHub begins using Copilot interaction data from individual tiers for model training unless users opt out. Business and Enterprise are excluded."
 ---
 

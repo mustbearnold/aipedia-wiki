@@ -28,6 +28,52 @@ scores:
   value: 6
   moat: 6
   longevity: 7
+facts:
+  best_for:
+    value: "Best for business teams that want no-code AI agents to handle inbox, meetings, CRM updates, scheduling, customer operations, and repeatable back-office workflows."
+    source: https://www.lindy.ai/
+    source_label: Lindy official site
+    source_id: lindy-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  pricing_anchor:
+    value: "Lindy pricing is credit and plan based; verify current monthly credits, included automations, phone/voice allowances, and team/enterprise limits before rollout."
+    source: https://www.lindy.ai/pricing
+    source_label: Source
+    source_id: lindy-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  workflow_surface:
+    value: "Lindy should be evaluated by workflow ownership, integrations, approval gates, and handoff behavior rather than by model choice alone."
+    source: https://docs.lindy.ai/
+    source_label: Lindy documentation
+    source_id: lindy-docs
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  security_posture:
+    value: "Enterprise buyers should review Lindy's security and compliance overview for data handling, access controls, and deployment assurances."
+    source: https://www.lindy.ai/security
+    source_label: Lindy security overview
+    source_id: lindy-security
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  watch_out_for:
+    value: "Credit-based agents can create unpredictable spend if workflows loop, call tools heavily, or run without approval checkpoints."
+    source: https://www.lindy.ai/pricing
+    source_label: Source
+    source_id: lindy-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
 tags: [ai-agents, workflow-automation, business-automation, no-code, lindy]
 best_for:
   - inbox triage and email drafting for solo operators
@@ -45,14 +91,23 @@ price_history:
   - date: 2024-10
     plan: "Pro"
     price: "$49.99/mo"
+    source: "https://www.lindy.ai/pricing"
+    source_label: "Source"
+    source_id: lindy-pricing
     note: "Earlier lineup had Pro at this tier with 5,000 credits"
   - date: 2026-02
     plan: "Plus / Pro / Max"
     price: "$49.99 / $99.99 / $199.99"
+    source: "https://www.lindy.ai/pricing"
+    source_label: "Source"
+    source_id: lindy-pricing
     note: "Lineup restructured, Pro renamed Plus, new tiers added above"
   - date: 2026-04-18
     plan: "All tiers"
     price: "Unchanged"
+    source: "https://www.lindy.ai/pricing"
+    source_label: "Source"
+    source_id: lindy-pricing
     note: "Verified via lindy.ai/pricing"
 ---
 

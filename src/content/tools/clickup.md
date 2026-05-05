@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: $0-$40/user/month
 status: active
 launched: 2017-01
-last_updated: 2026-05-03
-last_verified: 2026-05-03
+last_updated: 2026-05-04
+last_verified: 2026-05-04
 update_frequency: monthly
 seo_title: 'ClickUp: Features, Pricing & Review (April 2026)'
 meta_description: >-
@@ -32,6 +32,56 @@ scores:
   value: 8
   moat: 5
   longevity: 8
+facts:
+  best_for:
+    value: Best for teams consolidating tasks, docs, chat, goals, and AI assistance into one work-management workspace.
+    source: https://clickup.com/
+    source_label: ClickUp official site
+    source_id: clickup-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  pricing_anchor:
+    value: ClickUp pricing is seat and plan based, with AI features potentially tied to plan/add-on packaging; verify current
+      annual/monthly rates and ClickUp Brain availability.
+    source: https://clickup.com/pricing
+    source_label: ClickUp pricing
+    source_id: clickup-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  ai_workflow:
+    value: ClickUp Brain is positioned as AI across the workspace, so evaluation should test whether answers, writing, summaries,
+      automations, and task context work on the buyer’s real data.
+    source: https://clickup.com/ai
+    source_label: ClickUp Brain product page
+    source_id: clickup-brain
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  integration_surface:
+    value: The main implementation surface is migrating or connecting work-management objects, automations, docs, chat, and
+      reporting—not simply enabling a chatbot.
+    source: https://clickup.com/
+    source_label: ClickUp official site
+    source_id: clickup-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  watch_out_for:
+    value: 'ClickUp can replace multiple tools, but rollout risk is workspace complexity: permissions, notification noise, hierarchy
+      design, and user adoption matter more than the AI demo.'
+    source: https://clickup.com/pricing
+    source_label: ClickUp pricing
+    source_id: clickup-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
 tags: [project-management, productivity, workspace, tasks, docs, whiteboards, ai-agents, automations, clickup-brain]
 best_for:
   - small-to-mid teams consolidating tasks + docs + chat in one tool
@@ -49,14 +99,23 @@ price_history:
   - date: 2026-04-19
     plan: "Unlimited"
     price: "$7/user/mo (annual)"
+    source: "https://clickup.com/pricing"
+    source_label: "Source"
+    source_id: clickup-pricing
     note: "Annual billing. Monthly rate shown at $10/user/mo. Confirmed on clickup.com/pricing."
   - date: 2026-04-19
     plan: "Business"
     price: "$12/user/mo (annual)"
+    source: "https://clickup.com/pricing"
+    source_label: "Source"
+    source_id: clickup-pricing
     note: "Annual billing. Monthly rate $19/user/mo. Includes 5K automations/mo, advanced dashboards, SSO."
   - date: 2026-04-19
     plan: "ClickUp Brain"
     price: "$9/user/mo"
+    source: "https://clickup.com/pricing"
+    source_label: "Source"
+    source_id: clickup-pricing
     note: "AI add-on. Unlimited assistant, @Brain Agent, premium model routing (ChatGPT/Gemini/Claude), 1,500 AI Super Credits."
 ---
 

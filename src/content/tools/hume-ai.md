@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: $0-$500/month
 status: active
 launched: 2021-01
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-04
+last_verified: 2026-05-04
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -28,6 +28,56 @@ scores:
   value: 8
   moat: 8
   longevity: 7
+facts:
+  best_for:
+    value: Best for teams building expressive voice, empathic AI, and emotion-aware interaction features through hosted APIs.
+    source: https://www.hume.ai/
+    source_label: Hume AI official site
+    source_id: hume-ai-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  pricing_anchor:
+    value: Hume AI pricing is API/usage oriented with free and paid packaging; verify current credits, concurrency, voice/model
+      access, and enterprise terms.
+    source: https://www.hume.ai/pricing
+    source_label: Hume AI pricing
+    source_id: hume-ai-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  api_available:
+    value: Developer docs are the source of truth for authentication, streaming, EVI voice behavior, expression measurement,
+      and SDK integration.
+    source: https://dev.hume.ai/docs
+    source_label: Hume AI developer docs
+    source_id: hume-ai-docs
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  model_control:
+    value: Product evaluation should separate voice generation, empathic voice interface, and expression-measurement capabilities
+      because each has different use cases and risk.
+    source: https://www.hume.ai/products
+    source_label: Hume AI products
+    source_id: hume-ai-products
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  watch_out_for:
+    value: Emotion AI needs extra consent, privacy, bias, and safety review; do not treat affect signals as ground-truth user
+      intent without validation.
+    source: https://dev.hume.ai/docs
+    source_label: Hume AI developer docs
+    source_id: hume-ai-docs
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
 tags: [voice-ai, empathic-voice, emotion-ai, tts, text-to-speech, speech-to-speech, evi, octave, expression-measurement]
 seo_title: 'Hume AI: Features, Pricing & Review (May 2026)'
 meta_description: >-
@@ -49,14 +99,23 @@ price_history:
   - date: 2026-05-02
     plan: "Starter"
     price: "$3/mo"
+    source: "https://www.hume.ai/pricing"
+    source_label: "Source"
+    source_id: hume-ai-pricing
     note: "Entry paid tier: 30K TTS chars (~30 min), 40 min EVI, 5 concurrent connections, 20 projects."
   - date: 2026-05-02
     plan: "Creator"
     price: "$7/mo (first month $3.50)"
+    source: "https://www.hume.ai/pricing"
+    source_label: "Source"
+    source_id: hume-ai-pricing
     note: "Popular creator tier: 140K TTS chars (~140 min), 200 min EVI, 1,000 projects. 50% off first month on public pricing page."
   - date: 2026-05-02
     plan: "Pro"
     price: "$70/mo"
+    source: "https://www.hume.ai/pricing"
+    source_label: "Source"
+    source_id: hume-ai-pricing
     note: "1M TTS chars (~1,000 min), 1,200 min EVI, 3,000 projects, 10 concurrent connections."
 ---
 

@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$249.99/month"
 status: active
 launched: 2024-06
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-04
+last_verified: 2026-05-04
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -25,6 +25,57 @@ scores:
   value: 7
   moat: 6
   longevity: 7
+facts:
+  best_for:
+    value: Best for users who want an all-in-one AI workspace with agents for research, content creation, slides, video, and
+      task execution.
+    source: https://www.genspark.ai/
+    source_label: Genspark official site
+    source_id: genspark-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  pricing_anchor:
+    value: Genspark pricing/access is volatile and may be guarded; verify plan limits, credits, agent access, and enterprise
+      packaging on the live pricing surface.
+    source: https://www.genspark.ai/pricing
+    source_label: Genspark pricing
+    source_id: genspark-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  agentic_workspace:
+    value: Genspark Agents is the key differentiator versus a normal search or chat product, so evaluate task depth and source
+      transparency per agent workflow.
+    source: https://www.genspark.ai/agents
+    source_label: Genspark Agents
+    source_id: genspark-agents
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  workflow_surface:
+    value: The product surface spans research and content/workflow execution, making it closer to an AI workspace than a single-purpose
+      search engine.
+    source: https://www.genspark.ai/
+    source_label: Genspark official site
+    source_id: genspark-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  watch_out_for:
+    value: Check citation quality, privacy, export formats, credit burn, and whether agent outputs are reproducible before using
+      Genspark for business-critical research.
+    source: https://www.genspark.ai/agents
+    source_label: Genspark Agents
+    source_id: genspark-agents
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
 tags: [ai-agent, ai-search, super-agent, research, browser-agent, slides, sheets, voice-agent, agentic]
 best_for:
   - multi-step research with action output
@@ -44,10 +95,16 @@ price_history:
   - date: 2026-04-17
     plan: "Plus"
     price: "$24.99/mo"
+    source: "https://www.genspark.ai/pricing"
+    source_label: "Source"
+    source_id: genspark-pricing
     note: "Verified current"
   - date: 2026-04-17
     plan: "Pro"
     price: "$249.99/mo"
+    source: "https://www.genspark.ai/pricing"
+    source_label: "Source"
+    source_id: genspark-pricing
     note: "Verified current"
 ---
 

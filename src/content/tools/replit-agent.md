@@ -24,6 +24,143 @@ scores:
   value: 7
   moat: 6
   longevity: 7
+facts:
+  flagship_model:
+    value: "Replit Agent 3 for autonomous app-building sessions inside Replit"
+    source: "https://docs.replit.com/core-concepts/agent"
+    source_label: "Replit Agent docs"
+    source_id: replit-agent-docs
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  context_window:
+    value: "Not published as a single token window; Replit Agent operates over project context inside the Replit workspace"
+    source: "https://docs.replit.com/core-concepts/agent"
+    source_label: "Replit Agent docs"
+    source_id: replit-agent-docs
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  pricing_anchor:
+    value: "Starter/free access plus paid Replit plans and effort-based AI credits; Pro is the main advanced individual plan"
+    source: "https://replit.com/pricing"
+    source_label: "Replit pricing"
+    source_id: replit-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  free_plan:
+    value: "Yes: Starter/free plan includes limited AI credits and app publishing capacity"
+    source: "https://replit.com/pricing"
+    source_label: "Replit pricing"
+    source_id: replit-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  best_paid_tier:
+    value: "Pro for serious individual agent use; Enterprise for teams needing governance, support, and scale"
+    source: "https://replit.com/pricing"
+    source_label: "Replit pricing"
+    source_id: replit-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  api_available:
+    value: "Replit offers platform/workspace capabilities, but Replit Agent is primarily used inside the Replit IDE rather than as a general external coding-agent API"
+    source: "https://docs.replit.com/core-concepts/agent"
+    source_label: "Replit Agent docs"
+    source_id: replit-agent-docs
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  image_generation:
+    value: "No native image-generation product; Replit Agent focuses on software/app building"
+    source: "https://docs.replit.com/core-concepts/agent"
+    source_label: "Replit Agent docs"
+    source_id: replit-agent-docs
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  video_generation:
+    value: "No native video-generation product; Replit Agent focuses on software/app building"
+    source: "https://docs.replit.com/core-concepts/agent"
+    source_label: "Replit Agent docs"
+    source_id: replit-agent-docs
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  real_time_voice:
+    value: "No primary real-time voice-agent product; Replit Agent is a coding/app-building agent"
+    source: "https://docs.replit.com/core-concepts/agent"
+    source_label: "Replit Agent docs"
+    source_id: replit-agent-docs
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  web_browsing:
+    value: "Agent workflows can interact with project tooling and web previews, but Replit is not a general web-browsing assistant"
+    source: "https://docs.replit.com/core-concepts/agent"
+    source_label: "Replit Agent docs"
+    source_id: replit-agent-docs
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  coding_agent:
+    value: "Yes: Replit Agent is an autonomous coding/app-building agent inside the Replit browser IDE"
+    source: "https://docs.replit.com/core-concepts/agent"
+    source_label: "Replit Agent docs"
+    source_id: replit-agent-docs
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  enterprise_controls:
+    value: "Enterprise plans add team, governance, security, support, and procurement controls for organization-wide use"
+    source: "https://replit.com/pricing"
+    source_label: "Replit pricing"
+    source_id: replit-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  data_retention_or_privacy:
+    value: "Cloud IDE and agent workflows require reviewing workspace, secrets, deployment, and enterprise data controls before sensitive use"
+    source: "https://docs.replit.com/core-concepts/agent"
+    source_label: "Replit Agent docs"
+    source_id: replit-agent-docs
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  open_source_or_local:
+    value: "No: Replit Agent is proprietary hosted Replit software"
+    source: "https://replit.com/pricing"
+    source_label: "Replit pricing"
+    source_id: replit-pricing
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  best_for:
+    value: "Browser-native app prototyping, non-expert app building, demos, quick internal tools, and deploying small full-stack apps from one workspace"
+    source: "https://docs.replit.com/core-concepts/agent"
+    source_label: "Replit Agent docs"
+    source_id: replit-agent-docs
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  watch_out_for:
+    value: "Effort-based credits can surprise users, complex production apps still need engineering review, and serious usage pushes toward Pro/Enterprise"
+    source: "https://docs.replit.com/billing/ai-billing"
+    source_label: "Replit AI billing docs"
+    source_id: replit-ai-billing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
 tags: [browser-ide, app-builder, no-local-setup, ai-coding, deployment, non-developer, replit, agent-3]
 seo_title: "Replit Agent: Features, Pricing & Review (April 2026)"
 meta_description: "Replit Agent 3 runs autonomous coding sessions up to 200 minutes, spawns subagents, tests its own code. Effort-based credits across Economy, Power, Turbo modes. Free Starter tier, Core $25/mo, Pro $100/mo with Turbo."

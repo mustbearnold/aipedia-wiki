@@ -24,6 +24,50 @@ scores:
   value: 8
   moat: 9
   longevity: 8
+facts:
+  best_for:
+    value: "Cartesia is best for developers building low-latency voice agents and real-time speech experiences that need fast text-to-speech streaming rather than studio voiceover editing."
+    source: "https://cartesia.ai/sonic"
+    source_label: "Cartesia Sonic"
+    source_id: cartesia-sonic
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: medium
+    confidence: high
+  pricing_anchor:
+    value: "Cartesia pricing is usage based, so buyers should model characters, latency tier, concurrency, voice cloning, and production traffic before choosing it for agents."
+    source: "https://cartesia.ai/pricing"
+    source_label: "Cartesia pricing"
+    source_id: cartesia-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: high
+  flagship_model:
+    value: "Sonic is Cartesia's voice model family for fast, expressive speech generation, with the product positioned around real-time use cases."
+    source: "https://cartesia.ai/sonic"
+    source_label: "Cartesia Sonic"
+    source_id: cartesia-sonic
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: medium
+    confidence: high
+  developer_surface:
+    value: "Cartesia provides developer docs for integrating streaming speech APIs into voice agents and applications, making it more API-first than creator-suite voice tools."
+    source: "https://docs.cartesia.ai/"
+    source_label: "Cartesia docs"
+    source_id: cartesia-docs
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  watch_out_for:
+    value: "Production voice-agent costs can scale with character volume and retries; teams should test latency, interruption handling, and voice quality under real call conditions."
+    source: "https://cartesia.ai/pricing"
+    source_label: "Cartesia pricing"
+    source_id: cartesia-pricing
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
 tags: [ai-voice, tts, text-to-speech, real-time, voice-api, low-latency, voice-agents, sonic, cartesia]
 seo_title: "Cartesia: Features, Pricing & Review (April 2026)"
 meta_description: "Cartesia Sonic 3 delivers 90ms time-to-first-audio for real-time voice agents; Sonic Turbo hits 40ms. Credit-based pricing with Free to Enterprise tiers. Reviewed April 2026."
@@ -44,10 +88,16 @@ price_history:
   - date: 2026-03-01
     plan: "Credits"
     price: "1 credit/char TTS"
+    source: "https://cartesia.ai/pricing"
+    source_label: "Source"
+    source_id: cartesia-pricing
     note: "Sonic 3 launch with updated credit-based pricing"
   - date: 2026-04-15
     plan: "Pricing"
     price: "Verified unchanged"
+    source: "https://cartesia.ai/pricing"
+    source_label: "Source"
+    source_id: cartesia-pricing
     note: "Free through Scale tiers stable"
 ---
 

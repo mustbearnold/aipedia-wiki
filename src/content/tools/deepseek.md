@@ -27,25 +27,141 @@ scores:
   longevity: 7
 facts:
   flagship_model:
-    value: "DeepSeek-V4 preview; V3.2 verified API baseline"
-    source: "/news/2026-04-24-deepseek-v4-preview-release/"
-    source_label: "DeepSeek V4 preview coverage"
-    verified_at: 2026-04-26
+    value: "DeepSeek V3.2 and DeepSeek-R1 for chat/reasoning, with V4 preview signals still volatile"
+    source: "https://api-docs.deepseek.com/quick_start/pricing"
+    source_label: "DeepSeek API pricing docs"
+    source_id: deepseek-api-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
   context_window:
-    value: "128K tokens"
-    source: "/tools/deepseek/"
-    source_label: "AIpedia DeepSeek review"
-    verified_at: 2026-04-26
+    value: "128K tokens on published DeepSeek API endpoints"
+    source: "https://api-docs.deepseek.com/quick_start/pricing"
+    source_label: "DeepSeek API pricing docs"
+    source_id: deepseek-api-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  pricing_anchor:
+    value: "Chat is free; API pricing is token-based with cache-hit discounts and very low listed per-token rates"
+    source: "https://api-docs.deepseek.com/quick_start/pricing"
+    source_label: "DeepSeek API pricing docs"
+    source_id: deepseek-api-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  free_plan:
+    value: "Yes: chat.deepseek.com offers a free consumer chat interface"
+    source: "https://chat.deepseek.com"
+    source_label: "DeepSeek Chat"
+    source_id: deepseek-chat
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
   best_paid_tier:
-    value: "Usage-based API; free chat"
-    source: "/tools/deepseek/"
-    source_label: "AIpedia DeepSeek review"
-    verified_at: 2026-04-26
+    value: "API is the buyer path for production use; cache-heavy workloads benefit most from DeepSeek pricing"
+    source: "https://api-docs.deepseek.com/quick_start/pricing"
+    source_label: "DeepSeek API pricing docs"
+    source_id: deepseek-api-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  api_available:
+    value: "Yes: API endpoints include deepseek-chat and deepseek-reasoner"
+    source: "https://api-docs.deepseek.com/quick_start/pricing"
+    source_label: "DeepSeek API pricing docs"
+    source_id: deepseek-api-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  image_generation:
+    value: "No primary image-generation product in DeepSeek chat/API buyer positioning"
+    source: "https://chat.deepseek.com"
+    source_label: "DeepSeek Chat"
+    source_id: deepseek-chat
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  video_generation:
+    value: "No primary video-generation product in DeepSeek chat/API buyer positioning"
+    source: "https://chat.deepseek.com"
+    source_label: "DeepSeek Chat"
+    source_id: deepseek-chat
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  real_time_voice:
+    value: "No primary real-time voice-agent product; DeepSeek is focused on text chat, coding, and reasoning models"
+    source: "https://chat.deepseek.com"
+    source_label: "DeepSeek Chat"
+    source_id: deepseek-chat
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  web_browsing:
+    value: "Yes in the consumer chat interface as a web-search/chat feature"
+    source: "https://chat.deepseek.com"
+    source_label: "DeepSeek Chat"
+    source_id: deepseek-chat
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  coding_agent:
+    value: "Not a full IDE coding agent by itself; DeepSeek models are used for code and can power coding workflows through other tools"
+    source: "https://api-docs.deepseek.com/quick_start/pricing"
+    source_label: "DeepSeek API pricing docs"
+    source_id: deepseek-api-pricing
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  enterprise_controls:
+    value: "Enterprise governance details are thinner than OpenAI, Anthropic, Google, or Azure-style procurement; API buyers should evaluate data and jurisdiction requirements"
+    source: "https://api-docs.deepseek.com/quick_start/pricing"
+    source_label: "DeepSeek API pricing docs"
+    source_id: deepseek-api-pricing
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  data_retention_or_privacy:
+    value: "Jurisdiction, data handling, and regulatory posture are major procurement review items for sensitive workloads"
+    source: "https://chat.deepseek.com"
+    source_label: "DeepSeek Chat"
+    source_id: deepseek-chat
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  open_source_or_local:
+    value: "Yes: DeepSeek publishes open-weight models on Hugging Face for local/self-hosted use, depending on model/license"
+    source: "https://huggingface.co/deepseek-ai"
+    source_label: "DeepSeek Hugging Face organization"
+    source_id: deepseek-huggingface
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
   best_for:
-    value: "Cost-sensitive API reasoning, open-weight baselines, and self-hosting"
-    source: "/tools/deepseek/"
-    source_label: "AIpedia DeepSeek review"
-    verified_at: 2026-04-26
+    value: "Low-cost reasoning, coding assistance, API experimentation, and teams comfortable evaluating open-weight or China-origin model tradeoffs"
+    source: "https://api-docs.deepseek.com/quick_start/pricing"
+    source_label: "DeepSeek API pricing docs"
+    source_id: deepseek-api-pricing
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  watch_out_for:
+    value: "Model/version naming and pricing can change quickly; governance, privacy, and geopolitical procurement constraints matter more than raw benchmark scores"
+    source: "https://api-docs.deepseek.com/quick_start/pricing"
+    source_label: "DeepSeek API pricing docs"
+    source_id: deepseek-api-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
 tags: [open-weights, reasoning, chinese-llm, coding, math, api, free-tier, deepseek-v3, deepseek-v4, r1]
 seo_title: "DeepSeek: Features, Pricing & Review (April 2026)"
 meta_description: "DeepSeek launched V4 preview models on April 24, 2026, with pro and flash versions reported by AP. API from $0.28/M input tokens remains the verified public pricing baseline until DeepSeek publishes V4 endpoint pricing."
@@ -65,18 +181,30 @@ price_history:
   - date: 2025-01-20
     plan: "API"
     price: "$0.28/M input"
+    source: "https://api-docs.deepseek.com/quick_start/pricing"
+    source_label: "Source"
+    source_id: deepseek-api-pricing
     note: "R1 launched and held baseline API pricing"
   - date: 2026-04-17
     plan: "API"
     price: "$0.28/M input"
+    source: "https://api-docs.deepseek.com/quick_start/pricing"
+    source_label: "Source"
+    source_id: deepseek-api-pricing
     note: "Verified unchanged. Cache-hit rate $0.028/M."
   - date: 2026-04-24
     plan: "V4 preview"
     price: "Pricing not yet verified"
+    source: "https://api-docs.deepseek.com/quick_start/pricing"
+    source_label: "Source"
+    source_id: deepseek-api-pricing
     note: "AP reports pro and flash V4 preview models with improved knowledge, reasoning, and agentic capabilities."
   - date: 2026-04-27
     plan: "V4-Pro promo"
     price: "75% discount until May 5"
+    source: "https://api-docs.deepseek.com/quick_start/pricing"
+    source_label: "Source"
+    source_id: deepseek-api-pricing
     note: "Reuters reported a temporary V4-Pro developer discount plus lower cache-hit pricing across the API lineup."
 ---
 

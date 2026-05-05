@@ -29,6 +29,145 @@ scores:
   value: 9
   moat: 8
   longevity: 9
+facts:
+  flagship_model:
+    value: "Magic Studio: 25+ AI tools across design, text, image, video, and audio"
+    source: "https://www.canva.com/canva-ai/"
+    source_label: "Canva AI / Magic Studio"
+    source_id: canva-ai
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  context_window:
+    value: "Not applicable: Canva is a design platform, not a text chat model with a published token window"
+    source: "https://www.canva.com/canva-ai/"
+    source_label: "Canva AI / Magic Studio"
+    source_id: canva-ai
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+    next_review_at: 2026-06-03
+  pricing_anchor:
+    value: "Free; Pro $15/mo or $120/yr; Teams from $10/seat/mo annually with a 3-seat minimum; Enterprise custom"
+    source: "https://www.canva.com/pricing/"
+    source_label: "Canva pricing"
+    source_id: canva-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  free_plan:
+    value: "Yes: free tier includes templates and limited Magic Studio usage"
+    source: "https://www.canva.com/pricing/"
+    source_label: "Canva pricing"
+    source_id: canva-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  best_paid_tier:
+    value: "Pro for individuals; Teams for brand controls, collaboration, and approval workflows"
+    source: "https://www.canva.com/pricing/"
+    source_label: "Canva pricing"
+    source_id: canva-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  api_available:
+    value: "Enterprise surfaces include Connect API and higher-level admin controls; Canva is not primarily an open model API"
+    source: "https://www.canva.com/pricing/"
+    source_label: "Canva pricing"
+    source_id: canva-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  image_generation:
+    value: "Yes: Magic Media and Magic Studio include AI image generation and editing tools"
+    source: "https://www.canva.com/canva-ai/"
+    source_label: "Canva AI / Magic Studio"
+    source_id: canva-ai
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  video_generation:
+    value: "Yes: Magic Studio includes AI-assisted video generation and editing workflows"
+    source: "https://www.canva.com/canva-ai/"
+    source_label: "Canva AI / Magic Studio"
+    source_id: canva-ai
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  real_time_voice:
+    value: "No primary real-time voice-agent product; Canva is focused on design and content creation"
+    source: "https://www.canva.com/canva-ai/"
+    source_label: "Canva AI / Magic Studio"
+    source_id: canva-ai
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  web_browsing:
+    value: "No general web-browsing assistant; Canva is a design and content editor"
+    source: "https://www.canva.com/canva-ai/"
+    source_label: "Canva AI / Magic Studio"
+    source_id: canva-ai
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  coding_agent:
+    value: "No coding agent; Canva is a design and content platform"
+    source: "https://www.canva.com/canva-ai/"
+    source_label: "Canva AI / Magic Studio"
+    source_id: canva-ai
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  enterprise_controls:
+    value: "Enterprise adds SSO/SAML, SCIM, IP allowlisting, data retention, Connect API, and dedicated support"
+    source: "https://www.canva.com/pricing/"
+    source_label: "Canva pricing"
+    source_id: canva-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  data_retention_or_privacy:
+    value: "Enterprise is the safer tier for brand governance, data-retention controls, SSO, and regulated team workflows"
+    source: "https://www.canva.com/pricing/"
+    source_label: "Canva pricing"
+    source_id: canva-pricing
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  open_source_or_local:
+    value: "No: Canva is proprietary hosted software"
+    source: "https://www.canva.com/"
+    source_label: "Canva product page"
+    source_id: canva-ai
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  best_for:
+    value: "Non-designers creating marketing assets, social posts, presentations, brand collateral, and lightweight AI visuals"
+    source: "https://www.canva.com/canva-ai/"
+    source_label: "Canva AI / Magic Studio"
+    source_id: canva-ai
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  watch_out_for:
+    value: "Magic Media lags specialist image tools, Teams has a seat minimum, and design output can look template-driven"
+    source: "https://www.canva.com/pricing/"
+    source_label: "Canva pricing"
+    source_id: canva-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
 tags: [design-tool, social-media, templates, presentations, thumbnails, marketing, magic-studio, magic-design, non-designer]
 best_for:
   - social media managers
@@ -46,10 +185,16 @@ price_history:
   - date: 2024-09-01
     plan: "Teams"
     price: "$10/seat/mo annual"
+    source: "https://www.canva.com/pricing/"
+    source_label: "Source"
+    source_id: canva-pricing
     note: "Shifted from flat $119.99/year to per-seat billing."
   - date: 2026-04-15
     plan: "Pro"
     price: "$15/mo"
+    source: "https://www.canva.com/pricing/"
+    source_label: "Source"
+    source_id: canva-pricing
     note: "Verified unchanged at $15/mo or $120/year."
 ---
 

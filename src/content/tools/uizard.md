@@ -28,6 +28,33 @@ scores:
   value: 8
   moat: 6
   longevity: 8
+facts:
+  best_for:
+    value: "Miro-owned AI UI design tool. Autodesigner 2.0 generates full multi-screen mockups from text prompts, plus screenshot-to-mockup and sketch-to-wireframe scanners. Best for design, prototyping, UI, and creative-production workflows."
+    source: "https://uizard.io/pricing/"
+    source_label: "Source"
+    source_id: uizard-pricing
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: medium
+  pricing_anchor:
+    value: "Pro; $12/mo annual ($19/mo monthly); Verified on uizard.io/pricing"
+    source: "https://uizard.io/pricing/"
+    source_label: "Source"
+    source_id: uizard-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
+  watch_out_for:
+    value: "Non-Tier-1 canonical profile: verify current pricing, usage limits, data policy, and integration details before procurement"
+    source: "https://uizard.io/pricing/"
+    source_label: "Source"
+    source_id: uizard-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
 tags: [ui-design, ai-design, wireframing, mockups, autodesigner, uizard]
 best_for:
   - non-designers generating first-draft UI mockups
@@ -46,10 +73,16 @@ price_history:
   - date: 2026-04-18
     plan: "Pro"
     price: "$12/mo annual ($19/mo monthly)"
+    source: "https://uizard.io/pricing/"
+    source_label: "Source"
+    source_id: uizard-pricing
     note: "Verified on uizard.io/pricing"
   - date: 2026-04-18
     plan: "Business"
     price: "$39/mo"
+    source: "https://uizard.io/pricing/"
+    source_label: "Source"
+    source_id: uizard-pricing
     note: "Verified; unlimited projects, 5,000 AI generations/mo"
 ---
 

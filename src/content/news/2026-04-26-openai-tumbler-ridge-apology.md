@@ -8,9 +8,11 @@ summary: "OpenAI CEO Sam Altman apologized to residents of Tumbler Ridge after r
 affects: [chatgpt]
 categories: [ai-safety, ai-industry, ai-policy]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-30
-last_verified: 2026-04-30
+last_updated: 2026-05-05
+last_verified: 2026-05-05
 sources:
+  - url: "https://apnews.com/article/openai-altman-tumbler-ridge-killings-apology-dec2adaad3946583519370eede6a99e2"
+    title: "Altman apologizes after OpenAI failed to alert police before Tumbler Ridge killings - AP News"
   - url: "https://techcrunch.com/2026/04/25/openai-ceo-apologizes-to-tumbler-ridge-community/"
     title: "OpenAI CEO apologizes to Tumbler Ridge community - TechCrunch"
 ---
@@ -28,3 +30,7 @@ The likely next question is auditability: who reviewed the signal, what threshol
 ## Tool impact
 
 For ordinary ChatGPT users, no product setting changed today. For enterprise buyers, this raises procurement questions around safety logs, retention, abuse-response SLAs, and incident escalation.
+
+The AP report adds an important detail: OpenAI said it considered whether to refer the banned account to the Royal Canadian Mounted Police but decided the activity did not meet its referral threshold at the time. That makes the core issue a threshold and governance question, not simply a missed alert.
+
+The story also shows why consumer AI safety cannot be handled only as content moderation. When a system flags a user for violent activity, the downstream process needs clear authority, escalation rules, legal review, and documentation that can survive public scrutiny after a tragedy.

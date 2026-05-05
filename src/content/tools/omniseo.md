@@ -29,6 +29,33 @@ scores:
   value: 7
   moat: 7
   longevity: 7
+facts:
+  best_for:
+    value: "AI Visibility Platform for tracking brand mentions, citations, competitors, and recommendations across AI Overviews, AI Mode, ChatGPT, Perplexity, Gemini, Copilot, Claude, Meta AI, Grok, and DeepSeek. Best for SEO, marketing, content optimization, and search-visibility work."
+    source: "https://omniseo.com"
+    source_label: "OmniSEO homepage"
+    source_id: omniseo-official
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: medium
+  pricing_anchor:
+    value: "Essentials; $89/mo; 4 AI channels, 50 saved prompts/month, 5 competitors, 5 seats. First month shown as $45 during 50%-off promotion."
+    source: "https://omniseo.com/pricing/"
+    source_label: "Source"
+    source_id: omniseo-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
+  watch_out_for:
+    value: "Non-Tier-1 canonical profile: verify current pricing, usage limits, data policy, and integration details before procurement"
+    source: "https://omniseo.com/pricing/"
+    source_label: "Source"
+    source_id: omniseo-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
 tags: [ai-seo, ai-visibility, aeo, llm-visibility, geo, brand-monitoring, ai-search, citation-tracking]
 seo_title: 'OmniSEO: Features, Pricing & Review (May 2026)'
 meta_description: >-
@@ -51,14 +78,23 @@ price_history:
   - date: 2026-05-02
     plan: "Essentials"
     price: "$89/mo"
+    source: "https://omniseo.com/pricing/"
+    source_label: "Source"
+    source_id: omniseo-pricing
     note: "4 AI channels, 50 saved prompts/month, 5 competitors, 5 seats. First month shown as $45 during 50%-off promotion."
   - date: 2026-05-02
     plan: "Professional"
     price: "$349/mo"
+    source: "https://omniseo.com/pricing/"
+    source_label: "Source"
+    source_id: omniseo-pricing
     note: "10 AI channels, 100 saved prompts/month, 5 competitors, 10 seats. First month shown as $175 during 50%-off promotion."
   - date: 2026-05-02
     plan: "Enterprise"
     price: "$899+/mo"
+    source: "https://omniseo.com/pricing/"
+    source_label: "Source"
+    source_id: omniseo-pricing
     note: "10+ channels, custom regions/model cohorts, 500+ saved prompts/month, monthly AEO/GEO consultations, unlimited seats."
 ---
 

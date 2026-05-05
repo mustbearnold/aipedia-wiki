@@ -24,7 +24,155 @@ scores:
   value: 7
   moat: 7
   longevity: 8
+facts:
+  flagship_model:
+    value: "Express-2 avatars for corporate presenter video"
+    source: "https://www.synthesia.io"
+    source_label: "Synthesia product page"
+    source_id: synthesia-product
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  context_window:
+    value: "Not applicable: Synthesia is an avatar-video platform, not a text chat model with a published token window"
+    source: "https://help.synthesia.io"
+    source_label: "Synthesia help center"
+    source_id: synthesia-help
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+    next_review_at: 2026-06-03
+  pricing_anchor:
+    value: "Free 3 minutes; Starter $29/mo; Creator $89/mo; Enterprise custom"
+    source: "https://www.synthesia.io/pricing"
+    source_label: "Synthesia pricing"
+    source_id: synthesia-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  free_plan:
+    value: "Yes: free plan includes a small monthly video-minute allowance"
+    source: "https://www.synthesia.io/pricing"
+    source_label: "Synthesia pricing"
+    source_id: synthesia-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  best_paid_tier:
+    value: "Creator ($89/mo) for production teams; Enterprise for API, SSO, SCIM, audit, and governance"
+    source: "https://www.synthesia.io/pricing"
+    source_label: "Synthesia pricing"
+    source_id: synthesia-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  api_available:
+    value: "Enterprise only"
+    source: "https://www.synthesia.io/pricing"
+    source_label: "Synthesia pricing"
+    source_id: synthesia-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  image_generation:
+    value: "No native still-image generation; Synthesia is focused on avatar video"
+    source: "https://www.synthesia.io"
+    source_label: "Synthesia product page"
+    source_id: synthesia-product
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  video_generation:
+    value: "Yes: presenter/avatar video generation with scripts, avatars, dubbing, and lip-sync"
+    source: "https://www.synthesia.io"
+    source_label: "Synthesia product page"
+    source_id: synthesia-product
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  real_time_voice:
+    value: "No primary real-time conversational voice product; Synthesia is asynchronous presenter-video software"
+    source: "https://www.synthesia.io"
+    source_label: "Synthesia product page"
+    source_id: synthesia-product
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  web_browsing:
+    value: "No web-browsing assistant; Synthesia is video creation software"
+    source: "https://www.synthesia.io"
+    source_label: "Synthesia product page"
+    source_id: synthesia-product
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  coding_agent:
+    value: "No coding agent; Synthesia is avatar-video software"
+    source: "https://www.synthesia.io"
+    source_label: "Synthesia product page"
+    source_id: synthesia-product
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  enterprise_controls:
+    value: "Enterprise adds API, SSO, SCIM, audit logging, team brand controls, and governance features"
+    source: "https://www.synthesia.io/pricing"
+    source_label: "Synthesia pricing"
+    source_id: synthesia-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  data_retention_or_privacy:
+    value: "Enterprise governance and compliance controls are the safer path for HR, L&D, and regulated training content"
+    source: "https://help.synthesia.io"
+    source_label: "Synthesia help center"
+    source_id: synthesia-help
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  open_source_or_local:
+    value: "No: Synthesia is proprietary hosted software"
+    source: "https://www.synthesia.io"
+    source_label: "Synthesia product page"
+    source_id: synthesia-product
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  best_for:
+    value: "Corporate training, onboarding, compliance, LMS-ready presenter video, and multilingual avatar content"
+    source: "https://www.synthesia.io"
+    source_label: "Synthesia product page"
+    source_id: synthesia-product
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  watch_out_for:
+    value: "Starter minutes are tight, custom avatar turnaround can take days, and API access requires Enterprise"
+    source: "https://www.synthesia.io/pricing"
+    source_label: "Synthesia pricing"
+    source_id: synthesia-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
 tags: [ai-video, ai-avatar, talking-head, training-video, corporate-video, e-learning, express-2, scorm]
+best_for:
+  - corporate training, onboarding, compliance, and enablement teams
+  - LMS workflows that need SCORM export and team review controls
+  - multilingual enterprise video localization
+  - turning slide decks into narrated training content
+not_best_for:
+  - low-budget marketing or sales avatar campaigns
+  - cinematic creative video generation
+  - fast low-cost custom avatar cloning
+  - solo creators who do not need enterprise workflow controls
 seo_title: "Synthesia: Features, Pricing & Review (April 2026)"
 meta_description: "Synthesia builds corporate talking-head video with Express-2 avatars across 130+ languages. Free 3min, Starter $29, Creator $89, Enterprise custom. SCORM export and PowerPoint import anchor the L&D pipeline."
 author: "aipedia.wiki Editorial"

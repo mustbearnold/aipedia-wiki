@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$199/month; one-track licenses from $19"
 status: active
 launched: 2017-01
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-04
+last_verified: 2026-05-04
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -25,6 +25,52 @@ scores:
   value: 8
   moat: 6
   longevity: 7
+facts:
+  product_scope:
+    value: "AI music generator/licensing platform for royalty-safe background music, streams, creator videos, and commercial tracks."
+    source: "https://mubert.com/"
+    source_label: "Mubert homepage"
+    source_id: mubert-official
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: medium
+    confidence: high
+  pricing_anchor:
+    value: "Free and paid Render tiers plus track licensing options are published on Mubert pricing; verify commercial-use rights per tier."
+    source: "https://mubert.com/render/pricing"
+    source_label: "Mubert pricing"
+    source_id: mubert-pricing
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
+  licensing_model:
+    value: "Mubert’s buyer value depends on license fit, not just generation quality; FAQ/pricing should be checked for commercial, client, and platform rights."
+    source: "https://mubert.com/render/faq"
+    source_label: "Mubert FAQ"
+    source_id: mubert-faq
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: medium
+    confidence: high
+  best_for:
+    value: "Creators, streamers, and small teams needing fast background music with clearer licensing than generic audio-model experiments."
+    source: "https://mubert.com/render/pricing"
+    source_label: "Mubert pricing"
+    source_id: mubert-pricing
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
+  watch_out_for:
+    value: "Not a full song-production suite like Suno/Udio; evaluate rights, stem control, and originality requirements before using it for signature music."
+    source: "https://mubert.com/render/faq"
+    source_label: "Mubert FAQ"
+    source_id: mubert-faq
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: medium
+    confidence: medium
 tags: [ai-music, royalty-free, background-music, content-creation, youtube-safe]
 seo_title: "Mubert Review: AI Music Pricing, Licenses & Limits (May 2026)"
 meta_description: >-

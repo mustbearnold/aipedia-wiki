@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$25/user/month"
 status: active
 launched: 2020-09
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-04
+last_verified: 2026-05-04
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -24,6 +24,56 @@ scores:
   value: 7
   moat: 6
   longevity: 6
+facts:
+  best_for:
+    value: Best for people who want an AI thought partner and lightweight personal knowledge base, not a team wiki or deeply
+      structured project-management system.
+    source: https://get.mem.ai/
+    source_label: Mem product site
+    source_id: mem-product
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  pricing_anchor:
+    value: Mem pricing should be checked on the live pricing page because the product has shifted packaging during recent Mem
+      refreshes.
+    source: https://get.mem.ai/pricing
+    source_label: Mem pricing
+    source_id: mem-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  web_browsing:
+    value: Mem is centered on your saved notes and knowledge context rather than open-ended web browsing.
+    source: https://mem.ai/
+    source_label: Mem official site
+    source_id: mem-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  enterprise_controls:
+    value: AIpedia does not treat Mem as an enterprise knowledge-management default; teams should verify workspace, admin, and
+      retention controls before rollout.
+    source: https://get.mem.ai/pricing
+    source_label: Mem pricing
+    source_id: mem-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  watch_out_for:
+    value: Mem is best when users accept its opinionated, AI-first capture and retrieval model; teams needing folders, strict
+      taxonomy, or compliance workflows may prefer Notion, Obsidian, or a dedicated knowledge base.
+    source: https://get.mem.ai/
+    source_label: Mem product site
+    source_id: mem-product
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
 tags: [notes, ai-notes, knowledge-management, pkm, productivity, auto-organize, second-brain]
 seo_title: "Mem: AI Notes App Review, Features & Pricing (April 2026)"
 meta_description: "Mem is an AI notes app with Smart Search, Similar Mems, and Smart Write. Mem X Pro runs $19.99/mo; Teams at $25/user. Skips folders in favor of AI-managed recall."
@@ -43,10 +93,16 @@ price_history:
   - date: 2025-10-01
     plan: "Pro"
     price: "$19.99/mo"
+    source: "https://get.mem.ai/pricing"
+    source_label: "Source"
+    source_id: mem-pricing
     note: "Raised from $14.99 during Mem 2.0 refresh"
   - date: 2026-04-15
     plan: "Teams"
     price: "$25/user/mo"
+    source: "https://get.mem.ai/pricing"
+    source_label: "Source"
+    source_id: mem-pricing
     note: "Unchanged since launch"
 ---
 

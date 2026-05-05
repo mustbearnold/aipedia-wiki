@@ -24,7 +24,36 @@ scores:
   value: 7
   moat: 8
   longevity: 7
+facts:
+  best_for:
+    value: "Deemos Tech's high-detail 3D generator. Rodin Gen-2 at 10B parameters leads on photoreal surface detail, PBR materials, and part-segmentation. Best for image generation, editing, and visual-production workflows."
+    source: "https://hyper3d.ai/pricing"
+    source_label: "Source"
+    source_id: rodin-pricing
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: medium
+  pricing_anchor:
+    value: "Rodin Gen-2; n/a; Rodin Gen-2 released as a 10B-parameter model with higher surface detail, native PBR, and improved part-segmentation."
+    source: "https://hyper3d.ai/pricing"
+    source_label: "Source"
+    source_id: rodin-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
+  watch_out_for:
+    value: "Non-Tier-1 canonical profile: verify current pricing, usage limits, data policy, and integration details before procurement"
+    source: "https://hyper3d.ai/pricing"
+    source_label: "Source"
+    source_id: rodin-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
 tags: [3d-generation, text-to-3d, image-to-3d, pbr-materials, part-segmentation, auto-rigging, photoreal, api, glb, fbx, usdz]
+seo_title: "Rodin Review 2026: High-Detail AI 3D Generation, Pricing"
+meta_description: "Rodin review: when Deemos Tech's high-detail AI 3D generator beats Tripo3D or Meshy for photoreal assets, PBR materials, and API workflows."
 best_for:
   - studios needing hero photoreal 3D assets
   - artists iterating on sculpted detail without ZBrush workload
@@ -40,10 +69,16 @@ price_history:
   - date: 2025-11-06
     plan: "Rodin Gen-2"
     price: "n/a"
+    source: "https://hyper3d.ai/pricing"
+    source_label: "Source"
+    source_id: rodin-pricing
     note: "Rodin Gen-2 released as a 10B-parameter model with higher surface detail, native PBR, and improved part-segmentation."
   - date: 2026-04-15
     plan: "Plus"
     price: "$15/mo"
+    source: "https://hyper3d.ai/pricing"
+    source_label: "Source"
+    source_id: rodin-pricing
     note: "Verified unchanged. Pro stays $60/mo. Credits refresh monthly on paid tiers."
 ---
 

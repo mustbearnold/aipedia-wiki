@@ -11,8 +11,8 @@ pricing_model: enterprise
 price_range: "$30K-$500K+/year"
 status: active
 launched: 2016-01
-last_updated: 2026-05-03
-last_verified: 2026-05-03
+last_updated: 2026-05-04
+last_verified: 2026-05-04
 update_frequency: quarterly
 seo_title: "Ada (ada.cx): AI Customer Service Platform Review (2026)"
 meta_description: "Ada runs the ACX Platform for enterprise AI customer support: 80%+ autoresolution, voice + chat + email, Reasoning Engine, Playbooks. Contact-sales pricing from ~$30K/year. 350+ customers including Verizon, Monday.com, Pinterest, Square."
@@ -28,6 +28,57 @@ scores:
   value: 6
   moat: 8
   longevity: 8
+facts:
+  best_for:
+    value: Best for enterprise support teams evaluating AI customer-service automation across chat, email, voice, and agent-assist
+      workflows.
+    source: https://www.ada.cx/platform
+    source_label: Ada platform
+    source_id: ada-platform
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  pricing_anchor:
+    value: Ada does not expose a simple public tier sheet in the current source set; pricing should be validated with sales
+      and the official agent-pricing explainer.
+    source: https://www.ada.cx/blog/unpacking-ai-agent-pricing-resolution-based-vs-conversation-based-models/
+    source_label: Ada AI agent pricing explainer
+    source_id: ada-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  enterprise_controls:
+    value: Ada is an enterprise platform decision, so security, routing, omnichannel support, reporting, and handoff workflows
+      matter as much as model quality.
+    source: https://www.ada.cx/platform
+    source_label: Ada platform
+    source_id: ada-platform
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  api_available:
+    value: AIpedia treats Ada primarily as a customer-service automation platform; integration depth should be checked during
+      enterprise evaluation.
+    source: https://www.ada.cx/platform
+    source_label: Ada platform
+    source_id: ada-platform
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  watch_out_for:
+    value: Ada’s pricing pages are frequently protected from automated checks, so use live browser or sales confirmation before
+      quoting exact price ranges.
+    source: https://www.ada.cx/blog/unpacking-ai-agent-pricing-resolution-based-vs-conversation-based-models/
+    source_label: Ada AI agent pricing explainer
+    source_id: ada-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
 tags: [customer-support, ai-agent, chatbot, voice-ai, enterprise, ada]
 best_for:
   - enterprise CX teams with 300K+ annual conversations
@@ -46,6 +97,9 @@ price_history:
   - date: 2026-04-18
     plan: "Enterprise (contact sales)"
     price: "~$30K+/year (entry) to $500K+ (large deployments)"
+    source: "https://www.ada.cx/blog/unpacking-ai-agent-pricing-resolution-based-vs-conversation-based-models/"
+    source_label: "Source"
+    source_id: ada-pricing
     note: "Verified contact-sales model; resolution-based and conversation-based options both offered; no public tier sheet."
 ---
 

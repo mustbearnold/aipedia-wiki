@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0 free / $9.99-$29.99/mo"
 status: active
 launched: 2021-03
-last_updated: 2026-04-18
-last_verified: 2026-04-18
+last_updated: 2026-05-04
+last_verified: 2026-05-04
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -24,6 +24,55 @@ scores:
   value: 7
   moat: 5
   longevity: 6
+facts:
+  best_for:
+    value: Best for casual creators who want quick AI-generated songs and distribution paths rather than DAW-level composition
+      control.
+    source: https://boomy.com/
+    source_label: Boomy official site
+    source_id: boomy-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  pricing_anchor:
+    value: Boomy’s public pricing surface should be rechecked for plan names, release limits, download rights, and distribution
+      economics before quoting exact tiers.
+    source: https://boomy.com/pricing
+    source_label: Boomy pricing
+    source_id: boomy-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  workflow_surface:
+    value: The product is oriented around fast song creation and release workflows, not professional stem-by-stem music production.
+    source: https://boomy.com/
+    source_label: Boomy official site
+    source_id: boomy-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  enterprise_controls:
+    value: Commercial or client work should review Boomy terms for rights, releases, royalties, and account obligations.
+    source: https://boomy.com/terms
+    source_label: Boomy terms
+    source_id: boomy-terms
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  watch_out_for:
+    value: Boomy is easier than specialist composition tools, but serious creators should compare output control, rights, royalties,
+      and distribution lock-in against AIVA, Suno, Udio, and Stable Audio.
+    source: https://boomy.com/terms
+    source_label: Boomy terms
+    source_id: boomy-terms
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
 tags: [music-generation, beginner-friendly, distribution, streaming, spotify, royalty, content-creator]
 seo_title: "Boomy: Features, Pricing & Review (April 2026)"
 meta_description: "Boomy is AI music generation for non-musicians. Creator $9.99/mo, Pro $29.99/mo. Generates songs in seconds with built-in distribution to 40+ platforms. 20% royalty cut on streams."

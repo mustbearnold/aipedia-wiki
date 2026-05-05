@@ -12,8 +12,8 @@ pricing_model: free
 price_range: Free (self-host) or ~$0.03-$0.08 per API image
 status: active
 launched: 2022-08
-last_updated: 2026-05-02
-last_verified: 2026-04-22
+last_updated: 2026-05-04
+last_verified: 2026-05-04
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -26,6 +26,52 @@ scores:
   value: 10
   moat: 7
   longevity: 9
+facts:
+  model_family:
+    value: "Open-weight Stable Image/Stable Diffusion family from Stability AI, with self-hosting options plus hosted platform access."
+    source: "https://stability.ai/stable-image"
+    source_label: "Stability AI Stable Image"
+    source_id: stability-stable-image
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
+  api_available:
+    value: "Yes — Stability platform docs expose hosted image generation APIs for teams that do not want to run local inference."
+    source: "https://platform.stability.ai/docs"
+    source_label: "Stability AI platform docs"
+    source_id: stability-docs
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: medium
+    confidence: high
+  pricing_anchor:
+    value: "Self-hosting is free apart from infrastructure and license constraints; hosted Stability API pricing is credit-based and should be reviewed before volume use."
+    source: "https://platform.stability.ai/pricing"
+    source_label: "Stability AI pricing"
+    source_id: stable-diffusion-pricing
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
+  best_for:
+    value: "Teams that need controllable image generation, local/open-weight workflows, custom pipelines, or ecosystem flexibility beyond a closed web app."
+    source: "https://stability.ai/stable-image"
+    source_label: "Stability AI Stable Image"
+    source_id: stability-stable-image
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
+  watch_out_for:
+    value: "The open model ecosystem shifts quickly; verify the exact checkpoint, license, safety filters, and hardware requirements instead of treating Stable Diffusion as one product."
+    source: "https://stability.ai/news-updates"
+    source_label: "Stability AI news"
+    source_id: stable-diffusion-official
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
 tags: [ai-image, open-source, stable-diffusion, local-ai, fine-tuning, comfyui, civitai, lora, controlnet]
 seo_title: "Stable Diffusion Review: SD 3.5, Local Setup, Pricing and Alternatives"
 meta_description: "Stable Diffusion is the open-weight image model family for local generation, LoRA fine-tuning, ControlNet, and ComfyUI workflows. Compare SD 3.5, API pricing, Flux, and Midjourney."
@@ -58,10 +104,16 @@ price_history:
   - date: 2026-01-29
     plan: "SD 3.5 Large ControlNet"
     price: "Free (open weights)"
+    source: "https://platform.stability.ai/pricing"
+    source_label: "Source"
+    source_id: stable-diffusion-pricing
     note: "Blur, Canny, and Depth ControlNets released for SD 3.5 Large"
   - date: 2026-04-15
     plan: "Stability API"
     price: "3-8 credits per image"
+    source: "https://platform.stability.ai/pricing"
+    source_label: "Source"
+    source_id: stable-diffusion-pricing
     note: "Verified: Core 3, SD 3.5 Large 6.5, Turbo 4, Ultra 8; 1 credit = $0.01"
 ---
 

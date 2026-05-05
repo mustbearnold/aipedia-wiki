@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: "Free (GLM-4.7-Flash) / API from $1.00/M tokens (GLM-5)"
 status: active
 launched: 2022-08
-last_updated: 2026-05-03
-last_verified: 2026-05-03
+last_updated: 2026-05-04
+last_verified: 2026-05-04
 update_frequency: quarterly
 affiliate:
   has_program: false
@@ -26,6 +26,66 @@ scores:
   value: 8
   moat: 4
   longevity: 7
+facts:
+  best_for:
+    value: Best for teams comparing Chinese frontier/open-weight model options, especially when Z.ai/BigModel platform access
+      and GLM open releases matter.
+    source: https://www.zhipuai.cn/en
+    source_label: Z.ai official site
+    source_id: glm-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  flagship_model:
+    value: GLM-5 is the current public anchor in AIpedia source coverage, with model information available through Z.ai and
+      Hugging Face.
+    source: https://huggingface.co/zai-org/GLM-5
+    source_label: GLM-5 on Hugging Face
+    source_id: glm-huggingface
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  pricing_anchor:
+    value: API pricing lives on the Zhipu AI Open Platform and should be checked by model because token pricing and free Flash
+      tiers can change.
+    source: https://open.bigmodel.cn/pricing
+    source_label: Zhipu AI Open Platform pricing
+    source_id: glm-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  api_available:
+    value: BigModel provides hosted API access and documentation for GLM-family models.
+    source: https://docs.bigmodel.cn/
+    source_label: Zhipu AI Open Platform docs
+    source_id: glm-docs
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  open_source_or_local:
+    value: Some GLM releases are available as model repositories, but production use still requires checking the specific model
+      license and deployment constraints.
+    source: https://huggingface.co/zai-org/GLM-5
+    source_label: GLM-5 on Hugging Face
+    source_id: glm-huggingface
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  watch_out_for:
+    value: International teams should validate language coverage, API availability, compliance, and documentation fit before
+      treating GLM as a drop-in OpenAI or Anthropic alternative.
+    source: https://docs.bigmodel.cn/
+    source_label: Zhipu AI Open Platform docs
+    source_id: glm-docs
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
 tags: [open-source, chinese-llm, coding, agentic, glm-5, zhipu-ai, z-ai, swe-bench, api]
 seo_title: "GLM (ChatGLM): Features, Pricing & Review (April 2026)"
 meta_description: "GLM-5.1 from Zhipu AI (Z.ai) open-sourced April 7, 2026 under MIT. Topped SWE-Bench Pro at 58.4%. Free GLM-4.7-Flash tier, API from $1/M tokens. Trained on Huawei Ascend."

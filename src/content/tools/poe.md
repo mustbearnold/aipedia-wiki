@@ -24,6 +24,142 @@ scores:
   value: 8
   moat: 7
   longevity: 8
+facts:
+  flagship_model:
+    value: "Multi-model Poe chat platform with GPT, Claude, Gemini, Grok, DeepSeek, Mistral, image models, custom bots, and creator bots"
+    source: "https://poe.com/about"
+    source_label: "Poe about page"
+    source_id: poe-about
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  context_window:
+    value: "Model-dependent: Poe routes to many third-party models, each with its own context window and point cost"
+    source: "https://poe.com/about"
+    source_label: "Poe about page"
+    source_id: poe-about
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  pricing_anchor:
+    value: "Free limited access plus points-based subscriptions where each bot/model consumes compute points"
+    source: "https://poe.com/about"
+    source_label: "Poe about page"
+    source_id: poe-about
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  free_plan:
+    value: "Yes: free access exists with limits on available bots/messages/points"
+    source: "https://poe.com"
+    source_label: "Poe product site"
+    source_id: poe-product
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  best_paid_tier:
+    value: "Paid Poe subscriptions make sense for users who actively compare many models or use expensive bots through one account"
+    source: "https://poe.com/about"
+    source_label: "Poe about page"
+    source_id: poe-about
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  api_available:
+    value: "Yes: Poe provides an API and creator/developer docs for bots"
+    source: "https://poe.com/api_docs"
+    source_label: "Poe API docs"
+    source_id: poe-api-docs
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  image_generation:
+    value: "Yes through hosted third-party image bots/models, not a Poe-owned foundation image model"
+    source: "https://poe.com/about"
+    source_label: "Poe about page"
+    source_id: poe-about
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  video_generation:
+    value: "Limited/model-dependent through available bots; Poe itself is primarily a multi-model chat and bot platform"
+    source: "https://poe.com/about"
+    source_label: "Poe about page"
+    source_id: poe-about
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  real_time_voice:
+    value: "No primary real-time voice-agent product; Poe is primarily chat and bot routing"
+    source: "https://poe.com/about"
+    source_label: "Poe about page"
+    source_id: poe-about
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  web_browsing:
+    value: "Model/bot-dependent; some Poe bots can browse or use tools, but Poe is not a single web-browsing assistant model"
+    source: "https://poe.com/about"
+    source_label: "Poe about page"
+    source_id: poe-about
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  coding_agent:
+    value: "No dedicated autonomous coding agent; Poe can host coding-capable models and bots"
+    source: "https://poe.com/about"
+    source_label: "Poe about page"
+    source_id: poe-about
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  enterprise_controls:
+    value: "Enterprise-grade controls are limited compared with direct OpenAI, Anthropic, Google, or Microsoft procurement paths"
+    source: "https://poe.com/about"
+    source_label: "Poe about page"
+    source_id: poe-about
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  data_retention_or_privacy:
+    value: "Prompts route through Poe and selected model providers, so sensitive workflows require extra review"
+    source: "https://poe.com/about"
+    source_label: "Poe about page"
+    source_id: poe-about
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  open_source_or_local:
+    value: "No: Poe is a proprietary hosted routing/chat platform, even when it exposes open-weight model bots"
+    source: "https://poe.com/about"
+    source_label: "Poe about page"
+    source_id: poe-about
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  best_for:
+    value: "Comparing frontier models, keeping many bots in one chat UI, and building/share-testing custom bots without managing every provider account"
+    source: "https://poe.com/about"
+    source_label: "Poe about page"
+    source_id: poe-about
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  watch_out_for:
+    value: "Point costs change by bot/model, context/features vary by provider, and direct subscriptions may be cheaper for one-model power users"
+    source: "https://poe.com/about"
+    source_label: "Poe about page"
+    source_id: poe-about
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
 tags: [ai-chat, aggregator, multi-model, quora, points-based, developer-api]
 seo_title: "Poe: Features, Pricing & Review (April 2026)"
 meta_description: "Poe is Quora's multi-model AI chatbot aggregator. Access GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro, and dozens more through one subscription. Plans $4.99-$249.99/month on a points system."

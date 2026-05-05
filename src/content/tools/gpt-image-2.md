@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$200/month (ChatGPT) · API from $0.01/image"
 status: active
 launched: 2026-04
-last_updated: 2026-05-03
-last_verified: 2026-05-03
+last_updated: 2026-05-04
+last_verified: 2026-05-04
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -25,6 +25,52 @@ scores:
   value: 9
   moat: 9
   longevity: 9
+facts:
+  model_family:
+    value: "OpenAI GPT Image 2 is a ChatGPT/API image generation model focused on better instruction following, text rendering, and image editing."
+    source: "https://openai.com/index/introducing-chatgpt-images-2-0/"
+    source_label: "OpenAI GPT Image 2 launch"
+    source_id: gpt-image-2-official
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
+  api_available:
+    value: "Yes — OpenAI image-generation docs cover model use through the Images API."
+    source: "https://platform.openai.com/docs/guides/image-generation"
+    source_label: "OpenAI image generation docs"
+    source_id: openai-image-generation-docs
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
+  pricing_anchor:
+    value: "Consumer access follows ChatGPT plan limits; API pricing is published on OpenAI API pricing and should be checked per model, quality, and image size."
+    source: "https://openai.com/api/pricing/"
+    source_label: "OpenAI API pricing"
+    source_id: openai-api-pricing
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
+  best_for:
+    value: "Teams that need high-quality prompt following, editable images, and text-in-image output inside ChatGPT or OpenAI API workflows."
+    source: "https://platform.openai.com/docs/guides/image-generation"
+    source_label: "OpenAI image generation docs"
+    source_id: openai-image-generation-docs
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
+  watch_out_for:
+    value: "Closed model with policy and rate-limit constraints; compare against Ideogram for typography-first generation and Flux/Stable Diffusion for local or controllable pipelines."
+    source: "https://openai.com/index/introducing-chatgpt-images-2-0/"
+    source_label: "OpenAI GPT Image 2 launch"
+    source_id: gpt-image-2-official
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
 tags: [ai-image, image-generation, text-to-image, openai, gpt-image, reasoning, multilingual, 4k, infographics, api]
 seo_title: "GPT Image 2: Features, Pricing & Review (April 2026)"
 meta_description: "OpenAI's GPT Image 2 launched April 21, 2026. Native reasoning, 4K output, multilingual text rendering across 12+ languages, up to 8 variants per prompt. ChatGPT Free gets the standard model; Plus, Pro, and Business add thinking mode and web search. API from $0.01/image."
@@ -45,14 +91,23 @@ price_history:
   - date: 2026-04-21
     plan: "ChatGPT Plus"
     price: "$20/mo"
+    source: "https://chatgpt.com/#pricing"
+    source_label: "Source"
+    source_id: gpt-image-2-pricing
     note: "Thinking mode, longer reasoning runs, web search inside generation"
   - date: 2026-04-21
     plan: "API (low quality, 1024x768)"
     price: "$0.01 per image"
+    source: "https://chatgpt.com/#pricing"
+    source_label: "Source"
+    source_id: gpt-image-2-pricing
     note: "Entry-point tier for bulk programmatic generation"
   - date: 2026-04-21
     plan: "API (high quality, 4K)"
     price: "$0.41 per image"
+    source: "https://chatgpt.com/#pricing"
+    source_label: "Source"
+    source_id: gpt-image-2-pricing
     note: "Top tier, 4K photorealistic output"
 ---
 

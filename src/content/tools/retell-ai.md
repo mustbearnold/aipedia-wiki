@@ -33,17 +33,24 @@ facts:
     value: "Pay-as-you-go AI voice agent platform with templates, analytics, transcripts, simulation testing, webhooks, API access, and 20 included concurrent calls"
     source: "https://www.retellai.com/pricing"
     source_label: "Retell AI pricing"
+    source_id: retell-ai-best-for
     verified_at: 2026-04-28
+    confidence: high
   best_paid_tier:
     value: "Pay-as-you-go for builders; Enterprise for higher concurrency, SSO, DPA/MSA/BAA terms, and dedicated infrastructure"
     source: "https://www.retellai.com/pricing"
     source_label: "Retell AI pricing"
+    source_id: retell-ai-best-for
     verified_at: 2026-04-28
+    next_review_at: 2026-06-03
+    confidence: high
   best_for:
     value: "Teams building inbound or outbound phone agents that need production call analytics, testing, webhooks, and API control"
     source: "https://www.retellai.com/pricing"
     source_label: "Retell AI pricing"
+    source_id: retell-ai-best-for
     verified_at: 2026-04-28
+    confidence: high
 tags: [ai-voice, voice-agent, phone-agent, call-automation, customer-support, sales, telephony, webhooks, api]
 best_for:
   - teams building AI phone agents
@@ -60,14 +67,23 @@ price_history:
   - date: 2026-04-28
     plan: "Pay as you go"
     price: "$0.07-$0.31/minute for AI Voice Agents"
+    source: "https://www.retellai.com/pricing"
+    source_label: "Source"
+    source_id: retell-ai-best-for
     note: "$10 free credits, 20 included concurrent calls"
   - date: 2026-04-28
     plan: "AI Chat Agents"
     price: "$0.002+/message"
+    source: "https://www.retellai.com/pricing"
+    source_label: "Source"
+    source_id: retell-ai-best-for
     note: "Listed alongside AI Voice Agents"
   - date: 2026-04-28
     plan: "Enterprise"
     price: "Custom"
+    source: "https://www.retellai.com/pricing"
+    source_label: "Source"
+    source_id: retell-ai-best-for
     note: "Dedicated implementation support, SSO, custom MSA/DPA/BAA, higher concurrency"
 ---
 

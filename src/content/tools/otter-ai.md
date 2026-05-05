@@ -24,6 +24,50 @@ scores:
   value: 9
   moat: 6
   longevity: 7
+facts:
+  best_for:
+    value: "Teams that want a meeting bot to join Zoom, Google Meet, or Microsoft Teams, then produce searchable transcripts, summaries, and chat over meetings."
+    source: "https://otter.ai/otterpilot"
+    source_label: "OtterPilot overview"
+    source_id: otter-otterpilot
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  pricing_anchor:
+    value: "Free and paid tiers are based on meeting transcription and collaboration limits; Pro is listed as the first serious individual tier."
+    source: "https://otter.ai/pricing"
+    source_label: "Otter.ai pricing"
+    source_id: otter-ai-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-08-03
+  meeting_platforms:
+    value: "OtterPilot is positioned around joining common meeting platforms and automating notes, summaries, and follow-up context."
+    source: "https://otter.ai/otterpilot"
+    source_label: "OtterPilot overview"
+    source_id: otter-otterpilot
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  enterprise_controls:
+    value: "Business and Enterprise evaluation should focus on admin controls, sharing defaults, retention, and whether bot attendance is acceptable for regulated calls."
+    source: "https://otter.ai/pricing"
+    source_label: "Otter.ai pricing"
+    source_id: otter-ai-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: medium
+    next_review_at: 2026-08-03
+  watch_out_for:
+    value: "Always confirm consent, recording laws, and workspace sharing defaults. Meeting bots can create compliance risk even when transcription quality is good."
+    source: "https://otter.ai/otterpilot"
+    source_label: "OtterPilot overview"
+    source_id: otter-otterpilot
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-08-03
 tags: [meeting-transcription, ai-notes, zoom-integration, meeting-summary, productivity, otterpilot]
 seo_title: "Otter.ai: Features, Pricing & Review (April 2026)"
 meta_description: >-
@@ -44,10 +88,16 @@ price_history:
   - date: 2026-04-17
     plan: "Pro"
     price: "$16.99/mo"
+    source: "https://otter.ai/pricing"
+    source_label: "Source"
+    source_id: otter-ai-pricing
     note: "Verified. Annual billing drops to ~$8.33/mo."
   - date: 2026-04-17
     plan: "Business"
     price: "$30/user/mo"
+    source: "https://otter.ai/pricing"
+    source_label: "Source"
+    source_id: otter-ai-pricing
     note: "Verified. Includes video recording and team analytics."
 ---
 

@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$249.99/month"
 status: active
 launched: 2025-11
-last_updated: 2026-05-03
-last_verified: 2026-05-03
+last_updated: 2026-05-04
+last_verified: 2026-05-04
 update_frequency: monthly
 seo_title: "Antigravity: Features, Pricing & Review (April 2026)"
 meta_description: "Google Antigravity is an agent-first IDE built on a VS Code fork. Gemini 3.1 Pro default, Claude Sonnet 4.6, Opus 4.6, and GPT-OSS 120B supported. Free tier with rate limits, AI Pro $20/mo, AI Ultra $249.99/mo, plus 2,500 credits for $25. Manager view runs parallel agents with Artifacts."
@@ -27,6 +27,56 @@ scores:
   value: 7
   moat: 7
   longevity: 8
+facts:
+  best_for:
+    value: Best for developers testing Google’s agent-first IDE concept, especially manager-view orchestration across editor,
+      terminal, and browser tasks.
+    source: https://antigravity.google/
+    source_label: Google Antigravity official site
+    source_id: antigravity-official
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  pricing_anchor:
+    value: Antigravity and Gemini subscription packaging are high-volatility; verify whether preview access, Gemini plan limits,
+      and model access have changed before quoting pricing.
+    source: https://gemini.google/subscriptions/
+    source_label: Gemini subscriptions
+    source_id: google-gemini-subscriptions
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  coding_agent:
+    value: The product positioning is agent-first coding, not only autocomplete, with docs as the key source for workflow assumptions.
+    source: https://antigravity.google/docs
+    source_label: Google Antigravity docs
+    source_id: antigravity-docs
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  model_control:
+    value: Model access should be treated as volatile because Gemini subscriptions and preview limits can change faster than
+      the page narrative.
+    source: https://gemini.google/subscriptions/
+    source_label: Gemini subscriptions
+    source_id: google-gemini-subscriptions
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  watch_out_for:
+    value: Because Antigravity is a fast-moving Google developer product, avoid durable claims about default models, free limits,
+      or third-party model access without rechecking official pages.
+    source: https://antigravity.google/
+    source_label: Google Antigravity official site
+    source_id: antigravity-official
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
 tags: [agentic-coding, ide, google, gemini, antigravity, vscode-fork, parallel-agents, artifacts, browser-control]
 best_for:
   - parallel-agent orchestration across editor, terminal, and browser
@@ -44,14 +94,23 @@ price_history:
   - date: 2025-11-20
     plan: "Public preview"
     price: "$0"
+    source: "https://gemini.google/subscriptions/"
+    source_label: "Source"
+    source_id: google-gemini-subscriptions
     note: "Launched free with generous rate limits on Gemini 3 Pro"
   - date: 2026-03-12
     plan: "Free tier"
     price: "$0, reduced quota"
+    source: "https://gemini.google/subscriptions/"
+    source_label: "Source"
+    source_id: google-gemini-subscriptions
     note: "Daily requests cut from 250 to 20; per-minute from 10 to 5. User backlash triggered paid tiers rollout"
   - date: 2026-04-18
     plan: "AI Pro / AI Ultra / credits"
     price: "$20 / $249.99 / $25 per 2,500 credits"
+    source: "https://gemini.google/subscriptions/"
+    source_label: "Source"
+    source_id: google-gemini-subscriptions
     note: "Verified via Google AI subscriptions page and community reporting"
 ---
 

@@ -24,6 +24,50 @@ scores:
   value: 7
   moat: 7
   longevity: 7
+facts:
+  best_for:
+    value: "Fiction writers who want story-specific brainstorming, rewriting, expansion, and scene development instead of generic marketing copy generation."
+    source: "https://sudowrite.com/pricing"
+    source_label: "Sudowrite Pricing"
+    source_id: sudowrite-pricing
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  pricing_anchor:
+    value: "Paid plans start with the Hobby & Student tier, with monthly and annual rates plus credit limits that control practical writing volume."
+    source: "https://sudowrite.com/pricing"
+    source_label: "Sudowrite Pricing"
+    source_id: sudowrite-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-08-03
+  flagship_model:
+    value: "Sudowrite markets Muse as its custom-trained fiction model and routes some workflows across multiple model options."
+    source: "https://sudowrite.framer.website/muse"
+    source_label: "Sudowrite Muse overview"
+    source_id: sudowrite-muse
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: medium
+    confidence: high
+  model_routing:
+    value: "The docs expose guidance for choosing models by writing task, which matters because output style and credit use vary by model."
+    source: "https://docs.sudowrite.com/using-sudowrite/1ow1qkGqof9rtcyGnrWUBS/which-ai-model-should-i-use/veMq9xRH6KLCQPFm5XkQx7"
+    source_label: "Sudowrite model routing documentation"
+    source_id: sudowrite-model-routing
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  watch_out_for:
+    value: "Best for fiction drafting and revision, not factual research. Long-form writers should budget credits and keep final voice, continuity, and rights review human-led."
+    source: "https://sudowrite.com/pricing"
+    source_label: "Sudowrite Pricing"
+    source_id: sudowrite-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-08-03
 tags: [ai-writing, fiction, creative-writing, novel-writing, storytelling, muse-model]
 seo_title: "Sudowrite: Features, Pricing & Review (April 2026)"
 meta_description: "Sudowrite is the fiction-first AI writing tool with the custom-trained Muse model. Hobby $10/mo annual, Professional $22/mo, Max $44/mo. Story Engine, Describe, Expand, Rewrite."
@@ -44,10 +88,16 @@ price_history:
   - date: 2026-04-17
     plan: "Hobby & Student"
     price: "$10/mo"
+    source: "https://sudowrite.com/pricing"
+    source_label: "Source"
+    source_id: sudowrite-pricing
     note: "Annual rate; monthly $19. 225,000 credits/mo."
   - date: 2026-04-17
     plan: "Max"
     price: "$44/mo"
+    source: "https://sudowrite.com/pricing"
+    source_label: "Source"
+    source_id: sudowrite-pricing
     note: "Annual rate; monthly $59. 2M credits/mo with rollover."
 ---
 

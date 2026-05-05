@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0 free / $9/mo Pro"
 status: active
 launched: 2020-09
-last_updated: 2026-04-18
-last_verified: 2026-04-18
+last_updated: 2026-05-04
+last_verified: 2026-05-04
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -24,6 +24,55 @@ scores:
   value: 9
   moat: 6
   longevity: 7
+facts:
+  best_for:
+    value: Best for quick AI image cleanup and utility edits—background removal, uncrop, relight, cleanup, upscale, and similar
+      one-off visual production tasks.
+    source: https://clipdrop.co/tools
+    source_label: Clipdrop tools
+    source_id: clipdrop-tools
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  pricing_anchor:
+    value: Clipdrop has a self-serve pricing page, but quota, watermark, API, commercial, and credit details should be verified
+      before committing production workflows.
+    source: https://clipdrop.co/pricing
+    source_label: Clipdrop pricing
+    source_id: clipdrop-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  api_available:
+    value: Clipdrop exposes APIs, making it relevant for automating image utilities rather than only using the web editor.
+    source: https://clipdrop.co/apis
+    source_label: Clipdrop APIs
+    source_id: clipdrop-apis
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  workflow_surface:
+    value: The product is strongest as a toolkit of image-editing utilities, not as a full creative suite or brand system.
+    source: https://clipdrop.co/
+    source_label: Clipdrop official site
+    source_id: clipdrop-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  watch_out_for:
+    value: Compare Clipdrop against Adobe, Canva, Freepik, and standalone API tools by output quality, quota economics, watermark/export
+      rules, and API reliability.
+    source: https://clipdrop.co/pricing
+    source_label: Clipdrop pricing
+    source_id: clipdrop-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
 tags: [image-editing, background-removal, upscaling, relight, uncrop, stable-diffusion, photoshop-alternative]
 seo_title: "Clipdrop: Features, Pricing & Review (April 2026)"
 meta_description: "Clipdrop bundles background remove, upscale, relight, uncrop, Reimagine, and Stable Diffusion in one app. Free tier 15 images/month with watermark; Pro at $9/mo unlocks HD unlimited."

@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: $0-$18.99/month
 status: active
 launched: 2022-04
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-04
+last_verified: 2026-05-04
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -26,6 +26,52 @@ scores:
   value: 8
   moat: 6
   longevity: 7
+facts:
+  product_scope:
+    value: "Developer productivity assistant focused on local workflow memory, context capture, snippets, and on-device/cloud model support across developer tools."
+    source: "https://pieces.app/"
+    source_label: "Pieces homepage"
+    source_id: pieces-official
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: medium
+    confidence: high
+  core_dependencies:
+    value: "Pieces docs describe desktop/service dependencies and local components, which matter for rollout, updates, and troubleshooting."
+    source: "https://docs.pieces.app/products/core-dependencies"
+    source_label: "Pieces core dependencies docs"
+    source_id: pieces-core-dependencies
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: medium
+    confidence: high
+  pricing_anchor:
+    value: "Free and paid plans are documented in Pieces paid-plan docs; verify device, model, and team limits before standardizing."
+    source: "https://docs.pieces.app/products/paid-plans"
+    source_label: "Pieces paid plans docs"
+    source_id: pieces-official
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
+  best_for:
+    value: "Developers who want cross-tool memory, saved snippets, and local context recall rather than another code-completion-only assistant."
+    source: "https://pieces.app/"
+    source_label: "Pieces homepage"
+    source_id: pieces-official
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: medium
+    confidence: high
+  watch_out_for:
+    value: "Requires local app/service adoption and habit change; teams that only need completions may prefer Copilot, Cursor, or Codeium/Windsurf."
+    source: "https://docs.pieces.app/products/core-dependencies"
+    source_label: "Pieces core dependencies docs"
+    source_id: pieces-core-dependencies
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: medium
+    confidence: medium
 tags: [snippet-manager, workflow, ai-coding, context, developer-tools, vscode, jetbrains, chrome, local-llm, offline]
 seo_title: 'Pieces for Developers: Local AI Memory Review (April 2026)'
 meta_description: >-

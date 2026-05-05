@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$69/month"
 status: active
 launched: 2017-08
-last_updated: 2026-05-03
-last_verified: 2026-05-03
+last_updated: 2026-05-04
+last_verified: 2026-05-04
 update_frequency: monthly
 seo_title: "DeepL: Features, Pricing & Review (April 2026)"
 meta_description: "DeepL Translator and DeepL Write run on a proprietary next-gen LLM as of April 2026. Free tier, Starter $10.49/mo, Advanced $34.49/mo, Ultimate $68.99/mo. API Free at 500K chars; API Pro pay-as-you-go. EU-based, no training on user data."
@@ -28,6 +28,57 @@ scores:
   value: 7
   moat: 6
   longevity: 6
+facts:
+  best_for:
+    value: Best for high-quality translation and writing refinement where linguistic accuracy, tone, and document translation
+      matter more than general chatbot breadth.
+    source: https://www.deepl.com/en/translator
+    source_label: DeepL Translator
+    source_id: deepl-translator
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  pricing_anchor:
+    value: DeepL plan details differ across Free, Pro, Teams, Enterprise, and API usage; verify current plan features and regional
+      pricing before recommending.
+    source: https://support.deepl.com/hc/en-us/articles/360019924499-About-DeepL-plans
+    source_label: DeepL plans help center
+    source_id: deepl-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  api_available:
+    value: DeepL has developer docs for API integration, so product/API procurement should be separated from consumer Translator/Write
+      plans.
+    source: https://developers.deepl.com/docs
+    source_label: DeepL developer documentation
+    source_id: deepl-docs
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  workflow_surface:
+    value: DeepL Pro is the business workflow surface for secure text and document translation rather than general AI assistant
+      tasks.
+    source: https://www.deepl.com/en/pro
+    source_label: DeepL Pro
+    source_id: deepl-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  watch_out_for:
+    value: Check document limits, glossary support, data confidentiality, API quotas, and supported languages; DeepL is a specialist
+      translation stack, not a broad LLM workspace.
+    source: https://www.deepl.com/en/pro
+    source_label: DeepL Pro
+    source_id: deepl-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
 tags: [translation, writing, localization, api, glossary, document-translation, gdpr, llm, enterprise, proofreading]
 best_for:
   - EU/GDPR-sensitive translation workloads
@@ -44,14 +95,23 @@ price_history:
   - date: 2026-04-15
     plan: "Starter"
     price: "$10.49/mo"
+    source: "https://support.deepl.com/hc/en-us/articles/360019924499-About-DeepL-plans"
+    source_label: "Source"
+    source_id: deepl-pricing
     note: "Verified unchanged"
   - date: 2026-04-15
     plan: "Advanced"
     price: "$34.49/mo"
+    source: "https://support.deepl.com/hc/en-us/articles/360019924499-About-DeepL-plans"
+    source_label: "Source"
+    source_id: deepl-pricing
     note: "Verified unchanged"
   - date: 2026-04-15
     plan: "Ultimate"
     price: "$68.99/mo"
+    source: "https://support.deepl.com/hc/en-us/articles/360019924499-About-DeepL-plans"
+    source_label: "Source"
+    source_id: deepl-pricing
     note: "Verified unchanged"
 ---
 

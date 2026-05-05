@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2025-03
-last_updated: 2026-04-30
-last_verified: 2026-04-30
+last_updated: 2026-05-05
+last_verified: 2026-05-05
 update_frequency: monthly
 seo_title: "Manus: Features, Pricing & Review (2026)"
 meta_description: "Manus is Butterfly Effect's general-purpose autonomous agent. Meta announced an acquisition in December 2025, but China blocked the deal on April 27, 2026. Free tier includes 1,000 starter credits plus 300 daily. Pro from $20/mo."
@@ -28,6 +28,33 @@ scores:
   value: 7
   moat: 7
   longevity: 7
+facts:
+  best_for:
+    value: "General-purpose autonomous agent that researches, codes, builds spreadsheets, and operates the web in a sandboxed VM. Meta announced an acquisition in December 2025, but China blocked the deal on April 27, 2026. Best for workflow automation, agentic operations, and business-process automation."
+    source: "https://manus.im/pricing"
+    source_label: "Source"
+    source_id: manus-pricing
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: medium
+  pricing_anchor:
+    value: "Pro (Standard); $39/mo; Initial public pricing after invite-only phase"
+    source: "https://manus.im/pricing"
+    source_label: "Source"
+    source_id: manus-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
+  watch_out_for:
+    value: "Non-Tier-1 canonical profile: verify current pricing, usage limits, data policy, and integration details before procurement"
+    source: "https://manus.im/pricing"
+    source_label: "Source"
+    source_id: manus-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
 tags: [autonomous-agent, ai-automation, general-purpose-agent, web-agent, manus]
 best_for:
   - multi-step research tasks that span dozens of sites
@@ -45,14 +72,23 @@ price_history:
   - date: 2025-07
     plan: "Pro (Standard)"
     price: "$39/mo"
+    source: "https://manus.im/pricing"
+    source_label: "Source"
+    source_id: manus-pricing
     note: "Initial public pricing after invite-only phase"
   - date: 2026-01
     plan: "Pro (Standard)"
     price: "$20/mo"
+    source: "https://manus.im/pricing"
+    source_label: "Source"
+    source_id: manus-pricing
     note: "Price cut following broader access rollout"
   - date: 2026-04-18
     plan: "Pro (Standard)"
     price: "$20/mo"
+    source: "https://manus.im/pricing"
+    source_label: "Source"
+    source_id: manus-pricing
     note: "Verified, unchanged"
 ---
 

@@ -2,16 +2,16 @@
 type: tool
 slug: fireworks-ai
 title: Fireworks AI
-tagline: Serverless inference for open-source gen-AI models. 400+ models across LLM, image, vision, audio. $0.10-$0.90 per M tokens. Runs on Nvidia Blackwell for up to 10× cheaper per token.
+tagline: API-first inference platform for open and commercial generative models, with serverless inference, dedicated deployments, fine-tuning, and batch jobs.
 category: ai-chatbots
 company: fireworks-ai
 url: https://fireworks.ai
 pricing_model: paid
-price_range: "$0.10-$0.90/M tokens serverless / $2.90-$9/hr on-demand GPU"
+price_range: "Usage-based serverless, deployment, fine-tuning, and batch pricing"
 status: active
 launched: 2022-09
-last_updated: 2026-05-03
-last_verified: 2026-05-03
+last_updated: 2026-05-05
+last_verified: 2026-05-05
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -24,26 +24,78 @@ scores:
   value: 9
   moat: 7
   longevity: 8
-tags: [inference, serverless, open-source-models, fine-tuning, nvidia-blackwell, enterprise]
-seo_title: "Fireworks AI: Features, Pricing & Review (April 2026)"
-meta_description: "Fireworks AI runs 400+ open-source models serverlessly. $0.10-$0.90/M tokens. Nvidia Blackwell reduces cost per token up to 10x. Fine-tuning + HIPAA/SOC2. $1 free credits on signup."
+facts:
+  best_for:
+    value: Best for developers needing fast hosted inference over open and commercial generative models with API deployment
+      controls.
+    source: https://fireworks.ai/
+    source_label: Fireworks AI official site
+    source_id: fireworks-ai-official
+    verified_at: '2026-05-05'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  pricing_anchor:
+    value: Fireworks pricing is usage/model/deployment dependent; verify serverless, dedicated, fine-tune, and model-specific
+      rates on the current pricing page.
+    source: https://fireworks.ai/pricing
+    source_label: Fireworks AI pricing
+    source_id: fireworks-ai-pricing
+    verified_at: '2026-05-05'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  api_available:
+    value: Fireworks is API-first; docs define model invocation, deployment, fine-tuning, tool-use, and production integration
+      assumptions.
+    source: https://docs.fireworks.ai/
+    source_label: Fireworks AI docs
+    source_id: fireworks-ai-docs
+    verified_at: '2026-05-05'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  model_control:
+    value: The model catalog matters because open-source LLM and image-model availability, throughput, and pricing vary by model.
+    source: https://fireworks.ai/models
+    source_label: Fireworks AI models
+    source_id: fireworks-ai-models
+    verified_at: '2026-05-05'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  watch_out_for:
+    value: Compare Fireworks against Together, Groq, Replicate, and direct cloud by latency, throughput, model coverage, fine-tuning,
+      observability, and spend controls.
+    source: https://fireworks.ai/pricing
+    source_label: Fireworks AI pricing
+    source_id: fireworks-ai-pricing
+    verified_at: '2026-05-05'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+tags: [inference, serverless, open-source-models, fine-tuning, enterprise]
+seo_title: "Fireworks AI: Features, Pricing & Review (2026)"
+meta_description: "Fireworks AI is an API-first inference platform for open and commercial models, with serverless inference, dedicated deployments, fine-tuning, batch jobs, and usage-based pricing."
 author: "aipedia.wiki Editorial"
 best_for:
   - teams running open-weight LLMs at production scale
   - fine-tuning and custom-model deployment
-  - multimodal workloads (LLM + image + vision + audio) in one platform
-  - HIPAA / SOC 2 regulated deployments
+  - multimodal workloads across one API platform
+  - engineering teams comparing serverless and dedicated inference
 not_best_for:
   - latency-critical real-time apps (Groq wins on speed)
   - users who just want consumer chat (no UI)
-  - frontier proprietary models (no OpenAI frontier models / Claude)
+  - teams that only want direct access to a single proprietary frontier model family
 quick_answer: >-
-  Fireworks AI is a serverless inference platform for open-source AI models. 400+ models covering LLM, image, vision, audio. Serverless pricing is $0.10/M tokens for small models scaling to $0.90/M for 16B+. On-demand GPUs $2.90 (A100) to $9.00 (B200). Nvidia Blackwell reduces cost per token up to 10×. New users get $1 free credits. Pick it for production open-weight inference with fine-tuning + compliance.
+  Fireworks AI is an API-first inference platform for open and commercial generative models. Pick it for production inference, fine-tuning, batch jobs, and deployments where model choice, throughput, latency, and spend controls matter. Skip it if you want a consumer chatbot or the simplest possible local setup.
 ---
 
 # Fireworks AI
 
-A production-grade inference cloud for open-source generative AI. 400+ models across LLM, image, vision, audio, and embeddings. Serverless endpoints with no cold starts; on-demand GPU deployment for dedicated capacity. Built on Nvidia Blackwell silicon for 10× better cost-per-token economics than prior-gen platforms.
+Fireworks AI is an inference platform for teams that want to run generative models through APIs instead of managing the serving stack themselves. It covers serverless inference, dedicated deployments, fine-tuning, batch inference, and model hosting across text, vision, image, embeddings, reranking, and related workloads.
+
+The buyer question is not "does this replace ChatGPT?" It is whether Fireworks gives your engineering team the right mix of model catalog, latency, throughput, deployment control, compliance posture, and cost predictability for a production AI feature.
 
 ## Recent developments
 
@@ -51,100 +103,86 @@ A production-grade inference cloud for open-source generative AI. 400+ models ac
 
 ## System Verdict
 
-> **Pick Fireworks AI if you're running open-weight LLMs (or image, vision, audio) at production scale.** 400+ models under one API, fine-tuning support (DPO, supervised, quantization-aware), HIPAA and SOC 2 compliance, and pricing that scales down to $0.10/M tokens on smaller models. The Nvidia Blackwell platform gives Fireworks meaningful cost advantages passed to users.
+> **Pick Fireworks AI if you're running model-backed product features at production scale.** It is strongest when you need hosted inference, model choice, fine-tuning, batch jobs, and deployment controls without building your own GPU serving layer.
 >
-> **Skip it for latency-critical work.** [Groq](/tools/groq/) runs 3-10× faster on open-weight models. If your app needs 500+ tokens/second for real-time voice or streaming, Groq wins. Fireworks is faster than most GPU providers but Groq's LPU silicon still leads.
+> **Skip it if you need the simplest end-user chatbot.** Fireworks is developer infrastructure. Non-technical users are usually better served by a finished chat, writing, search, or automation product.
 >
-> **Fireworks vs Together AI vs Groq decision:** Fireworks for model variety + fine-tuning + compliance. Together for broad open-weight LLM + strong fine-tuning tooling. Groq for pure speed on Llama/Qwen. Most teams run two of these for different workloads.
+> **Fireworks vs Together AI vs Groq decision:** Fireworks for managed inference plus deployment flexibility. Together for another broad open-model cloud. Groq for workloads where raw token latency is the first constraint. Serious teams should benchmark their exact prompt shapes before standardizing.
 
 ## Key Facts
 
 | | |
 |---|---|
-| **Model count** | 400+ across LLM, image, vision, audio, embeddings |
-| **Serverless <4B parameters** | $0.10 per M tokens |
-| **Serverless 4B-16B** | $0.20 per M tokens |
-| **Serverless 16B+ parameters** | $0.90 per M tokens |
-| **A100 on-demand** | $2.90/hour |
-| **H100 on-demand** | ~$5-$7/hour |
-| **B200 on-demand** | $9.00/hour |
-| **Free credits** | $1 on signup |
-| **Batch inference** | 50% of serverless pricing (input and output) |
-| **Compliance** | HIPAA, GDPR, SOC 2 |
-| **Fine-tuning** | Supervised, DPO, quantization-aware techniques |
-| **Hardware** | Nvidia Blackwell (B200) platform |
+| **Core product** | Managed inference for generative models |
+| **Deployment modes** | Serverless inference and dedicated deployments |
+| **Billing shape** | Per-token serverless pricing, GPU-time deployment pricing, and training-token fine-tuning pricing |
+| **Fine-tuning** | Supported through Fireworks fine-tuning tooling |
+| **Batch jobs** | Supported for asynchronous inference workloads |
+| **API style** | Developer/API-first, including OpenAI-compatible usage patterns |
+| **Model catalog** | Availability varies by model, modality, deployment mode, and serverless support |
+| **Best buyer** | Engineering teams shipping model-backed products |
 
 ## When to pick Fireworks AI
 
-- **Production open-weight inference.** Llama 4, Qwen 3, DeepSeek V3.2, Mistral, Gemma 4 at reasonable scale. Serverless means no GPU management.
-- **Fine-tuning on-premise-like workflow.** Upload training data, fine-tune, deploy as a custom endpoint. Full pipeline without owning GPUs.
-- **Multimodal in one vendor.** LLM + image + vision + audio all under one bill and one API. Reduces procurement overhead.
-- **HIPAA-compliant deployments.** Medical AI apps can run on Fireworks with proper BAAs. Compliance is built in, not an afterthought.
-- **Embedding + retrieval workloads.** Fireworks serves popular open-source embedding models (BGE, E5, Nomic) at production rates.
+- **Production inference without GPU ownership.** Serverless inference lets teams call supported models by API, while dedicated deployments cover workloads that need higher rate limits, specific model hosting, or more control.
+- **Fine-tuning and deployment in one workflow.** Fireworks supports fine-tuning and deployment paths for teams that have training data, evaluation discipline, and a reason to customize model behavior.
+- **Batch and asynchronous workloads.** The Batch API is useful when cost and throughput matter more than instant response time.
+- **Model-backed product features.** Fireworks fits AI search, assistants, extraction, classification, image generation, reranking, and other application features that need predictable infrastructure.
+- **Procurement consolidation.** One platform can cover multiple model families and deployment modes, reducing the number of direct vendor integrations an engineering team has to maintain.
 
 ## When to pick something else
 
-- **Speed over all:** [Groq](/tools/groq/). 300-1000 tok/sec on LPU hardware. Fireworks is faster than average; Groq is in another class.
-- **Image/video breadth:** [Fal.ai](/tools/fal-ai/) has 600+ models including deeper coverage of video and custom LoRAs.
-- **Frontier proprietary:** Go direct. Fireworks doesn't run OpenAI frontier models or Claude Opus 4.7.
+- **Speed over all:** [Groq](/tools/groq/) is often the sharper evaluation target when token latency is the main constraint.
+- **Image/video breadth:** [Fal.ai](/tools/fal-ai/) may be a better first stop for teams mainly exploring creative image, video, and LoRA workflows.
+- **Frontier proprietary:** Go direct when your feature depends on the newest OpenAI, Anthropic, or Google model rather than an open or hosted catalog model.
 - **Local / privacy-first:** [Ollama](/tools/ollama/) for single-machine deployments or [AnythingLLM](/tools/anythingllm/) + self-host for teams.
 
 ## Pricing
 
-### Serverless (pay per token)
+Fireworks uses usage-based pricing rather than a simple monthly SaaS plan. As of verification on 2026-05-05, the official pricing page lists:
 
-| Model size | Input $/M tokens | Output $/M tokens |
-|---|---|---|
-| <4B parameters | $0.10 | $0.10 |
-| 4B-16B parameters | $0.20 | $0.20 |
-| 16B+ parameters | $0.90 | $0.90 |
+- Serverless inference billed per token, with pricing that varies by model size and selected model.
+- Dedicated on-demand deployments billed by GPU usage time.
+- Fine-tuning billed by training-token usage, with serving billed separately.
+- Batch inference discounts for asynchronous jobs.
+- Enterprise options for teams that need higher limits, security commitments, or reserved capacity.
 
-### On-demand GPU (pay per hour)
-
-| GPU | Price/hour |
-|---|---|
-| A100 | $2.90 |
-| H100 | ~$5-7 |
-| B200 | $9.00 |
-
-**Batch inference:** 50% of serverless pricing.
-**Free credits:** $1 on signup. Verified 2026-04-18 via [fireworks.ai/pricing](https://fireworks.ai/pricing).
+Always price your own workload against the live Fireworks pricing page because the model catalog, named model rates, GPU inventory, cached-token rules, and enterprise terms can change.
 
 ## Failure modes
 
-- **Large-model serverless pricing can surprise.** $0.90/M for 16B+ is higher than Groq's $0.11-$0.34 for equivalent. If you're cost-sensitive, benchmark both before committing.
-- **Cold starts on niche models.** Popular models have warm capacity; rarely-called models may cold-start noticeably.
+- **Large-model costs can surprise.** Token costs, cached-token behavior, batch discounts, and dedicated deployment utilization all affect the real bill. Benchmark before committing.
+- **Serverless availability varies.** Not every model is available serverlessly, and rate limits differ by model and account.
 - **Fine-tuning adds engineering overhead.** Fine-tuning is powerful but requires training data, hyperparameter intuition, and eval discipline. Not a one-click operation.
 - **No consumer chat UI.** API-first. For consumer-facing chat, pair with Open WebUI or a custom frontend.
-- **Blackwell capacity depends on region.** B200 availability ramped through 2026; not every region had full capacity at launch.
+- **Dedicated deployments still need capacity planning.** GPU-time billing can be efficient at scale, but underused deployments can cost more than serverless inference.
 
 ## Against the alternatives
 
 | | Fireworks AI | Groq | Together AI | OpenAI |
 |---|---|---|---|---|
-| **Model count** | 400+ | Smaller curated | Similar | Proprietary only |
-| **Speed (tok/sec)** | Fast (Blackwell) | Fastest (LPU) | Fast | Varies |
-| **Fine-tuning** | Strong (DPO, SFT, QAT) | Limited | Strong | Via separate API |
-| **Compliance** | HIPAA, SOC 2, GDPR | Yes | Yes | Enterprise tier |
-| **Best for** | Variety + fine-tuning | Latency | Fine-tuning + LLM | Frontier quality |
+| **Catalog shape** | Broad hosted model catalog | Curated speed-focused catalog | Broad hosted model catalog | Proprietary model family |
+| **Deployment control** | Serverless and dedicated deployments | Hosted API focus | Hosted API and deployment options | API platform and enterprise options |
+| **Fine-tuning** | Supported | More limited | Supported | Supported for selected models |
+| **Best for** | Production inference flexibility | Latency-sensitive inference | Open-model experimentation and scale | Frontier proprietary quality |
 
 ## Methodology
 
-Produced by the aipedia.wiki editorial pipeline. Last verified 2026-04-18 against [fireworks.ai/pricing](https://fireworks.ai/pricing), [costbench.com Fireworks AI](https://costbench.com/software/llm-api-providers/fireworks-ai/), and [Nvidia's Blackwell cost-per-token blog](https://blogs.nvidia.com/blog/inference-open-source-models-blackwell-reduce-cost-per-token/).
+Produced by the aipedia.wiki editorial pipeline. Last verified 2026-05-05 against the official [Fireworks pricing page](https://fireworks.ai/pricing), [Fireworks billing FAQ](https://docs.fireworks.ai/faq-new/billing-pricing/how-much-does-fireworks-cost), and [Fireworks inference documentation](https://docs.fireworks.ai/guides/inference-introduction).
 
 ## FAQ
 
-**What's the cheapest way to run Llama 4 on Fireworks?**
-Batch inference at 50% of serverless pricing. For real-time, serverless is the default. On-demand GPU makes sense only at sustained >70% utilization.
+**What's the cheapest way to run a workload on Fireworks?**
+It depends on the model, prompt shape, latency requirement, cached-token behavior, and utilization. Batch inference can help asynchronous jobs; dedicated deployments can help sustained traffic; serverless is usually the lowest-friction starting point.
 
 **Does Fireworks support fine-tuning?**
-Yes. Supervised fine-tuning, DPO (direct preference optimization), and quantization-aware techniques. Deploy your fine-tune as a custom endpoint.
+Yes. Fireworks documents fine-tuning workflows and deployment paths for fine-tuned models.
 
-**How does Blackwell reduce cost?**
-Nvidia's Blackwell (B200) platform delivers ~10× better tokens-per-watt and 5-10× tokens-per-dollar versus Hopper (H100) for inference workloads. Fireworks passes a portion of that through to users via lower serverless pricing.
+**Does Fireworks support OpenAI-compatible clients?**
+Yes. Fireworks documentation includes OpenAI-compatible usage patterns, which helps teams test Fireworks without rewriting every client call.
 
 **Is Fireworks compliant for healthcare?**
-Fireworks supports HIPAA-compliant deployments with BAAs. Check current compliance docs for specifics on your use case.
+Check the current Fireworks Trust Center and security documentation before relying on it for a regulated deployment. Compliance commitments can depend on account type, contract terms, deployment mode, and data-handling configuration.
 
 ## Related
 

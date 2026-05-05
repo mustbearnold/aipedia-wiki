@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$100/month"
 status: active
 launched: 2019-07
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-04
+last_verified: 2026-05-04
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -24,6 +24,56 @@ scores:
   value: 9
   moat: 7
   longevity: 8
+facts:
+  best_for:
+    value: Best for marketers and creators turning prompts, scripts, stock assets, voiceover, and templates into social or explainer
+      videos quickly.
+    source: https://invideo.io/ai/
+    source_label: Invideo AI
+    source_id: invideo-ai
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  pricing_anchor:
+    value: Invideo pricing depends on export minutes, AI generation limits, stock/media access, storage, users, and watermark/commercial
+      features.
+    source: https://invideo.io/pricing/
+    source_label: Invideo pricing
+    source_id: invideo-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  workflow_surface:
+    value: Invideo is a video-creation workflow product rather than a developer video-model API or professional NLE replacement.
+    source: https://invideo.io/
+    source_label: Invideo official site
+    source_id: invideo-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  integration_surface:
+    value: Help-center review should cover exports, licensing, brand kits, media uploads, subtitles, voiceover, and team/collaboration
+      behavior.
+    source: https://help.invideo.io/
+    source_label: Invideo help center
+    source_id: invideo-help
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  watch_out_for:
+    value: For business use, test asset licensing, voice quality, editing flexibility, export limits, and recurring credit/minute
+      burn before standardizing on Invideo.
+    source: https://invideo.io/pricing/
+    source_label: Invideo pricing
+    source_id: invideo-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
 tags: [ai-video, text-to-video, youtube, social-media, voiceover, sora, veo, templates]
 seo_title: "InVideo AI: Features, Pricing & Review (April 2026)"
 meta_description: "InVideo AI bundles VEO 3.1 and Kling 3.0 inside a text-to-video pipeline with 16M+ stock clips, AI voiceover in 50+ languages, and scene-level editing. Plans $0-$100/mo. Reviewed April 2026."
@@ -43,10 +93,16 @@ price_history:
   - date: 2026-04-17
     plan: "Plus"
     price: "$28/mo"
+    source: "https://invideo.io/pricing/"
+    source_label: "Source"
+    source_id: invideo-pricing
     note: "Verified at invideo.io/pricing, 50 AI minutes/month"
   - date: 2026-04-17
     plan: "Max"
     price: "$50/mo"
+    source: "https://invideo.io/pricing/"
+    source_label: "Source"
+    source_id: invideo-pricing
     note: "Verified, 200 AI minutes plus priority rendering"
 ---
 

@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$99/month"
 status: active
 launched: 2025-03
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-04
+last_verified: 2026-05-04
 update_frequency: monthly
 seo_title: "Higgsfield: Features, Pricing & Review (2026)"
 meta_description: "Higgsfield is an AI video platform with cinematic camera controls, Cinema Studio 3.5, Soul character anchoring, and Lipsync Studio. Free tier, Starter $15/mo, Plus $39/mo, Ultra $99/mo (annual). API on Ultra."
@@ -28,6 +28,57 @@ scores:
   value: 7
   moat: 7
   longevity: 7
+facts:
+  best_for:
+    value: Best for creators and marketers producing AI video/image content with stylized motion, cinematic effects, and social-ready
+      formats.
+    source: https://higgsfield.ai/
+    source_label: Higgsfield official site
+    source_id: higgsfield-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  pricing_anchor:
+    value: Higgsfield pricing is plan/credit dependent; verify current generation limits, commercial rights, export quality,
+      and feature access before committing.
+    source: https://higgsfield.ai/pricing
+    source_label: Higgsfield pricing
+    source_id: higgsfield-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  workflow_surface:
+    value: The product is a creative AI video and image-generation surface, not a general-purpose video editor or enterprise
+      MLOps platform.
+    source: https://higgsfield.ai/
+    source_label: Higgsfield official site
+    source_id: higgsfield-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  company_context:
+    value: Higgsfield positions around AI video/image infrastructure and creative generation; about/company pages are useful
+      for product-positioning changes.
+    source: https://higgsfield.ai/about
+    source_label: Higgsfield about
+    source_id: higgsfield-about
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  watch_out_for:
+    value: Evaluate artifact rate, likeness/IP controls, moderation, export formats, and credit burn against Runway, Pika, Kling,
+      and Hailuo before production use.
+    source: https://higgsfield.ai/pricing
+    source_label: Higgsfield pricing
+    source_id: higgsfield-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
 tags: [video-generation, cinematic-ai, camera-control, short-form-video, higgsfield]
 best_for:
   - cinematic camera movement (dolly, orbit, push-in, crane)
@@ -46,14 +97,23 @@ price_history:
   - date: 2026-04-18
     plan: "Starter"
     price: "$15/mo (annual)"
+    source: "https://higgsfield.ai/pricing"
+    source_label: "Source"
+    source_id: higgsfield-pricing
     note: "200 credits/mo, 2 concurrent video jobs"
   - date: 2026-04-18
     plan: "Plus"
     price: "$39/mo (annual)"
+    source: "https://higgsfield.ai/pricing"
+    source_label: "Source"
+    source_id: higgsfield-pricing
     note: "1,000 credits/mo, 6 concurrent jobs, 365-day unlimited on select image models"
   - date: 2026-04-18
     plan: "Ultra"
     price: "$99/mo (annual)"
+    source: "https://higgsfield.ai/pricing"
+    source_label: "Source"
+    source_id: higgsfield-pricing
     note: "3,000 base credits, 8 concurrent jobs, API access, one unlimited video model"
 ---
 

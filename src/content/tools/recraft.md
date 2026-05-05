@@ -28,6 +28,33 @@ scores:
   value: 8
   moat: 8
   longevity: 8
+facts:
+  best_for:
+    value: "Vector-native AI image generator with brand-style consistency and the cleanest typography-in-image output on the market. Recraft V3 leads the Hugging Face text-to-image benchmark as of April 2026. Best for image generation, editing, and visual-production workflows."
+    source: "https://www.recraft.ai/pricing"
+    source_label: "Source"
+    source_id: recraft-pricing
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: medium
+  pricing_anchor:
+    value: "Basic; $10/mo · 1,000 credits; Verified on recraft.ai/pricing"
+    source: "https://www.recraft.ai/pricing"
+    source_label: "Source"
+    source_id: recraft-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
+  watch_out_for:
+    value: "Non-Tier-1 canonical profile: verify current pricing, usage limits, data policy, and integration details before procurement"
+    source: "https://www.recraft.ai/pricing"
+    source_label: "Source"
+    source_id: recraft-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
 tags: [image-generation, vector-generation, brand-design, svg, recraft]
 best_for:
   - vector (SVG) output at generation time
@@ -46,10 +73,16 @@ price_history:
   - date: 2026-04-18
     plan: "Basic"
     price: "$10/mo · 1,000 credits"
+    source: "https://www.recraft.ai/pricing"
+    source_label: "Source"
+    source_id: recraft-pricing
     note: "Verified on recraft.ai/pricing"
   - date: 2026-04-18
     plan: "API raster"
     price: "$0.04 per image"
+    source: "https://www.recraft.ai/pricing"
+    source_label: "Source"
+    source_id: recraft-pricing
     note: "$0.08 per vector image"
 ---
 

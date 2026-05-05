@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "$600-$2000+/month"
 status: active
 launched: 2019-01
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-04
+last_verified: 2026-05-04
 update_frequency: quarterly
 affiliate:
   has_program: true
@@ -27,6 +27,57 @@ scores:
   value: 6
   moat: 7
   longevity: 8
+facts:
+  best_for:
+    value: Best for outbound sales teams that want one platform for prospect data, multichannel sequencing, and AI-assisted
+      research/copy/voice workflows.
+    source: https://www.amplemarket.com/
+    source_label: Amplemarket official site
+    source_id: amplemarket-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  pricing_anchor:
+    value: Amplemarket uses sales-platform pricing rather than a simple self-serve AI app tier; confirm seats, data credits,
+      dialer, and AI-agent packaging on the live pricing page.
+    source: https://www.amplemarket.com/pricing
+    source_label: Amplemarket pricing
+    source_id: amplemarket-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  workflow_surface:
+    value: 'The buyer surface is outbound revenue workflow: lead database, sequencing, enrichment, inbox, calling, and AI sales
+      copilot behavior.'
+    source: https://www.amplemarket.com/
+    source_label: Amplemarket official site
+    source_id: amplemarket-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  enterprise_controls:
+    value: Procurement should test CRM integration, deliverability controls, compliance, contact-data provenance, and role permissions
+      before scaling.
+    source: https://www.amplemarket.com/pricing
+    source_label: Amplemarket pricing
+    source_id: amplemarket-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  watch_out_for:
+    value: Do not evaluate Amplemarket as a generic automation tool; its value depends on sales-data quality, outbound volume,
+      and whether the team actually uses its sales workflow end to end.
+    source: https://www.amplemarket.com/
+    source_label: Amplemarket official site
+    source_id: amplemarket-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
 tags: [ai-sdr, sales-intelligence, lead-generation, sales-automation, cold-email, sales-engagement, outbound]
 seo_title: "Amplemarket Review: AI SDR Features, Pricing & Limits (May 2026)"
 meta_description: "Amplemarket bundles a 200M+ contact database, multichannel sequences, and the Duo AI agent suite (Copilot, Copywriter, Voice, Inbox). Startup plan $600/mo for 2 users on annual billing. Growth and Elite are custom-priced."

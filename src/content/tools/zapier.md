@@ -25,6 +25,142 @@ scores:
   value: 6
   moat: 9
   longevity: 9
+facts:
+  flagship_model:
+    value: "Zapier AI orchestration across Zaps, Agents, Tables, Interfaces, Chatbots, and Central"
+    source: "https://zapier.com/ai"
+    source_label: "Zapier AI"
+    source_id: zapier-ai
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  context_window:
+    value: "Not applicable: Zapier is an automation platform, not a text chat model with a published token window"
+    source: "https://zapier.com/ai"
+    source_label: "Zapier AI"
+    source_id: zapier-ai
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+    next_review_at: 2026-06-03
+  pricing_anchor:
+    value: "Free 100 tasks; Professional from $19.99/mo annually; Team from $69/mo annually; Enterprise custom"
+    source: "https://zapier.com/pricing"
+    source_label: "Zapier pricing"
+    source_id: zapier-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  free_plan:
+    value: "Yes: free plan includes limited monthly tasks and two-step Zaps"
+    source: "https://zapier.com/pricing"
+    source_label: "Zapier pricing"
+    source_id: zapier-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  best_paid_tier:
+    value: "Professional for multi-step Zaps and premium apps; Team for collaboration, SSO, and shared governance"
+    source: "https://zapier.com/pricing"
+    source_label: "Zapier pricing"
+    source_id: zapier-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  api_available:
+    value: "Yes: webhooks, app integrations, and platform/developer surfaces support programmatic automation"
+    source: "https://zapier.com/apps"
+    source_label: "Zapier apps directory"
+    source_id: zapier-apps
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  image_generation:
+    value: "Not native as a core model; Zapier can orchestrate image-generation apps through integrations"
+    source: "https://zapier.com/apps"
+    source_label: "Zapier apps directory"
+    source_id: zapier-apps
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  video_generation:
+    value: "Not native as a core model; Zapier can orchestrate video-generation apps through integrations"
+    source: "https://zapier.com/apps"
+    source_label: "Zapier apps directory"
+    source_id: zapier-apps
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  real_time_voice:
+    value: "No primary real-time voice product; voice workflows require connected apps"
+    source: "https://zapier.com/apps"
+    source_label: "Zapier apps directory"
+    source_id: zapier-apps
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  web_browsing:
+    value: "Limited through connected apps and automation steps, not a general web-browsing assistant"
+    source: "https://zapier.com/ai"
+    source_label: "Zapier AI"
+    source_id: zapier-ai
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  coding_agent:
+    value: "No general coding agent; Zapier Agents automate business workflows rather than software development"
+    source: "https://zapier.com/blog/zapier-agents-guide/"
+    source_label: "Zapier Agents guide"
+    source_id: zapier-agents-guide
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  enterprise_controls:
+    value: "Team and Enterprise add collaboration, SAML SSO, admin, governance, observability, and support controls"
+    source: "https://zapier.com/pricing"
+    source_label: "Zapier pricing"
+    source_id: zapier-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  data_retention_or_privacy:
+    value: "Cloud-only automation means workflow data passes through Zapier; regulated teams should review Enterprise controls"
+    source: "https://zapier.com/pricing"
+    source_label: "Zapier pricing"
+    source_id: zapier-pricing
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  open_source_or_local:
+    value: "No: Zapier is proprietary cloud software with no self-host option"
+    source: "https://zapier.com/pricing"
+    source_label: "Zapier pricing"
+    source_id: zapier-pricing
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  best_for:
+    value: "No-code SaaS automation across the broadest long-tail app catalog"
+    source: "https://zapier.com/apps"
+    source_label: "Zapier apps directory"
+    source_id: zapier-apps
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  watch_out_for:
+    value: "Task-based billing gets expensive on multi-step or high-frequency workflows; exports and self-hosting are not available"
+    source: "https://zapier.com/pricing"
+    source_label: "Zapier pricing"
+    source_id: zapier-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
 tags: [automation, workflow, integrations, no-code, zaps, ai-actions, triggers, agents, central]
 seo_title: 'Zapier: Features, Pricing & Review (May 2026)'
 meta_description: >-
@@ -45,10 +181,16 @@ price_history:
   - date: 2026-05-02
     plan: "Professional"
     price: "$19.99/mo"
+    source: "https://zapier.com/pricing"
+    source_label: "Source"
+    source_id: zapier-pricing
     note: "Starting annual price for Professional plan with 750 tasks/month."
   - date: 2026-05-02
     plan: "Team"
     price: "$69/mo"
+    source: "https://zapier.com/pricing"
+    source_label: "Source"
+    source_id: zapier-pricing
     note: "Starting annual price for Team plan with collaboration, shared folders, and SAML SSO."
 ---
 

@@ -1,0 +1,5463 @@
+{
+  "version": 1,
+  "description": "Canonical source registry for AIpedia fact provenance. Use stable IDs in facts.source_id and price_history.source_id so pricing/fact updates can be audited and updated from one registry.",
+  "sources": [
+    {
+      "id": "activepieces-docs",
+      "label": "Activepieces docs",
+      "url": "https://www.activepieces.com/docs",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "activepieces-official",
+      "label": "Activepieces official site",
+      "url": "https://www.activepieces.com/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "activepieces-pricing",
+      "label": "Activepieces pricing",
+      "url": "https://www.activepieces.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "activepieces-repository",
+      "label": "Activepieces GitHub repository",
+      "url": "https://github.com/activepieces/activepieces",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "ada-official",
+      "label": "Ada official site",
+      "url": "https://www.ada.cx/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "ada-platform",
+      "label": "Ada platform",
+      "url": "https://www.ada.cx/platform",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "ada-pricing",
+      "label": "Ada AI agent pricing explainer",
+      "url": "https://www.ada.cx/blog/unpacking-ai-agent-pricing-resolution-based-vs-conversation-based-models/",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "adcreative-official",
+      "label": "AdCreative.ai official site",
+      "url": "https://www.adcreative.ai/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "adcreative-pricing",
+      "label": "AdCreative.ai official site",
+      "url": "https://www.adcreative.ai/",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "adobe-firefly-blog-2026",
+      "label": "Adobe Firefly 2026 expansion",
+      "url": "https://blog.adobe.com/en/publish/2026/03/19/adobe-firefly-expands-video-image-creation-with-new-ai-capabilities-custom-models",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "adobe-firefly-pricing",
+      "label": "Adobe Firefly pricing",
+      "url": "https://firefly.adobe.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "adobe-firefly-product",
+      "label": "Adobe Firefly official site",
+      "url": "https://firefly.adobe.com/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "adobe-genai-guidelines",
+      "label": "Adobe Generative AI user guidelines",
+      "url": "https://www.adobe.com/legal/licenses-terms/adobe-gen-ai-user-guidelines.html",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "ag2-docs",
+      "label": "AG2 docs",
+      "url": "https://docs.ag2.ai/",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "ag2-install-docs",
+      "label": "AG2 install docs",
+      "url": "https://docs.ag2.ai/latest/docs/user-guide/basic-concepts/installing-ag2/",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "ag2-official",
+      "label": "AG2 official site",
+      "url": "https://www.ag2.ai/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "ag2-repository",
+      "label": "AG2 GitHub repository",
+      "url": "https://github.com/ag2ai/ag2",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "ahrefs-brand-radar",
+      "label": "Ahrefs Brand Radar",
+      "url": "https://ahrefs.com/brand-radar",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "ahrefs-pricing",
+      "label": "Source",
+      "url": "https://ahrefs.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "ahrefs-site-explorer",
+      "label": "Ahrefs Site Explorer",
+      "url": "https://ahrefs.com/site-explorer",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "ai21-official",
+      "label": "AI21 Labs official site",
+      "url": "https://www.ai21.com/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "low"
+    },
+    {
+      "id": "aider-official",
+      "label": "Aider homepage",
+      "url": "https://aider.chat/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-05-04"
+    },
+    {
+      "id": "aider-pricing",
+      "label": "Aider docs",
+      "url": "https://aider.chat/docs/",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-05-04"
+    },
+    {
+      "id": "aider-repository",
+      "label": "Aider GitHub repository",
+      "url": "https://github.com/Aider-AI/aider",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-05-04"
+    },
+    {
+      "id": "aipedia-news",
+      "label": "AIpedia news coverage",
+      "url": "https://aipedia.wiki/news/",
+      "type": "newsroom",
+      "trust_tier": "secondary",
+      "volatility": "medium"
+    },
+    {
+      "id": "aiva-help",
+      "label": "AIVA help",
+      "url": "https://www.aiva.ai/help",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "aiva-official",
+      "label": "AIVA official site",
+      "url": "https://www.aiva.ai/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "aiva-pricing",
+      "label": "AIVA pricing",
+      "url": "https://www.aiva.ai/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "aiva-terms",
+      "label": "AIVA terms",
+      "url": "https://www.aiva.ai/legal/terms",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "amazon-q-docs",
+      "label": "Amazon Q Developer docs",
+      "url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/what-is.html",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "amazon-q-features",
+      "label": "Amazon Q Developer features",
+      "url": "https://aws.amazon.com/q/developer/features/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "amazon-q-official",
+      "label": "Amazon Q Developer official site",
+      "url": "https://aws.amazon.com/q/developer/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "amazon-q-pricing",
+      "label": "Amazon Q Developer pricing",
+      "url": "https://aws.amazon.com/q/developer/pricing/",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "amplemarket-official",
+      "label": "Amplemarket official site",
+      "url": "https://www.amplemarket.com/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "amplemarket-pricing",
+      "label": "Amplemarket pricing",
+      "url": "https://www.amplemarket.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "anthropic-docs",
+      "label": "Anthropic documentation",
+      "url": "https://docs.anthropic.com/",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "anthropic-opus-47",
+      "label": "Anthropic Claude Opus 4.7 release",
+      "url": "https://www.anthropic.com/news/claude-opus-4-7",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "anthropic-pricing",
+      "label": "Claude plans and pricing",
+      "url": "https://www.anthropic.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "antigravity-docs",
+      "label": "Google Antigravity docs",
+      "url": "https://antigravity.google/docs",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "antigravity-official",
+      "label": "Google Antigravity official site",
+      "url": "https://antigravity.google/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "anythingllm-docs",
+      "label": "AnythingLLM docs",
+      "url": "https://docs.anythingllm.com/",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "anythingllm-official",
+      "label": "AnythingLLM official site",
+      "url": "https://anythingllm.com/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "anythingllm-pricing",
+      "label": "AnythingLLM hosted cloud pricing",
+      "url": "https://anythingllm.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "anythingllm-repository",
+      "label": "AnythingLLM GitHub repository",
+      "url": "https://github.com/Mintplex-Labs/anything-llm",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "apollo-data-enrichment",
+      "label": "Apollo data enrichment",
+      "url": "https://apollo.io/product/data-enrichment",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "apollo-official",
+      "label": "Apollo.io Pricing",
+      "url": "https://apollo.io/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "apollo-sales-engagement",
+      "label": "Apollo sales engagement",
+      "url": "https://apollo.io/product/sales-engagement",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "argil-docs",
+      "label": "Argil docs",
+      "url": "https://docs.argil.ai/",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "argil-official",
+      "label": "Argil official site",
+      "url": "https://www.argil.ai/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "argil-pricing",
+      "label": "Argil pricing",
+      "url": "https://www.argil.ai/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "assemblyai-docs",
+      "label": "AssemblyAI docs",
+      "url": "https://www.assemblyai.com/docs/",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "assemblyai-official",
+      "label": "AssemblyAI official site",
+      "url": "https://www.assemblyai.com/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "assemblyai-pricing",
+      "label": "AssemblyAI pricing",
+      "url": "https://www.assemblyai.com/pricing/",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "assemblyai-streaming",
+      "label": "AssemblyAI streaming speech-to-text",
+      "url": "https://www.assemblyai.com/products/streaming-speech-to-text",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "augment-code-best-for",
+      "label": "Augment docs",
+      "url": "https://docs.augmentcode.com/introduction",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "augment-code-best-paid-tier",
+      "label": "Augment pricing",
+      "url": "https://www.augmentcode.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "augment-code-coding-agent",
+      "label": "Augment Agent docs",
+      "url": "https://docs.augmentcode.com/using-augment/agent",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "augment-code-flagship-model",
+      "label": "Augment available models",
+      "url": "https://docs.augmentcode.com/models/available-models",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "base44-best-for",
+      "label": "Base44 docs",
+      "url": "https://docs.base44.com/",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "base44-best-paid-tier",
+      "label": "Base44 pricing guide",
+      "url": "https://base44.com/blog/how-much-does-base44-cost",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "base44-coding-agent",
+      "label": "Base44 developer docs",
+      "url": "https://docs.base44.com/developers/app-code/overview/introduction",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "beautiful-ai-ai-presentations",
+      "label": "Beautiful.ai AI presentations",
+      "url": "https://www.beautiful.ai/ai-presentations",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "beautiful-ai-home",
+      "label": "Beautiful.ai overview",
+      "url": "https://www.beautiful.ai",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "beautiful-ai-official",
+      "label": "Beautiful.ai pricing",
+      "url": "https://www.beautiful.ai/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "beehiiv-developer-docs",
+      "label": "beehiiv developer docs",
+      "url": "https://developers.beehiiv.com/",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "beehiiv-official",
+      "label": "beehiiv official site",
+      "url": "https://www.beehiiv.com/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "beehiiv-pricing",
+      "label": "beehiiv pricing",
+      "url": "https://www.beehiiv.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "blackbox-ai-best-for",
+      "label": "BLACKBOX AI pricing",
+      "url": "https://www.blackbox.ai/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "bolt-docs",
+      "label": "Bolt docs",
+      "url": "https://support.bolt.new/docs",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "bolt-official",
+      "label": "bolt.new/pricing",
+      "url": "https://bolt.new/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "boomy-official",
+      "label": "Boomy official site",
+      "url": "https://boomy.com/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "boomy-pricing",
+      "label": "Boomy pricing",
+      "url": "https://boomy.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "boomy-terms",
+      "label": "Boomy terms",
+      "url": "https://boomy.com/terms",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "browserbase-best-for",
+      "label": "browserbase source",
+      "url": "https://www.browserbase.com",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "canva-ai",
+      "label": "Canva AI / Magic Studio",
+      "url": "https://www.canva.com/canva-ai/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "canva-newsroom",
+      "label": "Canva Newsroom",
+      "url": "https://www.canva.com/newsroom/",
+      "type": "newsroom",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "canva-pricing",
+      "label": "Canva pricing",
+      "url": "https://www.canva.com/pricing/",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "capacities-docs",
+      "label": "Capacities docs",
+      "url": "https://docs.capacities.io/",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "capacities-pricing",
+      "label": "Source",
+      "url": "https://capacities.io/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "capacities-product",
+      "label": "Capacities product",
+      "url": "https://capacities.io/product",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "captions-official",
+      "label": "Captions pricing",
+      "url": "https://captions.ai/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-05-04"
+    },
+    {
+      "id": "captions-overview",
+      "label": "Captions overview",
+      "url": "https://captions.ai/overview",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-05-04"
+    },
+    {
+      "id": "cartesia-docs",
+      "label": "Cartesia docs",
+      "url": "https://docs.cartesia.ai/",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "cartesia-pricing",
+      "label": "Source",
+      "url": "https://cartesia.ai/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "cartesia-sonic",
+      "label": "Cartesia Sonic",
+      "url": "https://cartesia.ai/sonic",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "character-ai-about",
+      "label": "Character.AI about",
+      "url": "https://character.ai/about",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "character-ai-official",
+      "label": "Character.AI official site",
+      "url": "https://character.ai/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "character-ai-pricing",
+      "label": "Character.AI c.ai+ pricing",
+      "url": "https://character.ai/subscription/plus/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "character-ai-support",
+      "label": "Character.AI help center",
+      "url": "https://support.character.ai/",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "chatpdf-official",
+      "label": "ChatPDF official site",
+      "url": "https://www.chatpdf.com/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "chatpdf-pricing",
+      "label": "ChatPDF official site pricing surface",
+      "url": "https://www.chatpdf.com/",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "chatsonic-official",
+      "label": "Chatsonic official page",
+      "url": "https://writesonic.com/chatsonic",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "claude-code-llms",
+      "label": "Claude Code llms.txt",
+      "url": "https://code.claude.com/llms.txt",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "claude-code-official",
+      "label": "Claude Code docs",
+      "url": "https://code.claude.com/docs/en/overview",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "claude-design-official",
+      "label": "Claude Design product page",
+      "url": "https://claude.ai/design",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "claude-design-pricing",
+      "label": "Source",
+      "url": "https://www.anthropic.com/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "claude-design-support",
+      "label": "Claude Design support page",
+      "url": "https://support.anthropic.com/en/articles/11145838-using-claude-design",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "claude-pricing",
+      "label": "Claude pricing",
+      "url": "https://claude.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "clay-home",
+      "label": "Clay overview",
+      "url": "https://www.clay.com",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "clay-integrations",
+      "label": "Clay integrations",
+      "url": "https://www.clay.com/integrations",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "clay-official",
+      "label": "Clay Pricing",
+      "url": "https://www.clay.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "clay-university",
+      "label": "Clay University",
+      "url": "https://www.clay.com/university",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "clearscope-official",
+      "label": "Clearscope official site",
+      "url": "https://www.clearscope.io/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "clearscope-pricing",
+      "label": "Clearscope pricing",
+      "url": "https://www.clearscope.io/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "clickup-brain",
+      "label": "ClickUp Brain product page",
+      "url": "https://clickup.com/ai",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "clickup-official",
+      "label": "ClickUp official site",
+      "url": "https://clickup.com/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "clickup-pricing",
+      "label": "ClickUp pricing",
+      "url": "https://clickup.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "cline-docs",
+      "label": "Cline docs",
+      "url": "https://docs.cline.bot/home",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-05-04"
+    },
+    {
+      "id": "cline-pricing",
+      "label": "Cline homepage",
+      "url": "https://cline.bot/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-05-04"
+    },
+    {
+      "id": "cline-repository",
+      "label": "Cline GitHub repository",
+      "url": "https://github.com/cline/cline",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-05-04"
+    },
+    {
+      "id": "clipdrop-apis",
+      "label": "Clipdrop APIs",
+      "url": "https://clipdrop.co/apis",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "clipdrop-official",
+      "label": "Clipdrop official site",
+      "url": "https://clipdrop.co/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "clipdrop-pricing",
+      "label": "Clipdrop pricing",
+      "url": "https://clipdrop.co/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "clipdrop-tools",
+      "label": "Clipdrop tools",
+      "url": "https://clipdrop.co/tools",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "codeium-docs",
+      "label": "Windsurf docs",
+      "url": "https://docs.windsurf.com/",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "codeium-official",
+      "label": "Windsurf official site",
+      "url": "https://windsurf.com/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "codeium-pricing",
+      "label": "Windsurf pricing",
+      "url": "https://windsurf.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "codeium-pricing-blog",
+      "label": "Windsurf pricing plans blog",
+      "url": "https://windsurf.com/blog/windsurf-pricing-plans",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "coderabbit-best-for",
+      "label": "CodeRabbit pricing",
+      "url": "https://www.coderabbit.ai/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "coderabbit-best-paid-tier",
+      "label": "CodeRabbit plans docs",
+      "url": "https://docs.coderabbit.ai/management/plans",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "codex-docs",
+      "label": "Codex docs",
+      "url": "https://platform.openai.com/docs/codex",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "codex-official",
+      "label": "OpenAI Codex product page",
+      "url": "https://openai.com/codex/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "codex-pricing",
+      "label": "Codex pricing",
+      "url": "https://developers.openai.com/codex/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "cody-docs",
+      "label": "Sourcegraph Cody docs",
+      "url": "https://sourcegraph.com/docs/cody",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-05-04"
+    },
+    {
+      "id": "cody-pricing",
+      "label": "Sourcegraph pricing",
+      "url": "https://sourcegraph.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-05-04"
+    },
+    {
+      "id": "cohere-command",
+      "label": "Cohere Command models",
+      "url": "https://cohere.com/command",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "cohere-docs",
+      "label": "Cohere documentation",
+      "url": "https://docs.cohere.com/",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "cohere-official",
+      "label": "Cohere official site",
+      "url": "https://cohere.com/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "cohere-pricing",
+      "label": "Cohere pricing",
+      "url": "https://cohere.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "comet-best-for",
+      "label": "comet source",
+      "url": "https://www.perplexity.ai/comet",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "company-newsrooms",
+      "label": "Official company newsrooms and blogs",
+      "url": "https://news.google.com/",
+      "type": "newsroom",
+      "trust_tier": "secondary",
+      "volatility": "medium"
+    },
+    {
+      "id": "connected-papers-about",
+      "label": "Connected Papers about",
+      "url": "https://www.connectedpapers.com/about",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "connected-papers-main",
+      "label": "Connected Papers graph search",
+      "url": "https://www.connectedpapers.com/main",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "connected-papers-pricing",
+      "label": "Source",
+      "url": "https://www.connectedpapers.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "consensus-official",
+      "label": "Consensus official site",
+      "url": "https://consensus.app",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "consensus-pricing",
+      "label": "Consensus pricing",
+      "url": "https://consensus.app/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "consensus-search",
+      "label": "Consensus search product",
+      "url": "https://consensus.app",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "continue-docs",
+      "label": "Continue docs",
+      "url": "https://docs.continue.dev/",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "continue-hub",
+      "label": "Continue Hub",
+      "url": "https://hub.continue.dev/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "continue-pricing",
+      "label": "Source",
+      "url": "https://www.continue.dev/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "copy-ai-official",
+      "label": "Copy.ai Pricing",
+      "url": "https://www.copy.ai/prices",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "copy-ai-platform",
+      "label": "Copy.ai platform",
+      "url": "https://www.copy.ai/platform",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "copy-ai-workflows",
+      "label": "Copy.ai workflows",
+      "url": "https://www.copy.ai/workflows",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "crewai-docs",
+      "label": "CrewAI documentation",
+      "url": "https://docs.crewai.com/",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "crewai-official",
+      "label": "CrewAI official site",
+      "url": "https://www.crewai.com/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "crewai-pricing",
+      "label": "CrewAI pricing",
+      "url": "https://www.crewai.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "crewai-repository",
+      "label": "CrewAI GitHub repository",
+      "url": "https://github.com/crewAIInc/crewAI",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "cursor-docs",
+      "label": "Cursor documentation",
+      "url": "https://cursor.com/docs",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "cursor-model-docs",
+      "label": "Cursor model docs",
+      "url": "https://cursor.com/docs/models",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "cursor-pricing",
+      "label": "Cursor pricing",
+      "url": "https://cursor.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "d-id-agents",
+      "label": "D-ID Agents",
+      "url": "https://www.d-id.com/agents/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "d-id-docs",
+      "label": "D-ID docs",
+      "url": "https://docs.d-id.com/",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "d-id-official",
+      "label": "D-ID official site",
+      "url": "https://www.d-id.com/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "d-id-studio-pricing",
+      "label": "D-ID Studio pricing",
+      "url": "https://www.d-id.com/pricing/studio/",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "dalle-best-for",
+      "label": "dalle source",
+      "url": "https://aipedia.wiki/tools/dalle/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "dalle-best-paid-tier",
+      "label": "dalle source",
+      "url": "https://aipedia.wiki/tools/chatgpt/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "dalle-image-generation",
+      "label": "GPT Image 2 launch coverage",
+      "url": "https://aipedia.wiki/news/2026-04-21-openai-chatgpt-images-2-gpt-image-2/",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "decktopus-official",
+      "label": "Decktopus official site",
+      "url": "https://www.decktopus.com",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "decktopus-pricing",
+      "label": "Decktopus pricing",
+      "url": "https://www.decktopus.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "deepgram-docs",
+      "label": "Deepgram docs",
+      "url": "https://developers.deepgram.com/docs",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "deepgram-official",
+      "label": "Deepgram official site",
+      "url": "https://deepgram.com/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "deepgram-pricing",
+      "label": "Deepgram pricing",
+      "url": "https://deepgram.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "deepgram-voice-agent",
+      "label": "Deepgram Voice Agent API",
+      "url": "https://deepgram.com/product/voice-agent-api",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "deepl-docs",
+      "label": "DeepL developer documentation",
+      "url": "https://developers.deepl.com/docs",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "deepl-official",
+      "label": "DeepL Pro",
+      "url": "https://www.deepl.com/en/pro",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "deepl-pricing",
+      "label": "DeepL plans help center",
+      "url": "https://support.deepl.com/hc/en-us/articles/360019924499-About-DeepL-plans",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "deepl-translator",
+      "label": "DeepL Translator",
+      "url": "https://www.deepl.com/en/translator",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "deepseek-api-pricing",
+      "label": "DeepSeek API pricing docs",
+      "url": "https://api-docs.deepseek.com/quick_start/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "deepseek-chat",
+      "label": "DeepSeek Chat",
+      "url": "https://chat.deepseek.com",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "deepseek-huggingface",
+      "label": "DeepSeek Hugging Face organization",
+      "url": "https://huggingface.co/deepseek-ai",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "descript-changelog",
+      "label": "Descript changelog",
+      "url": "https://www.descript.com/changelog",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "descript-help",
+      "label": "Descript help center",
+      "url": "https://help.descript.com",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "descript-pricing",
+      "label": "Descript pricing",
+      "url": "https://www.descript.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "devin-docs",
+      "label": "Devin docs",
+      "url": "https://docs.devin.ai/get-started/devin-intro",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "devin-official",
+      "label": "Devin official site",
+      "url": "https://devin.ai",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "devin-pricing",
+      "label": "Devin pricing",
+      "url": "https://devin.ai/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "dext-accounting-integrations",
+      "label": "Dext Help: What is Dext, and who is it for?",
+      "url": "https://help.dext.com/en/articles/105688-what-is-dext-and-who-is-it-for",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "dext-pricing",
+      "label": "Dext Help: Dext plans for businesses",
+      "url": "https://help.dext.com/en/articles/647776-dext-plans-for-businesses",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "dia-best-for",
+      "label": "Dia website",
+      "url": "https://www.diabrowser.com",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "dia-coding-agent",
+      "label": "dia source",
+      "url": "https://aipedia.wiki/tools/dia/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "doubao-docs",
+      "label": "Volcengine Doubao docs",
+      "url": "https://www.volcengine.com/docs/82379",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "doubao-official",
+      "label": "Doubao official site",
+      "url": "https://www.doubao.com/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "doubao-pricing",
+      "label": "Volcengine Doubao model pricing",
+      "url": "https://www.volcengine.com/docs/82379/1099320",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "doubao-volcengine-product",
+      "label": "Volcengine Doubao product page",
+      "url": "https://www.volcengine.com/product/doubao",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "dust-docs",
+      "label": "Dust docs",
+      "url": "https://docs.dust.tt/",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "dust-official",
+      "label": "Dust official site",
+      "url": "https://dust.tt/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "dust-pricing",
+      "label": "Dust pricing",
+      "url": "https://dust.tt/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "dust-security",
+      "label": "Dust security",
+      "url": "https://dust.tt/security",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "elevenlabs-api-pricing",
+      "label": "ElevenLabs API pricing",
+      "url": "https://elevenlabs.io/pricing/api",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "elevenlabs-model-docs",
+      "label": "ElevenLabs model docs",
+      "url": "https://elevenlabs.io/docs/overview/models",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "elevenlabs-pricing",
+      "label": "ElevenLabs pricing",
+      "url": "https://elevenlabs.io/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "elicit-plan-docs",
+      "label": "Elicit plan documentation",
+      "url": "https://support.elicit.com/en/articles/8670209",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "elicit-pricing",
+      "label": "Source",
+      "url": "https://elicit.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "trust_tier": "primary",
+      "last_checked": "2026-05-04",
+      "id": "exa-docs",
+      "label": "Exa Search API guide",
+      "url": "https://exa.ai/docs/reference/search-api-guide",
+      "type": "docs",
+      "volatility": "medium"
+    },
+    {
+      "id": "exa-official",
+      "label": "Exa pricing",
+      "url": "https://exa.ai/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "factory-best-for",
+      "label": "Factory docs",
+      "url": "https://docs.factory.ai/welcome",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "factory-best-paid-tier",
+      "label": "Factory plans and models",
+      "url": "https://docs.factory.ai/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "fal-ai-docs",
+      "label": "fal.ai docs",
+      "url": "https://docs.fal.ai/",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "fal-ai-models",
+      "label": "fal.ai model catalog",
+      "url": "https://fal.ai/models",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "fal-ai-official",
+      "label": "fal.ai official site",
+      "url": "https://fal.ai/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "fal-ai-pricing",
+      "label": "fal.ai pricing",
+      "url": "https://fal.ai/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "fathom-help",
+      "label": "Fathom help center",
+      "url": "https://help.fathom.video/",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "fathom-official",
+      "label": "Fathom official site",
+      "url": "https://fathom.video/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "fathom-pricing",
+      "label": "Fathom pricing",
+      "url": "https://fathom.video/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "figma-ai-credits",
+      "label": "Figma AI credits documentation",
+      "url": "https://help.figma.com/hc/en-us/articles/33459875669015-How-AI-credits-work",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "figma-make-models",
+      "label": "Figma Make model selection documentation",
+      "url": "https://help.figma.com/hc/en-us/articles/36400680326551-Select-an-AI-model-to-use-in-Figma-Make",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "figma-pricing",
+      "label": "Source",
+      "url": "https://www.figma.com/pricing/",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "fireflies-askfred",
+      "label": "Fireflies AskFred",
+      "url": "https://fireflies.ai/askfred",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "fireflies-features",
+      "label": "Fireflies features",
+      "url": "https://fireflies.ai/features",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "fireflies-integrations",
+      "label": "Fireflies integrations",
+      "url": "https://fireflies.ai/integrations",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "fireflies-official",
+      "label": "Fireflies.ai Pricing",
+      "url": "https://fireflies.ai/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "fireworks-ai-docs",
+      "label": "Fireworks AI docs",
+      "url": "https://docs.fireworks.ai/",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "fireworks-ai-models",
+      "label": "Fireworks AI models",
+      "url": "https://fireworks.ai/models",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "fireworks-ai-official",
+      "label": "Fireworks AI official site",
+      "url": "https://fireworks.ai/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "fireworks-ai-pricing",
+      "label": "Fireworks AI pricing",
+      "url": "https://fireworks.ai/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "fish-audio-official",
+      "label": "Fish Audio official site",
+      "url": "https://fish.audio",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "fish-audio-pricing",
+      "label": "Fish Audio official site",
+      "url": "https://fish.audio",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "flux-docs",
+      "label": "Black Forest Labs docs",
+      "url": "https://docs.bfl.ai/quick_start/introduction",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "flux-official",
+      "label": "Black Forest Labs official site",
+      "url": "https://bfl.ai",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "flux-pricing",
+      "label": "fal.ai model pricing",
+      "url": "https://fal.ai/docs/platform-apis/v1/models/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "framer-ai",
+      "label": "Framer AI",
+      "url": "https://www.framer.com/ai/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "framer-ai-pricing",
+      "label": "Source",
+      "url": "https://framer.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "framer-help",
+      "label": "Framer help",
+      "url": "https://www.framer.com/help/",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "framer-official",
+      "label": "Framer official site",
+      "url": "https://www.framer.com/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "framer-pricing",
+      "label": "Framer pricing",
+      "url": "https://www.framer.com/pricing/",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "frase-features",
+      "label": "Frase features",
+      "url": "https://www.frase.io/features",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "frase-official",
+      "label": "Frase official site",
+      "url": "https://www.frase.io",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "frase-pricing",
+      "label": "Frase pricing",
+      "url": "https://www.frase.io/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "freepik-official",
+      "label": "Freepik AI image generator",
+      "url": "https://www.freepik.com/ai/image-generator",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "freepik-pricing",
+      "label": "Freepik pricing",
+      "url": "https://www.freepik.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "galileo-ai-features",
+      "label": "Galileo / Stitch features",
+      "url": "https://www.usegalileo.ai/features",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "galileo-ai-official",
+      "label": "Galileo / Stitch official site",
+      "url": "https://www.usegalileo.ai/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "galileo-ai-pricing",
+      "label": "Galileo / Stitch pricing surface",
+      "url": "https://www.usegalileo.ai/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "gamma-ai-presentation",
+      "label": "Gamma AI presentation maker",
+      "url": "https://gamma.app/ai-presentation-maker",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "gamma-features",
+      "label": "Gamma features",
+      "url": "https://gamma.app/features",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "gamma-official",
+      "label": "Gamma pricing",
+      "url": "https://gamma.app/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "genspark-agents",
+      "label": "Genspark Agents",
+      "url": "https://www.genspark.ai/agents",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "genspark-official",
+      "label": "Genspark official site",
+      "url": "https://www.genspark.ai/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "genspark-pricing",
+      "label": "Genspark pricing",
+      "url": "https://www.genspark.ai/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "getresponse-official",
+      "label": "GetResponse official site",
+      "url": "https://www.getresponse.com/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "getresponse-pricing",
+      "label": "GetResponse pricing",
+      "url": "https://www.getresponse.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "github-copilot-docs",
+      "label": "GitHub Copilot documentation",
+      "url": "https://docs.github.com/en/copilot",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "github-copilot-feature-matrix",
+      "label": "GitHub Copilot feature matrix",
+      "url": "https://docs.github.com/en/copilot/reference/copilot-feature-matrix",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "github-copilot-plans",
+      "label": "GitHub Copilot plans",
+      "url": "https://github.com/features/copilot/plans",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "github-repositories",
+      "label": "GitHub repositories",
+      "url": "https://github.com/",
+      "type": "repository",
+      "trust_tier": "secondary",
+      "volatility": "medium"
+    },
+    {
+      "id": "glean-developers",
+      "label": "Glean developer platform",
+      "url": "https://developers.glean.com/",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "glean-official",
+      "label": "Glean official site",
+      "url": "https://www.glean.com/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "glean-pricing",
+      "label": "Glean pricing surface",
+      "url": "https://www.glean.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "glm-docs",
+      "label": "Zhipu AI Open Platform docs",
+      "url": "https://docs.bigmodel.cn/",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "glm-huggingface",
+      "label": "GLM-5 on Hugging Face",
+      "url": "https://huggingface.co/zai-org/GLM-5",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "glm-official",
+      "label": "Z.ai official site",
+      "url": "https://www.zhipuai.cn/en",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "glm-pricing",
+      "label": "Zhipu AI Open Platform pricing",
+      "url": "https://open.bigmodel.cn/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "google-ai-pricing",
+      "label": "Google AI pricing",
+      "url": "https://ai.google.dev/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "google-gemini-docs",
+      "label": "Gemini API documentation",
+      "url": "https://ai.google.dev/gemini-api/docs",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "google-gemini-subscriptions",
+      "label": "Gemini subscriptions",
+      "url": "https://gemini.google/subscriptions/",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "google-stitch-labs",
+      "label": "Google Labs Stitch",
+      "url": "https://labs.google/stitch/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "google-stitch-official",
+      "label": "Google Stitch official site",
+      "url": "https://stitch.withgoogle.com/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "google-stitch-pricing",
+      "label": "Source",
+      "url": "https://www.nxcode.io/resources/news/google-stitch-pricing-plans-complete-guide-2026",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "google-workspace-ai",
+      "label": "Google Workspace AI",
+      "url": "https://workspace.google.com/solutions/ai/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "goose-official",
+      "label": "Goose official site",
+      "url": "https://block.github.io/goose/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "goose-pricing",
+      "label": "Source",
+      "url": "https://github.com/block/goose",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "goose-repository",
+      "label": "Goose GitHub repository",
+      "url": "https://github.com/block/goose",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "gpt-image-2-official",
+      "label": "OpenAI launch post",
+      "url": "https://openai.com/index/introducing-chatgpt-images-2-0/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "gpt-image-2-pricing",
+      "label": "Source",
+      "url": "https://chatgpt.com/#pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "grammarly-ai",
+      "label": "Grammarly AI",
+      "url": "https://www.grammarly.com/ai",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "grammarly-business",
+      "label": "Grammarly Business",
+      "url": "https://www.grammarly.com/business",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "grammarly-plans",
+      "label": "Grammarly plans",
+      "url": "https://www.grammarly.com/plans",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "grammarly-pricing",
+      "label": "Source",
+      "url": "https://grammarly.com/plans",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "granola-official",
+      "label": "Granola official site",
+      "url": "https://www.granola.ai/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "granola-pricing",
+      "label": "Granola pricing",
+      "url": "https://www.granola.ai/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "granola-security",
+      "label": "Granola security",
+      "url": "https://www.granola.ai/security",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "grok-code-fast-best-for",
+      "label": "grok-code-fast source",
+      "url": "https://x.ai",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "groq-docs",
+      "label": "Groq docs",
+      "url": "https://console.groq.com/docs/overview",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "groq-models",
+      "label": "Groq supported models",
+      "url": "https://console.groq.com/docs/models",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "groq-official",
+      "label": "Groq official site",
+      "url": "https://groq.com/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "groq-pricing",
+      "label": "Groq pricing",
+      "url": "https://groq.com/pricing/",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "gumloop-docs",
+      "label": "Gumloop docs",
+      "url": "https://docs.gumloop.com/",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "gumloop-official",
+      "label": "Gumloop official site",
+      "url": "https://www.gumloop.com/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "gumloop-pricing",
+      "label": "Gumloop pricing",
+      "url": "https://www.gumloop.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "hailuo-official",
+      "label": "Hailuo AI official site",
+      "url": "https://hailuoai.video/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "hailuo-pricing",
+      "label": "Hailuo AI pricing",
+      "url": "https://hailuoai.video/subscribe",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "harvey-blog",
+      "label": "Harvey blog",
+      "url": "https://www.harvey.ai/blog",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "harvey-official",
+      "label": "Harvey official site",
+      "url": "https://www.harvey.ai/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "harvey-platform",
+      "label": "Harvey platform",
+      "url": "https://www.harvey.ai/platform",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "harvey-pricing",
+      "label": "Source",
+      "url": "https://harvey.ai",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "harvey-security",
+      "label": "Harvey security",
+      "url": "https://www.harvey.ai/security",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "hedra-official",
+      "label": "Hedra official site",
+      "url": "https://www.hedra.com/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "hedra-pricing",
+      "label": "Hedra pricing",
+      "url": "https://www.hedra.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "helicone-docs",
+      "label": "Helicone docs",
+      "url": "https://docs.helicone.ai/",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "helicone-official",
+      "label": "Helicone official site",
+      "url": "https://www.helicone.ai/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "helicone-pricing",
+      "label": "Helicone pricing",
+      "url": "https://www.helicone.ai/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "helicone-repository",
+      "label": "Helicone GitHub repository",
+      "url": "https://github.com/Helicone/helicone",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "hermes-agent-docs",
+      "label": "Hermes Agent docs",
+      "url": "https://hermes-agent.nousresearch.com/docs",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "hermes-agent-official",
+      "label": "Hermes Agent official site",
+      "url": "https://hermes-agent.nousresearch.com/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "hermes-agent-pricing",
+      "label": "Hermes Agent official site",
+      "url": "https://hermes-agent.nousresearch.com/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "hermes-agent-repository",
+      "label": "Hermes Agent GitHub repository",
+      "url": "https://github.com/NousResearch/hermes-agent",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "hex-learn",
+      "label": "Hex Learn",
+      "url": "https://learn.hex.tech/",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "hex-official",
+      "label": "Hex official site",
+      "url": "https://hex.tech/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "hex-pricing",
+      "label": "Hex pricing",
+      "url": "https://hex.tech/pricing/",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "hex-security",
+      "label": "Hex security",
+      "url": "https://hex.tech/security/",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "heygen-api-docs",
+      "label": "HeyGen API docs",
+      "url": "https://docs.heygen.com",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "heygen-avatar-iv",
+      "label": "HeyGen Avatar IV guide",
+      "url": "https://help.heygen.com/en/articles/11269603-heygen-avatar-iv-complete-guide",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "heygen-pricing",
+      "label": "HeyGen pricing",
+      "url": "https://www.heygen.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "heygen-pricing-help",
+      "label": "HeyGen pricing help",
+      "url": "https://help.heygen.com/en/articles/9204682-heygen-pricing-plans-and-subscriptions-explained-what-you-need-to-know",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "higgsfield-about",
+      "label": "Higgsfield about",
+      "url": "https://higgsfield.ai/about",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "higgsfield-official",
+      "label": "Higgsfield official site",
+      "url": "https://higgsfield.ai/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "higgsfield-pricing",
+      "label": "Higgsfield pricing",
+      "url": "https://higgsfield.ai/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "hugging-face-docs",
+      "label": "Hugging Face docs",
+      "url": "https://huggingface.co/docs",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "hugging-face-models",
+      "label": "Hugging Face model hub",
+      "url": "https://huggingface.co/models",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "hugging-face-official",
+      "label": "Hugging Face official site",
+      "url": "https://huggingface.co/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "hugging-face-pricing",
+      "label": "Hugging Face pricing",
+      "url": "https://huggingface.co/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "humata-blog",
+      "label": "Humata blog",
+      "url": "https://www.humata.ai/blog",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "humata-official",
+      "label": "Humata official site",
+      "url": "https://www.humata.ai/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "humata-pricing",
+      "label": "Humata pricing",
+      "url": "https://www.humata.ai/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "humata-security",
+      "label": "Humata security",
+      "url": "https://www.humata.ai/security",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "hume-ai-docs",
+      "label": "Hume AI developer docs",
+      "url": "https://dev.hume.ai/docs",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "hume-ai-official",
+      "label": "Hume AI official site",
+      "url": "https://www.hume.ai/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "hume-ai-pricing",
+      "label": "Hume AI pricing",
+      "url": "https://www.hume.ai/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "hume-ai-products",
+      "label": "Hume AI products",
+      "url": "https://www.hume.ai/products",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "hunyuan-cloud",
+      "label": "Tencent Cloud Hunyuan product",
+      "url": "https://cloud.tencent.com/product/hunyuan",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "hunyuan-docs",
+      "label": "Tencent Cloud Hunyuan docs",
+      "url": "https://cloud.tencent.com/document/product/1729",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "hunyuan-official",
+      "label": "Tencent Hunyuan official site",
+      "url": "https://hunyuan.tencent.com/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "hunyuan-pricing",
+      "label": "Tencent Cloud Hunyuan pricing docs",
+      "url": "https://cloud.tencent.com/document/product/1729/97731",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "hyperwrite-official",
+      "label": "HyperWrite official site",
+      "url": "https://www.hyperwriteai.com",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "hyperwrite-personal-assistant",
+      "label": "HyperWrite Personal Assistant",
+      "url": "https://www.hyperwriteai.com/personal-assistant",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "hyperwrite-pricing",
+      "label": "HyperWrite pricing",
+      "url": "https://www.hyperwriteai.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "ideogram-docs",
+      "label": "Ideogram API docs",
+      "url": "https://docs.ideogram.ai/",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "ideogram-official",
+      "label": "Ideogram 3.0 features",
+      "url": "https://ideogram.ai/features/3.0",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "ideogram-pricing",
+      "label": "Ideogram pricing",
+      "url": "https://ideogram.ai/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "imagen-gemini-docs",
+      "label": "Gemini API image generation docs",
+      "url": "https://ai.google.dev/gemini-api/docs/image-generation",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "imagen-official",
+      "label": "Google DeepMind Imagen",
+      "url": "https://deepmind.google/models/imagen/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "imagen-pricing",
+      "label": "Source",
+      "url": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "imagen-vertex-docs",
+      "label": "Vertex AI image generation docs",
+      "url": "https://cloud.google.com/vertex-ai/generative-ai/docs/image/overview",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "imagen-vertex-pricing",
+      "label": "Vertex AI generative AI pricing",
+      "url": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "instantly-deliverability",
+      "label": "Instantly deliverability",
+      "url": "https://instantly.ai/products/deliverability-network",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "instantly-email",
+      "label": "Instantly email outreach",
+      "url": "https://instantly.ai/products/email-outreach",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "instantly-leads",
+      "label": "Instantly Lead Finder",
+      "url": "https://instantly.ai/products/lead-finder",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "instantly-official",
+      "label": "Instantly Pricing",
+      "url": "https://instantly.ai/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "intercom-fin",
+      "label": "Fin by Intercom",
+      "url": "https://fin.ai/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "intercom-official",
+      "label": "Intercom official site",
+      "url": "https://www.intercom.com",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "intercom-pricing",
+      "label": "Intercom pricing",
+      "url": "https://www.intercom.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "invideo-ai",
+      "label": "Invideo AI",
+      "url": "https://invideo.io/ai/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "invideo-help",
+      "label": "Invideo help center",
+      "url": "https://help.invideo.io/",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "invideo-official",
+      "label": "Invideo official site",
+      "url": "https://invideo.io/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "invideo-pricing",
+      "label": "Invideo pricing",
+      "url": "https://invideo.io/pricing/",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "jan-ai-docs",
+      "label": "Jan docs",
+      "url": "https://jan.ai/docs",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "jan-ai-official",
+      "label": "Jan official site",
+      "url": "https://jan.ai/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "jan-ai-repository",
+      "label": "Jan GitHub repository",
+      "url": "https://github.com/menloresearch/jan",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "jasper-official",
+      "label": "Jasper homepage",
+      "url": "https://www.jasper.ai/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-05-04"
+    },
+    {
+      "id": "jasper-platform",
+      "label": "Jasper platform",
+      "url": "https://www.jasper.ai/platform",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-05-04"
+    },
+    {
+      "id": "jasper-pricing",
+      "label": "Jasper pricing",
+      "url": "https://www.jasper.ai/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-05-04"
+    },
+    {
+      "id": "jetbrains-ai-assistant",
+      "label": "JetBrains AI Assistant",
+      "url": "https://www.jetbrains.com/ai-assistant/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "jetbrains-ai-docs",
+      "label": "JetBrains AI Assistant docs",
+      "url": "https://www.jetbrains.com/help/ai-assistant/",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "jetbrains-ai-official",
+      "label": "JetBrains AI official site",
+      "url": "https://www.jetbrains.com/ai/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "jetbrains-ai-pricing",
+      "label": "Source",
+      "url": "https://www.jetbrains.com/help/ai-assistant/licensing-and-subscriptions.html",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "jimeng-official",
+      "label": "Jimeng AI official site",
+      "url": "https://jimeng.jianying.com/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "jimeng-pricing",
+      "label": "Source",
+      "url": "https://dreamina.capcut.com",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "jimeng-volcengine",
+      "label": "Volcengine image/video infrastructure",
+      "url": "https://www.volcengine.com/product/veImageX",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "julius-business",
+      "label": "Julius AI for business",
+      "url": "https://julius.ai/for-business",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "julius-official",
+      "label": "Julius AI official site",
+      "url": "https://julius.ai/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "julius-pricing",
+      "label": "Julius AI pricing",
+      "url": "https://julius.ai/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "kagi-assistant-docs",
+      "label": "Kagi Assistant docs",
+      "url": "https://help.kagi.com/kagi/ai/assistant.html",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "kagi-official",
+      "label": "Kagi official site",
+      "url": "https://kagi.com",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "kagi-pricing",
+      "label": "Kagi pricing",
+      "url": "https://kagi.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "kimi-homepage",
+      "label": "Kimi homepage",
+      "url": "https://www.kimi.com/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-05-04"
+    },
+    {
+      "id": "kimi-official",
+      "label": "Moonshot platform",
+      "url": "https://platform.moonshot.ai/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-05-04"
+    },
+    {
+      "id": "kimi-pricing",
+      "label": "Kimi API pricing documentation",
+      "url": "https://platform.kimi.ai/docs/pricing/chat",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "kiro-best-for",
+      "label": "Kiro specs docs",
+      "url": "https://kiro.dev/docs/specs/",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "kiro-best-paid-tier",
+      "label": "Kiro pricing",
+      "url": "https://kiro.dev/pricing/",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "kiro-coding-agent",
+      "label": "Kiro homepage",
+      "url": "https://kiro.dev/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "kling-official",
+      "label": "Kling AI official site",
+      "url": "https://klingai.com",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "kling-pricing",
+      "label": "Kling AI pricing",
+      "url": "https://klingai.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "kokoro-model",
+      "label": "Kokoro model card",
+      "url": "https://huggingface.co/hexgrad/Kokoro-82M",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "kokoro-official",
+      "label": "Kokoro-82M on Hugging Face",
+      "url": "https://huggingface.co/hexgrad/Kokoro-82M",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "kokoro-readme",
+      "label": "Kokoro README",
+      "url": "https://huggingface.co/hexgrad/Kokoro-82M/blob/main/README.md",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "kokoro-repository",
+      "label": "Kokoro GitHub repository",
+      "url": "https://github.com/hexgrad/kokoro",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "kokoro-space",
+      "label": "Kokoro TTS Hugging Face Space",
+      "url": "https://huggingface.co/spaces/hexgrad/Kokoro-TTS",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "krea-official",
+      "label": "Krea official site",
+      "url": "https://www.krea.ai/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "krea-pricing",
+      "label": "Krea pricing",
+      "url": "https://www.krea.ai/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "krea-realtime",
+      "label": "Krea realtime image generation",
+      "url": "https://www.krea.ai/realtime",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "krea-video",
+      "label": "Krea video generator",
+      "url": "https://www.krea.ai/video",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "langflow-docs",
+      "label": "Langflow documentation",
+      "url": "https://docs.langflow.org/",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "langflow-official",
+      "label": "Langflow official site",
+      "url": "https://www.langflow.org/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "langflow-pricing",
+      "label": "Langflow official site",
+      "url": "https://www.langflow.org/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "langflow-repository",
+      "label": "Langflow GitHub repository",
+      "url": "https://github.com/langflow-ai/langflow",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "langfuse-docs",
+      "label": "Langfuse documentation",
+      "url": "https://langfuse.com/docs",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "langfuse-official",
+      "label": "Langfuse official site",
+      "url": "https://langfuse.com/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "langfuse-pricing",
+      "label": "langfuse.com/pricing",
+      "url": "https://langfuse.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "langfuse-repository",
+      "label": "Langfuse GitHub repository",
+      "url": "https://github.com/langfuse/langfuse",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "langgraph-docs",
+      "label": "LangGraph documentation",
+      "url": "https://docs.langchain.com/oss/python/langgraph/overview",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "langgraph-official",
+      "label": "LangGraph official site",
+      "url": "https://www.langchain.com/langgraph",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "langgraph-pricing",
+      "label": "langchain.com/pricing",
+      "url": "https://www.langchain.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "langgraph-repository",
+      "label": "LangGraph GitHub repository",
+      "url": "https://github.com/langchain-ai/langgraph",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "leonardo-docs",
+      "label": "Leonardo AI API docs",
+      "url": "https://docs.leonardo.ai/docs/getting-started",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "leonardo-official",
+      "label": "Leonardo AI official site",
+      "url": "https://leonardo.ai/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "leonardo-pricing",
+      "label": "Leonardo AI pricing",
+      "url": "https://leonardo.ai/pricing/",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "letta-docs",
+      "label": "Letta documentation",
+      "url": "https://docs.letta.com/",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "letta-official",
+      "label": "Letta official site",
+      "url": "https://www.letta.com/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "letta-pricing",
+      "label": "Letta pricing",
+      "url": "https://www.letta.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "letta-repository",
+      "label": "Letta GitHub repository",
+      "url": "https://github.com/letta-ai/letta",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "lindy-docs",
+      "label": "Lindy documentation",
+      "url": "https://docs.lindy.ai/",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "lindy-official",
+      "label": "Lindy official site",
+      "url": "https://www.lindy.ai/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "lindy-pricing",
+      "label": "Source",
+      "url": "https://www.lindy.ai/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "lindy-security",
+      "label": "Lindy security overview",
+      "url": "https://www.lindy.ai/security",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "llama-docs",
+      "label": "Llama model documentation",
+      "url": "https://www.llama.com/docs/model-cards-and-prompt-formats/",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "llama-downloads",
+      "label": "Llama downloads",
+      "url": "https://www.llama.com/llama-downloads/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "llama-meta-official",
+      "label": "Meta Llama official site",
+      "url": "https://ai.meta.com/llama/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "llama-official",
+      "label": "Llama 4 announcement (ai.meta.com)",
+      "url": "https://ai.meta.com/blog/llama-4-multimodal-intelligence/",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "llama-pricing",
+      "label": "Source",
+      "url": "https://www.together.ai/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "llama-repository",
+      "label": "Meta Llama GitHub repository",
+      "url": "https://github.com/meta-llama/llama-models",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "lm-studio-api-docs",
+      "label": "LM Studio local API docs",
+      "url": "https://lmstudio.ai/docs/app/api",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "lm-studio-docs",
+      "label": "LM Studio documentation",
+      "url": "https://lmstudio.ai/docs",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "lm-studio-github",
+      "label": "LM Studio GitHub organization",
+      "url": "https://github.com/lmstudio-ai",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "lm-studio-official",
+      "label": "LM Studio official site",
+      "url": "https://lmstudio.ai/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "logseq-blog",
+      "label": "Logseq blog",
+      "url": "https://blog.logseq.com/",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "low"
+    },
+    {
+      "id": "logseq-docs",
+      "label": "Logseq documentation",
+      "url": "https://docs.logseq.com/",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "logseq-official",
+      "label": "Logseq official site",
+      "url": "https://logseq.com/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "logseq-pricing",
+      "label": "Source",
+      "url": "https://logseq.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "logseq-repository",
+      "label": "Logseq GitHub repository",
+      "url": "https://github.com/logseq/logseq",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "lovable-docs",
+      "label": "Lovable docs",
+      "url": "https://docs.lovable.dev/",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "lovable-github",
+      "label": "Lovable GitHub integration",
+      "url": "https://docs.lovable.dev/integrations/github",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "lovable-official",
+      "label": "lovable.dev/pricing",
+      "url": "https://lovable.dev/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "lovable-supabase",
+      "label": "Lovable Supabase integration",
+      "url": "https://docs.lovable.dev/integrations/supabase",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "lovart-best-for",
+      "label": "lovart source",
+      "url": "https://www.lovart.ai",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "lovo-help",
+      "label": "LOVO help center",
+      "url": "https://help.lovo.ai/",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "lovo-official",
+      "label": "LOVO AI official site",
+      "url": "https://lovo.ai/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "lovo-pricing",
+      "label": "LOVO pricing",
+      "url": "https://lovo.ai/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "luma-official",
+      "label": "Luma Dream Machine product page",
+      "url": "https://lumalabs.ai/dream-machine",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "luma-pricing",
+      "label": "Source",
+      "url": "https://lumalabs.ai/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "magnific-official",
+      "label": "Magnific homepage",
+      "url": "https://www.magnific.com",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "magnific-pricing",
+      "label": "Source",
+      "url": "https://www.magnific.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "make-ai-agents",
+      "label": "Make AI Agents",
+      "url": "https://www.make.com/en/ai-agents",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "make-apps",
+      "label": "Make app integrations",
+      "url": "https://www.make.com/en/integrations",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "make-help",
+      "label": "Make Help Center",
+      "url": "https://www.make.com/en/help",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "make-pricing",
+      "label": "Source",
+      "url": "https://www.make.com/en/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "manus-pricing",
+      "label": "Source",
+      "url": "https://manus.im/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "marketmuse-competitive-analysis",
+      "label": "MarketMuse Competitive Analysis",
+      "url": "https://www.marketmuse.com/competitive-analysis/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "marketmuse-content-briefs",
+      "label": "MarketMuse Content Briefs",
+      "url": "https://www.marketmuse.com/content-briefs/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "marketmuse-inventory",
+      "label": "MarketMuse Inventory",
+      "url": "https://www.marketmuse.com/inventory/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "marketmuse-official",
+      "label": "MarketMuse Pricing",
+      "url": "https://www.marketmuse.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "mem-official",
+      "label": "Mem official site",
+      "url": "https://mem.ai/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "mem-pricing",
+      "label": "Mem pricing",
+      "url": "https://get.mem.ai/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "mem-product",
+      "label": "Mem product site",
+      "url": "https://get.mem.ai/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "meshy-pricing",
+      "label": "Source",
+      "url": "https://www.meshy.ai/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "midjourney-plans-docs",
+      "label": "Midjourney plan comparison docs",
+      "url": "https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "midjourney-terms",
+      "label": "Midjourney terms",
+      "url": "https://docs.midjourney.com/hc/en-us/articles/32083055291277-Terms-of-Service",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "midjourney-version-docs",
+      "label": "Midjourney version docs",
+      "url": "https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "minimax-official",
+      "label": "MiniMax official site",
+      "url": "https://www.minimax.io/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "minimax-pricing",
+      "label": "MiniMax platform pricing",
+      "url": "https://platform.minimax.io/docs/pricing/overview",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "minimax-speech-official",
+      "label": "MiniMax Audio product page",
+      "url": "https://www.minimax.io/audio",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "minimax-speech-pricing",
+      "label": "MiniMax Speech pricing docs",
+      "url": "https://platform.minimax.io/docs/guides/pricing-speech",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "mistral-chat",
+      "label": "Le Chat by Mistral AI",
+      "url": "https://chat.mistral.ai",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "mistral-huggingface",
+      "label": "Mistral AI Hugging Face organization",
+      "url": "https://huggingface.co/mistralai",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "mistral-model-docs",
+      "label": "Mistral AI model docs",
+      "url": "https://docs.mistral.ai/models/overview",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "trust_tier": "primary",
+      "last_checked": "2026-05-04",
+      "id": "mistral-models-docs",
+      "label": "Mistral model overview",
+      "url": "https://docs.mistral.ai/models/overview",
+      "type": "docs",
+      "volatility": "high"
+    },
+    {
+      "id": "mistral-pricing",
+      "label": "Mistral AI pricing",
+      "url": "https://mistral.ai/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "modal-official",
+      "label": "Modal pricing",
+      "url": "https://modal.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "morphic-pricing",
+      "label": "Source",
+      "url": "https://morphic.sh",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "mubert-faq",
+      "label": "Mubert FAQ",
+      "url": "https://mubert.com/render/faq",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-05-04"
+    },
+    {
+      "id": "mubert-official",
+      "label": "Mubert homepage",
+      "url": "https://mubert.com/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-05-04"
+    },
+    {
+      "id": "mubert-pricing",
+      "label": "Mubert pricing",
+      "url": "https://mubert.com/render/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-05-04"
+    },
+    {
+      "id": "murf-api",
+      "label": "Murf Voice API",
+      "url": "https://murf.ai/api",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "murf-enterprise",
+      "label": "Murf enterprise",
+      "url": "https://murf.ai/enterprise",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "murf-official",
+      "label": "Murf AI official site",
+      "url": "https://murf.ai/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "murf-pricing",
+      "label": "Murf pricing",
+      "url": "https://murf.ai/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "n8n-agent-docs",
+      "label": "n8n AI Agent node docs",
+      "url": "https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "n8n-docs",
+      "label": "n8n documentation",
+      "url": "https://docs.n8n.io",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "n8n-github",
+      "label": "n8n GitHub repository",
+      "url": "https://github.com/n8n-io/n8n",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "n8n-pricing",
+      "label": "n8n pricing",
+      "url": "https://n8n.io/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "nanochat-official",
+      "label": "nanochat GitHub repository",
+      "url": "https://github.com/karpathy/nanochat",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "nanochat-readme",
+      "label": "nanochat README",
+      "url": "https://github.com/karpathy/nanochat/blob/master/README.md",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "napkin-ai-official",
+      "label": "Napkin AI pricing",
+      "url": "https://www.napkin.ai/pricing/",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "neuronwriter-features",
+      "label": "NeuronWriter features",
+      "url": "https://neuronwriter.com/features/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "neuronwriter-official",
+      "label": "NeuronWriter pricing",
+      "url": "https://neuronwriter.com/pricing-neuron/",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "nightcafe-pricing",
+      "label": "Source",
+      "url": "https://creator.nightcafe.studio/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "notebooklm-help",
+      "label": "NotebookLM Help",
+      "url": "https://support.google.com/notebooklm/",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "notebooklm-official",
+      "label": "Google NotebookLM official app",
+      "url": "https://notebooklm.google.com",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "notebooklm-pricing",
+      "label": "Google NotebookLM official app",
+      "url": "https://notebooklm.google.com",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "notion-ai",
+      "label": "Notion AI product page",
+      "url": "https://www.notion.so/product/ai",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "notion-help",
+      "label": "Notion help",
+      "url": "https://www.notion.so/help",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "notion-pricing",
+      "label": "Notion pricing",
+      "url": "https://www.notion.so/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "obsidian-help",
+      "label": "Obsidian Help",
+      "url": "https://help.obsidian.md/",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "obsidian-plugins",
+      "label": "Obsidian community plugins",
+      "url": "https://obsidian.md/plugins",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "obsidian-pricing",
+      "label": "Source",
+      "url": "https://obsidian.md/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "ollama-official",
+      "label": "Groq",
+      "url": "https://groq.com",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "ollama-pricing",
+      "label": "independent benchmarks",
+      "url": "https://pooya.blog/blog/local-ai-ollama-benchmarks-cost-2026/",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "omniseo-official",
+      "label": "OmniSEO homepage",
+      "url": "https://omniseo.com",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "omniseo-pricing",
+      "label": "Source",
+      "url": "https://omniseo.com/pricing/",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "open-webui-official",
+      "label": "openwebui.com",
+      "url": "https://openwebui.com",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "trust_tier": "primary",
+      "last_checked": "2026-05-04",
+      "id": "openai-api-pricing",
+      "label": "OpenAI API pricing",
+      "url": "https://openai.com/api/pricing/",
+      "type": "pricing",
+      "volatility": "high"
+    },
+    {
+      "id": "openai-chatgpt-pricing",
+      "label": "ChatGPT pricing",
+      "url": "https://openai.com/chatgpt/pricing/",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "openai-enterprise-privacy",
+      "label": "OpenAI enterprise privacy",
+      "url": "https://openai.com/enterprise-privacy/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "trust_tier": "primary",
+      "last_checked": "2026-05-04",
+      "id": "openai-image-generation-docs",
+      "label": "OpenAI image generation docs",
+      "url": "https://platform.openai.com/docs/guides/image-generation",
+      "type": "docs",
+      "volatility": "high"
+    },
+    {
+      "id": "openai-model-docs",
+      "label": "OpenAI model docs",
+      "url": "https://platform.openai.com/docs/models",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "openai-pricing",
+      "label": "OpenAI pricing",
+      "url": "https://openai.com/api/pricing/",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "openclaw-official",
+      "label": "openclaw/openclaw GitHub",
+      "url": "https://github.com/openclaw/openclaw",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "openhands-official",
+      "label": "OpenHands documentation",
+      "url": "https://docs.openhands.dev/",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "openhands-pricing",
+      "label": "OpenHands pricing",
+      "url": "https://openhands.dev/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "openrouter-official",
+      "label": "OpenRouter pricing",
+      "url": "https://openrouter.ai/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "opusclip-pricing",
+      "label": "Source",
+      "url": "https://www.opus.pro/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "otter-ai-pricing",
+      "label": "Source",
+      "url": "https://otter.ai/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "otter-otterpilot",
+      "label": "OtterPilot overview",
+      "url": "https://otter.ai/otterpilot",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "perplexity-docs",
+      "label": "Perplexity API documentation",
+      "url": "https://docs.perplexity.ai/",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "perplexity-enterprise-pricing",
+      "label": "Perplexity Enterprise pricing",
+      "url": "https://www.perplexity.ai/enterprise/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "perplexity-pricing",
+      "label": "Perplexity pricing",
+      "url": "https://www.perplexity.ai/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "perplexity-pro-pricing",
+      "label": "Perplexity Pro pricing",
+      "url": "https://www.perplexity.ai/pro",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "phind-official",
+      "label": "Phind shutdown discussion",
+      "url": "https://news.ycombinator.com/item?id=46594533",
+      "type": "third_party",
+      "trust_tier": "secondary",
+      "volatility": "low"
+    },
+    {
+      "id": "phind-shutdown-hn",
+      "label": "Phind shutdown discussion",
+      "url": "https://news.ycombinator.com/item?id=46594533",
+      "type": "third_party",
+      "trust_tier": "secondary",
+      "volatility": "low"
+    },
+    {
+      "id": "pieces-core-dependencies",
+      "label": "Pieces core dependencies docs",
+      "url": "https://docs.pieces.app/products/core-dependencies",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-05-04"
+    },
+    {
+      "id": "pieces-official",
+      "label": "Pieces paid plans docs",
+      "url": "https://docs.pieces.app/products/paid-plans",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-05-04"
+    },
+    {
+      "id": "pika-official",
+      "label": "Pika official site",
+      "url": "https://pika.art",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "pika-pricing",
+      "label": "Pika pricing",
+      "url": "https://pika.art/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "pinecone-official",
+      "label": "Pinecone pricing",
+      "url": "https://www.pinecone.io/pricing/",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "pipedream-pricing",
+      "label": "Source",
+      "url": "https://pipedream.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "pitch-ai",
+      "label": "Pitch AI",
+      "url": "https://pitch.com/ai-presentation-maker",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "pitch-features",
+      "label": "Pitch features",
+      "url": "https://pitch.com/features",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "pitch-official",
+      "label": "Pitch pricing",
+      "url": "https://pitch.com/pricing/us",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "pixverse-official",
+      "label": "platform.pixverse.ai",
+      "url": "https://platform.pixverse.ai",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "pixverse-pricing",
+      "label": "Source",
+      "url": "https://www.imagine.art/blogs/pixverse-ai-pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "playground-ai-pricing",
+      "label": "Source",
+      "url": "https://playground.com/design/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "poe-about",
+      "label": "Poe about page",
+      "url": "https://poe.com/about",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "poe-api-docs",
+      "label": "Poe API docs",
+      "url": "https://poe.com/api_docs",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "poe-creator-docs",
+      "label": "Poe creator docs",
+      "url": "https://creator.poe.com/docs/server-bots/quick-start",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "poe-product",
+      "label": "Poe product site",
+      "url": "https://poe.com",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "presentations-ai-official",
+      "label": "Presentations.AI official site",
+      "url": "https://www.presentations.ai",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "presentations-ai-pricing",
+      "label": "Presentations.AI pricing",
+      "url": "https://www.presentations.ai/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "prezi-official",
+      "label": "Prezi homepage",
+      "url": "https://prezi.com/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "prezi-pricing",
+      "label": "Source",
+      "url": "https://prezi.com/pricing/",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "qdrant-best-for",
+      "label": "qdrant source",
+      "url": "https://qdrant.tech/documentation/",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "qdrant-best-paid-tier",
+      "label": "Qdrant Cloud billing",
+      "url": "https://qdrant.tech/documentation/cloud-pricing-payments/",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "qodo-best-for",
+      "label": "Qodo Git Integration docs",
+      "url": "https://docs.qodo.ai/v1/qodo-merge",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "qodo-best-paid-tier",
+      "label": "Qodo pricing",
+      "url": "https://www.qodo.ai/pricing/",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "quillbot-premium",
+      "label": "QuillBot Premium feature page",
+      "url": "https://quillbot.com/premium",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "quillbot-pricing",
+      "label": "Source",
+      "url": "https://quillbot.com/upgrade",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "qwen-blog",
+      "label": "Qwen3 blog",
+      "url": "https://qwenlm.github.io/blog/qwen3/",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "qwen-official",
+      "label": "Qwen official site",
+      "url": "https://qwen.ai/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "qwen-pricing",
+      "label": "Alibaba Cloud Model Studio pricing",
+      "url": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "read-ai-official",
+      "label": "Read AI plans and pricing",
+      "url": "https://www.read.ai/plans-pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "readwise-pricing",
+      "label": "Readwise pricing",
+      "url": "https://readwise.io/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "readwise-reader",
+      "label": "Readwise Reader official site",
+      "url": "https://readwise.io/read",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "recraft-pricing",
+      "label": "Source",
+      "url": "https://www.recraft.ai/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "reflect-official",
+      "label": "Reflect homepage",
+      "url": "https://reflect.app/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-05-04"
+    },
+    {
+      "id": "reflect-pricing",
+      "label": "Reflect homepage",
+      "url": "https://reflect.app/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-05-04"
+    },
+    {
+      "id": "reka-pricing",
+      "label": "Source",
+      "url": "https://docs.reka.ai/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "relevance-ai-official",
+      "label": "Relevance AI pricing page",
+      "url": "https://relevanceai.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "replicate-custom-models",
+      "label": "Replicate custom model deployment docs",
+      "url": "https://replicate.com/docs/guides/deploy-a-custom-model",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "replicate-docs",
+      "label": "Replicate documentation",
+      "url": "https://replicate.com/docs",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "replicate-official",
+      "label": "Replicate official models",
+      "url": "https://replicate.com/docs/topics/models/official-models",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "replicate-pricing",
+      "label": "Replicate pricing",
+      "url": "https://replicate.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "replit-agent-docs",
+      "label": "Replit Agent docs",
+      "url": "https://docs.replit.com/core-concepts/agent",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "replit-ai-billing",
+      "label": "Replit AI billing docs",
+      "url": "https://docs.replit.com/billing/ai-billing",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "replit-effort-pricing",
+      "label": "Replit effort-based pricing",
+      "url": "https://blog.replit.com/effort-based-pricing",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "replit-pricing",
+      "label": "Replit pricing",
+      "url": "https://replit.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "replit-pro-plan",
+      "label": "Replit Pro plan announcement",
+      "url": "https://blog.replit.com/pro-plan",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "trust_tier": "primary",
+      "last_checked": "2026-05-04",
+      "id": "resemble-ai-docs",
+      "label": "Resemble AI docs",
+      "url": "https://docs.resemble.ai/welcome",
+      "type": "docs",
+      "volatility": "medium"
+    },
+    {
+      "id": "resemble-ai-official",
+      "label": "Resemble AI homepage",
+      "url": "https://www.resemble.ai/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "resemble-ai-pricing",
+      "label": "Source",
+      "url": "https://www.resemble.ai/pricing/",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "retell-ai-best-for",
+      "label": "Retell AI pricing",
+      "url": "https://www.retellai.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "riverside-pricing",
+      "label": "Source",
+      "url": "https://riverside.fm/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "rodin-pricing",
+      "label": "Source",
+      "url": "https://hyper3d.ai/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "rork-best-for",
+      "label": "Rork technical FAQ",
+      "url": "https://docs.rork.com/faq/technical",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "rork-best-paid-tier",
+      "label": "Rork subscription docs",
+      "url": "https://docs.rork.com/introduction/subscriptions",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "rork-coding-agent",
+      "label": "Rork docs",
+      "url": "https://docs.rork.com/",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "rows-ai",
+      "label": "Rows AI Analyst",
+      "url": "https://rows.com/ai",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "rows-docs",
+      "label": "Rows docs",
+      "url": "https://rows.com/docs",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "rows-official",
+      "label": "Rows official site",
+      "url": "https://rows.com/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "rows-pricing",
+      "label": "Rows pricing",
+      "url": "https://rows.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "runway-help",
+      "label": "Runway help center",
+      "url": "https://help.runwayml.com/",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "runway-pricing",
+      "label": "Runway pricing",
+      "url": "https://runwayml.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "runway-research",
+      "label": "Runway research",
+      "url": "https://runwayml.com/research/introducing-runway-gwm-1",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "rytr-official",
+      "label": "Rytr official site",
+      "url": "https://rytr.me/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "rytr-pricing",
+      "label": "Rytr pricing",
+      "url": "https://rytr.me/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "same-dev-official",
+      "label": "Framer AI",
+      "url": "https://framer.com",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "same-dev-pricing",
+      "label": "Source",
+      "url": "https://docs.same.new/usage/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "scite-official",
+      "label": "scite.ai",
+      "url": "https://scite.ai",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "scite-pricing",
+      "label": "Source",
+      "url": "https://scite.ai/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "trust_tier": "primary",
+      "last_checked": "2026-05-04",
+      "id": "seedance-byteplus-modelark",
+      "label": "BytePlus ModelArk",
+      "url": "https://www.byteplus.com/en/product/modelark",
+      "type": "official",
+      "volatility": "high"
+    },
+    {
+      "id": "seedance-official",
+      "label": "Seedance homepage",
+      "url": "https://www.seedance.ai/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "seedance-pricing",
+      "label": "Seedance pricing",
+      "url": "https://www.seedance.ai/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "trust_tier": "primary",
+      "last_checked": "2026-05-04",
+      "id": "semantic-scholar-api",
+      "label": "Semantic Scholar API",
+      "url": "https://www.semanticscholar.org/product/api",
+      "type": "docs",
+      "volatility": "medium"
+    },
+    {
+      "trust_tier": "primary",
+      "last_checked": "2026-05-04",
+      "id": "semantic-scholar-official",
+      "label": "Semantic Scholar homepage",
+      "url": "https://www.semanticscholar.org/",
+      "type": "official",
+      "volatility": "medium"
+    },
+    {
+      "id": "semantic-scholar-pricing",
+      "label": "Semantic Scholar homepage",
+      "url": "https://www.semanticscholar.org/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "semrush-features",
+      "label": "Semrush features",
+      "url": "https://www.semrush.com/features/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "semrush-pricing",
+      "label": "Source",
+      "url": "https://www.semrush.com/pricing/",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "speechify-pricing",
+      "label": "Source",
+      "url": "https://speechify.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "spellbook-official",
+      "label": "GPT-5",
+      "url": "https://www.spellbook.legal",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "spellbook-pricing",
+      "label": "Source",
+      "url": "https://www.hyperstart.com/blog/spellbook-pricing/",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "trust_tier": "primary",
+      "last_checked": "2026-05-04",
+      "id": "stability-docs",
+      "label": "Stability AI platform docs",
+      "url": "https://platform.stability.ai/docs",
+      "type": "docs",
+      "volatility": "medium"
+    },
+    {
+      "trust_tier": "primary",
+      "last_checked": "2026-05-04",
+      "id": "stability-stable-image",
+      "label": "Stability AI Stable Image",
+      "url": "https://stability.ai/stable-image",
+      "type": "official",
+      "volatility": "high"
+    },
+    {
+      "id": "stable-audio-pricing",
+      "label": "Source",
+      "url": "https://stableaudio.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "stable-diffusion-official",
+      "label": "Stability AI news",
+      "url": "https://stability.ai/news-updates",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "stable-diffusion-pricing",
+      "label": "Source",
+      "url": "https://platform.stability.ai/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "stackblitz-webcontainers",
+      "label": "StackBlitz WebContainers",
+      "url": "https://webcontainers.io/",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "sudowrite-model-routing",
+      "label": "Sudowrite model routing documentation",
+      "url": "https://docs.sudowrite.com/using-sudowrite/1ow1qkGqof9rtcyGnrWUBS/which-ai-model-should-i-use/veMq9xRH6KLCQPFm5XkQx7",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "sudowrite-muse",
+      "label": "Sudowrite Muse overview",
+      "url": "https://sudowrite.framer.website/muse",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "sudowrite-pricing",
+      "label": "Source",
+      "url": "https://sudowrite.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "suno-model-timeline",
+      "label": "Suno model timeline",
+      "url": "https://help.suno.com/en/articles/5782721",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "suno-pricing",
+      "label": "Suno pricing",
+      "url": "https://suno.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "suno-studio",
+      "label": "Suno Studio announcement",
+      "url": "https://suno.com/blog/suno-studio",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "suno-v55",
+      "label": "Suno v5.5 announcement",
+      "url": "https://suno.com/blog/v5-5",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "supermaven-official",
+      "label": "Supermaven official site",
+      "url": "https://supermaven.com/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "supermaven-pricing",
+      "label": "Supermaven pricing",
+      "url": "https://supermaven.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "surfer-changelog",
+      "label": "Surfer SEO changelog",
+      "url": "https://surferseo.com/changelog",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "surfer-official",
+      "label": "Surfer SEO official site",
+      "url": "https://surferseo.com",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "surfer-seo-pricing",
+      "label": "Source",
+      "url": "https://surferseo.com/pricing/",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "synthesia-help",
+      "label": "Synthesia help center",
+      "url": "https://help.synthesia.io",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "synthesia-pricing",
+      "label": "Synthesia pricing",
+      "url": "https://www.synthesia.io/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "synthesia-product",
+      "label": "Synthesia product page",
+      "url": "https://www.synthesia.io",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "tabnine-docs",
+      "label": "Tabnine docs",
+      "url": "https://docs.tabnine.com/main/welcome/readme",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "tabnine-official",
+      "label": "Tabnine official site",
+      "url": "https://www.tabnine.com/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "tabnine-pricing",
+      "label": "Tabnine pricing",
+      "url": "https://www.tabnine.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "tabnine-privacy",
+      "label": "Tabnine code privacy",
+      "url": "https://www.tabnine.com/code-privacy",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "tactiq-pricing",
+      "label": "Source",
+      "url": "https://tactiq.io/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "taskade-official",
+      "label": "Taskade Official Site",
+      "url": "https://www.taskade.com",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "taskade-pricing",
+      "label": "Source",
+      "url": "https://www.taskade.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "tavus-pricing",
+      "label": "Source",
+      "url": "https://www.tavus.io/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "tines-pricing",
+      "label": "Source",
+      "url": "https://www.tines.com/pricing/",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "tome-official",
+      "label": "VentureBeat on Tome discontinuation",
+      "url": "https://venturebeat.com/technology/tomes-founders-ditch-viral-presentation-app-with-20m-users-to-build-ai",
+      "type": "third_party",
+      "trust_tier": "secondary",
+      "volatility": "medium"
+    },
+    {
+      "trust_tier": "secondary",
+      "last_checked": "2026-05-04",
+      "id": "tome-venturebeat-discontinued",
+      "label": "VentureBeat on Tome discontinuation",
+      "url": "https://venturebeat.com/technology/tomes-founders-ditch-viral-presentation-app-with-20m-users-to-build-ai",
+      "type": "third_party",
+      "volatility": "low"
+    },
+    {
+      "id": "trae-pricing",
+      "label": "Source",
+      "url": "https://www.trae.ai/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "tripo3d-pricing",
+      "label": "Source",
+      "url": "https://www.tripo3d.ai/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "typeface-official",
+      "label": "Typeface's own platform page",
+      "url": "https://www.typeface.ai/platform",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "typeface-pricing",
+      "label": "Source",
+      "url": "https://www.typeface.ai",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "typingmind-official",
+      "label": "typingmind.com/buy",
+      "url": "https://www.typingmind.com/buy",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "udio-pricing",
+      "label": "Udio pricing",
+      "url": "https://www.udio.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "udio-product",
+      "label": "Udio product site",
+      "url": "https://www.udio.com/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "uizard-pricing",
+      "label": "Source",
+      "url": "https://uizard.io/pricing/",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "unbounce-pricing",
+      "label": "Source",
+      "url": "https://unbounce.com/pricing/",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "v0-changelog",
+      "label": "v0 changelog",
+      "url": "https://v0.app/changelog",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "v0-docs",
+      "label": "v0 documentation",
+      "url": "https://v0.app/docs",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "v0-official",
+      "label": "v0.app/pricing",
+      "url": "https://v0.app/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "v0-pricing-blog",
+      "label": "Vercel updated v0 pricing announcement",
+      "url": "https://vercel.com/blog/updated-v0-pricing",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "trust_tier": "primary",
+      "last_checked": "2026-05-04",
+      "id": "val-town-docs",
+      "label": "Val Town docs",
+      "url": "https://docs.val.town/",
+      "type": "docs",
+      "volatility": "medium"
+    },
+    {
+      "trust_tier": "primary",
+      "last_checked": "2026-05-04",
+      "id": "val-town-official",
+      "label": "Val Town homepage",
+      "url": "https://www.val.town/",
+      "type": "official",
+      "volatility": "medium"
+    },
+    {
+      "id": "val-town-pricing",
+      "label": "Source",
+      "url": "https://www.val.town/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "veo-official",
+      "label": "Google DeepMind Veo page",
+      "url": "https://deepmind.google/technologies/veo/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "veo-pricing",
+      "label": "Source",
+      "url": "https://one.google.com/about/google-ai-plans/",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "vidu-official",
+      "label": "Vidu pricing page",
+      "url": "https://www.vidu.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "voiceflow-pricing",
+      "label": "Source",
+      "url": "https://www.voiceflow.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "trust_tier": "primary",
+      "last_checked": "2026-05-04",
+      "id": "voxtral-docs",
+      "label": "Mistral audio docs",
+      "url": "https://docs.mistral.ai/studio-api/audio/speech_to_text",
+      "type": "docs",
+      "volatility": "high"
+    },
+    {
+      "id": "voxtral-pricing",
+      "label": "Mistral Voxtral launch",
+      "url": "https://mistral.ai/news/voxtral",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "wan-pricing",
+      "label": "Source",
+      "url": "https://wan.video",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "weaviate-best-for",
+      "label": "weaviate source",
+      "url": "https://weaviate.io/developers/weaviate",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "weaviate-best-paid-tier",
+      "label": "Weaviate pricing",
+      "url": "https://weaviate.io/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "wellsaid-docs",
+      "label": "WellSaid API docs",
+      "url": "https://docs.wellsaidlabs.com/",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "wellsaid-enterprise",
+      "label": "WellSaid enterprise",
+      "url": "https://wellsaidlabs.com/enterprise",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "wellsaid-official",
+      "label": "WellSaid official site",
+      "url": "https://wellsaidlabs.com/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "wellsaid-pricing",
+      "label": "WellSaid pricing",
+      "url": "https://wellsaidlabs.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "whisper-official",
+      "label": "AssemblyAI",
+      "url": "https://www.assemblyai.com",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "whisper-pricing",
+      "label": "Source",
+      "url": "https://developers.openai.com/api/docs/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "windsurf-docs",
+      "label": "Windsurf docs",
+      "url": "https://docs.windsurf.com/",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "windsurf-official",
+      "label": "Windsurf official site",
+      "url": "https://windsurf.com/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "windsurf-pricing",
+      "label": "Windsurf pricing",
+      "url": "https://windsurf.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "windsurf-pricing-blog",
+      "label": "Windsurf pricing plans blog",
+      "url": "https://windsurf.com/blog/windsurf-pricing-plans",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "wispr-flow-best-for",
+      "label": "Wispr Flow pricing",
+      "url": "https://wisprflow.ai/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "wordtune-plan-docs",
+      "label": "Wordtune plan documentation",
+      "url": "https://support.wordtune.com/en/articles/8262930-wordtune-s-plans-pricing",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "wordtune-pricing",
+      "label": "Source",
+      "url": "https://wordtune.com/plans",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "workato-pricing",
+      "label": "Source",
+      "url": "https://www.workato.com",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "writer-official",
+      "label": "Writer homepage",
+      "url": "https://writer.com/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-05-04"
+    },
+    {
+      "id": "writer-palmyra",
+      "label": "Writer Palmyra LLMs",
+      "url": "https://writer.com/llms/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-05-04"
+    },
+    {
+      "id": "writer-platform",
+      "label": "Writer platform",
+      "url": "https://writer.com/platform/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-05-04"
+    },
+    {
+      "id": "writer-pricing",
+      "label": "Writer plans",
+      "url": "https://writer.com/plans/",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-05-04"
+    },
+    {
+      "id": "writesonic-docs",
+      "label": "Writesonic docs",
+      "url": "https://docs.writesonic.com/",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "writesonic-official",
+      "label": "Writesonic official site",
+      "url": "https://writesonic.com/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "writesonic-pricing",
+      "label": "Writesonic pricing",
+      "url": "https://writesonic.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "x-premium-help",
+      "label": "X Premium help",
+      "url": "https://help.x.com/en/using-x/x-premium",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "xai-docs",
+      "label": "xAI documentation",
+      "url": "https://docs.x.ai/",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "xai-grok-product",
+      "label": "xAI Grok product page",
+      "url": "https://x.ai/grok",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "xai-pricing",
+      "label": "xAI API pricing",
+      "url": "https://docs.x.ai/docs/models",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "yi-official",
+      "label": "01.AI Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/01.AI",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "trust_tier": "primary",
+      "last_checked": "2026-05-04",
+      "id": "you-com-docs",
+      "label": "You.com API docs",
+      "url": "https://you.com/docs/welcome",
+      "type": "docs",
+      "volatility": "medium"
+    },
+    {
+      "id": "you-com-official",
+      "label": "You.com pricing",
+      "url": "https://you.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "zapier-agents-guide",
+      "label": "Zapier Agents guide",
+      "url": "https://zapier.com/blog/zapier-agents-guide/",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "zapier-ai",
+      "label": "Zapier AI",
+      "url": "https://zapier.com/ai",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "zapier-apps",
+      "label": "Zapier apps directory",
+      "url": "https://zapier.com/apps",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "zapier-pricing",
+      "label": "Zapier pricing",
+      "url": "https://zapier.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "zed-pricing",
+      "label": "Source",
+      "url": "https://zed.dev/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    }
+  ]
+}

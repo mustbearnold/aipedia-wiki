@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "Free (open-weight, non-commercial) / $0.016/1K chars API"
 status: active
 launched: 2026-03
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-04
+last_verified: 2026-05-04
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -24,6 +24,52 @@ scores:
   value: 10
   moat: 6
   longevity: 8
+facts:
+  model_family:
+    value: "Mistral Voxtral is an open audio model family for speech understanding and transcription workflows, positioned through Mistral docs and launch material."
+    source: "https://mistral.ai/news/voxtral"
+    source_label: "Mistral Voxtral launch"
+    source_id: voxtral-pricing
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
+  api_available:
+    value: "Yes — Mistral docs document speech-to-text/audio APIs for the hosted developer workflow."
+    source: "https://docs.mistral.ai/studio-api/audio/speech_to_text"
+    source_label: "Mistral audio docs"
+    source_id: voxtral-docs
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
+  pricing_anchor:
+    value: "Hosted audio pricing should be checked against current Mistral/La Plateforme model pricing before production rollout."
+    source: "https://docs.mistral.ai/models/overview"
+    source_label: "Mistral model overview"
+    source_id: mistral-models-docs
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: medium
+  best_for:
+    value: "Teams evaluating open-weight or Mistral-native speech transcription and audio-understanding pipelines rather than polished creator voiceover tools."
+    source: "https://docs.mistral.ai/studio-api/audio/speech_to_text"
+    source_label: "Mistral audio docs"
+    source_id: voxtral-docs
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
+  watch_out_for:
+    value: "Separate Voxtral from full voice platforms: it is a speech/audio model surface, not an end-to-end dubbing, voice cloning, or call-center suite."
+    source: "https://mistral.ai/news/voxtral"
+    source_label: "Mistral Voxtral launch"
+    source_id: voxtral-pricing
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
 tags: [text-to-speech, tts, stt, speech-to-text, open-weight, api, voice-generation, mistral, multilingual]
 seo_title: "Voxtral (Mistral AI): Features, Pricing & Review (April 2026)"
 meta_description: "Voxtral is Mistral AI's 4B open-weight TTS + STT model launched March 26, 2026. 9 languages, 70ms latency, $0.016/1K chars via API. Weights CC BY-NC 4.0 on Hugging Face."
@@ -44,10 +90,16 @@ price_history:
   - date: 2026-03-26
     plan: "API launch"
     price: "$0.016/1K chars"
+    source: "https://mistral.ai/news/voxtral"
+    source_label: "Source"
+    source_id: voxtral-pricing
     note: "Voxtral TTS shipped alongside open weights on Hugging Face"
   - date: 2026-04-15
     plan: "API"
     price: "$0.016/1K chars"
+    source: "https://mistral.ai/news/voxtral"
+    source_label: "Source"
+    source_id: voxtral-pricing
     note: "Verified unchanged"
 ---
 

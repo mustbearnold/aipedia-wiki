@@ -11,8 +11,8 @@ pricing_model: open-source
 price_range: "Free (MIT license; BYOK API costs)"
 status: active
 launched: 2026-02
-last_updated: 2026-05-03
-last_verified: 2026-05-03
+last_updated: 2026-05-04
+last_verified: 2026-05-04
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -25,6 +25,55 @@ scores:
   value: 10
   moat: 4
   longevity: 7
+facts:
+  best_for:
+    value: Best for builders who want an open-source personal/ops agent with persistent memory, skills, scheduled jobs, and
+      messaging integrations rather than a single hosted SaaS assistant.
+    source: https://hermes-agent.nousresearch.com/
+    source_label: Hermes Agent official site
+    source_id: hermes-agent-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  pricing_anchor:
+    value: Hermes Agent is published as open-source software; real cost depends on the LLM/API providers, hosting, and messaging
+      services connected to it.
+    source: https://github.com/NousResearch/hermes-agent
+    source_label: Hermes Agent GitHub repository
+    source_id: hermes-agent-repository
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  open_source_or_local:
+    value: The repository is public and designed for self-hosted or user-controlled agent operation.
+    source: https://github.com/NousResearch/hermes-agent
+    source_label: Hermes Agent GitHub repository
+    source_id: hermes-agent-repository
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  api_available:
+    value: Docs cover the setup and extension path for an agent runtime, including tools, skills, scheduling, and provider configuration.
+    source: https://hermes-agent.nousresearch.com/docs
+    source_label: Hermes Agent docs
+    source_id: hermes-agent-docs
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  watch_out_for:
+    value: 'Hermes Agent is powerful but operator-owned: buyers need comfort managing providers, credentials, tool permissions,
+      and long-running agent behavior.'
+    source: https://hermes-agent.nousresearch.com/docs
+    source_label: Hermes Agent docs
+    source_id: hermes-agent-docs
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
 tags: [open-source, self-hosted, persistent-memory, auto-skills, multi-platform, telegram, discord, slack, whatsapp, signal, nous-research, mit-license]
 seo_title: "Hermes Agent: Features, Review & Pricing (April 2026)"
 meta_description: "Hermes Agent is Nous Research's MIT-licensed autonomous AI agent. Persistent memory, auto-generated skills, natural language cron, and Telegram/Discord/Slack/WhatsApp/Signal/CLI from one process. Free; bring your own API key."
@@ -44,10 +93,16 @@ price_history:
   - date: 2026-02-15
     plan: "Open-source"
     price: "Free"
+    source: "https://hermes-agent.nousresearch.com/"
+    source_label: "Source"
+    source_id: hermes-agent-pricing
     note: "Public release under MIT license from Nous Research."
   - date: 2026-04-17
     plan: "Open-source"
     price: "Free"
+    source: "https://hermes-agent.nousresearch.com/"
+    source_label: "Source"
+    source_id: hermes-agent-pricing
     note: "Verified unchanged. Self-hosted only; API costs are BYOK."
 ---
 

@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0 free / $14-$35/user/month"
 status: active
 launched: 2024-05
-last_updated: 2026-04-18
-last_verified: 2026-04-18
+last_updated: 2026-05-04
+last_verified: 2026-05-04
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -24,6 +24,57 @@ scores:
   value: 9
   moat: 7
   longevity: 8
+facts:
+  best_for:
+    value: Best for professionals who want an AI meeting notepad that augments personal notes instead of replacing them with
+      a fully automated meeting bot.
+    source: https://www.granola.ai/
+    source_label: Granola official site
+    source_id: granola-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  pricing_anchor:
+    value: Granola pricing has free and paid team packaging; verify current meeting limits, collaboration features, admin controls,
+      and annual/monthly plan terms.
+    source: https://www.granola.ai/pricing
+    source_label: Granola pricing
+    source_id: granola-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  workflow_surface:
+    value: Granola is optimized for back-to-back meeting notes and summaries, not broad voice transcription APIs or project-management
+      automation.
+    source: https://www.granola.ai/
+    source_label: Granola official site
+    source_id: granola-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  privacy_security:
+    value: Security review should cover recording behavior, transcript handling, calendar integrations, retention, and enterprise
+      controls.
+    source: https://www.granola.ai/security
+    source_label: Granola security
+    source_id: granola-security
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  watch_out_for:
+    value: Granola works best when users actively take notes; teams wanting fully automated CRM follow-up or call-center analytics
+      may need a different meeting-intelligence stack.
+    source: https://www.granola.ai/
+    source_label: Granola official site
+    source_id: granola-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
 tags: [meeting-notes, ai-summary, productivity, notion, hubspot, integrations, macos]
 seo_title: "Granola: Features, Pricing & Review (April 2026)"
 meta_description: "Granola is the AI notepad built for back-to-back meetings. Free tier unlimited summaries, 30-day history. Business $14/user/mo adds unlimited history + Notion, HubSpot, Slack, Zapier integrations."

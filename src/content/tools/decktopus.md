@@ -26,6 +26,48 @@ scores:
   value: 6
   moat: 5
   longevity: 6
+facts:
+  best_for:
+    value: "Small teams that want AI-assisted presentation drafts, slide structure, and lightweight editing without building a full design system."
+    source: "https://www.decktopus.com"
+    source_label: "Decktopus official site"
+    source_id: decktopus-official
+    verified_at: 2026-05-04
+    volatility: medium
+    confidence: high
+  workflow_surface:
+    value: "Decktopus fits prompt-to-deck workflows: generate an outline, pick a visual direction, revise slides, then export or share the deck."
+    source: "https://www.decktopus.com"
+    source_label: "Decktopus official site"
+    source_id: decktopus-official
+    verified_at: 2026-05-04
+    volatility: medium
+    confidence: high
+  pricing_anchor:
+    value: "Paid presentation product with individual and business plans listed on the vendor pricing page."
+    source: "https://www.decktopus.com/pricing"
+    source_label: "Decktopus pricing"
+    source_id: decktopus-pricing
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
+  export_surface:
+    value: "Best treated as a fast first-draft deck builder, then reviewed manually for brand voice, slide density, and executive-readiness."
+    source: "https://www.decktopus.com"
+    source_label: "Decktopus official site"
+    source_id: decktopus-official
+    verified_at: 2026-05-04
+    volatility: medium
+    confidence: medium
+  watch_out_for:
+    value: "Do not use it as the only design layer for high-stakes investor, sales, or brand decks; expect to edit structure, copy, and visual polish."
+    source: "https://www.decktopus.com"
+    source_label: "Decktopus official site"
+    source_id: decktopus-official
+    verified_at: 2026-05-04
+    volatility: medium
+    confidence: high
 tags: [presentations, slides, ai-generation, forms, speaker-notes, automation, prompt-to-deck]
 seo_title: 'Decktopus AI: Features, Pricing & Review (May 2026)'
 meta_description: >-
@@ -46,10 +88,16 @@ price_history:
   - date: 2026-05-02
     plan: "Pro"
     price: "$14.99/mo billed annually"
+    source: "https://www.decktopus.com/pricing"
+    source_label: "Source"
+    source_id: decktopus-pricing
     note: "9,000 AI credits/year, about 300 AI presentations/year, PDF export, AI assistance."
   - date: 2026-05-02
     plan: "Business"
     price: "$34.99/user/mo billed annually"
+    source: "https://www.decktopus.com/pricing"
+    source_label: "Source"
+    source_id: decktopus-pricing
     note: "12,000 AI credits/year, about 400 AI presentations/year for the organization, custom domain, slide analytics, webhook, team and organization features."
 ---
 

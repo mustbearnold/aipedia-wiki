@@ -60,6 +60,9 @@ affiliate_tracker.md
 # generated Pagefind search index 
 public/pagefind/ 
 
+# Hermes local plans and agent runtime artifacts
+.hermes/
+
 # Project Knowledge Graph runtime data
 .kg/project.db
 .kg/project.db-shm

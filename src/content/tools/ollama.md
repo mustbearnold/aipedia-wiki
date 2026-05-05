@@ -25,6 +25,33 @@ scores:
   value: 10
   moat: 8
   longevity: 9
+facts:
+  best_for:
+    value: "The default way to run open-weight LLMs locally. Free desktop runtime with OpenAI-compatible API, model library, and Ollama Cloud ($20-100/mo) for teams that want managed inference. Best for chat, research, assistant, and model-access workflows."
+    source: "https://groq.com"
+    source_label: "Groq"
+    source_id: ollama-official
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: medium
+  pricing_anchor:
+    value: "Pricing should be checked on the current Ollama source before purchase; AIpedia has not promoted this page to a full Tier 1 pricing profile yet"
+    source: "https://pooya.blog/blog/local-ai-ollama-benchmarks-cost-2026/"
+    source_label: "independent benchmarks"
+    source_id: ollama-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
+  watch_out_for:
+    value: "Non-Tier-1 canonical profile: verify current pricing, usage limits, data policy, and integration details before procurement"
+    source: "https://pooya.blog/blog/local-ai-ollama-benchmarks-cost-2026/"
+    source_label: "independent benchmarks"
+    source_id: ollama-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
 tags: [local-llm, open-source, inference, llm-runtime, privacy, self-hosted, developer, infrastructure]
 seo_title: "Ollama Review: Run Local LLMs, Pricing, Setup and LM Studio Comparison"
 meta_description: "Ollama runs open-weight LLMs locally with one command and an OpenAI-compatible API. Compare setup, hardware needs, Ollama Cloud pricing, LM Studio, and llama.cpp."

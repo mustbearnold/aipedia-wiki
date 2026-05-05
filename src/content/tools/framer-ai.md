@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$150/month+"
 status: active
 launched: 2013-01
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-04
+last_verified: 2026-05-04
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -24,6 +24,57 @@ scores:
   value: 8
   moat: 8
   longevity: 9
+facts:
+  best_for:
+    value: Best for designers and startups building polished marketing sites with no-code design, CMS, hosting, and AI-assisted
+      page generation.
+    source: https://www.framer.com/ai/
+    source_label: Framer AI
+    source_id: framer-ai
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  pricing_anchor:
+    value: Framer pricing depends on site, workspace, CMS, localization, bandwidth, and collaboration needs; verify both site
+      and workspace costs.
+    source: https://www.framer.com/pricing/
+    source_label: Framer pricing
+    source_id: framer-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  workflow_surface:
+    value: Framer AI accelerates website drafting inside Framer; it is not a general app builder or a replacement for production
+      engineering on complex web apps.
+    source: https://www.framer.com/ai/
+    source_label: Framer AI
+    source_id: framer-ai
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  integration_surface:
+    value: Implementation should review CMS, publishing, forms, analytics, localization, redirects, and domain/hosting behavior
+      in Framer help.
+    source: https://www.framer.com/help/
+    source_label: Framer help
+    source_id: framer-help
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  watch_out_for:
+    value: Framer shines for marketing sites, but teams should test SEO controls, CMS limits, handoff/export needs, and whether
+      design freedom creates maintenance debt.
+    source: https://www.framer.com/
+    source_label: Framer official site
+    source_id: framer-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
 tags: [ai-design, website-builder, no-code, framer, text-to-website, ai-generate, smart-components, seo, design-tools]
 seo_title: "Framer AI: Features, Pricing & Review (April 2026)"
 meta_description: "Framer is the AI-native website builder. Generate a full site from a text prompt, translate with one click, and ship production-grade responsive design. Plans from Free to Enterprise."
@@ -43,6 +94,9 @@ price_history:
   - date: 2026-04-17
     plan: "Basic"
     price: "$15/mo"
+    source: "https://framer.com/pricing"
+    source_label: "Source"
+    source_id: framer-ai-pricing
     note: "Site-level tier verified"
 ---
 

@@ -24,6 +24,48 @@ scores:
   value: 7
   moat: 8
   longevity: 8
+facts:
+  best_for:
+    value: "Clay is best for GTM teams that need data enrichment, prospect research, waterfalling across providers, and AI-assisted account/contact workflows in one spreadsheet-like workspace."
+    source: "https://www.clay.com"
+    source_label: "Clay overview"
+    source_id: clay-home
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  pricing_anchor:
+    value: "Clay pricing should be modeled around credits, enrichment providers, action volume, seats, and outbound workflow complexity, not just the base subscription."
+    source: "https://www.clay.com/pricing"
+    source_label: "Clay Pricing"
+    source_id: clay-official
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: high
+  integration_surface:
+    value: "Clay's integrations catalog is central to its value: teams can combine enrichment vendors, CRMs, and outbound tools without hand-building every data pipeline."
+    source: "https://www.clay.com/integrations"
+    source_label: "Clay integrations"
+    source_id: clay-integrations
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  learning_curve:
+    value: "Clay University exists because the product is powerful but workflow-heavy; implementation quality often determines whether Clay beats simpler prospecting tools."
+    source: "https://www.clay.com/university"
+    source_label: "Clay University"
+    source_id: clay-university
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  watch_out_for:
+    value: "The main risk is uncontrolled enrichment/action spend and brittle outbound logic; buyers should prototype one GTM workflow before rolling Clay across the revenue team."
+    source: "https://www.clay.com/pricing"
+    source_label: "Clay Pricing"
+    source_id: clay-official
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
 tags: [data-enrichment, sales-automation, lead-generation, gtm-automation, outreach]
 seo_title: "Clay: Features, Pricing & Review (April 2026)"
 meta_description: "Clay waterfalls 50+ data sources with Claygent AI research. New plans from March 2026 split credits into Data Credits + Actions. Launch $185/mo, Growth $495/mo. Legacy Starter/Explorer/Pro grandfathered."

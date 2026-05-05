@@ -24,6 +24,48 @@ scores:
   value: 6
   moat: 5
   longevity: 6
+facts:
+  best_for:
+    value: "MarketMuse is best for content teams doing topical authority planning, content inventory analysis, briefs, and prioritization across an existing site rather than simple single-page SEO scoring."
+    source: "https://www.marketmuse.com/inventory/"
+    source_label: "MarketMuse Inventory"
+    source_id: marketmuse-inventory
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  pricing_anchor:
+    value: "MarketMuse pricing should be checked against content inventory size, user count, brief volume, and whether the buyer needs strategy workflows beyond keyword optimization."
+    source: "https://www.marketmuse.com/pricing"
+    source_label: "MarketMuse Pricing"
+    source_id: marketmuse-official
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: high
+  content_briefs:
+    value: "MarketMuse Content Briefs are a core workflow for translating topic analysis into writer-ready outlines, questions, keywords, and internal-link guidance."
+    source: "https://www.marketmuse.com/content-briefs/"
+    source_label: "MarketMuse Content Briefs"
+    source_id: marketmuse-content-briefs
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  competitive_analysis:
+    value: "Competitive analysis is a key differentiator for teams deciding which topics require content updates, net-new pages, or deeper authority coverage."
+    source: "https://www.marketmuse.com/competitive-analysis/"
+    source_label: "MarketMuse Competitive Analysis"
+    source_id: marketmuse-competitive-analysis
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  watch_out_for:
+    value: "MarketMuse is most valuable when the team can operationalize briefs and inventory insights; small sites seeking lightweight keyword checks may find it heavier than needed."
+    source: "https://www.marketmuse.com/pricing"
+    source_label: "MarketMuse Pricing"
+    source_id: marketmuse-official
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
 tags: [seo, content-strategy, topical-authority, content-planning, ai-seo, content-audit, inventory]
 seo_title: "MarketMuse: Features, Pricing & Review (April 2026)"
 meta_description: "MarketMuse plans topical authority across a site. Free (10 queries/mo), Standard $149/mo, Team $399/mo, Premium from $999/mo. Full review for April 2026."

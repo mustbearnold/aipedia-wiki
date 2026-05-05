@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$10/month"
 status: active
 launched: 2023-10
-last_updated: 2026-05-03
-last_verified: 2026-05-03
+last_updated: 2026-05-04
+last_verified: 2026-05-04
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -24,6 +24,66 @@ scores:
   value: 9
   moat: 5
   longevity: 6
+facts:
+  best_for:
+    value: Best for developers who want very fast IDE autocomplete and long-context code awareness without adopting a full agentic
+      IDE.
+    source: https://supermaven.com/
+    source_label: Supermaven official site
+    source_id: supermaven-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  pricing_anchor:
+    value: Supermaven has a free tier and paid Pro/Team style plans; evaluate pricing by autocomplete, chat credit, and team
+      requirements.
+    source: https://supermaven.com/pricing
+    source_label: Supermaven pricing
+    source_id: supermaven-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  coding_agent:
+    value: Supermaven is primarily an AI code completion and assistant product, not a broad autonomous coding-agent platform.
+    source: https://supermaven.com/
+    source_label: Supermaven official site
+    source_id: supermaven-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  context_window:
+    value: The public positioning emphasizes long-context code completion, but buyers should verify current context claims against
+      the live product before relying on exact limits.
+    source: https://supermaven.com/
+    source_label: Supermaven official site
+    source_id: supermaven-official
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  enterprise_controls:
+    value: Enterprise buyers should review the pricing page for team and company controls instead of assuming consumer Pro features
+      are enough.
+    source: https://supermaven.com/pricing
+    source_label: Supermaven pricing
+    source_id: supermaven-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  watch_out_for:
+    value: Supermaven is a focused speed/autocomplete choice; teams wanting full repository agents, issue automation, or managed
+      coding workflows should compare Windsurf, Cursor, Claude Code, or Codex.
+    source: https://supermaven.com/
+    source_label: Supermaven official site
+    source_id: supermaven-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
 tags: [autocomplete, ai-coding, context-window, fast, vscode, jetbrains, neovim, babble]
 seo_title: "Supermaven: Features, Pricing & Review (April 2026)"
 meta_description: "Supermaven ships the fastest AI autocomplete in the category. Babble model runs a 1M-token context window at sub-250ms latency. Free tier plus Pro at $10/month. No chat, no agent."
@@ -44,10 +104,16 @@ price_history:
   - date: 2026-04-15
     plan: "Pro"
     price: "$10/mo"
+    source: "https://supermaven.com/pricing"
+    source_label: "Source"
+    source_id: supermaven-pricing
     note: "Verified unchanged. $5/month in chat credits included."
   - date: 2025-09-01
     plan: "Free"
     price: "$0"
+    source: "https://supermaven.com/pricing"
+    source_label: "Source"
+    source_id: supermaven-pricing
     note: "Free tier now includes 1M-token Babble context."
 ---
 

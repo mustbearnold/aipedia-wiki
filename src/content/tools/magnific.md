@@ -30,6 +30,33 @@ scores:
   value: 7
   moat: 7
   longevity: 8
+facts:
+  best_for:
+    value: "Magnific is now the AI creative platform formerly known as Freepik, with the original prompt-guided Magnific upscaler, image/video/audio models, stock assets, collaboration, and API access under the same brand. Best for image generation, editing, and visual-production workflows."
+    source: "https://www.magnific.com"
+    source_label: "Magnific homepage"
+    source_id: magnific-official
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: medium
+  pricing_anchor:
+    value: "Acquisition; n/a; Freepik announced it had acquired Magnific and would integrate the upscaler into its creative platform."
+    source: "https://www.magnific.com/pricing"
+    source_label: "Source"
+    source_id: magnific-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
+  watch_out_for:
+    value: "Non-Tier-1 canonical profile: verify current pricing, usage limits, data policy, and integration details before procurement"
+    source: "https://www.magnific.com/pricing"
+    source_label: "Source"
+    source_id: magnific-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
 tags: [image-upscaling, ai-image, ai-design, ai-creative-suite, image-enhancement, creative-upscaler, magnific, freepik, magnific-api]
 best_for:
   - creative teams that want upscaling, generation, stock assets, and editing in one platform
@@ -47,18 +74,30 @@ price_history:
   - date: 2024-05-07
     plan: "Acquisition"
     price: "n/a"
+    source: "https://www.magnific.com/pricing"
+    source_label: "Source"
+    source_id: magnific-pricing
     note: "Freepik announced it had acquired Magnific and would integrate the upscaler into its creative platform."
   - date: 2026-04-28
     plan: "Rebrand"
     price: "n/a"
+    source: "https://www.magnific.com/pricing"
+    source_label: "Source"
+    source_id: magnific-pricing
     note: "Freepik relaunched as Magnific, unifying stock assets, AI generation, upscaling, audio, video, and collaboration under one brand."
   - date: 2026-05-02
     plan: "Magnific platform"
     price: "Localized by region and billing cycle"
+    source: "https://www.magnific.com/pricing"
+    source_label: "Source"
+    source_id: magnific-pricing
     note: "Public pricing now routes through magnific.com/pricing with Free, Essential, Premium, Premium+, Pro, Business, and Enterprise-style plan families."
   - date: 2026-05-02
     plan: "Magnific Upscaler Creative API"
     price: "Usage-based by output image area"
+    source: "https://www.magnific.com/pricing"
+    source_label: "Source"
+    source_id: magnific-pricing
     note: "API docs price each upscale by output dimensions and upscale factor."
 ---
 

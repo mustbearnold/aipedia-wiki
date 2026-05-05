@@ -25,6 +25,52 @@ scores:
   value: 10
   moat: 7
   longevity: 8
+facts:
+  best_for:
+    value: "Best for desktop users and developers who want a GUI for downloading, chatting with, and serving local open-weight models without a cloud account."
+    source: https://lmstudio.ai/
+    source_label: LM Studio official site
+    source_id: lm-studio-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  pricing_anchor:
+    value: "LM Studio's core desktop app is positioned as free local AI software; evaluate commercial/enterprise use, model licenses, and hardware costs separately."
+    source: https://lmstudio.ai/
+    source_label: LM Studio official site
+    source_id: lm-studio-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  local_runtime:
+    value: "The product's main buying criterion is local runtime fit: hardware support, quantized model availability, context length, and privacy posture."
+    source: https://lmstudio.ai/docs
+    source_label: LM Studio documentation
+    source_id: lm-studio-docs
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  api_available:
+    value: "LM Studio can expose a local API for developer workflows, making it useful as an OpenAI-compatible local model server for experiments."
+    source: https://lmstudio.ai/docs/app/api
+    source_label: LM Studio local API docs
+    source_id: lm-studio-api-docs
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  watch_out_for:
+    value: "Local inference quality and speed depend on the selected model and the user's CPU/GPU/RAM; LM Studio does not make every frontier-model workload cheap or private by default."
+    source: https://lmstudio.ai/docs
+    source_label: LM Studio documentation
+    source_id: lm-studio-docs
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
 tags: [local-llm, desktop-app, gui, open-source-models, inference, privacy, developer]
 seo_title: "LM Studio: Features, Pricing & Review (April 2026)"
 meta_description: "LM Studio is the free desktop GUI for running open-weight LLMs locally. Visual model browser, one-click download, and OpenAI-compatible local server. Personal use is free forever."

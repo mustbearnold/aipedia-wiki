@@ -25,6 +25,50 @@ scores:
   value: 7
   moat: 5
   longevity: 6
+facts:
+  best_for:
+    value: "Professionals and students who need fast rewriting, tone adjustment, and clarity edits while preserving the writer's own voice."
+    source: "https://wordtune.com/plans"
+    source_label: "Wordtune Plans"
+    source_id: wordtune-pricing
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  pricing_anchor:
+    value: "Wordtune has Free, Plus, Unlimited, and Teams-style plans; serious daily rewriting generally requires checking the paid-plan rewrite and AI limits."
+    source: "https://wordtune.com/plans"
+    source_label: "Wordtune Plans"
+    source_id: wordtune-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-08-03
+  plan_limits:
+    value: "The help center documents plan-level pricing and feature differences, so procurement should use it to confirm current limits before rollout."
+    source: "https://support.wordtune.com/en/articles/8262930-wordtune-s-plans-pricing"
+    source_label: "Wordtune plan documentation"
+    source_id: wordtune-plan-docs
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: medium
+    next_review_at: 2026-08-03
+  company_context:
+    value: "Wordtune is part of AI21 Labs, which matters for buyers evaluating vendor stability and model-provider context."
+    source: "https://www.ai21.com/"
+    source_label: "AI21 Labs official site"
+    source_id: ai21-official
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  watch_out_for:
+    value: "Wordtune is a rewriting specialist, not a full research or brand-governance system. Teams still need citation checks, legal review, and style enforcement."
+    source: "https://support.wordtune.com/en/articles/8262930-wordtune-s-plans-pricing"
+    source_label: "Wordtune plan documentation"
+    source_id: wordtune-plan-docs
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-08-03
 tags: [ai-writing, paraphrasing, rewriting, editing, ai21-labs]
 seo_title: 'Wordtune: Features, Pricing & Review (April 2026)'
 meta_description: >-
@@ -46,10 +90,16 @@ price_history:
   - date: 2026-04-17
     plan: "Unlimited"
     price: "$19.99/mo"
+    source: "https://wordtune.com/plans"
+    source_label: "Source"
+    source_id: wordtune-pricing
     note: "Unlimited plan monthly rate; $9.99/mo on annual billing."
   - date: 2026-04-17
     plan: "Plus"
     price: "$24.99/mo"
+    source: "https://wordtune.com/plans"
+    source_label: "Source"
+    source_id: wordtune-pricing
     note: "Plus plan with 30 rewrites/day and 5 summaries/day."
 ---
 

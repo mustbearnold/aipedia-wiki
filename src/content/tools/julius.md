@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$20-$375/month"
 status: active
 launched: 2023-08
-last_updated: 2026-05-03
-last_verified: 2026-05-03
+last_updated: 2026-05-04
+last_verified: 2026-05-04
 update_frequency: monthly
 seo_title: "Julius AI: Features, Pricing & Review (April 2026)"
 meta_description: "Julius AI is a data-analysis copilot. Upload CSV, Excel, Parquet, or connect Snowflake and BigQuery, and Julius writes Python or R code, runs it, and returns charts. Free tier, Lite $20, Standard $45, Pro $60, Team $50/user, Business $375."
@@ -28,6 +28,57 @@ scores:
   value: 8
   moat: 6
   longevity: 7
+facts:
+  best_for:
+    value: Best for analysts and business users who want to chat with spreadsheets/data files and generate analysis without
+      writing code.
+    source: https://julius.ai/
+    source_label: Julius AI official site
+    source_id: julius-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  pricing_anchor:
+    value: Julius pricing includes free and paid packaging; verify message/analysis limits, data size, model access, team features,
+      and enterprise/security terms.
+    source: https://julius.ai/pricing
+    source_label: Julius AI pricing
+    source_id: julius-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  workflow_surface:
+    value: Julius focuses on AI data analysis over uploaded data, charts, and reports rather than general BI governance or warehouse-native
+      notebooks.
+    source: https://julius.ai/
+    source_label: Julius AI official site
+    source_id: julius-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  enterprise_controls:
+    value: Business evaluation should review team controls, data handling, security posture, and deployment fit for sensitive
+      datasets.
+    source: https://julius.ai/for-business
+    source_label: Julius AI for business
+    source_id: julius-business
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  watch_out_for:
+    value: For serious analytics, test reproducibility, source-data handling, statistical correctness, chart provenance, and
+      whether outputs can be audited by analysts.
+    source: https://julius.ai/for-business
+    source_label: Julius AI for business
+    source_id: julius-business
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
 tags: [data-analysis, code-interpreter, python, r, sql, csv, spreadsheet, bigquery, snowflake, claude, gpt-5, gemini]
 best_for:
   - business analysts running ad-hoc spreadsheet analysis
@@ -46,10 +97,16 @@ price_history:
   - date: 2026-04-15
     plan: "Standard"
     price: "$45/mo"
+    source: "https://julius.ai/pricing"
+    source_label: "Source"
+    source_id: julius-pricing
     note: "Verified, unchanged."
   - date: 2026-04-15
     plan: "Team"
     price: "$50/user/mo"
+    source: "https://julius.ai/pricing"
+    source_label: "Source"
+    source_id: julius-pricing
     note: "Verified, unchanged."
 ---
 

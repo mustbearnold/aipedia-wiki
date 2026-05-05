@@ -24,6 +24,49 @@ scores:
   value: 7
   moat: 8
   longevity: 8
+facts:
+  best_for:
+    value: "Researchers who need to see whether papers are supported, contrasted, or merely mentioned by later literature before trusting a citation trail."
+    source: "https://scite.ai"
+    source_label: "scite.ai"
+    source_id: scite-official
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  pricing_anchor:
+    value: "Personal pricing is listed separately from team and institutional access; confirm current monthly or annual terms before lab-wide use."
+    source: "https://scite.ai/pricing"
+    source_label: "scite.ai pricing"
+    source_id: scite-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-08-03
+  citation_classification:
+    value: "Smart Citations classify citation contexts as Supporting, Contrasting, or Mentioning, which is the core differentiator versus ordinary paper search."
+    source: "https://scite.ai"
+    source_label: "scite.ai"
+    source_id: scite-official
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  research_assistant:
+    value: "Use scite as a citation-quality and evidence-mapping layer, especially for checking whether influential claims have contradictory follow-up literature."
+    source: "https://scite.ai"
+    source_label: "scite.ai"
+    source_id: scite-official
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  watch_out_for:
+    value: "Classification helps triage evidence, but it does not replace reading methods, population, effect size, or publication-quality details in the cited papers."
+    source: "https://scite.ai"
+    source_label: "scite.ai"
+    source_id: scite-official
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-08-03
 tags: [citations, academic-research, peer-review, literature-review, evidence, smart-citations]
 seo_title: "Scite.ai: Smart Citations Review & Pricing (April 2026)"
 meta_description: >-
@@ -44,6 +87,9 @@ price_history:
   - date: 2026-04-17
     plan: "Personal"
     price: "$20/mo"
+    source: "https://scite.ai/pricing"
+    source_label: "Source"
+    source_id: scite-pricing
     note: "Verified unchanged. Annual at $200/yr."
 ---
 

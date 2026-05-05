@@ -24,6 +24,33 @@ scores:
   value: 6
   moat: 5
   longevity: 6
+facts:
+  best_for:
+    value: "No-code AI workforce platform for building agents that reason and act, billed on Actions plus separate Vendor Credits. Best for workflow automation, agentic operations, and business-process automation."
+    source: "https://relevanceai.com/pricing"
+    source_label: "Relevance AI pricing page"
+    source_id: relevance-ai-official
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: medium
+  pricing_anchor:
+    value: "Pricing should be checked on the current Relevance AI source before purchase; AIpedia has not promoted this page to a full Tier 1 pricing profile yet"
+    source: "https://relevanceai.com/pricing"
+    source_label: "Relevance AI pricing page"
+    source_id: relevance-ai-official
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
+  watch_out_for:
+    value: "Non-Tier-1 canonical profile: verify current pricing, usage limits, data policy, and integration details before procurement"
+    source: "https://relevanceai.com/pricing"
+    source_label: "Relevance AI pricing page"
+    source_id: relevance-ai-official
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
 tags: [ai-agents, no-code, agent-builder, llm, workflow, drag-and-drop, automation, rag, ai-workforce]
 seo_title: "Relevance AI: Features, Pricing & Review (April 2026)"
 meta_description: "Relevance AI is a no-code AI workforce platform. Free tier with 200 actions/mo; Pro $19/mo annual; Team $234/mo; Enterprise custom. Split pricing: Actions plus Vendor Credits since September 2025."

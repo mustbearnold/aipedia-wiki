@@ -10,8 +10,8 @@ pricing_model: enterprise
 price_range: "$59/user/month"
 status: active
 launched: 2023-07
-last_updated: 2026-05-03
-last_verified: 2026-05-03
+last_updated: 2026-05-04
+last_verified: 2026-05-04
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -24,6 +24,43 @@ scores:
   value: 6
   moat: 7
   longevity: 7
+facts:
+  product_scope:
+    value: "Sourcegraph Cody is now positioned around enterprise code intelligence and AI assistance over Sourcegraph’s code graph."
+    source: "https://sourcegraph.com/docs/cody"
+    source_label: "Sourcegraph Cody docs"
+    source_id: cody-docs
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: medium
+    confidence: high
+  pricing_anchor:
+    value: "Enterprise-focused pricing is published through Sourcegraph pricing; self-serve Cody plans were sunset, so teams should expect sales-led packaging."
+    source: "https://sourcegraph.com/pricing"
+    source_label: "Sourcegraph pricing"
+    source_id: cody-pricing
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
+  best_for:
+    value: "Large engineering organizations that already value Sourcegraph code search/code intelligence and want AI assistance tied to enterprise code context."
+    source: "https://sourcegraph.com/docs/cody"
+    source_label: "Sourcegraph Cody docs"
+    source_id: cody-docs
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: medium
+    confidence: high
+  watch_out_for:
+    value: "Not the default pick for individual developers after the self-serve shift; compare Cursor, Copilot, Cline, and Aider for lower-friction adoption."
+    source: "https://sourcegraph.com/pricing"
+    source_label: "Sourcegraph pricing"
+    source_id: cody-pricing
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
 tags: [codebase-search, ai-coding, enterprise, sourcegraph, ide-plugin, vscode, jetbrains]
 seo_title: "Cody by Sourcegraph: Features, Pricing & Review (April 2026)"
 meta_description: "Cody is now Enterprise-only at $59/user/month after Sourcegraph retired the Free and Pro self-serve tiers in July 2025. Cross-repo code graph context is the one thing Copilot and Cursor cannot match."
@@ -44,10 +81,16 @@ price_history:
   - date: 2025-07-23
     plan: "Free and Pro"
     price: "discontinued"
+    source: "https://sourcegraph.com/pricing"
+    source_label: "Source"
+    source_id: cody-pricing
     note: "Self-serve tiers retired. Enterprise is the only path forward."
   - date: 2026-04-15
     plan: "Enterprise"
     price: "$59/user/mo"
+    source: "https://sourcegraph.com/pricing"
+    source_label: "Source"
+    source_id: cody-pricing
     note: "Verified unchanged on pricing page."
 ---
 

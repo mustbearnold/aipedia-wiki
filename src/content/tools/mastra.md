@@ -25,6 +25,33 @@ scores:
   value: 9
   moat: 7
   longevity: 8
+facts:
+  best_for:
+    value: "TypeScript framework for building AI agents. From the Gatsby team. Open source, 22k+ GitHub stars, 300k weekly npm downloads. Free starter; Teams $250/month; Enterprise on-premises. Best for software development and code-assistant workflows."
+    source: "https://langchain-ai.github.io/langgraph/"
+    source_label: "LangGraph"
+    source_id: ag2-official
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: medium
+  pricing_anchor:
+    value: "Pricing should be checked on the current Mastra source before purchase; AIpedia has not promoted this page to a full Tier 1 pricing profile yet"
+    source: "https://langchain-ai.github.io/langgraph/"
+    source_label: "LangGraph"
+    source_id: ag2-official
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
+  watch_out_for:
+    value: "Non-Tier-1 canonical profile: verify current pricing, usage limits, data policy, and integration details before procurement"
+    source: "https://langchain-ai.github.io/langgraph/"
+    source_label: "LangGraph"
+    source_id: ag2-official
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
 tags: [agent-framework, typescript, open-source, rag, workflows, y-combinator, developer]
 seo_title: "Mastra: Features, Pricing & Review (April 2026)"
 meta_description: "Mastra is the TypeScript AI agent framework from the Gatsby team. Open source, 22k+ GitHub stars. Free Starter tier; Teams $250/mo; Enterprise on-premises. Best TypeScript-native alternative to LangChain."

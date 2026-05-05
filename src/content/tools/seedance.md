@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: $0-$49.99/month
 status: active
 launched: 2025-06
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-04
+last_verified: 2026-05-04
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -24,6 +24,43 @@ scores:
   value: 9
   moat: 8
   longevity: 8
+facts:
+  model_family:
+    value: "Seedance is ByteDance/Seedance AI video generation marketed for text-to-video and image-to-video creation, with BytePlus ModelArk availability for enterprise/API evaluation."
+    source: "https://www.byteplus.com/en/product/modelark"
+    source_label: "BytePlus ModelArk"
+    source_id: seedance-byteplus-modelark
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
+  pricing_anchor:
+    value: "Public Seedance pricing lists free and paid creator tiers; API or enterprise use should be verified through BytePlus ModelArk terms."
+    source: "https://www.seedance.ai/pricing"
+    source_label: "Seedance pricing"
+    source_id: seedance-pricing
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
+  best_for:
+    value: "Creators and teams comparing frontier video generation quality, image-to-video control, and ByteDance ecosystem access against Veo, Sora, Runway, Kling, and Pika."
+    source: "https://www.seedance.ai/"
+    source_label: "Seedance homepage"
+    source_id: seedance-official
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
+  watch_out_for:
+    value: "Video-model availability, commercial rights, and API access can vary by region and product surface, so validate the exact Seedance/BytePlus route before procurement."
+    source: "https://www.byteplus.com/en/product/modelark"
+    source_label: "BytePlus ModelArk"
+    source_id: seedance-byteplus-modelark
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: medium
 tags: [ai-video, video-generation, text-to-video, image-to-video, bytedance, seedance, character-consistency, multimodal]
 seo_title: 'Seedance 2.0: Features, Pricing & Review (April 2026)'
 meta_description: >-
@@ -44,10 +81,16 @@ price_history:
   - date: 2026-02-12
     plan: "Seedance 2.0"
     price: "Public launch"
+    source: "https://seedance.ai/pricing"
+    source_label: "Source"
+    source_id: seedance-pricing
     note: "ByteDance officially launched Seedance 2.0"
   - date: 2026-04-17
     plan: "Basic"
     price: "~$9.60/mo"
+    source: "https://seedance.ai/pricing"
+    source_label: "Source"
+    source_id: seedance-pricing
     note: "Verified, regional pricing applies"
 ---
 

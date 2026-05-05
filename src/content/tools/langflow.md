@@ -25,6 +25,52 @@ scores:
   value: 9
   moat: 3
   longevity: 7
+facts:
+  best_for:
+    value: "Best for engineers who want a visual, open-source canvas for RAG, LangChain/LangGraph prototypes, agents, and API-deployable AI workflows."
+    source: https://www.langflow.org/
+    source_label: Langflow official site
+    source_id: langflow-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  pricing_anchor:
+    value: "The core Langflow project is open source and self-hostable; managed-hosting and support choices should be evaluated separately after the DataStax-hosted cloud shutdown."
+    source: https://www.langflow.org/
+    source_label: Langflow official site
+    source_id: langflow-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  workflow_surface:
+    value: "Langflow turns components into flows that can be run, exported, and served for agentic or retrieval applications rather than acting as a generic SaaS automation suite."
+    source: https://docs.langflow.org/
+    source_label: Langflow documentation
+    source_id: langflow-docs
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  open_source:
+    value: "The GitHub repository is the best source for current license, release cadence, install paths, and community-maintained integrations."
+    source: https://github.com/langflow-ai/langflow
+    source_label: Langflow GitHub repository
+    source_id: langflow-repository
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  watch_out_for:
+    value: "Buyers needing hosted SLAs, enterprise controls, or non-LLM business-app automation should validate hosting/support separately rather than assuming the OSS canvas includes those guarantees."
+    source: https://docs.langflow.org/
+    source_label: Langflow documentation
+    source_id: langflow-docs
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
 tags: [llm-workflows, ai-agents, langchain, open-source, visual-builder, no-code, rag, automation, langgraph]
 seo_title: "Langflow: Features, Pricing & Review (April 2026)"
 meta_description: "Langflow is a free, open-source visual builder for LangChain LLM workflows, AI agents, and RAG pipelines. Version 1.8 ships MCP servers and improved agent nodes. Self-host for $0."
@@ -44,10 +90,16 @@ price_history:
   - date: 2026-03-09
     plan: "DataStax Langflow cloud"
     price: "Deprecated"
+    source: "https://langflow.org"
+    source_label: "Source"
+    source_id: langflow-pricing
     note: "DataStax-hosted Langflow deprecated; shutdown April 9, 2026. OSS continues."
   - date: 2026-04-15
     plan: "Langflow OSS"
     price: "$0"
+    source: "https://langflow.org"
+    source_label: "Source"
+    source_id: langflow-pricing
     note: "Self-host continues free. Version 1.8.4 released April 1, 2026."
 ---
 

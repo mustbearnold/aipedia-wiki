@@ -25,6 +25,52 @@ scores:
   value: 10
   moat: 7
   longevity: 9
+facts:
+  best_for:
+    value: "Teams comparing modern image-generation models where photorealism, prompt adherence, edit workflows, or API deployment matter more than a consumer app UI."
+    source: "https://bfl.ai"
+    source_label: "Black Forest Labs official site"
+    source_id: flux-official
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
+  model_surface:
+    value: "Flux is a model family from Black Forest Labs, with API and deployment options that vary by model version and provider."
+    source: "https://docs.bfl.ai/quick_start/introduction"
+    source_label: "Black Forest Labs docs"
+    source_id: flux-docs
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
+  pricing_anchor:
+    value: "API pricing depends on the serving provider and selected Flux model; fal.ai publishes model-level pricing for hosted inference."
+    source: "https://fal.ai/docs/platform-apis/v1/models/pricing"
+    source_label: "fal.ai model pricing"
+    source_id: flux-pricing
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
+  integration_surface:
+    value: "Evaluate Flux through the exact runtime you plan to use, such as BFL docs, fal.ai, Replicate, or a self-hosted workflow, because latency, price, and controls differ."
+    source: "https://docs.bfl.ai/quick_start/introduction"
+    source_label: "Black Forest Labs docs"
+    source_id: flux-docs
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: medium
+  watch_out_for:
+    value: "Do not compare only model names. Check license, available endpoints, image rights, safety filters, and whether the exact Flux variant is supported in your production stack."
+    source: "https://docs.bfl.ai/quick_start/introduction"
+    source_label: "Black Forest Labs docs"
+    source_id: flux-docs
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
 tags: [ai-image, image-generation, text-to-image, open-source, self-hosted, flux, lora, fine-tuning, comfyui, kontext]
 seo_title: "Flux Review 2026: Flux.2, Kontext, Pricing & API Guide"
 meta_description: "Flux by Black Forest Labs in April 2026: Flux.2 Pro/Flex/Dev/Klein plus Flux.1 Kontext for instruction edits. Self-host free; API from ~$0.003-$0.10/image via BFL, Replicate, fal."
@@ -44,10 +90,16 @@ price_history:
   - date: 2026-01-15
     plan: "Flux.2 Klein"
     price: "open-weight (Apache 2.0)"
+    source: "https://fal.ai/docs/platform-apis/v1/models/pricing"
+    source_label: "Source"
+    source_id: flux-pricing
     note: "Fastest Flux variant released; sub-second on consumer GPUs"
   - date: 2025-11-25
     plan: "Flux.2 family"
     price: "API + open-weight Dev"
+    source: "https://fal.ai/docs/platform-apis/v1/models/pricing"
+    source_label: "Source"
+    source_id: flux-pricing
     note: "Flux.2 Pro/Flex API launch; Flux.2 Dev open-weight (32B parameters)"
 ---
 

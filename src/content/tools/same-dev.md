@@ -28,6 +28,33 @@ scores:
   value: 8
   moat: 5
   longevity: 6
+facts:
+  best_for:
+    value: "Browser-based AI full-stack app builder. Clones existing designs from a URL, ships with live preview plus one-click deploy, and runs on token-metered pricing from free through $100 Ultra. Best for software development and code-assistant workflows."
+    source: "https://framer.com"
+    source_label: "Framer AI"
+    source_id: same-dev-official
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: medium
+  pricing_anchor:
+    value: "Free; $0; Verified, 500K tokens/mo"
+    source: "https://docs.same.new/usage/pricing"
+    source_label: "Source"
+    source_id: same-dev-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
+  watch_out_for:
+    value: "Non-Tier-1 canonical profile: verify current pricing, usage limits, data policy, and integration details before procurement"
+    source: "https://docs.same.new/usage/pricing"
+    source_label: "Source"
+    source_id: same-dev-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
 tags: [ai-coding, app-builder, fullstack-generation, vibe-coding, same-dev, browser-ide]
 best_for:
   - cloning existing site designs from a URL
@@ -44,14 +71,23 @@ price_history:
   - date: 2026-04-18
     plan: "Free"
     price: "$0"
+    source: "https://docs.same.new/usage/pricing"
+    source_label: "Source"
+    source_id: same-dev-pricing
     note: "Verified, 500K tokens/mo"
   - date: 2026-04-18
     plan: "Basic"
     price: "$10/mo"
+    source: "https://docs.same.new/usage/pricing"
+    source_label: "Source"
+    source_id: same-dev-pricing
     note: "Verified, 2M tokens/mo"
   - date: 2026-04-18
     plan: "Pro"
     price: "$25/mo"
+    source: "https://docs.same.new/usage/pricing"
+    source_label: "Source"
+    source_id: same-dev-pricing
     note: "Verified, 5M tokens/mo"
 ---
 

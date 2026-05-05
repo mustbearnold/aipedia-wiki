@@ -8,11 +8,11 @@ secondary_categories: [ai-search, ai-automation]
 company: Read AI
 url: https://www.read.ai
 pricing_model: freemium
-price_range: Free; Pro and Enterprise per-seat plans; Enterprise+ $39.75/user/mo monthly
+price_range: Free; Pro $19.75/user/mo monthly; Enterprise $29.75/user/mo monthly; Enterprise+ $39.75/user/mo monthly
 status: active
 launched: 2021
-last_updated: 2026-04-27
-last_verified: 2026-04-27
+last_updated: 2026-05-05
+last_verified: 2026-05-05
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -25,8 +25,35 @@ scores:
   value: 8
   moat: 7
   longevity: 8
+facts:
+  best_for:
+    value: "AI meeting assistant and productivity layer for meeting reports, transcription, summaries, coaching, Search Copilot, integrations, and digital twin workflows. Best for notes, meetings, personal knowledge, and recall workflows."
+    source: "https://www.read.ai/plans-pricing"
+    source_label: "Read AI plans and pricing"
+    source_id: read-ai-official
+    verified_at: 2026-05-05
+    volatility: medium
+    confidence: medium
+  pricing_anchor:
+    value: "Pricing should be checked on the current Read AI source before purchase; AIpedia has not promoted this page to a full Tier 1 pricing profile yet"
+    source: "https://www.read.ai/plans-pricing"
+    source_label: "Read AI plans and pricing"
+    source_id: read-ai-official
+    verified_at: 2026-05-05
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
+  watch_out_for:
+    value: "Non-Tier-1 canonical profile: verify current pricing, usage limits, data policy, and integration details before procurement"
+    source: "https://www.read.ai/plans-pricing"
+    source_label: "Read AI plans and pricing"
+    source_id: read-ai-official
+    verified_at: 2026-05-05
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
 tags: [meeting-ai, transcription, meeting-notes, search-copilot, productivity, summaries, coaching]
-seo_title: "Read AI Review: Meeting Assistant, Search Copilot & Pricing (April 2026)"
+seo_title: "Read AI Review: Meeting Assistant, Search Copilot & Pricing (2026)"
 meta_description: "Read AI is an AI meeting assistant and productivity platform for meeting reports, transcription, summaries, coaching, Search Copilot, integrations, and enterprise controls."
 author: aipedia.wiki Editorial
 best_for:
@@ -64,6 +91,7 @@ It competes with [Fathom](/tools/fathom/), [Fireflies](/tools/fireflies/), [Otte
 | **Meetings** | Zoom, Microsoft Teams, Google Meet |
 | **Free plan** | 5 meeting transcripts per month |
 | **Paid plans** | Unlimited meeting transcripts and reports on paid plans |
+| **Meeting length** | 1 hour on Free, 4 hours on Pro/Enterprise, 8 hours on Enterprise+ |
 | **Integrations** | Notion, Salesforce, HubSpot, Jira, Confluence, Zapier, webhooks and more |
 | **Enterprise+** | HIPAA, SSO/SAML, domain capture, custom retention |
 | **Best fit** | Teams combining meeting notes and cross-work search |
@@ -86,9 +114,26 @@ It competes with [Fathom](/tools/fathom/), [Fireflies](/tools/fireflies/), [Otte
 
 ## Pricing
 
-Read AI has a free plan with 5 meeting transcripts per month. Paid plans add unlimited meeting transcripts and reports, longer meeting lengths, premium integrations, workspace access, and file upload credits. Enterprise+ is listed at $39.75 per user per month on monthly billing, with annual discounting shown on the pricing page.
+Read AI has a free plan with 5 meeting transcripts per month, unlimited enterprise search, meeting/email/messaging summaries, coaching, basic integrations, topic readouts, 20+ languages, and desktop/mobile apps.
+
+As verified on 2026-05-05, Pro is $19.75 per user per month on monthly billing and $15 per user per month annually. It adds unlimited meeting transcripts, priority report processing, premium integrations, workspace access, unlimited meeting reports, unlimited storage, and 100 upload minutes per month. Enterprise is $29.75 monthly or $22.50 annually, adding audio/video playback, video highlights, premium support, and 200 upload minutes. Enterprise+ requires 10+ licenses and is $39.75 monthly or $29.75 annually, adding HIPAA compliance, SSO/SAML, domain capture, custom retention, workspace onboarding, and 300 upload minutes.
 
 Teams should compare against Fathom if unlimited free transcription is the deciding feature.
+
+## Buyer fit
+
+Read AI is strongest when meeting data should become a searchable work layer rather than a pile of transcripts. Managers may value coaching and engagement signals; operators may value action items and follow-ups; cross-functional teams may value Search Copilot across meetings, email, messaging, and integrations.
+
+It is weaker when a team only wants a simple meeting recorder. The more Read AI is used for coaching, search, and workspace-level sharing, the more governance matters: who can see meeting reports, what gets recorded, how long data is retained, and whether participants are comfortable with a bot in the room.
+
+## Rollout checklist
+
+- Confirm recording-consent norms for Zoom, Teams, and Meet.
+- Decide which meetings should automatically include Read Assistant.
+- Test whether summaries, action items, and key questions are accurate enough for important decisions.
+- Review Search Copilot access across meetings, email, messages, and integrations.
+- Choose a plan based on meeting length, playback needs, upload minutes, security controls, and license count.
+- Set policy for coaching metrics so sentiment and engagement data are used constructively.
 
 ## Failure Modes
 
@@ -97,10 +142,11 @@ Teams should compare against Fathom if unlimited free transcription is the decid
 - **Metrics can be misread.** Sentiment and engagement signals should not become lazy performance management.
 - **Enterprise value needs adoption.** Search and coaching only work if teams use the reports.
 - **Pricing page complexity.** Plan names and annual/monthly rates need careful reading.
+- **Search scope requires governance.** Cross-work search is powerful only if access and sharing rules are clear.
 
 ## Methodology
 
-Last verified 2026-04-28 against Read AI pricing and product pages. Scoring emphasizes meeting utility, search breadth, integration depth, and free-plan limits.
+Last verified 2026-05-05 against Read AI pricing and product pages. Scoring emphasizes meeting utility, search breadth, integration depth, and free-plan limits.
 
 ## FAQ
 

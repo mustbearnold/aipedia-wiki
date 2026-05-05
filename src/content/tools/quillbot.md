@@ -24,6 +24,49 @@ scores:
   value: 9
   moat: 6
   longevity: 7
+facts:
+  best_for:
+    value: "Students and everyday writers who need paraphrasing, grammar cleanup, summarization, citation help, and plagiarism checks in a simple writing toolkit."
+    source: "https://quillbot.com/premium"
+    source_label: "QuillBot Premium"
+    source_id: quillbot-premium
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  pricing_anchor:
+    value: "Premium pricing varies by billing interval, with annual pricing materially cheaper than monthly access."
+    source: "https://quillbot.com/upgrade"
+    source_label: "QuillBot Upgrade"
+    source_id: quillbot-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-08-03
+  paraphrasing_modes:
+    value: "Premium unlocks broader paraphrasing and writing-tool capacity compared with the free product, so mode and word-count limits matter for heavy users."
+    source: "https://quillbot.com/premium"
+    source_label: "QuillBot Premium"
+    source_id: quillbot-premium
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  academic_toolkit:
+    value: "QuillBot is strongest as a convenience bundle around rewriting, grammar, citation, summarization, and plagiarism workflows, not as a research engine."
+    source: "https://quillbot.com/premium"
+    source_label: "QuillBot Premium"
+    source_id: quillbot-premium
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  watch_out_for:
+    value: "Academic users should follow institution policy. Paraphrasing tools can create citation, originality, and disclosure problems if used to hide source borrowing."
+    source: "https://quillbot.com/premium"
+    source_label: "QuillBot Premium"
+    source_id: quillbot-premium
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-08-03
 tags: [ai-writing, paraphrasing, grammar-checker, summarizer, plagiarism-checker, student-tools]
 seo_title: "QuillBot: Features, Pricing & Review (April 2026)"
 meta_description: "QuillBot is the dominant AI paraphraser with 200M+ users, nine rewrite modes, grammar, summarizer, Co-Writer, and plagiarism. Premium $8.33/mo annual or $19.95 monthly."
@@ -43,6 +86,9 @@ price_history:
   - date: 2026-04-17
     plan: "Premium"
     price: "$8.33/mo"
+    source: "https://quillbot.com/upgrade"
+    source_label: "Source"
+    source_id: quillbot-pricing
     note: "Annual rate ($99.95/yr). Monthly $19.95, semi-annual $79.95."
 ---
 

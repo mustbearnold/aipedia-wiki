@@ -27,6 +27,33 @@ scores:
   value: 7
   moat: 8
   longevity: 7
+facts:
+  best_for:
+    value: "Stability AI's enterprise music and sound generator. Stable Audio 2.5 ships royalty-safe, fully-licensed training and three-minute tracks in under two seconds. Best for music generation, composition, or audio-creative workflows."
+    source: "https://stableaudio.com/pricing"
+    source_label: "Source"
+    source_id: stable-audio-pricing
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: medium
+  pricing_anchor:
+    value: "Stable Audio 2.5; n/a; Stable Audio 2.5 launched as Stability AI's first enterprise audio model. Three-minute tracks, stems, audio inpainting, fully-licensed training."
+    source: "https://stableaudio.com/pricing"
+    source_label: "Source"
+    source_id: stable-audio-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
+  watch_out_for:
+    value: "Non-Tier-1 canonical profile: verify current pricing, usage limits, data policy, and integration details before procurement"
+    source: "https://stableaudio.com/pricing"
+    source_label: "Source"
+    source_id: stable-audio-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
 tags: [ai-music, music-generation, sound-effects, stable-audio, stability-ai, royalty-safe, stems, audio-inpainting, enterprise]
 best_for:
   - brand and commercial campaigns needing legal-safe audio
@@ -44,10 +71,16 @@ price_history:
   - date: 2025-09-10
     plan: "Stable Audio 2.5"
     price: "n/a"
+    source: "https://stableaudio.com/pricing"
+    source_label: "Source"
+    source_id: stable-audio-pricing
     note: "Stable Audio 2.5 launched as Stability AI's first enterprise audio model. Three-minute tracks, stems, audio inpainting, fully-licensed training."
   - date: 2026-04-15
     plan: "Creator"
     price: "$11.99/mo"
+    source: "https://stableaudio.com/pricing"
+    source_label: "Source"
+    source_id: stable-audio-pricing
     note: "Verified unchanged. Personal plan remains free. Enterprise via sales contact."
 ---
 

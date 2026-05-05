@@ -26,6 +26,141 @@ scores:
   value: 8
   moat: 8
   longevity: 9
+facts:
+  flagship_model:
+    value: "Grammarly AI writing assistant, including GrammarlyGO-style rewrite, tone, compose, and reply workflows"
+    source: "https://www.grammarly.com/ai"
+    source_label: "Grammarly AI"
+    source_id: grammarly-ai
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  context_window:
+    value: "Not disclosed: Grammarly does not publish a token context window for its writing-assistant features"
+    source: "https://www.grammarly.com/ai"
+    source_label: "Grammarly AI"
+    source_id: grammarly-ai
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+    next_review_at: 2026-06-03
+  pricing_anchor:
+    value: "Free; Pro from $12/mo annually; Business from $15/member/mo annually; Enterprise custom"
+    source: "https://www.grammarly.com/plans"
+    source_label: "Grammarly plans"
+    source_id: grammarly-plans
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  free_plan:
+    value: "Yes: free writing suggestions and limited AI assistance"
+    source: "https://www.grammarly.com/plans"
+    source_label: "Grammarly plans"
+    source_id: grammarly-plans
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  best_paid_tier:
+    value: "Pro for individuals; Business for teams needing style guides, brand tones, admin, and security controls"
+    source: "https://www.grammarly.com/plans"
+    source_label: "Grammarly plans"
+    source_id: grammarly-plans
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  api_available:
+    value: "No public general-purpose Grammarly writing API for buyers; Grammarly is primarily app, extension, and enterprise software"
+    source: "https://www.grammarly.com/business"
+    source_label: "Grammarly Business"
+    source_id: grammarly-business
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  image_generation:
+    value: "No native image generation; Grammarly is focused on writing assistance"
+    source: "https://www.grammarly.com/ai"
+    source_label: "Grammarly AI"
+    source_id: grammarly-ai
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  video_generation:
+    value: "No native video generation; Grammarly is focused on writing assistance"
+    source: "https://www.grammarly.com/ai"
+    source_label: "Grammarly AI"
+    source_id: grammarly-ai
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  real_time_voice:
+    value: "No primary real-time voice-agent product; Grammarly is a writing assistant"
+    source: "https://www.grammarly.com/ai"
+    source_label: "Grammarly AI"
+    source_id: grammarly-ai
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  web_browsing:
+    value: "No general web-browsing assistant; Grammarly works inside writing surfaces and connected apps"
+    source: "https://www.grammarly.com/business"
+    source_label: "Grammarly Business"
+    source_id: grammarly-business
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  coding_agent:
+    value: "No coding agent; Grammarly is for writing, tone, grammar, and communication workflows"
+    source: "https://www.grammarly.com/ai"
+    source_label: "Grammarly AI"
+    source_id: grammarly-ai
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  enterprise_controls:
+    value: "Business and Enterprise add admin controls, style guides, brand tones, analytics, SSO, and security/compliance features"
+    source: "https://www.grammarly.com/business"
+    source_label: "Grammarly Business"
+    source_id: grammarly-business
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  data_retention_or_privacy:
+    value: "Enterprise procurement should evaluate Grammarly Business security, privacy, and compliance controls before deploying across regulated writing surfaces"
+    source: "https://www.grammarly.com/business"
+    source_label: "Grammarly Business"
+    source_id: grammarly-business
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  open_source_or_local:
+    value: "No: Grammarly is proprietary hosted software and browser/app infrastructure"
+    source: "https://www.grammarly.com/plans"
+    source_label: "Grammarly plans"
+    source_id: grammarly-plans
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  best_for:
+    value: "Professionals and teams that need always-on writing quality, grammar, tone, and brand consistency across many apps"
+    source: "https://www.grammarly.com/business"
+    source_label: "Grammarly Business"
+    source_id: grammarly-business
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  watch_out_for:
+    value: "Less useful for long-form reasoning than frontier chatbots, no public model choice, and team value depends on adoption across writing surfaces"
+    source: "https://www.grammarly.com/plans"
+    source_label: "Grammarly plans"
+    source_id: grammarly-plans
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
 tags: [ai-writing, grammar-checker, writing-assistant, productivity, chrome-extension]
 seo_title: 'Grammarly: Features, Pricing & Review (April 2026)'
 meta_description: >-
@@ -46,10 +181,16 @@ price_history:
   - date: 2026-04-17
     plan: "Pro"
     price: "$12/mo"
+    source: "https://grammarly.com/plans"
+    source_label: "Source"
+    source_id: grammarly-pricing
     note: "Verified annual rate. Premium now branded Pro."
   - date: 2026-04-17
     plan: "Business"
     price: "$15/user/mo"
+    source: "https://grammarly.com/plans"
+    source_label: "Source"
+    source_id: grammarly-pricing
     note: "Annual rate. Standalone Business tier retained for teams under 149 seats; larger orgs route to Enterprise."
 ---
 
