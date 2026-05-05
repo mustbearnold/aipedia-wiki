@@ -11,8 +11,8 @@ pricing_model: open-source
 price_range: "Free (open source)"
 status: active
 launched: 2024-10
-last_updated: 2026-05-04
-last_verified: 2026-05-04
+last_updated: 2026-05-05
+last_verified: 2026-05-05
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -146,8 +146,43 @@ AG2 is free and open source. No commercial tier. You pay only for:
 
 - **LLM inference** (whichever provider you configure)
 - **Compute** (self-host or cloud of choice)
+- **Observability** (logs, traces, evals, and alerts you add yourself)
+- **Security hardening** (sandboxing, secrets handling, permissions, and review)
+- **Engineering time** (agent design, testing, deployment, and maintenance)
 
 Verified 2026-04-18 via [ag2.ai](https://www.ag2.ai/) and [AG2 GitHub](https://github.com/ag2ai/ag2).
+
+## Buyer fit
+
+AG2 is best for teams that already understand agent frameworks and want to keep control. It is not a no-code automation product. The user has to define agents, tools, memory, code execution, model routing, and guardrails.
+
+Good fits:
+
+- research teams testing multi-agent coordination patterns
+- AutoGen users who want continuity outside Microsoft's enterprise roadmap
+- Python developers building internal prototypes
+- teams comparing AG2, LangGraph, CrewAI, and Microsoft Agent Framework
+- cloud-agnostic teams that want to avoid platform lock-in early
+
+Weak fits:
+
+- business users who need a ready-made automation app
+- regulated enterprises without a strong platform engineering team
+- teams that need vendor support, hosted observability, or enterprise SLAs
+- TypeScript-first teams that do not want a Python agent layer
+
+## Production checklist
+
+Before using AG2 beyond prototyping, answer these questions:
+
+- How are tool permissions restricted per agent?
+- Where does code execution run, and how is it sandboxed?
+- Which prompts, model calls, tool calls, and outputs are logged?
+- What eval set catches regressions before deploy?
+- How are secrets injected without exposing them to agents or logs?
+- Who reviews agent-created changes before they affect customers?
+
+AG2's openness is the advantage, but it also means production discipline is the user's job.
 
 ## Failure modes
 
@@ -155,6 +190,7 @@ Verified 2026-04-18 via [ag2.ai](https://www.ag2.ai/) and [AG2 GitHub](https://g
 - **Community bus factor.** AG2 depends on volunteer maintainers. Direction and pace can shift.
 - **Smaller community than LangChain.** Fewer Stack Overflow answers, fewer YouTube tutorials. Discord + GitHub for support.
 - **Future unclear.** If Microsoft Agent Framework dominates, AG2 may stagnate. If AG2 carves out independent traction, it becomes the AutoGen lineage default. Both scenarios are live as of April 2026.
+- **Framework enthusiasm can outrun product need.** Multi-agent systems add coordination overhead. Use AG2 when separate agents solve a real problem, not because a single prompt chain feels less exciting.
 
 ## Against the alternatives
 
