@@ -2,6 +2,12 @@
 
 Search format: each entry starts with `DD-MM-YYYY HH:MM TZ` so changes can be found by day, month, year, and time. Example search keys: `05-05-2026`, `05-2026`, `2026`, `11:29`.
 
+## 05-05-2026 19:21 NZST
+
+- Started the shortest-tool-page depth pass from the KPI queue.
+- Expanded `Together AI` with buyer-fit, procurement, model-evaluation, and infrastructure-risk guidance.
+- Expanded `AG2` with buyer-fit, production-readiness, security, observability, and multi-agent overhead guidance.
+
 ## 05-05-2026 19:16 NZST
 
 - Started the comparison-depth sprint from the shortest-comparison KPI queue.
