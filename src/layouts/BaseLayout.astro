@@ -130,7 +130,7 @@ const ogImageUrl = ogImage
     <SearchModal transition:persist="search-modal" />
     <GlobalToolPreview transition:persist="tool-preview" />
     <SourcePreviewLayer transition:persist="source-preview" />
-    <main id="main-content" class:list={[isOsChrome ? 'os-main-content' : 'max-w-6xl mx-auto px-4']} data-pagefind-body>
+    <main id="main-content" class:list={[isOsChrome ? 'os-main-content' : 'site-main-content']} data-pagefind-body>
       <slot />
     </main>
     {!isOsChrome && <Footer transition:persist="footer" />}

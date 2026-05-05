@@ -311,25 +311,25 @@ const categoriesCovered = new Set(
     appSubtitle={`${allGuides.length} use cases`}
     command="Browse AI tool guides"
   >
-  <div class="t2-canvas guides-canvas">
+  <div class="t2-canvas guides-canvas site-directory-canvas">
     <nav class="t2-breadcrumb" aria-label="Breadcrumb">
       <a href="/">Home</a>
       <span aria-hidden="true">/</span>
       <span class="t2-breadcrumb-current" aria-current="page">Use cases</span>
     </nav>
 
-    <section class="guides-hero" data-pagefind-ignore data-reveal>
-      <div class="guides-kicker">
-        <span class="guides-dot" aria-hidden="true"></span>
-        <span>Use cases</span>
-        <span class="guides-pill"><span class="tabular-nums">{allGuides.length}</span> pages</span>
+    <section class="guides-hero site-index-hero" data-pagefind-ignore data-reveal>
+      <div class="idx-eyebrow guides-kicker">
+        <span class="idx-eyebrow-chip idx-eyebrow-fresh">
+          <span class="idx-eyebrow-livedot" aria-hidden="true"></span>
+          Use cases
+        </span>
+        <span class="idx-eyebrow-chip"><span class="tabular-nums">{allGuides.length}</span> pages</span>
+        <span class="idx-eyebrow-trust">Problem-first. Catalog-sourced. No sponsored placements.</span>
       </div>
       <h1 class="guides-title">Use cases</h1>
       <p class="guides-subhead">
         Problem-first pages for picking tools by workflow, budget, and risk.
-      </p>
-      <p class="guides-confidence">
-        Each use case ranks tools from the same sourced catalog as the tool pages. No sponsored placements.
       </p>
       <div class="guides-stats" aria-label="Use cases stats">
         <div>
@@ -439,20 +439,11 @@ const categoriesCovered = new Set(
       --guide-subtle: var(--text-muted);
     }
     .guides-hero {
-      padding: clamp(34px, 6vw, 72px) 0 34px;
+      padding: var(--site-index-hero-top) 0 var(--site-section-gap);
       border-bottom: 1px solid var(--guide-line);
     }
     .guides-kicker {
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 10px;
-      color: var(--guide-subtle);
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      margin-bottom: 22px;
+      margin-bottom: 18px;
     }
     .guides-dot {
       width: 8px;
@@ -499,7 +490,7 @@ const categoriesCovered = new Set(
       margin-top: 34px;
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      max-width: 780px;
+      max-width: none;
       border: 1px solid var(--guide-line);
       border-radius: 8px;
       overflow: hidden;
@@ -526,7 +517,7 @@ const categoriesCovered = new Set(
       color: var(--guide-subtle);
     }
     .guides-section {
-      margin-top: 42px;
+      margin-top: var(--site-section-gap);
     }
     .guides-section-head {
       display: flex;

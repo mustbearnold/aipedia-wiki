@@ -43,11 +43,15 @@ const totalTools = tools.length;
     appSubtitle={`${totalTools} reviewed tools`}
     command="Search in plain English"
   >
-    <div class="p3-canvas search-index not-prose" data-search-index>
-    <section class="search-index-hero" aria-labelledby="search-title">
+    <div class="p3-canvas search-index site-directory-canvas not-prose" data-search-index>
+    <section class="search-index-hero site-index-hero" aria-labelledby="search-title">
       <div class="search-index-copy">
-        <p class="search-index-eyebrow">Aipedia Index</p>
-        <h1 id="search-title">Search all tools.</h1>
+        <div class="idx-eyebrow search-index-eyebrow">
+          <span class="idx-eyebrow-chip idx-eyebrow-accent">Aipedia Index</span>
+          <span class="idx-eyebrow-chip"><span class="tabular-nums">{totalTools}</span> tools</span>
+          <span class="idx-eyebrow-trust">Search the same reviewed catalog used across the site.</span>
+        </div>
+        <h1 id="search-title" class="search-index-title">Search all tools.</h1>
         <p class="search-index-lede">
           Type a tool, company, category, price range, or job to filter the full catalog.
         </p>
@@ -233,7 +237,7 @@ const totalTools = tools.length;
       width: 100%;
       max-width: 1680px;
       margin: 0 auto;
-      padding: 58px 32px 72px;
+      padding: var(--site-page-top) 0 var(--site-page-bottom);
       color: var(--p3-fg);
     }
 
@@ -581,7 +585,7 @@ const totalTools = tools.length;
 
     @media (max-width: 900px) {
       .search-index {
-        padding: 36px 18px 54px;
+        padding: var(--site-page-top) 0 var(--site-page-bottom);
       }
 
       .search-index-hero {
@@ -601,8 +605,8 @@ const totalTools = tools.length;
 
     @media (max-width: 640px) {
       .search-index {
-        padding: 26px 12px 42px;
-        width: calc(100vw - 56px);
+        padding: var(--site-page-top) 0 var(--site-page-bottom);
+        width: 100%;
       }
 
       .search-index-hero {

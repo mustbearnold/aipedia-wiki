@@ -50,7 +50,10 @@ body:has(main .t2-canvas) ::selection {
 
   max-width: 960px;
   margin: 0 auto;
-  padding: 0 4px;
+  padding: 0;
+}
+.t2-canvas.site-directory-canvas {
+  max-width: none;
 }
 .light .t2-canvas {
   --t2-line-strong: #cbd5e1;
@@ -2958,7 +2961,7 @@ html.light .t2-cat-search input {
   gap: 18px;
   position: relative;
   isolation: isolate;
-  padding: 34px 0 22px;
+  padding: var(--site-index-hero-top) 0 22px;
 }
 .compare-hero::before {
   content: "";

@@ -119,17 +119,21 @@ const breadcrumbItems = [
     appSubtitle={`${terms.length} terms`}
     command="Browse AI terms"
   >
-  <div class="glossary-desk" data-glossary-desk data-refresh-surface="home-adjacent">
+  <div class="glossary-desk site-directory-canvas" data-glossary-desk data-refresh-surface="home-adjacent">
     <nav class="glossary-desk__breadcrumb" aria-label="Breadcrumb" data-pagefind-ignore>
       <a href="/">Home</a>
       <span aria-hidden="true">/</span>
       <span aria-current="page">AI Glossary</span>
     </nav>
 
-    <section class="glossary-desk__hero" aria-labelledby="glossary-title">
+    <section class="glossary-desk__hero site-index-hero" aria-labelledby="glossary-title">
       <div class="glossary-desk__intro">
-        <p class="glossary-desk__eyebrow">Reference desk</p>
-        <h1 id="glossary-title">AI Glossary</h1>
+        <div class="idx-eyebrow glossary-desk__eyebrow">
+          <span class="idx-eyebrow-chip idx-eyebrow-accent">Reference desk</span>
+          <span class="idx-eyebrow-chip"><span class="tabular-nums">{terms.length}</span> terms</span>
+          <span class="idx-eyebrow-trust">Shared language for tools, agents, infrastructure, and business pages.</span>
+        </div>
+        <h1 id="glossary-title" class="glossary-desk__title">AI Glossary</h1>
         <p class="glossary-desk__lede">
           Definitions for the model, agent, business, and infrastructure terms used across aipedia.wiki.
         </p>
@@ -312,7 +316,7 @@ const breadcrumbItems = [
       width: 100%;
       max-width: 1180px;
       margin: 0 auto;
-      padding: 34px 0 72px;
+      padding: var(--site-page-top) 0 var(--site-page-bottom);
       color: var(--text-primary);
     }
 
@@ -345,7 +349,7 @@ const breadcrumbItems = [
       grid-template-columns: minmax(0, 1fr) minmax(280px, 430px);
       gap: 28px;
       align-items: end;
-      padding: 28px 0 26px;
+      padding: var(--site-index-hero-top) 0 var(--site-section-gap);
       border-bottom: 1px solid var(--glossary-line);
     }
 
@@ -788,7 +792,7 @@ const breadcrumbItems = [
 
     @media (max-width: 720px) {
       .glossary-desk {
-        padding-top: 22px;
+        padding-top: var(--site-page-top);
       }
 
       .glossary-desk__breadcrumb {

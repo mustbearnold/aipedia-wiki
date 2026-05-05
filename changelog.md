@@ -2,6 +2,14 @@
 
 Search format: each entry starts with `DD-MM-YYYY HH:MM TZ` so changes can be found by day, month, year, and time. Example search keys: `05-05-2026`, `05-2026`, `2026`, `11:29`.
 
+## 05-05-2026 21:02 NZST
+
+- Started the page-padding consistency pass for the next PR.
+- Added shared site spacing tokens for page gutters, top spacing, section rhythm, and bottom padding.
+- Normalized the main layout, T2 canvas, P3 canvas, homepage, search, glossary, and guides outer spacing so pages use one padding system instead of stacked page-specific gutters.
+- Added a wide directory canvas for compare, guides, and news indexes so they align with the tools directory while detail pages keep their narrower reading measure.
+- Extended the index-page pattern across tools, compare, guides, news, search, and glossary with shared hero spacing, eyebrow chips, headline scale, and full-width directory rails.
+
 ## 05-05-2026 19:21 NZST
 
 - Started the shortest-tool-page depth pass from the KPI queue.

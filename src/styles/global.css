@@ -105,6 +105,14 @@ html.theme-morph-fallback *::after {
     --motion-fast: 160ms;
     --motion-base: 240ms;
     --motion-slow: 420ms;
+    --site-page-max: 72rem;
+    --site-page-gutter: clamp(1rem, 3vw, 2rem);
+    --site-page-gutter-compact: clamp(0.875rem, 2vw, 1.5rem);
+    --site-page-top: clamp(1.5rem, 4vw, 3rem);
+    --site-page-bottom: clamp(3rem, 6vw, 5rem);
+    --site-section-gap: clamp(2.125rem, 4vw, 3.5rem);
+    --site-hero-padding-y: clamp(2rem, 5vw, 4.5rem);
+    --site-index-hero-top: clamp(1.125rem, 2.5vw, 2rem);
     --bg-base: #05060d;
     --bg-card: rgba(13, 18, 31, 0.78);
     --bg-card-hover: rgba(18, 24, 39, 0.82);
@@ -1287,6 +1295,32 @@ body > main,
 body > footer {
   z-index: 1;
 }
+.site-main-content {
+  width: min(100%, var(--site-page-max));
+  margin-inline: auto;
+  padding-inline: var(--site-page-gutter);
+}
+.site-directory-canvas {
+  width: 100%;
+  max-width: none;
+}
+.site-index-hero {
+  position: relative;
+  isolation: isolate;
+  max-width: none;
+  margin-bottom: 26px;
+  padding: var(--site-index-hero-top) 0 var(--site-section-gap);
+  border-bottom: 1px solid var(--border);
+}
+.site-index-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(34, 211, 238, 0.48), rgba(94, 234, 212, 0.34), transparent);
+  opacity: 0.42;
+  pointer-events: none;
+}
 .light .moat-layer {
   background:
     radial-gradient(ellipse 60% 38% at 55% 0%, rgba(2, 132, 199, 0.08), transparent 72%),
@@ -1335,6 +1369,10 @@ body > footer {
   margin-bottom: 26px;
   max-width: 860px;
 }
+.idx-hero.site-index-hero {
+  max-width: none;
+  padding: var(--site-index-hero-top) 0 var(--site-section-gap);
+}
 .idx-eyebrow {
   display: flex;
   flex-wrap: wrap;
@@ -1356,6 +1394,7 @@ body > footer {
   border: 1px solid var(--border);
   color: var(--text-secondary);
   white-space: nowrap;
+  text-transform: none;
 }
 .idx-eyebrow-fresh {
   color: #5eead4;
@@ -1387,6 +1426,7 @@ body > footer {
   color: var(--text-muted);
   letter-spacing: 0.005em;
   padding-left: 4px;
+  text-transform: none;
 }
 @media (max-width: 640px) {
   .idx-eyebrow-trust { display: none; }
@@ -1418,6 +1458,21 @@ body > footer {
   color: var(--text-secondary);
   max-width: 62ch;
   margin: 0;
+}
+.site-index-hero :is(.p3-headline, .guides-title, .search-index-title, .glossary-desk__title) {
+  max-width: 22ch;
+  margin: 0 0 18px;
+  font-size: clamp(2.25rem, 4.5vw, 3.5rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.04;
+}
+.site-index-hero :is(.p3-subhead, .guides-subhead, .search-index-lede, .glossary-desk__lede) {
+  max-width: 68ch;
+  margin: 0;
+  font-size: clamp(0.95rem, 1.2vw, 1.05rem);
+  font-weight: 500;
+  line-height: 1.55;
 }
 @media (prefers-reduced-motion: reduce) {
   .idx-eyebrow-livedot { animation: none; }
