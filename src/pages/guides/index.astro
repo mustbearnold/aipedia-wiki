@@ -3,6 +3,8 @@
  * /guides/ index. Problem-first use-case library over src/content/use-cases.
  */
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import IndexHero from '../../components/design/IndexHero.astro';
+import MetricStrip from '../../components/design/MetricStrip.astro';
 import OsPageShell from '../../components/os/OsPageShell.astro';
 import { getCollection } from 'astro:content';
 import '../../styles/t2-canvas.css';
@@ -318,34 +320,31 @@ const categoriesCovered = new Set(
       <span class="t2-breadcrumb-current" aria-current="page">Use cases</span>
     </nav>
 
-    <section class="guides-hero site-index-hero" data-pagefind-ignore data-reveal>
-      <div class="idx-eyebrow guides-kicker">
-        <span class="idx-eyebrow-chip idx-eyebrow-fresh">
-          <span class="idx-eyebrow-livedot" aria-hidden="true"></span>
-          Use cases
-        </span>
-        <span class="idx-eyebrow-chip"><span class="tabular-nums">{allGuides.length}</span> pages</span>
-        <span class="idx-eyebrow-trust">Problem-first. Catalog-sourced. No sponsored placements.</span>
-      </div>
-      <h1 class="guides-title">Use cases</h1>
-      <p class="guides-subhead">
-        Problem-first pages for picking tools by workflow, budget, and risk.
-      </p>
-      <div class="guides-stats" aria-label="Use cases stats">
-        <div>
-          <strong class="tabular-nums">{allGuides.length}</strong>
-          <span>use cases</span>
-        </div>
-        <div>
-          <strong class="tabular-nums">{toolMentions}</strong>
-          <span>tools mentioned</span>
-        </div>
-        <div>
-          <strong class="tabular-nums">{categoriesCovered}</strong>
-          <span>categories covered</span>
-        </div>
-      </div>
-    </section>
+    <IndexHero
+      title="Use cases"
+      lead="Problem-first pages for picking tools by workflow, budget, and risk."
+      class="guides-hero"
+      eyebrowClass="guides-kicker"
+      headingClass="guides-title"
+      leadClass="guides-subhead"
+      reveal
+      eyebrow={[
+        { label: 'Use cases', tone: 'fresh', live: true },
+        { label: 'pages', value: allGuides.length },
+      ]}
+      trust="Problem-first. Catalog-sourced. No sponsored placements."
+    >
+      <MetricStrip
+        slot="footer"
+        class="guides-stats"
+        label="Use cases stats"
+        metrics={[
+          { label: 'Use cases', value: allGuides.length },
+          { label: 'Tools mentioned', value: toolMentions },
+          { label: 'Categories covered', value: categoriesCovered },
+        ]}
+      />
+    </IndexHero>
 
     {featured.length > 0 && (
       <section class="guides-section" data-reveal>
@@ -485,36 +484,6 @@ const categoriesCovered = new Set(
       color: var(--guide-subtle);
       font-size: 14px;
       line-height: 1.5;
-    }
-    .guides-stats {
-      margin-top: 34px;
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      max-width: none;
-      border: 1px solid var(--guide-line);
-      border-radius: 8px;
-      overflow: hidden;
-      background: var(--guide-surface);
-    }
-    .guides-stats div {
-      padding: 18px 20px;
-      border-right: 1px solid var(--guide-line);
-    }
-    .guides-stats div:last-child { border-right: 0; }
-    .guides-stats strong {
-      display: block;
-      font-size: clamp(1.65rem, 3vw, 2.3rem);
-      line-height: 1;
-      color: var(--text-primary);
-    }
-    .guides-stats span {
-      display: block;
-      margin-top: 8px;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--guide-subtle);
     }
     .guides-section {
       margin-top: var(--site-section-gap);
@@ -709,17 +678,11 @@ const categoriesCovered = new Set(
       padding: 10px 8px;
     }
     @media (max-width: 760px) {
-      .guides-stats,
       .guides-featured-grid,
       .guides-lanes,
       .guides-archive-grid {
         grid-template-columns: 1fr;
       }
-      .guides-stats div {
-        border-right: 0;
-        border-bottom: 1px solid var(--guide-line);
-      }
-      .guides-stats div:last-child { border-bottom: 0; }
       .guides-section-head {
         align-items: start;
         flex-direction: column;

@@ -1,0 +1,130 @@
+---
+type EyebrowTone = 'fresh' | 'accent' | 'neutral' | 'gold';
+
+interface EyebrowItem {
+  label: string;
+  value?: string | number;
+  tone?: EyebrowTone;
+  live?: boolean;
+  href?: string;
+  class?: string;
+}
+
+interface Props {
+  title: string;
+  accent?: string;
+  suffix?: string;
+  lead?: string;
+  titleId?: string;
+  eyebrow?: EyebrowItem[];
+  trust?: string;
+  class?: string;
+  mainClass?: string;
+  eyebrowClass?: string;
+  headingClass?: string;
+  leadClass?: string;
+  accentClass?: string;
+  reveal?: boolean;
+  revealDelay?: string;
+  ariaLabelledby?: string;
+}
+
+const {
+  title,
+  accent,
+  suffix = '',
+  lead,
+  titleId,
+  eyebrow = [],
+  trust,
+  class: className = '',
+  mainClass = '',
+  eyebrowClass = '',
+  headingClass = 'idx-headline',
+  leadClass = 'idx-subhead',
+  accentClass = 'idx-gradient',
+  reveal = false,
+  revealDelay,
+  ariaLabelledby,
+} = Astro.props;
+
+const hasActions = Astro.slots.has('actions');
+const hasAfterLead = Astro.slots.has('afterLead');
+const hasAside = Astro.slots.has('aside');
+const hasFooter = Astro.slots.has('footer');
+const sectionClasses = ['ds-index-hero', 'site-index-hero', className].filter(Boolean).join(' ');
+const mainClasses = ['ds-index-hero-main', mainClass].filter(Boolean).join(' ');
+const eyebrowClasses = ['idx-eyebrow', eyebrowClass].filter(Boolean).join(' ');
+const revealAttrs = reveal
+  ? { 'data-reveal': true, style: revealDelay ? `--reveal-delay: ${revealDelay};` : undefined }
+  : {};
+
+function eyebrowItemClass(item: EyebrowItem): string {
+  const toneClass = item.tone === 'fresh'
+    ? 'idx-eyebrow-fresh'
+    : item.tone === 'accent'
+      ? 'idx-eyebrow-accent'
+      : item.tone === 'gold'
+        ? 'idx-eyebrow-gold'
+        : '';
+  return ['idx-eyebrow-chip', toneClass, item.class].filter(Boolean).join(' ');
+}
+---
+
+<section
+  class={sectionClasses}
+  data-pagefind-ignore
+  aria-labelledby={ariaLabelledby ?? titleId}
+  {...revealAttrs}
+>
+  <div class={mainClasses}>
+    {(eyebrow.length > 0 || trust) && (
+      <div class={eyebrowClasses}>
+        {eyebrow.map((item) => item.href ? (
+          <a href={item.href} class={eyebrowItemClass(item)}>
+            {item.live && <span class="idx-eyebrow-livedot" aria-hidden="true"></span>}
+            {item.value !== undefined && <span class="tabular-nums">{item.value}</span>}
+            <span>{item.label}</span>
+          </a>
+        ) : (
+          <span class={eyebrowItemClass(item)}>
+            {item.live && <span class="idx-eyebrow-livedot" aria-hidden="true"></span>}
+            {item.value !== undefined && <span class="tabular-nums">{item.value}</span>}
+            <span>{item.label}</span>
+          </span>
+        ))}
+        {trust && <span class="idx-eyebrow-trust">{trust}</span>}
+      </div>
+    )}
+
+    <h1 id={titleId} class={headingClass}>
+      {title}{accent && <> <span class={accentClass}>{accent}</span></>}{suffix}
+    </h1>
+
+    {lead && <p class={leadClass}>{lead}</p>}
+
+    {hasAfterLead && (
+      <div class="ds-index-hero-after">
+        <slot name="afterLead" />
+      </div>
+    )}
+
+    {hasActions && (
+      <div class="ds-index-hero-actions">
+        <slot name="actions" />
+      </div>
+    )}
+  </div>
+
+  {hasAside && (
+    <div class="ds-index-hero-aside">
+      <slot name="aside" />
+    </div>
+  )}
+
+  {hasFooter && (
+    <div class="ds-index-hero-footer">
+      <slot name="footer" />
+    </div>
+  )}
+</section>

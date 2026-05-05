@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import IndexHero from '../components/design/IndexHero.astro';
 import ToolLogo from '../components/ToolLogo.astro';
 import OsPageShell from '../components/os/OsPageShell.astro';
 import '../styles/p3-canvas.css';
@@ -44,18 +45,23 @@ const totalTools = tools.length;
     command="Search in plain English"
   >
     <div class="p3-canvas search-index site-directory-canvas not-prose" data-search-index>
-    <section class="search-index-hero site-index-hero" aria-labelledby="search-title">
-      <div class="search-index-copy">
-        <div class="idx-eyebrow search-index-eyebrow">
-          <span class="idx-eyebrow-chip idx-eyebrow-accent">Aipedia Index</span>
-          <span class="idx-eyebrow-chip"><span class="tabular-nums">{totalTools}</span> tools</span>
-          <span class="idx-eyebrow-trust">Search the same reviewed catalog used across the site.</span>
-        </div>
-        <h1 id="search-title" class="search-index-title">Search all tools.</h1>
-        <p class="search-index-lede">
-          Type a tool, company, category, price range, or job to filter the full catalog.
-        </p>
-
+    <IndexHero
+      title="Search all tools"
+      suffix="."
+      titleId="search-title"
+      lead="Type a tool, company, category, price range, or job to filter the full catalog."
+      class="search-index-hero"
+      mainClass="search-index-copy"
+      eyebrowClass="search-index-eyebrow"
+      headingClass="search-index-title"
+      leadClass="search-index-lede"
+      eyebrow={[
+        { label: 'Aipedia Index', tone: 'accent' },
+        { label: 'tools', value: totalTools },
+      ]}
+      trust="Search the same reviewed catalog used across the site."
+    >
+      <Fragment slot="afterLead">
         <label class="p3-search p3-search-btn search-index-control" for="catalog-search-input">
           <span class="p3-search-btn-glow" aria-hidden="true"></span>
           <svg class="p3-search-icon" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
@@ -79,8 +85,9 @@ const totalTools = tools.length;
             <button type="button" class="search-index-chip" data-search-chip={term}>{term}</button>
           ))}
         </div>
-      </div>
+      </Fragment>
 
+      <Fragment slot="aside">
       <aside class="search-index-ledger" aria-label="Catalog summary">
         <p class="search-index-ledger-kicker">Catalog</p>
         <div class="search-index-ledger-row">
@@ -96,7 +103,8 @@ const totalTools = tools.length;
           <strong>A-Z</strong>
         </div>
       </aside>
-    </section>
+      </Fragment>
+    </IndexHero>
 
     <section class="search-index-results" aria-labelledby="all-tools-title">
       <div class="search-index-results-head">

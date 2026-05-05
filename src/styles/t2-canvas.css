@@ -3111,6 +3111,9 @@ html.light .t2-cat-search input {
   color: var(--t2-muted);
   font-size: 12px;
 }
+.compare-summary-strip {
+  margin: 8px 0 22px;
+}
 .compare-filter-premium {
   display: block;
   margin: 0 0 30px;

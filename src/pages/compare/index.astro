@@ -4,6 +4,8 @@
  * Redesigned April 23, 2026 into the .t2-canvas system.
  */
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import IndexHero from '../../components/design/IndexHero.astro';
+import MetricStrip from '../../components/design/MetricStrip.astro';
 import OsPageShell from '../../components/os/OsPageShell.astro';
 import BreadcrumbLD from '../../components/seo/BreadcrumbLD.astro';
 import CollectionPageLD from '../../components/seo/CollectionPageLD.astro';
@@ -140,19 +142,25 @@ const comparisonItems = enriched.map((comparison) => ({
       <span class="t2-breadcrumb-current" aria-current="page">Compare</span>
     </nav>
 
-    <section class="compare-hero site-index-hero" data-pagefind-ignore data-reveal style="--reveal-delay: 60ms;">
-      <div class="compare-hero-main">
-        <div class="idx-eyebrow compare-eyebrow">
-          <span class="idx-eyebrow-chip idx-eyebrow-accent">Compare tools</span>
-          <span class="idx-eyebrow-chip"><span class="tabular-nums">{allComparisons.length}</span> guides</span>
-          <span class="idx-eyebrow-trust">Editorial only. No paid placements.</span>
-        </div>
-        <h1 class="idx-headline compare-headline">
-          Choose the right AI tool <span class="idx-gradient">before switching</span>.
-        </h1>
-        <p class="idx-subhead compare-subhead">
-          Side-by-side guides for the tool pairs people actually search. See scores, pricing notes, strengths, weaknesses, and which tool fits your work.
-        </p>
+    <IndexHero
+      title="Choose the right AI tool"
+      accent="before switching"
+      suffix="."
+      lead="Side-by-side guides for the tool pairs people actually search. See scores, pricing notes, strengths, weaknesses, and which tool fits your work."
+      class="compare-hero"
+      mainClass="compare-hero-main"
+      eyebrowClass="compare-eyebrow"
+      headingClass="idx-headline compare-headline"
+      leadClass="idx-subhead compare-subhead"
+      reveal
+      revealDelay="60ms"
+      eyebrow={[
+        { label: 'Compare tools', tone: 'accent' },
+        { label: 'guides', value: allComparisons.length },
+      ]}
+      trust="Editorial only. No paid placements."
+    >
+      <Fragment slot="actions">
         <div class="t2-ctas compare-ctas">
           <a href="/compare/build/" class="t2-cta t2-cta-primary">
             Build your own comparison
@@ -163,8 +171,9 @@ const comparisonItems = enriched.map((comparison) => ({
             <span class="t2-cta-arrow" aria-hidden="true">&rarr;</span>
           </a>
         </div>
-      </div>
+      </Fragment>
 
+      <Fragment slot="aside">
       <aside class="compare-hero-panel" aria-label="Comparison highlights">
         <div class="compare-panel-kicker">April 2026 comparison guide</div>
         <div class="compare-panel-score">
@@ -183,17 +192,16 @@ const comparisonItems = enriched.map((comparison) => ({
           ))}
         </div>
       </aside>
-    </section>
+      </Fragment>
+    </IndexHero>
 
-    <section class="compare-signal-grid" aria-label="Comparison summary" data-reveal style="--reveal-delay: 120ms;">
-      {heroSignals.map((signal) => (
-        <div class="compare-signal">
-          <span class="compare-signal-label">{signal.label}</span>
-          <strong class="compare-signal-value tabular-nums">{signal.value}</strong>
-          <span class="compare-signal-note">{signal.note}</span>
-        </div>
-      ))}
-    </section>
+    <MetricStrip
+      class="compare-summary-strip"
+      label="Comparison summary"
+      reveal
+      revealDelay="120ms"
+      metrics={heroSignals}
+    />
 
     <div class="t2-compare-filter compare-filter-premium" data-reveal>
       <label for="compare-filter" class="compare-filter-label">Find a comparison</label>

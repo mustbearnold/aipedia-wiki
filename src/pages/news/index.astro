@@ -17,6 +17,7 @@
  */
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import EmailCapture from '../../components/EmailCapture.astro';
+import IndexHero from '../../components/design/IndexHero.astro';
 import OsPageShell from '../../components/os/OsPageShell.astro';
 import BreadcrumbLD from '../../components/seo/BreadcrumbLD.astro';
 import CollectionPageLD from '../../components/seo/CollectionPageLD.astro';
@@ -238,23 +239,24 @@ const newsItems = sorted.slice(0, 100).map((item) => ({
       <span class="p3-crumbs-current" aria-current="page">News</span>
     </nav>
 
-    <!-- =============== HERO =============== -->
-    <header class="p3-newsdesk-hero site-index-hero" data-reveal style="--reveal-delay: 60ms;">
-      <div class="idx-eyebrow">
-        <span class="idx-eyebrow-chip idx-eyebrow-fresh">
-          <span class="idx-eyebrow-livedot" aria-hidden="true"></span>
-          Live desk
-        </span>
-        <span class="idx-eyebrow-chip">Updated {sorted[0]?.date ?? '—'}</span>
-        <span class="idx-eyebrow-trust">Primary-source linked. Material updates only.</span>
-      </div>
-      <h1 class="p3-headline p3-headline-wide">
-        The AI news <span class="p3-gradient">desk</span>.
-      </h1>
-      <p class="p3-subhead">
-        Every model release, price change, acquisition, and shutdown that moves a tool's score. Each item links to primary sources. Items land when material news lands, not on a forced cadence.
-      </p>
-
+    <IndexHero
+      title="The AI news"
+      accent="desk"
+      suffix="."
+      lead="Every model release, price change, acquisition, and shutdown that moves a tool's score. Each item links to primary sources. Items land when material news lands, not on a forced cadence."
+      class="p3-newsdesk-hero"
+      headingClass="p3-headline p3-headline-wide"
+      leadClass="p3-subhead"
+      accentClass="p3-gradient"
+      reveal
+      revealDelay="60ms"
+      eyebrow={[
+        { label: 'Live desk', tone: 'fresh', live: true },
+        { label: `Updated ${sorted[0]?.date ?? '—'}` },
+      ]}
+      trust="Primary-source linked. Material updates only."
+    >
+      <Fragment slot="footer">
       <div class="p3-statbar p3-statbar-5 p3-newsdesk-statbar" data-reveal style="--reveal-delay: 120ms; margin-top: 28px; margin-bottom: 0;">
         <div class="p3-stat">
           <span class="p3-stat-num tabular-nums">{sorted.length}</span>
@@ -287,7 +289,8 @@ const newsItems = sorted.slice(0, 100).map((item) => ({
           </div>
         ))}
       </div>
-    </header>
+      </Fragment>
+    </IndexHero>
 
     <!-- =============== TOP STORY =============== -->
     {topStory && (
