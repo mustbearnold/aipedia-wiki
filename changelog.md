@@ -554,6 +554,12 @@ Notes:
 - Refreshed monthly and annual plan pricing for Free, Pro, Enterprise, and Enterprise+.
 - Added buyer-fit and rollout guidance covering meeting length, upload minutes, Search Copilot, playback, HIPAA/SSO controls, and coaching-metric governance.
 
+## 05-05-2026 17:38 NZST
+
+- Started the comparison-quality sprint for high-intent "X vs Y" pages.
+- Expanded `seedance-vs-synthesia`, `instantly-vs-zapier`, `marketmuse-vs-semrush`, `claude-vs-cursor`, and `elevenlabs-vs-wellsaid` with decision matrices, pricing/procurement guidance, workflow-fit sections, and buyer test checklists.
+- Added missing canonical fact-table flags to three upgraded comparisons and corrected the Seedance comparison from 3.1 to current Seedance 2.0 naming.
+
 ## 05-05-2026 17:02 NZST
 
 - Added six post-May-3 AI news articles covering Sierra's funding round, Anthropic's enterprise AI services company, OpenAI's reported deployment venture, PwC/OpenAI finance agents, White House model-vetting talks, and Palantir's Q1 AI-platform demand signal.
