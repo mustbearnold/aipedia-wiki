@@ -29,6 +29,52 @@ scores:
   value: 10
   moat: 7
   longevity: 9
+facts:
+  best_for:
+    value: "Best for teams that want Meta open-weight language models for self-hosting, fine-tuning, privacy-sensitive deployments, and model-provider diversification."
+    source: https://ai.meta.com/llama/
+    source_label: Meta Llama official site
+    source_id: llama-meta-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  pricing_anchor:
+    value: "Llama model weights are downloadable under Meta's license, but real cost comes from inference hosting, GPUs, fine-tuning, vendor APIs, and compliance work."
+    source: https://www.llama.com/llama-downloads/
+    source_label: Llama downloads
+    source_id: llama-downloads
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  model_control:
+    value: "Model cards and prompt-format docs are the source of truth for variants, context behavior, tool-use formats, and deployment assumptions."
+    source: https://www.llama.com/docs/model-cards-and-prompt-formats/
+    source_label: Llama model documentation
+    source_id: llama-docs
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  open_source:
+    value: "Meta's GitHub utilities are useful for model-adjacent tooling, examples, and release artifacts, but license terms still need separate review."
+    source: https://github.com/meta-llama/llama-models
+    source_label: Meta Llama GitHub repository
+    source_id: llama-repository
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  watch_out_for:
+    value: "Open weights do not eliminate operational burden; benchmark quality, safety filters, data rights, hosting cost, and license restrictions before standardizing."
+    source: https://www.llama.com/docs/model-cards-and-prompt-formats/
+    source_label: Llama model documentation
+    source_id: llama-docs
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
 tags: [open-weight, llm, llama, meta, open-source, self-hosted, mixture-of-experts, multimodal, long-context]
 best_for:
   - self-hosted or VPC deployment
@@ -47,10 +93,16 @@ price_history:
   - date: 2025-04-05
     plan: "Llama 4 Maverick / Scout"
     price: "$0"
+    source: "https://www.together.ai/pricing"
+    source_label: "Source"
+    source_id: llama-pricing
     note: "Open weights released under Llama 4 Community License"
   - date: 2026-04-15
     plan: "Hosted (Groq)"
     price: "$0.20 / $0.60 per 1M tok"
+    source: "https://www.together.ai/pricing"
+    source_label: "Source"
+    source_id: llama-pricing
     note: "Cheapest first-party hosted Maverick inference"
 ---
 

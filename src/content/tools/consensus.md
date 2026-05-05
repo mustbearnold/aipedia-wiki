@@ -24,6 +24,48 @@ scores:
   value: 8
   moat: 7
   longevity: 7
+facts:
+  best_for:
+    value: "Research teams and students who need literature search with paper-level answers, study summaries, and a quick read on whether the evidence agrees."
+    source: "https://consensus.app"
+    source_label: "Consensus official site"
+    source_id: consensus-official
+    verified_at: 2026-05-04
+    volatility: medium
+    confidence: high
+  evidence_surface:
+    value: "Consensus is strongest when the question can be answered from academic literature rather than general web sources; its product centers paper search, summaries, and evidence synthesis."
+    source: "https://consensus.app"
+    source_label: "Consensus official site"
+    source_id: consensus-official
+    verified_at: 2026-05-04
+    volatility: medium
+    confidence: high
+  pricing_anchor:
+    value: "Freemium research-search product with paid individual plans listed on the vendor pricing page."
+    source: "https://consensus.app/pricing"
+    source_label: "Consensus pricing"
+    source_id: consensus-pricing
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
+  workflow_surface:
+    value: "Use it before drafting or buying research databases: ask a focused question, inspect cited papers, then move durable conclusions into notes or editorial evidence."
+    source: "https://consensus.app"
+    source_label: "Consensus official site"
+    source_id: consensus-official
+    verified_at: 2026-05-04
+    volatility: medium
+    confidence: medium
+  watch_out_for:
+    value: "It is not a replacement for expert literature review. Check the underlying papers, inclusion criteria, and recency before making clinical, legal, or investment decisions."
+    source: "https://consensus.app"
+    source_label: "Consensus official site"
+    source_id: consensus-official
+    verified_at: 2026-05-04
+    volatility: medium
+    confidence: high
 tags: [research, academic-search, peer-review, evidence-synthesis, science, consensus-meter]
 seo_title: "Consensus: Academic AI Search Review & Pricing (April 2026)"
 meta_description: "Consensus searches 200M+ peer-reviewed papers with a Consensus Meter showing study agreement. Free tier capped; Premium $11.99/mo ($8.99/mo annual) for unlimited Pro Analysis. Enterprise custom."

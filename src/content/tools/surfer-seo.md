@@ -28,6 +28,49 @@ scores:
   value: 8
   moat: 7
   longevity: 8
+facts:
+  best_for:
+    value: "SEO teams that want SERP-driven content briefs, optimization scoring, keyword research, and AI visibility tracking in one workflow."
+    source: "https://surferseo.com"
+    source_label: "Surfer SEO official site"
+    source_id: surfer-official
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  pricing_anchor:
+    value: "Paid tiers start around the Discovery level, with document, seat, and feature quotas that materially affect agency or content-team cost."
+    source: "https://surferseo.com/pricing/"
+    source_label: "Surfer SEO pricing"
+    source_id: surfer-seo-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-08-03
+  content_optimizer:
+    value: "Surfer remains strongest when the buyer wants content editing against live SERP signals rather than generic AI writing alone."
+    source: "https://surferseo.com"
+    source_label: "Surfer SEO official site"
+    source_id: surfer-official
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  ai_search_visibility:
+    value: "Recent positioning includes AI visibility tracking across Google and AI answer surfaces, which should be reviewed in the changelog for current availability."
+    source: "https://surferseo.com/changelog"
+    source_label: "Surfer SEO changelog"
+    source_id: surfer-changelog
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: medium
+  watch_out_for:
+    value: "SERP scores are directional, not editorial truth. Avoid optimizing away originality, expertise, and brand voice just to satisfy a content score."
+    source: "https://surferseo.com"
+    source_label: "Surfer SEO official site"
+    source_id: surfer-official
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-08-03
 tags: [seo, content-optimization, on-page-seo, content-editor, serp-analysis, keyword-research, ai-tracker, nlp, multilingual]
 seo_title: 'Surfer SEO: Features, Pricing & Review (April 2026)'
 meta_description: >-
@@ -49,14 +92,23 @@ price_history:
   - date: 2026-04-19
     plan: "Discovery"
     price: "$49/mo annual ($69/mo monthly)"
+    source: "https://surferseo.com/pricing/"
+    source_label: "Source"
+    source_id: surfer-seo-pricing
     note: "New entry tier (April 2026 pricing refresh). Includes 120 documents, 1 seat, keyword research, Surfy AI writer, SERP Analyzer."
   - date: 2026-04-19
     plan: "Standard"
     price: "$99/mo annual"
+    source: "https://surferseo.com/pricing/"
+    source_label: "Source"
+    source_id: surfer-seo-pricing
     note: "360 documents, 3 seats, AI Tracker (25 prompts/week), Content Audit, Topical Map."
   - date: 2026-04-19
     plan: "Pro"
     price: "$182/mo annual"
+    source: "https://surferseo.com/pricing/"
+    source_label: "Source"
+    source_id: surfer-seo-pricing
     note: "360 documents, 5 seats, AI Tracker (50 prompts/day), 5 brand workspaces, 200 pages tracked."
 ---
 

@@ -33,17 +33,24 @@ facts:
     value: "AI dictation across Mac, Windows, iPhone, and Android with 100+ languages, dictionary/snippets, command mode, and privacy mode"
     source: "https://wisprflow.ai/pricing"
     source_label: "Wispr Flow pricing"
+    source_id: wispr-flow-best-for
     verified_at: 2026-04-28
+    confidence: high
   best_paid_tier:
     value: "Flow Pro ($15/user/month monthly or $12/user/month annual) for unlimited words and command mode"
     source: "https://wisprflow.ai/pricing"
     source_label: "Wispr Flow pricing"
+    source_id: wispr-flow-best-for
     verified_at: 2026-04-28
+    next_review_at: 2026-06-03
+    confidence: high
   best_for:
     value: "People who write across many apps and want AI-cleaned dictation instead of raw speech-to-text"
     source: "https://wisprflow.ai/pricing"
     source_label: "Wispr Flow pricing"
+    source_id: wispr-flow-best-for
     verified_at: 2026-04-28
+    confidence: high
 tags: [ai-voice, dictation, speech-to-text, writing, notes, productivity, mac, windows, ios, android]
 best_for:
   - people who write faster by speaking than typing
@@ -60,14 +67,23 @@ price_history:
   - date: 2026-04-28
     plan: "Flow Basic"
     price: "$0"
+    source: "https://wisprflow.ai/pricing"
+    source_label: "Source"
+    source_id: wispr-flow-best-for
     note: "2,000 words/week desktop, 1,000 words/week iPhone, Android unlimited for a limited time"
   - date: 2026-04-28
     plan: "Flow Pro"
     price: "$15/user/month monthly or $12/user/month annual"
+    source: "https://wisprflow.ai/pricing"
+    source_label: "Source"
+    source_id: wispr-flow-best-for
     note: "Unlimited words across Mac, Windows, iPhone, and Android"
   - date: 2026-04-28
     plan: "Flow Enterprise"
     price: "Custom"
+    source: "https://wisprflow.ai/pricing"
+    source_label: "Source"
+    source_id: wispr-flow-best-for
     note: "SOC 2 Type II, ISO 27001, SSO/SAML, enforced privacy mode, HIPAA controls"
 ---
 

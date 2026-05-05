@@ -24,6 +24,142 @@ scores:
   value: 6
   moat: 7
   longevity: 8
+facts:
+  flagship_model:
+    value: "Ask Notion, AI Autofill, AI meeting notes, and Custom Agents inside the Notion workspace"
+    source: "https://www.notion.so/product/ai"
+    source_label: "Notion AI product page"
+    source_id: notion-ai
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  context_window:
+    value: "Not disclosed: Notion does not publish a single model context window for Notion AI features"
+    source: "https://www.notion.so/product/ai"
+    source_label: "Notion AI product page"
+    source_id: notion-ai
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  pricing_anchor:
+    value: "Full AI access for new subscribers is bundled into Business and Enterprise plans; Business is $18/user/mo annually or $20 monthly"
+    source: "https://www.notion.so/pricing"
+    source_label: "Notion pricing"
+    source_id: notion-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  free_plan:
+    value: "Free Notion plan exists, but full Notion AI access requires Business or Enterprise for new subscribers"
+    source: "https://www.notion.so/pricing"
+    source_label: "Notion pricing"
+    source_id: notion-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  best_paid_tier:
+    value: "Business for teams that want AI; Enterprise for SAML SSO, audit logs, and advanced security"
+    source: "https://www.notion.so/pricing"
+    source_label: "Notion pricing"
+    source_id: notion-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  api_available:
+    value: "Yes for the Notion workspace API, but Notion AI itself is not exposed as a general-purpose model API"
+    source: "https://www.notion.so/help"
+    source_label: "Notion help"
+    source_id: notion-help
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  image_generation:
+    value: "No primary native image-generation product; Notion AI is workspace Q&A, writing, database, meeting, and agent automation"
+    source: "https://www.notion.so/product/ai"
+    source_label: "Notion AI product page"
+    source_id: notion-ai
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  video_generation:
+    value: "No native video generation; Notion AI is workspace Q&A, writing, database, meeting, and agent automation"
+    source: "https://www.notion.so/product/ai"
+    source_label: "Notion AI product page"
+    source_id: notion-ai
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  real_time_voice:
+    value: "Voice input and meeting-note workflows exist, but Notion AI is not a real-time voice-agent platform"
+    source: "https://www.notion.so/product/ai"
+    source_label: "Notion AI product page"
+    source_id: notion-ai
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  web_browsing:
+    value: "Connected-app and workspace Q&A, not general open-web browsing"
+    source: "https://www.notion.so/product/ai"
+    source_label: "Notion AI product page"
+    source_id: notion-ai
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  coding_agent:
+    value: "No software-coding agent; Custom Agents automate Notion workspace workflows"
+    source: "https://www.notion.so/product/ai"
+    source_label: "Notion AI product page"
+    source_id: notion-ai
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  enterprise_controls:
+    value: "Enterprise adds SAML SSO, audit logs, advanced security, and workspace governance"
+    source: "https://www.notion.so/pricing"
+    source_label: "Notion pricing"
+    source_id: notion-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  data_retention_or_privacy:
+    value: "Cloud-hosted workspace AI; regulated teams should review Notion Enterprise security and admin controls"
+    source: "https://www.notion.so/help"
+    source_label: "Notion help"
+    source_id: notion-help
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  open_source_or_local:
+    value: "No: Notion AI is proprietary cloud software with no local/offline AI mode"
+    source: "https://www.notion.so/product/ai"
+    source_label: "Notion AI product page"
+    source_id: notion-ai
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  best_for:
+    value: "Teams already using Notion as a wiki, docs hub, database, or project workspace"
+    source: "https://www.notion.so/product/ai"
+    source_label: "Notion AI product page"
+    source_id: notion-ai
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  watch_out_for:
+    value: "AI is Business-only for new signups, model transparency is limited, and messy workspaces reduce answer quality"
+    source: "https://www.notion.so/pricing"
+    source_label: "Notion pricing"
+    source_id: notion-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
 tags: [notes, workspace, wiki, knowledge-base, ai-writing, ai-q-and-a, databases, collaboration, productivity, agents, meeting-notes]
 seo_title: "Notion AI: Features, Pricing & Review (April 2026)"
 meta_description: "Notion AI is bundled into Business at $18/user/mo (annual) or $20 (monthly) and includes AI Agents, Ask Notion, AI Autofill, and meeting notes. The standalone $10 add-on was retired May 2025."
@@ -43,10 +179,16 @@ price_history:
   - date: 2025-05
     plan: "Plus AI add-on"
     price: "retired"
+    source: "https://www.notion.so/pricing"
+    source_label: "Source"
+    source_id: notion-pricing
     note: "Standalone $10 AI add-on removed. AI now Business-only for new signups. Legacy Plus+AI subscribers grandfathered."
   - date: 2026-04-17
     plan: "Business"
     price: "$18/mo annual · $20/mo monthly"
+    source: "https://www.notion.so/pricing"
+    source_label: "Source"
+    source_id: notion-pricing
     note: "Verified via notion.so/pricing"
 ---
 

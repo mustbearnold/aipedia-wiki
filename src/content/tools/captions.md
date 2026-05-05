@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$69.99/month"
 status: active
 launched: 2021-01
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-04
+last_verified: 2026-05-04
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -24,7 +24,54 @@ scores:
   value: 8
   moat: 6
   longevity: 7
+facts:
+  product_scope:
+    value: "Creator-first AI video editor covering captions, talking-head editing, AI dubbing, AI creator/twin workflows, and mobile-friendly short-form production."
+    source: "https://captions.ai/overview"
+    source_label: "Captions overview"
+    source_id: captions-overview
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
+  pricing_anchor:
+    value: "Free entry point plus paid creator tiers on Captions pricing; verify export, AI feature, and usage limits before standardizing a creator workflow."
+    source: "https://captions.ai/pricing"
+    source_label: "Captions pricing"
+    source_id: captions-official
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
+  best_for:
+    value: "Short-form creators and social teams that need fast talking-head polish, subtitles, dubbing, eye contact, and AI avatar-style production in one app."
+    source: "https://captions.ai/overview"
+    source_label: "Captions overview"
+    source_id: captions-overview
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
+  watch_out_for:
+    value: "Less suitable for long-form editing, studio-grade color/audio pipelines, or teams that need open model/API control."
+    source: "https://captions.ai/pricing"
+    source_label: "Captions pricing"
+    source_id: captions-official
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: medium
 tags: [ai-video, captions, auto-captions, video-editing, ai-avatar, ai-twin, ai-creator, ai-dubbing, creator-tools, social-media, tiktok]
+best_for:
+  - vertical social video for TikTok, Reels, and Shorts
+  - creators who need captions, gaze correction, filler removal, and clip extraction in one app
+  - avatar-led short scripts with AI Twin or AI Creator
+  - quick multilingual dubbing for short-form clips
+not_best_for:
+  - long-form YouTube editing with complex timelines
+  - cinematic video generation, color grading, or VFX-heavy production
+  - enterprise LMS training pipelines that need SCORM export
+  - teams that need unlimited low-cost video minutes
 seo_title: "Captions.ai: Features, Pricing & Review (April 2026)"
 meta_description: "Captions.ai ships AI Twin, AI Creator, and AI Dubbing alongside gaze correction and auto-captions for short-form video. Pro $9.99, Max $24.99, Scale $69.99. The vertical-social specialist for talking-head creators."
 author: aipedia.wiki Editorial

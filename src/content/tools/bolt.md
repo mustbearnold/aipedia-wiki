@@ -27,7 +27,60 @@ scores:
   value: 8
   moat: 7
   longevity: 7
+facts:
+  best_for:
+    value: "Bolt.new is best for browser-based prototyping of full-stack web apps where the AI can edit files, run the app, and iterate in a hosted WebContainer environment."
+    source: "https://support.bolt.new/docs"
+    source_label: "Bolt docs"
+    source_id: bolt-docs
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  pricing_anchor:
+    value: "Bolt uses token/usage-aware paid plans, so serious users should estimate iteration volume, model usage, and deployment/export needs rather than comparing only list price."
+    source: "https://bolt.new/pricing"
+    source_label: "bolt.new/pricing"
+    source_id: bolt-official
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: high
+  runtime_architecture:
+    value: "Bolt's browser-native developer experience is built on StackBlitz WebContainers, enabling Node.js-style project execution without a local dev setup."
+    source: "https://webcontainers.io/"
+    source_label: "StackBlitz WebContainers"
+    source_id: stackblitz-webcontainers
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  workflow_surface:
+    value: "The product is strongest when a user wants prompt-to-code iteration with a running preview, file edits, package installs, and app debugging in one browser workspace."
+    source: "https://support.bolt.new/docs"
+    source_label: "Bolt docs"
+    source_id: bolt-docs
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  watch_out_for:
+    value: "Long debugging loops, large dependencies, or production-grade architecture work can consume tokens quickly; teams should move mature apps into a normal repo workflow once requirements stabilize."
+    source: "https://bolt.new/pricing"
+    source_label: "bolt.new/pricing"
+    source_id: bolt-official
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: medium
+    confidence: high
 tags: [app-builder, no-code, full-stack, webcontainers, browser-ide, prototyping, vibe-coding, ai-design]
+best_for:
+  - browser-only full-stack prototypes without local setup
+  - Chromebook, classroom, or locked-down environments that cannot install Node
+  - frontend-heavy apps where a fast Vite preview matters
+  - teams testing product ideas before choosing a backend architecture
+not_best_for:
+  - production apps that need managed databases and auth from the first prompt
+  - teams that require deterministic local dev environments and repo-first control
+  - cost-sensitive long sessions where token-metered billing can spike
+  - non-technical users who want a no-code builder instead of generated code
 quick_answer: >-
   Bolt.new is the browser-first AI app builder for fast prototypes, demos, and zero-setup web development. Pick it when WebContainers, instant preview, and one-click deploy matter. Choose Lovable for built-in Supabase/backend workflows, v0 for React components, or Cursor for serious codebase control.
 decision_brief:

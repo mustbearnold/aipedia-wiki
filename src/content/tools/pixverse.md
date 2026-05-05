@@ -28,6 +28,33 @@ scores:
   value: 9
   moat: 6
   longevity: 7
+facts:
+  best_for:
+    value: "AIsphere's AI video generator. V5.6 adds realistic multi-character lip-sync and ambient audio at 1080p, pricing undercuts Kling and Runway. Best for AI video generation, editing, avatars, or production workflows."
+    source: "https://platform.pixverse.ai"
+    source_label: "platform.pixverse.ai"
+    source_id: pixverse-official
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: medium
+  pricing_anchor:
+    value: "Standard; $8/mo (annual); Verified; 1,200 credits, 720p, 3 concurrent jobs"
+    source: "https://www.imagine.art/blogs/pixverse-ai-pricing"
+    source_label: "Source"
+    source_id: pixverse-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
+  watch_out_for:
+    value: "Non-Tier-1 canonical profile: verify current pricing, usage limits, data policy, and integration details before procurement"
+    source: "https://www.imagine.art/blogs/pixverse-ai-pricing"
+    source_label: "Source"
+    source_id: pixverse-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
 tags: [video-generation, ai-video, chinese-ai, anime, short-video, pixverse]
 best_for:
   - low-cost AI video generation for short-form social
@@ -45,10 +72,16 @@ price_history:
   - date: 2026-04-18
     plan: "Standard"
     price: "$8/mo (annual)"
+    source: "https://www.imagine.art/blogs/pixverse-ai-pricing"
+    source_label: "Source"
+    source_id: pixverse-pricing
     note: "Verified; 1,200 credits, 720p, 3 concurrent jobs"
   - date: 2026-04-18
     plan: "Pro"
     price: "$24/mo (annual)"
+    source: "https://www.imagine.art/blogs/pixverse-ai-pricing"
+    source_label: "Source"
+    source_id: pixverse-pricing
     note: "Verified; 6,000 credits, 1080p, 5 concurrent jobs"
 ---
 

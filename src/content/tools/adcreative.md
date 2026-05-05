@@ -11,8 +11,8 @@ pricing_model: paid
 price_range: "$29-$599/month"
 status: active
 launched: 2021-03
-last_updated: 2026-04-30
-last_verified: 2026-04-30
+last_updated: 2026-05-05
+last_verified: 2026-05-05
 update_frequency: quarterly
 seo_title: "AdCreative.ai: Features, Pricing & Review (April 2026)"
 meta_description: "AdCreative.ai generates banner, product, and video ads for Meta, Google, LinkedIn, and TikTok with conversion-tuned AI copy. Plans run $29-$599/mo, credit-based. Honest take on where it beats Canva and where Omneky still wins."
@@ -28,6 +28,55 @@ scores:
   value: 7
   moat: 6
   longevity: 7
+facts:
+  best_for:
+    value: Best for performance marketers who need many ad creative variants, product visuals, and platform-specific ad assets
+      from a brand kit.
+    source: https://www.adcreative.ai/
+    source_label: AdCreative.ai official site
+    source_id: adcreative-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  pricing_anchor:
+    value: AdCreative.ai’s current public pricing surface is its official site because the old /pricing path is unavailable;
+      verify credits and plan names before procurement.
+    source: https://www.adcreative.ai/
+    source_label: AdCreative.ai official site
+    source_id: adcreative-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  image_generation:
+    value: The product is focused on ad creative and product-image generation rather than general-purpose image art.
+    source: https://www.adcreative.ai/
+    source_label: AdCreative.ai official site
+    source_id: adcreative-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  enterprise_controls:
+    value: Team fit depends on brand kit handling, ad-platform workflows, creative volume, and collaboration limits.
+    source: https://www.adcreative.ai/
+    source_label: AdCreative.ai official site
+    source_id: adcreative-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  watch_out_for:
+    value: The stale /pricing URL is a known source-health pitfall; use the homepage/current official pricing surface and verify
+      credit economics before scaling campaigns.
+    source: https://www.adcreative.ai/
+    source_label: AdCreative.ai official site
+    source_id: adcreative-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
 tags: [ad-creative, ad-generation, paid-social, performance-marketing, meta-ads, google-ads, tiktok-ads, banner-ads, video-ads, product-photography]
 best_for:
   - performance marketers running paid social
@@ -44,6 +93,9 @@ price_history:
   - date: 2026-04-15
     plan: "Starter"
     price: "$29/mo"
+    source: "https://www.adcreative.ai/"
+    source_label: "Source"
+    source_id: adcreative-pricing
     note: "Verified, credit-based entry tier"
 ---
 
@@ -108,7 +160,7 @@ The moat is workflow speed. A solo marketer can generate a week's worth of varia
 
 ## Pricing
 
-Subscription pricing via [adcreative.ai/pricing](https://adcreative.ai/pricing). All paid plans include a free trial. No permanent free tier.
+Subscription pricing via [adcreative.ai/pricing](https://www.adcreative.ai/). All paid plans include a free trial. No permanent free tier.
 
 | Plan | Monthly | Credits / generations | Brands | Users | Who's it for |
 |------|---------|-----------------------|--------|-------|--------------|
@@ -117,7 +169,7 @@ Subscription pricing via [adcreative.ai/pricing](https://adcreative.ai/pricing).
 | Ultimate | Higher mid-tier | Larger bucket, team seats | 5+ | Multiple | Small agencies and in-house ad teams |
 | Enterprise | Custom, up to $599+/mo | Custom volume, API access | Unlimited | Unlimited | Multi-brand ad ops and agency groups |
 
-*Prices verified 2026-04-17 via [AdCreative pricing](https://adcreative.ai/pricing). Credit allocations and exact tier prices shift with promotions. Check the pricing page before committing annually.*
+*Prices verified 2026-04-17 via [AdCreative pricing](https://www.adcreative.ai/). Credit allocations and exact tier prices shift with promotions. Check the pricing page before committing annually.*
 
 ## Against the alternatives
 
@@ -148,7 +200,7 @@ This page was produced by the aipedia.wiki editorial pipeline, an automated syst
 ## FAQ
 
 **Is AdCreative.ai free?**
-No. There is a free trial but no permanent free tier. The entry paid plan starts at $29/month ([AdCreative pricing](https://adcreative.ai/pricing)).
+No. There is a free trial but no permanent free tier. The entry paid plan starts at $29/month ([AdCreative pricing](https://www.adcreative.ai/)).
 
 **Which ad platforms does it export to?**
 Meta (Facebook and Instagram), Google, LinkedIn, and TikTok. Creative is generated in native aspect ratios per platform.
@@ -171,7 +223,7 @@ Yes. Point it at a product URL or upload product images, and it generates lifest
 ## Sources
 
 - [AdCreative.ai Official Site](https://adcreative.ai): product features, format coverage, platform support
-- [AdCreative Pricing](https://adcreative.ai/pricing): tier structure and credit allocation
+- [AdCreative Pricing](https://www.adcreative.ai/): tier structure and credit allocation
 - [AdCreative Blog](https://adcreative.ai/blog): launch notes, feature updates, conversion-scoring methodology
 
 ## Related

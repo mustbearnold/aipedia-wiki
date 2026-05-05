@@ -24,6 +24,58 @@ scores:
   value: 8
   moat: 9
   longevity: 9
+facts:
+  best_for:
+    value: "Developers who want Anthropic's coding agent in the terminal with permissioned codebase edits, shell commands, and repository-aware workflows."
+    source: "https://code.claude.com/docs/en/overview"
+    source_label: "Claude Code docs"
+    source_id: claude-code-official
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  pricing_anchor:
+    value: "Claude Code access is tied to Claude subscriptions and usage limits; Pro and Max tiers should be checked against expected coding-agent hours."
+    source: "https://claude.com/pricing"
+    source_label: "Anthropic pricing"
+    source_id: claude-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-08-03
+  coding_agent:
+    value: "Claude Code is an agentic CLI: it can inspect files, propose and apply edits, run commands, and work across larger codebase tasks with user approval."
+    source: "https://code.claude.com/docs/en/overview"
+    source_label: "Claude Code docs"
+    source_id: claude-code-official
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  flagship_model:
+    value: "Claude Code follows Anthropic model availability, with Opus 4.7 documented as a frontier model relevant for harder coding and agent tasks."
+    source: "https://www.anthropic.com/news/claude-opus-4-7"
+    source_label: "Anthropic Claude Opus 4.7 release"
+    source_id: anthropic-opus-47
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: medium
+    confidence: high
+  agent_manifest:
+    value: "The published llms.txt is useful for agent-readable documentation of Claude Code commands, capabilities, and integration surface."
+    source: "https://code.claude.com/llms.txt"
+    source_label: "Claude Code llms.txt"
+    source_id: claude-code-llms
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  watch_out_for:
+    value: "The power comes with real side effects. Teams should enforce repository permissions, review diffs, protect secrets, and avoid unattended destructive commands."
+    source: "https://code.claude.com/docs/en/overview"
+    source_label: "Claude Code docs"
+    source_id: claude-code-official
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-08-03
 tags: [cli, agentic-coding, terminal, codebase-wide, autonomous, anthropic, claude-opus, ultraplan, monitor, mcp, skills]
 seo_title: "Claude Code: Features, Pricing & Review (April 2026)"
 meta_description: "Claude Code is Anthropic's CLI agentic coding tool running on Claude Opus 4.7. Reads, writes, and runs across full codebases autonomously. Included with Pro $20/mo; Max 5x $100/mo or Max 20x $200/mo."
@@ -43,14 +95,23 @@ price_history:
   - date: 2026-04-16
     plan: "Default model"
     price: "Claude Opus 4.7"
+    source: "https://claude.com/pricing"
+    source_label: "Source"
+    source_id: claude-pricing
     note: "Opus 4.7 released April 16, 2026; new tokenizer produces 1.0-1.35x more tokens vs 4.6."
   - date: 2026-04-15
     plan: "Pro"
     price: "$20/mo"
+    source: "https://claude.com/pricing"
+    source_label: "Source"
+    source_id: claude-pricing
     note: "Claude Code available on Pro tier as of 2026; previously Max-only."
   - date: 2026-04-17
     plan: "Claude Design handoff"
     price: "Bundled"
+    source: "https://claude.com/pricing"
+    source_label: "Source"
+    source_id: claude-pricing
     note: "Claude Code now receives production-build bundles from Claude Design (new Pro+ product). Closed loop: prompt -> design -> Claude Code -> working app."
 ---
 

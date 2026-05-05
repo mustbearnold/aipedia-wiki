@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$200+/month"
 status: active
 launched: 2023-01
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-04
+last_verified: 2026-05-04
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -24,6 +24,52 @@ scores:
   value: 9
   moat: 6
   longevity: 7
+facts:
+  runtime_model:
+    value: "Browser-based TypeScript serverless environment for vals, scheduled jobs, HTTP endpoints, email handlers, and small internal tools."
+    source: "https://www.val.town/"
+    source_label: "Val Town homepage"
+    source_id: val-town-official
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: medium
+    confidence: high
+  docs_surface:
+    value: "Docs cover vals as functions, scripts, HTTP endpoints, cron jobs, and collaborative code snippets."
+    source: "https://docs.val.town/"
+    source_label: "Val Town docs"
+    source_id: val-town-docs
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: medium
+    confidence: high
+  pricing_anchor:
+    value: "Free and paid tiers are published on Val Town pricing; teams should verify execution, privacy, and collaboration limits before moving production utilities."
+    source: "https://www.val.town/pricing"
+    source_label: "Val Town pricing"
+    source_id: val-town-pricing
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
+  best_for:
+    value: "Developers who want to ship tiny automations, APIs, cron jobs, prototypes, and AI-assisted internal utilities without provisioning a full app stack."
+    source: "https://docs.val.town/"
+    source_label: "Val Town docs"
+    source_id: val-town-docs
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: medium
+    confidence: high
+  watch_out_for:
+    value: "Not a replacement for a full application platform when you need complex deployments, strict infra controls, or private enterprise governance."
+    source: "https://www.val.town/pricing"
+    source_label: "Val Town pricing"
+    source_id: val-town-pricing
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: medium
 tags: [serverless, typescript, browser-ide, ai-coding, automation, deployment, deno, townie]
 seo_title: "Val Town: Features, Pricing & Review (April 2026)"
 meta_description: "Val Town runs TypeScript vals as serverless HTTP endpoints and cron jobs from the browser. Free tier, Pro with $5 Townie AI credits, Teams with $100/month in credits. Zero setup, Deno-based."
@@ -44,10 +90,16 @@ price_history:
   - date: 2026-04-15
     plan: "Teams"
     price: "$200/mo"
+    source: "https://www.val.town/pricing"
+    source_label: "Source"
+    source_id: val-town-pricing
     note: "Includes $100/month in Townie credits and unlimited custom domains."
   - date: 2026-04-15
     plan: "Pro"
     price: "$20/mo"
+    source: "https://www.val.town/pricing"
+    source_label: "Source"
+    source_id: val-town-pricing
     note: "Verified unchanged. Includes $5/month in Townie credits."
 ---
 

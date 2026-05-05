@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: "Free (chat) / API from $0.60/M input tokens"
 status: active
 launched: 2023-10
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-04
+last_verified: 2026-05-04
 update_frequency: quarterly
 affiliate:
   has_program: false
@@ -26,6 +26,52 @@ scores:
   value: 8
   moat: 5
   longevity: 7
+facts:
+  model_family:
+    value: "Moonshot AI/Kimi provides the Kimi chat product and API/model platform, with Kimi-branded models positioned for long-context and agentic work."
+    source: "https://platform.moonshot.ai/"
+    source_label: "Moonshot platform"
+    source_id: kimi-official
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
+  pricing_anchor:
+    value: "Chat may be free/freemium, while API pricing is published in Kimi platform docs and should be checked per model and token direction."
+    source: "https://platform.kimi.ai/docs/pricing/chat"
+    source_label: "Kimi pricing docs"
+    source_id: kimi-pricing
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
+  api_available:
+    value: "Yes — Moonshot/Kimi platform documentation exposes developer API access and pricing."
+    source: "https://platform.moonshot.ai/"
+    source_label: "Moonshot platform"
+    source_id: kimi-official
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
+  best_for:
+    value: "Users evaluating Chinese frontier/chat models, long-context workflows, and Kimi API economics alongside Qwen, DeepSeek, GLM, and mainstream US labs."
+    source: "https://www.kimi.com/"
+    source_label: "Kimi homepage"
+    source_id: kimi-homepage
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
+  watch_out_for:
+    value: "Availability, documentation, and model naming can vary by region and platform surface, so verify the exact Kimi/Moonshot endpoint before production use."
+    source: "https://platform.kimi.ai/docs/pricing/chat"
+    source_label: "Kimi pricing docs"
+    source_id: kimi-pricing
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: medium
 tags: [long-context, chinese-llm, moe, reasoning, coding, multilingual, open-source, api]
 seo_title: "Kimi: Features, Pricing & Review (April 2026)"
 meta_description: "Kimi K2.5 by Moonshot AI offers a free 256K-context chatbot. 1T-parameter MoE with 32B active, agent swarm mode, API from $0.60/M input. Kimi K2 Thinking tops Humanity's Last Exam at 44.9%."

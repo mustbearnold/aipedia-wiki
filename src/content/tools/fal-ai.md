@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0.01-$0.08 per image / hourly GPUs $2.90-$9.00"
 status: active
 launched: 2022-10
-last_updated: 2026-04-22
-last_verified: 2026-04-22
+last_updated: 2026-05-04
+last_verified: 2026-05-04
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -24,6 +24,57 @@ scores:
   value: 9
   moat: 8
   longevity: 8
+facts:
+  best_for:
+    value: Best for developers shipping image, video, audio, and 3D generative media features through fast serverless model
+      APIs.
+    source: https://fal.ai/
+    source_label: fal.ai official site
+    source_id: fal-ai-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  pricing_anchor:
+    value: fal.ai is pay-per-use and model-dependent; verify the exact model card/pricing for latency, resolution, duration,
+      and queue economics.
+    source: https://fal.ai/pricing
+    source_label: fal.ai pricing
+    source_id: fal-ai-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  api_available:
+    value: fal.ai is API-first, with docs as the source of truth for authentication, queues, file handling, webhooks, and SDK
+      behavior.
+    source: https://docs.fal.ai/
+    source_label: fal.ai docs
+    source_id: fal-ai-docs
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  model_catalog:
+    value: The model catalog is the procurement surface because availability and cost vary across image, video, 3D, and audio
+      models.
+    source: https://fal.ai/models
+    source_label: fal.ai model catalog
+    source_id: fal-ai-models
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  watch_out_for:
+    value: Compare fal.ai by per-model reliability, cold starts, queue latency, content policy, and cost at target volume—not
+      only headline speed claims.
+    source: https://fal.ai/pricing
+    source_label: fal.ai pricing
+    source_id: fal-ai-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
 tags: [inference, image-generation, video-generation, flux, nano-banana, serverless, api, fast]
 seo_title: "Fal.ai: Features, Pricing & Review (April 2026)"
 meta_description: "Fal.ai is the fastest generative-AI inference platform. 600+ models (FLUX, Nano Banana 2, video, audio). Per-output pricing $0.01-$0.08/image. 4x faster than competing platforms."

@@ -25,6 +25,52 @@ scores:
   value: 10
   moat: 7
   longevity: 8
+facts:
+  best_for:
+    value: "Best for local-first, outline-based personal knowledge management with backlinking, block references, graph navigation, and plain-text files."
+    source: https://logseq.com/
+    source_label: Logseq official site
+    source_id: logseq-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  pricing_anchor:
+    value: "The app is open source and local-first; paid evaluation usually centers on sync/publishing/services rather than the core editor."
+    source: https://logseq.com/pricing
+    source_label: Source
+    source_id: logseq-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  knowledge_model:
+    value: "Logseq is block/outliner-first, so it fits users who think in daily notes, backlinks, and nested bullets more than document-centric writing."
+    source: https://docs.logseq.com/
+    source_label: Logseq documentation
+    source_id: logseq-docs
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  open_source:
+    value: "The GitHub repository is the best source for current license, release activity, issues, and community plugin/development posture."
+    source: https://github.com/logseq/logseq
+    source_label: Logseq GitHub repository
+    source_id: logseq-repository
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  watch_out_for:
+    value: "Teams needing polished collaborative docs, strict admin controls, or AI-native knowledge workflows may outgrow Logseq's personal/local-first orientation."
+    source: https://docs.logseq.com/
+    source_label: Logseq documentation
+    source_id: logseq-docs
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
 tags: [notes, outliner, local-first, markdown, knowledge-base, zettelkasten, pkm, open-source, block-level, graph-view]
 seo_title: "Logseq: Features, Pricing & Review (April 2026)"
 meta_description: "Logseq is a free open-source outliner knowledge base. Plain-text markdown on disk, block-level references, graph view, PDF annotation. Core app free; Sync add-on $5/mo."
@@ -46,10 +92,16 @@ price_history:
   - date: 2024-06-01
     plan: "Logseq Sync"
     price: "$5/mo"
+    source: "https://logseq.com/pricing"
+    source_label: "Source"
+    source_id: logseq-pricing
     note: "End-to-end encrypted cross-device sync launched"
   - date: 2026-04-17
     plan: "Core app"
     price: "Free"
+    source: "https://logseq.com/pricing"
+    source_label: "Source"
+    source_id: logseq-pricing
     note: "Verified unchanged. AGPL-3.0 license."
 ---
 

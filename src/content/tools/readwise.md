@@ -24,6 +24,48 @@ scores:
   value: 9
   moat: 8
   longevity: 8
+facts:
+  best_for:
+    value: "Heavy readers who want articles, PDFs, newsletters, highlights, and review workflows consolidated into a serious read-it-later system."
+    source: "https://readwise.io/read"
+    source_label: "Readwise Reader official site"
+    source_id: readwise-reader
+    verified_at: 2026-05-04
+    volatility: medium
+    confidence: high
+  knowledge_surface:
+    value: "Readwise Reader is strongest as a capture-and-review workflow, with AI features supporting reading and recall rather than replacing a full notes graph."
+    source: "https://readwise.io/read"
+    source_label: "Readwise Reader official site"
+    source_id: readwise-reader
+    verified_at: 2026-05-04
+    volatility: medium
+    confidence: high
+  pricing_anchor:
+    value: "Readwise publishes Reader and bundle pricing on its pricing page; evaluate it by reading volume and whether highlight review is part of the workflow."
+    source: "https://readwise.io/pricing"
+    source_label: "Readwise pricing"
+    source_id: readwise-pricing
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
+  integration_surface:
+    value: "Best fit when it can sit between capture sources and downstream note tools such as Obsidian, Notion, or Roam."
+    source: "https://readwise.io/read"
+    source_label: "Readwise Reader official site"
+    source_id: readwise-reader
+    verified_at: 2026-05-04
+    volatility: medium
+    confidence: medium
+  watch_out_for:
+    value: "It is not primarily an AI research engine. Buyers expecting deep autonomous synthesis should compare NotebookLM, Elicit, Perplexity, and semantic-scholar workflows."
+    source: "https://readwise.io/read"
+    source_label: "Readwise Reader official site"
+    source_id: readwise-reader
+    verified_at: 2026-05-04
+    volatility: medium
+    confidence: high
 tags: [ai-notes, reading, highlights, spaced-repetition, pkm, newsletters, rss]
 seo_title: "Readwise Reader Review: AI Reading App (April 2026)"
 meta_description: "Readwise Reader unifies articles, newsletters, PDFs, ebooks, and YouTube into one inbox with Ghostreader AI and spaced-repetition review. $9.99/mo annual bundles the full Readwise system."
@@ -43,10 +85,16 @@ price_history:
   - date: 2025-08-01
     plan: "Reader + Readwise"
     price: "$9.99/mo (annual)"
+    source: "https://readwise.io/pricing"
+    source_label: "Source"
+    source_id: readwise-pricing
     note: "Bundled pricing held steady"
   - date: 2026-04-15
     plan: "Reader Lite"
     price: "$4.99/mo"
+    source: "https://readwise.io/pricing"
+    source_label: "Source"
+    source_id: readwise-pricing
     note: "Verified unchanged"
 ---
 

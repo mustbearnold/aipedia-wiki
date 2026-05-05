@@ -8,15 +8,29 @@ summary: "Anthropic shipped computer use capabilities for Claude, enabling the A
 affects: [claude]
 categories: [ai-automation, ai-chatbots]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-14
-last_verified: 2026-04-14
+last_updated: 2026-05-05
+last_verified: 2026-05-05
 sources:
-  - url: "https://aiagentstore.ai/ai-agent-news/this-week"
-    title: "Daily AI Agent News - Last 7 Days"
+  - url: "https://docs.anthropic.com/en/release-notes/claude-apps"
+    title: "Claude apps release notes - Anthropic"
 ---
 
-Anthropic rolled out computer use for Claude this week, letting the model act as a genuine agent. It can browse the web, open files, click through workflows, and run tasks without human intervention. This isn't theoretical, it's production-ready automation. The capability matters because it moves Claude from a chat interface into something that actually does work. Early use cases show promise for automating repetitive tasks that previously required manual effort. The company positioned this as a major step toward AI agents becoming workhorses rather than experiments. This directly competes with similar agent capabilities from OpenAI and others racing to build autonomous systems that handle real business tasks.
+Anthropic added computer-use access for Claude users in April, according to its Claude apps release notes.
+
+The feature lets Claude operate a computer-like environment for selected workflows rather than only answering in chat. That moves the product closer to practical agent work: browsing, interacting with apps, and completing tasks with more direct tool use.
+
+## Why it matters
+
+Computer use is one of the clearest dividing lines between an assistant and an agent. A chat model can suggest what to do. A computer-use agent can navigate a workflow, inspect state, and take steps toward the result.
+
+That also raises the risk level. When an assistant can click, type, browse, or operate files, teams need stronger controls around credentials, approvals, sensitive data, and irreversible actions.
+
+## Tool impact
+
+For [Claude](/tools/claude/), computer use strengthens the case for Claude as an automation surface rather than only a writing, coding, or reasoning assistant.
+
+Buyers should evaluate it with controlled tasks first: browser research, internal form filling, document preparation, or repetitive admin steps. Avoid giving any agent broad access to payment, production, legal, HR, or customer-account systems until logging, permissions, and human review are settled.
 
 ## Sources
 
-- [Daily AI Agent News - Last 7 Days](https://aiagentstore.ai/ai-agent-news/this-week)
+- [Claude apps release notes - Anthropic](https://docs.anthropic.com/en/release-notes/claude-apps)

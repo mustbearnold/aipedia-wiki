@@ -1,28 +1,34 @@
 ---
 type: news
 slug: 2026-03-05-reka-edge-7b-launch
-title: "Reka Ships Edge 7B for On-Device Multimodal Physical AI"
+title: "Reka ships Edge 7B multimodal model for edge deployment"
 date: 2026-03-05
 severity: minor
-summary: "Reka released Edge, a 7B-parameter multimodal model optimized for on-device deployment in robotics, cameras, and embedded systems. Edge outperforms other 7B vision-language models on MLVU and MMVU benchmarks. The release extends Reka's lineup to four tiers: Core (flagship), Flash, Edge, and Spark. API pricing unchanged."
+summary: "Reka released Reka Edge 2603, a 7B multimodal vision-language model for image, video, object-detection, and tool-use tasks on edge-capable hardware."
 affects: [reka]
 categories: [ai-chatbots]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-05
+last_verified: 2026-05-05
 sources:
+  - url: "https://huggingface.co/RekaAI/reka-edge-2603"
+    title: "RekaAI/reka-edge-2603 - Hugging Face"
+  - url: "https://docs.reka.ai/chat/models"
+    title: "Models - Reka API"
   - url: "https://reka.ai"
     title: "Reka"
 ---
 
-Reka shipped Edge, a 7-billion-parameter multimodal model, on March 5. Edge targets on-device inference for physical AI, robotics, cameras, and embedded systems where cloud round-trips are unacceptable.
+Reka released **Reka Edge 2603**, a 7B multimodal vision-language model that accepts image, video, and text inputs. The model card positions it for image understanding, video analysis, object detection, and agentic tool-use tasks.
 
-On published benchmarks Edge leads other 7B vision-language models on MLVU (long-video understanding) and MMVU (multimodal reasoning). The release extends Reka's production lineup to four models: Core (67B flagship, $2 input / $6 output per MTok), Flash (21B balanced, $0.80 / $2), Edge (7B on-device, partner licensing), and Spark (1B ultra-low-latency, $0.05 / $0.05).
+The important detail is deployment shape. Reka describes Edge as suitable for Apple Silicon Macs, Linux or WSL systems with substantial GPU and system memory, and Nvidia Robotics and Edge AI hardware. With quantization, the model card also lists smaller device classes such as Jetson Orin Nano, Samsung S25, Snapdragon XR2 Gen 3 devices, and Apple mobile/vision hardware as custom deployment targets.
 
-Reka's differentiator is native long-context video understanding. Where most LLMs rely on chunked frame extraction, Reka models process hours of video directly in a single forward pass. Core leads Gemini Ultra 59.3% to 54.7% on the Perception-Test video-QA benchmark. Edge brings that capability down to a size that runs on a single consumer GPU.
+## Why it matters
 
-The company remains enterprise-focused. Dedicated and on-prem deployment options set it apart from API-only frontier labs like Anthropic and OpenAI. The $110 million 2025 round led by NVIDIA and Snowflake valued Reka at unicorn status.
+Edge models matter because many physical-AI and inspection workflows cannot depend on a cloud round trip. A camera, robot, headset, or factory device may need local visual understanding for latency, privacy, or resilience reasons.
 
-## Sources
+The benchmark story should be read carefully. Reka publishes strong scores across VQA, MLVU, MMVU, RefCOCO, hallucination, and mobile-action tasks, but those numbers still need to be tested against the buyer's own videos, hardware, latency targets, and failure cases.
 
-- [Reka](https://reka.ai)
+## Tool impact
+
+For [Reka](/tools/reka/), Edge makes the product line more relevant to teams that want multimodal AI outside the browser-chat pattern. The practical buyer question is whether Reka's deployment support, license terms, and hardware requirements fit the environment where the model will actually run.

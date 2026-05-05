@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "Free (open weights) / Tencent Cloud API variable"
 status: active
 launched: 2023-09
-last_updated: 2026-04-18
-last_verified: 2026-04-18
+last_updated: 2026-05-04
+last_verified: 2026-05-04
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -25,6 +25,57 @@ scores:
   value: 9
   moat: 6
   longevity: 7
+facts:
+  best_for:
+    value: Best for China/Tencent-cloud teams evaluating Tencent Hunyuan models for text, image, video, and enterprise AI application
+      workloads.
+    source: https://cloud.tencent.com/product/hunyuan
+    source_label: Tencent Cloud Hunyuan product
+    source_id: hunyuan-cloud
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  pricing_anchor:
+    value: Hunyuan pricing is cloud/API-model dependent; verify the current Tencent Cloud billing docs for each model family
+      and context/output mode.
+    source: https://cloud.tencent.com/document/product/1729/97731
+    source_label: Tencent Cloud Hunyuan pricing docs
+    source_id: hunyuan-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  api_available:
+    value: Tencent Cloud docs are the implementation source for authentication, endpoints, model lists, quotas, and regional/service
+      constraints.
+    source: https://cloud.tencent.com/document/product/1729
+    source_label: Tencent Cloud Hunyuan docs
+    source_id: hunyuan-docs
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  model_catalog:
+    value: The Hunyuan public surface spans multiple model modalities, so recommendations should be specific to the target text/image/video
+      model.
+    source: https://hunyuan.tencent.com/
+    source_label: Tencent Hunyuan official site
+    source_id: hunyuan-official
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  watch_out_for:
+    value: For international buyers, check availability, language fit, data residency, compliance, API access path, and pricing
+      currency before choosing Hunyuan.
+    source: https://cloud.tencent.com/product/hunyuan
+    source_label: Tencent Cloud Hunyuan product
+    source_id: hunyuan-cloud
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
 tags: [tencent, open-weights, hunyuan, 3d-world-model, world-model, chinese-llm, video-gen, image-gen, gaussian-splatting]
 seo_title: "Hunyuan: Features, Pricing & Review (April 2026)"
 meta_description: "Hunyuan is Tencent's AI model family. HY-World 2.0 (April 16, 2026) open-sources 3D world generation with editable Unity/Unreal output. Also covers Hunyuan-Large LLM, HunyuanVideo, and 3D asset models. Apache-style open-source releases alongside hosted Tencent Cloud API."

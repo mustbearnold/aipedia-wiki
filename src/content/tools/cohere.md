@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$10/1M tokens"
 status: active
 launched: 2019-06
-last_updated: 2026-05-03
-last_verified: 2026-05-03
+last_updated: 2026-05-05
+last_verified: 2026-05-05
 update_frequency: monthly
 seo_title: "Cohere: Features, Pricing & Review (April 2026)"
 meta_description: "Cohere's Command A (256K context) is the agentic flagship; Command R+ runs at $2.50/$10 per 1M tokens. North workspace and Model Vault ship private deployment. Enterprise-first LLM platform built around RAG, Rerank, and Aya multilingual."
@@ -28,6 +28,56 @@ scores:
   value: 8
   moat: 8
   longevity: 8
+facts:
+  best_for:
+    value: Best for enterprises that need private, secure, customizable language models plus a strong RAG stack with embed and
+      rerank components.
+    source: https://cohere.com/
+    source_label: Cohere official site
+    source_id: cohere-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  pricing_anchor:
+    value: Cohere pricing mixes API usage and enterprise packaging; confirm model, embed, rerank, fine-tuning, deployment, and
+      support terms on the current pricing page.
+    source: https://cohere.com/pricing
+    source_label: Cohere pricing
+    source_id: cohere-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  model_control:
+    value: Command models are Cohere’s enterprise LLM family, and model choice should be validated against the target language,
+      retrieval, tool-use, and latency requirements.
+    source: https://cohere.com/command
+    source_label: Cohere Command models
+    source_id: cohere-command
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  api_available:
+    value: Cohere is API-first, with docs as the source of truth for chat, embed, rerank, tool-use, and deployment behavior.
+    source: https://docs.cohere.com/
+    source_label: Cohere documentation
+    source_id: cohere-docs
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  watch_out_for:
+    value: Do not buy Cohere as a generic chatbot alone; its differentiated value is enterprise RAG, privacy/deployment controls,
+      multilingual support, and retrieval quality.
+    source: https://cohere.com/
+    source_label: Cohere official site
+    source_id: cohere-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
 tags: [enterprise, llm, rag, embeddings, rerank, multilingual, private-deployment, cohere, command, aya]
 best_for:
   - enterprise RAG pipelines
@@ -46,14 +96,23 @@ price_history:
   - date: 2025-03-01
     plan: "Command A"
     price: "Launched"
+    source: "https://cohere.com/pricing"
+    source_label: "Source"
+    source_id: cohere-pricing
     note: "256K context, agentic + multilingual flagship"
   - date: 2026-04-15
     plan: "Command R+ 08-2024"
     price: "$2.50 / $10 per 1M tok"
+    source: "https://cohere.com/pricing"
+    source_label: "Source"
+    source_id: cohere-pricing
     note: "Verified unchanged; enterprise tier from $1/$3"
   - date: 2026-04-24
     plan: "Aleph Alpha deal"
     price: "Reported acquisition / merger"
+    source: "https://cohere.com/pricing"
+    source_label: "Source"
+    source_id: cohere-pricing
     note: "TechCrunch reports Cohere is moving to combine with German AI startup Aleph Alpha, strengthening European enterprise and sovereign-AI positioning."
 ---
 

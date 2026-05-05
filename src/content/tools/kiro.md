@@ -32,17 +32,24 @@ facts:
     value: "Spec-driven IDE and CLI with specs, steering, hooks, MCP, and autonomous agent preview"
     source: "https://kiro.dev/"
     source_label: "Kiro homepage"
+    source_id: kiro-coding-agent
     verified_at: 2026-04-28
+    confidence: high
   best_paid_tier:
     value: "Pro ($20/month) for regular use; Pro+ ($40/month) if specs/hooks consume credits quickly"
     source: "https://kiro.dev/pricing/"
     source_label: "Kiro pricing"
+    source_id: kiro-best-paid-tier
     verified_at: 2026-04-28
+    next_review_at: 2026-06-03
+    confidence: high
   best_for:
     value: "Complex feature and bugfix work where requirements, design, tasks, and tests need to stay traceable"
     source: "https://kiro.dev/docs/specs/"
     source_label: "Kiro specs docs"
+    source_id: kiro-best-for
     verified_at: 2026-04-28
+    confidence: high
 tags: [ai-coding, ai-ide, coding-agent, spec-driven-development, cli, mcp, vscode-compatible]
 best_for:
   - teams that want specs before agent-written code
@@ -59,18 +66,30 @@ price_history:
   - date: 2026-04-28
     plan: "Free"
     price: "$0/mo with 50 credits"
+    source: "https://kiro.dev/pricing/"
+    source_label: "Source"
+    source_id: kiro-best-paid-tier
     note: "New sign-ups get 500 bonus credits usable within 30 days"
   - date: 2026-04-28
     plan: "Pro"
     price: "$20/mo with 1,000 credits"
+    source: "https://kiro.dev/pricing/"
+    source_label: "Source"
+    source_id: kiro-best-paid-tier
     note: "Overage available at $0.04/credit on paid plans"
   - date: 2026-04-28
     plan: "Pro+"
     price: "$40/mo with 2,000 credits"
+    source: "https://kiro.dev/pricing/"
+    source_label: "Source"
+    source_id: kiro-best-paid-tier
     note: "Verified on kiro.dev/pricing"
   - date: 2026-04-28
     plan: "Power"
     price: "$200/mo with 10,000 credits"
+    source: "https://kiro.dev/pricing/"
+    source_label: "Source"
+    source_id: kiro-best-paid-tier
     note: "Verified on kiro.dev/pricing"
 ---
 

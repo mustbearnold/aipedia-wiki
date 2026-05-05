@@ -26,6 +26,52 @@ scores:
   value: 10
   moat: 6
   longevity: 7
+facts:
+  best_for:
+    value: "Best for creators and product teams that want an image-generation studio with model presets, canvas-style editing, and API access for visual production workflows."
+    source: https://leonardo.ai/
+    source_label: Leonardo AI official site
+    source_id: leonardo-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: medium
+    next_review_at: '2026-11-04'
+  pricing_anchor:
+    value: "Leonardo publishes plan/token pricing but the pricing page may block automated monitors; verify current token allowances, commercial terms, and API billing before procurement."
+    source: https://leonardo.ai/pricing/
+    source_label: Leonardo AI pricing
+    source_id: leonardo-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: medium
+    next_review_at: '2026-08-04'
+  api_available:
+    value: "The developer docs are the source of truth for API authentication, image-generation endpoints, model IDs, and usage patterns."
+    source: https://docs.leonardo.ai/docs/getting-started
+    source_label: Leonardo AI API docs
+    source_id: leonardo-docs
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  workflow_surface:
+    value: "Evaluate Leonardo as a creative production environment, not just a prompt box; image editing, model choices, token budgets, and asset workflows drive fit."
+    source: https://leonardo.ai/
+    source_label: Leonardo AI official site
+    source_id: leonardo-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: medium
+    next_review_at: '2026-11-04'
+  watch_out_for:
+    value: "Automated pricing checks can see 403 responses, so high-confidence buying decisions should be confirmed manually against the live web UI and terms."
+    source: https://leonardo.ai/pricing/
+    source_label: Leonardo AI pricing
+    source_id: leonardo-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: medium
+    next_review_at: '2026-08-04'
 tags: [ai-image, image-generation, text-to-image, free-tier, beginner-friendly, leonardo, lucid-origin, phoenix]
 seo_title: 'Leonardo AI: Features, Pricing & Review (April 2026)'
 meta_description: >-
@@ -49,10 +95,16 @@ price_history:
   - date: 2025-09-01
     plan: "Lucid Origin"
     price: "n/a"
+    source: "https://leonardo.ai/pricing"
+    source_label: "Source"
+    source_id: leonardo-pricing
     note: "Lucid Origin model added as new flagship."
   - date: 2026-04-17
     plan: "Apprentice"
     price: "$10/mo"
+    source: "https://leonardo.ai/pricing"
+    source_label: "Source"
+    source_id: leonardo-pricing
     note: "Verified unchanged (annual billing)."
 ---
 

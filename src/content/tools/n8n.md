@@ -28,6 +28,141 @@ scores:
   value: 10
   moat: 7
   longevity: 9
+facts:
+  flagship_model:
+    value: "Native AI Agent node with tool calling across supported LLM providers"
+    source: "https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/"
+    source_label: "n8n AI Agent node docs"
+    source_id: n8n-agent-docs
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  context_window:
+    value: "Model-dependent: n8n connects to external LLM providers and local models rather than publishing a single context window"
+    source: "https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/"
+    source_label: "n8n AI Agent node docs"
+    source_id: n8n-agent-docs
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  pricing_anchor:
+    value: "Community self-host free; cloud Starter €24/mo, Pro €60/mo, Business €800/mo, Enterprise custom"
+    source: "https://n8n.io/pricing"
+    source_label: "n8n pricing"
+    source_id: n8n-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  free_plan:
+    value: "Yes: Community self-host is free with unlimited workflows and executions"
+    source: "https://n8n.io/pricing"
+    source_label: "n8n pricing"
+    source_id: n8n-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  best_paid_tier:
+    value: "Community self-host for technical teams; Pro cloud for active production; Business/Enterprise for SSO and scale"
+    source: "https://n8n.io/pricing"
+    source_label: "n8n pricing"
+    source_id: n8n-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  api_available:
+    value: "Yes: HTTP nodes, code nodes, webhooks, credentials, and workflow APIs support programmatic automation"
+    source: "https://docs.n8n.io"
+    source_label: "n8n documentation"
+    source_id: n8n-docs
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  image_generation:
+    value: "Not native as a core model; n8n can orchestrate image-generation APIs through workflow nodes"
+    source: "https://docs.n8n.io"
+    source_label: "n8n documentation"
+    source_id: n8n-docs
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  video_generation:
+    value: "Not native as a core model; n8n can orchestrate video-generation APIs through workflow nodes"
+    source: "https://docs.n8n.io"
+    source_label: "n8n documentation"
+    source_id: n8n-docs
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  real_time_voice:
+    value: "No primary real-time voice product; voice workflows require connected services"
+    source: "https://docs.n8n.io"
+    source_label: "n8n documentation"
+    source_id: n8n-docs
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  web_browsing:
+    value: "Workflow web access through HTTP/browser-style integrations, not a packaged general web-browsing assistant"
+    source: "https://docs.n8n.io"
+    source_label: "n8n documentation"
+    source_id: n8n-docs
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  coding_agent:
+    value: "No dedicated software-coding agent; n8n is an automation and AI-agent workflow platform"
+    source: "https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/"
+    source_label: "n8n AI Agent node docs"
+    source_id: n8n-agent-docs
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  enterprise_controls:
+    value: "Business and Enterprise add SSO, audit logs, dedicated resources, support, and on-prem options"
+    source: "https://n8n.io/pricing"
+    source_label: "n8n pricing"
+    source_id: n8n-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  data_retention_or_privacy:
+    value: "Self-hosting gives full infrastructure and data-residency control; cloud tiers use n8n managed infrastructure"
+    source: "https://docs.n8n.io"
+    source_label: "n8n documentation"
+    source_id: n8n-docs
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  open_source_or_local:
+    value: "Yes: source-available fair-code with self-hosting permitted"
+    source: "https://github.com/n8n-io/n8n"
+    source_label: "n8n GitHub repository"
+    source_id: n8n-github
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  best_for:
+    value: "Developer-friendly automation, self-hosted workflows, and AI agents with tool calling"
+    source: "https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/"
+    source_label: "n8n AI Agent node docs"
+    source_id: n8n-agent-docs
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  watch_out_for:
+    value: "Steeper learning curve, fewer native integrations than Zapier, and real ops burden when self-hosted"
+    source: "https://docs.n8n.io"
+    source_label: "n8n documentation"
+    source_id: n8n-docs
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
 tags: [automation, workflows, ai-agents, no-code, open-source, integrations, zapier-alternative, self-host]
 seo_title: "n8n: Features, Pricing & Review (April 2026)"
 meta_description: "n8n is the open-source workflow automation platform with native AI Agent nodes. Free to self-host with unlimited executions. Cloud plans from €24/mo."
@@ -47,10 +182,16 @@ price_history:
   - date: 2025-10-15
     plan: "Cloud Starter"
     price: "€24/mo"
+    source: "https://n8n.io/pricing"
+    source_label: "Source"
+    source_id: n8n-pricing
     note: "Cloud pricing migrated to EUR"
   - date: 2026-04-15
     plan: "Community (self-host)"
     price: "$0"
+    source: "https://n8n.io/pricing"
+    source_label: "Source"
+    source_id: n8n-pricing
     note: "Free self-host verified unchanged"
 ---
 

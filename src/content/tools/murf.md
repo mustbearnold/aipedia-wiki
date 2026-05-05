@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: $0-$99/month
 status: active
 launched: 2020-10
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-04
+last_verified: 2026-05-04
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -26,6 +26,66 @@ scores:
   value: 7
   moat: 6
   longevity: 7
+facts:
+  best_for:
+    value: Best for marketing, training, and product teams that need polished text-to-speech, voiceover, dubbing, and voice
+      API options in one vendor.
+    source: https://murf.ai/
+    source_label: Murf AI official site
+    source_id: murf-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  pricing_anchor:
+    value: Murf has creator and business pricing plus API and enterprise surfaces; plan limits should be checked by voice minutes,
+      seats, dubbing, and API usage.
+    source: https://murf.ai/pricing
+    source_label: Murf pricing
+    source_id: murf-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  api_available:
+    value: Murf offers a voice API suite for product integrations, not only a browser-based studio.
+    source: https://murf.ai/api
+    source_label: Murf Voice API
+    source_id: murf-api
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  real_time_voice:
+    value: Murf is primarily a voice generation, dubbing, and API platform; buyers needing real-time conversational agents should
+      verify latency and interaction requirements separately.
+    source: https://murf.ai/api
+    source_label: Murf Voice API
+    source_id: murf-api
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  enterprise_controls:
+    value: Enterprise buyers should evaluate Murf’s enterprise page for workspace, security, and collaboration needs before
+      standardizing on it.
+    source: https://murf.ai/enterprise
+    source_label: Murf enterprise
+    source_id: murf-enterprise
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  watch_out_for:
+    value: 'The key constraint is not voice quality alone: minutes, commercial rights, dubbing workflows, pronunciation control,
+      and API economics determine fit at scale.'
+    source: https://murf.ai/pricing
+    source_label: Murf pricing
+    source_id: murf-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
 tags: [text-to-speech, tts, ai-voice, e-learning, corporate-narration, voice-cloning, translation, dubbing]
 seo_title: 'Murf AI: Features, Pricing & Review (April 2026)'
 meta_description: >-

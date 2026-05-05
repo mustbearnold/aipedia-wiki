@@ -11,8 +11,8 @@ pricing_model: paid
 price_range: '$39-$69/month (Business: custom)'
 status: active
 launched: 2021-01
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-04
+last_verified: 2026-05-04
 update_frequency: monthly
 seo_title: 'Jasper: Features, Pricing & Review (April 2026)'
 meta_description: >-
@@ -30,6 +30,43 @@ scores:
   value: 5
   moat: 3
   longevity: 6
+facts:
+  platform_scope:
+    value: "Marketing-focused AI platform for brand voice, campaign content, workflows, and team governance rather than a general chatbot."
+    source: "https://www.jasper.ai/platform"
+    source_label: "Jasper platform"
+    source_id: jasper-platform
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: medium
+    confidence: high
+  pricing_anchor:
+    value: "Creator/Pro-style paid plans plus Business custom pricing on Jasper pricing; verify seat, brand voice, workflow, and governance limits."
+    source: "https://www.jasper.ai/pricing"
+    source_label: "Jasper pricing"
+    source_id: jasper-pricing
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
+  best_for:
+    value: "Marketing teams that need branded campaign content, repeatable workflows, collaboration, and approvals more than frontier-model experimentation."
+    source: "https://www.jasper.ai/platform"
+    source_label: "Jasper platform"
+    source_id: jasper-platform
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: medium
+    confidence: high
+  watch_out_for:
+    value: "Generic writing can be cheaper in ChatGPT, Claude, or Gemini; Jasper earns its price only when brand governance and marketing workflow matter."
+    source: "https://www.jasper.ai/pricing"
+    source_label: "Jasper pricing"
+    source_id: jasper-pricing
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: medium
 tags: [marketing, copywriting, brand-voice, enterprise, content-creation, campaign-management, team-collaboration]
 best_for:
   - enterprise marketing teams with brand guidelines
@@ -47,10 +84,16 @@ price_history:
   - date: 2026-04-17
     plan: "Creator"
     price: "$39/mo"
+    source: "https://www.jasper.ai/pricing"
+    source_label: "Source"
+    source_id: jasper-pricing
     note: "Annual billing. Monthly rate $49."
   - date: 2026-04-17
     plan: "Pro"
     price: "$59/mo"
+    source: "https://www.jasper.ai/pricing"
+    source_label: "Source"
+    source_id: jasper-pricing
     note: "Annual billing. Monthly rate $69. Up to 5 seats, 3 brand voices."
 ---
 

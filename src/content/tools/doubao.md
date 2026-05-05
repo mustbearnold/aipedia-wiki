@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "Free (consumer); API from ~$0.47/M input tokens"
 status: active
 launched: 2023-08
-last_updated: 2026-05-03
-last_verified: 2026-05-03
+last_updated: 2026-05-04
+last_verified: 2026-05-04
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -24,6 +24,54 @@ scores:
   value: 8
   moat: 6
   longevity: 7
+facts:
+  best_for:
+    value: Best for China-focused teams evaluating ByteDance’s Doubao consumer assistant and Volcengine Doubao model/API ecosystem.
+    source: https://www.doubao.com/
+    source_label: Doubao official site
+    source_id: doubao-official
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  pricing_anchor:
+    value: Doubao API pricing should be treated as high-volatility and verified against Volcengine’s model-price documentation
+      before quoting token costs.
+    source: https://www.volcengine.com/docs/82379/1099320
+    source_label: Volcengine Doubao model pricing
+    source_id: doubao-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  model_control:
+    value: Volcengine is the relevant enterprise/developer product surface for Doubao model access, deployment, and API documentation.
+    source: https://www.volcengine.com/product/doubao
+    source_label: Volcengine Doubao product page
+    source_id: doubao-volcengine-product
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  api_available:
+    value: Volcengine docs are the source of truth for Doubao API/model integration assumptions.
+    source: https://www.volcengine.com/docs/82379
+    source_label: Volcengine Doubao docs
+    source_id: doubao-docs
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  watch_out_for:
+    value: Separate consumer Doubao claims from Volcengine API procurement; availability, compliance, pricing, model names,
+      and regional access can change quickly.
+    source: https://www.volcengine.com/docs/82379/1099320
+    source_label: Volcengine Doubao model pricing
+    source_id: doubao-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
 tags: [chinese-ai, bytedance, ai-chatbot, multimodal, doubao, consumer-ai, china]
 seo_title: "Doubao: Features, Pricing & Review (April 2026)"
 meta_description: "Doubao runs on Seed 2.0 as of April 2026, ByteDance's consumer AI app with 200M+ users. Free in China, Cici/Dola abroad, Volcano Engine API from ~$0.47/M tokens. No direct US app store access."

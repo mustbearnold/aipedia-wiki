@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$244/month"
 status: active
 launched: 2023-04
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-04
+last_verified: 2026-05-04
 update_frequency: monthly
 seo_title: "Gumloop: Features, Pricing & Review (2026)"
 meta_description: "Gumloop is a YC W24 AI workflow automation platform. Free tier with 2K credits, Solo $37/mo, Team $244/mo. Drag-and-drop builder, bring-your-own API keys, OpenAI/Anthropic/Gemini/DeepSeek backbones."
@@ -28,6 +28,57 @@ scores:
   value: 7
   moat: 6
   longevity: 7
+facts:
+  best_for:
+    value: Best for operations teams building AI automations and agentic workflows with a visual framework instead of custom
+      orchestration code.
+    source: https://www.gumloop.com/
+    source_label: Gumloop official site
+    source_id: gumloop-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  pricing_anchor:
+    value: Gumloop pricing depends on workflow usage, team features, and enterprise needs; verify run/credit limits, seats,
+      and automation scale on the pricing page.
+    source: https://www.gumloop.com/pricing
+    source_label: Gumloop pricing
+    source_id: gumloop-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  workflow_surface:
+    value: The product surface is workflow automation with AI steps, integrations, and agents—not a single chatbot or document
+      editor.
+    source: https://docs.gumloop.com/
+    source_label: Gumloop docs
+    source_id: gumloop-docs
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  integration_surface:
+    value: Implementation should test connector coverage, trigger behavior, permissions, error handling, human review steps,
+      and production monitoring.
+    source: https://docs.gumloop.com/
+    source_label: Gumloop docs
+    source_id: gumloop-docs
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  watch_out_for:
+    value: No-code AI automations can hide brittle logic; require observability, rollback paths, audit logs, and clear ownership
+      before replacing core processes.
+    source: https://www.gumloop.com/
+    source_label: Gumloop official site
+    source_id: gumloop-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
 tags: [ai-automation, workflow-builder, no-code, yc-backed, gumloop]
 best_for:
   - marketing and ops teams wanting AI-first automation
@@ -44,10 +95,16 @@ price_history:
   - date: 2026-04-18
     plan: "Solo"
     price: "$37/mo"
+    source: "https://gumloop.com/pricing"
+    source_label: "Source"
+    source_id: gumloop-pricing
     note: "Verified, unchanged; 20% discount on annual billing"
   - date: 2026-04-18
     plan: "Team"
     price: "$244/mo"
+    source: "https://gumloop.com/pricing"
+    source_label: "Source"
+    source_id: gumloop-pricing
     note: "Verified; 60K credits, up to 10 seats"
 ---
 

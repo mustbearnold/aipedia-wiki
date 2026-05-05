@@ -25,6 +25,48 @@ scores:
   value: 8
   moat: 6
   longevity: 7
+facts:
+  best_for:
+    value: "Fireflies.ai is best for teams that need meeting recording, transcription, summarization, searchable meeting memory, and collaboration across common video-conferencing platforms."
+    source: "https://fireflies.ai/features"
+    source_label: "Fireflies features"
+    source_id: fireflies-features
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  pricing_anchor:
+    value: "Fireflies pricing should be evaluated against transcript volume, storage, meeting integrations, team admin needs, and AI-search usage rather than only per-seat cost."
+    source: "https://fireflies.ai/pricing"
+    source_label: "Fireflies.ai Pricing"
+    source_id: fireflies-official
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: high
+  integration_surface:
+    value: "Fireflies publishes integrations across meeting, CRM, project-management, and productivity apps, which is a key advantage for pushing meeting notes into downstream systems."
+    source: "https://fireflies.ai/integrations"
+    source_label: "Fireflies integrations"
+    source_id: fireflies-integrations
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  ai_search:
+    value: "AskFred is Fireflies' conversational layer for querying meeting transcripts and extracting follow-ups from accumulated meeting history."
+    source: "https://fireflies.ai/askfred"
+    source_label: "Fireflies AskFred"
+    source_id: fireflies-askfred
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  watch_out_for:
+    value: "Meeting bots create consent, retention, and data-governance obligations; administrators should configure recording policies and storage before broad rollout."
+    source: "https://fireflies.ai/pricing"
+    source_label: "Fireflies.ai Pricing"
+    source_id: fireflies-official
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
 tags: [meeting-transcription, ai-notes, meeting-summary, productivity, zoom-integration]
 seo_title: "Fireflies.ai: Features, Pricing & Review (May 2026)"
 meta_description: "Fireflies.ai records and transcribes meetings across Zoom, Teams, Meet, and Webex, with AskFred AI search. Plans run Free, Pro $10, Business $19, Enterprise from $39/seat (annual)."

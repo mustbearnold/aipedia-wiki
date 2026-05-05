@@ -24,6 +24,33 @@ scores:
   value: 7
   moat: 6
   longevity: 7
+facts:
+  best_for:
+    value: "Consumer text-to-speech reader for PDFs, web pages, and documents. Premium $139/year; Premium+ $249/year adds voice cloning. Studio and API are separate products. Best for speech, voice, transcription, or audio-agent workflows."
+    source: "https://speechify.com/pricing"
+    source_label: "Source"
+    source_id: speechify-pricing
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: medium
+  pricing_anchor:
+    value: "Premium+; $249/yr; New tier added with commercial voice cloning"
+    source: "https://speechify.com/pricing"
+    source_label: "Source"
+    source_id: speechify-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
+  watch_out_for:
+    value: "Non-Tier-1 canonical profile: verify current pricing, usage limits, data policy, and integration details before procurement"
+    source: "https://speechify.com/pricing"
+    source_label: "Source"
+    source_id: speechify-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
 tags: [text-to-speech, reading, accessibility, productivity, tts, listen, documents, pdf, speechify-5, voice-clone]
 seo_title: "Speechify: Features, Pricing & Review (April 2026)"
 meta_description: "Speechify Premium is $139/year; Premium+ at $249/year adds commercial voice cloning. Studio uses credit pricing from $19/mo. API runs $10 per 1M chars pay-as-you-go. Reviewed April 2026."
@@ -44,10 +71,16 @@ price_history:
   - date: 2026-03-01
     plan: "Premium+"
     price: "$249/yr"
+    source: "https://speechify.com/pricing"
+    source_label: "Source"
+    source_id: speechify-pricing
     note: "New tier added with commercial voice cloning"
   - date: 2026-04-15
     plan: "Premium"
     price: "$139/yr"
+    source: "https://speechify.com/pricing"
+    source_label: "Source"
+    source_id: speechify-pricing
     note: "Verified unchanged"
 ---
 

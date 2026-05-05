@@ -24,6 +24,50 @@ scores:
   value: 7
   moat: 8
   longevity: 9
+facts:
+  best_for:
+    value: "Support teams that want an AI-first customer service stack where a bot, human inbox, help center, and support analytics live in one system."
+    source: "https://www.intercom.com"
+    source_label: "Intercom official site"
+    source_id: intercom-official
+    verified_at: 2026-05-04
+    volatility: medium
+    confidence: high
+  ai_agent_surface:
+    value: "Fin is the strategic center of the Intercom buy: evaluate it as an AI support agent plus human-assist workflow, not just another live-chat widget."
+    source: "https://fin.ai/"
+    source_label: "Fin by Intercom"
+    source_id: intercom-fin
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
+  pricing_anchor:
+    value: "Intercom publishes seat and AI-agent pricing on its pricing page; verify Fin resolution costs and support-seat packaging before migrating a help desk."
+    source: "https://www.intercom.com/pricing"
+    source_label: "Intercom pricing"
+    source_id: intercom-pricing
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
+  integration_surface:
+    value: "Best fit when support operations can centralize customer conversations, knowledge-base content, and workflow automation around Intercom."
+    source: "https://www.intercom.com"
+    source_label: "Intercom official site"
+    source_id: intercom-official
+    verified_at: 2026-05-04
+    volatility: medium
+    confidence: medium
+  watch_out_for:
+    value: "Resolution-based AI support pricing can change the cost model. Model your ticket volume, escalation rate, and knowledge-base readiness before rolling it out broadly."
+    source: "https://www.intercom.com/pricing"
+    source_label: "Intercom pricing"
+    source_id: intercom-pricing
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
 tags: [customer-support, ai-agent, live-chat, help-desk, customer-success]
 seo_title: "Intercom: Features, Pricing & Review (April 2026)"
 meta_description: "Intercom pairs Fin AI Agent (resolution-priced at $0.99) with Fin AI Copilot for human agents. Seats run Essential $29, Advanced $85, Expert $132 (annual). Resolution fees stack on top."

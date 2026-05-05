@@ -12,8 +12,8 @@ pricing_model: open-source
 price_range: Free self-host; Qdrant Cloud priced by CPU, memory, and disk usage
 status: active
 launched: 2021
-last_updated: 2026-04-27
-last_verified: 2026-04-27
+last_updated: 2026-05-05
+last_verified: 2026-05-05
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -26,8 +26,31 @@ scores:
   value: 8
   moat: 7
   longevity: 8
+facts:
+  flagship_model:
+    value: "Qdrant vector database"
+    source: "https://qdrant.tech/documentation/"
+    source_label: "Qdrant documentation"
+    source_id: qdrant-best-for
+    verified_at: 2026-05-05
+    next_review_at: 2026-06-03
+    confidence: high
+  best_paid_tier:
+    value: "Qdrant Cloud when managed operations matter; self-host for maximum control"
+    source: "https://qdrant.tech/documentation/cloud-pricing-payments/"
+    source_label: "Qdrant Cloud billing"
+    source_id: qdrant-best-paid-tier
+    verified_at: 2026-05-05
+    next_review_at: 2026-06-03
+    confidence: high
+  best_for:
+    value: "Open-source vector search, metadata filtering, RAG retrieval, and self-hostable AI infrastructure"
+    source: "https://qdrant.tech/documentation/"
+    source_id: qdrant-best-for
+    verified_at: 2026-05-05
+    confidence: high
 tags: [vector-database, open-source, rust, rag, semantic-search, retrieval, embeddings]
-seo_title: "Qdrant Review: Open-Source Vector Database & Cloud Pricing (April 2026)"
+seo_title: "Qdrant Review: Open-Source Vector Database & Cloud Pricing (2026)"
 meta_description: "Qdrant is an open-source Rust vector database with managed cloud options for RAG, semantic search, payload filtering, and AI retrieval workloads."
 author: aipedia.wiki Editorial
 best_for:
@@ -67,6 +90,7 @@ It is one of the main open-source alternatives to [Pinecone](/tools/pinecone/) a
 | **Cloud** | Qdrant Cloud managed clusters |
 | **Hybrid** | Options for customer environments |
 | **Pricing** | Cloud priced by CPU, memory, and disk usage |
+| **Operations** | Snapshots, monitoring, distributed deployment, and production checklist |
 | **Best fit** | Teams needing retrieval infrastructure with control |
 
 ## When to pick Qdrant
@@ -84,11 +108,40 @@ It is one of the main open-source alternatives to [Pinecone](/tools/pinecone/) a
 - **App database plus vectors:** pgvector in Postgres.
 - **Enterprise search and assistant:** [Glean](/tools/glean/).
 
+
+## How to evaluate it
+
+Evaluate Qdrant with the retrieval workload you actually have, not with a generic vector benchmark. The important questions are filter selectivity, recall at your target latency, ingestion behavior, payload schema design, and operational comfort. RAG teams should test chunk metadata, hybrid retrieval strategy, and re-ranking outside the database before treating any vector store as the full search system.
+
+Qdrant is a strong fit when the team wants infrastructure control. Self-hosting keeps deployment choices open, while Qdrant Cloud reduces operational burden for teams that do not want to run clusters themselves. The simpler product scope can be an advantage: fewer platform assumptions, clearer database behavior, and less pressure to adopt a full enterprise search suite.
+
+Choose something else if your hardest problem is connectors, permissions, or end-user UX. Glean-style workplace search tools solve a different layer. [Weaviate](/tools/weaviate/) is stronger when you want a broader vector platform with hybrid search and managed-cloud packaging. [Pinecone](/tools/pinecone/) is stronger when a cloud-native managed service is the default priority.
+
 ## Pricing
 
 Self-hosting Qdrant is free apart from infrastructure costs. Qdrant Cloud prices managed clusters based on CPU, memory, and disk storage usage. Billing can run through credit card or cloud marketplaces.
 
 For small projects, self-hosting or pgvector may be cheaper. For production teams that value managed operations, Qdrant Cloud removes database maintenance work.
+
+As verified on 2026-05-05, Qdrant's cloud billing docs emphasize resource-shaped pricing rather than a simple per-query SaaS plan. That means teams should model cluster size, replicas, disk storage, snapshots, traffic patterns, and marketplace billing before procurement.
+
+## Evaluation checklist
+
+Before committing to Qdrant:
+
+- Test recall and latency with your real chunking strategy.
+- Measure metadata filter selectivity, not only nearest-neighbor speed.
+- Decide whether hybrid search and reranking happen inside or outside the database layer.
+- Plan backups, snapshots, upgrades, and monitoring before production launch.
+- Confirm how tenant isolation maps to collections, payloads, or separate clusters.
+- Benchmark pgvector for small Postgres-native apps before adding a separate vector database.
+- Compare Qdrant Cloud against self-hosting once operations time is included.
+
+## Buyer fit
+
+Qdrant is strongest for engineering teams that want a focused vector database with open-source optionality. It is a good match when the product team owns retrieval quality and wants control over deployment, payload schema, filters, and evaluation.
+
+It is weaker when the buyer expects a finished knowledge product. Qdrant will not connect to every SaaS app, infer company permissions, or ship an employee-facing answer UI. It is the retrieval layer, not the entire enterprise-search system.
 
 ## Failure Modes
 
@@ -97,10 +150,11 @@ For small projects, self-hosting or pgvector may be cheaper. For production team
 - **Cloud pricing is resource-shaped.** CPU, memory, and disk choices need modeling.
 - **No workplace connectors.** You will build the ingestion and permissions layer.
 - **Embedding migration is non-trivial.** Changing models means re-indexing and validating retrieval quality.
+- **Retrieval evals are still your job.** A fast vector database does not prove that answers are correct.
 
 ## Methodology
 
-Last verified 2026-04-28 against Qdrant documentation, cloud billing docs, and GitHub. Scoring weighs open-source value, retrieval utility, cloud path, and platform breadth.
+Last verified 2026-05-05 against Qdrant documentation, cloud billing docs, and GitHub. Scoring weighs open-source value, retrieval utility, cloud path, and platform breadth.
 
 ## FAQ
 

@@ -26,6 +26,142 @@ scores:
   value: 9
   moat: 6
   longevity: 6
+facts:
+  flagship_model:
+    value: "Suno v5.5 for AI music generation, voice cloning, custom style models, and longer-form song workflows"
+    source: "https://suno.com/blog/v5-5"
+    source_label: "Suno v5.5 announcement"
+    source_id: suno-v55
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  context_window:
+    value: "Not applicable: Suno is a music-generation platform, not a text chat model with a published token context window"
+    source: "https://help.suno.com/en/articles/5782721"
+    source_label: "Suno model timeline"
+    source_id: suno-model-timeline
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+    next_review_at: 2026-06-03
+  pricing_anchor:
+    value: "Free; Pro $10/mo annually; Premier $30/mo annually; credits and commercial rights vary by tier"
+    source: "https://suno.com/pricing"
+    source_label: "Suno pricing"
+    source_id: suno-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  free_plan:
+    value: "Yes: free tier for non-commercial generation with limited credits"
+    source: "https://suno.com/pricing"
+    source_label: "Suno pricing"
+    source_id: suno-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  best_paid_tier:
+    value: "Pro for creators needing commercial rights; Premier for heavy users needing larger credit pools, Studio, and advanced exports"
+    source: "https://suno.com/pricing"
+    source_label: "Suno pricing"
+    source_id: suno-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  api_available:
+    value: "No broadly available self-serve public API is positioned as the main buyer product; Suno is primarily a web/app music creation platform"
+    source: "https://suno.com/pricing"
+    source_label: "Suno pricing"
+    source_id: suno-pricing
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  image_generation:
+    value: "No native image generation; Suno focuses on AI music and audio/song workflows"
+    source: "https://suno.com/pricing"
+    source_label: "Suno pricing"
+    source_id: suno-pricing
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  video_generation:
+    value: "No native video generation; Suno focuses on music generation and studio workflows"
+    source: "https://suno.com/pricing"
+    source_label: "Suno pricing"
+    source_id: suno-pricing
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  real_time_voice:
+    value: "No primary real-time voice-agent product; Suno voice features are music/voice-generation workflows"
+    source: "https://suno.com/blog/v5-5"
+    source_label: "Suno v5.5 announcement"
+    source_id: suno-v55
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  web_browsing:
+    value: "No web-browsing assistant; Suno is a music-generation platform"
+    source: "https://suno.com/pricing"
+    source_label: "Suno pricing"
+    source_id: suno-pricing
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  coding_agent:
+    value: "No coding agent; Suno is for music/audio generation"
+    source: "https://suno.com/pricing"
+    source_label: "Suno pricing"
+    source_id: suno-pricing
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  enterprise_controls:
+    value: "No standard enterprise admin plan is the core public offer; licensing and commercial usage depend on paid tiers and terms"
+    source: "https://suno.com/pricing"
+    source_label: "Suno pricing"
+    source_id: suno-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  data_retention_or_privacy:
+    value: "Creators should review rights, training, and commercial-use terms before uploading voices, stems, or client material"
+    source: "https://suno.com/pricing"
+    source_label: "Suno pricing"
+    source_id: suno-pricing
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  open_source_or_local:
+    value: "No: Suno is proprietary hosted software"
+    source: "https://suno.com/pricing"
+    source_label: "Suno pricing"
+    source_id: suno-pricing
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  best_for:
+    value: "Fast AI song ideation, demos, creator music, vocals, style exploration, and lightweight production workflows"
+    source: "https://suno.com/blog/suno-studio"
+    source_label: "Suno Studio announcement"
+    source_id: suno-studio
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  watch_out_for:
+    value: "Commercial rights require paid tiers, credit costs vary by model, and music-rights/legal status remains volatile"
+    source: "https://suno.com/pricing"
+    source_label: "Suno pricing"
+    source_id: suno-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
 tags: [ai-music, music-generation, text-to-music, song-generation, vocal-ai]
 seo_title: "Suno AI Review: v5.5 Pricing, Voice Cloning, Stems and Udio Comparison"
 meta_description: >-
@@ -57,10 +193,16 @@ price_history:
   - date: 2026-03-26
     plan: "Pro"
     price: "$10/mo"
+    source: "https://suno.com/pricing"
+    source_label: "Source"
+    source_id: suno-pricing
     note: "v5.5 launch · voice cloning, custom models added at existing price"
   - date: 2026-04-15
     plan: "Pro / Premier"
     price: "$10 / $30 per mo"
+    source: "https://suno.com/pricing"
+    source_label: "Source"
+    source_id: suno-pricing
     note: "Verified against suno.com/pricing · Pro $8/mo annual, Premier $24/mo annual"
 ---
 

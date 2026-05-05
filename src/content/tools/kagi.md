@@ -24,6 +24,49 @@ scores:
   value: 7
   moat: 6
   longevity: 7
+facts:
+  best_for:
+    value: "Power users who want paid, ad-free search with user-controlled ranking and optional AI assistance rather than a surveillance-ad search engine."
+    source: "https://kagi.com"
+    source_label: "Kagi official site"
+    source_id: kagi-official
+    verified_at: 2026-05-04
+    volatility: medium
+    confidence: high
+  ai_search:
+    value: "Kagi Assistant is an add-on layer for users who already value Kagi search quality; it should be evaluated as search-grounded assistance, not a standalone chatbot replacement."
+    source: "https://help.kagi.com/kagi/ai/assistant.html"
+    source_label: "Kagi Assistant docs"
+    source_id: kagi-assistant-docs
+    verified_at: 2026-05-04
+    volatility: medium
+    confidence: high
+  pricing_anchor:
+    value: "Paid search plans are listed by Kagi, with plan choice depending on search volume and whether Assistant access is needed."
+    source: "https://kagi.com/pricing"
+    source_label: "Kagi pricing"
+    source_id: kagi-pricing
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
+  workflow_surface:
+    value: "Best used as a daily default search engine for people willing to tune ranking, lenses, and filters instead of accepting a black-box results page."
+    source: "https://kagi.com"
+    source_label: "Kagi official site"
+    source_id: kagi-official
+    verified_at: 2026-05-04
+    volatility: medium
+    confidence: medium
+  watch_out_for:
+    value: "Kagi is intentionally paid. It is a poor fit if the buyer needs free mass deployment or a general enterprise knowledge-management platform."
+    source: "https://kagi.com/pricing"
+    source_label: "Kagi pricing"
+    source_id: kagi-pricing
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
 tags: [search-engine, privacy, ad-free, ai-summarization, paid-search, kagi-assistant, no-tracking]
 seo_title: "Kagi: Ad-Free Search Review & Pricing (April 2026)"
 meta_description: "Kagi is paid, ad-free search with user ranking controls and Kagi Assistant. Starter $5/mo (300 searches), Professional $10/mo unlimited, Ultimate $25/mo adds premium AI models. No free tier."

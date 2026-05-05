@@ -24,6 +24,47 @@ scores:
   value: 0
   moat: 0
   longevity: 0
+facts:
+  best_for:
+    value: "Historical reference only. Phind is no longer a live tool recommendation, so active buyers should compare Perplexity, ChatGPT, Claude, Kagi, or developer-focused search alternatives."
+    source: "https://news.ycombinator.com/item?id=46594533"
+    source_label: "Phind shutdown discussion"
+    source_id: phind-official
+    verified_at: 2026-05-04
+    volatility: low
+    confidence: medium
+  lifecycle_status:
+    value: "Treat Phind as discontinued in current AIpedia recommendations; preserve the page for comparison history and search-intent cleanup."
+    source: "https://news.ycombinator.com/item?id=46594533"
+    source_label: "Phind shutdown discussion"
+    source_id: phind-official
+    verified_at: 2026-05-04
+    volatility: low
+    confidence: medium
+  pricing_anchor:
+    value: "No active procurement path should be assumed for Phind; pricing is not relevant for new buyers."
+    source: "https://news.ycombinator.com/item?id=46594533"
+    source_label: "Phind shutdown discussion"
+    source_id: phind-official
+    verified_at: 2026-05-04
+    volatility: low
+    confidence: medium
+  migration_surface:
+    value: "For developer search, route users toward current tools with live search, coding context, and citation behavior rather than stale Phind feature claims."
+    source: "https://news.ycombinator.com/item?id=46594533"
+    source_label: "Phind shutdown discussion"
+    source_id: phind-official
+    verified_at: 2026-05-04
+    volatility: low
+    confidence: medium
+  watch_out_for:
+    value: "Avoid leaving Phind in active best-tool lists unless the context explicitly marks it as discontinued or historical."
+    source: "https://news.ycombinator.com/item?id=46594533"
+    source_label: "Phind shutdown discussion"
+    source_id: phind-official
+    verified_at: 2026-05-04
+    volatility: low
+    confidence: high
 tags: [search-engine, developer-tools, coding, ai-search, discontinued, shutdown, phind-70b]
 seo_title: "Phind: Discontinued AI Search Engine (Shut Down January 2026)"
 meta_description: "Phind shut down on January 16, 2026 with no sunset period. User data was deleted January 30, 2026. Use Perplexity, ChatGPT, or Claude for developer AI search instead."

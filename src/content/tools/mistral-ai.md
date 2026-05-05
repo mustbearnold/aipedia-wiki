@@ -26,6 +26,144 @@ scores:
   value: 9
   moat: 7
   longevity: 8
+facts:
+  flagship_model:
+    value: "Mistral Large 3 for frontier closed models plus Mistral Small open models for deployable/open-weight use cases"
+    source: "https://docs.mistral.ai/models/overview"
+    source_label: "Mistral AI model docs"
+    source_id: mistral-model-docs
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  context_window:
+    value: "Model-dependent; Mistral publishes per-model context windows in its model documentation"
+    source: "https://docs.mistral.ai/models/overview"
+    source_label: "Mistral AI model docs"
+    source_id: mistral-model-docs
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  pricing_anchor:
+    value: "Le Chat has free and Pro options; API pricing is per-model and published on Mistral pricing pages"
+    source: "https://mistral.ai/pricing"
+    source_label: "Mistral AI pricing"
+    source_id: mistral-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  free_plan:
+    value: "Yes: Le Chat has a free consumer tier and open models are available separately"
+    source: "https://chat.mistral.ai"
+    source_label: "Le Chat by Mistral AI"
+    source_id: mistral-chat
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  best_paid_tier:
+    value: "Le Chat Pro for consumer access; API/enterprise plans for production; open weights for teams that need deployability"
+    source: "https://mistral.ai/pricing"
+    source_label: "Mistral AI pricing"
+    source_id: mistral-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  api_available:
+    value: "Yes: Mistral provides model APIs for chat, reasoning, code, embeddings, and multimodal workflows"
+    source: "https://mistral.ai/pricing"
+    source_label: "Mistral AI pricing"
+    source_id: mistral-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  image_generation:
+    value: "Yes through Le Chat/partner creative workflows, but Mistral is primarily a language-model and enterprise AI provider"
+    source: "https://chat.mistral.ai"
+    source_label: "Le Chat by Mistral AI"
+    source_id: mistral-chat
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  video_generation:
+    value: "No primary native video-generation product; Mistral focuses on language, coding, multimodal, and enterprise model APIs"
+    source: "https://docs.mistral.ai/models/overview"
+    source_label: "Mistral AI model docs"
+    source_id: mistral-model-docs
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  real_time_voice:
+    value: "Voice/audio capabilities exist in the broader model family, but Mistral is not primarily a real-time voice-agent platform"
+    source: "https://docs.mistral.ai/models/overview"
+    source_label: "Mistral AI model docs"
+    source_id: mistral-model-docs
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  web_browsing:
+    value: "Le Chat includes web-search style assistant capabilities for consumer usage"
+    source: "https://chat.mistral.ai"
+    source_label: "Le Chat by Mistral AI"
+    source_id: mistral-chat
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  coding_agent:
+    value: "No bundled IDE agent equivalent to Cursor/Replit; Codestral and code-capable models power coding workflows through APIs and tools"
+    source: "https://docs.mistral.ai/models/overview"
+    source_label: "Mistral AI model docs"
+    source_id: mistral-model-docs
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  enterprise_controls:
+    value: "Enterprise buyer posture emphasizes European jurisdiction, deployment options, APIs, fine-tuning, and enterprise agreements"
+    source: "https://mistral.ai/pricing"
+    source_label: "Mistral AI pricing"
+    source_id: mistral-pricing
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  data_retention_or_privacy:
+    value: "EU incorporation and deployment options make Mistral strategically relevant for European and sovereignty-sensitive AI procurement"
+    source: "https://mistral.ai/pricing"
+    source_label: "Mistral AI pricing"
+    source_id: mistral-pricing
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  open_source_or_local:
+    value: "Yes: Mistral publishes open-weight models through Hugging Face alongside hosted proprietary models"
+    source: "https://huggingface.co/mistralai"
+    source_label: "Mistral AI Hugging Face organization"
+    source_id: mistral-huggingface
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  best_for:
+    value: "European AI procurement, open-weight deployment, model API buyers, coding/model experimentation, and teams balancing capability with sovereignty"
+    source: "https://docs.mistral.ai/models/overview"
+    source_label: "Mistral AI model docs"
+    source_id: mistral-model-docs
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  watch_out_for:
+    value: "Model lineup changes quickly, consumer Le Chat features differ from API capabilities, and open-weight versus hosted model terms vary by model"
+    source: "https://docs.mistral.ai/models/overview"
+    source_label: "Mistral AI model docs"
+    source_id: mistral-model-docs
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
 tags: [llm, open-source-ai, european-ai, ai-api, mistral, ai-models, mistral-small-4, voxtral, forge]
 seo_title: 'Mistral AI: Features, Pricing & Review (April 2026)'
 meta_description: "Mistral AI runs Mistral Large 3 (closed frontier), Mistral Small 4 (Apache 2.0, 256K context), Voxtral TTS, and Forge enterprise training. Le Chat Pro is €14.99/mo. GDPR-native EU hosting is the moat."
@@ -45,10 +183,16 @@ price_history:
   - date: 2026-03-16
     plan: "API · Mistral Small 4"
     price: "$0.15/M input"
+    source: "https://mistral.ai/pricing"
+    source_label: "Source"
+    source_id: mistral-pricing
     note: "Small 4 launched · Apache 2.0 · unifies Magistral + Pixtral + Devstral"
   - date: 2026-04-17
     plan: "le Chat Pro"
     price: "€14.99/mo"
+    source: "https://mistral.ai/pricing"
+    source_label: "Source"
+    source_id: mistral-pricing
     note: "Verified unchanged"
 ---
 

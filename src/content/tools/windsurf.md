@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2024-11
-last_updated: 2026-05-03
-last_verified: 2026-05-03
+last_updated: 2026-05-04
+last_verified: 2026-05-04
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -24,6 +24,55 @@ scores:
   value: 8
   moat: 7
   longevity: 7
+facts:
+  best_for:
+    value: Best for developers who want an agentic code editor with Cascade workflows, built-in models, and a VS Code-style
+      environment.
+    source: https://windsurf.com/
+    source_label: Windsurf official site
+    source_id: windsurf-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  pricing_anchor:
+    value: Windsurf pricing changes frequently around free usage, paid developer plans, credits, and enterprise tiers, so the
+      live pricing page should drive procurement copy.
+    source: https://windsurf.com/pricing
+    source_label: Windsurf pricing
+    source_id: windsurf-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  coding_agent:
+    value: Windsurf is explicitly positioned as an agentic developer environment rather than only autocomplete.
+    source: https://docs.windsurf.com/
+    source_label: Windsurf docs
+    source_id: windsurf-docs
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  enterprise_controls:
+    value: Enterprise evaluation should focus on admin controls, model access, usage governance, and data policy.
+    source: https://windsurf.com/pricing
+    source_label: Windsurf pricing
+    source_id: windsurf-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  watch_out_for:
+    value: The main risk is churn in ownership, packaging, credits, and model access, so comparisons should be rechecked before
+      claiming durable pricing advantages.
+    source: https://windsurf.com/blog/windsurf-pricing-plans
+    source_label: Windsurf pricing plans blog
+    source_id: windsurf-pricing-blog
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
 tags: [code-editor, ide, autocomplete, ai-coding, vscode-fork, agentic-coding, cascade, swe-1-5, cognition]
 seo_title: "Windsurf: Features, Pricing & Review (April 2026)"
 meta_description: "Windsurf is Cognition AI's VS Code fork with Cascade agent and SWE-1.5 model. Pro $20/mo, Max $200/mo, Teams $40/user. Free tier and SWE-1.5 access included. Verified April 2026."
@@ -43,10 +92,16 @@ price_history:
   - date: 2025-07-15
     plan: "ownership"
     price: "acquired by Cognition"
+    source: "https://windsurf.com/pricing"
+    source_label: "Source"
+    source_id: windsurf-pricing
     note: "Cognition AI acquired Windsurf after Google licensing deal and OpenAI acquisition collapse"
   - date: 2026-03-01
     plan: "Pro"
     price: "$20/mo"
+    source: "https://windsurf.com/pricing"
+    source_label: "Source"
+    source_id: windsurf-pricing
     note: "Pro re-priced to $20 to match Cursor; SWE-1.5 became default"
 ---
 

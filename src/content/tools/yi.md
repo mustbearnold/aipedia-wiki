@@ -26,6 +26,33 @@ scores:
   value: 7
   moat: 3
   longevity: 3
+facts:
+  best_for:
+    value: "Kai-Fu Lee's open-weight LLM family from 01.AI, now frozen after the March 2025 pivot away from pre-training. Best for research, literature review, evidence collection, and document analysis."
+    source: "https://en.wikipedia.org/wiki/01.AI"
+    source_label: "01.AI Wikipedia"
+    source_id: yi-official
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: medium
+  pricing_anchor:
+    value: "Pricing should be checked on the current Yi (01.AI) source before purchase; AIpedia has not promoted this page to a full Tier 1 pricing profile yet"
+    source: "https://en.wikipedia.org/wiki/01.AI"
+    source_label: "01.AI Wikipedia"
+    source_id: yi-official
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
+  watch_out_for:
+    value: "Non-Tier-1 canonical profile: verify current pricing, usage limits, data policy, and integration details before procurement"
+    source: "https://en.wikipedia.org/wiki/01.AI"
+    source_label: "01.AI Wikipedia"
+    source_id: yi-official
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
 tags: [open-source, llm, kai-fu-lee, chinese-ai, yi-34b, yi-lightning, open-weight, 01ai, frozen]
 seo_title: "Yi (01.AI): Frozen Model Family, Pricing & Review (April 2026)"
 meta_description: "Yi is 01.AI's open-weight LLM family, frozen after the March 2025 pre-training pivot. Yi-Lightning ~$0.14/M tokens via third parties. 01.AI now resells DeepSeek-based enterprise AI."

@@ -11,8 +11,8 @@ pricing_model: free
 price_range: "$0 (one optional $24 Mac voice pack)"
 status: active
 launched: 2023-10
-last_updated: 2026-05-03
-last_verified: 2026-05-03
+last_updated: 2026-05-04
+last_verified: 2026-05-04
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -25,6 +25,54 @@ scores:
   value: 10
   moat: 6
   longevity: 7
+facts:
+  best_for:
+    value: Best for users who want a local-first, open-source ChatGPT-style desktop app that can run local models and connect
+      to model providers.
+    source: https://jan.ai/
+    source_label: Jan official site
+    source_id: jan-ai-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  pricing_anchor:
+    value: Jan itself is open source; practical cost comes from hardware, local models, and any connected remote model/API providers.
+    source: https://github.com/menloresearch/jan
+    source_label: Jan GitHub repository
+    source_id: jan-ai-repository
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  open_source_or_local:
+    value: Jan’s repository is the authoritative source for license, releases, installation, and project activity.
+    source: https://github.com/menloresearch/jan
+    source_label: Jan GitHub repository
+    source_id: jan-ai-repository
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  runtime_architecture:
+    value: Docs should be used to verify local model setup, provider connections, data paths, and desktop runtime behavior.
+    source: https://jan.ai/docs
+    source_label: Jan docs
+    source_id: jan-ai-docs
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  watch_out_for:
+    value: Local-first chat still needs model-download hygiene, hardware fit, update discipline, and clear separation of local
+      versus cloud provider traffic.
+    source: https://jan.ai/docs
+    source_label: Jan docs
+    source_id: jan-ai-docs
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
 tags: [local-llm, open-source, desktop, privacy, offline, chatgpt-alternative]
 seo_title: "Jan.ai: Features & Review (April 2026)"
 meta_description: "Jan.ai is the free open-source desktop AI that runs 100% offline. 5.3M downloads, 41k GitHub stars. Connects to local or cloud models. Best open-source ChatGPT alternative for privacy-first users."

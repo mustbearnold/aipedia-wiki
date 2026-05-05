@@ -27,6 +27,48 @@ scores:
   value: 6
   moat: 9
   longevity: 10
+facts:
+  best_for:
+    value: "Semrush is best for teams that want a broad SEO and digital-marketing suite covering keyword research, competitive analysis, site audits, content workflows, and campaign reporting in one account."
+    source: "https://www.semrush.com/features/"
+    source_label: "Semrush features"
+    source_id: semrush-features
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  pricing_anchor:
+    value: "Semrush pricing is subscription plus add-ons, so buyers should include user seats, projects, data limits, local/listing tools, and AI-visibility needs in the total-cost model."
+    source: "https://www.semrush.com/pricing/"
+    source_label: "Semrush pricing"
+    source_id: semrush-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: high
+  suite_scope:
+    value: "The platform spans SEO, content, advertising, social, and competitive research, making it stronger for all-in-one marketing operations than single-purpose content optimizers."
+    source: "https://www.semrush.com/features/"
+    source_label: "Semrush features"
+    source_id: semrush-features
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  competitive_position:
+    value: "Compared with Ahrefs, Semrush usually has a broader marketing-suite surface, while Ahrefs is often chosen for backlink and web-index depth."
+    source: "https://www.semrush.com/features/"
+    source_label: "Semrush features"
+    source_id: semrush-features
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  watch_out_for:
+    value: "The suite can become expensive and noisy if a team only needs a narrow keyword or content-scoring workflow; define which toolkits and limits matter before upgrading."
+    source: "https://www.semrush.com/pricing/"
+    source_label: "Semrush pricing"
+    source_id: semrush-pricing
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
 tags: [seo, keyword-research, backlinks, site-audit, competitor-analysis, ppc, ai-visibility, semrush-copilot, contentshake, ai-visibility-toolkit]
 seo_title: "Semrush: Features, Pricing & Review (April 2026)"
 meta_description: "Semrush is the broadest SEO platform with 55+ tools spanning keyword research, backlinks, site audit, PPC, social, and AI Visibility tracking. Pro $139.95, Guru $249.95, Business $499.95. Copilot included free."
@@ -46,10 +88,16 @@ price_history:
   - date: 2026-03-15
     plan: "AI Visibility Toolkit"
     price: "$99/mo add-on"
+    source: "https://www.semrush.com/pricing/"
+    source_label: "Source"
+    source_id: semrush-pricing
     note: "Priced to undercut Ahrefs Brand Radar per-platform add-ons."
   - date: 2026-04-15
     plan: "Pro"
     price: "$139.95/mo"
+    source: "https://www.semrush.com/pricing/"
+    source_label: "Source"
+    source_id: semrush-pricing
     note: "Verified unchanged. Annual billing saves ~17%."
 ---
 

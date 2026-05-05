@@ -24,6 +24,33 @@ scores:
   value: 7
   moat: 7
   longevity: 7
+facts:
+  best_for:
+    value: "Luma AI's cinematography-focused video generator. Ray3 model, explicit pan/tilt/dolly/orbit controls, plans from $0 to $300/month. Best for AI video generation, editing, avatars, or production workflows."
+    source: "https://lumalabs.ai/dream-machine"
+    source_label: "Luma Dream Machine product page"
+    source_id: luma-official
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: medium
+  pricing_anchor:
+    value: "Ray3 model; Launch; Ray3 released March 2026, rolled across tiers"
+    source: "https://lumalabs.ai/pricing"
+    source_label: "Source"
+    source_id: luma-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
+  watch_out_for:
+    value: "Non-Tier-1 canonical profile: verify current pricing, usage limits, data policy, and integration details before procurement"
+    source: "https://lumalabs.ai/pricing"
+    source_label: "Source"
+    source_id: luma-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
 tags: [ai-video, video-generation, text-to-video, image-to-video, camera-controls, ray3]
 seo_title: "Luma Dream Machine Review: Ray3 Pricing, Camera Controls and Alternatives"
 meta_description: "Luma Dream Machine is an AI video generator built around Ray3 camera controls. Compare Luma pricing, free tier limits, 720p output, API access, and Luma vs Kling/Runway."
@@ -54,10 +81,16 @@ price_history:
   - date: 2026-03-01
     plan: "Ray3 model"
     price: "Launch"
+    source: "https://lumalabs.ai/pricing"
+    source_label: "Source"
+    source_id: luma-pricing
     note: "Ray3 released March 2026, rolled across tiers"
   - date: 2026-04-17
     plan: "Plus"
     price: "$30/mo"
+    source: "https://lumalabs.ai/pricing"
+    source_label: "Source"
+    source_id: luma-pricing
     note: "Verified, unchanged"
 ---
 

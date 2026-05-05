@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "$4.70-$108/month annual"
 status: active
 launched: 2017-01
-last_updated: 2026-05-03
-last_verified: 2026-05-03
+last_updated: 2026-05-04
+last_verified: 2026-05-04
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -24,7 +24,67 @@ scores:
   value: 6
   moat: 7
   longevity: 7
+facts:
+  best_for:
+    value: Best for teams building AI-avatar video, talking-head content, or interactive visual agents from D-ID Studio and
+      API surfaces.
+    source: https://www.d-id.com/
+    source_label: D-ID official site
+    source_id: d-id-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  pricing_anchor:
+    value: D-ID pricing is plan/credit/video-minute sensitive; verify Studio tiers, API packaging, agent usage, and commercial
+      rights on the live pricing page.
+    source: https://www.d-id.com/pricing/studio/
+    source_label: D-ID Studio pricing
+    source_id: d-id-studio-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  api_available:
+    value: D-ID exposes developer docs, so it can be used for programmatic avatar and video generation rather than only no-code
+      Studio creation.
+    source: https://docs.d-id.com/
+    source_label: D-ID docs
+    source_id: d-id-docs
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  real_time_avatar:
+    value: D-ID Agents is the key interactive-avatar product surface for conversational visual agents.
+    source: https://www.d-id.com/agents/
+    source_label: D-ID Agents
+    source_id: d-id-agents
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  watch_out_for:
+    value: Review consent, likeness rights, latency, voice/language quality, usage credits, and brand-safety workflow before
+      deploying generated presenters or agents.
+    source: https://www.d-id.com/pricing/studio/
+    source_label: D-ID Studio pricing
+    source_id: d-id-studio-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
 tags: [ai-avatar, talking-head, ai-video, digital-human, real-time-avatar, streaming-api, agents]
+best_for:
+  - live conversational avatars for support, education, kiosks, and companions
+  - developers embedding a streaming avatar API into products
+  - teams animating photos or presenters for interactive experiences
+  - brands that need real-time avatar conversations rather than only rendered clips
+not_best_for:
+  - cheapest batch avatar video production
+  - SCORM-heavy corporate training workflows
+  - cinematic scene generation or non-presenter video
+  - teams unwilling to manage avatar consent and uncanny-valley risk
 seo_title: "D-ID: Features, Pricing & Review (April 2026)"
 meta_description: "D-ID runs Creative Reality Studio for talking-head video and the Agents API for real-time streaming avatar conversations. Lite $4.70, Pro $16, Advanced $108 annual billing. The streaming avatar specialist."
 author: aipedia.wiki Editorial

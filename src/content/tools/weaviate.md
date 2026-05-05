@@ -9,11 +9,11 @@ company: Weaviate
 url: https://weaviate.io
 github_url: https://github.com/weaviate/weaviate
 pricing_model: open-source
-price_range: Free self-host; Weaviate Cloud from $45/mo; higher plans usage-based/custom
+price_range: Free self-host; 14-day cloud trial; Flex from $45/mo; Premium from $400/mo; add-ons usage-based
 status: active
 launched: 2019
-last_updated: 2026-04-27
-last_verified: 2026-04-27
+last_updated: 2026-05-05
+last_verified: 2026-05-05
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -26,8 +26,31 @@ scores:
   value: 8
   moat: 8
   longevity: 8
+facts:
+  flagship_model:
+    value: "Weaviate vector database"
+    source: "https://weaviate.io/developers/weaviate"
+    source_label: "Weaviate documentation"
+    source_id: weaviate-best-for
+    verified_at: 2026-05-05
+    next_review_at: 2026-06-03
+    confidence: high
+  best_paid_tier:
+    value: "Weaviate Cloud when managed service, scaling, and support matter"
+    source: "https://weaviate.io/pricing"
+    source_label: "Weaviate pricing"
+    source_id: weaviate-best-paid-tier
+    verified_at: 2026-05-05
+    next_review_at: 2026-06-03
+    confidence: high
+  best_for:
+    value: "Hybrid search, RAG, metadata filtering, multi-tenancy, and open-source vector infrastructure"
+    source: "https://weaviate.io/developers/weaviate"
+    source_id: weaviate-best-for
+    verified_at: 2026-05-05
+    confidence: high
 tags: [vector-database, open-source, rag, semantic-search, hybrid-search, embeddings, retrieval]
-seo_title: "Weaviate Review: Open-Source Vector Database & Cloud Pricing (April 2026)"
+seo_title: "Weaviate Review: Open-Source Vector Database & Cloud Pricing (2026)"
 meta_description: "Weaviate is an open-source vector database with managed cloud options for RAG, semantic search, hybrid retrieval, multi-tenancy, and AI-native applications."
 author: aipedia.wiki Editorial
 best_for:
@@ -66,6 +89,7 @@ It competes with [Pinecone](/tools/pinecone/), [Qdrant](/tools/qdrant/), Milvus,
 | **Use cases** | RAG, semantic search, hybrid retrieval, recommendations |
 | **Search modes** | Vector, keyword, hybrid, filters |
 | **AI services** | Embeddings and query agent features in cloud plans |
+| **Cloud plans** | 14-day trial, Flex from $45/month, Premium from $400/month |
 | **Pricing** | Free self-host plus paid cloud plans |
 | **Best fit** | Teams wanting control plus managed upgrade path |
 
@@ -84,11 +108,31 @@ It competes with [Pinecone](/tools/pinecone/), [Qdrant](/tools/qdrant/), Milvus,
 - **Postgres-first apps:** pgvector through your existing database.
 - **Workplace search:** [Glean](/tools/glean/) adds connectors, permissions, and employee-facing UX.
 
+
+## How to evaluate it
+
+Evaluate Weaviate as a retrieval platform, not just a nearest-neighbor index. The deciding factors are hybrid search quality, schema design, multi-tenancy needs, embedding workflow, cloud operations, and how cleanly it fits the rest of your RAG stack. If you already know your workload is simple vector lookup, a narrower database or Postgres with pgvector may be easier to run.
+
+Weaviate's strongest buyer fit is a team that wants open-source optionality without giving up a managed cloud path. That matters when procurement, data residency, or architecture reviews make cloud lock-in a concern. It also matters for teams that expect retrieval to become a core product surface rather than a small feature hidden behind a chatbot.
+
+Compare it directly with [Qdrant](/tools/qdrant/) and [Pinecone](/tools/pinecone/). Qdrant is appealing for focused open-source vector search and self-hosting. Pinecone is appealing for managed cloud simplicity. Weaviate sits in the middle: broader retrieval features, open deployment choices, and enough product surface for teams building search or RAG as a durable capability.
+
 ## Pricing
 
-Weaviate can be self-hosted for free. Weaviate Cloud has paid plans with monthly minimums and usage dimensions such as vector dimensions, storage, backup, and support tier. Pricing varies by region, index type, compression, and cloud plan.
+Weaviate can be self-hosted for free. As verified on 2026-05-05, Weaviate Cloud offers a 14-day free trial, Flex from $45/month, and Premium from $400/month. Pricing dimensions include vector dimensions, storage, backup, index type, compression, region, and cloud plan. Flex is a shared-cloud pay-as-you-go plan; Premium adds predictable spend, enhanced reliability, support, and dedicated-deployment options.
 
 The practical advice: use the calculator before migration, and compare against pgvector if your index is small.
+
+Weaviate also lists add-ons such as hosted embeddings and Query Agent. Query Agent has a monthly organization plan with included requests plus usage-based additional requests. These are useful, but they mean the full bill can include database, backup, AI service, support, and agent usage rather than only vector storage.
+
+## Evaluation checklist
+
+- Estimate vector dimensions, object count, object size, and backup volume before choosing a plan.
+- Test hybrid retrieval quality against plain vector search and keyword search.
+- Decide whether multi-tenancy belongs inside Weaviate or in your application layer.
+- Check whether compression changes recall enough to matter.
+- Model Premium or dedicated cloud if HIPAA, SSO/SAML, PrivateLink, customer-managed keys, or stronger SLAs are required.
+- Treat Query Agent and hosted embeddings as separate cost and architecture decisions.
 
 ## Failure Modes
 
@@ -97,10 +141,11 @@ The practical advice: use the calculator before migration, and compare against p
 - **Schema decisions linger.** Poor chunking and metadata design can make retrieval worse than the database deserves.
 - **Not an enterprise-search app.** Weaviate is infrastructure. It does not solve workplace permissions and UX by itself.
 - **Migration can be expensive.** Re-indexing embeddings and changing retrieval semantics require testing.
+- **Add-ons change scope.** Embeddings and Query Agent can make Weaviate more than a vector DB, but they also add procurement and evaluation work.
 
 ## Methodology
 
-Last verified 2026-04-28 against Weaviate pricing, cloud, and GitHub documentation. Scoring reflects open-source leverage, feature depth, cloud maturity, and operational complexity.
+Last verified 2026-05-05 against Weaviate pricing, cloud, and GitHub documentation. Scoring reflects open-source leverage, feature depth, cloud maturity, and operational complexity.
 
 ## FAQ
 

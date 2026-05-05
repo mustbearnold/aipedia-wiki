@@ -29,6 +29,33 @@ scores:
   value: 9
   moat: 6
   longevity: 7
+facts:
+  best_for:
+    value: "Open-source AI answer engine with generative UI. Self-hostable, MIT-licensed, multi-provider across OpenAI, Anthropic, Groq, and Ollama. Best for AI search, answer engines, and retrieval workflows."
+    source: "https://morphic.sh"
+    source_label: "Source"
+    source_id: morphic-pricing
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: medium
+  pricing_anchor:
+    value: "Self-host; $0; Verified. Core is MIT, BYOK for provider API costs."
+    source: "https://morphic.sh"
+    source_label: "Source"
+    source_id: morphic-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
+  watch_out_for:
+    value: "Non-Tier-1 canonical profile: verify current pricing, usage limits, data policy, and integration details before procurement"
+    source: "https://morphic.sh"
+    source_label: "Source"
+    source_id: morphic-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
 tags: [ai-search, answer-engine, open-source, self-hosted, generative-ui, perplexity-alternative, mit-license, byok, ollama, anthropic, openai, groq]
 best_for:
   - developers wanting a self-hosted answer engine
@@ -45,6 +72,9 @@ price_history:
   - date: 2026-04-15
     plan: "Self-host"
     price: "$0"
+    source: "https://morphic.sh"
+    source_label: "Source"
+    source_id: morphic-pricing
     note: "Verified. Core is MIT, BYOK for provider API costs."
 ---
 

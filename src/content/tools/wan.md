@@ -24,6 +24,33 @@ scores:
   value: 9
   moat: 8
   longevity: 9
+facts:
+  best_for:
+    value: "Alibaba Tongyi Lab's video generation family. Wan 2.7 is the proprietary flagship; Wan 2.2 remains Apache 2.0 open-weights. Best for AI video generation, editing, avatars, or production workflows."
+    source: "https://wan.video"
+    source_label: "Source"
+    source_id: wan-pricing
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: medium
+  pricing_anchor:
+    value: "Wan 2.2 open-weights; $0/self-host; Apache 2.0 weights on HuggingFace and ModelScope"
+    source: "https://wan.video"
+    source_label: "Source"
+    source_id: wan-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
+  watch_out_for:
+    value: "Non-Tier-1 canonical profile: verify current pricing, usage limits, data policy, and integration details before procurement"
+    source: "https://wan.video"
+    source_label: "Source"
+    source_id: wan-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
 tags: [ai-video, video-generation, text-to-video, image-to-video, alibaba, wan, tongyi, open-weights]
 seo_title: "Wan: Features, Pricing & Review (April 2026)"
 meta_description: "Wan 2.7 (April 6, 2026) is Alibaba Tongyi Lab's proprietary flagship video model with Thinking Mode. Wan 2.2 stays open-weights Apache 2.0. Clips 2-15s at 1080p, $0.10/second on fal.ai."
@@ -43,10 +70,16 @@ price_history:
   - date: 2025-07-28
     plan: "Wan 2.2 open-weights"
     price: "$0/self-host"
+    source: "https://wan.video"
+    source_label: "Source"
+    source_id: wan-pricing
     note: "Apache 2.0 weights on HuggingFace and ModelScope"
   - date: 2026-04-06
     plan: "Wan 2.7 API"
     price: "$0.10/second"
+    source: "https://wan.video"
+    source_label: "Source"
+    source_id: wan-pricing
     note: "fal.ai launch pricing, unified across 720p and 1080p"
 ---
 

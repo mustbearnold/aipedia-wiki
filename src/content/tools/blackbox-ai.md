@@ -33,17 +33,24 @@ facts:
     value: "Multi-model coding platform with chat, voice agent, app builder, multi-agent execution, coding agent across 35+ IDEs, web, and terminal"
     source: "https://www.blackbox.ai/pricing"
     source_label: "BLACKBOX AI pricing"
+    source_id: blackbox-ai-best-for
     verified_at: 2026-04-28
+    confidence: high
   best_paid_tier:
     value: "Pro Plus ($20/month) because it adds App Builder, multi-agent execution, coding agent, remote data agent, Slack, and E2E chat encryption"
     source: "https://www.blackbox.ai/pricing"
     source_label: "BLACKBOX AI pricing"
+    source_id: blackbox-ai-best-for
     verified_at: 2026-04-28
+    next_review_at: 2026-06-03
+    confidence: high
   best_for:
     value: "Developers who want cheap access to many models and agent surfaces, but can tolerate less enterprise polish than GitHub or Cursor"
     source: "https://www.blackbox.ai/pricing"
     source_label: "BLACKBOX AI pricing"
+    source_id: blackbox-ai-best-for
     verified_at: 2026-04-28
+    confidence: high
 tags: [ai-coding, coding-agent, app-builder, multi-model, ide, terminal, voice-agent, figma-to-code]
 best_for:
   - budget-conscious developers who want many models in one tool
@@ -60,14 +67,23 @@ price_history:
   - date: 2026-04-28
     plan: "Pro"
     price: "$10/month"
+    source: "https://www.blackbox.ai/pricing"
+    source_label: "Source"
+    source_id: blackbox-ai-best-for
     note: "Includes model credits, all chat models, and voice agent"
   - date: 2026-04-28
     plan: "Pro Plus"
     price: "$20/month"
+    source: "https://www.blackbox.ai/pricing"
+    source_label: "Source"
+    source_id: blackbox-ai-best-for
     note: "Adds App Builder, multi-agent execution, coding agent, Slack, E2E chat encryption"
   - date: 2026-04-28
     plan: "Pro Max"
     price: "$40/month"
+    source: "https://www.blackbox.ai/pricing"
+    source_label: "Source"
+    source_id: blackbox-ai-best-for
     note: "Adds more credits, team collaboration, admin/security controls, SAML SSO, analytics"
 ---
 

@@ -24,6 +24,33 @@ scores:
   value: 7
   moat: 7
   longevity: 8
+facts:
+  best_for:
+    value: "Google DeepMind's flagship AI video model. Native audio, 4K upscaling, access via Gemini Advanced ($19.99/mo) or Vertex AI. Best for AI video generation, editing, avatars, or production workflows."
+    source: "https://deepmind.google/technologies/veo/"
+    source_label: "Google DeepMind Veo page"
+    source_id: veo-official
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: medium
+  pricing_anchor:
+    value: "Veo 3.1 Lite; ~$0.10/sec (Vertex AI); Veo 3.1 Lite introduced on Vertex AI as the cost-efficient tier"
+    source: "https://one.google.com/about/google-ai-plans/"
+    source_label: "Source"
+    source_id: veo-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
+  watch_out_for:
+    value: "Non-Tier-1 canonical profile: verify current pricing, usage limits, data policy, and integration details before procurement"
+    source: "https://one.google.com/about/google-ai-plans/"
+    source_label: "Source"
+    source_id: veo-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
 tags: [ai-video, text-to-video, google, video-generation, cinematic, deepmind, gemini, vertex-ai]
 seo_title: "Google Veo 3.1: Features, Pricing & Review (April 2026)"
 meta_description: "Google Veo 3.1 is the current flagship video model from Google DeepMind. Consumer access via Gemini Advanced at $19.99/mo or Google AI Ultra at $249.99/mo. Vertex AI API starts at $0.10/sec."
@@ -43,10 +70,16 @@ price_history:
   - date: 2026-04-03
     plan: "Veo 3.1 Lite"
     price: "~$0.10/sec (Vertex AI)"
+    source: "https://one.google.com/about/google-ai-plans/"
+    source_label: "Source"
+    source_id: veo-pricing
     note: "Veo 3.1 Lite introduced on Vertex AI as the cost-efficient tier"
   - date: 2026-04-17
     plan: "Gemini Advanced"
     price: "$19.99/mo"
+    source: "https://one.google.com/about/google-ai-plans/"
+    source_label: "Source"
+    source_id: veo-pricing
     note: "Verified, unchanged"
 ---
 

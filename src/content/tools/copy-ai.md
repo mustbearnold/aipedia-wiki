@@ -24,6 +24,48 @@ scores:
   value: 7
   moat: 6
   longevity: 7
+facts:
+  best_for:
+    value: "Copy.ai is best for go-to-market teams that want repeatable AI workflows for sales and marketing tasks rather than only one-off copy generation."
+    source: "https://www.copy.ai/workflows"
+    source_label: "Copy.ai workflows"
+    source_id: copy-ai-workflows
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  pricing_anchor:
+    value: "Copy.ai pricing should be checked against workflow volume, seats, and GTM automation needs; it competes more with sales/marketing automation stacks than with simple writing tools."
+    source: "https://www.copy.ai/prices"
+    source_label: "Copy.ai Pricing"
+    source_id: copy-ai-official
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: high
+  workflow_surface:
+    value: "The platform centers on structured GTM workflows, making it useful when teams need consistent enrichment, messaging, and content processes with reusable steps."
+    source: "https://www.copy.ai/workflows"
+    source_label: "Copy.ai workflows"
+    source_id: copy-ai-workflows
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  platform_positioning:
+    value: "Copy.ai positions itself as a GTM AI platform, so comparisons should not frame it as only a blog-post or ad-copy writer."
+    source: "https://www.copy.ai/platform"
+    source_label: "Copy.ai platform"
+    source_id: copy-ai-platform
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  watch_out_for:
+    value: "The value case depends on having repeatable GTM processes and reliable source data; small teams that only need occasional drafts may find simpler writing assistants cheaper."
+    source: "https://www.copy.ai/prices"
+    source_label: "Copy.ai Pricing"
+    source_id: copy-ai-official
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
 tags: [ai-writing, copywriting, gtm-automation, sales-copy, marketing-copy, workflows]
 seo_title: "Copy.ai: Features, Pricing & Review (April 2026)"
 meta_description: "Copy.ai is a GTM AI platform with CRM-connected workflows. Free, Chat $29/mo, Starter $49/mo, Advanced $249/mo, Growth $1,000/mo. Full review for April 2026."

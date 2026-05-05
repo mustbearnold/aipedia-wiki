@@ -25,6 +25,52 @@ scores:
   value: 10
   moat: 5
   longevity: 8
+facts:
+  best_for:
+    value: "Developers who want strong open-weight models and Alibaba Cloud hosted inference options, especially for multilingual and agentic workloads."
+    source: "https://qwen.ai/"
+    source_label: "Qwen official site"
+    source_id: qwen-official
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
+  model_surface:
+    value: "Qwen should be evaluated as a model family with open releases, hosted APIs, and fast-moving version changes rather than a single chatbot product."
+    source: "https://qwenlm.github.io/blog/qwen3/"
+    source_label: "Qwen3 blog"
+    source_id: qwen-blog
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
+  pricing_anchor:
+    value: "Hosted API pricing is published through Alibaba Cloud Model Studio and depends on the selected model and token usage."
+    source: "https://www.alibabacloud.com/help/en/model-studio/model-pricing"
+    source_label: "Alibaba Cloud Model Studio pricing"
+    source_id: qwen-pricing
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
+  deployment_surface:
+    value: "Choose Qwen when open-weight deployment, regional availability, or Alibaba Cloud integration matters; compare license, context, and tool-use behavior per model."
+    source: "https://qwen.ai/"
+    source_label: "Qwen official site"
+    source_id: qwen-official
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: medium
+  watch_out_for:
+    value: "Do not generalize from one Qwen checkpoint to the whole family. Benchmark the exact model, quantization, serving stack, and language mix you plan to use."
+    source: "https://qwenlm.github.io/blog/qwen3/"
+    source_label: "Qwen3 blog"
+    source_id: qwen-blog
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
 tags: [open-weights, alibaba, multilingual, coding, vision, reasoning, qwen3, api, chinese-llm]
 seo_title: "Qwen: Features, Pricing & Review (April 2026)"
 meta_description: "Qwen is Alibaba's open-weight LLM family. Qwen3.6 Plus flagship (April 2026) runs 1M context with agentic coding; Apache 2.0 weights across 119 languages. API from ~$0.15/M tokens."

@@ -26,6 +26,33 @@ scores:
   value: 10
   moat: 8
   longevity: 9
+facts:
+  best_for:
+    value: "OpenAI's open-weights speech-to-text model. 99 languages, MIT license for self-host, and a $0.006/minute API. Underpins most third-party transcription products. Best for speech, voice, transcription, or audio-agent workflows."
+    source: "https://www.assemblyai.com"
+    source_label: "AssemblyAI"
+    source_id: whisper-official
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: medium
+  pricing_anchor:
+    value: "API; $0.006/min; Whisper-1 API, verified unchanged"
+    source: "https://developers.openai.com/api/docs/pricing"
+    source_label: "Source"
+    source_id: whisper-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
+  watch_out_for:
+    value: "Non-Tier-1 canonical profile: verify current pricing, usage limits, data policy, and integration details before procurement"
+    source: "https://developers.openai.com/api/docs/pricing"
+    source_label: "Source"
+    source_id: whisper-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
 tags: [speech-to-text, transcription, open-weights, multilingual, self-hosted, openai, whisper, subtitles, dictation]
 seo_title: "Whisper: Features, Pricing & Review (April 2026)"
 meta_description: "OpenAI's Whisper is the reference open-weights speech-to-text model. MIT license for self-hosting, $0.006/minute via API, and 99 languages. Powers the transcription layer of most third-party products."
@@ -46,10 +73,16 @@ price_history:
   - date: 2026-04-17
     plan: "API"
     price: "$0.006/min"
+    source: "https://developers.openai.com/api/docs/pricing"
+    source_label: "Source"
+    source_id: whisper-pricing
     note: "Whisper-1 API, verified unchanged"
   - date: 2025-03-20
     plan: "GPT-4o Transcribe"
     price: "$0.006/min"
+    source: "https://developers.openai.com/api/docs/pricing"
+    source_label: "Source"
+    source_id: whisper-pricing
     note: "OpenAI shipped GPT-4o Transcribe + Mini Transcribe as modern successors; Whisper-1 remains available and MIT weights unchanged"
 ---
 

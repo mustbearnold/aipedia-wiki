@@ -28,6 +28,33 @@ scores:
   value: 7
   moat: 8
   longevity: 8
+facts:
+  best_for:
+    value: "AI legal copilot for Microsoft Word. Drafts and redlines contracts in-document using GPT-5 and Claude Opus, with clause benchmarks across 2,000+ contract types. Best for writing, editing, content, and communication workflows."
+    source: "https://www.spellbook.legal"
+    source_label: "GPT-5"
+    source_id: spellbook-official
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: medium
+  pricing_anchor:
+    value: "Entry tier; Custom (~$49/user/mo starting); Not publicly listed; third-party trackers report starts around $49/user/mo in 2026. 7-day free trial available."
+    source: "https://www.hyperstart.com/blog/spellbook-pricing/"
+    source_label: "Source"
+    source_id: spellbook-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
+  watch_out_for:
+    value: "Non-Tier-1 canonical profile: verify current pricing, usage limits, data policy, and integration details before procurement"
+    source: "https://www.hyperstart.com/blog/spellbook-pricing/"
+    source_label: "Source"
+    source_id: spellbook-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
 tags: [legal-ai, contract-drafting, word-addin, law, spellbook, contract-review]
 best_for:
   - solo attorneys and small law firms drafting commercial contracts
@@ -44,6 +71,9 @@ price_history:
   - date: 2026-04-18
     plan: "Entry tier"
     price: "Custom (~$49/user/mo starting)"
+    source: "https://www.hyperstart.com/blog/spellbook-pricing/"
+    source_label: "Source"
+    source_id: spellbook-pricing
     note: "Not publicly listed; third-party trackers report starts around $49/user/mo in 2026. 7-day free trial available."
 ---
 

@@ -24,6 +24,33 @@ scores:
   value: 7
   moat: 7
   longevity: 8
+facts:
+  best_for:
+    value: "No-code AI agent builder for conversational apps across web chat, Slack, WhatsApp, Teams, and voice. Best for workflow automation, agentic operations, and business-process automation."
+    source: "https://www.voiceflow.com/pricing"
+    source_label: "Source"
+    source_id: voiceflow-pricing
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: medium
+  pricing_anchor:
+    value: "Pro; $60/editor/mo; Per-editor pricing restructure"
+    source: "https://www.voiceflow.com/pricing"
+    source_label: "Source"
+    source_id: voiceflow-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
+  watch_out_for:
+    value: "Non-Tier-1 canonical profile: verify current pricing, usage limits, data policy, and integration details before procurement"
+    source: "https://www.voiceflow.com/pricing"
+    source_label: "Source"
+    source_id: voiceflow-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
 tags: [chatbot, ai-agent, no-code, conversational-ai, customer-support, voice-assistant, rag, knowledge-base]
 seo_title: "Voiceflow: Features, Pricing & Review (April 2026)"
 meta_description: >-
@@ -44,10 +71,16 @@ price_history:
   - date: 2026-02-01
     plan: "Pro"
     price: "$60/editor/mo"
+    source: "https://www.voiceflow.com/pricing"
+    source_label: "Source"
+    source_id: voiceflow-pricing
     note: "Per-editor pricing restructure"
   - date: 2026-04-15
     plan: "Pro"
     price: "$60/editor/mo"
+    source: "https://www.voiceflow.com/pricing"
+    source_label: "Source"
+    source_id: voiceflow-pricing
     note: "Verified unchanged"
 ---
 

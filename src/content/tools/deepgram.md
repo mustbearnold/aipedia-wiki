@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: $200 free credit, then pay-as-you-go; Growth from $4k+/year
 status: active
 launched: 2015
-last_updated: 2026-04-27
-last_verified: 2026-04-27
+last_updated: 2026-05-05
+last_verified: 2026-05-05
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -25,8 +25,58 @@ scores:
   value: 8
   moat: 8
   longevity: 8
+facts:
+  best_for:
+    value: Best for developers building voice AI products that need speech-to-text, text-to-speech, audio intelligence, and
+      real-time agent APIs.
+    source: https://deepgram.com/
+    source_label: Deepgram official site
+    source_id: deepgram-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  pricing_anchor:
+    value: Deepgram pricing is usage-based and model/feature dependent; verify current STT, TTS, voice-agent, add-on, and enterprise
+      terms before forecasting cost.
+    source: https://deepgram.com/pricing
+    source_label: Deepgram pricing
+    source_id: deepgram-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  api_available:
+    value: Deepgram is API-first, with developer docs as the source of truth for endpoint behavior, authentication, streaming,
+      and SDK assumptions.
+    source: https://developers.deepgram.com/docs
+    source_label: Deepgram docs
+    source_id: deepgram-docs
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  real_time_voice:
+    value: The Voice Agent API is Deepgram’s dedicated surface for low-latency conversational voice agents.
+    source: https://deepgram.com/product/voice-agent-api
+    source_label: Deepgram Voice Agent API
+    source_id: deepgram-voice-agent
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  watch_out_for:
+    value: Evaluate Deepgram by latency, accuracy, diarization, language coverage, streaming reliability, TTS quality, and total
+      audio hours—not only per-hour headline rates.
+    source: https://deepgram.com/pricing
+    source_label: Deepgram pricing
+    source_id: deepgram-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
 tags: [speech-to-text, text-to-speech, voice-agent, transcription, realtime, api, audio-intelligence]
-seo_title: "Deepgram Review: Speech-to-Text, Voice Agents & Pricing (April 2026)"
+seo_title: "Deepgram Review: Speech-to-Text, Voice Agents & Pricing (2026)"
 meta_description: "Deepgram is a speech AI API platform for speech-to-text, text-to-speech, audio intelligence, and real-time voice agents."
 author: aipedia.wiki Editorial
 best_for:
@@ -44,7 +94,7 @@ quick_answer: >-
 
 # Deepgram
 
-Deepgram is a speech AI API platform. Its product set covers speech-to-text, text-to-speech, audio intelligence, and real-time voice-agent APIs for developers building voice products.
+Deepgram is a speech AI API platform. Its product set covers speech-to-text, text-to-speech, audio intelligence, and real-time voice-agent APIs for developers building voice products. The platform is built for embedded speech workflows: streaming transcription, call analytics, conversational agents, dictation, captions, and product features where voice quality affects the user experience.
 
 It competes with [AssemblyAI](/tools/assemblyai/), OpenAI Whisper, Google Speech-to-Text, Azure AI Speech, Amazon Transcribe, Speechmatics, and voice-agent stacks.
 
@@ -66,6 +116,7 @@ It competes with [AssemblyAI](/tools/assemblyai/), OpenAI Whisper, Google Speech
 | **Voice Agent API** | Real-time conversational voice agents |
 | **Audio intelligence** | Summarization, topic, sentiment, intent features |
 | **Free credit** | $200 credit for new projects |
+| **Growth plan** | Annual prepaid credits for growing applications |
 | **Best fit** | Voice products, call centers, agents, audio analytics |
 
 ## When to pick Deepgram
@@ -75,6 +126,7 @@ It competes with [AssemblyAI](/tools/assemblyai/), OpenAI Whisper, Google Speech
 - **You need developer controls.** API-first configuration is better than a meeting-note UI for embedded products.
 - **You handle high audio volume.** Usage-based pricing and Growth plans are built for scale.
 - **You care about data residency.** Deepgram lists a dedicated EU endpoint for EU processing.
+- **You need model choice for voice.** Deepgram separates real-time conversational STT, prerecorded transcription, TTS, and audio intelligence so teams can tune cost and quality by workflow.
 
 ## When to pick something else
 
@@ -85,9 +137,29 @@ It competes with [AssemblyAI](/tools/assemblyai/), OpenAI Whisper, Google Speech
 
 ## Pricing
 
-Deepgram offers a free credit, then pay-as-you-go pricing. Growth plans use annual prepaid credit commitments. Pricing varies by endpoint: speech-to-text, text-to-speech, Voice Agent API, and audio intelligence all have separate meters.
+Deepgram offers a free $200 credit, then pay-as-you-go pricing. Growth plans start around annual prepaid credit commitments, and Enterprise is custom. Pricing varies by endpoint: speech-to-text, text-to-speech, Voice Agent API, and audio intelligence all have separate meters.
 
 Teams should price by audio hours, concurrency, latency target, and whether TTS/LLM components are bundled or brought separately.
+
+As verified on 2026-05-05, the pricing page splits speech-to-text rates by streaming versus prerecorded usage and by model family, including Flux for real-time voice agents and Nova models for general transcription. It also lists separate concurrency limits for REST, WebSocket, TTS, Voice Agent API, and Audio Intelligence. Those limits can matter more than the per-minute headline rate in production.
+
+## Evaluation checklist
+
+Test Deepgram with your real audio before choosing it:
+
+- Noisy calls, accents, crosstalk, far-field audio, and domain jargon.
+- Streaming latency, partial transcripts, endpointing, and interruption behavior.
+- Diarization quality when multiple speakers overlap.
+- Language detection and multilingual behavior if calls switch languages.
+- TTS voice quality, pronunciation, and interruption handling for agents.
+- Concurrency limits under your peak traffic pattern.
+- Add-on cost for summarization, topics, sentiment, intent, or custom models.
+
+## Buyer fit
+
+Deepgram is strongest for product teams that need speech as infrastructure. A call-center platform, voice agent, transcription API, language-learning app, or compliance review workflow can justify integration effort because speech quality becomes product quality.
+
+It is less attractive for occasional transcription. If a team only uploads a few recordings per month, a finished app or a simple Whisper wrapper can be cheaper and easier. Deepgram becomes compelling when the team needs low-latency streaming, high volume, voice-agent primitives, or support for production reliability.
 
 ## Failure Modes
 
@@ -96,10 +168,11 @@ Teams should price by audio hours, concurrency, latency target, and whether TTS/
 - **Accuracy varies by domain.** Jargon, accents, noise, and overlapping speech need testing.
 - **Concurrency matters.** Real-time systems fail on limits before they fail on average price.
 - **Feature pricing is modular.** Audio intelligence and voice-agent features are not the same bill as transcription.
+- **Voice quality is workload-specific.** Model choice should be driven by your audio, not by a generic speech benchmark.
 
 ## Methodology
 
-Last verified 2026-04-28 against Deepgram pricing and product documentation. Scoring emphasizes API utility, real-time performance fit, voice-agent breadth, and implementation complexity.
+Last verified 2026-05-05 against Deepgram pricing and product documentation. Scoring emphasizes API utility, real-time performance fit, voice-agent breadth, and implementation complexity.
 
 ## FAQ
 

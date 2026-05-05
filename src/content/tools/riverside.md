@@ -25,6 +25,33 @@ scores:
   value: 8
   moat: 8
   longevity: 8
+facts:
+  best_for:
+    value: "Remote podcast and video recording platform with local-track capture. Each speaker records at source in 4K/48kHz, uploaded progressively so network hiccups never hit the master recording. Best for speech, voice, transcription, or audio-agent workflows."
+    source: "https://riverside.fm/pricing"
+    source_label: "Source"
+    source_id: riverside-pricing
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: medium
+  pricing_anchor:
+    value: "Standard; $15/mo annual; Verified: Standard $15/mo annual / $19/mo monthly, Pro $24/mo annual, Business $29/mo annual"
+    source: "https://riverside.fm/pricing"
+    source_label: "Source"
+    source_id: riverside-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
+  watch_out_for:
+    value: "Non-Tier-1 canonical profile: verify current pricing, usage limits, data policy, and integration details before procurement"
+    source: "https://riverside.fm/pricing"
+    source_label: "Source"
+    source_id: riverside-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
 tags: [podcast-recording, remote-recording, video-podcast, multitrack, magic-editor, transcription, 4k, studio-quality]
 seo_title: "Riverside: Features, Pricing & Review (April 2026)"
 meta_description: "Riverside captures each remote podcast or video guest at local source quality (4K / 48kHz), then uploads progressively. Free tier, Standard $15/mo annual, Pro $24/mo, Business $29/mo. Best-in-class source capture for podcast teams."
@@ -46,10 +73,16 @@ price_history:
   - date: 2026-04-17
     plan: "Standard"
     price: "$15/mo annual"
+    source: "https://riverside.fm/pricing"
+    source_label: "Source"
+    source_id: riverside-pricing
     note: "Verified: Standard $15/mo annual / $19/mo monthly, Pro $24/mo annual, Business $29/mo annual"
   - date: 2025-09-01
     plan: "Magic Clips"
     price: "Same"
+    source: "https://riverside.fm/pricing"
+    source_label: "Source"
+    source_id: riverside-pricing
     note: "AI short-form clip generator ships across tiers; Business gets full-length Magic Editor"
 ---
 

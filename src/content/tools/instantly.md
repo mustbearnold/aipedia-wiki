@@ -24,6 +24,48 @@ scores:
   value: 9
   moat: 7
   longevity: 7
+facts:
+  best_for:
+    value: "Instantly is best for outbound sales teams that need cold-email sequencing, many sending accounts, warmup/deliverability tooling, and prospect discovery in one workflow."
+    source: "https://instantly.ai/products/email-outreach"
+    source_label: "Instantly email outreach"
+    source_id: instantly-email
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  pricing_anchor:
+    value: "Instantly pricing should be checked across product modules, because sending/outreach, lead database access, and deliverability features can be packaged separately."
+    source: "https://instantly.ai/pricing"
+    source_label: "Instantly Pricing"
+    source_id: instantly-official
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: high
+  lead_database:
+    value: "Instantly Lead Finder is a distinct buyer consideration for teams that want prospecting data bundled with the outbound workflow rather than imported from Apollo, Clay, or a CRM."
+    source: "https://instantly.ai/products/lead-finder"
+    source_label: "Instantly Lead Finder"
+    source_id: instantly-leads
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  deliverability_focus:
+    value: "The platform emphasizes deliverability and warmup/network features, making it more sales-outreach-specific than generic marketing automation tools."
+    source: "https://instantly.ai/products/deliverability-network"
+    source_label: "Instantly deliverability"
+    source_id: instantly-deliverability
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  watch_out_for:
+    value: "Outbound volume depends on mailbox reputation, domain setup, compliance, and lead quality; buyers should not treat unlimited sending-account messaging as a guarantee of safe deliverability."
+    source: "https://instantly.ai/products/deliverability-network"
+    source_label: "Instantly deliverability"
+    source_id: instantly-deliverability
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
 tags: [cold-email, sales-automation, email-outreach, lead-generation, email-deliverability]
 seo_title: "Instantly: Features, Pricing & Review (April 2026)"
 meta_description: "Instantly bundles unlimited sending accounts with AI warmup and a B2B lead finder. Outreach plans run Growth $30, Hypergrowth $77.60, Light Speed $286.30 (annual). Lead finder is a separate add-on."

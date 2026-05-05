@@ -25,6 +25,33 @@ scores:
   value: 10
   moat: 8
   longevity: 9
+facts:
+  best_for:
+    value: "Microsoft's open-source agentic AI engine, merging Semantic Kernel and AutoGen. Version 1.0 shipped April 2026. Free, production-ready, and tightly integrated with Azure AI Foundry. Best for workflow automation, agentic operations, and business-process automation."
+    source: "https://langchain-ai.github.io/langgraph/"
+    source_label: "LangGraph"
+    source_id: ag2-official
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: medium
+  pricing_anchor:
+    value: "Pricing should be checked on the current Microsoft Agent Framework source before purchase; AIpedia has not promoted this page to a full Tier 1 pricing profile yet"
+    source: "https://langchain-ai.github.io/langgraph/"
+    source_label: "LangGraph"
+    source_id: ag2-official
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
+  watch_out_for:
+    value: "Non-Tier-1 canonical profile: verify current pricing, usage limits, data policy, and integration details before procurement"
+    source: "https://langchain-ai.github.io/langgraph/"
+    source_label: "LangGraph"
+    source_id: ag2-official
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
 tags: [agent-framework, microsoft, open-source, autogen-successor, semantic-kernel, azure, enterprise]
 seo_title: "Microsoft Agent Framework: Features & Review (April 2026)"
 meta_description: "Microsoft Agent Framework 1.0 (April 2026) is the successor to both Semantic Kernel and AutoGen. Free, open-source, production-ready. The default choice for Azure-backed enterprise agent deployments."

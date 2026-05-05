@@ -27,6 +27,33 @@ scores:
   value: 8
   moat: 7
   longevity: 7
+facts:
+  best_for:
+    value: "Developer-first workflow automation with inline JS, Python, Go, and Bash nodes. 3,000+ integrations. Hosts MCP servers that expose 10,000+ prebuilt tools to AI agents. Workday signed a definitive agreement to acquire Pipedream in November… Best for workflow automation, agentic operations, and business-process automation."
+    source: "https://pipedream.com/pricing"
+    source_label: "Source"
+    source_id: pipedream-pricing
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: medium
+  pricing_anchor:
+    value: "MCP servers; free; Pipedream shipped hosted MCP servers exposing 10,000+ tools to AI agents."
+    source: "https://pipedream.com/pricing"
+    source_label: "Source"
+    source_id: pipedream-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
+  watch_out_for:
+    value: "Non-Tier-1 canonical profile: verify current pricing, usage limits, data policy, and integration details before procurement"
+    source: "https://pipedream.com/pricing"
+    source_label: "Source"
+    source_id: pipedream-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
 tags: [workflow-automation, developer-tools, mcp, code-first, pipedream]
 best_for:
   - developers who want scriptable, version-controlled workflows
@@ -43,14 +70,23 @@ price_history:
   - date: 2025-03-28
     plan: "MCP servers"
     price: "free"
+    source: "https://pipedream.com/pricing"
+    source_label: "Source"
+    source_id: pipedream-pricing
     note: "Pipedream shipped hosted MCP servers exposing 10,000+ tools to AI agents."
   - date: 2025-11-19
     plan: "Acquisition"
     price: "n/a"
+    source: "https://pipedream.com/pricing"
+    source_label: "Source"
+    source_id: pipedream-pricing
     note: "Workday signed a definitive agreement to acquire Pipedream."
   - date: 2026-04-18
     plan: "Basic / Advanced"
     price: "$29 / $79 per month"
+    source: "https://pipedream.com/pricing"
+    source_label: "Source"
+    source_id: pipedream-pricing
     note: "Verified unchanged; Pipedream continues to operate independently pending deal close."
 ---
 

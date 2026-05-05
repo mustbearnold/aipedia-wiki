@@ -14,8 +14,8 @@ pricing_model: freemium
 price_range: "$0-$99+/month"
 status: active
 launched: 2021-11
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-04
+last_verified: 2026-05-04
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -28,6 +28,56 @@ scores:
   value: 8
   moat: 7
   longevity: 8
+facts:
+  best_for:
+    value: Best for newsletter operators who want publishing, audience growth, monetization, and AI-assisted writing in one
+      newsletter platform.
+    source: https://www.beehiiv.com/
+    source_label: beehiiv official site
+    source_id: beehiiv-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  pricing_anchor:
+    value: beehiiv pricing depends on subscriber count, publication count, automation, monetization, and API needs; verify the
+      current tier grid before recommending it.
+    source: https://www.beehiiv.com/pricing
+    source_label: beehiiv pricing
+    source_id: beehiiv-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  api_available:
+    value: beehiiv publishes developer documentation, so it can fit teams that need newsletter data and publishing automation
+      beyond the UI.
+    source: https://developers.beehiiv.com/
+    source_label: beehiiv developer docs
+    source_id: beehiiv-developer-docs
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  workflow_surface:
+    value: The workflow surface is newsletter growth and monetization rather than general-purpose AI writing.
+    source: https://www.beehiiv.com/
+    source_label: beehiiv official site
+    source_id: beehiiv-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  watch_out_for:
+    value: Choose beehiiv for the newsletter operating system, not just AI copy; teams needing full marketing automation may
+      still need HubSpot, Customer.io, or a CRM stack.
+    source: https://www.beehiiv.com/pricing
+    source_label: beehiiv pricing
+    source_id: beehiiv-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
 tags: [newsletter, email-marketing, ai-writer, monetization, content-creation, publishing, audience-growth, referrals]
 seo_title: "Beehiiv: Features, Pricing & Review (April 2026)"
 meta_description: >-
@@ -53,10 +103,16 @@ price_history:
   - date: 2026-04-15
     plan: "Launch"
     price: "$0/mo"
+    source: "https://www.beehiiv.com/pricing"
+    source_label: "Source"
+    source_id: beehiiv-pricing
     note: "Free tier verified. Up to 2,500 subscribers, includes core publishing and referral tools."
   - date: 2026-04-15
     plan: "Scale / Max"
     price: "From $39 / $99 per mo"
+    source: "https://www.beehiiv.com/pricing"
+    source_label: "Source"
+    source_id: beehiiv-pricing
     note: "Paid tiers verified against beehiiv.com/pricing. Price scales with subscriber count."
 ---
 

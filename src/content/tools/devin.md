@@ -24,6 +24,52 @@ scores:
   value: 7
   moat: 8
   longevity: 8
+facts:
+  best_for:
+    value: "Engineering teams that want an autonomous coding agent to take scoped tickets, work in its own environment, and return implementation artifacts for review."
+    source: "https://docs.devin.ai/get-started/devin-intro"
+    source_label: "Devin docs"
+    source_id: devin-docs
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
+  agent_surface:
+    value: "Devin is positioned as a software-engineering agent, not just autocomplete: delegate tasks, supervise progress, and review the resulting code changes."
+    source: "https://docs.devin.ai/get-started/devin-intro"
+    source_label: "Devin docs"
+    source_id: devin-docs
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
+  pricing_anchor:
+    value: "Vendor pricing is published on devin.ai and should be checked before procurement because autonomous-agent packaging can change quickly."
+    source: "https://devin.ai/pricing"
+    source_label: "Devin pricing"
+    source_id: devin-pricing
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
+  governance_surface:
+    value: "Use it with normal engineering controls: scoped tickets, repo permissions, branch review, CI, secrets hygiene, and human approval before merge."
+    source: "https://docs.devin.ai/get-started/devin-intro"
+    source_label: "Devin docs"
+    source_id: devin-docs
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: medium
+  watch_out_for:
+    value: "Autonomous coding agents amplify unclear requirements and unsafe permissions. Avoid broad production access until the agent's work quality is proven on low-risk repos."
+    source: "https://docs.devin.ai/get-started/devin-intro"
+    source_label: "Devin docs"
+    source_id: devin-docs
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
 tags: [autonomous-agent, ai-coding, software-engineer, delegation, agentic-coding, cognition, mcp]
 seo_title: "Devin: Features, Pricing & Review (April 2026)"
 meta_description: "Devin is Cognition AI's autonomous coding agent. Free starter tier, Pro $20/mo with ACU overage at $2.25, Max $200/mo, Teams $80/mo, Enterprise custom. MCP Marketplace live. Verified April 2026."
@@ -43,10 +89,16 @@ price_history:
   - date: 2025-04-03
     plan: "Pro"
     price: "$20/mo"
+    source: "https://devin.ai/pricing"
+    source_label: "Source"
+    source_id: devin-pricing
     note: "Self-serve Pro launched, replacing the old $500 Team-only tier"
   - date: 2026-04-15
     plan: "Teams"
     price: "$80/mo"
+    source: "https://devin.ai/pricing"
+    source_label: "Source"
+    source_id: devin-pricing
     note: "Teams plan re-priced and unlimited-seat structure introduced"
 ---
 

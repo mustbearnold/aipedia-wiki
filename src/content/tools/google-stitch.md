@@ -27,6 +27,52 @@ scores:
   value: 9
   moat: 7
   longevity: 7
+facts:
+  best_for:
+    value: "Product designers and builders who want Google Labs text-to-UI generation for early interface exploration, especially Material-style app screens."
+    source: "https://stitch.withgoogle.com/"
+    source_label: "Google Stitch official site"
+    source_id: google-stitch-official
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
+  workflow_surface:
+    value: "Stitch is best used at the ideation stage: generate screens, compare flows, and hand off promising directions to Figma or code for real product work."
+    source: "https://labs.google/stitch/"
+    source_label: "Google Labs Stitch"
+    source_id: google-stitch-labs
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
+  pricing_anchor:
+    value: "Google Labs availability and usage limits should be checked live because experimental Labs products can change packaging or access without much notice."
+    source: "https://stitch.withgoogle.com/"
+    source_label: "Google Stitch official site"
+    source_id: google-stitch-official
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: medium
+  integration_surface:
+    value: "Evaluate it as a design exploration layer, not a complete product-design system; export quality and downstream handoff matter more than screenshot appeal."
+    source: "https://labs.google/stitch/"
+    source_label: "Google Labs Stitch"
+    source_id: google-stitch-labs
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: medium
+  watch_out_for:
+    value: "Labs status means procurement risk. Do not build a critical production design workflow around Stitch until export, access, and retention policies are stable enough for your team."
+    source: "https://labs.google/stitch/"
+    source_label: "Google Labs Stitch"
+    source_id: google-stitch-labs
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
 tags: [design-tool, ui-design, prompt-to-ui, prototyping, figma-alternative, google, google-labs, ai-design, material-design-3, gemini]
 best_for:
   - rapid UI mockups from text prompts
@@ -44,10 +90,16 @@ price_history:
   - date: 2025-05-20
     plan: "Labs release"
     price: "Free"
+    source: "https://www.nxcode.io/resources/news/google-stitch-pricing-plans-complete-guide-2026"
+    source_label: "Source"
+    source_id: google-stitch-pricing
     note: "Launched at Google I/O 2025 as a Google Labs experiment."
   - date: 2026-04-17
     plan: "Labs"
     price: "Free"
+    source: "https://www.nxcode.io/resources/news/google-stitch-pricing-plans-complete-guide-2026"
+    source_label: "Source"
+    source_id: google-stitch-pricing
     note: "Verified free. 350 Standard + 200 Pro generations per month. Paid tiers expected Q4 2026."
 ---
 

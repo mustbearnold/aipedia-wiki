@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0 free / $28-$199/user/mo"
 status: active
 launched: 2020-10
-last_updated: 2026-04-18
-last_verified: 2026-04-18
+last_updated: 2026-05-04
+last_verified: 2026-05-04
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -24,6 +24,56 @@ scores:
   value: 7
   moat: 8
   longevity: 8
+facts:
+  best_for:
+    value: Best for data teams building collaborative notebooks, analytics apps, dashboards, and AI-assisted analysis in a governed
+      workspace.
+    source: https://hex.tech/
+    source_label: Hex official site
+    source_id: hex-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  pricing_anchor:
+    value: Hex pricing depends on editor/viewer seats, compute/workspace needs, enterprise governance, and collaboration scale;
+      verify current plan limits.
+    source: https://hex.tech/pricing/
+    source_label: Hex pricing
+    source_id: hex-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  workflow_surface:
+    value: Hex combines notebooks, SQL/Python, apps, dashboards, and AI assistance rather than acting as a standalone chatbot.
+    source: https://learn.hex.tech/
+    source_label: Hex Learn
+    source_id: hex-learn
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  enterprise_controls:
+    value: Security review should cover data connections, permissions, workspace governance, auditability, and enterprise compliance
+      posture.
+    source: https://hex.tech/security/
+    source_label: Hex security
+    source_id: hex-security
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  watch_out_for:
+    value: Hex is strongest when data teams standardize workflows; compare migration effort, warehouse costs, notebook ergonomics,
+      and dashboard/app consumption patterns.
+    source: https://hex.tech/
+    source_label: Hex official site
+    source_id: hex-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
 tags: [data-analysis, sql, python, notebook, ai-magic, collaboration, business-intelligence]
 seo_title: "Hex: Features, Pricing & Review (April 2026)"
 meta_description: "Hex is the AI-first collaborative data notebook for SQL + Python analysts. Hex Magic generates queries, debugs, and builds flows from natural language. Free Community; paid from $28/mo."

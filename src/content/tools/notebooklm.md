@@ -25,6 +25,49 @@ scores:
   value: 10
   moat: 7
   longevity: 7
+facts:
+  best_for:
+    value: "Students, analysts, and researchers who want source-grounded Q&A, summaries, and audio-style briefings over their own uploaded documents."
+    source: "https://notebooklm.google.com"
+    source_label: "Google NotebookLM official app"
+    source_id: notebooklm-official
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
+  grounding_surface:
+    value: "NotebookLM's core distinction is grounding answers in user-provided sources, making it more useful for document study than open-ended web chat."
+    source: "https://support.google.com/notebooklm/"
+    source_label: "NotebookLM Help"
+    source_id: notebooklm-help
+    verified_at: 2026-05-04
+    volatility: medium
+    confidence: high
+  pricing_anchor:
+    value: "NotebookLM has a free app surface, while higher limits or enterprise access may depend on Google plan packaging; verify live before institutional rollout."
+    source: "https://notebooklm.google.com"
+    source_label: "Google NotebookLM official app"
+    source_id: notebooklm-pricing
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: medium
+  workflow_surface:
+    value: "Best used to interrogate a bounded corpus: upload sources, ask questions, inspect citations, and export durable notes rather than trusting unsourced answers."
+    source: "https://support.google.com/notebooklm/"
+    source_label: "NotebookLM Help"
+    source_id: notebooklm-help
+    verified_at: 2026-05-04
+    volatility: medium
+    confidence: high
+  watch_out_for:
+    value: "It can summarize and synthesize, but source-grounded does not mean infallible. Check citations and avoid uploading confidential material without policy review."
+    source: "https://support.google.com/notebooklm/"
+    source_label: "NotebookLM Help"
+    source_id: notebooklm-help
+    verified_at: 2026-05-04
+    volatility: medium
+    confidence: high
 tags: [research, document-qa, summarization, podcast, audio-overview, google, rag, source-grounding, free]
 seo_title: "NotebookLM: Features, Pricing & Review (April 2026)"
 meta_description: "Google NotebookLM runs on Gemini 3.1 with source-grounded Q&A, Audio Overviews, and Studio outputs. Free tier is generous; Plus is $19.99/mo via Google One AI Premium; Ultra sits at $249.99/mo."
@@ -44,10 +87,16 @@ price_history:
   - date: 2025-12-01
     plan: "Plus"
     price: "$19.99/mo"
+    source: "https://notebooklm.google.com"
+    source_label: "Source"
+    source_id: notebooklm-pricing
     note: "Bundled into Google One AI Premium"
   - date: 2026-04-15
     plan: "Free"
     price: "$0"
+    source: "https://notebooklm.google.com"
+    source_label: "Source"
+    source_id: notebooklm-pricing
     note: "Free tier kept at 100 notebooks, 50 sources each, 3 Audio Overviews/day"
 ---
 

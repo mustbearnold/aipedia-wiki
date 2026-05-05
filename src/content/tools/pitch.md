@@ -25,6 +25,48 @@ scores:
   value: 8
   moat: 6
   longevity: 7
+facts:
+  best_for:
+    value: "Pitch is best for teams that want collaborative presentations with brand-consistent templates, real-time editing, and sharing/analytics rather than a one-off AI deck generator."
+    source: "https://pitch.com/features"
+    source_label: "Pitch features"
+    source_id: pitch-features
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  pricing_anchor:
+    value: "Pitch pricing is workspace-seat based, so teams should evaluate member count, collaboration needs, analytics, and brand controls before comparing it with standalone slide generators."
+    source: "https://pitch.com/pricing/us"
+    source_label: "Pitch pricing"
+    source_id: pitch-official
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: high
+  ai_surface:
+    value: "Pitch AI is positioned around generating and refining presentation drafts, but the enduring product value remains collaborative editing and distribution."
+    source: "https://pitch.com/ai-presentation-maker"
+    source_label: "Pitch AI"
+    source_id: pitch-ai
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  collaboration_model:
+    value: "Real-time collaboration, comments, presentation sharing, and analytics make Pitch stronger for team workflows than personal slide drafting."
+    source: "https://pitch.com/features"
+    source_label: "Pitch features"
+    source_id: pitch-features
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  watch_out_for:
+    value: "If a buyer only needs occasional AI-generated slides, a full Pitch workspace may be more process than necessary; validate export, template, analytics, and team-editing needs first."
+    source: "https://pitch.com/pricing/us"
+    source_label: "Pitch pricing"
+    source_id: pitch-official
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
 tags: [presentations, collaboration, slides, ai-writing, team-workflows, pitch-decks, real-time-editing]
 seo_title: "Pitch: Features, Pricing & Review (April 2026)"
 meta_description: "Pitch ships real-time multi-user editing, AI copy help, and unlimited decks on a free tier with 5 members. Plus $15, Team $23/seat, Business $30/seat. Verified April 2026."

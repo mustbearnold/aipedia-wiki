@@ -10,8 +10,8 @@ pricing_model: free
 price_range: "Free"
 status: active
 launched: 2015-11
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-04
+last_verified: 2026-05-04
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -24,6 +24,52 @@ scores:
   value: 10
   moat: 8
   longevity: 9
+facts:
+  corpus_scale:
+    value: "Free AI research search across more than 200M scholarly papers, with TLDRs, citation graph context, and paper discovery tools."
+    source: "https://www.semanticscholar.org/"
+    source_label: "Semantic Scholar homepage"
+    source_id: semantic-scholar-official
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: medium
+    confidence: high
+  api_available:
+    value: "Yes — Semantic Scholar exposes public API endpoints for paper search, recommendations, author data, citations, and datasets."
+    source: "https://www.semanticscholar.org/product/api"
+    source_label: "Semantic Scholar API"
+    source_id: semantic-scholar-api
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: medium
+    confidence: high
+  pricing_anchor:
+    value: "Free for the core scholar search product; API use is public but rate limits and key requirements should be checked before production use."
+    source: "https://www.semanticscholar.org/product/api"
+    source_label: "Semantic Scholar API"
+    source_id: semantic-scholar-api
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: medium
+    confidence: high
+  best_for:
+    value: "Literature discovery, citation chasing, paper summaries, and academic search workflows where free breadth matters more than closed-source answer synthesis."
+    source: "https://www.semanticscholar.org/"
+    source_label: "Semantic Scholar homepage"
+    source_id: semantic-scholar-official
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: medium
+    confidence: high
+  watch_out_for:
+    value: "Not a general chatbot or paid research workspace; teams needing conversational synthesis, file Q&A, or private libraries should pair it with NotebookLM, Elicit, or internal RAG."
+    source: "https://www.semanticscholar.org/product/api"
+    source_label: "Semantic Scholar API"
+    source_id: semantic-scholar-api
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: medium
+    confidence: medium
 tags: [academic-search, research, free, open-access, ai-research, citations]
 seo_title: "Semantic Scholar: Free AI Academic Search Engine (April 2026)"
 meta_description: >-
@@ -45,6 +91,9 @@ price_history:
   - date: 2026-04-17
     plan: "Free"
     price: "$0"
+    source: "https://www.semanticscholar.org"
+    source_label: "Source"
+    source_id: semantic-scholar-pricing
     note: "Verified fully free. No paid tier exists."
 ---
 

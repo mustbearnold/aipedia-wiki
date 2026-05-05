@@ -11,8 +11,8 @@ pricing_model: open-source
 price_range: "Free (Apache-2.0; BYOK LLM costs)"
 status: active
 launched: 2025-01
-last_updated: 2026-05-03
-last_verified: 2026-05-03
+last_updated: 2026-05-04
+last_verified: 2026-05-04
 update_frequency: frequent
 affiliate:
   has_program: false
@@ -25,6 +25,56 @@ scores:
   value: 10
   moat: 5
   longevity: 7
+facts:
+  best_for:
+    value: Best for developers who want an open-source, extensible local AI agent that can operate across coding and computer
+      tasks.
+    source: https://github.com/block/goose
+    source_label: Goose GitHub repository
+    source_id: goose-repository
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  pricing_anchor:
+    value: Goose itself is open source; practical cost comes from chosen model providers, local/remote execution, and any surrounding
+      infrastructure.
+    source: https://github.com/block/goose
+    source_label: Goose GitHub repository
+    source_id: goose-repository
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  open_source_or_local:
+    value: The repository is the authoritative source for license, installation, releases, extensions, and project activity.
+    source: https://github.com/block/goose
+    source_label: Goose GitHub repository
+    source_id: goose-repository
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  runtime_architecture:
+    value: Goose should be evaluated as an extensible agent runtime; check provider setup, extension permissions, MCP/tooling
+      behavior, and local security posture.
+    source: https://block.github.io/goose/
+    source_label: Goose official site
+    source_id: goose-official
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  watch_out_for:
+    value: 'Open-source agent power comes with risk: require sandboxing, secrets hygiene, review checkpoints, and clear provider-cost
+      controls before daily-driver use.'
+    source: https://github.com/block/goose
+    source_label: Goose GitHub repository
+    source_id: goose-repository
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
 tags: [open-source, agent, cli, desktop-app, multi-llm, mcp, automation, coding, block, linux-foundation, rust, aaif, apache-2]
 seo_title: "Goose AI Agent: Features, Review & Alternatives (April 2026)"
 meta_description: "Goose is the free Apache-2.0 AI agent from Block, contributed to the Linux Foundation's Agentic AI Foundation in December 2025. Desktop, CLI, and API with 15+ LLM providers and 70+ MCP extensions."
@@ -44,10 +94,16 @@ price_history:
   - date: 2025-12-15
     plan: "Open-source"
     price: "Free"
+    source: "https://github.com/block/goose"
+    source_label: "Source"
+    source_id: goose-pricing
     note: "Block contributed Goose to the Linux Foundation's Agentic AI Foundation (AAIF)."
   - date: 2026-04-17
     plan: "Open-source"
     price: "Free"
+    source: "https://github.com/block/goose"
+    source_label: "Source"
+    source_id: goose-pricing
     note: "Verified unchanged. Apache-2.0, BYOK LLM costs."
 ---
 

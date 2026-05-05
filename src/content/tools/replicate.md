@@ -11,8 +11,8 @@ pricing_model: paid
 price_range: Usage-based by official model output or hardware runtime
 status: active
 launched: 2019
-last_updated: 2026-04-27
-last_verified: 2026-04-27
+last_updated: 2026-05-05
+last_verified: 2026-05-05
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -25,8 +25,66 @@ scores:
   value: 8
   moat: 7
   longevity: 8
+facts:
+  best_for:
+    value: Best for teams that want API access to many open, official, and community AI models without running their own GPU
+      serving stack.
+    source: https://replicate.com/docs/topics/models/official-models
+    source_label: Replicate official models
+    source_id: replicate-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  pricing_anchor:
+    value: Usage-based pricing varies by model output, prediction runtime, or dedicated deployment hardware, so budget estimates
+      need model-level checks before scale-up.
+    source: https://replicate.com/pricing
+    source_label: Replicate pricing
+    source_id: replicate-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  api_available:
+    value: 'Replicate is API-first: models can be run through hosted endpoints and integrated into apps from the documentation.'
+    source: https://replicate.com/docs
+    source_label: Replicate documentation
+    source_id: replicate-docs
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  open_source_or_local:
+    value: Strong open-model coverage, but Replicate is primarily hosted infrastructure rather than a local inference app.
+    source: https://replicate.com/docs/topics/models/official-models
+    source_label: Replicate official models
+    source_id: replicate-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  enterprise_controls:
+    value: Custom model deployment is available for teams that need private deployments beyond public model endpoints.
+    source: https://replicate.com/docs/guides/deploy-a-custom-model
+    source_label: Replicate custom model deployment docs
+    source_id: replicate-custom-models
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  watch_out_for:
+    value: 'The buyer risk is variable usage economics: the cheapest prototype can become expensive when model runtime, retries,
+      and dedicated hardware are not monitored.'
+    source: https://replicate.com/pricing
+    source_label: Replicate pricing
+    source_id: replicate-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
 tags: [model-hosting, api, image-generation, video-generation, open-models, developers, inference]
-seo_title: "Replicate Review: AI Model API, Official Models & Pricing (April 2026)"
+seo_title: "Replicate Review: AI Model API, Official Models & Pricing (2026)"
 meta_description: "Replicate lets developers run official, community, and custom AI models by API. It is strongest for open-model image, video, and experimental inference workflows."
 author: aipedia.wiki Editorial
 best_for:
@@ -66,6 +124,7 @@ The product sits between a playground and a full cloud stack. Developers can run
 | **Community models** | Broad catalog, variable quality and maintenance |
 | **Custom models** | Publish and run your own containerized models |
 | **Pricing** | Usage-based by official model metric or hardware runtime |
+| **Private models** | Usually billed while dedicated hardware is online, including idle time |
 | **Best fit** | Developer prototypes and product integrations |
 
 ## When to pick Replicate
@@ -85,9 +144,28 @@ The product sits between a playground and a full cloud stack. Developers can run
 
 ## Pricing
 
-Replicate uses two main pricing patterns. Official models use predictable model-specific metrics such as output images, video seconds, or tokens. Other models generally bill by the hardware used and runtime duration.
+Replicate uses two main pricing patterns. Some public models are billed by input and output, such as images, video seconds, or tokens. Many public and community models are billed by the hardware used and the time they take to run.
 
-This is fair for experimentation but needs monitoring in production. Slow models, high-resolution outputs, and retries can move the bill faster than a flat SaaS plan.
+Private models are different. Most private models run on dedicated hardware, so teams can pay for setup time, idle time, and active processing time while the deployment is online. Fast-booting fine-tunes are an exception when labeled that way. This is fair for experimentation but needs monitoring in production. Slow models, high-resolution outputs, idle deployments, and retries can move the bill faster than a flat SaaS plan.
+
+As verified on 2026-05-05, Replicate lists hardware rates ranging from CPU instances through T4, L40S, A100, H100, and multi-GPU options. Enterprise and volume-discount conversations can add higher GPU limits, performance SLAs, priority support, onboarding help, and custom-model optimization.
+
+## Evaluation checklist
+
+Before using Replicate in production:
+
+- Prefer official models when API stability and predictable pricing matter.
+- Check the specific model page for cost estimates before building a feature around it.
+- Measure cold starts, runtime, queueing, and retries on realistic prompts.
+- Decide whether the model needs private deployment or can run as a public model call.
+- Track high-resolution media, long video outputs, and failed runs separately.
+- Compare custom deployments against Modal, Fal.ai, Together AI, Fireworks AI, or direct cloud GPUs once volume is predictable.
+
+## Buyer fit
+
+Replicate is strongest for teams that are still exploring model choice. It lets developers compare image, video, audio, vision, and utility models quickly, then turn the winning model into an API call without building infrastructure first.
+
+It becomes less compelling when the model choice is settled and traffic is high. At that point, dedicated inference providers or self-managed GPU infrastructure may offer better latency, controls, or unit economics. Replicate is often the right first production path, but not always the cheapest final path.
 
 ## Failure Modes
 
@@ -96,10 +174,11 @@ This is fair for experimentation but needs monitoring in production. Slow models
 - **Per-run cost opacity.** Hardware-runtime pricing can be harder to estimate than per-output pricing.
 - **Not an end-user product.** Replicate is an API and model catalog, not a polished creative suite.
 - **Migration work later.** The easiest prototype path may not be the cheapest long-term deployment.
+- **Idle private deployments cost money.** Dedicated private hardware changes the economics compared with public per-run model calls.
 
 ## Methodology
 
-Last verified 2026-04-28 against Replicate's official model and pricing documentation. Scoring emphasizes model breadth, developer experience, production stability, and cost predictability.
+Last verified 2026-05-05 against Replicate's official model and pricing documentation. Scoring emphasizes model breadth, developer experience, production stability, and cost predictability.
 
 ## FAQ
 

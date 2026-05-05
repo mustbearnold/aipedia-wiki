@@ -11,8 +11,8 @@ pricing_model: paid
 price_range: "$129-$399/month"
 status: active
 launched: 2016-01
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-04
+last_verified: 2026-05-04
 update_frequency: quarterly
 seo_title: "Clearscope: Features, Pricing & Review (2026)"
 meta_description: "Clearscope is the premium SEO content optimization tool. Essentials $129/mo, Business $399/mo, Enterprise custom. A-F grading, Google Docs integration, and new generative-engine-visibility features for tracking brand mentions in AI answers."
@@ -28,6 +28,57 @@ scores:
   value: 6
   moat: 8
   longevity: 9
+facts:
+  best_for:
+    value: Best for editorial SEO teams that want briefs, content grading, and AI-search visibility workflows in a premium content-optimization
+      platform.
+    source: https://www.clearscope.io/
+    source_label: Clearscope official site
+    source_id: clearscope-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  pricing_anchor:
+    value: Clearscope is priced as a premium SEO workflow product; verify report limits, user seats, AI visibility features,
+      and add-ons on the current pricing page.
+    source: https://www.clearscope.io/pricing
+    source_label: Clearscope pricing
+    source_id: clearscope-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  workflow_surface:
+    value: The useful surface is content research, brief creation, grading, and optimization around target queries rather than
+      generic AI writing.
+    source: https://www.clearscope.io/
+    source_label: Clearscope official site
+    source_id: clearscope-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  ai_search:
+    value: Clearscope’s current positioning includes Google and AI-search discovery, so track whether generative-answer visibility
+      features are included in the tier being bought.
+    source: https://www.clearscope.io/
+    source_label: Clearscope official site
+    source_id: clearscope-official
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  watch_out_for:
+    value: Do not compare Clearscope only by monthly price; compare content-report limits, SERP data quality, editorial adoption,
+      and whether AI-search reporting materially changes rankings work.
+    source: https://www.clearscope.io/pricing
+    source_label: Clearscope pricing
+    source_id: clearscope-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
 tags: [seo, content-optimization, enterprise-seo, keyword-research, clearscope]
 best_for:
   - enterprise in-house content teams
@@ -46,10 +97,16 @@ price_history:
   - date: 2026-04-18
     plan: "Essentials"
     price: "$129/mo"
+    source: "https://www.clearscope.io/pricing"
+    source_label: "Source"
+    source_id: clearscope-pricing
     note: "Verified on clearscope.io/pricing"
   - date: 2026-04-18
     plan: "Business"
     price: "$399/mo"
+    source: "https://www.clearscope.io/pricing"
+    source_label: "Source"
+    source_id: clearscope-pricing
     note: "Verified; includes dedicated account manager"
 ---
 

@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "Bundled with ChatGPT Plus ($20/mo) through Pro 20x ($200/mo)"
 status: active
 launched: 2025-05
-last_updated: 2026-05-03
-last_verified: 2026-05-03
+last_updated: 2026-05-04
+last_verified: 2026-05-04
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -25,6 +25,57 @@ scores:
   value: 8
   moat: 8
   longevity: 9
+facts:
+  best_for:
+    value: Best for teams already using OpenAI that want an agentic coding partner across web/cloud, CLI, IDE, and asynchronous
+      code tasks.
+    source: https://openai.com/codex/
+    source_label: OpenAI Codex product page
+    source_id: codex-official
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  pricing_anchor:
+    value: Codex pricing is high-volatility because developer/product packaging and token-credit billing can change; verify
+      the developer pricing page before quoting usage cost.
+    source: https://developers.openai.com/codex/pricing
+    source_label: Codex pricing
+    source_id: codex-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  coding_agent:
+    value: 'Codex should be evaluated as an agentic coding system, not only autocomplete: test repository context, task decomposition,
+      PR quality, and handoff behavior.'
+    source: https://platform.openai.com/docs/codex
+    source_label: Codex docs
+    source_id: codex-docs
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  integration_surface:
+    value: The implementation surface includes OpenAI account controls, repository permissions, CLI/IDE setup, cloud task security,
+      and developer workflow policy.
+    source: https://platform.openai.com/docs/codex
+    source_label: Codex docs
+    source_id: codex-docs
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  watch_out_for:
+    value: For production engineering, compare Codex with Claude Code, Cursor, Copilot, and open-source agents by reviewability,
+      sandboxing, data controls, model access, and failure recovery.
+    source: https://openai.com/codex/
+    source_label: OpenAI Codex product page
+    source_id: codex-official
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
 tags: [agentic-coding, cloud-agent, desktop-app, cli, openai, gpt-5, computer-use, memory, plugins, multi-agent]
 seo_title: "OpenAI Codex: Features, Pricing & Review (April 2026)"
 meta_description: "OpenAI Codex is the cloud-async coding agent bundled with ChatGPT. GPT-5.5 rolled into Codex April 23, 2026. Codex Desktop, CLI, and IDE extensions span cloud and local workflows. Plans $20-$200/mo via ChatGPT tiers."
@@ -46,18 +97,30 @@ price_history:
   - date: 2026-04-02
     plan: "API-aligned billing"
     price: "Credits per MTok"
+    source: "https://developers.openai.com/codex/pricing"
+    source_label: "Source"
+    source_id: codex-pricing
     note: "Switched from per-message to per-token credit billing. Credits remain the purchase unit; usage tracks input/cached/output tokens."
   - date: 2026-04-09
     plan: "Pro"
     price: "$100/mo"
+    source: "https://developers.openai.com/codex/pricing"
+    source_label: "Source"
+    source_id: codex-pricing
     note: "New $100 Pro tier launched between Plus and Pro 20x. 5x Codex usage vs Plus (10x promo through May 31, 2026). Matches Claude Max 5x pricing."
   - date: 2026-04-16
     plan: "Super-app update"
     price: "Same"
+    source: "https://developers.openai.com/codex/pricing"
+    source_label: "Source"
+    source_id: codex-pricing
     note: "Codex Desktop gained Computer Use, Memory, gpt-image-2, in-app browser, 90+ plugins, multi-agent workflows. Biggest surface expansion since launch."
   - date: 2026-04-23
     plan: "GPT-5.5"
     price: "Bundled with paid ChatGPT tiers"
+    source: "https://developers.openai.com/codex/pricing"
+    source_label: "Source"
+    source_id: codex-pricing
     note: "GPT-5.5 rolled out to Codex for longer-running coding, research, data, documents, spreadsheets, and tool-use tasks."
 ---
 

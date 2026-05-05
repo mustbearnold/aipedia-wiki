@@ -25,6 +25,48 @@ scores:
   value: 10
   moat: 5
   longevity: 8
+facts:
+  best_for:
+    value: "Continue is best for engineering teams that want an open-source coding assistant in VS Code or JetBrains with explicit control over model providers, prompts, context, and team-shared assistants."
+    source: "https://docs.continue.dev/"
+    source_label: "Continue docs"
+    source_id: continue-docs
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  pricing_anchor:
+    value: "Continue has paid Team pricing for shared collaboration and included credits, but the core buyer decision is often BYOK/model-control versus bundled proprietary coding agents."
+    source: "https://www.continue.dev/pricing"
+    source_label: "Continue pricing"
+    source_id: continue-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: high
+  model_control:
+    value: "Continue's docs emphasize configuring models and context providers, making it a strong fit where teams need provider flexibility or private/local model routing."
+    source: "https://docs.continue.dev/"
+    source_label: "Continue docs"
+    source_id: continue-docs
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  team_distribution:
+    value: "Continue Hub is the distribution layer for reusable assistants and blocks, which matters for teams standardizing coding-agent behavior across repositories."
+    source: "https://hub.continue.dev/"
+    source_label: "Continue Hub"
+    source_id: continue-hub
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  watch_out_for:
+    value: "Continue rewards teams willing to configure context, models, and rules; developers seeking a no-setup assistant may prefer a more opinionated hosted product."
+    source: "https://docs.continue.dev/"
+    source_label: "Continue docs"
+    source_id: continue-docs
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
 tags: [open-source, byok, local-model, ai-coding, vscode, jetbrains, self-hosted, continue-hub]
 seo_title: "Continue.dev Review: Open-Source Copilot Alternative for VS Code & JetBrains"
 meta_description: "Continue.dev is a free MIT-licensed AI coding extension for VS Code, JetBrains, and Vim. Compare BYOK setup, Team pricing, local Ollama support, and Copilot/Cursor tradeoffs."
@@ -56,10 +98,16 @@ price_history:
   - date: 2026-03-01
     plan: "Team"
     price: "$20/seat/mo"
+    source: "https://www.continue.dev/pricing"
+    source_label: "Source"
+    source_id: continue-pricing
     note: "Team tier restructured with $10 per-seat frontier-model credits included"
   - date: 2026-04-15
     plan: "Solo"
     price: "$0"
+    source: "https://www.continue.dev/pricing"
+    source_label: "Source"
+    source_id: continue-pricing
     note: "Solo remains free with full open-source extension access"
 ---
 

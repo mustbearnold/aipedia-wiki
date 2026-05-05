@@ -11,8 +11,8 @@ pricing_model: paid
 price_range: $15-$69/month
 status: active
 launched: 1998-09
-last_updated: 2026-04-19
-last_verified: 2026-04-19
+last_updated: 2026-05-04
+last_verified: 2026-05-04
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -29,6 +29,56 @@ scores:
   value: 7
   moat: 5
   longevity: 8
+facts:
+  best_for:
+    value: Best for small businesses that want email marketing, landing pages, automation, webinars, and AI-assisted campaign
+      creation in one marketing platform.
+    source: https://www.getresponse.com/
+    source_label: GetResponse official site
+    source_id: getresponse-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  pricing_anchor:
+    value: GetResponse pricing depends on contact count, plan, automation depth, ecommerce, webinars, and enterprise features;
+      verify current list-size tiers.
+    source: https://www.getresponse.com/pricing
+    source_label: GetResponse pricing
+    source_id: getresponse-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  workflow_surface:
+    value: The AI value sits inside email/campaign workflows rather than as a standalone writing assistant.
+    source: https://www.getresponse.com/
+    source_label: GetResponse official site
+    source_id: getresponse-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  integration_surface:
+    value: Procurement should test CRM/ecommerce integrations, deliverability tooling, segmentation, automation builder depth,
+      and consent/compliance workflows.
+    source: https://www.getresponse.com/
+    source_label: GetResponse official site
+    source_id: getresponse-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  watch_out_for:
+    value: Do not buy GetResponse only for AI copy; compare the complete marketing automation stack, deliverability, subscriber
+      pricing, and migration effort.
+    source: https://www.getresponse.com/pricing
+    source_label: GetResponse pricing
+    source_id: getresponse-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
 tags: [email-marketing, marketing-automation, landing-pages, webinars, ecommerce, course-creator, ai-email, newsletter]
 seo_title: 'GetResponse: Features, Pricing & Review (April 2026)'
 meta_description: >-
@@ -50,14 +100,23 @@ price_history:
   - date: 2026-04-19
     plan: "Starter"
     price: "$19/mo ($15.58 annual)"
+    source: "https://www.getresponse.com/pricing"
+    source_label: "Source"
+    source_id: getresponse-pricing
     note: "Entry tier: 1K contacts, email marketing + autoresponders + landing pages, 1 marketing-automation workflow, 3 AI-tool uses. 18% annual savings."
   - date: 2026-04-19
     plan: "Marketer"
     price: "$59/mo ($48.38 annual)"
+    source: "https://www.getresponse.com/pricing"
+    source_label: "Source"
+    source_id: getresponse-pricing
     note: "Adds unlimited marketing automation, ecommerce tools, unlimited AI tools, conversion funnels. 18% annual savings."
   - date: 2026-04-19
     plan: "Creator"
     price: "$69/mo ($56.58 annual)"
+    source: "https://www.getresponse.com/pricing"
+    source_label: "Source"
+    source_id: getresponse-pricing
     note: "Most Popular tier. Adds webinars (100 attendees), website builder, course creator (500 students). 18% annual savings."
 ---
 

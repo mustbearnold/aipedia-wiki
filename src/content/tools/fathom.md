@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$34/user/month"
 status: active
 launched: 2020-01
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-04
+last_verified: 2026-05-04
 update_frequency: monthly
 seo_title: "Fathom: Features, Pricing & Review (April 2026)"
 meta_description: "Fathom is a free AI meeting assistant with unlimited recordings, transcriptions, and instant summaries. Plans run Free, Premium $20/mo, Team $19/user/mo, Business $34/user/mo. CRM sync with HubSpot and Salesforce on Business."
@@ -28,6 +28,57 @@ scores:
   value: 10
   moat: 7
   longevity: 8
+facts:
+  best_for:
+    value: Best for teams that want a lightweight AI meeting notetaker with recording, summaries, clips, and CRM/workflow follow-up
+      support.
+    source: https://fathom.video/
+    source_label: Fathom official site
+    source_id: fathom-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  pricing_anchor:
+    value: Fathom has free and paid meeting-note packaging; verify team features, CRM sync, admin controls, recording limits,
+      and annual/monthly pricing.
+    source: https://fathom.video/pricing
+    source_label: Fathom pricing
+    source_id: fathom-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  workflow_surface:
+    value: The core workflow is meetings-to-notes, highlights, summaries, and follow-ups rather than general voice transcription
+      API use.
+    source: https://fathom.video/
+    source_label: Fathom official site
+    source_id: fathom-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  integration_surface:
+    value: Implementation should test calendar/video-platform behavior, CRM sync, sharing permissions, and note ownership using
+      help-center guidance.
+    source: https://help.fathom.video/
+    source_label: Fathom help center
+    source_id: fathom-help
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  watch_out_for:
+    value: Meeting bots create privacy and consent risk; compare Fathom by recording controls, retention, CRM sync accuracy,
+      and team admin features.
+    source: https://help.fathom.video/
+    source_label: Fathom help center
+    source_id: fathom-help
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
 tags: [meeting-ai, transcription, note-taking, free-tier, fathom, zoom-integration]
 best_for:
   - solo founders and consultants on constant meetings
@@ -44,14 +95,23 @@ price_history:
   - date: 2026-04-18
     plan: "Premium"
     price: "$20/mo ($16/mo annual)"
+    source: "https://fathom.ai/pricing"
+    source_label: "Source"
+    source_id: fathom-pricing
     note: "Verified on fathom.ai/pricing. Raised from $15/mo in early 2026."
   - date: 2026-04-18
     plan: "Team"
     price: "$19/user/mo ($15/user/mo annual, 2-user minimum)"
+    source: "https://fathom.ai/pricing"
+    source_label: "Source"
+    source_id: fathom-pricing
     note: "Verified on fathom.ai/pricing"
   - date: 2026-04-18
     plan: "Business"
     price: "$34/user/mo ($25/user/mo annual)"
+    source: "https://fathom.ai/pricing"
+    source_label: "Source"
+    source_id: fathom-pricing
     note: "Verified on fathom.ai/pricing. Adds CRM Field sync, Deal View, AI scorecards"
 ---
 

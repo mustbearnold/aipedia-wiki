@@ -1,0 +1,31 @@
+{
+  "tier1": [
+    "chatgpt",
+    "claude",
+    "gemini",
+    "grok",
+    "perplexity",
+    "cursor",
+    "github-copilot",
+    "midjourney",
+    "runway",
+    "elevenlabs",
+    "synthesia",
+    "zapier",
+    "n8n",
+    "canva",
+    "notion-ai",
+    "grammarly",
+    "descript",
+    "heygen",
+    "suno",
+    "udio",
+    "adobe-firefly",
+    "deepseek",
+    "mistral-ai",
+    "poe",
+    "replit-agent"
+  ],
+  "tier2": [],
+  "tier3": []
+}

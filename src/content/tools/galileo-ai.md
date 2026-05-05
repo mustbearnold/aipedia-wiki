@@ -11,8 +11,8 @@ pricing_model: free
 price_range: "$0 (free in Google Labs beta)"
 status: active
 launched: 2023-02
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-04
+last_verified: 2026-05-04
 update_frequency: quarterly
 seo_title: "Galileo AI: Now Google Stitch. Features, Pricing & Review (April 2026)"
 meta_description: "Galileo AI was acquired by Google in May 2025 and relaunched as Google Stitch, now powered by Gemini. Stitch is free through Google Labs with 350 standard and 200 experimental generations per month. The standalone Galileo product is retired."
@@ -28,6 +28,57 @@ scores:
   value: 10
   moat: 5
   longevity: 7
+facts:
+  best_for:
+    value: Best for teams evaluating Google Stitch-style AI UI design generation from prompts and screenshots, especially for
+      fast concept exploration.
+    source: https://www.usegalileo.ai/
+    source_label: Galileo / Stitch official site
+    source_id: galileo-ai-official
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  pricing_anchor:
+    value: The Galileo/Stitch surface is high-volatility; verify whether pricing, access, branding, and account requirements
+      have changed before recommending.
+    source: https://www.usegalileo.ai/pricing
+    source_label: Galileo / Stitch pricing surface
+    source_id: galileo-ai-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  workflow_surface:
+    value: The core workflow is AI-assisted UI design ideation, not a full design system, product-management, or production-code
+      environment.
+    source: https://www.usegalileo.ai/features
+    source_label: Galileo / Stitch features
+    source_id: galileo-ai-features
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  code_handoff:
+    value: Treat any handoff claims as design/prototype acceleration until export quality and developer workflow are tested
+      in the current product.
+    source: https://www.usegalileo.ai/
+    source_label: Galileo / Stitch official site
+    source_id: galileo-ai-official
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  watch_out_for:
+    value: Because the product surface appears rebranded/volatile, avoid durable claims about plan names, exports, ownership,
+      or model behavior without checking the live official pages.
+    source: https://www.usegalileo.ai/
+    source_label: Galileo / Stitch official site
+    source_id: galileo-ai-official
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
 tags: [text-to-ui, ui-design, figma, design-tool, galileo, google-stitch, gemini, ai-design]
 best_for:
   - designers who want free AI-generated UI mockups
@@ -45,10 +96,16 @@ price_history:
   - date: 2025-05-15
     plan: "Legacy Galileo paid plans"
     price: "retired"
+    source: "https://stitch.withgoogle.com"
+    source_label: "Source"
+    source_id: galileo-ai-pricing
     note: "Transitioned to free Google Stitch via Google Labs."
   - date: 2026-03-01
     plan: "Google Stitch beta"
     price: "$0/mo"
+    source: "https://stitch.withgoogle.com"
+    source_label: "Source"
+    source_id: galileo-ai-pricing
     note: "350 standard + 200 experimental generations per month."
 ---
 

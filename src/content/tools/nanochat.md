@@ -25,6 +25,47 @@ scores:
   value: 10
   moat: 6
   longevity: 8
+facts:
+  best_for:
+    value: "Engineers and students who want to understand the full LLM training pipeline from readable source code rather than a production training platform."
+    source: "https://github.com/karpathy/nanochat"
+    source_label: "nanochat GitHub repository"
+    source_id: nanochat-official
+    verified_at: 2026-05-04
+    volatility: medium
+    confidence: high
+  learning_surface:
+    value: "nanochat is valuable because it compresses tokenization, pretraining, supervised tuning, and RL-style alignment ideas into an inspectable educational codebase."
+    source: "https://github.com/karpathy/nanochat/blob/master/README.md"
+    source_label: "nanochat README"
+    source_id: nanochat-readme
+    verified_at: 2026-05-04
+    volatility: medium
+    confidence: high
+  pricing_anchor:
+    value: "The repository is open source; real cost comes from compute, data, and experiment time rather than a SaaS subscription."
+    source: "https://github.com/karpathy/nanochat"
+    source_label: "nanochat GitHub repository"
+    source_id: nanochat-official
+    verified_at: 2026-05-04
+    volatility: low
+    confidence: high
+  workflow_surface:
+    value: "Use it for education, small experiments, and code reading. For serious model training, graduate to hardened tooling with distributed training, evaluation, and data governance."
+    source: "https://github.com/karpathy/nanochat/blob/master/README.md"
+    source_label: "nanochat README"
+    source_id: nanochat-readme
+    verified_at: 2026-05-04
+    volatility: medium
+    confidence: high
+  watch_out_for:
+    value: "Do not mistake minimal code for production readiness. It intentionally omits many operational features needed for secure, repeatable, large-scale training."
+    source: "https://github.com/karpathy/nanochat"
+    source_label: "nanochat GitHub repository"
+    source_id: nanochat-official
+    verified_at: 2026-05-04
+    volatility: medium
+    confidence: high
 tags: [education, llm-training, open-source, python, karpathy, pretraining, fine-tuning, rlhf, gpt, research, minimal]
 seo_title: "nanochat by Karpathy: Full LLM Pipeline in ~8K Lines (2026)"
 meta_description: "nanochat is Andrej Karpathy's minimal, MIT-licensed LLM training framework covering tokenization, pretraining, fine-tuning, RLHF, and inference in ~8K lines of Python."

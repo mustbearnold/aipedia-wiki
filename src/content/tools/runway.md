@@ -28,29 +28,141 @@ scores:
 facts:
   flagship_model:
     value: "Gen-4 / Gen-4 Turbo"
-    source: "/tools/runway/"
-    source_label: "AIpedia Runway review"
-    verified_at: 2026-04-17
-  video_generation:
-    value: "Gen-4 / Gen-4 Turbo, Aleph, Act-Two"
-    source: "/tools/runway/"
-    source_label: "AIpedia Runway review"
-    verified_at: 2026-04-17
-  image_generation:
-    value: "Image-to-video, not a still-image specialist"
-    source: "/tools/runway/"
-    source_label: "AIpedia Runway review"
-    verified_at: 2026-04-17
+    source: "https://help.runwayml.com/hc/en-us/articles/37327109429011-Creating-with-Gen-4-Video"
+    source_label: "Runway Gen-4 help docs"
+    source_id: runway-help
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  context_window:
+    value: "Not applicable — Runway is a video-generation and editing platform, not a text chat model with a published token context window"
+    source: "https://help.runwayml.com/hc/en-us/articles/37327109429011-Creating-with-Gen-4-Video"
+    source_label: "Runway Gen-4 help docs"
+    source_id: runway-help
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+    next_review_at: 2026-06-03
+  pricing_anchor:
+    value: "Free plan plus Standard, Pro, Unlimited, and Enterprise tiers"
+    source: "https://runwayml.com/pricing"
+    source_label: "Runway pricing"
+    source_id: runway-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  free_plan:
+    value: "Yes — free plan available with limited credits/features"
+    source: "https://runwayml.com/pricing"
+    source_label: "Runway pricing"
+    source_id: runway-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
   best_paid_tier:
-    value: "Pro ($35/mo) or Unlimited ($95/mo)"
-    source: "/tools/runway/"
-    source_label: "AIpedia Runway review"
-    verified_at: 2026-04-17
+    value: "Pro ($35/mo) or Unlimited ($95/mo) for production video work"
+    source: "https://runwayml.com/pricing"
+    source_label: "Runway pricing"
+    source_id: runway-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  api_available:
+    value: "Yes — Runway supports API-driven production workflows for eligible models and accounts"
+    source: "https://runwayml.com/pricing"
+    source_label: "Runway pricing"
+    source_id: runway-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  image_generation:
+    value: "Image-to-video and video workflows; not a still-image specialist"
+    source: "https://help.runwayml.com/hc/en-us/articles/37327109429011-Creating-with-Gen-4-Video"
+    source_label: "Runway Gen-4 help docs"
+    source_id: runway-help
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  video_generation:
+    value: "Gen-4 / Gen-4 Turbo, Aleph, Act-Two, and related video tools"
+    source: "https://help.runwayml.com/hc/en-us/articles/37327109429011-Creating-with-Gen-4-Video"
+    source_label: "Runway Gen-4 help docs"
+    source_id: runway-help
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  real_time_voice:
+    value: "No primary real-time voice-generation product; Runway is video-first"
+    source: "https://runwayml.com/pricing"
+    source_label: "Runway pricing"
+    source_id: runway-pricing
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  web_browsing:
+    value: "No web-browsing assistant; Runway is video generation and editing software"
+    source: "https://runwayml.com"
+    source_label: "Runway product page"
+    source_id: runway-help
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  coding_agent:
+    value: "No coding agent; Runway is creative video software"
+    source: "https://runwayml.com"
+    source_label: "Runway product page"
+    source_id: runway-help
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  enterprise_controls:
+    value: "Enterprise plan is available for studios and organizations needing higher-scale production controls"
+    source: "https://runwayml.com/pricing"
+    source_label: "Runway pricing"
+    source_id: runway-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  data_retention_or_privacy:
+    value: "Review Runway usage-rights and enterprise terms before confidential or client-sensitive production work"
+    source: "https://help.runwayml.com/hc/en-us/articles/18927776141715-Usage-rights"
+    source_label: "Runway usage-rights help"
+    source_id: runway-help
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  open_source_or_local:
+    value: "No — Runway is proprietary and hosted"
+    source: "https://runwayml.com"
+    source_label: "Runway product page"
+    source_id: runway-help
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
   best_for:
     value: "Production AI video, in-context editing, motion capture, and API workflows"
-    source: "/tools/runway/"
-    source_label: "AIpedia Runway review"
-    verified_at: 2026-04-17
+    source: "https://runwayml.com"
+    source_label: "Runway product page"
+    source_id: runway-help
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  watch_out_for:
+    value: "Credit usage and render iteration can get expensive; best for teams with repeat video-production needs"
+    source: "https://runwayml.com/pricing"
+    source_label: "Runway pricing"
+    source_id: runway-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
 tags: [ai-video, video-generation, text-to-video, image-to-video, video-editing, filmmaking, runway, gen-4, gwm-1, aleph, act-two, professional]
 seo_title: "Runway: Features, Pricing & Review (April 2026)"
 meta_description: "Runway is the professional AI video platform with Gen-4 Turbo, Aleph video editing, Act-Two motion capture, and GWM-1 world models. Plans from $15 to $95/month. Best for studios and API-driven production."
@@ -71,10 +183,16 @@ price_history:
   - date: 2025-07-10
     plan: "Pro"
     price: "$35/mo"
+    source: "https://runwayml.com/pricing"
+    source_label: "Source"
+    source_id: runway-pricing
     note: "Pro tier launched"
   - date: 2026-04-15
     plan: "Standard"
     price: "$15/mo"
+    source: "https://runwayml.com/pricing"
+    source_label: "Source"
+    source_id: runway-pricing
     note: "Verified, unchanged"
 ---
 

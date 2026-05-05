@@ -28,6 +28,33 @@ scores:
   value: 8
   moat: 8
   longevity: 7
+facts:
+  best_for:
+    value: "Multimodal LLM family with native long-context video understanding. Core is flagship; Flash and Edge serve cheaper and on-device use cases. $110M unicorn round in 2025 backed by NVIDIA and Snowflake. Best for chat, research, assistant, and model-access workflows."
+    source: "https://docs.reka.ai/pricing"
+    source_label: "Source"
+    source_id: reka-pricing
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: medium
+  pricing_anchor:
+    value: "Reka Core API; $2 / $6 per MTok; Verified via docs.reka.ai/pricing. Image $0.02, video $0.08/min, audio $0.02/min."
+    source: "https://docs.reka.ai/pricing"
+    source_label: "Source"
+    source_id: reka-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
+  watch_out_for:
+    value: "Non-Tier-1 canonical profile: verify current pricing, usage limits, data policy, and integration details before procurement"
+    source: "https://docs.reka.ai/pricing"
+    source_label: "Source"
+    source_id: reka-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
 tags: [multimodal-llm, video-understanding, enterprise-ai, reka, foundation-model]
 best_for:
   - long-context video analysis and question answering
@@ -45,10 +72,16 @@ price_history:
   - date: 2026-04-18
     plan: "Reka Core API"
     price: "$2 / $6 per MTok"
+    source: "https://docs.reka.ai/pricing"
+    source_label: "Source"
+    source_id: reka-pricing
     note: "Verified via docs.reka.ai/pricing. Image $0.02, video $0.08/min, audio $0.02/min."
   - date: 2026-03-01
     plan: "Reka Edge (7B)"
     price: "On-device pricing via partners"
+    source: "https://docs.reka.ai/pricing"
+    source_label: "Source"
+    source_id: reka-pricing
     note: "New Edge model announced March 2026 for physical AI and on-device vision-language."
 ---
 

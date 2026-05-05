@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$30/editor/month"
 status: active
 launched: 2017-01
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-05
+last_verified: 2026-05-05
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -27,7 +27,154 @@ scores:
   value: 8
   moat: 8
   longevity: 8
+facts:
+  flagship_model:
+    value: "Transcript-first AI audio/video editor with Overdub, Studio Sound, filler removal, captions, and AI Actions"
+    source: "https://www.descript.com/changelog"
+    source_label: "Descript changelog"
+    source_id: descript-changelog
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  context_window:
+    value: "Not applicable: Descript is a media editor, not a text chat model with a published token context window"
+    source: "https://help.descript.com"
+    source_label: "Descript help center"
+    source_id: descript-help
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+    next_review_at: 2026-06-03
+  pricing_anchor:
+    value: "Free; Creator $15/mo or $12/mo annually; Pro $30/mo or $24/mo annually; Enterprise custom"
+    source: "https://www.descript.com/pricing"
+    source_label: "Descript pricing"
+    source_id: descript-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  free_plan:
+    value: "Yes: free tier with limited transcription/export capacity"
+    source: "https://www.descript.com/pricing"
+    source_label: "Descript pricing"
+    source_id: descript-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  best_paid_tier:
+    value: "Creator for lightweight creators; Pro for frequent podcasts, videos, Studio Sound, and larger transcription needs"
+    source: "https://www.descript.com/pricing"
+    source_label: "Descript pricing"
+    source_id: descript-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  api_available:
+    value: "No primary public media-generation API for typical buyers; Descript is primarily an editor/workspace product"
+    source: "https://help.descript.com"
+    source_label: "Descript help center"
+    source_id: descript-help
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  image_generation:
+    value: "No primary native still-image generation; Descript focuses on audio, video, transcription, and editing"
+    source: "https://www.descript.com/pricing"
+    source_label: "Descript pricing"
+    source_id: descript-pricing
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  video_generation:
+    value: "Yes: AI-assisted video editing, captions, clips, eye contact, and transcript-based editing workflows"
+    source: "https://www.descript.com/changelog"
+    source_label: "Descript changelog"
+    source_id: descript-changelog
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  real_time_voice:
+    value: "No primary real-time voice-agent product; Overdub and Studio Sound are asynchronous editing features"
+    source: "https://help.descript.com"
+    source_label: "Descript help center"
+    source_id: descript-help
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  web_browsing:
+    value: "No web-browsing assistant; Descript is a media editing platform"
+    source: "https://www.descript.com/pricing"
+    source_label: "Descript pricing"
+    source_id: descript-pricing
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  coding_agent:
+    value: "No coding agent; Descript is for podcast, video, and transcript editing"
+    source: "https://www.descript.com/pricing"
+    source_label: "Descript pricing"
+    source_id: descript-pricing
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  enterprise_controls:
+    value: "Enterprise adds custom pricing, collaboration, admin/security controls, and support for teams"
+    source: "https://www.descript.com/pricing"
+    source_label: "Descript pricing"
+    source_id: descript-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  data_retention_or_privacy:
+    value: "Teams using voice cloning, transcripts, and sensitive recordings should review Enterprise/security controls before broad deployment"
+    source: "https://help.descript.com"
+    source_label: "Descript help center"
+    source_id: descript-help
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  open_source_or_local:
+    value: "No: Descript is proprietary hosted desktop/cloud software"
+    source: "https://www.descript.com/pricing"
+    source_label: "Descript pricing"
+    source_id: descript-pricing
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  best_for:
+    value: "Podcasters, YouTubers, course creators, and marketing teams that edit spoken-word media faster from transcripts"
+    source: "https://www.descript.com/pricing"
+    source_label: "Descript pricing"
+    source_id: descript-pricing
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  watch_out_for:
+    value: "Transcription-hour caps, export limits, and AI feature quotas can force upgrades for frequent creators"
+    source: "https://www.descript.com/pricing"
+    source_label: "Descript pricing"
+    source_id: descript-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
 tags: [audio-editing, video-editing, transcription, overdub, voice-cloning, podcast-editing, studio-sound]
+best_for:
+  - podcast and YouTube teams editing spoken-word media from a transcript
+  - creators fixing flubs with Overdub instead of re-recording
+  - one-click cleanup with Studio Sound, filler removal, and silence trimming
+  - course producers turning rough recordings into polished lessons
+not_best_for:
+  - multi-cam editing, color grading, or VFX-heavy video
+  - synthetic avatar video production
+  - music production that needs a full DAW
+  - teams that require frame-accurate NLE control
 seo_title: "Descript: Features, Pricing & Review (May 2026)"
 meta_description: "Descript edits audio and video by editing the transcript. Current public pricing shows Free, Creator $12/editor/mo annually, Pro $24/editor/mo annually, and Enterprise custom."
 author: aipedia.wiki Editorial

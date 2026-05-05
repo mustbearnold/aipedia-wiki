@@ -25,6 +25,52 @@ scores:
   value: 9
   moat: 6
   longevity: 7
+facts:
+  best_for:
+    value: "Best for developers building stateful agents that need persistent memory, tool use, and model-agnostic agent state across sessions."
+    source: https://www.letta.com/
+    source_label: Letta official site
+    source_id: letta-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  pricing_anchor:
+    value: "Letta publishes cloud pricing and packaging for agent development; verify hosted usage limits, self-host expectations, and enterprise terms before purchase."
+    source: https://www.letta.com/pricing
+    source_label: Letta pricing
+    source_id: letta-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  memory_architecture:
+    value: "Letta's core differentiation is explicit long-term agent memory and state management rather than a stateless chat-completion wrapper."
+    source: https://docs.letta.com/
+    source_label: Letta documentation
+    source_id: letta-docs
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  open_source:
+    value: "The repository is the best source for current server, SDK, local-development, and licensing details for teams evaluating self-hosting."
+    source: https://github.com/letta-ai/letta
+    source_label: Letta GitHub repository
+    source_id: letta-repository
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  watch_out_for:
+    value: "Stateful memory improves continuity but adds governance work around retention, deletion, retrieval quality, and sensitive-data handling."
+    source: https://docs.letta.com/
+    source_label: Letta documentation
+    source_id: letta-docs
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
 tags: [agent-framework, memory, stateful, memgpt, open-source, python, llm-agents, long-term-memory, rag, letta-code]
 seo_title: "Letta (formerly MemGPT): Features, Pricing & Review (April 2026)"
 meta_description: "Letta is the open-source stateful agent platform formerly known as MemGPT. Self-host free under Apache-2.0, or use Letta Cloud with Free, Professional, Scale, and Enterprise tiers. Letta Code ships a memory-first coding CLI."

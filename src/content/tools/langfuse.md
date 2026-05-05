@@ -25,6 +25,52 @@ scores:
   value: 9
   moat: 8
   longevity: 9
+facts:
+  best_for:
+    value: "Best for teams that need open-source LLM observability, prompt management, evaluations, and tracing across production AI applications."
+    source: https://langfuse.com/
+    source_label: Langfuse official site
+    source_id: langfuse-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  pricing_anchor:
+    value: "Langfuse publishes cloud pricing with a free entry point and paid usage/team tiers; self-hosting and enterprise terms should be checked against current pricing."
+    source: https://langfuse.com/pricing
+    source_label: langfuse.com/pricing
+    source_id: langfuse-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  observability_surface:
+    value: "The product combines traces, scores, datasets, evaluations, prompts, and metrics, so it is closer to an LLM engineering control plane than a simple logging sink."
+    source: https://langfuse.com/docs
+    source_label: Langfuse documentation
+    source_id: langfuse-docs
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  open_source:
+    value: "The GitHub repository is the source of truth for self-hosting posture, licenses, integrations, and release activity."
+    source: https://github.com/langfuse/langfuse
+    source_label: Langfuse GitHub repository
+    source_id: langfuse-repository
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  watch_out_for:
+    value: "Adoption depends on instrumenting applications and maintaining evaluation datasets; teams wanting no-code analytics without developer integration should choose a simpler tool."
+    source: https://langfuse.com/docs
+    source_label: Langfuse documentation
+    source_id: langfuse-docs
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
 tags: [llm-observability, prompt-management, evals, open-source, mit, clickhouse, yc]
 seo_title: "Langfuse: Features, Pricing & Review (April 2026)"
 meta_description: "Langfuse is an MIT-licensed LLM engineering platform. Free tier 50k units/month, Core $29/mo. Acquired by ClickHouse Jan 2026 ($400M). Best open-source alternative to LangSmith with strong evals + prompt mgmt."

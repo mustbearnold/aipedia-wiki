@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "Free - $199.99/month"
 status: active
 launched: 2024-03
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-04
+last_verified: 2026-05-04
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -24,6 +24,56 @@ scores:
   value: 8
   moat: 4
   longevity: 6
+facts:
+  best_for:
+    value: Best for creators who want a fast consumer video generator tied to MiniMax/Hailuo models for text-to-video and image-to-video
+      production.
+    source: https://hailuoai.video/
+    source_label: Hailuo AI official site
+    source_id: hailuo-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  pricing_anchor:
+    value: Hailuo uses free and paid subscription/credit plans for video and image creators; exact allowances should be checked
+      before high-volume production.
+    source: https://hailuoai.video/subscribe
+    source_label: Hailuo AI pricing
+    source_id: hailuo-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  video_generation:
+    value: Hailuo is MiniMax’s video-generation surface, with MiniMax also listing Hailuo video models among its model products.
+    source: https://www.minimax.io/
+    source_label: MiniMax official site
+    source_id: minimax-official
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  api_available:
+    value: AIpedia treats Hailuo as a creator-facing web product here; teams needing programmatic video generation should separately
+      evaluate MiniMax platform/API options.
+    source: https://www.minimax.io/
+    source_label: MiniMax official site
+    source_id: minimax-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  watch_out_for:
+    value: Subscription credits, generation limits, commercial-use rules, and model/version changes are the main procurement
+      risks for regular video production.
+    source: https://hailuoai.video/subscribe
+    source_label: Hailuo AI pricing
+    source_id: hailuo-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
 tags: [ai-video, text-to-video, image-to-video, hailuo, minimax, chinese-ai, video-generation]
 seo_title: "Hailuo AI Video Generator: Pricing, Review & Alternatives (2026)"
 meta_description: "Hailuo AI is MiniMax's text-to-video generator with native 1080P output and plans starting at $7.99/month. Honest 2026 review vs Kling and Runway."

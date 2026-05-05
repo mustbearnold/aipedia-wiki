@@ -24,6 +24,143 @@ scores:
   value: 8
   moat: 6
   longevity: 7
+facts:
+  flagship_model:
+    value: "Udio v2.1 for AI music generation with inpainting, extensions, stems-style editing workflows, and licensing-oriented product direction"
+    source: "https://www.udio.com/"
+    source_label: "Udio product site"
+    source_id: udio-product
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  context_window:
+    value: "Not applicable: Udio is a music-generation platform, not a text chat model with a published token context window"
+    source: "https://www.udio.com/"
+    source_label: "Udio product site"
+    source_id: udio-product
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+    next_review_at: 2026-06-03
+  pricing_anchor:
+    value: "Free daily/monthly credits; Standard $10/mo; Pro $30/mo; paid tiers add larger credit pools and API access"
+    source: "https://www.udio.com/pricing"
+    source_label: "Udio pricing"
+    source_id: udio-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  free_plan:
+    value: "Yes: free tier with daily and monthly credits and attribution requirements"
+    source: "https://www.udio.com/pricing"
+    source_label: "Udio pricing"
+    source_id: udio-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  best_paid_tier:
+    value: "Standard for regular creators; Pro for heavy generation volume and broader production workflows"
+    source: "https://www.udio.com/pricing"
+    source_label: "Udio pricing"
+    source_id: udio-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  api_available:
+    value: "Yes: API access is listed for Standard and Pro tiers"
+    source: "https://www.udio.com/pricing"
+    source_label: "Udio pricing"
+    source_id: udio-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  image_generation:
+    value: "No native image generation; Udio focuses on AI music generation"
+    source: "https://www.udio.com/"
+    source_label: "Udio product site"
+    source_id: udio-product
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  video_generation:
+    value: "No native video generation; Udio focuses on AI music/audio generation"
+    source: "https://www.udio.com/"
+    source_label: "Udio product site"
+    source_id: udio-product
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  real_time_voice:
+    value: "No primary real-time voice-agent product; Udio is an asynchronous music-generation platform"
+    source: "https://www.udio.com/"
+    source_label: "Udio product site"
+    source_id: udio-product
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  web_browsing:
+    value: "No web-browsing assistant; Udio is a music-generation platform"
+    source: "https://www.udio.com/"
+    source_label: "Udio product site"
+    source_id: udio-product
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  coding_agent:
+    value: "No coding agent; Udio is for music/audio generation"
+    source: "https://www.udio.com/"
+    source_label: "Udio product site"
+    source_id: udio-product
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  enterprise_controls:
+    value: "No standard enterprise admin suite is the primary public offer; paid tiers focus on credits, rights, and API access"
+    source: "https://www.udio.com/pricing"
+    source_label: "Udio pricing"
+    source_id: udio-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  data_retention_or_privacy:
+    value: "Creators should review attribution, commercial-use, and licensing terms before using generated tracks commercially"
+    source: "https://www.udio.com/pricing"
+    source_label: "Udio pricing"
+    source_id: udio-pricing
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  open_source_or_local:
+    value: "No: Udio is proprietary hosted software"
+    source: "https://www.udio.com/"
+    source_label: "Udio product site"
+    source_id: udio-product
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  best_for:
+    value: "AI song generation, iterative music ideation, inpainting, extensions, and creator demos"
+    source: "https://www.udio.com/"
+    source_label: "Udio product site"
+    source_id: udio-product
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  watch_out_for:
+    value: "Free output attribution, credit limits, commercial rights, API access, and music licensing remain key buying constraints"
+    source: "https://www.udio.com/pricing"
+    source_label: "Udio pricing"
+    source_id: udio-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
 tags: [ai-music, music-generation, text-to-music, inpainting, high-fidelity-audio, licensed-ai]
 seo_title: "Udio AI Review: Pricing, Inpainting and Suno Comparison"
 meta_description: >-

@@ -33,17 +33,24 @@ facts:
     value: "Prompt-to-mobile app builder with React Native/Expo output, Rork Max Swift iOS path, code editor, and GitHub integration on paid plans"
     source: "https://docs.rork.com/"
     source_label: "Rork docs"
+    source_id: rork-coding-agent
     verified_at: 2026-04-28
+    confidence: high
   best_paid_tier:
     value: "Middle ($50/month) for meaningful iteration; Junior ($25/month) for light private projects"
     source: "https://docs.rork.com/introduction/subscriptions"
     source_label: "Rork subscription docs"
+    source_id: rork-best-paid-tier
     verified_at: 2026-04-28
+    next_review_at: 2026-06-03
+    confidence: high
   best_for:
     value: "Mobile-first MVPs that need phone testing, app-store prep, and React Native/Expo output"
     source: "https://docs.rork.com/faq/technical"
     source_label: "Rork technical FAQ"
+    source_id: rork-best-for
     verified_at: 2026-04-28
+    confidence: high
 tags: [mobile-app-builder, ai-design, ai-coding, react-native, expo, swift, app-store, play-store, github]
 best_for:
   - founders building mobile-first MVPs
@@ -60,14 +67,23 @@ price_history:
   - date: 2026-04-28
     plan: "Free"
     price: "$0/mo with 35 credits/month"
+    source: "https://docs.rork.com/introduction/subscriptions"
+    source_label: "Source"
+    source_id: rork-best-paid-tier
     note: "5 credit daily limit"
   - date: 2026-04-28
     plan: "Junior"
     price: "$25/mo with 100 credits"
+    source: "https://docs.rork.com/introduction/subscriptions"
+    source_label: "Source"
+    source_id: rork-best-paid-tier
     note: "Private projects, code editor, GitHub integration, email support"
   - date: 2026-04-28
     plan: "Middle / Senior"
     price: "$50/mo / $100/mo"
+    source: "https://docs.rork.com/introduction/subscriptions"
+    source_label: "Source"
+    source_id: rork-best-paid-tier
     note: "250 / 500 monthly credits"
 ---
 

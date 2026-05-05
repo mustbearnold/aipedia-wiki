@@ -25,6 +25,33 @@ scores:
   value: 9
   moat: 7
   longevity: 8
+facts:
+  best_for:
+    value: "Native Rust code editor with GPU rendering, real-time multiplayer, and the Zeta2 edit-prediction model. Free for individuals. Best for software development and code-assistant workflows."
+    source: "https://zed.dev/pricing"
+    source_label: "Source"
+    source_id: zed-pricing
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: medium
+  pricing_anchor:
+    value: "Pro; $20/mo; 500 prompts/month included. API list price plus 10% beyond the quota."
+    source: "https://zed.dev/pricing"
+    source_label: "Source"
+    source_id: zed-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
+  watch_out_for:
+    value: "Non-Tier-1 canonical profile: verify current pricing, usage limits, data policy, and integration details before procurement"
+    source: "https://zed.dev/pricing"
+    source_label: "Source"
+    source_id: zed-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
 tags: [code-editor, rust, collaborative, ai-coding, performance, open-source, linux, macos, windows, zeta]
 seo_title: "Zed: Features, Pricing & Review (April 2026)"
 meta_description: "Zed is a native Rust code editor with GPU rendering, real-time multiplayer, and AI via Claude, OpenAI frontier models, and Gemini. Free tier runs the Zeta2 edit-prediction model. Pro $20/month with 500 prompts."
@@ -45,10 +72,16 @@ price_history:
   - date: 2026-04-15
     plan: "Pro"
     price: "$20/mo"
+    source: "https://zed.dev/pricing"
+    source_label: "Source"
+    source_id: zed-pricing
     note: "500 prompts/month included. API list price plus 10% beyond the quota."
   - date: 2026-01-20
     plan: "ACP"
     price: "no change"
+    source: "https://zed.dev/pricing"
+    source_label: "Source"
+    source_id: zed-pricing
     note: "Agent Client Protocol launched with JetBrains; Zed ships Claude Code, Codex CLI, and Gemini CLI integrations."
 ---
 

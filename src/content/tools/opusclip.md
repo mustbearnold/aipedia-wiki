@@ -28,6 +28,33 @@ scores:
   value: 8
   moat: 7
   longevity: 8
+facts:
+  best_for:
+    value: "AI that turns long-form podcasts, interviews, and streams into TikTok / Reels / Shorts with virality scoring, captions, and B-roll. Best for AI video generation, editing, avatars, or production workflows."
+    source: "https://www.opus.pro/pricing"
+    source_label: "Source"
+    source_id: opusclip-pricing
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: medium
+  pricing_anchor:
+    value: "Pro; $29/mo; Verified via opus.pro/pricing; annual billing drops to $14.50/mo"
+    source: "https://www.opus.pro/pricing"
+    source_label: "Source"
+    source_id: opusclip-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
+  watch_out_for:
+    value: "Non-Tier-1 canonical profile: verify current pricing, usage limits, data policy, and integration details before procurement"
+    source: "https://www.opus.pro/pricing"
+    source_label: "Source"
+    source_id: opusclip-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
 tags: [short-form-video, video-editing, tiktok, reels, social-media, opusclip]
 best_for:
   - repurposing podcasts and interviews into short-form clips
@@ -45,10 +72,16 @@ price_history:
   - date: 2026-04-18
     plan: "Pro"
     price: "$29/mo"
+    source: "https://www.opus.pro/pricing"
+    source_label: "Source"
+    source_id: opusclip-pricing
     note: "Verified via opus.pro/pricing; annual billing drops to $14.50/mo"
   - date: 2026-04-18
     plan: "Starter"
     price: "$15/mo"
+    source: "https://www.opus.pro/pricing"
+    source_label: "Source"
+    source_id: opusclip-pricing
     note: "Monthly-only tier; removes watermark, unlocks 150 credits"
 ---
 

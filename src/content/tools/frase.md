@@ -26,6 +26,48 @@ scores:
   value: 8
   moat: 6
   longevity: 7
+facts:
+  best_for:
+    value: "SEO content teams that want SERP research, outlines, content briefs, and optimization guidance in one workflow."
+    source: "https://www.frase.io/features"
+    source_label: "Frase features"
+    source_id: frase-features
+    verified_at: 2026-05-04
+    volatility: medium
+    confidence: high
+  workflow_surface:
+    value: "Frase is strongest before and during drafting: research the search results, build a brief, write or revise content, then optimize against topic coverage."
+    source: "https://www.frase.io/features"
+    source_label: "Frase features"
+    source_id: frase-features
+    verified_at: 2026-05-04
+    volatility: medium
+    confidence: high
+  pricing_anchor:
+    value: "Subscription pricing is published by Frase and should be checked against seat counts, document limits, and AI usage needs."
+    source: "https://www.frase.io/pricing"
+    source_label: "Frase pricing"
+    source_id: frase-pricing
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
+  integration_surface:
+    value: "Use it as an SEO editorial layer rather than a full analytics suite; pair it with Search Console, keyword data, and human editorial review."
+    source: "https://www.frase.io/features"
+    source_label: "Frase features"
+    source_id: frase-features
+    verified_at: 2026-05-04
+    volatility: medium
+    confidence: medium
+  watch_out_for:
+    value: "Optimization scores can encourage sameness. Do not let SERP-derived outlines erase original expertise, product evidence, or differentiated editorial judgment."
+    source: "https://www.frase.io/features"
+    source_label: "Frase features"
+    source_id: frase-features
+    verified_at: 2026-05-04
+    volatility: medium
+    confidence: high
 tags: [seo, content-briefs, content-optimization, ai-writing, serp-analysis, on-page-seo, content-strategy]
 seo_title: 'Frase.io: Features, Pricing & Review (April 2026)'
 meta_description: >-

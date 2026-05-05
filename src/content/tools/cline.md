@@ -11,8 +11,8 @@ pricing_model: open-source
 price_range: "Free (BYOK API costs)"
 status: active
 launched: 2024-07
-last_updated: 2026-05-03
-last_verified: 2026-05-03
+last_updated: 2026-05-04
+last_verified: 2026-05-04
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -25,6 +25,52 @@ scores:
   value: 10
   moat: 4
   longevity: 7
+facts:
+  runtime_model:
+    value: "Open-source autonomous coding agent in the IDE with plan/act workflows, model choice, terminal/browser/tool use, and MCP extensibility."
+    source: "https://cline.bot/"
+    source_label: "Cline homepage"
+    source_id: cline-pricing
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: medium
+    confidence: high
+  docs_surface:
+    value: "Docs cover installation, model providers, context, MCP tools, and operational usage patterns for developer workflows."
+    source: "https://docs.cline.bot/home"
+    source_label: "Cline docs"
+    source_id: cline-docs
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: medium
+    confidence: high
+  open_source_or_local:
+    value: "Yes — Cline is open source on GitHub and runs inside the developer IDE with BYOK model access."
+    source: "https://github.com/cline/cline"
+    source_label: "Cline GitHub repository"
+    source_id: cline-repository
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: medium
+    confidence: high
+  best_for:
+    value: "Developers who want a local, extensible, model-flexible coding agent rather than a closed cloud coding environment."
+    source: "https://docs.cline.bot/home"
+    source_label: "Cline docs"
+    source_id: cline-docs
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: medium
+    confidence: high
+  watch_out_for:
+    value: "BYOK autonomy increases security responsibility; review permissions, MCP tools, model costs, and repo safety before broad rollout."
+    source: "https://docs.cline.bot/home"
+    source_label: "Cline docs"
+    source_id: cline-docs
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: medium
+    confidence: medium
 tags: [open-source, vscode, jetbrains, byok, plan-act-mode, mcp, terminal-execution, browser-automation, checkpoints, cursor-alternative, claude-dev]
 seo_title: "Cline: Features, Pricing & Review (April 2026)"
 meta_description: "Cline is a free open-source AI coding agent for VS Code and JetBrains (formerly Claude Dev). Plan/Act modes, MCP tool creation, BYOK for Claude Opus 4.7, OpenAI frontier models, Gemini, or local models. No subscription. Verified April 2026."
@@ -44,10 +90,16 @@ price_history:
   - date: 2024-07-01
     plan: "Extension"
     price: "Free (MIT)"
+    source: "https://cline.bot/"
+    source_label: "Source"
+    source_id: cline-pricing
     note: "Launched as Claude Dev, renamed Cline for model-agnostic support"
   - date: 2026-04-15
     plan: "Extension"
     price: "Free (MIT)"
+    source: "https://cline.bot/"
+    source_label: "Source"
+    source_id: cline-pricing
     note: "Verified unchanged. BYOK API costs remain the only spend."
 ---
 

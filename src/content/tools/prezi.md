@@ -29,6 +29,33 @@ scores:
   value: 7
   moat: 6
   longevity: 7
+facts:
+  best_for:
+    value: "Non-linear presentation platform with Prezi AI prompt-to-deck generation, zoom-and-pan storytelling, Prezi Video for on-camera presentations, and 1M+ media library. Free evaluation plus Standard, Plus, Premium, Teams, and Education plans. Best for presentation creation, slide design, and storytelling workflows."
+    source: "https://prezi.com/"
+    source_label: "Prezi homepage"
+    source_id: prezi-official
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: medium
+  pricing_anchor:
+    value: "Basic; Free; Free evaluation tier with limited controls; paid plans unlock stronger privacy, export, recording, and presentation features."
+    source: "https://prezi.com/pricing/"
+    source_label: "Source"
+    source_id: prezi-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
+  watch_out_for:
+    value: "Non-Tier-1 canonical profile: verify current pricing, usage limits, data policy, and integration details before procurement"
+    source: "https://prezi.com/pricing/"
+    source_label: "Source"
+    source_id: prezi-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
 tags: [presentations, non-linear-presentation, prezi-ai, prezi-video, zoom-pan, storytelling, ai-presentation]
 seo_title: 'Prezi: Features, Pricing & Review (May 2026)'
 meta_description: >-
@@ -50,14 +77,23 @@ price_history:
   - date: 2026-05-02
     plan: "Basic"
     price: "Free"
+    source: "https://prezi.com/pricing/"
+    source_label: "Source"
+    source_id: prezi-pricing
     note: "Free evaluation tier with limited controls; paid plans unlock stronger privacy, export, recording, and presentation features."
   - date: 2026-05-02
     plan: "Individual tiers"
     price: "$7 / $19 / $29 per month billed annually"
+    source: "https://prezi.com/pricing/"
+    source_label: "Source"
+    source_id: prezi-pricing
     note: "Standard, Plus, and Premium pricing verified against Prezi's public pricing page/search crawl."
   - date: 2026-05-02
     plan: "Teams"
     price: "$39/user/month billed annually"
+    source: "https://prezi.com/pricing/"
+    source_label: "Source"
+    source_id: prezi-pricing
     note: "Business team tier with collaboration, analytics, custom brand kit, and SSO features."
 ---
 

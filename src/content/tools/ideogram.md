@@ -26,6 +26,52 @@ scores:
   value: 9
   moat: 7
   longevity: 7
+facts:
+  best_for:
+    value: "Image-generation buyers who care about prompt adherence, text rendering, logos, posters, and design-like outputs more than a general stock-asset workflow."
+    source: "https://ideogram.ai/features/3.0"
+    source_label: "Ideogram 3.0 features"
+    source_id: ideogram-official
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
+  model_surface:
+    value: "Ideogram's public product positioning centers image generation with strong text and design rendering; API buyers should verify current model and endpoint availability in docs."
+    source: "https://docs.ideogram.ai/"
+    source_label: "Ideogram API docs"
+    source_id: ideogram-docs
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
+  pricing_anchor:
+    value: "Freemium image product with paid plans on the vendor pricing page; check current credits and queue limits before production use."
+    source: "https://ideogram.ai/pricing"
+    source_label: "Ideogram pricing"
+    source_id: ideogram-pricing
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
+  integration_surface:
+    value: "Use the web app for creative exploration and the API docs for production integration; the buying decision changes if you need automation rather than manual prompting."
+    source: "https://docs.ideogram.ai/"
+    source_label: "Ideogram API docs"
+    source_id: ideogram-docs
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
+  watch_out_for:
+    value: "Rights, brand-safety review, and exact model behavior matter for commercial design work. Test with your real typography and logo prompts before standardizing on it."
+    source: "https://ideogram.ai/features/3.0"
+    source_label: "Ideogram 3.0 features"
+    source_id: ideogram-official
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
 tags: [ai-image, image-generation, text-to-image, text-rendering, logos, thumbnails, typography, ideogram, marketing]
 seo_title: 'Ideogram 3.0: Features, Pricing & Review (April 2026)'
 meta_description: >-
@@ -49,10 +95,16 @@ price_history:
   - date: 2025-03-26
     plan: "3.0"
     price: "$7/mo"
+    source: "https://ideogram.ai/pricing"
+    source_label: "Source"
+    source_id: ideogram-pricing
     note: "Ideogram 3.0 launched; pricing restructured."
   - date: 2026-04-17
     plan: "Basic"
     price: "$7/mo"
+    source: "https://ideogram.ai/pricing"
+    source_label: "Source"
+    source_id: ideogram-pricing
     note: "Verified unchanged."
 ---
 

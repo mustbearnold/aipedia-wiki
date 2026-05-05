@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$79+/month"
 status: active
 launched: 2021-01
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-04
+last_verified: 2026-05-04
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -25,6 +25,56 @@ scores:
   value: 8
   moat: 6
   longevity: 7
+facts:
+  best_for:
+    value: Best for operators who want a spreadsheet interface with AI analysis, formulas, Python blocks, and data connectors
+      instead of a full BI or automation platform.
+    source: https://rows.com/ai
+    source_label: Rows AI Analyst
+    source_id: rows-ai
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  pricing_anchor:
+    value: Rows has Free, Plus, Pro, and Enterprise tiers; per-seat and workspace limits should be checked on the live pricing
+      page before rollout.
+    source: https://rows.com/pricing
+    source_label: Rows pricing
+    source_id: rows-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  api_available:
+    value: Rows is connector- and workbook-centered, with docs for integrations and spreadsheet workflows rather than a general-purpose
+      agent API.
+    source: https://rows.com/docs
+    source_label: Rows docs
+    source_id: rows-docs
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  enterprise_controls:
+    value: Enterprise is the tier to evaluate when governance, procurement, or larger workspace controls matter.
+    source: https://rows.com/pricing
+    source_label: Rows pricing
+    source_id: rows-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  watch_out_for:
+    value: Rows is strongest when spreadsheet users own the workflow; teams that need complex multi-step backend automation
+      may outgrow the spreadsheet model.
+    source: https://rows.com/
+    source_label: Rows official site
+    source_id: rows-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
 tags: [ai-spreadsheet, ai-analyst, data-analysis, no-code, automation, rows, superhuman]
 best_for:
   - ops and marketing teams pulling data from SaaS tools
@@ -45,10 +95,16 @@ price_history:
   - date: 2026-04-17
     plan: "Plus"
     price: "$8/user/mo"
+    source: "https://rows.com/pricing"
+    source_label: "Source"
+    source_id: rows-pricing
     note: "Verified unchanged on annual $6/user/mo"
   - date: 2026-04-17
     plan: "Pro"
     price: "$79/mo base + $8/user"
+    source: "https://rows.com/pricing"
+    source_label: "Source"
+    source_id: rows-pricing
     note: "Verified. Annual $59 base + $6/user"
 ---
 

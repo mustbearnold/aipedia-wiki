@@ -11,8 +11,8 @@ pricing_model: enterprise
 price_range: "14-day trial · Starter ~$29/user (third-party) · Enterprise custom"
 status: active
 launched: 2020-03
-last_updated: 2026-05-03
-last_verified: 2026-05-03
+last_updated: 2026-05-04
+last_verified: 2026-05-04
 update_frequency: quarterly
 seo_title: "Writer (Palmyra X5): Features, Pricing & Review (2026)"
 meta_description: "Writer is the enterprise AI platform running the Palmyra X5 model with 1M token context. Palmyra X5 API is $0.60 in / $6 out per MTok, about 75% cheaper than GPT-4.1. Starter offers a 14-day free trial; Enterprise is contact-sales. Used by Vanguard, Salesforce, Qualcomm, Uber, and Hilton."
@@ -28,6 +28,52 @@ scores:
   value: 8
   moat: 8
   longevity: 8
+facts:
+  platform_scope:
+    value: "Enterprise generative AI platform for apps, agents, knowledge work, writing workflows, and governed deployment on Writer-built Palmyra models."
+    source: "https://writer.com/platform/"
+    source_label: "Writer platform"
+    source_id: writer-platform
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: medium
+    confidence: high
+  model_family:
+    value: "Writer operates its own Palmyra LLM family, which is the strategic moat versus generic writing wrappers."
+    source: "https://writer.com/llms/"
+    source_label: "Writer Palmyra LLMs"
+    source_id: writer-palmyra
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
+  pricing_anchor:
+    value: "Public plans emphasize a trial and sales-led enterprise packaging; verify seat, usage, and model limits on Writer plans before procurement."
+    source: "https://writer.com/plans/"
+    source_label: "Writer plans"
+    source_id: writer-pricing
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: medium
+  best_for:
+    value: "Governed enterprise writing, knowledge, and agent programs where brand control, model governance, and private data workflows matter."
+    source: "https://writer.com/platform/"
+    source_label: "Writer platform"
+    source_id: writer-platform
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: medium
+    confidence: high
+  watch_out_for:
+    value: "Overkill for simple blog drafting; smaller teams should compare Jasper, Copy.ai, ChatGPT Team, and Claude before entering an enterprise sales cycle."
+    source: "https://writer.com/plans/"
+    source_label: "Writer plans"
+    source_id: writer-pricing
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: medium
 tags: [enterprise-ai, ai-writing, palmyra, content-generation, compliance, writer]
 best_for:
   - enterprise content generation with governance
@@ -46,14 +92,23 @@ price_history:
   - date: 2026-04-18
     plan: "Palmyra X5 API"
     price: "$0.60 in / $6 out per MTok"
+    source: "https://writer.com/plans/"
+    source_label: "Source"
+    source_id: writer-pricing
     note: "1M context; Writer claims roughly 75% lower cost than GPT-4.1 on comparable tasks"
   - date: 2026-04-18
     plan: "Starter"
     price: "14-day free trial, no credit card"
+    source: "https://writer.com/plans/"
+    source_label: "Source"
+    source_id: writer-pricing
     note: "Paid price not published on writer.com/plans; third-party sources report ~$29/user/mo annual"
   - date: 2025-04-28
     plan: "Palmyra X5 launch"
     price: "Released with 1M token context"
+    source: "https://writer.com/plans/"
+    source_label: "Source"
+    source_id: writer-pricing
     note: "Adaptive reasoning LLM positioned against GPT-4.1"
 ---
 

@@ -33,17 +33,24 @@ facts:
     value: "Natural-language app builder with AI chat, code tab, managed backend, integrations, and GitHub sync on Builder+"
     source: "https://docs.base44.com/developers/app-code/overview/introduction"
     source_label: "Base44 developer docs"
+    source_id: base44-coding-agent
     verified_at: 2026-04-28
+    confidence: high
   best_paid_tier:
     value: "Builder ($50/month or $40/month annual) because it unlocks custom domains and GitHub integration"
     source: "https://base44.com/blog/how-much-does-base44-cost"
     source_label: "Base44 pricing guide"
+    source_id: base44-best-paid-tier
     verified_at: 2026-04-28
+    next_review_at: 2026-06-03
+    confidence: high
   best_for:
     value: "Internal tools, portals, dashboards, and SaaS prototypes where managed backend speed beats full ownership"
     source: "https://docs.base44.com/"
     source_label: "Base44 docs"
+    source_id: base44-best-for
     verified_at: 2026-04-28
+    confidence: high
 tags: [app-builder, vibe-coding, no-code, ai-design, ai-coding, wix, react, vite, managed-backend, github-sync]
 best_for:
   - non-developers building internal tools and SaaS prototypes
@@ -60,18 +67,30 @@ price_history:
   - date: 2026-04-28
     plan: "Free"
     price: "$0/mo"
+    source: "https://base44.com/blog/how-much-does-base44-cost"
+    source_label: "Source"
+    source_id: base44-best-paid-tier
     note: "25 monthly messages and limited integration credits in Base44 pricing guide"
   - date: 2026-04-28
     plan: "Starter"
     price: "$20/mo monthly or $16/mo annual"
+    source: "https://base44.com/blog/how-much-does-base44-cost"
+    source_label: "Source"
+    source_id: base44-best-paid-tier
     note: "Verified in Base44 pricing guide"
   - date: 2026-04-28
     plan: "Builder"
     price: "$50/mo monthly or $40/mo annual"
+    source: "https://base44.com/blog/how-much-does-base44-cost"
+    source_label: "Source"
+    source_id: base44-best-paid-tier
     note: "Adds custom domains and GitHub integration"
   - date: 2026-04-28
     plan: "Pro / Elite"
     price: "$100/mo / $200/mo monthly"
+    source: "https://base44.com/blog/how-much-does-base44-cost"
+    source_label: "Source"
+    source_id: base44-best-paid-tier
     note: "Higher message and integration-credit limits"
 ---
 

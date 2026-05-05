@@ -26,6 +26,33 @@ scores:
   value: 8
   moat: 5
   longevity: 6
+facts:
+  best_for:
+    value: "Multi-model AI art platform with daily free credits, Flux.1, Flux.2, SDXL, Nano Banana, Seedream 4, and a community of creators. Best for image generation, editing, and visual-production workflows."
+    source: "https://creator.nightcafe.studio/pricing"
+    source_label: "Source"
+    source_id: nightcafe-pricing
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: medium
+  pricing_anchor:
+    value: "AI Hobbyist; $5.99/mo; Entry tier restructured."
+    source: "https://creator.nightcafe.studio/pricing"
+    source_label: "Source"
+    source_id: nightcafe-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
+  watch_out_for:
+    value: "Non-Tier-1 canonical profile: verify current pricing, usage limits, data policy, and integration details before procurement"
+    source: "https://creator.nightcafe.studio/pricing"
+    source_label: "Source"
+    source_id: nightcafe-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
 tags: [ai-image, image-generation, ai-art, community, multiple-models, flux, stable-diffusion]
 seo_title: 'NightCafe Review (April 2026): Multi-Model AI Art with Free Credits'
 meta_description: >-
@@ -49,10 +76,16 @@ price_history:
   - date: 2025-11-01
     plan: "AI Hobbyist"
     price: "$5.99/mo"
+    source: "https://creator.nightcafe.studio/pricing"
+    source_label: "Source"
+    source_id: nightcafe-pricing
     note: "Entry tier restructured."
   - date: 2026-04-17
     plan: "AI Enthusiast"
     price: "$9.99/mo"
+    source: "https://creator.nightcafe.studio/pricing"
+    source_label: "Source"
+    source_id: nightcafe-pricing
     note: "Verified unchanged."
 ---
 

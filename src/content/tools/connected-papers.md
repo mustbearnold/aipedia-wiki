@@ -24,6 +24,48 @@ scores:
   value: 8
   moat: 6
   longevity: 7
+facts:
+  best_for:
+    value: "Connected Papers is best for researchers who want a visual map of papers related to a seed work, including prior and derivative work exploration during literature review."
+    source: "https://www.connectedpapers.com/about"
+    source_label: "Connected Papers about"
+    source_id: connected-papers-about
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  pricing_anchor:
+    value: "Connected Papers pricing is driven by graph limits and academic/business usage, so buyers should estimate how often they need unlimited graph generation."
+    source: "https://www.connectedpapers.com/pricing"
+    source_label: "Connected Papers pricing"
+    source_id: connected-papers-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: high
+  graph_workflow:
+    value: "The main workflow starts from a seed paper and generates a visual graph of conceptually similar papers, which is useful for quickly understanding a research neighborhood."
+    source: "https://www.connectedpapers.com/main"
+    source_label: "Connected Papers graph search"
+    source_id: connected-papers-main
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  research_positioning:
+    value: "Connected Papers should be framed as discovery and mapping infrastructure, not as a summarizer or full citation manager."
+    source: "https://www.connectedpapers.com/about"
+    source_label: "Connected Papers about"
+    source_id: connected-papers-about
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  watch_out_for:
+    value: "It helps find related work but does not replace reading papers, assessing methods, or maintaining a citation database; pair it with a reference manager for serious reviews."
+    source: "https://www.connectedpapers.com/pricing"
+    source_label: "Connected Papers pricing"
+    source_id: connected-papers-pricing
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
 tags: [academic-search, research, visualization, citations, paper-graph, literature-review]
 seo_title: "Connected Papers: Visual Research Graph Review (April 2026)"
 meta_description: >-
@@ -44,6 +86,9 @@ price_history:
   - date: 2026-04-17
     plan: "Academic"
     price: "$3/mo"
+    source: "https://www.connectedpapers.com/pricing"
+    source_label: "Source"
+    source_id: connected-papers-pricing
     note: "Verified. Billed annually for unlimited graphs."
 ---
 

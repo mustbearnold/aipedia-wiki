@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$9.60-$84/month"
 status: active
 launched: 2024-08
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-04
+last_verified: 2026-05-04
 update_frequency: monthly
 seo_title: "Jimeng AI: Features, Pricing & Review (April 2026)"
 meta_description: "Jimeng (即梦) is ByteDance's Chinese-market creative app for image and video, powered by Seedream 5.0 and Seedance 2.0. Dreamina is the international rebrand. China tier from 69 RMB/mo (~$9.60), international from $18/mo. CapCut integrated."
@@ -28,6 +28,56 @@ scores:
   value: 9
   moat: 7
   longevity: 8
+facts:
+  best_for:
+    value: Best for Chinese-language creators using ByteDance/Jianying surfaces for AI image and video generation workflows.
+    source: https://jimeng.jianying.com/
+    source_label: Jimeng AI official site
+    source_id: jimeng-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  pricing_anchor:
+    value: Jimeng access/pricing can be region and app-account dependent; verify live official surfaces before publishing durable
+      plan or credit claims.
+    source: https://jimeng.jianying.com/
+    source_label: Jimeng AI official site
+    source_id: jimeng-official
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  workflow_surface:
+    value: The product is oriented around creative image/video generation, not a general business chatbot or developer model
+      platform.
+    source: https://jimeng.jianying.com/
+    source_label: Jimeng AI official site
+    source_id: jimeng-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  platform_context:
+    value: Volcengine media infrastructure is relevant background for ByteDance/Tencent-style cloud media workflows but should
+      not be conflated with consumer Jimeng pricing.
+    source: https://www.volcengine.com/product/veImageX
+    source_label: Volcengine image/video infrastructure
+    source_id: jimeng-volcengine
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  watch_out_for:
+    value: Check region availability, account requirements, export rights, watermarking, language UX, and commercial-use terms
+      before recommending Jimeng outside China.
+    source: https://jimeng.jianying.com/
+    source_label: Jimeng AI official site
+    source_id: jimeng-official
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
 tags: [ai-image, ai-video, jimeng, dreamina, bytedance, seedream, seedance, capcut, chinese-ai, consumer-app]
 best_for:
   - Chinese-market creators already on Douyin and CapCut
@@ -47,10 +97,16 @@ price_history:
   - date: 2026-02-20
     plan: "Dreamina (international)"
     price: "$18/mo"
+    source: "https://dreamina.capcut.com"
+    source_label: "Source"
+    source_id: jimeng-pricing
     note: "International launch credit plans span $18-$84/mo."
   - date: 2026-04-15
     plan: "Jimeng (China)"
     price: "69 RMB/mo"
+    source: "https://dreamina.capcut.com"
+    source_label: "Source"
+    source_id: jimeng-pricing
     note: "China pricing floor confirmed at ~$9.60 USD equivalent."
 ---
 

@@ -24,7 +24,44 @@ scores:
   value: 9
   moat: 6
   longevity: 7
+facts:
+  best_for:
+    value: "Shengshu Technology's AI video generator. Vidu Q1 turns text and up to 7 reference images into 5-second 1080p clips with native 48kHz audio. Best for AI video generation, editing, avatars, or production workflows."
+    source: "https://www.vidu.com/pricing"
+    source_label: "Vidu pricing page"
+    source_id: vidu-official
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: medium
+  pricing_anchor:
+    value: "Pricing should be checked on the current Vidu source before purchase; AIpedia has not promoted this page to a full Tier 1 pricing profile yet"
+    source: "https://www.vidu.com/pricing"
+    source_label: "Vidu pricing page"
+    source_id: vidu-official
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
+  watch_out_for:
+    value: "Non-Tier-1 canonical profile: verify current pricing, usage limits, data policy, and integration details before procurement"
+    source: "https://www.vidu.com/pricing"
+    source_label: "Vidu pricing page"
+    source_id: vidu-official
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
 tags: [video-generation, china-ai, short-video, ai-video, vidu]
+best_for:
+  - short reference-driven clips with consistent characters
+  - creators testing cheap 5-second 1080p video generation
+  - projects that benefit from native audio in the generated clip
+  - teams comparing Chinese generative video challengers against Runway and Pika
+not_best_for:
+  - long-form shots or sequence-level video production
+  - enterprise workflows that need deep admin controls and compliance review
+  - projects that need the strongest cinematic motion quality
+  - buyers who require mature Western support and procurement processes
 seo_title: "Vidu: Features, Pricing & Review (2026)"
 meta_description: "Vidu Q1 from Shengshu Technology generates 5-second 1080p clips with up to 7 reference images and native 48kHz audio. Free plan includes 800 monthly credits. Paid tiers start at $10/mo."
 author: "aipedia.wiki Editorial"

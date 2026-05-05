@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0 free / $1.99-$49/user/mo"
 status: active
 launched: 2023-02
-last_updated: 2026-04-18
-last_verified: 2026-04-18
+last_updated: 2026-05-04
+last_verified: 2026-05-04
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -24,6 +24,56 @@ scores:
   value: 9
   moat: 6
   longevity: 7
+facts:
+  best_for:
+    value: Best for teams that want to chat with documents and knowledge-base files with citations and workspace-level document
+      organization.
+    source: https://www.humata.ai/
+    source_label: Humata official site
+    source_id: humata-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  pricing_anchor:
+    value: Humata pricing depends on plan limits and document/workspace usage; verify pages, seats, upload limits, and enterprise/security
+      features.
+    source: https://www.humata.ai/pricing
+    source_label: Humata pricing
+    source_id: humata-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  workflow_surface:
+    value: Humata focuses on knowledge-base and document Q&A rather than broad web search, meeting notes, or general automation.
+    source: https://www.humata.ai/
+    source_label: Humata official site
+    source_id: humata-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  enterprise_controls:
+    value: Security review should cover file retention, encryption, access control, data training policy, and enterprise compliance
+      claims.
+    source: https://www.humata.ai/security
+    source_label: Humata security
+    source_id: humata-security
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  watch_out_for:
+    value: Document chat tools need evaluation on citation reliability, table/PDF parsing, permission boundaries, and hallucination
+      handling before use on legal or financial records.
+    source: https://www.humata.ai/blog
+    source_label: Humata blog
+    source_id: humata-blog
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
 tags: [pdf, document-chat, research, rag, citations, student, soc2]
 seo_title: "Humata: Features, Pricing & Review (April 2026)"
 meta_description: "Humata is a PDF chat tool with strong student pricing. Free 60 pages/mo. Student $1.99, Expert $9.99, Team $49/user/mo. SOC-2 compliance + SSO make it enterprise-friendly."

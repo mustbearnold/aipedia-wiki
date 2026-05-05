@@ -26,7 +26,155 @@ scores:
   value: 8
   moat: 8
   longevity: 9
+facts:
+  flagship_model:
+    value: "Avatar IV for photorealistic, emotion-aware avatar video generation"
+    source: "https://help.heygen.com/en/articles/11269603-heygen-avatar-iv-complete-guide"
+    source_label: "HeyGen Avatar IV guide"
+    source_id: heygen-avatar-iv
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  context_window:
+    value: "Not applicable: HeyGen is an avatar-video platform, not a text chat model with a published token context window"
+    source: "https://help.heygen.com/en/articles/11269603-heygen-avatar-iv-complete-guide"
+    source_label: "HeyGen Avatar IV guide"
+    source_id: heygen-avatar-iv
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+    next_review_at: 2026-06-03
+  pricing_anchor:
+    value: "Free; Creator $29/mo; Pro $99/mo; Business $149/mo plus seats; Enterprise custom"
+    source: "https://www.heygen.com/pricing"
+    source_label: "HeyGen pricing"
+    source_id: heygen-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  free_plan:
+    value: "Yes: free plan with limited, watermarked video generation"
+    source: "https://www.heygen.com/pricing"
+    source_label: "HeyGen pricing"
+    source_id: heygen-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  best_paid_tier:
+    value: "Creator for light avatar videos; Pro or Business for serious production; Enterprise for governance and scale"
+    source: "https://www.heygen.com/pricing"
+    source_label: "HeyGen pricing"
+    source_id: heygen-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  api_available:
+    value: "Yes: HeyGen provides developer/API docs for programmatic avatar and video generation"
+    source: "https://docs.heygen.com"
+    source_label: "HeyGen API docs"
+    source_id: heygen-api-docs
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  image_generation:
+    value: "No primary still-image generation product; HeyGen focuses on avatar video and translation"
+    source: "https://www.heygen.com/pricing"
+    source_label: "HeyGen pricing"
+    source_id: heygen-pricing
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  video_generation:
+    value: "Yes: avatar video generation, video translation, custom avatars, and interactive avatar workflows"
+    source: "https://www.heygen.com/pricing"
+    source_label: "HeyGen pricing"
+    source_id: heygen-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  real_time_voice:
+    value: "Yes for Interactive Avatars use cases, including real-time conversational avatar deployments"
+    source: "https://www.heygen.com/pricing"
+    source_label: "HeyGen pricing"
+    source_id: heygen-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  web_browsing:
+    value: "No general web-browsing assistant; HeyGen is focused on avatar/video generation"
+    source: "https://www.heygen.com/pricing"
+    source_label: "HeyGen pricing"
+    source_id: heygen-pricing
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  coding_agent:
+    value: "No coding agent; HeyGen is avatar/video generation software"
+    source: "https://www.heygen.com/pricing"
+    source_label: "HeyGen pricing"
+    source_id: heygen-pricing
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  enterprise_controls:
+    value: "Business and Enterprise tiers add workspace, brand, admin, security, and scale controls for production teams"
+    source: "https://www.heygen.com/pricing"
+    source_label: "HeyGen pricing"
+    source_id: heygen-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
+  data_retention_or_privacy:
+    value: "Avatar cloning and translation workflows require consent and governance review before enterprise deployment"
+    source: "https://help.heygen.com/en/articles/11269603-heygen-avatar-iv-complete-guide"
+    source_label: "HeyGen Avatar IV guide"
+    source_id: heygen-avatar-iv
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  open_source_or_local:
+    value: "No: HeyGen is proprietary hosted software"
+    source: "https://www.heygen.com/pricing"
+    source_label: "HeyGen pricing"
+    source_id: heygen-pricing
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  best_for:
+    value: "Marketing, sales enablement, training, localization, and avatar-led video production at scale"
+    source: "https://www.heygen.com/pricing"
+    source_label: "HeyGen pricing"
+    source_id: heygen-pricing
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  watch_out_for:
+    value: "Credit math is complex, high-quality models cost more credits, and realistic avatar governance matters for brand safety"
+    source: "https://help.heygen.com/en/articles/9204682-heygen-pricing-plans-and-subscriptions-explained-what-you-need-to-know"
+    source_label: "HeyGen pricing help"
+    source_id: heygen-pricing-help
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-03
 tags: [ai-video, ai-avatar, talking-head, video-marketing, sales-videos, training-videos, heygen, lip-sync, video-translation, avatar-iv]
+best_for:
+  - marketing, sales, and training teams making avatar-led videos
+  - fast custom avatar cloning without a long studio queue
+  - multilingual video translation with lip sync
+  - buyers who want a lower entry point than Synthesia
+not_best_for:
+  - cinematic scene generation or motion-heavy creative video
+  - LMS-first corporate training that depends on SCORM workflows
+  - voice-only cloning or audio production
+  - teams that cannot manage avatar consent and brand-safety review
 seo_title: "HeyGen: Features, Pricing & Review (April 2026)"
 meta_description: "HeyGen runs Avatar IV for photorealistic talking-head video across 175+ languages. Free, Creator $29, Pro $99, Business $149 plus $20/seat. Interactive Avatars and Video Translate round out the platform."
 author: "aipedia.wiki Editorial"

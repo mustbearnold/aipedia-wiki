@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$19/user/month"
 status: active
 launched: 2023-11
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-04
+last_verified: 2026-05-04
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -24,6 +24,56 @@ scores:
   value: 8
   moat: 7
   longevity: 8
+facts:
+  best_for:
+    value: Best for AWS-heavy engineering teams that want code assistance, cloud troubleshooting, and AWS service context inside
+      the same assistant family.
+    source: https://aws.amazon.com/q/developer/
+    source_label: Amazon Q Developer official site
+    source_id: amazon-q-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  pricing_anchor:
+    value: Amazon Q Developer has a free tier and paid Pro pricing; check AWS pricing for current seat, usage, and feature limits.
+    source: https://aws.amazon.com/q/developer/pricing/
+    source_label: Amazon Q Developer pricing
+    source_id: amazon-q-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  coding_agent:
+    value: Amazon Q Developer is a coding and software-development assistant with AWS-specific features, not a general chatbot
+      replacement.
+    source: https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/what-is.html
+    source_label: Amazon Q Developer docs
+    source_id: amazon-q-docs
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  enterprise_controls:
+    value: Enterprise fit is strongest when IAM, AWS admin controls, and cloud-development workflows are already central to
+      the team.
+    source: https://aws.amazon.com/q/developer/features/
+    source_label: Amazon Q Developer features
+    source_id: amazon-q-features
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  watch_out_for:
+    value: Amazon Q Developer is less compelling as a standalone editor assistant for teams outside AWS; compare against GitHub
+      Copilot, Cursor, Windsurf, and Claude Code by IDE and cloud context.
+    source: https://aws.amazon.com/q/developer/
+    source_label: Amazon Q Developer official site
+    source_id: amazon-q-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
 tags: [ai-coding, aws, cloud, autocomplete, ide-plugin, codewhisperer, enterprise, iam, cloudformation, cdk]
 seo_title: "Amazon Q Developer: Review & Pricing (April 2026)"
 meta_description: "Amazon Q Developer is AWS's AI coding assistant. Free tier 50 agentic chat interactions per month; Pro $19/user/mo for 1,000 agentic requests and 4,000 LOC transformation. Best on AWS-heavy stacks."
@@ -43,10 +93,16 @@ price_history:
   - date: 2024-04-30
     plan: "Pro"
     price: "$19/user/mo"
+    source: "https://aws.amazon.com/q/developer/pricing/"
+    source_label: "Source"
+    source_id: amazon-q-pricing
     note: "Introduced with Q Developer rebrand from CodeWhisperer."
   - date: 2026-04-17
     plan: "Pro"
     price: "$19/user/mo"
+    source: "https://aws.amazon.com/q/developer/pricing/"
+    source_label: "Source"
+    source_id: amazon-q-pricing
     note: "Verified unchanged."
 ---
 

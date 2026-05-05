@@ -24,7 +24,36 @@ scores:
   value: 9
   moat: 7
   longevity: 7
+facts:
+  best_for:
+    value: "VAST AI's text-to-3D and image-to-3D generator. Tripo 2.5 ships clean quad topology, PBR textures, and a production-grade API. Best for image generation, editing, and visual-production workflows."
+    source: "https://www.tripo3d.ai/pricing"
+    source_label: "Source"
+    source_id: tripo3d-pricing
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: medium
+  pricing_anchor:
+    value: "Tripo 2.5; n/a; Tripo 2.5 released with higher-fidelity geometry and quad-topology remesh as a first-class output."
+    source: "https://www.tripo3d.ai/pricing"
+    source_label: "Source"
+    source_id: tripo3d-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
+  watch_out_for:
+    value: "Non-Tier-1 canonical profile: verify current pricing, usage limits, data policy, and integration details before procurement"
+    source: "https://www.tripo3d.ai/pricing"
+    source_label: "Source"
+    source_id: tripo3d-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
 tags: [3d-generation, text-to-3d, image-to-3d, pbr-textures, quad-topology, auto-rigging, game-assets, api, glb, fbx, usdz, obj]
+seo_title: "Tripo3D Review 2026: Text-to-3D, Quad Topology, Pricing"
+meta_description: "Tripo3D review: when to use VAST AI's text-to-3D generator for clean quad meshes, PBR assets, API workflows, and game prototyping."
 best_for:
   - indie and mid-size game developers needing clean quad topology
   - creators building stylized assets for Unity or Unreal pipelines
@@ -40,10 +69,16 @@ price_history:
   - date: 2025-10-14
     plan: "Tripo 2.5"
     price: "n/a"
+    source: "https://www.tripo3d.ai/pricing"
+    source_label: "Source"
+    source_id: tripo3d-pricing
     note: "Tripo 2.5 released with higher-fidelity geometry and quad-topology remesh as a first-class output."
   - date: 2026-04-15
     plan: "Pro"
     price: "$20/mo"
+    source: "https://www.tripo3d.ai/pricing"
+    source_label: "Source"
+    source_id: tripo3d-pricing
     note: "Verified unchanged. Starter stays $10/mo and Pro Unlimited stays $60/mo."
 ---
 

@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: "$0-$33/month"
 status: active
 launched: 2016-02
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-04
+last_verified: 2026-05-04
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -26,6 +26,55 @@ scores:
   value: 8
   moat: 8
   longevity: 7
+facts:
+  best_for:
+    value: Best for creators who need structured instrumental composition, MIDI export, stems, and soundtrack-style music rather
+      than prompt-only pop-song generation.
+    source: https://www.aiva.ai/
+    source_label: AIVA official site
+    source_id: aiva-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  pricing_anchor:
+    value: AIVA has free and paid creator plans; verify download, copyright, monetization, and monthly generation limits on
+      the live pricing page.
+    source: https://www.aiva.ai/pricing
+    source_label: AIVA pricing
+    source_id: aiva-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  open_source_or_local:
+    value: AIVA is a hosted commercial music-generation product, not an open-source local model workflow.
+    source: https://www.aiva.ai/
+    source_label: AIVA official site
+    source_id: aiva-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  enterprise_controls:
+    value: Teams should check licensing and terms before using AIVA-generated music in commercial client or media workflows.
+    source: https://www.aiva.ai/legal/terms
+    source_label: AIVA terms
+    source_id: aiva-terms
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  watch_out_for:
+    value: AIVA is stronger for instrumental composition than vocal/song-generator workflows; compare it with Suno, Udio, and
+      Stable Audio by intended output rights and editability.
+    source: https://www.aiva.ai/help
+    source_label: AIVA help
+    source_id: aiva-help
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
 tags: [ai-music, music-generation, orchestral, cinematic, classical, midi, composition, film-scoring]
 seo_title: "AIVA: Features, Pricing & Review (April 2026)"
 meta_description: >-
@@ -51,10 +100,16 @@ price_history:
   - date: 2026-04-15
     plan: "Pro"
     price: "$33/mo"
+    source: "https://www.aiva.ai/pricing"
+    source_label: "Source"
+    source_id: aiva-pricing
     note: "Monthly Pro tier verified against aiva.ai/pricing. Annual effective rate ~$16/mo."
   - date: 2026-04-15
     plan: "Standard"
     price: "$15/mo"
+    source: "https://www.aiva.ai/pricing"
+    source_label: "Source"
+    source_id: aiva-pricing
     note: "Standard tier verified. Annual effective rate ~$11/mo."
 ---
 

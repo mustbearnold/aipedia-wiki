@@ -33,17 +33,24 @@ facts:
     value: "AI pull-request, IDE, and CLI review with agentic chat and Pro+ planning actions"
     source: "https://docs.coderabbit.ai/management/plans"
     source_label: "CodeRabbit plans docs"
+    source_id: coderabbit-best-paid-tier
     verified_at: 2026-04-28
+    confidence: high
   best_paid_tier:
     value: "Pro ($24/user/month annual) for review; Pro+ ($48/user/month annual) for planning, unit tests, and higher limits"
     source: "https://docs.coderabbit.ai/management/plans"
     source_label: "CodeRabbit plans docs"
+    source_id: coderabbit-best-paid-tier
     verified_at: 2026-04-28
+    next_review_at: 2026-06-03
+    confidence: high
   best_for:
     value: "Teams that want a first-pass AI reviewer on pull requests before human review"
     source: "https://www.coderabbit.ai/pricing"
     source_label: "CodeRabbit pricing"
+    source_id: coderabbit-best-for
     verified_at: 2026-04-28
+    confidence: high
 tags: [ai-coding, code-review, pull-requests, github, gitlab, cli, vscode, sast, linters]
 best_for:
   - teams overloaded by pull request review volume
@@ -60,14 +67,23 @@ price_history:
   - date: 2026-04-28
     plan: "Free"
     price: "$0/user/mo"
+    source: "https://www.coderabbit.ai/pricing"
+    source_label: "Source"
+    source_id: coderabbit-best-for
     note: "PR summarization, unlimited public/private repositories, limited review access via IDE/CLI"
   - date: 2026-04-28
     plan: "Pro"
     price: "$24/user/mo annual or $30 month-to-month"
+    source: "https://www.coderabbit.ai/pricing"
+    source_label: "Source"
+    source_id: coderabbit-best-for
     note: "Verified in CodeRabbit docs"
   - date: 2026-04-28
     plan: "Pro+"
     price: "$48/user/mo annual or $60 month-to-month"
+    source: "https://www.coderabbit.ai/pricing"
+    source_label: "Source"
+    source_id: coderabbit-best-for
     note: "Verified in CodeRabbit docs"
 ---
 

@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "Free 10k req/mo / paid tiers scale with volume"
 status: active
 launched: 2023-03
-last_updated: 2026-05-03
-last_verified: 2026-05-03
+last_updated: 2026-05-04
+last_verified: 2026-05-04
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -25,6 +25,57 @@ scores:
   value: 9
   moat: 7
   longevity: 8
+facts:
+  best_for:
+    value: Best for teams that need LLM observability, gateway controls, logging, cost tracking, and debugging across AI app
+      traffic.
+    source: https://www.helicone.ai/
+    source_label: Helicone official site
+    source_id: helicone-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  pricing_anchor:
+    value: Helicone pricing spans free/paid and enterprise packaging; verify event volumes, retention, gateway features, team
+      seats, and self-host/open-source tradeoffs.
+    source: https://www.helicone.ai/pricing
+    source_label: Helicone pricing
+    source_id: helicone-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  open_source_or_local:
+    value: Helicone is open source, so buyers can evaluate repository activity, deployment model, and self-hosting fit as part
+      of procurement.
+    source: https://github.com/Helicone/helicone
+    source_label: Helicone GitHub repository
+    source_id: helicone-repository
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  integration_surface:
+    value: Docs are the source of truth for SDK/proxy setup, provider support, logging, prompt tracing, experiments, and gateway
+      configuration.
+    source: https://docs.helicone.ai/
+    source_label: Helicone docs
+    source_id: helicone-docs
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  watch_out_for:
+    value: Observability tools sit in sensitive prompt/data paths; review PII handling, retention, self-host options, sampling,
+      and incident response before routing production traffic.
+    source: https://docs.helicone.ai/
+    source_label: Helicone docs
+    source_id: helicone-docs
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
 tags: [llm-observability, monitoring, ai-gateway, open-source, yc, dev-tools, langgraph]
 seo_title: "Helicone: Features, Pricing & Review (April 2026)"
 meta_description: "Helicone is an open-source LLM observability platform. Free 10k requests/mo. One-line integration. AI Gateway adds load balancing, caching, failover. Integrates with LangGraph, LiteLLM, Vercel AI SDK."

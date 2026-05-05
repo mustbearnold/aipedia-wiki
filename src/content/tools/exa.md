@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: "$0-$449/month"
 status: active
 launched: 2022-03
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-04
+last_verified: 2026-05-04
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -26,6 +26,43 @@ scores:
   value: 8
   moat: 7
   longevity: 8
+facts:
+  api_surface:
+    value: "Exa is a neural/web search API for AI applications, with search, content retrieval, crawling-style workflows, and answer-building primitives."
+    source: "https://exa.ai/docs/reference/search-api-guide"
+    source_label: "Exa Search API guide"
+    source_id: exa-docs
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: medium
+    confidence: high
+  pricing_anchor:
+    value: "Free developer access plus paid usage tiers are published on Exa pricing; teams should model per-request costs against expected agent/search volume."
+    source: "https://exa.ai/pricing"
+    source_label: "Exa pricing"
+    source_id: exa-official
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
+  best_for:
+    value: "Developers building AI agents, RAG, research tools, and web-aware products that need search/retrieval APIs rather than a consumer search UI."
+    source: "https://exa.ai/"
+    source_label: "Exa homepage"
+    source_id: exa-official
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: medium
+    confidence: high
+  watch_out_for:
+    value: "Not a finished search app for end users; value depends on integration quality, ranking fit, and retrieval cost control inside your product."
+    source: "https://exa.ai/docs/reference/search-api-guide"
+    source_label: "Exa Search API guide"
+    source_id: exa-docs
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: medium
+    confidence: high
 tags: [search-api, semantic-search, llm-tools, developer-tools, rag, web-search, embeddings, websets]
 seo_title: 'Exa AI: Neural Search API Review & Pricing (April 2026)'
 meta_description: >-

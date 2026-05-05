@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0 free / $9.99/mo c.ai+"
 status: active
 launched: 2022-09
-last_updated: 2026-05-03
-last_verified: 2026-05-03
+last_updated: 2026-05-04
+last_verified: 2026-05-04
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -24,6 +24,55 @@ scores:
   value: 9
   moat: 8
   longevity: 7
+facts:
+  best_for:
+    value: Best for consumer character chat, roleplay, and entertainment-oriented AI companions rather than enterprise productivity.
+    source: https://character.ai/
+    source_label: Character.AI official site
+    source_id: character-ai-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  pricing_anchor:
+    value: c.ai+ pricing is subscription-based; verify annual/monthly pricing and premium feature claims on the current subscription
+      page.
+    source: https://character.ai/subscription/plus/pricing
+    source_label: Character.AI c.ai+ pricing
+    source_id: character-ai-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  workflow_surface:
+    value: Character.AI’s core surface is user-created character conversations, not document work, coding, or business automation.
+    source: https://character.ai/about
+    source_label: Character.AI about
+    source_id: character-ai-about
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  model_control:
+    value: Users do not get enterprise-grade model/provider controls; evaluation should focus on conversation quality, safety,
+      privacy, and community features.
+    source: https://support.character.ai/
+    source_label: Character.AI help center
+    source_id: character-ai-support
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  watch_out_for:
+    value: Do not position Character.AI as a ChatGPT or Claude replacement for work; it is strongest for entertainment and persona
+      chat, with subscription value tied to usage experience.
+    source: https://character.ai/
+    source_label: Character.AI official site
+    source_id: character-ai-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
 tags: [ai-chat, roleplay, character, companion, entertainment, creative-writing, community]
 seo_title: "Character AI: Features, Pricing & Review (April 2026)"
 meta_description: "Character AI is the largest AI roleplay platform with 20M+ monthly users. Free tier, c.ai+ at $9.99/mo unlocks priority queue, faster responses, and the Imagine Gallery image generator."

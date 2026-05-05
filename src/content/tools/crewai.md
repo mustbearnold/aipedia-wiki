@@ -11,8 +11,8 @@ pricing_model: open-source
 price_range: "Free (MIT) · Enterprise from $99/mo"
 status: active
 launched: 2023-12
-last_updated: 2026-05-03
-last_verified: 2026-05-03
+last_updated: 2026-05-04
+last_verified: 2026-05-04
 update_frequency: monthly
 seo_title: "CrewAI: Features, Pricing & Review (April 2026)"
 meta_description: "CrewAI 1.14 is the current open-source release. Framework is free under MIT; Enterprise plans start at $99/mo and scale to a $120K/year Ultra tier. Role-based multi-agent orchestration for Python teams."
@@ -28,6 +28,56 @@ scores:
   value: 8
   moat: 6
   longevity: 6
+facts:
+  best_for:
+    value: Best for Python teams prototyping and operating role-based multi-agent workflows with an open-source framework and
+      optional enterprise platform.
+    source: https://www.crewai.com/
+    source_label: CrewAI official site
+    source_id: crewai-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  pricing_anchor:
+    value: CrewAI spans open-source framework use and paid platform/enterprise packaging, so verify current hosted, deployment,
+      observability, and seat terms before procurement.
+    source: https://www.crewai.com/pricing
+    source_label: CrewAI pricing
+    source_id: crewai-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  open_source_or_local:
+    value: The GitHub repository is the proof point for open-source evaluation and should be checked for license, activity,
+      and framework maturity.
+    source: https://github.com/crewAIInc/crewAI
+    source_label: CrewAI GitHub repository
+    source_id: crewai-repository
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  runtime_architecture:
+    value: Docs should drive implementation assumptions around crews, agents, tasks, tools, flows, memory, and deployment.
+    source: https://docs.crewai.com/
+    source_label: CrewAI documentation
+    source_id: crewai-docs
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  watch_out_for:
+    value: CrewAI is not a turnkey business outcome by itself; teams still need tool permissions, evals, observability, error
+      handling, cost controls, and human review.
+    source: https://docs.crewai.com/
+    source_label: CrewAI documentation
+    source_id: crewai-docs
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
 tags: [ai-agents, multi-agent, open-source, python, orchestration, framework, developer]
 best_for:
   - Python developers prototyping multi-agent workflows

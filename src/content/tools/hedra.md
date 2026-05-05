@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$60/month"
 status: active
 launched: 2024-05
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-04
+last_verified: 2026-05-04
 update_frequency: monthly
 seo_title: "Hedra: Features, Pricing & Review (April 2026)"
 meta_description: "Hedra Character-3 turns one image plus one audio file into a talking, singing, moving character video. Omnia Fast Alpha adds scene control. Free tier (300 credits) through Professional at $60/mo. Real-time avatar streaming at $0.05/minute."
@@ -28,6 +28,56 @@ scores:
   value: 8
   moat: 7
   longevity: 7
+facts:
+  best_for:
+    value: Best for creators and teams generating talking-character and AI video assets for social, ads, and creative production.
+    source: https://www.hedra.com/
+    source_label: Hedra official site
+    source_id: hedra-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  pricing_anchor:
+    value: Hedra pricing includes a free plan and paid packaging; verify credits, generation limits, resolution, commercial
+      terms, and export rules before production use.
+    source: https://www.hedra.com/pricing
+    source_label: Hedra pricing
+    source_id: hedra-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  workflow_surface:
+    value: Hedra is a creative video-generation product, not a general video editor, meeting recorder, or developer inference
+      API.
+    source: https://www.hedra.com/
+    source_label: Hedra official site
+    source_id: hedra-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  model_control:
+    value: Evaluate the live product for character consistency, voice/lip-sync quality, prompt controllability, aspect ratios,
+      and asset rights.
+    source: https://www.hedra.com/
+    source_label: Hedra official site
+    source_id: hedra-official
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  watch_out_for:
+    value: For brand work, test artifacts, identity/IP policy, watermarking, moderation, and repeatability before building a
+      content pipeline around Hedra.
+    source: https://www.hedra.com/pricing
+    source_label: Hedra pricing
+    source_id: hedra-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
 tags: [ai-video, talking-head, avatar, lip-sync, character-animation, hedra, character-3, omnia, studio-2]
 best_for:
   - talking-head avatars from a single portrait
@@ -46,10 +96,16 @@ price_history:
   - date: 2026-04-15
     plan: "Professional"
     price: "$60/mo"
+    source: "https://www.hedra.com/pricing"
+    source_label: "Source"
+    source_id: hedra-pricing
     note: "Verified unchanged. 12,000 credits."
   - date: 2026-01-20
     plan: "Creator"
     price: "$24/mo"
+    source: "https://www.hedra.com/pricing"
+    source_label: "Source"
+    source_id: hedra-pricing
     note: "Voice cloning and watermark-free output confirmed on Creator tier."
 ---
 

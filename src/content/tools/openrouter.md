@@ -25,6 +25,33 @@ scores:
   value: 8
   moat: 7
   longevity: 8
+facts:
+  best_for:
+    value: "Unified LLM API for hundreds of models, with OpenAI-compatible requests, provider routing, fallbacks, app attribution, and per-model token pricing. Best for AI infrastructure, retrieval, vector search, hosting, or developer platforms."
+    source: "https://openrouter.ai/pricing"
+    source_label: "OpenRouter pricing"
+    source_id: openrouter-official
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: medium
+  pricing_anchor:
+    value: "Pricing should be checked on the current OpenRouter source before purchase; AIpedia has not promoted this page to a full Tier 1 pricing profile yet"
+    source: "https://openrouter.ai/pricing"
+    source_label: "OpenRouter pricing"
+    source_id: openrouter-official
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
+  watch_out_for:
+    value: "Non-Tier-1 canonical profile: verify current pricing, usage limits, data policy, and integration details before procurement"
+    source: "https://openrouter.ai/pricing"
+    source_label: "OpenRouter pricing"
+    source_id: openrouter-official
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
 tags: [llm-api, model-router, openai-compatible, fallback, agents, inference, developers]
 seo_title: "OpenRouter Review: Unified LLM API, Routing & Pricing (April 2026)"
 meta_description: "OpenRouter gives developers one OpenAI-compatible API for hundreds of AI models, with routing, fallbacks, tool calling support, app attribution, and model-level pricing."

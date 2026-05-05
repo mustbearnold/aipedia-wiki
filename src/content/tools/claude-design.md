@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "Bundled with Claude Pro ($20/mo) and up"
 status: beta
 launched: 2026-04
-last_updated: 2026-05-02
-last_verified: 2026-04-29
+last_updated: 2026-05-04
+last_verified: 2026-05-04
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -25,6 +25,57 @@ scores:
   value: 9
   moat: 7
   longevity: 8
+facts:
+  best_for:
+    value: Best for Claude users turning prompts and design-system context into prototypes, design artifacts, and handoff material
+      inside the Claude ecosystem.
+    source: https://claude.ai/design
+    source_label: Claude Design product page
+    source_id: claude-design-official
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  pricing_anchor:
+    value: Treat Claude Design packaging as bundled with Claude plan access until Anthropic publishes a separate SKU; verify
+      on Claude pricing before quoting.
+    source: https://www.anthropic.com/pricing
+    source_label: Claude plans and pricing
+    source_id: anthropic-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  code_handoff:
+    value: The strongest buyer story is prototype-to-build handoff inside the Claude/Claude Code ecosystem rather than a standalone
+      Figma replacement.
+    source: https://support.anthropic.com/en/articles/11145838-using-claude-design
+    source_label: Claude Design support page
+    source_id: claude-design-support
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  workflow_surface:
+    value: Claude Design belongs in design prototyping and creative-production workflows, but production readiness still depends
+      on export quality and engineering review.
+    source: https://claude.ai/design
+    source_label: Claude Design product page
+    source_id: claude-design-official
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  watch_out_for:
+    value: Because Claude Design is new and access can change quickly, avoid hard claims about exports, model versions, or tier
+      availability without rechecking Anthropic and Claude support pages.
+    source: https://www.anthropic.com/pricing
+    source_label: Claude plans and pricing
+    source_id: anthropic-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
 tags: [design, prototyping, prompt-to-prototype, slide-decks, mockups, claude, anthropic, opus-4-7, non-designer, research-preview]
 seo_title: "Claude Design Review: Release Date, Pricing, Figma Comparison and Use Cases"
 meta_description: "Claude Design is Anthropic's prompt-to-prototype tool for mockups, decks, and one-pagers. Compare release date, Claude Pro pricing, codebase-aware design, and Figma alternatives."
@@ -57,6 +108,9 @@ price_history:
   - date: 2026-04-17
     plan: "Launch"
     price: "Bundled in Pro+"
+    source: "https://www.anthropic.com/"
+    source_label: "Source"
+    source_id: claude-design-pricing
     note: "Research preview launched April 17, 2026. No separate subscription; included with Claude Pro, Max, Team, and Enterprise tiers. Figma stock fell ~7% on the news."
 ---
 

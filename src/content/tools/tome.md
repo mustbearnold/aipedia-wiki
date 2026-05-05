@@ -11,8 +11,8 @@ pricing_model: free
 price_range: "Discontinued"
 status: dead
 launched: 2020-01
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-04
+last_verified: 2026-05-04
 update_frequency: quarterly
 affiliate:
   has_program: false
@@ -25,6 +25,39 @@ scores:
   value: 3
   moat: 2
   longevity: 1
+facts:
+  status:
+    value: "The original viral Tome presentation product was discontinued as the founders shifted focus from the 20M-user deck app to a new AI work product."
+    source: "https://venturebeat.com/technology/tomes-founders-ditch-viral-presentation-app-with-20m-users-to-build-ai"
+    source_label: "VentureBeat on Tome discontinuation"
+    source_id: tome-venturebeat-discontinued
+    verified_at: 2026-05-04
+    volatility: low
+    confidence: high
+  pricing_anchor:
+    value: "Discontinued; do not shortlist Tome for a new 2026 presentation workflow."
+    source: "https://venturebeat.com/technology/tomes-founders-ditch-viral-presentation-app-with-20m-users-to-build-ai"
+    source_label: "VentureBeat on Tome discontinuation"
+    source_id: tome-venturebeat-discontinued
+    verified_at: 2026-05-04
+    volatility: low
+    confidence: high
+  best_for:
+    value: "Historical context on AI presentation-app hype and product-market-fit risk, not active procurement."
+    source: "https://venturebeat.com/technology/tomes-founders-ditch-viral-presentation-app-with-20m-users-to-build-ai"
+    source_label: "VentureBeat on Tome discontinuation"
+    source_id: tome-venturebeat-discontinued
+    verified_at: 2026-05-04
+    volatility: low
+    confidence: high
+  watch_out_for:
+    value: "Do not compare Tome as an active alternative to Gamma, Canva, Beautiful.ai, Decktopus, or Presentations.AI unless discussing the discontinued product history."
+    source: "https://venturebeat.com/technology/tomes-founders-ditch-viral-presentation-app-with-20m-users-to-build-ai"
+    source_label: "VentureBeat on Tome discontinuation"
+    source_id: tome-venturebeat-discontinued
+    verified_at: 2026-05-04
+    volatility: low
+    confidence: high
 tags: [presentations, storytelling, narrative, ai-generation, discontinued, shut-down, pivot]
 seo_title: "Tome: Shut Down April 2025. What to Use Instead (April 2026)"
 meta_description: "Tome's AI presentation tool was discontinued April 15, 2025. Founders rebuilt as Lightfield (AI-native CRM). AngelList acquired the brand. Use Gamma, Beautiful.ai, or Pitch instead."

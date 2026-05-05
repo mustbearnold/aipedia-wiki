@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$30-$60/month + Business tier"
 status: active
 launched: 2019-06
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-04
+last_verified: 2026-05-04
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -24,6 +24,52 @@ scores:
   value: 7
   moat: 9
   longevity: 8
+facts:
+  enterprise_voice_stack:
+    value: "Generate voice cloning/TTS, Localize dubbing, Detect deepfake scanning, watermarking, and cloud/on-prem/VPC deployment make Resemble an enterprise voice-authenticity stack rather than a creator-only TTS app."
+    source: "https://www.resemble.ai/"
+    source_label: "Resemble AI homepage"
+    source_id: resemble-ai-official
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: medium
+    confidence: high
+  pricing_anchor:
+    value: "Free testing; Creator $30/mo; Professional $60/mo; Business/enterprise tiers for higher-volume localization, deployment, and compliance workflows."
+    source: "https://www.resemble.ai/pricing/"
+    source_label: "Resemble AI pricing"
+    source_id: resemble-ai-pricing
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
+  api_available:
+    value: "Yes — docs cover API workflows for generated voices and production integration."
+    source: "https://docs.resemble.ai/welcome"
+    source_label: "Resemble AI docs"
+    source_id: resemble-ai-docs
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: medium
+    confidence: high
+  best_for:
+    value: "Compliance-heavy voice cloning, localization, watermarking, and audio-authenticity programs that need enterprise deployment options."
+    source: "https://www.resemble.ai/"
+    source_label: "Resemble AI homepage"
+    source_id: resemble-ai-official
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: medium
+    confidence: high
+  watch_out_for:
+    value: "Solo creators who only need simple voiceover UX may prefer ElevenLabs or Fish Audio; real-time voice agents should verify latency and telephony requirements before standardizing."
+    source: "https://www.resemble.ai/pricing/"
+    source_label: "Resemble AI pricing"
+    source_id: resemble-ai-pricing
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: medium
 tags: [voice-cloning, tts, dubbing, deepfake-detection, ai-voice, api, text-to-speech, localize, detect, watermarking]
 seo_title: "Resemble AI: Features, Pricing & Review (April 2026)"
 meta_description: "Resemble AI ships Generate (voice cloning), Localize (149 languages on Business), and Detect (98% deepfake detection across 40+ languages). Reviewed April 2026."
@@ -44,10 +90,16 @@ price_history:
   - date: 2026-03-01
     plan: "Professional"
     price: "$60/mo"
+    source: "https://www.resemble.ai/pricing/"
+    source_label: "Source"
+    source_id: resemble-ai-pricing
     note: "Consumer tiers restructured; Flex Plan added for Detect"
   - date: 2026-04-15
     plan: "Creator"
     price: "$30/mo"
+    source: "https://www.resemble.ai/pricing/"
+    source_label: "Source"
+    source_id: resemble-ai-pricing
     note: "Verified unchanged"
 ---
 

@@ -28,6 +28,33 @@ scores:
   value: 6
   moat: 7
   longevity: 7
+facts:
+  best_for:
+    value: "Developer-first conversational AI video avatars with real-time perception, turn-taking, and photoreal rendering. Phoenix-4, Raven-1, and Sparrow-1 power sub-600ms face-to-face agents. Best for AI video generation, editing, avatars, or production workflows."
+    source: "https://www.tavus.io/pricing"
+    source_label: "Source"
+    source_id: tavus-pricing
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: medium
+  pricing_anchor:
+    value: "Phoenix-4; Included; Phoenix-4 launched with Gaussian-diffusion rendering, sub-600ms latency"
+    source: "https://www.tavus.io/pricing"
+    source_label: "Source"
+    source_id: tavus-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
+  watch_out_for:
+    value: "Non-Tier-1 canonical profile: verify current pricing, usage limits, data policy, and integration details before procurement"
+    source: "https://www.tavus.io/pricing"
+    source_label: "Source"
+    source_id: tavus-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
 tags: [ai-video, avatar, conversational-ai, real-time, api, developer, cvi, phoenix-4, replica, human-computing]
 best_for:
   - developers building conversational video agents
@@ -44,14 +71,23 @@ price_history:
   - date: 2026-02-18
     plan: "Phoenix-4"
     price: "Included"
+    source: "https://www.tavus.io/pricing"
+    source_label: "Source"
+    source_id: tavus-pricing
     note: "Phoenix-4 launched with Gaussian-diffusion rendering, sub-600ms latency"
   - date: 2026-04-15
     plan: "Starter"
     price: "$59/mo"
+    source: "https://www.tavus.io/pricing"
+    source_label: "Source"
+    source_id: tavus-pricing
     note: "Verified unchanged, plus pay-as-you-go usage"
   - date: 2026-04-15
     plan: "Growth"
     price: "$397/mo"
+    source: "https://www.tavus.io/pricing"
+    source_label: "Source"
+    source_id: tavus-pricing
     note: "Verified unchanged"
 ---
 

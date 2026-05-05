@@ -11,8 +11,8 @@ pricing_model: open-source
 price_range: "Free (open-source)"
 status: active
 launched: 2024-11
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-04
+last_verified: 2026-05-04
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -25,7 +25,67 @@ scores:
   value: 10
   moat: 5
   longevity: 7
+facts:
+  best_for:
+    value: Best for developers experimenting with lightweight open TTS models and local/offline voice synthesis workflows.
+    source: https://huggingface.co/hexgrad/Kokoro-82M
+    source_label: Kokoro model card
+    source_id: kokoro-model
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  pricing_anchor:
+    value: Kokoro is distributed as an open model; costs come from inference hardware/hosting and any downstream service wrapper
+      rather than a vendor SaaS plan.
+    source: https://github.com/hexgrad/kokoro
+    source_label: Kokoro GitHub repository
+    source_id: kokoro-repository
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  open_source_or_local:
+    value: The Hugging Face model card and repository are the authoritative sources for model files, license notes, examples,
+      and project activity.
+    source: https://huggingface.co/hexgrad/Kokoro-82M/blob/main/README.md
+    source_label: Kokoro README
+    source_id: kokoro-readme
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  workflow_surface:
+    value: The Hugging Face Space is useful for quick evaluation, but production usage should verify local inference, license,
+      voices, and latency separately.
+    source: https://huggingface.co/spaces/hexgrad/Kokoro-TTS
+    source_label: Kokoro TTS Hugging Face Space
+    source_id: kokoro-space
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  watch_out_for:
+    value: Before commercial use, review license, voice rights, quality across languages, hallucinated pronunciations, model
+      provenance, and abuse/safety controls.
+    source: https://huggingface.co/hexgrad/Kokoro-82M
+    source_label: Kokoro model card
+    source_id: kokoro-model
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
 tags: [ai-voice, tts, text-to-speech, open-source, local, free, kokoro]
+best_for:
+  - offline and local text-to-speech workflows
+  - high-volume narration where API costs would dominate
+  - privacy-constrained English speech generation
+  - developers embedding a small Apache 2.0 model in apps or devices
+not_best_for:
+  - voice cloning, emotional direction, or real-time voice agents
+  - managed enterprise APIs with uptime guarantees and support
+  - large multilingual voice libraries
+  - nontechnical teams that do not want local model setup
 seo_title: "Kokoro TTS Review 2026: Free Open-Source Text-to-Speech That Sounds Human"
 meta_description: "Kokoro is a free, open-source TTS model with 82M parameters that runs locally on consumer hardware. Quality rivals ElevenLabs. Full review with setup guide."
 author: "aipedia.wiki Editorial"

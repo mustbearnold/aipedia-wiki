@@ -24,6 +24,52 @@ scores:
   value: 8
   moat: 7
   longevity: 8
+facts:
+  best_for:
+    value: "Creators who want playful short-form AI video effects, image-to-video experiments, and quick social clips more than studio-grade production controls."
+    source: "https://pika.art"
+    source_label: "Pika official site"
+    source_id: pika-official
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
+  creative_surface:
+    value: "Pika differentiates around creator-facing effects and easy experimentation, so evaluate its templates and motion style as much as raw model quality."
+    source: "https://pika.art"
+    source_label: "Pika official site"
+    source_id: pika-official
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: medium
+  pricing_anchor:
+    value: "Freemium and paid Pika plans are listed on the pricing page; credit consumption should be tested with realistic generation workflows."
+    source: "https://pika.art/pricing"
+    source_label: "Pika pricing"
+    source_id: pika-pricing
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
+  workflow_surface:
+    value: "Best for ideation and social video drafts. Compare against Kling, Runway, Hailuo, and Veo if you need long-form continuity or strict brand controls."
+    source: "https://pika.art"
+    source_label: "Pika official site"
+    source_id: pika-official
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: medium
+  watch_out_for:
+    value: "Short-video tools can burn credits quickly while chasing usable motion. Validate output consistency, rights, and watermark/export limits before team rollout."
+    source: "https://pika.art/pricing"
+    source_label: "Pika pricing"
+    source_id: pika-pricing
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
 tags: [ai-video, text-to-video, image-to-video, video-generation, creative, short-video, pikaffects, pika-2-5]
 seo_title: 'Pika Labs: Features, Pricing & Review (April 2026)'
 meta_description: >-
@@ -44,10 +90,16 @@ price_history:
   - date: 2024-02-01
     plan: "Basic"
     price: "$10/mo"
+    source: "https://pika.art/pricing"
+    source_label: "Source"
+    source_id: pika-pricing
     note: "Basic plan entry point"
   - date: 2026-04-17
     plan: "Basic"
     price: "$10/mo"
+    source: "https://pika.art/pricing"
+    source_label: "Source"
+    source_id: pika-pricing
     note: "Verified, unchanged"
 ---
 

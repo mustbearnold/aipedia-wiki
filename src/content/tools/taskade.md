@@ -25,6 +25,33 @@ scores:
   value: 9
   moat: 6
   longevity: 7
+facts:
+  best_for:
+    value: "AI-native project workspace combining tasks, docs, mind maps, video chat, and custom AI agents in one real-time collaborative canvas. Best for workflow automation, agentic operations, and business-process automation."
+    source: "https://www.taskade.com"
+    source_label: "Taskade Official Site"
+    source_id: taskade-official
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: medium
+  pricing_anchor:
+    value: "Pro; $8/user/mo (annual); Verified current via taskade.com/pricing"
+    source: "https://www.taskade.com/pricing"
+    source_label: "Source"
+    source_id: taskade-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
+  watch_out_for:
+    value: "Non-Tier-1 canonical profile: verify current pricing, usage limits, data policy, and integration details before procurement"
+    source: "https://www.taskade.com/pricing"
+    source_label: "Source"
+    source_id: taskade-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
 tags: [project-management, ai-agent, collaboration, mind-map, kanban, ai-workspace, templates, real-time]
 best_for:
   - small teams combining tasks, docs, and AI in one tool
@@ -44,10 +71,16 @@ price_history:
   - date: 2026-04-17
     plan: "Pro"
     price: "$8/user/mo (annual)"
+    source: "https://www.taskade.com/pricing"
+    source_label: "Source"
+    source_id: taskade-pricing
     note: "Verified current via taskade.com/pricing"
   - date: 2026-04-17
     plan: "Business"
     price: "$20/user/mo (annual)"
+    source: "https://www.taskade.com/pricing"
+    source_label: "Source"
+    source_id: taskade-pricing
     note: "Verified current"
 ---
 

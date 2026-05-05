@@ -24,6 +24,49 @@ scores:
   value: 9
   moat: 7
   longevity: 9
+facts:
+  best_for:
+    value: "Systematic literature review, paper screening, and structured extraction when a team needs repeatable evidence tables rather than a general chat answer."
+    source: "https://elicit.com/pricing"
+    source_label: "Elicit pricing"
+    source_id: elicit-pricing
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  pricing_anchor:
+    value: "Free entry tier plus paid plans; Pro is listed at $49/month with report and alert limits that should be checked before a review sprint."
+    source: "https://elicit.com/pricing"
+    source_label: "Elicit pricing"
+    source_id: elicit-pricing
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-08-03
+  research_corpus:
+    value: "Elicit positions the product around search and extraction across a large academic paper corpus, with the page copy citing 125M+ papers."
+    source: "https://elicit.com/pricing"
+    source_label: "Elicit pricing"
+    source_id: elicit-pricing
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  systematic_review_workflow:
+    value: "The most defensible workflow is search, screen papers, extract structured fields, then export tables for human review."
+    source: "https://support.elicit.com/en/articles/8670209"
+    source_label: "Elicit plan documentation"
+    source_id: elicit-plan-docs
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  watch_out_for:
+    value: "Do not treat Elicit as a source of truth by itself. Use it to accelerate screening and extraction, then verify study quality, inclusion criteria, and extracted fields manually."
+    source: "https://support.elicit.com/en/articles/8670209"
+    source_label: "Elicit plan documentation"
+    source_id: elicit-plan-docs
+    verified_at: 2026-05-03
+    volatility: high
+    confidence: high
+    next_review_at: 2026-08-03
 tags: [academic-research, literature-review, systematic-review, paper-search, data-extraction, rct, evidence-synthesis]
 seo_title: 'Elicit: Features, Pricing & Review (April 2026)'
 meta_description: >-
@@ -44,10 +87,16 @@ price_history:
   - date: 2026-04-17
     plan: "Pro"
     price: "$49/mo"
+    source: "https://elicit.com/pricing"
+    source_label: "Source"
+    source_id: elicit-pricing
     note: "Verified unchanged. 12 reports/month, 10 concurrent alerts."
   - date: 2026-04-17
     plan: "Plus"
     price: "$12/mo"
+    source: "https://elicit.com/pricing"
+    source_label: "Source"
+    source_id: elicit-pricing
     note: "Verified unchanged. 4 automated reports/month."
 ---
 

@@ -24,6 +24,49 @@ scores:
   value: 8
   moat: 9
   longevity: 10
+facts:
+  best_for:
+    value: "Ahrefs is best for SEO teams that need deep backlink, keyword, competitor, and site-audit data, especially when link intelligence and web-index quality drive the buying decision."
+    source: "https://ahrefs.com/site-explorer"
+    source_label: "Ahrefs Site Explorer"
+    source_id: ahrefs-site-explorer
+    verified_at: 2026-05-03
+    volatility: low
+    confidence: high
+  pricing_anchor:
+    value: "Ahrefs pricing should be evaluated against projects, tracked keywords, users, exports, crawl credits, and any AI/brand-monitoring add-ons rather than headline plan price alone."
+    source: "https://ahrefs.com/pricing"
+    source_label: "Ahrefs pricing"
+    source_id: ahrefs-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: high
+  backlink_surface:
+    value: "Site Explorer is the central Ahrefs workflow for backlink, organic traffic, paid traffic, and competitor research, so comparisons should foreground data depth."
+    source: "https://ahrefs.com/site-explorer"
+    source_label: "Ahrefs Site Explorer"
+    source_id: ahrefs-site-explorer
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
+  ai_visibility:
+    value: "Brand Radar expands Ahrefs into AI-search and brand-visibility monitoring, which matters for modern SEO teams tracking answers beyond classic blue links."
+    source: "https://ahrefs.com/brand-radar"
+    source_label: "Ahrefs Brand Radar"
+    source_id: ahrefs-brand-radar
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: medium
+    confidence: high
+  watch_out_for:
+    value: "Ahrefs can be overkill for writers who only need page-level optimization; it is strongest when the team will use backlink, keyword, audit, and competitive data regularly."
+    source: "https://ahrefs.com/pricing"
+    source_label: "Ahrefs pricing"
+    source_id: ahrefs-pricing
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: high
 tags: [seo, backlinks, keyword-research, site-audit, content-explorer, rank-tracker, brand-radar, ai-content-helper, ai-visibility]
 seo_title: "Ahrefs: Features, Pricing & Review (April 2026)"
 meta_description: "Ahrefs runs the largest backlink index in SEO with Site Explorer, Keywords Explorer, Site Audit, Rank Tracker, and Content Explorer. Plans $29-$1,499/mo. Brand Radar tracks AI visibility across 6 platforms."
@@ -43,10 +86,16 @@ price_history:
   - date: 2026-01-15
     plan: "Starter"
     price: "$29/mo"
+    source: "https://ahrefs.com/pricing"
+    source_label: "Source"
+    source_id: ahrefs-pricing
     note: "Starter tier launched January 2026, cutting entry price 70%."
   - date: 2026-04-15
     plan: "Lite"
     price: "$129/mo"
+    source: "https://ahrefs.com/pricing"
+    source_label: "Source"
+    source_id: ahrefs-pricing
     note: "Verified unchanged. Annual billing is 2 months free."
 ---
 

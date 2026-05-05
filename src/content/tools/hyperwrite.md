@@ -24,6 +24,50 @@ scores:
   value: 6
   moat: 6
   longevity: 6
+facts:
+  best_for:
+    value: "Individuals who want a personal AI writing assistant plus browser-task assistance rather than a team content platform."
+    source: "https://www.hyperwriteai.com"
+    source_label: "HyperWrite official site"
+    source_id: hyperwrite-official
+    verified_at: 2026-05-04
+    volatility: medium
+    confidence: high
+  agent_surface:
+    value: "HyperWrite's Personal Assistant is positioned around acting in the browser and helping with online tasks, which makes permissions and review more important than for a simple text editor."
+    source: "https://www.hyperwriteai.com/personal-assistant"
+    source_label: "HyperWrite Personal Assistant"
+    source_id: hyperwrite-personal-assistant
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
+  pricing_anchor:
+    value: "Freemium writing-assistant product with paid plans listed on the vendor pricing page."
+    source: "https://www.hyperwriteai.com/pricing"
+    source_label: "HyperWrite pricing"
+    source_id: hyperwrite-pricing
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
+  workflow_surface:
+    value: "Most useful for personal drafting, rewriting, email, and browser workflows where the user can supervise outputs directly."
+    source: "https://www.hyperwriteai.com"
+    source_label: "HyperWrite official site"
+    source_id: hyperwrite-official
+    verified_at: 2026-05-04
+    volatility: medium
+    confidence: medium
+  watch_out_for:
+    value: "Browser-agent features should be used cautiously around accounts, forms, private data, and irreversible actions. Keep human review in the loop."
+    source: "https://www.hyperwriteai.com/personal-assistant"
+    source_label: "HyperWrite Personal Assistant"
+    source_id: hyperwrite-personal-assistant
+    verified_at: 2026-05-04
+    next_review_at: 2026-08-04
+    volatility: high
+    confidence: high
 tags: [ai-writing, browser-automation, ai-assistant, chrome-extension, personal-assistant]
 seo_title: "HyperWrite: Features, Pricing & Review (April 2026)"
 meta_description: "HyperWrite pairs an inline writing suite with a Personal Assistant browser agent. Free 15 uses/day; Premium $19.99/mo; Ultra $44.99/mo. Full review for April 2026."

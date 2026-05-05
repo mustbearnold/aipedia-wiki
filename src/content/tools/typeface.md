@@ -28,6 +28,33 @@ scores:
   value: 6
   moat: 7
   longevity: 7
+facts:
+  best_for:
+    value: "Enterprise AI content platform. Arc Agents, Arc Graph, Arc Spaces, and Arc Forge combine into a marketing orchestration engine with brand-grounded text and image generation. Best for writing, editing, content, and communication workflows."
+    source: "https://www.typeface.ai/platform"
+    source_label: "Typeface's own platform page"
+    source_id: typeface-official
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: medium
+  pricing_anchor:
+    value: "Enterprise (contact sales); Custom; No public tier sheet. Contact-sales only. Deal size varies by seat count, brand complexity, and integration scope."
+    source: "https://www.typeface.ai"
+    source_label: "Source"
+    source_id: typeface-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
+  watch_out_for:
+    value: "Non-Tier-1 canonical profile: verify current pricing, usage limits, data policy, and integration details before procurement"
+    source: "https://www.typeface.ai"
+    source_label: "Source"
+    source_id: typeface-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
 tags: [enterprise-content, brand-ai, ai-writing, typeface, content-automation]
 best_for:
   - enterprise marketing teams with strict brand guidelines
@@ -46,6 +73,9 @@ price_history:
   - date: 2026-04-18
     plan: "Enterprise (contact sales)"
     price: "Custom"
+    source: "https://www.typeface.ai"
+    source_label: "Source"
+    source_id: typeface-pricing
     note: "No public tier sheet. Contact-sales only. Deal size varies by seat count, brand complexity, and integration scope."
 ---
 

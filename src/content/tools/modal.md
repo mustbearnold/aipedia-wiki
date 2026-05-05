@@ -8,11 +8,11 @@ secondary_categories: [ai-coding, ai-automation]
 company: Modal Labs
 url: https://modal.com
 pricing_model: freemium
-price_range: Free starter credits; Team $250/mo plus compute; GPU billed per second
+price_range: Starter $0 with $30/mo credits; Team $250/mo plus compute; GPU billed per second
 status: active
 launched: 2021
-last_updated: 2026-04-30
-last_verified: 2026-04-30
+last_updated: 2026-05-05
+last_verified: 2026-05-05
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -25,8 +25,35 @@ scores:
   value: 8
   moat: 8
   longevity: 8
+facts:
+  best_for:
+    value: "Serverless cloud for Python, GPUs, jobs, web endpoints, sandboxes, queues, and AI apps that should scale without managing infrastructure. Best for AI infrastructure, retrieval, vector search, hosting, or developer platforms."
+    source: "https://modal.com/pricing"
+    source_label: "Modal pricing"
+    source_id: modal-official
+    verified_at: 2026-05-05
+    volatility: medium
+    confidence: medium
+  pricing_anchor:
+    value: "Pricing should be checked on the current Modal source before purchase; AIpedia has not promoted this page to a full Tier 1 pricing profile yet"
+    source: "https://modal.com/pricing"
+    source_label: "Modal pricing"
+    source_id: modal-official
+    verified_at: 2026-05-05
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
+  watch_out_for:
+    value: "Non-Tier-1 canonical profile: verify current pricing, usage limits, data policy, and integration details before procurement"
+    source: "https://modal.com/pricing"
+    source_label: "Modal pricing"
+    source_id: modal-official
+    verified_at: 2026-05-05
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
 tags: [serverless, gpu-cloud, python, inference, jobs, web-endpoints, ai-infrastructure]
-seo_title: "Modal Review: Serverless GPU Cloud & Pricing (April 2026)"
+seo_title: "Modal Review: Serverless GPU Cloud & Pricing (2026)"
 meta_description: "Modal is a serverless Python and GPU cloud for AI apps, batch jobs, inference endpoints, queues, and sandboxes, with per-second compute pricing."
 author: aipedia.wiki Editorial
 best_for:
@@ -67,8 +94,9 @@ The useful mental model: write Python, decorate functions, attach CPU/GPU/memory
 | **Core product** | Serverless Python and GPU cloud |
 | **Workloads** | Functions, batch jobs, queues, web endpoints, sandboxes |
 | **GPU pricing** | Per-second billing by GPU class |
-| **Starter** | Free plan with monthly compute credits |
-| **Team** | Paid workspace plan plus compute |
+| **Starter** | Free plan with $30/month compute credits |
+| **Team** | $250/month workspace plan with $100/month compute credits |
+| **Enterprise** | Custom plan with higher concurrency, support, audit logs, SSO, and HIPAA compatibility |
 | **Best fit** | AI apps, pipelines, inference, internal tools |
 | **Alternatives** | RunPod, Lambda Labs, AWS Batch, Kubernetes, [Together AI](/tools/together-ai/) |
 
@@ -89,9 +117,29 @@ The useful mental model: write Python, decorate functions, attach CPU/GPU/memory
 
 ## Pricing
 
-Modal bills compute by actual resource usage. GPU prices are listed per second by GPU type, including options such as T4, L4, A10, L40S, A100, H100, H200, and B200. CPU and memory are billed separately. The Starter plan includes monthly free credits, while Team adds a monthly platform fee plus compute.
+Modal bills compute by actual resource usage. GPU prices are listed per second by GPU type, including options such as T4, L4, A10, L40S, A100, H100, H200, B200, and RTX PRO 6000. CPU, memory, volumes, sandboxes, and notebooks have separate meters. The Starter plan includes $30/month in compute credits, while Team is $250/month plus compute and includes $100/month in compute credits.
 
 This is attractive for bursty jobs. For constant GPU load, compare against reserved instances before committing.
+
+As verified on 2026-05-05, Modal's pricing page also notes regional execution can cost 1.5x to 1.75x base prices and non-preemptible execution can cost 3x base prices. Those multipliers matter for production inference, customer-facing latency, and workloads that cannot tolerate interruption.
+
+## Evaluation checklist
+
+Before committing a production workload to Modal, test:
+
+- Cold start time, image build time, and model load time.
+- Whether the workload is bursty enough to benefit from serverless billing.
+- GPU memory requirements by model and batch size.
+- Queue behavior under peak traffic.
+- Region requirements and whether region multipliers change the economics.
+- Whether non-preemptible execution is required.
+- Logging, alerting, secrets, rollbacks, and cost tags.
+
+## Buyer fit
+
+Modal is strongest for Python-heavy teams that want to ship infrastructure as code without building a platform team. It fits evaluation jobs, embeddings, video and image processing, internal tools, scheduled tasks, custom inference endpoints, and workloads that scale from zero to many containers.
+
+It is weaker for organizations that already have a mature Kubernetes platform, need deep network control, or run steady GPUs around the clock. In those cases, the developer experience may still be excellent, but the cost comparison needs to include reserved capacity and existing infrastructure staff.
 
 ## Failure Modes
 
@@ -100,10 +148,11 @@ This is attractive for bursty jobs. For constant GPU load, compare against reser
 - **Python-first bias.** Great for Python teams, less natural for polyglot app stacks.
 - **Cloud abstraction limits.** If you need low-level network or cluster control, you may hit boundaries.
 - **Cost needs tags and alerts.** Per-second pricing is transparent, but runaway jobs are still runaway jobs.
+- **Pricing multipliers matter.** Region selection and non-preemptible execution can materially change production cost.
 
 ## Methodology
 
-Last verified 2026-04-28 against Modal's pricing and product documentation. Scoring emphasizes developer experience, fit for AI workloads, GPU flexibility, and cost risk.
+Last verified 2026-05-05 against Modal's pricing and product documentation. Scoring emphasizes developer experience, fit for AI workloads, GPU flexibility, and cost risk.
 
 ## FAQ
 

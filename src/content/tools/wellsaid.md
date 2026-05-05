@@ -11,8 +11,8 @@ pricing_model: paid
 price_range: $49-$199/month
 status: active
 launched: 2018
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-04
+last_verified: 2026-05-04
 update_frequency: quarterly
 affiliate:
   has_program: false
@@ -25,6 +25,65 @@ scores:
   value: 6
   moat: 7
   longevity: 7
+facts:
+  best_for:
+    value: Best for enterprise learning, corporate narration, and brand-safe voiceover workflows that need polished voices,
+      controls, and procurement-friendly positioning.
+    source: https://wellsaidlabs.com/enterprise
+    source_label: WellSaid enterprise
+    source_id: wellsaid-enterprise
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  pricing_anchor:
+    value: WellSaid pricing is plan-based for Studio and enterprise-oriented for larger teams; check voice/avatar, project,
+      API, and seat limits before rollout.
+    source: https://wellsaidlabs.com/pricing
+    source_label: WellSaid pricing
+    source_id: wellsaid-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  api_available:
+    value: WellSaid publishes API documentation, so it can be evaluated for product voice integrations as well as studio narration.
+    source: https://docs.wellsaidlabs.com/
+    source_label: WellSaid API docs
+    source_id: wellsaid-docs
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  enterprise_controls:
+    value: The enterprise page is the main source for security, collaboration, and brand-control evaluation.
+    source: https://wellsaidlabs.com/enterprise
+    source_label: WellSaid enterprise
+    source_id: wellsaid-enterprise
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  real_time_voice:
+    value: WellSaid is strongest for generated narration and studio/API voice production; do not assume it is a real-time conversational
+      voice agent without API latency testing.
+    source: https://docs.wellsaidlabs.com/
+    source_label: WellSaid API docs
+    source_id: wellsaid-docs
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  watch_out_for:
+    value: WellSaid is usually a fit decision around enterprise voice quality, rights, approval workflows, and API needs rather
+      than the lowest monthly price.
+    source: https://wellsaidlabs.com/pricing
+    source_label: WellSaid pricing
+    source_id: wellsaid-pricing
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
 tags: [tts, enterprise, e-learning, corporate-narration, scorm, articulate]
 seo_title: "WellSaid Labs: Features, Pricing & Review (April 2026)"
 meta_description: >-

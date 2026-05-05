@@ -26,6 +26,33 @@ scores:
   value: 9
   moat: 6
   longevity: 7
+facts:
+  best_for:
+    value: "Design-focused AI image generator with Playground v3 model, multi-model access, and a canvas editor built for social and marketing workflows. Best for image generation, editing, and visual-production workflows."
+    source: "https://playground.com/design/pricing"
+    source_label: "Source"
+    source_id: playground-ai-pricing
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: medium
+  pricing_anchor:
+    value: "Pro; $15/mo; Price restructured to current tiers."
+    source: "https://playground.com/design/pricing"
+    source_label: "Source"
+    source_id: playground-ai-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
+  watch_out_for:
+    value: "Non-Tier-1 canonical profile: verify current pricing, usage limits, data policy, and integration details before procurement"
+    source: "https://playground.com/design/pricing"
+    source_label: "Source"
+    source_id: playground-ai-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
 tags: [ai-image, image-generation, design-tools, canvas-editor, playground-v3, social-media]
 seo_title: 'Playground AI Review (April 2026): Design-Focused Image Generation'
 meta_description: >-
@@ -49,10 +76,16 @@ price_history:
   - date: 2025-06-01
     plan: "Pro"
     price: "$15/mo"
+    source: "https://playground.com/design/pricing"
+    source_label: "Source"
+    source_id: playground-ai-pricing
     note: "Price restructured to current tiers."
   - date: 2026-04-17
     plan: "Turbo"
     price: "$45/mo"
+    source: "https://playground.com/design/pricing"
+    source_label: "Source"
+    source_id: playground-ai-pricing
     note: "Verified unchanged."
 ---
 

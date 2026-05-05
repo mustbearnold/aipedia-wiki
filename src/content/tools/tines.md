@@ -28,6 +28,33 @@ scores:
   value: 7
   moat: 8
   longevity: 9
+facts:
+  best_for:
+    value: "Workflow automation built for security and IT teams. Audit-trail-grade runs, 30+ native SOC integrations, and native AI agents via Workbench. Best for workflow automation, agentic operations, and business-process automation."
+    source: "https://www.tines.com/pricing/"
+    source_label: "Source"
+    source_id: tines-pricing
+    verified_at: 2026-05-03
+    volatility: medium
+    confidence: medium
+  pricing_anchor:
+    value: "Starter; $500/mo (billed annually); Verified via tines.com/pricing. 1M events/mo, 2,500 AI credits, 5 flows."
+    source: "https://www.tines.com/pricing/"
+    source_label: "Source"
+    source_id: tines-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
+  watch_out_for:
+    value: "Non-Tier-1 canonical profile: verify current pricing, usage limits, data policy, and integration details before procurement"
+    source: "https://www.tines.com/pricing/"
+    source_label: "Source"
+    source_id: tines-pricing
+    verified_at: 2026-05-03
+    next_review_at: 2026-08-03
+    volatility: high
+    confidence: medium
 tags: [security-automation, workflow-automation, no-code, soc-automation, enterprise, tines]
 best_for:
   - security operations (SOC) automation
@@ -45,10 +72,16 @@ price_history:
   - date: 2026-04-18
     plan: "Starter"
     price: "$500/mo (billed annually)"
+    source: "https://www.tines.com/pricing/"
+    source_label: "Source"
+    source_id: tines-pricing
     note: "Verified via tines.com/pricing. 1M events/mo, 2,500 AI credits, 5 flows."
   - date: 2026-04-18
     plan: "Community"
     price: "$0"
+    source: "https://www.tines.com/pricing/"
+    source_label: "Source"
+    source_id: tines-pricing
     note: "Free forever. 1 builder, 3 flows, 25K events/mo, 50 AI credits."
 ---
 

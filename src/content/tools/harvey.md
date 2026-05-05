@@ -11,8 +11,8 @@ pricing_model: enterprise
 price_range: "Contact sales (reported ~$1,000-$1,200 per lawyer/month)"
 status: active
 launched: 2022-07
-last_updated: 2026-04-30
-last_verified: 2026-04-30
+last_updated: 2026-05-04
+last_verified: 2026-05-04
 update_frequency: quarterly
 seo_title: "Harvey AI: Features, Pricing & Review (2026)"
 meta_description: "Harvey is the enterprise AI platform for law firms. Workflows, Vault, Assistant, and Agents ground LLM output on firm documents. Used by majority of AmLaw 100. $11B valuation after March 2026 raise. Pricing is enterprise-only, reported around $1,000-$1,200 per lawyer/month."
@@ -28,6 +28,56 @@ scores:
   value: 6
   moat: 9
   longevity: 9
+facts:
+  best_for:
+    value: Best for law firms and professional-services organizations that need domain-specific AI workflows for legal research,
+      drafting, analysis, and matter work.
+    source: https://www.harvey.ai/
+    source_label: Harvey official site
+    source_id: harvey-official
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  pricing_anchor:
+    value: Harvey is enterprise-sales led; buyers should expect custom pricing tied to firm size, deployment scope, security
+      review, and professional-services workflows.
+    source: https://www.harvey.ai/platform
+    source_label: Harvey platform
+    source_id: harvey-platform
+    verified_at: '2026-05-04'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-08-04'
+  workflow_surface:
+    value: Harvey’s platform is built for legal and professional services rather than generic consumer productivity.
+    source: https://www.harvey.ai/platform
+    source_label: Harvey platform
+    source_id: harvey-platform
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  enterprise_controls:
+    value: Security and confidentiality review is central because Harvey targets sensitive matters and professional-services
+      data.
+    source: https://www.harvey.ai/security
+    source_label: Harvey security
+    source_id: harvey-security
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
+  watch_out_for:
+    value: Adoption should be evaluated by matter-level workflow fit, citation/verification discipline, confidentiality controls,
+      and lawyer review—not just model benchmark claims.
+    source: https://www.harvey.ai/blog
+    source_label: Harvey blog
+    source_id: harvey-blog
+    verified_at: '2026-05-04'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-11-04'
 tags: [legal-ai, law-firms, enterprise, document-drafting, workflows, harvey]
 best_for:
   - contract analysis, due diligence, and M&A document review
@@ -46,14 +96,23 @@ price_history:
   - date: 2026-04-18
     plan: "Enterprise"
     price: "Contact sales"
+    source: "https://harvey.ai"
+    source_label: "Source"
+    source_id: harvey-pricing
     note: "Reported third-party ACV roughly $1,000-$1,200 per lawyer per month; no public list price"
   - date: 2026-03-30
     plan: "Series funding announcement"
     price: "$200M round at $11B valuation"
+    source: "https://harvey.ai"
+    source_label: "Source"
+    source_id: harvey-pricing
     note: "Announced March 30, 2026. See [news writeup](/news/2026-03-30-harvey-200m-at-11b-valuation/) for details."
   - date: 2026-03-25
     plan: "Company valuation"
     price: "$11B"
+    source: "https://harvey.ai"
+    source_label: "Source"
+    source_id: harvey-pricing
     note: "$200M Series raised; total funding now exceeds $1B; ARR hit $190M in January 2026"
 ---
 
