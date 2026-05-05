@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import IndexHero from '../../components/design/IndexHero.astro';
 import OsPageShell from '../../components/os/OsPageShell.astro';
 import BreadcrumbLD from '../../components/seo/BreadcrumbLD.astro';
 import glossaryRaw from '../../content/glossary/index.md?raw';
@@ -126,19 +127,22 @@ const breadcrumbItems = [
       <span aria-current="page">AI Glossary</span>
     </nav>
 
-    <section class="glossary-desk__hero site-index-hero" aria-labelledby="glossary-title">
-      <div class="glossary-desk__intro">
-        <div class="idx-eyebrow glossary-desk__eyebrow">
-          <span class="idx-eyebrow-chip idx-eyebrow-accent">Reference desk</span>
-          <span class="idx-eyebrow-chip"><span class="tabular-nums">{terms.length}</span> terms</span>
-          <span class="idx-eyebrow-trust">Shared language for tools, agents, infrastructure, and business pages.</span>
-        </div>
-        <h1 id="glossary-title" class="glossary-desk__title">AI Glossary</h1>
-        <p class="glossary-desk__lede">
-          Definitions for the model, agent, business, and infrastructure terms used across aipedia.wiki.
-        </p>
-      </div>
-
+    <IndexHero
+      title="AI Glossary"
+      titleId="glossary-title"
+      lead="Definitions for the model, agent, business, and infrastructure terms used across aipedia.wiki."
+      class="glossary-desk__hero"
+      mainClass="glossary-desk__intro"
+      eyebrowClass="glossary-desk__eyebrow"
+      headingClass="glossary-desk__title"
+      leadClass="glossary-desk__lede"
+      eyebrow={[
+        { label: 'Reference desk', tone: 'accent' },
+        { label: 'terms', value: terms.length },
+      ]}
+      trust="Shared language for tools, agents, infrastructure, and business pages."
+    >
+      <Fragment slot="aside">
       <div class="glossary-desk__status ref-hero-card" aria-label="Glossary status">
         <div>
           <span class="glossary-desk__metric">{terms.length}</span>
@@ -153,7 +157,8 @@ const breadcrumbItems = [
           <span class="glossary-desk__label">verified {verifiedDate.slice(0, 4)}</span>
         </div>
       </div>
-    </section>
+      </Fragment>
+    </IndexHero>
 
     <section class="glossary-desk__tools" aria-label="Find a glossary term" data-pagefind-ignore>
       <label class="glossary-desk__search">

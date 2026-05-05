@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ToolCard from '../../components/ToolCard.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
+import IndexHero from '../../components/design/IndexHero.astro';
 import OsPageShell from '../../components/os/OsPageShell.astro';
 import BreadcrumbLD from '../../components/seo/BreadcrumbLD.astro';
 import ItemListLD from '../../components/seo/ItemListLD.astro';
@@ -131,23 +132,19 @@ const categoryEmojiMap: Record<string, string> = {
   >
     <Breadcrumb items={[{ label: 'All Tools' }]} />
 
-  <section class="idx-hero site-index-hero" data-pagefind-ignore>
-    <div class="idx-eyebrow">
-      <span class="idx-eyebrow-chip idx-eyebrow-fresh">
-        <span class="idx-eyebrow-livedot" aria-hidden="true"></span>
-        Updated today
-      </span>
-      <span class="idx-eyebrow-chip idx-eyebrow-accent">Editorial directory</span>
-      <span class="idx-eyebrow-chip"><span class="tabular-nums">{scoredTools.length}</span> tools</span>
-      <span class="idx-eyebrow-trust">Every claim sourced. Zero sponsored placements.</span>
-    </div>
-    <h1 class="idx-headline">
-      Every AI tool <span class="idx-gradient">we have reviewed</span>.
-    </h1>
-    <p class="idx-subhead">
-      All {scoredTools.length} tools sorted by editorial score. Each review covers what the tool does, who it is for, verified pricing, honest strengths and limitations, and clear alternatives.
-    </p>
-  </section>
+  <IndexHero
+    title="Every AI tool"
+    accent="we have reviewed"
+    suffix="."
+    lead={`All ${scoredTools.length} tools sorted by editorial score. Each review covers what the tool does, who it is for, verified pricing, honest strengths and limitations, and clear alternatives.`}
+    class="idx-hero"
+    eyebrow={[
+      { label: 'Updated today', tone: 'fresh', live: true },
+      { label: 'Editorial directory', tone: 'accent' },
+      { label: 'tools', value: scoredTools.length },
+    ]}
+    trust="Every claim sourced. Zero sponsored placements."
+  />
 
   <section class="tools-filter-panel" data-tools-controls data-pagefind-ignore>
     <div class="tools-filter-row tools-filter-row-primary">

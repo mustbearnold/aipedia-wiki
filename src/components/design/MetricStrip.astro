@@ -1,0 +1,47 @@
+---
+interface Metric {
+  label: string;
+  value: string | number;
+  note?: string;
+  href?: string;
+}
+
+interface Props {
+  metrics: Metric[];
+  label?: string;
+  class?: string;
+  reveal?: boolean;
+  revealDelay?: string;
+}
+
+const {
+  metrics,
+  label,
+  class: className = '',
+  reveal = false,
+  revealDelay,
+} = Astro.props;
+
+const columnCount = Math.max(1, Math.min(5, metrics.length));
+const classes = ['ds-metric-strip', className].filter(Boolean).join(' ');
+const revealAttrs = reveal
+  ? { 'data-reveal': true, style: `--ds-metric-count: ${columnCount};${revealDelay ? ` --reveal-delay: ${revealDelay};` : ''}` }
+  : { style: `--ds-metric-count: ${columnCount};` };
+---
+
+<section class={classes} aria-label={label} {...revealAttrs}>
+  {metrics.map((metric) => metric.href ? (
+    <a class="ds-metric" href={metric.href}>
+      <span class="ds-metric-label">{metric.label}</span>
+      <strong class="ds-metric-value tabular-nums">{metric.value}</strong>
+      {metric.note && <span class="ds-metric-note">{metric.note}</span>}
+    </a>
+  ) : (
+    <div class="ds-metric">
+      <span class="ds-metric-label">{metric.label}</span>
+      <strong class="ds-metric-value tabular-nums">{metric.value}</strong>
+      {metric.note && <span class="ds-metric-note">{metric.note}</span>}
+    </div>
+  ))}
+</section>
+

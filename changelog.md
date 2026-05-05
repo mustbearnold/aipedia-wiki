@@ -2,6 +2,12 @@
 
 Search format: each entry starts with `DD-MM-YYYY HH:MM TZ` so changes can be found by day, month, year, and time. Example search keys: `05-05-2026`, `05-2026`, `2026`, `11:29`.
 
+## 05-05-2026 22:40 NZST
+
+- Began Phase 1 of the visual-system plan by adding shared `IndexHero` and `MetricStrip` design primitives for major directory and index surfaces.
+- Migrated the tools, compare, news, guides, search, and glossary index heroes onto the shared pattern so headline scale, lead width, actions, aside panels, and summary metrics follow one visible rhythm.
+- Verified the pass with `npm run build:fast`, `git diff --check`, and desktop/mobile route QA across the migrated pages.
+
 ## 05-05-2026 22:06 NZST
 
 - Added `DESIGN.md` as the project-specific aipedia design doctrine so future UI work has a durable reference-product standard for page archetypes, layout rhythm, trust signals, mobile behavior, and external UI-skill usage.
