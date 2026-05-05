@@ -302,7 +302,7 @@ const decisionPaths = [
       grid-template-columns: minmax(0, 1fr) minmax(240px, 300px);
       gap: clamp(20px, 3vw, 36px);
       align-items: end;
-      padding: clamp(14px, 2vw, 24px) 0 clamp(30px, 4vw, 46px);
+      padding: var(--site-page-top) 0 var(--site-section-gap);
     }
 
     .home-eyebrow {
@@ -612,7 +612,7 @@ const decisionPaths = [
     }
 
     .home-section {
-      padding: 42px 0;
+      padding: var(--site-section-gap) 0;
       border-top: 1px solid var(--home-line);
     }
 
@@ -843,7 +843,6 @@ const decisionPaths = [
 	    @media (max-width: 620px) {
 	      .home-page {
 	        width: 100%;
-	        padding-top: 22px;
 	      }
 
 	      .home-hero h1 {
@@ -857,7 +856,7 @@ const decisionPaths = [
 	      }
 
 	      .home-section {
-	        padding: 34px 0;
+	        padding: var(--site-section-gap) 0;
 	      }
 
 	      .home-search-box,

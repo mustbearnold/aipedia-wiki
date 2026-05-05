@@ -185,8 +185,10 @@ const panelApps = [
       '--os-beam-two-y': 0.78,
     };
 
+    const readScrollY = () => Math.max(0, shell.scrollTop || window.scrollY || document.documentElement.scrollTop || 0);
+
     const setTarget = () => {
-      const scrollY = Math.max(0, window.scrollY || document.documentElement.scrollTop || 0);
+      const scrollY = readScrollY();
       const wallpaper = Math.min(36, scrollY * 0.035);
       const gridY = Math.min(30, scrollY * 0.055);
       const drift = Math.min(18, scrollY * 0.018);
@@ -263,7 +265,79 @@ const panelApps = [
       if (!frame) frame = requestAnimationFrame(tick);
     };
 
-    window.addEventListener('scroll', requestUpdate, { passive: true });
+    const isEditableTarget = (target) => {
+      return target instanceof Element && Boolean(target.closest('input, textarea, select, [contenteditable="true"]'));
+    };
+
+    const hasScrollableAncestor = (target, deltaY) => {
+      let node = target instanceof Element ? target : null;
+      while (node && node !== shell && node !== document.body) {
+        const styles = getComputedStyle(node);
+        const canScrollY = /(auto|scroll|overlay)/.test(styles.overflowY);
+        if (canScrollY && node.scrollHeight > node.clientHeight + 1) {
+          const atTop = node.scrollTop <= 0;
+          const atBottom = node.scrollTop + node.clientHeight >= node.scrollHeight - 1;
+          if ((deltaY < 0 && !atTop) || (deltaY > 0 && !atBottom)) return true;
+        }
+        node = node.parentElement;
+      }
+      return false;
+    };
+
+    const nudgeShellScroll = (nextY) => {
+      const maxY = Math.max(0, shell.scrollHeight - shell.clientHeight);
+      const clamped = Math.max(0, Math.min(maxY, nextY));
+      if (Math.abs(clamped - shell.scrollTop) < 1) return;
+      shell.scrollTop = clamped;
+      requestUpdate();
+    };
+
+    // OS chrome pages scroll inside the shell so the fixed panel and dock stay
+    // stable. Some embedded webviews deliver wheel/key events without moving
+    // that shell, so after native handling gets a frame we nudge only if the
+    // scroll position did not change.
+    window.addEventListener('wheel', (event) => {
+      if (event.defaultPrevented || event.ctrlKey || Math.abs(event.deltaY) <= Math.abs(event.deltaX)) return;
+      if (isEditableTarget(event.target) || hasScrollableAncestor(event.target, event.deltaY)) return;
+
+      const startY = readScrollY();
+      window.requestAnimationFrame(() => {
+        if (Math.abs(readScrollY() - startY) > 1) return;
+        nudgeShellScroll(startY + event.deltaY);
+      });
+    }, { passive: true, capture: true });
+
+    window.addEventListener('keydown', (event) => {
+      if (event.defaultPrevented || event.altKey || event.ctrlKey || event.metaKey) return;
+      if (isEditableTarget(event.target)) return;
+      if (event.target instanceof Element && event.target.closest('a, button, summary, [role="button"]')) return;
+
+      const page = Math.max(280, window.innerHeight * 0.86);
+      const deltas = {
+        PageDown: page,
+        PageUp: -page,
+        ArrowDown: 72,
+        ArrowUp: -72,
+        Home: -Infinity,
+        End: Infinity,
+      };
+      if (!Object.prototype.hasOwnProperty.call(deltas, event.key)) return;
+
+      const startY = readScrollY();
+      window.requestAnimationFrame(() => {
+        if (Math.abs(readScrollY() - startY) > 1) return;
+        const delta = deltas[event.key];
+        if (delta === Infinity) {
+          nudgeShellScroll(shell.scrollHeight);
+        } else if (delta === -Infinity) {
+          nudgeShellScroll(0);
+        } else {
+          nudgeShellScroll(startY + delta);
+        }
+      });
+    }, { passive: true, capture: true });
+
+    shell.addEventListener('scroll', requestUpdate, { passive: true });
     window.addEventListener('resize', requestUpdate, { passive: true });
     reducedMotion?.addEventListener?.('change', (event) => {
       if (event.matches) {

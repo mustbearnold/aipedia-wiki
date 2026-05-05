@@ -229,7 +229,7 @@ const newsItems = sorted.slice(0, 100).map((item) => ({
     appSubtitle={`${sorted.length} stories`}
     command="Read latest AI tool news"
   >
-    <div class="p3-canvas">
+    <div class="p3-canvas site-directory-canvas">
 
     <!-- Breadcrumbs -->
     <nav class="p3-crumbs" aria-label="Breadcrumb" data-reveal>
@@ -239,10 +239,14 @@ const newsItems = sorted.slice(0, 100).map((item) => ({
     </nav>
 
     <!-- =============== HERO =============== -->
-    <header class="p3-newsdesk-hero" data-reveal style="--reveal-delay: 60ms;">
-      <div class="p3-eyebrow">
-        <span class="p3-live-dot" aria-hidden="true"></span>
-        <span>LIVE DESK · verified daily · updated {sorted[0]?.date ?? '—'}</span>
+    <header class="p3-newsdesk-hero site-index-hero" data-reveal style="--reveal-delay: 60ms;">
+      <div class="idx-eyebrow">
+        <span class="idx-eyebrow-chip idx-eyebrow-fresh">
+          <span class="idx-eyebrow-livedot" aria-hidden="true"></span>
+          Live desk
+        </span>
+        <span class="idx-eyebrow-chip">Updated {sorted[0]?.date ?? '—'}</span>
+        <span class="idx-eyebrow-trust">Primary-source linked. Material updates only.</span>
       </div>
       <h1 class="p3-headline p3-headline-wide">
         The AI news <span class="p3-gradient">desk</span>.
@@ -525,7 +529,7 @@ const newsItems = sorted.slice(0, 100).map((item) => ({
   <style>
     /* hero tweaks */
     .p3-newsdesk-hero {
-      padding: 30px 0 26px;
+      padding: var(--site-index-hero-top) 0 var(--site-section-gap);
       max-width: none;
       position: relative;
       isolation: isolate;

@@ -50,7 +50,10 @@ body:has(main .p3-canvas) {
 
   max-width: 1180px;
   margin: 0 auto;
-  padding: 0 4px 80px;
+  padding: 0 0 var(--site-page-bottom);
+}
+.p3-canvas.site-directory-canvas {
+  max-width: none;
 }
 .p3-canvas-narrow { max-width: 900px; }
 .light .p3-canvas {
@@ -90,16 +93,16 @@ body:has(main .p3-canvas) {
   grid-template-columns: 1fr;
   gap: 32px;
   align-items: start;
-  padding: 20px 0 40px;
+  padding: var(--site-page-top) 0 var(--site-section-gap);
 }
 @media (min-width: 640px) {
-  .p3-hero { padding: 36px 0 48px; gap: 40px; }
+  .p3-hero { padding: var(--site-page-top) 0 var(--site-section-gap); gap: 40px; }
 }
 @media (min-width: 1024px) {
   .p3-hero {
     grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
     gap: 36px 56px;
-    padding: 48px 0 36px;
+    padding: var(--site-page-top) 0 var(--site-section-gap);
   }
 }
 .p3-hero-left { min-width: 0; }
