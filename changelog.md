@@ -2,6 +2,13 @@
 
 Search format: each entry starts with `DD-MM-YYYY HH:MM TZ` so changes can be found by day, month, year, and time. Example search keys: `05-05-2026`, `05-2026`, `2026`, `11:29`.
 
+## 05-05-2026 16:44 NZST
+
+- Migrated the tracked project runtime pins from Node 22.12.0 to Node 24.
+- Updated CI to install Node 24 while keeping the Node 24-compatible GitHub Actions versions.
+- Renamed the final production-confidence script from `build:full:node22` to `build:full:node24`.
+- Verified script tests, guards, link/news audits, `build:fast`, and `build:full:node24` under Node 24.
+
 ## 05-05-2026 16:18 NZST
 
 - Fixed the command-surface audit so CI clean checkouts tolerate explicitly ignored local operator scripts.
