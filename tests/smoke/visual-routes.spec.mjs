@@ -390,9 +390,11 @@ test('compare featured cards match homepage panel outline palette', async ({ pag
     };
   });
 
-  expect(cardPaint.borderColor).not.toContain('167, 139, 250');
-  expect(cardPaint.backgroundImage).not.toContain('167, 139, 250');
-  expect(cardPaint.borderColor).toMatch(/249,\s*115,\s*22/);
+  const violetLegacy = /167\D+139\D+250/;
+  expect(cardPaint.borderColor).not.toMatch(violetLegacy);
+  expect(cardPaint.backgroundImage).not.toMatch(violetLegacy);
+  // Chromium may emit comma rgb(249, 115, 22) or space rgb(249 115 22 / a)
+  expect(cardPaint.borderColor).toMatch(/249\D+115\D+22/);
   expect(cardPaint.backgroundImage).toBe('none');
 });
 
