@@ -160,7 +160,6 @@ test.describe('mobile layout', () => {
 test('homepage search shell exposes the main catalog workspaces', async ({ page }) => {
   await page.goto('/');
 
-  await expect(page.locator('[data-os-page-shell]')).toBeVisible();
   await expect(page.locator('[data-home-page]')).toBeVisible();
   await expect(page.locator('[data-home-search]')).toBeVisible();
   await expect(page.locator('.home-tools')).toBeVisible();
@@ -196,17 +195,20 @@ test('homepage primary destination labels are readable', async ({ page }) => {
   expect(clippedLabels).toEqual([]);
 });
 
-test('homepage OS wallpaper keeps warm accents out of decorative beams', async ({ page }) => {
+test('homepage catalog root keeps warm accents out of decorative beams', async ({ page }) => {
   await page.goto('/');
 
-  const wallpaperPaint = await page.locator('.os-page-wallpaper').evaluate((node) => {
+  const homeRoot = page.locator('.home-page');
+  await expect(homeRoot).toBeVisible();
+
+  const rootPaint = await homeRoot.evaluate((node) => {
     const style = getComputedStyle(node);
     return {
       backgroundImage: style.backgroundImage,
     };
   });
 
-  expect(wallpaperPaint.backgroundImage).not.toMatch(/245,\s*158,\s*11|251,\s*146,\s*60|orange|amber/i);
+  expect(rootPaint.backgroundImage).not.toMatch(/245,\s*158,\s*11|251,\s*146,\s*60|orange|amber/i);
 });
 
 test('source styles stay inside the Signal Cyan palette', () => {
@@ -374,7 +376,7 @@ test.describe('Signal Cyan palette', () => {
   }
 });
 
-test('compare featured cards use the cyan catalog palette', async ({ page }) => {
+test('compare featured cards match homepage panel outline palette', async ({ page }) => {
   await page.goto('/compare/');
 
   const featuredCards = page.locator('.compare-featured-grid .compare-card');
@@ -388,9 +390,12 @@ test('compare featured cards use the cyan catalog palette', async ({ page }) => 
     };
   });
 
-  expect(cardPaint.borderColor).not.toContain('167, 139, 250');
-  expect(cardPaint.backgroundImage).not.toContain('167, 139, 250');
-  expect(cardPaint.backgroundImage).toMatch(/34, 211, 238|94, 234, 212/);
+  const violetLegacy = /167\D+139\D+250/;
+  expect(cardPaint.borderColor).not.toMatch(violetLegacy);
+  expect(cardPaint.backgroundImage).not.toMatch(violetLegacy);
+  // Chromium may emit comma rgb(249, 115, 22) or space rgb(249 115 22 / a)
+  expect(cardPaint.borderColor).toMatch(/249\D+115\D+22/);
+  expect(cardPaint.backgroundImage).toBe('none');
 });
 
 test('tool finder is retired in favor of catalog search', async ({ page }) => {

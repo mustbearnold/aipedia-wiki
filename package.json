@@ -6,6 +6,8 @@
     "node": ">=24.0.0"
   },
   "scripts": {
+    "postinstall": "node scripts/playwright-install.mjs",
+    "playwright:install": "node scripts/playwright-install.mjs",
     "predev": "node scripts/guard-content.mjs && node scripts/guard-stale-facts.mjs",
     "prebuild": "node scripts/guard-content.mjs && node scripts/guard-stale-facts.mjs && node scripts/fetch-github-stats.mjs && node scripts/generate-og-news.mjs",
     "dev": "node scripts/copy-content.mjs && astro dev",
