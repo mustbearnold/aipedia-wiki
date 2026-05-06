@@ -27,20 +27,20 @@ for (const tool of activeTools) {
 }
 
 const palette: Record<string, { a: string; b: string }> = {
-  'ai-automation': { a: '#38bdf8', b: '#22d3ee' },
-  'ai-chatbots': { a: '#67e8f9', b: '#5eead4' },
-  'ai-coding': { a: '#38bdf8', b: '#5eead4' },
-  'ai-design': { a: '#67e8f9', b: '#22d3ee' },
-  'ai-image': { a: '#5eead4', b: '#38bdf8' },
-  'ai-music': { a: '#22d3ee', b: '#38bdf8' },
-  'ai-notes': { a: '#67e8f9', b: '#22d3ee' },
-  'ai-presentation': { a: '#38bdf8', b: '#5eead4' },
-  'ai-research': { a: '#67e8f9', b: '#5eead4' },
-  'ai-search': { a: '#67e8f9', b: '#22d3ee' },
-  'ai-seo': { a: '#5eead4', b: '#22d3ee' },
-  'ai-video': { a: '#38bdf8', b: '#38bdf8' },
-  'ai-voice': { a: '#7dd3fc', b: '#5eead4' },
-  'ai-writing': { a: '#67e8f9', b: '#22d3ee' },
+  'ai-automation': { a: '#fb923c', b: '#f97316' },
+  'ai-chatbots': { a: '#fb923c', b: '#fbbf24' },
+  'ai-coding': { a: '#fb923c', b: '#fbbf24' },
+  'ai-design': { a: '#fb923c', b: '#f97316' },
+  'ai-image': { a: '#fbbf24', b: '#fb923c' },
+  'ai-music': { a: '#f97316', b: '#fb923c' },
+  'ai-notes': { a: '#fb923c', b: '#f97316' },
+  'ai-presentation': { a: '#fb923c', b: '#fbbf24' },
+  'ai-research': { a: '#fb923c', b: '#fbbf24' },
+  'ai-search': { a: '#fb923c', b: '#f97316' },
+  'ai-seo': { a: '#fbbf24', b: '#f97316' },
+  'ai-video': { a: '#fb923c', b: '#fb923c' },
+  'ai-voice': { a: '#fb923c', b: '#fbbf24' },
+  'ai-writing': { a: '#fb923c', b: '#f97316' },
 };
 
 const categories = allCategories
@@ -52,8 +52,8 @@ const categories = allCategories
       label: category.data.title,
       count,
       avg: count > 0 ? Math.round(((categoryScoreSums[slug] ?? 0) / count) * 10) / 10 : 0,
-      colorA: palette[slug]?.a ?? '#22d3ee',
-      colorB: palette[slug]?.b ?? '#5eead4',
+      colorA: palette[slug]?.a ?? '#f97316',
+      colorB: palette[slug]?.b ?? '#fbbf24',
     };
   })
   .sort((a, b) => b.count - a.count);
@@ -142,7 +142,7 @@ const data = {
   }
 
   function hexToRgb(hex) {
-    const clean = String(hex || '#22d3ee').replace('#', '');
+    const clean = String(hex || '#f97316').replace('#', '');
     const n = parseInt(clean.length === 3 ? clean.split('').map((c) => c + c).join('') : clean, 16);
     return [(n >> 16) & 255, (n >> 8) & 255, n & 255];
   }
@@ -181,8 +181,8 @@ const data = {
         lane,
         phase: rand() * Math.PI * 2,
         pulse: rand() * Math.PI * 2,
-        colorA: category.colorA || '#22d3ee',
-        colorB: category.colorB || '#5eead4',
+        colorA: category.colorA || '#f97316',
+        colorB: category.colorB || '#fbbf24',
         weight,
       });
     }
@@ -193,7 +193,7 @@ const data = {
         y: 0.18 + rand() * 0.68,
         speed: 0.0007 + rand() * 0.00055,
         offset: rand(),
-        color: category.colorB || '#5eead4',
+        color: category.colorB || '#fbbf24',
         length: 0.08 + rand() * 0.12,
       };
     });
@@ -213,8 +213,8 @@ const data = {
         y3: clamp(y + (rand() - 0.5) * 0.16, 0.06, 0.92),
         offset: rand(),
         speed: 0.00009 + rand() * 0.00008,
-        colorA: category.colorA || '#22d3ee',
-        colorB: category.colorB || '#5eead4',
+        colorA: category.colorA || '#f97316',
+        colorB: category.colorB || '#fbbf24',
         width: 0.7 + rand() * 0.8,
       };
     });
@@ -238,8 +238,8 @@ const data = {
     const cy = state.height * (home ? 0.18 : 0.28) + state.pointerY * 10;
 
     const glow = ctx.createRadialGradient(cx, cy, 0, cx, cy, Math.max(state.width, state.height) * 0.62);
-    glow.addColorStop(0, home ? 'rgba(34, 211, 238, 0.105)' : 'rgba(34, 211, 238, 0.052)');
-    glow.addColorStop(0.34, home ? 'rgba(94, 234, 212, 0.045)' : 'rgba(94, 234, 212, 0.026)');
+    glow.addColorStop(0, home ? 'rgba(249, 115, 22, 0.105)' : 'rgba(249, 115, 22, 0.052)');
+    glow.addColorStop(0.34, home ? 'rgba(253, 186, 116, 0.045)' : 'rgba(253, 186, 116, 0.026)');
     glow.addColorStop(1, 'rgba(5, 6, 13, 0)');
     ctx.fillStyle = glow;
     ctx.fillRect(0, 0, state.width, state.height);
@@ -401,9 +401,9 @@ const data = {
     ctx.translate(x, y);
     ctx.rotate(angle);
     const sweep = ctx.createLinearGradient(0, 0, radius, 0);
-    sweep.addColorStop(0, 'rgba(94, 234, 212, 0.16)');
-    sweep.addColorStop(0.55, 'rgba(34, 211, 238, 0.055)');
-    sweep.addColorStop(1, 'rgba(34, 211, 238, 0)');
+    sweep.addColorStop(0, 'rgba(253, 186, 116, 0.16)');
+    sweep.addColorStop(0.55, 'rgba(249, 115, 22, 0.055)');
+    sweep.addColorStop(1, 'rgba(249, 115, 22, 0)');
     ctx.fillStyle = sweep;
     ctx.beginPath();
     ctx.moveTo(0, 0);
@@ -412,7 +412,7 @@ const data = {
     ctx.fill();
     ctx.restore();
 
-    ctx.strokeStyle = home ? 'rgba(94, 234, 212, 0.055)' : 'rgba(94, 234, 212, 0.03)';
+    ctx.strokeStyle = home ? 'rgba(253, 186, 116, 0.055)' : 'rgba(253, 186, 116, 0.03)';
     ctx.lineWidth = 1;
     for (let i = 1; i <= 3; i++) {
       ctx.beginPath();

@@ -1,11 +1,10 @@
 ---
 /**
- * /categories/ index. Browse all AI tool categories. Redesigned
- * April 23, 2026 into the .t2-canvas system.
+ * /categories/ index. Browse all AI tool categories. Uses .t2-canvas.
+ * Mobile layout tightened May 2026 (scroll chips, safe-area, tap targets).
  */
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import CategoryIcon from '../../components/CategoryIcon.astro';
-import OsPageShell from '../../components/os/OsPageShell.astro';
 import BreadcrumbLD from '../../components/seo/BreadcrumbLD.astro';
 import CollectionPageLD from '../../components/seo/CollectionPageLD.astro';
 import { getCollection } from 'astro:content';
@@ -60,7 +59,7 @@ const sorted = allCategories
   .sort((a, b) => b.toolCount - a.toolCount);
 
 const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
-const categoriesDescription = `Browse all ${allCategories.length} AI tool categories: coding assistants, writing tools, image generators, video tools, voice synthesis, automation, and more. ${activeTools.length} active tools reviewed.`;
+const categoriesDescription = `Browse all ${allCategories.length} AI tool categories: coding assistants, writing tools, image generators, video tools, voice synthesis, automation, and more. ${activeTools.length} active tools reviewed. Updated May 2026.`;
 const categoryItems = sorted.map((category) => ({
   name: category.title,
   url: new URL(`/categories/${category.slug}/`, siteBase).href,
@@ -69,9 +68,8 @@ const categoryItems = sorted.map((category) => ({
 ---
 
 <BaseLayout
-  title="Explore AI Tool Categories, aipedia.wiki"
+  title="AI Tool Categories · May 2026 · aipedia.wiki"
   description={categoriesDescription}
-  chrome="os"
 >
   <BreadcrumbLD items={[
     { name: 'Home', url: new URL('/', siteBase).href },
@@ -84,12 +82,7 @@ const categoryItems = sorted.map((category) => ({
     items={categoryItems}
     itemType="CollectionPage"
   />
-  <OsPageShell
-    activeApp="packages"
-    appTitle="Tool categories"
-    appSubtitle={`${allCategories.length} categories`}
-    command="Browse tool categories"
-  >
+  <div class="categories-page" data-home-page>
     <div class="t2-canvas">
     <nav class="t2-breadcrumb" aria-label="Breadcrumb">
       <a href="/">Home</a>
@@ -108,7 +101,7 @@ const categoryItems = sorted.map((category) => ({
         Explore every <span class="idx-gradient">AI category</span>.
       </h1>
       <p class="idx-subhead">
-        {activeTools.length} active tools across {allCategories.length} categories. Click a category to see top picks, category leaders, and editorial comparison tables.
+        {activeTools.length} active tools across {allCategories.length} categories. Each tile opens a ranked list with top picks and comparisons. Updated May 2026.
       </p>
     </section>
 
@@ -141,5 +134,146 @@ const categoryItems = sorted.map((category) => ({
       ))}
     </section>
     </div>
-  </OsPageShell>
+  </div>
+
+  <!-- Match homepage featured tool cards: src/pages/index.astro `.home-tool` + `--home-*` tokens (home-page-tokens.css). -->
+  <style is:global>
+    .categories-page[data-home-page] .t2-cat-index-card {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      padding: 13px;
+      border-radius: 12px;
+      border: 1px solid var(--home-card-outline);
+      background: var(--home-panel);
+      color: var(--home-on-card);
+      text-decoration: none;
+      position: relative;
+      isolation: auto;
+      overflow: visible;
+      box-shadow: none;
+      transform: none;
+      transition:
+        border-color var(--motion-fast, 160ms) var(--motion-ease, cubic-bezier(0.16, 1, 0.3, 1)),
+        background var(--motion-fast, 160ms) var(--motion-ease, cubic-bezier(0.16, 1, 0.3, 1));
+      -webkit-backdrop-filter: blur(12px) saturate(140%);
+      backdrop-filter: blur(12px) saturate(140%);
+    }
+
+    .categories-page[data-home-page] .t2-cat-index-card::before,
+    .categories-page[data-home-page] .t2-cat-index-card::after {
+      display: none;
+    }
+
+    @media (hover: hover) {
+      .categories-page[data-home-page] .t2-cat-index-card:hover {
+        border-color: var(--home-card-outline-hover);
+        background: var(--home-panel-strong);
+        transform: none;
+        box-shadow: none;
+      }
+
+      .categories-page[data-home-page] .t2-cat-index-card:hover .t2-cat-index-title {
+        color: var(--home-on-card);
+      }
+
+      .categories-page[data-home-page] .t2-cat-index-card:hover .t2-cat-index-arrow {
+        color: var(--home-accent);
+        opacity: 0.92;
+        transform: none;
+      }
+
+      .categories-page[data-home-page] .t2-cat-index-card:hover .t2-cat-index-icon {
+        transform: none;
+      }
+
+      .categories-page[data-home-page] .t2-cat-index-card:hover .t2-cat-index-top-tool {
+        color: var(--home-muted);
+      }
+    }
+
+    @media (hover: none) {
+      .categories-page[data-home-page] .t2-cat-index-card:active {
+        border-color: var(--home-card-outline-hover);
+        background: var(--home-panel-strong);
+      }
+    }
+
+    .categories-page[data-home-page] .t2-cat-index-card:focus-visible {
+      outline: none;
+      border-color: var(--home-card-outline-hover);
+      background: var(--home-panel-strong);
+      box-shadow: 0 0 0 2px rgba(249, 115, 22, 0.42);
+    }
+
+    .categories-page[data-home-page] .t2-cat-index-title {
+      color: var(--home-on-card);
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .categories-page[data-home-page] .t2-cat-index-meta {
+      color: var(--home-on-card-muted);
+    }
+
+    .categories-page[data-home-page] .t2-cat-index-meta strong {
+      color: var(--home-on-card);
+    }
+
+    .categories-page[data-home-page] .t2-cat-index-desc {
+      color: var(--home-muted);
+    }
+
+    .categories-page[data-home-page] .t2-cat-index-arrow {
+      color: var(--home-muted);
+      opacity: 0.85;
+    }
+
+    .categories-page[data-home-page] .t2-cat-index-icon.cat-icon {
+      --cat-size: 42px;
+      --cat-glyph: 22px;
+      width: 42px;
+      height: 42px;
+      border-radius: 11px;
+      background: transparent;
+      box-shadow: none;
+      border: 1px solid var(--home-card-outline);
+      color: var(--home-accent);
+    }
+
+    .categories-page[data-home-page] .t2-cat-index-top {
+      border-top: 1px solid var(--home-line);
+      color: var(--home-on-card-muted);
+    }
+
+    .categories-page[data-home-page] .t2-cat-index-top-label {
+      color: var(--home-accent);
+    }
+
+    .categories-page[data-home-page] .t2-cat-index-top-tool {
+      color: var(--home-muted);
+    }
+
+    .categories-page[data-home-page] .t2-cat-index-top-score {
+      color: var(--home-on-card);
+    }
+
+    .categories-page[data-home-page] .t2-cat-index-top-score-slash {
+      color: var(--home-on-card-muted);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .categories-page[data-home-page] .t2-cat-index-card {
+        -webkit-backdrop-filter: none;
+        backdrop-filter: none;
+      }
+    }
+
+    @media (max-width: 639px) {
+      .categories-page[data-home-page] .t2-cat-index-card {
+        padding: 13px;
+        gap: 10px;
+      }
+    }
+  </style>
 </BaseLayout>

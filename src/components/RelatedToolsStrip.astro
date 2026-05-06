@@ -53,27 +53,23 @@ const resolved: ResolvedTool[] = slugs
 ---
 
 {resolved.length > 0 && (
-  <aside class="not-prose mb-6 rounded-xl border border-[rgba(34, 211, 238,0.28)] bg-gradient-to-br from-[rgba(34, 211, 238,0.08)] via-[rgba(56,189,248,0.04)] to-transparent p-4">
-    <div class="text-[10px] font-semibold uppercase tracking-wider text-[var(--accent-primary)] mb-2">
-      Tools in this story
-    </div>
-    <div class="flex gap-2 flex-wrap">
+  <aside class="related-tools-strip not-prose mb-6 home-surface-card p-4">
+    <div class="related-tools-strip-label">Tools in this story</div>
+    <div class="related-tools-strip-row">
       {resolved.map((t) => (
         <a
           href={`/tools/${t.slug}/`}
-          class="flex items-center gap-2 rounded-lg border border-[var(--border)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] hover:border-[rgba(34, 211, 238,0.45)] px-3 py-2 no-underline transition-colors min-w-[180px] sm:min-w-[220px]"
+          class="home-surface-card related-tools-strip-card"
         >
           <ToolLogo slug={t.slug} title={t.title} size={28} />
-          <div class="flex-1 min-w-0">
-            <div class="text-[13px] font-semibold text-[var(--text-primary)] truncate">
-              {t.title}
-            </div>
-            <div class="flex items-center gap-2 text-[11px] text-[var(--text-muted)]">
+          <div class="related-tools-strip-main">
+            <div class="related-tools-strip-title">{t.title}</div>
+            <div class="related-tools-strip-meta">
               {typeof t.score === 'number' && (
-                <span class="text-[var(--accent-primary)] font-semibold tabular-nums">{t.score}/10</span>
+                <span class="related-tools-strip-score tabular-nums">{t.score}/10</span>
               )}
               {t.price_range && (
-                <span class="truncate" title={t.price_range}>{t.price_range}</span>
+                <span class="related-tools-strip-price" title={t.price_range}>{t.price_range}</span>
               )}
             </div>
           </div>
@@ -82,3 +78,74 @@ const resolved: ResolvedTool[] = slugs
     </div>
   </aside>
 )}
+
+<style>
+  .related-tools-strip-label {
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--home-accent);
+    margin-bottom: 10px;
+  }
+
+  .related-tools-strip-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .related-tools-strip-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    min-width: 180px;
+    flex: 1 1 200px;
+    max-width: 320px;
+    text-decoration: none;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: 640px) {
+    .related-tools-strip-card {
+      min-width: 220px;
+    }
+  }
+
+  .related-tools-strip-main {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .related-tools-strip-title {
+    font-size: 13px;
+    font-weight: 780;
+    line-height: 1.25;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .related-tools-strip-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 2px;
+    font-size: 11px;
+    color: var(--home-on-card-muted);
+  }
+
+  .related-tools-strip-score {
+    color: var(--home-accent);
+    font-weight: 800;
+    flex-shrink: 0;
+  }
+
+  .related-tools-strip-price {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    min-width: 0;
+  }
+</style>

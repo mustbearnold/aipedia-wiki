@@ -1,0 +1,217 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import { getCollection } from 'astro:content';
+
+const tools = await getCollection('tools');
+const activeTools = tools.filter(
+  (t) => !['dead', 'retired', 'acquired'].includes(String(t.data.status ?? 'active'))
+);
+const categories = await getCollection('categories');
+const comparisons = await getCollection('comparisons');
+const news = await getCollection('news');
+const trends = await getCollection('trends');
+const guides = await getCollection('use-cases');
+const workflows = await getCollection('workflows');
+const reports = await getCollection('reports');
+const dead = await getCollection('dead');
+const glossary = await getCollection('glossary');
+const companies = await getCollection('companies');
+
+type Hub = { href: string; title: string; description: string; meta: string };
+
+const browse: Hub[] = [
+  {
+    href: '/tools/',
+    title: 'All tools',
+    description: 'Directory of reviewed AI tools with scores and pricing.',
+    meta: `${activeTools.length} active reviews`,
+  },
+  {
+    href: '/categories/',
+    title: 'Categories',
+    description: 'Coding, image, voice, automation, and every modality we track.',
+    meta: `${categories.length} category hubs`,
+  },
+  {
+    href: '/compare/',
+    title: 'Comparisons',
+    description: 'Head-to-head guides when two tools compete for the same job.',
+    meta: `${comparisons.length} comparisons`,
+  },
+  {
+    href: '/news/',
+    title: 'Daily news',
+    description: 'Ships, pricing moves, and shutdowns with source links.',
+    meta: `${news.length} news items`,
+  },
+  {
+    href: '/trends/',
+    title: 'Trend analysis',
+    description: 'Editorial reports on how the AI tools market is shifting.',
+    meta: `${trends.length} trend pieces`,
+  },
+];
+
+const more: Hub[] = [
+  {
+    href: '/guides/',
+    title: 'Use cases',
+    description: 'Best-of guides and role-based stacks.',
+    meta: `${guides.length} guides`,
+  },
+  {
+    href: '/stack-builder/',
+    title: 'Tool Set Builder',
+    description: 'Pick a role and budget, then get a sourced starter stack.',
+    meta: 'Interactive',
+  },
+  {
+    href: '/workflows/',
+    title: 'Workflows',
+    description: 'Production patterns with concrete steps.',
+    meta: `${workflows.length} workflows`,
+  },
+  {
+    href: '/reports/',
+    title: 'Monthly reports',
+    description: 'Rolling digests across categories and scores.',
+    meta: `${reports.length} issues`,
+  },
+  {
+    href: '/dead/',
+    title: 'Dead tools',
+    description: 'Discontinued products kept on record so readers do not chase ghosts.',
+    meta: `${dead.length} archived`,
+  },
+  {
+    href: '/glossary/',
+    title: 'Glossary',
+    description: 'Terms that show up across tools, APIs, and benchmarks.',
+    meta: `${glossary.length} entries`,
+  },
+  {
+    href: '/companies/',
+    title: 'Companies',
+    description: 'Vendor profiles aligned with tools we review.',
+    meta: `${companies.length} profiles`,
+  },
+];
+---
+
+<BaseLayout
+  title="Explore aipedia.wiki — Site Map · May 2026"
+  description="Hub for every main section of aipedia.wiki: tools, categories, comparisons, news, trends, use cases, workflows, reports, and archives."
+>
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <Breadcrumb items={[{ label: 'Explore' }]} />
+
+    <div class="explore-page-root">
+      <section class="idx-hero mb-10" data-pagefind-ignore>
+        <div class="idx-eyebrow">
+          <span class="idx-eyebrow-chip idx-eyebrow-accent">Site hub</span>
+          <span class="idx-eyebrow-chip">Main sections</span>
+          <span class="idx-eyebrow-trust">One jump to every primary route.</span>
+        </div>
+        <h1 class="idx-headline">
+          <span class="idx-gradient">Explore</span> the wiki.
+        </h1>
+        <p class="idx-subhead">
+          Tools, categories, comparisons, daily news, and longer analysis. Builders, workflows, reports, glossary, vendors, plus the discontinued archive.
+        </p>
+      </section>
+
+      <h2 class="explore-hub-section-title">Browse and decide</h2>
+      <section class="explore-hub-grid mb-12" aria-label="Browse and decide">
+        {browse.map((item) => (
+          <a
+            href={item.href}
+            class="home-surface-card group block explore-hub-card touch-manipulation no-underline"
+            data-explore-card
+          >
+            <h3 class="explore-hub-card-title">{item.title}</h3>
+            <p class="explore-hub-card-desc">{item.description}</p>
+            <p class="explore-hub-card-meta">{item.meta}</p>
+          </a>
+        ))}
+      </section>
+
+      <h2 class="explore-hub-section-title">Guides, builders, archives</h2>
+      <section class="explore-hub-grid mb-16" aria-label="Guides, builders, and archives">
+        {more.map((item) => (
+          <a
+            href={item.href}
+            class="home-surface-card group block explore-hub-card touch-manipulation no-underline"
+            data-explore-card
+          >
+            <h3 class="explore-hub-card-title">{item.title}</h3>
+            <p class="explore-hub-card-desc">{item.description}</p>
+            <p class="explore-hub-card-meta">{item.meta}</p>
+          </a>
+        ))}
+      </section>
+    </div>
+  </div>
+
+  <style>
+    .explore-hub-section-title {
+      margin: 0 0 12px;
+      font-size: 11px;
+      font-weight: 850;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--home-on-card-muted);
+    }
+
+    .explore-hub-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+
+    @media (min-width: 640px) {
+      .explore-hub-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (min-width: 900px) {
+      .explore-hub-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    .explore-page-root .explore-hub-card {
+      padding: 13px;
+    }
+
+    .explore-page-root .explore-hub-card-title {
+      margin: 0 0 8px;
+      font-size: 15px;
+      font-weight: 800;
+      line-height: 1.35;
+      color: var(--home-on-card);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      transition: color var(--motion-fast, 160ms) var(--motion-ease, cubic-bezier(0.16, 1, 0.3, 1));
+    }
+
+    .explore-page-root a.home-surface-card:hover .explore-hub-card-title,
+    .explore-page-root a.home-surface-card:focus-visible .explore-hub-card-title {
+      color: var(--home-accent);
+    }
+
+    .explore-page-root .explore-hub-card-desc {
+      margin: 0 0 8px;
+      font-size: 13px;
+      line-height: 1.5;
+      color: var(--home-on-card-muted);
+    }
+
+    .explore-page-root .explore-hub-card-meta {
+      margin: 0;
+      font-size: 12px;
+      color: var(--home-dim);
+    }
+  </style>
+</BaseLayout>

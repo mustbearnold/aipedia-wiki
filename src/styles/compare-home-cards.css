@@ -1,0 +1,542 @@
+/**
+ * Compare directory (/compare/) and comparison detail pages (/compare/[slug]/):
+ * card chrome matches homepage `.home-tool` plus `home-page-tokens.css`
+ * (ancestors need `data-home-page`).
+ */
+
+/* =====================================================================
+ * Directory: `.compare-directory-page[data-home-page]`
+ * ===================================================================== */
+
+.compare-directory-page[data-home-page] .t2-compare-card {
+  gap: 12px;
+  padding: 13px;
+  border-radius: 12px;
+  border: 1px solid var(--home-card-outline);
+  background: var(--home-panel);
+  color: var(--home-on-card);
+  text-decoration: none;
+  -webkit-backdrop-filter: blur(12px) saturate(140%);
+  backdrop-filter: blur(12px) saturate(140%);
+  transition:
+    border-color var(--motion-fast, 160ms) var(--motion-ease, cubic-bezier(0.16, 1, 0.3, 1)),
+    background var(--motion-fast, 160ms) var(--motion-ease, cubic-bezier(0.16, 1, 0.3, 1));
+}
+
+.compare-directory-page[data-home-page] .t2-compare-card-featured {
+  padding: 13px;
+  border-radius: 12px;
+  border: 1px solid var(--home-card-outline);
+  background: var(--home-panel);
+}
+
+.compare-directory-page[data-home-page] .compare-card-premium::before {
+  display: none;
+}
+
+.compare-directory-page[data-home-page] .compare-featured-grid,
+.compare-directory-page[data-home-page] .t2-compare-grid-dense {
+  gap: 12px;
+}
+
+.compare-directory-page[data-home-page] .compare-card-compact {
+  padding: 13px;
+}
+
+@media (hover: hover) {
+  .compare-directory-page[data-home-page] .t2-compare-card:hover,
+  .compare-directory-page[data-home-page] .compare-card-premium:hover {
+    transform: none;
+    box-shadow: none;
+    border-color: var(--home-card-outline-hover);
+    background: var(--home-panel-strong);
+  }
+
+  .compare-directory-page[data-home-page] .t2-compare-card:hover .t2-compare-card-title,
+  .compare-directory-page[data-home-page] .compare-card-premium:hover .t2-compare-card-title {
+    color: var(--home-on-card);
+  }
+
+  .compare-directory-page[data-home-page] .t2-compare-card:hover .t2-compare-card-arrow,
+  .compare-directory-page[data-home-page] .compare-card-premium:hover .t2-compare-card-arrow {
+    color: var(--home-accent);
+    transform: none;
+  }
+
+  .compare-directory-page[data-home-page] .compare-card-premium:hover .t2-compare-card-arrow {
+    color: var(--home-accent);
+  }
+}
+
+@media (hover: none) {
+  .compare-directory-page[data-home-page] .t2-compare-card:active {
+    border-color: var(--home-card-outline-hover);
+    background: var(--home-panel-strong);
+  }
+}
+
+.compare-directory-page[data-home-page] .t2-compare-card-title {
+  font-size: 15px;
+  font-weight: 750;
+  color: var(--home-on-card);
+}
+
+.compare-directory-page[data-home-page] .t2-compare-card-vs {
+  color: var(--home-on-card-muted);
+}
+
+.compare-directory-page[data-home-page] .t2-compare-card-scores {
+  color: var(--home-on-card-muted);
+}
+
+.compare-directory-page[data-home-page] .t2-compare-card-scores span:first-child,
+.compare-directory-page[data-home-page] .t2-compare-card-scores span:last-child {
+  color: var(--home-on-card-muted);
+  opacity: 1;
+}
+
+.compare-directory-page[data-home-page] .t2-compare-card-scores span[aria-hidden='true'] {
+  color: var(--home-dim);
+  opacity: 0.85;
+}
+
+.compare-directory-page[data-home-page] .t2-compare-card-arrow {
+  color: var(--home-muted);
+}
+
+.compare-directory-page[data-home-page] .compare-logo-pair {
+  border: 1px solid var(--home-card-outline);
+  background: transparent;
+}
+
+.compare-directory-page[data-home-page] .compare-card-kicker span:first-child {
+  color: var(--home-dim);
+}
+
+.compare-directory-page[data-home-page] .compare-card-kicker span:last-child {
+  color: var(--home-accent);
+}
+
+.compare-directory-page[data-home-page] .compare-filter-premium {
+  border: 1px solid var(--home-hero-search-border);
+  background: var(--home-hero-search-bg);
+  box-shadow: var(--home-hero-search-shadow);
+}
+
+.compare-directory-page[data-home-page] .compare-filter-premium .compare-filter-label {
+  color: var(--home-muted);
+}
+
+.compare-directory-page[data-home-page] .compare-filter-premium .t2-compare-filter-input {
+  border-radius: 12px;
+  border: 1px solid var(--home-card-outline);
+  background: var(--home-input-bg);
+  color: var(--home-text);
+}
+
+.light .compare-directory-page[data-home-page] .compare-filter-premium .compare-filter-label {
+  color: var(--home-muted);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .compare-directory-page[data-home-page] .t2-compare-card {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+
+  .compare-directory-page[data-home-page] .compare-card-premium {
+    transform: none;
+    transition: none;
+  }
+}
+
+/* =====================================================================
+ * Detail: `.comparison-detail-page`
+ * ===================================================================== */
+
+.comparison-detail-page .t2-title {
+  color: var(--home-heading);
+}
+
+.comparison-detail-page .t2-breadcrumb a {
+  color: var(--home-muted);
+}
+
+.comparison-detail-page .t2-breadcrumb a:hover {
+  color: var(--home-accent);
+}
+
+.comparison-detail-page .t2-cmp-hero-meta,
+.comparison-detail-page .t2-meta-dot {
+  color: var(--home-muted);
+}
+
+.comparison-detail-page .t2-cmp-hero-author {
+  color: var(--home-on-card-muted);
+}
+
+.comparison-detail-page .t2-vs-banner {
+  margin: 20px 0 28px;
+  padding: 24px 20px;
+  border-radius: 12px;
+  border: 1px solid var(--home-card-outline);
+  background: var(--home-panel);
+  -webkit-backdrop-filter: blur(12px) saturate(140%);
+  backdrop-filter: blur(12px) saturate(140%);
+  box-shadow: none;
+}
+
+.comparison-detail-page .t2-vs-banner::before {
+  display: none;
+}
+
+.comparison-detail-page .t2-vs-logo {
+  background: var(--home-panel-strong);
+  border-color: var(--home-card-outline);
+}
+
+@media (hover: hover) {
+  .comparison-detail-page .t2-vs-logo:hover {
+    transform: none;
+    border-color: var(--home-card-outline-hover);
+    box-shadow: none;
+  }
+}
+
+.comparison-detail-page .t2-vs-name {
+  color: var(--home-heading);
+}
+
+.comparison-detail-page .t2-vs-score {
+  color: var(--home-on-card);
+}
+
+.comparison-detail-page .t2-vs-score-slash {
+  color: var(--home-on-card-muted);
+}
+
+.comparison-detail-page .t2-vs-divider {
+  border-color: var(--home-card-outline);
+  background: var(--home-chip-bg);
+}
+
+.comparison-detail-page .t2-cmp-cards {
+  gap: 12px;
+  margin-bottom: 36px;
+}
+
+.comparison-detail-page .t2-cmp-card {
+  padding: 13px;
+  border-radius: 12px;
+  border: 1px solid var(--home-card-outline);
+  background: var(--home-panel);
+  color: var(--home-on-card);
+  gap: 12px;
+  -webkit-backdrop-filter: blur(12px) saturate(140%);
+  backdrop-filter: blur(12px) saturate(140%);
+  transition:
+    border-color var(--motion-fast, 160ms) var(--motion-ease, cubic-bezier(0.16, 1, 0.3, 1)),
+    background var(--motion-fast, 160ms) var(--motion-ease, cubic-bezier(0.16, 1, 0.3, 1));
+}
+
+.comparison-detail-page .t2-cmp-card-winner {
+  border-color: var(--home-card-outline-hover);
+  background: var(--home-panel-strong);
+}
+
+.comparison-detail-page .t2-cmp-card-badge {
+  color: var(--home-accent);
+}
+
+.comparison-detail-page .t2-cmp-card-title {
+  font-size: 15px;
+  font-weight: 750;
+  color: var(--home-on-card);
+}
+
+.comparison-detail-page .t2-cmp-card-title:hover {
+  color: var(--home-accent);
+}
+
+.comparison-detail-page .t2-cmp-card-score {
+  color: var(--home-accent);
+}
+
+.comparison-detail-page .t2-cmp-card-score-slash {
+  color: var(--home-on-card-muted);
+}
+
+.comparison-detail-page .t2-cmp-card-price {
+  color: var(--home-muted);
+}
+
+.comparison-detail-page .t2-cmp-card-cta.t2-cta-primary {
+  border-radius: 10px;
+  border: none;
+  font-weight: 800;
+  background: var(--home-accent-solid);
+  color: var(--home-inverse);
+}
+
+.comparison-detail-page .t2-cmp-card-cta.t2-cta-primary:hover {
+  opacity: 0.94;
+}
+
+@media (hover: hover) {
+  .comparison-detail-page .t2-cmp-card:not(.t2-cmp-card-winner):hover {
+    border-color: var(--home-card-outline-hover);
+    background: var(--home-panel-strong);
+  }
+}
+
+.comparison-detail-page .t2-cmp-winner-chip {
+  color: var(--home-accent);
+  background: rgba(249, 115, 22, 0.1);
+  border-color: rgba(249, 115, 22, 0.28);
+}
+
+.comparison-detail-page .t2-cmp-brief-panel {
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid var(--home-card-outline);
+  background: var(--home-panel);
+  -webkit-backdrop-filter: blur(12px) saturate(140%);
+  backdrop-filter: blur(12px) saturate(140%);
+}
+
+.comparison-detail-page .t2-cmp-brief-panel::before {
+  display: none;
+}
+
+.light .comparison-detail-page .t2-cmp-brief-panel {
+  background: var(--home-panel);
+}
+
+.comparison-detail-page .t2-cmp-brief-kicker {
+  color: var(--home-accent);
+}
+
+.comparison-detail-page .t2-cmp-brief h2 {
+  color: var(--home-heading);
+}
+
+.comparison-detail-page .t2-cmp-brief p {
+  color: var(--home-muted);
+}
+
+.comparison-detail-page .t2-cmp-brief-link {
+  color: var(--home-accent);
+}
+
+.comparison-detail-page .t2-cmp-brief-link:hover {
+  color: var(--home-accent);
+  opacity: 0.92;
+}
+
+.comparison-detail-page .t2-cmp-axis-tools {
+  color: var(--home-on-card-muted);
+}
+
+.comparison-detail-page .t2-cmp-axis-score {
+  color: var(--home-muted);
+}
+
+.comparison-detail-page .t2-cmp-axis-score.is-leading {
+  color: var(--home-on-card);
+}
+
+.comparison-detail-page .t2-cmp-axis-mid span {
+  color: var(--home-muted);
+}
+
+.comparison-detail-page .t2-cmp-news-list a {
+  color: var(--home-muted);
+}
+
+.comparison-detail-page .t2-cmp-news-list a:hover {
+  color: var(--home-on-card);
+}
+
+.comparison-detail-page .t2-cmp-news-date {
+  color: var(--home-accent);
+}
+
+.comparison-detail-page .t2-cmp-toc-compared {
+  border-top-color: var(--home-line);
+}
+
+.comparison-detail-page .t2-cmp-toc-compared a {
+  color: var(--home-muted);
+}
+
+.comparison-detail-page .t2-cmp-toc-compared a:hover {
+  color: var(--home-accent);
+}
+
+/* Canonical facts table (ComparisonFactTable): global so View Transitions + all comparisons keep `--home-*`. */
+.comparison-detail-page section.t2-facts {
+  margin: 1.25rem 0 2rem;
+  padding: 13px;
+  border: 1px solid var(--home-card-outline);
+  border-radius: 12px;
+  background: var(--home-panel);
+  box-shadow: none;
+  color: var(--home-on-card);
+  -webkit-backdrop-filter: blur(12px) saturate(140%);
+  backdrop-filter: blur(12px) saturate(140%);
+  transition:
+    border-color var(--motion-fast, 160ms) var(--motion-ease, cubic-bezier(0.16, 1, 0.3, 1)),
+    background var(--motion-fast, 160ms) var(--motion-ease, cubic-bezier(0.16, 1, 0.3, 1));
+}
+
+.comparison-detail-page .t2-facts-header {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: 1rem;
+  align-items: end;
+  margin-bottom: 13px;
+}
+
+.comparison-detail-page .t2-facts-kicker {
+  margin: 0 0 9px;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--home-accent);
+}
+
+.comparison-detail-page .t2-facts h2 {
+  margin: 0;
+  font-size: clamp(1.35rem, 2.8vw, 2rem);
+  line-height: 1.06;
+  color: var(--home-heading);
+}
+
+.comparison-detail-page .t2-facts-header > p {
+  margin: 0;
+  max-width: 52rem;
+  color: var(--home-muted);
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.comparison-detail-page .t2-facts-table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--home-line);
+  border-radius: 14px;
+  background: var(--home-inner-panel);
+}
+
+.comparison-detail-page .t2-facts-table {
+  width: 100%;
+  min-width: 720px;
+  border-collapse: collapse;
+  color: var(--home-on-card);
+}
+
+.comparison-detail-page .t2-facts-table th,
+.comparison-detail-page .t2-facts-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--home-line);
+  text-align: left;
+  vertical-align: top;
+}
+
+.comparison-detail-page .t2-facts-table tr:last-child th,
+.comparison-detail-page .t2-facts-table tr:last-child td {
+  border-bottom: 0;
+}
+
+.comparison-detail-page .t2-facts-table thead th {
+  background: var(--home-panel-strong);
+  color: var(--home-dim);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.comparison-detail-page .t2-facts-table tbody th {
+  width: 12rem;
+  color: var(--home-muted);
+  font-size: 14px;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+}
+
+.comparison-detail-page .t2-facts-tool {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--home-on-card);
+  text-decoration: none;
+}
+
+.comparison-detail-page .t2-facts-tool:hover {
+  color: var(--home-accent);
+}
+
+.comparison-detail-page .t2-fact-value {
+  display: inline-block;
+  font-weight: 800;
+  color: var(--home-on-card);
+  text-decoration-color: rgba(249, 115, 22, 0.45);
+  text-underline-offset: 0.15em;
+}
+
+.comparison-detail-page a.t2-fact-value:hover {
+  color: var(--home-accent);
+}
+
+.comparison-detail-page .t2-fact-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+  color: var(--home-on-card-muted);
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+.comparison-detail-page .t2-fact-meta span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.35rem;
+  padding: 2px 8px;
+  border: 1px solid var(--home-card-outline);
+  border-radius: 999px;
+  background: var(--home-chip-bg);
+}
+
+.comparison-detail-page .t2-fact-empty {
+  color: var(--home-dim);
+}
+
+@media (max-width: 760px) {
+  .comparison-detail-page .t2-facts-header {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  .comparison-detail-page .t2-facts-table th,
+  .comparison-detail-page .t2-facts-table td {
+    padding: 10px 11px;
+  }
+}
+
+html.light .comparison-detail-page .t2-cmp-winner-chip {
+  color: var(--home-accent);
+  background: rgba(249, 115, 22, 0.1);
+  border-color: rgba(249, 115, 22, 0.24);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .comparison-detail-page .t2-vs-banner,
+  .comparison-detail-page .t2-cmp-card,
+  .comparison-detail-page .t2-cmp-brief-panel,
+  .comparison-detail-page section.t2-facts {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+}

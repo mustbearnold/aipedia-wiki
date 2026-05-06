@@ -81,20 +81,21 @@ function newsDate(value: unknown): string {
   badge={badge}
   ogImage={`/og/news/${slug}.png`}
   citations={sources}
+  homeSurfaceCards
 >
   {entry.data.hero ? (
-    <figure class="not-prose mb-6 -mx-4 sm:mx-0">
+    <figure class="not-prose home-surface-card mb-6 -mx-4 sm:mx-0 overflow-hidden p-0">
       <img
         src={entry.data.hero.url}
         alt={entry.data.hero.alt}
         loading="eager"
         decoding="async"
-        class="w-full max-h-[420px] object-cover rounded-none sm:rounded-xl border-y sm:border border-[var(--border)]"
+        class="w-full max-h-[420px] object-cover block"
       />
       {entry.data.hero.credit && (
-        <figcaption class="text-[11px] text-[var(--text-muted)] mt-2 px-4 sm:px-0">
+        <figcaption class="text-[11px] text-[var(--home-muted)] mt-2 px-4 sm:px-3 pb-3">
           {entry.data.hero.credit_url ? (
-            <a href={entry.data.hero.credit_url} target="_blank" rel="noopener" class="text-[var(--text-muted)] hover:text-[var(--accent-primary)] underline decoration-dotted">
+            <a href={entry.data.hero.credit_url} target="_blank" rel="noopener" class="text-[var(--home-muted)] hover:text-[var(--home-accent)] underline decoration-dotted">
               {entry.data.hero.credit}
             </a>
           ) : entry.data.hero.credit}
@@ -102,7 +103,7 @@ function newsDate(value: unknown): string {
       )}
     </figure>
   ) : (
-    <figure class="not-prose mb-6">
+    <figure class="not-prose home-surface-card mb-6 overflow-hidden p-0">
       <img
         src={`/og/news/thumbs/${slug}.webp`}
         alt={entry.data.title}
@@ -110,7 +111,17 @@ function newsDate(value: unknown): string {
         decoding="async"
         width="960"
         height="504"
-        class="w-full h-auto rounded-xl border border-[var(--border)] shadow-[0_10px_40px_rgba(0,0,0,0.45)]"
+        class="news-default-og-thumb news-default-og-thumb--dark w-full h-auto block"
+      />
+      <img
+        src={`/og/news/thumbs/light/${slug}.webp`}
+        alt=""
+        loading="eager"
+        decoding="async"
+        width="960"
+        height="504"
+        aria-hidden="true"
+        class="news-default-og-thumb news-default-og-thumb--light w-full h-auto block"
       />
     </figure>
   )}
@@ -132,26 +143,26 @@ function newsDate(value: unknown): string {
   />
   <Content />
   {sources.length > 0 && (
-    <section class="sources-callout not-prose mt-8 rounded-xl border border-[var(--border)] bg-[var(--bg-card)] p-5" aria-labelledby="sources">
+    <section class="sources-callout not-prose home-surface-card mt-8 p-5" aria-labelledby="sources">
       <div class="flex flex-wrap items-center justify-between gap-3">
         <div>
-          <h2 id="sources" class="m-0 text-base font-semibold text-[var(--text-primary)]">Sources</h2>
-          <p class="mt-1 text-xs text-[var(--text-muted)]">
+          <h2 id="sources" class="m-0 text-base font-semibold text-[var(--home-on-card)]">Sources</h2>
+          <p class="mt-1 text-xs text-[var(--home-on-card-muted)]">
             Primary and corroborating references used for this news item.
           </p>
         </div>
-        <span class="rounded-full border border-[var(--border)] px-3 py-1 text-xs text-[var(--text-muted)]">
+        <span class="rounded-full border border-[var(--home-card-outline)] px-3 py-1 text-xs text-[var(--home-on-card-muted)]">
           {sources.length} cited source{sources.length === 1 ? '' : 's'}
         </span>
       </div>
-      <ol class="mt-4 space-y-2 pl-5 text-sm text-[var(--text-secondary)]">
+      <ol class="mt-4 space-y-2 pl-5 text-sm text-[var(--home-muted)]">
         {sources.map((source) => (
           <li>
             <a
               href={source.url}
               target="_blank"
               rel="noopener noreferrer"
-              class="text-[var(--accent-primary)] underline decoration-dotted underline-offset-4 hover:decoration-solid"
+              class="text-[var(--home-accent)] underline decoration-dotted underline-offset-4 hover:decoration-solid"
               data-source-preview
               data-source-title={sourceLabel(source)}
               data-source-host={sourceHost(source)}

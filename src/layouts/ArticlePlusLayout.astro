@@ -5,7 +5,6 @@
  * April 23, 2026 into .t2-canvas.
  */
 import BaseLayout from './BaseLayout.astro';
-import OsPageShell from '../components/os/OsPageShell.astro';
 import '../styles/t2-canvas.css';
 import BreadcrumbLD from '../components/seo/BreadcrumbLD.astro';
 import ArticleLD from '../components/seo/ArticleLD.astro';
@@ -29,6 +28,8 @@ interface Props {
   datePublished?: string;
   ogImage?: string;
   citations?: Array<{ url: string; title?: string }>;
+  /** When true, uses homepage frosted card surfaces (--home-*) for this article. */
+  homeSurfaceCards?: boolean;
 }
 
 const {
@@ -40,6 +41,7 @@ const {
   datePublished,
   ogImage,
   citations = [],
+  homeSurfaceCards = false,
 } = Astro.props;
 
 const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
@@ -89,18 +91,6 @@ const verifiedIsFresh = verifiedIsValid && verifiedDaysSince <= 14;
 const verifiedIsRecent = verifiedIsValid && verifiedDaysSince > 14 && verifiedDaysSince <= 90;
 
 const tocHeadings = (headings ?? []).filter((h) => h.depth === 2).map((h) => ({ slug: h.slug, text: h.text }));
-const sectionKey = (articleSection ?? '').toLowerCase();
-const osActiveApp = sectionKey.includes('news') ? 'news' : 'manual';
-const osAppTitle = sectionKey.includes('news')
-  ? 'News article'
-  : sectionKey.includes('trend')
-    ? 'Trend guide'
-    : sectionKey.includes('workflow')
-      ? 'Workflow guide'
-      : sectionKey.includes('report')
-        ? 'Editorial report'
-        : 'Article';
-const osCommand = `Read ${title}`;
 ---
 
 <BaseLayout
@@ -120,7 +110,6 @@ const osCommand = `Read ${title}`;
     return isNaN(d.getTime()) ? String(lastVerified) : d.toISOString();
   })()}
   articleSection={articleSection}
-  chrome="os"
 >
   {breadcrumbLdItems && <BreadcrumbLD items={breadcrumbLdItems} />}
   <ArticleLD
@@ -135,14 +124,8 @@ const osCommand = `Read ${title}`;
     citations={citations}
   />
 
-  <OsPageShell
-    activeApp={osActiveApp}
-    appTitle={osAppTitle}
-    appSubtitle={articleSection ?? articleType}
-    command={osCommand}
-    density="article"
-  >
-  <div class="t2-canvas">
+  
+  <div class:list={['t2-canvas', homeSurfaceCards && 'news-article-shell']}>
     {breadcrumbs && (
       <nav class="t2-breadcrumb" aria-label="Breadcrumb">
         <a href="/">Home</a>
@@ -214,7 +197,7 @@ const osCommand = `Read ${title}`;
       </article>
 
       {tocHeadings.length > 0 && (
-        <aside class="t2-toc" aria-label="On this page">
+        <aside class:list={['t2-toc', homeSurfaceCards && 'home-surface-card']} aria-label="On this page">
           <div class="t2-toc-label">On this page</div>
           <ol class="t2-toc-list">
             {tocHeadings.map((h) => (
@@ -225,5 +208,4 @@ const osCommand = `Read ${title}`;
       )}
     </div>
   </div>
-  </OsPageShell>
 </BaseLayout>

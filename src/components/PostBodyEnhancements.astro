@@ -47,7 +47,7 @@ const rel = isAffiliate ? 'sponsored noopener' : 'noopener';
       head.className = 'flex items-center gap-2 mb-3';
       const icon = document.createElement('span');
       icon.className =
-        'inline-flex items-center justify-center w-5 h-5 rounded-md text-[10px] font-bold text-[var(--accent-primary)] bg-[rgba(34, 211, 238,0.15)] border border-[rgba(34, 211, 238,0.25)]';
+        'inline-flex items-center justify-center w-5 h-5 rounded-md text-[10px] font-bold text-[var(--accent-primary)] bg-[rgba(249, 115, 22,0.15)] border border-[rgba(249, 115, 22,0.25)]';
       icon.textContent = '\u00A7';
       icon.setAttribute('aria-hidden', 'true');
       const title = document.createElement('span');
@@ -102,7 +102,7 @@ const rel = isAffiliate ? 'sponsored noopener' : 'noopener';
           badge.textContent = 'Most Popular';
           cell.appendChild(badge);
           // Subtly emphasise the row.
-          rows[popularIdx].style.backgroundColor = 'rgba(34, 211, 238,0.06)';
+          rows[popularIdx].style.backgroundColor = 'rgba(249, 115, 22,0.06)';
         }
 
         // 2) Wrap each plan-name cell in the outbound link so every tier is clickable to checkout.

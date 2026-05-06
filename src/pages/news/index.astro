@@ -18,7 +18,6 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import EmailCapture from '../../components/EmailCapture.astro';
 import IndexHero from '../../components/design/IndexHero.astro';
-import OsPageShell from '../../components/os/OsPageShell.astro';
 import BreadcrumbLD from '../../components/seo/BreadcrumbLD.astro';
 import CollectionPageLD from '../../components/seo/CollectionPageLD.astro';
 import ToolLogo from '../../components/ToolLogo.astro';
@@ -214,7 +213,6 @@ const newsItems = sorted.slice(0, 100).map((item) => ({
 <BaseLayout
   title="AI Tools News · Daily Desk · aipedia.wiki"
   description={newsDescription}
-  chrome="os"
 >
   <BreadcrumbLD items={breadcrumbs} />
   <CollectionPageLD
@@ -224,13 +222,8 @@ const newsItems = sorted.slice(0, 100).map((item) => ({
     items={newsItems}
     itemType="NewsArticle"
   />
-  <OsPageShell
-    activeApp="news"
-    appTitle="AI news"
-    appSubtitle={`${sorted.length} stories`}
-    command="Read latest AI tool news"
-  >
-    <div class="p3-canvas site-directory-canvas">
+  
+    <div class="p3-canvas site-directory-canvas news-page-root">
 
     <!-- Breadcrumbs -->
     <nav class="p3-crumbs" aria-label="Breadcrumb" data-reveal>
@@ -257,17 +250,17 @@ const newsItems = sorted.slice(0, 100).map((item) => ({
       trust="Primary-source linked. Material updates only."
     >
       <Fragment slot="footer">
-      <div class="p3-statbar p3-statbar-5 p3-newsdesk-statbar" data-reveal style="--reveal-delay: 120ms; margin-top: 28px; margin-bottom: 0;">
+      <div class="p3-statbar p3-statbar-5 p3-newsdesk-statbar" data-reveal style="--reveal-delay: 120ms; margin-bottom: 0;">
         <div class="p3-stat">
           <span class="p3-stat-num tabular-nums">{sorted.length}</span>
           <span class="p3-stat-lbl">items</span>
         </div>
         <div class="p3-stat">
-          <span class="p3-stat-num tabular-nums" style="color: #67e8f9;">{severityCounts.breaking || 0}</span>
+          <span class="p3-stat-num tabular-nums" style="color: #fb923c;">{severityCounts.breaking || 0}</span>
           <span class="p3-stat-lbl">breaking</span>
         </div>
         <div class="p3-stat">
-          <span class="p3-stat-num tabular-nums" style="color: #67e8f9;">{severityCounts.major || 0}</span>
+          <span class="p3-stat-num tabular-nums" style="color: #fb923c;">{severityCounts.major || 0}</span>
           <span class="p3-stat-lbl">major</span>
         </div>
         <div class="p3-stat">
@@ -282,7 +275,7 @@ const newsItems = sorted.slice(0, 100).map((item) => ({
 
       <div class="p3-newsdesk-signal-grid" data-reveal style="--reveal-delay: 180ms;" aria-label="April 2026 news summary">
         {signalCards.map((card) => (
-          <div class="p3-newsdesk-signal-card">
+          <div class="p3-newsdesk-signal-card home-surface-card">
             <span class="p3-newsdesk-signal-label">{card.label}</span>
             <strong class="p3-newsdesk-signal-value tabular-nums">{card.value}</strong>
             <span class="p3-newsdesk-signal-note">{card.note}</span>
@@ -295,7 +288,7 @@ const newsItems = sorted.slice(0, 100).map((item) => ({
     <!-- =============== TOP STORY =============== -->
     {topStory && (
       <section class="p3-topstory-sec" aria-labelledby="top-story-heading" data-reveal style="--reveal-delay: 80ms;">
-        <a href={`/news/${topStory.n.slug}/`} class="p3-topstory">
+        <a href={`/news/${topStory.n.slug}/`} class="p3-topstory home-surface-card">
           <div class="p3-topstory-img">
             <img
               src={`/og/news/thumbs/${topStory.n.slug}.webp`}
@@ -304,6 +297,17 @@ const newsItems = sorted.slice(0, 100).map((item) => ({
               decoding="async"
               width="960"
               height="504"
+              class="news-default-og-thumb news-default-og-thumb--dark"
+            />
+            <img
+              src={`/og/news/thumbs/light/${topStory.n.slug}.webp`}
+              alt=""
+              aria-hidden="true"
+              loading="eager"
+              decoding="async"
+              width="960"
+              height="504"
+              class="news-default-og-thumb news-default-og-thumb--light"
             />
             <div class="p3-topstory-img-fade"></div>
           </div>
@@ -341,9 +345,17 @@ const newsItems = sorted.slice(0, 100).map((item) => ({
     <section class="p3-newsdesk-split">
       <div class="p3-newsdesk-main">
 
-        <!-- Filter rail -->
+        <!-- Filter rail: collapsible on narrow viewports to save vertical space -->
         {sorted.length > 0 && (
-          <div id="news-filters" class="p3-newsdesk-filters" data-pagefind-ignore data-reveal>
+          <details class="p3-newsdesk-filters-details" data-pagefind-ignore data-reveal>
+            <summary class="p3-newsdesk-filters-summary">
+              <span class="p3-newsdesk-filters-summary-title">Filters</span>
+              <span id="news-filters-summary-state" class="p3-newsdesk-filters-summary-state" aria-live="polite"
+                >All stories</span
+              >
+              <span class="p3-newsdesk-filters-summary-chevron" aria-hidden="true"></span>
+            </summary>
+            <div id="news-filters" class="p3-newsdesk-filters" data-pagefind-ignore>
             <div class="p3-newsdesk-filter-label">Severity</div>
             <div class="p3-newsdesk-chips-row" role="tablist" aria-label="Filter by severity">
               <button type="button" data-severity-filter="all" class="p3-chip p3-chip-active">
@@ -406,7 +418,8 @@ const newsItems = sorted.slice(0, 100).map((item) => ({
                 Clear filters
               </button>
             </div>
-          </div>
+            </div>
+          </details>
         )}
 
         <div class="p3-newsdesk-list-head" data-reveal>
@@ -428,7 +441,7 @@ const newsItems = sorted.slice(0, 100).map((item) => ({
               data-reveal
               style={`--reveal-delay: ${(i % 4) * 45}ms;`}
             >
-              <a href={`/news/${n.slug}/`} class="p3-newsdesk-card">
+              <a href={`/news/${n.slug}/`} class="p3-newsdesk-card home-surface-card">
                 <div class="p3-newsdesk-card-thumb">
                   <img
                     src={`/og/news/thumbs/${n.slug}.webp`}
@@ -437,6 +450,17 @@ const newsItems = sorted.slice(0, 100).map((item) => ({
                     decoding="async"
                     width="960"
                     height="504"
+                    class="news-default-og-thumb news-default-og-thumb--dark"
+                  />
+                  <img
+                    src={`/og/news/thumbs/light/${n.slug}.webp`}
+                    alt=""
+                    aria-hidden="true"
+                    loading="lazy"
+                    decoding="async"
+                    width="960"
+                    height="504"
+                    class="news-default-og-thumb news-default-og-thumb--light"
                   />
                 </div>
                 <div class="p3-newsdesk-card-body">
@@ -471,7 +495,7 @@ const newsItems = sorted.slice(0, 100).map((item) => ({
       <aside class="p3-newsdesk-aside" aria-label="Movers and methodology">
 
         {movers.length > 0 && (
-          <div class="p3-newsdesk-aside-card" data-reveal="right">
+          <div class="p3-newsdesk-aside-card home-surface-card" data-reveal="right">
             <div class="p3-newsdesk-aside-eyebrow">
               <span>MOVERS · past 14 days</span>
               <span class="p3-newsdesk-aside-eyebrow-sub">by mentions</span>
@@ -479,7 +503,7 @@ const newsItems = sorted.slice(0, 100).map((item) => ({
             <ol class="p3-newsdesk-movers">
               {movers.map((m, i) => (
                 <li>
-                  <a href={`/tools/${m.slug}/`} class="p3-newsdesk-mover">
+                  <a href={`/tools/${m.slug}/`} class="p3-newsdesk-mover home-surface-card">
                     <span class="p3-newsdesk-mover-rank tabular-nums">{i + 1}</span>
                     <span class="p3-newsdesk-mover-logo">
                       <ToolLogo slug={m.slug} alt="" size={24} />
@@ -499,7 +523,7 @@ const newsItems = sorted.slice(0, 100).map((item) => ({
           </div>
         )}
 
-        <div class="p3-newsdesk-aside-card" data-reveal="right" style="--reveal-delay: 70ms;">
+        <div class="p3-newsdesk-aside-card home-surface-card" data-reveal="right" style="--reveal-delay: 70ms;">
           <div class="p3-newsdesk-aside-eyebrow"><span>METHODOLOGY</span></div>
           <p class="p3-newsdesk-aside-body">
             Items are published when the first primary-source confirmation lands. We track pricing changes, model releases, acquisitions, shutdowns, and funding rounds that move a tool's utility, value, moat, or longevity score.
@@ -507,7 +531,7 @@ const newsItems = sorted.slice(0, 100).map((item) => ({
           <a href="/about/editorial/" class="p3-method-link" style="display:inline-block; margin-top:8px;">How we verify →</a>
         </div>
 
-        <div class="p3-newsdesk-aside-card p3-newsdesk-since" data-news-since-card hidden>
+        <div class="p3-newsdesk-aside-card home-surface-card p3-newsdesk-since" data-news-since-card hidden>
           <div class="p3-newsdesk-aside-eyebrow">
             <span>Since last visit</span>
             <span class="p3-newsdesk-aside-eyebrow-sub">local</span>
@@ -525,11 +549,21 @@ const newsItems = sorted.slice(0, 100).map((item) => ({
       <EmailCapture variant="footer" source="news-index" />
     </div>
     </div>
-  </OsPageShell>
-
-  <!-- News-specific styling additions that extend p3-canvas.css. Kept
+<!-- News-specific styling additions that extend p3-canvas.css. Kept
        inline because these classes are only used by this page. -->
   <style>
+    /* Map p3 copy tokens to homepage --home-* (this page is a .news-page-root). */
+    .news-page-root.p3-canvas {
+      --p3-line: var(--home-line);
+      --p3-line-strong: var(--home-line-strong);
+      --p3-surface: var(--home-panel);
+      --p3-surface-hover: var(--home-panel-strong);
+      --p3-fg: var(--home-on-card);
+      --p3-muted: var(--home-on-card-muted);
+      --p3-subtle: var(--home-dim);
+      --p3-accent-text: var(--home-accent);
+    }
+
     /* hero tweaks */
     .p3-newsdesk-hero {
       padding: var(--site-index-hero-top) 0 var(--site-section-gap);
@@ -542,7 +576,7 @@ const newsItems = sorted.slice(0, 100).map((item) => ({
       position: absolute;
       inset: 14px -18px auto -18px;
       height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(34, 211, 238, 0.52), rgba(34, 211, 238, 0.42), transparent);
+      background: linear-gradient(90deg, transparent, rgba(249, 115, 22, 0.52), rgba(249, 115, 22, 0.42), transparent);
       opacity: 0.55;
       pointer-events: none;
     }
@@ -550,7 +584,7 @@ const newsItems = sorted.slice(0, 100).map((item) => ({
       max-width: 70ch;
     }
     .p3-newsdesk-statbar {
-      box-shadow: 0 18px 60px -38px rgba(34, 211, 238, 0.42);
+      box-shadow: 0 18px 60px -38px rgba(249, 115, 22, 0.42);
     }
     .p3-newsdesk-signal-grid {
       display: grid;
@@ -561,21 +595,15 @@ const newsItems = sorted.slice(0, 100).map((item) => ({
     @media (min-width: 720px) {
       .p3-newsdesk-signal-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
     }
-    .p3-newsdesk-signal-card {
-      border: 1px solid var(--p3-line);
-      border-radius: 8px;
-      background:
-        linear-gradient(135deg, rgba(34, 211, 238, 0.055), transparent 42%),
-        var(--p3-surface);
+    .p3-newsdesk-signal-card.home-surface-card {
       padding: 12px 14px;
       min-width: 0;
-      transition: transform 180ms ease, border-color 180ms ease, background 180ms ease, box-shadow 180ms ease;
     }
-    .p3-newsdesk-signal-card:hover {
-      transform: translateY(-2px);
-      border-color: rgba(34, 211, 238, 0.28);
-      background: var(--p3-surface-hover);
-      box-shadow: 0 14px 34px -24px rgba(34, 211, 238, 0.42);
+    .p3-newsdesk-signal-card.home-surface-card:hover {
+      transform: none;
+      box-shadow: none;
+      border-color: var(--home-card-outline);
+      background: var(--home-panel);
     }
     .p3-newsdesk-signal-label,
     .p3-newsdesk-signal-note {
@@ -604,33 +632,64 @@ const newsItems = sorted.slice(0, 100).map((item) => ({
       color: var(--p3-muted);
     }
 
+    /* Mobile: one scrollable row instead of four stacked cards (~380px+ tall). */
+    @media (max-width: 639px) {
+      .p3-newsdesk-signal-grid {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        overscroll-behavior-x: contain;
+        touch-action: pan-x;
+        scroll-snap-type: x proximity;
+        gap: 8px;
+        margin-top: 10px;
+        padding-bottom: 2px;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+      }
+      .p3-newsdesk-signal-grid::-webkit-scrollbar {
+        display: none;
+      }
+      .p3-newsdesk-signal-card.home-surface-card {
+        flex: 0 0 auto;
+        width: min(76vw, 222px);
+        min-width: 156px;
+        padding: 8px 10px;
+        scroll-snap-align: start;
+      }
+      .p3-newsdesk-signal-label {
+        font-size: 9px;
+        letter-spacing: 0.1em;
+        margin-bottom: 4px;
+      }
+      .p3-newsdesk-signal-value {
+        font-size: 1.2rem;
+        margin-bottom: 3px;
+      }
+      .p3-newsdesk-signal-note {
+        font-size: 11px;
+        line-height: 1.35;
+      }
+    }
+
     /* ---- top story ---- */
     .p3-topstory-sec {
       margin-bottom: 48px;
     }
-    .p3-topstory {
+    .p3-topstory.home-surface-card {
       display: grid;
       grid-template-columns: 1fr;
       gap: 0;
-      border-radius: 8px;
+      border-radius: 12px;
       overflow: hidden;
-      border: 1px solid rgba(34, 211, 238, 0.26);
-      background:
-        linear-gradient(135deg, rgba(34, 211, 238, 0.08), transparent 36%),
-        var(--p3-surface);
+      position: relative;
       text-decoration: none;
       color: inherit;
-      transition: transform 220ms cubic-bezier(.2,.7,.2,1), border-color 200ms ease, box-shadow 220ms ease, background 220ms ease;
-      position: relative;
-    }
-    .p3-topstory:hover {
-      transform: translateY(-2px);
-      border-color: rgba(34, 211, 238, 0.44);
-      box-shadow: 0 22px 70px -34px rgba(34, 211, 238, 0.55);
-      background: var(--p3-surface-hover);
     }
     @media (min-width: 900px) {
-      .p3-topstory {
+      .p3-topstory.home-surface-card {
         grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
       }
     }
@@ -639,7 +698,7 @@ const newsItems = sorted.slice(0, 100).map((item) => ({
       aspect-ratio: 1200 / 630;
       overflow: hidden;
       background:
-        radial-gradient(ellipse 75% 80% at 82% 12%, rgba(34, 211, 238, 0.12), transparent 62%),
+        radial-gradient(ellipse 75% 80% at 82% 12%, rgba(249, 115, 22, 0.12), transparent 62%),
         #05060d;
     }
     @media (min-width: 900px) {
@@ -752,6 +811,72 @@ const newsItems = sorted.slice(0, 100).map((item) => ({
     }
     .p3-newsdesk-main { min-width: 0; }
 
+    /* ---- filters (optional disclosure on small screens) ---- */
+    .p3-newsdesk-filters-details {
+      margin-bottom: 20px;
+      border: none;
+      padding: 0;
+    }
+    .p3-newsdesk-filters-details > summary {
+      list-style: none;
+      cursor: pointer;
+      display: none;
+    }
+    .p3-newsdesk-filters-details > summary::-webkit-details-marker {
+      display: none;
+    }
+    .p3-newsdesk-filters-summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 10px 12px;
+      border-radius: 8px;
+      border: 1px solid var(--p3-line);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.025), transparent),
+        var(--p3-surface);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--p3-fg);
+      -webkit-tap-highlight-color: transparent;
+    }
+    .p3-newsdesk-filters-summary-title {
+      flex: none;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--p3-subtle);
+    }
+    .p3-newsdesk-filters-summary-state {
+      flex: 1;
+      min-width: 0;
+      text-align: right;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: normal;
+      text-transform: none;
+      color: var(--p3-muted);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .p3-newsdesk-filters-summary-chevron {
+      flex: none;
+      width: 9px;
+      height: 9px;
+      margin-left: 2px;
+      border-right: 2px solid var(--p3-muted);
+      border-bottom: 2px solid var(--p3-muted);
+      transform: rotate(45deg) translateY(-2px);
+      transition: transform 120ms ease;
+      opacity: 0.85;
+    }
+    .p3-newsdesk-filters-details[open] .p3-newsdesk-filters-summary-chevron {
+      transform: rotate(225deg) translateY(1px);
+    }
+
     /* ---- filters ---- */
     .p3-newsdesk-filters {
       padding: 14px 14px 12px;
@@ -760,7 +885,7 @@ const newsItems = sorted.slice(0, 100).map((item) => ({
       background:
         linear-gradient(180deg, rgba(255,255,255,0.025), transparent),
         var(--p3-surface);
-      margin-bottom: 20px;
+      margin-bottom: 0;
     }
     .p3-newsdesk-filter-label {
       font-size: 10px;
@@ -788,11 +913,11 @@ const newsItems = sorted.slice(0, 100).map((item) => ({
     }
     .p3-chip-more {
       color: var(--p3-accent-text);
-      background: rgba(34, 211, 238, 0.08);
-      border-color: rgba(34, 211, 238, 0.28);
+      background: rgba(249, 115, 22, 0.08);
+      border-color: rgba(249, 115, 22, 0.28);
     }
     .p3-chip-more:hover {
-      background: rgba(34, 211, 238, 0.16);
+      background: rgba(249, 115, 22, 0.16);
       color: var(--p3-accent-text);
     }
 
@@ -800,14 +925,36 @@ const newsItems = sorted.slice(0, 100).map((item) => ({
        row with subtle edge-fade so 4 chips fit in one line on narrow
        viewports without the screen getting dumped full of chips. */
     @media (max-width: 640px) {
-      .p3-newsdesk-filters { padding: 12px 12px 10px; }
-      .p3-newsdesk-filter-label + .p3-newsdesk-chips-row { margin-bottom: 10px; }
+      .p3-newsdesk-filters-details { margin-bottom: 14px; }
+      .p3-newsdesk-filters-details > summary {
+        display: flex;
+      }
+      .p3-newsdesk-filters-details[open] > summary {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border-bottom-color: transparent;
+        margin-bottom: 0;
+      }
+      .p3-newsdesk-filters-details[open] .p3-newsdesk-filters {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-top: none;
+      }
+      .p3-newsdesk-filters { padding: 10px 10px 8px; }
+      .p3-newsdesk-filter-label {
+        margin-bottom: 5px;
+        font-size: 9px;
+        letter-spacing: 0.12em;
+      }
+      .p3-newsdesk-filter-label + .p3-newsdesk-chips-row { margin-bottom: 8px; }
       .p3-newsdesk-chips-row {
         flex-wrap: nowrap;
         overflow-x: auto;
+        overflow-y: hidden;
+        touch-action: pan-x;
         scroll-snap-type: x proximity;
         -webkit-overflow-scrolling: touch;
-        padding-bottom: 4px;
+        padding-bottom: 3px;
         margin-right: 0;
         padding-right: 0;
         max-width: 100%;
@@ -818,15 +965,29 @@ const newsItems = sorted.slice(0, 100).map((item) => ({
       .p3-newsdesk-chips-row .p3-chip {
         flex: none;
         scroll-snap-align: start;
-        min-height: 44px;
-        padding: 8px 12px;
+        min-height: 40px;
+        padding: 6px 10px;
       }
-      /* Category chips DO wrap but visible set is 5 + "more" toggle,
-         so the block stays compact until expanded. */
+      /* Category chips: same single scroll row as severity (no wrap). */
       .p3-newsdesk-chips-cat {
-        flex-wrap: wrap;
-        overflow: visible;
-        mask-image: none;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        touch-action: pan-x;
+        mask-image: linear-gradient(90deg, #000 0, #000 calc(100% - 24px), transparent);
+      }
+      .p3-newsdesk-filter-foot {
+        margin-top: 8px;
+        padding-top: 8px;
+        gap: 8px;
+      }
+      .p3-newsdesk-tool-select {
+        min-height: 40px;
+        max-width: min(170px, 56vw);
+      }
+      .p3-newsdesk-clear {
+        min-height: 40px;
+        padding: 4px 9px;
       }
     }
 
@@ -868,7 +1029,7 @@ const newsItems = sorted.slice(0, 100).map((item) => ({
       min-height: 44px;
     }
     .p3-newsdesk-tool-select:focus {
-      outline: 2px solid rgba(34, 211, 238,0.4);
+      outline: 2px solid rgba(249, 115, 22,0.4);
       outline-offset: 1px;
     }
     .p3-newsdesk-clear {
@@ -884,7 +1045,7 @@ const newsItems = sorted.slice(0, 100).map((item) => ({
     }
     .p3-newsdesk-clear:hover {
       color: var(--p3-accent-text);
-      border-color: rgba(34, 211, 238, 0.35);
+      border-color: rgba(249, 115, 22, 0.35);
     }
     .p3-newsdesk-clear.hidden { display: none; }
 
@@ -937,28 +1098,21 @@ const newsItems = sorted.slice(0, 100).map((item) => ({
     @media (min-width: 700px) {
       .p3-newsdesk-grid { grid-template-columns: repeat(2, 1fr); }
     }
-    .p3-newsdesk-card {
+    .p3-newsdesk-card.home-surface-card {
       display: flex;
       flex-direction: column;
       height: 100%;
-      border-radius: 8px;
+      border-radius: 12px;
       overflow: hidden;
-      border: 1px solid var(--p3-line);
-      background: var(--p3-surface);
-      text-decoration: none;
-      color: inherit;
-      transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease, background 180ms ease;
     }
-    .p3-newsdesk-card:hover {
-      transform: translateY(-2px);
-      border-color: rgba(34, 211, 238, 0.28);
-      box-shadow: 0 16px 40px -24px rgba(34, 211, 238, 0.35);
-      background: var(--p3-surface-hover);
+    .p3-newsdesk-card.home-surface-card:hover {
+      transform: none;
+      box-shadow: none;
     }
     .p3-newsdesk-card-thumb {
       aspect-ratio: 1200 / 630;
       overflow: hidden;
-      background: var(--p3-surface-hover);
+      background: var(--home-inner-panel);
     }
     .p3-newsdesk-card-thumb img {
       display: block;
@@ -1050,20 +1204,14 @@ const newsItems = sorted.slice(0, 100).map((item) => ({
     @media (min-width: 1000px) {
       .p3-newsdesk-aside { position: sticky; top: 80px; }
     }
-    .p3-newsdesk-aside-card {
+    .p3-newsdesk-aside-card.home-surface-card {
       padding: 18px 18px 16px;
-      border-radius: 8px;
-      border: 1px solid var(--p3-line);
-      background:
-        linear-gradient(135deg, rgba(34, 211, 238, 0.055), transparent 40%),
-        var(--p3-surface);
-      transition: transform 180ms ease, border-color 180ms ease, background 180ms ease, box-shadow 180ms ease;
     }
-    .p3-newsdesk-aside-card:hover {
-      transform: translateY(-2px);
-      border-color: rgba(34, 211, 238, 0.28);
-      background: var(--p3-surface-hover);
-      box-shadow: 0 16px 36px -28px rgba(34, 211, 238, 0.42);
+    .p3-newsdesk-aside-card.home-surface-card:hover {
+      transform: none;
+      box-shadow: none;
+      border-color: var(--home-card-outline);
+      background: var(--home-panel);
     }
     .p3-newsdesk-aside-eyebrow {
       display: flex;
@@ -1112,22 +1260,18 @@ const newsItems = sorted.slice(0, 100).map((item) => ({
       flex-direction: column;
       gap: 4px;
     }
-    .p3-newsdesk-mover {
+    .p3-newsdesk-mover.home-surface-card {
       display: grid;
       grid-template-columns: 18px 28px 1fr auto;
       align-items: center;
       gap: 10px;
       padding: 8px 10px;
-      border-radius: 8px;
+      border-radius: 12px;
       text-decoration: none;
       color: inherit;
-      border: 1px solid transparent;
-      transition: background 140ms ease, border-color 140ms ease, transform 140ms ease;
     }
-    .p3-newsdesk-mover:hover {
-      background: var(--p3-surface-hover);
-      border-color: var(--p3-line);
-      transform: translateX(2px);
+    .p3-newsdesk-mover.home-surface-card:hover {
+      transform: none;
     }
     .p3-newsdesk-mover-rank {
       font-size: 11px;
@@ -1175,13 +1319,13 @@ const newsItems = sorted.slice(0, 100).map((item) => ({
     }
 
     @media (prefers-reduced-motion: reduce) {
-      .p3-newsdesk-signal-card,
-      .p3-topstory,
+      .p3-newsdesk-signal-card.home-surface-card,
+      .p3-topstory.home-surface-card,
       .p3-topstory-img img,
-      .p3-newsdesk-card,
+      .p3-newsdesk-card.home-surface-card,
       .p3-newsdesk-card-thumb img,
-      .p3-newsdesk-aside-card,
-      .p3-newsdesk-mover {
+      .p3-newsdesk-aside-card.home-surface-card,
+      .p3-newsdesk-mover.home-surface-card {
         transition: none;
         transform: none !important;
       }
@@ -1195,6 +1339,52 @@ const newsItems = sorted.slice(0, 100).map((item) => ({
       const root = document.getElementById('news-filters');
       const list = document.getElementById('news-list');
       if (!root || !list) return;
+
+      const detailsEl = root.closest('details.p3-newsdesk-filters-details');
+      const summaryState = document.getElementById('news-filters-summary-state');
+      const mqWide = window.matchMedia('(min-width: 641px)');
+
+      function filterActiveFromParams(p) {
+        return (
+          (p.get('severity') && p.get('severity') !== 'all') ||
+          (p.get('category') && p.get('category') !== 'all') ||
+          (p.get('tool') && p.get('tool') !== 'all')
+        );
+      }
+
+      function syncFiltersDetailsOpen() {
+        if (!detailsEl) return;
+        if (mqWide.matches) {
+          detailsEl.setAttribute('open', '');
+          return;
+        }
+        const p = new URLSearchParams(location.search);
+        if (filterActiveFromParams(p)) detailsEl.setAttribute('open', '');
+        else detailsEl.removeAttribute('open');
+      }
+
+      function formatCategoryLabel(slug) {
+        return String(slug || '')
+          .replace(/-/g, ' ')
+          .replace(/\b\w/g, (c) => c.toUpperCase());
+      }
+
+      function formatSummaryLine(state) {
+        if (state.severity === 'all' && state.category === 'all' && state.tool === 'all') {
+          return 'All stories';
+        }
+        const parts = [];
+        if (state.severity !== 'all') {
+          const s = state.severity || '';
+          parts.push(s.charAt(0).toUpperCase() + s.slice(1));
+        }
+        if (state.category !== 'all') parts.push(formatCategoryLabel(state.category));
+        if (state.tool !== 'all') parts.push(state.tool);
+        return parts.join(' · ');
+      }
+
+      syncFiltersDetailsOpen();
+      mqWide.addEventListener('change', syncFiltersDetailsOpen);
 
       const sevChips = root.querySelectorAll('[data-severity-filter]');
       const catChips = root.querySelectorAll('[data-category-filter]');
@@ -1258,6 +1448,7 @@ const newsItems = sorted.slice(0, 100).map((item) => ({
         const anyFilter = state.severity !== 'all' || state.tool !== 'all' || state.category !== 'all';
         if (clearBtn) clearBtn.classList.toggle('hidden', !anyFilter);
         if (noMatches) noMatches.classList.toggle('hidden', visible !== 0);
+        if (summaryState) summaryState.textContent = formatSummaryLine(state);
       }
 
       let state = readParams();
@@ -1298,6 +1489,7 @@ const newsItems = sorted.slice(0, 100).map((item) => ({
           state = { severity: 'all', tool: 'all', category: 'all' };
           writeParams(state);
           apply(state);
+          syncFiltersDetailsOpen();
         });
       }
     })();

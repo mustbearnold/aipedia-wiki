@@ -29,10 +29,10 @@ export const GET: APIRoute = ({ props }) => {
   // Color by score
   let color = '#94a3b8'; // slate
   if (score >= 9) color = '#14b8a6'; // teal
-  else if (score >= 7.5) color = '#22d3ee'; // cyan
-  else if (score >= 6) color = '#38bdf8'; // blue
-  else if (score >= 4) color = '#67e8f9'; // cyan
-  else color = '#67e8f9'; // cyan
+  else if (score >= 7.5) color = '#f97316'; // cyan
+  else if (score >= 6) color = '#fb923c'; // blue
+  else if (score >= 4) color = '#fb923c'; // cyan
+  else color = '#fb923c'; // cyan
 
   const truncated = title.length > 22 ? title.slice(0, 20) + '...' : title;
 
@@ -46,7 +46,7 @@ export const GET: APIRoute = ({ props }) => {
   </defs>
   <rect width="260" height="72" rx="10" fill="url(#g)" stroke="#2a2640" stroke-width="1"/>
   <g font-family="Metropolis, sans-serif">
-    <text x="16" y="22" font-size="10" font-weight="600" fill="#22d3ee" letter-spacing="1.2">AIPEDIA.WIKI</text>
+    <text x="16" y="22" font-size="10" font-weight="600" fill="#f97316" letter-spacing="1.2">AIPEDIA.WIKI</text>
     <text x="16" y="43" font-size="14" font-weight="700" fill="#ffffff">${escapeXml(truncated)}</text>
     <text x="16" y="60" font-size="11" fill="#94a3b8">Editorial score</text>
     <g transform="translate(178, 16)">

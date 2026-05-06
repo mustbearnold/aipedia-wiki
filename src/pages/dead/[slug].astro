@@ -68,16 +68,17 @@ const metaExtra = metaParts.length > 0 ? metaParts.join(' · ') : undefined;
   readingMinutes={readingMinutes}
   lastVerified={entry.data.last_updated ? String(entry.data.last_updated) : undefined}
   metaExtra={metaExtra}
+  homeSurfaceCards
 >
   {migrationPicks.length > 0 && (
-    <aside class="dead-migration not-prose" aria-label={`Alternatives to ${entry.data.title}`}>
+    <aside class="dead-migration home-surface-card not-prose" aria-label={`Alternatives to ${entry.data.title}`}>
       <div class="dead-migration-head">
         <span>Migration picks</span>
         <strong>Current alternatives</strong>
       </div>
       <div class="dead-migration-grid">
         {migrationPicks.map((tool) => (
-          <a href={`/tools/${tool.slug}/`}>
+          <a class="home-surface-inner" href={`/tools/${tool.slug}/`}>
             <ToolLogo slug={tool.slug} title={tool.title} size={34} />
             <span>
               <strong>{tool.title}</strong>
@@ -91,12 +92,7 @@ const metaExtra = metaParts.length > 0 ? metaParts.join(' · ') : undefined;
   <Content />
 
   <style>
-    .dead-migration {
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      background:
-        linear-gradient(135deg, rgba(34, 211, 238, 0.07), transparent 44%),
-        var(--bg-card);
+    .news-article-shell .dead-migration.home-surface-card {
       margin: 0 0 24px;
       padding: 18px;
     }
@@ -110,7 +106,7 @@ const metaExtra = metaParts.length > 0 ? metaParts.join(' · ') : undefined;
     }
 
     .dead-migration-head span {
-      color: var(--accent-primary-text);
+      color: var(--home-dim);
       font-size: 10px;
       font-weight: 900;
       letter-spacing: 0.14em;
@@ -118,7 +114,7 @@ const metaExtra = metaParts.length > 0 ? metaParts.join(' · ') : undefined;
     }
 
     .dead-migration-head strong {
-      color: var(--text-primary);
+      color: var(--home-on-card);
       font-size: 13px;
     }
 
@@ -128,22 +124,28 @@ const metaExtra = metaParts.length > 0 ? metaParts.join(' · ') : undefined;
       gap: 10px;
     }
 
-    .dead-migration-grid a {
+    .dead-migration-grid a.home-surface-inner {
       display: grid;
       grid-template-columns: 34px minmax(0, 1fr);
       gap: 10px;
       align-items: center;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      background: var(--bg-primary);
-      color: var(--text-primary);
       padding: 10px;
       text-decoration: none;
+      transition:
+        border-color var(--motion-fast, 160ms) var(--motion-ease, cubic-bezier(0.16, 1, 0.3, 1)),
+        background var(--motion-fast, 160ms) var(--motion-ease, cubic-bezier(0.16, 1, 0.3, 1));
     }
 
-    .dead-migration-grid a:hover {
-      border-color: rgba(34, 211, 238, 0.36);
-      color: var(--accent-primary-text);
+    .dead-migration-grid a.home-surface-inner:hover {
+      border-color: var(--home-card-outline-hover);
+      background: var(--home-panel-strong);
+    }
+
+    .dead-migration-grid a.home-surface-inner:focus-visible {
+      outline: none;
+      border-color: var(--home-card-outline-hover);
+      background: var(--home-panel-strong);
+      box-shadow: 0 0 0 2px rgba(249, 115, 22, 0.42);
     }
 
     .dead-migration-grid span {
@@ -157,13 +159,14 @@ const metaExtra = metaParts.length > 0 ? metaParts.join(' · ') : undefined;
       text-overflow: ellipsis;
       white-space: nowrap;
       font-size: 13px;
+      color: var(--home-on-card);
     }
 
     .dead-migration-grid em {
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
-      color: var(--text-muted);
+      color: var(--home-on-card-muted);
       font-size: 11.5px;
       font-style: normal;
       font-weight: 750;

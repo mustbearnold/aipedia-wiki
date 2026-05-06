@@ -3,7 +3,6 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import ToolCard from '../../components/ToolCard.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
 import IndexHero from '../../components/design/IndexHero.astro';
-import OsPageShell from '../../components/os/OsPageShell.astro';
 import BreadcrumbLD from '../../components/seo/BreadcrumbLD.astro';
 import ItemListLD from '../../components/seo/ItemListLD.astro';
 import { categoryLabel } from '../../utils/tool-metadata';
@@ -112,7 +111,6 @@ const categoryEmojiMap: Record<string, string> = {
 <BaseLayout
   title="All AI Tools — Complete A-Z Index — aipedia.wiki"
   description={toolsDescription}
-  chrome="os"
 >
   <BreadcrumbLD items={[
     { name: 'Home', url: new URL('/', siteBase).href },
@@ -124,12 +122,7 @@ const categoryEmojiMap: Record<string, string> = {
     items={toolsItemList}
     siteBase={siteBase}
   />
-  <OsPageShell
-    activeApp="packages"
-    appTitle="AI tool directory"
-    appSubtitle={`${scoredTools.length} reviewed tools`}
-    command={`Browse ${scoredTools.length} reviewed tools`}
-  >
+  
     <Breadcrumb items={[{ label: 'All Tools' }]} />
 
   <IndexHero
@@ -360,9 +353,7 @@ const categoryEmojiMap: Record<string, string> = {
     <p>No tools match those filters.</p>
     <button class="tools-reset" type="button" data-tools-empty-reset>Reset</button>
   </div>
-  </OsPageShell>
-
-  <script is:inline>
+<script is:inline>
     (() => {
       const root = document.querySelector('[data-tools-controls]');
       const grid = document.querySelector('[data-tools-grid]');
@@ -883,8 +874,8 @@ const categoryEmojiMap: Record<string, string> = {
     }
 
     .tools-search:focus-within {
-      border-color: rgba(34, 211, 238, 0.45);
-      box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.08);
+      border-color: rgba(249, 115, 22, 0.45);
+      box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.08);
       transform: translateY(-1px);
     }
 
@@ -925,7 +916,7 @@ const categoryEmojiMap: Record<string, string> = {
       right: 0;
       left: 0;
       overflow: hidden;
-      border: 1px solid rgba(34, 211, 238, 0.28);
+      border: 1px solid rgba(249, 115, 22, 0.28);
       border-radius: 10px;
       background: rgb(8, 13, 24);
       box-shadow: 0 24px 58px rgba(0, 0, 0, 0.46), 0 0 0 1px rgba(255, 255, 255, 0.04);
@@ -978,7 +969,7 @@ const categoryEmojiMap: Record<string, string> = {
       overflow-y: auto;
       padding: 6px;
       scrollbar-width: thin;
-      scrollbar-color: rgba(94, 234, 212, 0.36) transparent;
+      scrollbar-color: rgba(253, 186, 116, 0.36) transparent;
     }
 
     :global(.tools-search-result) {
@@ -999,7 +990,7 @@ const categoryEmojiMap: Record<string, string> = {
 
     :global(.tools-search-result:hover),
     :global(.tools-search-result:focus-visible) {
-      background: rgba(34, 211, 238, 0.11);
+      background: rgba(249, 115, 22, 0.11);
       color: var(--text-primary);
       outline: none;
       transform: translateX(2px);
@@ -1052,7 +1043,7 @@ const categoryEmojiMap: Record<string, string> = {
       place-items: center;
       min-width: 38px;
       height: 26px;
-      border: 1px solid rgba(94, 234, 212, 0.24);
+      border: 1px solid rgba(253, 186, 116, 0.24);
       border-radius: 999px;
       color: var(--accent-primary-text);
       font-size: 12px;
@@ -1110,8 +1101,8 @@ const categoryEmojiMap: Record<string, string> = {
     .tools-select-trigger:hover,
     .tools-select-trigger:focus-visible,
     .tools-select-field.is-open .tools-select-trigger {
-      border-color: rgba(34, 211, 238, 0.45);
-      box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.08);
+      border-color: rgba(249, 115, 22, 0.45);
+      box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.08);
       outline: none;
       transform: translateY(-1px);
     }
@@ -1144,13 +1135,13 @@ const categoryEmojiMap: Record<string, string> = {
       gap: 3px;
       max-height: min(340px, 58vh);
       overflow-y: auto;
-      border: 1px solid rgba(34, 211, 238, 0.26);
+      border: 1px solid rgba(249, 115, 22, 0.26);
       border-radius: 8px;
       background: rgba(8, 13, 24, 0.98);
       box-shadow: 0 22px 50px rgba(0, 0, 0, 0.42), 0 0 0 1px rgba(255, 255, 255, 0.04);
       padding: 6px;
       scrollbar-width: thin;
-      scrollbar-color: rgba(94, 234, 212, 0.36) transparent;
+      scrollbar-color: rgba(253, 186, 116, 0.36) transparent;
       opacity: 1;
       transform: translateY(0) scale(1);
       transform-origin: top center;
@@ -1198,14 +1189,14 @@ const categoryEmojiMap: Record<string, string> = {
 
     .tools-option:hover,
     .tools-option:focus-visible {
-      background: rgba(34, 211, 238, 0.10);
+      background: rgba(249, 115, 22, 0.10);
       color: var(--text-primary);
       outline: none;
       transform: translateX(2px);
     }
 
     .tools-option.is-selected {
-      background: rgba(34, 211, 238, 0.16);
+      background: rgba(249, 115, 22, 0.16);
       color: var(--accent-primary-text);
     }
 
@@ -1215,7 +1206,7 @@ const categoryEmojiMap: Record<string, string> = {
       justify-content: center;
       min-width: 26px;
       height: 22px;
-      border: 1px solid rgba(94, 234, 212, 0.22);
+      border: 1px solid rgba(253, 186, 116, 0.22);
       border-radius: 999px;
       color: var(--text-muted);
       font-size: 11px;
@@ -1229,8 +1220,8 @@ const categoryEmojiMap: Record<string, string> = {
 
     .tools-option.is-selected .tools-option-count {
       color: var(--accent-primary-text);
-      border-color: rgba(94, 234, 212, 0.42);
-      background: rgba(94, 234, 212, 0.10);
+      border-color: rgba(253, 186, 116, 0.42);
+      background: rgba(253, 186, 116, 0.10);
     }
 
     html.light .tools-select-menu,
@@ -1273,8 +1264,8 @@ const categoryEmojiMap: Record<string, string> = {
 
     .tools-score-toggle:hover,
     .tools-score-toggle:focus-within {
-      border-color: rgba(34, 211, 238, 0.38);
-      box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.07);
+      border-color: rgba(249, 115, 22, 0.38);
+      box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.07);
       transform: translateY(-1px);
     }
 
@@ -1283,8 +1274,8 @@ const categoryEmojiMap: Record<string, string> = {
     }
 
     .tools-score-toggle:has(input:checked) {
-      border-color: rgba(34, 211, 238, 0.42);
-      background: rgba(34, 211, 238, 0.10);
+      border-color: rgba(249, 115, 22, 0.42);
+      background: rgba(249, 115, 22, 0.10);
       color: var(--accent-primary-text);
     }
 
@@ -1310,8 +1301,8 @@ const categoryEmojiMap: Record<string, string> = {
 
     .tools-chip-toggle:hover,
     .tools-chip-toggle:focus-within {
-      border-color: rgba(34, 211, 238, 0.36);
-      box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.06);
+      border-color: rgba(249, 115, 22, 0.36);
+      box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.06);
       transform: translateY(-1px);
     }
 
@@ -1327,8 +1318,8 @@ const categoryEmojiMap: Record<string, string> = {
     }
 
     .tools-chip-toggle:has(input:checked) {
-      border-color: rgba(34, 211, 238, 0.42);
-      background: rgba(34, 211, 238, 0.10);
+      border-color: rgba(249, 115, 22, 0.42);
+      background: rgba(249, 115, 22, 0.10);
       color: var(--accent-primary-text);
     }
 
@@ -1347,8 +1338,8 @@ const categoryEmojiMap: Record<string, string> = {
       width: 30px;
       min-height: 30px;
       border-radius: 8px;
-      border-color: rgba(34, 211, 238, 0.18);
-      background: rgba(34, 211, 238, 0.06);
+      border-color: rgba(249, 115, 22, 0.18);
+      background: rgba(249, 115, 22, 0.06);
       color: var(--text-muted);
       font-size: 0;
       line-height: 0;
@@ -1379,10 +1370,10 @@ const categoryEmojiMap: Record<string, string> = {
     }
 
     .tools-card-shell .tools-card-compare.is-compared {
-      background: rgba(94, 234, 212, 0.13);
-      border-color: rgba(94, 234, 212, 0.42);
+      background: rgba(253, 186, 116, 0.13);
+      border-color: rgba(253, 186, 116, 0.42);
       color: var(--accent-primary-text);
-      box-shadow: 0 0 0 3px rgba(94, 234, 212, 0.08);
+      box-shadow: 0 0 0 3px rgba(253, 186, 116, 0.08);
     }
 
     .tools-card-shell .tools-card-compare.is-compared::before {
@@ -1399,9 +1390,9 @@ const categoryEmojiMap: Record<string, string> = {
 
     .tools-reset {
       min-height: 40px;
-      border: 1px solid rgba(34, 211, 238, 0.28);
+      border: 1px solid rgba(249, 115, 22, 0.28);
       border-radius: 8px;
-      background: rgba(34, 211, 238, 0.08);
+      background: rgba(249, 115, 22, 0.08);
       color: var(--accent-primary-text);
       cursor: pointer;
       font: inherit;
@@ -1418,8 +1409,8 @@ const categoryEmojiMap: Record<string, string> = {
 
     .tools-reset:hover,
     .tools-reset:focus-visible {
-      border-color: rgba(34, 211, 238, 0.48);
-      background: rgba(34, 211, 238, 0.13);
+      border-color: rgba(249, 115, 22, 0.48);
+      background: rgba(249, 115, 22, 0.13);
       outline: none;
       transform: translateY(-1px);
     }
@@ -1444,7 +1435,7 @@ const categoryEmojiMap: Record<string, string> = {
 
     .tools-empty-state {
       margin: -44px 0 64px;
-      border: 1px dashed rgba(34, 211, 238, 0.3);
+      border: 1px dashed rgba(249, 115, 22, 0.3);
       border-radius: 8px;
       color: var(--text-muted);
       padding: 24px;

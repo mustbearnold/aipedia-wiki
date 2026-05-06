@@ -1,6 +1,5 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import OsPageShell from '../../components/os/OsPageShell.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
 import AnswerContent from '../../components/AnswerContent.astro';
 
@@ -26,15 +25,9 @@ const answerLD = JSON.stringify({
 });
 ---
 
-<BaseLayout title="ChatGPT vs Claude: Which Is Actually Better (2026)?" description="ChatGPT wins on breadth, multimodal tools, Codex, and agents; Claude wins on careful writing, long-context work, and many developer workflows." chrome="os">
+<BaseLayout title="ChatGPT vs Claude: Which Is Actually Better (2026)?" description="ChatGPT wins on breadth, multimodal tools, Codex, and agents; Claude wins on careful writing, long-context work, and many developer workflows.">
   <script type="application/ld+json" set:html={answerLD} />
-  <OsPageShell
-    activeApp="ask"
-    appTitle="Answer"
-    appSubtitle="Definitive answer"
-    command="Read this answer"
-    density="article"
-  >
+  
   <Breadcrumb items={[{ label: 'Answers', href: '/answers/' }, { label: 'ChatGPT vs Claude: which is better?' }]} />
 
   <article class="max-w-2xl mx-auto py-6">
@@ -53,5 +46,4 @@ const answerLD = JSON.stringify({
       <p>This answer reflects flagship models and pricing as of April 2026. See our <a href="/about/scoring/" class="text-[var(--accent-primary)] no-underline hover:underline">scoring methodology</a> for how we evaluate tools.</p>
     </div>
   </article>
-  </OsPageShell>
 </BaseLayout>

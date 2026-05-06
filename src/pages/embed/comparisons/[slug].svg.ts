@@ -50,9 +50,9 @@ export const GET: APIRoute = ({ props }) => {
     const isWinner = winner === t.slug;
     return `
       <g transform="translate(24, ${y})">
-        <text x="0" y="0" font-size="14" font-weight="${isWinner ? '700' : '500'}" fill="${isWinner ? '#22d3ee' : '#ffffff'}">${escapeXml(truncate(t.title, 24))}</text>
+        <text x="0" y="0" font-size="14" font-weight="${isWinner ? '700' : '500'}" fill="${isWinner ? '#f97316' : '#ffffff'}">${escapeXml(truncate(t.title, 24))}</text>
         ${isWinner ? '<text x="' + (t.title.length * 7 + 8) + '" y="-1" font-size="10" fill="#14b8a6">WINNER</text>' : ''}
-        <text x="352" y="0" font-size="14" font-weight="700" fill="${isWinner ? '#22d3ee' : '#cbd5e1'}" text-anchor="end">${scoreStr}<tspan font-size="10" fill="#64748b" font-weight="400">/10</tspan></text>
+        <text x="352" y="0" font-size="14" font-weight="700" fill="${isWinner ? '#f97316' : '#cbd5e1'}" text-anchor="end">${scoreStr}<tspan font-size="10" fill="#64748b" font-weight="400">/10</tspan></text>
       </g>`;
   }).join('');
 
@@ -68,12 +68,12 @@ export const GET: APIRoute = ({ props }) => {
   </defs>
   <rect width="384" height="${height}" rx="12" fill="url(#g)" stroke="#2a2640" stroke-width="1"/>
   <g font-family="Metropolis, sans-serif">
-    <text x="24" y="28" font-size="10" font-weight="600" fill="#22d3ee" letter-spacing="1.2">AIPEDIA.WIKI</text>
+    <text x="24" y="28" font-size="10" font-weight="600" fill="#f97316" letter-spacing="1.2">AIPEDIA.WIKI</text>
     <text x="24" y="50" font-size="14" font-weight="700" fill="#ffffff">${escapeXml(truncate(title, 40))}</text>
     ${rows}
     <g transform="translate(24, ${88 + tools.length * 28})">
-      <rect x="0" y="-14" width="336" height="28" rx="6" fill="rgba(34, 211, 238,0.12)" stroke="rgba(34, 211, 238,0.3)" stroke-width="1"/>
-      <text x="12" y="4" font-size="12" font-weight="600" fill="#22d3ee">${escapeXml(verdict)}</text>
+      <rect x="0" y="-14" width="336" height="28" rx="6" fill="rgba(249, 115, 22,0.12)" stroke="rgba(249, 115, 22,0.3)" stroke-width="1"/>
+      <text x="12" y="4" font-size="12" font-weight="600" fill="#f97316">${escapeXml(verdict)}</text>
       <text x="324" y="4" font-size="11" fill="#94a3b8" text-anchor="end">Read full &gt;</text>
     </g>
   </g>
