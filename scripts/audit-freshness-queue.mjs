@@ -49,6 +49,11 @@ function scalar(frontmatter, key) {
   return value;
 }
 
+function isDeadTool(frontmatter) {
+  const status = scalar(frontmatter, 'status').toLowerCase();
+  return status === 'dead' || status === 'discontinued';
+}
+
 function markdownFiles(dir) {
   if (!existsSync(dir)) return [];
   return readdirSync(dir, { withFileTypes: true })
@@ -158,14 +163,16 @@ const missingTrustMetadata = registry.sources
   .filter((source) => !source.trust_tier || !source.volatility)
   .map((source) => ({ id: source.id ?? '', missing: ['trust_tier', 'volatility'].filter((key) => !source[key]) }));
 
-const toolRecords = markdownFiles(TOOLS_DIR).map((path) => {
+const toolRecordsAll = markdownFiles(TOOLS_DIR).map((path) => {
   const md = readMarkdown(path);
   const slug = scalar(md.frontmatter, 'slug') || path.split(/[\\/]/).pop().replace(/\.md$/, '');
   const title = scalar(md.frontmatter, 'title') || slug;
   const facts = parseFacts(md.frontmatter);
   const factEntries = Object.entries(facts).filter(([, fact]) => meaningfulValue(fact));
-  return { path, slug, title, raw: md.raw, facts, factEntries };
+  const is_dead = isDeadTool(md.frontmatter);
+  return { path, slug, title, raw: md.raw, facts, factEntries, is_dead };
 });
+const toolRecords = toolRecordsAll.filter((tool) => !tool.is_dead);
 const comparisonImpact = countComparisonMentions(toolRecords.map((tool) => tool.slug));
 
 const now = new Date();
@@ -239,6 +246,7 @@ const result = {
   review_window_days: REVIEW_WINDOW_DAYS,
   totals: {
     tools: toolRecords.length,
+    tools_dead: toolRecordsAll.length - toolRecords.length,
     facts: toolRecords.reduce((sum, tool) => sum + tool.factEntries.length, 0),
     sources: registry.sources.length,
     baseline_generic_pages: baselineGenericPages.length,

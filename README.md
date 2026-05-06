@@ -7,6 +7,7 @@ Astro source for aipedia.wiki, an AI tools encyclopedia and comparison system.
 ```bash
 npm ci
 npm run check
+npm run editorial:weekly
 npm run build
 npm run deploy
 ```
