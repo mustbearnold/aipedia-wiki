@@ -8,6 +8,28 @@ const toolsCount = allTools.filter(
 ---
 
 <style is:global>
+  /* Prevent default browser blue selection/visited styles inside modal. */
+  #search-modal ::selection {
+    background: rgba(249, 115, 22, 0.32);
+    color: var(--text-primary);
+  }
+  #search-modal a {
+    color: inherit;
+  }
+  #search-modal a:visited {
+    color: inherit;
+  }
+
+  /* Modal palette: warm charcoal (avoid blue/purple cast). */
+  #search-modal {
+    --s-ink-line: rgba(255, 255, 255, 0.10);
+    --s-ink-line-soft: rgba(255, 255, 255, 0.08);
+    --s-ink-muted: rgba(255, 255, 255, 0.72);
+    --s-ink-muted-2: rgba(255, 255, 255, 0.62);
+    --s-warm-panel: rgb(14, 11, 9);
+    --s-warm-panel-2: rgb(26, 22, 20);
+  }
+
   #search-modal {
     display: none; /* toggled via .is-visible class, not inline style */
     position: fixed;
@@ -35,11 +57,10 @@ const toolsCount = allTools.filter(
   #search-backdrop {
     position: absolute;
     inset: 0;
-    background:
-      radial-gradient(circle at 50% 18%, rgba(253, 186, 116, 0.10), transparent 34%),
-      rgba(4, 6, 12, 0.88);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    /* Warm charcoal overlay (no slate tint). */
+    background: rgba(0, 0, 0, 0.72);
+    backdrop-filter: blur(12px) saturate(140%);
+    -webkit-backdrop-filter: blur(12px) saturate(140%);
     opacity: 0;
     transition: opacity 220ms ease;
   }
@@ -48,7 +69,7 @@ const toolsCount = allTools.filter(
   }
   /* Light theme */
   html.light #search-backdrop {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.45);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
   }
@@ -62,11 +83,12 @@ const toolsCount = allTools.filter(
     max-height: calc(100dvh - 24px);
     display: flex;
     flex-direction: column;
+    /* Match homepage hero-results surface (warm blacks). */
     background:
-      linear-gradient(180deg, rgba(16, 24, 38, 0.98), rgba(8, 11, 19, 0.99)),
-      #080b13;
-    border: 1px solid rgba(253, 186, 116, 0.24);
-    border-radius: 8px;
+      linear-gradient(180deg, var(--s-warm-panel-2), var(--s-warm-panel)),
+      #0f0d0c;
+    border: 1px solid rgba(249, 115, 22, 0.28);
+    border-radius: 12px;
     box-shadow:
       0 34px 90px rgba(0, 0, 0, 0.72),
       0 0 0 1px rgba(255, 255, 255, 0.03),
@@ -96,9 +118,9 @@ const toolsCount = allTools.filter(
   /* Light theme override */
   html.light #search-box {
     background:
-      radial-gradient(ellipse 80% 60% at 100% 0%, rgba(249, 115, 22, 0.07), transparent 60%),
-      #ffffff;
-    border-color: rgba(0,0,0,0.08);
+      linear-gradient(180deg, rgb(255, 255, 255), rgb(255, 251, 247)),
+      #fffdfb;
+    border-color: rgba(249, 115, 22, 0.24);
   }
 
   .s-panel-head {
@@ -107,10 +129,10 @@ const toolsCount = allTools.filter(
     justify-content: space-between;
     gap: 16px;
     padding: 15px 18px 13px;
-    border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+    border-bottom: 1px solid var(--s-ink-line-soft);
     background:
       linear-gradient(90deg, rgba(253, 186, 116, 0.10), rgba(249, 115, 22, 0.04) 42%, transparent),
-      rgba(2, 6, 23, 0.34);
+      rgba(14, 11, 9, 0.46);
   }
   .s-panel-title {
     display: flex;
@@ -139,16 +161,16 @@ const toolsCount = allTools.filter(
     gap: 8px;
     flex-wrap: wrap;
     justify-content: flex-end;
-    color: #94a3b8;
+    color: var(--s-ink-muted-2);
     font-size: 10px;
     font-weight: 750;
     letter-spacing: 0.08em;
     text-transform: uppercase;
   }
   .s-panel-meta span {
-    border: 1px solid rgba(148, 163, 184, 0.16);
+    border: 1px solid var(--s-ink-line);
     border-radius: 5px;
-    background: rgba(15, 23, 42, 0.62);
+    background: rgba(14, 11, 9, 0.70);
     padding: 5px 8px;
     white-space: nowrap;
   }
@@ -158,8 +180,8 @@ const toolsCount = allTools.filter(
     display: flex;
     gap: 4px;
     padding: 8px 14px;
-    border-bottom: 1px solid rgba(148, 163, 184, 0.14);
-    background: rgba(2, 6, 23, 0.28);
+    border-bottom: 1px solid var(--s-ink-line-soft);
+    background: rgba(14, 11, 9, 0.42);
   }
   html.light .s-tabs { border-bottom-color: rgba(0,0,0,0.06); }
   .s-tab {
@@ -184,6 +206,13 @@ const toolsCount = allTools.filter(
   .s-tab::after { display: none; }
   .s-tab:hover {
     color: var(--text-primary);
+  }
+  .s-tab:focus,
+  .s-tab:focus-visible {
+    outline: none;
+  }
+  .s-tab:focus-visible {
+    box-shadow: inset 0 0 0 1px rgba(253, 186, 116, 0.24);
   }
   .s-tab.active {
     color: #f8fafc;
@@ -218,7 +247,7 @@ const toolsCount = allTools.filter(
     font-weight: 800;
     letter-spacing: 0.16em;
     text-transform: uppercase;
-    color: #94a3b8;
+    color: var(--s-ink-muted-2);
     opacity: 0.84;
   }
 
@@ -268,6 +297,20 @@ const toolsCount = allTools.filter(
     margin: 1px 0 !important;
     position: relative;
     border: 1px solid transparent;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  #search-results .s-result:focus,
+  #search-results .s-result:focus-visible,
+  #search-results .g-result:focus,
+  #search-results .g-result:focus-visible {
+    outline: none;
+  }
+  #search-results .s-result:focus-visible,
+  #search-results .g-result:focus-visible {
+    background: rgba(26, 22, 20, 0.86);
+    border-color: rgba(253, 186, 116, 0.22);
+    box-shadow: inset 0 0 0 1px rgba(253, 186, 116, 0.32), 0 12px 26px rgba(0, 0, 0, 0.20);
   }
   /* Left-edge accent stripe — hidden at rest, slides in on hover/select. */
   #search-results .s-result::before {
@@ -286,7 +329,7 @@ const toolsCount = allTools.filter(
   #search-results .s-result:hover,
   #search-results .s-result.is-selected,
   #search-results .g-result.is-selected {
-    background: rgba(15, 23, 42, 0.88);
+    background: rgba(26, 22, 20, 0.86);
     border-color: rgba(253, 186, 116, 0.18);
   }
   #search-results .s-result.is-selected::before,
@@ -341,7 +384,7 @@ const toolsCount = allTools.filter(
     align-items: center;
     justify-content: center;
     border-radius: 8px;
-    background: rgba(15, 23, 42, 0.95);
+    background: rgba(14, 11, 9, 0.92);
     border: 1px solid rgba(253, 186, 116, 0.22);
     color: #fdba74;
     font-size: 10px;
@@ -358,9 +401,9 @@ const toolsCount = allTools.filter(
     white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
   }
   #search-results .s-price {
-    font-size: 10px; font-weight: 700; color: #a8b3c7; flex-shrink: 0;
+    font-size: 10px; font-weight: 700; color: var(--s-ink-muted); flex-shrink: 0;
     padding: 4px 7px; border-radius: 5px;
-    background: rgba(15, 23, 42, 0.72); border: 1px solid rgba(148, 163, 184, 0.16);
+    background: rgba(14, 11, 9, 0.78); border: 1px solid var(--s-ink-line);
     white-space: nowrap;
   }
 
@@ -387,7 +430,7 @@ const toolsCount = allTools.filter(
     align-items: center;
     gap: 13px;
     padding: 18px 20px;
-    border-bottom: 1px solid rgba(148, 163, 184, 0.14);
+    border-bottom: 1px solid var(--s-ink-line-soft);
     position: relative;
     flex-shrink: 0;
   }
@@ -412,6 +455,21 @@ const toolsCount = allTools.filter(
     font-family: inherit;
     letter-spacing: 0;
     min-width: 0;
+    caret-color: #fb923c;
+  }
+  #search-input::selection {
+    background: rgba(249, 115, 22, 0.32);
+    color: var(--text-primary);
+  }
+  /* Chrome/Edge autofill (can appear as blue/yellow tint). */
+  #search-input:-webkit-autofill,
+  #search-input:-webkit-autofill:hover,
+  #search-input:-webkit-autofill:focus,
+  #search-input:-webkit-autofill:active {
+    -webkit-text-fill-color: var(--text-primary);
+    transition: background-color 999999s ease-out 0s;
+    box-shadow: 0 0 0px 1000px rgba(0, 0, 0, 0) inset;
+    caret-color: #fb923c;
   }
   #search-input::placeholder {
     color: var(--text-muted);
@@ -443,8 +501,8 @@ const toolsCount = allTools.filter(
     justify-content: space-between;
     gap: 10px;
     padding: 10px 14px;
-    border-top: 1px solid rgba(148, 163, 184, 0.12);
-    background: rgba(2, 6, 23, 0.34);
+    border-top: 1px solid var(--s-ink-line-soft);
+    background: rgba(14, 11, 9, 0.48);
     font-size: 10.5px;
     color: var(--text-muted);
     flex-shrink: 0;
@@ -509,8 +567,8 @@ const toolsCount = allTools.filter(
     gap: 8px;
   }
   .s-suggestion {
-    background: rgba(15, 23, 42, 0.74);
-    border: 1px solid rgba(148, 163, 184, 0.16);
+    background: rgba(14, 11, 9, 0.80);
+    border: 1px solid var(--s-ink-line);
     border-radius: 6px;
     padding: 7px 10px;
     font-size: 11px;

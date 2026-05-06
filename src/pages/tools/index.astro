@@ -972,6 +972,12 @@ const categoryEmojiMap: Record<string, string> = {
       scrollbar-color: rgba(253, 186, 116, 0.36) transparent;
     }
 
+    /* Avoid default browser blue selection inside dropdown. */
+    .tools-search-results ::selection {
+      background: rgba(249, 115, 22, 0.32);
+      color: var(--text-primary);
+    }
+
     :global(.tools-search-result) {
       display: grid;
       grid-template-columns: minmax(0, 1fr) auto;
@@ -982,10 +988,16 @@ const categoryEmojiMap: Record<string, string> = {
       color: var(--text-secondary);
       padding: 8px 10px;
       text-decoration: none;
+      outline: none;
+      -webkit-tap-highlight-color: transparent;
       transition:
         background var(--tools-fast) var(--tools-ease),
         color var(--tools-fast) var(--tools-ease),
         transform var(--tools-base) var(--tools-ease);
+    }
+
+    :global(.tools-search-result:focus) {
+      outline: none;
     }
 
     :global(.tools-search-result:hover),
@@ -994,6 +1006,19 @@ const categoryEmojiMap: Record<string, string> = {
       color: var(--text-primary);
       outline: none;
       transform: translateX(2px);
+    }
+
+    :global(.tools-search-result:visited) {
+      color: var(--text-secondary);
+    }
+
+    :global(.tools-search-result:visited) :global(.tools-search-result-main strong) {
+      color: var(--text-primary);
+    }
+
+    :global(.tools-search-result:visited) :global(.tools-search-result-main small),
+    :global(.tools-search-result:visited) :global(.tools-search-result-meta) {
+      color: var(--text-muted);
     }
 
     :global(.tools-search-result-main),

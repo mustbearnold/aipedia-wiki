@@ -2,7 +2,7 @@
 type: tool
 slug: servicenow
 title: "ServiceNow (Otto / AI Control Tower)"
-tagline: Enterprise agent/workflow control plane: ServiceNow’s Otto + AI Control Tower packaging for governed autonomous work across ITSM, employee workflows, and business operations.
+tagline: "Enterprise agent/workflow control plane: ServiceNow’s Otto + AI Control Tower packaging for governed autonomous work across ITSM, employee workflows, and business operations."
 category: ai-automation
 secondary_categories: [ai-enterprise, ai-agents]
 company: servicenow
