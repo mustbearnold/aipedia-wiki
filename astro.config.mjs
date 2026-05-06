@@ -12,9 +12,25 @@ import cloudflare from '@astrojs/cloudflare';
 const isDev = process.env.NODE_ENV !== 'production' && !process.env.CF_PAGES;
 const isFastBuild = process.env.AIPEDIA_FAST_BUILD === '1';
 
+const SITEMAP_EXCLUDED_PATHS = new Set([
+  '/about/editor/',
+  '/tool-finder/',
+]);
+
+function shouldIncludeInSitemap(page) {
+  const url = new URL(page, 'https://aipedia.wiki');
+  const path = url.pathname;
+
+  if (path.startsWith('/admin/')) return false;
+  if (path.startsWith('/api/')) return false;
+  if (SITEMAP_EXCLUDED_PATHS.has(path)) return false;
+
+  return true;
+}
+
 export default defineConfig({
   site: 'https://aipedia.wiki',
-  integrations: [sitemap()],
+  integrations: [sitemap({ filter: shouldIncludeInSitemap })],
   output: 'static',
   outDir: isFastBuild ? './dist-fast' : './dist',
   trailingSlash: 'always',

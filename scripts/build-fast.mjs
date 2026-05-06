@@ -18,4 +18,11 @@ const result = spawnSync(process.execPath, [astroBin, 'build'], {
   stdio: 'inherit',
 });
 
-process.exit(result.status ?? 1);
+if ((result.status ?? 1) !== 0) process.exit(result.status ?? 1);
+
+const auditResult = spawnSync(process.execPath, ['scripts/audit-indexability.mjs', '--dist', 'dist-fast/client'], {
+  cwd: PROJECT_DIR,
+  stdio: 'inherit',
+});
+
+process.exit(auditResult.status ?? 1);

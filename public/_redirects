@@ -15,6 +15,13 @@
 /compare/chatgpt-vs-semrush/ /tools/semrush/ 301
 /compare/chatgpt-vs-semrush /tools/semrush/ 301
 
+# Legacy utility URLs. Keep these as true edge redirects so Search Console
+# does not see static 200 OK meta-refresh placeholders.
+/about/editor/ /about/editorial/ 301
+/about/editor /about/editorial/ 301
+/tool-finder/ /search/ 301
+/tool-finder /search/ 301
+
 # Retired design/demo routes that were visible during early site iteration.
 # Redirect them to canonical public pages so Search Console stops reporting
 # the custom noindex 404 page for these stale URLs.
