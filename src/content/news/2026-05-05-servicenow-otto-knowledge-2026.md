@@ -9,6 +9,8 @@ categories: [ai-enterprise, ai-agents, ai-automation, ai-business]
 author: "aipedia.wiki Editorial"
 last_updated: 2026-05-06
 last_verified: 2026-05-06
+affects: [servicenow]
+related_tools: [servicenow]
 sources:
   - url: https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-turns-enterprise-AI-chaos-into-control-with-the-platform-for-governed-autonomous-work/default.aspx
     title: "ServiceNow turns enterprise AI chaos into control with the platform for governed, autonomous work"

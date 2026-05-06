@@ -3,6 +3,54 @@
   "description": "Canonical source registry for AIpedia fact provenance. Use stable IDs in facts.source_id and price_history.source_id so pricing/fact updates can be audited and updated from one registry.",
   "sources": [
     {
+      "id": "servicenow-governed-autonomous-work-2026",
+      "label": "ServiceNow Knowledge 2026: governed autonomous work press release",
+      "url": "https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-turns-enterprise-AI-chaos-into-control-with-the-platform-for-governed-autonomous-work/default.aspx",
+      "type": "newsroom",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "servicenow-otto-2026",
+      "label": "ServiceNow Knowledge 2026: Otto press release",
+      "url": "https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-Otto-creates-the-unified-AI-experience-for-the-enterprise/default.aspx",
+      "type": "newsroom",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "servicenow-products",
+      "label": "ServiceNow products overview",
+      "url": "https://www.servicenow.com/products.html",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "ibm-think-2026-prnewswire",
+      "label": "IBM Think 2026 press release (PR Newswire)",
+      "url": "https://www.prnewswire.com/news-releases/think-2026-ibm-delivers-the-blueprint-for-the-ai-operating-model-as-the-ai-divide-widens-302762136.html",
+      "type": "newsroom",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "ibm-watsonx-orchestrate-announcement",
+      "label": "IBM: Manage all your AI agents with watsonx Orchestrate",
+      "url": "https://www.ibm.com/new/announcements/manage-all-your-ai-agents-in-one-place-with-watsonx-orchestrate",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "ibm-watsonx-portfolio",
+      "label": "IBM watsonx portfolio",
+      "url": "https://www.ibm.com/watsonx",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
       "id": "activepieces-docs",
       "label": "Activepieces docs",
       "url": "https://www.activepieces.com/docs",

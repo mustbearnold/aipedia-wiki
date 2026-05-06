@@ -9,6 +9,8 @@ categories: [ai-enterprise, ai-agents, ai-business, ai-infrastructure]
 author: "aipedia.wiki Editorial"
 last_updated: 2026-05-06
 last_verified: 2026-05-06
+affects: [watsonx-orchestrate]
+related_tools: [watsonx-orchestrate]
 sources:
   - url: https://www.prnewswire.com/news-releases/think-2026-ibm-delivers-the-blueprint-for-the-ai-operating-model-as-the-ai-divide-widens-302762136.html
     title: "Think 2026: IBM Delivers the Blueprint for the AI Operating Model as the AI Divide Widens"
