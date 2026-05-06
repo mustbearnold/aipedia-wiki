@@ -17,7 +17,7 @@ test('site KPI audit emits stable JSON with core remediation metrics', () => {
   const data = JSON.parse(result.stdout);
   assert.equal(data.collections.tools, 247);
   assert.equal(data.collections.comparisons, 263);
-  assert.equal(data.collections.news, 197);
+  assert.equal(data.collections.news, 202);
   assert.equal(data.collections['use-cases'], 92);
 
   assert.ok(data.tools.status.active >= 200);
@@ -34,6 +34,6 @@ test('site KPI audit emits stable JSON with core remediation metrics', () => {
   assert.ok(data.comparisons.missing_canonical_fact_table >= 0);
   assert.ok(Array.isArray(data.comparisons.shortest));
 
-  assert.equal(data.news.total, 197);
+  assert.equal(data.news.total, 202);
   assert.ok(data.news.by_month['2026-04'] >= 1);
 });
