@@ -2,13 +2,13 @@
 type: tool
 slug: dalle
 title: DALL-E
-tagline: OpenAI's older image generation model family. DALL-E 2 and DALL-E 3 are deprecated in the API and scheduled for removal on May 12, 2026.
+tagline: OpenAI's older image generation model family. DALL-E 2 and DALL-E 3 are deprecated and scheduled for API removal on May 12, 2026.
 category: ai-image
 company: OpenAI
 url: https://platform.openai.com/docs/guides/image-generation
 pricing_model: paid
 price_range: "Deprecated API models; use current GPT Image pricing"
-status: active
+status: dead
 launched: 2022-04
 last_updated: 2026-05-05
 last_verified: 2026-05-05
@@ -25,12 +25,20 @@ scores:
   moat: 0
   longevity: 0
 facts:
+  status:
+    value: "DALL-E 2 and DALL-E 3 are deprecated OpenAI image API models scheduled for removal on May 12, 2026. Treat DALL-E as discontinued for new work; use current GPT Image models."
+    source: "https://platform.openai.com/docs/guides/image-generation"
+    source_label: "OpenAI image generation guide"
+    source_id: dalle-image-generation
+    verified_at: 2026-05-05
+    volatility: low
+    confidence: high
   flagship_model:
     value: "DALL-E 3, deprecated in favor of GPT Image models for new builds"
     source: "https://platform.openai.com/docs/guides/image-generation"
     source_id: dalle-best-for
     verified_at: 2026-05-05
-    next_review_at: 2026-05-12
+    volatility: low
     confidence: high
     status: deprecated
   image_generation:
@@ -39,14 +47,23 @@ facts:
     source_label: "OpenAI image generation guide"
     source_id: dalle-image-generation
     verified_at: 2026-05-05
+    volatility: low
     confidence: high
     status: deprecated
+  pricing_anchor:
+    value: "Discontinued for new builds. Use current GPT Image API pricing rather than starting new work on DALL-E."
+    source: "https://platform.openai.com/docs/pricing/"
+    source_label: "OpenAI pricing"
+    source_id: dalle-best-paid-tier
+    verified_at: 2026-05-05
+    volatility: low
+    confidence: high
   best_paid_tier:
     value: "Use current OpenAI GPT Image API pricing rather than starting new work on DALL-E"
     source: "https://platform.openai.com/docs/pricing/"
     source_id: dalle-best-paid-tier
     verified_at: 2026-05-05
-    next_review_at: 2026-05-12
+    volatility: low
     confidence: high
     status: deprecated
   best_for:
@@ -54,6 +71,7 @@ facts:
     source: "https://platform.openai.com/docs/deprecations/2023-03-20-codex-models%23.doc"
     source_id: dalle-best-for
     verified_at: 2026-05-05
+    volatility: low
     confidence: high
     status: deprecated
 tags: [ai-image, image-generation, openai, retired, chatgpt, historical]
@@ -71,7 +89,7 @@ seo_title: "DALL-E: Deprecated OpenAI Image Model Family (2026)"
 meta_description: "DALL-E 2 and DALL-E 3 are older OpenAI image models scheduled for API removal on May 12, 2026. New builds should use current GPT Image models."
 author: "aipedia.wiki Editorial"
 quick_answer: >-
-  DALL-E is OpenAI's older image model family. DALL-E 2 and DALL-E 3 are deprecated in the API and scheduled for removal on May 12, 2026. New OpenAI image work should use current GPT Image models instead.
+  DALL-E is OpenAI's older image model family. DALL-E 2 and DALL-E 3 are deprecated and scheduled for API removal on May 12, 2026. Treat DALL-E as discontinued for new work and use current GPT Image models instead.
 ---
 
 # DALL-E
