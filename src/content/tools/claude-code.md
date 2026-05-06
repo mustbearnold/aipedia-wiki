@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "$20-$200/month"
 status: active
 launched: 2025-02
-last_updated: 2026-05-03
-last_verified: 2026-05-03
+last_updated: 2026-05-06
+last_verified: 2026-05-06
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -123,6 +123,7 @@ Claude Opus 4.7 (released April 16, 2026) is the default backing model. Access i
 
 ## Recent developments (April-May 2026)
 
+- **May 5:** [Anthropic ships ten financial-services agent templates](/news/2026-05-05-anthropic-financial-services-agent-templates/) with Claude Code and Cowork plugins plus Managed Agent cookbooks. Finance teams get packaged pitch, KYC, and close workflows, but engineering still owns permissions, audit logs, and connector scopes.
 - **May 1:** [The MCP STDIO command-execution flaw reframed MCP server configs as privileged shell-access surfaces](/news/2026-05-03-mcp-stdio-command-execution-flaw/). Claude Code teams should inventory MCP configs, sandbox STDIO tools, and treat config approval as a security event, not a routine plugin install.
 - **April 30:** [Claude Security entered public beta for Enterprise codebase scans](/news/2026-04-30-claude-security-public-beta/). It gives Anthropic a first-party vulnerability-review and patch-proposal surface next to Claude Code's terminal agent loop.
 - **April 30:** [A coding-agent security roundup warned that attackers keep targeting credentials, not model weights](/news/2026-04-30-ai-coding-agent-credential-security-roundup/). Claude Code teams should treat permissions, command approvals, secrets, and environment separation as first-order security controls.

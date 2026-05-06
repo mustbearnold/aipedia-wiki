@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$249.99/month"
 status: active
 launched: 2023-12
-last_updated: 2026-05-05
-last_verified: 2026-05-05
+last_updated: 2026-05-06
+last_verified: 2026-05-06
 update_frequency: monthly
 seo_title: "Gemini: Features, Pricing & Review (April 2026)"
 meta_description: "Gemini 3.1 Pro is Google's flagship (Feb 2026, 1M token context). Google AI Pro $19.99/mo bundles 5TB storage, Veo 3.1, and Nano Banana 2. Ultra $249.99/mo unlocks Deep Think 3.1 and Nano Banana Pro. Best AI for Google Workspace users."
@@ -218,6 +218,7 @@ Google DeepMind's multimodal AI assistant. **Gemini 3.1 Pro** is the flagship as
 
 ## Recent developments (April-May 2026)
 
+- **May 5:** [Gemini API File Search adds multimodal RAG, metadata filters, and page citations](/news/2026-05-05-gemini-api-file-search-multimodal-rag/), tightening Google's managed retrieval story for agents and assistants that mix documents and visual assets.
 - **May 2:** [A reported Gemini UI string points to a possible Omni video-generation surface ahead of Google I/O](/news/2026-05-03-google-gemini-omni-video-generation-test/). Treat Omni as speculative until Google confirms it; the strategic watch item is whether Gemini unifies Veo video and Nano Banana image generation under one media workflow.
 - **May 1:** [The Pentagon expanded classified-network AI access to eight major vendors](/news/2026-05-01-pentagon-classified-ai-network-deals/), including Google.
 - **April 30:** [Gemini started rolling out to cars with Google built in](/news/2026-04-30-gemini-google-built-in-cars-rollout/), replacing the older Google Assistant car experience with a more conversational assistant surface. US English support begins first, with broader availability expected over time.
