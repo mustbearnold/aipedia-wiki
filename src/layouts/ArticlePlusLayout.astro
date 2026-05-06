@@ -7,6 +7,7 @@
 import BaseLayout from './BaseLayout.astro';
 import '../styles/t2-canvas.css';
 import BreadcrumbLD from '../components/seo/BreadcrumbLD.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
 import ArticleLD from '../components/seo/ArticleLD.astro';
 import ShareButtons from '../components/ShareButtons.astro';
 import FAQAccordionScript from '../components/FAQAccordionScript.astro';
@@ -126,21 +127,7 @@ const tocHeadings = (headings ?? []).filter((h) => h.depth === 2).map((h) => ({ 
 
   
   <div class:list={['t2-canvas', homeSurfaceCards && 'news-article-shell']}>
-    {breadcrumbs && (
-      <nav class="t2-breadcrumb" aria-label="Breadcrumb">
-        <a href="/">Home</a>
-        {breadcrumbs.map((b, i) => (
-          <>
-            <span aria-hidden="true">/</span>
-            {b.href && i < breadcrumbs.length - 1 ? (
-              <a href={b.href}>{b.label}</a>
-            ) : (
-              <span class="t2-breadcrumb-current" aria-current="page">{b.label}</span>
-            )}
-          </>
-        ))}
-      </nav>
-    )}
+    {breadcrumbs && <Breadcrumb items={breadcrumbs} />}
 
     <!-- Editorial eyebrow -->
     <div class="t2-eyebrow" data-pagefind-ignore>

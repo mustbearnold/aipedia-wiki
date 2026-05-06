@@ -1,12 +1,20 @@
 ---
 interface Props {
   items: Array<{ label: string; href?: string }>;
+  class?: string;
 }
 
-const { items } = Astro.props;
+const { items, class: className, ...rest } = Astro.props;
 ---
 
-<nav class="flex items-center gap-3 text-xs text-[var(--text-muted)] mb-8 mt-4 flex-wrap" aria-label="Breadcrumb">
+<nav
+  class:list={[
+    'site-breadcrumb flex items-center gap-3 text-xs text-[var(--text-muted)] mb-8 mt-4 flex-wrap',
+    className,
+  ]}
+  aria-label="Breadcrumb"
+  {...rest}
+>
   <button
     id="nav-back-btn"
     type="button"

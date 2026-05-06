@@ -5,6 +5,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import IndexHero from '../../components/design/IndexHero.astro';
 import MetricStrip from '../../components/design/MetricStrip.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
 import { getCollection } from 'astro:content';
 import '../../styles/t2-canvas.css';
 
@@ -308,11 +309,7 @@ const categoriesCovered = new Set(
   
   <div class="t2-canvas guides-canvas site-directory-canvas guides-page-root">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
-    <nav class="t2-breadcrumb" aria-label="Breadcrumb">
-      <a href="/">Home</a>
-      <span aria-hidden="true">/</span>
-      <span class="t2-breadcrumb-current" aria-current="page">Use cases</span>
-    </nav>
+    <Breadcrumb items={[{ label: 'Use cases' }]} />
 
     <IndexHero
       title="Use cases"

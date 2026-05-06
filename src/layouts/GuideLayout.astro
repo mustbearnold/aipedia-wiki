@@ -6,6 +6,7 @@
 import BaseLayout from './BaseLayout.astro';
 import '../styles/t2-canvas.css';
 import BreadcrumbLD from '../components/seo/BreadcrumbLD.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
 import ItemListLD from '../components/seo/ItemListLD.astro';
 import ArticleLD from '../components/seo/ArticleLD.astro';
 import ShareButtons from '../components/ShareButtons.astro';
@@ -113,13 +114,12 @@ const tocHeadings = (headings ?? []).filter((h) => h.depth === 2).map((h) => ({ 
 
   
     <div class="t2-canvas">
-    <nav class="t2-breadcrumb" aria-label="Breadcrumb">
-      <a href="/">Home</a>
-      <span aria-hidden="true">/</span>
-      <a href="/guides/">Guides</a>
-      <span aria-hidden="true">/</span>
-      <span class="t2-breadcrumb-current" aria-current="page">{title}</span>
-    </nav>
+    <Breadcrumb
+      items={[
+        { label: 'Guides', href: '/guides/' },
+        { label: title },
+      ]}
+    />
 
     <!-- Editorial eyebrow -->
     <div class="t2-eyebrow" data-pagefind-ignore>

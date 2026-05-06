@@ -341,9 +341,6 @@ const categoryEmojiMap: Record<string, string> = {
             emoji={categoryEmojiMap[cat] ?? '\uD83D\uDD27'}
             scores={tool.data.scores}
           />
-          <button type="button" class="tools-card-compare" data-compare-add={slug} aria-pressed="false" aria-label={`Compare ${tool.data.title}`} title="Compare">
-            <span data-compare-label>Compare</span>
-          </button>
         </div>
       );
     })}
@@ -1353,64 +1350,6 @@ const categoryEmojiMap: Record<string, string> = {
       display: block;
       transition: opacity var(--tools-base) var(--tools-ease), transform var(--tools-base) var(--tools-ease);
       will-change: transform, opacity;
-    }
-
-    .tools-card-shell .tools-card-compare {
-      position: absolute;
-      right: 44px;
-      bottom: 12px;
-      z-index: 2;
-      width: 30px;
-      min-height: 30px;
-      border-radius: 8px;
-      border-color: rgba(249, 115, 22, 0.18);
-      background: rgba(249, 115, 22, 0.06);
-      color: var(--text-muted);
-      font-size: 0;
-      line-height: 0;
-      padding: 0;
-      opacity: 0.72;
-      transform: none;
-      transition:
-        opacity var(--tools-fast) var(--tools-ease),
-        transform var(--tools-base) var(--tools-ease),
-        border-color var(--tools-base) var(--tools-ease),
-        background var(--tools-base) var(--tools-ease),
-        color var(--tools-fast) var(--tools-ease),
-        box-shadow var(--tools-base) var(--tools-ease);
-    }
-
-    .tools-card-shell .tools-card-compare::before {
-      content: '+';
-      font-size: 18px;
-      font-weight: 900;
-      line-height: 1;
-    }
-
-    .tools-card-shell:hover .tools-card-compare,
-    .tools-card-shell:focus-within .tools-card-compare,
-    .tools-card-shell .tools-card-compare.is-compared {
-      opacity: 1;
-      transform: none;
-    }
-
-    .tools-card-shell .tools-card-compare.is-compared {
-      background: rgba(253, 186, 116, 0.13);
-      border-color: rgba(253, 186, 116, 0.42);
-      color: var(--accent-primary-text);
-      box-shadow: 0 0 0 3px rgba(253, 186, 116, 0.08);
-    }
-
-    .tools-card-shell .tools-card-compare.is-compared::before {
-      content: '✓';
-      font-size: 15px;
-    }
-
-    @media (hover: none) {
-      .tools-card-shell .tools-card-compare {
-        opacity: 1;
-        transform: none;
-      }
     }
 
     .tools-reset {

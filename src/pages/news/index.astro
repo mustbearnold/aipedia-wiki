@@ -18,6 +18,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import EmailCapture from '../../components/EmailCapture.astro';
 import IndexHero from '../../components/design/IndexHero.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
 import BreadcrumbLD from '../../components/seo/BreadcrumbLD.astro';
 import CollectionPageLD from '../../components/seo/CollectionPageLD.astro';
 import ToolLogo from '../../components/ToolLogo.astro';
@@ -225,12 +226,7 @@ const newsItems = sorted.slice(0, 100).map((item) => ({
   
     <div class="p3-canvas site-directory-canvas news-page-root">
 
-    <!-- Breadcrumbs -->
-    <nav class="p3-crumbs" aria-label="Breadcrumb" data-reveal>
-      <a href="/">Home</a>
-      <span class="p3-crumbs-sep">/</span>
-      <span class="p3-crumbs-current" aria-current="page">News</span>
-    </nav>
+    <Breadcrumb items={[{ label: 'News' }]} data-reveal />
 
     <IndexHero
       title="The AI news"

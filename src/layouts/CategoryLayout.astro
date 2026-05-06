@@ -5,6 +5,7 @@
  */
 import BaseLayout from './BaseLayout.astro';
 import '../styles/t2-canvas.css';
+import Breadcrumb from '../components/Breadcrumb.astro';
 import BreadcrumbLD from '../components/seo/BreadcrumbLD.astro';
 import ItemListLD from '../components/seo/ItemListLD.astro';
 import ShareButtons from '../components/ShareButtons.astro';
@@ -153,14 +154,12 @@ const pricingFilters = [
   )}
 
     <div class="t2-canvas category-detail-page" data-home-page>
-    <!-- Breadcrumb -->
-    <nav class="t2-breadcrumb" aria-label="Breadcrumb">
-      <a href="/">Home</a>
-      <span aria-hidden="true">/</span>
-      <a href="/categories/">Categories</a>
-      <span aria-hidden="true">/</span>
-      <span class="t2-breadcrumb-current" aria-current="page">{title}</span>
-    </nav>
+    <Breadcrumb
+      items={[
+        { label: 'Categories', href: '/categories/' },
+        { label: title },
+      ]}
+    />
 
     <!-- Editorial eyebrow -->
     <div class="t2-eyebrow" data-pagefind-ignore>

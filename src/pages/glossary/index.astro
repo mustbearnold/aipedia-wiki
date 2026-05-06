@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import IndexHero from '../../components/design/IndexHero.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
 import BreadcrumbLD from '../../components/seo/BreadcrumbLD.astro';
 import glossaryRaw from '../../content/glossary/index.md?raw';
 
@@ -119,11 +120,7 @@ const breadcrumbItems = [
     data-glossary-desk
     data-refresh-surface="home-adjacent"
   >
-    <nav class="glossary-desk__breadcrumb" aria-label="Breadcrumb" data-pagefind-ignore>
-      <a href="/">Home</a>
-      <span aria-hidden="true">/</span>
-      <span aria-current="page">AI Glossary</span>
-    </nav>
+    <Breadcrumb items={[{ label: 'AI Glossary' }]} data-pagefind-ignore />
 
     <IndexHero
       title="AI Glossary"
