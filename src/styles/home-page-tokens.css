@@ -1,0 +1,101 @@
+/**
+ * Homepage design tokens — MUST be global (not scoped to index.astro).
+ * Scoped page styles can fail to match .home-page after Astro View Transitions
+ * until a full reload, which drops borders and other var(--home-*) usage.
+ * News listing and articles reuse the same vars via .news-page-root /
+ * .news-article-shell. Trend hub uses .trends-page-root. Tool Set Builder uses
+ * .stack-builder-page-root. Dead tools hub uses .dead-page-root. Explore hub uses .explore-page-root.
+ * Guides index uses .guides-page-root. Glossary uses .glossary-page-root.
+ * Companies index uses .companies-page-root.
+ */
+.home-page,
+[data-home-page],
+.comparison-detail-page,
+.news-page-root,
+.news-article-shell,
+.trends-page-root,
+.stack-builder-page-root,
+.dead-page-root,
+.explore-page-root,
+.guides-page-root,
+.glossary-page-root,
+.companies-page-root {
+  --home-panel: color-mix(in srgb, var(--bg-base) 78%, transparent);
+  --home-panel-strong: color-mix(in srgb, var(--bg-base) 88%, transparent);
+  --home-line: var(--border);
+  --home-line-strong: var(--site-accent-divider);
+  --home-text: var(--text-primary);
+  --home-heading: var(--text-primary);
+  --home-muted: var(--text-secondary);
+  --home-dim: var(--text-muted);
+  --home-accent: var(--accent-primary-text);
+  --home-accent-solid: var(--accent-primary);
+  --home-inverse: #0c0a09;
+  --home-chip-bg: color-mix(in srgb, var(--bg-base) 70%, transparent);
+  --home-inner-panel: color-mix(in srgb, var(--bg-base) 74%, transparent);
+  --home-input-bg: color-mix(in srgb, var(--bg-base) 72%, transparent);
+  --home-logo-bg: #fff;
+  --home-card-outline: var(--site-accent-outline);
+  --home-card-outline-hover: var(--site-accent-outline-hover);
+  --home-on-card: rgba(255, 255, 255, 0.96);
+  --home-on-card-muted: rgba(255, 255, 255, 0.62);
+  --home-hero-search-bg: color-mix(in srgb, var(--bg-base) 76%, transparent);
+  --home-hero-search-border: rgba(249, 115, 22, 0.24);
+  --home-hero-search-shadow:
+    0 10px 36px rgba(0, 0, 0, 0.35),
+    0 0 0 1px rgba(249, 115, 22, 0.06);
+  --home-hero-search-focus-border: rgba(249, 115, 22, 0.48);
+  --home-hero-search-focus-shadow:
+    0 14px 44px rgba(0, 0, 0, 0.42),
+    0 0 0 1px rgba(249, 115, 22, 0.14);
+  --home-hero-results-bg:
+    linear-gradient(180deg, rgb(26, 22, 20), rgb(14, 11, 9)),
+    #0f0d0c;
+  --home-hero-results-border: rgba(249, 115, 22, 0.32);
+  --home-hero-results-shadow:
+    0 26px 70px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(249, 115, 22, 0.06);
+  --home-hero-scrollbar-thumb: rgba(249, 115, 22, 0.38);
+  --home-scroll-pad-top: calc(3.75rem + env(safe-area-inset-top, 0px));
+}
+
+html.light .home-page,
+html.light [data-home-page],
+html.light .comparison-detail-page,
+html.light .news-page-root,
+html.light .news-article-shell,
+html.light .trends-page-root,
+html.light .stack-builder-page-root,
+html.light .dead-page-root,
+html.light .explore-page-root,
+html.light .guides-page-root,
+html.light .glossary-page-root,
+html.light .companies-page-root {
+  --home-line-strong: var(--site-accent-divider);
+  --home-panel: color-mix(in srgb, #ffffff 88%, transparent);
+  --home-panel-strong: color-mix(in srgb, #ffffff 94%, transparent);
+  --home-chip-bg: color-mix(in srgb, #ffffff 90%, transparent);
+  --home-inner-panel: color-mix(in srgb, #ffffff 92%, transparent);
+  --home-input-bg: color-mix(in srgb, #ffffff 96%, transparent);
+  --home-card-outline: var(--site-accent-outline);
+  --home-card-outline-hover: var(--site-accent-outline-hover);
+  --home-on-card: #18181b;
+  --home-on-card-muted: #52525b;
+  --home-hero-search-bg: color-mix(in srgb, #ffffff 90%, transparent);
+  --home-hero-search-border: rgba(249, 115, 22, 0.26);
+  --home-hero-search-shadow:
+    0 18px 48px rgba(234, 88, 12, 0.08),
+    0 0 0 1px rgba(249, 115, 22, 0.06);
+  --home-hero-search-focus-border: rgba(249, 115, 22, 0.48);
+  --home-hero-search-focus-shadow:
+    0 22px 56px rgba(234, 88, 12, 0.12),
+    0 0 0 1px rgba(249, 115, 22, 0.12);
+  --home-hero-results-bg:
+    linear-gradient(180deg, rgb(255, 255, 255), rgb(255, 251, 247)),
+    #fffdfb;
+  --home-hero-results-border: rgba(249, 115, 22, 0.28);
+  --home-hero-results-shadow:
+    0 22px 60px rgba(15, 23, 42, 0.12),
+    0 0 0 1px rgba(249, 115, 22, 0.06);
+  --home-hero-scrollbar-thumb: rgba(249, 115, 22, 0.38);
+}

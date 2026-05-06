@@ -3,7 +3,6 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import IndexHero from '../components/design/IndexHero.astro';
 import ToolLogo from '../components/ToolLogo.astro';
-import OsPageShell from '../components/os/OsPageShell.astro';
 import '../styles/p3-canvas.css';
 
 const allTools = await getCollection('tools');
@@ -36,14 +35,8 @@ const totalTools = tools.length;
 <BaseLayout
   title="Search - aipedia.wiki"
   description={`Search and browse all ${totalTools} AI tools reviewed on aipedia.wiki.`}
-  chrome="os"
 >
-  <OsPageShell
-    activeApp="ask"
-    appTitle="AI tool finder"
-    appSubtitle={`${totalTools} reviewed tools`}
-    command="Search in plain English"
-  >
+  
     <div class="p3-canvas search-index site-directory-canvas not-prose" data-search-index>
     <IndexHero
       title="Search all tools"
@@ -158,9 +151,7 @@ const totalTools = tools.length;
       </div>
     </section>
     </div>
-  </OsPageShell>
-
-  <script is:inline>
+<script is:inline>
     (() => {
       const root = document.querySelector('[data-search-index]');
       if (!root) return;
@@ -351,14 +342,14 @@ const totalTools = tools.length;
 
     .search-index-chip:hover,
     .search-index-chip:focus-visible {
-      border-color: rgba(34, 211, 238, 0.42);
-      background: rgba(34, 211, 238, 0.1);
+      border-color: rgba(249, 115, 22, 0.42);
+      background: rgba(249, 115, 22, 0.1);
       color: var(--p3-accent-text);
       outline: none;
     }
 
     .search-index-ledger {
-      border: 1px solid rgba(34, 211, 238, 0.28);
+      border: 1px solid rgba(249, 115, 22, 0.28);
       border-radius: 8px;
       background: rgba(8, 13, 24, 0.72);
       padding: 24px;
@@ -456,7 +447,7 @@ const totalTools = tools.length;
       content: '';
       position: absolute;
       inset: 0;
-      background: radial-gradient(ellipse 120% 100% at 100% 0%, rgba(34, 211, 238, 0.12), transparent 58%);
+      background: radial-gradient(ellipse 120% 100% at 100% 0%, rgba(249, 115, 22, 0.12), transparent 58%);
       opacity: 0;
       pointer-events: none;
       transition: opacity 150ms ease;
@@ -464,9 +455,9 @@ const totalTools = tools.length;
 
     .search-index-card:hover,
     .search-index-card:focus-within {
-      border-color: rgba(34, 211, 238, 0.36);
+      border-color: rgba(249, 115, 22, 0.36);
       background: var(--p3-surface-hover);
-      box-shadow: 0 18px 38px -30px rgba(34, 211, 238, 0.55);
+      box-shadow: 0 18px 38px -30px rgba(249, 115, 22, 0.55);
       transform: translateY(-1px);
     }
 
@@ -488,7 +479,7 @@ const totalTools = tools.length;
     }
 
     .search-index-card-link:focus-visible {
-      outline: 2px solid rgba(34, 211, 238, 0.48);
+      outline: 2px solid rgba(249, 115, 22, 0.48);
       outline-offset: -2px;
     }
 
@@ -566,7 +557,7 @@ const totalTools = tools.length;
     }
 
     .search-index-empty {
-      border: 1px dashed rgba(34, 211, 238, 0.28);
+      border: 1px dashed rgba(249, 115, 22, 0.28);
       border-radius: 8px;
       color: var(--p3-muted);
       margin-top: 14px;

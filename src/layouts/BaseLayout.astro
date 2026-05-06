@@ -9,6 +9,8 @@ import CompareTray from '../components/CompareTray.astro';
 import SourcePreviewLayer from '../components/SourcePreviewLayer.astro';
 import { ClientRouter } from 'astro:transitions';
 import '../styles/global.css';
+import '../styles/home-page-tokens.css';
+import '../styles/home-surface-cards.css';
 
 interface Props {
   title: string;
@@ -19,7 +21,6 @@ interface Props {
   articlePublishedTime?: string;
   articleModifiedTime?: string;
   articleSection?: string;
-  chrome?: 'site' | 'os';
 }
 
 const {
@@ -28,9 +29,7 @@ const {
   articlePublishedTime,
   articleModifiedTime,
   articleSection,
-  chrome = 'site',
 } = Astro.props;
-const isOsChrome = chrome === 'os';
 const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? 'https://aipedia.wiki');
 function clampMetaDescription(value: string): string {
   const normalized = String(value || '').replace(/\s+/g, ' ').trim();
@@ -111,29 +110,26 @@ const ogImageUrl = ogImage
       })();
     </script>
 
-    <!-- Smooth cross-page view transitions. OS chrome pages use full page loads so their fixed header never inherits stale route styles. -->
-    {!isOsChrome && <ClientRouter />}
+    <ClientRouter />
   </head>
-  <body class:list={['min-h-screen', isOsChrome && 'os-chrome-body']}>
+  <body class="min-h-screen">
     <!-- Skip-to-main-content: hidden off-screen until keyboard focus. Lets
          screen-reader + keyboard users bypass the sticky nav on every page. -->
     <a href="#main-content" class="skip-to-main">Skip to main content</a>
     <!-- Reading-progress bar: thin gradient strip fixed at the very top
          of the viewport. Scales horizontally with scroll position. Hidden
          via opacity when not scrolled so it doesn't flash on short pages. -->
-    {!isOsChrome && <div id="read-progress" aria-hidden="true" transition:persist="read-progress"></div>}
-    {!isOsChrome && (
-      <div id="bg-gradient" class="fixed inset-0 -z-10" style="background: linear-gradient(160deg, var(--bg-base) 0%, #070811 52%, #05060d 100%);" transition:persist></div>
-    )}
-    {!isOsChrome && <MoatLayer />}
-    {!isOsChrome && <Nav transition:persist="nav" />}
+    <div id="read-progress" aria-hidden="true" transition:persist="read-progress"></div>
+    <div id="bg-gradient" class="fixed inset-0 -z-10" style="background: var(--bg-base);" transition:persist></div>
+    <MoatLayer />
+    <Nav transition:persist="nav" />
     <SearchModal transition:persist="search-modal" />
     <GlobalToolPreview transition:persist="tool-preview" />
     <SourcePreviewLayer transition:persist="source-preview" />
-    <main id="main-content" class:list={[isOsChrome ? 'os-main-content' : 'site-main-content']} data-pagefind-body>
+    <main id="main-content" class="site-main-content" data-pagefind-body>
       <slot />
     </main>
-    {!isOsChrome && <Footer transition:persist="footer" />}
+    <Footer transition:persist="footer" />
     <CookieConsent transition:persist="cookie-consent" />
     <CompareTray transition:persist="compare-tray" />
 
@@ -143,9 +139,7 @@ const ogImageUrl = ogImage
         const bg = document.getElementById('bg-gradient');
         if (!bg) return;
         const isLight = document.documentElement.classList.contains('light');
-        bg.style.background = isLight
-          ? 'var(--bg-base)'
-          : 'linear-gradient(160deg, var(--bg-base) 0%, #070811 52%, #05060d 100%)';
+        bg.style.background = 'var(--bg-base)';
       }
       updateBg();
       // Watch for class changes on html element

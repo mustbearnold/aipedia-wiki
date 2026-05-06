@@ -74,7 +74,7 @@ const readingMinutes = Math.max(1, Math.round(wordCount / 230));
   lastVerified={entry.data.last_verified ? String(entry.data.last_verified) : undefined}
   readingMinutes={readingMinutes}
   relatedNews={relatedNews}
-  canonicalFactTable={entry.data.canonical_fact_table === true}
+  canonicalFactTable={tools.length >= 2 && entry.data.canonical_fact_table !== false}
 >
   <Content />
 </ComparisonLayout>

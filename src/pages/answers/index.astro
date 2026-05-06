@@ -1,6 +1,5 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import OsPageShell from '../../components/os/OsPageShell.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
 import EmailCapture from '../../components/EmailCapture.astro';
 
@@ -48,14 +47,8 @@ const answerCount = ANSWER_GROUPS.reduce((sum, group) => sum + group.items.lengt
 <BaseLayout
   title="Definitive AI Answers — Short Authoritative Guides — aipedia.wiki"
   description="Short definitive answers to the highest-volume AI questions. Best chatbot, best coder, ChatGPT vs Claude, free tools, and more. Updated monthly."
-  chrome="os"
 >
-  <OsPageShell
-    activeApp="ask"
-    appTitle="AI answers"
-    appSubtitle={`${answerCount} definitive answers`}
-    command="Browse clear AI answers"
-  >
+  
   <Breadcrumb items={[{ label: 'Answers' }]} />
 
   <section class="mb-10 pt-2">
@@ -77,7 +70,7 @@ const answerCount = ANSWER_GROUPS.reduce((sum, group) => sum + group.items.lengt
           {group.items.map((a) => (
             <a
               href={`/answers/${a.slug}/`}
-              class="group block rounded-xl border border-[var(--border)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] hover:border-[rgba(34, 211, 238,0.4)] p-5 no-underline transition-colors"
+              class="group block rounded-xl border border-[var(--border)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] hover:border-[rgba(249, 115, 22,0.4)] p-5 no-underline transition-colors"
             >
               <h3 class="text-[17px] font-bold text-[var(--text-primary)] group-hover:text-[var(--accent-primary)] m-0 transition-colors">
                 {a.q}
@@ -90,5 +83,4 @@ const answerCount = ANSWER_GROUPS.reduce((sum, group) => sum + group.items.lengt
   </section>
 
   <EmailCapture variant="footer" source="answers-index" />
-  </OsPageShell>
 </BaseLayout>

@@ -1,0 +1,200 @@
+/**
+ * Shared frosted panel cards (homepage paths/tools/news + news desk + articles).
+ * Relies on --home-* from src/styles/home-page-tokens.css. Ancestors include
+ * .home-page, .news-page-root, .trends-page-root, .stack-builder-page-root,
+ * .dead-page-root, .explore-page-root, .guides-page-root, .glossary-page-root,
+ * .companies-page-root, or .news-article-shell (among others in home-page-tokens).
+ */
+.home-page .home-surface-card,
+.news-page-root .home-surface-card,
+.trends-page-root .home-surface-card,
+.news-article-shell .home-surface-card,
+.stack-builder-page-root .home-surface-card,
+.dead-page-root .home-surface-card,
+.explore-page-root .home-surface-card,
+.guides-page-root .home-surface-card,
+.glossary-page-root .home-surface-card,
+.companies-page-root .home-surface-card {
+  -webkit-backdrop-filter: blur(12px) saturate(140%);
+  backdrop-filter: blur(12px) saturate(140%);
+}
+
+@media (max-width: 620px) {
+  .home-page .home-surface-card,
+  .news-page-root .home-surface-card,
+  .trends-page-root .home-surface-card,
+  .news-article-shell .home-surface-card,
+  .stack-builder-page-root .home-surface-card,
+  .dead-page-root .home-surface-card,
+  .explore-page-root .home-surface-card,
+  .guides-page-root .home-surface-card,
+  .glossary-page-root .home-surface-card,
+  .companies-page-root .home-surface-card {
+    -webkit-backdrop-filter: blur(10px) saturate(135%);
+    backdrop-filter: blur(10px) saturate(135%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-page .home-surface-card,
+  .news-page-root .home-surface-card,
+  .trends-page-root .home-surface-card,
+  .news-article-shell .home-surface-card,
+  .stack-builder-page-root .home-surface-card,
+  .dead-page-root .home-surface-card,
+  .explore-page-root .home-surface-card,
+  .guides-page-root .home-surface-card,
+  .glossary-page-root .home-surface-card,
+  .companies-page-root .home-surface-card {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+}
+
+.home-page .home-surface-card,
+.news-page-root .home-surface-card,
+.trends-page-root .home-surface-card,
+.news-article-shell .home-surface-card,
+.stack-builder-page-root .home-surface-card,
+.dead-page-root .home-surface-card,
+.explore-page-root .home-surface-card,
+.guides-page-root .home-surface-card,
+.glossary-page-root .home-surface-card,
+.companies-page-root .home-surface-card {
+  border: 1px solid var(--home-card-outline);
+  border-radius: 12px;
+  background: var(--home-panel);
+  box-shadow: none;
+  color: var(--home-on-card);
+  transition:
+    border-color var(--motion-fast, 160ms) var(--motion-ease, cubic-bezier(0.16, 1, 0.3, 1)),
+    background var(--motion-fast, 160ms) var(--motion-ease, cubic-bezier(0.16, 1, 0.3, 1));
+}
+
+/* Hero image wrappers: keep the border treatment without frosting the raster. */
+.news-article-shell figure.home-surface-card {
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+
+.home-page a.home-surface-card,
+.news-page-root a.home-surface-card,
+.trends-page-root a.home-surface-card,
+.news-article-shell a.home-surface-card,
+.stack-builder-page-root a.home-surface-card,
+.dead-page-root a.home-surface-card,
+.explore-page-root a.home-surface-card,
+.guides-page-root a.home-surface-card,
+.glossary-page-root a.home-surface-card,
+.companies-page-root a.home-surface-card {
+  text-decoration: none;
+}
+
+.home-page a.home-surface-card:hover,
+.news-page-root a.home-surface-card:hover,
+.trends-page-root a.home-surface-card:hover,
+.news-article-shell a.home-surface-card:hover,
+.stack-builder-page-root a.home-surface-card:hover,
+.dead-page-root a.home-surface-card:hover,
+.explore-page-root a.home-surface-card:hover,
+.guides-page-root a.home-surface-card:hover,
+.glossary-page-root a.home-surface-card:hover,
+.companies-page-root a.home-surface-card:hover {
+  border-color: var(--home-card-outline-hover);
+  background: var(--home-panel-strong);
+}
+
+.home-page a.home-surface-card:focus-visible,
+.news-page-root a.home-surface-card:focus-visible,
+.trends-page-root a.home-surface-card:focus-visible,
+.news-article-shell a.home-surface-card:focus-visible,
+.stack-builder-page-root a.home-surface-card:focus-visible,
+.dead-page-root a.home-surface-card:focus-visible,
+.explore-page-root a.home-surface-card:focus-visible,
+.guides-page-root a.home-surface-card:focus-visible,
+.glossary-page-root a.home-surface-card:focus-visible,
+.companies-page-root a.home-surface-card:focus-visible {
+  border-color: var(--home-card-outline-hover);
+  background: var(--home-panel-strong);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(249, 115, 22, 0.42);
+}
+
+.stack-builder-page-root button.home-surface-card {
+  color: var(--home-on-card);
+}
+
+.stack-builder-page-root button.home-surface-card:hover,
+.stack-builder-page-root button.home-surface-card:focus-visible {
+  border-color: var(--home-card-outline-hover);
+  background: var(--home-panel-strong);
+  outline: none;
+}
+
+.stack-builder-page-root button.home-surface-card:focus-visible {
+  box-shadow: 0 0 0 2px rgba(249, 115, 22, 0.42);
+}
+
+.stack-builder-page-root button.home-surface-card[aria-pressed='true'] {
+  border-color: var(--home-card-outline-hover);
+  background: var(--home-panel-strong);
+}
+
+.news-article-shell .t2-toc.home-surface-card {
+  padding: 14px 14px 16px;
+}
+
+.news-article-shell .t2-toc-label {
+  color: var(--home-dim);
+  border-bottom-color: var(--home-line);
+}
+
+.news-article-shell .t2-toc-list a {
+  color: var(--home-muted);
+}
+
+.news-article-shell .t2-toc-list a:hover {
+  color: var(--home-accent);
+}
+
+.news-article-shell .t2-toc-list a.is-active {
+  color: var(--home-on-card);
+  border-left-color: var(--home-accent-solid);
+  background: linear-gradient(90deg, rgba(249, 115, 22, 0.12), transparent 72%);
+}
+
+/* Nested inset panels inside a home-surface-card (impact box, TOC, prose callouts). */
+.news-article-shell .home-surface-inner,
+.news-page-root .home-surface-inner,
+.stack-builder-page-root .home-surface-inner,
+.dead-page-root .home-surface-inner,
+.explore-page-root .home-surface-inner,
+.guides-page-root .home-surface-inner,
+.glossary-page-root .home-surface-inner,
+.companies-page-root .home-surface-inner {
+  border: 1px solid var(--home-line);
+  border-radius: 12px;
+  background: var(--home-inner-panel);
+  color: var(--home-on-card);
+}
+
+.news-article-shell .home-surface-pill-link,
+.news-page-root .home-surface-pill-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid var(--home-card-outline);
+  border-radius: 999px;
+  background: var(--home-chip-bg);
+  color: var(--home-on-card);
+  font-size: 11.5px;
+  font-weight: 850;
+  text-decoration: none;
+  padding: 4px 9px 4px 5px;
+}
+
+.news-article-shell .home-surface-pill-link:hover,
+.news-page-root .home-surface-pill-link:hover {
+  border-color: var(--home-card-outline-hover);
+  color: var(--home-accent);
+}

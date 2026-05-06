@@ -7,24 +7,19 @@
 
 /* Global score color tokens — available everywhere, not just under .p3-canvas */
 :root {
-  --p3-score-high: #10b981;
-  --p3-score-good: #3b82f6;
-  --p3-score-watch: #f59e0b;
+  --p3-score-high: #34d399;
+  --p3-score-good: #fb923c;
+  --p3-score-watch: #fbbf24;
   --p3-score-low: #ef4444;
 }
 .light {
   --p3-score-high: #059669;
-  --p3-score-good: #2563eb;
+  --p3-score-good: #ea580c;
   --p3-score-watch: #d97706;
   --p3-score-low: #dc2626;
 }
 
-body:has(main .p3-canvas) {
-  background:
-    radial-gradient(ellipse 90% 40% at 50% -10%, rgba(34, 211, 238,0.18) 0%, transparent 60%),
-    radial-gradient(ellipse 50% 30% at 90% 10%, rgba(56,189,248,0.12) 0%, transparent 70%),
-    var(--bg-base);
-}
+/* Same as t2/homepage: moat + fixed bg gradient only (no extra body radials). */
 
 .p3-canvas {
   --p3-fg: var(--text-primary);
@@ -35,17 +30,13 @@ body:has(main .p3-canvas) {
   --p3-surface: var(--bg-card);
   --p3-surface-hover: var(--bg-card-hover);
   --p3-accent: var(--accent-primary);
-  --p3-accent-text: var(--accent-primary-text, #67e8f9);
-  --p3-score-high: #10b981;
-  --p3-score-good: #3b82f6;
-  --p3-score-watch: #f59e0b;
-  --p3-score-low: #ef4444;
+  --p3-accent-text: var(--accent-primary-text, #fb923c);
   --p3-shadow-rest:
     0 18px 46px -38px rgba(0, 0, 0, 0.84),
     0 1px 0 rgba(248, 250, 252, 0.045) inset;
   --p3-shadow-hover:
     0 22px 54px -34px rgba(0, 0, 0, 0.9),
-    0 14px 34px -24px rgba(34, 211, 238, 0.24);
+    0 14px 34px -24px rgba(249, 115, 22, 0.24);
   --p3-logo-shadow: drop-shadow(0 9px 14px rgba(0, 0, 0, 0.28));
 
   max-width: 1180px;
@@ -57,14 +48,14 @@ body:has(main .p3-canvas) {
 }
 .p3-canvas-narrow { max-width: 900px; }
 .light .p3-canvas {
-  --p3-line-strong: #cbd5e1;
+  --p3-line-strong: #d6d3d1;
   --p3-shadow-rest:
     0 18px 44px -34px rgba(15, 23, 42, 0.22),
     0 2px 10px -8px rgba(15, 23, 42, 0.18),
     0 1px 0 rgba(255, 255, 255, 0.72) inset;
   --p3-shadow-hover:
     0 26px 60px -36px rgba(15, 23, 42, 0.28),
-    0 14px 34px -28px rgba(8, 145, 178, 0.22),
+    0 14px 34px -28px rgba(234, 88, 12, 0.22),
     0 1px 0 rgba(255, 255, 255, 0.82) inset;
   --p3-logo-shadow: drop-shadow(0 8px 12px rgba(15, 23, 42, 0.14));
 }
@@ -180,14 +171,14 @@ body:has(main .p3-canvas) {
 .p3-live-dot {
   width: 7px; height: 7px;
   border-radius: 50%;
-  background: #5eead4;
-  box-shadow: 0 0 0 0 rgba(94, 234, 212, 0.55);
+  background: #fbbf24;
+  box-shadow: 0 0 0 0 rgba(253, 186, 116, 0.55);
   animation: p3-pulse 2.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
 @keyframes p3-pulse {
-  0%   { box-shadow: 0 0 0 0 rgba(94, 234, 212, 0.55); }
-  70%  { box-shadow: 0 0 0 8px rgba(94, 234, 212, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(94, 234, 212, 0); }
+  0%   { box-shadow: 0 0 0 0 rgba(253, 186, 116, 0.55); }
+  70%  { box-shadow: 0 0 0 8px rgba(253, 186, 116, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(253, 186, 116, 0); }
 }
 
 .p3-headline {
@@ -201,7 +192,7 @@ body:has(main .p3-canvas) {
 }
 .p3-headline-wide { max-width: none; }
 .p3-gradient {
-  background: linear-gradient(100deg, #22d3ee 0%, #38bdf8 60%, #5eead4 100%);
+  background: linear-gradient(100deg, #f97316 0%, #fb923c 60%, #fbbf24 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -246,12 +237,12 @@ body:has(main .p3-canvas) {
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background: rgba(94, 234, 212, 0.14);
-  color: #5eead4;
+  background: rgba(253, 186, 116, 0.14);
+  color: #fbbf24;
   font-size: 10px;
   font-weight: 800;
   flex: none;
-  border: 1px solid rgba(94, 234, 212, 0.28);
+  border: 1px solid rgba(253, 186, 116, 0.28);
 }
 .p3-trust-num {
   font-weight: 700;
@@ -287,9 +278,9 @@ body:has(main .p3-canvas) {
   max-width: 560px;
 }
 .p3-search:focus-within {
-  border-color: rgba(34, 211, 238, 0.5);
+  border-color: rgba(249, 115, 22, 0.5);
   background: var(--p3-surface-hover);
-  box-shadow: 0 0 0 4px rgba(34, 211, 238, 0.10);
+  box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.10);
 }
 .p3-search-icon {
   flex: none;
@@ -340,7 +331,7 @@ body:has(main .p3-canvas) {
   inset: 0;
   border-radius: inherit;
   padding: 1px;
-  background: linear-gradient(100deg, rgba(34, 211, 238, 0.35), rgba(56, 189, 248, 0.28) 55%, rgba(94, 234, 212, 0.25));
+  background: linear-gradient(100deg, rgba(249, 115, 22, 0.35), rgba(251, 146, 60, 0.28) 55%, rgba(253, 186, 116, 0.25));
   -webkit-mask: linear-gradient(#000, #000) content-box, linear-gradient(#000, #000);
           mask: linear-gradient(#000, #000) content-box, linear-gradient(#000, #000);
   -webkit-mask-composite: xor;
@@ -357,7 +348,7 @@ body:has(main .p3-canvas) {
   position: absolute;
   inset: -1px;
   border-radius: inherit;
-  background: radial-gradient(ellipse 70% 140% at 50% 50%, rgba(34, 211, 238,0.28), transparent 60%);
+  background: radial-gradient(ellipse 70% 140% at 50% 50%, rgba(249, 115, 22,0.28), transparent 60%);
   filter: blur(16px);
   opacity: 0;
   transition: opacity 220ms ease;
@@ -373,7 +364,7 @@ body:has(main .p3-canvas) {
 }
 .p3-search-btn:focus-visible {
   background: var(--p3-surface-hover);
-  box-shadow: 0 0 0 4px rgba(34, 211, 238, 0.18);
+  box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.18);
 }
 .p3-search-btn > * { position: relative; z-index: 1; }
 .p3-search-btn .p3-search-icon {
@@ -473,7 +464,7 @@ body:has(main .p3-canvas) {
 }
 .p3-quick-links a:hover {
   color: var(--p3-accent-text);
-  border-bottom-color: rgba(34, 211, 238, 0.35);
+  border-bottom-color: rgba(249, 115, 22, 0.35);
 }
 
 /* =========================================================
@@ -513,21 +504,21 @@ body:has(main .p3-canvas) {
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  background: radial-gradient(ellipse 120% 120% at 100% 0%, rgba(34, 211, 238, 0.12), transparent 65%);
+  background: radial-gradient(ellipse 120% 120% at 100% 0%, rgba(249, 115, 22, 0.12), transparent 65%);
   opacity: 0;
   transition: opacity 180ms ease;
   pointer-events: none;
   z-index: -1;
 }
 .p3-jump:hover {
-  border-color: rgba(34, 211, 238, 0.35);
+  border-color: rgba(249, 115, 22, 0.35);
   background: var(--p3-surface-hover);
   transform: translateY(-1px);
   box-shadow: var(--p3-shadow-hover);
 }
 .p3-jump:hover::before { opacity: 1; }
 .p3-jump:focus-visible {
-  outline: 2px solid rgba(34, 211, 238, 0.5);
+  outline: 2px solid rgba(249, 115, 22, 0.5);
   outline-offset: 2px;
 }
 
@@ -545,8 +536,8 @@ body:has(main .p3-canvas) {
   transition: background 160ms ease, color 160ms ease, transform 200ms ease;
 }
 .p3-jump:hover .p3-jump-icon {
-  background: rgba(34, 211, 238, 0.12);
-  border-color: rgba(34, 211, 238, 0.28);
+  background: rgba(249, 115, 22, 0.12);
+  border-color: rgba(249, 115, 22, 0.28);
   transform: rotate(-4deg) scale(1.05);
 }
 
@@ -598,16 +589,16 @@ body:has(main .p3-canvas) {
 /* ---------- cover story (homepage) ---------- */
 .p3-hero-right { min-width: 0; perspective: 1200px; }
 .p3-cover {
-  --cover-accent: #38bdf8;
-  --cover-accent-2: #5eead4;
-  --cover-next-accent: #5eead4;
+  --cover-accent: #fb923c;
+  --cover-accent-2: #fbbf24;
+  --cover-next-accent: #fbbf24;
   display: block;
   padding: 24px;
   border-radius: 18px;
-  border: 1px solid rgba(34, 211, 238, 0.25);
+  border: 1px solid rgba(249, 115, 22, 0.25);
   background:
-    radial-gradient(ellipse 120% 80% at 100% 0%, rgba(34, 211, 238, 0.14), transparent 60%),
-    linear-gradient(180deg, rgba(34, 211, 238, 0.04), transparent 40%),
+    radial-gradient(ellipse 120% 80% at 100% 0%, rgba(249, 115, 22, 0.14), transparent 60%),
+    linear-gradient(180deg, rgba(249, 115, 22, 0.04), transparent 40%),
     var(--p3-surface);
   text-decoration: none;
   color: inherit;
@@ -756,13 +747,13 @@ body:has(main .p3-canvas) {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: radial-gradient(ellipse 80% 70% at 0% 100%, rgba(56, 189, 248, 0.08), transparent 60%);
+  background: radial-gradient(ellipse 80% 70% at 0% 100%, rgba(251, 146, 60, 0.08), transparent 60%);
 }
 .p3-cover:hover {
   /* Lift composed with the tilt: translate + rotate share the same
      transform slot, so compose both. When not tilting, vars are 0deg. */
   transform: translateY(-2px) rotateX(var(--tilt-x)) rotateY(var(--tilt-y));
-  border-color: rgba(34, 211, 238, 0.45);
+  border-color: rgba(249, 115, 22, 0.45);
   box-shadow: var(--p3-shadow-hover);
 }
 .p3-cover-label {
@@ -780,8 +771,8 @@ body:has(main .p3-canvas) {
 .p3-cover-badge {
   padding: 3px 8px;
   border-radius: 999px;
-  border: 1px solid rgba(34, 211, 238, 0.35);
-  background: rgba(34, 211, 238, 0.10);
+  border: 1px solid rgba(249, 115, 22, 0.35);
+  background: rgba(249, 115, 22, 0.10);
 }
 .p3-cover-title-row {
   display: flex;
@@ -947,6 +938,54 @@ body:has(main .p3-canvas) {
   color: var(--p3-subtle);
 }
 
+/* News index hero: default stat strip spacing */
+.p3-newsdesk-statbar {
+  margin-top: 28px;
+}
+
+/* Mobile: one horizontal row + scroll instead of a tall 2-column grid */
+@media (max-width: 639px) {
+  .p3-newsdesk-statbar {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    overscroll-behavior-x: contain;
+    touch-action: pan-x;
+    scroll-snap-type: x proximity;
+    gap: 0;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 12px;
+  }
+  .p3-newsdesk-statbar::-webkit-scrollbar {
+    display: none;
+  }
+  .p3-newsdesk-statbar .p3-stat {
+    flex: 0 0 auto;
+    box-sizing: border-box;
+    width: min(31vw, 118px);
+    min-width: 92px;
+    padding: 10px 10px;
+    border-bottom: none;
+    scroll-snap-align: start;
+  }
+  .p3-newsdesk-statbar .p3-stat:last-child {
+    border-right: none;
+  }
+  .p3-newsdesk-statbar .p3-stat-num {
+    font-size: 21px;
+    margin-bottom: 1px;
+  }
+  .p3-newsdesk-statbar .p3-stat-lbl {
+    font-size: 9px;
+    letter-spacing: 0.08em;
+    line-height: 1.2;
+  }
+}
+
 /* ---------- section heads ---------- */
 .p3-sec-head {
   display: flex;
@@ -1011,7 +1050,7 @@ body:has(main .p3-canvas) {
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--p3-accent-text, #67e8f9);
+  color: var(--p3-accent-text, #fb923c);
   margin-bottom: 4px;
   display: inline-flex;
   align-items: center;
@@ -1026,7 +1065,7 @@ body:has(main .p3-canvas) {
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--p3-accent-text, #67e8f9);
+  color: var(--p3-accent-text, #fb923c);
   margin-bottom: 4px;
   display: inline-flex;
   align-items: center;
@@ -1052,9 +1091,9 @@ body:has(main .p3-canvas) {
 }
 .p3-axis-key-chip:hover {
   transform: translateY(-1px);
-  border-color: rgba(34, 211, 238, 0.4);
+  border-color: rgba(249, 115, 22, 0.4);
   background: var(--p3-surface-hover);
-  box-shadow: 0 4px 12px rgba(34, 211, 238, 0.12);
+  box-shadow: 0 4px 12px rgba(249, 115, 22, 0.12);
 }
 
 /* Micro-interactions: stat bar items subtle glow on hover */
@@ -1062,7 +1101,7 @@ body:has(main .p3-canvas) {
   transition: background 160ms ease;
 }
 .p3-stat:hover {
-  background: rgba(34, 211, 238, 0.03);
+  background: rgba(249, 115, 22, 0.03);
 }
 
 /* ---------- category rail ---------- */
@@ -1100,7 +1139,7 @@ body:has(main .p3-canvas) {
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  background: radial-gradient(ellipse 120% 100% at 100% 100%, rgba(34, 211, 238, 0.10), transparent 60%);
+  background: radial-gradient(ellipse 120% 100% at 100% 100%, rgba(249, 115, 22, 0.10), transparent 60%);
   opacity: 0;
   transition: opacity 200ms ease;
   pointer-events: none;
@@ -1108,7 +1147,7 @@ body:has(main .p3-canvas) {
 }
 .p3-catchip:hover {
   background: var(--p3-surface-hover);
-  border-color: rgba(34, 211, 238, 0.35);
+  border-color: rgba(249, 115, 22, 0.35);
   transform: translateY(-2px);
   box-shadow: var(--p3-shadow-hover);
 }
@@ -1128,9 +1167,9 @@ body:has(main .p3-canvas) {
   height: 2px;
   border-radius: 12px 12px 0 0;
   background: linear-gradient(90deg,
-    #22d3ee 0%,
-    #38bdf8 50%,
-    #5eead4 100%);
+    #f97316 0%,
+    #fb923c 50%,
+    #fbbf24 100%);
   background-size: 100% 100%;
   background-repeat: no-repeat;
   opacity: 0.5;
@@ -1174,7 +1213,7 @@ body:has(main .p3-canvas) {
   flex: none;
 }
 .p3-catchip:hover .p3-catchip-count {
-  background: rgba(34, 211, 238, 0.14);
+  background: rgba(249, 115, 22, 0.14);
   color: var(--p3-accent-text);
 }
 
@@ -1234,7 +1273,7 @@ body:has(main .p3-canvas) {
   transition: border-color 150ms ease, transform 150ms ease;
 }
 .p3-newshero:hover {
-  border-color: rgba(34, 211, 238, 0.35);
+  border-color: rgba(249, 115, 22, 0.35);
   transform: translateY(-1px);
 }
 .p3-newshero img {
@@ -1331,8 +1370,8 @@ body:has(main .p3-canvas) {
   text-transform: uppercase;
   border: 1px solid;
 }
-.p3-sev-breaking { color: #67e8f9; background: rgba(103, 232, 249,0.10); border-color: rgba(103, 232, 249,0.28); }
-.p3-sev-major { color: #67e8f9; background: rgba(103, 232, 249,0.10); border-color: rgba(103, 232, 249,0.28); }
+.p3-sev-breaking { color: #fb923c; background: rgba(251, 146, 60,0.10); border-color: rgba(251, 146, 60,0.28); }
+.p3-sev-major { color: #fb923c; background: rgba(251, 146, 60,0.10); border-color: rgba(251, 146, 60,0.28); }
 .p3-sev-minor { color: var(--p3-subtle); background: rgba(148,163,184,0.08); border-color: var(--p3-line); }
 
 /* ---------- movers ---------- */
@@ -1367,14 +1406,14 @@ body:has(main .p3-canvas) {
   position: absolute;
   top: 0; left: 0; bottom: 0;
   width: 3px;
-  background: linear-gradient(180deg, #22d3ee, #38bdf8);
+  background: linear-gradient(180deg, #f97316, #fb923c);
   opacity: 0;
   transition: opacity 180ms ease;
 }
 .p3-mover-lead::before { opacity: 0.9; }
 .p3-mover:hover {
   background: var(--p3-surface-hover);
-  border-color: rgba(34, 211, 238, 0.35);
+  border-color: rgba(249, 115, 22, 0.35);
   transform: translateX(2px);
   box-shadow: var(--p3-shadow-hover);
 }
@@ -1388,7 +1427,7 @@ body:has(main .p3-canvas) {
   font-variant-numeric: tabular-nums;
 }
 .p3-mover-lead .p3-mover-rank {
-  background: linear-gradient(135deg, #22d3ee, #38bdf8);
+  background: linear-gradient(135deg, #f97316, #fb923c);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1418,7 +1457,7 @@ body:has(main .p3-canvas) {
   display: block;
   height: 100%;
   border-radius: 999px;
-  background: linear-gradient(90deg, #22d3ee, #38bdf8);
+  background: linear-gradient(90deg, #f97316, #fb923c);
   transform-origin: left center;
   animation: p3-mover-bar-rise 700ms cubic-bezier(.22,.61,.36,1) forwards;
 }
@@ -1494,7 +1533,7 @@ body:has(main .p3-canvas) {
 }
 .p3-tile:hover {
   background: var(--p3-surface-hover);
-  border-color: rgba(34, 211, 238, 0.3);
+  border-color: rgba(249, 115, 22, 0.3);
   transform: translateY(-2px);
   box-shadow: var(--p3-shadow-hover);
 }
@@ -1504,7 +1543,7 @@ body:has(main .p3-canvas) {
   top: -1px; left: -1px; right: -1px;
   height: 2px;
   border-radius: 14px 14px 0 0;
-  background: linear-gradient(90deg, #22d3ee, #38bdf8, #5eead4);
+  background: linear-gradient(90deg, #f97316, #fb923c, #fbbf24);
 }
 .p3-tile-top {
   display: flex;
@@ -1608,7 +1647,7 @@ body:has(main .p3-canvas) {
   border-radius: 18px;
   border: 1px solid var(--p3-line);
   background:
-    radial-gradient(ellipse 50% 100% at 100% 50%, rgba(34, 211, 238, 0.07), transparent 70%),
+    radial-gradient(ellipse 50% 100% at 100% 50%, rgba(249, 115, 22, 0.07), transparent 70%),
     var(--p3-surface);
   box-shadow: var(--p3-shadow-rest);
 }
@@ -1696,7 +1735,7 @@ body:has(main .p3-canvas) {
 }
 .p3-cmp-card:hover {
   background: var(--p3-surface-hover);
-  border-color: rgba(34, 211, 238, 0.28);
+  border-color: rgba(249, 115, 22, 0.28);
   transform: translateY(-1px);
   box-shadow: var(--p3-shadow-hover);
 }
@@ -1761,7 +1800,7 @@ body:has(main .p3-canvas) {
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background: #5eead4;
+  background: #fbbf24;
   margin-left: 5px;
   vertical-align: middle;
 }
@@ -1793,11 +1832,11 @@ body:has(main .p3-canvas) {
 .p3-newsletter-inner {
   padding: 40px 32px;
   border-radius: 20px;
-  border: 1px solid rgba(34, 211, 238, 0.32);
+  border: 1px solid rgba(249, 115, 22, 0.32);
   background:
-    radial-gradient(ellipse 80% 120% at 100% 0%, rgba(56, 189, 248, 0.14), transparent 55%),
-    radial-gradient(ellipse 70% 100% at 0% 100%, rgba(34, 211, 238, 0.14), transparent 55%),
-    linear-gradient(180deg, rgba(34, 211, 238, 0.04), transparent 60%),
+    radial-gradient(ellipse 80% 120% at 100% 0%, rgba(251, 146, 60, 0.14), transparent 55%),
+    radial-gradient(ellipse 70% 100% at 0% 100%, rgba(249, 115, 22, 0.14), transparent 55%),
+    linear-gradient(180deg, rgba(249, 115, 22, 0.04), transparent 60%),
     var(--p3-surface);
   position: relative;
   overflow: hidden;
@@ -1812,7 +1851,7 @@ body:has(main .p3-canvas) {
   top: -1px; left: -1px; right: -1px;
   height: 2px;
   border-radius: 20px 20px 0 0;
-  background: linear-gradient(90deg, #22d3ee, #38bdf8, #5eead4);
+  background: linear-gradient(90deg, #f97316, #fb923c, #fbbf24);
   z-index: 1;
 }
 @media (min-width: 820px) {
@@ -1894,7 +1933,7 @@ body:has(main .p3-canvas) {
   overflow-wrap: anywhere;
 }
 .p3-newsletter-trust-item svg {
-  color: #5eead4;
+  color: #fbbf24;
   flex: none;
 }
 @media (max-width: 640px) {
@@ -1980,7 +2019,7 @@ body:has(main .p3-canvas) {
   padding: 32px 28px;
   border-radius: 18px;
   background:
-    radial-gradient(ellipse 60% 100% at 100% 0%, rgba(34, 211, 238, 0.09), transparent 60%),
+    radial-gradient(ellipse 60% 100% at 100% 0%, rgba(249, 115, 22, 0.09), transparent 60%),
     var(--p3-surface);
 }
 
@@ -1998,13 +2037,13 @@ body:has(main .p3-canvas) {
   white-space: nowrap;
 }
 .p3-btn-primary {
-  background: linear-gradient(100deg, #22d3ee 0%, #38bdf8 100%);
+  background: linear-gradient(100deg, #f97316 0%, #fb923c 100%);
   color: #0b0910;
   border: 1px solid transparent;
 }
 .p3-btn-primary:hover {
   transform: translateY(-1px);
-  box-shadow: 0 12px 28px -16px rgba(34, 211, 238,0.7);
+  box-shadow: 0 12px 28px -16px rgba(249, 115, 22,0.7);
 }
 .p3-btn-ghost {
   background: var(--p3-surface);
@@ -2013,7 +2052,7 @@ body:has(main .p3-canvas) {
 }
 .p3-btn-ghost:hover {
   background: var(--p3-surface-hover);
-  border-color: rgba(34, 211, 238,0.35);
+  border-color: rgba(249, 115, 22,0.35);
   color: var(--p3-accent-text);
 }
 
@@ -2040,12 +2079,12 @@ body:has(main .p3-canvas) {
 }
 .p3-chip:hover {
   background: var(--p3-surface-hover);
-  border-color: rgba(34, 211, 238, 0.3);
+  border-color: rgba(249, 115, 22, 0.3);
   color: var(--p3-fg);
 }
 .p3-chip-active {
-  background: rgba(34, 211, 238, 0.12);
-  border-color: rgba(34, 211, 238, 0.5);
+  background: rgba(249, 115, 22, 0.12);
+  border-color: rgba(249, 115, 22, 0.5);
   color: var(--p3-accent-text);
 }
 .p3-chip-count {
@@ -2058,7 +2097,7 @@ body:has(main .p3-canvas) {
   font-variant-numeric: tabular-nums;
 }
 .p3-chip-active .p3-chip-count {
-  background: rgba(34, 211, 238, 0.15);
+  background: rgba(249, 115, 22, 0.15);
   color: var(--p3-accent-text);
 }
 @media (max-width: 640px) {

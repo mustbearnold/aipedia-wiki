@@ -199,7 +199,7 @@ function svgFor(tool) {
   const category = escapeXml(CATEGORY_LABEL[tool.category] ?? tool.category ?? '');
   const company = escapeXml(tool.company ?? '');
   const scoreColor =
-    overall >= 9 ? '#34d399' : overall >= 8 ? '#a78bfa' : overall >= 6 ? '#fbbf24' : '#f87171';
+    overall >= 9 ? '#34d399' : overall >= 8 ? '#fb923c' : overall >= 6 ? '#fbbf24' : '#f87171';
   const logoData = embedLogo(tool.slug);
 
   const logoBlock = logoData
@@ -222,12 +222,13 @@ function svgFor(tool) {
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0b0a14"/>
-      <stop offset="100%" stop-color="#1a1830"/>
+      <stop offset="0%" stop-color="#0c0a09"/>
+      <stop offset="100%" stop-color="#1c1917"/>
     </linearGradient>
     <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#a78bfa"/>
-      <stop offset="100%" stop-color="#60a5fa"/>
+      <stop offset="0%" stop-color="#f97316"/>
+      <stop offset="52%" stop-color="#fb923c"/>
+      <stop offset="100%" stop-color="#fbbf24"/>
     </linearGradient>
   </defs>
   <rect width="1200" height="630" fill="url(#bg)"/>
@@ -237,14 +238,14 @@ function svgFor(tool) {
       ? `<image href="${brandLogoSmall}" x="60" y="60" width="56" height="56" preserveAspectRatio="xMidYMid meet"/>`
       : ''
   }
-  <text x="${brandLogoSmall ? 132 : 80}" y="100" font-family="Metropolis, sans-serif" font-size="26" font-weight="700" fill="#a78bfa" letter-spacing="1">aipedia.wiki</text>
+  <text x="${brandLogoSmall ? 132 : 80}" y="100" font-family="Metropolis, sans-serif" font-size="26" font-weight="700" fill="#fb923c" letter-spacing="1">aipedia.wiki</text>
   <text x="${brandLogoSmall ? 132 : 80}" y="124" font-family="Metropolis, sans-serif" font-size="16" font-weight="500" fill="#9ca3af">${category}</text>
   ${logoBlock}
   <text x="${titleX}" y="270" font-family="Metropolis, sans-serif" font-size="76" font-weight="800" fill="#fafafa">${title}</text>
   <text x="${titleX}" y="310" font-family="Metropolis, sans-serif" font-size="20" font-weight="500" fill="#9ca3af">${company}</text>
   <text x="80" y="400" font-family="Metropolis, sans-serif" font-size="26" font-weight="500" fill="#d1d5db">${taglineTspans}</text>
   <g transform="translate(960, 80)">
-    <rect x="0" y="0" width="160" height="160" rx="20" fill="rgba(167,139,250,0.10)" stroke="rgba(167,139,250,0.35)" stroke-width="2"/>
+    <rect x="0" y="0" width="160" height="160" rx="20" fill="rgba(249,115,22,0.10)" stroke="rgba(249,115,22,0.35)" stroke-width="2"/>
     <text x="80" y="100" font-family="Metropolis, sans-serif" font-size="64" font-weight="800" text-anchor="middle" fill="${scoreColor}">${overall}</text>
     <text x="80" y="130" font-family="Metropolis, sans-serif" font-size="16" font-weight="500" text-anchor="middle" fill="#9ca3af">/10 SCORE</text>
   </g>
@@ -272,7 +273,7 @@ const FONT_PATHS = [
 function rasterize(svgString) {
   if (!Resvg) return null;
   const resvg = new Resvg(svgString, {
-    background: '#0b0a14',
+    background: '#0c0a09',
     fitTo: { mode: 'width', value: 1200 },
     font: {
       fontFiles: FONT_PATHS,

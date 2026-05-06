@@ -50,7 +50,7 @@ function host(value: string): string {
 const sourceHosts = Array.from(new Set(sources.map((source) => host(source.url)).filter(Boolean))).slice(0, 4);
 ---
 
-<aside class="news-impact not-prose" aria-label="Story impact" data-reveal>
+<aside class="news-impact home-surface-card not-prose" aria-label="Story impact" data-reveal>
   <div class="news-impact-head">
     <span>Reader impact</span>
     <strong class={`news-impact-severity news-impact-severity-${severity}`}>{severity}</strong>
@@ -58,15 +58,15 @@ const sourceHosts = Array.from(new Set(sources.map((source) => host(source.url))
   <p>{severityCopy[severity] ?? severityCopy.minor}</p>
 
   <div class="news-impact-grid">
-    <div>
+    <div class="home-surface-inner">
       <span>Why it matters</span>
       <strong>{summary || 'This story was published because it changes the context around one or more AI tools.'}</strong>
     </div>
-    <div>
+    <div class="home-surface-inner">
       <span>Source base</span>
       <strong>{sources.length} source{sources.length === 1 ? '' : 's'}{sourceHosts.length ? ` | ${sourceHosts.join(', ')}` : ''}</strong>
     </div>
-    <div>
+    <div class="home-surface-inner">
       <span>Date</span>
       <strong>{date || 'Recent'}</strong>
     </div>
@@ -75,11 +75,11 @@ const sourceHosts = Array.from(new Set(sources.map((source) => host(source.url))
   {(tools.length > 0 || categories.length > 0) && (
     <div class="news-impact-links">
       {tools.length > 0 && (
-        <div>
+        <div class="home-surface-inner">
           <span>Affected tools</span>
           <div>
             {tools.map((tool) => (
-              <a href={`/tools/${tool.slug}/`}>
+              <a class="home-surface-pill-link" href={`/tools/${tool.slug}/`}>
                 <ToolLogo slug={tool.slug} title={tool.title} size={22} />
                 <span>{tool.title}</span>
               </a>
@@ -88,11 +88,11 @@ const sourceHosts = Array.from(new Set(sources.map((source) => host(source.url))
         </div>
       )}
       {categories.length > 0 && (
-        <div>
+        <div class="home-surface-inner">
           <span>Categories</span>
           <div>
             {categories.map((category) => (
-              <a href={`/categories/${category}/`}>{labelize(category)}</a>
+              <a class="home-surface-pill-link" href={`/categories/${category}/`}>{labelize(category)}</a>
             ))}
           </div>
         </div>
@@ -103,11 +103,6 @@ const sourceHosts = Array.from(new Set(sources.map((source) => host(source.url))
 
 <style>
   .news-impact {
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    background:
-      linear-gradient(135deg, rgba(34, 211, 238, 0.07), transparent 44%),
-      var(--bg-card);
     margin: 0 0 24px;
     padding: 18px;
   }
@@ -121,7 +116,7 @@ const sourceHosts = Array.from(new Set(sources.map((source) => host(source.url))
   }
 
   .news-impact-head > span {
-    color: var(--accent-primary-text);
+    color: var(--home-accent);
     font-size: 11px;
     font-weight: 900;
     letter-spacing: 0.14em;
@@ -129,9 +124,9 @@ const sourceHosts = Array.from(new Set(sources.map((source) => host(source.url))
   }
 
   .news-impact-severity {
-    border: 1px solid rgba(34, 211, 238, 0.3);
+    border: 1px solid rgba(249, 115, 22, 0.3);
     border-radius: 999px;
-    color: var(--accent-primary-text);
+    color: var(--home-accent);
     font-size: 10px;
     font-weight: 900;
     letter-spacing: 0.12em;
@@ -141,12 +136,12 @@ const sourceHosts = Array.from(new Set(sources.map((source) => host(source.url))
 
   .news-impact-severity-breaking,
   .news-impact-severity-major {
-    background: rgba(34, 211, 238, 0.10);
+    background: rgba(249, 115, 22, 0.1);
   }
 
   .news-impact p {
     margin: 0 0 14px;
-    color: var(--text-primary);
+    color: var(--home-on-card);
     font-size: 14px;
     font-weight: 760;
     line-height: 1.5;
@@ -159,19 +154,16 @@ const sourceHosts = Array.from(new Set(sources.map((source) => host(source.url))
   }
 
   .news-impact-grid > div,
-  .news-impact-links > div {
+  .news-impact-links > div.home-surface-inner {
     min-width: 0;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    background: color-mix(in srgb, var(--bg-primary) 76%, transparent);
     padding: 11px;
   }
 
   .news-impact-grid span,
-  .news-impact-links > div > span {
+  .news-impact-links > div.home-surface-inner > span:first-child {
     display: block;
     margin-bottom: 5px;
-    color: var(--text-muted);
+    color: var(--home-on-card-muted);
     font-size: 10px;
     font-weight: 900;
     letter-spacing: 0.1em;
@@ -180,7 +172,7 @@ const sourceHosts = Array.from(new Set(sources.map((source) => host(source.url))
 
   .news-impact-grid strong {
     display: block;
-    color: var(--text-secondary);
+    color: var(--home-on-card);
     font-size: 12.5px;
     font-weight: 780;
     line-height: 1.35;
@@ -192,30 +184,10 @@ const sourceHosts = Array.from(new Set(sources.map((source) => host(source.url))
     margin-top: 10px;
   }
 
-  .news-impact-links > div > div {
+  .news-impact-links > div.home-surface-inner > div {
     display: flex;
     flex-wrap: wrap;
     gap: 7px;
-  }
-
-  .news-impact-links a {
-    display: inline-flex;
-    align-items: center;
-    gap: 7px;
-    min-height: 30px;
-    border: 1px solid var(--border);
-    border-radius: 999px;
-    background: var(--bg-card);
-    color: var(--text-primary);
-    font-size: 11.5px;
-    font-weight: 850;
-    text-decoration: none;
-    padding: 4px 9px 4px 5px;
-  }
-
-  .news-impact-links a:hover {
-    border-color: rgba(34, 211, 238, 0.38);
-    color: var(--accent-primary-text);
   }
 
   @media (max-width: 780px) {

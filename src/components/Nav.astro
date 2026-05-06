@@ -9,14 +9,14 @@ const liveToolCount = allTools.filter(
   (t) => t.data.status !== 'dead' && t.data.status !== 'retired' && t.data.status !== 'acquired'
 ).length;
 
-// Active-page detection. Tree-based: any pathname starting with /news/
-// highlights News; /compare/ highlights Compare; /categories/ or /tools/
-// highlights Explore. Kept conservative so unrelated pages stay neutral.
+// Active-page detection. Tree-based prefixes for Compare, News,
+// Explore (/explore/), and Categories (/categories/...).
 const path = Astro.url.pathname;
 function isActive(prefixes: string[]): boolean {
   return prefixes.some((p) => path === p || path.startsWith(p));
 }
-const activeExplore = isActive(['/categories/', '/tools/', '/guides/', '/use-cases/']);
+const activeExplore = isActive(['/explore/']);
+const activeCategories = isActive(['/categories/']);
 const activeCompare = isActive(['/compare/']);
 const activeNews = isActive(['/news/', '/reports/', '/benchmarks/']);
 ---
@@ -40,7 +40,8 @@ const activeNews = isActive(['/news/', '/reports/', '/benchmarks/']);
          accent bar. Core navigation stays compact; deeper workflow
          routes live in the drawer. -->
     <div class="hidden sm:flex items-center gap-1">
-      <a href="/categories/" class:list={['nav-link', activeExplore && 'nav-link-active']} data-astro-prefetch="viewport">Explore</a>
+      <a href="/explore/" class:list={['nav-link', activeExplore && 'nav-link-active']} data-astro-prefetch="viewport">Explore</a>
+      <a href="/categories/" class:list={['nav-link', activeCategories && 'nav-link-active']} data-astro-prefetch="viewport">Categories</a>
       <a href="/compare/" class:list={['nav-link', activeCompare && 'nav-link-active']} data-astro-prefetch="viewport">Compare</a>
       <a href="/news/" class:list={['nav-link', activeNews && 'nav-link-active']} data-astro-prefetch="viewport">News</a>
 
@@ -88,7 +89,8 @@ const activeNews = isActive(['/news/', '/reports/', '/benchmarks/']);
     </div>
 
     <nav class="py-3">
-      <a href="/categories/" class="block px-5 py-3 text-sm text-[var(--text-primary)] no-underline hover:bg-[var(--bg-card-hover)]" data-astro-prefetch="viewport">Explore Categories</a>
+      <a href="/explore/" class="block px-5 py-3 text-sm text-[var(--text-primary)] no-underline hover:bg-[var(--bg-card-hover)]" data-astro-prefetch="viewport">Explore hub</a>
+      <a href="/categories/" class="block px-5 py-3 text-sm text-[var(--text-primary)] no-underline hover:bg-[var(--bg-card-hover)]" data-astro-prefetch="viewport">Categories</a>
       <a href="/compare/" class="block px-5 py-3 text-sm text-[var(--text-primary)] no-underline hover:bg-[var(--bg-card-hover)]" data-astro-prefetch="viewport">Compare Tools</a>
       <a href="/news/" class="block px-5 py-3 text-sm text-[var(--text-primary)] no-underline hover:bg-[var(--bg-card-hover)]" data-astro-prefetch="viewport">Daily News</a>
       <a href="/trends/" class="block px-5 py-3 text-sm text-[var(--text-primary)] no-underline hover:bg-[var(--bg-card-hover)]">Trend Analysis</a>

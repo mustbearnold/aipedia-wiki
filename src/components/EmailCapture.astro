@@ -28,9 +28,9 @@ const submitId = `email-capture-submit-${uid}`;
 const submitLabelId = `email-capture-submit-label-${uid}`;
 
 const containerClasses = {
-  hero: 'rounded-2xl border border-[rgba(34, 211, 238,0.28)] bg-gradient-to-br from-[rgba(34, 211, 238,0.10)] via-[rgba(56,189,248,0.06)] to-transparent p-6 sm:p-8',
+  hero: 'rounded-2xl border border-[rgba(249, 115, 22,0.28)] bg-gradient-to-br from-[rgba(249, 115, 22,0.10)] via-[rgba(251, 146, 60,0.06)] to-transparent p-6 sm:p-8',
   inline: 'rounded-2xl border border-[var(--border)] bg-[var(--bg-card)] p-5 sm:p-6',
-  footer: 'rounded-2xl border border-[rgba(34, 211, 238,0.28)] bg-gradient-to-br from-[rgba(34, 211, 238,0.10)] via-[rgba(56,189,248,0.06)] to-transparent p-6 sm:p-8',
+  footer: 'rounded-2xl border border-[rgba(249, 115, 22,0.28)] bg-gradient-to-br from-[rgba(249, 115, 22,0.10)] via-[rgba(251, 146, 60,0.06)] to-transparent p-6 sm:p-8',
 }[variant];
 ---
 
@@ -76,7 +76,7 @@ const containerClasses = {
     <button
       type="submit"
       id={submitId}
-      class="shrink-0 inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl font-semibold text-sm bg-[var(--accent-primary)] text-[#0b0a14] hover:brightness-110 transition-all shadow-[0_4px_14px_rgba(34, 211, 238,0.35)] hover:shadow-[0_6px_20px_rgba(34, 211, 238,0.45)] no-underline"
+      class="shrink-0 inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl font-semibold text-sm bg-[var(--accent-primary)] text-[#0b0a14] hover:brightness-110 transition-all shadow-[0_4px_14px_rgba(249, 115, 22,0.35)] hover:shadow-[0_6px_20px_rgba(249, 115, 22,0.45)] no-underline"
     >
       <span id={submitLabelId}>Subscribe</span>
       <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -122,7 +122,7 @@ const containerClasses = {
       const email = (inputEl.value || '').trim();
       if (!email) {
         statusEl.textContent = 'Enter your email to subscribe.';
-        statusEl.style.color = '#67e8f9';
+        statusEl.style.color = '#fb923c';
         return;
       }
 
@@ -137,7 +137,7 @@ const containerClasses = {
 
       if (turnstileEl && !turnstile_token) {
         statusEl.textContent = 'Spam check is still loading. Try again in a second.';
-        statusEl.style.color = '#67e8f9';
+        statusEl.style.color = '#fb923c';
         submitBtn.disabled = false;
         submitLabel.textContent = 'Subscribe';
         return;
@@ -160,20 +160,20 @@ const containerClasses = {
           } else {
             statusEl.textContent = "Thanks. We'll send you the next digest.";
           }
-          statusEl.style.color = '#5eead4';
+          statusEl.style.color = '#fbbf24';
           inputEl.value = '';
           submitLabel.textContent = 'Subscribed';
           // Keep button disabled on success so users don't spam-click
         } else {
           const msg = ERROR_MESSAGES[data.error] || 'Something went wrong. Try again.';
           statusEl.textContent = msg;
-          statusEl.style.color = '#67e8f9';
+          statusEl.style.color = '#fb923c';
           submitBtn.disabled = false;
           submitLabel.textContent = 'Subscribe';
         }
       } catch (err) {
         statusEl.textContent = 'Network error. Try again.';
-        statusEl.style.color = '#67e8f9';
+        statusEl.style.color = '#fb923c';
         submitBtn.disabled = false;
         submitLabel.textContent = 'Subscribe';
       } finally {

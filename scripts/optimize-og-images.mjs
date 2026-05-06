@@ -18,6 +18,7 @@ import { join } from 'node:path';
 const TARGETS = [
   'public/og/tools',
   'public/og/news',
+  'public/og/news/light',
 ];
 
 async function compressFile(path) {

@@ -5,7 +5,6 @@
  */
 import BaseLayout from './BaseLayout.astro';
 import '../styles/t2-canvas.css';
-import OsPageShell from '../components/os/OsPageShell.astro';
 import BreadcrumbLD from '../components/seo/BreadcrumbLD.astro';
 import ItemListLD from '../components/seo/ItemListLD.astro';
 import ShareButtons from '../components/ShareButtons.astro';
@@ -147,20 +146,13 @@ const pricingFilters = [
 ];
 ---
 
-<BaseLayout title={seoTitle ?? title} description={description} chrome="os">
+<BaseLayout title={seoTitle ?? title} description={description}>
   <BreadcrumbLD items={breadcrumbLdItems} />
   {itemListItems.length > 0 && (
     <ItemListLD name={title} description={description} items={itemListItems} siteBase={siteBase} />
   )}
 
-  <OsPageShell
-    activeApp="packages"
-    appTitle="Tool category"
-    appSubtitle={`${tools.length} ranked tools`}
-    command={`Browse ${title}`}
-    density="article"
-  >
-    <div class="t2-canvas">
+    <div class="t2-canvas category-detail-page" data-home-page>
     <!-- Breadcrumb -->
     <nav class="t2-breadcrumb" aria-label="Breadcrumb">
       <a href="/">Home</a>
@@ -218,7 +210,7 @@ const pricingFilters = [
               <div class="t2-cat-toppick">
                 <div class="t2-cat-toppick-rank">{rankLabels[i] ?? 'Also consider'}</div>
                 <a href={`/tools/${t.slug}/`} class="t2-cat-toppick-title">
-                  <ToolLogo slug={t.slug} title={t.title} size={32} />
+                  <ToolLogo slug={t.slug} title={t.title} size={42} className="t2-cat-toppick-logo" />
                   <span>{t.title}</span>
                 </a>
                 {score > 0 && (
@@ -267,7 +259,7 @@ const pricingFilters = [
         <slot />
 
         {sorted.length > 0 && (
-          <section aria-labelledby="all-tools" data-cat-filter-root>
+          <section class="t2-cat-ranked-section" aria-labelledby="all-tools" data-cat-filter-root>
             <h2 id="all-tools">All {title.toLowerCase()} tools ranked</h2>
             <div class="t2-cat-controls" data-pagefind-ignore>
               <label class="t2-cat-search">
@@ -313,11 +305,12 @@ const pricingFilters = [
                     data-score={score}
                   >
                     <div class="t2-cat-row-rank tabular-nums">{i + 1}</div>
-                    <ToolLogo slug={t.slug} title={t.title} size={32} className="t2-cat-row-logo" />
+                    <ToolLogo slug={t.slug} title={t.title} size={42} className="t2-cat-row-logo" />
                     <div class="t2-cat-row-main">
                       <a href={`/tools/${t.slug}/`} class="t2-cat-row-title">{t.title}</a>
                       {t.tagline && <div class="t2-cat-row-tagline">{t.tagline}</div>}
                     </div>
+                    <div class="t2-cat-row-tail">
                     {t.price_range && (
                       <span class="t2-cat-row-price" title={t.price_range}>{shortenPrice(t.price_range)}</span>
                     )}
@@ -341,6 +334,7 @@ const pricingFilters = [
                         </a>
                       )}
                     </div>
+                    </div>
                   </li>
                 );
               })}
@@ -354,9 +348,7 @@ const pricingFilters = [
       </article>
     </div>
     </div>
-  </OsPageShell>
-
-  <script is:inline>
+<script is:inline>
     (() => {
       const root = document.querySelector('[data-cat-filter-root]');
       if (!root) return;
@@ -448,4 +440,360 @@ const pricingFilters = [
       apply();
     })();
   </script>
+
+  <!-- Homepage card system: `--home-*` tokens (home-page-tokens.css) match index.astro `.home-tool`. -->
+  <style is:global>
+    /* ---- Hero ------------------------------------------------------------ */
+    .category-detail-page[data-home-page] .t2-title {
+      color: var(--home-heading);
+    }
+    .category-detail-page[data-home-page] .t2-breadcrumb a {
+      color: var(--home-muted);
+    }
+    .category-detail-page[data-home-page] .t2-breadcrumb a:hover {
+      color: var(--home-accent);
+    }
+    .category-detail-page[data-home-page] .t2-eyebrow-trust {
+      color: var(--home-muted);
+    }
+    .category-detail-page[data-home-page] .t2-cat-hero-meta,
+    .category-detail-page[data-home-page] .t2-meta-dot {
+      color: var(--home-muted);
+    }
+    .category-detail-page[data-home-page] .t2-cat-hero-icon.cat-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      background: transparent;
+      border: 1px solid var(--home-card-outline);
+      box-shadow: none;
+      color: var(--home-accent);
+      --cat-glyph: 28px;
+    }
+
+    /* ---- Top picks band + cards ----------------------------------------- */
+    .category-detail-page[data-home-page] .t2-cat-toppicks {
+      padding: 18px 18px 20px;
+      border-radius: 12px;
+      border: 1px solid var(--home-card-outline);
+      background: var(--home-panel);
+      -webkit-backdrop-filter: blur(12px) saturate(140%);
+      backdrop-filter: blur(12px) saturate(140%);
+      box-shadow: none;
+      margin-bottom: 32px;
+    }
+    .category-detail-page[data-home-page] .t2-cat-toppicks .t2-verdict-heading {
+      margin: 0 0 12px;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--home-accent);
+    }
+    .category-detail-page[data-home-page] .t2-cat-toppicks-grid {
+      gap: 12px;
+    }
+    .category-detail-page[data-home-page] .t2-cat-toppick {
+      gap: 10px;
+      padding: 13px;
+      border-radius: 12px;
+      border: 1px solid var(--home-card-outline);
+      background: var(--home-panel-strong);
+      color: var(--home-on-card);
+      transition:
+        border-color var(--motion-fast, 160ms) var(--motion-ease, cubic-bezier(0.16, 1, 0.3, 1)),
+        background var(--motion-fast, 160ms) var(--motion-ease, cubic-bezier(0.16, 1, 0.3, 1));
+    }
+    @media (hover: hover) {
+      .category-detail-page[data-home-page] .t2-cat-toppick:hover {
+        border-color: var(--home-card-outline-hover);
+        background: color-mix(in srgb, var(--home-panel-strong) 94%, transparent);
+      }
+    }
+    .category-detail-page[data-home-page] .t2-cat-toppick-rank {
+      color: var(--home-accent);
+      letter-spacing: 0.1em;
+    }
+    .category-detail-page[data-home-page] .t2-cat-toppick-title {
+      font-size: 15px;
+      font-weight: 750;
+      color: var(--home-on-card);
+    }
+    @media (hover: hover) {
+      .category-detail-page[data-home-page] .t2-cat-toppick-title:hover {
+        color: var(--home-accent);
+      }
+    }
+    .category-detail-page[data-home-page] .t2-cat-toppick-score {
+      color: var(--home-muted);
+      font-size: 13px;
+    }
+    .category-detail-page[data-home-page] .t2-cat-toppick-score-val {
+      color: var(--home-accent);
+      font-weight: 800;
+    }
+    .category-detail-page[data-home-page] .t2-cat-toppick-cta.t2-cta-primary {
+      background: var(--home-accent-solid);
+      color: var(--home-inverse);
+      border: none;
+      border-radius: 10px;
+      font-weight: 800;
+    }
+    .category-detail-page[data-home-page] .t2-cat-toppick-cta.t2-cta-primary:hover {
+      opacity: 0.94;
+    }
+    .category-detail-page[data-home-page] .t2-cat-toppick-compare {
+      border-radius: 10px;
+      border: 1px solid var(--home-card-outline);
+      background: transparent;
+      color: var(--home-muted);
+      font-weight: 700;
+    }
+    .category-detail-page[data-home-page] .t2-cat-toppick-compare:hover,
+    .category-detail-page[data-home-page] .t2-cat-toppick-compare:focus-visible {
+      border-color: var(--home-card-outline-hover);
+      color: var(--home-accent);
+      outline: none;
+    }
+
+    /* ---- Filter toolbar (hero search parity) ---------------------------- */
+    .category-detail-page[data-home-page] .t2-cat-controls {
+      padding: 12px 14px;
+      border-radius: 14px;
+      border: 1px solid var(--home-hero-search-border);
+      background: var(--home-hero-search-bg);
+      box-shadow: var(--home-hero-search-shadow);
+      gap: 12px;
+    }
+    .category-detail-page[data-home-page] .t2-cat-search span,
+    .category-detail-page[data-home-page] .t2-cat-filter-summary {
+      color: var(--home-muted);
+    }
+    .category-detail-page[data-home-page] .t2-cat-search input {
+      min-height: 48px;
+      border-radius: 12px;
+      border: 1px solid var(--home-card-outline);
+      background: var(--home-input-bg);
+      color: var(--home-text);
+      font-size: 15px;
+      font-weight: 650;
+    }
+    .category-detail-page[data-home-page] .t2-cat-search input:focus {
+      border-color: var(--home-hero-search-focus-border);
+      box-shadow: var(--home-hero-search-focus-shadow);
+      outline: none;
+    }
+    .category-detail-page[data-home-page] .t2-cat-filter-summary strong {
+      color: var(--home-accent);
+    }
+    .category-detail-page[data-home-page] .t2-cat-filter-pill,
+    .category-detail-page[data-home-page] .t2-cat-reset,
+    .category-detail-page[data-home-page] .t2-cat-toggle {
+      border-radius: 10px;
+      border: 1px solid var(--home-card-outline);
+      background: var(--home-chip-bg);
+      color: var(--home-muted);
+      font-weight: 750;
+    }
+    .category-detail-page[data-home-page] .t2-cat-filter-pill span {
+      color: var(--home-dim);
+    }
+    .category-detail-page[data-home-page] .t2-cat-filter-pill:hover,
+    .category-detail-page[data-home-page] .t2-cat-filter-pill:focus-visible,
+    .category-detail-page[data-home-page] .t2-cat-reset:hover,
+    .category-detail-page[data-home-page] .t2-cat-reset:focus-visible,
+    .category-detail-page[data-home-page] .t2-cat-filter-pill.is-active {
+      border-color: rgba(249, 115, 22, 0.48);
+      background: rgba(249, 115, 22, 0.12);
+      color: var(--home-accent);
+      outline: none;
+    }
+    .category-detail-page[data-home-page] .t2-cat-filter-pill.is-active span {
+      color: inherit;
+      opacity: 0.92;
+    }
+    .category-detail-page[data-home-page] .t2-cat-no-results {
+      border-radius: 12px;
+      border: 1px dashed var(--home-line);
+      background: var(--home-panel);
+      color: var(--home-muted);
+    }
+
+    /* ---- Ranked list rows = homepage `.home-tool` chrome (flex: optional price) -- */
+    .category-detail-page[data-home-page] .t2-cat-ranked-section .t2-cat-list {
+      gap: 12px;
+    }
+    .category-detail-page[data-home-page] .t2-cat-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 13px;
+      gap: 12px;
+      border-radius: 12px;
+      border: 1px solid var(--home-card-outline);
+      background: var(--home-panel);
+      color: var(--home-on-card);
+      transition:
+        border-color var(--motion-fast, 160ms) var(--motion-ease, cubic-bezier(0.16, 1, 0.3, 1)),
+        background var(--motion-fast, 160ms) var(--motion-ease, cubic-bezier(0.16, 1, 0.3, 1));
+      -webkit-backdrop-filter: blur(12px) saturate(140%);
+      backdrop-filter: blur(12px) saturate(140%);
+    }
+    .category-detail-page[data-home-page] .t2-cat-row-rank {
+      flex: none;
+      width: 24px;
+      text-align: center;
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--home-dim);
+    }
+    .category-detail-page[data-home-page] .t2-cat-row-logo.tool-logo {
+      flex: none;
+      border-radius: 11px !important;
+    }
+    .category-detail-page[data-home-page] .t2-cat-row-main {
+      flex: 1 1 200px;
+      min-width: 0;
+      display: block;
+    }
+    .category-detail-page[data-home-page] .t2-cat-row-title {
+      font-size: 15px;
+      font-weight: 750;
+      color: var(--home-on-card);
+    }
+    @media (hover: hover) {
+      .category-detail-page[data-home-page] .t2-cat-row-title:hover {
+        color: var(--home-accent);
+      }
+    }
+    .category-detail-page[data-home-page] .t2-cat-row-tagline {
+      margin-top: 4px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--home-on-card-muted);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .category-detail-page[data-home-page] .t2-cat-row-tail {
+      flex: 0 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 10px;
+      margin-left: auto;
+      min-width: 0;
+    }
+    .category-detail-page[data-home-page] .t2-cat-row-price {
+      flex: none;
+      display: none;
+      max-width: 150px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size: 13px;
+      font-weight: 650;
+      font-style: normal;
+      color: var(--home-on-card-muted);
+    }
+    @media (min-width: 720px) {
+      .category-detail-page[data-home-page] .t2-cat-row-price {
+        display: inline;
+      }
+    }
+    .category-detail-page[data-home-page] .t2-cat-row-score {
+      flex: none;
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--home-accent);
+      min-width: 2.5rem;
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+    }
+    .category-detail-page[data-home-page] .t2-cat-row-actions {
+      flex: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-left: 0;
+    }
+    .category-detail-page[data-home-page] .t2-cat-row-cta,
+    .category-detail-page[data-home-page] .t2-cat-row-compare {
+      border-radius: 10px;
+      border: 1px solid var(--home-card-outline);
+      border-bottom-width: 1px !important;
+      background: transparent;
+      color: var(--home-muted);
+      font-weight: 700;
+      min-height: 40px;
+      padding-inline: 12px;
+    }
+    .category-detail-page[data-home-page] .t2-cat-row-compare:hover,
+    .category-detail-page[data-home-page] .t2-cat-row-compare:focus-visible {
+      outline: none;
+    }
+    .category-detail-page[data-home-page] .t2-cat-row-cta:hover,
+    .category-detail-page[data-home-page] .t2-cat-row-compare:hover {
+      border-color: var(--home-card-outline-hover) !important;
+      background: var(--home-panel-strong);
+      color: var(--home-accent);
+    }
+    .category-detail-page[data-home-page] .t2-cat-row .t2-cat-row-cta {
+      background: var(--home-accent-solid);
+      color: var(--home-inverse);
+      border-color: transparent;
+      font-weight: 800;
+    }
+    .category-detail-page[data-home-page] .t2-cat-row .t2-cat-row-cta:hover {
+      background: var(--home-accent-solid);
+      color: var(--home-inverse);
+      border-color: transparent;
+      opacity: 0.94;
+    }
+    @media (hover: hover) {
+      .category-detail-page[data-home-page] .t2-cat-row:hover {
+        border-color: var(--home-card-outline-hover);
+        background: var(--home-panel-strong);
+      }
+      .category-detail-page[data-home-page] .t2-cat-row:hover .t2-cat-row-title {
+        color: var(--home-on-card);
+      }
+      .category-detail-page[data-home-page] .t2-cat-row:hover .t2-cat-row-title:hover {
+        color: var(--home-accent);
+      }
+    }
+
+    .category-detail-page[data-home-page] .t2-cat-ranked-section > h2#all-tools {
+      scroll-margin-top: var(--home-scroll-pad-top);
+      margin-top: 1.75rem;
+      color: var(--home-heading);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .category-detail-page[data-home-page] .t2-cat-toppicks,
+      .category-detail-page[data-home-page] .t2-cat-row {
+        -webkit-backdrop-filter: none;
+        backdrop-filter: none;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .category-detail-page[data-home-page] .t2-cat-row-tail {
+        flex: 1 1 100%;
+        margin-left: calc(24px + 42px + 24px);
+        justify-content: flex-start;
+      }
+      .category-detail-page[data-home-page] .t2-cat-row-actions > * {
+        flex: 1;
+      }
+      .category-detail-page[data-home-page] .t2-cat-filter-summary {
+        text-align: left;
+      }
+    }
+
+    html.light .category-detail-page[data-home-page] .t2-cat-search input {
+      background: var(--home-input-bg);
+    }
+  </style>
 </BaseLayout>

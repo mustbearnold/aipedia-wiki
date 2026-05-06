@@ -1,6 +1,5 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import OsPageShell from '../../components/os/OsPageShell.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
 import AnswerContent from '../../components/AnswerContent.astro';
 
@@ -26,15 +25,9 @@ const answerLD = JSON.stringify({
 });
 ---
 
-<BaseLayout title="Is Midjourney Worth It? Honest Answer (2026)" description="Midjourney is worth it for frequent stylized image work, concept art, and moodboards, but weaker for one-off images and precise brand layouts." chrome="os">
+<BaseLayout title="Is Midjourney Worth It? Honest Answer (2026)" description="Midjourney is worth it for frequent stylized image work, concept art, and moodboards, but weaker for one-off images and precise brand layouts.">
   <script type="application/ld+json" set:html={answerLD} />
-  <OsPageShell
-    activeApp="ask"
-    appTitle="Answer"
-    appSubtitle="Definitive answer"
-    command="Read this answer"
-    density="article"
-  >
+  
   <Breadcrumb items={[{ label: 'Answers', href: '/answers/' }, { label: 'Is Midjourney worth it in 2026?' }]} />
 
   <article class="max-w-2xl mx-auto py-6">
@@ -53,5 +46,4 @@ const answerLD = JSON.stringify({
       <p>This answer reflects flagship models and pricing as of April 2026. See our <a href="/about/scoring/" class="text-[var(--accent-primary)] no-underline hover:underline">scoring methodology</a> for how we evaluate tools.</p>
     </div>
   </article>
-  </OsPageShell>
 </BaseLayout>

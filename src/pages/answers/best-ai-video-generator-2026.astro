@@ -1,6 +1,5 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import OsPageShell from '../../components/os/OsPageShell.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
 import AnswerContent from '../../components/AnswerContent.astro';
 
@@ -26,15 +25,9 @@ const answerLD = JSON.stringify({
 });
 ---
 
-<BaseLayout title="Best AI Video Generator (2026): Definitive Answer" description="Runway for controlled production work, Kling for lower-cost cinematic clips, and HeyGen for avatar and localization workflows. April 2026 verdict." chrome="os">
+<BaseLayout title="Best AI Video Generator (2026): Definitive Answer" description="Runway for controlled production work, Kling for lower-cost cinematic clips, and HeyGen for avatar and localization workflows. April 2026 verdict.">
   <script type="application/ld+json" set:html={answerLD} />
-  <OsPageShell
-    activeApp="ask"
-    appTitle="Answer"
-    appSubtitle="Definitive answer"
-    command="Read this answer"
-    density="article"
-  >
+  
   <Breadcrumb items={[{ label: 'Answers', href: '/answers/' }, { label: 'What is the best AI video generator in 2026?' }]} />
 
   <article class="max-w-2xl mx-auto py-6">
@@ -53,5 +46,4 @@ const answerLD = JSON.stringify({
       <p>This answer reflects flagship models and pricing as of April 2026. See our <a href="/about/scoring/" class="text-[var(--accent-primary)] no-underline hover:underline">scoring methodology</a> for how we evaluate tools.</p>
     </div>
   </article>
-  </OsPageShell>
 </BaseLayout>

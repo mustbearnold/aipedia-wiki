@@ -439,7 +439,13 @@ for (const route of ['/about/', '/about/editorial/', '/about/scoring/', '/media-
     await page.goto(route);
 
     await expect(page.locator('[data-refresh-surface="home-adjacent"]').first()).toBeVisible();
-    await expect(page.locator('.ref-hero-card').first()).toBeVisible();
+    const heroCard =
+      route === '/dead/'
+        ? page.locator('.dead-page-root .home-surface-card').first()
+        : route === '/glossary/'
+          ? page.locator('.glossary-page-root .home-surface-card').first()
+          : page.locator('.ref-hero-card').first();
+    await expect(heroCard).toBeVisible();
   });
 }
 

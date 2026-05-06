@@ -90,8 +90,8 @@ const verifiedLabel = verifiedDate && !isNaN(verifiedDate.getTime())
   : null;
 
 const scoreColor = score >= 9 ? 'text-[var(--accent-success)]' : score >= 8 ? 'text-[var(--accent-primary)]' : score >= 6 ? 'text-[var(--accent-warning)]' : 'text-[var(--accent-danger)]';
-const scoreBg = score >= 9 ? 'rgba(94,234,212,0.12)' : score >= 8 ? 'rgba(34, 211, 238,0.14)' : score >= 6 ? 'rgba(103, 232, 249,0.12)' : 'rgba(103, 232, 249,0.12)';
-const scoreBorder = score >= 9 ? 'rgba(94,234,212,0.3)' : score >= 8 ? 'rgba(34, 211, 238,0.3)' : score >= 6 ? 'rgba(103, 232, 249,0.3)' : 'rgba(103, 232, 249,0.3)';
+const scoreBg = score >= 9 ? 'rgba(253, 186, 116,0.12)' : score >= 8 ? 'rgba(249, 115, 22,0.14)' : score >= 6 ? 'rgba(251, 146, 60,0.12)' : 'rgba(251, 146, 60,0.12)';
+const scoreBorder = score >= 9 ? 'rgba(253, 186, 116,0.3)' : score >= 8 ? 'rgba(249, 115, 22,0.3)' : score >= 6 ? 'rgba(251, 146, 60,0.3)' : 'rgba(251, 146, 60,0.3)';
 
 const launchedLabel = launched ? (() => {
   const m = String(launched).match(/^(\d{4})/);
@@ -113,13 +113,13 @@ if (verifiedLabel) chips.push({ label: 'Verified', value: verifiedLabel, icon: '
 ---
 
 <aside
-  class="not-prose mb-6 rounded-2xl border border-[rgba(34, 211, 238,0.28)] bg-gradient-to-br from-[rgba(34, 211, 238,0.10)] via-[rgba(56,189,248,0.06)] to-transparent p-5 sm:p-6 shadow-[0_1px_0_rgba(255,255,255,0.04)_inset]"
+  class="not-prose mb-6 rounded-2xl border border-[rgba(249, 115, 22,0.28)] bg-gradient-to-br from-[rgba(249, 115, 22,0.10)] via-[rgba(251, 146, 60,0.06)] to-transparent p-5 sm:p-6 shadow-[0_1px_0_rgba(255,255,255,0.04)_inset]"
   aria-label="Quick answer"
   data-pagefind-meta="quick-answer"
 >
   <div class="flex items-center gap-2 mb-4">
     <span
-      class="inline-flex items-center justify-center px-2 h-6 rounded-md text-[11px] font-bold uppercase tracking-wider text-[var(--accent-primary)] bg-[rgba(34, 211, 238,0.18)] border border-[rgba(34, 211, 238,0.35)]"
+      class="inline-flex items-center justify-center px-2 h-6 rounded-md text-[11px] font-bold uppercase tracking-wider text-[var(--accent-primary)] bg-[rgba(249, 115, 22,0.18)] border border-[rgba(249, 115, 22,0.35)]"
       aria-hidden="true">TL;DR</span>
     <span class="text-[11px] font-semibold uppercase tracking-wider text-[var(--accent-primary)]">
       Quick Answer
@@ -130,7 +130,7 @@ if (verifiedLabel) chips.push({ label: 'Verified', value: verifiedLabel, icon: '
   <div class="flex flex-wrap gap-1.5 mb-4">
     {chips.slice(1).map((c) => {
       const toneBg = c.tone === 'price'
-        ? 'bg-[rgba(94,234,212,0.10)] border-[rgba(94,234,212,0.28)] text-[var(--accent-success)]'
+        ? 'bg-[rgba(253, 186, 116,0.10)] border-[rgba(253, 186, 116,0.28)] text-[var(--accent-success)]'
         : 'bg-[var(--bg-card)] border-[var(--border)] text-[var(--text-secondary)]';
       return (
         <span class={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-medium border ${toneBg} tabular-nums`}>

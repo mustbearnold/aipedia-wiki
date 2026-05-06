@@ -12,7 +12,6 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from './BaseLayout.astro';
 import '../styles/t2-canvas.css';
-import OsPageShell from '../components/os/OsPageShell.astro';
 import ReadingProgress from '../components/ReadingProgress.astro';
 import BreadcrumbLD from '../components/seo/BreadcrumbLD.astro';
 import SoftwareApplicationLD from '../components/seo/SoftwareApplicationLD.astro';
@@ -94,7 +93,7 @@ function formatHistoryDate(v: unknown): string {
 // Sparkbars: tier colors match the homepage card treatment.
 function barColor(n: number): string {
   if (n >= 8) return '#34d399';
-  if (n >= 7) return '#38bdf8';
+  if (n >= 7) return '#fb923c';
   if (n >= 6) return '#fbbf24';
   return '#fb7185';
 }
@@ -256,7 +255,6 @@ const relatedNews = allNews
   title={f.seo_title ?? f.title}
   description={f.meta_description ?? f.tagline ?? ''}
   ogImage={`/og/tools/${toolSlug}.png`}
-  chrome="os"
 >
   <ReadingProgress />
   <BreadcrumbLD items={breadcrumbLdItems} />
@@ -287,13 +285,7 @@ const relatedNews = allNews
     {overall < 8 && <span data-pagefind-filter="Score">Below 8</span>}
   </div>
 
-  <OsPageShell
-    activeApp="packages"
-    appTitle="Tool review"
-    appSubtitle={`${overall.toFixed(1)}/10 review score`}
-    command={`Review ${f.title}`}
-    density="article"
-  >
+  
     <div class="t2-canvas">
     <!-- Breadcrumb -->
     <nav class="t2-breadcrumb" aria-label="Breadcrumb" data-reveal>
@@ -551,9 +543,7 @@ const relatedNews = allNews
       )}
     </div>
     </div>
-  </OsPageShell>
-
-  <StickyMobileCTA
+<StickyMobileCTA
     name={f.title}
     canonicalUrl={f.url}
     affiliateUrl={affiliate?.link}

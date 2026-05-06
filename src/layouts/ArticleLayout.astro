@@ -5,7 +5,6 @@
  * /media-kit, /glossary, and similar standalone pages.
  */
 import BaseLayout from './BaseLayout.astro';
-import OsPageShell from '../components/os/OsPageShell.astro';
 import '../styles/t2-canvas.css';
 import BreadcrumbLD from '../components/seo/BreadcrumbLD.astro';
 
@@ -42,23 +41,16 @@ const breadcrumbLdItems = breadcrumbs
       })),
     ]
   : undefined;
-const osAppTitle = type.toLowerCase().includes('glossary') ? 'Glossary' : 'Reference guide';
 ---
 
-<BaseLayout title={seoTitle ?? title} description={description} chrome="os">
+<BaseLayout title={seoTitle ?? title} description={description}>
   {breadcrumbLdItems && <BreadcrumbLD items={breadcrumbLdItems} />}
 
   <div class="sr-only" data-pagefind-ignore>
     <span data-pagefind-filter="Type">{type}</span>
   </div>
 
-  <OsPageShell
-    activeApp="trust"
-    appTitle={osAppTitle}
-    appSubtitle={type}
-    command={`Read ${title}`}
-    density="article"
-  >
+  
   <div class="t2-canvas ref-surface" data-refresh-surface="home-adjacent">
     {breadcrumbs && (
       <nav class="t2-breadcrumb" aria-label="Breadcrumb">
@@ -135,5 +127,4 @@ const osAppTitle = type.toLowerCase().includes('glossary') ? 'Glossary' : 'Refer
       </aside>
     </div>
   </div>
-  </OsPageShell>
 </BaseLayout>
