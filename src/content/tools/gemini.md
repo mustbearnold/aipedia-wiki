@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$249.99/month"
 status: active
 launched: 2023-12
-last_updated: 2026-05-06
-last_verified: 2026-05-06
+last_updated: 2026-05-07
+last_verified: 2026-05-07
 update_frequency: monthly
 seo_title: "Gemini: Features, Pricing & Review (April 2026)"
 meta_description: "Gemini 3.1 Pro is Google's flagship (Feb 2026, 1M token context). Google AI Pro $19.99/mo bundles 5TB storage, Veo 3.1, and Nano Banana 2. Ultra $249.99/mo unlocks Deep Think 3.1 and Nano Banana Pro. Best AI for Google Workspace users."
@@ -218,6 +218,7 @@ Google DeepMind's multimodal AI assistant. **Gemini 3.1 Pro** is the flagship as
 
 ## Recent developments (April-May 2026)
 
+- **May 5:** [Google released MTP drafters to make Gemma 4 inference up to 3x faster](/news/2026-05-05-gemma-4-mtp-drafters-inference/). Gemma is the open-weight sibling to Gemini, and the drafter release improves Google's local and self-hosted model story.
 - **May 5:** [Gemini API File Search adds multimodal RAG, metadata filters, and page citations](/news/2026-05-05-gemini-api-file-search-multimodal-rag/), tightening Google's managed retrieval story for agents and assistants that mix documents and visual assets.
 - **May 2:** [A reported Gemini UI string points to a possible Omni video-generation surface ahead of Google I/O](/news/2026-05-03-google-gemini-omni-video-generation-test/). Treat Omni as speculative until Google confirms it; the strategic watch item is whether Gemini unifies Veo video and Nano Banana image generation under one media workflow.
 - **May 1:** [The Pentagon expanded classified-network AI access to eight major vendors](/news/2026-05-01-pentagon-classified-ai-network-deals/), including Google.
@@ -350,7 +351,7 @@ Prices verified 2026-04-17 via [Google AI subscription page](https://one.google.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-26 against the [Gemini 3.1 Pro model card](https://deepmind.google/models/model-cards/gemini-3-1-pro/), [Google AI subscription page](https://one.google.com/about/ai-premium/), [Gemini API pricing docs](https://ai.google.dev/gemini-api/docs/pricing), [9to5Google's April 2026 tier breakdown](https://9to5google.com/2026/04/11/google-ai-pro-ultra-features/), and the [Nano Banana Personal Intelligence launch coverage](https://techcrunch.com/2026/04/16/google-adds-nano-banana-powered-image-generation-to-geminis-personal-intelligence/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-07 against the [Gemini 3.1 Pro model card](https://deepmind.google/models/model-cards/gemini-3-1-pro/), [Google AI subscription page](https://one.google.com/about/ai-premium/), [Gemini API pricing docs](https://ai.google.dev/gemini-api/docs/pricing), [9to5Google's April 2026 tier breakdown](https://9to5google.com/2026/04/11/google-ai-pro-ultra-features/), and the [Nano Banana Personal Intelligence launch coverage](https://techcrunch.com/2026/04/16/google-adds-nano-banana-powered-image-generation-to-geminis-personal-intelligence/).
 
 ## FAQ
 

@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2025
-last_updated: 2026-04-28
-last_verified: 2026-04-28
+last_updated: 2026-05-07
+last_verified: 2026-05-07
 update_frequency: monthly
 seo_title: "Kiro: Features, Pricing & Review (April 2026)"
 meta_description: "Kiro is a spec-driven agentic IDE and CLI. Free includes 50 credits; Pro is $20/mo with 1,000 credits; Pro+ is $40/mo with 2,000 credits; Power is $200/mo with 10,000 credits."
@@ -101,6 +101,8 @@ Kiro is compatible with Open VSX plugins, themes, and VS Code settings. It suppo
 
 The product is built around a sharp editorial stance: vibe coding is useful for exploration, but production work needs a spec. Kiro's specs create `requirements.md` or `bugfix.md`, `design.md`, and `tasks.md`; steering files carry project conventions; hooks automate routine agent actions around file saves, prompts, tool calls, and task execution.
 
+> **May 6, 2026:** [ServiceNow and AWS linked AI Control Tower, Bedrock AgentCore, and Kiro](/news/2026-05-06-servicenow-aws-agentcore-kiro-integration/). The integration gives Kiro a governed ServiceNow app-development path for mutual AWS and ServiceNow customers.
+
 ## System Verdict
 
 > **Pick Kiro if your team wants AI coding with a paper trail.** Specs are the differentiator: Kiro produces requirements, design docs, and task lists before or alongside implementation, which makes it easier to review intent and prevent agent drift.
@@ -186,7 +188,7 @@ Credits are consumed by prompts in vibe mode or spec mode, spec refinement, task
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-04-28 against primary Kiro sources.
+This page was produced by the aipedia.wiki editorial pipeline. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-05-07 against primary Kiro sources.
 
 ## FAQ
 

@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "$20-$200/month"
 status: active
 launched: 2025-02
-last_updated: 2026-05-06
-last_verified: 2026-05-06
+last_updated: 2026-05-07
+last_verified: 2026-05-07
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -123,6 +123,8 @@ Claude Opus 4.7 (released April 16, 2026) is the default backing model. Access i
 
 ## Recent developments (April-May 2026)
 
+- **May 6:** [Anthropic used SpaceX Colossus capacity to raise Claude Code and API limits](/news/2026-05-06-anthropic-spacex-colossus-claude-limits/). Claude Code five-hour limits doubled for Pro, Max, Team, and seat-based Enterprise plans, and peak-hour reductions were removed for Pro and Max.
+- **May 6:** [ServiceNow Build Agent reached Claude Code, Cursor, Windsurf, and GitHub Copilot](/news/2026-05-06-servicenow-build-agent-coding-tools/). ServiceNow developers can bring platform context into Claude Code, but should treat the connector as privileged enterprise workflow access.
 - **May 5:** [Anthropic ships ten financial-services agent templates](/news/2026-05-05-anthropic-financial-services-agent-templates/) with Claude Code and Cowork plugins plus Managed Agent cookbooks. Finance teams get packaged pitch, KYC, and close workflows, but engineering still owns permissions, audit logs, and connector scopes.
 - **May 1:** [The MCP STDIO command-execution flaw reframed MCP server configs as privileged shell-access surfaces](/news/2026-05-03-mcp-stdio-command-execution-flaw/). Claude Code teams should inventory MCP configs, sandbox STDIO tools, and treat config approval as a security event, not a routine plugin install.
 - **April 30:** [Claude Security entered public beta for Enterprise codebase scans](/news/2026-04-30-claude-security-public-beta/). It gives Anthropic a first-party vulnerability-review and patch-proposal surface next to Claude Code's terminal agent loop.
@@ -244,7 +246,7 @@ Subscription pricing via [claude.com/pricing](https://claude.com/pricing). Claud
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-24 against [Claude Code docs](https://code.claude.com/docs/en/overview), [Anthropic pricing](https://claude.com/pricing), [Claude Code llms.txt](https://code.claude.com/llms.txt), the [Opus 4.7 release coverage](https://www.anthropic.com/news/claude-opus-4-7), and the [NEC partnership](/news/2026-04-24-anthropic-nec-ai-engineering-workforce/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-07 against [Claude Code docs](https://code.claude.com/docs/en/overview), [Anthropic pricing](https://claude.com/pricing), [Claude Code llms.txt](https://code.claude.com/llms.txt), the [Opus 4.7 release coverage](https://www.anthropic.com/news/claude-opus-4-7), and the [NEC partnership](/news/2026-04-24-anthropic-nec-ai-engineering-workforce/).
 
 ## FAQ
 

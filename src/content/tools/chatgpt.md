@@ -11,11 +11,11 @@ pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2022-11
-last_updated: 2026-05-05
-last_verified: 2026-05-05
+last_updated: 2026-05-07
+last_verified: 2026-05-07
 update_frequency: monthly
 seo_title: "ChatGPT: Features, Pricing & Review (May 2026)"
-meta_description: "ChatGPT runs GPT-5.3 Instant on all tiers, GPT-5.5 Thinking on Plus, and GPT-5.5 Pro on Pro, Business, and Enterprise plans. Plus is $20/mo; Pro plans at $100 and $200/mo add heavier Codex usage. DALL-E and Sora are retired."
+meta_description: "ChatGPT now uses GPT-5.5 Instant as the default model, with GPT-5.5 Thinking on Plus and GPT-5.5 Pro on Pro, Business, and Enterprise plans. Plus is $20/mo; Pro plans at $100 and $200/mo add heavier Codex usage."
 author: "aipedia.wiki Editorial"
 affiliate:
   has_program: false
@@ -57,7 +57,7 @@ facts:
     confidence: high
     next_review_at: 2026-06-03
   free_plan:
-    value: "Yes — limited GPT-5.3 access, uploads, image generation, deep research, memory, context, and Codex access"
+    value: "Yes — limited GPT-5.5 Instant access, uploads, image generation, deep research, memory, context, and Codex access"
     source: "https://chatgpt.com/pricing/"
     source_label: "ChatGPT pricing"
     source_id: openai-chatgpt-pricing
@@ -218,6 +218,14 @@ price_history:
     source_label: "ChatGPT pricing"
     verified_at: 2026-05-03
     note: "Verified, unchanged"
+  - date: 2026-05-05
+    plan: "Default model"
+    price: "GPT-5.5 Instant"
+    source: "https://openai.com/index/gpt-5-5-instant/"
+    source_id: openai-gpt-55-instant
+    source_label: "OpenAI GPT-5.5 Instant release"
+    verified_at: 2026-05-07
+    note: "GPT-5.5 Instant replaced GPT-5.3 Instant as the default ChatGPT model and API chat-latest target."
   - date: 2026-04-16
     plan: "Agents SDK update"
     price: "Same"
@@ -252,7 +260,7 @@ OpenAI's general-purpose AI assistant for text, images, web browsing, sandboxed 
 
 | | |
 |---|---|
-| **Default model** | GPT-5.3 Instant on all tiers; Plus adds GPT-5.5 Thinking; Pro, Business, and Enterprise add GPT-5.5 Pro access |
+| **Default model** | GPT-5.5 Instant on all tiers; Plus adds GPT-5.5 Thinking; Pro, Business, and Enterprise add GPT-5.5 Pro access |
 | **Editorial position** | Best default AI assistant overall after GPT-5.5; Claude remains a specialist for long-form writing style, Claude Code, and stricter safety posture |
 | **Best paid tier** | Plus at $20/mo for most individuals |
 | **Coding agent** | Codex is included on Plus and scales on Pro tiers |
@@ -262,24 +270,27 @@ OpenAI's general-purpose AI assistant for text, images, web browsing, sandboxed 
 | **Context window** | ChatGPT pricing lists 256K reasoning context on Go, Plus, Business, and Enterprise; Pro reaches 400K |
 | **Score** | Utility 10 · Value 8 · Moat 10 · Longevity 10 |
 
-Every data point above was last verified against OpenAI pages, local news entries, or named sources on May 2, 2026.
+Every data point above was last verified against OpenAI pages, local news entries, or named sources on May 7, 2026.
 
 ## Pricing
 
 | Plan | Price | Models | Codex | Ads | Best fit |
 |------|-------|--------|-------|-----|----------|
-| Free | $0 | Limited GPT-5.3 Instant + GPT-5 Thinking Mini | Limited | Not listed | Casual use |
-| Go | Regional pricing | More GPT-5.3 Instant + GPT-5 Thinking Mini | Limited | May include ads | Budget users who need more than Free |
-| Plus | $20/mo | GPT-5.5 Thinking, expanded GPT-5.3 Instant, legacy models | Expanded | No | **Most individuals** |
-| Pro $100 | $100/mo | GPT-5.5 Pro + unlimited GPT-5.3 Instant | 5x Plus, 10x promo through May 31 | No | Developers using Codex weekly |
-| Pro $200 | $200/mo | GPT-5.5 Pro + unlimited GPT-5.3 Instant | 20x Plus | No | Heavy agentic coding workloads |
+| Free | $0 | Limited GPT-5.5 Instant + GPT-5 Thinking Mini | Limited | Not listed | Casual use |
+| Go | Regional pricing | More GPT-5.5 Instant + GPT-5 Thinking Mini | Limited | May include ads | Budget users who need more than Free |
+| Plus | $20/mo | GPT-5.5 Thinking, expanded GPT-5.5 Instant, legacy models | Expanded | No | **Most individuals** |
+| Pro $100 | $100/mo | GPT-5.5 Pro + unlimited GPT-5.5 Instant | 5x Plus, 10x promo through May 31 | No | Developers using Codex weekly |
+| Pro $200 | $200/mo | GPT-5.5 Pro + unlimited GPT-5.5 Instant | 20x Plus | No | Heavy agentic coding workloads |
 | Business | $25/user/mo monthly; $20/user/mo annually | Flexible GPT-5.5 Thinking and GPT-5.5 Pro access | Included, with workspace controls | No | Small teams |
 | Enterprise | Custom | Flexible GPT-5.5 Thinking and GPT-5.5 Pro access | High | No | SSO, audit, SOC 2, data controls |
 
-Prices and model access were rechecked on May 2, 2026 using [ChatGPT pricing](https://chatgpt.com/pricing/), [OpenAI's GPT-5.5 release note](https://openai.com/index/introducing-gpt-5-5/), [OpenAI's Pro tier help article](https://help.openai.com/en/articles/9793128-what-is-chatgpt-pro), and [OpenAI's Business help article](https://help.openai.com/en/articles/8792828-what-is-chatgpt-team). The public pricing snapshot available here does not expose a fixed US dollar amount for Go, so the table lists it as regional pricing instead of repeating an unverified $8/mo figure.
+Prices and model access were rechecked on May 7, 2026 using [ChatGPT pricing](https://chatgpt.com/pricing/), [OpenAI's GPT-5.5 Instant release note](https://openai.com/index/gpt-5-5-instant/), [OpenAI's GPT-5.5 release note](https://openai.com/index/introducing-gpt-5-5/), [OpenAI's Pro tier help article](https://help.openai.com/en/articles/9793128-what-is-chatgpt-pro), and [OpenAI's Business help article](https://help.openai.com/en/articles/8792828-what-is-chatgpt-team). The public pricing snapshot available here does not expose a fixed US dollar amount for Go, so the table lists it as regional pricing instead of repeating an unverified $8/mo figure.
 
 ## Recent changes
 
+- **May 6, 2026:** [OpenAI published a ChatGPT privacy and training-data controls explainer](/news/2026-05-06-openai-chatgpt-privacy-data-controls/), clarifying consumer data controls, Temporary Chat, memory review, Privacy Filter, export, deletion, and privacy requests.
+- **May 5, 2026:** [OpenAI opened ChatGPT ads to beta self-serve buying and CPC bidding](/news/2026-05-05-chatgpt-ads-manager-cpc-bidding/). Ads are now a clearer part of the ChatGPT business model, even if formats and global availability remain early.
+- **May 5, 2026:** [GPT-5.5 Instant replaced GPT-5.3 Instant as the default ChatGPT model](/news/2026-05-05-openai-gpt-55-instant-chatgpt-default/). Update any guidance that still names GPT-5.3 Instant as the default assistant.
 - **May 1, 2026:** [The Pentagon expanded classified-network AI access to eight major vendors](/news/2026-05-01-pentagon-classified-ai-network-deals/), including OpenAI. This does not change consumer ChatGPT tiers, but it makes regulated deployment, auditability, and government-access boundaries more important parts of the ChatGPT Enterprise story.
 - **April 30, 2026:** [ChatGPT Images 2.0 found its strongest early demand in India](/news/2026-04-30-chatgpt-images-2-india-adoption/), with OpenAI telling TechCrunch that India is the largest user base while third-party data showed a more uneven global engagement lift. Treat image generation as a core ChatGPT feature, but test local-language workflows before assuming the same adoption pattern everywhere.
 - **April 30, 2026:** [OpenAI added Advanced Account Security for ChatGPT and Codex](/news/2026-04-30-openai-advanced-account-security-yubikeys/), with passkey and hardware-key protection for high-risk accounts. Stronger phishing resistance comes with stricter recovery, so users should set up backup keys before enrolling.
@@ -339,7 +350,7 @@ The score is highest overall because GPT-5.5, Codex, image generation, workspace
 ## FAQ
 
 **Is ChatGPT free?**
-Yes. The free tier provides limited GPT-5.3 Instant access at no cost. Plus at $20/mo adds GPT-5.5 Thinking and is the best landing spot for most individuals.
+Yes. The free tier provides limited GPT-5.5 Instant access at no cost. Plus at $20/mo adds GPT-5.5 Thinking and is the best landing spot for most individuals.
 
 **Is DALL-E still available in ChatGPT?**
 No. DALL-E 3 was retired in March 2025 and replaced by GPT Image 2.
@@ -361,4 +372,4 @@ ChatGPT wins on breadth, image generation, and agent integrations. Claude remain
 - [OpenAI: About ChatGPT Pro tiers](https://help.openai.com/en/articles/9793128-what-is-chatgpt-pro): Pro $100, Pro $200, Codex limits, and promo details
 - [OpenAI: What is ChatGPT Business?](https://help.openai.com/en/articles/8792828-what-is-chatgpt-team): Business seat pricing and workspace controls
 
-This review follows the aipedia.wiki four-axis scoring model: Utility, Value, Moat, and Longevity. Last verified 2026-05-02.
+This review follows the aipedia.wiki four-axis scoring model: Utility, Value, Moat, and Longevity. Last verified 2026-05-07.

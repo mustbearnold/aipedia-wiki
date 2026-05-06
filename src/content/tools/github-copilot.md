@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$39/user/month"
 status: active
 launched: 2021-06
-last_updated: 2026-05-05
-last_verified: 2026-05-05
+last_updated: 2026-05-07
+last_verified: 2026-05-07
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -222,6 +222,10 @@ Claude Opus 4.7 went generally available inside Copilot on April 16, 2026, withi
 
 On April 24, 2026, GitHub's Copilot interaction-data policy took effect for Free, Pro, and Pro+ accounts: prompts, outputs, code snippets, and associated context may be used for model training unless individual users opt out. Copilot Business and Enterprise remain excluded from that training path.
 
+On May 6, 2026, [ServiceNow Build Agent reached GitHub Copilot, Cursor, Windsurf, and Claude Code](/news/2026-05-06-servicenow-build-agent-coding-tools/), giving ServiceNow developers a path to work from Copilot while retaining ServiceNow platform context and governance.
+
+On May 5, 2026, [GitHub brought secret and dependency scanning into MCP developer workflows](/news/2026-05-05-github-mcp-secret-dependency-scanning/). Secret scanning through the GitHub MCP Server is GA, dependency scanning is in public preview, and the Defender for Cloud code-to-cloud integration is GA.
+
 On May 1, 2026, GitHub announced that [GPT-5.2 and GPT-5.2-Codex will be retired across most Copilot experiences on June 1](/news/2026-05-03-github-copilot-gpt-52-deprecation/), pushing users to GPT-5.5 and GPT-5.3-Codex. Enterprise admins should confirm model policies before the cutoff.
 
 On April 27, 2026, GitHub announced that [Copilot will move to usage-based billing on June 1](/news/2026-04-27-github-copilot-usage-based-billing/). Premium requests are being replaced by GitHub AI Credits, and private-repo Copilot code review will begin consuming GitHub Actions minutes.
@@ -338,7 +342,7 @@ Prices verified 2026-04-17 via [GitHub Copilot plans](https://github.com/feature
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, normalizes factual claims, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-26 against [github.com/features/copilot](https://github.com/features/copilot), [github.com/features/copilot/plans](https://github.com/features/copilot/plans), [docs.github.com/en/copilot](https://docs.github.com/en/copilot), the [Opus 4.7 GA changelog](https://github.blog/changelog/2026-04-16-claude-opus-4-7-is-generally-available/), the [Copilot feature matrix](https://docs.github.com/en/copilot/reference/copilot-feature-matrix), and the [April 24 data-policy update](/news/2026-04-24-github-copilot-interaction-data-training/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, normalizes factual claims, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-07 against [github.com/features/copilot](https://github.com/features/copilot), [github.com/features/copilot/plans](https://github.com/features/copilot/plans), [docs.github.com/en/copilot](https://docs.github.com/en/copilot), the [Opus 4.7 GA changelog](https://github.blog/changelog/2026-04-16-claude-opus-4-7-is-generally-available/), the [Copilot feature matrix](https://docs.github.com/en/copilot/reference/copilot-feature-matrix), and the [April 24 data-policy update](/news/2026-04-24-github-copilot-interaction-data-training/).
 
 ## FAQ
 

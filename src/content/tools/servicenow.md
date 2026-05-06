@@ -11,8 +11,8 @@ pricing_model: enterprise
 price_range: Custom enterprise pricing
 status: active
 launched: 2004
-last_updated: 2026-05-06
-last_verified: 2026-05-06
+last_updated: 2026-05-07
+last_verified: 2026-05-07
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -83,6 +83,10 @@ ServiceNow is an enterprise workflow platform (ITSM + employee + customer + oper
 
 ## Recent developments (May 2026)
 
+- **May 6:** [ServiceNow launched a real-time data foundation for autonomous AI](/news/2026-05-06-servicenow-real-time-data-foundation/), including Context Engine, Autonomous Data Analytics, and Workflow Data Fabric positioning for live governed enterprise context.
+- **May 6:** [ServiceNow Build Agent reached Studio and major AI coding tools](/news/2026-05-06-servicenow-build-agent-coding-tools/), extending core skills into Cursor, Windsurf, Claude Code, and GitHub Copilot while keeping ServiceNow platform context and governance.
+- **May 6:** [ServiceNow and AWS linked AI Control Tower, Bedrock AgentCore, and Kiro](/news/2026-05-06-servicenow-aws-agentcore-kiro-integration/), adding a Kiro developer path and a shared governance architecture for mutual customers.
+- **May 5:** [ServiceNow Action Fabric opened governed enterprise actions to AI agents](/news/2026-05-05-servicenow-action-fabric-ai-agent-system/), exposing ServiceNow workflows through its generally available MCP Server for Claude, Copilot, and customer-built agents.
 - **May 5:** [ServiceNow debuts Otto and expands AI Control Tower at Knowledge 2026](/news/2026-05-05-servicenow-otto-knowledge-2026/).
 
 ## System Verdict

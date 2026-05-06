@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2023-03
-last_updated: 2026-05-03
-last_verified: 2026-05-03
+last_updated: 2026-05-07
+last_verified: 2026-05-07
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -206,6 +206,7 @@ Anysphere's AI-native code editor. A VS Code fork with LLMs wired into autocompl
 
 ## Recent developments
 
+- **May 6, 2026:** [ServiceNow Build Agent reached Cursor and other major AI coding tools](/news/2026-05-06-servicenow-build-agent-coding-tools/). Cursor users building ServiceNow apps can pull platform context into their IDE workflow, but teams should review permissions and deployment approvals before broad rollout.
 - **May 1, 2026:** [The MCP STDIO command-execution flaw made Cursor's MCP layer part of the shell-access threat model](/news/2026-05-03-mcp-stdio-command-execution-flaw/). Cursor users should audit `mcp.json`, disable automatic registration where possible, and sandbox third-party servers.
 - **May 1, 2026:** [Replit argued for independence as Cursor deal talk reshaped AI coding](/news/2026-05-01-replit-cursor-deal-independence/). Cursor's reported SpaceX/xAI acquisition option keeps strategic-owner risk and infrastructure upside central to how enterprises evaluate the IDE.
 - **April 27, 2026:** [Cursor and Claude were named in a reported PocketOS database-deletion incident](/news/2026-04-27-cursor-claude-database-deletion-incident/). Treat it as an agent-permissions and backup-design warning, not proof that AI coding tools should never touch infrastructure.
@@ -317,7 +318,7 @@ Prices verified 2026-04-17 via [cursor.com/pricing](https://cursor.com/pricing) 
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, normalizes factual claims, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [cursor.com/pricing](https://cursor.com/pricing), [cursor.com/docs/models](https://cursor.com/docs/models), the [Cursor changelog](https://cursor.com/changelog), the [Cursor 2.0 release notes](https://cursor.com/changelog/2-0), and the [Claude Opus 4.7 Cursor docs page](https://cursor.com/docs/models/claude-opus-4-7).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, normalizes factual claims, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-07 against [cursor.com/pricing](https://cursor.com/pricing), [cursor.com/docs/models](https://cursor.com/docs/models), the [Cursor changelog](https://cursor.com/changelog), the [Cursor 2.0 release notes](https://cursor.com/changelog/2-0), and the [Claude Opus 4.7 Cursor docs page](https://cursor.com/docs/models/claude-opus-4-7).
 
 ## FAQ
 

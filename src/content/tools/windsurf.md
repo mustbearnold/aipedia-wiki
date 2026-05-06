@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2024-11
-last_updated: 2026-05-04
-last_verified: 2026-05-04
+last_updated: 2026-05-07
+last_verified: 2026-05-07
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -111,6 +111,8 @@ Cognition AI's AI-native code editor. A VS Code fork with inline autocomplete, a
 
 Owned by Cognition since July 2025, after Google took a licensing deal and an earlier OpenAI acquisition collapsed. Now a sibling product to [Devin](/tools/devin/) inside the Cognition stack.
 
+> **May 6, 2026:** [ServiceNow Build Agent reached Windsurf and other major AI coding tools](/news/2026-05-06-servicenow-build-agent-coding-tools/), bringing ServiceNow platform context into agentic coding workflows while keeping ServiceNow governance and deployment controls in scope.
+
 > **May 1, 2026:** [The MCP STDIO command-execution disclosure named Windsurf in the highest-risk IDE bucket](/news/2026-05-03-mcp-stdio-command-execution-flaw/), with a reported zero-click prompt-injection path to local RCE. Treat MCP auto-registration and third-party servers as privileged shell access until patched and sandboxed.
 
 > **April 17, 2026:** [Windsurf shipped Claude Opus 4.7 support within 24 hours](/news/2026-04-17-opus-4-7-day-two-ide-adoption/) of Anthropic's release, alongside Cursor, Zed, and Continue.
@@ -207,7 +209,7 @@ Pricing via [windsurf.com/pricing](https://windsurf.com/pricing). Paid tiers mov
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [Windsurf pricing](https://windsurf.com/pricing), [Windsurf model docs](https://docs.windsurf.com/windsurf/models), and the [Cognition acquisition announcement](https://cognition.ai/blog/windsurf).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-07 against [Windsurf pricing](https://windsurf.com/pricing), [Windsurf model docs](https://docs.windsurf.com/windsurf/models), and the [Cognition acquisition announcement](https://cognition.ai/blog/windsurf).
 
 ## FAQ
 

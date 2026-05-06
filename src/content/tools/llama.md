@@ -12,8 +12,8 @@ pricing_model: open-source
 price_range: "$0-$0.85/1M tokens"
 status: active
 launched: 2023-02
-last_updated: 2026-05-03
-last_verified: 2026-05-03
+last_updated: 2026-05-07
+last_verified: 2026-05-07
 update_frequency: monthly
 seo_title: "Llama: Features, Pricing & Review (April 2026)"
 meta_description: "Meta's Llama 4 Maverick (400B total, 17B active, 1M context) is the flagship open-weight LLM. Scout offers 10M tokens. Free weights under the Llama 4 Community License. Hosted pricing from $0.15 per 1M input tokens on Groq."
@@ -109,6 +109,8 @@ price_history:
 # Llama
 
 Meta's open-weight LLM family. **Llama 4 Maverick** (400B total, 17B active parameters, mixture-of-experts, 1M context) is the current flagship. **Scout** (109B total, 17B active, 10M context) fits on a single H100 and owns the long-context tier. **Behemoth** (2T total, 288B active) remains an internal teacher model; Meta has not publicly released it.
+
+> **May 5, 2026 competitive note:** [Google released MTP drafters to make Gemma 4 inference up to 3x faster](/news/2026-05-05-gemma-4-mtp-drafters-inference/). For Llama buyers, the watch item is not only model quality but latency: official speculative-decoding assets can make Gemma more practical on local and workstation hardware.
 
 > **April 2, 2026 competitive note:** [Google released Gemma 4 under Apache 2.0](/news/2026-04-02-google-gemma-4-apache-license/). Apache licensing is strictly more permissive than Meta's Llama 4 Community License (which caps at 700M monthly active users). For self-hosters with concerns about the Llama license, Gemma 4 is the closest drop-in alternative at comparable small-to-mid scale.
 
@@ -207,7 +209,7 @@ Prices verified 2026-04-17 via [Together AI pricing](https://www.together.ai/pri
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against the [Llama 4 announcement](https://ai.meta.com/blog/llama-4-multimodal-intelligence/), [Llama 4 Community License](https://www.llama.com/llama4/license/), [Together AI pricing](https://www.together.ai/pricing), and [Artificial Analysis provider benchmarks](https://artificialanalysis.ai/models/llama-4-maverick/providers).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-07 against the [Llama 4 announcement](https://ai.meta.com/blog/llama-4-multimodal-intelligence/), [Llama 4 Community License](https://www.llama.com/llama4/license/), [Together AI pricing](https://www.together.ai/pricing), and [Artificial Analysis provider benchmarks](https://artificialanalysis.ai/models/llama-4-maverick/providers).
 
 ## FAQ
 
