@@ -19,6 +19,7 @@ const activeExplore = isActive(['/explore/']);
 const activeCategories = isActive(['/categories/']);
 const activeCompare = isActive(['/compare/']);
 const activeNews = isActive(['/news/', '/reports/', '/benchmarks/']);
+const activeAllTools = isActive(['/tools/']);
 ---
 
 <nav id="site-nav" class="nav-root fixed inset-x-0 top-0 z-50">
@@ -40,6 +41,7 @@ const activeNews = isActive(['/news/', '/reports/', '/benchmarks/']);
          accent bar. Core navigation stays compact; deeper workflow
          routes live in the drawer. -->
     <div class="hidden sm:flex items-center gap-1">
+      <a href="/tools/" class:list={['nav-link', activeAllTools && 'nav-link-active']} data-astro-prefetch="viewport">All Tools</a>
       <a href="/explore/" class:list={['nav-link', activeExplore && 'nav-link-active']} data-astro-prefetch="viewport">Explore</a>
       <a href="/categories/" class:list={['nav-link', activeCategories && 'nav-link-active']} data-astro-prefetch="viewport">Categories</a>
       <a href="/compare/" class:list={['nav-link', activeCompare && 'nav-link-active']} data-astro-prefetch="viewport">Compare</a>
@@ -89,6 +91,7 @@ const activeNews = isActive(['/news/', '/reports/', '/benchmarks/']);
     </div>
 
     <nav class="py-3">
+      <a href="/tools/" class="block px-5 py-3 text-sm text-[var(--text-primary)] no-underline hover:bg-[var(--bg-card-hover)]" data-astro-prefetch="viewport">All Tools</a>
       <a href="/explore/" class="block px-5 py-3 text-sm text-[var(--text-primary)] no-underline hover:bg-[var(--bg-card-hover)]" data-astro-prefetch="viewport">Explore hub</a>
       <a href="/categories/" class="block px-5 py-3 text-sm text-[var(--text-primary)] no-underline hover:bg-[var(--bg-card-hover)]" data-astro-prefetch="viewport">Categories</a>
       <a href="/compare/" class="block px-5 py-3 text-sm text-[var(--text-primary)] no-underline hover:bg-[var(--bg-card-hover)]" data-astro-prefetch="viewport">Compare Tools</a>
