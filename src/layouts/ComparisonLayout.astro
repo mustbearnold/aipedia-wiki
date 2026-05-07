@@ -41,6 +41,7 @@ interface ToolData {
     status?: string;
   } | string | undefined>;
   best_for?: string[];
+  not_best_for?: string[];
   tags?: string[];
   tagline?: string;
 }
@@ -136,6 +137,41 @@ function formatNewsDate(date?: string): string {
   return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
 }
 
+function factValue(t: ToolData, key: string): string {
+  const fact = t.facts?.[key];
+  if (!fact) return '';
+  if (typeof fact === 'string') return fact.trim();
+  return String(fact.value ?? '').trim();
+}
+
+function compactList(values: Array<string | undefined>, limit: number): string[] {
+  return values
+    .map((value) => String(value ?? '').trim())
+    .filter(Boolean)
+    .slice(0, limit);
+}
+
+function buyerBestFor(t: ToolData): string[] {
+  const listed = compactList(t.best_for ?? [], 3);
+  if (listed.length > 0) return listed;
+  return compactList([factValue(t, 'best_for')], 1);
+}
+
+function buyerWatchOuts(t: ToolData): string[] {
+  const listed = compactList(t.not_best_for ?? [], 2);
+  if (listed.length > 0) return listed;
+  return compactList([factValue(t, 'watch_out_for')], 1);
+}
+
+function pricingSignal(t: ToolData): string {
+  const bestTier = factValue(t, 'best_paid_tier');
+  if (bestTier && t.price_range) return `${t.price_range}. Best paid tier: ${bestTier}`;
+  if (bestTier) return `Best paid tier: ${bestTier}`;
+  if (t.price_range) return t.price_range;
+  if (t.pricing_model) return t.pricing_model.replace('-', ' ');
+  return '';
+}
+
 const breadcrumbLdItems = [
   { name: 'Home', url: siteBase },
   { name: 'Compare', url: `${siteBase}compare/` },
@@ -195,6 +231,15 @@ const axisRows = tools.length === 2
       right: axisValue(tools[1], axis.key as 'utility' | 'value' | 'moat' | 'longevity'),
     }))
   : [];
+
+const buyerGuides = tools
+  .map((tool) => ({
+    tool,
+    bestFor: buyerBestFor(tool),
+    watchOuts: buyerWatchOuts(tool),
+    pricing: pricingSignal(tool),
+  }))
+  .filter(({ tool, bestFor, watchOuts, pricing }) => tool.tagline || bestFor.length > 0 || watchOuts.length > 0 || pricing);
 
 // Build TOC headings (markdown H2s only, we don't add synthetic entries here)
 const tocHeadings = (headings ?? []).filter((h) => h.depth === 2).map((h) => ({ slug: h.slug, text: h.text }));
@@ -397,6 +442,55 @@ const tocHeadings = (headings ?? []).filter((h) => h.depth === 2).map((h) => ({ 
         )}
       </div>
     </section>
+
+    {buyerGuides.length > 0 && (
+      <section class="t2-cmp-brief" aria-label="Buyer fit guide">
+        {buyerGuides.map(({ tool, bestFor, watchOuts, pricing }) => (
+          <div class="t2-cmp-brief-panel">
+            <div class="t2-cmp-brief-kicker">Buyer fit</div>
+            <h2>Choose {tool.title} when</h2>
+            <ol class="t2-cmp-news-list">
+              {tool.tagline && (
+                <li>
+                  <a href={`/tools/${tool.slug}/`}>
+                    <span class="t2-cmp-news-date">Role</span>
+                    <span>{tool.tagline}</span>
+                  </a>
+                </li>
+              )}
+              {bestFor.map((item) => (
+                <li>
+                  <a href={`/tools/${tool.slug}/`}>
+                    <span class="t2-cmp-news-date">Pick</span>
+                    <span>{item}</span>
+                  </a>
+                </li>
+              ))}
+              {pricing && (
+                <li>
+                  <a href={`/tools/${tool.slug}/`}>
+                    <span class="t2-cmp-news-date">Price</span>
+                    <span>{pricing}</span>
+                  </a>
+                </li>
+              )}
+              {watchOuts.map((item) => (
+                <li>
+                  <a href={`/tools/${tool.slug}/`}>
+                    <span class="t2-cmp-news-date">Skip</span>
+                    <span>{item}</span>
+                  </a>
+                </li>
+              ))}
+            </ol>
+            <a href={`/tools/${tool.slug}/`} class="t2-cmp-brief-link">
+              Read the full {tool.title} review
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        ))}
+      </section>
+    )}
 
     {relatedComparisons.length > 0 && (
       <section class="t2-cmp-brief" aria-label="Related comparisons">
