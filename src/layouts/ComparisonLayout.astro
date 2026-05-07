@@ -53,6 +53,13 @@ interface NewsSignal {
   summary?: string;
 }
 
+interface RelatedComparison {
+  slug: string;
+  title: string;
+  description?: string;
+  sharedToolNames?: string[];
+}
+
 interface Props {
   title: string;
   seoTitle?: string;
@@ -64,6 +71,7 @@ interface Props {
   lastVerified?: string;
   readingMinutes?: number;
   relatedNews?: NewsSignal[];
+  relatedComparisons?: RelatedComparison[];
   canonicalFactTable?: boolean;
 }
 
@@ -78,6 +86,7 @@ const {
   lastVerified,
   readingMinutes = 0,
   relatedNews = [],
+  relatedComparisons = [],
   canonicalFactTable = false,
 } = Astro.props;
 
@@ -388,6 +397,44 @@ const tocHeadings = (headings ?? []).filter((h) => h.depth === 2).map((h) => ({ 
         )}
       </div>
     </section>
+
+    {relatedComparisons.length > 0 && (
+      <section class="t2-cmp-brief" aria-label="Related comparisons">
+        <div class="t2-cmp-brief-panel">
+          <div class="t2-cmp-brief-kicker">Related comparisons</div>
+          <h2>More decisions involving these tools</h2>
+          <ol class="t2-cmp-news-list">
+            {relatedComparisons.map((comparison) => (
+              <li>
+                <a href={`/compare/${comparison.slug}/`}>
+                  <span class="t2-cmp-news-date">
+                    {comparison.sharedToolNames && comparison.sharedToolNames.length > 0
+                      ? comparison.sharedToolNames.join(' + ')
+                      : 'Compare'}
+                  </span>
+                  <span>{comparison.title}</span>
+                </a>
+              </li>
+            ))}
+          </ol>
+        </div>
+
+        <div class="t2-cmp-brief-panel">
+          <div class="t2-cmp-brief-kicker">Source reviews</div>
+          <h2>Check the canonical tool pages</h2>
+          <ol class="t2-cmp-news-list">
+            {tools.slice(0, 4).map((tool) => (
+              <li>
+                <a href={`/tools/${tool.slug}/`}>
+                  <span class="t2-cmp-news-date">{tool.category ?? 'Tool'}</span>
+                  <span>{tool.title} review</span>
+                </a>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+    )}
 
     {canonicalFactTable && <ComparisonFactTable tools={tools} />}
 

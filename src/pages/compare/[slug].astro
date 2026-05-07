@@ -4,13 +4,48 @@ import ComparisonLayout from '../../layouts/ComparisonLayout.astro';
 
 export async function getStaticPaths() {
   const entries = await getCollection('comparisons');
-  return entries.map((entry) => ({
-    params: { slug: entry.data.slug || entry.id.replace(/\.md$/, '').replace(/\\/g, '/') },
-    props: { entry },
-  }));
+  const tools = await getCollection('tools');
+  const entrySlug = (entry) => entry.data.slug ?? entry.id.replace(/\.md$/, '').replace(/\\/g, '/');
+  const toolTitleBySlug = new Map(
+    tools.map((tool) => {
+      const slug = tool.data.slug ?? tool.id.replace(/\.md$/, '').replace(/\\/g, '/');
+      return [slug, tool.data.title];
+    })
+  );
+
+  return entries.map((entry) => {
+    const currentSlug = entrySlug(entry);
+    const toolSlugs = entry.data.tools ?? [];
+    const relatedComparisons = entries
+      .map((candidate) => {
+        const candidateSlug = entrySlug(candidate);
+        const candidateTools = candidate.data.tools ?? [];
+        const sharedTools = candidateTools.filter((toolSlug) => toolSlugs.includes(toolSlug));
+        return {
+          slug: candidateSlug,
+          title: candidate.data.title,
+          description: candidate.data.meta_description ?? '',
+          sharedToolNames: sharedTools
+            .map((toolSlug) => toolTitleBySlug.get(toolSlug) ?? toolSlug)
+            .slice(0, 2),
+          overlapCount: sharedTools.length,
+        };
+      })
+      .filter((candidate) => candidate.slug !== currentSlug && candidate.overlapCount > 0)
+      .sort((a, b) => {
+        if (b.overlapCount !== a.overlapCount) return b.overlapCount - a.overlapCount;
+        return a.title.localeCompare(b.title);
+      })
+      .slice(0, 6);
+
+    return {
+      params: { slug: currentSlug },
+      props: { entry, relatedComparisons },
+    };
+  });
 }
 
-const { entry } = Astro.props;
+const { entry, relatedComparisons = [] } = Astro.props;
 const { Content, headings } = await render(entry);
 
 const toolSlugs: string[] = entry.data.tools ?? [];
@@ -74,6 +109,7 @@ const readingMinutes = Math.max(1, Math.round(wordCount / 230));
   lastVerified={entry.data.last_verified ? String(entry.data.last_verified) : undefined}
   readingMinutes={readingMinutes}
   relatedNews={relatedNews}
+  relatedComparisons={relatedComparisons}
   canonicalFactTable={tools.length >= 2 && entry.data.canonical_fact_table !== false}
 >
   <Content />
