@@ -16,6 +16,11 @@ interface PeerItem {
   price?: string;
 }
 
+interface RelatedComparisonItem {
+  slug: string;
+  title: string;
+}
+
 interface Props {
   frontmatter: Record<string, any>;
   slug: string;
@@ -24,6 +29,7 @@ interface Props {
   peers?: PeerItem[];
   priceHistory?: Array<Record<string, any>>;
   relatedNews?: RelatedNewsItem[];
+  relatedComparisons?: RelatedComparisonItem[];
 }
 
 const {
@@ -34,6 +40,7 @@ const {
   peers = [],
   priceHistory = [],
   relatedNews = [],
+  relatedComparisons = [],
 } = Astro.props;
 
 const pricingLabels: Record<string, string> = {
@@ -142,6 +149,7 @@ const timeline = [
 
 const graphPeers = peers.slice(0, 4);
 const graphNews = relatedNews.slice(0, 3);
+const graphComparisons = relatedComparisons.slice(0, 4);
 ---
 
 <section class="tool-intel not-prose" aria-label={`${f.title} intelligence panel`} data-reveal>
@@ -247,6 +255,18 @@ const graphNews = relatedNews.slice(0, 3);
             <a href={`/tools/${peer.slug}/`}>
               <ToolLogo slug={peer.slug} title={peer.title} size={22} />
               <span>{peer.title}</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
+    {graphComparisons.length > 0 && (
+      <div class="tool-intel-graph-cluster">
+        <span>Head-to-head comparisons</span>
+        <div>
+          {graphComparisons.map((comparison) => (
+            <a href={`/compare/${comparison.slug}/`}>
+              <span>{comparison.title}</span>
             </a>
           ))}
         </div>

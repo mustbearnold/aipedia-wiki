@@ -66,6 +66,20 @@ const breadcrumbLdItems = [
 // primary category, sorted by overall score descending. Excludes self.
 const allTools = await getCollection('tools');
 const allNews = await getCollection('news');
+const allComparisons = await getCollection('comparisons');
+const entrySlug = (entry: any) => entry.data.slug ?? entry.id.replace(/\.md$/, '').replace(/\\/g, '/');
+const toolMetaBySlug = new Map(
+  allTools.map((tool) => {
+    const slug = tool.data.slug ?? tool.id.replace(/\.md$/, '').replace(/\\/g, '/');
+    return [
+      slug,
+      {
+        category: tool.data.category ?? '',
+        score: overallScore(tool.data.scores ?? {}),
+      },
+    ];
+  })
+);
 const peers = allTools
   .filter(t => t.data.category === f.category && (t.data.slug ?? t.id) !== (f.slug ?? toolSlug))
   .map(t => {
@@ -250,6 +264,37 @@ const relatedNews = allNews
   }))
   .sort((a, b) => (b.date || '').localeCompare(a.date || ''))
   .slice(0, 6);
+
+const relatedComparisons = allComparisons
+  .filter((entry) => Array.isArray(entry.data.tools) && entry.data.tools.includes(toolSlug))
+  .map((entry) => {
+    const comparedTools = entry.data.tools ?? [];
+    const otherToolSlugs = comparedTools.filter((slug: string) => slug !== toolSlug);
+    const sameCategoryCount = otherToolSlugs
+      .filter((slug: string) => toolMetaBySlug.get(slug)?.category === f.category)
+      .length;
+    const bestPeerScore = Math.max(
+      0,
+      ...otherToolSlugs.map((slug: string) => toolMetaBySlug.get(slug)?.score ?? 0)
+    );
+    return {
+      slug: entrySlug(entry),
+      title: entry.data.title,
+      sameCategoryCount,
+      bestPeerScore,
+      toolCount: comparedTools.length,
+      updatedAt: newsDate(entry.data.last_verified ?? entry.data.last_updated),
+    };
+  })
+  .sort((a, b) => {
+    if (b.sameCategoryCount !== a.sameCategoryCount) return b.sameCategoryCount - a.sameCategoryCount;
+    if (a.toolCount !== b.toolCount) return a.toolCount - b.toolCount;
+    if (b.bestPeerScore !== a.bestPeerScore) return b.bestPeerScore - a.bestPeerScore;
+    const dateCompare = b.updatedAt.localeCompare(a.updatedAt);
+    if (dateCompare !== 0) return dateCompare;
+    return a.title.localeCompare(b.title);
+  })
+  .slice(0, 8);
 ---
 
 <BaseLayout
@@ -444,6 +489,7 @@ const relatedNews = allNews
       peers={peers}
       priceHistory={priceHistory}
       relatedNews={relatedNews}
+      relatedComparisons={relatedComparisons}
     />
 
     {f.github_url && (
