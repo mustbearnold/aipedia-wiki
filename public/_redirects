@@ -14,6 +14,18 @@
 /compare/chatgpt-vs-n8n /tools/n8n/ 301
 /compare/chatgpt-vs-semrush/ /tools/semrush/ 301
 /compare/chatgpt-vs-semrush /tools/semrush/ 301
+/compare/chatgpt-vs-make/ /tools/make/ 301
+/compare/chatgpt-vs-make /tools/make/ 301
+/compare/chatgpt-vs-midjourney/ /answers/best-ai-image-generator-2026/ 301
+/compare/chatgpt-vs-midjourney /answers/best-ai-image-generator-2026/ 301
+/compare/adobe-firefly-vs-chatgpt/ /answers/best-ai-image-generator-2026/ 301
+/compare/adobe-firefly-vs-chatgpt /answers/best-ai-image-generator-2026/ 301
+/compare/chatgpt-vs-flux/ /answers/best-ai-image-generator-2026/ 301
+/compare/chatgpt-vs-flux /answers/best-ai-image-generator-2026/ 301
+/compare/claude-vs-midjourney/ /tools/midjourney/ 301
+/compare/claude-vs-midjourney /tools/midjourney/ 301
+/compare/chatgpt-vs-heygen/ /answers/best-ai-video-generator-2026/ 301
+/compare/chatgpt-vs-heygen /answers/best-ai-video-generator-2026/ 301
 
 # Legacy utility URLs. Keep these as true edge redirects so Search Console
 # does not see static 200 OK meta-refresh placeholders.
