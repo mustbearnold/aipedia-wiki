@@ -1,0 +1,352 @@
+---
+import { getCollection } from 'astro:content';
+
+interface Props {
+  categorySlug: string;
+  categoryTitle: string;
+  toolSlugs: string[];
+}
+
+const { categorySlug, categoryTitle, toolSlugs } = Astro.props;
+
+const allTools = await getCollection('tools');
+const allComparisons = await getCollection('comparisons');
+const allGuides = await getCollection('use-cases');
+const allNews = await getCollection('news');
+
+const categoryToolSet = new Set(toolSlugs);
+const toolMetaBySlug = new Map(
+  allTools.map((tool) => {
+    const slug = tool.data.slug ?? tool.id.replace(/\.md$/, '').replace(/\\/g, '/');
+    const score = tool.data.scores
+      ? Math.round((((tool.data.scores.utility ?? 0) + (tool.data.scores.value ?? 0) + (tool.data.scores.moat ?? 0) + (tool.data.scores.longevity ?? 0)) / 4) * 10) / 10
+      : 0;
+    return [slug, { category: tool.data.category ?? '', score }];
+  })
+);
+
+function entrySlug(entry: any): string {
+  return entry.data.slug ?? entry.id.replace(/\.md$/, '').replace(/\\/g, '/');
+}
+
+function isoDate(value: unknown): string {
+  if (!value) return '';
+  const d = value instanceof Date ? value : new Date(String(value));
+  return Number.isNaN(d.getTime()) ? String(value) : d.toISOString().slice(0, 10);
+}
+
+function shortDate(value: unknown): string {
+  const date = isoDate(value);
+  if (!date) return '';
+  const d = new Date(date);
+  if (Number.isNaN(d.getTime())) return date;
+  return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+}
+
+function overlapCount(slugs: string[] = []): number {
+  return slugs.filter((slug) => categoryToolSet.has(slug)).length;
+}
+
+const curatedComparisonMap: Record<string, string[]> = {
+  'ai-chatbots': ['chatgpt-vs-claude', 'chatgpt-vs-gemini', 'claude-vs-gemini', 'chatgpt-vs-deepseek', 'chatgpt-vs-mistral-ai'],
+  'ai-coding': ['cursor-vs-claude-code-vs-copilot', 'cursor-vs-github-copilot', 'claude-code-vs-github-copilot', 'cursor-vs-windsurf', 'cursor-vs-devin', 'bolt-vs-cursor'],
+  'ai-writing': ['chatgpt-vs-claude', 'claude-vs-gemini', 'chatgpt-vs-gemini'],
+  'ai-image': ['midjourney-vs-flux', 'midjourney-vs-stable-diffusion', 'ideogram-vs-midjourney', 'adobe-firefly-vs-midjourney', 'freepik-vs-midjourney', 'canva-vs-midjourney'],
+  'ai-video': ['kling-vs-seedance-vs-runway', 'runway-vs-synthesia', 'pika-vs-runway', 'heygen-vs-runway', 'kling-vs-synthesia', 'seedance-vs-synthesia'],
+  'ai-voice': ['cartesia-vs-elevenlabs', 'elevenlabs-vs-wellsaid', 'elevenlabs-vs-murf', 'elevenlabs-vs-fish-audio', 'elevenlabs-vs-resemble-ai', 'elevenlabs-vs-voxtral'],
+  'ai-research': ['chatgpt-vs-gemini', 'chatgpt-vs-claude', 'claude-vs-gemini'],
+};
+
+const curatedComparisonRank = new Map(
+  (curatedComparisonMap[categorySlug] ?? []).map((slug, index, list) => [slug, list.length - index])
+);
+
+const comparisonLinks = allComparisons
+  .map((entry) => {
+    const slug = entrySlug(entry);
+    const comparedTools = entry.data.tools ?? [];
+    const overlap = overlapCount(comparedTools);
+    const exactCategory = entry.data.category === categorySlug ? 1 : 0;
+    const bestPeerScore = Math.max(0, ...comparedTools.map((slug) => toolMetaBySlug.get(slug)?.score ?? 0));
+    return {
+      slug,
+      title: entry.data.title,
+      description: entry.data.meta_description ?? '',
+      date: isoDate(entry.data.last_verified ?? entry.data.last_updated),
+      curatedRank: curatedComparisonRank.get(slug) ?? 0,
+      exactCategory,
+      overlap,
+      bestPeerScore,
+    };
+  })
+  .filter((item) => item.curatedRank > 0 || item.exactCategory > 0 || item.overlap > 0)
+  .sort((a, b) => {
+    if (b.curatedRank !== a.curatedRank) return b.curatedRank - a.curatedRank;
+    if (b.overlap !== a.overlap) return b.overlap - a.overlap;
+    if (b.bestPeerScore !== a.bestPeerScore) return b.bestPeerScore - a.bestPeerScore;
+    if (b.exactCategory !== a.exactCategory) return b.exactCategory - a.exactCategory;
+    const dateCompare = b.date.localeCompare(a.date);
+    if (dateCompare !== 0) return dateCompare;
+    return a.title.localeCompare(b.title);
+  })
+  .slice(0, 6);
+
+const guideLinks = allGuides
+  .map((entry) => {
+    const mentioned = entry.data.tools_mentioned ?? [];
+    return {
+      slug: entrySlug(entry),
+      title: entry.data.title,
+      description: entry.data.description ?? entry.data.meta_description ?? '',
+      date: isoDate(entry.data.last_verified ?? entry.data.last_updated),
+      overlap: overlapCount(mentioned),
+    };
+  })
+  .filter((item) => item.overlap > 0)
+  .sort((a, b) => {
+    if (b.overlap !== a.overlap) return b.overlap - a.overlap;
+    const dateCompare = b.date.localeCompare(a.date);
+    if (dateCompare !== 0) return dateCompare;
+    return a.title.localeCompare(b.title);
+  })
+  .slice(0, 6);
+
+const newsLinks = allNews
+  .map((entry) => {
+    const affects = Array.isArray(entry.data.affects) ? entry.data.affects : [];
+    const related = Array.isArray(entry.data.related_tools) ? entry.data.related_tools : [];
+    const linkedTools = [...new Set([...affects, ...related])];
+    return {
+      slug: entrySlug(entry),
+      title: entry.data.title,
+      summary: entry.data.summary ?? '',
+      date: isoDate(entry.data.date ?? entry.data.last_updated),
+      overlap: overlapCount(linkedTools),
+    };
+  })
+  .filter((item) => item.overlap > 0)
+  .sort((a, b) => {
+    const dateCompare = b.date.localeCompare(a.date);
+    if (dateCompare !== 0) return dateCompare;
+    if (b.overlap !== a.overlap) return b.overlap - a.overlap;
+    return a.title.localeCompare(b.title);
+  })
+  .slice(0, 5);
+
+const answerMap: Record<string, Array<{ slug: string; title: string; meta: string }>> = {
+  'ai-chatbots': [
+    { slug: 'best-ai-chatbot-2026', title: 'Best AI chatbot in 2026', meta: 'Answer' },
+    { slug: 'chatgpt-alternatives-2026', title: 'Best ChatGPT alternatives', meta: 'Alternatives' },
+    { slug: 'chatgpt-vs-claude-which-is-better', title: 'ChatGPT vs Claude: which is better?', meta: 'Answer' },
+    { slug: 'best-free-ai-tools-2026', title: 'Best free AI tools', meta: 'Free tools' },
+  ],
+  'ai-coding': [
+    { slug: 'best-ai-coding-tool-2026', title: 'Best AI coding tool in 2026', meta: 'Answer' },
+    { slug: 'is-cursor-worth-it', title: 'Is Cursor worth the money?', meta: 'Buying guide' },
+  ],
+  'ai-writing': [
+    { slug: 'best-ai-for-writing-2026', title: 'Best AI for writing in 2026', meta: 'Answer' },
+    { slug: 'chatgpt-vs-claude-which-is-better', title: 'ChatGPT vs Claude: which is better?', meta: 'Answer' },
+  ],
+  'ai-image': [
+    { slug: 'best-ai-image-generator-2026', title: 'Best AI image generator in 2026', meta: 'Answer' },
+    { slug: 'is-midjourney-worth-it', title: 'Is Midjourney worth it?', meta: 'Buying guide' },
+  ],
+  'ai-video': [
+    { slug: 'best-ai-video-generator-2026', title: 'Best AI video generator in 2026', meta: 'Answer' },
+  ],
+  'ai-voice': [
+    { slug: 'best-ai-voice-generator-2026', title: 'Best AI voice generator in 2026', meta: 'Answer' },
+  ],
+  'ai-research': [
+    { slug: 'best-ai-for-students', title: 'Best AI for students', meta: 'Answer' },
+    { slug: 'best-free-ai-tools-2026', title: 'Best free AI tools', meta: 'Free tools' },
+  ],
+};
+
+const answerLinks = answerMap[categorySlug] ?? [];
+const buildTools = toolSlugs.slice(0, 4).join(',');
+const hasLinks = comparisonLinks.length > 0 || guideLinks.length > 0 || answerLinks.length > 0 || newsLinks.length > 0;
+---
+
+{hasLinks && (
+  <section class="category-graph not-prose" aria-labelledby="category-graph-heading">
+    <div class="category-graph-head">
+      <p>Category graph</p>
+      <h2 id="category-graph-heading">{categoryTitle} decision hub</h2>
+      <a href={buildTools ? `/compare/build/?tools=${buildTools}` : '/compare/build/'}>Build a comparison</a>
+    </div>
+
+    <div class="category-graph-grid">
+      {comparisonLinks.length > 0 && (
+        <section class="category-graph-panel">
+          <div class="category-graph-kicker">Compare</div>
+          <h3>Head-to-head decisions</h3>
+          <ol>
+            {comparisonLinks.map((item) => (
+              <li>
+                <a href={`/compare/${item.slug}/`}>
+                  <span>{item.title}</span>
+                  {item.description && <small>{item.description}</small>}
+                </a>
+              </li>
+            ))}
+          </ol>
+        </section>
+      )}
+
+      {guideLinks.length > 0 && (
+        <section class="category-graph-panel">
+          <div class="category-graph-kicker">Guides</div>
+          <h3>Workflow playbooks</h3>
+          <ol>
+            {guideLinks.map((item) => (
+              <li>
+                <a href={`/guides/${item.slug}/`}>
+                  <span>{item.title}</span>
+                  {item.description && <small>{item.description}</small>}
+                </a>
+              </li>
+            ))}
+          </ol>
+        </section>
+      )}
+
+      {answerLinks.length > 0 && (
+        <section class="category-graph-panel">
+          <div class="category-graph-kicker">Answers</div>
+          <h3>Fast buying answers</h3>
+          <ol>
+            {answerLinks.map((item) => (
+              <li>
+                <a href={`/answers/${item.slug}/`}>
+                  <span>{item.title}</span>
+                  <small>{item.meta}</small>
+                </a>
+              </li>
+            ))}
+          </ol>
+        </section>
+      )}
+
+      {newsLinks.length > 0 && (
+        <section class="category-graph-panel">
+          <div class="category-graph-kicker">News</div>
+          <h3>Recent product signals</h3>
+          <ol>
+            {newsLinks.map((item) => (
+              <li>
+                <a href={`/news/${item.slug}/`}>
+                  <span>{item.title}</span>
+                  <small>{shortDate(item.date)}</small>
+                </a>
+              </li>
+            ))}
+          </ol>
+        </section>
+      )}
+    </div>
+  </section>
+)}
+
+<style>
+  .category-graph {
+    margin: 26px 0 34px;
+    color: var(--home-on-card, var(--text-primary));
+  }
+
+  .category-graph-head {
+    display: grid;
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+
+  .category-graph-head p,
+  .category-graph-kicker {
+    margin: 0;
+    color: var(--home-accent, var(--accent-primary));
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  .category-graph-head h2 {
+    margin: 0;
+    color: var(--home-heading, var(--text-primary));
+    font-size: clamp(1.35rem, 2vw, 1.8rem);
+    line-height: 1.1;
+  }
+
+  .category-graph-head a {
+    justify-self: start;
+    color: var(--home-accent, var(--accent-primary));
+    font-size: 13px;
+    font-weight: 800;
+    text-decoration: none;
+  }
+
+  .category-graph-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--site-grid-gap, 12px);
+  }
+
+  @media (min-width: 780px) {
+    .category-graph-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  .category-graph-panel {
+    min-width: 0;
+    border: 1px solid var(--home-card-outline, var(--border));
+    border-radius: var(--site-radius-card, 8px);
+    background: var(--home-panel, var(--bg-card));
+    padding: var(--site-card-padding, 16px);
+  }
+
+  .category-graph-panel h3 {
+    margin: 8px 0 12px;
+    color: var(--home-on-card, var(--text-primary));
+    font-size: 15px;
+    line-height: 1.2;
+  }
+
+  .category-graph-panel ol {
+    display: grid;
+    gap: 9px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .category-graph-panel a {
+    display: grid;
+    gap: 3px;
+    color: var(--home-on-card, var(--text-primary));
+    text-decoration: none;
+  }
+
+  .category-graph-panel a:hover span {
+    color: var(--home-accent, var(--accent-primary));
+  }
+
+  .category-graph-panel span {
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 1.3;
+  }
+
+  .category-graph-panel small {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    color: var(--home-muted, var(--text-muted));
+    font-size: 12px;
+    font-weight: 650;
+    line-height: 1.35;
+  }
+</style>

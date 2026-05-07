@@ -1,6 +1,7 @@
 ---
 import { getCollection, render } from 'astro:content';
 import CategoryLayout from '../../layouts/CategoryLayout.astro';
+import CategoryGraph from '../../components/CategoryGraph.astro';
 
 export async function getStaticPaths() {
   const entries = await getCollection('categories');
@@ -56,4 +57,9 @@ const matchingTools = allTools
   lastVerified={entry.data.last_verified ? String(entry.data.last_verified) : undefined}
 >
   <Content />
+  <CategoryGraph
+    categorySlug={catSlug}
+    categoryTitle={entry.data.title}
+    toolSlugs={matchingTools.map((tool) => tool.slug)}
+  />
 </CategoryLayout>
