@@ -66,13 +66,13 @@ const orgLD = JSON.stringify({
 
   <h2>Scoring methodology</h2>
 
-  <div class="not-prose bg-[var(--bg-card)] border border-[var(--border)] rounded-xl p-6 my-6">
-    <p class="text-sm text-[var(--text-secondary)] leading-relaxed m-0 mb-4">
+  <div class="not-prose bg-[var(--bg-card)] border border-[var(--border)] rounded-[var(--site-radius-card)] p-[var(--site-card-padding)] my-[var(--site-content-gap)]">
+    <p class="text-sm text-[var(--text-secondary)] leading-relaxed m-0 mb-[var(--site-content-gap-sm)]">
       Four dimensions, each scored 1 to 10: <strong class="text-[var(--text-primary)]">Utility</strong> (does the core job well), <strong class="text-[var(--text-primary)]">Value</strong> (quality per dollar), <strong class="text-[var(--text-primary)]">Moat</strong> (hard to replicate or displace), <strong class="text-[var(--text-primary)]">Longevity</strong> (will it exist in two years). The overall score is the unweighted average. A 7 means genuinely good. A 5 means average.
     </p>
     <a
       href="/about/scoring/"
-      class="inline-flex items-center gap-2 bg-[var(--accent-primary)] text-[#0b0a14] px-5 py-2.5 rounded-lg text-sm font-medium no-underline hover:opacity-90 transition-opacity"
+      class="inline-flex items-center gap-[var(--site-chip-gap)] bg-[var(--accent-primary)] text-[#0b0a14] px-5 py-2.5 rounded-[var(--site-radius-control)] text-sm font-medium no-underline hover:opacity-90 transition-opacity"
     >
       Full scoring methodology
       <span>-&gt;</span>
@@ -93,7 +93,7 @@ const orgLD = JSON.stringify({
 
   <h2>Editorial stance</h2>
 
-  <div class="not-prose grid gap-3 my-6">
+  <div class="not-prose grid gap-[var(--site-card-gap)] my-[var(--site-content-gap)]">
     {[
       {
         title: 'Primary sources only',
@@ -120,7 +120,7 @@ const orgLD = JSON.stringify({
         body: 'We read every correction. Pages update when evidence checks out. If you think a score is unfair, the Contact Us link below accepts reasoned disagreement.',
       },
     ].map((item) => (
-      <div class="flex gap-4 bg-[var(--bg-card)] border border-[var(--border)] rounded-lg p-5">
+      <div class="flex gap-[var(--site-card-gap)] bg-[var(--bg-card)] border border-[var(--border)] rounded-[var(--site-radius-card)] p-[var(--site-card-padding)]">
         <div class="shrink-0 w-8 h-8 rounded-full bg-[rgba(249, 115, 22,0.12)] text-[var(--accent-primary)] flex items-center justify-center text-sm">
           &#10003;
         </div>
@@ -145,34 +145,34 @@ const orgLD = JSON.stringify({
   <!-- Contact -->
   <div
     id="contact"
-    class="not-prose mt-14 bg-gradient-to-br from-[rgba(249, 115, 22,0.08)] to-[rgba(251, 146, 60,0.06)] border border-[rgba(249, 115, 22,0.25)] rounded-xl p-8 scroll-mt-24"
+    class="not-prose mt-[var(--site-section-gap)] bg-gradient-to-br from-[rgba(249, 115, 22,0.08)] to-[rgba(251, 146, 60,0.06)] border border-[rgba(249, 115, 22,0.25)] rounded-[var(--site-radius-card)] p-[var(--site-card-padding)] scroll-mt-24"
   >
-    <div class="flex items-start gap-4">
+    <div class="flex items-start gap-[var(--site-card-gap)]">
       <div class="shrink-0 w-10 h-10 rounded-full bg-[rgba(249, 115, 22,0.15)] text-[var(--accent-primary)] flex items-center justify-center text-lg">
         &#9998;
       </div>
       <div class="min-w-0 flex-1">
-        <h2 class="text-xl font-semibold text-[var(--text-primary)] m-0 mb-2">Corrections, feedback, disagreement</h2>
-        <p class="text-sm text-[var(--text-secondary)] leading-relaxed m-0 mb-3">
+        <h2 class="text-xl font-semibold text-[var(--text-primary)] m-0 mb-[var(--site-chip-gap)]">Corrections, feedback, disagreement</h2>
+        <p class="text-sm text-[var(--text-secondary)] leading-relaxed m-0 mb-[var(--site-card-gap)]">
           Found a wrong price, a changed feature, or a tool that shut down? We read every correction and update pages when the evidence checks out. If you think a score is unfair, tell us what you would score it and why; we will look at the case.
         </p>
-        <div class="flex flex-wrap gap-3 mt-5">
+        <div class="flex flex-wrap gap-[var(--site-card-gap)] mt-[var(--site-content-gap-sm)]">
           <a
             href="mailto:editorial@aipedia.wiki?subject=Correction%20or%20feedback"
-            class="inline-flex items-center gap-2 bg-[var(--accent-primary)] text-[#0b0a14] px-5 py-2.5 rounded-lg text-sm font-medium no-underline hover:opacity-90 transition-opacity"
+            class="inline-flex items-center gap-[var(--site-chip-gap)] bg-[var(--accent-primary)] text-[#0b0a14] px-5 py-2.5 rounded-[var(--site-radius-control)] text-sm font-medium no-underline hover:opacity-90 transition-opacity"
           >
             <span>Email editorial</span>
             <span>-&gt;</span>
           </a>
           <a
             href="/about/"
-            class="inline-flex items-center gap-2 border border-[var(--border)] text-[var(--text-secondary)] hover:text-[var(--text-primary)] px-5 py-2.5 rounded-lg text-sm font-medium no-underline transition-colors"
+            class="inline-flex items-center gap-[var(--site-chip-gap)] border border-[var(--border)] text-[var(--text-secondary)] hover:text-[var(--text-primary)] px-5 py-2.5 rounded-[var(--site-radius-control)] text-sm font-medium no-underline transition-colors"
           >
             About aipedia.wiki
           </a>
           <a
             href="/about/scoring/"
-            class="inline-flex items-center gap-2 border border-[var(--border)] text-[var(--text-secondary)] hover:text-[var(--text-primary)] px-5 py-2.5 rounded-lg text-sm font-medium no-underline transition-colors"
+            class="inline-flex items-center gap-[var(--site-chip-gap)] border border-[var(--border)] text-[var(--text-secondary)] hover:text-[var(--text-primary)] px-5 py-2.5 rounded-[var(--site-radius-control)] text-sm font-medium no-underline transition-colors"
           >
             Scoring methodology
           </a>

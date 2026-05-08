@@ -59,6 +59,7 @@ const GA_MEASUREMENT_ID = import.meta.env.PUBLIC_GA_MEASUREMENT_ID || 'G-WCPX3D1
         allow_google_signals: false,
         allow_ad_personalization_signals: false,
       });
+      window.dispatchEvent(new CustomEvent('aipedia:analytics-ready'));
     }
 
     function setup() {

@@ -32,9 +32,9 @@ const answerLD = JSON.stringify({
   
   <Breadcrumb items={[{ label: 'Answers', href: '/answers/' }, { label: 'What is the best AI for writing in 2026?' }]} />
 
-  <article class="max-w-2xl mx-auto py-6">
-    <h1 class="text-2xl sm:text-3xl font-bold text-[var(--text-primary)] mb-2">What is the best AI for writing in 2026?</h1>
-    <div class="flex items-center gap-3 text-sm text-[var(--text-muted)] mb-6">
+  <article class="max-w-[var(--site-narrow-max)] mx-auto py-[var(--site-content-gap)]">
+    <h1 class="text-2xl sm:text-3xl font-bold text-[var(--text-primary)] mb-[var(--site-card-gap)]">What is the best AI for writing in 2026?</h1>
+    <div class="flex items-center gap-[var(--site-card-gap)] text-sm text-[var(--text-muted)] mb-[var(--site-content-gap)]">
       <a href="/about/editorial/" class="inline-flex items-center gap-1.5 no-underline hover:underline">
         <span class="text-[var(--text-secondary)]">aipedia.wiki Editorial</span>
       </a>
@@ -44,7 +44,7 @@ const answerLD = JSON.stringify({
 
     <AnswerContent content={answerContent} />
 
-    <div class="mt-8 pt-6 border-t border-[var(--border)] text-sm text-[var(--text-muted)]">
+    <div class="mt-[var(--site-section-gap)] pt-[var(--site-content-gap)] border-t border-[var(--border)] text-sm text-[var(--text-muted)]">
       <p>This answer reflects flagship models and pricing as of April 2026. See our <a href="/about/scoring/" class="text-[var(--accent-primary)] no-underline hover:underline">scoring methodology</a> for how we evaluate tools.</p>
     </div>
   </article>

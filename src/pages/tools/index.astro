@@ -279,7 +279,7 @@ const categoryEmojiMap: Record<string, string> = {
     </div>
   </section>
 
-  <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mb-16" data-tools-grid>
+  <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[var(--site-grid-gap)] mb-[var(--site-page-bottom)]" data-tools-grid>
     {scoredTools.map(({ tool, score }) => {
       const cat = tool.data.category ?? '';
       const secondaryCategories = tool.data.secondary_categories ?? [];
@@ -808,11 +808,11 @@ const categoryEmojiMap: Record<string, string> = {
       --tools-base: var(--motion-base, 240ms);
       --tools-slow: var(--motion-slow, 420ms);
       display: grid;
-      gap: 12px;
-      margin: 0 0 18px;
-      padding: 14px;
+      gap: var(--site-card-gap);
+      margin: 0 0 var(--site-content-gap);
+      padding: var(--site-card-padding);
       border: 1px solid var(--border);
-      border-radius: 8px;
+      border-radius: var(--site-radius-card);
       background: var(--bg-card);
       background: color-mix(in srgb, var(--bg-card) 88%, transparent);
       transition:
@@ -823,7 +823,7 @@ const categoryEmojiMap: Record<string, string> = {
 
     .tools-filter-row {
       display: grid;
-      gap: 10px;
+      gap: var(--site-card-gap);
     }
 
     .tools-filter-row-primary {
@@ -838,7 +838,7 @@ const categoryEmojiMap: Record<string, string> = {
     .tools-filter-row-signals {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
+      gap: var(--site-chip-gap);
       padding-top: 2px;
     }
 
@@ -1389,7 +1389,7 @@ const categoryEmojiMap: Record<string, string> = {
       font-size: 12px;
       font-weight: 750;
       line-height: 1.35;
-      padding-top: 12px;
+      padding-top: var(--site-card-gap);
     }
 
     .tools-filter-status strong {
@@ -1398,11 +1398,11 @@ const categoryEmojiMap: Record<string, string> = {
     }
 
     .tools-empty-state {
-      margin: -44px 0 64px;
+      margin: calc(var(--site-section-gap) * -1) 0 var(--site-page-bottom);
       border: 1px dashed rgba(249, 115, 22, 0.3);
-      border-radius: 8px;
+      border-radius: var(--site-radius-card);
       color: var(--text-muted);
-      padding: 24px;
+      padding: var(--site-card-padding);
       text-align: center;
       transition:
         background var(--tools-base) var(--tools-ease),
@@ -1435,7 +1435,7 @@ const categoryEmojiMap: Record<string, string> = {
 
     @media (max-width: 640px) {
       .tools-filter-panel {
-        padding: 12px;
+        padding: var(--site-card-padding);
       }
 
       .tools-filter-row-primary,

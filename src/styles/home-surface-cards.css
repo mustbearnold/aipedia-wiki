@@ -62,7 +62,7 @@
 .glossary-page-root .home-surface-card,
 .companies-page-root .home-surface-card {
   border: 1px solid var(--home-card-outline);
-  border-radius: 12px;
+  border-radius: var(--site-radius-card);
   background: var(--home-panel);
   box-shadow: none;
   color: var(--home-on-card);
@@ -141,7 +141,7 @@
 }
 
 .news-article-shell .t2-toc.home-surface-card {
-  padding: 14px 14px 16px;
+  padding: var(--site-card-padding);
 }
 
 .news-article-shell .t2-toc-label {
@@ -173,7 +173,7 @@
 .glossary-page-root .home-surface-inner,
 .companies-page-root .home-surface-inner {
   border: 1px solid var(--home-line);
-  border-radius: 12px;
+  border-radius: var(--site-radius-card);
   background: var(--home-inner-panel);
   color: var(--home-on-card);
 }
@@ -182,7 +182,7 @@
 .news-page-root .home-surface-pill-link {
   display: inline-flex;
   align-items: center;
-  gap: 7px;
+  gap: var(--site-chip-gap);
   border: 1px solid var(--home-card-outline);
   border-radius: 999px;
   background: var(--home-chip-bg);

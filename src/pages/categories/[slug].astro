@@ -55,6 +55,7 @@ const matchingTools = allTools
   emoji={EMOJI[catSlug] ?? '\u{1F527}'}
   tools={matchingTools}
   lastVerified={entry.data.last_verified ? String(entry.data.last_verified) : undefined}
+  configuredTopPicks={entry.data.top_picks}
 >
   <Content />
   <CategoryGraph

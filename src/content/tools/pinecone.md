@@ -124,6 +124,12 @@ As verified on 2026-05-05, Pinecone lists four plans:
 
 Usage can include database storage, write units, read units, import, backups, restore, Assistant storage and tokens, inference embeddings, reranking, and Dedicated Read Nodes. The economics are best when vector retrieval is valuable enough to justify a specialized service. For small or low-volume projects, the monthly minimum can dominate.
 
+## Best plan recommendation
+
+Start on Starter only for prototyping schema, metadata filters, and retrieval quality. Builder is the cleaner first paid step for a solo developer or small team that wants predictable experiments without committing to a production minimum. Standard is the real production starting point when retrieval affects customer experience, latency, or support obligations. Enterprise only makes sense when the workload needs private networking, audit logs, service accounts, SLAs, support, or procurement-grade controls.
+
+Before buying, estimate the full retrieval path: embedding generation, writes, reads, reranking, storage, backups, imports, and any assistant or inference usage. Pinecone can be the right database and still be the wrong first bill if the product has not proved that retrieval quality drives retention, support deflection, search conversion, or user trust.
+
 ## Evaluation checklist
 
 Before choosing Pinecone, test retrieval quality and cost together:

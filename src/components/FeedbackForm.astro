@@ -8,17 +8,17 @@ const subject = encodeURIComponent(`Feedback on ${toolName}`);
 const mailto = `mailto:editorial@aipedia.wiki?subject=${subject}`;
 ---
 
-<details class="not-prose mt-6 mb-2 rounded-xl border border-[var(--border)] bg-[var(--bg-card)] open:bg-[var(--bg-card-hover)] transition-colors group">
-  <summary class="cursor-pointer list-none px-4 py-3 text-sm font-medium text-[var(--text-primary)] flex items-center justify-between gap-3">
+<details class="not-prose mt-[var(--site-content-gap)] mb-[var(--site-card-gap)] rounded-[var(--site-radius-card)] border border-[var(--border)] bg-[var(--bg-card)] open:bg-[var(--bg-card-hover)] transition-colors group">
+  <summary class="cursor-pointer list-none px-[var(--site-card-padding)] py-[var(--site-card-gap)] text-sm font-medium text-[var(--text-primary)] flex items-center justify-between gap-[var(--site-card-gap)]">
     <span>Spotted an error or want to share your experience with {toolName}?</span>
   </summary>
-  <div class="px-4 pb-4 pt-1 text-sm text-[var(--text-secondary)] leading-relaxed">
-    <p class="m-0 mb-3">
+  <div class="px-[var(--site-card-padding)] pb-[var(--site-card-padding)] pt-1 text-sm text-[var(--text-secondary)] leading-relaxed">
+    <p class="m-0 mb-[var(--site-card-gap)]">
       Every tool page is re-verified on a recurring cycle, and corrections land faster when readers flag them directly. If you spot a stale fact, a missing capability, or have used {toolName} and want to share what worked or didn't, the editorial desk reviews every message sent through this form.
     </p>
     <a
       href={mailto}
-      class="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold text-[var(--text-primary)] border border-[var(--border)] hover:bg-[var(--bg-card-hover)] no-underline"
+      class="inline-flex items-center gap-[var(--site-chip-gap)] px-4 py-2 rounded-[var(--site-radius-control)] text-sm font-semibold text-[var(--text-primary)] border border-[var(--border)] hover:bg-[var(--bg-card-hover)] no-underline"
     >
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
       Email editorial@aipedia.wiki

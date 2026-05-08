@@ -103,11 +103,11 @@ const more: Hub[] = [
   title="Explore aipedia.wiki — Site Map · May 2026"
   description="Hub for every main section of aipedia.wiki: tools, categories, comparisons, news, trends, use cases, workflows, reports, and archives."
 >
-  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+  <div class="site-content-frame">
     <Breadcrumb items={[{ label: 'Explore' }]} />
 
     <div class="explore-page-root">
-      <section class="idx-hero mb-10" data-pagefind-ignore>
+      <section class="idx-hero" data-pagefind-ignore>
         <div class="idx-eyebrow">
           <span class="idx-eyebrow-chip idx-eyebrow-accent">Site hub</span>
           <span class="idx-eyebrow-chip">Main sections</span>
@@ -122,7 +122,7 @@ const more: Hub[] = [
       </section>
 
       <h2 class="explore-hub-section-title">Browse and decide</h2>
-      <section class="explore-hub-grid mb-12" aria-label="Browse and decide">
+      <section class="explore-hub-grid mb-[var(--site-section-gap)]" aria-label="Browse and decide">
         {browse.map((item) => (
           <a
             href={item.href}
@@ -137,7 +137,7 @@ const more: Hub[] = [
       </section>
 
       <h2 class="explore-hub-section-title">Guides, builders, archives</h2>
-      <section class="explore-hub-grid mb-16" aria-label="Guides, builders, and archives">
+      <section class="explore-hub-grid mb-[var(--site-page-bottom)]" aria-label="Guides, builders, and archives">
         {more.map((item) => (
           <a
             href={item.href}
@@ -166,7 +166,7 @@ const more: Hub[] = [
     .explore-hub-grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 12px;
+      gap: var(--site-grid-gap);
     }
 
     @media (min-width: 640px) {
@@ -182,7 +182,7 @@ const more: Hub[] = [
     }
 
     .explore-page-root .explore-hub-card {
-      padding: 13px;
+      padding: var(--site-card-padding);
     }
 
     .explore-page-root .explore-hub-card-title {

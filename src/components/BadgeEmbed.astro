@@ -14,29 +14,29 @@ const htmlSnippet = `<a href="${pageUrl}" target="_blank" rel="noopener"><img sr
 const markdownSnippet = `[![${title} on aipedia.wiki](${badgeUrl})](${pageUrl})`;
 ---
 
-<details class="not-prose mt-8 rounded-xl border border-[var(--border)] bg-[var(--bg-card)]">
-  <summary class="cursor-pointer px-5 py-3 text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--text-primary)] flex items-center justify-between">
-    <span class="inline-flex items-center gap-2">
+<details class="not-prose mt-[var(--site-content-gap)] rounded-[var(--site-radius-card)] border border-[var(--border)] bg-[var(--bg-card)]">
+  <summary class="cursor-pointer px-[var(--site-card-padding)] py-[var(--site-card-gap)] text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--text-primary)] flex items-center justify-between">
+    <span class="inline-flex items-center gap-[var(--site-chip-gap)]">
       <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
         <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
       </svg>
       Embed this score on your site
     </span>
-    <span class="text-xs text-[var(--text-muted)] ml-2">Free. Links back.</span>
+    <span class="text-xs text-[var(--text-muted)] ml-[var(--site-chip-gap)]">Free. Links back.</span>
   </summary>
 
-  <div class="px-5 pb-5 pt-2 border-t border-[var(--border)]">
-    <div class="mb-4 flex items-center justify-center py-4 bg-[var(--bg-base)] rounded-lg">
+  <div class="px-[var(--site-card-padding)] pb-[var(--site-card-padding)] pt-[var(--site-card-gap)] border-t border-[var(--border)]">
+    <div class="mb-[var(--site-content-gap-sm)] flex items-center justify-center py-[var(--site-card-gap)] bg-[var(--bg-base)] rounded-[var(--site-radius-control)]">
       <img src={badgeUrl} alt={`${title} editorial score badge`} width="260" height="72" loading="lazy" />
     </div>
 
-    <div class="space-y-3">
+    <div class="space-y-[var(--site-card-gap)]">
       <div>
         <div class="flex items-center justify-between mb-1">
           <label class="text-xs font-medium text-[var(--text-muted)]">HTML</label>
           <button type="button" class="copy-btn text-xs text-[var(--accent-primary)] hover:underline" data-copy={htmlSnippet}>Copy</button>
         </div>
-        <code class="block text-[11px] text-[var(--text-secondary)] bg-[var(--bg-base)] rounded px-3 py-2 overflow-x-auto whitespace-nowrap border border-[var(--border)]">{htmlSnippet}</code>
+        <code class="block text-[11px] text-[var(--text-secondary)] bg-[var(--bg-base)] rounded-[var(--site-radius-control)] px-3 py-2 overflow-x-auto whitespace-nowrap border border-[var(--border)]">{htmlSnippet}</code>
       </div>
 
       <div>
@@ -44,11 +44,11 @@ const markdownSnippet = `[![${title} on aipedia.wiki](${badgeUrl})](${pageUrl})`
           <label class="text-xs font-medium text-[var(--text-muted)]">Markdown</label>
           <button type="button" class="copy-btn text-xs text-[var(--accent-primary)] hover:underline" data-copy={markdownSnippet}>Copy</button>
         </div>
-        <code class="block text-[11px] text-[var(--text-secondary)] bg-[var(--bg-base)] rounded px-3 py-2 overflow-x-auto whitespace-nowrap border border-[var(--border)]">{markdownSnippet}</code>
+        <code class="block text-[11px] text-[var(--text-secondary)] bg-[var(--bg-base)] rounded-[var(--site-radius-control)] px-3 py-2 overflow-x-auto whitespace-nowrap border border-[var(--border)]">{markdownSnippet}</code>
       </div>
     </div>
 
-    <p class="text-xs text-[var(--text-muted)] mt-4 leading-relaxed">
+    <p class="text-xs text-[var(--text-muted)] mt-[var(--site-content-gap-sm)] leading-relaxed">
       Badge value auto-updates if the editorial score changes. Attribution via the link is required.
     </p>
   </div>

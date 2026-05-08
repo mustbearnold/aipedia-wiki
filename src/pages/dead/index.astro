@@ -58,7 +58,7 @@ const nonShutdownCount = sorted.filter((tool) => tool.cause !== 'shutdown').leng
   title="Dead AI Tools Archive — aipedia.wiki"
   description="Archive of discontinued AI tools. Track what shut down, when, and why, so readers stop chasing products that no longer exist."
 >
-  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+  <div class="site-content-frame">
     <Breadcrumb items={[{ label: 'Dead Tools' }]} />
 
     <div class="dead-page-root">
@@ -94,7 +94,7 @@ const nonShutdownCount = sorted.filter((tool) => tool.cause !== 'shutdown').leng
         </div>
       </section>
 
-      <section class="dead-card-grid mb-16">
+      <section class="dead-card-grid mb-[var(--site-page-bottom)]">
         {sorted.map((t) => (
           <a
             href={`/dead/${t.slug}/`}
@@ -122,8 +122,8 @@ const nonShutdownCount = sorted.filter((tool) => tool.cause !== 'shutdown').leng
     .dead-signal-strip {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 12px;
-      margin: -8px 0 28px;
+      gap: var(--site-grid-gap);
+      margin: calc(var(--site-content-gap-sm) * -0.5) 0 var(--site-content-gap);
     }
 
     @media (max-width: 720px) {
@@ -134,9 +134,9 @@ const nonShutdownCount = sorted.filter((tool) => tool.cause !== 'shutdown').leng
 
     .dead-page-root .dead-stat-card {
       display: grid;
-      gap: 10px;
+      gap: var(--site-card-gap);
       min-height: 104px;
-      padding: 16px;
+      padding: var(--site-card-padding);
     }
 
     .dead-page-root .dead-stat-card > span:first-child {

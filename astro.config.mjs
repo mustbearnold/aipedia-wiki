@@ -14,6 +14,8 @@ const isFastBuild = process.env.AIPEDIA_FAST_BUILD === '1';
 
 const SITEMAP_EXCLUDED_PATHS = new Set([
   '/about/editor/',
+  '/compare/build/',
+  '/search/',
   '/tool-finder/',
 ]);
 
@@ -47,5 +49,5 @@ export default defineConfig({
     },
   },
 
-  ...(isDev ? {} : { adapter: cloudflare() }),
+  ...(isDev || isFastBuild ? {} : { adapter: cloudflare() }),
 });

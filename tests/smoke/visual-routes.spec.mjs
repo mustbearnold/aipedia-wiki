@@ -3,13 +3,68 @@ import { readFileSync, readdirSync } from 'node:fs';
 import { extname, join } from 'node:path';
 import sharp from 'sharp';
 
+const guidePickRoutes = [
+  {
+    route: '/guides/best-ai-coding-assistant/',
+    bestOverallSlug: 'cursor',
+    plans: ['Cursor Pro', 'Copilot Free or Individual', 'Claude Max or API usage'],
+    firstRankedTitle: 'Cursor',
+  },
+  {
+    route: '/guides/best-ai-seo-tool/',
+    bestOverallSlug: 'surfer-seo',
+    plans: ['Surfer Essential', 'Ahrefs Starter', 'Semrush Pro or Guru'],
+    firstRankedTitle: 'Surfer SEO',
+  },
+  {
+    route: '/guides/best-ai-video-generator/',
+    bestOverallSlug: 'seedance',
+    labels: ['Best model overall', 'Best value model', 'Best Google/API pick'],
+    plans: [
+      'Seedance 2.0 via ByteDance Seed or BytePlus',
+      'Kling 3.0 Pro, Premier, or Ultra after verifying current access',
+      'Veo 3.1 via Flow, Gemini API, or Vertex AI',
+    ],
+    firstRankedTitle: 'Seedance 2.0',
+  },
+  {
+    route: '/guides/best-ai-for-presentations/',
+    bestOverallSlug: 'gamma',
+    plans: ['Gamma Pro', 'Gemini Free or Google AI Pro', 'Synthesia Creator or Enterprise'],
+    firstRankedTitle: 'Gamma',
+  },
+  {
+    route: '/guides/best-ai-for-meeting-notes/',
+    bestOverallSlug: 'fathom',
+    plans: ['Fathom Free or Team', 'NotebookLM Free', 'Fireflies Pro or Business'],
+    firstRankedTitle: 'Fathom',
+  },
+  {
+    route: '/guides/best-ai-for-blog-writing/',
+    bestOverallSlug: 'chatgpt',
+    plans: ['ChatGPT Plus', 'Claude Free or Pro', 'Jasper Pro or Business'],
+    firstRankedTitle: 'ChatGPT',
+  },
+  {
+    route: '/guides/best-ai-tools-for-marketers/',
+    bestOverallSlug: 'chatgpt',
+    plans: ['ChatGPT Plus or Business', 'Gemini Free or Google AI Pro', 'Jasper Pro or Business'],
+    firstRankedTitle: 'ChatGPT',
+  },
+];
+
 const routes = [
   '/',
   '/tools/chatgpt/',
   '/tools/claude/',
+  '/tools/watsonx-orchestrate/',
   '/compare/chatgpt-vs-claude/',
+  '/categories/ai-coding/',
+  ...guidePickRoutes.map(({ route }) => route),
+  '/companies/openai/',
   '/tools/',
   '/search/',
+  '/compare/build/',
   '/trends/',
   '/about/',
   '/about/editorial/',
@@ -21,6 +76,16 @@ const routes = [
 ];
 
 const mobileRoutes = [
+  '/',
+  '/tools/chatgpt/',
+  '/tools/watsonx-orchestrate/',
+  '/compare/chatgpt-vs-claude/',
+  '/categories/ai-coding/',
+  ...guidePickRoutes.map(({ route }) => route),
+  '/companies/openai/',
+  '/tools/',
+  '/search/',
+  '/compare/build/',
   '/stack-builder/?roles=solo-founder%2Ccontent-creator%2Cdeveloper',
   '/trends/',
   '/about/',
@@ -29,6 +94,13 @@ const mobileRoutes = [
   '/media-kit/',
   '/glossary/',
   '/dead/',
+];
+
+const mobileViewports = [
+  { label: '360px', width: 360, height: 780, isMobile: true },
+  { label: '390px', width: 390, height: 844, isMobile: true },
+  { label: '430px', width: 430, height: 932, isMobile: true },
+  { label: '768px', width: 768, height: 1024, isMobile: false },
 ];
 
 const paletteRoutes = [
@@ -116,43 +188,65 @@ for (const route of routes) {
 }
 
 test.describe('mobile layout', () => {
-  test.use({ viewport: { width: 390, height: 844 }, isMobile: true });
-
-  for (const route of mobileRoutes) {
-    test(`route has no horizontal overflow on mobile: ${route}`, async ({ page }) => {
-      await page.goto(route);
-
-      const overflow = await page.evaluate(() => {
-        const doc = document.documentElement;
-        const overflowing = [];
-        const maxRight = doc.clientWidth + 1;
-
-        for (const el of document.querySelectorAll('body *')) {
-          const style = getComputedStyle(el);
-          if (style.position === 'fixed') continue;
-
-          const rect = el.getBoundingClientRect();
-          if (rect.width <= 0 || rect.height <= 0 || rect.right <= maxRight) continue;
-
-          overflowing.push({
-            tag: el.tagName,
-            className: typeof el.className === 'string' ? el.className : '',
-            right: Math.round(rect.right),
-            width: Math.round(rect.width),
-          });
-
-          if (overflowing.length >= 5) break;
-        }
-
-        return {
-          scrollWidth: doc.scrollWidth,
-          clientWidth: doc.clientWidth,
-          overflowing,
-        };
+  for (const viewport of mobileViewports) {
+    test.describe(viewport.label, () => {
+      test.use({
+        viewport: { width: viewport.width, height: viewport.height },
+        isMobile: viewport.isMobile,
       });
 
-      expect(overflow.scrollWidth).toBeLessThanOrEqual(overflow.clientWidth + 1);
-      expect(overflow.overflowing).toEqual([]);
+      for (const route of mobileRoutes) {
+        test(`route has no horizontal overflow: ${route}`, async ({ page }) => {
+          await page.goto(route);
+
+          const overflow = await page.evaluate(() => {
+            const doc = document.documentElement;
+            const overflowing = [];
+            const maxRight = doc.clientWidth + 1;
+            const isContainedByHorizontalScroller = (node) => {
+              for (let parent = node.parentElement; parent && parent !== document.body && parent !== doc; parent = parent.parentElement) {
+                const style = getComputedStyle(parent);
+                const overflowX = style.overflowX;
+                const clipsHorizontally = overflowX === 'auto' || overflowX === 'scroll' || overflowX === 'hidden' || overflowX === 'clip';
+                if (!clipsHorizontally) continue;
+
+                const rect = parent.getBoundingClientRect();
+                if (rect.width <= 0 || rect.height <= 0) continue;
+                if (rect.left < -1 || rect.right > maxRight) continue;
+                return true;
+              }
+              return false;
+            };
+
+            for (const el of document.querySelectorAll('body *')) {
+              const style = getComputedStyle(el);
+              if (style.position === 'fixed') continue;
+
+              const rect = el.getBoundingClientRect();
+              if (rect.width <= 0 || rect.height <= 0 || rect.right <= maxRight) continue;
+              if (isContainedByHorizontalScroller(el)) continue;
+
+              overflowing.push({
+                tag: el.tagName,
+                className: typeof el.className === 'string' ? el.className : '',
+                right: Math.round(rect.right),
+                width: Math.round(rect.width),
+              });
+
+              if (overflowing.length >= 5) break;
+            }
+
+            return {
+              scrollWidth: doc.scrollWidth,
+              clientWidth: doc.clientWidth,
+              overflowing,
+            };
+          });
+
+          expect(overflow.scrollWidth).toBeLessThanOrEqual(overflow.clientWidth + 1);
+          expect(overflow.overflowing).toEqual([]);
+        });
+      }
     });
   }
 });
@@ -432,6 +526,28 @@ test('stack builder shows selected roles before budget is chosen', async ({ page
   await expect(placeholder).toContainText('Developer');
   await expect(placeholder).toContainText('Choose a budget');
 });
+
+for (const guide of guidePickRoutes) {
+  test(`guide exposes buyer-type decision picks before full ranking: ${guide.route}`, async ({ page }) => {
+    await page.goto(guide.route);
+
+    const decisionPanel = page.locator('.t2-guide-decisions');
+    await expect(decisionPanel).toBeVisible();
+    const expectedLabels = guide.labels ?? ['Best overall', 'Budget/free pick', 'Pro/team pick'];
+    for (const label of expectedLabels) {
+      await expect(decisionPanel).toContainText(label);
+    }
+    for (const plan of guide.plans) {
+      await expect(decisionPanel).toContainText(plan);
+    }
+    await expect(decisionPanel).toContainText('2 official sources');
+
+    await expect(decisionPanel.locator('a[data-cta-placement="guide_decision_best_overall"]')).toHaveAttribute('data-cta-tool-slug', guide.bestOverallSlug);
+    await expect(decisionPanel.locator('a[data-cta-placement="guide_decision_budget"]')).toHaveCount(1);
+    await expect(decisionPanel.locator('a[data-cta-placement="guide_decision_pro_team"]')).toHaveCount(1);
+    await expect(page.locator('.t2-guide-row-title').first()).toHaveText(guide.firstRankedTitle);
+  });
+}
 
 test('trends index has expanded beyond the seed report set', async ({ page }) => {
   await page.goto('/trends/');

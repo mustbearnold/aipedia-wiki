@@ -51,8 +51,8 @@ const answerCount = ANSWER_GROUPS.reduce((sum, group) => sum + group.items.lengt
   
   <Breadcrumb items={[{ label: 'Answers' }]} />
 
-  <section class="mb-10 pt-2">
-    <h1 class="text-3xl sm:text-4xl font-bold mb-3 leading-tight">
+  <section class="mb-[var(--site-section-gap)] pt-[var(--site-content-gap-sm)]">
+    <h1 class="text-3xl sm:text-4xl font-bold mb-[var(--site-card-gap)] leading-tight">
       Definitive <span class="accent-gradient-text">answers</span>
     </h1>
     <p class="text-[var(--text-secondary)] text-sm sm:text-base max-w-2xl leading-relaxed">
@@ -60,17 +60,17 @@ const answerCount = ANSWER_GROUPS.reduce((sum, group) => sum + group.items.lengt
     </p>
   </section>
 
-  <section class="space-y-8 mb-16">
+  <section class="space-y-[var(--site-section-gap)] mb-[var(--site-page-bottom)]">
     {ANSWER_GROUPS.map((group) => (
       <div>
-        <h2 class="text-[11px] font-semibold uppercase tracking-[0.14em] text-[var(--text-muted)] mb-3">
+        <h2 class="text-[11px] font-semibold uppercase tracking-[0.14em] text-[var(--text-muted)] mb-[var(--site-card-gap)]">
           {group.title}
         </h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-[var(--site-grid-gap)]">
           {group.items.map((a) => (
             <a
               href={`/answers/${a.slug}/`}
-              class="group block rounded-xl border border-[var(--border)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] hover:border-[rgba(249, 115, 22,0.4)] p-5 no-underline transition-colors"
+              class="group block rounded-[var(--site-radius-card)] border border-[var(--border)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] hover:border-[rgba(249, 115, 22,0.4)] p-[var(--site-card-padding)] no-underline transition-colors"
             >
               <h3 class="text-[17px] font-bold text-[var(--text-primary)] group-hover:text-[var(--accent-primary)] m-0 transition-colors">
                 {a.q}

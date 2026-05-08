@@ -333,7 +333,7 @@ const decisionPaths = [
     .home-hero {
       display: grid;
       grid-template-columns: minmax(0, 1fr) minmax(240px, 300px);
-      gap: clamp(20px, 3vw, 36px);
+      gap: var(--site-panel-gap);
       align-items: end;
       padding: var(--site-page-top) 0 var(--site-section-gap);
       min-width: 0;
@@ -356,7 +356,7 @@ const decisionPaths = [
 
     .home-hero h1 {
       max-width: 760px;
-      margin: 18px 0 0;
+      margin: var(--site-content-gap) 0 0;
       color: var(--home-heading);
       font-size: clamp(2rem, 8vw + 1rem, 5.25rem);
       font-weight: 650;
@@ -366,7 +366,7 @@ const decisionPaths = [
 
     .home-lede {
       max-width: 690px;
-      margin: 24px 0 0;
+      margin: var(--site-content-gap) 0 0;
       color: var(--home-muted);
       font-size: clamp(17px, 2vw, 21px);
       line-height: 1.6;
@@ -375,7 +375,7 @@ const decisionPaths = [
     .home-search {
       max-width: 780px;
       width: 100%;
-      margin-top: 28px;
+      margin-top: var(--site-content-gap);
     }
 
     .home-search-combo {
@@ -643,17 +643,17 @@ const decisionPaths = [
 
     .home-summary {
       display: grid;
-      gap: 10px;
-      padding: 18px;
+      gap: var(--site-card-gap);
+      padding: var(--site-card-padding);
       border: 1px solid var(--home-card-outline);
-      border-radius: 18px;
+      border-radius: var(--site-radius-emphasis);
       background: var(--home-panel);
     }
 
     .home-summary div {
-      padding: 16px;
+      padding: var(--site-card-padding);
       border: 1px solid var(--home-card-outline);
-      border-radius: 14px;
+      border-radius: var(--site-radius-card);
       background: var(--home-inner-panel);
     }
 
@@ -681,8 +681,8 @@ const decisionPaths = [
       display: flex;
       align-items: end;
       justify-content: space-between;
-      gap: 18px;
-      margin-bottom: 18px;
+      gap: var(--site-content-gap);
+      margin-bottom: var(--site-content-gap);
     }
 
     .home-section-head h2,
@@ -712,13 +712,13 @@ const decisionPaths = [
     .home-paths {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 12px;
+      gap: var(--site-grid-gap);
     }
 
     .home-path {
       display: grid;
-      gap: 9px;
-      padding: 18px;
+      gap: var(--site-card-gap);
+      padding: var(--site-card-padding);
     }
 
     .home-path span {
@@ -748,7 +748,7 @@ const decisionPaths = [
       z-index: 5;
       max-width: 780px;
       width: 100%;
-      margin-bottom: 16px;
+      margin-bottom: var(--site-content-gap);
       min-width: 0;
     }
 
@@ -780,7 +780,7 @@ const decisionPaths = [
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 12px;
+      gap: var(--site-grid-gap);
       width: 100%;
       min-height: 36px;
       padding: 0;
@@ -898,7 +898,7 @@ const decisionPaths = [
       z-index: 1;
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 12px;
+      gap: var(--site-card-gap);
     }
 
     .home-tool {
@@ -907,7 +907,7 @@ const decisionPaths = [
       align-items: center;
       gap: 12px;
       min-width: 0;
-      padding: 13px;
+      padding: var(--site-card-padding);
     }
 
     .home-tool :global(.home-tool-logo) {
@@ -952,13 +952,13 @@ const decisionPaths = [
     .home-bottom-grid {
       display: grid;
       grid-template-columns: minmax(0, 1fr) minmax(280px, 380px);
-      gap: 24px;
+      gap: var(--site-panel-gap);
       align-items: start;
     }
 
     .home-news-list {
       display: grid;
-      gap: 10px;
+      gap: var(--site-grid-gap);
     }
 
     .home-news {
@@ -966,7 +966,7 @@ const decisionPaths = [
       grid-template-columns: auto minmax(0, 1fr);
       gap: 6px 12px;
       align-items: center;
-      padding: 13px;
+      padding: var(--site-card-padding);
     }
 
     .home-news small {
@@ -997,7 +997,7 @@ const decisionPaths = [
     }
 
     .home-trust {
-      padding: 20px;
+      padding: var(--site-card-padding);
     }
 
     .home-trust ul {

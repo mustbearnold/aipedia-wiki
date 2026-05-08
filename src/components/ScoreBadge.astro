@@ -33,7 +33,7 @@ const gradId = `score-grad-${Math.random().toString(36).slice(2, 8)}`;
 
 {resolvedVariant === 'hero' && (
   <div
-    class="hero-score not-prose relative flex items-center gap-4 rounded-2xl border border-[var(--border)] px-4 py-3"
+    class="hero-score not-prose relative flex items-center gap-[var(--site-card-gap)] rounded-[var(--site-radius-emphasis)] border border-[var(--border)] px-[var(--site-card-padding)] py-[var(--site-card-gap)]"
     style={`background: radial-gradient(120% 120% at 100% 0%, ${palette.from}22 0%, transparent 55%), var(--bg-card);`}
     aria-label={`Editorial score: ${score} out of 10`}
   >
@@ -81,7 +81,7 @@ const gradId = `score-grad-${Math.random().toString(36).slice(2, 8)}`;
 
 {resolvedVariant === 'sidebar' && (
   <div
-    class="flex items-baseline justify-between w-full rounded-xl border border-[var(--border)] px-5 py-3"
+    class="flex items-baseline justify-between w-full rounded-[var(--site-radius-card)] border border-[var(--border)] px-[var(--site-card-padding)] py-[var(--site-card-gap)]"
     style="background: linear-gradient(135deg, rgba(249, 115, 22,0.10), rgba(251, 146, 60,0.08));"
   >
     <span class="text-[11px] font-semibold uppercase tracking-wider text-[var(--text-muted)]">
@@ -95,7 +95,7 @@ const gradId = `score-grad-${Math.random().toString(36).slice(2, 8)}`;
 
 {resolvedVariant === 'pill' && (
   <div
-    class="inline-flex flex-col items-center justify-center rounded-xl border border-[var(--border)] px-5 py-3"
+    class="inline-flex flex-col items-center justify-center rounded-[var(--site-radius-card)] border border-[var(--border)] px-[var(--site-card-padding)] py-[var(--site-card-gap)]"
     style="background: linear-gradient(135deg, rgba(249, 115, 22,0.1), rgba(251, 146, 60,0.1));"
   >
     <span class="text-3xl font-bold accent-gradient-text leading-none">

@@ -1,56 +1,42 @@
 ---
+import CommercialCTA from './CommercialCTA.astro';
+
 interface Props {
   name: string;
   canonicalUrl?: string;
   affiliateUrl?: string | null;
   pricingModel?: string;
   priceRange?: string;
+  toolSlug?: string;
+  pageType?: string;
+  placement?: string;
 }
 
-const { name, canonicalUrl, affiliateUrl, pricingModel, priceRange } = Astro.props;
+const {
+  name,
+  canonicalUrl,
+  affiliateUrl,
+  pricingModel,
+  priceRange,
+  toolSlug,
+  pageType = 'tool',
+  placement = 'tool_body_cta',
+} = Astro.props;
 
-const href = (affiliateUrl && affiliateUrl.length > 0 ? affiliateUrl : canonicalUrl) ?? '#';
-const isAffiliate = Boolean(affiliateUrl && affiliateUrl.length > 0);
-
-function ctaLabel(): string {
-  const model = (pricingModel ?? '').toLowerCase();
-  const price = (priceRange ?? '').toLowerCase();
-  // Require BOTH a freemium/free pricing model AND an actual $0 / Free
-  // signal in the price range. Open-source alone is not enough: many
-  // open-source tools have free self-hosting but their affiliate URL
-  // points to a paid hosted product.
-  const modelSignalsFree = model === 'free' || model === 'freemium';
-  const priceSignalsFree = /\$0(?!\s*\(self|\s*\(self-host)/i.test(price) || /\bfree\b/i.test(price);
-  const hasFree = modelSignalsFree && priceSignalsFree;
-  if (hasFree) return `Try ${name} free`;
-  if (model === 'enterprise') return `Visit ${name}`;
-  return `Get ${name}`;
-}
-
-const label = ctaLabel();
-const hasUrl = href !== '#';
-const rel = isAffiliate ? 'sponsored noopener' : 'noopener';
+const resolvedSlug = toolSlug ?? name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 ---
 
-{hasUrl && (
-  <div class="not-prose mb-6 flex items-center gap-3 flex-wrap">
-    <a
-      href={href}
-      target="_blank"
-      rel={rel}
-      class="group inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-[15px] bg-[var(--accent-primary)] text-[#0b0a14] hover:brightness-110 transition-all shadow-[0_4px_14px_rgba(249, 115, 22,0.35)] hover:shadow-[0_8px_24px_rgba(249, 115, 22,0.5)] no-underline"
-      data-tool-cta={name}
-    >
-      <span>{label}</span>
-      <span aria-hidden="true" class="transition-transform group-hover:translate-x-0.5">↗</span>
-    </a>
-    {priceRange && (
-      <span class="inline-flex items-center gap-1.5 text-xs text-[var(--text-muted)]">
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
-        </svg>
-        <span class="tabular-nums">{priceRange}</span>
-      </span>
-    )}
-  </div>
-)}
+<CommercialCTA
+  toolName={name}
+  toolSlug={resolvedSlug}
+  canonicalUrl={canonicalUrl}
+  affiliateUrl={affiliateUrl}
+  pricingModel={pricingModel}
+  priceRange={priceRange}
+  pageType={pageType}
+  placement={placement}
+  className="group inline-flex items-center gap-2 px-6 py-3 rounded-[var(--site-radius-control)] font-semibold text-[15px] bg-[var(--accent-primary)] text-[#0b0a14] hover:brightness-110 transition-all shadow-[0_4px_14px_rgba(249, 115, 22,0.35)] hover:shadow-[0_8px_24px_rgba(249, 115, 22,0.5)] no-underline"
+  wrapperClass="not-prose mb-[var(--site-content-gap)] commercial-cta-stack"
+  disclosureClass="commercial-cta-disclosure"
+  toolCtaMarker
+/>

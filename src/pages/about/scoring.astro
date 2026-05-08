@@ -312,7 +312,7 @@ const pageDesc =
 
   <h2>Frequently Asked Questions</h2>
 
-  <div class="not-prose my-6 divide-y divide-[var(--border)] border-y border-[var(--border)]">
+  <div class="not-prose my-[var(--site-content-gap)] divide-y divide-[var(--border)] border-y border-[var(--border)]">
     {faqs.map((f) => (
       <details class="group">
         <summary class="flex items-start justify-between gap-4 py-4 cursor-pointer list-none hover:bg-[var(--bg-card)]/50 transition-colors px-1">
@@ -324,19 +324,19 @@ const pageDesc =
   </div>
 
   <!-- CTA: disagree with a score -->
-  <div class="not-prose mt-14 bg-gradient-to-br from-[rgba(249, 115, 22,0.08)] to-[rgba(251, 146, 60,0.06)] border border-[rgba(249, 115, 22,0.25)] rounded-xl p-8">
-    <div class="flex items-start gap-4">
+  <div class="not-prose mt-[var(--site-section-gap)] bg-gradient-to-br from-[rgba(249, 115, 22,0.08)] to-[rgba(251, 146, 60,0.06)] border border-[rgba(249, 115, 22,0.25)] rounded-[var(--site-radius-card)] p-[var(--site-card-padding)]">
+    <div class="flex items-start gap-[var(--site-card-gap)]">
       <div class="shrink-0 w-10 h-10 rounded-full bg-[rgba(249, 115, 22,0.15)] text-[var(--accent-primary)] flex items-center justify-center text-lg">
         ?
       </div>
       <div class="min-w-0 flex-1">
-        <h2 class="text-xl font-semibold text-[var(--text-primary)] m-0 mb-2">Disagree with a score?</h2>
-        <p class="text-sm text-[var(--text-secondary)] leading-relaxed m-0 mb-5">
+        <h2 class="text-xl font-semibold text-[var(--text-primary)] m-0 mb-[var(--site-chip-gap)]">Disagree with a score?</h2>
+        <p class="text-sm text-[var(--text-secondary)] leading-relaxed m-0 mb-[var(--site-content-gap-sm)]">
           If you believe a score is wrong, outdated, or based on incorrect information, we want to know. Include what you've used the tool for, what you'd score it, and what you'd compare it against. The goal is accurate, useful information, not defensiveness.
         </p>
         <a
           href="mailto:editorial@aipedia.wiki?subject=Score%20challenge%20on%20aipedia.wiki"
-          class="inline-flex items-center gap-2 bg-[var(--accent-primary)] text-[#0b0a14] px-5 py-2.5 rounded-lg text-sm font-medium no-underline hover:opacity-90 transition-opacity"
+          class="inline-flex items-center gap-[var(--site-chip-gap)] bg-[var(--accent-primary)] text-[#0b0a14] px-5 py-2.5 rounded-[var(--site-radius-control)] text-sm font-medium no-underline hover:opacity-90 transition-opacity"
         >
           <span>Challenge a score</span>
           <span aria-hidden="true">&rarr;</span>

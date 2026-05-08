@@ -2,17 +2,17 @@
 type: tool
 slug: synthesia
 title: Synthesia
-tagline: AI avatar video platform for corporate training, onboarding, and compliance content at scale.
+tagline: "Enterprise AI avatar video platform for training, onboarding, compliance, sales enablement, localization, and SCORM-ready presenter content."
 category: ai-video
 company: Synthesia Ltd.
 url: https://synthesia.io
 pricing_model: freemium
-price_range: "$0-$89/month"
+price_range: "Basic free, Starter $29/mo, Creator $89/mo, Enterprise custom"
 status: active
 launched: 2017-01
-last_updated: 2026-05-02
-last_verified: 2026-05-02
-update_frequency: monthly
+last_updated: 2026-05-08
+last_verified: 2026-05-08
+update_frequency: weekly
 affiliate:
   has_program: true
   commission: "25%"
@@ -22,284 +22,217 @@ affiliate:
 scores:
   utility: 8
   value: 7
-  moat: 7
+  moat: 8
   longevity: 8
 facts:
   flagship_model:
-    value: "Express-2 avatars for corporate presenter video"
-    source: "https://www.synthesia.io"
-    source_label: "Synthesia product page"
-    source_id: synthesia-product
-    verified_at: 2026-05-03
-    volatility: high
+    value: "Express-2 is Synthesia's current expressive avatar engine for full-body avatar video, combining voice, lip sync, and body-language generation."
+    source: "https://www.synthesia.io/post/express-2-is-synthesias-next-chapter-for-full-body-expressive-ai-avatars"
+    source_label: "Synthesia Express-2 announcement"
+    source_id: synthesia-express-2
+    verified_at: 2026-05-08
+    volatility: medium
     confidence: high
-    next_review_at: 2026-06-03
-  context_window:
-    value: "Not applicable: Synthesia is an avatar-video platform, not a text chat model with a published token window"
-    source: "https://help.synthesia.io"
-    source_label: "Synthesia help center"
-    source_id: synthesia-help
-    verified_at: 2026-05-03
-    volatility: low
-    confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-08-08
   pricing_anchor:
-    value: "Free 3 minutes; Starter $29/mo; Creator $89/mo; Enterprise custom"
+    value: "Synthesia lists Basic free, Starter $29/mo, Creator $89/mo, and Enterprise custom pricing, with credits as the shared usage currency."
     source: "https://www.synthesia.io/pricing"
     source_label: "Synthesia pricing"
     source_id: synthesia-pricing
-    verified_at: 2026-05-03
+    verified_at: 2026-05-08
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-08
   free_plan:
-    value: "Yes: free plan includes a small monthly video-minute allowance"
+    value: "Basic is free and includes 1,200 credits/month, usable for up to 10 minutes of video/month or 25 AI-generated video assets."
     source: "https://www.synthesia.io/pricing"
     source_label: "Synthesia pricing"
     source_id: synthesia-pricing
-    verified_at: 2026-05-03
+    verified_at: 2026-05-08
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-08
   best_paid_tier:
-    value: "Creator ($89/mo) for production teams; Enterprise for API, SSO, SCIM, audit, and governance"
+    value: "Creator is the practical production tier for regular teams; Enterprise is the safer path for unlimited minutes, SAML/SSO, live collaboration, brand kits, SCORM export, onboarding, and governance."
     source: "https://www.synthesia.io/pricing"
     source_label: "Synthesia pricing"
     source_id: synthesia-pricing
-    verified_at: 2026-05-03
+    verified_at: 2026-05-08
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-08
   api_available:
-    value: "Enterprise only"
+    value: "Creator and Enterprise include Synthesia API access, with listed annual video-minute allowances and additional usage available on Enterprise."
     source: "https://www.synthesia.io/pricing"
     source_label: "Synthesia pricing"
     source_id: synthesia-pricing
-    verified_at: 2026-05-03
+    verified_at: 2026-05-08
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
-  image_generation:
-    value: "No native still-image generation; Synthesia is focused on avatar video"
-    source: "https://www.synthesia.io"
-    source_label: "Synthesia product page"
-    source_id: synthesia-product
-    verified_at: 2026-05-03
-    volatility: low
-    confidence: high
+    next_review_at: 2026-06-08
   video_generation:
-    value: "Yes: presenter/avatar video generation with scripts, avatars, dubbing, and lip-sync"
-    source: "https://www.synthesia.io"
-    source_label: "Synthesia product page"
-    source_id: synthesia-product
-    verified_at: 2026-05-03
-    volatility: high
-    confidence: high
-    next_review_at: 2026-06-03
-  real_time_voice:
-    value: "No primary real-time conversational voice product; Synthesia is asynchronous presenter-video software"
-    source: "https://www.synthesia.io"
-    source_label: "Synthesia product page"
-    source_id: synthesia-product
-    verified_at: 2026-05-03
-    volatility: low
-    confidence: high
-  web_browsing:
-    value: "No web-browsing assistant; Synthesia is video creation software"
-    source: "https://www.synthesia.io"
-    source_label: "Synthesia product page"
-    source_id: synthesia-product
-    verified_at: 2026-05-03
-    volatility: low
-    confidence: high
-  coding_agent:
-    value: "No coding agent; Synthesia is avatar-video software"
-    source: "https://www.synthesia.io"
-    source_label: "Synthesia product page"
-    source_id: synthesia-product
-    verified_at: 2026-05-03
-    volatility: low
-    confidence: high
-  enterprise_controls:
-    value: "Enterprise adds API, SSO, SCIM, audit logging, team brand controls, and governance features"
+    value: "Synthesia focuses on avatar-led presenter video, AI dubbing, localization, PowerPoint-to-video, templates, interactivity, API automation, and SCORM-ready publishing."
     source: "https://www.synthesia.io/pricing"
     source_label: "Synthesia pricing"
     source_id: synthesia-pricing
-    verified_at: 2026-05-03
+    verified_at: 2026-05-08
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
-  data_retention_or_privacy:
-    value: "Enterprise governance and compliance controls are the safer path for HR, L&D, and regulated training content"
-    source: "https://help.synthesia.io"
-    source_label: "Synthesia help center"
-    source_id: synthesia-help
-    verified_at: 2026-05-03
-    volatility: medium
+    next_review_at: 2026-06-08
+  avatar_library:
+    value: "Synthesia pricing lists 9 avatars on Basic, 125+ on Starter, 180+ on Creator, and 240+ on Enterprise."
+    source: "https://www.synthesia.io/pricing"
+    source_label: "Synthesia pricing"
+    source_id: synthesia-pricing
+    verified_at: 2026-05-08
+    volatility: high
     confidence: high
-  open_source_or_local:
-    value: "No: Synthesia is proprietary hosted software"
-    source: "https://www.synthesia.io"
-    source_label: "Synthesia product page"
-    source_id: synthesia-product
-    verified_at: 2026-05-03
-    volatility: low
-    confidence: high
+    next_review_at: 2026-06-08
   best_for:
-    value: "Corporate training, onboarding, compliance, LMS-ready presenter video, and multilingual avatar content"
-    source: "https://www.synthesia.io"
-    source_label: "Synthesia product page"
-    source_id: synthesia-product
-    verified_at: 2026-05-03
-    volatility: medium
-    confidence: high
-  watch_out_for:
-    value: "Starter minutes are tight, custom avatar turnaround can take days, and API access requires Enterprise"
+    value: "Corporate training, onboarding, compliance, sales enablement, multilingual training, PowerPoint-to-video, and SCORM-ready presenter video."
     source: "https://www.synthesia.io/pricing"
     source_label: "Synthesia pricing"
     source_id: synthesia-pricing
-    verified_at: 2026-05-03
+    verified_at: 2026-05-08
+    volatility: medium
+    confidence: high
+    next_review_at: 2026-08-08
+  watch_out_for:
+    value: "Credits, AI asset generation, API allowances, AI dubbing, Veo/Sora integration, and enterprise-only controls can change quickly and should be checked before procurement."
+    source: "https://www.synthesia.io/pricing"
+    source_label: "Synthesia pricing"
+    source_id: synthesia-pricing
+    verified_at: 2026-05-08
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
-tags: [ai-video, ai-avatar, talking-head, training-video, corporate-video, e-learning, express-2, scorm]
+    next_review_at: 2026-06-08
+tags: [ai-video, ai-avatar, talking-head, training-video, corporate-video, e-learning, express-2, scorm, video-localization]
 best_for:
   - corporate training, onboarding, compliance, and enablement teams
-  - LMS workflows that need SCORM export and team review controls
-  - multilingual enterprise video localization
-  - turning slide decks into narrated training content
+  - teams converting PowerPoint decks and SOPs into narrated avatar video
+  - multilingual training and localization workflows
+  - buyers who need SCORM export, collaboration, SSO, brand kits, and governance
 not_best_for:
-  - low-budget marketing or sales avatar campaigns
-  - cinematic creative video generation
-  - fast low-cost custom avatar cloning
-  - solo creators who do not need enterprise workflow controls
-seo_title: "Synthesia: Features, Pricing & Review (April 2026)"
-meta_description: "Synthesia builds corporate talking-head video with Express-2 avatars across 130+ languages. Free 3min, Starter $29, Creator $89, Enterprise custom. SCORM export and PowerPoint import anchor the L&D pipeline."
+  - low-budget creator or sales-video campaigns where HeyGen is faster to trial
+  - real-time conversational avatar agents
+  - cinematic scene generation or motion-first creative video
+  - teams that need simple unlimited usage without credit planning
+seo_title: "Synthesia Review: Pricing, Express-2 & Best Uses (May 2026)"
+meta_description: "Synthesia review updated May 8, 2026. Compare Basic, Starter, Creator, Enterprise, Express-2 avatars, API access, SCORM export, and alternatives."
 author: "aipedia.wiki Editorial"
 quick_answer: >-
-  Synthesia is the enterprise AI avatar platform for training, compliance, and onboarding video. Express-2 avatars deliver scripted output in 130+ languages; SCORM export and PowerPoint import plug directly into LMS pipelines. Pick it over [HeyGen](/tools/heygen/) for L&D depth; skip it for marketing or cinematic work.
+  Synthesia is the enterprise AI avatar video pick when the job is training, onboarding, compliance, sales enablement, PowerPoint-to-video, localization, or SCORM-ready presenter content. As of May 8, 2026, Express-2 is the current avatar engine story, Creator now matters because API access appears on public pricing, and Enterprise is still the safer path for governance, unlimited minutes, SAML/SSO, brand kits, and SCORM workflows.
 ---
 
 # Synthesia
 
-Synthesia is the enterprise AI avatar video platform built by Synthesia Ltd., headquartered in London. **Express-2** is the current production avatar generation, covering 130+ languages with auto-dubbing that re-syncs lip movements to translated audio.
+Synthesia is an enterprise AI avatar video platform for corporate training and business communication. It is not a frontier cinematic video model. Its job is to turn scripts, slides, SOPs, training content, and localization needs into presenter-led video at scale.
 
-The platform owns the corporate L&D pipeline: SCORM export into Workday, SAP, Cornerstone, and Docebo, plus PowerPoint and Google Slides import that converts decks into narrated video.
+The current buyer correction is that Synthesia is no longer only "Starter vs Creator vs Enterprise minutes." The pricing page now uses a shared credit model, includes Basic free usage, lists Creator API access, and exposes newer media integrations such as Veo 3.1 and Sora 2 for short generated assets.
 
 ## System Verdict
 
-> **Pick Synthesia when the output ships into an LMS.** SCORM export, slide import, and team workflow controls run deeper than any competitor. Compliance, onboarding, and product training teams scale multilingual content here without rebuilding pipelines.
+> **Pick Synthesia when the output needs to live inside a business training or enablement system.** SCORM export, PowerPoint import, brand controls, collaboration, localization, and enterprise governance are the point.
 >
-> **Skip it for marketing, sales outreach, or creative work.** [HeyGen](/tools/heygen/) produces more expressive avatars at a cheaper entry point and clones custom faces in minutes versus Synthesia's 24 to 48 hour queue. [Runway](/tools/runway/), Kling, or Veo 3 own cinematic video; Synthesia only renders presenters.
+> **Skip Synthesia when the job is marketing-speed avatar generation or live conversation.** [HeyGen](/tools/heygen/) is usually the faster default for avatar-led marketing/localization. [Tavus](/tools/tavus/) is the developer-first choice for real-time conversational avatars.
 >
-> **Who pays which tier:** Free for evaluation only (3 minutes per month, watermarked). Starter $29/mo for individual trainers or small L&D teams. Creator $89/mo for most working teams that need personal avatars. Enterprise for anyone needing SSO, API, unlimited avatars, or compliance controls. Studio Avatars add roughly $1,000 per year on top of the base plan.
+> **Best plan logic:** Basic is for evaluation. Starter is for light individual use. Creator is the practical production tier for regular teams and now matters because public pricing lists API access. Enterprise is for unlimited video minutes, SAML/SSO, brand kits, live collaboration, SCORM export, onboarding, and governance.
 
 ## Key Facts
 
-| | |
-|---|---|
-| **Flagship avatar generation** | Express-2 |
-| **Avatars (Creator)** | 180+ stock avatars · 5 personal avatars |
-| **Languages** | 130+ with auto-dubbing and lip-sync re-render |
-| **Custom avatar turnaround** | 24 to 48 hours after consent video upload |
-| **Key integrations** | SCORM export · PowerPoint import · Google Slides import |
-| **LMS compatibility** | Workday · SAP · Cornerstone · Docebo |
-| **Tiers** | Free 3 min · Starter $29 ($18 annual) · Creator $89 ($64 annual) · Enterprise custom |
-| **API access** | Enterprise only |
-| **Studio Avatars add-on** | ~$1,000/year (premium high-fidelity clones) |
+- **Current avatar engine:** Express-2 for expressive full-body avatars, natural co-speech gestures, and 1080p avatar output.
+- **Pricing:** Basic free, Starter $29/mo, Creator $89/mo, Enterprise custom.
+- **Credits:** Synthesia says credits are the shared currency across AI usage-based features.
+- **Basic:** 1,200 credits/mo, usable for up to 10 minutes of video/month or 25 AI-generated assets.
+- **Starter:** $29/mo, 1 editor and 3 guests, 125+ avatars, AI Dubbing, logo removal, and 1,200 credits/mo.
+- **Creator:** $89/mo, 5 Personal Avatars, API access, multiple avatars per scene, interactive videos, 180+ avatars, and 3,600 credits/mo.
+- **Enterprise:** custom pricing, unlimited video minutes, 240+ avatars, unlimited Personal Avatars, SAML/SSO, live collaboration, brand kits, SCORM export, and onboarding.
+- **API:** public pricing lists API access on Creator and Enterprise with annual video-minute allowances.
+- **Publishing strength:** SCORM export, video embeds, multilingual player, PowerPoint import, templates, and brand controls.
 
-Every data point above was verified against vendor documentation on 2026-04-17. See Sources.
+## What It Actually Is
 
-## What it actually is
+Synthesia is a structured business-video system. Users write or import a script, choose an avatar, add slides or media, localize the content, then publish a presenter-led video for training, onboarding, product education, or internal communication.
 
-A single platform with one core workflow: type a script, pick an avatar, select a language, render a presenter video. Express-2 handles lip sync and facial movement; the in-browser editor layers slides, graphics, and screen recordings on top of the avatar track.
+Express-2 is Synthesia's current avatar-engine story. Synthesia describes it as a combined video and voice engine for avatars that can pair facial expression, lip sync, voice, and body language. That matters for L&D because a stiff talking head loses attention quickly.
 
-Auto-dubbing translates the script into 130+ languages and re-syncs avatar lip movements to the new audio. No reshoot, no voice actor booking.
+## When To Pick Synthesia
 
-The moat is the LMS pipeline. SCORM export, deck import, and role-based team workspaces plug directly into the corporate training stack most competitors treat as an afterthought.
+- **Corporate training:** onboarding, compliance, SOPs, internal updates, enablement, security training, and technical training.
+- **PowerPoint-to-video:** teams with existing decks can turn static material into narrated presenter video.
+- **Localization:** AI Dubbing, translation, multilingual player, and language support make it easier to maintain global training.
+- **Governance:** Enterprise adds the controls serious buyers usually need before deploying synthetic media internally.
+- **SCORM/LMS publishing:** Synthesia's SCORM export is a core reason it stays on L&D shortlists.
 
-## When to pick Synthesia
+## When To Pick Something Else
 
-- **You ship training video into an LMS.** SCORM export is native. Uploading to Workday, SAP, Cornerstone, or Docebo is one click, not a re-encode.
-- **Your source material is PowerPoint decks.** Direct import converts slides into narrated video with avatar delivery. No one else handles this as cleanly.
-- **Your content ships in multiple languages.** Auto-dubbing with lip-sync re-render covers 130+ languages without reshooting.
-- **You run a team with role-based permissions.** Creator plan adds shared workspaces; Enterprise adds SSO, SCIM, and audit.
-- **You need compliance and data controls.** Enterprise ships the governance profile that L&D and HR buyers require.
+- **Marketing and sales avatars:** [HeyGen](/tools/heygen/) is usually easier to trial and more flexible for sales/localization templates.
+- **Real-time conversational video agents:** [Tavus](/tools/tavus/) is built for live face-to-face AI.
+- **Simple single-image avatar animation:** [D-ID](/tools/d-id/) can be simpler for lightweight use cases.
+- **Cinematic scene generation:** use [Seedance](/tools/seedance/), [Kling](/tools/kling/), [Veo](/tools/veo/), or [Runway](/tools/runway/).
+- **Social clipping and captions:** [Captions](/tools/captions/) and [OpusClip](/tools/opusclip/) solve distribution, not corporate training.
 
-## When to pick something else
+## Pricing And Buying Advice
 
-- **Marketing, sales outreach, or personalized video at scale:** [HeyGen](/tools/heygen/). More avatars, faster custom cloning, cheaper entry, better API access on paid tiers.
-- **Live streaming conversational avatar with LLM knowledge base:** [D-ID](/tools/d-id/) Agents. Synthesia ships no real-time streaming product.
-- **Short-form vertical social video with captions and clips:** [Captions](/tools/captions/).
-- **Transcript-driven podcast or long-form cleanup:** [Descript](/tools/descript/).
-- **Cinematic scene generation, not presenters:** [Runway](/tools/runway/), Kling, or Veo 3.
+As of May 8, 2026, Synthesia's public monthly pricing lists:
 
-## Pricing
+- **Basic:** free, 1,200 credits/mo, up to 10 minutes of video/month or 25 AI-generated video assets.
+- **Starter:** $29/mo, 1,200 credits/mo, 125+ avatars, 1 editor and 3 guests, AI Dubbing, logo removal, and downloaded videos.
+- **Creator:** $89/mo, 3,600 credits/mo, 5 Personal Avatars, API access, multiple avatars per scene, interactive videos, 1 editor and 5 guests, and 180+ avatars.
+- **Enterprise:** custom, unlimited video minutes, 240+ avatars, unlimited Personal Avatars, SAML/SSO, live collaboration, brand kits, SCORM export, onboarding, and custom credits.
 
-Subscription pricing via [synthesia.io/pricing](https://www.synthesia.io/pricing). Annual billing saves roughly 28% on Creator and 38% on Starter.
+The old "API was locked to Enterprise" framing is stale. The public pricing page now lists Synthesia API under Creator and Enterprise. Procurement teams should still verify exact API allowance, add-on pricing, data controls, and commercial terms before buying.
 
-| Plan | Monthly | Annual (effective/mo) | Video minutes | Avatars | Personal avatars |
-|------|---------|-----------------------|---------------|---------|-------------------|
-| Free | $0 | $0 | 3 min | 9 stock | 0 |
-| Starter | $29 | $18 | 10 min | 125+ | 3 |
-| Creator | $89 | $64 | 30 min | 180+ | 5 |
-| Enterprise | Custom | Custom | Unlimited | Full library | Unlimited |
+## Synthesia Vs Current Alternatives
 
-*Prices verified 2026-04-17 via [Synthesia pricing](https://www.synthesia.io/pricing). Enterprise unlocks API, SSO, SCIM, audit logging, team brand kits, and unrestricted AI Playground. High-fidelity Studio Avatars add roughly $1,000 per year on top of the base plan.*
+**Synthesia vs HeyGen:** Synthesia is better for L&D, SCORM, business training governance, and structured corporate video. HeyGen is better for marketing-speed avatar video, digital twins, localization, and sales outreach.
 
-## Against the alternatives
+**Synthesia vs Tavus:** Synthesia is asynchronous presenter video. Tavus is real-time conversation.
 
-| | Synthesia (Creator) | [HeyGen](/tools/heygen/) (Creator) | [D-ID](/tools/d-id/) (Pro) |
-|---|---|---|---|
-| **Entry price** | $89/mo ($64 annual) | $29/mo | $16/mo annual |
-| **Monthly output** | 30 min | 200 credits (~10 min Avatar IV) | 60 credits (~15 min) |
-| **Languages** | 130+ | 175+ | 120+ |
-| **Custom avatar turnaround** | 24 to 48 hrs | Minutes | Credit-gated |
-| **SCORM / LMS export** | Native | Limited | Limited |
-| **PowerPoint import** | Native | No | Yes |
-| **Real-time streaming** | None | Interactive Avatars | Agents API |
-| **Best viewed as** | Enterprise L&D specialist | Flexible mid-market default | Streaming API specialist |
+**Synthesia vs D-ID:** Synthesia is more complete for business training and enterprise publishing. D-ID can fit simpler single-image avatar/API use cases.
 
-## Failure modes
+**Synthesia vs Runway or Veo:** Synthesia is not a cinematic generator. Use it for presenters, training, and business communication.
 
-- **Uncanny valley at close inspection.** Express-2 improved expressiveness but avatars still read as synthetic in HD close-ups. Mechanical blinking and stiff shoulder movement surface on careful review.
-- **Starter cap is tight.** 10 minutes per month means one 5-minute explainer eats half the quota. Most teams need Creator.
-- **Custom avatar queue is slow.** 24 to 48 hours after consent upload. [HeyGen](/tools/heygen/) turns this around in minutes.
-- **No API below Enterprise.** Workflow automation and bulk generation are locked behind a sales contact.
-- **No scene generation.** Synthesia is presenter-only. Complex visuals need [Runway](/tools/runway/) or Kling.
-- **Studio Avatar upcharge.** The cleanest high-fidelity clones add roughly $1,000 per year to the base plan.
+## Failure Modes
+
+- **Credit planning:** credits now span multiple AI usage features, so a monthly plan can be consumed faster than expected.
+- **Enterprise dependency:** SAML/SSO, SCORM export at scale, custom onboarding, brand governance, and unlimited minutes push serious teams into Enterprise.
+- **Synthetic feel:** Express-2 improves gesture and expressiveness, but close-up avatars can still read as synthetic.
+- **Not live conversation:** Synthesia is not the default tool for a two-way AI video agent.
+- **Not a scene model:** Veo/Sora integration does not make Synthesia the best raw AI video generator.
+- **Procurement review:** HR, L&D, and compliance content should go through privacy, consent, and synthetic-media policy review.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [Synthesia pricing](https://www.synthesia.io/pricing) and the [Synthesia help center](https://help.synthesia.io).
+AiPedia re-verified this page on **May 8, 2026** against Synthesia pricing, avatar product pages, Express-2 materials, and Synthesia docs. Public pricing and API availability have changed enough that older April-era reviews should not be trusted without checking the current pricing page.
 
 ## FAQ
 
 **Is Synthesia free?**
-Yes, with strict limits. The free tier gives 3 minutes per month of watermarked video using 9 stock avatars. Paid plans start at Starter $29/mo ($18 annual) with 10 minutes and 125+ avatars ([Synthesia pricing](https://www.synthesia.io/pricing)).
+Yes. The Basic plan is free and lists 1,200 credits/month, usable for up to 10 minutes of video/month or 25 AI-generated video assets.
 
-**How realistic are Synthesia avatars?**
-Express-2 reads naturally in standard corporate contexts. Close inspection still reveals mechanical blinking and stiff shoulder movement. For marketing-grade realism, [HeyGen](/tools/heygen/) Avatar IV edges Synthesia at a comparable price.
-
-**Does Synthesia export to LMS platforms?**
-Yes. Native SCORM export ships into Workday, SAP, Cornerstone, Docebo, and other major LMS platforms. This remains the single deepest integration on the market for AI video.
-
-**How does Synthesia compare to HeyGen?**
-Synthesia owns corporate L&D through SCORM, PowerPoint import, and team workflow controls. [HeyGen](/tools/heygen/) wins on avatar expressiveness, custom avatar turnaround (minutes versus days), language count (175+ versus 130+), and Creator-tier price point ($29 versus $89).
-
-**Can Synthesia create custom avatars?**
-Yes, on Starter and above. Upload a short consent video; processing takes 24 to 48 hours. High-fidelity Studio Avatars add roughly $1,000 per year on top of the base plan.
+**What is Express-2?**
+Express-2 is Synthesia's expressive avatar engine for full-body avatar video, combining voice, lip sync, facial movement, and body-language generation.
 
 **Does Synthesia have an API?**
-Only on Enterprise. Starter and Creator plans have no programmatic access, which rules out bulk personalized outreach workflows without a sales contract.
+Yes. Public pricing now lists API access on Creator and Enterprise, with annual video-minute allowances. Verify exact usage terms before building automation around it.
+
+**Is Synthesia better than HeyGen?**
+For enterprise training and SCORM/L&D workflows, often yes. For marketing, localization, and faster digital-twin work, HeyGen is usually the stronger first test.
+
+**Can Synthesia replace Runway, Kling, Seedance, or Veo?**
+No. Synthesia is a presenter-video and training platform. It may include short generated asset integrations, but it is not the same as a frontier video model.
 
 ## Sources
 
-- [Synthesia pricing](https://www.synthesia.io/pricing): current tier structure and limits
-- [Synthesia help center](https://help.synthesia.io): avatar creation, SCORM export, language coverage
-- [Synthesia main site](https://www.synthesia.io): Express-2 model reference and use cases
+- [Synthesia pricing](https://www.synthesia.io/pricing)
+- [Synthesia avatars](https://www.synthesia.io/features/avatars)
+- [Synthesia Express-2 announcement](https://www.synthesia.io/post/express-2-is-synthesias-next-chapter-for-full-body-expressive-ai-avatars)
+- [Synthesia avatar docs](https://docs.synthesia.io/docs/synthesia-avatars)
+- [Synthesia help center](https://help.synthesia.io)
 
 ## Related
 
-- **Category:** [AI Video Generation](/categories/ai-video/)
-- **Comparisons:** [HeyGen vs Synthesia](/compare/heygen-vs-synthesia/) · [Runway vs Synthesia](/compare/runway-vs-synthesia/) · [Kling 3.0 vs Synthesia](/compare/kling-vs-synthesia/) · [ElevenLabs vs Synthesia](/compare/elevenlabs-vs-synthesia/)
+- **Category:** [AI Video](/categories/ai-video/)
+- **Compare:** [HeyGen](/tools/heygen/) · [Tavus](/tools/tavus/) · [D-ID](/tools/d-id/) · [Runway](/tools/runway/)
+- **Guide:** [Best AI Video Generator](/guides/best-ai-video-generator/)

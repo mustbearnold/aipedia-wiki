@@ -12,6 +12,7 @@ import CompanyOrganizationLD from '../components/seo/CompanyOrganizationLD.astro
 import ShareButtons from '../components/ShareButtons.astro';
 import FeedbackForm from '../components/FeedbackForm.astro';
 import ToolLogo from '../components/ToolLogo.astro';
+import CommercialCTA from '../components/CommercialCTA.astro';
 import { shortenPrice } from '../utils/shorten-price';
 
 interface ToolData {
@@ -21,7 +22,7 @@ interface ToolData {
   url?: string;
   price_range?: string;
   pricing_model?: string;
-  affiliate?: { link?: string | null } | null;
+  affiliate?: { link?: string | null; network?: string | null } | null;
   scores?: { utility?: number; value?: number; moat?: number; longevity?: number };
   tagline?: string;
 }
@@ -62,15 +63,6 @@ function ctaLabel(t: ToolData): string {
   if (model === 'enterprise') return `Visit ${t.title}`;
   return `Get ${t.title}`;
 }
-function ctaHref(t: ToolData): string {
-  const affUrl = t.affiliate?.link;
-  return (affUrl && affUrl.length > 0 ? affUrl : t.url) ?? '';
-}
-function ctaRel(t: ToolData): string {
-  const affUrl = t.affiliate?.link;
-  return affUrl && affUrl.length > 0 ? 'sponsored noopener' : 'noopener';
-}
-
 const typePill: Record<string, { cls: string; label: string }> = {
   startup:  { cls: 't2-company-type-startup',  label: 'Startup' },
   bigtech:  { cls: 't2-company-type-bigtech',  label: 'Big Tech' },
@@ -143,8 +135,6 @@ const tocHeadings = (headings ?? []).filter((h) => h.depth === 2).map((h) => ({ 
         <div class="t2-company-products-grid">
           {keyProducts.map((t) => {
             const score = overallScore(t);
-            const href = ctaHref(t);
-            const rel = ctaRel(t);
             const label = ctaLabel(t);
             return (
               <div class="t2-company-product">
@@ -160,11 +150,23 @@ const tocHeadings = (headings ?? []).filter((h) => h.depth === 2).map((h) => ({ 
                 {t.tagline && <div class="t2-company-product-tagline">{t.tagline}</div>}
                 <div class="t2-company-product-meta">
                   {t.price_range && <span class="t2-company-product-price" title={t.price_range}>{shortenPrice(t.price_range)}</span>}
-                  {href && (
-                    <a href={href} target="_blank" rel={rel} class="t2-company-product-cta" data-company-product-cta={t.slug}>
-                      {label} <span class="t2-cta-arrow" aria-hidden="true">→</span>
-                    </a>
-                  )}
+                  <CommercialCTA
+                    toolName={t.title}
+                    toolSlug={t.slug}
+                    canonicalUrl={t.url}
+                    affiliateUrl={t.affiliate?.link}
+                    affiliateProgram={t.affiliate?.network}
+                    label={label}
+                    pricingModel={t.pricing_model}
+                    priceRange={t.price_range}
+                    pageType="company"
+                    placement="company_product_card"
+                    pageSlug={slug}
+                    categorySlug={t.category}
+                    className="t2-company-product-cta"
+                    arrow="→"
+                    companyProductCtaMarker
+                  />
                 </div>
               </div>
             );

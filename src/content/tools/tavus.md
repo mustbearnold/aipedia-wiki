@@ -2,20 +2,20 @@
 type: tool
 slug: tavus
 title: Tavus
-tagline: Developer-first conversational AI video avatars with real-time perception, turn-taking, and photoreal rendering. Phoenix-4, Raven-1, and Sparrow-1 power sub-600ms face-to-face agents.
+tagline: "Developer-first real-time AI video agents: CVI, Phoenix-4 rendering, Raven-1 perception, and Sparrow-1 turn-taking for face-to-face product experiences."
 category: ai-video
 secondary_categories: [ai-voice]
-company: tavus
+company: Tavus
 url: https://www.tavus.io
 pricing_model: freemium
-price_range: "$0-$397/month + usage"
+price_range: "$0, Starter $59/mo, Growth $397/mo, Enterprise custom, plus pay-as-you-go usage"
 status: active
 launched: 2021-02
-last_updated: 2026-04-17
-last_verified: 2026-04-17
-update_frequency: monthly
-seo_title: "Tavus: Features, Pricing & Review (April 2026)"
-meta_description: "Tavus ships Phoenix-4 real-time rendering (Feb 2026), Raven-1 perception, and Sparrow-1 turn-taking for developer-first Conversational Video Interface. Free tier, Starter $59/mo, Growth $397/mo plus usage. Sub-600ms latency, bring-your-own-LLM."
+last_updated: 2026-05-08
+last_verified: 2026-05-08
+update_frequency: weekly
+seo_title: "Tavus Review: CVI, Phoenix-4 & Pricing (May 2026)"
+meta_description: "Tavus review updated May 8, 2026. See CVI, Phoenix-4, Raven-1, Sparrow-1, current pricing, best uses, risks, and avatar-video alternatives."
 author: "aipedia.wiki Editorial"
 affiliate:
   has_program: false
@@ -26,206 +26,215 @@ affiliate:
 scores:
   utility: 8
   value: 6
-  moat: 7
-  longevity: 7
+  moat: 8
+  longevity: 8
 facts:
   best_for:
-    value: "Developer-first conversational AI video avatars with real-time perception, turn-taking, and photoreal rendering. Phoenix-4, Raven-1, and Sparrow-1 power sub-600ms face-to-face agents. Best for AI video generation, editing, avatars, or production workflows."
-    source: "https://www.tavus.io/pricing"
-    source_label: "Source"
-    source_id: tavus-pricing
-    verified_at: 2026-05-03
-    volatility: medium
-    confidence: medium
+    value: "Developer teams building real-time face-to-face AI agents inside products, especially tutoring, coaching, sales qualification, support, patient intake, and interactive onboarding."
+    source: "https://www.tavus.io/cvi"
+    source_label: "Tavus CVI product page"
+    source_id: tavus-cvi
+    verified_at: 2026-05-08
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-08
+  cvi_available:
+    value: "Tavus CVI is the Conversational Video Interface: an API-first framework for real-time multimodal video interactions where an AI agent can see, hear, and respond naturally."
+    source: "https://docs.tavus.io/sections/conversational-video-interface/overview-cvi"
+    source_label: "Tavus CVI docs"
+    source_id: tavus-cvi-docs
+    verified_at: 2026-05-08
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-08
+  flagship_stack:
+    value: "CVI uses Phoenix-4 for real-time rendering, Raven-1 for perception, and Sparrow-1 for turn-taking; Tavus markets the pipeline around sub-500ms average response time and 1080p real-time avatar rendering."
+    source: "https://www.tavus.io/cvi"
+    source_label: "Tavus CVI product page"
+    source_id: tavus-cvi
+    verified_at: 2026-05-08
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-08
+  phoenix_4:
+    value: "Phoenix-4 is Tavus's real-time facial behavior engine for identity-preserving 1080p, 40fps avatar rendering with emotion control, active listening, and micro-expressions."
+    source: "https://www.tavus.io/post/phoenix-4-real-time-human-rendering-with-emotional-intelligence"
+    source_label: "Tavus Phoenix-4 announcement"
+    source_id: tavus-phoenix-4
+    verified_at: 2026-05-08
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-08
   pricing_anchor:
-    value: "Phoenix-4; Included; Phoenix-4 launched with Gaussian-diffusion rendering, sub-600ms latency"
+    value: "Developer pricing lists Basic free, Starter $59/mo, Growth $397/mo, and Enterprise custom, with included conversational/video generation minutes and pay-as-you-go overages."
     source: "https://www.tavus.io/pricing"
-    source_label: "Source"
+    source_label: "Tavus pricing"
     source_id: tavus-pricing
-    verified_at: 2026-05-03
-    next_review_at: 2026-08-03
+    verified_at: 2026-05-08
+    next_review_at: 2026-06-08
     volatility: high
-    confidence: medium
+    confidence: high
   watch_out_for:
-    value: "Non-Tier-1 canonical profile: verify current pricing, usage limits, data policy, and integration details before procurement"
+    value: "Tavus is not a simple no-code avatar-video editor; production buyers must model pay-as-you-go minutes, replica training, concurrency, privacy consent, LLM latency, and enterprise terms."
     source: "https://www.tavus.io/pricing"
-    source_label: "Source"
+    source_label: "Tavus pricing"
     source_id: tavus-pricing
-    verified_at: 2026-05-03
-    next_review_at: 2026-08-03
+    verified_at: 2026-05-08
+    next_review_at: 2026-06-08
     volatility: high
-    confidence: medium
-tags: [ai-video, avatar, conversational-ai, real-time, api, developer, cvi, phoenix-4, replica, human-computing]
+    confidence: high
+tags: [ai-video, ai-avatar, conversational-ai, real-time-video, api, developer, cvi, phoenix-4, raven-1, sparrow-1, replica]
 best_for:
-  - developers building conversational video agents
-  - real-time face-to-face AI for tutoring, coaching, support
-  - personalized video outreach at scale via API
-  - embedding photoreal avatars inside SaaS products
+  - developers building real-time conversational video agents
+  - SaaS teams embedding face-to-face AI tutors, coaches, support agents, SDRs, or intake flows
+  - products that need API-first video conversations, memory, function calling, RAG, or bring-your-own-LLM control
+  - teams that can manage consent, privacy, latency, and usage-cost modeling
 not_best_for:
-  - marketing teams that just want pre-rendered talking-head videos
-  - low-budget creators (no-code alternatives cost less)
-  - workloads that need stock language-first avatars over real-time conversation
+  - marketing teams that only need pre-rendered talking-head videos
+  - creators looking for a simple avatar studio with templates
+  - cinematic text-to-video generation
+  - low-budget workflows that do not need real-time interaction
 quick_answer: >-
-  Tavus is the developer-first conversational video avatar platform. Pick it when you need real-time face-to-face AI with sub-600ms latency, photoreal rendering, and an API-first build path. Skip it for simple pre-recorded talking-head videos where HeyGen or Synthesia ship faster on lower budgets.
+  Tavus is the avatar-video pick when the product requirement is real-time conversation, not a rendered presenter clip. As of May 8, 2026, its core stack is CVI with Phoenix-4 rendering, Raven-1 perception, and Sparrow-1 turn-taking. Use it for embedded AI video agents; use HeyGen or Synthesia for scripted business videos, and use Veo, Seedance, Kling, Runway, or Vidu for cinematic scene generation.
 price_history:
-  - date: 2026-02-18
-    plan: "Phoenix-4"
-    price: "Included"
+  - date: 2026-05-08
+    plan: "Basic"
+    price: "Free"
     source: "https://www.tavus.io/pricing"
-    source_label: "Source"
+    source_label: "Tavus pricing"
     source_id: tavus-pricing
-    note: "Phoenix-4 launched with Gaussian-diffusion rendering, sub-600ms latency"
-  - date: 2026-04-15
+    note: "Includes 25 minutes of AI conversational video, 5 minutes of AI video generation, 25 stock replicas, and 30+ language support."
+  - date: 2026-05-08
     plan: "Starter"
-    price: "$59/mo"
+    price: "$59/mo plus pay-as-you-go"
     source: "https://www.tavus.io/pricing"
-    source_label: "Source"
+    source_label: "Tavus pricing"
     source_id: tavus-pricing
-    note: "Verified unchanged, plus pay-as-you-go usage"
-  - date: 2026-04-15
+    note: "Includes 100 conversational minutes, 10 video-generation minutes, 3 custom replica trainings per month, and up to 3 concurrent streams."
+  - date: 2026-05-08
     plan: "Growth"
-    price: "$397/mo"
+    price: "$397/mo plus pay-as-you-go"
     source: "https://www.tavus.io/pricing"
-    source_label: "Source"
+    source_label: "Tavus pricing"
     source_id: tavus-pricing
-    note: "Verified unchanged"
+    note: "Includes 1,250 conversational minutes, 100 video-generation minutes, 7 custom replica trainings per month, 100+ stock replicas, and conversation recordings. Confirm exact concurrent-stream cap before purchase because the public page has inconsistent values."
 ---
 
 # Tavus
 
-Tavus is a developer-first conversational video AI platform. It ships three proprietary models: Phoenix-4 (real-time photoreal rendering, launched February 2026), Raven-1 (perception: expression, gaze, screen context), and Sparrow-1 (turn-taking). Together they power the Conversational Video Interface (CVI), an API framework for building face-to-face AI agents with sub-600ms round-trip latency.
+Tavus is a developer platform for **real-time conversational video agents**. That puts it in the avatar-video family, but not in the same buying lane as HeyGen or Synthesia. HeyGen and Synthesia are mainly for rendered business videos. Tavus is for building an AI person into an app so a user can talk to it face to face.
 
-The pitch is "human computing": an avatar that sees, hears, and responds in real time, swappable with any LLM backend. The ecosystem targets developers, not marketing teams.
+The current Tavus stack is **CVI** (Conversational Video Interface) with **Phoenix-4** for real-time rendering, **Raven-1** for perception, and **Sparrow-1** for turn-taking. The platform is API-first and aimed at product teams, not creators who just want a template editor.
 
 ## System Verdict
 
-> **Pick Tavus if you are a developer building a conversational video agent and latency matters.** Phoenix-4 renders 1080p at 40fps with sub-600ms end-to-end latency, which is the bar real-time face-to-face AI has to clear before it stops feeling like a teleconference bot. Raven-1 and Sparrow-1 handle perception and turn-taking out of the box. Bring-your-own-LLM support means the avatar layer plugs into Claude, GPT-5, or a self-hosted model.
+> **Pick Tavus if you are building a real-time AI video agent and the conversation itself is the product.** Tutoring, coaching, customer support, sales qualification, patient intake, interview practice, and language learning are the natural fits.
 >
-> **Skip it if your use case is pre-rendered marketing video.** [HeyGen](/tools/heygen/) and [Synthesia](/tools/synthesia/) ship faster for scripted talking-head videos at lower cost. [D-ID](/tools/d-id/) covers single-image avatar animation more cheaply when real-time conversation is not required. Tavus's moat evaporates outside interactive workloads.
+> **Skip Tavus if you need normal avatar videos.** For scripted sales clips, employee training, onboarding modules, or localization, [HeyGen](/tools/heygen/) and [Synthesia](/tools/synthesia/) are faster to ship and easier for non-engineers.
 >
-> **Who pays which tier:** Free for prototyping with 25 stock replicas, Starter $59/mo for individuals and startups shipping their first CVI integration, Growth $397/mo for teams scaling to production with 10 concurrent streams, Enterprise for white-label and guaranteed SLAs. Usage is billed on top of every paid plan.
+> **Best plan logic:** Basic is for prototyping. Starter is the first serious developer tier. Growth is the likely production tier because it adds materially more minutes, stock replicas, custom replica training, recordings, and higher concurrency. Enterprise is for white-label, custom concurrency, SLAs, compliance, and volume discounts.
 
 ## Key Facts
 
-| | |
-|---|---|
-| **Flagship rendering model** | Phoenix-4 (launched February 2026) · Gaussian-diffusion · 1080p at 40fps · sub-600ms latency |
-| **Perception model** | Raven-1 · reads expression, gaze, screen context |
-| **Turn-taking model** | Sparrow-1 · dialogue timing under 600ms |
-| **Core product** | Conversational Video Interface (CVI) API |
-| **LLM backend** | Tavus optimized LLMs or bring-your-own (Claude, GPT-5, self-hosted) |
-| **Text-to-video generation** | Yes · powered by Phoenix-4 |
-| **Stock replicas** | 100+ library, 40+ added with Phoenix-4 launch |
-| **Subscription pricing** | Free · Starter $59 · Growth $397 · Enterprise custom |
-| **Usage model** | Pay-as-you-go on conversational minutes and video generation |
-| **Consumer product** | PALs (emotionally intelligent AI humans for personal use) |
-| **Funding** | $40M Series B led by CRV (November 2025) |
+- **Core product:** Conversational Video Interface, a real-time multimodal video pipeline for AI agents.
+- **Rendering model:** Phoenix-4, Tavus's real-time facial behavior engine.
+- **Perception model:** Raven-1, which reads facial expression, tone, gaze, emotion, and ambient context.
+- **Turn-taking model:** Sparrow-1, which handles conversational timing and interruption behavior.
+- **Latency positioning:** Tavus markets CVI around sub-500ms average response time and 1080p real-time avatar rendering.
+- **Developer pricing:** Basic free, Starter $59/mo, Growth $397/mo, Enterprise custom, with usage-based overages.
+- **Best use:** embedded product experiences where a video agent needs to see, hear, respond, remember, call tools, or use a knowledge base.
+- **Important buyer caveat:** Tavus's public pricing page contains inconsistent Growth concurrency values in different sections, so teams should confirm the contractual stream cap before purchase.
 
-Every data point above was verified against vendor documentation on 2026-04-17. See Sources.
+## What It Actually Is
 
-## What it actually is
+Tavus CVI is a live video-agent pipeline. In a typical flow, the user joins a video conversation, Tavus handles audio/video streaming, Raven-1 interprets user signals, a language model produces the response, Sparrow-1 decides turn timing, and Phoenix-4 renders the replica back to the user in real time.
 
-An API-first developer platform for building real-time conversational video agents. Three proprietary models do the heavy lifting. Phoenix-4 renders photoreal avatars at 1080p / 40fps using a Gaussian-diffusion approach. Raven-1 watches the user and extracts expression, gaze, and screen context. Sparrow-1 handles when-to-speak decisions with sub-600ms latency.
+That is a different job from "make a two-minute training video." Tavus is valuable when the agent needs to react during the conversation. It becomes overkill when the buyer only needs a polished presenter video that can be exported and embedded in a course, landing page, or sales email.
 
-The CVI layer stitches these together into an SDK that accepts an LLM plug-in. A developer pipes user speech into an LLM (Tavus-optimized or their own). The response routes back through Phoenix-4, and the avatar speaks with lip-sync, facial micro-expressions, and head motion.
+## When To Pick Tavus
 
-The real moats: end-to-end latency under 600ms is genuinely hard and most competitors do not hit it. Phoenix-4's real-time emotional expression control is novel in February 2026. Bring-your-own-LLM support is important for enterprise buyers who do not want Tavus in the middle of their prompt stack. PALs (the consumer product) extends the tech to end users with 30+ language support.
+- **Interactive education and coaching:** AI tutors, role-play practice, language-learning partners, interview prep, or onboarding assistants that need face-to-face feedback.
+- **Support and intake flows:** agents that can read confusion, collect data, trigger function calls, hand off to humans, and keep users engaged longer than voice-only bots.
+- **Sales and qualification:** AI SDRs, product concierges, and guided demos where presence may improve completion rates.
+- **Developer-controlled stacks:** teams that want to bring their own LLM, knowledge base, tools, memory layer, or workflow logic.
+- **Video agents inside SaaS:** product builders who need APIs, streaming infrastructure, concurrency, and integration control.
 
-## When to pick Tavus
+## When To Pick Something Else
 
-- **You are building a conversational video agent in your product.** Tutoring platforms, customer-service avatars, sales qualifiers, telehealth intake, and language-practice bots all benefit from sub-600ms face-to-face interaction.
-- **You need full-duplex conversation, not scripted videos.** Phoenix-4 listens and responds simultaneously. Scripted avatar tools like HeyGen and Synthesia do not.
-- **You already have an LLM stack.** Bring-your-own-LLM means Tavus plugs into Claude, GPT-5, or a fine-tuned in-house model without forcing you to reroute prompts.
-- **Latency drives your user experience.** Under 600ms utterance-to-utterance is the threshold where users stop noticing the avatar is AI. Slower avatars break immersion.
-- **You need developer tooling, not a GUI.** Tavus's docs, SDK, and Replica API are designed for engineers. Marketing teams will find HeyGen friendlier.
-
-## When to pick something else
-
-- **Scripted talking-head videos for training, marketing, or internal comms:** [HeyGen](/tools/heygen/) or [Synthesia](/tools/synthesia/). Faster to ship, no API integration required, cheaper per video.
-- **Single-image avatar animation:** [D-ID](/tools/d-id/). Cheaper when real-time interaction is not required.
-- **Open-source or self-hostable video avatar pipeline:** SadTalker, Wav2Lip, or Hedra. Tavus does not ship open weights.
-- **Low-budget creator use case:** Most solo creators do not need CVI. Pre-rendered video tools at $20-30/mo cover the job.
+- **Scripted marketing or training videos:** use [HeyGen](/tools/heygen/) or [Synthesia](/tools/synthesia/).
+- **Enterprise L&D with SCORM and structured course workflows:** start with [Synthesia](/tools/synthesia/).
+- **Fast digital-twin sales and localization videos:** start with [HeyGen](/tools/heygen/).
+- **Single-image avatar animation or lighter live-avatar experiments:** evaluate [D-ID](/tools/d-id/).
+- **Cinematic scene generation:** use [Veo](/tools/veo/), [Seedance](/tools/seedance/), [Kling](/tools/kling/), [Runway](/tools/runway/), [Vidu](/tools/vidu/), or [Wan](/tools/wan/).
 
 ## Pricing
 
-Subscription and usage pricing via [tavus.io/pricing](https://www.tavus.io/pricing):
+Tavus has two buyer tracks: PALs for consumers and Developer for teams building with APIs. AiPedia ranks Tavus as a developer tool, so the Developer pricing is the commercial surface that matters most.
 
-| Plan | Monthly | Conversational minutes | Video gen minutes | Custom replicas | Concurrent streams | Who's it for |
-|------|---------|------------------------|-------------------|-----------------|--------------------|--------------|
-| Free (Basic) | $0 | 25 | 5 | Stock only (25) | 1 | Prototyping |
-| Starter | $59 | 100 | 10 | 3/mo (+$40 each overage) | Up to 3 | Individual developers |
-| Growth | $397 | 1,250 | 100 | 7/mo + 100+ stock | Up to 10 | **Most production teams land here** |
-| Enterprise | Custom | Custom | Custom | Unlimited | Custom | White-label, SLAs, dedicated support |
+- **Basic: free.** Includes whitelabeled APIs, 25 minutes of AI conversational video, 5 minutes of AI video generation, access to 25 stock replicas, and 30+ language support.
+- **Starter: $59/mo plus pay-as-you-go.** Adds 3 custom replica trainings per month, 100 conversational minutes, 10 video-generation minutes, pay-as-you-go with no overage limit, and up to 3 concurrent streams.
+- **Growth: $397/mo plus pay-as-you-go.** Adds 7 custom replica trainings per month, 1,250 conversational minutes, 100 video-generation minutes, 100+ stock replicas, conversation recordings, and production-scale concurrency.
+- **Enterprise: custom.** Adds 100% white-label, scaling discounts, custom concurrency, top-tier support, enterprise security and compliance, guaranteed SLAs, and faster boot times.
 
-Consumer product (PALs) via [tavus.io/pals](https://www.tavus.io/):
+Current overage anchors on the public pricing page include Starter CVI overage at $0.37/min, Growth CVI overage at $0.32/min, Starter video-generation overage at $1/min, Growth video-generation overage at $0.90/min, and Growth conversation recordings at $0.03/min. Custom replica overages are listed at $65 per replica on Starter and $40 per replica on Growth.
 
-| PALs plan | Monthly | Voice/video call minutes |
-|-----------|---------|--------------------------|
-| Free | $0 | 15 |
-| Plus | $20 | 150 |
-| Max | $50 | 500 |
+One pricing issue is worth flagging: the public pricing page says Growth has "up to 10 concurrent streams" in the plan summary, while the compare table shows 15. Treat that as a procurement question, not a detail to hand-wave.
 
-*Prices verified 2026-04-17 via [Tavus pricing](https://www.tavus.io/pricing). Paid plans bill platform fees plus pay-as-you-go usage for minutes and replicas beyond the included pool. Total monthly cost varies with usage.*
+## Against The Alternatives
 
-## Against the alternatives
+- **Tavus vs HeyGen:** Tavus wins for real-time video agents and API-first product integration. HeyGen wins for sales clips, localization, presenter templates, and faster non-engineer workflows.
+- **Tavus vs Synthesia:** Tavus wins for live conversations. Synthesia wins for enterprise training, governance, SCORM/LMS use cases, and polished course-style presenter videos.
+- **Tavus vs D-ID:** Tavus is more production-oriented for real-time conversational agents. D-ID is simpler and often cheaper for lighter avatar animation or single-image talking-head workflows.
+- **Tavus vs Veo, Seedance, Kling, Runway, Vidu, or Wan:** those tools generate scenes and motion. Tavus generates a real-time human interface.
 
-| | Tavus CVI | HeyGen | Synthesia | D-ID |
-|---|---|---|---|---|
-| **Primary use** | Real-time conversational agents | Scripted talking-head video | Scripted training video | Single-image avatar animation |
-| **Latency target** | Sub-600ms | Not real-time | Not real-time | Near real-time, lower fidelity |
-| **API-first** | Yes | Yes | Yes | Yes |
-| **Bring-your-own-LLM** | Yes | Limited | Limited | No |
-| **Photoreal rendering** | Phoenix-4 · 1080p / 40fps | Strong, pre-rendered | Strong, pre-rendered | Moderate |
-| **Perception (sees user)** | Raven-1, yes | No | No | No |
-| **Turn-taking model** | Sparrow-1, yes | No | No | No |
-| **Best viewed as** | Real-time conversation specialist | Marketing video tool | Training video tool | Budget avatar animator |
+## Failure Modes
 
-## Failure modes
-
-- **Usage costs stack on top of platform fees.** Starter and Growth plans include a pool of minutes, but overages bill pay-as-you-go. A moderately active production workload can push Growth well past $397/mo. Model your usage before committing.
-- **Custom replica training is metered.** Starter gets 3 custom replicas/mo; additional trainings run $40 each. Large replica libraries accrue fast.
-- **LLM latency is your problem.** Tavus guarantees sub-600ms on its own stack, but if you bring a slow LLM, the conversation feels slow. Budget 200-400ms of latency for the LLM round-trip.
-- **Phoenix-4 is February 2026 technology.** It is stable and shipping, but real-time video rendering is a moving field. Expect iteration; build against the Replica API rather than tight model-specific assumptions.
-- **Uncanny-valley risk remains.** Phoenix-4 reduces it materially, but prolonged face-to-face conversation with a synthetic human still reads as artificial for some users. A/B test with your actual audience.
-- **Enterprise controls are gated.** White-label, custom concurrency, guaranteed SLAs, and faster boot times are Enterprise-only. Growth plan deployments still show Tavus branding in edge cases.
-- **Stock replicas may clash with your brand.** The 100+ library is diverse, but custom replicas require consent-recorded source video. Plan for a replica production pipeline.
-- **Real-time perception is powerful and privacy-sensitive.** Raven-1 reads expression, gaze, and screen content. Privacy disclosures and user consent flows are your obligation, not Tavus's.
+- **Usage costs can exceed the subscription.** The monthly plan is only the platform fee plus included minutes. Active production agents need a usage model before launch.
+- **Concurrency is a real product constraint.** Confirm stream caps in the contract, especially because the public Growth page shows inconsistent values.
+- **LLM latency still matters.** Tavus can handle the video pipeline, but a slow external LLM will still make the conversation feel slow.
+- **Privacy and consent are not optional.** Raven-1-style perception means users may be sharing visual, emotional, voice, and contextual signals. Product teams need explicit consent and clear data handling.
+- **Custom replicas need governance.** Replica training involves real likeness and voice. Brand safety, consent logs, and revocation workflows belong in the launch checklist.
+- **It is not a marketer-friendly editor.** Non-technical teams may struggle unless engineering owns the integration.
+- **Real-time avatar quality is still an audience test.** Even strong rendering can feel unnatural to some users in long conversations.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [Tavus pricing](https://www.tavus.io/pricing), [CVI documentation](https://docs.tavus.io/sections/conversational-video-interface/overview-cvi), the [Phoenix-4 announcement](https://www.tavus.io/post/phoenix-4-real-time-human-rendering-with-emotional-intelligence), and the [Series B funding announcement](https://www.businesswire.com/news/home/20251111507298/en/Tavus-Raises-$40M-to-Build-the-Next-Frontier-of-Intelligence-Human-Computing).
+This page was refreshed on 2026-05-08 against Tavus's current pricing page, CVI product page, CVI documentation, and Phoenix-4 announcement. AiPedia treats vendor model claims as primary-source facts and the buying recommendation as editorial analysis.
+
+Scores follow the four-dimension rubric at [/about/scoring/](/about/scoring/): utility, value, moat, and longevity.
 
 ## FAQ
 
 **Is Tavus free?**
-Yes. The Free (Basic) tier includes 25 minutes of conversational video and 5 minutes of video generation per month with 25 stock replicas. It is enough to prototype a CVI integration. Production workloads need Starter at $59/mo or Growth at $397/mo, both with pay-as-you-go usage on top.
+Yes. The Developer Basic plan is free and includes limited conversational-video and video-generation minutes. It is for prototypes, not production traffic.
 
-**What is the Conversational Video Interface (CVI)?**
-CVI is Tavus's framework for real-time multimodal video interactions with AI. An agent sees the user via Raven-1, decides when to speak via Sparrow-1, and renders photoreal response via Phoenix-4. End-to-end latency is sub-600ms. Developers plug in their own LLM or use a Tavus-optimized one.
+**What is CVI?**
+CVI stands for Conversational Video Interface. It is Tavus's API-first framework for real-time multimodal video interactions with AI agents.
 
 **What is Phoenix-4?**
-A real-time human rendering model launched February 2026. It uses Gaussian-diffusion to synthesize photorealistic video at 1080p and 40fps with sub-600ms latency. It is the first real-time model to generate and control emotional states, active listening, and continuous facial motion in a single system ([Phoenix-4 announcement](https://www.tavus.io/post/phoenix-4-real-time-human-rendering-with-emotional-intelligence)).
+Phoenix-4 is Tavus's real-time facial behavior engine. Tavus says it supports identity-preserving 1080p, 40fps rendering with active listening, emotional expression, and micro-expressions.
 
-**Can I bring my own LLM?**
-Yes. The CVI layer is modular. Developers can integrate Claude, GPT-5, Gemini, or a self-hosted model in the dialogue step. Tavus also provides ultra-low latency optimized LLMs for teams that do not want to manage the LLM layer.
+**What are Raven-1 and Sparrow-1?**
+Raven-1 is the perception layer that analyzes visual and audio context. Sparrow-1 is the turn-taking layer that helps the agent decide when to respond or interrupt.
 
-**Tavus vs HeyGen or Synthesia?**
-Different products. Tavus is for real-time conversational agents (face-to-face AI with sub-600ms latency). HeyGen and Synthesia are for pre-rendered scripted video (training, marketing, internal comms). If the use case is "click play and watch a talking head," Tavus is overkill. If the use case is "have a conversation with an AI human," HeyGen and Synthesia do not ship that capability.
+**Is Tavus better than HeyGen or Synthesia?**
+Only for real-time video agents. For scripted business video, HeyGen and Synthesia are usually more practical.
 
-**What are PALs?**
-PALs are Tavus's consumer-facing AI humans that communicate through text, voice, and face-to-face video. They ship with agentic capabilities and real-time perception. Pricing runs Free, Plus $20/mo, or Max $50/mo depending on voice and video call minutes.
+**Can Tavus make normal generated videos?**
+Yes, Tavus includes AI video generation minutes, but its strategic value is live conversational video. If the main need is cinematic footage, start with Veo, Seedance, Kling, Runway, Vidu, or Wan.
 
 **How fresh is the pricing?**
-Verified 2026-04-17 against [tavus.io/pricing](https://www.tavus.io/pricing). Base plans have not changed since early 2026; usage rates and overage pricing are documented per-tier on the pricing page.
+Pricing and plan details were verified on 2026-05-08. Because Tavus uses subscription plus pay-as-you-go usage, production buyers should verify overages, concurrency, SLAs, and enterprise terms before committing.
 
 ## Sources
 
-- [Tavus pricing page](https://www.tavus.io/pricing): current tier pricing, included minutes, replica limits
-- [Tavus CVI overview](https://docs.tavus.io/sections/conversational-video-interface/overview-cvi): documentation for the Conversational Video Interface
-- [Phoenix-4 announcement](https://www.tavus.io/post/phoenix-4-real-time-human-rendering-with-emotional-intelligence): February 2026 launch of real-time rendering
-- [Tavus home page](https://www.tavus.io/): positioning, current models (Phoenix-4, Raven-1, Sparrow-1)
-- [Series B funding announcement](https://www.businesswire.com/news/home/20251111507298/en/Tavus-Raises-$40M-to-Build-the-Next-Frontier-of-Intelligence-Human-Computing): $40M Series B led by CRV (November 2025)
+- [Tavus pricing](https://www.tavus.io/pricing)
+- [Tavus CVI product page](https://www.tavus.io/cvi)
+- [Tavus CVI documentation](https://docs.tavus.io/sections/conversational-video-interface/overview-cvi)
+- [Tavus Phoenix-4 announcement](https://www.tavus.io/post/phoenix-4-real-time-human-rendering-with-emotional-intelligence)
 
 ## Related
 
 - **Category:** [AI Video](/categories/ai-video/)
+- **Compare:** [HeyGen](/tools/heygen/) · [Synthesia](/tools/synthesia/) · [D-ID](/tools/d-id/)
+- **Guide:** [Best AI Video Generator](/guides/best-ai-video-generator/)

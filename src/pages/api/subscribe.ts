@@ -6,13 +6,10 @@
 // is typed from wrangler.jsonc + the Pages dashboard bindings.
 
 import type { APIRoute } from 'astro';
-// @ts-expect-error - cloudflare:workers is a Worker runtime module
-// provided by the Cloudflare environment at runtime, not a normal npm
-// package, so TypeScript's module resolver doesn't find it at build
-// time. Runtime resolves it correctly on the worker.
-import { env } from 'cloudflare:workers';
 
-export const prerender = false;
+const isFastBuild = process.env.AIPEDIA_FAST_BUILD === '1';
+
+export const prerender = isFastBuild;
 
 const EMAIL_RE = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
@@ -25,6 +22,15 @@ async function sha256(text: string): Promise<string> {
 function isLocalRequest(request: Request): boolean {
   const host = new URL(request.url).hostname;
   return host === 'localhost' || host === '127.0.0.1' || host === '::1';
+}
+
+async function getWorkerEnv(): Promise<any> {
+  if (isFastBuild) return {};
+  // cloudflare:workers is a runtime module, so keep Vite from resolving
+  // it during the fast static audit build.
+  const workerModule = 'cloudflare:workers';
+  const mod = await import(/* @vite-ignore */ workerModule);
+  return mod.env ?? {};
 }
 
 async function verifyTurnstile(token: string, ip: string, secret: string, request: Request): Promise<boolean> {
@@ -81,7 +87,7 @@ export const GET: APIRoute = () =>
 
 export const POST: APIRoute = async ({ request, clientAddress }) => {
   try {
-    const workerEnv: any = env ?? {};
+    const workerEnv: any = await getWorkerEnv();
     const debugApi = String(workerEnv?.AIPEDIA_DEBUG_API ?? '').toLowerCase() === 'true';
     // The D1 binding's variable name can be either `DB` (conventional)
     // or `D1` (default when using the "Add D1 binding" UI without
@@ -170,9 +176,6 @@ export const POST: APIRoute = async ({ request, clientAddress }) => {
     return json(
       {
         error: 'unhandled',
-        ...(String((env as any)?.AIPEDIA_DEBUG_API ?? '').toLowerCase() === 'true'
-          ? { detail: String(err?.message ?? err).slice(0, 300) }
-          : {}),
       },
       500,
     );

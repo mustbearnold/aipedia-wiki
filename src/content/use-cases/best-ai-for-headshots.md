@@ -62,9 +62,23 @@ Start with real photos, not a text-only prompt. Choose three to ten source image
 
 For LinkedIn and resumes, choose the least dramatic output. A believable, well-lit image beats a glossy portrait that looks like an ad campaign. For company directories, keep backgrounds and framing consistent across the team so AI-generated images do not stand out.
 
+## Best Tool by Situation
+
+Use ChatGPT when you want coaching around the source photo, prompt, crop, and professional tone. It is the best default for someone who does not know how to write image prompts and wants to stay conservative.
+
+Use Midjourney when aesthetics are the priority and the headshot is for a creative portfolio, personal brand, speaker page, or exploratory concept. Treat the output as a direction, then reject anything that changes identity or looks too synthetic.
+
+Use Gemini when the headshot task is part of a broader Google workflow, such as updating a resume, bio, or document package. It is not the most specialized headshot product, but convenience matters if the image is one piece of a profile refresh.
+
+Specialist headshot services are still worth considering when consistency matters across a team. They usually provide a more structured upload and selection process than a general image model, which can reduce weird likeness drift.
+
 ## When Not To Use AI
 
 Do not use AI headshots for identity documents, press photos where accuracy matters, regulated professional profiles, or any situation where the image could mislead someone about who they are meeting. If the photo will appear on a law firm, medical practice, investor page, or public executive bio, a real photographer is still the cleaner choice.
+
+## Buying Advice
+
+Do not pay for a headshot workflow until you have tested likeness preservation on free or low-cost outputs. The deciding question is not whether the image looks good; it is whether a colleague, hiring manager, or client would recognize you without feeling misled. If the tool cannot preserve identity across several attempts, stop instead of buying more credits.
 
 ## Prompt Tips
 

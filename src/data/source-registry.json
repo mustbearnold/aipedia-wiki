@@ -435,7 +435,8 @@
       "url": "https://docs.argil.ai/",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-05-08"
     },
     {
       "id": "argil-official",
@@ -443,7 +444,8 @@
       "url": "https://www.argil.ai/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-05-08"
     },
     {
       "id": "argil-pricing",
@@ -451,7 +453,8 @@
       "url": "https://www.argil.ai/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-05-08"
     },
     {
       "id": "assemblyai-docs",
@@ -700,7 +703,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-05-04"
+      "last_checked": "2026-05-08"
     },
     {
       "id": "captions-overview",
@@ -709,7 +712,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-05-04"
+      "last_checked": "2026-05-08"
     },
     {
       "id": "cartesia-docs",
@@ -1262,11 +1265,21 @@
     },
     {
       "id": "d-id-agents",
-      "label": "D-ID Agents",
-      "url": "https://www.d-id.com/agents/",
+      "label": "D-ID Visual AI Agents",
+      "url": "https://www.d-id.com/ai-agents/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-05-08"
+    },
+    {
+      "id": "d-id-api-pricing",
+      "label": "D-ID API pricing",
+      "url": "https://www.d-id.com/pricing/api/",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-05-08"
     },
     {
       "id": "d-id-docs",
@@ -1274,7 +1287,8 @@
       "url": "https://docs.d-id.com/",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-05-08"
     },
     {
       "id": "d-id-official",
@@ -1282,7 +1296,8 @@
       "url": "https://www.d-id.com/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-05-08"
     },
     {
       "id": "d-id-studio-pricing",
@@ -1290,7 +1305,8 @@
       "url": "https://www.d-id.com/pricing/studio/",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-05-08"
     },
     {
       "id": "dalle-best-for",
@@ -2307,7 +2323,44 @@
       "url": "https://hailuoai.video/subscribe",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-05-08"
+    },
+    {
+      "id": "hailuo-23-launch",
+      "label": "MiniMax Hailuo 2.3 launch",
+      "url": "https://www.minimax.io/news/minimax-hailuo-23",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-05-08"
+    },
+    {
+      "id": "minimax-video-api",
+      "label": "MiniMax video generation API docs",
+      "url": "https://platform.minimax.io/docs/api-reference/video-generation-intro",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-05-08"
+    },
+    {
+      "id": "minimax-video-packages",
+      "label": "MiniMax video package pricing",
+      "url": "https://platform.minimax.io/docs/guides/pricing-video",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-05-08"
+    },
+    {
+      "id": "minimax-token-plan",
+      "label": "MiniMax token plan pricing",
+      "url": "https://platform.minimax.io/docs/guides/pricing-token-plan",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-05-08"
     },
     {
       "id": "harvey-blog",
@@ -2355,7 +2408,17 @@
       "url": "https://www.hedra.com/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-05-08"
+    },
+    {
+      "id": "hedra-models",
+      "label": "Hedra models",
+      "url": "https://www.hedra.com/models",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-05-08"
     },
     {
       "id": "hedra-pricing",
@@ -2363,7 +2426,8 @@
       "url": "https://www.hedra.com/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-05-08"
     },
     {
       "id": "helicone-docs",
@@ -2467,7 +2531,8 @@
       "url": "https://docs.heygen.com",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-05-08"
     },
     {
       "id": "heygen-avatar-iv",
@@ -2475,7 +2540,44 @@
       "url": "https://help.heygen.com/en/articles/11269603-heygen-avatar-iv-complete-guide",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-05-08"
+    },
+    {
+      "id": "heygen-avatar-v-launch",
+      "label": "HeyGen Avatar V launch",
+      "url": "https://www.heygen.com/blog/announcing-avatar-v",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-05-08"
+    },
+    {
+      "id": "heygen-avatar-v-report",
+      "label": "HeyGen Avatar V technical report",
+      "url": "https://dynamic.heygen.ai/www/Paper%20Links/avatarv_tech_report.pdf",
+      "type": "research",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-05-08"
+    },
+    {
+      "id": "heygen-avatar-iv-api",
+      "label": "HeyGen Avatar IV API announcement",
+      "url": "https://www.heygen.com/blog/announcing-the-avatar-iv-api",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-05-08"
+    },
+    {
+      "id": "heygen-api-pricing",
+      "label": "HeyGen API pricing help",
+      "url": "https://help.heygen.com/en/articles/10060327-heygen-api-pricing-explained",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-05-08"
     },
     {
       "id": "heygen-pricing",
@@ -2483,7 +2585,8 @@
       "url": "https://www.heygen.com/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-05-08"
     },
     {
       "id": "heygen-pricing-help",
@@ -2491,7 +2594,8 @@
       "url": "https://help.heygen.com/en/articles/9204682-heygen-pricing-plans-and-subscriptions-explained-what-you-need-to-know",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-05-08"
     },
     {
       "id": "higgsfield-about",
@@ -3039,6 +3143,14 @@
       "label": "Kling AI pricing",
       "url": "https://klingai.com/pricing",
       "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "kling-30-launch",
+      "label": "Kuaishou Kling AI 3.0 launch",
+      "url": "https://ir.kuaishou.com/news-releases/news-release-details/kling-ai-launches-30-model-ushering-era-where-everyone-can-be",
+      "type": "newsroom",
       "trust_tier": "primary",
       "volatility": "high"
     },
@@ -4008,6 +4120,14 @@
       "volatility": "medium"
     },
     {
+      "id": "openai-gpt-55-instant",
+      "label": "OpenAI GPT-5.5 Instant release",
+      "url": "https://openai.com/index/gpt-5-5-instant/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
       "trust_tier": "primary",
       "last_checked": "2026-05-04",
       "id": "openai-image-generation-docs",
@@ -4622,6 +4742,46 @@
       "volatility": "medium"
     },
     {
+      "id": "runway-api-docs",
+      "label": "Runway API docs",
+      "url": "https://docs.dev.runwayml.com/",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "runway-api-models",
+      "label": "Runway API models",
+      "url": "https://docs.dev.runwayml.com/guides/models/",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "runway-api-pricing",
+      "label": "Runway API pricing",
+      "url": "https://docs.dev.runwayml.com/guides/pricing/",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "runway-enterprise",
+      "label": "Runway enterprise",
+      "url": "https://runwayml.com/enterprise/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "runway-models",
+      "label": "Available Models on Runway",
+      "url": "https://help.runwayml.com/hc/en-us/articles/48649877897107-Available-Models-on-Runway",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
       "id": "runway-pricing",
       "label": "Runway pricing",
       "url": "https://runwayml.com/pricing",
@@ -4634,6 +4794,14 @@
       "label": "Runway research",
       "url": "https://runwayml.com/research/introducing-runway-gwm-1",
       "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "runway-usage-rights",
+      "label": "Runway usage rights",
+      "url": "https://help.runwayml.com/hc/en-us/articles/18927776141715-Usage-rights",
+      "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium"
     },
@@ -4696,18 +4864,42 @@
     },
     {
       "id": "seedance-official",
-      "label": "Seedance homepage",
-      "url": "https://www.seedance.ai/",
+      "label": "ByteDance Seedance 2.0",
+      "url": "https://seed.bytedance.com/en/seedance2_0",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "high"
     },
     {
       "id": "seedance-pricing",
-      "label": "Seedance pricing",
-      "url": "https://www.seedance.ai/pricing",
+      "label": "BytePlus Seedance 2.0 resource packs",
+      "url": "https://docs.byteplus.com/api/docs/ModelArk/2191775",
       "type": "pricing",
       "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "seedance-bytedance-launch",
+      "label": "Seedance 2.0 official launch",
+      "url": "https://seed.bytedance.com/blog/seedance-2-0-official-launch",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "seedance-byteplus-api",
+      "label": "BytePlus Seedance 2.0 API reference",
+      "url": "https://docs.byteplus.com/api/docs/ModelArk/1520757",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "seedance-ai-independent-disclosure",
+      "label": "Seedance.ai independent disclosure",
+      "url": "https://www.seedance.ai/",
+      "type": "official",
+      "trust_tier": "secondary",
       "volatility": "high"
     },
     {
@@ -4928,7 +5120,8 @@
       "url": "https://help.synthesia.io",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-05-08"
     },
     {
       "id": "synthesia-pricing",
@@ -4936,7 +5129,8 @@
       "url": "https://www.synthesia.io/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-05-08"
     },
     {
       "id": "synthesia-product",
@@ -4944,7 +5138,35 @@
       "url": "https://www.synthesia.io",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-05-08"
+    },
+    {
+      "id": "synthesia-avatars",
+      "label": "Synthesia avatar product page",
+      "url": "https://www.synthesia.io/features/avatars",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-05-08"
+    },
+    {
+      "id": "synthesia-express-2",
+      "label": "Synthesia Express-2 announcement",
+      "url": "https://www.synthesia.io/post/express-2-is-synthesias-next-chapter-for-full-body-expressive-ai-avatars",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-05-08"
+    },
+    {
+      "id": "synthesia-avatar-docs",
+      "label": "Synthesia avatar docs",
+      "url": "https://docs.synthesia.io/docs/synthesia-avatars",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-05-08"
     },
     {
       "id": "tabnine-docs",
@@ -5004,11 +5226,39 @@
     },
     {
       "id": "tavus-pricing",
-      "label": "Source",
+      "label": "Tavus pricing",
       "url": "https://www.tavus.io/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-05-08"
+    },
+    {
+      "id": "tavus-cvi",
+      "label": "Tavus CVI product page",
+      "url": "https://www.tavus.io/cvi",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-05-08"
+    },
+    {
+      "id": "tavus-cvi-docs",
+      "label": "Tavus CVI docs",
+      "url": "https://docs.tavus.io/sections/conversational-video-interface/overview-cvi",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-05-08"
+    },
+    {
+      "id": "tavus-phoenix-4",
+      "label": "Tavus Phoenix-4 announcement",
+      "url": "https://www.tavus.io/post/phoenix-4-real-time-human-rendering-with-emotional-intelligence",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-05-08"
     },
     {
       "id": "tines-pricing",
@@ -5168,7 +5418,7 @@
     {
       "id": "veo-official",
       "label": "Google DeepMind Veo page",
-      "url": "https://deepmind.google/technologies/veo/",
+      "url": "https://deepmind.google/models/veo/",
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium"
@@ -5182,12 +5432,98 @@
       "volatility": "high"
     },
     {
+      "id": "veo-gemini-api-pricing",
+      "label": "Gemini API Veo 3.1 pricing",
+      "url": "https://ai.google.dev/gemini-api/docs/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "veo-31-gemini-api-docs",
+      "label": "Gemini API Veo 3.1 docs",
+      "url": "https://ai.google.dev/gemini-api/docs/video",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "veo-31-ingredients",
+      "label": "Veo 3.1 Ingredients to Video update",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/veo-3-1-ingredients-to-video/",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "veo-31-gemini-api-update",
+      "label": "Veo 3.1 Gemini API launch",
+      "url": "https://developers.googleblog.com/en/introducing-veo-3-1-and-new-creative-capabilities-in-the-gemini-api/",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "veo-31-lite",
+      "label": "Veo 3.1 Lite announcement",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/veo-3-1-lite/",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
       "id": "vidu-official",
       "label": "Vidu pricing page",
       "url": "https://www.vidu.com/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-05-08"
+    },
+    {
+      "id": "vidu-q3-official",
+      "label": "Vidu Q3 official page",
+      "url": "https://www.vidu.com/vidu-q3",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-05-08"
+    },
+    {
+      "id": "vidu-reference-to-video",
+      "label": "Vidu reference-to-video official page",
+      "url": "https://www.vidu.com/ai-reference-to-video",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-05-08"
+    },
+    {
+      "id": "vidu-api-quickstart",
+      "label": "Vidu API quickstart",
+      "url": "https://platform.vidu.com/docs/quick-start",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-05-08"
+    },
+    {
+      "id": "vidu-api-pricing",
+      "label": "Vidu API pricing",
+      "url": "https://platform.vidu.com/docs/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-05-08"
+    },
+    {
+      "id": "vidu-api-reference-to-video",
+      "label": "Vidu API reference-to-video docs",
+      "url": "https://platform.vidu.com/docs/reference-to-video",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-05-08"
     },
     {
       "id": "voiceflow-pricing",
@@ -5216,11 +5552,66 @@
     },
     {
       "id": "wan-pricing",
-      "label": "Source",
+      "label": "Wan official site",
       "url": "https://wan.video",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "high",
+      "last_checked": "2026-05-08"
+    },
+    {
+      "id": "wan-model-studio-video-docs",
+      "label": "Alibaba Cloud Wan video generation docs",
+      "url": "https://www.alibabacloud.com/help/en/model-studio/video-generate-edit-model/",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-05-08"
+    },
+    {
+      "id": "wan-model-studio-pricing",
+      "label": "Alibaba Cloud Model Studio pricing",
+      "url": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-05-08"
+    },
+    {
+      "id": "wan-model-studio-models",
+      "label": "Alibaba Cloud Model Studio models",
+      "url": "https://www.alibabacloud.com/help/en/model-studio/models",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-05-08"
+    },
+    {
+      "id": "wan2-2-github",
+      "label": "Wan2.2 GitHub repository",
+      "url": "https://github.com/Wan-Video/Wan2.2",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-05-08"
+    },
+    {
+      "id": "wan-huggingface",
+      "label": "Wan-AI Hugging Face organization",
+      "url": "https://huggingface.co/Wan-AI",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-05-08"
+    },
+    {
+      "id": "fal-wan-27",
+      "label": "fal.ai Wan 2.7",
+      "url": "https://fal.ai/wan-2.7",
+      "type": "pricing",
+      "trust_tier": "secondary",
+      "volatility": "high",
+      "last_checked": "2026-05-08"
     },
     {
       "id": "weaviate-best-for",

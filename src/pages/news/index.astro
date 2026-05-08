@@ -585,14 +585,14 @@ const newsItems = sorted.slice(0, 100).map((item) => ({
     .p3-newsdesk-signal-grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 10px;
-      margin-top: 14px;
+      gap: var(--site-grid-gap);
+      margin-top: var(--site-content-gap-sm);
     }
     @media (min-width: 720px) {
       .p3-newsdesk-signal-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
     }
     .p3-newsdesk-signal-card.home-surface-card {
-      padding: 12px 14px;
+      padding: var(--site-card-padding);
       min-width: 0;
     }
     .p3-newsdesk-signal-card.home-surface-card:hover {
@@ -639,8 +639,8 @@ const newsItems = sorted.slice(0, 100).map((item) => ({
         overscroll-behavior-x: contain;
         touch-action: pan-x;
         scroll-snap-type: x proximity;
-        gap: 8px;
-        margin-top: 10px;
+        gap: var(--site-grid-gap);
+        margin-top: var(--site-content-gap-sm);
         padding-bottom: 2px;
         scrollbar-width: none;
         -webkit-overflow-scrolling: touch;
@@ -652,7 +652,7 @@ const newsItems = sorted.slice(0, 100).map((item) => ({
         flex: 0 0 auto;
         width: min(76vw, 222px);
         min-width: 156px;
-        padding: 8px 10px;
+        padding: var(--site-card-gap);
         scroll-snap-align: start;
       }
       .p3-newsdesk-signal-label {
@@ -672,13 +672,13 @@ const newsItems = sorted.slice(0, 100).map((item) => ({
 
     /* ---- top story ---- */
     .p3-topstory-sec {
-      margin-bottom: 48px;
+      margin-bottom: var(--site-section-gap);
     }
     .p3-topstory.home-surface-card {
       display: grid;
       grid-template-columns: 1fr;
       gap: 0;
-      border-radius: 12px;
+      border-radius: var(--site-radius-card);
       overflow: hidden;
       position: relative;
       text-decoration: none;
@@ -720,23 +720,23 @@ const newsItems = sorted.slice(0, 100).map((item) => ({
     .light .p3-topstory-img-fade { background: linear-gradient(0deg, rgba(255,255,255,0.2) 0%, transparent 40%); }
 
     .p3-topstory-body {
-      padding: 32px 28px 30px;
+      padding: var(--site-card-padding);
       display: flex;
       flex-direction: column;
     }
     @media (min-width: 900px) {
-      .p3-topstory-body { padding: 40px 36px; }
+      .p3-topstory-body { padding: clamp(1.5rem, 3vw, 2.5rem); }
     }
     .p3-topstory-label {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 12px;
+      gap: var(--site-card-gap);
       font-size: 10px;
       font-weight: 700;
       letter-spacing: 0.14em;
       color: var(--p3-accent-text);
-      margin-bottom: 16px;
+      margin-bottom: var(--site-content-gap);
     }
     .p3-topstory-title {
       font-size: clamp(1.5rem, 2.8vw, 2rem);
@@ -761,8 +761,8 @@ const newsItems = sorted.slice(0, 100).map((item) => ({
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      gap: 8px;
-      padding-top: 14px;
+      gap: var(--site-chip-gap);
+      padding-top: var(--site-card-gap);
       border-top: 1px solid var(--p3-line);
       font-size: 12px;
       color: var(--p3-muted);
@@ -773,7 +773,7 @@ const newsItems = sorted.slice(0, 100).map((item) => ({
       display: inline-flex;
       flex-wrap: wrap;
       align-items: center;
-      gap: 5px;
+      gap: var(--site-chip-gap);
     }
     .p3-topstory-affect-pill {
       padding: 2px 7px;
@@ -795,13 +795,13 @@ const newsItems = sorted.slice(0, 100).map((item) => ({
     .p3-newsdesk-split {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 36px;
-      margin-bottom: 48px;
+      gap: var(--site-panel-gap);
+      margin-bottom: var(--site-section-gap);
     }
     @media (min-width: 1000px) {
       .p3-newsdesk-split {
         grid-template-columns: minmax(0, 1fr) 300px;
-        gap: 40px;
+        gap: var(--site-panel-gap);
         align-items: start;
       }
     }
@@ -809,7 +809,7 @@ const newsItems = sorted.slice(0, 100).map((item) => ({
 
     /* ---- filters (optional disclosure on small screens) ---- */
     .p3-newsdesk-filters-details {
-      margin-bottom: 20px;
+      margin-bottom: var(--site-content-gap);
       border: none;
       padding: 0;
     }
@@ -825,9 +825,9 @@ const newsItems = sorted.slice(0, 100).map((item) => ({
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 10px;
-      padding: 10px 12px;
-      border-radius: 8px;
+      gap: var(--site-card-gap);
+      padding: var(--site-card-gap) var(--site-card-padding);
+      border-radius: var(--site-radius-control);
       border: 1px solid var(--p3-line);
       background:
         linear-gradient(180deg, rgba(255,255,255,0.025), transparent),
@@ -875,8 +875,8 @@ const newsItems = sorted.slice(0, 100).map((item) => ({
 
     /* ---- filters ---- */
     .p3-newsdesk-filters {
-      padding: 14px 14px 12px;
-      border-radius: 8px;
+      padding: var(--site-card-padding);
+      border-radius: var(--site-radius-card);
       border: 1px solid var(--p3-line);
       background:
         linear-gradient(180deg, rgba(255,255,255,0.025), transparent),
@@ -889,15 +889,15 @@ const newsItems = sorted.slice(0, 100).map((item) => ({
       letter-spacing: 0.14em;
       text-transform: uppercase;
       color: var(--p3-subtle);
-      margin-bottom: 8px;
+      margin-bottom: var(--site-card-gap);
     }
     .p3-newsdesk-filter-label + .p3-newsdesk-chips-row {
-      margin-bottom: 14px;
+      margin-bottom: var(--site-content-gap-sm);
     }
     .p3-newsdesk-chips-row {
       display: flex;
       flex-wrap: wrap;
-      gap: 6px;
+      gap: var(--site-chip-gap);
     }
     .p3-chip-cat { font-size: 11.5px; }
     /* Overflow categories hidden by default; revealed when parent is expanded */
@@ -991,16 +991,16 @@ const newsItems = sorted.slice(0, 100).map((item) => ({
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 10px;
-      margin-top: 12px;
-      padding-top: 12px;
+      gap: var(--site-card-gap);
+      margin-top: var(--site-card-gap);
+      padding-top: var(--site-card-gap);
       border-top: 1px dashed var(--p3-line);
       font-size: 11.5px;
     }
     .p3-newsdesk-tool-dropdown {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: var(--site-chip-gap);
     }
     .p3-newsdesk-tool-label {
       font-size: 11px;
@@ -1049,9 +1049,9 @@ const newsItems = sorted.slice(0, 100).map((item) => ({
       display: flex;
       align-items: end;
       justify-content: space-between;
-      gap: 16px;
-      margin: 24px 0 14px;
-      padding-bottom: 12px;
+      gap: var(--site-content-gap);
+      margin: var(--site-content-gap) 0 var(--site-card-gap);
+      padding-bottom: var(--site-card-gap);
       border-bottom: 1px solid var(--p3-line);
     }
     .p3-newsdesk-list-head h2 {
@@ -1089,7 +1089,7 @@ const newsItems = sorted.slice(0, 100).map((item) => ({
       margin: 0;
       display: grid;
       grid-template-columns: 1fr;
-      gap: 12px;
+      gap: var(--site-grid-gap);
     }
     @media (min-width: 700px) {
       .p3-newsdesk-grid { grid-template-columns: repeat(2, 1fr); }
@@ -1098,7 +1098,7 @@ const newsItems = sorted.slice(0, 100).map((item) => ({
       display: flex;
       flex-direction: column;
       height: 100%;
-      border-radius: 12px;
+      border-radius: var(--site-radius-card);
       overflow: hidden;
     }
     .p3-newsdesk-card.home-surface-card:hover {
@@ -1122,16 +1122,16 @@ const newsItems = sorted.slice(0, 100).map((item) => ({
       filter: saturate(1.05);
     }
     .p3-newsdesk-card-body {
-      padding: 16px 16px 18px;
+      padding: var(--site-card-padding);
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: var(--site-card-gap);
       flex: 1;
     }
     .p3-newsdesk-card-meta {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: var(--site-card-gap);
     }
     .p3-newsdesk-card-date { font-size: 11px; color: var(--p3-subtle); }
     /* Title exists for a11y, SEO, and image-fails-to-load fallback, but
@@ -1179,8 +1179,8 @@ const newsItems = sorted.slice(0, 100).map((item) => ({
     .p3-newsdesk-card-affect-more { color: var(--p3-subtle); }
 
     .p3-newsdesk-empty {
-      padding: 24px;
-      border-radius: 8px;
+      padding: var(--site-card-padding);
+      border-radius: var(--site-radius-card);
       border: 1px dashed var(--p3-line);
       text-align: center;
       font-size: 13px;
@@ -1194,14 +1194,14 @@ const newsItems = sorted.slice(0, 100).map((item) => ({
     .p3-newsdesk-aside {
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: var(--site-grid-gap);
       min-width: 0;
     }
     @media (min-width: 1000px) {
       .p3-newsdesk-aside { position: sticky; top: 80px; }
     }
     .p3-newsdesk-aside-card.home-surface-card {
-      padding: 18px 18px 16px;
+      padding: var(--site-card-padding);
     }
     .p3-newsdesk-aside-card.home-surface-card:hover {
       transform: none;
@@ -1260,9 +1260,9 @@ const newsItems = sorted.slice(0, 100).map((item) => ({
       display: grid;
       grid-template-columns: 18px 28px 1fr auto;
       align-items: center;
-      gap: 10px;
-      padding: 8px 10px;
-      border-radius: 12px;
+      gap: var(--site-card-gap);
+      padding: var(--site-card-gap);
+      border-radius: var(--site-radius-card);
       text-decoration: none;
       color: inherit;
     }
@@ -1300,7 +1300,7 @@ const newsItems = sorted.slice(0, 100).map((item) => ({
     .p3-newsdesk-mover-sub {
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: var(--site-chip-gap);
       font-size: 10.5px;
       color: var(--p3-subtle);
     }

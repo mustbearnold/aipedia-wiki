@@ -13,6 +13,7 @@ import ShareButtons from '../components/ShareButtons.astro';
 import FAQAccordionScript from '../components/FAQAccordionScript.astro';
 import FeedbackForm from '../components/FeedbackForm.astro';
 import ToolLogo from '../components/ToolLogo.astro';
+import CommercialCTA from '../components/CommercialCTA.astro';
 
 interface ToolData {
   slug: string;
@@ -23,9 +24,27 @@ interface ToolData {
   price_range?: string;
   pricing_model?: string;
   status?: string;
-  affiliate?: { link?: string | null } | null;
+  affiliate?: { link?: string | null; network?: string | null } | null;
   scores?: { utility?: number; value?: number; moat?: number; longevity?: number };
+  facts?: Record<string, {
+    value?: string;
+    source?: string;
+    source_label?: string;
+    verified_at?: string | Date;
+    note?: string;
+    status?: string;
+  } | string | undefined>;
+  best_for?: string[];
+  not_best_for?: string[];
   tagline?: string;
+}
+
+interface GuidePickData {
+  tool: string;
+  label?: string;
+  plan?: string;
+  reason: string;
+  sources?: Array<{ label: string; url: string }>;
 }
 
 interface Props {
@@ -34,6 +53,11 @@ interface Props {
   description?: string;
   slug: string;
   tools: ToolData[];
+  guidePicks?: {
+    best_overall?: GuidePickData;
+    budget?: GuidePickData;
+    pro_team?: GuidePickData;
+  };
   headings?: Array<{ depth: number; slug: string; text: string }>;
   lastVerified?: string;
   readingMinutes?: number;
@@ -41,16 +65,12 @@ interface Props {
 
 const {
   title, seoTitle, description = '',
-  slug, tools, headings = [],
+  slug, tools, guidePicks, headings = [],
   lastVerified, readingMinutes = 0,
 } = Astro.props;
 
 const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
 
-function overallScore(t: ToolData): number {
-  const s = t.scores ?? {};
-  return Math.round((((s.utility ?? 0) + (s.value ?? 0) + (s.moat ?? 0) + (s.longevity ?? 0)) / 4) * 10) / 10;
-}
 function ctaLabel(t: ToolData): string {
   const model = (t.pricing_model ?? '').toLowerCase();
   const price = (t.price_range ?? '').toLowerCase();
@@ -60,16 +80,165 @@ function ctaLabel(t: ToolData): string {
   if (model === 'enterprise') return `Visit ${t.title}`;
   return `Get ${t.title}`;
 }
-function ctaHref(t: ToolData): string {
-  const affUrl = t.affiliate?.link;
-  return (affUrl && affUrl.length > 0 ? affUrl : t.url) ?? '#';
-}
-function ctaRel(t: ToolData): string {
-  const affUrl = t.affiliate?.link;
-  return affUrl && affUrl.length > 0 ? 'sponsored noopener' : 'noopener';
+
+function axisValue(t: ToolData, axis: 'utility' | 'value' | 'moat' | 'longevity'): number {
+  return t.scores?.[axis] ?? 0;
 }
 
-const rankedTools = [...tools].sort((a, b) => overallScore(b) - overallScore(a));
+function factValue(t: ToolData, key: string): string {
+  const fact = t.facts?.[key];
+  if (!fact) return '';
+  if (typeof fact === 'string') return fact.trim();
+  return String(fact.value ?? '').trim();
+}
+
+function compactText(value: string, limit = 112): string {
+  const cleaned = String(value ?? '').replace(/\s+/g, ' ').trim();
+  if (cleaned.length <= limit) return cleaned;
+  return `${cleaned.slice(0, limit - 1).replace(/\s+\S*$/, '')}...`;
+}
+
+function buyerBestFor(t: ToolData): string {
+  const listed = (t.best_for ?? []).map((item) => item.trim()).filter(Boolean);
+  if (listed[0]) return listed[0];
+  return factValue(t, 'best_for');
+}
+
+function bestForReason(t: ToolData): string {
+  const bestFor = buyerBestFor(t);
+  return bestFor ? `Best fit for ${bestFor}.` : '';
+}
+
+function pricingSignal(t: ToolData): string {
+  const bestTier = factValue(t, 'best_paid_tier');
+  if (bestTier && t.price_range) return `${t.price_range}. Best paid tier: ${bestTier}`;
+  if (bestTier) return `Best paid tier: ${bestTier}`;
+  if (t.price_range) return t.price_range;
+  if (t.pricing_model) return t.pricing_model.replace('-', ' ');
+  return '';
+}
+
+function minMonthlyPrice(t: ToolData): number | null {
+  const model = (t.pricing_model ?? '').toLowerCase();
+  const range = (t.price_range ?? '').toLowerCase();
+  if (model === 'free' || model === 'freemium' || /\bfree\b|\$0(?!\s*\(self|\s*\(self-host)/i.test(range)) return 0;
+  const prices = [...range.matchAll(/\$(\d+(?:\.\d+)?)/g)].map((match) => Number(match[1]));
+  const valid = prices.filter((price) => Number.isFinite(price));
+  if (valid.length === 0) return null;
+  return Math.min(...valid);
+}
+
+function budgetToolFor(list: ToolData[]): ToolData | null {
+  const priced = list
+    .map((tool) => ({ tool, price: minMonthlyPrice(tool), value: axisValue(tool, 'value') }))
+    .filter((item): item is { tool: ToolData; price: number; value: number } => item.price != null)
+    .sort((a, b) => {
+      if (a.price !== b.price) return a.price - b.price;
+      return b.value - a.value;
+    });
+  return priced[0]?.tool ?? null;
+}
+
+function proTeamToolFor(list: ToolData[]): ToolData | null {
+  const scored = list
+    .map((tool) => {
+      const text = `${tool.pricing_model ?? ''} ${tool.price_range ?? ''} ${factValue(tool, 'best_paid_tier')} ${(tool.best_for ?? []).join(' ')} ${buyerBestFor(tool)}`.toLowerCase();
+      const explicitTeamSignal = /\b(team|teams|business|enterprise|pro|agency|company|admin|sso|workspace)\b/.test(text);
+      const score = (axisValue(tool, 'utility') * 1.1) + axisValue(tool, 'moat') + axisValue(tool, 'longevity') + (explicitTeamSignal ? 2 : 0);
+      return { tool, score, explicitTeamSignal };
+    })
+    .filter((item) => item.score > 0)
+    .sort((a, b) => b.score - a.score);
+  return scored[0]?.tool ?? null;
+}
+
+const rankedTools = [...tools];
+const toolBySlug = new Map(rankedTools.map((tool) => [tool.slug, tool]));
+
+const bestOverallTool = rankedTools[0] ?? null;
+const bestBudgetTool = budgetToolFor(rankedTools) ?? bestOverallTool;
+const bestProTeamTool = proTeamToolFor(rankedTools) ?? rankedTools[1] ?? bestOverallTool;
+
+const pickSlots = [
+  {
+    key: 'best_overall',
+    fallbackLabel: 'Best overall',
+    placement: 'guide_decision_best_overall',
+    fallbackTool: bestOverallTool,
+    fallbackReason: (tool: ToolData) => tool.tagline || bestForReason(tool) || `${tool.title} is the first editorial pick for this guide.`,
+  },
+  {
+    key: 'budget',
+    fallbackLabel: 'Budget/free pick',
+    placement: 'guide_decision_budget',
+    fallbackTool: bestBudgetTool,
+    fallbackReason: (tool: ToolData) => pricingSignal(tool) || `${tool.title} has the clearest low-cost entry point in the current tool data.`,
+  },
+  {
+    key: 'pro_team',
+    fallbackLabel: 'Pro/team pick',
+    placement: 'guide_decision_pro_team',
+    fallbackTool: bestProTeamTool,
+    fallbackReason: (tool: ToolData) => (
+      factValue(tool, 'best_paid_tier')
+        ? `Best paid tier: ${factValue(tool, 'best_paid_tier')}`
+        : bestForReason(tool) || `${tool.title} has the strongest pro-workflow score signal in this guide.`
+    ),
+  },
+] satisfies Array<{
+  key: keyof NonNullable<Props['guidePicks']>;
+  fallbackLabel: string;
+  placement: string;
+  fallbackTool: ToolData | null;
+  fallbackReason: (tool: ToolData) => string;
+}>;
+
+const structuredDecisionCards = pickSlots
+  .map((slot) => {
+    const pick = guidePicks?.[slot.key];
+    if (!pick) return null;
+    const tool = toolBySlug.get(pick.tool);
+    if (!tool) return null;
+    return {
+      label: pick.label || slot.fallbackLabel,
+      tool,
+      placement: slot.placement,
+      reason: compactText(pick.reason || slot.fallbackReason(tool)),
+      plan: pick.plan,
+      sources: pick.sources ?? [],
+    };
+  })
+  .filter((card): card is { label: string; tool: ToolData; placement: string; reason: string; plan?: string; sources: Array<{ label: string; url: string }> } => Boolean(card));
+
+const fallbackDecisionCards = [
+  bestOverallTool && {
+    label: 'Best overall',
+    tool: bestOverallTool,
+    placement: 'guide_decision_best_overall',
+    reason: compactText(bestOverallTool.tagline || bestForReason(bestOverallTool) || `${bestOverallTool.title} is the first editorial pick for this guide.`),
+    sources: [],
+  },
+  bestBudgetTool && {
+    label: 'Budget/free pick',
+    tool: bestBudgetTool,
+    placement: 'guide_decision_budget',
+    reason: compactText(pricingSignal(bestBudgetTool) || `${bestBudgetTool.title} has the clearest low-cost entry point in the current tool data.`),
+    sources: [],
+  },
+  bestProTeamTool && {
+    label: 'Pro/team pick',
+    tool: bestProTeamTool,
+    placement: 'guide_decision_pro_team',
+    reason: compactText(
+      factValue(bestProTeamTool, 'best_paid_tier')
+        ? `Best paid tier: ${factValue(bestProTeamTool, 'best_paid_tier')}`
+        : bestForReason(bestProTeamTool) || `${bestProTeamTool.title} has the strongest pro-workflow score signal in this guide.`,
+    ),
+    sources: [],
+  },
+].filter((card): card is { label: string; tool: ToolData; placement: string; reason: string; plan?: string; sources: Array<{ label: string; url: string }> } => Boolean(card));
+
+const decisionCards = structuredDecisionCards.length > 0 ? structuredDecisionCards : fallbackDecisionCards;
 
 const breadcrumbLdItems = [
   { name: 'Home', url: siteBase },
@@ -89,7 +258,6 @@ const itemListItems = rankedTools.map((t) => ({
   name: t.title,
   slug: t.slug,
   category: t.category,
-  score: overallScore(t) || undefined,
   status: t.status,
 }));
 
@@ -152,14 +320,69 @@ const tocHeadings = (headings ?? []).filter((h) => h.depth === 2).map((h) => ({ 
       </div>
     </header>
 
+    {decisionCards.length > 0 && (
+      <section class="t2-guide-decisions" aria-labelledby="guide-decision-title">
+        <div class="t2-guide-decisions-head">
+          <div>
+            <div class="t2-cmp-brief-kicker">Start here</div>
+            <h2 id="guide-decision-title">Best picks by buyer type</h2>
+          </div>
+          <a href="#full-ranking" class="t2-guide-decisions-jump">See full ranking</a>
+        </div>
+        <div class="t2-guide-decision-grid">
+          {decisionCards.map((card) => {
+            const label = ctaLabel(card.tool);
+            return (
+              <article class="t2-guide-decision-card">
+                <div class="t2-guide-decision-label">{card.label}</div>
+                <div class="t2-guide-decision-tool">
+                  <ToolLogo slug={card.tool.slug} title={card.tool.title} size={34} />
+                  <div class="t2-guide-decision-main">
+                    <a href={`/tools/${card.tool.slug}/`} class="t2-guide-decision-title">{card.tool.title}</a>
+                    <div class="t2-guide-decision-meta">
+                      {card.plan && <span>{card.plan}</span>}
+                      {card.plan && (card.tool.price_range || card.tool.pricing_model) && <span aria-hidden="true">·</span>}
+                      {(card.tool.price_range || card.tool.pricing_model) && <span>{card.tool.price_range || card.tool.pricing_model}</span>}
+                    </div>
+                  </div>
+                </div>
+                <p>{card.reason}</p>
+                {card.sources.length > 0 && (
+                  <div class="t2-guide-decision-sources">
+                    {card.sources.length} official source{card.sources.length === 1 ? '' : 's'}
+                  </div>
+                )}
+                <CommercialCTA
+                  toolName={card.tool.title}
+                  toolSlug={card.tool.slug}
+                  canonicalUrl={card.tool.url}
+                  affiliateUrl={card.tool.affiliate?.link}
+                  affiliateProgram={card.tool.affiliate?.network}
+                  label={label}
+                  pricingModel={card.tool.pricing_model}
+                  priceRange={card.tool.price_range}
+                  pageType="guide"
+                  placement={card.placement}
+                  pageSlug={slug}
+                  categorySlug={card.tool.category}
+                  className="t2-cta t2-cta-primary t2-guide-decision-cta"
+                  wrapperClass="commercial-cta-stack t2-guide-decision-cta-stack"
+                  disclosureClass="commercial-cta-disclosure t2-guide-decision-disclosure"
+                  arrow="→"
+                  guideCtaMarker
+                />
+              </article>
+            );
+          })}
+        </div>
+      </section>
+    )}
+
     {rankedTools.length > 0 && (
-      <section class="t2-guide-picks" aria-label="Ranked picks">
+      <section id="full-ranking" class="t2-guide-picks" aria-label="Ranked picks">
         <p class="t2-verdict-heading">Ranked picks</p>
         <ol class="t2-guide-list">
           {rankedTools.map((t, i) => {
-            const score = overallScore(t);
-            const href = ctaHref(t);
-            const rel = ctaRel(t);
             const label = ctaLabel(t);
             const isTop = i === 0;
             return (
@@ -170,23 +393,23 @@ const tocHeadings = (headings ?? []).filter((h) => h.depth === 2).map((h) => ({ 
                   <a href={`/tools/${t.slug}/`} class="t2-guide-row-title">{t.title}</a>
                   {t.price_range && <div class="t2-guide-row-price">{t.price_range}</div>}
                 </div>
-                {score > 0 && (
-                  <span class="t2-guide-row-score tabular-nums">
-                    {score}<span class="t2-guide-row-score-slash">/10</span>
-                  </span>
-                )}
-                {href !== '#' && (
-                  <a
-                    href={href}
-                    target="_blank"
-                    rel={rel}
-                    class="t2-cta t2-cta-primary t2-guide-row-cta"
-                    data-guide-cta={t.slug}
-                  >
-                    {label}
-                    <span class="t2-cta-arrow" aria-hidden="true">→</span>
-                  </a>
-                )}
+                <CommercialCTA
+                  toolName={t.title}
+                  toolSlug={t.slug}
+                  canonicalUrl={t.url}
+                  affiliateUrl={t.affiliate?.link}
+                  affiliateProgram={t.affiliate?.network}
+                  label={label}
+                  pricingModel={t.pricing_model}
+                  priceRange={t.price_range}
+                  pageType="guide"
+                  placement={isTop ? 'guide_top_pick' : 'guide_ranked_pick'}
+                  pageSlug={slug}
+                  categorySlug={t.category}
+                  className="t2-cta t2-cta-primary t2-guide-row-cta"
+                  arrow="→"
+                  guideCtaMarker
+                />
               </li>
             );
           })}

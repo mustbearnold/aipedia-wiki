@@ -9,9 +9,9 @@
  * ===================================================================== */
 
 .compare-directory-page[data-home-page] .t2-compare-card {
-  gap: 12px;
-  padding: 13px;
-  border-radius: 12px;
+  gap: var(--site-card-gap);
+  padding: var(--site-card-padding);
+  border-radius: var(--site-radius-card);
   border: 1px solid var(--home-card-outline);
   background: var(--home-panel);
   color: var(--home-on-card);
@@ -24,8 +24,8 @@
 }
 
 .compare-directory-page[data-home-page] .t2-compare-card-featured {
-  padding: 13px;
-  border-radius: 12px;
+  padding: var(--site-card-padding);
+  border-radius: var(--site-radius-card);
   border: 1px solid var(--home-card-outline);
   background: var(--home-panel);
 }
@@ -36,11 +36,11 @@
 
 .compare-directory-page[data-home-page] .compare-featured-grid,
 .compare-directory-page[data-home-page] .t2-compare-grid-dense {
-  gap: 12px;
+  gap: var(--site-grid-gap);
 }
 
 .compare-directory-page[data-home-page] .compare-card-compact {
-  padding: 13px;
+  padding: var(--site-card-padding);
 }
 
 @media (hover: hover) {
@@ -128,7 +128,7 @@
 }
 
 .compare-directory-page[data-home-page] .compare-filter-premium .t2-compare-filter-input {
-  border-radius: 12px;
+  border-radius: var(--site-radius-control);
   border: 1px solid var(--home-card-outline);
   background: var(--home-input-bg);
   color: var(--home-text);
@@ -176,9 +176,9 @@
 }
 
 .comparison-detail-page .t2-vs-banner {
-  margin: 20px 0 28px;
-  padding: 24px 20px;
-  border-radius: 12px;
+  margin: var(--site-content-gap) 0 var(--site-section-gap);
+  padding: var(--site-card-padding);
+  border-radius: var(--site-radius-card);
   border: 1px solid var(--home-card-outline);
   background: var(--home-panel);
   -webkit-backdrop-filter: blur(12px) saturate(140%);
@@ -221,17 +221,17 @@
 }
 
 .comparison-detail-page .t2-cmp-cards {
-  gap: 12px;
-  margin-bottom: 36px;
+  gap: var(--site-grid-gap);
+  margin-bottom: var(--site-section-gap);
 }
 
 .comparison-detail-page .t2-cmp-card {
-  padding: 13px;
-  border-radius: 12px;
+  padding: var(--site-card-padding);
+  border-radius: var(--site-radius-card);
   border: 1px solid var(--home-card-outline);
   background: var(--home-panel);
   color: var(--home-on-card);
-  gap: 12px;
+  gap: var(--site-card-gap);
   -webkit-backdrop-filter: blur(12px) saturate(140%);
   backdrop-filter: blur(12px) saturate(140%);
   transition:
@@ -295,9 +295,51 @@
   border-color: rgba(249, 115, 22, 0.28);
 }
 
+.comparison-detail-page .t2-cmp-usecase {
+  margin-bottom: var(--site-section-gap);
+  border: 1px solid var(--home-card-outline);
+  border-radius: var(--site-radius-card);
+  background: var(--home-panel);
+  -webkit-backdrop-filter: blur(12px) saturate(140%);
+  backdrop-filter: blur(12px) saturate(140%);
+}
+
+.comparison-detail-page .t2-cmp-usecase-head h2 {
+  color: var(--home-heading);
+}
+
+.comparison-detail-page .t2-cmp-usecase-card {
+  border-color: var(--home-line);
+  background: var(--home-inner-panel);
+}
+
+.comparison-detail-page .t2-cmp-usecase-card.is-primary {
+  border-color: var(--home-card-outline-hover);
+  background: var(--home-panel-strong);
+}
+
+.comparison-detail-page .t2-cmp-usecase-label,
+.comparison-detail-page .t2-cmp-usecase p {
+  color: var(--home-muted);
+}
+
+.comparison-detail-page .t2-cmp-usecase-tool {
+  color: var(--home-on-card);
+}
+
+.comparison-detail-page .t2-cmp-usecase-tool:hover,
+.comparison-detail-page .t2-cmp-usecase-link {
+  color: var(--home-accent);
+}
+
+.comparison-detail-page .t2-cmp-usecase-link:hover {
+  color: var(--home-accent);
+  opacity: 0.92;
+}
+
 .comparison-detail-page .t2-cmp-brief-panel {
-  padding: 16px;
-  border-radius: 12px;
+  padding: var(--site-card-padding);
+  border-radius: var(--site-radius-card);
   border: 1px solid var(--home-card-outline);
   background: var(--home-panel);
   -webkit-backdrop-filter: blur(12px) saturate(140%);
@@ -375,10 +417,10 @@
 
 /* Canonical facts table (ComparisonFactTable): global so View Transitions + all comparisons keep `--home-*`. */
 .comparison-detail-page section.t2-facts {
-  margin: 1.25rem 0 2rem;
-  padding: 13px;
+  margin: var(--site-content-gap) 0 var(--site-section-gap);
+  padding: var(--site-card-padding);
   border: 1px solid var(--home-card-outline);
-  border-radius: 12px;
+  border-radius: var(--site-radius-card);
   background: var(--home-panel);
   box-shadow: none;
   color: var(--home-on-card);
@@ -392,9 +434,9 @@
 .comparison-detail-page .t2-facts-header {
   display: grid;
   grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
-  gap: 1rem;
+  gap: var(--site-content-gap);
   align-items: end;
-  margin-bottom: 13px;
+  margin-bottom: var(--site-content-gap);
 }
 
 .comparison-detail-page .t2-facts-kicker {
@@ -424,7 +466,7 @@
 .comparison-detail-page .t2-facts-table-wrap {
   overflow-x: auto;
   border: 1px solid var(--home-line);
-  border-radius: 14px;
+  border-radius: var(--site-radius-card);
   background: var(--home-inner-panel);
 }
 
@@ -437,7 +479,7 @@
 
 .comparison-detail-page .t2-facts-table th,
 .comparison-detail-page .t2-facts-table td {
-  padding: 12px 14px;
+  padding: var(--site-card-gap) var(--site-card-padding);
   border-bottom: 1px solid var(--home-line);
   text-align: left;
   vertical-align: top;

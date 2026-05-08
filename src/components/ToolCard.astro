@@ -105,9 +105,9 @@ const categoryLabel = category.replace('ai-', 'AI ').replace(/\b\w/g, (c) => c.t
 
 <a
   href={`/tools/${slug}/`}
-  class="tool-card block bg-[var(--bg-card)] border border-[var(--border)] rounded-xl p-3 hover:bg-[var(--bg-card-hover)] hover:border-[rgba(249, 115, 22,0.35)] transition-all duration-200 no-underline group"
+  class="tool-card block bg-[var(--bg-card)] border border-[var(--border)] rounded-[var(--site-radius-card)] p-[var(--site-card-padding)] hover:bg-[var(--bg-card-hover)] hover:border-[rgba(249, 115, 22,0.35)] transition-all duration-200 no-underline group"
 >
-  <div class="flex items-start gap-3">
+  <div class="flex items-start gap-[var(--site-card-gap)]">
     <ToolLogo slug={slug} title={title} size={36} className="shrink-0" />
     <div class="min-w-0 flex-1">
       <div class="flex items-center justify-between gap-2 mb-1">

@@ -58,7 +58,8 @@ for (const tool of tools) {
     if (source && !sourceId) factsWithSourceButNoSourceId.push({ ...item, source });
     if (sourceId && !sourceIds.has(sourceId)) unknownSourceIds.push({ ...item, source_id: sourceId });
     if (!String(fact.confidence ?? '').trim()) factsMissingConfidence.push(item);
-    if ((volatility === 'high' || HIGH_VOLATILITY_KEYS.has(key)) && !String(fact.next_review_at ?? '').trim()) {
+    const needsScheduledReview = volatility === 'high' || (!volatility && HIGH_VOLATILITY_KEYS.has(key));
+    if (needsScheduledReview && !String(fact.next_review_at ?? '').trim()) {
       highVolatilityMissingNextReview.push({ ...item, volatility: volatility || 'inferred-high' });
     }
   }

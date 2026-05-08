@@ -7,6 +7,37 @@ meta_description: "Cursor ($20/mo) is the best AI coding assistant in 2026. We c
 author: "aipedia.wiki Editorial"
 description: Cursor leads for most developers due to its integrated IDE experience, multi-model support, and codebase awareness at $20/mo.
 tools_mentioned: [cursor, claude-code, github-copilot, windsurf, devin]
+guide_picks:
+  best_overall:
+    tool: cursor
+    label: "Best overall"
+    plan: "Cursor Pro"
+    reason: "Best default for developers who want a VS Code-compatible AI IDE with inline editing, multi-file context, and model switching in one paid plan."
+    sources:
+      - label: "Cursor Pricing"
+        url: "https://cursor.com/pricing"
+      - label: "Cursor Features"
+        url: "https://cursor.com/features"
+  budget:
+    tool: github-copilot
+    label: "Budget/free pick"
+    plan: "Copilot Free or Individual"
+    reason: "Best low-friction choice for students, hobbyists, and developers who want AI autocomplete inside an existing GitHub and IDE workflow."
+    sources:
+      - label: "GitHub Copilot Pricing"
+        url: "https://github.com/features/copilot#pricing"
+      - label: "GitHub Copilot"
+        url: "https://github.com/features/copilot"
+  pro_team:
+    tool: claude-code
+    label: "Pro/team pick"
+    plan: "Claude Max or API usage"
+    reason: "Best fit for senior engineers handling multi-file refactors, debugging loops, migrations, and terminal-based agentic coding work."
+    sources:
+      - label: "Claude Code Documentation"
+        url: "https://docs.anthropic.com/en/docs/claude-code"
+      - label: "Anthropic Pricing"
+        url: "https://www.anthropic.com/pricing"
 last_updated: 2026-05-03
 last_verified: 2026-05-03
 update_frequency: monthly

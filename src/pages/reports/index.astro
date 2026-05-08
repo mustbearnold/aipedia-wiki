@@ -55,17 +55,17 @@ const hasSingleReport = sorted.length === 1;
   </section>
 
   {sorted.length === 0 && (
-    <div class="bg-[var(--bg-card)] border border-[var(--border)] rounded-xl p-6 text-sm text-[var(--text-muted)]">
+    <div class="bg-[var(--bg-card)] border border-[var(--border)] rounded-[var(--site-radius-card)] p-[var(--site-card-padding)] text-sm text-[var(--text-muted)]">
       The first report publishes in April 2026. Subscribe below to get it in your inbox.
     </div>
   )}
 
   {hasSingleReport ? (
-    <section class="mb-16">
+    <section class="mb-[var(--site-page-bottom)]">
       {sorted.map((r) => (
         <a
           href={`/reports/${r.slug}/`}
-          class="group grid gap-4 md:grid-cols-[minmax(0,0.38fr)_minmax(0,1fr)] rounded-xl border border-[var(--border)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] hover:border-[rgba(249,115,22,0.45)] p-5 no-underline transition-colors"
+          class="group grid gap-[var(--site-content-gap)] md:grid-cols-[minmax(0,0.38fr)_minmax(0,1fr)] rounded-[var(--site-radius-card)] border border-[var(--border)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] hover:border-[rgba(249,115,22,0.45)] p-[var(--site-card-padding)] no-underline transition-colors"
         >
           <div>
             <div class="text-[11px] font-semibold uppercase tracking-[0.12em] text-[var(--accent-primary)] mb-2">
@@ -85,11 +85,11 @@ const hasSingleReport = sorted.length === 1;
       ))}
     </section>
   ) : (
-    <section class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-16">
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-[var(--site-grid-gap)] mb-[var(--site-page-bottom)]">
       {sorted.map((r) => (
       <a
         href={`/reports/${r.slug}/`}
-        class="group block rounded-xl border border-[var(--border)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] hover:border-[rgba(249,115,22,0.45)] p-5 no-underline transition-colors"
+        class="group block rounded-[var(--site-radius-card)] border border-[var(--border)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] hover:border-[rgba(249,115,22,0.45)] p-[var(--site-card-padding)] no-underline transition-colors"
       >
         <div class="text-[11px] font-semibold uppercase tracking-[0.12em] text-[var(--accent-primary)] mb-2">
           {r.monthLabel}

@@ -35,7 +35,7 @@ function pillImpactClass(impact: string) {
   title="Trending in AI Tools — What's Changing Now — aipedia.wiki"
   description="Editorial analysis of major shifts in the AI tools landscape. Model launches, market consolidations, pricing wars, and category emergences."
 >
-  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+  <div class="site-content-frame">
     <Breadcrumb items={[{ label: 'Trending' }]} />
 
     <div class="trends-page-root">
@@ -54,7 +54,7 @@ function pillImpactClass(impact: string) {
         </p>
       </section>
 
-      <section class="trends-card-grid mb-16">
+      <section class="trends-card-grid mb-[var(--site-page-bottom)]">
         {sorted.map((t) => (
           <a
             href={`/trends/${t.slug}/`}
@@ -81,7 +81,7 @@ function pillImpactClass(impact: string) {
     .trends-card-grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 12px;
+      gap: var(--site-grid-gap);
     }
     @media (min-width: 768px) {
       .trends-card-grid {
@@ -90,7 +90,7 @@ function pillImpactClass(impact: string) {
     }
 
     .trends-page-root .trend-card-link {
-      padding: 13px;
+      padding: var(--site-card-padding);
     }
 
     /* Matches homepage `.home-news-severity` / chip language. */

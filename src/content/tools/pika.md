@@ -7,11 +7,11 @@ category: ai-video
 company: Pika Labs
 url: 'https://pika.art'
 pricing_model: freemium
-price_range: $0-$58/month
+price_range: "$0-$76/month billed yearly"
 status: active
 launched: 2023-11
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-08
+last_verified: 2026-05-08
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -71,9 +71,9 @@ facts:
     volatility: high
     confidence: high
 tags: [ai-video, text-to-video, image-to-video, video-generation, creative, short-video, pikaffects, pika-2-5]
-seo_title: 'Pika Labs: Features, Pricing & Review (April 2026)'
+seo_title: 'Pika Labs: Features, Pricing & Review (May 2026)'
 meta_description: >-
-  Pika Labs runs on Pika 2.5, with Pikaffects, Pikadditions, Pikaframes, and scene extension. Free plan includes 150 credits. Pricing $0-$58/mo. Reviewed April 2026.
+  Pika Labs runs on Pika 2.5, with Pikaffects, Pikadditions, Pikaframes, and scene extension. Free Basic includes 80 monthly video credits; paid plans run up to Fancy at $76/mo billed yearly.
 author: aipedia.wiki Editorial
 best_for:
   - creative effects and Pikaffects
@@ -85,37 +85,37 @@ not_best_for:
   - API-driven production pipelines
   - single clips beyond Pikaframes' 20-25 second ceiling
 quick_answer: >-
-  Pika Labs runs on Pika 2.5 with Pikaffects, Pikadditions, and Pikaframes for creative-effects video. The free 150-credit tier is the easiest on-ramp in the category. Basic at $10/mo removes watermarks. Skip it for multi-shot narratives or API-driven pipelines.
+  Pika Labs runs on Pika 2.5 with Pikaffects, Pikadditions, and Pikaframes for creative-effects video. The free Basic tier is the easiest on-ramp in the category. Standard unlocks broader resolution access and watermark-free downloads. Skip it for multi-shot narratives or API-driven pipelines.
 price_history:
   - date: 2024-02-01
-    plan: "Basic"
-    price: "$10/mo"
+    plan: "Standard"
+    price: "$8/mo billed yearly"
     source: "https://pika.art/pricing"
     source_label: "Source"
     source_id: pika-pricing
-    note: "Basic plan entry point"
+    note: "Paid entry point on current pricing page"
   - date: 2026-04-17
-    plan: "Basic"
-    price: "$10/mo"
+    plan: "Standard"
+    price: "$8/mo billed yearly"
     source: "https://pika.art/pricing"
     source_label: "Source"
     source_id: pika-pricing
-    note: "Verified, unchanged"
+    note: "Official page lists yearly billing; monthly toggle may differ"
 ---
 
 # Pika Labs
 
 Pika Labs' AI video generator. Pika 2.5 (released early 2026) is the current flagship, covering text-to-video, image-to-video, and creative effects through Pikaffects, Pikadditions, and Pikaframes.
 
-Pricing runs $0 to $58/month. The free tier includes 150 credits monthly.
+Pricing runs from a free Basic tier to Fancy at $76/month when billed yearly. The free tier includes 80 monthly video credits.
 
 ## System Verdict
 
-> **Pick Pika if creative effects and fast social-clip turnaround outrank raw cinematic fidelity.** Pikaffects (melt, explode, cake-ify, squish) and Pikadditions (insert objects or characters into existing video) have no direct equivalent in [Runway](/tools/runway/), [Kling](/tools/kling/), or [Veo](/tools/veo/). Basic at $10/mo kills the watermark and unlocks HD output.
+> **Pick Pika if creative effects and fast social-clip turnaround outrank raw cinematic fidelity.** Pikaffects (melt, explode, cake-ify, squish) and Pikadditions (insert objects or characters into existing video) have no direct equivalent in [Runway](/tools/runway/), [Kling](/tools/kling/), or [Veo](/tools/veo/). Standard is the paid entry point for broader resolution access and watermark-free downloads.
 >
-> **Skip it for multi-shot narratives, API-driven pipelines, or benchmark-topping raw quality.** [Runway](/tools/runway/) Gen-4.5 and [Kling](/tools/kling/) 3.0 beat Pika on consistency across sequences. [Seedance](/tools/seedance/) 2.0 leads current ELO benchmarks. Pika is a creative-effects specialist, not a production pipeline.
+> **Skip it for multi-shot narratives, API-driven pipelines, or benchmark-topping raw quality.** [Runway](/tools/runway/) and [Kling](/tools/kling/) are better comparison points for production consistency. Treat Seedance-style third-party routes as research targets until the exact official provider, commercial rights, pricing, and availability are verified.
 >
-> **Who pays which tier:** Free $0 for evaluation, Basic $10/mo for most social creators, Pro $58/mo for lip sync, extend, and 2,500 credits, Enterprise custom for API access and team accounts.
+> **Who pays which tier:** Free Basic for evaluation, Standard for most social creators, Pro for faster/heavier creative work, Fancy for the largest listed credit allowance, Enterprise/custom routes for API or team needs.
 
 ## Key Facts
 
@@ -125,12 +125,12 @@ Pricing runs $0 to $58/month. The free tier includes 150 credits monthly.
 | **Signature features** | Pikaffects · Pikadditions · Pikaframes · scene extension · integrated sound effects |
 | **Base clip length** | 3 to 5 seconds |
 | **Extended clip length** | Up to 20-25 seconds via Pikaframes |
-| **Free tier** | 150 credits/month · watermarked · standard quality |
-| **Paid tiers** | Basic $10 · Pro $58 · Enterprise custom |
+| **Free tier** | 80 monthly video credits · Pika 2.5 at 480p only |
+| **Paid tiers** | Standard $8 billed yearly · Pro $28 billed yearly · Fancy $76 billed yearly |
 | **API access** | Enterprise tier only |
 | **Company** | Pika Labs |
 
-Every data point above was verified against vendor documentation on 2026-04-17. See Sources.
+Pricing was refreshed against the official Pika pricing page on 2026-05-08. Feature notes were last checked against Pika's official site and Pika 2.5 release notes on 2026-04-17. See Sources.
 
 ## What it actually is
 
@@ -151,7 +151,7 @@ The moat is creative effects. Pika is the only major generator with a production
 ## When to pick something else
 
 - **Multi-shot narrative consistency:** [Runway](/tools/runway/) Gen-4.5 or [Kling](/tools/kling/) 3.0.
-- **Top current ELO benchmark quality:** [Seedance](/tools/seedance/) 2.0 leads text-to-video and image-to-video.
+- **Unverified model-route experiments:** evaluate Seedance only through an official ByteDance or BytePlus route before using it as a buyer decision.
 - **Native audio inside cinematic output:** [Veo](/tools/veo/) 3.1 or [Kling](/tools/kling/) 3.0.
 - **Explicit camera-movement control:** [Luma](/tools/luma/) Dream Machine.
 - **API-driven production pipelines:** [Runway](/tools/runway/). Pika's API is Enterprise-gated.
@@ -159,34 +159,34 @@ The moat is creative effects. Pika is the only major generator with a production
 
 ## Pricing
 
-Subscription pricing via [pika.art/pricing](https://pika.art/pricing). Basic is the standard paid entry point.
+Subscription pricing via [pika.art/pricing](https://pika.art/pricing). Standard is the standard paid entry point.
 
 | Plan | Price | Credits/Month | Key Limits |
 |------|-------|---------------|-----------|
-| Free | $0 | 150 | Watermark · standard quality · base 3-5s clips |
-| Basic | $10/mo | 700 | No watermark · HD · priority queue |
-| Pro | $58/mo | 2,500 | Lip sync · clip extend · Pikaframes 20-25s |
-| Enterprise | Custom | Unlimited | API access · team accounts · SLA |
+| Basic | $0 | 80 | Pika 2.5 at 480p only · limited monthly credits |
+| Standard | $8/mo billed yearly | 700 | All resolutions · fast generations · watermark-free downloads |
+| Pro | $28/mo billed yearly | 2,300 | Faster generations · larger credit allowance |
+| Fancy | $76/mo billed yearly | 6,000 | Fastest generations · largest listed credit allowance |
 
-*Prices verified 2026-04-17 via [pika.art/pricing](https://pika.art/pricing). Commercial rights apply on paid tiers.*
+*Prices verified 2026-05-08 via [pika.art/pricing](https://pika.art/pricing). VAT and monthly-billing prices may vary by country and billing toggle.*
 
 ## Against the alternatives
 
-| | Pika 2.5 | Runway Gen-4.5 | Kling 3.0 | Seedance 2.0 |
-|---|---|---|---|---|
-| **Creative effects library** | Strongest (Pikaffects, Pikadditions) | Limited | None | Limited |
-| **Single-clip length** | 20-25s via Pikaframes | Up to 30s | 15s | 15s multi-shot |
-| **Multi-shot consistency** | Mid | Strong | Strong | Strong |
-| **Native audio** | Integrated SFX | No | Yes | Yes, stereo |
-| **Public API** | Enterprise only | Full API | None | BytePlus beta |
-| **Free tier generosity** | 150 credits/mo | Limited | 66 credits/day (Kling 2.0 only) | 100 credits/day |
-| **Best viewed as** | Creative-effects specialist | Production pipeline leader | Quality-per-dollar leader | Current ELO leader |
+| | Pika 2.5 | Runway | Kling |
+|---|---|---|---|
+| **Creative effects library** | Strongest (Pikaffects, Pikadditions) | Limited | Limited |
+| **Single-clip length** | 20-25s via Pikaframes | Verify current model limits on Runway | Verify current model limits in Kling |
+| **Multi-shot consistency** | Mid | Stronger production workflow | Strong short-clip quality |
+| **Native audio** | Integrated SFX | Verify current model/tool support | Verify current model/tool support |
+| **Public API** | Enterprise/custom route | API available through Runway | Verify current availability |
+| **Free tier generosity** | 80 video credits/mo | Limited | Verify in app |
+| **Best viewed as** | Creative-effects specialist | Production pipeline leader | Quality-focused short-video alternative |
 
 ## Failure modes
 
 - **Base clips are short.** 3 to 5 seconds per generation. Longer outputs depend on Pikaframes (Pro) or scene extension, which stack credits.
 - **Consistency degrades across extensions.** Characters drift after multiple extend passes. Runway and Kling hold subject identity better.
-- **Credit burn on high-res output.** HD and long clips consume 3 to 5 credits each. Free-tier users exhaust 150 credits in short order.
+- **Credit burn on high-res output.** Higher-quality and longer clips consume more credits. Free-tier users can exhaust the 80 monthly video credits quickly.
 - **Queue waits on free tier.** Peak-hour generations wait 5 to 15 minutes.
 - **No native timeline editor.** Sequencing across clips happens in external tools.
 - **API is Enterprise-gated.** Solo developers and small teams cannot script Pika without a custom contract.
@@ -199,7 +199,7 @@ This page was produced by the aipedia.wiki editorial pipeline, an automated syst
 ## FAQ
 
 **Is Pika free?**
-Yes. The free plan provides 150 credits per month for roughly 30 to 75 standard clips. Outputs carry a watermark. Basic at $10/mo removes the watermark and increases credits to 700.
+Yes. The free Basic plan provides 80 monthly video credits. Standard is the first paid tier and lists 700 monthly video credits on the official pricing page.
 
 **What is the max clip length on Pika?**
 Base generations run 3 to 5 seconds. Pikaframes (Pro tier) extends single clips to 20-25 seconds. Scene extension chains additional frames beyond that.
@@ -214,12 +214,12 @@ A Pika 2.5 feature that inserts new objects or characters into existing video wi
 Pika leads on creative effects and free-tier generosity. Kling leads on raw motion quality, 4K output, and 15-second single clips. Pick by workflow, not by headline quality.
 
 **Does Pika have an API?**
-Yes, through the Enterprise tier only. Basic and Pro users access Pika through the web interface at pika.art.
+Yes, but treat API access as a separate/custom route. Standard and Pro users should expect to use Pika through the web interface at pika.art unless their account has explicit API access.
 
 ## Sources
 
 - [Pika Labs official site](https://pika.art) (verified 2026-04-17)
-- [Pika Pricing](https://pika.art/pricing) (verified 2026-04-17)
+- [Pika Pricing](https://pika.art/pricing) (verified 2026-05-08)
 - [Pika 2.5 release notes](https://pika.art/blog/pika-2-5) (verified 2026-04-17)
 
 ## Related

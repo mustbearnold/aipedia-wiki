@@ -1,11 +1,10 @@
 ---
+import CommercialCTA from './CommercialCTA.astro';
+
 /**
- * Affiliate CTA button.
- * Renders a "Try {tool}" or "Visit {tool}" button on tool pages.
- *
- * IMPORTANT: Per editorial policy, commission rates and affiliate network details
- * are NEVER shown to users. The `commission` prop is ignored. Affiliate relationships
- * are disclosed sitewide via the footer only.
+ * Legacy affiliate CTA adapter.
+ * Prefer CommercialCTA for new placements so disclosure and tracking stay
+ * consistent across money pages. Commission metadata is intentionally unused.
  */
 interface Props {
   title: string;
@@ -15,24 +14,20 @@ interface Props {
 }
 
 const { title, url, hasProgram } = Astro.props;
+const legacySlug = title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 ---
 
-{hasProgram ? (
-  <a
-    href={url}
-    target="_blank"
-    rel="noopener sponsored"
-    class="flex w-full items-center justify-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold bg-[var(--accent-primary)] text-[#0b0a14] no-underline hover:no-underline transition-all hover:brightness-110 shadow-[0_4px_14px_rgba(249, 115, 22,0.32)]"
-  >
-    Try {title} &rarr;
-  </a>
-) : (
-  <a
-    href={url}
-    target="_blank"
-    rel="noopener"
-    class="flex w-full items-center justify-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold text-[var(--text-secondary)] border border-[var(--border)] no-underline hover:no-underline hover:bg-[var(--bg-card-hover)] transition-colors"
-  >
-    Visit {title} &rarr;
-  </a>
-)}
+<CommercialCTA
+  toolName={title}
+  toolSlug={legacySlug}
+  canonicalUrl={hasProgram ? null : url}
+  affiliateUrl={hasProgram ? url : null}
+  label={hasProgram ? `Try ${title}` : `Visit ${title}`}
+  pageType="tool"
+  placement="legacy_affiliate_cta"
+  className={hasProgram
+    ? 'flex w-full items-center justify-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold bg-[var(--accent-primary)] text-[#0b0a14] no-underline hover:no-underline transition-all hover:brightness-110 shadow-[0_4px_14px_rgba(249, 115, 22,0.32)]'
+    : 'flex w-full items-center justify-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold text-[var(--text-secondary)] border border-[var(--border)] no-underline hover:no-underline hover:bg-[var(--bg-card-hover)] transition-colors'}
+  wrapperClass="commercial-cta-stack w-full"
+  arrow="→"
+/>

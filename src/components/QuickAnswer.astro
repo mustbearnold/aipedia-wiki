@@ -113,11 +113,11 @@ if (verifiedLabel) chips.push({ label: 'Verified', value: verifiedLabel, icon: '
 ---
 
 <aside
-  class="not-prose mb-6 rounded-2xl border border-[rgba(249, 115, 22,0.28)] bg-gradient-to-br from-[rgba(249, 115, 22,0.10)] via-[rgba(251, 146, 60,0.06)] to-transparent p-5 sm:p-6 shadow-[0_1px_0_rgba(255,255,255,0.04)_inset]"
+  class="not-prose mb-[var(--site-content-gap)] rounded-[var(--site-radius-card)] border border-[rgba(249, 115, 22,0.28)] bg-gradient-to-br from-[rgba(249, 115, 22,0.10)] via-[rgba(251, 146, 60,0.06)] to-transparent p-[var(--site-card-padding)] shadow-[0_1px_0_rgba(255,255,255,0.04)_inset]"
   aria-label="Quick answer"
   data-pagefind-meta="quick-answer"
 >
-  <div class="flex items-center gap-2 mb-4">
+  <div class="flex items-center gap-[var(--site-chip-gap)] mb-[var(--site-content-gap-sm)]">
     <span
       class="inline-flex items-center justify-center px-2 h-6 rounded-md text-[11px] font-bold uppercase tracking-wider text-[var(--accent-primary)] bg-[rgba(249, 115, 22,0.18)] border border-[rgba(249, 115, 22,0.35)]"
       aria-hidden="true">TL;DR</span>
@@ -127,7 +127,7 @@ if (verifiedLabel) chips.push({ label: 'Verified', value: verifiedLabel, icon: '
   </div>
 
   <!-- Stat chips strip — dense, scannable, renders before prose. -->
-  <div class="flex flex-wrap gap-1.5 mb-4">
+  <div class="flex flex-wrap gap-[var(--site-chip-gap)] mb-[var(--site-content-gap-sm)]">
     {chips.slice(1).map((c) => {
       const toneBg = c.tone === 'price'
         ? 'bg-[rgba(253, 186, 116,0.10)] border-[rgba(253, 186, 116,0.28)] text-[var(--accent-success)]'

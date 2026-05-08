@@ -39,14 +39,14 @@
     0 14px 34px -24px rgba(249, 115, 22, 0.24);
   --p3-logo-shadow: drop-shadow(0 9px 14px rgba(0, 0, 0, 0.28));
 
-  max-width: 1180px;
+  max-width: var(--site-container-max);
   margin: 0 auto;
   padding: 0 0 var(--site-page-bottom);
 }
 .p3-canvas.site-directory-canvas {
   max-width: none;
 }
-.p3-canvas-narrow { max-width: 900px; }
+.p3-canvas-narrow { max-width: var(--site-narrow-max); }
 .light .p3-canvas {
   --p3-line-strong: #d6d3d1;
   --p3-shadow-rest:
@@ -82,17 +82,17 @@
 .p3-hero {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 32px;
+  gap: var(--site-panel-gap);
   align-items: start;
   padding: var(--site-page-top) 0 var(--site-section-gap);
 }
 @media (min-width: 640px) {
-  .p3-hero { padding: var(--site-page-top) 0 var(--site-section-gap); gap: 40px; }
+  .p3-hero { padding: var(--site-page-top) 0 var(--site-section-gap); gap: var(--site-panel-gap); }
 }
 @media (min-width: 1024px) {
   .p3-hero {
     grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
-    gap: 36px 56px;
+    gap: var(--site-panel-gap);
     padding: var(--site-page-top) 0 var(--site-section-gap);
   }
 }

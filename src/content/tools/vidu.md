@@ -2,17 +2,17 @@
 type: tool
 slug: vidu
 title: Vidu
-tagline: Shengshu Technology's AI video generator. Vidu Q1 turns text and up to 7 reference images into 5-second 1080p clips with native 48kHz audio.
+tagline: "Shengshu Technology's AI video platform for reference-driven clips, Vidu Q3 story videos with native audio, and lower-cost Q2/Q1 API routes."
 category: ai-video
 company: Shengshu Technology
 url: https://www.vidu.com
 pricing_model: freemium
-price_range: "$0-$99/month"
+price_range: "Free app access plus paid plans; API credits are $0.005 each, with Q3 video routes from $0.02-$0.15 per second by model and resolution"
 status: active
 launched: 2024-07
-last_updated: 2026-04-18
-last_verified: 2026-04-18
-update_frequency: monthly
+last_updated: 2026-05-08
+last_verified: 2026-05-08
+update_frequency: weekly
 affiliate:
   has_program: false
   commission: null
@@ -21,162 +21,222 @@ affiliate:
   link: null
 scores:
   utility: 8
-  value: 9
+  value: 8
   moat: 6
   longevity: 7
 facts:
   best_for:
-    value: "Shengshu Technology's AI video generator. Vidu Q1 turns text and up to 7 reference images into 5-second 1080p clips with native 48kHz audio. Best for AI video generation, editing, avatars, or production workflows."
-    source: "https://www.vidu.com/pricing"
-    source_label: "Vidu pricing page"
-    source_id: vidu-official
-    verified_at: 2026-05-03
-    volatility: medium
-    confidence: medium
+    value: "Reference-driven AI video where character, product, scene, or style consistency matters across short clips."
+    source: "https://www.vidu.com/ai-reference-to-video"
+    source_label: "Vidu reference-to-video official page"
+    source_id: vidu-reference-to-video
+    verified_at: 2026-05-08
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-08
+  current_model_route:
+    value: "Vidu currently surfaces Q3, Q2, Q1, and Vidu 2.0 API routes; Q3 is the current story/native-audio route, while Q2 and Q1 remain useful for cheaper or legacy workflows."
+    source: "https://platform.vidu.com/docs/pricing"
+    source_label: "Vidu API pricing"
+    source_id: vidu-api-pricing
+    verified_at: 2026-05-08
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-08
+  q3_story_video:
+    value: "Vidu Q3 supports native audio and video in one generation, up to 16 seconds per generation, and is marketed for storytelling, camera control, and multi-speaker output."
+    source: "https://www.vidu.com/vidu-q3"
+    source_label: "Vidu Q3 official page"
+    source_id: vidu-q3-official
+    verified_at: 2026-05-08
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-08
+  reference_video:
+    value: "Vidu reference-to-video supports 1-7 references on multiple model routes, with Q3 models adding simultaneous audio/video options in the API docs."
+    source: "https://platform.vidu.com/docs/reference-to-video"
+    source_label: "Vidu API reference-to-video docs"
+    source_id: vidu-api-reference-to-video
+    verified_at: 2026-05-08
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-08
   pricing_anchor:
-    value: "Pricing should be checked on the current Vidu source before purchase; AIpedia has not promoted this page to a full Tier 1 pricing profile yet"
-    source: "https://www.vidu.com/pricing"
-    source_label: "Vidu pricing page"
-    source_id: vidu-official
-    verified_at: 2026-05-03
-    next_review_at: 2026-08-03
+    value: "Vidu API credits are $0.005 each. Q3 general video runs from $0.02-$0.15 per second by model, resolution, and peak/off-peak mode; Q1 1080p 5-second routes are listed at $0.40 peak or $0.20 off-peak."
+    source: "https://platform.vidu.com/docs/pricing"
+    source_label: "Vidu API pricing"
+    source_id: vidu-api-pricing
+    verified_at: 2026-05-08
     volatility: high
-    confidence: medium
+    confidence: high
+    next_review_at: 2026-06-08
   watch_out_for:
-    value: "Non-Tier-1 canonical profile: verify current pricing, usage limits, data policy, and integration details before procurement"
-    source: "https://www.vidu.com/pricing"
-    source_label: "Vidu pricing page"
-    source_id: vidu-official
-    verified_at: 2026-05-03
-    next_review_at: 2026-08-03
+    value: "Consumer app plans and API routes do not map cleanly to one another; verify current credits, commercial rights, model access, region, and audio defaults before paying."
+    source: "https://platform.vidu.com/docs/quick-start"
+    source_label: "Vidu API quickstart"
+    source_id: vidu-api-quickstart
+    verified_at: 2026-05-08
     volatility: high
-    confidence: medium
-tags: [video-generation, china-ai, short-video, ai-video, vidu]
-best_for:
-  - short reference-driven clips with consistent characters
-  - creators testing cheap 5-second 1080p video generation
-  - projects that benefit from native audio in the generated clip
-  - teams comparing Chinese generative video challengers against Runway and Pika
-not_best_for:
-  - long-form shots or sequence-level video production
-  - enterprise workflows that need deep admin controls and compliance review
-  - projects that need the strongest cinematic motion quality
-  - buyers who require mature Western support and procurement processes
-seo_title: "Vidu: Features, Pricing & Review (2026)"
-meta_description: "Vidu Q1 from Shengshu Technology generates 5-second 1080p clips with up to 7 reference images and native 48kHz audio. Free plan includes 800 monthly credits. Paid tiers start at $10/mo."
+    confidence: high
+    next_review_at: 2026-06-08
+tags: [video-generation, china-ai, short-video, ai-video, vidu, reference-to-video, native-audio]
+seo_title: "Vidu Review: Q3, Q2, Pricing & Best Uses (May 2026)"
+meta_description: "Vidu review updated May 8, 2026. See when to use Vidu Q3, Q2, and Q1, current API pricing, reference-to-video strengths, risks, and alternatives."
 author: "aipedia.wiki Editorial"
+best_for:
+  - reference-driven video with consistent characters, products, or scenes
+  - short story clips where native audio and visuals should land together
+  - creators comparing Chinese AI video challengers against Seedance, Kling, Runway, and Veo
+  - developers testing API-priced video routes before buying creator plans
+not_best_for:
+  - buyers who only want one simple plan recommendation without model-route complexity
+  - long-form production where a dedicated editing workspace matters
+  - teams needing mature Western procurement, admin, and compliance workflows
+  - avatar or presenter video workflows that need a business-video platform
 quick_answer: >-
-  Vidu is Shengshu Technology's AI video tool, and Q1 is the current flagship as of April 2026. Pick it for cheap reference-to-video work where character consistency across multiple images matters. Skip it for clips longer than 5 seconds or cinematic motion on par with Kling 3.0 or Veo 3.
+  Vidu is not just a Q1 tool anymore. As of May 8, 2026, treat Vidu Q3 as the current story/video-with-native-audio route, Q2 as a flexible lower-cost API route, and Q1 as a legacy 5-second 1080p option. Pick Vidu for reference-driven consistency and short narrative clips; compare Seedance, Kling, Veo, and Runway before calling it the best general video model.
 ---
 
 # Vidu
 
-Shengshu Technology's AI video platform. **Vidu Q1** is the current flagship, generating **5-second 1080p** clips from text or up to **7 reference images**. Native 48kHz audio generation ships in the same model, not a separate pipeline.
+Vidu is Shengshu Technology's AI video platform. It is strongest when you need reference-driven consistency: the same person, product, character, logo, scene, or style staying recognizable across generated clips.
 
-Alibaba led a $293M round into Shengshu on April 10, 2026, signaling the company is the leading Chinese challenger in generative video. Vidu's real edge is multi-reference character consistency, not cinematic motion length.
+The old buyer story was "Vidu Q1 makes 5-second reference videos." That is now too thin and stale. As of May 8, 2026, Vidu's current official surface includes **Vidu Q3**, **Vidu Q2**, **Vidu Q1**, and **Vidu 2.0** routes, with different durations, audio behavior, resolutions, and API prices.
 
 ## System Verdict
 
-> **Pick Vidu if you need cheap, character-consistent short clips from reference images.** Q1's 7-reference pipeline prevents the face-drift that breaks Runway and Pika outputs, and the $10/mo Standard tier undercuts nearly every Western competitor. The built-in audio generation skips a second tool for foley and background music on short-form content.
+> **Pick Vidu if reference consistency matters more than having the most famous Western brand.** Vidu's reference-to-video product is built around maintaining characters, objects, scenes, and visual style across short, story-driven clips.
 >
-> **Skip it if you need clips longer than 5 seconds or Sora-tier cinematic motion.** Q1 caps at 5 seconds per generation. For 10-25 second clips with synchronized dialogue, Kling 3.0 Pro wins. For photoreal cinematic motion, Veo 3 wins. For long-form narrative with extended durations, Kling 2.0 wins.
+> **Use Q3 for story clips with native audio.** Vidu's Q3 page markets native audio plus video in one generation, up to 16 seconds per generation, camera control, multilingual output, and multi-speaker support.
 >
-> **Who pays which tier:** Free plan covers casual testers with 800 monthly credits. Standard $10/mo fits hobbyists running 200 clips a month. Premium $35/mo fits short-form creators at 1,000 clips. Ultimate $99/mo fits agency teams needing unlimited videos.
-
-## Recent developments
-
-- **April 10, 2026:** [Alibaba leads $293M round in Shengshu Technology](/news/2026-04-10-alibaba-vidu-shengshu-funding/), Vidu's parent company. Major capital injection backing Vidu's competition with Kling, Runway, and Veo 3.
+> **Use Q2 or Q1 only when the route fits the job.** Q2 is useful for cheaper or flexible API work. Q1 remains a 5-second 1080p option, but it should no longer be framed as the whole Vidu story.
 
 ## Key Facts
 
-| | |
-|---|---|
-| **Flagship model** | Vidu Q1 (released April 21, 2025; current as of April 2026) |
-| **Current pricing** | Free · Standard $10/mo · Premium $35/mo · Ultimate $99/mo |
-| **Max duration** | 5 seconds per clip |
-| **Max resolution** | 1080p |
-| **Free tier** | Yes, 800 monthly credits plus unlimited off-peak mode |
-| **Reference images** | Up to 7 per generation (multi-subject consistency) |
-| **Native audio** | Yes, 48kHz sound effects, foley, and music |
-| **API access** | Yes, via platform.vidu.com |
-| **Parent company** | Shengshu Technology (Beijing) |
+- **Owner:** Shengshu Technology.
+- **Current buyer frame:** Q3 for story/native-audio clips, Q2 for flexible API-priced video, Q1 for legacy 5-second 1080p reference/image/text/start-end tasks.
+- **Reference strength:** the official reference-to-video page highlights 1-7 references, character consistency, product detail preservation, and scene continuity.
+- **Q3 duration:** up to 16 seconds per generation on the official Q3 page and API pricing docs.
+- **Q3 audio:** Q3 is marketed as native audio plus video in one generation. API docs also show Q3 routes with simultaneous audio/video options.
+- **API credit price:** $0.005 per credit.
+- **Q3 API pricing range:** general Q3 routes range from $0.02-$0.15 per second depending on model, resolution, and peak/off-peak pricing.
+- **Q1 API anchor:** Q1 1080p 5-second routes are listed at $0.40 peak or $0.20 off-peak.
+- **Market signal:** Shengshu drew a major April 10, 2026 funding round led by Alibaba, which is why Vidu should be treated as a serious Chinese AI video challenger rather than a disposable long-tail generator. See AiPedia's funding note: [Alibaba Leads $293M Round in Vidu Maker Shengshu Technology](/news/2026-04-10-alibaba-vidu-shengshu-funding/).
 
-## What it actually is
+## What It Actually Is
 
-A browser-based image-to-video and text-to-video generator built around the Q1 diffusion model. The interface accepts text prompts, one to seven reference images, or both, and produces a 1080p 5-second clip.
+Vidu is a browser product plus an API platform. The app is for creators who want reference-to-video, image-to-video, text-to-video, sound effects, templates, and quick publishing. The API platform is for teams that need priced routes, task status, credits, and repeatable integration.
 
-The "First-to-Last Frame" pipeline accepts a starting and ending image and interpolates motion between them. That makes Q1 noticeably better than Runway or Pika for character-consistency work, which is the only job Q1 is clearly best in class at.
+The important current-date correction is that **Vidu Q1 is not the only current model route**. Vidu Q3 is now the more important buyer signal for story video with native audio. Vidu Q2 and Q1 still matter for pricing, lower-cost generation, and compatibility, but they should not be used to describe all of Vidu.
 
-The AI Sound Effects feature generates up to 10 seconds of layered 48kHz audio from text prompts, with timestamp commands for precise cueing. No other major generator ships native high-quality audio at this price.
+## Which Vidu Route To Test
 
-## When to pick Vidu
+**Test Vidu Q3 first if:**
 
-- **Character-consistent shorts from reference images.** The 7-reference pipeline holds faces and outfits across generations better than Runway Gen-4 or Pika 2.x.
-- **Budget short-form content pipelines.** Standard at $10/mo is the cheapest credible video plan from any major vendor.
-- **Projects needing native audio.** Foley and music generation in the same model removes the need for ElevenLabs or Suno on short clips.
-- **Multi-subject scene composition.** Up to 7 references lets you lock multiple characters or props into one shot without a second compositing pass.
+- you want a complete short clip with visuals, dialogue or voiceover, sound effects, and music in one generation;
+- you need up to 16 seconds in one run;
+- camera timing and story rhythm matter;
+- you are making comic drama, short-form series, narrative ads, or multi-speaker clips.
 
-## When to pick something else
+**Test Vidu reference-to-video if:**
 
-- **For clips longer than 5 seconds:** [Kling](/tools/kling/) or [Veo](/tools/veo/). Q1 caps hard at 5 seconds.
-- **For cinematic photoreal motion:** [Veo](/tools/veo/) or [Runway](/tools/runway/). Q1's motion model is functional, not cinematic.
-- **For synchronized dialogue and character speech:** [Hailuo](/tools/hailuo/) or [Kling](/tools/kling/). Vidu's audio is foley and music, not lip-synced speech.
-- **For the current open-weights state of the art:** [Wan](/tools/wan/) or [Hailuo](/tools/hailuo/). Vidu is closed-source.
+- character consistency is the job;
+- product details, logos, outfits, or props must stay stable;
+- you are making ads, AI influencer content, IP animation, or multi-scene social clips;
+- you want to upload multiple references rather than rely on a prompt alone.
 
-## Pricing
+**Test Q2 or Q1 if:**
 
-| Plan | Price | What you get | Who's it for |
-|---|---|---|---|
-| Free | $0 | 800 monthly credits, ~200 videos, unlimited off-peak mode | Casual testers |
-| Standard | $10/mo ($96/yr) | 800 credits, up to 200 videos, faster generation | Hobbyists |
-| Premium | $35/mo ($336/yr) | 4,000 credits, up to 1,000 videos, commercial license | Short-form creators |
-| Ultimate | $99/mo ($948/yr) | 8,000 credits, unlimited videos, priority queue | Agency teams |
+- you need a cheaper API route;
+- you are comparing peak and off-peak pricing;
+- you only need a short 5-second or simple 1080p generation;
+- your workflow already depends on an older Vidu model route.
 
-Prices verified 2026-04-18 via the [Vidu pricing page](https://www.vidu.com/pricing) and [Flowith pricing breakdown](https://flowith.io/blog/vidu-pricing-2026-free-vs-pro-vs-enterprise-cost/).
+## When To Pick Vidu
 
-Credits scale with quality tier: higher settings consume 1.5 to 2.5x more credits per generation. API pricing is published separately at [platform.vidu.com](https://platform.vidu.com/pricing) on a per-generation basis.
+- **Character-consistent shorts:** Vidu is one of the better options to test when a face, outfit, product, or visual style must stay consistent.
+- **Narrative clips with audio:** Q3 is built around native audio and video landing together, which reduces separate sound assembly.
+- **Reference-heavy ad concepts:** The reference workflow fits products, mascots, brand worlds, and storyboards.
+- **API price testing:** Vidu's API docs expose credits, pricing, off-peak rules, and route differences clearly enough to model real workloads.
+- **Alternative testing:** It belongs in every serious AI video comparison next to Seedance, Kling, Veo, Runway, Hailuo, and Wan.
 
-## Against the alternatives
+## When To Pick Something Else
 
-| | Vidu Q1 | Kling 3.0 | Runway Gen-4 | Kling 2.0 |
-|---|---|---|---|---|
-| **Entry price** | $10/mo | $20/mo (via ChatGPT Plus) | $15/mo | $10/mo |
-| **Max duration** | 5s | 25s (Pro) | 10s | 10s |
-| **Max resolution** | 1080p | 1080p (Pro) | 4K | 1080p |
-| **Reference images** | Up to 7 | 1 | 1-2 | 1-4 |
-| **Native audio** | Yes (48kHz) | Yes (dialogue sync) | No | No |
-| **Best for** | Budget character-consistent shorts | Longer cinematic clips with speech | 4K polish | Long-form physical realism |
+- **Best raw frontier output:** Compare [Seedance](/tools/seedance/), [Kling](/tools/kling/), and [Veo](/tools/veo/) first.
+- **Editing workspace:** [Runway](/tools/runway/) is stronger if you need a production environment, not just generation.
+- **Open weights and self-hosting:** [Wan](/tools/wan/) is the better control route.
+- **Avatar or presenter video:** [HeyGen](/tools/heygen/), [Synthesia](/tools/synthesia/), and [Tavus](/tools/tavus/) fit business avatar workflows better.
+- **Enterprise procurement:** Teams with strict data residency, vendor review, or admin requirements should complete a compliance review before standardizing on Vidu.
 
-## Failure modes
+## Pricing And Buying Advice
 
-- **5-second hard cap.** Q1 cannot produce longer single clips. Stitching multiple generations introduces motion discontinuities.
-- **Motion realism gap.** Q1 holds subjects consistent but its motion model trails Kling 3.0 and Veo 3 on complex physics and dynamic camera work.
-- **No lip-synced dialogue.** The audio generator handles foley and music, not synchronized character speech. Workflows needing dialogue need a second tool.
-- **China-hosted infrastructure.** Some enterprise users have data-residency requirements that rule Vidu out regardless of output quality.
-- **Pricing page localization lag.** English-language pricing sometimes shows "Loading pricing plans" on first visit. Refresh or visit from a US IP resolves it.
-- **Fast model iteration.** Shengshu ships new Q-series variants frequently. Plans and limits tied to specific model versions can shift between sessions.
+Vidu has two different buyer surfaces: the consumer web app and the API platform. Do not assume a consumer plan, app credit allowance, and API route have the same economics.
+
+On May 8, 2026, Vidu's API docs list credits at **$0.005 each**. The same docs list Q3 and Q2 pricing by model, route, resolution, duration, and peak/off-peak state.
+
+For quick planning:
+
+- **Q3-pro general video:** 540p at $0.05/sec, 720p at $0.125/sec, and 1080p at $0.15/sec.
+- **Q3-turbo general video:** 540p at $0.04/sec, 720p at $0.06/sec, and 1080p at $0.07/sec, with lower off-peak prices.
+- **Q3 reference-to-video:** Q3-turbo starts at $0.025/sec for 540p and $0.065/sec for 1080p; Q3-pro runs up to $0.125/sec for 1080p.
+- **Q2 examples:** Q2 1080p text-to-video starts at $0.10 plus $0.05/sec, while Q2 1080p reference-to-video starts at $0.375 plus $0.05/sec.
+- **Q1:** 1080p 5-second text, image, start/end, and reference routes are listed at $0.40 peak or $0.20 off-peak.
+
+That API detail is useful, but creators should still verify consumer app pricing and commercial rights in the current account flow before paying.
+
+## Vidu Vs Current Alternatives
+
+**Vidu vs Seedance:** Seedance is the better first test for general frontier creator-video output. Vidu is the better test when reference consistency and native audio/story clips are the job.
+
+**Vidu vs Kling:** Kling should be tested first for many cinematic and prompt-adherence workflows. Vidu may win when you have multiple references and need continuity across characters, products, or scenes.
+
+**Vidu vs Veo:** Veo is the Google ecosystem route and often the higher-profile raw-generation test. Vidu is worth testing when you want a more explicit reference-to-video workflow.
+
+**Vidu vs Runway:** Runway is a full creative workspace. Vidu is more directly a generation and reference-consistency platform.
+
+**Vidu vs Hailuo:** Hailuo is the MiniMax short-video value route. Vidu is more compelling when reference continuity and Q3 native-audio story clips are the deciding factors.
+
+## Failure Modes
+
+- **Model-route confusion:** Q3, Q2, Q1, and Vidu 2.0 have different durations, audio defaults, capabilities, and pricing.
+- **Consumer/API mismatch:** A creator plan may not price the same way as API credits, and the same model names can show up in different workflows.
+- **Reference setup work:** Vidu's strength depends on good references. Weak or inconsistent inputs reduce the benefit.
+- **Quality is still prompt-dependent:** Reference consistency does not guarantee perfect motion, hands, physics, dialogue timing, or camera execution.
+- **Compliance review:** Shengshu Technology is a China-based provider, so some buyers need legal, regional, and data review.
+- **Fast-moving docs:** Vidu is changing quickly. Re-check model routes and pricing before publishing budget recommendations.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-18 against the [Vidu pricing page](https://www.vidu.com/pricing), the [VentureBeat Q1 launch coverage](https://venturebeat.com/business/vidu-q1-a-new-generative-video-model-from-shengshu-technology-launches-with-aim-to-lower-barrier-to-vfx-industry), and [Bloomberg's reporting on the Alibaba funding round](https://www.bloomberg.com/news/articles/2026-04-10/alibaba-leads-300-million-bet-on-ai-video-generator-shengshu).
+AiPedia re-verified this page on **May 8, 2026** using Vidu's official Q3 page, official reference-to-video page, API quickstart, API pricing docs, and API reference-to-video docs. The score reflects buyer utility, value, moat, and longevity, with extra caution because Vidu's route naming and pricing are changing quickly.
 
 ## FAQ
 
-**Is Vidu free to use?**
-Yes. The free plan gives 800 monthly credits (about 200 short videos) plus unlimited generation in off-peak mode. Paid plans start at $10/month for the Standard tier with faster generation and a commercial-use license.
+**Is Vidu Q1 still the flagship?**
+No. Q1 still exists as a 5-second 1080p API route, but current Vidu positioning now includes Q3 for native-audio story video and Q2 for flexible lower-cost routes.
 
-**What is the maximum video length on Vidu Q1?**
-Q1 caps at 5 seconds per clip at 1080p resolution. For longer output, creators stitch multiple generations in post. Newer Q-series variants on partner platforms extend to 16 seconds, but that is not the main Q1 offering on vidu.com.
+**What is Vidu Q3 best for?**
+Short story clips where audio and visuals need to be generated together: dialogue, voiceover, sound effects, music, camera timing, and multi-speaker scenes.
 
-**How many reference images does Vidu support?**
-Up to 7 per generation. That is the highest multi-reference count among major video generators and the key reason Vidu wins on character-consistency work.
+**How many references can Vidu use?**
+Vidu's official reference-to-video material and API docs support up to 7 references on supported routes, though exact limits depend on model and input type.
 
-**Does Vidu generate sound?**
-Yes. The AI Sound Effects feature produces 48kHz foley, ambient audio, and background music up to 10 seconds long, with timestamp commands for cueing. It does not generate lip-synced character dialogue.
+**How much does Vidu API video cost?**
+API credits cost $0.005 each. Q3 general video ranges from $0.02-$0.15/sec depending on model, resolution, and off-peak pricing. Q1 1080p 5-second routes are listed at $0.40 peak or $0.20 off-peak.
 
-**Who owns Vidu?**
-Shengshu Technology, a Beijing-based AI company. Alibaba's cloud division led a $293M funding round on April 10, 2026, making Alibaba the largest external investor.
+**Should I use Vidu instead of Kling or Veo?**
+Use Vidu when reference consistency and native-audio story clips matter. For raw frontier quality, test Kling, Veo, and Seedance side by side before picking a winner.
+
+## Sources
+
+- [Vidu Q3 official page](https://www.vidu.com/vidu-q3)
+- [Vidu reference-to-video official page](https://www.vidu.com/ai-reference-to-video)
+- [Vidu API quickstart](https://platform.vidu.com/docs/quick-start)
+- [Vidu API pricing](https://platform.vidu.com/docs/pricing)
+- [Vidu API reference-to-video docs](https://platform.vidu.com/docs/reference-to-video)
+- [Vidu pricing page](https://www.vidu.com/pricing)
 
 ## Related
 
 - **Category:** [AI Video](/categories/ai-video/)
+- **Compare:** [Seedance](/tools/seedance/) · [Kling](/tools/kling/) · [Veo](/tools/veo/) · [Runway](/tools/runway/) · [Hailuo](/tools/hailuo/) · [Wan](/tools/wan/)
+- **Guide:** [Best AI Video Generator](/guides/best-ai-video-generator/)

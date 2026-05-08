@@ -48,11 +48,11 @@ const statStrip = [
   title="AI Companies Profiles — aipedia.wiki"
   description="Profiles of the companies behind the AI tools we review. Founded dates, funding, HQ, and product rollups for every major player."
 >
-  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+  <div class="site-content-frame">
     <Breadcrumb items={[{ label: 'Companies' }]} />
 
     <div class="companies-page-root pb-16">
-      <section class="idx-hero mb-10" data-pagefind-ignore>
+      <section class="idx-hero" data-pagefind-ignore>
         <div class="idx-eyebrow">
           <span class="idx-eyebrow-chip idx-eyebrow-accent">Company profiles</span>
           <span class="idx-eyebrow-chip"><span class="tabular-nums">{total}</span> compan{total === 1 ? 'y' : 'ies'}</span>
@@ -64,9 +64,9 @@ const statStrip = [
         </p>
       </section>
 
-      <section class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-8" aria-label="Company coverage stats">
+      <section class="grid grid-cols-1 sm:grid-cols-3 gap-[var(--site-grid-gap)] mb-[var(--site-content-gap)]" aria-label="Company coverage stats">
         {statStrip.map((stat) => (
-          <div class="home-surface-card p-4">
+          <div class="home-surface-card p-[var(--site-card-padding)]">
             <div class="text-2xl font-bold tabular-nums text-[var(--home-on-card)]">{stat.value}</div>
             <div class="mt-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-[var(--home-dim)]">
               {stat.label}
@@ -75,11 +75,11 @@ const statStrip = [
         ))}
       </section>
 
-      <section class="grid grid-cols-1 md:grid-cols-2 gap-3">
+      <section class="grid grid-cols-1 md:grid-cols-2 gap-[var(--site-grid-gap)]">
         {sorted.map((c) => (
           <a
             href={`/companies/${c.slug}/`}
-            class="home-surface-card group block p-5 no-underline"
+            class="home-surface-card group block p-[var(--site-card-padding)] no-underline"
           >
             <div class="flex items-start justify-between gap-3 mb-2">
               <h3 class="font-semibold text-[var(--home-on-card)] text-base leading-tight group-hover:text-[var(--home-accent)] transition-colors m-0">

@@ -28,14 +28,14 @@ const submitId = `email-capture-submit-${uid}`;
 const submitLabelId = `email-capture-submit-label-${uid}`;
 
 const containerClasses = {
-  hero: 'rounded-2xl border border-[rgba(249, 115, 22,0.28)] bg-gradient-to-br from-[rgba(249, 115, 22,0.10)] via-[rgba(251, 146, 60,0.06)] to-transparent p-6 sm:p-8',
-  inline: 'rounded-2xl border border-[var(--border)] bg-[var(--bg-card)] p-5 sm:p-6',
-  footer: 'rounded-2xl border border-[rgba(249, 115, 22,0.28)] bg-gradient-to-br from-[rgba(249, 115, 22,0.10)] via-[rgba(251, 146, 60,0.06)] to-transparent p-6 sm:p-8',
+  hero: 'rounded-[var(--site-radius-card)] border border-[rgba(249, 115, 22,0.28)] bg-gradient-to-br from-[rgba(249, 115, 22,0.10)] via-[rgba(251, 146, 60,0.06)] to-transparent p-[var(--site-card-padding)]',
+  inline: 'rounded-[var(--site-radius-card)] border border-[var(--border)] bg-[var(--bg-card)] p-[var(--site-card-padding)]',
+  footer: 'rounded-[var(--site-radius-card)] border border-[rgba(249, 115, 22,0.28)] bg-gradient-to-br from-[rgba(249, 115, 22,0.10)] via-[rgba(251, 146, 60,0.06)] to-transparent p-[var(--site-card-padding)]',
 }[variant];
 ---
 
 <section
-  class={`email-capture max-w-3xl mx-auto my-12 ${containerClasses}`}
+  class={`email-capture max-w-[var(--site-narrow-max)] mx-auto my-[var(--site-section-gap)] ${containerClasses}`}
   data-source={source}
 >
   <div class="mb-4">
@@ -50,7 +50,7 @@ const containerClasses = {
     </p>
   </div>
 
-  <form id={formId} class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
+  <form id={formId} class="flex flex-col sm:flex-row items-stretch sm:items-center gap-[var(--site-card-gap)]">
     <label for={inputId} class="sr-only">Email address</label>
     <input
       type="text"
@@ -68,7 +68,7 @@ const containerClasses = {
       autocomplete="email"
       inputmode="email"
       placeholder="you@example.com"
-      class="flex-1 min-w-0 rounded-lg border border-[var(--border)] bg-[var(--bg-base)] px-3 py-2.5 text-sm text-[var(--text-primary)] placeholder:text-[var(--text-muted)] focus:outline-none focus:ring-1 focus:ring-[var(--accent-primary)]"
+      class="flex-1 min-w-0 rounded-[var(--site-radius-control)] border border-[var(--border)] bg-[var(--bg-base)] px-3 py-2.5 text-sm text-[var(--text-primary)] placeholder:text-[var(--text-muted)] focus:outline-none focus:ring-1 focus:ring-[var(--accent-primary)]"
     />
     {turnstileSiteKey && (
       <div class="cf-turnstile shrink-0" data-sitekey={turnstileSiteKey} data-theme="dark" data-size="flexible"></div>
@@ -76,7 +76,7 @@ const containerClasses = {
     <button
       type="submit"
       id={submitId}
-      class="shrink-0 inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl font-semibold text-sm bg-[var(--accent-primary)] text-[#0b0a14] hover:brightness-110 transition-all shadow-[0_4px_14px_rgba(249, 115, 22,0.35)] hover:shadow-[0_6px_20px_rgba(249, 115, 22,0.45)] no-underline"
+      class="shrink-0 inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-[var(--site-radius-control)] font-semibold text-sm bg-[var(--accent-primary)] text-[#0b0a14] hover:brightness-110 transition-all shadow-[0_4px_14px_rgba(249, 115, 22,0.35)] hover:shadow-[0_6px_20px_rgba(249, 115, 22,0.45)] no-underline"
     >
       <span id={submitLabelId}>Subscribe</span>
       <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">

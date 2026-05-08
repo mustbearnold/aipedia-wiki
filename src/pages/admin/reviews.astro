@@ -7,18 +7,19 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 <BaseLayout
   title="Review Moderation — aipedia.wiki admin"
   description="Internal review moderation queue."
+  noindex={true}
 >
-  <div class="max-w-4xl mx-auto">
+  <div class="max-w-[var(--site-narrow-max)] mx-auto">
     <h1 class="text-2xl font-bold mb-1">Review Moderation</h1>
-    <p class="text-sm text-[var(--text-muted)] mb-6">Approve or reject user-submitted reviews. Basic-auth protected.</p>
+    <p class="text-sm text-[var(--text-muted)] mb-[var(--site-content-gap)]">Approve or reject user-submitted reviews. Basic-auth protected.</p>
 
-    <div class="flex gap-2 mb-4" data-admin-tabs>
-      <button type="button" class="px-3 py-1.5 rounded-lg text-sm font-semibold bg-[var(--accent-primary)] text-[#0b0a14]" data-admin-status="pending">Pending</button>
-      <button type="button" class="px-3 py-1.5 rounded-lg text-sm font-semibold border border-[var(--border)] text-[var(--text-secondary)]" data-admin-status="approved">Approved</button>
-      <button type="button" class="px-3 py-1.5 rounded-lg text-sm font-semibold border border-[var(--border)] text-[var(--text-secondary)]" data-admin-status="rejected">Rejected</button>
+    <div class="flex gap-[var(--site-chip-gap)] mb-[var(--site-content-gap-sm)]" data-admin-tabs>
+      <button type="button" class="px-3 py-1.5 rounded-[var(--site-radius-control)] text-sm font-semibold bg-[var(--accent-primary)] text-[#0b0a14]" data-admin-status="pending">Pending</button>
+      <button type="button" class="px-3 py-1.5 rounded-[var(--site-radius-control)] text-sm font-semibold border border-[var(--border)] text-[var(--text-secondary)]" data-admin-status="approved">Approved</button>
+      <button type="button" class="px-3 py-1.5 rounded-[var(--site-radius-control)] text-sm font-semibold border border-[var(--border)] text-[var(--text-secondary)]" data-admin-status="rejected">Rejected</button>
     </div>
 
-    <div class="space-y-3" data-admin-list>
+    <div class="space-y-[var(--site-card-gap)]" data-admin-list>
       <div class="text-sm text-[var(--text-muted)]">Loading…</div>
     </div>
   </div>
@@ -38,8 +39,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         tabs.forEach((t) => {
           const active = t.getAttribute('data-admin-status') === status;
           t.className = active
-            ? 'px-3 py-1.5 rounded-lg text-sm font-semibold bg-[var(--accent-primary)] text-[#0b0a14]'
-            : 'px-3 py-1.5 rounded-lg text-sm font-semibold border border-[var(--border)] text-[var(--text-secondary)]';
+            ? 'px-3 py-1.5 rounded-[var(--site-radius-control)] text-sm font-semibold bg-[var(--accent-primary)] text-[#0b0a14]'
+            : 'px-3 py-1.5 rounded-[var(--site-radius-control)] text-sm font-semibold border border-[var(--border)] text-[var(--text-secondary)]';
         });
         load();
       }
@@ -63,9 +64,9 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
             return;
           }
           listEl.innerHTML = reviews.map((r) => `
-            <article class="rounded-xl border border-[var(--border)] bg-[var(--bg-card)] p-4" data-review-id="${r.id}">
-              <div class="flex items-center justify-between gap-2 mb-2 flex-wrap">
-                <div class="flex items-center gap-2">
+            <article class="rounded-[var(--site-radius-card)] border border-[var(--border)] bg-[var(--bg-card)] p-[var(--site-card-padding)]" data-review-id="${r.id}">
+              <div class="flex items-center justify-between gap-[var(--site-chip-gap)] mb-[var(--site-chip-gap)] flex-wrap">
+                <div class="flex items-center gap-[var(--site-chip-gap)]">
                   <a href="/tools/${escapeHtml(r.tool_slug)}/" class="text-[12px] font-semibold text-[var(--accent-primary)] no-underline">${escapeHtml(r.tool_slug)}</a>
                   <span class="text-[var(--accent-warning)] text-sm">${'★'.repeat(r.rating)}${'☆'.repeat(5 - r.rating)}</span>
                   <span class="text-[14px] font-semibold">${escapeHtml(r.title)}</span>
@@ -74,11 +75,11 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
                   ${escapeHtml(r.author_name)} · spam: ${Number(r.spam_score || 0).toFixed(2)}
                 </div>
               </div>
-              <p class="text-[13px] whitespace-pre-wrap m-0 mb-3">${escapeHtml(r.body)}</p>
-              <div class="flex gap-2">
-                <button type="button" class="px-3 py-1 rounded text-[12px] font-semibold bg-[var(--accent-success)] text-[#0b0a14]" data-act="approve" data-id="${r.id}">Approve</button>
-                <button type="button" class="px-3 py-1 rounded text-[12px] font-semibold border border-[var(--border)] text-[var(--text-secondary)]" data-act="reject" data-id="${r.id}">Reject</button>
-                <button type="button" class="px-3 py-1 rounded text-[12px] font-semibold border border-[rgba(251, 146, 60,0.30)] text-[var(--accent-danger)]" data-act="delete" data-id="${r.id}">Delete</button>
+              <p class="text-[13px] whitespace-pre-wrap m-0 mb-[var(--site-card-gap)]">${escapeHtml(r.body)}</p>
+              <div class="flex gap-[var(--site-chip-gap)]">
+                <button type="button" class="px-3 py-1 rounded-[var(--site-radius-control)] text-[12px] font-semibold bg-[var(--accent-success)] text-[#0b0a14]" data-act="approve" data-id="${r.id}">Approve</button>
+                <button type="button" class="px-3 py-1 rounded-[var(--site-radius-control)] text-[12px] font-semibold border border-[var(--border)] text-[var(--text-secondary)]" data-act="reject" data-id="${r.id}">Reject</button>
+                <button type="button" class="px-3 py-1 rounded-[var(--site-radius-control)] text-[12px] font-semibold border border-[rgba(251, 146, 60,0.30)] text-[var(--accent-danger)]" data-act="delete" data-id="${r.id}">Delete</button>
               </div>
             </article>
           `).join('');

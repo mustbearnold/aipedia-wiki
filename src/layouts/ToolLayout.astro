@@ -18,7 +18,7 @@ import BreadcrumbLD from '../components/seo/BreadcrumbLD.astro';
 import SoftwareApplicationLD from '../components/seo/SoftwareApplicationLD.astro';
 import FAQPageLD from '../components/seo/FAQPageLD.astro';
 import ToolLogo from '../components/ToolLogo.astro';
-import ToolCTA from '../components/ToolCTA.astro';
+import CommercialCTA from '../components/CommercialCTA.astro';
 import StickyMobileCTA from '../components/StickyMobileCTA.astro';
 import GithubStats from '../components/GithubStats.astro';
 import ProsCons from '../components/ProsCons.astro';
@@ -176,6 +176,13 @@ function cleanSnippet(value: unknown, fallback = ''): string {
   return text.charAt(0).toUpperCase() + text.slice(1);
 }
 
+function factValue(key: string): string {
+  const fact = f.facts?.[key];
+  if (!fact) return '';
+  if (typeof fact === 'string') return fact.trim();
+  return String(fact.value ?? '').trim();
+}
+
 function signalTone(label: unknown, value?: unknown): 'positive' | 'negative' | 'neutral' {
   const text = `${label ?? ''} ${value ?? ''}`.toLowerCase();
   if (/\b(watch|avoid|not best|not ideal|limitation|risk|weak|caps?|ads?|no video|verify before buying)\b/.test(text)) {
@@ -194,6 +201,10 @@ const firstNotBestFor = Array.isArray(f.not_best_for) && f.not_best_for.length >
   ? cleanSnippet(f.not_best_for[0])
   : 'Narrow edge cases';
 const pricingGlance = cleanSnippet(f.price_range, f.pricing_model ? cleanSnippet(f.pricing_model) : 'Check pricing');
+const bestPlanGlance = cleanSnippet(
+  f.best_plan ?? f.plan_recommendation ?? factValue('best_paid_tier'),
+  pricingGlance
+);
 const modelLabels: Record<string, string> = {
   free: 'Free product',
   freemium: 'Free + paid plans',
@@ -204,7 +215,7 @@ const modelLabels: Record<string, string> = {
 const modelGlance = f.pricing_model ? modelLabels[f.pricing_model] ?? cleanSnippet(f.pricing_model) : 'Verified tool';
 const generatedHeroGlance = {
   items: [
-    { label: 'Model', value: modelGlance, detail: pricingGlance, tone: 'neutral' },
+    { label: 'Best plan', value: bestPlanGlance, detail: modelGlance, tone: 'positive' },
     { label: 'Best for', value: firstBestFor, detail: catLabel, tone: 'positive' },
     { label: 'Watch', value: firstNotBestFor, detail: 'Check fit before switching', tone: 'negative' },
   ],
@@ -216,7 +227,7 @@ const generatedDecisionBrief = {
   items: [
     { label: 'Use it for', value: firstBestFor, detail: catLabel ? `Best-fit ${catLabel.toLowerCase()} use case.` : '', tone: 'positive' },
     { label: 'Watch for', value: firstNotBestFor, detail: 'Not every workflow needs this tool.', tone: 'negative' },
-    { label: 'Pricing note', value: pricingGlance, detail: 'Verify limits before committing.' },
+    { label: 'Plan pick', value: bestPlanGlance, detail: 'Verify limits before committing.', tone: 'positive' },
   ],
 };
 const effectiveDecisionBrief = decisionBrief ?? (f.quick_answer ? generatedDecisionBrief : null);
@@ -417,16 +428,22 @@ const relatedComparisons = allComparisons
 
         <div class="t2-ctas" data-reveal style="--reveal-delay: 260ms">
           {f.url && (
-            <a
-              href={(affiliate?.link && affiliate.link.length > 0) ? affiliate.link : f.url}
-              target="_blank"
-              rel={affiliate?.link && affiliate.link.length > 0 ? 'noopener sponsored' : 'noopener'}
-              class="t2-cta t2-cta-primary"
-              aria-label={`${primaryCtaLabel} on the official site`}
-            >
-              {primaryCtaLabel}
-              <span class="t2-cta-arrow" aria-hidden="true">↗</span>
-            </a>
+            <CommercialCTA
+              toolName={f.title}
+              toolSlug={toolSlug}
+              canonicalUrl={f.url}
+              affiliateUrl={affiliate?.link}
+              affiliateProgram={affiliate?.network}
+              label={primaryCtaLabel}
+              pricingModel={f.pricing_model}
+              priceRange={f.price_range}
+              pageType="tool"
+              placement="tool_hero_primary"
+              pageSlug={toolSlug}
+              categorySlug={catSlug}
+              className="t2-cta t2-cta-primary"
+              toolCtaMarker
+            />
           )}
           <a href={`/compare/`} class="t2-cta t2-cta-secondary">
             Compare alternatives
@@ -554,6 +571,11 @@ const relatedComparisons = allComparisons
         <PostBodyEnhancements
           outboundUrl={(affiliate?.link && affiliate.link.length > 0 ? affiliate.link : (f.url ?? '#'))}
           isAffiliate={Boolean(affiliate?.link && affiliate.link.length > 0)}
+          toolSlug={toolSlug}
+          toolName={f.title}
+          pageType="tool"
+          priceRange={f.price_range}
+          affiliateProgram={affiliate?.network}
         />
 
         {showSupplementalSections && (
@@ -591,10 +613,14 @@ const relatedComparisons = allComparisons
     </div>
 <StickyMobileCTA
     name={f.title}
+    toolSlug={toolSlug}
     canonicalUrl={f.url}
     affiliateUrl={affiliate?.link}
+    affiliateProgram={affiliate?.network}
     pricingModel={f.pricing_model}
     priceRange={f.price_range}
+    pageSlug={toolSlug}
+    categorySlug={catSlug}
   />
 
   <script is:inline define:vars={{ toolSlug, toolTitle: f.title }}>

@@ -105,6 +105,12 @@ Before rolling it out, test the boring cases. Check whether your password manage
 
 Comet is compelling if Perplexity is already your answer engine. Before moving primary browsing over, check extension compatibility, bookmark/profile migration, admin controls, mobile sync, privacy settings, and whether the free tier's assistant limits match your workload.
 
+## Best plan recommendation
+
+Start with the free browser and treat paid Perplexity capacity as the upgrade lever, not as a reason to switch browsers immediately. Comet only earns the daily-driver slot if it reduces repeated search, source triage, summarization, and follow-up work compared with your current browser plus Perplexity in a tab. If the browser itself becomes another profile to maintain, keep Comet as a research-specific workspace.
+
+For students, analysts, writers, and founders, the right first test is a one-week source-heavy project: market research, literature review, vendor shortlisting, or trip planning with citations. For teams, the first test should include extension compatibility, SSO expectations, data-sharing comfort, and a clear policy for reviewing delegated actions before anything touches email, purchases, or account settings.
+
 ## Practical workflows
 
 - **Source-heavy research.** Ask a question, inspect cited sources, open the strongest pages, and keep follow-up questions tied to the current page.

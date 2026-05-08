@@ -2,17 +2,17 @@
 type: tool
 slug: seedance
 title: Seedance 2.0
-tagline: ByteDance's multimodal video model. Top ELO ranking on text-to-video and image-to-video, native stereo audio, public beta on BytePlus ModelArk.
+tagline: "ByteDance Seed's frontier multimodal audio-video model for text, image, audio, and video referenced generation."
 category: ai-video
 company: bytedance
-url: 'https://seedance.ai'
-pricing_model: freemium
-price_range: $0-$49.99/month
+url: "https://seed.bytedance.com/en/seedance2_0"
+pricing_model: paid
+price_range: "BytePlus API/resource packs; route-specific pricing"
 status: active
-launched: 2025-06
-last_updated: 2026-05-04
-last_verified: 2026-05-04
-update_frequency: monthly
+launched: 2026-02
+last_updated: 2026-05-08
+last_verified: 2026-05-08
+update_frequency: weekly
 affiliate:
   has_program: false
   commission: null
@@ -20,200 +20,190 @@ affiliate:
   network: null
   link: null
 scores:
-  utility: 9
-  value: 9
-  moat: 8
+  utility: 10
+  value: 8
+  moat: 9
   longevity: 8
 facts:
-  model_family:
-    value: "Seedance is ByteDance/Seedance AI video generation marketed for text-to-video and image-to-video creation, with BytePlus ModelArk availability for enterprise/API evaluation."
-    source: "https://www.byteplus.com/en/product/modelark"
-    source_label: "BytePlus ModelArk"
-    source_id: seedance-byteplus-modelark
-    verified_at: 2026-05-04
-    next_review_at: 2026-08-04
+  flagship_model:
+    value: "Seedance 2.0 is ByteDance Seed's current frontier video model, built around unified multimodal audio-video generation with text, image, audio, and video inputs."
+    source: "https://seed.bytedance.com/en/seedance2_0"
+    source_label: "ByteDance Seedance 2.0"
+    source_id: seedance-official
+    verified_at: 2026-05-08
+    next_review_at: 2026-06-08
+    volatility: high
+    confidence: high
+  video_generation:
+    value: "The official launch says Seedance 2.0 supports multimodal reference generation, video editing, video continuation, native audio-video output, and up to 15-second high-quality multi-shot audio-video generation."
+    source: "https://seed.bytedance.com/blog/seedance-2-0-official-launch"
+    source_label: "Seedance 2.0 official launch"
+    source_id: seedance-bytedance-launch
+    verified_at: 2026-05-08
+    next_review_at: 2026-06-08
+    volatility: high
+    confidence: high
+  api_available:
+    value: "BytePlus ModelArk exposes Seedance 2.0 video generation through official BytePlus product and API documentation."
+    source: "https://docs.byteplus.com/api/docs/ModelArk/1520757"
+    source_label: "BytePlus Seedance 2.0 API reference"
+    source_id: seedance-byteplus-api
+    verified_at: 2026-05-08
+    next_review_at: 2026-06-08
     volatility: high
     confidence: high
   pricing_anchor:
-    value: "Public Seedance pricing lists free and paid creator tiers; API or enterprise use should be verified through BytePlus ModelArk terms."
-    source: "https://www.seedance.ai/pricing"
-    source_label: "Seedance pricing"
+    value: "BytePlus documents Dreamina Seedance 2.0 resource packs at USD 4.30 per 1M tokens and Dreamina Seedance 2.0 fast at USD 3.30 per 1M tokens, with minimum purchase rules and pay-as-you-go overage."
+    source: "https://docs.byteplus.com/api/docs/ModelArk/2191775"
+    source_label: "BytePlus Seedance 2.0 resource packs"
     source_id: seedance-pricing
-    verified_at: 2026-05-04
-    next_review_at: 2026-08-04
-    volatility: high
-    confidence: high
-  best_for:
-    value: "Creators and teams comparing frontier video generation quality, image-to-video control, and ByteDance ecosystem access against Veo, Sora, Runway, Kling, and Pika."
-    source: "https://www.seedance.ai/"
-    source_label: "Seedance homepage"
-    source_id: seedance-official
-    verified_at: 2026-05-04
-    next_review_at: 2026-08-04
+    verified_at: 2026-05-08
+    next_review_at: 2026-06-08
     volatility: high
     confidence: high
   watch_out_for:
-    value: "Video-model availability, commercial rights, and API access can vary by region and product surface, so validate the exact Seedance/BytePlus route before procurement."
-    source: "https://www.byteplus.com/en/product/modelark"
-    source_label: "BytePlus ModelArk"
-    source_id: seedance-byteplus-modelark
-    verified_at: 2026-05-04
-    next_review_at: 2026-08-04
+    value: "The public seedance.ai site says it is an independent platform and not affiliated with ByteDance or its products, so AiPedia should not treat that site as the official Seedance buyer route."
+    source: "https://www.seedance.ai/"
+    source_label: "Seedance.ai independent disclosure"
+    source_id: seedance-ai-independent-disclosure
+    verified_at: 2026-05-08
+    next_review_at: 2026-06-08
     volatility: high
-    confidence: medium
-tags: [ai-video, video-generation, text-to-video, image-to-video, bytedance, seedance, character-consistency, multimodal]
-seo_title: 'Seedance 2.0: Features, Pricing & Review (April 2026)'
-meta_description: >-
-  Seedance 2.0 is ByteDance's multimodal AI video model. Top current ELO on text-to-video and image-to-video. Free tier; paid plans ~$9.60-$49.99/mo. Public beta on BytePlus ModelArk April 14, 2026.
-author: aipedia.wiki Editorial
+    confidence: high
+tags: [ai-video, video-generation, text-to-video, image-to-video, audio-video, bytedance, seedance, multimodal, modelark]
+seo_title: "Seedance 2.0: Features, Access, Pricing & Review (May 2026)"
+meta_description: "Seedance 2.0 is ByteDance Seed's frontier multimodal AI video model. Verified May 8, 2026 against ByteDance Seed and BytePlus sources. Avoid treating seedance.ai as official."
+author: "aipedia.wiki Editorial"
 best_for:
+  - raw AI video model quality tests
   - multimodal audio-video generation
   - motion-heavy scenes
-  - character consistency
-  - budget-conscious creators
+  - reference-based video generation
 not_best_for:
-  - enterprise Western-compliance pipelines
-  - workflows needing a mature public API
-  - regions with restricted ByteDance access
+  - buyers who need the simplest Western SaaS route
+  - teams that cannot use ByteDance-linked providers
+  - workflows that need a finished editing suite around the model
 quick_answer: >-
-  Seedance 2.0 is ByteDance's multimodal video model. It currently leads Artificial Analysis ELO on text-to-video and image-to-video. Native stereo audio, multi-shot cuts, and 15-second output ship in one pass. Skip it for Western-compliance pipelines or mature API access.
+  Seedance 2.0 is one of the first AI video models serious buyers should test in May 2026. Use official ByteDance Seed or BytePlus routes, not seedance.ai as an official source. Pick it for raw model quality, multimodal references, motion, and native audio-video generation; skip it if procurement simplicity matters more.
 price_history:
   - date: 2026-02-12
     plan: "Seedance 2.0"
-    price: "Public launch"
-    source: "https://seedance.ai/pricing"
-    source_label: "Source"
+    price: "Official launch"
+    source: "https://seed.bytedance.com/blog/seedance-2-0-official-launch"
+    source_label: "Seedance 2.0 official launch"
+    source_id: seedance-bytedance-launch
+    verified_at: 2026-05-08
+    note: "ByteDance Seed announced Seedance 2.0 as its next-generation video creation model."
+  - date: 2026-04-24
+    plan: "BytePlus video generation API"
+    price: "API documentation updated"
+    source: "https://docs.byteplus.com/api/docs/ModelArk/1520757"
+    source_label: "BytePlus Seedance 2.0 API reference"
+    source_id: seedance-byteplus-api
+    verified_at: 2026-05-08
+    note: "BytePlus documentation exposes video generation task APIs for ModelArk."
+  - date: 2026-05-08
+    plan: "Dreamina Seedance 2.0 resource packs"
+    price: "USD 4.30 per 1M-token resource pack; minimum purchase applies"
+    source: "https://docs.byteplus.com/api/docs/ModelArk/2191775"
+    source_label: "BytePlus Seedance 2.0 resource packs"
     source_id: seedance-pricing
-    note: "ByteDance officially launched Seedance 2.0"
-  - date: 2026-04-17
-    plan: "Basic"
-    price: "~$9.60/mo"
-    source: "https://seedance.ai/pricing"
-    source_label: "Source"
-    source_id: seedance-pricing
-    note: "Verified, regional pricing applies"
+    verified_at: 2026-05-08
+    note: "BytePlus resource-pack pricing is route-specific and not the same as a consumer SaaS plan."
 ---
 
 # Seedance 2.0
 
-ByteDance's flagship multimodal AI video model. Seedance 2.0 (public launch February 12, 2026, public beta on BytePlus ModelArk April 14, 2026) generates cinematic video with native stereo audio, multi-shot cuts, and realistic physics in a single pass.
+Seedance 2.0 is ByteDance Seed's frontier multimodal AI video model. As of May 8, 2026, AiPedia treats it as one of the first models serious buyers should test for raw video quality, motion stability, multimodal references, native audio-video generation, and director-style control.
 
-Pricing runs $0 to $49.99/month. API access ships via BytePlus ModelArk, fal.ai, and third-party routing.
+The key correction: `seedance.ai` is not the official ByteDance Seedance product route. That site says it is independent and not affiliated with ByteDance or its products. The canonical sources for this record are ByteDance Seed and BytePlus ModelArk.
 
 ## System Verdict
 
-> **Pick Seedance 2.0 if current benchmark quality and multimodal output matter most.** It holds ELO 1,269 on text-to-video and ELO 1,351 on image-to-video as of March 2026, ahead of [Kling](/tools/kling/) 3.0, [Veo](/tools/veo/) 3, and Runway Gen-4.5 on Artificial Analysis rankings. Native dual-channel audio generates alongside the video with synced dialogue and SFX.
+> **Pick Seedance 2.0 if raw model quality is the priority.** ByteDance says the model uses a unified multimodal audio-video joint generation architecture and supports text, image, audio, and video inputs. The official launch describes stronger complex-motion handling, multimodal references, video editing, video continuation, and up to 15-second multi-shot audio-video output.
 >
-> **Skip it for Western enterprise compliance, mature API tooling, or regions with ByteDance restrictions.** The public API is in beta on BytePlus ModelArk. Data residency and policy reviews are required for Western enterprise. [Runway](/tools/runway/) remains the standard for production pipelines, [Veo](/tools/veo/) 3.1 for Google-ecosystem workflows.
+> **Skip it if procurement simplicity matters more than raw output quality.** Access, commercial rights, pricing, data handling, and region availability must be verified through the exact official ByteDance/BytePlus route you plan to use.
 >
-> **Who pays which tier:** Free for evaluation, Basic ~$9.60/mo for watermark-free output, Pro $49.99/mo for priority queue and higher resolution. Developers use BytePlus ModelArk or fal.ai with per-second pricing.
+> **Do not use `seedance.ai` as the canonical source.** It can be a third-party wrapper or community surface, but it should not drive AiPedia pricing, official URL, or commercial recommendation copy.
 
 ## Key Facts
 
 | | |
 |---|---|
-| **Current flagship** | Seedance 2.0 |
-| **Public launch** | February 12, 2026 |
-| **Public beta on BytePlus ModelArk** | April 14, 2026 |
-| **Benchmarks (Artificial Analysis, March 2026)** | ELO 1,269 text-to-video · 1,351 image-to-video |
-| **Native audio** | Dual-channel stereo, dialogue, SFX, ambient |
-| **Max clip length** | 15 seconds multi-shot |
-| **Resolution** | Up to 1080p standard · 4K upscaling on Pro |
-| **API access** | BytePlus ModelArk (public beta) · fal.ai · third-party |
-| **Company** | ByteDance (parent of TikTok) |
+| Current model | Seedance 2.0 |
+| Owner/source of truth | ByteDance Seed |
+| Official product page | `seed.bytedance.com/en/seedance2_0` |
+| API/product route | BytePlus ModelArk |
+| Input modalities | Text, image, audio, and video references |
+| Output strengths | Motion stability, audio-video generation, reference control, multi-shot creation |
+| Pricing signal | BytePlus route-specific API/resource-pack pricing |
+| Main watch-out | Avoid treating independent `seedance.ai` pages as official ByteDance data |
 
-Every data point above was verified against vendor and third-party benchmarks on 2026-04-17. See Sources.
+## What It Actually Is
 
-## What it actually is
+Seedance 2.0 is not just a consumer "text to video" wrapper. ByteDance positions it as a unified multimodal video-generation model that can reason over multiple input types before creating synchronized video and audio.
 
-A unified multimodal video model that accepts text, image, audio, and video inputs. Seedance 2.0 generates a 15-second clip with synced stereo audio, multi-shot cuts, and physics in a single pass.
+The official launch says Seedance 2.0 improves complex interaction and motion scenes, physical accuracy, visual realism, controllability, audio expressiveness, and audio-video synergy. It also describes video editing and continuation capabilities, which matter for production workflows where a single generated clip rarely lands perfectly on the first try.
 
-Users describe camera movement (dolly in, crane, tracking pan) and lighting conditions (golden hour, rim lighting) as prompt inputs. The model executes the direction. Character and object consistency hold across cuts inside a single generation.
+## When To Pick Seedance
 
-The moats: current ELO leadership on both text-to-video and image-to-video, native multimodal output in one pass, and ByteDance's TikTok-scale video training corpus. The gaps: Western compliance review required, API still in beta, regional restrictions in some markets.
+- You are benchmarking the strongest closed video models in 2026.
+- You need motion-heavy scenes with bodies, objects, camera movement, or complex interaction.
+- You want native audio-video generation rather than adding audio after the fact.
+- You need reference-driven control across images, video, audio, and text.
+- You can validate official access through ByteDance Seed, BytePlus, or a vendor that clearly discloses its model route.
 
-## When to pick Seedance
+## When To Pick Something Else
 
-- **Current benchmark quality is the priority.** Artificial Analysis ranks it first on text-to-video and image-to-video as of March 2026.
-- **Native audio in the output matters.** Dialogue and SFX sync to on-screen action in one generation.
-- **Multi-shot sequences in a single clip are needed.** Seedance 2.0 ships cuts inside the 15-second window.
-- **Motion and physics are the deciding factor.** Fabric, hair, walking cycles, and fluid simulation outpace Hailuo 2.3 and older Kling versions.
-- **TikTok-adjacent output is the target.** Dreamina and CapCut ship Seedance 2.0 access natively.
+- **Cleanest production workspace:** [Runway](/tools/runway/) gives creators a stronger editor, export flow, and multi-model workspace.
+- **Google Cloud/API governance:** [Google Veo 3.1](/tools/veo/) is better for Vertex AI and Gemini API buyers.
+- **Cinematic value alternative:** [Kling 3.0](/tools/kling/) deserves a direct test when short-form cinematic output and value matter.
+- **Avatar video:** [HeyGen](/tools/heygen/) is the better fit for presenter-led sales, training, and localization videos.
+- **Low-risk social effects:** [Pika](/tools/pika/) is simpler for quick social clips and creative effects.
 
-## When to pick something else
+## Pricing And Access
 
-- **Western enterprise with strict data residency:** [Runway](/tools/runway/) or [Veo](/tools/veo/) 3.1 via Vertex AI.
-- **Mature public API with production SLAs:** [Runway](/tools/runway/).
-- **Top 4K output with 15-second clips:** [Kling](/tools/kling/) 3.0 leads on native 4K at 60fps.
-- **Creative-effects workflow:** [Pika](/tools/pika/) for Pikaffects, Pikadditions, and scene extension.
-- **Explicit camera-control dials:** [Luma](/tools/luma/) Dream Machine.
-- **Longer single clips:** [Hailuo](/tools/hailuo/) extends further in one pass.
+Do not reuse old consumer-plan numbers for Seedance unless they are tied to a verified official route. The current source-backed pricing anchor AiPedia can cite is BytePlus ModelArk's resource-pack documentation, which lists Dreamina Seedance 2.0 and Dreamina Seedance 2.0 fast resource packs by token quantity.
 
-## Pricing
+| Route | What to verify | Source-backed status |
+|---|---|---|
+| ByteDance Seed page | Model identity and official positioning | Verified May 8, 2026 |
+| BytePlus ModelArk | API/product access and docs | Verified May 8, 2026 |
+| BytePlus resource packs | USD resource-pack pricing and minimum purchase rules | Verified May 8, 2026 |
+| seedance.ai | Whether it is official ByteDance | It says it is independent and not affiliated |
 
-Consumer pricing via [seedance.ai/pricing](https://seedance.ai/pricing). Developer access via [BytePlus ModelArk](https://seed.bytedance.com/en/models) and fal.ai.
+## Failure Modes
 
-| Plan | Price | Credits/Month | Key Limits |
-|------|-------|---------------|-----------|
-| Free | $0 | 100 daily | Watermark · 720p max · standard queue |
-| Basic | ~$9.60/mo | 1,000 | No watermark · 1080p · Seedance 2.0 access |
-| Pro | $49.99/mo | 5,000 | Priority queue · 15s clips · 4K upscaling |
-| API (fal.ai) | Per-second | N/A | Pay-as-you-go for developers |
-
-*Prices verified 2026-04-17. Regional variation applies. Consumer rates converted to USD; CNY pricing differs.*
-
-## Against the alternatives
-
-| | Seedance 2.0 | Kling 3.0 | Veo 3.1 | Runway Gen-4.5 |
-|---|---|---|---|---|
-| **ELO rank (Artificial Analysis Mar 2026)** | #1 t2v and i2v | Top-tier | Strong | Strong |
-| **Native audio** | Yes, stereo + SFX | Yes | Yes | No |
-| **Max single-clip length** | 15s multi-shot | 15s | Varies | Up to 30s on Pro |
-| **Max resolution** | 1080p · 4K upscaling | 4K at 60fps | 4K upscaling | 1080p |
-| **Public API** | BytePlus beta · fal.ai | None | Vertex AI | Full API |
-| **Starting paid price** | ~$9.60/mo | $10/mo | $19.99/mo | $15/mo |
-| **Best viewed as** | Current ELO leader | Quality-per-dollar leader | Google-stack integrator | Production pipeline leader |
-
-## Failure modes
-
-- **API is public beta, not GA.** BytePlus ModelArk access opened April 14, 2026. Production SLAs are narrower than Runway's.
-- **Regional restrictions.** Some markets cannot access Seedance directly due to ByteDance's regulatory posture.
-- **Western compliance review required.** ByteDance ownership triggers data-handling scrutiny for EU, UK, and US enterprise buyers.
-- **Content moderation is strict.** Violence, nudity, and some artistic prompts block without clear appeal.
-- **Ecosystem is young.** Fewer third-party integrations, tutorials, and workflow templates than Runway or Kling.
-- **Benchmark position can shift.** Veo 3.1 and Runway's next release will compete directly. Rankings change monthly.
-- **Pricing is fragmented across routes.** Seedance.ai consumer plans, BytePlus ModelArk, fal.ai, and Dreamina all bill differently.
-
-## Methodology
-
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and benchmark details against primary sources, and generates the editorial analysis above. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [seedance.ai](https://seedance.ai), [BytePlus ModelArk](https://seed.bytedance.com/en/models), and [Artificial Analysis Video Models](https://artificialanalysis.ai/video-models).
+- **Route confusion:** Independent Seedance-branded sites can look official. Always trace the buyer route back to ByteDance Seed, BytePlus, Dreamina/Jimeng, or a clearly disclosed provider.
+- **Procurement friction:** ByteDance ownership can trigger legal, data, and regional review for some US, EU, UK, or government buyers.
+- **Pricing fragmentation:** API tokens, resource packs, third-party wrappers, and consumer surfaces may price the same underlying model differently.
+- **Benchmark volatility:** Video-model leaderboards move quickly. Use your own prompt set before buying.
+- **No full production suite:** The model may be excellent, but production teams still need editing, storage, approvals, brand controls, and export workflows.
 
 ## FAQ
 
-**Is Seedance free?**
-Yes. The free tier provides 100 daily credits, applies a watermark, and caps output at 720p. Basic at ~$9.60/mo removes the watermark and unlocks 1080p.
+**Is Seedance 2.0 official?**
+Yes. Seedance 2.0 is official through ByteDance Seed. The official page is on `seed.bytedance.com`.
 
-**How much does Seedance cost?**
-Basic is ~$9.60/mo for 1,000 credits. Pro is $49.99/mo for 5,000 credits and priority queue. Free tier includes 100 daily credits. Prices verified April 17, 2026.
+**Is seedance.ai official?**
+No. As of May 8, 2026, the public `seedance.ai` page says it is independent and not affiliated with ByteDance or its products.
 
-**Is Seedance 3.1 out?**
-No. Seedance 2.0 is the current flagship. It launched publicly February 12, 2026, with public beta on BytePlus ModelArk on April 14, 2026.
+**Does Seedance 2.0 have an API?**
+BytePlus ModelArk documents video generation APIs and exposes Seedance 2.0 through its product surface. Validate the exact model ID, region, rights, and pricing before production use.
 
-**Seedance 2.0 vs Kling 3.0?**
-Seedance 2.0 currently leads Artificial Analysis ELO on text-to-video and image-to-video. Kling 3.0 leads on 4K output and has a cheaper entry at $10/mo. Both ship native audio. Benchmark against your own prompt library.
-
-**Does Seedance have an API?**
-Yes, via BytePlus ModelArk (public beta, April 14, 2026) and third-party routing through fal.ai. Runway still offers the more mature production API.
+**Is Seedance 2.0 better than Kling 3.0 or Veo 3.1?**
+AiPedia would test Seedance 2.0 first for raw model quality on May 8, 2026. Serious buyers should still compare it against Kling 3.0 and Veo 3.1 on their own prompts because each model has different strengths.
 
 ## Sources
 
-- [Seedance official site](https://seedance.ai) (verified 2026-04-17)
-- [Seedance Pricing](https://seedance.ai/pricing) (verified 2026-04-17)
-- [ByteDance Seed Models](https://seed.bytedance.com/en/models) (verified 2026-04-17)
-- [Artificial Analysis Video Models](https://artificialanalysis.ai/video-models) (verified 2026-04-17)
-- [Seedance 2.0 public beta coverage](https://thesource.com/2026/04/15/seedance/) (April 15, 2026)
+- [ByteDance Seedance 2.0](https://seed.bytedance.com/en/seedance2_0) (verified 2026-05-08)
+- [Seedance 2.0 official launch](https://seed.bytedance.com/blog/seedance-2-0-official-launch) (verified 2026-05-08)
+- [BytePlus ModelArk](https://www.byteplus.com/en/product/modelark) (verified 2026-05-08)
+- [BytePlus Seedance 2.0 API reference](https://docs.byteplus.com/api/docs/ModelArk/1520757) (verified 2026-05-08)
+- [BytePlus Seedance 2.0 resource packs](https://docs.byteplus.com/api/docs/ModelArk/2191775) (verified 2026-05-08)
+- [Seedance.ai independent disclosure](https://www.seedance.ai/) (verified 2026-05-08)
 
 ## Related
 
 - **Category:** [AI Video Generation](/categories/ai-video/)
-- **Comparisons:** [Kling vs Seedance vs Runway](/compare/kling-vs-seedance-vs-runway/) · [Pika vs Seedance](/compare/pika-vs-seedance/) · [HeyGen vs Seedance](/compare/heygen-vs-seedance/) · [Seedance vs Synthesia](/compare/seedance-vs-synthesia/)
+- **Alternatives:** [Kling 3.0](/tools/kling/) · [Google Veo 3.1](/tools/veo/) · [Runway](/tools/runway/) · [Pika](/tools/pika/) · [HeyGen](/tools/heygen/)

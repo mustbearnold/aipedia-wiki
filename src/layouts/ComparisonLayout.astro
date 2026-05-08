@@ -15,6 +15,7 @@ import FAQAccordionScript from '../components/FAQAccordionScript.astro';
 import FeedbackForm from '../components/FeedbackForm.astro';
 import ToolLogo from '../components/ToolLogo.astro';
 import ComparisonFactTable from '../components/comparison/ComparisonFactTable.astro';
+import CommercialCTA from '../components/CommercialCTA.astro';
 
 interface ToolData {
   slug: string;
@@ -25,7 +26,7 @@ interface ToolData {
   price_range?: string;
   pricing_model?: string;
   status?: string;
-  affiliate?: { link?: string | null } | null;
+  affiliate?: { link?: string | null; network?: string | null } | null;
   scores?: {
     utility?: number;
     value?: number;
@@ -112,16 +113,6 @@ function ctaLabel(t: ToolData): string {
   return `Get ${t.title}`;
 }
 
-function ctaHref(t: ToolData): string {
-  const affUrl = t.affiliate?.link;
-  return (affUrl && affUrl.length > 0 ? affUrl : t.url) ?? '#';
-}
-
-function ctaRel(t: ToolData): string {
-  const affUrl = t.affiliate?.link;
-  return affUrl && affUrl.length > 0 ? 'sponsored noopener' : 'noopener';
-}
-
 function axisValue(t: ToolData, axis: 'utility' | 'value' | 'moat' | 'longevity'): number {
   return t.scores?.[axis] ?? 0;
 }
@@ -151,6 +142,12 @@ function compactList(values: Array<string | undefined>, limit: number): string[]
     .slice(0, limit);
 }
 
+function compactText(value: string, limit = 96): string {
+  const cleaned = String(value ?? '').replace(/\s+/g, ' ').trim();
+  if (cleaned.length <= limit) return cleaned;
+  return `${cleaned.slice(0, limit - 1).replace(/\s+\S*$/, '')}...`;
+}
+
 function buyerBestFor(t: ToolData): string[] {
   const listed = compactList(t.best_for ?? [], 3);
   if (listed.length > 0) return listed;
@@ -170,6 +167,27 @@ function pricingSignal(t: ToolData): string {
   if (t.price_range) return t.price_range;
   if (t.pricing_model) return t.pricing_model.replace('-', ' ');
   return '';
+}
+
+function minMonthlyPrice(t: ToolData): number | null {
+  const model = (t.pricing_model ?? '').toLowerCase();
+  const range = (t.price_range ?? '').toLowerCase();
+  if (model === 'free' || model === 'freemium' || /\bfree\b|\$0(?!\s*\(self|\s*\(self-host)/i.test(range)) return 0;
+  const prices = [...range.matchAll(/\$(\d+(?:\.\d+)?)/g)].map((match) => Number(match[1]));
+  const valid = prices.filter((price) => Number.isFinite(price));
+  if (valid.length === 0) return null;
+  return Math.min(...valid);
+}
+
+function budgetToolFor(list: ToolData[]): ToolData | null {
+  const priced = list
+    .map((tool) => ({ tool, price: minMonthlyPrice(tool), value: axisValue(tool, 'value') }))
+    .filter((item): item is { tool: ToolData; price: number; value: number } => item.price != null)
+    .sort((a, b) => {
+      if (a.price !== b.price) return a.price - b.price;
+      return b.value - a.value;
+    });
+  return priced[0]?.tool ?? null;
 }
 
 const breadcrumbLdItems = [
@@ -240,6 +258,48 @@ const buyerGuides = tools
     pricing: pricingSignal(tool),
   }))
   .filter(({ tool, bestFor, watchOuts, pricing }) => tool.tagline || bestFor.length > 0 || watchOuts.length > 0 || pricing);
+
+const useCaseWinnerRows = (() => {
+  const rows: Array<{ label: string; tool: ToolData; reason: string; kind: string }> = [];
+  const seen = new Set<string>();
+
+  function add(label: string, tool: ToolData | null | undefined, reason: string, kind: string) {
+    if (!tool) return;
+    const cleanLabel = compactText(label, 56);
+    const cleanReason = compactText(reason, 112);
+    if (!cleanLabel || !cleanReason) return;
+    const key = `${kind}:${cleanLabel.toLowerCase()}:${tool.slug}`;
+    if (seen.has(key)) return;
+    seen.add(key);
+    rows.push({ label: cleanLabel, tool, reason: cleanReason, kind });
+  }
+
+  if (scoreLeader) {
+    add(
+      winner === 'depends' ? 'Most people' : 'Editorial pick',
+      scoreLeader,
+      winner === 'depends'
+        ? `${scoreLeader.title} has the strongest current score signal; check the fit rows before treating that as universal.`
+        : `${scoreLeader.title} is the named editorial winner for this comparison.`,
+      'primary',
+    );
+  }
+
+  const budgetTool = budgetToolFor(tools);
+  if (budgetTool) {
+    const price = pricingSignal(budgetTool);
+    add('Budget or free tier', budgetTool, price || `${budgetTool.title} has the clearest entry path in the current data.`, 'budget');
+  }
+
+  for (const tool of tools) {
+    const bestFor = buyerBestFor(tool);
+    for (const item of bestFor.slice(0, tools.length === 2 ? 2 : 1)) {
+      add(item, tool, tool.tagline || pricingSignal(tool) || `${tool.title} is the better fit for this workflow.`, 'fit');
+    }
+  }
+
+  return rows.slice(0, 5);
+})();
 
 // Build TOC headings (markdown H2s only, we don't add synthetic entries here)
 const tocHeadings = (headings ?? []).filter((h) => h.depth === 2).map((h) => ({ slug: h.slug, text: h.text }));
@@ -343,8 +403,6 @@ const tocHeadings = (headings ?? []).filter((h) => h.depth === 2).map((h) => ({ 
       {tools.map((t) => {
         const score = overallScore(t);
         const winBadge = winningTool?.slug === t.slug;
-        const href = ctaHref(t);
-        const rel = ctaRel(t);
         const label = ctaLabel(t);
         return (
           <div class={`t2-cmp-card ${winBadge ? 't2-cmp-card-winner' : ''}`.trim()}>
@@ -363,22 +421,80 @@ const tocHeadings = (headings ?? []).filter((h) => h.depth === 2).map((h) => ({ 
             {t.price_range && (
               <div class="t2-cmp-card-price">{t.price_range}</div>
             )}
-            {href !== '#' && (
-              <a
-                href={href}
-                target="_blank"
-                rel={rel}
-                class="t2-cta t2-cta-primary t2-cmp-card-cta"
-                data-compare-cta={t.slug}
-              >
-                {label}
-                <span class="t2-cta-arrow" aria-hidden="true">↗</span>
-              </a>
-            )}
+            <CommercialCTA
+              toolName={t.title}
+              toolSlug={t.slug}
+              canonicalUrl={t.url}
+              affiliateUrl={t.affiliate?.link}
+              affiliateProgram={t.affiliate?.network}
+              label={label}
+              pricingModel={t.pricing_model}
+              priceRange={t.price_range}
+              pageType="comparison"
+              placement={winBadge ? 'comparison_winner_card' : 'comparison_tool_card'}
+              pageSlug={slug}
+              categorySlug={t.category}
+              comparisonPair={tools.map((tool) => tool.slug).join('_vs_')}
+              className="t2-cta t2-cta-primary t2-cmp-card-cta"
+              compareCtaMarker
+            />
           </div>
         );
       })}
     </section>
+
+    {useCaseWinnerRows.length > 0 && (
+      <section class="t2-cmp-usecase" aria-labelledby="winner-by-use-case">
+        <div class="t2-cmp-usecase-head">
+          <div>
+            <div class="t2-cmp-brief-kicker">Winner by use case</div>
+            <h2 id="winner-by-use-case">Choose faster</h2>
+          </div>
+          <a href="#full-comparison" class="t2-cmp-brief-link t2-cmp-usecase-skip">
+            See full comparison
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
+        <div class="t2-cmp-usecase-grid">
+          {useCaseWinnerRows.map(({ label, tool, reason, kind }) => (
+            <article class={`t2-cmp-usecase-card ${kind === 'primary' ? 'is-primary' : ''}`.trim()}>
+              <span class="t2-cmp-usecase-label">{label}</span>
+              <a href={`/tools/${tool.slug}/`} class="t2-cmp-usecase-tool">
+                <ToolLogo slug={tool.slug} title={tool.title} size={34} />
+                <span>{tool.title}</span>
+              </a>
+              <p>{reason}</p>
+              {kind === 'primary' ? (
+                <CommercialCTA
+                  toolName={tool.title}
+                  toolSlug={tool.slug}
+                  canonicalUrl={tool.url}
+                  affiliateUrl={tool.affiliate?.link}
+                  affiliateProgram={tool.affiliate?.network}
+                  label={ctaLabel(tool)}
+                  pricingModel={tool.pricing_model}
+                  priceRange={tool.price_range}
+                  pageType="comparison"
+                  placement="comparison_use_case_winner"
+                  pageSlug={slug}
+                  categorySlug={tool.category}
+                  comparisonPair={tools.map((comparedTool) => comparedTool.slug).join('_vs_')}
+                  className="t2-cta t2-cta-primary t2-cmp-usecase-cta"
+                  wrapperClass="commercial-cta-stack t2-cmp-usecase-cta-wrap"
+                  disclosureClass="commercial-cta-disclosure t2-cmp-usecase-disclosure"
+                  compareCtaMarker
+                />
+              ) : (
+                <a href={`/tools/${tool.slug}/`} class="t2-cmp-usecase-link">
+                  Review {tool.title}
+                  <span aria-hidden="true">→</span>
+                </a>
+              )}
+            </article>
+          ))}
+        </div>
+      </section>
+    )}
 
     <section class="t2-cmp-brief" aria-label="Decision brief">
       <div class="t2-cmp-brief-panel t2-cmp-brief-verdict">
@@ -533,7 +649,7 @@ const tocHeadings = (headings ?? []).filter((h) => h.depth === 2).map((h) => ({ 
     {canonicalFactTable && <ComparisonFactTable tools={tools} />}
 
     <!-- Main layout: prose + floating TOC -->
-    <div class="t2-layout">
+    <div class="t2-layout" id="full-comparison">
       <article class="t2-prose">
         <slot />
 

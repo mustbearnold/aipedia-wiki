@@ -308,7 +308,7 @@ const categoriesCovered = new Set(
 >
   
   <div class="t2-canvas guides-canvas site-directory-canvas guides-page-root">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="site-content-frame">
     <Breadcrumb items={[{ label: 'Use cases' }]} />
 
     <IndexHero
@@ -438,7 +438,7 @@ const categoriesCovered = new Set(
       color: var(--home-heading);
     }
     .guides-subhead {
-      margin: 22px 0 0;
+      margin: var(--site-content-gap) 0 0;
       max-width: 760px;
       font-size: clamp(1.02rem, 2vw, 1.28rem);
       line-height: 1.55;
@@ -451,8 +451,8 @@ const categoriesCovered = new Set(
       display: flex;
       justify-content: space-between;
       align-items: end;
-      gap: 18px;
-      margin-bottom: 16px;
+      gap: var(--site-content-gap);
+      margin-bottom: var(--site-content-gap);
     }
     .guides-section-kicker {
       margin: 0 0 7px;

@@ -50,6 +50,14 @@ v0 by Vercel suits developers needing code output from prompts. Figma AI fits de
 
 Figma AI focuses on design artifacts like vectors and prototypes within a collaborative canvas, using models like Claude Sonnet 4.6 for tasks such as generating UI from text or images.[1] v0 by Vercel prioritizes code generation, leveraging Gemini 3.1 Pro's 2M token context to produce React components from prompts, which suits developer workflows over visual design.[2] Pricing starts free for both, but Figma scales per editor seat while v0 charges per developer with higher Pro limits.
 
+## Best Plan Recommendation
+
+Start with Figma AI when the team needs design exploration, stakeholder review, multiplayer collaboration, comments, component thinking, and handoff. It is the better tool when the artifact must be discussed visually before anyone commits to implementation. Designers, product managers, and brand teams get more leverage from Figma because the output stays inside the design system and review workflow.
+
+Start with v0 when the user is a developer who needs working React/Tailwind components quickly. v0 is better for app builders, founders, and frontend engineers who want a prompt-to-code loop that can move toward a deployable interface. It is not a substitute for product design judgment, but it can skip blank-canvas frontend work.
+
+Use both when design and implementation are both real needs. Figma helps decide what should exist. v0 helps turn a clarified interface into code. Skipping Figma can create code that looks plausible but misses product intent; skipping v0 can leave teams with polished mockups and slow implementation.
+
 ## Who should choose Figma AI
 
 Designers and product teams in Figma ecosystems use it to speed up ideation and prototyping without leaving the tool.
@@ -57,6 +65,10 @@ Designers and product teams in Figma ecosystems use it to speed up ideation and 
 ## Who should choose v0 by Vercel
 
 Developers building web apps select it for prompt-to-code conversion and quick deployment on Vercel.
+
+## Evaluation Checklist
+
+Compare the same brief in both tools: a pricing page, a dashboard, and a form-heavy workflow. Judge Figma on editability, stakeholder feedback, design-system fit, and handoff clarity. Judge v0 on code quality, component structure, accessibility, responsive behavior, and how much cleanup is needed before shipping. The best tool is the one that removes the bottleneck your team actually has.
 
 ## Bottom Line
 

@@ -2,17 +2,17 @@
 type: tool
 slug: captions
 title: Captions.ai
-tagline: Short-form AI video app for creators with AI Twin, AI Creator, AI Dubbing, and gaze-corrected talking-head editing.
+tagline: Mobile-first AI video editor for social creators with captions, AI edits, AI Twin, AI Creator, AI Lipdub, and short-form production tools.
 category: ai-video
 company: Captions AI Inc.
 url: 'https://www.captions.ai'
 pricing_model: freemium
-price_range: "$0-$69.99/month"
+price_range: "$0-$279.99/month; Enterprise custom"
 status: active
 launched: 2021-01
-last_updated: 2026-05-04
-last_verified: 2026-05-04
-update_frequency: monthly
+last_updated: 2026-05-08
+last_verified: 2026-05-08
+update_frequency: weekly
 affiliate:
   has_program: false
   commission: null
@@ -26,180 +26,187 @@ scores:
   longevity: 7
 facts:
   product_scope:
-    value: "Creator-first AI video editor covering captions, talking-head editing, AI dubbing, AI creator/twin workflows, and mobile-friendly short-form production."
+    value: "Creator-first AI video editor covering captions, AI edits, chat-based editing, AI Twin/custom actors, AI Creator, AI Ads, AI Lipdub, translation, denoise, voice clone, and social video workflows."
     source: "https://captions.ai/overview"
     source_label: "Captions overview"
     source_id: captions-overview
-    verified_at: 2026-05-04
-    next_review_at: 2026-08-04
+    verified_at: 2026-05-08
+    next_review_at: 2026-06-08
     volatility: high
     confidence: high
   pricing_anchor:
-    value: "Free entry point plus paid creator tiers on Captions pricing; verify export, AI feature, and usage limits before standardizing a creator workflow."
+    value: "Captions pricing on 2026-05-08 lists free signup, Pro at $9.99/month, Max at $24.99/month, Scale at $69.99/$139.99/$279.99 per month, and Enterprise custom, with prices reflecting iOS plans only."
     source: "https://captions.ai/pricing"
     source_label: "Captions pricing"
     source_id: captions-official
-    verified_at: 2026-05-04
-    next_review_at: 2026-08-04
+    verified_at: 2026-05-08
+    next_review_at: 2026-06-08
     volatility: high
     confidence: high
   best_for:
-    value: "Short-form creators and social teams that need fast talking-head polish, subtitles, dubbing, eye contact, and AI avatar-style production in one app."
+    value: "Short-form creators and social teams that need fast talking-head polish, captions, AI edits, digital twins or custom actors, translation/lipdub, and mobile-first publishing."
     source: "https://captions.ai/overview"
     source_label: "Captions overview"
     source_id: captions-overview
-    verified_at: 2026-05-04
-    next_review_at: 2026-08-04
+    verified_at: 2026-05-08
+    next_review_at: 2026-06-08
     volatility: high
     confidence: high
   watch_out_for:
-    value: "Less suitable for long-form editing, studio-grade color/audio pipelines, or teams that need open model/API control."
+    value: "Captions is strongest for short-form social workflows; it is less suitable for long-form timeline editing, open model/API control, cinematic generation, or enterprise L&D packaging."
     source: "https://captions.ai/pricing"
     source_label: "Captions pricing"
     source_id: captions-official
-    verified_at: 2026-05-04
-    next_review_at: 2026-08-04
+    verified_at: 2026-05-08
+    next_review_at: 2026-06-08
     volatility: high
     confidence: medium
-tags: [ai-video, captions, auto-captions, video-editing, ai-avatar, ai-twin, ai-creator, ai-dubbing, creator-tools, social-media, tiktok]
+tags: [ai-video, captions, auto-captions, video-editing, ai-avatar, ai-twin, ai-creator, ai-lipdub, creator-tools, social-media, tiktok]
 best_for:
   - vertical social video for TikTok, Reels, and Shorts
-  - creators who need captions, gaze correction, filler removal, and clip extraction in one app
-  - avatar-led short scripts with AI Twin or AI Creator
-  - quick multilingual dubbing for short-form clips
+  - creators who need captions, AI edits, chat-based editing, denoise, voice tools, and exports in one app
+  - avatar-led short scripts with AI Twin, custom AI actors, or AI Creator
+  - quick translation and lipdub workflows for short-form clips
 not_best_for:
   - long-form YouTube editing with complex timelines
   - cinematic video generation, color grading, or VFX-heavy production
   - enterprise LMS training pipelines that need SCORM export
-  - teams that need unlimited low-cost video minutes
-seo_title: "Captions.ai: Features, Pricing & Review (April 2026)"
-meta_description: "Captions.ai ships AI Twin, AI Creator, and AI Dubbing alongside gaze correction and auto-captions for short-form video. Pro $9.99, Max $24.99, Scale $69.99. The vertical-social specialist for talking-head creators."
+  - teams that need open API/model control or predictable low-cost video minutes
+seo_title: "Captions.ai Review: Pricing, AI Twin & Social Video (May 2026)"
+meta_description: "Captions.ai is a short-form AI video editor for social creators. Current May 2026 review covers Pro, Max, Scale, AI Twin, AI Creator, AI Lipdub, credits, iOS-pricing caveat, and alternatives."
 author: aipedia.wiki Editorial
 quick_answer: >-
-  Captions.ai is the short-form AI video app for TikTok, Reels, and Shorts creators. AI Twin clones a digital version from one selfie; AI Creator generates video from text scripts; AI Dubbing translates into 28+ languages with lip sync. Pick it for mobile-first vertical workflows; skip it for full generative video or multi-cam production.
+  Captions.ai is the best-fit pick when the output is short-form social video, not cinematic generation or enterprise avatar training. Pro is for watermark-free editing and captions; Max is where generative AI, AI Twin/custom actors, and chat editing become the real reason to pay; Scale is for teams that need far more credits.
+price_history:
+  - date: 2026-05-08
+    plan: "Pro"
+    price: "$9.99/mo"
+    source: "https://captions.ai/pricing"
+    source_label: "Captions pricing"
+    source_id: captions-official
+    note: "Basic editing, captions in 100+ languages, customizable captions, watermark-free exports. Prices reflect iOS plans only."
+  - date: 2026-05-08
+    plan: "Max"
+    price: "$24.99/mo"
+    source: "https://captions.ai/pricing"
+    source_label: "Captions pricing"
+    source_id: captions-official
+    note: "500 credits/month; AI edit styles, AI-generated video, digital twins/custom AI actors, chat-based editing, generative assets."
+  - date: 2026-05-08
+    plan: "Scale"
+    price: "$69.99-$279.99/mo"
+    source: "https://captions.ai/pricing"
+    source_label: "Captions pricing"
+    source_id: captions-official
+    note: "Scale 1x/2x/4x with 1,400/2,800/5,600 credits per month and higher-tier generative models."
 ---
 
 # Captions.ai
 
-Captions.ai is the short-form AI video app built by Captions AI Inc. (also operating as Mirage) for social-media creators on TikTok, Reels, and Shorts. Available as iOS and Android apps plus a web editor, it collapses caption generation, gaze correction, filler removal, and clip extraction into a mobile-first workflow.
-
-The 2026 lineup centers on three AI products. **AI Twin** clones a digital version from a single selfie. **AI Creator** generates video from text scripts using stock avatars. **AI Dubbing** translates audio into 28+ languages with lip sync.
+Captions.ai is a short-form AI video editor for creators and social teams. It is strongest when the goal is faster talking-head production: captions, AI edits, custom actors or digital twins, chat-based edits, translation/lipdub, denoise, voice tools, and mobile-friendly publishing.
 
 ## System Verdict
 
-> **Pick Captions.ai when the deliverable is vertical social video.** Auto-captions, gaze correction, and clip extraction run fast enough for same-day posting. AI Twin and AI Creator fill gaps for creators who want avatar-led content without filming.
+> **Pick Captions.ai when the deliverable is social video.** It is built for creators who want a faster path from footage or prompt to a finished clip for TikTok, Reels, Shorts, ads, or creator-led marketing.
 >
-> **Skip it for long-form YouTube editing, multi-cam production, or full generative video.** DaVinci Resolve or Premiere Pro own long-form. [Runway](/tools/runway/), Kling, or Veo 3 own text-to-video with scene generation. Captions.ai is an editor with avatars, not a generative platform.
+> **Skip it for cinematic generation or enterprise avatar training.** Captions can generate and edit video, but it is not the same buyer category as Veo, Kling, Runway, Seedance, HeyGen, Synthesia, or D-ID.
 >
-> **Who pays which tier:** Free for evaluation only (exports are watermarked). Pro $9.99/mo for most solo creators posting weekly. Max $24.99/mo when AI Twin, AI Creator text-to-video, and AI Lipdub are core to the workflow. Scale $69.99/mo for agencies cranking bulk content.
+> **Best plan for most paying creators:** Pro is the watermark-free editing/captions plan. Max is the real AI plan because it adds AI-generated videos, AI Twin/custom actors, chat editing, curated AI Edit styles, and 500 monthly credits.
 
-## Key Facts
+## Current Key Facts
 
-| | |
-|---|---|
-| **Core products** | AI Twin · AI Creator · AI Dubbing · AI Lipdub |
-| **AI Twin** | Digital clone from a single selfie · speaks any script |
-| **AI Creator** | Text-to-video with stock 3D avatars |
-| **AI Dubbing** | 28+ languages · lip sync to translated audio |
-| **Editing features** | Auto-captions (30+ styles) · gaze correction · filler removal · clip generator · auto-B-roll · teleprompter |
-| **Platforms** | iOS · Android · web editor |
-| **Tiers** | Pro $9.99 (200 credits) · Max $24.99 (500 credits) · Scale $69.99 (1400 credits) |
-| **Platform targets** | TikTok · Reels · YouTube Shorts |
+- **Current plans:** free signup, Pro, Max, Scale 1x, Scale 2x, Scale 4x, Enterprise.
+- **Current monthly pricing:** Pro $9.99, Max $24.99, Scale $69.99, Scale 2x $139.99, Scale 4x $279.99, Enterprise custom.
+- **Important caveat:** Captions says all displayed prices are USD and reflect iOS plans only.
+- **Pro includes:** fast fixes, captions in 100+ languages, customizable caption styling, and watermark-free exports.
+- **Max adds:** curated AI Edit styles, AI-generated videos, digital twins/custom AI actors, chat-based editing, 500 credits/month, and generative B-roll/music/sound/image assets.
+- **Scale adds:** 1,400/2,800/5,600 monthly credits depending on the Scale tier, customized usage tiers, and more sophisticated generative AI models.
+- **Overview claims:** Captions can transform footage into edited videos, create from prompts, add automatic subtitles, dub voiceovers into 30+ languages, and create a spokesperson from a selfie or from scratch.
 
-Every data point above was verified against vendor documentation on 2026-04-17. See Sources.
+Verified against Captions official pages on 2026-05-08.
 
-## What it actually is
+## What It Actually Is
 
-A mobile-first editor with AI automation layered on top. The app ingests recorded or uploaded footage, runs auto-captions, corrects gaze to simulate direct camera contact, strips fillers, and exports in vertical aspect ratios optimized for TikTok, Reels, and YouTube Shorts.
+Captions.ai is a creator editor with AI automation layered into the workflow. The overview page positions it around finished videos from uploaded footage, prompt-based editing, automatic captions, AI-generated actors, translation/dubbing, music, eye contact correction, denoise, and short-form production.
 
-The 2026 AI Studio adds generative features on top of the editor. AI Twin clones a creator from one selfie. AI Creator produces full videos from text scripts using stock 3D avatars. AI Lipdub and AI Dubbing handle language localization.
+The buyer distinction is important. Captions.ai is not the tool to choose when you need a cinematic text-to-video model. It is the tool to choose when you already think in social clips, talking heads, creator ads, fast edits, and captioned vertical exports.
 
-The moat is thin against CapCut's free tier on pure editing, so the AI features carry the pricing case. Talking-head creators posting 3+ times per week get the clearest return.
+## When To Pick Captions.ai
 
-## When to pick Captions.ai
+- **You post social video weekly.** Captions, AI edits, denoise, voice tools, and fast export are built around repeat posting.
+- **You need avatar-style clips without setting up a full avatar studio.** Max includes digital twins/custom AI actors and AI-generated videos.
+- **You want edits through prompts.** The overview page describes a chat-based editor that can handle changes from simple swaps to abstract requests.
+- **You need accessibility/localization features.** Captions lists captions in 100+ languages and dubbing/translation into 30+ languages.
+- **You work phone-first.** Captions says the product is made for mobile and the pricing page caveats that displayed prices reflect iOS plans.
 
-- **You post vertical social video weekly.** Auto-captions, gaze correction, and platform-optimized export run faster than any desktop NLE for short-form.
-- **You want avatar-led content without filming.** AI Twin clones you from one selfie; AI Creator produces full videos from typed scripts.
-- **You localize content across languages.** AI Dubbing covers 28+ languages with lip sync to translated audio.
-- **You repurpose long videos into clips.** The clip generator scans for viral moments and formats them for TikTok or Reels.
-- **You work mobile-first.** iOS and Android apps run deeper than the web editor for most workflows.
+## When To Pick Something Else
 
-## When to pick something else
-
-- **Long-form YouTube editing:** DaVinci Resolve free tier or Premiere Pro. Captions.ai is not built for it.
-- **Full generative video from text:** [Runway](/tools/runway/), Kling, or Veo 3. Captions.ai edits footage; it does not generate scenes.
-- **Transcript-driven podcast and long-form video cleanup:** [Descript](/tools/descript/). Better transcription depth and Overdub voice cloning.
-- **Enterprise talking-head video with custom avatars:** [HeyGen](/tools/heygen/) or [Synthesia](/tools/synthesia/). Higher-fidelity avatars, broader language coverage, API access.
-- **Live streaming conversational avatar:** [D-ID](/tools/d-id/) Agents.
+- **Full avatar-video business stack:** [HeyGen](/tools/heygen/) for avatar library, translation, and business/team workflows.
+- **Enterprise training videos:** [Synthesia](/tools/synthesia/) for stronger L&D packaging.
+- **Interactive visual agents:** [D-ID](/tools/d-id/) or [Tavus](/tools/tavus/).
+- **Creator clone/UGC avatar ads:** [Argil](/tools/argil/) when avatar-led ads are the main deliverable.
+- **Cinematic generation:** Runway, Veo, Kling, Seedance, or [Hedra](/tools/hedra/) depending on the model/workflow.
+- **Long-form editing:** DaVinci Resolve, Premiere Pro, or Descript-style transcript editing will fit better.
 
 ## Pricing
 
-Subscription pricing via [captions.ai/pricing](https://captions.ai/pricing). Yearly billing carries an automatic discount.
+Use [Captions pricing](https://captions.ai/pricing) as the live source before buying. Current public monthly pricing on 2026-05-08:
 
-| Plan | Monthly | Credits | AI Twin | AI Creator | AI Lipdub | Who's it for |
-|------|---------|---------|---------|------------|-----------|--------------|
-| Pro | $9.99 | 200 | No | No | No | **Most solo creators posting weekly** |
-| Max | $24.99 | 500 | Yes | Yes | Yes | Creators needing avatar generation |
-| Scale | $69.99 | 1,400 | Yes | Yes | Yes | Agencies, bulk content pipelines |
+- **Free signup:** available, but advanced features require a subscription.
+- **Pro:** $9.99/month for basic editing, captions in 100+ languages, customizable captions, and watermark-free exports.
+- **Max:** $24.99/month for Pro plus AI Edit styles, AI-generated video, digital twins/custom AI actors, chat-based editing, 500 credits, and generative assets.
+- **Scale:** $69.99/month for 1,400 credits.
+- **Scale 2x:** $139.99/month for 2,800 credits.
+- **Scale 4x:** $279.99/month for 5,600 credits.
+- **Enterprise:** custom pricing with bulk credit discounts, custom seats, dedicated account management, training-data exclusion, onboarding, support, and early access.
 
-*Prices verified 2026-04-17 via [Captions.ai pricing](https://captions.ai/pricing) and the [Captions help center](https://captions.ai/help/docs/subscriptions). Free tier exports are watermarked. AI Twin, AI Creator text-to-video, and AI Lipdub unlock at Max and above. Scale adds top-tier AI models alongside the credit lift.*
+Captions states that displayed prices reflect iOS plans only. Verify Android, web, and regional pricing in the app before standardizing a team workflow.
 
-## Against the alternatives
+## Best Plan Guidance
 
-| | Captions.ai (Pro) | CapCut | [Descript](/tools/descript/) (Hobbyist) | [Runway](/tools/runway/) |
-|---|---|---|---|---|
-| **Entry price** | $9.99/mo | Free / $15 | $24/mo ($16 annual) | $15/mo |
-| **Primary workflow** | Short-form vertical | General editor | Transcript-driven | Generative video |
-| **Auto-captions** | **Core, 30+ styles** | Manual + basic | Transcript-based | N/A |
-| **Gaze correction** | **Yes** | No | Yes | No |
-| **AI avatar from selfie** | **AI Twin (Max)** | No | No | No |
-| **Text-to-video** | AI Creator (Max) | No | No | **Full scenes** |
-| **Best viewed as** | Vertical social specialist | General mobile editor | Podcast / long-form post | Cinematic generator |
+- **Most solo editors:** Pro if the core need is captions, fast fixes, and watermark-free exports.
+- **Most AI-video creators:** Max if AI Twin/custom actors, AI-generated video, chat editing, and generative assets are central.
+- **Agencies/teams:** Scale only when credit demand is predictable. Otherwise, test Max first and measure actual credit burn.
+- **Enterprise:** use sales if training-data exclusion, custom seats, account management, onboarding, or bulk credit discounts matter.
 
-## Failure modes
+## Failure Modes
 
-- **Not a generative platform.** Captions.ai edits footage and fills gaps with stock avatars. [Runway](/tools/runway/), Kling, and Veo 3 own scene generation.
-- **Thin moat against CapCut.** CapCut's free tier covers most manual editing. Captions.ai earns its price through AI automation, not raw editor depth.
-- **Web version trails mobile.** Feature parity lags on desktop. Most workflows assume iOS or Android.
-- **Clip generator misses sometimes.** Auto-selected viral moments don't always match what actually lands. Manual review is worth the time.
-- **Caption accuracy on heavy accents or jargon.** 90%+ on clean English; degrades on strong regional accents and dense technical vocabulary.
-- **Avatar fidelity below HeyGen or Synthesia.** AI Twin and AI Creator output suits social posting; not broadcast-grade.
-- **Free tier watermark.** Usable for evaluation, not for public posting.
+- **It is not a cinematic video model.** Captions edits and generates creator/social assets; it is not a Veo or Kling replacement.
+- **Feature value depends on posting frequency.** If you post rarely, Pro or Max can be overkill.
+- **Pricing is platform-sensitive.** The public page explicitly says prices reflect iOS plans only.
+- **Credit usage can be fuzzy before testing.** Scale plans are only worth it after measuring real monthly AI usage.
+- **Avatar fidelity is social-first.** For polished enterprise avatar presenters, compare HeyGen and Synthesia.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [Captions.ai pricing](https://captions.ai/pricing) and the [Captions help center](https://captions.ai/help/docs/subscriptions).
+AiPedia refreshed this page on 2026-05-08 using Captions' official overview and pricing pages. Older stale language was removed, Scale 2x/4x were added, credit counts were updated, the iOS-pricing caveat was added, and unsupported language-count and feature-gate claims were replaced with current official phrasing.
 
 ## FAQ
 
-**Is Captions.ai free?**
-Yes, with a watermark. The free tier is usable for evaluation but not for public posting. Pro at $9.99/mo unlocks 200 credits, unlimited exports, and no watermark ([Captions.ai pricing](https://captions.ai/pricing)).
+**What is Captions.ai best for?**
+Captions.ai is best for short-form social video: talking-head edits, captions, AI edits, creator ads, AI Twin/custom actors, translation/lipdub, and mobile-first publishing.
 
-**What is AI Twin?**
-A digital clone generated from a single selfie. The AI Twin can star in new videos speaking any typed script. Available on Max and Scale plans.
+**How much does Captions.ai cost?**
+As of 2026-05-08, Captions lists Pro at $9.99/month, Max at $24.99/month, Scale at $69.99/month, Scale 2x at $139.99/month, Scale 4x at $279.99/month, and Enterprise custom. Displayed prices reflect iOS plans only.
 
-**What is AI Creator?**
-Text-to-video using a library of stock 3D avatars. Paste a script, pick an avatar, render a full video. Available on Max and Scale.
+**Which Captions.ai plan should I buy?**
+Most creators should start with Pro for watermark-free editing and captions. Upgrade to Max only if AI-generated videos, AI Twin/custom actors, chat editing, or generative assets are central.
 
-**Does Captions.ai do translation?**
-Yes, via AI Dubbing. It translates audio into 28+ languages and generates an AI voiceover with lip sync to match the new language.
+**Does Captions.ai support AI Twin?**
+Yes. The current pricing page describes digital twins or custom AI actors on Max, and the overview page describes creating a spokesperson from a selfie or from scratch.
 
-**How does Captions.ai compare to Runway?**
-Different workflows. Captions.ai edits existing footage and fills gaps with AI avatars; it is optimized for short-form vertical social. [Runway](/tools/runway/) generates novel scenes from text or images and owns cinematic video work.
+**Does Captions.ai do dubbing or translation?**
+Yes. The overview page says Captions can translate and dub videos into 30+ languages, and the pricing feature matrix lists AI Translate and AI Lipdub.
 
-**How does it compare to CapCut?**
-CapCut wins on manual editing depth and effects library at a lower price point, including a free tier. Captions.ai wins on AI automation for talking-head creators who want auto-captions, gaze correction, and avatar generation in one app.
-
-**Which plan should a solo creator pick?**
-Pro at $9.99/mo fits most solo creators posting 3+ times per week on TikTok, Reels, or Shorts. Move to Max at $24.99 only when AI Twin, AI Creator text-to-video, or AI Lipdub are core to the workflow.
+**How does Captions.ai compare to HeyGen?**
+Captions.ai is better for short-form editing and creator workflows. [HeyGen](/tools/heygen/) is better for full avatar-video production, business templates, avatar libraries, and broader translation workflows.
 
 ## Sources
 
-- [Captions.ai pricing](https://captions.ai/pricing): plan structure and credit allocations
-- [Captions help center](https://captions.ai/help/docs/subscriptions): subscription details and feature gating
-- [Captions.ai tools: AI Twin](https://www.captions.ai/tools/ai-twin): AI Twin product reference
-- [Captions.ai main site](https://www.captions.ai): AI Creator, AI Dubbing, Video Model v3 reference
+- [Captions.ai overview](https://captions.ai/overview): product scope, AI editing, chat editing, digital twin/custom actor, captions, dubbing, and mobile-workflow claims.
+- [Captions.ai pricing](https://captions.ai/pricing): current Pro, Max, Scale, Scale 2x, Scale 4x, Enterprise pricing, credits, features, and iOS-pricing caveat.
 
 ## Related
 
 - **Category:** [AI Video Generation](/categories/ai-video/)
+- **Compare next:** [HeyGen](/tools/heygen/) · [Synthesia](/tools/synthesia/) · [Argil](/tools/argil/) · [D-ID](/tools/d-id/)

@@ -75,6 +75,16 @@ The best cover letters usually have four parts:
 
 Avoid the common AI failure mode: a polished but empty letter that says you are "excited to leverage my skills" without naming the actual company problem. Hiring teams can spot that immediately.
 
+## Best Tool by Situation
+
+Use ChatGPT when you need fast variants: one warmer, one more direct, one shorter, and one tailored to a specific job description. It is also the best choice when you need help pulling stories out of a resume.
+
+Use Claude when the first draft feels too salesy or generic. It is strongest as an editor that can make the letter more concise, formal, and evidence-led. Ask it to mark every sentence that sounds unsupported.
+
+Use Gemini when the letter is being drafted inside Google Docs alongside the resume and job description. The benefit is workflow speed, not necessarily better writing.
+
+For high-stakes roles, write the first paragraph yourself. AI can polish and structure, but the reason you want the role should sound like a real person with context.
+
 ## What To Provide
 
 Give the AI enough source material:
@@ -87,6 +97,10 @@ Give the AI enough source material:
 - claims that must not be made, such as relocation, years of experience, or management responsibilities
 
 For senior roles, include a short note on the business problem you think the company is hiring for. That lets the tool write toward judgment and fit rather than only keyword matching.
+
+## What To Avoid
+
+Do not ask for a "perfect" cover letter from only a job post. That produces generic claims. Do not include confidential employer information, private client names, or metrics you cannot defend. Avoid long letters unless the role specifically requests one; a concise, specific letter is usually stronger than a polished page of filler.
 
 ## FAQ
 

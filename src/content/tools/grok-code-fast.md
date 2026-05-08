@@ -122,6 +122,12 @@ Test Grok Code Fast on the workflows that create real developer drag:
 - Does cached input materially reduce cost in your agent loop?
 - Does the merge rate stay steady once human reviewers inspect the output?
 
+## Best plan recommendation
+
+Treat Grok Code Fast as an API/model choice rather than a subscription decision. The best first use is a narrow agent loop with measurable throughput: failing-test repair, small refactors, lint fixes, codebase Q&A, or autocomplete experiments. Keep prompts small enough that latency and cached-input pricing matter, then compare total cost per accepted patch against Claude, Codex, Gemini, and the current model in your editor.
+
+Do not standardize on it because the token price looks attractive in isolation. Measure accepted changes, reviewer rework, failed tool calls, and rollback rate. If the model is fast but creates extra review burden, the savings disappear. If it keeps quality steady while cutting wait time, it can be a strong specialist model inside a larger coding stack.
+
 ## Failure modes
 
 - Ecosystem maturity trails GitHub Copilot, Cursor, and Claude Code.

@@ -15,20 +15,20 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY ?? '';
 
 <section
   id="reviews"
-  class="not-prose mt-10 mb-6"
+  class="not-prose mt-[var(--site-section-gap)] mb-[var(--site-content-gap)]"
   aria-label="Reader reviews"
   data-reviews-root
   data-tool-slug={toolSlug}
   data-tool-title={toolTitle}
 >
-  <div class="flex items-end justify-between gap-3 mb-4 flex-wrap">
+  <div class="flex items-end justify-between gap-[var(--site-card-gap)] mb-[var(--site-content-gap-sm)] flex-wrap">
     <div>
       <h2 class="text-lg font-semibold m-0 text-[var(--text-primary)]">Reader reviews</h2>
       <div class="text-[12px] text-[var(--text-muted)] mt-1" data-reviews-summary>Loading…</div>
     </div>
     <button
       type="button"
-      class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-[13px] font-semibold text-[var(--text-primary)] bg-[rgba(249, 115, 22,0.12)] border border-[rgba(249, 115, 22,0.3)] hover:bg-[rgba(249, 115, 22,0.2)]"
+      class="inline-flex items-center gap-[var(--site-chip-gap)] px-3 py-1.5 rounded-[var(--site-radius-control)] text-[13px] font-semibold text-[var(--text-primary)] bg-[rgba(249, 115, 22,0.12)] border border-[rgba(249, 115, 22,0.3)] hover:bg-[rgba(249, 115, 22,0.2)]"
       data-reviews-toggle-form
     >
       Write a review
@@ -37,11 +37,11 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY ?? '';
 
   <div class="hidden" data-reviews-form-wrap>
     <form
-      class="rounded-xl border border-[var(--border)] bg-[var(--bg-card)] p-4 mb-4"
+      class="rounded-[var(--site-radius-card)] border border-[var(--border)] bg-[var(--bg-card)] p-[var(--site-card-padding)] mb-[var(--site-content-gap-sm)]"
       data-reviews-form
     >
-      <div class="grid sm:grid-cols-[auto_1fr] gap-3 mb-3">
-        <label class="flex items-center gap-2 text-sm text-[var(--text-secondary)]">
+      <div class="grid sm:grid-cols-[auto_1fr] gap-[var(--site-card-gap)] mb-[var(--site-card-gap)]">
+        <label class="flex items-center gap-[var(--site-chip-gap)] text-sm text-[var(--text-secondary)]">
           <span>Your rating</span>
           <span class="sr-only">(1 to 5 stars)</span>
           <span class="inline-flex" data-rating-stars>
@@ -64,7 +64,7 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY ?? '';
           placeholder="Headline (e.g. Saved me hours per week)"
           maxlength="140"
           required
-          class="w-full rounded-lg border border-[var(--border)] bg-[var(--bg-base)] px-3 py-2 text-sm text-[var(--text-primary)] placeholder:text-[var(--text-muted)] focus:outline-none focus:ring-1 focus:ring-[var(--accent-primary)]"
+          class="w-full rounded-[var(--site-radius-control)] border border-[var(--border)] bg-[var(--bg-base)] px-3 py-2 text-sm text-[var(--text-primary)] placeholder:text-[var(--text-muted)] focus:outline-none focus:ring-1 focus:ring-[var(--accent-primary)]"
         />
       </div>
       <textarea
@@ -74,44 +74,44 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY ?? '';
         maxlength="4000"
         rows="5"
         required
-        class="w-full rounded-lg border border-[var(--border)] bg-[var(--bg-base)] px-3 py-2 text-sm text-[var(--text-primary)] placeholder:text-[var(--text-muted)] mb-3 focus:outline-none focus:ring-1 focus:ring-[var(--accent-primary)]"
+        class="w-full rounded-[var(--site-radius-control)] border border-[var(--border)] bg-[var(--bg-base)] px-3 py-2 text-sm text-[var(--text-primary)] placeholder:text-[var(--text-muted)] mb-[var(--site-card-gap)] focus:outline-none focus:ring-1 focus:ring-[var(--accent-primary)]"
       ></textarea>
-      <div class="grid sm:grid-cols-2 gap-3 mb-3">
+      <div class="grid sm:grid-cols-2 gap-[var(--site-card-gap)] mb-[var(--site-card-gap)]">
         <input
           type="text"
           name="author_name"
           placeholder="Display name (shown publicly)"
           maxlength="80"
           required
-          class="rounded-lg border border-[var(--border)] bg-[var(--bg-base)] px-3 py-2 text-sm text-[var(--text-primary)] placeholder:text-[var(--text-muted)] focus:outline-none focus:ring-1 focus:ring-[var(--accent-primary)]"
+          class="rounded-[var(--site-radius-control)] border border-[var(--border)] bg-[var(--bg-base)] px-3 py-2 text-sm text-[var(--text-primary)] placeholder:text-[var(--text-muted)] focus:outline-none focus:ring-1 focus:ring-[var(--accent-primary)]"
         />
         <input
           type="email"
           name="author_email"
           placeholder="Email (private, not shown)"
           maxlength="160"
-          class="rounded-lg border border-[var(--border)] bg-[var(--bg-base)] px-3 py-2 text-sm text-[var(--text-primary)] placeholder:text-[var(--text-muted)] focus:outline-none focus:ring-1 focus:ring-[var(--accent-primary)]"
+          class="rounded-[var(--site-radius-control)] border border-[var(--border)] bg-[var(--bg-base)] px-3 py-2 text-sm text-[var(--text-primary)] placeholder:text-[var(--text-muted)] focus:outline-none focus:ring-1 focus:ring-[var(--accent-primary)]"
         />
       </div>
       {turnstileSiteKey && (
-        <div class="cf-turnstile mb-3" data-sitekey={turnstileSiteKey} data-theme="dark"></div>
+        <div class="cf-turnstile mb-[var(--site-card-gap)]" data-sitekey={turnstileSiteKey} data-theme="dark"></div>
       )}
-      <div class="flex items-center gap-3">
+      <div class="flex items-center gap-[var(--site-card-gap)]">
         <button
           type="submit"
-          class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-sm font-semibold bg-[var(--accent-primary)] text-[#0b0a14] hover:brightness-110"
+          class="inline-flex items-center gap-[var(--site-chip-gap)] px-4 py-2 rounded-[var(--site-radius-control)] text-sm font-semibold bg-[var(--accent-primary)] text-[#0b0a14] hover:brightness-110"
           data-reviews-submit
         >
           Submit review
         </button>
         <span class="text-[12px] text-[var(--text-muted)]">Reviews are moderated before publishing.</span>
       </div>
-      <div class="mt-3 text-[13px]" data-reviews-status role="status" aria-live="polite"></div>
+      <div class="mt-[var(--site-card-gap)] text-[13px]" data-reviews-status role="status" aria-live="polite"></div>
     </form>
   </div>
 
-  <div data-reviews-list class="space-y-3"></div>
-  <div class="text-[13px] text-[var(--text-muted)] mt-3 hidden" data-reviews-empty>
+  <div data-reviews-list class="space-y-[var(--site-card-gap)]"></div>
+  <div class="text-[13px] text-[var(--text-muted)] mt-[var(--site-card-gap)] hidden" data-reviews-empty>
     No reviews yet. Be the first to share your experience with {toolTitle}.
   </div>
 </section>
@@ -181,9 +181,9 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY ?? '';
           if (emptyEl) emptyEl.classList.toggle('hidden', count > 0);
           if (listEl) {
             listEl.innerHTML = (data.reviews || []).map((rev) => `
-              <article class="rounded-xl border border-[var(--border)] bg-[var(--bg-card)] p-4">
-                <div class="flex items-center justify-between gap-2 mb-1 flex-wrap">
-                  <div class="flex items-center gap-2">
+              <article class="rounded-[var(--site-radius-card)] border border-[var(--border)] bg-[var(--bg-card)] p-[var(--site-card-padding)]">
+                <div class="flex items-center justify-between gap-[var(--site-chip-gap)] mb-1 flex-wrap">
+                  <div class="flex items-center gap-[var(--site-chip-gap)]">
                     <span class="text-[var(--accent-warning)] text-sm" aria-label="${rev.rating} of 5 stars">${starBar(rev.rating)}</span>
                     <span class="text-[14px] font-semibold text-[var(--text-primary)]">${escapeHtml(rev.title)}</span>
                   </div>

@@ -138,9 +138,9 @@ const categoryItems = sorted.map((category) => ({
     .categories-page[data-home-page] .t2-cat-index-card {
       display: flex;
       flex-direction: column;
-      gap: 12px;
-      padding: 13px;
-      border-radius: 12px;
+      gap: var(--site-card-gap);
+      padding: var(--site-card-padding);
+      border-radius: var(--site-radius-card);
       border: 1px solid var(--home-card-outline);
       background: var(--home-panel);
       color: var(--home-on-card);
@@ -268,8 +268,8 @@ const categoryItems = sorted.map((category) => ({
 
     @media (max-width: 639px) {
       .categories-page[data-home-page] .t2-cat-index-card {
-        padding: 13px;
-        gap: 10px;
+        padding: var(--site-card-padding);
+        gap: var(--site-card-gap);
       }
     }
   </style>

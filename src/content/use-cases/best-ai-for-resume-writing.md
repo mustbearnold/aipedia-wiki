@@ -93,6 +93,20 @@ Create one master resume, then tailor for each role. Ask AI to classify each job
 
 That prevents the common mistake of forcing every keyword into the resume. Applicant tracking systems matter, but hiring managers still reject resumes that look stuffed, vague, or dishonest.
 
+## Best Tool by Situation
+
+Use ChatGPT when speed and iteration matter most. It is the easiest place to paste a job description, extract matching experience, rewrite bullets, and ask follow-up questions. For most job seekers, this is the best starting point because the drafting loop is flexible and forgiving.
+
+Use Claude when the resume already has good substance but needs restraint. It is especially useful for senior, academic, legal, consulting, policy, and executive resumes where tone matters and exaggerated language can backfire. Ask it to remove vague claims, compress bullets, and flag unsupported statements.
+
+Use Gemini when the workflow already lives in Google Docs. The advantage is convenience: editing, comparing, and revising in the same workspace. It is less useful if you want a separate, controlled coaching conversation.
+
+## What To Avoid
+
+Do not let any model invent numbers, promotions, clients, tools, credentials, dates, or responsibilities. Also avoid over-optimizing for ATS keywords at the expense of a human reader. A resume that repeats the job description but hides the actual work is weak.
+
+For sensitive roles, keep private employer, client, clearance, patient, financial, or source-code details out of prompts unless your organization explicitly allows that use. Use anonymized notes when possible, then manually restore specifics in your private draft.
+
 ## Best Prompt
 
 ```text

@@ -120,6 +120,12 @@ Before switching, test platform fit, extension compatibility, account boundaries
 
 Dia is unusually explicit about browser-agent risk. Its security page says conversations, history, bookmarks, and files are encrypted and stored locally by default; Sync is end-to-end encrypted; AI providers are contractually restricted from training on Dia user data; and content sharing can be disabled in Settings. For prompt injection, Dia says the assistant starts without access to other tabs or write actions, requires approval before form filling or real-world effects, hides sensitive form fields from the agent, and avoids irreversible actions without user confirmation.
 
+## Best plan recommendation
+
+Use the free download as the evaluation path and avoid treating Dia as a company-wide browser replacement until platform and admin controls match the organization. For individual users on supported Macs, the best first test is a real week of work: meeting prep, tab-heavy research, product comparisons, documentation reading, and source-backed writing. If Dia saves context recovery time, it earns a place as a personal browser.
+
+For teams, the decision is slower. Test extension behavior, profile separation, app permissions, sync expectations, and the security posture around connected work apps. Dia is more compelling as an opt-in workflow browser than as a mandated managed browser today.
+
 ## Failure modes
 
 - macOS-only availability limits adoption for Windows and Linux teams.

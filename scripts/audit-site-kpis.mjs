@@ -11,6 +11,13 @@ const PROJECT_DIR = dirname(dirname(fileURLToPath(import.meta.url)));
 const CONTENT_DIR = join(PROJECT_DIR, 'src', 'content');
 const JSON_MODE = process.argv.includes('--json');
 
+const THIN_RISK_WORD_FLOORS = {
+  tools: 800,
+  comparisons: 700,
+  use_cases: 850,
+  news: 300,
+};
+
 const COLLECTIONS = [
   'tools',
   'comparisons',
@@ -220,6 +227,15 @@ function summarizeShortest(items, limit = 10) {
     .map(({ slug, words, path }) => ({ slug, words, path: projectPath(path) }));
 }
 
+function summarizeThinRisk(items, floor, limit = 25) {
+  const thin = items.filter((item) => item.words < floor);
+  return {
+    under_words: floor,
+    count: thin.length,
+    shortest: summarizeShortest(thin, limit),
+  };
+}
+
 const collectionCounts = Object.fromEntries(COLLECTIONS.map((collection) => [collection, markdownFiles(collection).length]));
 
 const toolRecords = markdownFiles('tools').map((path) => {
@@ -269,6 +285,7 @@ const freshnessDays = toolRecords.map((tool) => daysSince(tool.last_verified)).f
 
 const result = {
   generated_at: new Date().toISOString(),
+  quality_floors: THIN_RISK_WORD_FLOORS,
   collections: collectionCounts,
   tools: {
     total: toolRecords.length,
@@ -291,21 +308,28 @@ const result = {
       verified_over_30_days: freshnessDays.filter((age) => age > 30).length,
     },
     shortest: summarizeShortest(toolRecords),
+    thin_risk: summarizeThinRisk(
+      toolRecords.filter((tool) => tool.status === 'active' || tool.status === 'beta'),
+      THIN_RISK_WORD_FLOORS.tools,
+    ),
   },
   comparisons: {
     total: comparisonRecords.length,
     with_canonical_fact_table: comparisonRecords.filter((comparison) => comparison.canonical_fact_table).length,
     missing_canonical_fact_table: comparisonRecords.filter((comparison) => !comparison.canonical_fact_table).length,
     shortest: summarizeShortest(comparisonRecords),
+    thin_risk: summarizeThinRisk(comparisonRecords, THIN_RISK_WORD_FLOORS.comparisons),
   },
   use_cases: {
     total: useCaseRecords.length,
     shortest: summarizeShortest(useCaseRecords),
+    thin_risk: summarizeThinRisk(useCaseRecords, THIN_RISK_WORD_FLOORS.use_cases),
   },
   news: {
     total: newsRecords.length,
     by_month: Object.fromEntries(Object.entries(countBy(newsRecords.map((news) => news.month))).sort()),
     shortest: summarizeShortest(newsRecords),
+    thin_risk: summarizeThinRisk(newsRecords, THIN_RISK_WORD_FLOORS.news),
   },
   files: {
     public_pagefind_tracked: existsSync(join(PROJECT_DIR, 'public', 'pagefind')),
@@ -343,6 +367,7 @@ if (JSON_MODE) {
   printList('missing best_for', result.tools.missing.best_for);
   printList('missing not_best_for', result.tools.missing.not_best_for);
   printList('missing facts', result.tools.missing.facts, 25);
+  console.log(`thin-risk active/beta tools under ${result.tools.thin_risk.under_words} words: ${result.tools.thin_risk.count}`);
   console.log('shortest tools:');
   for (const tool of result.tools.shortest) console.log(`  ${tool.slug.padEnd(24)} ${String(tool.words).padStart(5)} words`);
 
@@ -350,6 +375,7 @@ if (JSON_MODE) {
   console.log(`total: ${result.comparisons.total}`);
   console.log(`with canonical_fact_table: ${result.comparisons.with_canonical_fact_table}`);
   console.log(`missing canonical_fact_table: ${result.comparisons.missing_canonical_fact_table}`);
+  console.log(`thin-risk comparisons under ${result.comparisons.thin_risk.under_words} words: ${result.comparisons.thin_risk.count}`);
   console.log('shortest comparisons:');
   for (const comparison of result.comparisons.shortest) {
     console.log(`  ${comparison.slug.padEnd(38)} ${String(comparison.words).padStart(5)} words`);
@@ -357,12 +383,14 @@ if (JSON_MODE) {
 
   printSection('Use cases');
   console.log(`total: ${result.use_cases.total}`);
+  console.log(`thin-risk use cases under ${result.use_cases.thin_risk.under_words} words: ${result.use_cases.thin_risk.count}`);
   console.log('shortest use cases:');
   for (const useCase of result.use_cases.shortest) console.log(`  ${useCase.slug.padEnd(36)} ${String(useCase.words).padStart(5)} words`);
 
   printSection('News');
   console.log(`total: ${result.news.total}`);
   console.log(`by month: ${JSON.stringify(result.news.by_month)}`);
+  console.log(`thin-risk news under ${result.news.thin_risk.under_words} words: ${result.news.thin_risk.count}`);
   console.log('shortest news:');
   for (const news of result.news.shortest) console.log(`  ${news.slug.padEnd(46)} ${String(news.words).padStart(5)} words`);
 }

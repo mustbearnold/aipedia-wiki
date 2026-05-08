@@ -86,7 +86,7 @@ const brandNotes = [
   subhead="Press-ready data, logo files, citation language, and partnership requests."
   breadcrumbs={[{ label: 'Media Kit' }]}
 >
-  <p class="not-prose text-xs text-[var(--text-muted)] mb-6">
+  <p class="not-prose text-xs text-[var(--text-muted)] mb-[var(--site-content-gap)]">
     <span class="uppercase tracking-[0.12em]">Last updated:</span>
     <time datetime={LAST_UPDATED}>{LAST_UPDATED_HUMAN}</time>
   </p>
@@ -103,28 +103,28 @@ const brandNotes = [
 
   <h2>Site at a glance</h2>
 
-  <div class="not-prose my-6 grid grid-cols-2 md:grid-cols-3 gap-3">
-    <div class="rounded-xl border border-[var(--border)] bg-[var(--bg-card)] p-4">
+  <div class="not-prose my-[var(--site-content-gap)] grid grid-cols-2 md:grid-cols-3 gap-[var(--site-grid-gap)]">
+    <div class="rounded-[var(--site-radius-card)] border border-[var(--border)] bg-[var(--bg-card)] p-[var(--site-card-padding)]">
       <div class="text-2xl font-bold text-[var(--text-primary)] tabular-nums">{activeTools.length}</div>
       <div class="text-xs text-[var(--text-muted)] uppercase tracking-[0.1em] mt-1">Tool reviews</div>
     </div>
-    <div class="rounded-xl border border-[var(--border)] bg-[var(--bg-card)] p-4">
+    <div class="rounded-[var(--site-radius-card)] border border-[var(--border)] bg-[var(--bg-card)] p-[var(--site-card-padding)]">
       <div class="text-2xl font-bold text-[var(--text-primary)] tabular-nums">{allCategories.length}</div>
       <div class="text-xs text-[var(--text-muted)] uppercase tracking-[0.1em] mt-1">Categories</div>
     </div>
-    <div class="rounded-xl border border-[var(--border)] bg-[var(--bg-card)] p-4">
+    <div class="rounded-[var(--site-radius-card)] border border-[var(--border)] bg-[var(--bg-card)] p-[var(--site-card-padding)]">
       <div class="text-2xl font-bold text-[var(--text-primary)] tabular-nums">{allComparisons.length}</div>
       <div class="text-xs text-[var(--text-muted)] uppercase tracking-[0.1em] mt-1">Head-to-head comparisons</div>
     </div>
-    <div class="rounded-xl border border-[var(--border)] bg-[var(--bg-card)] p-4">
+    <div class="rounded-[var(--site-radius-card)] border border-[var(--border)] bg-[var(--bg-card)] p-[var(--site-card-padding)]">
       <div class="text-2xl font-bold text-[var(--text-primary)] tabular-nums">{allUseCases.length}</div>
       <div class="text-xs text-[var(--text-muted)] uppercase tracking-[0.1em] mt-1">Use-case guides</div>
     </div>
-    <div class="rounded-xl border border-[var(--border)] bg-[var(--bg-card)] p-4">
+    <div class="rounded-[var(--site-radius-card)] border border-[var(--border)] bg-[var(--bg-card)] p-[var(--site-card-padding)]">
       <div class="text-2xl font-bold text-[var(--text-primary)] tabular-nums">{allDead.length}</div>
       <div class="text-xs text-[var(--text-muted)] uppercase tracking-[0.1em] mt-1">Archived dead tools</div>
     </div>
-    <div class="rounded-xl border border-[var(--border)] bg-[var(--bg-card)] p-4">
+    <div class="rounded-[var(--site-radius-card)] border border-[var(--border)] bg-[var(--bg-card)] p-[var(--site-card-padding)]">
       <div class="text-2xl font-bold text-[var(--text-primary)] tabular-nums">{allNews.length}</div>
       <div class="text-xs text-[var(--text-muted)] uppercase tracking-[0.1em] mt-1">News items</div>
     </div>
@@ -184,7 +184,7 @@ const brandNotes = [
   <p class="not-prose my-4">
     <a
       href="mailto:editorial@aipedia.wiki?subject=Partnership%20inquiry"
-      class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold bg-[var(--accent-primary)] !text-[#0b0a14] no-underline hover:brightness-110 transition-all shadow-[0_4px_14px_rgba(249, 115, 22,0.35)]"
+      class="inline-flex items-center gap-[var(--site-chip-gap)] px-5 py-2.5 rounded-[var(--site-radius-control)] text-sm font-semibold bg-[var(--accent-primary)] !text-[#0b0a14] no-underline hover:brightness-110 transition-all shadow-[0_4px_14px_rgba(249, 115, 22,0.35)]"
     >
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
         <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
@@ -200,7 +200,7 @@ const brandNotes = [
     Current Signal Cyan logo, favicon, and preview images are available under the paths below. Partners may use these for partner-directory pages, press coverage, and integration announcements.
   </p>
 
-  <div class="not-prose media-brand-kit my-6">
+  <div class="not-prose media-brand-kit my-[var(--site-content-gap)]">
     <div class="media-brand-hero">
       <img
         src="/brand/aipedia-media-kit-preview.png"
@@ -243,8 +243,8 @@ const brandNotes = [
 
   <h2>Fact sheet</h2>
 
-  <div class="not-prose my-4 rounded-xl border border-[var(--border)] bg-[var(--bg-card)] p-5">
-    <dl class="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-6 text-sm">
+  <div class="not-prose my-[var(--site-content-gap-sm)] rounded-[var(--site-radius-card)] border border-[var(--border)] bg-[var(--bg-card)] p-[var(--site-card-padding)]">
+    <dl class="grid grid-cols-1 sm:grid-cols-2 gap-y-[var(--site-card-gap)] gap-x-[var(--site-content-gap)] text-sm">
       <div><dt class="text-[var(--text-muted)] text-xs uppercase tracking-[0.1em]">Name</dt><dd class="text-[var(--text-primary)] m-0">aipedia.wiki</dd></div>
       <div><dt class="text-[var(--text-muted)] text-xs uppercase tracking-[0.1em]">Category</dt><dd class="text-[var(--text-primary)] m-0">AI tools review and reference</dd></div>
       <div><dt class="text-[var(--text-muted)] text-xs uppercase tracking-[0.1em]">Active tools reviewed</dt><dd class="text-[var(--text-primary)] m-0 tabular-nums">{activeTools.length}</dd></div>
@@ -262,14 +262,14 @@ const brandNotes = [
 <style>
   .media-brand-kit {
     display: grid;
-    gap: 14px;
+    gap: var(--site-card-gap);
   }
 
   .media-brand-hero {
     display: grid;
     overflow: hidden;
     border: 1px solid rgba(249, 115, 22, 0.24);
-    border-radius: 8px;
+    border-radius: var(--site-radius-card);
     background: var(--bg-card);
   }
 
@@ -283,9 +283,9 @@ const brandNotes = [
     display: grid;
     grid-template-columns: auto minmax(0, 1fr) auto;
     align-items: center;
-    gap: 14px;
+    gap: var(--site-card-gap);
     border-top: 1px solid var(--border);
-    padding: 14px 16px;
+    padding: var(--site-card-gap) var(--site-card-padding);
   }
 
   .media-brand-hero span,
@@ -332,21 +332,21 @@ const brandNotes = [
   .media-brand-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 12px;
+    gap: var(--site-grid-gap);
   }
 
   .media-brand-card {
     display: grid;
     grid-template-columns: 74px minmax(0, 1fr) min-content;
     align-items: center;
-    gap: 14px;
+    gap: var(--site-card-gap);
     min-height: 104px;
     overflow: hidden;
     border: 1px solid var(--border);
-    border-radius: 8px;
+    border-radius: var(--site-radius-card);
     background: rgba(8, 13, 24, 0.66);
     color: var(--text-primary);
-    padding: 14px;
+    padding: var(--site-card-padding);
     text-decoration: none;
     transition: border-color 150ms ease, background 150ms ease, transform 150ms ease;
   }
@@ -364,7 +364,7 @@ const brandNotes = [
     height: 74px;
     overflow: hidden;
     border: 1px solid rgba(249, 115, 22, 0.2);
-    border-radius: 8px;
+    border-radius: var(--site-radius-control);
     background:
       radial-gradient(circle at 50% 40%, rgba(249, 115, 22, 0.13), transparent 62%),
       rgba(2, 6, 23, 0.62);
@@ -395,7 +395,7 @@ const brandNotes = [
 
   .media-brand-copy {
     display: grid;
-    gap: 6px;
+    gap: var(--site-chip-gap);
     min-width: 0;
   }
 
@@ -408,15 +408,15 @@ const brandNotes = [
   .media-brand-notes {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 12px;
+    gap: var(--site-grid-gap);
     margin: 2px 0 0;
   }
 
   .media-brand-notes div {
     border: 1px solid var(--border);
-    border-radius: 8px;
+    border-radius: var(--site-radius-card);
     background: rgba(8, 13, 24, 0.52);
-    padding: 14px;
+    padding: var(--site-card-padding);
   }
 
   .media-brand-notes dt,

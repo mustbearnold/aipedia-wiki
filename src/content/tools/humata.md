@@ -142,6 +142,12 @@ A document-chat platform aimed at research-heavy students and small teams. Uploa
 
 Prices verified 2026-04-18 via [humata.ai/pricing](https://www.humata.ai/pricing).
 
+## Best plan recommendation
+
+Use Free only for a few papers or one small project. Student is the obvious first paid plan for academic users because the price is low and the page allowance fits regular reading without jumping to a professional subscription. Expert is the better solo-professional tier when the workflow involves client files, research packets, or recurring PDF review. Team is the first plan to consider for shared folders, SSO, OCR, and departmental document workflows.
+
+Before paying, upload the actual documents you care about: scanned PDFs, tables, long contracts, academic papers, and mixed-format files. The value depends less on the chat interface and more on whether citations point to the right pages, OCR works on your scans, and the plan limit matches your monthly page volume.
+
 ## Failure modes
 
 - **Page cap is enforced strictly.** Upload 10 PDFs averaging 60 pages = 600 pages, which blows through Expert tier fast. Monitor usage.

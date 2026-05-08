@@ -2,20 +2,20 @@
 type: tool
 slug: hedra
 title: Hedra
-tagline: Omnimodal talking character video. One image plus one audio file, out comes a lip-synced avatar with full-scene motion and up to ten-minute runtime.
+tagline: AI creative studio for character video, pooled credits, and access to Hedra, Veo, Kling, MiniMax, image, and voice models from one workspace.
 category: ai-video
 secondary_categories: [ai-voice]
 company: hedra
 url: https://www.hedra.com
 pricing_model: freemium
-price_range: "$0-$60/month"
+price_range: "Free signup; $15-$75/month; Enterprise custom"
 status: active
 launched: 2024-05
-last_updated: 2026-05-04
-last_verified: 2026-05-04
-update_frequency: monthly
-seo_title: "Hedra: Features, Pricing & Review (April 2026)"
-meta_description: "Hedra Character-3 turns one image plus one audio file into a talking, singing, moving character video. Omnia Fast Alpha adds scene control. Free tier (300 credits) through Professional at $60/mo. Real-time avatar streaming at $0.05/minute."
+last_updated: 2026-05-08
+last_verified: 2026-05-08
+update_frequency: weekly
+seo_title: "Hedra Review: Pricing, Models & Best Uses (May 2026)"
+meta_description: "Hedra is now a pooled-credit AI media studio for character video plus Veo, Kling, MiniMax, image, and voice models. Current May 2026 review covers pricing, credits, best uses, and watch-outs."
 author: "aipedia.wiki Editorial"
 affiliate:
   has_program: false
@@ -30,209 +30,190 @@ scores:
   longevity: 7
 facts:
   best_for:
-    value: Best for creators and teams generating talking-character and AI video assets for social, ads, and creative production.
+    value: Best for creators and marketing teams that want character video plus access to several video, image, and voice models under one pooled-credit studio.
     source: https://www.hedra.com/
     source_label: Hedra official site
     source_id: hedra-official
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-08'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-08-08'
   pricing_anchor:
-    value: Hedra pricing includes a free plan and paid packaging; verify credits, generation limits, resolution, commercial
-      terms, and export rules before production use.
+    value: Hedra pricing on 2026-05-08 lists Basic at $15/month with 1,500 credits, Creator at $30/month with 5,400 credits, Professional and Teams at $75/month with 14,400 credits, plus Enterprise custom.
     source: https://www.hedra.com/pricing
     source_label: Hedra pricing
     source_id: hedra-pricing
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-08'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-04'
+    next_review_at: '2026-06-08'
   workflow_surface:
-    value: Hedra is a creative video-generation product, not a general video editor, meeting recorder, or developer inference
-      API.
-    source: https://www.hedra.com/
-    source_label: Hedra official site
-    source_id: hedra-official
-    verified_at: '2026-05-04'
-    volatility: medium
-    confidence: high
-    next_review_at: '2026-11-04'
-  model_control:
-    value: Evaluate the live product for character consistency, voice/lip-sync quality, prompt controllability, aspect ratios,
-      and asset rights.
-    source: https://www.hedra.com/
-    source_label: Hedra official site
-    source_id: hedra-official
-    verified_at: '2026-05-04'
+    value: Hedra has shifted from a narrow talking-character tool into a unified studio where video, image, character animation, and voice models share one credit balance.
+    source: https://www.hedra.com/models
+    source_label: Hedra models
+    source_id: hedra-models
+    verified_at: '2026-05-08'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-04'
+    next_review_at: '2026-06-08'
+  model_control:
+    value: Hedra's model page says all models draw from the same credit pool and recommends Omnia or Hedra Avatar for character videos, Veo 3.1 for cinematic scenes, Kling 2.5 Turbo or MiniMax for fast iterations, and Nano Banana or Seedream for images.
+    source: https://www.hedra.com/models
+    source_label: Hedra models
+    source_id: hedra-models
+    verified_at: '2026-05-08'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-06-08'
   watch_out_for:
-    value: For brand work, test artifacts, identity/IP policy, watermarking, moderation, and repeatability before building a
-      content pipeline around Hedra.
+    value: Credits do not roll over monthly, model costs vary sharply by model and second/generation, and high-end models like Veo 3.1 consume far more credits than Hedra Character-3.
     source: https://www.hedra.com/pricing
     source_label: Hedra pricing
     source_id: hedra-pricing
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-08'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-04'
-tags: [ai-video, talking-head, avatar, lip-sync, character-animation, hedra, character-3, omnia, studio-2]
+    next_review_at: '2026-06-08'
+tags: [ai-video, talking-head, avatar, lip-sync, character-animation, hedra, character-3, omnia, veo, kling, multimodal-studio]
 best_for:
-  - talking-head avatars from a single portrait
-  - long-form lip-synced character video up to 10 minutes
-  - singing and performance videos
-  - real-time avatar streaming on a credit budget
-  - creators who need scene motion, not just a moving mouth
+  - creators who want character videos and broader AI media generation in one studio
+  - teams comparing Hedra Avatar, Omnia, Veo, Kling, MiniMax, and image models with one credit wallet
+  - social, ad, and marketing teams that need fast iteration across video/image/audio assets
+  - buyers who can budget by credits instead of fixed monthly video minutes
 not_best_for:
-  - photoreal corporate stock avatars (HeyGen or Synthesia)
-  - sales outreach scale with template personalization (Tavus)
-  - instant static portrait animation with the cheapest floor (D-ID)
-  - fully-cloned personal avatars from webcam footage (Argil)
+  - buyers who only want a cheap static talking-head avatar generator
+  - enterprise L&D teams that need SCORM, LMS, and training governance first
+  - teams that need predictable fixed video minutes rather than variable model credits
+  - users who will waste monthly credits because they do not roll over
 quick_answer: >-
-  Hedra is the strongest talking-character video model for creators who need an avatar that actually moves, not just a mouth. Character-3 Long-Form handles 10-minute runs, Omnia adds prompt-driven scene motion. Skip it for polished corporate stock avatars (HeyGen, Synthesia) or cloned-self sales video (Tavus, Argil).
+  Hedra is no longer just "one portrait plus audio becomes a talking character." As of May 8, 2026, it is better understood as a pooled-credit AI media studio: Hedra character models sit next to Veo 3.1, Kling 2.5 Turbo, MiniMax, image models, and voice generation. Pick it when you want model choice and fast creative iteration; skip it when you need predictable avatar-video minutes or enterprise training workflows.
 price_history:
-  - date: 2026-04-15
-    plan: "Professional"
-    price: "$60/mo"
+  - date: 2026-05-08
+    plan: "Basic"
+    price: "$15/mo"
     source: "https://www.hedra.com/pricing"
-    source_label: "Source"
+    source_label: "Hedra pricing"
     source_id: hedra-pricing
-    note: "Verified unchanged. 12,000 credits."
-  - date: 2026-01-20
+    note: "1,500 monthly credits; slower generations; commercial use."
+  - date: 2026-05-08
     plan: "Creator"
-    price: "$24/mo"
+    price: "$30/mo"
     source: "https://www.hedra.com/pricing"
-    source_label: "Source"
+    source_label: "Hedra pricing"
     source_id: hedra-pricing
-    note: "Voice cloning and watermark-free output confirmed on Creator tier."
+    note: "5,400 monthly credits; faster generation; commercial use; extra credits available."
+  - date: 2026-05-08
+    plan: "Professional"
+    price: "$75/mo"
+    source: "https://www.hedra.com/pricing"
+    source_label: "Hedra pricing"
+    source_id: hedra-pricing
+    note: "14,400 monthly credits; fastest generation; commercial use; Teams plan access."
 ---
 
 # Hedra
 
-San Francisco talking-character video company. The flagship model, **Character-3**, is an omnimodal system that takes one image and one audio file and returns a lip-synced avatar with micro-expressions, head motion, and full-body movement in a single pass.
-
-**Character-3 Long-Form** pushes runtime to ten minutes. **Omnia (Fast Alpha)**, the early-2026 release, adds prompt-driven scene control: upload one image plus audio, then describe motion ("walking toward camera", "gesturing with both hands"). **Studio 2** wraps everything in a timeline editor with audio layers, scene stitching, and a Camera Director tool.
+Hedra is an AI creative studio for video, image, character animation, and voice generation. The important 2026 buyer shift: Hedra is now positioned less like a single talking-character model and more like a pooled-credit workspace where multiple models run under one account.
 
 ## System Verdict
 
-> **Pick Hedra if the character has to actually move and perform, not just mouth along.** Character-3 treats image, text, and audio as one input, so lip-sync, head nod, blink, and body gesture stay coherent instead of drifting apart the way two-stage pipelines do. The ten-minute Long-Form ceiling clears the sixty-second wall most competitors still sit behind in early 2026.
+> **Pick Hedra when you want model choice inside one creative workflow.** Hedra still matters for character videos, but its current models page also positions Veo, Kling, MiniMax, Nano Banana, Seedream, voice, and an AI agent workflow under the same studio and credit balance.
 >
-> **Skip it if the job is a corporate stock avatar reading a script at a desk.** HeyGen and Synthesia ship polished template libraries, brand kits, and a hundred-plus voice-locale pairs out of the box. Hedra asks you to bring your own portrait and audio. It is a model, not a studio floor.
+> **Skip Hedra if you need predictable fixed minutes.** Credits are the currency, monthly subscription credits do not roll over, and costs vary heavily by model. A 10-second Hedra Character-3 render and a 10-second Veo 3.1 render do not cost the same.
 >
-> **Who pays which tier:** Free (300 credits) for evaluation, Lite $8/mo for hobbyists, Creator $24/mo for most working creators (voice cloning, watermark-free), Professional $60/mo for agencies with sustained volume, Enterprise for real-time streaming at scale.
+> **Best plan for most serious creators:** Creator at $30/month is the current middle plan because it gives 5,400 monthly credits and faster generation. Basic at $15/month is the safer test tier; Professional or Teams at $75/month fits sustained production.
 
-## Key Facts
+## Current Key Facts
 
-| | |
-|---|---|
-| **Flagship model** | Character-3 (omnimodal image + text + audio) |
-| **Long-form variant** | Character-3 Long-Form, up to 10-minute clips |
-| **2026 release** | Omnia (Fast Alpha), prompt-driven scene motion |
-| **Editor** | Studio 2 with timeline, audio layers, Camera Director |
-| **Modular Blocks** | Elements library (January 2026): reusable characters, outfits, environments |
-| **Real-time streaming** | $0.05/minute, about 15x below direct competitors |
-| **Pricing tiers** | Free (300 cr) · Lite $8 · Creator $24 · Professional $60 · Enterprise custom |
-| **Credit reference** | ~180 credits per 30-second 720p talking head |
-| **Credit rollover** | None. Unused credits reset each billing cycle. |
-| **Commercial rights** | Watermark-free output on Creator and above |
+- **Studio positioning:** create consistent images and videos for social, sales, and marketing collateral.
+- **Model access:** Hedra says video, image, character animation, and voice models all draw from one shared credit pool.
+- **Current model guidance:** Hedra recommends Omnia or Hedra Avatar for character videos, Veo 3.1 for cinematic scenes, Kling 2.5 Turbo or MiniMax for fast iterations, and Nano Banana or Seedream for images.
+- **Current self-serve plans:** Basic $15/month, Creator $30/month, Professional $75/month, Teams $75/month, Enterprise custom.
+- **Current credit examples:** Hedra Character-3 is listed at 6 credits/second; Veo 3.1 Fast at 20 credits/second; Veo 3.1 at 55 credits/second; Sora 2 Pro at 70 credits/second; Kling 2.5 Turbo at 10 credits/second.
+- **Credit rollover:** subscription credits reset each billing cycle; purchased credit packs can roll over.
 
-Every data point above was verified on 2026-04-17. See Sources.
+Verified against Hedra official pages on 2026-05-08.
 
-## What it actually is
+## What It Actually Is
 
-A character-video model plus a non-linear editor. The model is omnimodal, meaning image, prompt text, and audio feed the same network instead of chaining a lip-sync pass on top of a face-animation pass.
+Hedra started in buyer memory as a talking-character video product. The current site now frames it as a broader AI media studio: ideation, image/video generation, character/voice workflows, templates, and model routing.
 
-Character-3 is the production line. It handles talking heads, singing, emotional delivery, and camera framing from a single portrait. Character-3 Long-Form extends the runtime ceiling to about ten minutes in one render.
+That matters for buyers. If you only compare Hedra to HeyGen or D-ID as a static avatar tool, you miss the new use case. Hedra is closer to a creative model hub where a marketer can test character video, Veo 3.1, Kling 2.5 Turbo, MiniMax, image models, and voice in the same credit environment.
 
-Omnia (Fast Alpha) is the newer entry. It adds prompt-driven scene motion: instead of the avatar staying in frame, it walks, turns, or gestures on cue. Useful for narrative shorts and product demos.
+The downside is budgeting. Pooled credits are flexible, but they make cost less obvious than a plan promising a fixed number of video minutes.
 
-Studio 2 is where the outputs are composed. Timeline editing, multi-layer audio, branching workflow paths, and the Camera Director tool for pan, dolly, and tracking shots. Elements (released January 2026) introduces reusable character bases, outfits, and environments for brand consistency across videos.
+## When To Pick Hedra
 
-## When to pick Hedra
+- **You want to compare multiple video models quickly.** Hedra's model page explicitly includes Veo, Kling, MiniMax, Hedra character models, and other media models in one studio.
+- **You need social/ad creative iteration.** The home page positions Hedra around social media, sales, and marketing collateral.
+- **You are comfortable budgeting by credits.** Creator and Professional provide enough monthly credits to test a real workflow.
+- **You want character video plus cinematic generation nearby.** Hedra can be used for talking characters and broader scene generation instead of forcing separate accounts.
 
-- **Character has to perform, not just speak.** Singing, laughter, acting beats, emotional emphasis. Omnimodal training surfaces these consistently instead of drifting off the audio.
-- **You need a run longer than a minute.** Character-3 Long-Form clears ten minutes in one render. HeyGen and D-ID stitch multiple shorter clips; Hedra does it in one pass.
-- **You want scene motion, not a locked-down bust shot.** Omnia responds to prompt directions like "walking toward camera" without separate keyframing.
-- **Real-time avatars on a budget.** Streaming at $0.05/minute is aggressively below the streaming avatar rate card from Tavus and Synthesia.
-- **You already have a portrait and a voice.** The product is opinionated: bring the source inputs, skip template studios.
+## When To Pick Something Else
 
-## When to pick something else
-
-- **Corporate stock avatar with brand kits and localization:** [HeyGen](/tools/heygen/) or [Synthesia](/tools/synthesia/). Template libraries, locale-voice pairs, SOC 2 posture.
-- **Personalized sales video at scale from a cloned self:** [Tavus](/tools/tavus/). Built around the outbound use case with CRM hooks.
-- **Cheapest floor for photo-to-talking-head:** [D-ID](/tools/d-id/). Lowest entry price for short clips and embed widgets.
-- **Fully-cloned personal avatar from webcam footage:** [Argil](/tools/argil/). Specialized in creator self-clones with gesture capture.
-- **Scripted video with auto-translated voice locales:** [Synthesia](/tools/synthesia/). Strongest multi-language pipeline.
+- **Polished corporate avatar video:** [HeyGen](/tools/heygen/) or [Synthesia](/tools/synthesia/) are clearer defaults for stock avatars, brand kits, translation, and business workflows.
+- **Interactive real-time visual agents:** [D-ID](/tools/d-id/) or [Tavus](/tools/tavus/) are better first comparisons.
+- **Creator self-clones and UGC avatar ads:** [Argil](/tools/argil/) is more narrowly tuned to creator/marketer avatar output.
+- **Short-form editing and captions:** [Captions.ai](/tools/captions/) is stronger for phone-first editing, subtitles, AI edits, and social exports.
 
 ## Pricing
 
-Subscription pricing via [hedra.com/pricing](https://www.hedra.com/pricing). Credits do not roll over. Annual billing typically saves roughly 20% across paid tiers.
+Use [Hedra pricing](https://www.hedra.com/pricing) as the purchase source of truth. Current public monthly pricing on 2026-05-08:
 
-| Plan | Monthly | Credits | Watermark | Voice cloning | Who's it for |
-|------|---------|---------|-----------|---------------|--------------|
-| Free | $0 | 300 | Yes | No | Evaluation only |
-| Lite | $8/mo | 1,000 | Yes | No | Light hobbyist use |
-| Creator | $24/mo | 4,000 | No | Yes | **Most working creators land here** |
-| Professional | $60/mo | 12,000 | No | Yes | Agencies, sustained output |
-| Enterprise | Custom | Custom | No | Yes | Real-time avatar streaming, SSO, SLA |
+- **Basic:** $15/month, 1,500 credits/month, slower generations, commercial use, no monthly rollover.
+- **Creator:** $30/month, 5,400 credits/month, faster generation, commercial use, extra credits available.
+- **Professional:** $75/month, 14,400 credits/month, fastest generation, commercial use, extra credits available, Teams plan access.
+- **Teams:** $75/month, 14,400 credits/month, fastest generation, commercial use, Teams plan access.
+- **Enterprise:** custom pricing, custom credits, dedicated technical support, account management, private deployment options, SSO, legal/security review, and team management.
 
-*Prices verified 2026-04-17 via [Hedra pricing](https://www.hedra.com/pricing). Real-time avatar streaming bills at roughly $0.05 per minute on the Enterprise track. Reference cost: a 30-second 720p talking head burns about 180 credits.*
+Credits are not interchangeable with minutes. Hedra lists different credit rates for different models, including Hedra Character-3 at 6 credits/second and Veo 3.1 at 55 credits/second.
 
-## Against the alternatives
+## Best Plan Guidance
 
-| | Hedra Character-3 | HeyGen | Synthesia | Tavus |
-|---|---|---|---|---|
-| **Use case** | Performance character, singing, narrative | Corporate stock avatar, marketing video | Enterprise training, localization | Personalized outbound video |
-| **Max clip length** | ~10 min (Long-Form) | Unlimited via stitching | Unlimited via stitching | Seconds to a few minutes |
-| **Avatar source** | Bring your own portrait | Template library + custom | Template library + enterprise scan | User self-scan clone |
-| **Scene motion** | Yes via Omnia | Limited | Limited | Background locked |
-| **Real-time streaming** | Yes, $0.05/min | Yes, higher rate | Limited pilot | Yes |
-| **Strongest at** | Performance fidelity | Template breadth | Language locales | Sales personalization |
+- **Testing:** start free or Basic, but test the actual model you plan to use because credit burn varies by model.
+- **Most creators:** Creator is the practical first paid plan because 5,400 credits gives more room to compare models.
+- **Agencies and teams:** Professional or Teams makes sense if you need fastest generation, shared work, and sustained monthly output.
+- **Enterprise:** use sales if SSO, private deployment, legal/security review, or dedicated support is mandatory.
 
-## Failure modes
+## Failure Modes
 
-- **Credits burn fast on long renders.** A ten-minute Character-3 Long-Form can eat a Creator plan's monthly allotment in a single session. Budget renders before subscribing.
-- **Omnia is Fast Alpha.** Scene motion ships with rough edges on complex crowd scenes and fast camera movement. Expect retries.
-- **No rollover on unused credits.** Every plan resets at the cycle boundary. Heavy-batch workflows concentrated in one week of the month waste capacity.
-- **Training and template depth trail HeyGen and Synthesia.** Hedra ships a strong model and a decent editor, not a locked-down corporate studio floor. Brand kit and locale coverage are shallower.
-- **Source-input quality caps output.** A low-resolution portrait or noisy audio file surfaces as artifacts. Character-3 is not a restoration model.
-- **Real-time streaming requires Enterprise.** The $0.05/minute streaming rate is not on the self-serve Professional tier.
-- **Performance realism depends on audio drama.** Flat monotone inputs produce flat outputs. Omnimodal training amplifies what is in the audio, including absence of prosody.
+- **Credit burn can surprise buyers.** High-end models consume credits quickly, especially cinematic video models.
+- **Monthly subscription credits do not roll over.** Batch-heavy teams can waste value if they do not ship consistently.
+- **Model routing complicates quality evaluation.** A great Hedra Character-3 output does not guarantee the same value from Veo, Kling, MiniMax, or image models.
+- **Not a mature enterprise training stack.** Hedra's current positioning is creative production, not L&D governance.
+- **Official model names can change quickly.** Treat model availability and rates as high-volatility facts.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis readers see. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [Hedra pricing](https://www.hedra.com/pricing), the [Hedra feature announcements blog](https://hedra.me/blogs/feature-announcements-and-updates), and third-party coverage of Character-3 Long-Form and Omnia Fast Alpha.
+AiPedia refreshed this page on 2026-05-08 using Hedra's official home page, models page, and pricing page. Older Lite/Creator/Professional pricing, free-credit counts, streaming-price claims, and unsupported long-form assertions were removed or replaced with current official plan and model-credit information.
 
 ## FAQ
 
-**What is Character-3 and how is it different from a standard lip-sync model?**
-Character-3 is omnimodal. It processes image, text prompt, and audio through a single network instead of chaining a face-animation step with a separate lip-sync pass. The output keeps mouth shapes, head motion, blinks, and body gestures coherent with the audio emotion. Two-stage pipelines drift apart when any signal changes.
+**What is Hedra best for?**
+Hedra is best for creators and marketing teams that want character video plus broader AI media generation in one pooled-credit studio.
 
-**How long can a Hedra clip run?**
-Character-3 Long-Form renders up to about ten minutes in a single pass. Standard Character-3 handles shorter clips. Longer projects can be stitched in Studio 2's timeline editor with multi-layer audio.
+**How much does Hedra cost?**
+As of 2026-05-08, Hedra lists Basic at $15/month, Creator at $30/month, Professional at $75/month, Teams at $75/month, and Enterprise at custom pricing.
 
-**What is Hedra Omnia?**
-Omnia (Fast Alpha) is the early-2026 scene-motion release. The avatar walks, gestures, and moves through space in response to text prompts, not just a locked bust shot. Useful for narrative video and product demo scenes.
+**Does Hedra include Veo or Kling?**
+Hedra's models page says Veo and Kling models are available inside Hedra Studio, and its pricing page lists current credit rates for Veo 3.1, Veo 3.1 Fast, Kling 2.5 Turbo, and other models.
 
-**Does Hedra offer real-time avatar streaming?**
-Yes. The streaming tier bills at about $0.05 per minute, roughly 15x below direct competitors. Real-time streaming is on the Enterprise track, not the self-serve Professional plan.
+**Do Hedra credits roll over?**
+Monthly subscription credits do not carry over. Hedra says purchased credit packs can roll over.
 
-**Is there a free tier?**
-Yes. Free plan ships 300 credits for evaluation. Watermark stays on output. Creator at $24/mo and above removes the watermark and unlocks voice cloning.
+**Which Hedra plan should most creators try first?**
+Creator at $30/month is the best first serious test because it has 5,400 monthly credits and faster generation. Basic is safer for quick evaluation.
 
-**Does Hedra have an API?**
-Access is available through Enterprise. Most self-serve users interact through the web-based Studio 2 editor.
+**Is Hedra better than HeyGen?**
+For model variety and creative experimentation, often yes. For polished corporate avatar videos, translation workflows, and business packaging, [HeyGen](/tools/heygen/) is usually the stronger default.
 
 ## Sources
 
-- [Hedra pricing page](https://www.hedra.com/pricing): current tiers, credits, and plan features
-- [Hedra feature announcements](https://hedra.me/blogs/feature-announcements-and-updates): Character-3 Long-Form, Omnia, Elements release notes
-- [MagicHour: How to Use Hedra AI in 2026](https://magichour.ai/blog/guide-to-hedra-ai): Character-3 capabilities and pricing reference
-- [Filmora: Ultimate Guide to Hedra AI in 2026](https://filmora.wondershare.com/video-editor-review/hedra-ai-review.html): Studio 2 timeline and Camera Director coverage
-- [Atlas Cloud: Free AI Video Generators for Consistent Characters and Lip-Sync](https://www.atlascloud.ai/blog/guides/top-4-free-ai-video-generators-for-consistent-characters-lip-sync): Character-3 runtime ceiling and real-time streaming rate
+- [Hedra official site](https://www.hedra.com/): current positioning around social, sales, marketing collateral, and unified creative workflows.
+- [Hedra models](https://www.hedra.com/models): pooled-credit model access, model guidance, and supported model families.
+- [Hedra pricing](https://www.hedra.com/pricing): current plan names, prices, credit allocations, model credit rates, rollover rules, and enterprise features.
 
 ## Related
 
 - **Category:** [AI Video](/categories/ai-video/) · [AI Voice](/categories/ai-voice/)
+- **Compare next:** [HeyGen](/tools/heygen/) · [Synthesia](/tools/synthesia/) · [D-ID](/tools/d-id/) · [Argil](/tools/argil/)

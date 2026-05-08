@@ -60,18 +60,18 @@ const categoryLabel = category.replace('ai-', '').replace(/-/g, ' ')
 ---
 
 {alternatives.length > 0 && (
-  <section class="not-prose my-8" data-pagefind-ignore>
-    <div class="flex items-baseline justify-between mb-3 flex-wrap gap-2">
+  <section class="not-prose my-[var(--site-section-gap)]" data-pagefind-ignore>
+    <div class="flex items-baseline justify-between mb-[var(--site-card-gap)] flex-wrap gap-[var(--site-chip-gap)]">
       <h2 class="text-lg font-bold m-0 text-[var(--text-primary)]">Top {categoryLabel} alternatives</h2>
       <a href={`/categories/${category}/`} class="text-xs text-[var(--accent-primary)] no-underline hover:underline">
         See all {categoryLabel} tools →
       </a>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-[var(--site-grid-gap)]">
       {alternatives.map((alt) => (
         <a
           href={`/tools/${alt.slug}/`}
-          class="group flex items-start gap-3 rounded-xl border border-[var(--border)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] hover:border-[rgba(249, 115, 22,0.4)] p-3 no-underline transition-colors"
+          class="group flex items-start gap-[var(--site-card-gap)] rounded-[var(--site-radius-card)] border border-[var(--border)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] hover:border-[rgba(249, 115, 22,0.4)] p-[var(--site-card-padding)] no-underline transition-colors"
         >
           <ToolLogo slug={alt.slug} title={alt.title} size={36} className="shrink-0" />
           <div class="flex-1 min-w-0">

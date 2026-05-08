@@ -54,12 +54,12 @@ const rows = sorted.map((entry, i) => {
 ---
 
 {sorted.length >= 2 && (
-  <section class="not-prose my-8" aria-labelledby="price-history-heading">
-    <div class="flex items-baseline justify-between mb-3">
+  <section class="not-prose my-[var(--site-section-gap)]" aria-labelledby="price-history-heading">
+    <div class="flex items-baseline justify-between mb-[var(--site-card-gap)]">
       <h2 id="price-history-heading" class="text-lg font-bold text-[var(--text-primary)] m-0">Price history</h2>
       <span class="text-xs text-[var(--text-muted)]">Since launch</span>
     </div>
-    <div class="rounded-xl border border-[var(--border)] bg-[var(--bg-card)] overflow-hidden">
+    <div class="rounded-[var(--site-radius-card)] border border-[var(--border)] bg-[var(--bg-card)] overflow-hidden">
       <ul class="list-none p-0 m-0">
         {rows.map((r, idx) => (
           <li class={`flex items-center gap-3 px-4 py-3 ${idx < rows.length - 1 ? 'border-b border-[var(--border)]' : ''}`}>
@@ -84,7 +84,7 @@ const rows = sorted.map((entry, i) => {
         ))}
       </ul>
     </div>
-    <p class="text-[11px] text-[var(--text-muted)] mt-2 leading-relaxed">
+    <p class="text-[11px] text-[var(--text-muted)] mt-[var(--site-card-gap)] leading-relaxed">
       Price changes tracked from public pricing pages. Email <a href="mailto:hello@aipedia.wiki" class="text-[var(--accent-primary)] no-underline">hello@aipedia.wiki</a> to flag a missed change.
     </p>
   </section>

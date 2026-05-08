@@ -107,6 +107,7 @@ function resolveSlug(slug: string) {
     vendorUrl: (t.data as any).url ?? null,
     affiliateLink: affiliate?.link ?? null,
     hasProgram: !!affiliate?.has_program,
+    affiliateProgram: affiliate?.network ?? null,
   };
 }
 
@@ -122,6 +123,7 @@ interface ResolvedTool {
   vendorUrl?: string | null;
   affiliateLink?: string | null;
   hasProgram?: boolean;
+  affiliateProgram?: string | null;
 }
 const resolvedStacks: Record<string, Record<string, Record<string, ResolvedTool[]>>> = {};
 for (const [role, cats] of Object.entries(STACKS)) {
@@ -250,7 +252,7 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
   title="AI Tool Set Builder: Find Your Best AI Tools (April 2026)"
   description="Pick your role, set your budget, get a suggested AI tool set, swap any tool, and share the result. Recently-updated badges flag tools that shipped in the last 14 days."
 >
-  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+  <div class="site-content-frame">
     <Breadcrumb items={[{ label: 'Tool Set Builder' }]} />
 
     <div class="stack-builder-page-root">
@@ -394,9 +396,9 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
     .sb-hero {
       display: grid;
       grid-template-columns: minmax(0, 1fr) minmax(260px, 360px);
-      gap: clamp(1.25rem, 4vw, 3rem);
+      gap: var(--site-panel-gap);
       align-items: end;
-      padding: clamp(3rem, 7vw, 5.75rem) 0 clamp(2rem, 5vw, 3.5rem);
+      padding: var(--site-page-top) 0 var(--site-section-gap);
     }
     .sb-hero-copy {
       max-width: 820px;
@@ -427,7 +429,7 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
     }
     .sb-hero-copy > p:last-child {
       max-width: 700px;
-      margin: 1.35rem 0 0;
+      margin: var(--site-content-gap) 0 0;
       color: var(--text-secondary);
       font-size: clamp(1.05rem, 2vw, 1.25rem);
       line-height: 1.6;
@@ -437,7 +439,7 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
     }
     .sb-logic h2 {
       margin: 0;
-      padding: 1rem 1.1rem;
+      padding: var(--site-card-padding);
       color: var(--home-on-card);
       font-size: 0.95rem;
       border-bottom: 1px solid var(--home-line);
@@ -452,9 +454,9 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
     .sb-logic li {
       display: flex;
       align-items: center;
-      gap: 0.75rem;
+      gap: var(--site-card-gap);
       min-height: 3rem;
-      padding: 0.75rem 1.1rem;
+      padding: var(--site-card-gap) var(--site-card-padding);
       color: var(--home-on-card-muted);
       border-bottom: 1px solid var(--home-line);
       font-size: 0.9rem;
@@ -1000,6 +1002,12 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
       background: var(--home-panel-strong);
       color: var(--home-on-card);
     }
+    .stack-builder-page-root .sb-affiliate-note {
+      color: var(--home-on-card-muted);
+      font-size: 0.62rem;
+      font-weight: 700;
+      line-height: 1.1;
+    }
     .stack-builder-page-root a.sb-cta-chip.home-surface-inner {
       display: flex;
       align-items: center;
@@ -1114,6 +1122,9 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
       swaps: /** @type {Record<string,string>} */ ({}),
     };
     const MAX_ROLES = 3;
+    const completedKeys = new Set();
+    let builderStarted = false;
+    const pendingEvents = [];
 
     const output = document.getElementById('stack-output');
     const placeholder = document.getElementById('stack-placeholder');
@@ -1127,6 +1138,55 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
     const placeholderKicker = document.getElementById('sb-empty-kicker');
     const placeholderTitle = document.getElementById('sb-empty-title');
     const placeholderCopy = document.getElementById('sb-empty-copy');
+
+    function deviceType() {
+      const width = window.innerWidth || document.documentElement.clientWidth || 0;
+      if (width < 768) return 'mobile';
+      if (width < 1024) return 'tablet';
+      return 'desktop';
+    }
+
+    function baseFunnelPayload(extra = {}) {
+      return {
+        page_type: 'stack_builder',
+        page_slug: 'stack-builder',
+        roles: state.roles.join(','),
+        role_count: state.roles.length,
+        budget: state.budget || '',
+        swap_count: Object.keys(state.swaps).length,
+        device_type: deviceType(),
+        viewport_width: window.innerWidth || document.documentElement.clientWidth || 0,
+        ...extra,
+      };
+    }
+
+    function flushFunnelEvents() {
+      if (!window.gtag) return;
+      while (pendingEvents.length > 0) {
+        const item = pendingEvents.shift();
+        window.gtag('event', item.name, item.payload);
+      }
+    }
+
+    function trackFunnel(name, extra = {}) {
+      const payload = baseFunnelPayload(extra);
+      window.dispatchEvent(new CustomEvent('aipedia:stack-builder', {
+        detail: { event: name, payload },
+      }));
+      if (window.gtag) {
+        window.gtag('event', name, payload);
+      } else {
+        pendingEvents.push({ name, payload });
+      }
+    }
+
+    function trackStarted(trigger) {
+      if (builderStarted) return;
+      builderStarted = true;
+      trackFunnel('stack_builder_started', { trigger });
+    }
+
+    window.addEventListener('aipedia:analytics-ready', flushFunnelEvents);
 
     // ---------- URL sync ----------
     function readURL() {
@@ -1223,6 +1283,7 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
     }
 
     function toggleRole(role) {
+      trackStarted('role');
       const i = state.roles.indexOf(role);
       if (i >= 0) {
         state.roles.splice(i, 1);
@@ -1236,12 +1297,18 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
       paintRoleButtons();
       writeURL();
       renderStack();
+      trackFunnel('stack_builder_role_selected', {
+        selected_role: role,
+        selected: state.roles.includes(role),
+      });
     }
     function setBudget(budget) {
+      trackStarted('budget');
       state.budget = budget;
       paintBudgetButtons();
       writeURL();
       renderStack();
+      trackFunnel('stack_builder_budget_selected', { selected_budget: budget });
     }
 
     document.querySelectorAll('.sb-role-btn').forEach(b => {
@@ -1297,6 +1364,27 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
     function escapeHtml(s) {
       if (typeof s !== 'string') return '';
       return s.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+    }
+
+    function commercialCtaAttrs(t, placement, clickEvent) {
+      const isAffiliate = !!t.affiliateLink;
+      return [
+        'data-commercial-cta',
+        `data-cta-view-event="${escapeHtml(clickEvent + '_view')}"`,
+        `data-cta-click-event="${escapeHtml(clickEvent)}"`,
+        'data-cta-page-type="stack_builder"',
+        'data-cta-page-slug="stack-builder"',
+        `data-cta-placement="${escapeHtml(placement)}"`,
+        `data-cta-tool-slug="${escapeHtml(t.slug)}"`,
+        `data-cta-tool-name="${escapeHtml(t.title)}"`,
+        'data-cta-label="Try"',
+        `data-cta-destination-type="${isAffiliate ? 'affiliate' : 'official'}"`,
+        `data-cta-is-affiliate="${String(isAffiliate)}"`,
+        `data-cta-category-slug="${escapeHtml(t.category || '')}"`,
+        `data-cta-affiliate-program="${escapeHtml(t.affiliateProgram || '')}"`,
+        `data-cta-price-range="${escapeHtml(t.price || '')}"`,
+        'data-cta-is-sticky="false"',
+      ].join(' ');
     }
 
     function renderCategoryIcon(category) {
@@ -1381,6 +1469,7 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
                 const tryUrl = t.affiliateLink || t.vendorUrl || '';
                 const tryRel = t.affiliateLink ? 'noopener nofollow sponsored' : 'noopener';
                 const tryLabel = 'Try';
+                const tryAttrs = commercialCtaAttrs(t, 'stack_builder_tool_row', 'stack_builder_try_tool');
                 return `
                   <article class="sb-stack-row home-surface-inner">
                     <a href="${t.url}" class="sb-stack-icon" aria-label="Open ${escapeHtml(t.title)} review">
@@ -1411,7 +1500,7 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
                       <button type="button" class="sb-swap-action" data-swap-role="${escapeHtml(role)}" data-swap-cat="${escapeHtml(catName)}" data-swap-slug="${escapeHtml(original.slug)}" aria-label="Swap ${escapeHtml(t.title)} for an alternative">
                         Swap
                       </button>
-                      ${tryUrl ? `<a href="${escapeHtml(tryUrl)}" target="_blank" rel="${tryRel}" class="sb-try-link" aria-label="${tryLabel} ${escapeHtml(t.title)} on vendor site">${tryLabel}</a>` : ''}
+                      ${tryUrl ? `<a href="${escapeHtml(tryUrl)}" target="_blank" rel="${tryRel}" class="sb-try-link" aria-label="${tryLabel} ${escapeHtml(t.title)} on vendor site" ${tryAttrs}>${tryLabel}</a>${t.affiliateLink ? '<span class="sb-affiliate-note">Affiliate</span>' : ''}` : ''}
                       <button type="button" class="sb-compare-link" data-compare-add="${escapeHtml(t.slug)}" aria-pressed="false"><span data-compare-label>Compare</span></button>
                     </div>
                   </article>
@@ -1442,8 +1531,9 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
         const tryUrl = t.affiliateLink || t.vendorUrl || '';
         if (!tryUrl) return '';
         const rel = t.affiliateLink ? 'noopener nofollow sponsored' : 'noopener';
+        const tryAttrs = commercialCtaAttrs(t, 'stack_builder_try_stack_grid', 'stack_builder_try_stack');
         return `
-          <a href="${escapeHtml(tryUrl)}" target="_blank" rel="${rel}" class="sb-cta-chip home-surface-inner" title="Open ${escapeHtml(t.title)} in a new tab">
+          <a href="${escapeHtml(tryUrl)}" target="_blank" rel="${rel}" class="sb-cta-chip home-surface-inner" title="Open ${escapeHtml(t.title)} in a new tab" ${tryAttrs}>
             ${renderCategoryIcon(t.category)}
             <span>${escapeHtml(t.title)}</span>
             <strong>Try</strong>
@@ -1452,6 +1542,11 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
       }).filter(Boolean).join('');
 
       const hasAffiliate = allPicks.some(t => t.affiliateLink);
+      const completionKey = [
+        state.roles.join(','),
+        state.budget,
+        Object.entries(state.swaps).sort(([a], [b]) => a.localeCompare(b)).map(([k, v]) => `${k}=${v}`).join('|'),
+      ].join('::');
 
       // "From $X" uses summed LOW prices — the realistic entry cost.
       // High-range ceiling was confusing ($29-$2745) because seat-based
@@ -1484,6 +1579,18 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
           </div>
         ` : ''}
       `;
+
+      if (!completedKeys.has(completionKey)) {
+        completedKeys.add(completionKey);
+        trackFunnel('stack_builder_completed', {
+          tool_count: toolCount,
+          category_count: catCount,
+          estimated_monthly_low: Math.round(totalLow),
+          estimated_monthly_high: Math.round(totalHigh),
+          has_affiliate_links: hasAffiliate,
+          recommended_tools: allPicks.map(t => t.slug).join(','),
+        });
+      }
     }
 
     // ---------- Swap modal ----------
@@ -1496,6 +1603,11 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
 
     function openSwap(role, cat, slug) {
       swapRole = role; swapCat = cat; swapSlug = slug;
+      trackFunnel('stack_builder_swap_opened', {
+        role,
+        category_name: cat,
+        tool_slug: slug,
+      });
       const current = (STACKS[role]?.[cat]?.[state.budget] || []).find(t => t.slug === slug);
       const existingSwap = state.swaps[`${role}:${cat}:${slug}`];
       const displayed = existingSwap
@@ -1538,6 +1650,13 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
       } else {
         state.swaps[k] = targetSlug;
       }
+      trackFunnel('stack_builder_tool_swapped', {
+        role: swapRole,
+        category_name: swapCat,
+        original_tool_slug: swapSlug,
+        replacement_tool_slug: targetSlug === '__reset' ? '' : targetSlug,
+        reset_swap: targetSlug === '__reset',
+      });
       closeSwap();
       writeURL();
       renderStack();
@@ -1557,6 +1676,13 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
       if (choose) {
         chooseSwap(choose.getAttribute('data-choose'));
         return;
+      }
+      const compareBtn = e.target.closest && e.target.closest('[data-compare-add]');
+      if (compareBtn) {
+        trackFunnel('internal_compare_click', {
+          tool_slug: compareBtn.getAttribute('data-compare-add') || '',
+          cta_placement: 'stack_builder_compare_add',
+        });
       }
       if (e.target === swapBackdrop) closeSwap();
     });
@@ -1624,12 +1750,15 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
     }
 
     document.getElementById('sb-share').addEventListener('click', () => {
+      trackFunnel('save_stack', { method: 'share_link' });
       copyText(location.href, document.getElementById('sb-share-label'), 'Copied!');
     });
     document.getElementById('sb-export-md').addEventListener('click', () => {
+      trackFunnel('save_stack', { method: 'markdown_export' });
       copyText(buildMarkdown(), document.getElementById('sb-export-md-label'), 'Copied!');
     });
     document.getElementById('sb-reset').addEventListener('click', () => {
+      trackFunnel('stack_builder_reset');
       state.roles = []; state.budget = null; state.swaps = {};
       paintRoleButtons(); paintBudgetButtons();
       writeURL(); renderStack();

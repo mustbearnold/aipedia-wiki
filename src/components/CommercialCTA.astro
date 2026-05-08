@@ -1,0 +1,126 @@
+---
+interface Props {
+  toolName: string;
+  toolSlug: string;
+  canonicalUrl?: string | null;
+  affiliateUrl?: string | null;
+  label?: string;
+  pricingModel?: string | null;
+  priceRange?: string | null;
+  affiliateProgram?: string | null;
+  pageType: string;
+  placement: string;
+  pageSlug?: string | null;
+  categorySlug?: string | null;
+  comparisonPair?: string | null;
+  className?: string;
+  wrapperClass?: string;
+  disclosureClass?: string;
+  disclosureText?: string;
+  showDisclosure?: boolean;
+  isStickyCta?: boolean;
+  arrow?: string;
+  ariaLabel?: string;
+  toolCtaMarker?: boolean;
+  compareCtaMarker?: boolean;
+  categoryCtaMarker?: boolean;
+  categoryListCtaMarker?: boolean;
+  guideCtaMarker?: boolean;
+  companyProductCtaMarker?: boolean;
+  viewEvent?: string;
+  clickEvent?: string;
+}
+
+const {
+  toolName,
+  toolSlug,
+  canonicalUrl,
+  affiliateUrl,
+  label,
+  pricingModel,
+  priceRange,
+  affiliateProgram,
+  pageType,
+  placement,
+  pageSlug,
+  categorySlug,
+  comparisonPair,
+  className = 't2-cta t2-cta-primary',
+  wrapperClass = 'commercial-cta-stack',
+  disclosureClass = 'commercial-cta-disclosure',
+  disclosureText = 'Affiliate link; no extra cost to you.',
+  showDisclosure = true,
+  isStickyCta = false,
+  arrow = '↗',
+  ariaLabel,
+  toolCtaMarker = false,
+  compareCtaMarker = false,
+  categoryCtaMarker = false,
+  categoryListCtaMarker = false,
+  guideCtaMarker = false,
+  companyProductCtaMarker = false,
+  viewEvent,
+  clickEvent,
+} = Astro.props;
+
+const href = (affiliateUrl && affiliateUrl.length > 0 ? affiliateUrl : canonicalUrl) ?? '';
+const isAffiliate = Boolean(affiliateUrl && affiliateUrl.length > 0);
+const destinationType = isAffiliate ? 'affiliate' : 'official';
+const rel = isAffiliate ? 'sponsored noopener' : 'noopener';
+const hasUrl = href.length > 0 && href !== '#';
+
+function defaultLabel(): string {
+  const model = (pricingModel ?? '').toLowerCase();
+  const price = (priceRange ?? '').toLowerCase();
+  const modelFree = model === 'free' || model === 'freemium';
+  const priceFree = /\$0(?!\s*\(self|\s*\(self-host)/i.test(price) || /\bfree\b/i.test(price);
+  if (modelFree && priceFree) return `Try ${toolName} free`;
+  if (model === 'enterprise') return `Visit ${toolName}`;
+  return `Get ${toolName}`;
+}
+
+const resolvedLabel = label ?? defaultLabel();
+const resolvedAriaLabel = ariaLabel ?? `${resolvedLabel} on the official site`;
+const resolvedViewEvent = viewEvent ?? (isAffiliate ? 'affiliate_cta_view' : 'official_cta_view');
+const resolvedClickEvent = clickEvent ?? (isAffiliate ? 'affiliate_cta_click' : 'official_cta_click');
+---
+
+{hasUrl && (
+  <span class={wrapperClass}>
+    <a
+      href={href}
+      target="_blank"
+      rel={rel}
+      class={className}
+      aria-label={resolvedAriaLabel}
+      data-commercial-cta
+      data-cta-view-event={resolvedViewEvent}
+      data-cta-click-event={resolvedClickEvent}
+      data-cta-page-type={pageType}
+      data-cta-placement={placement}
+      data-cta-tool-slug={toolSlug}
+      data-cta-tool-name={toolName}
+      data-cta-label={resolvedLabel}
+      data-cta-destination-type={destinationType}
+      data-cta-is-affiliate={String(isAffiliate)}
+      data-cta-page-slug={pageSlug ?? undefined}
+      data-cta-category-slug={categorySlug ?? undefined}
+      data-cta-comparison-pair={comparisonPair ?? undefined}
+      data-cta-affiliate-program={affiliateProgram ?? undefined}
+      data-cta-price-range={priceRange ?? undefined}
+      data-cta-is-sticky={String(isStickyCta)}
+      data-tool-cta={toolCtaMarker ? toolSlug : undefined}
+      data-compare-cta={compareCtaMarker ? toolSlug : undefined}
+      data-category-cta={categoryCtaMarker ? toolSlug : undefined}
+      data-category-list-cta={categoryListCtaMarker ? toolSlug : undefined}
+      data-guide-cta={guideCtaMarker ? toolSlug : undefined}
+      data-company-product-cta={companyProductCtaMarker ? toolSlug : undefined}
+    >
+      <span>{resolvedLabel}</span>
+      {arrow && <span class="t2-cta-arrow" aria-hidden="true">{arrow}</span>}
+    </a>
+    {showDisclosure && isAffiliate && (
+      <span class={disclosureClass}>{disclosureText}</span>
+    )}
+  </span>
+)}

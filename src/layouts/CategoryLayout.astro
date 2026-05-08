@@ -12,6 +12,7 @@ import ShareButtons from '../components/ShareButtons.astro';
 import FeedbackForm from '../components/FeedbackForm.astro';
 import ToolLogo from '../components/ToolLogo.astro';
 import CategoryIcon from '../components/CategoryIcon.astro';
+import CommercialCTA from '../components/CommercialCTA.astro';
 import { shortenPrice } from '../utils/shorten-price';
 
 interface ToolData {
@@ -23,10 +24,18 @@ interface ToolData {
   price_range?: string;
   pricing_model?: string;
   status?: string;
-  affiliate?: { link?: string | null } | null;
+  affiliate?: { link?: string | null; network?: string | null } | null;
   scores?: { utility?: number; value?: number; moat?: number; longevity?: number };
   tagline?: string;
   quick_answer?: string;
+}
+
+type CategoryTopPickValue = string | { tool?: string; label?: string; reason?: string };
+
+interface CategoryTopPicks {
+  best_overall?: CategoryTopPickValue;
+  budget?: CategoryTopPickValue;
+  pro_team?: CategoryTopPickValue;
 }
 
 interface Props {
@@ -37,9 +46,10 @@ interface Props {
   emoji: string;
   tools: ToolData[];
   lastVerified?: string;
+  configuredTopPicks?: CategoryTopPicks;
 }
 
-const { title, seoTitle, description = '', slug, emoji, tools, lastVerified } = Astro.props;
+const { title, seoTitle, description = '', slug, emoji, tools, lastVerified, configuredTopPicks } = Astro.props;
 const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
 
 function overallScore(t: ToolData): number {
@@ -55,17 +65,7 @@ function ctaLabel(t: ToolData): string {
   if (model === 'enterprise') return `Visit ${t.title}`;
   return `Get ${t.title}`;
 }
-function ctaHref(t: ToolData): string {
-  const affUrl = t.affiliate?.link;
-  return (affUrl && affUrl.length > 0 ? affUrl : t.url) ?? '#';
-}
-function ctaRel(t: ToolData): string {
-  const affUrl = t.affiliate?.link;
-  return affUrl && affUrl.length > 0 ? 'sponsored noopener' : 'noopener';
-}
-
 const sorted = [...tools].sort((a, b) => overallScore(b) - overallScore(a));
-const top3 = sorted.slice(0, 3);
 
 // Category stats: surface in a tight stat bar under the hero.
 const activeTools = tools.filter((t) => t.status !== 'dead' && t.status !== 'retired' && t.status !== 'acquired');
@@ -95,8 +95,6 @@ const itemListItems = sorted.map((t) => ({
   status: t.status,
 }));
 
-const rankLabels = ['Best overall', 'Runner-up', 'Best value'];
-
 function lower(value?: string | null): string {
   return String(value ?? '').toLowerCase();
 }
@@ -123,6 +121,87 @@ function filterText(t: ToolData): string {
     t.price_range,
   ].filter(Boolean).join(' ').toLowerCase();
 }
+
+function isBudgetPick(t: ToolData): boolean {
+  const bucket = priceBucket(t);
+  const price = lower(t.price_range);
+  return (
+    bucket === 'free' ||
+    bucket === 'freemium' ||
+    bucket === 'open-source' ||
+    /\$(?:0|5|10|15|20)(?:\b|\/|\s)/.test(price)
+  );
+}
+
+function isProTeamPick(t: ToolData): boolean {
+  const model = lower(t.pricing_model).replace(/[_-]/g, ' ');
+  const price = lower(t.price_range);
+  const text = filterText(t);
+  return (
+    model.includes('paid') ||
+    model.includes('enterprise') ||
+    /\b(pro|team|teams|business|enterprise|studio|max)\b/.test(price) ||
+    /\b(team|teams|business|enterprise|agency|developer|professional|production)\b/.test(text)
+  );
+}
+
+function firstUnique(candidates: Array<ToolData | undefined>, used: Set<string>): ToolData | undefined {
+  const match = candidates.find((tool) => tool && !used.has(tool.slug));
+  if (match) used.add(match.slug);
+  return match;
+}
+
+const usedTopPickSlugs = new Set<string>();
+const bestOverall = firstUnique([sorted[0]], usedTopPickSlugs);
+const bestBudget = firstUnique(
+  [
+    sorted.find((tool) => isBudgetPick(tool) && tool.slug !== bestOverall?.slug),
+    ...sorted,
+  ],
+  usedTopPickSlugs
+);
+const bestProTeam = firstUnique(
+  [
+    sorted.find((tool) => isProTeamPick(tool) && tool.slug !== bestOverall?.slug && tool.slug !== bestBudget?.slug),
+    ...sorted,
+  ],
+  usedTopPickSlugs
+);
+const topPicks = [
+  bestOverall && { label: 'Best overall', tool: bestOverall },
+  bestBudget && { label: 'Best free or budget', tool: bestBudget },
+  bestProTeam && { label: 'Best pro or team', tool: bestProTeam },
+].filter(Boolean) as Array<{ label: string; tool: ToolData }>;
+
+const configuredPickDefs = [
+  { key: 'best_overall', label: 'Best overall' },
+  { key: 'budget', label: 'Best free or budget' },
+  { key: 'pro_team', label: 'Best pro or team' },
+] as const;
+const toolBySlug = new Map(sorted.map((tool) => [tool.slug, tool]));
+const hasConfiguredPicks = Boolean(configuredTopPicks && Object.values(configuredTopPicks).some(Boolean));
+const usedConfiguredPickSlugs = new Set<string>();
+const configuredPickCards = hasConfiguredPicks
+  ? configuredPickDefs
+      .map(({ key, label }) => {
+        const raw = configuredTopPicks?.[key];
+        const pickSlug = typeof raw === 'string' ? raw : raw?.tool;
+        const tool = pickSlug ? toolBySlug.get(pickSlug) : undefined;
+        if (!tool || usedConfiguredPickSlugs.has(tool.slug)) return undefined;
+        usedConfiguredPickSlugs.add(tool.slug);
+        return {
+          label: typeof raw === 'object' && raw.label ? raw.label : label,
+          tool,
+        };
+      })
+      .filter(Boolean) as Array<{ label: string; tool: ToolData }>
+  : [];
+const visibleTopPicks = hasConfiguredPicks
+  ? [
+      ...configuredPickCards,
+      ...topPicks.filter(({ tool }) => !usedConfiguredPickSlugs.has(tool.slug)),
+    ].slice(0, 3)
+  : topPicks;
 
 const priceLabels: Record<string, string> = {
   free: 'Free',
@@ -196,18 +275,16 @@ const pricingFilters = [
     </header>
 
     <!-- Top picks: three cards in the quick-answer band -->
-    {top3.length > 0 && (
+    {visibleTopPicks.length > 0 && (
       <aside class="t2-cat-toppicks" aria-label="Top picks">
         <p class="t2-verdict-heading">Top picks</p>
         <div class="t2-cat-toppicks-grid">
-          {top3.map((t, i) => {
+          {visibleTopPicks.map(({ label: pickLabel, tool: t }) => {
             const score = overallScore(t);
-            const href = ctaHref(t);
-            const rel = ctaRel(t);
             const label = ctaLabel(t);
             return (
               <div class="t2-cat-toppick">
-                <div class="t2-cat-toppick-rank">{rankLabels[i] ?? 'Also consider'}</div>
+                <div class="t2-cat-toppick-rank">{pickLabel}</div>
                 <a href={`/tools/${t.slug}/`} class="t2-cat-toppick-title">
                   <ToolLogo slug={t.slug} title={t.title} size={42} className="t2-cat-toppick-logo" />
                   <span>{t.title}</span>
@@ -223,28 +300,27 @@ const pricingFilters = [
                     )}
                   </div>
                 )}
-                {href !== '#' && (
-                  <div class="t2-cat-toppick-actions">
-                    <a
-                      href={href}
-                      target="_blank"
-                      rel={rel}
-                      class="t2-cta t2-cta-primary t2-cat-toppick-cta"
-                      data-category-cta={t.slug}
-                    >
-                      {label}
-                      <span class="t2-cta-arrow" aria-hidden="true">↗</span>
-                    </a>
+                <div class="t2-cat-toppick-actions">
+                  <CommercialCTA
+                    toolName={t.title}
+                    toolSlug={t.slug}
+                    canonicalUrl={t.url}
+                    affiliateUrl={t.affiliate?.link}
+                    affiliateProgram={t.affiliate?.network}
+                    label={label}
+                    pricingModel={t.pricing_model}
+                    priceRange={t.price_range}
+                    pageType="category"
+                    placement="category_top_pick"
+                    pageSlug={slug}
+                    categorySlug={slug}
+                    className="t2-cta t2-cta-primary t2-cat-toppick-cta"
+                    categoryCtaMarker
+                  />
                     <button type="button" class="t2-cat-toppick-compare" data-compare-add={t.slug} aria-pressed="false">
                       <span data-compare-label>Compare</span>
                     </button>
-                  </div>
-                )}
-                {href === '#' && (
-                  <button type="button" class="t2-cat-toppick-compare" data-compare-add={t.slug} aria-pressed="false">
-                    <span data-compare-label>Compare</span>
-                  </button>
-                )}
+                </div>
               </div>
             );
           })}
@@ -290,8 +366,6 @@ const pricingFilters = [
             <ol class="t2-cat-list">
               {sorted.map((t, i) => {
                 const score = overallScore(t);
-                const href = ctaHref(t);
-                const rel = ctaRel(t);
                 const label = ctaLabel(t);
                 const bucket = priceBucket(t);
                 return (
@@ -320,18 +394,22 @@ const pricingFilters = [
                       <button type="button" class="t2-cat-row-compare" data-compare-add={t.slug} aria-pressed="false">
                         <span data-compare-label>Compare</span>
                       </button>
-                      {href !== '#' && (
-                        <a
-                          href={href}
-                          target="_blank"
-                          rel={rel}
-                          class="t2-cat-row-cta"
-                          data-category-list-cta={t.slug}
-                        >
-                          {label}
-                          <span class="t2-cta-arrow" aria-hidden="true">↗</span>
-                        </a>
-                      )}
+                      <CommercialCTA
+                        toolName={t.title}
+                        toolSlug={t.slug}
+                        canonicalUrl={t.url}
+                        affiliateUrl={t.affiliate?.link}
+                        affiliateProgram={t.affiliate?.network}
+                        label={label}
+                        pricingModel={t.pricing_model}
+                        priceRange={t.price_range}
+                        pageType="category"
+                        placement="category_ranked_list"
+                        pageSlug={slug}
+                        categorySlug={slug}
+                        className="t2-cat-row-cta"
+                        categoryListCtaMarker
+                      />
                     </div>
                     </div>
                   </li>
@@ -462,7 +540,7 @@ const pricingFilters = [
     .category-detail-page[data-home-page] .t2-cat-hero-icon.cat-icon {
       width: 56px;
       height: 56px;
-      border-radius: 14px;
+      border-radius: var(--site-radius-card);
       background: transparent;
       border: 1px solid var(--home-card-outline);
       box-shadow: none;
@@ -472,17 +550,17 @@ const pricingFilters = [
 
     /* ---- Top picks band + cards ----------------------------------------- */
     .category-detail-page[data-home-page] .t2-cat-toppicks {
-      padding: 18px 18px 20px;
-      border-radius: 12px;
+      padding: var(--site-card-padding);
+      border-radius: var(--site-radius-card);
       border: 1px solid var(--home-card-outline);
       background: var(--home-panel);
       -webkit-backdrop-filter: blur(12px) saturate(140%);
       backdrop-filter: blur(12px) saturate(140%);
       box-shadow: none;
-      margin-bottom: 32px;
+      margin-bottom: var(--site-section-gap);
     }
     .category-detail-page[data-home-page] .t2-cat-toppicks .t2-verdict-heading {
-      margin: 0 0 12px;
+      margin: 0 0 var(--site-card-gap);
       font-size: 12px;
       font-weight: 900;
       letter-spacing: 0.12em;
@@ -490,12 +568,12 @@ const pricingFilters = [
       color: var(--home-accent);
     }
     .category-detail-page[data-home-page] .t2-cat-toppicks-grid {
-      gap: 12px;
+      gap: var(--site-grid-gap);
     }
     .category-detail-page[data-home-page] .t2-cat-toppick {
-      gap: 10px;
-      padding: 13px;
-      border-radius: 12px;
+      gap: var(--site-card-gap);
+      padding: var(--site-card-padding);
+      border-radius: var(--site-radius-card);
       border: 1px solid var(--home-card-outline);
       background: var(--home-panel-strong);
       color: var(--home-on-card);
@@ -535,14 +613,14 @@ const pricingFilters = [
       background: var(--home-accent-solid);
       color: var(--home-inverse);
       border: none;
-      border-radius: 10px;
+      border-radius: var(--site-radius-control);
       font-weight: 800;
     }
     .category-detail-page[data-home-page] .t2-cat-toppick-cta.t2-cta-primary:hover {
       opacity: 0.94;
     }
     .category-detail-page[data-home-page] .t2-cat-toppick-compare {
-      border-radius: 10px;
+      border-radius: var(--site-radius-control);
       border: 1px solid var(--home-card-outline);
       background: transparent;
       color: var(--home-muted);
@@ -557,12 +635,12 @@ const pricingFilters = [
 
     /* ---- Filter toolbar (hero search parity) ---------------------------- */
     .category-detail-page[data-home-page] .t2-cat-controls {
-      padding: 12px 14px;
-      border-radius: 14px;
+      padding: var(--site-card-gap) var(--site-card-padding);
+      border-radius: var(--site-radius-emphasis);
       border: 1px solid var(--home-hero-search-border);
       background: var(--home-hero-search-bg);
       box-shadow: var(--home-hero-search-shadow);
-      gap: 12px;
+      gap: var(--site-card-gap);
     }
     .category-detail-page[data-home-page] .t2-cat-search span,
     .category-detail-page[data-home-page] .t2-cat-filter-summary {
@@ -570,7 +648,7 @@ const pricingFilters = [
     }
     .category-detail-page[data-home-page] .t2-cat-search input {
       min-height: 48px;
-      border-radius: 12px;
+      border-radius: var(--site-radius-control);
       border: 1px solid var(--home-card-outline);
       background: var(--home-input-bg);
       color: var(--home-text);
@@ -588,7 +666,7 @@ const pricingFilters = [
     .category-detail-page[data-home-page] .t2-cat-filter-pill,
     .category-detail-page[data-home-page] .t2-cat-reset,
     .category-detail-page[data-home-page] .t2-cat-toggle {
-      border-radius: 10px;
+      border-radius: var(--site-radius-control);
       border: 1px solid var(--home-card-outline);
       background: var(--home-chip-bg);
       color: var(--home-muted);
@@ -612,7 +690,7 @@ const pricingFilters = [
       opacity: 0.92;
     }
     .category-detail-page[data-home-page] .t2-cat-no-results {
-      border-radius: 12px;
+      border-radius: var(--site-radius-card);
       border: 1px dashed var(--home-line);
       background: var(--home-panel);
       color: var(--home-muted);
@@ -620,15 +698,15 @@ const pricingFilters = [
 
     /* ---- Ranked list rows = homepage `.home-tool` chrome (flex: optional price) -- */
     .category-detail-page[data-home-page] .t2-cat-ranked-section .t2-cat-list {
-      gap: 12px;
+      gap: var(--site-grid-gap);
     }
     .category-detail-page[data-home-page] .t2-cat-row {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      padding: 13px;
-      gap: 12px;
-      border-radius: 12px;
+      padding: var(--site-card-padding);
+      gap: var(--site-card-gap);
+      border-radius: var(--site-radius-card);
       border: 1px solid var(--home-card-outline);
       background: var(--home-panel);
       color: var(--home-on-card);

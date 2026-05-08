@@ -6,6 +6,7 @@ import CookieConsent from '../components/CookieConsent.astro';
 import MoatLayer from '../components/MoatLayer.astro';
 import GlobalToolPreview from '../components/GlobalToolPreview.astro';
 import SourcePreviewLayer from '../components/SourcePreviewLayer.astro';
+import CommercialAnalytics from '../components/CommercialAnalytics.astro';
 import { ClientRouter } from 'astro:transitions';
 import '../styles/global.css';
 import '../styles/home-page-tokens.css';
@@ -16,6 +17,7 @@ interface Props {
   description: string;
   ogImage?: string;
   noindex?: boolean;
+  robots?: string;
   ogType?: 'website' | 'article';
   articlePublishedTime?: string;
   articleModifiedTime?: string;
@@ -23,7 +25,7 @@ interface Props {
 }
 
 const {
-  title, description, ogImage, noindex,
+  title, description, ogImage, noindex, robots,
   ogType = 'website',
   articlePublishedTime,
   articleModifiedTime,
@@ -38,6 +40,7 @@ function clampMetaDescription(value: string): string {
   return `${clipped.slice(0, boundary > 110 ? boundary : 157).trim()}...`;
 }
 const metaDescription = clampMetaDescription(description);
+const robotsContent = robots ?? (noindex ? 'noindex, nofollow' : 'index, follow');
 // Social networks (X, LinkedIn, Facebook, Slack, iMessage) reject SVG
 // for link previews — PNG/JPG/WebP only. All OG images must be raster.
 // generate-og-svgs.mjs rasterizes each SVG to PNG at build time.
@@ -61,7 +64,7 @@ const ogImageUrl = ogImage
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" href="/favicon.ico" />
 
-    <meta name="robots" content={noindex ? 'noindex, nofollow' : 'index, follow'} />
+    <meta name="robots" content={robotsContent} />
 
     <!-- Impact affiliate network site verification -->
     <meta name="impact-site-verification" value="2c73acbf-cc61-403b-82c5-2e55071f3a01" />
@@ -130,6 +133,7 @@ const ogImageUrl = ogImage
     </main>
     <Footer transition:persist="footer" />
     <CookieConsent transition:persist="cookie-consent" />
+    <CommercialAnalytics />
 
     <script is:inline>
       // Update background gradient based on theme

@@ -7,6 +7,11 @@ import { fileURLToPath } from 'node:url';
 const PROJECT_DIR = dirname(dirname(fileURLToPath(import.meta.url)));
 const SITE_ORIGIN = 'https://aipedia.wiki';
 const jsonMode = process.argv.includes('--json');
+const REQUIRED_NOINDEX_PATHS = [
+  '/admin/reviews/',
+  '/compare/build/',
+  '/search/',
+];
 
 function argValue(name) {
   const equalsArg = process.argv.find((arg) => arg.startsWith(`${name}=`));
@@ -18,7 +23,7 @@ function argValue(name) {
 const distArg = argValue('--dist');
 const distDir = distArg
   ? join(PROJECT_DIR, distArg)
-  : join(PROJECT_DIR, process.env.AIPEDIA_FAST_BUILD === '1' ? 'dist-fast/client' : 'dist/client');
+  : join(PROJECT_DIR, process.env.AIPEDIA_FAST_BUILD === '1' ? 'dist-fast' : 'dist/client');
 
 function read(path) {
   return readFileSync(path, 'utf8');
@@ -165,11 +170,26 @@ for (const loc of sitemapUrls) {
   }
 }
 
+for (const pathname of REQUIRED_NOINDEX_PATHS) {
+  const htmlPath = builtHtmlPath(pathname);
+  if (!existsSync(htmlPath)) continue;
+
+  const html = read(htmlPath);
+  const url = new URL(pathname, SITE_ORIGIN).href;
+  if (seen.has(url)) {
+    issues.push({ code: 'required-noindex-url-in-sitemap', url });
+  }
+  if (!/<meta\s+[^>]*name=["']robots["'][^>]*content=["'][^"']*noindex/i.test(html)) {
+    issues.push({ code: 'required-noindex-missing', url });
+  }
+}
+
 const report = {
   ok: issues.length === 0,
   dist: relative(PROJECT_DIR, distDir).replaceAll(sep, '/'),
   sitemap_urls: sitemapUrls.length,
   checked_html: checkedHtml,
+  required_noindex_paths: REQUIRED_NOINDEX_PATHS,
   redirect_source_paths: [...redirectSourcePaths].sort(),
   noindex_header_patterns: noindexHeaderPatterns,
   issues,

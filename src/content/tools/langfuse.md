@@ -140,6 +140,12 @@ An open-source LLM engineering platform that combines observability, evaluation,
 
 Overage on all paid tiers: $8 per 100k units. Self-hosted: $0 (MIT). Verified 2026-04-18 via [langfuse.com/pricing](https://langfuse.com/pricing).
 
+## Best plan recommendation
+
+Start on Hobby if the goal is instrumentation proof: traces, prompt versions, datasets, and a small eval loop. Core is the best first paid plan when a team needs longer retention, support expectations, or enough units to monitor a production feature. Move beyond Core when unit volume, SSO, audit, compliance, or team governance become the bottleneck rather than basic observability.
+
+Self-hosting is attractive because the core is MIT licensed, but it is not free operationally. Teams still need to run the database stack, upgrades, backups, access control, and incident response. Choose self-hosting for data-control requirements or heavy usage economics, not because it avoids all cost.
+
 ## Failure modes
 
 - **Unit accounting can surprise.** One "unit" maps to one trace span. Complex agent workflows generate many spans per user request. Watch your quota.

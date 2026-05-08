@@ -9,7 +9,7 @@ const { items, class: className, ...rest } = Astro.props;
 
 <nav
   class:list={[
-    'site-breadcrumb flex items-center gap-3 text-xs text-[var(--text-muted)] mb-8 mt-4 flex-wrap',
+    'site-breadcrumb flex items-center gap-[var(--site-chip-gap)] text-xs text-[var(--text-muted)] mb-[var(--site-content-gap)] mt-[var(--site-content-gap-sm)] flex-wrap',
     className,
   ]}
   aria-label="Breadcrumb"

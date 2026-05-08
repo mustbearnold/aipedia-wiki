@@ -47,6 +47,26 @@ const toolFacts = z.object({
   watch_out_for: toolFact.optional(),
 }).passthrough().optional();
 
+const guideDecisionPick = z.object({
+  tool: z.string(),
+  label: z.string().optional(),
+  plan: z.string().optional(),
+  reason: z.string(),
+  sources: z.array(z.object({
+    label: z.string(),
+    url: z.string().url(),
+  })).optional(),
+}).passthrough();
+
+const categoryTopPick = z.union([
+  z.string(),
+  z.object({
+    tool: z.string(),
+    label: z.string().optional(),
+    reason: z.string().optional(),
+  }).passthrough(),
+]);
+
 /* ------------------------------------------------------------------ */
 /*  Tools                                                              */
 /* ------------------------------------------------------------------ */
@@ -131,6 +151,11 @@ const categories = defineCollection({
     last_updated: dateish,
     last_verified: dateish,
     update_frequency: z.string().optional(),
+    top_picks: z.object({
+      best_overall: categoryTopPick.optional(),
+      budget: categoryTopPick.optional(),
+      pro_team: categoryTopPick.optional(),
+    }).passthrough().optional(),
   }).passthrough(),
 });
 
@@ -217,6 +242,11 @@ const useCases = defineCollection({
     author: z.string().optional(),
     description: z.string().optional(),
     tools_mentioned: z.array(z.string()).optional(),
+    guide_picks: z.object({
+      best_overall: guideDecisionPick.optional(),
+      budget: guideDecisionPick.optional(),
+      pro_team: guideDecisionPick.optional(),
+    }).passthrough().optional(),
     last_updated: dateish,
     last_verified: dateish,
     update_frequency: z.string().optional(),

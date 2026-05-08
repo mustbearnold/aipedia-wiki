@@ -49,6 +49,14 @@ Cursor leads for most developers due to its IDE integration and fast autocomplet
 
 Aider focuses on chat-driven file edits from terminal, passing full repo context to models like GPT-5.3 Codex for multi-file changes. Cursor embeds AI into IDE workflow, prioritizing autocomplete speed via Supermaven and agent tasks over terminal simplicity. Aider stays editor-agnostic; Cursor requires its app. Context limits match top models (2M tokens via Gemini 3.1 Pro), but Cursor adds IDE tools like previews[1][3].
 
+## Best Plan Recommendation
+
+Start with Cursor if you already live in VS Code or want AI assistance throughout the normal editing loop. Cursor Pro is easiest to justify for daily coding because autocomplete, chat, Composer-style edits, and background agents sit in one interface. It is the better default for most developers who want less setup and more continuous help.
+
+Start with Aider if you prefer terminal workflows, want model choice, or need a lightweight tool that can edit a repo without replacing your editor. It is also attractive for users who already understand git discipline and want to control which model is used for each task. The cost can be lower for occasional use, but heavy API usage can erase that advantage.
+
+Some advanced developers should use both: Cursor for everyday editing and Aider for focused terminal-driven refactors, scriptable workflows, or model experiments.
+
 ## Who should choose Aider
 
 Terminal users or those avoiding IDEs pick Aider for its free base and model flexibility.
@@ -56,6 +64,10 @@ Terminal users or those avoiding IDEs pick Aider for its free base and model fle
 ## Who should choose Cursor
 
 Developers in VS Code-like environments choose Cursor for autocomplete and agents in daily coding.
+
+## Evaluation Checklist
+
+Run both tools on the same repository tasks: one small bug, one multi-file refactor, one test failure, and one documentation update. Judge patch quality, context discovery, command safety, git cleanliness, and how much manual review is needed. Cursor should win if integrated flow matters most. Aider should win if editor freedom, terminal control, and model selection matter more than a polished IDE.
 
 ## Bottom Line
 

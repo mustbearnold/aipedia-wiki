@@ -57,6 +57,16 @@ Use ChatGPT for the brief, Ideogram or Midjourney for exploration, then a design
 - avoid using generated marks that resemble known brands
 - keep editable source files, not only PNG exports
 
+## Best Tool by Situation
+
+Use Ideogram when the logo has to include readable text. That includes wordmarks, badges, event marks, podcast art, stickers, and social graphics where the name itself is part of the design. It is still a concepting tool, but it gives you a better starting point for typography-heavy ideas.
+
+Use Midjourney when the brief is visual rather than typographic: mascot, symbol, emblem, moodboard, texture, illustration style, or premium brand direction. It is often the better brainstorming tool for taste, but the selected idea should be rebuilt manually.
+
+Use ChatGPT before generating images if the brand strategy is unclear. It can help define audience, tone, competitors to avoid, visual metaphors, color constraints, and prompt directions. It is also useful after generation as a critique partner.
+
+Use a human designer when the logo will carry real business risk: funded startup launch, app-store brand, physical packaging, legal entity, franchise, trademark application, or long-term company identity.
+
 ## Best Workflow
 
 Use AI for breadth, then design tools for precision:
@@ -68,6 +78,10 @@ Use AI for breadth, then design tools for precision:
 5. Test the mark in real contexts: website header, app icon, invoice, social avatar, dark mode, and printed one-color use.
 
 That workflow keeps AI where it is useful: fast exploration. It keeps final brand work where it belongs: controlled vector design.
+
+## Buying Advice
+
+Do not buy a logo tool because it produces the prettiest mockup. Buy only when it helps you create more usable concepts faster. The final asset still needs vector files, brand colors, typography decisions, spacing rules, small-size testing, and rights review. If a tool cannot export or guide you toward production-ready assets, treat it as inspiration rather than the source of record.
 
 ## Prompt Tips
 

@@ -104,6 +104,12 @@ Browserbase lists four plans. Free includes 3 concurrent browsers, 1 browser hou
 
 The unit economics depend on workload shape. A short fetch-heavy enrichment task can be cheap. A long-running browser session with login, proxy traffic, screenshots, model calls, and retries can cost more than the headline plan price suggests. Track browser hours, Search calls, Fetch calls, proxy usage, model gateway spend, and retention requirements separately.
 
+## Best plan recommendation
+
+Use the free tier only to validate API fit, not production economics. The Developer plan is the practical starting point for solo builders or small teams proving an agent workflow because it gives enough concurrency and browser hours to test real flows without jumping straight to custom sales. Startup becomes the more realistic fit once the workload is part of a product or internal platform and needs higher concurrency, longer debugging windows, and a cleaner cost baseline.
+
+Move to Scale only when the browser layer is a production dependency. At that point, the evaluation should include SSO, security review, data processing terms, verified agents, retention, and escalation support. The platform is easiest to justify when it replaces a fragile internal browser fleet, not when it is used for one script that already runs reliably on a cheap VM.
+
 ## Practical evaluation
 
 Before standardizing on Browserbase, run a pilot with real failure cases:

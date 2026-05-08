@@ -35,6 +35,7 @@ const totalTools = tools.length;
 <BaseLayout
   title="Search - aipedia.wiki"
   description={`Search and browse all ${totalTools} AI tools reviewed on aipedia.wiki.`}
+  robots="noindex, follow"
 >
   
     <div class="p3-canvas search-index site-directory-canvas not-prose" data-search-index>
@@ -234,7 +235,7 @@ const totalTools = tools.length;
   <style is:global>
     .search-index {
       width: 100%;
-      max-width: 1680px;
+      max-width: none;
       margin: 0 auto;
       padding: var(--site-page-top) 0 var(--site-page-bottom);
       color: var(--p3-fg);
@@ -248,9 +249,9 @@ const totalTools = tools.length;
     .search-index-hero {
       display: grid;
       grid-template-columns: minmax(0, 1fr) minmax(260px, 360px);
-      gap: 42px;
+      gap: var(--site-panel-gap);
       align-items: end;
-      padding-bottom: 42px;
+      padding-bottom: var(--site-section-gap);
       border-bottom: 1px solid var(--p3-line);
     }
 
@@ -280,7 +281,7 @@ const totalTools = tools.length;
 
     .search-index-lede {
       max-width: 680px;
-      margin: 22px 0 0;
+      margin: var(--site-content-gap) 0 0;
       color: var(--p3-muted);
       font-size: 20px;
       font-weight: 650;
@@ -289,7 +290,7 @@ const totalTools = tools.length;
 
     .search-index-control {
       max-width: 760px;
-      margin-top: 30px;
+      margin-top: var(--site-content-gap);
       cursor: text;
     }
 
@@ -319,9 +320,9 @@ const totalTools = tools.length;
     .search-index-quick {
       display: flex;
       flex-wrap: wrap;
-      gap: 9px;
+      gap: var(--site-chip-gap);
       max-width: 760px;
-      margin-top: 16px;
+      margin-top: var(--site-content-gap-sm);
     }
 
     .search-index-chip {
@@ -350,9 +351,9 @@ const totalTools = tools.length;
 
     .search-index-ledger {
       border: 1px solid rgba(249, 115, 22, 0.28);
-      border-radius: 8px;
+      border-radius: var(--site-radius-card);
       background: rgba(8, 13, 24, 0.72);
-      padding: 24px;
+      padding: var(--site-card-padding);
     }
 
     .search-index-ledger-kicker {
@@ -369,13 +370,13 @@ const totalTools = tools.length;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 18px;
+      gap: var(--site-card-gap);
       border-top: 1px solid var(--p3-line);
       color: var(--p3-subtle);
       font-size: 15px;
       font-weight: 750;
       line-height: 1.2;
-      padding: 14px 0;
+      padding: var(--site-card-gap) 0;
     }
 
     .search-index-ledger-row:last-child {
@@ -390,15 +391,15 @@ const totalTools = tools.length;
     }
 
     .search-index-results {
-      padding-top: 40px;
+      padding-top: var(--site-section-gap);
     }
 
     .search-index-results-head {
       display: flex;
       align-items: end;
       justify-content: space-between;
-      gap: 20px;
-      margin-bottom: 18px;
+      gap: var(--site-content-gap);
+      margin-bottom: var(--site-content-gap);
     }
 
     .search-index-results h2 {
@@ -427,7 +428,7 @@ const totalTools = tools.length;
     .search-index-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 12px;
+      gap: var(--site-grid-gap);
     }
 
     .search-index-card {
@@ -436,7 +437,7 @@ const totalTools = tools.length;
       flex-direction: column;
       min-height: 144px;
       border: 1px solid var(--p3-line);
-      border-radius: 8px;
+      border-radius: var(--site-radius-card);
       background: rgba(8, 13, 24, 0.62);
       color: var(--p3-fg);
       overflow: hidden;
@@ -471,10 +472,10 @@ const totalTools = tools.length;
       z-index: 1;
       display: grid;
       grid-template-columns: 44px minmax(0, 1fr) auto;
-      gap: 14px;
+      gap: var(--site-card-gap);
       align-items: center;
       color: inherit;
-      padding: 18px 18px 12px;
+      padding: var(--site-card-padding);
       text-decoration: none;
     }
 
@@ -488,7 +489,7 @@ const totalTools = tools.length;
       z-index: 1;
       display: grid;
       min-width: 0;
-      gap: 6px;
+      gap: var(--site-card-gap);
     }
 
     .search-index-card-meta {
@@ -533,10 +534,10 @@ const totalTools = tools.length;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 10px;
+      gap: var(--site-card-gap);
       margin-top: auto;
       border-top: 1px solid var(--p3-line);
-      padding: 10px 12px 12px 18px;
+      padding: var(--site-card-gap) var(--site-card-padding);
     }
 
     .search-index-card-foot > span {
@@ -558,10 +559,10 @@ const totalTools = tools.length;
 
     .search-index-empty {
       border: 1px dashed rgba(249, 115, 22, 0.28);
-      border-radius: 8px;
+      border-radius: var(--site-radius-card);
       color: var(--p3-muted);
       margin-top: 14px;
-      padding: 26px;
+      padding: var(--site-card-padding);
       text-align: center;
     }
 
