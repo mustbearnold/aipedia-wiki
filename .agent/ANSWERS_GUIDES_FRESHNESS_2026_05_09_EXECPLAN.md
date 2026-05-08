@@ -80,6 +80,7 @@ Priority pages must avoid horizontal overflow at 360/390/430/768/1024 and presen
 - 2026-05-09: Added `.agent/STALE_ANSWERS_GUIDES_TRIAGE_2026_05_09.md` with refresh/merge/noindex/leave decisions for priority answer and guide pages.
 - 2026-05-09: Refreshed `midjourney-alternatives` and `elevenlabs-alternatives` against current official/vendor sources, added guide picks, removed stale pricing/model claims, and promoted both refreshed alternatives pages on `/guides/`.
 - 2026-05-09: Added content-level guide `noindex` support and noindexed the weak overlapping under-$10 and under-$50 budget guide routes, replacing stale unsupported claims with merge guidance toward stronger budget/category pages.
+- 2026-05-09: Refreshed `best-ai-tools-under-20-month` against official pricing/help sources, added guide picks, removed unsupported April model claims, and reframed the page around buyer jobs rather than a brittle 40-tool price table.
 
 ## 15. Final report
 Pending.
