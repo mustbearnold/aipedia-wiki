@@ -35,6 +35,15 @@ facts:
     volatility: high
     confidence: high
     next_review_at: 2026-06-08
+  context_window:
+    value: "Not applicable - HeyGen is an avatar/video platform, not a chat model with a token context window; LiveAvatar prompts and knowledge-base context are separate conversational-avatar setup."
+    source: "https://help.heygen.com/en/articles/10035615-how-to-get-started-with-liveavatars"
+    source_label: "HeyGen LiveAvatar help"
+    source_id: heygen-liveavatar-help
+    verified_at: 2026-05-08
+    volatility: medium
+    confidence: high
+    next_review_at: 2026-08-08
   api_model_route:
     value: "HeyGen announced Avatar IV API access for programmatic lifelike talking videos from a photo and script; API pricing is separate from regular creator subscriptions."
     source: "https://www.heygen.com/blog/announcing-the-avatar-iv-api"
@@ -53,11 +62,38 @@ facts:
     volatility: high
     confidence: high
     next_review_at: 2026-06-08
+  free_plan:
+    value: "Free lists $0/mo, 1 video per month, videos up to 3 minutes, 1 Custom Digital Twin, 500+ stock photo avatars, 720p export, share/download support, and trial access to premium features."
+    source: "https://www.heygen.com/pricing"
+    source_label: "HeyGen pricing"
+    source_id: heygen-pricing
+    verified_at: 2026-05-08
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-08
+  best_paid_tier:
+    value: "Creator is the default first paid tier for solo avatar-video work; Pro adds 4K and 10x premium usage; Business is the team tier with SAML/SSO, collaboration, SCORM, LMS integrations, and $20/seat add-ons."
+    source: "https://www.heygen.com/pricing"
+    source_label: "HeyGen pricing"
+    source_id: heygen-pricing
+    verified_at: 2026-05-08
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-08
   api_pricing_anchor:
     value: "HeyGen API usage is pay-as-you-go and separate from standard subscriptions; Avatar IV API generation is listed from $3-$5 per minute depending on avatar type and resolution."
     source: "https://help.heygen.com/en/articles/10060327-heygen-api-pricing-explained"
     source_label: "HeyGen API pricing help"
     source_id: heygen-api-pricing
+    verified_at: 2026-05-08
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-08
+  image_generation:
+    value: "Limited supporting image workflow: HeyGen lists photo avatars, generated avatars/looks, and advanced image/video model access, but it is not a general-purpose image generation suite."
+    source: "https://www.heygen.com/pricing"
+    source_label: "HeyGen pricing"
+    source_id: heygen-pricing
     verified_at: 2026-05-08
     volatility: high
     confidence: high
@@ -71,6 +107,57 @@ facts:
     volatility: high
     confidence: high
     next_review_at: 2026-06-08
+  real_time_voice:
+    value: "Yes for LiveAvatar workflows: HeyGen says LiveAvatars respond in real time, support Full and Lite integration modes, and can add voice chat through the Streaming SDK; this is separate from ordinary rendered-video subscriptions."
+    source: "https://help.heygen.com/en/articles/10035615-how-to-get-started-with-liveavatars"
+    source_label: "HeyGen LiveAvatar help"
+    source_id: heygen-liveavatar-help
+    verified_at: 2026-05-08
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-08
+  web_browsing:
+    value: "No web-browsing assistant is listed; HeyGen is an AI video, avatar, translation, LiveAvatar, and API platform."
+    source: "https://www.heygen.com/pricing"
+    source_label: "HeyGen pricing"
+    source_id: heygen-pricing
+    verified_at: 2026-05-08
+    volatility: low
+    confidence: high
+  coding_agent:
+    value: "No coding agent; HeyGen's developer surface is API/SDK integration for generated videos, translations, avatars, and LiveAvatar rather than autonomous software development."
+    source: "https://docs.heygen.com"
+    source_label: "HeyGen API docs"
+    source_id: heygen-api-docs
+    verified_at: 2026-05-08
+    volatility: low
+    confidence: high
+  enterprise_controls:
+    value: "Business and Enterprise list SAML/SSO, SCIM provisioning, MFA, role/access controls, audit logs, centralized billing, workspaces, collaboration, SCORM/LMS workflows, and enterprise-grade security/privacy controls."
+    source: "https://www.heygen.com/pricing"
+    source_label: "HeyGen pricing"
+    source_id: heygen-pricing
+    verified_at: 2026-05-08
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-08
+  data_retention_or_privacy:
+    value: "HeyGen says it is SOC 2 Type II, GDPR, CCPA, DPF, and EU AI Act aligned; it uses AWS US hosting, encryption, SSO/SCIM/RBAC/audit logs, and excludes enterprise customer data from AI model training by default."
+    source: "https://www.heygen.com/security"
+    source_label: "HeyGen security"
+    source_id: heygen-security
+    verified_at: 2026-05-08
+    volatility: medium
+    confidence: high
+    next_review_at: 2026-08-08
+  open_source_or_local:
+    value: "No - HeyGen is a proprietary hosted AI video/avatar platform with cloud app, API, and LiveAvatar services."
+    source: "https://www.heygen.com/pricing"
+    source_label: "HeyGen pricing"
+    source_id: heygen-pricing
+    verified_at: 2026-05-08
+    volatility: low
+    confidence: high
   api_available:
     value: "Yes: HeyGen provides API documentation and separate API pricing for programmatic avatar/video workflows."
     source: "https://docs.heygen.com"
@@ -170,7 +257,7 @@ This separation matters for purchasing. A plan that looks cheap for manual video
 
 As of May 8, 2026, HeyGen's public app pricing lists:
 
-- **Free:** $0, 3 videos per month, videos up to 1 minute, 720p export, and trial access to premium features.
+- **Free:** $0, 1 video per month, videos up to 3 minutes, 1 Custom Digital Twin, 500+ stock photo avatars, 720p export, share/download support, and trial access to premium features.
 - **Creator:** $29/mo, videos up to 30 minutes, one Custom Digital Twin, 700+ Stock Video Avatars, 175+ languages/dialects, 1080p export, brand kit, and watermark removal.
 - **Pro:** $99/mo, more premium usage, faster processing, translation-script editing/proofreading, and 4K export.
 - **Business:** $149/mo plus $20/seat, videos up to 60 minutes, 4K export, SAML/SSO, collaboration, SCORM export, LMS integrations, and workflow integrations.
@@ -207,7 +294,7 @@ AiPedia re-verified this page on **May 8, 2026** against HeyGen's pricing page, 
 Yes. HeyGen's Avatar V launch says Avatar V is its next-generation avatar model and the foundation for its current avatar direction. Avatar IV remains important because HeyGen is actively promoting Avatar IV API for programmatic talking-video generation.
 
 **Is HeyGen free?**
-Yes, but the free plan is for evaluation. It currently lists 3 videos per month, 1-minute video duration, 720p export, and trial access to premium features.
+Yes, but the free plan is for evaluation. It currently lists 1 video per month, videos up to 3 minutes, 720p export, and trial access to premium features.
 
 **Which HeyGen plan should most buyers start with?**
 Creator for solo avatar-video work, Pro for heavier usage and 4K, Business for seats, SSO, SCORM/LMS, and collaboration, Enterprise for governance and custom terms.

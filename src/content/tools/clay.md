@@ -2,16 +2,16 @@
 type: tool
 slug: clay
 title: Clay
-tagline: Data enrichment and outbound automation platform waterfalling 50+ sources with Claygent AI research, now on split Data Credits plus Actions pricing.
+tagline: GTM enrichment and automation workspace for waterfalling data providers, running AI account research, and pushing signal-rich lists into sales workflows.
 category: ai-automation
 company: Clay Technologies Inc.
 url: https://clay.com
 pricing_model: freemium
-price_range: "$0-$800/month"
+price_range: "$0-$800+/month"
 status: active
 launched: 2021-01
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-08
+last_verified: 2026-05-08
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://www.clay.com"
     source_label: "Clay overview"
     source_id: clay-home
-    verified_at: 2026-05-03
+    verified_at: 2026-05-08
     volatility: low
     confidence: high
   pricing_anchor:
@@ -38,8 +38,8 @@ facts:
     source: "https://www.clay.com/pricing"
     source_label: "Clay Pricing"
     source_id: clay-official
-    verified_at: 2026-05-03
-    next_review_at: 2026-08-03
+    verified_at: 2026-05-08
+    next_review_at: 2026-08-08
     volatility: high
     confidence: high
   integration_surface:
@@ -47,7 +47,7 @@ facts:
     source: "https://www.clay.com/integrations"
     source_label: "Clay integrations"
     source_id: clay-integrations
-    verified_at: 2026-05-03
+    verified_at: 2026-05-08
     volatility: medium
     confidence: high
   learning_curve:
@@ -55,7 +55,7 @@ facts:
     source: "https://www.clay.com/university"
     source_label: "Clay University"
     source_id: clay-university
-    verified_at: 2026-05-03
+    verified_at: 2026-05-08
     volatility: medium
     confidence: high
   watch_out_for:
@@ -63,153 +63,126 @@ facts:
     source: "https://www.clay.com/pricing"
     source_label: "Clay Pricing"
     source_id: clay-official
-    verified_at: 2026-05-03
+    verified_at: 2026-05-08
     volatility: medium
     confidence: high
 tags: [data-enrichment, sales-automation, lead-generation, gtm-automation, outreach]
-seo_title: "Clay: Features, Pricing & Review (April 2026)"
-meta_description: "Clay waterfalls 50+ data sources with Claygent AI research. New plans from March 2026 split credits into Data Credits + Actions. Launch $185/mo, Growth $495/mo. Legacy Starter/Explorer/Pro grandfathered."
+seo_title: "Clay Review (May 2026): GTM Enrichment, Waterfalls, AI Research"
+meta_description: "Clay is a GTM enrichment workspace for waterfalling data providers, running AI account research, and pushing enriched lists into outbound systems. Best for GTM ops, ABM, and signal-based prospecting."
 author: "aipedia.wiki Editorial"
 best_for:
-  - GTM engineers and sales ops
+  - GTM engineers and sales operations teams
   - account-based marketing teams
   - agencies running signal-based outbound
-  - founders doing event-triggered prospecting
+  - founders doing narrow, high-value prospecting
 not_best_for:
-  - non-technical sales reps
-  - teams wanting one-tool simplicity
-  - low-budget bootstrap outbound
+  - teams wanting a simple sender
+  - non-technical reps who need one-click outbound
+  - low-budget spray-and-pray outreach
 quick_answer: >-
-  Clay is the enrichment specialist: 50+ sources waterfalled with Claygent AI research on top. New March 2026 plans split Data Credits and Actions ($185 Launch, $495 Growth). Pick for high-signal ABM. Skip if you need a sender or CRM.
+  Clay is the GTM enrichment specialist. Pick it when your edge is better data, source waterfalling, AI account research, and custom outbound logic. Skip it if you want an all-in-one database plus sender (Apollo) or a cheaper cold-email sender (Instantly).
 ---
 
 # Clay
 
-Clay is a data enrichment and GTM automation platform. It pulls from 50+ sources simultaneously (Apollo, LinkedIn, Crunchbase, Hunter, Prospeo, Google News) and waterfalls through them per-row to maximize fill rates. [Claygent](https://clay.com) is the built-in AI agent that runs custom per-lead research.
+Clay is a GTM enrichment and automation workspace. Teams use it to waterfall multiple data providers, enrich account/contact records, run AI-assisted research, build signal-based outbound lists, and push enriched data into CRMs or sending tools.
 
-Clay overhauled pricing on [March 11, 2026](https://www.salesforge.ai/blog/clay-pricing). New plans split credits into **Data Credits** (for buying enrichment) and **Actions** (for running platform operations). Legacy Starter, Explorer, and Pro plans remain available to existing customers indefinitely.
+As of May 8, 2026, Clay is AiPedia's best sales-tool pick for teams whose bottleneck is **data quality and workflow logic**, not merely sending emails. It is more powerful than a simple prospecting tool, but it also demands more operational discipline.
 
 ## System Verdict
 
-> **Pick Clay when your outbound strategy depends on signal stacking.** The waterfall across 50+ sources produces lead data no single-source tool can match. Claygent runs custom per-account research at scale, from "what did this CTO post about last week" to "is this company hiring for role X."
->
-> **Skip it if you want one tool for everything.** [Apollo](/tools/apollo/) is all-in-one database plus sender plus dialer at lower cost. **Skip it for sending.** Clay produces enriched lists, not delivered emails. You still need [Instantly](/tools/instantly/), Smartlead, or similar. **Skip it for non-technical users.** The table-builder interface and credit math require GTM-ops fluency.
->
-> **Who pays which tier:** Launch $185/mo for small ABM teams, Growth $495/mo for most mid-market outbound ops (unlimited credits and actions), Enterprise for agencies and scaled GTM engineering. Legacy Starter $149/mo still works for grandfathered customers on the old split.
+Pick Clay when outbound quality depends on signal stacking: job changes, funding, hiring pages, tech stack, LinkedIn activity, company news, CRM data, enrichment providers, and AI-generated research all feeding one workflow.
 
-## Key Facts
+Skip Clay if you need a simple all-in-one sales platform. [Apollo](/tools/apollo/) is the easier first purchase when the team wants database, sequencing, dialer, and CRM sync in one system. Skip Clay if the main job is sending lots of cold email. [Instantly](/tools/instantly/) is the sender-first tool.
 
-| | |
-|---|---|
-| **New plans (March 2026)** | Launch $185/mo · Growth $495/mo · Enterprise custom |
-| **Launch credits** | 2,500 Data Credits · 15,000 Actions |
-| **Growth credits** | Unlimited Data Credits and Actions |
-| **Legacy plans (grandfathered)** | Starter $149 · Explorer $349 · Pro $800/mo |
-| **Legacy switching window** | Closed April 10, 2026 |
-| **Data sources** | 50+ including Apollo, LinkedIn, Crunchbase, Hunter |
-| **Claygent** | AI research agent · 15-25+ credits per action |
-| **Free tier** | Yes · limited credits and integrations |
-| **CRM sync** | Salesforce, HubSpot, Outreach |
+## Best For
 
-Every data point above was verified against vendor pages on 2026-04-17. See Sources.
+- GTM operations teams building repeatable outbound workflows
+- account-based marketing teams that need rich account research
+- agencies that want to create high-signal lead lists for clients
+- sales teams that already have a sender and CRM
+- founders targeting a narrow list of high-value accounts
 
-## What it actually is
+## Not Ideal For
 
-A spreadsheet-style workbench for building enriched lead lists. Each column calls a different data source or runs a Claygent research task. Import a list of companies, find decision-maker emails via Hunter, pull funding from Crunchbase, extract LinkedIn activity via Prospeo, generate a personalized opener via Claygent, all in one table.
+- sales reps who want a simple prospect database and a send button
+- teams without someone to own workflow design
+- high-volume cold email where deliverability is the main bottleneck
+- very small teams that cannot justify time spent on enrichment logic
 
-The waterfall logic tries sources in sequence until valid data returns, minimizing wasted credits. Webhooks fire enrichments on triggers: funding rounds, job changes, specific LinkedIn activity.
+## Pricing And Access
 
-The moat is aggregation. No other tool connects this many data sources in one workflow with a general-purpose AI research agent on top. The weakness is the learning curve: credit math, prompt engineering, and waterfall configuration all require time to internalize.
+Clay publishes pricing on its official pricing page, but the real buying question is not just the base plan. Buyers should model:
 
-## When to pick Clay
+- data credits
+- actions or workflow usage
+- enrichment providers
+- AI research depth
+- table size
+- seat needs
+- CRM and sender integrations
+- whether the team can monitor usage
 
-- **You run account-based marketing with signal-stacked outbound.** 20-30 data points per contact, pulled from many sources, is Clay's native shape.
-- **You need event-triggered prospecting.** Webhooks fire enrichments when companies get funded, make hires, or post about relevant topics.
-- **You already use Instantly, Smartlead, or Lemlist to send.** Clay exports directly into these.
-- **You have a GTM engineer or sales-ops person running the stack.** Clay rewards that skill density.
-- **Your personalization strategy is "read each lead's LinkedIn post and write a specific opener."** Claygent automates the research half.
+Credit and action usage can rise quickly when a workflow calls multiple providers and AI research steps for every row. AiPedia recommends prototyping one real outbound workflow before rolling Clay across a sales team.
 
-## When to pick something else
+## Workflow Fit
 
-- **All-in-one database plus sender plus CRM sync:** [Apollo](/tools/apollo/). Simpler, cheaper, less powerful.
-- **High-volume sending:** [Instantly](/tools/instantly/). Pair with Clay for data.
-- **Enterprise data coverage:** ZoomInfo Enrich. Stronger on mid-market and enterprise accounts.
-- **Tech-stack enrichment for marketers:** Clearbit (now part of HubSpot). Narrower scope, simpler UX.
-- **Manual outbound under 500 leads/month:** Apollo or a spreadsheet. Clay's power does not unlock below that volume.
+A typical Clay workflow starts with a target account list, then adds enrichment and research steps:
 
-## Pricing
+1. Import accounts or contacts.
+2. Add columns for firmographics, people, email, phone, and social data.
+3. Waterfall across providers until valid data is found.
+4. Use AI research to summarize accounts, triggers, or personalization angles.
+5. Apply filters and scoring logic.
+6. Sync approved records to a CRM or outbound sender.
+7. Monitor credit/action cost and data quality.
 
-New self-serve pricing launched March 11, 2026. Legacy customers can stay on old plans indefinitely but the switching window closed April 10, 2026. Via [clay.com/pricing](https://www.clay.com/pricing):
+This is where Clay wins. It lets a GTM team build a specific research and enrichment machine rather than buying a fixed database view.
 
-| Plan | Annual ($/mo) | Data Credits/mo | Actions/mo | Who's it for |
-|------|---------------|-----------------|------------|--------------|
-| Free | $0 | Limited | Limited | Testing the product |
-| Launch | $185 | 2,500 | 15,000 | Small ABM teams |
-| Growth | $495 | Unlimited | Unlimited | **Most mid-market outbound ops** |
-| Enterprise | Custom | Custom | Custom | Agencies and scaled GTM ops |
+## Watch-Outs
 
-Legacy tiers still active for grandfathered customers:
+**Clay is not a sender.** It produces enriched lists and workflows. You still need Apollo, Instantly, Smartlead, Lemlist, a CRM, or another sending/engagement layer.
 
-| Legacy plan | Annual ($/mo) | Credits/yr |
-|-------------|---------------|------------|
-| Starter | $134 | 24,000 |
-| Explorer | $314 | 120,000 |
-| Pro | $720 | 600,000 |
+**The learning curve is real.** Clay is powerful because it is flexible. That also means poor workflow design can create bad data and wasted credits.
 
-*Prices verified 2026-04-17 via [clay.com/pricing](https://www.clay.com/pricing) and [Clay pricing changes coverage](https://www.salesforge.ai/blog/clay-pricing). Claygent research queries consume 15-25+ credits each. Clay produces enriched lists; sending requires a separate tool.*
+**AI research quality depends on prompts and sources.** Generic instructions produce generic output. Good Clay workflows need precise source choices, prompts, fallbacks, and QA.
 
-## Against the alternatives
+**Costs are workload-shaped.** A small workflow can be cheap. A broad workflow with many enrichment providers and AI columns can become expensive quickly.
 
-| | Clay Growth | Apollo Professional | Instantly Hypergrowth |
-|---|---|---|---|
-| **Price** | $495/mo | $79/user/mo (annual) | $77.60/mo |
-| **Data sources** | 50+ waterfalled | 400M+ built-in | 700M+ Lead Finder add-on |
-| **AI research agent** | Claygent (deepest) | AI Assistant (lighter) | Basic personalization |
-| **Email sending** | None | Included | Unlimited accounts |
-| **Learning curve** | Steep | Moderate | Low |
-| **Best viewed as** | Enrichment specialist | All-in-one stack | Sender specialist |
+**Data still needs validation.** Clay waterfalls providers, but bad or stale source data can still enter the workflow. Sample-check before sending.
 
-## Failure modes
+## Clay Vs Alternatives
 
-- **Credit math is still hard even after the split.** The new Launch plan's 2,500 Data Credits plus 15,000 Actions model is cleaner than the old unified credit system, but waterfall and Claygent costs still surprise teams on first builds.
-- **Claygent quality tracks prompt quality.** Generic prompts produce generic research. Getting the full value of the AI agent requires iteration and engineering discipline.
-- **Steep learning curve.** Non-technical sales reps struggle with waterfall configuration, conditional logic, and export flows. Clay is a GTM-engineer tool.
-- **Data source errors propagate.** Clay aggregates third-party data. If Hunter, Crunchbase, or LinkedIn return stale results, Clay serves those stale results. Waterfall helps but does not eliminate.
-- **Legacy pricing confusion.** Customers on Starter/Explorer/Pro see different UX and ceiling than new Launch/Growth customers. Migration decisions now require a conscious choice since the switching window closed April 10, 2026.
-- **Not a sender.** Clay produces lists. Teams new to outbound sometimes expect end-to-end delivery; they need Instantly, Smartlead, or Lemlist paired with it.
-- **Webhook complexity.** Event-triggered enrichment is powerful but requires proper trigger design, de-duplication logic, and cost monitoring.
-- **No native CRM.** Clay syncs into Salesforce and HubSpot but does not replace them.
-
-## Methodology
-
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [Clay pricing](https://www.clay.com/pricing), [Clay docs](https://university.clay.com/docs/plans-and-billing), and [Clay pricing-change analysis](https://www.salesforge.ai/blog/clay-pricing).
+| Need | Best AiPedia pick | Why |
+|---|---|---|
+| Enrichment and signal workflows | [Clay](../tools/clay.md) | Waterfalls, integrations, AI research, and custom GTM logic |
+| One outbound platform | [Apollo](../tools/apollo.md) | Database, enrichment, sequences, dialer, and CRM sync in one system |
+| High-volume email sending | [Instantly](../tools/instantly.md) | Sender-first workflow with inbox rotation and deliverability tooling |
+| Packaged AI SDR suite | [Amplemarket](../tools/amplemarket.md) | More bundled sales workflow for teams ready for a larger platform decision |
 
 ## FAQ
 
-**What changed in Clay's March 2026 pricing?**
-Clay split credits into Data Credits (for buying enrichment data) and Actions (for platform operations). New self-serve plans are Launch ($185/mo, 2,500 Data Credits + 15,000 Actions) and Growth ($495/mo, unlimited). Legacy Starter, Explorer, and Pro plans remain available to existing customers, but the switching window closed April 10, 2026 ([Clay pricing changes](https://www.salesforge.ai/blog/clay-pricing)).
+**What is Clay best for?**
+Clay is best for GTM teams that need enrichment, source waterfalling, AI account research, and custom prospecting workflows.
 
-**What is Claygent?**
-Clay's built-in AI research agent. Prompts it with natural language ("extract the top pain point from this company's latest earnings call," "find the head of RevOps and summarize their LinkedIn") and it runs web research per row. Each Claygent action consumes 15-25+ credits depending on depth.
+**Does Clay send emails?**
+No. Clay can prepare enriched lists and push data into other systems, but you need a sender such as Instantly, Apollo, Smartlead, or Lemlist.
 
-**Clay vs Apollo?**
-Apollo is all-in-one: database, sequences, dialer, CRM sync at $79/user/mo (annual). Clay has no proprietary database; it waterfalls 50+ external sources (including Apollo) and runs Claygent research. Teams often use both: Apollo for base lists and CRM flow, Clay for deep per-account enrichment before sending.
+**Is Clay better than Apollo?**
+Clay is better for enrichment depth and custom workflows. Apollo is better when the team wants one platform for prospect data, engagement, dialer, and CRM sync.
 
-**Do I need a separate sender with Clay?**
-Yes. Clay produces enriched lead lists, not delivered emails. Pair it with [Instantly](/tools/instantly/), Smartlead, or Lemlist. Exports are direct.
+**Is Clay good for solo founders?**
+Sometimes, but only for narrow, high-value outbound where research quality matters. Most solo founders should start with a simpler tool unless they enjoy GTM workflow building.
 
-**Is Clay worth it for a solo founder?**
-Rarely. The learning curve, credit math, and $185+/mo floor make Apollo or a simpler stack the better default under 500 leads/month. Founders running signal-based ABM on named accounts can justify Clay even solo; spray-and-pray outbound cannot.
-
-**How much does Claygent actually cost per lead?**
-A typical multi-source enrichment (5-8 columns plus one Claygent research task) runs 25-60 credits per row. A 1,000-lead table can burn through the Launch plan's 2,500 Data Credits quickly. Growth's unlimited plan removes that constraint.
+**How often does AiPedia recheck Clay?**
+Clay pricing and packaging are volatile, so AiPedia treats it as a monthly review target and rechecks official pricing/product pages when updating commercial claims.
 
 ## Sources
 
-- [Clay Pricing](https://www.clay.com/pricing): current Launch, Growth, and legacy plan tiers
-- [Clay Docs: Plans and Billing](https://university.clay.com/docs/plans-and-billing): Data Credits vs Actions mechanics
-- [Clay pricing changes coverage (Salesforge)](https://www.salesforge.ai/blog/clay-pricing): March 2026 pricing overhaul details
-- [G2 Clay Reviews](https://www.g2.com/products/clay/reviews): user-reported workflows and credit experience
+- [Clay pricing](https://www.clay.com/pricing)
+- [Clay integrations](https://www.clay.com/integrations)
+- [Clay University](https://www.clay.com/university)
+- [Clay official site](https://www.clay.com/)
 
 ## Related
 

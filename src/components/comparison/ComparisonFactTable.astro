@@ -99,6 +99,48 @@ const rows = rowConfigs
       </p>
     </div>
 
+    <div class="t2-facts-mobile-cards" aria-label="Canonical facts by tool">
+      {tools.map((tool, toolIndex) => (
+        <article class="t2-fact-mobile-card">
+          <a href={`/tools/${tool.slug}/`} class="t2-facts-tool t2-fact-mobile-tool">
+            <ToolLogo slug={tool.slug} title={tool.title} size={36} />
+            <span>{tool.title}</span>
+          </a>
+          <dl class="t2-fact-mobile-list">
+            {rows.map((row) => {
+              const { fact, value } = row.cells[toolIndex];
+              const verified = formatVerified(fact?.verified_at);
+              const sourceLabel = fact?.source_label ?? 'Source';
+              return (
+                <div class="t2-fact-mobile-row">
+                  <dt>{row.label}</dt>
+                  <dd>
+                    {value ? (
+                      <>
+                        {fact?.source ? (
+                          <a href={fact.source} class="t2-fact-value">{value}</a>
+                        ) : (
+                          <span class="t2-fact-value">{value}</span>
+                        )}
+                        {(verified || fact?.source) && (
+                          <span class="t2-fact-meta">
+                            {verified && <span>Verified {verified}</span>}
+                            {fact?.source && <span>{sourceLabel}</span>}
+                          </span>
+                        )}
+                      </>
+                    ) : (
+                      <span class="t2-fact-empty">—</span>
+                    )}
+                  </dd>
+                </div>
+              );
+            })}
+          </dl>
+        </article>
+      ))}
+    </div>
+
     <div class="t2-facts-table-wrap">
       <table class="t2-facts-table">
         <thead>

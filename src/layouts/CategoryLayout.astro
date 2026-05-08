@@ -28,6 +28,7 @@ interface ToolData {
   scores?: { utility?: number; value?: number; moat?: number; longevity?: number };
   tagline?: string;
   quick_answer?: string;
+  category_match_type?: 'primary' | 'secondary';
 }
 
 type CategoryTopPickValue = string | { tool?: string; label?: string; reason?: string };
@@ -56,6 +57,9 @@ function overallScore(t: ToolData): number {
   const s = t.scores ?? {};
   return Math.round((((s.utility ?? 0) + (s.value ?? 0) + (s.moat ?? 0) + (s.longevity ?? 0)) / 4) * 10) / 10;
 }
+function categoryMatchRank(t: ToolData): number {
+  return t.category_match_type === 'secondary' ? 0 : 1;
+}
 function ctaLabel(t: ToolData): string {
   const model = (t.pricing_model ?? '').toLowerCase();
   const price = (t.price_range ?? '').toLowerCase();
@@ -65,7 +69,13 @@ function ctaLabel(t: ToolData): string {
   if (model === 'enterprise') return `Visit ${t.title}`;
   return `Get ${t.title}`;
 }
-const sorted = [...tools].sort((a, b) => overallScore(b) - overallScore(a));
+const sorted = [...tools].sort((a, b) => {
+  const matchDelta = categoryMatchRank(b) - categoryMatchRank(a);
+  if (matchDelta !== 0) return matchDelta;
+  const scoreDelta = overallScore(b) - overallScore(a);
+  if (scoreDelta !== 0) return scoreDelta;
+  return a.title.localeCompare(b.title);
+});
 
 // Category stats: surface in a tight stat bar under the hero.
 const activeTools = tools.filter((t) => t.status !== 'dead' && t.status !== 'retired' && t.status !== 'acquired');
@@ -171,7 +181,7 @@ const topPicks = [
   bestOverall && { label: 'Best overall', tool: bestOverall },
   bestBudget && { label: 'Best free or budget', tool: bestBudget },
   bestProTeam && { label: 'Best pro or team', tool: bestProTeam },
-].filter(Boolean) as Array<{ label: string; tool: ToolData }>;
+].filter(Boolean) as Array<{ label: string; tool: ToolData; reason?: string }>;
 
 const configuredPickDefs = [
   { key: 'best_overall', label: 'Best overall' },
@@ -191,10 +201,11 @@ const configuredPickCards = hasConfiguredPicks
         usedConfiguredPickSlugs.add(tool.slug);
         return {
           label: typeof raw === 'object' && raw.label ? raw.label : label,
+          reason: typeof raw === 'object' && raw.reason ? raw.reason : undefined,
           tool,
         };
       })
-      .filter(Boolean) as Array<{ label: string; tool: ToolData }>
+      .filter(Boolean) as Array<{ label: string; tool: ToolData; reason?: string }>
   : [];
 const visibleTopPicks = hasConfiguredPicks
   ? [
@@ -279,7 +290,7 @@ const pricingFilters = [
       <aside class="t2-cat-toppicks" aria-label="Top picks">
         <p class="t2-verdict-heading">Top picks</p>
         <div class="t2-cat-toppicks-grid">
-          {visibleTopPicks.map(({ label: pickLabel, tool: t }) => {
+          {visibleTopPicks.map(({ label: pickLabel, reason, tool: t }) => {
             const score = overallScore(t);
             const label = ctaLabel(t);
             return (
@@ -300,6 +311,7 @@ const pricingFilters = [
                     )}
                   </div>
                 )}
+                {reason && <p class="t2-cat-toppick-reason">{reason}</p>}
                 <div class="t2-cat-toppick-actions">
                   <CommercialCTA
                     toolName={t.title}
@@ -608,6 +620,13 @@ const pricingFilters = [
     .category-detail-page[data-home-page] .t2-cat-toppick-score-val {
       color: var(--home-accent);
       font-weight: 800;
+    }
+    .category-detail-page[data-home-page] .t2-cat-toppick-reason {
+      margin: 0;
+      max-width: 46ch;
+      color: var(--home-muted);
+      font-size: 13px;
+      line-height: 1.45;
     }
     .category-detail-page[data-home-page] .t2-cat-toppick-cta.t2-cta-primary {
       background: var(--home-accent-solid);

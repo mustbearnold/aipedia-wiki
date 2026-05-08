@@ -19,13 +19,39 @@ const distDir = distArg
   ? (isAbsolute(distArg) ? distArg : join(PROJECT_DIR, distArg))
   : join(PROJECT_DIR, process.env.AIPEDIA_FAST_BUILD === '1' ? 'dist-fast' : 'dist/client');
 
+const partnerLinks = {
+  apollo: {
+    href: 'https://get.apollo.io/xdiykcapi88b',
+    toolSlug: 'apollo',
+    affiliateProgram: 'Impact',
+  },
+  adcreative: {
+    href: 'https://free-trial.adcreative.ai/46864ltm9g0d',
+    toolSlug: 'adcreative',
+    affiliateProgram: 'FirstPromoter',
+  },
+  unbounce: {
+    href: 'https://unbounce.partnerlinks.io/f49zh5fwcfoo',
+    toolSlug: 'unbounce',
+    affiliateProgram: 'PartnerStack',
+  },
+  amplemarket: {
+    href: 'https://grow.amplemarket.com/aipediawiki',
+    toolSlug: 'amplemarket',
+    affiliateProgram: 'direct',
+  },
+};
+
 const requiredRoutes = [
   { path: '/tools/chatgpt/', minCtas: 2, pageType: 'tool' },
+  { path: '/tools/apollo/', minCtas: 2, pageType: 'tool', requiredAffiliateLinks: [partnerLinks.apollo] },
+  { path: '/tools/adcreative/', minCtas: 2, pageType: 'tool', requiredAffiliateLinks: [partnerLinks.adcreative] },
+  { path: '/tools/unbounce/', minCtas: 2, pageType: 'tool', requiredAffiliateLinks: [partnerLinks.unbounce] },
   {
     path: '/compare/chatgpt-vs-claude/',
-    minCtas: 3,
+    minCtas: 4,
     pageType: 'comparison',
-    requiredPlacements: ['comparison_tool_card', 'comparison_use_case_winner'],
+    requiredPlacements: ['comparison_hero_winner', 'comparison_tool_card', 'comparison_use_case_winner'],
   },
   { path: '/categories/ai-coding/', minCtas: 3, pageType: 'category' },
   {
@@ -39,6 +65,13 @@ const requiredRoutes = [
       'guide_top_pick',
     ],
   },
+  { path: '/guides/best-ai-tools-for-sales-teams/', minCtas: 5, pageType: 'guide', requiredAffiliateLinks: [partnerLinks.apollo] },
+  { path: '/guides/best-ai-for-cold-email/', minCtas: 5, pageType: 'guide', requiredAffiliateLinks: [partnerLinks.apollo, partnerLinks.amplemarket] },
+  { path: '/guides/ai-lead-generation/', minCtas: 5, pageType: 'guide', requiredAffiliateLinks: [partnerLinks.apollo, partnerLinks.amplemarket] },
+  { path: '/guides/best-ai-tools-for-marketers/', minCtas: 5, pageType: 'guide', requiredAffiliateLinks: [partnerLinks.adcreative, partnerLinks.unbounce] },
+  { path: '/guides/best-ai-for-ad-copy/', minCtas: 5, pageType: 'guide', requiredAffiliateLinks: [partnerLinks.adcreative, partnerLinks.unbounce] },
+  { path: '/categories/ai-design/', minCtas: 3, pageType: 'category', requiredAffiliateLinks: [partnerLinks.adcreative, partnerLinks.unbounce] },
+  { path: '/categories/ai-seo/', minCtas: 3, pageType: 'category', requiredAffiliateLinks: [partnerLinks.adcreative] },
   { path: '/companies/openai/', minCtas: 1, pageType: 'company' },
 ];
 
@@ -124,6 +157,41 @@ for (const route of requiredRoutes) {
         code: 'commercial-cta-placement-missing',
         route: route.path,
         detail: placement,
+      });
+    }
+  }
+
+  for (const requiredLink of route.requiredAffiliateLinks ?? []) {
+    const matchingHref = anchors.filter((anchor) => anchor.attrs.get('href') === requiredLink.href);
+    if (matchingHref.length === 0) {
+      issues.push({
+        code: 'required-affiliate-link-missing',
+        route: route.path,
+        detail: `${requiredLink.toolSlug} ${requiredLink.href}`,
+      });
+      continue;
+    }
+
+    const trackedMatch = matchingHref.find((anchor) => (
+      anchor.attrs.get('data-cta-tool-slug') === requiredLink.toolSlug &&
+      anchor.attrs.get('data-cta-destination-type') === 'affiliate' &&
+      anchor.attrs.get('data-cta-is-affiliate') === 'true' &&
+      (!requiredLink.affiliateProgram || anchor.attrs.get('data-cta-affiliate-program') === requiredLink.affiliateProgram)
+    ));
+
+    if (!trackedMatch) {
+      issues.push({
+        code: 'required-affiliate-link-untracked',
+        route: route.path,
+        detail: `${requiredLink.toolSlug} ${requiredLink.href}`,
+      });
+    }
+
+    if (!html.includes('Affiliate link; no extra cost to you.')) {
+      issues.push({
+        code: 'required-affiliate-disclosure-missing',
+        route: route.path,
+        detail: requiredLink.toolSlug,
       });
     }
   }

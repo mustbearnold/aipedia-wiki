@@ -189,4 +189,5 @@ Kuaishou's official 3.0 launch describes native audio across English, Chinese, J
 ## Related
 
 - **Category:** [AI Video Generation](/categories/ai-video/)
+- **Compare:** [Veo vs Kling](/compare/veo-vs-kling/) · [Kling vs Pika](/compare/kling-vs-pika/) · [Hailuo vs Kling](/compare/hailuo-vs-kling/) · [Runway vs Kling vs Seedance vs Veo](/compare/kling-vs-seedance-vs-runway/)
 - **Alternatives:** [Seedance 2.0](/tools/seedance/) · [Google Veo 3.1](/tools/veo/) · [Runway](/tools/runway/) · [Pika](/tools/pika/) · [HeyGen](/tools/heygen/)

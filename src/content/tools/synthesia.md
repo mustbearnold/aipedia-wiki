@@ -7,7 +7,7 @@ category: ai-video
 company: Synthesia Ltd.
 url: https://synthesia.io
 pricing_model: freemium
-price_range: "Basic free, Starter $29/mo, Creator $89/mo, Enterprise custom"
+price_range: "Basic free, Starter $29/mo monthly or $18/mo annual, Creator $89/mo monthly or $64/mo annual, Enterprise custom"
 status: active
 launched: 2017-01
 last_updated: 2026-05-08
@@ -34,8 +34,16 @@ facts:
     volatility: medium
     confidence: high
     next_review_at: 2026-08-08
+  context_window:
+    value: "Not applicable - Synthesia is an avatar-video and business-video platform, not a chat assistant or language model with a token context window."
+    source: "https://www.synthesia.io/pricing"
+    source_label: "Synthesia pricing"
+    source_id: synthesia-pricing
+    verified_at: 2026-05-08
+    volatility: low
+    confidence: high
   pricing_anchor:
-    value: "Synthesia lists Basic free, Starter $29/mo, Creator $89/mo, and Enterprise custom pricing, with credits as the shared usage currency."
+    value: "Synthesia lists Basic free, Starter $29/mo monthly or $18/mo annual, Creator $89/mo monthly or $64/mo annual, and Enterprise custom pricing, with credits as the shared usage currency."
     source: "https://www.synthesia.io/pricing"
     source_label: "Synthesia pricing"
     source_id: synthesia-pricing
@@ -70,6 +78,15 @@ facts:
     volatility: high
     confidence: high
     next_review_at: 2026-06-08
+  image_generation:
+    value: "Limited supporting asset generation: Synthesia pricing says credits can be used for AI-generated video assets, while the product remains focused on avatar-led video rather than general image generation."
+    source: "https://www.synthesia.io/pricing"
+    source_label: "Synthesia pricing"
+    source_id: synthesia-pricing
+    verified_at: 2026-05-08
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-08
   video_generation:
     value: "Synthesia focuses on avatar-led presenter video, AI dubbing, localization, PowerPoint-to-video, templates, interactivity, API automation, and SCORM-ready publishing."
     source: "https://www.synthesia.io/pricing"
@@ -79,6 +96,57 @@ facts:
     volatility: high
     confidence: high
     next_review_at: 2026-06-08
+  real_time_voice:
+    value: "No primary real-time voice-agent product is listed; Synthesia's public pricing positions the platform around generated avatar videos, AI Dubbing, interactive videos, API access, and enterprise publishing."
+    source: "https://www.synthesia.io/pricing"
+    source_label: "Synthesia pricing"
+    source_id: synthesia-pricing
+    verified_at: 2026-05-08
+    volatility: medium
+    confidence: high
+    next_review_at: 2026-08-08
+  web_browsing:
+    value: "No web-browsing assistant is listed; Synthesia is a business video, avatar, dubbing, localization, API, and SCORM publishing platform."
+    source: "https://www.synthesia.io/pricing"
+    source_label: "Synthesia pricing"
+    source_id: synthesia-pricing
+    verified_at: 2026-05-08
+    volatility: low
+    confidence: high
+  coding_agent:
+    value: "No coding agent; Synthesia API access is for automating avatar-video generation workflows, not for autonomous software development."
+    source: "https://www.synthesia.io/pricing"
+    source_label: "Synthesia pricing"
+    source_id: synthesia-pricing
+    verified_at: 2026-05-08
+    volatility: low
+    confidence: high
+  enterprise_controls:
+    value: "Enterprise lists unlimited video minutes, 240+ stock avatars, unlimited Personal Avatars, SAML/SSO, live team collaboration, brand kits, SCORM export, onboarding, implementation services, and dedicated CSM support."
+    source: "https://www.synthesia.io/pricing"
+    source_label: "Synthesia pricing"
+    source_id: synthesia-pricing
+    verified_at: 2026-05-08
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-08
+  data_retention_or_privacy:
+    value: "Synthesia security practices describe logical customer-data separation, customer-controlled SSO, AES-256 encryption at rest, TLS 1.2+ in transit, EU/Ireland customer-data storage, and deletion within up to 90 days after request or account termination."
+    source: "https://www.synthesia.io/legal/security-practices"
+    source_label: "Synthesia security practices"
+    source_id: synthesia-security-practices
+    verified_at: 2026-05-08
+    volatility: medium
+    confidence: high
+    next_review_at: 2026-08-08
+  open_source_or_local:
+    value: "No - Synthesia is a proprietary hosted SaaS video platform; its security page lists some open-source software dependencies, but the service itself is not a local/open-source tool."
+    source: "https://www.synthesia.io/legal/security-practices"
+    source_label: "Synthesia security practices"
+    source_id: synthesia-security-practices
+    verified_at: 2026-05-08
+    volatility: low
+    confidence: high
   avatar_library:
     value: "Synthesia pricing lists 9 avatars on Basic, 125+ on Starter, 180+ on Creator, and 240+ on Enterprise."
     source: "https://www.synthesia.io/pricing"
@@ -141,11 +209,11 @@ The current buyer correction is that Synthesia is no longer only "Starter vs Cre
 ## Key Facts
 
 - **Current avatar engine:** Express-2 for expressive full-body avatars, natural co-speech gestures, and 1080p avatar output.
-- **Pricing:** Basic free, Starter $29/mo, Creator $89/mo, Enterprise custom.
+- **Pricing:** Basic free, Starter $29/mo monthly or $18/mo annual, Creator $89/mo monthly or $64/mo annual, Enterprise custom.
 - **Credits:** Synthesia says credits are the shared currency across AI usage-based features.
 - **Basic:** 1,200 credits/mo, usable for up to 10 minutes of video/month or 25 AI-generated assets.
-- **Starter:** $29/mo, 1 editor and 3 guests, 125+ avatars, AI Dubbing, logo removal, and 1,200 credits/mo.
-- **Creator:** $89/mo, 5 Personal Avatars, API access, multiple avatars per scene, interactive videos, 180+ avatars, and 3,600 credits/mo.
+- **Starter:** $29/mo monthly or $18/mo annual, 1 editor and 3 guests, 125+ avatars, AI Dubbing, logo removal, and 14,500 credits/year on annual billing.
+- **Creator:** $89/mo monthly or $64/mo annual, 5 Personal Avatars, API access, multiple avatars per scene, interactive videos, 180+ avatars, and 44,000 credits/year on annual billing.
 - **Enterprise:** custom pricing, unlimited video minutes, 240+ avatars, unlimited Personal Avatars, SAML/SSO, live collaboration, brand kits, SCORM export, and onboarding.
 - **API:** public pricing lists API access on Creator and Enterprise with annual video-minute allowances.
 - **Publishing strength:** SCORM export, video embeds, multilingual player, PowerPoint import, templates, and brand controls.
@@ -174,11 +242,11 @@ Express-2 is Synthesia's current avatar-engine story. Synthesia describes it as 
 
 ## Pricing And Buying Advice
 
-As of May 8, 2026, Synthesia's public monthly pricing lists:
+As of May 8, 2026, Synthesia's public pricing lists:
 
 - **Basic:** free, 1,200 credits/mo, up to 10 minutes of video/month or 25 AI-generated video assets.
-- **Starter:** $29/mo, 1,200 credits/mo, 125+ avatars, 1 editor and 3 guests, AI Dubbing, logo removal, and downloaded videos.
-- **Creator:** $89/mo, 3,600 credits/mo, 5 Personal Avatars, API access, multiple avatars per scene, interactive videos, 1 editor and 5 guests, and 180+ avatars.
+- **Starter:** $29/mo monthly or $18/mo annual, 14,500 credits/year on annual billing, 125+ avatars, 1 editor and 3 guests, AI Dubbing, logo removal, and downloaded videos.
+- **Creator:** $89/mo monthly or $64/mo annual, 44,000 credits/year on annual billing, 5 Personal Avatars, API access, multiple avatars per scene, interactive videos, 1 editor and 5 guests, and 180+ avatars.
 - **Enterprise:** custom, unlimited video minutes, 240+ avatars, unlimited Personal Avatars, SAML/SSO, live collaboration, brand kits, SCORM export, onboarding, and custom credits.
 
 The old "API was locked to Enterprise" framing is stale. The public pricing page now lists Synthesia API under Creator and Enterprise. Procurement teams should still verify exact API allowance, add-on pricing, data controls, and commercial terms before buying.

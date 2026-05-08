@@ -201,6 +201,10 @@ const verifiedLabel =
   verifiedDate && !isNaN(verifiedDate.getTime())
     ? verifiedDate.toLocaleDateString('en-US', { month: 'short', year: 'numeric' })
     : null;
+const verifiedExactLabel =
+  verifiedDate && !isNaN(verifiedDate.getTime())
+    ? verifiedDate.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })
+    : null;
 
 const itemListItems = tools
   .filter((t) => t)
@@ -336,36 +340,6 @@ const tocHeadings = (headings ?? []).filter((h) => h.depth === 2).map((h) => ({ 
       ]}
     />
 
-    <!-- Versus banner: dual-logo hero with a gradient divider and
-         inline scores. Magazine-cover moment that sets up the page
-         before the title + meta row. Only renders for 2-tool compares;
-         3+ tool compares skip straight to the title. -->
-    {tools.length === 2 && (
-      <div class="t2-vs-banner" data-pagefind-ignore>
-        <div class="t2-vs-side">
-          <a href={`/tools/${tools[0].slug}/`} class="t2-vs-logo">
-            <ToolLogo slug={tools[0].slug} title={tools[0].title} size={72} />
-          </a>
-          <span class="t2-vs-name">{tools[0].title}</span>
-          {overallScore(tools[0]) > 0 && (
-            <span class="t2-vs-score tabular-nums">{overallScore(tools[0])}<span class="t2-vs-score-slash">/10</span></span>
-          )}
-        </div>
-        <div class="t2-vs-divider" aria-hidden="true">
-          <span class="t2-vs-label">VS</span>
-        </div>
-        <div class="t2-vs-side">
-          <a href={`/tools/${tools[1].slug}/`} class="t2-vs-logo">
-            <ToolLogo slug={tools[1].slug} title={tools[1].title} size={72} />
-          </a>
-          <span class="t2-vs-name">{tools[1].title}</span>
-          {overallScore(tools[1]) > 0 && (
-            <span class="t2-vs-score tabular-nums">{overallScore(tools[1])}<span class="t2-vs-score-slash">/10</span></span>
-          )}
-        </div>
-      </div>
-    )}
-
     <!-- Hero -->
     <header class="t2-cmp-hero" data-pagefind-ignore>
       <h1 class="t2-title">{title}</h1>
@@ -397,6 +371,96 @@ const tocHeadings = (headings ?? []).filter((h) => h.depth === 2).map((h) => ({ 
         )}
       </div>
     </header>
+
+    {(scoreLeader || useCaseWinnerRows.length > 0) && (
+      <section class="t2-cmp-decision-hero" aria-labelledby="comparison-decision-heading">
+        <div class="t2-cmp-decision-panel">
+          <div class="t2-cmp-decision-trust" aria-label="Editorial trust signals">
+            {verifiedExactLabel && <span>Verified {verifiedExactLabel}</span>}
+            <span>No paid ranking</span>
+            <span>Source-backed comparison</span>
+          </div>
+          <div class="t2-cmp-brief-kicker">Decision first</div>
+          <h2 id="comparison-decision-heading">{verdictLabel}</h2>
+          <p>{verdictCopy}</p>
+          <div class="t2-cmp-decision-actions">
+            {scoreLeader && (
+              <CommercialCTA
+                toolName={scoreLeader.title}
+                toolSlug={scoreLeader.slug}
+                canonicalUrl={scoreLeader.url}
+                affiliateUrl={scoreLeader.affiliate?.link}
+                affiliateProgram={scoreLeader.affiliate?.network}
+                label={ctaLabel(scoreLeader)}
+                pricingModel={scoreLeader.pricing_model}
+                priceRange={scoreLeader.price_range}
+                pageType="comparison"
+                placement="comparison_hero_winner"
+                pageSlug={slug}
+                categorySlug={scoreLeader.category}
+                comparisonPair={tools.map((tool) => tool.slug).join('_vs_')}
+                className="t2-cta t2-cta-primary t2-cmp-decision-cta"
+                wrapperClass="commercial-cta-stack t2-cmp-decision-cta-wrap"
+                disclosureClass="commercial-cta-disclosure t2-cmp-decision-disclosure"
+                compareCtaMarker
+              />
+            )}
+            <a href="#full-comparison" class="t2-cta t2-cta-secondary t2-cmp-decision-secondary">
+              See full comparison
+              <span class="t2-cta-arrow" aria-hidden="true">↓</span>
+            </a>
+          </div>
+        </div>
+
+        {useCaseWinnerRows.length > 0 && (
+          <div class="t2-cmp-decision-usecases" aria-label="Winner by use case">
+            <div class="t2-cmp-brief-kicker">Winner by use case</div>
+            <div class="t2-cmp-decision-usecase-list">
+              {useCaseWinnerRows.slice(0, 3).map(({ label, tool, reason, kind }) => (
+                <a
+                  href={kind === 'primary' ? '#full-comparison' : `/tools/${tool.slug}/`}
+                  class={`t2-cmp-decision-usecase ${kind === 'primary' ? 'is-primary' : ''}`.trim()}
+                >
+                  <span class="t2-cmp-decision-usecase-label">{label}</span>
+                  <strong>
+                    <ToolLogo slug={tool.slug} title={tool.title} size={26} />
+                    <span>{tool.title}</span>
+                  </strong>
+                  <span>{reason}</span>
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
+      </section>
+    )}
+
+    <!-- Versus banner: dual-logo comparison context after the decision-first module. -->
+    {tools.length === 2 && (
+      <div class="t2-vs-banner" data-pagefind-ignore>
+        <div class="t2-vs-side">
+          <a href={`/tools/${tools[0].slug}/`} class="t2-vs-logo">
+            <ToolLogo slug={tools[0].slug} title={tools[0].title} size={72} />
+          </a>
+          <span class="t2-vs-name">{tools[0].title}</span>
+          {overallScore(tools[0]) > 0 && (
+            <span class="t2-vs-score tabular-nums">{overallScore(tools[0])}<span class="t2-vs-score-slash">/10</span></span>
+          )}
+        </div>
+        <div class="t2-vs-divider" aria-hidden="true">
+          <span class="t2-vs-label">VS</span>
+        </div>
+        <div class="t2-vs-side">
+          <a href={`/tools/${tools[1].slug}/`} class="t2-vs-logo">
+            <ToolLogo slug={tools[1].slug} title={tools[1].title} size={72} />
+          </a>
+          <span class="t2-vs-name">{tools[1].title}</span>
+          {overallScore(tools[1]) > 0 && (
+            <span class="t2-vs-score tabular-nums">{overallScore(tools[1])}<span class="t2-vs-score-slash">/10</span></span>
+          )}
+        </div>
+      </div>
+    )}
 
     <!-- Tool cards compared -->
     <section class="t2-cmp-cards" aria-label="Tools compared">

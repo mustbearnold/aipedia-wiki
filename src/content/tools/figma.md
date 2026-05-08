@@ -2,16 +2,16 @@
 type: tool
 slug: figma
 title: Figma
-tagline: The industry-standard collaborative design platform. AI features ship across Design, Dev Mode, FigJam, Slides, Draw, Buzz, Sites, and Make. Figma Make runs on Claude Opus for prompt-to-app prototyping.
+tagline: Collaborative product design platform with Figma Design, Dev Mode, FigJam, Slides, Draw, Buzz, Sites, Make, AI credits, design systems, and code handoff.
 category: ai-design
 company: figma
 url: https://www.figma.com
 pricing_model: freemium
-price_range: "$0-$90/month"
+price_range: "$0-$90/mo per Full seat"
 status: active
 launched: 2016-09
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-08
+last_verified: 2026-05-08
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -26,210 +26,298 @@ scores:
   longevity: 9
 facts:
   best_for:
-    value: "Collaborative product design teams that need AI inside the same workspace as Design, Dev Mode, FigJam, Slides, Sites, Buzz, and Make."
-    source: "https://www.figma.com/pricing/"
-    source_label: "Figma Plans & Pricing"
-    source_id: figma-pricing
-    verified_at: 2026-05-03
+    value: "Figma is best for product design teams that need multiplayer design files, design systems, Dev Mode handoff, and AI-assisted workflows in the same platform."
+    source: "https://help.figma.com/hc/en-us/articles/360040328273-Figma-plans-and-features"
+    source_label: "Figma plans and features"
+    source_id: figma-plans-features
+    verified_at: 2026-05-08
     volatility: medium
     confidence: high
   pricing_anchor:
-    value: "Figma pricing is seat and product-tier based, with AI usage governed by monthly AI credit allocations and overage rules."
+    value: "Figma has a free Starter plan and paid Full-seat pricing that currently lists Professional at $16/month, Organization at $55/month, and Enterprise at $90/month, with Dev and Collab seats priced separately."
     source: "https://www.figma.com/pricing/"
-    source_label: "Figma Plans & Pricing"
+    source_label: "Figma pricing"
     source_id: figma-pricing
-    verified_at: 2026-05-03
+    verified_at: 2026-05-08
     volatility: high
     confidence: high
-    next_review_at: 2026-08-03
+    next_review_at: 2026-06-08
+  best_paid_tier:
+    value: "Professional Full seat at $16/month is the right first paid tier for most small product teams; Organization and Enterprise are governance and scale upgrades."
+    source: "https://www.figma.com/pricing/"
+    source_label: "Figma pricing"
+    source_id: figma-pricing
+    verified_at: 2026-05-08
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-08
   ai_credits:
-    value: "AI credits are metered separately by plan and user type; teams should model credit usage before rolling AI features across large design orgs."
+    value: "AI credits reset monthly, do not roll over, and currently include 500 credits on Starter, 3,000 on Professional Full seats, 3,500 on Organization Full seats, and 4,250 on Enterprise Full seats."
     source: "https://help.figma.com/hc/en-us/articles/33459875669015-How-AI-credits-work"
-    source_label: "Figma AI credits documentation"
+    source_label: "Figma AI credits"
     source_id: figma-ai-credits
-    verified_at: 2026-05-03
+    verified_at: 2026-05-08
     volatility: high
     confidence: high
-    next_review_at: 2026-08-03
-  figma_make_model:
-    value: "Figma Make exposes model selection, with Claude Opus documented as one of the available/default model options for prompt-to-app work."
+    next_review_at: 2026-06-08
+  flagship_model:
+    value: "Figma Make exposes a model selector with options including Gemini 3 Flash, Gemini 3.1 Pro, Claude Sonnet 4.6, and Claude Opus 4.7; Figma says the default model may change over time."
     source: "https://help.figma.com/hc/en-us/articles/36400680326551-Select-an-AI-model-to-use-in-Figma-Make"
-    source_label: "Figma Make model selection documentation"
+    source_label: "Figma Make model selection"
     source_id: figma-make-models
-    verified_at: 2026-05-03
+    verified_at: 2026-05-08
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-08
+  figma_make_scope:
+    value: "Figma Make creates functional prototypes, web apps, and interactive UI from prompts, attached Figma designs, style libraries, backend instructions, and MCP connectors."
+    source: "https://help.figma.com/hc/en-us/articles/31304485164695-Create-and-edit-a-Figma-Make-file"
+    source_label: "Figma Make creation docs"
+    source_id: figma-make-create
+    verified_at: 2026-05-08
+    volatility: medium
+    confidence: high
+  code_handoff:
+    value: "Figma Make supports downloading a code ZIP or pushing code to GitHub, but local code changes cannot automatically push back into Figma Make."
+    source: "https://help.figma.com/hc/en-us/articles/35710574222487-Beyond-the-basics-Using-Figma-Make"
+    source_label: "Figma Make advanced docs"
+    source_id: figma-make-advanced
+    verified_at: 2026-05-08
     volatility: medium
     confidence: high
   watch_out_for:
-    value: "The AI value is strongest for teams already living in Figma. If the buyer only needs one-off image generation or copy, a cheaper specialist may be simpler."
-    source: "https://help.figma.com/hc/en-us/articles/33459875669015-How-AI-credits-work"
-    source_label: "Figma AI credits documentation"
-    source_id: figma-ai-credits
-    verified_at: 2026-05-03
-    volatility: high
+    value: "Figma is strongest when the buyer needs a durable design system. It is overkill for a founder who only wants a launchable MVP from a prompt."
+    source: "https://help.figma.com/hc/en-us/articles/29717597009431-Guide-to-billing-at-Figma"
+    source_label: "Figma billing guide"
+    source_id: figma-billing
+    verified_at: 2026-05-08
+    volatility: medium
     confidence: high
-    next_review_at: 2026-08-03
+hero_glance:
+  items:
+    - label: "Best plan"
+      value: "Professional Full seat"
+      detail: "$16/mo before AI add-ons"
+      tone: positive
+    - label: "Best for"
+      value: "Product design systems"
+      detail: "Design, Dev Mode, Make"
+      tone: positive
+    - label: "Watch"
+      value: "Seat and AI-credit math"
+      detail: "Model choice changes burn"
+      tone: negative
+decision_brief:
+  items:
+    - label: "Use it for"
+      value: "Collaborative product design"
+      detail: "Best when design files, systems, and dev handoff matter."
+      tone: positive
+    - label: "Buy this plan"
+      value: "Professional Full seat"
+      detail: "$16/month is the first serious tier for small teams."
+      tone: positive
+    - label: "Avoid when"
+      value: "You only need prompt-to-MVP"
+      detail: "Lovable or v0 will usually get to runnable app faster."
+      tone: negative
 tags: [design, ui-ux, prototyping, collaboration, design-system, figma-make, figma-sites, figma-slides, figma-buzz, dev-mode]
-seo_title: "Figma: Features, Pricing & Review (April 2026)"
-meta_description: "Figma's design suite now spans Design, Dev Mode, FigJam, Slides, Draw, Buzz, Sites, and Make. Figma Make generates apps from prompts via Claude Opus. Plans run $0-$90/editor/mo."
+seo_title: "Figma Review: Pricing, AI Credits, Make & Sites (May 2026)"
+meta_description: "Updated May 8, 2026: Figma pricing, Full seats, AI credits, Figma Make models, Sites, Dev Mode, best plan, alternatives, and buyer risks."
 author: "aipedia.wiki Editorial"
+primary_cta_label: "Start with Figma free"
+best_plan: "Professional Full seat at $16/month"
 best_for:
-  - product design teams
-  - design systems at scale
-  - dev handoff with code specs
-  - prompt-to-prototype via Figma Make
+  - product design teams building shared design systems
+  - designers and engineers who need trustworthy Dev Mode handoff
+  - teams that want Figma Make inside an existing design workflow
+  - organizations managing design libraries, approvals, governance, and collaboration
 not_best_for:
-  - solo freelancers on a tight budget
-  - pure text-to-code workflows with no design step
-  - print-focused production work
+  - solo founders who only want a runnable MVP from a prompt
+  - teams that need full-stack app architecture control from the first draft
+  - print-production workflows that need mature CMYK and prepress tools
+  - buyers who cannot model seat costs and AI-credit usage before rollout
 quick_answer: >-
-  Figma is the default collaborative design platform. Pick it for product teams, design systems, and dev handoff. Skip for solo budget work (Penpot, Canva), pure prompt-to-code (v0, Lovable), or print production (Illustrator).
+  Figma is still the product-design system of record. Buy it when design files, multiplayer collaboration, Dev Mode, and design-system governance matter. Use Figma Make when app prototypes need to stay close to the design source. Pick Lovable, Bolt.new, or v0 instead when the buyer mainly wants a launchable app from prompts and can review generated code outside a design platform.
 price_history:
   - date: 2026-03-18
-    plan: "AI credits"
-    price: "3,000/mo Pro"
+    plan: "AI credit enforcement"
+    price: "500-4,250 included credits/mo by seat and plan"
+    source: "https://help.figma.com/hc/en-us/articles/33459875669015-How-AI-credits-work"
+    source_label: "Figma AI credits"
+    source_id: figma-ai-credits
+    note: "Full-seat AI credit limits became enforced; heavy Figma Make and image workflows now need credit planning."
+  - date: 2026-05-08
+    plan: "Professional Full seat"
+    price: "$16/mo"
     source: "https://www.figma.com/pricing/"
-    source_label: "Source"
+    source_label: "Figma pricing"
     source_id: figma-pricing
-    note: "AI credit enforcement activated March 18, 2026 across all tiers."
-  - date: 2026-04-15
-    plan: "Professional"
-    price: "$16/editor/mo"
-    source: "https://www.figma.com/pricing/"
-    source_label: "Source"
-    source_id: figma-pricing
-    note: "Verified unchanged on annual billing."
-  - date: 2026-04-17
-    plan: "Competitive landscape"
-    price: "~7% stock drop"
-    source: "https://www.figma.com/pricing/"
-    source_label: "Source"
-    source_id: figma-pricing
-    note: "Anthropic launched [Claude Design](/tools/claude-design/) targeting the non-designer segment. Figma stock fell ~7% on the announcement. Mike Krieger (Anthropic CPO) resigned from Figma's board on April 14, three days before the launch. See [news](/news/2026-04-17-anthropic-launches-claude-design/)."
+    note: "Current public pricing page lists Starter free, Professional Full seat $16/mo, Organization Full seat $55/mo, and Enterprise Full seat $90/mo."
 ---
 
 # Figma
 
-Figma is the collaborative design platform used by most product teams in 2026. The suite spans eight products: Design, Dev Mode, FigJam, Slides, Draw, Buzz, Sites, and Make.
+Figma is the default product-design platform for teams that build software interfaces together. As verified on May 8, 2026, the platform now spans Figma Design, Dev Mode, FigJam, Slides, Draw, Buzz, Sites, Make, AI credits, design-system administration, and seat-based billing. The practical buying question is no longer "Can Figma do AI?" It can. The better question is whether the buyer needs AI inside a shared design system, or whether a prompt-first app builder would ship the first version faster.
 
-Figma Make generates working prototypes and web apps from natural-language prompts, with Claude Opus as the default backing model. Pricing runs free to $90 per editor per month.
+AiPedia's answer: Figma is the strongest choice when the design file is the source of truth. Lovable, Bolt.new, v0, and Replit Agent are better when the source of truth is a working app and the design layer can be rougher at first.
 
-## System Verdict
+## Buyer Verdict
 
-> **Pick Figma if you run a product design team or ship UI at any meaningful scale.** Still the reference point for design systems, real-time multiplayer editing, and dev handoff via Dev Mode. Figma Make closes the prompt-to-prototype gap that v0 and Lovable opened; the rest of the suite is the reason teams stay.
->
-> **Skip it if you are a solo freelancer on a tight budget, need pure text-to-code without a design step, or do print production.** The per-editor pricing punishes individuals. [v0](/tools/v0/) and [Lovable](/tools/lovable/) generate shipped code faster when design fidelity does not matter. Illustrator beats Figma on CMYK and print.
->
-> **Who pays which tier:** Starter free for hobbyists and 2-editor drafts, Professional $16/editor for most working teams, Organization $55/editor when you need branching and org-wide libraries, Enterprise $90/editor for SOC 2, SSO, and advanced security. AI credits cap at 3,000 to 4,250 per month depending on tier; overages run $0.03/credit pay-as-you-go.
+Pick Figma if your team already thinks in screens, components, variants, tokens, comments, branches, and engineer handoff. It is still the safest buy for product designers, design systems, cross-functional product teams, and companies that need a durable interface workflow. The reason is not one AI feature. The reason is that Figma combines the canvas, collaboration model, shared libraries, Dev Mode, governance, and now AI-assisted Make/Sites/Buzz work in one place.
+
+Do not buy Figma just because you want to generate an app from a prompt. Figma Make can create functional prototypes and web apps, and it can push code to GitHub or let you download a code ZIP. But Figma is still a design-first platform. If the buyer is a solo founder trying to validate a SaaS idea this week, [Lovable](/tools/lovable/) will usually move faster because its workflow is organized around app generation, cloud/backend paths, and launch iteration.
+
+The best first paid plan for most professional teams is **Professional Full seat at $16/month**. Use Starter to evaluate, but serious teams need unlimited files and projects, team libraries, advanced prototyping, and Dev Mode. Organization and Enterprise are worth it when central administration, SSO, branching, design-system governance, SCIM, or workspace controls are the buying reason.
+
+## Recent Developments
+
+- **May 8, 2026 verification:** Figma's current pricing page lists Starter free, Professional Full seat $16/month, Organization Full seat $55/month, Enterprise Full seat $90/month, and separate Dev/Collab seat pricing.
+- **AI credits are now a buying constraint:** Figma's AI credit docs say credits reset monthly, do not roll over, and vary by plan and seat. Heavy Figma Make users need to watch credit burn.
+- **Figma Make model wording changed from older pages:** Current docs list selectable models such as Gemini 3 Flash, Gemini 3.1 Pro, Claude Sonnet 4.6, and Claude Opus 4.7, but they also say the default model may change over time. AiPedia should not describe one model as a permanent default.
+- **Figma Make is broader than a mockup generator:** Current docs describe prompt creation, attached designs, style-library context, backend instructions, MCP connectors, preview editing, direct code editing, code ZIP download, and GitHub push.
+- **April 17, 2026 competitive signal:** [Anthropic launched Claude Design and Figma stock dropped 7%](/news/2026-04-17-anthropic-launches-claude-design/), which reinforces why AiPedia separates Figma's durable design-system moat from prompt-first design and app tools.
+- **AI app-builder competition is stronger:** [Lovable](/tools/lovable/) now has a clearer app-builder and backend story, [Bolt.new](/tools/bolt/) is stronger for browser-native build/run/debug sessions, and [v0](/tools/v0/) is strongest when the buyer already wants Vercel-native React/Next work.
 
 ## Key Facts
 
-| | |
+| Fact | Current Figma position |
 |---|---|
-| **Core products** | Design · Dev Mode · FigJam · Slides · Draw · Buzz · Sites · Make |
-| **Figma Make backing model** | Claude Opus (default) · alternative models selectable |
-| **Collaboration** | Real-time multiplayer · branching (Org+) · version history |
-| **AI credits** | 500/mo Starter · 3,000/mo Pro · 3,500/mo Org · 4,250/mo Enterprise |
-| **Credit overage** | $0.03/credit pay-as-you-go · shared pool add-on $120-$240/mo |
-| **Starter limits** | 3 Design files · 3 FigJam · 3 Slides · 2 editors · 150 AI credits/day |
-| **Dev Mode** | Code export (CSS, SwiftUI, Compose) · AI-generated summaries |
-| **Figma Sites** | Publishes designs as live websites · Full seat required |
-| **Figma Buzz** | Marketing assets and promos · Dev or Full seat |
-| **Pricing** | Starter $0 · Professional $16 · Organization $55 · Enterprise $90 (per editor, annual) |
+| Best buyer | Product design teams and design-system operators |
+| Free plan | Starter with limited access and included AI credits |
+| Best first paid plan | Professional Full seat at $16/month |
+| Organization Full seat | $55/month |
+| Enterprise Full seat | $90/month |
+| AI credits | 500/mo Starter, 3,000/mo Pro Full seat, 3,500/mo Org Full seat, 4,250/mo Enterprise Full seat |
+| Figma Make models | Model selector lists Gemini 3 Flash, Gemini 3.1 Pro, Claude Sonnet 4.6, and Claude Opus 4.7; default may change |
+| Figma Make output | Functional prototypes, web apps, interactive UI, preview, and editable code |
+| Backend path | Figma Make can add backend support, including Supabase for multi-user apps |
+| Code handoff | Download code ZIP or push to GitHub; outside code changes do not automatically sync back |
+| Main watch-out | Seat costs plus AI-credit burn can outrun value if the buyer only needs one prompt-built app |
 
-Every data point above was verified against vendor sources on 2026-04-17. See Sources.
+Every fact above was checked against official Figma sources on 2026-05-08. See Sources.
 
-## What it actually is
+## What Figma Actually Is
 
-One design platform served as eight connected products. A single subscription covers the full suite at the editor's seat tier.
+Figma is a collaborative interface-production system. Figma Design remains the main canvas for UI/UX work. Dev Mode gives engineers inspect and handoff workflows. FigJam handles whiteboarding. Slides covers deck work. Draw adds illustration tooling. Buzz handles brand and marketing assets. Sites is the website-building beta. Make is the prompt-to-functional-prototype layer.
 
-Design and Dev Mode remain the workhorses. FigJam handles whiteboarding and sticky-note sessions. Slides ships presentation decks with live component embeds and AI tone adjustment on copy.
+That product spread matters because buyers often compare Figma against tools that solve only one job. Lovable may ship a founder MVP faster. Canva may serve non-designers better for social assets. v0 may generate shadcn/Tailwind UI faster for Vercel teams. But Figma is much harder to replace when the job is maintaining a shared design system across product, design, engineering, marketing, and leadership.
 
-Figma Make is the prompt-to-app layer. It generates functional prototypes and working web apps from natural language, with Claude Opus selected as the default model in [Figma Make model picker](https://help.figma.com/hc/en-us/articles/36400680326551-Select-an-AI-model-to-use-in-Figma-Make). Sites publishes finished designs as live, deployable websites. Buzz handles marketing assets, social graphics, and promo materials.
+Figma Make is the part that overlaps most with app builders. It lets users describe a prototype or web app in chat, attach Figma designs, use style context from libraries, add backend instructions, use MCP connectors, inspect an interactive preview, and edit code directly. Its advanced docs describe Supabase for multi-user app support and two code handoff options: download a ZIP or push code to GitHub.
 
-The moats: the component model that powers every design system of record in 2026, Dev Mode's code-accurate handoff that engineering actually trusts, and the real-time multiplayer canvas that competitors have not caught up on. AI credit enforcement started March 18, 2026, which matters for heavy generative-workflow users.
+The important limitation is ownership flow. Code can leave Figma Make, but changes made in a local IDE cannot automatically push back into Make. That makes Figma Make useful for ideation and design-adjacent prototypes, not a complete replacement for a production engineering workflow.
 
-## When to pick Figma
+## When To Pick Figma
 
-- **You run a design system for a product team.** Figma's component variants, auto layout, and shared libraries remain the standard everyone else copies.
-- **You need trustworthy dev handoff.** Dev Mode exports CSS, SwiftUI, and Jetpack Compose specs engineers ship without rewriting.
-- **You want prompt-to-prototype without leaving the canvas.** Figma Make generates working apps from prompts, powered by Claude Opus, and the output lives in the same file tree as the design.
-- **You publish design-driven websites.** Figma Sites turns final designs into live URLs without a code export step.
-- **You run multiplayer sessions with distributed teams.** Simultaneous editing, branching on Organization, and comment threads scale cleaner than any alternative.
-- **You already pay per editor.** Once you are on Professional or Org, the AI features and product sprawl come bundled.
+- **You run product design at team scale.** Shared components, variants, comments, branches, and libraries are the reason Figma remains hard to displace.
+- **You need trustworthy dev handoff.** Dev Mode, inspect workflows, version context, and design-to-engineering collaboration are still stronger than prompt-first app builders.
+- **You want Figma Make close to the design source.** If the prototype starts from existing frames, components, and library styles, Make keeps the work near the source file.
+- **You publish design-driven websites.** Figma Sites is still beta, but it fits teams that want to move from design to responsive web publishing without jumping into a code-first builder immediately.
+- **You need governance.** Organization and Enterprise add the administrative, security, library, and workspace controls that real companies buy.
+- **You have multiple seat types.** Full, Dev, Collab, and View seats let teams buy access by role instead of paying every stakeholder as a full editor.
 
-## When to pick something else
+## When To Pick Something Else
 
-- **Pure prompt-to-code with no design step:** [v0](/tools/v0/) or [Lovable](/tools/lovable/). Ship React apps from prompts without the canvas overhead.
-- **Non-designer marketing and social output:** [Canva](/tools/canva/). Cheaper, faster for thumbnails, and non-designers actually finish the work.
-- **Budget-conscious solo designer:** Penpot. Open source, self-hostable, no per-editor tax.
-- **Print production:** Adobe Illustrator and InDesign. Figma's CMYK and prepress are thin.
-- **Heavy 3D or motion work:** Spline for 3D, After Effects for motion. Figma's prototyping is interaction-only.
+- **Pick [Lovable](/tools/lovable/) for founder MVPs.** Lovable is better when the buyer wants a working app, backend path, publishing flow, and GitHub handoff from product prompts.
+- **Pick [v0](/tools/v0/) for Vercel-native UI and app work.** v0 is stronger when the output should be React, Next.js, Tailwind, shadcn, and Vercel-aligned from the beginning.
+- **Pick [Bolt.new](/tools/bolt/) for browser-native coding sessions.** Bolt is better when the buyer wants to run, inspect, and debug the app in a browser development workspace.
+- **Pick [Canva](/tools/canva/) for non-designer marketing work.** Canva is easier for social posts, brand templates, and quick team assets.
+- **Pick Adobe Illustrator or InDesign for print.** Figma can export, but it is not the best prepress or CMYK production system.
 
 ## Pricing
 
-Subscription pricing via [figma.com/pricing](https://www.figma.com/pricing/). Every editor seat carries the full product suite; AI credits cap by tier.
+Pricing was checked against [Figma pricing](https://www.figma.com/pricing/) on 2026-05-08. Figma's current public page is seat based, not a flat "AI design app" subscription.
 
-| Plan | Price (annual) | AI credits | Who's it for |
-|------|----------------|------------|--------------|
-| Starter | $0 | 500/mo · 150/day cap | Hobbyists · 2-editor drafts |
-| Professional | $16/editor/mo | 3,000/mo | **Most working teams should land here** |
-| Organization | $55/editor/mo | 3,500/mo | Multi-team orgs needing branching and SSO |
-| Enterprise | $90/editor/mo | 4,250/mo | SOC 2, advanced security, dedicated CSM |
+| Plan | Current public price | Buyer fit |
+|---|---:|---|
+| Starter | Free | Evaluation, drafts, lightweight collaboration, and limited AI-credit use |
+| Professional Full seat | $16/month | Best first paid tier for working designers and small product teams |
+| Professional Dev seat | $12/month | Engineers who need Dev Mode and related collaboration without full design access |
+| Professional Collab seat | $3/month | Lightweight collaborators who mainly use FigJam and Slides |
+| Organization Full seat | $55/month | Larger teams needing centralized administration, libraries, and org-wide workflows |
+| Enterprise Full seat | $90/month | Companies needing advanced security, SCIM, workspaces, and enterprise governance |
 
-*Prices verified 2026-04-17 via [Figma Plans & Pricing](https://www.figma.com/pricing/) and [Figma AI credits docs](https://help.figma.com/hc/en-us/articles/33459875669015-How-AI-credits-work). Credit overage billed at $0.03/credit pay-as-you-go; 5,000 or 10,000 shared-pool add-ons run $120 and $240 per month.*
+Figma AI credits add another layer. The current docs say each seat gets credits, credits reset monthly, do not roll over, and cannot be shared or transferred between users. Included Full-seat credits are 500/month on Starter, 3,000/month on Professional, 3,500/month on Organization, and 4,250/month on Enterprise. Starter and View-seat users also have a 150-credit daily limit.
 
-## Against the alternatives
+Model choice matters. Figma says AI feature consumption varies by request, model, complexity, and context. Current Make model docs list options including Gemini 3 Flash, Gemini 3.1 Pro, Claude Sonnet 4.6, and Claude Opus 4.7, while also warning that the default model may change and that some non-default models can use substantially more credits.
 
-| | Figma | v0 by Vercel | Canva |
-|---|---|---|---|
-| **Primary use** | Product design + dev handoff | Prompt to React code | Non-designer marketing visuals |
-| **Collaboration** | Real-time multiplayer, branching | Single-user prompts | Team workspace, approvals |
-| **AI generation** | Figma Make (Claude Opus) | Native, fast iteration | Magic Studio suite |
-| **Design systems** | Industry standard | None | Brand Kit (light) |
-| **Dev handoff** | Dev Mode code export | Ships runnable code directly | None |
-| **Entry price** | $16/editor (Pro) | $0 free tier | $0 free tier |
-| **Best viewed as** | Design system platform | Frontend code generator | Template-driven social tool |
+## Best Plan To Buy
 
-## Failure modes
+Most real teams should start at **Professional Full seat at $16/month** for the people creating and editing product design work. Keep non-design stakeholders on cheaper or free access where possible. Buy Dev seats for engineers who need Dev Mode rather than full design editing. Buy Collab seats for people who mostly participate in FigJam or Slides.
 
-- **Per-editor pricing punishes solos.** $16/editor adds up fast. A 10-editor team hits $1,920/year minimum on Professional, before AI credit overages.
-- **AI credit enforcement is live.** Since March 18, 2026, exceeding monthly credits means waiting, paying $0.03/credit, or buying a 5K-10K shared pool add-on at $120-$240/mo.
-- **Figma Make uses more credits on Claude Opus.** The default model delivers stronger output but burns through credits faster than alternative picks in the model selector.
-- **Starter is genuinely thin.** 3 Design files, 3 FigJam, 3 Slides. Serious users outgrow it in a week.
-- **Sites and Make require Full seats.** Dev or Collab seats cannot create Figma Sites or Make projects, only view them.
-- **Windows and web performance lag.** Large files with heavy AI workloads stutter on lower-spec machines. The desktop app still eats RAM.
-- **File format is proprietary.** SVG and PDF export work. Moving a live design system to another tool is a migration project, not a click.
-- **Competitive pressure from prompt-first tools.** v0 and Lovable ship functional code faster when the goal is a working prototype, not a design artifact.
+Move to Organization when cross-team governance is the problem: org-wide libraries, branching and merging, plugin management, central administration, domain capture, and SSO. Move to Enterprise when security and scale become the reason: SCIM, workspace administration, stricter external-content controls, guest controls, and enterprise policy requirements.
+
+Do not buy Organization or Enterprise just to "get AI." The first question is whether the design system and governance features are needed. The second question is whether the team has enough AI credit volume to justify add-ons or plan changes.
+
+## Figma Make Watch-Outs
+
+- **Default-model claims age quickly.** Current Figma docs explicitly say the default model may change. AiPedia should list current selectable models and avoid permanent default-model language.
+- **AI credits are metered.** Heavy prompt loops, complex context, image tools, and higher-cost models can burn through included credits.
+- **Figma Make is not a complete production pipeline.** Downloading ZIP code or pushing to GitHub helps, but local changes do not automatically sync back into Figma Make.
+- **Backend support still needs engineering judgment.** Figma Make can add backend support and use Supabase for multi-user apps, but auth, RLS, secrets, data migration, observability, and hosting choices still need review.
+- **Figma Sites is still beta.** Treat it as promising for design-driven sites, not a universal replacement for mature CMS, ecommerce, or custom web-app stacks.
+- **Seat strategy matters.** A team that buys too many Full seats pays for access it may not need.
+
+## Against The Alternatives
+
+| Buyer job | Figma | Lovable | v0 | Bolt.new |
+|---|---|---|---|---|
+| Product design system | Best default | Not the system of record | Not a design-system canvas | Not the system of record |
+| Founder MVP | Useful after product direction is clearer | Best fit | Strong if Vercel/React-first | Strong if browser coding is central |
+| Design to code | Strong handoff and Make experiments | App generation plus GitHub sync | Strong React/Next output | Browser-native build/run/debug |
+| Backend path | Make can add backend support and use Supabase | Lovable Cloud or Supabase | Bring your own/Vercel path | Bolt Cloud/database path |
+| Non-designer ease | Medium | High for app prompts | Medium for frontend prompts | Medium for developer-minded users |
+| Main risk | Seat cost and credit burn | Generated app review and cloud costs | Stack lock-in | Token burn and stack limits |
+
+The short version: Figma wins when design quality, shared systems, and handoff matter. Lovable wins when the buyer wants a working MVP with backend paths. v0 wins when Vercel-native React is the obvious stack. Bolt.new wins when the browser should feel like the IDE.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [Figma Plans & Pricing](https://www.figma.com/pricing/), [AI credits documentation](https://help.figma.com/hc/en-us/articles/33459875669015-How-AI-credits-work), and [Figma Make model selection](https://help.figma.com/hc/en-us/articles/36400680326551-Select-an-AI-model-to-use-in-Figma-Make).
+AiPedia scores Figma as a buyer decision page, not as a benchmark claim. Utility is high because Figma remains central to product design, Dev Mode, design systems, Make, Sites, and cross-functional collaboration. Value is strong for teams that use the suite daily, but weaker for solos who only need one generated app. Moat is high because shared design systems and team workflows are hard to migrate. Longevity is high because Figma has expanded from design canvas to multi-product workflow, but prompt-first app builders are attacking the early-prototype use case.
+
+This page was updated on 2026-05-08 against official Figma pricing, AI credit, Make model, Make creation, Make advanced, and plans/features documentation. Unsupported permanent default-model language was removed.
 
 ## FAQ
 
 **Is Figma free?**
-Yes. The Starter plan gives 3 Design files, 3 FigJam, 3 Slides, 2 editors, and 500 AI credits per month with a 150/day cap. Serious teams outgrow it fast and move to Professional at $16/editor/mo.
 
-**What is Figma Make?**
-A prompt-to-app generator inside Figma that turns natural-language descriptions into working prototypes and web apps. Claude Opus is the default backing model, with alternatives selectable from the [model picker](https://help.figma.com/hc/en-us/articles/36400680326551-Select-an-AI-model-to-use-in-Figma-Make). Requires a Full seat.
+Yes. Starter is free and currently includes limited access plus AI credits. Serious product teams usually outgrow Starter because Professional is the first tier designed for unlimited files/projects and working team libraries.
 
-**What are AI credits and how do they work?**
-AI credits gate generative features across Figma Make, image tools, and text-AI actions. Starter gets 500/mo, Pro 3,000, Org 3,500, Enterprise 4,250. Overages run $0.03/credit pay-as-you-go or a 5K-10K shared pool add-on at $120-$240/mo ([AI credits docs](https://help.figma.com/hc/en-us/articles/33459875669015-How-AI-credits-work)).
+**What Figma plan should a small team buy first?**
 
-**Figma vs v0 for shipping a prototype?**
-v0 ships React code faster when design fidelity is secondary. Figma wins when the prototype needs to match a design system, get dev handoff, or feed into a production file. Many teams use v0 for early exploration and Figma for production design.
+Professional Full seat at $16/month for designers and product people who create design work. Add Dev seats for engineers who need Dev Mode, and keep casual stakeholders on lighter access when possible.
 
-**Does Figma cover print?**
-Thinly. CMYK support is basic and prepress workflows assume Illustrator or InDesign. Use Figma for screen design and a dedicated print tool for packaging, brochures, or commercial printing.
+**Does Figma Make generate real apps?**
+
+Figma Make can create functional prototypes, web apps, and interactive UI from prompts. Current docs also describe backend instructions, Supabase-backed multi-user examples, editable code, ZIP download, and GitHub push.
+
+**What models does Figma Make use?**
+
+As verified on May 8, 2026, Figma's model-selection docs list Gemini 3 Flash, Gemini 3.1 Pro, Claude Sonnet 4.6, and Claude Opus 4.7 as selectable options, and say the default model may change over time.
+
+**Is Figma better than Lovable?**
+
+For design systems, design collaboration, and dev handoff, yes. For founder MVPs and prompt-to-app launch speed, Lovable is usually the better first tool.
+
+**Can Figma replace a production engineering workflow?**
+
+No. It can help design, prototype, generate, inspect, and hand off code. Production apps still need engineering review, source control discipline, security checks, deployment choices, and monitoring.
 
 ## Sources
 
-- [Figma Plans & Pricing](https://www.figma.com/pricing/): Current tier pricing and feature matrix
-- [Figma AI credits](https://help.figma.com/hc/en-us/articles/33459875669015-How-AI-credits-work): Credit allocations, overage billing, and enforcement date
-- [Figma Make model selection](https://help.figma.com/hc/en-us/articles/36400680326551-Select-an-AI-model-to-use-in-Figma-Make): Default Claude Opus model and alternatives
-- [Figma plans and features](https://help.figma.com/hc/en-us/articles/360040328273-Figma-plans-and-features): Seat types, product access by tier
+- [Figma pricing](https://www.figma.com/pricing/) - current plan, seat, AI-credit, Make, Sites, and feature matrix. Verified 2026-05-08.
+- [Figma AI credits](https://help.figma.com/hc/en-us/articles/33459875669015-How-AI-credits-work) - credit allowances, monthly reset, non-rollover rules, daily caps, and model/complexity consumption notes. Verified 2026-05-08.
+- [Figma Make model selection](https://help.figma.com/hc/en-us/articles/36400680326551-Select-an-AI-model-to-use-in-Figma-Make) - selectable models and default-model caveat. Verified 2026-05-08.
+- [Create and edit a Figma Make file](https://help.figma.com/hc/en-us/articles/31304485164695-Create-and-edit-a-Figma-Make-file) - prompt workflow, attached designs, backend instructions, MCP connectors, preview, and code editing. Verified 2026-05-08.
+- [Beyond the basics: Using Figma Make](https://help.figma.com/hc/en-us/articles/35710574222487-Beyond-the-basics-Using-Figma-Make) - Supabase support, code ZIP download, and GitHub push. Verified 2026-05-08.
+- [Figma plans and features](https://help.figma.com/hc/en-us/articles/360040328273-Figma-plans-and-features) - product lineup, plan features, and governance features. Verified 2026-05-08.
+- [Figma billing guide](https://help.figma.com/hc/en-us/articles/29717597009431-Guide-to-billing-at-Figma) - seat types and product access by role. Verified 2026-05-08.
 
 ## Related
 
 - **Category:** [AI Design](/categories/ai-design/)
-- **Comparisons:** [Figma vs v0](/compare/figma-vs-v0/) · [Canva vs Figma](/compare/canva-vs-figma/) · [Figma vs Lovable](/compare/figma-vs-lovable/) · [Figma vs Google Stitch](/compare/figma-vs-google-stitch/) · [Bolt vs Figma](/compare/bolt-vs-figma/)
+- **Key comparison:** [Figma vs Lovable](/compare/figma-vs-lovable/)
+- **More comparisons:** [Figma vs v0](/compare/figma-vs-v0/) · [Canva vs Figma](/compare/canva-vs-figma/) · [Figma vs Google Stitch](/compare/figma-vs-google-stitch/) · [Bolt vs Figma](/compare/bolt-vs-figma/)
+- **Alternatives:** [Lovable](/tools/lovable/) · [v0](/tools/v0/) · [Bolt.new](/tools/bolt/) · [Canva](/tools/canva/) · [Google Stitch](/tools/google-stitch/)
+
+Commercial note: AiPedia is using the official Figma URL for reader CTAs. No tracked affiliate publisher link is configured for Figma, and editorial recommendations do not depend on affiliate availability.

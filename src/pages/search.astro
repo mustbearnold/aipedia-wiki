@@ -16,6 +16,7 @@ const tools = allTools
     return {
       slug,
       title: tool.data.title,
+      categorySlug: tool.data.category ?? '',
       category: (tool.data.category ?? '').replace(/^ai-/, '').replace(/-/g, ' '),
       company: tool.data.company ?? '',
       tagline: tool.data.tagline ?? tool.data.meta_description ?? '',
@@ -114,6 +115,7 @@ const totalTools = tools.length;
           const searchText = [
             tool.title,
             tool.company,
+            tool.categorySlug,
             tool.category,
             tool.tagline,
             tool.priceRange,
@@ -127,7 +129,16 @@ const totalTools = tools.length;
               data-tool-card
               data-search-text={searchText}
             >
-              <a class="search-index-card-link" href={`/tools/${tool.slug}/`}>
+              <a
+                class="search-index-card-link"
+                href={`/tools/${tool.slug}/`}
+                data-search-result
+                data-result-type="tool"
+                data-result-title={tool.title}
+                data-result-url={`/tools/${tool.slug}/`}
+                data-tool-slug={tool.slug}
+                data-category-slug={tool.categorySlug}
+              >
                 <ToolLogo slug={tool.slug} title={tool.title} size={44} />
                 <span class="search-index-card-copy">
                   <span class="search-index-card-meta">{tool.category || 'tool'} · {tool.score}/10</span>
@@ -164,12 +175,73 @@ const totalTools = tools.length;
       const keyHint = root.querySelector('[data-search-kbd]');
       const chips = Array.from(root.querySelectorAll('[data-search-chip]'));
       let syncTimer;
+      let searchTrackTimer;
+      let lastTrackedSearchKey = '';
+      const pendingSearchEvents = [];
 
       if (keyHint) {
         keyHint.textContent = /Mac|iPhone|iPad|iPod/.test(navigator.platform) ? 'Cmd K' : 'Ctrl K';
       }
 
       const normalize = (value) => String(value || '').trim().toLowerCase();
+
+      function deviceType() {
+        const width = window.innerWidth || document.documentElement.clientWidth || 0;
+        if (width < 768) return 'mobile';
+        if (width < 1024) return 'tablet';
+        return 'desktop';
+      }
+
+      function pageSlug() {
+        return (window.location.pathname || '/search/')
+          .replace(/^\/+|\/+$/g, '')
+          .replace(/\//g, '-') || 'search';
+      }
+
+      function flushSearchEvents() {
+        if (!window.gtag) return;
+        while (pendingSearchEvents.length > 0) {
+          const item = pendingSearchEvents.shift();
+          window.gtag('event', item.eventName, item.payload);
+        }
+      }
+
+      function trackSearchIntent(eventName, extra = {}) {
+        const payload = {
+          page_type: 'search',
+          page_slug: pageSlug(),
+          search_surface: 'catalog_page',
+          query: '',
+          result_count: 0,
+          device_type: deviceType(),
+          viewport_width: window.innerWidth || document.documentElement.clientWidth || 0,
+          ...extra,
+        };
+        window.dispatchEvent(new CustomEvent('aipedia:search', {
+          detail: { event: eventName, payload },
+        }));
+        if (window.gtag) {
+          window.gtag('event', eventName, payload);
+        } else {
+          pendingSearchEvents.push({ eventName, payload });
+        }
+      }
+
+      function scheduleSearchAnalytics(value, resultCount, source) {
+        const query = String(value || '').trim();
+        if (!query) return;
+        window.clearTimeout(searchTrackTimer);
+        searchTrackTimer = window.setTimeout(() => {
+          const base = { query, result_count: resultCount, search_source: source };
+          const key = `${query}|${resultCount}|${source}`;
+          if (key === lastTrackedSearchKey) return;
+          lastTrackedSearchKey = key;
+          trackSearchIntent('search_performed', base);
+          if (resultCount === 0) {
+            trackSearchIntent('search_zero_results', base);
+          }
+        }, 350);
+      }
 
       const setQueryParam = (value) => {
         const url = new URL(window.location.href);
@@ -179,7 +251,7 @@ const totalTools = tools.length;
         window.history.replaceState({}, '', url);
       };
 
-      const applyFilter = (value, updateUrl = true) => {
+      const applyFilter = (value, updateUrl = true, source = 'input') => {
         const terms = normalize(value).split(/\s+/).filter(Boolean);
         let visible = 0;
 
@@ -195,6 +267,7 @@ const totalTools = tools.length;
         });
         if (empty) empty.hidden = visible !== 0;
         root.classList.toggle('is-filtered', terms.length > 0);
+        scheduleSearchAnalytics(value, visible, source);
 
         if (updateUrl) {
           window.clearTimeout(syncTimer);
@@ -202,17 +275,41 @@ const totalTools = tools.length;
         }
       };
 
-      input?.addEventListener('input', () => applyFilter(input.value));
+      input?.addEventListener('input', () => applyFilter(input.value, true, 'input'));
 
       chips.forEach((chip) => {
         chip.addEventListener('click', () => {
           const term = chip.getAttribute('data-search-chip') || '';
           if (!input) return;
+          trackSearchIntent('search_quick_term_clicked', {
+            query: term,
+            result_count: cards.length,
+            search_source: 'quick_term',
+          });
           input.value = term;
           input.focus();
-          applyFilter(term);
+          applyFilter(term, true, 'quick_term');
         });
       });
+
+      root.addEventListener('click', (event) => {
+        const link = event.target.closest('[data-search-result]');
+        if (!link) return;
+        const visibleCards = cards.filter((card) => !card.hidden);
+        const index = visibleCards.findIndex((card) => card.contains(link));
+        trackSearchIntent('search_result_clicked', {
+          query: input?.value.trim() || '',
+          result_count: visibleCards.length,
+          result_position: index >= 0 ? index + 1 : '',
+          result_type: link.dataset.resultType || 'tool',
+          result_title: link.dataset.resultTitle || link.textContent.trim(),
+          result_url: link.dataset.resultUrl || link.getAttribute('href') || '',
+          tool_slug: link.dataset.toolSlug || '',
+          category_slug: link.dataset.categorySlug || '',
+        });
+      });
+
+      window.addEventListener('aipedia:analytics-ready', flushSearchEvents);
 
       window.addEventListener('keydown', (event) => {
         const isSearchShortcut = (event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'k';
@@ -225,7 +322,7 @@ const totalTools = tools.length;
       const initialQuery = new URLSearchParams(window.location.search).get('q') || '';
       if (initialQuery && input) {
         input.value = initialQuery;
-        applyFilter(initialQuery, false);
+        applyFilter(initialQuery, false, 'url_param');
       } else {
         applyFilter('', false);
       }

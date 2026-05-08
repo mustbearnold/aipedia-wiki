@@ -133,6 +133,7 @@ const rel = isAffiliate ? 'sponsored noopener' : 'noopener';
           link.dataset.ctaViewEvent = isAffiliate ? 'affiliate_cta_view' : 'official_cta_view';
           link.dataset.ctaClickEvent = isAffiliate ? 'affiliate_cta_click' : 'official_cta_click';
           link.dataset.ctaPageType = pageType;
+          link.dataset.ctaPageSlug = toolSlug;
           link.dataset.ctaPlacement = 'tool_pricing_table';
           link.dataset.ctaToolSlug = toolSlug;
           link.dataset.ctaToolName = toolName;
@@ -141,6 +142,7 @@ const rel = isAffiliate ? 'sponsored noopener' : 'noopener';
           link.dataset.ctaIsAffiliate = String(isAffiliate);
           link.dataset.ctaPriceRange = priceRange;
           link.dataset.ctaAffiliateProgram = affiliateProgram || '';
+          link.dataset.ctaIsSticky = 'false';
           // Move all child nodes of planCell into the link (preserves the "Most Popular" badge).
           while (planCell.firstChild) link.appendChild(planCell.firstChild);
           link.append(

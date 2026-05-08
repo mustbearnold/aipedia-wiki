@@ -21,7 +21,15 @@ const DEFAULT_REQUIRED_GUIDES = [
   'best-ai-for-presentations',
   'best-ai-for-meeting-notes',
   'best-ai-for-blog-writing',
+  'best-ai-for-cold-email',
+  'ai-lead-generation',
   'best-ai-tools-for-marketers',
+  'best-ai-tools-for-small-business',
+  'best-ai-tools-for-freelancers',
+  'best-ai-tools-for-agencies',
+  'best-ai-tools-for-ecommerce',
+  'best-ai-tools-for-sales-teams',
+  'best-ai-tools-for-customer-support',
 ];
 
 const REQUIRED_SLOTS = ['best_overall', 'budget', 'pro_team'];

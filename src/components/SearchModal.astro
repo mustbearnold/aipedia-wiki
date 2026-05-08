@@ -664,6 +664,10 @@ const toolsCount = allTools.filter(
   let pagefind = null;
   let activeTab = 'tools';
   let debounceTimer;
+  let searchAnalyticsTimer;
+  let lastTrackedSearchKey = '';
+  let lastSearchQuery = '';
+  const pendingSearchEvents = [];
 
   // Lazy element getters — never cache. Always fetch fresh to survive view transitions.
   const $ = (id) => document.getElementById(id);
@@ -676,6 +680,71 @@ const toolsCount = allTools.filter(
       input:    $('search-input'),
       results:  $('search-results'),
     };
+  }
+
+  function deviceType() {
+    const width = window.innerWidth || document.documentElement.clientWidth || 0;
+    if (width < 768) return 'mobile';
+    if (width < 1024) return 'tablet';
+    return 'desktop';
+  }
+
+  function pageSlug() {
+    return (window.location.pathname || '/')
+      .replace(/^\/+|\/+$/g, '')
+      .replace(/\//g, '-') || 'home';
+  }
+
+  function flushSearchEvents() {
+    if (!window.gtag) return;
+    while (pendingSearchEvents.length > 0) {
+      const item = pendingSearchEvents.shift();
+      window.gtag('event', item.eventName, item.payload);
+    }
+  }
+
+  function trackSearchIntent(eventName, extra = {}) {
+    const payload = {
+      page_type: 'site_search',
+      page_slug: pageSlug(),
+      search_surface: 'modal',
+      active_tab: activeTab,
+      query: '',
+      result_count: 0,
+      device_type: deviceType(),
+      viewport_width: window.innerWidth || document.documentElement.clientWidth || 0,
+      ...extra,
+    };
+    window.dispatchEvent(new CustomEvent('aipedia:search', {
+      detail: { event: eventName, payload },
+    }));
+    if (window.gtag) {
+      window.gtag('event', eventName, payload);
+    } else {
+      pendingSearchEvents.push({ eventName, payload });
+    }
+  }
+
+  function scheduleSearchPerformed(query, resultCount, resultType) {
+    const cleanQuery = String(query || '').trim();
+    if (!cleanQuery) return;
+    lastSearchQuery = cleanQuery;
+    window.clearTimeout(searchAnalyticsTimer);
+    searchAnalyticsTimer = window.setTimeout(() => {
+      const key = `${activeTab}|${cleanQuery}|${resultCount}|${resultType}`;
+      if (key === lastTrackedSearchKey) return;
+      lastTrackedSearchKey = key;
+      const payload = {
+        active_tab: activeTab,
+        query: cleanQuery,
+        result_count: resultCount,
+        result_type: resultType,
+      };
+      trackSearchIntent('search_performed', payload);
+      if (resultCount === 0) {
+        trackSearchIntent('search_zero_results', payload);
+      }
+    }, 350);
   }
 
   async function loadTools() {
@@ -721,6 +790,10 @@ const toolsCount = allTools.filter(
     if (!tab || !tab.dataset.tab) return;
     if (!$('search-modal')?.classList.contains('is-visible')) return;
     activeTab = tab.dataset.tab;
+    trackSearchIntent('search_tab_changed', {
+      active_tab: activeTab,
+      query: els().input?.value.trim() || '',
+    });
     document.querySelectorAll('.s-tab').forEach(t => t.classList.toggle('active', t === tab));
     const { input } = els();
     if (input) {
@@ -792,6 +865,10 @@ const toolsCount = allTools.filter(
     showHint();
     preselectFirst();
     if (activeTab === 'tools' && !TOOLS.length) queueToolRender('');
+    trackSearchIntent('search_modal_opened', {
+      active_tab: activeTab,
+      trigger: triggerEl?.id || triggerEl?.getAttribute?.('data-search-trigger') || 'keyboard',
+    });
   }
 
   function closeModal() {
@@ -812,6 +889,7 @@ const toolsCount = allTools.filter(
       }
       if (inner) { inner.style.transform = inner.style.transition = ''; }
       if (input) { input.value = ''; }
+      lastSearchQuery = '';
       showHint();
     }, 200);
   }
@@ -833,7 +911,7 @@ const toolsCount = allTools.filter(
       results.innerHTML = `
         <div class="s-section">Popular tools</div>
         ${featured.map(t => `
-          <a class="s-result" href="${t.url}">
+          <a class="s-result" href="${t.url}" data-search-result data-result-type="tool" data-result-title="${esc(t.title)}" data-result-url="${esc(t.url)}" data-tool-slug="${esc(t.slug)}" data-category-slug="${esc(t.category)}">
             <div class="s-icon"><img src="/logos/tools/${t.slug}.png" alt="" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'s-icon-fallback',textContent:'${EMOJI[t.category]||'AI'}'}))" /></div>
             <div class="s-text">
               <div class="s-name">${esc(t.title)}</div>
@@ -857,7 +935,11 @@ const toolsCount = allTools.filter(
             freshInput.value = btn.dataset.q;
             freshInput.focus();
           }
-          searchGeneral(btn.dataset.q);
+          trackSearchIntent('search_suggestion_clicked', {
+            active_tab: 'general',
+            query: btn.dataset.q || '',
+          });
+          searchGeneral(btn.dataset.q).then(preselectFirst);
         });
       });
     }
@@ -877,13 +959,14 @@ const toolsCount = allTools.filter(
       t.tagline.toLowerCase().includes(lq) ||
       t.category.toLowerCase().includes(lq)
     ).slice(0, 10);
+    scheduleSearchPerformed(q, hits.length, 'tool');
 
     if (!hits.length) {
       results.innerHTML = `<p class="s-hint">No tools matching "${esc(q)}"</p>`;
       return;
     }
     results.innerHTML = hits.map(t => `
-      <a class="s-result" href="${t.url}">
+      <a class="s-result" href="${t.url}" data-search-result data-result-type="tool" data-result-title="${esc(t.title)}" data-result-url="${esc(t.url)}" data-tool-slug="${esc(t.slug)}" data-category-slug="${esc(t.category)}">
         <div class="s-icon"><img src="/logos/tools/${t.slug}.png" alt="" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'s-icon-fallback',textContent:'${EMOJI[t.category]||'AI'}'}))" /></div>
         <div class="s-text">
           <div class="s-name">${highlight(t.title, q)}</div>
@@ -912,15 +995,17 @@ const toolsCount = allTools.filter(
       await initPagefind();
       if (!pagefind) {
         results.innerHTML = '<p class="s-hint">Full-text search unavailable in dev mode.</p>';
+        scheduleSearchPerformed(q, 0, 'page');
         return;
       }
     }
     const res = await pagefind.search(q);
     const top = res.results.slice(0, 8);
+    scheduleSearchPerformed(q, top.length, 'page');
     if (!top.length) { results.innerHTML = `<p class="s-hint">No results for "${esc(q)}"</p>`; return; }
     const data = await Promise.all(top.map(r => r.data()));
     results.innerHTML = data.map(d => `
-      <a class="g-result" href="${d.url}">
+      <a class="g-result" href="${d.url}" data-search-result data-result-type="page" data-result-title="${esc(d.meta?.title || d.url)}" data-result-url="${esc(d.url)}">
         <span class="g-title">${esc(d.meta?.title || d.url)}</span>
         ${d.excerpt ? `<span class="g-excerpt">${safeExcerpt(d.excerpt)}</span>` : ''}
       </a>`).join('');
@@ -955,7 +1040,8 @@ const toolsCount = allTools.filter(
     if (e.target.id !== 'search-input') return;
     clearTimeout(debounceTimer);
     const q = e.target.value.trim();
-    if (!q) { showHint(); preselectFirst(); return; }
+    if (!q) { lastSearchQuery = ''; showHint(); preselectFirst(); return; }
+    lastSearchQuery = q;
     if (activeTab === 'tools') queueToolRender(q);
     else { debounceTimer = setTimeout(() => { searchGeneral(q).then(preselectFirst); }, 200); }
   });
@@ -998,7 +1084,7 @@ const toolsCount = allTools.filter(
       if (a) a.click();
       return;
     }
-    if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+    if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
       e.preventDefault();
       const m = $('search-modal');
       m?.classList.contains('is-visible') ? closeModal() : openModal(null);
@@ -1010,6 +1096,25 @@ const toolsCount = allTools.filter(
   });
 
   document.addEventListener('click', (e) => {
+    const result = e.target.closest('[data-search-result]');
+    if (result && $('search-modal')?.contains(result)) {
+      const { results, input } = els();
+      const all = Array.from(results?.querySelectorAll('[data-search-result]') || []);
+      const resultPosition = all.indexOf(result) + 1;
+      trackSearchIntent('search_result_clicked', {
+        active_tab: activeTab,
+        query: input?.value.trim() || lastSearchQuery,
+        result_count: all.length,
+        result_position: resultPosition || '',
+        result_type: result.dataset.resultType || '',
+        result_title: result.dataset.resultTitle || result.textContent.trim(),
+        result_url: result.dataset.resultUrl || result.getAttribute('href') || '',
+        tool_slug: result.dataset.toolSlug || '',
+        category_slug: result.dataset.categorySlug || '',
+      });
+      return;
+    }
+
     // Search triggers (desktop nav, mobile nav, homepage bar)
     const trigger = e.target.closest('#search-trigger, #search-trigger-mobile, #homepage-search-bar');
     if (trigger) { e.preventDefault(); openModal(trigger); return; }
@@ -1027,5 +1132,6 @@ const toolsCount = allTools.filter(
       if (i) i.value = '';
     }
   });
+  window.addEventListener('aipedia:analytics-ready', flushSearchEvents);
 })();
 </script>

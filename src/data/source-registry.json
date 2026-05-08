@@ -609,6 +609,46 @@
       "volatility": "medium"
     },
     {
+      "id": "bolt-intro",
+      "label": "Bolt introduction docs",
+      "url": "https://support.bolt.new/building/intro-bolt",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "bolt-database",
+      "label": "Bolt database docs",
+      "url": "https://support.bolt.new/cloud/database",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "bolt-hosting",
+      "label": "Bolt hosting docs",
+      "url": "https://support.bolt.new/cloud/hosting",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "bolt-tokens",
+      "label": "Bolt token docs",
+      "url": "https://support.bolt.new/account-and-subscription/tokens",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "bolt-supported-technologies",
+      "label": "Bolt supported technologies",
+      "url": "https://support.bolt.new/building/supported-technologies",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
       "id": "bolt-official",
       "label": "bolt.new/pricing",
       "url": "https://bolt.new/pricing",
@@ -1726,8 +1766,40 @@
       "volatility": "medium"
     },
     {
+      "id": "figma-make-create",
+      "label": "Figma Make creation documentation",
+      "url": "https://help.figma.com/hc/en-us/articles/31304485164695-Create-and-edit-a-Figma-Make-file",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "figma-make-advanced",
+      "label": "Figma Make advanced documentation",
+      "url": "https://help.figma.com/hc/en-us/articles/35710574222487-Beyond-the-basics-Using-Figma-Make",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "figma-plans-features",
+      "label": "Figma plans and features",
+      "url": "https://help.figma.com/hc/en-us/articles/360040328273-Figma-plans-and-features",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "figma-billing",
+      "label": "Figma billing guide",
+      "url": "https://help.figma.com/hc/en-us/articles/29717597009431-Guide-to-billing-at-Figma",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
       "id": "figma-pricing",
-      "label": "Source",
+      "label": "Figma pricing",
       "url": "https://www.figma.com/pricing/",
       "type": "pricing",
       "trust_tier": "primary",
@@ -2580,6 +2652,15 @@
       "last_checked": "2026-05-08"
     },
     {
+      "id": "heygen-liveavatar-help",
+      "label": "HeyGen LiveAvatar help",
+      "url": "https://help.heygen.com/en/articles/10035615-how-to-get-started-with-liveavatars",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-05-08"
+    },
+    {
       "id": "heygen-pricing",
       "label": "HeyGen pricing",
       "url": "https://www.heygen.com/pricing",
@@ -2595,6 +2676,15 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
+      "last_checked": "2026-05-08"
+    },
+    {
+      "id": "heygen-security",
+      "label": "HeyGen security",
+      "url": "https://www.heygen.com/security",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
       "last_checked": "2026-05-08"
     },
     {
@@ -3534,6 +3624,22 @@
       "id": "lovable-docs",
       "label": "Lovable docs",
       "url": "https://docs.lovable.dev/",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "lovable-plans-credits",
+      "label": "Lovable plans and credits",
+      "url": "https://docs.lovable.dev/introduction/plans-and-credits",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "lovable-cloud",
+      "label": "Lovable Cloud docs",
+      "url": "https://docs.lovable.dev/integrations/cloud",
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium"
@@ -5160,9 +5266,36 @@
       "last_checked": "2026-05-08"
     },
     {
+      "id": "synthesia-enterprise",
+      "label": "Synthesia enterprise",
+      "url": "https://www.synthesia.io/enterprise",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-05-08"
+    },
+    {
       "id": "synthesia-avatar-docs",
       "label": "Synthesia avatar docs",
       "url": "https://docs.synthesia.io/docs/synthesia-avatars",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-05-08"
+    },
+    {
+      "id": "synthesia-personal-avatar-docs",
+      "label": "Synthesia personal avatar docs",
+      "url": "https://docs.synthesia.io/docs/personal-avatars",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-05-08"
+    },
+    {
+      "id": "synthesia-security-practices",
+      "label": "Synthesia security practices",
+      "url": "https://www.synthesia.io/legal/security-practices",
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
@@ -5356,6 +5489,14 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high"
+    },
+    {
+      "id": "unbounce-features",
+      "label": "Unbounce features",
+      "url": "https://unbounce.com/product/features/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
     },
     {
       "id": "v0-changelog",

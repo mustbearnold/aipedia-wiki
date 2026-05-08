@@ -2,42 +2,113 @@
 type: category
 slug: ai-design
 title: AI Design & App Building
-description: AI design tools and vibe coding app builders. Canva, Figma, Google Stitch, Framer AI, Galileo AI, Lovable, Bolt, v0, Uizard.
+description: Current AI design tools and app builders for social creative, product design, design systems, web prototypes, full-stack apps, and Vercel-native UI workflows.
 tool_count: 9
-seo_title: "Best AI Design Tools (2026), aipedia.wiki"
-meta_description: "Canva AI, Figma AI, and Lovable lead AI design and app building in 2026. Compare 8 tools including Google Stitch, Framer AI, Galileo AI, and Uizard for design, vibe coding, and prototyping. Updated April 2026."
+seo_title: "Best AI Design & App Builder Tools (May 2026)"
+meta_description: "Updated May 8, 2026: compare Canva AI, Figma, Google Stitch, Lovable, Bolt.new, v0, Uizard, Framer AI, and Galileo AI by buyer fit, pricing, workflow, and production risk."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-17
-last_verified: 2026-04-17
-update_frequency: monthly
+last_updated: 2026-05-08
+last_verified: 2026-05-08
+update_frequency: weekly
+top_picks:
+  best_overall:
+    tool: canva
+    label: "Best for non-designers"
+  budget:
+    tool: google-stitch
+    label: "Best free experiment"
+  pro_team:
+    tool: figma
+    label: "Best pro design suite"
 ---
 
-## Overview
-AI design and app building experienced massive disruption in early 2026. Google launched Stitch in March, dropping Figma stock 12 percent and offering 350 free AI design generations per month with voice-controlled canvas interaction. Canva AI remains the dominant tool for non-designers and social media content at $13 per month, with the largest user base and the most accessible interface ([Canva](https://canva.com)). Lovable emerged as the leading vibe coding app builder, reaching $20 million ARR within two months by generating full-stack applications with Supabase backends from natural language prompts at $25 per month ([Lovable](https://lovable.dev)). Figma AI serves professional UI/UX designers at $16-55 per month ([Figma](https://figma.com)). The category has split into two segments: traditional design tools including Canva, Figma AI, and Google Stitch for visual design work, and AI app builders including Lovable, Bolt.new, and v0 by Vercel for generating functional web applications from prompts. Bolt.new and v0 compete at $20 per month for browser-based prototyping and React component generation respectively.
+## Quick Decision
 
-## The Players
+AI design is now two overlapping markets. The first is **visual creation and product design**: brand assets, social posts, presentations, UX mockups, design systems, and stakeholder review. The second is **AI app building**: prompts, screenshots, Figma context, and code turning into web apps, prototypes, deploys, or pull requests.
 
-| Tool | Price | Best For | Utility | Value | Moat | Longevity |
-|------|-------|----------|---------|-------|------|-----------|
-| **Canva AI** | $13/mo Pro | Non-designers, social media | 8 | 9 | 8 | 9 |
-| **Figma AI** | $16-55/mo | Professional UI/UX | 9 | 7 | 8 | 8 |
-| **Google Stitch** | Free (350 gen/mo) | AI-native design, voice canvas | 8 | 10 | 7 | 8 |
-| **Lovable** | $25/mo Starter | Full-stack app from prompt | 9 | 8 | 6 | 8 |
-| **Bolt.new** | $20/mo Pro | Browser app builder | 9 | 8 | 6 | 8 |
-| **v0 by Vercel** | $20/mo Premium | React UI components | 8 | 7 | 6 | 7 |
+As of May 8, 2026, start with the job:
 
-## Our Picks
-- **Best for thumbnails/social:** Canva Pro ($13/mo).
-- **Best app builder:** Lovable ($25/mo). $20M ARR in 2 months.
-- **Best free:** Google Stitch (350 gen/month free)
+**Use [Canva](/tools/canva/) when non-designers need finished creative fast.** Canva AI 2.0 is built across Canva's Visual Suite and supports conversational creation, editable layouts, on-brand generation, AI images, AI video, Magic Write, resizing, background tools, and business controls. It is the safest first stop for marketers, creators, teachers, small businesses, and teams that need to publish polished content without a design department.
 
-## Video Potential
-- "Google Stitch vs Figma . Is Figma Dead?" (massive news search)
-- "I Built a Full App with Lovable in 1 Hour" (demo/tutorial)
-- "Bolt vs Lovable vs v0 . Best AI App Builder 2026" (comparison)
+**Use [Figma](/tools/figma/) when design quality, design systems, multiplayer review, and handoff matter.** Figma's pricing page now lists AI add-ons, daily/monthly AI credits by plan, Figma Make, Figma Sites, Dev Mode, MCP support, libraries, variables, governance, and enterprise seats. Pick Figma when the artifact has to survive design critique and developer handoff, not just look plausible in a generator.
+
+**Use [Lovable](/tools/lovable/) when the buyer wants a full-stack app from a prompt.** Lovable's public pricing page lists Pro at $25/month and Business at $50/month, both shared across unlimited users, with credits, custom domains, roles, permissions, SSO, and security controls depending on tier. It is the cleanest shortlist entry when the buyer wants backend, auth, database, and a live app path from one product.
+
+**Use [v0 by Vercel](/tools/v0/) when the buyer wants a Vercel-native web artifact.** The current v0 docs describe an AI agent for real code, full-stack apps, agents, backend connections, deployments, and PRs. The current public pricing page lists Free, Team at $30/user/month, Business at $100/user/month, Enterprise custom pricing, and model token pricing. Do not buy v0 expecting retired legacy pricing.
+
+**Use [Bolt.new](/tools/bolt/) when the buyer wants a browser app builder with an execution environment.** Bolt's pricing page lists Free with 300K daily tokens and 1M monthly tokens, Pro at $25/month, Teams at $30/month per member, and Enterprise custom. It is useful when the buyer wants to build and run in the browser, but token usage and production cleanup still matter.
+
+**Use [Google Stitch](/tools/google-stitch/) as an experimental vibe-design canvas, not a procurement-safe design system yet.** Google's March 2026 Stitch update describes an AI-native software design canvas with natural-language UI creation, an infinite canvas, design agents, voice interaction, interactive prototypes, DESIGN.md, MCP, SDK, and developer-tool exports. Treat access, quotas, and production fit as moving Google Labs facts that should be verified in the product before a team depends on them.
+
+## Buyer Paths
+
+| Buyer job | Start with | Why | Watch out |
+|---|---|---|---|
+| Social posts, thumbnails, ads, classroom assets, presentations | [Canva](/tools/canva/) | Fastest path from idea to publishable creative for non-designers | Regional pricing and AI usage limits can vary; verify the plan in Canva before upgrading |
+| Product design, UX review, design systems, developer handoff | [Figma](/tools/figma/) | Best collaborative design surface, with AI credits, Dev Mode, MCP, libraries, and governance | AI output still needs design judgment and component discipline |
+| Full-stack app from prompt | [Lovable](/tools/lovable/) | Strongest single-product path for app, backend, auth, database, and live URL assumptions | Credits and generated backend choices need review before production |
+| Vercel-native app or UI workflow | [v0](/tools/v0/) | Strong web artifact loop: prompt, files, Figma, design mode, GitHub, deploys, PRs | Credit/token usage and generated code quality can surprise teams |
+| Browser-based app prototyping | [Bolt.new](/tools/bolt/) | Runs app-building work in the browser with generous free token limits | Larger projects use more tokens because file-system context is part of prompts |
+| Experimental AI-native design canvas | [Google Stitch](/tools/google-stitch/) | Best place to test Google's vibe-design direction and voice/canvas workflow | Labs product: verify access, quotas, export path, and enterprise fit before relying on it |
+
+## Current Shortlist
+
+**Best for non-designers: Canva.** The reason is not just AI generation. Canva wins because it combines templates, brand controls, image/video/editor workflows, AI writing, social formats, education use cases, and a familiar editor. If the buyer is a marketer, creator, teacher, founder, or small business operator, Canva usually turns intent into a publishable asset faster than Figma or an app builder.
+
+**Best pro design suite: Figma.** Figma is still the pro team default because design is social: designers, PMs, engineers, marketers, and stakeholders need comments, versions, libraries, variables, prototypes, Dev Mode, and governance. Figma Make and Sites make the category more competitive with app builders, but the strongest reason to buy Figma is still shared product design discipline.
+
+**Best app builder for most founders: Lovable.** Choose Lovable when "AI design" really means "I want a working SaaS, internal tool, portal, marketplace, or app." The Pro and Business tiers are priced around credits and shared users, so it can be easier for a small team to try than a seat-heavy product design suite.
+
+**Best Vercel-native builder: v0.** Choose v0 when the buyer cares about Vercel, Next.js, React, Tailwind, shadcn/ui, GitHub, deploys, and PR workflow. It is no longer fair to call v0 only a component generator, but it is also not magic production engineering. Use it for the first strong implementation draft, then review.
+
+**Best browser builder: Bolt.new.** Choose Bolt when the buyer wants to build in a browser environment and test quickly without a local setup. The free tier is useful for evaluation; serious use moves into Pro or Teams when token ceilings and collaboration matter.
+
+**Best experimental design canvas: Google Stitch.** Stitch is strategically important because it attacks the idea stage before Figma, v0, Lovable, or Bolt get involved. It is where founders and designers should test voice-directed UI exploration and agentic design critique. It is not the default production design system yet.
+
+## Pricing Reality
+
+Do not rank this category on headline monthly price alone. Canva, Figma, Lovable, Bolt, v0, and Stitch bill different units.
+
+Figma is seat-based and AI-credit aware. Its public pricing page lists Starter free, Professional full seats at $16/month, Organization full seats at $55/month billed annually, and Enterprise full seats at $90/month billed annually, with AI credits varying by plan.
+
+Lovable is credit-based and team-friendly. Its pricing page lists Pro at $25/month and Business at $50/month, shared across unlimited users, with monthly credits and usage-based cloud plus AI.
+
+Bolt.new is token-based. Its public pricing page lists Free, Pro at $25/month, Teams at $30/month per member, and Enterprise custom, with token limits and rollover rules.
+
+v0 is credit and token metered. Its public pricing page lists Free, Team at $30/user/month, Business at $100/user/month, Enterprise custom, plus model token rates for v0 Mini, v0 Pro, v0 Max, and v0 Max Fast.
+
+Canva pricing is more region and plan sensitive in the public experience, and AiPedia could not reliably render a durable pricing table from the official page in this crawl. The safer buyer guidance is to use Canva free to validate workflow fit, then verify Pro, Teams, Business, or Enterprise pricing directly in your region before upgrading.
+
+Google Stitch's official March 2026 announcement is product-focused, not a durable pricing table. Treat its access and quotas as volatile until Google publishes stable commercial terms.
+
+## What Hurts Trust
+
+Do not call every app builder a design tool. Lovable, Bolt, and v0 can generate interfaces, but the purchase question is app-building scope, code ownership, deployment, backend, and review workflow.
+
+Do not call every design tool an app builder. Canva and Figma can produce AI-assisted design artifacts, but that is different from owning the app runtime, database, authentication, and production deploy path.
+
+Do not quote retired v0 public pricing. The current public v0 pricing page lists Free, Team, Business, and Enterprise plus token pricing.
+
+Do not claim Stitch has a stable buyer plan or fixed quota unless the current official product surface says so. Google's current public source for this refresh is the March 2026 Stitch article, not a pricing table.
+
+Do not publish unsourced model-routing or model-version claims as if they are confirmed product facts for this category. Model routing changes quickly and should be sourced per tool page, not invented in category copy.
+
+Do not make a wide table the only mobile experience. Mobile buyers need top picks, plain-language use cases, pricing caveats, and watch-outs before they compare rows.
+
+## Money Pages To Build Next
+
+- [Lovable vs Bolt.new vs v0](/compare/lovable-vs-bolt-vs-v0/) should be rebuilt first because it is the highest-intent app-builder comparison in this category and still has stale pricing and scope language.
+- [Figma AI vs v0](/compare/figma-vs-v0/) should be rebuilt around design-system workflow versus Vercel-native implementation.
+- [Canva AI vs v0](/compare/canva-vs-v0/) should be rebuilt around non-designer creative production versus web-app output.
+- [Google Stitch vs v0](/compare/google-stitch-vs-v0/) should be rebuilt around vibe-design exploration versus Vercel app-building workflow.
+- A new guide for "best AI app builder" should separate founder MVP, Vercel-native UI, browser IDE, design-to-code, and enterprise governance paths.
 
 ## Sources
 
-- Canva: [https://canva.com](https://canva.com)
-- Figma: [https://figma.com](https://figma.com)
-- Lovable: [https://lovable.dev](https://lovable.dev)
+- [Canva AI](https://www.canva.com/canva-ai/) (verified 2026-05-08)
+- [Figma pricing](https://www.figma.com/pricing/) (verified 2026-05-08)
+- [Google Stitch announcement](https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-ai-ui-design/) (verified 2026-05-08)
+- [Lovable pricing](https://lovable.dev/pricing) (verified 2026-05-08)
+- [Bolt.new pricing](https://bolt.new/pricing) (verified 2026-05-08)
+- [v0 pricing](https://v0.app/pricing) (verified 2026-05-08)
+- [v0 documentation](https://v0.app/docs) (verified 2026-05-08)

@@ -26,25 +26,28 @@ const EMOJI: Record<string, string> = {
 
 const allTools = await getCollection('tools');
 const matchingTools = allTools
-  .filter((t) => {
-    if (t.data.status !== 'active') return false;
-    if (t.data.category === catSlug) return true;
+  .flatMap((t) => {
+    if (t.data.status !== 'active') return [];
+    const primaryMatch = t.data.category === catSlug;
     const secondary = (t.data as any).secondary_categories ?? [];
-    return Array.isArray(secondary) && secondary.includes(catSlug);
-  })
-  .map((t) => ({
-    slug: t.data.slug ?? t.id.replace(/\.md$/, ''),
-    title: t.data.title,
-    category: t.data.category,
-    company: t.data.company,
-    url: t.data.url,
-    price_range: t.data.price_range,
-    pricing_model: t.data.pricing_model,
-    affiliate: t.data.affiliate,
-    scores: t.data.scores,
-    tagline: t.data.tagline,
-    quick_answer: (t.data as any).quick_answer,
-  }));
+    const secondaryMatch = Array.isArray(secondary) && secondary.includes(catSlug);
+    if (!primaryMatch && !secondaryMatch) return [];
+
+    return [{
+      slug: t.data.slug ?? t.id.replace(/\.md$/, ''),
+      title: t.data.title,
+      category: t.data.category,
+      company: t.data.company,
+      url: t.data.url,
+      price_range: t.data.price_range,
+      pricing_model: t.data.pricing_model,
+      affiliate: t.data.affiliate,
+      scores: t.data.scores,
+      tagline: t.data.tagline,
+      quick_answer: (t.data as any).quick_answer,
+      category_match_type: primaryMatch ? 'primary' : 'secondary',
+    }];
+  });
 ---
 
 <CategoryLayout
