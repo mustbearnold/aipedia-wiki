@@ -286,10 +286,10 @@ const archiveGroups: Record<string, Guide[]> = {
 };
 
 const archiveMeta: Record<string, { label: string; description: string }> = {
-  'best-of': { label: 'Ranked use cases', description: 'Ranked choices by job, budget, and workflow.' },
+  'best-of': { label: 'Ranked buyer guides', description: 'Ranked choices by job, budget, and workflow.' },
   'stack': { label: 'Tool sets', description: 'Complete tool combinations for real work.' },
   'alternatives': { label: 'Alternatives', description: 'Swap one tool for a better fit.' },
-  'comparison': { label: 'Comparisons', description: 'Use case pages with direct tradeoffs.' },
+  'comparison': { label: 'Comparisons', description: 'Guide pages with direct tradeoffs.' },
   'other': { label: 'Reference', description: 'Useful pages that do not fit a single lane.' },
 };
 
@@ -303,24 +303,24 @@ const categoriesCovered = new Set(
 ---
 
 <BaseLayout
-  title="AI tool use cases, aipedia.wiki"
-  description={`${allGuides.length} use cases for picking AI tools by workflow, budget, and risk.`}
+  title="AI tool guides, aipedia.wiki"
+  description={`${allGuides.length} buyer guides for picking AI tools by workflow, budget, and risk.`}
 >
-  
+
   <div class="t2-canvas guides-canvas site-directory-canvas guides-page-root">
     <div class="site-content-frame">
-    <Breadcrumb items={[{ label: 'Use cases' }]} />
+    <Breadcrumb items={[{ label: 'Guides' }]} />
 
     <IndexHero
-      title="Use cases"
-      lead="Problem-first pages for picking tools by workflow, budget, and risk."
+      title="Guides"
+      lead="Problem-first buyer guides for picking tools by workflow, budget, and risk."
       class="guides-hero"
       eyebrowClass="guides-kicker"
       headingClass="guides-title"
       leadClass="guides-subhead"
       reveal
       eyebrow={[
-        { label: 'Use cases', tone: 'fresh', live: true },
+        { label: 'Guides', tone: 'fresh', live: true },
         { label: 'pages', value: allGuides.length },
       ]}
       trust="Problem-first. Catalog-sourced. No sponsored placements."
@@ -328,9 +328,9 @@ const categoriesCovered = new Set(
       <MetricStrip
         slot="footer"
         class="guides-stats"
-        label="Use cases stats"
+        label="Guides stats"
         metrics={[
-          { label: 'Use cases', value: allGuides.length },
+          { label: 'Guides', value: allGuides.length },
           { label: 'Tools mentioned', value: toolMentions },
           { label: 'Categories covered', value: categoriesCovered },
         ]}
@@ -342,7 +342,7 @@ const categoriesCovered = new Set(
         <div class="guides-section-head">
           <div>
             <p class="guides-section-kicker">Start here</p>
-            <h2>Most useful use cases</h2>
+            <h2>Most useful guides</h2>
           </div>
           <span>Reviewed, useful, and central to the site.</span>
         </div>
@@ -393,7 +393,7 @@ const categoriesCovered = new Set(
       <div class="guides-section-head">
         <div>
           <p class="guides-section-kicker">Full archive</p>
-          <h2>All use cases</h2>
+          <h2>All guides</h2>
         </div>
         <span>Kept for long-tail discovery and internal linking.</span>
       </div>

@@ -44,7 +44,7 @@ export const GET: APIRoute = async () => {
   const lines: string[] = [];
   lines.push('# aipedia.wiki — full manifest');
   lines.push('');
-  lines.push('> Extended LLM-friendly site manifest. Enumerates every active page across tools, categories, comparisons, use-case guides, and companies. See /llms.txt for the concise version.');
+  lines.push('> Extended LLM-friendly site manifest. Enumerates every active page across tools, categories, comparisons, buyer guides, and companies. See /llms.txt for the concise version.');
   lines.push('');
   lines.push('## Editorial stance');
   lines.push('');
@@ -56,7 +56,7 @@ export const GET: APIRoute = async () => {
   lines.push('- [All Tools A-Z](https://aipedia.wiki/tools/)');
   lines.push('- [All Categories](https://aipedia.wiki/categories/)');
   lines.push('- [All Comparisons](https://aipedia.wiki/compare/)');
-  lines.push('- [Use Cases](https://aipedia.wiki/guides/)');
+  lines.push('- [Guides](https://aipedia.wiki/guides/)');
   lines.push('- [Glossary](https://aipedia.wiki/glossary/)');
   lines.push('- [Editorial Policy](https://aipedia.wiki/about/editorial/)');
   lines.push('- [Scoring Methodology](https://aipedia.wiki/about/scoring/)');
@@ -102,7 +102,7 @@ export const GET: APIRoute = async () => {
   }
 
   if (useCases.length > 0) {
-    lines.push('## Use-case guides');
+    lines.push('## Guides');
     lines.push('');
     const sortedUseCases = [...useCases].sort((a: any, b: any) => (a.data.title || '').localeCompare(b.data.title || ''));
     for (const u of sortedUseCases) {

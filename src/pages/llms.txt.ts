@@ -33,7 +33,7 @@ export const GET: APIRoute = async () => {
   const lines: string[] = [];
   lines.push('# aipedia.wiki');
   lines.push('');
-  lines.push(`> Independent AI tools encyclopedia maintained by aipedia.wiki Editorial. ${activeTools.length} active tool pages across ${activeCategories.length} categories, ${comparisons.length} head-to-head comparisons, ${useCases.length} use-case guides. Public pages carry verification metadata and editorial sourcing controls.`);
+  lines.push(`> Independent AI tools encyclopedia maintained by aipedia.wiki Editorial. ${activeTools.length} active tool pages across ${activeCategories.length} categories, ${comparisons.length} head-to-head comparisons, ${useCases.length} buyer guides. Public pages carry verification metadata and editorial sourcing controls.`);
   lines.push('');
   lines.push('Editorial positioning: no individual-author bylines, no fabricated hands-on testing claims. Pages cite vendor-published sources. Scoring is four-dimension (utility, value, moat, longevity) and is not influenced by affiliate commissions.');
   lines.push('');
@@ -43,7 +43,7 @@ export const GET: APIRoute = async () => {
   lines.push('- [All Tools A-Z](https://aipedia.wiki/tools/): every active AI tool page');
   lines.push('- [All Categories](https://aipedia.wiki/categories/): hubs grouping tools by domain');
   lines.push('- [All Comparisons](https://aipedia.wiki/compare/): head-to-head tool vs tool articles');
-  lines.push('- [Use Cases](https://aipedia.wiki/guides/): problem-first pages for choosing AI tools by workflow, budget, and risk');
+  lines.push('- [Guides](https://aipedia.wiki/guides/): problem-first buyer pages for choosing AI tools by workflow, budget, and risk');
   lines.push('- [Glossary](https://aipedia.wiki/glossary/): defined terms used across the site');
   lines.push('');
   lines.push('## Editorial and methodology');
