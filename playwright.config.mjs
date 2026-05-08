@@ -1,12 +1,16 @@
+const host = process.env.AIPEDIA_PLAYWRIGHT_HOST ?? '127.0.0.1';
+const port = process.env.AIPEDIA_PLAYWRIGHT_PORT ?? '4321';
+const baseURL = `http://${host}:${port}`;
+
 export default {
   webServer: {
-    command: 'npm run dev -- --host 127.0.0.1 --port 4321',
-    url: 'http://127.0.0.1:4321',
-    reuseExistingServer: true,
-    timeout: 120000,
+    command: `node scripts/serve-static.mjs --dir dist/client --host ${host} --port ${port}`,
+    url: baseURL,
+    reuseExistingServer: !process.env.CI,
+    timeout: 30000,
   },
   use: {
-    baseURL: 'http://127.0.0.1:4321',
+    baseURL,
     viewport: { width: 1280, height: 900 },
   },
 };

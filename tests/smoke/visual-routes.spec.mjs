@@ -13,7 +13,8 @@ const guidePickRoutes = [
   {
     route: '/guides/best-ai-seo-tool/',
     bestOverallSlug: 'surfer-seo',
-    plans: ['Surfer Essential', 'Ahrefs Starter', 'Semrush Pro or Guru'],
+    labels: ['Best overall', 'Budget content scoring', 'Pro/team suite'],
+    plans: ['Surfer Standard', 'NeuronWriter Silver', 'Semrush Pro or Guru'],
     firstRankedTitle: 'Surfer SEO',
   },
   {
@@ -30,7 +31,7 @@ const guidePickRoutes = [
   {
     route: '/guides/best-ai-for-presentations/',
     bestOverallSlug: 'gamma',
-    plans: ['Gamma Pro', 'Gemini Free or Google AI Pro', 'Synthesia Creator or Enterprise'],
+    plans: ['Gamma Pro for client-facing work', 'Canva Free or Canva Pro', 'Pitch Team'],
     firstRankedTitle: 'Gamma',
   },
   {
@@ -48,7 +49,8 @@ const guidePickRoutes = [
   {
     route: '/guides/best-ai-tools-for-marketers/',
     bestOverallSlug: 'chatgpt',
-    plans: ['ChatGPT Plus or Business', 'Gemini Free or Google AI Pro', 'Jasper Pro or Business'],
+    labels: ['Best overall', 'Best for ad creative', 'Best for conversion pages'],
+    plans: ['Plus for solo marketers; Business', 'Trial or Starter', 'Build for active campaigns'],
     firstRankedTitle: 'ChatGPT',
   },
 ];
