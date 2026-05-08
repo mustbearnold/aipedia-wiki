@@ -2556,7 +2556,7 @@
       "id": "heygen-avatar-v-report",
       "label": "HeyGen Avatar V technical report",
       "url": "https://dynamic.heygen.ai/www/Paper%20Links/avatarv_tech_report.pdf",
-      "type": "research",
+      "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
       "last_checked": "2026-05-08"

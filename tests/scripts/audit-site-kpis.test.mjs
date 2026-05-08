@@ -18,7 +18,7 @@ test('site KPI audit emits stable JSON with core remediation metrics', () => {
   assert.equal(data.collections.tools, 249);
   assert.equal(data.collections.comparisons, 263);
   assert.equal(data.collections.news, 213);
-  assert.equal(data.collections['use-cases'], 92);
+  assert.equal(data.collections['use-cases'], 93);
 
   assert.ok(data.tools.status.active >= 200);
   assert.ok(Array.isArray(data.tools.missing.seo_title));
