@@ -61,12 +61,13 @@ interface Props {
   headings?: Array<{ depth: number; slug: string; text: string }>;
   lastVerified?: string;
   readingMinutes?: number;
+  noindex?: boolean;
 }
 
 const {
   title, seoTitle, description = '',
   slug, tools, guidePicks, headings = [],
-  lastVerified, readingMinutes = 0,
+  lastVerified, readingMinutes = 0, noindex = false,
 } = Astro.props;
 
 const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
@@ -264,7 +265,7 @@ const itemListItems = rankedTools.map((t) => ({
 const tocHeadings = (headings ?? []).filter((h) => h.depth === 2).map((h) => ({ slug: h.slug, text: h.text }));
 ---
 
-<BaseLayout title={seoTitle ?? title} description={description}>
+<BaseLayout title={seoTitle ?? title} description={description} noindex={noindex}>
   <BreadcrumbLD items={breadcrumbLdItems} />
   {itemListItems.length > 0 && (
     <ItemListLD name={title} description={description} items={itemListItems} siteBase={siteBase} />
