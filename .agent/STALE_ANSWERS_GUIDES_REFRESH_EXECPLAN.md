@@ -176,7 +176,7 @@ High-priority stale long-tail guide candidates found by `rg`:
 
 | Page | Recommended action | Reason |
 | --- | --- | --- |
-| `src/content/use-cases/best-ai-coding-assistant.md` | Refresh | Money page; linked from refreshed coding answer; must stay current with Claude Code, Cursor, Copilot, Codex. |
+| `src/content/use-cases/best-ai-coding-assistant.md` | Refreshed | Money page; linked from refreshed coding answer; current as of 2026-05-09 for Claude Code, Cursor, Copilot, Codex, Windsurf, and Devin. |
 | `src/content/use-cases/chatgpt-alternatives.md` | Refresh | Money page; linked from refreshed ChatGPT answers; current alternatives source trail must match answer pages. |
 | `src/content/use-cases/best-free-ai-tools.md` | Refresh | Money/topical hub; linked from refreshed free tools answer. |
 | `src/content/use-cases/best-ai-automation-platform.md` | Refresh | High buyer intent but contains specific stale version/pricing claims. |
@@ -210,3 +210,8 @@ Remaining risks:
 
 - Many `src/content/use-cases/*.md` pages still contain April 2026 body claims; high-intent pages should be refreshed first, low-value duplicates should be merged or noindexed rather than date-bumped.
 - This checkpoint did not add direct affiliate CTAs to answer pages; it routes users into existing money pages where tracked CTAs/disclosures already exist.
+
+Continuation progress:
+
+- 2026-05-09: Added and pushed Vercel Speed Insights plus orange favicon/browser-tab assets in commit `1663f847`; `npm run ship:check` passed before push.
+- 2026-05-09: Refreshed `src/content/use-cases/best-ai-coding-assistant.md` as the first high-intent stale guide. Current facts were checked against official Cursor pricing, Anthropic Max/Claude Code access, GitHub Copilot plans, Windsurf usage docs, and OpenAI Codex pages on May 9, 2026. The page now avoids stale April/model-version claims, adds Codex to the buyer set, updates `last_verified` to 2026-05-09, and keeps `/guides/` automatically aligned through guide frontmatter.
