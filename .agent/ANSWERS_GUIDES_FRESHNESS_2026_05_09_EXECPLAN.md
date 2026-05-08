@@ -78,6 +78,7 @@ Priority pages must avoid horizontal overflow at 360/390/430/768/1024 and presen
 - 2026-05-09: Added reusable `AnswerDecisionPanel` and applied it to the five priority answer routes: video generator, chatbot, ChatGPT alternatives, free AI tools, and coding tool.
 - 2026-05-09: Updated `/answers/` parent hub with current May 9 refresh signal and short answer summaries for the refreshed priority pages.
 - 2026-05-09: Added `.agent/STALE_ANSWERS_GUIDES_TRIAGE_2026_05_09.md` with refresh/merge/noindex/leave decisions for priority answer and guide pages.
+- 2026-05-09: Refreshed `midjourney-alternatives` and `elevenlabs-alternatives` against current official/vendor sources, added guide picks, removed stale pricing/model claims, and promoted both refreshed alternatives pages on `/guides/`.
 
 ## 15. Final report
 Pending.

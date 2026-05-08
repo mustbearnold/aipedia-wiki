@@ -1,94 +1,182 @@
 ---
 type: use-case
 slug: elevenlabs-alternatives
-title: "Best ElevenLabs Alternatives (2026)"
-seo_title: "Best ElevenLabs Alternatives (2026), aipedia.wiki"
-meta_description: "ElevenLabs is strong but expensive. WellSaid for broadcast voiceovers, Cartesia for low-latency real-time agents, Fish Audio S2 for multilingual cloning, and Voxtral for open-source self-hosting are the four live alternatives worth comparing in 2026."
-description: "Four live ElevenLabs alternatives that cover broadcast voiceovers, low-latency voice agents, multilingual cloning, and open-source self-hosting."
-tools_mentioned: ["wellsaid", "cartesia", "fish-audio", "voxtral"]
+title: "Best ElevenLabs Alternatives (May 2026)"
+seo_title: "Best ElevenLabs Alternatives in May 2026: Cartesia, Fish Audio, WellSaid"
+meta_description: "As of May 9, 2026, Cartesia, Fish Audio, WellSaid, and Voxtral are the ElevenLabs alternatives worth comparing for real-time agents, multilingual cloning, narration, and open-weight TTS."
+description: "Current buyer guide to the best ElevenLabs alternatives for real-time voice agents, multilingual cloning, broadcast narration, and open-weight text-to-speech."
+tools_mentioned: [cartesia, fish-audio, wellsaid, voxtral, elevenlabs]
+guide_picks:
+  best_overall:
+    tool: cartesia
+    label: "Best real-time alternative"
+    plan: "Free to test; compare paid plans when agent traffic is predictable"
+    reason: "Best ElevenLabs alternative when the job is live conversation, because Cartesia publicly emphasizes Sonic latency under 100ms and production voice-agent use cases."
+    sources:
+      - label: "Cartesia pricing"
+        url: "https://cartesia.ai/pricing"
+  budget:
+    tool: fish-audio
+    label: "Best API-value alternative"
+    plan: "Pay-as-you-go API for TTS and ASR"
+    reason: "Best fit when predictable usage-based API pricing, multilingual TTS, and open research around Fish Audio S2 matter more than a polished creator suite."
+    sources:
+      - label: "Fish Audio API pricing"
+        url: "https://docs.fish.audio/developer-guide/models-pricing/pricing-and-rate-limits"
+      - label: "Fish Audio S2 technical report"
+        url: "https://arxiv.org/abs/2603.08823"
+  pro_team:
+    tool: wellsaid
+    label: "Best narration-team alternative"
+    plan: "Creative for smaller teams; Business/Enterprise for scale and rights workflow"
+    reason: "Best pick when the buyer is making training, e-learning, corporate narration, or broadcast-style voiceover and cares more about polished voiceover workflow than experimental cloning."
+    sources:
+      - label: "WellSaid pricing"
+        url: "https://www.wellsaid.io/ai-voice-pricing"
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-09
+last_verified: 2026-05-09
 update_frequency: monthly
 ---
 
-# Best ElevenLabs Alternatives (2026)
+# Best ElevenLabs Alternatives (May 2026)
 
-ElevenLabs is the default AI voice tool, but four live alternatives cover cases where ElevenLabs is either too expensive, too slow for real-time agents, too restrictive on self-hosting, or less strong on specific non-English languages.
+ElevenLabs is still one of the best default AI voice platforms, but it is no longer the only serious buyer path. As of 2026-05-09, the strongest alternatives are [Cartesia](/tools/cartesia/) for real-time voice agents, [Fish Audio](/tools/fish-audio/) for usage-based API value and multilingual TTS, [WellSaid](/tools/wellsaid/) for polished narration teams, and [Voxtral](/tools/voxtral/) for open-weight TTS experimentation.
+
+AiPedia may earn a commission from some links on this page. Affiliate availability does not change rankings, and commercial links are disclosed near CTAs.
 
 ## Quick Verdict
 
-**Pick Cartesia for real-time voice agents.** Sub-200ms first-audio latency beats ElevenLabs and is the single hardest bar to clear for live conversation. **Pick WellSaid for long-form broadcast narration.** The voice bank is smaller but every voice clears studio QC before release. **Pick Fish Audio S2 for multilingual cloning.** Handles 20+ languages at a lower per-character price than ElevenLabs. **Pick Voxtral if you need to self-host.** Open weights, runs on commodity GPU, no per-character metering.
+**Best real-time alternative:** Cartesia. Pick it if your product needs low-latency spoken responses for voice agents, support bots, tutoring, interviews, or live conversations.
 
-## At a Glance
+**Best API-value alternative:** Fish Audio. Pick it if you want pay-as-you-go TTS/ASR pricing, multilingual voice generation, and a more developer-centered workflow.
 
-| Rank | Tool | Best For | Price |
-|---|---|---|---|
-| 1 | [Cartesia](../tools/cartesia.md) | Low-latency real-time voice agents | Free tier; $29-$299/month |
-| 2 | [WellSaid](../tools/wellsaid.md) | Broadcast-grade narration | $44-$179/user/month |
-| 3 | [Fish Audio](../tools/fish-audio.md) | Multilingual voice cloning | Free; $7-$89/month |
-| 4 | [Voxtral](../tools/voxtral.md) | Open-source self-hosting | Free (open weights); hosted $0.001/min |
+**Best narration-team alternative:** WellSaid. Pick it if you create training, e-learning, corporate narration, or professional voiceover content where consistency and commercial rights matter.
 
-## Why not ElevenLabs?
+**Best open-weight alternative:** Voxtral TTS. Pick it if you want Mistral's open v26.03 TTS model, streaming, zero-shot voice cloning, and a self-deployment story to evaluate.
 
-ElevenLabs Creator is $22/month for roughly 100K characters. That covers small creators but breaks fast at scale. Pro at $99/month and Scale at $330/month get expensive for podcasters and audiobook producers pushing 500K+ characters. Real-time API calls carry their own premium rate separately from monthly quotas. Most teams who switch do it for one of three reasons: per-character pricing, latency floor on the real-time API, or compliance requirements that rule out closed-source TTS.
+**Best default if you are not sure:** ElevenLabs. If you want one polished platform for voice cloning, creator workflows, agent tooling, and a broad ecosystem, ElevenLabs remains the benchmark to beat.
 
-## Top Picks
+## What To Buy First
 
-### 1. Cartesia
+1. **Stay with ElevenLabs** if you need the most mature all-around voice platform and are not fighting cost or latency.
+2. **Test Cartesia** if your buyer problem is real-time interaction. Latency matters more than voice-library size for live agents.
+3. **Test Fish Audio** if monthly subscriptions are the pain point and you want API pricing tied to actual usage.
+4. **Test WellSaid** if your buyer is a training, corporate, or e-learning team that wants polished narration rather than cloned voices.
+5. **Test Voxtral** if open weights, self-hosting, or data-control evaluation matters more than a consumer UI.
 
-Cartesia's Sonic model is the real-time voice leader. Sub-200ms time-to-first-audio on the streaming API means conversational agents feel live rather than batch-rendered.
+## At A Glance
 
-Pricing starts with a free tier including 10K characters. Pro at $29/month handles 500K characters plus voice cloning. Startup at $299/month covers 10M characters and unlocks the full clone + voice design toolkit. API access scales per-character below ElevenLabs's rate at equivalent quality.
+| Rank | Tool | Best for | Current price signal verified May 9, 2026 | Watch-out |
+|---|---|---|---:|---|
+| 1 | [Cartesia](/tools/cartesia/) | Real-time voice agents | Public pricing page, free testing path, paid plans | Built for voice infrastructure, not just creator narration |
+| 2 | [Fish Audio](/tools/fish-audio/) | Usage-based API value | `s2-pro` and `s1` TTS at $15/M UTF-8 bytes | Less polished as a non-technical creator suite |
+| 3 | [WellSaid](/tools/wellsaid/) | Corporate narration | Paid plans include commercial usage rights | Not the cheapest cloning playground |
+| 4 | [Voxtral](/tools/voxtral/) | Open-weight TTS | Mistral docs list Voxtral TTS at $16/M chars for API use | Newer and more technical than ElevenLabs |
+| Benchmark | [ElevenLabs](/tools/elevenlabs/) | Broad default voice platform | Credits vary by model; public pricing uses credits and subscriptions | Cost can rise quickly with scale and model choices |
 
-Pick Cartesia for voice agents, customer-support bots, and any product where a 500ms delay would feel broken.
+## Why Not Just Use ElevenLabs?
 
-### 2. WellSaid
+ElevenLabs is still a strong default, especially if the buyer wants a single polished interface for voice cloning, text-to-speech, agents, dubbing, and media workflows. The reason to compare alternatives is not that ElevenLabs is weak. It is that different jobs punish different tradeoffs:
 
-WellSaid has the smallest voice roster of this list, but every voice is QC'd by professional voice actors before release. That translates to more consistent output on long-form broadcast and e-learning work where tonal drift across chapters breaks the listener.
+- **Live agents punish latency.** Cartesia is built around real-time speech infrastructure.
+- **High-volume API usage punishes subscriptions and credit waste.** Fish Audio's public docs are straightforward pay-as-you-go for API usage.
+- **Corporate narration punishes inconsistent voice output.** WellSaid is positioned around production voiceover and commercial rights.
+- **Compliance and research teams punish closed systems.** Voxtral gives technical teams an open-weight TTS route to evaluate.
 
-Pricing is $44/user/month for the Pro tier (40,000 characters per project) and $179/user/month for Enterprise (unlimited characters plus voice avatars for custom narration). No free tier.
+## 1. Cartesia: Best Real-Time Voice Agent Alternative
 
-Pick WellSaid if you produce audiobooks, corporate training, or explainers where "sounds human" matters more than voice variety.
+[Cartesia](/tools/cartesia/) is the first ElevenLabs alternative to test if the job is live conversation. Cartesia's pricing page includes customer proof around Sonic's low-latency voice-agent performance, including references to sub-100ms model latency and real-time multimodal use cases.
 
-### 3. Fish Audio
+Use Cartesia if:
 
-Fish Audio S2 handles 20+ languages with voice cloning from a 10-second sample. Per-character pricing undercuts ElevenLabs in most languages, and the S2 model released 2025 closed the quality gap on English while maintaining better accent rendering on Japanese, Korean, Mandarin, and Spanish.
+- You are building a voice agent, receptionist, tutor, interview bot, support bot, or roleplay system.
+- First audio latency matters more than having the biggest creator voice library.
+- Your product team needs voice infrastructure instead of only a studio UI.
 
-Free tier covers 1,000 characters daily. Plus at $7/month includes 100K characters and commercial license. Pro at $89/month covers 1M characters and unlocks API streaming.
+Avoid Cartesia if:
 
-Pick Fish Audio for multilingual projects where ElevenLabs's English-first accent rendering would betray the content's origin.
+- You mainly need a polished creator app for occasional narration.
+- Your buyer wants the broadest preset voice marketplace rather than API-first control.
 
-### 4. Voxtral
+## 2. Fish Audio: Best API-Value Alternative
 
-Voxtral is the open-weights alternative. Model weights ship under a commercial-use license; self-hosting on a single consumer GPU is realistic. Latency and voice quality trail Cartesia and ElevenLabs on English, but the data-sovereignty story is the reason to use it.
+[Fish Audio](/tools/fish-audio/) is the strongest ElevenLabs alternative when usage-based API economics matter. Fish Audio's developer docs say its API has no subscription fees or monthly minimums, and list TTS pricing for `s2-pro` and `s1` at $15 per million UTF-8 bytes. The same docs put ASR at $0.36 per audio hour.
 
-Hosted tier via Mistral is $0.001/minute. Self-host cost depends entirely on GPU economics.
+Fish Audio also has a credible technical story. The Fish Audio S2 technical report says the system releases model weights and fine-tuning code, with streaming inference and time-to-first-audio below 100ms in the reported setup.
 
-Pick Voxtral if you have a compliance or IP reason you cannot ship audio to a third-party API.
+Use Fish Audio if:
 
-## How we chose
+- You want a pay-as-you-go API instead of guessing subscription tiers.
+- You are doing multilingual voice generation or custom voice work.
+- You can tolerate a more developer-centered workflow.
 
-Scope: live alternatives to ElevenLabs's core TTS and voice-cloning use cases, verified against vendor pricing pages in April 2026. PlayHT was excluded because the service shut down on December 31, 2025 after Meta acqui-hired the team. Resemble AI, Murf, and Lovo are covered in the main [AI Voice category](/categories/ai-voice/) but did not make the primary picks here because their differentiation against ElevenLabs is weaker than the four above.
+Avoid Fish Audio if:
+
+- You want the safest one-click creator workflow for a non-technical team.
+- You need a large, polished business-facing narration suite.
+
+## 3. WellSaid: Best Narration-Team Alternative
+
+[WellSaid](/tools/wellsaid/) is the better ElevenLabs alternative for corporate training, e-learning, explainer videos, and brand voiceover teams. Its pricing FAQ says paid plans include commercial usage rights, and its plan copy is built around voiceover production, downloads, captions, and business/enterprise workflows.
+
+Use WellSaid if:
+
+- You produce e-learning, training, explainers, or corporate video voiceover.
+- You care more about polished narration than experimental cloning.
+- You need commercial usage rights and business workflow features.
+
+Avoid WellSaid if:
+
+- Your main goal is ultra-low-latency live voice agents.
+- You want the cheapest API for high-volume generation.
+
+## 4. Voxtral TTS: Best Open-Weight Alternative
+
+[Voxtral](/tools/voxtral/) is Mistral's open v26.03 text-to-speech model. Mistral's docs describe it as a text-to-speech model with zero-shot voice cloning, support for 9 languages, streaming, about 90ms time-to-first-audio, and no transcript required for voice prompts. The same model card lists API pricing at $16 per million characters.
+
+Use Voxtral if:
+
+- You want an open-weight TTS model to evaluate.
+- You need self-deployment options or research control.
+- You have technical capacity to manage a less consumer-friendly workflow.
+
+Avoid Voxtral if:
+
+- You need a polished commercial creator app today.
+- You want the broadest marketplace of ready voices.
+
+## How We Chose
+
+This guide was re-verified on 2026-05-09 against official vendor docs and pricing pages for ElevenLabs, Cartesia, Fish Audio, WellSaid, and Mistral Voxtral. AiPedia ranks alternatives by buyer job: real-time agents, API economics, narration workflow, and open-weight control. Unsupported old claims about minute-based Voxtral pricing, fixed ElevenLabs character quotas, and static April plan prices were removed or reframed around current public pricing language.
 
 ## FAQ
 
-**Which is the cheapest full replacement?**
-Fish Audio. Free tier plus $7/month Plus covers most creator workloads at a fraction of ElevenLabs's $22/month Creator.
+**What is the best ElevenLabs alternative for voice agents?**
 
-**Which has the lowest latency?**
-Cartesia. Sub-200ms first-audio is the current benchmark leader on public streaming APIs.
+Cartesia. For live conversation, latency and streaming behavior matter more than having the broadest creator suite.
 
-**Which supports commercial voice cloning?**
-All four. Fish Audio Plus ($7/month) is the lowest entry point for commercial cloning. WellSaid enterprise is the highest-quality option but requires a contract.
+**What is the cheapest ElevenLabs alternative for API usage?**
 
-**Is PlayHT still a viable alternative?**
-No. Play.ht shut down December 31, 2025 after Meta acqui-hired the team. Existing accounts, audio files, and cloned voices were deleted without an export tool. See [the PlayHT shutdown page](../dead/play-ht.md) for migration details.
+Fish Audio is the first one to inspect because its developer docs publish pay-as-you-go API pricing without subscription fees or monthly minimums. Actual cost depends on text volume, language, audio duration, and model choice.
+
+**What is the best ElevenLabs alternative for corporate narration?**
+
+WellSaid. It is built more directly around business voiceover, captions, downloads, and commercial usage rights.
+
+**Is Voxtral a real ElevenLabs replacement?**
+
+Not for every buyer. Voxtral is most interesting for technical teams that want open-weight TTS, self-deployment evaluation, and control. It is not the easiest creator app replacement.
+
+**Should most creators still use ElevenLabs?**
+
+Often, yes. ElevenLabs remains the most complete all-around platform. Switch only when you have a specific reason: latency, API economics, narration workflow, compliance, or open-weight control.
 
 ## Sources
 
+- [ElevenLabs pricing](https://elevenlabs.io/pricing)
 - [Cartesia pricing](https://cartesia.ai/pricing)
-- [WellSaid pricing](https://wellsaidlabs.com/pricing)
-- [Fish Audio pricing](https://fish.audio/pricing)
-- [Voxtral documentation](https://mistral.ai/news/voxtral)
-- Prices verified against vendor pricing pages, 2026-04-18.
+- [Fish Audio API pricing](https://docs.fish.audio/developer-guide/models-pricing/pricing-and-rate-limits)
+- [Fish Audio S2 technical report](https://arxiv.org/abs/2603.08823)
+- [WellSaid pricing](https://www.wellsaid.io/ai-voice-pricing)
+- [Mistral Voxtral TTS model card](https://docs.mistral.ai/models/model-cards/voxtral-tts-26-03)
