@@ -4,7 +4,7 @@ import Breadcrumb from '../../components/Breadcrumb.astro';
 import AnswerContent from '../../components/AnswerContent.astro';
 
 const answerContent = `
-The best free AI tools in April 2026 are [ChatGPT](/tools/chatgpt/) for broad everyday work, [Claude](/tools/claude/) for writing and careful reasoning, [Gemini](/tools/gemini/) for Google-native workflows, [Perplexity](/tools/perplexity/) for cited research, and [NotebookLM](/tools/notebooklm/) for source-grounded study.
+The best free AI tools in May 2026 are [ChatGPT](/tools/chatgpt/) for broad everyday work, [Claude](/tools/claude/) for writing and careful reasoning, [Gemini](/tools/gemini/) for Google-native workflows, [Perplexity](/tools/perplexity/) for cited research, and [NotebookLM](/tools/notebooklm/) for source-grounded study.
 
 **ChatGPT is the safest all-rounder.** The free tier covers writing, brainstorming, basic coding help, and general Q&A. Paid ChatGPT is stronger, especially after GPT-5.5, but the free product is still the easiest default for casual users.
 
@@ -14,7 +14,7 @@ The best free AI tools in April 2026 are [ChatGPT](/tools/chatgpt/) for broad ev
 
 **Perplexity and NotebookLM solve research differently.** Perplexity is better for current web research with citations. NotebookLM is better when you already have the source documents and want answers grounded only in those files.
 
-Start with ChatGPT if you need one general tool. Add Claude for writing, Gemini for Google work, Perplexity for web citations, and NotebookLM for document-grounded research.
+Start with ChatGPT if you need one general tool. Add Claude for writing, Gemini for Google work, Perplexity for web citations, and NotebookLM for document-grounded research. For budget stacks, compare the [best AI tools under $20/month](/guides/best-ai-tools-under-20-month/) and the full [free AI tools guide](/guides/best-free-ai-tools/).
 `;
 
 const answerLD = JSON.stringify({
@@ -24,12 +24,12 @@ const answerLD = JSON.stringify({
   author: { '@type': 'Organization', name: 'aipedia.wiki Editorial', url: 'https://aipedia.wiki/about/editorial/' },
   publisher: { '@id': 'https://aipedia.wiki/#organization' },
   datePublished: '2026-04-16',
-  dateModified: '2026-04-27',
+  dateModified: '2026-05-09',
   mainEntityOfPage: 'https://aipedia.wiki/answers/best-free-ai-tools-2026/',
 });
 ---
 
-<BaseLayout title="Best Free AI Tools (2026): Definitive Answer" description="ChatGPT, Claude, Gemini, Perplexity, and NotebookLM are the strongest free AI tools in April 2026, with important limits to understand.">
+<BaseLayout title="Best Free AI Tools (2026): Definitive Answer" description="ChatGPT, Claude, Gemini, Perplexity, and NotebookLM are the strongest free AI tools in May 2026, with important limits to understand.">
   <script type="application/ld+json" set:html={answerLD} />
   
   <Breadcrumb items={[{ label: 'Answers', href: '/answers/' }, { label: 'What are the best free AI tools in 2026?' }]} />
@@ -41,13 +41,13 @@ const answerLD = JSON.stringify({
         <span class="text-[var(--text-secondary)]">aipedia.wiki Editorial</span>
       </a>
       <span aria-hidden="true">·</span>
-      <time datetime="2026-04-27" class="text-[var(--accent-success)]">Updated April 2026</time>
+      <time datetime="2026-05-09" class="text-[var(--accent-success)]">Verified May 9, 2026</time>
     </div>
 
     <AnswerContent content={answerContent} />
 
     <div class="mt-[var(--site-section-gap)] pt-[var(--site-content-gap)] border-t border-[var(--border)] text-sm text-[var(--text-muted)]">
-      <p>This answer reflects flagship models and pricing as of April 2026. See our <a href="/about/scoring/" class="text-[var(--accent-primary)] no-underline hover:underline">scoring methodology</a> for how we evaluate tools.</p>
+      <p>This answer was checked against current vendor sources on May 9, 2026, including <a href="https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus" class="text-[var(--accent-primary)] no-underline hover:underline">ChatGPT Plus/free access docs</a>, <a href="https://docs.anthropic.com/en/docs/models-overview" class="text-[var(--accent-primary)] no-underline hover:underline">Anthropic model docs</a>, <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-pro/" class="text-[var(--accent-primary)] no-underline hover:underline">Google Gemini 3.1 Pro</a>, and <a href="https://www.perplexity.ai/pro" class="text-[var(--accent-primary)] no-underline hover:underline">Perplexity Pro</a>. See our <a href="/about/scoring/" class="text-[var(--accent-primary)] no-underline hover:underline">scoring methodology</a>.</p>
     </div>
   </article>
 </BaseLayout>
