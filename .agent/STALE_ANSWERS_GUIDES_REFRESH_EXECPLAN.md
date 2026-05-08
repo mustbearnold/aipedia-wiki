@@ -177,7 +177,7 @@ High-priority stale long-tail guide candidates found by `rg`:
 | Page | Recommended action | Reason |
 | --- | --- | --- |
 | `src/content/use-cases/best-ai-coding-assistant.md` | Refreshed | Money page; linked from refreshed coding answer; current as of 2026-05-09 for Claude Code, Cursor, Copilot, Codex, Windsurf, and Devin. |
-| `src/content/use-cases/chatgpt-alternatives.md` | Refresh | Money page; linked from refreshed ChatGPT answers; current alternatives source trail must match answer pages. |
+| `src/content/use-cases/chatgpt-alternatives.md` | Refreshed | Money page; linked from refreshed ChatGPT answers; current as of 2026-05-09 for Claude, Gemini, Perplexity, Grok, Mistral AI, NotebookLM, and ChatGPT plan positioning. |
 | `src/content/use-cases/best-free-ai-tools.md` | Refresh | Money/topical hub; linked from refreshed free tools answer. |
 | `src/content/use-cases/best-ai-automation-platform.md` | Refresh | High buyer intent but contains specific stale version/pricing claims. |
 | `src/content/use-cases/ai-customer-support.md` | Refresh or merge | Commercially valuable, but old model/version/pricing specifics make it risky until verified. |
@@ -215,3 +215,4 @@ Continuation progress:
 
 - 2026-05-09: Added and pushed Vercel Speed Insights plus orange favicon/browser-tab assets in commit `1663f847`; `npm run ship:check` passed before push.
 - 2026-05-09: Refreshed `src/content/use-cases/best-ai-coding-assistant.md` as the first high-intent stale guide. Current facts were checked against official Cursor pricing, Anthropic Max/Claude Code access, GitHub Copilot plans, Windsurf usage docs, and OpenAI Codex pages on May 9, 2026. The page now avoids stale April/model-version claims, adds Codex to the buyer set, updates `last_verified` to 2026-05-09, and keeps `/guides/` automatically aligned through guide frontmatter.
+- 2026-05-09: Refreshed `src/content/use-cases/chatgpt-alternatives.md` with current official-source checks for Claude, Gemini, Perplexity, Grok, Mistral AI, NotebookLM, and ChatGPT positioning. Removed stale April 15/model-version claims and rebuilt the page around buyer jobs: writing/analysis, Google Workspace, cited research, X-native real-time context, privacy/open-model control, and source-grounded study.
