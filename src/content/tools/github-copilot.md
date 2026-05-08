@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$39/user/month"
 status: active
 launched: 2021-06
-last_updated: 2026-05-07
-last_verified: 2026-05-07
+last_updated: 2026-05-09
+last_verified: 2026-05-09
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -267,7 +267,7 @@ April 30 security coverage added another practical caveat: [recent coding-agent 
 | **Premium request caps** | Free 50 · Pro 300 · Pro+ 1,500 · Business 300/seat · Enterprise 1,000/seat · overage $0.04 each |
 | **Copilot Spaces** | Context-scoping feature accessible via the GitHub MCP server |
 | **Data-training policy** | Free / Pro / Pro+ interaction data may be used for model training unless opted out; Business / Enterprise excluded |
-| **Recent shipments (12 mo)** | GPT-5.5 GA (Apr 24, 2026) · BYOK in VS Code · cloud-agent metrics · Jira controls · PR chat/debugging improvements · Coding Agent GA · Agent mode GA (Mar 2026) · MCP support GA · Copilot CLI GA (Apr 2026) · Opus 4.7 GA (Apr 16, 2026) · Agentic code review (Mar 2026) |
+| **Recent shipments (12 mo)** | Agents secrets/variables · code-review metrics by comment type · Rubber Duck cross-model review · GPT-5.5 GA (Apr 24, 2026) · BYOK in VS Code · cloud-agent metrics · Jira controls · PR chat/debugging improvements · Coding Agent GA · Agent mode GA (Mar 2026) · MCP support GA · Copilot CLI GA (Apr 2026) · Opus 4.7 GA (Apr 16, 2026) · Agentic code review (Mar 2026) |
 
 ## What it actually is
 
@@ -326,8 +326,17 @@ Prices verified 2026-04-17 via [GitHub Copilot plans](https://github.com/feature
 | **Pricing** | $10/mo flat + 300 premium requests (Opus locked to Pro+ at 7.5x) | $20/mo + $20 usage pool at API rates | $100/mo flat for Max 5x |
 | **Best viewed as** | GitHub-native AI inside your existing IDE | GUI-first multi-agent workbench | Strongest autonomous CLI agent |
 
+## Recent changes
+
+- **May 8, 2026:** [GitHub will deprecate Grok Code Fast 1 across Copilot on May 15](/news/2026-05-08-github-copilot-grok-code-fast-1-deprecation/). Teams using it should switch model policies to GPT-5 mini, Claude Haiku 4.5, or another supported model before the deadline.
+- **May 8, 2026:** [Copilot cloud agent gained dedicated Agents secrets and variables](/news/2026-05-08-github-copilot-cloud-agent-secrets-variables/), including organization-level sharing for agent configuration.
+- **May 8, 2026:** [Copilot code-review metrics now include comment-type breakdowns](/news/2026-05-08-github-copilot-code-review-metrics-comment-types/), giving admins a better view of security, bug-risk, and other suggestion categories.
+- **May 7, 2026:** [Copilot CLI Rubber Duck can now pair GPT and Claude as cross-model critics](/news/2026-05-07-github-copilot-rubber-duck-cross-model-review/) when experimental mode is enabled.
+- **May 7, 2026:** [GitHub retired Claude Sonnet 4 and set GPT-4.1's Copilot retirement for June 1](/news/2026-05-07-github-copilot-gpt41-claude-sonnet4-deprecations/). Enterprise admins should verify GPT-5.5 and Claude Sonnet 4.6 are enabled where needed.
+
 ## Failure modes
 
+- **Model retirements are accelerating.** In May 2026 alone, GitHub retired Claude Sonnet 4, set GPT-4.1 for June 1, and set Grok Code Fast 1 for May 15. Copilot buyers need a model-policy owner and a fallback testing process.
 - **Model churn is now operational.** [GPT-5.2 and GPT-5.2-Codex retire from most Copilot experiences on June 1, 2026](/news/2026-05-03-github-copilot-gpt-52-deprecation/). Admins need model-policy owners, not just developer preference lists.
 - **Premium request quota burns fast on GPT-5.5 and Opus 4.7.** At the 7.5x multiplier, Pro+'s 1,500 requests yield ~200 top-model turns. Heavy users should pin Sonnet 4.6 or GPT-5-Codex for routine work and reserve GPT-5.5 / Opus for hard problems, or plan for overage at $0.04/request.
 - **Opus 4.7 is not in Pro ($10).** Access requires Pro+ ($39), Business, or Enterprise. Pro is oriented around lower-cost coding and Gemini/Sonnet models by default.
@@ -342,7 +351,7 @@ Prices verified 2026-04-17 via [GitHub Copilot plans](https://github.com/feature
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, normalizes factual claims, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-07 against [github.com/features/copilot](https://github.com/features/copilot), [github.com/features/copilot/plans](https://github.com/features/copilot/plans), [docs.github.com/en/copilot](https://docs.github.com/en/copilot), the [Opus 4.7 GA changelog](https://github.blog/changelog/2026-04-16-claude-opus-4-7-is-generally-available/), the [Copilot feature matrix](https://docs.github.com/en/copilot/reference/copilot-feature-matrix), and the [April 24 data-policy update](/news/2026-04-24-github-copilot-interaction-data-training/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, normalizes factual claims, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-09 against [github.com/features/copilot](https://github.com/features/copilot), [github.com/features/copilot/plans](https://github.com/features/copilot/plans), [docs.github.com/en/copilot](https://docs.github.com/en/copilot), the [May 8 Grok Code Fast 1 retirement](/news/2026-05-08-github-copilot-grok-code-fast-1-deprecation/), the [May 8 cloud-agent secrets update](/news/2026-05-08-github-copilot-cloud-agent-secrets-variables/), the [May 8 code-review metrics update](/news/2026-05-08-github-copilot-code-review-metrics-comment-types/), the [May 7 Rubber Duck update](/news/2026-05-07-github-copilot-rubber-duck-cross-model-review/), and the [May 7 model retirement notices](/news/2026-05-07-github-copilot-gpt41-claude-sonnet4-deprecations/).
 
 ## FAQ
 

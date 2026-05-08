@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "Bundled with ChatGPT Plus ($20/mo) through Pro 20x ($200/mo)"
 status: active
 launched: 2025-05
-last_updated: 2026-05-04
-last_verified: 2026-05-04
+last_updated: 2026-05-09
+last_verified: 2026-05-09
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -249,6 +249,11 @@ Prices verified 2026-04-18 via [OpenAI Codex pricing](https://developers.openai.
 | **Pricing model** | Bundled with ChatGPT Plus+ | Bundled with Claude Pro+ | $20/mo Cursor Pro + API | $500/mo Teams |
 | **Best for** | Async background work + OpenAI ecosystem | Long-context terminal agent | Primary daily-driver IDE | Fully autonomous tasks |
 
+## Recent changes
+
+- **May 7, 2026:** [OpenAI put GPT-5.5-Cyber into limited preview through Trusted Access for Cyber](/news/2026-05-07-openai-gpt-55-cyber-trusted-access/). The same announcement also introduced Codex Security for open source maintainers and a Codex Security plugin for moving from threat modeling to discovery, validation, attack-path analysis, and verified fixes.
+- **May 3, 2026:** [Codex Desktop added Pets, Hatch, and config imports](/news/2026-05-03-openai-codex-pets-config-imports/), a small but visible sign that OpenAI is turning Codex into a persistent desktop workbench.
+
 ## Failure modes
 
 - **macOS-first desktop app.** Windows + EU/UK rolling out but not yet universal. Linux developers use the CLI or wait.
@@ -261,7 +266,7 @@ Prices verified 2026-04-18 via [OpenAI Codex pricing](https://developers.openai.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation and multi-source news coverage, verifies facts against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-04-27 against OpenAI's Codex docs, the Codex rate card, and multi-source coverage including the April 16 super-app update announcement.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation and multi-source news coverage, verifies facts against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-05-09 against OpenAI's Codex docs, the Codex rate card, the [May 7 GPT-5.5-Cyber and Codex Security update](/news/2026-05-07-openai-gpt-55-cyber-trusted-access/), and multi-source coverage including the April 16 super-app update announcement.
 
 ## FAQ
 

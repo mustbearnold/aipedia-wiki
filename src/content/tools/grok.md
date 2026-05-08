@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$300/month"
 status: active
 launched: 2023-11
-last_updated: 2026-05-05
-last_verified: 2026-05-05
+last_updated: 2026-05-09
+last_verified: 2026-05-09
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -350,6 +350,7 @@ Consumer tier pricing for SuperGrok tiers is not uniformly disclosed on xAI's pu
 
 ## Failure modes
 
+- **Third-party coding distribution can disappear quickly.** [GitHub will deprecate Grok Code Fast 1 across Copilot on May 15, 2026](/news/2026-05-08-github-copilot-grok-code-fast-1-deprecation/) because of a provider-side deprecation. Verify the exact Grok model and surface before treating Grok as a stable coding backend.
 - **Demand-driven outages.** On [April 23, 2026](/news/2026-04-23-grok-outages-high-demand/), Grok experienced intermittent connectivity issues and response delays across web, mobile, and X integration for several hours. Free-tier and lighter-subscription users absorbed most of the friction; SuperGrok and Premium+ subscribers noticed fewer interruptions. Second congestion episode in April 2026 after the 4.3 beta expansion to $30 and $40 tiers grew the traffic pool ~50x while Colossus 2 is still ramping to 1.5 GW.
 - **Voice-agent rollout is enterprise-first.** [Grok Voice Think Fast 1.0](/news/2026-04-23-xai-grok-voice-think-fast-10/) matters for xAI's commercial surface, but public pricing, SLA, latency distributions, and deployment limits still need more documentation.
 - **No persistent memory, full stop.** Every competitor (ChatGPT, Gemini, Claude) has had cross-session memory for 18+ months. Grok still resets every conversation. The sharpest community complaint against the $300/mo Heavy tier.
@@ -367,7 +368,7 @@ Consumer tier pricing for SuperGrok tiers is not uniformly disclosed on xAI's pu
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-24 against [x.ai](https://x.ai), [docs.x.ai reasoning docs](https://docs.x.ai/developers/model-capabilities/text/reasoning), [Artificial Analysis](https://artificialanalysis.ai/models/grok-4-20/providers), and the [Grok Voice Think Fast 1.0 launch](/news/2026-04-23-xai-grok-voice-think-fast-10/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-09 against [x.ai](https://x.ai), [docs.x.ai reasoning docs](https://docs.x.ai/developers/model-capabilities/text/reasoning), [Artificial Analysis](https://artificialanalysis.ai/models/grok-4-20/providers), the [May 8 GitHub Copilot Grok Code Fast 1 retirement](/news/2026-05-08-github-copilot-grok-code-fast-1-deprecation/), and the [Grok Voice Think Fast 1.0 launch](/news/2026-04-23-xai-grok-voice-think-fast-10/).
 
 ## FAQ
 

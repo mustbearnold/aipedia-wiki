@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2023-03
-last_updated: 2026-05-07
-last_verified: 2026-05-07
+last_updated: 2026-05-09
+last_verified: 2026-05-09
 update_frequency: monthly
 seo_title: "Claude: Features, Pricing & Review (2026)"
 meta_description: "Claude runs Opus 4.7 (April 16, 2026) as flagship, Sonnet 4.6, Haiku 4.5. Claude Design (April 17) added for prompt-to-prototype. 1M context, $5/$25 per MTok API. Free tier; Pro $20/mo."
@@ -344,6 +344,7 @@ Prices verified 2026-04-17 via [Anthropic pricing docs](https://platform.claude.
 
 ## Failure modes
 
+- **Copilot-hosted Claude model availability changes fast.** [GitHub retired Claude Sonnet 4 in Copilot and points users to Sonnet 4.6](/news/2026-05-07-github-copilot-gpt41-claude-sonnet4-deprecations/); [Rubber Duck in Copilot CLI can now use Claude as a cross-model critic](/news/2026-05-07-github-copilot-rubber-duck-cross-model-review/). Claude access inside third-party tools should be verified on the exact platform, not assumed from claude.ai.
 - **Conservative safety refusals.** Claude declines requests that are not actually harmful at a higher rate than ChatGPT. Noticeable on red-team research, edgy creative writing, and some analysis of adversarial content.
 - **No native image or video.** Workflows that need multimodal output need a second tool alongside Claude.
 - **Opus 4.7 tokenizer bump.** Same sticker price as 4.6, but 1.0-1.35× more effective tokens. At 1.2×+ inflation, GPT-5.5 can be as cheap or cheaper on effective cost despite Opus's lower output sticker price. API workloads need re-benchmarking before migrating.
@@ -355,7 +356,7 @@ Prices verified 2026-04-17 via [Anthropic pricing docs](https://platform.claude.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-07 against Anthropic's [pricing docs](https://platform.claude.com/docs/en/about-claude/pricing), [model docs](https://platform.claude.com/docs/en/about-claude/models), the [Opus 4.7 release coverage](https://venturebeat.com/technology/anthropic-releases-claude-opus-4-7-narrowly-retaking-lead-for-most-powerful-generally-available-llm), the [GitHub Copilot changelog](https://github.blog/changelog/2026-04-16-claude-opus-4-7-is-generally-available/), the [NEC partnership](/news/2026-04-24-anthropic-nec-ai-engineering-workforce/), and [reported Google-Anthropic investment coverage](/news/2026-04-24-google-anthropic-40b-investment/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-09 against Anthropic's [pricing docs](https://platform.claude.com/docs/en/about-claude/pricing), [model docs](https://platform.claude.com/docs/en/about-claude/models), the [Opus 4.7 release coverage](https://venturebeat.com/technology/anthropic-releases-claude-opus-4-7-narrowly-retaking-lead-for-most-powerful-generally-available-llm), the [May 7 GitHub Copilot Claude model notices](/news/2026-05-07-github-copilot-gpt41-claude-sonnet4-deprecations/), the [May 7 Copilot Rubber Duck update](/news/2026-05-07-github-copilot-rubber-duck-cross-model-review/), the [NEC partnership](/news/2026-04-24-anthropic-nec-ai-engineering-workforce/), and [reported Google-Anthropic investment coverage](/news/2026-04-24-google-anthropic-40b-investment/).
 
 ## FAQ
 

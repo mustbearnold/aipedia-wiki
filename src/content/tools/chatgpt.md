@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2022-11
-last_updated: 2026-05-07
-last_verified: 2026-05-07
+last_updated: 2026-05-09
+last_verified: 2026-05-09
 update_frequency: monthly
 seo_title: "ChatGPT: Features, Pricing & Review (May 2026)"
 meta_description: "ChatGPT now uses GPT-5.5 Instant as the default model, with GPT-5.5 Thinking on Plus and GPT-5.5 Pro on Pro, Business, and Enterprise plans. Plus is $20/mo; Pro plans at $100 and $200/mo add heavier Codex usage."
@@ -270,7 +270,7 @@ OpenAI's general-purpose AI assistant for text, images, web browsing, sandboxed 
 | **Context window** | ChatGPT pricing lists 256K reasoning context on Go, Plus, Business, and Enterprise; Pro reaches 400K |
 | **Score** | Utility 10 · Value 8 · Moat 10 · Longevity 10 |
 
-Every data point above was last verified against OpenAI pages, local news entries, or named sources on May 7, 2026.
+Every data point above was last verified against OpenAI pages, local news entries, or named sources on May 9, 2026.
 
 ## Pricing
 
@@ -288,6 +288,9 @@ Prices and model access were rechecked on May 7, 2026 using [ChatGPT pricing](ht
 
 ## Recent changes
 
+- **May 7, 2026:** [ChatGPT added trusted contact support for serious safety moments](/news/2026-05-07-chatgpt-trusted-contact-safety-feature/) on eligible adult personal accounts in supported regions. This is not a Business, Enterprise, or Edu workspace feature.
+- **May 7, 2026:** [ChatGPT Workspace Agents reached eligible Enterprise workspaces with Enterprise Key Management](/news/2026-05-07-chatgpt-enterprise-ekm-workspace-agents/), making governed agents more relevant for compliance-heavy buyers.
+- **May 7, 2026:** [OpenAI put GPT-5.5-Cyber into limited preview through Trusted Access for Cyber](/news/2026-05-07-openai-gpt-55-cyber-trusted-access/). This is gated security access, not a normal ChatGPT tier.
 - **May 6, 2026:** [OpenAI published a ChatGPT privacy and training-data controls explainer](/news/2026-05-06-openai-chatgpt-privacy-data-controls/), clarifying consumer data controls, Temporary Chat, memory review, Privacy Filter, export, deletion, and privacy requests.
 - **May 5, 2026:** [OpenAI opened ChatGPT ads to beta self-serve buying and CPC bidding](/news/2026-05-05-chatgpt-ads-manager-cpc-bidding/). Ads are now a clearer part of the ChatGPT business model, even if formats and global availability remain early.
 - **May 5, 2026:** [GPT-5.5 Instant replaced GPT-5.3 Instant as the default ChatGPT model](/news/2026-05-05-openai-gpt-55-instant-chatgpt-default/). Update any guidance that still names GPT-5.3 Instant as the default assistant.
@@ -372,4 +375,4 @@ ChatGPT wins on breadth, image generation, and agent integrations. Claude remain
 - [OpenAI: About ChatGPT Pro tiers](https://help.openai.com/en/articles/9793128-what-is-chatgpt-pro): Pro $100, Pro $200, Codex limits, and promo details
 - [OpenAI: What is ChatGPT Business?](https://help.openai.com/en/articles/8792828-what-is-chatgpt-team): Business seat pricing and workspace controls
 
-This review follows the aipedia.wiki four-axis scoring model: Utility, Value, Moat, and Longevity. Last verified 2026-05-07.
+This review follows the aipedia.wiki four-axis scoring model: Utility, Value, Moat, and Longevity. Last verified 2026-05-09.
