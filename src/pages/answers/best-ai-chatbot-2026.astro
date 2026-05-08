@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
 import AnswerContent from '../../components/AnswerContent.astro';
+import AnswerDecisionPanel from '../../components/AnswerDecisionPanel.astro';
 
 const answerContent = `
 [ChatGPT](/tools/chatgpt/) is the best general-purpose AI chatbot for most users in May 2026 because it combines OpenAI's current flagship models, image tools, browsing, voice, Codex, agents, files, and the broadest consumer ecosystem in one product.
@@ -41,6 +42,20 @@ const answerLD = JSON.stringify({
       <span aria-hidden="true">·</span>
       <time datetime="2026-05-09" class="text-[var(--accent-success)]">Verified May 9, 2026</time>
     </div>
+
+    <AnswerDecisionPanel
+      verdict="ChatGPT is still the broadest default chatbot subscription; Claude, Gemini, and Perplexity win when the workflow is narrower."
+      winnerLabel="Default winner"
+      winner="ChatGPT"
+      bestFor="People who want one assistant for text, images, browsing, files, voice, coding help, agents, and everyday problem solving."
+      avoidIf="Your main need is citation-first research, Google-native workspace help, or long-form writing critique. Those jobs can justify Perplexity, Gemini, or Claude first."
+      nextStep="Compare ChatGPT with Claude before paying if writing quality, long analysis, or codebase reasoning matters."
+      links={[
+        { href: '/tools/chatgpt/', label: 'Review ChatGPT' },
+        { href: '/compare/chatgpt-vs-claude/', label: 'Compare ChatGPT vs Claude' },
+        { href: '/guides/chatgpt-alternatives/', label: 'See alternatives' },
+      ]}
+    />
 
     <AnswerContent content={answerContent} />
 

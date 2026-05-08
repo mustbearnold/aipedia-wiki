@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
 import AnswerContent from '../../components/AnswerContent.astro';
+import AnswerDecisionPanel from '../../components/AnswerDecisionPanel.astro';
 
 const answerContent = `
 The best free AI tools in May 2026 are [ChatGPT](/tools/chatgpt/) for broad everyday work, [Claude](/tools/claude/) for writing and careful reasoning, [Gemini](/tools/gemini/) for Google-native workflows, [Perplexity](/tools/perplexity/) for cited research, and [NotebookLM](/tools/notebooklm/) for source-grounded study.
@@ -43,6 +44,20 @@ const answerLD = JSON.stringify({
       <span aria-hidden="true">·</span>
       <time datetime="2026-05-09" class="text-[var(--accent-success)]">Verified May 9, 2026</time>
     </div>
+
+    <AnswerDecisionPanel
+      verdict="Start with ChatGPT Free, then add Claude, Gemini, Perplexity, or NotebookLM only when the job demands their specialty."
+      winnerLabel="Best free default"
+      winner="ChatGPT Free"
+      bestFor="Casual users who want one no-cost assistant for questions, drafts, brainstorming, learning, and basic coding help before choosing a paid plan."
+      avoidIf="You need predictable high-volume usage, team controls, long research sessions, or source-grounded work every day."
+      nextStep="Use the free stack guide if you want a no-cost workflow before upgrading to a paid buyer guide."
+      links={[
+        { href: '/tools/chatgpt/', label: 'Review ChatGPT Free' },
+        { href: '/guides/best-free-ai-tools/', label: 'Read free tools guide' },
+        { href: '/guides/best-ai-tools-under-20-month/', label: 'See under $20 picks' },
+      ]}
+    />
 
     <AnswerContent content={answerContent} />
 

@@ -10,11 +10,11 @@ const ANSWER_GROUPS = [
   {
     title: 'Best tools',
     items: [
-      { slug: 'best-ai-chatbot-2026', q: 'What is the best AI chatbot in 2026?' },
-      { slug: 'best-ai-coding-tool-2026', q: 'What is the best AI coding tool in 2026?' },
+      { slug: 'best-ai-chatbot-2026', q: 'What is the best AI chatbot in 2026?', a: 'ChatGPT is the broadest default; Claude, Gemini, and Perplexity win narrower jobs.' },
+      { slug: 'best-ai-coding-tool-2026', q: 'What is the best AI coding tool in 2026?', a: 'Cursor for daily IDE work, Claude Code for deep repo tasks, Copilot for GitHub-first teams.' },
       { slug: 'best-ai-for-writing-2026', q: 'What is the best AI for writing in 2026?' },
       { slug: 'best-ai-image-generator-2026', q: 'What is the best AI image generator in 2026?' },
-      { slug: 'best-ai-video-generator-2026', q: 'What is the best AI video generator in 2026?' },
+      { slug: 'best-ai-video-generator-2026', q: 'What is the best AI video generator in 2026?', a: 'Runway is safest for production; Seedance, Veo, and Kling must be tested for frontier model quality.' },
       { slug: 'best-ai-voice-generator-2026', q: 'What is the best AI voice generator in 2026?' },
     ],
   },
@@ -22,7 +22,7 @@ const ANSWER_GROUPS = [
     title: 'Tool comparisons',
     items: [
       { slug: 'chatgpt-vs-claude-which-is-better', q: 'ChatGPT vs Claude: which is better?' },
-      { slug: 'chatgpt-alternatives-2026', q: 'What are the best ChatGPT alternatives in 2026?' },
+      { slug: 'chatgpt-alternatives-2026', q: 'What are the best ChatGPT alternatives in 2026?', a: 'Claude is the first alternative to test; Gemini and Perplexity win Google and research workflows.' },
     ],
   },
   {
@@ -35,7 +35,7 @@ const ANSWER_GROUPS = [
   {
     title: 'Free and budget',
     items: [
-      { slug: 'best-free-ai-tools-2026', q: 'What are the best free AI tools in 2026?' },
+      { slug: 'best-free-ai-tools-2026', q: 'What are the best free AI tools in 2026?', a: 'Start with ChatGPT Free, then add Claude, Gemini, Perplexity, or NotebookLM for specific work.' },
       { slug: 'best-ai-for-students', q: 'What is the best AI for students in 2026?' },
     ],
   },
@@ -58,6 +58,9 @@ const answerCount = ANSWER_GROUPS.reduce((sum, group) => sum + group.items.lengt
     <p class="text-[var(--text-secondary)] text-sm sm:text-base max-w-2xl leading-relaxed">
       Short, direct answers to common AI buying questions. No listicle fluff, no affiliate ranking. Each answer is designed for a fast decision, with deeper reviews linked when needed.
     </p>
+    <p class="mt-3 text-xs font-semibold uppercase tracking-[0.14em] text-[var(--accent-success)]">
+      Priority answers refreshed and source-checked May 9, 2026
+    </p>
   </section>
 
   <section class="space-y-[var(--site-section-gap)] mb-[var(--site-page-bottom)]">
@@ -75,6 +78,9 @@ const answerCount = ANSWER_GROUPS.reduce((sum, group) => sum + group.items.lengt
               <h3 class="text-[17px] font-bold text-[var(--text-primary)] group-hover:text-[var(--accent-primary)] m-0 transition-colors">
                 {a.q}
               </h3>
+              {'a' in a && a.a && (
+                <p class="mt-2 mb-0 text-sm leading-relaxed text-[var(--text-secondary)]">{a.a}</p>
+              )}
             </a>
           ))}
         </div>

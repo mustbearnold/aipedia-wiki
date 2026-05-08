@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
 import AnswerContent from '../../components/AnswerContent.astro';
+import AnswerDecisionPanel from '../../components/AnswerDecisionPanel.astro';
 
 const answerContent = `
 [Claude Code](/tools/claude-code/) is the strongest pick for complex codebase reasoning in May 2026. [Cursor](/tools/cursor/) is the best daily AI IDE for most developers. [GitHub Copilot](/tools/github-copilot/) is the safest enterprise default when the team already lives in GitHub.
@@ -41,6 +42,20 @@ const answerLD = JSON.stringify({
       <span aria-hidden="true">·</span>
       <time datetime="2026-05-09" class="text-[var(--accent-success)]">Verified May 9, 2026</time>
     </div>
+
+    <AnswerDecisionPanel
+      verdict="Cursor is the best daily AI IDE, Claude Code is the strongest deep repo agent, and GitHub Copilot is the safest GitHub-first team default."
+      winnerLabel="Default winner"
+      winner="Cursor for daily coding"
+      bestFor="Developers who want AI edits, chat, autocomplete, diffs, and agent work inside a VS Code-style environment all day."
+      avoidIf="You mainly want terminal-native autonomous refactors, or your company standardizes every developer workflow around GitHub procurement."
+      nextStep="Use the coding assistant guide if you are deciding between Cursor, Claude Code, Copilot, Codex, Windsurf, and Devin."
+      links={[
+        { href: '/guides/best-ai-coding-assistant/', label: 'Read coding buyer guide' },
+        { href: '/tools/cursor/', label: 'Review Cursor' },
+        { href: '/compare/cursor-vs-github-copilot/', label: 'Compare Cursor vs Copilot' },
+      ]}
+    />
 
     <AnswerContent content={answerContent} />
 

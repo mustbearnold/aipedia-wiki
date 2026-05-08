@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
 import AnswerContent from '../../components/AnswerContent.astro';
+import AnswerDecisionPanel from '../../components/AnswerDecisionPanel.astro';
 
 const answerContent = `
 [Runway](/tools/runway/) is still the safest AI video generator pick for most professional teams in May 2026 because Gen-4.5 combines strong motion quality, prompt control, API access, and a mature production workflow.
@@ -39,6 +40,20 @@ const answerLD = JSON.stringify({
       <span aria-hidden="true">·</span>
       <time datetime="2026-05-09" class="text-[var(--accent-success)]">Verified May 9, 2026</time>
     </div>
+
+    <AnswerDecisionPanel
+      verdict="Runway is the safest production buy, but Seedance 2.0, Veo 3.1, and Kling 3.0 must be tested when raw model quality decides the purchase."
+      winnerLabel="Default winner"
+      winner="Runway for production workflow"
+      bestFor="Teams that need reliable editing, exports, multi-model access, and client-ready workflows rather than only one impressive generation model."
+      avoidIf="You only need avatar-led presenter videos. In that case, HeyGen and Synthesia belong ahead of cinematic scene generators."
+      nextStep="Open the full video guide if you are choosing between Seedance, Veo, Kling, Runway, and avatar-video tools."
+      links={[
+        { href: '/guides/best-ai-video-generator/', label: 'Read the video buyer guide' },
+        { href: '/tools/runway/', label: 'Review Runway' },
+        { href: '/compare/kling-vs-seedance-vs-runway/', label: 'Compare video models' },
+      ]}
+    />
 
     <AnswerContent content={answerContent} />
 
