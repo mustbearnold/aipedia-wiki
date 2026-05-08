@@ -10,10 +10,12 @@ const activeTools = allTools.filter((tool) => !['dead', 'retired', 'acquired'].i
 const allComparisons = await getCollection('comparisons');
 const allNews = await getCollection('news');
 const allCategories = await getCollection('categories');
+const allGuides = await getCollection('use-cases');
 
 const toolCount = activeTools.length;
 const comparisonCount = allComparisons.length;
 const newsCount = allNews.length;
+const guideCount = allGuides.length;
 
 function scoreFor(tool: (typeof activeTools)[number]): number {
   const scores = tool.data.scores;
@@ -57,15 +59,21 @@ const latestNews = allNews
   .slice(0, 4);
 
 const popularSearches = [
+  'AI video generator',
+  'avatar video generator',
+  'ad copy tools',
+  'sales AI tools',
+  'AI SEO tools',
   'coding assistant',
-  'AI image generator',
-  'research with citations',
-  'workflow automation',
-  'meeting notes',
-  'latest OpenAI news',
 ];
 
 const decisionPaths = [
+  {
+    label: 'Pick by job',
+    title: 'Start with buyer guides for a workflow, role, or budget.',
+    href: '/guides/',
+    meta: `${guideCount} buyer guides`,
+  },
   {
     label: 'Browse tools',
     title: 'Find a tool by category, score, or pricing.',
@@ -84,19 +92,25 @@ const decisionPaths = [
     href: '/news/',
     meta: `${newsCount} news items`,
   },
+  {
+    label: 'Build a stack',
+    title: 'Get a role-based starter set before you buy.',
+    href: '/stack-builder/',
+    meta: 'Interactive builder',
+  },
 ];
 
 ---
 
 <BaseLayout
   title={`AI Tools Wiki · May 2026 · ${toolCount} tools scored`}
-  description={`Compare ${toolCount} AI tools with source-backed reviews, ${comparisonCount} head-to-head guides, and ${newsCount} news items. Updated May 2026. Independent scores. No paid rankings.`}
+  description={`Compare ${toolCount} AI tools with source-backed reviews, ${guideCount} buyer guides, ${comparisonCount} head-to-head comparisons, and ${newsCount} news items. Updated May 2026. Independent scores. No paid rankings.`}
 >
   <HomepageLD
     toolCount={toolCount}
     comparisonCount={comparisonCount}
     categoryCount={allCategories.length}
-    lastUpdated="2026-05-06"
+    lastUpdated="2026-05-09"
   />
 
   <div class="home-page" data-home-page>
@@ -105,8 +119,8 @@ const decisionPaths = [
           <p class="home-eyebrow">AI tools wiki</p>
           <h1 id="home-title">Find the right AI tool faster.</h1>
           <p class="home-lede">
-            Source-backed reviews, comparisons, guides, and AI news. No paid rankings, no vague hype,
-            just tradeoffs you can use.
+            Source-backed reviews, buyer guides, comparisons, and AI news. No paid rankings, no vague hype,
+            just tradeoffs and buying paths you can use.
           </p>
 
           <form class="home-search" data-home-search role="search" action="/search/" method="get">

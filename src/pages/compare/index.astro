@@ -72,7 +72,30 @@ const enriched: EnrichedComparison[] = allComparisons.map((c) => {
   };
 });
 
-const featured = [...enriched].sort((a, b) => b.sumScore - a.sumScore).slice(0, 6);
+const priorityComparisonSlugs = [
+  'chatgpt-vs-claude',
+  'cursor-vs-github-copilot',
+  'lovable-vs-bolt-vs-v0',
+  'kling-vs-seedance-vs-runway',
+  'veo-vs-seedance',
+  'runway-vs-veo',
+  'heygen-vs-synthesia',
+  'n8n-vs-make-vs-zapier',
+];
+const comparisonBySlug = new Map(enriched.map(c => [c.slug, c]));
+const usedFeaturedSlugs = new Set<string>();
+const featured = [
+  ...priorityComparisonSlugs
+    .map(slug => comparisonBySlug.get(slug))
+    .filter((c): c is EnrichedComparison => Boolean(c)),
+  ...[...enriched].sort((a, b) => b.sumScore - a.sumScore),
+]
+  .filter((c) => {
+    if (usedFeaturedSlugs.has(c.slug)) return false;
+    usedFeaturedSlugs.add(c.slug);
+    return true;
+  })
+  .slice(0, 8);
 
 const byCategory: Record<string, EnrichedComparison[]> = {};
 for (const c of enriched) {
@@ -100,7 +123,7 @@ const heroSignals = [
   { label: 'Comparison guides', value: allComparisons.length, note: 'source-backed pages' },
   { label: 'Tools in wiki', value: liveToolCount, note: 'active profiles' },
   { label: 'Most covered area', value: topCategoryLabel, note: `${byCategory[topCategory]?.length ?? 0} comparisons` },
-  { label: 'Strongest pair avg', value: strongestPairScore.toFixed(1), note: 'highest combined score' },
+  { label: 'Featured pair avg', value: strongestPairScore.toFixed(1), note: 'buyer-priority pair' },
 ];
 
 const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
@@ -164,7 +187,7 @@ const comparisonItems = enriched.map((comparison) => ({
 
       <Fragment slot="aside">
       <aside class="compare-hero-panel" aria-label="Comparison highlights">
-        <div class="compare-panel-kicker">May 2026 comparison guide</div>
+        <div class="compare-panel-kicker">Buyer comparison guide</div>
         <div class="compare-panel-score">
           <span class="tabular-nums">{strongestPairScore.toFixed(1)}</span>
           <small>/10 top pair average</small>
@@ -212,8 +235,8 @@ const comparisonItems = enriched.map((comparison) => ({
       <div class="t2-index-group-head compare-group-head">
         <span class="compare-group-mark" aria-hidden="true"></span>
         <div>
-          <p class="compare-group-kicker">Popular comparisons</p>
-          <h2 class="t2-index-group-title">Top comparisons</h2>
+          <p class="compare-group-kicker">Buyer-priority comparisons</p>
+          <h2 class="t2-index-group-title">Start with these comparisons</h2>
         </div>
         <span class="t2-index-group-count">{featured.length}</span>
       </div>

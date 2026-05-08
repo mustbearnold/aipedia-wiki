@@ -66,7 +66,7 @@ const STACKS: Record<string, Record<string, { budget: string[]; standard: string
     'Stock & Brand':       { budget: ['freepik'],         standard: ['canva','adobe-firefly'],  premium: ['adobe-firefly','canva'] },
     'Presentations':       { budget: [],                  standard: ['gamma'],                  premium: ['gamma','beautiful-ai'] },
   },
-  // New April 2026 roles
+  // Expanded buyer roles
   'agency': {
     'Creative Direction':  { budget: ['canva'],           standard: ['canva','adobe-firefly'],  premium: ['adobe-firefly','midjourney','canva'] },
     'Client Decks':        { budget: [],                  standard: ['claude-design','gamma'],  premium: ['claude-design','gamma','beautiful-ai'] },
@@ -249,7 +249,7 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
 ---
 
 <BaseLayout
-  title="AI Tool Set Builder: Find Your Best AI Tools (April 2026)"
+  title="AI Tool Set Builder: Find Your Best AI Tools"
   description="Pick your role, set your budget, get a suggested AI tool set, swap any tool, and share the result. Recently-updated badges flag tools that shipped in the last 14 days."
 >
   <div class="site-content-frame">
@@ -258,7 +258,7 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
     <div class="stack-builder-page-root">
   <section class="sb-hero">
     <div class="sb-hero-copy">
-      <p class="sb-eyebrow">April 2026 tool builder</p>
+      <p class="sb-eyebrow">AI tool set builder</p>
       <h1>Build a working AI tool set.</h1>
       <p>
         Choose a role, budget, and workflow. aipedia suggests a sourced set of reviewed tools, then lets you swap individual picks.

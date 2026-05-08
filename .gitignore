@@ -39,6 +39,9 @@ public/og/tools/*.svg
 !.dev.vars.example
 !.env.example
 
+# Vercel local project-link metadata
+.vercel/
+
 # Generated from wikis/_meta/ — committed so Cloudflare build can import them.
 # Source of truth remains in wikis/_meta/; regenerate with `npm run wiki:refresh`.
 # src/data/_meta/   # intentionally NOT gitignored

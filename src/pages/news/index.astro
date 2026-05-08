@@ -95,7 +95,13 @@ const recent14 = sorted.filter(n => new Date(n.date) >= fourteenDaysAgo);
 const sevenDaysAgo = new Date();
 sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
 const recent7 = sorted.filter(n => new Date(n.date) >= sevenDaysAgo);
-const april2026 = sorted.filter(n => n.date.startsWith('2026-04'));
+const currentMonthKey = today.slice(0, 7);
+const currentMonthDate = new Date(`${currentMonthKey}-01T00:00:00Z`);
+const currentMonthLabel = currentMonthDate.toLocaleDateString('en-US', {
+  month: 'long',
+  year: 'numeric',
+});
+const currentMonthNews = sorted.filter(n => n.date.startsWith(currentMonthKey));
 const mentionCounts: Record<string, number> = {};
 const latestSev: Record<string, string> = {};
 for (const n of recent14) {
@@ -179,8 +185,8 @@ const leadingCategory = categoryOptions[0]
   : null;
 const signalCards = [
   {
-    label: 'April 2026 archive',
-    value: april2026.length,
+    label: `${currentMonthLabel} archive`,
+    value: currentMonthNews.length,
     note: 'verified items this month',
   },
   {
@@ -269,7 +275,7 @@ const newsItems = sorted.slice(0, 100).map((item) => ({
         </div>
       </div>
 
-      <div class="p3-newsdesk-signal-grid" data-reveal style="--reveal-delay: 180ms;" aria-label="April 2026 news summary">
+      <div class="p3-newsdesk-signal-grid" data-reveal style="--reveal-delay: 180ms;" aria-label={`${currentMonthLabel} news summary`}>
         {signalCards.map((card) => (
           <div class="p3-newsdesk-signal-card home-surface-card">
             <span class="p3-newsdesk-signal-label">{card.label}</span>

@@ -60,7 +60,7 @@ const sorted = allCategories
   .sort((a, b) => b.toolCount - a.toolCount);
 
 const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
-const categoriesDescription = `Browse all ${allCategories.length} AI tool categories: coding assistants, writing tools, image generators, video tools, voice synthesis, automation, and more. ${activeTools.length} active tools reviewed. Updated May 2026.`;
+const categoriesDescription = `Browse ${allCategories.length} AI tool category hubs for buyer research: coding assistants, writing tools, image generators, video tools, voice synthesis, automation, and more. ${activeTools.length} active tools reviewed. Updated May 2026.`;
 const categoryItems = sorted.map((category) => ({
   name: category.title,
   url: new URL(`/categories/${category.slug}/`, siteBase).href,
@@ -89,16 +89,16 @@ const categoryItems = sorted.map((category) => ({
 
     <section class="idx-hero" data-pagefind-ignore>
       <div class="idx-eyebrow">
-        <span class="idx-eyebrow-chip idx-eyebrow-accent">Directory</span>
+        <span class="idx-eyebrow-chip idx-eyebrow-accent">Buyer categories</span>
         <span class="idx-eyebrow-chip"><span class="tabular-nums">{allCategories.length}</span> categories</span>
         <span class="idx-eyebrow-chip"><span class="tabular-nums">{activeTools.length}</span> active tools</span>
         <span class="idx-eyebrow-trust">Editorial only, no paid placements</span>
       </div>
       <h1 class="idx-headline">
-        Explore every <span class="idx-gradient">AI category</span>.
+        Choose the right <span class="idx-gradient">AI category</span>.
       </h1>
       <p class="idx-subhead">
-        {activeTools.length} active tools across {allCategories.length} categories. Each tile opens a ranked list with top picks and comparisons. Updated May 2026.
+        Start here when you know the job but not the tool. {activeTools.length} active tools across {allCategories.length} category hubs, each with ranked picks and comparisons. Updated May 2026.
       </p>
     </section>
 

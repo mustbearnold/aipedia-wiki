@@ -18,15 +18,15 @@ function isActive(prefixes: string[]): boolean {
 const activeExplore = isActive(['/explore/']);
 const activeCategories = isActive(['/categories/']);
 const activeCompare = isActive(['/compare/']);
-const activeNews = isActive(['/news/', '/reports/', '/benchmarks/']);
+const activeNews = isActive(['/news/', '/benchmarks/']);
 const activeAllTools = isActive(['/tools/']);
 ---
 
 <nav id="site-nav" class="nav-root fixed inset-x-0 top-0 z-50">
   <div class="site-container h-12 md:h-14 flex items-center justify-between">
     <!-- Brand lockup. Slightly larger logo (26px) + wordmark with a
-         subtle live-dot after the TLD. The dot reinforces the homepage
-         "verified today" trust signal right in the header. -->
+         subtle live-dot after the TLD. The dot reinforces that the catalog
+         has visible freshness metadata without overclaiming every page is current today. -->
     <a href="/" class="nav-brand inline-flex items-center gap-2.5 no-underline hover:no-underline" aria-label="aipedia.wiki home" data-astro-prefetch="viewport">
       <span class="nav-logo-frame" aria-hidden="true">
         <img src="/brand/aipedia-logo-crystal-cyan-48.png" alt="" width="26" height="26" loading="eager" decoding="sync" />
@@ -34,7 +34,7 @@ const activeAllTools = isActive(['/tools/']);
       <span class="nav-wordmark">
         <span class="nav-wordmark-name">aipedia</span><span class="nav-wordmark-tld">.wiki</span>
       </span>
-      <span class="nav-livedot" aria-hidden="true" title="Verified today"></span>
+      <span class="nav-livedot" aria-hidden="true" title="Freshness tracked"></span>
     </a>
 
     <!-- Desktop links. Underline-slide on hover; active page shows the
@@ -103,7 +103,7 @@ const activeAllTools = isActive(['/tools/']);
 
       <a href="/stack-builder/" class="block px-5 py-3 text-sm text-[var(--text-secondary)] no-underline hover:bg-[var(--bg-card-hover)]">Tool Set Builder</a>
       <a href="/workflows/" class="block px-5 py-3 text-sm text-[var(--text-secondary)] no-underline hover:bg-[var(--bg-card-hover)]">Workflows</a>
-      <a href="/reports/" class="block px-5 py-3 text-sm text-[var(--text-secondary)] no-underline hover:bg-[var(--bg-card-hover)]">Monthly Reports</a>
+      <a href="/answers/" class="block px-5 py-3 text-sm text-[var(--text-secondary)] no-underline hover:bg-[var(--bg-card-hover)]">Answers</a>
       <a href="/dead/" class="block px-5 py-3 text-sm text-[var(--text-secondary)] no-underline hover:bg-[var(--bg-card-hover)]">Dead Tools</a>
 
       <div class="my-3 border-t border-[var(--border)]"></div>

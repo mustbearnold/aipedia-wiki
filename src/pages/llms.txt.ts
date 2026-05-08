@@ -44,6 +44,9 @@ export const GET: APIRoute = async () => {
   lines.push('- [All Categories](https://aipedia.wiki/categories/): hubs grouping tools by domain');
   lines.push('- [All Comparisons](https://aipedia.wiki/compare/): head-to-head tool vs tool articles');
   lines.push('- [Guides](https://aipedia.wiki/guides/): problem-first buyer pages for choosing AI tools by workflow, budget, and risk');
+  lines.push('- [Tool Set Builder](https://aipedia.wiki/stack-builder/): role-and-budget path to starter AI tool stacks');
+  lines.push('- [News](https://aipedia.wiki/news/): source-linked product, model, pricing, acquisition, and shutdown updates');
+  lines.push('- [Answers](https://aipedia.wiki/answers/): concise responses to high-volume AI buying questions');
   lines.push('- [Glossary](https://aipedia.wiki/glossary/): defined terms used across the site');
   lines.push('');
   lines.push('## Editorial and methodology');

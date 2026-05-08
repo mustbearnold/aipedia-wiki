@@ -57,6 +57,9 @@ export const GET: APIRoute = async () => {
   lines.push('- [All Categories](https://aipedia.wiki/categories/)');
   lines.push('- [All Comparisons](https://aipedia.wiki/compare/)');
   lines.push('- [Guides](https://aipedia.wiki/guides/)');
+  lines.push('- [Tool Set Builder](https://aipedia.wiki/stack-builder/)');
+  lines.push('- [News](https://aipedia.wiki/news/)');
+  lines.push('- [Answers](https://aipedia.wiki/answers/)');
   lines.push('- [Glossary](https://aipedia.wiki/glossary/)');
   lines.push('- [Editorial Policy](https://aipedia.wiki/about/editorial/)');
   lines.push('- [Scoring Methodology](https://aipedia.wiki/about/scoring/)');

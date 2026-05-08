@@ -258,13 +258,17 @@ const lanes = [
 
 const guideBySlug = new Map(guides.map(g => [g.slug, g]));
 const featuredSlugs = [
+  'best-ai-video-generator',
+  'best-ai-avatar-video-generator',
+  'best-ai-for-ad-copy',
+  'best-ai-tools-for-sales-teams',
+  'best-ai-seo-tool',
   'best-ai-coding-assistant',
-  'ai-solo-founder-stack',
-  'best-ai-automation-platform',
-  'best-ai-research-tool',
+  'best-ai-for-presentations',
   'best-ai-for-data-analysis',
-  'ai-content-creator-stack',
+  'best-ai-automation-platform',
   'best-ai-tools-under-20-month',
+  'ai-solo-founder-stack',
   'chatgpt-alternatives',
 ];
 const featured = featuredSlugs.map(slug => guideBySlug.get(slug)).filter(Boolean) as Guide[];
@@ -342,9 +346,9 @@ const categoriesCovered = new Set(
         <div class="guides-section-head">
           <div>
             <p class="guides-section-kicker">Start here</p>
-            <h2>Most useful guides</h2>
+            <h2>Highest-intent buyer guides</h2>
           </div>
-          <span>Reviewed, useful, and central to the site.</span>
+          <span>Money-page paths for choosing tools by job, budget, and risk.</span>
         </div>
         <div class="guides-featured-grid">
           {featured.map(g => (
