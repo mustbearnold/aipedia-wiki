@@ -164,13 +164,13 @@ Remaining stale `/answers/` pages found by `rg`:
 
 | Page | Recommended action | Reason |
 | --- | --- | --- |
-| `src/pages/answers/best-ai-for-students.astro` | Refresh | Good query intent, but April 2026 language and student workflow claims need current verification. |
-| `src/pages/answers/best-ai-for-writing-2026.astro` | Refresh | Good buyer/search intent; should link to writing guides and tool pages with updated Claude/ChatGPT/Grammarly facts. |
-| `src/pages/answers/best-ai-image-generator-2026.astro` | Refresh | High commercial intent; current image-model landscape needs current-source verification before updating. |
-| `src/pages/answers/best-ai-voice-generator-2026.astro` | Refresh | High commercial intent; ElevenLabs/Cartesia/Fish/WellSaid claims need current verification. |
-| `src/pages/answers/chatgpt-vs-claude-which-is-better.astro` | Refresh or merge with comparison | Strong query, but may duplicate `/compare/chatgpt-vs-claude/`; best near-term action is a concise answer that routes to the full comparison. |
-| `src/pages/answers/is-cursor-worth-it.astro` | Refresh | Good purchase intent; must verify current Cursor plan/usage model and link to coding guide/comparison. |
-| `src/pages/answers/is-midjourney-worth-it.astro` | Refresh | Good purchase intent; must verify current Midjourney pricing/positioning and link to image-generator guides. |
+| `src/pages/answers/best-ai-for-students.astro` | Refreshed | Good query intent; updated with May 9 source trail and link to student guide. |
+| `src/pages/answers/best-ai-for-writing-2026.astro` | Refreshed | Good buyer/search intent; updated Claude/ChatGPT/Grammarly positioning and writing-guide links. |
+| `src/pages/answers/best-ai-image-generator-2026.astro` | Refreshed | High commercial intent; updated with ChatGPT Images 2.0 / GPT Image 2, Midjourney, and Ideogram sources. |
+| `src/pages/answers/best-ai-voice-generator-2026.astro` | Refreshed | High commercial intent; updated with ElevenLabs v3/pricing and Cartesia source trail. |
+| `src/pages/answers/chatgpt-vs-claude-which-is-better.astro` | Refreshed, keep as concise router | Strong query; now routes to `/compare/chatgpt-vs-claude/` for the full comparison. |
+| `src/pages/answers/is-cursor-worth-it.astro` | Refreshed | Good purchase intent; updated with Cursor, Copilot, and Claude Code source trail. |
+| `src/pages/answers/is-midjourney-worth-it.astro` | Refreshed | Good purchase intent; updated with Midjourney, ChatGPT Images 2.0, and Ideogram source trail. |
 
 High-priority stale long-tail guide candidates found by `rg`:
 
@@ -208,6 +208,5 @@ Commands run:
 
 Remaining risks:
 
-- Seven `/answers/` pages still contain April 2026 freshness language and need the next source-backed refresh pass.
 - Many `src/content/use-cases/*.md` pages still contain April 2026 body claims; high-intent pages should be refreshed first, low-value duplicates should be merged or noindexed rather than date-bumped.
 - This checkpoint did not add direct affiliate CTAs to answer pages; it routes users into existing money pages where tracked CTAs/disclosures already exist.

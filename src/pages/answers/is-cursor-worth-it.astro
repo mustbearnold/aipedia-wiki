@@ -4,13 +4,13 @@ import Breadcrumb from '../../components/Breadcrumb.astro';
 import AnswerContent from '../../components/AnswerContent.astro';
 
 const answerContent = `
-[Cursor Pro](/tools/cursor/) is worth it for developers who code most days and want AI help inside the editor. It is less compelling for occasional coding, terminal-first workflows, or teams already standardized on another IDE and [GitHub Copilot](/tools/github-copilot/).
+[Cursor Pro](/tools/cursor/) is worth it in May 2026 for developers who code most days and want AI help inside the editor. It is less compelling for occasional coding, terminal-first workflows, or teams already standardized on another IDE and [GitHub Copilot](/tools/github-copilot/).
 
 Cursor's value comes from staying in flow: autocomplete, inline edits, chat, agent-assisted changes, and codebase-aware suggestions all live in the same VS Code-style workspace. That makes it a strong daily-driver choice for feature work, refactors, test updates, and normal shipping.
 
 The main downside is fit. If you prefer terminal agents, compare [Claude Code](/tools/claude-code/). If you need broad enterprise standardization, Copilot may be easier to roll out. If you only code occasionally, Cursor's free tier or a cheaper assistant is usually enough.
 
-Pick Cursor Pro when editor-integrated AI saves time every week. Skip or delay the upgrade if you code sporadically, dislike VS Code-style editors, or need a terminal-first agent instead.
+Pick Cursor Pro when editor-integrated AI saves time every week. Skip or delay the upgrade if you code sporadically, dislike VS Code-style editors, or need a terminal-first agent instead. For the deeper decision, read the [AI coding assistant guide](/guides/best-ai-coding-assistant/) and [Cursor vs GitHub Copilot](/compare/cursor-vs-github-copilot/).
 `;
 
 const answerLD = JSON.stringify({
@@ -20,7 +20,7 @@ const answerLD = JSON.stringify({
   author: { '@type': 'Organization', name: 'aipedia.wiki Editorial', url: 'https://aipedia.wiki/about/editorial/' },
   publisher: { '@id': 'https://aipedia.wiki/#organization' },
   datePublished: '2026-04-16',
-  dateModified: '2026-04-27',
+  dateModified: '2026-05-09',
   mainEntityOfPage: 'https://aipedia.wiki/answers/is-cursor-worth-it/',
 });
 ---
@@ -37,13 +37,13 @@ const answerLD = JSON.stringify({
         <span class="text-[var(--text-secondary)]">aipedia.wiki Editorial</span>
       </a>
       <span aria-hidden="true">·</span>
-      <time datetime="2026-04-27" class="text-[var(--accent-success)]">Updated April 2026</time>
+      <time datetime="2026-05-09" class="text-[var(--accent-success)]">Verified May 9, 2026</time>
     </div>
 
     <AnswerContent content={answerContent} />
 
     <div class="mt-[var(--site-section-gap)] pt-[var(--site-content-gap)] border-t border-[var(--border)] text-sm text-[var(--text-muted)]">
-      <p>This answer reflects flagship models and pricing as of April 2026. See our <a href="/about/scoring/" class="text-[var(--accent-primary)] no-underline hover:underline">scoring methodology</a> for how we evaluate tools.</p>
+      <p>This answer was checked against current vendor sources on May 9, 2026, including <a href="https://cursor.com/terms/pricing" class="text-[var(--accent-primary)] no-underline hover:underline">Cursor pricing policy</a>, <a href="https://github.com/features/copilot/plans" class="text-[var(--accent-primary)] no-underline hover:underline">GitHub Copilot plans</a>, and <a href="https://docs.anthropic.com/en/release-notes/claude-code" class="text-[var(--accent-primary)] no-underline hover:underline">Claude Code release notes</a>. See our <a href="/about/scoring/" class="text-[var(--accent-primary)] no-underline hover:underline">scoring methodology</a>.</p>
     </div>
   </article>
 </BaseLayout>

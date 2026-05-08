@@ -4,13 +4,13 @@ import Breadcrumb from '../../components/Breadcrumb.astro';
 import AnswerContent from '../../components/AnswerContent.astro';
 
 const answerContent = `
-Neither ChatGPT nor Claude is universally better in April 2026. [ChatGPT](/tools/chatgpt/) is better as an all-purpose assistant. [Claude](/tools/claude/) is better for careful writing, long-context reasoning, and many developer workflows.
+Neither ChatGPT nor Claude is universally better in May 2026. [ChatGPT](/tools/chatgpt/) is better as an all-purpose assistant. [Claude](/tools/claude/) is better for careful writing, long-context reasoning, and many developer workflows.
 
 ChatGPT wins on breadth. It bundles GPT-5.5, image generation, browsing, voice, Codex, agents, file analysis, and a mature consumer ecosystem. If you want one subscription that covers most personal and business tasks, ChatGPT is the easier default.
 
 Claude wins when the output needs more restraint and structure. It is especially strong for long documents, nuanced writing, careful analysis, and code work through [Claude Code](/tools/claude-code/). Teams that value conservative behavior and transparent long-context workflows should test Claude first.
 
-The decision is mostly workflow fit. Choose ChatGPT for multimodal work, images, voice, Codex, and broad assistant coverage. Choose Claude for writing quality, long-context analysis, and codebase reasoning. Many power users keep both because they solve different jobs.
+The decision is mostly workflow fit. Choose ChatGPT for multimodal work, images, voice, Codex, and broad assistant coverage. Choose Claude for writing quality, long-context analysis, and codebase reasoning. Many power users keep both because they solve different jobs. For the full buyer breakdown, read [ChatGPT vs Claude](/compare/chatgpt-vs-claude/).
 `;
 
 const answerLD = JSON.stringify({
@@ -20,7 +20,7 @@ const answerLD = JSON.stringify({
   author: { '@type': 'Organization', name: 'aipedia.wiki Editorial', url: 'https://aipedia.wiki/about/editorial/' },
   publisher: { '@id': 'https://aipedia.wiki/#organization' },
   datePublished: '2026-04-16',
-  dateModified: '2026-04-27',
+  dateModified: '2026-05-09',
   mainEntityOfPage: 'https://aipedia.wiki/answers/chatgpt-vs-claude-which-is-better/',
 });
 ---
@@ -37,13 +37,13 @@ const answerLD = JSON.stringify({
         <span class="text-[var(--text-secondary)]">aipedia.wiki Editorial</span>
       </a>
       <span aria-hidden="true">·</span>
-      <time datetime="2026-04-27" class="text-[var(--accent-success)]">Updated April 2026</time>
+      <time datetime="2026-05-09" class="text-[var(--accent-success)]">Verified May 9, 2026</time>
     </div>
 
     <AnswerContent content={answerContent} />
 
     <div class="mt-[var(--site-section-gap)] pt-[var(--site-content-gap)] border-t border-[var(--border)] text-sm text-[var(--text-muted)]">
-      <p>This answer reflects flagship models and pricing as of April 2026. See our <a href="/about/scoring/" class="text-[var(--accent-primary)] no-underline hover:underline">scoring methodology</a> for how we evaluate tools.</p>
+      <p>This answer was checked against current vendor sources on May 9, 2026, including <a href="https://openai.com/index/introducing-gpt-5-5/" class="text-[var(--accent-primary)] no-underline hover:underline">OpenAI GPT-5.5</a>, <a href="https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus" class="text-[var(--accent-primary)] no-underline hover:underline">ChatGPT Plus docs</a>, <a href="https://docs.anthropic.com/en/docs/models-overview" class="text-[var(--accent-primary)] no-underline hover:underline">Anthropic model docs</a>, and <a href="https://docs.anthropic.com/en/release-notes/claude-code" class="text-[var(--accent-primary)] no-underline hover:underline">Claude Code release notes</a>. See our <a href="/about/scoring/" class="text-[var(--accent-primary)] no-underline hover:underline">scoring methodology</a>.</p>
     </div>
   </article>
 </BaseLayout>

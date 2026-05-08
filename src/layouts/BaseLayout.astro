@@ -7,6 +7,7 @@ import MoatLayer from '../components/MoatLayer.astro';
 import GlobalToolPreview from '../components/GlobalToolPreview.astro';
 import SourcePreviewLayer from '../components/SourcePreviewLayer.astro';
 import CommercialAnalytics from '../components/CommercialAnalytics.astro';
+import Analytics from '@vercel/analytics/astro';
 import { ClientRouter } from 'astro:transitions';
 import '../styles/global.css';
 import '../styles/home-page-tokens.css';
@@ -134,6 +135,7 @@ const ogImageUrl = ogImage
     <Footer transition:persist="footer" />
     <CookieConsent transition:persist="cookie-consent" />
     <CommercialAnalytics />
+    <Analytics />
 
     <script is:inline>
       // Update background gradient based on theme
