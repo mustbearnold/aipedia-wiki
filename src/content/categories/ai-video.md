@@ -84,6 +84,8 @@ Do not make a wide comparison table the mobile experience. Mobile buyers need st
 
 **Short-form social creator:** use the refreshed [TikTok AI tools guide](/guides/best-ai-for-tiktok/) when the choice is hooks/scripts, CapCut-style editing, OpusClip repurposing, Runway generated B-roll, HeyGen avatar posts, or Captions.ai social editing.
 
+**YouTube creator:** use the refreshed [YouTube creators AI guide](/guides/best-ai-for-youtube-creators/) when the buyer needs to choose between Descript editing, ChatGPT scripts, Canva or Midjourney thumbnails, ElevenLabs narration, OpusClip Shorts, and Runway B-roll.
+
 ## Review Standard
 
 AiPedia should not publish a hard "best video model" claim unless the prompt set, date, model identifiers, settings, cost, region, and evaluation criteria are disclosed. Until a controlled benchmark exists, this category should use editorial language like "test first," "best buyer route," and "best fit," backed by current official sources.

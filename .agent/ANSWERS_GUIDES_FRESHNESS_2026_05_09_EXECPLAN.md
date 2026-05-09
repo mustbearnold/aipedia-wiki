@@ -119,6 +119,7 @@ Priority pages must avoid horizontal overflow at 360/390/430/768/1024 and presen
 - 2026-05-09: Refreshed high-trust professional/education guides `best-ai-tools-for-accountants` and `best-ai-tools-for-teachers`; removed stale April model/pricing claims, bad relative links, generic chatbot rankings, and weak third-party roundup sources; added official OpenAI, Anthropic, Google, Microsoft, Xero, and Intuit source trails plus explicit privacy, professional-review, and classroom-safety rules.
 - 2026-05-09: Refreshed `best-ai-for-book-writing` and `best-ai-for-tiktok`; removed stale April model/version/pricing claims, weak roundup sources, and bad relative tool links; added current official source trails, guide picks, author/TikTok safety rules, and parent hub links from AI Writing and AI Video.
 - 2026-05-09: Refreshed `best-open-source-ai-tools`; replaced brittle unsupported benchmark/model-version claims with a buyer guide around Ollama, LM Studio, Open WebUI, Llama, Mistral, DeepSeek, FLUX, Stable Diffusion, Whisper, and Hugging Face; updated AI Chatbots, AI Coding, and AI Image parent surfaces to avoid stale open-source/open-weight language.
+- 2026-05-09: Refreshed `best-ai-for-youtube-creators`; removed stale April model/version/pricing claims, bad relative links, and weak roundup sources; rebuilt around Descript, ChatGPT, Canva, ElevenLabs, OpusClip, Runway, Midjourney, and Gemini with creator safety rules and parent links from AI Video, AI Image, and AI Voice.
 
 ## 15. Final report
 Pending.

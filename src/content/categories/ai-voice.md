@@ -48,6 +48,7 @@ Start with [ElevenLabs](/tools/elevenlabs/) for polished creator voice generatio
 
 - [Best AI for Transcription](/guides/best-ai-for-transcription/)
 - [Best AI Voice Generator for YouTube](/guides/best-ai-voice-youtube/)
+- [Best AI Tools for YouTube Creators](/guides/best-ai-for-youtube-creators/)
 - [Best AI Avatar Video Generator](/guides/best-ai-avatar-video-generator/)
 - [Best AI for Meeting Notes](/guides/best-ai-for-meeting-notes/)
 
