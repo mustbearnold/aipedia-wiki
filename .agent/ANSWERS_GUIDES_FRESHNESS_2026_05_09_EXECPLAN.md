@@ -152,6 +152,7 @@ Priority pages must avoid horizontal overflow at 360/390/430/768/1024 and presen
 - 2026-05-09: Light-refreshed `best-ai-tools-for-small-business`; reverified current official ChatGPT, OpenAI Business, Google AI subscriptions, Google Workspace AI, Zapier, and Claude source trails; advanced verification to May 9; fixed relative `.md` tool links and older ChatGPT pricing URL shape; added conservative trust/disclosure language; strengthened privacy, task-volume, Workspace, and automation-judgment caveats; and updated AI Chatbots plus AI Automation parent surfaces.
 - 2026-05-09: Light-refreshed `synthesia-alternatives`; reverified current official Synthesia, HeyGen, Tavus, D-ID, Hedra, Argil, and Captions source trails; advanced verification to May 9; expanded structured tool coverage; tightened plan, credit, concurrency, SCORM/LMS/API, and social-creator switch-cost guidance; and updated the AI Video parent surface.
 - 2026-05-09: Cleaned the last stale May 8 sentence in `best-ai-video-generator` after rechecking the official Kuaishou Kling 3.0 launch language about early Ultra access and broader rollout; kept the May 9 logged-in access/credit verification caveat.
+- 2026-05-09: Moved beyond the main guide queue into oldest verified workflow content; refreshed `design-agency-replacement` from an April 17 fixed-cost "replace an agency" claim into a current-source workflow around Midjourney, Figma, Canva, and Adobe Firefly with safer plan/credit/region caveats, and linked it from the AI Design parent category.
 
 ## 15. Final report
 Pending.

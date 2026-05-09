@@ -123,6 +123,7 @@ Do not make a wide table the only mobile experience. Mobile buyers need top pick
 - [Best AI for Social Media Posts](/guides/best-ai-for-social-media-posts/) should stay current because broad social buyers need a first-purchase split between Canva for finished social assets, ChatGPT for captions and calendars, AdCreative.ai for paid-social variants, Jasper for brand governance, and OpusClip for video repurposing.
 - [Best AI Tools for Instagram](/guides/best-ai-for-instagram/) should stay current because social buyers need a different split from general design: Canva for organic assets, ChatGPT for captions, AdCreative.ai for paid-social variants, Runway or Meta Edits for Reels, and Midjourney for visual direction.
 - [Best AI Tools for Ecommerce](/guides/best-ai-tools-for-ecommerce/) should stay current because ecommerce buyers need a practical split between ChatGPT for product/catalog work, Canva for publishable store creative, Jasper for governed campaign workflow, Perplexity for sourced research, and Zapier for order/support handoffs.
+- [AI design agency replacement workflow](/workflows/design-agency-replacement/) is now the safer workflow route for buyers trying to replace some agency production work with Midjourney, Figma, Canva, and Adobe Firefly without pretending AI replaces strategy, compliance, or human creative sign-off.
 
 ## Sources
 
