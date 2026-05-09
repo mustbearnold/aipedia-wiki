@@ -44,6 +44,7 @@ As of May 9, 2026, the wrong question is "which AI writes best?" The better ques
 - **Best enterprise marketing orchestration option:** [Typeface](/tools/typeface/) because it centers brand graph, campaign agents, reviews, approvals, publishing, and creative systems.
 - **Best newsletter operating system:** [Beehiiv](/tools/beehiiv/) because it connects writing to publishing, audience growth, monetization, analytics, referrals, ads, Boosts, paid subscriptions, AI credits, API access, and beehiiv MCP.
 - **Best fiction-writing specialist:** [Sudowrite](/tools/sudowrite/) because it is purpose-built for story work, scene expansion, character development, and creative rewrite passes rather than generic business copy.
+- **Best social caption and post-planning assistant:** [ChatGPT](/tools/chatgpt/) because it is the fastest low-friction companion for hooks, captions, calendars, brand-voice rewrites, comment replies, and campaign angles when paired with a production tool such as Canva.
 
 ## Choosing the Right Tool
 
@@ -73,6 +74,7 @@ As of May 9, 2026, the wrong question is "which AI writes best?" The better ques
 - [Best AI Tools for LinkedIn](/guides/best-ai-for-linkedin/)
 - [Best AI for Book Writing](/guides/best-ai-for-book-writing/)
 - [Best AI Tools for Writers](/guides/best-ai-tools-for-writers/)
+- [Best AI for Social Media Posts](/guides/best-ai-for-social-media-posts/)
 - [Best AI for Ad Copy](/guides/best-ai-for-ad-copy/)
 - [Best Jasper Alternatives](/guides/jasper-alternatives/)
 - [Best Grammarly Alternatives](/guides/grammarly-alternatives/)

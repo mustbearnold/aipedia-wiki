@@ -119,6 +119,7 @@ Do not make a wide table the only mobile experience. Mobile buyers need top pick
 - A new guide for "best AI app builder" should separate founder MVP, Vercel-native UI, browser IDE, design-to-code, and enterprise governance paths.
 - [Best AI Tools for Designers](/guides/best-ai-tools-for-designers/) should stay current because it now separates pro design, fast-production creative, image ideation, Adobe workflows, and UI/app prototyping.
 - [Best AI Tools for Product Managers](/guides/best-ai-tools-for-product-managers/) should stay current because PMs need a different buying path from designers: ChatGPT or Claude for docs, Perplexity for cited research, Figma for design review and handoff, Notion for team knowledge, and Fathom for customer-interview evidence.
+- [Best AI for Social Media Posts](/guides/best-ai-for-social-media-posts/) should stay current because broad social buyers need a first-purchase split between Canva for finished social assets, ChatGPT for captions and calendars, AdCreative.ai for paid-social variants, Jasper for brand governance, and OpusClip for video repurposing.
 - [Best AI Tools for Instagram](/guides/best-ai-for-instagram/) should stay current because social buyers need a different split from general design: Canva for organic assets, ChatGPT for captions, AdCreative.ai for paid-social variants, Runway or Meta Edits for Reels, and Midjourney for visual direction.
 
 ## Sources
