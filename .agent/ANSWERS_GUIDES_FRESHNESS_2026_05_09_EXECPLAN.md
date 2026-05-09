@@ -98,6 +98,7 @@ Priority pages must avoid horizontal overflow at 360/390/430/768/1024 and presen
 - 2026-05-09: Added the mobile quick-decision panel to the next high-intent answer batch: `best-ai-image-generator-2026`, `best-ai-voice-generator-2026`, and `best-ai-for-writing-2026`; verified current official/vendor source trails and updated `/answers/` summaries so the parent hub is aligned.
 - 2026-05-09: Noindexed and merged stale `ai-customer-support` into the stronger current `best-ai-tools-for-customer-support` guide after checking current Intercom Fin outcome pricing, n8n pricing, OpenAI API pricing, and support guide overlap; removed unsupported automation-rate, fake model-version, and fixed agent-replacement claims from the active index.
 - 2026-05-09: Noindexed and merged stale `ai-content-pipeline` into stronger current creator-stack, blog-writing, SEO, and automation guides after checking current Claude, ChatGPT, Surfer SEO, n8n, and Canva source pages; removed unsupported model-version claims, fixed monthly stack totals, and duplicate broad workflow content from the active index.
+- 2026-05-09: Refreshed `grammarly-alternatives` and the parent `ai-writing` category with current Grammarly, Claude, ChatGPT, QuillBot, Wordtune, and Google AI Pro sources; removed stale April model labels, weak third-party source claims, and table-led generic chatbot rankings; added guide picks and promoted the refreshed route on `/guides/`.
 
 ## 15. Final report
 Pending.
