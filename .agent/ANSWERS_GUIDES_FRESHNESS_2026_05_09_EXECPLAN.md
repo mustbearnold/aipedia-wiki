@@ -84,6 +84,7 @@ Priority pages must avoid horizontal overflow at 360/390/430/768/1024 and presen
 - 2026-05-09: Rebuilt `best-ai-tools-for-recruiters` with official current sources, removed unsupported April claims and broken markdown links, added LinkedIn Recruiter, hireEZ, Paradox, and Eightfold AI tool records, and promoted the guide on `/guides/`.
 - 2026-05-09: Noindexed and merged weak `best-ai-tools-for-real-estate-agents` and `best-ai-tools-for-nonprofits` guide routes, excluded them from sitemap and `/guides/`, and replaced stale generic chatbot claims with rebuild criteria and stronger internal paths.
 - 2026-05-09: Noindexed and merged weak `otter-ai-alternatives` and `notion-ai-alternatives` routes, excluding them from sitemap and `/guides/` and routing users to stronger meeting-note, Notion comparison, and tool pages.
+- 2026-05-09: Refreshed `runway-alternatives` with current official Runway, Google Veo 3.1, ByteDance Seedance 2.0, Kuaishou Kling 3.0, and Luma sources; added Seedance/Kling/Veo guide picks; removed the table-led mobile section; and promoted the guide on `/guides/`.
 
 ## 15. Final report
 Pending.
