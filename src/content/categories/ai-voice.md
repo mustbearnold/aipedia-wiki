@@ -2,69 +2,59 @@
 type: category
 slug: ai-voice
 title: AI Voice and Text-to-Speech Tools
-description: Compare AI voice generation, voice cloning, text-to-speech, speech-to-text, dubbing, and voice-agent tools including ElevenLabs, MiniMax Speech, Cartesia, Fish Audio, Hume AI, Murf, Deepgram, AssemblyAI, and Kokoro.
+description: Compare AI voice generation, voice cloning, text-to-speech, speech-to-text, dubbing, transcription APIs, and voice-agent tools.
 tool_count: 23
-seo_title: "Best AI Voice Tools 2026: TTS, Voice Cloning, Dubbing and Voice Agents"
-meta_description: "Compare 23 AI voice tools for TTS, voice cloning, dubbing, speech-to-text, and voice agents. ElevenLabs, MiniMax Speech, Cartesia, Fish Audio, Hume AI, Deepgram, AssemblyAI, and more."
+seo_title: "Best AI Voice Tools 2026: TTS, Voice Cloning, Dubbing, Transcription and Voice Agents"
+meta_description: "Compare AI voice tools in May 2026: ElevenLabs for voice generation, MiniMax Speech for hosted TTS value, Cartesia and Retell AI for voice agents, Descript for creator transcription/editing, and Deepgram or AssemblyAI for speech-to-text APIs."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-09
+last_verified: 2026-05-09
 update_frequency: monthly
 ---
 
-## Fast answer
+## Fast Answer
 
-Start with **ElevenLabs** if you want the most polished voice quality and a mature creator workflow. Look at **MiniMax Speech** when API price-per-character is the main constraint. Use **Cartesia** for low-latency conversational voice, **Fish Audio** or **Kokoro** for open-source and local options, and **Deepgram** or **AssemblyAI** when the job is speech-to-text rather than voice generation.
+AI voice is not one category. The market splits into **voice generation**, **voice cloning**, **dubbing**, **real-time voice agents**, **meeting transcription**, **creator transcription/editing**, and **speech-to-text APIs**.
 
-AI voice is not one category anymore. The market now splits into five buying decisions: narrated voiceover, voice cloning, real-time voice agents, speech-to-text transcription, and local/open-source TTS. Pick by workflow first, then compare price.
+Start with [ElevenLabs](/tools/elevenlabs/) for polished creator voice generation and cloning. Look at [MiniMax Speech](/tools/minimax-speech/) when hosted TTS price and multilingual coverage matter. Use [Cartesia](/tools/cartesia/) or [Retell AI](/tools/retell-ai/) for low-latency voice agents. Use [Fathom](/tools/fathom/) for meeting transcription, [Descript](/tools/descript/) for podcast/video transcription and editing, and [Deepgram](/tools/deepgram/) or [AssemblyAI](/tools/assemblyai/) when transcription is an API or product feature.
 
-## Best by use case
+## Best by Use Case
 
 | Use case | Start with | Why |
 |---|---|---|
-| Best overall TTS quality | ElevenLabs | Strongest polish, cloning, dubbing, and creator ecosystem |
-| Cheapest hosted multilingual TTS | MiniMax Speech | Low per-character API pricing with broad language coverage |
-| Real-time voice agents | Cartesia or Retell AI | Built for low-latency conversational turns |
-| Open-source or local TTS | Fish Audio or Kokoro | Better fit when privacy, control, or self-hosting matter |
-| Speech-to-text API | Deepgram or AssemblyAI | Transcription, diarization, and developer API workflows |
-| Podcast/video editing with voice | Descript or Riverside | Voice tools bundled with editing and publishing workflows |
-| Corporate narration | WellSaid or Murf | Safer team workflows, approvals, and brand voice management |
+| Best overall TTS quality | [ElevenLabs](/tools/elevenlabs/) | Strong creator workflow across text-to-speech, voice cloning, dubbing, speech-to-text, sound effects, and production tools. |
+| Hosted multilingual TTS value | [MiniMax Speech](/tools/minimax-speech/) | Strong fit when API cost and multilingual hosted output are the main constraints. |
+| Real-time voice agents | [Cartesia](/tools/cartesia/) or [Retell AI](/tools/retell-ai/) | Built for low-latency conversational turns rather than static narration. |
+| Meeting transcription | [Fathom](/tools/fathom/) | Best first test when the transcript needs summaries, clips, call search, CRM sync, or team meeting workflows. |
+| Creator transcription and editing | [Descript](/tools/descript/) | Best when the transcript becomes the audio/video editing surface. |
+| Speech-to-text API | [Deepgram](/tools/deepgram/) or [AssemblyAI](/tools/assemblyai/) | Better fit when transcription powers an app, workflow, analytics system, or backend service. |
+| Podcast/video production | [Descript](/tools/descript/) or [Riverside](/tools/riverside/) | Voice, transcript, recording, clips, captions, and publishing workflows in one surface. |
+| Corporate narration | [WellSaid](/tools/wellsaid/) or [Murf](/tools/murf/) | Safer team workflows, approvals, and brand voice management. |
+| Open-source or local TTS | [Fish Audio](/tools/fish-audio/) or [Kokoro](/tools/kokoro/) | Better when privacy, local control, or self-hosting matters. |
 
-## Overview
+## Buying Guidance
 
-AI voice generation and text-to-speech tools have consolidated as of April 2026, with ElevenLabs dominating on quality, MiniMax Speech competing hard on hosted API pricing, Fish Audio and Kokoro covering open-source/self-hosted needs, and Cartesia pushing low-latency voice-agent workflows. Play.ht is dead, shut down December 31, 2025 after Meta's acquisition. The surviving tools are less interchangeable than they look: a YouTube narrator, a call-center voice agent, a medical transcription app, and a local privacy workflow should not all choose the same provider.
+**Buy a TTS platform** when the output is narration, ads, training, product demos, audiobooks, dubbing, or branded voice content.
 
-## The Players
+**Buy a meeting transcription app** when the input is calls and the output needs summaries, action items, clips, searchable history, CRM handoff, and admin controls.
 
-| Tool | Price | Best For | Utility | Value | Moat | Longevity |
-|------|-------|----------|---------|-------|------|-----------|
-| **ElevenLabs** | $5-330/mo | Best overall quality | 10 | 8 | 9 | 10 |
-| **Murf AI** | $19-39/mo | Corporate narration | 7 | 7 | 5 | 7 |
-| **LOVO AI** | $24-75/mo | Voice + video editing combo | 7 | 6 | 5 | 7 |
-| **Fish Audio (Fish Speech S2)** | Free tier + API | Open-source, multilingual, ultra-low latency | 9 | 10 | 6 | 8 |
-| **Voxtral (Mistral)** | $0.016/1K chars | Cheapest API | 8 | 10 | 6 | 8 |
-| **Descript** | Free-$30/mo | Podcast/video editing, Overdub voice cloning | 9 | 8 | 8 | 8 |
-| ~~Play.ht~~ | DEAD | ~~Was good~~ | . | . | . | . |
+**Buy a creator editor** when the transcript needs to become edited audio or video.
 
-## Our Picks
-- **Best quality:** ElevenLabs Creator ($22/mo). 100K characters/month (~75-90 min audio), voice cloning.
-- **Best budget hosted TTS:** MiniMax Speech. Strong when API volume is high and ElevenLabs pricing is too expensive.
-- **Best open-source:** Fish Audio S2 or Kokoro. Better for privacy-sensitive and self-hosted workflows.
-- **Best transcription API:** Deepgram or AssemblyAI. Use these when the input is audio and the output is text.
+**Buy an STT API** when transcription is a feature inside your product, support workflow, call analysis system, or voice agent.
 
-## For YouTube Specifically
-- ElevenLabs Creator ($22/mo) = 6-10 videos of 8-12 minutes each per month
-- Pick a calm, authoritative voice from their library (similar to AICodeKing style)
-- Clone your own voice if you want unique branding (included in Creator plan)
+**Do not buy by generic accuracy claims.** Test with real audio: accents, speaker overlap, background noise, jargon, mic quality, language mix, consent requirements, latency, and retention policy all matter.
 
-## Video Potential
-- "Best AI Voice for YouTube in 2026" (evergreen search intent)
-- "Play.ht is DEAD . Where to Go Now" (news for orphaned users)
-- "ElevenLabs vs Murf vs LOVO . Full Comparison" (comparison)
-- "Voxtral: Mistral's New AI Voice is 47% Cheaper" (news)
+## Money Guides
+
+- [Best AI for Transcription](/guides/best-ai-for-transcription/)
+- [Best AI Voice Generator for YouTube](/guides/best-ai-voice-youtube/)
+- [Best AI Avatar Video Generator](/guides/best-ai-avatar-video-generator/)
+- [Best AI for Meeting Notes](/guides/best-ai-for-meeting-notes/)
 
 ## Sources
 
-- ElevenLabs: [https://elevenlabs.io](https://elevenlabs.io)
-- Fish Audio: [https://fish.audio](https://fish.audio)
-- Voxtral (Mistral): [https://mistral.ai](https://mistral.ai)
+- [ElevenLabs pricing](https://elevenlabs.io/pricing) (verified 2026-05-09)
+- [Descript pricing](https://www.descript.com/pricing) (verified 2026-05-09)
+- [Deepgram pricing](https://deepgram.com/pricing) (verified 2026-05-09)
+- [AssemblyAI pricing](https://www.assemblyai.com/pricing) (verified 2026-05-09)
+- [Fathom pricing](https://www.fathom.ai/pricing) (verified 2026-05-09)
