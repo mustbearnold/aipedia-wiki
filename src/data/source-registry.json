@@ -3885,7 +3885,8 @@
       "url": "https://www.minimax.io/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-05-09"
     },
     {
       "id": "minimax-pricing",
@@ -3893,7 +3894,8 @@
       "url": "https://platform.minimax.io/docs/pricing/overview",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-05-09"
     },
     {
       "id": "minimax-speech-official",
@@ -3901,15 +3903,35 @@
       "url": "https://www.minimax.io/audio",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-05-09"
     },
     {
       "id": "minimax-speech-pricing",
       "label": "MiniMax Speech pricing docs",
-      "url": "https://platform.minimax.io/docs/guides/pricing-speech",
+      "url": "https://platform.minimax.io/docs/guides/pricing-paygo",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-05-09"
+    },
+    {
+      "id": "minimax-speech-t2a",
+      "label": "MiniMax T2A docs",
+      "url": "https://platform.minimax.io/docs/api-reference/speech-t2a-intro",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-05-09"
+    },
+    {
+      "id": "minimax-speech-voice-cloning",
+      "label": "MiniMax voice cloning docs",
+      "url": "https://platform.minimax.io/docs/api-reference/voice-cloning-intro",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-05-09"
     },
     {
       "id": "mistral-chat",

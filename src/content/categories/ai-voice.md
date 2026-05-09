@@ -16,7 +16,7 @@ update_frequency: monthly
 
 AI voice is not one category. The market splits into **voice generation**, **voice cloning**, **dubbing**, **real-time voice agents**, **meeting transcription**, **creator transcription/editing**, and **speech-to-text APIs**.
 
-Start with [ElevenLabs](/tools/elevenlabs/) for polished creator voice generation and cloning. Look at [MiniMax Speech](/tools/minimax-speech/) when hosted TTS price and multilingual coverage matter. Use [Cartesia](/tools/cartesia/) or [Retell AI](/tools/retell-ai/) for low-latency voice agents. Use [Fathom](/tools/fathom/) for meeting transcription, [Descript](/tools/descript/) for podcast/video transcription and editing, and [Deepgram](/tools/deepgram/) or [AssemblyAI](/tools/assemblyai/) when transcription is an API or product feature.
+Start with [ElevenLabs](/tools/elevenlabs/) for polished creator voice generation and cloning. Look at [MiniMax Speech](/tools/minimax-speech/) when hosted TTS price, Speech 2.8 API access, voice slots, RPM, and multilingual coverage matter. Use [Cartesia](/tools/cartesia/) or [Retell AI](/tools/retell-ai/) for low-latency voice agents. Use [Fathom](/tools/fathom/) for meeting transcription, [Descript](/tools/descript/) for podcast/video transcription and editing, and [Deepgram](/tools/deepgram/) or [AssemblyAI](/tools/assemblyai/) when transcription is an API or product feature.
 
 ## Best by Use Case
 
@@ -24,7 +24,7 @@ Start with [ElevenLabs](/tools/elevenlabs/) for polished creator voice generatio
 |---|---|---|
 | YouTube voiceover | [ElevenLabs](/tools/elevenlabs/) | Best default for polished creator narration, cloned channel voices, dubbing, and production workflow; compare Fish Audio and MiniMax before scaling high-volume output. |
 | Best overall TTS quality | [ElevenLabs](/tools/elevenlabs/) | Strong creator workflow across text-to-speech, voice cloning, dubbing, speech-to-text, sound effects, music, and production tools. |
-| Hosted multilingual TTS value | [MiniMax Speech](/tools/minimax-speech/) | Strong fit when API cost, credits, voice slots, RPM, and multilingual hosted output are the main constraints. |
+| Hosted multilingual TTS value | [MiniMax Speech](/tools/minimax-speech/) | Strong fit when Speech 2.8 API access, pay-as-you-go character pricing, subscription credits, voice slots, RPM, and multilingual hosted output are the main constraints. |
 | Real-time voice agents | [Cartesia](/tools/cartesia/) or [Retell AI](/tools/retell-ai/) | Built for low-latency conversational turns rather than static narration. |
 | Meeting transcription | [Fathom](/tools/fathom/) | Best first test when the transcript needs summaries, clips, call search, CRM sync, or team meeting workflows. |
 | Creator transcription and editing | [Descript](/tools/descript/) | Best when the transcript becomes the audio/video editing surface. |
@@ -59,6 +59,8 @@ Start with [ElevenLabs](/tools/elevenlabs/) for polished creator voice generatio
 - [Fish Audio plans](https://fish.audio/plan/) (verified 2026-05-09)
 - [Fish Audio API pricing](https://docs.fish.audio/developer-guide/models-pricing/pricing-and-rate-limits) (verified 2026-05-09)
 - [MiniMax Audio Subscription pricing](https://platform.minimax.io/docs/guides/pricing-speech) (verified 2026-05-09)
+- [MiniMax pay-as-you-go pricing](https://platform.minimax.io/docs/guides/pricing-paygo) (verified 2026-05-09)
+- [MiniMax T2A API docs](https://platform.minimax.io/docs/api-reference/speech-t2a-intro) (verified 2026-05-09)
 - [YouTube altered or synthetic content disclosure](https://support.google.com/youtube/answer/14328491) (verified 2026-05-09)
 - [Descript pricing](https://www.descript.com/pricing) (verified 2026-05-09)
 - [Deepgram pricing](https://deepgram.com/pricing) (verified 2026-05-09)

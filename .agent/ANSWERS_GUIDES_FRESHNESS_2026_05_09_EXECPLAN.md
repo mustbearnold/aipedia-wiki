@@ -155,6 +155,7 @@ Priority pages must avoid horizontal overflow at 360/390/430/768/1024 and presen
 - 2026-05-09: Moved beyond the main guide queue into oldest verified workflow content; refreshed `design-agency-replacement` from an April 17 fixed-cost "replace an agency" claim into a current-source workflow around Midjourney, Figma, Canva, and Adobe Firefly with safer plan/credit/region caveats, and linked it from the AI Design parent category.
 - 2026-05-09: Refreshed the stale `pipedream` tool record with current official Pipedream pricing/MCP docs and Workday's fiscal 2026 Q4 close disclosure; corrected the acquisition from pending to closed; updated the source registry and AI Automation parent category.
 - 2026-05-09: Refreshed the stale `meshy` tool record with current official Meshy pricing, credit-usage, API pricing, and Meshy 6 launch sources; corrected the page from Meshy 5 Preview to Meshy 6 current, updated credit-math warnings, source registry entries, and AI Image parent category.
+- 2026-05-09: Refreshed the stale `minimax-speech` tool record with current official MiniMax T2A, voice-cloning, audio subscription, pay-as-you-go, and company-result sources; corrected Speech 2.6/Speech-02 framing to current Speech 2.8 HD/Turbo, updated pricing from old per-1K claims to current per-million and subscription lanes, and aligned AI Voice plus parent MiniMax surfaces.
 
 ## 15. Final report
 Pending.

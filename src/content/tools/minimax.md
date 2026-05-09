@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "Free - $0.30/1M tokens (API)"
 status: active
 launched: 2021-12
-last_updated: 2026-05-03
-last_verified: 2026-05-03
+last_updated: 2026-05-09
+last_verified: 2026-05-09
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: "https://www.minimax.io/"
     source_label: "MiniMax official site"
     source_id: minimax-official
-    verified_at: 2026-05-03
+    verified_at: 2026-05-09
     volatility: medium
     confidence: medium
   pricing_anchor:
@@ -39,17 +39,17 @@ facts:
     source: "https://platform.minimax.io/docs/pricing/overview"
     source_label: "MiniMax platform pricing"
     source_id: minimax-pricing
-    verified_at: 2026-05-03
-    next_review_at: 2026-08-03
+    verified_at: 2026-05-09
+    next_review_at: 2026-06-09
     volatility: high
     confidence: medium
   watch_out_for:
-    value: "Non-Tier-1 canonical profile: verify current pricing, usage limits, data policy, and integration details before procurement"
+    value: "MiniMax has separate Token Plan, Audio Subscription, and pay-as-you-go routes; verify model availability, quotas, and billing lane before procurement."
     source: "https://platform.minimax.io/docs/pricing/overview"
     source_label: "MiniMax platform pricing"
     source_id: minimax-pricing
-    verified_at: 2026-05-03
-    next_review_at: 2026-08-03
+    verified_at: 2026-05-09
+    next_review_at: 2026-06-09
     volatility: high
     confidence: medium
 tags: [chinese-ai, multimodal, llm, talkie, hailuo, companion-ai, api, foundation-models]
@@ -64,18 +64,18 @@ not_best_for:
   - users who need deep English-language chat quality matching OpenAI frontier models
   - enterprises requiring US-based data residency
 quick_answer: >-
-  MiniMax is a Shanghai AI lab (founded 2021, listed on HKEX January 2026). Its M2.7 flagship text model runs at $0.30/$1.20 per 1M tokens with a 205K context. Its Talkie app hit 11M MAU by mid-2024. Hailuo handles video, Speech 2.6 handles voice. Cost-first, not quality-first.
+  MiniMax is a Shanghai AI lab (founded 2021, listed on HKEX January 2026). Its M2.7 flagship text model is listed at $0.30 input / $1.20 output per 1M tokens on the current pay-as-you-go page. Its Talkie app hit 11M MAU by mid-2024. Hailuo handles video, Speech 2.8 handles current voice APIs, and Music 2.6 handles music. Cost-first, not quality-first.
 ---
 
 # MiniMax
 
 A Shanghai AI company founded December 2021. Listed on the Hong Kong Stock Exchange on January 9, 2026, opening with shares doubling to a market cap near HK$345. Builds multimodal foundation models plus consumer apps.
 
-The portfolio: the **M2** family of text models (flagship M2.7, released March 18, 2026), **Hailuo** video generation (covered on the [Hailuo page](/tools/hailuo/)), **Speech 2.6** for voice (covered on [MiniMax Speech](/tools/minimax-speech/)), **Music 2.6** for music, and the **Talkie** companion app.
+The portfolio: the **M2** family of text models (flagship M2.7, released March 18, 2026), **Hailuo** video generation (covered on the [Hailuo page](/tools/hailuo/)), **Speech 2.8** for current voice APIs (covered on [MiniMax Speech](/tools/minimax-speech/)), **Music 2.6** for music, and the **Talkie** companion app.
 
 ## System Verdict
 
-> **Pick MiniMax if the work is voice, video, or companion apps where per-call cost matters more than peak English quality.** The M2 family, Speech 2.6, and Hailuo video sit under one token plan, which reduces integration overhead for multi-modal products.
+> **Pick MiniMax if the work is voice, video, or companion apps where per-call cost matters more than peak English quality.** The M2 family, Speech 2.8, Music 2.6, and Hailuo video sit under overlapping platform purchase routes, which can reduce integration overhead for multimodal products if the buyer maps the exact Token Plan, Audio Subscription, or pay-as-you-go path.
 >
 > **Skip it for English-first reasoning.** M2.7 trails [Claude Opus 4.7](/tools/claude/) and OpenAI frontier models on agentic coding, long-form coherence, and premise-testing tasks. US-facing production workloads with compliance requirements should evaluate data residency before committing.
 >
@@ -89,8 +89,8 @@ The portfolio: the **M2** family of text models (flagship M2.7, released March 1
 | **Public** | Hong Kong Stock Exchange, January 9, 2026 |
 | **Flagship text model** | M2.7 (March 18, 2026), 205K context |
 | **M2.7 API price** | $0.30 in / $1.20 out per 1M tokens |
-| **Budget text model** | M2.5 at $0.118 in / $0.95 out per 1M tokens |
-| **Speech** | Speech 2.6, 40 languages, real-time |
+| **Budget text model** | M2.5 now appears at $0.30 in / $1.20 out per 1M tokens on pay-as-you-go; historical/third-party prices may differ |
+| **Speech** | Speech 2.8 HD/Turbo current in API docs; Speech 2.6 and Speech-02 still supported |
 | **Video** | Hailuo 2.3 at $0.28 per 6s clip (768P) |
 | **Music** | Music 2.6 |
 | **Consumer apps** | MiniMax agent (minimax.io), Talkie (talkie-ai.com) |
@@ -100,7 +100,7 @@ The portfolio: the **M2** family of text models (flagship M2.7, released March 1
 
 Three product lines under one token plan.
 
-**Developer API.** The M2 text family plus Speech 2.6, Music 2.6, and Hailuo video. Multimodal under one platform at [platform.minimax.io](https://platform.minimax.io/docs/pricing/overview).
+**Developer API.** The M2 text family plus Speech 2.8, Music 2.6, and Hailuo video. Multimodal under one platform at [platform.minimax.io](https://platform.minimax.io/docs/pricing/overview).
 
 **MiniMax consumer agent.** An assistant interface at minimax.io for general work and daily tasks. Free tier with paid upgrades.
 
@@ -108,8 +108,8 @@ Three product lines under one token plan.
 
 ## When to pick MiniMax
 
-- **Multimodal apps that need cheap token rates.** M2.5 at $0.118 input is one of the lowest multimodal APIs available.
-- **Voice app builders.** Speech 2.6 in 40 languages with voice cloning at $0.03-$0.05 per 1K chars undercuts ElevenLabs by 80%+.
+- **Multimodal apps that need cheap multimodal routes.** MiniMax's current pay-as-you-go page keeps M2.7 and M2.5 in the low-cost text tier at $0.30 input / $1.20 output per 1M tokens, while voice, video, image, and music sit under the same developer platform.
+- **Voice app builders.** Speech 2.8 HD/Turbo, voice cloning, streaming T2A, and long-form async speech generation are the current voice reasons to shortlist MiniMax; verify whether Audio Subscription, Token Plan, or pay-as-you-go is the right billing lane.
 - **Companion-chat products.** Talkie proves the consumer fit. The underlying models are tuned for character persona work.
 - **Cost-first prototyping.** Running benchmarks on M2.5 before graduating to M2.7 Pro saves material spend during early iteration.
 - **Teams standardizing on one vendor for text + voice + video.** One platform, one token plan.
@@ -128,18 +128,20 @@ Three product lines under one token plan.
 
 | Model | Input | Output |
 |-------|-------|--------|
-| M2.5 | $0.118 | $0.950 |
-| MiniMax-01 | $0.200 | $1.100 |
-| M2 | $0.255 | $1.000 |
-| M2.1 | $0.290 | $0.950 |
+| M2.5 | $0.300 | $1.200 |
+| M2.5-highspeed | $0.600 | $2.400 |
+| M2-her | $0.300 | $1.200 |
+| M2 | $0.300 | $1.200 |
+| M2.1 | $0.300 | $1.200 |
+| M2.1-highspeed | $0.600 | $2.400 |
 | M2.7 | $0.300 | $1.200 |
-| M1 | $0.400 | $1.760 |
+| M2.7-highspeed | $0.600 | $2.400 |
 
 **Voice, video, music APIs:** separate package pricing. See [platform.minimax.io](https://platform.minimax.io/docs/pricing/overview).
 
 **Consumer apps:** MiniMax agent and Talkie both have free tiers with in-app paid upgrades.
 
-*Prices verified 2026-04-17 via [pricepertoken.com/minimax](https://pricepertoken.com/pricing-page/provider/minimax) and the [MiniMax platform pricing docs](https://platform.minimax.io/docs/pricing/overview).*
+*Prices verified 2026-05-09 via the [MiniMax pay-as-you-go pricing docs](https://platform.minimax.io/docs/guides/pricing-paygo) and [MiniMax platform pricing overview](https://platform.minimax.io/docs/pricing/overview).*
 
 ## Against the alternatives
 
@@ -148,7 +150,7 @@ Three product lines under one token plan.
 | **Input $/1M** | $0.30 | $5.00 | Not disclosed | ~$0.40 |
 | **Output $/1M** | $1.20 | $25.00 | Not disclosed | ~$1.20 |
 | **Context** | 205K | 1M | Not disclosed | 1M |
-| **Voice bundled** | Yes (Speech 2.6) | No | No | No |
+| **Voice bundled** | Yes (Speech 2.8 / Speech 2.6 / Speech-02 surfaces) | No | No | No |
 | **Video bundled** | Yes (Hailuo) | No | No | No |
 | **English reasoning** | Mid | Strongest | Strong | Strong |
 | **Data hosting** | China | US | US | China |
@@ -161,21 +163,21 @@ Three product lines under one token plan.
 - **Copyright litigation around Talkie.** Major entertainment studios have sued over celebrity simulations. Product risk is real.
 - **Moderation gaps in Talkie.** Public reviews have flagged inadequate content moderation on character interactions.
 - **English-language community support is thin.** API docs exist in English. Tutorials, forum threads, and debugging resources lean heavily Chinese.
-- **Naming drift across products.** Web platform names ("Speech 2.6") do not always match API SKU names ("Speech-02-HD"). Integration requires careful mapping.
+- **Naming drift across products.** Current docs expose Speech 2.8, Speech 2.6, and Speech-02 across different endpoints and purchase paths. Integration requires careful mapping.
 - **Valuation-to-revenue gap.** HKEX listing valued the company around $6.5B at IPO, with shares doubling day-one to imply ~$13B. Published Talkie ARR (2024) of ~$70M leaves a wide gap to close.
 - **M2.7 commercial-use restrictions.** Recent coverage indicates tighter commercial-use terms on the newest model compared to prior releases. Verify license terms before deploying in production.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis shown here. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against the [MiniMax platform docs](https://platform.minimax.io/docs/pricing/overview), [pricepertoken.com/minimax](https://pricepertoken.com/pricing-page/provider/minimax), the [M2.7 model card](https://pricepertoken.com/pricing-page/model/minimax-minimax-m2.7), and HKEX listing coverage.
+This page was partially rechecked by the aipedia.wiki editorial workflow on May 9, 2026 while refreshing [MiniMax Speech](/tools/minimax-speech/). The current pass verified MiniMax's platform overview, pay-as-you-go pricing, T2A/voice-cloning docs, and March 2026 company results; deeper MiniMax text-model benchmarking remains a future refresh. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average).
 
 ## FAQ
 
 **Is MiniMax free to use?**
-The consumer MiniMax agent and Talkie both have free tiers. API access is pay-as-you-go with no subscription. M2.5 at $0.118 in / $0.95 out per 1M tokens is the cheapest text option.
+The consumer MiniMax agent and Talkie both have free tiers. API access can run through pay-as-you-go or subscription/token-plan routes. As of May 9, 2026, the pay-as-you-go page lists M2.5 and M2.7 at $0.30 input / $1.20 output per 1M tokens, with highspeed variants at $0.60 / $2.40.
 
 **What is the current MiniMax flagship model?**
-M2.7, released March 18, 2026. 205,000-token context window. API pricing at $0.30 input and $1.20 output per 1M tokens ([pricepertoken.com](https://pricepertoken.com/pricing-page/model/minimax-minimax-m2.7)).
+M2.7 is the current flagship text model called out on MiniMax's public site and pay-as-you-go docs. API pricing is listed at $0.30 input and $1.20 output per 1M tokens on MiniMax's current pay-as-you-go page.
 
 **How does MiniMax relate to Hailuo AI?**
 Hailuo is MiniMax's text-to-video product, running on the same company infrastructure but priced separately. See the [Hailuo page](/tools/hailuo/) for details. The Hailuo 2.3 models are accessible via the MiniMax developer API.
@@ -190,8 +192,9 @@ A character and companion chat app run by MiniMax. 11 million monthly active use
 
 - [MiniMax official site](https://www.minimax.io/): product overview
 - [MiniMax platform pricing](https://platform.minimax.io/docs/pricing/overview): API rates across text, voice, video, music
-- [pricepertoken.com MiniMax provider page](https://pricepertoken.com/pricing-page/provider/minimax): text model pricing history
-- [M2.7 model card](https://pricepertoken.com/pricing-page/model/minimax-minimax-m2.7): flagship model details
+- [MiniMax pay-as-you-go pricing](https://platform.minimax.io/docs/guides/pricing-paygo): current text, audio, video, music, and MCP usage rates
+- [MiniMax T2A API overview](https://platform.minimax.io/docs/api-reference/speech-t2a-intro): current Speech 2.8 and voice API surface
+- [MiniMax FY2025 results](https://www.prnewswire.com/news-releases/minimax-announces-full-year-2025-financial-results-302700868.html): company and multimodal usage context
 - [MiniMax Wikipedia](https://en.wikipedia.org/wiki/MiniMax_Group): company background, listing, and product history
 - [South China Morning Post: Talkie user stats](https://www.scmp.com/tech/tech-trends/article/3284511/chinese-ai-unicorn-minimax-scores-big-us-talkie-chatbot-entertainment-app): MAU and US-user composition
 
