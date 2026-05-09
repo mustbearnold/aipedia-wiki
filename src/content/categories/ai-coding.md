@@ -58,12 +58,15 @@ AI coding tools now split into five buyer jobs: inline help inside an existing I
 
 **Best Copilot alternative guide:** [GitHub Copilot alternatives](/guides/github-copilot-alternatives/) now separates AI-native IDEs, terminal agents, OpenAI-native agents, Google-native workflows, and Copilot's usage-based billing risk.
 
+**Best Cursor alternative guide:** [Cursor alternatives](/guides/cursor-alternatives/) now separates AI-native IDE swaps, existing-editor Copilot workflows, terminal agents, open-source CLI control, browser app builders, and enterprise delegation.
+
 **Best full buyer guide:** [Best AI coding assistant](/guides/best-ai-coding-assistant/) remains the primary category money page and should stay synchronized with Copilot billing, Cursor pricing, Claude Code access, and model availability.
 
 ## Money Pages To Build Next
 
 - [Cursor vs GitHub Copilot](/compare/cursor-vs-github-copilot/) should be kept current around Cursor's AI-native IDE fit versus Copilot's GitHub-native governance.
 - [GitHub Copilot alternatives](/guides/github-copilot-alternatives/) should be monitored through the June 1, 2026 Copilot AI Credits migration.
+- [Cursor alternatives](/guides/cursor-alternatives/) should be monitored monthly because Cursor, Windsurf, Copilot, Claude Code, and Replit all expose usage-sensitive pricing or agent limits.
 - A new `Claude Code vs Codex` comparison would capture terminal-agent and OpenAI/Anthropic agent-intent searches.
 - A new `Cursor vs Windsurf` comparison would capture buyer intent around AI IDE price, credits, and workflow.
 - A new `best AI coding agent` guide should separate terminal agents, PR agents, browser builders, and autonomous software-engineering products.
