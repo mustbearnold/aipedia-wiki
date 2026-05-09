@@ -109,6 +109,7 @@ Priority pages must avoid horizontal overflow at 360/390/430/768/1024 and presen
 - 2026-05-09: Refreshed `best-ai-tools-for-developers` against current official Cursor, GitHub Copilot, Claude Code, Anthropic pricing, OpenAI Codex, and OpenAI API pricing sources; removed stale Cursor 2.0, Claude Opus 4.7, GPT-5-Codex, fake benchmark, and broken relative-link claims; added guide picks; promoted the guide on `/guides/`; and updated the AI Coding parent category.
 - 2026-05-09: Refreshed `best-ai-for-debugging` against current official Cursor, GitHub Copilot, Claude Code, OpenAI Codex, and OpenAI API pricing sources; removed stale April model/version, benchmark, pricing, and broken relative-link claims; added guide picks; and updated the AI Coding parent category.
 - 2026-05-09: Noindexed and merged weak high-stakes legal routes `best-ai-for-legal-research` and `best-ai-tools-for-lawyers`; replaced unsupported April legal/product claims with archive notices, safer internal paths, and rebuild criteria requiring legal-specific sources, jurisdiction caveats, confidentiality guidance, and professional-review language.
+- 2026-05-09: Refreshed `best-ai-for-photo-editing` and the parent `ai-image` category with current official Adobe Firefly, Photoshop Generative Fill, ChatGPT Images 2.0, Canva AI, and Midjourney plan sources; removed stale April model/pricing claims, fake third-party rankings, and bad relative links; added guide picks; and promoted the refreshed photo-editing guide on `/guides/`.
 
 ## 15. Final report
 Pending.
