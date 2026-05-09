@@ -31,6 +31,7 @@ As of May 9, 2026, the wrong question is "which AI writes best?" The better ques
 | **[Typeface](/tools/typeface/)** | Enterprise marketing orchestration | Best for large marketing teams that need brand-safe campaigns across agents, creative workflows, approvals, and systems. |
 | **[Grammarly](/tools/grammarly/)** | Editing, grammar, and tone layer | Best as a polish layer, not a full content operating system. |
 | **[Beehiiv](/tools/beehiiv/)** | Newsletter publishing, growth, and monetization | Best when the newsletter is a business and needs publishing, referrals, ads, paid subscriptions, AI credits, API, and growth surfaces rather than only draft generation. |
+| **[Sudowrite](/tools/sudowrite/)** | Fiction, novels, and creative-writing workflow | Best when the work is scenes, characters, sensory detail, story continuity, and fiction-specific rewrite/expansion rather than business or SEO content. |
 
 ## Our Picks
 
@@ -42,6 +43,7 @@ As of May 9, 2026, the wrong question is "which AI writes best?" The better ques
 - **Best enterprise governance option:** [Writer](/tools/writer/) because it is built for governed agents, IT controls, trust, and enterprise workflows.
 - **Best enterprise marketing orchestration option:** [Typeface](/tools/typeface/) because it centers brand graph, campaign agents, reviews, approvals, publishing, and creative systems.
 - **Best newsletter operating system:** [Beehiiv](/tools/beehiiv/) because it connects writing to publishing, audience growth, monetization, analytics, referrals, ads, Boosts, paid subscriptions, AI credits, API access, and beehiiv MCP.
+- **Best fiction-writing specialist:** [Sudowrite](/tools/sudowrite/) because it is purpose-built for story work, scene expansion, character development, and creative rewrite passes rather than generic business copy.
 
 ## Choosing the Right Tool
 
@@ -61,6 +63,8 @@ As of May 9, 2026, the wrong question is "which AI writes best?" The better ques
 
 **Use Beehiiv if:** the writing workflow is tied to a newsletter business with subscriber growth, referrals, ads, Boosts, paid subscriptions, automations, analytics, AI credits, and owned publishing.
 
+**Use Sudowrite if:** the writing job is fiction, screenplays, scenes, characters, story beats, expansion, or creative rewrites.
+
 ## Money Guides
 
 - [Best AI for Blog Writing](/guides/best-ai-for-blog-writing/)
@@ -68,11 +72,11 @@ As of May 9, 2026, the wrong question is "which AI writes best?" The better ques
 - [Best AI for Brainstorming](/guides/best-ai-for-brainstorming/)
 - [Best AI Tools for LinkedIn](/guides/best-ai-for-linkedin/)
 - [Best AI for Book Writing](/guides/best-ai-for-book-writing/)
+- [Best AI Tools for Writers](/guides/best-ai-tools-for-writers/)
 - [Best AI for Ad Copy](/guides/best-ai-for-ad-copy/)
 - [Best Jasper Alternatives](/guides/jasper-alternatives/)
 - [Best Grammarly Alternatives](/guides/grammarly-alternatives/)
 - [Best AI Tools for Newsletter Writers](/guides/best-ai-for-newsletter-writers/)
-- [Best AI Tools for Writers](/guides/best-ai-tools-for-writers/)
 
 ## Sources
 
@@ -85,3 +89,4 @@ As of May 9, 2026, the wrong question is "which AI writes best?" The better ques
 - [Writer](https://writer.com/) (verified 2026-05-09)
 - [Typeface](https://www.typeface.ai/) (verified 2026-05-09)
 - [beehiiv pricing](https://www.beehiiv.com/pricing) (verified 2026-05-09)
+- [Sudowrite pricing](https://sudowrite.com/pricing) (verified 2026-05-09)
