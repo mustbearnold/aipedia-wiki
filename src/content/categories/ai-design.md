@@ -112,6 +112,7 @@ Do not make a wide table the only mobile experience. Mobile buyers need top pick
 ## Money Pages To Build Next
 
 - [Lovable vs Bolt.new vs v0](/compare/lovable-vs-bolt-vs-v0/) should be rebuilt first because it is the highest-intent app-builder comparison in this category and still has stale pricing and scope language.
+- [Best Canva AI Alternatives](/guides/canva-ai-alternatives/) is now refreshed and should stay in the design money-page rotation because it separates Canva replacement intent by buyer job: Figma for product design, Firefly for Adobe production, Midjourney for ideation, Freepik for creator assets, and Recraft/Ideogram for text and vector-heavy brand work.
 - [Figma AI vs v0](/compare/figma-vs-v0/) should be rebuilt around design-system workflow versus Vercel-native implementation.
 - [Canva AI vs v0](/compare/canva-vs-v0/) should be rebuilt around non-designer creative production versus web-app output.
 - [Google Stitch vs v0](/compare/google-stitch-vs-v0/) should be rebuilt around vibe-design exploration versus Vercel app-building workflow.
@@ -129,3 +130,6 @@ Do not make a wide table the only mobile experience. Mobile buyers need top pick
 - [Bolt.new pricing](https://bolt.new/pricing) (verified 2026-05-09)
 - [v0 pricing](https://v0.app/pricing) (verified 2026-05-09)
 - [v0 documentation](https://v0.app/docs) (verified 2026-05-09)
+- [Freepik pricing](https://www.freepik.com/pricing/139506675) (verified 2026-05-09)
+- [Recraft V4 docs](https://www.recraft.ai/docs/recraft-models/recraft-V4) (verified 2026-05-09)
+- [Ideogram plans](https://docs.ideogram.ai/plans-and-pricing/available-plans) (verified 2026-05-09)
