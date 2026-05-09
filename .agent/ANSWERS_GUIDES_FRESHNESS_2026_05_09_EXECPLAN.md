@@ -106,6 +106,7 @@ Priority pages must avoid horizontal overflow at 360/390/430/768/1024 and presen
 - 2026-05-09: Re-audited the chatbot/free/ChatGPT-alternatives answer source trails against current OpenAI Help Center, OpenAI GPT-5.5 Instant, Anthropic model, Google Gemini 3.1 Pro, and Perplexity Pro sources; replaced brittle GPT-5.5 launch links with current official ChatGPT/model documentation.
 - 2026-05-09: Re-audited `/answers/best-ai-coding-tool-2026/` against current Claude Code release/subscription docs, Cursor pricing docs, and GitHub Copilot plans/billing docs; added the Copilot AI Credits/premium-request caveat and replaced the older Cursor pricing-policy link with current docs.
 - 2026-05-09: Refreshed `ai-solo-founder-stack` with current official Cursor, Claude Code, ChatGPT, Lovable, Bolt, n8n, Intercom, Notion, Gamma, and GitHub Copilot billing sources; removed stale fixed monthly stack totals, unsupported April model claims, and relative markdown links; added guide picks; and updated AI Coding and AI Automation parent categories while keeping `/guides/` aligned through its existing featured placement.
+- 2026-05-09: Refreshed `best-ai-tools-for-developers` against current official Cursor, GitHub Copilot, Claude Code, Anthropic pricing, OpenAI Codex, and OpenAI API pricing sources; removed stale Cursor 2.0, Claude Opus 4.7, GPT-5-Codex, fake benchmark, and broken relative-link claims; added guide picks; promoted the guide on `/guides/`; and updated the AI Coding parent category.
 
 ## 15. Final report
 Pending.
