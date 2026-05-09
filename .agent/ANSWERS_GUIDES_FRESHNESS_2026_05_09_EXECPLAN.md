@@ -120,6 +120,7 @@ Priority pages must avoid horizontal overflow at 360/390/430/768/1024 and presen
 - 2026-05-09: Refreshed `best-ai-for-book-writing` and `best-ai-for-tiktok`; removed stale April model/version/pricing claims, weak roundup sources, and bad relative tool links; added current official source trails, guide picks, author/TikTok safety rules, and parent hub links from AI Writing and AI Video.
 - 2026-05-09: Refreshed `best-open-source-ai-tools`; replaced brittle unsupported benchmark/model-version claims with a buyer guide around Ollama, LM Studio, Open WebUI, Llama, Mistral, DeepSeek, FLUX, Stable Diffusion, Whisper, and Hugging Face; updated AI Chatbots, AI Coding, and AI Image parent surfaces to avoid stale open-source/open-weight language.
 - 2026-05-09: Refreshed `best-ai-for-youtube-creators`; removed stale April model/version/pricing claims, bad relative links, and weak roundup sources; rebuilt around Descript, ChatGPT, Canva, ElevenLabs, OpusClip, Runway, Midjourney, and Gemini with creator safety rules and parent links from AI Video, AI Image, and AI Voice.
+- 2026-05-09: Refreshed `deepseek-alternatives`; replaced V3.2-only and benchmark-claim framing with a current switcher guide around ChatGPT, Claude, Cursor, Gemini, Mistral, Perplexity, Grok, and open/local model stacks; updated AI Chatbots and AI Coding parent surfaces.
 
 ## 15. Final report
 Pending.
