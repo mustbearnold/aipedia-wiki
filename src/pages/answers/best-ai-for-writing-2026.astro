@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
 import AnswerContent from '../../components/AnswerContent.astro';
+import AnswerDecisionPanel from '../../components/AnswerDecisionPanel.astro';
 
 const answerContent = `
 [Claude](/tools/claude/) is the best first pick for writing in May 2026 when quality, structure, and revision judgment matter. It is especially strong for long-form drafts, editing, summarization, and rewriting without making the prose feel overproduced.
@@ -42,10 +43,24 @@ const answerLD = JSON.stringify({
       <time datetime="2026-05-09" class="text-[var(--accent-success)]">Verified May 9, 2026</time>
     </div>
 
+    <AnswerDecisionPanel
+      verdict="Claude is the best first writing assistant when prose quality, structure, and revision judgment matter; ChatGPT and Grammarly win different writing jobs."
+      winnerLabel="Default winner"
+      winner="Claude"
+      bestFor="Long-form drafting, rewriting, editing, summarizing, voice matching, and careful critique where the output should not feel overproduced."
+      avoidIf="Your writing workflow also needs image generation, browsing, data analysis, Codex, or inline grammar controls inside existing apps."
+      nextStep="Use Claude for serious drafting, ChatGPT for a broader creative workspace, and Grammarly for inline review."
+      links={[
+        { href: '/tools/claude/', label: 'Review Claude' },
+        { href: '/guides/best-ai-tools-for-writers/', label: 'Writing tools guide' },
+        { href: '/guides/best-ai-for-blog-writing/', label: 'Blog writing guide' },
+      ]}
+    />
+
     <AnswerContent content={answerContent} />
 
     <div class="mt-[var(--site-section-gap)] pt-[var(--site-content-gap)] border-t border-[var(--border)] text-sm text-[var(--text-muted)]">
-      <p>This answer was checked against current vendor sources on May 9, 2026, including <a href="https://docs.anthropic.com/en/docs/models-overview" class="text-[var(--accent-primary)] no-underline hover:underline">Anthropic model docs</a>, <a href="https://openai.com/index/introducing-gpt-5-5/" class="text-[var(--accent-primary)] no-underline hover:underline">OpenAI GPT-5.5</a>, and <a href="https://superhuman.com/plans" class="text-[var(--accent-primary)] no-underline hover:underline">Superhuman/Grammarly plans</a>. See our <a href="/about/scoring/" class="text-[var(--accent-primary)] no-underline hover:underline">scoring methodology</a>.</p>
+      <p>This answer was checked against current vendor sources on May 9, 2026, including <a href="https://docs.anthropic.com/en/docs/models-overview" class="text-[var(--accent-primary)] no-underline hover:underline">Anthropic model docs</a>, <a href="https://openai.com/index/introducing-gpt-5-5/" class="text-[var(--accent-primary)] no-underline hover:underline">OpenAI GPT-5.5</a>, and <a href="https://www.grammarly.com/plans" class="text-[var(--accent-primary)] no-underline hover:underline">Grammarly plans</a>. See our <a href="/about/scoring/" class="text-[var(--accent-primary)] no-underline hover:underline">scoring methodology</a>.</p>
     </div>
   </article>
 </BaseLayout>
