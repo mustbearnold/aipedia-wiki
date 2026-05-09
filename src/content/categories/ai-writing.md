@@ -60,6 +60,9 @@ As of May 9, 2026, the wrong question is "which AI writes best?" The better ques
 ## Money Guides
 
 - [Best AI for Blog Writing](/guides/best-ai-for-blog-writing/)
+- [Best AI for Email Writing](/guides/best-ai-for-email-writing/)
+- [Best AI for Brainstorming](/guides/best-ai-for-brainstorming/)
+- [Best AI Tools for LinkedIn](/guides/best-ai-for-linkedin/)
 - [Best AI for Ad Copy](/guides/best-ai-for-ad-copy/)
 - [Best Jasper Alternatives](/guides/jasper-alternatives/)
 - [Best Grammarly Alternatives](/guides/grammarly-alternatives/)
