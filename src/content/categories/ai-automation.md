@@ -2,49 +2,88 @@
 type: category
 slug: ai-automation
 title: AI Automation & Agents
-description: Workflow automation, AI agent platforms, and sales/support tools. n8n, Make, Zapier, Relevance AI, CrewAI, Lindy, Manus, Gumloop, Pipedream, Tines, Taskade, Rows, Apollo, Clay, Intercom, Instantly.
+description: Current workflow automation, AI agent platforms, and operations tools for technical teams, non-technical operators, GTM workflows, support, sales, and internal automation.
 tool_count: 24
-seo_title: "Best AI Automation Tools (2026), aipedia.wiki"
-meta_description: "n8n, Make, and Zapier lead workflow automation in 2026. Compare 22 platforms including Lindy, Manus, Gumloop, Pipedream, and Tines for AI agents, integrations, and self-hosting. Updated April 2026."
+seo_title: "Best AI Automation Tools & Agent Platforms (May 2026)"
+meta_description: "Updated May 9, 2026: compare n8n, Zapier, Make, Gumloop, Relevance AI, Lindy, Pipedream, CrewAI, Apollo, Clay, Intercom, and Instantly by workflow fit, pricing unit, integrations, and governance."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-17
-last_verified: 2026-04-17
-update_frequency: monthly
+last_updated: 2026-05-09
+last_verified: 2026-05-09
+update_frequency: weekly
+top_picks:
+  best_overall:
+    tool: n8n
+    label: "Best technical workflow platform"
+  budget:
+    tool: make
+    label: "Best low-cost visual builder"
+  pro_team:
+    tool: zapier
+    label: "Best non-technical SaaS coverage"
 ---
 
-## Overview
-AI automation and agent platforms split into two segments as of April 2026: no-code workflow builders and developer agent frameworks. n8n leads the category as the best overall platform, offering free self-hosting with unlimited executions and a native AI agent builder that supports tool use, memory, RAG, and multi-agent orchestration, with cloud plans starting at $20 per month ([n8n](https://n8n.io)). Make provides a visual workflow canvas at the lowest cloud pricing starting at $9 per month ([Make](https://make.com)). Zapier maintains the widest integration catalog at 6,000 or more apps but is the most expensive per task ([Zapier](https://zapier.com)). On the developer framework side, LangGraph offers precise agent state machine control as a free open-source tool, CrewAI handles multi-agent orchestration, and the Claude Agent SDK enables Claude-native agent development. n8n 2.0 blurred the line between no-code and developer tools with its native AI agent nodes, pulling technical users away from both Zapier and standalone agent frameworks.
+## Quick Decision
 
-## The Players
+AI automation now splits into four buyer jobs: deterministic workflow automation, AI-assisted workflow building, delegated agent workforces, and vertical revenue/support automation. Do not buy by hype. Start with the workflow owner, the billing unit, and the failure risk.
 
-| Tool | Price | Best For | Utility | Value | Moat | Longevity |
-|------|-------|----------|---------|-------|------|-----------|
-| **n8n** | Free self-host, $20-50/mo cloud | Devs wanting AI agent + automation | 9 | 10 | 7 | 9 |
-| **Make.com** | $9-145/mo | Complex flows, cheaper than Zapier | 8 | 8 | 6 | 8 |
-| **Zapier** | Free-$299+/mo | Non-technical, most integrations | 8 | 6 | 9 | 9 |
-| **Relevance AI** | Free-$234/mo | No-code AI agent builder | 8 | 7 | 6 | 7 |
-| **CrewAI** | Free-$99+/mo | Multi-agent orchestration (devs) | 8 | 8 | 7 | 8 |
-| **LangGraph** | Free (open source) | Precise agent state machines | 9 | 10 | 7 | 9 |
-| **Claude Agent SDK** | API pricing | Claude-native agents | 9 | 8 | 8 | 9 |
-| **Apollo.io** | Free-$149/user/mo | Sales intelligence, 275M+ contacts | 9 | 8 | 7 | 8 |
-| **Clay** | Free-$800/mo | Data enrichment, signal-based outreach | 9 | 7 | 8 | 8 |
-| **Instantly** | $37-358/mo | Cold email sending, unlimited accounts | 8 | 9 | 7 | 7 |
-| **Intercom** | $39-139/seat/mo | AI customer support, Fin AI Agent | 9 | 7 | 8 | 9 |
+**Use [n8n](/tools/n8n/) when a technical founder, ops engineer, or agency wants control.** n8n's current pricing page says cloud plans include unlimited users, unlimited workflows, every integration, and monthly workflow-execution billing rather than per-step billing. It also has a standard self-hosted Community Edition path. This makes n8n the strongest default for complex AI workflows when someone can own credentials, logs, retries, and security.
+
+**Use [Zapier](/tools/zapier/) when non-technical teams need the fastest SaaS connection path.** Zapier's current pricing page frames the platform around Zaps, Tables, Interfaces, Canvas, AI workflow tools, Zapier MCP, and more than 8,000 apps. It is still the cleanest recommendation when app coverage and speed matter more than self-hosting or code-level control.
+
+**Use [Make](/tools/make/) when visual workflow clarity and low entry price matter.** Make's current pricing page lists a free plan with 1,000 credits/month and 3000+ apps, plus Core, Pro, Teams, and Enterprise tiers. Its AI Agents page positions Make around transparent agents across 3000+ apps.
+
+**Use [Gumloop](/tools/gumloop/) when the buyer wants AI-native flows, agents, triggers, MCP, policies, and guardrails.** Gumloop is a stronger fit for agent-heavy workflow building than a generic "connect two apps" use case.
+
+**Use [Relevance AI](/tools/relevance-ai/) when the purchase question is an AI workforce.** Relevance AI's current pricing page lists actions, vendor credits, workforces, unlimited agents/tools, 2000+ integrations, scheduling, escalations, and BYO LLM on paid plans.
+
+## Buyer Paths
+
+| Buyer job | Start with | Why | Watch out |
+|---|---|---|---|
+| Technical AI workflows, self-hosting, internal automations | [n8n](/tools/n8n/) | Best mix of workflow control, AI nodes, code steps, self-hosting, and execution-based billing | Needs real ownership for credentials, logs, retries, and security |
+| Non-technical SaaS automation | [Zapier](/tools/zapier/) | Broadest app catalog and fastest setup for business teams | Task billing and automation sprawl can get expensive |
+| Visual scenario building and branching workflows | [Make](/tools/make/) | Strong visual canvas, routers, filters, credits, and 3000+ apps | Credit use depends on scenario design and frequency |
+| Agent-heavy workflows and modern automation teams | [Gumloop](/tools/gumloop/) | AI-native flows, unlimited agents/flows, policies, guardrails, and MCP support | Credit usage must be tested with real production tasks |
+| Delegated GTM, research, support, and ops agents | [Relevance AI](/tools/relevance-ai/) | AI workforces, actions, vendor credits, scheduling, escalations, and marketplace patterns | Not the cheapest generic workflow router |
+| Inbox, calendar, meeting, and follow-up assistant | [Lindy](/tools/lindy/) | Assistant-style automation for professionals who want delegation, not a blank canvas | Connected inboxes and usage tiers shape the real plan |
+| Developer API workflows and embedded integrations | [Pipedream](/tools/pipedream/) | Developer-friendly workflows, Connect, and credit-based compute | Requires more technical judgment than Zapier or Make |
 
 ## Our Picks
-- **Best overall:** n8n ($20/mo cloud). Open-source, AI agents built in.
-- **Best free:** LangGraph. Open-source, most precise agent control.
-- **Best for non-devs:** Relevance AI. Drag-and-drop agent builder.
-- **Most integrations:** Zapier. 6,000+ apps, but expensive at scale.
 
-## Video Potential
-- "n8n vs Make vs Zapier . Which Automation Tool in 2026?" (high search)
-- "Build an AI Agent in 10 Minutes with n8n 2.0" (tutorial)
-- "I Automated My Entire Business with AI Agents" (aspirational)
-- "Claude Agent SDK: Build Agents on Claude's Max Plan" (developer tutorial)
+**Best overall: n8n.** Use it when the team can handle a more powerful workflow surface and wants a path from no-code automations to AI agents, code steps, APIs, and self-hosting.
+
+**Best for non-technical teams: Zapier.** Use it when the team needs automations live today across common SaaS tools and the budget can handle task-based scaling.
+
+**Best budget visual builder: Make.** Use it when the buyer wants visual scenario control, branching, 3000+ apps, and a lower starting price than the more enterprise-shaped options.
+
+**Best AI-native workflow challenger: Gumloop.** Use it when agents, flows, triggers, MCP, guardrails, and team usage analytics are core to the workflow.
+
+**Best agent workforce platform: Relevance AI.** Use it when the buyer wants to delegate repeatable work to agents across GTM, research, support, and operations.
+
+## Money Pages To Build Next
+
+- [Best AI automation platform](/guides/best-ai-automation-platform/) is the primary buyer guide and should stay current weekly while automation pricing and agent surfaces move quickly.
+- [n8n vs Make vs Zapier](/compare/n8n-vs-make-vs-zapier/) should be rebuilt next around workflow complexity, pricing unit, AI-agent support, and owner type.
+- A new `Gumloop vs Relevance AI` comparison would capture high-intent buyers choosing between AI-native workflow building and agent workforce deployment.
+- A new `n8n vs Gumloop` comparison would separate technical workflow control from modern agent-flow UX.
+- A new `Zapier MCP vs n8n AI workflows` answer page could capture buyers asking how AI tools should connect to SaaS apps.
+
+## What Hurts Trust
+
+Do not claim that one automation platform is universally cheapest. n8n bills workflow executions, Zapier bills tasks, Make bills credits, Gumloop bills credits, Relevance AI bills actions/vendor credits, and Pipedream bills workflow compute credits.
+
+Do not recommend AI agent platforms without failure planning. Production workflows need owners, logs, alerts, credentials hygiene, approvals, retry behavior, and a rollback plan.
+
+Do not leave this category stale. Automation tools are adding MCP, agent builders, AI workflow credits, and new pricing units quickly. A page with April 2026 prices or old "6,000 apps" language can mislead buyers.
 
 ## Sources
 
-- n8n: [https://n8n.io](https://n8n.io)
-- Make: [https://make.com](https://make.com)
-- Zapier: [https://zapier.com](https://zapier.com)
+- [n8n pricing](https://n8n.io/pricing/) (verified 2026-05-09)
+- [n8n AI documentation](https://docs.n8n.io/advanced-ai/) (verified 2026-05-09)
+- [Zapier pricing](https://zapier.com/pricing) (verified 2026-05-09)
+- [Make pricing](https://www.make.com/en/pricing) (verified 2026-05-09)
+- [Make AI Agents](https://www.make.com/en/ai-agents) (verified 2026-05-09)
+- [Gumloop pricing](https://www.gumloop.com/pricing) (verified 2026-05-09)
+- [Relevance AI pricing](https://relevanceai.com/pricing) (verified 2026-05-09)
+- [Lindy pricing](https://www.lindy.ai/pricing) (verified 2026-05-09)
+- [Pipedream pricing docs](https://pipedream.com/docs/pricing) (verified 2026-05-09)
