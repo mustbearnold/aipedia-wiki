@@ -4406,11 +4406,20 @@
     },
     {
       "id": "pipedream-pricing",
-      "label": "Source",
-      "url": "https://pipedream.com/pricing",
+      "label": "Pipedream pricing docs",
+      "url": "https://pipedream.com/docs/pricing",
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high"
+    },
+    {
+      "id": "workday-pipedream-close",
+      "label": "Workday FY2026 Q4 results",
+      "url": "https://investor.workday.com/news-and-events/press-releases/news-details/2026/Workday-Announces-Fiscal-2026-Fourth-Quarter-and-Full-Year-Financial-Results/default.aspx",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-05-09"
     },
     {
       "id": "pitch-ai",

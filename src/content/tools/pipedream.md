@@ -2,7 +2,7 @@
 type: tool
 slug: pipedream
 title: Pipedream
-tagline: Developer-first workflow automation with inline JS, Python, Go, and Bash nodes. 3,000+ integrations. Hosts MCP servers that expose 10,000+ prebuilt tools to AI agents. Workday signed a definitive agreement to acquire Pipedream in November 2025.
+tagline: Developer-first workflow automation with inline JS, Python, Go, and Bash nodes, 3,000+ integrations, hosted MCP servers for 10,000+ agent tools, and Workday ownership after the acquisition closed in fiscal Q4 2026.
 category: ai-automation
 company: pipedream
 url: https://pipedream.com
@@ -10,11 +10,11 @@ pricing_model: freemium
 price_range: "$0-$99+/month"
 status: active
 launched: 2019-03
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-09
+last_verified: 2026-05-09
 update_frequency: monthly
 seo_title: "Pipedream: Features, Pricing & Review (2026)"
-meta_description: "Pipedream is the code-first workflow automation platform. Free tier, Basic $29/mo, Advanced $79/mo. 3,000+ integrations. Hosts MCP servers for AI agents. Workday signed a definitive agreement to acquire Pipedream Nov 2025. Verified April 18, 2026."
+meta_description: "Pipedream is the code-first workflow automation platform for developers and agents. Free, Basic $29/mo, Advanced $79/mo, 3,000+ integrations, hosted MCP tools, and Workday ownership. Verified May 9, 2026."
 author: "aipedia.wiki Editorial"
 affiliate:
   has_program: false
@@ -29,29 +29,29 @@ scores:
   longevity: 7
 facts:
   best_for:
-    value: "Developer-first workflow automation with inline JS, Python, Go, and Bash nodes. 3,000+ integrations. Hosts MCP servers that expose 10,000+ prebuilt tools to AI agents. Workday signed a definitive agreement to acquire Pipedream in November… Best for workflow automation, agentic operations, and business-process automation."
-    source: "https://pipedream.com/pricing"
+    value: "Developer-first workflow automation with inline JS, Python, Go, and Bash nodes, 3,000+ integrations, hosted MCP servers for 10,000+ agent tools, and Workday ownership after the acquisition closed in fiscal Q4 2026."
+    source: "https://pipedream.com/docs/pricing"
     source_label: "Source"
     source_id: pipedream-pricing
-    verified_at: 2026-05-03
+    verified_at: 2026-05-09
     volatility: medium
     confidence: medium
   pricing_anchor:
     value: "MCP servers; free; Pipedream shipped hosted MCP servers exposing 10,000+ tools to AI agents."
-    source: "https://pipedream.com/pricing"
+    source: "https://pipedream.com/docs/connect/mcp/users"
     source_label: "Source"
     source_id: pipedream-pricing
-    verified_at: 2026-05-03
-    next_review_at: 2026-08-03
+    verified_at: 2026-05-09
+    next_review_at: 2026-06-09
     volatility: high
     confidence: medium
   watch_out_for:
-    value: "Non-Tier-1 canonical profile: verify current pricing, usage limits, data policy, and integration details before procurement"
-    source: "https://pipedream.com/pricing"
+    value: "Workday now owns Pipedream, so long-term packaging, governance, pricing, and enterprise roadmap should be verified before multi-year procurement."
+    source: "https://investor.workday.com/news-and-events/press-releases/news-details/2026/Workday-Announces-Fiscal-2026-Fourth-Quarter-and-Full-Year-Financial-Results/default.aspx"
     source_label: "Source"
     source_id: pipedream-pricing
-    verified_at: 2026-05-03
-    next_review_at: 2026-08-03
+    verified_at: 2026-05-09
+    next_review_at: 2026-06-09
     volatility: high
     confidence: medium
 tags: [workflow-automation, developer-tools, mcp, code-first, pipedream]
@@ -60,12 +60,13 @@ best_for:
   - teams building AI agents that need tool access to 3,000+ APIs
   - long-running or complex logic that Zapier's task-counting model punishes
   - secure API-key management across many third-party services
+  - Workday customers evaluating agent connectivity across enterprise apps
 not_best_for:
   - non-technical users who do not want to touch code
   - teams that need an enterprise UI-first no-code builder
   - workloads that must self-host on-premise (no self-hosted edition)
 quick_answer: >-
-  Pipedream is the code-first workflow automation platform for developers, with inline JS, Python, Go, and Bash nodes next to 3,000+ prebuilt connectors. Pick it for scriptable automations and AI-agent tool access via its hosted MCP servers. Skip it for pure no-code work where Zapier or Make fit better.
+  Pipedream is the code-first workflow automation platform for developers, with inline JS, Python, Go, and Bash nodes next to 3,000+ prebuilt connectors. Pick it for scriptable automations, embedded integrations, and AI-agent tool access via hosted MCP servers. Skip it for pure no-code work where Zapier or Make fit better.
 price_history:
   - date: 2025-03-28
     plan: "MCP servers"
@@ -87,16 +88,23 @@ price_history:
     source: "https://pipedream.com/pricing"
     source_label: "Source"
     source_id: pipedream-pricing
-    note: "Verified unchanged; Pipedream continues to operate independently pending deal close."
+    note: "Verified unchanged before Workday's fiscal Q4 close disclosure."
+  - date: 2026-05-09
+    plan: "Workday acquisition closed"
+    price: "n/a"
+    source: "https://investor.workday.com/news-and-events/press-releases/news-details/2026/Workday-Announces-Fiscal-2026-Fourth-Quarter-and-Full-Year-Financial-Results/default.aspx"
+    source_label: "Workday FY2026 Q4 results"
+    source_id: workday-pipedream-close
+    note: "Workday's February 24, 2026 results say it closed the acquisition of Pipedream in fiscal Q4 2026."
 ---
 
 # Pipedream
 
-Pipedream is a workflow automation platform built for developers. Workflows are trigger-and-step pipelines, like Zapier or Make, but any step can be inline **JavaScript, Python, Go, or Bash** code alongside 3,000+ prebuilt connectors. That makes Pipedream the go-to pick when an automation needs real logic, typed data handling, or version-controlled source rather than a purely visual builder.
+Pipedream is a workflow automation platform built for developers. Workflows are trigger-and-step pipelines, like Zapier or Make, but any step can be inline **JavaScript, Python, Go, or Bash** code alongside 3,000+ prebuilt connectors. That makes Pipedream the go-to pick when an automation needs real logic, typed data handling, embedded integrations, or version-controlled source rather than a purely visual builder.
 
 In March 2025 Pipedream shipped hosted **MCP (Model Context Protocol) servers** that expose 10,000+ prebuilt tools to AI agents. That turned Pipedream into one of the primary tool-access layers for LLM agents alongside Zapier MCP and custom SDKs.
 
-**Workday signed a definitive agreement to acquire Pipedream on November 19, 2025.** The deal was announced to close in Q4 of Workday's fiscal 2026. Pipedream and Workday continue to operate independently pending closing conditions, and Pipedream's public pricing and free tier remain unchanged.
+**Workday now owns Pipedream.** Workday signed the definitive agreement on November 19, 2025, then said in its February 24, 2026 fiscal Q4 results that it closed the acquisition of Pipedream. Public Pipedream pricing and docs still remain the best source for buyer-facing workflow, credit, and MCP details as of May 9, 2026.
 
 ## System Verdict
 
@@ -104,7 +112,7 @@ In March 2025 Pipedream shipped hosted **MCP (Model Context Protocol) servers** 
 >
 > **Skip it if your team is non-technical or the stakeholder list includes someone who insists on pure no-code.** [Zapier](/tools/zapier/) still wins on breadth of connectors (9,000+ vs 3,000+) and on the natural-language Zap builder. [Make](/tools/make/) is cheaper at high volume and has the best visual debugging. Pipedream has no self-hosted edition, so [n8n](/tools/n8n/) remains the pick for data-residency or on-premise deployments.
 >
-> **Who pays which tier:** Free for hobby and exploration use (100 credits, 3 active workflows). Basic $29/mo for small teams needing longer-running workflows and more credits. Advanced $79/mo for unlimited active workflows, priority support, and longer event history. Business is custom-quoted for SSO, audit logs, and dedicated support.
+> **Who pays which tier:** Free for hobby and exploration use. Basic $29/mo for small teams needing longer-running workflows and more credits. Advanced $79/mo for unlimited active workflows, priority support, and longer event history. Business is custom-quoted for SSO, audit logs, and dedicated support. Verify plan limits in the current pricing docs before building a cost model.
 
 ## Key Facts
 
@@ -120,7 +128,7 @@ In March 2025 Pipedream shipped hosted **MCP (Model Context Protocol) servers** 
 | **Business** | Custom · unlimited credits · SSO/SAML · audit logs · dedicated support |
 | **Workflow execution cap** | 5 min (Free) · 12.5 min (paid) · custom (Business) |
 | **Self-hosting** | None |
-| **Corporate status** | Workday signed a definitive agreement to acquire Pipedream (Nov 19, 2025); deal pending close |
+| **Corporate status** | Workday acquisition closed in fiscal Q4 2026, per Workday's Feb. 24, 2026 results |
 
 ## What it actually is
 
@@ -163,7 +171,7 @@ Subscription pricing via [pipedream.com/pricing](https://pipedream.com/pricing):
 
 **MCP server access** is free for personal use at [mcp.pipedream.com](https://mcp.pipedream.com). Production deployments inside apps run through Pipedream Connect.
 
-Prices verified 2026-04-18 via [Pipedream pricing](https://pipedream.com/pricing) and the [Pipedream pricing docs](https://pipedream.com/docs/pricing).
+Prices and credit mechanics verified 2026-05-09 via [Pipedream pricing](https://pipedream.com/pricing) and the [Pipedream pricing docs](https://pipedream.com/docs/pricing). The public pricing page can be dynamic, so the docs page is the more stable citation for credit mechanics.
 
 ## Against the alternatives
 
@@ -184,13 +192,13 @@ Prices verified 2026-04-18 via [Pipedream pricing](https://pipedream.com/pricing
 - **Free tier event history is short.** 30-day history on Basic, 1 year on Advanced. Long-horizon debugging needs the higher tier.
 - **No native versioning UX for team collaboration.** Workflow history exists, but there is no equivalent of a pull-request review flow. Teams building critical automations should layer their own review discipline.
 - **Non-technical users hit a wall.** The platform exposes real code surface by design. Teams without developer capacity should start with Zapier or Make.
-- **Pending Workday acquisition.** The November 2025 definitive agreement introduces uncertainty about long-term product direction, pricing, and whether Pipedream stays independently sold. The deal was expected to close in Q4 of Workday's fiscal 2026. Readers evaluating for multi-year deployments should price in the concentration risk.
+- **Workday ownership.** The acquisition has closed, so the risk is no longer "will the deal close?" It is packaging, roadmap, governance, and whether Pipedream stays independently sold in the same way. Readers evaluating multi-year deployments should price in the concentration risk and ask how Pipedream fits Workday's agent platform.
 - **MCP tool sprawl.** The hosted MCP server exposes 10,000+ tools. Agents given unfiltered access make worse decisions than agents given scoped tool allowlists. Use Pipedream's per-workflow MCP scoping.
 - **Execution cap on paid tiers.** 12.5 minutes per workflow on Basic and Advanced. Long-running jobs need to be chunked or moved to Business.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-18 against [Pipedream pricing](https://pipedream.com/pricing), [Pipedream pricing docs](https://pipedream.com/docs/pricing), the [MCP Servers documentation](https://pipedream.com/docs/connect/mcp), the [Pipedream MCP launch announcement](https://mcp.pipedream.com/), and [Workday's November 2025 press release](https://newsroom.workday.com/2025-11-19-Workday-Signs-Definitive-Agreement-to-Acquire-Pipedream).
+This page was rechecked by the aipedia.wiki editorial workflow on May 9, 2026 against [Pipedream pricing](https://pipedream.com/pricing), [Pipedream pricing docs](https://pipedream.com/docs/pricing), [Pipedream MCP end-user docs](https://pipedream.com/docs/connect/mcp/users), [Pipedream MCP developer docs](https://mcp.pipedream.com/developers), and [Workday's fiscal 2026 Q4 results](https://investor.workday.com/news-and-events/press-releases/news-details/2026/Workday-Announces-Fiscal-2026-Fourth-Quarter-and-Full-Year-Financial-Results/default.aspx). Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average).
 
 ## FAQ
 
@@ -201,7 +209,7 @@ Yes for hobby and evaluation work. The free tier gives 100 credits/day, 3 active
 A hosted Model Context Protocol endpoint at [mcp.pipedream.com](https://mcp.pipedream.com) that exposes 10,000+ prebuilt tools across 3,000+ APIs to any MCP-compatible AI agent. It is free for personal use. Production embedding into apps runs through Pipedream Connect.
 
 **Is Workday buying Pipedream?**
-Workday signed a definitive agreement to acquire Pipedream on November 19, 2025, expected to close in Q4 of Workday's fiscal 2026. The two companies continue to operate independently pending closing conditions. Pipedream's public pricing and product surface are unchanged as of April 2026.
+Workday signed a definitive agreement to acquire Pipedream on November 19, 2025, and Workday's February 24, 2026 fiscal Q4 results say the acquisition closed. Pipedream's public docs and pricing surface remain active as of May 9, 2026, but enterprise buyers should ask Workday/Pipedream about long-term packaging and roadmap.
 
 ## Related
 

@@ -46,7 +46,7 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 | Agent-heavy workflows and modern automation teams | [Gumloop](/tools/gumloop/) | AI-native flows, unlimited agents/flows, policies, guardrails, and MCP support | Credit usage must be tested with real production tasks |
 | Delegated GTM, research, support, and ops agents | [Relevance AI](/tools/relevance-ai/) | AI workforces, actions, vendor credits, scheduling, escalations, and marketplace patterns | Not the cheapest generic workflow router |
 | Inbox, calendar, meeting, and follow-up assistant | [Lindy](/tools/lindy/) | Assistant-style automation for professionals who want delegation, not a blank canvas | Connected inboxes and usage tiers shape the real plan |
-| Developer API workflows and embedded integrations | [Pipedream](/tools/pipedream/) | Developer-friendly workflows, Connect, and credit-based compute | Requires more technical judgment than Zapier or Make |
+| Developer API workflows and embedded integrations | [Pipedream](/tools/pipedream/) | Developer-friendly workflows, Connect, MCP servers, and credit-based compute under Workday ownership | Requires more technical judgment than Zapier or Make; ask how Workday packaging affects enterprise rollout |
 
 ## Our Picks
 
@@ -92,3 +92,4 @@ Do not leave this category stale. Automation tools are adding MCP, agent builder
 - [Relevance AI pricing](https://relevanceai.com/pricing) (verified 2026-05-09)
 - [Lindy pricing](https://www.lindy.ai/pricing) (verified 2026-05-09)
 - [Pipedream pricing docs](https://pipedream.com/docs/pricing) (verified 2026-05-09)
+- [Workday FY2026 Q4 results: Pipedream acquisition closed](https://investor.workday.com/news-and-events/press-releases/news-details/2026/Workday-Announces-Fiscal-2026-Fourth-Quarter-and-Full-Year-Financial-Results/default.aspx) (verified 2026-05-09)
