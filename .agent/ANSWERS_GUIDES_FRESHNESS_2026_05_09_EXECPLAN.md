@@ -85,6 +85,7 @@ Priority pages must avoid horizontal overflow at 360/390/430/768/1024 and presen
 - 2026-05-09: Noindexed and merged weak `best-ai-tools-for-real-estate-agents` and `best-ai-tools-for-nonprofits` guide routes, excluded them from sitemap and `/guides/`, and replaced stale generic chatbot claims with rebuild criteria and stronger internal paths.
 - 2026-05-09: Noindexed and merged weak `otter-ai-alternatives` and `notion-ai-alternatives` routes, excluding them from sitemap and `/guides/` and routing users to stronger meeting-note, Notion comparison, and tool pages.
 - 2026-05-09: Refreshed `runway-alternatives` with current official Runway, Google Veo 3.1, ByteDance Seedance 2.0, Kuaishou Kling 3.0, and Luma sources; added Seedance/Kling/Veo guide picks; removed the table-led mobile section; and promoted the guide on `/guides/`.
+- 2026-05-09: Refreshed the AI music guide cluster: `suno-alternatives`, `best-ai-music-generator`, and parent category `ai-music` now use current official Suno, Udio, ElevenLabs Music, AIVA, Mubert, and Stable Audio sources; removed stale April pricing/model claims and bad markdown links; added guide picks; and promoted the refreshed music guides on `/guides/`.
 
 ## 15. Final report
 Pending.

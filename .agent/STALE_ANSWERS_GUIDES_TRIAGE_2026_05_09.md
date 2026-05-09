@@ -36,7 +36,7 @@ This triage covers the active checkpoint: stale `/answers/` pages and stale/high
 | `/guides/otter-ai-alternatives/` | 2026-05-09 | Noindex and merge | The old page ranked generic chatbots instead of real meeting-note alternatives and overlapped with the meeting-notes guide. | Done: archived/noindexed, removed from sitemap and `/guides/`, routes users to meeting-note guide and Otter/Fireflies/Fathom/Read AI tool pages. |
 | `/guides/notion-ai-alternatives/` | 2026-05-09 | Noindex and merge | The old page duplicated stronger Notion comparisons and lacked Notion-specific migration value. | Done: archived/noindexed, removed from sitemap and `/guides/`, routes users to Notion comparisons and relevant tool pages. |
 | `/guides/jasper-alternatives/` | 2026-05-03 | Refresh or merge | Valuable marketing query but likely overlaps with ad copy/writing pages. | Refresh with Jasper/Copy.ai/ChatGPT/Claude; merge if thin. |
-| `/guides/suno-alternatives/` | 2026-05-03 | Refresh | Music AI is volatile; alternative intent is clear. | Recheck Suno/Udio/Mubert/Aiva and licensing/commercial rights. |
+| `/guides/suno-alternatives/` | 2026-05-09 | Refresh | Music AI is volatile; alternative intent is clear. | Done: refreshed around Udio, ElevenLabs Music, AIVA, Mubert, Stable Audio, and Suno with current official sources, licensing caveats, guide picks, and `/guides/` hub promotion. |
 | `/guides/runway-alternatives/` | 2026-05-09 | Refresh | Video-model market changed; must align with Seedance/Kling/Veo page. | Done: refreshed around Seedance 2.0, Kling 3.0, Veo 3.1, Luma, Pika, Hailuo, HeyGen, and Synthesia with current official sources and `/guides/` hub promotion. |
 
 ## Permanent Rules Reinforced
