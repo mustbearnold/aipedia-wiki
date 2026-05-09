@@ -117,6 +117,7 @@ Priority pages must avoid horizontal overflow at 360/390/430/768/1024 and presen
 - 2026-05-09: Refreshed the AI-writing long-tail cluster: `best-ai-for-brainstorming`, `best-ai-for-email-writing`, and `best-ai-for-linkedin` now use current official ChatGPT, Claude, Google AI/Workspace, Canva, and Apollo sources; removed stale April roundup citations, bad relative links, unsupported model/pricing claims, and added guide picks plus AI Writing parent hub links.
 - 2026-05-09: Refreshed `best-ai-for-excel`; removed the incorrect Microsoft 365 Copilot to GitHub Copilot internal link, replaced stale April roundup claims with official Microsoft Copilot in Excel, ChatGPT, Google AI/Workspace, and Claude sources, and documented Microsoft 365 Copilot as a missing future tool record rather than faking the internal route.
 - 2026-05-09: Refreshed high-trust professional/education guides `best-ai-tools-for-accountants` and `best-ai-tools-for-teachers`; removed stale April model/pricing claims, bad relative links, generic chatbot rankings, and weak third-party roundup sources; added official OpenAI, Anthropic, Google, Microsoft, Xero, and Intuit source trails plus explicit privacy, professional-review, and classroom-safety rules.
+- 2026-05-09: Refreshed `best-ai-for-book-writing` and `best-ai-for-tiktok`; removed stale April model/version/pricing claims, weak roundup sources, and bad relative tool links; added current official source trails, guide picks, author/TikTok safety rules, and parent hub links from AI Writing and AI Video.
 
 ## 15. Final report
 Pending.

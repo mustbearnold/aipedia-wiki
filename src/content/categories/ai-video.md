@@ -82,6 +82,8 @@ Do not make a wide comparison table the mobile experience. Mobile buyers need st
 
 **Training or L&D buyer:** start with Synthesia or HeyGen, then use the [avatar-video buyer guide](/guides/best-ai-avatar-video-generator/) to compare Tavus, D-ID, Argil, Hedra, and Captions depending on whether the need is templates, live conversation, long-form avatars, custom talking characters, or short-form social editing.
 
+**Short-form social creator:** use the refreshed [TikTok AI tools guide](/guides/best-ai-for-tiktok/) when the choice is hooks/scripts, CapCut-style editing, OpusClip repurposing, Runway generated B-roll, HeyGen avatar posts, or Captions.ai social editing.
+
 ## Review Standard
 
 AiPedia should not publish a hard "best video model" claim unless the prompt set, date, model identifiers, settings, cost, region, and evaluation criteria are disclosed. Until a controlled benchmark exists, this category should use editorial language like "test first," "best buyer route," and "best fit," backed by current official sources.
