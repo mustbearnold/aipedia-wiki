@@ -157,6 +157,7 @@ Priority pages must avoid horizontal overflow at 360/390/430/768/1024 and presen
 - 2026-05-09: Refreshed the stale `meshy` tool record with current official Meshy pricing, credit-usage, API pricing, and Meshy 6 launch sources; corrected the page from Meshy 5 Preview to Meshy 6 current, updated credit-math warnings, source registry entries, and AI Image parent category.
 - 2026-05-09: Refreshed the stale `minimax-speech` tool record with current official MiniMax T2A, voice-cloning, audio subscription, pay-as-you-go, and company-result sources; corrected Speech 2.6/Speech-02 framing to current Speech 2.8 HD/Turbo, updated pricing from old per-1K claims to current per-million and subscription lanes, and aligned AI Voice plus parent MiniMax surfaces.
 - 2026-05-09: Refreshed the stale `opusclip` tool record with current official OpusClip pricing, plans/credits, and ClipAnything sources; advanced verification to May 9, corrected Pro/Starter credit and pack wording, added source registry entries, and aligned the AI Video parent category with short-form repurposing guidance.
+- 2026-05-09: Refreshed the stale `pixverse` tool record with current official PixVerse Platform model-pricing, API subscription, and API overview docs plus CnTechPost funding context; removed unverified third-party web-plan pricing as the primary anchor, corrected V5.6-only framing to current V6/C1/V5.6 API coverage, added source registry entries, and aligned the AI Video parent category.
 
 ## 15. Final report
 Pending.

@@ -1,21 +1,21 @@
 ---
 type: tool
 slug: pixverse
-title: Pixverse
-tagline: AIsphere's AI video generator. V5.6 adds realistic multi-character lip-sync and ambient audio at 1080p, pricing undercuts Kling and Runway.
+title: PixVerse
+tagline: AIsphere's AI video generator for short-form text-to-video, image-to-video, reference-to-video, lip-sync, sound effects, and API-driven video generation.
 category: ai-video
 secondary_categories: []
 company: AIsphere (Beijing)
 url: https://pixverse.ai
 pricing_model: freemium
-price_range: "$0-$149/month"
+price_range: "Free + paid web plans; API credits $1=200 credits"
 status: active
 launched: 2024-01
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-09
+last_verified: 2026-05-09
 update_frequency: monthly
-seo_title: "Pixverse: Features, Pricing & Review (2026)"
-meta_description: "Pixverse V5.6 is AIsphere's AI video model with multi-character lip-sync, ambient audio, and 1080p output at 5-10 seconds. Free tier, Standard $8/mo, Pro $24/mo, Premium $48/mo. Pricing undercuts Kling and Runway; strong for anime and short-form social."
+seo_title: "PixVerse Review: V6 API Pricing, Credits & Buyer Fit (May 2026)"
+meta_description: "PixVerse is AIsphere's AI video platform for short-form text-to-video, image-to-video, lip-sync, sound, and API workflows. Updated May 9, 2026 with V6/C1/V5.6 credit rates, web-plan caveats, and buyer guidance."
 author: "aipedia.wiki Editorial"
 affiliate:
   has_program: false
@@ -30,29 +30,29 @@ scores:
   longevity: 7
 facts:
   best_for:
-    value: "AIsphere's AI video generator. V5.6 adds realistic multi-character lip-sync and ambient audio at 1080p, pricing undercuts Kling and Runway. Best for AI video generation, editing, avatars, or production workflows."
-    source: "https://platform.pixverse.ai"
-    source_label: "platform.pixverse.ai"
-    source_id: pixverse-official
-    verified_at: 2026-05-03
+    value: "AIsphere's AI video generator for short-form social clips, stylized video, image-to-video, reference-to-video, lip-sync, sound effects, and API workflows."
+    source: "https://docs.platform.pixverse.ai/pixverse-api-llm-txt-2109771m0"
+    source_label: "PixVerse API overview"
+    source_id: pixverse-api-overview
+    verified_at: 2026-05-09
     volatility: medium
     confidence: medium
   pricing_anchor:
-    value: "Standard; $8/mo (annual); Verified; 1,200 credits, 720p, 3 concurrent jobs"
-    source: "https://www.imagine.art/blogs/pixverse-ai-pricing"
-    source_label: "Source"
-    source_id: pixverse-pricing
-    verified_at: 2026-05-03
-    next_review_at: 2026-08-03
+    value: "API credit anchor: $1 = 200 credits; V6 5-second 540p no-audio generation costs 35 credits, 720p costs 45 credits, and 1080p costs 90 credits"
+    source: "https://docs.platform.pixverse.ai/model-pricing-796039m0"
+    source_label: "PixVerse model pricing"
+    source_id: pixverse-model-pricing
+    verified_at: 2026-05-09
+    next_review_at: 2026-06-09
     volatility: high
     confidence: medium
   watch_out_for:
-    value: "Non-Tier-1 canonical profile: verify current pricing, usage limits, data policy, and integration details before procurement"
-    source: "https://www.imagine.art/blogs/pixverse-ai-pricing"
-    source_label: "Source"
-    source_id: pixverse-pricing
-    verified_at: 2026-05-03
-    next_review_at: 2026-08-03
+    value: "API memberships are separate from PixVerse Web memberships; app-plan prices, monthly credits, and commercial rights should be verified in the logged-in billing surface before purchase"
+    source: "https://docs.platform.pixverse.ai/how-to-subscribe-api-plans-882969m0"
+    source_label: "PixVerse API subscription docs"
+    source_id: pixverse-api-subscriptions
+    verified_at: 2026-05-09
+    next_review_at: 2026-06-09
     volatility: high
     confidence: medium
 tags: [video-generation, ai-video, chinese-ai, anime, short-video, pixverse]
@@ -64,40 +64,40 @@ best_for:
   - multi-character dialogue clips with lip-sync
 not_best_for:
   - clips longer than 10 seconds
-  - cinematic feature-grade output (use Veo 3 or Kling 2.x)
+  - cinematic feature-grade output (test Veo 3.1, Kling 3.0, Seedance 2.0, and Runway first)
   - users who need strict data-residency outside China
 quick_answer: >-
   Pixverse is AIsphere's AI video model. V5.6 delivers 1080p output with native audio, multi-character lip-sync, and character-consistent references. Pick it for short-form social and anime-style generation on a tight budget. Skip it for clips over 10 seconds or cinematic feature work.
 price_history:
-  - date: 2026-04-18
-    plan: "Standard"
-    price: "$8/mo (annual)"
-    source: "https://www.imagine.art/blogs/pixverse-ai-pricing"
-    source_label: "Source"
-    source_id: pixverse-pricing
-    note: "Verified; 1,200 credits, 720p, 3 concurrent jobs"
-  - date: 2026-04-18
-    plan: "Pro"
-    price: "$24/mo (annual)"
-    source: "https://www.imagine.art/blogs/pixverse-ai-pricing"
-    source_label: "Source"
-    source_id: pixverse-pricing
-    note: "Verified; 6,000 credits, 1080p, 5 concurrent jobs"
+  - date: 2026-05-09
+    plan: "API credits"
+    price: "$1 = 200 credits"
+    source: "https://docs.platform.pixverse.ai/model-pricing-796039m0"
+    source_label: "PixVerse model pricing"
+    source_id: pixverse-model-pricing
+    note: "Official API docs list per-second credit consumption by model, quality, and audio setting"
+  - date: 2026-05-09
+    plan: "Web app subscriptions"
+    price: "Verify in app"
+    source: "https://docs.platform.pixverse.ai/how-to-subscribe-api-plans-882969m0"
+    source_label: "PixVerse API subscription docs"
+    source_id: pixverse-api-subscriptions
+    note: "PixVerse docs say API memberships and PixVerse Web memberships are separate; do not assume API credits buy web-app usage"
 ---
 
 # Pixverse
 
-Pixverse is an AI video generation platform from **AIsphere**, a Beijing-based startup founded in 2023 by former Microsoft Research Asia and ByteDance executive Wang Changhu. The platform launched globally in January 2024 and reports 100M+ users across 175+ countries. Current flagship is **V5.6**, which adds multi-character lip-sync, ambient audio generation, and 1080p output in 5-10 seconds.
+PixVerse is an AI video generation platform from **AIsphere**, a Beijing-based startup founded in 2023 by former Microsoft Research Asia and ByteDance executive Wang Changhu. The product spans a consumer web app and a separate PixVerse Platform API for text-to-video, image-to-video, template video, first/last-frame transition, lip-sync, reference-to-video, sound effects, extension, motion control, and video modification.
 
-AIsphere closed a $300M Series C in March 2026 led by CDH Investments, joining unicorn status. Prior rounds include a $60M Alibaba-led round and earlier Series A funding. Chinese tech capital dominates the cap table, a material data-residency consideration for some enterprise buyers.
+AIsphere closed a $300M Series C in March 2026 led by CDH Investments, according to CnTechPost's report citing LatePost. The same report said the funding was the largest single financing in China's AI video generation sector and that PixVerse had accumulated more than 100M users. Funding is not proof of model quality, but it matters because AI video is expensive to serve and capacity can shape creator pricing, render speed, and global expansion.
 
 ## System Verdict
 
-> **Pick Pixverse if you want cheap, fast AI video for TikTok-scale clips and do not need more than 10 seconds.** V5.6 holds its own against Kling 2.0 and Runway Gen-4 at a fraction of the price. Anime and illustration-style outputs land particularly well given the model's training distribution. Character reference images keep subjects consistent across clips.
+> **Pick PixVerse if you want short-form AI video and you are comfortable testing a fast-moving Chinese AI video platform.** The official API docs list V6, C1, V5.6, V5.5, and older model families, with separate credit rates for quality, duration, and audio. It is best treated as a budget/iteration and stylized-output test bed, not the default enterprise video system.
 >
-> **Skip it for cinematic or enterprise work.** Max clip length remains 5-10 seconds; long-form narrative is out of reach. [Veo 3](/tools/veo/) and [Kling](/tools/kling/) produce more physically coherent motion for realistic scenes. Buyers with strict data-residency rules around Chinese infrastructure should steer clear.
+> **Skip it when procurement clarity, data residency, or production governance matters more than cheap experiments.** PixVerse's API docs are useful, but the web app and API memberships are separate. Buyers should verify web subscription pricing, credit rollover, commercial rights, watermark rules, region, and upload/data policy inside the logged-in product before paying.
 >
-> **Who pays which tier:** Free for evaluation with watermark and 720p max, Standard $8/mo for volume experimenters at 720p, Pro $24/mo for 1080p output and 5 concurrent jobs, Premium $48/mo for high-volume creators, Ultra $149/mo for priority queue. API pricing runs around $4.80/min of generated video.
+> **Who pays which tier:** Use the free/web app route only for hands-on output tests. Use paid web subscriptions if the logged-in billing screen confirms the credits, watermark removal, resolution, commercial usage, and queue speed you need. Use PixVerse Platform only when you need API generation and can manage credit consumption directly.
 
 ## Key Facts
 
@@ -105,114 +105,114 @@ AIsphere closed a $300M Series C in March 2026 led by CDH Investments, joining u
 |---|---|
 | **Company** | AIsphere (Beijing, founded 2023) |
 | **Funding** | Series C $300M (Mar 2026) · total ~$400M+ |
-| **Flagship model** | V5.6 (multi-character lip-sync + ambient audio) |
-| **Max duration** | 5-10 seconds per clip |
+| **Current API models** | V6 · C1 · V5.6 · V5.5 · V5/V4.5/V4/V3.5 |
+| **API capabilities** | Text-to-video · image-to-video · transition · reference/fusion · lip-sync · sound · extend · motion control · modify |
 | **Resolutions** | 360p · 540p · 720p · 1080p |
-| **Pricing tiers** | Free · Standard $8 · Pro $24 · Premium $48 · Ultra $149 |
-| **Free tier** | 90 initial + 60 daily credits, watermark, lower resolution |
-| **Credit math** | $1 = 100 credits · 5-second 360p clip = ~45 credits |
+| **API credit anchor** | $1 = 200 credits |
+| **Web pricing** | Verify in logged-in PixVerse Web billing; API memberships are separate |
 | **Styles** | Realistic · Anime · Clay · 3D animation |
 | **Character consistency** | Reference-image support from V4.5 onward |
-| **API** | Available via [platform.pixverse.ai](https://platform.pixverse.ai) at ~$4.80/min |
-| **Languages** | Multilingual prompts; lip-sync tuned for English + Mandarin |
+| **API** | Available via [platform.pixverse.ai](https://platform.pixverse.ai) with model-level credit tables |
+| **Funding context** | $300M Series C reported March 2026; global expansion focus |
 
 ## What it actually is
 
-A text-to-video, image-to-video, and character-reference generation platform delivered through a web app, mobile app, and API. Users buy credits and spend them per generation; higher resolution and longer clips cost more credits.
+A text-to-video, image-to-video, and character-reference generation platform delivered through a consumer web app and a separate developer platform. Users buy credits and spend them per generation; higher resolution, longer duration, and audio usually cost more credits.
 
-V5.6 generates 5-10 second clips at up to 1080p in 1-2 minutes on the standard queue. The model supports multi-character dialogue with separate lip-sync tracks per speaker, ambient audio that fits the scene, and key-frame control for precise first-frame and last-frame anchoring.
+The official Platform docs currently publish model tables for **V6**, **C1**, **V5.6**, **V5.5**, and older V5/V4.5/V4/V3.5 models. They also list feature families such as transition, fusion/reference-to-video, speech/lip-sync, sound effects, extend, motion control, and modify generation.
 
-Character consistency via reference images is a core differentiator: upload a subject, generate multiple clips where that subject remains recognizable. The API supports programmatic access for studios and agencies, priced per minute of finished video rather than per credit.
+Character consistency via reference images is a core buyer reason to test PixVerse: upload a subject, generate multiple short clips, and compare identity drift against Kling, Seedance, Vidu, Runway, and Veo before committing budget.
 
 ## When to pick Pixverse
 
-- **Short-form social content.** 5-10 second clips are exactly TikTok, Reels, and Shorts length. V5.6's audio + lip-sync handles single-speaker talking-head clips without a separate voice tool.
+- **Short-form social content.** The useful job is quick image-to-video, text-to-video, reference clips, effects, and stylized social assets, not long-form editing.
 - **Anime and illustration output.** The training distribution rewards stylized aesthetics; Ghibli-like and Pixar-like looks land with minimal prompt engineering.
-- **Budget-conscious volume work.** Standard at $8/mo is the cheapest monthly plan among competitive 2026 video models. 1,200 credits covers 25+ short clips.
+- **Budget-conscious API testing.** The official API anchor is $1 = 200 credits, but real cost depends on model, resolution, duration, audio, retries, and whether the output is usable.
 - **Character-consistent creator series.** Upload one reference image, generate a week of clips featuring the same character across scenes. Kling and Runway charge more for equivalent reference workflows.
-- **Fast iteration.** 1-2 minute generation time at 720p makes prompt iteration feasible; Runway Gen-4 and Veo 3 typically take longer.
+- **Fast iteration.** Use it as a prompt lab beside Kling, Seedance, Vidu, Pika, and Hailuo; do not assume the first good demo transfers to every prompt style.
 
 ## When to pick something else
 
-- **Cinematic or feature-grade realism:** [Veo 3](/tools/veo/) via Gemini or [Kling](/tools/kling/) 2.0 produce more physically coherent motion and handle complex camera moves better.
-- **Clips over 10 seconds:** [Runway](/tools/runway/) Gen-4 extends to ~16 seconds with chaining; [Luma](/tools/luma/) Dream Machine handles longer sequences.
+- **Cinematic or feature-grade realism:** [Veo 3.1](/tools/veo/) via Gemini, [Kling 3.0](/tools/kling/), [Seedance 2.0](/tools/seedance/), and [Runway](/tools/runway/) should be tested before you commit to PixVerse for production shots.
+- **Longer controlled sequences:** Use [Runway](/tools/runway/), [Veo](/tools/veo/), [Luma](/tools/luma/), or model-specific extend/chaining workflows and test continuity before production.
 - **ByteDance-native or Douyin-first workflows:** [Jimeng](/tools/jimeng/) or [Seedance](/tools/seedance/) integrate directly with ByteDance tooling.
-- **US or EU data residency requirement:** Runway and Veo 3 run on Western infrastructure. Pixverse's data path runs through AIsphere servers.
+- **US or EU data residency requirement:** Runway and Veo are cleaner first shortlists for Western procurement. Treat PixVerse uploads as requiring legal/security review before regulated use.
 - **Highest quality talking-head avatars:** [Hedra](/tools/hedra/) or [Higgsfield](/tools/higgsfield/) specialize in avatar and character animation with stronger identity preservation.
 - **Open-weight or self-host path:** [Wan](/tools/wan/) from Alibaba offers open weights for local deployment.
 - **Chinese-market-first physical realism:** [Hailuo](/tools/hailuo/) or [Vidu](/tools/vidu/) are the direct peer set.
 
 ## Pricing
 
-Subscription pricing via [pixverse.ai](https://pixverse.ai) (annual billing shown; monthly is roughly 25% higher):
+PixVerse pricing needs two separate checks:
 
-| Plan | Price | Credits/mo | Resolution | Concurrent jobs |
-|---|---|---|---|---|
-| Free | $0 | 90 initial + 60 daily | Up to 540p, watermark | 1 |
-| Standard | $8/mo | 1,200 | Up to 720p | 3 |
-| Pro | $24/mo | 6,000 | Up to 1080p | 5 |
-| Premium | $48/mo | 15,000 | Up to 1080p, faster queue | 8 |
-| Ultra | $149/mo | 25,000 | 1080p + priority | 10+ |
+| Surface | What AiPedia could verify on May 9, 2026 | Buyer note |
+|---|---|---|
+| PixVerse Web | Public web-plan pricing was not reliable enough to quote from non-official mirrors | Verify plan price, monthly credits, watermark rules, output resolution, queue priority, and commercial rights in the logged-in billing screen before paying |
+| PixVerse Platform API | Official docs list **$1 = 200 credits** and per-model credit tables | Good for developers who can estimate credit burn before generation |
+| API subscription docs | PixVerse says API memberships are separate from PixVerse Web memberships and API credits cannot be used with PixVerse Web | Do not buy one surface assuming it funds the other |
 
-Credit mechanics: $1 buys 100 credits. A 5-second 360p clip costs ~45 credits, a 720p clip runs higher, 1080p higher still. Monthly credits do not roll over. Add-on credit packs range $10 for 1,000 credits up to $5,000 for 500,000.
+Official API credit examples:
 
-API pricing via [platform.pixverse.ai](https://platform.pixverse.ai) runs approximately **$4.80/min** for V6-class output, competitive with Kling Turbo and cheaper than Runway Gen-4.
+| Model | Quality | No audio | With audio |
+|---|---:|---:|---:|
+| V6 | 540p, 1 second | 7 credits | 9 credits |
+| V6 | 720p, 1 second | 9 credits | 12 credits |
+| V6 | 1080p, 1 second | 18 credits | 23 credits |
+| V5.6 | 720p, 5 seconds | 45 credits | 80 credits |
+| V5.6 | 1080p, 5 seconds | 75 credits | 150 credits |
 
-Prices verified 2026-04-18 via [imagine.art Pixverse pricing breakdown](https://www.imagine.art/blogs/pixverse-ai-pricing) and [tooljunction.io review](https://www.tooljunction.io/ai-tools/pixverse).
+Prices and credit rates verified May 9, 2026 via [PixVerse Platform model pricing](https://docs.platform.pixverse.ai/model-pricing-796039m0) and [PixVerse API subscription docs](https://docs.platform.pixverse.ai/how-to-subscribe-api-plans-882969m0).
 
 ## Against the alternatives
 
-| | Pixverse V5.6 | Kling 2.0 | Runway Gen-4 | Veo 3 |
+| | PixVerse | Kling 3.0 | Runway | Veo 3.1 |
 |---|---|---|---|---|
-| **Max duration** | 10s | 10s base, 20s with chaining | ~16s chained | 8s base |
-| **Max resolution** | 1080p | 1080p | 1080p | 4K in some tiers |
-| **Entry paid plan** | $8/mo | $10/mo | $15/mo | Bundled with Google AI Pro |
-| **Audio / lip-sync** | Yes (V5.6) | Yes | Yes | Yes (strongest) |
-| **Character reference** | Yes (V4.5+) | Yes | Yes | Limited |
-| **Style strength** | Anime, illustration | Realistic, cinematic | Cinematic + stylized | Realistic, cinematic |
-| **API price/min** | ~$4.80 | ~$6-8 | ~$15 | Bundled via Gemini |
-| **Data path** | China | China | US | Google Cloud |
-| **Best viewed as** | Budget short-form generator | Balanced Chinese model | Western cinematic lead | Google-stack flagship |
+| **Best for** | Budget tests, stylized clips, reference-to-video, API experiments | Cinematic creator output and current value testing | Production workspace, editing, team workflow | Google/API route, native audio, provenance expectations |
+| **Current caveat** | Web-plan prices must be verified in app; API is separate | Model access/credit rules can vary by app state | More expensive if you only need throwaway tests | API generation can get expensive fast |
+| **Audio / lip-sync** | API docs include speech/lip-sync and sound effects | Native audio in current 3.0 path | Model/workspace dependent | Native audio in Veo 3.1 |
+| **Character/reference work** | Reference/fusion workflows in API docs | Strong current reference/storytelling pitch | Strong production workflow | Up to reference-image controls through Gemini API docs |
+| **Data/procurement path** | China-linked AIsphere | China-linked Kuaishou | Western SaaS | Google Cloud/Gemini API |
+| **Best viewed as** | Cheap test bed and developer API route | Value/cinematic challenger | Finished production workspace | Enterprise/API shortlist |
 
 ## Failure modes
 
-- **Hard 10-second ceiling.** Longer narrative requires clip chaining or a different tool. Continuity across chains is inconsistent.
-- **Physics coherence lags Kling and Veo 3.** Complex hand interactions, physical object handling, and crowd scenes break down more often than on cinematic-tier models.
+- **Do not rely on old web-plan prices.** The official API docs are clear, but web subscription pricing can move and must be checked in the app.
+- **API and web memberships are separate.** PixVerse explicitly warns that API credits cannot be used with PixVerse Web.
+- **Physics coherence may lag frontier tests.** Complex hand interactions, physical object handling, and crowd scenes should be tested against Kling, Seedance, Veo, and Runway.
 - **Realistic human faces drift on Pro tier.** Sub-pixel instability in eyes and mouth shows up at 720p; 1080p helps but does not eliminate it.
-- **Credits expire monthly.** No rollover means heavy-use months burn add-on packs fast; light-use months waste allowance.
+- **Credits and retries define real cost.** Higher quality, audio, longer durations, and failed prompt iterations can change cost more than the headline credit anchor suggests.
 - **Chinese infrastructure.** Data routes through AIsphere servers. Enterprises with US or EU data-residency policies should review before production use.
-- **Lip-sync struggles with non-English and non-Mandarin.** V5.6 holds up well in the primary two languages; accent drift and mouth-shape errors appear in other languages.
-- **Prompt adherence weaker than Veo 3.** Complex multi-element prompts sometimes drop 2-3 specified elements. Iteration cycles help but cost credits.
+- **Prompt adherence needs head-to-head testing.** Complex multi-element prompts can drop details across many video models; do not buy without a fixed test prompt set.
 - **Watermark on Free is unavoidable.** Evaluation only; paid tiers remove it.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-04-18 against [pixverse.ai](https://pixverse.ai), [platform docs](https://docs.platform.pixverse.ai/model-pricing-796039m0), the [imagine.art V5.6 overview](https://www.imagine.art/features/pixverse-5-6), and [Bloomberg's $300M unicorn coverage](https://www.bloomberg.com/news/articles/2026-03-12/alibaba-backed-video-ai-startup-pixverse-raises-300-million).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified May 9, 2026 against [PixVerse Platform model pricing](https://docs.platform.pixverse.ai/model-pricing-796039m0), [PixVerse API subscription docs](https://docs.platform.pixverse.ai/how-to-subscribe-api-plans-882969m0), [PixVerse API overview](https://docs.platform.pixverse.ai/pixverse-api-llm-txt-2109771m0), and [CnTechPost's AIsphere Series C report](https://cntechpost.com/2026/03/12/ai-video-startup-aisphere-raises-300-million-record-china-funding/).
 
 ## FAQ
 
 **Is Pixverse free to use?**
-Yes. Free accounts get 90 initial credits plus 60 daily renewal credits, watermarked output, and a resolution cap below Pro tiers. Paid plans start at $8/mo (Standard, annual billing).
+PixVerse has a free/web app path, but AiPedia did not verify current public web-plan limits from an official, unauthenticated pricing table on May 9, 2026. Check the logged-in billing screen before relying on daily credits, watermark removal, or commercial-use assumptions.
 
 **What is V5.6 and how is it different from V5?**
-V5.6 adds natural multi-character dialogue with individual lip-sync tracks, ambient audio generation, and sharper motion in complex scenes. V5 introduced key-frame control and faster rendering at 1080p. V6 is the API-tier model with additional physics simulation.
+PixVerse's official API pricing page still lists V5.6 credit tables, but it also lists V6 and C1. Treat V5.6 as a supported model family, not necessarily the only current flagship. For buying decisions, test the exact model option visible in your app or API account.
 
 **How long can a Pixverse clip be?**
-5 to 10 seconds per generation. Longer sequences require clip chaining, with visible continuity breaks between joins. For clips over 10 seconds, [Runway](/tools/runway/) or [Luma](/tools/luma/) are better choices.
+The official API docs price generations by model, quality, duration, and audio setting. Before production, verify the maximum duration available for the exact model and workflow you plan to use, then test continuity if you need chained clips.
 
 **Does Pixverse have an API?**
-Yes, via [platform.pixverse.ai](https://platform.pixverse.ai). V6-tier pricing is approximately $4.80 per minute of finished video, competitive with Kling Turbo and below Runway Gen-4.
+Yes, via [platform.pixverse.ai](https://platform.pixverse.ai). The official docs publish model-level credit rates and say API memberships are separate from PixVerse Web memberships.
 
 **Who owns Pixverse?**
 AIsphere, a Beijing-based startup founded in 2023 by Wang Changhu (former Microsoft Research Asia and ByteDance). Alibaba is the lead strategic investor; CDH Investments led the March 2026 $300M Series C that made AIsphere an AI unicorn.
 
 **Should I worry about data residency?**
-If your organization has US or EU data-residency requirements, yes. Pixverse processes uploads and generations on AIsphere infrastructure in China. Regulated industries should prefer Runway or Veo 3 for this reason.
+If your organization has strict US or EU data-residency requirements, yes. PixVerse is tied to AIsphere in China, so regulated industries should run procurement and upload-policy review before production use.
 
 **Which styles does Pixverse do best?**
-Anime, illustration, 3D-animation, and clay styles land with minimal prompt engineering. Photorealistic human faces are weaker than Veo 3 or Kling 2.0 at equivalent tiers.
+Anime, illustration, 3D-animation, and clay styles are the safest reasons to test it first. Photorealistic human faces, physical interactions, and complex camera moves should be tested against Veo 3.1, Kling 3.0, Seedance 2.0, and Runway before paying for volume.
 
 ## Related
 
 - **Category:** [AI Video](/categories/ai-video/)
-- **Alternatives:** [Kling](/tools/kling/) · [Runway](/tools/runway/) · [Pika](/tools/pika/) · [Luma](/tools/luma/) · [Hailuo](/tools/hailuo/) · [Veo 3](/tools/veo/) · [Wan](/tools/wan/) · [Jimeng](/tools/jimeng/) · [Seedance](/tools/seedance/) · [Vidu](/tools/vidu/) · [Higgsfield](/tools/higgsfield/) · [Hedra](/tools/hedra/)
+- **Alternatives:** [Kling](/tools/kling/) · [Runway](/tools/runway/) · [Pika](/tools/pika/) · [Luma](/tools/luma/) · [Hailuo](/tools/hailuo/) · [Veo](/tools/veo/) · [Wan](/tools/wan/) · [Jimeng](/tools/jimeng/) · [Seedance](/tools/seedance/) · [Vidu](/tools/vidu/) · [Higgsfield](/tools/higgsfield/) · [Hedra](/tools/hedra/)

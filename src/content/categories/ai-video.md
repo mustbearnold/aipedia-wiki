@@ -54,6 +54,8 @@ If you need a person on camera, use avatar tools. The [best AI avatar video gene
 
 **Best budget/effects pick:** Pika. Use it for quick social clips, playful effects, image-to-video experiments, and low-commitment creator workflows.
 
+**Best PixVerse use case:** treat [PixVerse](/tools/pixverse/) as a budget/stylized test bed and API-credit route, not as a default enterprise video system. Its official Platform docs publish V6/C1/V5.6 credit rates and make clear API memberships are separate from PixVerse Web memberships, so buyers should verify web-plan pricing, watermark rules, commercial rights, and upload/data policy before paying.
+
 **Best avatar-video pick:** [HeyGen](/tools/heygen/) for creator/business presenter video, sales video, localization, digital twins, and fast templates. [Synthesia](/tools/synthesia/) is the stronger enterprise training/L&D shortlist when SCORM, LMS, workplace governance, and structured training workflows matter. Use the May 9 verified [avatar-video buyer guide](/guides/best-ai-avatar-video-generator/) when the choice is between HeyGen, Synthesia, Tavus, D-ID, Hedra, Argil, and Captions. If Synthesia is already the incumbent, use the refreshed [Synthesia alternatives guide](/guides/synthesia-alternatives/) to decide whether switching is worth the migration cost.
 
 ## What Hurts Trust
@@ -134,6 +136,8 @@ Yes, but with honest positioning. They are useful for budget testing, effects, o
 - [Pika pricing](https://pika.art/pricing)
 - [OpusClip pricing](https://www.opus.pro/pricing) (verified 2026-05-09)
 - [OpusClip plans and credits](https://help.opus.pro/docs/article/plans-and-credits) (verified 2026-05-09)
+- [PixVerse Platform model pricing](https://docs.platform.pixverse.ai/model-pricing-796039m0) (verified 2026-05-09)
+- [PixVerse API subscription docs](https://docs.platform.pixverse.ai/how-to-subscribe-api-plans-882969m0) (verified 2026-05-09)
 - [HeyGen pricing](https://www.heygen.com/pricing) (verified 2026-05-09)
 - [Synthesia pricing](https://www.synthesia.io/pricing) (verified 2026-05-09)
 

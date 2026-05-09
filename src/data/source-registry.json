@@ -4507,19 +4507,57 @@
     },
     {
       "id": "pixverse-official",
-      "label": "platform.pixverse.ai",
+      "label": "PixVerse Platform",
       "url": "https://platform.pixverse.ai",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-05-09"
     },
     {
       "id": "pixverse-pricing",
-      "label": "Source",
-      "url": "https://www.imagine.art/blogs/pixverse-ai-pricing",
+      "label": "PixVerse model pricing",
+      "url": "https://docs.platform.pixverse.ai/model-pricing-796039m0",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-05-09"
+    },
+    {
+      "id": "pixverse-model-pricing",
+      "label": "PixVerse model pricing",
+      "url": "https://docs.platform.pixverse.ai/model-pricing-796039m0",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-05-09"
+    },
+    {
+      "id": "pixverse-api-subscriptions",
+      "label": "PixVerse API subscription docs",
+      "url": "https://docs.platform.pixverse.ai/how-to-subscribe-api-plans-882969m0",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-05-09"
+    },
+    {
+      "id": "pixverse-api-overview",
+      "label": "PixVerse API overview",
+      "url": "https://docs.platform.pixverse.ai/pixverse-api-llm-txt-2109771m0",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-05-09"
+    },
+    {
+      "id": "pixverse-funding-cntechpost",
+      "label": "CnTechPost AIsphere Series C report",
+      "url": "https://cntechpost.com/2026/03/12/ai-video-startup-aisphere-raises-300-million-record-china-funding/",
+      "type": "news",
+      "trust_tier": "secondary",
+      "volatility": "medium",
+      "last_checked": "2026-05-09"
     },
     {
       "id": "playground-ai-pricing",
