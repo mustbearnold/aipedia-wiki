@@ -19,6 +19,8 @@ const SITEMAP_EXCLUDED_PATHS = new Set([
   '/guides/best-ai-tools-for-real-estate-agents/',
   '/guides/best-ai-tools-under-10-month/',
   '/guides/best-ai-tools-under-50-month/',
+  '/guides/notion-ai-alternatives/',
+  '/guides/otter-ai-alternatives/',
   '/search/',
   '/tool-finder/',
 ]);
