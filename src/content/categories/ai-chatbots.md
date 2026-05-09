@@ -71,6 +71,7 @@ Do not subscribe to multiple chatbots because each one has a new model announcem
 
 - [Best ChatGPT Alternatives](/guides/chatgpt-alternatives/)
 - [Best Gemini Alternatives](/guides/gemini-alternatives/)
+- [Best Claude Alternatives](/guides/claude-alternatives/)
 - [Best AI Coding Assistant](/guides/best-ai-coding-assistant/)
 - [Best Free AI Tools](/guides/best-free-ai-tools/)
 - [Best AI Tools Under $20/month](/guides/best-ai-tools-under-20-month/)
