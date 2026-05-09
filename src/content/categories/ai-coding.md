@@ -64,6 +64,8 @@ AI coding tools now split into five buyer jobs: inline help inside an existing I
 
 **Best developer buyer guide:** [Best AI tools for developers](/guides/best-ai-tools-for-developers/) now separates AI-native IDEs, GitHub-native assistants, terminal agents, OpenAI-native agents, browser app builders, and open-source CLI workflows for developer buyers.
 
+**Best debugging guide:** [Best AI for debugging](/guides/best-ai-for-debugging/) now focuses on reproducible bug loops, IDE fixes, terminal agents, Codex checkpoints, and usage-cost controls rather than stale model-version claims.
+
 ## Money Pages To Build Next
 
 - [Cursor vs GitHub Copilot](/compare/cursor-vs-github-copilot/) should be kept current around Cursor's AI-native IDE fit versus Copilot's GitHub-native governance.
@@ -71,6 +73,7 @@ AI coding tools now split into five buyer jobs: inline help inside an existing I
 - [Daily agentic coding workflow](/workflows/agentic-coding-workflow/) now separates Cursor, Claude Code, GitHub Copilot, and Codex by job while warning teams to model Claude usage and Copilot AI Credits before broad rollout.
 - [Micro-SaaS weekend MVP workflow](/workflows/micro-saas-weekend-build/) now shows how to use Cursor with Supabase, Vercel, Stripe, Lemon Squeezy, and Cloudflare without pretending a weekend prototype is a production SaaS.
 - [Best AI tools for developers](/guides/best-ai-tools-for-developers/) should stay aligned with Cursor, Copilot, Claude Code, Codex, Windsurf, Replit Agent, and Aider usage/pricing changes.
+- [Best AI for debugging](/guides/best-ai-for-debugging/) should stay synchronized with developer tool usage costs and the June 1, 2026 Copilot AI Credits migration.
 - [GitHub Copilot alternatives](/guides/github-copilot-alternatives/) should be monitored through the June 1, 2026 Copilot AI Credits migration.
 - [Cursor alternatives](/guides/cursor-alternatives/) should be monitored monthly because Cursor, Windsurf, Copilot, Claude Code, and Replit all expose usage-sensitive pricing or agent limits.
 - A new `Claude Code vs Codex` comparison would capture terminal-agent and OpenAI/Anthropic agent-intent searches.
