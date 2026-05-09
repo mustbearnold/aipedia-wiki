@@ -2,44 +2,64 @@
 type: category
 slug: ai-research
 title: AI Research Tools
-description: AI-powered tools for academic research, literature review, and paper discovery. Elicit, Consensus, Scite, Connected Papers, Semantic Scholar, Julius, Kagi.
+description: Source-backed AI tools for literature review, paper discovery, citation context, research notebooks, academic search, and evidence synthesis.
 tool_count: 8
-seo_title: "Best AI Research Tools (2026), aipedia.wiki"
-meta_description: "Elicit, Consensus, and Semantic Scholar lead AI academic research tools in 2026. Compare 7 tools including Julius AI and Kagi for literature review, citation analysis, data analysis, and paper discovery. Updated April 2026."
+seo_title: "Best AI Research Tools: Elicit, Scite, Semantic Scholar & Perplexity (May 2026)"
+meta_description: "Compare the best AI research tools in May 2026: Elicit for literature review, Semantic Scholar for free academic search, Scite for citation context, NotebookLM for source-grounded notebooks, and Perplexity for cited web research."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-09
+last_verified: 2026-05-09
 update_frequency: monthly
 ---
 
 ## Overview
 
-AI research tools are reshaping how academics, scientists, and knowledge workers engage with the scholarly literature. Where a systematic literature review once required weeks of manual database searches, abstract screening, and data extraction, tools like Elicit can now automate the majority of that workflow across tens of millions of papers. Elicit is the clear leader in this category, developed by Ought with a mission-driven approach to scientific rigor: its structured data extraction from RCTs and observational studies is used by professional researchers at academic institutions and policy organizations worldwide ([Elicit](https://elicit.com)).
+AI research tools split into four buyer lanes now: **literature review**, **academic search**, **citation context**, and **source-grounded analysis**. The right purchase depends on whether the user needs to find papers, evaluate citations, analyze a fixed source set, or research current web material outside academic databases.
 
-Consensus takes a complementary approach, answering research questions with direct synthesis of claims from peer-reviewed papers, including a consensus meter that quantifies agreement across the literature . a feature with no direct equivalent elsewhere in the category. Scite addresses a different but equally important problem: traditional citation counts treat a citing paper as a positive signal regardless of whether it supports, disputes, or merely mentions the cited work. Scite's smart citation index classifies each citation as supporting, contrasting, or mentioning, giving researchers a sharply more accurate picture of a paper's standing in the literature.
+As of May 9, 2026, **[Elicit](/tools/elicit/)** is AiPedia's best research-workflow pick because it is built around paper discovery, screening, extraction, and evidence tables. **[Semantic Scholar](/tools/semantic-scholar/)** is the free academic-search baseline. **[Scite](/tools/scite/)** is the specialist pick when citation context matters. **[NotebookLM](/tools/notebooklm/)** is best when answers must stay grounded in a chosen source library. **[Perplexity](/tools/perplexity/)** is the best cited-web add-on for current sources, documentation, policy, market, and company research.
 
-Connected Papers and Semantic Scholar serve discovery rather than synthesis. Connected Papers generates a visual graph of related academic papers, allowing researchers to map out a research area and identify foundational works and recent developments without knowing the right search terms. Semantic Scholar, built by the Allen Institute for AI and permanently free, indexes 200 million-plus papers across all disciplines with AI-powered relevance ranking and citation analysis, and is the infrastructure layer that several other tools in this category build upon.
+The wrong move is treating a general chatbot as a research protocol. ChatGPT and Claude can help read, explain, outline, and critique material, but they do not replace database selection, inclusion criteria, source inspection, citation verification, or domain expertise.
 
-The defining characteristic of this category is that the best tools are built on genuine proprietary datasets and methodology, not just an LLM wrapper around existing search engines. That gives Elicit, Scite, and Semantic Scholar stronger moats than most AI tool categories.
+## Best Picks
 
-## The Players
+| Buyer job | Best starting tool | Why | Watch-out |
+|---|---|---|---|
+| Systematic or semi-systematic literature review | [Elicit](/tools/elicit/) | Built around papers, screening, extraction, and evidence tables | Search strategy and extraction fields still need human review |
+| Free academic search and citation trails | [Semantic Scholar](/tools/semantic-scholar/) | Strong free discovery layer for papers, authors, related work, and citations | Not a full literature-review workflow by itself |
+| Citation support/contrast context | [Scite](/tools/scite/) | Helps show whether later papers support, contrast, or merely mention prior work | Coverage depends on indexed literature and publisher access |
+| Source-grounded notebooks | [NotebookLM](/tools/notebooklm/) | Good when the source set is already selected and answers should stay inside it | It cannot discover what you did not provide |
+| Current cited web research | [Perplexity](/tools/perplexity/) | Fast source trails for current web, policy, product, and market questions | Inspect primary sources before citing |
+| Claim-level academic Q&A | [Consensus](/tools/consensus/) | Useful for quick synthesis from peer-reviewed literature | Treat as a starting point, not the conclusion |
+| Visual related-paper mapping | [Connected Papers](/tools/connected-papers/) | Helps map a field and find adjacent or foundational papers | Better for discovery than source evaluation |
 
-| Tool | Price | Best For | Utility | Value | Moat | Longevity |
-|------|-------|----------|---------|-------|------|-----------|
-| **Elicit** | Free / $12 Plus | Systematic literature review, data extraction | 9 | 9 | 7 | 9 |
-| **Consensus** | Free / $10.99 Premium | Research question synthesis, consensus meter | 8 | 8 | 7 | 8 |
-| **Scite** | Free / $20 Essential | Smart citation analysis, citation type index | 8 | 7 | 8 | 8 |
-| **Connected Papers** | Free / $5 Academic | Visual paper graph, research area mapping | 7 | 8 | 6 | 7 |
-| **Semantic Scholar** | Free (always) | Comprehensive academic search, API | 9 | 10 | 8 | 9 |
+## What To Buy First
 
-## Our Pick
+Researchers doing evidence reviews should start with Elicit plus Semantic Scholar. That covers structured workflow and free academic discovery.
 
-**Elicit** is the best AI research tool for anyone conducting systematic or semi-systematic literature reviews. Its structured extraction workflows, powered by a curated corpus of academic papers, save professional researchers hours per project and meaningfully reduce missed relevant papers. For general academic search that is always free, **Semantic Scholar** is indispensable and has the strongest institutional backing in the category through the Allen Institute for AI.
+Students and analysts working from a fixed set of class readings, PDFs, interviews, or reports should start with NotebookLM. It is safer for source-grounded study than asking a general chatbot to roam.
+
+Teams checking whether evidence is supported or disputed should evaluate Scite. It is a paid specialist for citation context, not a general writing assistant.
+
+People doing current business, policy, product, or technical research should add Perplexity. It is stronger for fast cited web trails than academic-only tools.
+
+## Money Guides
+
+- [Best AI Tools for Researchers](/guides/best-ai-tools-for-researchers/)
+- [Best AI for Citations and References](/guides/best-ai-for-citations/)
+- [Best AI Tools for Students](/guides/best-ai-tools-for-students/)
+- [Best AI for Data Analysis](/guides/best-ai-for-data-analysis/)
+- [Best AI for Medical Research](/guides/best-ai-for-medical-research/) - high-stakes page pending rebuild/noindex review
+
+## Trust Rules for Research AI
+
+Do not cite generated text. Cite the original source. Do not treat a linked source trail as proof of truth. Do not upload confidential research, private interviews, patient data, unpublished manuscripts, or restricted institutional material without checking policy and vendor terms. AI can shorten the path to evidence, but it cannot own the evidence judgment.
 
 ## Sources
 
-- Elicit: [https://elicit.com](https://elicit.com)
-- Consensus: [https://consensus.app](https://consensus.app)
-- Scite: [https://scite.ai](https://scite.ai)
-- Connected Papers: [https://connectedpapers.com](https://connectedpapers.com)
-- Semantic Scholar: [https://semanticscholar.org](https://semanticscholar.org)
+- [Elicit pricing](https://elicit.com/pricing) - verified 2026-05-09.
+- [Semantic Scholar](https://www.semanticscholar.org/) - verified 2026-05-09.
+- [Scite](https://scite.ai/) - verified 2026-05-09.
+- [NotebookLM](https://notebooklm.google/) - verified 2026-05-09.
+- [Perplexity Enterprise](https://www.perplexity.ai/enterprise) - verified 2026-05-09.
+- [Consensus](https://consensus.app/) - verified 2026-05-09.
+- [Connected Papers](https://www.connectedpapers.com/) - verified 2026-05-09.
