@@ -1,67 +1,64 @@
 ---
 type: use-case
 slug: ai-customer-support
-title: "Best AI Tools for Customer Support (2026)"
-seo_title: "Best AI Customer Support Tools (2026), aipedia.wiki"
-meta_description: "Compare top AI tools for automating customer support tickets: n8n + Claude Opus 4.7 leads for custom workflows at $50-200/mo; Intercom Fin runner-up for no-setup resolution."
+title: "AI Customer Support Guide (Archived)"
+seo_title: "AI Customer Support Guide: Archived AiPedia Route"
+meta_description: "This old AI customer support guide is archived and merged into AiPedia's current source-backed customer-support AI buyer guide."
 author: "aipedia.wiki Editorial"
-description: "n8n + Claude Opus 4.7 automates 70-80% of tickets via workflows and AI responses."
-tools_mentioned: [n8n, claude]
-last_updated: 2026-05-03
-last_verified: 2026-05-03
-update_frequency: quarterly
+description: "Archived merge page for an older AI customer support guide that overlapped with a stronger current buyer guide."
+tools_mentioned: [intercom, voiceflow, ada, retell-ai, n8n, claude]
+last_updated: 2026-05-09
+last_verified: 2026-05-09
+update_frequency: monthly
+noindex: true
 ---
 
-# Best AI Tools for Customer Support (2026)
+# AI Customer Support Guide (Archived)
 
-AI customer support tools classify tickets, generate responses, and escalate issues to automate 70-80% of routine inquiries like password resets, order status, and billing questions. n8n with Claude Opus 4.7 (flagship as of 2026-04-15) handles custom workflows and structured responses at $50-200/mo total, replacing 1-3 agents. Intercom Fin follows for built-in resolution without setup.
+This guide is archived and noindexed as of 2026-05-09.
 
-## Quick Verdict
-**n8n + Claude Opus 4.7** tops for flexibility; n8n (cloud $24/mo starter as of 2026-04-15) orchestrates workflows across help desks, Claude Opus 4.7 ($5/$25 per million tokens input/output) excels at instruction-following with low hallucination for support tasks. Total usage stays $50-200/mo for 500 tickets.
-**Runner-up: Intercom Fin** offers zero-setup AI in existing platforms ($0.99/resolution); suits teams avoiding custom builds but scales costlier for volume. top-tier OpenAI models can trail on cost for structured support tasks.
+AiPedia removed the previous version from the active index because it overlapped with the stronger [Best AI Tools for Customer Support](/guides/best-ai-tools-for-customer-support/) buyer guide and carried stale April 2026 claims. The old route used unsupported automation percentages, brittle model labels such as "Claude Opus 4.7," fixed replacement-savings claims, and old pricing language.
 
-| Tool | Version (2026-04-15) | Monthly Cost | Auto-Resolution Fit | Setup Time |
-|------|----------------------|--------------|---------------------|------------|
-| **n8n + Claude Opus 4.7** | n8n 1.92 / Claude Opus 4.7 | $50-200 | 70-80% (custom) | 3-5 days |
-| **Intercom Fin** | Fin 3.2 | $0.99/resolution | 60-70% (built-in) | 1 day |
-| **OpenAI API** | GPT-5 family | $100-500 (usage) | 65-75% | 3-5 days |
-| **Gemini 3.1 Pro** | 3.1 Pro | $20-150 (usage) | 60-70% | 3-5 days |
+That is not good enough for a support-automation page. Customer-support AI is a commercial decision about tickets, chat, phone, human handoff, knowledge-base quality, seat costs, outcome pricing, governance, and escalation risk. It should not be reduced to one generic LLM plus a guessed automation percentage.
 
-## n8n + Claude Opus 4.7
-n8n automates workflows via visual nodes connecting help desks (Zendesk, Intercom) to AI APIs; version 1.92 (2026-04-15) adds native Claude Opus 4.7 support and confidence scoring. Claude Opus 4.7, Anthropic's flagship, processes tickets for classification ("auto-resolve or escalate?") and responses using knowledge base context; $5 input / $25 output per million tokens (1M context). For 500 tickets/mo (avg 2k tokens each), expect $30-100/mo on Claude plus n8n cloud starter $24/mo.
-Why it fits: Handles 70-80% resolution with guardrails like 1-10 confidence scores (route <7 to humans), keyword flags ("refund," "complaint"), and repeat-customer logic. Low hallucination suits policy-bound replies; integrates existing FAQs via RAG. Deploy in 3-5 days: trigger on new ticket, classify/respond/branch. Beats top-tier OpenAI models on cost-accuracy for structured tasks; outperforms Gemini 3.1 Pro on instruction adherence. Limitations: Requires workflow setup; self-host free but adds infra management. Total replaces $3k-15k/mo agents[1][7].
+## Where To Go Instead
 
-## Intercom Fin
-Intercom Fin 3.2 (2026-04-15) embeds AI resolution in Intercom chats/tickets; auto-classifies, responds from FAQs, escalates via sentiment. Pricing $0.99 per AI resolution (no base fee if on Intercom plans $74+/mo). For 500 tickets at 70% auto, ~$350/mo.
-Why it fits: Zero custom code; activates in days for 60-70% resolution on routine queries. Uses proprietary models tuned for support (comparable to Claude Sonnet). Good for Intercom users avoiding APIs. Limitations: Per-resolution fees grow with volume (e.g., 1k/mo = $700); less flexible than n8n for multi-platform or deep customization. Trails n8n stack on cost for high volume[1].
+- For the current source-backed buyer guide, use [Best AI Tools for Customer Support](/guides/best-ai-tools-for-customer-support/).
+- For an all-in-one AI support platform, compare [Intercom](/tools/intercom/).
+- For designing chat or voice flows before a full helpdesk migration, compare [Voiceflow](/tools/voiceflow/).
+- For enterprise CX automation, compare [Ada](/tools/ada/).
+- For phone-heavy support workflows, compare [Retell AI](/tools/retell-ai/).
+- For custom workflow automation, compare [n8n](/tools/n8n/) and [Claude](/tools/claude/) after modeling API usage and human review.
 
-## OpenAI GPT-5 API
-OpenAI GPT-5 family models via API can handle classification and response generation. Pricing depends on selected model, context length, and volume. Pair with n8n or Zapier for roughly $100-500/mo at 500-ticket scale.
-Why it fits: Strong on creative responses but higher hallucination than Claude for strict policies. 65-75% resolution with prompting. Limitations: 6x costlier output than Claude; rate limits on low tiers. Use if already in OpenAI ecosystem[7][8].
+## Why This Route Was Merged
 
-## Gemini 3.1 Pro
-Google Gemini 3.1 Pro API (2026-04-15) at $0.50-$2/M tokens (est.); good multimodal for ticket images. ~$20-150/mo usage.
-Why it fits: Fast, cheap for volume; 60-70% resolution. Limitations: Weaker instruction-following vs Claude; Google ecosystem lock-in[1].
+The current support guide is more useful because it separates four buyer jobs:
 
-## How We Chose
-Ranked by resolution rate/cost ratio from benchmarks (LMSYS Arena support evals), pricing pages (2026-04-15), and published deployment case studies. Prioritised 70%+ automation, < $200/mo for 500 tickets, multi-helpdesk support. See methodology.
+- AI support platform with human inbox and help center.
+- Builder or budget path for teams that want to design flows.
+- Enterprise CX automation for high-volume operations.
+- Voice-agent support for phone-heavy workflows.
 
-## FAQ
-**What is the fastest setup?**
-Intercom Fin (1 day) if using Intercom; n8n + Claude needs 3-5 days for workflows.
+It also avoids pretending that a generic model can guarantee a fixed support-resolution rate. Before buying, teams should test historic tickets, define escalation rules, model monthly outcomes or seats, and decide which conversations are safe to automate.
 
-**Free options?**
-n8n self-hosted (free) + Claude Haiku ($0.25/$1.25/M) totals $10-30/mo; accuracy drops to 60%.
+## Rebuild Standard
 
-**Does it handle voice/video tickets?**
-n8n + Claude/OpenAI yes via transcription nodes; Intercom Fin limited to text/chat.
+AiPedia should only reindex this route if it becomes a distinct implementation playbook rather than a duplicate buyer guide. A rebuilt page should answer:
 
-**ROI timeline?**
-40-50% resolution week 1, 70-80% by month 2; saves 30+ agent hours/mo at 500 tickets.
+- Which helpdesk or inbox is already in place?
+- Which support jobs can be automated safely?
+- What knowledge-base cleanup is required before launch?
+- What escalation and human-review rules are mandatory?
+- Which pricing model applies: seats, outcomes, resolutions, minutes, credits, or API usage?
+- Which analytics events measure deflection, resolution, hallucination, escalation, and refund risk?
 
-## Sources
-- [n8n Pricing](https://n8n.io/pricing/) - Cloud starter $24/mo (2026-04-15).
-- [Anthropic Pricing](https://anthropic.com/pricing/) - Claude Opus 4.7 $5/$25/M tokens.
-- [OpenAI Pricing](https://openai.com/api/pricing/) - OpenAI GPT-5 API pricing[7].
-- [Intercom Fin](https://www.intercom.com/fin) - $0.99/resolution.
----
+Until then, this route exists only as a consolidation page so old links do not become a dead end.
+
+## Sources Checked
+
+- [Best AI Tools for Customer Support](/guides/best-ai-tools-for-customer-support/) - AiPedia's current customer-support AI buyer guide.
+- [Intercom pricing](https://www.intercom.com/pricing) - checked 2026-05-09 for Fin outcome pricing and seat packaging.
+- [Fin AI Agent outcomes](https://www.intercom.com/help/en/articles/8205718-fin-ai-agent-outcomes) - checked 2026-05-09 for outcome/resolution billing behavior.
+- [n8n pricing](https://n8n.io/pricing/) - checked 2026-05-09 for cloud/self-hosted plan structure and execution limits.
+- [OpenAI API pricing](https://openai.com/api/pricing/) - checked 2026-05-09 for current model pricing language.
+- [Anthropic pricing](https://www.anthropic.com/pricing) - checked 2026-05-09 for Claude API pricing direction.
