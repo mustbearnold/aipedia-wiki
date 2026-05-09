@@ -140,6 +140,7 @@ Priority pages must avoid horizontal overflow at 360/390/430/768/1024 and presen
 - 2026-05-09: Light-refreshed `ai-lead-generation`; reverified Apollo, Clay, Amplemarket, n8n, and Instantly official source trails, advanced the page to May 9, added Apollo credits and Clay current Launch/Growth pricing details, kept the AI Automation parent aligned, and promoted the route on `/guides/`.
 - 2026-05-09: Refreshed `best-ai-avatar-video-generator`; reverified official HeyGen, Synthesia, Tavus, D-ID, Hedra, Argil, and Captions source trails; advanced verification to May 9; expanded structured `tools_mentioned`; added a do-not-buy section; removed stale Tavus/Hedra/Captions framing; and kept the AI Video parent category plus `/guides/` featured placement aligned.
 - 2026-05-09: Light-refreshed `best-ai-for-ad-copy`; reverified current official ChatGPT, OpenAI Business, AdCreative.ai, Jasper, Copy.ai, and Unbounce source trails; advanced verification to May 9; tightened AdCreative.ai credit/billing caveats and creative-volume measurement guidance; and updated AI Writing plus AI SEO parent surfaces while keeping `/guides/` featured placement aligned.
+- 2026-05-09: Light-refreshed `best-ai-for-cold-email`; reverified current official Apollo, Instantly, Clay, and Amplemarket source trails; advanced verification to May 9; tightened sender-versus-lead-credit and deliverability measurement guidance; corrected stale Clay Growth price framing; and updated the AI Automation parent surface.
 
 ## 15. Final report
 Pending.
