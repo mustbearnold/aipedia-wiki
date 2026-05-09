@@ -66,6 +66,8 @@ AI coding tools now split into five buyer jobs: inline help inside an existing I
 
 **Best debugging guide:** [Best AI for debugging](/guides/best-ai-for-debugging/) now focuses on reproducible bug loops, IDE fixes, terminal agents, Codex checkpoints, and usage-cost controls rather than stale model-version claims.
 
+**Best code review guide:** [Best AI for code review](/guides/best-ai-for-code-review/) now separates dedicated PR review tools, enterprise code-quality governance, GitHub-native review, Cursor Bugbot, and senior-engineer agent review loops while warning teams about Copilot's June 1, 2026 private-repo Actions-minutes billing change.
+
 ## Money Pages To Build Next
 
 - [Cursor vs GitHub Copilot](/compare/cursor-vs-github-copilot/) should be kept current around Cursor's AI-native IDE fit versus Copilot's GitHub-native governance.
@@ -74,6 +76,7 @@ AI coding tools now split into five buyer jobs: inline help inside an existing I
 - [Micro-SaaS weekend MVP workflow](/workflows/micro-saas-weekend-build/) now shows how to use Cursor with Supabase, Vercel, Stripe, Lemon Squeezy, and Cloudflare without pretending a weekend prototype is a production SaaS.
 - [Best AI tools for developers](/guides/best-ai-tools-for-developers/) should stay aligned with Cursor, Copilot, Claude Code, Codex, Windsurf, Replit Agent, and Aider usage/pricing changes.
 - [Best AI for debugging](/guides/best-ai-for-debugging/) should stay synchronized with developer tool usage costs and the June 1, 2026 Copilot AI Credits migration.
+- [Best AI for code review](/guides/best-ai-for-code-review/) should stay synchronized with CodeRabbit, Qodo, GitHub Copilot code review billing, Cursor Bugbot, Claude Code, and Codex because AI-generated code is increasing review load.
 - [Best AI for API documentation](/guides/best-ai-for-api-documentation/) now separates hosted docs platforms, SDK/docs generators, developer portals, and repo-aware AI assistants instead of ranking generic chatbots as if they were documentation systems.
 - [Best open source AI tools](/guides/best-open-source-ai-tools/) should stay synchronized with Ollama, LM Studio, Open WebUI, Llama, Mistral, DeepSeek, and open-model licensing because developer buyers often want local or self-hosted control before paying for hosted agents.
 - [DeepSeek alternatives](/guides/deepseek-alternatives/) should stay synchronized with ChatGPT, Claude, Cursor, Gemini, Mistral, Perplexity, and the open-source AI guide because DeepSeek switching intent often overlaps with coding, model cost, and local/open-model control.
