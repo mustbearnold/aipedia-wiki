@@ -92,6 +92,7 @@ Priority pages must avoid horizontal overflow at 360/390/430/768/1024 and presen
 - 2026-05-09: Refreshed `best-ai-for-transcription` and parent `ai-voice` category with current official Fathom, Descript, Deepgram, AssemblyAI, and ElevenLabs sources; repositioned the guide around meeting transcripts, creator editing, speech-to-text APIs, and voice-platform transcription; removed unsupported accuracy claims; and promoted the guide on `/guides/`.
 - 2026-05-09: Refreshed `best-ai-tools-for-designers` and parent `ai-design` category with current official Figma, Canva, Midjourney, Adobe Firefly, Google Stitch, v0, Lovable, and Bolt.new sources; removed unsupported old model/version claims and bad relative links; added guide picks; and promoted the guide on `/guides/`.
 - 2026-05-09: Refreshed `best-ai-automation-platform` and parent `ai-automation` category with current official n8n, Zapier, Make, Gumloop, Relevance AI, Lindy, Pipedream, and CrewAI sources; removed April 2026 version/pricing claims and bad relative links; added guide picks; and kept the already-featured `/guides/` placement aligned.
+- 2026-05-09: Refreshed `github-copilot-alternatives` and parent `ai-coding` category with current official GitHub Copilot plans/billing, Cursor, Claude Code, Windsurf, Gemini Code Assist, and Claude Max sources; removed stale April model/pricing claims and bad relative links; added guide picks; and promoted the guide on `/guides/`.
 
 ## 15. Final report
 Pending.
