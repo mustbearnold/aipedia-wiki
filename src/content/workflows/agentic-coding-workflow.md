@@ -3,92 +3,181 @@ type: workflow
 slug: agentic-coding-workflow
 title: "Daily Agentic Coding Workflow with Claude Code and Cursor"
 seo_title: "Daily Agentic Coding Workflow with Claude Code and Cursor (2026)"
-meta_description: "Ship production code faster by splitting work between a CLI agent (Claude Code) and an IDE agent (Cursor). Verified April 2026."
-description: "Ship production code faster by splitting work between a CLI agent (Claude Code) and an IDE agent (Cursor)."
-stack: [claude-code, cursor]
-tools_mentioned: [claude-code, cursor]
+meta_description: "Updated May 9, 2026: a source-backed workflow for splitting repo work between Claude Code, Cursor, GitHub Copilot, and Codex without losing review control."
+description: "A current workflow for splitting repo work between Claude Code, Cursor, GitHub Copilot, and Codex while keeping human review, cost control, and safe git checkpoints."
+stack: [claude-code, cursor, github-copilot, codex]
+tools_mentioned: [claude-code, cursor, github-copilot, codex]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-17
-last_verified: 2026-04-17
-update_frequency: quarterly
+last_updated: 2026-05-09
+last_verified: 2026-05-09
+update_frequency: monthly
 ---
 
 # Daily Agentic Coding Workflow with Claude Code and Cursor
 
-This workflow routes tasks between Claude Code v2.1.108 (deliberate multi-file refactors) and Cursor 2.0 (inline edits and agentic iteration). Production shops using the split report roughly 3× throughput vs. single-tool setups. Total stack cost: $120/mo.
+Agentic coding is not "let one AI write everything." The working pattern in 2026 is a supervised loop: use one tool for fast in-editor iteration, one tool for deliberate repo-wide work, one system of record for git, and one human checkpoint before anything reaches production.
 
-## The short version
+**AiPedia verdict, verified May 9, 2026:** use [Cursor](/tools/cursor/) for fast editing and local codebase flow, use [Claude Code](/tools/claude-code/) for terminal-based investigation and multi-file tasks, keep [GitHub Copilot](/tools/github-copilot/) in the conversation if your team is GitHub-native, and use [Codex](/tools/codex/) when you want a coding agent to run checks, prepare PR-style changes, or keep working across a local project.
 
-- Start tasks in Cursor 2.0 for autocomplete and single-file agents. Switch to Claude Code v2.1.108 CLI for anything spanning 5+ files or needing a full plan.
-- Maintain a .claude/ folder with CLAUDE.md, repo-map.txt, and task-plans/ to give Claude Code instant context. Cursor reads .cursor/rules/ separately.
-- Hand off diffs via git branches; review in Cursor. Saves 4 hours per day on refactors vs. fully manual work. Cost: $120/mo vs. $5,000/mo for a junior developer.
+**Do not run this workflow without git discipline.** Every agentic session needs a branch, a clear task file, a diff review, and real tests. The cost and risk both rise when agents run without scope.
 
-## The stack
+---
 
-### [Claude Code v2.1.108](/tools/claude-code/) ($100/mo Max)
+## The Short Version
 
-Claude Code owns multi-file refactors, test suite generation, and architecture tasks. The 1M token context on Opus 4.7 holds a 50k LOC repo. Agent Teams spawn subagents for exploration and review. Recommended setup: run it via CLI inside Cursor's terminal for a separate panel and checkpoints. Avoid the Cursor extension; it breaks on IDE updates.
+- **Cursor owns the editing surface.** Use it for autocomplete, local refactors, quick fixes, component work, and review polish.
+- **Claude Code owns deliberate terminal tasks.** Use it for repo investigation, multi-file changes, dependency mapping, tests, and command-driven debugging.
+- **Copilot is the GitHub-native option.** It is valuable for teams already standardizing on GitHub, but GitHub's June 1, 2026 AI Credits billing shift means agent-heavy usage needs cost modeling.
+- **Codex is the long-running project agent.** Use it when you want the agent to inspect files, edit, run checks, keep progress plans, and ship commits through the same local project workflow.
+- **Humans own merge decisions.** Agents can propose and verify. They should not silently merge production changes.
 
-### [Cursor 2.0](/tools/cursor/) ($20/mo Pro)
+---
 
-Cursor owns daily velocity: tab autocomplete, inline Composer 2 edits, and Agents Window for parallel subagents on UI or single-file bugs. Cloud agents handle async builds without blocking the operator. Task split: 80% goes to Cursor, 20% to Claude Code's deliberate sessions.
+## Best Tool by Coding Job
 
-## The workflow, step by step
+| Coding job | Start with | Why | Watch out |
+|---|---|---|---|
+| Daily in-editor coding | [Cursor](/tools/cursor/) | Fastest loop for editing files, reviewing diffs, and staying in the project | Heavy agent usage can push you into higher usage tiers |
+| Multi-file repo investigation | [Claude Code](/tools/claude-code/) | Terminal-native agent flow, command execution, and strong planning loops | Pro/Max/API limits and extra usage need monitoring |
+| GitHub-native team workflow | [GitHub Copilot](/tools/github-copilot/) | Strong IDE, PR, policy, and enterprise fit for GitHub teams | AI Credits billing starts June 1, 2026 |
+| Autonomous checkpoint work | [Codex](/tools/codex/) | Good for local repo inspection, edits, checks, commits, and multi-step site work | Still needs review scope and explicit acceptance criteria |
 
-1. Open the repo in Cursor 2.0. Cmd+K on a file for inline edits or tab for autocomplete. For agents, open Agents Window (Cmd+Shift+A). Sample prompt: "Fix this React component to use new hooks API. Read src/components/, run tests, iterate on failures." Cursor's subagents handle research and commands.
+---
 
-2. For multi-file tasks, create a git branch: `git checkout -b claude-refactor-api`. In Cursor terminal, run `claude-code init`. That scaffolds the .claude/ folder if missing.
+## Daily Workflow
 
-3. Build .claude/ context. Create CLAUDE.md: "Project: Next.js ecom app. Conventions: ESLint strict, tests with Vitest 90% coverage, Zustand stores. Never commit console.logs. API layer in /lib/api/." Add repo-map.txt: tree output from `tree -I node_modules`. Dump open tickets into tasks/ as .md files.
+### 1. Start with a branch and a written task
 
-4. Prompt Claude Code CLI: "Read .claude/ fully. Task from tasks/api-migrate.md: Migrate /lib/api/users to tRPC. Plan in task-plans/api-migrate-plan.md first. Use Agent Teams: explorer subagent maps deps, implementer edits files, tester runs vitest --coverage, reviewer diffs changes. Output diff only after approval." Claude plans, checkpoints, edits 10-20 files.
+Create a branch before the first agent prompt. Then write a short task note that says:
 
-5. Review the diff in Claude's panel. Type "approve" to commit to the branch; it runs git diff and pushes to origin/claude-refactor-api. If wrong: "reject and iterate: missed auth middleware."
+- what files or routes are in scope,
+- what behavior should change,
+- what must not change,
+- which checks must pass,
+- what evidence should prove the change is safe.
 
-6. Switch to Cursor: `git checkout claude-refactor-api`. Agents Window: "Review and polish these 15 files. Inline fix TypeScript errors, add JSDoc. Run full test suite." Cursor iterates fast on edges.
+This makes the agent better and protects the repo. A vague prompt like "clean this up" is how agentic work leaks into unrelated files.
 
-7. Merge: `git checkout main; git merge claude-refactor-api --no-ff`. Cursor's background agent runs a CI sim: "Build, test, lint full repo." Push if green.
+### 2. Use Cursor for local flow
 
-8. Daily cleanup: `claude-code clean` removes temp branches. Cursor Agents Window archives sessions. Total cycle: roughly 45 minutes on a task that would take 4 hours manually.
+Open the repo in Cursor when the task is close to the code you are already reading: component edits, CSS fixes, small refactors, TypeScript cleanup, test updates, docs edits, and review polish.
 
-## Where it breaks
+Cursor is best when you can see the diff quickly and steer the tool inside the current editor context. It is not automatically the best choice for a wide architectural migration unless you have already mapped the affected files.
 
-Claude Code hallucinates file paths without a current repo-map.txt. A stale map can cost hours debugging phantom files. Refresh the map weekly.
+### 3. Use Claude Code for deliberate terminal work
 
-Cursor 2.0 IDE updates have broken the Claude Code extension panel multiple times since January 2026. Stick to the CLI.
+Use Claude Code when the task needs command-line inspection, test loops, dependency mapping, or broad repo changes. The strongest pattern is:
 
-Parallel agents conflict on shared files if both run without isolated branches. Overwrites have killed deploys. Always branch before a Claude Code session.
+1. ask Claude Code to inspect before editing,
+2. ask for a plan,
+3. let it make a scoped change,
+4. run tests,
+5. review the diff from a separate surface.
 
-Heavy Claude sessions hit the $100/mo Max quota fast. Claude Pro at $20 is too light for daily agentic work; budget Max if this stack is the daily driver.
+Anthropic's current help docs say Claude Code can be used with paid Pro or Max plans, and the Claude Code docs point subscription pricing back to Claude's plan pages while also warning that cost reporting can change as the product updates. Treat that as a reason to watch usage rather than publishing a fixed monthly cost.
 
-## Monthly cost
+### 4. Use Copilot if GitHub is the team's center
 
-| Tool | Price/mo | Notes |
-|---|---|---|
-| Cursor 2.0 Pro | $20 | Unlimited autocomplete, 10 parallel agents. |
-| Claude Code Max | $100 | 1M tokens on Opus 4.7, Agent Teams; Pro $20 too light for daily. |
-| **Total** | **$120** | Vs. $5,000/mo junior dev (160h @ $30/h). |
+GitHub Copilot still makes sense when the team lives in GitHub, VS Code, JetBrains, pull requests, policies, and enterprise controls. But the buyer conversation changed: GitHub's official billing docs say Copilot is moving to usage-based billing with GitHub AI Credits on June 1, 2026, and code review will also consume GitHub Actions minutes.
 
-## Who this is for
+That does not make Copilot bad. It means agentic review, autonomous coding sessions, and premium-model usage need a budget owner.
 
-Copy this stack for 20k+ LOC repos where afternoons disappear into manual refactors. Optimal for solo developers and 2-person teams shipping weekly.
+### 5. Use Codex for project checkpoints
 
-Skip it for greenfield prototypes (Cursor alone wins) or for enterprise work with strict compliance (self-hosted tooling required).
+Use Codex when the task is not just "edit this file" but "inspect the repo, maintain a plan, update parent pages, run checks, commit, and push." That is especially useful for content-heavy projects, documentation systems, SEO sites, and long-running rebuilds where the work must be auditable.
+
+The same rule applies: no silent merges, no vague tasks, no unsupported claims, and no skipping checks.
+
+---
+
+## Handoff Pattern
+
+Use this loop for high-value work:
+
+1. **Cursor reads and edits the immediate file.**
+2. **Claude Code investigates broader dependencies.**
+3. **Cursor reviews and polishes the diff.**
+4. **Codex runs the project-specific checks and updates plan/docs if needed.**
+5. **A human reviews the final diff before merge.**
+
+This split keeps each tool in its lane. The risk with agentic coding is not that one tool is weak; it is that five tools all touch the same files without ownership.
+
+---
+
+## Cost Control Rules
+
+Do not budget agentic coding as a fixed "$120/month" stack. That is no longer honest enough.
+
+- Cursor has Free, Pro, Pro+, Ultra, Teams, and Enterprise-style paths, and heavier agent usage can make the right plan different from the cheapest paid plan.
+- Claude Code can be used through paid Claude plans or API-style usage paths, and Anthropic exposes usage/cost controls because longer sessions can consume more.
+- GitHub Copilot moves toward AI Credits on June 1, 2026; organizations should review preview billing and set budgets before agent-heavy use.
+- Codex cost depends on how you run it and which model/workflow is used.
+
+The practical rule: if the agent saves a shipping day, the cost can be worth it. If the agent spends hours exploring vague tasks, it can become an expensive distraction.
+
+---
+
+## Where It Breaks
+
+**Agents edit too broadly.** Fix this with branch scope, file ownership, and explicit "do not touch" notes.
+
+**Repo context goes stale.** Fix this by updating project instructions, task plans, route maps, and test commands when the repo changes.
+
+**Tests become theater.** Fix this by requiring checks that actually cover the changed behavior, not only a green build.
+
+**Costs surprise the team.** Fix this by checking Claude usage, Cursor plan fit, Copilot AI Credits, and any API keys before assigning agentic work broadly.
+
+**Review quality drops.** Fix this by forcing every agent-produced change through a human diff review and at least one independent verification command.
+
+---
+
+## Who Should Use This Workflow
+
+Use it if:
+
+- you work in an active repo with tests and git history,
+- tasks often span multiple files,
+- you can review code,
+- you care about shipping faster without giving up control,
+- agent costs are cheaper than the engineering time saved.
+
+Skip it if:
+
+- the app has no tests or no clear owner,
+- you cannot review the generated code,
+- the task is a tiny one-file edit,
+- compliance rules require a stricter approved-tool path,
+- nobody owns the monthly usage budget.
+
+---
 
 ## FAQ
 
-**Can a single subscription cover both tools?**
-No. Cursor Pro at $20 via cursor.com; Claude Code Max at $100 via anthropic.com. No overlap on billing.
+**Should Cursor or Claude Code be the default?**
+Cursor is the default when you are editing and reviewing locally. Claude Code is the default when the work needs terminal investigation, planning, command execution, and multi-file iteration.
 
-**Can the two tools share context?**
-No. Maintain CLAUDE.md for Claude Code and .cursor/rules/ for Cursor. Copy-paste key sections weekly.
+**Is GitHub Copilot still worth using?**
+Yes for GitHub-native teams, especially where IDE coverage, PR flow, governance, and enterprise controls matter. The June 1, 2026 AI Credits move means cost controls now matter more for agent-heavy usage.
 
-**CLI or extension for Claude Code inside Cursor?**
-CLI only. The extension loses its panel on Cursor updates and needs reinstalling every 2 weeks.
+**Can agents merge their own changes?**
+Not on serious work. Let agents make branches, run checks, and prepare commits. Keep merge authority with a human reviewer or a clearly defined release process.
 
-**How many files before switching from Cursor to Claude Code?**
-5+. Cursor shines under that threshold. Claude's 1M context owns sprawling multi-file work.
+**What is the safest first setup?**
+Use Cursor for local edits, Claude Code for one scoped terminal task at a time, and a required diff review before commit. Add Copilot/Codex only when they solve a specific workflow gap.
 
-## Methodology
+**What is the biggest mistake?**
+Giving agents broad instructions without a task file, branch, tests, and review path. That creates fast-looking work that is hard to trust.
 
-This workflow page was produced by the aipedia.wiki editorial pipeline. Tool versions, pricing, and integration behavior are verified quarterly against vendor documentation. Last verified 2026-04-17.
+## Sources
+
+- [Cursor pricing](https://cursor.com/pricing), verified 2026-05-09
+- [Cursor usage docs](https://docs.cursor.com/account/usage), verified 2026-05-09
+- [Claude Code docs](https://code.claude.com/docs/en/overview), verified 2026-05-09
+- [Claude Code cost management](https://code.claude.com/docs/en/costs), verified 2026-05-09
+- [Use Claude Code with Pro or Max](https://support.claude.com/en/articles/11145838-use-claude-code-with-your-pro-or-max-plan), verified 2026-05-09
+- [Claude Max plan](https://support.claude.com/en/articles/11049741-what-is-the-max-plan), verified 2026-05-09
+- [GitHub Copilot plans](https://github.com/features/copilot/plans), verified 2026-05-09
+- [GitHub Copilot usage-based billing](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-individuals), verified 2026-05-09
+- [GitHub Copilot code review billing change](https://github.blog/changelog/2026-04-27-github-copilot-code-review-will-start-consuming-github-actions-minutes-on-june-1-2026), verified 2026-05-09
+
+---

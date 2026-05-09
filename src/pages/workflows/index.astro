@@ -21,8 +21,9 @@ const sorted = entries
     description: e.data.meta_description || e.data.description || '',
     stack: e.data.stack || [],
     lastUpdated: toYmd(e.data.last_updated),
+    lastVerified: toYmd(e.data.last_verified),
   }))
-  .sort((a, b) => a.title.localeCompare(b.title));
+  .sort((a, b) => (b.lastVerified || b.lastUpdated).localeCompare(a.lastVerified || a.lastUpdated) || a.title.localeCompare(b.title));
 ---
 
 <BaseLayout
@@ -58,6 +59,11 @@ const sorted = entries
         <p class="text-[13.5px] leading-relaxed text-[var(--text-secondary)] m-0 mb-3">
           {w.description}
         </p>
+        {(w.lastVerified || w.lastUpdated) && (
+          <p class="text-[11px] font-semibold uppercase tracking-[0.08em] text-[var(--text-muted)] m-0 mb-3">
+            Verified {w.lastVerified || w.lastUpdated}
+          </p>
+        )}
         {w.stack.length > 0 && (
           <div class="flex flex-wrap gap-1.5 pt-2 border-t border-[var(--border)]">
             {w.stack.slice(0, 6).map((s: string) => (
