@@ -38,7 +38,7 @@ The practical question is no longer "which model can make an image?" Most major 
 |------|-------|----------|---------|-------|------|-----------|
 | **Midjourney** | $10-60/mo | Best artistic/aesthetic quality | 10 | 8 | 9 | 9 |
 | **GPT Image 2 (OpenAI)** | Included in ChatGPT; API from $0.01/image | ChatGPT users, text-heavy assets, infographics, API workflows | 10 | 9 | 9 | 9 |
-| **Flux (Black Forest Labs)** | Free open-source / hosted varies | Open-source, self-host, fine-tune | 9 | 10 | 6 | 8 |
+| **Flux (Black Forest Labs)** | Open-weight / hosted varies | Local workflows, self-hosting, fine-tuning | 9 | 10 | 6 | 8 |
 | **Ideogram** | Free-$20/mo | English text-in-image, logos, marketing materials | 8 | 9 | 7 | 7 |
 | **Leonardo AI** | Free-$24/mo | Free daily generation and quick creative iteration | 8 | 10 | 5 | 7 |
 | **Google Imagen** | In Gemini Advanced ($20/mo) | Google users and photorealism | 8 | 8 | 8 | 9 |
@@ -49,7 +49,7 @@ The practical question is no longer "which model can make an image?" Most major 
 
 - **Midjourney still owns the aesthetic lane.** It remains the reference for cinematic composition and stylized illustration.
 - **GPT Image 2 moved OpenAI back into the front tier.** It is strongest when the image needs reasoning, multilingual text, diagrams, maps, or direct ChatGPT integration.
-- **Flux remains the open workflow choice.** LoRA fine-tuning, self-hosting, ComfyUI, and hosted APIs keep it important even when closed models improve.
+- **Flux remains the open-weight workflow choice.** LoRA fine-tuning, self-hosting, ComfyUI, and hosted APIs keep it important even when closed models improve, but license terms still need checking before commercial use.
 - **Ideogram is now a focused text-in-image specialist.** It still matters for logo and marketing workflows, but GPT Image 2 reduced its underlying capability moat.
 - **Adobe Firefly wins where provenance and Creative Cloud matter.** It may not lead on raw image quality, but enterprise creative teams often care about licensing and workflow more than leaderboard wins.
 
@@ -60,7 +60,7 @@ The practical question is no longer "which model can make an image?" Most major 
 - **Best photo-editing workflow:** Adobe Firefly. Best first shortlist entry when the buyer needs Photoshop-native Generative Fill, object removal, expansion, upscaling, Creative Cloud, and commercial creative review.
 - **Best practical social workflow:** Canva. Best when the image needs to become a finished post, ad, thumbnail, flyer, or branded asset.
 - **Best for text-heavy assets:** GPT Image 2. Strongest fit for infographics, slides, maps, annotated diagrams, and multilingual text.
-- **Best open workflow:** Flux. Open-source, self-hostable, and fine-tunable.
+- **Best open workflow:** Flux. Open-weight, self-hostable, and fine-tunable, with commercial-use terms depending on the exact model/license.
 - **Best free entry point:** Leonardo AI. Easy to test without committing to a paid image stack.
 - **Best commercially safer creative workflow:** Adobe Firefly. Especially for Creative Cloud teams.
 
@@ -88,7 +88,7 @@ Image generation is approaching commodity. The real differentiation is workflow 
 - "150 FREE AI Images Per Day: Leonardo AI Full Guide" (free angle, high click)
 - "Best AI Tool for YouTube Thumbnails" (niche but high intent)
 - "I Tested Every AI Image Generator: Ranking Them All" (mega-comparison)
-- "Flux: The Free AI Image Tool That Rivals Midjourney" (open-source angle)
+- "Flux: The Open-Weight AI Image Workflow That Rivals Closed Tools" (open-model angle)
 
 ## Sources
 
@@ -97,4 +97,4 @@ Image generation is approaching commodity. The real differentiation is workflow 
 - [Adobe Firefly plans](https://www.adobe.com/products/firefly/plans.html) (verified 2026-05-09)
 - [Photoshop Generative Fill documentation](https://helpx.adobe.com/photoshop/desktop/create-open-import-images/create-images/edit-images-with-generative-fill.html) (verified 2026-05-09)
 - [Canva AI](https://www.canva.com/canva-ai/) (verified 2026-05-09)
-- Flux (Black Forest Labs): [https://blackforestlabs.ai](https://blackforestlabs.ai)
+- [FLUX.1 dev on Hugging Face](https://huggingface.co/black-forest-labs/FLUX.1-dev) (verified 2026-05-09)

@@ -74,6 +74,7 @@ AI coding tools now split into five buyer jobs: inline help inside an existing I
 - [Micro-SaaS weekend MVP workflow](/workflows/micro-saas-weekend-build/) now shows how to use Cursor with Supabase, Vercel, Stripe, Lemon Squeezy, and Cloudflare without pretending a weekend prototype is a production SaaS.
 - [Best AI tools for developers](/guides/best-ai-tools-for-developers/) should stay aligned with Cursor, Copilot, Claude Code, Codex, Windsurf, Replit Agent, and Aider usage/pricing changes.
 - [Best AI for debugging](/guides/best-ai-for-debugging/) should stay synchronized with developer tool usage costs and the June 1, 2026 Copilot AI Credits migration.
+- [Best open source AI tools](/guides/best-open-source-ai-tools/) should stay synchronized with Ollama, LM Studio, Open WebUI, Llama, Mistral, DeepSeek, and open-model licensing because developer buyers often want local or self-hosted control before paying for hosted agents.
 - [Best AI for SQL queries](/guides/best-ai-for-sql-queries/) should stay current because SQL buyers split between ChatGPT for learning, Cursor for app/database code, Claude for schema reasoning, Hex for data-team notebooks, and Julius for business-user analysis.
 - [GitHub Copilot alternatives](/guides/github-copilot-alternatives/) should be monitored through the June 1, 2026 Copilot AI Credits migration.
 - [Cursor alternatives](/guides/cursor-alternatives/) should be monitored monthly because Cursor, Windsurf, Copilot, Claude Code, and Replit all expose usage-sensitive pricing or agent limits.

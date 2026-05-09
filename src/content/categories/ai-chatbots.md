@@ -75,6 +75,7 @@ Do not subscribe to multiple chatbots because each one has a new model announcem
 - [Best AI Coding Assistant](/guides/best-ai-coding-assistant/)
 - [Best Free AI Tools](/guides/best-free-ai-tools/)
 - [Best AI Tools Under $20/month](/guides/best-ai-tools-under-20-month/)
+- [Best Open Source AI Tools](/guides/best-open-source-ai-tools/)
 - [Best AI for Blog Writing](/guides/best-ai-for-blog-writing/)
 
 ## Related Categories
