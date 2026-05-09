@@ -63,7 +63,7 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 ## Money Pages To Build Next
 
 - [Best AI automation platform](/guides/best-ai-automation-platform/) is the primary buyer guide and should stay current weekly while automation pricing and agent surfaces move quickly.
-- [AI automation agency tech stack](/guides/ai-agency-stack/) is now the agency delivery-stack page for n8n, Zapier, Make, Claude, ChatGPT, voice agents, Browserbase, and client dashboard decisions. Keep it aligned with agency, sales, support, and lead-generation updates.
+- [AI automation agency tech stack](/guides/ai-agency-stack/) is now the agency delivery-stack page for n8n, Zapier, Make, Claude, ChatGPT, voice agents, Browserbase, and client dashboard decisions. Keep it aligned with the May 9 verified [best AI tools for agencies](/guides/best-ai-tools-for-agencies/), sales, support, and lead-generation updates.
 - [AI lead generation stack](/guides/ai-lead-generation/) and the May 9 verified [cold-email buyer guide](/guides/best-ai-for-cold-email/) now cover Apollo, Clay, Amplemarket, Instantly, and n8n as a buyer flow for prospect data, enrichment, sender handoff, deliverability, and GTM automation. Keep them synchronized with sales-team and agency pages.
 - [Best AI stack for solo founders](/guides/ai-solo-founder-stack/) now gives founders the practical automation sequence: manual first, n8n once workflows repeat, Intercom only after real support volume, and no fake fixed monthly stack total.
 - [n8n vs Make vs Zapier](/compare/n8n-vs-make-vs-zapier/) should be rebuilt next around workflow complexity, pricing unit, AI-agent support, and owner type.
