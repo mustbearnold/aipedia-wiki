@@ -17,6 +17,7 @@ const SITEMAP_EXCLUDED_PATHS = new Set([
   '/compare/build/',
   '/guides/ai-content-pipeline/',
   '/guides/ai-customer-support/',
+  '/guides/best-ai-for-medical-research/',
   '/guides/best-ai-for-legal-research/',
   '/guides/best-ai-tools-for-nonprofits/',
   '/guides/best-ai-tools-for-lawyers/',

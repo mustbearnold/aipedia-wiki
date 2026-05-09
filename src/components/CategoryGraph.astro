@@ -11,7 +11,7 @@ const { categorySlug, categoryTitle, toolSlugs } = Astro.props;
 
 const allTools = await getCollection('tools');
 const allComparisons = await getCollection('comparisons');
-const allGuides = await getCollection('use-cases');
+const allGuides = (await getCollection('use-cases')).filter((entry) => entry.data.noindex !== true);
 const allNews = await getCollection('news');
 
 const categoryToolSet = new Set(toolSlugs);

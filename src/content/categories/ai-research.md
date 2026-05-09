@@ -48,7 +48,8 @@ People doing current business, policy, product, or technical research should add
 - [Best AI for Citations and References](/guides/best-ai-for-citations/)
 - [Best AI Tools for Students](/guides/best-ai-tools-for-students/)
 - [Best AI for Data Analysis](/guides/best-ai-for-data-analysis/)
-- [Best AI for Medical Research](/guides/best-ai-for-medical-research/) - high-stakes page pending rebuild/noindex review
+
+AiPedia is intentionally not promoting the old medical-research guide until it is rebuilt with medical-specific sources, privacy guidance, regulator context, and high-stakes safety caveats.
 
 ## Trust Rules for Research AI
 
