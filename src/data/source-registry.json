@@ -4333,11 +4333,30 @@
     },
     {
       "id": "opusclip-pricing",
-      "label": "Source",
+      "label": "OpusClip pricing",
       "url": "https://www.opus.pro/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-05-09"
+    },
+    {
+      "id": "opusclip-plans-credits",
+      "label": "OpusClip plans and credits",
+      "url": "https://help.opus.pro/docs/article/plans-and-credits",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-05-09"
+    },
+    {
+      "id": "opusclip-clipanything",
+      "label": "OpusClip ClipAnything docs",
+      "url": "https://help.opus.pro/docs/article/9947095-clip-anything",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-05-09"
     },
     {
       "id": "otter-ai-pricing",

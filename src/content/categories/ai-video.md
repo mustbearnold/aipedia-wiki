@@ -86,6 +86,8 @@ Do not make a wide comparison table the mobile experience. Mobile buyers need st
 
 **YouTube creator:** use the refreshed [YouTube creators AI guide](/guides/best-ai-for-youtube-creators/) when the buyer needs to choose between Descript editing, ChatGPT scripts, Canva or Midjourney thumbnails, ElevenLabs narration, OpusClip Shorts, and Runway B-roll.
 
+**Long-form repurposing buyer:** use [OpusClip](/tools/opusclip/) when the source is already a podcast, webinar, livestream, interview, or YouTube video and the job is finding clips, adding captions, reframing to 9:16, and scheduling Shorts/Reels/TikTok posts. It is not a text-to-video model; compare it against Descript, Captions, and InVideo before comparing it against Seedance, Kling, Veo, or Runway.
+
 ## Review Standard
 
 AiPedia should not publish a hard "best video model" claim unless the prompt set, date, model identifiers, settings, cost, region, and evaluation criteria are disclosed. Until a controlled benchmark exists, this category should use editorial language like "test first," "best buyer route," and "best fit," backed by current official sources.
@@ -130,6 +132,8 @@ Yes, but with honest positioning. They are useful for budget testing, effects, o
 - [Runway pricing](https://runwayml.com/pricing)
 - [Runway API models](https://docs.dev.runwayml.com/guides/models/)
 - [Pika pricing](https://pika.art/pricing)
+- [OpusClip pricing](https://www.opus.pro/pricing) (verified 2026-05-09)
+- [OpusClip plans and credits](https://help.opus.pro/docs/article/plans-and-credits) (verified 2026-05-09)
 - [HeyGen pricing](https://www.heygen.com/pricing) (verified 2026-05-09)
 - [Synthesia pricing](https://www.synthesia.io/pricing) (verified 2026-05-09)
 
