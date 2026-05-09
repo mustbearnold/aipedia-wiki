@@ -90,6 +90,7 @@ Priority pages must avoid horizontal overflow at 360/390/430/768/1024 and presen
 - 2026-05-09: Refreshed `best-ai-for-blog-writing` with current official ChatGPT, Claude, Jasper, and Surfer SEO sources; removed stale April model/pricing claims and table-led mobile flow; added Surfer SEO as the SEO/AI-visibility layer; kept the parent `ai-writing` category aligned; and promoted the refreshed blog-writing guide on `/guides/`.
 - 2026-05-09: Refreshed `best-ai-for-meeting-notes` and parent `ai-notes` category with current official Fathom, Fireflies, Otter, Read AI, NotebookLM, Notion, and Obsidian sources; removed unsupported accuracy/version claims and bad markdown links; added Read AI to the buyer set; and promoted the guide on `/guides/`.
 - 2026-05-09: Refreshed `best-ai-for-transcription` and parent `ai-voice` category with current official Fathom, Descript, Deepgram, AssemblyAI, and ElevenLabs sources; repositioned the guide around meeting transcripts, creator editing, speech-to-text APIs, and voice-platform transcription; removed unsupported accuracy claims; and promoted the guide on `/guides/`.
+- 2026-05-09: Refreshed `best-ai-tools-for-designers` and parent `ai-design` category with current official Figma, Canva, Midjourney, Adobe Firefly, Google Stitch, v0, Lovable, and Bolt.new sources; removed unsupported old model/version claims and bad relative links; added guide picks; and promoted the guide on `/guides/`.
 
 ## 15. Final report
 Pending.
