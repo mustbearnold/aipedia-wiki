@@ -82,6 +82,7 @@ Priority pages must avoid horizontal overflow at 360/390/430/768/1024 and presen
 - 2026-05-09: Added content-level guide `noindex` support and noindexed the weak overlapping under-$10 and under-$50 budget guide routes, replacing stale unsupported claims with merge guidance toward stronger budget/category pages.
 - 2026-05-09: Refreshed `best-ai-tools-under-20-month` against official pricing/help sources, added guide picks, removed unsupported April model claims, and reframed the page around buyer jobs rather than a brittle 40-tool price table.
 - 2026-05-09: Rebuilt `best-ai-tools-for-recruiters` with official current sources, removed unsupported April claims and broken markdown links, added LinkedIn Recruiter, hireEZ, Paradox, and Eightfold AI tool records, and promoted the guide on `/guides/`.
+- 2026-05-09: Noindexed and merged weak `best-ai-tools-for-real-estate-agents` and `best-ai-tools-for-nonprofits` guide routes, excluded them from sitemap and `/guides/`, and replaced stale generic chatbot claims with rebuild criteria and stronger internal paths.
 
 ## 15. Final report
 Pending.

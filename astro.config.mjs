@@ -15,6 +15,8 @@ const isFastBuild = process.env.AIPEDIA_FAST_BUILD === '1';
 const SITEMAP_EXCLUDED_PATHS = new Set([
   '/about/editor/',
   '/compare/build/',
+  '/guides/best-ai-tools-for-nonprofits/',
+  '/guides/best-ai-tools-for-real-estate-agents/',
   '/guides/best-ai-tools-under-10-month/',
   '/guides/best-ai-tools-under-50-month/',
   '/search/',

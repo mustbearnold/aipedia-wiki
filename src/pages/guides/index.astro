@@ -22,6 +22,7 @@ type Guide = {
   lastUpdated: unknown;
   lastVerified: unknown;
   tools: string[];
+  noindex: boolean;
 };
 
 function guideType(slug: string): GuideType {
@@ -42,8 +43,9 @@ const guides: Guide[] = allGuides.map(g => {
     lastUpdated: g.data.last_updated,
     lastVerified: g.data.last_verified,
     tools: g.data.tools_mentioned || [],
+    noindex: g.data.noindex === true,
   };
-});
+}).filter(g => !g.noindex);
 
 function dateLabel(value: unknown): string {
   if (!value) return 'Review queued';
