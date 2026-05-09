@@ -24,11 +24,11 @@ top_picks:
 
 ## Overview
 
-AiPedia verified this category on May 9, 2026 while refreshing the [AI photo-editing buyer guide](/guides/best-ai-for-photo-editing/). AI image tools now split into four buyer jobs: aesthetic generation, conversational image editing, finished social/design assets, and professional photo-production workflows.
+AiPedia verified this category on May 9, 2026 while refreshing the [AI photo-editing buyer guide](/guides/best-ai-for-photo-editing/) and the [Meshy tool page](/tools/meshy/). AI image tools now split into five buyer jobs: aesthetic generation, conversational image editing, finished social/design assets, professional photo-production workflows, and 3D asset generation for games, AR/VR, printing, and prototyping.
 
 [Midjourney](/tools/midjourney/) remains the aesthetic ideation benchmark. [ChatGPT](/tools/chatgpt/) and GPT Image 2 are the best default when image generation or editing is part of a broader assistant workflow. [Adobe Firefly](/tools/adobe-firefly/) is the safer first pick for Photoshop, Creative Cloud, Generative Fill, object removal, image expansion, and credit-aware commercial review. [Canva](/tools/canva/) wins when the image needs to become a finished post, ad, thumbnail, product graphic, or presentation asset quickly.
 
-Flux by Black Forest Labs remains the power-user and self-hosting choice, with a strong LoRA and ComfyUI ecosystem. Ideogram is still a strong pick for English-first logos and marketing text. Leonardo AI offers one of the easiest free entry points.
+Flux by Black Forest Labs remains the power-user and self-hosting choice, with a strong LoRA and ComfyUI ecosystem. Ideogram is still a strong pick for English-first logos and marketing text. Leonardo AI offers one of the easiest free entry points. [Meshy](/tools/meshy/) is the 3D specialist to shortlist when the buyer needs a generated asset, not a flat image; its May 2026 risk is credit math and Free-plan download limits around Meshy 6 output.
 
 The practical question is no longer "which model can make an image?" Most major systems can. The better question is which workflow you trust for the job: artistic direction, readable text, self-hosting, brand consistency, or integration with the rest of your AI stack.
 
@@ -44,6 +44,7 @@ The practical question is no longer "which model can make an image?" Most major 
 | **Google Imagen** | In Gemini Advanced ($20/mo) | Google users and photorealism | 8 | 8 | 8 | 9 |
 | **Stable Diffusion** | Free open-source | Self-hosting, no restrictions, fine-tuning | 9 | 10 | 7 | 9 |
 | **Adobe Firefly** | Free-$29.99/mo | Commercially safer Creative Cloud workflows | 7 | 7 | 8 | 9 |
+| **Meshy** | Free-$60/mo | 3D assets, game prototypes, AR/VR, 3D printing | 8 | 8 | 7 | 6 |
 
 ## Market Dynamics (May 2026)
 
@@ -63,6 +64,7 @@ The practical question is no longer "which model can make an image?" Most major 
 - **Best open workflow:** Flux. Open-weight, self-hostable, and fine-tunable, with commercial-use terms depending on the exact model/license.
 - **Best free entry point:** Leonardo AI. Easy to test without committing to a paid image stack.
 - **Best commercially safer creative workflow:** Adobe Firefly. Especially for Creative Cloud teams.
+- **Best 3D asset generator:** Meshy. Best first shortlist entry when the output needs to become a GLB, FBX, OBJ, USDZ, STL, BLEND, or 3MF file instead of a flat image.
 
 ## Money Guides To Keep Current
 
@@ -99,3 +101,5 @@ Image generation is approaching commodity. The real differentiation is workflow 
 - [Photoshop Generative Fill documentation](https://helpx.adobe.com/photoshop/desktop/create-open-import-images/create-images/edit-images-with-generative-fill.html) (verified 2026-05-09)
 - [Canva AI](https://www.canva.com/canva-ai/) (verified 2026-05-09)
 - [FLUX.1 dev on Hugging Face](https://huggingface.co/black-forest-labs/FLUX.1-dev) (verified 2026-05-09)
+- [Meshy pricing](https://www.meshy.ai/pricing) (verified 2026-05-09)
+- [Meshy credit usage help](https://help.meshy.ai/en/articles/10000507-how-many-credits-does-each-generation-task-cost) (verified 2026-05-09)

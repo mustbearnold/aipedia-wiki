@@ -3830,11 +3830,30 @@
     },
     {
       "id": "meshy-pricing",
-      "label": "Source",
+      "label": "Meshy pricing",
       "url": "https://www.meshy.ai/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-05-09"
+    },
+    {
+      "id": "meshy-credit-usage",
+      "label": "Meshy credit usage help",
+      "url": "https://help.meshy.ai/en/articles/10000507-how-many-credits-does-each-generation-task-cost",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-05-09"
+    },
+    {
+      "id": "meshy-6-launch",
+      "label": "Meshy 6 launch post",
+      "url": "https://www.meshy.ai/blog/meshy-6-launch",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-05-09"
     },
     {
       "id": "midjourney-plans-docs",
