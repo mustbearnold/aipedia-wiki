@@ -71,6 +71,7 @@ AI search is not one category anymore. Buyers now choose between **cited answer 
 - [Best AI tools for researchers](/guides/best-ai-tools-for-researchers/) should stay synchronized because research buyers often move between Perplexity, NotebookLM, Elicit, Semantic Scholar, Scite, Consensus, Claude, and ChatGPT.
 - [Best AI for citations](/guides/best-ai-for-citations/) should stay current because citation trust is the biggest risk in AI search.
 - [Best AI tools for journalists](/guides/best-ai-tools-for-journalists/) should stay aligned because journalists need source discipline, not AI "fact-checking" theater.
+- [Best AI Tools for Freelancers](/guides/best-ai-tools-for-freelancers/) should stay aligned because freelance consultants, writers, developers, and strategists often use Perplexity for billable source-backed research before drafting in ChatGPT or Claude.
 - A new `Perplexity vs ChatGPT Search` comparison would capture high-intent buyers deciding whether to keep Perplexity or consolidate into ChatGPT.
 - A new `Perplexity vs Google AI Mode` answer page would capture search behavior changes caused by Google's AI Overviews and AI Mode.
 - A new `Exa vs Perplexity API` comparison would capture developer buyers choosing between search/retrieval primitives and Perplexity-style answer APIs.
