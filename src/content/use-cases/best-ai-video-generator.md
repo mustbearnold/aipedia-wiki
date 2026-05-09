@@ -97,7 +97,7 @@ Kuaishou's official Kling 3.0 announcement describes Video 3.0 and Video 3.0 Omn
 
 That makes Kling 3.0 a serious answer to "what should I test next after Seedance?" It is especially relevant for short-form, cinematic, multi-shot, and social-video work where the creator can evaluate outputs by prompt set rather than by spec sheet.
 
-The caution is purchase clarity. The Kling pricing page is dynamic and not always easy to audit from static crawl output. The official launch also said Kling 3.0 was initially exclusive to Ultra subscribers and would become public later. On May 8, 2026, the safe buyer advice is to verify current 3.0/Omni access, credit burn, region, commercial rights, and watermark rules in the logged-in Kling app before paying.
+The caution is purchase clarity. The Kling pricing page is dynamic and not always easy to audit from static crawl output. The official launch also said Kling 3.0 was initially exclusive to Ultra subscribers and would become public later. As of May 9, 2026, the safe buyer advice is to verify current 3.0/Omni access, credit burn, region, commercial rights, and watermark rules in the logged-in Kling app before paying.
 
 **Pick Kling if:** you want a high-quality cinematic alternative and can verify access before purchase.
 
