@@ -103,6 +103,7 @@ Priority pages must avoid horizontal overflow at 360/390/430/768/1024 and presen
 - 2026-05-09: Refreshed `claude-alternatives` with current Claude, ChatGPT, Google AI, Perplexity, Grok, and Mistral sources; removed stale April model/version claims, third-party ranking sources, and bad relative links; added guide picks and promoted the refreshed route through `/guides/` and the AI Chatbots money-guide list.
 - 2026-05-09: Refreshed `cursor-alternatives` and the parent `ai-coding` category with current Cursor, GitHub Copilot, Claude Code, Aider, Replit, and coding-agent source pages; removed old price claims, unsupported model-routing claims, and bad relative links; added guide picks and promoted the refreshed route on `/guides/`.
 - 2026-05-09: Re-audited the priority `/answers/best-ai-video-generator-2026/` route against current Runway, Google Veo 3.1, ByteDance Seedance 2.0, TechCrunch rollout, Kuaishou Kling 3.0, and HeyGen sources; tightened the Seedance access/IP caveat, updated the parent `/answers/` summary, advanced the full video guide/category verification to May 9, and replaced lingering relative `.md` links in the guide table with canonical routes.
+- 2026-05-09: Re-audited the chatbot/free/ChatGPT-alternatives answer source trails against current OpenAI Help Center, OpenAI GPT-5.5 Instant, Anthropic model, Google Gemini 3.1 Pro, and Perplexity Pro sources; replaced brittle GPT-5.5 launch links with current official ChatGPT/model documentation.
 
 ## 15. Final report
 Pending.
