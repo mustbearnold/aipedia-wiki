@@ -54,7 +54,7 @@ If you need a person on camera, use avatar tools. The [best AI avatar video gene
 
 **Best budget/effects pick:** Pika. Use it for quick social clips, playful effects, image-to-video experiments, and low-commitment creator workflows.
 
-**Best avatar-video pick:** [HeyGen](/tools/heygen/) for creator/business presenter video, sales video, localization, digital twins, and fast templates. [Synthesia](/tools/synthesia/) is the stronger enterprise training/L&D shortlist when SCORM, LMS, workplace governance, and structured training workflows matter. Use the May 9 verified [avatar-video buyer guide](/guides/best-ai-avatar-video-generator/) when the choice is between HeyGen, Synthesia, Tavus, D-ID, Hedra, Argil, and Captions.
+**Best avatar-video pick:** [HeyGen](/tools/heygen/) for creator/business presenter video, sales video, localization, digital twins, and fast templates. [Synthesia](/tools/synthesia/) is the stronger enterprise training/L&D shortlist when SCORM, LMS, workplace governance, and structured training workflows matter. Use the May 9 verified [avatar-video buyer guide](/guides/best-ai-avatar-video-generator/) when the choice is between HeyGen, Synthesia, Tavus, D-ID, Hedra, Argil, and Captions. If Synthesia is already the incumbent, use the refreshed [Synthesia alternatives guide](/guides/synthesia-alternatives/) to decide whether switching is worth the migration cost.
 
 ## What Hurts Trust
 
@@ -137,6 +137,7 @@ Yes, but with honest positioning. They are useful for budget testing, effects, o
 
 - [Best AI video generator guide](/guides/best-ai-video-generator/)
 - [Best AI avatar video generator guide](/guides/best-ai-avatar-video-generator/)
+- [Best Synthesia alternatives](/guides/synthesia-alternatives/)
 - [Runway vs Kling vs Seedance vs Veo](/compare/kling-vs-seedance-vs-runway/)
 - [Seedance 2.0](/tools/seedance/)
 - [Kling 3.0](/tools/kling/)
