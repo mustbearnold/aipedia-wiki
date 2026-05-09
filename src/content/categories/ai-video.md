@@ -54,7 +54,7 @@ If you need a person on camera, use avatar tools. The [best AI avatar video gene
 
 **Best budget/effects pick:** Pika. Use it for quick social clips, playful effects, image-to-video experiments, and low-commitment creator workflows.
 
-**Best avatar-video pick:** [HeyGen](/tools/heygen/) for creator/business presenter video, sales video, localization, digital twins, and fast templates. [Synthesia](/tools/synthesia/) is the stronger enterprise training/L&D shortlist when SCORM, LMS, workplace governance, and structured training workflows matter. Use the [avatar-video buyer guide](/guides/best-ai-avatar-video-generator/) when the choice is between HeyGen, Synthesia, Tavus, D-ID, Hedra, Argil, and Captions.
+**Best avatar-video pick:** [HeyGen](/tools/heygen/) for creator/business presenter video, sales video, localization, digital twins, and fast templates. [Synthesia](/tools/synthesia/) is the stronger enterprise training/L&D shortlist when SCORM, LMS, workplace governance, and structured training workflows matter. Use the May 9 verified [avatar-video buyer guide](/guides/best-ai-avatar-video-generator/) when the choice is between HeyGen, Synthesia, Tavus, D-ID, Hedra, Argil, and Captions.
 
 ## What Hurts Trust
 
@@ -130,8 +130,8 @@ Yes, but with honest positioning. They are useful for budget testing, effects, o
 - [Runway pricing](https://runwayml.com/pricing)
 - [Runway API models](https://docs.dev.runwayml.com/guides/models/)
 - [Pika pricing](https://pika.art/pricing)
-- [HeyGen pricing](https://www.heygen.com/pricing)
-- [Synthesia pricing](https://www.synthesia.io/pricing)
+- [HeyGen pricing](https://www.heygen.com/pricing) (verified 2026-05-09)
+- [Synthesia pricing](https://www.synthesia.io/pricing) (verified 2026-05-09)
 
 ## Related
 
