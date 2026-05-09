@@ -22,8 +22,9 @@ Start with [ElevenLabs](/tools/elevenlabs/) for polished creator voice generatio
 
 | Use case | Start with | Why |
 |---|---|---|
-| Best overall TTS quality | [ElevenLabs](/tools/elevenlabs/) | Strong creator workflow across text-to-speech, voice cloning, dubbing, speech-to-text, sound effects, and production tools. |
-| Hosted multilingual TTS value | [MiniMax Speech](/tools/minimax-speech/) | Strong fit when API cost and multilingual hosted output are the main constraints. |
+| YouTube voiceover | [ElevenLabs](/tools/elevenlabs/) | Best default for polished creator narration, cloned channel voices, dubbing, and production workflow; compare Fish Audio and MiniMax before scaling high-volume output. |
+| Best overall TTS quality | [ElevenLabs](/tools/elevenlabs/) | Strong creator workflow across text-to-speech, voice cloning, dubbing, speech-to-text, sound effects, music, and production tools. |
+| Hosted multilingual TTS value | [MiniMax Speech](/tools/minimax-speech/) | Strong fit when API cost, credits, voice slots, RPM, and multilingual hosted output are the main constraints. |
 | Real-time voice agents | [Cartesia](/tools/cartesia/) or [Retell AI](/tools/retell-ai/) | Built for low-latency conversational turns rather than static narration. |
 | Meeting transcription | [Fathom](/tools/fathom/) | Best first test when the transcript needs summaries, clips, call search, CRM sync, or team meeting workflows. |
 | Creator transcription and editing | [Descript](/tools/descript/) | Best when the transcript becomes the audio/video editing surface. |
@@ -55,6 +56,10 @@ Start with [ElevenLabs](/tools/elevenlabs/) for polished creator voice generatio
 ## Sources
 
 - [ElevenLabs pricing](https://elevenlabs.io/pricing) (verified 2026-05-09)
+- [Fish Audio plans](https://fish.audio/plan/) (verified 2026-05-09)
+- [Fish Audio API pricing](https://docs.fish.audio/developer-guide/models-pricing/pricing-and-rate-limits) (verified 2026-05-09)
+- [MiniMax Audio Subscription pricing](https://platform.minimax.io/docs/guides/pricing-speech) (verified 2026-05-09)
+- [YouTube altered or synthetic content disclosure](https://support.google.com/youtube/answer/14328491) (verified 2026-05-09)
 - [Descript pricing](https://www.descript.com/pricing) (verified 2026-05-09)
 - [Deepgram pricing](https://deepgram.com/pricing) (verified 2026-05-09)
 - [AssemblyAI pricing](https://www.assemblyai.com/pricing) (verified 2026-05-09)
