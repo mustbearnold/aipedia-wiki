@@ -2,65 +2,99 @@
 type: category
 slug: ai-search
 title: AI Search & Research Tools
-description: AI-powered search engines and research assistants. Perplexity, Kagi, Phind, Exa, Morphic, Genspark, You.com.
-tool_count: 7
-seo_title: "Best AI Search Tools (2026), aipedia.wiki"
-meta_description: "Perplexity, Kagi, and Genspark lead AI search in 2026. Compare 7 tools including Morphic, Phind, and Exa for research, citations, and APIs. Updated April 2026."
+description: AI answer engines, private search, research notebooks, semantic search APIs, and source-backed research assistants.
+tool_count: 8
+seo_title: "Best AI Search and Research Tools (May 2026)"
+meta_description: "Updated May 9, 2026: compare Perplexity, ChatGPT Search, Google AI Mode, NotebookLM, Kagi, Exa, You.com, and Grok by citations, privacy, documents, APIs, and buyer fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-17
-last_verified: 2026-04-17
-update_frequency: monthly
+last_updated: 2026-05-09
+last_verified: 2026-05-09
+update_frequency: weekly
+top_picks:
+  best_overall:
+    tool: perplexity
+    label: "Best cited answer engine"
+  budget:
+    tool: gemini
+    label: "Best Google-native AI search path"
+  pro_team:
+    tool: exa
+    label: "Best developer search API"
 ---
 
-## Overview
-AI search engines and research assistants synthesize answers from multiple sources instead of returning link lists, fundamentally reshaping how people find information as of April 2026. Perplexity is the clear consumer leader with 100 million or more monthly users, offering cited AI answers and Pro Search for complex queries at $20 per month ([Perplexity](https://perplexity.ai)). Google AI Overviews deployed globally and changed the default search experience, now including AI-generated summaries for most queries at no cost, which is the single biggest threat to traditional content websites. Gemini Deep Research generates multi-page research reports with cited sources and is the best tool for serious research tasks at $20 per month via Gemini Advanced ([Gemini](https://gemini.google.com)). For developers building AI agents, Tavily provides the simplest search API with a free tier of 1,000 searches per month and default integration in LangChain and LangGraph tutorials, while Exa offers semantic search for content discovery. ChatGPT Search adds browsing and synthesis for existing ChatGPT Plus subscribers. This category is existentially threatening traditional SEO, driving the emergence of GEO as a new discipline.
+## Quick Decision
 
-## The Players
+AI search is not one category anymore. Buyers now choose between **cited answer engines**, **Google-native AI search**, **owned-document research**, **private paid search**, **developer search APIs**, and **real-time social/current-events context**.
 
-| Tool | Price | Best For | Utility | Value | Moat | Longevity |
-|------|-------|----------|---------|-------|------|-----------|
-| **Perplexity** | Free / $20 Pro | Best AI search, citations, research | 10 | 9 | 8 | 9 |
-| **Google AI Overviews** | Free (in Google Search) | Default search with AI summaries | 8 | 10 | 10 | 10 |
-| **Gemini Deep Research** | $20/mo Advanced | Multi-step research reports | 9 | 8 | 8 | 9 |
-| **ChatGPT Search** | In ChatGPT Plus ($20/mo) | Browsing + synthesis for ChatGPT users | 8 | 8 | 7 | 9 |
-| **Exa** | Free tier + API pricing | Developer API, semantic search | 8 | 8 | 7 | 7 |
-| **Tavily** | Free tier + API pricing | AI agent search API, built for RAG | 8 | 9 | 6 | 7 |
-| **You.com** | Free / $15 Pro | Privacy-focused AI search | 6 | 7 | 4 | 5 |
+**Use [Perplexity](/tools/perplexity/) when the job is cited open-web answers.** It remains the strongest default for people who want an answer engine with source links, follow-up research, spaces, Pro/Max paths, Enterprise controls, and API surfaces like Sonar, Search API, Agent API, and embeddings.
 
-## Market Dynamics (April 2026)
-- **Perplexity hit 100M+ monthly users.** Fastest-growing search product since Google. Revenue growing but profitability uncertain.
-- **Google AI Overviews** deployed globally. The default search experience now includes AI summaries. This is the single biggest threat to traditional content websites.
-- **Gemini Deep Research** is underrated. It generates multi-page research reports with cited sources. Best for serious research tasks.
-- **Exa and Tavily** are the picks for developers building AI agents that need web search. Tavily is the default in most LangChain/LangGraph tutorials.
-- **You.com declining.** Hard to compete when Google, Perplexity, and ChatGPT all offer AI search.
+**Use [ChatGPT](/tools/chatgpt/) when search is only one part of the workflow.** ChatGPT Search is the better Perplexity alternative when the buyer also wants writing, coding, file analysis, images, voice, data analysis, projects, and everyday assistant work.
+
+**Use [Gemini](/tools/gemini/) and Google AI Mode when the buyer already lives in Google.** Google's current AI Mode and AI Overviews updates focus on helping users find relevant websites, deep insights, and original content across the web. Google AI Plans connect Gemini, Deep Research, AI Mode, Workspace, NotebookLM, and Chrome features depending on plan and region.
+
+**Use [NotebookLM](/tools/notebooklm/) when the source set is already known.** It is a research notebook for documents, reports, transcripts, Drive files, and study materials, not a pure open-web search replacement.
+
+**Use [Kagi](/tools/kagi/) when privacy and search control matter.** It is the paid, ad-free search choice for people who want ranking controls and optional Assistant features rather than an answer-engine-first product.
+
+**Use [Exa](/tools/exa/) when you are building AI search into a product.** It is a developer API lane for semantic search, retrieval, crawling-style workflows, and deep research APIs.
+
+## Buyer Paths
+
+| Buyer job | Start with | Why | Watch out |
+|---|---|---|---|
+| Cited open-web answers | [Perplexity](/tools/perplexity/) | Best answer-engine workflow for sources, follow-ups, and research spaces | Pro/Max/Enterprise/API plan details change quickly |
+| General AI workspace with search | [ChatGPT](/tools/chatgpt/) | Search plus writing, files, code, data, image, voice, and projects | Requires source discipline for serious research |
+| Google-native search and research | [Gemini](/tools/gemini/) | AI Mode, AI Overviews, Deep Research, Workspace, NotebookLM, and Chrome fit | Google ecosystem lock-in and regional feature limits |
+| Owned-source research | [NotebookLM](/tools/notebooklm/) | Best for selected PDFs, notes, reports, calls, classes, and Drive material | Not a full web discovery engine |
+| Private paid search | [Kagi](/tools/kagi/) | Ad-free search, lenses, ranking controls, Assistant options | Paid search is a harder sell for casual users |
+| Search/retrieval API | [Exa](/tools/exa/) | Search and retrieval primitives for AI apps and agents | Value depends on integration quality and request economics |
+| Real-time social context | [Grok](/tools/grok/) | Useful when X-native context is the source of the question | Social data can be noisy, biased, or incomplete |
+| Alternative answer engine | [You.com](/tools/you-com/) | Useful to compare as a search/chat hybrid, especially for teams evaluating multiple AI search surfaces | Must verify current plans and model access before committing |
 
 ## Our Picks
-- **Best overall:** Perplexity Pro ($20/mo). Best answer quality, citations, Pro Search for complex queries.
-- **Best free:** Google AI Overviews. It's just Google now, AI summaries included.
-- **Best for deep research:** Gemini Advanced ($20/mo). Deep Research mode generates comprehensive reports.
-- **Best for developers:** Tavily. Free tier, built for AI agents, simple API.
 
-## For AI Agent Builders
-If you're building agents that need to search the web:
-- **Tavily:** simplest API, best LangChain/LangGraph integration, free tier includes 1K searches/month
-- **Exa:** semantic search (finds similar content, not just keyword matches), better for discovery
-- **Perplexity API:** most accurate answers but more expensive, best when you need synthesis not raw results
+**Best overall AI answer engine: Perplexity.** Use it when citations, source trails, and open-web synthesis are the actual job.
 
-## Impact on Content Creators
-AI search is cannibalizing traditional web traffic. If you create content (blogs, YouTube, wikis):
-1. **Optimize for AI citations.** Perplexity and Google AI Overviews cite sources. Be the source they cite.
-2. **GEO (Generative Engine Optimization)** is the new SEO. See [[geo-trend]] trend page.
-3. **Video content is more defensible.** AI search can't fully replicate video demonstrations.
-4. **Original research/data wins.** AI can summarize but can't create primary sources.
+**Best Perplexity alternative:** [ChatGPT Search](/tools/chatgpt/) for people who want research to continue into drafting, analysis, code, files, and multimodal work.
 
-## Video Potential
-- "Perplexity vs Google vs ChatGPT . Which AI Search is Best?" (massive search intent)
-- "Google AI Overviews Killed My Blog Traffic . Here's What I'm Doing" (creator angle)
-- "How to Build an AI Agent with Web Search (Tavily + LangGraph)" (developer tutorial)
-- "GEO: The New SEO for AI Search" (trend explainer, low competition)
+**Best Google-native option:** [Gemini](/tools/gemini/) because AI Mode, AI Overviews, Google AI Plans, Deep Research, Workspace, and NotebookLM now overlap heavily with research intent.
+
+**Best source-notebook:** [NotebookLM](/tools/notebooklm/) when the buyer wants to interrogate a controlled source library.
+
+**Best private search:** [Kagi](/tools/kagi/) for buyers who want to pay for search quality, privacy, and ranking control.
+
+**Best developer API:** [Exa](/tools/exa/) when the search/retrieval layer is being embedded into an AI product.
+
+## Money Pages To Keep Current
+
+- [Perplexity alternatives](/guides/perplexity-alternatives/) now separates answer engines, general assistants, Google AI Search, owned-document research, private search, and developer APIs.
+- [Best AI tools for researchers](/guides/best-ai-tools-for-researchers/) should stay synchronized because research buyers often move between Perplexity, NotebookLM, Elicit, Semantic Scholar, Scite, Consensus, Claude, and ChatGPT.
+- [Best AI for citations](/guides/best-ai-for-citations/) should stay current because citation trust is the biggest risk in AI search.
+- [Best AI tools for journalists](/guides/best-ai-tools-for-journalists/) should stay aligned because journalists need source discipline, not AI "fact-checking" theater.
+- A new `Perplexity vs ChatGPT Search` comparison would capture high-intent buyers deciding whether to keep Perplexity or consolidate into ChatGPT.
+- A new `Perplexity vs Google AI Mode` answer page would capture search behavior changes caused by Google's AI Overviews and AI Mode.
+- A new `Exa vs Perplexity API` comparison would capture developer buyers choosing between search/retrieval primitives and Perplexity-style answer APIs.
+
+## What Hurts Trust
+
+Do not call AI search "fact checking" unless the cited sources actually support the claim. The tool can find and summarize sources; editorial verification is still the user's job.
+
+Do not rank AI search tools by monthly price alone. Real value depends on citation quality, source controls, file limits, model access, API request economics, enterprise privacy, and whether the output can be audited.
+
+Do not leave this category stale. Google AI Mode, Perplexity Pro/Max/Enterprise, ChatGPT Search, NotebookLM plan limits, and AI search APIs are moving quickly enough that old April 2026 copy can mislead buyers.
 
 ## Sources
 
-- Perplexity: [https://perplexity.ai](https://perplexity.ai)
-- Google AI Overviews: [https://google.com](https://google.com)
-- Gemini Deep Research: [https://gemini.google.com](https://gemini.google.com)
+- [Perplexity Enterprise](https://www.perplexity.ai/enterprise) (verified 2026-05-09)
+- [Perplexity API pricing](https://docs.perplexity.ai/docs/getting-started/pricing) (verified 2026-05-09)
+- [Perplexity Enterprise pricing FAQ](https://www.perplexity.ai/help-center/en/articles/10352986-enterprise-pro-pricing-and-billing-frequently-asked-questions) (verified 2026-05-09)
+- [ChatGPT Search Help](https://help.openai.com/en/articles/9237897-chatgpt-search) (verified 2026-05-09)
+- [Google AI Mode and AI Overviews updates](https://blog.google/products-and-platforms/products/search/explore-web-generative-ai-search/) (verified 2026-05-09)
+- [Google AI Plans](https://one.google.com/about/google-ai-plans/) (verified 2026-05-09)
+- [NotebookLM upgrade docs](https://support.google.com/notebooklm/answer/16213268) (verified 2026-05-09)
+- [Kagi Ultimate plan docs](https://help.kagi.com/kagi/plans/ultimate-plan.html) (verified 2026-05-09)
+- [Kagi Team plan docs](https://help.kagi.com/kagi/plans/team-plan.html) (verified 2026-05-09)
+- [Exa pricing update](https://exa.ai/docs/changelog/pricing-update) (verified 2026-05-09)
+- [Exa pricing](https://exa.ai/pricing) (verified 2026-05-09)
+- [You.com plans](https://home.you.com/plans) (verified 2026-05-09)
+- [X Premium+ pricing](https://help.x.com/en/premium-plus-price-update) (verified 2026-05-09)
