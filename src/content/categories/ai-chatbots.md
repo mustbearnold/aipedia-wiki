@@ -78,6 +78,7 @@ Do not subscribe to multiple chatbots because each one has a new model announcem
 - [Best AI Tools Under $20/month](/guides/best-ai-tools-under-20-month/)
 - [Best Open Source AI Tools](/guides/best-open-source-ai-tools/)
 - [Best AI Tools for Product Managers](/guides/best-ai-tools-for-product-managers/)
+- [Best AI Tools for Consultants](/guides/best-ai-tools-for-consultants/)
 - [Best AI for Blog Writing](/guides/best-ai-for-blog-writing/)
 
 ## Related Categories

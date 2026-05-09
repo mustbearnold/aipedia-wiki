@@ -61,6 +61,7 @@ As of May 9, 2026, the best purchase depends less on "which AI summarizes best?"
 - [Best AI for Meeting Notes](/guides/best-ai-for-meeting-notes/)
 - [Best AI for Summarization](/guides/best-ai-for-summarization/)
 - [Best AI Tools for Product Managers](/guides/best-ai-tools-for-product-managers/)
+- [Best AI Tools for Consultants](/guides/best-ai-tools-for-consultants/)
 - [Best Free AI Tools](/guides/best-free-ai-tools/)
 - [Best AI Tools for Students](/guides/best-ai-tools-for-students/)
 

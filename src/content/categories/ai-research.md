@@ -49,6 +49,7 @@ People doing current business, policy, product, or technical research should add
 - [Best AI Tools for Students](/guides/best-ai-tools-for-students/)
 - [Best AI for Data Analysis](/guides/best-ai-for-data-analysis/)
 - [Best AI for Interview Prep](/guides/best-ai-for-interview-prep/)
+- [Best AI Tools for Consultants](/guides/best-ai-tools-for-consultants/)
 
 AiPedia is intentionally not promoting the old medical-research guide until it is rebuilt with medical-specific sources, privacy guidance, regulator context, and high-stakes safety caveats.
 
