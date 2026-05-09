@@ -137,6 +137,7 @@ Priority pages must avoid horizontal overflow at 360/390/430/768/1024 and presen
 - 2026-05-09: Refreshed `ai-agency-stack`; rebuilt the stale agency automation stack around current official n8n, Zapier, Make, OpenAI, Claude, ElevenLabs, Retell AI, Browserbase, Lovable, and v0 sources; added guide picks, cost-risk and failure-mode guidance, updated the AI Automation parent category, and promoted the route on `/guides/`.
 - 2026-05-09: Refreshed `best-ai-for-academic-writing`; rebuilt the stale academic-writing page around current official Claude, ChatGPT, NotebookLM, Elicit, Semantic Scholar, Grammarly, and QuillBot sources; added guide picks, academic-integrity and source-verification guidance, updated AI Research and AI Writing parent categories, and promoted the route on `/guides/`.
 - 2026-05-09: Refreshed `best-ai-for-code-review`; replaced the stale generic Cursor/Claude/ChatGPT ranking with a current buyer guide around CodeRabbit, Qodo, GitHub Copilot code review, Cursor Bugbot, Claude Code, and Codex using official source trails; added guide picks, Copilot June 1 private-repo Actions-minutes billing caveat, AI-review guardrails, AI Coding parent updates, and `/guides/` promotion.
+- 2026-05-09: Light-refreshed `ai-lead-generation`; reverified Apollo, Clay, Amplemarket, n8n, and Instantly official source trails, advanced the page to May 9, added Apollo credits and Clay current Launch/Growth pricing details, kept the AI Automation parent aligned, and promoted the route on `/guides/`.
 
 ## 15. Final report
 Pending.
