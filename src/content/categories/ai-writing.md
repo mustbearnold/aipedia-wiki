@@ -74,6 +74,7 @@ As of May 9, 2026, the wrong question is "which AI writes best?" The better ques
 - [Best AI Tools for LinkedIn](/guides/best-ai-for-linkedin/)
 - [Best AI for Book Writing](/guides/best-ai-for-book-writing/)
 - [Best AI Tools for Writers](/guides/best-ai-tools-for-writers/)
+- [Best AI for Academic Writing](/guides/best-ai-for-academic-writing/)
 - [Best AI for Social Media Posts](/guides/best-ai-for-social-media-posts/)
 - [Best AI for Ad Copy](/guides/best-ai-for-ad-copy/)
 - [Best Jasper Alternatives](/guides/jasper-alternatives/)

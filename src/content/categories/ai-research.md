@@ -45,6 +45,7 @@ People doing current business, policy, product, or technical research should add
 ## Money Guides
 
 - [Best AI Tools for Researchers](/guides/best-ai-tools-for-researchers/)
+- [Best AI for Academic Writing](/guides/best-ai-for-academic-writing/)
 - [Best AI for Citations and References](/guides/best-ai-for-citations/)
 - [Best AI Tools for Students](/guides/best-ai-tools-for-students/)
 - [Best AI for Data Analysis](/guides/best-ai-for-data-analysis/)
