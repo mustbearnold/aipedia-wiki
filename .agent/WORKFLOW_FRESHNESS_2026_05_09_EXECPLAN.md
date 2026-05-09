@@ -73,6 +73,7 @@ Workflow content should be readable as stacked sections at 360, 390, 430, 768, a
 - 2026-05-09: Started workflow freshness checkpoint after committing the solo-founder stack refresh. Chose `agentic-coding-workflow` because it had stale precise tool versions, unsupported throughput/cost claims, and existing catalog tool coverage.
 - 2026-05-09: Refreshed `agentic-coding-workflow` against current Cursor, Claude Code, Claude Max, GitHub Copilot plans/billing, and GitHub Copilot code-review billing sources; rewrote fixed-cost/version claims into a safer supervised workflow with cost controls and human review gates.
 - 2026-05-09: Updated `/workflows/` to sort by current verification date and show verified dates on cards; updated AI Coding category to link to the refreshed workflow.
+- 2026-05-09: Refreshed `micro-saas-weekend-build` against current Cursor, Supabase, Vercel, Stripe, Lemon Squeezy, and Cloudflare Workers sources; removed fake fixed $45/month and 48-hour production claims; reframed the page as a weekend MVP validation workflow with security, RLS, payments, mobile, and rollback checkpoints.
 
 ## 15. Final report
 Pending.

@@ -1,104 +1,200 @@
 ---
 type: workflow
 slug: micro-saas-weekend-build
-title: "Ship a Micro-SaaS in a Weekend: Cursor, Supabase, and Cloudflare"
-seo_title: "Ship a Micro-SaaS in a Weekend: Cursor, Supabase, and Cloudflare (2026)"
-meta_description: "Go from idea to deployed, authenticated, billable web app in two days without writing CSS by hand. Verified April 2026."
-description: "Go from idea to deployed, authenticated, billable web app in two days without writing CSS by hand."
-stack: [cursor, supabase, cloudflare]
-tools_mentioned: [cursor, supabase, cloudflare]
+title: "Ship a Micro-SaaS Weekend MVP with Cursor, Supabase, Vercel, and Stripe"
+seo_title: "Ship a Micro-SaaS Weekend MVP with AI Coding Tools (2026)"
+meta_description: "Updated May 9, 2026: a source-backed weekend MVP workflow using Cursor, Supabase, Vercel, and Stripe without fake fixed-cost or time-saved claims."
+description: "Build a small authenticated, billable MVP with AI-assisted coding, Supabase, Vercel, and Stripe while keeping scope, security, and billing risk under control."
+stack: [cursor, supabase, vercel, stripe]
+tools_mentioned: [cursor]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-17
-last_verified: 2026-04-17
-update_frequency: quarterly
+last_updated: 2026-05-09
+last_verified: 2026-05-09
+update_frequency: monthly
 ---
 
-# Ship a Micro-SaaS in a Weekend: Cursor, Supabase, and Cloudflare
+# Ship a Micro-SaaS Weekend MVP with Cursor, Supabase, Vercel, and Stripe
 
-This workflow ships a working SaaS product (payments, auth, user data, custom domain) in 48 hours. Total stack cost: $45/mo to run. Roughly 14 hours of actual work across two days. Time savings vs. hand-rolling: ~30 hours.
+A weekend micro-SaaS build should prove a narrow buyer workflow, not pretend a two-day prototype is a production company. The right stack is boring on purpose: AI-assisted coding, managed auth/database, simple hosting, and a payment flow you can test before asking strangers for money.
 
-## The short version
+**AiPedia verdict, verified May 9, 2026:** use [Cursor](/tools/cursor/) for the coding surface, [Supabase](https://supabase.com/pricing) for Postgres/auth/storage, [Vercel](https://vercel.com/docs/plans/hobby) for the frontend deploy, and [Stripe](https://stripe.com/pricing) or [Lemon Squeezy](https://www.lemonsqueezy.com/pricing) for payments. Use Cloudflare Workers only when you need edge functions, queues, or Cloudflare-native routing; do not make it mandatory for every weekend MVP.
 
-- Use Cursor 2.0 ($20/mo) to scaffold the entire frontend and backend in natural language. ~80% of the codebase generates without keyboard input.
-- Deploy the database and auth layer on Supabase Pro ($25/mo). PostgreSQL, user management, and file storage out of the box.
-- Host the app on Cloudflare Workers ($0 to start). Most weekend builds stay under the free tier all month.
-- Total time: 14 hours across two days. Total cost: $45/mo. Time saved vs. building from scratch: ~30 hours.
+**Do not publish this as "ship a full SaaS in 48 hours."** A weekend build can validate the idea, collect emails, run a paid test, or serve a small first cohort. It still needs security review, billing tests, database policies, backups, monitoring, and customer support before it deserves real production trust.
 
-## The stack
+---
 
-### [Cursor](/tools/cursor/) ($20/mo Pro)
+## The Short Version
 
-Cursor 2.0 drives the speed. It acts as a pair programmer that understands the full codebase at once. Paste a schema, paste API routes, paste component structure, and it generates the next piece with context. Hallucination rate is materially lower than six months ago. Tab completion is fast enough that the chat panel rarely comes out. Pro is required for weekend-scale work; the free tier hits token limits by Saturday afternoon.
+- **Build surface:** [Cursor](/tools/cursor/) for fast editing, review, and AI-assisted implementation.
+- **Backend:** Supabase for Postgres, auth, storage, and row-level security.
+- **Frontend deploy:** Vercel for GitHub-linked preview and production deploys.
+- **Payments:** Stripe Checkout/Billing for direct payment control, or Lemon Squeezy if merchant-of-record tax handling matters more.
+- **Edge/functions:** Cloudflare Workers only if your app genuinely needs Workers, queues, Durable Objects, or Cloudflare routing.
+- **Human checkpoint:** review auth, database access, payment webhooks, error states, and mobile layout before launch.
 
-### Supabase Pro ($25/mo)
+---
 
-Supabase is PostgreSQL with guardrails. Three roles: the database (100 GB included), user authentication (100,000 monthly active users included), and file storage (100 GB included). Row Level Security rules push auth logic into SQL instead of middleware. The free tier is viable for testing. Pro unlocks daily backups and email support. Scale beyond Pro is rare; pricing is transparent and does not surprise at the next tier.
+## Weekend Scope
 
-### Cloudflare Workers (free tier)
+A good weekend MVP has:
 
-Workers runs the API layer. Deploy the backend as a serverless function; Cloudflare handles routing, CORS, and edge caching automatically. Free tier covers 100,000 requests/day. Typical weekend project burns ~8,000 requests in the first week. Overage pricing is $0.50 per million requests.
+- one user type,
+- one core paid action,
+- one pricing promise,
+- one dashboard or result screen,
+- one support channel,
+- one analytics event that tells you whether the workflow worked.
 
-## The workflow, step by step
+Do not build teams, roles, admin dashboards, referrals, coupons, advanced billing, onboarding tours, and AI agents in the same weekend. That is how a validation sprint becomes a half-built product.
 
-1. **Write the database schema in plain English.** Open Cursor and describe the data model: "I need users, projects, and billing events. Users have email and a subscription status. Projects belong to users. Billing events track usage." Cursor generates the SQL migrations. Paste them into Supabase's SQL editor. 20 minutes.
+---
 
-2. **Generate Supabase auth scaffolding.** Prompt Cursor: "Set up email/password auth with Supabase. I need a login form, a signup form, and a protected route that checks the session." Cursor outputs React components with the Supabase client already configured. No hand-rolled fetch calls required.
+## Step-by-Step Workflow
 
-3. **Build the main feature in Cursor.** This is the high-leverage step. Describe the feature (a form that submits data, stores it in Supabase, shows a list of results) in one prompt. Cursor generates the component, the API route, error handling, and loading states. Review, request two tweaks, done. 90 minutes of work becomes 15.
+### 1. Write the product contract first
 
-4. **Set up Cloudflare Workers deployment.** Create a wrangler.toml. Cursor will generate it on request. Config points to the Supabase URL and API key (stored as secrets). Deploy with `wrangler deploy`. API is live in 30 seconds.
+Before opening Cursor, write a short spec:
 
-5. **Connect the frontend to the Worker.** Update API calls to the Worker URL instead of localhost. Cursor does this automatically given the endpoint list. Test in the browser.
+- user problem,
+- input the user gives you,
+- output they receive,
+- data you store,
+- payment moment,
+- refund/support promise,
+- what must never happen.
 
-6. **Add Stripe or Lemonsqueezy for payments.** Prompt Cursor: "Add a checkout button that creates a Stripe session and stores the transaction in Supabase." It generates the webhook handler, the database trigger, and the UI. Paste Stripe keys into Cloudflare secrets. Payments work.
+Paste that into Cursor and ask it to produce a build plan with files, database tables, routes, and test cases. Do not let the first prompt generate the whole app. Make the agent explain the architecture before it writes code.
 
-7. **Deploy the frontend.** Vercel (free tier) works. Push to GitHub; Vercel auto-deploys. Custom domain is $10/year.
+### 2. Scaffold the app in Cursor
 
-8. **Set up a cron job for billing.** For monthly charging, write a Cloudflare Worker scheduled trigger. Cursor generates the logic: query users with active subscriptions, call Stripe, update Supabase. Deploy. Runs monthly without intervention.
+Use Cursor for the first working slice:
 
-## Where it breaks
+- landing page,
+- signup/login,
+- protected dashboard,
+- one core form,
+- one result view,
+- basic error states,
+- mobile-first layout pass.
 
-**Cursor hallucinates file paths in large projects.** In a monorepo with separate frontend and backend folders, Cursor will occasionally generate import statements that reference files three levels up that do not exist. Flow-breaking, not project-breaking. Fix: keep the project structure flat for the first weekend. Refactor later.
+Cursor is useful here because the task is concrete and reviewable. Keep the file structure simple. Do not ask the agent to create a clever architecture for a product that has no users yet.
 
-**Supabase Row Level Security rules are powerful but opaque.** RLS rule syntax is SQL and small mistakes are silent failures. A 45-minute debug session to discover user B can read user A's projects is normal. Fix: test RLS rules in the Supabase dashboard before deploying. Write a simple SELECT query as each user and verify the results.
+### 3. Create Supabase tables and auth
 
-**Cloudflare Workers have a 30-second timeout.** If a Stripe webhook takes longer than 30 seconds, it fails silently. Test payments will not create database records, and the cause is not obvious. Fix: move long operations to a background queue. Supabase's pg_cron extension handles payments asynchronously.
+Use Supabase for the database and auth layer. Supabase's current pricing page lists free and paid plans, monthly active user allowances, storage, bandwidth, and paid-plan features such as backups and higher limits. The practical founder rule is:
 
-**Cursor struggles with CSS.** Ask it to style a form and it generates Tailwind classes that look fine in preview but break on mobile. Fix: use a component library (shadcn/ui is the typical pick) and let Cursor compose components instead of styling from scratch.
+- Free can be enough for testing and private MVPs.
+- Pro becomes more appropriate when users, backups, support, or project limits matter.
+- Usage and add-ons can change real cost, so do not publish a fake flat backend cost.
 
-## Monthly cost
+Turn on Row Level Security early. Test with two users before launch. If user A can read user B's data, the weekend build is not launchable.
 
-| Tool | Price | Notes |
+### 4. Deploy the frontend on Vercel
+
+Use Vercel when the app is a standard frontend/web app connected to GitHub. Hobby is suitable for personal/non-commercial experimentation; Pro is the normal path once the project is commercial, team-based, or needs more production controls.
+
+For a founder, the important workflow is not just "deploy." It is:
+
+- preview every branch,
+- protect production environment variables,
+- test the production URL,
+- connect the domain,
+- watch the first deploy logs,
+- keep rollbacks possible.
+
+### 5. Add payments after the core action works
+
+Use Stripe when you want direct payment infrastructure, Checkout, subscriptions, billing, tax products, and broad SaaS control. Stripe's pricing remains pay-as-you-go with country-specific card rates and no monthly platform fee for the standard payments setup.
+
+Use Lemon Squeezy when merchant-of-record handling, VAT/sales-tax collection, product bundles, license keys, and creator-style digital product workflows matter more than direct Stripe control. Lemon Squeezy's current pricing page lists a consolidated transaction fee model rather than a monthly SaaS subscription.
+
+Do not add payments before the core user workflow succeeds without payment. Failed product flow plus working payments is the wrong kind of launch.
+
+### 6. Use Cloudflare Workers only for a reason
+
+Cloudflare Workers can be excellent for edge functions, request routing, queues, durable state, and platform-style workloads. But a simple weekend SaaS often does not need Workers on day one if Vercel and Supabase already cover the app.
+
+Cloudflare's current Workers pricing is usage-shaped and product-specific. Treat it as an architecture choice, not a mandatory free line item.
+
+---
+
+## Launch Checklist
+
+Before showing the app to users:
+
+- test signup, login, logout, password reset, and protected routes,
+- test Row Level Security with two real accounts,
+- test payment success, cancellation, webhook replay, and refund path,
+- test mobile at 360, 390, 430, and 768 widths,
+- add a support email or contact form,
+- add basic analytics for signup, checkout click, payment success, and core action completed,
+- write a short privacy note for what data you store,
+- keep an emergency rollback path.
+
+---
+
+## Where This Breaks
+
+**AI-generated auth looks plausible but leaks data.** Fix by testing Supabase policies as separate users.
+
+**Payment webhooks work once, then fail in production.** Fix by testing webhook signing, retries, idempotency, and local-to-production environment variables.
+
+**The app looks fine on desktop and breaks on mobile.** Fix by treating 390px as the default build target, not a final polish pass.
+
+**The stack cost is misunderstood.** Cursor, Supabase, Vercel, Stripe, Lemon Squeezy, and Cloudflare all have usage or plan limits. Budget with headroom.
+
+**The product scope explodes.** Fix by shipping one paid workflow, not a platform.
+
+---
+
+## Buy or Defer
+
+| Need | Start with | Defer until |
 |---|---|---|
-| Cursor Pro | $20 | Unlimited Tab completions, 500 fast requests/day |
-| Supabase Pro | $25 | 100 GB storage, 100K MAU, daily backups |
-| Cloudflare Workers | $0 | Free tier covers 100K requests/day; $0.50/million after |
-| Vercel (frontend hosting) | $0 | Free tier; $20/mo for priority support |
-| Domain | $10/year | Namecheap or similar |
-| **Total** | **$45/mo** | Scales to $65/mo if Cloudflare paid tier kicks in |
+| AI-assisted coding | [Cursor](/tools/cursor/) | Add other coding agents after Cursor's limits are real |
+| Database and auth | Supabase free/testing path | Supabase Pro when backups, production controls, or usage justify it |
+| Frontend deploy | Vercel Hobby for personal tests | Vercel Pro when commercial/team limits matter |
+| Payments | Stripe test mode or Lemon Squeezy test product | Live payments after auth and core workflow work |
+| Edge functions | Skip for most MVPs | Cloudflare Workers when edge/routing/queue needs are real |
 
-Contractor comparison: $3,000 to $8,000 for the same build. A junior developer takes ~2 weeks.
+---
 
-## Who this is for
+## Who This Is For
 
-Copy this stack for a developer who can code but hates boilerplate, has a weekend free, and wants to validate an idea with real users and real payments.
+Use this workflow if you can review code, understand basic auth and database rules, and want to validate a narrow SaaS workflow quickly.
 
-Skip it for projects that need polished design (hire a designer), for complex business logic (use a full framework like Rails), or for operators not comfortable debugging when things break (they will).
+Skip it if you cannot debug generated code, need enterprise compliance, handle sensitive regulated data, or need a polished product experience before user validation.
+
+---
 
 ## FAQ
 
-**Can this stack go to production?**
-Yes. Paying customers run on this exact setup. Supabase and Cloudflare are both enterprise-grade. The limiting factor is code quality. Test thoroughly before charging money.
+**Can a weekend MVP take real payments?**
+Yes, but only after the core workflow, auth, webhook handling, refund path, and support contact are tested. Use test mode first.
 
-**What if the database grows past 100 GB?**
-Supabase Team at $599/mo covers 500 GB. Beyond that, migrate to a dedicated Postgres instance. This workflow targets MVPs, not scale.
+**Is Supabase free enough?**
+Often for early testing, but production buyers should evaluate backups, logs, project limits, monthly active users, storage, bandwidth, and support needs against the current Supabase pricing page.
 
-**Does Cursor actually save that much time?**
-Yes for most operators. Typing speed is rarely the bottleneck. Cursor eliminates the thinking time (recalling Supabase's auth API, Cloudflare's environment variable syntax, etc.). Operators already fluent in these services see smaller savings.
+**Should I use Cloudflare Workers or Vercel functions?**
+Use the platform that matches the app. Vercel is simpler for a typical frontend app deployed from GitHub. Cloudflare Workers makes more sense for Cloudflare-native edge workloads, queues, routing, or platform-style services.
 
-**What happens when Cursor makes a mistake?**
-Review every generated block before commit. Expect ~3 bugs caught in day one. Cursor is a tool, not a replacement for judgment. Speed comes from trusting it ~90% of the time and catching the 10%.
+**Should I use Stripe or Lemon Squeezy?**
+Use Stripe for direct SaaS payment infrastructure and control. Use Lemon Squeezy when merchant-of-record tax handling and digital-product workflows are more valuable than direct platform control.
 
-## Methodology
+**What is the most common weekend-build failure?**
+Building too much before testing the one workflow that proves whether anyone wants the product.
 
-This workflow page was produced by the aipedia.wiki editorial pipeline. Tool versions, pricing, and free-tier limits are verified quarterly against vendor documentation. Last verified 2026-04-17.
+## Sources
+
+- [Cursor pricing](https://cursor.com/pricing), verified 2026-05-09
+- [Cursor usage docs](https://docs.cursor.com/account/usage), verified 2026-05-09
+- [Supabase pricing](https://supabase.com/pricing), verified 2026-05-09
+- [Supabase monthly active users docs](https://supabase.com/docs/guides/platform/manage-your-usage/monthly-active-users), verified 2026-05-09
+- [Vercel Hobby plan docs](https://vercel.com/docs/plans/hobby), verified 2026-05-09
+- [Vercel pricing docs](https://vercel.com/docs/pricing), verified 2026-05-09
+- [Stripe pricing](https://stripe.com/pricing), verified 2026-05-09
+- [Lemon Squeezy pricing](https://www.lemonsqueezy.com/pricing), verified 2026-05-09
+- [Cloudflare Workers pricing](https://workers.cloudflare.com/pricing), verified 2026-05-09
+- [Cloudflare Workers platform pricing docs](https://developers.cloudflare.com/workers/platform/pricing/), verified 2026-05-09
+
+---

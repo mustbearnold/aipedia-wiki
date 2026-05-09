@@ -67,6 +67,7 @@ AI coding tools now split into five buyer jobs: inline help inside an existing I
 - [Cursor vs GitHub Copilot](/compare/cursor-vs-github-copilot/) should be kept current around Cursor's AI-native IDE fit versus Copilot's GitHub-native governance.
 - [Best AI stack for solo founders](/guides/ai-solo-founder-stack/) now covers the founder build path: Cursor for technical founders, Lovable/Bolt for non-technical MVPs, and GitHub Copilot billing risk for agent-heavy coding.
 - [Daily agentic coding workflow](/workflows/agentic-coding-workflow/) now separates Cursor, Claude Code, GitHub Copilot, and Codex by job while warning teams to model Claude usage and Copilot AI Credits before broad rollout.
+- [Micro-SaaS weekend MVP workflow](/workflows/micro-saas-weekend-build/) now shows how to use Cursor with Supabase, Vercel, Stripe, Lemon Squeezy, and Cloudflare without pretending a weekend prototype is a production SaaS.
 - [GitHub Copilot alternatives](/guides/github-copilot-alternatives/) should be monitored through the June 1, 2026 Copilot AI Credits migration.
 - [Cursor alternatives](/guides/cursor-alternatives/) should be monitored monthly because Cursor, Windsurf, Copilot, Claude Code, and Replit all expose usage-sensitive pricing or agent limits.
 - A new `Claude Code vs Codex` comparison would capture terminal-agent and OpenAI/Anthropic agent-intent searches.
