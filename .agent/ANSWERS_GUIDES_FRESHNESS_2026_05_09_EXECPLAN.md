@@ -94,6 +94,7 @@ Priority pages must avoid horizontal overflow at 360/390/430/768/1024 and presen
 - 2026-05-09: Refreshed `best-ai-automation-platform` and parent `ai-automation` category with current official n8n, Zapier, Make, Gumloop, Relevance AI, Lindy, Pipedream, and CrewAI sources; removed April 2026 version/pricing claims and bad relative links; added guide picks; and kept the already-featured `/guides/` placement aligned.
 - 2026-05-09: Refreshed `github-copilot-alternatives` and parent `ai-coding` category with current official GitHub Copilot plans/billing, Cursor, Claude Code, Windsurf, Gemini Code Assist, and Claude Max sources; removed stale April model/pricing claims and bad relative links; added guide picks; and promoted the guide on `/guides/`.
 - 2026-05-09: Refreshed `canva-ai-alternatives` and kept the parent `ai-design` category aligned with current official Canva AI 2.0, Figma, Adobe Firefly, Midjourney, Freepik, Recraft, and Ideogram sources; removed unsupported old model names and third-party ranking sources; added guide picks; and promoted the guide on `/guides/`.
+- 2026-05-09: Refreshed `ai-content-creator-stack` with current official Perplexity, Claude, ElevenLabs, HeyGen, Runway, Descript, Canva, and Suno sources; removed fixed old monthly stack totals, stale April pricing/model claims, and unsupported time-saved promises; added guide picks; and promoted the guide on `/guides/`.
 
 ## 15. Final report
 Pending.
