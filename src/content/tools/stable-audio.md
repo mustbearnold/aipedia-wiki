@@ -2,19 +2,19 @@
 type: tool
 slug: stable-audio
 title: Stable Audio
-tagline: Stability AI's enterprise music and sound generator. Stable Audio 2.5 ships royalty-safe, fully-licensed training and three-minute tracks in under two seconds.
+tagline: Stability AI's music and sound generator for commercial-safe clips, sound effects, brand audio, and enterprise audio licensing. Stable Audio 2.5 supports three-minute outputs, audio-to-audio, inpainting, API access, and enterprise self-hosting options.
 category: ai-music
 company: stability-ai
 url: https://stableaudio.com
 pricing_model: freemium
-price_range: "$0-$12/month + enterprise"
+price_range: "$0-$89.99/month + 20-credit API/enterprise"
 status: active
 launched: 2023-09
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-10
+last_verified: 2026-05-10
 update_frequency: monthly
-seo_title: "Stable Audio: Features, Pricing & Review (April 2026)"
-meta_description: "Stable Audio 2.5 is Stability AI's flagship music and sound generator as of April 2026. Royalty-safe training, three-minute tracks in under two seconds, stems export, and audio inpainting. Free Personal plan. Creator at $11.99/mo for commercial use. Enterprise on-premise available."
+seo_title: "Stable Audio Review: Pricing, License & Stable Audio 2.5 (May 2026)"
+meta_description: "Stable Audio review refreshed May 10, 2026: Stable Audio 2.5 features, Free/Pro/Studio/Max pricing, Creator vs Enterprise licensing, 20-credit API pricing, and commercial-use caveats."
 author: "aipedia.wiki Editorial"
 affiliate:
   has_program: false
@@ -29,189 +29,191 @@ scores:
   longevity: 7
 facts:
   best_for:
-    value: "Stability AI's enterprise music and sound generator. Stable Audio 2.5 ships royalty-safe, fully-licensed training and three-minute tracks in under two seconds. Best for music generation, composition, or audio-creative workflows."
-    source: "https://stableaudio.com/pricing"
-    source_label: "Source"
-    source_id: stable-audio-pricing
-    verified_at: 2026-05-03
+    value: "Commercial-safe instrumental music, sound effects, and brand audio workflows where licensed training data and enterprise deployment options matter more than vocal songwriting."
+    source: "https://stability.ai/stable-audio"
+    source_label: "Stability AI Stable Audio"
+    source_id: stable-audio-official
+    verified_at: 2026-05-10
     volatility: medium
-    confidence: medium
+    confidence: high
   pricing_anchor:
-    value: "Stable Audio 2.5; n/a; Stable Audio 2.5 launched as Stability AI's first enterprise audio model. Three-minute tracks, stems, audio inpainting, fully-licensed training."
+    value: "StableAudio.com lists Free, Pro ($11.99/mo), Studio ($29.99/mo), Max ($89.99/mo), and Enterprise licensing. Free/Pro use Personal licensing; Studio/Max use Creator licensing for individual commercial projects."
     source: "https://stableaudio.com/pricing"
-    source_label: "Source"
+    source_label: "Stable Audio pricing"
     source_id: stable-audio-pricing
-    verified_at: 2026-05-03
-    next_review_at: 2026-08-03
+    verified_at: 2026-05-10
+    next_review_at: 2026-08-10
     volatility: high
-    confidence: medium
+    confidence: high
   watch_out_for:
-    value: "Non-Tier-1 canonical profile: verify current pricing, usage limits, data policy, and integration details before procurement"
+    value: "Do not assume the cheapest paid plan unlocks commercial rights. As of May 10, 2026, Pro is still shown with a Personal license, while Studio and Max carry the Creator license; organizations and larger deployments may need Enterprise."
     source: "https://stableaudio.com/pricing"
-    source_label: "Source"
+    source_label: "Stable Audio pricing"
     source_id: stable-audio-pricing
-    verified_at: 2026-05-03
-    next_review_at: 2026-08-03
+    verified_at: 2026-05-10
+    next_review_at: 2026-08-10
     volatility: high
-    confidence: medium
-tags: [ai-music, music-generation, sound-effects, stable-audio, stability-ai, royalty-safe, stems, audio-inpainting, enterprise]
+    confidence: high
+tags: [ai-music, music-generation, sound-effects, stable-audio, stability-ai, royalty-safe, audio-inpainting, enterprise]
 best_for:
-  - brand and commercial campaigns needing legal-safe audio
-  - sound designers generating sfx and ambient beds
-  - enterprise sonic branding with on-premise deployment
-  - developers needing a commercial-safe music API
-  - stems workflow for mix-ready versioning
+  - sound designers generating clips, sfx, ambiences, and production beds
+  - brands that need licensed-training-data positioning for campaigns or product audio
+  - individual creators who need commercial rights through Studio or Max
+  - developers testing a Stability AI API audio workflow
+  - enterprises that need custom licensing, implementation support, or self-hosting conversations
 not_best_for:
-  - consumer-facing songs with vocals (use Suno or Udio)
-  - full-song writing with lyrics and vocal performance
-  - tight music-theory fidelity against Suno v5 or Udio v2
+  - consumer-facing songs with polished vocals and lyrics
+  - buyers who want commercial rights on the cheapest paid plan
+  - teams that need transparent public enterprise pricing
+  - open-weights commercial deployment without checking Stability AI's license terms
 quick_answer: >-
-  Stable Audio 2.5 is the royalty-safe enterprise music generator. Pick it for brand campaigns, sound design, or any workflow where licensed training data is non-negotiable. Skip it for vocal-driven songs. Suno and Udio still win on that axis.
+  Stable Audio 2.5 is strongest for instrumental tracks, sound effects, brand audio, and enterprise licensing conversations. Use Studio or Max if you are an individual creator who needs commercial rights; use Enterprise for organizations and self-hosted deployments. Skip it if you mainly want vocal-driven songs.
 price_history:
+  - date: 2026-05-10
+    plan: "StableAudio.com subscriptions"
+    price: "Free, $11.99/mo Pro, $29.99/mo Studio, $89.99/mo Max, Enterprise quote"
+    source: "https://stableaudio.com/pricing"
+    source_label: "Stable Audio pricing"
+    source_id: stable-audio-pricing
+    note: "Free and Pro are shown with Personal licensing; Studio and Max are shown with Creator licensing for individual commercial projects and music releases. Prices exclude VAT/sales taxes."
+  - date: 2026-05-10
+    plan: "Stability AI API - Stable Audio 2.5"
+    price: "20 credits per generation"
+    source: "https://platform.stability.ai/pricing"
+    source_label: "Stability AI platform pricing"
+    source_id: stable-audio-api-pricing
+    note: "Official platform pricing lists Stable Audio 2.5 at 20 credits for up to three minutes of generated audio."
   - date: 2025-09-10
-    plan: "Stable Audio 2.5"
-    price: "n/a"
-    source: "https://stableaudio.com/pricing"
-    source_label: "Source"
-    source_id: stable-audio-pricing
-    note: "Stable Audio 2.5 launched as Stability AI's first enterprise audio model. Three-minute tracks, stems, audio inpainting, fully-licensed training."
-  - date: 2026-04-15
-    plan: "Creator"
-    price: "$11.99/mo"
-    source: "https://stableaudio.com/pricing"
-    source_label: "Source"
-    source_id: stable-audio-pricing
-    note: "Verified unchanged. Personal plan remains free. Enterprise via sales contact."
+    plan: "Stable Audio 2.5 launch"
+    price: "Enterprise and platform access"
+    source: "https://stability.ai/news-updates/stability-ai-introduces-stable-audio-25-the-first-audio-model-built-for-enterprise-sound-production-at-scale"
+    source_label: "Stable Audio 2.5 launch"
+    source_id: stable-audio-launch
+    note: "Stable Audio 2.5 launched with three-minute outputs, API and partner access, audio inpainting, fully licensed training data, and enterprise licensing."
 ---
 
 # Stable Audio
 
-Stability AI's enterprise-focused music and sound generator. **Stable Audio 2.5** is the production flagship as of April 2026, released September 10, 2025. One model covers text-to-audio, audio-to-audio, and audio inpainting.
+Stable Audio is Stability AI's music and sound generation product. **Stable Audio 2.5** is the current flagship as of May 10, 2026, and Stability positions it for enterprise-grade sound production, brand audio, sound effects, and instrumental music.
 
-Training used fully licensed datasets. Outputs are commercial-safe under paid licenses. Three-minute tracks generate in under two seconds on Nvidia H100 GPUs.
+Verified May 10, 2026 against StableAudio.com pricing, Stability AI's Stable Audio 2.5 page, Stability AI platform pricing, Stability AI licensing, and the Stable Audio Open model card.
 
 ## System Verdict
 
-> **Pick Stable Audio if legal safety on the training data is non-negotiable.** Stable Audio 2.5 trained on fully licensed material and ships enterprise indemnification options. For brand campaigns, advertising beds, platform audio, and any commercial work where a labels-and-publishers dispute is an existential risk, this is the safest pick on the market.
+> **Pick Stable Audio when rights and deployment options matter more than pop-song polish.** Stability says Stable Audio models are trained on fully licensed datasets, and the 2.5 product is built around commercial-safe instrumental audio, sfx, brand sound, API access, and enterprise deployment.
 >
-> **Skip it for vocal-driven songs.** Suno v5 and Udio v2 still beat Stable Audio on lyric generation, vocal performance, and consumer song structure. Stable Audio's strength is instrumental tracks, sound effects, and branded audio identities. Full-song vocals are not the product focus.
+> **Skip it if the job is vocal-first songwriting.** Stable Audio is useful for tracks, clips, ambiences, and sound design. If you mainly want lyrics, vocals, hooks, and consumer song structure, compare [Suno](/tools/suno/) and [Udio](/tools/udio/) first.
 >
-> **Who pays which tier:** Free Personal license for non-commercial testing. Creator at $11.99/mo for individual commercial projects. Enterprise (custom pricing) for organizations with on-premise deployment, custom fine-tuning, and indemnification clauses. API access through stability.ai runs $0.20 per long-form generation (up to 190 seconds).
+> **Best plan guidance:** Free is for testing. Pro is $11.99/month but still uses a Personal license. Studio at $29.99/month and Max at $89.99/month carry the Creator license for individual commercial projects and music releases. Organizations, apps, games, film/TV, large commercial products, and self-hosting conversations should go through Enterprise.
 
 ## Key Facts
 
 | | |
 |---|---|
-| **Flagship model** | Stable Audio 2.5 (released September 10, 2025) |
-| **Max track length** | Up to 3 minutes (~190 seconds) in a single generation |
-| **Generation speed** | Under 2 seconds on H100 GPUs (8-step inference) |
-| **Core modes** | Text-to-audio · Audio-to-audio · Audio inpainting |
-| **Stems export** | Yes (clean stems for mixing and versioning) |
-| **Training data** | Fully licensed dataset (commercial-safe) |
-| **Open-source sibling** | Stable Audio Open 1.0 (47s max, research license, non-commercial) |
-| **API pricing** | $0.20 per long-form generation (up to 190s) via Stability AI API |
-| **Distribution** | stableaudio.com · Stability AI API · fal · Replicate · ComfyUI |
-| **Commercial rights** | Personal (non-commercial) · Creator ($11.99/mo individual commercial) · Enterprise (custom, org-wide) |
+| **Current flagship** | Stable Audio 2.5 |
+| **Best fit** | Instrumental tracks, sfx, ambiences, brand audio, enterprise sound production |
+| **Max output** | Up to 3 minutes |
+| **API price** | 20 credits per Stable Audio 2.5 generation |
+| **Core workflows** | Text-to-audio, audio-to-audio, audio inpainting |
+| **Training-data claim** | Stability says Stable Audio models are commercially safe and trained on fully licensed datasets |
+| **Web plans** | Free, Pro, Studio, Max, Enterprise |
+| **Individual commercial license** | Studio and Max Creator license tiers |
+| **Enterprise path** | Custom licensing, implementation support, customization, and self-hosting options |
+| **Open sibling** | Stable Audio Open 1.0: up to 47 seconds, Community License, commercial use requires checking Stability AI licensing |
 
-Every data point above was verified against vendor documentation on 2026-04-17. See Sources.
+## What It Actually Is
 
-## What it actually is
+Stable Audio is a hosted web app plus a Stability AI model family. The current product surface points buyers to StableAudio.com, the Stability AI API, partner platforms such as fal, Replicate, and ComfyUI, and enterprise licensing.
 
-One music and sound generation product served through a web app, the Stability AI API, and partner platforms (fal, Replicate, ComfyUI). A single license tier covers all access points.
+Stable Audio 2.5 is designed for tracks up to three minutes. Stability's launch materials say it improves musical structure, prompt adherence, and control, with audio inpainting alongside text-to-audio and audio-to-audio. The strongest buyer reason is not "best song demo." It is the combination of licensed-training-data positioning, API/partner access, and enterprise licensing options.
 
-Stable Audio 2.5 is a latent diffusion model trained on a licensed dataset. It supports three generation modes. Text-to-audio from prompts. Audio-to-audio transformation of uploaded source material. Audio inpainting fills gaps or extends existing audio contextually.
+The open model is separate. Stable Audio Open 1.0 can generate up to 47-second stereo clips and is distributed under the Stability AI Community License. Treat it as a research/open-model option, not the same product as the paid Stable Audio 2.5 service.
 
-Stems export is native. The model produces separated instrumental layers clean enough for DAW mixing without source separation plugins. Three-minute outputs include intro, development, and outro structure without manual stitching.
+## When To Pick Stable Audio
 
-The real moat: training-data provenance. Stability AI disclosed the fully licensed dataset and packages enterprise indemnification against IP claims. Suno and Udio still face active litigation from major labels. That difference matters for any org where an IP dispute is a board-level risk.
+- **Commercial-safe instrumental work:** brand beds, podcast bumpers, product sounds, sfx, game audio, ad concepts, and ambient tracks.
+- **Rights-sensitive audio workflows:** teams that care about the training-data story before they care about the flashiest vocal demo.
+- **API audio generation:** developers who want a Stability AI-hosted text/audio-to-audio option priced in credits.
+- **Enterprise sound production:** organizations that need custom deployment, implementation support, fine-tuning on a sound library, or self-hosting discussions.
+- **Creator commercial projects:** individual creators who are ready for Studio or Max rather than assuming Pro is enough.
 
-Stable Audio Open 1.0 is the sibling research model. 47-second maximum, trained on CC0 / CC BY / CC Sampling+ data, non-commercial research license. Do not confuse it with the commercial 2.5 product.
+## When To Pick Something Else
 
-## When to pick Stable Audio
-
-- **Brand audio and sonic identity work.** Enterprise license + fully licensed training = the clearest legal path for advertising, platform sounds, and branded campaigns.
-- **Sound design and sfx.** Text-to-audio handles ambient beds, Foley, one-shots, and texture layers at speeds no human sound designer matches.
-- **Stems-first workflow.** Native stems export skips source separation entirely. Deliver mix-ready multitracks to a DAW in one step.
-- **Developer audio workflows.** The $0.20-per-generation API (up to 190 seconds) is cost-competitive for batch sound generation in games, apps, or video tools.
-- **On-premise deployment.** Enterprise contracts allow Stable Audio 2.5 to run inside a customer's infrastructure. Suno and Udio are cloud-only.
-
-## When to pick something else
-
-- **Full-song writing with vocals and lyrics:** [Suno](/tools/suno/) or [Udio](/tools/udio/). Stable Audio 2.5 does not match either on lyric generation, vocal performance, or consumer song structure.
-- **Consumer-facing song creation:** [Suno](/tools/suno/) ships a polished consumer app with cover art and sharing. Stable Audio is positioned for production workflows, not TikTok virality.
-- **Royalty-free stock-music replacement at zero marginal cost:** [Mubert](/tools/mubert/) targets background-music use cases with generative stems and a broader free tier.
-- **Voice, narration, or dialogue:** [ElevenLabs](/tools/elevenlabs/). Stable Audio generates music and sound, not speech or voice performance.
-- **Open-weights self-hosting:** Stable Audio Open 1.0 (47s max, non-commercial research license) ships on Hugging Face. Do not ship it commercially.
+- **Full songs with vocals and lyrics:** [Suno](/tools/suno/) or [Udio](/tools/udio/).
+- **Composer-led scoring and MIDI control:** [AIVA](/tools/aiva/).
+- **Background music beds at scale:** [Mubert](/tools/mubert/).
+- **Voice, narration, or dialogue:** [ElevenLabs](/tools/elevenlabs/).
+- **Free commercial open-weights use:** do not assume Stable Audio Open qualifies. Check Stability AI's current license before shipping.
 
 ## Pricing
 
-Subscription licenses via [stableaudio.com/pricing](https://stableaudio.com/pricing). API pricing separate via Stability AI.
+StableAudio.com currently separates subscription plans from license types. That distinction matters.
 
-| Plan | Price | Commercial use | Generation limits | Who's it for |
-|------|-------|----------------|-------------------|--------------|
-| Personal | Free | No (non-commercial only) | Daily quota | Casual testing and non-commercial projects |
-| Creator | $11.99/mo | Yes (individual) | Higher monthly quota, upload source audio | **Most individual commercial users land here** |
-| Enterprise | Custom | Yes (org-wide + indemnification) | Custom, including on-prem | Brands, platforms, studios with legal review |
-| API | $0.20 per long-form generation | Per Stability AI license | Pay-as-you-go up to 190s | Developers and batch workflows |
+| Plan | Price | License shown | Monthly Stable Audio 2.5 generations | Best for |
+|------|-------|---------------|--------------------------------------|----------|
+| Free | Free | Personal | 10 | Non-commercial testing |
+| Pro | $11.99/month | Personal | 250 | Heavier personal use, not the commercial default |
+| Studio | $29.99/month | Creator | 675 | Most individual commercial music/sfx projects |
+| Max | $89.99/month | Creator | 2,250 | High-volume individual creator workflows |
+| Enterprise | Custom | Enterprise | Custom | Organizations, apps, games, film/TV, large deployments, self-hosting |
+| Stability AI API | 20 credits/generation | Platform terms | Usage-based | Developers generating up to 3 minutes through the API |
 
-*Prices verified 2026-04-17 via [Stable Audio pricing](https://stableaudio.com/pricing), the [Stability AI license page](https://stability.ai/license), and the [Pixazo Stable Audio 2.5 API reference](https://www.pixazo.ai/models/audio-generation/stable-audio-2-5-api).*
+Prices exclude VAT/sales taxes. Verified May 10, 2026 on [Stable Audio pricing](https://stableaudio.com/pricing) and [Stability AI platform pricing](https://platform.stability.ai/pricing).
 
-Enterprise contracts can include on-premise deployment and custom model fine-tuning. Stability AI positions 2.5 as its first audio model built specifically for enterprise sound production.
+## Against The Alternatives
 
-## Against the alternatives
-
-| | Stable Audio 2.5 | Suno v5 | Udio v2 |
+| | Stable Audio 2.5 | Suno | Udio |
 |---|---|---|---|
-| **Training-data transparency** | **Fully licensed (disclosed)** | Disputed (active litigation) | Disputed (active litigation) |
-| **Vocal and lyric quality** | Limited | **Strongest** | Strong |
-| **Instrumental and sound design** | **Strongest** | Strong | Strong |
-| **Max track length** | 3 minutes | 4+ minutes | 4+ minutes |
-| **Stems export** | **Native** | Limited | Limited |
-| **Generation speed** | **Under 2s (H100)** | Seconds | Seconds |
-| **On-premise deployment** | **Enterprise** | Cloud only | Cloud only |
-| **Best viewed as** | Enterprise commercial-safe default | Consumer song-creation default | Consumer songwriter-pro default |
+| **Best job** | Instrumental audio, sfx, brand/enterprise sound | Fast complete songs | Songwriting alternatives and iteration |
+| **Training-data positioning** | Stability claims fully licensed datasets | Rights debate remains a buyer concern | Rights debate remains a buyer concern |
+| **Vocal/lyric strength** | Not the main product focus | Stronger | Stronger |
+| **Enterprise deployment** | Enterprise licensing and self-hosting conversations | Cloud consumer/pro workflow | Cloud consumer/pro workflow |
+| **API path** | Stability AI API and partners | Check current developer/API availability | Check current developer/API availability |
+| **Best viewed as** | Rights-sensitive audio asset generator | Consumer song creation default | Consumer songwriting alternative |
 
-## Failure modes
+## Failure Modes
 
-- **Vocal quality is not the product.** Stable Audio 2.5 generates instrumental tracks and sfx cleanly. Vocal performances, lyric generation, and sung melodies lag Suno and Udio materially.
-- **Prompt adherence is improved, not solved.** Specific BPM, key, or arrangement requests land closer than Stable Audio 2.0 but still drift. Producers should expect iteration, not one-shot perfection.
-- **Three-minute ceiling.** Stable Audio 2.5 tops out at roughly 190 seconds per generation. Longer pieces need concatenation. Suno and Udio extend further in a single shot.
-- **Stable Audio Open 1.0 is not commercial.** The open-weights model is research-license only and capped at 47 seconds. Confusing it with Stable Audio 2.5 will bust a commercial-use contract.
-- **Enterprise indemnification is contract-dependent.** The "royalty-safe" claim depends on Stability AI's license terms and the fully-licensed training dataset. Read the Stability AI license page before shipping on Creator alone.
-- **Category volatility.** Music-generation licensing law is in motion. The Suno / Udio label lawsuits will shape the competitive set in 2026-2027. Stable Audio's moat depends partly on whether competitors are forced into comparable licensing.
-- **Pricing transparency is thin.** Creator is posted at $11.99/mo but monthly generation limits and enterprise pricing are not fully public. Plan on a sales call for org-wide contracts.
+- **Commercial rights are easy to misread.** Pro is a paid plan, but the current pricing page shows it with a Personal license. Studio and Max are the current Creator-license self-serve options.
+- **Enterprise is not publicly priced.** If you are a company, app, game, film/TV workflow, or high-revenue deployment, expect a sales and legal review.
+- **Vocal performance is not the core pitch.** Stable Audio 2.5 is better framed as instrumental/sfx/brand audio than as a direct vocal-song winner.
+- **API costs are credit-based.** Stable Audio 2.5 is listed at 20 credits per generation on the platform pricing page; verify live credit pricing and account terms before estimating margins.
+- **Open weights are not the same as paid Stable Audio.** Stable Audio Open 1.0 is capped at shorter outputs and uses Stability's Community License; commercial use needs a license check.
+- **Category law and platform terms are volatile.** AI music rights, upload restrictions, and licensing language can change quickly. Re-check terms before release, distribution, ads, or client work.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [Stable Audio pricing](https://stableaudio.com/pricing), the [Stable Audio 2.5 launch page](https://stability.ai/stable-audio), the [VentureBeat 2.5 launch coverage](https://venturebeat.com/ai/stability-ais-enterprise-audio-model-cuts-production-time-from-weeks-to), and the [Stability AI license page](https://stability.ai/license).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified May 10, 2026 against [Stable Audio pricing](https://stableaudio.com/pricing), [Stable Audio 2.5](https://stability.ai/stable-audio), [Stability AI platform pricing](https://platform.stability.ai/pricing), [Stability AI licensing](https://stability.ai/license), and [Stable Audio Open 1.0](https://huggingface.co/stabilityai/stable-audio-open-1.0).
 
 ## FAQ
 
 **Is Stable Audio free?**
-Yes, with constraints. The Personal plan is free for non-commercial projects only. Commercial use on individual projects requires the Creator plan at $11.99/mo. Organizations need an Enterprise license.
+Yes, for limited non-commercial testing. The Free plan currently includes 10 monthly Stable Audio 2.5 generations and uses a Personal license.
+
+**Which Stable Audio plan should I buy for commercial use?**
+Most individual commercial users should start with Studio, because the current pricing page shows Studio and Max with the Creator license. Pro is cheaper, but it is still shown with a Personal license as of May 10, 2026.
 
 **What is the current Stable Audio model?**
-Stable Audio 2.5 is the production flagship. It launched September 10, 2025 as Stability AI's first audio model built specifically for enterprise sound production ([VentureBeat launch coverage](https://venturebeat.com/ai/stability-ais-enterprise-audio-model-cuts-production-time-from-weeks-to)).
+Stable Audio 2.5 is the current flagship model. Stability AI describes it as built for enterprise-grade sound production, with up to three-minute tracks, text-to-audio, audio-to-audio, and audio inpainting.
+
+**How much does the Stable Audio API cost?**
+Stability AI platform pricing lists Stable Audio 2.5 at 20 credits per generation for up to three minutes. Check the live platform pricing page and your account billing before building a margin model.
 
 **Can I use Stable Audio output commercially?**
-Yes, on Creator and Enterprise plans. Personal plan output is non-commercial only. The Creator plan permits commercial releases and campaigns for individuals. Enterprise covers org-wide use plus indemnification ([license page](https://stability.ai/license)).
+Yes, but only under the right license. Studio and Max are the self-serve Creator-license plans for individual commercial projects and music releases. Organizations and broader deployments should use Enterprise.
 
-**Is Stable Audio trained on copyrighted music?**
-Stability AI states that Stable Audio 2.5 was trained on a fully licensed dataset. This is the explicit differentiator against Suno and Udio, both of which face active label litigation over training data. For brand and enterprise workloads, that provenance is the primary reason to pick Stable Audio.
+**Is Stable Audio trained on licensed data?**
+Stability AI says Stable Audio models are commercially safe and trained on fully licensed datasets. That is a major reason to consider it for brand and enterprise workloads, but buyers should still review the current license and terms before release.
 
 **Does Stable Audio export stems?**
-Yes. Native stems export ships with Stable Audio 2.5. Separated instrumental layers export clean enough for DAW mixing without additional source separation.
+The current official product and pricing pages I verified do not make native stem export the central claim. Treat Stable Audio as text/audio-to-audio and inpainting for generated audio, then check the live app for export options before building a DAW workflow around it.
 
 **Stable Audio 2.5 vs Stable Audio Open 1.0, which should I use?**
-Stable Audio 2.5 for any commercial work. It is the enterprise flagship, 3-minute output, fully licensed training. Stable Audio Open 1.0 is the open-weights research model, 47-second cap, non-commercial research license only. Do not ship Stable Audio Open 1.0 in commercial work.
+Use Stable Audio 2.5 for the hosted commercial product and enterprise/API workflows. Stable Audio Open 1.0 is a shorter-output open model under the Stability AI Community License; verify commercial licensing before using it in a product.
 
-**Stable Audio vs Suno vs Udio for song creation?**
-For vocal-driven songs with lyrics, pick [Suno](/tools/suno/) or [Udio](/tools/udio/). Both beat Stable Audio on vocal quality and consumer song structure. For instrumental tracks, sound design, brand audio, or any workflow where the training-data provenance matters, Stable Audio 2.5 is the safer pick.
-
-**Can I deploy Stable Audio on-premise?**
-Yes, on Enterprise contracts. Stability AI offers custom deployment including on-premise and custom fine-tuning. Neither Suno nor Udio offers on-prem as of April 2026.
+**Can I deploy Stable Audio on-premises?**
+Enterprise conversations can include self-hosting and custom deployment. The public self-hosting route also points to Stable Audio Open and Open Small weights, which are not the same as a blanket commercial right to deploy Stable Audio 2.5.
 
 ## Related
 
 - **Category:** [AI Music](/categories/ai-music/)
-- **Alternatives:** [Suno](/tools/suno/) · [Udio](/tools/udio/) · [Mubert](/tools/mubert/) · [ElevenLabs](/tools/elevenlabs/)
+- **Alternatives:** [Suno](/tools/suno/) · [Udio](/tools/udio/) · [AIVA](/tools/aiva/) · [Mubert](/tools/mubert/) · [ElevenLabs](/tools/elevenlabs/)

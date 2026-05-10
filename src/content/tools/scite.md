@@ -2,16 +2,16 @@
 type: tool
 slug: scite
 title: Scite
-tagline: Smart Citations classify every academic reference as Supporting, Contrasting, or Mentioning across 1.2B+ indexed citations.
+tagline: Smart Citations classify academic citation contexts as Supporting, Contrasting, or Mentioning across Scite's 1.6B+ indexed citations.
 category: ai-research
 company: scite LLC
 url: https://scite.ai
 pricing_model: freemium
-price_range: "$0-$20/month"
+price_range: "$20-$50/month; organization/developer custom"
 status: active
 launched: 2018-01
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-10
+last_verified: 2026-05-10
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,24 +30,26 @@ facts:
     source: "https://scite.ai"
     source_label: "scite.ai"
     source_id: scite-official
-    verified_at: 2026-05-03
+    verified_at: 2026-05-10
+    next_review_at: 2026-08-10
     volatility: medium
     confidence: high
   pricing_anchor:
-    value: "Personal pricing is listed separately from team and institutional access; confirm current monthly or annual terms before lab-wide use."
+    value: "Scite lists Basic at $20/month, Pro at $50/month, and Organization/Developer access as custom-priced."
     source: "https://scite.ai/pricing"
     source_label: "scite.ai pricing"
     source_id: scite-pricing
-    verified_at: 2026-05-03
+    verified_at: 2026-05-10
     volatility: high
     confidence: high
-    next_review_at: 2026-08-03
+    next_review_at: 2026-08-10
   citation_classification:
     value: "Smart Citations classify citation contexts as Supporting, Contrasting, or Mentioning, which is the core differentiator versus ordinary paper search."
     source: "https://scite.ai"
     source_label: "scite.ai"
     source_id: scite-official
-    verified_at: 2026-05-03
+    verified_at: 2026-05-10
+    next_review_at: 2026-08-10
     volatility: medium
     confidence: high
   research_assistant:
@@ -55,7 +57,8 @@ facts:
     source: "https://scite.ai"
     source_label: "scite.ai"
     source_id: scite-official
-    verified_at: 2026-05-03
+    verified_at: 2026-05-10
+    next_review_at: 2026-08-10
     volatility: medium
     confidence: high
   watch_out_for:
@@ -63,17 +66,17 @@ facts:
     source: "https://scite.ai"
     source_label: "scite.ai"
     source_id: scite-official
-    verified_at: 2026-05-03
+    verified_at: 2026-05-10
     volatility: high
     confidence: high
-    next_review_at: 2026-08-03
+    next_review_at: 2026-08-10
 tags: [citations, academic-research, peer-review, literature-review, evidence, smart-citations]
-seo_title: "Scite.ai: Smart Citations Review & Pricing (April 2026)"
+seo_title: "Scite.ai: Smart Citations Review & Pricing (May 2026)"
 meta_description: >-
-  Scite classifies 1.2B+ citations as Supporting, Contrasting, or Mentioning. Personal $20/mo, Team and Enterprise custom. Unique citation-context signal no other tool provides. Verified April 2026.
+  Scite classifies 1.6B+ citations as Supporting, Contrasting, or Mentioning. Basic $20/mo, Pro $50/mo, Organization and Developer custom. Verified May 2026.
 author: "aipedia.wiki Editorial"
 quick_answer: >-
-  Scite classifies each citation as Supporting, Contrasting, or Mentioning across 1.2B+ indexed references. The Assistant answers research questions grounded in that classified context. Pick it for credibility checks and systematic reviews. Skip it for casual browsing or humanities-heavy fields.
+  Scite classifies citation contexts as Supporting, Contrasting, or Mentioning across 1.6B+ indexed citations. The Assistant and search tools are grounded in Scite's scholarly corpus. Pick it for credibility checks and systematic reviews. Skip it for casual browsing or humanities-heavy fields.
 best_for:
   - PhD students conducting systematic literature reviews
   - Researchers evaluating paper credibility before citation
@@ -85,19 +88,33 @@ not_best_for:
   - Fields with sparse coverage (engineering, humanities)
 price_history:
   - date: 2026-04-17
-    plan: "Personal"
+    plan: "Basic"
     price: "$20/mo"
     source: "https://scite.ai/pricing"
-    source_label: "Source"
+    source_label: "Scite pricing"
     source_id: scite-pricing
-    note: "Verified unchanged. Annual at $200/yr."
+    note: "Older Personal framing verified before Scite's Basic/Pro packaging refresh."
+  - date: 2026-05-10
+    plan: "Basic"
+    price: "$20/mo"
+    source: "https://scite.ai/pricing"
+    source_label: "Scite pricing"
+    source_id: scite-pricing
+    note: "Includes Scite Assistant, Full-Text Search, dashboards, citation reports, alerts, and 250 MCP credits per month."
+  - date: 2026-05-10
+    plan: "Pro"
+    price: "$50/mo"
+    source: "https://scite.ai/pricing"
+    source_label: "Scite pricing"
+    source_id: scite-pricing
+    note: "Adds patents in Search and Assistant, MCP access to more datasets, and 2,500 MCP credits per month."
 ---
 
 # Scite
 
-scite LLC's Smart Citations platform. Every citation in its 1.2 billion-plus index is classified as Supporting, Contrasting, or Mentioning based on the text surrounding the reference in the citing paper. The Assistant layers AI Q&A on top of that classified database.
+scite LLC's Smart Citations platform. Citation contexts in its 1.6 billion-plus citation index are classified as Supporting, Contrasting, or Mentioning based on the text surrounding the reference in the citing paper. The Assistant layers AI Q&A on top of that classified research corpus.
 
-Pricing: Free tier limited, Personal $20/mo ($200/yr), Team and Enterprise custom.
+Pricing: Basic $20/mo, Pro $50/mo, Organization and Developer custom. Scite offers a 7-day free trial.
 
 ## System Verdict
 
@@ -105,20 +122,21 @@ Pricing: Free tier limited, Personal $20/mo ($200/yr), Team and Enterprise custo
 >
 > **Skip it if your field is lightly covered or your budget is zero.** Biomedical and social sciences have dense coverage. Engineering, computer science, arts, and humanities thin out fast. For free discovery, [Semantic Scholar](/tools/semantic-scholar/) covers the basics. For conversational research Q&A, [Consensus](/tools/consensus/) is faster and cheaper.
 >
-> **Who pays which tier:** Free for one-off checks with strict limits, Personal $20/mo for any researcher doing regular literature work, Team for lab groups, Enterprise ($5K to $25K/year typical) for institutional SSO and API access.
+> **Who pays which tier:** Basic $20/mo for regular individual literature work, Pro $50/mo for power researchers who need patents and broader MCP datasets, Organization for university/company access, and Developer for API/MCP integrations.
 
 ## Key Facts
 
 | | |
 |---|---|
-| **Classified citations indexed** | 1.2B+ across 178M papers |
+| **Classified citations indexed** | 1.6B+ citations |
+| **Search corpus** | 280M+ scholarly sources on the home page; 200M+ sources shown on the pricing page |
 | **Classification labels** | Supporting, Contrasting, Mentioning |
 | **Signature feature** | Citation-context classification via trained NLP |
 | **Scite Assistant** | AI Q&A grounded in classified citation contexts |
 | **Reference Check** | Audits a draft's bibliography for retracted or contested sources |
 | **Analytics** | Journal-level and author-level supporting-to-contrasting ratios |
-| **API access** | Enterprise tier only |
-| **Student discount** | 30 to 50 percent off Personal plan |
+| **API access** | Organization and Developer paths; contact Scite |
+| **Student/academic discount** | Available when recommending Scite to an institution, per Scite pricing FAQ |
 | **Coverage strength** | Biomedical, social sciences |
 | **Coverage weakness** | Engineering, CS, humanities |
 
@@ -148,16 +166,16 @@ The moat is the classified database itself. Building it required years of NLP tr
 
 ## Pricing
 
-Subscription pricing via [scite.ai/pricing](https://scite.ai/pricing).
+Subscription pricing via [scite.ai/pricing](https://scite.ai/pricing), verified May 10, 2026.
 
 | Plan | Price | Key Access |
 |------|-------|-----------|
-| Free | $0 | Limited daily searches, no full citation statements |
-| Personal | $20/mo ($200/yr) | Unlimited Smart Citations, full Assistant, Reference Check, alerts |
-| Team | Custom | Multi-seat licenses, team analytics |
-| Enterprise | Custom (~$5K-$25K/yr) | SSO, API, institutional licensing |
+| Basic | $20/mo | Scite Assistant, Full-Text Search, dashboards, paper citation reports, alerts, 250 MCP credits/month |
+| Pro | $50/mo | Basic plus patents in Search and Assistant, more MCP datasets, 2,500 MCP credits/month |
+| Organization | Custom | Domain/IP/email access, API and MCP access, volume pricing, analytics, SSO, exports, support |
+| Developer | Custom | Credit-based API and MCP access, with tiered pricing for high-volume usage |
 
-*Prices verified 2026-04-17 via [scite.ai/pricing](https://scite.ai/pricing). Student discounts of 30 to 50 percent apply on Personal. Enterprise ranges cited from independent channel reporting.*
+*Prices verified 2026-05-10 via [scite.ai/pricing](https://scite.ai/pricing). Scite says new users can start a 7-day free trial. Organization and Developer pricing require contacting Scite.*
 
 ## Against the alternatives
 
@@ -165,24 +183,24 @@ Subscription pricing via [scite.ai/pricing](https://scite.ai/pricing).
 |---|---|---|---|
 | **Primary signal** | Citation sentiment (Support/Contrast) | Consensus meter from abstracts | Citation counts + influential citations |
 | **Q&A interface** | Assistant (classified-context grounded) | Yes (abstract-grounded) | No native Q&A |
-| **Database size** | 1.2B+ citations across 178M papers | 200M+ papers | 200M+ papers |
-| **Free tier usefulness** | Very limited | Generous monthly | Fully free, forever |
-| **Price floor (paid)** | $20/mo Personal | $10.99/mo Premium | $0 |
+| **Database size** | 1.6B+ citations; 280M+ scholarly sources claimed on Scite home page | 200M+ papers | 200M+ papers |
+| **Free tier usefulness** | 7-day trial, then paid individual plans | Generous monthly | Fully free, forever |
+| **Price floor (paid)** | $20/mo Basic | $10.99/mo Premium | $0 |
 | **Best viewed as** | Credibility checker | Research question answerer | Free discovery engine |
 
 ## Failure modes
 
 - **Classification is NLP, not ground truth.** Nuanced or sarcastic citation contexts get misclassified. Verify high-stakes classifications manually.
-- **Free tier is a demo, not a workflow.** A handful of searches per day and no access to full citation statements. Anyone evaluating the tool seriously needs the trial or Personal plan.
+- **Trial is not a long-term workflow.** Anyone evaluating Scite seriously should budget for Basic, Pro, or an institution-provided seat.
 - **Coverage gaps outside STEM and social sciences.** Engineering, CS, humanities, and arts have sparse citation-context data. Check your field before subscribing.
 - **No offline access.** All features require internet and an active session.
 - **Assistant inherits classification error rates.** If the underlying citation context was misclassified, the Assistant's synthesized answer carries the error forward.
-- **$20/mo feels steep without institutional backing.** Independent academics and hobbyists will feel it. Cochrane-grade reviewers will not.
-- **Smaller API footprint.** Programmatic access is Enterprise-only. Solo developers cannot script against the database.
+- **$20-$50/mo feels steep without institutional backing.** Independent academics and hobbyists will feel it. Systematic reviewers and institution-backed researchers may not.
+- **API access is a sales motion.** Programmatic use requires Organization or Developer contact, not a simple self-serve key.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the analysis above. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [scite.ai](https://scite.ai) and [scite pricing](https://scite.ai/pricing).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the analysis above. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-10 against [scite.ai](https://scite.ai) and [scite pricing](https://scite.ai/pricing).
 
 ## FAQ
 
@@ -190,7 +208,7 @@ This page was produced by the aipedia.wiki editorial pipeline, an automated syst
 Google Scholar counts citations. Scite classifies them. Knowing a paper has 500 citations is less useful than knowing 150 of them explicitly contest its findings.
 
 **Is Scite worth $20/month?**
-For active researchers running regular literature reviews, yes. The Supporting/Contrasting split saves hours and flags contested science. For occasional academic work, [Semantic Scholar](/tools/semantic-scholar/) is free and covers basic needs.
+For active researchers running regular literature reviews, yes. Basic is $20/month and the Supporting/Contrasting split can save hours and flag contested science. For occasional academic work, [Semantic Scholar](/tools/semantic-scholar/) is free and covers basic needs.
 
 **How accurate is citation classification?**
 Scite uses trained NLP models and publishes confidence levels per classification. High-stakes citations should still be manually verified, particularly in nuanced or critical contexts.
@@ -202,12 +220,12 @@ Scite grounds answers in classified citation contexts. [Consensus](/tools/consen
 Coverage is thinnest outside STEM and social sciences. Humanities researchers will find sparse citation-context data for most fields.
 
 **Can I integrate Scite into my institution's research tools?**
-Yes, via the Enterprise tier. API access and SSO are bundled. Personal and Team plans do not include the API.
+Yes, via Organization or Developer access. Scite's pricing page says API and MCP access are available through custom-priced paths.
 
 ## Sources
 
-- [scite.ai](https://scite.ai): product overview and classification methodology
-- [scite.ai pricing](https://scite.ai/pricing): current tier prices and limits
+- [scite.ai](https://scite.ai): product overview, Smart Citations, corpus claims, publisher partnerships
+- [scite.ai pricing](https://scite.ai/pricing): current Basic, Pro, Organization, and Developer packaging
 
 ## Related
 

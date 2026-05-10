@@ -2,16 +2,16 @@
 type: tool
 slug: langgraph
 title: LangGraph
-tagline: LangChain's low-level agent orchestration framework. Graph-based stateful agents for production. MIT-licensed free library + LangSmith paid observability. Used by Klarna, Replit, Elastic.
+tagline: LangChain's low-level orchestration runtime for long-running, stateful AI agents. MIT-licensed Python and JavaScript libraries; paid spend comes from LangSmith observability and deployment.
 category: ai-automation
-company: langchain
+company: LangChain
 url: https://www.langchain.com/langgraph
 pricing_model: freemium
-price_range: "$0 library / LangSmith paid tiers"
+price_range: "$0 library / $39 Plus / usage-based deployment"
 status: active
 launched: 2024-01
-last_updated: 2026-04-18
-last_verified: 2026-04-18
+last_updated: 2026-05-10
+last_verified: 2026-05-10
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -26,157 +26,188 @@ scores:
   longevity: 9
 facts:
   best_for:
-    value: "Best for developers building reliable stateful agents, multi-step workflows, human-in-the-loop flows, and durable graph-based orchestration in code."
-    source: https://www.langchain.com/langgraph
-    source_label: LangGraph official site
-    source_id: langgraph-official
-    verified_at: '2026-05-04'
-    volatility: medium
-    confidence: high
-    next_review_at: '2026-11-04'
-  pricing_anchor:
-    value: "LangGraph is an open-source framework; paid spend usually comes from LangSmith/LangGraph Platform hosting, observability, or enterprise deployment rather than the library itself."
-    source: https://www.langchain.com/pricing
-    source_label: langchain.com/pricing
-    source_id: langgraph-pricing
-    verified_at: '2026-05-04'
-    volatility: high
-    confidence: high
-    next_review_at: '2026-08-04'
-  runtime_architecture:
-    value: "LangGraph models agents as graphs with state, persistence, streaming, and controllable edges, which makes it better for long-running agent systems than one-shot prompt chains."
+    value: "Best for engineering teams building long-running, stateful agents and workflows that need durable execution, streaming, human-in-the-loop controls, persistence, or multi-agent coordination."
     source: https://docs.langchain.com/oss/python/langgraph/overview
     source_label: LangGraph documentation
     source_id: langgraph-docs
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-10'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-08-10'
+  pricing_anchor:
+    value: "LangGraph is free and MIT-licensed; current paid LangSmith layers include Developer at $0/seat/month, Plus at $39/seat/month, Enterprise custom, and usage-based LangSmith Deployment for hosted agents."
+    source: https://www.langchain.com/pricing
+    source_label: LangChain pricing
+    source_id: langgraph-pricing
+    verified_at: '2026-05-10'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-06-10'
+  runtime_architecture:
+    value: "LangGraph is positioned as the orchestration runtime for durable execution, streaming, human-in-the-loop, and persistence, while LangSmith provides tracing, evaluation, prompts, and deployment across frameworks."
+    source: https://docs.langchain.com/oss/python/langgraph/overview
+    source_label: LangGraph documentation
+    source_id: langgraph-docs
+    verified_at: '2026-05-10'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-08-10'
+  deployment_billing:
+    value: "LangSmith Deployment is the current hosted-agent layer formerly called LangGraph Platform; deployment runs are billed separately from trace/seat pricing, and uptime can add cost while a deployment stays live."
+    source: https://docs.langchain.com/langsmith/billing
+    source_label: LangSmith billing documentation
+    source_id: langsmith-billing
+    verified_at: '2026-05-10'
+    volatility: high
+    confidence: high
+    next_review_at: '2026-06-10'
   open_source:
-    value: "The repository is the source of truth for Python/TypeScript package support, license, examples, and release activity."
+    value: "The GitHub repository identifies LangGraph as an MIT-licensed low-level orchestration framework for stateful agents and points JavaScript/TypeScript users to LangGraph.js and the JS docs."
     source: https://github.com/langchain-ai/langgraph
     source_label: LangGraph GitHub repository
     source_id: langgraph-repository
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-10'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-08-10'
   watch_out_for:
-    value: "LangGraph is a developer framework, not a finished business app; teams need engineering capacity to design state, tools, persistence, deployment, and evaluations."
+    value: "LangGraph is a low-level developer framework, not a finished business app; teams own graph design, state, persistence, evaluation, deployment, and debugging choices."
     source: https://docs.langchain.com/oss/python/langgraph/overview
     source_label: LangGraph documentation
     source_id: langgraph-docs
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-10'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
-tags: [agent-framework, graph, python, typescript, langchain, stateful, production, langsmith]
-seo_title: "LangGraph: Features, Pricing & Review (April 2026)"
-meta_description: "LangGraph is LangChain's graph-based agent framework for stateful production agents. MIT-licensed free library. Used by Klarna, Replit, Elastic. Paired with LangSmith for observability."
+    next_review_at: '2026-08-10'
+tags: [agent-framework, graph, python, typescript, javascript, langchain, stateful, production, langsmith]
+seo_title: "LangGraph: Features, Pricing & Review (May 2026)"
+meta_description: "LangGraph is LangChain's MIT-licensed orchestration runtime for stateful production agents. Current May 2026 review covers LangSmith pricing, deployment billing, and alternatives."
 author: "aipedia.wiki Editorial"
 best_for:
-  - Python and TypeScript teams building production agents
+  - Python and JavaScript teams building production agents
   - long-running stateful agent workflows
-  - teams already using LangChain
-  - graph-native agent architectures (loops, conditional branches, human-in-the-loop)
+  - teams already using LangChain or LangSmith
+  - graph-native agent architectures with loops, conditional branches, and human approval
 not_best_for:
-  - simple single-turn LLM calls (use LangChain high-level API or direct SDK)
-  - teams avoiding the LangChain ecosystem
-  - no-code or visual builders (use LangFlow)
+  - simple single-turn LLM calls
+  - no-code teams that want a visual builder
+  - teams trying to avoid the LangChain ecosystem entirely
 quick_answer: >-
-  LangGraph is LangChain's low-level orchestration framework for building stateful, long-running AI agents as graphs. MIT-licensed free library in Python and TypeScript. Used by Klarna, Replit, and Elastic in production. Paired with LangSmith for paid observability. Pick it for production agents that need loops, conditional branches, or human-in-the-loop. Skip it for simple one-shot LLM calls or if you don't want LangChain dependencies.
+  LangGraph is LangChain's low-level runtime for long-running, stateful agents and workflows. The library is MIT-licensed and free for Python and JavaScript/TypeScript teams; LangSmith adds paid observability and deployment, with Plus at $39/seat/month and usage-based deployment meters as of May 10, 2026. Pick it when you need durable execution, persistence, streaming, or human approval. Skip it for simple one-shot calls or no-code automation.
 ---
 
 # LangGraph
 
-LangChain's graph-based agent orchestration framework. Where LangChain gives you high-level agent abstractions, LangGraph gives you nodes, edges, state, and full control over how an agent's decision loop unfolds. Hit v1.0 alongside LangChain v1.0 in late 2025.
+LangGraph is LangChain's low-level orchestration runtime for stateful AI agents. Where LangChain gives you higher-level agent APIs, LangGraph gives developers explicit control over graphs, state, persistence, interrupts, streaming, and multi-agent workflows.
 
 ## System Verdict
 
-> **Pick LangGraph if you're building production agents that need more than a single LLM call.** The graph model (nodes as functions, edges as transitions, state as shared memory) maps naturally to how real agent workflows branch, loop, and pause for human input. Production case studies from Klarna, Replit, and Elastic prove it scales.
+> **Pick LangGraph if you are building production agents that need more than one LLM call.** It is strongest when the workflow must branch, loop, pause for approval, persist state, recover after failure, or coordinate multiple agents.
 >
-> **Skip it if your workflow is one-shot LLM + tools.** LangChain's high-level `create_react_agent` or direct Anthropic / OpenAI SDK calls are simpler. Also skip if you want to avoid the LangChain ecosystem; its conventions (runnables, tools, prompt templates) come along for the ride.
+> **Skip it if the job is a simple prompt, tool call, or no-code workflow.** Direct provider SDKs, LangChain's higher-level agent API, Mastra, CrewAI, or LangFlow can be faster depending on the team and abstraction level.
 >
-> **Free to use forever.** The library is MIT-licensed. You pay only if you add LangSmith (observability) or deploy on LangGraph Platform (managed hosting). Most teams self-host LangGraph on their own infra.
+> **Commercial reality:** the LangGraph library is free and MIT-licensed. The paid layer is LangSmith: Developer is $0/seat/month, Plus is $39/seat/month, Enterprise is custom, and hosted LangSmith Deployment can add deployment-run and uptime costs.
 
 ## Key Facts
 
 | | |
 |---|---|
-| **License** | MIT (library) |
-| **Languages** | Python and TypeScript |
-| **Version** | v1.0 (shipped alongside LangChain v1.0 late 2025) |
-| **Production users** | Klarna, Replit, Elastic, many more |
-| **Core concepts** | Nodes, edges, shared state, conditional routing, checkpointing |
+| **Last verified** | May 10, 2026 |
+| **License** | MIT for the library |
+| **Languages** | Python and JavaScript/TypeScript |
+| **Current product shape** | LangGraph for orchestration; LangSmith for tracing, evaluation, prompts, and deployment |
+| **Official proof points** | LangChain's docs/site list companies including Klarna, Uber, J.P. Morgan, Replit, Elastic, and more |
+| **Core concepts** | Durable execution, persistence, streaming, interrupts, memory, subgraphs |
 | **Library cost** | $0 |
-| **LangSmith** | Paid observability tiers (see LangChain pricing) |
-| **LangGraph Platform** | Managed hosting, seat + usage-based pricing |
-| **Related** | [DeepAgents](https://github.com/langchain-ai/deepagents): LangChain's planning-first agent harness built on LangGraph |
+| **LangSmith plans** | Developer $0/seat/month; Plus $39/seat/month; Enterprise custom |
+| **Hosted deployment** | LangSmith Deployment, formerly LangGraph Platform |
+| **Related** | [Deep Agents](https://docs.langchain.com/oss/python/deepagents/overview): LangChain's higher-level harness built on LangGraph |
 
 ## When to pick LangGraph
 
-- **Long-running stateful agents.** Conversations, research pipelines, or multi-step workflows that persist and resume. LangGraph's checkpointing makes this clean.
-- **Loops and conditional branches.** When the agent needs to iterate until a condition is met (re-plan, retry, re-search). Express as a graph cycle.
-- **Human-in-the-loop workflows.** Pause the graph, wait for human input, resume. First-class pattern.
-- **Multi-agent systems.** Sub-agents as sub-graphs. Compose bigger systems from smaller ones.
-- **Migrating from LangChain v0 agents.** The modern recommended path is LangChain for high-level + LangGraph for custom control.
+- **Long-running stateful agents.** Research pipelines, support workflows, code agents, and process automations that need to remember state and resume cleanly fit LangGraph's design.
+- **Durable execution matters.** LangGraph is built for workflows that can recover from failures and keep running over time, not just one request-response loop.
+- **Human-in-the-loop workflows.** Interrupts let a team inspect, edit, approve, or reject state before the agent continues.
+- **Multi-agent or subgraph systems.** Subgraphs help split complex agent behavior into smaller units without giving up central state control.
+- **LangSmith is already part of the stack.** The first-party tracing, evals, Studio, and Deployment path are smoother when the team is comfortable with LangChain's ecosystem.
 
 ## When to pick something else
 
-- **Simple one-shot LLM calls:** Direct [OpenAI](https://platform.openai.com), [Anthropic](https://platform.claude.com), or [Google](https://ai.google.dev) SDK.
-- **TypeScript-first with clean ergonomics:** [Mastra](/tools/mastra/) is purpose-built for TS agents.
-- **Visual no-code:** [LangFlow](/tools/langflow/) ships a drag-drop interface on top of LangChain/LangGraph primitives.
-- **Multi-agent crew patterns:** [CrewAI](/tools/crewai/) emphasizes role-based crews with simpler mental model.
-- **Azure-aligned enterprise:** [Microsoft Agent Framework](/tools/microsoft-agent-framework/).
+- **Simple one-shot LLM calls:** direct [OpenAI](https://platform.openai.com), [Anthropic](https://platform.claude.com), or [Google](https://ai.google.dev) SDKs.
+- **TypeScript-first agents with product-style ergonomics:** [Mastra](/tools/mastra/) is purpose-built for TypeScript teams.
+- **Visual no-code or low-code building:** [LangFlow](/tools/langflow/) gives a canvas for LangChain and LangGraph workflows.
+- **Role-based multi-agent prototypes:** [CrewAI](/tools/crewai/) is easier when the mental model is "crew of specialist agents" rather than explicit graph state.
+- **Azure-aligned enterprise:** [Microsoft Agent Framework](/tools/microsoft-agent-framework/) is the more natural fit when Azure AI Foundry is the default platform.
 
 ## Pricing
 
-| Product | Price | Notes |
+| Product | Current public price | Notes |
 |---|---|---|
-| LangGraph library | $0 | MIT-licensed, free forever |
-| LangSmith (observability) | Free tier + paid plans | Integrated with LangGraph |
-| LangGraph Platform (managed) | Seat + usage-based | Hosted deployment for teams |
+| LangGraph library | $0 | MIT-licensed open-source framework |
+| LangSmith Developer | $0/seat/month | Includes one seat and a free monthly trace allowance |
+| LangSmith Plus | $39/seat/month | Adds team collaboration and one dev-sized LangSmith Deployment |
+| LangSmith Deployment | Usage-based beyond the included dev deployment | Deployed LangGraph agents can incur $0.005 deployment-run charges plus uptime costs while the deployment database stays live |
+| LangSmith Enterprise | Custom | Adds advanced hosting, security, support, and enterprise deployment options |
 
-See [langchain.com/pricing](https://www.langchain.com/pricing) for LangSmith and Platform specifics. Verified 2026-04-18.
+Pricing verified May 10, 2026 against LangChain's public pricing and LangSmith billing docs. Model/API provider costs are separate from LangSmith.
 
-## Failure modes
+## Failure Modes
 
-- **LangChain coupling.** Using LangGraph pulls in LangChain conventions. Teams who want to stay framework-free find this heavier than writing raw agent loops.
-- **Verbose for simple cases.** A single-LLM-call workflow in LangGraph is more code than necessary. Pick the right tool; don't over-engineer.
-- **Learning curve.** The graph mental model takes getting used to if you've only done linear prompt chains.
-- **Python ecosystem maturity outpaces TypeScript.** The TS SDK is real but the Python community and docs are deeper.
-- **Observability without LangSmith is work.** The happy path uses LangSmith. Alternatives (Helicone, Langfuse, OpenTelemetry) integrate but need more setup.
+- **Low-level by design.** LangGraph does not hide the agent architecture. Teams must still design state, tools, routing, evals, and deployment behavior.
+- **Billing has multiple meters.** Seats, traces, deployment runs, uptime, and third-party model costs can all matter once LangSmith is in production.
+- **Verbose for simple work.** A single LLM call or straightforward tool call is usually cleaner with a direct SDK or LangChain's higher-level agent API.
+- **LangChain conventions still show up.** LangGraph can be used standalone, but many real projects use LangChain message, tool, and model abstractions around it.
+- **Python examples are the deepest path.** JavaScript/TypeScript support is real, but Python remains the more mature documentation and community path.
 
-## Against the alternatives
+## Against the Alternatives
 
-| | LangGraph | Mastra | MS Agent Framework | CrewAI | AG2 |
+| | LangGraph | Mastra | Microsoft Agent Framework | CrewAI | AG2 |
 |---|---|---|---|---|---|
-| **Primary language** | Python + TS | TS | .NET + Python | Python | Python |
-| **License** | MIT | Open source | Open source | Open source | Open source |
-| **Model** | Graph nodes + edges | Agent + workflow primitives | Agents + workflows | Role-based crews | Multi-agent conversations |
-| **Production usage** | Klarna, Replit, Elastic | Early (22k GitHub stars) | Microsoft enterprise | Wide community | AutoGen lineage |
-| **Best for** | Complex stateful agents | TypeScript shops | Azure enterprise | Crew patterns | AutoGen continuation |
+| **Primary fit** | Stateful production agents | TypeScript agents and workflows | Azure enterprise agents | Role-based crews | AutoGen-style multi-agent work |
+| **Main language** | Python + JavaScript/TypeScript | TypeScript | .NET + Python | Python | Python |
+| **License posture** | MIT library | Open source | Open source | Open source | Open source |
+| **Control model** | Explicit graph state and edges | Agent/workflow primitives | Agents plus workflows | Agents with roles/goals | Conversational agent patterns |
+| **Hosted path** | LangSmith Deployment | Mastra Cloud/platform path | Azure AI Foundry | CrewAI Enterprise | Self-host/community first |
+| **Best for** | Durable stateful agents | TS-first product teams | Microsoft/Azure buyers | Fast crew prototypes | AutoGen continuation |
 
 ## Methodology
 
-Produced by the aipedia.wiki editorial pipeline. Last verified 2026-04-18 against [langchain.com/langgraph](https://www.langchain.com/langgraph), [LangGraph GitHub](https://github.com/langchain-ai/langgraph), and the [LangChain v1.0 announcement](https://blog.langchain.com/langchain-langgraph-1dot0/).
+Produced by the aipedia.wiki editorial pipeline. Last verified May 10, 2026 against LangGraph official materials, LangGraph Python and JavaScript docs, LangChain pricing, LangSmith billing docs, the LangGraph GitHub repository, and the LangChain/LangGraph v1.0 announcement.
 
 ## FAQ
 
 **Is LangGraph really free?**
-Yes. MIT-licensed library, free forever. You only pay for add-ons (LangSmith observability, LangGraph Platform managed hosting) if you want them.
+Yes. The LangGraph library is MIT-licensed and free to use. Paid spend starts when a team uses LangSmith services such as observability, evaluation, or hosted deployment.
+
+**What replaced LangGraph Platform?**
+LangChain's current public product language calls the hosted layer LangSmith Deployment. LangSmith billing docs describe it as the deployment product formerly called LangGraph Platform.
 
 **Do I need LangChain to use LangGraph?**
-LangGraph is a standalone library but shares primitives (runnables, tools, messages) with LangChain. Most real projects import both. You can use LangGraph with any LLM provider, LangChain or not.
+No. LangGraph can be used standalone, but the docs commonly use LangChain components for models and tools, and many teams pair it with LangSmith for tracing and evals.
 
 **What's the difference between LangGraph and LangChain?**
-LangChain is high-level abstractions (create an agent in a few lines). LangGraph is low-level orchestration (define exactly how your agent's decision graph runs). LangChain v1.0 now points power users at LangGraph for anything beyond basic patterns.
+LangChain is the higher-level agent framework. LangGraph is the orchestration runtime underneath or beside it when you need durable execution, persistence, human-in-the-loop, streaming, and explicit state control.
 
 **Does LangGraph compete with Mastra?**
-In the TypeScript space, yes. LangGraph's TS port works but Mastra has cleaner TS ergonomics. For Python-first work, LangGraph has no direct peer with comparable production usage.
+Yes, especially for TypeScript teams choosing an agent/workflow framework. LangGraph has the broader LangChain/LangSmith ecosystem; Mastra often feels more native for TypeScript-first product engineering.
+
+## Sources
+
+- [LangGraph official site](https://www.langchain.com/langgraph)
+- [LangGraph Python docs](https://docs.langchain.com/oss/python/langgraph/overview)
+- [LangGraph JavaScript docs](https://docs.langchain.com/oss/javascript/langgraph/overview)
+- [LangChain pricing](https://www.langchain.com/pricing)
+- [LangSmith billing docs](https://docs.langchain.com/langsmith/billing)
+- [LangGraph GitHub repository](https://github.com/langchain-ai/langgraph)
+- [LangChain and LangGraph v1.0 announcement](https://www.langchain.com/blog/langchain-langgraph-1dot0)
+
+## Review History
+
+- 2026-05-10: Refreshed LangGraph pricing, hosted deployment naming, source-backed buyer guidance, and current verification language.
+- 2026-04-18: Initial agent-framework review.
 
 ## Related
 
-- **Category:** [AI Automation](/categories/ai-automation/) · [AI Coding](/categories/ai-coding/)
-- **Compare:** LangGraph vs [Mastra](/tools/mastra/) · LangGraph vs [CrewAI](/tools/crewai/)
-- **See also:** [LangFlow](/tools/langflow/) · [Microsoft Agent Framework](/tools/microsoft-agent-framework/)
+- **Category:** [AI Automation](/categories/ai-automation/) and [AI Coding](/categories/ai-coding/)
+- **Compare:** LangGraph vs [Mastra](/tools/mastra/) - LangGraph vs [CrewAI](/tools/crewai/)
+- **See also:** [LangFlow](/tools/langflow/) - [Microsoft Agent Framework](/tools/microsoft-agent-framework/) - [Langfuse](/tools/langfuse/)

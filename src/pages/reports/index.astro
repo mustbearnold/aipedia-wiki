@@ -5,6 +5,8 @@ import EmailCapture from '../../components/EmailCapture.astro';
 import { getCollection } from 'astro:content';
 
 const entries = await getCollection('reports');
+const allTools = await getCollection('tools');
+const toolCount = allTools.length;
 
 function toYmd(v: unknown): string {
   if (!v) return '';
@@ -36,7 +38,7 @@ const hasSingleReport = sorted.length === 1;
 
 <BaseLayout
   title="State of AI Tools — Monthly Reports — aipedia.wiki"
-  description="Monthly editorial reports covering what changed across 132 AI tools. New launches, score movements, pricing shifts, deaths, and what to watch next."
+  description={`Monthly editorial reports covering what changed across ${toolCount} tracked AI tools. New launches, score movements, pricing shifts, deaths, and what to watch next.`}
 >
   <Breadcrumb items={[{ label: 'Reports' }]} />
 
@@ -50,7 +52,7 @@ const hasSingleReport = sorted.length === 1;
       Monthly <span class="idx-gradient">field reports</span>.
     </h1>
     <p class="idx-subhead">
-      Long-form summaries of score movement, launches, and pricing changes.
+      Long-form summaries of score movement, launches, pricing changes, and market watchlists across the tracked catalog.
     </p>
   </section>
 

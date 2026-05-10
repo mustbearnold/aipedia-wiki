@@ -8,16 +8,18 @@ author: "aipedia.wiki Editorial"
 company_type: startup
 founded: 2022
 hq: New York, USA
-funding: "Series D (February 2026)"
+funding: "$500M Series D; $11B valuation"
 key_products: [elevenlabs]
-last_updated: 2026-04-30
+last_updated: 2026-05-10
 update_frequency: quarterly
-last_verified: 2026-04-30
+last_verified: 2026-05-10
 ---
 
 # ElevenLabs
 
-ElevenLabs, founded in 2022 by Piotr Dabkowski and Mati Staniszewski, is headquartered in New York and valued at $11 billion following a $500 million Series D round in February 2026.[1][2][4][5] The company develops AI models for text-to-speech, speech-to-text, sound effects, dubbing, music generation, and conversational agents, with $330 million ARR at the end of 2025.[1][2]
+ElevenLabs, founded in 2022 by Piotr Dabkowski and Mati Staniszewski, builds AI audio models and products for text-to-speech, speech-to-text, sound effects, dubbing, music generation, and conversational agents.
+
+As of May 10, 2026, ElevenLabs' strongest verified company signal is its official May 2026 update: the company said it crossed $500 million in ARR during the first four months of 2026, after ending 2025 with $350 million in ARR. Its February 2026 Series D raised $500 million at an $11 billion valuation and brought total funding to $781 million.
 
 ## Key Facts
 | | |
@@ -26,36 +28,55 @@ ElevenLabs, founded in 2022 by Piotr Dabkowski and Mati Staniszewski, is headqua
 | **HQ** | New York, USA |
 | **Funding** | Series D ($500M, February 2026; total $781M) |
 | **Valuation** | $11B (February 2026) |
-| **Key products** | ElevenLabs TTS, Voice Agents, Dubbing, Music |
+| **ARR signal** | Crossed $500M ARR in the first four months of 2026 |
+| **Team signal** | 530 teammates across 50+ countries as of May 2026 |
+| **Key products** | ElevenCreative, ElevenAgents, ElevenAPI, ElevenLabs TTS, Dubbing, Music |
+| **Current TTS model signal** | Eleven v3 plus Flash/Turbo v2.5 for low-latency production use cases |
 
 ## What They Do
-ElevenLabs builds foundational AI models across the audio stack, including text-to-speech, transcription, sound effects, dubbing, music, and conversation.[1][3][4] These models integrate with orchestration and enterprise infrastructure for production platforms used by businesses, creators, and developers.[1][3]
+ElevenLabs builds foundational AI models across the audio stack, then packages them into three commercial lanes: ElevenCreative for creators and brands, ElevenAgents for conversational AI and customer workflows, and ElevenAPI for developers building voice infrastructure into products.
 
-The company expanded from voice synthesis to full audio AI, adding voice agents for customer support, 29-language video dubbing, text-to-music generation launched in August 2025, celebrity voice deals with Michael Caine and Matthew McConaughey, and an enterprise voice marketplace.[2] Operations span London, New York, San Francisco, Warsaw, Dublin, Tokyo, Seoul, Singapore, Bengaluru, Sydney, São Paulo, Berlin, Paris, and Mexico City.[4]
+The company expanded from voice synthesis into speech-to-text, sound effects, dubbing, music, voice cloning, and agents that can work across voice, chat, email, and other channels. ElevenLabs says it is expanding local go-to-market teams across London, New York, San Francisco, Warsaw, Dublin, Tokyo, Seoul, Singapore, Bengaluru, Sydney, São Paulo, Berlin, Paris, and Mexico City.
 
 ## Current Flagship Products
-- [ElevenLabs TTS](../tools/elevenlabs.md): Text-to-speech platform with human-like synthesis across multiple languages. Supports web, API, and integrations. Flagship model: Eleven Multilingual v3 (2026).[1][3]
-- **Voice Agents**: Conversational AI for customer service and phone automation with low-latency interaction. ElevenAgents platform for enterprise deployment.[2][3][4]
-- **Dubbing**: Video dubbing in 29 languages preserving original voice traits. Supports content translation and re-voicing.[2]
-- **Music**: ElevenLabs Music for text-to-music generation, launched August 2025.[2]
-- **Voice Cloning**: Custom voices from audio samples, with professional and instant options plus celebrity licensing.[2]
-- **Sound Effects**: Text-to-sound effects generation.[1]
+- **[ElevenLabs TTS](/tools/elevenlabs/):** Text-to-speech platform with web, API, and workflow surfaces. ElevenLabs' help center lists Eleven v3 as the latest and most advanced speech synthesis model, with Flash v2.5 and Turbo v2.5 positioned for lower-latency production use.
+- **ElevenAgents:** Conversational AI platform for customer support, sales, marketing, training, hiring, and internal workflows. ElevenLabs' February 2026 Series D post said the product received faster response times, improved expressiveness, turn-taking improvements, and an Eleven v3 Conversational model.
+- **ElevenCreative:** Creator and brand platform for generating, editing, and localizing audio across more than 70 languages.
+- **ElevenAPI:** Developer infrastructure for text to speech, speech to text, dubbing, sound effects, music, and agents APIs.
+- **Dubbing and localization:** Video/audio localization workflows that preserve voice traits and support global content production.
+- **Music and sound effects:** Generative audio tools for text-to-music and text-to-sound-effects workflows.
 
 ## Recent News
-- February 4, 2026: Raised $500 million Series D at $11 billion valuation, total funding $781 million; eyes IPO.[1][4][5]
-- Year-end 2025: Reached $330 million ARR.[1][2]
-- September 2025: Secondary round at $6.6 billion valuation.[2]
-- January 2025: Series C at $3.3 billion valuation.[2]
-- August 2025: Launched ElevenLabs Music.[2]
-- March 2026: Expanded enterprise adoption with local teams in 14 cities.[4]
+- **May 2026:** ElevenLabs said it crossed $500M ARR in the first four months of 2026, welcomed new investors including BlackRock, Wellington, NVIDIA/NVentures, Santander, Jamie Foxx, and Eva Longoria, and completed a $100M tender offer.
+- **February 2026:** ElevenLabs raised a $500M Series D at an $11B valuation, bringing total funding to $781M across five rounds.
+- **February 2026:** The Series D announcement positioned ElevenAgents as a major enterprise focus and described a voice-agent upgrade with faster response times, turn-taking improvements, and the Eleven v3 Conversational model.
+- **2025 to 2026:** ElevenLabs said it ended 2025 with $350M ARR and crossed $500M ARR by early May 2026.
 
 ## Strategic Position
-ElevenLabs leads in audio AI quality, with models rated closest to human speech and a data flywheel from user growth.[1][2] Enterprise adoption by firms like Deutsche Telekom and Square drives ARR acceleration.[1] Opportunities include voice agents for call centers, dubbing for localization, and music generation markets. Threats are open-weight models like Mistral Voxtral, Google TTS advances, and OpenAI voice tools, though ElevenLabs holds a quality edge as of April 2026.[2][3] Local deployments and safety measures support enterprise trust.[3]
+ElevenLabs is strongest where voice quality, low latency, localization, and enterprise deployment matter together. Its official customer examples include Deutsche Telekom, Square, the Ukrainian Government, Revolut, Duolingo, NVIDIA, TIME, Meta, Epic Games, Salesforce, MasterClass, and Harvey across agents, localization, customer support, training, and developer infrastructure.
+
+The main buyer risk is cost and governance. ElevenLabs pricing is credit-based for creative/API usage and separate agent pricing can depend on text-only, voice, multimodal, LLM, and telephony components. Enterprise buyers should verify voice rights, consent, safety review, retention, language coverage, region support, and production latency before standardizing on generated voices.
+
+## Current Buyer Notes
+
+| Buyer question | May 2026 answer |
+|---|---|
+| **Best product for creators** | ElevenCreative / ElevenLabs TTS when narration, dubbing, or brand voice quality matters |
+| **Best product for developers** | ElevenAPI for text-to-speech, speech-to-text, dubbing, sound effects, music, and agent integrations |
+| **Best enterprise lane** | ElevenAgents when customer workflows need voice/chat agents with testing, monitoring, integrations, and reliability |
+| **Current model signal** | Eleven v3 for expressive speech; Flash/Turbo v2.5 when low-latency multilingual production matters |
+| **Commercial watch-out** | Estimate monthly credits, retries, dubbing minutes, agent minutes, LLM pass-through, and telephony before buying |
+| **Trust watch-out** | Voice cloning, celebrity/licensed voices, customer calls, and synthetic media need consent, disclosure, and safety review |
 
 ## Sources
-- [ElevenLabs Series D Announcement](https://elevenlabs.io/blog/series-d)[1]
-- [SaaStr on ARR and Growth](https://www.saastr.com/elevenlabs-just-hit-330m-arr-it-took-twilio-8-years-to-get-there/)[2]
-- [ElevenLabs About Page](https://elevenlabs.io/about)[3]
-- [EU-Startups on Funding](https://www.eu-startups.com/2026/02/elevenlabs-e424-million-raise-values-the-company-at-e9-3-billion-and-marks-one-of-europes-largest-ai-funding-rounds-this-year/)[4]
-- [Wikipedia](https://en.wikipedia.org/wiki/ElevenLabs)[5]
----
+- [ElevenLabs $500M ARR update](https://elevenlabs.io/blog/500m-arr-and-new-investors): May 2026 ARR, new investors, tender offer, team size, enterprise examples
+- [ElevenLabs Series D announcement](https://elevenlabs.io/blog/series-d): $500M Series D, $11B valuation, total funding, product lanes, customer examples, international expansion
+- [ElevenLabs pricing](https://elevenlabs.io/pricing): current self-serve plan and credit packaging
+- [ElevenLabs model help center](https://help.elevenlabs.io/hc/en-us/articles/17883183930129-What-models-do-you-offer-and-what-is-the-difference-between-them): Eleven v3, Flash v2.5, Turbo v2.5, model positioning, language and credit notes
+- [ElevenAgents cost help center](https://help.elevenlabs.io/hc/en-us/articles/29298065878929-How-much-does-ElevenAgents-cost): agent pricing components and billing caveats
+
+## Related
+- [ElevenLabs](/tools/elevenlabs/)
+- [AI Voice Category](/categories/ai-voice/)
+- [AI Video Category](/categories/ai-video/)
+- [Best AI Voice Generator Answer](/answers/best-ai-voice-generator-2026/)

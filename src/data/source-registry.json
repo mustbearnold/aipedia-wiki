@@ -132,9 +132,25 @@
     },
     {
       "id": "adobe-firefly-pricing",
-      "label": "Adobe Firefly pricing",
-      "url": "https://firefly.adobe.com/pricing",
+      "label": "Adobe Firefly plans",
+      "url": "https://www.adobe.com/products/firefly/plans",
       "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "adobe-firefly-creative-agent-2026",
+      "label": "Adobe Firefly creative-agent update",
+      "url": "https://news.adobe.com/news/2026/04/adobe-new-creative-agent",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "adobe-firefly-generative-credits",
+      "label": "Adobe Firefly generative credits overview",
+      "url": "https://helpx.adobe.com/firefly/using/generative-credits.html",
+      "type": "docs",
       "trust_tier": "primary",
       "volatility": "high"
     },
@@ -225,7 +241,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-05-04"
+      "last_checked": "2026-05-10"
     },
     {
       "id": "aider-pricing",
@@ -234,7 +250,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-05-04"
+      "last_checked": "2026-05-10"
     },
     {
       "id": "aider-repository",
@@ -243,7 +259,7 @@
       "type": "repository",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-05-04"
+      "last_checked": "2026-05-10"
     },
     {
       "id": "aipedia-news",
@@ -347,15 +363,48 @@
       "url": "https://www.anthropic.com/news/claude-opus-4-7",
       "type": "blog",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-05-10"
     },
     {
       "id": "anthropic-pricing",
       "label": "Claude plans and pricing",
-      "url": "https://www.anthropic.com/pricing",
+      "url": "https://claude.com/pricing",
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high"
+    },
+    {
+      "id": "anthropic-series-g-2026",
+      "label": "Anthropic Series G announcement",
+      "url": "https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "anthropic-model-overview",
+      "label": "Claude model overview",
+      "url": "https://platform.claude.com/docs/en/about-claude/models/overview",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "anthropic-spacex-limits-2026",
+      "label": "Anthropic SpaceX compute and usage limits announcement",
+      "url": "https://www.anthropic.com/news/higher-limits-spacex",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "anthropic-news",
+      "label": "Anthropic news",
+      "url": "https://www.anthropic.com/news",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
     },
     {
       "id": "antigravity-docs",
@@ -530,9 +579,25 @@
     },
     {
       "id": "base44-best-paid-tier",
-      "label": "Base44 pricing guide",
-      "url": "https://base44.com/blog/how-much-does-base44-cost",
+      "label": "Base44 pricing",
+      "url": "https://base44.com/pricing",
       "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "base44-affiliate-program",
+      "label": "Base44 affiliate program",
+      "url": "https://base44.com/affiliates",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "base44-billing-plans",
+      "label": "Base44 billing and plans",
+      "url": "https://docs.base44.com/Account-and-billing/Billing-and-plans",
+      "type": "docs",
       "trust_tier": "primary",
       "volatility": "high"
     },
@@ -598,6 +663,38 @@
       "url": "https://www.blackbox.ai/pricing",
       "type": "pricing",
       "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "blackbox-ai-desktop-agent",
+      "label": "BLACKBOX AI Desktop Agent docs",
+      "url": "https://docs.blackbox.ai/features/desktop-agent/key-features",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "blackbox-ai-enterprise",
+      "label": "BLACKBOX AI Enterprise docs",
+      "url": "https://docs.blackbox.ai/features/enterprise",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "blackbox-ai-security",
+      "label": "BLACKBOX AI security",
+      "url": "https://www.blackbox.ai/security",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "blackbox-ai-affiliate-cuelinks",
+      "label": "Cuelinks BLACKBOX AI affiliate listing",
+      "url": "https://www.cuelinks.com/campaigns/blackbox-ai-affiliate-program",
+      "type": "third_party",
+      "trust_tier": "secondary",
       "volatility": "high"
     },
     {
@@ -840,7 +937,8 @@
       "url": "https://code.claude.com/llms.txt",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-05-10"
     },
     {
       "id": "claude-code-official",
@@ -848,7 +946,35 @@
       "url": "https://code.claude.com/docs/en/overview",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-05-10"
+    },
+    {
+      "id": "claude-code-costs",
+      "label": "Claude Code cost management",
+      "url": "https://code.claude.com/docs/en/costs",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-05-10"
+    },
+    {
+      "id": "claude-code-usage-limits",
+      "label": "Claude Code usage limits",
+      "url": "https://support.claude.com/en/articles/14552983-models-usage-and-limits-in-claude-code",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-05-10"
+    },
+    {
+      "id": "claude-max-plan",
+      "label": "Claude Max plan help",
+      "url": "https://support.claude.com/en/articles/11049741-what-is-the-max-plan",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-05-10"
     },
     {
       "id": "claude-design-official",
@@ -880,7 +1006,17 @@
       "url": "https://claude.com/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-05-10"
+    },
+    {
+      "id": "anthropic-higher-limits-spacex",
+      "label": "Anthropic higher Claude Code limits",
+      "url": "https://www.anthropic.com/news/higher-limits-spacex",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-05-10"
     },
     {
       "id": "clay-home",
@@ -961,7 +1097,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-05-04"
+      "last_checked": "2026-05-10"
     },
     {
       "id": "cline-pricing",
@@ -970,7 +1106,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-05-04"
+      "last_checked": "2026-05-10"
     },
     {
       "id": "cline-repository",
@@ -979,7 +1115,16 @@
       "type": "repository",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-05-04"
+      "last_checked": "2026-05-10"
+    },
+    {
+      "id": "cline-vscode-marketplace",
+      "label": "Cline VS Code Marketplace listing",
+      "url": "https://marketplace.visualstudio.com/items?itemName=saoudrizwan.claude-dev",
+      "type": "third_party",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-05-10"
     },
     {
       "id": "clipdrop-apis",
@@ -1003,7 +1148,8 @@
       "url": "https://clipdrop.co/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-05-10"
     },
     {
       "id": "clipdrop-tools",
@@ -1062,6 +1208,30 @@
       "volatility": "high"
     },
     {
+      "id": "coderabbit-platform-docs",
+      "label": "CodeRabbit platform docs",
+      "url": "https://docs.coderabbit.ai/",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "coderabbit-knowledge-base",
+      "label": "CodeRabbit Knowledge Base docs",
+      "url": "https://docs.coderabbit.ai/knowledge-base",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "coderabbit-cli",
+      "label": "CodeRabbit CLI page",
+      "url": "https://www.coderabbit.ai/cli",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
       "id": "codex-docs",
       "label": "Codex docs",
       "url": "https://platform.openai.com/docs/codex",
@@ -1092,7 +1262,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-05-04"
+      "last_checked": "2026-05-10"
     },
     {
       "id": "cody-pricing",
@@ -1101,7 +1271,34 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-05-04"
+      "last_checked": "2026-05-10"
+    },
+    {
+      "id": "cody-plan-changes",
+      "label": "Sourcegraph Cody plan changes",
+      "url": "https://sourcegraph.com/blog/changes-to-cody-free-pro-and-enterprise-starter-plans",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-05-10"
+    },
+    {
+      "id": "cody-model-provider",
+      "label": "Sourcegraph Model Provider docs",
+      "url": "https://sourcegraph.com/docs/model-provider",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-05-10"
+    },
+    {
+      "id": "cody-model-configuration",
+      "label": "Sourcegraph Cody model configuration docs",
+      "url": "https://sourcegraph.com/docs/cody/enterprise/model-configuration",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-05-10"
     },
     {
       "id": "cohere-command",
@@ -1629,9 +1826,25 @@
       "volatility": "high"
     },
     {
+      "id": "elevenlabs-500m-arr-2026",
+      "label": "ElevenLabs $500M ARR update",
+      "url": "https://elevenlabs.io/blog/500m-arr-and-new-investors",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
       "id": "elevenlabs-model-docs",
       "label": "ElevenLabs model docs",
       "url": "https://elevenlabs.io/docs/overview/models",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "elevenlabs-model-help",
+      "label": "ElevenLabs model help center",
+      "url": "https://help.elevenlabs.io/hc/en-us/articles/17883183930129-What-models-do-you-offer-and-what-is-the-difference-between-them",
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high"
@@ -1645,16 +1858,32 @@
       "volatility": "high"
     },
     {
+      "id": "elevenlabs-series-d-2026",
+      "label": "ElevenLabs Series D announcement",
+      "url": "https://elevenlabs.io/blog/series-d",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "elevenlabs-agents-cost",
+      "label": "ElevenAgents cost help center",
+      "url": "https://help.elevenlabs.io/hc/en-us/articles/29298065878929-How-much-does-ElevenAgents-cost",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
       "id": "elicit-plan-docs",
-      "label": "Elicit plan documentation",
-      "url": "https://support.elicit.com/en/articles/8670209",
+      "label": "Elicit systematic review documentation",
+      "url": "https://support.elicit.com/en/articles/14759154-systematic-reviews-in-elicit",
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium"
     },
     {
       "id": "elicit-pricing",
-      "label": "Source",
+      "label": "Elicit pricing",
       "url": "https://elicit.com/pricing",
       "type": "pricing",
       "trust_tier": "primary",
@@ -1692,6 +1921,30 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high"
+    },
+    {
+      "id": "factory-enterprise",
+      "label": "Factory enterprise overview",
+      "url": "https://docs.factory.ai/enterprise",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "factory-identity-access",
+      "label": "Factory identity and access docs",
+      "url": "https://docs.factory.ai/enterprise/identity-and-access",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "factory-desktop-launch",
+      "label": "Factory desktop app launch",
+      "url": "https://factory.ai/news/factory-desktop",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "medium"
     },
     {
       "id": "fal-ai-docs",
@@ -1894,6 +2147,38 @@
       "volatility": "medium"
     },
     {
+      "id": "flux-2-github",
+      "label": "Black Forest Labs FLUX.2 GitHub",
+      "url": "https://github.com/black-forest-labs/flux2",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "flux-2-klein-huggingface",
+      "label": "FLUX.2 Klein 4B on Hugging Face",
+      "url": "https://huggingface.co/black-forest-labs/FLUX.2-klein-4B",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "flux-2-models",
+      "label": "Black Forest Labs FLUX models overview",
+      "url": "https://help.bfl.ai/articles/9364115800-flux-models-overview",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "flux-2-pricing",
+      "label": "Black Forest Labs API pricing",
+      "url": "https://docs.bfl.ai/quick_start/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
       "id": "flux-official",
       "label": "Black Forest Labs official site",
       "url": "https://bfl.ai",
@@ -1903,9 +2188,33 @@
     },
     {
       "id": "flux-pricing",
-      "label": "fal.ai model pricing",
-      "url": "https://fal.ai/docs/platform-apis/v1/models/pricing",
+      "label": "fal.ai FLUX.2 pricing",
+      "url": "https://fal.ai/flux-2",
       "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "flux-licensing",
+      "label": "Black Forest Labs licensing overview",
+      "url": "https://help.bfl.ai/articles/9272590838-self-serve-dev-license-overview-pricing",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "flux-replicate-pricing",
+      "label": "Replicate FLUX.2 pricing",
+      "url": "https://replicate.com/blog/run-flux-2-on-replicate/",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "flux-cloudflare-workers",
+      "label": "Cloudflare Workers AI FLUX changelog",
+      "url": "https://developers.cloudflare.com/changelog/product-group/ai/3/",
+      "type": "docs",
       "trust_tier": "primary",
       "volatility": "high"
     },
@@ -2083,7 +2392,8 @@
       "url": "https://docs.github.com/en/copilot",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-05-10"
     },
     {
       "id": "github-copilot-feature-matrix",
@@ -2091,7 +2401,8 @@
       "url": "https://docs.github.com/en/copilot/reference/copilot-feature-matrix",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-05-10"
     },
     {
       "id": "github-copilot-plans",
@@ -2099,7 +2410,35 @@
       "url": "https://github.com/features/copilot/plans",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-05-10"
+    },
+    {
+      "id": "github-copilot-plan-docs",
+      "label": "GitHub Copilot plan docs",
+      "url": "https://docs.github.com/en/copilot/get-started/plans",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-05-10"
+    },
+    {
+      "id": "github-copilot-ai-credits",
+      "label": "GitHub Copilot usage-based billing",
+      "url": "https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-individuals",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-05-10"
+    },
+    {
+      "id": "github-copilot-supported-models",
+      "label": "GitHub Copilot supported models",
+      "url": "https://docs.github.com/en/copilot/reference/ai-models/supported-models",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-05-10"
     },
     {
       "id": "github-repositories",
@@ -2287,8 +2626,8 @@
     },
     {
       "id": "grammarly-pricing",
-      "label": "Source",
-      "url": "https://grammarly.com/plans",
+      "label": "Grammarly Pro pricing support",
+      "url": "https://support.grammarly.com/hc/en-us/articles/115000090011-How-much-does-Grammarly-Pro-cost",
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high"
@@ -3357,6 +3696,38 @@
       "volatility": "medium"
     },
     {
+      "id": "langfuse-clickhouse-acquisition",
+      "label": "Langfuse joins ClickHouse",
+      "url": "https://langfuse.com/blog/joining-clickhouse",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "langfuse-clickhouse-series-d",
+      "label": "ClickHouse Series D and Langfuse acquisition",
+      "url": "https://clickhouse.com/blog/clickhouse-raises-400-million-series-d-acquires-langfuse-launches-postgres",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "langfuse-integrations",
+      "label": "Langfuse integrations",
+      "url": "https://langfuse.com/integrations",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "langfuse-open-source",
+      "label": "Langfuse open-source handbook",
+      "url": "https://langfuse.com/handbook/chapters/open-source",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
       "id": "langfuse-official",
       "label": "Langfuse official site",
       "url": "https://langfuse.com/",
@@ -3366,7 +3737,7 @@
     },
     {
       "id": "langfuse-pricing",
-      "label": "langfuse.com/pricing",
+      "label": "Langfuse pricing",
       "url": "https://langfuse.com/pricing",
       "type": "pricing",
       "trust_tier": "primary",
@@ -3381,9 +3752,33 @@
       "volatility": "medium"
     },
     {
+      "id": "langfuse-self-hosting",
+      "label": "Langfuse self-hosting",
+      "url": "https://langfuse.com/self-hosting",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "langfuse-opentelemetry",
+      "label": "Langfuse OpenTelemetry docs",
+      "url": "https://langfuse.com/integrations/native/opentelemetry",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
       "id": "langgraph-docs",
       "label": "LangGraph documentation",
       "url": "https://docs.langchain.com/oss/python/langgraph/overview",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "langgraph-js-docs",
+      "label": "LangGraph JavaScript documentation",
+      "url": "https://docs.langchain.com/oss/javascript/langgraph/overview",
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium"
@@ -3398,11 +3793,35 @@
     },
     {
       "id": "langgraph-pricing",
-      "label": "langchain.com/pricing",
+      "label": "LangChain pricing",
       "url": "https://www.langchain.com/pricing",
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high"
+    },
+    {
+      "id": "langsmith-billing",
+      "label": "LangSmith billing documentation",
+      "url": "https://docs.langchain.com/langsmith/billing",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "langsmith-deployment",
+      "label": "LangSmith Deployment official site",
+      "url": "https://www.langchain.com/langsmith/deployment",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "langchain-v1-announcement",
+      "label": "LangChain and LangGraph v1.0 announcement",
+      "url": "https://www.langchain.com/blog/langchain-langgraph-1dot0",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
     },
     {
       "id": "langgraph-repository",
@@ -3805,12 +4224,85 @@
       "volatility": "high"
     },
     {
+      "id": "mastra-about",
+      "label": "Mastra about page",
+      "url": "https://mastra.ai/about",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "mastra-blog",
+      "label": "Mastra blog",
+      "url": "https://mastra.ai/blog",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "mastra-customers",
+      "label": "Mastra customers",
+      "url": "https://mastra.ai/customers",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "mastra-deployment-docs",
+      "label": "Mastra deployment documentation",
+      "url": "https://mastra.ai/docs/deployment/overview",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "mastra-docs",
+      "label": "Mastra documentation",
+      "url": "https://mastra.ai/docs",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "mastra-github",
+      "label": "Mastra GitHub repository",
+      "url": "https://github.com/mastra-ai/mastra",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "mastra-official",
+      "label": "Mastra official site",
+      "url": "https://mastra.ai/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "mastra-platform-docs",
+      "label": "Mastra Platform documentation",
+      "url": "https://mastra.ai/docs/mastra-platform/overview",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "mastra-pricing",
+      "label": "Mastra pricing",
+      "url": "https://mastra.ai/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
       "id": "mem-official",
       "label": "Mem official site",
       "url": "https://mem.ai/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-05-10"
     },
     {
       "id": "mem-pricing",
@@ -3818,7 +4310,8 @@
       "url": "https://get.mem.ai/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-05-10"
     },
     {
       "id": "mem-product",
@@ -3826,7 +4319,8 @@
       "url": "https://get.mem.ai/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-05-10"
     },
     {
       "id": "meshy-pricing",
@@ -3876,6 +4370,14 @@
       "label": "Midjourney version docs",
       "url": "https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version",
       "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "midjourney-v8-alpha-update",
+      "label": "Midjourney V8 alpha update",
+      "url": "https://updates.midjourney.com/v8-alpha/",
+      "type": "official",
       "trust_tier": "primary",
       "volatility": "high"
     },
@@ -4364,7 +4866,8 @@
       "url": "https://otter.ai/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-05-10"
     },
     {
       "id": "otter-otterpilot",
@@ -4372,7 +4875,8 @@
       "url": "https://otter.ai/otterpilot",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-05-10"
     },
     {
       "id": "perplexity-docs",
@@ -4554,7 +5058,7 @@
       "id": "pixverse-funding-cntechpost",
       "label": "CnTechPost AIsphere Series C report",
       "url": "https://cntechpost.com/2026/03/12/ai-video-startup-aisphere-raises-300-million-record-china-funding/",
-      "type": "news",
+      "type": "third_party",
       "trust_tier": "secondary",
       "volatility": "medium",
       "last_checked": "2026-05-09"
@@ -4664,6 +5168,30 @@
       "volatility": "high"
     },
     {
+      "id": "qodo-ide-docs",
+      "label": "Qodo IDE docs",
+      "url": "https://docs.qodo.ai/qodo-ide",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "qodo-cli-docs",
+      "label": "Qodo CLI docs",
+      "url": "https://docs.qodo.ai/qodo-command",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "qodo-enterprise",
+      "label": "Qodo enterprise page",
+      "url": "https://www.qodo.ai/solutions/enterprise/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
       "id": "quillbot-premium",
       "label": "QuillBot Premium feature page",
       "url": "https://quillbot.com/premium",
@@ -4685,7 +5213,8 @@
       "url": "https://qwenlm.github.io/blog/qwen3/",
       "type": "blog",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-05-10"
     },
     {
       "id": "qwen-official",
@@ -4693,7 +5222,8 @@
       "url": "https://qwen.ai/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-05-10"
     },
     {
       "id": "qwen-pricing",
@@ -4701,7 +5231,8 @@
       "url": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-05-10"
     },
     {
       "id": "read-ai-official",
@@ -4875,12 +5406,60 @@
       "volatility": "high"
     },
     {
+      "id": "retell-ai-knowledge-base",
+      "label": "Retell AI knowledge base docs",
+      "url": "https://docs.retellai.com/build/knowledge-base",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "retell-ai-batch-call",
+      "label": "Retell AI batch-call docs",
+      "url": "https://docs.retellai.com/deploy/make-batch-call",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
       "id": "riverside-pricing",
-      "label": "Source",
+      "label": "Riverside pricing",
       "url": "https://riverside.fm/pricing",
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high"
+    },
+    {
+      "id": "riverside-high-quality-tracks",
+      "label": "Riverside high-quality tracks",
+      "url": "https://support.riverside.com/hc/en-us/articles/5260109014045-About-high-quality-tracks",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "riverside-4k-recording",
+      "label": "Riverside 4K recording guide",
+      "url": "https://support.riverside.com/hc/en-us/articles/5588601739165-Guide-Recording-in-4K",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "riverside-ai-tools",
+      "label": "Riverside AI tools overview",
+      "url": "https://support.riverside.com/hc/en-us/articles/13315511579037-AI-Tools-Overview",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "riverside-about",
+      "label": "Riverside about",
+      "url": "https://riverside.com/about",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
     },
     {
       "id": "rodin-pricing",
@@ -4910,6 +5489,30 @@
       "id": "rork-coding-agent",
       "label": "Rork docs",
       "url": "https://docs.rork.com/",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "rork-github-sync",
+      "label": "Rork GitHub sync guide",
+      "url": "https://docs.rork.com/tutorials/how-to-connect-github",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "rork-api-guide",
+      "label": "Rork API guide",
+      "url": "https://docs.rork.com/features-apis/apis/how-to-connect-an-api-to-your-project",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "rork-app-store-checklist",
+      "label": "Rork App Store checklist",
+      "url": "https://docs.rork.com/submitting-to-app-store/apple/app-store-checklist",
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium"
@@ -5036,19 +5639,27 @@
     },
     {
       "id": "same-dev-official",
-      "label": "Framer AI",
-      "url": "https://framer.com",
-      "type": "official",
+      "label": "Same quickstart",
+      "url": "https://docs.same.new/get-started/quick-start",
+      "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium"
     },
     {
       "id": "same-dev-pricing",
-      "label": "Source",
+      "label": "Same pricing",
       "url": "https://docs.same.new/usage/pricing",
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high"
+    },
+    {
+      "id": "same-dev-deploy",
+      "label": "Same deploy docs",
+      "url": "https://docs.same.new/essentials/deploying",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
     },
     {
       "id": "scite-official",
@@ -5056,15 +5667,17 @@
       "url": "https://scite.ai",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-05-10"
     },
     {
       "id": "scite-pricing",
-      "label": "Source",
+      "label": "Scite pricing",
       "url": "https://scite.ai/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-05-10"
     },
     {
       "trust_tier": "primary",
@@ -5167,19 +5780,35 @@
     },
     {
       "id": "spellbook-official",
-      "label": "GPT-5",
-      "url": "https://www.spellbook.legal",
+      "label": "Spellbook pricing and product suite",
+      "url": "https://spellbook.com/pricing",
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium"
     },
     {
       "id": "spellbook-pricing",
-      "label": "Source",
-      "url": "https://www.hyperstart.com/blog/spellbook-pricing/",
+      "label": "Spellbook pricing",
+      "url": "https://spellbook.com/pricing",
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high"
+    },
+    {
+      "id": "spellbook-security",
+      "label": "Spellbook security",
+      "url": "https://spellbook.com/security",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "spellbook-associate",
+      "label": "Spellbook Associate help",
+      "url": "https://help.spellbook.legal/en/articles/10438652-how-to-use-spellbook-s-associate-an-overview",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
     },
     {
       "trust_tier": "primary",
@@ -5201,11 +5830,51 @@
     },
     {
       "id": "stable-audio-pricing",
-      "label": "Source",
+      "label": "Stable Audio pricing",
       "url": "https://stableaudio.com/pricing",
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high"
+    },
+    {
+      "id": "stable-audio-official",
+      "label": "Stability AI Stable Audio",
+      "url": "https://stability.ai/stable-audio",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "stable-audio-api-pricing",
+      "label": "Stability AI platform pricing",
+      "url": "https://platform.stability.ai/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "stable-audio-launch",
+      "label": "Stable Audio 2.5 launch",
+      "url": "https://stability.ai/news-updates/stability-ai-introduces-stable-audio-25-the-first-audio-model-built-for-enterprise-sound-production-at-scale",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "stable-audio-license",
+      "label": "Stability AI license",
+      "url": "https://stability.ai/license",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "stable-audio-open",
+      "label": "Stable Audio Open 1.0 model card",
+      "url": "https://huggingface.co/stabilityai/stable-audio-open-1.0",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
     },
     {
       "id": "stable-diffusion-official",
@@ -5441,12 +6110,28 @@
       "volatility": "high"
     },
     {
+      "id": "tactiq-official",
+      "label": "Tactiq official",
+      "url": "https://tactiq.io",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
       "id": "tactiq-pricing",
-      "label": "Source",
-      "url": "https://tactiq.io/pricing",
+      "label": "Tactiq pricing",
+      "url": "https://tactiq.io/buy",
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high"
+    },
+    {
+      "id": "tactiq-trust-center",
+      "label": "Tactiq Trust Center help",
+      "url": "https://help.tactiq.io/en/articles/12307002-how-to-access-tactiq-s-trust-center",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
     },
     {
       "id": "taskade-official",
@@ -5501,12 +6186,68 @@
       "last_checked": "2026-05-08"
     },
     {
+      "id": "tines-ai",
+      "label": "AI in Tines",
+      "url": "https://www.tines.com/platform/ai/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "tines-agent-faq",
+      "label": "Tines AI Agent FAQ",
+      "url": "https://explained.tines.com/en/articles/11510164-ai-agent-action-faqs",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "tines-ai-credits",
+      "label": "Tines AI usage and credits",
+      "url": "https://explained.tines.com/en/articles/12801399-ai-usage-and-credits",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "tines-about",
+      "label": "Tines about",
+      "url": "https://www.tines.com/about/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "tines-funding-series-c",
+      "label": "Tines Series C funding release",
+      "url": "https://www.prnewswire.com/news-releases/tines-secures-125m-in-series-c-financing-bringing-total-valuation-to-1-125b-302372726.html",
+      "type": "third_party",
+      "trust_tier": "secondary",
+      "volatility": "medium"
+    },
+    {
+      "id": "tines-packaging",
+      "label": "Tines pricing and packaging",
+      "url": "https://explained.tines.com/en/articles/9620399-understanding-tines-pricing-and-packaging",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
       "id": "tines-pricing",
-      "label": "Source",
+      "label": "Tines pricing",
       "url": "https://www.tines.com/pricing/",
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high"
+    },
+    {
+      "id": "tines-security",
+      "label": "Tines security",
+      "url": "https://www.tines.com/security/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
     },
     {
       "id": "tome-official",
@@ -5583,11 +6324,67 @@
     },
     {
       "id": "uizard-pricing",
-      "label": "Source",
+      "label": "Uizard pricing",
       "url": "https://uizard.io/pricing/",
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high"
+    },
+    {
+      "id": "uizard-autodesigner",
+      "label": "Uizard Autodesigner 2.0",
+      "url": "https://uizard.io/autodesigner/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "uizard-screenshot-scanner",
+      "label": "Uizard Screenshot Scanner help",
+      "url": "https://support.uizard.io/en/articles/7915206-using-screenshot-scanner",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "uizard-wireframe-scanner",
+      "label": "Uizard Wireframe Scanner help",
+      "url": "https://support.uizard.io/en/articles/6435370-using-wireframe-scanner",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "uizard-exporting-projects",
+      "label": "Uizard exporting projects help",
+      "url": "https://support.uizard.io/en/articles/6380330-exporting-projects",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "uizard-figma-import",
+      "label": "Uizard Figma import help",
+      "url": "https://support.uizard.io/en/articles/6912011-importing-screens-from-figma-adobe-or-sketch",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "uizard-subscriptions",
+      "label": "Uizard subscriptions help",
+      "url": "https://support.uizard.io/en/articles/6249189-understanding-subscriptions",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "uizard-joins-miro",
+      "label": "Uizard joins Miro",
+      "url": "https://uizard.io/blog/uizard-joins-miro/",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "low"
     },
     {
       "id": "unbounce-pricing",
@@ -5911,19 +6708,43 @@
     },
     {
       "id": "whisper-official",
-      "label": "AssemblyAI",
-      "url": "https://www.assemblyai.com",
-      "type": "official",
+      "label": "OpenAI Whisper GitHub",
+      "url": "https://github.com/openai/whisper",
+      "type": "repository",
       "trust_tier": "primary",
       "volatility": "medium"
     },
     {
       "id": "whisper-pricing",
-      "label": "Source",
+      "label": "OpenAI API pricing",
       "url": "https://developers.openai.com/api/docs/pricing",
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high"
+    },
+    {
+      "id": "whisper-research",
+      "label": "OpenAI Whisper research post",
+      "url": "https://openai.com/research/whisper",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "low"
+    },
+    {
+      "id": "openai-speech-to-text-docs",
+      "label": "OpenAI speech-to-text docs",
+      "url": "https://developers.openai.com/api/docs/guides/speech-to-text",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "openai-realtime-transcription-docs",
+      "label": "OpenAI realtime transcription docs",
+      "url": "https://developers.openai.com/api/docs/guides/realtime-transcription",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
     },
     {
       "id": "windsurf-docs",
@@ -5966,6 +6787,38 @@
       "volatility": "high"
     },
     {
+      "id": "wispr-flow-privacy",
+      "label": "Wispr Flow privacy",
+      "url": "https://wisprflow.ai/privacy",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "wispr-flow-command-mode",
+      "label": "Wispr Flow Command Mode docs",
+      "url": "https://docs.wisprflow.ai/articles/4816967992-how-to-use-command-mode",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "wispr-flow-team-enterprise-faq",
+      "label": "Wispr Flow team and Enterprise FAQ",
+      "url": "https://docs.wisprflow.ai/articles/2458545840-faqs-for-flow-pro-team-and-flow-enterprise-plans",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "wispr-flow-affiliate-program",
+      "label": "Wispr Flow affiliate program",
+      "url": "https://partners.dub.co/flow",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
       "id": "wordtune-plan-docs",
       "label": "Wordtune plan documentation",
       "url": "https://support.wordtune.com/en/articles/8262930-wordtune-s-plans-pricing",
@@ -5983,8 +6836,56 @@
     },
     {
       "id": "workato-pricing",
-      "label": "Source",
-      "url": "https://www.workato.com",
+      "label": "Workato pricing docs",
+      "url": "https://docs.workato.com/pricing.html",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "workato-mcp-docs",
+      "label": "Workato MCP docs",
+      "url": "https://docs.workato.com/en/mcp.html",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "workato-agent-studio-docs",
+      "label": "Workato Agent Studio docs",
+      "url": "https://docs.workato.com/agentic/agent-studio",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "workato-go-docs",
+      "label": "Workato GO docs",
+      "url": "https://docs.workato.com/en/agentic/workato-go.html",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "workato-connectors-docs",
+      "label": "Workato connector docs",
+      "url": "https://docs.workato.com/en/connectors.html",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "workato-security-compliance-docs",
+      "label": "Workato security compliance docs",
+      "url": "https://docs.workato.com/en/security/security-compliance.html",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "workato-gartner-mq-2026",
+      "label": "Workato 2026 Gartner Magic Quadrant post",
+      "url": "https://www.workato.com/the-connector/gartner-magic-quadrant-2026/",
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium"
@@ -6112,7 +7013,8 @@
       "url": "https://zapier.com/blog/zapier-agents-guide/",
       "type": "blog",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-05-10"
     },
     {
       "id": "zapier-ai",
@@ -6120,7 +7022,8 @@
       "url": "https://zapier.com/ai",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-05-10"
     },
     {
       "id": "zapier-apps",
@@ -6128,7 +7031,8 @@
       "url": "https://zapier.com/apps",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-05-10"
     },
     {
       "id": "zapier-pricing",
@@ -6136,7 +7040,8 @@
       "url": "https://zapier.com/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-05-10"
     },
     {
       "id": "zed-pricing",
