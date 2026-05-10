@@ -1,6 +1,6 @@
 {
   "framework": "astro",
   "installCommand": "npm install",
-  "buildCommand": "npm run build:fast",
+  "buildCommand": "AIPEDIA_LEDGER_IGNORE_DIRTY=1 npm run build:fast",
   "outputDirectory": "dist-fast"
 }
