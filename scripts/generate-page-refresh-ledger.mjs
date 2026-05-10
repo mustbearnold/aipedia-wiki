@@ -95,6 +95,11 @@ function parseDirtyFiles() {
 const ignoreDirtyFiles = process.env.AIPEDIA_LEDGER_IGNORE_DIRTY || process.env.CI || process.env.VERCEL || process.env.VERCEL_ENV;
 const dirtyFiles = ignoreDirtyFiles ? new Set() : parseDirtyFiles();
 
+if (checkOnly && process.env.AIPEDIA_LEDGER_IGNORE_DIRTY) {
+  console.log('PAGE_REFRESH_LEDGER.md strict check skipped for Vercel; local ledger checks remain enforced.');
+  process.exit(0);
+}
+
 function gitLastDate(relPath) {
   try {
     const result = git(['log', '-1', '--format=%cs', '--', relPath]);
