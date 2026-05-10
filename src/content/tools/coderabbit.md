@@ -2,7 +2,7 @@
 type: tool
 slug: coderabbit
 title: CodeRabbit
-tagline: AI code review platform for pull requests, IDE reviews, and CLI reviews. Free PR summaries, Pro $24/user/month annual, Pro+ $48/user/month annual.
+tagline: AI code review platform for pull requests, IDE reviews, CLI reviews, and Slack agent workflows. Pro is $24/user/month annual; Pro+ is $48/user/month annual.
 category: ai-coding
 secondary_categories: [ai-automation]
 company: CodeRabbit
@@ -11,11 +11,11 @@ pricing_model: freemium
 price_range: "$0-$60/developer/month"
 status: active
 launched: 2023
-last_updated: 2026-04-28
-last_verified: 2026-04-28
+last_updated: 2026-05-10
+last_verified: 2026-05-10
 update_frequency: monthly
-seo_title: "CodeRabbit: Features, Pricing & Review (April 2026)"
-meta_description: "CodeRabbit provides AI code reviews for pull requests, IDEs, and CLI workflows. Free gives PR summaries; Pro is $24/user/mo annual or $30 monthly; Pro+ is $48/user/mo annual or $60 monthly."
+seo_title: "CodeRabbit: Features, Pricing & Review (May 2026)"
+meta_description: "CodeRabbit provides AI code reviews for pull requests, IDEs, CLI workflows, and Slack. Pro is $24/user/mo annual, Pro+ is $48/user/mo annual, and the Slack agent is usage priced."
 author: aipedia.wiki Editorial
 affiliate:
   has_program: false
@@ -30,18 +30,18 @@ scores:
   longevity: 8
 facts:
   coding_agent:
-    value: "AI pull-request, IDE, and CLI review with agentic chat and Pro+ planning actions"
+    value: "AI pull-request, IDE, CLI, and Slack review/planning workflow with agentic chat and Pro+ planning actions"
     source: "https://docs.coderabbit.ai/management/plans"
     source_label: "CodeRabbit plans docs"
     source_id: coderabbit-best-paid-tier
-    verified_at: 2026-04-28
+    verified_at: 2026-05-10
     confidence: high
   best_paid_tier:
-    value: "Pro ($24/user/month annual) for review; Pro+ ($48/user/month annual) for planning, unit tests, and higher limits"
+    value: "Pro ($24/user/month annual) for review; Pro+ ($48/user/month annual) for planning, unit tests, merge-conflict help, and higher limits"
     source: "https://docs.coderabbit.ai/management/plans"
     source_label: "CodeRabbit plans docs"
     source_id: coderabbit-best-paid-tier
-    verified_at: 2026-04-28
+    verified_at: 2026-05-10
     next_review_at: 2026-06-03
     confidence: high
   best_for:
@@ -49,7 +49,7 @@ facts:
     source: "https://www.coderabbit.ai/pricing"
     source_label: "CodeRabbit pricing"
     source_id: coderabbit-best-for
-    verified_at: 2026-04-28
+    verified_at: 2026-05-10
     confidence: high
 tags: [ai-coding, code-review, pull-requests, github, gitlab, cli, vscode, sast, linters]
 best_for:
@@ -62,38 +62,45 @@ not_best_for:
   - teams that expect AI review to replace senior ownership
   - repositories with weak tests and no review culture
 quick_answer: >-
-  CodeRabbit is useful when pull request review is the bottleneck. Pick it for automated summaries, contextual PR comments, IDE/CLI reviews, linter and SAST support, and OSS-friendly public repository terms. Skip it if your team needs deeper architecture review from humans, not more comments.
+  CodeRabbit is useful when pull request review is the bottleneck. Pick it for automated summaries, contextual PR comments, IDE/CLI reviews, linter and SAST support, and OSS-friendly public repository terms. Consider the Slack agent separately for investigation, planning, and PR-opening workflows. Skip it if your team needs deeper architecture review from humans, not more comments.
 price_history:
-  - date: 2026-04-28
+  - date: 2026-05-10
     plan: "Free"
     price: "$0/user/mo"
     source: "https://www.coderabbit.ai/pricing"
     source_label: "Source"
     source_id: coderabbit-best-for
-    note: "PR summarization, unlimited public/private repositories, limited review access via IDE/CLI"
-  - date: 2026-04-28
+    note: "PR summarization, unlimited public/private repositories, limited review access via IDE/CLI, and a 14-day trial"
+  - date: 2026-05-10
     plan: "Pro"
     price: "$24/user/mo annual or $30 month-to-month"
     source: "https://www.coderabbit.ai/pricing"
     source_label: "Source"
     source_id: coderabbit-best-for
-    note: "Verified in CodeRabbit docs"
-  - date: 2026-04-28
+    note: "Verified against pricing page and plans docs; includes PR reviews, Knowledge Base, SAST/linter support, dashboards, docstrings, autofix, MCP connections, linked-repo analysis, and usage-based add-on access"
+  - date: 2026-05-10
     plan: "Pro+"
     price: "$48/user/mo annual or $60 month-to-month"
     source: "https://www.coderabbit.ai/pricing"
     source_label: "Source"
     source_id: coderabbit-best-for
-    note: "Verified in CodeRabbit docs"
+    note: "Verified against pricing page and plans docs; adds custom pre-merge checks, unit-test generation, simplify, merge-conflict resolution, issue planning, and higher limits"
+  - date: 2026-05-10
+    plan: "CodeRabbit Agent for Slack"
+    price: "$0.50/agent minute"
+    source: "https://www.coderabbit.ai/pricing"
+    source_label: "Source"
+    source_id: coderabbit-best-for
+    note: "Usage-priced Slack agent for investigation, recurring tasks, planning, code generation, opening PRs, and progress summaries"
 ---
 
 # CodeRabbit
 
-CodeRabbit is an AI code review platform for pull requests, IDE reviews, and CLI reviews. It connects to GitHub and GitLab, summarizes pull requests, comments on changed code, supports linters and SAST tools, and adds workflow features such as Jira/Linear integrations, autofix, docstring generation, and MCP connections on paid tiers.
+CodeRabbit is an AI code review platform for pull requests, IDE reviews, CLI reviews, and Slack-based engineering workflows. It connects to GitHub, GitLab, Azure DevOps, and Bitbucket surfaces, summarizes pull requests, comments on changed code, supports linters and SAST tools, and adds workflow features such as Jira/Linear integrations, autofix, docstring generation, MCP connections, issue planning, and usage-priced Slack agent work.
 
 The best mental model: CodeRabbit is not an AI IDE. It is a review layer for teams already using pull requests.
 
-CodeRabbit's Knowledge Base is the feature that keeps it from being just another comment bot. It can learn repository preferences from review feedback, detect team rules from agent instruction files such as `.cursorrules` and `CLAUDE.md`, and connect code changes to issue trackers for business context.
+CodeRabbit's Knowledge Base is the feature that keeps it from being just another comment bot. It can learn repository preferences from review feedback, detect team rules from agent instruction files such as `.cursorrules`, `CLAUDE.md`, and `.github/copilot-instructions.md`, use linked issue and PR context, connect MCP servers, and search the web for external documentation. Teams that do not want retained Knowledge Base data can opt out in configuration, but that disables stored learnings.
 
 ## System Verdict
 
@@ -101,28 +108,31 @@ CodeRabbit's Knowledge Base is the feature that keeps it from being just another
 >
 > **Skip it if your real problem is architecture, ownership, or missing tests.** AI review can reduce low-level friction, but it cannot replace a senior reviewer who understands product intent, security posture, and rollout risk.
 >
-> **Who pays which tier:** Free for PR summaries and light IDE/CLI review, Pro for normal private-repo code review, Pro+ for teams that want issue planning, unit test generation, merge conflict help, and higher limits, Enterprise for self-hosting, RBAC, SSO, audit logs, and marketplace billing.
+> **Who pays which tier:** Free for PR summaries and light IDE/CLI review, Pro for normal private-repo code review, Pro+ for teams that want issue planning, unit test generation, merge-conflict help, and higher limits, Enterprise for self-hosting, custom RBAC, SSO, audit logs, API access, and marketplace billing. Treat CodeRabbit Agent for Slack as a separate usage-priced workflow, not a seat plan replacement.
 
 ## Key Facts
 
 | | |
 |---|---|
 | **Core product** | AI code reviews for pull requests |
-| **Surfaces** | PR comments, IDE reviews, CLI reviews, agentic chat |
-| **Git platforms** | GitHub and GitLab sign-up paths are documented |
-| **Free plan** | PR summarization, unlimited public/private repositories, 14-day Pro+ trial |
-| **Open source** | Public repositories can receive Pro+ features without paid subscription, subject to OSS rate limits |
-| **Knowledge Base** | Learns team preferences; detects rules from agent/config files; connects issue context |
+| **Surfaces** | PR comments, IDE reviews, CLI reviews, Slack agent, agentic chat |
+| **Git platforms** | GitHub, GitLab, Azure DevOps, and Bitbucket surfaces are documented |
+| **Free plan** | PR summarization, unlimited public/private repositories, IDE/CLI reviews under lower limits, 14-day trial |
+| **Open source** | Public repositories can receive Pro+ features without paid subscription, subject to OSS rate limits that vary by project/community |
+| **Knowledge Base** | Learns team preferences; detects rules from agent/config files; connects issue, PR, MCP, linked-repo, and web-search context |
 | **Paid plans** | Pro, Pro+, Enterprise |
 | **Pro price** | $24/developer/mo billed annually, or $30 month-to-month |
 | **Pro+ price** | $48/developer/mo billed annually, or $60 month-to-month |
+| **Slack agent** | $0.50 per active agent minute |
 | **Enterprise** | Self-hosting option, multi-org support, custom RBAC, SSO, audit logging, API access |
 
 ## What It Actually Is
 
 CodeRabbit reviews code where teams already review code: pull requests. The paid product layers in linter and SAST support, linked repository analysis, analytics dashboards, docstring generation, autofix, pre-merge checks, MCP connections, and issue-tracker integrations.
 
-Pro+ expands the workflow beyond comments. It adds upstream and downstream actions around the review process, including issue planning, unit test generation, merge conflict resolution, and other pre/post-merge actions. Rate limits are enforced per developer on a rolling hourly basis.
+Pro+ expands the workflow beyond comments. It adds upstream and downstream actions around the review process, including issue planning, unit test generation, simplification, merge-conflict resolution, custom pre-merge checks, and other pre/post-merge actions. Rate limits are enforced per developer on a rolling hourly basis; Pro, Pro+, and Enterprise can add usage-based review capacity when teams want uninterrupted CLI and PR review loops.
+
+The Slack agent is a separate surface for investigation, recurring tasks, planning, code generation, opening pull requests, and progress reporting from Slack. The current pricing page lists it at $0.50 per active agent minute, so buyers should model it as usage spend rather than a fixed review seat.
 
 That means CodeRabbit works best as a **pre-review triage layer**. It can summarize what changed, flag suspicious areas, enforce known rules, and make simple improvement suggestions. The human reviewer still owns product behavior, rollout safety, threat modeling, and whether the patch should exist at all.
 
@@ -132,6 +142,7 @@ That means CodeRabbit works best as a **pre-review triage layer**. It can summar
 |---|---|---|
 | OSS maintainers | Strong | Public repos can get Pro+ features under OSS rate limits |
 | Small private teams | Strong | Pro covers normal PR review and basic automation |
+| Slack-heavy engineering teams | Medium | Useful for investigation/planning loops; usage pricing needs spend controls |
 | Teams with flaky tests | Medium | Comments help, but missing tests are still the bottleneck |
 | Security-critical code | Medium | Useful signal, not a substitute for security review |
 | Solo hobby repos | Weak | Free summaries may be enough; paid seats are overkill |
@@ -141,7 +152,8 @@ That means CodeRabbit works best as a **pre-review triage layer**. It can summar
 - **You review many small and medium PRs.** AI summaries and first-pass comments save the most time when review volume is steady.
 - **You maintain public repos.** CodeRabbit documents free reviews for public repositories and an OSS plan with Pro+ features under separate rate limits.
 - **You want PR review across IDE and CLI contexts.** Developers can run review before a pull request exists.
-- **You want review plus automation.** Pro+ moves toward issue planning, unit test generation, and merge-conflict support.
+- **You want review plus automation.** Pro+ moves toward issue planning, unit test generation, simplification, custom pre-merge checks, and merge-conflict support.
+- **Your team works in Slack.** CodeRabbit Agent can investigate incidents, plan work, generate code, open PRs, and summarize progress from Slack, but it is billed by active agent minute.
 - **You need enterprise deployment options.** Enterprise includes self-hosting, SSO, RBAC, audit logging, and API access.
 
 ## When To Pick Something Else
@@ -157,19 +169,20 @@ Pricing via [CodeRabbit pricing](https://www.coderabbit.ai/pricing) and [CodeRab
 
 | Plan | Price | Notes |
 |---|---:|---|
-| Free | $0/user/mo | PR summarization, unlimited public/private repos, 14-day Pro+ trial |
-| OSS | $0 | Public repos receive Pro+ features, subject to OSS rate limits |
-| Pro | $24/user/mo annual or $30 monthly | PR reviews, higher limits, knowledge base, linter/SAST support, analytics, docstrings, autofix |
-| Pro+ | $48/user/mo annual or $60 monthly | Adds issue planning, unit test generation, merge conflict resolution, higher limits |
-| Enterprise | Custom | Self-hosting, multi-org, custom RBAC, SSO, audit logs, API access |
+| Free | $0/user/mo | PR summarization, unlimited public/private repos, IDE/CLI reviews under lower limits, 14-day trial |
+| OSS | $0 | Public repos receive Pro+ features, subject to OSS rate limits that vary by project/community |
+| Pro | $24/user/mo annual or $30 monthly | PR reviews, higher limits, Knowledge Base, linter/SAST support, analytics, reports, docstrings, autofix, MCP connections, linked-repo analysis, usage-based add-on access |
+| Pro+ | $48/user/mo annual or $60 monthly | Adds custom pre-merge checks, issue planning, unit test generation, simplify, merge-conflict resolution, higher limits |
+| Enterprise | Custom | Self-hosting, multi-org, custom RBAC, SSO, audit logs, API access, SLA support, AWS/GCP Marketplace billing, vendor security review support |
+| Agent for Slack | $0.50/agent minute | Usage-priced Slack agent for investigation, recurring tasks, planning, code generation, opening PRs, and summaries |
 
 ## Against The Alternatives
 
 | | CodeRabbit | GitHub Copilot Review | Human reviewer |
 |---|---|---|---|
 | **Best at** | First-pass PR review and summaries | GitHub-native assistant workflow | Product intent, architecture, risk |
-| **Context source** | Repo, linked repos, Knowledge Base, issues | GitHub/IDE context | Organization and product memory |
-| **Automation** | Pro+ planning, unit tests, merge conflict help | Copilot agent/review features | Depends on team process |
+| **Context source** | Repo, linked repos, Knowledge Base, issues, MCP, web search | GitHub/IDE context | Organization and product memory |
+| **Automation** | Pro+ planning, unit tests, simplify, merge-conflict help, Slack agent workflows | Copilot agent/review features | Depends on team process |
 | **Failure mode** | Noisy comments | Generic suggestions | Slow or unavailable |
 | **Best use** | Before human review | Inside GitHub-first teams | Final accountability |
 
@@ -178,23 +191,28 @@ Pricing via [CodeRabbit pricing](https://www.coderabbit.ai/pricing) and [CodeRab
 - **AI comments can become noise.** If the team does not tune rules and conventions, reviewers may spend time triaging low-value comments.
 - **Architecture review remains human work.** CodeRabbit can spot patterns, but it does not own product tradeoffs or cross-team design decisions.
 - **Rate limits matter.** Free, OSS, Pro, Pro+, and Enterprise all have different per-developer review-rate buckets.
+- **Slack agent spend can drift.** Usage pricing is attractive for episodic work, but teams should monitor active agent minutes.
 - **Private repos need paid review.** The free plan is mainly PR summaries plus limited IDE/CLI review after trial.
+- **Knowledge Base retention is a governance choice.** Opting out removes stored learnings; leaving it on improves context but requires procurement/privacy review.
 - **Security coverage is not complete.** Linter and SAST integrations help, but they do not replace a real application security program.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-04-28 against CodeRabbit primary sources.
+This page was produced by the aipedia.wiki editorial pipeline. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-05-10 against CodeRabbit primary sources.
 
 ## FAQ
 
 **Is CodeRabbit free?**
-Yes, for PR summaries and limited review access. CodeRabbit also documents free public-repository reviews and an OSS tier with Pro+ features under separate limits.
+Yes, for PR summaries and limited review access. CodeRabbit also documents free public-repository reviews and an OSS tier with Pro+ features under project/community-dependent limits.
 
 **How much is CodeRabbit Pro?**
 Pro is $24 per developer per month billed annually, or $30 month-to-month.
 
 **What does Pro+ add?**
 Pro+ adds higher limits and workflow actions around review, including issue planning, unit test generation, merge conflict resolution, and other pre/post-merge actions.
+
+**How much is CodeRabbit Agent for Slack?**
+The current pricing page lists CodeRabbit Agent for Slack at $0.50 per active agent minute.
 
 **Can CodeRabbit be self-hosted?**
 Self-hosting is listed as an Enterprise option.
@@ -203,7 +221,9 @@ Self-hosting is listed as an Enterprise option.
 
 - [CodeRabbit pricing](https://www.coderabbit.ai/pricing): public pricing and feature list
 - [CodeRabbit plans documentation](https://docs.coderabbit.ai/management/plans): monthly prices, OSS terms, rate limits, Enterprise features
-- [CodeRabbit Knowledge Base docs](https://docs.coderabbit.ai/integrations/knowledge-base/): team preferences, agent-file rule detection, issue tracker context
+- [CodeRabbit platform documentation](https://docs.coderabbit.ai/): supported surfaces, Slack agent, IDE, CLI, and platform positioning
+- [CodeRabbit Knowledge Base docs](https://docs.coderabbit.ai/knowledge-base): team preferences, agent-file rule detection, issue tracker context, MCP, web search, and opt-out behavior
+- [CodeRabbit CLI page](https://www.coderabbit.ai/cli): CLI review and agent-loop positioning
 
 ## Related
 

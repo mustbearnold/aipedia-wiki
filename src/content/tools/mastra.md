@@ -2,17 +2,18 @@
 type: tool
 slug: mastra
 title: Mastra
-tagline: TypeScript framework for building AI agents. From the Gatsby team. Open source, 22k+ GitHub stars, 300k weekly npm downloads. Free starter; Teams $250/month; Enterprise on-premises.
+tagline: TypeScript framework and platform for building AI agents, workflows, RAG, memory, evals, and production APIs. Apache 2.0 framework; paid platform starts at Teams $250/month plus usage meters.
 category: ai-coding
-company: mastra
+secondary_categories: [ai-automation]
+company: Mastra
 url: https://mastra.ai
 github_url: https://github.com/mastra-ai/mastra
 pricing_model: freemium
-price_range: "$0 free / $250/team/month"
+price_range: "$0-$250/month + usage add-ons / custom enterprise"
 status: active
 launched: 2024-10
-last_updated: 2026-04-18
-last_verified: 2026-04-18
+last_updated: 2026-05-10
+last_verified: 2026-05-10
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -22,143 +23,204 @@ affiliate:
   link: null
 scores:
   utility: 9
-  value: 9
+  value: 8
   moat: 7
   longevity: 8
 facts:
   best_for:
-    value: "TypeScript framework for building AI agents. From the Gatsby team. Open source, 22k+ GitHub stars, 300k weekly npm downloads. Free starter; Teams $250/month; Enterprise on-premises. Best for software development and code-assistant workflows."
-    source: "https://langchain-ai.github.io/langgraph/"
-    source_label: "LangGraph"
-    source_id: ag2-official
-    verified_at: 2026-05-03
+    value: "Best for TypeScript teams building AI agents, graph-style workflows, RAG systems, memory-backed assistants, evals, and production API endpoints inside a modern web stack."
+    source: https://mastra.ai/docs
+    source_label: Mastra documentation
+    source_id: mastra-docs
+    verified_at: '2026-05-10'
     volatility: medium
-    confidence: medium
+    confidence: high
+    next_review_at: '2026-08-10'
   pricing_anchor:
-    value: "Pricing should be checked on the current Mastra source before purchase; AIpedia has not promoted this page to a full Tier 1 pricing profile yet"
-    source: "https://langchain-ai.github.io/langgraph/"
-    source_label: "LangGraph"
-    source_id: ag2-official
-    verified_at: 2026-05-03
-    next_review_at: 2026-08-03
+    value: "Mastra's Apache 2.0 framework is free; Mastra Platform currently has Starter at $0/month, Teams at $250/month, Enterprise custom pricing, and usage meters for observability events, CPU time, data egress, persistent server uptime, Memory Gateway tokens, and retrieval storage."
+    source: https://mastra.ai/pricing
+    source_label: Mastra pricing
+    source_id: mastra-pricing
+    verified_at: '2026-05-10'
     volatility: high
-    confidence: medium
+    confidence: high
+    next_review_at: '2026-06-10'
+  platform_scope:
+    value: "Mastra Platform provides Studio for hosted testing/inspection and Server for deploying a Mastra application as an API server; teams can also deploy to Node-compatible environments, Bun, Deno, Cloudflare, and cloud providers."
+    source: https://mastra.ai/docs/deployment/overview
+    source_label: Mastra deployment documentation
+    source_id: mastra-deployment-docs
+    verified_at: '2026-05-10'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-08-10'
+  open_source:
+    value: "Mastra's public pricing page identifies the framework as Apache 2.0 licensed, and the GitHub repository describes it as a modern TypeScript stack for AI-powered applications and agents."
+    source: https://github.com/mastra-ai/mastra
+    source_label: Mastra GitHub repository
+    source_id: mastra-github
+    verified_at: '2026-05-10'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-08-10'
+  traction:
+    value: "Mastra's official site displayed 23.7k GitHub stars and its About page says the company started in 2024, came from the Gatsby team, raised $13m, and gets millions of downloads each month."
+    source: https://mastra.ai/about
+    source_label: Mastra about page
+    source_id: mastra-about
+    verified_at: '2026-05-10'
+    volatility: medium
+    confidence: high
+    next_review_at: '2026-08-10'
   watch_out_for:
-    value: "Non-Tier-1 canonical profile: verify current pricing, usage limits, data policy, and integration details before procurement"
-    source: "https://langchain-ai.github.io/langgraph/"
-    source_label: "LangGraph"
-    source_id: ag2-official
-    verified_at: 2026-05-03
-    next_review_at: 2026-08-03
+    value: "The flat Teams price is only part of production cost; CPU hours, observability events, data egress, persistent server uptime, Memory Gateway tokens, retrieval storage, and model/API costs can all add spend."
+    source: https://mastra.ai/pricing
+    source_label: Mastra pricing
+    source_id: mastra-pricing
+    verified_at: '2026-05-10'
     volatility: high
-    confidence: medium
-tags: [agent-framework, typescript, open-source, rag, workflows, y-combinator, developer]
-seo_title: "Mastra: Features, Pricing & Review (April 2026)"
-meta_description: "Mastra is the TypeScript AI agent framework from the Gatsby team. Open source, 22k+ GitHub stars. Free Starter tier; Teams $250/mo; Enterprise on-premises. Best TypeScript-native alternative to LangChain."
+    confidence: high
+    next_review_at: '2026-06-10'
+tags: [agent-framework, typescript, javascript, open-source, rag, workflows, memory, observability, y-combinator, developer]
+seo_title: "Mastra: Features, Pricing & Review (May 2026)"
+meta_description: "Mastra is an Apache 2.0 TypeScript AI agent framework and platform. Current May 2026 review covers pricing, usage meters, Server, Studio, Memory Gateway, and alternatives."
 author: "aipedia.wiki Editorial"
 best_for:
   - TypeScript and JavaScript developers building AI agents
-  - teams avoiding Python for their AI stack
-  - full-stack devs wanting type-safe agents
-  - Vercel / Next.js shops
+  - Next.js, React, Node, Hono, Astro, and serverless teams
+  - teams that want agents, workflows, RAG, evals, memory, and observability in one TS stack
+  - product teams that want to deploy agent APIs while keeping source control
 not_best_for:
-  - Python-first teams (use LangGraph or Microsoft Agent Framework)
-  - non-developers (not a no-code tool)
-  - solo hobbyists wanting visual agent builders
+  - Python-first teams
+  - non-developers who need a no-code builder
+  - tiny teams that may outgrow the free tier but cannot justify platform usage add-ons
 quick_answer: >-
-  Mastra is the TypeScript framework for building AI agents, workflows, and RAG pipelines. From the Gatsby team, 22k+ GitHub stars, 300k weekly npm downloads, YC-backed. Open source and free to use; Mastra Cloud platform has a free Starter tier, $250/team/month Teams tier, and Enterprise on-premises option. Pick it if your stack is TypeScript. Skip it if you're Python-first.
+  Mastra is a TypeScript-first framework and platform for agents, workflows, RAG, memory, evals, observability, and production agent APIs. The framework is Apache 2.0 and free; Mastra Platform has a $0 Starter plan, $250/month Teams plan, custom Enterprise, and usage meters for CPU, observability, egress, persistent server uptime, Memory Gateway tokens, and storage as of May 10, 2026. Pick it if your stack is TypeScript. Skip it if you are Python-first or want no-code automation.
 ---
 
 # Mastra
 
-The TypeScript-native answer to LangChain and LangGraph. Built by the team behind Gatsby, Mastra launched October 2024 and hit 1.0 in January 2026. Growth has been fast: 22k+ GitHub stars within 15 months, 300k weekly npm downloads at 1.0 release.
+Mastra is the TypeScript-native agent framework built by the former Gatsby team. It gives JavaScript and TypeScript teams agents, graph-style workflows, RAG, memory, evals, observability, MCP support, and deployment paths without moving the agent layer into Python.
 
 ## System Verdict
 
-> **Pick Mastra if your stack is TypeScript.** It is the cleanest, most ergonomic TS agent framework on the market in 2026. Type-safe end to end, integrates naturally with Next.js / Vercel / Remix, and covers the same primitives as LangGraph (agents, workflows, memory, RAG, tool use, evals).
+> **Pick Mastra if your product stack is TypeScript and you want agent logic to live beside the rest of your app.** It is strongest for teams shipping AI features in Next.js, React, Node, Hono, Astro, serverless, or standalone API services.
 >
-> **Skip it if you're a Python shop.** [LangGraph](https://langchain-ai.github.io/langgraph/), [Microsoft Agent Framework](/tools/microsoft-agent-framework/), or [CrewAI](/tools/crewai/) all serve Python-first teams better. Also skip if you want visual no-code agent building; Mastra is code-first.
+> **Skip it if your organization is Python-first or wants a visual no-code builder.** LangGraph, Microsoft Agent Framework, CrewAI, LangFlow, and Voiceflow are better fits depending on whether the gap is language, enterprise cloud alignment, or builder UX.
 >
-> **Who pays for Cloud:** Teams deploying agents in production who want managed workflow runs, observability, and team seats. $250/month Teams tier is reasonable for a small team; Enterprise on-premises for regulated deployments. Solo devs and hobbyists should stay on the free open-source framework.
+> **Best plan:** start with the Apache 2.0 framework and $0 Platform Starter. Move to Teams at $250/month only when shared Studio/Server deployments, SSO/SOC 2 docs, longer retention, or higher included CPU/egress matter. Budget separately for CPU, observability, egress, persistent server uptime, Memory Gateway, and model-provider costs.
 
 ## Key Facts
 
 | | |
 |---|---|
-| **Language** | TypeScript |
-| **License** | Open source (permissive; see repo) |
-| **Founded** | October 2024, by the Gatsby team |
-| **GitHub stars** | 22,000+ |
-| **npm downloads** | 300,000+ weekly (at 1.0 release, January 2026) |
-| **YC batch** | Yes (2024) |
-| **Cloud Starter** | Free, unlimited users and deployments |
-| **Cloud Teams** | $250/team/month |
-| **Enterprise** | On-premises deployment, custom SLAs, Slack support |
-| **Core primitives** | Agents, workflows, memory, RAG pipelines, tools, evals |
+| **Last verified** | May 10, 2026 |
+| **Language** | TypeScript / JavaScript |
+| **Framework license** | Apache 2.0 |
+| **Company** | Mastra, founded in 2024 by the former Gatsby team |
+| **Current site signal** | 23.7k GitHub stars displayed on mastra.ai |
+| **Funding/team signal** | About page says $13m raised and a 20-person team |
+| **Core primitives** | Agents, tools, workflows, RAG, memory, evals, observability, MCP, Server, Studio |
+| **Platform Starter** | $0/month with unlimited users, deployments, and projects plus included usage allowances |
+| **Platform Teams** | $250/month with multiple teams, SSO, SOC 2 docs, 250 CPU hours, 100GB data egress, and six-month retention |
+| **Enterprise** | Custom platform pricing and custom licensed self-hosted features |
 
-## When to pick Mastra
+## What Changed Recently
 
-- **TypeScript-first teams.** Type safety across prompt inputs, tool definitions, workflow states, and evaluation results. LangChain's TS port doesn't match this level of native TS ergonomics.
-- **Next.js / Vercel deployments.** Mastra integrates cleanly with modern React frameworks. Agents can be deployed as API routes, edge functions, or serverless workers.
-- **Full-stack AI products.** Build your frontend, backend, and agent layer in one language. No Python<>Node bridge needed.
-- **Rapid prototyping to production.** The workflow + agent primitives cover everything from one-shot LLM calls to multi-step agentic loops with memory and tool use.
+- **Mastra Platform is now the commercial center.** Studio and Server can be deployed to the cloud, while the open-source framework remains free.
+- **Pricing is no longer just "$0 or $250."** The public page now exposes add-on rates for observability events, CPU time, data egress, persistent server uptime, Memory Gateway tokens, and retrieval storage.
+- **Memory Gateway matters beyond Mastra apps.** Mastra markets it as memory for any agent/framework, with token and storage meters.
+- **Recent May 2026 updates focused on production operations.** The blog lists Background Tasks for agents on May 7 and ClickHouse support for observability on May 5.
 
-## When to pick something else
+## When to Pick Mastra
 
-- **Python stack:** [LangGraph](https://langchain-ai.github.io/langgraph/) (LangChain's graph-based agent framework), [Microsoft Agent Framework](/tools/microsoft-agent-framework/), or [CrewAI](/tools/crewai/).
+- **TypeScript-first teams.** Tool definitions, workflow state, agent inputs, eval outputs, and app code can stay in one language and type system.
+- **Agent APIs inside web products.** Mastra can run inside existing frameworks or as a standalone server, so the agent layer can ship as normal infrastructure.
+- **Workflows need explicit control.** Mastra workflows support graph-style control flow for multi-step processes where you do not want a fully autonomous loop.
+- **Production visibility matters early.** Studio, evals, traces, logs, metrics, and CloudExporter make it easier to debug before the agent becomes a black box.
+- **Memory is a first-class requirement.** Mastra's docs include message history, resource/thread scoping, and observational memory for long-running conversations.
+
+## When to Pick Something Else
+
+- **Python stack:** [LangGraph](/tools/langgraph/), [Microsoft Agent Framework](/tools/microsoft-agent-framework/), or [CrewAI](/tools/crewai/).
 - **No-code visual agent builder:** [LangFlow](/tools/langflow/) or [Voiceflow](/tools/voiceflow/).
-- **Production-grade agent observability focus:** [Langfuse](https://langfuse.com) or [Helicone](https://helicone.ai) (complementary, not alternative).
-- **Enterprise with strict compliance:** [Microsoft Agent Framework](/tools/microsoft-agent-framework/) with Azure tenant integration.
+- **Pure observability layer:** [Langfuse](/tools/langfuse/) or [Helicone](/tools/helicone/) can complement Mastra without replacing the framework.
+- **Azure-first enterprise:** [Microsoft Agent Framework](/tools/microsoft-agent-framework/) is usually easier to justify if Azure AI Foundry is already the standard.
+- **Simple one-off LLM calls:** direct provider SDKs or the [Vercel AI SDK](https://ai-sdk.dev/) may be lighter.
 
 ## Pricing
 
-| Plan | Price | Who it's for |
+| Plan / meter | Current public price | Notes |
 |---|---|---|
-| Open Source | $0 | All developers. Self-host the framework. |
-| Cloud Starter | $0 | Unlimited users and deployments on Mastra's managed platform |
-| Cloud Teams | $250/team/mo | Team observability, priority support, managed runs |
-| Cloud Enterprise | Custom | On-premises deployment, SLAs, dedicated Slack |
+| Open-source framework | $0 | Apache 2.0; build and host agents anywhere |
+| Platform Starter | $0/month | Unlimited users/deployments/projects; includes 1M observability events, 24 CPU hours, 10GB egress, 15-day retention, and Memory Gateway starter allowances |
+| Platform Teams | $250/month | Adds multiple teams, SSO, SOC 2 docs, 250 CPU hours, 100GB egress, six-month retention, and larger Memory Gateway allowances |
+| Platform Enterprise | Custom | Custom volume/retention, RBAC, audit logs, support and uptime SLAs, dedicated support engineer |
+| Persistent Server | $100/project on Starter and Teams | Listed as 24/7 uptime add-on on the public pricing page |
+| Usage add-ons | Varies | Observability events, CPU time, data egress, Memory Gateway tokens, retrieval storage, and model-provider usage can add cost |
+| Self-hosted Enterprise | Custom annual fee | Licensed self-hosted features with data staying in the customer's VPC |
 
-Prices verified 2026-04-18 via [mastra.ai](https://mastra.ai/) and [Mastra Platform announcement](https://mastra.ai/blog/announcing-mastra-platform).
+Pricing verified May 10, 2026 against Mastra's public pricing page. Model-provider costs are not included in Mastra pricing.
 
-## Failure modes
+## Failure Modes
 
-- **TypeScript-only.** If your team is polyglot, expect friction. No official Python bindings.
-- **Younger than competitors.** LangChain has 3+ years of battle testing. Mastra's production reliability curve is still maturing, though the YC-backed team is shipping aggressively.
-- **Community is smaller.** Fewer Stack Overflow answers, fewer community-contributed tools. Discord + GitHub issues are the active support channels.
-- **Cloud Teams at $250/mo is flat for the team but can be pricey for small teams.** Compare against LangSmith or Langfuse on a per-seat basis.
-- **Ecosystem still filling in.** Some niche integrations (specific vector DBs, obscure LLM providers) may require custom adapters.
+- **Usage math is easy to underestimate.** Teams that leave persistent servers running, generate high trace volume, or use Memory Gateway heavily may pay more than the headline $250/month Teams plan.
+- **TypeScript-only by design.** This is a strength for web teams and a mismatch for Python-first data/agent teams.
+- **You still need production engineering.** Mastra supplies framework and platform primitives, but auth, secrets, data retention, eval quality, and deployment architecture remain your responsibility.
+- **Fast-moving surface area.** Platform, Memory Gateway, observability, background tasks, and integrations are evolving quickly; procurement teams should re-check docs before committing.
+- **No-code buyers will bounce.** Studio helps inspect and test, but Mastra is not a drag-and-drop business automation builder.
 
-## Against the alternatives
+## Against the Alternatives
 
 | | Mastra | LangGraph | Microsoft Agent Framework | CrewAI |
 |---|---|---|---|---|
-| **Language** | TypeScript | Python | .NET + Python | Python |
-| **License** | Open source | Open source | Open source | Open source |
-| **Cloud platform** | Yes ($0-$250+) | LangSmith | Azure AI Foundry | Yes |
-| **Maturity (2026)** | Early (1.0) | Established | 1.0 April 2026 | Established |
-| **Best for** | TS / Next.js shops | Python-first | Azure / enterprise | Multi-agent crews |
+| **Primary fit** | TypeScript agent apps | Stateful production agents | Azure/Microsoft enterprise agents | Python role-based crews |
+| **Main language** | TypeScript / JavaScript | Python + JavaScript/TypeScript | .NET + Python | Python |
+| **License posture** | Apache 2.0 framework | MIT library | Open source | Open source |
+| **Hosted path** | Mastra Platform: Studio + Server | LangSmith Deployment | Azure AI Foundry | CrewAI Enterprise |
+| **Best plan guidance** | Start free, pay Teams when platform collaboration/usage limits matter | Free library, pay LangSmith when tracing/deployment matters | Use when Azure governance matters | Use for faster multi-agent crew prototypes |
+| **Watch-out** | Usage meters beyond Teams | LangSmith deployment/trace costs | Azure ecosystem pull | Less explicit graph control |
 
 ## Methodology
 
-Produced by the aipedia.wiki editorial pipeline. Last verified 2026-04-18 against [mastra.ai](https://mastra.ai/) and [Mastra GitHub repository](https://github.com/mastra-ai/mastra).
+Produced by the aipedia.wiki editorial pipeline. Last verified May 10, 2026 against Mastra official site, documentation, pricing, platform/deployment docs, customers page, About page, GitHub repository, and recent Mastra blog/changelog surfaces.
 
 ## FAQ
 
 **Is Mastra really free?**
-The framework is open source and free to use forever. Mastra Cloud has a free Starter tier with unlimited users and deployments. Only Teams ($250/mo) and Enterprise are paid.
+The framework is free and Apache 2.0 licensed. Mastra Platform also has a $0 Starter plan, but production usage can create add-on costs once CPU, observability, egress, persistent server uptime, Memory Gateway, storage, or model usage grows.
 
-**How is Mastra different from LangChain's TypeScript SDK?**
-Designed natively for TypeScript with much stronger type ergonomics. LangChain's TS port mirrors the Python API; Mastra's API is built for TypeScript idioms first.
+**What is Mastra Platform?**
+Mastra Platform is the hosted product around Studio and Server. Studio is the hosted visual environment for testing agents, workflows, and traces; Server deploys the Mastra application as an API server.
 
-**Can I use Mastra with OpenAI, Claude, and Gemini?**
-Yes. Standard OpenAI-compatible and provider-specific adapters ship out of the box. Also works with Ollama and any OpenAI-compatible local endpoint.
+**How is Mastra different from LangGraph?**
+Mastra is built for TypeScript product teams and web deployment ergonomics. LangGraph has the larger LangChain/LangSmith ecosystem and remains the stronger default for Python-first stateful agents.
+
+**Can I deploy Mastra without Mastra Platform?**
+Yes. Mastra can run in Node-compatible environments, Bun, Deno, Cloudflare, standalone servers, web frameworks, and cloud providers. The paid platform is a managed route, not the only deployment path.
 
 **What production companies use Mastra?**
-Several YC companies and early-stage startups have shipped Mastra-backed products. Being newer than LangChain, the public customer logo list is shorter but growing.
+Mastra's customers page lists case studies and customer references including Replit, PLAID, SoftBank, WorkOS, Factorial, Docker, Counsel Health, Fireworks, Medusa, Sanity, Elastic, and others.
+
+## Sources
+
+- [Mastra official site](https://mastra.ai/)
+- [Mastra documentation](https://mastra.ai/docs)
+- [Mastra pricing](https://mastra.ai/pricing)
+- [Mastra deployment docs](https://mastra.ai/docs/deployment/overview)
+- [Mastra Platform docs](https://mastra.ai/docs/mastra-platform/overview)
+- [Mastra customers](https://mastra.ai/customers)
+- [Mastra about page](https://mastra.ai/about)
+- [Mastra GitHub repository](https://github.com/mastra-ai/mastra)
+- [Mastra blog](https://mastra.ai/blog)
+
+## Review History
+
+- 2026-05-10: Refreshed Mastra pricing, source provenance, platform/memory guidance, recent product changes, and buyer watch-outs.
+- 2026-04-18: Initial TypeScript agent-framework review.
 
 ## Related
 
-- **Category:** [AI Coding](/categories/ai-coding/) · [AI Automation](/categories/ai-automation/)
-- **Compare:** Mastra vs [LangFlow](/tools/langflow/) · Mastra vs [CrewAI](/tools/crewai/)
-- **See also:** [Claude](/tools/claude/) · [Ollama](/tools/ollama/)
+- **Category:** [AI Coding](/categories/ai-coding/) and [AI Automation](/categories/ai-automation/)
+- **Compare:** Mastra vs [LangGraph](/tools/langgraph/) - Mastra vs [CrewAI](/tools/crewai/)
+- **See also:** [LangFlow](/tools/langflow/) - [Langfuse](/tools/langfuse/) - [Ollama](/tools/ollama/)

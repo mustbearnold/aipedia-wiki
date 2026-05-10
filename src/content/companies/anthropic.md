@@ -3,61 +3,80 @@ type: company
 slug: anthropic
 title: Anthropic
 seo_title: "Anthropic Company Profile (2026), aipedia.wiki"
-meta_description: "Anthropic builds Claude, a family of AI models focused on safety and reasoning. Founded 2021 by ex-OpenAI researchers, valued at $380B with $40B+ in funding."
+meta_description: "Anthropic builds Claude, Claude Code, and enterprise AI products. Verified May 2026: $30B Series G at a $380B post-money valuation, $14B run-rate revenue, and Opus 4.7, Sonnet 4.6, and Haiku 4.5 models."
 author: "aipedia.wiki Editorial"
 company_type: startup
 founded: 2021
 hq: San Francisco, USA
-funding: "$40B+"
+funding: "$30B Series G; $380B post-money valuation"
 key_products: [claude, claude-code]
-last_updated: 2026-04-30
+last_updated: 2026-05-10
 update_frequency: quarterly
-last_verified: 2026-04-30
+last_verified: 2026-05-10
 ---
 
 # Anthropic
 
-Anthropic is an AI safety and research company founded in 2021 by Dario Amodei, Daniela Amodei, and former OpenAI researchers. Headquartered in San Francisco, the company develops the Claude family of large language models focused on reliability, interpretability, and steerability. As of February 2026, Anthropic raised $30 billion in Series G funding at a $380 billion post-money valuation, with total funding exceeding $40 billion.[3][2]
+Anthropic is an AI safety and research company founded in 2021 by Dario Amodei, Daniela Amodei, and former OpenAI researchers. Headquartered in San Francisco, the company develops the Claude family of models and enterprise products around coding, knowledge work, agents, and regulated-industry deployments.
+
+As of May 10, 2026, Anthropic's strongest verified company signal is its February 2026 Series G: the company said it raised $30 billion at a $380 billion post-money valuation. Anthropic also reported $14 billion in run-rate revenue, more than 500 customers spending over $1 million on an annualized basis, and eight of the Fortune 10 as Claude customers.
 
 ## Key Facts
 | | |
 |---|---|
 | **Founded** | 2021 |
 | **HQ** | San Francisco, USA |
-| **Funding** | $40B+ raised |
-| **Valuation** | $380B (Feb 2026) |
-| **Key products** | Claude, Claude Code |
+| **Latest verified funding** | $30B Series G |
+| **Valuation** | $380B post-money (Feb 2026) |
+| **Run-rate revenue** | $14B reported by Anthropic in Feb 2026 |
+| **Enterprise signal** | 500+ annualized $1M+ customers; 8 of Fortune 10 as Claude customers |
+| **Key products** | Claude, Claude Code, Claude Cowork, Claude for Work, Claude API |
+| **Current model line** | Opus 4.7, Sonnet 4.6, Haiku 4.5 |
 
 ## What They Do
-Anthropic builds frontier AI systems with safety techniques applied at scale, including Constitutional AI and interpretability research. The company leads enterprise AI adoption, powering workflows for over 300,000 business customers and holding 40% market share in enterprise LLM spending.[1] Revenue run-rate reached $14 billion by early 2026, up from $5 billion in August 2025, with 85% from business customers.[1][3]
+Anthropic builds frontier AI systems with safety techniques applied at scale, including Constitutional AI and interpretability research. Its commercial business centers on Claude for individual users, Claude for Work and Enterprise, the Claude API, Claude Code for software teams, and newer agent/workflow products such as Claude Cowork.
 
-Claude models support long context windows and excel in reasoning, competing with rivals on benchmarks while prioritizing safety alignment. Anthropic pursues B2B revenue through API access, partnerships like AWS Bedrock and Google, and developer tools.[1][3]
+Claude models support long context windows and are sold through Anthropic's own apps/API plus major cloud channels. Anthropic says Claude is available on Amazon Bedrock, Google Cloud Vertex AI, and Microsoft Foundry, giving enterprise buyers multiple procurement and deployment paths.
 
 ## Current Flagship Products
-- **[Claude](../tools/claude.md)**: Family of LLMs including Opus 4.7, Sonnet 4.6, Haiku 4.5. Available via API, web/app, with 1M+ token context.[2]
-- **[Claude Code](../tools/claude-code.md)**: CLI-based agentic coding tool for terminal workflows, file operations, command execution. Generated $1B revenue in six months.[1]
+- **[Claude](/tools/claude/)**: AI assistant and model family. Anthropic's May 2026 model docs list Claude Opus 4.7, Claude Sonnet 4.6, and Claude Haiku 4.5 as the current generally available lineup.
+- **[Claude Code](/tools/claude-code/)**: Agentic coding product for terminal and repository workflows. Anthropic said Claude Code run-rate revenue had grown to more than $2.5 billion by February 2026.
+- **Claude Cowork and Claude for Work:** Knowledge-work and team products that extend Claude beyond individual chat into documents, workflows, plugins, and enterprise deployments.
+- **Claude API / Claude Platform:** Developer access to Claude models, prompt caching, batch processing, and cloud marketplace routes.
 
 ## Recent News
-- April 2026: Launched Claude Opus 4.7, the new flagship. Same $5/$25 per MTok API pricing, 1M context, 128K output max.
-- February 2026: Raised $30B Series G funding led by GIC and Coatue at $380B valuation to expand research, products, infrastructure.[3][2]
-- February 2026: Launched Claude Opus 4.6, advancing toward multi-step task execution.[2]
-- October 2025: Signed multibillion-dollar AI chips deal with Google.[2]
-- 2025-2026: Revenue grew to $14B run-rate; projects $20-26B in 2026, positive cash flow by 2027.[1][3]
+- **May 2026:** Anthropic announced a SpaceX compute partnership using Colossus 1 capacity, doubled Claude Code five-hour limits for Pro, Max, Team, and seat-based Enterprise plans, removed peak-hour Claude Code reductions for Pro and Max, and raised Claude Opus API rate limits.
+- **April 2026:** Anthropic launched Claude Opus 4.7. The model docs list Opus 4.7 at $5 per million input tokens and $25 per million output tokens, with a 1M-token context window and 128K max output for the synchronous Messages API.
+- **February 2026:** Anthropic raised a $30B Series G at a $380B post-money valuation. The company reported $14B run-rate revenue, 500+ customers spending over $1M annualized, and Claude Code run-rate revenue above $2.5B.
+- **February 2026:** Anthropic's Series G post said Opus 4.6 had launched the prior week and positioned it as a frontier model for agentic knowledge work.
 
 ## Strategic Position
-Anthropic holds a competitive moat through enterprise dominance (40% share vs. OpenAI's 27%), safety research leadership, and rapid revenue growth (10x annually).[1] Partnerships with Amazon and Google provide infrastructure scale. Threats include intensifying competition from OpenAI and Google DeepMind on capabilities. Opportunities lie in coding tools like Claude Code and regulated industries favoring safety focus.[1][3]
+Anthropic's strategic position is strongest in three areas: enterprise trust, coding workflows, and long-context reasoning. The company has unusually strong public proof points for enterprise adoption, including its own customer-spend disclosures and cloud-platform availability across AWS, Google Cloud, and Microsoft. Claude Code has become a major revenue line, not merely a developer demo.
+
+The main risk is that Anthropic's advantage is expensive to sustain. Its May 2026 SpaceX announcement makes the capacity story clearer: usage limits and enterprise reliability depend on enormous compute access, including AWS, Google, Microsoft/NVIDIA, Fluidstack, and now SpaceX infrastructure. Buyers should treat Claude as a frontier provider with strong enterprise momentum, but still re-check model availability, rate limits, cloud-region support, and plan packaging before committing.
+
+## Current Buyer Notes
+
+| Buyer question | May 2026 answer |
+|---|---|
+| **Best Anthropic product for individuals** | Claude Pro for most paid users; Claude Max when higher usage and output limits matter |
+| **Best developer product** | Claude Code for repo work, plus Claude API for app integration |
+| **Best enterprise path** | Claude Team for small teams; Enterprise for scale, governance, and usage priced at API rates |
+| **Current API models** | Opus 4.7, Sonnet 4.6, Haiku 4.5 |
+| **API cost anchor** | Opus 4.7 $5/$25 per MTok, Sonnet 4.6 $3/$15, Haiku 4.5 $1/$5 |
+| **Main watch-out** | Usage limits, cloud route, data controls, and model access can vary by plan, region, and deployment channel |
 
 ## Sources
-- [Anthropic Official Website](https://www.anthropic.com/) -- Company details, funding announcement, research.[3][4]
-- [DeepResearchGlobal Report](https://www.deepresearchglobal.com/p/anthropic-company-analysis-outlook-report) -- Revenue, market share analysis.[1]
-- [DexterAgent Profile](https://dexteragent.ai/companies/anthropic-1771845277) -- Funding, product releases.[2]
-- [Anthropic Economic Index](https://www.anthropic.com/research/economic-index-march-2026-report) -- Research updates.[5]
+- [Anthropic Series G announcement](https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation): funding, valuation, revenue, enterprise adoption, Claude Code revenue, cloud availability
+- [Claude model overview](https://platform.claude.com/docs/en/about-claude/models/overview): Opus 4.7, Sonnet 4.6, Haiku 4.5, model IDs, pricing, context windows, output limits
+- [Claude pricing](https://claude.com/pricing): Pro, Max, Team, Enterprise pricing and feature packaging
+- [Anthropic SpaceX compute announcement](https://www.anthropic.com/news/higher-limits-spacex): May 2026 usage-limit changes, Opus API limit increase, and compute-capacity details
+- [Anthropic news](https://www.anthropic.com/news): official company and product announcements
 
 ## Related
-- [Claude](../tools/claude.md)
-- [Claude Code](../tools/claude-code.md)
-- [LLM Category](../categories/ai-writing.md)
-- [Coding Assistants Category](../categories/ai-coding.md)
+- [Claude](/tools/claude/)
+- [Claude Code](/tools/claude-code/)
+- [AI Writing Category](/categories/ai-writing/)
+- [Coding Assistants Category](/categories/ai-coding/)
 - OpenAI: Primary competitor
 - Google DeepMind: Competitor on frontier models
----

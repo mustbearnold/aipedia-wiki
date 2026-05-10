@@ -11,8 +11,8 @@ pricing_model: open-source
 price_range: "Free (BYOK API costs)"
 status: active
 launched: 2024-07
-last_updated: 2026-05-04
-last_verified: 2026-05-04
+last_updated: 2026-05-10
+last_verified: 2026-05-10
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,8 +31,8 @@ facts:
     source: "https://cline.bot/"
     source_label: "Cline homepage"
     source_id: cline-pricing
-    verified_at: 2026-05-04
-    next_review_at: 2026-08-04
+    verified_at: 2026-05-10
+    next_review_at: 2026-06-10
     volatility: medium
     confidence: high
   docs_surface:
@@ -40,17 +40,17 @@ facts:
     source: "https://docs.cline.bot/home"
     source_label: "Cline docs"
     source_id: cline-docs
-    verified_at: 2026-05-04
-    next_review_at: 2026-08-04
+    verified_at: 2026-05-10
+    next_review_at: 2026-06-10
     volatility: medium
     confidence: high
   open_source_or_local:
-    value: "Yes — Cline is open source on GitHub and runs inside the developer IDE with BYOK model access."
+    value: "Yes — Cline is open source on GitHub under Apache-2.0 and runs inside the developer IDE with BYOK model access."
     source: "https://github.com/cline/cline"
     source_label: "Cline GitHub repository"
     source_id: cline-repository
-    verified_at: 2026-05-04
-    next_review_at: 2026-08-04
+    verified_at: 2026-05-10
+    next_review_at: 2026-06-10
     volatility: medium
     confidence: high
   best_for:
@@ -58,8 +58,8 @@ facts:
     source: "https://docs.cline.bot/home"
     source_label: "Cline docs"
     source_id: cline-docs
-    verified_at: 2026-05-04
-    next_review_at: 2026-08-04
+    verified_at: 2026-05-10
+    next_review_at: 2026-06-10
     volatility: medium
     confidence: high
   watch_out_for:
@@ -67,13 +67,13 @@ facts:
     source: "https://docs.cline.bot/home"
     source_label: "Cline docs"
     source_id: cline-docs
-    verified_at: 2026-05-04
-    next_review_at: 2026-08-04
+    verified_at: 2026-05-10
+    next_review_at: 2026-06-10
     volatility: medium
     confidence: medium
 tags: [open-source, vscode, jetbrains, byok, plan-act-mode, mcp, terminal-execution, browser-automation, checkpoints, cursor-alternative, claude-dev]
-seo_title: "Cline: Features, Pricing & Review (April 2026)"
-meta_description: "Cline is a free open-source AI coding agent for VS Code and JetBrains (formerly Claude Dev). Plan/Act modes, MCP tool creation, BYOK for Claude Opus 4.7, OpenAI frontier models, Gemini, or local models. No subscription. Verified April 2026."
+seo_title: "Cline: Features, Pricing & Review (May 2026)"
+meta_description: "Cline is a free open-source AI coding agent for VS Code, JetBrains, and CLI workflows. Plan/Act modes, MCP, BYOK model routing, terminal/browser actions, and local-model support. Verified May 2026."
 author: "aipedia.wiki Editorial"
 best_for:
   - VS Code or JetBrains devs wanting autonomous agents without a subscription
@@ -89,52 +89,59 @@ quick_answer: >-
 price_history:
   - date: 2024-07-01
     plan: "Extension"
-    price: "Free (MIT)"
+    price: "Free (Apache-2.0)"
     source: "https://cline.bot/"
-    source_label: "Source"
+    source_label: "Cline homepage"
     source_id: cline-pricing
     note: "Launched as Claude Dev, renamed Cline for model-agnostic support"
   - date: 2026-04-15
     plan: "Extension"
-    price: "Free (MIT)"
+    price: "Free (Apache-2.0)"
     source: "https://cline.bot/"
-    source_label: "Source"
+    source_label: "Cline homepage"
     source_id: cline-pricing
-    note: "Verified unchanged. BYOK API costs remain the only spend."
+    note: "Verified unchanged as a free extension; BYOK API or local-model costs remain separate."
+  - date: 2026-05-10
+    plan: "Extension"
+    price: "Free (Apache-2.0)"
+    source: "https://github.com/cline/cline"
+    source_label: "Cline GitHub repository"
+    source_id: cline-repository
+    note: "Repository metadata shows Apache-2.0 licensing; VS Code Marketplace lists the extension as Free."
 ---
 
 # Cline
 
-A free open-source AI coding agent for VS Code and JetBrains, formerly known as Claude Dev. Runs autonomously inside the IDE: reads the codebase, writes and edits files, runs terminal commands, controls a browser, and builds custom MCP tools with approval gates at each step.
+A free open-source AI coding agent for VS Code, JetBrains, and CLI workflows, formerly known as Claude Dev. Runs autonomously inside the developer workspace: reads the codebase, writes and edits files, runs terminal commands, controls a browser, and builds custom MCP tools with approval gates at each step.
 
-The extension itself costs nothing. Bring your own API key for Claude Opus 4.7, OpenAI frontier models, Gemini 3.1 Pro, or a local model via Ollama.
+The extension itself costs nothing. Bring your own API key for Anthropic, OpenAI, Google Gemini, OpenRouter, cloud providers, an OpenAI-compatible endpoint, or a local model via Ollama or LM Studio.
 
 ## System Verdict
 
 > **Pick Cline if you want a capable autonomous agent inside VS Code or JetBrains with no subscription and full model choice.** Plan mode shows the approach before any code is written; Act mode executes with explicit approval at every significant step.
 >
-> 60,300+ GitHub stars and 5M+ installs. Reported enterprise use at Samsung, Salesforce, Oracle, Amazon, and Microsoft.
+> 61,600+ GitHub stars and about 3.9M VS Code Marketplace installs as of May 10, 2026. The public repo listed v3.82.0 as the latest release on May 1, 2026.
 >
 > **Skip it for zero-setup usage or centralized team dashboards.** [Cursor](/tools/cursor/) bundles a model subscription and more polished UX. [GitHub Copilot](/tools/github-copilot/) has the lowest setup friction for individuals.
 >
-> **Who pays what:** Extension is free. API costs land on your provider bill. Light use on Haiku 4.5 or a local model can run under $5/month; heavy Opus 4.7 use can reach $20-$50/month on frontier-heavy sessions.
+> **Who pays what:** Extension is free. API costs land on your provider bill unless you use a local model. Budget by provider, model, context size, and task length rather than assuming Cline has a bundled subscription.
 
 ## Key Facts
 
 | | |
 |---|---|
-| **License** | MIT, open source |
+| **License** | Apache-2.0, open source |
 | **Primary IDE** | VS Code · JetBrains (IntelliJ, PyCharm, WebStorm) · CLI |
 | **Modes** | Plan (read-only planning) · Act (execution with approval gates) |
-| **BYOK providers** | Anthropic · OpenAI · Google · AWS Bedrock · Azure OpenAI · GCP Vertex · OpenRouter · Cerebras · Groq |
+| **BYOK providers** | Anthropic · OpenAI · Google Gemini · AWS Bedrock · Azure OpenAI · GCP Vertex · OpenRouter · Cerebras · Groq · OpenAI-compatible APIs |
 | **Local models** | LM Studio · Ollama · any OpenAI-compatible API |
 | **MCP support** | First-class, runtime MCP server creation |
 | **Terminal execution** | Yes, with Proceed While Running for non-blocking tasks |
 | **Browser automation** | Yes, via Claude Computer Use |
 | **Checkpoints** | Workspace snapshots at each significant step |
-| **GitHub stars** | 60,300+ · 5M+ installs |
+| **GitHub stars** | 61,600+ · about 3.9M VS Code Marketplace installs |
 
-Every data point above was verified against vendor documentation on 2026-04-17. See Sources.
+Every data point above was verified against vendor documentation on 2026-05-10. See Sources.
 
 ## What it actually is
 
@@ -144,7 +151,7 @@ Context commands scope what the agent sees: @file, @folder, @url, @problems. Ter
 
 MCP support is first-class. Ask Cline to build a Jira MCP server and it creates, installs, and registers the server for you. Checkpoints snapshot the workspace so rollback to any prior state is one click.
 
-BYOK is total. Any Anthropic, OpenAI, or Google API key works. AWS Bedrock, Azure OpenAI, GCP Vertex, OpenRouter, Cerebras, Groq, and any OpenAI-compatible endpoint route cleanly. Local models via LM Studio or Ollama cost nothing beyond hardware.
+BYOK is broad. Anthropic, OpenAI, Google Gemini, AWS Bedrock, Azure OpenAI, GCP Vertex, OpenRouter, Cerebras, Groq, and OpenAI-compatible endpoints route cleanly. Local models via LM Studio or Ollama cost nothing beyond hardware.
 
 ## When to pick Cline
 
@@ -158,7 +165,7 @@ BYOK is total. Any Anthropic, OpenAI, or Google API key works. AWS Bedrock, Azur
 
 - **Polished IDE with bundled models:** [Cursor](/tools/cursor/) at $20/mo. Less setup, more design polish.
 - **Lightest-weight inline autocomplete:** [GitHub Copilot](/tools/github-copilot/) at $10/mo.
-- **Terminal-first agentic runs:** [Claude Code](/tools/claude/) CLI. Deeper agentic capability on complex multi-file tasks.
+- **Terminal-first agentic runs:** [Claude Code](/tools/claude-code/) CLI. Deeper agentic capability on complex multi-file tasks.
 - **CLI-first open source with git-commit transparency:** [Aider](/tools/aider/). Free, BYOK, auto-commits every change.
 - **Async ticket delegation:** [Devin](/tools/devin/). Hand a ticket off, review the PR.
 
@@ -166,21 +173,21 @@ BYOK is total. Any Anthropic, OpenAI, or Google API key works. AWS Bedrock, Azur
 
 | Tier | Cost | Notes |
 |------|------|-------|
-| Cline extension | Free | MIT license · VS Code Marketplace · Open VSX |
+| Cline extension | Free | Apache-2.0 license · VS Code Marketplace · Open VSX |
 | API costs | Usage-based | Varies by model and session length |
 | Local models | $0 | Via LM Studio or Ollama |
 
-Typical session costs on BYOK (verified 2026-04-17):
+Typical session costs on BYOK vary by provider, model, context, cache behavior, and task length. Treat these as budgeting ranges, not vendor guarantees:
 
 | Model | Typical session | Notes |
 |-------|-----------------|-------|
-| Claude Haiku 4.5 | Pennies to under $1 | Fastest, cheapest |
-| Claude Opus 4.7 | $0.50-$5 | Best multi-file quality |
+| Claude Haiku-class models | Pennies to under $1 | Fast, lower-cost route for light tasks |
+| Claude Opus 4.7 | $0.50-$5+ | Premium route for harder multi-file tasks |
 | OpenAI frontier models | $0.50-$5 | Strong alternative |
-| Gemini 3.1 Pro | $0.02-$2 | Long context, lowest cost tier |
+| Gemini models | $0.02-$2+ | Often attractive for long-context experimentation |
 | Ollama (local) | $0 | Hardware-bound quality |
 
-*Costs verified 2026-04-17 via vendor API pricing pages. Light use can run under $5/month; heavy Opus 4.7 use can reach $20-$50/month.*
+*Cline has no bundled model subscription. Anthropic's May 2026 API docs list Claude Opus 4.7 at $5 per million input tokens and $25 per million output tokens; other providers vary.*
 
 ## Against the alternatives
 
@@ -206,15 +213,15 @@ Typical session costs on BYOK (verified 2026-04-17):
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [cline.bot](https://cline.bot/), [Cline docs](https://docs.cline.bot/introduction/overview), the [Cline GitHub repo](https://github.com/cline/cline), and the [VS Code Marketplace listing](https://marketplace.visualstudio.com/items?itemName=saoudrizwan.claude-dev).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-10 against [cline.bot](https://cline.bot/), [Cline docs](https://docs.cline.bot/getting-started/what-is-cline), the [Cline GitHub repo](https://github.com/cline/cline), and the [VS Code Marketplace listing](https://marketplace.visualstudio.com/items?itemName=saoudrizwan.claude-dev).
 
 ## FAQ
 
 **Is Cline free?**
-The extension is free and MIT-licensed. You pay only for the API calls to your chosen provider. A local Ollama model brings total cost to zero.
+The extension is free and Apache-2.0 licensed. You pay only for the API calls to your chosen provider. A local Ollama model brings total cost to zero beyond hardware and setup time.
 
 **What was Cline called before?**
-It launched as Claude Dev in mid-2024. Renamed to Cline to reflect model-agnostic support for Claude, OpenAI frontier models, Gemini 3.1 Pro, and local models.
+It launched as Claude Dev in mid-2024. Renamed to Cline to reflect model-agnostic support for Claude, OpenAI, Gemini, cloud-hosted providers, OpenAI-compatible endpoints, and local models.
 
 **How does Plan mode work?**
 Plan mode is read-only. Cline analyzes the codebase and task, then generates a step-by-step plan for your review. No code is written until you approve and switch to Act mode.
@@ -231,7 +238,7 @@ Cursor is a polished VS Code fork with a bundled model subscription and less set
 ## Sources
 
 - [cline.bot](https://cline.bot/): product features, documentation, and release notes
-- [Cline docs: overview](https://docs.cline.bot/introduction/overview): Plan/Act modes and MCP setup
+- [Cline docs: What is Cline?](https://docs.cline.bot/getting-started/what-is-cline): Plan/Act modes, checkpoints, model choice, and local execution
 - [GitHub: cline/cline](https://github.com/cline/cline): source code, stars, community
 - [VS Code Marketplace listing](https://marketplace.visualstudio.com/items?itemName=saoudrizwan.claude-dev): installs and ratings
 

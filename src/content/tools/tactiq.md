@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$40/user/month"
 status: active
 launched: 2020-08
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-10
+last_verified: 2026-05-10
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -28,28 +28,28 @@ scores:
 facts:
   best_for:
     value: "Browser-side AI meeting transcription for Google Meet, Zoom, and Microsoft Teams that runs without a bot in the room, with instant AI summaries and action items. Best for notes, meetings, personal knowledge, and recall workflows."
-    source: "https://tactiq.io/pricing"
-    source_label: "Source"
-    source_id: tactiq-pricing
-    verified_at: 2026-05-03
+    source: "https://tactiq.io"
+    source_label: "Tactiq official"
+    source_id: tactiq-official
+    verified_at: 2026-05-10
     volatility: medium
     confidence: medium
   pricing_anchor:
     value: "Pro; $8/user/mo annual; Verified. Monthly billing is $12/user."
-    source: "https://tactiq.io/pricing"
-    source_label: "Source"
+    source: "https://tactiq.io/buy"
+    source_label: "Tactiq pricing"
     source_id: tactiq-pricing
-    verified_at: 2026-05-03
-    next_review_at: 2026-08-03
+    verified_at: 2026-05-10
+    next_review_at: 2026-08-10
     volatility: high
     confidence: medium
   watch_out_for:
-    value: "Non-Tier-1 canonical profile: verify current pricing, usage limits, data policy, and integration details before procurement"
-    source: "https://tactiq.io/pricing"
-    source_label: "Source"
+    value: "Browser-extension capture depends on supported meeting captions; verify seat counts, AI credits, Business beta features, and compliance documents before procurement."
+    source: "https://tactiq.io/buy"
+    source_label: "Tactiq pricing"
     source_id: tactiq-pricing
-    verified_at: 2026-05-03
-    next_review_at: 2026-08-03
+    verified_at: 2026-05-10
+    next_review_at: 2026-08-10
     volatility: high
     confidence: medium
 tags: [meeting-transcription, ai-notes, meeting-summary, chrome-extension, no-bot, zoom, google-meet, teams]
@@ -65,22 +65,43 @@ not_best_for:
   - mobile-first users without a desktop browser
 quick_answer: >-
   Tactiq is the cleanest pick when a meeting bot is not allowed or not wanted. It transcribes Google Meet, Zoom, and Teams from a Chrome extension, skips audio recording, and generates AI summaries after the call. Pick for privacy-sensitive work and solo use. Skip for CRM-synced sales intelligence or Webex.
-seo_title: "Tactiq: Features, Pricing & Review (April 2026)"
-meta_description: "Tactiq transcribes Google Meet, Zoom, and Teams via Chrome extension with no bot in the call. Plans Free, Pro $8, Team $16.67, Business $29.16, Enterprise custom (annual). SOC 2 and ISO 27001."
+seo_title: "Tactiq: Features, Pricing & Review (May 2026)"
+meta_description: "Tactiq transcribes Google Meet, Zoom, and Teams via Chrome extension with no bot in the call. Plans Free, Pro $8 annual or $12 monthly, Team $16.67 annual, Business $29.16 annual, Enterprise custom."
 author: "aipedia.wiki Editorial"
 price_history:
+  - date: 2026-05-10
+    plan: "Pro"
+    price: "$8/user/mo annual"
+    source: "https://tactiq.io/buy"
+    source_label: "Tactiq pricing"
+    source_id: tactiq-pricing
+    note: "Verified unchanged. Monthly billing is $12/user."
+  - date: 2026-05-10
+    plan: "Team"
+    price: "$16.67/user/mo annual"
+    source: "https://tactiq.io/buy"
+    source_label: "Tactiq pricing"
+    source_id: tactiq-pricing
+    note: "Verified unchanged. Monthly billing is $20/user."
+  - date: 2026-05-10
+    plan: "Business"
+    price: "$29.16/user/mo annual"
+    source: "https://tactiq.io/buy"
+    source_label: "Tactiq pricing"
+    source_id: tactiq-pricing
+    note: "Verified unchanged. Monthly billing is $40/user; MCP and Claude Connector are still beta."
   - date: 2026-04-17
     plan: "Pro"
     price: "$8/user/mo annual"
-    source: "https://tactiq.io/pricing"
-    source_label: "Source"
+    source: "https://tactiq.io/buy"
+    source_label: "Tactiq pricing"
     source_id: tactiq-pricing
     note: "Verified. Monthly billing is $12/user."
   - date: 2026-04-17
     plan: "Team"
     price: "$16.67/user/mo annual"
-    source: "https://tactiq.io/pricing"
-    source_label: "Source"
+    source: "https://tactiq.io/buy"
+    source_label: "Tactiq pricing"
     source_id: tactiq-pricing
     note: "Verified. Monthly billing is $20/user."
 ---
@@ -89,7 +110,7 @@ price_history:
 
 Tactiq is an AI meeting transcription tool that runs from a Chrome extension. It captures live captions during Google Meet, Zoom, and Microsoft Teams calls, then generates AI summaries, action items, and custom-prompt outputs once the meeting ends. No bot joins the call.
 
-Pricing runs Free, Pro $8/user/month, Team $16.67/user/month, Business $29.16/user/month, and Enterprise on custom contracts (all annual). Tactiq is SOC 2 Type II certified and ISO 27001 compliant.
+Pricing runs Free, Pro $8/user/month, Team $16.67/user/month, Business $29.16/user/month, and Enterprise on custom contracts when billed annually. Monthly billing is $12 Pro, $20 Team, and $40 Business. Tactiq's pricing and Trust Center pages publish SOC 2 Type II, ISO 27001:2022, GDPR, and HIPAA claims, with detailed documents available by Trust Center request.
 
 ## System Verdict
 
@@ -99,7 +120,7 @@ Pricing runs Free, Pro $8/user/month, Team $16.67/user/month, Business $29.16/us
 >
 > **Skip it for CRM-synced revenue intelligence.** [Fireflies](/tools/fireflies/) and Gong win on Salesforce and HubSpot pipeline hooks. **Skip it for cross-meeting memory at scale.** [Otter AI](/tools/otter-ai/) AI Chat is deeper. **Skip it if your team runs Webex or Dialpad.** Tactiq ships Meet, Zoom, and Teams only.
 >
-> **Who pays which tier:** Free for up to 10 meetings a month, Pro $8/user for most individuals on unlimited transcription, Team $16.67/user for 1-20 person teams needing unlimited AI credits, Business $29.16/user for 20-200 person orgs wanting SAML SSO and MCP, Enterprise for 200+ with DPA and custom SSO.
+> **Who pays which tier:** Free for up to 10 meetings a month, Pro $8/user annually for most individuals on unlimited transcription, Team $16.67/user annually for 1-20 person teams needing unlimited AI credits, Business $29.16/user annually for 20-200 person orgs wanting SAML SSO, advanced retention, MCP beta, and the Claude Connector beta, Enterprise for 200+ with DPA and custom SSO.
 
 ## Key Facts
 
@@ -112,13 +133,13 @@ Pricing runs Free, Pro $8/user/month, Team $16.67/user/month, Business $29.16/us
 | **Bot in room** | No. Captions read client-side. |
 | **Audio recording** | None. Transcript is text only. |
 | **Languages** | 60+ with speaker identification |
-| **Compliance** | SOC 2 Type II, ISO 27001, GDPR, HIPAA |
-| **MCP integration** | Business tier (beta) |
+| **Compliance** | SOC 2 Type II, ISO 27001:2022, GDPR; pricing table also lists HIPAA compliant |
+| **MCP integration** | Business tier MCP and Claude Connector betas |
 | **Workflow integrations** | Slack, Linear, HubSpot, Notion |
 | **Pricing (annual)** | Free, Pro $8, Team $16.67, Business $29.16, Enterprise custom |
-| **Customers claimed** | 10,000+ companies including OpenAI, NVIDIA, Uber |
+| **Adoption signals claimed** | 1m+ weekly meetings, 1,000,000+ Chrome extension users, 4.8 rating from 3,000+ Chrome Web Store reviews |
 
-Every data point above was verified against vendor pages on 2026-04-17. See Sources.
+Every data point above was verified against vendor pages on 2026-05-10. See Sources.
 
 ## What it actually is
 
@@ -134,8 +155,8 @@ The moat is the privacy posture plus the free-tier generosity. The weakness is t
 - **You transcribe under 10 meetings a month.** The Free tier with 5 AI credits handles most solo founder and consultant workloads at $0.
 - **You want unlimited transcripts for under $10/user.** Pro at $8/user annual is the cheapest unlimited plan in the category.
 - **You share summaries to Slack, Notion, or Linear.** Native integrations push post-meeting outputs without glue.
-- **You are enterprise-compliance-sensitive.** SOC 2 Type II, ISO 27001, GDPR, and HIPAA coverage ship in-product.
-- **You use MCP and want meeting context in Claude or Cursor.** The Business tier beta exposes Tactiq transcripts via MCP.
+- **You are enterprise-compliance-sensitive.** Tactiq publishes SOC 2 Type II, ISO 27001:2022, GDPR, and HIPAA claims, with detailed documents available through Trust Center access.
+- **You use MCP or Claude workflows.** The Business tier lists Tactiq MCP and Tactiq Claude Connector as beta features.
 
 ## When to pick something else
 
@@ -147,7 +168,7 @@ The moat is the privacy posture plus the free-tier generosity. The weakness is t
 
 ## Pricing
 
-Subscription pricing via [tactiq.io/pricing](https://tactiq.io/pricing). Annual billing saves roughly 30-40% across paid tiers.
+Subscription pricing via [tactiq.io/buy](https://tactiq.io/buy). Annual billing saves up to 33% across paid tiers.
 
 | Plan | Monthly | Annual (effective) | Transcripts | AI credits | Users | Notable |
 |------|---------|--------------------|-------------|------------|-------|---------|
@@ -157,7 +178,7 @@ Subscription pricing via [tactiq.io/pricing](https://tactiq.io/pricing). Annual 
 | Business | $40/user | $29.16/user | Unlimited | Unlimited | 20-200 | SAML SSO, MCP (beta), advanced retention |
 | Enterprise | Custom | Custom | Unlimited | Unlimited | 200+ | DPA, customizable SSO, CSM |
 
-*Prices verified 2026-04-17 via [tactiq.io/pricing](https://tactiq.io/pricing). Free tier has no credit card requirement.*
+*Prices verified 2026-05-10 via [tactiq.io/buy](https://tactiq.io/buy). Free tier has no credit card requirement.*
 
 ## Against the alternatives
 
@@ -180,17 +201,17 @@ Subscription pricing via [tactiq.io/pricing](https://tactiq.io/pricing). Annual 
 - **Free-tier AI credits are tight.** Five AI summaries a month means heavy Free users hit the cap fast and must upgrade to keep using AI features.
 - **Pro tier still has a 10-credit cap.** Unlimited transcripts at $8/user, but advanced AI actions on Pro stop at 10/mo. Unlimited AI requires Team.
 - **Webex and phone calls are not supported.** Teams using Cisco Webex, Dialpad, or any PSTN workflow get zero Tactiq coverage.
-- **MCP integration is Business-tier and beta.** Solo users wanting Tactiq context in Claude or Cursor cannot access MCP without a 20-seat Business commitment.
+- **MCP and Claude Connector are Business-tier betas.** Solo users wanting Tactiq context in downstream AI workflows cannot access those beta features without a Business plan.
 - **No bot means nothing in the attendee list.** Some compliance workflows require visible evidence that the meeting was recorded. Tactiq does not provide that trail on the attendee view. Ensure consent language in the meeting invite covers it.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-04-17 against [tactiq.io/pricing](https://tactiq.io/pricing) and [tactiq.io](https://tactiq.io).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-05-10 against [tactiq.io/buy](https://tactiq.io/buy), [tactiq.io](https://tactiq.io), and Tactiq's Trust Center help page.
 
 ## FAQ
 
 **Is Tactiq free?**
-Yes. The Free plan includes 10 transcripts a month, 5 AI credits, and full Ask Tactiq AI access at $0 with no credit card. Pro at $8/user (annual) removes the transcript cap. Verified via [tactiq.io/pricing](https://tactiq.io/pricing).
+Yes. The Free plan includes 10 transcripts a month, 5 AI credits, and AI-generated insights at $0 with no credit card. Pro at $8/user (annual) removes the transcript cap. Verified via [tactiq.io/buy](https://tactiq.io/buy).
 
 **Does Tactiq send a bot to my meetings?**
 No. Tactiq is a Chrome extension that reads the live caption track inside your meeting tab. No named participant is added to the call, and no audio is recorded. That is the product's single biggest differentiator against Otter AI and Fireflies.
@@ -205,15 +226,16 @@ No. Tactiq captures text transcripts only. Workflows that need playback should u
 60+ languages with speaker identification, pulled from the host platform's live caption system.
 
 **Is Tactiq HIPAA and SOC 2 compliant?**
-Yes. Tactiq publishes SOC 2 Type II and ISO 27001 certifications, plus GDPR and HIPAA coverage. Business and Enterprise tiers add DPA and customizable SSO.
+Tactiq publishes SOC 2 Type II, ISO 27001:2022, and GDPR materials through its Trust Center, and the pricing comparison table lists HIPAA compliant. Buyers in regulated environments should request Trust Center access and confirm any DPA or BAA needs before rollout.
 
 **Does Tactiq have MCP?**
-Yes, on the Business tier as a beta. That exposes Tactiq transcripts to MCP-compatible tools like Claude Desktop and Cursor.
+Yes, on the Business tier as a beta. The same Business tier also lists a Tactiq Claude Connector beta.
 
 ## Sources
 
-- [Tactiq Pricing](https://tactiq.io/pricing): current tiers, transcript caps, AI credits, enterprise features
-- [Tactiq main site](https://tactiq.io): product positioning, platform support, compliance posture
+- [Tactiq Pricing](https://tactiq.io/buy): current tiers, transcript caps, AI credits, annual and monthly prices, enterprise features
+- [Tactiq main site](https://tactiq.io): product positioning, platform support, adoption claims, workflow integrations
+- [Tactiq Trust Center help](https://help.tactiq.io/en/articles/12307002-how-to-access-tactiq-s-trust-center): Trust Center access process and listed compliance materials
 
 ## Related
 
@@ -223,3 +245,4 @@ Yes, on the Business tier as a beta. That exposes Tactiq transcripts to MCP-comp
 ## Review History
 
 - **2026-04-17:** New page. Pricing and features verified against tactiq.io.
+- **2026-05-10:** Refreshed pricing source from redirected /pricing to canonical /buy; reverified monthly/annual pricing, MCP/Claude beta status, Trust Center claims, platform support, and adoption signals.

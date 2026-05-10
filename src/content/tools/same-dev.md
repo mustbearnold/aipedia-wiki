@@ -2,7 +2,7 @@
 type: tool
 slug: same-dev
 title: Same.dev
-tagline: Browser-based AI full-stack app builder. Clones existing designs from a URL, ships with live preview plus one-click deploy, and runs on token-metered pricing from free through $100 Ultra.
+tagline: Browser-based AI app builder for prompt- and URL-based web apps. It clones existing designs, previews in the browser, deploys through Same's hosted flow, and runs on token-metered pricing from free through $100 Ultra.
 category: ai-coding
 secondary_categories: []
 company: same
@@ -11,12 +11,13 @@ pricing_model: freemium
 price_range: "$0-$100/month"
 status: active
 launched: 2024
-last_updated: 2026-04-17
-last_verified: 2026-04-17
+last_updated: 2026-05-10
+last_verified: 2026-05-10
 update_frequency: monthly
 seo_title: "Same.dev: AI App Builder Review & Pricing (2026)"
-meta_description: "Same.dev is a browser-based AI app builder that clones existing sites from a URL and ships full-stack apps with live preview plus deploy. Free tier with 500K tokens, paid from $10 Basic through $100 Ultra, plus pay-as-you-go overage."
+meta_description: "Same.dev/Same.new review refreshed May 10, 2026: URL cloning, prompt-built Next.js web apps, Netlify deployment caveats, pricing from free to $100 Ultra, and best alternatives."
 author: "aipedia.wiki Editorial"
+best_plan: "Pro ($25/mo) for active prototypes; Free for the first clone test."
 affiliate:
   has_program: false
   commission: null
@@ -30,82 +31,96 @@ scores:
   longevity: 6
 facts:
   best_for:
-    value: "Browser-based AI full-stack app builder. Clones existing designs from a URL, ships with live preview plus one-click deploy, and runs on token-metered pricing from free through $100 Ultra. Best for software development and code-assistant workflows."
-    source: "https://framer.com"
-    source_label: "Framer AI"
+    value: "Browser-based AI app builder for URL cloning, prompt-built Next.js web apps, live preview, and hosted deployment workflows."
+    source: "https://docs.same.new/get-started/quick-start"
+    source_label: "Same quickstart"
     source_id: same-dev-official
-    verified_at: 2026-05-03
+    verified_at: 2026-05-10
     volatility: medium
-    confidence: medium
+    confidence: high
   pricing_anchor:
-    value: "Free; $0; Verified, 500K tokens/mo"
+    value: "Free plan includes 500K tokens/mo; paid tiers are Basic $10, Pro $25, Max $50, and Ultra $100 with Ultra overage at $10 per extra 2M tokens."
     source: "https://docs.same.new/usage/pricing"
-    source_label: "Source"
+    source_label: "Same pricing"
     source_id: same-dev-pricing
-    verified_at: 2026-05-03
-    next_review_at: 2026-08-03
+    verified_at: 2026-05-10
+    next_review_at: 2026-08-10
     volatility: high
-    confidence: medium
+    confidence: high
   watch_out_for:
-    value: "Non-Tier-1 canonical profile: verify current pricing, usage limits, data policy, and integration details before procurement"
-    source: "https://docs.same.new/usage/pricing"
-    source_label: "Source"
-    source_id: same-dev-pricing
-    verified_at: 2026-05-03
-    next_review_at: 2026-08-03
+    value: "Download/export is a paid-tier feature, unclaimed Same deployments can expire after 14 days of inactivity, and custom domains require claiming the Netlify deployment."
+    source: "https://docs.same.new/essentials/deploying"
+    source_label: "Same deploy docs"
+    source_id: same-dev-deploy
+    verified_at: 2026-05-10
+    next_review_at: 2026-08-10
     volatility: high
-    confidence: medium
+    confidence: high
 tags: [ai-coding, app-builder, fullstack-generation, vibe-coding, same-dev, browser-ide]
 best_for:
   - cloning existing site designs from a URL
-  - fast full-stack prototypes with auth, database, and deploy built in
+  - fast web-app prototypes with browser preview, deployment, and common integrations
   - non-coders who want a working app from a prompt
   - designers iterating on UI in-browser with live preview
 not_best_for:
   - production enterprise codebases with strict compliance requirements
-  - projects needing deep backend customization outside the managed stack
+  - projects needing deep backend customization or owned infrastructure from day one
   - developers who prefer a local IDE with full repo control
 quick_answer: >-
-  Same.dev is a browser-based AI app builder that clones existing site designs from a URL and generates full-stack apps with one-click deploy. Pick it for fast design-driven prototypes. Skip it for production-critical code or deep backend customization; use Cursor or Claude Code instead.
+  Same.dev is a browser-based AI app builder that clones existing site designs from a URL and generates Next.js web apps from prompts, images, or references. Pick it for fast design-driven prototypes. Skip it for regulated production apps or deep backend customization; use Cursor or Claude Code when you need full repo control.
 price_history:
-  - date: 2026-04-18
+  - date: 2026-05-10
     plan: "Free"
     price: "$0"
     source: "https://docs.same.new/usage/pricing"
-    source_label: "Source"
+    source_label: "Same pricing"
     source_id: same-dev-pricing
-    note: "Verified, 500K tokens/mo"
-  - date: 2026-04-18
+    note: "Verified unchanged at 500K tokens/mo."
+  - date: 2026-05-10
     plan: "Basic"
     price: "$10/mo"
     source: "https://docs.same.new/usage/pricing"
-    source_label: "Source"
+    source_label: "Same pricing"
     source_id: same-dev-pricing
-    note: "Verified, 2M tokens/mo"
-  - date: 2026-04-18
+    note: "Verified unchanged at 2M tokens/mo with premium model, download, and remix."
+  - date: 2026-05-10
     plan: "Pro"
     price: "$25/mo"
     source: "https://docs.same.new/usage/pricing"
-    source_label: "Source"
+    source_label: "Same pricing"
     source_id: same-dev-pricing
-    note: "Verified, 5M tokens/mo"
+    note: "Verified unchanged at 5M tokens/mo with premium model, download, and remix."
+  - date: 2026-05-10
+    plan: "Max"
+    price: "$50/mo"
+    source: "https://docs.same.new/usage/pricing"
+    source_label: "Same pricing"
+    source_id: same-dev-pricing
+    note: "Verified unchanged at 10M tokens/mo."
+  - date: 2026-05-10
+    plan: "Ultra"
+    price: "$100/mo"
+    source: "https://docs.same.new/usage/pricing"
+    source_label: "Same pricing"
+    source_id: same-dev-pricing
+    note: "Verified unchanged at 20M tokens/mo plus $10 per additional 2M tokens."
 ---
 
 # Same.dev
 
-A **browser-based AI app builder** that generates full-stack applications from a prompt. The signature move is **clone-from-URL**: paste a target site, Same rebuilds the UI and ships a working app with the same look and feel. Backend plumbing (auth, database, deploy) is included in the managed stack.
+A **browser-based AI app builder** that generates web applications from a prompt, image, or reference URL. The signature move is **clone-from-URL**: paste a target site, Same rebuilds the UI, then lets you refine the project in a browser workspace with live preview.
 
-Competes directly with [Bolt](/tools/bolt/), [Lovable](/tools/lovable/), [v0](/tools/v0/), and [Replit Agent](/tools/replit-agent/). The differentiator is design cloning and the integrated in-browser preview loop.
+Competes directly with [Bolt](/tools/bolt/), [Lovable](/tools/lovable/), [v0](/tools/v0/), and [Replit Agent](/tools/replit-agent/). The differentiator is design cloning, a browser-first edit loop, and an official docs surface around Next.js apps, GitHub, Neon, Supabase, Clerk, and deployment.
 
-Pricing is token-metered with a 500K free tier and four paid tiers from $10 through $100. Overage is pay-as-you-go at $10 per 2M tokens on Ultra. Unused tokens expire monthly.
+Pricing is token-metered with a 500K free tier and four paid tiers from $10 through $100. Overage is pay-as-you-go at $10 per 2M tokens on Ultra. Unused tokens expire at the end of each billing cycle.
 
 ## System Verdict
 
-> **Pick Same.dev if you need a fast design-driven prototype and want cloning from an existing URL as a first-class feature.** The browser-first workflow and integrated auth, database, and deploy make it hard to beat for greenfield apps shipped in a day. Free tier is generous enough to test real projects.
+> **Pick Same.dev if you need a fast design-driven prototype and want cloning from an existing URL as a first-class feature.** The browser-first workflow, live preview, and prompt editing make it strong for first drafts, rebuilds, landing pages, and simple app prototypes. Free is enough to test; Pro is the sensible active-builder tier.
 >
-> **Skip it for production-critical code or deep customization.** The managed stack limits how far backend logic can stray from the defaults. For long-lived apps or regulated workloads, ship the prototype, then port to [Cursor](/tools/cursor/) or [Claude Code](/tools/claude-code/) for ongoing work.
+> **Skip it for production-critical code or deep customization.** Same is built around a hosted browser workflow. The docs now make clear that custom deployment control, code download, and external hosting paths depend on paid/export/GitHub/Netlify choices, so regulated or long-lived apps still need engineering review.
 >
-> **Who pays which tier:** Free for exploration and one-off prototypes, Basic $10/mo for solo tinkerers with 2M tokens, Pro $25/mo for active builders shipping multiple projects, Max $50/mo for agencies or heavier workflows, Ultra $100/mo when the overage terms make pay-as-you-go the cheapest option.
+> **Who pays which tier:** Free for exploration and one-off clone tests, Basic $10/mo for solo tinkerers with 2M tokens, Pro $25/mo for active builders shipping multiple prototypes, Max $50/mo for heavier workflows, Ultra $100/mo when the 20M-token pool plus overage terms are cheaper than stopping work.
 
 ## Key Facts
 
@@ -114,31 +129,33 @@ Pricing is token-metered with a 500K free tier and four paid tiers from $10 thro
 | **Company** | Same |
 | **Launched** | 2024 (browser-based AI app builder wave) |
 | **Flagship feature** | Clone-from-URL (paste a site, get a rebuilt app) |
-| **Stack** | Full-stack: auth + database + deploy included |
+| **Stack** | Next.js-oriented web apps with integrations for GitHub, Neon, Supabase, and Clerk |
 | **Interface** | Browser-based IDE with live preview |
 | **Pricing model** | Token-metered, monthly reset, expire at cycle end |
 | **Free tier** | 500,000 tokens/mo |
 | **Paid entry** | Basic at $10/mo (2M tokens) |
 | **Top tier** | Ultra at $100/mo (20M tokens) plus $10 per 2M overage |
-| **Enterprise** | Contact for custom plans |
+| **Deployment** | Same/Netlify deployment flow; custom domain control requires claiming the deployment |
 
 ## What it actually is
 
-A hosted **vibe-coding** platform where the entire development loop runs in-browser. Users type a prompt or paste a URL; Same generates a full-stack app, renders live preview, and deploys to a subdomain with a single click.
+A hosted **vibe-coding** platform where the development loop runs in-browser. Users type a prompt, upload an image, or paste a URL; Same generates a web app, renders live preview, and can deploy through its hosted flow.
 
 **Clone-from-URL** is the signature. Paste `https://example.com` and Same reconstructs the UI, infers layout, and scaffolds comparable components. This is useful for design reference, competitive rebuilds, or porting a Figma-exported site into real code.
 
-**Download and remix** on paid tiers lets users export the project or branch existing ones. This is the main path off the managed stack when a project outgrows Same's defaults.
+**Download and remix** on paid tiers lets users export the project or branch existing ones. This is the main path off the hosted workflow when a project outgrows Same's defaults.
 
-**Token metering** replaced older flat-subscription models across the vibe-coding category. Unused tokens do not roll over. Ultra tier adds pay-as-you-go overage at $10 per 2M tokens, which is useful for spiky workloads.
+**Deployment is convenient but not equivalent to owning the infrastructure.** Same's deployment docs describe a Netlify-backed flow, custom-domain control through claiming a deployment, and unclaimed deployments that can expire after 14 days of inactivity. Treat deploy as a prototype path until you have claimed/exported and reviewed the app.
+
+**Token metering** replaced Same's older pay-as-you-go Pro model. Unused tokens do not roll over. Ultra tier adds pay-as-you-go overage at $10 per 2M tokens, which is useful for spiky workloads.
 
 ## When to pick Same.dev
 
 - **Design cloning from a URL.** First-class feature, no extra plugin. Closest competitor requires separate screenshot-import steps.
-- **Greenfield full-stack prototypes.** Auth, database, and deploy are baked in. One prompt to a working app on a public URL in minutes.
-- **Non-coders shipping real apps.** The browser interface and managed stack lower the floor more than [Cursor](/tools/cursor/) or [Claude Code](/tools/claude-code/), which assume a local dev environment.
+- **Greenfield web-app prototypes.** Same starts from prompts, URLs, or images, then supports app logic, deployment, and integrations without a local setup.
+- **Non-coders shipping prototype apps.** The browser interface lowers the floor more than [Cursor](/tools/cursor/) or [Claude Code](/tools/claude-code/), which assume a local dev environment.
 - **Design-led iteration with live preview.** Change prompt, see result. Tight feedback loop for UI work.
-- **Token-budgeted projects.** Five plans cover hobbyists through agencies, and Ultra's overage terms work for spiky usage better than fixed flat tiers.
+- **Token-budgeted projects.** Five plans cover hobbyists through heavier builders, and Ultra's overage terms work for spiky usage better than hard caps.
 
 ## When to pick something else
 
@@ -152,11 +169,11 @@ A hosted **vibe-coding** platform where the entire development loop runs in-brow
 
 ## Pricing
 
-Verified 2026-04-18 via [docs.same.new/usage/pricing](https://docs.same.new/usage/pricing):
+Verified 2026-05-10 via [docs.same.new/usage/pricing](https://docs.same.new/usage/pricing):
 
 | Plan | Price | Monthly tokens | Key features |
 |---|---|---|---|
-| Free | $0 | 500,000 | Community support, live preview, deploy |
+| Free | $0 | 500,000 | Browser build flow, live preview, deploy |
 | Basic | $10/mo | 2,000,000 | Premium model, download & remix projects |
 | Pro | $25/mo | 5,000,000 | Premium model, download & remix projects |
 | Max | $50/mo | 10,000,000 | Premium model, download & remix projects |
@@ -167,46 +184,47 @@ Verified 2026-04-18 via [docs.same.new/usage/pricing](https://docs.same.new/usag
 
 **Overage:** Ultra tier is the only plan with pay-as-you-go overage built in. Lower tiers cap at the monthly pool.
 
-Prices verified 2026-04-18 via [Same pricing docs](https://docs.same.new/usage/pricing).
+Prices verified 2026-05-10 via [Same pricing docs](https://docs.same.new/usage/pricing).
 
 ## Against the alternatives
 
-| | Same.dev Pro | Bolt Pro | Lovable Pro | v0 Pro |
+| | Same.dev | Bolt | Lovable | v0 |
 |---|---|---|---|---|
-| **Monthly** | $25 | $20 | $20 | $20 |
+| **Best starting point** | URL/image/prompt clone into a Same project | In-browser dev sandbox | Supabase-first app builder | React / shadcn UI generation |
 | **Signature feature** | Clone-from-URL | StackBlitz WebContainer | Supabase-native stack | shadcn / Next.js output |
-| **Full-stack** | Yes, managed | Yes | Yes | UI-first, backend lighter |
-| **Deploy** | One-click | One-click | One-click | Vercel-native |
-| **Download project** | Yes (paid tiers) | Yes | Yes | Yes |
+| **Backend path** | Next.js plus integrations | Full-stack sandbox | Supabase-led | Usually paired with Vercel app code |
+| **Deploy path** | Same/Netlify flow | Bolt deployment flow | Lovable deployment flow | Vercel-native |
+| **Export/control risk** | Download is paid; custom domains require claiming deployment | Check current export and token terms | Check Supabase/project export terms | Check v0/Vercel credit and deployment billing |
 | **Best viewed as** | Design-cloning app builder | Sandbox app builder | Supabase-first builder | React component generator |
 
 ## Failure modes
 
-- **Managed stack limits deep backend.** The same auth, database, and deploy conveniences that speed prototyping become blockers when a project outgrows the defaults.
+- **Hosted workflow limits deep backend control.** Integrations cover common auth, database, GitHub, and deployment needs, but serious apps still need export, repo review, and infrastructure decisions.
 - **Token expiration stings.** Unused tokens disappear at cycle end. Light-usage months are wasted on mid-tier plans.
 - **Clone-from-URL misreads complex layouts.** Heavily-dynamic sites (dashboards, complex forms, infinite scroll) rebuild imperfectly. Treat the output as a starting point.
 - **Production-readiness gap.** Auth flows, data-model choices, and security posture of generated apps need hardening before real users hit them.
 - **Lock-in risk on free tier.** Download and remix are paid-tier features. Free-tier projects need an upgrade to leave the platform cleanly.
+- **Unclaimed deployments are not permanent infrastructure.** Same's deployment docs say unclaimed deployments can expire after 14 days of inactivity.
 - **Smaller ecosystem than Replit or Bolt.** Community templates, plugins, and third-party integrations are thinner.
 - **Pricing tier proliferation.** Five consumer tiers plus enterprise is more segmentation than the category average. Pick-a-plan fatigue is real.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-18 against [docs.same.new pricing](https://docs.same.new/usage/pricing).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-10 against Same quickstart, FAQ, deploy, integrations, and pricing docs.
 
 ## FAQ
 
 **Is Same.dev free?**
-Yes. The free tier includes 500,000 tokens per month, community support, live preview, and deploy. Paid plans start at $10/mo Basic.
+Yes. Same's pricing docs list a free plan with 500,000 tokens per month. Paid plans start at $10/mo Basic.
 
 **What is clone-from-URL?**
-Paste any public site into Same.dev and it reconstructs the UI as a new full-stack app. Useful for design reference, competitive teardowns, and porting existing sites into real code.
+Paste any public site into Same.dev and it reconstructs the UI as a new web app. Useful for design reference, competitive teardowns, and porting existing sites into real code.
 
 **How does Same.dev compare to Bolt and Lovable?**
-Same's signature differentiator is URL-based design cloning. [Bolt](/tools/bolt/) leans on StackBlitz WebContainers for in-browser development, [Lovable](/tools/lovable/) prioritises a Supabase-first backend stack. All three ship fast full-stack prototypes.
+Same's signature differentiator is URL-based design cloning. [Bolt](/tools/bolt/) leans on StackBlitz WebContainers for in-browser development, [Lovable](/tools/lovable/) prioritises a Supabase-first backend stack. All three can ship fast web-app prototypes, but their export, deployment, and usage-pricing details differ.
 
 **Can I export my project?**
-Yes, on paid tiers. Download and remix are Basic-and-up features. Free tier projects need an upgrade to export.
+Yes, on paid tiers. Download and remix are Basic-and-up features in Same's pricing docs. Free tier projects need an upgrade to export cleanly.
 
 **Do unused tokens roll over?**
 No. All unused tokens expire at the end of each billing cycle.
@@ -215,7 +233,7 @@ No. All unused tokens expire at the end of each billing cycle.
 On Free through Max, usage caps at the pool. On Ultra, pay-as-you-go kicks in at $10 per additional 2 million tokens.
 
 **Can I use Same.dev for production apps?**
-For prototypes and internal tools, yes. For regulated or compliance-heavy production workloads, port the generated project to a standard IDE ([Cursor](/tools/cursor/) or [Claude Code](/tools/claude-code/)) and harden auth, data models, and security before launch.
+For prototypes and internal tools, yes. For regulated or compliance-heavy production workloads, export or sync the project, move it into a standard repo workflow such as [Cursor](/tools/cursor/) or [Claude Code](/tools/claude-code/), and harden auth, data models, deployment, and security before launch.
 
 ## Related
 

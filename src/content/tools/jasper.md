@@ -8,15 +8,15 @@ category: ai-writing
 company: jasper
 url: 'https://jasper.ai'
 pricing_model: paid
-price_range: '$39-$69/month (Business: custom)'
+price_range: '$59-$69/month (Business: custom)'
 status: active
 launched: 2021-01
-last_updated: 2026-05-04
-last_verified: 2026-05-04
+last_updated: 2026-05-10
+last_verified: 2026-05-10
 update_frequency: monthly
-seo_title: 'Jasper: Features, Pricing & Review (April 2026)'
+seo_title: 'Jasper: Features, Pricing & Review (May 2026)'
 meta_description: >-
-  Jasper is the enterprise marketing AI platform with Brand Voice, Jasper Studio custom apps, and campaign workflows. Creator $39/mo annual, Pro $59/mo annual, Business custom.
+  Jasper is the enterprise marketing AI platform with Brand Voice, Jasper IQ, Jasper Studio custom apps, and campaign workflows. Pro is $59/mo annual or $69/mo monthly; Business is custom.
 author: aipedia.wiki Editorial
 affiliate:
   has_program: true
@@ -36,26 +36,26 @@ facts:
     source: "https://www.jasper.ai/platform"
     source_label: "Jasper platform"
     source_id: jasper-platform
-    verified_at: 2026-05-04
-    next_review_at: 2026-08-04
+    verified_at: 2026-05-10
+    next_review_at: 2026-08-10
     volatility: medium
     confidence: high
   pricing_anchor:
-    value: "Creator/Pro-style paid plans plus Business custom pricing on Jasper pricing; verify seat, brand voice, workflow, and governance limits."
+    value: "Pro is $59/mo billed yearly or $69/mo billed monthly; Business is custom pricing for advanced agents, no-code app building, API access, admin controls, and support."
     source: "https://www.jasper.ai/pricing"
     source_label: "Jasper pricing"
     source_id: jasper-pricing
-    verified_at: 2026-05-04
-    next_review_at: 2026-08-04
+    verified_at: 2026-05-10
+    next_review_at: 2026-08-10
     volatility: high
     confidence: high
   best_for:
-    value: "Marketing teams that need branded campaign content, repeatable workflows, collaboration, and approvals more than frontier-model experimentation."
+    value: "Marketing teams that need branded campaign content, Jasper IQ context, agents, content pipelines, collaboration, and approvals more than frontier-model experimentation."
     source: "https://www.jasper.ai/platform"
     source_label: "Jasper platform"
     source_id: jasper-platform
-    verified_at: 2026-05-04
-    next_review_at: 2026-08-04
+    verified_at: 2026-05-10
+    next_review_at: 2026-08-10
     volatility: medium
     confidence: high
   watch_out_for:
@@ -63,8 +63,8 @@ facts:
     source: "https://www.jasper.ai/pricing"
     source_label: "Jasper pricing"
     source_id: jasper-pricing
-    verified_at: 2026-05-04
-    next_review_at: 2026-08-04
+    verified_at: 2026-05-10
+    next_review_at: 2026-08-10
     volatility: high
     confidence: medium
 tags: [marketing, copywriting, brand-voice, enterprise, content-creation, campaign-management, team-collaboration]
@@ -79,29 +79,23 @@ not_best_for:
   - cost-sensitive small teams
   - SEO-first content operations
 quick_answer: >-
-  Jasper is the enterprise marketing platform for brand-consistent content. Pick it for Brand Voice enforcement, campaign workflows, and Jasper Studio custom apps. Skip it if one seat of ChatGPT or Claude at $20/mo covers the same drafting need.
+  Jasper is the enterprise marketing platform for brand-consistent content. Pick it for Jasper IQ context, Brand Voice enforcement, campaign workflows, agents, and Jasper Studio custom apps. Skip it if one seat of ChatGPT or Claude covers the same drafting need.
 price_history:
-  - date: 2026-04-17
-    plan: "Creator"
-    price: "$39/mo"
-    source: "https://www.jasper.ai/pricing"
-    source_label: "Source"
-    source_id: jasper-pricing
-    note: "Annual billing. Monthly rate $49."
-  - date: 2026-04-17
+  - date: 2026-05-10
     plan: "Pro"
     price: "$59/mo"
     source: "https://www.jasper.ai/pricing"
-    source_label: "Source"
+    source_label: "Jasper pricing"
     source_id: jasper-pricing
-    note: "Annual billing. Monthly rate $69. Up to 5 seats, 3 brand voices."
+    verified_at: 2026-05-10
+    note: "Annual billing. Monthly rate $69. Current public pricing page presents Pro and Business; Creator is not visible."
 ---
 
 # Jasper
 
 Jasper AI Inc.'s enterprise marketing content platform. Layers Brand Voice profiles, knowledge bases, campaign workflows, Jasper Studio custom apps, and Jasper Agents on top of foundation models from OpenAI, Anthropic, and Google.
 
-Targets marketing teams that need brand-consistent output at scale. Solo users and small teams rarely break even against a single [ChatGPT](/tools/chatgpt/) or [Claude](/tools/claude/) seat at $20/mo.
+Targets marketing teams that need brand-consistent output at scale. Solo users and small teams rarely break even against a single [ChatGPT](/tools/chatgpt/) or [Claude](/tools/claude/) seat unless brand governance is already painful.
 
 ## System Verdict
 
@@ -109,7 +103,7 @@ Targets marketing teams that need brand-consistent output at scale. Solo users a
 >
 > **Skip it for individual or small-team drafting.** [ChatGPT](/tools/chatgpt/) Plus or [Claude](/tools/claude/) Pro at $20/mo deliver comparable writing quality because Jasper routes through the same underlying models. The moat is workflow, not output quality.
 >
-> **Who pays which tier:** Creator $39/mo annual for a single marketer with one brand, Pro $59/mo annual for up to 5 seats and 3 brand voices, Business custom (typically $1,000-$2,000+/mo) for unlimited seats, Jasper Agents, and Studio.
+> **Who pays which tier:** Pro $59/mo annually or $69/mo monthly for a marketer who needs brand context, agents, campaigns, and Jasper's editor; Business custom for teams that need advanced agents, Jasper Grid, no-code custom AI apps, API access, SSO/admin controls, unlimited IQ customization, and dedicated support.
 
 ## Key Facts
 
@@ -118,13 +112,13 @@ Targets marketing teams that need brand-consistent output at scale. Solo users a
 | **Model backbone** | Routes across OpenAI, Anthropic, and Google models based on task |
 | **Brand Voice** | Train on company style guides, tone, terminology for cross-channel consistency |
 | **Jasper Studio** | No-code builder for custom AI apps and branded workflows (Business tier) |
-| **Jasper Agents** | Autonomous marketing task agents (Business tier) |
+| **Jasper Agents** | Marketing agents for research, creation, and optimization |
 | **Knowledge assets** | Upload product docs, style guides, brand guidelines as reference |
 | **Templates** | 50+ pre-built frameworks for ads, emails, blog, social, product pages |
 | **Browser extension** | Brand Voice available inside Gmail, LinkedIn, CMS tools |
-| **Free trial** | 7 days on Creator and Pro · no permanent free tier |
+| **Free trial** | 7 days on Pro · no permanent free tier |
 
-Every data point above was verified against vendor documentation on 2026-04-17. See Sources.
+Every data point above was verified against vendor documentation on 2026-05-10. See Sources.
 
 ## What it actually is
 
@@ -132,7 +126,7 @@ One marketing content workspace wrapping a multi-model routing layer. Users pick
 
 Campaign management coordinates multi-channel content from a single dashboard with approval flows and version control. The browser extension pushes the same Brand Voice into external tools.
 
-Jasper Studio (Business) builds custom AI apps without code. Jasper Agents (Business) handle repeating marketing tasks autonomously. Canvas supports long-form brainstorming and drafting.
+Jasper Studio (Business) builds custom AI apps without code. Jasper Agents handle repeating marketing tasks like research, creation, and optimization. Canvas supports long-form brainstorming and drafting.
 
 The moat is team workflow. Brand Voice enforcement, Knowledge assets, and approval flows are genuinely useful for marketing orgs. The moat shrinks as [ChatGPT](/tools/chatgpt/) Projects, [Claude](/tools/claude/) Projects, and memory features add similar brand context without the wrapper markup.
 
@@ -142,11 +136,11 @@ The moat is team workflow. Brand Voice enforcement, Knowledge assets, and approv
 - **Agencies running multiple client brands.** Separate Brand Voice profiles per client keeps output on-brand without manual editing.
 - **Marketing operations standardizing AI across an org.** Central admin and usage tracking give ops teams the governance raw LLM seats lack.
 - **Campaign managers coordinating multi-channel output.** Dashboard view of content status across blog, email, social, and ads beats spreadsheet tracking.
-- **Business tier buyers needing custom AI apps.** Jasper Studio is the fastest path to branded AI tools without engineering time.
+- **Business tier buyers needing custom AI apps.** Jasper Studio and no-code custom agents are the fastest path to branded AI tools without engineering time.
 
 ## When to pick something else
 
-- **Individual writers or solopreneurs:** [ChatGPT](/tools/chatgpt/) Plus or [Claude](/tools/claude/) Pro at $20/mo beats Jasper Creator on price and raw quality.
+- **Individual writers or solopreneurs:** [ChatGPT](/tools/chatgpt/) Plus or [Claude](/tools/claude/) Pro usually beats Jasper Pro on price and raw quality.
 - **Budget marketing teams:** [Copy.ai](/tools/copy-ai/) matches the template library at lower tiers.
 - **SEO-first content operations:** Surfer SEO or Clearscope. Jasper's SEO layer trails dedicated tools.
 - **Inline grammar and tone layer:** [Grammarly](/tools/grammarly/) Business. Jasper is a content platform, not an editor.
@@ -156,19 +150,18 @@ The moat is team workflow. Brand Voice enforcement, Knowledge assets, and approv
 
 Subscription pricing via [jasper.ai/pricing](https://www.jasper.ai/pricing):
 
-| Plan | Annual (effective/mo) | Monthly | Seats | Brand Voices | Key Features |
-|------|-----------------------|---------|-------|--------------|--------------|
-| Creator | $39 | $49 | 1 | 1 | SEO mode, browser extension, 50+ templates |
-| Pro | $59 | $69 | Up to 5 | 3 | Collaboration, priority support, campaign tools |
-| Business | Custom (typically $1,000-$2,000+/mo) | Custom | Unlimited | Unlimited | Jasper Studio, Jasper Agents, API, custom workflows, dedicated CSM |
+| Plan | Annual (effective/mo) | Monthly | Best fit | Key Features |
+|------|-----------------------|---------|----------|--------------|
+| Pro | $59 | $69 | Solo marketers or small teams testing Jasper | Essential agents, Canvas, Brand Voice, knowledge assets, audiences, browser extension, 90+ apps, and Jasper Chat |
+| Business | Custom | Custom | Marketing departments and agencies | Advanced agents, Jasper Grid, no-code AI App Builder/custom agents, unlimited IQ customization, API access, admin controls, SSO, and dedicated support |
 
-*Prices verified 2026-04-17 via [jasper.ai/pricing](https://www.jasper.ai/pricing). Annual billing saves roughly 20% on Creator and Pro. 7-day free trial on Creator and Pro.*
+*Prices verified 2026-05-10 via [jasper.ai/pricing](https://www.jasper.ai/pricing). Annual billing saves roughly 20% on Pro. Jasper says most people start with a 7-day free trial of Pro.*
 
 ## Against the alternatives
 
 | | Jasper Pro | ChatGPT Plus | Claude Pro |
 |---|---|---|---|
-| **Monthly price (single seat equiv)** | ~$12/seat (5 seats @ $59) | $20 | $20 |
+| **Monthly price** | $59 annual / $69 monthly | Paid seat usually lower | Paid seat usually lower |
 | **Brand Voice enforcement** | **Strongest** | Custom GPTs, Projects | Projects |
 | **Campaign workflows** | **Yes** | None | None |
 | **Custom app builder** | Jasper Studio (Business) | Custom GPTs | None |
@@ -179,16 +172,16 @@ Subscription pricing via [jasper.ai/pricing](https://www.jasper.ai/pricing):
 ## Failure modes
 
 - **Shrinking moat.** The core value proposition (brand voice wrapper over foundation models) keeps getting commoditized as [ChatGPT](/tools/chatgpt/) Projects, [Claude](/tools/claude/) Projects, and Gemini memory add similar brand context inline.
-- **Price premium without quality delta.** Output quality is bounded by the underlying models Jasper routes to. Paying $39-$59/mo for wrapper workflow makes sense only when team features are actively used.
-- **Individual users lose.** At $39/mo minimum, Jasper costs nearly 2x a raw LLM seat for the same writing quality. Solo buyers should start on Plus or Pro and only escalate if team features become load-bearing.
+- **Price premium without quality delta.** Output quality is bounded by the underlying models Jasper routes to. Paying $59-$69/mo for wrapper workflow makes sense only when marketing workflow features are actively used.
+- **Individual users lose without a governance need.** Jasper Pro costs more than most raw LLM seats for similar drafting quality. Solo buyers should start on ChatGPT or Claude and only escalate if team/brand features become load-bearing.
 - **SEO lags specialists.** Jasper's SEO mode covers basics but trails Surfer SEO and Clearscope on SERP analysis and content scoring.
 - **Model routing is opaque.** Users cannot select which model handles a task. Outputs can swing in tone or quality between generations because Jasper reroutes under the hood.
-- **Feature creep toward enterprise.** Product development has shifted toward Business-tier features like Agents and Studio. Creator and Pro users see less roadmap value than in 2022-2023.
-- **Training-on-data defaults.** Business tier disables training by default; Creator and Pro users should confirm settings before pasting sensitive briefs.
+- **Feature creep toward enterprise.** Product development has shifted toward Business-tier features like advanced agents, Grid, Studio, API access, and admin controls. Pro users should confirm the features they actually get before buying.
+- **Training-on-data defaults.** Business tier disables training by default; Pro users should confirm settings before pasting sensitive briefs.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [jasper.ai/pricing](https://www.jasper.ai/pricing) and [G2 Jasper Reviews](https://www.g2.com/products/jasper/reviews).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-10 against [jasper.ai/pricing](https://www.jasper.ai/pricing) and the [Jasper platform page](https://www.jasper.ai/platform).
 
 ## FAQ
 
@@ -205,14 +198,15 @@ A no-code builder for custom AI apps and branded workflows, available on the Bus
 Autonomous marketing task agents available on the Business tier. Handle recurring work like content ideation, repurposing, or channel-specific drafting without manual prompting.
 
 **Does Jasper have a free tier?**
-No permanent free tier. A 7-day free trial is available on Creator and Pro. Business requires a sales call.
+No permanent free tier. Jasper says most people start with a 7-day free trial on Pro. Business requires a sales call.
 
 **Jasper vs Copy.ai?**
 Jasper targets enterprise marketing teams with heavier brand workflow, campaign management, and Studio tooling. [Copy.ai](/tools/copy-ai/) positions as a lighter, cheaper template library with a more generous free tier. Large orgs with governance needs default to Jasper; budget teams default to Copy.ai.
 
 ## Sources
 
-- [Jasper Pricing](https://www.jasper.ai/pricing): Current Creator, Pro, and Business tier details
+- [Jasper Pricing](https://www.jasper.ai/pricing): Current Pro and Business tier details
+- [Jasper Platform](https://www.jasper.ai/platform): Jasper IQ, agents, content pipelines, Studio, and marketing workflow positioning
 - [Jasper Partners program](https://jasper.ai/partners): Affiliate program terms
 - [G2 Jasper Reviews](https://www.g2.com/products/jasper/reviews): User reviews and feature validation
 - [Vendr Jasper marketplace](https://www.vendr.com/marketplace/jasper): Business tier negotiated pricing benchmarks
