@@ -89,7 +89,11 @@ function parseDirtyFiles() {
   }));
 }
 
-const dirtyFiles = parseDirtyFiles();
+// Vercel may mark files dirty during install/build because of checkout/cache
+// normalization. CI checks should validate the committed ledger state, while
+// local editorial runs still use dirty files to mark actively refreshed pages.
+const ignoreDirtyFiles = process.env.CI || process.env.VERCEL;
+const dirtyFiles = ignoreDirtyFiles ? new Set() : parseDirtyFiles();
 
 function gitLastDate(relPath) {
   try {
