@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: $0-$30/user/month
 status: active
 launched: 2009-07
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-10
+last_verified: 2026-05-10
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -32,52 +32,52 @@ facts:
     source: "https://www.grammarly.com/ai"
     source_label: "Grammarly AI"
     source_id: grammarly-ai
-    verified_at: 2026-05-03
+    verified_at: 2026-05-10
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-10
   context_window:
     value: "Not disclosed: Grammarly does not publish a token context window for its writing-assistant features"
     source: "https://www.grammarly.com/ai"
     source_label: "Grammarly AI"
     source_id: grammarly-ai
-    verified_at: 2026-05-03
+    verified_at: 2026-05-10
     volatility: low
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-10
   pricing_anchor:
-    value: "Free; Pro from $12/mo annually; Business from $15/member/mo annually; Enterprise custom"
+    value: "Free; Grammarly Pro at $30/member/mo monthly, $60/member quarterly, or $144/member/year ($12 average monthly); Enterprise custom"
     source: "https://www.grammarly.com/plans"
     source_label: "Grammarly plans"
     source_id: grammarly-plans
-    verified_at: 2026-05-03
+    verified_at: 2026-05-10
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-10
   free_plan:
     value: "Yes: free writing suggestions and limited AI assistance"
     source: "https://www.grammarly.com/plans"
     source_label: "Grammarly plans"
     source_id: grammarly-plans
-    verified_at: 2026-05-03
+    verified_at: 2026-05-10
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-10
   best_paid_tier:
-    value: "Pro for individuals; Business for teams needing style guides, brand tones, admin, and security controls"
+    value: "Pro for individuals and teams up to 149 seats; Enterprise for larger teams needing SSO, data loss prevention, admin, and security controls"
     source: "https://www.grammarly.com/plans"
     source_label: "Grammarly plans"
     source_id: grammarly-plans
-    verified_at: 2026-05-03
+    verified_at: 2026-05-10
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-10
   api_available:
     value: "No public general-purpose Grammarly writing API for buyers; Grammarly is primarily app, extension, and enterprise software"
     source: "https://www.grammarly.com/business"
     source_label: "Grammarly Business"
     source_id: grammarly-business
-    verified_at: 2026-05-03
+    verified_at: 2026-05-10
     volatility: medium
     confidence: high
   image_generation:
@@ -85,7 +85,7 @@ facts:
     source: "https://www.grammarly.com/ai"
     source_label: "Grammarly AI"
     source_id: grammarly-ai
-    verified_at: 2026-05-03
+    verified_at: 2026-05-10
     volatility: low
     confidence: high
   video_generation:
@@ -93,7 +93,7 @@ facts:
     source: "https://www.grammarly.com/ai"
     source_label: "Grammarly AI"
     source_id: grammarly-ai
-    verified_at: 2026-05-03
+    verified_at: 2026-05-10
     volatility: low
     confidence: high
   real_time_voice:
@@ -101,7 +101,7 @@ facts:
     source: "https://www.grammarly.com/ai"
     source_label: "Grammarly AI"
     source_id: grammarly-ai
-    verified_at: 2026-05-03
+    verified_at: 2026-05-10
     volatility: low
     confidence: high
   web_browsing:
@@ -109,7 +109,7 @@ facts:
     source: "https://www.grammarly.com/business"
     source_label: "Grammarly Business"
     source_id: grammarly-business
-    verified_at: 2026-05-03
+    verified_at: 2026-05-10
     volatility: low
     confidence: high
   coding_agent:
@@ -117,23 +117,23 @@ facts:
     source: "https://www.grammarly.com/ai"
     source_label: "Grammarly AI"
     source_id: grammarly-ai
-    verified_at: 2026-05-03
+    verified_at: 2026-05-10
     volatility: low
     confidence: high
   enterprise_controls:
-    value: "Business and Enterprise add admin controls, style guides, brand tones, analytics, SSO, and security/compliance features"
+    value: "Pro includes advanced writing and team features that were previously Business; Enterprise adds advanced security, admin controls, SAML SSO, and data loss prevention"
     source: "https://www.grammarly.com/business"
     source_label: "Grammarly Business"
     source_id: grammarly-business
-    verified_at: 2026-05-03
+    verified_at: 2026-05-10
     volatility: medium
     confidence: high
   data_retention_or_privacy:
-    value: "Enterprise procurement should evaluate Grammarly Business security, privacy, and compliance controls before deploying across regulated writing surfaces"
+    value: "Enterprise procurement should evaluate Grammarly security, privacy, and compliance controls before deploying across regulated writing surfaces"
     source: "https://www.grammarly.com/business"
     source_label: "Grammarly Business"
     source_id: grammarly-business
-    verified_at: 2026-05-03
+    verified_at: 2026-05-10
     volatility: medium
     confidence: high
   open_source_or_local:
@@ -141,7 +141,7 @@ facts:
     source: "https://www.grammarly.com/plans"
     source_label: "Grammarly plans"
     source_id: grammarly-plans
-    verified_at: 2026-05-03
+    verified_at: 2026-05-10
     volatility: low
     confidence: high
   best_for:
@@ -149,22 +149,22 @@ facts:
     source: "https://www.grammarly.com/business"
     source_label: "Grammarly Business"
     source_id: grammarly-business
-    verified_at: 2026-05-03
+    verified_at: 2026-05-10
     volatility: medium
     confidence: high
   watch_out_for:
-    value: "Less useful for long-form reasoning than frontier chatbots, no public model choice, and team value depends on adoption across writing surfaces"
+    value: "Less useful for long-form reasoning than frontier chatbots, no public model choice, and buyers should account for the Superhuman suite transition and old Business-to-Pro packaging change"
     source: "https://www.grammarly.com/plans"
     source_label: "Grammarly plans"
     source_id: grammarly-plans
-    verified_at: 2026-05-03
+    verified_at: 2026-05-10
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-10
 tags: [ai-writing, grammar-checker, writing-assistant, productivity, chrome-extension]
-seo_title: 'Grammarly: Features, Pricing & Review (April 2026)'
+seo_title: 'Grammarly: Features, Pricing & Review (May 2026)'
 meta_description: >-
-  Grammarly is the inline AI writing layer for 40M+ daily users. Pro $12/mo annual, Business $15/user/mo, Enterprise custom. Coda acquisition is pivoting the product toward AI productivity.
+  Grammarly is the inline AI writing layer inside the Superhuman suite. Compare Free, Pro at $30/mo or $144/year, and Enterprise custom pricing as of May 2026.
 author: aipedia.wiki Editorial
 best_for:
   - inline grammar and tone checks in the browser
@@ -178,27 +178,27 @@ not_best_for:
 quick_answer: >-
   Grammarly is the inline writing layer for Gmail, Docs, Slack, and 500,000+ sites. Pick it for real-time grammar, tone, and rewrites across the browser. Skip it for long-form generation where Claude or ChatGPT produce better drafts.
 price_history:
-  - date: 2026-04-17
+  - date: 2026-05-10
     plan: "Pro"
     price: "$12/mo"
     source: "https://grammarly.com/plans"
     source_label: "Source"
     source_id: grammarly-pricing
     note: "Verified annual rate. Premium now branded Pro."
-  - date: 2026-04-17
-    plan: "Business"
-    price: "$15/user/mo"
-    source: "https://grammarly.com/plans"
-    source_label: "Source"
+  - date: 2026-05-10
+    plan: "Pro"
+    price: "$30/member/mo monthly; $60/member quarterly; $144/member/year"
+    source: "https://support.grammarly.com/hc/en-us/articles/115000090011-How-much-does-Grammarly-Pro-cost"
+    source_label: "Grammarly Pro pricing support"
     source_id: grammarly-pricing
-    note: "Annual rate. Standalone Business tier retained for teams under 149 seats; larger orgs route to Enterprise."
+    note: "Grammarly support says Pro replaces the old Grammarly Business plan and supports up to 149 seats."
 ---
 
 # Grammarly
 
 Grammarly Inc.'s AI writing assistant. Runs across a browser extension, desktop apps on Windows and Mac, mobile keyboards on iOS and Android, and a web editor. Covers grammar, spelling, clarity, tone detection, and generative rewrites through GrammarlyGO.
 
-Reaches 40 million daily users and 50,000 organizations. The December 2024 Coda acquisition brought Coda CEO Shishir Mehrotra in as Grammarly's new CEO and kicked off a pivot from pure writing assistant to AI productivity platform.
+Reaches 40 million daily users and 50,000 organizations. Grammarly is now positioned as the writing assistant inside the broader Superhuman suite alongside Superhuman Go, Coda, and Superhuman Mail, while standalone Grammarly remains available.
 
 ## System Verdict
 
@@ -206,7 +206,7 @@ Reaches 40 million daily users and 50,000 organizations. The December 2024 Coda 
 >
 > **Skip it if the job is zero-to-one drafting.** GrammarlyGO rewrites are competent but not a substitute for [Claude](/tools/claude/) or [ChatGPT](/tools/chatgpt/) on long-form content. Technical writers and developers also see aggressive false positives on code and jargon.
 >
-> **Who pays which tier:** Free for casual users, Pro $12/mo for most individuals, Business $15/user/mo for teams needing shared style guides and analytics, Enterprise for orgs with SSO, audit, and 150+ seats.
+> **Who pays which tier:** Free for casual users, Pro for individuals and teams up to 149 seats that need advanced writing and team features, Enterprise for larger or more controlled deployments needing SSO, data loss prevention, admin, and security controls.
 
 ## Key Facts
 
@@ -215,13 +215,13 @@ Reaches 40 million daily users and 50,000 organizations. The December 2024 Coda 
 | **Daily active users** | 40M+ (up from 30M in 2024) |
 | **Organizations** | 50,000+ |
 | **Reach** | 500,000+ websites and apps via browser extension |
-| **Parent company** | Grammarly Inc. · CEO Shishir Mehrotra (post-Coda acquisition) |
+| **Parent platform** | Superhuman suite · Grammarly remains available standalone |
 | **Generative layer** | GrammarlyGO · rewrite, tone shift, reply drafts |
 | **Compliance** | SOC 2 · GDPR · HIPAA |
-| **Developer API** | None publicly available |
-| **Recent strategic move** | Coda acquisition closed December 2024 · AI productivity pivot in progress |
+| **Developer API** | No public general-purpose writing API for buyers |
+| **Recent strategic move** | Superhuman suite positioning with Superhuman Go, Grammarly, Coda, and Superhuman Mail |
 
-Every data point above was verified against vendor documentation on 2026-04-17. See Sources.
+Every data point above was verified against official Grammarly and Superhuman documentation on 2026-05-10. See Sources.
 
 ## What it actually is
 
@@ -229,13 +229,13 @@ One writing quality layer served through four surfaces: a browser extension, a d
 
 GrammarlyGO adds generative rewrites, tone shifts, and reply drafts inside that same surface. Users select text, pick an action, and accept or discard the output without leaving their current app.
 
-The moat is distribution. The browser extension sits inside the user's existing workflow and processes text with low-latency suggestions that no external chat interface matches on context-switch cost. The Coda acquisition signals a future where that same inline surface carries custom agents and knowledge retrieval, not just grammar fixes.
+The moat is distribution. The browser extension sits inside the user's existing workflow and processes text with low-latency suggestions that no external chat interface matches on context-switch cost. The Superhuman suite shift signals a future where that same writing layer sits alongside agents, docs, and mail rather than staying a pure grammar checker.
 
 ## When to pick Grammarly
 
 - **Writing happens inside the browser.** Gmail, Docs, LinkedIn, Slack, CMS drafts. Grammarly's inline layer removes the copy-paste loop that kills momentum with chat-based tools.
 - **Non-native English writing at scale.** The tone detector and rephrasing suggestions catch natural-speech errors rule-based checkers miss.
-- **Team style consistency.** Business plan style guides enforce custom terminology, capitalization, and voice rules across seats in real time.
+- **Team style consistency.** Pro and Enterprise-style features support custom terminology, capitalization, snippets, brand tones, and voice rules across seats.
 - **Volume email and doc output.** Daily writers see the cost per fix collapse when the tool prevents hundreds of small errors per week.
 - **Compliance-sensitive orgs.** SOC 2, GDPR, HIPAA coverage plus Enterprise data controls handle regulated industries.
 
@@ -254,11 +254,10 @@ Subscription pricing via [grammarly.com/plans](https://grammarly.com/plans):
 | Plan | Price | Key Features | Who's it for |
 |------|-------|--------------|--------------|
 | Free | $0 | Grammar, spelling, punctuation, basic clarity | Casual users |
-| Pro | $12/mo annual ($30 monthly) | Full suggestions, tone, plagiarism, unlimited GrammarlyGO | **Most individuals should land here** |
-| Business | $15/user/mo annual | Style guides, admin dashboard, analytics, SSO | Teams 3-149 seats |
-| Enterprise | Custom | Full Business features plus audit, data controls, volume pricing | 150+ seats or regulated industries |
+| Pro | $30/member/mo monthly, $60/member quarterly, or $144/member/year | Advanced writing features, tone suggestions, full-sentence rewrites, and team features that were previously Business | **Most paying individuals and small teams land here** |
+| Enterprise | Custom | Advanced security and admin controls, SAML SSO, data loss prevention, and larger procurement needs | Larger teams or regulated industries |
 
-*Prices verified 2026-04-17 via [grammarly.com/plans](https://grammarly.com/plans). Annual billing required for the $12/mo and $15/user/mo rates; quarterly billing on Pro runs $20/mo.*
+*Prices verified 2026-05-10 via Grammarly support and [grammarly.com/plans](https://grammarly.com/plans). Grammarly support says Pro replaces the old Grammarly Business plan and allows up to 149 seats.*
 
 ## Against the alternatives
 
@@ -269,7 +268,7 @@ Subscription pricing via [grammarly.com/plans](https://grammarly.com/plans):
 | **Tone detection** | Yes, document-level | Prompt-driven only | Mode selection only |
 | **Generative drafting** | GrammarlyGO (inline) | Strongest (full chat) | Rewrite only |
 | **Plagiarism scan** | Yes, 16B+ sources | None | None |
-| **Team style guides** | Business tier | None | Teams tier |
+| **Team style guides** | Pro/Enterprise | None | Teams tier |
 | **Best viewed as** | Inline writing layer | Generalist assistant | Voice-preserving rewriter |
 
 ## Failure modes
@@ -279,36 +278,36 @@ Subscription pricing via [grammarly.com/plans](https://grammarly.com/plans):
 - **No developer API.** Teams that want Grammarly-quality checks embedded in internal apps or proprietary editors have no supported path.
 - **Cloud processing only.** All text routes through Grammarly servers for analysis. Regulated orgs that need on-premise processing default to Enterprise data controls or avoid the product.
 - **Tone detection drifts on short text.** Single sentences and bullet points surface misleading tone signals. The feature assumes a paragraph of context.
-- **Style guides locked to Business.** Pro users with brand guidelines cannot enforce them inside Grammarly. Upgrade path is a 25% per-seat jump.
-- **Strategic uncertainty during the Coda pivot.** Post-acquisition roadmap centers on AI productivity features over pure grammar. Core users should track whether writing-assistant investment stays level as Coda Docs and agents ship.
+- **Old Business plan assumptions are stale.** Grammarly support now says Pro replaces Business, so teams should re-check seat, admin, and procurement requirements before renewing.
+- **Strategic uncertainty during the Superhuman suite pivot.** The roadmap is expanding beyond pure grammar. Core users should track whether writing-assistant investment stays level as Superhuman Go, Coda, and Mail features ship.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [Grammarly Plans](https://grammarly.com/plans), [Grammarly acquires Coda (TechCrunch, Dec 17 2024)](https://techcrunch.com/2024/12/17/grammarly-acquires-productivity-startup-coda-brings-on-new-ceo/), and the [Grammarly Business overview](https://www.grammarly.com/business).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-05-10 against [Grammarly Plans](https://grammarly.com/plans), Grammarly support pricing docs, [Grammarly AI](https://www.grammarly.com/ai), and the Superhuman suite support page.
 
 ## FAQ
 
 **Is Grammarly free?**
-Yes. The free tier covers grammar, spelling, punctuation, and basic clarity across the browser extension, desktop app, mobile keyboards, and web editor. Pro at $12/mo annual unlocks tone detection, advanced clarity, plagiarism scanning, and unlimited GrammarlyGO rewrites ([Grammarly Plans](https://grammarly.com/plans)).
+Yes. The free tier covers core writing help. Pro unlocks advanced writing and team features. Grammarly support lists Pro at $30/member/month, $60/member/quarter, or $144/member/year ([Grammarly support](https://support.grammarly.com/hc/en-us/articles/115000090011-How-much-does-Grammarly-Pro-cost)).
 
 **Is Grammarly Pro worth it vs the free tier?**
-Yes for daily English writers. Pro's tone detection, advanced rewrites, and GrammarlyGO cover professional polish the free tier does not. Infrequent users get enough from free.
+Yes for daily English writers. Pro's tone suggestions, full-sentence rewrites, advanced writing features, and team controls cover professional polish the free tier does not. Infrequent users may get enough from free.
 
-**What happened with the Coda acquisition?**
-Grammarly acquired Coda in December 2024. Coda CEO Shishir Mehrotra became Grammarly's CEO. The stated direction is a pivot from writing assistant to AI productivity platform, layering Coda Docs and agents on top of Grammarly's existing inline surface ([TechCrunch](https://techcrunch.com/2024/12/17/grammarly-acquires-productivity-startup-coda-brings-on-new-ceo/)).
+**What changed with Superhuman?**
+Grammarly is now part of the Superhuman suite alongside Superhuman Go, Coda, and Superhuman Mail. Grammarly support says standalone Grammarly remains available for customers who prefer it.
 
 **Grammarly vs ChatGPT or Claude for writing?**
 Grammarly checks and polishes text inline across the browser. ChatGPT and Claude draft and rewrite at higher quality but require copy-paste out of the source app. Most professional writers run both: Grammarly inline, a chat LLM for drafting and long-form rewrites.
 
 **Does Grammarly have a developer API?**
-No public API. Enterprise customers negotiate limited integration scopes, but there is no self-service API for embedding Grammarly checks in custom applications.
+No public general-purpose writing API for buyers. Grammarly is primarily delivered through apps, extensions, and enterprise software.
 
 ## Sources
 
-- [Grammarly Plans](https://grammarly.com/plans): Current pricing for Free, Pro, Business, and Enterprise tiers
-- [Grammarly Business](https://www.grammarly.com/business): Team features and style guide enforcement
-- [GrammarlyGO product page](https://grammarly.com/grammarlygo): Generative AI feature scope
-- [Grammarly acquires Coda (TechCrunch)](https://techcrunch.com/2024/12/17/grammarly-acquires-productivity-startup-coda-brings-on-new-ceo/): December 17, 2024 acquisition announcement and leadership change
+- [Grammarly Plans](https://grammarly.com/plans): Current Free, Pro, and Enterprise-facing plan surface
+- [Grammarly Pro pricing support](https://support.grammarly.com/hc/en-us/articles/115000090011-How-much-does-Grammarly-Pro-cost): Pro monthly, quarterly, annual pricing and Business replacement note
+- [Grammarly AI](https://www.grammarly.com/ai): AI writing, tone, and in-workflow positioning
+- [Superhuman suite support](https://support.grammarly.com/hc/en-us/articles/40709437438733-Introducing-the-Superhuman-suite): Suite packaging and standalone-product notes
 
 ## Related
 

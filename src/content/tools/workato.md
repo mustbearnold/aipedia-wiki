@@ -2,16 +2,16 @@
 type: tool
 slug: workato
 title: Workato
-tagline: Enterprise iPaaS with the deepest governance and audit story. 1,200+ connectors, native AI agents, priced per recipe run on annual contracts.
+tagline: Enterprise iPaaS and agentic orchestration platform with Workato ONE, Agent Studio, Workato GO, MCP servers, and governance-heavy automation for large teams.
 category: ai-automation
 company: workato
 url: https://www.workato.com
 pricing_model: enterprise
-price_range: "Annual contracts (roughly $10k+ starting)"
+price_range: "Custom usage-based enterprise pricing"
 status: active
 launched: 2013-01
-last_updated: 2026-04-23
-last_verified: 2026-04-23
+last_updated: 2026-05-10
+last_verified: 2026-05-10
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -26,49 +26,56 @@ scores:
   longevity: 9
 facts:
   best_for:
-    value: "Enterprise iPaaS with the deepest governance and audit story. 1,200+ connectors, native AI agents, priced per recipe run on annual contracts. Best for workflow automation, agentic operations, and business-process automation."
-    source: "https://www.workato.com"
-    source_label: "Source"
-    source_id: workato-pricing
-    verified_at: 2026-05-03
+    value: "Large enterprises that need governed integration, automation, AI-agent orchestration, Workato-hosted MCP servers, and audit-heavy workflow execution across business systems."
+    source: "https://docs.workato.com/en/mcp.html"
+    source_label: "Workato MCP docs"
+    source_id: workato-mcp-docs
+    verified_at: 2026-05-10
     volatility: medium
     confidence: medium
   pricing_anchor:
-    value: "Enterprise; Custom annual contract; No public per-seat or per-task pricing; engagement required for quote"
-    source: "https://www.workato.com"
-    source_label: "Source"
+    value: "Usage-based direct-customer pricing: platform edition fee plus usage fee; Standard, Business, Enterprise, and Workato One editions; exact rates require contract or sales discussion."
+    source: "https://docs.workato.com/pricing.html"
+    source_label: "Workato pricing docs"
     source_id: workato-pricing
-    verified_at: 2026-05-03
-    next_review_at: 2026-08-03
+    verified_at: 2026-05-10
+    next_review_at: 2026-08-10
     volatility: high
     confidence: medium
   watch_out_for:
-    value: "Non-Tier-1 canonical profile: verify current pricing, usage limits, data policy, and integration details before procurement"
-    source: "https://www.workato.com"
-    source_label: "Source"
+    value: "Direct-customer pricing changed for customers after February 2024; legacy contracts may use a separate model, so procurement must verify edition, usage unit, OPAs, concurrency, and agentic/MCP entitlements."
+    source: "https://docs.workato.com/pricing.html"
+    source_label: "Workato pricing docs"
     source_id: workato-pricing
-    verified_at: 2026-05-03
-    next_review_at: 2026-08-03
+    verified_at: 2026-05-10
+    next_review_at: 2026-08-10
     volatility: high
     confidence: medium
 tags: [ipaas, enterprise-automation, workflow, integration, governance, audit, rbac, sso, ai-agents, workbot]
-seo_title: "Workato: Features, Pricing & Review (April 2026)"
-meta_description: "Workato is enterprise iPaaS with 1,200+ connectors, native AI agents, RBAC, SSO, and audit logs. Annual contracts only, typically $10k+ starting. Built for companies with compliance requirements."
+seo_title: "Workato Review: Pricing, Workato ONE & MCP (May 2026)"
+meta_description: "Workato is enterprise iPaaS plus agentic orchestration for governed automation, Workato ONE, Agent Studio, Workato GO, MCP servers, and usage-based custom pricing."
 author: "aipedia.wiki Editorial"
 best_for:
   - large enterprises with compliance and audit requirements
   - teams needing RBAC, SSO, SCIM out of the box
   - integrating SAP, Oracle, Workday, NetSuite
   - governed citizen-developer automation at scale
-  - AI agents inside existing Workato workflows (Workbot)
+  - AI agents, genies, Workato GO, and MCP access inside governed workflows
 not_best_for:
   - solo developers or small teams
   - usage-based or per-flow pricing preferences
   - teams wanting open-source or self-host
   - cost-sensitive startups (Zapier or Activepieces fit better)
 quick_answer: >-
-  Workato is enterprise iPaaS built for large, audit-heavy organizations. 1,200+ connectors, RBAC, SSO, SCIM, and HIPAA-ready deployments all ship out of the box. Pricing is annual contract only, typically starting around $10k. Pick it for Fortune 500 integration work; skip it if Zapier's per-task pricing or Activepieces' open-source fits your team size.
+  Workato is enterprise iPaaS and agentic orchestration for large, audit-heavy organizations. Its current direct-customer pricing model combines a platform edition fee with usage fees, and Workato One adds agentic capabilities such as Agent Studio, Workato GO, and MCP. Pick it when governed enterprise integration matters more than self-serve pricing; skip it if Zapier, Make, n8n, or Activepieces fits your team size.
 price_history:
+  - date: 2026-05-10
+    plan: "Standard / Business / Enterprise / Workato One"
+    price: "Custom usage-based enterprise pricing"
+    source: "https://docs.workato.com/pricing.html"
+    source_label: "Workato pricing docs"
+    source_id: workato-pricing
+    note: "Workato docs describe a platform edition fee plus usage fee for direct customers; Workato One includes agentic capabilities. Customers before February 2024 may be on a separate pricing model."
   - date: 2026-04-17
     plan: "Enterprise"
     price: "Custom annual contract"
@@ -80,15 +87,21 @@ price_history:
 
 # Workato
 
-Enterprise iPaaS (integration platform as a service) founded 2013 and now owned privately at a reported valuation above $5B. Positioned against MuleSoft, Boomi, and Zapier Enterprise. 1,200+ prebuilt connectors, a Workbot AI-agent framework, and a governance stack (RBAC, SSO, SCIM, audit logs, HIPAA-ready) aimed at Fortune 500 buyers.
+Enterprise iPaaS (integration platform as a service) founded in 2013 and now positioned around **Workato ONE**, agentic orchestration, and governed enterprise automation. It competes with MuleSoft, Boomi, Zapier Enterprise, ServiceNow workflow automation, and IBM watsonx Orchestrate depending on whether the buyer cares most about integration depth, workflow governance, or AI-agent control.
 
-Pricing is **annual contract only**. No public per-user or per-task rates. Engagement with a Workato sales team produces a custom quote tied to environments, recipes, and task volume.
+Pricing is **custom and usage-based for direct customers**. Workato's own docs describe a platform edition fee plus a usage fee, with Standard, Business, Enterprise, and Workato One editions. Exact rates are not public; customers that joined before February 2024 may be on a separate pricing model.
+
+## Recent developments (May 2026)
+
+- **Workato ONE is now the clearest buying frame.** Workato describes it as an agentic stack that combines orchestration, context, skills, and trust rather than a standalone workflow builder.
+- **Agent Studio, Workato GO, and MCP are now central to the AI story.** Agent Studio creates "genies" that can perform actions and call workflows; Workato GO gives users a chat/search/task interface; MCP exposes Workato integrations to AI clients such as Claude, ChatGPT, Cursor, and other MCP-compatible tools.
+- **2026 Gartner positioning is part of the enterprise proof story.** Workato says Gartner named it a Leader in the 2026 iPaaS Magic Quadrant for the eighth time and Furthest in Vision for the third consecutive year. Treat this as vendor-provided analyst-positioning evidence, not a guarantee that Workato is the right fit for every buyer.
 
 ## System Verdict
 
-> **Pick Workato if compliance and governance are what blocked Zapier or n8n.** The audit log, role-based access control, change approval workflows, and SOC 2 / HIPAA / ISO 27001 attestations are what distinguish it from mid-market tools. 1,200+ enterprise connectors (SAP, Oracle, Workday, NetSuite, ServiceNow) cover systems that Zapier and Activepieces skip or partially support.
+> **Pick Workato if compliance, governance, and enterprise integration depth are what blocked Zapier, Make, or n8n.** The audit log, role-based access control, lifecycle controls, security documentation, and Workato-hosted MCP/agentic tooling are the reasons large IT teams shortlist it.
 >
-> **Skip it if you are under 500 employees or do not have a procurement process for $10k+ annual contracts.** [Zapier](/tools/zapier/) at per-task pricing fits solo and small-team use; [n8n](/tools/n8n/) offers a similar enterprise footprint with self-host; [Activepieces](/tools/activepieces/) open-source covers the privacy-first case for free. Workato's price-to-value only clears at enterprise volume.
+> **Skip it if you need transparent self-serve pricing or a small-team automation tool.** [Zapier](/tools/zapier/) and [Make](/tools/make/) are easier starts for business teams; [n8n](/tools/n8n/) and [Activepieces](/tools/activepieces/) are better when self-hosting or open-source control matters. Workato's price-to-value case only clears when governance and scale are part of the job.
 >
 > **Who pays:** Fortune 500 IT, regulated industries (finance, healthcare, pharma), and large SaaS companies running internal platform teams. Budget is IT OpEx, not department discretionary spend.
 
@@ -97,28 +110,28 @@ Pricing is **annual contract only**. No public per-user or per-task rates. Engag
 | | |
 |---|---|
 | **Positioning** | Enterprise iPaaS, governance-first |
-| **Connectors** | 1,200+ (strongest enterprise coverage: SAP, Oracle, Workday, NetSuite, ServiceNow) |
-| **AI agents** | Workbot (in-chat AI-triggered workflows), native LLM connectors for OpenAI, Anthropic, Google |
-| **Compliance** | SOC 2 Type 2, ISO 27001, HIPAA-ready, GDPR, SOX-aware |
+| **Connectors** | 1,000+ connectors, including pre-built, universal, and community connector paths |
+| **AI / agentic layer** | Workato ONE, Agent Studio, Workato GO, Workato-hosted MCP servers, genies, and workflow skills |
+| **Compliance** | SOC 2 Type II, SOC 3, ISO 27001, HIPAA-related documentation, GDPR, and customer audit materials depending on contract |
 | **Governance** | RBAC, SSO, SCIM, audit logs, change approval, environment promotion |
-| **Pricing model** | Annual contract, custom |
-| **Entry price** | Typically $10k+/year; larger deployments run into six figures |
+| **Pricing model** | Custom usage-based pricing: platform edition fee plus usage fee |
+| **Public rates** | Not published; verify edition, usage capacity, add-ons, OPAs, concurrency, and agentic/MCP entitlements in contract |
 | **Self-host** | No (SaaS only) |
 | **Versioning** | Recipe lifecycle (Dev → Test → Prod), Git-backed recipe export |
 | **Monitoring** | Error dashboards, recipe run logs, SLA-grade uptime |
 
-Every data point verified 2026-04-17 against [workato.com](https://www.workato.com) and independent reviews on G2 and TrustRadius.
+Every data point on this page was re-verified on 2026-05-10 against Workato pricing, connector, agentic, MCP, and security documentation.
 
 ## What it actually is
 
-A SaaS platform for connecting enterprise systems via drag-and-drop workflows ("recipes"). Recipes trigger on events (API calls, schedules, file drops), call connector actions (1,200+ integrations), branch on logic, and write to downstream systems.
+A SaaS platform for connecting enterprise systems via drag-and-drop workflows ("recipes"). Recipes trigger on events (API calls, schedules, file drops), call connector actions across Workato's 1,000+ connector ecosystem, branch on logic, and write to downstream systems.
 
 The enterprise story compounds through six differentiators:
 
-- **Connector depth.** SAP, Oracle EBS, Workday, NetSuite, ServiceNow, Salesforce are first-class. These are the systems where Zapier and Make offer partial coverage and Activepieces skips entirely.
+- **Connector depth.** Workato documents more than 1,000 connectors across pre-built, universal, and community options, with enterprise systems such as Salesforce, NetSuite, ServiceNow, Workday, SAP, and Oracle often driving deals.
 - **Governance primitives.** Role-based access, environment promotion (dev/test/prod), change approval workflows, and exportable audit logs are table-stakes-for-Fortune-500.
-- **Workbot.** AI-agent surface that lets business users trigger Workato recipes from Slack, Teams, or chat widgets via natural language.
-- **Compliance attestations.** SOC 2 Type 2, ISO 27001, HIPAA-ready, GDPR. Legal review passes quickly.
+- **Agentic layer.** Agent Studio creates governed genies, Workato GO gives employees a chat/search/task surface, and MCP exposes approved Workato skills to AI clients.
+- **Compliance attestations.** Workato documents SOC 2 Type II, SOC 3, ISO 27001, HIPAA, GDPR, and audit-report access paths. Legal review is easier than with lightweight automation tools, but procurement should still confirm the exact report and region.
 - **Sales-led onboarding.** A named customer success manager, implementation specialists, and architect workshops ship with most contracts. This is what you are paying for beyond the product.
 - **SLA uptime.** 99.98%+ reported; enterprise SLAs codified in contracts.
 
@@ -127,7 +140,7 @@ The enterprise story compounds through six differentiators:
 - **Compliance blocks every alternative.** Your legal team rejects Zapier, n8n cloud, Make, and Activepieces on SOC 2, HIPAA, or data-residency grounds.
 - **You need SAP, Oracle, Workday, or NetSuite integration.** Workato's connectors cover the deep APIs these systems expose; lighter-weight competitors ship partial coverage.
 - **You run a platform team governing citizen-developer automation.** Workato's RBAC and audit story is what lets IT say yes to business-unit automations without losing control.
-- **AI agents need to operate inside governed workflows.** Workbot wraps LLM calls in the same audit and RBAC as every other recipe.
+- **AI agents need to operate inside governed workflows.** Agent Studio, Workato GO, and MCP can wrap agent actions in Workato's identity, policy, and audit model instead of leaving each team to wire its own assistant to production systems.
 - **Your procurement prefers annual contracts with an account team.** Most Workato customers buy through a sales cycle, not self-serve.
 
 ## When to pick something else
@@ -135,55 +148,55 @@ The enterprise story compounds through six differentiators:
 - **Solo developers and small teams:** [Zapier](/tools/zapier/) at per-task pricing or [n8n](/tools/n8n/) self-hosted. Workato's floor is too high.
 - **Open-source and self-host:** [Activepieces](/tools/activepieces/) (MIT) or [n8n](/tools/n8n/) (fair-code). Workato is SaaS only.
 - **Visual builder with cheap mid-market pricing:** [Make](/tools/make/) at $9/mo and up.
-- **AI-agent-first with MCP:** Activepieces native MCP, or roll your own via LangGraph + MCP SDK.
-- **Broadest raw connector count:** Zapier at 7,000+. Workato covers depth on 1,200+ enterprise systems; Zapier covers breadth on everything including long-tail consumer SaaS.
+- **AI-agent-first with open tooling:** Activepieces native MCP, Gumloop for AI-native flow building, or roll your own via LangGraph + MCP SDK.
+- **Broadest raw app catalog:** Zapier is the breadth play for 8,000+ apps. Workato is the governance and enterprise-system-depth play.
 
 ## Pricing
 
-No public pricing. Workato sells through a sales team with custom quotes. Approximate brackets reported by G2 reviewers and Gartner:
+Workato does not publish dollar rates. Its current pricing documentation says direct customers pay through a usage-based model with two parts:
 
-| Deployment size | Approximate annual spend |
+| Pricing component | What it means |
 |---|---|
-| Small enterprise (5-10 recipes, 1 environment) | $10,000-$30,000 |
-| Mid enterprise (50+ recipes, dev/test/prod) | $60,000-$150,000 |
-| Large enterprise (hundreds of recipes, multi-region) | $200,000+ |
+| Platform edition fee | Standard, Business, Enterprise, or Workato One determines the capability set |
+| Usage fee | Scales with usage volume through Workato's common billing unit |
+| Additional capabilities | OPAs, concurrency, and other add-ons can be purchased depending on contract and plan |
 
-The primary pricing variables are task volume, number of environments, and connector tier (premium SAP/Oracle/Workday connectors carry premium pricing).
+The important May 2026 caveat: Workato says customers who joined before February 2024 may be on a separate pricing model. Do not assume an old recipe/task quote maps cleanly to a new Workato One evaluation.
 
-Prices are directional only; get a quote from [workato.com](https://www.workato.com/lp/contact-us). Public customers include Broadcom, HP, Box, and Autodesk.
+Third-party pricing pages often estimate five-figure annual entry points and six-figure enterprise deployments. Treat those as budgeting signals only, not vendor-confirmed pricing. The reliable procurement move is to ask Workato for the exact edition, usage unit, included capacity, overage model, OPA/concurrency costs, MCP availability, Agent Studio/GO availability, and any premium connector constraints.
 
 ## Against the alternatives
 
 | | Workato | Zapier | MuleSoft | n8n Cloud |
 |---|---|---|---|---|
 | **Pricing model** | Annual contract | Per-task + seats | Annual license | Per-execution + seats |
-| **Entry price** | ~$10k+/yr | $19.99/mo | ~$80k+/yr | $20/mo |
-| **Connector count** | 1,200+ | 7,000+ | 800+ | 400+ |
+| **Entry price** | Custom quote | Self-serve paid plans | Custom quote | Self-serve paid plans |
+| **Connector count** | 1,000+ | 8,000+ apps | Enterprise integrations | 400+ |
 | **Enterprise system depth** | **Strongest** | Partial | Strong (Salesforce-owned) | Partial |
 | **Self-host** | No | No | On-prem option | Yes (free) |
-| **AI agents** | Workbot | Zapier AI | Einstein | BYO via OpenAI nodes |
+| **AI agents** | Workato ONE / Agent Studio / MCP | Zapier AI / MCP | Einstein / MuleSoft AI | BYO via AI nodes |
 | **Compliance** | SOC 2, ISO, HIPAA | SOC 2 | SOC 2, ISO, HIPAA | SOC 2 (Cloud) |
 | **Best viewed as** | Fortune 500 iPaaS | Broad-breadth automation | Salesforce-stack iPaaS | Developer-friendly automation |
 
 ## Failure modes
 
-- **Opaque pricing.** Without a quote, budget planning is guesswork. Independent research relies on third-party reviews and analyst estimates.
+- **Opaque pricing.** Without a quote, budget planning is guesswork. Workato now documents the pricing model, but not public rates.
 - **Steep onboarding.** The platform is deep; most teams need 4-8 weeks of onboarding plus ongoing admin.
 - **Vendor lock.** Recipes are proprietary format. Export is possible but migration to Zapier, n8n, or Activepieces requires manual rebuild.
 - **Connector quality varies.** Premium connectors (SAP, Workday) are well-maintained; long-tail connectors can lag vendor API changes.
 - **Small-team overkill.** Teams under 500 employees rarely get ROI; the governance features are the value, and governance is not a cost center for startups.
-- **Sales-led cadence.** Procurement cycles of 3-6 months for new deployments. Urgent integrations go elsewhere.
+- **Agentic entitlement ambiguity.** Workato One, Agent Studio, Workato GO, MCP servers, and local MCP features may not be included the same way in every contract or region. Verify before building the business case.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline. Public pricing for Workato is unavailable; brackets quoted above are sourced from G2 reviews and industry reports, not vendor documentation. Last verified 2026-04-23 against [workato.com](https://www.workato.com) and public customer case studies.
+This page was produced by the aipedia.wiki editorial pipeline. Public dollar pricing for Workato is unavailable, so this refresh relies on Workato's pricing model documentation rather than unsupported quoted brackets. Last verified 2026-05-10 against Workato pricing, connector, security, Agent Studio, Workato GO, MCP, and 2026 Gartner-positioning pages.
 
 ## FAQ
 
 <details>
 <summary>How much does Workato cost?</summary>
 
-No public pricing. Annual contracts start around $10,000 for small deployments and scale into the hundreds of thousands for large enterprises. Contact [Workato sales](https://www.workato.com/lp/contact-us) for a quote.
+No public dollar pricing. Workato's current docs describe usage-based direct-customer pricing with a platform edition fee plus a usage fee. Standard, Business, Enterprise, and Workato One determine the capability set; actual rates require a Workato quote or existing contract review.
 
 </details>
 
@@ -195,9 +208,9 @@ Only at the enterprise end. Zapier targets solo developers and small teams with 
 </details>
 
 <details>
-<summary>What is Workbot?</summary>
+<summary>What is Workbot, and is it still the main AI story?</summary>
 
-Workato's AI-agent framework. Lets business users trigger Workato recipes from Slack, Teams, or chat widgets using natural language. Every Workbot invocation inherits the recipe's RBAC and audit trail, so governance does not degrade when users move from the Workato UI to chat.
+Workbot is still part of Workato's history, but the current AI buying story is broader: Agent Studio for genies, Workato GO for chat/search/tasks, and MCP for exposing governed Workato skills to AI clients. Ask which of these are included in your edition before treating Workato as an agent platform.
 
 </details>
 
@@ -219,3 +232,18 @@ No. Workato is SaaS only. For self-host iPaaS options, see [n8n](/tools/n8n/) (f
 
 - **Category:** [AI Automation](/categories/ai-automation/)
 - **Also see:** [Zapier](/tools/zapier/) (mid-market alternative) · [Activepieces](/tools/activepieces/) (open-source alternative) · [n8n](/tools/n8n/) (developer-friendly self-host)
+
+## Sources
+
+- [Workato pricing docs](https://docs.workato.com/pricing.html) (verified 2026-05-10)
+- [Workato MCP docs](https://docs.workato.com/en/mcp.html) (verified 2026-05-10)
+- [Workato Agent Studio docs](https://docs.workato.com/agentic/agent-studio) (verified 2026-05-10)
+- [Workato GO docs](https://docs.workato.com/en/agentic/workato-go.html) (verified 2026-05-10)
+- [Workato connector docs](https://docs.workato.com/en/connectors.html) (verified 2026-05-10)
+- [Workato security compliance docs](https://docs.workato.com/en/security/security-compliance.html) (verified 2026-05-10)
+- [Workato 2026 Gartner Magic Quadrant post](https://www.workato.com/the-connector/gartner-magic-quadrant-2026/) (verified 2026-05-10)
+
+## Review History
+
+- **2026-05-10:** Refreshed pricing model, agentic/MCP positioning, connector count language, compliance caveats, alternatives, and source registry against current Workato docs.
+- **2026-04-23:** Initial enterprise iPaaS review.

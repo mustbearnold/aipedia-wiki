@@ -1,12 +1,12 @@
 ---
 import ArticleLayout from '../layouts/ArticleLayout.astro';
 
-const LAST_UPDATED = '2026-04-28';
-const LAST_UPDATED_HUMAN = 'April 28, 2026';
+const LAST_UPDATED = '2026-05-10';
+const LAST_UPDATED_HUMAN = 'May 10, 2026';
 
 const pageName = 'Privacy Policy, aipedia.wiki';
 const pageDesc =
-  'How aipedia.wiki handles data. Privacy-first analytics, cookie policy, affiliate-network cookies, user rights under GDPR and CCPA, contact for data requests.';
+  'How aipedia.wiki handles data: privacy controls, consent-based analytics, newsletter and review data, affiliate-network cookies, and contact for data requests.';
 ---
 
 <ArticleLayout
@@ -14,7 +14,7 @@ const pageDesc =
   seoTitle={pageName}
   description={pageDesc}
   eyebrow="Trust + transparency"
-  subhead="How aipedia.wiki handles data. GDPR and CCPA compliant."
+  subhead="How aipedia.wiki handles data, consent, analytics, affiliate links, and reader requests."
   breadcrumbs={[{ label: 'Privacy Policy' }]}
 >
   <p class="not-prose text-xs text-[var(--text-muted)] mb-6">
@@ -25,7 +25,7 @@ const pageDesc =
   <h2>Summary</h2>
 
   <p>
-    aipedia.wiki is an independent, agentically operated review site for AI tools. The site collects minimal data, does not set tracking cookies of its own, and does not sell or share data with advertisers. This page documents exactly what happens when a reader visits.
+    aipedia.wiki is an independent, agentically operated review site for AI tools. The site collects limited data to serve pages, protect forms from abuse, measure what readers use, and maintain newsletter, review, and correction workflows. aipedia.wiki does not sell personal data or run third-party advertising pixels.
   </p>
 
   <h2>What data is collected</h2>
@@ -37,8 +37,11 @@ const pageDesc =
   <ul>
     <li><strong>Server request logs.</strong> The Cloudflare edge records each request (IP address, user agent, requested URL, referrer, timestamp). These are retained by Cloudflare under its standard policy and are not exported to any other system.</li>
     <li><strong>Aggregated traffic analytics.</strong> Cloudflare Web Analytics measures pageviews, device type, and country at an aggregated level. No cookies. No cross-site tracking. No individual reader profile is built.</li>
-    <li><strong>Optional Google Analytics.</strong> Google Analytics 4 only loads after you click "Allow analytics" in the privacy controls banner. It measures site usage such as pageviews, referral source, browser, device, country/region, and approximate engagement. We disable Google signals and ad personalization signals.</li>
-    <li><strong>Search queries.</strong> The on-site search (Pagefind) runs entirely in the reader's browser. Queries are never sent to any server.</li>
+    <li><strong>Optional Google Analytics.</strong> Google Analytics 4 only loads after you click "Allow analytics" in the privacy controls banner. It measures site usage such as pageviews, referral source, browser, device, country/region, approximate engagement, commercial CTA clicks, and search-result interactions. We set IP anonymization and disable Google signals and ad personalization signals.</li>
+    <li><strong>Search queries.</strong> The Pagefind search index runs in the reader's browser. If analytics is rejected, search stays local. If analytics is allowed, the site may send aggregate search-event data to Google Analytics, including the search term, result count, result type, and search surface.</li>
+    <li><strong>Newsletter signups.</strong> If you subscribe, the site stores your email address, signup source, timestamp, and a hashed IP value for rate limiting and abuse prevention. Cloudflare Turnstile may be used to verify that the signup was not automated.</li>
+    <li><strong>Reader reviews and feedback.</strong> If you submit a review or correction, the site stores the content you submit, moderation metadata, and anti-abuse signals such as hashed IP, user agent, spam score, and Turnstile result. Review email addresses, when supplied, are hashed before storage. Approved review text and display name may appear publicly.</li>
+    <li><strong>Local preferences and lightweight votes.</strong> Theme, analytics choice, compare-tray selections, and helpful-vote state may be stored in browser <code>localStorage</code>. Helpful votes also send the page slug, page type, and yes/no value to the site so editors can see which pages need work.</li>
     <li><strong>Email you send.</strong> If you email <a href="mailto:editorial@aipedia.wiki">editorial@aipedia.wiki</a> through a feedback form or correction link, the message is delivered to an editorial inbox. Content is read, actioned where relevant, and retained for correspondence history.</li>
   </ul>
 
@@ -46,15 +49,15 @@ const pageDesc =
 
   <ul>
     <li>No third-party advertising trackers.</li>
-    <li>No behavioural profile, cohort membership, or retargeting pixel.</li>
+    <li>No behavioural advertising profile, cohort membership, or retargeting pixel.</li>
     <li>No account system. No login. No password to leak.</li>
-    <li>No sale of data to third parties. Ever.</li>
+    <li>No sale of personal data to third parties.</li>
   </ul>
 
   <h2>Cookies</h2>
 
   <p>
-    aipedia.wiki does not set first-party tracking cookies unless you consent to analytics. A small <code>theme</code> preference and your analytics consent choice are stored in <code>localStorage</code> so the site remembers whether you picked light or dark mode and whether you allowed or rejected analytics. Those preference values never leave your browser.
+    aipedia.wiki does not set first-party tracking cookies unless you consent to analytics. The site stores functional preferences in <code>localStorage</code>, including <code>theme</code>, <code>aipedia-cookie-consent</code>, compare-tray selections, and helpful-vote state. These values keep the interface usable across visits.
   </p>
 
   <p>
@@ -69,6 +72,7 @@ const pageDesc =
 
   <ul>
     <li><strong>Cloudflare Pages</strong> hosts the site and delivers pages via a global CDN. <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Cloudflare privacy policy</a>.</li>
+    <li><strong>Cloudflare Turnstile</strong> helps protect newsletter, review, and feedback forms from automated abuse. <a href="https://www.cloudflare.com/turnstile-privacy-policy/" target="_blank" rel="noopener">Cloudflare Turnstile privacy notice</a>.</li>
     <li><strong>Google Analytics 4</strong> provides consent-based aggregate traffic analytics. Google Analytics is not loaded unless you allow analytics in the privacy controls banner. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google privacy policy</a>.</li>
     <li><strong>Affiliate networks</strong> (Impact, PartnerStack, Rewardful, FirstPromoter, ShareASale, others) may drop a click-tracking cookie when you click through an affiliate link. Each network runs under its own privacy policy, linked from the destination site.</li>
   </ul>
@@ -76,11 +80,11 @@ const pageDesc =
   <h2>Your rights</h2>
 
   <p>
-    Readers in the EU, UK, and California have statutory data rights including access, correction, and deletion.
+    Readers in the EU, UK, and California may have statutory data rights, including access, correction, deletion, objection or opt-out, and non-discrimination rights depending on the law that applies to them.
   </p>
 
   <p>
-    Because aipedia.wiki does not maintain reader accounts or behavioural profiles, there is very little data to request. Cloudflare server logs contain IP addresses and request metadata, which are purged on the standard Cloudflare retention cycle. Email correspondence is retained in the editorial inbox.
+    Because aipedia.wiki does not maintain reader accounts or behavioural advertising profiles, there is limited reader data to request. Cloudflare server logs contain request metadata that is controlled by Cloudflare's retention cycle. Newsletter records, review submissions, helpful-vote aggregates, and email correspondence are handled by aipedia.wiki for the purposes described above.
   </p>
 
   <p>
@@ -96,7 +100,7 @@ const pageDesc =
   <h2>Changes to this policy</h2>
 
   <p>
-    This policy may be updated to reflect changes in the site, its infrastructure, or applicable law. The "Last updated" date at the top of this page reflects the most recent material change. Substantive changes are announced in the site-wide <a href="/news/">news feed</a>.
+    This policy may be updated to reflect changes in the site, its infrastructure, or applicable law. The "Last updated" date at the top of this page reflects the most recent material change or accuracy refresh. Substantive changes are announced in the site-wide <a href="/news/">news feed</a>.
   </p>
 
   <h2>Contact</h2>

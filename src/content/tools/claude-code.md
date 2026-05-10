@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "$20-$200/month"
 status: active
 launched: 2025-02
-last_updated: 2026-05-07
-last_verified: 2026-05-07
+last_updated: 2026-05-10
+last_verified: 2026-05-10
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://code.claude.com/docs/en/overview"
     source_label: "Claude Code docs"
     source_id: claude-code-official
-    verified_at: 2026-05-03
+    verified_at: 2026-05-10
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -38,16 +38,16 @@ facts:
     source: "https://claude.com/pricing"
     source_label: "Anthropic pricing"
     source_id: claude-pricing
-    verified_at: 2026-05-03
+    verified_at: 2026-05-10
     volatility: high
     confidence: high
-    next_review_at: 2026-08-03
+    next_review_at: 2026-06-10
   coding_agent:
     value: "Claude Code is an agentic CLI: it can inspect files, propose and apply edits, run commands, and work across larger codebase tasks with user approval."
     source: "https://code.claude.com/docs/en/overview"
     source_label: "Claude Code docs"
     source_id: claude-code-official
-    verified_at: 2026-05-03
+    verified_at: 2026-05-10
     volatility: medium
     confidence: high
   flagship_model:
@@ -55,8 +55,8 @@ facts:
     source: "https://www.anthropic.com/news/claude-opus-4-7"
     source_label: "Anthropic Claude Opus 4.7 release"
     source_id: anthropic-opus-47
-    verified_at: 2026-05-03
-    next_review_at: 2026-08-03
+    verified_at: 2026-05-10
+    next_review_at: 2026-06-10
     volatility: medium
     confidence: high
   agent_manifest:
@@ -64,7 +64,7 @@ facts:
     source: "https://code.claude.com/llms.txt"
     source_label: "Claude Code llms.txt"
     source_id: claude-code-llms
-    verified_at: 2026-05-03
+    verified_at: 2026-05-10
     volatility: medium
     confidence: high
   watch_out_for:
@@ -72,13 +72,13 @@ facts:
     source: "https://code.claude.com/docs/en/overview"
     source_label: "Claude Code docs"
     source_id: claude-code-official
-    verified_at: 2026-05-03
+    verified_at: 2026-05-10
     volatility: high
     confidence: high
-    next_review_at: 2026-08-03
+    next_review_at: 2026-06-10
 tags: [cli, agentic-coding, terminal, codebase-wide, autonomous, anthropic, claude-opus, ultraplan, monitor, mcp, skills]
-seo_title: "Claude Code: Features, Pricing & Review (April 2026)"
-meta_description: "Claude Code is Anthropic's CLI agentic coding tool running on Claude Opus 4.7. Reads, writes, and runs across full codebases autonomously. Included with Pro $20/mo; Max 5x $100/mo or Max 20x $200/mo."
+seo_title: "Claude Code: Features, Pricing & Review (May 2026)"
+meta_description: "Claude Code is Anthropic's CLI agentic coding tool for repo-wide terminal work. Verified May 2026: Pro $20/mo includes Claude Code; Max 5x $100/mo and Max 20x $200/mo scale usage."
 author: "aipedia.wiki Editorial"
 best_for:
   - professional backend developers
@@ -90,27 +90,48 @@ not_best_for:
   - free-tier developers
   - beginners uncomfortable with the terminal
 quick_answer: >-
-  Claude Code is Anthropic's terminal-based agentic coding CLI running on Claude Opus 4.7. Pick Max 5x at $100/mo for sustained coding; Pro at $20/mo covers lighter use. Skip for IDE workflows (Cursor, Copilot) or free tooling (Cline).
+  Claude Code is Anthropic's terminal-based agentic coding CLI for repo-wide work. Pick Max 5x at $100/mo for sustained coding; Pro at $20/mo covers lighter use and now has doubled five-hour Claude Code limits after Anthropic's May 6 compute update. Skip for IDE workflows (Cursor, Copilot) or free tooling (Cline).
 price_history:
+  - date: 2026-05-10
+    plan: "Claude Code limits"
+    price: "Included with paid Claude plans; limits vary"
+    source: "https://www.anthropic.com/news/higher-limits-spacex"
+    source_label: "Anthropic usage-limit update"
+    source_id: anthropic-higher-limits-spacex
+    note: "Anthropic said Claude Code five-hour rate limits doubled for Pro, Max, Team, and seat-based Enterprise plans on May 6, 2026."
+  - date: 2026-05-10
+    plan: "Pro"
+    price: "$20/mo"
+    source: "https://claude.com/pricing"
+    source_label: "Claude pricing"
+    source_id: claude-pricing
+    note: "Claude pricing says Pro is $20 monthly or $17/month with annual billing, and includes Claude Code."
+  - date: 2026-05-10
+    plan: "Max 5x / Max 20x"
+    price: "$100/mo / $200/mo"
+    source: "https://support.claude.com/en/articles/11049741-what-is-the-max-plan"
+    source_label: "Claude Max plan help"
+    source_id: claude-max-plan
+    note: "Max plan help lists Max 5x at $100/month and Max 20x at $200/month for web subscriptions."
   - date: 2026-04-16
     plan: "Default model"
     price: "Claude Opus 4.7"
     source: "https://claude.com/pricing"
-    source_label: "Source"
+    source_label: "Claude pricing"
     source_id: claude-pricing
     note: "Opus 4.7 released April 16, 2026; new tokenizer produces 1.0-1.35x more tokens vs 4.6."
   - date: 2026-04-15
     plan: "Pro"
     price: "$20/mo"
     source: "https://claude.com/pricing"
-    source_label: "Source"
+    source_label: "Claude pricing"
     source_id: claude-pricing
     note: "Claude Code available on Pro tier as of 2026; previously Max-only."
   - date: 2026-04-17
     plan: "Claude Design handoff"
     price: "Bundled"
     source: "https://claude.com/pricing"
-    source_label: "Source"
+    source_label: "Claude pricing"
     source_id: claude-pricing
     note: "Claude Code now receives production-build bundles from Claude Design (new Pro+ product). Closed loop: prompt -> design -> Claude Code -> working app."
 ---
@@ -119,7 +140,7 @@ price_history:
 
 Claude Code is Anthropic's terminal-based agentic coding CLI. It runs inside your shell, reads files across an entire codebase, writes code, executes tests, runs commands, and self-corrects through errors without manual intervention.
 
-Claude Opus 4.7 (released April 16, 2026) is the default backing model. Access is included with Claude Pro at $20/mo and scales through Max 5x at $100/mo and Max 20x at $200/mo. No free tier.
+Claude Opus 4.7 (released April 16, 2026) is the default backing model. Access is included with Claude Pro at $20/mo and scales through Max 5x at $100/mo and Max 20x at $200/mo. Anthropic's May 6 compute update doubled Claude Code five-hour limits for Pro, Max, Team, and seat-based Enterprise plans. No free tier.
 
 ## Recent developments (April-May 2026)
 
@@ -149,7 +170,7 @@ Claude Opus 4.7 (released April 16, 2026) is the default backing model. Access i
 
 ## System Verdict
 
-> **Pick Claude Code if you run serious multi-file engineering from the terminal.** The agentic loop (plan, execute, validate, self-correct) is the deepest on the market as of April 2026. Opus 4.7 takes measurable leads on agentic coding benchmarks against OpenAI frontier models and Gemini 3.1 Pro. MCP server support, Skills, and Agent SDK hosting turn it into a production agent platform, not just a coding assistant.
+> **Pick Claude Code if you run serious multi-file engineering from the terminal.** The agentic loop (plan, execute, validate, self-correct) remains one of the deepest coding-agent workflows as of May 2026. Anthropic's May 6 compute update doubled Claude Code five-hour rate limits for Pro, Max, Team, and seat-based Enterprise plans, which makes sustained terminal work easier to justify. MCP server support, Skills, and Agent SDK hosting turn it into a production agent platform, not just a coding assistant.
 >
 > **Skip it if you want IDE-integrated coding, visual editing, or a free tier.** [Cursor](/tools/cursor/) at $20/mo owns IDE-integrated AI coding with inline autocomplete and visual diffs. [GitHub Copilot](/tools/github-copilot/) at $10/mo is the cheapest entry for GitHub-centric teams. [Cline](/tools/cline/) is free open-source VS Code with BYOK. Claude Code is CLI-only and demands real terminal comfort.
 >
@@ -170,7 +191,7 @@ Claude Opus 4.7 (released April 16, 2026) is the default backing model. Access i
 | **Checkpointing** | Save and restore session state during long runs |
 | **Pricing** | Pro $20 · Max 5x $100 · Max 20x $200 · API pay-per-token |
 
-Every data point above was verified against vendor sources on 2026-04-17. See Sources.
+Every data point above was verified against vendor sources on 2026-05-10. See Sources.
 The enterprise partnership surface was refreshed on 2026-04-24 after Anthropic's NEC announcement.
 
 ## What it actually is
@@ -215,7 +236,7 @@ Subscription pricing via [claude.com/pricing](https://claude.com/pricing). Claud
 | Team (Premium) | $100/seat/mo | Premium seats only, 5-seat minimum | Teams standardizing on Claude Code |
 | API (BYOK) | Pay-per-token | Unrestricted | Commercial products built on Claude Code |
 
-*Prices verified 2026-04-17 via [Anthropic pricing](https://claude.com/pricing) and [Claude Code docs](https://code.claude.com/docs/en/overview). Pro users see lower rate ceilings than Max tiers; heavy agentic workloads should price against Max. Third-party services routing Claude Code through Max subscriptions are restricted per Anthropic's April 2026 policy; use API key path for commercial redistribution.*
+*Prices verified 2026-05-10 via [Anthropic pricing](https://claude.com/pricing), [Claude Code docs](https://code.claude.com/docs/en/overview), and Anthropic's May 6 usage-limit update. Pro users still see lower rate ceilings than Max tiers; heavy agentic workloads should price against Max, Team Premium, Enterprise, or API usage paths. Third-party services routing Claude Code through Max subscriptions are restricted per Anthropic's April 2026 policy; use API key path for commercial redistribution.*
 
 ## Against the alternatives
 
@@ -246,7 +267,7 @@ Subscription pricing via [claude.com/pricing](https://claude.com/pricing). Claud
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-07 against [Claude Code docs](https://code.claude.com/docs/en/overview), [Anthropic pricing](https://claude.com/pricing), [Claude Code llms.txt](https://code.claude.com/llms.txt), the [Opus 4.7 release coverage](https://www.anthropic.com/news/claude-opus-4-7), and the [NEC partnership](/news/2026-04-24-anthropic-nec-ai-engineering-workforce/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-10 against [Claude Code docs](https://code.claude.com/docs/en/overview), [Claude Code cost management](https://code.claude.com/docs/en/costs), [Anthropic pricing](https://claude.com/pricing), [Claude Code usage limits](https://support.claude.com/en/articles/14552983-models-usage-and-limits-in-claude-code), the [May 6 usage-limit update](https://www.anthropic.com/news/higher-limits-spacex), and the [Opus 4.7 release coverage](https://www.anthropic.com/news/claude-opus-4-7).
 
 ## FAQ
 

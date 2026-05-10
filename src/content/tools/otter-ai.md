@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$30/user/month"
 status: active
 launched: 2016-02
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-10
+last_verified: 2026-05-10
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -30,24 +30,24 @@ facts:
     source: "https://otter.ai/otterpilot"
     source_label: "OtterPilot overview"
     source_id: otter-otterpilot
-    verified_at: 2026-05-03
+    verified_at: 2026-05-10
     volatility: medium
     confidence: high
   pricing_anchor:
-    value: "Free and paid tiers are based on meeting transcription and collaboration limits; Pro is listed as the first serious individual tier."
+    value: "Free and paid tiers are based on meeting transcription and collaboration limits; Pro is listed at $16.99/user/month monthly or $8.33/user/month annually, while Business is $30/user/month monthly or $19.99/user/month annually."
     source: "https://otter.ai/pricing"
     source_label: "Otter.ai pricing"
     source_id: otter-ai-pricing
-    verified_at: 2026-05-03
+    verified_at: 2026-05-10
     volatility: high
     confidence: high
-    next_review_at: 2026-08-03
+    next_review_at: 2026-08-10
   meeting_platforms:
     value: "OtterPilot is positioned around joining common meeting platforms and automating notes, summaries, and follow-up context."
     source: "https://otter.ai/otterpilot"
     source_label: "OtterPilot overview"
     source_id: otter-otterpilot
-    verified_at: 2026-05-03
+    verified_at: 2026-05-10
     volatility: medium
     confidence: high
   enterprise_controls:
@@ -55,23 +55,23 @@ facts:
     source: "https://otter.ai/pricing"
     source_label: "Otter.ai pricing"
     source_id: otter-ai-pricing
-    verified_at: 2026-05-03
+    verified_at: 2026-05-10
     volatility: high
     confidence: medium
-    next_review_at: 2026-08-03
+    next_review_at: 2026-08-10
   watch_out_for:
     value: "Always confirm consent, recording laws, and workspace sharing defaults. Meeting bots can create compliance risk even when transcription quality is good."
     source: "https://otter.ai/otterpilot"
     source_label: "OtterPilot overview"
     source_id: otter-otterpilot
-    verified_at: 2026-05-03
+    verified_at: 2026-05-10
     volatility: high
     confidence: high
-    next_review_at: 2026-08-03
+    next_review_at: 2026-08-10
 tags: [meeting-transcription, ai-notes, zoom-integration, meeting-summary, productivity, otterpilot]
-seo_title: "Otter.ai: Features, Pricing & Review (April 2026)"
+seo_title: "Otter.ai: Features, Pricing & Review (May 2026)"
 meta_description: >-
-  Otter.ai auto-joins Zoom, Teams, and Meet via OtterPilot, transcribes, and summarizes with action items. Free (300 min/mo), Pro $16.99/mo, Business $30/user/mo, Enterprise custom. Verified April 2026.
+  Otter.ai auto-joins Zoom, Teams, and Meet, transcribes, summarizes, and stores searchable meeting notes. Free has 300 min/mo; Pro starts at $16.99/mo or $8.33/mo annually. Verified May 2026.
 author: "aipedia.wiki Editorial"
 quick_answer: >-
   Otter.ai joins meetings via OtterPilot, transcribes in real time, and summarizes with action items. Full-text search across every past transcript is the real differentiator. Pick it for heavy meeting loads. Skip it if Fathom's free tier covers the basics.
@@ -99,6 +99,13 @@ price_history:
     source_label: "Source"
     source_id: otter-ai-pricing
     note: "Verified. Includes video recording and team analytics."
+  - date: 2026-05-10
+    plan: "Business annual"
+    price: "$19.99/user/mo"
+    source: "https://otter.ai/pricing"
+    source_label: "Source"
+    source_id: otter-ai-pricing
+    note: "Live pricing page lists Business at $30 monthly or $19.99/user/month annually, with unlimited meetings and 6,000 imported-file minutes."
 ---
 
 # Otter.ai
@@ -113,7 +120,7 @@ Pricing: Free (300 min/month), Pro $16.99/mo ($8.33/mo annual), Business $30/use
 >
 > **Skip it if Fathom's free tier covers your load.** Fathom transcribes and summarizes for $0 on individual plans and handles 80% of Otter's use case. Otter wins on search depth, team workspaces, and in-person mobile capture. Pay for those specifically, or stay free.
 >
-> **Who pays which tier:** Free for anyone with fewer than 2-3 meetings per week, Pro $16.99/mo ($8.33/mo annual) for solo professionals in heavy call loads, Business $30/user/mo for teams that need video recording and shared workspaces, Enterprise for SSO, compliance controls, and OtterPilot for Sales.
+> **Who pays which tier:** Free for anyone with fewer than 2-3 meetings per week, Pro $16.99/mo ($8.33/mo annual) for solo professionals in heavy call loads, Business $30/user/mo ($19.99/user/mo annual) for teams that need unlimited meetings, stronger admin controls, and shared workspaces, Enterprise for SSO, SCIM, API/webhooks, compliance controls, and sales/recruiting agents.
 
 ## Key Facts
 
@@ -126,7 +133,7 @@ Pricing: Free (300 min/month), Pro $16.99/mo ($8.33/mo annual), Business $30/use
 | **AI Chat** | Cross-meeting Q&A, email drafting, status updates |
 | **Speaker ID** | Trained voice profiles for recurring participants |
 | **Video recording** | Business tier and above only |
-| **Free tier** | 300 min/month, 30-min cap per meeting, 3 AI summaries/month |
+| **Free tier** | 300 min/month, 30-min cap per conversation, 25 most recent conversations, 20 monthly AI Chat queries |
 | **Mobile capture** | In-person meetings via iOS/Android app |
 | **Company** | Otter.ai Inc., founded 2016 |
 
@@ -160,12 +167,12 @@ Subscription pricing via [otter.ai/pricing](https://otter.ai/pricing).
 
 | Plan | Price | Minutes/Month | Per Meeting | Key Features |
 |------|-------|---------------|-------------|--------------|
-| Basic | $0 | 300 min | 30 min | 3 AI summaries/mo, no video, limited AI Chat |
+| Basic | $0 | 300 min | 30 min | 25 most recent conversations, 20 monthly AI Chat queries, no video |
 | Pro | $16.99/mo ($8.33/mo annual) | 1,200 min | 90 min | Unlimited summaries, custom vocabulary, bulk export, 2 concurrent OtterPilots |
-| Business | $30/user/mo (~$20 annual) | 6,000 min | 4 hrs | Video recording, team workspaces, analytics, priority support |
+| Business | $30/user/mo ($19.99/user/mo annual) | Unlimited meetings; 6,000 imported-file minutes | 4 hrs | Video recording, team workspaces, analytics, priority support |
 | Enterprise | Custom | Unlimited | Unlimited | SSO, SCIM, compliance, OtterPilot for Sales, video replay |
 
-*Prices verified 2026-04-17 via [otter.ai/pricing](https://otter.ai/pricing). Annual billing drops Pro to roughly $8.33/mo. Free tier hits the 300-minute cap fast for anyone in more than 2 long weekly meetings.*
+*Prices verified 2026-05-10 via [otter.ai/pricing](https://otter.ai/pricing). Annual billing lists Pro at $8.33/user/month and Business at $19.99/user/month. Free tier hits the 300-minute cap fast for anyone in more than 2 long weekly meetings.*
 
 ## Against the alternatives
 
@@ -175,7 +182,7 @@ Subscription pricing via [otter.ai/pricing](https://otter.ai/pricing).
 | **Meeting minutes** | 1,200/mo | Unlimited | Unlimited |
 | **Platforms** | Zoom, Teams, Meet | Zoom, Teams, Meet | Zoom, Teams, Meet, Webex |
 | **Cross-meeting search** | Strong | Basic | Strong |
-| **AI Chat / Q&A** | Yes | Yes | Yes (deeper CRM hooks) |
+| **AI Chat / Q&A** | 50 monthly queries | Yes | Yes (deeper CRM hooks) |
 | **Video recording** | No (Business tier) | Yes | Yes |
 | **Mobile in-person capture** | Yes | No | Limited |
 | **Best viewed as** | Searchable meeting archive | Free default | CRM-integrated sales tool |
@@ -188,17 +195,17 @@ Subscription pricing via [otter.ai/pricing](https://otter.ai/pricing).
 - **No video recording at Pro.** Only Business ($30/user/mo) and Enterprise capture video alongside transcript. Pro users get audio-only archives.
 - **Mobile transcription lags desktop.** Background noise on phone calls causes frequent errors.
 - **Moat is thin.** Fathom covers 80% of Otter's use case for free. Pay for specific advantages (search depth, team workspaces, mobile), not for general transcription.
-- **AI Chat query limits vary by tier.** Heavy users on Pro should confirm current caps before relying on it as a daily workflow.
+- **AI Chat query limits vary by tier.** Basic lists 20 monthly queries, Pro 50, and Business/Enterprise 200. Heavy users should confirm current caps before relying on it as a daily workflow.
 - **No offline mode.** Transcription and search require active connection.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the analysis above. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [Otter.ai pricing](https://otter.ai/pricing), [Otter.ai OtterPilot overview](https://otter.ai/otterpilot), and [Otter.ai Help Center](https://help.otter.ai).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the analysis above. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-05-10 against [Otter.ai pricing](https://otter.ai/pricing), [Otter.ai product pages](https://otter.ai/), and [Otter.ai Help Center](https://help.otter.ai).
 
 ## FAQ
 
 **Is Otter.ai free?**
-The Basic tier is permanently free with 300 transcription minutes per month and a 30-minute cap per meeting. It includes 3 AI summaries per month. Enough for very light users. Not enough for anyone with a normal meeting load.
+The Basic tier is permanently free with 300 transcription minutes per month and a 30-minute cap per meeting. It keeps the 25 most recent conversations and lists 20 monthly AI Chat queries. Enough for very light users. Not enough for anyone with a normal meeting load.
 
 **How accurate is Otter.ai transcription?**
 85 to 90 percent on clean English audio with a single speaker. Drops to 70 to 80 percent with strong accents, overlapping talk, or heavy technical jargon. Custom vocabulary helps on domain terms. Compliance-grade transcription still needs human review.
@@ -217,8 +224,8 @@ Only on Business ($30/user/mo) and Enterprise. Basic and Pro capture audio trans
 
 ## Sources
 
-- [Otter.ai pricing](https://otter.ai/pricing): current tier prices and limits
-- [Otter.ai OtterPilot overview](https://otter.ai/otterpilot): bot features and meeting platforms
+- [Otter.ai pricing](https://otter.ai/pricing): current tier prices and limits, verified 2026-05-10
+- [Otter.ai product overview](https://otter.ai/): bot features and meeting platforms, verified 2026-05-10
 - [Otter.ai Help Center](https://help.otter.ai): feature documentation and limits
 
 ## Related

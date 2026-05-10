@@ -11,10 +11,10 @@ pricing_model: freemium
 price_range: "$0-$249.99/month"
 status: active
 launched: 2023-12
-last_updated: 2026-05-07
-last_verified: 2026-05-07
+last_updated: 2026-05-10
+last_verified: 2026-05-10
 update_frequency: monthly
-seo_title: "Gemini: Features, Pricing & Review (April 2026)"
+seo_title: "Gemini: Features, Pricing & Review (May 2026)"
 meta_description: "Gemini 3.1 Pro is Google's flagship (Feb 2026, 1M token context). Google AI Pro $19.99/mo bundles 5TB storage, Veo 3.1, and Nano Banana 2. Ultra $249.99/mo unlocks Deep Think 3.1 and Nano Banana Pro. Best AI for Google Workspace users."
 author: "aipedia.wiki Editorial"
 affiliate:
@@ -34,124 +34,124 @@ facts:
     source: "https://ai.google.dev/gemini-api/docs/models/gemini-3.1-pro-preview"
     source_label: "Gemini 3.1 Pro model docs"
     source_id: google-gemini-docs
-    verified_at: 2026-05-03
+    verified_at: 2026-05-10
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-10
   context_window:
     value: "1,048,576 input tokens and 65,536 output tokens on Gemini 3.1 Pro Preview"
     source: "https://ai.google.dev/gemini-api/docs/models/gemini-3.1-pro-preview"
     source_label: "Gemini 3.1 Pro model docs"
     source_id: google-gemini-docs
-    verified_at: 2026-05-03
+    verified_at: 2026-05-10
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-10
   pricing_anchor:
     value: "Free; Google AI Pro $19.99/mo; Google AI Ultra $249.99/mo; Gemini API free and paid tiers"
     source: "https://gemini.google/subscriptions/"
     source_label: "Gemini subscriptions"
     source_id: google-gemini-subscriptions
-    verified_at: 2026-05-03
+    verified_at: 2026-05-10
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-10
   free_plan:
     value: "Yes — $0 Gemini access with a Google Account and limited everyday-help features"
     source: "https://gemini.google/subscriptions/"
     source_label: "Gemini subscriptions"
     source_id: google-gemini-subscriptions
-    verified_at: 2026-05-03
+    verified_at: 2026-05-10
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-10
   best_paid_tier:
     value: "Google AI Pro ($19.99/mo) for most users; Ultra for highest limits, Deep Think, and Veo-heavy work"
     source: "https://gemini.google/subscriptions/"
     source_label: "Gemini subscriptions"
     source_id: google-gemini-subscriptions
-    verified_at: 2026-05-03
+    verified_at: 2026-05-10
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-10
   api_available:
     value: "Yes — Gemini API via Google AI Studio and Vertex AI"
     source: "https://ai.google.dev/gemini-api/docs/models"
     source_label: "Gemini API model docs"
     source_id: google-gemini-docs
-    verified_at: 2026-05-03
+    verified_at: 2026-05-10
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-10
   image_generation:
     value: "Yes — Nano Banana 2 and Nano Banana Pro image generation/editing"
     source: "https://ai.google.dev/gemini-api/docs/image-generation"
     source_label: "Gemini image-generation docs"
     source_id: google-gemini-docs
-    verified_at: 2026-05-03
+    verified_at: 2026-05-10
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-10
   video_generation:
     value: "Yes — Veo 3.1 video generation through Gemini API / Google AI plans"
     source: "https://ai.google.dev/gemini-api/docs/video"
     source_label: "Gemini video-generation docs"
     source_id: google-gemini-docs
-    verified_at: 2026-05-03
+    verified_at: 2026-05-10
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-10
   real_time_voice:
     value: "Yes — Gemini Live API supports real-time bidirectional audio, video, text, and native audio outputs"
     source: "https://ai.google.dev/gemini-api/docs/live-api/get-started-sdk"
     source_label: "Gemini Live API docs"
     source_id: google-gemini-docs
-    verified_at: 2026-05-03
+    verified_at: 2026-05-10
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-10
   web_browsing:
     value: "Yes — Grounding with Google Search connects Gemini to real-time web content with citations"
     source: "https://ai.google.dev/gemini-api/docs/google-search"
     source_label: "Gemini Google Search grounding docs"
     source_id: google-gemini-docs
-    verified_at: 2026-05-03
+    verified_at: 2026-05-10
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-10
   coding_agent:
     value: "Yes — Gemini CLI, Gemini Code Assist/Jules/Antigravity, and Gemini Docs MCP support coding-agent workflows"
     source: "https://ai.google.dev/gemini-api/docs/coding-agents"
     source_label: "Gemini coding-agent docs"
     source_id: google-gemini-docs
-    verified_at: 2026-05-03
+    verified_at: 2026-05-10
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-10
   enterprise_controls:
     value: "Workspace and Gemini Enterprise provide admin controls, agent management, data controls, and Google Cloud security layers such as Model Armor"
     source: "https://workspace.google.com/solutions/ai/"
     source_label: "Google Workspace AI"
     source_id: google-workspace-ai
-    verified_at: 2026-05-03
+    verified_at: 2026-05-10
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-10
   data_retention_or_privacy:
     value: "Workspace company data is not used to train models; Google Cloud generative AI products follow Google Cloud AI/ML privacy commitments"
     source: "https://workspace.google.com/solutions/ai/"
     source_label: "Google Workspace AI privacy"
     source_id: google-workspace-ai
-    verified_at: 2026-05-03
+    verified_at: 2026-05-10
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-10
   open_source_or_local:
     value: "No for Gemini; Gemma is Google’s open-weight sibling family, not the hosted Gemini product"
     source: "https://ai.google.dev/gemini-api/docs/models"
     source_label: "Gemini API model docs"
     source_id: google-gemini-docs
-    verified_at: 2026-05-03
+    verified_at: 2026-05-10
     volatility: low
     confidence: high
   best_for:
@@ -159,7 +159,7 @@ facts:
     source: "https://gemini.google/subscriptions/"
     source_label: "Gemini subscriptions"
     source_id: google-gemini-subscriptions
-    verified_at: 2026-05-03
+    verified_at: 2026-05-10
     volatility: medium
     confidence: high
   watch_out_for:
@@ -167,7 +167,7 @@ facts:
     source: "https://workspace.google.com/solutions/ai/"
     source_label: "Google Workspace AI"
     source_id: google-workspace-ai
-    verified_at: 2026-05-03
+    verified_at: 2026-05-10
     volatility: medium
     confidence: high
 tags: [chatbot, ai-assistant, writing, search, multimodal, google-workspace, deep-research, deep-think, long-context, nano-banana, veo, android]
@@ -190,7 +190,7 @@ price_history:
     source: "https://gemini.google/subscriptions/"
     source_id: google-gemini-subscriptions
     source_label: "Gemini subscriptions"
-    verified_at: 2026-05-03
+    verified_at: 2026-05-10
     note: "Gemini 3.1 Pro launched as flagship; Pro tier storage bumped to 5TB"
   - date: 2026-04-11
     plan: "AI Plus"
@@ -198,7 +198,7 @@ price_history:
     source: "https://gemini.google/subscriptions/"
     source_id: google-gemini-subscriptions
     source_label: "Gemini subscriptions"
-    verified_at: 2026-05-03
+    verified_at: 2026-05-10
     note: "Intro offer $3.99/mo for 2 months; sits between Free and AI Pro"
   - date: 2026-04-15
     plan: "AI Pro"
@@ -206,7 +206,7 @@ price_history:
     source: "https://gemini.google/subscriptions/"
     source_id: google-gemini-subscriptions
     source_label: "Gemini subscriptions"
-    verified_at: 2026-05-03
+    verified_at: 2026-05-10
     note: "Verified, unchanged"
 ---
 
@@ -273,7 +273,7 @@ Google DeepMind's multimodal AI assistant. **Gemini 3.1 Pro** is the flagship as
 | **Storage bundled** | 2TB (Plus) · 5TB (Pro) · 30TB (Ultra) via Google One |
 | **Developer / RAG stack** | Gemini Embedding 2 GA and AI Studio app-building subscriptions strengthen builder workflows |
 
-Every data point above verified against vendor sources on 2026-04-15. See Sources.
+Every data point above verified against vendor sources on 2026-05-10. See Sources.
 
 ## What it actually is
 
@@ -321,7 +321,7 @@ API pricing via [Gemini API pricing docs](https://ai.google.dev/gemini-api/docs/
 | Gemini 3.1 Flash | Lower tier | Lower tier | 1M | 64K |
 | Veo 3.1 Lite | Per-video pricing | · | · | · |
 
-Prices verified 2026-04-17 via [Google AI subscription page](https://one.google.com/about/ai-premium/), [Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing), and [9to5Google's April 2026 tier breakdown](https://9to5google.com/2026/04/11/google-ai-pro-ultra-features/).
+Prices verified 2026-05-10 via [Google AI plans](https://one.google.com/about/google-ai-plans/), [Gemini subscription details](https://gemini.google/subscriptions/), and [Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing).
 
 **Long-context surcharge note:** Gemini 3.1 Pro charges a higher per-token rate above 200K tokens ($4/$18 vs $2/$12). Claude Opus 4.7 and Sonnet 4.6 charge flat rates across their full 1M context. Budget against expected context length before committing.
 
@@ -351,7 +351,7 @@ Prices verified 2026-04-17 via [Google AI subscription page](https://one.google.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-07 against the [Gemini 3.1 Pro model card](https://deepmind.google/models/model-cards/gemini-3-1-pro/), [Google AI subscription page](https://one.google.com/about/ai-premium/), [Gemini API pricing docs](https://ai.google.dev/gemini-api/docs/pricing), [9to5Google's April 2026 tier breakdown](https://9to5google.com/2026/04/11/google-ai-pro-ultra-features/), and the [Nano Banana Personal Intelligence launch coverage](https://techcrunch.com/2026/04/16/google-adds-nano-banana-powered-image-generation-to-geminis-personal-intelligence/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-10 against the [Gemini 3.1 Pro model card](https://deepmind.google/models/model-cards/gemini-3-1-pro/), [Gemini 3.1 Pro API docs](https://ai.google.dev/gemini-api/docs/models/gemini-3.1-pro-preview), [Google AI plans](https://one.google.com/about/google-ai-plans/), [Gemini subscriptions](https://gemini.google/subscriptions/), and [Gemini API pricing docs](https://ai.google.dev/gemini-api/docs/pricing).
 
 ## FAQ
 

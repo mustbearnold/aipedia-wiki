@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: $0-$100/month
 status: active
 launched: 2020-01
-last_updated: 2026-05-03
-last_verified: 2026-05-03
+last_updated: 2026-05-10
+last_verified: 2026-05-10
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,16 +31,16 @@ facts:
     source: "https://gamma.app/features"
     source_label: "Gamma features"
     source_id: gamma-features
-    verified_at: 2026-05-03
+    verified_at: 2026-05-10
     volatility: low
     confidence: high
   pricing_anchor:
-    value: "Gamma pricing is tied to seats and AI credits/features, so buyers should compare both export/collaboration needs and expected generation volume."
+    value: "Gamma pricing is tied to plan gates, cards per prompt, branding removal, AI model access, analytics, custom domains, API access, and workspace features, so buyers should compare workflow needs before upgrading."
     source: "https://gamma.app/pricing"
     source_label: "Gamma pricing"
     source_id: gamma-official
-    verified_at: 2026-05-03
-    next_review_at: 2026-08-03
+    verified_at: 2026-05-10
+    next_review_at: 2026-08-10
     volatility: high
     confidence: high
   generation_surface:
@@ -48,7 +48,7 @@ facts:
     source: "https://gamma.app/ai-presentation-maker"
     source_label: "Gamma AI presentation maker"
     source_id: gamma-ai-presentation
-    verified_at: 2026-05-03
+    verified_at: 2026-05-10
     volatility: medium
     confidence: high
   output_model:
@@ -56,7 +56,7 @@ facts:
     source: "https://gamma.app/features"
     source_label: "Gamma features"
     source_id: gamma-features
-    verified_at: 2026-05-03
+    verified_at: 2026-05-10
     volatility: low
     confidence: high
   watch_out_for:
@@ -64,13 +64,13 @@ facts:
     source: "https://gamma.app/pricing"
     source_label: "Gamma pricing"
     source_id: gamma-official
-    verified_at: 2026-05-03
+    verified_at: 2026-05-10
     volatility: medium
     confidence: high
 tags: [presentations, slides, ai-generation, documents, web-pages, pitch-decks, prompt-to-deck]
-seo_title: 'Gamma: Features, Pricing & Review (April 2026)'
+seo_title: 'Gamma: Features, Pricing & Review (May 2026)'
 meta_description: >-
-  Gamma generates decks, docs, and web pages from a prompt. Free tier includes 400 one-time AI credits. Plus $10, Pro $20, Ultra $100/month as of April 2026.
+  Gamma generates decks, docs, websites, social posts, and images from prompts, PDFs, and PPTX files. Compare Free, Plus, Pro, and Ultra plan gates as of May 2026.
 author: aipedia.wiki Editorial
 best_for:
   - founder pitch decks
@@ -91,7 +91,7 @@ quick_answer: >-
 
 Gamma Tech's AI-first deck builder. A single prompt produces a card-based document that renders as a slide deck, a scrollable page, or a shared URL without a separate export step.
 
-The free tier includes 400 one-time AI credits. Paid tiers run $10 to $100 per month.
+The free tier supports simple projects, imports, and exports. Paid tiers add branding removal, higher card-per-prompt limits, advanced models, analytics, custom domains, API access, and workspace controls.
 
 ## System Verdict
 
@@ -99,7 +99,7 @@ The free tier includes 400 one-time AI credits. Paid tiers run $10 to $100 per m
 >
 > **Skip it if you need pixel-accurate PPTX for enterprise clients or chart-first data decks.** Export fidelity still needs a cleanup pass in PowerPoint. Chart customization trails [Beautiful.ai](/tools/beautiful-ai/) and native slide tools.
 >
-> **Who pays which tier:** Free for occasional one-offs, Plus $10/mo for regular solo users, Pro $20/mo for unlimited credits and analytics, Ultra $100/mo for top image models and early features. Teams that need shared workspaces upgrade to seat-based Team or Business pricing.
+> **Who pays which tier:** Free for occasional one-offs, Plus when branding removal and more cards per prompt matter, Pro when custom branding, analytics, custom domains, API access, and workspace templates matter, and Ultra when power users need much higher AI usage and access to the most advanced text, image, and video models.
 
 ## Key Facts
 
@@ -107,21 +107,21 @@ The free tier includes 400 one-time AI credits. Paid tiers run $10 to $100 per m
 |---|---|
 | **Company** | Gamma Tech (founded 2020) |
 | **Output formats** | Slide deck · scrollable doc · shareable web page (single source) |
-| **Generation time** | Under 20 seconds for a standard 8-15 card deck |
-| **AI models** | Claude Opus 4.7 and OpenAI frontier models available for generation |
-| **Free tier** | 400 one-time AI credits (not monthly) |
-| **Pricing (monthly)** | Plus $10 · Pro $20 · Ultra $100 |
-| **Team/Business** | Seat-based, per-user pricing |
+| **Generation target** | Working presentation in under a minute |
+| **AI models** | Plan-gated advanced text, image, and video model access |
+| **Free tier** | Simple presentations, docs, websites, social, and images; PDF/PPTX import; PDF/PPTX/PNG/Google Slides export |
+| **Paid tiers** | Plus · Pro · Ultra · team/contact-sales paths |
+| **API access** | Pro, Ultra, Team, and Business accounts |
 | **PPTX export** | Available, lossy on complex layouts |
 | **Offline mode** | None |
 
-Every data point above was verified against vendor documentation on 2026-04-17. See Sources.
+Every data point above was verified against official Gamma documentation on 2026-05-10. See Sources.
 
 ## What it actually is
 
 One product serving three outputs from a single generation. A Gamma card holds text, images, charts, and embeds; the same file renders as a 16:9 slide, a scroll-flow document, or a public URL.
 
-The AI layer handles layout, hierarchy, theme, and image selection from a prompt or outline. Claude Opus 4.7 and OpenAI frontier models are selectable as the generation model.
+The AI layer handles layout, hierarchy, theme, and image selection from a prompt or outline. Gamma's public pricing page gates more advanced text, image, and video model access by tier, but buyers should check the live product for the exact model menu before making model-specific claims.
 
 The moat is format, not model quality. Gamma's shareable URL output skips the download-and-attach loop entirely, which matters for client-facing async work.
 
@@ -130,7 +130,7 @@ The moat is format, not model quality. Gamma's shareable URL output skips the do
 - **You need a designed first draft in minutes, not hours.** Prompt-to-card workflow is fastest in the category.
 - **Your deck ships as a link, not a file.** The browser-native URL output beats sending a PPTX attachment for async review.
 - **You want one artifact for multiple surfaces.** The same Gamma file becomes a deck, a doc, and a mobile-friendly web page.
-- **You are a founder, consultant, or marketer working solo or in a small team.** Sweet spot for the feature set at the Plus price.
+- **You are a founder, consultant, or marketer working solo or in a small team.** Sweet spot for the feature set before heavier team presentation platforms become necessary.
 
 ## When to pick something else
 
@@ -142,18 +142,17 @@ The moat is format, not model quality. Gamma's shareable URL output skips the do
 
 ## Pricing
 
-Subscription pricing via [gamma.app/pricing](https://gamma.app/pricing).
+Subscription and team pricing are managed via [gamma.app/pricing](https://gamma.app/pricing). Gamma's public pricing page is reliable for plan gates, but exact price rendering can change by billing toggle, account state, or region, so check the live page before purchase.
 
-| Plan | Monthly | Annual (effective/mo) | AI credits | Who's it for |
-|------|---------|-----------------------|------------|--------------|
-| Free | $0 | $0 | 400 one-time | Trial users and occasional decks |
-| Plus | $10 | $8 | Unlimited, standard models | **Most solo users land here** |
-| Pro | $20 | $15 | Unlimited, advanced models + analytics + custom domain | Client-facing and brand work |
-| Ultra | $100 | introductory | Unlimited, top image models + early features | Power users and agencies |
-| Team | Seat-based | Seat-based | Shared workspace | 2+ seat collaboration |
-| Business | Seat-based | Seat-based | Shared workspace + admin | 10+ seat orgs |
+| Plan | Verified gates | Who's it for |
+|------|----------------|--------------|
+| Free | Up to 10 cards per prompt; simple presentations, docs, websites, social, and images; PDF/PPTX import; PDF/PPTX/PNG/Google Slides export | Trial users and occasional decks |
+| Plus | Everything in Free; up to 20 cards per prompt; Gamma branding removal; advanced AI image models | Regular solo creators |
+| Pro | Everything in Plus; up to 60 cards per prompt; premium AI image models; custom branding and fonts; detailed analytics and advanced sharing; up to 10 custom domains; API access; workspace templates | Client-facing, brand, automation, and repeat publishing work |
+| Ultra | Everything in Pro; substantially more AI usage; up to 75 cards per prompt; access to advanced text, image, and video models; up to 100 custom domains; early feature access | Power users, agencies, and heavy generators |
+| Team / Sales | Contact-sales path for teams evaluating Gamma | Shared workspace and organization needs |
 
-*Prices verified 2026-04-17 via [gamma.app/pricing](https://gamma.app/pricing). Annual billing saves roughly 20%. Free credits are one-time, not monthly.*
+*Plan gates verified 2026-05-10 via [gamma.app/pricing](https://gamma.app/pricing). Check the live pricing page for current dollar amounts and billing options before purchase.*
 
 ## Against the alternatives
 
@@ -169,7 +168,7 @@ Subscription pricing via [gamma.app/pricing](https://gamma.app/pricing).
 ## Failure modes
 
 - **PPTX export still needs cleanup.** Custom fonts, embedded live content, and complex layouts do not translate pixel-perfect. Treat Gamma as a drafting surface for anyone who will open the file in PowerPoint later.
-- **Free credits are one-time, not monthly.** The 400-credit allocation runs out fast during iteration. Plus at $10/mo is the practical entry point.
+- **Exact pricing can move behind billing/account state.** Use AiPedia for the plan-gate decision, then confirm live dollar amounts on Gamma before paying.
 - **Card format confuses trad-deck audiences.** Viewers expecting fixed 16:9 slides sometimes read the scrollable view as unfinished.
 - **Chart tooling is thin.** Data-heavy decks require post-generation editing or a separate visualization tool.
 - **No offline mode.** Editing and presenting both require an internet connection.
@@ -182,7 +181,7 @@ This page was produced by the aipedia.wiki editorial pipeline, an automated syst
 ## FAQ
 
 **Is Gamma free?**
-Yes, with limits. The free tier includes 400 one-time AI credits and Gamma branding on exports. Plus at $10/mo removes the watermark and unlocks unlimited credits on standard models.
+Yes, with limits. The free tier supports simple presentations, docs, websites, social posts, images, PDF/PPTX import, and PDF/PPTX/PNG/Google Slides export. Plus removes Gamma branding and raises the cards-per-prompt limit.
 
 **What is the card format?**
 A Gamma card is the base unit of a file. It holds text, images, charts, and embeds. The same card renders as a 16:9 slide in presentation mode, a scroll-flow section in document mode, or a section on a shareable web page.
@@ -194,12 +193,16 @@ Yes. PPTX export is available on all paid tiers. Fidelity is lossy on complex la
 Default generation produces 8-15 cards from a standard prompt. Users can specify card count in the prompt or add and delete cards after generation.
 
 **Which AI model does Gamma use?**
-Claude Opus 4.7 and OpenAI frontier models are selectable as the generation model inside the product. Higher tiers unlock advanced image models for visual generation.
+Gamma's public pricing page describes advanced text, image, and video model access by tier, but does not expose a stable static model list in the public page text. Check the live app before making a purchase based on a specific model name.
+
+**Does Gamma have an API?**
+Yes. Gamma says its Generate API v1.0 is generally available and accessible on Pro, Ultra, Team, and Business accounts. It can generate presentations, documents, webpages, and social posts programmatically.
 
 ## Sources
 
 - [Gamma pricing](https://gamma.app/pricing): Current plans, credits, and tier features
-- [Gamma Help Center](https://help.gamma.app/en/articles/8077107-upgrading-your-gamma-subscription): Upgrade flow and plan details
+- [Gamma AI presentation maker](https://gamma.app/ai-presentation-maker): Presentation generation positioning and usage claims
+- [Gamma API documentation](https://help.gamma.app/en/articles/11962420-does-gamma-have-an-api): API availability and access requirements
 
 ## Related
 

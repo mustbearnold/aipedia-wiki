@@ -3,33 +3,58 @@ Allow: /
 Disallow: /admin/
 Disallow: /api/
 
+# OpenAI search and user-triggered access. Keep GPTBot allowed while
+# AiPedia prioritizes AI-search visibility and source citation.
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+
 User-agent: GPTBot
 Allow: /
 Disallow: /admin/
+Disallow: /api/
 
 User-agent: ChatGPT-User
 Allow: /
 Disallow: /admin/
+Disallow: /api/
 
-User-agent: anthropic-ai
+# Anthropic search, user-triggered retrieval, and training crawlers.
+User-agent: Claude-SearchBot
 Allow: /
 Disallow: /admin/
+Disallow: /api/
+
+User-agent: Claude-User
+Allow: /
+Disallow: /admin/
+Disallow: /api/
 
 User-agent: ClaudeBot
 Allow: /
 Disallow: /admin/
+Disallow: /api/
+
+User-agent: anthropic-ai
+Allow: /
+Disallow: /admin/
+Disallow: /api/
 
 User-agent: PerplexityBot
 Allow: /
 Disallow: /admin/
+Disallow: /api/
 
 User-agent: Google-Extended
 Allow: /
 Disallow: /admin/
+Disallow: /api/
 
 User-agent: Bytespider
 Allow: /
 Disallow: /admin/
+Disallow: /api/
 
 Sitemap: https://aipedia.wiki/sitemap-index.xml
 

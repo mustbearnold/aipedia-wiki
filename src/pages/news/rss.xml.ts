@@ -56,6 +56,8 @@ export const GET: APIRoute = async () => {
     <atom:link href="https://aipedia.wiki/news/rss.xml" rel="self" type="application/rss+xml" />
     <description>Daily AI tools industry news, verified and edited by aipedia.wiki Editorial. New launches, model releases, pricing changes, shutdowns.</description>
     <language>en-us</language>
+    <generator>aipedia.wiki Astro RSS generator</generator>
+    <ttl>15</ttl>
     <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
     ${items}
   </channel>

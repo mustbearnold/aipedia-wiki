@@ -7,11 +7,11 @@ category: ai-notes
 company: Mem Labs
 url: https://mem.ai
 pricing_model: freemium
-price_range: "$0-$25/user/month"
+price_range: "$0-$12/month; Teams custom"
 status: active
 launched: 2020-09
-last_updated: 2026-05-04
-last_verified: 2026-05-04
+last_updated: 2026-05-10
+last_verified: 2026-05-10
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,52 +31,51 @@ facts:
     source: https://get.mem.ai/
     source_label: Mem product site
     source_id: mem-product
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-10'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-10'
   pricing_anchor:
-    value: Mem pricing should be checked on the live pricing page because the product has shifted packaging during recent Mem
-      refreshes.
+    value: Mem pricing lists a limited Free tier, Pro at $12/month, and Teams as custom pricing.
     source: https://get.mem.ai/pricing
     source_label: Mem pricing
     source_id: mem-pricing
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-10'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-04'
+    next_review_at: '2026-08-10'
   web_browsing:
     value: Mem is centered on your saved notes and knowledge context rather than open-ended web browsing.
     source: https://mem.ai/
     source_label: Mem official site
     source_id: mem-official
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-10'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-10'
   enterprise_controls:
-    value: AIpedia does not treat Mem as an enterprise knowledge-management default; teams should verify workspace, admin, and
-      retention controls before rollout.
+    value: AIpedia does not treat Mem as an enterprise knowledge-management default; Teams is custom-priced, so buyers should
+      verify workspace, admin, retention, security, and procurement controls before rollout.
     source: https://get.mem.ai/pricing
     source_label: Mem pricing
     source_id: mem-pricing
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-10'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-04'
+    next_review_at: '2026-08-10'
   watch_out_for:
     value: Mem is best when users accept its opinionated, AI-first capture and retrieval model; teams needing folders, strict
       taxonomy, or compliance workflows may prefer Notion, Obsidian, or a dedicated knowledge base.
     source: https://get.mem.ai/
     source_label: Mem product site
     source_id: mem-product
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-10'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-10'
 tags: [notes, ai-notes, knowledge-management, pkm, productivity, auto-organize, second-brain]
-seo_title: "Mem: AI Notes App Review, Features & Pricing (April 2026)"
-meta_description: "Mem is an AI notes app with Smart Search, Similar Mems, and Smart Write. Mem X Pro runs $19.99/mo; Teams at $25/user. Skips folders in favor of AI-managed recall."
+seo_title: "Mem: AI Notes App Review, Features & Pricing (May 2026)"
+meta_description: "Mem is an AI notes app for automatic organization, chat, deep search, and personal knowledge recall. Pro is listed at $12/mo; Teams uses custom pricing."
 author: "aipedia.wiki Editorial"
 best_for:
   - knowledge workers who dislike filing
@@ -104,21 +103,28 @@ price_history:
     source_label: "Source"
     source_id: mem-pricing
     note: "Unchanged since launch"
+  - date: 2026-05-10
+    plan: "Pro"
+    price: "$12/mo"
+    source: "https://get.mem.ai/pricing"
+    source_label: "Source"
+    source_id: mem-pricing
+    note: "Live pricing page lists Pro at $12/month with unlimited notes, chat, and deep searches; Teams is custom."
 ---
 
 # Mem
 
 An AI-first notes app from Mem Labs. Skips folders and tags entirely: notes get auto-linked, related context surfaces in a sidebar as you write, and Smart Search answers plain-language questions across the vault. Backed by frontier models for retrieval and writing aids.
 
-Free tier caps at 100 notes. Pro is $19.99/mo. Teams at $25/user/mo adds shared workspaces.
+Free tier is now a light trial with 25 notes and messages per month. Pro is listed at $12/month and Teams uses custom pricing.
 
 ## System Verdict
 
 > **Pick Mem if manual filing is the bottleneck.** The auto-surfacing of related notes mid-write is the clearest differentiator. Smart Search returns cited snippets from old notes in seconds, which beats folder-hunting for consultants and journalists working across many clients.
 >
-> **Skip it if you need structure, offline, or export freedom.** No databases, no kanban, no local storage. The 2025 price increase from $14.99 to $19.99 narrowed the value gap against Notion AI and Reflect, both of which give more control over how notes are organized.
+> **Skip it if you need structure, offline, or export freedom.** No databases, no kanban, no local storage. The $12/month Pro plan is easier to justify than earlier Mem packaging, but Notion AI and Reflect still give more control over how notes are organized.
 >
-> **Who pays which tier:** Free for under 100 notes, Pro $19.99/mo for solo knowledge workers with heavy capture, Teams $25/user/mo for 2+ seat teams wanting shared AI-surfaced context.
+> **Who pays which tier:** Free for a light 25-note/message test, Pro at $12/month for solo knowledge workers with heavy capture, and Teams only after procurement verifies workspace, admin, retention, and security needs.
 
 ## Key Facts
 
@@ -131,11 +137,11 @@ Free tier caps at 100 notes. Pro is $19.99/mo. Teams at $25/user/mo adds shared 
 | **Smart Write / Smart Edit** | Draft, expand, rewrite with vault context |
 | **Capture surfaces** | Web, desktop, iOS, Android, browser extension, email forwarding |
 | **Integrations** | Google Calendar, Slack (Pro), Zapier |
-| **Free tier** | 100 notes, basic search, 5 AI generations/month |
-| **Pro** | $19.99/mo, unlimited notes and AI |
+| **Free tier** | 25 notes and messages/month |
+| **Pro** | $12/mo, unlimited notes, chat, and deep searches |
 | **Offline mode** | None, cloud-only |
 
-Every data point was verified against vendor docs on 2026-04-17. See Sources.
+Every data point was verified against vendor docs on 2026-05-10. See Sources.
 
 ## What it actually is
 
@@ -165,17 +171,17 @@ The moat: no other mainstream notes app commits as hard to AI-first organization
 
 | Plan | Price | Key Limits |
 |------|-------|-----------|
-| Free | $0 | 100 notes, basic AI search, 5 AI generations/mo |
-| Pro | $19.99/mo ($192/yr) | Unlimited notes, Smart Search, Smart Write, 1,000 AI generations/mo |
-| Teams | $25/user/mo | Shared workspaces, admin controls, priority support |
+| Free | $0 | 25 notes and messages/month |
+| Pro | $12/mo | Unlimited notes, chat, and deep searches |
+| Teams | Custom | Shared/team use; verify admin, retention, security, and procurement controls |
 
-*Prices verified 2026-04-17 via [mem.ai/pricing](https://get.mem.ai/pricing).*
+*Prices verified 2026-05-10 via [mem.ai/pricing](https://get.mem.ai/pricing).*
 
 ## Against the alternatives
 
 | | Mem Pro | Notion AI | Reflect | Obsidian |
 |---|---|---|---|---|
-| **Price** | $19.99/mo | $10-$20/mo | $10/mo | Free |
+| **Price** | $12/mo | $10-$20/mo | $10/mo | Free |
 | **Organization model** | **AI auto-links, no folders** | Databases + pages | Manual backlinks | Manual, local files |
 | **Offline** | None | Limited | Full | Full |
 | **End-to-end encryption** | No | No | Yes | Yes (local) |
@@ -185,7 +191,7 @@ The moat: no other mainstream notes app commits as hard to AI-first organization
 ## Failure modes
 
 - **Smart Search misses break the model.** No folders means no fallback. A miss on a critical query costs more than an equivalent miss in a structured tool.
-- **Pricing increase narrowed the value gap.** Pro moved from $14.99 to $19.99 in late 2025. Reflect at $10/mo and Notion AI at $10 now undercut Mem on price.
+- **Teams pricing is not self-serve.** Pro is cheaper than many AI-note competitors at $12/month, but Teams buyers must contact sales and verify controls before rollout.
 - **Cloud-only, no offline.** Field work, travel, or regulated data all need a different tool.
 - **No databases or project management.** Mem is a notes app, not a wiki or tracker. Workflows that depend on structured records outgrow it.
 - **Export is lossy.** Markdown export exists but drops AI-generated backlinks and Similar Mems relationships.
@@ -194,15 +200,15 @@ The moat: no other mainstream notes app commits as hard to AI-first organization
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [mem.ai](https://mem.ai) and the [Mem pricing page](https://get.mem.ai/pricing).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-05-10 against [mem.ai](https://mem.ai) and the [Mem pricing page](https://get.mem.ai/pricing).
 
 ## FAQ
 
 **Does Mem have a free plan?**
-Yes. Free covers 100 notes, basic AI search, and 5 AI generations per month. Pro at $19.99/mo unlocks unlimited notes, Smart Search, Smart Write, and 1,000 monthly AI generations ([mem.ai/pricing](https://get.mem.ai/pricing)).
+Yes. Free covers 25 notes and messages per month. Pro at $12/month unlocks unlimited notes, chat, and deep searches ([mem.ai/pricing](https://get.mem.ai/pricing)).
 
 **Is Mem good for teams?**
-The Teams plan at $25/user/mo supports shared workspaces with AI that surfaces collective context. Fine for small teams, weaker than Notion on permissions and admin depth.
+Teams uses custom pricing. Treat it as a sales-led option and verify workspace, admin, retention, and security controls before standardizing on it.
 
 **How does Mem compare to Obsidian?**
 Obsidian stores notes locally as Markdown with manual backlinking. Mem stores in the cloud with AI auto-linking. Obsidian wins on privacy, portability, and plugins. Mem wins on zero-friction capture and conversational search.
@@ -211,12 +217,12 @@ Obsidian stores notes locally as Markdown with manual backlinking. Mem stores in
 No. The app is cloud-only. No local storage or offline mode exists.
 
 **Mem vs Reflect?**
-Reflect costs less ($10/mo), adds end-to-end encryption, and relies on manual backlinks for control. Mem is pricier and cloud-processed but eliminates the filing step entirely. Control-seekers pick Reflect. Capture-first users pick Mem.
+Reflect costs less ($10/mo), adds end-to-end encryption, and relies on manual backlinks for control. Mem is hosted and cloud-processed but eliminates the filing step more aggressively. Control-seekers pick Reflect. Capture-first users pick Mem.
 
 ## Sources
 
 - [mem.ai](https://mem.ai): product overview and feature list
-- [Mem pricing page](https://get.mem.ai/pricing): current Free, Pro, and Teams tiers
+- [Mem pricing page](https://get.mem.ai/pricing): current Free, Pro, and Teams tiers, verified 2026-05-10
 - [Mem X launch notes](https://newsletter.mem.ai/p/introducing-mem-x-and-teams): AI feature history and roadmap
 
 ## Related
