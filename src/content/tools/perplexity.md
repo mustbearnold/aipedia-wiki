@@ -2,20 +2,20 @@
 type: tool
 slug: perplexity
 title: Perplexity
-tagline: AI search engine with cited answers, Sonar 2, a Pro-tier model switcher across Gemini 3.1 Pro, Claude Sonnet 4.6, GPT-5.2, Grok 4.1, and more, Deep Research exports, Perplexity Computer, and the Comet browser.
+tagline: AI search engine with cited answers, a Pro-tier model switcher across GPT, Claude, Gemini, and more, Deep Research exports, Perplexity Computer, and the Comet browser.
 category: ai-search
 secondary_categories: [ai-chatbots, ai-writing]
 company: perplexity
 url: https://perplexity.ai
 pricing_model: freemium
-price_range: "$0-$271/seat/month billed annually"
+price_range: "$0-$325/seat/month"
 status: active
 launched: 2022-12
-last_updated: 2026-05-05
-last_verified: 2026-05-05
+last_updated: 2026-05-11
+last_verified: 2026-05-11
 update_frequency: monthly
-seo_title: "Perplexity: Features, Pricing & Review (April 2026)"
-meta_description: "Perplexity runs Sonar 2 plus switchable models such as Gemini 3.1 Pro, Claude Sonnet 4.6, GPT-5.2, and Grok 4.1. Free tier; Pro $17/mo billed annually; Max $167/mo billed annually; Enterprise starts at $34/seat/mo annual."
+seo_title: "Perplexity: Features, Pricing & Review (May 2026)"
+meta_description: "Perplexity offers cited AI search, model switching, Deep Research, Comet, and Computer. Free tier; Pro $20/mo or $200/year; Enterprise Pro $40/seat/mo or $400/year; Enterprise Max $325/seat/mo or $3,250/year."
 author: "aipedia.wiki Editorial"
 affiliate:
   has_program: false
@@ -30,11 +30,11 @@ scores:
   longevity: 8
 facts:
   flagship_model:
-    value: "Sonar 2 for Perplexity-native search answers; Pro can switch among Sonar 2, Gemini 3.1 Pro, Claude Sonnet 4.6, GPT-5.2, Grok 4.1, and more"
-    source: "https://www.perplexity.ai/pro"
-    source_label: "Perplexity Pro pricing"
-    source_id: perplexity-pro-pricing
-    verified_at: 2026-05-03
+    value: "Perplexity-native cited answers plus paid model selection across recent GPT, Claude, Gemini, and other supported models"
+    source: "https://www.perplexity.ai/enterprise/pricing"
+    source_label: "Perplexity pricing"
+    source_id: perplexity-pricing
+    verified_at: 2026-05-11
     volatility: high
     confidence: high
     next_review_at: 2026-06-03
@@ -43,34 +43,34 @@ facts:
     source: "https://docs.perplexity.ai/docs/sonar/models/sonar-pro"
     source_label: "Perplexity Sonar Pro docs"
     source_id: perplexity-docs
-    verified_at: 2026-05-03
+    verified_at: 2026-05-11
     volatility: high
     confidence: high
     next_review_at: 2026-06-03
   pricing_anchor:
-    value: "Free; Pro $17/mo billed annually; Max $167/mo billed annually; Enterprise Pro $34/seat/mo annual; Enterprise Max $271/seat/mo annual"
+    value: "Free; Pro $20/mo or $200/year; Enterprise Pro $40/seat/mo or $400/year; Enterprise Max $325/seat/mo or $3,250/year"
     source: "https://www.perplexity.ai/enterprise/pricing"
     source_label: "Perplexity Enterprise pricing"
     source_id: perplexity-enterprise-pricing
-    verified_at: 2026-05-03
+    verified_at: 2026-05-11
     volatility: high
     confidence: high
     next_review_at: 2026-06-03
   free_plan:
     value: "Yes — free answer engine access with limited advanced usage"
-    source: "https://www.perplexity.ai/pro"
-    source_label: "Perplexity Pro pricing"
-    source_id: perplexity-pro-pricing
-    verified_at: 2026-05-03
+    source: "https://www.perplexity.ai/enterprise/pricing"
+    source_label: "Perplexity pricing"
+    source_id: perplexity-pricing
+    verified_at: 2026-05-11
     volatility: high
     confidence: high
     next_review_at: 2026-06-03
   best_paid_tier:
-    value: "Pro for most individual researchers; Max only for Model Council, Perplexity Computer, or very heavy research"
-    source: "https://www.perplexity.ai/pro"
-    source_label: "Perplexity Pro pricing"
-    source_id: perplexity-pro-pricing
-    verified_at: 2026-05-03
+    value: "Pro for most individual researchers; Enterprise Pro for teams; Enterprise Max only for heavy reasoning, larger files, multi-model research, or high-volume Computer use"
+    source: "https://www.perplexity.ai/enterprise/pricing"
+    source_label: "Perplexity pricing"
+    source_id: perplexity-pricing
+    verified_at: 2026-05-11
     volatility: high
     confidence: high
     next_review_at: 2026-06-03
@@ -79,7 +79,7 @@ facts:
     source: "https://docs.perplexity.ai/docs/getting-started/pricing"
     source_label: "Perplexity API pricing docs"
     source_id: perplexity-docs
-    verified_at: 2026-05-03
+    verified_at: 2026-05-11
     volatility: high
     confidence: high
     next_review_at: 2026-06-03
@@ -88,7 +88,7 @@ facts:
     source: "https://docs.perplexity.ai/docs/sonar/media"
     source_label: "Perplexity media docs"
     source_id: perplexity-docs
-    verified_at: 2026-05-03
+    verified_at: 2026-05-11
     volatility: medium
     confidence: high
   video_generation:
@@ -96,15 +96,15 @@ facts:
     source: "https://docs.perplexity.ai/docs/sonar/media"
     source_label: "Perplexity media docs"
     source_id: perplexity-docs
-    verified_at: 2026-05-03
+    verified_at: 2026-05-11
     volatility: medium
     confidence: high
   real_time_voice:
     value: "No dedicated real-time voice-generation API or voice-agent product documented; Perplexity is research/search-first"
-    source: "https://www.perplexity.ai/pro"
-    source_label: "Perplexity Pro pricing"
-    source_id: perplexity-pro-pricing
-    verified_at: 2026-05-03
+    source: "https://www.perplexity.ai/enterprise/pricing"
+    source_label: "Perplexity pricing"
+    source_id: perplexity-pricing
+    verified_at: 2026-05-11
     volatility: medium
     confidence: high
   web_browsing:
@@ -112,16 +112,16 @@ facts:
     source: "https://docs.perplexity.ai/docs/agent-api/tools"
     source_label: "Perplexity Agent API tools"
     source_id: perplexity-docs
-    verified_at: 2026-05-03
+    verified_at: 2026-05-11
     volatility: high
     confidence: high
     next_review_at: 2026-06-03
   coding_agent:
     value: "Limited — Perplexity Computer and Agent API automate tasks, but Perplexity is not a coding IDE agent like Codex or Claude Code"
-    source: "https://www.perplexity.ai/pro"
-    source_label: "Perplexity Pro pricing"
-    source_id: perplexity-pro-pricing
-    verified_at: 2026-05-03
+    source: "https://www.perplexity.ai/enterprise/pricing"
+    source_label: "Perplexity pricing"
+    source_id: perplexity-pricing
+    verified_at: 2026-05-11
     volatility: medium
     confidence: high
   enterprise_controls:
@@ -129,7 +129,7 @@ facts:
     source: "https://www.perplexity.ai/enterprise/pricing"
     source_label: "Perplexity Enterprise pricing"
     source_id: perplexity-enterprise-pricing
-    verified_at: 2026-05-03
+    verified_at: 2026-05-11
     volatility: high
     confidence: high
     next_review_at: 2026-06-03
@@ -138,24 +138,24 @@ facts:
     source: "https://docs.perplexity.ai/docs/resources/privacy-security"
     source_label: "Perplexity API privacy docs"
     source_id: perplexity-docs
-    verified_at: 2026-05-03
+    verified_at: 2026-05-11
     volatility: high
     confidence: high
     next_review_at: 2026-06-03
   open_source_or_local:
     value: "No — Perplexity is a proprietary hosted answer engine and API platform"
-    source: "https://www.perplexity.ai/pro"
-    source_label: "Perplexity Pro pricing"
-    source_id: perplexity-pro-pricing
-    verified_at: 2026-05-03
+    source: "https://www.perplexity.ai/enterprise/pricing"
+    source_label: "Perplexity pricing"
+    source_id: perplexity-pricing
+    verified_at: 2026-05-11
     volatility: low
     confidence: high
   best_for:
     value: "Cited live-web research, fact-checking, source discovery, due diligence, and research-to-deliverable workflows"
-    source: "https://www.perplexity.ai/pro"
-    source_label: "Perplexity Pro pricing"
-    source_id: perplexity-pro-pricing
-    verified_at: 2026-05-03
+    source: "https://www.perplexity.ai/enterprise/pricing"
+    source_label: "Perplexity pricing"
+    source_id: perplexity-pricing
+    verified_at: 2026-05-11
     volatility: medium
     confidence: high
   watch_out_for:
@@ -163,7 +163,7 @@ facts:
     source: "https://docs.perplexity.ai/docs/sonar/models"
     source_label: "Perplexity Sonar model docs"
     source_id: perplexity-docs
-    verified_at: 2026-05-03
+    verified_at: 2026-05-11
     volatility: medium
     confidence: high
 tags: [search-engine, research, citations, answer-engine, web-search, real-time, fact-checking, sonar, deep-research, comet-browser, model-council, spaces]
@@ -181,6 +181,22 @@ not_best_for:
 quick_answer: >-
   Perplexity is the strongest AI-native answer engine for cited, verifiable research from the live web. Pick it for inline numbered citations, a Pro-tier frontier-model switcher, and Deep Research that exports to decks and spreadsheets. Skip it for long-form writing, coding, or image/video generation.
 price_history:
+  - date: 2026-05-11
+    plan: "Pro"
+    price: "$20/mo or $200/year"
+    source: "https://www.perplexity.ai/enterprise/pricing"
+    source_id: perplexity-pricing
+    source_label: "Perplexity pricing"
+    verified_at: 2026-05-11
+    note: "Pricing page shows Pro at $20/month or $200/year, replacing the prior annualized $17/month shorthand"
+  - date: 2026-05-11
+    plan: "Enterprise"
+    price: "Enterprise Pro $40/seat/mo or $400/year; Enterprise Max $325/seat/mo or $3,250/year"
+    source: "https://www.perplexity.ai/enterprise/pricing"
+    source_id: perplexity-pricing
+    source_label: "Perplexity pricing"
+    verified_at: 2026-05-11
+    note: "May 2026 enterprise pricing refresh"
   - date: 2026-03-18
     plan: "Comet browser"
     price: "$0"
@@ -203,10 +219,12 @@ price_history:
 
 Perplexity is an AI-native answer engine. Every response is synthesized from live web sources with numbered inline citations (no list of ten blue links, no scraped snippets stripped of attribution).
 
-The house model is **Sonar 2** for Perplexity-native search answers. Pro subscribers can switch among models such as Gemini 3.1 Pro, Claude Sonnet 4.6, GPT-5.2, Grok 4.1, and Kimi K2.5, while the Sonar API exposes Sonar and Sonar Pro search-grounded models.
+Perplexity's core product is cited AI search. Paid subscribers can select among recent GPT, Claude, Gemini, and other supported models, while the Sonar API exposes search-grounded models for developers.
 
-## Recent developments (March-April 2026)
+## Recent developments (March-May 2026)
 
+- **May 8:** [Morningstar and PitchBook added Perplexity integrations for finance research workflows](/news/2026-05-08-perplexity-morningstar-pitchbook-finance/), strengthening Perplexity's pitch as a cited, source-backed work surface for analysts.
+- **May 6:** [Snap said its planned $400 million Perplexity AI search deal ended amicably](/news/2026-05-06-snap-perplexity-400m-deal-ended/), making Perplexity's direct app, Comet, enterprise, and Computer strategy more important than Snapchat distribution.
 - **April 24:** [A retrieval-poisoning demo exposed how thin, circular sources can contaminate AI search answers](/news/2026-04-24-retrieval-poisoning-world-championship-demo/). This is directly relevant to Perplexity because citation UX needs source independence, not just visible links.
 - **April 16:** [Perplexity Personal Computer ships for Mac](/news/2026-04-16-perplexity-personal-computer-mac/), a desktop-native research agent that works across your local files and browser tabs alongside web search.
 - **March 18:** Comet browser paywall dropped. Free across iOS, Android, Mac, and Windows.
@@ -215,30 +233,30 @@ Max adds Model Council and Perplexity Computer. The Comet browser is free on eve
 
 ## System Verdict
 
-> **Pick Perplexity if you need cited, verifiable answers from the live web.** Nothing else in the consumer-AI market surfaces sources as aggressively or as cleanly. Pro at $17/mo billed annually is the right default for researchers, journalists, analysts, and anyone doing due diligence who needs to see where a claim came from.
+> **Pick Perplexity if you need cited, verifiable answers from the live web.** Nothing else in the consumer-AI market surfaces sources as aggressively or as cleanly. Pro at $20/mo or $200/year is the right default for researchers, journalists, analysts, and anyone doing due diligence who needs to see where a claim came from.
 >
 > **Skip it if your workload is writing, coding, or creative generation.** [Claude](/tools/claude/) Opus 4.7 wins on long-form coherence and terminal coding; [ChatGPT](/tools/chatgpt/) wins on feature breadth, image generation, and the Codex agent. Perplexity has no native image or video generation and does not pretend to be a general-purpose assistant.
 >
-> **Who pays which tier:** Free for casual fact-checks, Pro $17/mo billed annually for regular cited research (the sweet spot), Max $167/mo billed annually only if you actually use Model Council or Perplexity Computer weekly, Enterprise Pro $34/seat/mo annual for teams that need Spaces with SSO, Enterprise Max $271/seat/mo annual for compliance-heavy orgs running Computer workloads at scale.
+> **Who pays which tier:** Free for casual fact-checks, Pro $20/mo or $200/year for regular cited research (the sweet spot), Enterprise Pro $40/seat/mo or $400/year for teams that need SSO, shared files, and admin controls, Enterprise Max $325/seat/mo or $3,250/year only for heavy reasoning, multi-model research, larger files, and high-volume Computer workflows.
 
 ## Key Facts
 
 | | |
 |---|---|
-| **House model** | Sonar 2 for Perplexity-native search answers; Sonar / Sonar Pro on the API |
-| **Switchable models (Pro+)** | Gemini 3.1 Pro · Sonar 2 · Claude Sonnet 4.6 · GPT-5.2 · Claude Opus 4.6 · Grok 4.1 · Kimi K2.5 and more |
+| **House model** | Perplexity-native cited answer engine; Sonar / Sonar Pro on the API |
+| **Switchable models (Pro+)** | Recent GPT, Claude, Gemini, and other supported models |
 | **Deep Research** | Reads hundreds of sources, 2-5 min per query; exports to PowerPoint, spreadsheets, dashboards, and websites |
 | **Model Council (Max-only)** | Runs the same query across 3 frontier models; synthesizer (Claude Opus) resolves convergence/divergence |
-| **Perplexity Computer (Max-only)** | Cloud agent orchestrating 19 models across 400+ tools; 10,000 credits/mo included |
+| **Perplexity Computer** | Agentic work surface for paying subscribers; Pro shows 500 credits/mo and Enterprise Max shows 15,000 credits/mo on the May 2026 pricing page |
 | **Spaces** | File-grounded research workspaces. Pro: 50 files. Enterprise: 500 files. Scheduled Tasks for recurring research |
 | **Comet browser** | Free on iOS (Mar 2026), Android (Nov 2025), Mac and Windows (Jul 2025). No iPad build |
 | **Voice Mode** | Pro and Max |
-| **Pricing** | Free · Pro $17/mo annual · Max $167/mo annual · Enterprise Pro $34/seat/mo annual · Enterprise Max $271/seat/mo annual |
+| **Pricing** | Free · Pro $20/mo or $200/year · Enterprise Pro $40/seat/mo or $400/year · Enterprise Max $325/seat/mo or $3,250/year |
 | **API** | Sonar API and Sonar Pro API (search-augmented LLM, 2× citation density on Pro) |
 
 ## What it actually is
 
-One product surface (answer engine plus a thin agent layer) with two pricing tracks (consumer and enterprise). The free tier is Sonar on light rate limits. Pro adds model switching, unlimited Pro searches, Deep Research, Spaces, and Voice. Max layers on Model Council and Perplexity Computer.
+One product surface (answer engine plus a thin agent layer) with consumer and enterprise pricing. The free tier is for light answer-engine use. Pro adds model selection, more Pro searches, Deep Research, Spaces, and Computer credits. Enterprise tiers add team governance, data controls, and higher usage ceilings.
 
 The moats are specific and narrow. First, citation UX: every numbered claim links to the underlying source inline, which neither ChatGPT nor Claude nor Gemini matches in default behavior.
 
@@ -251,7 +269,7 @@ The open question is whether any of these survive once Google AI Overviews, Chat
 ## When to pick Perplexity
 
 - **You need verifiable answers with live citations.** Every sentence is traceable to a source. That's the exact behavior default ChatGPT and Claude chats do not produce without explicit browsing mode prompts.
-- **You want to A/B frontier models on the same question.** Pro's model switcher and Max's Model Council are a clean way to run Sonar 2, Gemini 3.1 Pro, Claude Sonnet 4.6, GPT-5.2, Grok 4.1, and other supported models against similar research prompts without stacking separate subscriptions.
+- **You want to A/B frontier models on the same question.** Pro's model switcher and higher enterprise tiers' multi-model research mode are a clean way to compare recent GPT, Claude, Gemini, and other supported models against similar research prompts without stacking separate subscriptions.
 - **You run research-to-deliverable workflows.** Deep Research exports directly to PowerPoint, spreadsheets, and dashboards. That's the step that kills throughput when researchers use a chatbot and then paste into slides manually.
 - **You want a browser-layer AI assistant.** Comet is free on iOS, Android, Mac, and Windows; it reads the page, summarizes tabs, and answers in context without leaving the browser.
 - **You're building search-augmented LLM apps.** The Sonar and Sonar Pro APIs ship real-time web-wide research with citations as a primitive. Cheaper than stitching your own Bing/Brave + RAG stack.
@@ -267,24 +285,23 @@ The open question is whether any of these survive once Google AI Overviews, Chat
 
 ## Pricing
 
-Consumer pricing via [perplexity.ai/pro](https://perplexity.ai/pro):
+Consumer pricing via [Perplexity pricing](https://www.perplexity.ai/enterprise/pricing):
 
 | Plan | Price | Pro Searches | Models | Deep Research | Who's it for |
 |---|---|---|---|---|---|
 | Free | $0 | ~3-5/day | Sonar only | Limited | Casual fact-checks |
-| Pro | $17/mo billed annually | Advanced usage | Sonar 2 + Gemini 3.1 Pro, Claude Sonnet 4.6, GPT-5.2, Grok 4.1, Kimi K2.5 and more | Full (+ deck/sheet export) | **Most individuals should land here** |
-| Max | $167/mo billed annually | Highest personal usage | Everything in Pro | Full | Model Council + Perplexity Computer users |
+| Pro | $20/mo or $200/year | Up to 200 Pro queries/week | Recent GPT, Claude, Gemini, and other supported models | Up to 20/month | **Most individuals should land here** |
 
 Enterprise pricing via [perplexity.ai/enterprise/pricing](https://perplexity.ai/enterprise/pricing):
 
 | Plan | Price | Fit |
 |---|---|---|
-| Enterprise Pro | $34/seat/mo billed annually | Team search, files/apps, SSO/SCIM, admin controls |
-| Enterprise Max | $271/seat/mo billed annually | Enterprise Pro plus advanced reasoning, deep research at scale, larger files, retention configuration, audit logs, and team insights |
+| Enterprise Pro | $40/seat/mo or $400/year | Team search, files/apps, SSO/SCIM, admin controls |
+| Enterprise Max | $325/seat/mo or $3,250/year | Enterprise Pro plus advanced reasoning, deep research at scale, larger files, multi-model research, retention configuration, audit logs, and team insights |
 
-Education Pro runs $10/mo (or free for a promotional window at participating universities). Sonar and Sonar Pro APIs are priced separately at [perplexity.ai/api-platform](https://perplexity.ai/api-platform). Verify current per-token rates there before building on it.
+Sonar and Sonar Pro APIs are priced separately at [perplexity.ai/api-platform](https://perplexity.ai/api-platform). Verify current per-token rates there before building on it.
 
-Prices verified 2026-05-03 via [Perplexity Pro](https://www.perplexity.ai/pro), [Perplexity Enterprise pricing](https://www.perplexity.ai/enterprise/pricing), and the [Perplexity API pricing docs](https://docs.perplexity.ai/docs/getting-started/pricing).
+Prices verified 2026-05-11 via [Perplexity pricing](https://www.perplexity.ai/enterprise/pricing) and the [Perplexity API pricing docs](https://docs.perplexity.ai/docs/getting-started/pricing).
 
 ## Against the alternatives
 
@@ -292,7 +309,7 @@ Prices verified 2026-05-03 via [Perplexity Pro](https://www.perplexity.ai/pro), 
 |---|---|---|---|
 | **Source citation quality** | Strongest · inline numbered citations by default | Good in browsing mode, absent elsewhere | Present when browsing is invoked, less granular |
 | **Research depth** | Deep Research reads 100+ pages, exports to deck/sheet | Browsing + Deep Research mode, no direct export | Projects + web search, no direct deliverable export |
-| **Pricing** | $17/mo billed annually | $20/mo | $20/mo |
+| **Pricing** | $20/mo or $200/year | $20/mo | $20/mo |
 | **Best viewed as** | Cited answer engine and research specialist | Generalist default with broadest feature suite | Reasoning, writing, and coding specialist |
 
 ## Failure modes
@@ -301,25 +318,25 @@ Prices verified 2026-05-03 via [Perplexity Pro](https://www.perplexity.ai/pro), 
 - **Source quality varies by query.** For thin-coverage topics the engine cites low-tier SEO content and blog roundups with the same confidence as primary sources. Depth is only as good as the open web on the topic.
 - **Paywalled content is mostly inaccessible.** Academic journals, gated news, and subscription research do not load. For scientific literature use [Consensus](/tools/consensus/) or [Elicit](/tools/elicit/) instead.
 - **Model switching adds a decision tax.** Pro users with six models on tap tend to ping-pong. The default (Sonar auto-routing) is the right choice for most queries; override only when you have a specific reason.
-- **Perplexity Computer credits deplete quietly.** Max includes 10,000 credits/mo. Multi-step agent runs burn them fast. Watch the live credit tracker before kicking off a long deploy or scraping job.
+- **Perplexity Computer credits deplete quietly.** Pro shows 500 credits/mo and Enterprise Max shows 15,000 credits/mo on the May 2026 pricing page. Multi-step agent runs can burn credits fast, so watch the live credit tracker before kicking off a long deploy or scraping job.
 - **Comet is not on iPad.** Mac, Windows, iPhone, and Android ship. iPad users are stuck with the web app or the regular Perplexity iOS app.
 - **Model Council is web-only on Max.** Not available on mobile apps, Enterprise Pro, or the free tier. The synthesizer step adds latency. Expect 30-60s before a unified answer.
 - **No native image, video, or voice generation beyond Voice Mode input.** For multimodal creation you need a second tool.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-03 against [Perplexity Pro](https://www.perplexity.ai/pro), [Perplexity Enterprise pricing](https://www.perplexity.ai/enterprise/pricing), the [Perplexity API pricing docs](https://docs.perplexity.ai/docs/getting-started/pricing), the [Sonar model docs](https://docs.perplexity.ai/docs/sonar/models), and the [API privacy/security docs](https://docs.perplexity.ai/docs/resources/privacy-security).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-11 against [Perplexity Pro](https://www.perplexity.ai/pro), [Perplexity Enterprise pricing](https://www.perplexity.ai/enterprise/pricing), the [Perplexity API pricing docs](https://docs.perplexity.ai/docs/getting-started/pricing), the [Sonar model docs](https://docs.perplexity.ai/docs/sonar/models), the [API privacy/security docs](https://docs.perplexity.ai/docs/resources/privacy-security), and the May 8, 2026 [Morningstar/PitchBook integration announcement](https://newsroom.morningstar.com/news/news-details/2026/Morningstar-and-PitchBook-Expand-Access-to-Trusted-Investment-Intelligence-Through-Perplexity/default.aspx).
 
 ## FAQ
 
 **Is Perplexity free?**
-Yes. The free tier runs Sonar with limited advanced usage and full access to standard cited answers. Pro at $17/mo billed annually unlocks higher limits, the model switcher, Deep Research with deck and spreadsheet export, Spaces, and Voice Mode.
+Yes. The free tier has limited advanced usage and full access to standard cited answers. Pro at $20/mo or $200/year unlocks higher limits, the model switcher, Deep Research with deck and spreadsheet export, Spaces, and Voice Mode.
 
 **Which frontier models can Pro users pick per query?**
-Perplexity currently advertises model choices including Sonar 2, Gemini 3.1 Pro, Claude Sonnet 4.6, GPT-5.2, Claude Opus 4.6, Grok 4.1, and Kimi K2.5. Sonar is the default search answer engine. Free users have more limited model access.
+Perplexity currently advertises model choice across recent GPT, Claude, Gemini, and other supported models. Exact model availability changes quickly, so check the model picker before buying for one specific model.
 
 **What is Sonar?**
-Sonar is Perplexity's search-grounded answer model family. In the consumer product, Sonar 2 is Perplexity's native answer model; for developers, the Sonar and Sonar Pro APIs expose search-grounded models with published 128K and 200K context windows.
+Sonar is Perplexity's search-grounded answer model family. For developers, the Sonar and Sonar Pro APIs expose search-grounded models with published 128K and 200K context windows.
 
 It is also available to developers as the Sonar and Sonar Pro APIs. Pricing for the API tier is listed at [perplexity.ai/api-platform](https://perplexity.ai/api-platform).
 
@@ -342,7 +359,7 @@ Model Council runs the same query against multiple supported frontier models and
 It is **Max-only** (and Enterprise Max), web-only, not on mobile.
 
 **What is Perplexity Computer?**
-A cloud-based agent environment for Max subscribers that orchestrates 19 frontier models across 400+ tool connectors for multi-step tasks: research pipelines, code execution, deployment, automation. Claude Opus handles orchestration. 10,000 credits per month are included; live credit tracking shows consumption as runs progress.
+An agentic work surface for paying subscribers that can use tools, files, connectors, and web context for multi-step tasks: research pipelines, analysis, drafting, and automation. The May 2026 pricing page lists 500 Computer credits per month on Pro and 15,000 credits per month on Enterprise Max; live credit tracking shows consumption as runs progress.
 
 ## Related
 

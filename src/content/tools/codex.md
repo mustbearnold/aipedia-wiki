@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "Bundled with ChatGPT Plus ($20/mo) through Pro 20x ($200/mo)"
 status: active
 launched: 2025-05
-last_updated: 2026-05-09
-last_verified: 2026-05-09
+last_updated: 2026-05-11
+last_verified: 2026-05-11
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -32,53 +32,53 @@ facts:
     source: https://openai.com/codex/
     source_label: OpenAI Codex product page
     source_id: codex-official
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-11'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-04'
+    next_review_at: '2026-08-11'
   pricing_anchor:
     value: Codex pricing is high-volatility because developer/product packaging and token-credit billing can change; verify
       the developer pricing page before quoting usage cost.
     source: https://developers.openai.com/codex/pricing
     source_label: Codex pricing
     source_id: codex-pricing
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-11'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-04'
+    next_review_at: '2026-08-11'
   coding_agent:
     value: 'Codex should be evaluated as an agentic coding system, not only autocomplete: test repository context, task decomposition,
       PR quality, and handoff behavior.'
     source: https://platform.openai.com/docs/codex
     source_label: Codex docs
     source_id: codex-docs
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-11'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-04'
+    next_review_at: '2026-08-11'
   integration_surface:
     value: The implementation surface includes OpenAI account controls, repository permissions, CLI/IDE setup, cloud task security,
       and developer workflow policy.
     source: https://platform.openai.com/docs/codex
     source_label: Codex docs
     source_id: codex-docs
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-11'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-04'
+    next_review_at: '2026-08-11'
   watch_out_for:
     value: For production engineering, compare Codex with Claude Code, Cursor, Copilot, and open-source agents by reviewability,
       sandboxing, data controls, model access, and failure recovery.
     source: https://openai.com/codex/
     source_label: OpenAI Codex product page
     source_id: codex-official
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-11'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-04'
+    next_review_at: '2026-08-11'
 tags: [agentic-coding, cloud-agent, desktop-app, cli, openai, gpt-5, computer-use, memory, plugins, multi-agent]
-seo_title: "OpenAI Codex: Features, Pricing & Review (April 2026)"
-meta_description: "OpenAI Codex is the cloud-async coding agent bundled with ChatGPT. GPT-5.5 rolled into Codex April 23, 2026. Codex Desktop, CLI, and IDE extensions span cloud and local workflows. Plans $20-$200/mo via ChatGPT tiers."
+seo_title: "OpenAI Codex: Features, Pricing & Review (May 2026)"
+meta_description: "OpenAI Codex is the cloud-async coding agent bundled with ChatGPT. GPT-5.5 rolled into Codex April 23, 2026, and Codex for Chrome added signed-in browser workflows on May 7. Plans $20-$200/mo via ChatGPT tiers."
 author: "aipedia.wiki Editorial"
 best_for:
   - async background coding (fire a task, return to a PR)
@@ -132,6 +132,7 @@ Bundled with every paid ChatGPT tier. Pro tiers get 5x to 20x the Codex usage of
 
 ## Recent developments (March-May 2026)
 
+- **May 7, 2026:** [OpenAI added Codex for Chrome](/news/2026-05-07-openai-codex-chrome-extension/), letting the Codex desktop app work directly across signed-in Chrome tabs on macOS and Windows. Treat it as a major workflow unlock and a permission-scope decision: the value is real browser context; the risk is letting an agent operate inside authenticated web apps.
 - **May 2, 2026:** [Codex Desktop added Pets, Hatch custom pet generation, cross-agent config imports, and a dictation dictionary](/news/2026-05-03-openai-codex-pets-config-imports/). The playful overlay is less important than the config portability: Codex can now import conventions from tools such as Claude Code instead of forcing users to rewrite setup context.
 - **May 1, 2026:** [The MCP STDIO command-execution flaw put agent connectors back under security review](/news/2026-05-03-mcp-stdio-command-execution-flaw/). Codex Desktop's plugin/MCP layer should be treated as privileged tool access, not as harmless extension metadata.
 - **May 1, 2026:** [The Pentagon expanded classified-network AI access to eight major vendors](/news/2026-05-01-pentagon-classified-ai-network-deals/), including OpenAI. This is a government deployment story rather than a public Codex feature, but it reinforces why account security, network boundaries, and audit controls matter for agentic OpenAI products.
@@ -184,7 +185,7 @@ Bundled with every paid ChatGPT tier. Pro tiers get 5x to 20x the Codex usage of
 | **Billing** | Credits per MTok input / cached input / output (since April 2, 2026) |
 | **Platform support** | macOS (primary) · Windows rolling out · EU/UK rolling out · Linux via CLI |
 
-Every data point verified 2026-04-18 against OpenAI's Codex docs and multi-source coverage.
+Every data point verified 2026-05-11 against OpenAI's Codex docs, pricing pages, and multi-source coverage.
 
 ## What it actually is
 
@@ -251,6 +252,7 @@ Prices verified 2026-04-18 via [OpenAI Codex pricing](https://developers.openai.
 
 ## Recent changes
 
+- **May 7, 2026:** [OpenAI added Codex for Chrome](/news/2026-05-07-openai-codex-chrome-extension/) so Codex can inspect, test, and operate across signed-in Chrome tabs while keeping control in the desktop app.
 - **May 7, 2026:** [OpenAI put GPT-5.5-Cyber into limited preview through Trusted Access for Cyber](/news/2026-05-07-openai-gpt-55-cyber-trusted-access/). The same announcement also introduced Codex Security for open source maintainers and a Codex Security plugin for moving from threat modeling to discovery, validation, attack-path analysis, and verified fixes.
 - **May 3, 2026:** [Codex Desktop added Pets, Hatch, and config imports](/news/2026-05-03-openai-codex-pets-config-imports/), a small but visible sign that OpenAI is turning Codex into a persistent desktop workbench.
 
@@ -266,7 +268,7 @@ Prices verified 2026-04-18 via [OpenAI Codex pricing](https://developers.openai.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation and multi-source news coverage, verifies facts against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-05-09 against OpenAI's Codex docs, the Codex rate card, the [May 7 GPT-5.5-Cyber and Codex Security update](/news/2026-05-07-openai-gpt-55-cyber-trusted-access/), and multi-source coverage including the April 16 super-app update announcement.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation and multi-source news coverage, verifies facts against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-05-11 against OpenAI's Codex docs, the Codex rate card, the [May 7 Codex for Chrome update](/news/2026-05-07-openai-codex-chrome-extension/), the [May 7 GPT-5.5-Cyber and Codex Security update](/news/2026-05-07-openai-gpt-55-cyber-trusted-access/), and multi-source coverage including the April 16 super-app update announcement.
 
 ## FAQ
 
@@ -306,6 +308,7 @@ Yes. ChatGPT Business at $25/user/mo. Plus Codex-only seats with pay-as-you-go t
 - [OpenAI: Codex pricing](https://developers.openai.com/codex/pricing)
 - [OpenAI: Codex rate card](https://help.openai.com/en/articles/20001106-codex-rate-card)
 - [OpenAI: Codex flexible pricing for teams](https://openai.com/index/codex-flexible-pricing-for-teams/)
+- [Codex for Chrome coverage](/news/2026-05-07-openai-codex-chrome-extension/)
 - [Codex Desktop Pets and config-import update](/news/2026-05-03-openai-codex-pets-config-imports/)
 - [Codex Desktop super-app coverage](/news/2026-04-16-openai-codex-desktop-super-app/)
 - [Builder.io: Codex vs Claude Code comparison](https://www.builder.io/blog/codex-vs-claude-code)
@@ -318,4 +321,4 @@ Yes. ChatGPT Business at $25/user/mo. Plus Codex-only seats with pay-as-you-go t
 - **Category:** [AI Coding](/categories/ai-coding/)
 - **Parent product:** [ChatGPT](/tools/chatgpt/) (Codex ships inside every paid ChatGPT tier)
 - **Direct competitors:** [Claude Code](/tools/claude-code/) · [Cursor](/tools/cursor/) · [Devin](/tools/devin/) · [Aider](/tools/aider/) · [GitHub Copilot](/tools/github-copilot/) · [Replit Agent](/tools/replit-agent/) · [Windsurf](/tools/windsurf/)
-- **News:** [Codex Desktop super-app](/news/2026-04-16-openai-codex-desktop-super-app/) · [Pro tier launch](/news/2026-04-09-chatgpt-pro-100-tier-launch/)
+- **News:** [Codex for Chrome](/news/2026-05-07-openai-codex-chrome-extension/) · [Codex Desktop super-app](/news/2026-04-16-openai-codex-desktop-super-app/) · [Pro tier launch](/news/2026-04-09-chatgpt-pro-100-tier-launch/)

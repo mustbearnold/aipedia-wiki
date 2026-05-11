@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "Free open-weight downloads / hosted API priced per model"
 status: active
 launched: 2023-09
-last_updated: 2026-05-10
-last_verified: 2026-05-10
+last_updated: 2026-05-11
+last_verified: 2026-05-11
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,8 +31,8 @@ facts:
     source: "https://qwen.ai/"
     source_label: "Qwen official site"
     source_id: qwen-official
-    verified_at: 2026-05-10
-    next_review_at: 2026-08-10
+    verified_at: 2026-05-11
+    next_review_at: 2026-08-11
     volatility: high
     confidence: high
   model_surface:
@@ -40,8 +40,8 @@ facts:
     source: "https://qwenlm.github.io/blog/qwen3/"
     source_label: "Qwen3 blog"
     source_id: qwen-blog
-    verified_at: 2026-05-10
-    next_review_at: 2026-08-10
+    verified_at: 2026-05-11
+    next_review_at: 2026-08-11
     volatility: high
     confidence: high
   pricing_anchor:
@@ -49,8 +49,8 @@ facts:
     source: "https://www.alibabacloud.com/help/en/model-studio/model-pricing"
     source_label: "Alibaba Cloud Model Studio pricing"
     source_id: qwen-pricing
-    verified_at: 2026-05-10
-    next_review_at: 2026-08-10
+    verified_at: 2026-05-11
+    next_review_at: 2026-08-11
     volatility: high
     confidence: high
   deployment_surface:
@@ -58,8 +58,8 @@ facts:
     source: "https://qwen.ai/"
     source_label: "Qwen official site"
     source_id: qwen-official
-    verified_at: 2026-05-10
-    next_review_at: 2026-08-10
+    verified_at: 2026-05-11
+    next_review_at: 2026-08-11
     volatility: high
     confidence: medium
   watch_out_for:
@@ -67,8 +67,8 @@ facts:
     source: "https://qwenlm.github.io/blog/qwen3/"
     source_label: "Qwen3 blog"
     source_id: qwen-blog
-    verified_at: 2026-05-10
-    next_review_at: 2026-08-10
+    verified_at: 2026-05-11
+    next_review_at: 2026-08-11
     volatility: high
     confidence: high
 tags: [open-weights, alibaba, multilingual, coding, vision, reasoning, qwen3, api, chinese-llm]
@@ -96,7 +96,8 @@ The official Qwen3 release includes two open-weight MoE models, **Qwen3-235B-A22
 
 ## Recent developments
 
-- **May 10, 2026:** AiPedia refreshed this page against official Qwen, Alibaba Cloud Model Studio, Hugging Face, and OpenAI comparison sources. Unsupported Qwen3.6/proprietary flagship claims were removed from the evergreen review until primary sources support them.
+- **May 11, 2026:** AiPedia refreshed this page against official Qwen, Alibaba Cloud Model Studio, Hugging Face, and current Qwen3.6 coverage. Unsupported Qwen3.6/proprietary flagship claims remain excluded from the evergreen review until primary sources support them.
+- **April 16, 2026:** [Third-party coverage reported a Qwen3.6-35B-A3B sparse MoE release](/news/2026-04-16-qwen-3-6-35b-a3b-release/). AiPedia is tracking it as market signal, but this evergreen page keeps the official Qwen3 open-weight line as the buyer-facing baseline until primary source support is clear.
 - **April 30, 2026:** [Alibaba-linked Metis showed an 8B Qwen3-VL-based agent can improve by calling tools less](/news/2026-04-30-alibaba-metis-agent-tool-use-hdpo/). The HDPO-trained model reduces blind tool calls from 98% to 2% in the project reports, making tool abstention a useful Qwen ecosystem signal.
 - **April 19, 2026:** [Alibaba Amap debuts first embodied robot at Beijing Humanoid Robot Half Marathon](/news/2026-04-19-beijing-humanoid-robot-half-marathon-alibaba-abot/). Quadruped from Amap's new embodied-intelligence division, powered by Alibaba's ABot-World model (leads AGIbot World Challenge and World Arena benchmarks). Moves Alibaba from Qwen-as-foundation into first-party robotics alongside the model family.
 
@@ -123,7 +124,7 @@ The official Qwen3 release includes two open-weight MoE models, **Qwen3-235B-A22
 | **Example hosted rate** | qwen-max listed at $1.60/M input and $6.40/M output on Model Studio |
 | **Batch invocation** | 50% off real-time pricing on supported models |
 
-Every data point above was verified on 2026-05-10. See Sources.
+Every data point above was verified on 2026-05-11. See Sources.
 
 ## What it actually is
 
@@ -163,7 +164,7 @@ Hosted pricing via [Alibaba Cloud Model Studio](https://www.alibabacloud.com/hel
 | qwen-max example | $1.60/M input, $6.40/M output | Listed on Model Studio's Qwen-Max pricing table as of May 10, 2026 |
 | Batch invocation | 50% off real-time | Supported models only |
 
-*Prices verified 2026-05-10 via [Alibaba Cloud Model Studio pricing](https://www.alibabacloud.com/help/en/model-studio/model-pricing). Third-party gateways can be useful, but their rates and model availability are separate from Alibaba's official pricing.*
+*Prices verified 2026-05-11 via [Alibaba Cloud Model Studio pricing](https://www.alibabacloud.com/help/en/model-studio/model-pricing). Third-party gateways can be useful, but their rates and model availability are separate from Alibaba's official pricing.*
 
 ## Against the alternatives
 
@@ -187,7 +188,7 @@ Hosted pricing via [Alibaba Cloud Model Studio](https://www.alibabacloud.com/hel
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-05-10 against [Alibaba Cloud Model Studio pricing](https://www.alibabacloud.com/help/en/model-studio/model-pricing), [Qwen official site](https://qwen.ai/), [Qwen3 blog](https://qwenlm.github.io/blog/qwen3/), and [Hugging Face Qwen](https://huggingface.co/Qwen).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-05-11 against [Alibaba Cloud Model Studio pricing](https://www.alibabacloud.com/help/en/model-studio/model-pricing), [Qwen official site](https://qwen.ai/), [Qwen3 blog](https://qwenlm.github.io/blog/qwen3/), [Hugging Face Qwen](https://huggingface.co/Qwen), and the tracked [Qwen3.6-35B-A3B news signal](/news/2026-04-16-qwen-3-6-35b-a3b-release/).
 
 ## FAQ
 
