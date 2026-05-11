@@ -478,8 +478,8 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-08 | /tools/veo/ | Tool | Yes | frontmatter | src/content/tools/veo.md |
 | 2026-05-08 | /tools/vidu/ | Tool | Yes | frontmatter | src/content/tools/vidu.md |
 | 2026-05-08 | /tools/wan/ | Tool | Yes | frontmatter | src/content/tools/wan.md |
-| 2026-05-11 | / | Static page | Yes | editorial refresh | src/pages/index.astro |
-| 2026-05-11 | /answers/ | Static page | Yes | editorial refresh | src/pages/answers/index.astro |
+| 2026-05-09 | / | Static page | Yes | git | src/pages/index.astro |
+| 2026-05-09 | /answers/ | Static page | Yes | git | src/pages/answers/index.astro |
 | 2026-05-09 | /answers/best-ai-chatbot-2026/ | Static page | Yes | page metadata | src/pages/answers/best-ai-chatbot-2026.astro |
 | 2026-05-09 | /answers/best-ai-coding-tool-2026/ | Static page | Yes | page metadata | src/pages/answers/best-ai-coding-tool-2026.astro |
 | 2026-05-09 | /answers/best-ai-for-students/ | Static page | Yes | page metadata | src/pages/answers/best-ai-for-students.astro |
@@ -492,25 +492,25 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-09 | /answers/chatgpt-vs-claude-which-is-better/ | Static page | Yes | page metadata | src/pages/answers/chatgpt-vs-claude-which-is-better.astro |
 | 2026-05-09 | /answers/is-cursor-worth-it/ | Static page | Yes | page metadata | src/pages/answers/is-cursor-worth-it.astro |
 | 2026-05-09 | /answers/is-midjourney-worth-it/ | Static page | Yes | page metadata | src/pages/answers/is-midjourney-worth-it.astro |
-| 2026-05-11 | /categories/ | Static page | Yes | editorial refresh | src/pages/categories/index.astro |
+| 2026-05-09 | /categories/ | Static page | Yes | git | src/pages/categories/index.astro |
 | 2026-05-09 | /categories/ai-automation/ | Category | Yes | frontmatter | src/content/categories/ai-automation.md |
-| 2026-05-11 | /categories/ai-chatbots/ | Category | Yes | editorial refresh | src/content/categories/ai-chatbots.md |
-| 2026-05-11 | /categories/ai-coding/ | Category | Yes | editorial refresh | src/content/categories/ai-coding.md |
+| 2026-05-09 | /categories/ai-chatbots/ | Category | Yes | frontmatter | src/content/categories/ai-chatbots.md |
+| 2026-05-09 | /categories/ai-coding/ | Category | Yes | frontmatter | src/content/categories/ai-coding.md |
 | 2026-05-09 | /categories/ai-design/ | Category | Yes | frontmatter | src/content/categories/ai-design.md |
 | 2026-05-09 | /categories/ai-image/ | Category | Yes | frontmatter | src/content/categories/ai-image.md |
-| 2026-05-11 | /categories/ai-infrastructure/ | Category | Yes | editorial refresh | src/content/categories/ai-infrastructure.md |
+| 2026-05-09 | /categories/ai-infrastructure/ | Category | Yes | frontmatter | src/content/categories/ai-infrastructure.md |
 | 2026-05-09 | /categories/ai-music/ | Category | Yes | frontmatter | src/content/categories/ai-music.md |
 | 2026-05-09 | /categories/ai-notes/ | Category | Yes | frontmatter | src/content/categories/ai-notes.md |
 | 2026-05-09 | /categories/ai-presentation/ | Category | Yes | frontmatter | src/content/categories/ai-presentation.md |
 | 2026-05-09 | /categories/ai-research/ | Category | Yes | frontmatter | src/content/categories/ai-research.md |
-| 2026-05-11 | /categories/ai-search/ | Category | Yes | editorial refresh | src/content/categories/ai-search.md |
+| 2026-05-09 | /categories/ai-search/ | Category | Yes | frontmatter | src/content/categories/ai-search.md |
 | 2026-05-09 | /categories/ai-seo/ | Category | Yes | frontmatter | src/content/categories/ai-seo.md |
 | 2026-05-09 | /categories/ai-video/ | Category | Yes | frontmatter | src/content/categories/ai-video.md |
-| 2026-05-11 | /categories/ai-voice/ | Category | Yes | editorial refresh | src/content/categories/ai-voice.md |
+| 2026-05-09 | /categories/ai-voice/ | Category | Yes | frontmatter | src/content/categories/ai-voice.md |
 | 2026-05-09 | /categories/ai-writing/ | Category | Yes | frontmatter | src/content/categories/ai-writing.md |
-| 2026-05-11 | /compare/ | Static page | Yes | editorial refresh | src/pages/compare/index.astro |
-| 2026-05-11 | /explore/ | Static page | Yes | editorial refresh | src/pages/explore/index.astro |
-| 2026-05-11 | /guides/ | Static page | Yes | editorial refresh | src/pages/guides/index.astro |
+| 2026-05-09 | /compare/ | Static page | Yes | git | src/pages/compare/index.astro |
+| 2026-05-09 | /explore/ | Static page | Yes | git | src/pages/explore/index.astro |
+| 2026-05-09 | /guides/ | Static page | Yes | git | src/pages/guides/index.astro |
 | 2026-05-09 | /guides/ai-agency-stack/ | Guide | Yes | frontmatter | src/content/use-cases/ai-agency-stack.md |
 | 2026-05-09 | /guides/ai-content-creator-stack/ | Guide | Yes | frontmatter | src/content/use-cases/ai-content-creator-stack.md |
 | 2026-05-09 | /guides/ai-content-pipeline/ | Guide | No | frontmatter | src/content/use-cases/ai-content-pipeline.md |
@@ -596,14 +596,13 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-09 | /guides/runway-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/runway-alternatives.md |
 | 2026-05-09 | /guides/suno-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/suno-alternatives.md |
 | 2026-05-09 | /guides/synthesia-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/synthesia-alternatives.md |
-| 2026-05-11 | /llms-full.txt | Crawl surface | No | editorial refresh | src/pages/llms-full.txt.ts |
-| 2026-05-11 | /llms.txt | Crawl surface | No | editorial refresh | src/pages/llms.txt.ts |
-| 2026-05-11 | /news/ | Static page | Yes | editorial refresh | src/pages/news/index.astro |
-| 2026-05-11 | /sitemap-index.xml | Crawl surface | No | editorial refresh | astro.config.mjs |
+| 2026-05-09 | /llms-full.txt | Crawl surface | No | git | src/pages/llms-full.txt.ts |
+| 2026-05-09 | /llms.txt | Crawl surface | No | git | src/pages/llms.txt.ts |
+| 2026-05-09 | /news/ | Static page | Yes | git | src/pages/news/index.astro |
+| 2026-05-09 | /sitemap-index.xml | Crawl surface | No | git | astro.config.mjs |
 | 2026-05-09 | /stack-builder/ | Static page | Yes | git | src/pages/stack-builder/index.astro |
-| 2026-05-11 | /tools/ | Static page | Yes | editorial refresh | src/pages/tools/index.astro |
+| 2026-05-09 | /tools/ | Static page | Yes | git | src/pages/tools/index.astro |
 | 2026-05-09 | /tools/chatgpt/ | Tool | Yes | frontmatter | src/content/tools/chatgpt.md |
-| 2026-05-09 | /tools/claude/ | Tool | Yes | frontmatter | src/content/tools/claude.md |
 | 2026-05-09 | /tools/eightfold-ai/ | Tool | Yes | frontmatter | src/content/tools/eightfold-ai.md |
 | 2026-05-09 | /tools/github-copilot/ | Tool | Yes | frontmatter | src/content/tools/github-copilot.md |
 | 2026-05-09 | /tools/grok/ | Tool | Yes | frontmatter | src/content/tools/grok.md |
@@ -616,7 +615,7 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-09 | /tools/paradox/ | Tool | Yes | frontmatter | src/content/tools/paradox.md |
 | 2026-05-09 | /tools/pipedream/ | Tool | Yes | frontmatter | src/content/tools/pipedream.md |
 | 2026-05-09 | /tools/pixverse/ | Tool | Yes | frontmatter | src/content/tools/pixverse.md |
-| 2026-05-11 | /workflows/ | Static page | Yes | editorial refresh | src/pages/workflows/index.astro |
+| 2026-05-09 | /workflows/ | Static page | Yes | git | src/pages/workflows/index.astro |
 | 2026-05-09 | /workflows/agentic-coding-workflow/ | Workflow | Yes | frontmatter | src/content/workflows/agentic-coding-workflow.md |
 | 2026-05-09 | /workflows/design-agency-replacement/ | Workflow | Yes | frontmatter | src/content/workflows/design-agency-replacement.md |
 | 2026-05-09 | /workflows/micro-saas-weekend-build/ | Workflow | Yes | frontmatter | src/content/workflows/micro-saas-weekend-build.md |
@@ -666,7 +665,7 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-10 | /compare/gemini-vs-grok/ | Comparison | Yes | frontmatter | src/content/comparisons/gemini-vs-grok.md |
 | 2026-05-10 | /compare/ideogram-vs-midjourney/ | Comparison | Yes | frontmatter | src/content/comparisons/ideogram-vs-midjourney.md |
 | 2026-05-10 | /compare/midjourney-vs-flux/ | Comparison | Yes | frontmatter | src/content/comparisons/midjourney-vs-flux.md |
-| 2026-05-11 | /news/rss.xml | Crawl surface | No | editorial refresh | src/pages/news/rss.xml.ts |
+| 2026-05-10 | /news/rss.xml | Crawl surface | No | git | src/pages/news/rss.xml.ts |
 | 2026-05-10 | /privacy/ | Static page | Yes | git | src/pages/privacy.astro |
 | 2026-05-10 | /reports/ | Static page | Yes | git | src/pages/reports/index.astro |
 | 2026-05-10 | /reports/2026-04/ | Report | Yes | frontmatter | src/content/reports/2026-04.md |
@@ -692,7 +691,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-10 | /tools/mem/ | Tool | Yes | frontmatter | src/content/tools/mem.md |
 | 2026-05-10 | /tools/otter-ai/ | Tool | Yes | frontmatter | src/content/tools/otter-ai.md |
 | 2026-05-10 | /tools/qodo/ | Tool | Yes | frontmatter | src/content/tools/qodo.md |
-| 2026-05-11 | /tools/qwen/ | Tool | Yes | working tree | src/content/tools/qwen.md |
 | 2026-05-10 | /tools/retell-ai/ | Tool | Yes | frontmatter | src/content/tools/retell-ai.md |
 | 2026-05-10 | /tools/riverside/ | Tool | Yes | frontmatter | src/content/tools/riverside.md |
 | 2026-05-10 | /tools/rork/ | Tool | Yes | frontmatter | src/content/tools/rork.md |
@@ -707,11 +705,13 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-10 | /tools/wispr-flow/ | Tool | Yes | frontmatter | src/content/tools/wispr-flow.md |
 | 2026-05-10 | /tools/workato/ | Tool | Yes | frontmatter | src/content/tools/workato.md |
 | 2026-05-10 | /tools/zapier/ | Tool | Yes | frontmatter | src/content/tools/zapier.md |
-| 2026-05-11 | /trends/ | Static page | Yes | editorial refresh | src/pages/trends/index.astro |
+| 2026-05-10 | /trends/ | Static page | Yes | git | src/pages/trends/index.astro |
 | 2026-05-10 | /trends/ai-coding-model-arms-race/ | Trend | Yes | frontmatter | src/content/trends/ai-coding-model-arms-race.md |
 | 2026-05-10 | /trends/ai-memory-layer/ | Trend | Yes | frontmatter | src/content/trends/ai-memory-layer.md |
 | 2026-05-10 | /trends/ai-supply-chain-security/ | Trend | Yes | frontmatter | src/content/trends/ai-supply-chain-security.md |
 | 2026-05-10 | /trends/enterprise-agent-platforms/ | Trend | Yes | frontmatter | src/content/trends/enterprise-agent-platforms.md |
 | 2026-05-10 | /trends/sovereign-ai-procurement/ | Trend | Yes | frontmatter | src/content/trends/sovereign-ai-procurement.md |
-| 2026-05-11 | /tools/codex/ | Tool | Yes | working tree | src/content/tools/codex.md |
-| 2026-05-11 | /tools/perplexity/ | Tool | Yes | working tree | src/content/tools/perplexity.md |
+| 2026-05-11 | /tools/claude/ | Tool | Yes | working tree | src/content/tools/claude.md |
+| 2026-05-11 | /tools/codex/ | Tool | Yes | frontmatter | src/content/tools/codex.md |
+| 2026-05-11 | /tools/perplexity/ | Tool | Yes | frontmatter | src/content/tools/perplexity.md |
+| 2026-05-11 | /tools/qwen/ | Tool | Yes | frontmatter | src/content/tools/qwen.md |

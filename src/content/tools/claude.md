@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2023-03
-last_updated: 2026-05-09
-last_verified: 2026-05-09
+last_updated: 2026-05-11
+last_verified: 2026-05-11
 update_frequency: monthly
 seo_title: "Claude: Features, Pricing & Review (2026)"
 meta_description: "Claude runs Opus 4.7 (April 16, 2026) as flagship, Sonnet 4.6, Haiku 4.5. Claude Design (April 17) added for prompt-to-prototype. 1M context, $5/$25 per MTok API. Free tier; Pro $20/mo."
@@ -34,61 +34,61 @@ facts:
     source: "https://platform.claude.com/docs/en/about-claude/models/overview"
     source_label: "Anthropic model docs"
     source_id: anthropic-docs
-    verified_at: 2026-05-03
+    verified_at: 2026-05-11
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-11
   context_window:
     value: "1M tokens on Opus 4.7 and Sonnet 4.6; 200K tokens on Haiku 4.5"
     source: "https://platform.claude.com/docs/en/about-claude/models/overview"
     source_label: "Anthropic model docs"
     source_id: anthropic-docs
-    verified_at: 2026-05-03
+    verified_at: 2026-05-11
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-11
   pricing_anchor:
     value: "Free; Pro $20/mo or $17/mo annual; Max from $100/mo; Team/Enterprise custom; API Opus 4.7 is $5 input / $25 output per MTok"
     source: "https://claude.com/pricing"
     source_label: "Claude pricing"
     source_id: claude-pricing
-    verified_at: 2026-05-03
+    verified_at: 2026-05-11
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-11
   free_plan:
     value: "Yes — web, mobile, and desktop chat with writing, code/data work, image analysis, web search, memory, file creation, connectors, MCP, and limits"
     source: "https://claude.com/pricing"
     source_label: "Claude pricing"
     source_id: claude-pricing
-    verified_at: 2026-05-03
+    verified_at: 2026-05-11
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-11
   best_paid_tier:
     value: "Pro for most individuals; Max for heavy Claude Code, high-output, or early-feature workloads"
     source: "https://claude.com/pricing"
     source_label: "Claude pricing"
     source_id: claude-pricing
-    verified_at: 2026-05-03
+    verified_at: 2026-05-11
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-11
   api_available:
     value: "Yes — Claude API plus Amazon Bedrock, Google Vertex AI, and Microsoft Foundry availability"
     source: "https://platform.claude.com/docs/en/about-claude/models/overview"
     source_label: "Anthropic model docs"
     source_id: anthropic-docs
-    verified_at: 2026-05-03
+    verified_at: 2026-05-11
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-11
   image_generation:
     value: "No native image generation; current Claude models support image input and vision"
     source: "https://platform.claude.com/docs/en/about-claude/models/overview"
     source_label: "Anthropic model docs"
     source_id: anthropic-docs
-    verified_at: 2026-05-03
+    verified_at: 2026-05-11
     volatility: medium
     confidence: high
   video_generation:
@@ -96,7 +96,7 @@ facts:
     source: "https://platform.claude.com/docs/en/about-claude/models/overview"
     source_label: "Anthropic model docs"
     source_id: anthropic-docs
-    verified_at: 2026-05-03
+    verified_at: 2026-05-11
     volatility: medium
     confidence: high
   real_time_voice:
@@ -104,7 +104,7 @@ facts:
     source: "https://claude.com/pricing"
     source_label: "Claude pricing"
     source_id: claude-pricing
-    verified_at: 2026-05-03
+    verified_at: 2026-05-11
     volatility: medium
     confidence: high
   web_browsing:
@@ -112,43 +112,43 @@ facts:
     source: "https://platform.claude.com/docs/en/agents-and-tools/tool-use/web-search-tool"
     source_label: "Anthropic web search docs"
     source_id: anthropic-docs
-    verified_at: 2026-05-03
+    verified_at: 2026-05-11
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-11
   coding_agent:
     value: "Yes — Claude Code is included in Pro and higher plans and supported with commercial organization/API usage"
     source: "https://claude.com/pricing"
     source_label: "Claude pricing"
     source_id: claude-pricing
-    verified_at: 2026-05-03
+    verified_at: 2026-05-11
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-11
   enterprise_controls:
     value: "SSO, domain capture, central billing/admin, connector controls, desktop deployment, RBAC, SCIM, audit logs, usage analytics, Compliance API, HIPAA-ready options, and custom retention"
     source: "https://claude.com/pricing"
     source_label: "Claude pricing"
     source_id: claude-pricing
-    verified_at: 2026-05-03
+    verified_at: 2026-05-11
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-11
   data_retention_or_privacy:
     value: "API zero-data-retention scope is available; retained feature data is not used for model training without express permission"
     source: "https://platform.claude.com/docs/en/build-with-claude/api-and-data-retention"
     source_label: "Anthropic data-retention docs"
     source_id: anthropic-docs
-    verified_at: 2026-05-03
+    verified_at: 2026-05-11
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-11
   open_source_or_local:
     value: "No — Claude is proprietary and hosted by Anthropic or managed cloud partners"
     source: "https://platform.claude.com/docs/en/about-claude/models/overview"
     source_label: "Anthropic model docs"
     source_id: anthropic-docs
-    verified_at: 2026-05-03
+    verified_at: 2026-05-11
     volatility: low
     confidence: high
   best_for:
@@ -156,7 +156,7 @@ facts:
     source: "https://platform.claude.com/docs/en/about-claude/models/overview"
     source_label: "Anthropic model docs"
     source_id: anthropic-docs
-    verified_at: 2026-05-03
+    verified_at: 2026-05-11
     volatility: medium
     confidence: high
   watch_out_for:
@@ -164,7 +164,7 @@ facts:
     source: "https://claude.com/pricing"
     source_label: "Claude pricing"
     source_id: claude-pricing
-    verified_at: 2026-05-03
+    verified_at: 2026-05-11
     volatility: medium
     confidence: high
 tags: [chatbot, ai-assistant, writing, coding, reasoning, analysis, long-context, artifacts, claude-code, claude-design, extended-thinking, computer-use]
@@ -187,7 +187,7 @@ price_history:
     source: "https://claude.com/pricing"
     source_id: claude-pricing
     source_label: "Claude pricing"
-    verified_at: 2026-05-03
+    verified_at: 2026-05-11
     note: "New flagship released · per-token pricing matches Opus 4.6; effective cost rises 1.0-1.35x due to new tokenizer"
   - date: 2026-04-17
     plan: "Claude Design"
@@ -195,7 +195,7 @@ price_history:
     source: "https://claude.com/pricing"
     source_id: claude-pricing
     source_label: "Claude pricing"
-    verified_at: 2026-05-03
+    verified_at: 2026-05-11
     note: "New product: prompt-to-prototype tool for slides, mockups, one-pagers. Research preview. Available to Pro, Max, Team, Enterprise. Figma stock fell ~7% on the announcement."
   - date: 2026-04-17
     plan: "Pro"
@@ -203,7 +203,7 @@ price_history:
     source: "https://claude.com/pricing"
     source_id: claude-pricing
     source_label: "Claude pricing"
-    verified_at: 2026-05-03
+    verified_at: 2026-05-11
     note: "Verified, unchanged"
 ---
 
@@ -215,6 +215,8 @@ Anthropic's AI assistant. **Opus 4.7** is the flagship as of **April 16, 2026**,
 
 ## Recent developments
 
+- **May 10:** [Reports tied Anthropic to Akamai's $1.8B frontier-model cloud commitment](/news/2026-05-10-anthropic-akamai-cloud-deal/). The reporting reinforces that Claude capacity is becoming an infrastructure-market story, not just a model-quality story.
+- **May 9:** [FIS and Anthropic are developing a Claude-powered financial-crimes agent for banks](/news/2026-05-09-anthropic-fis-financial-crimes-agent/). The project pushes Claude deeper into regulated, evidence-heavy enterprise workflows where auditability matters as much as reasoning quality.
 - **May 6:** [Claude Managed Agents added dreaming, outcomes, and multiagent orchestration](/news/2026-05-06-claude-managed-agents-dreaming-outcomes-orchestration/). The release pushes Claude further into hosted agent infrastructure, with memory refinement, rubric-based outcomes, and parallel subagent work.
 - **May 6:** [Anthropic used SpaceX Colossus capacity to raise Claude Code and Opus API limits](/news/2026-05-06-anthropic-spacex-colossus-claude-limits/). Higher capacity reduces one of Claude's biggest friction points for heavy agent and coding workloads.
 - **May 5:** [ServiceNow Action Fabric opened governed enterprise actions to Claude and other AI agents](/news/2026-05-05-servicenow-action-fabric-ai-agent-system/). Claude Cowork is an early design-partner surface for routing enterprise requests through ServiceNow approval chains.
@@ -326,7 +328,7 @@ API pricing via [platform.claude.com](https://platform.claude.com/docs/en/about-
 
 Fast Mode beta on Opus at 6× rates ($30/$150). Batch API discounts all models 50%. Prompt caching drops cache-hit input to 10% of standard.
 
-Prices verified 2026-04-17 via [Anthropic pricing docs](https://platform.claude.com/docs/en/about-claude/pricing) and the [Opus 4.7 release coverage](https://venturebeat.com/technology/anthropic-releases-claude-opus-4-7-narrowly-retaking-lead-for-most-powerful-generally-available-llm).
+Prices verified 2026-05-11 via [Anthropic pricing docs](https://platform.claude.com/docs/en/about-claude/pricing) and the [Opus 4.7 release coverage](https://venturebeat.com/technology/anthropic-releases-claude-opus-4-7-narrowly-retaking-lead-for-most-powerful-generally-available-llm).
 
 **Opus 4.7 cost-impact note:** the per-token rate is unchanged from 4.6, but the new tokenizer produces **1.0 to 1.35× more tokens for the same input**. Budget-sensitive API workloads should benchmark their own prompts before migrating.
 
@@ -356,7 +358,7 @@ Prices verified 2026-04-17 via [Anthropic pricing docs](https://platform.claude.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-09 against Anthropic's [pricing docs](https://platform.claude.com/docs/en/about-claude/pricing), [model docs](https://platform.claude.com/docs/en/about-claude/models), the [Opus 4.7 release coverage](https://venturebeat.com/technology/anthropic-releases-claude-opus-4-7-narrowly-retaking-lead-for-most-powerful-generally-available-llm), the [May 7 GitHub Copilot Claude model notices](/news/2026-05-07-github-copilot-gpt41-claude-sonnet4-deprecations/), the [May 7 Copilot Rubber Duck update](/news/2026-05-07-github-copilot-rubber-duck-cross-model-review/), the [NEC partnership](/news/2026-04-24-anthropic-nec-ai-engineering-workforce/), and [reported Google-Anthropic investment coverage](/news/2026-04-24-google-anthropic-40b-investment/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-11 against Anthropic's [pricing docs](https://platform.claude.com/docs/en/about-claude/pricing), [model docs](https://platform.claude.com/docs/en/about-claude/models), the [Opus 4.7 release coverage](https://venturebeat.com/technology/anthropic-releases-claude-opus-4-7-narrowly-retaking-lead-for-most-powerful-generally-available-llm), the [May 10 reported Akamai cloud-deal coverage](/news/2026-05-10-anthropic-akamai-cloud-deal/), the [May 9 FIS financial-crimes agent coverage](/news/2026-05-09-anthropic-fis-financial-crimes-agent/), the [May 7 GitHub Copilot Claude model notices](/news/2026-05-07-github-copilot-gpt41-claude-sonnet4-deprecations/), the [May 7 Copilot Rubber Duck update](/news/2026-05-07-github-copilot-rubber-duck-cross-model-review/), the [NEC partnership](/news/2026-04-24-anthropic-nec-ai-engineering-workforce/), and [reported Google-Anthropic investment coverage](/news/2026-04-24-google-anthropic-40b-investment/).
 
 ## FAQ
 
