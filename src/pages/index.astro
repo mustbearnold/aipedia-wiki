@@ -165,17 +165,35 @@ function newsDateFmt(iso: string): string {
 
     {weeklyStream.length > 0 && (
       <nav class="gt-weekly" aria-label="What's new this week">
-        <p class="gt-weekly-label">This week</p>
-        <ol class="gt-weekly-list">
-          {weeklyStream.map((n) => (
-            <li class={`gt-weekly-item gt-weekly-${n.severity}`}>
-              <a href={`/news/${n.slug}/`}>
-                <time>{shortNewsDate(n.date)}</time>
-                <strong>{n.title}</strong>
-              </a>
-            </li>
-          ))}
-        </ol>
+        <div class="gt-weekly-head">
+          <p class="gt-weekly-label">
+            <span class="gt-livedot" aria-hidden="true"></span>
+            This week
+          </p>
+          <a href="/news/" class="gt-weekly-all">All news <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="gt-weekly-marquee" data-pause-on-hover>
+          <ol class="gt-weekly-track" aria-label="Recent stories">
+            {/* Render the list twice for seamless loop. The duplicate is
+                aria-hidden so screen readers only announce the first set. */}
+            {weeklyStream.map((n) => (
+              <li class={`gt-weekly-item gt-weekly-${n.severity}`}>
+                <a href={`/news/${n.slug}/`}>
+                  <time>{shortNewsDate(n.date)}</time>
+                  <strong>{n.title}</strong>
+                </a>
+              </li>
+            ))}
+            {weeklyStream.map((n) => (
+              <li class={`gt-weekly-item gt-weekly-${n.severity}`} aria-hidden="true">
+                <a href={`/news/${n.slug}/`} tabindex="-1">
+                  <time>{shortNewsDate(n.date)}</time>
+                  <strong>{n.title}</strong>
+                </a>
+              </li>
+            ))}
+          </ol>
+        </div>
       </nav>
     )}
 
@@ -303,40 +321,94 @@ function newsDateFmt(iso: string): string {
   </div>
 
   <style>
-    /* What's new this week ----------------------------------------- */
-    .gt-weekly { margin-bottom: 20px; }
+    /* What's new this week — auto-scrolling marquee ticker.
+       Two copies of the list inside .gt-weekly-track so the transform
+       can loop at -50% for a seamless wrap. CSS mask fades the edges
+       so cards drift in/out instead of being clipped at the viewport
+       boundary. Hover pauses; prefers-reduced-motion disables. */
+    .gt-weekly { margin-bottom: 24px; }
+    .gt-weekly-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      margin: 0 0 10px;
+    }
     .gt-weekly-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
       font-size: 11px;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.1em;
       color: var(--gt-subtle);
-      margin: 0 0 8px;
+      margin: 0;
     }
-    .gt-weekly-list {
-      list-style: none; padding: 0 18px 8px; margin: 0 -18px;
-      display: flex; gap: 8px;
-      overflow-x: auto;
-      scrollbar-width: none;
+    .gt-weekly-all {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--gt-accent);
+      text-decoration: none;
     }
-    .gt-weekly-list::-webkit-scrollbar { display: none; }
+    .gt-weekly-all:hover { color: var(--gt-accent-hover); }
+
+    .gt-weekly-marquee {
+      position: relative;
+      overflow: hidden;
+      margin: 0 -18px;
+      padding: 4px 0;
+      -webkit-mask-image: linear-gradient(
+        to right,
+        transparent 0,
+        #000 32px,
+        #000 calc(100% - 32px),
+        transparent 100%
+      );
+      mask-image: linear-gradient(
+        to right,
+        transparent 0,
+        #000 32px,
+        #000 calc(100% - 32px),
+        transparent 100%
+      );
+    }
+
+    @keyframes gt-weekly-scroll {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+
+    .gt-weekly-track {
+      display: flex;
+      gap: 10px;
+      list-style: none;
+      padding: 0 18px;
+      margin: 0;
+      width: max-content;
+      animation: gt-weekly-scroll 50s linear infinite;
+    }
+    .gt-weekly-marquee[data-pause-on-hover]:hover .gt-weekly-track {
+      animation-play-state: paused;
+    }
+
     .gt-weekly-item {
       flex: 0 0 auto;
-      max-width: 280px;
+      width: 280px;
       border-radius: var(--gt-radius-sm);
       border: 1px solid var(--gt-line);
       background: var(--gt-surface);
     }
     .gt-weekly-breaking { border-left: 3px solid var(--gt-negative); }
-    .gt-weekly-major { border-left: 3px solid var(--gt-accent); }
-    .gt-weekly-minor { border-left: 3px solid var(--gt-line-strong); }
+    .gt-weekly-major    { border-left: 3px solid var(--gt-accent); }
+    .gt-weekly-minor    { border-left: 3px solid var(--gt-line-strong); }
     .gt-weekly-item:hover { background: var(--gt-surface-2); }
     .gt-weekly-item a {
       display: block;
-      padding: 10px 14px;
+      padding: 12px 14px;
       text-decoration: none;
       color: var(--gt-fg);
-      min-width: 200px;
+      height: 100%;
     }
     .gt-weekly-item time {
       display: block;
@@ -357,8 +429,17 @@ function newsDateFmt(iso: string): string {
       -webkit-box-orient: vertical;
       overflow: hidden;
     }
+
     @media (prefers-reduced-motion: reduce) {
-      .gt-weekly-list { scroll-behavior: auto; }
+      .gt-weekly-track {
+        animation: none;
+        flex-wrap: wrap;
+        width: auto;
+      }
+      .gt-weekly-marquee {
+        -webkit-mask-image: none;
+        mask-image: none;
+      }
     }
 
     /* Search ------------------------------------------------------- */
