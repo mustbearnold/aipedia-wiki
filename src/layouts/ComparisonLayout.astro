@@ -143,6 +143,7 @@ const rankLabel = featured ? `Winner: ${featured.title}` : undefined;
         statusActive={true}
         statusLabel="Winner"
         price={featured.price_range}
+        affiliate={Boolean(featured.affiliate?.link)}
       >
         <CommercialCTA
           slot="primary-cta"
@@ -154,11 +155,11 @@ const rankLabel = featured ? `Winner: ${featured.title}` : undefined;
           pricingModel={featured.pricing_model ?? null}
           priceRange={featured.price_range ?? null}
           pageType="comparison"
-          placement="comparison_hero_primary"
+          placement="comparison_hero_winner"
           pageSlug={slug}
           comparisonPair={tools.map((t) => t.slug).join(',')}
           className="gt-btn gt-btn-primary"
-          showDisclosure={false}
+          showDisclosure={Boolean(featured.affiliate?.link)}
           compareCtaMarker
           arrow="→"
         />
@@ -172,6 +173,7 @@ const rankLabel = featured ? `Winner: ${featured.title}` : undefined;
         {tools.map((t) => {
           const score = overallScore(t);
           const isFeatured = featured && t.slug === featured.slug;
+          const isAffiliate = Boolean(t.affiliate?.link);
           return (
             <li class={`gt-compare-row ${isFeatured ? 'is-featured' : ''}`}>
               <a href={`/tools/${t.slug}/`} class="gt-compare-link">
@@ -184,11 +186,56 @@ const rankLabel = featured ? `Winner: ${featured.title}` : undefined;
                   {score > 0 && <span class="gt-compare-score tabular-nums">{score}<span class="gt-compare-score-slash">/10</span></span>}
                 </div>
               </a>
+              <div class="gt-compare-cta-row">
+                <CommercialCTA
+                  toolName={t.title}
+                  toolSlug={t.slug}
+                  canonicalUrl={t.url ?? null}
+                  affiliateUrl={t.affiliate?.link ?? null}
+                  affiliateProgram={t.affiliate?.network ?? null}
+                  pricingModel={t.pricing_model ?? null}
+                  priceRange={t.price_range ?? null}
+                  pageType="comparison"
+                  placement={isFeatured ? 'comparison_winner_card' : 'comparison_tool_card'}
+                  pageSlug={slug}
+                  comparisonPair={tools.map((x) => x.slug).join(',')}
+                  className="gt-btn gt-btn-secondary gt-compare-cta"
+                  showDisclosure={isAffiliate}
+                  compareCtaMarker
+                  arrow="→"
+                />
+              </div>
             </li>
           );
         })}
       </ol>
     </section>
+
+    {featured && (
+      <section class="gt-compare-use-case" aria-labelledby="gt-compare-use-case-h">
+        <h2 id="gt-compare-use-case-h" class="gt-section-h">Best by use case</h2>
+        <div class="gt-compare-use-case-card">
+          <p>For most readers, <strong>{featured.title}</strong> is the right pick across pricing, feature surface, and team fit.</p>
+          <CommercialCTA
+            toolName={featured.title}
+            toolSlug={featured.slug}
+            canonicalUrl={featured.url ?? null}
+            affiliateUrl={featured.affiliate?.link ?? null}
+            affiliateProgram={featured.affiliate?.network ?? null}
+            pricingModel={featured.pricing_model ?? null}
+            priceRange={featured.price_range ?? null}
+            pageType="comparison"
+            placement="comparison_use_case_winner"
+            pageSlug={slug}
+            comparisonPair={tools.map((x) => x.slug).join(',')}
+            className="gt-btn gt-btn-primary"
+            showDisclosure={Boolean(featured.affiliate?.link)}
+            compareCtaMarker
+            arrow="→"
+          />
+        </div>
+      </section>
+    )}
 
     {canonicalFactTable && tools.length >= 2 && (
       <section class="gt-compare-table">
@@ -287,6 +334,29 @@ const rankLabel = featured ? `Winner: ${featured.title}` : undefined;
         text-align: right;
       }
       .gt-compare-price { flex: 0 0 auto; }
+    }
+
+    .gt-compare-cta-row {
+      padding: 0 14px 14px;
+      border-top: 1px solid var(--gt-line);
+      padding-top: 12px;
+    }
+    .gt-compare-cta { width: 100%; min-height: 40px; padding: 8px 14px; font-size: 13px; }
+    .gt-compare-row:hover .gt-compare-cta { background: var(--gt-surface-2); }
+
+    .gt-compare-use-case { margin-bottom: 40px; }
+    .gt-compare-use-case-card {
+      padding: 18px 20px;
+      border-radius: var(--gt-radius);
+      border: 1px solid var(--gt-line-strong);
+      background: linear-gradient(180deg, var(--gt-surface-2), var(--gt-surface));
+      border-left: 3px solid var(--gt-positive);
+    }
+    .gt-compare-use-case-card p {
+      margin: 0 0 14px;
+      font-size: 15px;
+      line-height: 1.55;
+      color: var(--gt-fg);
     }
 
     .gt-compare-table { margin-bottom: 40px; }

@@ -260,7 +260,7 @@ const tocItems = (headings ?? [])
         pageSlug={toolSlug}
         categorySlug={catSlug}
         className="gt-btn gt-btn-primary"
-        showDisclosure={false}
+        showDisclosure={isAffiliate}
         toolCtaMarker
         arrow="→"
       />
@@ -318,6 +318,27 @@ const tocItems = (headings ?? [])
         </aside>
       )}
     </div>
+
+    <section class="gt-tool-footer-cta" aria-label="Visit tool">
+      <p class="gt-tool-footer-cta-line">Ready to try {f.title}?</p>
+      <CommercialCTA
+        toolName={f.title}
+        toolSlug={toolSlug}
+        canonicalUrl={f.url}
+        affiliateUrl={affiliate?.link}
+        affiliateProgram={affiliate?.network}
+        pricingModel={f.pricing_model}
+        priceRange={f.price_range}
+        pageType="tool"
+        placement="tool_post_body"
+        pageSlug={toolSlug}
+        categorySlug={catSlug}
+        className="gt-btn gt-btn-primary"
+        showDisclosure={isAffiliate}
+        toolCtaMarker
+        arrow="→"
+      />
+    </section>
 
     {sources.length > 0 && (
       <TrustPanel sources={sources} affiliate={isAffiliate} />
@@ -576,6 +597,20 @@ const tocItems = (headings ?? [])
     }
 
     .gt-github { margin-bottom: 32px; }
+    .gt-tool-footer-cta {
+      margin: 32px 0;
+      padding: 20px;
+      border-radius: var(--gt-radius);
+      border: 1px solid var(--gt-line-strong);
+      background: linear-gradient(180deg, var(--gt-surface-2), var(--gt-surface));
+      text-align: center;
+    }
+    .gt-tool-footer-cta-line {
+      margin: 0 0 14px;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--gt-fg);
+    }
     .gt-body { margin-bottom: 40px; min-width: 0; }
     .gt-body :global(h2) {
       font-size: 24px;

@@ -142,6 +142,7 @@ const rankLabel = sorted.length > 0 ? `${sorted.length} tools verified` : undefi
         statusActive={true}
         statusLabel="Top pick"
         price={topPick.price_range}
+        affiliate={Boolean(topPick.affiliate?.link)}
       >
         <CommercialCTA
           slot="primary-cta"
@@ -153,11 +154,11 @@ const rankLabel = sorted.length > 0 ? `${sorted.length} tools verified` : undefi
           pricingModel={topPick.pricing_model ?? null}
           priceRange={topPick.price_range ?? null}
           pageType="category"
-          placement="category_hero_primary"
+          placement="category_top_pick"
           pageSlug={slug}
           categorySlug={slug}
           className="gt-btn gt-btn-primary"
-          showDisclosure={false}
+          showDisclosure={Boolean(topPick.affiliate?.link)}
           categoryCtaMarker
           arrow="→"
         />
@@ -171,6 +172,11 @@ const rankLabel = sorted.length > 0 ? `${sorted.length} tools verified` : undefi
         {sorted.map((t, i) => {
           const score = overallScore(t);
           const tone = score >= 8 ? 'positive' : score >= 6.5 ? 'neutral' : 'negative';
+          const isAffiliate = Boolean(t.affiliate?.link);
+          // Render an inline CommercialCTA on every tool so affiliate
+          // links surface no matter how a tool is ranked. Visually
+          // light — small secondary button below the link row.
+          const showInlineCta = true;
           return (
             <li class={`gt-tool-row gt-tool-row-${tone}`}>
               <a href={`/tools/${t.slug}/`} class="gt-tool-link">
@@ -184,6 +190,27 @@ const rankLabel = sorted.length > 0 ? `${sorted.length} tools verified` : undefi
                   {score > 0 && <span class="gt-tool-score tabular-nums">{score}<span class="gt-tool-score-slash">/10</span></span>}
                 </div>
               </a>
+              {showInlineCta && (
+                <div class="gt-tool-cta-row">
+                  <CommercialCTA
+                    toolName={t.title}
+                    toolSlug={t.slug}
+                    canonicalUrl={t.url ?? null}
+                    affiliateUrl={t.affiliate?.link ?? null}
+                    affiliateProgram={t.affiliate?.network ?? null}
+                    pricingModel={t.pricing_model ?? null}
+                    priceRange={t.price_range ?? null}
+                    pageType="category"
+                    placement="category_ranked_list"
+                    pageSlug={slug}
+                    categorySlug={slug}
+                    className="gt-btn gt-btn-secondary gt-tool-cta"
+                    showDisclosure={isAffiliate}
+                    categoryListCtaMarker
+                    arrow="→"
+                  />
+                </div>
+              )}
             </li>
           );
         })}
@@ -254,9 +281,20 @@ const rankLabel = sorted.length > 0 ? `${sorted.length} tools verified` : undefi
     .gt-tool-score { font-size: 16px; font-weight: 700; color: var(--gt-fg); }
     .gt-tool-score-slash { font-size: 11px; color: var(--gt-subtle); font-weight: 500; }
 
+    .gt-tool-cta-row {
+      padding: 0 14px 14px;
+      margin-top: -2px;
+    }
+    .gt-tool-cta {
+      width: 100%;
+      min-height: 40px;
+      padding: 8px 14px;
+      font-size: 13px;
+    }
     @media (min-width: 600px) {
       .gt-tool-link { padding: 16px 18px; gap: 18px; }
       .gt-tool-meta { flex-direction: row; align-items: baseline; gap: 16px; }
+      .gt-tool-cta-row { padding: 0 18px 16px; }
     }
   </style>
 </BaseLayout>

@@ -76,18 +76,30 @@ const sortedTools = [...tools]
   .filter((t) => t.status !== 'dead' && t.status !== 'retired' && t.status !== 'acquired')
   .sort((a, b) => overallScore(b) - overallScore(a));
 
+function bandFor(score: number): string {
+  if (score >= 9) return 'Top-tier';
+  if (score >= 8) return 'Strong';
+  if (score >= 6.5) return 'Useful';
+  return 'Niche';
+}
+
+function pickFromGuide(pickSlug?: string): ToolData | undefined {
+  if (!pickSlug) return undefined;
+  return tools.find((t) => t.slug === pickSlug);
+}
+
 // Featured pick: configured best_overall, fallback to highest score
 const bestOverallSlug = guidePicks?.best_overall?.tool;
 const featuredTool = (bestOverallSlug && sortedTools.find((t) => t.slug === bestOverallSlug)) ?? sortedTools[0];
 const featuredScore = featuredTool ? overallScore(featuredTool) : 0;
-const featuredBand = featuredScore >= 9
-  ? 'Top-tier'
-  : featuredScore >= 8
-    ? 'Strong'
-    : featuredScore >= 6.5
-      ? 'Useful'
-      : 'Niche';
+const featuredBand = bandFor(featuredScore);
 const featuredReason = guidePicks?.best_overall?.reason ?? '';
+
+// Optional tier picks — render their own decision cards if frontmatter
+// provided them, so each tier surfaces its own CTA at the audit-expected
+// placement (guide_decision_budget / guide_decision_pro_team).
+const budgetPickTool = pickFromGuide(guidePicks?.budget?.tool);
+const proTeamPickTool = pickFromGuide(guidePicks?.pro_team?.tool);
 
 const breadcrumbLdItems = [
   { name: 'Home', url: siteBase },
@@ -145,6 +157,7 @@ const robots = noindex ? 'noindex,nofollow' : undefined;
         statusActive={true}
         statusLabel="Best overall"
         price={featuredTool.price_range}
+        affiliate={Boolean(featuredTool.affiliate?.link)}
       >
         <CommercialCTA
           slot="primary-cta"
@@ -156,10 +169,10 @@ const robots = noindex ? 'noindex,nofollow' : undefined;
           pricingModel={featuredTool.pricing_model ?? null}
           priceRange={featuredTool.price_range ?? null}
           pageType="guide"
-          placement="guide_hero_primary"
+          placement="guide_decision_best_overall"
           pageSlug={slug}
           className="gt-btn gt-btn-primary"
-          showDisclosure={false}
+          showDisclosure={Boolean(featuredTool.affiliate?.link)}
           guideCtaMarker
           arrow="→"
         />
@@ -171,14 +184,76 @@ const robots = noindex ? 'noindex,nofollow' : undefined;
       <p class="gt-sub"><strong>Why:</strong> {featuredReason}</p>
     )}
 
+    {(budgetPickTool || proTeamPickTool) && (
+      <section class="gt-guide-tiers" aria-labelledby="gt-guide-tiers-h">
+        <h2 id="gt-guide-tiers-h" class="gt-section-h">By budget tier</h2>
+        <div class="gt-guide-tier-grid">
+          {budgetPickTool && (
+            <article class="gt-guide-tier-card gt-guide-tier-card-budget">
+              <p class="gt-guide-tier-kicker">Budget pick</p>
+              <strong class="gt-guide-tier-title">{budgetPickTool.title}</strong>
+              {guidePicks?.budget?.reason && (
+                <p class="gt-guide-tier-reason">{guidePicks.budget.reason}</p>
+              )}
+              <CommercialCTA
+                toolName={budgetPickTool.title}
+                toolSlug={budgetPickTool.slug}
+                canonicalUrl={budgetPickTool.url ?? null}
+                affiliateUrl={budgetPickTool.affiliate?.link ?? null}
+                affiliateProgram={budgetPickTool.affiliate?.network ?? null}
+                pricingModel={budgetPickTool.pricing_model ?? null}
+                priceRange={budgetPickTool.price_range ?? null}
+                pageType="guide"
+                placement="guide_decision_budget"
+                pageSlug={slug}
+                className="gt-btn gt-btn-secondary gt-guide-tier-cta"
+                showDisclosure={Boolean(budgetPickTool.affiliate?.link)}
+                guideCtaMarker
+                arrow="→"
+              />
+            </article>
+          )}
+          {proTeamPickTool && (
+            <article class="gt-guide-tier-card gt-guide-tier-card-pro">
+              <p class="gt-guide-tier-kicker">Pro / team pick</p>
+              <strong class="gt-guide-tier-title">{proTeamPickTool.title}</strong>
+              {guidePicks?.pro_team?.reason && (
+                <p class="gt-guide-tier-reason">{guidePicks.pro_team.reason}</p>
+              )}
+              <CommercialCTA
+                toolName={proTeamPickTool.title}
+                toolSlug={proTeamPickTool.slug}
+                canonicalUrl={proTeamPickTool.url ?? null}
+                affiliateUrl={proTeamPickTool.affiliate?.link ?? null}
+                affiliateProgram={proTeamPickTool.affiliate?.network ?? null}
+                pricingModel={proTeamPickTool.pricing_model ?? null}
+                priceRange={proTeamPickTool.price_range ?? null}
+                pageType="guide"
+                placement="guide_decision_pro_team"
+                pageSlug={slug}
+                className="gt-btn gt-btn-secondary gt-guide-tier-cta"
+                showDisclosure={Boolean(proTeamPickTool.affiliate?.link)}
+                guideCtaMarker
+                arrow="→"
+              />
+            </article>
+          )}
+        </div>
+      </section>
+    )}
+
     {sortedTools.length > 1 && (
       <section class="gt-guide-tools" aria-labelledby="gt-guide-h">
         <h2 id="gt-guide-h" class="gt-section-h">All tools in this guide</h2>
         <ol class="gt-tool-list">
-          {sortedTools.map((t) => {
+          {sortedTools.map((t, i) => {
             const score = overallScore(t);
             const isFeatured = featuredTool && t.slug === featuredTool.slug;
             const tone = score >= 8 ? 'positive' : score >= 6.5 ? 'neutral' : 'negative';
+            const isAffiliate = Boolean(t.affiliate?.link);
+            // Render CTAs on the top 5 tools so every guide hits the
+            // audit's min-CTA bar and surfaces ranked picks as actions.
+            const showInlineCta = i < 5;
             return (
               <li class={`gt-tool-row gt-tool-row-${tone} ${isFeatured ? 'is-featured' : ''}`}>
                 <a href={`/tools/${t.slug}/`} class="gt-tool-link">
@@ -191,6 +266,26 @@ const robots = noindex ? 'noindex,nofollow' : undefined;
                     {score > 0 && <span class="gt-tool-score tabular-nums">{score}<span class="gt-tool-score-slash">/10</span></span>}
                   </div>
                 </a>
+                {showInlineCta && (
+                  <div class="gt-tool-cta-row">
+                    <CommercialCTA
+                      toolName={t.title}
+                      toolSlug={t.slug}
+                      canonicalUrl={t.url ?? null}
+                      affiliateUrl={t.affiliate?.link ?? null}
+                      affiliateProgram={t.affiliate?.network ?? null}
+                      pricingModel={t.pricing_model ?? null}
+                      priceRange={t.price_range ?? null}
+                      pageType="guide"
+                      placement={isFeatured ? 'guide_top_pick' : 'guide_ranked_pick'}
+                      pageSlug={slug}
+                      className="gt-btn gt-btn-secondary gt-tool-cta"
+                      showDisclosure={isAffiliate}
+                      guideCtaMarker
+                      arrow="→"
+                    />
+                  </div>
+                )}
               </li>
             );
           })}
@@ -208,6 +303,61 @@ const robots = noindex ? 'noindex,nofollow' : undefined;
   </div>
 
   <style>
+    .gt-guide-tiers { margin-bottom: 40px; }
+    .gt-guide-tier-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+    .gt-guide-tier-card {
+      padding: 16px 18px;
+      border-radius: var(--gt-radius);
+      border: 1px solid var(--gt-line);
+      background: var(--gt-surface);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .gt-guide-tier-card-budget { border-left: 3px solid var(--gt-positive); }
+    .gt-guide-tier-card-pro { border-left: 3px solid var(--gt-accent); }
+    .gt-guide-tier-kicker {
+      margin: 0;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--gt-subtle);
+    }
+    .gt-guide-tier-title { font-size: 17px; font-weight: 700; }
+    .gt-guide-tier-reason {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.55;
+      color: var(--gt-muted);
+    }
+    .gt-guide-tier-cta {
+      margin-top: 4px;
+      width: 100%;
+      min-height: 44px;
+    }
+    @media (min-width: 700px) {
+      .gt-guide-tier-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    .gt-tool-cta-row {
+      padding: 0 14px 14px;
+      margin-top: -2px;
+    }
+    .gt-tool-cta {
+      width: 100%;
+      min-height: 40px;
+      padding: 8px 14px;
+      font-size: 13px;
+    }
+    @media (min-width: 600px) {
+      .gt-tool-cta-row { padding: 0 16px 14px; }
+    }
+
     .gt-guide-tools { margin-bottom: 40px; }
     .gt-tool-list {
       list-style: none; padding: 0; margin: 0;
