@@ -1,0 +1,1137 @@
+---
+import { getCollection } from 'astro:content';
+
+const allTools = await getCollection('tools');
+const toolsCount = allTools.filter(
+  (t) => t.data.status !== 'dead' && t.data.status !== 'retired' && t.data.status !== 'acquired'
+).length;
+---
+
+<style is:global>
+  /* Prevent default browser blue selection/visited styles inside modal. */
+  #search-modal ::selection {
+    background: rgba(249, 115, 22, 0.32);
+    color: var(--text-primary);
+  }
+  #search-modal a {
+    color: inherit;
+  }
+  #search-modal a:visited {
+    color: inherit;
+  }
+
+  /* Modal palette: warm charcoal (avoid cool casts). */
+  #search-modal {
+    --s-ink-line: rgba(255, 255, 255, 0.10);
+    --s-ink-line-soft: rgba(255, 255, 255, 0.08);
+    --s-ink-muted: rgba(255, 255, 255, 0.72);
+    --s-ink-muted-2: rgba(255, 255, 255, 0.62);
+    --s-warm-panel: rgb(14, 11, 9);
+    --s-warm-panel-2: rgb(26, 22, 20);
+  }
+
+  #search-modal {
+    display: none; /* toggled via .is-visible class, not inline style */
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    /* Mobile: anchor to TOP so the on-screen keyboard (which claims the
+       lower third of the viewport on iOS/Android) never overlaps the
+       input. Desktop centers the modal — keyboards are physical there. */
+    align-items: flex-start;
+    justify-content: center;
+    padding: calc(env(safe-area-inset-top, 0px) + 12px) 12px 12px;
+    pointer-events: none;
+  }
+  @media (min-width: 640px) {
+    #search-modal {
+      align-items: center;
+      padding: 0 1rem;
+    }
+  }
+  #search-modal.is-visible { display: flex; }
+  #search-modal.is-open    { pointer-events: all; }
+
+  /* Backdrop: dark editorial overlay with just enough blur to keep the
+     command surface connected to the current page without looking frosted. */
+  #search-backdrop {
+    position: absolute;
+    inset: 0;
+    /* Warm charcoal overlay (no slate tint). */
+    background: rgba(0, 0, 0, 0.72);
+    backdrop-filter: blur(12px) saturate(140%);
+    -webkit-backdrop-filter: blur(12px) saturate(140%);
+    opacity: 0;
+    transition: opacity 220ms ease;
+  }
+  #search-modal.is-open #search-backdrop {
+    opacity: 1;
+  }
+  /* Light theme */
+  html.light #search-backdrop {
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  #search-box {
+    position: relative;
+    width: 100%;
+    max-width: 720px;
+    /* dvh tracks the visible viewport (keyboard-aware on iOS 15.4+
+       and Android Chrome). Modal never exceeds what the user can see. */
+    max-height: calc(100dvh - 24px);
+    display: flex;
+    flex-direction: column;
+    /* Match homepage hero-results surface (warm blacks). */
+    background:
+      linear-gradient(180deg, var(--s-warm-panel-2), var(--s-warm-panel)),
+      #0f0d0c;
+    border: 1px solid rgba(249, 115, 22, 0.28);
+    border-radius: 12px;
+    box-shadow:
+      0 34px 90px rgba(0, 0, 0, 0.72),
+      0 0 0 1px rgba(255, 255, 255, 0.03),
+      0 0 42px rgba(249, 115, 22, 0.08);
+    overflow: hidden;
+    will-change: transform, opacity;
+  }
+  #search-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #f97316 0%, #fbbf24 72%, rgba(249, 115, 22, 0.72) 100%);
+    opacity: 0.85;
+    pointer-events: none;
+    z-index: 2;
+  }
+  #search-box-inner {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    flex: 1;
+    will-change: transform;
+  }
+  /* Light theme override */
+  html.light #search-box {
+    background:
+      linear-gradient(180deg, rgb(255, 255, 255), rgb(255, 251, 247)),
+      #fffdfb;
+    border-color: rgba(249, 115, 22, 0.24);
+  }
+
+  .s-panel-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 15px 18px 13px;
+    border-bottom: 1px solid var(--s-ink-line-soft);
+    background:
+      linear-gradient(90deg, rgba(253, 186, 116, 0.10), rgba(249, 115, 22, 0.04) 42%, transparent),
+      rgba(14, 11, 9, 0.46);
+  }
+  .s-panel-title {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+  }
+  .s-panel-eyebrow {
+    color: #fbbf24;
+    font-size: 10px;
+    font-weight: 850;
+    letter-spacing: 0.16em;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+  .s-panel-name {
+    color: var(--text-primary);
+    font-size: 15px;
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: 0;
+  }
+  .s-panel-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    color: var(--s-ink-muted-2);
+    font-size: 10px;
+    font-weight: 750;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .s-panel-meta span {
+    border: 1px solid var(--s-ink-line);
+    border-radius: 5px;
+    background: rgba(14, 11, 9, 0.70);
+    padding: 5px 8px;
+    white-space: nowrap;
+  }
+
+  .s-tabs {
+    position: relative;
+    display: flex;
+    gap: 4px;
+    padding: 8px 14px;
+    border-bottom: 1px solid var(--s-ink-line-soft);
+    background: rgba(14, 11, 9, 0.42);
+  }
+  html.light .s-tabs { border-bottom-color: rgba(0,0,0,0.06); }
+  .s-tab {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 10px;
+    font-size: 11px;
+    font-weight: 750;
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: var(--text-muted);
+    background: transparent;
+    border: none;
+    border-radius: 6px;
+    font-family: inherit;
+    line-height: 1.4;
+    transition: color 150ms ease;
+  }
+  .s-tab::after { display: none; }
+  .s-tab:hover {
+    color: var(--text-primary);
+  }
+  .s-tab:focus,
+  .s-tab:focus-visible {
+    outline: none;
+  }
+  .s-tab:focus-visible {
+    box-shadow: inset 0 0 0 1px rgba(253, 186, 116, 0.24);
+  }
+  .s-tab.active {
+    color: #f8fafc;
+    background: rgba(253, 186, 116, 0.12);
+    box-shadow: inset 0 0 0 1px rgba(253, 186, 116, 0.22);
+  }
+  .s-tab .s-count {
+    font-size: 10px;
+    font-weight: 800;
+    padding: 2px 7px;
+    border-radius: 5px;
+    background: rgba(253, 186, 116, 0.08);
+    border: 1px solid rgba(253, 186, 116, 0.16);
+    color: #fdba74;
+    font-variant-numeric: tabular-nums;
+    transition: background 160ms ease, color 160ms ease, border-color 160ms ease;
+  }
+  html.light .s-tab .s-count {
+    background: rgba(0,0,0,0.04);
+    border-color: rgba(0,0,0,0.08);
+  }
+  .s-tab.active .s-count {
+    background: rgba(253, 186, 116, 0.13);
+    border-color: rgba(253, 186, 116, 0.34);
+    color: #ffedd5;
+  }
+
+  /* Section label for default state */
+  .s-section {
+    padding: 14px 16px 6px;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--s-ink-muted-2);
+    opacity: 0.84;
+  }
+
+  #search-results {
+    /* Grows to fill remaining modal height, scrolls internally.
+       Falls back gracefully on browsers without dvh support. */
+    flex: 1;
+    min-height: 0;
+    max-height: 52vh;
+    max-height: calc(100dvh - 180px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+    padding: 6px 8px 10px;
+    /* Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: rgba(253, 186, 116, 0.28) transparent;
+  }
+  /* WebKit (Chrome / Edge / Safari) */
+  #search-results::-webkit-scrollbar {
+    width: 8px;
+  }
+  #search-results::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  #search-results::-webkit-scrollbar-thumb {
+    background: rgba(253, 186, 116, 0.25);
+    border-radius: 4px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+  }
+  #search-results::-webkit-scrollbar-thumb:hover {
+    background: rgba(249, 115, 22, 0.45);
+    background-clip: padding-box;
+    border: 2px solid transparent;
+  }
+
+  #search-results .s-result {
+    display: flex !important;
+    align-items: center;
+    gap: 13px;
+    padding: 11px 13px 11px 14px;
+    border-radius: 8px;
+    text-decoration: none !important;
+    color: inherit;
+    transition: background 140ms ease, transform 140ms ease, box-shadow 140ms ease, border-color 140ms ease;
+    margin: 1px 0 !important;
+    position: relative;
+    border: 1px solid transparent;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  #search-results .s-result:focus,
+  #search-results .s-result:focus-visible,
+  #search-results .g-result:focus,
+  #search-results .g-result:focus-visible {
+    outline: none;
+  }
+  #search-results .s-result:focus-visible,
+  #search-results .g-result:focus-visible {
+    background: rgba(26, 22, 20, 0.86);
+    border-color: rgba(253, 186, 116, 0.22);
+    box-shadow: inset 0 0 0 1px rgba(253, 186, 116, 0.32), 0 12px 26px rgba(0, 0, 0, 0.20);
+  }
+  /* Left-edge accent stripe — hidden at rest, slides in on hover/select. */
+  #search-results .s-result::before {
+    content: '';
+    position: absolute;
+    left: 3px;
+    top: 10px;
+    bottom: 10px;
+    width: 3px;
+    border-radius: 2px;
+    background: linear-gradient(180deg, #f97316, #fbbf24);
+    opacity: 0;
+    transform: translateX(-4px);
+    transition: opacity 160ms ease, transform 160ms ease;
+  }
+  #search-results .s-result:hover,
+  #search-results .s-result.is-selected,
+  #search-results .g-result.is-selected {
+    background: rgba(26, 22, 20, 0.86);
+    border-color: rgba(253, 186, 116, 0.18);
+  }
+  #search-results .s-result.is-selected::before,
+  #search-results .s-result:hover::before {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  #search-results .s-result.is-selected,
+  #search-results .g-result.is-selected {
+    box-shadow: inset 0 0 0 1px rgba(253, 186, 116, 0.28), 0 12px 26px rgba(0, 0, 0, 0.20);
+  }
+  #search-results .g-result {
+    padding: 10px 12px 10px 14px;
+    position: relative;
+  }
+  #search-results .g-result::before {
+    content: '';
+    position: absolute;
+    left: 3px;
+    top: 10px;
+    bottom: 10px;
+    width: 3px;
+    border-radius: 2px;
+    background: linear-gradient(180deg, #f97316, #fbbf24);
+    opacity: 0;
+    transform: translateX(-4px);
+    transition: opacity 160ms ease, transform 160ms ease;
+  }
+  #search-results .g-result:hover::before,
+  #search-results .g-result.is-selected::before {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  #search-results .s-icon {
+    width: 36px; height: 36px;
+    display: flex !important; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  #search-results .s-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    border-radius: 8px;
+    background: rgba(248, 250, 252, 0.96);
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.16);
+  }
+  #search-results .s-icon-fallback {
+    width: 36px;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background: rgba(14, 11, 9, 0.92);
+    border: 1px solid rgba(253, 186, 116, 0.22);
+    color: #fdba74;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+  }
+  #search-results .s-text { flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; gap: 1px; }
+  #search-results .s-name {
+    font-size: 13px; font-weight: 750; color: var(--text-primary);
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis; line-height: 1.3;
+  }
+  #search-results .s-sub {
+    font-size: 11px; color: var(--text-muted); line-height: 1.35;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  #search-results .s-price {
+    font-size: 10px; font-weight: 700; color: var(--s-ink-muted); flex-shrink: 0;
+    padding: 4px 7px; border-radius: 5px;
+    background: rgba(14, 11, 9, 0.78); border: 1px solid var(--s-ink-line);
+    white-space: nowrap;
+  }
+
+  /* General search (pagefind) results */
+  #search-results .g-result {
+    display: flex !important; flex-direction: column; gap: 2px;
+    padding: 11px 14px; border-radius: 8px;
+    text-decoration: none !important; color: inherit;
+    transition: background 100ms; margin: 0 !important;
+  }
+  #search-results .g-result:hover { background: var(--bg-card-hover); }
+  #search-results .g-title { font-size: 13px; font-weight: 600; color: var(--text-primary); }
+  #search-results .g-excerpt { font-size: 11px; color: var(--text-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; line-height: 1.4; }
+  #search-results mark {
+    background: rgba(253, 186, 116, 0.16); color: #ffedd5;
+    border-radius: 3px; padding: 0 2px;
+  }
+
+  .s-hint { font-size: 12px; color: var(--text-muted); text-align: center; padding: 20px 12px; }
+
+  /* Input row: taller, removes flex-shrink on icon, accent on focus */
+  .s-input-row {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 18px 20px;
+    border-bottom: 1px solid var(--s-ink-line-soft);
+    position: relative;
+    flex-shrink: 0;
+  }
+  html.light .s-input-row { border-bottom-color: rgba(0,0,0,0.06); }
+  .s-input-row svg {
+    flex-shrink: 0;
+    color: #fb923c;
+    opacity: 0.72;
+    transition: color 180ms ease, opacity 180ms ease;
+  }
+  .s-input-row:focus-within svg {
+    color: #fbbf24;
+    opacity: 1;
+  }
+  #search-input {
+    flex: 1;
+    background: transparent;
+    color: var(--text-primary);
+    font-size: 18px;
+    outline: none;
+    border: none;
+    font-family: inherit;
+    letter-spacing: 0;
+    min-width: 0;
+    caret-color: #fb923c;
+  }
+  #search-input::selection {
+    background: rgba(249, 115, 22, 0.32);
+    color: var(--text-primary);
+  }
+  /* Chrome/Edge autofill (can appear as blue/yellow tint). */
+  #search-input:-webkit-autofill,
+  #search-input:-webkit-autofill:hover,
+  #search-input:-webkit-autofill:focus,
+  #search-input:-webkit-autofill:active {
+    -webkit-text-fill-color: var(--text-primary);
+    transition: background-color 999999s ease-out 0s;
+    box-shadow: 0 0 0px 1000px rgba(0, 0, 0, 0) inset;
+    caret-color: #fb923c;
+  }
+  #search-input::placeholder {
+    color: var(--text-muted);
+    opacity: 0.7;
+  }
+  .s-esc-hint {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--text-muted);
+    border: 1px solid rgba(255,255,255,0.12);
+    background: rgba(255,255,255,0.04);
+    border-radius: 5px;
+    padding: 4px 7px;
+    font-family: inherit;
+    opacity: 0.7;
+    transition: opacity 160ms ease;
+  }
+  html.light .s-esc-hint {
+    border-color: rgba(0,0,0,0.12);
+    background: rgba(0,0,0,0.03);
+  }
+  .s-input-row:focus-within .s-esc-hint { opacity: 1; }
+
+  /* Keyboard footer — slim row of key hints at the bottom of the modal. */
+  .s-kbd-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px 14px;
+    border-top: 1px solid var(--s-ink-line-soft);
+    background: rgba(14, 11, 9, 0.48);
+    font-size: 10.5px;
+    color: var(--text-muted);
+    flex-shrink: 0;
+  }
+  html.light .s-kbd-footer {
+    border-top-color: rgba(0,0,0,0.06);
+    background: rgba(0,0,0,0.02);
+  }
+  .s-kbd-hints {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .s-kbd-group {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .s-kbd-key {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 5px;
+    border-radius: 4px;
+    border: 1px solid rgba(255,255,255,0.14);
+    background: rgba(255,255,255,0.04);
+    font-family: inherit;
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--text-secondary, #e5e7eb);
+  }
+  html.light .s-kbd-key {
+    border-color: rgba(0,0,0,0.14);
+    background: rgba(0,0,0,0.03);
+    color: #3f3f46;
+  }
+  .s-kbd-brand {
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    opacity: 0.75;
+  }
+  @media (max-width: 520px) {
+    .s-panel-head {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .s-panel-meta {
+      justify-content: flex-start;
+    }
+    .s-kbd-footer { display: none; }
+  }
+
+  .s-suggestions {
+    padding: 4px 14px 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .s-suggestion {
+    background: rgba(14, 11, 9, 0.80);
+    border: 1px solid var(--s-ink-line);
+    border-radius: 6px;
+    padding: 7px 10px;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-secondary);
+    cursor: pointer;
+    font-family: inherit;
+    transition: border-color 140ms ease, color 140ms ease, background 140ms ease;
+  }
+  .s-suggestion:hover {
+    background: rgba(253, 186, 116, 0.10);
+    border-color: rgba(253, 186, 116, 0.28);
+    color: #ffedd5;
+  }
+</style>
+
+<div id="search-modal" role="dialog" aria-modal="true" aria-label="Search">
+  <div id="search-backdrop"></div>
+  <div id="search-box">
+    <div id="search-box-inner">
+      <div class="s-panel-head">
+        <div class="s-panel-title">
+          <span class="s-panel-eyebrow">Aipedia Index</span>
+          <span class="s-panel-name">Search the AI tools wiki</span>
+        </div>
+        <div class="s-panel-meta" aria-hidden="true">
+          <span>{toolsCount} tools</span>
+          <span>All pages</span>
+        </div>
+      </div>
+      <!-- Input -->
+      <div class="s-input-row">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+        </svg>
+        <input id="search-input" type="text" placeholder="Search tools..."
+          autocomplete="off" spellcheck="false" />
+        <kbd class="s-esc-hint">Esc</kbd>
+      </div>
+      <!-- Tabs -->
+      <div class="s-tabs">
+        <button class="s-tab active" data-tab="tools">Tools <span class="s-count">{toolsCount}</span></button>
+        <button class="s-tab" data-tab="general">All Pages</button>
+      </div>
+      <!-- Results -->
+      <div id="search-results"></div>
+      <!-- Keyboard hints -->
+      <div class="s-kbd-footer" aria-hidden="true">
+        <div class="s-kbd-hints">
+          <span class="s-kbd-group"><span class="s-kbd-key">↑</span><span class="s-kbd-key">↓</span> navigate</span>
+          <span class="s-kbd-group"><span class="s-kbd-key">↵</span> open</span>
+          <span class="s-kbd-group"><span class="s-kbd-key">esc</span> close</span>
+        </div>
+        <span class="s-kbd-brand">aipedia.wiki</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  const SEARCH_INDEX_URL = '/api/search-tools.json';
+  const EMOJI = {
+    'ai-chatbots': 'AI',
+    'ai-coding': 'CD',
+    'ai-writing': 'WR',
+    'ai-image': 'IM',
+    'ai-video': 'VD',
+    'ai-voice': 'VO',
+    'ai-notes': 'NT',
+    'ai-search': 'SR',
+    'ai-seo': 'SE',
+    'ai-automation': 'AU',
+    'ai-design': 'DS',
+    'ai-music': 'MU',
+    'ai-presentation': 'PR',
+    'ai-research': 'RS',
+  };
+
+  window.__aipediaSearchData = window.__aipediaSearchData || { TOOLS: [], EMOJI };
+  window.__aipediaSearchData.EMOJI = EMOJI;
+  let TOOLS = Array.isArray(window.__aipediaSearchData.TOOLS)
+    ? window.__aipediaSearchData.TOOLS
+    : [];
+  let toolsPromise = null;
+  let toolsLoadFailed = false;
+
+  // If we've already initialised on this document, bail out (prevents duplicate listeners
+  // across Astro view transitions, which was causing the search to stop opening).
+  if (window.__aipediaSearchInit) return;
+  window.__aipediaSearchInit = true;
+
+  let pagefind = null;
+  let activeTab = 'tools';
+  let debounceTimer;
+  let searchAnalyticsTimer;
+  let lastTrackedSearchKey = '';
+  let lastSearchQuery = '';
+  const pendingSearchEvents = [];
+
+  // Lazy element getters — never cache. Always fetch fresh to survive view transitions.
+  const $ = (id) => document.getElementById(id);
+  function els() {
+    return {
+      modal:    $('search-modal'),
+      backdrop: $('search-backdrop'),
+      box:      $('search-box'),
+      inner:    $('search-box-inner'),
+      input:    $('search-input'),
+      results:  $('search-results'),
+    };
+  }
+
+  function deviceType() {
+    const width = window.innerWidth || document.documentElement.clientWidth || 0;
+    if (width < 768) return 'mobile';
+    if (width < 1024) return 'tablet';
+    return 'desktop';
+  }
+
+  function pageSlug() {
+    return (window.location.pathname || '/')
+      .replace(/^\/+|\/+$/g, '')
+      .replace(/\//g, '-') || 'home';
+  }
+
+  function flushSearchEvents() {
+    if (!window.gtag) return;
+    while (pendingSearchEvents.length > 0) {
+      const item = pendingSearchEvents.shift();
+      window.gtag('event', item.eventName, item.payload);
+    }
+  }
+
+  function trackSearchIntent(eventName, extra = {}) {
+    const payload = {
+      page_type: 'site_search',
+      page_slug: pageSlug(),
+      search_surface: 'modal',
+      active_tab: activeTab,
+      query: '',
+      result_count: 0,
+      device_type: deviceType(),
+      viewport_width: window.innerWidth || document.documentElement.clientWidth || 0,
+      ...extra,
+    };
+    window.dispatchEvent(new CustomEvent('aipedia:search', {
+      detail: { event: eventName, payload },
+    }));
+    if (window.gtag) {
+      window.gtag('event', eventName, payload);
+    } else {
+      pendingSearchEvents.push({ eventName, payload });
+    }
+  }
+
+  function scheduleSearchPerformed(query, resultCount, resultType) {
+    const cleanQuery = String(query || '').trim();
+    if (!cleanQuery) return;
+    lastSearchQuery = cleanQuery;
+    window.clearTimeout(searchAnalyticsTimer);
+    searchAnalyticsTimer = window.setTimeout(() => {
+      const key = `${activeTab}|${cleanQuery}|${resultCount}|${resultType}`;
+      if (key === lastTrackedSearchKey) return;
+      lastTrackedSearchKey = key;
+      const payload = {
+        active_tab: activeTab,
+        query: cleanQuery,
+        result_count: resultCount,
+        result_type: resultType,
+      };
+      trackSearchIntent('search_performed', payload);
+      if (resultCount === 0) {
+        trackSearchIntent('search_zero_results', payload);
+      }
+    }, 350);
+  }
+
+  async function loadTools() {
+    if (TOOLS.length) return TOOLS;
+    if (toolsPromise) return toolsPromise;
+
+    toolsPromise = fetch(SEARCH_INDEX_URL, { credentials: 'same-origin', cache: 'no-cache' })
+      .then((res) => {
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        return res.json();
+      })
+      .then((data) => {
+        TOOLS = Array.isArray(data.tools) ? data.tools : [];
+        toolsLoadFailed = false;
+        window.__aipediaSearchData.TOOLS = TOOLS;
+        return TOOLS;
+      })
+      .catch((err) => {
+        toolsLoadFailed = true;
+        toolsPromise = null;
+        console.warn('[aipedia-search] tool index unavailable:', err);
+        return TOOLS;
+      });
+
+    return toolsPromise;
+  }
+
+  function queueToolRender(q) {
+    const { results } = els();
+    if (results && !TOOLS.length) {
+      results.innerHTML = '<p class="s-hint">Loading tools...</p>';
+    }
+    loadTools().then(() => {
+      if (q) searchTools(q);
+      else showHint();
+      preselectFirst();
+    });
+  }
+
+  // Tab clicks (delegated on document so new tab buttons are always handled)
+  document.addEventListener('click', (e) => {
+    const tab = e.target.closest('.s-tab');
+    if (!tab || !tab.dataset.tab) return;
+    if (!$('search-modal')?.classList.contains('is-visible')) return;
+    activeTab = tab.dataset.tab;
+    trackSearchIntent('search_tab_changed', {
+      active_tab: activeTab,
+      query: els().input?.value.trim() || '',
+    });
+    document.querySelectorAll('.s-tab').forEach(t => t.classList.toggle('active', t === tab));
+    const { input } = els();
+    if (input) {
+      input.placeholder = activeTab === 'tools' ? 'Search tools...' : 'Search all pages...';
+      const q = input.value.trim();
+      if (q) runSearch(q);
+      else {
+        showHint();
+        preselectFirst();
+        if (activeTab === 'tools' && !TOOLS.length) queueToolRender('');
+      }
+    }
+  });
+
+  // ── Open / Close ──────────────────────────────────────────────
+  function openModal(triggerEl) {
+    const { modal, box, inner, input } = els();
+    if (!modal || !box || !inner || !input) return; // no search in DOM
+
+    // Hard reset — clears any orphaned state from previous close or transition
+    modal.classList.remove('is-open');
+    box.style.transition = 'none';
+    box.style.transform  = '';
+    box.style.opacity    = '';
+    box.style.borderRadius = '';
+    inner.style.transition = 'none';
+    inner.style.transform  = '';
+
+    const tr = triggerEl ? triggerEl.getBoundingClientRect() : null;
+    const vw = window.innerWidth;
+    const vh = window.innerHeight;
+    const finalW = Math.min(700, vw - 32);
+
+    modal.classList.add('is-visible');
+    document.body.style.overflow = 'hidden';
+
+    if (tr) {
+      const dx = (tr.left + tr.width / 2) - vw / 2;
+      const dy = (tr.top  + tr.height / 2) - vh / 2;
+      const sx = tr.width / finalW;
+      const sy = tr.height / 50;
+
+      box.style.transition   = 'none';
+      box.style.opacity      = '0.5';
+      box.style.borderRadius = (tr.height / 2) + 'px';
+      box.style.transform    = `translate(${dx}px,${dy}px) scale(${sx},${sy})`;
+      inner.style.transition = 'none';
+      inner.style.transform  = `scale(${1/sx},${1/sy})`;
+      box.offsetHeight;
+      const ease = 'cubic-bezier(0.22,1,0.36,1)';
+      box.style.transition  = `transform 300ms ${ease}, opacity 200ms ease, border-radius 300ms ${ease}`;
+      box.style.transform   = 'translate(0,0) scale(1)';
+      box.style.opacity     = '1';
+      box.style.borderRadius= '14px';
+      inner.style.transition= `transform 300ms ${ease}`;
+      inner.style.transform = 'scale(1,1)';
+    } else {
+      box.style.transition = 'none';
+      box.style.opacity    = '0';
+      box.style.transform  = 'scale(0.95)';
+      box.offsetHeight;
+      box.style.transition = 'transform 260ms cubic-bezier(0.22,1,0.36,1), opacity 200ms ease';
+      box.style.transform  = 'scale(1)';
+      box.style.opacity    = '1';
+    }
+
+    requestAnimationFrame(() => requestAnimationFrame(() => modal.classList.add('is-open')));
+    setTimeout(() => input.focus(), 50);
+    showHint();
+    preselectFirst();
+    if (activeTab === 'tools' && !TOOLS.length) queueToolRender('');
+    trackSearchIntent('search_modal_opened', {
+      active_tab: activeTab,
+      trigger: triggerEl?.id || triggerEl?.getAttribute?.('data-search-trigger') || 'keyboard',
+    });
+  }
+
+  function closeModal() {
+    const { modal, box, inner, input } = els();
+    if (!modal) return;
+    if (box) {
+      box.style.transition = 'transform 180ms ease, opacity 140ms ease';
+      box.style.transform  = 'scale(0.97)';
+      box.style.opacity    = '0';
+    }
+    modal.classList.remove('is-open');
+    setTimeout(() => {
+      modal.classList.remove('is-visible');
+      document.body.style.overflow = '';
+      if (box) {
+        box.style.transition = box.style.transform = box.style.opacity = '';
+        box.style.borderRadius = '';
+      }
+      if (inner) { inner.style.transform = inner.style.transition = ''; }
+      if (input) { input.value = ''; }
+      lastSearchQuery = '';
+      showHint();
+    }, 200);
+  }
+
+  // Curated "popular" tool slugs — shown as default state
+  const FEATURED = ['claude','chatgpt','cursor','midjourney','elevenlabs','perplexity','n8n','lovable'];
+
+  function showHint() {
+    const { results, input } = els();
+    if (!results) return;
+    if (activeTab === 'tools') {
+      if (!TOOLS.length) {
+        results.innerHTML = `<p class="s-hint">${toolsLoadFailed ? 'Tool search unavailable.' : 'Loading tools...'}</p>`;
+        return;
+      }
+      const featured = FEATURED
+        .map(slug => TOOLS.find(t => t.slug === slug))
+        .filter(Boolean);
+      results.innerHTML = `
+        <div class="s-section">Popular tools</div>
+        ${featured.map(t => `
+          <a class="s-result" href="${t.url}" data-search-result data-result-type="tool" data-result-title="${esc(t.title)}" data-result-url="${esc(t.url)}" data-tool-slug="${esc(t.slug)}" data-category-slug="${esc(t.category)}">
+            <div class="s-icon"><img src="/logos/tools/${t.slug}.png" alt="" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'s-icon-fallback',textContent:'${EMOJI[t.category]||'AI'}'}))" /></div>
+            <div class="s-text">
+              <div class="s-name">${esc(t.title)}</div>
+              <div class="s-sub">${esc(t.tagline)}</div>
+            </div>
+            ${t.price ? `<div class="s-price">${esc(t.price)}</div>` : ''}
+          </a>`).join('')}
+      `;
+    } else {
+      results.innerHTML = `
+        <div class="s-section">Try searching for</div>
+        <div class="s-suggestions">
+          ${['best AI for coding','voice cloning','solo founder tool set','cursor vs windsurf','cheapest TTS','AI presentation'].map(q => `
+            <button class="s-suggestion" data-q="${esc(q)}">${esc(q)}</button>
+          `).join('')}
+        </div>`;
+      results.querySelectorAll('.s-suggestion').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const { input: freshInput } = els();
+          if (freshInput) {
+            freshInput.value = btn.dataset.q;
+            freshInput.focus();
+          }
+          trackSearchIntent('search_suggestion_clicked', {
+            active_tab: 'general',
+            query: btn.dataset.q || '',
+          });
+          searchGeneral(btn.dataset.q).then(preselectFirst);
+        });
+      });
+    }
+  }
+
+  // ── Tool search (instant, client-side) ────────────────────────
+  function searchTools(q) {
+    const { results } = els();
+    if (!results) return;
+    if (!TOOLS.length) {
+      results.innerHTML = `<p class="s-hint">${toolsLoadFailed ? 'Tool search unavailable.' : 'Loading tools...'}</p>`;
+      return;
+    }
+    const lq = q.toLowerCase();
+    const hits = TOOLS.filter(t =>
+      t.title.toLowerCase().includes(lq) ||
+      t.tagline.toLowerCase().includes(lq) ||
+      t.category.toLowerCase().includes(lq)
+    ).slice(0, 10);
+    scheduleSearchPerformed(q, hits.length, 'tool');
+
+    if (!hits.length) {
+      results.innerHTML = `<p class="s-hint">No tools matching "${esc(q)}"</p>`;
+      return;
+    }
+    results.innerHTML = hits.map(t => `
+      <a class="s-result" href="${t.url}" data-search-result data-result-type="tool" data-result-title="${esc(t.title)}" data-result-url="${esc(t.url)}" data-tool-slug="${esc(t.slug)}" data-category-slug="${esc(t.category)}">
+        <div class="s-icon"><img src="/logos/tools/${t.slug}.png" alt="" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'s-icon-fallback',textContent:'${EMOJI[t.category]||'AI'}'}))" /></div>
+        <div class="s-text">
+          <div class="s-name">${highlight(t.title, q)}</div>
+          <div class="s-sub">${highlight(t.tagline, q)}</div>
+        </div>
+        ${t.price ? `<div class="s-price">${esc(t.price)}</div>` : ''}
+      </a>`).join('');
+  }
+
+  // ── General search (Pagefind) ─────────────────────────────────
+  async function initPagefind() {
+    if (pagefind) return;
+    try {
+      const runtimeImport = new Function('specifier', 'return import(specifier)');
+      pagefind = await runtimeImport('/pagefind/pagefind.js');
+      await pagefind.options({ excerptLength: 20 });
+    } catch(e) {
+      pagefind = null;
+    }
+  }
+
+  async function searchGeneral(q) {
+    const { results } = els();
+    if (!results) return;
+    if (!pagefind) {
+      await initPagefind();
+      if (!pagefind) {
+        results.innerHTML = '<p class="s-hint">Full-text search unavailable in dev mode.</p>';
+        scheduleSearchPerformed(q, 0, 'page');
+        return;
+      }
+    }
+    const res = await pagefind.search(q);
+    const top = res.results.slice(0, 8);
+    scheduleSearchPerformed(q, top.length, 'page');
+    if (!top.length) { results.innerHTML = `<p class="s-hint">No results for "${esc(q)}"</p>`; return; }
+    const data = await Promise.all(top.map(r => r.data()));
+    results.innerHTML = data.map(d => `
+      <a class="g-result" href="${d.url}" data-search-result data-result-type="page" data-result-title="${esc(d.meta?.title || d.url)}" data-result-url="${esc(d.url)}">
+        <span class="g-title">${esc(d.meta?.title || d.url)}</span>
+        ${d.excerpt ? `<span class="g-excerpt">${safeExcerpt(d.excerpt)}</span>` : ''}
+      </a>`).join('');
+  }
+
+  function preselectFirst() {
+    const { results } = els();
+    const first = results?.querySelector('a');
+    if (first) first.classList.add('is-selected');
+  }
+
+  function runSearch(q) {
+    if (activeTab === 'tools') queueToolRender(q);
+    else searchGeneral(q);
+  }
+
+  // ── Helpers ───────────────────────────────────────────────────
+  function esc(s) {
+    return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+  function safeExcerpt(s) {
+    return esc(s).replace(/&lt;mark&gt;/g,'<mark>').replace(/&lt;\/mark&gt;/g,'</mark>');
+  }
+  function highlight(text, q) {
+    const safe = esc(text);
+    const re = new RegExp('(' + q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&') + ')', 'gi');
+    return safe.replace(re, '<mark>$1</mark>');
+  }
+
+  // ── Events (all delegated on document so they survive DOM swaps) ──
+  document.addEventListener('input', (e) => {
+    if (e.target.id !== 'search-input') return;
+    clearTimeout(debounceTimer);
+    const q = e.target.value.trim();
+    if (!q) { lastSearchQuery = ''; showHint(); preselectFirst(); return; }
+    lastSearchQuery = q;
+    if (activeTab === 'tools') queueToolRender(q);
+    else { debounceTimer = setTimeout(() => { searchGeneral(q).then(preselectFirst); }, 200); }
+  });
+
+  function selectedResult() {
+    const { results } = els();
+    return results?.querySelector('a.is-selected');
+  }
+  function moveSelection(dir) {
+    const { results } = els();
+    if (!results) return;
+    const all = Array.from(results.querySelectorAll('a'));
+    if (!all.length) return;
+    const cur = all.findIndex(a => a.classList.contains('is-selected'));
+    let next = cur + dir;
+    if (next < 0) next = all.length - 1;
+    if (next >= all.length) next = 0;
+    all.forEach(a => a.classList.remove('is-selected'));
+    all[next].classList.add('is-selected');
+    all[next].scrollIntoView({ block: 'nearest' });
+  }
+
+  document.addEventListener('keydown', (e) => {
+    const isInput = e.target.id === 'search-input';
+    if (isInput && e.key === 'Escape') { e.stopPropagation(); closeModal(); return; }
+    if (isInput && (e.key === 'ArrowDown' || (e.key === 'Tab' && !e.shiftKey))) {
+      e.preventDefault();
+      moveSelection(1);
+      return;
+    }
+    if (isInput && (e.key === 'ArrowUp' || (e.key === 'Tab' && e.shiftKey))) {
+      e.preventDefault();
+      moveSelection(-1);
+      return;
+    }
+    if (isInput && e.key === 'Enter') {
+      e.preventDefault();
+      const { results } = els();
+      const a = selectedResult() || results?.querySelector('a');
+      if (a) a.click();
+      return;
+    }
+    if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
+      e.preventDefault();
+      const m = $('search-modal');
+      m?.classList.contains('is-visible') ? closeModal() : openModal(null);
+    }
+    if (e.key === 'Escape') {
+      const m = $('search-modal');
+      if (m?.classList.contains('is-visible')) closeModal();
+    }
+  });
+
+  document.addEventListener('click', (e) => {
+    const result = e.target.closest('[data-search-result]');
+    if (result && $('search-modal')?.contains(result)) {
+      const { results, input } = els();
+      const all = Array.from(results?.querySelectorAll('[data-search-result]') || []);
+      const resultPosition = all.indexOf(result) + 1;
+      trackSearchIntent('search_result_clicked', {
+        active_tab: activeTab,
+        query: input?.value.trim() || lastSearchQuery,
+        result_count: all.length,
+        result_position: resultPosition || '',
+        result_type: result.dataset.resultType || '',
+        result_title: result.dataset.resultTitle || result.textContent.trim(),
+        result_url: result.dataset.resultUrl || result.getAttribute('href') || '',
+        tool_slug: result.dataset.toolSlug || '',
+        category_slug: result.dataset.categorySlug || '',
+      });
+      return;
+    }
+
+    // Search triggers (desktop nav, mobile nav, homepage bar)
+    const trigger = e.target.closest('#search-trigger, #search-trigger-mobile, #homepage-search-bar');
+    if (trigger) { e.preventDefault(); openModal(trigger); return; }
+    // Backdrop → close
+    if (e.target.id === 'search-backdrop') { closeModal(); return; }
+  });
+
+  // Close immediately when navigating between pages
+  document.addEventListener('astro:before-preparation', () => {
+    const m = $('search-modal');
+    if (m?.classList.contains('is-visible')) {
+      m.classList.remove('is-visible', 'is-open');
+      document.body.style.overflow = '';
+      const i = $('search-input');
+      if (i) i.value = '';
+    }
+  });
+  window.addEventListener('aipedia:analytics-ready', flushSearchEvents);
+})();
+</script>
