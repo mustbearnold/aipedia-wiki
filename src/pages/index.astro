@@ -13,6 +13,7 @@ import Hero from '../components/godtier/Hero.astro';
 import DecisionCard from '../components/godtier/DecisionCard.astro';
 import TrustPanel from '../components/godtier/TrustPanel.astro';
 import CommercialCTA from '../components/CommercialCTA.astro';
+import ToolLogo from '../components/ToolLogo.astro';
 import HomepageLD from '../components/seo/HomepageLD.astro';
 import { categoryLabel, overallScore } from '../utils/tool-metadata';
 
@@ -385,9 +386,28 @@ function newsDateFmt(iso: string): string {
             open();
             return;
           }
+          function homeMonogram(t) {
+            return String(t || '').split(/\s+/).slice(0,2).map(w => (w[0]||'').toUpperCase()).join('');
+          }
+          function homeLeftCell(m) {
+            const kind = (m.kind || '').toLowerCase();
+            if (kind === 'tool') {
+              return m.logo
+                ? `<img src="${escape(m.logo)}" alt="" loading="lazy" decoding="async" class="gt-search-result-logo" />`
+                : `<span class="gt-search-result-logo gt-search-result-logo-mono">${escape(homeMonogram(m.title))}</span>`;
+            }
+            if (kind === 'compare' && m.logo) {
+              const second = Array.isArray(m.logos) && m.logos[1] ? m.logos[1] : null;
+              return `<span class="gt-search-result-logos">
+                <img src="${escape(m.logo)}" alt="" loading="lazy" decoding="async" />
+                ${second ? `<img src="${escape(second)}" alt="" loading="lazy" decoding="async" />` : ''}
+              </span>`;
+            }
+            return `<span class="gt-search-result-kind">${escape(m.kind || '')}</span>`;
+          }
           results.innerHTML = matches.map((m, i) => `
             <a class="gt-search-result" href="${escape(m.href)}" role="option" id="gt-search-result-${i}" tabindex="-1">
-              <span class="gt-search-result-kind">${escape(m.kind || '')}</span>
+              ${homeLeftCell(m)}
               <strong class="gt-search-result-title">${escape(m.title)}</strong>
               ${m.detail ? `<span class="gt-search-result-detail">${escape(m.detail)}</span>` : ''}
               ${m.meta ? `<span class="gt-search-result-meta">${escape(m.meta)}</span>` : ''}
@@ -461,6 +481,7 @@ function newsDateFmt(iso: string): string {
             <li class={`gt-tool-row gt-tool-row-${tone}`}>
               <a href={`/tools/${t.slug}/`} class="gt-tool-link">
                 <span class="gt-tool-rank">{i + 1}</span>
+                <ToolLogo slug={t.slug} title={t.title} size={40} />
                 <div class="gt-tool-main">
                   <strong class="gt-tool-title">{t.title}</strong>
                   {t.tagline && <span class="gt-tool-tagline">{t.tagline}</span>}
@@ -721,8 +742,9 @@ function newsDateFmt(iso: string): string {
     }
     :global(.gt-search-result) {
       display: grid;
-      grid-template-columns: minmax(0, 1fr) auto;
-      grid-template-rows: auto auto auto;
+      grid-template-columns: auto minmax(0, 1fr) auto;
+      grid-template-rows: auto auto;
+      align-items: center;
       column-gap: 12px;
       padding: 10px 14px;
       text-decoration: none;
@@ -736,20 +758,73 @@ function newsDateFmt(iso: string): string {
     :global(.gt-search-result:hover) {
       background: var(--gt-surface-2);
     }
+    /* Left cell — official logo, vs-pair logos, or a kind label pill. */
+    :global(.gt-search-result-logo) {
+      grid-column: 1;
+      grid-row: 1 / span 2;
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      background: #ffffff;
+      object-fit: contain;
+      padding: 3px;
+      box-sizing: border-box;
+      box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.12), 0 1px 2px rgba(0, 0, 0, 0.25);
+      flex: none;
+    }
+    :global(html.light .gt-search-result-logo) {
+      background: #f8fafc;
+      box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.08), 0 1px 2px rgba(0, 0, 0, 0.04);
+    }
+    :global(.gt-search-result-logo-mono) {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      background: linear-gradient(135deg, rgba(249, 115, 22, 0.18), rgba(251, 146, 60, 0.12));
+      color: var(--gt-fg);
+      font-size: 13px;
+      font-weight: 700;
+    }
+    :global(.gt-search-result-logos) {
+      grid-column: 1;
+      grid-row: 1 / span 2;
+      display: inline-flex;
+      align-items: center;
+    }
+    :global(.gt-search-result-logos img) {
+      width: 28px;
+      height: 28px;
+      border-radius: 6px;
+      background: #ffffff;
+      object-fit: contain;
+      padding: 2px;
+      box-sizing: border-box;
+      box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.15), 0 1px 2px rgba(0, 0, 0, 0.25);
+    }
+    :global(.gt-search-result-logos img + img) { margin-left: -8px; }
+    :global(html.light .gt-search-result-logos img) {
+      background: #f8fafc;
+      box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.08), 0 1px 2px rgba(0, 0, 0, 0.04);
+    }
     :global(.gt-search-result-kind) {
       grid-column: 1;
-      grid-row: 1;
-      font-size: 10px;
+      grid-row: 1 / span 2;
+      align-self: center;
+      font-size: 9px;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.08em;
       color: var(--gt-accent);
-      display: block;
-      margin-bottom: 2px;
+      background: rgba(249, 115, 22, 0.10);
+      border: 1px solid rgba(249, 115, 22, 0.30);
+      border-radius: 6px;
+      padding: 6px 8px;
+      white-space: nowrap;
     }
     :global(.gt-search-result-title) {
-      grid-column: 1;
-      grid-row: 2;
+      grid-column: 2;
+      grid-row: 1;
       font-size: 14px;
       font-weight: 600;
       line-height: 1.35;
@@ -760,8 +835,8 @@ function newsDateFmt(iso: string): string {
       white-space: nowrap;
     }
     :global(.gt-search-result-detail) {
-      grid-column: 1;
-      grid-row: 3;
+      grid-column: 2;
+      grid-row: 2;
       font-size: 12px;
       color: var(--gt-muted);
       line-height: 1.4;
@@ -771,8 +846,8 @@ function newsDateFmt(iso: string): string {
       white-space: nowrap;
     }
     :global(.gt-search-result-meta) {
-      grid-column: 2;
-      grid-row: 1 / span 3;
+      grid-column: 3;
+      grid-row: 1 / span 2;
       align-self: center;
       font-size: 12px;
       font-weight: 600;
@@ -835,7 +910,7 @@ function newsDateFmt(iso: string): string {
     .gt-tool-row:hover { background: var(--gt-surface-2); }
     .gt-tool-link {
       display: grid;
-      grid-template-columns: 32px 1fr auto;
+      grid-template-columns: 24px 40px 1fr auto;
       align-items: center;
       gap: 12px;
       padding: 14px;

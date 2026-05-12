@@ -180,12 +180,40 @@ const toolsCount = allTools.filter(
     }
 
     // ── render ────────────────────────────────────────────────────
+    function monogram(title) {
+      return String(title || '')
+        .split(/\s+/)
+        .slice(0, 2)
+        .map((w) => (w[0] || '').toUpperCase())
+        .join('');
+    }
+    function leftCellHtml(item) {
+      const kind = (item.kind || 'page').toLowerCase();
+      // Tool rows get the official logo (with a monogram fallback so the
+      // chip is never empty). Other kinds keep the colored kind pill so the
+      // category remains scannable.
+      if (kind === 'tool') {
+        if (item.logo) {
+          return `<img src="${escape(item.logo)}" alt="" loading="lazy" decoding="async" class="sp-row-logo" />`;
+        }
+        return `<span class="sp-row-logo sp-row-logo-mono">${escape(monogram(item.title))}</span>`;
+      }
+      if (kind === 'compare' && item.logo) {
+        // Show two stacked mini logos for the vs pair when available.
+        const second = Array.isArray(item.logos) && item.logos[1] ? item.logos[1] : null;
+        return `<span class="sp-row-logos">
+          <img src="${escape(item.logo)}" alt="" loading="lazy" decoding="async" />
+          ${second ? `<img src="${escape(second)}" alt="" loading="lazy" decoding="async" />` : ''}
+        </span>`;
+      }
+      return `<span class="sp-row-kind sp-row-kind-${escape(kind)}">${escape(item.kind || '')}</span>`;
+    }
     function rowHtml(item, idx) {
       const meta = item.meta || '';
       const detail = item.detail || '';
       return `
         <a class="sp-row" href="${escape(item.href)}" role="option" id="sp-row-${idx}" tabindex="-1" data-row-query="${escape(input.value)}">
-          <span class="sp-row-kind sp-row-kind-${escape((item.kind || 'page').toLowerCase())}">${escape(item.kind || '')}</span>
+          ${leftCellHtml(item)}
           <span class="sp-row-main">
             <strong>${escape(item.title)}</strong>
             ${detail ? `<span class="sp-row-detail">${escape(detail)}</span>` : ''}
@@ -580,7 +608,7 @@ const toolsCount = allTools.filter(
   .sp-group-list { padding: 0 4px 4px; }
   .sp-row {
     display: grid;
-    grid-template-columns: minmax(56px, auto) minmax(0, 1fr) auto;
+    grid-template-columns: minmax(40px, auto) minmax(0, 1fr) auto;
     align-items: center;
     column-gap: 12px;
     padding: 10px 14px;
@@ -590,6 +618,59 @@ const toolsCount = allTools.filter(
     color: var(--gt-fg);
     min-height: 52px;
     transition: background 80ms ease;
+  }
+  /* Tool logo chip — official mark on a white square with subtle ring.
+     Same visual language as ToolLogo.astro for consistency across the
+     site. */
+  .sp-row-logo {
+    grid-column: 1;
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: #ffffff;
+    object-fit: contain;
+    padding: 3px;
+    box-sizing: border-box;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.12), 0 1px 2px rgba(0, 0, 0, 0.25);
+    flex: none;
+  }
+  html.light .sp-row-logo {
+    background: #f8fafc;
+    box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.08), 0 1px 2px rgba(0, 0, 0, 0.04);
+  }
+  /* Monogram fallback — initials in an accent-tinted square. */
+  .sp-row-logo-mono {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    background: linear-gradient(135deg, rgba(249, 115, 22, 0.18), rgba(251, 146, 60, 0.12));
+    color: var(--gt-fg);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+  }
+  /* Stacked vs-pair logos for compare rows. */
+  .sp-row-logos {
+    grid-column: 1;
+    display: inline-flex;
+    align-items: center;
+    flex: none;
+  }
+  .sp-row-logos img {
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    background: #ffffff;
+    object-fit: contain;
+    padding: 2px;
+    box-sizing: border-box;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.15), 0 1px 2px rgba(0, 0, 0, 0.25);
+  }
+  .sp-row-logos img + img { margin-left: -8px; }
+  html.light .sp-row-logos img {
+    background: #f8fafc;
+    box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.08), 0 1px 2px rgba(0, 0, 0, 0.04);
   }
   .sp-row + .sp-row { margin-top: 2px; }
   .sp-row.is-active { background: var(--gt-surface-2); }

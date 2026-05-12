@@ -1,11 +1,19 @@
 import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
 import { categoryLabel, isActiveToolStatus } from '../../utils/tool-metadata';
+import logoManifest from '../../data/logo-manifest.json';
 
 export const prerender = true;
 
+const LOGOS = logoManifest as Record<string, string>;
+
 function entrySlug(entry: { id: string; data: { slug?: string } }): string {
   return String(entry.data.slug ?? entry.id.replace(/\.md$/, '').replace(/\\/g, '/'));
+}
+
+function logoFor(slug: string | null | undefined): string | null {
+  if (!slug) return null;
+  return LOGOS[slug] ?? null;
 }
 
 function scoreFor(tool: Awaited<ReturnType<typeof getCollection<'tools'>>>[number]): number {
@@ -38,6 +46,7 @@ export const GET: APIRoute = async () => {
         kind: 'Tool',
         title: tool.data.title,
         href: `/tools/${slug}/`,
+        logo: logoFor(slug),
         meta: `${categoryLabels[0] || 'AI tool'} · ${score.toFixed(1)}/10`,
         detail: tool.data.tagline ?? tool.data.meta_description ?? '',
         badge: tool.data.price_range ?? tool.data.pricing_model ?? '',
@@ -61,11 +70,14 @@ export const GET: APIRoute = async () => {
     ...allComparisons.map((comparison) => {
       const slug = entrySlug(comparison);
       const comparedTools = comparison.data.tools ?? [];
+      const comparedLogos = comparedTools.map((t: string) => logoFor(t)).filter(Boolean) as string[];
 
       return {
         kind: 'Compare',
         title: comparison.data.title,
         href: `/compare/${slug}/`,
+        logo: comparedLogos[0] ?? null,
+        logos: comparedLogos.slice(0, 2),
         meta: 'Comparison guide',
         detail: comparison.data.meta_description ?? (comparedTools.length ? comparedTools.join(' vs ') : ''),
         badge: comparedTools.length ? `${comparedTools.length} tools` : '',

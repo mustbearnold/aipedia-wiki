@@ -11,6 +11,7 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/godtier/Hero.astro';
+import ToolLogo from '../components/ToolLogo.astro';
 import { categoryLabel, overallScore } from '../utils/tool-metadata';
 
 const allTools = await getCollection('tools');
@@ -118,6 +119,7 @@ const totalTools = tools.length;
               data-category-slug={tool.categorySlug}
             >
               <span class="gt-tool-rank">{i + 1}</span>
+              <ToolLogo slug={tool.slug} title={tool.title} size={40} />
               <div class="gt-tool-main">
                 <strong class="gt-tool-title">{tool.title}</strong>
                 {tool.tagline && <span class="gt-tool-tagline">{tool.tagline}</span>}
@@ -349,7 +351,7 @@ const totalTools = tools.length;
     .gt-tool-row:hover { background: var(--gt-surface-2); }
     .gt-tool-link {
       display: grid;
-      grid-template-columns: 32px 1fr auto;
+      grid-template-columns: 24px 40px 1fr auto;
       align-items: center;
       gap: 12px;
       padding: 14px;

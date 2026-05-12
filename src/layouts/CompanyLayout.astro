@@ -10,6 +10,7 @@
 import BaseLayout from './BaseLayout.astro';
 import Hero from '../components/godtier/Hero.astro';
 import DecisionCard from '../components/godtier/DecisionCard.astro';
+import ToolLogo from '../components/ToolLogo.astro';
 import BreadcrumbLD from '../components/seo/BreadcrumbLD.astro';
 import CompanyOrganizationLD from '../components/seo/CompanyOrganizationLD.astro';
 import ShareButtons from '../components/ShareButtons.astro';
@@ -168,6 +169,7 @@ const tagline = metaBits.length > 0 ? metaBits.join(' · ') : description;
             return (
               <li class="gt-product-row">
                 <a href={`/tools/${t.slug}/`} class="gt-product-link">
+                  <ToolLogo slug={t.slug} title={t.title} size={40} />
                   <div class="gt-product-main">
                     <strong class="gt-product-title">{t.title}</strong>
                     {t.tagline && <span class="gt-product-tagline">{t.tagline}</span>}
@@ -205,7 +207,7 @@ const tagline = metaBits.length > 0 ? metaBits.join(' · ') : description;
     }
     .gt-product-link {
       display: grid;
-      grid-template-columns: 1fr auto;
+      grid-template-columns: 40px 1fr auto;
       align-items: center;
       gap: 14px;
       padding: 14px;

@@ -7,9 +7,15 @@
  *   Row 2: title (clamp 36px → 60px) + tagline
  *   Row 3 (optional): subtagline paragraph
  *
+ * When a `logoSlug` is provided, the title row gains an official logo
+ * chip to the left of the title — used on tool pages to anchor brand
+ * recognition above the fold.
+ *
  * Visual content (screenshot, terminal, video) is rendered as a
  * separate <Visual /> component below the Hero, not inside it.
  */
+import ToolLogo from '../ToolLogo.astro';
+
 interface Breadcrumb {
   label: string;
   href?: string;
@@ -21,6 +27,8 @@ interface Props {
   breadcrumbs?: Breadcrumb[];
   verifiedLabel?: string;     // e.g. "Verified May 10" — pulses live dot
   rankLabel?: string;         // e.g. "Top pick in AI Coding"
+  logoSlug?: string;          // optional tool slug for logo chip beside title
+  logoTitle?: string;         // title for the logo's monogram fallback
 }
 
 const {
@@ -29,6 +37,8 @@ const {
   breadcrumbs = [],
   verifiedLabel,
   rankLabel,
+  logoSlug,
+  logoTitle,
 } = Astro.props;
 ---
 
@@ -58,9 +68,16 @@ const {
   )}
 </nav>
 
-<header class="gt-title-row">
-  <h1 class="gt-title">{title}</h1>
-  {tagline && <p class="gt-tagline">{tagline}</p>}
+<header class={`gt-title-row ${logoSlug ? 'has-logo' : ''}`}>
+  {logoSlug && (
+    <div class="gt-title-logo">
+      <ToolLogo slug={logoSlug} title={logoTitle ?? title} size={64} />
+    </div>
+  )}
+  <div class="gt-title-text">
+    <h1 class="gt-title">{title}</h1>
+    {tagline && <p class="gt-tagline">{tagline}</p>}
+  </div>
 </header>
 
 <style>
@@ -102,6 +119,21 @@ const {
   .gt-meta-rank { color: #fb923c; font-weight: 600; }
 
   .gt-title-row { margin-bottom: 18px; }
+  .gt-title-row.has-logo {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 16px;
+    align-items: start;
+  }
+  .gt-title-logo {
+    grid-column: 1;
+    margin-top: 2px;
+  }
+  .gt-title-text {
+    grid-column: 2;
+    min-width: 0;
+  }
+  .gt-title-row:not(.has-logo) .gt-title-text { grid-column: 1; }
   .gt-title {
     font-size: clamp(36px, 9vw, 56px);
     font-weight: 700;
@@ -119,5 +151,6 @@ const {
   @media (min-width: 900px) {
     .gt-title { font-size: 60px; }
     .gt-tagline { font-size: 19px; }
+    .gt-title-row.has-logo { gap: 20px; }
   }
 </style>

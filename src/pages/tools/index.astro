@@ -8,6 +8,7 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Hero from '../../components/godtier/Hero.astro';
+import ToolLogo from '../../components/ToolLogo.astro';
 import BreadcrumbLD from '../../components/seo/BreadcrumbLD.astro';
 import ItemListLD from '../../components/seo/ItemListLD.astro';
 import { categoryLabel, overallScore } from '../../utils/tool-metadata';
@@ -97,6 +98,7 @@ const itemList = scoredTools.map((t) => ({
             <li class={`gt-tool-row gt-tool-row-${tone}`} data-category={t.category}>
               <a href={`/tools/${t.slug}/`} class="gt-tool-link">
                 <span class="gt-tool-rank">{i + 1}</span>
+                <ToolLogo slug={t.slug} title={t.title} size={40} />
                 <div class="gt-tool-main">
                   <strong class="gt-tool-title">{t.title}</strong>
                   {t.tagline && <span class="gt-tool-tagline">{t.tagline}</span>}
@@ -183,7 +185,7 @@ const itemList = scoredTools.map((t) => ({
     .gt-tool-row:hover { background: var(--gt-surface-2); }
     .gt-tool-link {
       display: grid;
-      grid-template-columns: 36px 1fr auto;
+      grid-template-columns: 24px 40px 1fr auto;
       align-items: center;
       gap: 12px;
       padding: 14px;

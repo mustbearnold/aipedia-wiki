@@ -13,6 +13,7 @@
 import BaseLayout from './BaseLayout.astro';
 import Hero from '../components/godtier/Hero.astro';
 import DecisionCard from '../components/godtier/DecisionCard.astro';
+import ToolLogo from '../components/ToolLogo.astro';
 import BreadcrumbLD from '../components/seo/BreadcrumbLD.astro';
 import ItemListLD from '../components/seo/ItemListLD.astro';
 import ShareButtons from '../components/ShareButtons.astro';
@@ -181,6 +182,7 @@ const rankLabel = sorted.length > 0 ? `${sorted.length} tools verified` : undefi
             <li class={`gt-tool-row gt-tool-row-${tone}`}>
               <a href={`/tools/${t.slug}/`} class="gt-tool-link">
                 <span class="gt-tool-rank">{i + 1}</span>
+                <ToolLogo slug={t.slug} title={t.title} size={40} />
                 <div class="gt-tool-main">
                   <strong class="gt-tool-title">{t.title}</strong>
                   {t.tagline && <span class="gt-tool-tagline">{t.tagline}</span>}
@@ -243,9 +245,9 @@ const rankLabel = sorted.length > 0 ? `${sorted.length} tools verified` : undefi
     .gt-tool-row-negative { border-left: 3px solid var(--gt-negative); }
     .gt-tool-link {
       display: grid;
-      grid-template-columns: 32px 1fr auto;
+      grid-template-columns: 24px 40px 1fr auto;
       align-items: center;
-      gap: 14px;
+      gap: 12px;
       padding: 14px 14px;
       text-decoration: none;
       color: var(--gt-fg);
