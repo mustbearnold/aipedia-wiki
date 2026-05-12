@@ -78,11 +78,10 @@ const toolsCount = allTools.filter(
     const RECENT_KEY = 'aipedia:recent-searches';
     const RECENT_MAX = 5;
     const RESULT_GROUPS = [
-      { kind: 'Tool',       label: 'Tools',       max: 6 },
-      { kind: 'Comparison', label: 'Comparisons', max: 4 },
-      { kind: 'Guide',      label: 'Guides',      max: 3 },
-      { kind: 'News',       label: 'News',        max: 3 },
-      { kind: 'Page',       label: 'Pages',       max: 3 },
+      { kind: 'Tool',     label: 'Tools',       max: 6 },
+      { kind: 'Compare',  label: 'Comparisons', max: 4 },
+      { kind: 'Category', label: 'Categories',  max: 3 },
+      { kind: 'News',     label: 'News',        max: 3 },
     ];
     const POPULAR_TOOL_LIMIT = 6;
 
@@ -609,10 +608,10 @@ const toolsCount = allTools.filter(
     border: 1px solid var(--gt-line);
     white-space: nowrap;
   }
-  .sp-row-kind-tool       { color: var(--gt-accent); border-color: rgba(249, 115, 22, 0.35); background: rgba(249, 115, 22, 0.08); }
-  .sp-row-kind-comparison { color: var(--gt-positive); border-color: rgba(52, 211, 153, 0.35); background: rgba(var(--gt-positive-rgb), 0.08); }
-  .sp-row-kind-guide      { color: var(--gt-warn); border-color: rgba(251, 191, 36, 0.35); background: rgba(251, 191, 36, 0.08); }
-  .sp-row-kind-news       { color: #fb923c; border-color: rgba(251, 146, 60, 0.35); background: rgba(251, 146, 60, 0.08); }
+  .sp-row-kind-tool     { color: var(--gt-accent); border-color: rgba(249, 115, 22, 0.35); background: rgba(249, 115, 22, 0.08); }
+  .sp-row-kind-compare  { color: var(--gt-positive); border-color: rgba(52, 211, 153, 0.35); background: rgba(var(--gt-positive-rgb), 0.08); }
+  .sp-row-kind-category { color: var(--gt-warn); border-color: rgba(251, 191, 36, 0.35); background: rgba(251, 191, 36, 0.08); }
+  .sp-row-kind-news     { color: #fb923c; border-color: rgba(251, 146, 60, 0.35); background: rgba(251, 146, 60, 0.08); }
   .sp-row-main {
     grid-column: 2;
     min-width: 0;
