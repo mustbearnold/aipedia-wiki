@@ -225,16 +225,213 @@ function newsDateFmt(iso: string): string {
       </DecisionCard>
     )}
 
-    <form class="gt-search" role="search" action="/search/" method="get">
+    <form class="gt-search" role="search" action="/search/" method="get" data-home-search>
       <label for="gt-search-input" class="gt-sr-only">Search aipedia.wiki</label>
       <div class="gt-search-row">
         <svg class="gt-search-icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
           <path d="M10.8 18.1a7.3 7.3 0 1 1 0-14.6 7.3 7.3 0 0 1 0 14.6Zm5.1-2 4.6 4.6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
         </svg>
-        <input id="gt-search-input" name="q" type="search" autocomplete="off" placeholder="Search 253 AI tools, comparisons, news" />
+        <input
+          id="gt-search-input"
+          name="q"
+          type="search"
+          autocomplete="off"
+          spellcheck="false"
+          placeholder="Search 253 AI tools, comparisons, news"
+          role="combobox"
+          aria-autocomplete="list"
+          aria-expanded="false"
+          aria-controls="gt-search-results"
+          aria-haspopup="listbox"
+          data-home-search-input
+        />
         <button type="submit" class="gt-search-submit">Search</button>
       </div>
+      <div
+        class="gt-search-panel"
+        id="gt-search-results"
+        role="listbox"
+        aria-label="Search suggestions"
+        data-home-search-panel
+        hidden
+      >
+        <div class="gt-search-panel-head">
+          <span data-home-search-heading>Top matches</span>
+          <strong data-home-search-count></strong>
+        </div>
+        <div class="gt-search-panel-list" data-home-search-results></div>
+      </div>
     </form>
+
+    <script is:inline>
+      (() => {
+        const root = document.querySelector('[data-home-search]');
+        if (!root) return;
+        const input = root.querySelector('[data-home-search-input]');
+        const panel = root.querySelector('[data-home-search-panel]');
+        const results = root.querySelector('[data-home-search-results]');
+        const heading = root.querySelector('[data-home-search-heading]');
+        const count = root.querySelector('[data-home-search-count]');
+        if (!input || !panel || !results) return;
+
+        const INDEX_URL = '/api/home-search.json';
+        const MAX_RESULTS = 7;
+        let data = null;
+        let loadPromise = null;
+        let failed = false;
+        let activeIndex = -1;
+        let openMatches = [];
+
+        function normalize(v) {
+          return String(v || '').toLowerCase().trim();
+        }
+
+        function terms(value) {
+          return normalize(value).split(/\s+/).filter(Boolean);
+        }
+
+        function escape(s) {
+          return String(s).replace(/[&<>"']/g, (c) => (
+            { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]
+          ));
+        }
+
+        function load() {
+          if (loadPromise) return loadPromise;
+          loadPromise = fetch(INDEX_URL, { headers: { Accept: 'application/json' } })
+            .then((r) => r.ok ? r.json() : Promise.reject(r.status))
+            .then((payload) => {
+              data = Array.isArray(payload.items) ? payload.items : [];
+            })
+            .catch(() => { failed = true; data = []; });
+          return loadPromise;
+        }
+
+        function rank(item, qTerms, query) {
+          const title = normalize(item.title);
+          const kind = normalize(item.kind);
+          const haystack = normalize(item.search);
+          let score = Number(item.priority || 0);
+          if (!qTerms.length) return score;
+          if (title === query) score += 1000;
+          else if (title.startsWith(query)) score += 720;
+          else if (qTerms.every((t) => title.split(/[^a-z0-9]+/).includes(t))) score += 640;
+          else if (qTerms.every((t) => title.includes(t))) score += 520;
+          if (qTerms.every((t) => kind.includes(t))) score += 80;
+          for (const t of qTerms) {
+            if (title.startsWith(t)) score += 90;
+            else if (title.includes(t)) score += 65;
+            else if (haystack.includes(t)) score += 20;
+          }
+          return score;
+        }
+
+        function getMatches() {
+          if (!data) return [];
+          const qTerms = terms(input.value);
+          const query = qTerms.join(' ');
+          return data
+            .map((item) => ({ item, score: rank(item, qTerms, query) }))
+            .filter(({ item, score }) => {
+              if (!qTerms.length) return item.kind === 'Tool';
+              const haystack = `${normalize(item.title)} ${normalize(item.search)}`;
+              return score > Number(item.priority || 0) && qTerms.every((t) => haystack.includes(t));
+            })
+            .sort((a, b) => b.score - a.score || normalize(a.item.title).localeCompare(normalize(b.item.title)))
+            .map(({ item }) => item)
+            .slice(0, MAX_RESULTS);
+        }
+
+        function open() {
+          panel.hidden = false;
+          input.setAttribute('aria-expanded', 'true');
+        }
+        function close() {
+          panel.hidden = true;
+          input.setAttribute('aria-expanded', 'false');
+          activeIndex = -1;
+        }
+
+        function setActive(idx) {
+          const items = results.querySelectorAll('.gt-search-result');
+          items.forEach((el, i) => el.classList.toggle('is-active', i === idx));
+          activeIndex = idx;
+          if (idx >= 0 && items[idx]) items[idx].scrollIntoView({ block: 'nearest' });
+        }
+
+        function render() {
+          if (failed) {
+            heading.textContent = 'Search unavailable';
+            count.textContent = '';
+            results.innerHTML = '<div class="gt-search-empty">Press Search to open the full search page.</div>';
+            open();
+            return;
+          }
+          if (!data) {
+            heading.textContent = 'Loading';
+            count.textContent = '';
+            results.innerHTML = '<div class="gt-search-empty">Loading…</div>';
+            open();
+            load().then(render);
+            return;
+          }
+          const matches = getMatches();
+          openMatches = matches;
+          const hasQuery = terms(input.value).length > 0;
+          heading.textContent = hasQuery ? 'Top matches' : 'Popular tools';
+          count.textContent = `${matches.length} shown`;
+          if (!matches.length) {
+            results.innerHTML = '<div class="gt-search-empty">No matches. Press Search to check every page.</div>';
+            open();
+            return;
+          }
+          results.innerHTML = matches.map((m, i) => `
+            <a class="gt-search-result" href="${escape(m.href)}" role="option" id="gt-search-result-${i}" tabindex="-1">
+              <span class="gt-search-result-kind">${escape(m.kind || '')}</span>
+              <strong class="gt-search-result-title">${escape(m.title)}</strong>
+              ${m.detail ? `<span class="gt-search-result-detail">${escape(m.detail)}</span>` : ''}
+              ${m.meta ? `<span class="gt-search-result-meta">${escape(m.meta)}</span>` : ''}
+            </a>
+          `).join('');
+          activeIndex = -1;
+          open();
+        }
+
+        input.addEventListener('focus', render);
+        input.addEventListener('input', render);
+        input.addEventListener('keydown', (e) => {
+          const items = results.querySelectorAll('.gt-search-result');
+          if (e.key === 'ArrowDown') {
+            e.preventDefault();
+            if (items.length === 0) return;
+            setActive((activeIndex + 1) % items.length);
+          } else if (e.key === 'ArrowUp') {
+            e.preventDefault();
+            if (items.length === 0) return;
+            setActive((activeIndex - 1 + items.length) % items.length);
+          } else if (e.key === 'Enter') {
+            if (activeIndex >= 0 && items[activeIndex]) {
+              e.preventDefault();
+              window.location.href = items[activeIndex].getAttribute('href');
+            }
+          } else if (e.key === 'Escape') {
+            close();
+            input.blur();
+          }
+        });
+
+        document.addEventListener('click', (e) => {
+          if (!root.contains(e.target)) close();
+        });
+
+        results.addEventListener('mouseover', (e) => {
+          const item = e.target.closest('.gt-search-result');
+          if (!item) return;
+          const items = Array.from(results.querySelectorAll('.gt-search-result'));
+          setActive(items.indexOf(item));
+        });
+      })();
+    </script>
 
     <section class="gt-stats" aria-label="Catalog summary">
       <a href="/tools/" class="gt-stat">
@@ -483,6 +680,112 @@ function newsDateFmt(iso: string): string {
       cursor: pointer;
     }
     .gt-search-submit:hover { background: var(--gt-accent-hover); }
+
+    /* Typeahead dropdown — drops below the search row.
+       JS injects result rows via innerHTML so these styles must escape
+       Astro's scoped CSS and apply globally via :global(). */
+    .gt-search { position: relative; }
+    :global(.gt-search-panel) {
+      position: absolute;
+      top: calc(100% + 6px);
+      left: 0;
+      right: 0;
+      z-index: 30;
+      border-radius: var(--gt-radius);
+      border: 1px solid var(--gt-line-strong);
+      background: var(--bg-base, #0a0a0a);
+      box-shadow: 0 16px 40px -16px rgba(0, 0, 0, 0.6);
+      overflow: hidden;
+      max-height: 60vh;
+      display: flex;
+      flex-direction: column;
+    }
+    :global(.gt-search-panel[hidden]) { display: none; }
+    :global(.gt-search-panel-head) {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--gt-line);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    :global(.gt-search-panel-head span) { color: var(--gt-subtle); }
+    :global(.gt-search-panel-head strong) { color: var(--gt-muted); font-variant-numeric: tabular-nums; }
+    :global(.gt-search-panel-list) {
+      overflow-y: auto;
+      flex: 1 1 auto;
+      background: var(--bg-base, #0a0a0a);
+    }
+    :global(.gt-search-result) {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      grid-template-rows: auto auto auto;
+      column-gap: 12px;
+      padding: 10px 14px;
+      text-decoration: none;
+      color: var(--gt-fg);
+      border-bottom: 1px solid var(--gt-line);
+      min-height: 56px;
+      border-left: none;
+    }
+    :global(.gt-search-result:last-child) { border-bottom: none; }
+    :global(.gt-search-result.is-active),
+    :global(.gt-search-result:hover) {
+      background: var(--gt-surface-2);
+    }
+    :global(.gt-search-result-kind) {
+      grid-column: 1;
+      grid-row: 1;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--gt-accent);
+      display: block;
+      margin-bottom: 2px;
+    }
+    :global(.gt-search-result-title) {
+      grid-column: 1;
+      grid-row: 2;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.35;
+      color: var(--gt-fg);
+      display: block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    :global(.gt-search-result-detail) {
+      grid-column: 1;
+      grid-row: 3;
+      font-size: 12px;
+      color: var(--gt-muted);
+      line-height: 1.4;
+      display: block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    :global(.gt-search-result-meta) {
+      grid-column: 2;
+      grid-row: 1 / span 3;
+      align-self: center;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--gt-muted);
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+    :global(.gt-search-empty) {
+      padding: 16px 14px;
+      font-size: 13px;
+      color: var(--gt-muted);
+      text-align: center;
+    }
 
     /* Stats -------------------------------------------------------- */
     .gt-stats {
