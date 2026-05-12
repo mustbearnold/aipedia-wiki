@@ -10,8 +10,8 @@ url: https://business.linkedin.com/hire/recruiter
 pricing_model: enterprise
 price_range: "Contact sales; Hiring Assistant is an add-on"
 status: active
-last_updated: 2026-05-09
-last_verified: 2026-05-09
+last_updated: 2026-05-11
+last_verified: 2026-05-11
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://business.linkedin.com/hire/recruiter"
     source_label: "LinkedIn Recruiter + Hiring Assistant"
     source_id: linkedin-recruiter
-    verified_at: 2026-05-09
+    verified_at: 2026-05-11
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -38,7 +38,7 @@ facts:
     source: "https://business.linkedin.com/hire/recruiter"
     source_label: "LinkedIn Recruiter FAQ"
     source_id: linkedin-recruiter
-    verified_at: 2026-05-09
+    verified_at: 2026-05-11
     volatility: high
     confidence: high
   enterprise_controls:
@@ -46,7 +46,7 @@ facts:
     source: "https://business.linkedin.com/hire/recruiter"
     source_label: "LinkedIn Recruiter + Hiring Assistant"
     source_id: linkedin-recruiter
-    verified_at: 2026-05-09
+    verified_at: 2026-05-11
     volatility: medium
     confidence: high
   watch_out_for:
@@ -54,7 +54,7 @@ facts:
     source: "https://business.linkedin.com/hire/recruiter"
     source_label: "LinkedIn Recruiter FAQ"
     source_id: linkedin-recruiter
-    verified_at: 2026-05-09
+    verified_at: 2026-05-11
     volatility: medium
     confidence: high
 tags: [recruiting, sourcing, hiring, talent-acquisition, candidate-outreach]
@@ -78,13 +78,32 @@ quick_answer: >-
 
 LinkedIn Recruiter is LinkedIn's professional recruiting platform. It combines candidate search, projects, InMail, collaboration, reporting, hiring-system integrations, and Hiring Assistant, LinkedIn's AI agent for recruiters.
 
-As of May 9, 2026, AiPedia treats LinkedIn Recruiter + Hiring Assistant as the strongest first evaluation for teams that hire consistently and source candidates through LinkedIn.
+As of May 11, 2026, AiPedia treats LinkedIn Recruiter + Hiring Assistant as the strongest first evaluation for teams that hire consistently and source candidates through LinkedIn.
 
 ## System Verdict
 
 Pick LinkedIn Recruiter when the main problem is finding, reviewing, and engaging qualified candidates. The moat is simple: LinkedIn has the professional network, work-history signals, recruiter workflows, candidate messaging, and hiring integrations in one platform.
 
 Skip it if you only need job-description drafts or occasional hiring help. [ChatGPT](/tools/chatgpt/) is cheaper for recruiter writing support. Skip it if high-volume screening and scheduling are the main problem; [Paradox](/tools/paradox/) is more focused on that workflow.
+
+## What LinkedIn Recruiter Actually Does
+
+LinkedIn Recruiter is the paid recruiting platform built around LinkedIn's professional graph. Recruiters use it for advanced candidate search, projects, collaboration, candidate messaging, applicant review, reports, and hiring-system integrations. Hiring Assistant adds AI support on top of that workflow: turning hiring goals into search strategies, finding potential matches, reviewing applicants against criteria, drafting outreach, and helping with prescreening while keeping recruiters in control.
+
+That combination is why AiPedia ranks it as the default first evaluation for consistent hiring teams. The product is not the cheapest option, and it is not a complete ATS by itself, but it owns one of the hardest recruiting assets to replicate: a large, current professional network where candidates already maintain work-history and skills signals.
+
+## Best Plan
+
+LinkedIn does not present one universal public price for Recruiter. The right package depends on seats, hiring volume, InMail needs, collaboration requirements, integrations, and whether Hiring Assistant is included as an add-on.
+
+For most teams, the practical choice is:
+
+- Use free LinkedIn and job posts only for occasional hiring.
+- Consider LinkedIn Recruiter Lite or smaller recruiter products only when the team has low volume and does not need deep collaboration.
+- Evaluate LinkedIn Recruiter when hiring is recurring, sourcing matters, and recruiters need projects, reports, messaging, and integrations.
+- Add Hiring Assistant only if the team will use AI-assisted search, applicant review, outreach drafts, and prescreening enough to justify the extra line item.
+
+Do not buy the add-on just because "AI" is in the name. Buy it when recruiter capacity, shortlist quality, or applicant-review speed is measurable pain.
 
 ## Best For
 
@@ -106,9 +125,39 @@ Skip it if you only need job-description drafts or occasional hiring help. [Chat
 
 LinkedIn says Recruiter pricing varies by organization needs, including company size and number of recruiter seats. Hiring Assistant is an add-on to LinkedIn Recruiter, so buyers should confirm package, seat, InMail, integration, and add-on terms with sales.
 
+Procurement should ask for the all-in cost, not just the base seat quote. Confirm Recruiter edition, number of seats, InMail allowance, job slots if bundled, applicant-review features, Hiring Assistant access, ATS/CRM integrations, support, contract term, renewal uplift, and cancellation terms. If the budget owner is comparing it with hireEZ or SeekOut-style sourcing tools, normalize the comparison around actual recruiter workflow rather than headline price.
+
+## Best Alternatives
+
+[hireEZ](/tools/hireez/) is the main challenger when the team wants a recruiting-specific platform that combines sourcing, CRM, rediscovery, applicant match, analytics, internal mobility, scheduling, and ATS workflows.
+
+[Paradox](/tools/paradox/) is better for high-volume inbound hiring where mobile apply, conversational screening, resume matching, reminders, and scheduling are more important than passive sourcing.
+
+[Eightfold AI](/tools/eightfold-ai/) is better when the buyer is solving broader enterprise talent intelligence: skills matching, internal mobility, workforce planning, and retention.
+
+[ChatGPT](/tools/chatgpt/) is enough for low-risk writing support, but it is not a sourcing database, ATS, or auditable hiring system.
+
+## Buying Checklist
+
+Before renewing or buying LinkedIn Recruiter, ask:
+
+- How many hires actually originate from LinkedIn-sourced candidates?
+- Which roles require passive sourcing versus inbound applicant review?
+- How much recruiter time is spent searching, messaging, screening, and summarizing?
+- Which workflows would Hiring Assistant accelerate, and who reviews its output?
+- Are InMail response rates healthy enough to justify the spend?
+- Which ATS or CRM integrations are required for clean reporting?
+- What human review, bias control, and compliance documentation does the team need?
+
+The strongest case for LinkedIn Recruiter is repeatable hiring where the professional graph matters. The weakest case is occasional hiring where a cheaper assistant and targeted job distribution would be enough.
+
 ## Watch-Outs
 
 Hiring Assistant should not be treated as an autonomous decision-maker. LinkedIn's FAQ says it keeps human involvement central and lets recruiters choose when to use it. That is essential for hiring compliance, bias control, and candidate trust.
+
+## AiPedia Trust Note
+
+This page was refreshed on May 11, 2026 using LinkedIn's current Recruiter and Hiring Assistant pages. AiPedia does not list a paid affiliate program for LinkedIn Recruiter. Scores reflect buyer utility, defensibility, network moat, and procurement risk.
 
 ## Sources
 

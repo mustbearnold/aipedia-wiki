@@ -1,0 +1,92 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import EmailCapture from '../../components/EmailCapture.astro';
+
+// Hand-curated list mirroring the individual answer pages.
+// Kept here (rather than auto-discovered) so the order and copy
+// can be editorial, not alphabetical.
+const ANSWER_GROUPS = [
+  {
+    title: 'Best tools',
+    items: [
+      { slug: 'best-ai-chatbot-2026', q: 'What is the best AI chatbot in 2026?', a: 'ChatGPT is the broadest default; Claude, Gemini, and Perplexity win narrower jobs.' },
+      { slug: 'best-ai-coding-tool-2026', q: 'What is the best AI coding tool in 2026?', a: 'Cursor for daily IDE work, Claude Code for deep repo tasks, Copilot for GitHub-first teams.' },
+      { slug: 'best-ai-for-writing-2026', q: 'What is the best AI for writing in 2026?', a: 'Claude is the first writing pick; ChatGPT is broader, and Grammarly fits inline review.' },
+      { slug: 'best-ai-image-generator-2026', q: 'What is the best AI image generator in 2026?', a: 'ChatGPT Images 2.0 is easiest for most people; Midjourney, Ideogram, and open models win specialist jobs.' },
+      { slug: 'best-ai-video-generator-2026', q: 'What is the best AI video generator in 2026?', a: 'Runway is safest to buy for production; Seedance, Veo, and Kling must be tested for frontier model quality.' },
+      { slug: 'best-ai-voice-generator-2026', q: 'What is the best AI voice generator in 2026?', a: 'ElevenLabs is the safest default; Cartesia, Fish Audio, and Speechify fit narrower voice workflows.' },
+    ],
+  },
+  {
+    title: 'Tool comparisons',
+    items: [
+      { slug: 'chatgpt-vs-claude-which-is-better', q: 'ChatGPT vs Claude: which is better?' },
+      { slug: 'chatgpt-alternatives-2026', q: 'What are the best ChatGPT alternatives in 2026?', a: 'Claude is the first alternative to test; Gemini and Perplexity win Google and research workflows.' },
+    ],
+  },
+  {
+    title: 'Buying decisions',
+    items: [
+      { slug: 'is-midjourney-worth-it', q: 'Is Midjourney worth it in 2026?' },
+      { slug: 'is-cursor-worth-it', q: 'Is Cursor worth the money?' },
+    ],
+  },
+  {
+    title: 'Free and budget',
+    items: [
+      { slug: 'best-free-ai-tools-2026', q: 'What are the best free AI tools in 2026?', a: 'Start with ChatGPT Free, then add Claude, Gemini, Perplexity, or NotebookLM for specific work.' },
+      { slug: 'best-ai-for-students', q: 'What is the best AI for students in 2026?' },
+    ],
+  },
+];
+
+const answerCount = ANSWER_GROUPS.reduce((sum, group) => sum + group.items.length, 0);
+---
+
+<BaseLayout
+  title="Definitive AI Answers — Short Authoritative Guides — aipedia.wiki"
+  description="Short definitive answers to the highest-volume AI buying questions. Best chatbot, best coder, ChatGPT vs Claude, free tools, and more."
+>
+  
+  <Breadcrumb items={[{ label: 'Answers' }]} />
+
+  <section class="mb-[var(--site-section-gap)] pt-[var(--site-content-gap-sm)]">
+    <h1 class="text-3xl sm:text-4xl font-bold mb-[var(--site-card-gap)] leading-tight">
+      Definitive <span class="accent-gradient-text">answers</span>
+    </h1>
+    <p class="text-[var(--text-secondary)] text-sm sm:text-base max-w-2xl leading-relaxed">
+      Short, direct answers to common AI buying questions. No listicle fluff, no affiliate ranking. Each answer is designed for a fast decision, with deeper reviews linked when needed.
+    </p>
+    <p class="mt-3 text-xs font-semibold uppercase tracking-[0.14em] text-[var(--accent-success)]">
+      Priority answers refreshed and source-checked May 9, 2026
+    </p>
+  </section>
+
+  <section class="space-y-[var(--site-section-gap)] mb-[var(--site-page-bottom)]">
+    {ANSWER_GROUPS.map((group) => (
+      <div>
+        <h2 class="text-[11px] font-semibold uppercase tracking-[0.14em] text-[var(--text-muted)] mb-[var(--site-card-gap)]">
+          {group.title}
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-[var(--site-grid-gap)]">
+          {group.items.map((a) => (
+            <a
+              href={`/answers/${a.slug}/`}
+              class="group block rounded-[var(--site-radius-card)] border border-[var(--border)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] hover:border-[rgba(249, 115, 22,0.4)] p-[var(--site-card-padding)] no-underline transition-colors"
+            >
+              <h3 class="text-[17px] font-bold text-[var(--text-primary)] group-hover:text-[var(--accent-primary)] m-0 transition-colors">
+                {a.q}
+              </h3>
+              {'a' in a && a.a && (
+                <p class="mt-2 mb-0 text-sm leading-relaxed text-[var(--text-secondary)]">{a.a}</p>
+              )}
+            </a>
+          ))}
+        </div>
+      </div>
+    ))}
+  </section>
+
+  <EmailCapture variant="footer" source="answers-index" />
+</BaseLayout>

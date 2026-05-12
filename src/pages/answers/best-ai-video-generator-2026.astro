@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import Breadcrumb from '../../components/Breadcrumb.astro';
+import Hero from '../../components/godtier/Hero.astro';
 import AnswerContent from '../../components/AnswerContent.astro';
 import AnswerDecisionPanel from '../../components/AnswerDecisionPanel.astro';
 
@@ -31,17 +31,18 @@ const answerLD = JSON.stringify({
 <BaseLayout title="Best AI Video Generator (2026): Definitive Answer" description="Runway is safest for production, while Veo 3.1, Seedance 2.0, and Kling 3.0 should be tested for frontier generated-video quality. May 2026 verdict.">
   <script type="application/ld+json" set:html={answerLD} />
   
-  <Breadcrumb items={[{ label: 'Answers', href: '/answers/' }, { label: 'What is the best AI video generator in 2026?' }]} />
+  <div class="gt-canvas">
+    <Hero
+      title="What is the best AI video generator in 2026?"
+      breadcrumbs={[
+        { label: 'aipedia', href: '/' },
+        { label: 'Answers', href: '/answers/' },
+        { label: "What is the best AI video generator in 2026?" },
+      ]}
+      verifiedLabel="Verified May 9, 2026"
+    />
 
-  <article class="max-w-[var(--site-narrow-max)] mx-auto py-[var(--site-content-gap)]">
-    <h1 class="text-2xl sm:text-3xl font-bold text-[var(--text-primary)] mb-[var(--site-card-gap)]">What is the best AI video generator in 2026?</h1>
-    <div class="flex items-center gap-[var(--site-card-gap)] text-sm text-[var(--text-muted)] mb-[var(--site-content-gap)]">
-      <a href="/about/editorial/" class="inline-flex items-center gap-1.5 no-underline hover:underline">
-        <span class="text-[var(--text-secondary)]">aipedia.wiki Editorial</span>
-      </a>
-      <span aria-hidden="true">·</span>
-      <time datetime="2026-05-09" class="text-[var(--accent-success)]">Verified May 9, 2026</time>
-    </div>
+    <article class="gt-body" id="gt-body">
 
     <AnswerDecisionPanel
       verdict="Runway is the safest production buy, but Seedance 2.0, Veo 3.1, and Kling 3.0 must be tested when raw model quality decides the purchase."
@@ -63,4 +64,5 @@ const answerLD = JSON.stringify({
       <p>This answer was checked against current vendor and release sources on May 9, 2026, including <a href="https://help.runwayml.com/hc/en-us/articles/46974685288467-Creating-with-Gen-4-5" class="text-[var(--accent-primary)] no-underline hover:underline">Runway Gen-4.5 docs</a>, <a href="https://blog.google/innovation-and-ai/products/veo-updates-flow/" class="text-[var(--accent-primary)] no-underline hover:underline">Google Veo 3.1 updates</a>, <a href="https://seed.bytedance.com/blog/seedance-2-0-official-launch" class="text-[var(--accent-primary)] no-underline hover:underline">ByteDance Seedance 2.0</a>, <a href="https://techcrunch.com/2026/03/26/bytedances-new-ai-video-generation-model-dreamina-seedance-2-0-comes-to-capcut/" class="text-[var(--accent-primary)] no-underline hover:underline">Seedance 2.0 rollout reporting</a>, <a href="https://ir.kuaishou.com/news-releases/news-release-details/kling-ai-launches-30-model-ushering-era-where-everyone-can-be/" class="text-[var(--accent-primary)] no-underline hover:underline">Kuaishou Kling 3.0</a>, and <a href="https://www.heygen.com/blog/announcing-avatar-v" class="text-[var(--accent-primary)] no-underline hover:underline">HeyGen Avatar V</a>. See our <a href="/about/scoring/" class="text-[var(--accent-primary)] no-underline hover:underline">scoring methodology</a>.</p>
     </div>
   </article>
+  </div>
 </BaseLayout>

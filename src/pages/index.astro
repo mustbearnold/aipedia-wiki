@@ -1,12 +1,23 @@
 ---
+/**
+ * Homepage — god-tier 10/10 mobile-first (May 2026 onward).
+ *
+ * Composes the same god-tier components used across the site:
+ *   Hero · DecisionCard (top tool) · top tools list · category rail · news list · TrustPanel
+ *
+ * Legacy preserved at src/legacy-pages/index.legacy.astro.
+ */
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import ToolLogo from '../components/ToolLogo.astro';
+import Hero from '../components/godtier/Hero.astro';
+import DecisionCard from '../components/godtier/DecisionCard.astro';
+import TrustPanel from '../components/godtier/TrustPanel.astro';
+import CommercialCTA from '../components/CommercialCTA.astro';
 import HomepageLD from '../components/seo/HomepageLD.astro';
-import { categoryLabel } from '../utils/tool-metadata';
+import { categoryLabel, overallScore } from '../utils/tool-metadata';
 
 const allTools = await getCollection('tools');
-const activeTools = allTools.filter((tool) => !['dead', 'retired', 'acquired'].includes(String(tool.data.status ?? 'active')));
+const activeTools = allTools.filter((tool: any) => !['dead', 'retired', 'acquired'].includes(String(tool.data.status ?? 'active')));
 const allComparisons = await getCollection('comparisons');
 const allNews = await getCollection('news');
 const allCategories = await getCollection('categories');
@@ -17,38 +28,54 @@ const comparisonCount = allComparisons.length;
 const newsCount = allNews.length;
 const guideCount = allGuides.length;
 
-function scoreFor(tool: (typeof activeTools)[number]): number {
-  const scores = tool.data.scores;
-  if (!scores) return 0;
-  const values = [scores.utility, scores.value, scores.moat, scores.longevity].filter((value): value is number => typeof value === 'number');
-  if (!values.length) return 0;
-  return values.reduce((sum, value) => sum + value, 0) / values.length;
-}
-
-function entrySlug(entry: { id: string; data: { slug?: string } }): string {
+function entrySlug(entry: any): string {
   return String(entry.data.slug ?? entry.id.replace(/\.md$/, '').replace(/\\/g, '/'));
 }
 
-const topTools = activeTools
-  .map((tool) => ({
+const scoredTools = activeTools
+  .map((tool: any) => ({
     slug: entrySlug(tool),
     title: tool.data.title,
     category: tool.data.category ?? 'ai-tools',
     categoryLabel: categoryLabel(tool.data.category ?? 'ai-tools'),
     tagline: tool.data.tagline ?? tool.data.meta_description ?? '',
-    pricing: tool.data.price_range ?? tool.data.pricing_model ?? 'Pricing varies',
-    score: scoreFor(tool),
+    pricing: tool.data.price_range ?? null,
+    pricingModel: tool.data.pricing_model ?? null,
+    url: tool.data.url ?? null,
+    affiliateLink: tool.data.affiliate?.link ?? null,
+    affiliateNetwork: tool.data.affiliate?.network ?? null,
+    score: overallScore(tool.data.scores ?? {}),
   }))
-  .sort((a, b) => b.score - a.score)
-  .slice(0, 8);
+  .sort((a: any, b: any) => b.score - a.score);
 
-/** Categories represented in the featured row (for dropdown filter). */
-const topToolCategories = Array.from(
-  new Map(topTools.map((t) => [t.category, { slug: t.category, label: t.categoryLabel }])).values()
-).sort((a, b) => a.label.localeCompare(b.label));
+const topTool = scoredTools[0];
+const topScoreBand = topTool && topTool.score >= 9
+  ? 'Top-tier'
+  : topTool && topTool.score >= 8
+    ? 'Strong'
+    : 'Useful';
+
+const topTools = scoredTools.slice(0, 8);
+
+const categories = allCategories
+  .map((cat: any) => {
+    const catSlug = cat.data.slug ?? cat.id.replace(/\.md$/, '');
+    const inCategory = activeTools.filter((t: any) => t.data.category === catSlug);
+    const topScore = inCategory.length > 0
+      ? Math.max(...inCategory.map((t: any) => overallScore(t.data.scores ?? {})))
+      : 0;
+    return {
+      slug: catSlug,
+      label: cat.data.title ?? categoryLabel(catSlug),
+      count: inCategory.length,
+      topScore,
+    };
+  })
+  .filter((c: any) => c.count > 0)
+  .sort((a: any, b: any) => b.topScore - a.topScore);
 
 const latestNews = allNews
-  .map((news) => ({
+  .map((news: any) => ({
     slug: entrySlug(news),
     title: news.data.title,
     summary: news.data.summary ?? news.data.description ?? '',
@@ -56,1495 +83,516 @@ const latestNews = allNews
     severity: news.data.severity ?? 'minor',
   }))
   .sort((a, b) => b.date.localeCompare(a.date))
-  .slice(0, 4);
+  .slice(0, 6);
 
-const popularSearches = [
-  'AI video generator',
-  'avatar video generator',
-  'ad copy tools',
-  'sales AI tools',
-  'AI SEO tools',
-  'coding assistant',
+const homepageSources = [
+  { label: 'Scoring methodology', url: '/about/scoring/', verified: '2026-05-11' },
+  { label: 'Editorial policy',    url: '/about/editorial/', verified: '2026-05-11' },
+  { label: 'How we verify facts', url: '/about/', verified: '2026-05-11' },
+  { label: 'Affiliate disclosure', url: '/disclosure/', verified: '2026-05-11' },
 ];
 
-const decisionPaths = [
-  {
-    label: 'Pick by job',
-    title: 'Start with buyer guides for a workflow, role, or budget.',
-    href: '/guides/',
-    meta: `${guideCount} buyer guides`,
-  },
-  {
-    label: 'Browse tools',
-    title: 'Find a tool by category, score, or pricing.',
-    href: '/tools/',
-    meta: `${toolCount} active reviews`,
-  },
-  {
-    label: 'Compare options',
-    title: 'See practical tradeoffs between similar tools.',
-    href: '/compare/',
-    meta: `${comparisonCount} comparisons`,
-  },
-  {
-    label: 'Track changes',
-    title: 'Follow launches, pricing updates, and model changes.',
-    href: '/news/',
-    meta: `${newsCount} news items`,
-  },
-  {
-    label: 'Build a stack',
-    title: 'Get a role-based starter set before you buy.',
-    href: '/stack-builder/',
-    meta: 'Interactive builder',
-  },
-];
+// Dynamic freshness: count today's and this-week's news, build the
+// verified label off the most-recent news date so the homepage rank
+// line actually carries a real signal.
+const monthShort = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const latestNewsDateIso = latestNews[0]?.date ?? '';
+const latestNewsDate = latestNewsDateIso ? new Date(latestNewsDateIso + 'T12:00:00Z') : null;
+const freshLabel = latestNewsDate && !isNaN(latestNewsDate.getTime())
+  ? `Updated ${monthShort[latestNewsDate.getUTCMonth()]} ${latestNewsDate.getUTCDate()}`
+  : 'Updated daily';
 
+// News count today (same UTC date as latest)
+const todayIso = new Date().toISOString().slice(0, 10);
+const todaysNewsCount = latestNews.filter((n) => n.date === todayIso).length;
+const rankLabelText = todaysNewsCount > 0
+  ? `${todaysNewsCount} new ${todaysNewsCount === 1 ? 'story' : 'stories'} today`
+  : `${toolCount} tools tracked`;
+
+// "What's new this week" strip — the 3 most-recent breaking/major items
+// for the homepage hero scroller, regardless of date filter.
+const sevenDaysAgo = new Date();
+sevenDaysAgo.setUTCDate(sevenDaysAgo.getUTCDate() - 7);
+const sevenDaysAgoIso = sevenDaysAgo.toISOString().slice(0, 10);
+const weeklyStream = allNews
+  .map((n: any) => ({
+    slug: entrySlug(n),
+    title: n.data.title,
+    date: String(n.data.date).slice(0, 10),
+    severity: (n.data.severity as string) || 'minor',
+  }))
+  .filter((n) => n.date >= sevenDaysAgoIso)
+  .sort((a, b) => b.date.localeCompare(a.date))
+  .slice(0, 5);
+
+function shortNewsDate(iso: string): string {
+  const d = new Date(iso + 'T12:00:00Z');
+  if (isNaN(d.getTime())) return iso;
+  return `${monthShort[d.getUTCMonth()]} ${d.getUTCDate()}`;
+}
+
+function newsDateFmt(iso: string): string {
+  const d = new Date(iso);
+  if (isNaN(d.getTime())) return iso;
+  const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  return `${months[d.getUTCMonth()]} ${d.getUTCDate()}`;
+}
 ---
 
 <BaseLayout
   title={`AI Tools Wiki · May 2026 · ${toolCount} tools scored`}
-  description={`Compare ${toolCount} AI tools with source-backed reviews, ${guideCount} buyer guides, ${comparisonCount} head-to-head comparisons, and ${newsCount} news items. Updated May 2026. Independent scores. No paid rankings.`}
+  description={`Compare ${toolCount} AI tools with source-backed reviews, ${guideCount} buyer guides, and ${newsCount} news items. Updated May 2026. Independent scores. No paid rankings.`}
 >
   <HomepageLD
     toolCount={toolCount}
     comparisonCount={comparisonCount}
     categoryCount={allCategories.length}
-    lastUpdated="2026-05-09"
+    lastUpdated="2026-05-11"
   />
 
-  <div class="home-page" data-home-page>
-      <section class="home-hero" aria-labelledby="home-title">
-        <div class="home-hero-copy">
-          <p class="home-eyebrow">AI tools wiki</p>
-          <h1 id="home-title">Find the right AI tool faster.</h1>
-          <p class="home-lede">
-            Source-backed reviews, buyer guides, comparisons, and AI news. No paid rankings, no vague hype,
-            just tradeoffs and buying paths you can use.
-          </p>
+  <div class="sr-only" data-pagefind-ignore>
+    <span data-pagefind-filter="Type">Home</span>
+  </div>
 
-          <form class="home-search" data-home-search role="search" action="/search/" method="get">
-            <label for="home-search-input">Search aipedia.wiki</label>
-            <div class="home-search-combo">
-              <div class="home-search-box">
-                <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M10.8 18.1a7.3 7.3 0 1 1 0-14.6 7.3 7.3 0 0 1 0 14.6Zm5.1-2 4.6 4.6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                </svg>
-                <input
-                  id="home-search-input"
-                  name="q"
-                  type="search"
-                  autocomplete="off"
-                  spellcheck="false"
-                  placeholder="Search tools"
-                  role="combobox"
-                  aria-autocomplete="list"
-                  aria-expanded="false"
-                  aria-controls="home-search-results"
-                  data-home-search-input
-                />
-                <button type="submit">Search</button>
-              </div>
-              <div class="home-search-results" id="home-search-results" role="listbox" data-home-search-panel hidden>
-                <div class="home-search-results-head">
-                  <span data-home-search-heading>Top matches</span>
-                  <strong data-home-search-count></strong>
-                </div>
-                <div class="home-search-results-list" data-home-search-results></div>
-              </div>
-            </div>
-          </form>
+  <div class="gt-canvas">
 
-          <div class="home-quick-scroller" role="region" aria-label="Popular searches">
-            <div class="home-quick">
-              {popularSearches.map((term) => (
-                <button type="button" data-home-query={term}>{term}</button>
-              ))}
-            </div>
-          </div>
-        </div>
+    <Hero
+      title="aipedia.wiki"
+      tagline="The AI tools encyclopedia and buyer decision engine. Independent reviews, comparisons, and scoring."
+      verifiedLabel={freshLabel}
+      rankLabel={rankLabelText}
+    />
 
-        <aside class="home-summary" aria-label="Catalog summary">
-          <div>
-            <strong>{toolCount}</strong>
-            <span>reviewed AI tools</span>
-          </div>
-          <div>
-            <strong>{comparisonCount}</strong>
-            <span>comparison guides</span>
-          </div>
-          <div>
-            <strong>{newsCount}</strong>
-            <span>AI news stories</span>
-          </div>
-        </aside>
-      </section>
-
-      <section class="home-section" id="explore" aria-labelledby="paths-title">
-        <div class="home-section-head">
-          <p class="home-eyebrow">Start here</p>
-          <h2 id="paths-title">Choose the path that matches your question.</h2>
-        </div>
-        <div class="home-paths">
-          {decisionPaths.map((path) => (
-            <a class="home-path home-surface-card" href={path.href}>
-              <span>{path.label}</span>
-              <strong>{path.title}</strong>
-              <small>{path.meta}</small>
-            </a>
-          ))}
-        </div>
-      </section>
-
-      <section class="home-section home-tools-section" id="top-tools" aria-labelledby="tools-title">
-        <div class="home-section-head">
-          <p class="home-eyebrow">Top reviewed</p>
-          <h2 id="tools-title">Strong starting points.</h2>
-          <a href="/tools/">Browse all tools</a>
-        </div>
-
-        <div class="home-tool-filter">
-          <label id="home-tool-filter-label" for="home-tool-filter-trigger">Category</label>
-          <div class="home-tool-filter-box" data-home-tool-filter-wrap>
-            <button
-              type="button"
-              id="home-tool-filter-trigger"
-              class="home-tool-filter-trigger"
-              aria-haspopup="listbox"
-              aria-expanded="false"
-              aria-controls="home-tool-filter-menu"
-              data-home-tool-filter-trigger
-            >
-              <span data-home-tool-filter-display>All categories</span>
-              <span class="home-tool-filter-trigger-chevron" aria-hidden="true">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="m6 9 6 6 6-6"></path>
-                </svg>
-              </span>
-            </button>
-            <input type="hidden" value="all" data-home-tool-filter-value />
-            <div
-              id="home-tool-filter-menu"
-              class="home-tool-filter-menu"
-              role="listbox"
-              aria-labelledby="home-tool-filter-label"
-              hidden
-              data-home-tool-filter-menu
-            >
-              <button type="button" role="option" class="home-tool-filter-option is-active" data-value="all">
-                All categories
-              </button>
-              {topToolCategories.map((c) => (
-                <button type="button" role="option" class="home-tool-filter-option" data-value={c.slug}>
-                  {c.label}
-                </button>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        <div class="home-tools" data-home-tools>
-          {topTools.map((tool) => (
-            <a
-              class="home-tool home-surface-card"
-              href={`/tools/${tool.slug}/`}
-              data-home-tool
-              data-category={tool.category}
-            >
-              <ToolLogo slug={tool.slug} title={tool.title} size={42} className="home-tool-logo" />
-              <span>
-                <strong>{tool.title}</strong>
-                <small>{tool.categoryLabel} · {tool.score.toFixed(1)}/10</small>
-              </span>
-              <em>{tool.pricing}</em>
-            </a>
-          ))}
-        </div>
-        <p class="home-empty" data-home-tools-empty hidden>No featured tools match that filter.</p>
-      </section>
-
-      <section class="home-section home-bottom-grid">
-        <div>
-          <div class="home-section-head">
-            <p class="home-eyebrow">Latest news</p>
-            <h2>What changed recently.</h2>
-            <a href="/news/">Open news</a>
-          </div>
-          <div class="home-news-list">
-            {latestNews.map((news) => (
-              <a class="home-news home-surface-card" href={`/news/${news.slug}/`}>
-                <span class:list={['home-news-severity', `is-${news.severity}`]}>{news.severity}</span>
-                <strong>{news.title}</strong>
-                <small>{news.date}</small>
+    {weeklyStream.length > 0 && (
+      <nav class="gt-weekly" aria-label="What's new this week">
+        <p class="gt-weekly-label">This week</p>
+        <ol class="gt-weekly-list">
+          {weeklyStream.map((n) => (
+            <li class={`gt-weekly-item gt-weekly-${n.severity}`}>
+              <a href={`/news/${n.slug}/`}>
+                <time>{shortNewsDate(n.date)}</time>
+                <strong>{n.title}</strong>
               </a>
-            ))}
-          </div>
-        </div>
+            </li>
+          ))}
+        </ol>
+      </nav>
+    )}
 
-        <aside class="home-trust home-surface-card" aria-label="Editorial standards">
-          <p class="home-eyebrow">Why trust it</p>
-          <h2>Built for decisions, not ads.</h2>
-          <ul>
-            <li>Every important claim needs a source.</li>
-            <li>Scores use utility, value, moat, and longevity.</li>
-            <li>Paid placement does not decide rankings.</li>
-            <li>Old, retired, and acquired tools are separated out.</li>
-          </ul>
-          <a href="/about/scoring/">Read the scoring model</a>
-        </aside>
-      </section>
-    </div>
-<style>
-    /* --home-* tokens: src/styles/home-page-tokens.css (global; survives View Transitions) */
+    {topTool && (
+      <DecisionCard
+        scoreOverall={topTool.score}
+        scoreBand={topScoreBand}
+        statusActive={true}
+        statusLabel="#1 overall"
+        price={topTool.pricing ?? undefined}
+      >
+        <CommercialCTA
+          slot="primary-cta"
+          toolName={topTool.title}
+          toolSlug={topTool.slug}
+          canonicalUrl={topTool.url}
+          affiliateUrl={topTool.affiliateLink}
+          affiliateProgram={topTool.affiliateNetwork}
+          pricingModel={topTool.pricingModel}
+          priceRange={topTool.pricing}
+          pageType="home"
+          placement="home_hero_primary"
+          pageSlug="home"
+          className="gt-btn gt-btn-primary"
+          showDisclosure={false}
+          arrow="→"
+        />
+        <a slot="secondary-cta" href={`/tools/${topTool.slug}/`} class="gt-btn gt-btn-secondary">Read {topTool.title} review</a>
+      </DecisionCard>
+    )}
 
-    .home-page {
-      width: 100%;
-      max-width: 100%;
-      margin: 0;
-      padding: 0;
-      overflow-x: clip;
-      color: var(--home-text);
-    }
+    <form class="gt-search" role="search" action="/search/" method="get">
+      <label for="gt-search-input" class="gt-sr-only">Search aipedia.wiki</label>
+      <div class="gt-search-row">
+        <svg class="gt-search-icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M10.8 18.1a7.3 7.3 0 1 1 0-14.6 7.3 7.3 0 0 1 0 14.6Zm5.1-2 4.6 4.6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </svg>
+        <input id="gt-search-input" name="q" type="search" autocomplete="off" placeholder="Search 253 AI tools, comparisons, news" />
+        <button type="submit" class="gt-search-submit">Search</button>
+      </div>
+    </form>
 
-    .home-summary,
-    .home-summary div,
-    .home-search-box,
-    .home-tool-filter-box,
-    .home-search-results,
-    .home-quick button {
-      -webkit-backdrop-filter: blur(12px) saturate(140%);
-      backdrop-filter: blur(12px) saturate(140%);
-    }
+    <section class="gt-stats" aria-label="Catalog summary">
+      <a href="/tools/" class="gt-stat">
+        <strong>{toolCount}</strong>
+        <span>tools scored</span>
+      </a>
+      <a href="/compare/" class="gt-stat">
+        <strong>{comparisonCount}</strong>
+        <span>comparisons</span>
+      </a>
+      <a href="/news/" class="gt-stat">
+        <strong>{newsCount}</strong>
+        <span>news items</span>
+      </a>
+      <a href="/guides/" class="gt-stat">
+        <strong>{guideCount}</strong>
+        <span>buyer guides</span>
+      </a>
+    </section>
 
-    @media (max-width: 620px) {
-      .home-summary,
-      .home-summary div,
-      .home-search-box,
-      .home-tool-filter-box,
-      .home-search-results,
-      .home-quick button {
-        -webkit-backdrop-filter: blur(10px) saturate(135%);
-        backdrop-filter: blur(10px) saturate(135%);
-      }
-    }
+    <section class="gt-top-tools" aria-labelledby="gt-top-h">
+      <h2 id="gt-top-h" class="gt-section-h">Top-scored AI tools</h2>
+      <ol class="gt-tool-list">
+        {topTools.map((t, i) => {
+          const tone = t.score >= 8 ? 'positive' : t.score >= 6.5 ? 'neutral' : 'negative';
+          return (
+            <li class={`gt-tool-row gt-tool-row-${tone}`}>
+              <a href={`/tools/${t.slug}/`} class="gt-tool-link">
+                <span class="gt-tool-rank">{i + 1}</span>
+                <div class="gt-tool-main">
+                  <strong class="gt-tool-title">{t.title}</strong>
+                  {t.tagline && <span class="gt-tool-tagline">{t.tagline}</span>}
+                </div>
+                <div class="gt-tool-meta">
+                  <span class="gt-tool-category">{t.categoryLabel}</span>
+                  <span class="gt-tool-score tabular-nums">{t.score}<span class="gt-tool-score-slash">/10</span></span>
+                </div>
+              </a>
+            </li>
+          );
+        })}
+      </ol>
+      <a href="/tools/" class="gt-link-row">See all {toolCount} tools <span aria-hidden="true">→</span></a>
+    </section>
 
-    @media (prefers-reduced-motion: reduce) {
-      .home-summary,
-      .home-summary div,
-      .home-search-box,
-      .home-tool-filter-box,
-      .home-search-results,
-      .home-quick button {
-        -webkit-backdrop-filter: none;
-        backdrop-filter: none;
-      }
-    }
+    <section class="gt-categories" aria-labelledby="gt-cat-h">
+      <h2 id="gt-cat-h" class="gt-section-h">Browse by category</h2>
+      <ul class="gt-cat-grid">
+        {categories.map((c: any) => (
+          <li class="gt-cat-card">
+            <a href={`/categories/${c.slug}/`}>
+              <strong>{c.label}</strong>
+              <span>{c.count} {c.count === 1 ? 'tool' : 'tools'}</span>
+              {c.topScore > 0 && <span class="gt-cat-score">Top {c.topScore}/10</span>}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
 
-    .home-page :is(button, a.home-path, a.home-tool, a.home-news, .home-path, .home-tool) {
-      touch-action: manipulation;
-    }
+    <section class="gt-news" aria-labelledby="gt-news-h">
+      <h2 id="gt-news-h" class="gt-section-h">Latest AI news</h2>
+      <ol class="gt-news-list">
+        {latestNews.map((n) => (
+          <li class={`gt-news-row gt-news-${n.severity}`}>
+            <a href={`/news/${n.slug}/`}>
+              <time class="gt-news-date">{newsDateFmt(n.date)}</time>
+              <strong class="gt-news-title">{n.title}</strong>
+              {n.summary && <span class="gt-news-summary">{n.summary}</span>}
+            </a>
+          </li>
+        ))}
+      </ol>
+      <a href="/news/" class="gt-link-row">All news <span aria-hidden="true">→</span></a>
+    </section>
 
-    .home-hero {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(240px, 300px);
-      gap: var(--site-panel-gap);
-      align-items: end;
-      padding: var(--site-page-top) 0 var(--site-section-gap);
-      min-width: 0;
-    }
+    <TrustPanel
+      sources={homepageSources}
+      affiliate={true}
+      heading="Editorial standards"
+      subline="aipedia.wiki is an agentically operated AI-tools encyclopedia. Independent scores. Source-backed facts. Some outbound links are affiliate links — disclosed per-CTA. Affiliate relationships never influence scores, rankings, or reviews."
+    />
 
-    .home-hero-copy {
-      min-width: 0;
-      max-width: 100%;
-    }
+  </div>
 
-    .home-eyebrow {
-      margin: 0;
-      color: var(--home-accent);
-      font-size: 12px;
-      font-weight: 900;
-      letter-spacing: 0.12em;
-      line-height: 1;
+  <style>
+    /* What's new this week ----------------------------------------- */
+    .gt-weekly { margin-bottom: 20px; }
+    .gt-weekly-label {
+      font-size: 11px;
+      font-weight: 700;
       text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--gt-subtle);
+      margin: 0 0 8px;
     }
-
-    .home-hero h1 {
-      max-width: 760px;
-      margin: var(--site-content-gap) 0 0;
-      color: var(--home-heading);
-      font-size: clamp(2rem, 8vw + 1rem, 5.25rem);
-      font-weight: 650;
-      letter-spacing: -0.02em;
-      line-height: 1.02;
+    .gt-weekly-list {
+      list-style: none; padding: 0 18px 8px; margin: 0 -18px;
+      display: flex; gap: 8px;
+      overflow-x: auto;
+      scrollbar-width: none;
     }
-
-    .home-lede {
-      max-width: 690px;
-      margin: var(--site-content-gap) 0 0;
-      color: var(--home-muted);
-      font-size: clamp(17px, 2vw, 21px);
-      line-height: 1.6;
+    .gt-weekly-list::-webkit-scrollbar { display: none; }
+    .gt-weekly-item {
+      flex: 0 0 auto;
+      max-width: 280px;
+      border-radius: var(--gt-radius-sm);
+      border: 1px solid var(--gt-line);
+      background: var(--gt-surface);
     }
-
-    .home-search {
-      max-width: 780px;
-      width: 100%;
-      margin-top: var(--site-content-gap);
-    }
-
-    .home-search-combo {
-      position: relative;
-      z-index: 30;
-      width: 100%;
-      max-width: 100%;
-      min-width: 0;
-    }
-
-    .home-search label,
-    .home-tool-filter label {
+    .gt-weekly-breaking { border-left: 3px solid var(--gt-negative); }
+    .gt-weekly-major { border-left: 3px solid var(--gt-accent); }
+    .gt-weekly-minor { border-left: 3px solid var(--gt-line-strong); }
+    .gt-weekly-item:hover { background: var(--gt-surface-2); }
+    .gt-weekly-item a {
       display: block;
-      margin-bottom: 9px;
-      color: var(--home-muted);
+      padding: 10px 14px;
+      text-decoration: none;
+      color: var(--gt-fg);
+      min-width: 200px;
+    }
+    .gt-weekly-item time {
+      display: block;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--gt-subtle);
+      margin-bottom: 4px;
+      font-variant-numeric: tabular-nums;
+    }
+    .gt-weekly-item strong {
       font-size: 13px;
-      font-weight: 800;
-    }
-
-    .home-search-box {
-      display: grid;
-      grid-template-columns: 22px minmax(0, 1fr) auto;
-      align-items: center;
-      gap: 14px;
-      min-height: 68px;
-      min-width: 0;
-      max-width: 100%;
-      padding: 10px 10px 10px 18px;
-      border: 1px solid var(--home-hero-search-border);
-      border-radius: 14px;
-      background: var(--home-hero-search-bg);
-      box-shadow: var(--home-hero-search-shadow);
-      color: var(--home-accent);
-    }
-
-    .home-search-box svg {
-      color: var(--home-accent);
-      opacity: 0.92;
-    }
-
-    .home-search-box:focus-within {
-      border-color: var(--home-hero-search-focus-border);
-      box-shadow: var(--home-hero-search-focus-shadow);
-    }
-
-    .home-search-box input {
-      min-width: 0;
-      border: 0;
-      outline: 0;
-      color: var(--home-text);
-      background: transparent;
-      font: inherit;
-      font-size: 19px;
-      font-weight: 750;
-    }
-
-    .home-search-box input::placeholder {
-      color: var(--home-dim);
-      opacity: 1;
-    }
-
-    .home-search-box button {
-      min-height: 48px;
-      padding: 0 18px;
-      border: 0;
-      border-radius: 10px;
-      color: var(--home-inverse);
-      background: var(--home-accent-solid);
-      font: inherit;
-      font-weight: 800;
-    }
-
-    .home-search-results {
-      position: absolute;
-      z-index: 80;
-      top: calc(100% + 10px);
-      right: 0;
-      left: 0;
-      width: 100%;
-      max-width: 100%;
-      box-sizing: border-box;
+      line-height: 1.4;
+      font-weight: 600;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
       overflow: hidden;
-      border: 1px solid var(--home-hero-results-border);
-      border-radius: 14px;
-      background: var(--home-hero-results-bg);
-      box-shadow: var(--home-hero-results-shadow);
-      color: var(--home-text);
-      opacity: 1;
-      transform: translateY(0) scale(1);
-      transform-origin: top center;
-      transition:
-        opacity var(--motion-fast, 160ms) var(--motion-ease, cubic-bezier(0.16, 1, 0.3, 1)),
-        transform var(--motion-base, 240ms) var(--motion-ease, cubic-bezier(0.16, 1, 0.3, 1)),
-        border-color var(--motion-base, 240ms) var(--motion-ease, cubic-bezier(0.16, 1, 0.3, 1));
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .gt-weekly-list { scroll-behavior: auto; }
     }
 
-    .home-search-results[hidden] {
-      display: none;
-    }
-
-    @starting-style {
-      .home-search-results:not([hidden]) {
-        opacity: 0;
-        transform: translateY(-8px) scale(0.985);
-      }
-    }
-
-    .home-search-results-head {
+    /* Search ------------------------------------------------------- */
+    .gt-search { margin-bottom: 24px; }
+    .gt-search-row {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      min-height: 36px;
-      padding: 0 13px;
-      border-bottom: 1px solid var(--home-line);
-      color: var(--home-muted);
-      font-size: 11px;
-      font-weight: 900;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
+      gap: 8px;
+      padding: 6px 6px 6px 14px;
+      border-radius: var(--gt-radius);
+      border: 1px solid var(--gt-line-strong);
+      background: var(--gt-surface);
+      transition: border-color 120ms ease, background 120ms ease;
     }
-
-    .home-search-results-head strong {
-      color: var(--home-accent);
-      font-variant-numeric: tabular-nums;
-      letter-spacing: 0;
-      text-transform: none;
+    .gt-search-row:focus-within {
+      border-color: var(--gt-accent);
+      background: var(--gt-surface-2);
     }
-
-    .home-search-results-list {
-      display: grid;
-      max-height: min(390px, 54vh);
-      overflow-y: auto;
-      padding: 7px;
-      scrollbar-width: thin;
-      scrollbar-color: var(--home-hero-scrollbar-thumb) transparent;
-    }
-
-    :global(.home-search-result) {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) auto;
-      align-items: center;
-      gap: 14px;
-      min-height: 62px;
-      padding: 9px 11px;
-      border-radius: 10px;
-      color: var(--home-text);
-      text-decoration: none;
-      transition:
-        background var(--motion-fast, 160ms) var(--motion-ease, cubic-bezier(0.16, 1, 0.3, 1)),
-        color var(--motion-fast, 160ms) var(--motion-ease, cubic-bezier(0.16, 1, 0.3, 1)),
-        transform var(--motion-base, 240ms) var(--motion-ease, cubic-bezier(0.16, 1, 0.3, 1));
-    }
-
-    :global(.home-search-result:hover),
-    :global(.home-search-result:focus-visible) {
-      background: rgba(249, 115, 22, 0.1);
-      outline: none;
-      transform: translateX(2px);
-    }
-
-    :global(html.light) :global(.home-search-result:hover),
-    :global(html.light) :global(.home-search-result:focus-visible) {
-      background: rgba(249, 115, 22, 0.08);
-    }
-
-    :global(.home-search-result-main),
-    :global(.home-search-result-meta) {
+    .gt-search-icon { color: var(--gt-subtle); flex: 0 0 auto; }
+    .gt-search input {
+      flex: 1;
       min-width: 0;
+      background: transparent;
+      border: none;
+      outline: none;
+      color: var(--gt-fg);
+      font-size: 16px;
+      padding: 10px 6px;
     }
+    .gt-search input::placeholder { color: var(--gt-subtle); }
+    .gt-search-submit {
+      flex: 0 0 auto;
+      padding: 10px 16px;
+      min-height: 40px;
+      border-radius: var(--gt-radius-sm);
+      background: var(--gt-accent);
+      color: #fff;
+      font-weight: 600;
+      font-size: 14px;
+      border: none;
+      cursor: pointer;
+    }
+    .gt-search-submit:hover { background: var(--gt-accent-hover); }
 
-    :global(.home-search-result-main) {
+    /* Stats -------------------------------------------------------- */
+    .gt-stats {
       display: grid;
-      gap: 3px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-bottom: 40px;
+    }
+    .gt-stat {
+      padding: 14px 16px;
+      border-radius: var(--gt-radius-sm);
+      border: 1px solid var(--gt-line);
+      background: var(--gt-surface);
+      text-decoration: none;
+      color: var(--gt-fg);
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      min-height: 60px;
+      transition: background 120ms ease, border-color 120ms ease;
+    }
+    .gt-stat:active { background: var(--gt-surface-2); }
+    .gt-stat strong { font-size: 24px; font-weight: 700; letter-spacing: -0.01em; }
+    .gt-stat span { font-size: 12px; color: var(--gt-subtle); }
+    @media (min-width: 600px) {
+      .gt-stats { grid-template-columns: repeat(4, 1fr); }
     }
 
-    :global(.home-search-result-kind) {
-      color: var(--home-accent);
-      font-size: 10px;
-      font-weight: 900;
-      letter-spacing: 0.1em;
-      line-height: 1;
-      text-transform: uppercase;
+    /* Tool list ---------------------------------------------------- */
+    .gt-top-tools { margin-bottom: 40px; }
+    .gt-tool-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
     }
-
-    :global(.home-search-result-main strong),
-    :global(.home-search-result-main small),
-    :global(.home-search-result-meta span) {
+    .gt-tool-row {
+      border-radius: var(--gt-radius-sm);
+      border: 1px solid var(--gt-line);
+      background: var(--gt-surface);
+    }
+    .gt-tool-row-positive { border-left: 3px solid var(--gt-positive); }
+    .gt-tool-row-neutral { border-left: 3px solid var(--gt-warn); }
+    .gt-tool-row-negative { border-left: 3px solid var(--gt-negative); }
+    .gt-tool-row:hover { background: var(--gt-surface-2); }
+    .gt-tool-link {
+      display: grid;
+      grid-template-columns: 32px 1fr auto;
+      align-items: center;
+      gap: 12px;
+      padding: 14px;
+      text-decoration: none;
+      color: var(--gt-fg);
+      min-height: 60px;
+    }
+    .gt-tool-rank {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--gt-subtle);
+      text-align: center;
+      font-variant-numeric: tabular-nums;
+    }
+    .gt-tool-main { min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+    .gt-tool-title { font-size: 15px; font-weight: 600; }
+    .gt-tool-tagline {
+      font-size: 12.5px;
+      color: var(--gt-muted);
       overflow: hidden;
       text-overflow: ellipsis;
-      white-space: nowrap;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      line-height: 1.4;
     }
-
-    :global(.home-search-result-main strong) {
-      color: var(--home-heading);
-      font-size: 15px;
-      font-weight: 900;
+    .gt-tool-meta {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 2px;
+      flex-shrink: 0;
     }
+    .gt-tool-category { font-size: 11px; color: var(--gt-subtle); white-space: nowrap; }
+    .gt-tool-score { font-size: 16px; font-weight: 700; }
+    .gt-tool-score-slash { font-size: 11px; color: var(--gt-subtle); font-weight: 500; }
 
-    :global(.home-search-result-main small) {
-      color: var(--home-muted);
-      font-size: 12px;
-      font-weight: 650;
-    }
-
-    :global(.home-search-result-meta) {
+    /* Category grid ------------------------------------------------ */
+    .gt-categories { margin-bottom: 40px; }
+    .gt-cat-grid {
+      list-style: none;
+      padding: 0;
+      margin: 0;
       display: grid;
-      justify-items: end;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+    .gt-cat-card {
+      border-radius: var(--gt-radius-sm);
+      border: 1px solid var(--gt-line);
+      background: var(--gt-surface);
+    }
+    .gt-cat-card:hover { background: var(--gt-surface-2); }
+    .gt-cat-card a {
+      display: flex;
+      flex-direction: column;
       gap: 4px;
-      max-width: 190px;
-      color: var(--home-muted);
-      font-size: 12px;
-      font-weight: 750;
-      text-align: right;
-    }
-
-    :global(.home-search-result-meta b) {
-      color: var(--home-accent);
-      font-size: 11px;
-      font-weight: 900;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-    }
-
-    :global(.home-search-no-results) {
-      padding: 15px 13px;
-      color: var(--home-muted);
-      font-size: 13px;
-      font-weight: 750;
-    }
-
-    .home-quick-scroller {
-      width: 100%;
-      max-width: min(780px, 100%);
-      margin-top: 15px;
-      min-width: 0;
-    }
-
-    .home-quick {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 9px;
-      min-width: 0;
-      max-width: 100%;
-    }
-
-    .home-quick button {
-      min-height: 34px;
-      padding: 0 13px;
-      border: 1px solid var(--home-card-outline);
-      border-radius: 10px;
-      color: var(--home-on-card-muted);
-      background: var(--home-chip-bg);
-      font: inherit;
-      font-size: 13px;
-      font-weight: 800;
-    }
-
-    .home-quick button:hover,
-    .home-quick button:focus-visible {
-      border-color: var(--home-card-outline-hover);
-      color: var(--home-accent);
-      outline: none;
-    }
-
-    .home-summary {
-      display: grid;
-      gap: var(--site-card-gap);
-      padding: var(--site-card-padding);
-      border: 1px solid var(--home-card-outline);
-      border-radius: var(--site-radius-emphasis);
-      background: var(--home-panel);
-    }
-
-    .home-summary div {
-      padding: var(--site-card-padding);
-      border: 1px solid var(--home-card-outline);
-      border-radius: var(--site-radius-card);
-      background: var(--home-inner-panel);
-    }
-
-    .home-summary strong {
-      display: block;
-      color: var(--home-on-card);
-      font-size: 34px;
-      line-height: 1;
-    }
-
-    .home-summary span {
-      display: block;
-      margin-top: 7px;
-      color: var(--home-on-card-muted);
-      font-size: 13px;
-    }
-
-    .home-section {
-      padding: var(--site-section-gap) 0;
-      border-top: 1px solid var(--home-line);
-      scroll-margin-top: var(--home-scroll-pad-top);
-    }
-
-    .home-section-head {
-      display: flex;
-      align-items: end;
-      justify-content: space-between;
-      gap: var(--site-content-gap);
-      margin-bottom: var(--site-content-gap);
-    }
-
-    .home-section-head h2,
-    .home-trust h2 {
-      max-width: 720px;
-      margin: 8px 0 0;
-      color: var(--home-heading);
-      font-size: clamp(28px, 4vw, 46px);
-      font-weight: 720;
-      letter-spacing: 0;
-      line-height: 1.05;
-    }
-
-    .home-trust h2 {
-      color: var(--home-on-card);
-    }
-
-    .home-section-head a,
-    .home-trust a {
-      color: var(--home-accent);
-      font-size: 14px;
-      font-weight: 900;
+      padding: 14px;
       text-decoration: none;
-      white-space: nowrap;
+      color: var(--gt-fg);
+      min-height: 70px;
+    }
+    .gt-cat-card strong { font-size: 14px; font-weight: 600; }
+    .gt-cat-card span { font-size: 11px; color: var(--gt-subtle); }
+    .gt-cat-score { color: var(--gt-positive) !important; font-weight: 600; }
+    @media (min-width: 600px) {
+      .gt-cat-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (min-width: 900px) {
+      .gt-cat-grid { grid-template-columns: repeat(4, 1fr); }
     }
 
-    .home-paths {
+    /* News list ---------------------------------------------------- */
+    .gt-news { margin-bottom: 40px; }
+    .gt-news-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .gt-news-row {
+      border-radius: var(--gt-radius-sm);
+      border: 1px solid var(--gt-line);
+      background: var(--gt-surface);
+    }
+    .gt-news-row:hover { background: var(--gt-surface-2); }
+    .gt-news-row.gt-news-critical { border-left: 3px solid var(--gt-negative); }
+    .gt-news-row.gt-news-major { border-left: 3px solid var(--gt-accent); }
+    .gt-news-row.gt-news-minor { border-left: 3px solid var(--gt-line); }
+    .gt-news-row a {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: var(--site-grid-gap);
+      grid-template-columns: 56px 1fr;
+      gap: 12px;
+      padding: 14px;
+      text-decoration: none;
+      color: var(--gt-fg);
+      align-items: baseline;
+      min-height: 60px;
     }
-
-    .home-path {
-      display: grid;
-      gap: var(--site-card-gap);
-      padding: var(--site-card-padding);
-    }
-
-    .home-path span {
-      color: var(--home-accent);
-      font-size: 12px;
-      font-weight: 900;
+    .gt-news-date {
+      font-size: 11px;
+      font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.08em;
+      color: var(--gt-subtle);
+      font-variant-numeric: tabular-nums;
     }
-
-    .home-path strong {
-      font-size: 18px;
+    .gt-news-title {
+      grid-column: 2;
+      grid-row: 1;
+      font-size: 14px;
+      font-weight: 600;
       line-height: 1.35;
     }
-
-    .home-path small,
-    .home-tool small,
-    .home-tool em,
-    .home-news small {
-      color: var(--home-on-card-muted);
-      font-size: 13px;
-    }
-
-    /* Stack above `.home-tools` so the open listbox is not painted under the tool cards (same parent, later sibling wins by default). */
-    .home-tool-filter {
-      position: relative;
-      z-index: 5;
-      max-width: 780px;
-      width: 100%;
-      margin-bottom: var(--site-content-gap);
-      min-width: 0;
-    }
-
-    /* Closed row matches hero `.home-search-box`; open list matches `.home-search-results` (no OS-native white popup). */
-    .home-tool-filter-box {
-      position: relative;
-      display: grid;
-      grid-template-columns: minmax(0, 1fr);
-      align-items: center;
-      box-sizing: border-box;
-      min-height: 52px;
-      padding: 8px 14px 8px 18px;
-      border: 1px solid var(--home-hero-search-border);
-      border-radius: 14px;
-      background: var(--home-hero-search-bg);
-      box-shadow: var(--home-hero-search-shadow);
-      color: var(--home-accent);
-      transition:
-        border-color var(--motion-fast, 160ms) var(--motion-ease, cubic-bezier(0.16, 1, 0.3, 1)),
-        box-shadow var(--motion-fast, 160ms) var(--motion-ease, cubic-bezier(0.16, 1, 0.3, 1));
-    }
-
-    .home-tool-filter-box:focus-within {
-      border-color: var(--home-hero-search-focus-border);
-      box-shadow: var(--home-hero-search-focus-shadow);
-    }
-
-    .home-tool-filter-trigger {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: var(--site-grid-gap);
-      width: 100%;
-      min-height: 36px;
-      padding: 0;
-      border: 0;
-      border-radius: 0;
-      outline: none;
-      background: transparent;
-      color: var(--home-text);
-      font: inherit;
-      font-size: 16px;
-      font-weight: 700;
-      letter-spacing: -0.01em;
-      text-align: left;
-      cursor: pointer;
-    }
-
-    .home-tool-filter-trigger span:first-child {
-      min-width: 0;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-
-    .home-tool-filter-trigger-chevron {
-      flex: none;
-      color: var(--home-accent);
-      opacity: 0.92;
-      transition: transform 160ms var(--motion-ease, cubic-bezier(0.16, 1, 0.3, 1));
-    }
-
-    .home-tool-filter-box.is-open .home-tool-filter-trigger-chevron {
-      transform: rotate(180deg);
-    }
-
-    .home-tool-filter-menu {
-      position: absolute;
-      z-index: 75;
-      top: calc(100% + 10px);
-      left: 0;
-      right: 0;
-      box-sizing: border-box;
-      margin: 0;
-      padding: 7px;
-      border: 1px solid var(--home-hero-results-border);
-      border-radius: 14px;
-      background: var(--home-hero-results-bg);
-      box-shadow: var(--home-hero-results-shadow);
-      color: var(--home-text);
-      max-height: min(320px, 48vh);
-      overflow-y: auto;
-      scrollbar-width: thin;
-      scrollbar-color: var(--home-hero-scrollbar-thumb) transparent;
-    }
-
-    .home-tool-filter-menu:not([hidden]) {
-      animation: home-filter-menu-in 160ms var(--motion-ease, cubic-bezier(0.16, 1, 0.3, 1)) both;
-    }
-
-    @keyframes home-filter-menu-in {
-      from {
-        opacity: 0;
-        transform: translateY(-6px) scale(0.985);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .home-tool-filter-menu:not([hidden]) {
-        animation: none;
-      }
-    }
-
-    .home-tool-filter-option {
-      display: block;
-      width: 100%;
-      margin: 0;
-      padding: 10px 11px;
-      border: 0;
-      border-radius: 10px;
-      background: transparent;
-      color: var(--home-text);
-      font: inherit;
-      font-size: 15px;
-      font-weight: 650;
-      text-align: left;
-      cursor: pointer;
-      transition: background var(--motion-fast, 160ms) var(--motion-ease, cubic-bezier(0.16, 1, 0.3, 1));
-    }
-
-    .home-tool-filter-option:hover,
-    .home-tool-filter-option:focus-visible {
-      background: rgba(249, 115, 22, 0.12);
-      outline: none;
-    }
-
-    html.light .home-tool-filter-option:hover,
-    html.light .home-tool-filter-option:focus-visible {
-      background: rgba(249, 115, 22, 0.08);
-    }
-
-    .home-tool-filter-option.is-active {
-      background: rgba(249, 115, 22, 0.14);
-      font-weight: 750;
-    }
-
-    html.light .home-tool-filter-option.is-active {
-      background: rgba(249, 115, 22, 0.1);
-    }
-
-    .home-tools {
-      position: relative;
-      z-index: 1;
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: var(--site-card-gap);
-    }
-
-    .home-tool {
-      display: grid;
-      grid-template-columns: 42px minmax(0, 1fr) auto;
-      align-items: center;
-      gap: 12px;
-      min-width: 0;
-      padding: var(--site-card-padding);
-    }
-
-    .home-tool :global(.home-tool-logo) {
-      border-radius: 11px;
-      background: var(--home-logo-bg);
-    }
-
-    .home-tool span {
-      min-width: 0;
-    }
-
-    .home-tool strong,
-    .home-news strong {
-      display: block;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      font-size: 15px;
-    }
-
-    .home-tool small {
-      display: block;
-      margin-top: 4px;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-
-    .home-tool em {
-      max-width: 150px;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      font-style: normal;
-    }
-
-    .home-empty {
-      margin: 14px 0 0;
-      color: var(--home-muted);
-    }
-
-    .home-bottom-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(280px, 380px);
-      gap: var(--site-panel-gap);
-      align-items: start;
-    }
-
-    .home-news-list {
-      display: grid;
-      gap: var(--site-grid-gap);
-    }
-
-    .home-news {
-      display: grid;
-      grid-template-columns: auto minmax(0, 1fr);
-      gap: 6px 12px;
-      align-items: center;
-      padding: var(--site-card-padding);
-    }
-
-    .home-news small {
+    .gt-news-summary {
       grid-column: 2;
+      grid-row: 2;
+      font-size: 12.5px;
+      color: var(--gt-muted);
+      line-height: 1.45;
+      margin-top: 4px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
     }
 
-    .home-news-severity {
+    /* Link rows ---------------------------------------------------- */
+    .gt-link-row {
       display: inline-flex;
       align-items: center;
-      justify-content: center;
-      min-width: 66px;
-      min-height: 24px;
-      border-radius: 999px;
-      color: var(--home-inverse);
-      background: var(--home-accent);
-      font-size: 10px;
-      font-weight: 900;
-      text-transform: uppercase;
+      gap: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--gt-accent);
+      text-decoration: none;
+      padding: 8px 0;
+      min-height: 36px;
     }
-
-    .home-news-severity.is-breaking {
-      color: white;
-      background: #fb7185;
-    }
-
-    .home-news-severity.is-major {
-      background: #fbbf24;
-    }
-
-    .home-trust {
-      padding: var(--site-card-padding);
-    }
-
-    .home-trust ul {
-      display: grid;
-      gap: 10px;
-      margin: 18px 0;
-      padding-left: 18px;
-      color: var(--home-on-card-muted);
-      line-height: 1.55;
-    }
-
-    @media (max-width: 900px) {
-      .home-hero,
-      .home-bottom-grid {
-        grid-template-columns: 1fr;
-        min-height: auto;
-        align-items: start;
-        gap: clamp(14px, 3vw, 22px);
-        padding-bottom: clamp(1rem, 3vw, var(--site-section-gap));
-      }
-
-      .home-summary {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-      }
-
-      .home-paths,
-      .home-tools {
-        grid-template-columns: 1fr;
-      }
-    }
-
-	    @media (max-width: 620px) {
-	      .home-page {
-	        width: 100%;
-	        padding-bottom: max(0.75rem, env(safe-area-inset-bottom, 0px));
-	      }
-
-	      .home-hero {
-	        align-items: start;
-	        gap: 12px;
-	        padding: 8px 0 12px;
-	      }
-
-	      .home-hero h1 {
-	        margin-top: 8px;
-	        font-size: clamp(1.65rem, 7.5vw + 0.4rem, 2.45rem);
-	        line-height: 1.05;
-	        text-wrap: balance;
-	      }
-
-	      .home-lede {
-	        margin-top: 10px;
-	        font-size: 15px;
-	        line-height: 1.48;
-	        text-wrap: pretty;
-	      }
-
-	      .home-search {
-	        margin-top: 12px;
-	      }
-
-	      .home-search label {
-	        margin-bottom: 5px;
-	        font-size: 12px;
-	      }
-
-	      /* One-row chip strip: scrolls inside the content box (no negative margins) */
-	      .home-quick-scroller {
-	        position: relative;
-	        max-width: 100%;
-	        margin-top: 10px;
-	        margin-inline: 0;
-	        padding-inline: env(safe-area-inset-left, 0px) env(safe-area-inset-right, 0px);
-	        overflow: hidden;
-	      }
-
-	      .home-quick-scroller::after {
-	        content: "";
-	        position: absolute;
-	        top: 0;
-	        right: 0;
-	        bottom: 10px;
-	        width: min(40px, 15vw);
-	        pointer-events: none;
-	        background: linear-gradient(to left, var(--bg-base), transparent);
-	        opacity: 0.92;
-	      }
-
-	      .home-quick {
-	        flex-wrap: nowrap;
-	        overflow-x: auto;
-	        overflow-y: hidden;
-	        gap: 10px;
-	        padding: 4px 2px 12px;
-	        margin: 0;
-	        max-width: 100%;
-	        box-sizing: border-box;
-	        -webkit-overflow-scrolling: touch;
-	        overscroll-behavior-x: contain;
-	        scroll-snap-type: x proximity;
-	        scrollbar-width: none;
-	      }
-
-	      .home-quick::-webkit-scrollbar {
-	        display: none;
-	      }
-
-	      .home-quick button {
-	        flex: 0 0 auto;
-	        scroll-snap-align: start;
-	        min-height: 44px;
-	        padding: 0 14px;
-	        font-size: 13px;
-	      }
-
-	      .home-section {
-	        padding: clamp(1.05rem, 3.8vw, 1.65rem) 0;
-	      }
-
-	      .home-section-head {
-	        margin-bottom: 12px;
-	        gap: 10px;
-	      }
-
-	      .home-section-head h2,
-	      .home-trust h2 {
-	        font-size: clamp(1.32rem, 5.2vw + 0.32rem, 1.82rem);
-	        line-height: 1.08;
-	      }
-
-	      .home-path {
-	        padding: 14px;
-	        min-height: 44px;
-	      }
-
-	      .home-summary {
-	        grid-template-columns: 1fr;
-	        padding: 14px;
-	        gap: 8px;
-	      }
-
-	      .home-summary div {
-	        padding: 12px;
-	      }
-
-	      .home-summary strong {
-	        font-size: 28px;
-	      }
-
-	      .home-tool {
-	        grid-template-columns: 1fr;
-	        min-height: 48px;
-	      }
-
-	      .home-tool-filter-box {
-	        min-height: 52px;
-	        padding: 10px 12px 10px 16px;
-	      }
-
-	      .home-tool-filter-trigger {
-	        min-height: 44px;
-	        font-size: 16px;
-	        font-weight: 650;
-	      }
-
-	      .home-trust {
-	        padding: 16px;
-	      }
-
-	      /* Input + button on one row (icon hidden); 44px minimum tap targets */
-	      .home-search-box {
-	        grid-template-columns: minmax(0, 1fr) auto;
-	        align-items: center;
-	        min-height: 52px;
-	        gap: 8px;
-	        padding: 8px 10px;
-	      }
-
-	      .home-search-box input {
-	        font-size: 16px;
-	        font-weight: 650;
-	      }
-
-	      .home-search-results {
-	        border-radius: 12px;
-	      }
-
-	      :global(.home-search-result) {
-	        grid-template-columns: 1fr;
-	        gap: 8px;
-	      }
-
-	      :global(.home-search-result-meta) {
-	        justify-items: start;
-	        max-width: none;
-	        text-align: left;
-	      }
-
-	      .home-search-box svg {
-	        display: none;
-	      }
-
-	      .home-search-box button {
-	        width: auto;
-	        min-width: 5.5rem;
-	        min-height: 44px;
-	        padding: 0 16px;
-	      }
-
-	      .home-section-head {
-	        display: block;
-	      }
-
-	      .home-section-head a {
-	        display: inline-flex;
-	        align-items: center;
-	        min-height: 44px;
-	        margin-top: 8px;
-	        padding: 0 4px;
-	      }
-
-	      .home-tool em {
-	        max-width: none;
-	      }
-	    }
-
-	    @media (max-width: 620px) and (prefers-reduced-motion: reduce) {
-	      .home-quick {
-	        scroll-snap-type: none;
-	      }
-
-	      .home-quick-scroller::after {
-	        opacity: 0;
-	      }
-	    }
+    .gt-link-row:hover { color: var(--gt-accent-hover); }
   </style>
-
-  <script is:inline>
-    /**
-     * Must run on astro:page-load as well as initial DOM ready.
-     * View Transitions swap DOM without re-parsing this script, so listeners
-     * were missing after client-side navigation back to `/`.
-     */
-    function aipediaInitHomePage() {
-      const root = document.querySelector('[data-home-page]');
-      if (!root || root.dataset.aipediaHomeInit === '1') return;
-      root.dataset.aipediaHomeInit = '1';
-
-      const searchForm = root.querySelector('[data-home-search]');
-      const searchInput = root.querySelector('[data-home-search-input]');
-      const searchPanel = root.querySelector('[data-home-search-panel]');
-      const searchResults = root.querySelector('[data-home-search-results]');
-      const searchHeading = root.querySelector('[data-home-search-heading]');
-      const searchCount = root.querySelector('[data-home-search-count]');
-      const reducedMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)');
-      const SEARCH_INDEX_URL = '/api/home-search.json';
-      let searchData = [];
-      let searchDataLoaded = false;
-      let searchDataFailed = false;
-      let searchDataPromise;
-      let searchHasFocus = false;
-
-      const filterWrap = root.querySelector('[data-home-tool-filter-wrap]');
-      const filterTrigger = root.querySelector('[data-home-tool-filter-trigger]');
-      const filterMenu = root.querySelector('[data-home-tool-filter-menu]');
-      const filterHidden = root.querySelector('[data-home-tool-filter-value]');
-      const filterDisplay = root.querySelector('[data-home-tool-filter-display]');
-      const tools = Array.from(root.querySelectorAll('[data-home-tool]'));
-      const empty = root.querySelector('[data-home-tools-empty]');
-
-      function filterTools() {
-        const cat = filterHidden && 'value' in filterHidden ? String(filterHidden.value || 'all') : 'all';
-        let visible = 0;
-        tools.forEach((tool) => {
-          const slug = tool.getAttribute('data-category') || '';
-          const match = cat === 'all' || slug === cat;
-          tool.hidden = !match;
-          if (match) visible += 1;
-        });
-        if (empty) empty.hidden = visible !== 0;
-      }
-
-      function setFilterMenuOpen(open) {
-        if (!filterMenu || !filterTrigger || !filterWrap) return;
-        filterMenu.hidden = !open;
-        filterWrap.classList.toggle('is-open', open);
-        filterTrigger.setAttribute('aria-expanded', open ? 'true' : 'false');
-      }
-
-      function syncFilterActive(slug) {
-        filterWrap?.querySelectorAll('.home-tool-filter-option').forEach((btn) => {
-          const v = btn.getAttribute('data-value') || '';
-          const on = v === slug;
-          btn.classList.toggle('is-active', on);
-          btn.setAttribute('aria-selected', on ? 'true' : 'false');
-        });
-      }
-
-      function applyHomeFilter(slug, labelText) {
-        if (filterHidden) filterHidden.value = slug;
-        if (filterDisplay && labelText) filterDisplay.textContent = labelText;
-        syncFilterActive(slug);
-        filterTools();
-      }
-
-      const normalize = (value) => String(value || '').trim().toLowerCase();
-      const termsFor = (value) => normalize(value).split(/\s+/).filter(Boolean);
-      const escapeHtml = (value) => String(value || '').replace(/[&<>"']/g, (char) => ({
-        '&': '&amp;',
-        '<': '&lt;',
-        '>': '&gt;',
-        '"': '&quot;',
-        "'": '&#39;',
-      }[char]));
-      const closeSearchResults = () => {
-        if (searchPanel) searchPanel.hidden = true;
-        searchInput?.setAttribute('aria-expanded', 'false');
-      };
-      const openSearchResults = () => {
-        if (!searchPanel) return;
-        searchPanel.hidden = false;
-        searchInput?.setAttribute('aria-expanded', 'true');
-      };
-      const setSearchMessage = (message) => {
-        if (!searchResults) return;
-        searchResults.innerHTML = `
-          <div class="home-search-no-results" role="option" aria-disabled="true">
-            ${escapeHtml(message)}
-          </div>
-        `;
-      };
-      const loadSearchData = () => {
-        if (searchDataPromise) return searchDataPromise;
-        searchDataPromise = fetch(SEARCH_INDEX_URL, {
-          headers: { Accept: 'application/json' },
-        })
-          .then((response) => {
-            if (!response.ok) throw new Error(`Search index failed: ${response.status}`);
-            return response.json();
-          })
-          .then((payload) => {
-            searchData = Array.isArray(payload.items) ? payload.items : [];
-            searchDataLoaded = true;
-            return searchData;
-          })
-          .catch(() => {
-            searchDataFailed = true;
-            searchDataLoaded = true;
-            searchData = [];
-            return searchData;
-          });
-        return searchDataPromise;
-      };
-      const rankSearchItem = (item, terms, query) => {
-        const title = normalize(item.title);
-        const kind = normalize(item.kind);
-        const haystack = normalize(item.search);
-        let rank = Number(item.priority || 0);
-        if (!terms.length) return rank;
-        if (title === query) rank += 1000;
-        else if (title.startsWith(query)) rank += 720;
-        else if (terms.every((term) => title.split(/[^a-z0-9]+/).includes(term))) rank += 640;
-        else if (terms.every((term) => title.includes(term))) rank += 520;
-        if (terms.every((term) => kind.includes(term))) rank += 80;
-        terms.forEach((term) => {
-          if (title.startsWith(term)) rank += 90;
-          else if (title.includes(term)) rank += 65;
-          else if (haystack.includes(term)) rank += 20;
-        });
-        return rank;
-      };
-      const matchingSearchItems = () => {
-        const terms = termsFor(searchInput?.value);
-        const query = terms.join(' ');
-        const matches = searchData
-          .map((item) => ({ item, rank: rankSearchItem(item, terms, query) }))
-          .filter(({ item, rank }) => {
-            if (!terms.length) return item.kind === 'Tool';
-            const haystack = `${normalize(item.title)} ${normalize(item.search)}`;
-            return rank > Number(item.priority || 0) && terms.every((term) => haystack.includes(term));
-          })
-          .sort((a, b) => {
-            if (b.rank !== a.rank) return b.rank - a.rank;
-            return normalize(a.item.title).localeCompare(normalize(b.item.title));
-          })
-          .map(({ item }) => item);
-        return { terms, matches };
-      };
-      const renderSearchResults = () => {
-        if (!searchPanel || !searchResults || !searchInput) return;
-        if (!searchHasFocus) {
-          closeSearchResults();
-          return;
-        }
-
-        if (!searchDataLoaded) {
-          if (searchHeading) searchHeading.textContent = 'Loading search';
-          if (searchCount) searchCount.textContent = '';
-          setSearchMessage('Loading matches...');
-          openSearchResults();
-          loadSearchData().then(renderSearchResults);
-          return;
-        }
-
-        if (searchDataFailed) {
-          if (searchHeading) searchHeading.textContent = 'Search unavailable';
-          if (searchCount) searchCount.textContent = '';
-          setSearchMessage('Press Search to open the full search page.');
-          openSearchResults();
-          return;
-        }
-
-        const { terms, matches } = matchingSearchItems();
-        const shown = matches.slice(0, 7);
-        const hasQuery = terms.length > 0;
-        if (searchHeading) searchHeading.textContent = hasQuery ? 'Top matches' : 'Popular tools';
-        if (searchCount) searchCount.textContent = `${shown.length} shown`;
-
-        if (!shown.length) {
-          setSearchMessage('No matches yet. Press Search to check every page.');
-          openSearchResults();
-          return;
-        }
-
-        searchResults.innerHTML = shown.map((item, index) => `
-          <a class="home-search-result" href="${escapeHtml(item.href)}" role="option" id="home-search-result-${index}" tabindex="-1" data-no-tool-preview>
-            <span class="home-search-result-main">
-              <span class="home-search-result-kind">${escapeHtml(item.kind)}</span>
-              <strong>${escapeHtml(item.title)}</strong>
-              <small>${escapeHtml(item.detail || item.meta || '')}</small>
-            </span>
-            <span class="home-search-result-meta">
-              <span>${escapeHtml(item.meta || '')}</span>
-              ${item.badge ? `<b>${escapeHtml(item.badge)}</b>` : ''}
-            </span>
-          </a>
-        `).join('');
-        openSearchResults();
-      };
-
-      root.querySelectorAll('[data-home-query]').forEach((button) => {
-        button.addEventListener('click', () => {
-          if (!searchInput) return;
-          searchInput.value = button.getAttribute('data-home-query') || '';
-          searchInput.focus();
-          searchHasFocus = true;
-          renderSearchResults();
-        });
-      });
-
-      searchInput?.addEventListener('focus', () => {
-        searchHasFocus = true;
-        renderSearchResults();
-      });
-      searchInput?.addEventListener('input', renderSearchResults);
-      searchInput?.addEventListener('keydown', (event) => {
-        if (event.key === 'ArrowDown' && searchPanel && !searchPanel.hidden) {
-          const first = searchPanel.querySelector('.home-search-result');
-          if (first) {
-            event.preventDefault();
-            first.focus();
-          }
-        }
-        if (event.key === 'Escape') {
-          event.preventDefault();
-          searchHasFocus = false;
-          closeSearchResults();
-        }
-      });
-      searchPanel?.addEventListener('keydown', (event) => {
-        const links = Array.from(searchPanel.querySelectorAll('.home-search-result'));
-        const index = links.indexOf(document.activeElement);
-        if (event.key === 'Escape') {
-          event.preventDefault();
-          searchHasFocus = false;
-          closeSearchResults();
-          searchInput?.focus();
-          return;
-        }
-        if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
-          event.preventDefault();
-          const direction = event.key === 'ArrowDown' ? 1 : -1;
-          const next = index === -1 ? 0 : (index + direction + links.length) % links.length;
-          links[next]?.focus();
-        }
-      });
-      searchForm?.addEventListener('submit', (event) => {
-        if (!searchInput?.value.trim()) {
-          event.preventDefault();
-          searchInput?.focus();
-          searchHasFocus = true;
-          renderSearchResults();
-        }
-      });
-      document.addEventListener('click', (event) => {
-        const target = event.target instanceof Element ? event.target : null;
-        if (target && !searchForm?.contains(target) && !target.closest('[data-home-query]')) {
-          searchHasFocus = false;
-          closeSearchResults();
-        }
-        if (target && filterWrap && !filterWrap.contains(target)) {
-          setFilterMenuOpen(false);
-        }
-      });
-
-      filterTrigger?.addEventListener('click', (event) => {
-        event.stopPropagation();
-        setFilterMenuOpen(Boolean(filterMenu?.hidden));
-      });
-
-      filterTrigger?.addEventListener('keydown', (event) => {
-        if (event.key === 'Escape') setFilterMenuOpen(false);
-      });
-
-      filterWrap?.querySelectorAll('.home-tool-filter-option').forEach((btn) => {
-        btn.addEventListener('click', (event) => {
-          event.stopPropagation();
-          const slug = btn.getAttribute('data-value') || 'all';
-          applyHomeFilter(slug, btn.textContent?.trim() || '');
-          setFilterMenuOpen(false);
-        });
-      });
-
-      filterTools();
-
-      if (reducedMotion?.matches) root.classList.add('home-reduced-motion');
-    }
-
-    document.addEventListener('astro:page-load', aipediaInitHomePage);
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', aipediaInitHomePage);
-    } else {
-      aipediaInitHomePage();
-    }
-  </script>
 </BaseLayout>

@@ -1,0 +1,161 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import { getCollection } from 'astro:content';
+
+const allTrends = await getCollection('trends');
+
+function toYmd(v: unknown): string {
+  if (!v) return '';
+  if (v instanceof Date) return isNaN(v.getTime()) ? '' : v.toISOString().slice(0, 10);
+  const s = String(v);
+  const d = new Date(s);
+  return isNaN(d.getTime()) ? s : d.toISOString().slice(0, 10);
+}
+
+const sorted = allTrends
+  .map((t) => ({
+    slug: t.data.slug || t.id.replace(/\.md$/, ''),
+    title: t.data.title,
+    description: t.data.description || t.data.meta_description || '',
+    timeframe: t.data.timeframe || '',
+    impact: t.data.impact || 'medium',
+    lastUpdated: toYmd(t.data.last_updated),
+  }))
+  .sort((a, b) => (b.lastUpdated || '').localeCompare(a.lastUpdated || ''));
+
+function pillImpactClass(impact: string) {
+  if (impact === 'high') return 'is-high';
+  if (impact === 'low') return 'is-low';
+  return 'is-medium';
+}
+---
+
+<BaseLayout
+  title="Trending in AI Tools — What's Changing Now — aipedia.wiki"
+  description="Editorial analysis of major shifts in the AI tools landscape. Model launches, market consolidations, pricing wars, and category emergences."
+>
+  <div class="site-content-frame">
+    <Breadcrumb items={[{ label: 'Trending' }]} />
+
+    <div class="trends-page-root">
+      <section class="idx-hero" data-pagefind-ignore>
+        <div class="idx-eyebrow">
+          <span class="idx-eyebrow-chip idx-eyebrow-fresh">Sourced analysis</span>
+          <span class="idx-eyebrow-chip idx-eyebrow-accent">Trend reports</span>
+          <span class="idx-eyebrow-chip"><span class="tabular-nums">{sorted.length}</span> tracked</span>
+          <span class="idx-eyebrow-trust">Every shift linked to source notes. Refreshed May 10, 2026.</span>
+        </div>
+        <h1 class="idx-headline">
+          What is <span class="idx-gradient">changing now</span>.
+        </h1>
+        <p class="idx-subhead">
+          Refreshed May 10, 2026. Curated analysis of the shifts reshaping the AI tools landscape: new model classes, category consolidation, pricing changes, coding-agent economics, enterprise agent control planes, sovereign AI procurement, AI supply-chain security, and the tools being left behind.
+        </p>
+      </section>
+
+      <section class="trends-card-grid mb-[var(--site-page-bottom)]">
+        {sorted.map((t) => (
+          <a
+            href={`/trends/${t.slug}/`}
+            class="home-surface-card group block trend-card-link touch-manipulation"
+            data-trend-card
+          >
+            <div class="flex items-start gap-3 mb-3">
+              <span class:list={['trend-impact-pill', pillImpactClass(String(t.impact))]}>
+                {t.impact} impact
+              </span>
+            </div>
+            <h3 class="trend-card-title">{t.title}</h3>
+            {t.description && (
+              <p class="trend-card-desc mb-3 line-clamp-2">{t.description}</p>
+            )}
+            {t.timeframe && <p class="trend-card-meta line-clamp-1">{t.timeframe}</p>}
+          </a>
+        ))}
+      </section>
+    </div>
+  </div>
+
+  <style>
+    .trends-card-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--site-grid-gap);
+    }
+    @media (min-width: 768px) {
+      .trends-card-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    .trends-page-root .trend-card-link {
+      padding: var(--site-card-padding);
+    }
+
+    /* Matches homepage `.home-news-severity` / chip language. */
+    .trends-page-root .trend-impact-pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 24px;
+      padding: 0 10px;
+      border-radius: 999px;
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      border: 1px solid transparent;
+    }
+
+    .trends-page-root .trend-impact-pill.is-high {
+      color: var(--home-inverse);
+      background: var(--home-accent-solid);
+    }
+
+    .trends-page-root .trend-impact-pill.is-medium {
+      color: var(--home-inverse);
+      background: #fbbf24;
+      border-color: rgba(251, 191, 36, 0.72);
+    }
+
+    html.light .trends-page-root .trend-impact-pill.is-medium {
+      color: #1c1917;
+    }
+
+    .trends-page-root .trend-impact-pill.is-low {
+      color: var(--home-on-card-muted);
+      background: var(--home-chip-bg);
+      border-color: var(--home-card-outline);
+    }
+
+    .trends-page-root .trend-card-title {
+      margin: 0 0 8px;
+      font-size: 15px;
+      font-weight: 800;
+      line-height: 1.35;
+      color: var(--home-on-card);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      transition: color var(--motion-fast, 160ms) var(--motion-ease, cubic-bezier(0.16, 1, 0.3, 1));
+    }
+
+    .trends-page-root a.home-surface-card:hover .trend-card-title,
+    .trends-page-root a.home-surface-card:focus-visible .trend-card-title {
+      color: var(--home-accent);
+    }
+
+    .trends-page-root .trend-card-desc {
+      margin: 0;
+      font-size: 13px;
+      line-height: 1.5;
+      color: var(--home-on-card-muted);
+    }
+
+    .trends-page-root .trend-card-meta {
+      margin: 0;
+      font-size: 12px;
+      color: var(--home-dim);
+    }
+  </style>
+</BaseLayout>

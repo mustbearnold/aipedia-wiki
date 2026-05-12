@@ -1,0 +1,151 @@
+---
+/**
+ * StickyCTA — bottom-anchored mobile CTA, auto-reparents to <body>.
+ *
+ * Appears once the user scrolls past `observeSelector` (default .gt-card).
+ * Hides when the footer enters the viewport (no overlap with the trust /
+ * disclosure region).
+ *
+ * Reparenting to <body> is required because <main> has z-index: 1, which
+ * stacks behind <footer> (also z-index: 1, later in DOM order).
+ */
+interface CTA {
+  label: string;
+  href: string;
+  external?: boolean;
+}
+
+interface Props {
+  title: string;
+  score?: number;
+  price?: string;
+  cta: CTA;
+  observeSelector?: string;     // element that determines when to show
+  hideSelector?: string;        // element that determines when to hide
+}
+
+const {
+  title,
+  score,
+  price,
+  cta,
+  observeSelector = '.gt-card',
+  hideSelector = 'footer',
+} = Astro.props;
+
+const infoBits = [
+  score != null ? `${score}/10` : null,
+  price ?? null,
+].filter(Boolean).join(' · ');
+---
+
+<div
+  class="gt-sticky"
+  id="gt-sticky"
+  aria-hidden="true"
+  data-observe={observeSelector}
+  data-hide={hideSelector}
+>
+  <div class="gt-sticky-info">
+    <strong>{title}</strong>
+    {infoBits && <span>{infoBits}</span>}
+  </div>
+  <a
+    href={cta.href}
+    class="gt-btn gt-btn-primary gt-sticky-btn"
+    {...(cta.external ? { target: '_blank', rel: 'noopener' } : {})}
+  >
+    {cta.label}
+    <span aria-hidden="true">→</span>
+  </a>
+</div>
+
+<script is:inline>
+  (function () {
+    var sticky = document.getElementById('gt-sticky');
+    if (!sticky) return;
+    var observeSelector = sticky.dataset.observe || '.gt-card';
+    var hideSelector = sticky.dataset.hide || 'footer';
+    var anchor = document.querySelector(observeSelector);
+    var hider = document.querySelector(hideSelector);
+    if (!anchor) return;
+
+    // Reparent so we sit as a sibling of <main> and <footer>, not nested
+    // inside <main>'s stacking context (which loses to <footer>).
+    if (sticky.parentElement !== document.body) {
+      document.body.appendChild(sticky);
+    }
+
+    var pastAnchor = false;
+    var footerVisible = false;
+    function update() {
+      var show = pastAnchor && !footerVisible;
+      sticky.classList.toggle('is-visible', show);
+      sticky.setAttribute('aria-hidden', show ? 'false' : 'true');
+    }
+
+    var anchorIO = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        pastAnchor = !e.isIntersecting && e.boundingClientRect.top < 0;
+        update();
+      });
+    }, { threshold: 0 });
+    anchorIO.observe(anchor);
+
+    if (hider) {
+      var hideIO = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          footerVisible = e.isIntersecting;
+          update();
+        });
+      }, { threshold: 0 });
+      hideIO.observe(hider);
+    }
+  })();
+</script>
+
+<style>
+  .gt-sticky {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px calc(10px + env(safe-area-inset-bottom, 0));
+    background: var(--bg-base, #0a0a0a);
+    border-top: 1px solid var(--gt-line-strong);
+    box-shadow: 0 -8px 24px -8px rgba(0, 0, 0, 0.5);
+    transform: translateY(110%);
+    transition: transform 240ms cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 100;
+  }
+  :global(.light) .gt-sticky {
+    background: #ffffff;
+    box-shadow: 0 -6px 20px -8px rgba(0, 0, 0, 0.15);
+  }
+  .gt-sticky.is-visible { transform: translateY(0); }
+  .gt-sticky-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    flex: 1;
+    min-width: 0;
+  }
+  .gt-sticky-info strong { font-size: 14px; color: var(--gt-fg); }
+  .gt-sticky-info span { font-size: 12px; color: var(--gt-subtle); }
+  .gt-sticky-btn {
+    width: auto;
+    flex: 0 0 auto;
+    padding: 10px 16px;
+    min-height: 44px;
+    font-size: 14px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .gt-sticky { transition: none; }
+  }
+  @media (min-width: 600px) {
+    .gt-sticky { display: none; }
+  }
+</style>

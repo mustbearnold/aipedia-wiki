@@ -280,6 +280,8 @@
         btn.setAttribute('aria-pressed', selected ? 'true' : 'false');
         const label = btn.querySelector('[data-compare-label]');
         if (label) label.textContent = selected ? 'In compare' : 'Compare';
+        const marker = btn.querySelector('.t2-cta-arrow');
+        if (marker) marker.textContent = selected ? '✓' : '+';
       });
     }
 

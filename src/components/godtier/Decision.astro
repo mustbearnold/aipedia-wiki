@@ -1,0 +1,86 @@
+---
+/**
+ * Decision — quick-answer paragraph + tone-coded "Buy if / Skip if" cards.
+ *
+ * The single canonical "what to do" block. There must not be a duplicate
+ * of these cards anywhere else on the page (the legacy ToolLayout had two
+ * — hero glance + decision brief — which is the redundancy this kills).
+ */
+interface Item {
+  tone?: 'positive' | 'negative' | 'neutral';
+  label: string;
+  value: string;
+}
+
+interface Props {
+  quickAnswer?: string;
+  items?: Item[];
+  heading?: string;
+}
+
+const { quickAnswer, items = [], heading = 'The call' } = Astro.props;
+---
+
+<section class="gt-decision" aria-labelledby="gt-decision-h">
+  <h2 id="gt-decision-h" class="gt-section-h">{heading}</h2>
+  {quickAnswer && <p class="gt-decision-lead">{quickAnswer}</p>}
+  {items.length > 0 && (
+    <ul class="gt-decision-grid">
+      {items.map((d) => (
+        <li class={`gt-decision-card gt-decision-${d.tone ?? 'neutral'}`}>
+          <span class="gt-decision-label">{d.label}</span>
+          <strong class="gt-decision-value">{d.value}</strong>
+        </li>
+      ))}
+    </ul>
+  )}
+</section>
+
+<style>
+  .gt-decision { margin-bottom: 40px; }
+  .gt-decision-lead {
+    font-size: var(--gt-text-tagline);
+    line-height: 1.55;
+    margin: 0 0 18px;
+    color: var(--gt-fg);
+    font-weight: 500;
+  }
+  .gt-decision-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .gt-decision-card {
+    padding: 14px 16px;
+    border-radius: var(--gt-radius-sm);
+    border: 1px solid var(--gt-line);
+    background: var(--gt-surface);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .gt-decision-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--gt-subtle);
+  }
+  .gt-decision-positive { border-left: 3px solid var(--gt-positive); }
+  .gt-decision-positive .gt-decision-label { color: var(--gt-positive); }
+  .gt-decision-negative { border-left: 3px solid var(--gt-negative); }
+  .gt-decision-negative .gt-decision-label { color: var(--gt-negative); }
+  .gt-decision-value {
+    font-size: 15px;
+    line-height: 1.45;
+    color: var(--gt-fg);
+    font-weight: 500;
+  }
+
+  @media (min-width: 600px) {
+    .gt-decision-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+</style>

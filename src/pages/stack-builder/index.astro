@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import Breadcrumb from '../../components/Breadcrumb.astro';
+import Hero from '../../components/godtier/Hero.astro';
 import { getCollection } from 'astro:content';
 import { shortenPrice } from '../../utils/shorten-price';
 
@@ -252,28 +252,31 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
   title="AI Tool Set Builder: Find Your Best AI Tools"
   description="Pick your role, set your budget, get a suggested AI tool set, swap any tool, and share the result. Recently-updated badges flag tools that shipped in the last 14 days."
 >
-  <div class="site-content-frame">
-    <Breadcrumb items={[{ label: 'Tool Set Builder' }]} />
+  <div class="gt-canvas stack-builder-page-root">
+    <Hero
+      title="Tool set builder"
+      tagline="Choose a role, budget, and workflow. aipedia suggests a sourced set of reviewed tools, then lets you swap individual picks."
+      breadcrumbs={[
+        { label: 'aipedia', href: '/' },
+        { label: 'Tool set builder' },
+      ]}
+      rankLabel="Interactive · 4-step build"
+    />
 
-    <div class="stack-builder-page-root">
-  <section class="sb-hero">
-    <div class="sb-hero-copy">
-      <p class="sb-eyebrow">AI tool set builder</p>
-      <h1>Build a working AI tool set.</h1>
-      <p>
-        Choose a role, budget, and workflow. aipedia suggests a sourced set of reviewed tools, then lets you swap individual picks.
-      </p>
-    </div>
-    <aside class="sb-logic home-surface-card" aria-label="How the tool set is chosen">
-      <h2>How we choose</h2>
-      <ol>
-        <li><span>1.</span> What you need</li>
-        <li><span>2.</span> Your budget</li>
-        <li><span>3.</span> Recent updates</li>
-        <li><span>4.</span> Easy alternatives</li>
-      </ol>
-    </aside>
-  </section>
+    <ul class="gt-decision-grid gt-sb-howwe" aria-label="How the tool set is chosen">
+      <li class="gt-decision-card gt-decision-positive">
+        <span class="gt-decision-label">1 · What</span>
+        <strong class="gt-decision-value">Pick up to 3 roles you fill day-to-day.</strong>
+      </li>
+      <li class="gt-decision-card gt-decision-positive">
+        <span class="gt-decision-label">2 · Budget</span>
+        <strong class="gt-decision-value">Set free, standard, or premium tier.</strong>
+      </li>
+      <li class="gt-decision-card gt-decision-positive">
+        <span class="gt-decision-label">3 · Tools</span>
+        <strong class="gt-decision-value">Get a sourced stack with swap suggestions.</strong>
+      </li>
+    </ul>
 
   <!-- Step 1: Roles (multi-select up to 3) -->
   <section class="sb-section">
@@ -390,7 +393,6 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
     </p>
   </section>
 
-    </div>
   </div>
 <style>
     .sb-hero {

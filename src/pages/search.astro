@@ -1,169 +1,143 @@
 ---
+/**
+ * /search/ — god-tier 10/10 mobile-first.
+ *
+ * Hero + .gt-search input + popular term chips + filterable tool list.
+ * Same client-side Pagefind-style filtering + Ctrl/Cmd K shortcut +
+ * analytics tracking as legacy.
+ *
+ * Legacy preserved at src/legacy-pages/search.legacy.astro.
+ */
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import IndexHero from '../components/design/IndexHero.astro';
-import ToolLogo from '../components/ToolLogo.astro';
-import '../styles/p3-canvas.css';
+import Hero from '../components/godtier/Hero.astro';
+import { categoryLabel, overallScore } from '../utils/tool-metadata';
 
 const allTools = await getCollection('tools');
 
 const tools = allTools
-  .filter((tool) => tool.data.status !== 'dead')
-  .map((tool) => {
+  .filter((tool: any) => tool.data.status !== 'dead')
+  .map((tool: any) => {
     const slug = tool.data.slug || tool.id.replace(/\.md$/, '').replace(/\\/g, '/');
-    const scores = tool.data.scores ?? { utility: 0, value: 0, moat: 0, longevity: 0 };
-    const score = ((scores.utility ?? 0) + (scores.value ?? 0) + (scores.moat ?? 0) + (scores.longevity ?? 0)) / 4;
     return {
       slug,
       title: tool.data.title,
       categorySlug: tool.data.category ?? '',
-      category: (tool.data.category ?? '').replace(/^ai-/, '').replace(/-/g, ' '),
+      category: categoryLabel(tool.data.category ?? ''),
       company: tool.data.company ?? '',
       tagline: tool.data.tagline ?? tool.data.meta_description ?? '',
-      priceRange: tool.data.price_range ?? tool.data.pricing_model ?? '',
+      priceRange: tool.data.price_range ?? '',
       pricingModel: tool.data.pricing_model ?? '',
       status: tool.data.status ?? 'active',
-      score: Math.round(score * 10) / 10,
+      score: overallScore(tool.data.scores ?? {}),
       tags: tool.data.tags ?? [],
     };
   })
-  .sort((a, b) => a.title.localeCompare(b.title));
+  .sort((a: any, b: any) => b.score - a.score || a.title.localeCompare(b.title));
 
-const quickTerms = ['ChatGPT', 'Claude', 'Cursor', 'Midjourney', 'ElevenLabs', 'automation'];
+const quickTerms = ['ChatGPT', 'Claude', 'Cursor', 'Midjourney', 'ElevenLabs', 'automation', 'free'];
 const totalTools = tools.length;
 ---
 
 <BaseLayout
-  title="Search - aipedia.wiki"
+  title="Search aipedia.wiki"
   description={`Search and browse all ${totalTools} AI tools reviewed on aipedia.wiki.`}
   robots="noindex, follow"
 >
-  
-    <div class="p3-canvas search-index site-directory-canvas not-prose" data-search-index>
-    <IndexHero
-      title="Search all tools"
-      suffix="."
-      titleId="search-title"
-      lead="Type a tool, company, category, price range, or job to filter the full catalog."
-      class="search-index-hero"
-      mainClass="search-index-copy"
-      eyebrowClass="search-index-eyebrow"
-      headingClass="search-index-title"
-      leadClass="search-index-lede"
-      eyebrow={[
-        { label: 'Aipedia Index', tone: 'accent' },
-        { label: 'tools', value: totalTools },
+  <div class="sr-only" data-pagefind-ignore>
+    <span data-pagefind-filter="Type">Search</span>
+  </div>
+
+  <div class="gt-canvas" data-search-index>
+    <Hero
+      title="Search"
+      tagline="Find any tool, comparison, or guide. Type a name, company, category, price, or job."
+      breadcrumbs={[
+        { label: 'aipedia', href: '/' },
+        { label: 'Search' },
       ]}
-      trust="Search the same reviewed catalog used across the site."
-    >
-      <Fragment slot="afterLead">
-        <label class="p3-search p3-search-btn search-index-control" for="catalog-search-input">
-          <span class="p3-search-btn-glow" aria-hidden="true"></span>
-          <svg class="p3-search-icon" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M10.8 18.1a7.3 7.3 0 1 1 0-14.6 7.3 7.3 0 0 1 0 14.6Zm5.1-2 4.6 4.6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-          </svg>
-          <input
-            id="catalog-search-input"
-            class="search-index-input"
-            type="search"
-            inputmode="search"
-            autocomplete="off"
-            spellcheck="false"
-            placeholder={`Search ${totalTools} tools`}
-            data-tool-search
-          />
-          <kbd class="p3-kbd" data-search-kbd aria-hidden="true">Ctrl K</kbd>
-        </label>
+      rankLabel={`${totalTools} tools indexed`}
+    />
 
-        <div class="search-index-quick" aria-label="Quick searches">
-          {quickTerms.map((term) => (
-            <button type="button" class="search-index-chip" data-search-chip={term}>{term}</button>
-          ))}
-        </div>
-      </Fragment>
-
-      <Fragment slot="aside">
-      <aside class="search-index-ledger" aria-label="Catalog summary">
-        <p class="search-index-ledger-kicker">Catalog</p>
-        <div class="search-index-ledger-row">
-          <span>Visible tools</span>
-          <strong data-visible-count>{totalTools}</strong>
-        </div>
-        <div class="search-index-ledger-row">
-          <span>Total tools</span>
-          <strong>{totalTools}</strong>
-        </div>
-        <div class="search-index-ledger-row">
-          <span>Sort</span>
-          <strong>A-Z</strong>
-        </div>
-      </aside>
-      </Fragment>
-    </IndexHero>
-
-    <section class="search-index-results" aria-labelledby="all-tools-title">
-      <div class="search-index-results-head">
-        <div>
-          <p class="search-index-eyebrow">Full catalog</p>
-          <h2 id="all-tools-title">All tools</h2>
-        </div>
-        <p class="search-index-count"><span data-visible-count>{totalTools}</span> shown</p>
+    <form class="gt-search" role="search" onsubmit="return false">
+      <label for="catalog-search-input" class="gt-sr-only">Search tools</label>
+      <div class="gt-search-row">
+        <svg class="gt-search-icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M10.8 18.1a7.3 7.3 0 1 1 0-14.6 7.3 7.3 0 0 1 0 14.6Zm5.1-2 4.6 4.6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </svg>
+        <input
+          id="catalog-search-input"
+          type="search"
+          inputmode="search"
+          autocomplete="off"
+          spellcheck="false"
+          placeholder={`Search ${totalTools} tools`}
+          data-tool-search
+        />
+        <kbd class="gt-kbd" data-search-kbd aria-hidden="true">Ctrl K</kbd>
       </div>
+    </form>
 
-      <div class="search-index-grid" data-tool-grid>
-        {tools.map((tool) => {
-          const searchText = [
-            tool.title,
-            tool.company,
-            tool.categorySlug,
-            tool.category,
-            tool.tagline,
-            tool.priceRange,
-            tool.status,
-            ...tool.tags,
-          ].join(' ').toLowerCase();
+    <nav class="gt-chips" aria-label="Quick searches">
+      {quickTerms.map((term) => (
+        <button type="button" class="gt-chip" data-search-chip={term}>{term}</button>
+      ))}
+    </nav>
 
-          return (
-            <article
-              class="search-index-card"
-              data-tool-card
-              data-search-text={searchText}
+    <p class="gt-search-count">
+      <strong data-visible-count>{totalTools}</strong> <span data-search-noun>tools</span>
+    </p>
+
+    <ol class="gt-tool-list" data-tool-grid>
+      {tools.map((tool: any, i: number) => {
+        const searchText = [
+          tool.title,
+          tool.company,
+          tool.categorySlug,
+          tool.category,
+          tool.tagline,
+          tool.priceRange,
+          tool.status,
+          ...tool.tags,
+        ].join(' ').toLowerCase();
+        const tone = tool.score >= 8 ? 'positive' : tool.score >= 6.5 ? 'neutral' : 'negative';
+        return (
+          <li
+            class={`gt-tool-row gt-tool-row-${tone}`}
+            data-tool-card
+            data-search-text={searchText}
+          >
+            <a
+              href={`/tools/${tool.slug}/`}
+              class="gt-tool-link"
+              data-search-result
+              data-result-type="tool"
+              data-result-title={tool.title}
+              data-result-url={`/tools/${tool.slug}/`}
+              data-tool-slug={tool.slug}
+              data-category-slug={tool.categorySlug}
             >
-              <a
-                class="search-index-card-link"
-                href={`/tools/${tool.slug}/`}
-                data-search-result
-                data-result-type="tool"
-                data-result-title={tool.title}
-                data-result-url={`/tools/${tool.slug}/`}
-                data-tool-slug={tool.slug}
-                data-category-slug={tool.categorySlug}
-              >
-                <ToolLogo slug={tool.slug} title={tool.title} size={44} />
-                <span class="search-index-card-copy">
-                  <span class="search-index-card-meta">{tool.category || 'tool'} · {tool.score}/10</span>
-                  <strong>{tool.title}</strong>
-                  <span>{tool.tagline}</span>
-                </span>
-                <span class="search-index-card-end" aria-hidden="true">-&gt;</span>
-              </a>
-              <div class="search-index-card-foot">
-                <span>{tool.priceRange || tool.pricingModel || 'Pricing varies'}</span>
-                <button type="button" data-compare-add={tool.slug} aria-pressed="false">
-                  <span data-compare-label>Compare</span>
-                </button>
+              <span class="gt-tool-rank">{i + 1}</span>
+              <div class="gt-tool-main">
+                <strong class="gt-tool-title">{tool.title}</strong>
+                {tool.tagline && <span class="gt-tool-tagline">{tool.tagline}</span>}
               </div>
-            </article>
-          );
-        })}
-      </div>
+              <div class="gt-tool-meta">
+                <span class="gt-tool-category">{tool.category}</span>
+                {tool.score > 0 && <span class="gt-tool-score tabular-nums">{tool.score}<span class="gt-tool-score-slash">/10</span></span>}
+              </div>
+            </a>
+          </li>
+        );
+      })}
+    </ol>
 
-      <div class="search-index-empty" data-search-empty hidden>
-        <p>No tools match that search.</p>
-      </div>
-    </section>
+    <div class="gt-search-empty" data-search-empty hidden>
+      <p>No tools match that search. Try a different keyword or <a href="/tools/">browse all tools</a>.</p>
     </div>
-<script is:inline>
+  </div>
+
+  <script is:inline>
     (() => {
       const root = document.querySelector('[data-search-index]');
       if (!root) return;
@@ -174,6 +148,7 @@ const totalTools = tools.length;
       const empty = root.querySelector('[data-search-empty]');
       const keyHint = root.querySelector('[data-search-kbd]');
       const chips = Array.from(root.querySelectorAll('[data-search-chip]'));
+      const noun = root.querySelector('[data-search-noun]');
       let syncTimer;
       let searchTrackTimer;
       let lastTrackedSearchKey = '';
@@ -183,70 +158,38 @@ const totalTools = tools.length;
         keyHint.textContent = /Mac|iPhone|iPad|iPod/.test(navigator.platform) ? 'Cmd K' : 'Ctrl K';
       }
 
-      const normalize = (value) => String(value || '').trim().toLowerCase();
+      const normalize = (v) => String(v || '').trim().toLowerCase();
 
-      function deviceType() {
-        const width = window.innerWidth || document.documentElement.clientWidth || 0;
-        if (width < 768) return 'mobile';
-        if (width < 1024) return 'tablet';
-        return 'desktop';
+      function trackSearch(name, extra = {}) {
+        const payload = { page_type: 'search', search_surface: 'catalog_page', ...extra };
+        window.dispatchEvent(new CustomEvent('aipedia:search', { detail: { event: name, payload } }));
+        if (window.gtag) window.gtag('event', name, payload);
+        else pendingSearchEvents.push({ name, payload });
       }
-
-      function pageSlug() {
-        return (window.location.pathname || '/search/')
-          .replace(/^\/+|\/+$/g, '')
-          .replace(/\//g, '-') || 'search';
-      }
-
-      function flushSearchEvents() {
-        if (!window.gtag) return;
-        while (pendingSearchEvents.length > 0) {
-          const item = pendingSearchEvents.shift();
-          window.gtag('event', item.eventName, item.payload);
+      window.addEventListener('aipedia:analytics-ready', () => {
+        while (pendingSearchEvents.length) {
+          const e = pendingSearchEvents.shift();
+          if (window.gtag) window.gtag('event', e.name, e.payload);
         }
-      }
-
-      function trackSearchIntent(eventName, extra = {}) {
-        const payload = {
-          page_type: 'search',
-          page_slug: pageSlug(),
-          search_surface: 'catalog_page',
-          query: '',
-          result_count: 0,
-          device_type: deviceType(),
-          viewport_width: window.innerWidth || document.documentElement.clientWidth || 0,
-          ...extra,
-        };
-        window.dispatchEvent(new CustomEvent('aipedia:search', {
-          detail: { event: eventName, payload },
-        }));
-        if (window.gtag) {
-          window.gtag('event', eventName, payload);
-        } else {
-          pendingSearchEvents.push({ eventName, payload });
-        }
-      }
+      });
 
       function scheduleSearchAnalytics(value, resultCount, source) {
         const query = String(value || '').trim();
         if (!query) return;
         window.clearTimeout(searchTrackTimer);
         searchTrackTimer = window.setTimeout(() => {
-          const base = { query, result_count: resultCount, search_source: source };
           const key = `${query}|${resultCount}|${source}`;
           if (key === lastTrackedSearchKey) return;
           lastTrackedSearchKey = key;
-          trackSearchIntent('search_performed', base);
-          if (resultCount === 0) {
-            trackSearchIntent('search_zero_results', base);
-          }
+          trackSearch('search_performed', { query, result_count: resultCount, search_source: source });
+          if (resultCount === 0) trackSearch('search_zero_results', { query, result_count: 0, search_source: source });
         }, 350);
       }
 
       const setQueryParam = (value) => {
         const url = new URL(window.location.href);
-        const query = value.trim();
-        if (query) url.searchParams.set('q', query);
+        const q = value.trim();
+        if (q) url.searchParams.set('q', q);
         else url.searchParams.delete('q');
         window.history.replaceState({}, '', url);
       };
@@ -254,21 +197,16 @@ const totalTools = tools.length;
       const applyFilter = (value, updateUrl = true, source = 'input') => {
         const terms = normalize(value).split(/\s+/).filter(Boolean);
         let visible = 0;
-
         cards.forEach((card) => {
           const haystack = card.getAttribute('data-search-text') || '';
-          const match = terms.every((term) => haystack.includes(term));
+          const match = terms.every((t) => haystack.includes(t));
           card.hidden = !match;
-          if (match) visible += 1;
+          if (match) visible++;
         });
-
-        counters.forEach((counter) => {
-          counter.textContent = String(visible);
-        });
+        counters.forEach((c) => { c.textContent = String(visible); });
+        if (noun) noun.textContent = visible === 1 ? 'tool' : 'tools';
         if (empty) empty.hidden = visible !== 0;
-        root.classList.toggle('is-filtered', terms.length > 0);
         scheduleSearchAnalytics(value, visible, source);
-
         if (updateUrl) {
           window.clearTimeout(syncTimer);
           syncTimer = window.setTimeout(() => setQueryParam(value), 120);
@@ -281,26 +219,21 @@ const totalTools = tools.length;
         chip.addEventListener('click', () => {
           const term = chip.getAttribute('data-search-chip') || '';
           if (!input) return;
-          trackSearchIntent('search_quick_term_clicked', {
-            query: term,
-            result_count: cards.length,
-            search_source: 'quick_term',
-          });
           input.value = term;
           input.focus();
           applyFilter(term, true, 'quick_term');
+          trackSearch('search_quick_term_clicked', { query: term });
         });
       });
 
       root.addEventListener('click', (event) => {
         const link = event.target.closest('[data-search-result]');
         if (!link) return;
-        const visibleCards = cards.filter((card) => !card.hidden);
-        const index = visibleCards.findIndex((card) => card.contains(link));
-        trackSearchIntent('search_result_clicked', {
+        const visible = cards.filter((c) => !c.hidden);
+        const idx = visible.findIndex((c) => c.contains(link));
+        trackSearch('search_result_clicked', {
           query: input?.value.trim() || '',
-          result_count: visibleCards.length,
-          result_position: index >= 0 ? index + 1 : '',
+          result_position: idx >= 0 ? idx + 1 : '',
           result_type: link.dataset.resultType || 'tool',
           result_title: link.dataset.resultTitle || link.textContent.trim(),
           result_url: link.dataset.resultUrl || link.getAttribute('href') || '',
@@ -309,448 +242,150 @@ const totalTools = tools.length;
         });
       });
 
-      window.addEventListener('aipedia:analytics-ready', flushSearchEvents);
-
       window.addEventListener('keydown', (event) => {
-        const isSearchShortcut = (event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'k';
-        if (!isSearchShortcut || !input) return;
-        event.preventDefault();
-        input.focus();
-        input.select();
+        if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'k' && input) {
+          event.preventDefault();
+          input.focus();
+          input.select();
+        }
       });
 
-      const initialQuery = new URLSearchParams(window.location.search).get('q') || '';
-      if (initialQuery && input) {
-        input.value = initialQuery;
-        applyFilter(initialQuery, false, 'url_param');
+      const initial = new URLSearchParams(window.location.search).get('q') || '';
+      if (initial && input) {
+        input.value = initial;
+        applyFilter(initial, false, 'url_param');
       } else {
         applyFilter('', false);
       }
     })();
   </script>
 
-  <style is:global>
-    .search-index {
-      width: 100%;
-      max-width: none;
-      margin: 0 auto;
-      padding: var(--site-page-top) 0 var(--site-page-bottom);
-      color: var(--p3-fg);
+  <style>
+    .gt-sr-only {
+      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+    }
+    .gt-search { margin-bottom: 16px; }
+    .gt-search-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 6px 6px 14px;
+      border-radius: var(--gt-radius);
+      border: 1px solid var(--gt-line-strong);
+      background: var(--gt-surface);
+      transition: border-color 120ms ease, background 120ms ease;
+    }
+    .gt-search-row:focus-within { border-color: var(--gt-accent); background: var(--gt-surface-2); }
+    .gt-search-icon { color: var(--gt-subtle); flex: 0 0 auto; }
+    .gt-search input {
+      flex: 1; min-width: 0;
+      background: transparent; border: none; outline: none;
+      color: var(--gt-fg); font-size: 16px;
+      padding: 12px 6px;
+    }
+    .gt-search input::placeholder { color: var(--gt-subtle); }
+    .gt-kbd {
+      flex: 0 0 auto;
+      padding: 4px 8px;
+      border-radius: 6px;
+      background: var(--gt-surface-2);
+      border: 1px solid var(--gt-line);
+      color: var(--gt-muted);
+      font-size: 11px;
+      font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+    }
+    @media (max-width: 599px) {
+      .gt-kbd { display: none; }
     }
 
-    .search-index,
-    .search-index * {
-      box-sizing: border-box;
+    .gt-chips {
+      display: flex; gap: 6px;
+      overflow-x: auto;
+      padding: 0 18px 12px;
+      margin: 0 -18px 12px;
+      scrollbar-width: none;
     }
-
-    .search-index-hero {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(260px, 360px);
-      gap: var(--site-panel-gap);
-      align-items: end;
-      padding-bottom: var(--site-section-gap);
-      border-bottom: 1px solid var(--p3-line);
+    .gt-chips::-webkit-scrollbar { display: none; }
+    .gt-chip {
+      flex: 0 0 auto;
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 6px 12px;
+      min-height: 36px;
+      border-radius: 999px;
+      background: var(--gt-surface);
+      border: 1px solid var(--gt-line);
+      color: var(--gt-muted);
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background 120ms ease, color 120ms ease, border-color 120ms ease;
     }
+    .gt-chip:hover { background: var(--gt-surface-2); color: var(--gt-fg); }
 
-    .search-index-copy {
-      min-width: 0;
-    }
-
-    .search-index-eyebrow {
-      margin: 0 0 14px;
-      color: var(--p3-accent-text);
+    .gt-search-count {
       font-size: 12px;
-      font-weight: 850;
-      letter-spacing: 0.14em;
-      line-height: 1;
+      color: var(--gt-subtle);
+      margin: 0 0 12px;
       text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 600;
     }
+    .gt-search-count strong { color: var(--gt-fg); font-variant-numeric: tabular-nums; }
 
-    .search-index h1 {
-      max-width: 10ch;
-      margin: 0;
-      color: var(--p3-fg);
-      font-size: clamp(54px, 8vw, 106px);
-      font-weight: 900;
-      letter-spacing: 0;
-      line-height: 0.92;
+    .gt-tool-list {
+      list-style: none; padding: 0; margin: 0 0 32px;
+      display: flex; flex-direction: column; gap: 8px;
     }
-
-    .search-index-lede {
-      max-width: 680px;
-      margin: var(--site-content-gap) 0 0;
-      color: var(--p3-muted);
-      font-size: 20px;
-      font-weight: 650;
-      line-height: 1.45;
+    .gt-tool-row {
+      border-radius: var(--gt-radius-sm);
+      border: 1px solid var(--gt-line);
+      background: var(--gt-surface);
     }
-
-    .search-index-control {
-      max-width: 760px;
-      margin-top: var(--site-content-gap);
-      cursor: text;
+    .gt-tool-row-positive { border-left: 3px solid var(--gt-positive); }
+    .gt-tool-row-neutral { border-left: 3px solid var(--gt-warn); }
+    .gt-tool-row-negative { border-left: 3px solid var(--gt-negative); }
+    .gt-tool-row:hover { background: var(--gt-surface-2); }
+    .gt-tool-link {
+      display: grid;
+      grid-template-columns: 32px 1fr auto;
+      align-items: center;
+      gap: 12px;
+      padding: 14px;
+      text-decoration: none;
+      color: var(--gt-fg);
+      min-height: 60px;
     }
-
-    .search-index-control:hover {
-      transform: none;
+    .gt-tool-rank {
+      font-size: 13px; font-weight: 700;
+      color: var(--gt-subtle); text-align: center;
+      font-variant-numeric: tabular-nums;
     }
-
-    .search-index-input {
-      flex: 1;
-      min-width: 0;
-      appearance: none;
-      border: 0;
-      outline: 0;
-      background: transparent;
-      color: var(--p3-fg);
-      font: inherit;
-      font-size: 17px;
-      font-weight: 750;
+    .gt-tool-main { min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+    .gt-tool-title { font-size: 15px; font-weight: 600; }
+    .gt-tool-tagline {
+      font-size: 12.5px;
+      color: var(--gt-muted);
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
       line-height: 1.4;
     }
-
-    .search-index-input::placeholder {
-      color: var(--p3-subtle);
-      opacity: 1;
+    .gt-tool-meta {
+      display: flex; flex-direction: column; align-items: flex-end; gap: 2px;
     }
+    .gt-tool-category { font-size: 11px; color: var(--gt-subtle); white-space: nowrap; }
+    .gt-tool-score { font-size: 16px; font-weight: 700; }
+    .gt-tool-score-slash { font-size: 11px; color: var(--gt-subtle); font-weight: 500; }
 
-    .search-index-quick {
-      display: flex;
-      flex-wrap: wrap;
-      gap: var(--site-chip-gap);
-      max-width: 760px;
-      margin-top: var(--site-content-gap-sm);
+    .gt-search-empty {
+      padding: 24px; border-radius: var(--gt-radius);
+      border: 1px solid var(--gt-line); background: var(--gt-surface);
+      color: var(--gt-muted); font-size: 14px;
+      margin-bottom: 32px;
     }
-
-    .search-index-chip {
-      appearance: none;
-      border: 1px solid var(--p3-line);
-      border-radius: 999px;
-      background: var(--p3-surface);
-      color: var(--p3-muted);
-      cursor: pointer;
-      font: inherit;
-      font-size: 13px;
-      font-weight: 800;
-      line-height: 1;
-      min-height: 34px;
-      padding: 0 13px;
-      transition: background 150ms ease, border-color 150ms ease, color 150ms ease;
-    }
-
-    .search-index-chip:hover,
-    .search-index-chip:focus-visible {
-      border-color: rgba(249, 115, 22, 0.42);
-      background: rgba(249, 115, 22, 0.1);
-      color: var(--p3-accent-text);
-      outline: none;
-    }
-
-    .search-index-ledger {
-      border: 1px solid rgba(249, 115, 22, 0.28);
-      border-radius: var(--site-radius-card);
-      background: rgba(8, 13, 24, 0.72);
-      padding: var(--site-card-padding);
-    }
-
-    .search-index-ledger-kicker {
-      margin: 0 0 16px;
-      color: var(--p3-accent-text);
-      font-size: 12px;
-      font-weight: 900;
-      letter-spacing: 0.14em;
-      line-height: 1;
-      text-transform: uppercase;
-    }
-
-    .search-index-ledger-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: var(--site-card-gap);
-      border-top: 1px solid var(--p3-line);
-      color: var(--p3-subtle);
-      font-size: 15px;
-      font-weight: 750;
-      line-height: 1.2;
-      padding: var(--site-card-gap) 0;
-    }
-
-    .search-index-ledger-row:last-child {
-      padding-bottom: 0;
-    }
-
-    .search-index-ledger-row strong {
-      color: var(--p3-fg);
-      font-size: 16px;
-      font-weight: 900;
-      text-align: right;
-    }
-
-    .search-index-results {
-      padding-top: var(--site-section-gap);
-    }
-
-    .search-index-results-head {
-      display: flex;
-      align-items: end;
-      justify-content: space-between;
-      gap: var(--site-content-gap);
-      margin-bottom: var(--site-content-gap);
-    }
-
-    .search-index-results h2 {
-      margin: 0;
-      color: var(--p3-fg);
-      font-size: clamp(28px, 4vw, 48px);
-      font-weight: 900;
-      letter-spacing: 0;
-      line-height: 1;
-    }
-
-    .search-index-count {
-      margin: 0;
-      color: var(--p3-subtle);
-      font-size: 13px;
-      font-weight: 850;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      white-space: nowrap;
-    }
-
-    .search-index-count span {
-      color: var(--p3-accent-text);
-    }
-
-    .search-index-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: var(--site-grid-gap);
-    }
-
-    .search-index-card {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      min-height: 144px;
-      border: 1px solid var(--p3-line);
-      border-radius: var(--site-radius-card);
-      background: rgba(8, 13, 24, 0.62);
-      color: var(--p3-fg);
-      overflow: hidden;
-      transition: border-color 150ms ease, background 150ms ease, transform 150ms ease, box-shadow 150ms ease;
-    }
-
-    .search-index-card::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse 120% 100% at 100% 0%, rgba(249, 115, 22, 0.12), transparent 58%);
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 150ms ease;
-    }
-
-    .search-index-card:hover,
-    .search-index-card:focus-within {
-      border-color: rgba(249, 115, 22, 0.36);
-      background: var(--p3-surface-hover);
-      box-shadow: 0 18px 38px -30px rgba(249, 115, 22, 0.55);
-      transform: translateY(-1px);
-    }
-
-    .search-index-card:hover::before,
-    .search-index-card:focus-within::before {
-      opacity: 1;
-    }
-
-    .search-index-card-link {
-      position: relative;
-      z-index: 1;
-      display: grid;
-      grid-template-columns: 44px minmax(0, 1fr) auto;
-      gap: var(--site-card-gap);
-      align-items: center;
-      color: inherit;
-      padding: var(--site-card-padding);
-      text-decoration: none;
-    }
-
-    .search-index-card-link:focus-visible {
-      outline: 2px solid rgba(249, 115, 22, 0.48);
-      outline-offset: -2px;
-    }
-
-    .search-index-card-copy {
-      position: relative;
-      z-index: 1;
-      display: grid;
-      min-width: 0;
-      gap: var(--site-card-gap);
-    }
-
-    .search-index-card-meta {
-      color: var(--p3-subtle);
-      font-size: 11px;
-      font-weight: 900;
-      letter-spacing: 0.08em;
-      line-height: 1.1;
-      text-transform: uppercase;
-    }
-
-    .search-index-card strong {
-      color: var(--p3-fg);
-      font-size: 18px;
-      font-weight: 900;
-      letter-spacing: 0;
-      line-height: 1.15;
-    }
-
-    .search-index-card-copy > span:last-child {
-      display: -webkit-box;
-      overflow: hidden;
-      color: var(--p3-muted);
-      font-size: 13px;
-      font-weight: 650;
-      line-height: 1.45;
-      -webkit-box-orient: vertical;
-      -webkit-line-clamp: 2;
-    }
-
-    .search-index-card-end {
-      position: relative;
-      z-index: 1;
-      color: var(--p3-accent-text);
-      font-size: 18px;
-      font-weight: 900;
-    }
-
-    .search-index-card-foot {
-      position: relative;
-      z-index: 1;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: var(--site-card-gap);
-      margin-top: auto;
-      border-top: 1px solid var(--p3-line);
-      padding: var(--site-card-gap) var(--site-card-padding);
-    }
-
-    .search-index-card-foot > span {
-      min-width: 0;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      color: var(--p3-subtle);
-      font-size: 11.5px;
-      font-weight: 850;
-    }
-
-    .search-index-card-foot [data-compare-add] {
-      min-height: 30px;
-      border-radius: 7px;
-      font-size: 11.5px;
-      padding: 0 9px;
-    }
-
-    .search-index-empty {
-      border: 1px dashed rgba(249, 115, 22, 0.28);
-      border-radius: var(--site-radius-card);
-      color: var(--p3-muted);
-      margin-top: 14px;
-      padding: var(--site-card-padding);
-      text-align: center;
-    }
-
-    .search-index-empty p {
-      margin: 0;
-      font-size: 16px;
-      font-weight: 750;
-    }
-
-    html.light .search-index-ledger,
-    html.light .search-index-card {
-      background: rgba(248, 250, 252, 0.76);
-    }
-
-    @media (max-width: 1100px) {
-      .search-index-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-
-    @media (max-width: 900px) {
-      .search-index {
-        padding: var(--site-page-top) 0 var(--site-page-bottom);
-      }
-
-      .search-index-hero {
-        grid-template-columns: 1fr;
-        gap: 24px;
-        align-items: start;
-      }
-
-      .search-index h1 {
-        font-size: 56px;
-      }
-
-      .search-index-ledger {
-        max-width: 520px;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .search-index {
-        padding: var(--site-page-top) 0 var(--site-page-bottom);
-        width: 100%;
-      }
-
-      .search-index-hero {
-        gap: 18px;
-        padding-bottom: 28px;
-      }
-
-      .search-index h1 {
-        font-size: 40px;
-        max-width: 11ch;
-      }
-
-      .search-index-lede {
-        margin-top: 14px;
-        font-size: 15px;
-      }
-
-      .search-index-control {
-        margin-top: 20px;
-      }
-
-      .search-index-input {
-        font-size: 15px;
-      }
-
-      .search-index-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .search-index-card {
-        min-height: 104px;
-      }
-
-      .search-index-card-link {
-        grid-template-columns: 40px minmax(0, 1fr) auto;
-        padding: 14px 14px 10px;
-      }
-
-      .search-index-card strong {
-        font-size: 16px;
-      }
-
-      .search-index-results-head {
-        align-items: start;
-        flex-direction: column;
-        gap: 8px;
-      }
-    }
+    .gt-search-empty a { color: var(--gt-accent); border-bottom: 1px solid currentColor; text-decoration: none; }
   </style>
 </BaseLayout>

@@ -1,0 +1,123 @@
+---
+/**
+ * Hero — meta strip + title + tagline + optional sub paragraph.
+ *
+ * The first three rows of a god-tier page. One job per row:
+ *   Row 1: breadcrumb + freshness + rank
+ *   Row 2: title (clamp 36px → 60px) + tagline
+ *   Row 3 (optional): subtagline paragraph
+ *
+ * Visual content (screenshot, terminal, video) is rendered as a
+ * separate <Visual /> component below the Hero, not inside it.
+ */
+interface Breadcrumb {
+  label: string;
+  href?: string;
+}
+
+interface Props {
+  title: string;
+  tagline?: string;
+  breadcrumbs?: Breadcrumb[];
+  verifiedLabel?: string;     // e.g. "Verified May 10" — pulses live dot
+  rankLabel?: string;         // e.g. "Top pick in AI Coding"
+}
+
+const {
+  title,
+  tagline,
+  breadcrumbs = [],
+  verifiedLabel,
+  rankLabel,
+} = Astro.props;
+---
+
+<nav class="gt-meta" aria-label="Page meta">
+  {breadcrumbs.length > 0 && (
+    <ol class="gt-crumbs">
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {b.href && i < breadcrumbs.length - 1
+            ? <a href={b.href}>{b.label}</a>
+            : <span aria-current="page">{b.label}</span>}
+        </li>
+      ))}
+    </ol>
+  )}
+  {(verifiedLabel || rankLabel) && (
+    <div class="gt-meta-row">
+      {verifiedLabel && (
+        <span class="gt-meta-fresh">
+          <span class="gt-livedot" aria-hidden="true"></span>
+          {verifiedLabel}
+        </span>
+      )}
+      {verifiedLabel && rankLabel && <span class="gt-meta-sep" aria-hidden="true">·</span>}
+      {rankLabel && <span class="gt-meta-rank">★ {rankLabel}</span>}
+    </div>
+  )}
+</nav>
+
+<header class="gt-title-row">
+  <h1 class="gt-title">{title}</h1>
+  {tagline && <p class="gt-tagline">{tagline}</p>}
+</header>
+
+<style>
+  .gt-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: var(--gt-text-meta);
+    color: var(--gt-subtle);
+    margin-bottom: 16px;
+  }
+  .gt-crumbs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  .gt-crumbs li + li::before { content: '/'; margin-right: 6px; opacity: 0.5; }
+  .gt-crumbs a {
+    color: var(--gt-muted);
+    text-decoration: none;
+    min-height: 24px;
+    display: inline-flex;
+    align-items: center;
+  }
+  .gt-crumbs a:active { color: var(--gt-fg); }
+  .gt-crumbs [aria-current="page"] { color: var(--gt-fg); font-weight: 500; }
+  .gt-meta-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .gt-meta-sep { opacity: 0.5; }
+  .gt-meta-fresh {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--gt-positive);
+    font-weight: 600;
+  }
+  .gt-meta-rank { color: #fb923c; font-weight: 600; }
+
+  .gt-title-row { margin-bottom: 18px; }
+  .gt-title {
+    font-size: clamp(36px, 9vw, 56px);
+    font-weight: 700;
+    line-height: 1.02;
+    letter-spacing: -0.022em;
+    margin: 0 0 8px;
+  }
+  .gt-tagline {
+    font-size: var(--gt-text-tagline);
+    line-height: 1.4;
+    color: var(--gt-fg);
+    margin: 0;
+    font-weight: 500;
+  }
+  @media (min-width: 900px) {
+    .gt-title { font-size: 60px; }
+    .gt-tagline { font-size: 19px; }
+  }
+</style>

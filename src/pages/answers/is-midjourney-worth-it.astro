@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import Breadcrumb from '../../components/Breadcrumb.astro';
+import Hero from '../../components/godtier/Hero.astro';
 import AnswerContent from '../../components/AnswerContent.astro';
 
 const answerContent = `
@@ -28,17 +28,18 @@ const answerLD = JSON.stringify({
 <BaseLayout title="Is Midjourney Worth It? Honest Answer (2026)" description="Midjourney is worth it for frequent stylized image work, concept art, and moodboards, but weaker for one-off images and precise brand layouts.">
   <script type="application/ld+json" set:html={answerLD} />
   
-  <Breadcrumb items={[{ label: 'Answers', href: '/answers/' }, { label: 'Is Midjourney worth it in 2026?' }]} />
+  <div class="gt-canvas">
+    <Hero
+      title="Is Midjourney worth it in 2026?"
+      breadcrumbs={[
+        { label: 'aipedia', href: '/' },
+        { label: 'Answers', href: '/answers/' },
+        { label: "Is Midjourney worth it in 2026?" },
+      ]}
+      verifiedLabel="Verified May 9, 2026"
+    />
 
-  <article class="max-w-[var(--site-narrow-max)] mx-auto py-[var(--site-content-gap)]">
-    <h1 class="text-2xl sm:text-3xl font-bold text-[var(--text-primary)] mb-[var(--site-card-gap)]">Is Midjourney worth it in 2026?</h1>
-    <div class="flex items-center gap-[var(--site-card-gap)] text-sm text-[var(--text-muted)] mb-[var(--site-content-gap)]">
-      <a href="/about/editorial/" class="inline-flex items-center gap-1.5 no-underline hover:underline">
-        <span class="text-[var(--text-secondary)]">aipedia.wiki Editorial</span>
-      </a>
-      <span aria-hidden="true">·</span>
-      <time datetime="2026-05-09" class="text-[var(--accent-success)]">Verified May 9, 2026</time>
-    </div>
+    <article class="gt-body" id="gt-body">
 
     <AnswerContent content={answerContent} />
 
@@ -46,4 +47,5 @@ const answerLD = JSON.stringify({
       <p>This answer was checked against current vendor sources on May 9, 2026, including <a href="https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans" class="text-[var(--accent-primary)] no-underline hover:underline">Midjourney plans</a>, <a href="https://openai.com/index/introducing-chatgpt-images-2-0/" class="text-[var(--accent-primary)] no-underline hover:underline">OpenAI ChatGPT Images 2.0</a>, and <a href="https://docs.ideogram.ai/plans-and-pricing/plans-and-pricing" class="text-[var(--accent-primary)] no-underline hover:underline">Ideogram plans</a>. See our <a href="/about/scoring/" class="text-[var(--accent-primary)] no-underline hover:underline">scoring methodology</a>.</p>
     </div>
   </article>
+  </div>
 </BaseLayout>

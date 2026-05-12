@@ -1,0 +1,133 @@
+---
+/**
+ * FactList — facts with confidence + volatility + verified date + source.
+ *
+ * Surfaces the metadata that frontmatter already carries (confidence,
+ * volatility, verified_at) but the legacy ToolLayout hides.
+ */
+interface Fact {
+  label: string;
+  value: string;
+  confidence?: 'high' | 'medium' | 'low' | string;
+  volatility?: 'low' | 'medium' | 'high' | string;
+  verified?: string;       // ISO date string
+  source?: string;
+}
+
+interface Props {
+  facts: Fact[];
+  heading?: string;
+}
+
+const { facts, heading = 'Key facts' } = Astro.props;
+
+const confidenceColor = {
+  high:   { dot: '#34d399', bg: 'rgba(52,211,153,0.12)',  fg: '#34d399' },
+  medium: { dot: '#fbbf24', bg: 'rgba(251,191,36,0.12)',  fg: '#fbbf24' },
+  low:    { dot: '#fb7185', bg: 'rgba(251,113,133,0.14)', fg: '#fb7185' },
+} as const;
+
+function volatilityLabel(v: string): string {
+  if (v === 'low') return 'Stable';
+  if (v === 'medium') return 'Drifts';
+  if (v === 'high') return 'Volatile';
+  return v;
+}
+---
+
+<section class="gt-facts" aria-labelledby="gt-facts-h">
+  <h2 id="gt-facts-h" class="gt-section-h">{heading}</h2>
+  <ol class="gt-fact-list">
+    {facts.map((f) => {
+      const key = (f.confidence ?? 'high') as keyof typeof confidenceColor;
+      const c = confidenceColor[key] ?? confidenceColor.high;
+      return (
+        <li class="gt-fact">
+          <span class="gt-fact-label">{f.label}</span>
+          <span class="gt-fact-value">{f.value}</span>
+          <div class="gt-fact-meta">
+            {f.confidence && (
+              <span class="gt-fact-pill" style={`background:${c.bg}; color:${c.fg};`}>
+                <span class="gt-fact-pill-dot" style={`background:${c.dot};`}></span>
+                {f.confidence}
+              </span>
+            )}
+            {f.volatility && (
+              <span class="gt-fact-pill gt-fact-pill-muted">
+                {volatilityLabel(f.volatility)}
+              </span>
+            )}
+            {(f.verified || f.source) && (
+              <span class="gt-fact-verified">
+                {f.verified && <span>{f.verified}</span>}
+                {f.verified && f.source && <span aria-hidden="true"> · </span>}
+                {f.source && <span>{f.source}</span>}
+              </span>
+            )}
+          </div>
+        </li>
+      );
+    })}
+  </ol>
+</section>
+
+<style>
+  .gt-facts { margin-bottom: 40px; }
+  .gt-fact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-top: 1px solid var(--gt-line);
+  }
+  .gt-fact {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--gt-line);
+  }
+  .gt-fact-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--gt-subtle);
+  }
+  .gt-fact-value { font-size: 15px; color: var(--gt-fg); line-height: 1.45; }
+  .gt-fact-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 8px;
+    margin-top: 4px;
+    align-items: center;
+  }
+  .gt-fact-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 3px 8px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 600;
+    white-space: nowrap;
+    text-transform: capitalize;
+  }
+  .gt-fact-pill-dot { width: 6px; height: 6px; border-radius: 50%; }
+  .gt-fact-pill-muted {
+    background: var(--gt-surface-2);
+    color: var(--gt-muted);
+    border: 1px solid var(--gt-line);
+  }
+  .gt-fact-verified { font-size: 11px; color: var(--gt-subtle); }
+
+  @media (min-width: 600px) {
+    .gt-fact {
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 24px;
+    }
+    .gt-fact-label { flex: 0 0 130px; padding-top: 2px; }
+    .gt-fact-value { flex: 1; }
+    .gt-fact-meta { flex: 0 0 auto; justify-content: flex-end; }
+  }
+</style>

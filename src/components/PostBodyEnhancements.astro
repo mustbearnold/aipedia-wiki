@@ -43,18 +43,36 @@ const rel = isAffiliate ? 'sponsored noopener' : 'noopener';
       const collected = [];
       let next = heading.nextElementSibling;
       while (next && next.tagName !== 'H2') {
-        collected.push(next);
+        if (['SCRIPT', 'STYLE', 'TEMPLATE'].includes(next.tagName)) break;
+        if (next.classList && (
+          next.classList.contains('not-prose') ||
+          next.classList.contains('share-buttons') ||
+          next.classList.contains('helpful-vote') ||
+          next.classList.contains('badge-embed') ||
+          next.classList.contains('cite-this-page') ||
+          next.classList.contains('report-outdated')
+        )) break;
+        if (['P', 'UL', 'OL'].includes(next.tagName)) {
+          collected.push(next);
+        } else if (collected.length > 0) {
+          break;
+        }
         next = next.nextElementSibling;
       }
       if (collected.length === 0) return;
 
       let totalLinks = 0;
-      collected.forEach((el) => { totalLinks += el.querySelectorAll('a').length; });
+      collected.forEach((el) => {
+        if (el.matches && el.matches('ul, ol, p')) totalLinks += el.querySelectorAll('a').length;
+      });
 
       const wrap = document.createElement('aside');
       wrap.className =
-        'sources-callout not-prose mt-[var(--site-section-gap)] rounded-[var(--site-radius-card)] border border-[var(--border)] bg-[var(--bg-card)] p-[var(--site-card-padding)]';
+        'sources-callout not-prose mt-[var(--site-section-gap)] rounded-[var(--site-radius-card)] p-[var(--site-card-padding)]';
       wrap.setAttribute('aria-label', 'Sources');
+      wrap.style.border = '1px solid rgba(249, 115, 22, 0.30)';
+      wrap.style.background = 'linear-gradient(135deg, rgba(249, 115, 22, 0.12), rgba(20, 12, 8, 0.96) 42%, rgba(12, 9, 7, 0.98))';
+      wrap.style.boxShadow = '0 22px 48px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(253, 186, 116, 0.06)';
 
       const head = document.createElement('div');
       head.className = 'flex items-center gap-[var(--site-chip-gap)] mb-[var(--site-card-gap)]';
@@ -75,6 +93,12 @@ const rel = isAffiliate ? 'sponsored noopener' : 'noopener';
       const body = document.createElement('div');
       body.className = 'text-[13px] leading-relaxed text-[var(--text-secondary)] space-y-2';
       collected.forEach((el) => body.appendChild(el));
+      body.querySelectorAll('a').forEach((link) => {
+        link.setAttribute('data-source-preview', '');
+        link.setAttribute('data-source-title', link.textContent.trim() || link.href);
+        try { link.setAttribute('data-source-host', new URL(link.href).hostname.replace(/^www\./, '')); } catch (_) {}
+        link.setAttribute('data-source-kind', 'Primary source');
+      });
       wrap.appendChild(body);
 
       heading.insertAdjacentElement('afterend', wrap);
@@ -87,11 +111,16 @@ const rel = isAffiliate ? 'sponsored noopener' : 'noopener';
       tables.forEach((tbl) => {
         const headerCells = [...tbl.querySelectorAll('thead th')];
         const isPricing = headerCells.some((th) => /price|cost|plan/i.test(th.textContent || ''));
-        if (!isPricing) return;
+        if (!isPricing) {
+          enhanceMobileTable(tbl, headerCells);
+          return;
+        }
         if (tbl.dataset.pricingEnhanced === '1') return;
         tbl.dataset.pricingEnhanced = '1';
+        tbl.dataset.mobileCardified = '1';
 
         const rows = [...tbl.querySelectorAll('tbody tr')];
+        const headers = headerCells.map((th) => (th.textContent || '').trim()).filter(Boolean);
 
         // 1) "Most Popular" badge on the row most teams pick.
         // Heuristic: the lowest-priced PAID tier (skip the row whose first cell text is exactly
@@ -118,7 +147,82 @@ const rel = isAffiliate ? 'sponsored noopener' : 'noopener';
           rows[popularIdx].style.backgroundColor = 'rgba(249, 115, 22,0.06)';
         }
 
-        // 2) Wrap each plan-name cell in the outbound link so every tier is clickable to checkout.
+        // 2) Build a mobile-first card view from the same table rows. Desktop keeps the
+        // real table; phones get tappable plan cards instead of a six-column squeeze.
+        if (!tbl.nextElementSibling?.classList?.contains('t2-pricing-cards')) {
+          const cardList = document.createElement('div');
+          cardList.className = 't2-pricing-cards not-prose';
+          cardList.setAttribute('aria-label', `${toolName || 'Tool'} pricing plans`);
+
+          rows.forEach((row, index) => {
+            const cells = [...row.querySelectorAll('td')];
+            if (!cells.length) return;
+            const plan = (cells[0]?.textContent || '').replace(/Most Popular/i, '').trim();
+            const price = (cells[1]?.textContent || '').trim();
+            const card = document.createElement('article');
+            card.className = 't2-pricing-card';
+            if (index === popularIdx) card.classList.add('is-recommended');
+
+            const head = document.createElement('div');
+            head.className = 't2-pricing-card-head';
+            const titleWrap = document.createElement('div');
+            const kicker = document.createElement('span');
+            kicker.className = 't2-pricing-card-kicker';
+            kicker.textContent = index === popularIdx ? 'AiPedia pick' : 'Plan';
+            const title = document.createElement('strong');
+            title.className = 't2-pricing-card-title';
+            title.textContent = plan || `Plan ${index + 1}`;
+            titleWrap.append(kicker, title);
+            const priceEl = document.createElement('span');
+            priceEl.className = 't2-pricing-card-price';
+            priceEl.textContent = price || 'Check pricing';
+            head.append(titleWrap, priceEl);
+            card.appendChild(head);
+
+            const fields = document.createElement('dl');
+            fields.className = 't2-pricing-card-fields';
+            cells.slice(2).forEach((cell, cellIndex) => {
+              const value = (cell.textContent || '').trim();
+              if (!value) return;
+              const dt = document.createElement('dt');
+              dt.textContent = headers[cellIndex + 2] || `Detail ${cellIndex + 1}`;
+              const dd = document.createElement('dd');
+              dd.textContent = value;
+              fields.append(dt, dd);
+            });
+            card.appendChild(fields);
+
+            if (outboundUrl && outboundUrl !== '#') {
+              const cta = document.createElement('a');
+              cta.href = outboundUrl;
+              cta.target = '_blank';
+              cta.rel = rel;
+              cta.className = 't2-pricing-card-cta';
+              cta.textContent = index === popularIdx ? `Start ${plan}` : `Check ${plan}`;
+              cta.setAttribute('data-commercial-cta', '');
+              cta.dataset.ctaViewEvent = isAffiliate ? 'affiliate_cta_view' : 'official_cta_view';
+              cta.dataset.ctaClickEvent = isAffiliate ? 'affiliate_cta_click' : 'official_cta_click';
+              cta.dataset.ctaPageType = pageType;
+              cta.dataset.ctaPageSlug = toolSlug;
+              cta.dataset.ctaPlacement = 'tool_pricing_card';
+              cta.dataset.ctaToolSlug = toolSlug;
+              cta.dataset.ctaToolName = toolName;
+              cta.dataset.ctaLabel = cta.textContent;
+              cta.dataset.ctaDestinationType = isAffiliate ? 'affiliate' : 'official';
+              cta.dataset.ctaIsAffiliate = String(isAffiliate);
+              cta.dataset.ctaPriceRange = priceRange;
+              cta.dataset.ctaAffiliateProgram = affiliateProgram || '';
+              cta.dataset.ctaIsSticky = 'false';
+              card.appendChild(cta);
+            }
+
+            cardList.appendChild(card);
+          });
+
+          if (cardList.children.length) tbl.insertAdjacentElement('afterend', cardList);
+        }
+
+        // 3) Wrap each plan-name cell in the outbound link so every tier is clickable to checkout.
         if (!outboundUrl || outboundUrl === '#') return;
         rows.forEach((row) => {
           const planCell = row.querySelector('td');
@@ -162,6 +266,55 @@ const rel = isAffiliate ? 'sponsored noopener' : 'noopener';
           tbl.insertAdjacentElement('afterend', note);
         }
       });
+    }
+
+    function enhanceMobileTable(tbl, headerCells) {
+      if (tbl.dataset.mobileCardified === '1') return;
+      const rows = [...tbl.querySelectorAll('tbody tr')];
+      if (!rows.length) return;
+      tbl.dataset.mobileCardified = '1';
+      const headers = headerCells.map((th) => (th.textContent || '').trim());
+      const isKeyValue = rows.every((row) => row.querySelectorAll('td').length === 2);
+      const cardList = document.createElement('div');
+      cardList.className = isKeyValue ? 't2-table-cards t2-table-cards-kv not-prose' : 't2-table-cards not-prose';
+      cardList.setAttribute('aria-label', 'Table summary');
+
+      rows.forEach((row, index) => {
+        const cells = [...row.querySelectorAll('td')];
+        if (!cells.length) return;
+        const card = document.createElement('article');
+        card.className = 't2-table-card';
+
+        if (isKeyValue) {
+          const key = document.createElement('span');
+          key.className = 't2-table-card-label';
+          key.textContent = (cells[0].textContent || '').trim();
+          const value = document.createElement('div');
+          value.className = 't2-table-card-value';
+          value.textContent = (cells[1].textContent || '').trim();
+          card.append(key, value);
+        } else {
+          const title = document.createElement('strong');
+          title.className = 't2-table-card-title';
+          title.textContent = (cells[0].textContent || '').trim() || `Row ${index + 1}`;
+          card.appendChild(title);
+          const fields = document.createElement('dl');
+          fields.className = 't2-table-card-fields';
+          cells.slice(1).forEach((cell, cellIndex) => {
+            const value = (cell.textContent || '').trim();
+            if (!value) return;
+            const dt = document.createElement('dt');
+            dt.textContent = headers[cellIndex + 1] || `Detail ${cellIndex + 1}`;
+            const dd = document.createElement('dd');
+            dd.textContent = value;
+            fields.append(dt, dd);
+          });
+          card.appendChild(fields);
+        }
+        cardList.appendChild(card);
+      });
+
+      if (cardList.children.length) tbl.insertAdjacentElement('afterend', cardList);
     }
 
     function run() {

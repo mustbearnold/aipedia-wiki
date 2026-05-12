@@ -564,7 +564,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-09 | /guides/best-ai-tools-for-nonprofits/ | Guide | No | frontmatter | src/content/use-cases/best-ai-tools-for-nonprofits.md |
 | 2026-05-09 | /guides/best-ai-tools-for-product-managers/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-tools-for-product-managers.md |
 | 2026-05-09 | /guides/best-ai-tools-for-real-estate-agents/ | Guide | No | frontmatter | src/content/use-cases/best-ai-tools-for-real-estate-agents.md |
-| 2026-05-09 | /guides/best-ai-tools-for-recruiters/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-tools-for-recruiters.md |
 | 2026-05-09 | /guides/best-ai-tools-for-researchers/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-tools-for-researchers.md |
 | 2026-05-09 | /guides/best-ai-tools-for-sales-teams/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-tools-for-sales-teams.md |
 | 2026-05-09 | /guides/best-ai-tools-for-small-business/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-tools-for-small-business.md |
@@ -601,18 +600,13 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-09 | /news/ | Static page | Yes | git | src/pages/news/index.astro |
 | 2026-05-09 | /sitemap-index.xml | Crawl surface | No | git | astro.config.mjs |
 | 2026-05-09 | /stack-builder/ | Static page | Yes | git | src/pages/stack-builder/index.astro |
-| 2026-05-09 | /tools/ | Static page | Yes | git | src/pages/tools/index.astro |
 | 2026-05-09 | /tools/chatgpt/ | Tool | Yes | frontmatter | src/content/tools/chatgpt.md |
-| 2026-05-09 | /tools/eightfold-ai/ | Tool | Yes | frontmatter | src/content/tools/eightfold-ai.md |
 | 2026-05-09 | /tools/github-copilot/ | Tool | Yes | frontmatter | src/content/tools/github-copilot.md |
 | 2026-05-09 | /tools/grok/ | Tool | Yes | frontmatter | src/content/tools/grok.md |
-| 2026-05-09 | /tools/hireez/ | Tool | Yes | frontmatter | src/content/tools/hireez.md |
-| 2026-05-09 | /tools/linkedin-recruiter/ | Tool | Yes | frontmatter | src/content/tools/linkedin-recruiter.md |
 | 2026-05-09 | /tools/meshy/ | Tool | Yes | frontmatter | src/content/tools/meshy.md |
 | 2026-05-09 | /tools/minimax-speech/ | Tool | Yes | frontmatter | src/content/tools/minimax-speech.md |
 | 2026-05-09 | /tools/minimax/ | Tool | Yes | frontmatter | src/content/tools/minimax.md |
 | 2026-05-09 | /tools/opusclip/ | Tool | Yes | frontmatter | src/content/tools/opusclip.md |
-| 2026-05-09 | /tools/paradox/ | Tool | Yes | frontmatter | src/content/tools/paradox.md |
 | 2026-05-09 | /tools/pipedream/ | Tool | Yes | frontmatter | src/content/tools/pipedream.md |
 | 2026-05-09 | /tools/pixverse/ | Tool | Yes | frontmatter | src/content/tools/pixverse.md |
 | 2026-05-09 | /workflows/ | Static page | Yes | git | src/pages/workflows/index.astro |
@@ -711,7 +705,13 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-10 | /trends/ai-supply-chain-security/ | Trend | Yes | frontmatter | src/content/trends/ai-supply-chain-security.md |
 | 2026-05-10 | /trends/enterprise-agent-platforms/ | Trend | Yes | frontmatter | src/content/trends/enterprise-agent-platforms.md |
 | 2026-05-10 | /trends/sovereign-ai-procurement/ | Trend | Yes | frontmatter | src/content/trends/sovereign-ai-procurement.md |
-| 2026-05-11 | /tools/claude/ | Tool | Yes | working tree | src/content/tools/claude.md |
+| 2026-05-11 | /guides/best-ai-tools-for-recruiters/ | Guide | Yes | working tree | src/content/use-cases/best-ai-tools-for-recruiters.md |
+| 2026-05-11 | /tools/ | Static page | Yes | working tree | src/pages/tools/index.astro |
+| 2026-05-11 | /tools/claude/ | Tool | Yes | frontmatter | src/content/tools/claude.md |
 | 2026-05-11 | /tools/codex/ | Tool | Yes | frontmatter | src/content/tools/codex.md |
+| 2026-05-11 | /tools/eightfold-ai/ | Tool | Yes | working tree | src/content/tools/eightfold-ai.md |
+| 2026-05-11 | /tools/hireez/ | Tool | Yes | working tree | src/content/tools/hireez.md |
+| 2026-05-11 | /tools/linkedin-recruiter/ | Tool | Yes | working tree | src/content/tools/linkedin-recruiter.md |
+| 2026-05-11 | /tools/paradox/ | Tool | Yes | working tree | src/content/tools/paradox.md |
 | 2026-05-11 | /tools/perplexity/ | Tool | Yes | frontmatter | src/content/tools/perplexity.md |
 | 2026-05-11 | /tools/qwen/ | Tool | Yes | frontmatter | src/content/tools/qwen.md |

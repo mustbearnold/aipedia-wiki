@@ -6,6 +6,8 @@ import { remarkToolMentions } from './src/plugins/remark-tool-mentions.mjs';
 import { remarkGlossaryMentions } from './src/plugins/remark-glossary-mentions.mjs';
 import { remarkFootnoteRefs } from './src/plugins/remark-footnote-refs.mjs';
 import { rehypeRemoveFirstH1 } from './src/plugins/rehype-remove-first-h1.mjs';
+import rehypeCollapseSections from './src/plugins/rehype-collapse-sections.mjs';
+import rehypeRepairTables from './src/plugins/rehype-repair-tables.mjs';
 
 import cloudflare from '@astrojs/cloudflare';
 
@@ -54,7 +56,7 @@ export default defineConfig({
 
   markdown: {
     remarkPlugins: [remarkRewriteLinks, remarkFootnoteRefs, remarkToolMentions, remarkGlossaryMentions],
-    rehypePlugins: [rehypeRemoveFirstH1],
+    rehypePlugins: [rehypeRemoveFirstH1, rehypeRepairTables, rehypeCollapseSections],
     shikiConfig: {
       theme: 'github-dark',
     },

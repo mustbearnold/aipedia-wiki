@@ -1,13 +1,16 @@
 ---
 /**
- * ArticlePlusLayout - narrative article pages (trends, dead-tool
- * eulogies) with sticky TOC, byline, share, feedback. Redesigned
- * April 23, 2026 into .t2-canvas.
+ * ArticlePlusLayout — god-tier 10/10 narrative article (May 2026 onward).
+ *
+ * Used for trends, news posts, dead-tool eulogies. Composes Hero + body +
+ * citations as a TrustPanel.
+ *
+ * Legacy preserved at ArticlePlusLayout.legacy.astro.
  */
 import BaseLayout from './BaseLayout.astro';
-import '../styles/t2-canvas.css';
+import Hero from '../components/godtier/Hero.astro';
+import TrustPanel from '../components/godtier/TrustPanel.astro';
 import BreadcrumbLD from '../components/seo/BreadcrumbLD.astro';
-import Breadcrumb from '../components/Breadcrumb.astro';
 import ArticleLD from '../components/seo/ArticleLD.astro';
 import ShareButtons from '../components/ShareButtons.astro';
 import FAQAccordionScript from '../components/FAQAccordionScript.astro';
@@ -29,32 +32,21 @@ interface Props {
   datePublished?: string;
   ogImage?: string;
   citations?: Array<{ url: string; title?: string }>;
-  /** When true, uses homepage frosted card surfaces (--home-*) for this article. */
   homeSurfaceCards?: boolean;
 }
 
 const {
   title, seoTitle, description = '', pageUrl,
-  breadcrumbs, badge, headings = [],
+  breadcrumbs, badge,
   readingMinutes = 0, lastVerified, metaExtra,
   articleType = 'Article',
   articleSection,
   datePublished,
   ogImage,
   citations = [],
-  homeSurfaceCards = false,
 } = Astro.props;
 
 const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
-
-const badgeClass = badge
-  ? ({
-      cyan: 't2-badge-cyan',
-      teal: 't2-badge-teal',
-      blue: 't2-badge-blue',
-      gray: 't2-badge-gray',
-    }[badge.color] ?? 't2-badge-gray')
-  : '';
 
 const breadcrumbLdItems = breadcrumbs
   ? [
@@ -78,37 +70,31 @@ function parseCalendarDate(value?: string): Date | null {
 }
 
 const verifiedDate = parseCalendarDate(lastVerified);
-const verifiedIsValid = verifiedDate && !isNaN(verifiedDate.getTime());
-const verifiedLabel = verifiedIsValid
-  ? verifiedDate!.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })
-  : null;
-const verifiedIso = verifiedIsValid ? verifiedDate!.toISOString().split('T')[0] : null;
-function relativeDays(d: Date): string {
-  const now = new Date();
-  const today = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 12);
-  const target = new Date(d.getFullYear(), d.getMonth(), d.getDate(), 12);
-  const days = Math.round((today.getTime() - target.getTime()) / 86400000);
-  if (days < 0) return 'in the future';
-  if (days === 0) return 'today';
-  if (days === 1) return 'yesterday';
-  if (days < 7) return `${days} days ago`;
-  if (days < 30) return `${Math.round(days / 7)} weeks ago`;
-  if (days < 365) return `${Math.round(days / 30)} months ago`;
-  return `${Math.round(days / 365)} years ago`;
-}
-const verifiedRelative = verifiedIsValid ? relativeDays(verifiedDate!) : null;
+const verifiedRecently = verifiedDate && !isNaN(verifiedDate.getTime())
+  ? Math.floor((Date.now() - verifiedDate.getTime()) / 86400000) <= 90
+  : false;
+const monthShort = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const verifiedLabel = verifiedRecently && verifiedDate
+  ? `Verified ${monthShort[verifiedDate.getMonth()]} ${verifiedDate.getDate()}`
+  : undefined;
 
-const todayAtNoon = (() => {
-  const now = new Date();
-  return new Date(now.getFullYear(), now.getMonth(), now.getDate(), 12);
-})();
-const verifiedDaysSince = verifiedIsValid
-  ? Math.max(0, Math.round((todayAtNoon.getTime() - new Date(verifiedDate!.getFullYear(), verifiedDate!.getMonth(), verifiedDate!.getDate(), 12).getTime()) / 86400000))
-  : Infinity;
-const verifiedIsFresh = verifiedIsValid && verifiedDaysSince <= 14;
-const verifiedIsRecent = verifiedIsValid && verifiedDaysSince > 14 && verifiedDaysSince <= 90;
+const trustSources = citations.map((c) => ({
+  label: c.title ?? c.url,
+  url: c.url,
+  verified: lastVerified ?? undefined,
+}));
 
-const tocHeadings = (headings ?? []).filter((h) => h.depth === 2).map((h) => ({ slug: h.slug, text: h.text }));
+const heroBreadcrumbs = breadcrumbs
+  ? [
+      { label: 'aipedia', href: '/' },
+      ...breadcrumbs.map((b) => ({ label: b.label, href: b.href })),
+    ]
+  : [
+      { label: 'aipedia', href: '/' },
+      { label: title },
+    ];
+
+const rankLabel = badge?.text ?? metaExtra ?? (readingMinutes > 0 ? `${readingMinutes} min read` : undefined);
 ---
 
 <BaseLayout
@@ -116,100 +102,99 @@ const tocHeadings = (headings ?? []).filter((h) => h.depth === 2).map((h) => ({ 
   description={description}
   ogImage={ogImage}
   ogType="article"
-  articlePublishedTime={(() => {
-    const v = datePublished ?? lastVerified;
-    if (!v) return undefined;
-    const d = new Date(String(v));
-    return isNaN(d.getTime()) ? String(v) : d.toISOString();
-  })()}
-  articleModifiedTime={(() => {
-    if (!lastVerified) return undefined;
-    const d = new Date(String(lastVerified));
-    return isNaN(d.getTime()) ? String(lastVerified) : d.toISOString();
-  })()}
+  articlePublishedTime={datePublished}
+  articleModifiedTime={lastVerified}
   articleSection={articleSection}
 >
   {breadcrumbLdItems && <BreadcrumbLD items={breadcrumbLdItems} />}
   <ArticleLD
     headline={title}
     description={description}
-    pageUrl={pageUrl}
-    datePublished={datePublished ?? lastVerified}
+    datePublished={datePublished}
     dateModified={lastVerified}
+    pageUrl={pageUrl}
     articleType={articleType}
-    articleSection={articleSection}
-    wordCount={readingMinutes ? Math.round(readingMinutes * 230) : undefined}
-    citations={citations}
   />
 
-  
-  <div class:list={['t2-canvas', homeSurfaceCards && 'news-article-shell']}>
-    {breadcrumbs && <Breadcrumb items={breadcrumbs} />}
-
-    <!-- Editorial eyebrow -->
-    <div class="t2-eyebrow" data-pagefind-ignore>
-      {verifiedIsFresh && (
-        <span class="t2-eyebrow-chip t2-eyebrow-fresh">
-          <span class="t2-eyebrow-livedot" aria-hidden="true"></span>
-          Updated {verifiedLabel}
-        </span>
-      )}
-      {verifiedIsRecent && (
-        <span class="t2-eyebrow-chip">Updated {verifiedLabel}</span>
-      )}
-      {articleSection && <span class="t2-eyebrow-chip t2-eyebrow-accent">{articleSection}</span>}
-      {badge && <span class={`t2-article-badge ${badgeClass}`.trim()}>{badge.text}</span>}
-      <span class="t2-eyebrow-trust">Editorial only, no paid placements</span>
-    </div>
-
-    <header class="t2-article-hero" data-pagefind-ignore>
-      <div class="t2-article-title-row">
-        <h1 class="t2-title">{title}</h1>
-      </div>
-      <div class="t2-article-byline">
-        <span>By <span class="t2-article-author">aipedia.wiki Editorial</span></span>
-        {readingMinutes > 0 && (
-          <>
-            <span aria-hidden="true" class="t2-meta-dot">·</span>
-            <span>{readingMinutes} min read</span>
-          </>
-        )}
-        {metaExtra && (
-          <>
-            <span aria-hidden="true" class="t2-meta-dot">·</span>
-            <span>{metaExtra}</span>
-          </>
-        )}
-        {verifiedIsValid && verifiedRelative && (
-          <>
-            <span aria-hidden="true" class="t2-meta-dot">·</span>
-            <span>
-              <time datetime={verifiedIso!} title={`Verified ${verifiedLabel}`}>{verifiedRelative}</time>
-            </span>
-          </>
-        )}
-      </div>
-    </header>
-
-    <div class="t2-layout">
-      <article class="t2-prose">
-        <slot />
-
-        <FAQAccordionScript />
-        <ShareButtons title={title} pageUrl={pageUrl} />
-        <FeedbackForm toolName={title} />
-      </article>
-
-      {tocHeadings.length > 0 && (
-        <aside class:list={['t2-toc', homeSurfaceCards && 'home-surface-card']} aria-label="On this page">
-          <div class="t2-toc-label">On this page</div>
-          <ol class="t2-toc-list">
-            {tocHeadings.map((h) => (
-              <li><a href={`#${h.slug}`}>{h.text}</a></li>
-            ))}
-          </ol>
-        </aside>
-      )}
-    </div>
+  <div class="sr-only" data-pagefind-ignore>
+    <span data-pagefind-filter="Type">{articleType}</span>
+    {articleSection && <span data-pagefind-filter="Section">{articleSection}</span>}
   </div>
+
+  <div class="gt-canvas">
+    <Hero
+      title={title}
+      tagline={description}
+      breadcrumbs={heroBreadcrumbs}
+      verifiedLabel={verifiedLabel}
+      rankLabel={rankLabel}
+    />
+
+    <article class="gt-body">
+      <slot />
+    </article>
+
+    {trustSources.length > 0 && (
+      <TrustPanel
+        sources={trustSources}
+        heading="Sources cited"
+      />
+    )}
+
+    <FAQAccordionScript />
+    <ShareButtons title={title} pageUrl={pageUrl} />
+    <FeedbackForm toolName={title} />
+  </div>
+
+  <style>
+    .gt-body { margin-bottom: 40px; }
+    .gt-body :global(h2) {
+      font-size: 22px; font-weight: 700; letter-spacing: -0.01em;
+      margin: 36px 0 14px; color: var(--gt-fg);
+    }
+    .gt-body :global(h3) { font-size: 17px; font-weight: 600; margin: 28px 0 10px; color: var(--gt-fg); }
+    .gt-body :global(p),
+    .gt-body :global(li) { font-size: var(--gt-text-prose); line-height: 1.65; color: var(--gt-fg); }
+    .gt-body :global(ul),
+    .gt-body :global(ol) { padding-left: 1.2em; margin: 0 0 18px; }
+    .gt-body :global(li) { margin-bottom: 8px; }
+    .gt-body :global(a) {
+      color: var(--gt-accent);
+      text-decoration: none;
+      border-bottom: 1px solid currentColor;
+    }
+    .gt-body :global(blockquote) {
+      margin: 18px 0; padding: 12px 16px;
+      border-left: 3px solid var(--gt-accent);
+      background: var(--gt-surface);
+      border-radius: 0 var(--gt-radius-sm) var(--gt-radius-sm) 0;
+    }
+    .gt-body :global(table) {
+      width: 100%; border-collapse: collapse;
+      font-size: 14px; margin: 18px 0;
+      display: block; overflow-x: auto;
+    }
+    .gt-body :global(th),
+    .gt-body :global(td) { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--gt-line); }
+    .gt-body :global(th) {
+      font-size: 11px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.08em; color: var(--gt-subtle);
+    }
+    .gt-body :global(code) {
+      font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+      font-size: 0.9em;
+      background: var(--gt-surface-2);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .gt-body :global(pre) {
+      background: #0d1117;
+      padding: 14px;
+      border-radius: var(--gt-radius-sm);
+      overflow-x: auto;
+      font-size: 13px;
+      margin: 18px 0;
+    }
+    .gt-body :global(pre code) { background: transparent; padding: 0; }
+  </style>
 </BaseLayout>

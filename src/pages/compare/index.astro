@@ -1,341 +1,182 @@
 ---
 /**
- * /compare/ index. Head-to-head AI tool comparison directory (.t2-canvas).
- * Mobile layout tightened May 2026 (safe-area, touch targets).
+ * /compare/ index — god-tier 10/10 mobile-first comparison directory.
+ *
+ * Legacy preserved at src/legacy-pages/compare-index.legacy.astro.
  */
+import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import IndexHero from '../../components/design/IndexHero.astro';
-import MetricStrip from '../../components/design/MetricStrip.astro';
-import Breadcrumb from '../../components/Breadcrumb.astro';
+import Hero from '../../components/godtier/Hero.astro';
 import BreadcrumbLD from '../../components/seo/BreadcrumbLD.astro';
 import CollectionPageLD from '../../components/seo/CollectionPageLD.astro';
-import { getCollection } from 'astro:content';
-import logoManifest from '../../data/logo-manifest.json';
-import '../../styles/t2-canvas.css';
-import '../../styles/compare-home-cards.css';
+import { overallScore } from '../../utils/tool-metadata';
 
 const allComparisons = await getCollection('comparisons');
 const allTools = await getCollection('tools');
 
-type ToolInfo = { title: string; score: number; logo: string };
-const toolLookup: Record<string, ToolInfo> = {};
+const toolScoreBySlug: Record<string, { title: string; score: number }> = {};
 for (const t of allTools) {
   const slug = t.data.slug || t.id.replace(/\.md$/, '');
-  const s = t.data.scores ?? { utility: 0, value: 0, moat: 0, longevity: 0 };
-  const score = Math.round((((s.utility ?? 0) + (s.value ?? 0) + (s.moat ?? 0) + (s.longevity ?? 0)) / 4) * 10) / 10;
-  toolLookup[slug] = {
+  toolScoreBySlug[slug] = {
     title: t.data.title || slug,
-    score,
-    logo: (logoManifest as Record<string, string>)[slug] ?? `/logos/tools/${slug}.png`,
+    score: overallScore(t.data.scores ?? {}),
   };
 }
-
-const categoryLabels: Record<string, string> = {
-  'ai-chatbots': 'Chatbots',
-  'ai-voice': 'Voice', 'ai-video': 'Video', 'ai-coding': 'Coding',
-  'ai-automation': 'Automation', 'ai-seo': 'SEO', 'ai-design': 'Design',
-  'ai-writing': 'Writing', 'ai-image': 'Image', 'ai-search': 'Search',
-  'ai-notes': 'Notes', 'ai-music': 'Music',
-  'ai-presentation': 'Presentation', 'ai-research': 'Research',
-};
 
 interface EnrichedComparison {
   slug: string;
   title: string;
   description: string;
-  category: string;
-  toolA: ToolInfo | null;
-  toolB: ToolInfo | null;
-  slugA: string;
-  slugB: string;
-  sumScore: number;
-  dataAttr: string;
+  toolPair: string[];
+  topScore: number;
+  toolNames: string[];
 }
 
-const enriched: EnrichedComparison[] = allComparisons.map((c) => {
+// Auto-generate a fallback description when frontmatter doesn't provide
+// one, so every card has something for the reader to scan.
+function fallbackDescription(toolNames: string[]): string {
+  if (toolNames.length === 0) return 'Head-to-head comparison with scored facts.';
+  if (toolNames.length === 1) return `Where ${toolNames[0]} wins, where it loses, and what to pick instead.`;
+  if (toolNames.length === 2) {
+    return `${toolNames[0]} vs ${toolNames[1]} on pricing, features, and team fit.`;
+  }
+  const lastTwo = toolNames.slice(-2).join(' and ');
+  const first = toolNames.slice(0, -2).join(', ');
+  return `${first}, ${lastTwo} compared on pricing, features, and use case.`;
+}
+
+const enriched: EnrichedComparison[] = allComparisons.map((c: any) => {
   const slug = c.data.slug || c.id.replace(/\.md$/, '');
-  const tools = Array.isArray(c.data.tools) ? c.data.tools : [];
-  const slugA = String(tools[0] || '');
-  const slugB = String(tools[1] || '');
-  const toolA = toolLookup[slugA] || null;
-  const toolB = toolLookup[slugB] || null;
-  const sumScore = (toolA?.score || 0) + (toolB?.score || 0);
-  const title = c.data.title || '';
-  const description = c.data.description || c.data.summary || '';
-  const category = c.data.category || 'other';
-  const categoryLabel = categoryLabels[category] || category.replace(/^ai-/, '').replace(/-/g, ' ');
+  const tools = (Array.isArray(c.data.tools) ? c.data.tools : []).map(String);
+  const toolInfos = tools.map((s: string) => toolScoreBySlug[s]).filter(Boolean);
+  const topScore = toolInfos.length > 0 ? Math.max(...toolInfos.map((t: any) => t.score)) : 0;
+  const toolNames = toolInfos.map((t: any) => t.title);
   return {
-    slug, title, description,
-    category,
-    toolA, toolB, slugA, slugB, sumScore,
-    dataAttr: `${title} ${slugA} ${slugB} ${toolA?.title || ''} ${toolB?.title || ''} ${category} ${categoryLabel}`.toLowerCase(),
+    slug,
+    title: c.data.title || '',
+    description: (c.data.description || c.data.summary || '').trim() || fallbackDescription(toolNames),
+    toolPair: tools,
+    topScore,
+    toolNames,
   };
 });
 
-const priorityComparisonSlugs = [
-  'chatgpt-vs-claude',
-  'cursor-vs-github-copilot',
-  'lovable-vs-bolt-vs-v0',
-  'kling-vs-seedance-vs-runway',
-  'veo-vs-seedance',
-  'runway-vs-veo',
-  'heygen-vs-synthesia',
-  'n8n-vs-make-vs-zapier',
-];
-const comparisonBySlug = new Map(enriched.map(c => [c.slug, c]));
-const usedFeaturedSlugs = new Set<string>();
-const featured = [
-  ...priorityComparisonSlugs
-    .map(slug => comparisonBySlug.get(slug))
-    .filter((c): c is EnrichedComparison => Boolean(c)),
-  ...[...enriched].sort((a, b) => b.sumScore - a.sumScore),
-]
-  .filter((c) => {
-    if (usedFeaturedSlugs.has(c.slug)) return false;
-    usedFeaturedSlugs.add(c.slug);
-    return true;
-  })
-  .slice(0, 8);
-
-const byCategory: Record<string, EnrichedComparison[]> = {};
-for (const c of enriched) {
-  if (!byCategory[c.category]) byCategory[c.category] = [];
-  byCategory[c.category].push(c);
-}
-for (const cat of Object.keys(byCategory)) {
-  byCategory[cat].sort((a, b) => b.sumScore - a.sumScore);
-}
-const categoriesOrdered = Object.keys(byCategory).sort((a, b) => byCategory[b].length - byCategory[a].length);
-/** Matches Nav + homepage: tools with live wiki profiles (not unique slugs only on comparison pages). */
-const liveToolCount = allTools.filter(
-  (t) => t.data.status !== 'dead' && t.data.status !== 'retired' && t.data.status !== 'acquired'
-).length;
-const topCategory = categoriesOrdered[0] || 'other';
-const topCategoryLabel = categoryLabels[topCategory] || topCategory.replace(/^ai-/, '').replace(/-/g, ' ');
-const strongestPair = featured[0];
-const strongestPairScore = strongestPair ? Math.round((strongestPair.sumScore / 2) * 10) / 10 : 0;
-const categorySignals = categoriesOrdered.slice(0, 4).map((cat) => ({
-  slug: cat,
-  label: categoryLabels[cat] || cat.replace(/^ai-/, '').replace(/-/g, ' '),
-  count: byCategory[cat].length,
-}));
-const heroSignals = [
-  { label: 'Comparison guides', value: allComparisons.length, note: 'source-backed pages' },
-  { label: 'Tools in wiki', value: liveToolCount, note: 'active profiles' },
-  { label: 'Most covered area', value: topCategoryLabel, note: `${byCategory[topCategory]?.length ?? 0} comparisons` },
-  { label: 'Featured pair avg', value: strongestPairScore.toFixed(1), note: 'buyer-priority pair' },
-];
-
+const sorted = enriched.sort((a, b) => b.topScore - a.topScore);
 const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
-const compareDescription = `${allComparisons.length} editorial head-to-head comparisons between the most-searched AI tool pairs. Updated May 2026.`;
-const comparisonItems = enriched.map((comparison) => ({
-  name: comparison.title || `${comparison.toolA?.title ?? comparison.slugA} vs ${comparison.toolB?.title ?? comparison.slugB}`,
-  url: new URL(`/compare/${comparison.slug}/`, siteBase).href,
-  description: comparison.description,
+const description = `Browse ${allComparisons.length} head-to-head AI tool comparisons. Independent scoring, verified facts. Updated May 2026.`;
+
+const collectionItems = sorted.map((c) => ({
+  name: c.title,
+  url: new URL(`/compare/${c.slug}/`, siteBase).href,
+  description: c.description,
 }));
 ---
 
 <BaseLayout
-  title="Compare AI Tools · May 2026 · aipedia.wiki"
-  description={compareDescription}
+  title="AI Tool Comparisons · May 2026 · aipedia.wiki"
+  description={description}
 >
   <BreadcrumbLD items={[
     { name: 'Home', url: new URL('/', siteBase).href },
-    { name: 'Compare AI Tools', url: new URL('/compare/', siteBase).href },
+    { name: 'Compare', url: new URL('/compare/', siteBase).href },
   ]} />
   <CollectionPageLD
-    name="Compare AI Tools"
-    description={compareDescription}
+    name="AI Tool Comparisons"
+    description={description}
     pageUrl={new URL('/compare/', siteBase).href}
-    items={comparisonItems}
-    itemType="Article"
+    items={collectionItems}
+    itemType="CollectionPage"
   />
-  <div class="compare-directory-page" data-home-page>
-    <div class="t2-canvas site-directory-canvas">
-    <Breadcrumb items={[{ label: 'Compare' }]} data-reveal />
 
-    <IndexHero
-      title="Choose the right AI tool"
-      accent="before switching"
-      suffix="."
-      lead="Side-by-side guides for the tool pairs people actually search. Scores, pricing notes, strengths, weaknesses, and fit. Updated May 2026."
-      class="compare-hero"
-      mainClass="compare-hero-main"
-      eyebrowClass="compare-eyebrow"
-      headingClass="idx-headline compare-headline"
-      leadClass="idx-subhead compare-subhead"
-      reveal
-      revealDelay="60ms"
-      eyebrow={[
-        { label: 'Compare tools', tone: 'accent' },
-        { label: 'comparisons', value: allComparisons.length },
+  <div class="sr-only" data-pagefind-ignore>
+    <span data-pagefind-filter="Type">CompareIndex</span>
+  </div>
+
+  <div class="gt-canvas">
+    <Hero
+      title="Compare AI tools"
+      tagline="Head-to-head reviews with shared fact tables, independent scores, and clear winners."
+      breadcrumbs={[
+        { label: 'aipedia', href: '/' },
+        { label: 'Compare' },
       ]}
-      trust="Editorial only. No paid placements."
-    >
-      <Fragment slot="actions">
-        <div class="t2-ctas compare-ctas">
-          <a href="/compare/build/" class="t2-cta t2-cta-primary">
-            Build your own comparison
-            <span class="t2-cta-arrow" aria-hidden="true">&rarr;</span>
-          </a>
-          <a href="#featured-section" class="t2-cta t2-cta-secondary">
-            Browse popular comparisons
-            <span class="t2-cta-arrow" aria-hidden="true">&rarr;</span>
-          </a>
-        </div>
-      </Fragment>
-
-      <Fragment slot="aside">
-      <aside class="compare-hero-panel" aria-label="Comparison highlights">
-        <div class="compare-panel-kicker">Buyer comparison guide</div>
-        <div class="compare-panel-score">
-          <span class="tabular-nums">{strongestPairScore.toFixed(1)}</span>
-          <small>/10 top pair average</small>
-        </div>
-        <div class="compare-panel-pair">
-          {strongestPair?.toolA?.title ?? 'Top tool'} <span>vs</span> {strongestPair?.toolB?.title ?? 'Top alternative'}
-        </div>
-        <div class="compare-panel-lines">
-          {categorySignals.map((cat) => (
-            <a href={`#cat-${cat.slug}`} class="compare-panel-line">
-              <span>{cat.label}</span>
-              <strong class="tabular-nums">{cat.count}</strong>
-            </a>
-          ))}
-        </div>
-      </aside>
-      </Fragment>
-    </IndexHero>
-
-    <MetricStrip
-      class="compare-summary-strip"
-      label="Comparison summary"
-      reveal
-      revealDelay="120ms"
-      metrics={heroSignals}
+      rankLabel={`${allComparisons.length} comparisons`}
     />
 
-    <div class="t2-compare-filter compare-filter-premium" data-reveal>
-      <label for="compare-filter" class="compare-filter-label">Find a comparison</label>
-      <div class="compare-filter-control">
-        <input
-          id="compare-filter"
-          type="text"
-          role="searchbox"
-          inputmode="search"
-          enterkeyhint="search"
-          autocomplete="off"
-          placeholder="Search by tool, pair, or category..."
-          class="t2-compare-filter-input"
-        />
-      </div>
-    </div>
-
-    <section class="t2-index-group compare-featured-group" id="featured-section" data-reveal>
-      <div class="t2-index-group-head compare-group-head">
-        <span class="compare-group-mark" aria-hidden="true"></span>
-        <div>
-          <p class="compare-group-kicker">Buyer-priority comparisons</p>
-          <h2 class="t2-index-group-title">Start with these comparisons</h2>
-        </div>
-        <span class="t2-index-group-count">{featured.length}</span>
-      </div>
-      <div class="t2-compare-grid compare-featured-grid">
-        {featured.map((c, i) => (
-          <a href={`/compare/${c.slug}/`} class="compare-card t2-compare-card t2-compare-card-featured compare-card-premium" data-search={c.dataAttr} style={`--reveal-delay: ${(i % 3) * 55}ms;`}>
-            <div class="t2-compare-card-logos compare-logo-pair">
-              {c.toolA && <img src={c.toolA.logo} alt="" width="36" height="36" loading="lazy" decoding="async" fetchpriority="low" />}
-              {c.toolB && <img src={c.toolB.logo} alt="" width="36" height="36" loading="lazy" decoding="async" fetchpriority="low" />}
-            </div>
-            <div class="t2-compare-card-body">
-              <div class="compare-card-kicker">
-                <span>{categoryLabels[c.category] || c.category.replace(/^ai-/, '').replace(/-/g, ' ')}</span>
-                <span class="tabular-nums">{Math.round((c.sumScore / 2) * 10) / 10}/10 avg</span>
+    <section class="gt-compare-index" aria-label="All comparisons">
+      <ol class="gt-compare-cards">
+        {sorted.map((c) => (
+          <li class="gt-compare-card">
+            <a href={`/compare/${c.slug}/`}>
+              <strong class="gt-compare-card-title">{c.title}</strong>
+              {c.description && <p class="gt-compare-card-desc">{c.description}</p>}
+              <div class="gt-compare-card-meta">
+                <span class="gt-compare-card-tools">{c.toolPair.length} tools</span>
+                {c.topScore > 0 && (
+                  <span class="gt-compare-card-score tabular-nums">Top {c.topScore}/10</span>
+                )}
               </div>
-              <div class="t2-compare-card-title">
-                {c.toolA?.title || '?'} <span class="t2-compare-card-vs">vs</span> {c.toolB?.title || '?'}
-              </div>
-              <div class="t2-compare-card-scores tabular-nums">
-                <span>{c.toolA?.score.toFixed(1) || '-'}</span>
-                <span aria-hidden="true">/</span>
-                <span>{c.toolB?.score.toFixed(1) || '-'}</span>
-              </div>
-            </div>
-            <span class="t2-compare-card-arrow" aria-hidden="true">&rarr;</span>
-          </a>
-        ))}
-      </div>
-    </section>
-
-    {categoriesOrdered.map((cat) => (
-      <section class="t2-index-group category-block compare-category-block" id={`cat-${cat}`} data-category={cat} data-reveal>
-        <div class="t2-index-group-head compare-group-head">
-          <span class="compare-group-mark" aria-hidden="true"></span>
-          <div>
-            <p class="compare-group-kicker">Category</p>
-            <h2 class="t2-index-group-title">{categoryLabels[cat] || cat.replace(/^ai-/, '').replace(/-/g, ' ')}</h2>
-          </div>
-          <span class="t2-index-group-count" data-category-count>{byCategory[cat].length}</span>
-        </div>
-        <div class="t2-compare-grid t2-compare-grid-dense">
-          {byCategory[cat].map((c, i) => (
-            <a href={`/compare/${c.slug}/`} class="compare-card t2-compare-card compare-card-premium compare-card-compact" data-search={c.dataAttr} data-category={c.category} style={`--reveal-delay: ${(i % 4) * 35}ms;`}>
-              <div class="t2-compare-card-logos compare-logo-pair">
-                {c.toolA && <img src={c.toolA.logo} alt="" width="30" height="30" loading="lazy" decoding="async" fetchpriority="low" />}
-                {c.toolB && <img src={c.toolB.logo} alt="" width="30" height="30" loading="lazy" decoding="async" fetchpriority="low" />}
-              </div>
-              <div class="t2-compare-card-body">
-                <div class="t2-compare-card-title">
-                  {c.toolA?.title || '?'} <span class="t2-compare-card-vs">vs</span> {c.toolB?.title || '?'}
-                </div>
-                <div class="t2-compare-card-scores tabular-nums">
-                  <span>{c.toolA?.score.toFixed(1) || '-'}</span>
-                  <span aria-hidden="true">/</span>
-                  <span>{c.toolB?.score.toFixed(1) || '-'}</span>
-                </div>
-              </div>
-              <span class="t2-compare-card-arrow" aria-hidden="true">&rarr;</span>
             </a>
-          ))}
-        </div>
-      </section>
-    ))}
-    </div>
+          </li>
+        ))}
+      </ol>
+    </section>
   </div>
-<script is:inline>
-    (function () {
-      const input = document.getElementById('compare-filter');
-      const featuredSec = document.getElementById('featured-section');
-      const directoryRoot = document.querySelector('.compare-directory-page');
-      if (!input) return;
-      const categoryCards = Array.from(document.querySelectorAll('.category-block .compare-card'));
-      const categoryBlocks = Array.from(document.querySelectorAll('.category-block'));
-      function isMatch(card, q) {
-        return q === '' || (card.dataset.search && card.dataset.search.includes(q));
-      }
-      function applyFilter() {
-        const q = input.value.trim().toLowerCase();
-        const countsByCategory = new Map();
-        categoryCards.forEach((card) => {
-          const match = isMatch(card, q);
-          card.style.display = match ? '' : 'none';
-          if (match) {
-            const cat = card.dataset.category || 'other';
-            countsByCategory.set(cat, (countsByCategory.get(cat) || 0) + 1);
-          }
-        });
-        categoryBlocks.forEach((block) => {
-          const cat = block.dataset.category || 'other';
-          const count = q === '' ? block.querySelectorAll('.compare-card').length : (countsByCategory.get(cat) || 0);
-          const countEl = block.querySelector('[data-category-count]');
-          if (countEl) countEl.textContent = String(count);
-          block.style.display = count > 0 ? '' : 'none';
-        });
-        if (featuredSec) featuredSec.style.display = q === '' ? '' : 'none';
-        /* Sticky search overlaps results once "Popular" collapses; use normal flow while filtering. */
-        if (directoryRoot) directoryRoot.classList.toggle('compare-directory-filtering', q !== '');
-      }
-      input.addEventListener('input', applyFilter);
-    })();
-  </script>
+
+  <style>
+    .gt-compare-index { margin-bottom: 40px; }
+    .gt-compare-cards {
+      list-style: none; padding: 0; margin: 0;
+      display: grid; grid-template-columns: 1fr; gap: 10px;
+    }
+    .gt-compare-card {
+      border-radius: var(--gt-radius-sm);
+      border: 1px solid var(--gt-line);
+      background: var(--gt-surface);
+      transition: background 120ms ease, border-color 120ms ease;
+    }
+    .gt-compare-card:hover {
+      background: var(--gt-surface-2);
+      border-color: var(--gt-line-strong);
+    }
+    .gt-compare-card a {
+      display: flex; flex-direction: column; gap: 8px;
+      padding: 16px;
+      text-decoration: none;
+      color: var(--gt-fg);
+      min-height: 90px;
+    }
+    .gt-compare-card-title { font-size: 16px; font-weight: 700; line-height: 1.35; }
+    .gt-compare-card-desc {
+      margin: 0; font-size: 13px; line-height: 1.5; color: var(--gt-muted);
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .gt-compare-card-meta {
+      display: flex; align-items: baseline; justify-content: space-between;
+      margin-top: auto;
+      padding-top: 6px;
+    }
+    .gt-compare-card-tools {
+      font-size: 11px;
+      color: var(--gt-subtle);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 600;
+    }
+    .gt-compare-card-score {
+      font-size: 12px;
+      color: var(--gt-positive);
+      font-weight: 700;
+    }
+
+    @media (min-width: 600px) {
+      .gt-compare-cards { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    }
+    @media (min-width: 900px) {
+      .gt-compare-cards { grid-template-columns: repeat(3, 1fr); }
+    }
+  </style>
 </BaseLayout>

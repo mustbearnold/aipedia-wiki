@@ -1,7 +1,11 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import Breadcrumb from '../../components/Breadcrumb.astro';
+/**
+ * /trends/ index — god-tier 10/10 mobile-first.
+ */
 import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/godtier/Hero.astro';
+import BreadcrumbLD from '../../components/seo/BreadcrumbLD.astro';
 
 const allTrends = await getCollection('trends');
 
@@ -14,7 +18,7 @@ function toYmd(v: unknown): string {
 }
 
 const sorted = allTrends
-  .map((t) => ({
+  .map((t: any) => ({
     slug: t.data.slug || t.id.replace(/\.md$/, ''),
     title: t.data.title,
     description: t.data.description || t.data.meta_description || '',
@@ -22,140 +26,107 @@ const sorted = allTrends
     impact: t.data.impact || 'medium',
     lastUpdated: toYmd(t.data.last_updated),
   }))
-  .sort((a, b) => (b.lastUpdated || '').localeCompare(a.lastUpdated || ''));
+  .sort((a: any, b: any) => (b.lastUpdated || '').localeCompare(a.lastUpdated || ''));
 
-function pillImpactClass(impact: string) {
-  if (impact === 'high') return 'is-high';
-  if (impact === 'low') return 'is-low';
-  return 'is-medium';
-}
+const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
 ---
 
 <BaseLayout
-  title="Trending in AI Tools — What's Changing Now — aipedia.wiki"
+  title="Trending in AI Tools · aipedia.wiki"
   description="Editorial analysis of major shifts in the AI tools landscape. Model launches, market consolidations, pricing wars, and category emergences."
 >
-  <div class="site-content-frame">
-    <Breadcrumb items={[{ label: 'Trending' }]} />
+  <BreadcrumbLD items={[
+    { name: 'Home', url: new URL('/', siteBase).href },
+    { name: 'Trending', url: new URL('/trends/', siteBase).href },
+  ]} />
 
-    <div class="trends-page-root">
-      <section class="idx-hero" data-pagefind-ignore>
-        <div class="idx-eyebrow">
-          <span class="idx-eyebrow-chip idx-eyebrow-fresh">Sourced analysis</span>
-          <span class="idx-eyebrow-chip idx-eyebrow-accent">Trend reports</span>
-          <span class="idx-eyebrow-chip"><span class="tabular-nums">{sorted.length}</span> tracked</span>
-          <span class="idx-eyebrow-trust">Every shift linked to source notes. Refreshed May 10, 2026.</span>
-        </div>
-        <h1 class="idx-headline">
-          What is <span class="idx-gradient">changing now</span>.
-        </h1>
-        <p class="idx-subhead">
-          Refreshed May 10, 2026. Curated analysis of the shifts reshaping the AI tools landscape: new model classes, category consolidation, pricing changes, coding-agent economics, enterprise agent control planes, sovereign AI procurement, AI supply-chain security, and the tools being left behind.
-        </p>
-      </section>
+  <div class="sr-only" data-pagefind-ignore>
+    <span data-pagefind-filter="Type">TrendIndex</span>
+  </div>
 
-      <section class="trends-card-grid mb-[var(--site-page-bottom)]">
-        {sorted.map((t) => (
-          <a
-            href={`/trends/${t.slug}/`}
-            class="home-surface-card group block trend-card-link touch-manipulation"
-            data-trend-card
-          >
-            <div class="flex items-start gap-3 mb-3">
-              <span class:list={['trend-impact-pill', pillImpactClass(String(t.impact))]}>
-                {t.impact} impact
-              </span>
-            </div>
-            <h3 class="trend-card-title">{t.title}</h3>
-            {t.description && (
-              <p class="trend-card-desc mb-3 line-clamp-2">{t.description}</p>
-            )}
-            {t.timeframe && <p class="trend-card-meta line-clamp-1">{t.timeframe}</p>}
-          </a>
-        ))}
-      </section>
-    </div>
+  <div class="gt-canvas">
+    <Hero
+      title="What's changing now"
+      tagline="Curated analysis of shifts reshaping the AI tools landscape: new model classes, category consolidation, pricing changes, coding-agent economics, enterprise control planes."
+      breadcrumbs={[
+        { label: 'aipedia', href: '/' },
+        { label: 'Trending' },
+      ]}
+      rankLabel={`${sorted.length} trends tracked`}
+    />
+
+    <section class="gt-trends">
+      <ol class="gt-trend-cards">
+        {sorted.map((t: any) => {
+          const impact = t.impact === 'high' ? 'high' : t.impact === 'low' ? 'low' : 'medium';
+          return (
+            <li class={`gt-trend-card gt-trend-card-${impact}`}>
+              <a href={`/trends/${t.slug}/`}>
+                <span class={`gt-trend-impact gt-trend-impact-${impact}`}>{t.impact} impact</span>
+                <strong class="gt-trend-card-title">{t.title}</strong>
+                {t.description && <p class="gt-trend-card-desc">{t.description}</p>}
+                {t.timeframe && <span class="gt-trend-timeframe">{t.timeframe}</span>}
+              </a>
+            </li>
+          );
+        })}
+      </ol>
+    </section>
   </div>
 
   <style>
-    .trends-card-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: var(--site-grid-gap);
+    .gt-trends { margin-bottom: 40px; }
+    .gt-trend-cards {
+      list-style: none; padding: 0; margin: 0;
+      display: grid; grid-template-columns: 1fr; gap: 10px;
     }
-    @media (min-width: 768px) {
-      .trends-card-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
+    .gt-trend-card {
+      border-radius: var(--gt-radius-sm);
+      border: 1px solid var(--gt-line);
+      background: var(--gt-surface);
     }
-
-    .trends-page-root .trend-card-link {
-      padding: var(--site-card-padding);
+    .gt-trend-card-high { border-left: 3px solid var(--gt-accent); }
+    .gt-trend-card-medium { border-left: 3px solid var(--gt-warn); }
+    .gt-trend-card-low { border-left: 3px solid var(--gt-line-strong); }
+    .gt-trend-card:hover { background: var(--gt-surface-2); }
+    .gt-trend-card a {
+      display: flex; flex-direction: column; gap: 8px;
+      padding: 16px;
+      text-decoration: none;
+      color: var(--gt-fg);
+      min-height: 100px;
     }
-
-    /* Matches homepage `.home-news-severity` / chip language. */
-    .trends-page-root .trend-impact-pill {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 24px;
-      padding: 0 10px;
+    .gt-trend-impact {
+      display: inline-block;
+      width: fit-content;
+      padding: 2px 8px;
       border-radius: 999px;
       font-size: 10px;
-      font-weight: 900;
-      letter-spacing: 0.06em;
+      font-weight: 700;
       text-transform: uppercase;
-      border: 1px solid transparent;
+      letter-spacing: 0.06em;
     }
-
-    .trends-page-root .trend-impact-pill.is-high {
-      color: var(--home-inverse);
-      background: var(--home-accent-solid);
-    }
-
-    .trends-page-root .trend-impact-pill.is-medium {
-      color: var(--home-inverse);
-      background: #fbbf24;
-      border-color: rgba(251, 191, 36, 0.72);
-    }
-
-    html.light .trends-page-root .trend-impact-pill.is-medium {
-      color: #1c1917;
-    }
-
-    .trends-page-root .trend-impact-pill.is-low {
-      color: var(--home-on-card-muted);
-      background: var(--home-chip-bg);
-      border-color: var(--home-card-outline);
-    }
-
-    .trends-page-root .trend-card-title {
-      margin: 0 0 8px;
-      font-size: 15px;
-      font-weight: 800;
-      line-height: 1.35;
-      color: var(--home-on-card);
+    .gt-trend-impact-high { background: var(--gt-accent); color: #fff; }
+    .gt-trend-impact-medium { background: var(--gt-warn); color: #1c1917; }
+    .gt-trend-impact-low { background: var(--gt-surface-2); color: var(--gt-muted); border: 1px solid var(--gt-line); }
+    .gt-trend-card-title { font-size: 16px; font-weight: 700; line-height: 1.35; }
+    .gt-trend-card-desc {
+      margin: 0; font-size: 13px; line-height: 1.5; color: var(--gt-muted);
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
       overflow: hidden;
-      text-overflow: ellipsis;
-      transition: color var(--motion-fast, 160ms) var(--motion-ease, cubic-bezier(0.16, 1, 0.3, 1));
     }
-
-    .trends-page-root a.home-surface-card:hover .trend-card-title,
-    .trends-page-root a.home-surface-card:focus-visible .trend-card-title {
-      color: var(--home-accent);
+    .gt-trend-timeframe {
+      margin-top: auto;
+      font-size: 11px;
+      color: var(--gt-subtle);
     }
-
-    .trends-page-root .trend-card-desc {
-      margin: 0;
-      font-size: 13px;
-      line-height: 1.5;
-      color: var(--home-on-card-muted);
+    @media (min-width: 600px) {
+      .gt-trend-cards { grid-template-columns: repeat(2, 1fr); gap: 12px; }
     }
-
-    .trends-page-root .trend-card-meta {
-      margin: 0;
-      font-size: 12px;
-      color: var(--home-dim);
+    @media (min-width: 900px) {
+      .gt-trend-cards { grid-template-columns: repeat(3, 1fr); }
     }
   </style>
 </BaseLayout>

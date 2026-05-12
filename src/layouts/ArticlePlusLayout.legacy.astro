@@ -1,0 +1,215 @@
+---
+/**
+ * ArticlePlusLayout - narrative article pages (trends, dead-tool
+ * eulogies) with sticky TOC, byline, share, feedback. Redesigned
+ * April 23, 2026 into .t2-canvas.
+ */
+import BaseLayout from './BaseLayout.astro';
+import '../styles/t2-canvas.css';
+import BreadcrumbLD from '../components/seo/BreadcrumbLD.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import ArticleLD from '../components/seo/ArticleLD.astro';
+import ShareButtons from '../components/ShareButtons.astro';
+import FAQAccordionScript from '../components/FAQAccordionScript.astro';
+import FeedbackForm from '../components/FeedbackForm.astro';
+
+interface Props {
+  title: string;
+  seoTitle?: string;
+  description?: string;
+  pageUrl: string;
+  breadcrumbs?: Array<{ label: string; href?: string }>;
+  badge?: { text: string; color: string };
+  headings?: Array<{ depth: number; slug: string; text: string }>;
+  readingMinutes?: number;
+  lastVerified?: string;
+  metaExtra?: string;
+  articleType?: 'Article' | 'NewsArticle' | 'BlogPosting';
+  articleSection?: string;
+  datePublished?: string;
+  ogImage?: string;
+  citations?: Array<{ url: string; title?: string }>;
+  /** When true, uses homepage frosted card surfaces (--home-*) for this article. */
+  homeSurfaceCards?: boolean;
+}
+
+const {
+  title, seoTitle, description = '', pageUrl,
+  breadcrumbs, badge, headings = [],
+  readingMinutes = 0, lastVerified, metaExtra,
+  articleType = 'Article',
+  articleSection,
+  datePublished,
+  ogImage,
+  citations = [],
+  homeSurfaceCards = false,
+} = Astro.props;
+
+const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
+
+const badgeClass = badge
+  ? ({
+      cyan: 't2-badge-cyan',
+      teal: 't2-badge-teal',
+      blue: 't2-badge-blue',
+      gray: 't2-badge-gray',
+    }[badge.color] ?? 't2-badge-gray')
+  : '';
+
+const breadcrumbLdItems = breadcrumbs
+  ? [
+      { name: 'Home', url: siteBase },
+      ...breadcrumbs.map((b) => ({
+        name: b.label,
+        url: b.href ? `${siteBase}${b.href.replace(/^\//, '')}` : `${siteBase}${Astro.url.pathname.replace(/^\//, '')}`,
+      })),
+    ]
+  : undefined;
+
+function parseCalendarDate(value?: string): Date | null {
+  if (!value) return null;
+  const text = String(value);
+  const dateOnly = /^(\d{4})-(\d{2})-(\d{2})$/.exec(text);
+  if (dateOnly) {
+    const [, year, month, day] = dateOnly;
+    return new Date(Number(year), Number(month) - 1, Number(day), 12);
+  }
+  return new Date(text);
+}
+
+const verifiedDate = parseCalendarDate(lastVerified);
+const verifiedIsValid = verifiedDate && !isNaN(verifiedDate.getTime());
+const verifiedLabel = verifiedIsValid
+  ? verifiedDate!.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })
+  : null;
+const verifiedIso = verifiedIsValid ? verifiedDate!.toISOString().split('T')[0] : null;
+function relativeDays(d: Date): string {
+  const now = new Date();
+  const today = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 12);
+  const target = new Date(d.getFullYear(), d.getMonth(), d.getDate(), 12);
+  const days = Math.round((today.getTime() - target.getTime()) / 86400000);
+  if (days < 0) return 'in the future';
+  if (days === 0) return 'today';
+  if (days === 1) return 'yesterday';
+  if (days < 7) return `${days} days ago`;
+  if (days < 30) return `${Math.round(days / 7)} weeks ago`;
+  if (days < 365) return `${Math.round(days / 30)} months ago`;
+  return `${Math.round(days / 365)} years ago`;
+}
+const verifiedRelative = verifiedIsValid ? relativeDays(verifiedDate!) : null;
+
+const todayAtNoon = (() => {
+  const now = new Date();
+  return new Date(now.getFullYear(), now.getMonth(), now.getDate(), 12);
+})();
+const verifiedDaysSince = verifiedIsValid
+  ? Math.max(0, Math.round((todayAtNoon.getTime() - new Date(verifiedDate!.getFullYear(), verifiedDate!.getMonth(), verifiedDate!.getDate(), 12).getTime()) / 86400000))
+  : Infinity;
+const verifiedIsFresh = verifiedIsValid && verifiedDaysSince <= 14;
+const verifiedIsRecent = verifiedIsValid && verifiedDaysSince > 14 && verifiedDaysSince <= 90;
+
+const tocHeadings = (headings ?? []).filter((h) => h.depth === 2).map((h) => ({ slug: h.slug, text: h.text }));
+---
+
+<BaseLayout
+  title={seoTitle ?? title}
+  description={description}
+  ogImage={ogImage}
+  ogType="article"
+  articlePublishedTime={(() => {
+    const v = datePublished ?? lastVerified;
+    if (!v) return undefined;
+    const d = new Date(String(v));
+    return isNaN(d.getTime()) ? String(v) : d.toISOString();
+  })()}
+  articleModifiedTime={(() => {
+    if (!lastVerified) return undefined;
+    const d = new Date(String(lastVerified));
+    return isNaN(d.getTime()) ? String(lastVerified) : d.toISOString();
+  })()}
+  articleSection={articleSection}
+>
+  {breadcrumbLdItems && <BreadcrumbLD items={breadcrumbLdItems} />}
+  <ArticleLD
+    headline={title}
+    description={description}
+    pageUrl={pageUrl}
+    datePublished={datePublished ?? lastVerified}
+    dateModified={lastVerified}
+    articleType={articleType}
+    articleSection={articleSection}
+    wordCount={readingMinutes ? Math.round(readingMinutes * 230) : undefined}
+    citations={citations}
+  />
+
+  
+  <div class:list={['t2-canvas', homeSurfaceCards && 'news-article-shell']}>
+    {breadcrumbs && <Breadcrumb items={breadcrumbs} />}
+
+    <!-- Editorial eyebrow -->
+    <div class="t2-eyebrow" data-pagefind-ignore>
+      {verifiedIsFresh && (
+        <span class="t2-eyebrow-chip t2-eyebrow-fresh">
+          <span class="t2-eyebrow-livedot" aria-hidden="true"></span>
+          Updated {verifiedLabel}
+        </span>
+      )}
+      {verifiedIsRecent && (
+        <span class="t2-eyebrow-chip">Updated {verifiedLabel}</span>
+      )}
+      {articleSection && <span class="t2-eyebrow-chip t2-eyebrow-accent">{articleSection}</span>}
+      {badge && <span class={`t2-article-badge ${badgeClass}`.trim()}>{badge.text}</span>}
+      <span class="t2-eyebrow-trust">Editorial only, no paid placements</span>
+    </div>
+
+    <header class="t2-article-hero" data-pagefind-ignore>
+      <div class="t2-article-title-row">
+        <h1 class="t2-title">{title}</h1>
+      </div>
+      <div class="t2-article-byline">
+        <span>By <span class="t2-article-author">aipedia.wiki Editorial</span></span>
+        {readingMinutes > 0 && (
+          <>
+            <span aria-hidden="true" class="t2-meta-dot">·</span>
+            <span>{readingMinutes} min read</span>
+          </>
+        )}
+        {metaExtra && (
+          <>
+            <span aria-hidden="true" class="t2-meta-dot">·</span>
+            <span>{metaExtra}</span>
+          </>
+        )}
+        {verifiedIsValid && verifiedRelative && (
+          <>
+            <span aria-hidden="true" class="t2-meta-dot">·</span>
+            <span>
+              <time datetime={verifiedIso!} title={`Verified ${verifiedLabel}`}>{verifiedRelative}</time>
+            </span>
+          </>
+        )}
+      </div>
+    </header>
+
+    <div class="t2-layout">
+      <article class="t2-prose">
+        <slot />
+
+        <FAQAccordionScript />
+        <ShareButtons title={title} pageUrl={pageUrl} />
+        <FeedbackForm toolName={title} />
+      </article>
+
+      {tocHeadings.length > 0 && (
+        <aside class:list={['t2-toc', homeSurfaceCards && 'home-surface-card']} aria-label="On this page">
+          <div class="t2-toc-label">On this page</div>
+          <ol class="t2-toc-list">
+            {tocHeadings.map((h) => (
+              <li><a href={`#${h.slug}`}>{h.text}</a></li>
+            ))}
+          </ol>
+        </aside>
+      )}
+    </div>
+  </div>
+</BaseLayout>

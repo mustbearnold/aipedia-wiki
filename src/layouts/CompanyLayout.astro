@@ -1,19 +1,20 @@
 ---
 /**
- * CompanyLayout - company profile pages. Redesigned April 23, 2026
- * into .t2-canvas.
+ * CompanyLayout — god-tier 10/10 mobile-first company profile (May 2026 onward).
+ *
+ * Hero shows company name + founding metadata; DecisionCard surfaces the
+ * flagship product CTA; key products render as a list.
+ *
+ * Legacy preserved at CompanyLayout.legacy.astro.
  */
 import BaseLayout from './BaseLayout.astro';
-import '../styles/t2-canvas.css';
-import ReadingProgress from '../components/ReadingProgress.astro';
+import Hero from '../components/godtier/Hero.astro';
+import DecisionCard from '../components/godtier/DecisionCard.astro';
 import BreadcrumbLD from '../components/seo/BreadcrumbLD.astro';
-import Breadcrumb from '../components/Breadcrumb.astro';
 import CompanyOrganizationLD from '../components/seo/CompanyOrganizationLD.astro';
 import ShareButtons from '../components/ShareButtons.astro';
 import FeedbackForm from '../components/FeedbackForm.astro';
-import ToolLogo from '../components/ToolLogo.astro';
 import CommercialCTA from '../components/CommercialCTA.astro';
-import { shortenPrice } from '../utils/shorten-price';
 
 interface ToolData {
   slug: string;
@@ -44,8 +45,8 @@ interface Props {
 
 const {
   title, seoTitle, description = '', slug, companyType,
-  founded, hq, funding, keyProducts = [], headings = [],
-  lastVerified, readingMinutes = 0,
+  founded, hq, funding, keyProducts = [],
+  lastVerified,
 } = Astro.props;
 
 const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
@@ -54,22 +55,25 @@ function overallScore(t: ToolData): number {
   const s = t.scores ?? {};
   return Math.round((((s.utility ?? 0) + (s.value ?? 0) + (s.moat ?? 0) + (s.longevity ?? 0)) / 4) * 10) / 10;
 }
-function ctaLabel(t: ToolData): string {
-  const model = (t.pricing_model ?? '').toLowerCase();
-  const price = (t.price_range ?? '').toLowerCase();
-  const modelFree = model === 'free' || model === 'freemium';
-  const priceFree = /\$0(?!\s*\(self|\s*\(self-host)/i.test(price) || /\bfree\b/i.test(price);
-  if (modelFree && priceFree) return `Try ${t.title} free`;
-  if (model === 'enterprise') return `Visit ${t.title}`;
-  return `Get ${t.title}`;
-}
-const typePill: Record<string, { cls: string; label: string }> = {
-  startup:  { cls: 't2-company-type-startup',  label: 'Startup' },
-  bigtech:  { cls: 't2-company-type-bigtech',  label: 'Big Tech' },
-  acquired: { cls: 't2-company-type-acquired', label: 'Acquired' },
-  dead:     { cls: 't2-company-type-dead',     label: 'Discontinued' },
+
+const sortedProducts = [...keyProducts].sort((a, b) => overallScore(b) - overallScore(a));
+const flagship = sortedProducts[0];
+const flagshipScore = flagship ? overallScore(flagship) : 0;
+const flagshipBand = flagshipScore >= 9
+  ? 'Top-tier'
+  : flagshipScore >= 8
+    ? 'Strong'
+    : flagshipScore >= 6.5
+      ? 'Useful'
+      : 'Niche';
+
+const typeLabel: Record<string, string> = {
+  startup:  'Startup',
+  bigtech:  'Big Tech',
+  acquired: 'Acquired',
+  dead:     'Discontinued',
 };
-const typeStyle = typePill[companyType] ?? typePill.startup;
+const companyTypeLabel = typeLabel[companyType] ?? 'Company';
 
 const breadcrumbLdItems = [
   { name: 'Home', url: siteBase },
@@ -78,120 +82,154 @@ const breadcrumbLdItems = [
 ];
 
 const verifiedDate = lastVerified ? new Date(lastVerified) : null;
-const verifiedLabel = verifiedDate && !isNaN(verifiedDate.getTime())
-  ? verifiedDate.toLocaleDateString('en-US', { month: 'short', year: 'numeric' })
-  : null;
 const verifiedRecently = verifiedDate && !isNaN(verifiedDate.getTime())
-  ? Math.floor((Date.now() - verifiedDate.getTime()) / 86400000) <= 60
+  ? Math.floor((Date.now() - verifiedDate.getTime()) / 86400000) <= 90
   : false;
+const monthShort = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const verifiedLabel = verifiedRecently && verifiedDate
+  ? `Verified ${monthShort[verifiedDate.getUTCMonth()]} ${verifiedDate.getUTCDate()}`
+  : undefined;
 
-const tocHeadings = (headings ?? []).filter((h) => h.depth === 2).map((h) => ({ slug: h.slug, text: h.text }));
+const metaBits = [
+  founded ? `Founded ${founded}` : null,
+  hq,
+  funding ? `${funding} raised` : null,
+].filter(Boolean);
+const tagline = metaBits.length > 0 ? metaBits.join(' · ') : description;
 ---
 
 <BaseLayout title={seoTitle ?? title} description={description}>
-  <ReadingProgress />
   <BreadcrumbLD items={breadcrumbLdItems} />
-  <CompanyOrganizationLD name={title} description={description} founded={founded} hq={hq} pageUrl={`${siteBase}companies/${slug}/`} />
+  <CompanyOrganizationLD
+    name={title}
+    description={description}
+    founded={founded}
+    hq={hq}
+    pageUrl={`${siteBase}companies/${slug}/`}
+  />
 
-  
-  <div class="t2-canvas">
-    <Breadcrumb
-      items={[
+  <div class="sr-only" data-pagefind-ignore>
+    <span data-pagefind-filter="Type">Company</span>
+    <span data-pagefind-filter="CompanyType">{companyTypeLabel}</span>
+  </div>
+
+  <div class="gt-canvas">
+    <Hero
+      title={title}
+      tagline={tagline}
+      breadcrumbs={[
+        { label: 'aipedia', href: '/' },
         { label: 'Companies', href: '/companies/' },
         { label: title },
       ]}
+      verifiedLabel={verifiedLabel}
+      rankLabel={companyTypeLabel}
     />
 
-    <!-- Editorial eyebrow -->
-    <div class="t2-eyebrow" data-pagefind-ignore>
-      {verifiedRecently && verifiedLabel && (
-        <span class="t2-eyebrow-chip t2-eyebrow-fresh">
-          <span class="t2-eyebrow-livedot" aria-hidden="true"></span>
-          Updated {verifiedLabel}
-        </span>
-      )}
-      {!verifiedRecently && verifiedLabel && (
-        <span class="t2-eyebrow-chip">Updated {verifiedLabel}</span>
-      )}
-      <span class={`t2-eyebrow-chip ${companyType === 'dead' || companyType === 'acquired' ? '' : 't2-eyebrow-accent'}`}>{typeStyle.label}</span>
-      <span class="t2-eyebrow-trust">Editorial only, no paid placements</span>
-    </div>
+    {flagship && (
+      <DecisionCard
+        scoreOverall={flagshipScore}
+        scoreBand={flagshipBand}
+        statusActive={companyType !== 'dead' && companyType !== 'acquired'}
+        statusLabel="Flagship"
+        price={flagship.price_range}
+      >
+        <CommercialCTA
+          slot="primary-cta"
+          toolName={flagship.title}
+          toolSlug={flagship.slug}
+          canonicalUrl={flagship.url ?? null}
+          affiliateUrl={flagship.affiliate?.link ?? null}
+          affiliateProgram={flagship.affiliate?.network ?? null}
+          pricingModel={flagship.pricing_model ?? null}
+          priceRange={flagship.price_range ?? null}
+          pageType="company"
+          placement="company_hero_primary"
+          pageSlug={slug}
+          className="gt-btn gt-btn-primary"
+          showDisclosure={false}
+          companyProductCtaMarker
+          arrow="→"
+        />
+        <a slot="secondary-cta" href={`/tools/${flagship.slug}/`} class="gt-btn gt-btn-secondary">Read {flagship.title} review</a>
+      </DecisionCard>
+    )}
 
-    <header class="t2-article-hero" data-pagefind-ignore>
-      <div class="t2-article-title-row">
-        <h1 class="t2-title">{title}</h1>
-      </div>
-      <div class="t2-article-byline">
-        {founded && (<><span>Founded {founded}</span></>)}
-        {hq && (<><span aria-hidden="true" class="t2-meta-dot">·</span><span>{hq}</span></>)}
-        {funding && (<><span aria-hidden="true" class="t2-meta-dot">·</span><span>{funding} raised</span></>)}
-        {readingMinutes > 0 && (<><span aria-hidden="true" class="t2-meta-dot">·</span><span>{readingMinutes} min read</span></>)}
-      </div>
-    </header>
+    {description && tagline !== description && (
+      <p class="gt-sub">{description}</p>
+    )}
 
-    {keyProducts.length > 0 && (
-      <section class="t2-company-products" aria-label="Products">
-        <p class="t2-verdict-heading">Products by {title}</p>
-        <div class="t2-company-products-grid">
-          {keyProducts.map((t) => {
+    {sortedProducts.length > 0 && (
+      <section class="gt-products" aria-labelledby="gt-products-h">
+        <h2 id="gt-products-h" class="gt-section-h">Products by {title}</h2>
+        <ol class="gt-product-list">
+          {sortedProducts.map((t) => {
             const score = overallScore(t);
-            const label = ctaLabel(t);
             return (
-              <div class="t2-company-product">
-                <a href={`/tools/${t.slug}/`} class="t2-company-product-title">
-                  <ToolLogo slug={t.slug} title={t.title} size={28} />
-                  <span>{t.title}</span>
-                  {score > 0 && (
-                    <span class="t2-company-product-score tabular-nums">
-                      {score}<span class="t2-company-product-score-slash">/10</span>
-                    </span>
-                  )}
+              <li class="gt-product-row">
+                <a href={`/tools/${t.slug}/`} class="gt-product-link">
+                  <div class="gt-product-main">
+                    <strong class="gt-product-title">{t.title}</strong>
+                    {t.tagline && <span class="gt-product-tagline">{t.tagline}</span>}
+                  </div>
+                  <div class="gt-product-meta">
+                    {t.price_range && <span class="gt-product-price">{t.price_range}</span>}
+                    {score > 0 && <span class="gt-product-score tabular-nums">{score}<span class="gt-product-score-slash">/10</span></span>}
+                  </div>
                 </a>
-                {t.tagline && <div class="t2-company-product-tagline">{t.tagline}</div>}
-                <div class="t2-company-product-meta">
-                  {t.price_range && <span class="t2-company-product-price" title={t.price_range}>{shortenPrice(t.price_range)}</span>}
-                  <CommercialCTA
-                    toolName={t.title}
-                    toolSlug={t.slug}
-                    canonicalUrl={t.url}
-                    affiliateUrl={t.affiliate?.link}
-                    affiliateProgram={t.affiliate?.network}
-                    label={label}
-                    pricingModel={t.pricing_model}
-                    priceRange={t.price_range}
-                    pageType="company"
-                    placement="company_product_card"
-                    pageSlug={slug}
-                    categorySlug={t.category}
-                    className="t2-company-product-cta"
-                    arrow="→"
-                    companyProductCtaMarker
-                  />
-                </div>
-              </div>
+              </li>
             );
           })}
-        </div>
+        </ol>
       </section>
     )}
 
-    <div class="t2-layout">
-      <article class="t2-prose">
-        <slot />
-        <ShareButtons title={title} pageUrl={`${siteBase}companies/${slug}/`} />
-        <FeedbackForm toolName={title} />
-      </article>
+    <article class="gt-body">
+      <slot />
+    </article>
 
-      {tocHeadings.length > 0 && (
-        <aside class="t2-toc" aria-label="On this page">
-          <div class="t2-toc-label">On this page</div>
-          <ol class="t2-toc-list">
-            {tocHeadings.map((h) => (
-              <li><a href={`#${h.slug}`}>{h.text}</a></li>
-            ))}
-          </ol>
-        </aside>
-      )}
-    </div>
+    <ShareButtons title={title} pageUrl={`${siteBase}companies/${slug}/`} />
+    <FeedbackForm toolName={title} />
   </div>
+
+  <style>
+    .gt-products { margin-bottom: 40px; }
+    .gt-product-list {
+      list-style: none; padding: 0; margin: 0;
+      display: flex; flex-direction: column; gap: 8px;
+    }
+    .gt-product-row {
+      border-radius: var(--gt-radius-sm);
+      border: 1px solid var(--gt-line);
+      background: var(--gt-surface);
+    }
+    .gt-product-link {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 14px;
+      padding: 14px;
+      text-decoration: none;
+      color: var(--gt-fg);
+      min-height: 60px;
+    }
+    .gt-product-main { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+    .gt-product-title { font-size: 15px; font-weight: 600; }
+    .gt-product-tagline { font-size: 12.5px; color: var(--gt-muted); line-height: 1.4; }
+    .gt-product-meta {
+      display: flex; flex-direction: column; align-items: flex-end; gap: 2px;
+    }
+    .gt-product-price { font-size: 11px; color: var(--gt-subtle); white-space: nowrap; }
+    .gt-product-score { font-size: 16px; font-weight: 700; }
+    .gt-product-score-slash { font-size: 11px; color: var(--gt-subtle); font-weight: 500; }
+
+    .gt-body { margin-bottom: 40px; }
+    .gt-body :global(h2) {
+      font-size: 22px; font-weight: 700; letter-spacing: -0.01em;
+      margin: 36px 0 14px;
+    }
+    .gt-body :global(p),
+    .gt-body :global(li) { font-size: var(--gt-text-prose); line-height: 1.65; }
+    .gt-body :global(a) { color: var(--gt-accent); border-bottom: 1px solid currentColor; text-decoration: none; }
+  </style>
 </BaseLayout>

@@ -1,0 +1,718 @@
+/* ============================================================
+ * God-tier design tokens (May 2026 onward)
+ *
+ * Mobile-first design system tokens used across all redesigned
+ * layouts. Variables are prefixed --gt-* to avoid collision with
+ * the existing site tokens (--text-primary, --bg-card, etc.).
+ *
+ * Imported globally via BaseLayout; declared on :root so any
+ * component or page can consume them without an outer wrapper.
+ *
+ * Light-mode overrides live on .light below.
+ * ============================================================ */
+
+:root {
+  /* Foreground colors — fall through to site tokens, then explicit
+     defaults so a missing token never produces black-on-black. */
+  --gt-fg: var(--text-primary, #f5f5f5);
+  --gt-muted: var(--text-secondary, #c9c9c9);
+  --gt-subtle: var(--text-muted, #8a8a8a);
+
+  /* Surfaces */
+  --gt-line: var(--border, rgba(255, 255, 255, 0.10));
+  --gt-line-strong: rgba(255, 255, 255, 0.18);
+  --gt-surface: rgba(255, 255, 255, 0.035);
+  --gt-surface-2: rgba(255, 255, 255, 0.08);
+
+  /* Accents */
+  --gt-accent: #f97316;
+  --gt-accent-hover: #ea6810;
+  --gt-positive: #34d399;
+  --gt-positive-rgb: 52, 211, 153;
+  --gt-negative: #fb7185;
+  --gt-negative-rgb: 251, 113, 133;
+  --gt-warn: #fbbf24;
+
+  /* Radii */
+  --gt-radius: 14px;
+  --gt-radius-sm: 10px;
+  --gt-radius-pill: 999px;
+
+  /* Type scale */
+  --gt-text-meta: 12px;
+  --gt-text-pill: 11px;
+  --gt-text-body: 16px;
+  --gt-text-prose: 17px;
+  --gt-text-tagline: 17px;
+  --gt-text-section-h: 12px;
+
+  /* Touch targets */
+  --gt-tap-target: 48px;
+  --gt-tap-target-sm: 44px;
+
+  /* Spacing rhythm */
+  --gt-stack-xs: 10px;
+  --gt-stack-sm: 18px;
+  --gt-stack-md: 24px;
+  --gt-stack-lg: 40px;
+  --gt-stack-xl: 56px;
+
+  /* Canvas */
+  --gt-canvas-max: 680px;
+  --gt-canvas-pad-x: 18px;
+  --gt-canvas-pad-y: 16px;
+  --gt-canvas-pad-bottom-mobile: 120px;
+}
+
+.light {
+  --gt-line: rgba(0, 0, 0, 0.10);
+  --gt-line-strong: rgba(0, 0, 0, 0.18);
+  --gt-surface: rgba(0, 0, 0, 0.025);
+  --gt-surface-2: rgba(0, 0, 0, 0.06);
+}
+
+/* Canvas helper — pages opt in by wrapping content in .gt-canvas. */
+.gt-canvas {
+  max-width: var(--gt-canvas-max);
+  margin: 0 auto;
+  padding: var(--gt-canvas-pad-y) var(--gt-canvas-pad-x) var(--gt-canvas-pad-bottom-mobile);
+  color: var(--gt-fg);
+  font-size: var(--gt-text-body);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (min-width: 600px) {
+  .gt-canvas {
+    padding: 32px 24px 40px;
+  }
+}
+
+@media (min-width: 900px) {
+  .gt-canvas {
+    padding-top: 40px;
+  }
+}
+
+/* Live verification dot — used in hero meta strips site-wide. */
+.gt-livedot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gt-positive);
+  box-shadow: 0 0 0 0 rgba(var(--gt-positive-rgb), 0.55);
+  animation: gt-pulse 2.4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+@keyframes gt-pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(var(--gt-positive-rgb), 0.55); }
+  70%  { box-shadow: 0 0 0 6px rgba(var(--gt-positive-rgb), 0); }
+  100% { box-shadow: 0 0 0 0 rgba(var(--gt-positive-rgb), 0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .gt-livedot { animation: none; }
+}
+
+/* Decision grid — tone-coded 3-up card list. Used by Decision component
+   and any page that wants the same "Buy if / Pick / Skip if" pattern. */
+.gt-decision-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px;
+}
+.gt-decision-card {
+  padding: 14px 16px;
+  border-radius: var(--gt-radius-sm);
+  border: 1px solid var(--gt-line);
+  background: var(--gt-surface);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.gt-decision-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--gt-subtle);
+}
+.gt-decision-positive { border-left: 3px solid var(--gt-positive); }
+.gt-decision-positive .gt-decision-label { color: var(--gt-positive); }
+.gt-decision-negative { border-left: 3px solid var(--gt-negative); }
+.gt-decision-negative .gt-decision-label { color: var(--gt-negative); }
+.gt-decision-neutral { border-left: 3px solid var(--gt-warn); }
+.gt-decision-neutral .gt-decision-label { color: var(--gt-warn); }
+.gt-decision-value {
+  font-size: 15px;
+  line-height: 1.45;
+  color: var(--gt-fg);
+  font-weight: 500;
+}
+@media (min-width: 600px) {
+  .gt-decision-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* Subtagline / lead paragraph that follows the decision card. */
+.gt-sub {
+  font-size: 15px;
+  color: var(--gt-muted);
+  margin: 0 0 24px;
+  line-height: 1.6;
+}
+
+/* Anchor scroll offset so deep-links don't slip under sticky headers. */
+.gt-canvas :is(h1, h2, h3, h4, h5, h6)[id],
+.gt-canvas [id]:target {
+  scroll-margin-top: 80px;
+}
+
+/* Global prose rhythm — applied to anything that sits inside .gt-body.
+   Prevents the "wall of text" problem: caps measure for readability,
+   adds breathing room between paragraphs, balances long lines.
+
+   `text-wrap: pretty` (CSS Text Level 4, widely shipped 2026) ensures
+   paragraphs never end with one orphan word on a line. `text-wrap: balance`
+   on headings prevents an awkward ragged last line. */
+.gt-body { max-width: 68ch; }
+.gt-body > p,
+.gt-body > ul,
+.gt-body > ol,
+.gt-body > blockquote,
+.gt-body > details {
+  margin-block: 0 0 1.15em 0;
+}
+.gt-body > p {
+  margin-bottom: 1.15em;
+  text-wrap: pretty;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  hyphenate-limit-chars: 8 4 4;
+}
+.gt-body > p:last-child { margin-bottom: 0; }
+.gt-body > ul > li,
+.gt-body > ol > li {
+  margin-bottom: 0.55em;
+  text-wrap: pretty;
+}
+.gt-body > ul > li:last-child,
+.gt-body > ol > li:last-child { margin-bottom: 0; }
+.gt-body > h2,
+.gt-body > h3 {
+  line-height: 1.2;
+  text-wrap: balance;
+}
+.gt-body > h1 { text-wrap: balance; }
+/* Tighten consecutive lists / cards so they read as a group, not a wall. */
+.gt-body > ul + p,
+.gt-body > ol + p { margin-top: 0.4em; }
+/* Pull the first paragraph after a heading slightly tighter. */
+.gt-body > h2 + p,
+.gt-body > h3 + p { margin-top: 0.4em; }
+
+/* Strip residual footnote ref styles in case the remark plugin sees
+   legacy `<sup class="fn-ref">` markup in cached MDX. */
+.gt-body sup.fn-ref { display: none; }
+
+/* ============================================================
+   Body-section card treatments. May 2026 onward we visually
+   distinguish recurring editorial sections so the body doesn't read
+   as a wall of prose. CSS-only — no content changes — uses
+   attribute selectors on the heading IDs that the markdown parser
+   already generates.
+
+   Patterns:
+   - "Where {Tool} Wins"       → green tone-coded card list
+   - "Where {Tool} Loses"      → red tone-coded card list
+   - "When to pick {Tool}"     → green tone-coded card list
+   - "When to pick something else" / "When not to" → red tone-coded card list
+   - "Who should choose {Tool}" → neutral recommendation card (paragraph)
+   - "Quick Answer" / "Bottom Line" / "The Call" / "TL;DR" → lead callout
+   - "Key Differences" / "Decision Snapshot" → subtle section panel
+   ============================================================ */
+
+/* Lead callout — Quick Answer / Bottom Line / TL;DR / similar */
+.gt-body > h2[id="quick-answer"] + p,
+.gt-body > h2[id="bottom-line"] + p,
+.gt-body > h2[id="tldr"] + p,
+.gt-body > h2[id="the-call"] + p,
+.gt-body > h2[id="quick-verdict"] + p,
+.gt-body > h2[id="decision-snapshot"] + p,
+.gt-body > h2[id="winner-by-use-case"] + p,
+.gt-body > h2[id="trust-notes"] + p,
+.gt-body > h2[id^="why-"][id$="-is-not-a-current-choice"] + p {
+  margin-top: 12px;
+  padding: 18px 20px;
+  border-radius: var(--gt-radius);
+  border: 1px solid var(--gt-line-strong);
+  background: linear-gradient(180deg, var(--gt-surface-2), var(--gt-surface));
+  border-left: 3px solid var(--gt-accent);
+  font-size: 17px;
+  line-height: 1.55;
+  font-weight: 500;
+  text-wrap: pretty;
+}
+/* Red-accent variant for "why this tool is not a current choice" — same
+   callout box but the accent bar is the negative tone. */
+.gt-body > h2[id^="why-"][id$="-is-not-a-current-choice"] + p {
+  border-left-color: var(--gt-negative);
+}
+
+/* Tone-coded card-list treatment for "Where X Wins / When to pick"
+   bullet lists. Each <li> becomes a card with a left tone bar. */
+.gt-body > h2[id^="where-"] + ul,
+.gt-body > h2[id^="when-to-pick-"]:not([id="when-to-pick-something-else"]) + ul,
+.gt-body > h2[id="when-to-pick-it"] + ul,
+.gt-body > h2[id="when-to-pick"] + ul {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 24px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+.gt-body > h2[id^="where-"] + ul > li,
+.gt-body > h2[id^="when-to-pick-"]:not([id="when-to-pick-something-else"]) + ul > li,
+.gt-body > h2[id="when-to-pick-it"] + ul > li,
+.gt-body > h2[id="when-to-pick"] + ul > li {
+  margin: 0;
+  padding: 14px 16px;
+  border-radius: var(--gt-radius-sm);
+  border: 1px solid var(--gt-line);
+  background: var(--gt-surface);
+  border-left: 3px solid var(--gt-positive);
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+/* "Where X Loses" / "When not to" / "When to pick something else" — negative tone */
+.gt-body > h2[id^="where-"][id*="-loses"] + ul,
+.gt-body > h2[id="when-to-pick-something-else"] + ul,
+.gt-body > h2[id="when-not-to"] + ul,
+.gt-body > h2[id="when-not-to-pick"] + ul,
+.gt-body > h2[id="when-not"] + ul {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 24px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+.gt-body > h2[id^="where-"][id*="-loses"] + ul > li,
+.gt-body > h2[id="when-to-pick-something-else"] + ul > li,
+.gt-body > h2[id="when-not-to"] + ul > li,
+.gt-body > h2[id="when-not-to-pick"] + ul > li,
+.gt-body > h2[id="when-not"] + ul > li {
+  margin: 0;
+  padding: 14px 16px;
+  border-radius: var(--gt-radius-sm);
+  border: 1px solid var(--gt-line);
+  background: var(--gt-surface);
+  border-left: 3px solid var(--gt-negative);
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+/* "Who should choose X" / "Which should you buy" — paragraph rendered
+   as a recommendation card. */
+.gt-body > h2[id^="who-should-choose"] + p,
+.gt-body > h2[id="which-should-you-buy"] + p,
+.gt-body > h2[id="which-should-you-pick"] + p,
+.gt-body > h2[id="who-wins"] + p {
+  margin-top: 12px;
+  padding: 14px 16px;
+  border-radius: var(--gt-radius-sm);
+  border: 1px solid var(--gt-line);
+  background: var(--gt-surface);
+  border-left: 3px solid var(--gt-accent);
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+/* "Key Differences" / "Decision Matrix" / "Workflow Fit" / pricing /
+   notes-style sections — softer panel treatment for pure-prose sections
+   that should still feel like a distinct beat. Also applies to a
+   following <ul> when the section is a bullet list. */
+.gt-body > h2[id="key-differences"] + p,
+.gt-body > h2[id="decision-matrix"] + p,
+.gt-body > h2[id="workflow-fit"] + p,
+.gt-body > h2[id="practical-workflow"] + p,
+.gt-body > h2[id="best-workflow"] + p,
+.gt-body > h2[id="best-choice-by-user-type"] + p,
+.gt-body > h2[id="evaluation-notes"] + p,
+.gt-body > h2[id="current-product-signals"] + p,
+.gt-body > h2[id^="pricing-and-"] + p,
+.gt-body > h2[id="pricing-and-limits"] + p,
+.gt-body > h2[id="pricing-reality"] + p,
+.gt-body > h2[id="pricing-and-procurement"] + p,
+.gt-body > h2[id="pricing-and-plan-guidance"] + p,
+.gt-body > h2[id="pricing-and-access-guidance"] + p,
+.gt-body > h2[id="key-differences"] + ul,
+.gt-body > h2[id="decision-matrix"] + ul,
+.gt-body > h2[id="workflow-fit"] + ul,
+.gt-body > h2[id="practical-workflow"] + ul,
+.gt-body > h2[id="best-workflow"] + ul,
+.gt-body > h2[id="best-choice-by-user-type"] + ul,
+.gt-body > h2[id="evaluation-notes"] + ul,
+.gt-body > h2[id="current-product-signals"] + ul,
+.gt-body > h2[id^="pricing-and-"] + ul,
+.gt-body > h2[id="pricing-and-limits"] + ul,
+.gt-body > h2[id="pricing-reality"] + ul,
+.gt-body > h2[id="pricing-and-procurement"] + ul,
+.gt-body > h2[id="pricing-and-plan-guidance"] + ul,
+.gt-body > h2[id="pricing-and-access-guidance"] + ul {
+  margin-top: 12px;
+  padding: 16px 18px;
+  border-radius: var(--gt-radius-sm);
+  background: var(--gt-surface);
+  border: 1px solid var(--gt-line);
+}
+.gt-body > h2[id="key-differences"] + ul,
+.gt-body > h2[id="decision-matrix"] + ul,
+.gt-body > h2[id="workflow-fit"] + ul,
+.gt-body > h2[id="practical-workflow"] + ul,
+.gt-body > h2[id="best-workflow"] + ul,
+.gt-body > h2[id="best-choice-by-user-type"] + ul,
+.gt-body > h2[id="evaluation-notes"] + ul,
+.gt-body > h2[id="current-product-signals"] + ul,
+.gt-body > h2[id^="pricing-and-"] + ul,
+.gt-body > h2[id="pricing-and-limits"] + ul,
+.gt-body > h2[id="pricing-reality"] + ul,
+.gt-body > h2[id="pricing-and-procurement"] + ul,
+.gt-body > h2[id="pricing-and-plan-guidance"] + ul,
+.gt-body > h2[id="pricing-and-access-guidance"] + ul {
+  padding-left: 36px;
+}
+
+/* "Watchouts" / "Watch-Outs" / "What To Avoid" / "Common Mistakes" →
+   red-tone-coded card grid (warnings). */
+.gt-body > h2[id="watchouts"] + ul,
+.gt-body > h2[id="watch-outs"] + ul,
+.gt-body > h2[id="what-to-avoid"] + ul,
+.gt-body > h2[id="common-mistakes"] + ul,
+.gt-body > h2[id="failure-modes"] + ul {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 24px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+.gt-body > h2[id="watchouts"] + ul > li,
+.gt-body > h2[id="watch-outs"] + ul > li,
+.gt-body > h2[id="what-to-avoid"] + ul > li,
+.gt-body > h2[id="common-mistakes"] + ul > li,
+.gt-body > h2[id="failure-modes"] + ul > li {
+  margin: 0;
+  padding: 14px 16px;
+  border-radius: var(--gt-radius-sm);
+  border: 1px solid var(--gt-line);
+  background: var(--gt-surface);
+  border-left: 3px solid var(--gt-negative);
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+/* "What To Test Before Buying" / "Buying Checklist" / "Buyer
+   Recommendations" → orange-accent recommendation card grid. */
+.gt-body > h2[id="what-to-test-before-buying"] + ul,
+.gt-body > h2[id="buying-checklist"] + ul,
+.gt-body > h2[id="buyer-recommendations"] + ul {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 24px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+.gt-body > h2[id="what-to-test-before-buying"] + ul > li,
+.gt-body > h2[id="buying-checklist"] + ul > li,
+.gt-body > h2[id="buyer-recommendations"] + ul > li {
+  margin: 0;
+  padding: 14px 16px;
+  border-radius: var(--gt-radius-sm);
+  border: 1px solid var(--gt-line);
+  background: var(--gt-surface);
+  border-left: 3px solid var(--gt-accent);
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+/* Multi-column grids on wider viewports so the card lists read as
+   side-by-side beats, not vertically endless. */
+@media (min-width: 700px) {
+  .gt-body > h2[id^="where-"] + ul,
+  .gt-body > h2[id^="when-to-pick-"]:not([id="when-to-pick-something-else"]) + ul,
+  .gt-body > h2[id="when-to-pick-it"] + ul,
+  .gt-body > h2[id="when-to-pick"] + ul,
+  .gt-body > h2[id^="where-"][id*="-loses"] + ul,
+  .gt-body > h2[id="when-to-pick-something-else"] + ul,
+  .gt-body > h2[id="when-not-to"] + ul,
+  .gt-body > h2[id="when-not-to-pick"] + ul,
+  .gt-body > h2[id="when-not"] + ul,
+  .gt-body > h2[id="watchouts"] + ul,
+  .gt-body > h2[id="watch-outs"] + ul,
+  .gt-body > h2[id="what-to-avoid"] + ul,
+  .gt-body > h2[id="common-mistakes"] + ul,
+  .gt-body > h2[id="failure-modes"] + ul,
+  .gt-body > h2[id="what-to-test-before-buying"] + ul,
+  .gt-body > h2[id="buying-checklist"] + ul,
+  .gt-body > h2[id="buyer-recommendations"] + ul {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+}
+
+/* Inside body card-lists, strip default <li> margin-bottom so spacing
+   is controlled by the grid gap instead. */
+.gt-body > h2[id^="where-"] + ul > li,
+.gt-body > h2[id^="when-to-pick-"]:not([id="when-to-pick-something-else"]) + ul > li,
+.gt-body > h2[id="when-to-pick-it"] + ul > li,
+.gt-body > h2[id="when-to-pick"] + ul > li,
+.gt-body > h2[id^="where-"][id*="-loses"] + ul > li,
+.gt-body > h2[id="when-to-pick-something-else"] + ul > li,
+.gt-body > h2[id="when-not-to"] + ul > li,
+.gt-body > h2[id="when-not-to-pick"] + ul > li,
+.gt-body > h2[id="when-not"] + ul > li,
+.gt-body > h2[id="watchouts"] + ul > li,
+.gt-body > h2[id="watch-outs"] + ul > li,
+.gt-body > h2[id="what-to-avoid"] + ul > li,
+.gt-body > h2[id="common-mistakes"] + ul > li,
+.gt-body > h2[id="failure-modes"] + ul > li,
+.gt-body > h2[id="what-to-test-before-buying"] + ul > li,
+.gt-body > h2[id="buying-checklist"] + ul > li,
+.gt-body > h2[id="buyer-recommendations"] + ul > li { margin-bottom: 0; }
+
+/* ============================================================
+   Collapsible body sections — built at build time by
+   src/plugins/rehype-collapse-sections.mjs. Style globally so the
+   accordion looks identical on every layout (tool / comparison /
+   guide / company / article-plus).
+   ============================================================ */
+.gt-body details.gt-section-collapse {
+  border: none;
+  background: transparent;
+  padding: 0;
+  margin: 36px 0 0;
+  border-top: 1px solid var(--gt-line);
+  border-radius: 0;
+}
+.gt-body details.gt-section-collapse > summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 24px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  transition: color 120ms ease;
+}
+.gt-body details.gt-section-collapse > summary::-webkit-details-marker {
+  display: none;
+}
+.gt-body details.gt-section-collapse > summary::after {
+  content: 'Show';
+  flex: 0 0 auto;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--gt-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(249, 115, 22, 0.3);
+  background: rgba(249, 115, 22, 0.08);
+  transition: background 120ms ease, color 120ms ease;
+}
+.gt-body details.gt-section-collapse[open] > summary::after {
+  content: 'Hide';
+  background: var(--gt-surface-2);
+  color: var(--gt-muted);
+  border-color: var(--gt-line-strong);
+}
+.gt-body details.gt-section-collapse > summary:hover::after {
+  background: rgba(249, 115, 22, 0.16);
+}
+.gt-body details.gt-section-collapse[open] > summary:hover::after {
+  background: var(--gt-line-strong);
+}
+.gt-body .gt-section-collapse-heading {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.014em;
+  color: var(--gt-fg);
+  line-height: 1.2;
+  display: block;
+  flex: 1 1 auto;
+  margin: 0;
+}
+/* Cancel any heading border-top inside collapsed sections so we
+   don't get a doubled divider. */
+.gt-body details.gt-section-collapse h2,
+.gt-body details.gt-section-collapse .gt-section-collapse-heading {
+  border-top: none;
+  padding-top: 0;
+  margin-top: 0;
+}
+.gt-body details.gt-section-collapse > *:not(summary) {
+  margin-top: 18px;
+}
+
+/* Section heading shared across all god-tier components. */
+.gt-section-h {
+  font-size: var(--gt-text-section-h);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--gt-subtle);
+  margin: 0 0 14px;
+}
+
+/* Visually hidden but accessible (screen-reader only). */
+.gt-sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Shared search input pattern — pill-shaped with leading icon and
+   optional trailing submit / kbd hint. */
+.gt-search { margin-bottom: 16px; }
+.gt-search-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 6px 6px 14px;
+  border-radius: var(--gt-radius);
+  border: 1px solid var(--gt-line-strong);
+  background: var(--gt-surface);
+  transition: border-color 120ms ease, background 120ms ease;
+}
+.gt-search-row:focus-within {
+  border-color: var(--gt-accent);
+  background: var(--gt-surface-2);
+}
+.gt-search-icon { color: var(--gt-subtle); flex: 0 0 auto; }
+.gt-search input {
+  flex: 1;
+  min-width: 0;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--gt-fg);
+  font-size: 16px;
+  padding: 12px 6px;
+}
+.gt-search input::placeholder { color: var(--gt-subtle); }
+.gt-search-submit {
+  flex: 0 0 auto;
+  padding: 10px 16px;
+  min-height: 40px;
+  border-radius: var(--gt-radius-sm);
+  background: var(--gt-accent);
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+}
+.gt-search-submit:hover { background: var(--gt-accent-hover); }
+.gt-kbd {
+  flex: 0 0 auto;
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: var(--gt-surface-2);
+  border: 1px solid var(--gt-line);
+  color: var(--gt-muted);
+  font-size: 11px;
+  font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+}
+@media (max-width: 599px) {
+  .gt-kbd { display: none; }
+}
+
+/* Horizontal scrollable chip strip — used for filters, popular terms,
+   alphabetical jumps, jump-to-section pills. */
+.gt-chips {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  margin-bottom: 16px;
+}
+.gt-chips::-webkit-scrollbar { display: none; }
+.gt-chip {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  min-height: 36px;
+  border-radius: 999px;
+  background: var(--gt-surface);
+  border: 1px solid var(--gt-line);
+  color: var(--gt-muted);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  text-decoration: none;
+  transition: background 120ms ease, color 120ms ease, border-color 120ms ease;
+}
+.gt-chip:hover { background: var(--gt-surface-2); color: var(--gt-fg); }
+.gt-chip.is-active {
+  background: var(--gt-accent);
+  color: #fff;
+  border-color: var(--gt-accent);
+}
+.gt-chip span {
+  font-size: 11px;
+  opacity: 0.75;
+  font-variant-numeric: tabular-nums;
+}
+/* Compact letter chip for alphabet jumps. */
+.gt-chip-letter {
+  min-width: 36px;
+  justify-content: center;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Shared button system. ≥48px touch target by default. */
+.gt-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: var(--gt-tap-target);
+  padding: 12px 18px;
+  border-radius: var(--gt-radius-sm);
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 120ms ease, background 120ms ease, opacity 120ms ease;
+  width: 100%;
+  box-sizing: border-box;
+  cursor: pointer;
+  border: none;
+}
+.gt-btn-primary {
+  background: var(--gt-accent);
+  color: #fff;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1), 0 6px 16px -8px rgba(249, 115, 22, 0.6);
+}
+.gt-btn-primary:hover { background: var(--gt-accent-hover); }
+.gt-btn-primary:active { transform: translateY(1px); }
+.gt-btn-secondary {
+  background: transparent;
+  color: var(--gt-fg);
+  border: 1px solid var(--gt-line-strong);
+}
+.gt-btn-secondary:active { background: var(--gt-surface-2); }

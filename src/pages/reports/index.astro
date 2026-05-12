@@ -1,111 +1,128 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import Breadcrumb from '../../components/Breadcrumb.astro';
-import EmailCapture from '../../components/EmailCapture.astro';
+/**
+ * /reports/ index — god-tier 10/10 mobile-first.
+ */
 import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/godtier/Hero.astro';
+import BreadcrumbLD from '../../components/seo/BreadcrumbLD.astro';
+import EmailCapture from '../../components/EmailCapture.astro';
 
 const entries = await getCollection('reports');
 const allTools = await getCollection('tools');
 const toolCount = allTools.length;
 
-function toYmd(v: unknown): string {
-  if (!v) return '';
-  if (v instanceof Date) return isNaN(v.getTime()) ? '' : v.toISOString().slice(0, 10);
-  const s = String(v);
-  const d = new Date(s);
-  return isNaN(d.getTime()) ? s : d.toISOString().slice(0, 10);
-}
-
 function formatMonth(slug: string): string {
   const m = slug.match(/^(\d{4})-(\d{2})$/);
   if (!m) return slug;
-  const month = new Date(`${slug}-01T12:00:00Z`).toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
-  return month;
+  return new Date(`${slug}-01T12:00:00Z`).toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
 }
 
 const sorted = entries
-  .map(e => ({
+  .map((e: any) => ({
     slug: e.data.slug || e.id.replace(/\.md$/, ''),
     title: e.data.title,
     description: e.data.meta_description || e.data.description || '',
-    lastUpdated: toYmd(e.data.last_updated),
     monthLabel: formatMonth(e.data.slug || e.id.replace(/\.md$/, '')),
   }))
-  .sort((a, b) => (b.slug || '').localeCompare(a.slug || ''));
+  .sort((a: any, b: any) => (b.slug || '').localeCompare(a.slug || ''));
 
-const hasSingleReport = sorted.length === 1;
+const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
 ---
 
 <BaseLayout
-  title="State of AI Tools — Monthly Reports — aipedia.wiki"
-  description={`Monthly editorial reports covering what changed across ${toolCount} tracked AI tools. New launches, score movements, pricing shifts, deaths, and what to watch next.`}
+  title="Monthly AI Tool Reports · aipedia.wiki"
+  description={`Monthly editorial reports across ${toolCount} tracked AI tools. New launches, score movements, pricing shifts, deaths.`}
 >
-  <Breadcrumb items={[{ label: 'Reports' }]} />
+  <BreadcrumbLD items={[
+    { name: 'Home', url: new URL('/', siteBase).href },
+    { name: 'Reports', url: new URL('/reports/', siteBase).href },
+  ]} />
 
-  <section class="idx-hero" data-pagefind-ignore>
-    <div class="idx-eyebrow">
-      <span class="idx-eyebrow-chip idx-eyebrow-accent">Report archive</span>
-      <span class="idx-eyebrow-chip"><span class="tabular-nums">{sorted.length}</span> report{sorted.length === 1 ? '' : 's'}</span>
-      <span class="idx-eyebrow-trust">Editorial only. Sources reviewed before publication.</span>
-    </div>
-    <h1 class="idx-headline">
-      Monthly <span class="idx-gradient">field reports</span>.
-    </h1>
-    <p class="idx-subhead">
-      Long-form summaries of score movement, launches, pricing changes, and market watchlists across the tracked catalog.
-    </p>
-  </section>
+  <div class="sr-only" data-pagefind-ignore>
+    <span data-pagefind-filter="Type">ReportIndex</span>
+  </div>
 
-  {sorted.length === 0 && (
-    <div class="bg-[var(--bg-card)] border border-[var(--border)] rounded-[var(--site-radius-card)] p-[var(--site-card-padding)] text-sm text-[var(--text-muted)]">
-      The first report publishes in April 2026. Subscribe below to get it in your inbox.
-    </div>
-  )}
+  <div class="gt-canvas">
+    <Hero
+      title="Monthly field reports"
+      tagline="Long-form summaries of score movement, launches, pricing changes, and market watchlists across the tracked catalog."
+      breadcrumbs={[
+        { label: 'aipedia', href: '/' },
+        { label: 'Reports' },
+      ]}
+      rankLabel={`${sorted.length} report${sorted.length === 1 ? '' : 's'}`}
+    />
 
-  {hasSingleReport ? (
-    <section class="mb-[var(--site-page-bottom)]">
-      {sorted.map((r) => (
-        <a
-          href={`/reports/${r.slug}/`}
-          class="group grid gap-[var(--site-content-gap)] md:grid-cols-[minmax(0,0.38fr)_minmax(0,1fr)] rounded-[var(--site-radius-card)] border border-[var(--border)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] hover:border-[rgba(249,115,22,0.45)] p-[var(--site-card-padding)] no-underline transition-colors"
-        >
-          <div>
-            <div class="text-[11px] font-semibold uppercase tracking-[0.12em] text-[var(--accent-primary)] mb-2">
-              Featured report
-            </div>
-            <div class="text-sm text-[var(--text-muted)]">{r.monthLabel}</div>
-          </div>
-          <div>
-            <h2 class="text-xl font-bold text-[var(--text-primary)] group-hover:text-[var(--accent-primary)] mb-2 transition-colors">
-              {r.title}
-            </h2>
-            <p class="text-sm leading-relaxed text-[var(--text-secondary)] m-0">
-              {r.description}
-            </p>
-          </div>
-        </a>
-      ))}
-    </section>
-  ) : (
-    <section class="grid grid-cols-1 md:grid-cols-2 gap-[var(--site-grid-gap)] mb-[var(--site-page-bottom)]">
-      {sorted.map((r) => (
-      <a
-        href={`/reports/${r.slug}/`}
-        class="group block rounded-[var(--site-radius-card)] border border-[var(--border)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] hover:border-[rgba(249,115,22,0.45)] p-[var(--site-card-padding)] no-underline transition-colors"
-      >
-        <div class="text-[11px] font-semibold uppercase tracking-[0.12em] text-[var(--accent-primary)] mb-2">
-          {r.monthLabel}
-        </div>
-        <h2 class="text-[17px] font-bold text-[var(--text-primary)] group-hover:text-[var(--accent-primary)] mb-2 transition-colors">
-          {r.title}
-        </h2>
-        <p class="text-[13.5px] leading-relaxed text-[var(--text-secondary)] m-0">
-          {r.description}
-        </p>
-      </a>
-      ))}
-    </section>
-  )}
+    {sorted.length === 0 && (
+      <p class="gt-empty">
+        The first report publishes in April 2026. Subscribe below to get it in your inbox.
+      </p>
+    )}
 
-  <EmailCapture variant="footer" source="reports-index" />
+    {sorted.length > 0 && (
+      <section class="gt-reports">
+        <ol class="gt-report-cards">
+          {sorted.map((r: any) => (
+            <li class="gt-report-card">
+              <a href={`/reports/${r.slug}/`}>
+                <span class="gt-report-month">{r.monthLabel}</span>
+                <strong class="gt-report-title">{r.title}</strong>
+                {r.description && <p class="gt-report-desc">{r.description}</p>}
+              </a>
+            </li>
+          ))}
+        </ol>
+      </section>
+    )}
+
+    <EmailCapture variant="footer" source="reports-index" />
+  </div>
+
+  <style>
+    .gt-empty {
+      padding: 24px; border-radius: var(--gt-radius);
+      border: 1px solid var(--gt-line);
+      background: var(--gt-surface);
+      color: var(--gt-muted);
+      font-size: 14px;
+      margin-bottom: 24px;
+    }
+    .gt-reports { margin-bottom: 40px; }
+    .gt-report-cards {
+      list-style: none; padding: 0; margin: 0;
+      display: grid; grid-template-columns: 1fr; gap: 10px;
+    }
+    .gt-report-card {
+      border-radius: var(--gt-radius-sm);
+      border: 1px solid var(--gt-line);
+      background: var(--gt-surface);
+    }
+    .gt-report-card:hover { background: var(--gt-surface-2); border-color: var(--gt-line-strong); }
+    .gt-report-card a {
+      display: flex; flex-direction: column; gap: 6px;
+      padding: 16px;
+      text-decoration: none;
+      color: var(--gt-fg);
+      min-height: 90px;
+    }
+    .gt-report-month {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--gt-accent);
+    }
+    .gt-report-title { font-size: 16px; font-weight: 700; line-height: 1.35; }
+    .gt-report-desc {
+      margin: 0; font-size: 13px; line-height: 1.5; color: var(--gt-muted);
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    @media (min-width: 600px) {
+      .gt-report-cards { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    }
+  </style>
 </BaseLayout>

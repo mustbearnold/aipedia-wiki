@@ -1,19 +1,20 @@
 ---
 /**
- * ComparisonLayout - head-to-head comparison pages, redesigned April 23,
- * 2026 to match the .t2-canvas system.
+ * ComparisonLayout — god-tier 10/10 mobile-first comparison page.
+ *
+ * Hero shows the comparison title; DecisionCard surfaces the winner with
+ * its primary CTA; the markdown body renders the editorial comparison.
+ *
+ * Legacy preserved at ComparisonLayout.legacy.astro.
  */
 import BaseLayout from './BaseLayout.astro';
-import '../styles/t2-canvas.css';
-import '../styles/compare-home-cards.css';
+import Hero from '../components/godtier/Hero.astro';
+import DecisionCard from '../components/godtier/DecisionCard.astro';
 import BreadcrumbLD from '../components/seo/BreadcrumbLD.astro';
-import Breadcrumb from '../components/Breadcrumb.astro';
-import ItemListLD from '../components/seo/ItemListLD.astro';
 import ArticleLD from '../components/seo/ArticleLD.astro';
 import ShareButtons from '../components/ShareButtons.astro';
 import FAQAccordionScript from '../components/FAQAccordionScript.astro';
 import FeedbackForm from '../components/FeedbackForm.astro';
-import ToolLogo from '../components/ToolLogo.astro';
 import ComparisonFactTable from '../components/comparison/ComparisonFactTable.astro';
 import CommercialCTA from '../components/CommercialCTA.astro';
 
@@ -27,40 +28,16 @@ interface ToolData {
   pricing_model?: string;
   status?: string;
   affiliate?: { link?: string | null; network?: string | null } | null;
-  scores?: {
-    utility?: number;
-    value?: number;
-    moat?: number;
-    longevity?: number;
-  };
-  facts?: Record<string, {
-    value?: string;
-    source?: string;
-    source_label?: string;
-    verified_at?: string | Date;
-    note?: string;
-    status?: string;
-  } | string | undefined>;
+  scores?: { utility?: number; value?: number; moat?: number; longevity?: number };
+  facts?: Record<string, any>;
   best_for?: string[];
   not_best_for?: string[];
   tags?: string[];
   tagline?: string;
 }
 
-interface NewsSignal {
-  slug: string;
-  title: string;
-  date?: string;
-  severity?: string;
-  summary?: string;
-}
-
-interface RelatedComparison {
-  slug: string;
-  title: string;
-  description?: string;
-  sharedToolNames?: string[];
-}
+interface NewsSignal { slug: string; title: string; date?: string; severity?: string; summary?: string; }
+interface RelatedComparison { slug: string; title: string; description?: string; sharedToolNames?: string[]; }
 
 interface Props {
   title: string;
@@ -83,12 +60,8 @@ const {
   description = '',
   slug,
   tools,
-  headings = [],
   winner,
   lastVerified,
-  readingMinutes = 0,
-  relatedNews = [],
-  relatedComparisons = [],
   canonicalFactTable = false,
 } = Astro.props;
 
@@ -96,656 +69,253 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
 
 function overallScore(t: ToolData): number {
   const s = t.scores ?? {};
-  const u = s.utility ?? 0;
-  const v = s.value ?? 0;
-  const m = s.moat ?? 0;
-  const l = s.longevity ?? 0;
+  const u = s.utility ?? 0, v = s.value ?? 0, m = s.moat ?? 0, l = s.longevity ?? 0;
   return Math.round(((u + v + m + l) / 4) * 10) / 10;
 }
 
-function ctaLabel(t: ToolData): string {
-  const model = (t.pricing_model ?? '').toLowerCase();
-  const price = (t.price_range ?? '').toLowerCase();
-  const modelFree = model === 'free' || model === 'freemium';
-  const priceFree = /\$0(?!\s*\(self|\s*\(self-host)/i.test(price) || /\bfree\b/i.test(price);
-  if (modelFree && priceFree) return `Try ${t.title} free`;
-  if (model === 'enterprise') return `Visit ${t.title}`;
-  return `Get ${t.title}`;
-}
-
-function axisValue(t: ToolData, axis: 'utility' | 'value' | 'moat' | 'longevity'): number {
-  return t.scores?.[axis] ?? 0;
-}
-
-function scoreLabel(score: number): string {
-  return score > 0 ? `${score}/10` : 'unscored';
-}
-
-function formatNewsDate(date?: string): string {
-  if (!date) return 'recent';
-  const d = new Date(date);
-  if (Number.isNaN(d.getTime())) return date;
-  return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
-}
-
-function factValue(t: ToolData, key: string): string {
-  const fact = t.facts?.[key];
-  if (!fact) return '';
-  if (typeof fact === 'string') return fact.trim();
-  return String(fact.value ?? '').trim();
-}
-
-function compactList(values: Array<string | undefined>, limit: number): string[] {
-  return values
-    .map((value) => String(value ?? '').trim())
-    .filter(Boolean)
-    .slice(0, limit);
-}
-
-function compactText(value: string, limit = 96): string {
-  const cleaned = String(value ?? '').replace(/\s+/g, ' ').trim();
-  if (cleaned.length <= limit) return cleaned;
-  return `${cleaned.slice(0, limit - 1).replace(/\s+\S*$/, '')}...`;
-}
-
-function buyerBestFor(t: ToolData): string[] {
-  const listed = compactList(t.best_for ?? [], 3);
-  if (listed.length > 0) return listed;
-  return compactList([factValue(t, 'best_for')], 1);
-}
-
-function buyerWatchOuts(t: ToolData): string[] {
-  const listed = compactList(t.not_best_for ?? [], 2);
-  if (listed.length > 0) return listed;
-  return compactList([factValue(t, 'watch_out_for')], 1);
-}
-
-function pricingSignal(t: ToolData): string {
-  const bestTier = factValue(t, 'best_paid_tier');
-  if (bestTier && t.price_range) return `${t.price_range}. Best paid tier: ${bestTier}`;
-  if (bestTier) return `Best paid tier: ${bestTier}`;
-  if (t.price_range) return t.price_range;
-  if (t.pricing_model) return t.pricing_model.replace('-', ' ');
-  return '';
-}
-
-function minMonthlyPrice(t: ToolData): number | null {
-  const model = (t.pricing_model ?? '').toLowerCase();
-  const range = (t.price_range ?? '').toLowerCase();
-  if (model === 'free' || model === 'freemium' || /\bfree\b|\$0(?!\s*\(self|\s*\(self-host)/i.test(range)) return 0;
-  const prices = [...range.matchAll(/\$(\d+(?:\.\d+)?)/g)].map((match) => Number(match[1]));
-  const valid = prices.filter((price) => Number.isFinite(price));
-  if (valid.length === 0) return null;
-  return Math.min(...valid);
-}
-
-function budgetToolFor(list: ToolData[]): ToolData | null {
-  const priced = list
-    .map((tool) => ({ tool, price: minMonthlyPrice(tool), value: axisValue(tool, 'value') }))
-    .filter((item): item is { tool: ToolData; price: number; value: number } => item.price != null)
-    .sort((a, b) => {
-      if (a.price !== b.price) return a.price - b.price;
-      return b.value - a.value;
-    });
-  return priced[0]?.tool ?? null;
-}
+const winnerTool = winner ? tools.find((t) => t.slug === winner) : undefined;
+const fallbackWinner = !winnerTool && tools.length > 0
+  ? [...tools].sort((a, b) => overallScore(b) - overallScore(a))[0]
+  : undefined;
+const featured = winnerTool ?? fallbackWinner;
+const featuredScore = featured ? overallScore(featured) : 0;
+const featuredBand = featuredScore >= 9
+  ? 'Top-tier'
+  : featuredScore >= 8
+    ? 'Strong'
+    : featuredScore >= 6.5
+      ? 'Useful'
+      : 'Niche';
 
 const breadcrumbLdItems = [
   { name: 'Home', url: siteBase },
-  { name: 'Compare', url: `${siteBase}compare/` },
+  { name: 'Comparisons', url: `${siteBase}compare/` },
   { name: title, url: `${siteBase}compare/${slug}/` },
 ];
 
 const verifiedDate = lastVerified ? new Date(lastVerified) : null;
-const verifiedLabel =
-  verifiedDate && !isNaN(verifiedDate.getTime())
-    ? verifiedDate.toLocaleDateString('en-US', { month: 'short', year: 'numeric' })
-    : null;
-const verifiedExactLabel =
-  verifiedDate && !isNaN(verifiedDate.getTime())
-    ? verifiedDate.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })
-    : null;
+const verifiedRecently = verifiedDate && !isNaN(verifiedDate.getTime())
+  ? Math.floor((Date.now() - verifiedDate.getTime()) / 86400000) <= 90
+  : false;
+const monthShort = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const verifiedLabel = verifiedRecently && verifiedDate
+  ? `Verified ${monthShort[verifiedDate.getUTCMonth()]} ${verifiedDate.getUTCDate()}`
+  : undefined;
 
-const itemListItems = tools
-  .filter((t) => t)
-  .map((t) => ({
-    name: t.title,
-    slug: t.slug,
-    category: t.category,
-    score: overallScore(t) || undefined,
-    status: t.status,
-  }));
-
-const winningTool = winner && winner !== 'depends' ? tools.find((t) => t.slug === winner) : null;
-const scoredTools = tools
-  .map((t) => ({ tool: t, score: overallScore(t) }))
-  .filter((x) => x.score > 0)
-  .sort((a, b) => b.score - a.score);
-const scoreLeader = winningTool ?? scoredTools[0]?.tool ?? null;
-const topScore = scoredTools[0]?.score ?? 0;
-const secondScore = scoredTools[1]?.score ?? 0;
-const scoreSpread = topScore && secondScore ? Math.round((topScore - secondScore) * 10) / 10 : 0;
-const verdictLabel =
-  winningTool
-    ? `${winningTool.title} leads`
-    : winner === 'depends'
-      ? 'Split decision'
-      : scoreLeader
-        ? `${scoreLeader.title} has the score edge`
-        : 'Decision brief';
-const verdictCopy =
-  winningTool
-    ? `${winningTool.title} is the editorial pick for this head-to-head, but the fit still depends on workflow, price, and current product momentum.`
-    : winner === 'depends'
-      ? 'There is no universal winner. Use the score spread, price signals, and latest product changes below before choosing.'
-      : scoreLeader
-        ? `${scoreLeader.title} leads the current scorecard by ${scoreSpread > 0 ? `${scoreSpread} points` : 'a narrow margin'}. Read the detailed tradeoffs before treating that as a blanket answer.`
-        : 'Use the scorecard, recent changes, and editorial notes below to decide which tool fits the job.';
-const axisRows = tools.length === 2
-  ? [
-      { key: 'utility', label: 'Utility' },
-      { key: 'value', label: 'Value' },
-      { key: 'moat', label: 'Moat' },
-      { key: 'longevity', label: 'Longevity' },
-    ].map((axis) => ({
-      ...axis,
-      left: axisValue(tools[0], axis.key as 'utility' | 'value' | 'moat' | 'longevity'),
-      right: axisValue(tools[1], axis.key as 'utility' | 'value' | 'moat' | 'longevity'),
-    }))
-  : [];
-
-const buyerGuides = tools
-  .map((tool) => ({
-    tool,
-    bestFor: buyerBestFor(tool),
-    watchOuts: buyerWatchOuts(tool),
-    pricing: pricingSignal(tool),
-  }))
-  .filter(({ tool, bestFor, watchOuts, pricing }) => tool.tagline || bestFor.length > 0 || watchOuts.length > 0 || pricing);
-
-const useCaseWinnerRows = (() => {
-  const rows: Array<{ label: string; tool: ToolData; reason: string; kind: string }> = [];
-  const seen = new Set<string>();
-
-  function add(label: string, tool: ToolData | null | undefined, reason: string, kind: string) {
-    if (!tool) return;
-    const cleanLabel = compactText(label, 56);
-    const cleanReason = compactText(reason, 112);
-    if (!cleanLabel || !cleanReason) return;
-    const key = `${kind}:${cleanLabel.toLowerCase()}:${tool.slug}`;
-    if (seen.has(key)) return;
-    seen.add(key);
-    rows.push({ label: cleanLabel, tool, reason: cleanReason, kind });
-  }
-
-  if (scoreLeader) {
-    add(
-      winner === 'depends' ? 'Most people' : 'Editorial pick',
-      scoreLeader,
-      winner === 'depends'
-        ? `${scoreLeader.title} has the strongest current score signal; check the fit rows before treating that as universal.`
-        : `${scoreLeader.title} is the named editorial winner for this comparison.`,
-      'primary',
-    );
-  }
-
-  const budgetTool = budgetToolFor(tools);
-  if (budgetTool) {
-    const price = pricingSignal(budgetTool);
-    add('Budget or free tier', budgetTool, price || `${budgetTool.title} has the clearest entry path in the current data.`, 'budget');
-  }
-
-  for (const tool of tools) {
-    const bestFor = buyerBestFor(tool);
-    for (const item of bestFor.slice(0, tools.length === 2 ? 2 : 1)) {
-      add(item, tool, tool.tagline || pricingSignal(tool) || `${tool.title} is the better fit for this workflow.`, 'fit');
-    }
-  }
-
-  return rows.slice(0, 5);
-})();
-
-// Build TOC headings (markdown H2s only, we don't add synthetic entries here)
-const tocHeadings = (headings ?? []).filter((h) => h.depth === 2).map((h) => ({ slug: h.slug, text: h.text }));
+const rankLabel = featured ? `Winner: ${featured.title}` : undefined;
 ---
 
-<BaseLayout title={seoTitle ?? title} description={description}>
+<BaseLayout
+  title={seoTitle ?? title}
+  description={description}
+>
   <BreadcrumbLD items={breadcrumbLdItems} />
-  {itemListItems.length > 0 && (
-    <ItemListLD name={title} description={description} items={itemListItems} siteBase={siteBase} />
-  )}
   <ArticleLD
     headline={title}
     description={description}
+    datePublished={lastVerified ? String(lastVerified) : undefined}
+    dateModified={lastVerified ? String(lastVerified) : undefined}
     pageUrl={`${siteBase}compare/${slug}/`}
-    datePublished={lastVerified}
-    dateModified={lastVerified}
-    articleType="Article"
-    articleSection="Tool Comparison"
-    about={tools.map((t) => t.title)}
   />
 
   <div class="sr-only" data-pagefind-ignore>
     <span data-pagefind-filter="Type">Comparison</span>
     {tools.map((t) => <span data-pagefind-filter="Tool">{t.title}</span>)}
-    {winningTool && <span data-pagefind-filter="Editorial Pick">{winningTool.title}</span>}
   </div>
 
-  
-    <div class="t2-canvas comparison-detail-page" data-home-page>
-    <Breadcrumb
-      items={[
+  <div class="gt-canvas">
+    <Hero
+      title={title}
+      tagline={description}
+      breadcrumbs={[
+        { label: 'aipedia', href: '/' },
         { label: 'Compare', href: '/compare/' },
         { label: title },
       ]}
+      verifiedLabel={verifiedLabel}
+      rankLabel={rankLabel}
     />
 
-    <!-- Hero -->
-    <header class="t2-cmp-hero" data-pagefind-ignore>
-      <h1 class="t2-title">{title}</h1>
-      <div class="t2-cmp-hero-meta">
-        <span>By <span class="t2-cmp-hero-author">aipedia.wiki Editorial</span></span>
-        {readingMinutes > 0 && (
-          <>
-            <span aria-hidden="true" class="t2-meta-dot">·</span>
-            <span>{readingMinutes} min read</span>
-          </>
-        )}
-        {verifiedLabel && (
-          <>
-            <span aria-hidden="true" class="t2-meta-dot">·</span>
-            <span>
-              <span class="t2-cat-verified-tick" aria-hidden="true">✓</span>
-              Verified {verifiedLabel}
-            </span>
-          </>
-        )}
-        {winningTool && (
-          <>
-            <span aria-hidden="true" class="t2-meta-dot">·</span>
-            <span class="t2-cmp-winner-chip">
-              <span class="t2-cmp-winner-star" aria-hidden="true">★</span>
-              Editorial pick: {winningTool.title}
-            </span>
-          </>
-        )}
-      </div>
-    </header>
-
-    {(scoreLeader || useCaseWinnerRows.length > 0) && (
-      <section class="t2-cmp-decision-hero" aria-labelledby="comparison-decision-heading">
-        <div class="t2-cmp-decision-panel">
-          <div class="t2-cmp-decision-trust" aria-label="Editorial trust signals">
-            {verifiedExactLabel && <span>Verified {verifiedExactLabel}</span>}
-            <span>No paid ranking</span>
-            <span>Source-backed comparison</span>
-          </div>
-          <div class="t2-cmp-brief-kicker">Decision first</div>
-          <h2 id="comparison-decision-heading">{verdictLabel}</h2>
-          <p>{verdictCopy}</p>
-          <div class="t2-cmp-decision-actions">
-            {scoreLeader && (
-              <CommercialCTA
-                toolName={scoreLeader.title}
-                toolSlug={scoreLeader.slug}
-                canonicalUrl={scoreLeader.url}
-                affiliateUrl={scoreLeader.affiliate?.link}
-                affiliateProgram={scoreLeader.affiliate?.network}
-                label={ctaLabel(scoreLeader)}
-                pricingModel={scoreLeader.pricing_model}
-                priceRange={scoreLeader.price_range}
-                pageType="comparison"
-                placement="comparison_hero_winner"
-                pageSlug={slug}
-                categorySlug={scoreLeader.category}
-                comparisonPair={tools.map((tool) => tool.slug).join('_vs_')}
-                className="t2-cta t2-cta-primary t2-cmp-decision-cta"
-                wrapperClass="commercial-cta-stack t2-cmp-decision-cta-wrap"
-                disclosureClass="commercial-cta-disclosure t2-cmp-decision-disclosure"
-                compareCtaMarker
-              />
-            )}
-            <a href="#full-comparison" class="t2-cta t2-cta-secondary t2-cmp-decision-secondary">
-              See full comparison
-              <span class="t2-cta-arrow" aria-hidden="true">↓</span>
-            </a>
-          </div>
-        </div>
-
-        {useCaseWinnerRows.length > 0 && (
-          <div class="t2-cmp-decision-usecases" aria-label="Winner by use case">
-            <div class="t2-cmp-brief-kicker">Winner by use case</div>
-            <div class="t2-cmp-decision-usecase-list">
-              {useCaseWinnerRows.slice(0, 3).map(({ label, tool, reason, kind }) => (
-                <a
-                  href={kind === 'primary' ? '#full-comparison' : `/tools/${tool.slug}/`}
-                  class={`t2-cmp-decision-usecase ${kind === 'primary' ? 'is-primary' : ''}`.trim()}
-                >
-                  <span class="t2-cmp-decision-usecase-label">{label}</span>
-                  <strong>
-                    <ToolLogo slug={tool.slug} title={tool.title} size={26} />
-                    <span>{tool.title}</span>
-                  </strong>
-                  <span>{reason}</span>
-                </a>
-              ))}
-            </div>
-          </div>
-        )}
-      </section>
+    {featured && (
+      <DecisionCard
+        scoreOverall={featuredScore}
+        scoreBand={featuredBand}
+        statusActive={true}
+        statusLabel="Winner"
+        price={featured.price_range}
+      >
+        <CommercialCTA
+          slot="primary-cta"
+          toolName={featured.title}
+          toolSlug={featured.slug}
+          canonicalUrl={featured.url ?? null}
+          affiliateUrl={featured.affiliate?.link ?? null}
+          affiliateProgram={featured.affiliate?.network ?? null}
+          pricingModel={featured.pricing_model ?? null}
+          priceRange={featured.price_range ?? null}
+          pageType="comparison"
+          placement="comparison_hero_primary"
+          pageSlug={slug}
+          comparisonPair={tools.map((t) => t.slug).join(',')}
+          className="gt-btn gt-btn-primary"
+          showDisclosure={false}
+          compareCtaMarker
+          arrow="→"
+        />
+        <a slot="secondary-cta" href={`/tools/${featured.slug}/`} class="gt-btn gt-btn-secondary">Read {featured.title} review</a>
+      </DecisionCard>
     )}
 
-    <!-- Versus banner: dual-logo comparison context after the decision-first module. -->
-    {tools.length === 2 && (
-      <div class="t2-vs-banner" data-pagefind-ignore>
-        <div class="t2-vs-side">
-          <a href={`/tools/${tools[0].slug}/`} class="t2-vs-logo">
-            <ToolLogo slug={tools[0].slug} title={tools[0].title} size={72} />
-          </a>
-          <span class="t2-vs-name">{tools[0].title}</span>
-          {overallScore(tools[0]) > 0 && (
-            <span class="t2-vs-score tabular-nums">{overallScore(tools[0])}<span class="t2-vs-score-slash">/10</span></span>
-          )}
-        </div>
-        <div class="t2-vs-divider" aria-hidden="true">
-          <span class="t2-vs-label">VS</span>
-        </div>
-        <div class="t2-vs-side">
-          <a href={`/tools/${tools[1].slug}/`} class="t2-vs-logo">
-            <ToolLogo slug={tools[1].slug} title={tools[1].title} size={72} />
-          </a>
-          <span class="t2-vs-name">{tools[1].title}</span>
-          {overallScore(tools[1]) > 0 && (
-            <span class="t2-vs-score tabular-nums">{overallScore(tools[1])}<span class="t2-vs-score-slash">/10</span></span>
-          )}
-        </div>
-      </div>
-    )}
-
-    <!-- Tool cards compared -->
-    <section class="t2-cmp-cards" aria-label="Tools compared">
-      {tools.map((t) => {
-        const score = overallScore(t);
-        const winBadge = winningTool?.slug === t.slug;
-        const label = ctaLabel(t);
-        return (
-          <div class={`t2-cmp-card ${winBadge ? 't2-cmp-card-winner' : ''}`.trim()}>
-            {winBadge && <div class="t2-cmp-card-badge">Editorial pick</div>}
-            <div class="t2-cmp-card-top">
-              <a href={`/tools/${t.slug}/`} class="t2-cmp-card-title">
-                <ToolLogo slug={t.slug} title={t.title} size={42} />
-                <span>{t.title}</span>
-              </a>
-              {score > 0 && (
-                <span class="t2-cmp-card-score tabular-nums">
-                  {score}<span class="t2-cmp-card-score-slash">/10</span>
-                </span>
-              )}
-            </div>
-            {t.price_range && (
-              <div class="t2-cmp-card-price">{t.price_range}</div>
-            )}
-            <CommercialCTA
-              toolName={t.title}
-              toolSlug={t.slug}
-              canonicalUrl={t.url}
-              affiliateUrl={t.affiliate?.link}
-              affiliateProgram={t.affiliate?.network}
-              label={label}
-              pricingModel={t.pricing_model}
-              priceRange={t.price_range}
-              pageType="comparison"
-              placement={winBadge ? 'comparison_winner_card' : 'comparison_tool_card'}
-              pageSlug={slug}
-              categorySlug={t.category}
-              comparisonPair={tools.map((tool) => tool.slug).join('_vs_')}
-              className="t2-cta t2-cta-primary t2-cmp-card-cta"
-              compareCtaMarker
-            />
-          </div>
-        );
-      })}
-    </section>
-
-    {useCaseWinnerRows.length > 0 && (
-      <section class="t2-cmp-usecase" aria-labelledby="winner-by-use-case">
-        <div class="t2-cmp-usecase-head">
-          <div>
-            <div class="t2-cmp-brief-kicker">Winner by use case</div>
-            <h2 id="winner-by-use-case">Choose faster</h2>
-          </div>
-          <a href="#full-comparison" class="t2-cmp-brief-link t2-cmp-usecase-skip">
-            See full comparison
-            <span aria-hidden="true">→</span>
-          </a>
-        </div>
-        <div class="t2-cmp-usecase-grid">
-          {useCaseWinnerRows.map(({ label, tool, reason, kind }) => (
-            <article class={`t2-cmp-usecase-card ${kind === 'primary' ? 'is-primary' : ''}`.trim()}>
-              <span class="t2-cmp-usecase-label">{label}</span>
-              <a href={`/tools/${tool.slug}/`} class="t2-cmp-usecase-tool">
-                <ToolLogo slug={tool.slug} title={tool.title} size={34} />
-                <span>{tool.title}</span>
-              </a>
-              <p>{reason}</p>
-              {kind === 'primary' ? (
-                <CommercialCTA
-                  toolName={tool.title}
-                  toolSlug={tool.slug}
-                  canonicalUrl={tool.url}
-                  affiliateUrl={tool.affiliate?.link}
-                  affiliateProgram={tool.affiliate?.network}
-                  label={ctaLabel(tool)}
-                  pricingModel={tool.pricing_model}
-                  priceRange={tool.price_range}
-                  pageType="comparison"
-                  placement="comparison_use_case_winner"
-                  pageSlug={slug}
-                  categorySlug={tool.category}
-                  comparisonPair={tools.map((comparedTool) => comparedTool.slug).join('_vs_')}
-                  className="t2-cta t2-cta-primary t2-cmp-usecase-cta"
-                  wrapperClass="commercial-cta-stack t2-cmp-usecase-cta-wrap"
-                  disclosureClass="commercial-cta-disclosure t2-cmp-usecase-disclosure"
-                  compareCtaMarker
-                />
-              ) : (
-                <a href={`/tools/${tool.slug}/`} class="t2-cmp-usecase-link">
-                  Review {tool.title}
-                  <span aria-hidden="true">→</span>
-                </a>
-              )}
-            </article>
-          ))}
-        </div>
-      </section>
-    )}
-
-    <section class="t2-cmp-brief" aria-label="Decision brief">
-      <div class="t2-cmp-brief-panel t2-cmp-brief-verdict">
-        <div class="t2-cmp-brief-kicker">Verdict</div>
-        <h2>{verdictLabel}</h2>
-        <p>{verdictCopy}</p>
-        {scoreLeader && (
-          <a href={`/tools/${scoreLeader.slug}/`} class="t2-cmp-brief-link">
-            Open {scoreLeader.title} review
-            <span aria-hidden="true">→</span>
-          </a>
-        )}
-      </div>
-
-      {tools.length === 2 && (
-        <div class="t2-cmp-brief-panel t2-cmp-axis-panel">
-          <div class="t2-cmp-brief-kicker">Score race</div>
-          <div class="t2-cmp-axis-tools">
-            <span>{tools[0].title}</span>
-            <span>{tools[1].title}</span>
-          </div>
-          <div class="t2-cmp-axis-list">
-            {axisRows.map((row) => {
-              const leftPct = Math.max(0, Math.min(100, row.left * 10));
-              const rightPct = Math.max(0, Math.min(100, row.right * 10));
-              const leftWins = row.left >= row.right;
-              const rightWins = row.right >= row.left;
-              return (
-                <div class="t2-cmp-axis-row">
-                  <div class={`t2-cmp-axis-score ${leftWins ? 'is-leading' : ''}`}>{scoreLabel(row.left)}</div>
-                  <div class="t2-cmp-axis-mid">
-                    <span>{row.label}</span>
-                    <div class="t2-cmp-axis-bars" aria-hidden="true">
-                      <i style={`width: ${leftPct}%`}></i>
-                      <b style={`width: ${rightPct}%`}></b>
-                    </div>
-                  </div>
-                  <div class={`t2-cmp-axis-score ${rightWins ? 'is-leading' : ''}`}>{scoreLabel(row.right)}</div>
+    <section class="gt-compare-tools" aria-labelledby="gt-compare-h">
+      <h2 id="gt-compare-h" class="gt-section-h">The contenders</h2>
+      <ol class="gt-compare-list">
+        {tools.map((t) => {
+          const score = overallScore(t);
+          const isFeatured = featured && t.slug === featured.slug;
+          return (
+            <li class={`gt-compare-row ${isFeatured ? 'is-featured' : ''}`}>
+              <a href={`/tools/${t.slug}/`} class="gt-compare-link">
+                <div class="gt-compare-main">
+                  <strong class="gt-compare-title">{t.title}{isFeatured && <span class="gt-compare-badge">Winner</span>}</strong>
+                  {t.tagline && <span class="gt-compare-tagline">{t.tagline}</span>}
                 </div>
-              );
-            })}
-          </div>
-        </div>
-      )}
-
-      <div class="t2-cmp-brief-panel t2-cmp-news-panel">
-        <div class="t2-cmp-brief-kicker">Latest signals</div>
-        {relatedNews.length > 0 ? (
-          <ol class="t2-cmp-news-list">
-            {relatedNews.slice(0, 3).map((n) => (
-              <li>
-                <a href={`/news/${n.slug}/`}>
-                  <span class="t2-cmp-news-date">{formatNewsDate(n.date)}</span>
-                  <span>{n.title}</span>
-                </a>
-              </li>
-            ))}
-          </ol>
-        ) : (
-          <p>No recent news update is attached to these tools yet.</p>
-        )}
-      </div>
+                <div class="gt-compare-meta">
+                  {t.price_range && <span class="gt-compare-price">{t.price_range}</span>}
+                  {score > 0 && <span class="gt-compare-score tabular-nums">{score}<span class="gt-compare-score-slash">/10</span></span>}
+                </div>
+              </a>
+            </li>
+          );
+        })}
+      </ol>
     </section>
 
-    {buyerGuides.length > 0 && (
-      <section class="t2-cmp-brief" aria-label="Buyer fit guide">
-        {buyerGuides.map(({ tool, bestFor, watchOuts, pricing }) => (
-          <div class="t2-cmp-brief-panel">
-            <div class="t2-cmp-brief-kicker">Buyer fit</div>
-            <h2>Choose {tool.title} when</h2>
-            <ol class="t2-cmp-news-list">
-              {tool.tagline && (
-                <li>
-                  <a href={`/tools/${tool.slug}/`}>
-                    <span class="t2-cmp-news-date">Role</span>
-                    <span>{tool.tagline}</span>
-                  </a>
-                </li>
-              )}
-              {bestFor.map((item) => (
-                <li>
-                  <a href={`/tools/${tool.slug}/`}>
-                    <span class="t2-cmp-news-date">Pick</span>
-                    <span>{item}</span>
-                  </a>
-                </li>
-              ))}
-              {pricing && (
-                <li>
-                  <a href={`/tools/${tool.slug}/`}>
-                    <span class="t2-cmp-news-date">Price</span>
-                    <span>{pricing}</span>
-                  </a>
-                </li>
-              )}
-              {watchOuts.map((item) => (
-                <li>
-                  <a href={`/tools/${tool.slug}/`}>
-                    <span class="t2-cmp-news-date">Skip</span>
-                    <span>{item}</span>
-                  </a>
-                </li>
-              ))}
-            </ol>
-            <a href={`/tools/${tool.slug}/`} class="t2-cmp-brief-link">
-              Read the full {tool.title} review
-              <span aria-hidden="true">→</span>
-            </a>
-          </div>
-        ))}
+    {canonicalFactTable && tools.length >= 2 && (
+      <section class="gt-compare-table">
+        <h2 class="gt-section-h">Head to head</h2>
+        <ComparisonFactTable tools={tools} />
       </section>
     )}
 
-    {relatedComparisons.length > 0 && (
-      <section class="t2-cmp-brief" aria-label="Related comparisons">
-        <div class="t2-cmp-brief-panel">
-          <div class="t2-cmp-brief-kicker">Related comparisons</div>
-          <h2>More decisions involving these tools</h2>
-          <ol class="t2-cmp-news-list">
-            {relatedComparisons.map((comparison) => (
-              <li>
-                <a href={`/compare/${comparison.slug}/`}>
-                  <span class="t2-cmp-news-date">
-                    {comparison.sharedToolNames && comparison.sharedToolNames.length > 0
-                      ? comparison.sharedToolNames.join(' + ')
-                      : 'Compare'}
-                  </span>
-                  <span>{comparison.title}</span>
-                </a>
-              </li>
-            ))}
-          </ol>
-        </div>
+    <article class="gt-body">
+      <slot />
+    </article>
 
-        <div class="t2-cmp-brief-panel">
-          <div class="t2-cmp-brief-kicker">Source reviews</div>
-          <h2>Check the canonical tool pages</h2>
-          <ol class="t2-cmp-news-list">
-            {tools.slice(0, 4).map((tool) => (
-              <li>
-                <a href={`/tools/${tool.slug}/`}>
-                  <span class="t2-cmp-news-date">{tool.category ?? 'Tool'}</span>
-                  <span>{tool.title} review</span>
-                </a>
-              </li>
-            ))}
-          </ol>
-        </div>
-      </section>
-    )}
+    <FAQAccordionScript />
+    <ShareButtons title={title} pageUrl={`${siteBase}compare/${slug}/`} />
+    <FeedbackForm toolName={title} />
+  </div>
 
-    {canonicalFactTable && <ComparisonFactTable tools={tools} />}
+  <style>
+    .gt-compare-tools { margin-bottom: 40px; }
+    .gt-compare-list {
+      list-style: none; padding: 0; margin: 0;
+      display: flex; flex-direction: column; gap: 8px;
+    }
+    .gt-compare-row {
+      border-radius: var(--gt-radius-sm);
+      border: 1px solid var(--gt-line);
+      background: var(--gt-surface);
+      transition: background 120ms ease;
+    }
+    .gt-compare-row.is-featured {
+      border-color: var(--gt-positive);
+      background: rgba(var(--gt-positive-rgb), 0.06);
+    }
+    .gt-compare-row:hover { background: var(--gt-surface-2); }
+    .gt-compare-link {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 10px;
+      padding: 14px;
+      text-decoration: none;
+      color: var(--gt-fg);
+      min-height: 60px;
+    }
+    .gt-compare-main { min-width: 0; display: flex; flex-direction: column; gap: 4px; }
+    .gt-compare-title { font-size: 15px; font-weight: 600; }
+    .gt-compare-badge {
+      display: inline-block;
+      margin-left: 8px;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: var(--gt-positive);
+      color: #0a0a0a;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      vertical-align: middle;
+    }
+    .gt-compare-tagline { font-size: 12.5px; color: var(--gt-muted); line-height: 1.4; }
+    .gt-compare-meta {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      padding-top: 6px;
+      border-top: 1px solid var(--gt-line);
+      flex-wrap: wrap;
+    }
+    .gt-compare-price {
+      font-size: 12px;
+      color: var(--gt-subtle);
+      flex: 1 1 auto;
+      min-width: 0;
+      word-break: break-word;
+    }
+    .gt-compare-score { font-size: 16px; font-weight: 700; flex: 0 0 auto; }
+    .gt-compare-score-slash { font-size: 11px; color: var(--gt-subtle); font-weight: 500; }
 
-    <!-- Main layout: prose + floating TOC -->
-    <div class="t2-layout" id="full-comparison">
-      <article class="t2-prose">
-        <slot />
+    /* Side-by-side at ≥600px — main on left, meta as a column on the
+       right. Constrain meta to a max-width so a long pricing string
+       can't squeeze the tagline column. */
+    @media (min-width: 600px) {
+      .gt-compare-link {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(140px, 200px);
+        align-items: center;
+        gap: 14px;
+      }
+      .gt-compare-meta {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 2px;
+        padding-top: 0;
+        border-top: none;
+        text-align: right;
+      }
+      .gt-compare-price { flex: 0 0 auto; }
+    }
 
-        <FAQAccordionScript />
-        <ShareButtons title={title} pageUrl={`${siteBase}compare/${slug}/`} />
-        <FeedbackForm toolName={title} />
-      </article>
+    .gt-compare-table { margin-bottom: 40px; }
 
-      {tocHeadings.length > 0 && (
-        <aside class="t2-toc" aria-label="On this page">
-          <div class="t2-toc-label">On this page</div>
-          <ol class="t2-toc-list">
-            {tocHeadings.map((h) => (
-              <li><a href={`#${h.slug}`}>{h.text}</a></li>
-            ))}
-          </ol>
-          <div class="t2-cmp-toc-compared">
-            <div class="t2-toc-label">Comparing</div>
-            <ul>
-              {tools.map((t) => {
-                const score = overallScore(t);
-                return (
-                  <li>
-                    <a href={`/tools/${t.slug}/`}>{t.title}</a>
-                    {score > 0 && <span class="tabular-nums">{score}</span>}
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-        </aside>
-      )}
-    </div>
-    </div>
+    .gt-body { margin-bottom: 40px; }
+    .gt-body :global(h2) {
+      font-size: 22px; font-weight: 700; letter-spacing: -0.01em;
+      margin: 36px 0 14px; color: var(--gt-fg);
+    }
+    .gt-body :global(h3) { font-size: 17px; font-weight: 600; margin: 28px 0 10px; }
+    .gt-body :global(p),
+    .gt-body :global(li) { font-size: var(--gt-text-prose); line-height: 1.65; }
+    .gt-body :global(a) { color: var(--gt-accent); border-bottom: 1px solid currentColor; text-decoration: none; }
+    .gt-body :global(blockquote) {
+      margin: 18px 0; padding: 12px 16px;
+      border-left: 3px solid var(--gt-accent);
+      background: var(--gt-surface);
+      border-radius: 0 var(--gt-radius-sm) var(--gt-radius-sm) 0;
+    }
+    .gt-body :global(table) {
+      width: 100%; border-collapse: collapse;
+      font-size: 14px; margin: 18px 0;
+      display: block; overflow-x: auto;
+    }
+    .gt-body :global(th),
+    .gt-body :global(td) { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--gt-line); }
+    .gt-body :global(th) {
+      font-size: 11px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.08em; color: var(--gt-subtle);
+    }
+  </style>
 </BaseLayout>

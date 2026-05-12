@@ -1,0 +1,700 @@
+---
+/**
+ * /guides/ index. Problem-first use-case library over src/content/use-cases.
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import IndexHero from '../../components/design/IndexHero.astro';
+import MetricStrip from '../../components/design/MetricStrip.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import { getCollection } from 'astro:content';
+import '../../styles/t2-canvas.css';
+
+const allGuides = await getCollection('use-cases');
+const allTools = await getCollection('tools');
+
+type GuideType = 'best-of' | 'alternatives' | 'stack' | 'comparison' | 'other';
+type IntentLane = 'Build software' | 'Create media' | 'Grow a business' | 'Research and study' | 'Operate workflows';
+type Guide = {
+  slug: string;
+  title: string;
+  description: string;
+  type: GuideType;
+  lastUpdated: unknown;
+  lastVerified: unknown;
+  tools: string[];
+  noindex: boolean;
+};
+
+function guideType(slug: string): GuideType {
+  if (slug.startsWith('best-')) return 'best-of';
+  if (slug.endsWith('-alternatives')) return 'alternatives';
+  if (slug.endsWith('-stack')) return 'stack';
+  if (slug.includes('-vs-')) return 'comparison';
+  return 'other';
+}
+
+const guides: Guide[] = allGuides.map(g => {
+  const slug = g.data.slug || g.id.replace(/\.md$/, '');
+  return {
+    slug,
+    title: g.data.title,
+    description: g.data.meta_description || g.data.description || '',
+    type: guideType(slug),
+    lastUpdated: g.data.last_updated,
+    lastVerified: g.data.last_verified,
+    tools: g.data.tools_mentioned || [],
+    noindex: g.data.noindex === true,
+  };
+}).filter(g => !g.noindex);
+
+function dateLabel(value: unknown): string {
+  if (!value) return 'Review queued';
+  const iso = value instanceof Date ? value.toISOString().slice(0, 10) : String(value).slice(0, 10);
+  return `Verified ${iso}`;
+}
+
+const toolCategoryBySlug = new Map(
+  allTools.map(tool => [tool.data.slug || tool.id.replace(/\.md$/, ''), tool.data.category])
+);
+const toolSlugAliases: Record<string, string> = {
+  'canva-magic-studio': 'canva',
+  'chatgpt-gpt-5': 'chatgpt',
+  'chatgpt-gpt5': 'chatgpt',
+  'claude-4-6': 'claude',
+  'claude-api': 'claude',
+  'claude-opus-46': 'claude',
+  'cursor-ai': 'cursor',
+  'deepseek-v32': 'deepseek',
+  'fireflies-ai': 'fireflies',
+  'gemini-3-pro': 'gemini',
+  'gemini-31-pro': 'gemini',
+  'gemini-advanced': 'gemini',
+  'google-gemini': 'gemini',
+  'gpt-5': 'chatgpt',
+  'japer': 'jasper',
+  'luma-dream-machine': 'luma',
+  'microsoft-365-copilot': 'chatgpt',
+  'microsoft-copilot': 'chatgpt',
+  'openai-api': 'chatgpt',
+  'openai-gpt': 'chatgpt',
+  'perplexity-ai': 'perplexity',
+  'perplexity-enterprise': 'perplexity',
+  'perplexity-pro': 'perplexity',
+  'replit-ghostwriter': 'replit-agent',
+};
+const toolCategoryAliases: Record<string, string> = {
+  'capcut': 'ai-video',
+  'castmagic': 'ai-notes',
+  'colossyan': 'ai-video',
+  'deepbrain': 'ai-video',
+  'eightfold-ai': 'ai-automation',
+  'elai': 'ai-video',
+  'genmo': 'ai-video',
+  'gohighlevel': 'ai-automation',
+  'gong': 'ai-automation',
+  'google-translate': 'ai-writing',
+  'gorgias': 'ai-automation',
+  'help-scout': 'ai-automation',
+  'hireez': 'ai-automation',
+  'paradox-olivia': 'ai-automation',
+  'podcastle': 'ai-voice',
+  'resume-io': 'ai-writing',
+  'salesforce-einstein': 'ai-automation',
+  'vercel': 'ai-coding',
+  'zendesk': 'ai-automation',
+};
+
+function categoryForToolMention(slug: string): string | undefined {
+  const canonicalSlug = toolSlugAliases[slug] || slug;
+  return toolCategoryBySlug.get(canonicalSlug) || toolCategoryAliases[slug];
+}
+
+function metadataTextForGuide(g: Guide): string {
+  return `${g.slug} ${g.title} ${g.description}`.toLowerCase();
+}
+
+const intentBySlug: Partial<Record<string, IntentLane>> = {
+  'ai-agency-stack': 'Grow a business',
+  'ai-content-creator-stack': 'Create media',
+  'ai-content-pipeline': 'Create media',
+  'ai-customer-support': 'Grow a business',
+  'ai-lead-generation': 'Grow a business',
+  'ai-solo-founder-stack': 'Grow a business',
+
+  'best-ai-automation-platform': 'Operate workflows',
+  'best-ai-coding-assistant': 'Build software',
+  'best-ai-for-academic-writing': 'Research and study',
+  'best-ai-for-ad-copy': 'Grow a business',
+  'best-ai-for-api-documentation': 'Build software',
+  'best-ai-for-blog-writing': 'Create media',
+  'best-ai-for-book-writing': 'Create media',
+  'best-ai-for-brainstorming': 'Operate workflows',
+  'best-ai-for-citations': 'Research and study',
+  'best-ai-for-code-review': 'Build software',
+  'best-ai-for-cold-email': 'Grow a business',
+  'best-ai-for-cover-letters': 'Operate workflows',
+  'best-ai-for-data-analysis': 'Research and study',
+  'best-ai-for-debugging': 'Build software',
+  'best-ai-for-email-writing': 'Operate workflows',
+  'best-ai-for-excel': 'Operate workflows',
+  'best-ai-for-headshots': 'Create media',
+  'best-ai-for-instagram': 'Create media',
+  'best-ai-for-interview-prep': 'Research and study',
+  'best-ai-for-legal-research': 'Research and study',
+  'best-ai-for-linkedin': 'Grow a business',
+  'best-ai-for-logo-design': 'Create media',
+  'best-ai-for-medical-research': 'Research and study',
+  'best-ai-for-meeting-notes': 'Operate workflows',
+  'best-ai-for-newsletter-writers': 'Create media',
+  'best-ai-for-photo-editing': 'Create media',
+  'best-ai-for-podcasters': 'Create media',
+  'best-ai-for-presentations': 'Create media',
+  'best-ai-for-resume-writing': 'Operate workflows',
+  'best-ai-for-seo-content': 'Grow a business',
+  'best-ai-for-social-media-posts': 'Grow a business',
+  'best-ai-for-sql-queries': 'Build software',
+  'best-ai-for-summarization': 'Research and study',
+  'best-ai-for-tiktok': 'Create media',
+  'best-ai-for-transcription': 'Create media',
+  'best-ai-for-translation': 'Operate workflows',
+  'best-ai-for-unit-tests': 'Build software',
+  'best-ai-for-youtube-creators': 'Create media',
+  'best-ai-music-generator': 'Create media',
+  'best-ai-seo-tool': 'Grow a business',
+  'best-ai-tools-for-accountants': 'Grow a business',
+  'best-ai-tools-for-agencies': 'Grow a business',
+  'best-ai-tools-for-consultants': 'Grow a business',
+  'best-ai-tools-for-customer-support': 'Grow a business',
+  'best-ai-tools-for-designers': 'Create media',
+  'best-ai-tools-for-developers': 'Build software',
+  'best-ai-tools-for-ecommerce': 'Grow a business',
+  'best-ai-tools-for-freelancers': 'Grow a business',
+  'best-ai-tools-for-journalists': 'Research and study',
+  'best-ai-tools-for-lawyers': 'Research and study',
+  'best-ai-tools-for-marketers': 'Grow a business',
+  'best-ai-tools-for-nonprofits': 'Grow a business',
+  'best-ai-tools-for-product-managers': 'Grow a business',
+  'best-ai-tools-for-real-estate-agents': 'Grow a business',
+  'best-ai-tools-for-recruiters': 'Grow a business',
+  'best-ai-tools-for-researchers': 'Research and study',
+  'best-ai-tools-for-sales-teams': 'Grow a business',
+  'best-ai-tools-for-small-business': 'Grow a business',
+  'best-ai-tools-for-students': 'Research and study',
+  'best-ai-tools-for-teachers': 'Research and study',
+  'best-ai-tools-for-writers': 'Create media',
+  'best-ai-tools-under-10-month': 'Operate workflows',
+  'best-ai-tools-under-20-month': 'Operate workflows',
+  'best-ai-tools-under-50-month': 'Operate workflows',
+  'best-ai-video-generator': 'Create media',
+  'best-ai-voice-youtube': 'Create media',
+  'best-free-ai-tools': 'Operate workflows',
+  'best-open-source-ai-tools': 'Operate workflows',
+  'best-pay-as-you-go-ai-tools': 'Build software',
+
+  'canva-ai-alternatives': 'Create media',
+  'chatgpt-alternatives': 'Operate workflows',
+  'claude-alternatives': 'Operate workflows',
+  'cursor-alternatives': 'Build software',
+  'deepseek-alternatives': 'Operate workflows',
+  'elevenlabs-alternatives': 'Create media',
+  'gemini-alternatives': 'Operate workflows',
+  'github-copilot-alternatives': 'Build software',
+  'grammarly-alternatives': 'Create media',
+  'jasper-alternatives': 'Grow a business',
+  'midjourney-alternatives': 'Create media',
+  'notion-ai-alternatives': 'Operate workflows',
+  'otter-ai-alternatives': 'Operate workflows',
+  'perplexity-alternatives': 'Research and study',
+  'runway-alternatives': 'Create media',
+  'suno-alternatives': 'Create media',
+  'synthesia-alternatives': 'Create media',
+};
+
+function intentLaneForGuide(g: Guide): IntentLane {
+  const explicitLane = intentBySlug[g.slug];
+  if (explicitLane) return explicitLane;
+
+  const text = metadataTextForGuide(g);
+  if (/coding-assistant|code-review|debugging|unit-tests?|api-documentation|sql-queries|developers?|cursor-alternatives|github-copilot-alternatives/.test(text)) {
+    return 'Build software';
+  }
+  if (/image|video|music|design|presentation|creator|podcast|youtube|tiktok|instagram|headshot|logo|photo|voice|suno|runway|midjourney|canva|elevenlabs|synthesia/.test(text)) {
+    return 'Create media';
+  }
+  if (/marketing|marketer|sales|lead|customer-support|support|agency|consultant|ecommerce|small-business|real-estate|recruiter|cold-email|ad-copy|seo|linkedin|nonprofit/.test(text)) {
+    return 'Grow a business';
+  }
+  if (/research|academic|citation|medical|legal|student|teacher|journalist|data-analysis|researcher|interview-prep/.test(text)) {
+    return 'Research and study';
+  }
+  return 'Operate workflows';
+}
+
+const lanes = [
+  {
+    label: 'Build software',
+    deck: 'Agents, IDEs, code review, debugging, tests, docs.',
+    href: '/categories/ai-coding/',
+  },
+  {
+    label: 'Create media',
+    deck: 'Writing, design, images, video, audio, and creator workflows.',
+    href: '/categories/ai-image/',
+  },
+  {
+    label: 'Grow a business',
+    deck: 'Marketing, sales, support, agencies, ecommerce, and founders.',
+    href: '/categories/ai-seo/',
+  },
+  {
+    label: 'Research and study',
+    deck: 'Search, citations, academic writing, analysis, and notes.',
+    href: '/categories/ai-research/',
+  },
+  {
+    label: 'Operate workflows',
+    deck: 'Automation, notes, transcription, budgeting, and daily utility.',
+    href: '/categories/ai-automation/',
+  },
+] satisfies Array<{ label: IntentLane; deck: string; href: string }>;
+
+const guideBySlug = new Map(guides.map(g => [g.slug, g]));
+const featuredSlugs = [
+  'best-ai-video-generator',
+  'best-ai-avatar-video-generator',
+  'runway-alternatives',
+  'best-ai-music-generator',
+  'suno-alternatives',
+  'ai-content-creator-stack',
+  'midjourney-alternatives',
+  'best-ai-for-photo-editing',
+  'best-ai-for-instagram',
+  'best-ai-for-social-media-posts',
+  'best-ai-voice-youtube',
+  'best-ai-tools-for-designers',
+  'canva-ai-alternatives',
+  'elevenlabs-alternatives',
+  'jasper-alternatives',
+  'grammarly-alternatives',
+  'best-ai-tools-for-writers',
+  'best-ai-for-blog-writing',
+  'best-ai-for-ad-copy',
+  'best-ai-for-newsletter-writers',
+  'best-ai-tools-for-sales-teams',
+  'ai-lead-generation',
+  'best-ai-tools-for-consultants',
+  'best-ai-tools-for-recruiters',
+  'ai-agency-stack',
+  'best-ai-tools-for-product-managers',
+  'best-ai-seo-tool',
+  'best-ai-for-seo-content',
+  'best-ai-coding-assistant',
+  'github-copilot-alternatives',
+  'cursor-alternatives',
+  'best-ai-tools-for-developers',
+  'best-ai-for-code-review',
+  'best-pay-as-you-go-ai-tools',
+  'best-ai-for-sql-queries',
+  'best-ai-for-presentations',
+  'best-ai-for-data-analysis',
+  'best-ai-tools-for-researchers',
+  'best-ai-for-academic-writing',
+  'best-ai-for-citations',
+  'best-ai-tools-for-journalists',
+  'perplexity-alternatives',
+  'best-ai-tools-for-students',
+  'best-ai-for-meeting-notes',
+  'best-ai-for-transcription',
+  'best-ai-automation-platform',
+  'best-ai-tools-under-20-month',
+  'ai-solo-founder-stack',
+  'chatgpt-alternatives',
+  'gemini-alternatives',
+  'claude-alternatives',
+  'deepseek-alternatives',
+];
+const featured = featuredSlugs.map(slug => guideBySlug.get(slug)).filter(Boolean) as Guide[];
+
+const laneGroups = lanes.map(lane => ({
+  ...lane,
+  items: guides
+    .filter(g => intentLaneForGuide(g) === lane.label)
+    .sort((a, b) => String(b.lastVerified || b.lastUpdated || '').localeCompare(String(a.lastVerified || a.lastUpdated || '')))
+    .slice(0, 8),
+}));
+
+const archiveGroups: Record<string, Guide[]> = {
+  'best-of': guides.filter(g => g.type === 'best-of'),
+  'stack': guides.filter(g => g.type === 'stack'),
+  'alternatives': guides.filter(g => g.type === 'alternatives'),
+  'comparison': guides.filter(g => g.type === 'comparison'),
+  'other': guides.filter(g => g.type === 'other'),
+};
+
+const archiveMeta: Record<string, { label: string; description: string }> = {
+  'best-of': { label: 'Ranked buyer guides', description: 'Ranked choices by job, budget, and workflow.' },
+  'stack': { label: 'Tool sets', description: 'Complete tool combinations for real work.' },
+  'alternatives': { label: 'Alternatives', description: 'Swap one tool for a better fit.' },
+  'comparison': { label: 'Comparisons', description: 'Guide pages with direct tradeoffs.' },
+  'other': { label: 'Reference', description: 'Useful pages that do not fit a single lane.' },
+};
+
+const toolMentions = new Set(guides.flatMap(g => g.tools)).size;
+const categoriesCovered = new Set(
+  guides
+    .flatMap(g => g.tools)
+    .map(categoryForToolMention)
+    .filter((category): category is string => Boolean(category))
+).size;
+---
+
+<BaseLayout
+  title="AI tool guides, aipedia.wiki"
+  description={`${allGuides.length} buyer guides for picking AI tools by workflow, budget, and risk.`}
+>
+
+  <div class="t2-canvas guides-canvas site-directory-canvas guides-page-root">
+    <div class="site-content-frame">
+    <Breadcrumb items={[{ label: 'Guides' }]} />
+
+    <IndexHero
+      title="Guides"
+      lead="Problem-first buyer guides for picking tools by workflow, budget, and risk."
+      class="guides-hero"
+      eyebrowClass="guides-kicker"
+      headingClass="guides-title"
+      leadClass="guides-subhead"
+      reveal
+      eyebrow={[
+        { label: 'Guides', tone: 'fresh', live: true },
+        { label: 'pages', value: allGuides.length },
+      ]}
+      trust="Problem-first. Catalog-sourced. No sponsored placements."
+    >
+      <MetricStrip
+        slot="footer"
+        class="guides-stats"
+        label="Guides stats"
+        metrics={[
+          { label: 'Guides', value: allGuides.length },
+          { label: 'Tools mentioned', value: toolMentions },
+          { label: 'Categories covered', value: categoriesCovered },
+        ]}
+      />
+    </IndexHero>
+
+    {featured.length > 0 && (
+      <section class="guides-section" data-reveal>
+        <div class="guides-section-head">
+          <div>
+            <p class="guides-section-kicker">Start here</p>
+            <h2>Highest-intent buyer guides</h2>
+          </div>
+          <span>Money-page paths for choosing tools by job, budget, and risk.</span>
+        </div>
+        <div class="guides-featured-grid">
+          {featured.map(g => (
+            <a href={`/guides/${g.slug}/`} class="guides-featured-card home-surface-card">
+              <span class="guides-card-meta">{dateLabel(g.lastVerified || g.lastUpdated)}</span>
+              <h3>{g.title}</h3>
+              {g.description && <p>{g.description}</p>}
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <section class="guides-section" data-reveal>
+      <div class="guides-section-head">
+        <div>
+          <p class="guides-section-kicker">Browse by work</p>
+          <h2>Browse by goal</h2>
+        </div>
+        <span>Fast paths into the library.</span>
+      </div>
+      <div class="guides-lanes">
+        {laneGroups.map(lane => lane.items.length > 0 && (
+          <section class="guides-lane home-surface-card">
+            <div class="guides-lane-head">
+              <div>
+                <h3>{lane.label}</h3>
+                <p>{lane.deck}</p>
+              </div>
+              <a href={lane.href} aria-label={`${lane.label} category`}>Category</a>
+            </div>
+            <div class="guides-lane-links">
+              {lane.items.map(g => (
+                <a href={`/guides/${g.slug}/`}>
+                  <span>{g.title}</span>
+                  <small>{dateLabel(g.lastVerified || g.lastUpdated)}</small>
+                </a>
+              ))}
+            </div>
+          </section>
+        ))}
+      </div>
+    </section>
+
+    <section class="guides-section guides-archive" data-reveal>
+      <div class="guides-section-head">
+        <div>
+          <p class="guides-section-kicker">Full archive</p>
+          <h2>All guides</h2>
+        </div>
+        <span>Kept for long-tail discovery and internal linking.</span>
+      </div>
+      {Object.entries(archiveGroups).map(([groupKey, items]) => items.length > 0 && (
+        <details class="guides-archive-group home-surface-card" open={groupKey === 'best-of' || groupKey === 'stack'}>
+          <summary>
+            <span>
+              <strong>{archiveMeta[groupKey].label}</strong>
+              <small>{archiveMeta[groupKey].description}</small>
+            </span>
+            <span class="tabular-nums">{items.length}</span>
+          </summary>
+          <div class="guides-archive-grid">
+            {items.map(g => (
+              <a href={`/guides/${g.slug}/`}>
+                <span>{g.title}</span>
+                <small>{dateLabel(g.lastVerified || g.lastUpdated)}</small>
+              </a>
+            ))}
+          </div>
+        </details>
+      ))}
+    </section>
+    </div>
+  </div>
+<style>
+    /* Layout and typography scoped to guides; panels use shared .home-surface-card + --home-* (guides-page-root). */
+    .guides-hero {
+      padding: var(--site-index-hero-top) 0 var(--site-section-gap);
+      border-bottom: 1px solid var(--home-line);
+    }
+    .guides-kicker {
+      margin-bottom: 18px;
+    }
+    .guides-title {
+      margin: 0;
+      max-width: 930px;
+      font-size: clamp(2.5rem, 7vw, 5.6rem);
+      line-height: 0.95;
+      font-weight: 800;
+      letter-spacing: 0;
+      color: var(--home-heading);
+    }
+    .guides-subhead {
+      margin: var(--site-content-gap) 0 0;
+      max-width: 760px;
+      font-size: clamp(1.02rem, 2vw, 1.28rem);
+      line-height: 1.55;
+      color: var(--home-muted);
+    }
+    .guides-section {
+      margin-top: var(--site-section-gap);
+    }
+    .guides-section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: var(--site-content-gap);
+      margin-bottom: var(--site-content-gap);
+    }
+    .guides-section-kicker {
+      margin: 0 0 7px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--home-accent);
+    }
+    .guides-section-head h2 {
+      margin: 0;
+      color: var(--home-heading);
+      font-size: clamp(1.45rem, 2.7vw, 2.1rem);
+      line-height: 1.05;
+      letter-spacing: 0;
+    }
+    .guides-section-head > span {
+      max-width: 360px;
+      text-align: right;
+      color: var(--home-dim);
+      font-size: 13px;
+      line-height: 1.4;
+    }
+    .guides-featured-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .guides-featured-card {
+      min-height: 180px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+    .guides-card-meta {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--home-dim);
+    }
+    .guides-featured-card h3 {
+      margin: 16px 0 10px;
+      color: var(--home-on-card);
+      font-size: clamp(1.12rem, 2vw, 1.42rem);
+      line-height: 1.16;
+      letter-spacing: 0;
+    }
+    .guides-featured-card p {
+      margin: 0;
+      color: var(--home-on-card-muted);
+      font-size: 14px;
+      line-height: 1.48;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .guides-lanes {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .guides-lane {
+      padding: 18px;
+    }
+    .guides-lane-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--home-line);
+    }
+    .guides-lane h3 {
+      margin: 0;
+      color: var(--home-on-card);
+      font-size: 1.05rem;
+      letter-spacing: 0;
+    }
+    .guides-lane p {
+      margin: 6px 0 0;
+      color: var(--home-on-card-muted);
+      font-size: 13px;
+      line-height: 1.42;
+    }
+    .guides-lane-head a {
+      flex: none;
+      height: 30px;
+      display: inline-flex;
+      align-items: center;
+      padding: 0 10px;
+      border-radius: 999px;
+      border: 1px solid var(--home-card-outline);
+      color: var(--home-accent);
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 700;
+      transition:
+        border-color var(--motion-fast, 160ms) var(--motion-ease, cubic-bezier(0.16, 1, 0.3, 1)),
+        background var(--motion-fast, 160ms) var(--motion-ease, cubic-bezier(0.16, 1, 0.3, 1));
+    }
+    .guides-lane-head a:hover {
+      border-color: var(--home-card-outline-hover);
+      background: var(--home-panel-strong);
+    }
+    .guides-lane-links,
+    .guides-archive-grid {
+      display: grid;
+      gap: 2px;
+      margin-top: 10px;
+    }
+    .guides-lane-links a,
+    .guides-archive-grid a {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 9px 8px;
+      border-radius: 6px;
+      color: var(--home-on-card-muted);
+      text-decoration: none;
+      font-size: 13px;
+      line-height: 1.3;
+      transition:
+        background var(--motion-fast, 160ms) var(--motion-ease, cubic-bezier(0.16, 1, 0.3, 1)),
+        color var(--motion-fast, 160ms) var(--motion-ease, cubic-bezier(0.16, 1, 0.3, 1));
+    }
+    .guides-lane-links a:hover,
+    .guides-archive-grid a:hover {
+      background: var(--home-panel-strong);
+      color: var(--home-on-card);
+    }
+    .guides-lane-links small,
+    .guides-archive-grid small {
+      flex: none;
+      color: var(--home-dim);
+      font-size: 11px;
+      white-space: nowrap;
+    }
+    .guides-archive {
+      padding-top: 8px;
+    }
+    .guides-archive-group {
+      margin-bottom: 10px;
+      overflow: hidden;
+    }
+    .guides-archive-group summary {
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      padding: 16px 18px;
+      color: var(--home-on-card);
+    }
+    .guides-archive-group summary::-webkit-details-marker { display: none; }
+    .guides-archive-group summary strong {
+      display: block;
+      font-size: 15px;
+    }
+    .guides-archive-group summary small {
+      display: block;
+      margin-top: 4px;
+      color: var(--home-dim);
+      font-size: 12px;
+    }
+    .guides-archive-group summary > .tabular-nums {
+      color: var(--home-accent);
+      font-weight: 800;
+    }
+    .guides-archive-grid {
+      padding: 0 10px 12px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      border-top: 1px solid var(--home-line);
+    }
+    .guides-archive-grid a {
+      padding: 10px 8px;
+    }
+    @media (max-width: 760px) {
+      .guides-featured-grid,
+      .guides-lanes,
+      .guides-archive-grid {
+        grid-template-columns: 1fr;
+      }
+      .guides-section-head {
+        align-items: start;
+        flex-direction: column;
+      }
+      .guides-section-head > span {
+        text-align: left;
+      }
+      .guides-lane-links a,
+      .guides-archive-grid a {
+        flex-direction: column;
+        gap: 3px;
+      }
+    }
+  </style>
+</BaseLayout>

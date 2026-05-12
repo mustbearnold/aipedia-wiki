@@ -1,0 +1,195 @@
+---
+/**
+ * DecisionCard — the conversion surface.
+ *
+ * On mobile (above the fold): big score, status pill, price, primary CTA.
+ * On desktop (≥600px): horizontal — score/status on left, CTA group on right.
+ *
+ * This component owns the trust line ("Editorial · no paid placements" or
+ * affiliate disclosure). The line shows once, here, instead of in three
+ * places like the legacy ToolLayout.
+ */
+interface CTA {
+  label: string;
+  href: string;
+  external?: boolean;
+}
+
+interface Props {
+  scoreOverall?: number;
+  scoreBand?: string;
+  statusActive?: boolean;
+  statusLabel?: string;        // overrides default "Active"
+  price?: string;
+  primaryCta?: CTA;            // optional — can be replaced by <slot name="primary-cta">
+  secondaryCta?: CTA;          // optional — can be replaced by <slot name="secondary-cta">
+  affiliate?: boolean;
+  trustLine?: string;          // overrides default
+}
+
+const {
+  scoreOverall,
+  scoreBand,
+  statusActive = true,
+  statusLabel,
+  price,
+  primaryCta,
+  secondaryCta,
+  affiliate = false,
+  trustLine,
+} = Astro.props;
+
+const defaultTrust = affiliate
+  ? 'Affiliate link · disclosed below'
+  : 'Editorial · no paid placements';
+const finalTrust = trustLine ?? defaultTrust;
+---
+
+<section class="gt-card" aria-labelledby="gt-card-cta">
+  <header class="gt-card-head">
+    {scoreOverall != null && (
+      <div class="gt-card-score">
+        <strong class="gt-card-score-num">{scoreOverall}<span class="gt-card-score-slash">/10</span></strong>
+        {scoreBand && <span class="gt-card-score-band">{scoreBand}</span>}
+      </div>
+    )}
+    <div class="gt-card-status">
+      {statusActive && (
+        <span class="gt-card-status-pill">
+          <span class="gt-card-status-dot"></span>
+          {statusLabel ?? 'Active'}
+        </span>
+      )}
+      {price && <span class="gt-card-price">{price}</span>}
+    </div>
+  </header>
+
+  <div class="gt-card-ctas">
+    {Astro.slots.has('primary-cta')
+      ? <slot name="primary-cta" />
+      : primaryCta && (
+          <a
+            id="gt-card-cta"
+            href={primaryCta.href}
+            class="gt-btn gt-btn-primary"
+            {...(primaryCta.external ? { target: '_blank', rel: 'noopener' } : {})}
+          >
+            {primaryCta.label}
+            <span aria-hidden="true">→</span>
+          </a>
+        )
+    }
+    {Astro.slots.has('secondary-cta')
+      ? <slot name="secondary-cta" />
+      : secondaryCta && (
+          <a
+            href={secondaryCta.href}
+            class="gt-btn gt-btn-secondary"
+            {...(secondaryCta.external ? { target: '_blank', rel: 'noopener' } : {})}
+          >
+            {secondaryCta.label}
+          </a>
+        )
+    }
+  </div>
+
+  <p class="gt-card-trust">{finalTrust}</p>
+</section>
+
+<style>
+  .gt-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 16px;
+    border-radius: var(--gt-radius);
+    border: 1px solid var(--gt-line-strong);
+    background: linear-gradient(180deg, var(--gt-surface-2), var(--gt-surface));
+    margin-bottom: 24px;
+  }
+  .gt-card-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 4px;
+  }
+  .gt-card-score { display: flex; flex-direction: column; }
+  .gt-card-score-num {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: var(--gt-fg);
+  }
+  .gt-card-score-slash { font-size: 16px; color: var(--gt-subtle); font-weight: 500; }
+  .gt-card-score-band {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--gt-positive);
+    margin-top: 2px;
+  }
+  .gt-card-status {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 6px;
+  }
+  .gt-card-status-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: rgba(var(--gt-positive-rgb), 0.10);
+    border: 1px solid rgba(var(--gt-positive-rgb), 0.25);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--gt-positive);
+  }
+  .gt-card-status-dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--gt-positive);
+  }
+  .gt-card-price { font-size: 13px; color: var(--gt-muted); font-weight: 500; }
+  .gt-card-ctas {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+  .gt-card-trust {
+    margin: 4px 0 0;
+    font-size: 12px;
+    color: var(--gt-subtle);
+    text-align: center;
+  }
+
+  @media (min-width: 600px) {
+    .gt-card {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 20px 22px;
+    }
+    .gt-card-head { flex: 1 1 auto; margin: 0; }
+    .gt-card-ctas {
+      flex-direction: row;
+      align-items: center;
+      gap: 10px;
+      width: auto;
+      flex: 0 0 auto;
+    }
+    .gt-card-ctas :global(.gt-btn) {
+      width: auto;
+      flex: 0 0 auto;
+    }
+    .gt-card-trust {
+      flex-basis: 100%;
+      margin: 6px 0 0;
+      text-align: left;
+    }
+  }
+</style>

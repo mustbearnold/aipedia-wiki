@@ -1,0 +1,92 @@
+---
+/**
+ * TrustPanel — sources rendered inline with verification dates.
+ *
+ * Trust is the surface, not a link.
+ */
+interface Source {
+  label: string;
+  url: string;
+  verified?: string;
+}
+
+interface Props {
+  sources: Source[];
+  affiliate?: boolean;
+  heading?: string;
+  subline?: string;
+}
+
+const {
+  sources,
+  affiliate = false,
+  heading = 'Where this comes from',
+  subline,
+} = Astro.props;
+
+const defaultSub = affiliate
+  ? 'Produced by the aipedia.wiki editorial pipeline against primary sources. Some links on this page are affiliate links — disclosed per-CTA. Affiliate relationships do not influence scores or rankings.'
+  : 'Produced by the aipedia.wiki editorial pipeline against primary sources. No paid placements. No affiliate link on this page.';
+const finalSub = subline ?? defaultSub;
+---
+
+<aside class="gt-trust" aria-labelledby="gt-trust-h">
+  <header class="gt-trust-head">
+    <h2 id="gt-trust-h" class="gt-section-h">{heading}</h2>
+    <p class="gt-trust-sub">{finalSub}</p>
+  </header>
+  <ul class="gt-trust-list">
+    {sources.map((s) => (
+      <li>
+        <a href={s.url} target="_blank" rel="noopener nofollow">
+          <span class="gt-trust-name">{s.label}</span>
+          {s.verified && <span class="gt-trust-date">verified {s.verified}</span>}
+        </a>
+      </li>
+    ))}
+  </ul>
+</aside>
+
+<style>
+  .gt-trust {
+    padding: 18px;
+    border-radius: var(--gt-radius);
+    border: 1px solid var(--gt-line);
+    background: var(--gt-surface);
+    margin-bottom: 40px;
+  }
+  .gt-trust-head { margin-bottom: 14px; }
+  .gt-trust-sub { margin: 0; font-size: 13px; color: var(--gt-muted); line-height: 1.55; }
+  .gt-trust-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+  .gt-trust-list a {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 12px;
+    border-radius: 8px;
+    min-height: 44px;
+    text-decoration: none;
+    color: var(--gt-fg);
+    transition: background 120ms ease;
+    gap: 12px;
+  }
+  .gt-trust-list a:active { background: var(--gt-surface-2); }
+  .gt-trust-name { font-size: 14px; font-weight: 500; }
+  .gt-trust-date {
+    font-size: 11px;
+    color: var(--gt-subtle);
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+
+  @media (min-width: 600px) {
+    .gt-trust-list { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>

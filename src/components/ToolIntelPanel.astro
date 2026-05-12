@@ -158,10 +158,11 @@ const graphComparisons = relatedComparisons.slice(0, 4);
       <span>Watchlist</span>
       <strong>{f.title}</strong>
     </div>
-    <p>Save this page locally, then revisit it when pricing, score notes, or related news changes.</p>
+    <p>Save this tool to this browser. Local-only: no account sync, email alerts, or reminders yet.</p>
     <button type="button" data-watch-tool={slug} data-watch-title={f.title}>
       <span data-watch-label>Watch this tool</span>
     </button>
+    <div class="tool-intel-watch-list" data-watch-list hidden></div>
   </div>
 
   <div class="tool-intel-card tool-intel-badges">
@@ -289,6 +290,7 @@ const graphComparisons = relatedComparisons.slice(0, 4);
   .tool-intel {
     display: grid;
     grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    align-items: start;
     gap: 12px;
     margin: 18px 0 22px;
   }
@@ -300,12 +302,8 @@ const graphComparisons = relatedComparisons.slice(0, 4);
     background:
       linear-gradient(135deg, rgba(249, 115, 22, 0.055), transparent 48%),
       var(--bg-card);
+    height: fit-content;
     padding: 16px;
-  }
-
-  .tool-intel-facts,
-  .tool-intel-graph {
-    grid-row: span 2;
   }
 
   .tool-intel-card-head {
@@ -358,6 +356,54 @@ const graphComparisons = relatedComparisons.slice(0, 4);
   .tool-intel-watch button.is-watched {
     background: rgba(52, 211, 153, 0.15);
     border-color: rgba(52, 211, 153, 0.44);
+  }
+
+  .tool-intel-watch-list {
+    display: grid;
+    gap: 8px;
+    margin-top: 12px;
+    border-top: 1px solid var(--tool-intel-line);
+    padding-top: 12px;
+  }
+
+  .tool-intel-watch-list[hidden] {
+    display: none;
+  }
+
+  .tool-intel-watch-list span {
+    color: var(--text-muted);
+    font-size: 11px;
+    font-weight: 850;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .tool-intel-watch-list a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    border: 1px solid rgba(249, 115, 22, 0.18);
+    border-radius: 8px;
+    background: rgba(249, 115, 22, 0.06);
+    color: var(--text-primary);
+    font-size: 13px;
+    font-weight: 800;
+    padding: 8px 10px;
+    text-decoration: none;
+  }
+
+  .tool-intel-watch-list a:hover,
+  .tool-intel-watch-list a:focus-visible {
+    border-color: rgba(249, 115, 22, 0.36);
+    background: rgba(249, 115, 22, 0.12);
+    outline: none;
+  }
+
+  .tool-intel-watch-list small {
+    color: var(--accent-primary-text);
+    font-size: 11px;
+    font-weight: 850;
   }
 
   .tool-intel-badge-list {
@@ -578,29 +624,128 @@ const graphComparisons = relatedComparisons.slice(0, 4);
       grid-template-columns: 1fr;
     }
 
-    .tool-intel-facts,
-    .tool-intel-graph {
-      grid-row: auto;
-    }
   }
 
   @media (max-width: 560px) {
     .tool-intel {
-      margin-top: 14px;
+      gap: 10px;
+      margin: 14px 0 18px;
     }
 
     .tool-intel-card {
-      padding: 14px;
+      padding: 12px;
     }
 
-    .tool-intel dl,
-    .tool-intel-atomic-row,
+    .tool-intel-card-head {
+      gap: 8px;
+      margin-bottom: 9px;
+    }
+
+    .tool-intel-card-head span {
+      font-size: 9px;
+      letter-spacing: 0.12em;
+    }
+
+    .tool-intel-card-head strong {
+      font-size: 12px;
+    }
+
+    .tool-intel p {
+      font-size: 12px;
+      line-height: 1.42;
+    }
+
+    .tool-intel-watch button {
+      margin-top: 10px;
+      min-height: 38px;
+      border-radius: 10px;
+      font-size: 12.5px;
+    }
+
+    .tool-intel-badge-list {
+      gap: 6px;
+    }
+
+    .tool-intel-badge {
+      min-height: 26px;
+      border-radius: 10px;
+      font-size: 10.5px;
+      padding: 0 8px;
+    }
+
+    .tool-intel dl {
+      grid-template-columns: minmax(78px, 0.52fr) minmax(0, 1fr);
+      gap: 7px 10px;
+    }
+
+    .tool-intel dt {
+      font-size: 10px;
+    }
+
+    .tool-intel dd {
+      font-size: 12px;
+    }
+
+    .tool-intel-atomic {
+      gap: 7px;
+      margin-top: 11px;
+      padding-top: 11px;
+    }
+
+    .tool-intel-atomic-row {
+      grid-template-columns: minmax(78px, 0.52fr) minmax(0, 1fr);
+      gap: 3px 10px;
+    }
+
+    .tool-intel-atomic-row span {
+      font-size: 10px;
+    }
+
+    .tool-intel-atomic-row strong {
+      font-size: 11.5px;
+    }
+
     .tool-intel-timeline li {
-      grid-template-columns: 1fr;
+      grid-template-columns: 64px minmax(0, 1fr);
+      gap: 8px;
+    }
+
+    .tool-intel-time-type {
+      min-height: 22px;
+      font-size: 9px;
     }
 
     .tool-intel-atomic-row a {
-      grid-column: auto;
+      grid-column: 2;
+    }
+
+    .tool-intel-graph-row {
+      gap: 9px;
+      padding: 8px 0;
+    }
+
+    .tool-intel-graph-row span,
+    .tool-intel-graph-cluster > span {
+      font-size: 10px;
+    }
+
+    .tool-intel-graph-row strong,
+    .tool-intel-graph-row a,
+    .tool-intel-timeline strong,
+    .tool-intel-timeline a {
+      font-size: 12px;
+    }
+
+    .tool-intel-graph-cluster {
+      gap: 7px;
+      margin-top: 11px;
+    }
+
+    .tool-intel-graph-cluster a {
+      min-height: 28px;
+      border-radius: 10px;
+      font-size: 10.5px;
+      padding-right: 8px;
     }
   }
 </style>
@@ -634,8 +779,36 @@ const graphComparisons = relatedComparisons.slice(0, 4);
       if (label) label.textContent = watched ? 'Watching' : 'Watch this tool';
     }
 
+    function escapeHtml(value) {
+      return String(value || '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+
+    function renderList() {
+      const box = document.querySelector('[data-watch-list]');
+      if (!box) return;
+      const list = read().filter((item) => item && item.slug).slice(0, 5);
+      box.hidden = list.length === 0;
+      if (!list.length) {
+        box.innerHTML = '';
+        return;
+      }
+      box.innerHTML = [
+        '<span>Saved on this device</span>',
+        ...list.map((item) => {
+          const slug = String(item.slug || '').replace(/[^a-z0-9-]/gi, '');
+          const title = escapeHtml(item.title || slug);
+          return `<a href="/tools/${slug}/">${title}<small>Open</small></a>`;
+        }),
+      ].join('');
+    }
+
     function init() {
       document.querySelectorAll('[data-watch-tool]').forEach((btn) => paint(btn));
+      renderList();
     }
 
     document.addEventListener('click', (event) => {
@@ -648,6 +821,7 @@ const graphComparisons = relatedComparisons.slice(0, 4);
       if (!wasWatching) list.unshift({ slug, title, at: Date.now() });
       write(list);
       paint(btn);
+      renderList();
     });
 
     if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);

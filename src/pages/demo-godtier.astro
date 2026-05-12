@@ -1,0 +1,172 @@
+---
+/**
+ * Demo: 10/10 "god-tier" tool page mock — now composed from shared components.
+ *
+ * Standalone demo at /demo-godtier/.
+ *
+ * The components used below (Hero, Visual, DecisionCard, Decision, ScoreCard,
+ * FactList, TrustPanel, StickyCTA) live in src/components/godtier/ and are
+ * the same ones ToolLayout.astro composes for all 253 tool pages.
+ *
+ * Editing this page lets you preview component API changes on a realistic
+ * data set before they ripple through the rest of the site.
+ */
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/godtier/Hero.astro';
+import Visual from '../components/godtier/Visual.astro';
+import DecisionCard from '../components/godtier/DecisionCard.astro';
+import Decision from '../components/godtier/Decision.astro';
+import ScoreCard from '../components/godtier/ScoreCard.astro';
+import FactList from '../components/godtier/FactList.astro';
+import TrustPanel from '../components/godtier/TrustPanel.astro';
+import StickyCTA from '../components/godtier/StickyCTA.astro';
+
+const tool = {
+  title: 'Claude Code',
+  tagline: "Anthropic's terminal-based agentic coding CLI",
+  subtagline: 'Reads, writes, and runs across full codebases autonomously. Included with Claude Pro at $20/mo; Max tiers scale usage up to 20x.',
+  category: 'AI Coding',
+  categorySlug: 'ai-coding',
+  url: 'https://code.claude.com',
+  pricing_summary: '$20 – $200 / mo',
+  last_verified: '2026-05-10',
+  rank: { label: 'Top pick in AI Coding' },
+  score: {
+    overall: 9.0,
+    band: 'Top-tier',
+    confidence: 'high',
+    axes: [
+      { label: 'Utility',   value: 10, why: 'How much real work it can do for a competent operator, end to end.' },
+      { label: 'Value',     value: 8,  why: 'What you get for the dollar relative to the closest alternative.' },
+      { label: 'Moat',      value: 9,  why: 'How hard it would be for a competitor to replicate the underlying advantage.' },
+      { label: 'Longevity', value: 9,  why: 'How likely the product is to still be best-in-class 24 months out.' },
+    ],
+  },
+  quick_answer: "Buy Max 5x at $100/mo if you run multi-file engineering from a terminal every day. Stay on Pro at $20/mo for lighter sessions — Anthropic doubled the five-hour Claude Code limits on May 6. Skip it if you want IDE integration (use Cursor) or a free tier (use Cline).",
+  decision: [
+    { tone: 'positive' as const, label: 'Buy if',  value: 'You run multi-file refactors or long agentic sessions from the terminal' },
+    { tone: 'positive' as const, label: 'Pick',    value: 'Max 5x at $100/mo for daily use · Pro $20/mo for light use' },
+    { tone: 'negative' as const, label: 'Skip if', value: 'You need an IDE, visual diffs, or a free tier' },
+  ],
+  facts: [
+    { label: 'Backing model',  value: 'Claude Opus 4.7 · Sonnet 4.6 · Haiku 4.5', confidence: 'high', volatility: 'medium', verified: '2026-05-10', source: 'Anthropic release notes' },
+    { label: 'Context window', value: '1M tokens (Opus, Sonnet) · 200K (Haiku)',  confidence: 'high', volatility: 'low',    verified: '2026-05-10', source: 'Claude Code docs' },
+    { label: 'Interface',      value: 'Terminal only · macOS, Linux · Windows via WSL', confidence: 'high', volatility: 'low', verified: '2026-05-10', source: 'Claude Code docs' },
+    { label: 'MCP support',    value: 'First-class Model Context Protocol',      confidence: 'high', volatility: 'medium', verified: '2026-05-10', source: 'Claude Code docs' },
+    { label: 'Pricing',        value: 'Pro $20 · Max 5x $100 · Max 20x $200 · API pay-per-token', confidence: 'high', volatility: 'high', verified: '2026-05-10', source: 'Anthropic pricing' },
+  ],
+  primary_cta: { label: 'Try Claude Code', href: 'https://code.claude.com', external: true },
+  secondary_cta: { label: 'Compare alternatives', href: '/compare/cursor-vs-claude-code-vs-copilot/' },
+  affiliate: false,
+  sources: [
+    { label: 'Claude Code docs',     url: 'https://code.claude.com/docs/en/overview',          verified: '2026-05-10' },
+    { label: 'Anthropic pricing',     url: 'https://claude.com/pricing',                        verified: '2026-05-10' },
+    { label: 'May 6 limits update',   url: 'https://www.anthropic.com/news/higher-limits-spacex', verified: '2026-05-10' },
+    { label: 'Opus 4.7 release',      url: 'https://www.anthropic.com/news/claude-opus-4-7',    verified: '2026-04-16' },
+    { label: 'Claude Code llms.txt',  url: 'https://code.claude.com/llms.txt',                  verified: '2026-05-10' },
+    { label: 'Max plan support',      url: 'https://support.claude.com/en/articles/11049741-what-is-the-max-plan', verified: '2026-05-10' },
+  ],
+};
+---
+
+<BaseLayout title="Claude Code — Demo (10/10 god-tier · component-composed)" description="God-tier demo composed from reusable components.">
+  <div class="gt-canvas">
+
+    <Hero
+      title={tool.title}
+      tagline={tool.tagline}
+      breadcrumbs={[
+        { label: 'aipedia', href: '/' },
+        { label: tool.category, href: `/categories/${tool.categorySlug}/` },
+        { label: tool.title },
+      ]}
+      verifiedLabel="Verified May 10"
+      rankLabel={tool.rank.label}
+    />
+
+    <DecisionCard
+      scoreOverall={tool.score.overall}
+      scoreBand={tool.score.band}
+      price={tool.pricing_summary}
+      primaryCta={tool.primary_cta}
+      secondaryCta={tool.secondary_cta}
+      affiliate={tool.affiliate}
+    />
+
+    <p class="gt-sub">{tool.subtagline}</p>
+
+    <Visual
+      mode="terminal"
+      title={tool.title}
+      terminalTitle="claude — fish"
+      caption="Plan, edit across files, validate via tests, report."
+      lines={[
+        { kind: 'prompt',  text: '~/repo $ claude' },
+        { kind: 'comment', text: 'Welcome · Opus 4.7 · 1M context' },
+        { kind: 'prompt',  text: '› refactor auth middleware' },
+        { kind: 'agent',   text: '⏺ Reading 14 files…' },
+        { kind: 'agent',   text: '⏺ Editing src/middleware/auth.ts' },
+        { kind: 'agent',   text: '⏺ Editing src/lib/session.ts' },
+        { kind: 'agent',   text: '⏺ Running pnpm test --filter auth' },
+        { kind: 'ok',      text: '✓ 42 tests passed · task complete' },
+      ]}
+    />
+
+    <Decision
+      quickAnswer={tool.quick_answer}
+      items={tool.decision}
+    />
+
+    <ScoreCard
+      overall={tool.score.overall}
+      band={tool.score.band}
+      confidence={tool.score.confidence}
+      axes={tool.score.axes}
+    />
+
+    <FactList facts={tool.facts} />
+
+    <article class="gt-body">
+      <h2 class="gt-section-h">What it actually is</h2>
+      <p>A CLI agent that runs in your shell and treats your entire codebase as context. You describe a task; it plans, reads relevant files, edits across modules, runs tests, reads errors, and iterates until done.</p>
+      <p>Opus 4.7 is the default model. The 1M-token context on Opus and Sonnet means real-world repos load in a single session. MCP support, Skills, and Agent SDK hosting turn it into a platform for production AI pipelines, not just a coding assistant.</p>
+
+      <h2 class="gt-section-h">When to pick it</h2>
+      <ul>
+        <li><strong>Multi-file refactors and migrations.</strong> The agent loop self-corrects through failed tests.</li>
+        <li><strong>You already pay for Claude Pro or Max.</strong> Claude Code is included.</li>
+        <li><strong>You need MCP integration.</strong> First-class support beats every IDE-integrated competitor.</li>
+      </ul>
+
+      <h2 class="gt-section-h">When not to</h2>
+      <ul>
+        <li><strong>IDE-integrated coding:</strong> <a href="/tools/cursor/">Cursor</a> at $20/mo.</li>
+        <li><strong>Cheapest GitHub-centric entry:</strong> <a href="/tools/github-copilot/">GitHub Copilot</a> at $10/mo.</li>
+        <li><strong>Free option:</strong> <a href="/tools/cline/">Cline</a>. VS Code agent with BYOK.</li>
+      </ul>
+    </article>
+
+    <TrustPanel
+      sources={tool.sources}
+      affiliate={tool.affiliate}
+    />
+
+  </div>
+
+  <StickyCTA
+    title={tool.title}
+    score={tool.score.overall}
+    price={tool.pricing_summary}
+    cta={tool.primary_cta}
+  />
+
+  <style>
+    .gt-body { margin-bottom: 40px; }
+    .gt-body h2 { margin-top: 32px; }
+    .gt-body p,
+    .gt-body li { font-size: var(--gt-text-prose); line-height: 1.65; color: var(--gt-fg); }
+    .gt-body ul { padding-left: 1.2em; margin: 0; }
+    .gt-body li { margin-bottom: 10px; }
+    .gt-body a { color: var(--gt-accent); text-decoration: none; border-bottom: 1px solid currentColor; }
+  </style>
+</BaseLayout>

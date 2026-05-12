@@ -1,0 +1,197 @@
+---
+/**
+ * CompanyLayout - company profile pages. Redesigned April 23, 2026
+ * into .t2-canvas.
+ */
+import BaseLayout from './BaseLayout.astro';
+import '../styles/t2-canvas.css';
+import ReadingProgress from '../components/ReadingProgress.astro';
+import BreadcrumbLD from '../components/seo/BreadcrumbLD.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import CompanyOrganizationLD from '../components/seo/CompanyOrganizationLD.astro';
+import ShareButtons from '../components/ShareButtons.astro';
+import FeedbackForm from '../components/FeedbackForm.astro';
+import ToolLogo from '../components/ToolLogo.astro';
+import CommercialCTA from '../components/CommercialCTA.astro';
+import { shortenPrice } from '../utils/shorten-price';
+
+interface ToolData {
+  slug: string;
+  title: string;
+  category?: string;
+  url?: string;
+  price_range?: string;
+  pricing_model?: string;
+  affiliate?: { link?: string | null; network?: string | null } | null;
+  scores?: { utility?: number; value?: number; moat?: number; longevity?: number };
+  tagline?: string;
+}
+
+interface Props {
+  title: string;
+  seoTitle?: string;
+  description?: string;
+  slug: string;
+  companyType: string;
+  founded?: string | number;
+  hq?: string;
+  funding?: string;
+  keyProducts: ToolData[];
+  headings?: Array<{ depth: number; slug: string; text: string }>;
+  lastVerified?: string;
+  readingMinutes?: number;
+}
+
+const {
+  title, seoTitle, description = '', slug, companyType,
+  founded, hq, funding, keyProducts = [], headings = [],
+  lastVerified, readingMinutes = 0,
+} = Astro.props;
+
+const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
+
+function overallScore(t: ToolData): number {
+  const s = t.scores ?? {};
+  return Math.round((((s.utility ?? 0) + (s.value ?? 0) + (s.moat ?? 0) + (s.longevity ?? 0)) / 4) * 10) / 10;
+}
+function ctaLabel(t: ToolData): string {
+  const model = (t.pricing_model ?? '').toLowerCase();
+  const price = (t.price_range ?? '').toLowerCase();
+  const modelFree = model === 'free' || model === 'freemium';
+  const priceFree = /\$0(?!\s*\(self|\s*\(self-host)/i.test(price) || /\bfree\b/i.test(price);
+  if (modelFree && priceFree) return `Try ${t.title} free`;
+  if (model === 'enterprise') return `Visit ${t.title}`;
+  return `Get ${t.title}`;
+}
+const typePill: Record<string, { cls: string; label: string }> = {
+  startup:  { cls: 't2-company-type-startup',  label: 'Startup' },
+  bigtech:  { cls: 't2-company-type-bigtech',  label: 'Big Tech' },
+  acquired: { cls: 't2-company-type-acquired', label: 'Acquired' },
+  dead:     { cls: 't2-company-type-dead',     label: 'Discontinued' },
+};
+const typeStyle = typePill[companyType] ?? typePill.startup;
+
+const breadcrumbLdItems = [
+  { name: 'Home', url: siteBase },
+  { name: 'Companies', url: `${siteBase}companies/` },
+  { name: title, url: `${siteBase}companies/${slug}/` },
+];
+
+const verifiedDate = lastVerified ? new Date(lastVerified) : null;
+const verifiedLabel = verifiedDate && !isNaN(verifiedDate.getTime())
+  ? verifiedDate.toLocaleDateString('en-US', { month: 'short', year: 'numeric' })
+  : null;
+const verifiedRecently = verifiedDate && !isNaN(verifiedDate.getTime())
+  ? Math.floor((Date.now() - verifiedDate.getTime()) / 86400000) <= 60
+  : false;
+
+const tocHeadings = (headings ?? []).filter((h) => h.depth === 2).map((h) => ({ slug: h.slug, text: h.text }));
+---
+
+<BaseLayout title={seoTitle ?? title} description={description}>
+  <ReadingProgress />
+  <BreadcrumbLD items={breadcrumbLdItems} />
+  <CompanyOrganizationLD name={title} description={description} founded={founded} hq={hq} pageUrl={`${siteBase}companies/${slug}/`} />
+
+  
+  <div class="t2-canvas">
+    <Breadcrumb
+      items={[
+        { label: 'Companies', href: '/companies/' },
+        { label: title },
+      ]}
+    />
+
+    <!-- Editorial eyebrow -->
+    <div class="t2-eyebrow" data-pagefind-ignore>
+      {verifiedRecently && verifiedLabel && (
+        <span class="t2-eyebrow-chip t2-eyebrow-fresh">
+          <span class="t2-eyebrow-livedot" aria-hidden="true"></span>
+          Updated {verifiedLabel}
+        </span>
+      )}
+      {!verifiedRecently && verifiedLabel && (
+        <span class="t2-eyebrow-chip">Updated {verifiedLabel}</span>
+      )}
+      <span class={`t2-eyebrow-chip ${companyType === 'dead' || companyType === 'acquired' ? '' : 't2-eyebrow-accent'}`}>{typeStyle.label}</span>
+      <span class="t2-eyebrow-trust">Editorial only, no paid placements</span>
+    </div>
+
+    <header class="t2-article-hero" data-pagefind-ignore>
+      <div class="t2-article-title-row">
+        <h1 class="t2-title">{title}</h1>
+      </div>
+      <div class="t2-article-byline">
+        {founded && (<><span>Founded {founded}</span></>)}
+        {hq && (<><span aria-hidden="true" class="t2-meta-dot">·</span><span>{hq}</span></>)}
+        {funding && (<><span aria-hidden="true" class="t2-meta-dot">·</span><span>{funding} raised</span></>)}
+        {readingMinutes > 0 && (<><span aria-hidden="true" class="t2-meta-dot">·</span><span>{readingMinutes} min read</span></>)}
+      </div>
+    </header>
+
+    {keyProducts.length > 0 && (
+      <section class="t2-company-products" aria-label="Products">
+        <p class="t2-verdict-heading">Products by {title}</p>
+        <div class="t2-company-products-grid">
+          {keyProducts.map((t) => {
+            const score = overallScore(t);
+            const label = ctaLabel(t);
+            return (
+              <div class="t2-company-product">
+                <a href={`/tools/${t.slug}/`} class="t2-company-product-title">
+                  <ToolLogo slug={t.slug} title={t.title} size={28} />
+                  <span>{t.title}</span>
+                  {score > 0 && (
+                    <span class="t2-company-product-score tabular-nums">
+                      {score}<span class="t2-company-product-score-slash">/10</span>
+                    </span>
+                  )}
+                </a>
+                {t.tagline && <div class="t2-company-product-tagline">{t.tagline}</div>}
+                <div class="t2-company-product-meta">
+                  {t.price_range && <span class="t2-company-product-price" title={t.price_range}>{shortenPrice(t.price_range)}</span>}
+                  <CommercialCTA
+                    toolName={t.title}
+                    toolSlug={t.slug}
+                    canonicalUrl={t.url}
+                    affiliateUrl={t.affiliate?.link}
+                    affiliateProgram={t.affiliate?.network}
+                    label={label}
+                    pricingModel={t.pricing_model}
+                    priceRange={t.price_range}
+                    pageType="company"
+                    placement="company_product_card"
+                    pageSlug={slug}
+                    categorySlug={t.category}
+                    className="t2-company-product-cta"
+                    arrow="→"
+                    companyProductCtaMarker
+                  />
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+    )}
+
+    <div class="t2-layout">
+      <article class="t2-prose">
+        <slot />
+        <ShareButtons title={title} pageUrl={`${siteBase}companies/${slug}/`} />
+        <FeedbackForm toolName={title} />
+      </article>
+
+      {tocHeadings.length > 0 && (
+        <aside class="t2-toc" aria-label="On this page">
+          <div class="t2-toc-label">On this page</div>
+          <ol class="t2-toc-list">
+            {tocHeadings.map((h) => (
+              <li><a href={`#${h.slug}`}>{h.text}</a></li>
+            ))}
+          </ol>
+        </aside>
+      )}
+    </div>
+  </div>
+</BaseLayout>

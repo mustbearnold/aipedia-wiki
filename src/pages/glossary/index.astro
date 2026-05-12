@@ -1,8 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import IndexHero from '../../components/design/IndexHero.astro';
-import Breadcrumb from '../../components/Breadcrumb.astro';
+import Hero from '../../components/godtier/Hero.astro';
 import BreadcrumbLD from '../../components/seo/BreadcrumbLD.astro';
 import glossaryRaw from '../../content/glossary/index.md?raw';
 
@@ -116,68 +115,48 @@ const breadcrumbItems = [
 
   
   <div
-    class="glossary-desk glossary-page-root site-content-frame site-directory-canvas"
+    class="gt-canvas glossary-desk glossary-page-root"
     data-glossary-desk
-    data-refresh-surface="home-adjacent"
   >
-    <Breadcrumb items={[{ label: 'AI Glossary' }]} data-pagefind-ignore />
-
-    <IndexHero
+    <Hero
       title="AI Glossary"
-      titleId="glossary-title"
-      lead="Definitions for the model, agent, business, and infrastructure terms used across aipedia.wiki."
-      class="glossary-desk__hero"
-      mainClass="glossary-desk__intro"
-      eyebrowClass="glossary-desk__eyebrow"
-      headingClass="glossary-desk__title"
-      leadClass="glossary-desk__lede"
-      eyebrow={[
-        { label: 'Reference desk', tone: 'accent' },
-        { label: 'terms', value: terms.length },
+      tagline="Definitions for the model, agent, business, and infrastructure terms used across aipedia.wiki."
+      breadcrumbs={[
+        { label: 'aipedia', href: '/' },
+        { label: 'Glossary' },
       ]}
-      trust="Shared language for tools, agents, infrastructure, and business pages."
-    >
-      <Fragment slot="aside">
-      <div class="glossary-desk__status home-surface-card" aria-label="Glossary status">
-        <div>
-          <span class="glossary-desk__metric">{terms.length}</span>
-          <span class="glossary-desk__label">terms tracked</span>
-        </div>
-        <div>
-          <span class="glossary-desk__metric">{lanes.length}</span>
-          <span class="glossary-desk__label">reference lanes</span>
-        </div>
-        <div>
-          <span class="glossary-desk__metric">Apr</span>
-          <span class="glossary-desk__label">verified {verifiedDate.slice(0, 4)}</span>
-        </div>
-      </div>
-      </Fragment>
-    </IndexHero>
+      rankLabel={`${terms.length} terms · ${lanes.length} lanes`}
+    />
 
-    <section class="glossary-desk__tools home-surface-card" aria-label="Find a glossary term" data-pagefind-ignore>
-      <label class="glossary-desk__search">
-        <span>Search glossary</span>
+    <form class="gt-search" role="search" data-pagefind-ignore onsubmit="return false">
+      <label for="glossary-search-input" class="gt-sr-only">Search glossary</label>
+      <div class="gt-search-row">
+        <svg class="gt-search-icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M10.8 18.1a7.3 7.3 0 1 1 0-14.6 7.3 7.3 0 0 1 0 14.6Zm5.1-2 4.6 4.6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </svg>
         <input
+          id="glossary-search-input"
           type="search"
-          placeholder="Try RAG, inference, GEO, or agentic AI"
+          inputmode="search"
           autocomplete="off"
+          spellcheck="false"
+          placeholder="Try RAG, inference, GEO, or agentic AI"
           data-glossary-search
         />
-      </label>
-
-      <div class="glossary-desk__quick" aria-label="Popular glossary terms">
-        {popularTerms.map((term) => term && (
-          <button type="button" data-glossary-chip data-query={term.name}>{term.name}</button>
-        ))}
       </div>
+    </form>
 
-      <div class="glossary-desk__alpha" aria-label="Alphabetical glossary jump links" data-glossary-alpha>
-        {alphabet.map((letter) => (
-          <a href={`#glossary-${letter.toLowerCase()}`}>{letter}</a>
-        ))}
-      </div>
-    </section>
+    <nav class="gt-chips" aria-label="Popular glossary terms" data-pagefind-ignore>
+      {popularTerms.map((term) => term && (
+        <button type="button" class="gt-chip" data-glossary-chip data-query={term.name}>{term.name}</button>
+      ))}
+    </nav>
+
+    <nav class="gt-chips gt-chips-alpha" aria-label="Alphabetical jump links" data-glossary-alpha data-pagefind-ignore>
+      {alphabet.map((letter) => (
+        <a href={`#glossary-${letter.toLowerCase()}`} class="gt-chip gt-chip-letter">{letter}</a>
+      ))}
+    </nav>
 
     <div class="glossary-desk__body">
       <aside class="glossary-desk__rail home-surface-card" data-pagefind-ignore aria-label="Glossary lanes">

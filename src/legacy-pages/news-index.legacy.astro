@@ -1,0 +1,1527 @@
+---
+/**
+ * /news/ listing. $100k editorial redesign shipped 2026-04-23.
+ *
+ * Structure:
+ *   - Breadcrumb + eyebrow + gradient headline + subhead
+ *   - Stat bar: items, breaking, major, tools tracked, categories
+ *   - Today's top story: featured magazine-cover block (OG hero image)
+ *   - Split:
+ *       Left: filter chips (severity + category) + full news grid
+ *       Right: Movers-this-fortnight + methodology mini-card
+ *   - Email capture
+ *
+ * Filter behaviour (severity tabs + category chips + tool dropdown) is
+ * preserved, URL-synced. Functional parity with the prior t2-canvas
+ * version is maintained.
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import EmailCapture from '../../components/EmailCapture.astro';
+import IndexHero from '../../components/design/IndexHero.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import BreadcrumbLD from '../../components/seo/BreadcrumbLD.astro';
+import CollectionPageLD from '../../components/seo/CollectionPageLD.astro';
+import ToolLogo from '../../components/ToolLogo.astro';
+import { getCollection } from 'astro:content';
+import '../../styles/p3-canvas.css';
+
+const entries = await getCollection('news');
+const allTools = await getCollection('tools');
+
+function toYmd(v: unknown): string {
+  if (!v) return '';
+  if (v instanceof Date) return isNaN(v.getTime()) ? '' : v.toISOString().slice(0, 10);
+  const s = String(v);
+  const d = new Date(s);
+  return isNaN(d.getTime()) ? s : d.toISOString().slice(0, 10);
+}
+
+function formatNewsDate(iso: string): string {
+  if (!iso) return '';
+  const parts = iso.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+  if (parts) {
+    const [, year, month, day] = parts;
+    return `${Number(month)}/${Number(day)}/${year}`;
+  }
+  const then = new Date(iso);
+  if (isNaN(then.getTime())) return iso;
+  return then.toLocaleDateString('en-US', {
+    month: 'numeric',
+    day: 'numeric',
+    year: 'numeric',
+  });
+}
+
+const sorted = entries
+  .map(e => ({
+    slug: e.data.slug || e.id.replace(/\.md$/, ''),
+    title: e.data.title,
+    summary: e.data.summary ?? '',
+    date: toYmd(e.data.date),
+    severity: (e.data.severity as string) || 'minor',
+    affects: e.data.affects || [],
+    categories: e.data.categories || [],
+  }))
+  .sort((a, b) => (b.date || '').localeCompare(a.date || ''));
+
+/* --- top story selection: editorial importance first, recency second.
+       A recent breaking story should not be buried by a newer major item. --- */
+const today = new Date().toISOString().slice(0, 10);
+const topStory = (() => {
+  const severityWeight: Record<string, number> = { breaking: 3, major: 2, minor: 1 };
+  const ranked = [...sorted].sort((a, b) => {
+    const bySeverity = (severityWeight[b.severity] ?? 0) - (severityWeight[a.severity] ?? 0);
+    if (bySeverity) return bySeverity;
+    return (b.date || '').localeCompare(a.date || '');
+  });
+  const n = ranked[0];
+  if (!n) return null;
+  const isToday = n.date === today;
+  if (n.severity === 'breaking') return { n, label: isToday ? 'BREAKING · TODAY' : 'RECENT · BREAKING' };
+  if (n.severity === 'major') return { n, label: isToday ? "TODAY'S TOP STORY" : 'LATEST MAJOR STORY' };
+  return { n, label: 'LATEST' };
+})();
+
+/* --- movers this fortnight: count affects[] mentions in last 14 days. --- */
+const toolsBySlug = new Map(
+  allTools.map(t => {
+    const slug = t.data.slug || t.id.replace(/\.md$/, '');
+    return [slug, { title: t.data.title, category: t.data.category ?? '', slug }];
+  })
+);
+const fourteenDaysAgo = new Date();
+fourteenDaysAgo.setDate(fourteenDaysAgo.getDate() - 14);
+const recent14 = sorted.filter(n => new Date(n.date) >= fourteenDaysAgo);
+const sevenDaysAgo = new Date();
+sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
+const recent7 = sorted.filter(n => new Date(n.date) >= sevenDaysAgo);
+const currentMonthKey = today.slice(0, 7);
+const currentMonthDate = new Date(`${currentMonthKey}-01T00:00:00Z`);
+const currentMonthLabel = currentMonthDate.toLocaleDateString('en-US', {
+  month: 'long',
+  year: 'numeric',
+});
+const currentMonthNews = sorted.filter(n => n.date.startsWith(currentMonthKey));
+const mentionCounts: Record<string, number> = {};
+const latestSev: Record<string, string> = {};
+for (const n of recent14) {
+  for (const t of n.affects) {
+    mentionCounts[t] = (mentionCounts[t] ?? 0) + 1;
+    if (!latestSev[t]) latestSev[t] = n.severity;
+  }
+}
+const movers = Object.entries(mentionCounts)
+  .filter(([slug]) => toolsBySlug.has(slug))
+  .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+  .slice(0, 7)
+  .map(([slug, count]) => ({
+    slug,
+    count,
+    title: toolsBySlug.get(slug)!.title,
+    category: toolsBySlug.get(slug)!.category,
+    sev: latestSev[slug] || 'minor',
+  }));
+
+/* --- filter option sets --- */
+const severityCounts = sorted.reduce<Record<string, number>>((acc, n) => {
+  acc[n.severity] = (acc[n.severity] ?? 0) + 1;
+  return acc;
+}, {});
+const toolCounts = sorted.reduce<Record<string, number>>((acc, n) => {
+  for (const t of n.affects) acc[t] = (acc[t] ?? 0) + 1;
+  return acc;
+}, {});
+const toolOptions = Object.entries(toolCounts)
+  .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+  .map(([slug, count]) => ({ slug, count }));
+const categoryCounts = sorted.reduce<Record<string, number>>((acc, n) => {
+  for (const c of n.categories) acc[c] = (acc[c] ?? 0) + 1;
+  return acc;
+}, {});
+const categoryOptions = Object.entries(categoryCounts)
+  .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+  .slice(0, 8) /* cap at the 8 most populated */
+  .map(([slug, count]) => ({ slug, count }));
+
+const totalTools = new Set(sorted.flatMap(n => n.affects)).size;
+const totalCats = new Set(sorted.flatMap(n => n.categories)).size;
+const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
+const newsDescription = "AI tools news verified against primary sources. Model releases, pricing changes, acquisitions, shutdowns, and funding rounds affecting the aipedia.wiki tool catalog.";
+
+const CATEGORY_LABEL: Record<string, string> = {
+  'ai-business': 'Business',
+  'ai-industry': 'Industry',
+  'ai-research': 'Research',
+  'ai-security': 'Security',
+  'ai-infrastructure': 'Infrastructure',
+  'ai-open-source': 'Open Source',
+  'ai-transparency': 'Transparency',
+  'ai-policy': 'Policy',
+  'ai-ethics': 'Ethics',
+  'ai-models': 'Models',
+  'ai-model-release': 'Model Release',
+  'ai-tools': 'Tools',
+  'ai-hardware': 'Hardware',
+  'ai-coding': 'Coding',
+  'ai-voice': 'Voice',
+  'ai-video': 'Video',
+  'ai-image': 'Image',
+  'ai-writing': 'Writing',
+  'ai-design': 'Design',
+  'ai-seo': 'SEO',
+  'ai-automation': 'Automation',
+  'ai-search': 'Search',
+  'ai-notes': 'Notes',
+  'ai-music': 'Music',
+  'ai-presentation': 'Presentation',
+  'ai-chatbots': 'Chatbots',
+};
+function catLabel(slug: string): string {
+  return CATEGORY_LABEL[slug] ?? slug.replace(/^ai-/, '').replace(/-/g, ' ');
+}
+
+const leadingCategory = categoryOptions[0]
+  ? { label: catLabel(categoryOptions[0].slug), count: categoryOptions[0].count }
+  : null;
+const signalCards = [
+  {
+    label: `${currentMonthLabel} archive`,
+    value: currentMonthNews.length,
+    note: 'verified items this month',
+  },
+  {
+    label: 'Last 7 days',
+    value: recent7.length,
+    note: 'fresh material changes',
+  },
+  {
+    label: 'Biggest updates',
+    value: (severityCounts.breaking || 0) + (severityCounts.major || 0),
+    note: 'breaking or major items',
+  },
+  {
+    label: 'Most active area',
+    value: leadingCategory?.label ?? 'Tracking',
+    note: leadingCategory ? `${leadingCategory.count} stories tagged` : 'category data pending',
+  },
+];
+
+const breadcrumbs = [
+  { name: 'Home', url: new URL('/', siteBase).href },
+  { name: 'News', url: new URL('/news/', siteBase).href },
+];
+const newsItems = sorted.slice(0, 100).map((item) => ({
+  name: item.title,
+  url: new URL(`/news/${item.slug}/`, siteBase).href,
+  description: item.summary,
+}));
+---
+
+<BaseLayout
+  title="AI Tools News · Daily Desk · aipedia.wiki"
+  description={newsDescription}
+>
+  <BreadcrumbLD items={breadcrumbs} />
+  <CollectionPageLD
+    name="AI Tools News"
+    description={newsDescription}
+    pageUrl={new URL('/news/', siteBase).href}
+    items={newsItems}
+    itemType="NewsArticle"
+  />
+  
+    <div class="p3-canvas site-directory-canvas news-page-root">
+
+    <Breadcrumb items={[{ label: 'News' }]} data-reveal />
+
+    <IndexHero
+      title="The AI news"
+      accent="desk"
+      suffix="."
+      lead="Every model release, price change, acquisition, and shutdown that moves a tool's score. Each item links to primary sources. Items land when material news lands, not on a forced cadence."
+      class="p3-newsdesk-hero"
+      headingClass="p3-headline p3-headline-wide"
+      leadClass="p3-subhead"
+      accentClass="p3-gradient"
+      reveal
+      revealDelay="60ms"
+      eyebrow={[
+        { label: 'Live desk', tone: 'fresh', live: true },
+        { label: `Updated ${sorted[0]?.date ?? '—'}` },
+      ]}
+      trust="Primary-source linked. Material updates only."
+    >
+      <Fragment slot="footer">
+      <div class="p3-statbar p3-statbar-5 p3-newsdesk-statbar" data-reveal style="--reveal-delay: 120ms; margin-bottom: 0;">
+        <div class="p3-stat">
+          <span class="p3-stat-num tabular-nums">{sorted.length}</span>
+          <span class="p3-stat-lbl">items</span>
+        </div>
+        <div class="p3-stat">
+          <span class="p3-stat-num tabular-nums" style="color: #fb923c;">{severityCounts.breaking || 0}</span>
+          <span class="p3-stat-lbl">breaking</span>
+        </div>
+        <div class="p3-stat">
+          <span class="p3-stat-num tabular-nums" style="color: #fb923c;">{severityCounts.major || 0}</span>
+          <span class="p3-stat-lbl">major</span>
+        </div>
+        <div class="p3-stat">
+          <span class="p3-stat-num tabular-nums">{totalTools}</span>
+          <span class="p3-stat-lbl">tools covered</span>
+        </div>
+        <div class="p3-stat">
+          <span class="p3-stat-num tabular-nums">{totalCats}</span>
+          <span class="p3-stat-lbl">categories</span>
+        </div>
+      </div>
+
+      <div class="p3-newsdesk-signal-grid" data-reveal style="--reveal-delay: 180ms;" aria-label={`${currentMonthLabel} news summary`}>
+        {signalCards.map((card) => (
+          <div class="p3-newsdesk-signal-card home-surface-card">
+            <span class="p3-newsdesk-signal-label">{card.label}</span>
+            <strong class="p3-newsdesk-signal-value tabular-nums">{card.value}</strong>
+            <span class="p3-newsdesk-signal-note">{card.note}</span>
+          </div>
+        ))}
+      </div>
+      </Fragment>
+    </IndexHero>
+
+    <!-- =============== TOP STORY =============== -->
+    {topStory && (
+      <section class="p3-topstory-sec" aria-labelledby="top-story-heading" data-reveal style="--reveal-delay: 80ms;">
+        <a href={`/news/${topStory.n.slug}/`} class="p3-topstory home-surface-card">
+          <div class="p3-topstory-img">
+            <img
+              src={`/og/news/thumbs/${topStory.n.slug}.webp`}
+              alt=""
+              loading="eager"
+              decoding="async"
+              width="960"
+              height="504"
+              class="news-default-og-thumb news-default-og-thumb--dark"
+            />
+            <img
+              src={`/og/news/thumbs/light/${topStory.n.slug}.webp`}
+              alt=""
+              aria-hidden="true"
+              loading="eager"
+              decoding="async"
+              width="960"
+              height="504"
+              class="news-default-og-thumb news-default-og-thumb--light"
+            />
+            <div class="p3-topstory-img-fade"></div>
+          </div>
+          <div class="p3-topstory-body">
+            <div class="p3-topstory-label">
+              <span>{topStory.label}</span>
+              <span class={`p3-sev p3-sev-${topStory.n.severity}`}>{topStory.n.severity}</span>
+            </div>
+            <h2 id="top-story-heading" class="p3-topstory-title">{topStory.n.title}</h2>
+            {topStory.n.summary && (
+              <p class="p3-topstory-summary">{topStory.n.summary}</p>
+            )}
+            <div class="p3-topstory-meta">
+              <time datetime={topStory.n.date} class="p3-topstory-date">{formatNewsDate(topStory.n.date)}</time>
+              {topStory.n.affects.length > 0 && (
+                <span class="p3-topstory-affects">
+                  <span aria-hidden="true">·</span>
+                  <span>affects</span>
+                  {topStory.n.affects.slice(0, 4).map(t => (
+                    <span class="p3-topstory-affect-pill">{t}</span>
+                  ))}
+                  {topStory.n.affects.length > 4 && (
+                    <span class="p3-topstory-affect-pill">+{topStory.n.affects.length - 4}</span>
+                  )}
+                </span>
+              )}
+              <span class="p3-topstory-cta">Read story <span aria-hidden="true">→</span></span>
+            </div>
+          </div>
+        </a>
+      </section>
+    )}
+
+    <!-- =============== SPLIT: list + movers sidebar =============== -->
+    <section class="p3-newsdesk-split">
+      <div class="p3-newsdesk-main">
+
+        <!-- Filter rail: collapsible on narrow viewports to save vertical space -->
+        {sorted.length > 0 && (
+          <details class="p3-newsdesk-filters-details" data-pagefind-ignore data-reveal>
+            <summary class="p3-newsdesk-filters-summary">
+              <span class="p3-newsdesk-filters-summary-title">Filters</span>
+              <span id="news-filters-summary-state" class="p3-newsdesk-filters-summary-state" aria-live="polite"
+                >All stories</span
+              >
+              <span class="p3-newsdesk-filters-summary-chevron" aria-hidden="true"></span>
+            </summary>
+            <div id="news-filters" class="p3-newsdesk-filters" data-pagefind-ignore>
+            <div class="p3-newsdesk-filter-label">Severity</div>
+            <div class="p3-newsdesk-chips-row" role="tablist" aria-label="Filter by severity">
+              <button type="button" data-severity-filter="all" class="p3-chip p3-chip-active">
+                All <span class="p3-chip-count tabular-nums">{sorted.length}</span>
+              </button>
+              {(['breaking', 'major', 'minor'] as const).map((sev) => severityCounts[sev] ? (
+                <button type="button" data-severity-filter={sev} class="p3-chip">
+                  <span class="capitalize">{sev}</span>
+                  <span class="p3-chip-count tabular-nums">{severityCounts[sev]}</span>
+                </button>
+              ) : null)}
+            </div>
+
+            {categoryOptions.length > 0 && (
+              <>
+                <div class="p3-newsdesk-filter-label">Category</div>
+                <div id="category-chips" class="p3-newsdesk-chips-row p3-newsdesk-chips-cat" aria-label="Filter by category" data-expanded="false">
+                  <button type="button" data-category-filter="all" class="p3-chip p3-chip-active p3-chip-cat">
+                    All
+                  </button>
+                  {categoryOptions.map(({ slug, count }, i) => (
+                    <button
+                      type="button"
+                      data-category-filter={slug}
+                      class={`p3-chip p3-chip-cat ${i >= 5 ? 'p3-chip-overflow' : ''}`.trim()}
+                    >
+                      <span>{catLabel(slug)}</span>
+                      <span class="p3-chip-count tabular-nums">{count}</span>
+                    </button>
+                  ))}
+                  {categoryOptions.length > 5 && (
+                    <button
+                      type="button"
+                      id="category-expand-toggle"
+                      class="p3-chip p3-chip-cat p3-chip-more"
+                      aria-expanded="false"
+                      aria-controls="category-chips"
+                    >
+                      <span class="p3-chip-more-label">+{categoryOptions.length - 5} more</span>
+                      <span class="p3-chip-less-label" hidden>Show less</span>
+                    </button>
+                  )}
+                </div>
+              </>
+            )}
+
+            <div class="p3-newsdesk-filter-foot">
+              {toolOptions.length > 0 && (
+                <div class="p3-newsdesk-tool-dropdown">
+                  <label for="tool-filter-select" class="p3-newsdesk-tool-label">Tool</label>
+                  <select id="tool-filter-select" class="p3-newsdesk-tool-select">
+                    <option value="all">All tools</option>
+                    {toolOptions.map(({ slug, count }) => (
+                      <option value={slug}>{slug} ({count})</option>
+                    ))}
+                  </select>
+                </div>
+              )}
+              <button type="button" id="clear-filters" class="p3-newsdesk-clear hidden">
+                Clear filters
+              </button>
+            </div>
+            </div>
+          </details>
+        )}
+
+        <div class="p3-newsdesk-list-head" data-reveal>
+          <div>
+            <p class="p3-newsdesk-list-kicker">Verified feed</p>
+            <h2>Latest tool-market moves</h2>
+          </div>
+          <span>{sorted[0]?.date ?? 'Updating'} newest first</span>
+        </div>
+
+        <!-- News grid -->
+        <ul id="news-list" class="p3-newsdesk-grid">
+          {sorted.map((n, i) => (
+            <li
+              class="p3-newsdesk-item"
+              data-severity={n.severity}
+              data-affects={n.affects.join(',')}
+              data-categories={n.categories.join(',')}
+              data-reveal
+              style={`--reveal-delay: ${(i % 4) * 45}ms;`}
+            >
+              <a href={`/news/${n.slug}/`} class="p3-newsdesk-card home-surface-card">
+                <div class="p3-newsdesk-card-thumb">
+                  <img
+                    src={`/og/news/thumbs/${n.slug}.webp`}
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                    width="960"
+                    height="504"
+                    class="news-default-og-thumb news-default-og-thumb--dark"
+                  />
+                  <img
+                    src={`/og/news/thumbs/light/${n.slug}.webp`}
+                    alt=""
+                    aria-hidden="true"
+                    loading="lazy"
+                    decoding="async"
+                    width="960"
+                    height="504"
+                    class="news-default-og-thumb news-default-og-thumb--light"
+                  />
+                </div>
+                <div class="p3-newsdesk-card-body">
+                  <div class="p3-newsdesk-card-meta">
+                    <span class={`p3-sev p3-sev-${n.severity}`}>{n.severity}</span>
+                    <time datetime={n.date} class="p3-newsdesk-card-date tabular-nums">{formatNewsDate(n.date)}</time>
+                  </div>
+                  <h3 class="p3-newsdesk-card-title">{n.title}</h3>
+                  {n.summary && <p class="p3-newsdesk-card-summary">{n.summary}</p>}
+                  {n.affects.length > 0 && (
+                    <div class="p3-newsdesk-card-affects">
+                      {n.affects.slice(0, 3).map(t => (
+                        <span class="p3-newsdesk-card-affect-pill">{t}</span>
+                      ))}
+                      {n.affects.length > 3 && (
+                        <span class="p3-newsdesk-card-affect-pill p3-newsdesk-card-affect-more">+{n.affects.length - 3}</span>
+                      )}
+                    </div>
+                  )}
+                </div>
+              </a>
+            </li>
+          ))}
+        </ul>
+
+        <p id="no-matches" class="p3-newsdesk-empty hidden">
+          No news items match these filters. <a href="/news/">Clear filters</a> to see everything.
+        </p>
+      </div>
+
+      <!-- Movers sidebar -->
+      <aside class="p3-newsdesk-aside" aria-label="Movers and methodology">
+
+        {movers.length > 0 && (
+          <div class="p3-newsdesk-aside-card home-surface-card" data-reveal="right">
+            <div class="p3-newsdesk-aside-eyebrow">
+              <span>MOVERS · past 14 days</span>
+              <span class="p3-newsdesk-aside-eyebrow-sub">by mentions</span>
+            </div>
+            <ol class="p3-newsdesk-movers">
+              {movers.map((m, i) => (
+                <li>
+                  <a href={`/tools/${m.slug}/`} class="p3-newsdesk-mover home-surface-card">
+                    <span class="p3-newsdesk-mover-rank tabular-nums">{i + 1}</span>
+                    <span class="p3-newsdesk-mover-logo">
+                      <ToolLogo slug={m.slug} alt="" size={24} />
+                    </span>
+                    <span class="p3-newsdesk-mover-main">
+                      <span class="p3-newsdesk-mover-name">{m.title}</span>
+                      <span class="p3-newsdesk-mover-sub">
+                        <span class={`p3-sev p3-sev-${m.sev}`}>{m.sev}</span>
+                        <span class="tabular-nums">{m.count} {m.count === 1 ? 'mention' : 'mentions'}</span>
+                      </span>
+                    </span>
+                    <span class="p3-newsdesk-mover-arrow" aria-hidden="true">→</span>
+                  </a>
+                </li>
+              ))}
+            </ol>
+          </div>
+        )}
+
+        <div class="p3-newsdesk-aside-card home-surface-card" data-reveal="right" style="--reveal-delay: 70ms;">
+          <div class="p3-newsdesk-aside-eyebrow"><span>METHODOLOGY</span></div>
+          <p class="p3-newsdesk-aside-body">
+            Items are published when the first primary-source confirmation lands. We track pricing changes, model releases, acquisitions, shutdowns, and funding rounds that move a tool's utility, value, moat, or longevity score.
+          </p>
+          <a href="/about/editorial/" class="p3-method-link" style="display:inline-block; margin-top:8px;">How we verify →</a>
+        </div>
+
+        <div class="p3-newsdesk-aside-card home-surface-card p3-newsdesk-since" data-news-since-card hidden>
+          <div class="p3-newsdesk-aside-eyebrow">
+            <span>Since last visit</span>
+            <span class="p3-newsdesk-aside-eyebrow-sub">local</span>
+          </div>
+          <p class="p3-newsdesk-aside-body">
+            <strong class="tabular-nums" data-news-since-count>0</strong> new item<span data-news-since-plural>s</span> landed since you last opened the news desk.
+          </p>
+          <a href="#news-list" class="p3-newsdesk-since-link">Jump to latest</a>
+        </div>
+      </aside>
+    </section>
+
+    <!-- =============== EMAIL CAPTURE =============== -->
+    <div class="p3-email" data-reveal>
+      <EmailCapture variant="footer" source="news-index" />
+    </div>
+    </div>
+<!-- News-specific styling additions that extend p3-canvas.css. Kept
+       inline because these classes are only used by this page. -->
+  <style>
+    /* Map p3 copy tokens to homepage --home-* (this page is a .news-page-root). */
+    .news-page-root.p3-canvas {
+      --p3-line: var(--home-line);
+      --p3-line-strong: var(--home-line-strong);
+      --p3-surface: var(--home-panel);
+      --p3-surface-hover: var(--home-panel-strong);
+      --p3-fg: var(--home-on-card);
+      --p3-muted: var(--home-on-card-muted);
+      --p3-subtle: var(--home-dim);
+      --p3-accent-text: var(--home-accent);
+    }
+
+    /* hero tweaks */
+    .p3-newsdesk-hero {
+      padding: var(--site-index-hero-top) 0 var(--site-section-gap);
+      max-width: none;
+      position: relative;
+      isolation: isolate;
+    }
+    .p3-newsdesk-hero::before {
+      content: "";
+      position: absolute;
+      inset: 14px -18px auto -18px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(249, 115, 22, 0.52), rgba(249, 115, 22, 0.42), transparent);
+      opacity: 0.55;
+      pointer-events: none;
+    }
+    .p3-newsdesk-hero .p3-subhead {
+      max-width: 70ch;
+    }
+    .p3-newsdesk-statbar {
+      box-shadow: 0 18px 60px -38px rgba(249, 115, 22, 0.42);
+    }
+    .p3-newsdesk-signal-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--site-grid-gap);
+      margin-top: var(--site-content-gap-sm);
+    }
+    @media (min-width: 720px) {
+      .p3-newsdesk-signal-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    }
+    .p3-newsdesk-signal-card.home-surface-card {
+      padding: var(--site-card-padding);
+      min-width: 0;
+    }
+    .p3-newsdesk-signal-card.home-surface-card:hover {
+      transform: none;
+      box-shadow: none;
+      border-color: var(--home-card-outline);
+      background: var(--home-panel);
+    }
+    .p3-newsdesk-signal-label,
+    .p3-newsdesk-signal-note {
+      display: block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .p3-newsdesk-signal-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color: var(--p3-subtle);
+      margin-bottom: 7px;
+    }
+    .p3-newsdesk-signal-value {
+      display: block;
+      font-size: clamp(1.25rem, 2vw, 1.65rem);
+      line-height: 1;
+      color: var(--p3-fg);
+      margin-bottom: 5px;
+    }
+    .p3-newsdesk-signal-note {
+      font-size: 12px;
+      color: var(--p3-muted);
+    }
+
+    /* Mobile: one scrollable row instead of four stacked cards (~380px+ tall). */
+    @media (max-width: 639px) {
+      .p3-newsdesk-signal-grid {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        overscroll-behavior-x: contain;
+        touch-action: pan-x;
+        scroll-snap-type: x proximity;
+        gap: var(--site-grid-gap);
+        margin-top: var(--site-content-gap-sm);
+        padding-bottom: 2px;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+      }
+      .p3-newsdesk-signal-grid::-webkit-scrollbar {
+        display: none;
+      }
+      .p3-newsdesk-signal-card.home-surface-card {
+        flex: 0 0 auto;
+        width: min(76vw, 222px);
+        min-width: 156px;
+        padding: var(--site-card-gap);
+        scroll-snap-align: start;
+      }
+      .p3-newsdesk-signal-label {
+        font-size: 9px;
+        letter-spacing: 0.1em;
+        margin-bottom: 4px;
+      }
+      .p3-newsdesk-signal-value {
+        font-size: 1.2rem;
+        margin-bottom: 3px;
+      }
+      .p3-newsdesk-signal-note {
+        font-size: 11px;
+        line-height: 1.35;
+      }
+    }
+
+    /* ---- top story ---- */
+    .p3-topstory-sec {
+      margin-bottom: var(--site-section-gap);
+    }
+    .p3-topstory.home-surface-card {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0;
+      border-radius: var(--site-radius-card);
+      overflow: hidden;
+      position: relative;
+      text-decoration: none;
+      color: inherit;
+    }
+    @media (min-width: 900px) {
+      .p3-topstory.home-surface-card {
+        grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      }
+    }
+    .p3-topstory-img {
+      position: relative;
+      aspect-ratio: 1200 / 630;
+      overflow: hidden;
+      background:
+        radial-gradient(ellipse 75% 80% at 82% 12%, rgba(249, 115, 22, 0.12), transparent 62%),
+        #05060d;
+    }
+    @media (min-width: 900px) {
+      .p3-topstory-img { aspect-ratio: auto; height: 100%; min-height: 320px; }
+    }
+    .p3-topstory-img img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transition: transform 700ms cubic-bezier(.2,.7,.2,1), filter 260ms ease;
+    }
+    .p3-topstory:hover .p3-topstory-img img {
+      transform: scale(1.025);
+      filter: saturate(1.06) contrast(1.03);
+    }
+    .p3-topstory-img-fade {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(0deg, rgba(11, 9, 16, 0.25) 0%, transparent 40%);
+      pointer-events: none;
+    }
+    .light .p3-topstory-img-fade { background: linear-gradient(0deg, rgba(255,255,255,0.2) 0%, transparent 40%); }
+
+    .p3-topstory-body {
+      padding: var(--site-card-padding);
+      display: flex;
+      flex-direction: column;
+    }
+    @media (min-width: 900px) {
+      .p3-topstory-body { padding: clamp(1.5rem, 3vw, 2.5rem); }
+    }
+    .p3-topstory-label {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--site-card-gap);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      color: var(--p3-accent-text);
+      margin-bottom: var(--site-content-gap);
+    }
+    .p3-topstory-title {
+      font-size: clamp(1.5rem, 2.8vw, 2rem);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      color: var(--p3-fg);
+      margin: 0 0 14px;
+    }
+    .p3-topstory:hover .p3-topstory-title { color: var(--p3-accent-text); }
+    .p3-topstory-summary {
+      font-size: 14px;
+      line-height: 1.55;
+      color: var(--p3-muted);
+      margin: 0 0 18px;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .p3-topstory-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: var(--site-chip-gap);
+      padding-top: var(--site-card-gap);
+      border-top: 1px solid var(--p3-line);
+      font-size: 12px;
+      color: var(--p3-muted);
+      margin-top: auto;
+    }
+    .p3-topstory-date { color: var(--p3-subtle); }
+    .p3-topstory-affects {
+      display: inline-flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: var(--site-chip-gap);
+    }
+    .p3-topstory-affect-pill {
+      padding: 2px 7px;
+      border-radius: 999px;
+      background: var(--p3-surface-hover);
+      color: var(--p3-muted);
+      font-size: 11px;
+      font-weight: 600;
+    }
+    .p3-topstory-cta {
+      margin-left: auto;
+      font-weight: 600;
+      color: var(--p3-accent-text);
+      transition: transform 150ms ease;
+    }
+    .p3-topstory:hover .p3-topstory-cta { transform: translateX(3px); }
+
+    /* ---- split layout ---- */
+    .p3-newsdesk-split {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--site-panel-gap);
+      margin-bottom: var(--site-section-gap);
+    }
+    @media (min-width: 1000px) {
+      .p3-newsdesk-split {
+        grid-template-columns: minmax(0, 1fr) 300px;
+        gap: var(--site-panel-gap);
+        align-items: start;
+      }
+    }
+    .p3-newsdesk-main { min-width: 0; }
+
+    /* ---- filters (optional disclosure on small screens) ---- */
+    .p3-newsdesk-filters-details {
+      margin-bottom: var(--site-content-gap);
+      border: none;
+      padding: 0;
+    }
+    .p3-newsdesk-filters-details > summary {
+      list-style: none;
+      cursor: pointer;
+      display: none;
+    }
+    .p3-newsdesk-filters-details > summary::-webkit-details-marker {
+      display: none;
+    }
+    .p3-newsdesk-filters-summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--site-card-gap);
+      padding: var(--site-card-gap) var(--site-card-padding);
+      border-radius: var(--site-radius-control);
+      border: 1px solid var(--p3-line);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.025), transparent),
+        var(--p3-surface);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--p3-fg);
+      -webkit-tap-highlight-color: transparent;
+    }
+    .p3-newsdesk-filters-summary-title {
+      flex: none;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--p3-subtle);
+    }
+    .p3-newsdesk-filters-summary-state {
+      flex: 1;
+      min-width: 0;
+      text-align: right;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: normal;
+      text-transform: none;
+      color: var(--p3-muted);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .p3-newsdesk-filters-summary-chevron {
+      flex: none;
+      width: 9px;
+      height: 9px;
+      margin-left: 2px;
+      border-right: 2px solid var(--p3-muted);
+      border-bottom: 2px solid var(--p3-muted);
+      transform: rotate(45deg) translateY(-2px);
+      transition: transform 120ms ease;
+      opacity: 0.85;
+    }
+    .p3-newsdesk-filters-details[open] .p3-newsdesk-filters-summary-chevron {
+      transform: rotate(225deg) translateY(1px);
+    }
+
+    /* ---- filters ---- */
+    .p3-newsdesk-filters {
+      padding: var(--site-card-padding);
+      border-radius: var(--site-radius-card);
+      border: 1px solid var(--p3-line);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.025), transparent),
+        var(--p3-surface);
+      margin-bottom: 0;
+    }
+    .p3-newsdesk-filter-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--p3-subtle);
+      margin-bottom: var(--site-card-gap);
+    }
+    .p3-newsdesk-filter-label + .p3-newsdesk-chips-row {
+      margin-bottom: var(--site-content-gap-sm);
+    }
+    .p3-newsdesk-chips-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--site-chip-gap);
+    }
+    .p3-chip-cat { font-size: 11.5px; }
+    /* Overflow categories hidden by default; revealed when parent is expanded */
+    .p3-newsdesk-chips-cat .p3-chip-overflow { display: none; }
+    .p3-newsdesk-chips-cat[data-expanded="true"] .p3-chip-overflow { display: inline-flex; }
+    .p3-newsdesk-chips-cat[data-expanded="true"] .p3-chip-more .p3-chip-more-label { display: none; }
+    .p3-newsdesk-chips-cat[data-expanded="true"] .p3-chip-more .p3-chip-less-label {
+      display: inline !important;
+    }
+    .p3-chip-more {
+      color: var(--p3-accent-text);
+      background: rgba(249, 115, 22, 0.08);
+      border-color: rgba(249, 115, 22, 0.28);
+    }
+    .p3-chip-more:hover {
+      background: rgba(249, 115, 22, 0.16);
+      color: var(--p3-accent-text);
+    }
+
+    /* Mobile: severity chips never wrap. They sit in a horizontal-scroll
+       row with subtle edge-fade so 4 chips fit in one line on narrow
+       viewports without the screen getting dumped full of chips. */
+    @media (max-width: 640px) {
+      .p3-newsdesk-filters-details { margin-bottom: 14px; }
+      .p3-newsdesk-filters-details > summary {
+        display: flex;
+      }
+      .p3-newsdesk-filters-details[open] > summary {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border-bottom-color: transparent;
+        margin-bottom: 0;
+      }
+      .p3-newsdesk-filters-details[open] .p3-newsdesk-filters {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-top: none;
+      }
+      .p3-newsdesk-filters { padding: 10px 10px 8px; }
+      .p3-newsdesk-filter-label {
+        margin-bottom: 5px;
+        font-size: 9px;
+        letter-spacing: 0.12em;
+      }
+      .p3-newsdesk-filter-label + .p3-newsdesk-chips-row { margin-bottom: 8px; }
+      .p3-newsdesk-chips-row {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        touch-action: pan-x;
+        scroll-snap-type: x proximity;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 3px;
+        margin-right: 0;
+        padding-right: 0;
+        max-width: 100%;
+        mask-image: linear-gradient(90deg, #000 0, #000 calc(100% - 24px), transparent);
+      }
+      .p3-newsdesk-chips-row::-webkit-scrollbar { display: none; }
+      .p3-newsdesk-chips-row { scrollbar-width: none; }
+      .p3-newsdesk-chips-row .p3-chip {
+        flex: none;
+        scroll-snap-align: start;
+        min-height: 40px;
+        padding: 6px 10px;
+      }
+      /* Category chips: same single scroll row as severity (no wrap). */
+      .p3-newsdesk-chips-cat {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        touch-action: pan-x;
+        mask-image: linear-gradient(90deg, #000 0, #000 calc(100% - 24px), transparent);
+      }
+      .p3-newsdesk-filter-foot {
+        margin-top: 8px;
+        padding-top: 8px;
+        gap: 8px;
+      }
+      .p3-newsdesk-tool-select {
+        min-height: 40px;
+        max-width: min(170px, 56vw);
+      }
+      .p3-newsdesk-clear {
+        min-height: 40px;
+        padding: 4px 9px;
+      }
+    }
+
+    .p3-newsdesk-filter-foot {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: var(--site-card-gap);
+      margin-top: var(--site-card-gap);
+      padding-top: var(--site-card-gap);
+      border-top: 1px dashed var(--p3-line);
+      font-size: 11.5px;
+    }
+    .p3-newsdesk-tool-dropdown {
+      display: flex;
+      align-items: center;
+      gap: var(--site-chip-gap);
+    }
+    .p3-newsdesk-tool-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--p3-subtle);
+    }
+    .p3-newsdesk-tool-select {
+      appearance: none;
+      -webkit-appearance: none;
+      background: var(--p3-surface-hover) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2.5'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") no-repeat right 10px center;
+      background-size: 10px;
+      color: var(--p3-fg);
+      border: 1px solid var(--p3-line);
+      border-radius: 8px;
+      padding: 5px 26px 5px 10px;
+      font: inherit;
+      font-size: 12px;
+      cursor: pointer;
+      max-width: 170px;
+      min-height: 44px;
+    }
+    .p3-newsdesk-tool-select:focus {
+      outline: 2px solid rgba(249, 115, 22,0.4);
+      outline-offset: 1px;
+    }
+    .p3-newsdesk-clear {
+      background: transparent;
+      border: 1px solid var(--p3-line);
+      color: var(--p3-muted);
+      border-radius: 999px;
+      padding: 4px 10px;
+      min-height: 44px;
+      font-size: 11px;
+      cursor: pointer;
+      transition: color 120ms ease, border-color 120ms ease;
+    }
+    .p3-newsdesk-clear:hover {
+      color: var(--p3-accent-text);
+      border-color: rgba(249, 115, 22, 0.35);
+    }
+    .p3-newsdesk-clear.hidden { display: none; }
+
+    .p3-newsdesk-list-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: var(--site-content-gap);
+      margin: var(--site-content-gap) 0 var(--site-card-gap);
+      padding-bottom: var(--site-card-gap);
+      border-bottom: 1px solid var(--p3-line);
+    }
+    .p3-newsdesk-list-head h2 {
+      margin: 0;
+      font-size: clamp(1.35rem, 2.5vw, 1.9rem);
+      letter-spacing: -0.02em;
+      color: var(--p3-fg);
+    }
+    .p3-newsdesk-list-head > span {
+      flex: none;
+      font-size: 12px;
+      color: var(--p3-subtle);
+      font-variant-numeric: tabular-nums;
+    }
+    .p3-newsdesk-list-kicker {
+      margin: 0 0 5px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--p3-accent-text);
+    }
+    @media (max-width: 640px) {
+      .p3-newsdesk-list-head {
+        align-items: start;
+        flex-direction: column;
+        gap: 6px;
+      }
+    }
+
+    /* ---- grid of news cards ---- */
+    .p3-newsdesk-grid {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--site-grid-gap);
+    }
+    @media (min-width: 700px) {
+      .p3-newsdesk-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    .p3-newsdesk-card.home-surface-card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      border-radius: var(--site-radius-card);
+      overflow: hidden;
+    }
+    .p3-newsdesk-card.home-surface-card:hover {
+      transform: none;
+      box-shadow: none;
+    }
+    .p3-newsdesk-card-thumb {
+      aspect-ratio: 1200 / 630;
+      overflow: hidden;
+      background: var(--home-inner-panel);
+    }
+    .p3-newsdesk-card-thumb img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 420ms cubic-bezier(.2,.7,.2,1), filter 180ms ease;
+    }
+    .p3-newsdesk-card:hover .p3-newsdesk-card-thumb img {
+      transform: scale(1.025);
+      filter: saturate(1.05);
+    }
+    .p3-newsdesk-card-body {
+      padding: var(--site-card-padding);
+      display: flex;
+      flex-direction: column;
+      gap: var(--site-card-gap);
+      flex: 1;
+    }
+    .p3-newsdesk-card-meta {
+      display: flex;
+      align-items: center;
+      gap: var(--site-card-gap);
+    }
+    .p3-newsdesk-card-date { font-size: 11px; color: var(--p3-subtle); }
+    /* Title exists for a11y, SEO, and image-fails-to-load fallback, but
+       the OG image above already carries the headline visually. Demoted
+       to caption-weight (13.5/600 + muted) so it doesn't fight the image. */
+    .p3-newsdesk-card-title {
+      font-size: 13.5px;
+      font-weight: 600;
+      line-height: 1.35;
+      letter-spacing: -0.005em;
+      color: var(--p3-muted);
+      margin: 0;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .p3-newsdesk-card:hover .p3-newsdesk-card-title { color: var(--p3-accent-text); }
+    /* Summary becomes the primary body text for each card. */
+    .p3-newsdesk-card-summary {
+      font-size: 13px;
+      line-height: 1.5;
+      color: var(--p3-fg);
+      margin: 0;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .p3-newsdesk-card-affects {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin-top: auto;
+      padding-top: 6px;
+    }
+    .p3-newsdesk-card-affect-pill {
+      padding: 1px 6px;
+      border-radius: 999px;
+      background: var(--p3-surface-hover);
+      color: var(--p3-muted);
+      font-size: 10.5px;
+      font-weight: 600;
+    }
+    .p3-newsdesk-card-affect-more { color: var(--p3-subtle); }
+
+    .p3-newsdesk-empty {
+      padding: var(--site-card-padding);
+      border-radius: var(--site-radius-card);
+      border: 1px dashed var(--p3-line);
+      text-align: center;
+      font-size: 13px;
+      color: var(--p3-muted);
+      margin: 14px 0 0;
+    }
+    .p3-newsdesk-empty.hidden { display: none; }
+    .p3-newsdesk-empty a { color: var(--p3-accent-text); }
+
+    /* ---- sidebar ---- */
+    .p3-newsdesk-aside {
+      display: flex;
+      flex-direction: column;
+      gap: var(--site-grid-gap);
+      min-width: 0;
+    }
+    @media (min-width: 1000px) {
+      .p3-newsdesk-aside { position: sticky; top: 80px; }
+    }
+    .p3-newsdesk-aside-card.home-surface-card {
+      padding: var(--site-card-padding);
+    }
+    .p3-newsdesk-aside-card.home-surface-card:hover {
+      transform: none;
+      box-shadow: none;
+      border-color: var(--home-card-outline);
+      background: var(--home-panel);
+    }
+    .p3-newsdesk-aside-eyebrow {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 8px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      color: var(--p3-accent-text);
+      margin-bottom: 12px;
+    }
+    .p3-newsdesk-aside-eyebrow-sub {
+      letter-spacing: 0.08em;
+      font-weight: 500;
+      color: var(--p3-subtle);
+    }
+    .p3-newsdesk-aside-body {
+      font-size: 12.5px;
+      line-height: 1.55;
+      color: var(--p3-muted);
+      margin: 0;
+    }
+    .p3-newsdesk-aside-body strong {
+      color: var(--p3-accent-text);
+      font-size: 18px;
+      font-weight: 900;
+    }
+    .p3-newsdesk-since-link {
+      display: inline-flex;
+      margin-top: 10px;
+      color: var(--p3-accent-text);
+      font-size: 12px;
+      font-weight: 850;
+      text-decoration: none;
+    }
+    .p3-newsdesk-since-link:hover {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .p3-newsdesk-movers {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .p3-newsdesk-mover.home-surface-card {
+      display: grid;
+      grid-template-columns: 18px 28px 1fr auto;
+      align-items: center;
+      gap: var(--site-card-gap);
+      padding: var(--site-card-gap);
+      border-radius: var(--site-radius-card);
+      text-decoration: none;
+      color: inherit;
+    }
+    .p3-newsdesk-mover.home-surface-card:hover {
+      transform: none;
+    }
+    .p3-newsdesk-mover-rank {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--p3-subtle);
+      text-align: center;
+    }
+    .p3-newsdesk-mover-logo {
+      width: 28px;
+      height: 28px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .p3-newsdesk-mover-main {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      min-width: 0;
+    }
+    .p3-newsdesk-mover-name {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--p3-fg);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .p3-newsdesk-mover:hover .p3-newsdesk-mover-name { color: var(--p3-accent-text); }
+    .p3-newsdesk-mover-sub {
+      display: flex;
+      align-items: center;
+      gap: var(--site-chip-gap);
+      font-size: 10.5px;
+      color: var(--p3-subtle);
+    }
+    .p3-newsdesk-mover-arrow {
+      color: var(--p3-subtle);
+      font-size: 14px;
+      transition: color 120ms ease, transform 120ms ease;
+    }
+    .p3-newsdesk-mover:hover .p3-newsdesk-mover-arrow {
+      color: var(--p3-accent-text);
+      transform: translateX(2px);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .p3-newsdesk-signal-card.home-surface-card,
+      .p3-topstory.home-surface-card,
+      .p3-topstory-img img,
+      .p3-newsdesk-card.home-surface-card,
+      .p3-newsdesk-card-thumb img,
+      .p3-newsdesk-aside-card.home-surface-card,
+      .p3-newsdesk-mover.home-surface-card {
+        transition: none;
+        transform: none !important;
+      }
+    }
+  </style>
+
+  <script is:inline>
+    // News filter: severity chips + category chips + tool select,
+    // URL-synced. Functional parity with the prior dropdown UI.
+    (function () {
+      const root = document.getElementById('news-filters');
+      const list = document.getElementById('news-list');
+      if (!root || !list) return;
+
+      const detailsEl = root.closest('details.p3-newsdesk-filters-details');
+      const summaryState = document.getElementById('news-filters-summary-state');
+      const mqWide = window.matchMedia('(min-width: 641px)');
+
+      function filterActiveFromParams(p) {
+        return (
+          (p.get('severity') && p.get('severity') !== 'all') ||
+          (p.get('category') && p.get('category') !== 'all') ||
+          (p.get('tool') && p.get('tool') !== 'all')
+        );
+      }
+
+      function syncFiltersDetailsOpen() {
+        if (!detailsEl) return;
+        if (mqWide.matches) {
+          detailsEl.setAttribute('open', '');
+          return;
+        }
+        const p = new URLSearchParams(location.search);
+        if (filterActiveFromParams(p)) detailsEl.setAttribute('open', '');
+        else detailsEl.removeAttribute('open');
+      }
+
+      function formatCategoryLabel(slug) {
+        return String(slug || '')
+          .replace(/-/g, ' ')
+          .replace(/\b\w/g, (c) => c.toUpperCase());
+      }
+
+      function formatSummaryLine(state) {
+        if (state.severity === 'all' && state.category === 'all' && state.tool === 'all') {
+          return 'All stories';
+        }
+        const parts = [];
+        if (state.severity !== 'all') {
+          const s = state.severity || '';
+          parts.push(s.charAt(0).toUpperCase() + s.slice(1));
+        }
+        if (state.category !== 'all') parts.push(formatCategoryLabel(state.category));
+        if (state.tool !== 'all') parts.push(state.tool);
+        return parts.join(' · ');
+      }
+
+      syncFiltersDetailsOpen();
+      mqWide.addEventListener('change', syncFiltersDetailsOpen);
+
+      const sevChips = root.querySelectorAll('[data-severity-filter]');
+      const catChips = root.querySelectorAll('[data-category-filter]');
+      const toolSelect = document.getElementById('tool-filter-select');
+      const clearBtn = document.getElementById('clear-filters');
+      const noMatches = document.getElementById('no-matches');
+      const items = Array.from(list.querySelectorAll('.p3-newsdesk-item'));
+
+      // Category overflow: tap "+N more" to reveal the long tail, tap
+      // "Show less" to collapse. If a hidden chip is selected via URL,
+      // auto-expand so the active chip is visible.
+      const catContainer = document.getElementById('category-chips');
+      const catToggle = document.getElementById('category-expand-toggle');
+      if (catToggle && catContainer) {
+        catToggle.addEventListener('click', () => {
+          const expanded = catContainer.getAttribute('data-expanded') === 'true';
+          catContainer.setAttribute('data-expanded', expanded ? 'false' : 'true');
+          catToggle.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+        });
+      }
+
+      function readParams() {
+        const p = new URLSearchParams(location.search);
+        return {
+          severity: p.get('severity') || 'all',
+          tool: p.get('tool') || 'all',
+          category: p.get('category') || 'all',
+        };
+      }
+      function writeParams(state) {
+        const p = new URLSearchParams();
+        if (state.severity !== 'all') p.set('severity', state.severity);
+        if (state.tool !== 'all') p.set('tool', state.tool);
+        if (state.category !== 'all') p.set('category', state.category);
+        const qs = p.toString();
+        history.replaceState(null, '', location.pathname + (qs ? '?' + qs : '') + location.hash);
+      }
+
+      function apply(state) {
+        let visible = 0;
+        items.forEach((el) => {
+          const sev = el.getAttribute('data-severity') || 'minor';
+          const affects = (el.getAttribute('data-affects') || '').split(',').filter(Boolean);
+          const cats = (el.getAttribute('data-categories') || '').split(',').filter(Boolean);
+          const sevOk = state.severity === 'all' || sev === state.severity;
+          const toolOk = state.tool === 'all' || affects.includes(state.tool);
+          const catOk = state.category === 'all' || cats.includes(state.category);
+          const show = sevOk && toolOk && catOk;
+          el.style.display = show ? '' : 'none';
+          if (show) visible++;
+        });
+        sevChips.forEach((c) => {
+          const v = c.getAttribute('data-severity-filter');
+          c.classList.toggle('p3-chip-active', v === state.severity);
+        });
+        catChips.forEach((c) => {
+          const v = c.getAttribute('data-category-filter');
+          c.classList.toggle('p3-chip-active', v === state.category);
+        });
+        if (toolSelect) toolSelect.value = state.tool;
+        const anyFilter = state.severity !== 'all' || state.tool !== 'all' || state.category !== 'all';
+        if (clearBtn) clearBtn.classList.toggle('hidden', !anyFilter);
+        if (noMatches) noMatches.classList.toggle('hidden', visible !== 0);
+        if (summaryState) summaryState.textContent = formatSummaryLine(state);
+      }
+
+      let state = readParams();
+      // If the initial URL-selected category is hidden in the overflow
+      // set, expand the overflow row so the active chip is visible.
+      if (catContainer && state.category !== 'all') {
+        const selected = root.querySelector(`[data-category-filter="${CSS.escape(state.category)}"]`);
+        if (selected && selected.classList.contains('p3-chip-overflow')) {
+          catContainer.setAttribute('data-expanded', 'true');
+          if (catToggle) catToggle.setAttribute('aria-expanded', 'true');
+        }
+      }
+      apply(state);
+
+      sevChips.forEach((c) => {
+        c.addEventListener('click', () => {
+          state = { ...state, severity: c.getAttribute('data-severity-filter') || 'all' };
+          writeParams(state);
+          apply(state);
+        });
+      });
+      catChips.forEach((c) => {
+        c.addEventListener('click', () => {
+          state = { ...state, category: c.getAttribute('data-category-filter') || 'all' };
+          writeParams(state);
+          apply(state);
+        });
+      });
+      if (toolSelect) {
+        toolSelect.addEventListener('change', () => {
+          state = { ...state, tool: toolSelect.value || 'all' };
+          writeParams(state);
+          apply(state);
+        });
+      }
+      if (clearBtn) {
+        clearBtn.addEventListener('click', () => {
+          state = { severity: 'all', tool: 'all', category: 'all' };
+          writeParams(state);
+          apply(state);
+          syncFiltersDetailsOpen();
+        });
+      }
+    })();
+  </script>
+
+  <script is:inline define:vars={{ newsDates: sorted.map((n) => n.date).filter(Boolean) }}>
+    (function () {
+      const KEY = 'aipedia-news-last-visit';
+      const card = document.querySelector('[data-news-since-card]');
+      if (!card) return;
+      const countEl = card.querySelector('[data-news-since-count]');
+      const pluralEl = card.querySelector('[data-news-since-plural]');
+      const dates = Array.isArray(newsDates) ? newsDates : [];
+      const last = Number(localStorage.getItem(KEY) || 0);
+      if (last > 0) {
+        const count = dates.filter((date) => {
+          const time = Date.parse(date);
+          return time && time > last;
+        }).length;
+        if (count > 0) {
+          if (countEl) countEl.textContent = String(count);
+          if (pluralEl) pluralEl.hidden = count === 1;
+          card.hidden = false;
+        }
+      }
+      window.setTimeout(() => {
+        try {
+          localStorage.setItem(KEY, String(Date.now()));
+        } catch (_) {}
+      }, 900);
+    })();
+  </script>
+</BaseLayout>

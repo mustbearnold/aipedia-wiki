@@ -1,0 +1,885 @@
+---
+/**
+ * ToolLayout — production tool-page template.
+ *
+ * Visual system promoted from the /demo-claude/ redesign: single-accent
+ * palette, flat score card with sparkbars, compact chip strip, inline
+ * Quick Answer block from frontmatter, floating TOC, <details> FAQ
+ * accordion, and the "strip redundant System Verdict" script. SEO
+ * JSON-LD, sticky mobile CTA, reviews, related comparisons, and
+ * recently-viewed tracking are preserved from the prior layout.
+ */
+import { getCollection } from 'astro:content';
+import BaseLayout from './BaseLayout.astro';
+import '../styles/t2-canvas.css';
+import ReadingProgress from '../components/ReadingProgress.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import BreadcrumbLD from '../components/seo/BreadcrumbLD.astro';
+import SoftwareApplicationLD from '../components/seo/SoftwareApplicationLD.astro';
+import FAQPageLD from '../components/seo/FAQPageLD.astro';
+import ToolLogo from '../components/ToolLogo.astro';
+import CommercialCTA from '../components/CommercialCTA.astro';
+import StickyMobileCTA from '../components/StickyMobileCTA.astro';
+import GithubStats from '../components/GithubStats.astro';
+import ProsCons from '../components/ProsCons.astro';
+import RelatedComparisons from '../components/RelatedComparisons.astro';
+import ReviewsBlock from '../components/ReviewsBlock.astro';
+import ShareButtons from '../components/ShareButtons.astro';
+import FAQAccordionScript from '../components/FAQAccordionScript.astro';
+import PostBodyEnhancements from '../components/PostBodyEnhancements.astro';
+import HelpfulVote from '../components/HelpfulVote.astro';
+import FeedbackForm from '../components/FeedbackForm.astro';
+import ReportOutdatedButton from '../components/ReportOutdatedButton.astro';
+import BadgeEmbed from '../components/BadgeEmbed.astro';
+import CiteThisPage from '../components/CiteThisPage.astro';
+import ToolIntelPanel from '../components/ToolIntelPanel.astro';
+import { categoryLabel, isActiveToolStatus, overallScore } from '../utils/tool-metadata';
+
+interface Props {
+  frontmatter: Record<string, any>;
+  faqItems?: Array<{ question: string; answer: string }>;
+  headings?: Array<{ depth: number; slug: string; text: string }>;
+  readingMinutes?: number;
+}
+
+const { frontmatter, faqItems = [], headings = [], readingMinutes = 0 } = Astro.props;
+const f = frontmatter;
+
+const scores = f.scores ?? { utility: 0, value: 0, moat: 0, longevity: 0 };
+const overall = overallScore(scores);
+const catSlug = f.category ?? '';
+const catLabel = categoryLabel(catSlug);
+
+const toolSlug = f.slug ?? '';
+const siteBase = Astro.site?.href ?? 'https://aipedia.wiki';
+const affiliate = f.affiliate ?? {};
+const pageMode = f.page_mode ?? 'dossier';
+const showSupplementalSections = pageMode !== 'dossier';
+
+const breadcrumbLdItems = [
+  { name: 'Home', url: `${siteBase}` },
+  { name: catLabel, url: `${siteBase}categories/${catSlug}/` },
+  { name: f.title, url: `${siteBase}tools/${toolSlug}/` },
+];
+
+// Peer alternatives for the in-prose "Top alternatives" section: same
+// primary category, sorted by overall score descending. Excludes self.
+const allTools = await getCollection('tools');
+const allNews = await getCollection('news');
+const allComparisons = await getCollection('comparisons');
+const entrySlug = (entry: any) => entry.data.slug ?? entry.id.replace(/\.md$/, '').replace(/\\/g, '/');
+const toolMetaBySlug = new Map(
+  allTools.map((tool) => {
+    const slug = tool.data.slug ?? tool.id.replace(/\.md$/, '').replace(/\\/g, '/');
+    return [
+      slug,
+      {
+        category: tool.data.category ?? '',
+        score: overallScore(tool.data.scores ?? {}),
+      },
+    ];
+  })
+);
+const peers = allTools
+  .filter(t => t.data.category === f.category && (t.data.slug ?? t.id) !== (f.slug ?? toolSlug))
+  .map(t => {
+    const s = t.data.scores ?? { utility: 0, value: 0, moat: 0, longevity: 0 };
+    const avg = overallScore(s);
+    return {
+      slug: t.data.slug ?? t.id,
+      title: t.data.title,
+      tagline: t.data.tagline ?? '',
+      score: avg,
+      price: t.data.price_range ?? '',
+    };
+  })
+  .sort((a, b) => b.score - a.score);
+
+// Price history: newest first for display.
+const priceHistory = Array.isArray(f.price_history) ? [...f.price_history].reverse() : [];
+const monthShort = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+function formatHistoryDate(v: unknown): string {
+  if (!v) return '';
+  const d = v instanceof Date ? v : new Date(String(v));
+  if (isNaN(d.getTime())) return String(v);
+  return `${monthShort[d.getUTCMonth()]} ${d.getUTCDate()}, ${d.getUTCFullYear()}`;
+}
+
+// Sparkbars: tier colors match the homepage card treatment.
+function barColor(n: number): string {
+  if (n >= 8) return '#34d399';
+  if (n >= 7) return '#fb923c';
+  if (n >= 6) return '#fbbf24';
+  return '#fb7185';
+}
+const sparkbars = [
+  { label: 'Utility', value: scores.utility ?? 0 },
+  { label: 'Value', value: scores.value ?? 0 },
+  { label: 'Moat', value: scores.moat ?? 0 },
+  { label: 'Longevity', value: scores.longevity ?? 0 },
+].map(b => ({ ...b, color: barColor(b.value), pct: Math.max(15, Math.min(100, (b.value / 10) * 100)) }));
+
+// TOC: markdown H2s + the two extra sections we render in Astro below.
+// Extras are inserted before the final "Related" section if present,
+// otherwise appended. System Verdict is filtered out because it is
+// removed from the DOM by a script below (content is redundant with
+// the Quick Answer block that sits above the article).
+const markdownH2s = (headings ?? [])
+  .filter(h => h.depth === 2 && h.slug !== 'system-verdict')
+  .map(h => ({ slug: h.slug, text: h.text }));
+const extraTocItems = [] as Array<{ slug: string; text: string }>;
+if (showSupplementalSections && priceHistory.length > 0) extraTocItems.push({ slug: 'price-history', text: 'Price history' });
+if (showSupplementalSections && peers.length > 0) extraTocItems.push({ slug: 'top-alternatives', text: 'Top alternatives' });
+const relatedIdx = markdownH2s.findIndex(h => h.slug === 'related');
+const tocHeadings = relatedIdx >= 0
+  ? [...markdownH2s.slice(0, relatedIdx), ...extraTocItems, ...markdownH2s.slice(relatedIdx)]
+  : [...markdownH2s, ...extraTocItems];
+
+const launchedStr = f.launched ? String(f.launched).slice(0, 4) : '';
+const verifiedStr = f.last_verified
+  ? (() => { const d = new Date(String(f.last_verified)); const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']; return `${months[d.getUTCMonth()]} ${d.getUTCFullYear()}`; })()
+  : '';
+
+// Category rank + percentile. Surfaces "Top pick in {category}" for the
+// highest-scoring tool in a category and "#N in {category}" for the rest.
+// Based on the same score as the homepage rail, so the signals match.
+const categoryPeers = allTools
+  .filter(t => t.data.category === f.category && isActiveToolStatus(t.data.status))
+  .map(t => {
+    const s = t.data.scores ?? {};
+    return {
+      slug: t.data.slug ?? t.id,
+      score: overallScore(s),
+    };
+  })
+  .sort((a, b) => b.score - a.score);
+const categorySize = categoryPeers.length;
+const categoryRank = categoryPeers.findIndex(p => p.slug === (f.slug ?? toolSlug)) + 1;
+// Top pick only if score ties or beats the highest, AND the tool is active.
+const isTopPick = isActiveToolStatus(f.status) && categoryRank === 1 && overall >= 7.5;
+const isHighRank = categoryRank > 1 && categoryRank <= 3 && categorySize >= 6 && overall >= 7;
+const rankLabel = isTopPick
+  ? `Top pick in ${catLabel}`
+  : isHighRank ? `#${categoryRank} in ${catLabel}` : '';
+
+const decisionBrief = f.decision_brief && Array.isArray(f.decision_brief.items)
+  ? f.decision_brief
+  : null;
+
+function cleanSnippet(value: unknown, fallback = ''): string {
+  if (!value) return fallback;
+  const text = String(value)
+    .replace(/\s+/g, ' ')
+    .replace(/\.$/, '')
+    .trim();
+  if (!text) return fallback;
+  return text.charAt(0).toUpperCase() + text.slice(1);
+}
+
+function factValue(key: string): string {
+  const fact = f.facts?.[key];
+  if (!fact) return '';
+  if (typeof fact === 'string') return fact.trim();
+  return String(fact.value ?? '').trim();
+}
+
+function signalTone(label: unknown, value?: unknown): 'positive' | 'negative' | 'neutral' {
+  const text = `${label ?? ''} ${value ?? ''}`.toLowerCase();
+  if (/\b(watch|avoid|not best|not ideal|limitation|risk|weak|caps?|ads?|no video|verify before buying)\b/.test(text)) {
+    return 'negative';
+  }
+  if (/\b(best|top pick|start here|use it|verified|active|strong|free|open source)\b/.test(text)) {
+    return 'positive';
+  }
+  return 'neutral';
+}
+
+const firstBestFor = Array.isArray(f.best_for) && f.best_for.length > 0
+  ? cleanSnippet(f.best_for[0])
+  : catLabel ? `${catLabel} workflows` : 'Primary workflow';
+const firstNotBestFor = Array.isArray(f.not_best_for) && f.not_best_for.length > 0
+  ? cleanSnippet(f.not_best_for[0])
+  : 'Narrow edge cases';
+const pricingGlance = cleanSnippet(f.price_range, f.pricing_model ? cleanSnippet(f.pricing_model) : 'Check pricing');
+const bestPlanGlance = cleanSnippet(
+  f.best_plan ?? f.plan_recommendation ?? factValue('best_paid_tier'),
+  pricingGlance
+);
+const modelLabels: Record<string, string> = {
+  free: 'Free product',
+  freemium: 'Free + paid plans',
+  paid: 'Paid product',
+  enterprise: 'Enterprise product',
+  'open-source': 'Open-source + cloud',
+};
+const modelGlance = f.pricing_model ? modelLabels[f.pricing_model] ?? cleanSnippet(f.pricing_model) : 'Verified tool';
+const generatedHeroGlance = {
+  items: [
+    { label: 'Best plan', value: bestPlanGlance, detail: modelGlance, tone: 'positive' },
+    { label: 'Best for', value: firstBestFor, detail: catLabel, tone: 'positive' },
+    { label: 'Watch', value: firstNotBestFor, detail: 'Check fit before switching', tone: 'negative' },
+  ],
+};
+const heroGlance = f.hero_glance && Array.isArray(f.hero_glance.items)
+  ? f.hero_glance
+  : generatedHeroGlance;
+const generatedDecisionBrief = {
+  items: [
+    { label: 'Use it for', value: firstBestFor, detail: catLabel ? `Best-fit ${catLabel.toLowerCase()} use case.` : '', tone: 'positive' },
+    { label: 'Watch for', value: firstNotBestFor, detail: 'Not every workflow needs this tool.', tone: 'negative' },
+    { label: 'Plan pick', value: bestPlanGlance, detail: 'Verify limits before committing.', tone: 'positive' },
+  ],
+};
+const effectiveDecisionBrief = decisionBrief ?? (f.quick_answer ? generatedDecisionBrief : null);
+const scoreBand = overall >= 9
+  ? 'Top-tier score'
+  : overall >= 8
+    ? 'Strong score'
+    : overall >= 6.5
+      ? 'Useful, with tradeoffs'
+      : 'Niche score';
+const scoreTone = overall >= 8 ? 'positive' : overall >= 6.5 ? 'neutral' : 'negative';
+const scoreNote = f.score_note ?? decisionBrief?.score_note ?? '';
+const primaryCtaLabel = f.primary_cta_label
+  ?? (f.pricing_model === 'freemium' ? `Open ${f.title}` : f.pricing_model === 'free' ? `Open ${f.title}` : `Visit ${f.title}`);
+
+// "Verified" freshness badge. Anything verified within 30 days reads as
+// fresh; 30-90 days as recent; older is hidden so it doesn't read stale.
+function daysSince(v: unknown): number {
+  if (!v) return Infinity;
+  const d = new Date(String(v));
+  if (isNaN(d.getTime())) return Infinity;
+  return Math.floor((Date.now() - d.getTime()) / 86400000);
+}
+const verifiedDays = daysSince(f.last_verified);
+const isFreshVerified = verifiedDays <= 30;
+const isRecentVerified = verifiedDays > 30 && verifiedDays <= 90;
+
+function newsDate(value: unknown): string {
+  if (!value) return '';
+  const d = value instanceof Date ? value : new Date(String(value));
+  return isNaN(d.getTime()) ? String(value) : d.toISOString().slice(0, 10);
+}
+
+const relatedNews = allNews
+  .filter((entry) => {
+    const affects = Array.isArray(entry.data.affects) ? entry.data.affects : [];
+    const related = Array.isArray(entry.data.related_tools) ? entry.data.related_tools : [];
+    return affects.includes(toolSlug) || related.includes(toolSlug);
+  })
+  .map((entry) => ({
+    slug: entry.data.slug || entry.id.replace(/\.md$/, '').replace(/\\/g, '/'),
+    title: entry.data.title,
+    date: newsDate(entry.data.date),
+    severity: entry.data.severity,
+  }))
+  .sort((a, b) => (b.date || '').localeCompare(a.date || ''))
+  .slice(0, 6);
+
+const relatedComparisons = allComparisons
+  .filter((entry) => Array.isArray(entry.data.tools) && entry.data.tools.includes(toolSlug))
+  .map((entry) => {
+    const comparedTools = entry.data.tools ?? [];
+    const otherToolSlugs = comparedTools.filter((slug: string) => slug !== toolSlug);
+    const sameCategoryCount = otherToolSlugs
+      .filter((slug: string) => toolMetaBySlug.get(slug)?.category === f.category)
+      .length;
+    const bestPeerScore = Math.max(
+      0,
+      ...otherToolSlugs.map((slug: string) => toolMetaBySlug.get(slug)?.score ?? 0)
+    );
+    return {
+      slug: entrySlug(entry),
+      title: entry.data.title,
+      sameCategoryCount,
+      bestPeerScore,
+      toolCount: comparedTools.length,
+      updatedAt: newsDate(entry.data.last_verified ?? entry.data.last_updated),
+    };
+  })
+  .sort((a, b) => {
+    if (b.sameCategoryCount !== a.sameCategoryCount) return b.sameCategoryCount - a.sameCategoryCount;
+    if (a.toolCount !== b.toolCount) return a.toolCount - b.toolCount;
+    if (b.bestPeerScore !== a.bestPeerScore) return b.bestPeerScore - a.bestPeerScore;
+    const dateCompare = b.updatedAt.localeCompare(a.updatedAt);
+    if (dateCompare !== 0) return dateCompare;
+    return a.title.localeCompare(b.title);
+  })
+  .slice(0, 8);
+---
+
+<BaseLayout
+  title={f.seo_title ?? f.title}
+  description={f.meta_description ?? f.tagline ?? ''}
+  ogImage={`/og/tools/${toolSlug}.png`}
+>
+  <ReadingProgress />
+  <BreadcrumbLD items={breadcrumbLdItems} />
+  {faqItems.length > 0 && <FAQPageLD questions={faqItems} />}
+  <SoftwareApplicationLD
+    name={f.title}
+    url={f.url ?? ''}
+    category={catLabel}
+    priceRange={f.price_range ?? 'Free'}
+    score={overall}
+    description={f.meta_description ?? f.tagline ?? ''}
+    publisher={f.company ?? ''}
+    reviewBody={f.tagline ?? f.meta_description ?? ''}
+    pageUrl={`${siteBase}tools/${toolSlug}/`}
+    datePublished={f.last_updated ? String(f.last_updated) : undefined}
+    dateModified={f.last_verified ? String(f.last_verified) : undefined}
+    slug={toolSlug}
+    status={f.status}
+  />
+
+  <div class="sr-only" data-pagefind-ignore>
+    <span data-pagefind-filter="Type">Tool</span>
+    {catLabel && <span data-pagefind-filter="Category">{catLabel}</span>}
+    {f.pricing_model && <span data-pagefind-filter="Pricing">{f.pricing_model}</span>}
+    {f.status && <span data-pagefind-filter="Status">{f.status}</span>}
+    {overall >= 9 && <span data-pagefind-filter="Score">9+</span>}
+    {overall >= 8 && overall < 9 && <span data-pagefind-filter="Score">8-8.9</span>}
+    {overall < 8 && <span data-pagefind-filter="Score">Below 8</span>}
+  </div>
+
+  
+    <div class="t2-canvas">
+    <Breadcrumb
+      items={[
+        { label: catLabel, href: `/categories/${catSlug}/` },
+        { label: f.title },
+      ]}
+      data-reveal
+    />
+
+    <!-- Editorial eyebrow row. Premium-product-page pattern: tiny live-dot
+         + verification state + category rank. Sits above the logo/title
+         block so visitors register "this is a current, scored, ranked
+         editorial entry" before the brand name. -->
+    <div class="t2-eyebrow" data-pagefind-ignore data-reveal style="--reveal-delay: 70ms">
+      {isFreshVerified && (
+        <span class="t2-eyebrow-chip t2-eyebrow-fresh">
+          <span class="t2-eyebrow-livedot" aria-hidden="true"></span>
+          <span class="t2-eyebrow-full">Verified {verifiedStr}</span>
+          <span class="t2-eyebrow-short" aria-hidden="true">Verified</span>
+        </span>
+      )}
+      {isRecentVerified && (
+        <span class="t2-eyebrow-chip">
+          <span class="t2-eyebrow-full">Verified {verifiedStr}</span>
+          <span class="t2-eyebrow-short" aria-hidden="true">Verified</span>
+        </span>
+      )}
+      {catLabel && (
+        <a href={`/categories/${catSlug}/`} class="t2-eyebrow-chip t2-eyebrow-link">{catLabel}</a>
+      )}
+      {rankLabel && (
+        <span class={`t2-eyebrow-chip ${isTopPick ? 't2-eyebrow-gold' : 't2-eyebrow-accent'}`}>
+          {isTopPick && <span class="t2-eyebrow-star" aria-hidden="true">★</span>}
+          <span class="t2-eyebrow-full">{rankLabel}</span>
+          <span class="t2-eyebrow-short" aria-hidden="true">{isTopPick ? 'Top pick' : 'Ranked'}</span>
+        </span>
+      )}
+      <span class="t2-eyebrow-trust">Editorial only, no paid placements</span>
+    </div>
+
+    <!-- Hero: logo + title + tagline (no meta line — company/verified
+         already surface in the chip strip below), score card on right. -->
+    <header class="t2-hero">
+      <div class="t2-hero-main" data-reveal style="--reveal-delay: 120ms">
+        <div class="t2-logo-frame">
+          <ToolLogo slug={toolSlug} title={f.title} size={64} className="rounded-lg" />
+        </div>
+        <div class="t2-hero-copy">
+          <div class="t2-title-row">
+            <h1 class="t2-title">{f.title}</h1>
+            {f.status === 'active' && (
+              <span class="t2-status-pill" aria-label="Status: active">
+                <span class="t2-status-dot" aria-hidden="true"></span>
+                Active
+              </span>
+            )}
+          </div>
+          {f.tagline && <p class="t2-tagline">{f.tagline}</p>}
+        </div>
+        {heroGlance && (
+          <div class="t2-hero-glance" aria-label={`${f.title} at a glance`}>
+            {heroGlance.items.map((item: any) => (
+              <div class={`t2-hero-glance-item t2-hero-glance-${item.tone ?? signalTone(item.label, item.value)}`.trim()}>
+                <span class="t2-hero-glance-label">{item.label}</span>
+                <strong>{item.value}</strong>
+                {item.detail && <span class="t2-hero-glance-detail">{item.detail}</span>}
+              </div>
+            ))}
+          </div>
+        )}
+
+        <div class="t2-chips" data-reveal style="--reveal-delay: 220ms">
+          {f.price_range && (
+            <div class="t2-chip">
+              <span class="t2-chip-label">Pricing</span>
+              <span class="t2-chip-value">{f.price_range}</span>
+            </div>
+          )}
+          {launchedStr && (
+            <div class="t2-chip">
+              <span class="t2-chip-label">Launched</span>
+              <span class="t2-chip-value">{launchedStr}</span>
+            </div>
+          )}
+        </div>
+
+        <div class="t2-ctas" data-reveal style="--reveal-delay: 260ms">
+          {f.url && (
+            <CommercialCTA
+              toolName={f.title}
+              toolSlug={toolSlug}
+              canonicalUrl={f.url}
+              affiliateUrl={affiliate?.link}
+              affiliateProgram={affiliate?.network}
+              label={primaryCtaLabel}
+              pricingModel={f.pricing_model}
+              priceRange={f.price_range}
+              pageType="tool"
+              placement="tool_hero_primary"
+              pageSlug={toolSlug}
+              categorySlug={catSlug}
+              className="t2-cta t2-cta-primary"
+              toolCtaMarker
+            />
+          )}
+          <a href={`/compare/`} class="t2-cta t2-cta-secondary">
+            Compare alternatives
+            <span class="t2-cta-arrow" aria-hidden="true">&rarr;</span>
+          </a>
+          <button type="button" class="t2-cta t2-cta-secondary t2-cta-compare" data-compare-add={toolSlug} aria-pressed="false">
+            <span data-compare-label>Compare</span>
+            <span class="t2-cta-arrow" aria-hidden="true">+</span>
+          </button>
+        </div>
+      </div>
+
+      <aside class="t2-score" aria-label={`Overall score ${overall} out of 10`} data-reveal="right" style="--reveal-delay: 180ms">
+        <div class="t2-score-top">
+          <span class="t2-score-label">Score</span>
+          <span class="t2-score-value">{overall}<span class="t2-score-slash">/10</span></span>
+        </div>
+        <div class={`t2-score-band t2-score-band-${scoreTone}`}>{scoreBand}</div>
+        <div class="t2-score-bars" title={sparkbars.map(b => `${b.label} ${b.value}/10`).join(' · ')}>
+          {sparkbars.map(b => (
+            <div class="t2-score-bar">
+              <div class="t2-score-bar-col">
+                <span class="t2-score-bar-fill" style={`height: ${b.pct}%; background: ${b.color};`}></span>
+              </div>
+              <span class="t2-score-bar-num tabular-nums">{b.value}</span>
+              <span class="t2-score-bar-label">{b.label}</span>
+            </div>
+          ))}
+        </div>
+        {scoreNote && <p class="t2-score-note">{scoreNote}</p>}
+      </aside>
+    </header>
+
+    <!-- Quick Answer (from frontmatter). Replaces the redundant inline
+         "System Verdict" block, which is stripped from the markdown via
+         script below. -->
+    {(f.quick_answer || effectiveDecisionBrief) && (
+      <aside class="t2-verdict" aria-labelledby="quick-answer-label" data-reveal style="--reveal-delay: 120ms">
+        <p id="quick-answer-label" class="t2-verdict-heading">Quick Answer</p>
+        {f.quick_answer && <p class="t2-verdict-body">{f.quick_answer}</p>}
+        {effectiveDecisionBrief && (
+          <div class="t2-verdict-points" aria-label={`${f.title} decision notes`}>
+            {effectiveDecisionBrief.items.map((item: any) => (
+              <div class={`t2-verdict-point t2-verdict-point-${item.tone ?? signalTone(item.label, item.value)}`}>
+                <span class="t2-verdict-point-label">{item.label}</span>
+                <strong>{item.value}</strong>
+                {item.detail && <span class="t2-verdict-point-detail">{item.detail}</span>}
+              </div>
+            ))}
+          </div>
+        )}
+      </aside>
+    )}
+
+    <ToolIntelPanel
+      frontmatter={f}
+      slug={toolSlug}
+      overall={overall}
+      categoryLabel={catLabel}
+      peers={peers}
+      priceHistory={priceHistory}
+      relatedNews={relatedNews}
+      relatedComparisons={relatedComparisons}
+    />
+
+    {f.github_url && (
+      <div class="t2-githubstats" data-reveal>
+        <GithubStats slug={toolSlug} />
+      </div>
+    )}
+
+    <div data-reveal>
+      <ProsCons pros={f.best_for} cons={f.not_best_for} />
+    </div>
+
+    <!-- Main layout: prose + floating TOC -->
+    <div class="t2-layout">
+      <article class="t2-prose">
+        <slot />
+
+        {showSupplementalSections && priceHistory.length > 0 && (
+          <section aria-labelledby="price-history">
+            <h2 id="price-history">Price history</h2>
+            <ul class="t2-price-history">
+              {priceHistory.map((h: any) => (
+                <li class="t2-price-history-item">
+                  <time class="t2-price-history-date">{formatHistoryDate(h.date)}</time>
+                  <div class="t2-price-history-body">
+                    <div class="t2-price-history-headline">
+                      <span class="t2-price-history-plan">{h.plan}</span>
+                      <span class="t2-price-history-price">{h.price}</span>
+                    </div>
+                    {h.note && <div class="t2-price-history-note">{h.note}</div>}
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+
+        {showSupplementalSections && peers.length > 0 && (
+          <section aria-labelledby="top-alternatives">
+            <h2 id="top-alternatives">Top alternatives</h2>
+            <ul class="t2-alt-list">
+              {peers.slice(0, 10).map((p) => (
+                <li class="t2-alt-item">
+                  <a href={`/tools/${p.slug}/`} class="t2-alt-link">
+                    <div class="t2-alt-main">
+                      <span class="t2-alt-title">{p.title}</span>
+                      {p.tagline && <span class="t2-alt-tagline">{p.tagline}</span>}
+                    </div>
+                    <span class="t2-alt-meta">
+                      {p.price && <span class="t2-alt-price">{p.price}</span>}
+                      <span class="t2-alt-score tabular-nums">{p.score}</span>
+                    </span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+
+        <FAQAccordionScript />
+
+        <PostBodyEnhancements
+          outboundUrl={(affiliate?.link && affiliate.link.length > 0 ? affiliate.link : (f.url ?? '#'))}
+          isAffiliate={Boolean(affiliate?.link && affiliate.link.length > 0)}
+          toolSlug={toolSlug}
+          toolName={f.title}
+          pageType="tool"
+          priceRange={f.price_range}
+          affiliateProgram={affiliate?.network}
+        />
+
+        {showSupplementalSections && (
+          <RelatedComparisons toolSlug={toolSlug} toolTitle={f.title} />
+        )}
+
+        {showSupplementalSections && (
+          <ReviewsBlock toolSlug={toolSlug} toolTitle={f.title} />
+        )}
+
+        <ShareButtons title={f.title} pageUrl={`${siteBase}tools/${toolSlug}/`} />
+
+        <HelpfulVote pageSlug={toolSlug} pageType="tool" />
+
+        <BadgeEmbed slug={toolSlug} title={f.title} />
+
+        <CiteThisPage title={`${f.title} — Editorial Review`} pageUrl={`${siteBase}tools/${toolSlug}/`} pageType="tool-review" />
+
+        <FeedbackForm toolName={f.title} />
+
+        <ReportOutdatedButton pageTitle={f.title} pageSlug={toolSlug} pageType="tool" />
+      </article>
+
+      {tocHeadings.length > 0 && (
+        <aside class="t2-toc" aria-label="On this page" data-reveal="right">
+          <div class="t2-toc-label">On this page</div>
+          <ol class="t2-toc-list">
+            {tocHeadings.map(h => (
+              <li><a href={`#${h.slug}`}>{h.text}</a></li>
+            ))}
+          </ol>
+        </aside>
+      )}
+    </div>
+    </div>
+<StickyMobileCTA
+    name={f.title}
+    toolSlug={toolSlug}
+    canonicalUrl={f.url}
+    affiliateUrl={affiliate?.link}
+    affiliateProgram={affiliate?.network}
+    pricingModel={f.pricing_model}
+    priceRange={f.price_range}
+    pageSlug={toolSlug}
+    categorySlug={catSlug}
+  />
+
+  <script is:inline define:vars={{ toolSlug, toolTitle: f.title }}>
+    (function () {
+      const KEY = 'recently-viewed-tools';
+      const MAX = 10;
+      try {
+        const raw = localStorage.getItem(KEY);
+        let list = raw ? JSON.parse(raw) : [];
+        if (!Array.isArray(list)) list = [];
+        list = list.filter((e) => e && e.slug !== toolSlug);
+        list.unshift({ slug: toolSlug, title: toolTitle, at: Date.now() });
+        list = list.slice(0, MAX);
+        localStorage.setItem(KEY, JSON.stringify(list));
+      } catch (_) {}
+    })();
+  </script>
+
+  <!-- Canvas styles live in src/styles/t2-canvas.css (imported globally via BaseLayout). -->
+
+  <!-- Generic scrollbox wrapping for long lists (recent developments,
+       price history, top alternatives, reviews). -->
+  <script is:inline>
+    (function () {
+      var SCROLLBOX_CONFIG = [
+        { id: 'recent-developments', threshold: 4, maxVisibleItems: 3, itemSelector: ':scope > li',
+          label: function (n) { return n + ' recent developments, scroll to read more'; } },
+        { id: 'recent-changes', threshold: 4, maxVisibleItems: 3, itemSelector: ':scope > li',
+          label: function (n) { return n + ' recent changes, scroll to read more'; } },
+        { id: 'price-history', threshold: 6, itemSelector: ':scope > li',
+          label: function (n) { return n + ' price changes, scroll to read more'; } },
+        { id: 'top-alternatives', threshold: 8, itemSelector: ':scope > li',
+          label: function (n) { return n + ' alternative tools, scroll to read more'; } },
+        { id: 'reader-reviews', threshold: 5, itemSelector: ':scope > *',
+          label: function (n) { return n + ' reader reviews, scroll to read more'; } },
+      ];
+
+      function findListAfterHeading(h) {
+        var el = h.nextElementSibling;
+        while (el && !(el.tagName === 'UL' || el.tagName === 'OL' || el.tagName === 'DIV' || el.tagName === 'SECTION')) {
+          el = el.nextElementSibling;
+        }
+        if (!el) return null;
+        if (el.tagName === 'SECTION' || (el.tagName === 'DIV' && !el.matches('ul, ol'))) {
+          var inner = el.querySelector(':scope > ul, :scope > ol');
+          if (inner) return inner;
+        }
+        return (el.tagName === 'UL' || el.tagName === 'OL') ? el : null;
+      }
+
+      function boxOne(cfg) {
+        var targetSection = document.getElementById(cfg.id);
+        if (!targetSection) return;
+        var list;
+        if (targetSection.tagName === 'H2') {
+          list = findListAfterHeading(targetSection);
+        } else {
+          list = targetSection.querySelector('ul, ol');
+        }
+        if (!list) return;
+        var items = list.querySelectorAll(cfg.itemSelector);
+        if (items.length < cfg.threshold) return;
+        if (list.parentNode && list.parentNode.classList.contains('t2-scrollbox')) return;
+
+        var wrap = document.createElement('div');
+        wrap.className = 't2-scrollbox';
+        wrap.setAttribute('tabindex', '0');
+        wrap.setAttribute('role', 'region');
+        wrap.setAttribute('aria-label', cfg.label(items.length));
+        list.parentNode.insertBefore(wrap, list);
+        wrap.appendChild(list);
+
+        if (cfg.maxVisibleItems && items.length > cfg.maxVisibleItems) {
+          window.requestAnimationFrame(function () {
+            var visible = Array.prototype.slice.call(items, 0, cfg.maxVisibleItems);
+            var last = visible[visible.length - 1];
+            if (!last) return;
+            var top = list.offsetTop;
+            var bottom = last.offsetTop + last.offsetHeight;
+            var buffer = 18;
+            wrap.style.maxHeight = Math.max(180, bottom - top + buffer) + 'px';
+          });
+        }
+      }
+
+      function init() { SCROLLBOX_CONFIG.forEach(boxOne); }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+      } else {
+        init();
+      }
+      document.addEventListener('astro:page-load', init);
+    })();
+  </script>
+
+  <!-- Tool-page scroll reveals. The homepage already uses the global
+       [data-reveal] system from BaseLayout; this opts generated markdown
+       sections into the same motion without changing content files. -->
+  <script is:inline>
+    (function () {
+      var SELECTOR = [
+        '.t2-prose > h2',
+        '.t2-prose > h3',
+        '.t2-prose > p',
+        '.t2-prose > blockquote',
+        '.t2-prose > table',
+        '.t2-prose > ul',
+        '.t2-prose > ol',
+        '.t2-prose > .not-prose',
+        '.t2-prose > .faq-accordion',
+        '.t2-prose > .sources-callout'
+      ].join(',');
+
+      function mark() {
+        var nodes = Array.prototype.slice.call(document.querySelectorAll(SELECTOR));
+        nodes.forEach(function (el, index) {
+          if (el.closest('.not-prose') && !el.classList.contains('not-prose')) return;
+          if (!el.hasAttribute('data-reveal')) {
+            el.setAttribute('data-reveal', '');
+            el.style.setProperty('--reveal-delay', Math.min(index % 3, 2) * 45 + 'ms');
+          }
+        });
+        observe(nodes.concat(Array.prototype.slice.call(document.querySelectorAll('.t2-canvas [data-reveal]:not(.is-revealed)'))));
+      }
+
+      function observe(nodes) {
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) {
+          nodes.forEach(function (el) { el.classList.add('is-revealed'); });
+          return;
+        }
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add('is-revealed');
+            io.unobserve(entry.target);
+          });
+        }, { threshold: 0.10, rootMargin: '0px 0px -64px 0px' });
+        nodes.forEach(function (el) {
+          if (!el.classList.contains('is-revealed')) io.observe(el);
+        });
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', mark);
+      } else {
+        mark();
+      }
+      document.addEventListener('astro:page-load', mark);
+    })();
+  </script>
+
+  <!-- Active section marker for the sticky tool-page TOC. -->
+  <script is:inline>
+    (function () {
+      function initActiveToc() {
+        var toc = document.querySelector('.t2-toc');
+        if (!toc || toc.dataset.activeBound === '1') return;
+        var links = Array.prototype.slice.call(toc.querySelectorAll('a[href^="#"]'));
+        var pairs = links.map(function (link) {
+          var id = decodeURIComponent(link.getAttribute('href').slice(1));
+          return { link: link, target: document.getElementById(id) };
+        }).filter(function (pair) { return pair.target; });
+        if (!pairs.length) return;
+        toc.dataset.activeBound = '1';
+
+        function setActive(activeLink) {
+          links.forEach(function (link) {
+            link.classList.toggle('is-active', link === activeLink);
+          });
+        }
+
+        if (!('IntersectionObserver' in window)) {
+          setActive(pairs[0].link);
+          return;
+        }
+
+        var visible = new Map();
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              visible.set(entry.target.id, entry.boundingClientRect.top);
+            } else {
+              visible.delete(entry.target.id);
+            }
+          });
+          if (visible.size === 0) return;
+          var active = pairs
+            .filter(function (pair) { return visible.has(pair.target.id); })
+            .sort(function (a, b) { return visible.get(a.target.id) - visible.get(b.target.id); })[0];
+          if (active) setActive(active.link);
+        }, { rootMargin: '-96px 0px -62% 0px', threshold: [0, 0.1, 0.5] });
+
+        pairs.forEach(function (pair) { io.observe(pair.target); });
+        setActive(pairs[0].link);
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initActiveToc);
+      } else {
+        initActiveToc();
+      }
+      document.addEventListener('astro:page-load', initActiveToc);
+    })();
+  </script>
+
+  <!-- Strip redundant inline "System Verdict" section; the Quick Answer
+       block at the top of the page already carries the verdict. -->
+  <script is:inline>
+    (function () {
+      function stripSystemVerdict() {
+        var h = document.getElementById('system-verdict');
+        if (!h) return;
+        var next = h.nextElementSibling;
+        while (next && next.tagName !== 'H2') {
+          var toRemove = next;
+          next = next.nextElementSibling;
+          toRemove.remove();
+        }
+        h.remove();
+      }
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', stripSystemVerdict);
+      } else {
+        stripSystemVerdict();
+      }
+      document.addEventListener('astro:page-load', stripSystemVerdict);
+    })();
+  </script>
+
+  <!-- Group consecutive <details> blocks under the FAQ heading into a
+       single wrapper for consistent rhythm. Purely presentational. -->
+  <script is:inline>
+    (function () {
+      function groupFaq() {
+        var h = document.getElementById('faq');
+        if (!h || h.dataset.faqGrouped === '1') return;
+        var items = [];
+        var n = h.nextElementSibling;
+        while (n && n.tagName !== 'H2') {
+          if (n.tagName === 'DETAILS') items.push(n);
+          n = n.nextElementSibling;
+        }
+        if (items.length === 0) return;
+        var wrap = document.createElement('div');
+        wrap.className = 't2-faq';
+        items[0].parentNode.insertBefore(wrap, items[0]);
+        items.forEach(function (d) { wrap.appendChild(d); });
+        h.dataset.faqGrouped = '1';
+      }
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', groupFaq);
+      } else {
+        groupFaq();
+      }
+      document.addEventListener('astro:page-load', groupFaq);
+    })();
+  </script>
+</BaseLayout>

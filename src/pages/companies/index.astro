@@ -1,17 +1,20 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import Breadcrumb from '../../components/Breadcrumb.astro';
+/**
+ * /companies/ index — god-tier 10/10 mobile-first.
+ */
 import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/godtier/Hero.astro';
+import BreadcrumbLD from '../../components/seo/BreadcrumbLD.astro';
 
 const allCompanies = await getCollection('companies');
 const allTools = await getCollection('tools');
 const activeToolCount = allTools.filter(
-  (t) => t.data.status !== 'dead' && t.data.status !== 'retired' && t.data.status !== 'acquired'
+  (t: any) => t.data.status !== 'dead' && t.data.status !== 'retired' && t.data.status !== 'acquired'
 ).length;
-const allNews = await getCollection('news');
 
 const sorted = allCompanies
-  .map((c) => ({
+  .map((c: any) => ({
     slug: c.data.slug || c.id.replace(/\.md$/, ''),
     title: c.data.title,
     description: c.data.meta_description || '',
@@ -21,109 +24,154 @@ const sorted = allCompanies
     funding: (c.data as any).funding ?? '',
     keyProducts: ((c.data as any).key_products as string[] | undefined) ?? [],
   }))
-  .sort((a, b) => a.title.localeCompare(b.title));
+  .sort((a: any, b: any) => a.title.localeCompare(b.title));
 
-const typeColors: Record<string, string> = {
-  startup:  'bg-[rgba(253, 186, 116,0.10)] text-[var(--accent-success)] border-[rgba(253, 186, 116,0.25)]',
-  bigtech:  'bg-[rgba(251, 146, 60,0.10)] text-[var(--accent-secondary)] border-[rgba(251, 146, 60,0.25)]',
-  acquired: 'bg-[rgba(251, 146, 60,0.10)] text-[var(--accent-warning)] border-[rgba(251, 146, 60,0.25)]',
-  dead:     'bg-[rgba(251, 146, 60,0.10)] text-[var(--accent-danger)] border-[rgba(251, 146, 60,0.25)]',
-};
 const typeLabel: Record<string, string> = {
   startup: 'Startup',
   bigtech: 'Big Tech',
   acquired: 'Acquired',
   dead: 'Discontinued',
 };
+const typeToneClass: Record<string, string> = {
+  startup: 'gt-co-type-startup',
+  bigtech: 'gt-co-type-bigtech',
+  acquired: 'gt-co-type-acquired',
+  dead: 'gt-co-type-dead',
+};
 
-const total = sorted.length;
-const statStrip = [
-  { label: 'tracked companies', value: total },
-  { label: 'reviewed products', value: activeToolCount },
-  { label: 'news items linked', value: allNews.length },
-];
+const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
 ---
 
 <BaseLayout
-  title="AI Companies Profiles — aipedia.wiki"
-  description="Profiles of the companies behind the AI tools we review. Founded dates, funding, HQ, and product rollups for every major player."
+  title="AI Companies · May 2026 · aipedia.wiki"
+  description="Profiles of the companies behind the AI tools we review. Founded dates, funding, HQ, and product rollups."
 >
-  <div class="site-content-frame">
-    <Breadcrumb items={[{ label: 'Companies' }]} />
+  <BreadcrumbLD items={[
+    { name: 'Home', url: new URL('/', siteBase).href },
+    { name: 'Companies', url: new URL('/companies/', siteBase).href },
+  ]} />
 
-    <div class="companies-page-root pb-16">
-      <section class="idx-hero" data-pagefind-ignore>
-        <div class="idx-eyebrow">
-          <span class="idx-eyebrow-chip idx-eyebrow-accent">Company profiles</span>
-          <span class="idx-eyebrow-chip"><span class="tabular-nums">{total}</span> compan{total === 1 ? 'y' : 'ies'}</span>
-          <span class="idx-eyebrow-trust">Funding + founding verified against primary sources.</span>
-        </div>
-        <h1 class="idx-headline">Tracked <span class="idx-gradient">AI companies</span>.</h1>
-        <p class="idx-subhead">
-          Only companies with reviewed products, funding notes, and source-backed product links are listed here.
-        </p>
-      </section>
-
-      <section class="grid grid-cols-1 sm:grid-cols-3 gap-[var(--site-grid-gap)] mb-[var(--site-content-gap)]" aria-label="Company coverage stats">
-        {statStrip.map((stat) => (
-          <div class="home-surface-card p-[var(--site-card-padding)]">
-            <div class="text-2xl font-bold tabular-nums text-[var(--home-on-card)]">{stat.value}</div>
-            <div class="mt-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-[var(--home-dim)]">
-              {stat.label}
-            </div>
-          </div>
-        ))}
-      </section>
-
-      <section class="grid grid-cols-1 md:grid-cols-2 gap-[var(--site-grid-gap)]">
-        {sorted.map((c) => (
-          <a
-            href={`/companies/${c.slug}/`}
-            class="home-surface-card group block p-[var(--site-card-padding)] no-underline"
-          >
-            <div class="flex items-start justify-between gap-3 mb-2">
-              <h3 class="font-semibold text-[var(--home-on-card)] text-base leading-tight group-hover:text-[var(--home-accent)] transition-colors m-0">
-                {c.title}
-              </h3>
-              <span class={`shrink-0 inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-semibold uppercase tracking-wider border ${typeColors[c.type] || typeColors.startup}`}>
-                {typeLabel[c.type] || c.type}
-              </span>
-            </div>
-            <div class="flex items-center gap-x-3 gap-y-1 text-xs text-[var(--home-dim)] mb-2 flex-wrap">
-              {c.founded && <span>Founded {c.founded}</span>}
-              {c.hq && (
-                <>
-                  <span aria-hidden="true">|</span>
-                  <span>{c.hq}</span>
-                </>
-              )}
-              {c.funding && (
-                <>
-                  <span aria-hidden="true">|</span>
-                  <span>{c.funding}</span>
-                </>
-              )}
-            </div>
-            {c.description && (
-              <p class="text-sm text-[var(--home-on-card-muted)] leading-relaxed line-clamp-2 m-0 mb-2">{c.description}</p>
-            )}
-            {c.keyProducts.length > 0 && (
-              <div class="flex items-center gap-1.5 flex-wrap mt-2">
-                {c.keyProducts.slice(0, 4).map((p) => (
-                  <span
-                    class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-medium text-[var(--home-on-card-muted)] border border-[var(--home-line)] bg-[var(--home-inner-panel)]"
-                  >
-                    {p}
-                  </span>
-                ))}
-                {c.keyProducts.length > 4 && (
-                  <span class="text-[10px] text-[var(--home-dim)]">+{c.keyProducts.length - 4} more</span>
-                )}
-              </div>
-            )}
-          </a>
-        ))}
-      </section>
-    </div>
+  <div class="sr-only" data-pagefind-ignore>
+    <span data-pagefind-filter="Type">CompanyIndex</span>
   </div>
+
+  <div class="gt-canvas">
+    <Hero
+      title="AI companies"
+      tagline="Profiles of the companies behind every tool we review. Funding, founding dates, HQ, and product rollups verified against primary sources."
+      breadcrumbs={[
+        { label: 'aipedia', href: '/' },
+        { label: 'Companies' },
+      ]}
+      rankLabel={`${sorted.length} companies · ${activeToolCount} products`}
+    />
+
+    <section class="gt-co-index">
+      <ol class="gt-co-cards">
+        {sorted.map((c: any) => (
+          <li class="gt-co-card">
+            <a href={`/companies/${c.slug}/`}>
+              <div class="gt-co-card-head">
+                <strong class="gt-co-card-title">{c.title}</strong>
+                <span class={`gt-co-card-type ${typeToneClass[c.type] || ''}`}>
+                  {typeLabel[c.type] || c.type}
+                </span>
+              </div>
+              <div class="gt-co-card-meta">
+                {c.founded && <span>Founded {c.founded}</span>}
+                {c.hq && <><span aria-hidden="true">·</span><span>{c.hq}</span></>}
+                {c.funding && <><span aria-hidden="true">·</span><span>{c.funding}</span></>}
+              </div>
+              {c.description && <p class="gt-co-card-desc">{c.description}</p>}
+              {c.keyProducts.length > 0 && (
+                <div class="gt-co-card-products">
+                  {c.keyProducts.slice(0, 4).map((p: string) => (
+                    <span class="gt-co-card-product">{p}</span>
+                  ))}
+                  {c.keyProducts.length > 4 && (
+                    <span class="gt-co-card-more">+{c.keyProducts.length - 4}</span>
+                  )}
+                </div>
+              )}
+            </a>
+          </li>
+        ))}
+      </ol>
+    </section>
+  </div>
+
+  <style>
+    .gt-co-index { margin-bottom: 40px; }
+    .gt-co-cards {
+      list-style: none; padding: 0; margin: 0;
+      display: grid; grid-template-columns: 1fr; gap: 10px;
+    }
+    .gt-co-card {
+      border-radius: var(--gt-radius-sm);
+      border: 1px solid var(--gt-line);
+      background: var(--gt-surface);
+      transition: background 120ms ease, border-color 120ms ease;
+    }
+    .gt-co-card:hover { background: var(--gt-surface-2); border-color: var(--gt-line-strong); }
+    .gt-co-card a {
+      display: flex; flex-direction: column; gap: 10px;
+      padding: 16px;
+      text-decoration: none;
+      color: var(--gt-fg);
+      min-height: 90px;
+    }
+    .gt-co-card-head {
+      display: flex; align-items: baseline; justify-content: space-between;
+      gap: 12px;
+    }
+    .gt-co-card-title { font-size: 16px; font-weight: 700; }
+    .gt-co-card-type {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      border: 1px solid var(--gt-line-strong);
+      white-space: nowrap;
+    }
+    .gt-co-type-startup  { color: var(--gt-positive); border-color: rgba(var(--gt-positive-rgb), 0.4); }
+    .gt-co-type-bigtech  { color: var(--gt-accent); border-color: rgba(249, 115, 22, 0.4); }
+    .gt-co-type-acquired { color: var(--gt-warn); border-color: rgba(251, 191, 36, 0.4); }
+    .gt-co-type-dead     { color: var(--gt-negative); border-color: rgba(var(--gt-negative-rgb), 0.4); }
+    .gt-co-card-meta {
+      display: flex; flex-wrap: wrap; gap: 6px;
+      font-size: 11px; color: var(--gt-subtle);
+    }
+    .gt-co-card-desc {
+      margin: 0; font-size: 13px; line-height: 1.5; color: var(--gt-muted);
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .gt-co-card-products {
+      display: flex; flex-wrap: wrap; gap: 4px;
+      margin-top: auto;
+    }
+    .gt-co-card-product {
+      padding: 2px 8px;
+      border-radius: 4px;
+      border: 1px solid var(--gt-line);
+      background: var(--gt-surface-2);
+      font-size: 10px;
+      font-weight: 500;
+      color: var(--gt-muted);
+    }
+    .gt-co-card-more {
+      font-size: 10px; color: var(--gt-subtle); align-self: center;
+    }
+    @media (min-width: 600px) {
+      .gt-co-cards { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    }
+    @media (min-width: 900px) {
+      .gt-co-cards { grid-template-columns: repeat(3, 1fr); }
+    }
+  </style>
 </BaseLayout>

@@ -1,8 +1,12 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import Breadcrumb from '../../components/Breadcrumb.astro';
-import EmailCapture from '../../components/EmailCapture.astro';
+/**
+ * /workflows/ index — god-tier 10/10 mobile-first.
+ */
 import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/godtier/Hero.astro';
+import BreadcrumbLD from '../../components/seo/BreadcrumbLD.astro';
+import EmailCapture from '../../components/EmailCapture.astro';
 
 const entries = await getCollection('workflows');
 
@@ -15,67 +19,116 @@ function toYmd(v: unknown): string {
 }
 
 const sorted = entries
-  .map(e => ({
+  .map((e: any) => ({
     slug: e.data.slug || e.id.replace(/\.md$/, ''),
     title: e.data.title,
     description: e.data.meta_description || e.data.description || '',
     stack: e.data.stack || [],
-    lastUpdated: toYmd(e.data.last_updated),
-    lastVerified: toYmd(e.data.last_verified),
+    lastVerified: toYmd(e.data.last_verified) || toYmd(e.data.last_updated),
   }))
-  .sort((a, b) => (b.lastVerified || b.lastUpdated).localeCompare(a.lastVerified || a.lastUpdated) || a.title.localeCompare(b.title));
+  .sort((a: any, b: any) => (b.lastVerified || '').localeCompare(a.lastVerified || '') || a.title.localeCompare(b.title));
+
+const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
 ---
 
 <BaseLayout
-  title="AI Workflow Tutorials — Real Stacks That Ship — aipedia.wiki"
-  description="Real workflow tutorials for solo operators and small teams. How to build a podcast, research pipeline, micro-SaaS, newsletter, and more using specific AI tool stacks."
+  title="AI Workflow Tutorials · aipedia.wiki"
+  description="Real workflow tutorials for solo operators and small teams. Tool stacks for podcasts, research pipelines, micro-SaaS, newsletters, and more."
 >
-  
-  <Breadcrumb items={[{ label: 'Workflows' }]} />
+  <BreadcrumbLD items={[
+    { name: 'Home', url: new URL('/', siteBase).href },
+    { name: 'Workflows', url: new URL('/workflows/', siteBase).href },
+  ]} />
 
-  <section class="idx-hero" data-pagefind-ignore>
-    <div class="idx-eyebrow">
-      <span class="idx-eyebrow-chip idx-eyebrow-accent">Production workflows</span>
-      <span class="idx-eyebrow-chip"><span class="tabular-nums">{sorted.length}</span> tool set{sorted.length === 1 ? '' : 's'}</span>
-      <span class="idx-eyebrow-trust">Buying order and human checkpoints included.</span>
-    </div>
-    <h1 class="idx-headline">
-      Workflow <span class="idx-gradient">tutorials</span>.
-    </h1>
-    <p class="idx-subhead">
-      Practical tool sets for real work. Each tutorial names the tools, buying order, failure points, and places where a person should check the result before publishing.
-    </p>
-  </section>
+  <div class="sr-only" data-pagefind-ignore>
+    <span data-pagefind-filter="Type">WorkflowIndex</span>
+  </div>
 
-  <section class="grid grid-cols-1 md:grid-cols-2 gap-[var(--site-grid-gap)] mb-[var(--site-page-bottom)]">
-    {sorted.map((w) => (
-      <a
-        href={`/workflows/${w.slug}/`}
-        class="group block rounded-[var(--site-radius-card)] border border-[var(--border)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] hover:border-[rgba(249, 115, 22,0.4)] p-[var(--site-card-padding)] no-underline transition-colors"
-      >
-        <h2 class="text-[17px] font-bold text-[var(--text-primary)] group-hover:text-[var(--accent-primary)] mb-2 transition-colors">
-          {w.title}
-        </h2>
-        <p class="text-[13.5px] leading-relaxed text-[var(--text-secondary)] m-0 mb-3">
-          {w.description}
-        </p>
-        {(w.lastVerified || w.lastUpdated) && (
-          <p class="text-[11px] font-semibold uppercase tracking-[0.08em] text-[var(--text-muted)] m-0 mb-3">
-            Verified {w.lastVerified || w.lastUpdated}
-          </p>
-        )}
-        {w.stack.length > 0 && (
-          <div class="flex flex-wrap gap-1.5 pt-2 border-t border-[var(--border)]">
-            {w.stack.slice(0, 6).map((s: string) => (
-              <span class="text-[11px] px-2 py-0.5 rounded-full bg-[var(--bg-base)] border border-[var(--border)] text-[var(--text-muted)]">
-                {s}
-              </span>
-            ))}
-          </div>
-        )}
-      </a>
-    ))}
-  </section>
+  <div class="gt-canvas">
+    <Hero
+      title="Workflow tutorials"
+      tagline="Practical tool sets for real work. Each tutorial names the tools, buying order, failure points, and human checkpoints."
+      breadcrumbs={[
+        { label: 'aipedia', href: '/' },
+        { label: 'Workflows' },
+      ]}
+      rankLabel={`${sorted.length} workflow${sorted.length === 1 ? '' : 's'}`}
+    />
 
-  <EmailCapture variant="footer" source="workflows-index" />
+    <section class="gt-workflows">
+      <ol class="gt-wf-cards">
+        {sorted.map((w: any) => (
+          <li class="gt-wf-card">
+            <a href={`/workflows/${w.slug}/`}>
+              <strong class="gt-wf-title">{w.title}</strong>
+              {w.description && <p class="gt-wf-desc">{w.description}</p>}
+              {w.lastVerified && <span class="gt-wf-verified">Verified {w.lastVerified}</span>}
+              {w.stack.length > 0 && (
+                <div class="gt-wf-stack">
+                  {w.stack.slice(0, 6).map((s: string) => (
+                    <span class="gt-wf-stack-item">{s}</span>
+                  ))}
+                </div>
+              )}
+            </a>
+          </li>
+        ))}
+      </ol>
+    </section>
+
+    <EmailCapture variant="footer" source="workflows-index" />
+  </div>
+
+  <style>
+    .gt-workflows { margin-bottom: 40px; }
+    .gt-wf-cards {
+      list-style: none; padding: 0; margin: 0;
+      display: grid; grid-template-columns: 1fr; gap: 10px;
+    }
+    .gt-wf-card {
+      border-radius: var(--gt-radius-sm);
+      border: 1px solid var(--gt-line);
+      background: var(--gt-surface);
+    }
+    .gt-wf-card:hover { background: var(--gt-surface-2); border-color: var(--gt-line-strong); }
+    .gt-wf-card a {
+      display: flex; flex-direction: column; gap: 8px;
+      padding: 16px;
+      text-decoration: none;
+      color: var(--gt-fg);
+      min-height: 90px;
+    }
+    .gt-wf-title { font-size: 16px; font-weight: 700; line-height: 1.35; }
+    .gt-wf-desc {
+      margin: 0; font-size: 13px; line-height: 1.5; color: var(--gt-muted);
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .gt-wf-verified {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--gt-subtle);
+    }
+    .gt-wf-stack {
+      display: flex; flex-wrap: wrap; gap: 4px;
+      padding-top: 8px;
+      border-top: 1px solid var(--gt-line);
+      margin-top: auto;
+    }
+    .gt-wf-stack-item {
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: var(--gt-surface-2);
+      border: 1px solid var(--gt-line);
+      font-size: 10px;
+      color: var(--gt-muted);
+    }
+    @media (min-width: 600px) {
+      .gt-wf-cards { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    }
+  </style>
 </BaseLayout>

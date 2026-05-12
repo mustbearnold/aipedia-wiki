@@ -1,29 +1,23 @@
 ---
 /**
- * /categories/ index. Browse all AI tool categories. Uses .t2-canvas.
- * Mobile layout tightened May 2026 (scroll chips, safe-area, tap targets).
+ * /categories/ index — god-tier 10/10 mobile-first.
+ *
+ * Browse all AI tool categories. Legacy preserved at
+ * src/legacy-pages/categories-index.legacy.astro.
  */
+import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import CategoryIcon from '../../components/CategoryIcon.astro';
-import Breadcrumb from '../../components/Breadcrumb.astro';
+import Hero from '../../components/godtier/Hero.astro';
 import BreadcrumbLD from '../../components/seo/BreadcrumbLD.astro';
 import CollectionPageLD from '../../components/seo/CollectionPageLD.astro';
-import { getCollection } from 'astro:content';
-import '../../styles/t2-canvas.css';
+import { overallScore } from '../../utils/tool-metadata';
 
 const allCategories = await getCollection('categories');
 const allTools = await getCollection('tools');
 const activeTools = allTools.filter(
-  (t) => t.data.status !== 'dead' && t.data.status !== 'retired' && t.data.status !== 'acquired'
+  (t: any) => t.data.status !== 'dead' && t.data.status !== 'retired' && t.data.status !== 'acquired'
 );
 
-// Count tools per category + capture top-scored active tool per category
-// so each card surfaces an editorial signal (top pick + score) instead
-// of just a count.
-function overall(s: { utility?: number; value?: number; moat?: number; longevity?: number } | undefined) {
-  if (!s) return 0;
-  return Math.round((((s.utility ?? 0) + (s.value ?? 0) + (s.moat ?? 0) + (s.longevity ?? 0)) / 4) * 10) / 10;
-}
 const toolCountBySlug: Record<string, number> = {};
 const catScoreSum: Record<string, number> = {};
 const topByCategory: Record<string, { title: string; slug: string; score: number }> = {};
@@ -31,7 +25,7 @@ for (const t of activeTools) {
   const cat = t.data.category;
   if (!cat) continue;
   toolCountBySlug[cat] = (toolCountBySlug[cat] || 0) + 1;
-  const score = overall(t.data.scores);
+  const score = overallScore(t.data.scores ?? {});
   catScoreSum[cat] = (catScoreSum[cat] ?? 0) + score;
   const prev = topByCategory[cat];
   if (!prev || score > prev.score) {
@@ -43,9 +37,8 @@ for (const t of activeTools) {
   }
 }
 
-// Sort categories by tool count (biggest first)
 const sorted = allCategories
-  .map(c => {
+  .map((c: any) => {
     const count = toolCountBySlug[c.data.slug] || 0;
     const avg = count > 0 ? Math.round(((catScoreSum[c.data.slug] ?? 0) / count) * 10) / 10 : 0;
     return {
@@ -57,11 +50,12 @@ const sorted = allCategories
       top: topByCategory[c.data.slug] ?? null,
     };
   })
-  .sort((a, b) => b.toolCount - a.toolCount);
+  .sort((a: any, b: any) => b.toolCount - a.toolCount);
 
 const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
-const categoriesDescription = `Browse ${allCategories.length} AI tool category hubs for buyer research: coding assistants, writing tools, image generators, video tools, voice synthesis, automation, and more. ${activeTools.length} active tools reviewed. Updated May 2026.`;
-const categoryItems = sorted.map((category) => ({
+const categoriesDescription = `Browse ${allCategories.length} AI tool category hubs for buyer research. ${activeTools.length} active tools reviewed. Updated May 2026.`;
+
+const categoryItems = sorted.map((category: any) => ({
   name: category.title,
   url: new URL(`/categories/${category.slug}/`, siteBase).href,
   description: category.description,
@@ -83,194 +77,119 @@ const categoryItems = sorted.map((category) => ({
     items={categoryItems}
     itemType="CollectionPage"
   />
-  <div class="categories-page" data-home-page>
-    <div class="t2-canvas">
-    <Breadcrumb items={[{ label: 'Categories' }]} />
 
-    <section class="idx-hero" data-pagefind-ignore>
-      <div class="idx-eyebrow">
-        <span class="idx-eyebrow-chip idx-eyebrow-accent">Buyer categories</span>
-        <span class="idx-eyebrow-chip"><span class="tabular-nums">{allCategories.length}</span> categories</span>
-        <span class="idx-eyebrow-chip"><span class="tabular-nums">{activeTools.length}</span> active tools</span>
-        <span class="idx-eyebrow-trust">Editorial only, no paid placements</span>
-      </div>
-      <h1 class="idx-headline">
-        Choose the right <span class="idx-gradient">AI category</span>.
-      </h1>
-      <p class="idx-subhead">
-        Start here when you know the job but not the tool. {activeTools.length} active tools across {allCategories.length} category hubs, each with ranked picks and comparisons. Updated May 2026.
-      </p>
-    </section>
-
-    <section class="t2-cat-index-grid">
-      {sorted.map((c, i) => (
-        <a href={`/categories/${c.slug}/`} class={`t2-cat-index-card ${i < 3 ? 't2-cat-index-card-top' : ''}`.trim()}>
-          <div class="t2-cat-index-head">
-            <CategoryIcon slug={c.slug} label={c.title} class="t2-cat-index-icon" />
-            <div class="t2-cat-index-head-text">
-              <h2 class="t2-cat-index-title">{c.title}</h2>
-              {c.avg > 0 && (
-                <div class="t2-cat-index-meta">
-                  <span class="tabular-nums"><strong>{c.toolCount}</strong> tool{c.toolCount === 1 ? '' : 's'}</span>
-                  <span aria-hidden="true" class="t2-meta-dot">·</span>
-                  <span class="tabular-nums">avg <strong>{c.avg}</strong>/10</span>
-                </div>
-              )}
-            </div>
-            <span class="t2-cat-index-arrow" aria-hidden="true">→</span>
-          </div>
-          {c.description && <p class="t2-cat-index-desc">{c.description}</p>}
-          {c.top && (
-            <div class="t2-cat-index-top">
-              <span class="t2-cat-index-top-label">Top pick</span>
-              <span class="t2-cat-index-top-tool">{c.top.title}</span>
-              <span class="t2-cat-index-top-score tabular-nums">{c.top.score}<span class="t2-cat-index-top-score-slash">/10</span></span>
-            </div>
-          )}
-        </a>
-      ))}
-    </section>
-    </div>
+  <div class="sr-only" data-pagefind-ignore>
+    <span data-pagefind-filter="Type">Index</span>
   </div>
 
-  <!-- Match homepage featured tool cards: src/pages/index.astro `.home-tool` + `--home-*` tokens (home-page-tokens.css). -->
-  <style is:global>
-    .categories-page[data-home-page] .t2-cat-index-card {
-      display: flex;
-      flex-direction: column;
-      gap: var(--site-card-gap);
-      padding: var(--site-card-padding);
-      border-radius: var(--site-radius-card);
-      border: 1px solid var(--home-card-outline);
-      background: var(--home-panel);
-      color: var(--home-on-card);
+  <div class="gt-canvas">
+    <Hero
+      title="AI Tool Categories"
+      tagline="Start here when you know the job but not the tool. Ranked category hubs across buyer workflows."
+      breadcrumbs={[
+        { label: 'aipedia', href: '/' },
+        { label: 'Categories' },
+      ]}
+      rankLabel={`${allCategories.length} categories · ${activeTools.length} tools`}
+    />
+
+    <section class="gt-cat-index" aria-label="All AI tool categories">
+      <ul class="gt-cat-cards">
+        {sorted.map((c: any) => (
+          <li class="gt-cat-card">
+            <a href={`/categories/${c.slug}/`}>
+              <div class="gt-cat-card-head">
+                <strong class="gt-cat-card-title">{c.title}</strong>
+                <span class="gt-cat-card-count">{c.toolCount} {c.toolCount === 1 ? 'tool' : 'tools'}</span>
+              </div>
+              {c.description && <p class="gt-cat-card-desc">{c.description}</p>}
+              {c.top && (
+                <div class="gt-cat-card-top">
+                  <span class="gt-cat-card-top-label">Top pick</span>
+                  <span class="gt-cat-card-top-tool">{c.top.title}</span>
+                  <span class="gt-cat-card-top-score tabular-nums">{c.top.score}<span class="gt-cat-card-top-slash">/10</span></span>
+                </div>
+              )}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
+  </div>
+
+  <style>
+    .gt-cat-index { margin-bottom: 40px; }
+    .gt-cat-cards {
+      list-style: none; padding: 0; margin: 0;
+      display: grid; grid-template-columns: 1fr; gap: 10px;
+    }
+    .gt-cat-card {
+      border-radius: var(--gt-radius-sm);
+      border: 1px solid var(--gt-line);
+      background: var(--gt-surface);
+      transition: background 120ms ease, border-color 120ms ease;
+    }
+    .gt-cat-card:hover {
+      background: var(--gt-surface-2);
+      border-color: var(--gt-line-strong);
+    }
+    .gt-cat-card a {
+      display: flex; flex-direction: column; gap: 10px;
+      padding: 16px;
       text-decoration: none;
-      position: relative;
-      isolation: auto;
-      overflow: visible;
-      box-shadow: none;
-      transform: none;
-      transition:
-        border-color var(--motion-fast, 160ms) var(--motion-ease, cubic-bezier(0.16, 1, 0.3, 1)),
-        background var(--motion-fast, 160ms) var(--motion-ease, cubic-bezier(0.16, 1, 0.3, 1));
-      -webkit-backdrop-filter: blur(12px) saturate(140%);
-      backdrop-filter: blur(12px) saturate(140%);
+      color: var(--gt-fg);
+      min-height: 84px;
     }
-
-    .categories-page[data-home-page] .t2-cat-index-card::before,
-    .categories-page[data-home-page] .t2-cat-index-card::after {
-      display: none;
+    .gt-cat-card-head {
+      display: flex; align-items: baseline; justify-content: space-between;
+      gap: 12px;
     }
-
-    @media (hover: hover) {
-      .categories-page[data-home-page] .t2-cat-index-card:hover {
-        border-color: var(--home-card-outline-hover);
-        background: var(--home-panel-strong);
-        transform: none;
-        box-shadow: none;
-      }
-
-      .categories-page[data-home-page] .t2-cat-index-card:hover .t2-cat-index-title {
-        color: var(--home-on-card);
-      }
-
-      .categories-page[data-home-page] .t2-cat-index-card:hover .t2-cat-index-arrow {
-        color: var(--home-accent);
-        opacity: 0.92;
-        transform: none;
-      }
-
-      .categories-page[data-home-page] .t2-cat-index-card:hover .t2-cat-index-icon {
-        transform: none;
-      }
-
-      .categories-page[data-home-page] .t2-cat-index-card:hover .t2-cat-index-top-tool {
-        color: var(--home-muted);
-      }
+    .gt-cat-card-title { font-size: 16px; font-weight: 700; }
+    .gt-cat-card-count {
+      font-size: 11px; color: var(--gt-subtle);
+      white-space: nowrap;
     }
-
-    @media (hover: none) {
-      .categories-page[data-home-page] .t2-cat-index-card:active {
-        border-color: var(--home-card-outline-hover);
-        background: var(--home-panel-strong);
-      }
+    .gt-cat-card-desc {
+      margin: 0;
+      font-size: 13px;
+      line-height: 1.5;
+      color: var(--gt-muted);
     }
-
-    .categories-page[data-home-page] .t2-cat-index-card:focus-visible {
-      outline: none;
-      border-color: var(--home-card-outline-hover);
-      background: var(--home-panel-strong);
-      box-shadow: 0 0 0 2px rgba(249, 115, 22, 0.42);
+    .gt-cat-card-top {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 8px;
+      padding-top: 10px;
+      border-top: 1px solid var(--gt-line);
+      font-size: 12px;
     }
-
-    .categories-page[data-home-page] .t2-cat-index-title {
-      color: var(--home-on-card);
-      font-size: 15px;
+    .gt-cat-card-top-label {
+      color: var(--gt-accent);
       font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-size: 10px;
     }
-
-    .categories-page[data-home-page] .t2-cat-index-meta {
-      color: var(--home-on-card-muted);
+    .gt-cat-card-top-tool {
+      flex: 1;
+      color: var(--gt-muted);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
-
-    .categories-page[data-home-page] .t2-cat-index-meta strong {
-      color: var(--home-on-card);
+    .gt-cat-card-top-score {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--gt-fg);
     }
+    .gt-cat-card-top-slash { font-size: 11px; color: var(--gt-subtle); font-weight: 500; }
 
-    .categories-page[data-home-page] .t2-cat-index-desc {
-      color: var(--home-muted);
+    @media (min-width: 600px) {
+      .gt-cat-cards { grid-template-columns: repeat(2, 1fr); gap: 12px; }
     }
-
-    .categories-page[data-home-page] .t2-cat-index-arrow {
-      color: var(--home-muted);
-      opacity: 0.85;
-    }
-
-    .categories-page[data-home-page] .t2-cat-index-icon.cat-icon {
-      --cat-size: 42px;
-      --cat-glyph: 22px;
-      width: 42px;
-      height: 42px;
-      border-radius: 11px;
-      background: transparent;
-      box-shadow: none;
-      border: 1px solid var(--home-card-outline);
-      color: var(--home-accent);
-    }
-
-    .categories-page[data-home-page] .t2-cat-index-top {
-      border-top: 1px solid var(--home-line);
-      color: var(--home-on-card-muted);
-    }
-
-    .categories-page[data-home-page] .t2-cat-index-top-label {
-      color: var(--home-accent);
-    }
-
-    .categories-page[data-home-page] .t2-cat-index-top-tool {
-      color: var(--home-muted);
-    }
-
-    .categories-page[data-home-page] .t2-cat-index-top-score {
-      color: var(--home-on-card);
-    }
-
-    .categories-page[data-home-page] .t2-cat-index-top-score-slash {
-      color: var(--home-on-card-muted);
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .categories-page[data-home-page] .t2-cat-index-card {
-        -webkit-backdrop-filter: none;
-        backdrop-filter: none;
-      }
-    }
-
-    @media (max-width: 639px) {
-      .categories-page[data-home-page] .t2-cat-index-card {
-        padding: var(--site-card-padding);
-        gap: var(--site-card-gap);
-      }
+    @media (min-width: 900px) {
+      .gt-cat-cards { grid-template-columns: repeat(3, 1fr); }
     }
   </style>
 </BaseLayout>

@@ -1,4 +1,13 @@
 ---
+/**
+ * ComparisonFactTable — head-to-head fact table.
+ *
+ * Mobile-first: each tool gets a card with a labeled fact list. On
+ * ≥820px (when the table fits), renders as a comparison table side-by-side.
+ *
+ * Re-styled May 2026 to live inside the godtier visual system without
+ * depending on legacy t2-canvas.css.
+ */
 import ToolLogo from '../ToolLogo.astro';
 
 interface FactEntry {
@@ -58,13 +67,14 @@ function fallbackImage(tool: ToolData): string | undefined {
 function formatVerified(value?: string | Date): string | undefined {
   if (!value) return undefined;
   const date = value instanceof Date ? value : new Date(value);
-  if (Number.isNaN(date.getTime())) return String(value);
-  return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+  if (Number.isNaN(date.getTime())) return undefined;
+  const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  return `${months[date.getUTCMonth()]} ${date.getUTCDate()}`;
 }
 
 const rowConfigs: RowConfig[] = [
   { key: 'flagship_model', label: 'Flagship / model', fallback: (tool) => tool.title },
-  { key: 'best_paid_tier', label: 'Best paid tier / price', fallback: (tool) => tool.price_range },
+  { key: 'best_paid_tier', label: 'Best paid tier', fallback: (tool) => tool.price_range },
   { key: 'context_window', label: 'Context window' },
   { key: 'image_generation', label: 'Image generation', fallback: fallbackImage },
   { key: 'real_time_voice', label: 'Real-time voice' },
@@ -87,50 +97,46 @@ const rows = rowConfigs
 ---
 
 {tools.length >= 2 && rows.length > 0 && (
-  <section class="t2-facts" aria-labelledby="at-a-glance">
-    <div class="t2-facts-header">
-      <div>
-        <p class="t2-facts-kicker">Canonical facts</p>
-        <h2 id="at-a-glance">At a Glance</h2>
-      </div>
-      <p>
-        Volatile details are generated from each tool page so model names,
-        context windows, pricing, and capability rows update site-wide from one source.
+  <section class="gt-cft" aria-labelledby="gt-cft-h">
+    <header class="gt-cft-head">
+      <p class="gt-cft-kicker">Canonical facts</p>
+      <h2 id="gt-cft-h" class="gt-cft-title">At a glance</h2>
+      <p class="gt-cft-sub">
+        Pulled from each tool's verified-fact block. Updates here propagate site-wide from one source.
       </p>
-    </div>
+    </header>
 
-    <div class="t2-facts-mobile-cards" aria-label="Canonical facts by tool">
+    {/* Mobile: per-tool card stack */}
+    <div class="gt-cft-mobile" aria-label="Canonical facts by tool">
       {tools.map((tool, toolIndex) => (
-        <article class="t2-fact-mobile-card">
-          <a href={`/tools/${tool.slug}/`} class="t2-facts-tool t2-fact-mobile-tool">
-            <ToolLogo slug={tool.slug} title={tool.title} size={36} />
-            <span>{tool.title}</span>
+        <article class="gt-cft-card">
+          <a href={`/tools/${tool.slug}/`} class="gt-cft-card-head">
+            <ToolLogo slug={tool.slug} title={tool.title} size={32} />
+            <strong>{tool.title}</strong>
           </a>
-          <dl class="t2-fact-mobile-list">
+          <dl class="gt-cft-list">
             {rows.map((row) => {
               const { fact, value } = row.cells[toolIndex];
               const verified = formatVerified(fact?.verified_at);
-              const sourceLabel = fact?.source_label ?? 'Source';
+              const sourceLabel = fact?.source_label ?? null;
               return (
-                <div class="t2-fact-mobile-row">
+                <div class="gt-cft-row">
                   <dt>{row.label}</dt>
                   <dd>
                     {value ? (
                       <>
-                        {fact?.source ? (
-                          <a href={fact.source} class="t2-fact-value">{value}</a>
-                        ) : (
-                          <span class="t2-fact-value">{value}</span>
-                        )}
-                        {(verified || fact?.source) && (
-                          <span class="t2-fact-meta">
-                            {verified && <span>Verified {verified}</span>}
-                            {fact?.source && <span>{sourceLabel}</span>}
+                        <span class="gt-cft-value">{value}</span>
+                        {(verified || sourceLabel) && (
+                          <span class="gt-cft-meta">
+                            {verified && <span class="gt-cft-meta-pill">Verified {verified}</span>}
+                            {fact?.source && sourceLabel && (
+                              <a href={fact.source} class="gt-cft-meta-link" target="_blank" rel="noopener nofollow">{sourceLabel}</a>
+                            )}
                           </span>
                         )}
                       </>
                     ) : (
-                      <span class="t2-fact-empty">—</span>
+                      <span class="gt-cft-empty">—</span>
                     )}
                   </dd>
                 </div>
@@ -141,15 +147,16 @@ const rows = rowConfigs
       ))}
     </div>
 
-    <div class="t2-facts-table-wrap">
-      <table class="t2-facts-table">
+    {/* Desktop: comparison table */}
+    <div class="gt-cft-table-wrap">
+      <table class="gt-cft-table">
         <thead>
           <tr>
-            <th scope="col">Fact</th>
+            <th scope="col" class="gt-cft-th-row">Fact</th>
             {tools.map((tool) => (
               <th scope="col">
-                <a href={`/tools/${tool.slug}/`} class="t2-facts-tool">
-                  <ToolLogo slug={tool.slug} title={tool.title} size={42} />
+                <a href={`/tools/${tool.slug}/`} class="gt-cft-table-tool">
+                  <ToolLogo slug={tool.slug} title={tool.title} size={28} />
                   <span>{tool.title}</span>
                 </a>
               </th>
@@ -159,28 +166,26 @@ const rows = rowConfigs
         <tbody>
           {rows.map((row) => (
             <tr>
-              <th scope="row">{row.label}</th>
+              <th scope="row" class="gt-cft-th-row">{row.label}</th>
               {row.cells.map(({ fact, value }) => {
                 const verified = formatVerified(fact?.verified_at);
-                const sourceLabel = fact?.source_label ?? 'Source';
+                const sourceLabel = fact?.source_label ?? null;
                 return (
                   <td>
                     {value ? (
                       <>
-                        {fact?.source ? (
-                          <a href={fact.source} class="t2-fact-value">{value}</a>
-                        ) : (
-                          <span class="t2-fact-value">{value}</span>
-                        )}
-                        {(verified || fact?.source) && (
-                          <span class="t2-fact-meta">
-                            {verified && <span>Verified {verified}</span>}
-                            {fact?.source && <span>{sourceLabel}</span>}
+                        <span class="gt-cft-value">{value}</span>
+                        {(verified || sourceLabel) && (
+                          <span class="gt-cft-meta">
+                            {verified && <span class="gt-cft-meta-pill">Verified {verified}</span>}
+                            {fact?.source && sourceLabel && (
+                              <a href={fact.source} class="gt-cft-meta-link" target="_blank" rel="noopener nofollow">{sourceLabel}</a>
+                            )}
                           </span>
                         )}
                       </>
                     ) : (
-                      <span class="t2-fact-empty">—</span>
+                      <span class="gt-cft-empty">—</span>
                     )}
                   </td>
                 );
@@ -192,3 +197,165 @@ const rows = rowConfigs
     </div>
   </section>
 )}
+
+<style>
+  .gt-cft { margin: 0 0 40px; }
+  .gt-cft-head { margin-bottom: 16px; }
+  .gt-cft-kicker {
+    margin: 0 0 4px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--gt-subtle);
+  }
+  .gt-cft-title {
+    margin: 0 0 8px;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: var(--gt-fg);
+  }
+  .gt-cft-sub {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.55;
+    color: var(--gt-muted);
+  }
+
+  /* Mobile per-tool cards (default) */
+  .gt-cft-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .gt-cft-card {
+    border-radius: var(--gt-radius);
+    border: 1px solid var(--gt-line);
+    background: var(--gt-surface);
+    overflow: hidden;
+  }
+  .gt-cft-card-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: var(--gt-fg);
+    border-bottom: 1px solid var(--gt-line);
+    background: var(--gt-surface-2);
+  }
+  .gt-cft-card-head strong { font-size: 15px; font-weight: 700; }
+
+  .gt-cft-list {
+    margin: 0;
+    padding: 0;
+  }
+  .gt-cft-row {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--gt-line);
+  }
+  .gt-cft-row:last-child { border-bottom: none; }
+  .gt-cft-row dt {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--gt-subtle);
+  }
+  .gt-cft-row dd {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .gt-cft-value {
+    font-size: 14px;
+    line-height: 1.45;
+    color: var(--gt-fg);
+  }
+  .gt-cft-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: center;
+    margin-top: 2px;
+  }
+  .gt-cft-meta-pill {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 999px;
+    background: rgba(var(--gt-positive-rgb), 0.10);
+    color: var(--gt-positive);
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+  }
+  .gt-cft-meta-link {
+    font-size: 11px;
+    color: var(--gt-accent);
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+  }
+  .gt-cft-meta-link:hover { color: var(--gt-accent-hover); }
+  .gt-cft-empty { color: var(--gt-subtle); font-size: 14px; }
+
+  /* Desktop comparison table — hidden on mobile */
+  .gt-cft-table-wrap { display: none; }
+
+  @media (min-width: 820px) {
+    .gt-cft-mobile { display: none; }
+    .gt-cft-table-wrap {
+      display: block;
+      border: 1px solid var(--gt-line);
+      border-radius: var(--gt-radius);
+      overflow-x: auto;
+      background: var(--gt-surface);
+    }
+    .gt-cft-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    .gt-cft-table th,
+    .gt-cft-table td {
+      padding: 12px 14px;
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid var(--gt-line);
+    }
+    .gt-cft-table thead th {
+      background: var(--gt-surface-2);
+      font-weight: 600;
+      border-bottom: 1px solid var(--gt-line-strong);
+    }
+    .gt-cft-th-row {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--gt-subtle);
+      width: 130px;
+      white-space: nowrap;
+      vertical-align: middle;
+    }
+    .gt-cft-table-tool {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      color: var(--gt-fg);
+      font-weight: 600;
+    }
+    .gt-cft-table-tool:hover { color: var(--gt-accent); }
+    .gt-cft-table td .gt-cft-value {
+      display: block;
+      margin-bottom: 4px;
+    }
+  }
+</style>

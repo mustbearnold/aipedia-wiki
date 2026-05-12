@@ -1,0 +1,129 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import { getCollection } from 'astro:content';
+
+const allCompanies = await getCollection('companies');
+const allTools = await getCollection('tools');
+const activeToolCount = allTools.filter(
+  (t) => t.data.status !== 'dead' && t.data.status !== 'retired' && t.data.status !== 'acquired'
+).length;
+const allNews = await getCollection('news');
+
+const sorted = allCompanies
+  .map((c) => ({
+    slug: c.data.slug || c.id.replace(/\.md$/, ''),
+    title: c.data.title,
+    description: c.data.meta_description || '',
+    type: (c.data.company_type as string) || 'startup',
+    founded: c.data.founded ?? '',
+    hq: (c.data as any).hq ?? '',
+    funding: (c.data as any).funding ?? '',
+    keyProducts: ((c.data as any).key_products as string[] | undefined) ?? [],
+  }))
+  .sort((a, b) => a.title.localeCompare(b.title));
+
+const typeColors: Record<string, string> = {
+  startup:  'bg-[rgba(253, 186, 116,0.10)] text-[var(--accent-success)] border-[rgba(253, 186, 116,0.25)]',
+  bigtech:  'bg-[rgba(251, 146, 60,0.10)] text-[var(--accent-secondary)] border-[rgba(251, 146, 60,0.25)]',
+  acquired: 'bg-[rgba(251, 146, 60,0.10)] text-[var(--accent-warning)] border-[rgba(251, 146, 60,0.25)]',
+  dead:     'bg-[rgba(251, 146, 60,0.10)] text-[var(--accent-danger)] border-[rgba(251, 146, 60,0.25)]',
+};
+const typeLabel: Record<string, string> = {
+  startup: 'Startup',
+  bigtech: 'Big Tech',
+  acquired: 'Acquired',
+  dead: 'Discontinued',
+};
+
+const total = sorted.length;
+const statStrip = [
+  { label: 'tracked companies', value: total },
+  { label: 'reviewed products', value: activeToolCount },
+  { label: 'news items linked', value: allNews.length },
+];
+---
+
+<BaseLayout
+  title="AI Companies Profiles — aipedia.wiki"
+  description="Profiles of the companies behind the AI tools we review. Founded dates, funding, HQ, and product rollups for every major player."
+>
+  <div class="site-content-frame">
+    <Breadcrumb items={[{ label: 'Companies' }]} />
+
+    <div class="companies-page-root pb-16">
+      <section class="idx-hero" data-pagefind-ignore>
+        <div class="idx-eyebrow">
+          <span class="idx-eyebrow-chip idx-eyebrow-accent">Company profiles</span>
+          <span class="idx-eyebrow-chip"><span class="tabular-nums">{total}</span> compan{total === 1 ? 'y' : 'ies'}</span>
+          <span class="idx-eyebrow-trust">Funding + founding verified against primary sources.</span>
+        </div>
+        <h1 class="idx-headline">Tracked <span class="idx-gradient">AI companies</span>.</h1>
+        <p class="idx-subhead">
+          Only companies with reviewed products, funding notes, and source-backed product links are listed here.
+        </p>
+      </section>
+
+      <section class="grid grid-cols-1 sm:grid-cols-3 gap-[var(--site-grid-gap)] mb-[var(--site-content-gap)]" aria-label="Company coverage stats">
+        {statStrip.map((stat) => (
+          <div class="home-surface-card p-[var(--site-card-padding)]">
+            <div class="text-2xl font-bold tabular-nums text-[var(--home-on-card)]">{stat.value}</div>
+            <div class="mt-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-[var(--home-dim)]">
+              {stat.label}
+            </div>
+          </div>
+        ))}
+      </section>
+
+      <section class="grid grid-cols-1 md:grid-cols-2 gap-[var(--site-grid-gap)]">
+        {sorted.map((c) => (
+          <a
+            href={`/companies/${c.slug}/`}
+            class="home-surface-card group block p-[var(--site-card-padding)] no-underline"
+          >
+            <div class="flex items-start justify-between gap-3 mb-2">
+              <h3 class="font-semibold text-[var(--home-on-card)] text-base leading-tight group-hover:text-[var(--home-accent)] transition-colors m-0">
+                {c.title}
+              </h3>
+              <span class={`shrink-0 inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-semibold uppercase tracking-wider border ${typeColors[c.type] || typeColors.startup}`}>
+                {typeLabel[c.type] || c.type}
+              </span>
+            </div>
+            <div class="flex items-center gap-x-3 gap-y-1 text-xs text-[var(--home-dim)] mb-2 flex-wrap">
+              {c.founded && <span>Founded {c.founded}</span>}
+              {c.hq && (
+                <>
+                  <span aria-hidden="true">|</span>
+                  <span>{c.hq}</span>
+                </>
+              )}
+              {c.funding && (
+                <>
+                  <span aria-hidden="true">|</span>
+                  <span>{c.funding}</span>
+                </>
+              )}
+            </div>
+            {c.description && (
+              <p class="text-sm text-[var(--home-on-card-muted)] leading-relaxed line-clamp-2 m-0 mb-2">{c.description}</p>
+            )}
+            {c.keyProducts.length > 0 && (
+              <div class="flex items-center gap-1.5 flex-wrap mt-2">
+                {c.keyProducts.slice(0, 4).map((p) => (
+                  <span
+                    class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-medium text-[var(--home-on-card-muted)] border border-[var(--home-line)] bg-[var(--home-inner-panel)]"
+                  >
+                    {p}
+                  </span>
+                ))}
+                {c.keyProducts.length > 4 && (
+                  <span class="text-[10px] text-[var(--home-dim)]">+{c.keyProducts.length - 4} more</span>
+                )}
+              </div>
+            )}
+          </a>
+        ))}
+      </section>
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,813 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import IndexHero from '../../components/design/IndexHero.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import BreadcrumbLD from '../../components/seo/BreadcrumbLD.astro';
+import glossaryRaw from '../../content/glossary/index.md?raw';
+
+export const prerender = true;
+
+const entries = await getCollection('glossary');
+const entry = entries[0];
+const body = glossaryRaw.replace(/^---\s*[\s\S]*?\s*---\s*/, '');
+const title = entry.data.title ?? 'AI Tools Glossary';
+const description = entry.data.description ?? 'Definitions of key AI terms used throughout the AI tools wiki.';
+const toDateString = (value: unknown) => {
+  if (value instanceof Date) return value.toISOString().slice(0, 10);
+  return String(value ?? '2026-04-17').slice(0, 10);
+};
+const verifiedDate = toDateString(entry.data.last_verified);
+const updatedDate = toDateString(entry.data.last_updated ?? verifiedDate);
+
+const escapeHtml = (value: string) => value
+  .replace(/&/g, '&amp;')
+  .replace(/</g, '&lt;')
+  .replace(/>/g, '&gt;')
+  .replace(/"/g, '&quot;');
+
+const normalizeHref = (href: string) => {
+  if (href.startsWith('#') || href.startsWith('http')) return href;
+  return href
+    .replace(/^\.\.\/tools\//, '/tools/')
+    .replace(/^\.\.\/categories\//, '/categories/')
+    .replace(/\.md(#.*)?$/, (_match, hash = '') => `${hash ? '' : '/'}${hash}`)
+    .replace(/\/#/, '#');
+};
+
+const renderInlineMarkdown = (value: string) => {
+  let html = escapeHtml(value.trim());
+  html = html.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+  html = html.replace(/`([^`]+)`/g, '<code>$1</code>');
+  html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_match, label, href) => (
+    `<a href="${escapeHtml(normalizeHref(href))}">${label}</a>`
+  ));
+  return html;
+};
+
+const slugify = (value: string) => value
+  .toLowerCase()
+  .replace(/\([^)]*\)/g, '')
+  .replace(/&/g, 'and')
+  .replace(/[^a-z0-9]+/g, '-')
+  .replace(/^-|-$/g, '');
+
+const classifyTerm = (name: string) => {
+  const text = name.toLowerCase();
+  if (/(agent|computer use|workflow|multi-agent|no-code|low-code|vibe)/.test(text)) return 'Agent systems';
+  if (/(api|sdk|token|context|latency|inference|embedding|vector|rag)/.test(text)) return 'Build terms';
+  if (/(seo|geo|affiliate|sponsored|arr|mrr|saas)/.test(text)) return 'Business terms';
+  if (/(voice|tts|cloning|hallucination)/.test(text)) return 'Trust and media';
+  return 'Model terms';
+};
+
+const sections = body
+  .split(/\r?\n---\r?\n/g)
+  .map((section) => section.trim())
+  .filter((section) => section.startsWith('## '));
+
+const terms = sections.map((section) => {
+  const lines = section.split('\n');
+  const name = lines.shift()?.replace(/^##\s+/, '').trim() ?? '';
+  const slug = slugify(name);
+  const seeAlsoLine = lines.find((line) => line.trim().startsWith('See also:'));
+  const seeAlso = [...(seeAlsoLine ?? '').matchAll(/\[([^\]]+)\]\(([^)]+)\)/g)].map((match) => ({
+    label: match[1],
+    href: normalizeHref(match[2]),
+  }));
+  const paragraphs = lines
+    .join('\n')
+    .split(/\n{2,}/)
+    .map((paragraph) => paragraph.trim().replace(/\s{2,}/g, ' '))
+    .filter((paragraph) => paragraph && !paragraph.startsWith('See also:'));
+  const summary = paragraphs[0] ?? '';
+  const detail = paragraphs.slice(1, 3);
+  const searchText = [name, summary, detail.join(' '), seeAlso.map((item) => item.label).join(' ')].join(' ');
+
+  return {
+    name,
+    slug,
+    initial: name[0]?.toUpperCase() ?? '#',
+    lane: classifyTerm(name),
+    summaryHtml: renderInlineMarkdown(summary),
+    detailHtml: detail.map(renderInlineMarkdown),
+    seeAlso,
+    searchText,
+  };
+}).sort((a, b) => a.name.localeCompare(b.name));
+
+const lanes = ['Model terms', 'Agent systems', 'Build terms', 'Business terms', 'Trust and media']
+  .map((lane) => ({ lane, terms: terms.filter((term) => term.lane === lane) }))
+  .filter((group) => group.terms.length > 0);
+
+const alphabet = [...new Set(terms.map((term) => term.initial))].sort();
+const popularTerms = ['LLM', 'Agentic AI', 'RAG', 'Tokens', 'Context Window', 'GEO']
+  .map((name) => terms.find((term) => term.name === name))
+  .filter(Boolean);
+
+const breadcrumbItems = [
+  { name: 'Home', url: 'https://aipedia.wiki/' },
+  { name: 'AI Glossary', url: 'https://aipedia.wiki/glossary/' },
+];
+---
+
+<BaseLayout title="AI Glossary | aipedia.wiki" description={description}>
+  <BreadcrumbLD items={breadcrumbItems} />
+
+  
+  <div
+    class="glossary-desk glossary-page-root site-content-frame site-directory-canvas"
+    data-glossary-desk
+    data-refresh-surface="home-adjacent"
+  >
+    <Breadcrumb items={[{ label: 'AI Glossary' }]} data-pagefind-ignore />
+
+    <IndexHero
+      title="AI Glossary"
+      titleId="glossary-title"
+      lead="Definitions for the model, agent, business, and infrastructure terms used across aipedia.wiki."
+      class="glossary-desk__hero"
+      mainClass="glossary-desk__intro"
+      eyebrowClass="glossary-desk__eyebrow"
+      headingClass="glossary-desk__title"
+      leadClass="glossary-desk__lede"
+      eyebrow={[
+        { label: 'Reference desk', tone: 'accent' },
+        { label: 'terms', value: terms.length },
+      ]}
+      trust="Shared language for tools, agents, infrastructure, and business pages."
+    >
+      <Fragment slot="aside">
+      <div class="glossary-desk__status home-surface-card" aria-label="Glossary status">
+        <div>
+          <span class="glossary-desk__metric">{terms.length}</span>
+          <span class="glossary-desk__label">terms tracked</span>
+        </div>
+        <div>
+          <span class="glossary-desk__metric">{lanes.length}</span>
+          <span class="glossary-desk__label">reference lanes</span>
+        </div>
+        <div>
+          <span class="glossary-desk__metric">Apr</span>
+          <span class="glossary-desk__label">verified {verifiedDate.slice(0, 4)}</span>
+        </div>
+      </div>
+      </Fragment>
+    </IndexHero>
+
+    <section class="glossary-desk__tools home-surface-card" aria-label="Find a glossary term" data-pagefind-ignore>
+      <label class="glossary-desk__search">
+        <span>Search glossary</span>
+        <input
+          type="search"
+          placeholder="Try RAG, inference, GEO, or agentic AI"
+          autocomplete="off"
+          data-glossary-search
+        />
+      </label>
+
+      <div class="glossary-desk__quick" aria-label="Popular glossary terms">
+        {popularTerms.map((term) => term && (
+          <button type="button" data-glossary-chip data-query={term.name}>{term.name}</button>
+        ))}
+      </div>
+
+      <div class="glossary-desk__alpha" aria-label="Alphabetical glossary jump links" data-glossary-alpha>
+        {alphabet.map((letter) => (
+          <a href={`#glossary-${letter.toLowerCase()}`}>{letter}</a>
+        ))}
+      </div>
+    </section>
+
+    <div class="glossary-desk__body">
+      <aside class="glossary-desk__rail home-surface-card" data-pagefind-ignore aria-label="Glossary lanes">
+        <p class="glossary-desk__rail-title">On this page</p>
+        {lanes.map((group) => (
+          <a href={`#${slugify(group.lane)}`}>
+            <span>{group.lane}</span>
+            <strong>{group.terms.length}</strong>
+          </a>
+        ))}
+        <div class="glossary-desk__note">
+          <span>Updated {updatedDate}</span>
+          <p>Terms are written as short reference entries, not vendor claims.</p>
+        </div>
+      </aside>
+
+      <section class="glossary-desk__terms" aria-live="polite">
+        <div class="glossary-desk__result-line" data-pagefind-ignore>
+          <span data-glossary-count>{terms.length}</span> terms visible
+        </div>
+
+        {alphabet.map((letter) => {
+          const letterTerms = terms.filter((term) => term.initial === letter);
+          return (
+            <section class="glossary-desk__letter" id={`glossary-${letter.toLowerCase()}`} data-glossary-group>
+              <h2>{letter}</h2>
+              <div class="glossary-desk__grid">
+                {letterTerms.map((term) => (
+                  <article
+                    class="glossary-card home-surface-card"
+                    id={term.slug}
+                    data-glossary-term
+                    data-lane={term.lane}
+                    data-search={term.searchText.toLowerCase()}
+                  >
+                    <div class="glossary-card__top">
+                      <h3>{term.name}</h3>
+                      <a href={`#${term.slug}`} aria-label={`Copy anchor for ${term.name}`}>#</a>
+                    </div>
+                    <p class="glossary-card__lane">{term.lane}</p>
+                    <p class="glossary-card__summary" set:html={term.summaryHtml} />
+                    {term.detailHtml.length > 0 && (
+                      <div class="glossary-card__detail">
+                        {term.detailHtml.map((paragraph) => <p set:html={paragraph} />)}
+                      </div>
+                    )}
+                    {term.seeAlso.length > 0 && (
+                      <div class="glossary-card__links" aria-label={`Related terms for ${term.name}`}>
+                        <span>See also</span>
+                        {term.seeAlso.map((item) => <a href={item.href}>{item.label}</a>)}
+                      </div>
+                    )}
+                  </article>
+                ))}
+              </div>
+            </section>
+          );
+        })}
+
+        <div class="glossary-desk__empty home-surface-card" hidden data-glossary-empty data-pagefind-ignore>
+          <strong>No matching term yet.</strong>
+          <span>Try a broader phrase or use the site search for related tool pages.</span>
+        </div>
+      </section>
+    </div>
+  </div>
+<script is:inline>
+    function initGlossaryDesk() {
+      const root = document.querySelector('[data-glossary-desk]');
+      if (!root || root.dataset.ready === '1') return;
+      root.dataset.ready = '1';
+
+      const input = root.querySelector('[data-glossary-search]');
+      const cards = Array.from(root.querySelectorAll('[data-glossary-term]'));
+      const groups = Array.from(root.querySelectorAll('[data-glossary-group]'));
+      const count = root.querySelector('[data-glossary-count]');
+      const empty = root.querySelector('[data-glossary-empty]');
+
+      function termMatches(card, query) {
+        if (!query) return true;
+        const haystack = card.getAttribute('data-search') || '';
+        if (query.length <= 3) {
+          const escaped = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+          return new RegExp('(^|[^a-z0-9])' + escaped + '([^a-z0-9]|$)').test(haystack);
+        }
+        return haystack.includes(query);
+      }
+
+      function applyFilter() {
+        const query = (input?.value || '').trim().toLowerCase();
+        let visible = 0;
+        cards.forEach((card) => {
+          const matches = termMatches(card, query);
+          card.hidden = !matches;
+          if (matches) visible += 1;
+        });
+        groups.forEach((group) => {
+          const hasVisibleTerm = Array.from(group.querySelectorAll('[data-glossary-term]')).some((card) => !card.hidden);
+          group.hidden = !hasVisibleTerm;
+        });
+        if (count) count.textContent = String(visible);
+        if (empty) empty.hidden = visible > 0;
+      }
+
+      input?.addEventListener('input', applyFilter);
+      root.querySelectorAll('[data-glossary-chip]').forEach((chip) => {
+        chip.addEventListener('click', () => {
+          if (!input) return;
+          input.value = chip.getAttribute('data-query') || '';
+          input.focus();
+          applyFilter();
+        });
+      });
+
+      applyFilter();
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initGlossaryDesk);
+    } else {
+      initGlossaryDesk();
+    }
+    document.addEventListener('astro:after-swap', initGlossaryDesk);
+  </script>
+
+  <style is:global>
+    /* Layout and type; frosted panels use .home-surface-card + --home-* under .glossary-page-root. */
+    .glossary-desk {
+      width: 100%;
+      margin: 0 auto;
+      padding: var(--site-page-top) 0 var(--site-page-bottom);
+      color: var(--home-heading);
+    }
+
+    .glossary-desk,
+    .glossary-desk * {
+      box-sizing: border-box;
+    }
+
+    .glossary-desk__breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 36px;
+      color: var(--home-dim);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .glossary-desk__breadcrumb a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .glossary-desk__breadcrumb a:hover {
+      color: var(--home-accent);
+    }
+
+    .glossary-desk__hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(280px, 430px);
+      gap: 28px;
+      align-items: end;
+      padding: var(--site-index-hero-top) 0 var(--site-section-gap);
+      border-bottom: 1px solid var(--home-line);
+    }
+
+    .glossary-desk__eyebrow,
+    .glossary-desk__label,
+    .glossary-desk__rail-title,
+    .glossary-card__lane,
+    .glossary-card__links span,
+    .glossary-desk__search span {
+      margin: 0;
+      color: var(--home-dim);
+      font-size: 11px;
+      font-weight: 850;
+      letter-spacing: 0.12em;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    .glossary-desk__eyebrow {
+      color: var(--home-accent);
+    }
+
+    .glossary-desk h1 {
+      max-width: 12ch;
+      margin: 14px 0 0;
+      color: var(--home-heading);
+      font-size: clamp(48px, 6vw, 68px);
+      font-weight: 850;
+      letter-spacing: 0;
+      line-height: 0.92;
+    }
+
+    .glossary-desk__lede {
+      max-width: 660px;
+      margin: 22px 0 0;
+      color: var(--home-muted);
+      font-size: 20px;
+      font-weight: 650;
+      line-height: 1.5;
+    }
+
+    .glossary-desk__status {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      overflow: hidden;
+    }
+
+    .glossary-desk__status > div {
+      min-width: 0;
+      padding: 20px;
+      border-right: 1px solid var(--home-line);
+    }
+
+    .glossary-desk__status > div:last-child {
+      border-right: 0;
+    }
+
+    .glossary-desk__metric {
+      display: block;
+      color: var(--home-on-card);
+      font-size: 34px;
+      font-weight: 850;
+      letter-spacing: 0;
+      line-height: 1;
+    }
+
+    .glossary-desk__label {
+      display: block;
+      margin-top: 10px;
+      line-height: 1.25;
+    }
+
+    .glossary-desk__tools {
+      position: sticky;
+      top: 56px;
+      z-index: 20;
+      display: grid;
+      grid-template-columns: minmax(260px, 1fr) minmax(0, auto);
+      gap: 14px;
+      align-items: center;
+      margin: 22px 0 34px;
+      padding: 14px;
+    }
+
+    .glossary-desk__search {
+      display: grid;
+      gap: 10px;
+      min-width: 0;
+    }
+
+    .glossary-desk__search input {
+      width: 100%;
+      min-height: 52px;
+      border: 1px solid var(--home-card-outline);
+      border-radius: 8px;
+      background: var(--home-input-bg);
+      color: var(--home-on-card);
+      font: inherit;
+      font-size: 16px;
+      font-weight: 750;
+      letter-spacing: 0;
+      line-height: 1.2;
+      padding: 0 16px;
+      outline: none;
+    }
+
+    .glossary-desk__search input:focus {
+      border-color: var(--home-card-outline-hover);
+      box-shadow: 0 0 0 2px rgba(249, 115, 22, 0.14);
+    }
+
+    .glossary-desk__quick,
+    .glossary-desk__alpha {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: flex-end;
+      min-width: 0;
+    }
+
+    .glossary-desk__quick button,
+    .glossary-desk__alpha a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 34px;
+      border: 1px solid var(--home-line);
+      border-radius: 7px;
+      background: var(--home-inner-panel);
+      color: var(--home-on-card-muted);
+      font: inherit;
+      font-size: 12px;
+      font-weight: 800;
+      line-height: 1;
+      padding: 0 11px;
+      text-decoration: none;
+      transition:
+        border-color var(--motion-fast, 160ms) var(--motion-ease, cubic-bezier(0.16, 1, 0.3, 1)),
+        background var(--motion-fast, 160ms) var(--motion-ease, cubic-bezier(0.16, 1, 0.3, 1)),
+        color var(--motion-fast, 160ms) var(--motion-ease, cubic-bezier(0.16, 1, 0.3, 1));
+    }
+
+    .glossary-desk__alpha {
+      grid-column: 1 / -1;
+      justify-content: flex-start;
+      padding-top: 2px;
+    }
+
+    .glossary-desk__alpha a {
+      min-width: 34px;
+      padding: 0 8px;
+    }
+
+    .glossary-desk__quick button:hover,
+    .glossary-desk__alpha a:hover {
+      border-color: var(--home-card-outline-hover);
+      background: var(--home-panel-strong);
+      color: var(--home-on-card);
+    }
+
+    .glossary-desk__body {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 260px;
+      gap: 34px;
+      align-items: start;
+    }
+
+    .glossary-desk__rail {
+      position: sticky;
+      top: 190px;
+      display: grid;
+      gap: 8px;
+      padding: 16px;
+      order: 2;
+    }
+
+    .glossary-desk__rail a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      min-height: 40px;
+      border-radius: 7px;
+      color: var(--home-on-card-muted);
+      font-size: 13px;
+      font-weight: 750;
+      line-height: 1.2;
+      padding: 0 10px;
+      text-decoration: none;
+      transition:
+        background var(--motion-fast, 160ms) var(--motion-ease, cubic-bezier(0.16, 1, 0.3, 1)),
+        color var(--motion-fast, 160ms) var(--motion-ease, cubic-bezier(0.16, 1, 0.3, 1));
+    }
+
+    .glossary-desk__rail a:hover {
+      background: var(--home-panel-strong);
+      color: var(--home-on-card);
+    }
+
+    .glossary-desk__rail strong {
+      color: var(--home-accent);
+      font-size: 12px;
+      font-weight: 850;
+    }
+
+    .glossary-desk__note {
+      margin-top: 12px;
+      padding-top: 14px;
+      border-top: 1px solid var(--home-line);
+    }
+
+    .glossary-desk__note span {
+      color: var(--home-accent);
+      font-size: 11px;
+      font-weight: 850;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .glossary-desk__note p {
+      margin: 8px 0 0;
+      color: var(--home-dim);
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .glossary-desk__terms {
+      min-width: 0;
+    }
+
+    .glossary-desk__result-line {
+      margin-bottom: 18px;
+      color: var(--home-dim);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .glossary-desk__result-line span {
+      color: var(--home-accent);
+    }
+
+    .glossary-desk__letter {
+      scroll-margin-top: 190px;
+      margin-bottom: 42px;
+    }
+
+    .glossary-desk__letter h2 {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin: 0 0 14px;
+      color: var(--home-heading);
+      font-size: 28px;
+      font-weight: 850;
+      letter-spacing: 0;
+      line-height: 1;
+    }
+
+    .glossary-desk__letter h2::after {
+      content: '';
+      height: 1px;
+      flex: 1;
+      background: linear-gradient(90deg, var(--home-line-strong), transparent);
+    }
+
+    .glossary-desk__grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .glossary-card {
+      min-width: 0;
+      padding: 18px;
+    }
+
+    .glossary-card__top {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: start;
+    }
+
+    .glossary-card h3 {
+      margin: 0;
+      color: var(--home-on-card);
+      font-size: 21px;
+      font-weight: 850;
+      letter-spacing: 0;
+      line-height: 1.15;
+    }
+
+    .glossary-card__top a {
+      flex: 0 0 auto;
+      color: var(--home-dim);
+      font-size: 14px;
+      font-weight: 850;
+      text-decoration: none;
+    }
+
+    .glossary-card__top a:hover {
+      color: var(--home-accent);
+    }
+
+    .glossary-card__lane {
+      margin-top: 10px;
+      color: var(--home-accent);
+    }
+
+    .glossary-card__summary,
+    .glossary-card__detail p {
+      margin: 14px 0 0;
+      color: var(--home-on-card-muted);
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1.62;
+    }
+
+    .glossary-card__detail p {
+      color: var(--home-dim);
+      font-size: 14px;
+    }
+
+    .glossary-card strong {
+      color: var(--home-on-card);
+      font-weight: 850;
+    }
+
+    .glossary-card .glossary-card__summary a,
+    .glossary-card .glossary-card__detail a {
+      color: var(--home-accent);
+      text-decoration: none;
+    }
+
+    .glossary-card .glossary-card__summary a:hover,
+    .glossary-card .glossary-card__detail a:hover {
+      opacity: 0.92;
+    }
+
+    .glossary-card code {
+      border: 1px solid var(--home-line);
+      border-radius: 5px;
+      background: var(--home-inner-panel);
+      color: var(--home-on-card);
+      font-size: 0.9em;
+      padding: 2px 5px;
+    }
+
+    .glossary-card__links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+      margin-top: 16px;
+      padding-top: 14px;
+      border-top: 1px solid var(--home-line);
+    }
+
+    .glossary-card__links a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
+      border: 1px solid var(--home-line);
+      border-radius: 7px;
+      background: var(--home-inner-panel);
+      color: var(--home-on-card-muted);
+      font-size: 12px;
+      font-weight: 800;
+      line-height: 1.2;
+      padding: 6px 9px;
+      text-decoration: none;
+      transition:
+        border-color var(--motion-fast, 160ms) var(--motion-ease, cubic-bezier(0.16, 1, 0.3, 1)),
+        background var(--motion-fast, 160ms) var(--motion-ease, cubic-bezier(0.16, 1, 0.3, 1)),
+        color var(--motion-fast, 160ms) var(--motion-ease, cubic-bezier(0.16, 1, 0.3, 1));
+    }
+
+    .glossary-card__links a:hover {
+      border-color: var(--home-card-outline-hover);
+      color: var(--home-on-card);
+      background: var(--home-panel-strong);
+    }
+
+    .glossary-page-root .glossary-desk__empty.home-surface-card {
+      border-style: dashed;
+    }
+
+    .glossary-desk__empty {
+      color: var(--home-on-card-muted);
+      padding: 22px;
+    }
+
+    .glossary-desk__empty strong,
+    .glossary-desk__empty span {
+      display: block;
+    }
+
+    .glossary-desk__empty strong {
+      color: var(--home-on-card);
+      margin-bottom: 8px;
+    }
+
+    @media (max-width: 980px) {
+      .glossary-desk__hero,
+      .glossary-desk__body {
+        grid-template-columns: 1fr;
+      }
+
+      .glossary-desk__rail {
+        position: static;
+        order: -1;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .glossary-desk__rail-title,
+      .glossary-desk__note {
+        grid-column: 1 / -1;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .glossary-desk {
+        padding-top: var(--site-page-top);
+      }
+
+      .glossary-desk__breadcrumb {
+        margin-bottom: 22px;
+      }
+
+      .glossary-desk h1 {
+        font-size: 46px;
+      }
+
+      .glossary-desk__lede {
+        font-size: 16px;
+      }
+
+      .glossary-desk__status,
+      .glossary-desk__tools,
+      .glossary-desk__grid,
+      .glossary-desk__rail {
+        grid-template-columns: 1fr;
+      }
+
+      .glossary-desk__status > div {
+        border-right: 0;
+        border-bottom: 1px solid var(--home-line);
+      }
+
+      .glossary-desk__status > div:last-child {
+        border-bottom: 0;
+      }
+
+      .glossary-desk__tools {
+        position: static;
+      }
+
+      .glossary-desk__quick {
+        justify-content: flex-start;
+      }
+
+      .glossary-card {
+        padding: 16px;
+      }
+    }
+  </style>
+</BaseLayout>

@@ -1,7 +1,11 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import Breadcrumb from '../../components/Breadcrumb.astro';
+/**
+ * /dead/ index — god-tier 10/10 mobile-first.
+ */
 import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/godtier/Hero.astro';
+import BreadcrumbLD from '../../components/seo/BreadcrumbLD.astro';
 
 const allDead = await getCollection('dead');
 
@@ -12,7 +16,6 @@ function toYmd(v: unknown): string {
   const d = new Date(s);
   return isNaN(d.getTime()) ? s : d.toISOString().slice(0, 10);
 }
-
 function prettyDate(ymd: string): string {
   if (!ymd) return '';
   const d = new Date(ymd);
@@ -20,16 +23,8 @@ function prettyDate(ymd: string): string {
   return d.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
 }
 
-function causePillClass(cause: string): string {
-  if (cause === 'shutdown' || cause === 'bankrupt') return 'dead-cause-shutdown';
-  if (cause === 'acquired') return 'dead-cause-acquired';
-  if (cause === 'pivoted') return 'dead-cause-pivoted';
-  if (cause === 'rebranded') return 'dead-cause-rebranded';
-  return 'dead-cause-unknown';
-}
-
 const sorted = allDead
-  .map((t) => ({
+  .map((t: any) => ({
     slug: t.data.slug || t.id.replace(/\.md$/, ''),
     title: t.data.title,
     description: t.data.meta_description || '',
@@ -37,7 +32,7 @@ const sorted = allDead
     cause: (t.data.cause as string) || 'unknown',
     acquiredBy: (t.data.acquired_by as string) || '',
   }))
-  .sort((a, b) => (b.diedYmd || '').localeCompare(a.diedYmd || ''));
+  .sort((a: any, b: any) => (b.diedYmd || '').localeCompare(a.diedYmd || ''));
 
 const causeLabel: Record<string, string> = {
   shutdown: 'Shut down',
@@ -47,210 +42,125 @@ const causeLabel: Record<string, string> = {
   rebranded: 'Rebranded',
   unknown: 'Unknown',
 };
+const causeTone: Record<string, string> = {
+  shutdown: 'negative',
+  bankrupt: 'negative',
+  acquired: 'neutral',
+  pivoted: 'neutral',
+  rebranded: 'neutral',
+  unknown: 'neutral',
+};
 
-const total = sorted.length;
-const recent = sorted[0];
-const shutdownCount = sorted.filter((tool) => tool.cause === 'shutdown').length;
-const nonShutdownCount = sorted.filter((tool) => tool.cause !== 'shutdown').length;
+const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
 ---
 
 <BaseLayout
-  title="Dead AI Tools Archive — aipedia.wiki"
-  description="Archive of discontinued AI tools. Track what shut down, when, and why, so readers stop chasing products that no longer exist."
+  title="Dead AI Tools Archive · aipedia.wiki"
+  description="Archive of discontinued AI tools. Track what shut down, when, and why."
 >
-  <div class="site-content-frame">
-    <Breadcrumb items={[{ label: 'Dead Tools' }]} />
+  <BreadcrumbLD items={[
+    { name: 'Home', url: new URL('/', siteBase).href },
+    { name: 'Dead tools', url: new URL('/dead/', siteBase).href },
+  ]} />
 
-    <div class="dead-page-root">
-      <section class="idx-hero" data-pagefind-ignore data-refresh-surface="home-adjacent">
-        <div class="idx-eyebrow">
-          <span class="idx-eyebrow-chip idx-eyebrow-accent">Archive</span>
-          <span class="idx-eyebrow-chip"><span class="tabular-nums">{total}</span> tool{total === 1 ? '' : 's'} archived</span>
-          <span class="idx-eyebrow-trust">Industry memory. Sorted by most recent death.</span>
-        </div>
-        <h1 class="idx-headline">
-          <span class="idx-gradient">Dead tools</span> archive.
-        </h1>
-        <p class="idx-subhead">
-          AI tools that shut down, were acquired, pivoted, or rebranded. Archived so readers stop chasing products that no longer exist, and so the industry has a working memory.
-        </p>
-      </section>
+  <div class="sr-only" data-pagefind-ignore>
+    <span data-pagefind-filter="Type">DeadIndex</span>
+  </div>
 
-      <section class="dead-signal-strip" aria-label="Archive status" data-pagefind-ignore>
-        <div class="dead-stat-card home-surface-card">
-          <span>Latest archive</span>
-          <strong>{recent?.diedYmd ? prettyDate(recent.diedYmd) : 'Tracked'}</strong>
-          <p>{recent?.title ?? 'Dead tools'} is the newest archived record.</p>
-        </div>
-        <div class="dead-stat-card home-surface-card">
-          <span>Shutdowns</span>
-          <strong class="tabular-nums">{shutdownCount}</strong>
-          <p>Products fully closed or discontinued for readers.</p>
-        </div>
-        <div class="dead-stat-card home-surface-card">
-          <span>Transitions</span>
-          <strong class="tabular-nums">{nonShutdownCount}</strong>
-          <p>Acquisitions, pivots, and rebrands kept in memory.</p>
-        </div>
-      </section>
+  <div class="gt-canvas">
+    <Hero
+      title="Dead tools archive"
+      tagline="AI tools that shut down, were acquired, pivoted, or rebranded. Archived so readers stop chasing products that no longer exist."
+      breadcrumbs={[
+        { label: 'aipedia', href: '/' },
+        { label: 'Dead tools' },
+      ]}
+      rankLabel={`${sorted.length} archived`}
+    />
 
-      <section class="dead-card-grid mb-[var(--site-page-bottom)]">
-        {sorted.map((t) => (
-          <a
-            href={`/dead/${t.slug}/`}
-            class="home-surface-card group block dead-tool-card touch-manipulation no-underline"
-            data-dead-card
-          >
-            <div class="flex items-start justify-between gap-3 mb-2">
-              <span class:list={['dead-cause-pill', causePillClass(t.cause)]}>
-                {causeLabel[t.cause] || t.cause}
-              </span>
-              {t.diedYmd && <span class="dead-tool-date shrink-0 tabular-nums">{prettyDate(t.diedYmd)}</span>}
-            </div>
-            <h3 class="dead-tool-title">{t.title}</h3>
-            {t.acquiredBy && (
-              <div class="dead-tool-acquired">by {t.acquiredBy}</div>
-            )}
-            {t.description && <p class="dead-tool-desc line-clamp-2 m-0">{t.description}</p>}
-          </a>
-        ))}
-      </section>
-    </div>
+    <section class="gt-dead-index">
+      <ol class="gt-dead-cards">
+        {sorted.map((t: any) => {
+          const tone = causeTone[t.cause] ?? 'neutral';
+          return (
+            <li class={`gt-dead-card gt-dead-card-${tone}`}>
+              <a href={`/dead/${t.slug}/`}>
+                <div class="gt-dead-card-head">
+                  <span class={`gt-dead-cause gt-dead-cause-${t.cause}`}>{causeLabel[t.cause] || t.cause}</span>
+                  {t.diedYmd && <span class="gt-dead-date">{prettyDate(t.diedYmd)}</span>}
+                </div>
+                <strong class="gt-dead-card-title">{t.title}</strong>
+                {t.acquiredBy && <span class="gt-dead-acquired">by {t.acquiredBy}</span>}
+                {t.description && <p class="gt-dead-card-desc">{t.description}</p>}
+              </a>
+            </li>
+          );
+        })}
+      </ol>
+    </section>
   </div>
 
   <style>
-    .dead-signal-strip {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: var(--site-grid-gap);
-      margin: calc(var(--site-content-gap-sm) * -0.5) 0 var(--site-content-gap);
+    .gt-dead-index { margin-bottom: 40px; }
+    .gt-dead-cards {
+      list-style: none; padding: 0; margin: 0;
+      display: grid; grid-template-columns: 1fr; gap: 10px;
     }
-
-    @media (max-width: 720px) {
-      .dead-signal-strip {
-        grid-template-columns: 1fr;
-      }
+    .gt-dead-card {
+      border-radius: var(--gt-radius-sm);
+      border: 1px solid var(--gt-line);
+      background: var(--gt-surface);
     }
-
-    .dead-page-root .dead-stat-card {
-      display: grid;
-      gap: var(--site-card-gap);
-      min-height: 104px;
-      padding: var(--site-card-padding);
+    .gt-dead-card-negative { border-left: 3px solid var(--gt-negative); }
+    .gt-dead-card-neutral { border-left: 3px solid var(--gt-warn); }
+    .gt-dead-card:hover { background: var(--gt-surface-2); }
+    .gt-dead-card a {
+      display: flex; flex-direction: column; gap: 8px;
+      padding: 14px;
+      text-decoration: none;
+      color: var(--gt-fg);
+      min-height: 90px;
     }
-
-    .dead-page-root .dead-stat-card > span:first-child {
-      color: var(--home-on-card-muted);
-      font-size: 11px;
-      font-weight: 850;
-      letter-spacing: 0.1em;
-      line-height: 1.1;
-      text-transform: uppercase;
+    .gt-dead-card-head {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 8px;
     }
-
-    .dead-page-root .dead-stat-card strong {
-      margin: 0;
-      color: var(--home-on-card);
-      font-size: clamp(1.25rem, 2vw, 1.65rem);
-      font-weight: 850;
-      letter-spacing: 0;
-      line-height: 1;
-    }
-
-    .dead-page-root .dead-stat-card p {
-      margin: 0;
-      color: var(--home-on-card-muted);
-      font-size: 13px;
-      font-weight: 650;
-      line-height: 1.45;
-    }
-
-    .dead-card-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 12px;
-    }
-
-    @media (min-width: 768px) {
-      .dead-card-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-
-    .dead-page-root .dead-tool-card {
-      padding: 13px;
-    }
-
-    .dead-page-root .dead-cause-pill {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 24px;
-      padding: 0 10px;
+    .gt-dead-cause {
+      padding: 2px 8px;
       border-radius: 999px;
       font-size: 10px;
-      font-weight: 900;
-      letter-spacing: 0.06em;
+      font-weight: 700;
       text-transform: uppercase;
-      border: 1px solid var(--home-card-outline);
+      letter-spacing: 0.06em;
+      border: 1px solid var(--gt-line-strong);
     }
-
-    .dead-page-root .dead-cause-shutdown {
-      color: var(--accent-danger);
-      background: color-mix(in srgb, var(--accent-danger) 14%, var(--home-chip-bg));
-      border-color: color-mix(in srgb, var(--accent-danger) 35%, var(--home-card-outline));
+    .gt-dead-cause-shutdown,
+    .gt-dead-cause-bankrupt {
+      color: var(--gt-negative);
+      border-color: rgba(var(--gt-negative-rgb), 0.4);
     }
-
-    .dead-page-root .dead-cause-acquired {
-      color: var(--accent-secondary);
-      background: color-mix(in srgb, var(--accent-secondary) 12%, var(--home-chip-bg));
-      border-color: color-mix(in srgb, var(--accent-secondary) 35%, var(--home-card-outline));
+    .gt-dead-cause-acquired { color: var(--gt-accent); border-color: rgba(249, 115, 22, 0.4); }
+    .gt-dead-cause-pivoted,
+    .gt-dead-cause-rebranded { color: var(--gt-warn); border-color: rgba(251, 191, 36, 0.4); }
+    .gt-dead-date {
+      font-size: 11px;
+      color: var(--gt-subtle);
+      font-variant-numeric: tabular-nums;
     }
-
-    .dead-page-root .dead-cause-pivoted,
-    .dead-page-root .dead-cause-rebranded {
-      color: var(--home-accent-solid);
-      background: color-mix(in srgb, var(--home-accent-solid) 14%, var(--home-chip-bg));
-      border-color: var(--home-card-outline);
-    }
-
-    .dead-page-root .dead-cause-unknown {
-      color: var(--home-on-card-muted);
-      background: var(--home-chip-bg);
-      border-color: var(--home-card-outline);
-    }
-
-    .dead-page-root .dead-tool-date {
-      font-size: 12px;
-      color: var(--home-dim);
-    }
-
-    .dead-page-root .dead-tool-title {
-      margin: 0 0 8px;
-      font-size: 15px;
-      font-weight: 800;
-      line-height: 1.35;
-      color: var(--home-on-card);
+    .gt-dead-card-title { font-size: 15px; font-weight: 700; }
+    .gt-dead-acquired { font-size: 12px; color: var(--gt-muted); }
+    .gt-dead-card-desc {
+      margin: 0; font-size: 13px; line-height: 1.5; color: var(--gt-muted);
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
       overflow: hidden;
-      text-overflow: ellipsis;
-      transition: color var(--motion-fast, 160ms) var(--motion-ease, cubic-bezier(0.16, 1, 0.3, 1));
     }
-
-    .dead-page-root a.home-surface-card:hover .dead-tool-title,
-    .dead-page-root a.home-surface-card:focus-visible .dead-tool-title {
-      color: var(--home-accent);
+    @media (min-width: 600px) {
+      .gt-dead-cards { grid-template-columns: repeat(2, 1fr); gap: 12px; }
     }
-
-    .dead-page-root .dead-tool-acquired {
-      font-size: 12px;
-      color: var(--home-on-card-muted);
-      margin-bottom: 8px;
-    }
-
-    .dead-page-root .dead-tool-desc {
-      font-size: 13px;
-      line-height: 1.5;
-      color: var(--home-on-card-muted);
+    @media (min-width: 900px) {
+      .gt-dead-cards { grid-template-columns: repeat(3, 1fr); }
     }
   </style>
 </BaseLayout>

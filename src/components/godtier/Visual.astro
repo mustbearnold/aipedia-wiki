@@ -1,0 +1,153 @@
+---
+/**
+ * Visual — hero product visual wrapper.
+ *
+ * Supports three modes:
+ *   - terminal: a styled fake-terminal preview using the `lines` prop
+ *   - image:    a real screenshot at `src`
+ *   - fallback: styled wordmark on accent gradient when nothing else is provided
+ *
+ * Tools without an explicit hero visual get the fallback automatically.
+ */
+interface TerminalLine {
+  kind?: 'prompt' | 'comment' | 'agent' | 'ok' | 'plain';
+  text: string;
+}
+
+interface Props {
+  mode?: 'terminal' | 'image' | 'fallback';
+  title?: string;             // wordmark text for fallback
+  imageSrc?: string;
+  imageAlt?: string;
+  caption?: string;
+  terminalTitle?: string;
+  lines?: TerminalLine[];
+}
+
+const {
+  mode = 'fallback',
+  title = '',
+  imageSrc,
+  imageAlt = '',
+  caption,
+  terminalTitle = 'preview',
+  lines = [],
+} = Astro.props;
+
+function classForLine(kind?: string): string {
+  if (kind === 'prompt') return 'gt-tprompt';
+  if (kind === 'comment') return 'gt-tcomment';
+  if (kind === 'agent') return 'gt-tagent';
+  if (kind === 'ok') return 'gt-tok';
+  return 'gt-tplain';
+}
+
+// Pre-interleave with newline strings so the rendered <pre> preserves
+// linebreaks between styled spans (JSX doesn't add whitespace between
+// sibling elements on its own).
+const terminalNodes: Array<{ cls: string; text: string; nl: boolean }> = [];
+lines.forEach((l, i) => {
+  terminalNodes.push({ cls: classForLine(l.kind), text: l.text, nl: false });
+  if (i < lines.length - 1) terminalNodes.push({ cls: '', text: '\n', nl: true });
+});
+---
+
+<figure class="gt-visual" aria-label={`${title} preview`}>
+  <div class="gt-visual-frame">
+    {mode === 'terminal' && (
+      <div class="gt-terminal">
+        <div class="gt-terminal-bar">
+          <span class="gt-dot gt-dot-red"></span>
+          <span class="gt-dot gt-dot-yellow"></span>
+          <span class="gt-dot gt-dot-green"></span>
+          <span class="gt-terminal-title">{terminalTitle}</span>
+        </div>
+        <pre class="gt-terminal-body">{terminalNodes.map((n) =>
+          n.nl ? n.text : <span class={n.cls}>{n.text}</span>
+        )}</pre>
+      </div>
+    )}
+    {mode === 'image' && imageSrc && (
+      <img src={imageSrc} alt={imageAlt} class="gt-visual-img" loading="lazy" decoding="async" />
+    )}
+    {mode === 'fallback' && (
+      <div class="gt-visual-fallback" aria-hidden="true">
+        <span class="gt-visual-fallback-mark">{title}</span>
+      </div>
+    )}
+  </div>
+  {caption && <figcaption class="gt-visual-cap">{caption}</figcaption>}
+</figure>
+
+<style>
+  .gt-visual { margin: 0 0 32px; }
+  .gt-visual-frame {
+    border-radius: var(--gt-radius);
+    overflow: hidden;
+    border: 1px solid var(--gt-line);
+    background: #0d1117;
+    box-shadow: 0 24px 60px -28px rgba(0, 0, 0, 0.6);
+  }
+  .gt-visual-img { display: block; width: 100%; height: auto; }
+
+  /* Terminal */
+  .gt-terminal-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    background: #161b22;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  }
+  .gt-dot { width: 11px; height: 11px; border-radius: 50%; flex: none; }
+  .gt-dot-red { background: #ff5f57; }
+  .gt-dot-yellow { background: #febc2e; }
+  .gt-dot-green { background: #28c840; }
+  .gt-terminal-title {
+    margin-left: auto;
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.5);
+    font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+  }
+  .gt-terminal-body {
+    margin: 0;
+    padding: 14px;
+    font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+    font-size: 12.5px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.86);
+    white-space: pre-wrap;
+    overflow-x: auto;
+  }
+  .gt-tprompt  { color: #58a6ff; font-weight: 600; }
+  .gt-tcomment { color: rgba(255, 255, 255, 0.45); font-style: italic; }
+  .gt-tagent   { color: #d2a8ff; }
+  .gt-tok      { color: #56d364; font-weight: 600; }
+  .gt-tplain   { color: rgba(255, 255, 255, 0.86); }
+
+  /* Fallback */
+  .gt-visual-fallback {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 16 / 9;
+    background:
+      radial-gradient(circle at 20% 20%, rgba(249, 115, 22, 0.18), transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(52, 211, 153, 0.12), transparent 50%),
+      #0d1117;
+  }
+  .gt-visual-fallback-mark {
+    font-size: clamp(36px, 8vw, 72px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: rgba(255, 255, 255, 0.92);
+    text-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+  }
+
+  .gt-visual-cap {
+    font-size: 12.5px;
+    color: var(--gt-subtle);
+    margin-top: 10px;
+    text-align: center;
+  }
+</style>

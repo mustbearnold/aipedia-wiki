@@ -1,0 +1,144 @@
+---
+/**
+ * Custom 404 page. Canvas-styled, offers search + popular destinations.
+ * Astro generates /404.html as a static asset; Cloudflare Pages serves
+ * it for any unmatched route.
+ */
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import { getCollection } from 'astro:content';
+import '../styles/t2-canvas.css';
+
+const allTools = await getCollection('tools');
+const allNews = await getCollection('news');
+
+const topTools = allTools
+  .map(t => {
+    const s = t.data.scores ?? { utility: 0, value: 0, moat: 0, longevity: 0 };
+    const score = Math.round((((s.utility ?? 0) + (s.value ?? 0) + (s.moat ?? 0) + (s.longevity ?? 0)) / 4) * 10) / 10;
+    return {
+      slug: t.data.slug || t.id.replace(/\.md$/, ''),
+      title: t.data.title,
+      tagline: t.data.tagline ?? '',
+      score,
+      status: t.data.status,
+    };
+  })
+  .filter(t => t.status !== 'dead' && t.status !== 'retired' && t.status !== 'acquired')
+  .sort((a, b) => b.score - a.score)
+  .slice(0, 6);
+
+const latestNews = allNews
+  .map(n => ({
+    slug: n.data.slug || n.id.replace(/\.md$/, ''),
+    title: n.data.title,
+    date: String(n.data.date).slice(0, 10),
+  }))
+  .sort((a, b) => b.date.localeCompare(a.date))
+  .slice(0, 3);
+---
+
+<BaseLayout
+  title="Page not found, aipedia.wiki"
+  description="The page you were looking for doesn't exist on aipedia.wiki. Try the search, the top tools, or the latest news."
+  noindex={true}
+>
+  
+  <div class="t2-canvas">
+    <Breadcrumb items={[{ label: '404' }]} />
+
+    <header class="t2-article-hero">
+      <div class="t2-404-code" aria-hidden="true">404</div>
+      <h1 class="t2-title">Page not found</h1>
+      <p class="t2-tagline">
+        That URL doesn't match anything in the catalog. Try one of these paths, or hit <kbd class="t2-404-kbd">Ctrl K</kbd> to search.
+      </p>
+      <div class="t2-ctas" style="margin-top: 16px;">
+        <a href="/" class="t2-cta t2-cta-primary">
+          Home
+          <span class="t2-cta-arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <a href="/tools/" class="t2-cta t2-cta-secondary">
+          Browse all tools
+          <span class="t2-cta-arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <a href="/compare/" class="t2-cta t2-cta-secondary">
+          Compare head-to-head
+          <span class="t2-cta-arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </header>
+
+    <section class="t2-index-group">
+      <div class="t2-index-group-head">
+        <span class="t2-index-dot" aria-hidden="true"></span>
+        <h2 class="t2-index-group-title">Top-rated AI tools</h2>
+      </div>
+      <div class="t2-index-grid">
+        {topTools.map(t => (
+          <a href={`/tools/${t.slug}/`} class="t2-index-card">
+            <h3 class="t2-index-card-title">{t.title} <span class="t2-404-score tabular-nums">{t.score}/10</span></h3>
+            {t.tagline && <p class="t2-index-card-desc">{t.tagline}</p>}
+          </a>
+        ))}
+      </div>
+    </section>
+
+    {latestNews.length > 0 && (
+      <section class="t2-index-group">
+        <div class="t2-index-group-head">
+          <span class="t2-index-dot t2-index-dot-secondary" aria-hidden="true"></span>
+          <h2 class="t2-index-group-title">Latest news</h2>
+        </div>
+        <div class="t2-index-grid">
+          {latestNews.map(n => (
+            <a href={`/news/${n.slug}/`} class="t2-index-card">
+              <h3 class="t2-index-card-title">{n.title}</h3>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+  </div>
+
+  <style>
+    .t2-404-code {
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--t2-accent-text);
+      margin-bottom: 6px;
+    }
+    .t2-404-kbd {
+      display: inline-block;
+      padding: 2px 6px;
+      border-radius: 4px;
+      border: 1px solid var(--t2-line);
+      background: var(--t2-surface);
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--t2-fg);
+      vertical-align: middle;
+    }
+    .t2-404-score {
+      float: right;
+      color: var(--t2-accent-text);
+      font-weight: 700;
+      font-size: 12px;
+      margin-left: 8px;
+    }
+    .t2-index-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: var(--t2-accent-text);
+      box-shadow: 0 0 0 4px color-mix(in srgb, var(--t2-accent-text) 14%, transparent);
+      flex: 0 0 auto;
+    }
+    .t2-index-dot-secondary {
+      background: var(--t2-fg-muted);
+      box-shadow: 0 0 0 4px color-mix(in srgb, var(--t2-fg-muted) 14%, transparent);
+    }
+  </style>
+</BaseLayout>

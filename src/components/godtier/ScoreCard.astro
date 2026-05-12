@@ -1,0 +1,107 @@
+---
+/**
+ * ScoreCard — overall score + axes with inline self-explainers.
+ *
+ * No link-out to /about/scoring/ — each axis carries its own why-line.
+ */
+interface Axis {
+  label: string;
+  value: number;
+  why: string;
+}
+
+interface Props {
+  overall?: number;
+  band?: string;
+  confidence?: 'high' | 'medium' | 'low' | string;
+  axes: Axis[];
+  heading?: string;
+  subline?: string;
+}
+
+const {
+  overall,
+  band,
+  confidence = 'high',
+  axes,
+  heading = 'Editorial score',
+  subline,
+} = Astro.props;
+
+function barColor(n: number): string {
+  if (n >= 8) return 'var(--gt-positive)';
+  if (n >= 7) return 'var(--gt-accent)';
+  if (n >= 6) return 'var(--gt-warn)';
+  return 'var(--gt-negative)';
+}
+
+const sub = subline ?? `Unweighted average of ${axes.length} axes · confidence ${confidence}`;
+---
+
+<section class="gt-score" aria-labelledby="gt-score-h">
+  <header class="gt-score-head">
+    <h2 id="gt-score-h" class="gt-section-h">{heading}</h2>
+    <p class="gt-score-sub" set:html={sub.replace(/(high|medium|low)/i, '<strong>$1</strong>')} />
+  </header>
+  <ul class="gt-score-axes">
+    {axes.map((a) => (
+      <li class="gt-axis">
+        <div class="gt-axis-head">
+          <span class="gt-axis-label">{a.label}</span>
+          <span class="gt-axis-value tabular-nums">{a.value}<span class="gt-axis-slash">/10</span></span>
+        </div>
+        <div class="gt-axis-track" aria-hidden="true">
+          <span class="gt-axis-fill" style={`width: ${(a.value / 10) * 100}%; background: ${barColor(a.value)};`}></span>
+        </div>
+        <p class="gt-axis-why">{a.why}</p>
+      </li>
+    ))}
+  </ul>
+</section>
+
+<style>
+  .gt-score {
+    margin-bottom: 40px;
+    padding: 18px;
+    border-radius: var(--gt-radius);
+    border: 1px solid var(--gt-line);
+    background: var(--gt-surface);
+  }
+  .gt-score-head { margin-bottom: 16px; }
+  .gt-score-sub { margin: 0; font-size: 13px; color: var(--gt-muted); }
+  .gt-score-axes {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .gt-axis-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 6px;
+  }
+  .gt-axis-label { font-size: 14px; font-weight: 600; }
+  .gt-axis-value { font-size: 14px; font-weight: 600; color: var(--gt-fg); }
+  .gt-axis-slash { font-size: 11px; color: var(--gt-subtle); font-weight: 500; }
+  .gt-axis-track {
+    height: 6px;
+    border-radius: 999px;
+    background: var(--gt-line);
+    overflow: hidden;
+    margin-bottom: 8px;
+  }
+  .gt-axis-fill {
+    display: block;
+    height: 100%;
+    border-radius: 999px;
+    transition: width 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .gt-axis-why { margin: 0; font-size: 13px; color: var(--gt-muted); line-height: 1.5; }
+
+  @media (min-width: 600px) {
+    .gt-score-axes { grid-template-columns: repeat(2, 1fr); gap: 18px 28px; }
+  }
+</style>

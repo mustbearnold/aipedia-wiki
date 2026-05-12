@@ -7050,6 +7050,46 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high"
+    },
+    {
+      "id": "eightfold-talent-acquisition",
+      "label": "Eightfold Talent Acquisition",
+      "url": "https://eightfold.ai/products/talent-acquisition/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "eightfold-products",
+      "label": "Eightfold products overview",
+      "url": "https://eightfold.ai/products/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "hireez-platform",
+      "label": "hireEZ recruiting platform",
+      "url": "https://www.hireez.com/platform/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "linkedin-recruiter",
+      "label": "LinkedIn Recruiter and Hiring Assistant",
+      "url": "https://business.linkedin.com/hire/recruiter",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "paradox-recruiters",
+      "label": "Paradox recruiter solution",
+      "url": "https://www.paradox.ai/solutions/recruiters",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
     }
   ]
 }

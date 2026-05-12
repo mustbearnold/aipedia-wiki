@@ -7,12 +7,14 @@ import MoatLayer from '../components/MoatLayer.astro';
 import GlobalToolPreview from '../components/GlobalToolPreview.astro';
 import SourcePreviewLayer from '../components/SourcePreviewLayer.astro';
 import CommercialAnalytics from '../components/CommercialAnalytics.astro';
+import CompareTray from '../components/CompareTray.astro';
 import Analytics from '@vercel/analytics/astro';
 import SpeedInsights from '@vercel/speed-insights/astro';
 import { ClientRouter } from 'astro:transitions';
 import '../styles/global.css';
 import '../styles/home-page-tokens.css';
 import '../styles/home-surface-cards.css';
+import '../styles/godtier-tokens.css';
 
 interface Props {
   title: string;
@@ -134,6 +136,7 @@ const ogImageUrl = ogImage
       <slot />
     </main>
     <Footer transition:persist="footer" />
+    <CompareTray transition:persist="compare-tray" />
     <CookieConsent transition:persist="cookie-consent" />
     <CommercialAnalytics />
     <Analytics />

@@ -1,1466 +1,221 @@
 ---
+/**
+ * /tools/ index — god-tier 10/10 mobile-first.
+ *
+ * Full catalog of active AI tools sorted by score, with category filter chips.
+ * Legacy preserved at src/legacy-pages/tools-index.legacy.astro.
+ */
+import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import ToolCard from '../../components/ToolCard.astro';
-import Breadcrumb from '../../components/Breadcrumb.astro';
-import IndexHero from '../../components/design/IndexHero.astro';
+import Hero from '../../components/godtier/Hero.astro';
 import BreadcrumbLD from '../../components/seo/BreadcrumbLD.astro';
 import ItemListLD from '../../components/seo/ItemListLD.astro';
-import { categoryLabel } from '../../utils/tool-metadata';
-import { shortenPrice } from '../../utils/shorten-price';
-import { getCollection } from 'astro:content';
+import { categoryLabel, overallScore } from '../../utils/tool-metadata';
 
 const allTools = await getCollection('tools');
 const inactiveStatuses = new Set(['dead', 'retired', 'acquired']);
-const activeTools = allTools.filter(t => !inactiveStatuses.has(String(t.data.status ?? '').toLowerCase()));
+const activeTools = allTools.filter((t: any) => !inactiveStatuses.has(String(t.data.status ?? '').toLowerCase()));
 
-const scoredTools = activeTools
-  .map(tool => {
-    const s = tool.data.scores ?? { utility: 0, value: 0, moat: 0, longevity: 0 };
-    const avg = ((s.utility ?? 0) + (s.value ?? 0) + (s.moat ?? 0) + (s.longevity ?? 0)) / 4;
-    return { tool, score: Math.round(avg * 10) / 10 };
-  })
-  .sort((a, b) => b.score - a.score);
+interface ScoredTool {
+  slug: string;
+  title: string;
+  tagline: string;
+  category: string;
+  categoryLabel: string;
+  price: string;
+  score: number;
+}
 
-const activeCategoryCount = new Set(scoredTools.map(({ tool }) => tool.data.category).filter(Boolean)).size;
-const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
-const toolsDescription = `Complete index of all ${scoredTools.length} active AI tools reviewed on aipedia.wiki. Sorted by editorial score across ${activeCategoryCount} categories.`;
-const toolsItemList = scoredTools.map(({ tool, score }) => ({
-  name: tool.data.title,
-  slug: tool.data.slug || tool.id.replace(/\.md$/, '').replace(/\\/g, '/'),
-  category: tool.data.category,
-  score,
-  status: tool.data.status,
-}));
+const scoredTools: ScoredTool[] = activeTools
+  .map((t: any) => ({
+    slug: t.data.slug || t.id.replace(/\.md$/, ''),
+    title: t.data.title,
+    tagline: t.data.tagline ?? t.data.meta_description ?? '',
+    category: t.data.category ?? '',
+    categoryLabel: categoryLabel(t.data.category ?? ''),
+    price: t.data.price_range ?? '',
+    score: overallScore(t.data.scores ?? {}),
+  }))
+  .sort((a: ScoredTool, b: ScoredTool) => b.score - a.score || a.title.localeCompare(b.title));
 
 const categoryCounts = new Map<string, number>();
-for (const { tool } of scoredTools) {
-  const categories = new Set([
-    tool.data.category,
-    ...(tool.data.secondary_categories ?? []),
-  ].filter(Boolean));
-  for (const category of categories) {
-    categoryCounts.set(category, (categoryCounts.get(category) ?? 0) + 1);
-  }
-}
-
+scoredTools.forEach((t) => {
+  if (t.category) categoryCounts.set(t.category, (categoryCounts.get(t.category) || 0) + 1);
+});
 const categoryOptions = Array.from(categoryCounts.entries())
   .map(([slug, count]) => ({ slug, label: categoryLabel(slug), count }))
-  .sort((a, b) => a.label.localeCompare(b.label));
+  .sort((a, b) => b.count - a.count);
 
-const pricingLabels: Record<string, string> = {
-  free: 'Free',
-  freemium: 'Freemium',
-  paid: 'Paid',
-  enterprise: 'Enterprise',
-  'open-source': 'Open source',
-};
+const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
+const description = `Complete index of all ${scoredTools.length} active AI tools reviewed on aipedia.wiki. Sorted by editorial score across ${categoryOptions.length} categories.`;
 
-const pricingCounts = new Map<string, number>();
-for (const { tool } of scoredTools) {
-  const pricing = tool.data.pricing_model ?? 'paid';
-  pricingCounts.set(pricing, (pricingCounts.get(pricing) ?? 0) + 1);
-}
-
-const pricingOptions = Array.from(pricingCounts.entries())
-  .map(([slug, count]) => ({ slug, label: pricingLabels[slug] ?? slug, count }))
-  .sort((a, b) => a.label.localeCompare(b.label));
-
-const companyDisplayNames: Record<string, string> = {
-  anthropic: 'Anthropic',
-  google: 'Google',
-  groq: 'Groq',
-  microsoft: 'Microsoft',
-  'microsoft-github': 'Microsoft/GitHub',
-  ollama: 'Ollama',
-  openai: 'OpenAI',
-  xai: 'xAI',
-};
-
-const companyLabel = (value?: string | null) => {
-  const raw = String(value ?? '').trim();
-  if (!raw) return '';
-  const key = raw.toLowerCase();
-  return companyDisplayNames[key] ?? raw
-    .replace(/[-_]+/g, ' ')
-    .replace(/\b\w/g, letter => letter.toUpperCase())
-    .replace(/\bAi\b/g, 'AI');
-};
-
-const nowMs = Date.now();
-const thirtyDaysMs = 30 * 86400000;
-const signalCounts = scoredTools.reduce((acc, { tool }) => {
-  const pricing = tool.data.pricing_model ?? '';
-  const tags = tool.data.tags ?? [];
-  const verifiedTime = Date.parse(String(tool.data.last_verified ?? tool.data.last_updated ?? '')) || 0;
-  if (pricing === 'free' || pricing === 'freemium' || pricing === 'open-source') acc.freeStart += 1;
-  if (pricing === 'open-source' || tags.includes('open-source')) acc.openSource += 1;
-  if (tool.data.github_url) acc.github += 1;
-  if (verifiedTime && nowMs - verifiedTime <= thirtyDaysMs) acc.fresh += 1;
-  return acc;
-}, { freeStart: 0, openSource: 0, github: 0, fresh: 0 });
-
-const categoryEmojiMap: Record<string, string> = {
-  'ai-chatbots': '\uD83D\uDCAC', 'ai-voice': '\uD83D\uDD0A', 'ai-video': '\uD83C\uDFAC',
-  'ai-coding': '\uD83D\uDCBB', 'ai-automation': '\u26A1', 'ai-seo': '\uD83D\uDCC8',
-  'ai-design': '\uD83C\uDFA8', 'ai-writing': '\u270D\uFE0F', 'ai-image': '\uD83D\uDDBC',
-  'ai-search': '\uD83D\uDD0D', 'ai-notes': '\uD83D\uDCDD', 'ai-music': '\uD83C\uDFB5',
-  'ai-presentation': '\uD83D\uDCCA', 'ai-research': '\uD83D\uDD2C',
-};
+const itemList = scoredTools.map((t) => ({
+  name: t.title,
+  slug: t.slug,
+  category: t.category,
+  score: t.score,
+}));
 ---
 
 <BaseLayout
-  title="All AI Tools — Complete A-Z Index — aipedia.wiki"
-  description={toolsDescription}
+  title={`All AI Tools (${scoredTools.length}) · May 2026 · aipedia.wiki`}
+  description={description}
 >
   <BreadcrumbLD items={[
     { name: 'Home', url: new URL('/', siteBase).href },
-    { name: 'All AI Tools', url: new URL('/tools/', siteBase).href },
+    { name: 'All tools', url: new URL('/tools/', siteBase).href },
   ]} />
-  <ItemListLD
-    name="All AI Tools"
-    description={toolsDescription}
-    items={toolsItemList}
-    siteBase={siteBase}
-  />
-  
-    <Breadcrumb items={[{ label: 'All Tools' }]} />
+  <ItemListLD items={itemList} listName="All AI Tools" pageUrl={new URL('/tools/', siteBase).href} />
 
-  <IndexHero
-    title="Every AI tool"
-    accent="we have reviewed"
-    suffix="."
-    lead={`All ${scoredTools.length} tools sorted by editorial score. Each review covers what the tool does, who it is for, verified pricing, honest strengths and limitations, and clear alternatives.`}
-    class="idx-hero"
-    eyebrow={[
-      { label: 'Freshness tracked', tone: 'fresh', live: true },
-      { label: 'Editorial directory', tone: 'accent' },
-      { label: 'tools', value: scoredTools.length },
-    ]}
-    trust="Every claim sourced. Zero sponsored placements."
-  />
-
-  <section class="tools-filter-panel" data-tools-controls data-pagefind-ignore>
-    <div class="tools-filter-row tools-filter-row-primary">
-      <div class="tools-search-wrap">
-        <label class="tools-search" for="tools-page-search">
-          <svg class="tools-search-icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M10.8 18.1a7.3 7.3 0 1 1 0-14.6 7.3 7.3 0 0 1 0 14.6Zm5.1-2 4.6 4.6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-          </svg>
-          <input
-            id="tools-page-search"
-            type="search"
-            autocomplete="off"
-            spellcheck="false"
-            placeholder="Search tools, guides, tags"
-            role="combobox"
-            aria-autocomplete="list"
-            aria-expanded="false"
-            aria-controls="tools-search-results"
-            data-tools-search
-          />
-        </label>
-        <div class="tools-search-results" id="tools-search-results" role="listbox" data-tools-search-panel hidden>
-          <div class="tools-search-results-head">
-            <span data-tools-search-heading>Top matches</span>
-            <strong data-tools-search-count></strong>
-          </div>
-          <div class="tools-search-results-list" data-tools-search-results></div>
-        </div>
-      </div>
-
-      <div class="tools-select-field" data-tools-select="sort" data-value="score-desc">
-        <span class="tools-select-caption" id="tools-sort-label">Sort</span>
-        <button
-          class="tools-select-trigger"
-          type="button"
-          aria-haspopup="listbox"
-          aria-expanded="false"
-          aria-labelledby="tools-sort-label tools-sort-value"
-          data-tools-select-trigger
-        >
-          <span id="tools-sort-value" data-tools-select-text>Highest score</span>
-          <svg class="tools-select-chevron" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-        </button>
-        <div class="tools-select-menu" role="listbox" aria-labelledby="tools-sort-label" data-tools-select-menu hidden>
-          <button class="tools-option is-selected" type="button" role="option" aria-selected="true" data-tools-option data-value="score-desc" data-label="Highest score">Highest score</button>
-          <button class="tools-option" type="button" role="option" aria-selected="false" data-tools-option data-value="title-asc" data-label="A-Z">A-Z</button>
-          <button class="tools-option" type="button" role="option" aria-selected="false" data-tools-option data-value="utility-desc" data-label="Utility">Utility</button>
-          <button class="tools-option" type="button" role="option" aria-selected="false" data-tools-option data-value="value-desc" data-label="Value">Value</button>
-          <button class="tools-option" type="button" role="option" aria-selected="false" data-tools-option data-value="recent-desc" data-label="Recently verified">Recently verified</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="tools-filter-row tools-filter-row-secondary">
-      <div class="tools-select-field" data-tools-select="category" data-value="">
-        <span class="tools-select-caption" id="tools-category-label">Category</span>
-        <button
-          class="tools-select-trigger"
-          type="button"
-          aria-haspopup="listbox"
-          aria-expanded="false"
-          aria-labelledby="tools-category-label tools-category-value"
-          data-tools-select-trigger
-        >
-          <span id="tools-category-value" data-tools-select-text>All categories</span>
-          <svg class="tools-select-chevron" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-        </button>
-        <div class="tools-select-menu" role="listbox" aria-labelledby="tools-category-label" data-tools-select-menu hidden>
-          <button class="tools-option is-selected" type="button" role="option" aria-selected="true" data-tools-option data-value="" data-label="All categories">All categories</button>
-          {categoryOptions.map((option) => (
-            <button class="tools-option" type="button" role="option" aria-selected="false" data-tools-option data-value={option.slug} data-label={option.label}>
-              <span>{option.label}</span>
-              <span class="tools-option-count">{option.count}</span>
-            </button>
-          ))}
-        </div>
-      </div>
-
-      <div class="tools-select-field" data-tools-select="pricing" data-value="">
-        <span class="tools-select-caption" id="tools-pricing-label">Pricing</span>
-        <button
-          class="tools-select-trigger"
-          type="button"
-          aria-haspopup="listbox"
-          aria-expanded="false"
-          aria-labelledby="tools-pricing-label tools-pricing-value"
-          data-tools-select-trigger
-        >
-          <span id="tools-pricing-value" data-tools-select-text>All pricing</span>
-          <svg class="tools-select-chevron" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-        </button>
-        <div class="tools-select-menu" role="listbox" aria-labelledby="tools-pricing-label" data-tools-select-menu hidden>
-          <button class="tools-option is-selected" type="button" role="option" aria-selected="true" data-tools-option data-value="" data-label="All pricing">All pricing</button>
-          {pricingOptions.map((option) => (
-            <button class="tools-option" type="button" role="option" aria-selected="false" data-tools-option data-value={option.slug} data-label={option.label}>
-              <span>{option.label}</span>
-              <span class="tools-option-count">{option.count}</span>
-            </button>
-          ))}
-        </div>
-      </div>
-
-      <label class="tools-score-toggle">
-        <input type="checkbox" data-tools-strong />
-        <span>8.0+ only</span>
-      </label>
-
-      <button class="tools-reset" type="button" data-tools-reset hidden>Reset</button>
-    </div>
-
-    <div class="tools-filter-row tools-filter-row-signals" aria-label="Quick filters">
-      <label class="tools-chip-toggle">
-        <input type="checkbox" data-tools-free />
-        <span>Free start <strong>{signalCounts.freeStart}</strong></span>
-      </label>
-      <label class="tools-chip-toggle">
-        <input type="checkbox" data-tools-open-source />
-        <span>Open source <strong>{signalCounts.openSource}</strong></span>
-      </label>
-      <label class="tools-chip-toggle">
-        <input type="checkbox" data-tools-github />
-        <span>Public repo <strong>{signalCounts.github}</strong></span>
-      </label>
-      <label class="tools-chip-toggle">
-        <input type="checkbox" data-tools-fresh />
-        <span>Freshly verified <strong>{signalCounts.fresh}</strong></span>
-      </label>
-    </div>
-
-    <div class="tools-filter-status" aria-live="polite">
-      <span><strong data-tools-visible>{scoredTools.length}</strong> of <span>{scoredTools.length}</span> tools shown</span>
-      <span data-tools-active-summary>All categories, all pricing</span>
-    </div>
-  </section>
-
-  <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[var(--site-grid-gap)] mb-[var(--site-page-bottom)]" data-tools-grid>
-    {scoredTools.map(({ tool, score }) => {
-      const cat = tool.data.category ?? '';
-      const secondaryCategories = tool.data.secondary_categories ?? [];
-      const categories = Array.from(new Set([cat, ...secondaryCategories].filter(Boolean)));
-      const scores = tool.data.scores ?? {};
-      const slug = tool.data.slug || tool.id.replace(/\.md$/, '').replace(/\\/g, '/');
-      const searchText = [
-        tool.data.title,
-        tool.data.company,
-        tool.data.tagline,
-        tool.data.meta_description,
-        tool.data.price_range,
-        tool.data.pricing_model,
-        tool.data.status,
-        ...categories,
-        ...categories.map((category) => categoryLabel(category)),
-        ...(tool.data.tags ?? []),
-        ...(tool.data.best_for ?? []),
-        ...(tool.data.not_best_for ?? []),
-      ].filter(Boolean).join(' ').toLowerCase();
-      const verifiedTime = Date.parse(String(tool.data.last_verified ?? tool.data.last_updated ?? '')) || 0;
-      const pricing = tool.data.pricing_model ?? '';
-      const tags = tool.data.tags ?? [];
-      const freeStart = pricing === 'free' || pricing === 'freemium' || pricing === 'open-source';
-      const openSource = pricing === 'open-source' || tags.includes('open-source');
-      const hasGithub = Boolean(tool.data.github_url);
-      const fresh = verifiedTime && nowMs - verifiedTime <= thirtyDaysMs;
-      return (
-        <div
-          data-tools-item
-          class="tools-card-shell"
-          data-title={tool.data.title.toLowerCase()}
-          data-category={cat}
-          data-categories={categories.join(' ')}
-          data-pricing={pricing}
-          data-score={score}
-          data-utility={scores.utility ?? 0}
-          data-value={scores.value ?? 0}
-          data-recent={verifiedTime}
-          data-free-start={freeStart ? '1' : '0'}
-          data-open-source={openSource ? '1' : '0'}
-          data-github={hasGithub ? '1' : '0'}
-          data-fresh={fresh ? '1' : '0'}
-          data-status={tool.data.status}
-          data-search-primary={[tool.data.title, tool.data.company, slug].filter(Boolean).join(' ').toLowerCase()}
-          data-search={searchText}
-          data-url={`/tools/${slug}/`}
-          data-display-title={tool.data.title}
-          data-company={companyLabel(tool.data.company)}
-          data-category-label={categoryLabel(cat)}
-          data-price-display={shortenPrice(tool.data.price_range ?? tool.data.pricing_model ?? 'Free')}
-        >
-          <ToolCard
-            title={tool.data.title}
-            slug={slug}
-            category={cat}
-            score={score}
-            priceRange={tool.data.price_range ?? 'Free'}
-            emoji={categoryEmojiMap[cat] ?? '\uD83D\uDD27'}
-            scores={tool.data.scores}
-          />
-        </div>
-      );
-    })}
-  </section>
-
-  <div class="tools-empty-state" data-tools-empty hidden>
-    <p>No tools match those filters.</p>
-    <button class="tools-reset" type="button" data-tools-empty-reset>Reset</button>
+  <div class="sr-only" data-pagefind-ignore>
+    <span data-pagefind-filter="Type">ToolIndex</span>
   </div>
-<script is:inline>
-    (() => {
-      const root = document.querySelector('[data-tools-controls]');
-      const grid = document.querySelector('[data-tools-grid]');
-      if (!root || !grid) return;
 
-      const input = root.querySelector('[data-tools-search]');
-      const searchWrap = root.querySelector('.tools-search-wrap');
-      const searchPanel = root.querySelector('[data-tools-search-panel]');
-      const searchResults = root.querySelector('[data-tools-search-results]');
-      const searchHeading = root.querySelector('[data-tools-search-heading]');
-      const searchCount = root.querySelector('[data-tools-search-count]');
-      const selects = Array.from(root.querySelectorAll('[data-tools-select]'));
-      const category = root.querySelector('[data-tools-select="category"]');
-      const pricing = root.querySelector('[data-tools-select="pricing"]');
-      const sort = root.querySelector('[data-tools-select="sort"]');
-      const strong = root.querySelector('[data-tools-strong]');
-      const freeStart = root.querySelector('[data-tools-free]');
-      const openSource = root.querySelector('[data-tools-open-source]');
-      const github = root.querySelector('[data-tools-github]');
-      const fresh = root.querySelector('[data-tools-fresh]');
-      const reset = root.querySelector('[data-tools-reset]');
-      const visibleCount = root.querySelector('[data-tools-visible]');
-      const summary = root.querySelector('[data-tools-active-summary]');
-      const empty = document.querySelector('[data-tools-empty]');
-      const emptyReset = document.querySelector('[data-tools-empty-reset]');
-      const items = Array.from(grid.querySelectorAll('[data-tools-item]'));
-      const reducedMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)');
-      let gridHasAnimated = false;
+  <div class="gt-canvas">
+    <Hero
+      title="All AI tools"
+      tagline="Every actively-reviewed AI tool in the catalog, sorted by editorial score. Filter by category, click through to deep reviews."
+      breadcrumbs={[
+        { label: 'aipedia', href: '/' },
+        { label: 'All tools' },
+      ]}
+      rankLabel={`${scoredTools.length} tools · ${categoryOptions.length} categories`}
+    />
 
-      const numberFrom = (item, key) => Number(item.getAttribute(key) || 0);
-      const normalize = (value) => String(value || '').trim().toLowerCase();
-      const genericSearchTerms = new Set(['ai', 'app', 'apps', 'tool', 'tools', 'agent', 'agents', 'chat', 'code', 'image', 'video', 'voice', 'audio', 'music', 'search', 'writing', 'design', 'automation', 'research', 'seo', 'data']);
-      const escapeHtml = (value) => String(value || '').replace(/[&<>"']/g, (char) => ({
-        '&': '&amp;',
-        '<': '&lt;',
-        '>': '&gt;',
-        '"': '&quot;',
-        "'": '&#39;',
-      }[char]));
-      const selectValue = (select) => select?.dataset.value || '';
-      const selectedText = (select) => select?.querySelector('[data-tools-option].is-selected')?.dataset.label || '';
-      const optionList = (select) => Array.from(select?.querySelectorAll('[data-tools-option]') || []);
-      const titleFor = (item) => normalize(item.getAttribute('data-display-title'));
-      const primaryFor = (item) => item.getAttribute('data-search-primary') || '';
-      const exactPrimaryMatch = (item, terms) => {
-        const tokens = primaryFor(item).split(/[^a-z0-9]+/).filter(Boolean);
-        return terms.every((term) => tokens.includes(term));
-      };
-      const searchModeFor = (terms) => {
-        if (!terms.length) return 'none';
-        const query = terms.join(' ');
-        if (items.some((item) => titleFor(item) === query)) return 'exact-title';
-        const meaningfulTerms = terms.filter((term) => term.length >= 3 && !genericSearchTerms.has(term));
-        if (meaningfulTerms.length && items.some((item) => exactPrimaryMatch(item, meaningfulTerms))) return 'primary';
-        return 'broad';
-      };
-      const matchesSearchTerms = (item, terms, mode) => {
-        if (!terms.length) return true;
-        const query = terms.join(' ');
-        const title = titleFor(item);
-        if (mode === 'exact-title') {
-          if (title === query) return true;
-          return terms.length === 1 && title.startsWith(`${query} `) && item.getAttribute('data-status') !== 'beta';
-        }
-        const source = mode === 'primary' ? primaryFor(item) : item.getAttribute('data-search') || '';
-        return terms.every((term) => source.includes(term));
-      };
-      let searchHasFocus = false;
-      const closeSearchResults = () => {
-        if (searchPanel) searchPanel.hidden = true;
-        input?.setAttribute('aria-expanded', 'false');
-      };
-      const openSearchResults = () => {
-        if (!searchPanel) return;
-        searchPanel.hidden = false;
-        input?.setAttribute('aria-expanded', 'true');
-      };
-      const closeSelect = (select) => {
-        const trigger = select?.querySelector('[data-tools-select-trigger]');
-        const menu = select?.querySelector('[data-tools-select-menu]');
-        if (!trigger || !menu) return;
-        trigger.setAttribute('aria-expanded', 'false');
-        menu.hidden = true;
-        select.classList.remove('is-open');
-      };
-      const closeAllSelects = (except) => {
-        selects.forEach((select) => {
-          if (select !== except) closeSelect(select);
-        });
-      };
-      const openSelect = (select, focusSelected = false) => {
-        const trigger = select?.querySelector('[data-tools-select-trigger]');
-        const menu = select?.querySelector('[data-tools-select-menu]');
-        if (!trigger || !menu) return;
-        closeAllSelects(select);
-        trigger.setAttribute('aria-expanded', 'true');
-        menu.hidden = false;
-        select.classList.add('is-open');
-        if (focusSelected) {
-          const selected = select.querySelector('[data-tools-option].is-selected') || select.querySelector('[data-tools-option]');
-          selected?.focus();
-        }
-      };
-      const setSelectValue = (select, value) => {
-        if (!select) return;
-        const options = optionList(select);
-        const option = options.find((item) => item.dataset.value === value) || options[0];
-        if (!option) return;
-        const nextValue = option.dataset.value || '';
-        select.dataset.value = nextValue;
-        select.querySelector('[data-tools-select-text]').textContent = option.dataset.label || option.textContent.trim();
-        options.forEach((item) => {
-          const selected = item === option;
-          item.classList.toggle('is-selected', selected);
-          item.setAttribute('aria-selected', selected ? 'true' : 'false');
-        });
-      };
+    <nav class="gt-cat-chips" aria-label="Filter by category">
+      <button type="button" class="gt-chip is-active" data-filter="all">All <span>{scoredTools.length}</span></button>
+      {categoryOptions.map((c) => (
+        <button type="button" class="gt-chip" data-filter={c.slug}>{c.label} <span>{c.count}</span></button>
+      ))}
+    </nav>
 
-      const updateUrl = () => {
-        const url = new URL(window.location.href);
-        const values = {
-          q: input?.value.trim() || '',
-          category: selectValue(category),
-          pricing: selectValue(pricing),
-          sort: selectValue(sort) === 'score-desc' ? '' : selectValue(sort),
-          strong: strong?.checked ? '1' : '',
-          free: freeStart?.checked ? '1' : '',
-          oss: openSource?.checked ? '1' : '',
-          github: github?.checked ? '1' : '',
-          fresh: fresh?.checked ? '1' : '',
-        };
-        Object.entries(values).forEach(([key, value]) => {
-          if (value) url.searchParams.set(key, value);
-          else url.searchParams.delete(key);
-        });
-        window.history.replaceState({}, '', url);
-      };
+    <section class="gt-tools-index">
+      <ol class="gt-tool-list" id="gt-tool-list">
+        {scoredTools.map((t, i) => {
+          const tone = t.score >= 8 ? 'positive' : t.score >= 6.5 ? 'neutral' : 'negative';
+          return (
+            <li class={`gt-tool-row gt-tool-row-${tone}`} data-category={t.category}>
+              <a href={`/tools/${t.slug}/`} class="gt-tool-link">
+                <span class="gt-tool-rank">{i + 1}</span>
+                <div class="gt-tool-main">
+                  <strong class="gt-tool-title">{t.title}</strong>
+                  {t.tagline && <span class="gt-tool-tagline">{t.tagline}</span>}
+                </div>
+                <div class="gt-tool-meta">
+                  <span class="gt-tool-category">{t.categoryLabel}</span>
+                  <span class="gt-tool-score tabular-nums">{t.score}<span class="gt-tool-score-slash">/10</span></span>
+                </div>
+              </a>
+            </li>
+          );
+        })}
+      </ol>
+    </section>
+  </div>
 
-      const sortItems = (visibleItems) => {
-        const mode = selectValue(sort) || 'score-desc';
-        const sorted = [...visibleItems].sort((a, b) => {
-          if (mode === 'title-asc') {
-            return (a.getAttribute('data-title') || '').localeCompare(b.getAttribute('data-title') || '');
-          }
-          if (mode === 'utility-desc') return numberFrom(b, 'data-utility') - numberFrom(a, 'data-utility');
-          if (mode === 'value-desc') return numberFrom(b, 'data-value') - numberFrom(a, 'data-value');
-          if (mode === 'recent-desc') return numberFrom(b, 'data-recent') - numberFrom(a, 'data-recent');
-          return numberFrom(b, 'data-score') - numberFrom(a, 'data-score');
-        });
-        sorted.forEach((item, index) => {
-          item.style.order = String(index);
-        });
-        return sorted;
-      };
-
-      const captureGridLayout = () => new Map(items
-        .filter((item) => !item.hidden)
-        .map((item) => [item, item.getBoundingClientRect()]));
-
-      const animateGridLayout = (beforeRects, visibleItems) => {
-        if (!gridHasAnimated) {
-          gridHasAnimated = true;
-          return;
-        }
-        if (reducedMotion?.matches || !visibleItems.length) return;
-
-        requestAnimationFrame(() => {
-          visibleItems.forEach((item) => {
-            item.getAnimations?.().forEach((animation) => animation.cancel());
-            const after = item.getBoundingClientRect();
-            const before = beforeRects.get(item);
-            if (!before) {
-              item.animate([
-                { opacity: 0, transform: 'translateY(8px) scale(0.985)' },
-                { opacity: 1, transform: 'translateY(0) scale(1)' },
-              ], {
-                duration: 240,
-                easing: 'cubic-bezier(0.16, 1, 0.3, 1)',
-              });
-              return;
-            }
-
-            const dx = before.left - after.left;
-            const dy = before.top - after.top;
-            if (Math.abs(dx) < 0.5 && Math.abs(dy) < 0.5) return;
-            item.animate([
-              { transform: `translate(${dx}px, ${dy}px)` },
-              { transform: 'translate(0, 0)' },
-            ], {
-              duration: 260,
-              easing: 'cubic-bezier(0.16, 1, 0.3, 1)',
-            });
-          });
-        });
-      };
-
-      const renderSearchResults = (visibleItems, terms) => {
-        if (!searchResults || !searchPanel || !input) return;
-        if (!searchHasFocus) {
-          closeSearchResults();
-          return;
-        }
-
-        const hasQuery = terms.length > 0;
-        const resultItems = hasQuery ? [...visibleItems].sort((a, b) => {
-          const rank = (item) => {
-            const title = titleFor(item);
-            const company = normalize(item.getAttribute('data-company'));
-            const category = normalize(item.getAttribute('data-category-label'));
-            const haystack = item.getAttribute('data-search') || '';
-            return terms.reduce((total, term) => {
-              if (title === term) return total + 140;
-              if (title.startsWith(term)) return total + 120;
-              if (title.includes(term)) return total + 90;
-              if (company.includes(term)) return total + 50;
-              if (category.includes(term)) return total + 25;
-              if (haystack.includes(term)) return total + 10;
-              return total;
-            }, 0);
-          };
-          const rankDelta = rank(b) - rank(a);
-          if (rankDelta !== 0) return rankDelta;
-          return numberFrom(b, 'data-score') - numberFrom(a, 'data-score');
-        }) : visibleItems;
-        const shown = resultItems.slice(0, 7);
-        if (searchHeading) searchHeading.textContent = hasQuery ? 'Top matches' : 'Popular tools';
-        if (searchCount) searchCount.textContent = `${shown.length} shown`;
-
-        if (!shown.length) {
-          searchResults.innerHTML = `
-            <div class="tools-search-no-results" role="option" aria-disabled="true">
-              No matching tools. Try a broader word or clear a filter.
-            </div>
-          `;
-          openSearchResults();
-          return;
-        }
-
-        searchResults.innerHTML = shown.map((item, index) => {
-          const title = item.getAttribute('data-display-title') || '';
-          const company = item.getAttribute('data-company') || '';
-          const category = item.getAttribute('data-category-label') || 'AI tool';
-          const price = item.getAttribute('data-price-display') || '';
-          const url = item.getAttribute('data-url') || '#';
-          const score = Number(item.getAttribute('data-score') || 0).toFixed(1);
-          const subline = [company, category].filter(Boolean).join(' · ');
-          return `
-            <a class="tools-search-result" href="${escapeHtml(url)}" role="option" id="tools-search-result-${index}" tabindex="-1" data-no-tool-preview>
-              <span class="tools-search-result-main">
-                <strong>${escapeHtml(title)}</strong>
-                <small>${escapeHtml(subline || category)}</small>
-              </span>
-              <span class="tools-search-result-meta">
-                <span>${escapeHtml(price)}</span>
-                <b>${escapeHtml(score)}</b>
-              </span>
-            </a>
-          `;
-        }).join('');
-        openSearchResults();
-      };
-
-      const apply = (syncUrl = true) => {
-        const terms = normalize(input?.value).split(/\s+/).filter(Boolean);
-        const searchMode = searchModeFor(terms);
-        const beforeRects = captureGridLayout();
-        const categoryValue = selectValue(category);
-        const pricingValue = selectValue(pricing);
-        const strongOnly = !!strong?.checked;
-        const freeOnly = !!freeStart?.checked;
-        const openSourceOnly = !!openSource?.checked;
-        const githubOnly = !!github?.checked;
-        const freshOnly = !!fresh?.checked;
-        const visibleItems = [];
-
-        items.forEach((item) => {
-          const categories = (item.getAttribute('data-categories') || '').split(/\s+/).filter(Boolean);
-          const matchesTerms = matchesSearchTerms(item, terms, searchMode);
-          const matchesCategory = !categoryValue || categories.includes(categoryValue);
-          const matchesPricing = !pricingValue || item.getAttribute('data-pricing') === pricingValue;
-          const matchesScore = !strongOnly || numberFrom(item, 'data-score') >= 8;
-          const matchesFree = !freeOnly || item.getAttribute('data-free-start') === '1';
-          const matchesOpenSource = !openSourceOnly || item.getAttribute('data-open-source') === '1';
-          const matchesGithub = !githubOnly || item.getAttribute('data-github') === '1';
-          const matchesFresh = !freshOnly || item.getAttribute('data-fresh') === '1';
-          const visible = matchesTerms && matchesCategory && matchesPricing && matchesScore && matchesFree && matchesOpenSource && matchesGithub && matchesFresh;
-          item.hidden = !visible;
-          if (visible) visibleItems.push(item);
-        });
-
-        const orderedVisibleItems = sortItems(visibleItems);
-        animateGridLayout(beforeRects, orderedVisibleItems);
-        renderSearchResults(orderedVisibleItems, terms);
-
-        if (visibleCount) visibleCount.textContent = String(visibleItems.length);
-        if (empty) empty.hidden = visibleItems.length !== 0;
-        if (reset) reset.hidden = !terms.length && !categoryValue && !pricingValue && !strongOnly && !freeOnly && !openSourceOnly && !githubOnly && !freshOnly && (selectValue(sort) || 'score-desc') === 'score-desc';
-
-        const parts = [
-          selectedText(category) || 'All categories',
-          selectedText(pricing) || 'all pricing',
-          strongOnly ? '8.0+ only' : '',
-          freeOnly ? 'free start' : '',
-          openSourceOnly ? 'open source' : '',
-          githubOnly ? 'public repo' : '',
-          freshOnly ? 'freshly verified' : '',
-        ].filter(Boolean);
-        if (summary) summary.textContent = parts.join(', ');
-
-        if (syncUrl) updateUrl();
-      };
-
-      const resetAll = () => {
-        if (input) input.value = '';
-        setSelectValue(category, '');
-        setSelectValue(pricing, '');
-        setSelectValue(sort, 'score-desc');
-        if (strong) strong.checked = false;
-        if (freeStart) freeStart.checked = false;
-        if (openSource) openSource.checked = false;
-        if (github) github.checked = false;
-        if (fresh) fresh.checked = false;
-        apply();
-      };
-
-      selects.forEach((select) => {
-        const trigger = select.querySelector('[data-tools-select-trigger]');
-        trigger?.addEventListener('click', () => {
-          const expanded = trigger.getAttribute('aria-expanded') === 'true';
-          if (expanded) closeSelect(select);
-          else openSelect(select);
-        });
-        trigger?.addEventListener('keydown', (event) => {
-          if (event.key === 'ArrowDown' || event.key === 'Enter' || event.key === ' ') {
-            event.preventDefault();
-            openSelect(select, true);
-          }
-        });
-        optionList(select).forEach((option, index, options) => {
-          option.addEventListener('click', () => {
-            setSelectValue(select, option.dataset.value || '');
-            closeSelect(select);
-            trigger?.focus();
-            apply();
-          });
-          option.addEventListener('keydown', (event) => {
-            if (event.key === 'Enter' || event.key === ' ') {
-              event.preventDefault();
-              option.click();
-              return;
-            }
-            if (event.key === 'Escape') {
-              event.preventDefault();
-              closeSelect(select);
-              trigger?.focus();
-              return;
-            }
-            if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
-              event.preventDefault();
-              const direction = event.key === 'ArrowDown' ? 1 : -1;
-              const next = (index + direction + options.length) % options.length;
-              options[next]?.focus();
-              return;
-            }
-            if (event.key === 'Home') {
-              event.preventDefault();
-              options[0]?.focus();
-              return;
-            }
-            if (event.key === 'End') {
-              event.preventDefault();
-              options[options.length - 1]?.focus();
+  <script is:inline>
+    (function () {
+      var chips = document.querySelectorAll('.gt-chip[data-filter]');
+      var rows = document.querySelectorAll('#gt-tool-list .gt-tool-row');
+      chips.forEach(function (chip) {
+        chip.addEventListener('click', function () {
+          var filter = chip.dataset.filter;
+          chips.forEach(function (c) { c.classList.remove('is-active'); });
+          chip.classList.add('is-active');
+          rows.forEach(function (row) {
+            if (filter === 'all' || row.dataset.category === filter) {
+              row.style.display = '';
+            } else {
+              row.style.display = 'none';
             }
           });
         });
       });
-
-      document.addEventListener('click', (event) => {
-        if (!root.contains(event.target)) closeAllSelects();
-        if (searchWrap && !searchWrap.contains(event.target)) {
-          searchHasFocus = false;
-          closeSearchResults();
-        }
-      });
-      document.addEventListener('keydown', (event) => {
-        if (event.key === 'Escape') {
-          closeAllSelects();
-          closeSearchResults();
-        }
-      });
-
-      input?.addEventListener('focus', () => {
-        searchHasFocus = true;
-        apply(false);
-      });
-      input?.addEventListener('input', () => {
-        searchHasFocus = true;
-        apply();
-      });
-      input?.addEventListener('keydown', (event) => {
-        if (event.key === 'ArrowDown' && searchPanel && !searchPanel.hidden) {
-          const first = searchPanel.querySelector('.tools-search-result');
-          if (first) {
-            event.preventDefault();
-            first.focus();
-          }
-        }
-        if (event.key === 'Escape') {
-          event.preventDefault();
-          closeSearchResults();
-        }
-      });
-      searchPanel?.addEventListener('keydown', (event) => {
-        const links = Array.from(searchPanel.querySelectorAll('.tools-search-result'));
-        const index = links.indexOf(document.activeElement);
-        if (event.key === 'Escape') {
-          event.preventDefault();
-          closeSearchResults();
-          input?.focus();
-          return;
-        }
-        if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
-          event.preventDefault();
-          const direction = event.key === 'ArrowDown' ? 1 : -1;
-          const next = index === -1 ? 0 : (index + direction + links.length) % links.length;
-          links[next]?.focus();
-        }
-      });
-      strong?.addEventListener('change', () => apply());
-      freeStart?.addEventListener('change', () => apply());
-      openSource?.addEventListener('change', () => apply());
-      github?.addEventListener('change', () => apply());
-      fresh?.addEventListener('change', () => apply());
-      reset?.addEventListener('click', resetAll);
-      emptyReset?.addEventListener('click', resetAll);
-
-      const params = new URLSearchParams(window.location.search);
-      if (input) input.value = params.get('q') || '';
-      if (category && params.has('category')) setSelectValue(category, params.get('category') || '');
-      if (pricing && params.has('pricing')) setSelectValue(pricing, params.get('pricing') || '');
-      if (sort) setSelectValue(sort, params.get('sort') || 'score-desc');
-      if (strong) strong.checked = params.get('strong') === '1';
-      if (freeStart) freeStart.checked = params.get('free') === '1';
-      if (openSource) openSource.checked = params.get('oss') === '1';
-      if (github) github.checked = params.get('github') === '1';
-      if (fresh) fresh.checked = params.get('fresh') === '1';
-      apply(false);
     })();
   </script>
 
   <style>
-    .tools-filter-panel {
-      --tools-ease: var(--motion-ease, cubic-bezier(0.16, 1, 0.3, 1));
-      --tools-fast: var(--motion-fast, 160ms);
-      --tools-base: var(--motion-base, 240ms);
-      --tools-slow: var(--motion-slow, 420ms);
-      display: grid;
-      gap: var(--site-card-gap);
-      margin: 0 0 var(--site-content-gap);
-      padding: var(--site-card-padding);
-      border: 1px solid var(--border);
-      border-radius: var(--site-radius-card);
-      background: var(--bg-card);
-      background: color-mix(in srgb, var(--bg-card) 88%, transparent);
-      transition:
-        background var(--tools-slow) var(--tools-ease),
-        border-color var(--tools-base) var(--tools-ease),
-        box-shadow var(--tools-base) var(--tools-ease);
+    .gt-cat-chips {
+      display: flex; gap: 6px;
+      overflow-x: auto;
+      padding: 4px 18px 12px;
+      margin: 0 -18px 18px;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
     }
-
-    .tools-filter-row {
-      display: grid;
-      gap: var(--site-card-gap);
-    }
-
-    .tools-filter-row-primary {
-      grid-template-columns: minmax(0, 1fr) minmax(180px, 240px);
-    }
-
-    .tools-filter-row-secondary {
-      grid-template-columns: minmax(160px, 1fr) minmax(150px, 220px) auto auto;
-      align-items: end;
-    }
-
-    .tools-filter-row-signals {
-      display: flex;
-      flex-wrap: wrap;
-      gap: var(--site-chip-gap);
-      padding-top: 2px;
-    }
-
-    .tools-search-wrap,
-    .tools-search,
-    .tools-select-field,
-    .tools-score-toggle {
-      min-width: 0;
-    }
-
-    .tools-search-wrap {
-      position: relative;
-      z-index: 45;
-    }
-
-    .tools-search {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      min-height: 46px;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      background: var(--bg-primary);
-      padding: 0 13px;
-      transition:
-        background var(--tools-base) var(--tools-ease),
-        border-color var(--tools-base) var(--tools-ease),
-        box-shadow var(--tools-base) var(--tools-ease),
-        transform var(--tools-base) var(--tools-ease);
-    }
-
-    .tools-search:focus-within {
-      border-color: rgba(249, 115, 22, 0.45);
-      box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.08);
-      transform: translateY(-1px);
-    }
-
-    .tools-search-icon {
+    .gt-cat-chips::-webkit-scrollbar { display: none; }
+    .gt-chip {
       flex: 0 0 auto;
-      color: var(--accent-primary-text);
-      transition: color var(--tools-fast) var(--tools-ease), transform var(--tools-base) var(--tools-ease);
-    }
-
-    .tools-search:focus-within .tools-search-icon {
-      transform: scale(1.08);
-    }
-
-    .tools-search input,
-    .tools-select-trigger {
-      width: 100%;
-      color: var(--text-primary);
-      font: inherit;
-      letter-spacing: 0;
-    }
-
-    .tools-search input {
-      min-width: 0;
-      font-size: 15px;
-      font-weight: 700;
-      transition: color var(--tools-fast) var(--tools-ease);
-    }
-
-    .tools-search input::placeholder {
-      color: var(--text-muted);
-      opacity: 0.82;
-    }
-
-    .tools-search-results {
-      position: absolute;
-      z-index: 70;
-      top: calc(100% + 8px);
-      right: 0;
-      left: 0;
-      overflow: hidden;
-      border: 1px solid rgba(249, 115, 22, 0.28);
-      border-radius: 10px;
-      background: rgb(8, 13, 24);
-      box-shadow: 0 24px 58px rgba(0, 0, 0, 0.46), 0 0 0 1px rgba(255, 255, 255, 0.04);
-      opacity: 1;
-      transform: translateY(0) scale(1);
-      transform-origin: top center;
-      transition:
-        opacity var(--tools-fast) var(--tools-ease),
-        transform var(--tools-base) var(--tools-ease),
-        border-color var(--tools-base) var(--tools-ease),
-        box-shadow var(--tools-slow) var(--tools-ease);
-    }
-
-    .tools-search-results[hidden] {
-      display: none;
-    }
-
-    @starting-style {
-      .tools-search-results:not([hidden]) {
-        opacity: 0;
-        transform: translateY(-8px) scale(0.985);
-      }
-    }
-
-    .tools-search-results-head {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      min-height: 34px;
-      border-bottom: 1px solid var(--border);
-      color: var(--text-muted);
-      font-size: 11px;
-      font-weight: 850;
-      letter-spacing: 0.08em;
-      padding: 0 12px;
-      text-transform: uppercase;
-    }
-
-    .tools-search-results-head strong {
-      color: var(--accent-primary-text);
-      font-variant-numeric: tabular-nums;
-      letter-spacing: 0;
-      text-transform: none;
-    }
-
-    .tools-search-results-list {
-      display: grid;
-      max-height: min(390px, 58vh);
-      overflow-y: auto;
-      padding: 6px;
-      scrollbar-width: thin;
-      scrollbar-color: rgba(253, 186, 116, 0.36) transparent;
-    }
-
-    /* Avoid default browser blue selection inside dropdown. */
-    .tools-search-results ::selection {
-      background: rgba(249, 115, 22, 0.32);
-      color: var(--text-primary);
-    }
-
-    :global(.tools-search-result) {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) auto;
-      align-items: center;
-      gap: 14px;
-      min-height: 54px;
-      border-radius: 8px;
-      color: var(--text-secondary);
-      padding: 8px 10px;
-      text-decoration: none;
-      outline: none;
-      -webkit-tap-highlight-color: transparent;
-      transition:
-        background var(--tools-fast) var(--tools-ease),
-        color var(--tools-fast) var(--tools-ease),
-        transform var(--tools-base) var(--tools-ease);
-    }
-
-    :global(.tools-search-result:focus) {
-      outline: none;
-    }
-
-    :global(.tools-search-result:hover),
-    :global(.tools-search-result:focus-visible) {
-      background: rgba(249, 115, 22, 0.11);
-      color: var(--text-primary);
-      outline: none;
-      transform: translateX(2px);
-    }
-
-    :global(.tools-search-result:visited) {
-      color: var(--text-secondary);
-    }
-
-    :global(.tools-search-result:visited) :global(.tools-search-result-main strong) {
-      color: var(--text-primary);
-    }
-
-    :global(.tools-search-result:visited) :global(.tools-search-result-main small),
-    :global(.tools-search-result:visited) :global(.tools-search-result-meta) {
-      color: var(--text-muted);
-    }
-
-    :global(.tools-search-result-main),
-    :global(.tools-search-result-meta) {
-      min-width: 0;
-    }
-
-    :global(.tools-search-result-main) {
-      display: grid;
-      gap: 2px;
-    }
-
-    :global(.tools-search-result-main strong),
-    :global(.tools-search-result-main small),
-    :global(.tools-search-result-meta span) {
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-
-    :global(.tools-search-result-main strong) {
-      color: var(--text-primary);
-      font-size: 14px;
-      font-weight: 850;
-    }
-
-    :global(.tools-search-result-main small) {
-      color: var(--text-muted);
-      font-size: 12px;
-      font-weight: 650;
-      transition: color var(--tools-fast) var(--tools-ease);
-    }
-
-    :global(.tools-search-result-meta) {
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      gap: 8px;
-      color: var(--text-muted);
-      font-size: 11px;
-      font-weight: 750;
-      max-width: min(42vw, 360px);
-    }
-
-    :global(.tools-search-result-meta b) {
-      display: inline-grid;
-      place-items: center;
-      min-width: 38px;
-      height: 26px;
-      border: 1px solid rgba(253, 186, 116, 0.24);
-      border-radius: 999px;
-      color: var(--accent-primary-text);
-      font-size: 12px;
-      font-variant-numeric: tabular-nums;
-      transition:
-        background var(--tools-fast) var(--tools-ease),
-        border-color var(--tools-fast) var(--tools-ease),
-        color var(--tools-fast) var(--tools-ease),
-        transform var(--tools-base) var(--tools-ease);
-    }
-
-    :global(.tools-search-no-results) {
-      color: var(--text-muted);
-      font-size: 13px;
-      font-weight: 750;
-      padding: 18px 12px;
-    }
-
-    .tools-select-field {
-      position: relative;
-      display: grid;
-      gap: 6px;
-    }
-
-    .tools-select-caption {
-      color: var(--text-muted);
-      font-size: 11px;
-      font-weight: 850;
-      line-height: 1;
-      text-transform: uppercase;
-    }
-
-    .tools-select-trigger {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-      min-height: 40px;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      background: var(--bg-primary);
-      cursor: pointer;
-      font-size: 13px;
-      font-weight: 750;
-      padding: 0 11px;
-      text-align: left;
-      transition:
-        background var(--tools-base) var(--tools-ease),
-        border-color var(--tools-base) var(--tools-ease),
-        box-shadow var(--tools-base) var(--tools-ease),
-        color var(--tools-fast) var(--tools-ease),
-        transform var(--tools-base) var(--tools-ease);
-    }
-
-    .tools-select-trigger:hover,
-    .tools-select-trigger:focus-visible,
-    .tools-select-field.is-open .tools-select-trigger {
-      border-color: rgba(249, 115, 22, 0.45);
-      box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.08);
-      outline: none;
-      transform: translateY(-1px);
-    }
-
-    .tools-select-trigger span {
-      min-width: 0;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-
-    .tools-select-chevron {
-      flex: 0 0 auto;
-      color: var(--text-muted);
-      transition: transform var(--tools-base) var(--tools-ease), color var(--tools-fast) var(--tools-ease);
-    }
-
-    .tools-select-field.is-open .tools-select-chevron {
-      color: var(--accent-primary-text);
-      transform: rotate(180deg);
-    }
-
-    .tools-select-menu {
-      position: absolute;
-      z-index: 40;
-      top: calc(100% + 7px);
-      right: 0;
-      left: 0;
-      display: grid;
-      gap: 3px;
-      max-height: min(340px, 58vh);
-      overflow-y: auto;
-      border: 1px solid rgba(249, 115, 22, 0.26);
-      border-radius: 8px;
-      background: rgba(8, 13, 24, 0.98);
-      box-shadow: 0 22px 50px rgba(0, 0, 0, 0.42), 0 0 0 1px rgba(255, 255, 255, 0.04);
-      padding: 6px;
-      scrollbar-width: thin;
-      scrollbar-color: rgba(253, 186, 116, 0.36) transparent;
-      opacity: 1;
-      transform: translateY(0) scale(1);
-      transform-origin: top center;
-      transition:
-        opacity var(--tools-fast) var(--tools-ease),
-        transform var(--tools-base) var(--tools-ease),
-        border-color var(--tools-base) var(--tools-ease),
-        box-shadow var(--tools-slow) var(--tools-ease);
-    }
-
-    .tools-select-menu[hidden] {
-      display: none;
-    }
-
-    @starting-style {
-      .tools-select-menu:not([hidden]) {
-        opacity: 0;
-        transform: translateY(-8px) scale(0.985);
-      }
-    }
-
-    .tools-option {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      width: 100%;
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 6px 12px;
       min-height: 36px;
-      border: 0;
-      border-radius: 6px;
-      background: transparent;
-      color: var(--text-secondary);
-      cursor: pointer;
-      font: inherit;
-      font-size: 13px;
-      font-weight: 780;
-      letter-spacing: 0;
-      padding: 0 10px;
-      text-align: left;
-      transition:
-        background var(--tools-fast) var(--tools-ease),
-        color var(--tools-fast) var(--tools-ease),
-        transform var(--tools-base) var(--tools-ease);
-    }
-
-    .tools-option:hover,
-    .tools-option:focus-visible {
-      background: rgba(249, 115, 22, 0.10);
-      color: var(--text-primary);
-      outline: none;
-      transform: translateX(2px);
-    }
-
-    .tools-option.is-selected {
-      background: rgba(249, 115, 22, 0.16);
-      color: var(--accent-primary-text);
-    }
-
-    .tools-option-count {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-width: 26px;
-      height: 22px;
-      border: 1px solid rgba(253, 186, 116, 0.22);
       border-radius: 999px;
-      color: var(--text-muted);
-      font-size: 11px;
-      font-weight: 850;
-      font-variant-numeric: tabular-nums;
-      transition:
-        background var(--tools-fast) var(--tools-ease),
-        border-color var(--tools-fast) var(--tools-ease),
-        color var(--tools-fast) var(--tools-ease);
-    }
-
-    .tools-option.is-selected .tools-option-count {
-      color: var(--accent-primary-text);
-      border-color: rgba(253, 186, 116, 0.42);
-      background: rgba(253, 186, 116, 0.10);
-    }
-
-    html.light .tools-select-menu,
-    html.light .tools-search-results {
-      border-color: rgba(14, 116, 144, 0.24);
-      background: rgb(255, 255, 255);
-      box-shadow: 0 22px 42px rgba(15, 23, 42, 0.16), 0 0 0 1px rgba(15, 23, 42, 0.04);
-    }
-
-    html.light .tools-option:hover,
-    html.light .tools-option:focus-visible,
-    html.light .tools-option.is-selected,
-    html.light :global(.tools-search-result:hover),
-    html.light :global(.tools-search-result:focus-visible) {
-      background: rgba(14, 116, 144, 0.09);
-    }
-
-    .tools-score-toggle {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      min-height: 40px;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      background: var(--bg-primary);
-      color: var(--text-primary);
-      cursor: pointer;
+      background: var(--gt-surface);
+      border: 1px solid var(--gt-line);
+      color: var(--gt-muted);
       font-size: 13px;
-      font-weight: 800;
-      padding: 0 12px;
+      font-weight: 600;
+      cursor: pointer;
       white-space: nowrap;
-      transition:
-        background var(--tools-base) var(--tools-ease),
-        border-color var(--tools-base) var(--tools-ease),
-        box-shadow var(--tools-base) var(--tools-ease),
-        color var(--tools-fast) var(--tools-ease),
-        transform var(--tools-base) var(--tools-ease);
+      transition: background 120ms ease, color 120ms ease, border-color 120ms ease;
     }
-
-    .tools-score-toggle:hover,
-    .tools-score-toggle:focus-within {
-      border-color: rgba(249, 115, 22, 0.38);
-      box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.07);
-      transform: translateY(-1px);
+    .gt-chip:hover { background: var(--gt-surface-2); color: var(--gt-fg); }
+    .gt-chip.is-active {
+      background: var(--gt-accent);
+      color: #fff;
+      border-color: var(--gt-accent);
     }
+    .gt-chip span { font-size: 11px; opacity: 0.75; font-variant-numeric: tabular-nums; }
 
-    .tools-score-toggle input {
-      flex: 0 0 16px;
+    .gt-tools-index { margin-bottom: 40px; }
+    .gt-tool-list {
+      list-style: none; padding: 0; margin: 0;
+      display: flex; flex-direction: column; gap: 8px;
     }
-
-    .tools-score-toggle:has(input:checked) {
-      border-color: rgba(249, 115, 22, 0.42);
-      background: rgba(249, 115, 22, 0.10);
-      color: var(--accent-primary-text);
+    .gt-tool-row {
+      border-radius: var(--gt-radius-sm);
+      border: 1px solid var(--gt-line);
+      background: var(--gt-surface);
     }
-
-    .tools-chip-toggle {
-      display: inline-flex;
+    .gt-tool-row-positive { border-left: 3px solid var(--gt-positive); }
+    .gt-tool-row-neutral { border-left: 3px solid var(--gt-warn); }
+    .gt-tool-row-negative { border-left: 3px solid var(--gt-negative); }
+    .gt-tool-row:hover { background: var(--gt-surface-2); }
+    .gt-tool-link {
+      display: grid;
+      grid-template-columns: 36px 1fr auto;
       align-items: center;
-      min-height: 34px;
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      background: var(--bg-primary);
-      color: var(--text-secondary);
-      cursor: pointer;
-      font-size: 12px;
-      font-weight: 800;
-      padding: 0 11px 0 9px;
-      transition:
-        background var(--tools-base) var(--tools-ease),
-        border-color var(--tools-base) var(--tools-ease),
-        box-shadow var(--tools-base) var(--tools-ease),
-        color var(--tools-fast) var(--tools-ease),
-        transform var(--tools-base) var(--tools-ease);
-    }
-
-    .tools-chip-toggle:hover,
-    .tools-chip-toggle:focus-within {
-      border-color: rgba(249, 115, 22, 0.36);
-      box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.06);
-      transform: translateY(-1px);
-    }
-
-    .tools-chip-toggle input {
-      margin: 0 7px 0 0;
-    }
-
-    .tools-chip-toggle strong {
-      color: var(--text-muted);
-      font-size: 11px;
-      font-variant-numeric: tabular-nums;
-      margin-left: 4px;
-    }
-
-    .tools-chip-toggle:has(input:checked) {
-      border-color: rgba(249, 115, 22, 0.42);
-      background: rgba(249, 115, 22, 0.10);
-      color: var(--accent-primary-text);
-    }
-
-    .tools-card-shell {
-      position: relative;
-      display: block;
-      transition: opacity var(--tools-base) var(--tools-ease), transform var(--tools-base) var(--tools-ease);
-      will-change: transform, opacity;
-    }
-
-    .tools-reset {
-      min-height: 40px;
-      border: 1px solid rgba(249, 115, 22, 0.28);
-      border-radius: 8px;
-      background: rgba(249, 115, 22, 0.08);
-      color: var(--accent-primary-text);
-      cursor: pointer;
-      font: inherit;
-      font-size: 13px;
-      font-weight: 850;
-      padding: 0 13px;
-      transition:
-        background var(--tools-base) var(--tools-ease),
-        border-color var(--tools-base) var(--tools-ease),
-        box-shadow var(--tools-base) var(--tools-ease),
-        color var(--tools-fast) var(--tools-ease),
-        transform var(--tools-base) var(--tools-ease);
-    }
-
-    .tools-reset:hover,
-    .tools-reset:focus-visible {
-      border-color: rgba(249, 115, 22, 0.48);
-      background: rgba(249, 115, 22, 0.13);
-      outline: none;
-      transform: translateY(-1px);
-    }
-
-    .tools-filter-status {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
       gap: 12px;
-      border-top: 1px solid var(--border);
-      color: var(--text-muted);
-      font-size: 12px;
-      font-weight: 750;
-      line-height: 1.35;
-      padding-top: var(--site-card-gap);
+      padding: 14px;
+      text-decoration: none;
+      color: var(--gt-fg);
+      min-height: 60px;
     }
-
-    .tools-filter-status strong {
-      color: var(--accent-primary-text);
+    .gt-tool-rank {
+      font-size: 13px; font-weight: 700;
+      color: var(--gt-subtle); text-align: center;
       font-variant-numeric: tabular-nums;
     }
-
-    .tools-empty-state {
-      margin: calc(var(--site-section-gap) * -1) 0 var(--site-page-bottom);
-      border: 1px dashed rgba(249, 115, 22, 0.3);
-      border-radius: var(--site-radius-card);
-      color: var(--text-muted);
-      padding: var(--site-card-padding);
-      text-align: center;
-      transition:
-        background var(--tools-base) var(--tools-ease),
-        border-color var(--tools-base) var(--tools-ease),
-        color var(--tools-fast) var(--tools-ease),
-        opacity var(--tools-base) var(--tools-ease),
-        transform var(--tools-base) var(--tools-ease);
+    .gt-tool-main { min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+    .gt-tool-title { font-size: 15px; font-weight: 600; }
+    .gt-tool-tagline {
+      font-size: 12.5px;
+      color: var(--gt-muted);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      line-height: 1.4;
     }
-
-    .tools-empty-state p {
-      margin: 0 0 14px;
-      font-weight: 750;
+    .gt-tool-meta {
+      display: flex; flex-direction: column; align-items: flex-end; gap: 2px;
     }
-
-    @media (max-width: 920px) {
-      .tools-filter-row-primary,
-      .tools-filter-row-secondary {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .tools-filter-row-signals {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .tools-chip-toggle {
-        justify-content: center;
-      }
+    .gt-tool-category {
+      font-size: 11px; color: var(--gt-subtle);
+      white-space: nowrap;
     }
-
-    @media (max-width: 640px) {
-      .tools-filter-panel {
-        padding: var(--site-card-padding);
-      }
-
-      .tools-filter-row-primary,
-      .tools-filter-row-secondary {
-        grid-template-columns: 1fr;
-      }
-
-      .tools-filter-status {
-        align-items: flex-start;
-        flex-direction: column;
-      }
-
-      :global(.tools-search-result) {
-        grid-template-columns: 1fr;
-        gap: 6px;
-      }
-
-      :global(.tools-search-result-meta) {
-        justify-content: flex-start;
-        max-width: none;
-      }
-
-      .tools-filter-row-signals {
-        grid-template-columns: 1fr;
-      }
-    }
+    .gt-tool-score { font-size: 16px; font-weight: 700; }
+    .gt-tool-score-slash { font-size: 11px; color: var(--gt-subtle); font-weight: 500; }
   </style>
 </BaseLayout>

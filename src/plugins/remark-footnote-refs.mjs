@@ -1,22 +1,20 @@
 /**
  * remark-footnote-refs
  *
- * Converts bracketed citation markers like [1], [2][3], [1][2][3] in body text
- * into clickable superscript footnote links that jump to a numbered entry in
- * the ## Sources section. Also stamps source list items with id="ref-N" so the
- * anchors resolve.
+ * Strips bracketed citation markers like [1], [2][3] from body prose
+ * because they read as raw AI output and visually clutter the page.
+ * The Sources section at the bottom is now the canonical reference
+ * surface — readers click through there, not from inline superscripts.
  *
- * Why: Perplexity outputs [N] citation markers that look like raw AI output
- * and don't link anywhere. This plugin rewrites them to proper footnote refs.
+ * In the Sources section we still strip the trailing [N] marker from
+ * each list item and stamp it with id="ref-N" so any existing
+ * deep-link still resolves.
  *
  * Rules:
  * - Skips text inside code, code blocks, links, and headings.
- * - Only matches [N] where N is 1-99. Ignores e.g. [brand] or [$10] which
- *   could collide in prose.
- * - In the Sources section, finds list items that end with [N] and tags them
- *   with id="ref-N" while stripping the trailing [N] marker.
+ * - Only matches [N] where N is 1-99 (ignores brand-style brackets).
  */
-import { visit, SKIP } from 'unist-util-visit';
+import { visit } from 'unist-util-visit';
 
 const CITE = /\[(\d{1,2})\](?:\[\d{1,2}\])*/g;
 
@@ -31,20 +29,9 @@ function parseMarkers(token) {
   return nums;
 }
 
-function buildSupNodes(nums) {
-  // Render as <sup class="fn-ref"><a href="#ref-N">N</a>, <a href="#ref-M">M</a></sup>
-  const children = [];
-  nums.forEach((n, i) => {
-    if (i > 0) {
-      children.push({ type: 'html', value: '<span class="fn-ref-sep">,</span>' });
-    }
-    children.push({
-      type: 'html',
-      value: `<a href="#ref-${n}" class="fn-ref-link" aria-label="See source ${n}">${n}</a>`,
-    });
-  });
-  return { type: 'html', value: `<sup class="fn-ref">[${children.map(c => c.value).join('')}]</sup>` };
-}
+// Inline citations are stripped, not rendered. Kept here for reference
+// if we ever want to bring superscript footnotes back.
+// function buildSupNodes(nums) { ... }
 
 export function remarkFootnoteRefs() {
   return (tree) => {
@@ -84,12 +71,14 @@ export function remarkFootnoteRefs() {
       }
     });
 
-    // Second pass: in text nodes OUTSIDE the sources list, replace [N] with <sup>
+    // Second pass: in text nodes OUTSIDE the sources list, STRIP every
+    // [N] inline citation. Also collapse the whitespace left behind so
+    // we don't end up with double-spaces or a leading space before
+    // punctuation like ". ", "; ", etc.
     visit(tree, 'text', (node, index, parent) => {
       if (!parent) return;
       if (parent.type === 'link' || parent.type === 'inlineCode' || parent.type === 'code') return;
       if (parent.type === 'heading') return;
-      // Skip list items inside the sources list (their anchors are handled above)
       if (sourcesListNode && isInsideNode(parent, sourcesListNode)) return;
 
       const value = node.value;
@@ -99,24 +88,16 @@ export function remarkFootnoteRefs() {
       }
       CITE.lastIndex = 0;
 
-      // Split text node around citation matches
-      const newNodes = [];
-      let lastIdx = 0;
-      let m;
-      while ((m = CITE.exec(value)) !== null) {
-        if (m.index > lastIdx) {
-          newNodes.push({ type: 'text', value: value.slice(lastIdx, m.index) });
-        }
-        const nums = parseMarkers(m[0]);
-        newNodes.push(buildSupNodes(nums));
-        lastIdx = m.index + m[0].length;
-      }
-      if (lastIdx < value.length) {
-        newNodes.push({ type: 'text', value: value.slice(lastIdx) });
-      }
+      // 1. Drop trailing [N] markers (with leading whitespace) entirely:
+      //    "Anthropic's flagship  [3][4]." → "Anthropic's flagship."
+      // 2. Drop standalone [N] markers between words and clean up extra space.
+      let next = value
+        .replace(/\s*\[\d{1,2}\](?:\[\d{1,2}\])*\s*([.,;:!?])/g, '$1')
+        .replace(/\s*\[\d{1,2}\](?:\[\d{1,2}\])*/g, '')
+        .replace(/[ \t]{2,}/g, ' ');
 
-      parent.children.splice(index, 1, ...newNodes);
-      return [SKIP, index + newNodes.length];
+      if (next === value) return;
+      node.value = next;
     });
   };
 }
