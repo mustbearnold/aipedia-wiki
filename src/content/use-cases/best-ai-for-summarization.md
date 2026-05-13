@@ -7,8 +7,8 @@ meta_description: "Best AI summarization tools in 2026: Claude for long document
 description: "A practical guide to choosing AI summarization tools for long documents, meetings, research, web pages, and everyday work."
 tools_mentioned: ["claude", "chatgpt", "gemini"]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-05
-last_verified: 2026-05-05
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 ---
 

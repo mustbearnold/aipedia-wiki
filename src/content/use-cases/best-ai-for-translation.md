@@ -7,8 +7,8 @@ meta_description: "Best AI translation tools in 2026: DeepL for professional tra
 description: "A practical guide to choosing AI translation tools by workflow: professional documents, contextual rewriting, casual travel translation, and API localization."
 tools_mentioned: ["deepl", "chatgpt", "gemini"]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-05
-last_verified: 2026-05-05
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 ---
 
@@ -98,7 +98,7 @@ For casual use, yes. For contracts, medical content, financial disclosures, publ
 Glossaries, terminology control, data handling, document-format preservation, and review workflow.
 
 **How often is this list updated?**
-Monthly, or sooner when major pricing, model, or product changes affect the recommendation.
+Monthly, or sooner when major pricing, model, or product changes affect the recommendation. Last verified on 2026-05-13.
 
 ## Sources
 

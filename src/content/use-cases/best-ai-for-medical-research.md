@@ -3,19 +3,19 @@ type: use-case
 slug: best-ai-for-medical-research
 title: "Best AI for Medical Research (Archived)"
 seo_title: "Best AI for Medical Research (Archived)"
-meta_description: "Archived May 9, 2026: this medical-research AI guide is noindexed until AiPedia rebuilds it with medical-specific sources, privacy guidance, regulatory caveats, and current product verification."
+meta_description: "Archived May 13, 2026: this medical-research AI guide is noindexed until AiPedia rebuilds it with medical-specific sources, privacy guidance, regulatory caveats, and current product verification."
 description: "This archived route explains why AiPedia removed the old medical-research AI guide from the active index and where readers should go instead."
 tools_mentioned: ["elicit", "semantic-scholar", "scite", "perplexity", "claude", "chatgpt"]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-09
-last_verified: 2026-05-09
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 noindex: true
 ---
 
 # Best AI for Medical Research (Archived)
 
-AiPedia removed the previous version of this page from the active index on May 9, 2026.
+AiPedia removed the previous version of this page from the active index on May 9, 2026. This archive note was re-verified on May 13, 2026.
 
 The old guide made high-stakes medical-research recommendations using stale April 2026 model/pricing language, generic chatbot rankings, weak third-party sources, and unsupported claims about multimodal scan analysis, clinical-trial reasoning, and medical research accuracy. That is not good enough for a medical or biomedical research buyer page.
 
@@ -48,7 +48,7 @@ AiPedia should only re-index this route after rebuilding it around:
 
 ## Current Source Trail
 
-This archival decision was checked on 2026-05-09 against:
+This archival decision was checked on 2026-05-13 against:
 
 - [FDA Artificial Intelligence in Software as a Medical Device](https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-software-medical-device)
 - [FDA AI/ML-enabled medical devices](https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-and-machine-learning-aiml-enabled-medical-devices)

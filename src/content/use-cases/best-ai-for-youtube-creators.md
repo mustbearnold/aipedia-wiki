@@ -32,8 +32,8 @@ guide_picks:
       - label: "Runway pricing"
         url: "https://runwayml.com/pricing"
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-09
-last_verified: 2026-05-09
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 ---
 
@@ -41,7 +41,7 @@ update_frequency: monthly
 
 The best AI tool for YouTube depends on the bottleneck. A faceless explainer channel needs research, scripting, voice, editing, thumbnails, and B-roll. A talking-head creator needs scripting, cleanup, captions, clips, and packaging. A Shorts creator needs fast repurposing and mobile-native edits. No single AI product is the best at every step.
 
-Verified May 9, 2026 against current official Descript, ChatGPT, Canva, ElevenLabs, OpusClip, Runway, Midjourney, and Gemini sources. AiPedia may earn from some tool links, but rankings stay editorial and are based on buyer fit, not commission.
+Verified May 13, 2026 against current official Descript, ChatGPT, Canva, ElevenLabs, OpusClip, Runway, Midjourney, and Gemini sources. AiPedia may earn from some tool links, but rankings stay editorial and are based on buyer fit, not commission.
 
 ## Quick Verdict
 
@@ -135,11 +135,11 @@ OpenAI's current pricing page lists Free, Go, Plus, Pro, Business, and Enterpris
 
 ## Sources
 
-- [Descript pricing](https://www.descript.com/pricing) (verified 2026-05-09)
-- [ChatGPT pricing](https://chatgpt.com/pricing/) (verified 2026-05-09)
-- [Canva AI](https://www.canva.com/canva-ai/) (verified 2026-05-09)
-- [ElevenLabs pricing](https://elevenlabs.io/pricing) (verified 2026-05-09)
-- [OpusClip pricing](https://www.opus.pro/pricing) (verified 2026-05-09)
-- [Runway pricing](https://runwayml.com/pricing) (verified 2026-05-09)
-- [Midjourney plan docs](https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans) (verified 2026-05-09)
-- [Gemini subscriptions](https://gemini.google/subscriptions/) (verified 2026-05-09)
+- [Descript pricing](https://www.descript.com/pricing) (verified 2026-05-13)
+- [ChatGPT pricing](https://chatgpt.com/pricing/) (verified 2026-05-13)
+- [Canva AI](https://www.canva.com/canva-ai/) (verified 2026-05-13)
+- [ElevenLabs pricing](https://elevenlabs.io/pricing) (verified 2026-05-13)
+- [OpusClip pricing](https://www.opus.pro/pricing) (verified 2026-05-13)
+- [Runway pricing](https://runwayml.com/pricing) (verified 2026-05-13)
+- [Midjourney plan docs](https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans) (verified 2026-05-13)
+- [Gemini subscriptions](https://gemini.google/subscriptions/) (verified 2026-05-13)

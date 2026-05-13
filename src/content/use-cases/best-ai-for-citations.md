@@ -3,7 +3,7 @@ type: use-case
 slug: best-ai-for-citations
 title: "Best AI for Citations and References (May 2026)"
 seo_title: "Best AI for Citations: Scite, Perplexity, NotebookLM & Elicit (May 2026)"
-meta_description: "Updated May 9, 2026: Scite is best for citation context, Perplexity for cited web answers, NotebookLM for source-grounded notes, and Elicit for literature-review references."
+meta_description: "Updated May 13, 2026: Scite is best for citation context, Perplexity for cited web answers, NotebookLM for source-grounded notes, and Elicit for literature-review references."
 description: "A current buyer guide to AI tools for citation context, cited research answers, source-grounded notebooks, literature review references, and bibliography workflows."
 tools_mentioned: ["scite", "perplexity", "notebooklm", "elicit", "semantic-scholar", "consensus"]
 guide_picks:
@@ -32,14 +32,14 @@ guide_picks:
       - label: "Elicit pricing"
         url: "https://elicit.com/pricing"
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-09
-last_verified: 2026-05-09
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 ---
 
 # Best AI for Citations and References (May 2026)
 
-AiPedia verified this guide on 2026-05-09 against current official Scite, Semantic Scholar, Elicit, Perplexity, NotebookLM, and Consensus sources. Rankings are editorial. AiPedia may earn affiliate revenue from some outbound links, but citation integrity is the priority.
+AiPedia verified this guide on 2026-05-13 against current official Scite, Semantic Scholar, Elicit, Perplexity, NotebookLM, and Consensus sources. Rankings are editorial. AiPedia may earn affiliate revenue from some outbound links, but citation integrity is the priority.
 
 ## Quick Verdict
 
@@ -141,9 +141,9 @@ NotebookLM is safest for a fixed class source pack, Semantic Scholar is best for
 
 ## Sources
 
-- [Scite](https://scite.ai/) - citation context and Smart Citations product reference, verified 2026-05-09.
-- [Semantic Scholar](https://www.semanticscholar.org/) - free academic search and citation graph reference, verified 2026-05-09.
-- [Elicit pricing](https://elicit.com/pricing) - research workflow and plan reference, verified 2026-05-09.
-- [Perplexity Enterprise](https://www.perplexity.ai/enterprise) - cited research/search and team plan reference, verified 2026-05-09.
-- [NotebookLM](https://notebooklm.google/) - source-grounded notebook reference, verified 2026-05-09.
-- [Consensus](https://consensus.app/) - academic answer engine reference, verified 2026-05-09.
+- [Scite](https://scite.ai/) - citation context and Smart Citations product reference, verified 2026-05-13.
+- [Semantic Scholar](https://www.semanticscholar.org/) - free academic search and citation graph reference, verified 2026-05-13.
+- [Elicit pricing](https://elicit.com/pricing) - research workflow and plan reference, verified 2026-05-13.
+- [Perplexity Enterprise](https://www.perplexity.ai/enterprise) - cited research/search and team plan reference, verified 2026-05-13.
+- [NotebookLM](https://notebooklm.google/) - source-grounded notebook reference, verified 2026-05-13.
+- [Consensus](https://consensus.app/) - academic answer engine reference, verified 2026-05-13.

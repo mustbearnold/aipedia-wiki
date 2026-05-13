@@ -35,8 +35,8 @@ guide_picks:
       - label: "Claude Code Pro and Max Usage"
         url: "https://support.anthropic.com/en/articles/11145838-using-claude-code-with-your-pro-or-max-plan"
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-09
-last_verified: 2026-05-09
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: weekly
 ---
 

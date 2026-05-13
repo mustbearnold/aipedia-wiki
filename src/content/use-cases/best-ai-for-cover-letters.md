@@ -7,8 +7,8 @@ meta_description: "Best AI tools for cover letters in 2026: ChatGPT for tailored
 description: "A practical guide to using AI for cover letters without producing generic, exaggerated, or unsafe job-application copy."
 tools_mentioned: ["chatgpt", "claude", "gemini"]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-05
-last_verified: 2026-05-05
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 ---
 

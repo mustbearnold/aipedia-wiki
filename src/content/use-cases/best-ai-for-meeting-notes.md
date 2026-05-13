@@ -3,9 +3,9 @@ type: use-case
 slug: best-ai-for-meeting-notes
 title: "Best AI for Meeting Notes (May 2026)"
 seo_title: "Best AI Meeting Notes Tools: Fathom, Fireflies, Otter, Read AI & NotebookLM (May 2026)"
-meta_description: "Best AI meeting notes tools in May 2026: Fathom for free individual notes, Fireflies for team intelligence, Otter for live transcription, Read AI for meeting reports, and NotebookLM for source-grounded review."
+meta_description: "Best AI meeting notes tools in May 2026: Fathom for free individual notes, Fireflies for team intelligence, Otter for live transcription, Read AI for meeting reports, NotebookLM for source-grounded review, and newer entrants MeetGeek and Castmagic for multilingual capture and content repurposing."
 description: "A current buyer guide to AI meeting-note tools for transcripts, summaries, action items, CRM handoff, live transcription, team meeting intelligence, and post-meeting source review."
-tools_mentioned: ["fathom", "fireflies", "otter-ai", "read-ai", "notebooklm"]
+tools_mentioned: ["fathom", "fireflies", "otter-ai", "read-ai", "notebooklm", "meetgeek", "castmagic"]
 guide_picks:
   best_overall:
     tool: fathom
@@ -32,8 +32,8 @@ guide_picks:
       - label: "Fireflies pricing"
         url: "https://fireflies.ai/pricing"
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-09
-last_verified: 2026-05-09
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 ---
 
@@ -41,7 +41,7 @@ update_frequency: monthly
 
 The best AI meeting-note tool depends on whether you need a personal notetaker, live captions, team meeting intelligence, CRM handoff, enterprise controls, or source-grounded review after the call.
 
-Verified May 9, 2026 against official Fathom, Fireflies, Otter, Read AI, and NotebookLM sources. AiPedia may earn from some tool links, but the ranking is editorial.
+Verified May 13, 2026 against official Fathom, Fireflies, Otter, Read AI, NotebookLM, MeetGeek, and Castmagic sources. AiPedia may earn from some tool links, but the ranking is editorial.
 
 ## Quick Verdict
 
@@ -55,6 +55,8 @@ Pick **[Read AI](/tools/read-ai/)** when the buyer wants meeting reports, coachi
 
 Pick **[NotebookLM](/tools/notebooklm/)** as the free post-meeting analysis companion when you already have the transcript, recording notes, PDFs, or source files and want grounded Q&A, summaries, reports, flashcards, mind maps, and source-based review.
 
+Consider **[MeetGeek](/tools/meetgeek/)** when multilingual calendar coverage, a chat over the meeting library, and team-friendly transcript distribution matter more than the Fathom or Fireflies default. Consider **[Castmagic](/tools/castmagic/)** when the real bottleneck is turning a recorded meeting, interview, or podcast into show notes, blog posts, social threads, or newsletter sections rather than the meeting notes themselves.
+
 ## Best Picks by Meeting Job
 
 - **Best default for individuals:** [Fathom](/tools/fathom/)
@@ -62,6 +64,8 @@ Pick **[NotebookLM](/tools/notebooklm/)** as the free post-meeting analysis comp
 - **Best live transcript workflow:** [Otter.ai](/tools/otter-ai/)
 - **Best meeting-report and coaching layer:** [Read AI](/tools/read-ai/)
 - **Best source-grounded post-meeting review:** [NotebookLM](/tools/notebooklm/)
+- **Best multilingual calendar coverage:** [MeetGeek](/tools/meetgeek/)
+- **Best meeting-to-content repurposing:** [Castmagic](/tools/castmagic/)
 
 ## What To Buy First
 
@@ -115,6 +119,22 @@ Start with the meeting type:
 
 **Watch-out:** NotebookLM is a post-meeting source workspace, not a replacement for Fathom, Fireflies, Otter, or Read AI when you need automatic recording and live capture.
 
+### 6. MeetGeek
+
+[MeetGeek](/tools/meetgeek/) is worth testing when the meeting workflow is multilingual or distributed. The product auto-joins calendar events on Zoom, Google Meet, and Microsoft Teams, transcribes in 100+ languages, generates summaries and action items, and lets users chat with a searchable meeting library. AiPedia is tracking MeetGeek as of May 13, 2026 and treats it as a credible alternative to Fathom or Fireflies for buyers who care most about language coverage and a meeting-knowledge chat surface.
+
+**Best for:** distributed teams with non-English meetings, consultants who manage many client calls, and ops teams that want a searchable knowledge layer on top of recordings.
+
+**Watch-out:** verify retention defaults, who can join meetings as a bot, and which integrations matter to your stack before switching the team off an incumbent notetaker.
+
+### 7. Castmagic
+
+[Castmagic](/tools/castmagic/) is not a meeting notetaker in the Fathom or Fireflies sense. It is a content factory for recorded audio: upload a recorded meeting, interview, or podcast, and Castmagic produces show notes, timestamped chapters, blog drafts, social threads, newsletter sections, and quote pulls. AiPedia is tracking it as of May 13, 2026 for buyers whose real bottleneck is repurposing the meeting, not summarizing it.
+
+**Best for:** podcasters, interview-driven creators, marketers who turn customer or expert calls into content, and founders who repurpose recordings across newsletter, blog, and social.
+
+**Watch-out:** Castmagic does not replace a calendar-aware notetaker for routine internal meetings. Use it on the recordings that need to become published content.
+
 ## What Not To Do
 
 Do not choose a meeting bot only by transcript accuracy claims. Test on your real audio: accents, interruptions, background noise, meeting size, and platform setup matter.
@@ -140,13 +160,15 @@ Yes, especially for live transcription, speaker identification, collaborative tr
 Read AI fits when you want meeting reports, coaching, workplace search, email/message context, and a broader productivity surface around meetings.
 
 **How often is this guide updated?**  
-Monthly, and sooner when pricing, plan limits, recording policies, or major meeting-intelligence features change. This page was last verified on 2026-05-09.
+Monthly, and sooner when pricing, plan limits, recording policies, or major meeting-intelligence features change. This page was last verified on 2026-05-13.
 
 ## Sources
 
-- [Fathom pricing](https://www.fathom.ai/pricing) (verified 2026-05-09)
-- [Fireflies pricing](https://fireflies.ai/pricing) (verified 2026-05-09)
-- [Otter.ai pricing](https://otter.ai/pricing) (verified 2026-05-09)
-- [Read AI pricing](https://www.read.ai/plans-pricing) (verified 2026-05-09)
-- [Read AI product overview](https://www.read.ai/) (verified 2026-05-09)
-- [NotebookLM upgrade information](https://support.google.com/notebooklm/answer/16213268) (verified 2026-05-09)
+- [Fathom pricing](https://www.fathom.ai/pricing) (verified 2026-05-13)
+- [Fireflies pricing](https://fireflies.ai/pricing) (verified 2026-05-13)
+- [Otter.ai pricing](https://otter.ai/pricing) (verified 2026-05-13)
+- [Read AI pricing](https://www.read.ai/plans-pricing) (verified 2026-05-13)
+- [Read AI product overview](https://www.read.ai/) (verified 2026-05-13)
+- [NotebookLM upgrade information](https://support.google.com/notebooklm/answer/16213268) (verified 2026-05-13)
+- [MeetGeek](https://meetgeek.ai) (verified 2026-05-13)
+- [Castmagic](https://www.castmagic.io) (verified 2026-05-13)

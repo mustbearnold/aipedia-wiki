@@ -35,8 +35,8 @@ guide_picks:
       - label: "Qodo Git Integration Docs"
         url: "https://docs.qodo.ai/v1/qodo-merge"
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-09
-last_verified: 2026-05-09
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: weekly
 ---
 

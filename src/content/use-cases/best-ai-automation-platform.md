@@ -3,7 +3,7 @@ type: use-case
 slug: best-ai-automation-platform
 title: "Best AI Automation Platform (May 2026)"
 seo_title: "Best AI Automation Platform: n8n, Zapier, Make, Gumloop & Relevance AI (May 2026)"
-meta_description: "Best AI automation platforms in May 2026: n8n for technical teams, Zapier for no-code integrations, Make for visual operations, Gumloop for AI-native workflows, and Relevance AI for agent workforces."
+meta_description: "Best AI automation platforms in May 2026 (refreshed May 13): n8n for technical teams, Zapier for no-code integrations, Make for visual operations, Gumloop for AI-native workflows, and Relevance AI for agent workforces."
 author: "aipedia.wiki Editorial"
 description: "A current buyer guide to AI automation platforms, covering workflow automation, AI agents, integrations, self-hosting, pricing units, governance, and which platform to buy first."
 tools_mentioned: ["n8n", "zapier", "make", "gumloop", "relevance-ai", "lindy", "pipedream", "crewai"]
@@ -36,14 +36,14 @@ guide_picks:
     sources:
       - label: "Zapier pricing"
         url: "https://zapier.com/pricing"
-last_updated: 2026-05-09
-last_verified: 2026-05-09
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 ---
 
 # Best AI Automation Platform (May 2026)
 
-AiPedia verified this guide on 2026-05-09 against current official pricing, docs, and product pages. Rankings are editorial. AiPedia may earn affiliate revenue from some tool links, but paid relationships do not determine the winner.
+AiPedia verified this guide on 2026-05-13 against current official pricing, docs, and product pages. Rankings are editorial. AiPedia may earn affiliate revenue from some tool links, but paid relationships do not determine the winner.
 
 ## Quick Verdict
 
@@ -185,13 +185,13 @@ Use Gumloop when the work is AI-native flows and agents inside a workflow surfac
 
 ## Sources
 
-- [n8n pricing](https://n8n.io/pricing/) (verified 2026-05-09)
-- [n8n AI documentation](https://docs.n8n.io/advanced-ai/) (verified 2026-05-09)
-- [Zapier pricing](https://zapier.com/pricing) (verified 2026-05-09)
-- [Make pricing](https://www.make.com/en/pricing) (verified 2026-05-09)
-- [Make AI Agents](https://www.make.com/en/ai-agents) (verified 2026-05-09)
-- [Gumloop pricing](https://www.gumloop.com/pricing) (verified 2026-05-09)
-- [Relevance AI pricing](https://relevanceai.com/pricing) (verified 2026-05-09)
-- [Lindy pricing](https://www.lindy.ai/pricing) (verified 2026-05-09)
-- [Pipedream pricing docs](https://pipedream.com/docs/pricing) (verified 2026-05-09)
-- [CrewAI documentation](https://docs.crewai.com/en/introduction) (verified 2026-05-09)
+- [n8n pricing](https://n8n.io/pricing/) (verified 2026-05-13)
+- [n8n AI documentation](https://docs.n8n.io/advanced-ai/) (verified 2026-05-13)
+- [Zapier pricing](https://zapier.com/pricing) (verified 2026-05-13)
+- [Make pricing](https://www.make.com/en/pricing) (verified 2026-05-13)
+- [Make AI Agents](https://www.make.com/en/ai-agents) (verified 2026-05-13)
+- [Gumloop pricing](https://www.gumloop.com/pricing) (verified 2026-05-13)
+- [Relevance AI pricing](https://relevanceai.com/pricing) (verified 2026-05-13)
+- [Lindy pricing](https://www.lindy.ai/pricing) (verified 2026-05-13)
+- [Pipedream pricing docs](https://pipedream.com/docs/pricing) (verified 2026-05-13)
+- [CrewAI documentation](https://docs.crewai.com/en/introduction) (verified 2026-05-13)

@@ -3,12 +3,12 @@ type: use-case
 slug: ai-solo-founder-stack
 title: "Best AI Stack for Solo Founders (2026)"
 seo_title: "Best AI Stack for Solo Founders in 2026: What to Buy First"
-meta_description: "Updated May 9, 2026: a source-backed AI stack for solo founders choosing coding, research, automation, support, notes, and deck tools without wasting budget."
+meta_description: "Updated May 13, 2026: a source-backed AI stack for solo founders choosing coding, research, automation, support, notes, and deck tools without wasting budget."
 author: "aipedia.wiki Editorial"
 description: The AI tools solo founders should buy first, defer, or avoid when building products, writing copy, automating operations, researching competitors, and supporting users.
 tools_mentioned: [cursor, claude, chatgpt, lovable, bolt, n8n, perplexity, intercom, notion-ai, gamma, github-copilot, zapier]
-last_updated: 2026-05-09
-last_verified: 2026-05-09
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 guide_picks:
   best_overall:
@@ -43,7 +43,7 @@ guide_picks:
 
 The best solo-founder AI stack is not ten subscriptions. It is a sequence: buy the tool that removes today's biggest bottleneck, prove the workflow, then add the next layer only when usage is visible.
 
-**AiPedia verdict, verified May 9, 2026:** technical founders should usually start with [Cursor](/tools/cursor/) plus one general reasoning assistant. Non-technical founders should test [Lovable](/tools/lovable/) or [Bolt](/tools/bolt/) before hiring a prototype team. Add [n8n](/tools/n8n/) after workflows repeat, [Perplexity](/tools/perplexity/) when research needs citations, and [Intercom](/tools/intercom/) only when support volume justifies seat plus usage pricing.
+**AiPedia verdict, verified May 13, 2026:** technical founders should usually start with [Cursor](/tools/cursor/) plus one general reasoning assistant. Non-technical founders should test [Lovable](/tools/lovable/) or [Bolt](/tools/bolt/) before hiring a prototype team. Add [n8n](/tools/n8n/) after workflows repeat, [Perplexity](/tools/perplexity/) when research needs citations, and [Intercom](/tools/intercom/) only when support volume justifies seat plus usage pricing.
 
 **Who this is for:** solo founders, indie hackers, and 1-3 person teams building SaaS, apps, services, or content-led businesses. The goal is to choose the first two or three tools that make the founder faster without creating a subscription mess.
 
@@ -195,17 +195,17 @@ Often, but that is the wrong first question. The right question is whether each 
 
 ## Sources
 
-- [Cursor pricing](https://cursor.com/pricing), verified 2026-05-09
-- [Cursor account plans](https://docs.cursor.com/account/plans), verified 2026-05-09
-- [Claude Code authentication](https://code.claude.com/docs/en/authentication), verified 2026-05-09
-- [Use Claude Code with Pro or Max](https://support.claude.com/en/articles/11145838-use-claude-code-with-your-pro-or-max-plan), verified 2026-05-09
-- [ChatGPT Plus](https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus), verified 2026-05-09
-- [Lovable pricing](https://lovable.dev/pricing), verified 2026-05-09
-- [Bolt.new pricing](https://bolt.new/pricing), verified 2026-05-09
-- [n8n pricing](https://n8n.io/pricing/), verified 2026-05-09
-- [Intercom pricing](https://www.intercom.com/pricing), verified 2026-05-09
-- [Notion pricing](https://www.notion.com/pricing), verified 2026-05-09
-- [Gamma pricing](https://gamma.app/pricing), verified 2026-05-09
-- [GitHub Copilot billing](https://docs.github.com/en/copilot/concepts/billing), verified 2026-05-09
+- [Cursor pricing](https://cursor.com/pricing), verified 2026-05-13
+- [Cursor account plans](https://docs.cursor.com/account/plans), verified 2026-05-13
+- [Claude Code authentication](https://code.claude.com/docs/en/authentication), verified 2026-05-13
+- [Use Claude Code with Pro or Max](https://support.claude.com/en/articles/11145838-use-claude-code-with-your-pro-or-max-plan), verified 2026-05-13
+- [ChatGPT Plus](https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus), verified 2026-05-13
+- [Lovable pricing](https://lovable.dev/pricing), verified 2026-05-13
+- [Bolt.new pricing](https://bolt.new/pricing), verified 2026-05-13
+- [n8n pricing](https://n8n.io/pricing/), verified 2026-05-13
+- [Intercom pricing](https://www.intercom.com/pricing), verified 2026-05-13
+- [Notion pricing](https://www.notion.com/pricing), verified 2026-05-13
+- [Gamma pricing](https://gamma.app/pricing), verified 2026-05-13
+- [GitHub Copilot billing](https://docs.github.com/en/copilot/concepts/billing), verified 2026-05-13
 
 ---

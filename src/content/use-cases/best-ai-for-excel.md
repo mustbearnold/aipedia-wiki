@@ -34,8 +34,8 @@ guide_picks:
       - label: "Claude pricing"
         url: "https://claude.com/pricing"
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-09
-last_verified: 2026-05-09
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 ---
 

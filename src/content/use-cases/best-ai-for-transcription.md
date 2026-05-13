@@ -32,8 +32,8 @@ guide_picks:
       - label: "Deepgram pricing"
         url: "https://deepgram.com/pricing"
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-09
-last_verified: 2026-05-09
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 ---
 
@@ -41,7 +41,7 @@ update_frequency: monthly
 
 The best AI transcription tool depends on the input and the workflow after the transcript exists. A sales call needs meeting summaries and CRM handoff. A podcast needs text-based editing and captions. A developer building an app needs an API. A voice platform may need speech-to-text as one feature alongside text-to-speech, dubbing, and voice agents.
 
-Verified May 9, 2026 against official Fathom, Descript, Deepgram, AssemblyAI, and ElevenLabs sources. AiPedia may earn from some tool links, but rankings are editorial.
+Verified May 13, 2026 against official Fathom, Descript, Deepgram, AssemblyAI, and ElevenLabs sources. Cohere Transcribe (transcribe-03-2026) is the newest API entrant worth testing alongside Deepgram and AssemblyAI when speech-to-text becomes a product feature, and Mistral's Voxtral remains a speech-to-text (not text-to-speech) option for teams already on the Mistral stack. AiPedia may earn from some tool links, but rankings are editorial.
 
 ## Quick Verdict
 
@@ -93,7 +93,7 @@ Use Deepgram for real-time transcription, call analytics, voice-agent backends, 
 
 [AssemblyAI](/tools/assemblyai/) is the speech-understanding API to compare with Deepgram when the transcript needs richer analysis. Its current pricing page lists speech-to-text and add-on capabilities such as speaker diarization, prompting, medical mode, and other audio intelligence features.
 
-Use AssemblyAI when the buyer cares about structured transcript analysis, speaker labels, prompts, medical/entity handling, or application-level speech understanding rather than simply "audio in, text out."
+Use AssemblyAI when the buyer cares about structured transcript analysis, speaker labels, prompts, medical/entity handling, or application-level speech understanding rather than simply "audio in, text out." Newer API entrants to bench alongside it include Cohere's transcribe-03-2026 model and Mistral's Voxtral speech-to-text family, both of which are worth testing on real production audio before committing.
 
 **Watch-out:** add-ons change the real cost. Price the full workflow, not just baseline transcription.
 
@@ -130,12 +130,12 @@ Deepgram is the first API to test for real-time and production STT. AssemblyAI s
 Yes, but it makes the most sense when transcription is part of a broader voice workflow that also needs TTS, dubbing, voice cloning, or voice-agent features.
 
 **How often is this guide updated?**  
-Monthly, and sooner when pricing, API capabilities, language support, plan limits, or major speech-model changes affect the recommendation. Last verified on 2026-05-09.
+Monthly, and sooner when pricing, API capabilities, language support, plan limits, or major speech-model changes affect the recommendation. Last verified on 2026-05-13.
 
 ## Sources
 
-- [Fathom pricing](https://www.fathom.ai/pricing) (verified 2026-05-09)
-- [Descript pricing](https://www.descript.com/pricing) (verified 2026-05-09)
-- [Deepgram pricing](https://deepgram.com/pricing) (verified 2026-05-09)
-- [AssemblyAI pricing](https://www.assemblyai.com/pricing) (verified 2026-05-09)
-- [ElevenLabs pricing](https://elevenlabs.io/pricing) (verified 2026-05-09)
+- [Fathom pricing](https://www.fathom.ai/pricing) (verified 2026-05-13)
+- [Descript pricing](https://www.descript.com/pricing) (verified 2026-05-13)
+- [Deepgram pricing](https://deepgram.com/pricing) (verified 2026-05-13)
+- [AssemblyAI pricing](https://www.assemblyai.com/pricing) (verified 2026-05-13)
+- [ElevenLabs pricing](https://elevenlabs.io/pricing) (verified 2026-05-13)

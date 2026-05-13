@@ -3,21 +3,23 @@ type: use-case
 slug: best-ai-for-legal-research
 title: "Best AI for Legal Research (Archived)"
 seo_title: "Best AI for Legal Research (Archived)"
-meta_description: "Archived May 9, 2026: this legal-research guide is noindexed until AiPedia rebuilds it with legal-specific sources, jurisdiction caveats, and current product verification."
+meta_description: "Archived May 13, 2026: this legal-research guide is noindexed until AiPedia rebuilds it with legal-specific sources, jurisdiction caveats, and current product verification."
 description: "This archived route explains why AiPedia removed the old legal-research AI guide from the active index and where readers should go instead."
 tools_mentioned: ["perplexity", "claude", "chatgpt"]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-09
-last_verified: 2026-05-09
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 noindex: true
 ---
 
 # Best AI for Legal Research (Archived)
 
-AiPedia removed the previous version of this page from the active index on May 9, 2026.
+AiPedia removed the previous version of this page from the active index on May 9, 2026. This archive note was re-verified on May 13, 2026.
 
 The old guide made legal-research recommendations using generic AI-model claims, stale April 2026 pricing/version language, and weak third-party ranking sources. That is not good enough for a high-stakes legal buyer page. A trustworthy legal-research guide needs current source-backed coverage of legal databases, cited research reliability, jurisdiction limits, privacy, confidentiality, hallucination risk, professional-responsibility constraints, and human lawyer review.
+
+On May 12, 2026, Anthropic announced Claude for Legal, a vertical product with twelve workflow plugins and a Harvey integration. AiPedia is tracking the launch but will not re-index this route on the strength of a single vendor announcement. The rebuild still needs independent verification of accuracy, citation behavior, privilege handling, and jurisdiction coverage before any buyer guidance ships.
 
 ## Where To Go Instead
 

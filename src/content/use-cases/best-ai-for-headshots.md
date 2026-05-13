@@ -7,8 +7,8 @@ meta_description: "Best AI tools for professional headshots in 2026: when to use
 description: "A practical guide to AI professional headshots, including realism, disclosure, consent, brand fit, and when a real photographer is still better."
 tools_mentioned: ["midjourney", "chatgpt", "gemini"]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-05
-last_verified: 2026-05-05
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 ---
 
