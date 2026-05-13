@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$40/user/month"
 status: active
 launched: 2020-08
-last_updated: 2026-05-10
-last_verified: 2026-05-10
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: "https://tactiq.io"
     source_label: "Tactiq official"
     source_id: tactiq-official
-    verified_at: 2026-05-10
+    verified_at: 2026-05-13
     volatility: medium
     confidence: medium
   pricing_anchor:
@@ -39,8 +39,8 @@ facts:
     source: "https://tactiq.io/buy"
     source_label: "Tactiq pricing"
     source_id: tactiq-pricing
-    verified_at: 2026-05-10
-    next_review_at: 2026-08-10
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: high
     confidence: medium
   watch_out_for:
@@ -48,8 +48,8 @@ facts:
     source: "https://tactiq.io/buy"
     source_label: "Tactiq pricing"
     source_id: tactiq-pricing
-    verified_at: 2026-05-10
-    next_review_at: 2026-08-10
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: high
     confidence: medium
 tags: [meeting-transcription, ai-notes, meeting-summary, chrome-extension, no-bot, zoom, google-meet, teams]
@@ -69,6 +69,27 @@ seo_title: "Tactiq: Features, Pricing & Review (May 2026)"
 meta_description: "Tactiq transcribes Google Meet, Zoom, and Teams via Chrome extension with no bot in the call. Plans Free, Pro $8 annual or $12 monthly, Team $16.67 annual, Business $29.16 annual, Enterprise custom."
 author: "aipedia.wiki Editorial"
 price_history:
+  - date: 2026-05-13
+    plan: "Pro"
+    price: "$8/user/mo annual"
+    source: "https://tactiq.io/buy"
+    source_label: "Tactiq pricing"
+    source_id: tactiq-pricing
+    note: "Verified unchanged. Monthly billing is $12/user."
+  - date: 2026-05-13
+    plan: "Team"
+    price: "$16.67/user/mo annual"
+    source: "https://tactiq.io/buy"
+    source_label: "Tactiq pricing"
+    source_id: tactiq-pricing
+    note: "Verified unchanged. Monthly billing is $20/user."
+  - date: 2026-05-13
+    plan: "Business"
+    price: "$29.16/user/mo annual"
+    source: "https://tactiq.io/buy"
+    source_label: "Tactiq pricing"
+    source_id: tactiq-pricing
+    note: "Verified unchanged. Monthly billing is $40/user; MCP and Claude Connector are still beta."
   - date: 2026-05-10
     plan: "Pro"
     price: "$8/user/mo annual"
@@ -76,20 +97,6 @@ price_history:
     source_label: "Tactiq pricing"
     source_id: tactiq-pricing
     note: "Verified unchanged. Monthly billing is $12/user."
-  - date: 2026-05-10
-    plan: "Team"
-    price: "$16.67/user/mo annual"
-    source: "https://tactiq.io/buy"
-    source_label: "Tactiq pricing"
-    source_id: tactiq-pricing
-    note: "Verified unchanged. Monthly billing is $20/user."
-  - date: 2026-05-10
-    plan: "Business"
-    price: "$29.16/user/mo annual"
-    source: "https://tactiq.io/buy"
-    source_label: "Tactiq pricing"
-    source_id: tactiq-pricing
-    note: "Verified unchanged. Monthly billing is $40/user; MCP and Claude Connector are still beta."
   - date: 2026-04-17
     plan: "Pro"
     price: "$8/user/mo annual"
@@ -139,7 +146,7 @@ Pricing runs Free, Pro $8/user/month, Team $16.67/user/month, Business $29.16/us
 | **Pricing (annual)** | Free, Pro $8, Team $16.67, Business $29.16, Enterprise custom |
 | **Adoption signals claimed** | 1m+ weekly meetings, 1,000,000+ Chrome extension users, 4.8 rating from 3,000+ Chrome Web Store reviews |
 
-Every data point above was verified against vendor pages on 2026-05-10. See Sources.
+Every data point above was verified against vendor pages on 2026-05-13. See Sources.
 
 ## What it actually is
 
@@ -178,7 +185,7 @@ Subscription pricing via [tactiq.io/buy](https://tactiq.io/buy). Annual billing 
 | Business | $40/user | $29.16/user | Unlimited | Unlimited | 20-200 | SAML SSO, MCP (beta), advanced retention |
 | Enterprise | Custom | Custom | Unlimited | Unlimited | 200+ | DPA, customizable SSO, CSM |
 
-*Prices verified 2026-05-10 via [tactiq.io/buy](https://tactiq.io/buy). Free tier has no credit card requirement.*
+*Prices verified 2026-05-13 via [tactiq.io/buy](https://tactiq.io/buy). Free tier has no credit card requirement.*
 
 ## Against the alternatives
 
@@ -206,7 +213,7 @@ Subscription pricing via [tactiq.io/buy](https://tactiq.io/buy). Annual billing 
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-05-10 against [tactiq.io/buy](https://tactiq.io/buy), [tactiq.io](https://tactiq.io), and Tactiq's Trust Center help page.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-05-13 against [tactiq.io/buy](https://tactiq.io/buy), [tactiq.io](https://tactiq.io), and Tactiq's Trust Center help page.
 
 ## FAQ
 
@@ -246,3 +253,4 @@ Yes, on the Business tier as a beta. The same Business tier also lists a Tactiq 
 
 - **2026-04-17:** New page. Pricing and features verified against tactiq.io.
 - **2026-05-10:** Refreshed pricing source from redirected /pricing to canonical /buy; reverified monthly/annual pricing, MCP/Claude beta status, Trust Center claims, platform support, and adoption signals.
+- **2026-05-13:** Reverified all pricing, transcript caps, AI credits, MCP/Claude Connector beta status, and compliance claims against tactiq.io/buy. No material changes.

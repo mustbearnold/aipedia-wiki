@@ -2,7 +2,7 @@
 type: tool
 slug: codex
 title: OpenAI Codex
-tagline: OpenAI's agentic coding product. Cloud-async coding agent, Codex Desktop app (macOS first, Windows rolling), CLI, and IDE extensions. GPT-5.5 rolled into Codex on April 23, 2026 after the April 16 super-app update added Computer Use, Memory, gpt-image-2, in-app browser, 90+ plugins, and multi-agent workflows.
+tagline: OpenAI's agentic coding product. Cloud-async coding agent, Codex Desktop app (macOS first, Windows rolling), CLI, IDE extensions, and a Chrome extension for signed-in browser workflows. GPT-5.5 rolled into Codex on April 23, 2026; Codex Security became the anchor of OpenAI's May 11 Daybreak defensive-cyber launch.
 category: ai-coding
 secondary_categories: [ai-chatbots]
 company: openai
@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "Bundled with ChatGPT Plus ($20/mo) through Pro 20x ($200/mo)"
 status: active
 launched: 2025-05
-last_updated: 2026-05-11
-last_verified: 2026-05-11
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -32,7 +32,7 @@ facts:
     source: https://openai.com/codex/
     source_label: OpenAI Codex product page
     source_id: codex-official
-    verified_at: '2026-05-11'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
     next_review_at: '2026-08-11'
@@ -42,7 +42,7 @@ facts:
     source: https://developers.openai.com/codex/pricing
     source_label: Codex pricing
     source_id: codex-pricing
-    verified_at: '2026-05-11'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
     next_review_at: '2026-08-11'
@@ -52,7 +52,7 @@ facts:
     source: https://platform.openai.com/docs/codex
     source_label: Codex docs
     source_id: codex-docs
-    verified_at: '2026-05-11'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
     next_review_at: '2026-08-11'
@@ -62,7 +62,7 @@ facts:
     source: https://platform.openai.com/docs/codex
     source_label: Codex docs
     source_id: codex-docs
-    verified_at: '2026-05-11'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
     next_review_at: '2026-08-11'
@@ -72,13 +72,13 @@ facts:
     source: https://openai.com/codex/
     source_label: OpenAI Codex product page
     source_id: codex-official
-    verified_at: '2026-05-11'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
     next_review_at: '2026-08-11'
 tags: [agentic-coding, cloud-agent, desktop-app, cli, openai, gpt-5, computer-use, memory, plugins, multi-agent]
 seo_title: "OpenAI Codex: Features, Pricing & Review (May 2026)"
-meta_description: "OpenAI Codex is the cloud-async coding agent bundled with ChatGPT. GPT-5.5 rolled into Codex April 23, 2026, and Codex for Chrome added signed-in browser workflows on May 7. Plans $20-$200/mo via ChatGPT tiers."
+meta_description: "OpenAI Codex is the cloud-async coding agent bundled with ChatGPT. GPT-5.5 rolled into Codex April 23, 2026, Codex for Chrome added signed-in browser workflows on May 7, and Codex Security anchors the May 11 Daybreak defensive-cyber launch. Plans $20-$200/mo via ChatGPT tiers."
 author: "aipedia.wiki Editorial"
 best_for:
   - async background coding (fire a task, return to a PR)
@@ -122,6 +122,20 @@ price_history:
     source_label: "Source"
     source_id: codex-pricing
     note: "GPT-5.5 rolled out to Codex for longer-running coding, research, data, documents, spreadsheets, and tool-use tasks."
+  - date: 2026-05-07
+    plan: "Codex for Chrome"
+    price: "Bundled with paid ChatGPT tiers"
+    source: "https://developers.openai.com/codex/pricing"
+    source_label: "Source"
+    source_id: codex-pricing
+    note: "Codex Chrome extension launched, letting the desktop app inspect, test, and operate across signed-in Chrome tabs on macOS and Windows."
+  - date: 2026-05-11
+    plan: "Daybreak / Codex Security"
+    price: "Bundled with paid ChatGPT tiers; Trusted Access tiers gated"
+    source: "https://developers.openai.com/codex/pricing"
+    source_label: "Source"
+    source_id: codex-pricing
+    note: "OpenAI launched Daybreak with Codex Security as the anchor product. GPT-5.5 / Trusted Access / GPT-5.5-Cyber tiers. 22 partners including Cloudflare, Cisco, CrowdStrike, Palo Alto Networks, Snyk, Semgrep, and Socket. Same-day GPT-5.5-Cyber EU preview and OpenAI Deployment Company corporate restructure."
 ---
 
 # OpenAI Codex
@@ -132,7 +146,11 @@ Bundled with every paid ChatGPT tier. Pro tiers get 5x to 20x the Codex usage of
 
 ## Recent developments (March-May 2026)
 
+- **May 11, 2026:** [OpenAI launched Daybreak](/news/2026-05-11-openai-daybreak-codex-security-launch/) with **Codex Security as the anchor product**. Daybreak wraps Codex Security in three model tiers (GPT-5.5, Trusted Access, GPT-5.5-Cyber) and onboards 22 launch partners across Cloudflare, Cisco, CrowdStrike, Palo Alto Networks, Snyk, Semgrep, Socket, and more. Codex Security is now the operational center of OpenAI's defensive-cyber play and the most consequential Codex announcement since the April 16 super-app update.
+- **May 11, 2026:** [OpenAI consolidated its commercial operations under an OpenAI Deployment Company](/news/2026-05-11-openai-deployment-company-formation/). The restructure cleans the path for enterprise distribution of Codex, ChatGPT, and Daybreak across hyperscalers and government customers.
+- **May 11, 2026:** [OpenAI opened a GPT-5.5-Cyber EU preview](/news/2026-05-11-openai-gpt-55-cyber-eu-preview/), bringing the cyber-permissive model to European defenders inside Trusted Access. Relevant to Codex Security customers operating under EU data-residency requirements.
 - **May 7, 2026:** [OpenAI added Codex for Chrome](/news/2026-05-07-openai-codex-chrome-extension/), letting the Codex desktop app work directly across signed-in Chrome tabs on macOS and Windows. Treat it as a major workflow unlock and a permission-scope decision: the value is real browser context; the risk is letting an agent operate inside authenticated web apps.
+- **May 7, 2026:** [OpenAI shipped Realtime 2 with two new voice models](/news/2026-05-07-openai-realtime-2-voice-models/). The lower-latency bidirectional stack tightens voice-driven Codex workflows for hands-free coding sessions and dictation in Codex Desktop.
 - **May 2, 2026:** [Codex Desktop added Pets, Hatch custom pet generation, cross-agent config imports, and a dictation dictionary](/news/2026-05-03-openai-codex-pets-config-imports/). The playful overlay is less important than the config portability: Codex can now import conventions from tools such as Claude Code instead of forcing users to rewrite setup context.
 - **May 1, 2026:** [The MCP STDIO command-execution flaw put agent connectors back under security review](/news/2026-05-03-mcp-stdio-command-execution-flaw/). Codex Desktop's plugin/MCP layer should be treated as privileged tool access, not as harmless extension metadata.
 - **May 1, 2026:** [The Pentagon expanded classified-network AI access to eight major vendors](/news/2026-05-01-pentagon-classified-ai-network-deals/), including OpenAI. This is a government deployment story rather than a public Codex feature, but it reinforces why account security, network boundaries, and audit controls matter for agentic OpenAI products.
@@ -162,7 +180,7 @@ Bundled with every paid ChatGPT tier. Pro tiers get 5x to 20x the Codex usage of
 
 ## System Verdict
 
-> **Pick Codex if you want an async coding agent that runs in the background while you do other work.** Codex's "fire a task, come back to a pull request" model is the strongest pattern in the category for routine features, test generation, boilerplate, and documentation. The April 16 super-app update makes Codex Desktop the most capable all-in-one developer surface from OpenAI. Best for users already paying for ChatGPT Plus or higher.
+> **Pick Codex if you want an async coding agent that runs in the background while you do other work.** Codex's "fire a task, come back to a pull request" model is the strongest pattern in the category for routine features, test generation, boilerplate, and documentation. The April 16 super-app update makes Codex Desktop the most capable all-in-one developer surface from OpenAI, the May 7 Codex Chrome extension extends that surface into signed-in browser workflows, and the May 11 Daybreak launch puts Codex Security at the center of OpenAI's defensive-cyber product. Best for users already paying for ChatGPT Plus or higher.
 >
 > **Skip it if you need a Linux desktop GUI today, primary in-IDE coding, or the tightest terminal agent.** [Cursor](/tools/cursor/) owns daily-driver IDE coding with real-time autocomplete and in-editor chat. [Claude Code](/tools/claude-code/) owns terminal-native autonomous runs and the 1M context window for codebase-scale work. [Devin](/tools/devin/) owns fully-autonomous enterprise agent-first workflows. Codex is strongest as a hybrid: async cloud agent + capable desktop companion.
 >
@@ -181,11 +199,16 @@ Bundled with every paid ChatGPT tier. Pro tiers get 5x to 20x the Codex usage of
 | **Image generation** | gpt-image-2 bundled in Codex Desktop (new April 16) |
 | **In-app browser** | Yes (new April 16). Research, form-fill, scrape without leaving the app |
 | **Plugins** | 90+ (new April 16). Combines skills, app integrations, MCP servers |
+| **Chrome extension** | Yes (new May 7, 2026). Codex Desktop operates across signed-in Chrome tabs on macOS and Windows |
+| **Codex Security** | Anchor product of OpenAI's May 11 Daybreak launch. 22 partners including Cloudflare, Cisco, CrowdStrike, Palo Alto Networks, Snyk, Semgrep, Socket |
+| **Cyber model tiers** | GPT-5.5 · Trusted Access · GPT-5.5-Cyber (EU preview opened May 11, 2026) |
 | **Multi-agent** | Yes. Run multiple Codex agents concurrently across different tasks or modules |
+| **Voice** | Realtime 2 voice models (new May 7, 2026) tighten dictation and hands-free Codex sessions |
 | **Billing** | Credits per MTok input / cached input / output (since April 2, 2026) |
 | **Platform support** | macOS (primary) · Windows rolling out · EU/UK rolling out · Linux via CLI |
+| **Cloud distribution** | OpenAI Deployment Company (formed May 11, 2026) consolidates enterprise distribution; Amazon Bedrock preview live since April 28, 2026 |
 
-Every data point verified 2026-05-11 against OpenAI's Codex docs, pricing pages, and multi-source coverage.
+Every data point verified 2026-05-13 against OpenAI's Codex docs, pricing pages, the Daybreak / Codex Security announcement, and multi-source coverage.
 
 ## What it actually is
 
@@ -196,6 +219,10 @@ Three related surfaces united by the same underlying agent:
 **2. Codex Desktop (the April 16 super-app).** A standalone macOS app (Windows rolling out) that runs multiple Codex agents in parallel, uses Computer Use to operate applications directly, holds persistent Memory across sessions, generates images with gpt-image-2, browses the web in-app, and orchestrates 90+ plugins including first-party app integrations and third-party MCP servers.
 
 **3. Codex CLI + IDE extensions.** Local-first developers use Codex as a terminal CLI (similar shape to Claude Code) or via IDE extensions in VS Code, JetBrains, and others. IDE extensions hit the same GPT-5.5 and Codex-Spark model family that backs the cloud and desktop surfaces.
+
+**4. Codex for Chrome (May 7, 2026).** A browser extension that lets Codex Desktop inspect, test, and operate across signed-in Chrome tabs on macOS and Windows. Real browser context, with the corresponding permission-scope trade-off because the agent runs inside authenticated web apps.
+
+**5. Codex Security (May 11, 2026).** Anchor product of OpenAI's Daybreak defensive-cyber launch. Wraps GPT-5.5, Trusted Access, and GPT-5.5-Cyber model tiers with a Codex Security plugin that handles threat modeling, vulnerability discovery, validation, attack-path analysis, and verified fixes. Twenty-two launch partners including Cloudflare, Cisco, CrowdStrike, Palo Alto Networks, Snyk, Semgrep, and Socket. GPT-5.5-Cyber is now in EU preview through Trusted Access.
 
 The real moat is the **cross-surface consistency**. A task started in the desktop app can hand off to the cloud agent. Memory carries across sessions and surfaces. Plugins work everywhere. OpenAI is treating Codex as the front end of a developer-focused super app rather than a single product.
 
@@ -253,9 +280,13 @@ Prices verified 2026-04-18 via [OpenAI Codex pricing](https://developers.openai.
 ## Recent changes
 
 - **May 11, 2026:** [OpenAI launched Daybreak](/news/2026-05-11-openai-daybreak-codex-security-launch/), wrapping Codex Security with GPT-5.5 / Trusted Access / GPT-5.5-Cyber tiers and onboarding 22 partners (Cloudflare, Cisco, CrowdStrike, Palo Alto Networks, Snyk, Semgrep, Socket, and more). Codex Security is now the operational center of OpenAI's defensive-cyber play.
+- **May 11, 2026:** [OpenAI formed an OpenAI Deployment Company](/news/2026-05-11-openai-deployment-company-formation/) to consolidate enterprise commercial operations for ChatGPT, Codex, and Daybreak. Cleans up multi-cloud Codex distribution after the April 30 Microsoft non-exclusivity restructure.
+- **May 11, 2026:** [GPT-5.5-Cyber EU preview opened](/news/2026-05-11-openai-gpt-55-cyber-eu-preview/) through Trusted Access for Cyber. Codex Security customers operating in the EU now have a path to the cyber-permissive model under EU compliance posture.
 - **May 7, 2026:** [OpenAI added Codex for Chrome](/news/2026-05-07-openai-codex-chrome-extension/) so Codex can inspect, test, and operate across signed-in Chrome tabs while keeping control in the desktop app.
+- **May 7, 2026:** [OpenAI shipped Realtime 2 with two new voice models](/news/2026-05-07-openai-realtime-2-voice-models/), reducing latency for Codex dictation and hands-free sessions in Codex Desktop.
 - **May 7, 2026:** [OpenAI put GPT-5.5-Cyber into limited preview through Trusted Access for Cyber](/news/2026-05-07-openai-gpt-55-cyber-trusted-access/). The same announcement also introduced Codex Security for open source maintainers and a Codex Security plugin for moving from threat modeling to discovery, validation, attack-path analysis, and verified fixes.
 - **May 3, 2026:** [Codex Desktop added Pets, Hatch, and config imports](/news/2026-05-03-openai-codex-pets-config-imports/), a small but visible sign that OpenAI is turning Codex into a persistent desktop workbench.
+- **April 28, 2026:** [Codex available on Amazon Bedrock](/news/2026-04-28-openai-models-codex-managed-agents-aws/) via limited preview, with Codex CLI, the desktop app, and the VS Code extension all configurable to use Bedrock as the provider.
 
 ## Failure modes
 
@@ -269,7 +300,7 @@ Prices verified 2026-04-18 via [OpenAI Codex pricing](https://developers.openai.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation and multi-source news coverage, verifies facts against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-05-11 against OpenAI's Codex docs, the Codex rate card, the [May 7 Codex for Chrome update](/news/2026-05-07-openai-codex-chrome-extension/), the [May 7 GPT-5.5-Cyber and Codex Security update](/news/2026-05-07-openai-gpt-55-cyber-trusted-access/), and multi-source coverage including the April 16 super-app update announcement.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation and multi-source news coverage, verifies facts against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-05-13 against OpenAI's Codex docs, the Codex rate card, the [May 11 Daybreak / Codex Security launch](/news/2026-05-11-openai-daybreak-codex-security-launch/), the [May 11 OpenAI Deployment Company formation](/news/2026-05-11-openai-deployment-company-formation/), the [May 11 GPT-5.5-Cyber EU preview](/news/2026-05-11-openai-gpt-55-cyber-eu-preview/), the [May 7 Codex for Chrome update](/news/2026-05-07-openai-codex-chrome-extension/), the [May 7 Realtime 2 voice models](/news/2026-05-07-openai-realtime-2-voice-models/), the [May 7 GPT-5.5-Cyber and Codex Security update](/news/2026-05-07-openai-gpt-55-cyber-trusted-access/), and multi-source coverage including the April 16 super-app update announcement.
 
 ## FAQ
 

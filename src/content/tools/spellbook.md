@@ -11,11 +11,11 @@ pricing_model: paid
 price_range: "Custom quote; 7-day free trial"
 status: active
 launched: 2022-06
-last_updated: 2026-05-10
-last_verified: 2026-05-10
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: quarterly
 seo_title: "Spellbook Review: Legal AI in Word, Pricing & Security (May 2026)"
-meta_description: "Spellbook review refreshed May 10, 2026: legal AI for Microsoft Word, Associate multi-document workflows, custom per-team pricing, 7-day trial, and security caveats."
+meta_description: "Spellbook review refreshed May 13, 2026: legal AI for Microsoft Word, Associate multi-document workflows, custom per-team pricing, 7-day trial, and the new Claude for Legal competitive context."
 author: "aipedia.wiki Editorial"
 best_plan: "Start with the 7-day trial; request a custom quote before any team rollout."
 affiliate:
@@ -35,7 +35,7 @@ facts:
     source: "https://spellbook.com/pricing"
     source_label: "Spellbook pricing"
     source_id: spellbook-official
-    verified_at: 2026-05-10
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -43,8 +43,8 @@ facts:
     source: "https://spellbook.com/pricing"
     source_label: "Spellbook pricing"
     source_id: spellbook-pricing
-    verified_at: 2026-05-10
-    next_review_at: 2026-08-10
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: high
     confidence: high
   watch_out_for:
@@ -52,8 +52,8 @@ facts:
     source: "https://spellbook.com/security"
     source_label: "Spellbook security"
     source_id: spellbook-security
-    verified_at: 2026-05-10
-    next_review_at: 2026-08-10
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: high
     confidence: high
 tags: [legal-ai, contract-drafting, word-addin, law, spellbook, contract-review]
@@ -69,13 +69,13 @@ not_best_for:
 quick_answer: >-
   Spellbook embeds legal AI directly inside Microsoft Word and adds Associate for multi-document contract workflows. Pick it for transactional contract review, drafting, playbooks, and team-standard language inside Word. Skip it if you need transparent public pricing, litigation research, or a non-Word drafting workflow.
 price_history:
-  - date: 2026-05-10
+  - date: 2026-05-13
     plan: "Team license"
     price: "Custom quote"
     source: "https://spellbook.com/pricing"
     source_label: "Spellbook pricing"
     source_id: spellbook-pricing
-    note: "Official pricing is based on team members on the license; 7-day free trial is available."
+    note: "Official pricing is based on team members on the license; 7-day free trial is available. Reverified unchanged 2026-05-13 alongside the May 12 Claude for Legal launch."
 ---
 
 # Spellbook
@@ -83,6 +83,10 @@ price_history:
 Spellbook is a legal AI copilot built around Microsoft Word contract work. The Word add-in reviews, drafts, asks questions, benchmarks clauses, and runs playbooks inside the document. Spellbook Associate is the separate web/desktop workspace for multi-document tasks such as comparing files, revising templates from reference material, and asking questions across a deal package.
 
 The company launched the first GenAI contract review tool in 2022 as Rally, then rebranded to Spellbook. In October 2025, [Khosla Ventures led a $50M Series B](https://spellbook.com/blog/series-b), and Spellbook said it had grown to 4,000 law firms and in-house legal teams in 80 countries. Its current pricing page says more than 4,400 in-house teams and law firms use Spellbook worldwide.
+
+## Recent developments
+
+- **May 12, 2026:** [Anthropic launched Claude for Legal](/news/2026-05-12-anthropic-claude-for-legal-plugins-microsoft-365/) with 12 practice-area plugins, 20-plus MCP connectors (Harvey, Relativity, Everlaw, Thomson Reuters CoCounsel, DocuSign, Box), and a Microsoft 365 integration that embeds Claude across Word, Outlook, Excel, and PowerPoint. Freshfields, Quinn Emanuel, Holland & Knight, and Crosby joined as launch customers. The Claude inside Word surface is the first frontier-lab product that directly contests Spellbook's positioning, although Anthropic is sitting under partners like Harvey rather than replacing the vertical product layer. Spellbook buyers should ask how the team plans to coexist with or differentiate against Claude for Legal on the Word add-in, playbook codification, and contract market data.
 
 Pricing is custom and quote-based. Spellbook says pricing is structured around the number of team members on the license, and lawyers can try Spellbook free for 7 days. Security coverage is strong for the segment: SOC 2 Type II, HIPAA controls, GDPR/CCPA/PIPEDA privacy coverage, zero-data-retention agreements with OpenAI and Anthropic, and an independent low-risk EU AI Act classification opinion.
 
@@ -158,7 +162,7 @@ The official path is a trial or demo request via [spellbook.com/pricing](https:/
 
 The Spellbook Suite includes: Word add-in with Review, Draft, Ask, Benchmarks, and Playbooks. Associate (the multi-document agent) is included. Group or team training sessions are included. Dedicated support applies to teams over 10 users.
 
-Prices verified 2026-05-10 via [Spellbook pricing](https://spellbook.com/pricing). Fixed per-seat numbers are not publicly disclosed by Spellbook directly.
+Prices verified 2026-05-13 via [Spellbook pricing](https://spellbook.com/pricing). Fixed per-seat numbers are not publicly disclosed by Spellbook directly.
 
 ## Against the alternatives
 
@@ -180,13 +184,14 @@ Prices verified 2026-05-10 via [Spellbook pricing](https://spellbook.com/pricing
 - **Not a case research tool.** Spellbook is tuned for transactional drafting and review, not case law search or pleadings. Litigators should look elsewhere.
 - **Model-routing opacity.** Public pages mention GPT5, legacy GPT-4o copy, OpenAI, and Anthropic. Buyers should ask which models are active, where data is processed, and whether the quoted plan includes the same model access.
 - **Harvey ceiling at enterprise scale.** Spellbook now sells to larger firms and enterprises, but Harvey remains the clearer default for broad firmwide legal AI that spans research, litigation, and workflow automation.
+- **New Claude for Legal competition inside Word.** Anthropic's May 12, 2026 [Claude for Legal launch](/news/2026-05-12-anthropic-claude-for-legal-plugins-microsoft-365/) puts a frontier-lab assistant directly in Word, Outlook, Excel, and PowerPoint with 12 practice-area plugins and 20-plus legal-tech connectors. Spellbook's playbooks, contract market data, and Associate workflow remain differentiators, but the Word add-in surface is no longer uncontested.
 - **Playbook build services may depend on quote.** Codifying team-specific playbooks is listed for in-house teams, but buyers should confirm whether it is included in their package.
 - **7-day trial is short.** Legal procurement cycles rarely fit inside a week. Real evaluation often requires a direct pilot agreement beyond the public trial.
 - **Canadian data residency.** HQ in Newfoundland means some US federal or state procurement policies require extra review before adoption.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-05-10 against Spellbook pricing, security, Associate help, legal AI in Word, State of Contracts, and Series B pages.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-05-13 against Spellbook pricing, security, Associate help, legal AI in Word, State of Contracts, and Series B pages, with cross-reference to the May 12, 2026 [Anthropic Claude for Legal launch](/news/2026-05-12-anthropic-claude-for-legal-plugins-microsoft-365/).
 
 ## FAQ
 

@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$15/user/month; Enterprise custom"
 status: active
 launched: 2024
-last_updated: 2026-05-10
-last_verified: 2026-05-10
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 seo_title: "Wispr Flow: Features, Pricing & Review (May 2026)"
 meta_description: "Wispr Flow is an AI voice dictation app for Mac, Windows, iPhone, and Android. Basic is free, Pro is $15/user/mo monthly or $12/user/mo annual, students get extra discounts, and Enterprise adds SSO/SAML, enforced Privacy Mode, HIPAA controls, SOC 2, and ISO 27001."
@@ -34,7 +34,7 @@ facts:
     source: "https://wisprflow.ai/pricing"
     source_label: "Wispr Flow pricing"
     source_id: wispr-flow-best-for
-    verified_at: 2026-05-10
+    verified_at: 2026-05-13
     confidence: high
   best_paid_tier:
     value: "Flow Pro ($15/user/month monthly or $12/user/month annual) for unlimited words and command mode"
@@ -42,15 +42,23 @@ facts:
     source_label: "Wispr Flow pricing"
     source_id: wispr-flow-best-for
     verified_at: 2026-05-10
-    next_review_at: 2026-06-10
+    next_review_at: 2026-06-13
     confidence: high
   best_for:
     value: "People who write across many apps and want AI-cleaned dictation instead of raw speech-to-text"
     source: "https://wisprflow.ai/pricing"
     source_label: "Wispr Flow pricing"
     source_id: wispr-flow-best-for
-    verified_at: 2026-05-10
+    verified_at: 2026-05-13
     confidence: high
+  funding:
+    value: "Reported May 12, 2026: Wispr AI in talks for ~$260M round led by Menlo Ventures at ~$2B valuation; not finalized. 2.5M+ downloads disclosed."
+    source: "https://www.bloomberg.com/news/articles/2026-05-12/ai-dictation-startup-wispr-in-funding-talks-at-2-billion-value"
+    source_label: "Bloomberg"
+    source_id: wispr-funding-260m
+    verified_at: 2026-05-13
+    volatility: high
+    confidence: medium
 tags: [ai-voice, dictation, speech-to-text, writing, notes, productivity, mac, windows, ios, android]
 best_for:
   - people who write faster by speaking than typing
@@ -85,6 +93,14 @@ price_history:
     source_label: "Source"
     source_id: wispr-flow-best-for
     note: "Dedicated support, SOC 2 Type II, ISO 27001, enforced HIPAA compliance, enforced Privacy Mode, SSO/SAML, advanced dashboards, bulk discounts, dedicated IT admin seats"
+  - date: 2026-05-13
+    plan: "Flow Pro"
+    price: "$15/user/month monthly or $12/user/month annual"
+    source: "https://wisprflow.ai/pricing"
+    source_label: "Wispr Flow pricing"
+    source_id: wispr-flow-best-for
+    verified_at: 2026-05-13
+    note: "Re-verified unchanged the day after Bloomberg reported Wispr was in talks for a ~$260M round led by Menlo Ventures at a ~$2B valuation (May 12, 2026)."
 ---
 
 # Wispr Flow
@@ -92,6 +108,11 @@ price_history:
 Wispr Flow is an AI voice dictation app. It works across Mac, Windows, iPhone, and Android, turning spoken words into cleaned-up text inside the apps where people already write.
 
 The key distinction is Wispr Flow vs raw speech-to-text. Raw transcription captures words. Wispr Flow is positioned as a productivity layer: custom dictionary, snippets, Command Mode, edits, formatting, Privacy Mode, team collaboration, and enterprise controls.
+
+## Recent developments
+
+- **May 12, 2026:** [Wispr reportedly in talks for ~$260M at ~$2B valuation, led by Menlo Ventures](/news/2026-05-12-wispr-ai-260m-2b-valuation-menlo-ventures/). Bloomberg and The Tech Portal both reported the round (not yet finalized) and cited 2.5M+ downloads and Fortune 500 traction. Treat the valuation as a buying-confidence signal for product longevity, not a pricing change.
+- **2026-05-13:** Pro pricing re-verified unchanged at $15/user/mo monthly or $12/user/mo annual on the official pricing page.
 
 ## System Verdict
 
@@ -154,7 +175,7 @@ Command Mode is the key paid workflow to understand. Wispr's help docs say it is
 
 ## Pricing
 
-Wispr Flow pricing was verified from the official pricing page on 2026-05-10:
+Wispr Flow pricing was re-verified from the official pricing page on 2026-05-13 (unchanged since 2026-05-10):
 
 | Plan | Price | Practical meaning |
 |---|---:|---|
@@ -185,7 +206,7 @@ The pricing page also says new users start with a 14-day Flow Pro trial and no c
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-05-10 against Wispr Flow primary pricing, privacy, command-mode, team/enterprise, referral, and affiliate-program information.
+This page was produced by the aipedia.wiki editorial pipeline. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-05-13 against Wispr Flow primary pricing, privacy, command-mode, team/enterprise, referral, and affiliate-program information, plus May 12, 2026 Bloomberg and The Tech Portal coverage of the reported $260M Menlo-led round at a $2B valuation.
 
 ## FAQ
 
@@ -214,6 +235,8 @@ No. Wispr Flow is a dictation and writing tool. Use a voice-agent platform for p
 - [Wispr Flow Command Mode docs](https://docs.wisprflow.ai/articles/4816967992-how-to-use-command-mode): paid/trial requirement and Mac/Windows availability
 - [Wispr Flow team and Enterprise FAQ](https://docs.wisprflow.ai/articles/2458545840-faqs-for-flow-pro-team-and-flow-enterprise-plans): trials, billing, team features, admin roles, and Enterprise access
 - [Wispr Flow affiliate program](https://partners.dub.co/flow): commission, cookie, payout, and advertising guidelines
+- [Bloomberg: Wispr in funding talks at $2B value (May 12, 2026)](https://www.bloomberg.com/news/articles/2026-05-12/ai-dictation-startup-wispr-in-funding-talks-at-2-billion-value): $260M round led by Menlo Ventures, not finalized
+- [aipedia.wiki news coverage](/news/2026-05-12-wispr-ai-260m-2b-valuation-menlo-ventures/): aggregated coverage of the reported round
 
 ## Related
 

@@ -11,11 +11,11 @@ pricing_model: freemium
 price_range: "$0-$100/month"
 status: active
 launched: 2024
-last_updated: 2026-05-10
-last_verified: 2026-05-10
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 seo_title: "Same.dev: AI App Builder Review & Pricing (2026)"
-meta_description: "Same.dev/Same.new review refreshed May 10, 2026: URL cloning, prompt-built Next.js web apps, Netlify deployment caveats, pricing from free to $100 Ultra, and best alternatives."
+meta_description: "Same.dev/Same.new review refreshed May 13, 2026: URL cloning, prompt-built Next.js web apps, Netlify deployment caveats, pricing from free to $100 Ultra, and best alternatives."
 author: "aipedia.wiki Editorial"
 best_plan: "Pro ($25/mo) for active prototypes; Free for the first clone test."
 affiliate:
@@ -35,7 +35,7 @@ facts:
     source: "https://docs.same.new/get-started/quick-start"
     source_label: "Same quickstart"
     source_id: same-dev-official
-    verified_at: 2026-05-10
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -43,8 +43,8 @@ facts:
     source: "https://docs.same.new/usage/pricing"
     source_label: "Same pricing"
     source_id: same-dev-pricing
-    verified_at: 2026-05-10
-    next_review_at: 2026-08-10
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: high
     confidence: high
   watch_out_for:
@@ -52,8 +52,8 @@ facts:
     source: "https://docs.same.new/essentials/deploying"
     source_label: "Same deploy docs"
     source_id: same-dev-deploy
-    verified_at: 2026-05-10
-    next_review_at: 2026-08-10
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: high
     confidence: high
 tags: [ai-coding, app-builder, fullstack-generation, vibe-coding, same-dev, browser-ide]
@@ -69,35 +69,35 @@ not_best_for:
 quick_answer: >-
   Same.dev is a browser-based AI app builder that clones existing site designs from a URL and generates Next.js web apps from prompts, images, or references. Pick it for fast design-driven prototypes. Skip it for regulated production apps or deep backend customization; use Cursor or Claude Code when you need full repo control.
 price_history:
-  - date: 2026-05-10
+  - date: 2026-05-13
     plan: "Free"
     price: "$0"
     source: "https://docs.same.new/usage/pricing"
     source_label: "Same pricing"
     source_id: same-dev-pricing
     note: "Verified unchanged at 500K tokens/mo."
-  - date: 2026-05-10
+  - date: 2026-05-13
     plan: "Basic"
     price: "$10/mo"
     source: "https://docs.same.new/usage/pricing"
     source_label: "Same pricing"
     source_id: same-dev-pricing
     note: "Verified unchanged at 2M tokens/mo with premium model, download, and remix."
-  - date: 2026-05-10
+  - date: 2026-05-13
     plan: "Pro"
     price: "$25/mo"
     source: "https://docs.same.new/usage/pricing"
     source_label: "Same pricing"
     source_id: same-dev-pricing
     note: "Verified unchanged at 5M tokens/mo with premium model, download, and remix."
-  - date: 2026-05-10
+  - date: 2026-05-13
     plan: "Max"
     price: "$50/mo"
     source: "https://docs.same.new/usage/pricing"
     source_label: "Same pricing"
     source_id: same-dev-pricing
     note: "Verified unchanged at 10M tokens/mo."
-  - date: 2026-05-10
+  - date: 2026-05-13
     plan: "Ultra"
     price: "$100/mo"
     source: "https://docs.same.new/usage/pricing"
@@ -169,7 +169,7 @@ A hosted **vibe-coding** platform where the development loop runs in-browser. Us
 
 ## Pricing
 
-Verified 2026-05-10 via [docs.same.new/usage/pricing](https://docs.same.new/usage/pricing):
+Verified 2026-05-13 via [docs.same.new/usage/pricing](https://docs.same.new/usage/pricing):
 
 | Plan | Price | Monthly tokens | Key features |
 |---|---|---|---|
@@ -184,7 +184,7 @@ Verified 2026-05-10 via [docs.same.new/usage/pricing](https://docs.same.new/usag
 
 **Overage:** Ultra tier is the only plan with pay-as-you-go overage built in. Lower tiers cap at the monthly pool.
 
-Prices verified 2026-05-10 via [Same pricing docs](https://docs.same.new/usage/pricing).
+Prices verified 2026-05-13 via [Same pricing docs](https://docs.same.new/usage/pricing).
 
 ## Against the alternatives
 
@@ -210,7 +210,7 @@ Prices verified 2026-05-10 via [Same pricing docs](https://docs.same.new/usage/p
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-10 against Same quickstart, FAQ, deploy, integrations, and pricing docs.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against Same quickstart, FAQ, deploy, integrations, and pricing docs.
 
 ## FAQ
 

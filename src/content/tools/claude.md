@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2023-03
-last_updated: 2026-05-11
-last_verified: 2026-05-11
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 seo_title: "Claude: Features, Pricing & Review (2026)"
 meta_description: "Claude runs Opus 4.7 (April 16, 2026) as flagship, Sonnet 4.6, Haiku 4.5. Claude Design (April 17) added for prompt-to-prototype. 1M context, $5/$25 per MTok API. Free tier; Pro $20/mo."
@@ -48,34 +48,34 @@ facts:
     confidence: high
     next_review_at: 2026-06-11
   pricing_anchor:
-    value: "Free; Pro $20/mo or $17/mo annual; Max from $100/mo; Team/Enterprise custom; API Opus 4.7 is $5 input / $25 output per MTok"
+    value: "Free; Pro $20/mo or $17/mo annual; Max from $100/mo (5x) or $200/mo (20x); Team standard seat $20/mo annual ($25 monthly) or premium $100/mo annual ($125 monthly); Enterprise $20/seat plus API-rate usage; API Opus 4.7 is $5 input / $25 output per MTok"
     source: "https://claude.com/pricing"
     source_label: "Claude pricing"
     source_id: claude-pricing
-    verified_at: 2026-05-11
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
-    next_review_at: 2026-06-11
+    next_review_at: 2026-06-13
   free_plan:
-    value: "Yes — web, mobile, and desktop chat with writing, code/data work, image analysis, web search, memory, file creation, connectors, MCP, and limits"
+    value: "Yes. Web, mobile, and desktop chat with writing, code/data work, image analysis, web search, memory, file creation, connectors, MCP, and limits"
     source: "https://claude.com/pricing"
     source_label: "Claude pricing"
     source_id: claude-pricing
-    verified_at: 2026-05-11
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
-    next_review_at: 2026-06-11
+    next_review_at: 2026-06-13
   best_paid_tier:
     value: "Pro for most individuals; Max for heavy Claude Code, high-output, or early-feature workloads"
     source: "https://claude.com/pricing"
     source_label: "Claude pricing"
     source_id: claude-pricing
-    verified_at: 2026-05-11
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
-    next_review_at: 2026-06-11
+    next_review_at: 2026-06-13
   api_available:
-    value: "Yes — Claude API plus Amazon Bedrock, Google Vertex AI, and Microsoft Foundry availability"
+    value: "Yes. Claude API plus Amazon Bedrock, Google Vertex AI, and Microsoft Foundry availability"
     source: "https://platform.claude.com/docs/en/about-claude/models/overview"
     source_label: "Anthropic model docs"
     source_id: anthropic-docs
@@ -100,7 +100,7 @@ facts:
     volatility: medium
     confidence: high
   real_time_voice:
-    value: "Limited — Claude apps list Voice mode, but current Claude models are text/image input with text output"
+    value: "Limited. Claude apps list Voice mode, but current Claude models are text/image input with text output"
     source: "https://claude.com/pricing"
     source_label: "Claude pricing"
     source_id: claude-pricing
@@ -108,7 +108,7 @@ facts:
     volatility: medium
     confidence: high
   web_browsing:
-    value: "Yes — Claude web search gives real-time web access with citations"
+    value: "Yes. Claude web search gives real-time web access with citations"
     source: "https://platform.claude.com/docs/en/agents-and-tools/tool-use/web-search-tool"
     source_label: "Anthropic web search docs"
     source_id: anthropic-docs
@@ -117,7 +117,7 @@ facts:
     confidence: high
     next_review_at: 2026-06-11
   coding_agent:
-    value: "Yes — Claude Code is included in Pro and higher plans and supported with commercial organization/API usage"
+    value: "Yes. Claude Code is included in Pro and higher plans and supported with commercial organization/API usage"
     source: "https://claude.com/pricing"
     source_label: "Claude pricing"
     source_id: claude-pricing
@@ -126,14 +126,14 @@ facts:
     confidence: high
     next_review_at: 2026-06-11
   enterprise_controls:
-    value: "SSO, domain capture, central billing/admin, connector controls, desktop deployment, RBAC, SCIM, audit logs, usage analytics, Compliance API, HIPAA-ready options, and custom retention"
+    value: "SSO, domain capture, central billing/admin, connector controls, desktop deployment, RBAC, SCIM, audit logs, usage analytics, Compliance API, HIPAA-ready options, custom retention, plus Claude for Legal practice-area plugins and Microsoft 365 integration as of May 12, 2026"
     source: "https://claude.com/pricing"
     source_label: "Claude pricing"
     source_id: claude-pricing
-    verified_at: 2026-05-11
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
-    next_review_at: 2026-06-11
+    next_review_at: 2026-06-13
   data_retention_or_privacy:
     value: "API zero-data-retention scope is available; retained feature data is not used for model training without express permission"
     source: "https://platform.claude.com/docs/en/build-with-claude/api-and-data-retention"
@@ -144,7 +144,7 @@ facts:
     confidence: high
     next_review_at: 2026-06-11
   open_source_or_local:
-    value: "No — Claude is proprietary and hosted by Anthropic or managed cloud partners"
+    value: "No. Claude is proprietary and hosted by Anthropic or managed cloud partners"
     source: "https://platform.claude.com/docs/en/about-claude/models/overview"
     source_label: "Anthropic model docs"
     source_id: anthropic-docs
@@ -203,8 +203,24 @@ price_history:
     source: "https://claude.com/pricing"
     source_id: claude-pricing
     source_label: "Claude pricing"
-    verified_at: 2026-05-11
-    note: "Verified, unchanged"
+    verified_at: 2026-05-13
+    note: "Verified, unchanged. Annual rate is $17/mo (15% off)."
+  - date: 2026-05-13
+    plan: "Team"
+    price: "$20/seat annual ($25 monthly) standard, $100/seat annual ($125 monthly) premium"
+    source: "https://claude.com/pricing"
+    source_id: claude-pricing
+    source_label: "Claude pricing"
+    verified_at: 2026-05-13
+    note: "Re-verified after Claude for Legal launch (May 12, 2026). Team page now exposes Standard and Premium seat SKUs for 5-150 person teams."
+  - date: 2026-05-13
+    plan: "Enterprise"
+    price: "$20/seat plus API-rate usage"
+    source: "https://claude.com/pricing"
+    source_id: claude-pricing
+    source_label: "Claude pricing"
+    verified_at: 2026-05-13
+    note: "Re-verified. Enterprise published pricing is now $20/seat plus API-rate usage rather than purely custom."
 ---
 
 # Claude
@@ -272,7 +288,7 @@ Anthropic's AI assistant. **Opus 4.7** is the flagship as of **April 16, 2026**,
 | **Max output** | 128K (Opus) · 64K (Sonnet) · 64K (Haiku) |
 | **API pricing** | Opus 4.7: $5 in / $25 out per MTok (new tokenizer = 1.0-1.35× more tokens vs 4.6) |
 | | Sonnet 4.6: $3 / $15 per MTok · Haiku 4.5: $1 / $5 per MTok |
-| **Subscription pricing** | Free · Pro $20 · Max 5x $100 · Max 20x $200 · Team $30/user · Enterprise custom |
+| **Subscription pricing** | Free · Pro $20 monthly or $17/mo annual · Max 5x $100 · Max 20x $200 · Team $20/seat annual ($25 monthly) standard or $100/seat annual ($125 monthly) premium · Enterprise $20/seat plus API-rate usage |
 | **Agentic coding** | Claude Code CLI · top terminal coding agent; GPT-5.5 Codex is now the main overall challenger |
 | **Enterprise distribution** | NEC partnership announced April 24, 2026 · about 30,000 NEC employees plus BluStellar and cybersecurity services |
 | **Reported infrastructure financing** | Google reportedly planning up to $40B in cash and compute investment, per April 24 Bloomberg reporting |
@@ -313,11 +329,12 @@ Subscription pricing via [claude.com/pricing](https://claude.com/pricing):
 | Plan | Price | Models | Who's it for |
 |---|---|---|---|
 | Free | $0 | Sonnet (capped daily messages) | Casual use, no extended thinking |
-| Pro | $20/mo | Opus 4.7 · Sonnet 4.6 · Haiku 4.5 · extended thinking · Projects | **Most individuals should land here** |
+| Pro | $20/mo or $17/mo annual | Opus 4.7 · Sonnet 4.6 · Haiku 4.5 · extended thinking · Projects | **Most individuals should land here** |
 | Max 5x | $100/mo | Full lineup, 5× Pro usage | Heavy solo coders / writers |
 | Max 20x | $200/mo | Full lineup, 20× Pro usage | Teams or sustained agentic workloads |
-| Team | $30/user/mo | Full lineup + admin + no-training-on-data | 2+ seat teams |
-| Enterprise | Custom | Full lineup + SSO + SCIM + audit | Compliance-heavy orgs |
+| Team (Standard seat) | $20/seat annual or $25/seat monthly | Full lineup + admin + no-training-on-data; 5-150 seats | Small/mid teams |
+| Team (Premium seat) | $100/seat annual or $125/seat monthly | Higher usage, priority access | Heavier per-seat workloads |
+| Enterprise | $20/seat + API-rate usage | Full lineup + SSO + SCIM + audit + Compliance API + HIPAA-ready | Compliance-heavy orgs |
 
 API pricing via [platform.claude.com](https://platform.claude.com/docs/en/about-claude/pricing):
 
@@ -329,7 +346,7 @@ API pricing via [platform.claude.com](https://platform.claude.com/docs/en/about-
 
 Fast Mode beta on Opus at 6× rates ($30/$150). Batch API discounts all models 50%. Prompt caching drops cache-hit input to 10% of standard.
 
-Prices verified 2026-05-11 via [Anthropic pricing docs](https://platform.claude.com/docs/en/about-claude/pricing) and the [Opus 4.7 release coverage](https://venturebeat.com/technology/anthropic-releases-claude-opus-4-7-narrowly-retaking-lead-for-most-powerful-generally-available-llm).
+Prices verified 2026-05-13 via [Claude pricing](https://claude.com/pricing), [Anthropic pricing docs](https://platform.claude.com/docs/en/about-claude/pricing), and the [Opus 4.7 release coverage](https://venturebeat.com/technology/anthropic-releases-claude-opus-4-7-narrowly-retaking-lead-for-most-powerful-generally-available-llm).
 
 **Opus 4.7 cost-impact note:** the per-token rate is unchanged from 4.6, but the new tokenizer produces **1.0 to 1.35× more tokens for the same input**. Budget-sensitive API workloads should benchmark their own prompts before migrating.
 
@@ -359,7 +376,7 @@ Prices verified 2026-05-11 via [Anthropic pricing docs](https://platform.claude.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-11 against Anthropic's [pricing docs](https://platform.claude.com/docs/en/about-claude/pricing), [model docs](https://platform.claude.com/docs/en/about-claude/models), the [Opus 4.7 release coverage](https://venturebeat.com/technology/anthropic-releases-claude-opus-4-7-narrowly-retaking-lead-for-most-powerful-generally-available-llm), the [May 10 reported Akamai cloud-deal coverage](/news/2026-05-10-anthropic-akamai-cloud-deal/), the [May 9 FIS financial-crimes agent coverage](/news/2026-05-09-anthropic-fis-financial-crimes-agent/), the [May 7 GitHub Copilot Claude model notices](/news/2026-05-07-github-copilot-gpt41-claude-sonnet4-deprecations/), the [May 7 Copilot Rubber Duck update](/news/2026-05-07-github-copilot-rubber-duck-cross-model-review/), the [NEC partnership](/news/2026-04-24-anthropic-nec-ai-engineering-workforce/), and [reported Google-Anthropic investment coverage](/news/2026-04-24-google-anthropic-40b-investment/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against [Claude pricing](https://claude.com/pricing), Anthropic's [pricing docs](https://platform.claude.com/docs/en/about-claude/pricing), [model docs](https://platform.claude.com/docs/en/about-claude/models), the [Opus 4.7 release coverage](https://venturebeat.com/technology/anthropic-releases-claude-opus-4-7-narrowly-retaking-lead-for-most-powerful-generally-available-llm), the [May 12 Claude for Legal launch](/news/2026-05-12-anthropic-claude-for-legal-plugins-microsoft-365/), the [May 10 reported Akamai cloud-deal coverage](/news/2026-05-10-anthropic-akamai-cloud-deal/), the [May 9 FIS financial-crimes agent coverage](/news/2026-05-09-anthropic-fis-financial-crimes-agent/), the [May 6 Managed Agents update](/news/2026-05-06-claude-managed-agents-dreaming-outcomes-orchestration/), the [May 7 GitHub Copilot Claude model notices](/news/2026-05-07-github-copilot-gpt41-claude-sonnet4-deprecations/), the [May 7 Copilot Rubber Duck update](/news/2026-05-07-github-copilot-rubber-duck-cross-model-review/), the [NEC partnership](/news/2026-04-24-anthropic-nec-ai-engineering-workforce/), and [reported Google-Anthropic investment coverage](/news/2026-04-24-google-anthropic-40b-investment/).
 
 ## FAQ
 

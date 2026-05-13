@@ -10,11 +10,11 @@ pricing_model: freemium
 price_range: "$0-$89.99/month + 20-credit API/enterprise"
 status: active
 launched: 2023-09
-last_updated: 2026-05-10
-last_verified: 2026-05-10
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 seo_title: "Stable Audio Review: Pricing, License & Stable Audio 2.5 (May 2026)"
-meta_description: "Stable Audio review refreshed May 10, 2026: Stable Audio 2.5 features, Free/Pro/Studio/Max pricing, Creator vs Enterprise licensing, 20-credit API pricing, and commercial-use caveats."
+meta_description: "Stable Audio review refreshed May 13, 2026: Stable Audio 2.5 features, Free/Pro/Studio/Max pricing, Creator vs Enterprise licensing, 20-credit API pricing, and commercial-use caveats."
 author: "aipedia.wiki Editorial"
 affiliate:
   has_program: false
@@ -33,7 +33,7 @@ facts:
     source: "https://stability.ai/stable-audio"
     source_label: "Stability AI Stable Audio"
     source_id: stable-audio-official
-    verified_at: 2026-05-10
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -41,8 +41,8 @@ facts:
     source: "https://stableaudio.com/pricing"
     source_label: "Stable Audio pricing"
     source_id: stable-audio-pricing
-    verified_at: 2026-05-10
-    next_review_at: 2026-08-10
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: high
     confidence: high
   watch_out_for:
@@ -50,8 +50,8 @@ facts:
     source: "https://stableaudio.com/pricing"
     source_label: "Stable Audio pricing"
     source_id: stable-audio-pricing
-    verified_at: 2026-05-10
-    next_review_at: 2026-08-10
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: high
     confidence: high
 tags: [ai-music, music-generation, sound-effects, stable-audio, stability-ai, royalty-safe, audio-inpainting, enterprise]
@@ -69,20 +69,20 @@ not_best_for:
 quick_answer: >-
   Stable Audio 2.5 is strongest for instrumental tracks, sound effects, brand audio, and enterprise licensing conversations. Use Studio or Max if you are an individual creator who needs commercial rights; use Enterprise for organizations and self-hosted deployments. Skip it if you mainly want vocal-driven songs.
 price_history:
-  - date: 2026-05-10
+  - date: 2026-05-13
     plan: "StableAudio.com subscriptions"
     price: "Free, $11.99/mo Pro, $29.99/mo Studio, $89.99/mo Max, Enterprise quote"
     source: "https://stableaudio.com/pricing"
     source_label: "Stable Audio pricing"
     source_id: stable-audio-pricing
-    note: "Free and Pro are shown with Personal licensing; Studio and Max are shown with Creator licensing for individual commercial projects and music releases. Prices exclude VAT/sales taxes."
-  - date: 2026-05-10
+    note: "Reverified unchanged 2026-05-13. Free and Pro are shown with Personal licensing; Studio and Max are shown with Creator licensing for individual commercial projects and music releases. Prices exclude VAT/sales taxes."
+  - date: 2026-05-13
     plan: "Stability AI API - Stable Audio 2.5"
     price: "20 credits per generation"
     source: "https://platform.stability.ai/pricing"
     source_label: "Stability AI platform pricing"
     source_id: stable-audio-api-pricing
-    note: "Official platform pricing lists Stable Audio 2.5 at 20 credits for up to three minutes of generated audio."
+    note: "Reverified unchanged 2026-05-13. Official platform pricing lists Stable Audio 2.5 at 20 credits for up to three minutes of generated audio."
   - date: 2025-09-10
     plan: "Stable Audio 2.5 launch"
     price: "Enterprise and platform access"
@@ -94,9 +94,9 @@ price_history:
 
 # Stable Audio
 
-Stable Audio is Stability AI's music and sound generation product. **Stable Audio 2.5** is the current flagship as of May 10, 2026, and Stability positions it for enterprise-grade sound production, brand audio, sound effects, and instrumental music.
+Stable Audio is Stability AI's music and sound generation product. **Stable Audio 2.5** is the current flagship as of May 13, 2026, and Stability positions it for enterprise-grade sound production, brand audio, sound effects, and instrumental music.
 
-Verified May 10, 2026 against StableAudio.com pricing, Stability AI's Stable Audio 2.5 page, Stability AI platform pricing, Stability AI licensing, and the Stable Audio Open model card.
+Verified May 13, 2026 against StableAudio.com pricing, Stability AI's Stable Audio 2.5 page, Stability AI platform pricing, Stability AI licensing, and the Stable Audio Open model card.
 
 ## System Verdict
 
@@ -158,7 +158,7 @@ StableAudio.com currently separates subscription plans from license types. That 
 | Enterprise | Custom | Enterprise | Custom | Organizations, apps, games, film/TV, large deployments, self-hosting |
 | Stability AI API | 20 credits/generation | Platform terms | Usage-based | Developers generating up to 3 minutes through the API |
 
-Prices exclude VAT/sales taxes. Verified May 10, 2026 on [Stable Audio pricing](https://stableaudio.com/pricing) and [Stability AI platform pricing](https://platform.stability.ai/pricing).
+Prices exclude VAT/sales taxes. Verified May 13, 2026 on [Stable Audio pricing](https://stableaudio.com/pricing) and [Stability AI platform pricing](https://platform.stability.ai/pricing).
 
 ## Against The Alternatives
 
@@ -182,7 +182,7 @@ Prices exclude VAT/sales taxes. Verified May 10, 2026 on [Stable Audio pricing](
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified May 10, 2026 against [Stable Audio pricing](https://stableaudio.com/pricing), [Stable Audio 2.5](https://stability.ai/stable-audio), [Stability AI platform pricing](https://platform.stability.ai/pricing), [Stability AI licensing](https://stability.ai/license), and [Stable Audio Open 1.0](https://huggingface.co/stabilityai/stable-audio-open-1.0).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified May 13, 2026 against [Stable Audio pricing](https://stableaudio.com/pricing), [Stable Audio 2.5](https://stability.ai/stable-audio), [Stability AI platform pricing](https://platform.stability.ai/pricing), [Stability AI licensing](https://stability.ai/license), and [Stable Audio Open 1.0](https://huggingface.co/stabilityai/stable-audio-open-1.0).
 
 ## FAQ
 
@@ -190,7 +190,7 @@ This page was produced by the aipedia.wiki editorial pipeline, an automated syst
 Yes, for limited non-commercial testing. The Free plan currently includes 10 monthly Stable Audio 2.5 generations and uses a Personal license.
 
 **Which Stable Audio plan should I buy for commercial use?**
-Most individual commercial users should start with Studio, because the current pricing page shows Studio and Max with the Creator license. Pro is cheaper, but it is still shown with a Personal license as of May 10, 2026.
+Most individual commercial users should start with Studio, because the current pricing page shows Studio and Max with the Creator license. Pro is cheaper, but it is still shown with a Personal license as of May 13, 2026.
 
 **What is the current Stable Audio model?**
 Stable Audio 2.5 is the current flagship model. Stability AI describes it as built for enterprise-grade sound production, with up to three-minute tracks, text-to-audio, audio-to-audio, and audio inpainting.

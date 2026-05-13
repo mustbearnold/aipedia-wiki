@@ -9,8 +9,8 @@ url: https://www.paradox.ai/solutions/recruiters
 pricing_model: enterprise
 price_range: "Contact sales"
 status: active
-last_updated: 2026-05-11
-last_verified: 2026-05-11
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -29,7 +29,7 @@ facts:
     source: "https://www.paradox.ai/solutions/recruiters"
     source_label: "Paradox recruiter solution"
     source_id: paradox-recruiters
-    verified_at: 2026-05-11
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -37,7 +37,7 @@ facts:
     source: "https://www.paradox.ai/solutions/recruiters"
     source_label: "Paradox recruiter solution"
     source_id: paradox-recruiters
-    verified_at: 2026-05-11
+    verified_at: 2026-05-13
     volatility: high
     confidence: medium
   watch_out_for:
@@ -45,7 +45,7 @@ facts:
     source: "https://www.paradox.ai/solutions/recruiters"
     source_label: "Paradox recruiter solution"
     source_id: paradox-recruiters
-    verified_at: 2026-05-11
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
 tags: [recruiting, conversational-ai, screening, scheduling, candidate-experience]
@@ -69,7 +69,7 @@ quick_answer: >-
 
 Paradox is a conversational AI recruiting platform best known for Olivia. Recruiters use it for candidate questions, mobile apply, screening, resume matching, scheduling, reminders, and candidate-experience workflows.
 
-As of May 11, 2026, AiPedia treats Paradox as the best AI recruiting pick for high-volume screening and scheduling.
+As of May 13, 2026, AiPedia treats Paradox as the best AI recruiting pick for high-volume screening and scheduling. The recruiter solution centers on a six-product conversational suite (Career Sites, CRM, ATS, Apply, Events, Scheduling) plus text recruiting, recorded video interviews, onboarding, and surveys, with the Immersive Job Preview named 2025 Top HR Product of the Year by HR Executive.
 
 ## System Verdict
 
@@ -147,7 +147,7 @@ Paradox should be judged on workflow fit, not just AI branding. Before buying, m
 
 ## AiPedia Trust Note
 
-This page was refreshed on May 11, 2026 using Paradox's current recruiter solution page. AiPedia does not list a paid affiliate program for Paradox. Scores reflect practical recruiter utility, candidate-experience impact, implementation risk, and durability.
+This page was refreshed on May 13, 2026 using Paradox's current recruiter solution page. AiPedia does not list a paid affiliate program for Paradox. Scores reflect practical recruiter utility, candidate-experience impact, implementation risk, and durability.
 
 ## Sources
 

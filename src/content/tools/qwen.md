@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "Free open-weight downloads / hosted API priced per model"
 status: active
 launched: 2023-09
-last_updated: 2026-05-11
-last_verified: 2026-05-11
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,8 +31,8 @@ facts:
     source: "https://qwen.ai/"
     source_label: "Qwen official site"
     source_id: qwen-official
-    verified_at: 2026-05-11
-    next_review_at: 2026-08-11
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: high
     confidence: high
   model_surface:
@@ -40,8 +40,8 @@ facts:
     source: "https://qwenlm.github.io/blog/qwen3/"
     source_label: "Qwen3 blog"
     source_id: qwen-blog
-    verified_at: 2026-05-11
-    next_review_at: 2026-08-11
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: high
     confidence: high
   pricing_anchor:
@@ -49,8 +49,8 @@ facts:
     source: "https://www.alibabacloud.com/help/en/model-studio/model-pricing"
     source_label: "Alibaba Cloud Model Studio pricing"
     source_id: qwen-pricing
-    verified_at: 2026-05-11
-    next_review_at: 2026-08-11
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: high
     confidence: high
   deployment_surface:
@@ -58,8 +58,8 @@ facts:
     source: "https://qwen.ai/"
     source_label: "Qwen official site"
     source_id: qwen-official
-    verified_at: 2026-05-11
-    next_review_at: 2026-08-11
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: high
     confidence: medium
   watch_out_for:
@@ -67,10 +67,15 @@ facts:
     source: "https://qwenlm.github.io/blog/qwen3/"
     source_label: "Qwen3 blog"
     source_id: qwen-blog
-    verified_at: 2026-05-11
-    next_review_at: 2026-08-11
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: high
     confidence: high
+price_history:
+  - date: 2026-05-13
+    note: "qwen-max International tier: $1.20/M input (0-32K) and $6.00/M output; new Qwen-Flash tier at $0.10/M input and $0.40/M output; qwen-plus at $0.40/M input and $1.20/M output (0-256K)."
+  - date: 2026-05-11
+    note: "qwen-max International listed at $1.60/M input and $6.40/M output on Model Studio."
 tags: [open-weights, alibaba, multilingual, coding, vision, reasoning, qwen3, api, chinese-llm]
 seo_title: "Qwen: Features, Pricing & Review (May 2026)"
 meta_description: "Qwen is Alibaba Cloud's model family for Qwen Chat, hosted Model Studio APIs, and Apache 2.0 Qwen3 open weights. Verified May 2026."
@@ -96,8 +101,10 @@ The official Qwen3 release includes two open-weight MoE models, **Qwen3-235B-A22
 
 ## Recent developments
 
-- **May 11, 2026:** AiPedia refreshed this page against official Qwen, Alibaba Cloud Model Studio, Hugging Face, and current Qwen3.6 coverage. Unsupported Qwen3.6/proprietary flagship claims remain excluded from the evergreen review until primary sources support them.
-- **April 16, 2026:** [Third-party coverage reported a Qwen3.6-35B-A3B sparse MoE release](/news/2026-04-16-qwen-3-6-35b-a3b-release/). AiPedia is tracking it as market signal, but this evergreen page keeps the official Qwen3 open-weight line as the buyer-facing baseline until primary source support is clear.
+- **May 13, 2026:** AiPedia refreshed this page against official Qwen, Alibaba Cloud Model Studio, Hugging Face, and the latest Qwen ecosystem coverage. Model Studio International pricing now lists qwen-max at $1.20/M input (0-32K) and $6.00/M output (down from the May 10 list of $1.60/$6.40), with a new Qwen-Flash tier at $0.10/M input and $0.40/M output. Qwen-Turbo is no longer receiving updates; Qwen-Flash is the recommended replacement.
+- **May 11, 2026:** [Alibaba Qwen and Taobao launched a co-built agentic shopping experience](/news/2026-05-11-alibaba-qwen-taobao-agentic-shopping/). The integration is the highest-profile production deployment of Qwen agentic capabilities to date, pushing the family from developer-facing model lineup into a consumer-scale commerce surface that touches hundreds of millions of users.
+- **April 28, 2026:** [Vidu Shengshu, the Alibaba-affiliated video-model studio, raised fresh funding](/news/2026-04-28-alibaba-vidu-shengshu-funding/). Reinforces that Alibaba's AI bet now spans Qwen text/code, Qwen-VL, image, video, and embodied stacks, not just the chat model family.
+- **April 16, 2026:** [Third-party coverage reported a Qwen3.6-35B-A3B sparse MoE release](/news/2026-04-16-qwen-3-6-35b-a3b-release/). AiPedia is tracking it as a market signal, but this evergreen page keeps the official Qwen3 open-weight line as the buyer-facing baseline until primary source support is clear.
 - **April 30, 2026:** [Alibaba-linked Metis showed an 8B Qwen3-VL-based agent can improve by calling tools less](/news/2026-04-30-alibaba-metis-agent-tool-use-hdpo/). The HDPO-trained model reduces blind tool calls from 98% to 2% in the project reports, making tool abstention a useful Qwen ecosystem signal.
 - **April 19, 2026:** [Alibaba Amap debuts first embodied robot at Beijing Humanoid Robot Half Marathon](/news/2026-04-19-beijing-humanoid-robot-half-marathon-alibaba-abot/). Quadruped from Amap's new embodied-intelligence division, powered by Alibaba's ABot-World model (leads AGIbot World Challenge and World Arena benchmarks). Moves Alibaba from Qwen-as-foundation into first-party robotics alongside the model family.
 
@@ -121,10 +128,11 @@ The official Qwen3 release includes two open-weight MoE models, **Qwen3-235B-A22
 | **Architecture** | Hybrid thinking / non-thinking mode switchable |
 | **Qwen3 context examples** | 32K on smaller dense models; 128K on Qwen3-8B and larger official Qwen3 models |
 | **Hosted API pricing** | Published by Alibaba Cloud Model Studio and varies by model/mode/context |
-| **Example hosted rate** | qwen-max listed at $1.60/M input and $6.40/M output on Model Studio |
+| **Example hosted rate** | qwen-max International: $1.20/M input (0-32K) and $6.00/M output as of 2026-05-13; Qwen-Flash: $0.10/M input and $0.40/M output |
 | **Batch invocation** | 50% off real-time pricing on supported models |
+| **Production agent surface** | Qwen and Taobao co-built agentic shopping launched May 11, 2026 |
 
-Every data point above was verified on 2026-05-11. See Sources.
+Every data point above was verified on 2026-05-13. See Sources.
 
 ## What it actually is
 
@@ -161,10 +169,12 @@ Hosted pricing via [Alibaba Cloud Model Studio](https://www.alibabacloud.com/hel
 | Open weights (Hugging Face/ModelScope) | Free to download | Apache 2.0 across the official Qwen3 open-weight line; hosting costs are separate |
 | Qwen3 open-weight self-hosting | Infrastructure cost | Cost depends on model size, quantization, hardware, throughput, and context length |
 | Alibaba Cloud Model Studio | Model-specific token pricing | Official page lists model, mode, input/output token rates, and free quota where applicable |
-| qwen-max example | $1.60/M input, $6.40/M output | Listed on Model Studio's Qwen-Max pricing table as of May 10, 2026 |
+| qwen-max example | $1.20/M input (0-32K), $6.00/M output | Listed on Model Studio's Qwen-Max International pricing as of May 13, 2026; tiered to $2.40/$12 (32K-128K) and $3/$15 (128K-252K) |
+| qwen-plus | $0.40/M input (0-256K), $1.20/M output | Long-context tier: $1.20/M input and $3.60/M output for 256K-1M |
+| Qwen-Flash | $0.10/M input, $0.40/M output | New entry tier; Qwen-Turbo no longer receiving updates |
 | Batch invocation | 50% off real-time | Supported models only |
 
-*Prices verified 2026-05-11 via [Alibaba Cloud Model Studio pricing](https://www.alibabacloud.com/help/en/model-studio/model-pricing). Third-party gateways can be useful, but their rates and model availability are separate from Alibaba's official pricing.*
+*Prices verified 2026-05-13 via [Alibaba Cloud Model Studio pricing](https://www.alibabacloud.com/help/en/model-studio/model-pricing). Chinese Mainland deployment rates are lower than the International tiers shown here. Third-party gateways can be useful, but their rates and model availability are separate from Alibaba's official pricing.*
 
 ## Against the alternatives
 
@@ -188,7 +198,7 @@ Hosted pricing via [Alibaba Cloud Model Studio](https://www.alibabacloud.com/hel
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-05-11 against [Alibaba Cloud Model Studio pricing](https://www.alibabacloud.com/help/en/model-studio/model-pricing), [Qwen official site](https://qwen.ai/), [Qwen3 blog](https://qwenlm.github.io/blog/qwen3/), [Hugging Face Qwen](https://huggingface.co/Qwen), and the tracked [Qwen3.6-35B-A3B news signal](/news/2026-04-16-qwen-3-6-35b-a3b-release/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-05-13 against [Alibaba Cloud Model Studio pricing](https://www.alibabacloud.com/help/en/model-studio/model-pricing), [Qwen official site](https://qwen.ai/), [Qwen3 blog](https://qwenlm.github.io/blog/qwen3/), [Hugging Face Qwen](https://huggingface.co/Qwen), the [May 11 Qwen-Taobao agentic shopping coverage](/news/2026-05-11-alibaba-qwen-taobao-agentic-shopping/), and the tracked [Qwen3.6-35B-A3B news signal](/news/2026-04-16-qwen-3-6-35b-a3b-release/).
 
 ## FAQ
 

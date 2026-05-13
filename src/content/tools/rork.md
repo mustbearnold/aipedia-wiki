@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$1,800/month"
 status: active
 launched: 2025
-last_updated: 2026-05-10
-last_verified: 2026-05-10
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 seo_title: "Rork: Features, Pricing & Review (May 2026)"
 meta_description: "Rork builds mobile apps from prompts. Free includes 35 credits/month; Junior is $25/mo, Middle $50/mo, Senior $100/mo, Scale plans run to $1,800/mo, and GitHub sync helps teams leave the prompt-only loop."
@@ -34,14 +34,14 @@ facts:
     source: "https://docs.rork.com/"
     source_label: "Rork docs"
     source_id: rork-coding-agent
-    verified_at: 2026-05-10
+    verified_at: 2026-05-13
     confidence: high
   best_paid_tier:
     value: "Middle ($50/month) for meaningful iteration; Junior ($25/month) for light private projects"
     source: "https://docs.rork.com/introduction/subscriptions"
     source_label: "Rork subscription docs"
     source_id: rork-best-paid-tier
-    verified_at: 2026-05-10
+    verified_at: 2026-05-13
     next_review_at: 2026-06-10
     confidence: high
   best_for:
@@ -49,7 +49,7 @@ facts:
     source: "https://docs.rork.com/faq/technical"
     source_label: "Rork technical FAQ"
     source_id: rork-best-for
-    verified_at: 2026-05-10
+    verified_at: 2026-05-13
     confidence: high
 tags: [mobile-app-builder, ai-design, ai-coding, react-native, expo, swift, app-store, play-store, github]
 best_for:
@@ -159,7 +159,7 @@ The big distinction is Rork vs Rork Max. Standard Rork is the cross-platform rou
 
 ## Pricing
 
-Pricing verified on 2026-05-10 via [Rork subscription docs](https://docs.rork.com/introduction/subscriptions):
+Pricing verified on 2026-05-13 via [Rork subscription docs](https://docs.rork.com/introduction/subscriptions):
 
 | Plan | Price | Monthly credits | Notes |
 |---|---:|---:|---|
@@ -199,7 +199,7 @@ One pricing caveat: the public subscription docs list Rork's own subscription cr
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-05-10 against Rork primary subscription, technical, GitHub sync, API/backend, testing, monetization, and store-publishing documentation.
+This page was produced by the aipedia.wiki editorial pipeline. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-05-13 against Rork primary subscription, technical, GitHub sync, API/backend, testing, monetization, and store-publishing documentation.
 
 ## FAQ
 

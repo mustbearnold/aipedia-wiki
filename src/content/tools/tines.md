@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$500+/month + custom"
 status: active
 launched: 2018
-last_updated: 2026-05-10
-last_verified: 2026-05-10
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: quarterly
 seo_title: "Tines: Pricing, Features & Review (May 2026)"
 meta_description: "Tines is security-first workflow automation for IT and SOC teams. Community is free; Starter starts at $500/mo; Business and Enterprise are custom. AI Agent action access is plan-sensitive."
@@ -34,25 +34,25 @@ facts:
     source: "https://www.tines.com/platform/ai/"
     source_label: "Tines AI"
     source_id: tines-ai
-    verified_at: 2026-05-10
+    verified_at: 2026-05-13
     volatility: medium
     confidence: medium
   pricing_anchor:
-    value: "Starter; starts at $500/mo; includes 1M monthly events, 2,500 AI run-time credits, up to 5 builders, and 20 flows."
-    source: "https://www.tines.com/pricing/"
-    source_label: "Tines pricing"
-    source_id: tines-pricing
-    verified_at: 2026-05-10
-    next_review_at: 2026-08-10
+    value: "Starter; starts at $500/mo; current packaging doc (May 1, 2026) lists 5-20 flows, 2-5 users, 1M monthly events, and 2,500-10,000 AI run-time credits, with AI Agent action now included."
+    source: "https://explained.tines.com/en/articles/9620399-understanding-tines-pricing-and-packaging"
+    source_label: "Tines pricing explainer"
+    source_id: tines-pricing-explainer
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: high
     confidence: medium
   watch_out_for:
-    value: "AI access is plan-sensitive: Tines pricing includes AI run-time credits on Starter, but the AI Agent action FAQ says the AI Agent action is Business and Enterprise only. Verify AI Agent, hosting, and credit requirements before procurement."
-    source: "https://explained.tines.com/en/articles/11510164-ai-agent-action-faqs"
-    source_label: "Tines AI Agent FAQ"
-    source_id: tines-agent-faq
-    verified_at: 2026-05-10
-    next_review_at: 2026-08-10
+    value: "AI Agent action availability moved: the current pricing explainer (May 1, 2026) now lists AI Agent action on Starter, Business, and Enterprise, while the older AI Agent FAQ still says Business and Enterprise only. Confirm Starter access in writing before procurement."
+    source: "https://explained.tines.com/en/articles/9620399-understanding-tines-pricing-and-packaging"
+    source_label: "Tines pricing explainer"
+    source_id: tines-pricing-explainer
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: high
     confidence: medium
 tags: [security-automation, workflow-automation, no-code, soc-automation, enterprise, tines]
@@ -69,6 +69,34 @@ not_best_for:
 quick_answer: >-
   Tines is the workflow automation platform security and IT teams pick when audit logs, role-based access, flexible hosting, and controlled AI workflows matter more than app count. Pick it for SOC, IT, compliance, and agentic workflow orchestration. Skip it for low-cost consumer-app glue, where Zapier or Make is cheaper.
 price_history:
+  - date: 2026-05-13
+    plan: "Starter"
+    price: "Starting at $500/mo"
+    source: "https://explained.tines.com/en/articles/9620399-understanding-tines-pricing-and-packaging"
+    source_label: "Tines pricing explainer"
+    source_id: tines-pricing-explainer
+    note: "Verified. May 1, 2026 packaging lists 5-20 flows, 2-5 users, 1M monthly events, 2,500-10,000 AI run-time credits, and AI Agent action now included."
+  - date: 2026-05-13
+    plan: "Community"
+    price: "$0"
+    source: "https://www.tines.com/pricing/"
+    source_label: "Tines pricing"
+    source_id: tines-pricing
+    note: "Free with no credit card. Packaging docs list 3 flows, 1 user, 25K monthly events, and 50 monthly AI run-time credits. No AI Agent action."
+  - date: 2026-05-13
+    plan: "Business"
+    price: "Contact sales"
+    source: "https://explained.tines.com/en/articles/9620399-understanding-tines-pricing-and-packaging"
+    source_label: "Tines pricing explainer"
+    source_id: tines-pricing-explainer
+    note: "Business edition starts at 30 flows, 100 users, 1.5M daily events, with AI Agent action and self-hosting available."
+  - date: 2026-05-13
+    plan: "Enterprise"
+    price: "Contact sales"
+    source: "https://explained.tines.com/en/articles/9620399-understanding-tines-pricing-and-packaging"
+    source_label: "Tines pricing explainer"
+    source_id: tines-pricing-explainer
+    note: "All limits contact-Tines; dedicated cloud tenant and self-hosting available."
   - date: 2026-05-10
     plan: "Starter"
     price: "Starting at $500/mo"
@@ -76,20 +104,6 @@ price_history:
     source_label: "Tines pricing"
     source_id: tines-pricing
     note: "Verified. Pricing page lists 1M monthly events, 2,500 AI run-time credits, up to 5 builders, and 20 flows."
-  - date: 2026-05-10
-    plan: "Community"
-    price: "$0"
-    source: "https://www.tines.com/pricing/"
-    source_label: "Tines pricing"
-    source_id: tines-pricing
-    note: "Free with no credit card. Packaging docs list 1 builder, 3 flows, 25K monthly events, and 50 monthly AI run-time credits."
-  - date: 2026-05-10
-    plan: "Business and Enterprise"
-    price: "Contact sales"
-    source: "https://www.tines.com/pricing/"
-    source_label: "Tines pricing"
-    source_id: tines-pricing
-    note: "Business and Enterprise pricing is not published; pricing page positions them for organization-wide scale, 100+ builders, flexible hosting, and dedicated support/training."
   - date: 2026-04-18
     plan: "Starter"
     price: "$500/mo (billed annually)"
@@ -112,7 +126,7 @@ Tines is the workflow automation platform built for security and IT teams that n
 
 The platform differentiates itself from general-purpose automation tools like Zapier and Make by treating SOC 2, SSO/SAML, role-based access, hosting flexibility, and audit logging as first-class features. Workbench lets builders chat with connected systems and run actions across APIs, while the AI Agent action adds Task and Chat modes for agentic workflows.
 
-As of May 2026, Tines' AI stack spans Workbench, the AI Agent action, Story copilot, and Automatic mode in Event Transform. Default AI runs on Tines-managed providers and consumes AI run-time credits; paid customers can also bring their own AI model. Important buying caveat: Tines' current AI Agent FAQ says the AI Agent action is available on Business and Enterprise plans, even though Community and Starter receive monthly AI run-time credits for other AI surfaces.
+As of May 2026, Tines' AI stack spans Workbench, the AI Agent action, Story copilot, and Automatic mode in Event Transform. Default AI runs on Tines-managed providers and consumes AI run-time credits; paid customers can also bring their own AI model. Important buying caveat: Tines' current pricing explainer (May 1, 2026) now lists the AI Agent action on Starter, Business, and Enterprise, while the older AI Agent FAQ still says Business and Enterprise only. Get Starter eligibility confirmed in writing before procurement.
 
 ## System Verdict
 
@@ -130,16 +144,16 @@ As of May 2026, Tines' AI stack spans Workbench, the AI Agent action, Story copi
 | **Integrations** | Templates, Send to Story, APIs, and any service with an API |
 | **Agent mode** | AI Agent action with Task and Chat modes |
 | **LLM backend** | Tines default AI plus optional customer-provided models on paid editions |
-| **Community tier** | Free forever: 1 builder, 3 flows, 25K events/mo, 50 AI run-time credits |
-| **Starter** | Starts at $500/mo: 1M monthly events, 2,500 AI run-time credits, up to 5 builders and 20 flows |
-| **Business** | Contact sales: 100+ builders, flexible hosting, dedicated support/training |
-| **Enterprise** | Contact sales: dedicated infrastructure and enterprise controls |
+| **Community tier** | Free forever: 1 user, 3 flows, 25K events/mo, 50 AI run-time credits, no AI Agent action |
+| **Starter** | Starts at $500/mo: 5-20 flows, 2-5 users, 1M monthly events, 2,500-10,000 AI run-time credits, AI Agent action included per current packaging |
+| **Business** | Contact sales: 30+ flows, 100 users, 1.5M daily events, AI Agent action, self-hosting available |
+| **Enterprise** | Contact sales: dedicated cloud tenant, self-hosting, enterprise controls |
 | **Compliance** | SOC Type II, audit logs, SSO/SAML, role-based access, Trust Center documents under NDA |
 | **Founded / HQ** | 2018, Dublin and Boston |
 | **Funding** | $272M total, $125M Series C Feb 2025, $1.125B valuation |
 | **Investors** | Growth Equity at Goldman Sachs, SoftBank, Activant, Accel, Felicis, CrowdStrike, Addition |
 
-Every data point above was verified against vendor or company-source pages on 2026-05-10. See Sources.
+Every data point above was verified against vendor or company-source pages on 2026-05-13. See Sources.
 
 ## What it actually is
 
@@ -153,7 +167,7 @@ The real moat: Tines treats every run like evidence. Logs are immutable, credent
 
 - **SOC and incident response automation.** Native connectors to CrowdStrike, SentinelOne, Splunk, and PagerDuty mean you are not writing custom HTTP wrappers for every alert route.
 - **Regulated industries with audit requirements.** Tines publishes SOC Type II, audit logs, SSO/SAML, Trust Center documents, and hosting controls for regulated reviews.
-- **Agentic workflows with explicit controls.** The AI Agent action can use Task mode for autonomous workflow steps and Chat mode for user-facing AI pages, but current Tines docs say the AI Agent action is Business/Enterprise only.
+- **Agentic workflows with explicit controls.** The AI Agent action runs in Task mode for autonomous workflow steps or Chat mode for user-facing AI pages. The May 1, 2026 packaging now lists AI Agent on Starter as well as Business and Enterprise, but the older FAQ still says Business/Enterprise only, so confirm Starter access on quote.
 - **IT ops and compliance teams replacing spreadsheet-driven runbooks.** Case and incident management ships in Business and Enterprise tiers.
 - **Multi-team enterprise deployments.** Business and Enterprise bring flexible hosting, advanced security controls, support/training, and broader workflow program management.
 
@@ -170,16 +184,16 @@ Pricing via [tines.com/pricing](https://www.tines.com/pricing/):
 
 | Plan | Price | Limits | Who's it for |
 |---|---|---|---|
-| Community | $0 | 1 builder · 3 flows · 25K events/mo · 50 AI run-time credits | Solo evaluation, personal flows |
-| Starter | Starts at $500/mo | 1M monthly events · 2,500 AI run-time credits · up to 5 builders · 20 flows · 7-day event retention | **Lean security teams starting production automation** |
-| Business | Contact sales | 100+ builders · flexible hosting · dedicated support/training · broader workflow features | Multi-team SOC, IT, and compliance programs |
-| Enterprise | Contact sales | Dedicated infrastructure and enterprise controls | Regulated enterprises with isolation, hosting, or governance requirements |
+| Community | $0 | 1 user · 3 flows · 25K events/mo · 50 AI run-time credits · no AI Agent action | Solo evaluation, personal flows |
+| Starter | Starts at $500/mo | 2-5 users · 5-20 flows · 1M monthly events · 2,500-10,000 AI run-time credits · AI Agent action included per May 2026 packaging | **Lean security teams starting production automation** |
+| Business | Contact sales | 100 users · 30+ flows · 1.5M daily events · AI Agent action · self-hosting available · dedicated support/training | Multi-team SOC, IT, and compliance programs |
+| Enterprise | Contact sales | All limits contact-Tines · dedicated cloud tenant · self-hosting · enterprise controls | Regulated enterprises with isolation, hosting, or governance requirements |
 
-All tiers include unlimited parallel workflow runs. Tines' pricing explainer says enhanced packaging launched for new customers on June 25, 2025, and the current feature-set list is accurate as of May 1, 2026. Business and Enterprise add flexible hosting, advanced workflow/security bundles, and a path to self-hosting. The Tines Startup Program discounts access for companies under 100 employees, under $50M raised, and under 5 years old.
+All tiers include unlimited parallel workflow runs. Tines' pricing explainer says enhanced packaging launched for new customers on June 25, 2025, and the current feature-set list is accurate as of May 1, 2026. Business and Enterprise add flexible hosting, advanced workflow/security bundles, and self-hosting. The Tines Startup Program discounts access for companies under 100 employees, under $50M raised, and under 5 years old.
 
 Published list pricing for Business and Enterprise is not posted. Treat any third-party quote ranges as directional only until Tines returns an order form.
 
-Prices verified 2026-05-10 via [tines.com/pricing](https://www.tines.com/pricing/), the [Tines pricing explainer](https://explained.tines.com/en/articles/9620399-understanding-tines-pricing-and-packaging), and the [AI usage and credits explainer](https://explained.tines.com/en/articles/12801399-ai-usage-and-credits).
+Prices verified 2026-05-13 via [tines.com/pricing](https://www.tines.com/pricing/), the [Tines pricing explainer](https://explained.tines.com/en/articles/9620399-understanding-tines-pricing-and-packaging), and the [AI usage and credits explainer](https://explained.tines.com/en/articles/12801399-ai-usage-and-credits).
 
 ## Against the alternatives
 
@@ -198,7 +212,7 @@ Prices verified 2026-05-10 via [tines.com/pricing](https://www.tines.com/pricing
 - **Starter floor is $500/mo.** There is a genuine cliff between Community and Starter. Small teams outgrowing Community cannot incrementally buy one more flow.
 - **App catalog is not the point.** Tines can connect to APIs and has many templates, but marketers and revenue-ops teams will still find Zapier's app catalog easier for commodity SaaS glue.
 - **Business and Enterprise pricing is opaque.** Expect sales cycles, not self-service. Budget for procurement overhead.
-- **AI Agent action access is plan-sensitive.** Tines includes AI run-time credits across plans, but the current AI Agent FAQ says the AI Agent action is available on Business and Enterprise plans and not Community tenants. Verify Starter eligibility before buying specifically for agents.
+- **AI Agent action access is plan-sensitive.** Tines includes AI run-time credits across plans. The current pricing explainer (May 1, 2026) now lists the AI Agent action on Starter, Business, and Enterprise, while the older AI Agent FAQ still says Business and Enterprise only. Get Starter eligibility confirmed in writing before buying specifically for agents.
 - **Custom AI models change the cost model.** Tines default AI consumes AI run-time credits; custom AI models do not use those credits, but require your own model contract and governance.
 - **Agent autonomy is still a control problem.** Deterministic workflows are mature; fully autonomous runs still need human-in-the-loop checkpoints for production incident response.
 - **Learning curve for non-security operators.** The platform's mental model assumes familiarity with webhooks, auth flows, and IR playbooks. Marketing users trip over that.
@@ -206,7 +220,7 @@ Prices verified 2026-05-10 via [tines.com/pricing](https://www.tines.com/pricing
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-10 against [tines.com/pricing](https://www.tines.com/pricing/), the [Tines pricing explainer](https://explained.tines.com/en/articles/9620399-understanding-tines-pricing-and-packaging), the [AI Agent FAQ](https://explained.tines.com/en/articles/11510164-ai-agent-action-faqs), [AI in Tines](https://www.tines.com/platform/ai/), [Tines security](https://www.tines.com/security/), [Tines about](https://www.tines.com/about/), and the [Series C funding release](https://www.prnewswire.com/news-releases/tines-secures-125m-in-series-c-financing-bringing-total-valuation-to-1-125b-302372726.html).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against [tines.com/pricing](https://www.tines.com/pricing/), the [Tines pricing explainer](https://explained.tines.com/en/articles/9620399-understanding-tines-pricing-and-packaging), the [AI Agent FAQ](https://explained.tines.com/en/articles/11510164-ai-agent-action-faqs), [AI in Tines](https://www.tines.com/platform/ai/), [Tines security](https://www.tines.com/security/), [Tines about](https://www.tines.com/about/), and the [Series C funding release](https://www.prnewswire.com/news-releases/tines-secures-125m-in-series-c-financing-bringing-total-valuation-to-1-125b-302372726.html).
 
 ## FAQ
 
@@ -217,7 +231,7 @@ Yes. The Community tier is free forever and includes 1 builder, 3 flows, 25,000 
 Workbench is the builder-facing AI chat layer. Tines describes it as a natural-language interface for interacting with data, taking action on workflows, and monitoring real-time scenarios without switching across applications.
 
 **Does Tines have AI agents?**
-Yes. Tines has an AI Agent action with Task and Chat modes. Task mode is for autonomous workflow steps; Chat mode creates AI-powered pages for end users. Current Tines FAQ language says the AI Agent action is available on Business and Enterprise plans, so buyers should not assume Community or Starter access without confirmation.
+Yes. Tines has an AI Agent action with Task and Chat modes. Task mode is for autonomous workflow steps; Chat mode creates AI-powered pages for end users. The current pricing explainer (May 1, 2026) lists the AI Agent action on Starter, Business, and Enterprise, while the older AI Agent FAQ still says Business and Enterprise only. Confirm Starter access on quote before buying.
 
 **How does Tines compare to Zapier?**
 Tines is security-first with audit logs, SOC Type II, SSO/SAML, role-based controls, and API-oriented workflow building. [Zapier](/tools/zapier/) is consumer-app-first with 5,000+ integrations and a $19.99/mo floor. Pick Tines for SOC and compliance. Pick Zapier for marketing and ops glue.
@@ -251,3 +265,4 @@ Yes. Tines exposes its own REST API for programmatic control over stories, actio
 
 - **2026-04-17:** New page. Pricing and features verified against Tines sources.
 - **2026-05-10:** Refreshed current pricing and packaging; corrected Starter limits, AI Agent action availability caveat, AI credit language, security/source provenance, and visible verification dates.
+- **2026-05-13:** Reverified packaging against the May 1, 2026 Tines pricing explainer. Updated Starter to reflect the now-published 5-20 flow, 2-5 user, 2,500-10,000 AI credit ranges and AI Agent action inclusion. Flagged the conflict with the older AI Agent FAQ.

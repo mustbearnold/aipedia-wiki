@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: "Free self-host / OpenAI transcription API $0.003-$0.006 per minute"
 status: active
 launched: 2022-09
-last_updated: 2026-05-10
-last_verified: 2026-05-10
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -32,7 +32,7 @@ facts:
     source: "https://github.com/openai/whisper"
     source_label: "OpenAI Whisper GitHub"
     source_id: whisper-official
-    verified_at: 2026-05-10
+    verified_at: 2026-05-13
     volatility: medium
     confidence: medium
   pricing_anchor:
@@ -40,8 +40,8 @@ facts:
     source: "https://developers.openai.com/api/docs/pricing"
     source_label: "OpenAI API pricing"
     source_id: whisper-pricing
-    verified_at: 2026-05-10
-    next_review_at: 2026-08-10
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: high
     confidence: medium
   watch_out_for:
@@ -49,8 +49,8 @@ facts:
     source: "https://developers.openai.com/api/docs/pricing"
     source_label: "OpenAI API pricing"
     source_id: whisper-pricing
-    verified_at: 2026-05-10
-    next_review_at: 2026-08-10
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: high
     confidence: medium
 tags: [speech-to-text, transcription, open-weights, multilingual, self-hosted, openai, whisper, subtitles, dictation]
@@ -70,6 +70,13 @@ not_best_for:
 quick_answer: >-
   Whisper is OpenAI's open-weights speech-to-text baseline, free under the MIT license for self-hosting and still available as `whisper-1` through OpenAI's hosted API at $0.006/minute. For new hosted builds, compare GPT-4o Transcribe at $0.006/minute, GPT-4o Mini Transcribe at $0.003/minute, and GPT-4o Transcribe Diarize for speaker labels. Pick Whisper for local/offline batch transcription; use the newer hosted models or specialist APIs when accuracy, streaming, diarization, or latency matter more.
 price_history:
+  - date: 2026-05-13
+    plan: "OpenAI transcription API"
+    price: "$0.003-$0.006/min"
+    source: "https://developers.openai.com/api/docs/pricing"
+    source_label: "OpenAI API pricing"
+    source_id: whisper-pricing
+    note: "Reverified. gpt-4o-transcribe $0.006/min and gpt-4o-mini-transcribe $0.003/min remain on the public pricing page; whisper-1 and gpt-4o-transcribe-diarize still callable via the transcription endpoint per OpenAI's speech-to-text docs."
   - date: 2026-05-10
     plan: "OpenAI transcription API"
     price: "$0.003-$0.006/min"
@@ -101,6 +108,7 @@ As of May 2026, Whisper is no longer the default hosted recommendation for every
 
 ## Recent developments
 
+- **May 13, 2026:** Reverified OpenAI API pricing. gpt-4o-transcribe at $0.006/min and gpt-4o-mini-transcribe at $0.003/min remain on the public pricing page; whisper-1 and gpt-4o-transcribe-diarize remain callable via the `/v1/audio/transcriptions` endpoint per OpenAI's speech-to-text docs even though they are no longer listed on the public pricing table.
 - **May 2026:** OpenAI's current speech-to-text docs list GPT-4o Transcribe, GPT-4o Mini Transcribe, GPT-4o Transcribe Diarize, and whisper-1 on the transcription path. Diarize supports speaker-aware `diarized_json` on `/v1/audio/transcriptions`; it is not yet supported in the Realtime API.
 - **April 2026:** Self-hosted Whisper remains the open-weights baseline. The OpenAI repository now documents six model sizes including `turbo`, an optimized `large-v3` variant for faster transcription with some accuracy tradeoff.
 - **March 2025:** OpenAI shipped GPT-4o Transcribe and Mini Transcribe as hosted successors on the same `/v1/audio/transcriptions` endpoint. Whisper-1 stays callable by model ID; MIT weights are unchanged.
@@ -130,7 +138,7 @@ As of May 2026, Whisper is no longer the default hosted recommendation for every
 | **Speaker diarization** | No native self-host Whisper diarization; GPT-4o Transcribe Diarize or third-party wrappers fill the gap |
 | **Real-time streaming** | Use Realtime transcription models for live audio; self-hosted Whisper remains batch-first |
 
-Every data point above verified on 2026-05-10 via OpenAI's Whisper repository, Whisper research post, OpenAI API pricing, speech-to-text docs, and realtime transcription docs.
+Every data point above verified on 2026-05-13 via OpenAI's Whisper repository, Whisper research post, OpenAI API pricing, speech-to-text docs, and realtime transcription docs.
 
 ## What it actually is
 
@@ -172,7 +180,7 @@ OpenAI API (via `/v1/audio/transcriptions`):
 
 Self-host weights at [github.com/openai/whisper](https://github.com/openai/whisper) and on Hugging Face. Managed Whisper hosting via Replicate or Hugging Face Inference Endpoints runs $0.003-$0.01/minute depending on model size and batching.
 
-Prices verified 2026-05-10 via [OpenAI API pricing](https://developers.openai.com/api/docs/pricing).
+Prices verified 2026-05-13 via [OpenAI API pricing](https://developers.openai.com/api/docs/pricing). The public pricing table currently lists gpt-4o-transcribe and gpt-4o-mini-transcribe; whisper-1 and gpt-4o-transcribe-diarize remain callable via the transcription endpoint per OpenAI's speech-to-text docs.
 
 ## Against the alternatives
 
@@ -196,7 +204,7 @@ Prices verified 2026-05-10 via [OpenAI API pricing](https://developers.openai.co
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/). Last verified 2026-05-10 against [github.com/openai/whisper](https://github.com/openai/whisper), [OpenAI Whisper research post](https://openai.com/research/whisper), [OpenAI API pricing](https://developers.openai.com/api/docs/pricing), OpenAI speech-to-text docs, and OpenAI realtime transcription docs.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/). Last verified 2026-05-13 against [github.com/openai/whisper](https://github.com/openai/whisper), [OpenAI Whisper research post](https://openai.com/research/whisper), [OpenAI API pricing](https://developers.openai.com/api/docs/pricing), OpenAI speech-to-text docs, and OpenAI realtime transcription docs.
 
 ## FAQ
 
@@ -259,3 +267,4 @@ Not natively. Options: (1) wrap it with pyannote.audio or whisperx for open-sour
 
 - **2026-04-17:** New page. Pricing and features verified against OpenAI Whisper and OpenAI API pricing.
 - **2026-05-10:** Refreshed around OpenAI's current hosted transcription lineup, corrected the source registry from AssemblyAI to OpenAI, added GPT-4o Transcribe Diarize and realtime transcription caveats, and reverified API pricing, file limits, output formats, and self-host model guidance.
+- **2026-05-13:** Reverified MIT license, six-model repository status, and API per-minute prices. Noted that whisper-1 and gpt-4o-transcribe-diarize no longer appear on the public pricing table but remain callable via the transcription endpoint.

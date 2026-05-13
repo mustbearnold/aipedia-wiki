@@ -10,8 +10,8 @@ url: https://www.hireez.com/platform/
 pricing_model: enterprise
 price_range: "Contact sales / demo-led"
 status: active
-last_updated: 2026-05-11
-last_verified: 2026-05-11
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://www.hireez.com/platform/"
     source_label: "hireEZ AI recruiting platform"
     source_id: hireez-platform
-    verified_at: 2026-05-11
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -38,7 +38,7 @@ facts:
     source: "https://www.hireez.com/platform/"
     source_label: "hireEZ AI recruiting platform"
     source_id: hireez-platform
-    verified_at: 2026-05-11
+    verified_at: 2026-05-13
     volatility: high
     confidence: medium
   watch_out_for:
@@ -46,7 +46,7 @@ facts:
     source: "https://www.hireez.com/platform/"
     source_label: "hireEZ AI recruiting platform"
     source_id: hireez-platform
-    verified_at: 2026-05-11
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
 tags: [recruiting, sourcing, recruiting-crm, talent-acquisition, applicant-matching]
@@ -70,7 +70,7 @@ quick_answer: >-
 
 hireEZ is an AI-first recruiting platform for sourcing, recruiting CRM, rediscovery, applicant match, hiring intelligence, scheduling, job distribution, and ATS workflows.
 
-As of May 11, 2026, AiPedia treats hireEZ as the strongest sourcing-and-CRM challenger to LinkedIn Recruiter for teams that want more of the recruiting workflow in one AI-first platform.
+As of May 13, 2026, AiPedia treats hireEZ as the strongest sourcing-and-CRM challenger to LinkedIn Recruiter for teams that want more of the recruiting workflow in one AI-first platform.
 
 ## System Verdict
 
@@ -146,7 +146,7 @@ hireEZ is broad. That is a strength only if the team will use the platform beyon
 
 ## AiPedia Trust Note
 
-This page was refreshed on May 11, 2026 using hireEZ's current platform page. AiPedia does not list a paid affiliate program for hireEZ. Scores reflect practical recruiter utility, implementation burden, defensibility, and likely platform durability.
+This page was refreshed on May 13, 2026 using hireEZ's current platform page. AiPedia does not list a paid affiliate program for hireEZ. Scores reflect practical recruiter utility, implementation burden, defensibility, and likely platform durability.
 
 ## Sources
 

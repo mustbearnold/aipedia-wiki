@@ -9,8 +9,8 @@ url: https://eightfold.ai/products/talent-acquisition/
 pricing_model: enterprise
 price_range: "Custom enterprise"
 status: active
-last_updated: 2026-05-11
-last_verified: 2026-05-11
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -29,7 +29,7 @@ facts:
     source: "https://eightfold.ai/products/talent-acquisition/"
     source_label: "Eightfold Talent Acquisition"
     source_id: eightfold-talent-acquisition
-    verified_at: 2026-05-11
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -37,7 +37,7 @@ facts:
     source: "https://eightfold.ai/products/"
     source_label: "Eightfold products"
     source_id: eightfold-products
-    verified_at: 2026-05-11
+    verified_at: 2026-05-13
     volatility: high
     confidence: medium
   watch_out_for:
@@ -45,12 +45,12 @@ facts:
     source: "https://eightfold.ai/products/"
     source_label: "Eightfold products"
     source_id: eightfold-products
-    verified_at: 2026-05-11
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
 tags: [talent-intelligence, recruiting, skills, workforce-planning, internal-mobility]
 seo_title: "Eightfold AI Review (May 2026): Talent Intelligence Platform"
-meta_description: "Eightfold AI is an enterprise talent intelligence platform for skills-based talent acquisition, talent management, workforce exchange, resource management, and workforce planning."
+meta_description: "Eightfold AI is an enterprise talent intelligence platform with AI Interviewer, 360 Interview, AI Interview Companion, skills-based talent acquisition, talent management, workforce exchange, resource management, and workforce planning. Oracle Recruiting integration announced 2026."
 author: "aipedia.wiki Editorial"
 best_for:
   - enterprise talent acquisition
@@ -70,7 +70,7 @@ quick_answer: >-
 
 Eightfold AI is an enterprise talent intelligence platform. Its product surface spans Talent Acquisition, Talent Management, Workforce Exchange, Resource Management, and broader workforce planning.
 
-As of May 11, 2026, AiPedia treats Eightfold as the best enterprise AI recruiting option when the business problem is skills-based talent intelligence rather than simple sourcing.
+As of May 13, 2026, AiPedia treats Eightfold as the best enterprise AI recruiting option when the business problem is skills-based talent intelligence rather than simple sourcing. The product surface now includes AI Interviewer (autonomous interviewing with 360 Interview collapsing multi-round evaluations into one session) and AI Interview Companion (intelligent agent for human-led interviews with skills-based and coding interview capabilities). An Oracle Recruiting integration extends Eightfold's agentic interviewing into existing Oracle workflows.
 
 ## System Verdict
 
@@ -80,7 +80,9 @@ Skip it if your team needs a practical sourcing tool first. [LinkedIn Recruiter]
 
 ## What Eightfold Actually Does
 
-Eightfold's Talent Acquisition product is built around talent intelligence: matching people to roles by skills, potential, experience, and fit rather than treating a resume keyword match as the whole decision. Its broader product family includes Talent Management, Workforce Exchange, Resource Management, and workforce planning, which is why AiPedia scores it as an enterprise talent platform rather than a recruiter point solution.
+Eightfold's Talent Acquisition product is built around talent intelligence: matching people to roles by skills, potential, experience, and fit rather than treating a resume keyword match as the whole decision. Its broader product family includes Talent Management, Workforce Exchange, Resource Management, TalentForge, and workforce planning, which is why AiPedia scores it as an enterprise talent platform rather than a recruiter point solution.
+
+The platform now leans heavily on Talent Agents. AI Interviewer runs autonomous interviews and can collapse multi-round evaluations into a single 360 Interview session. AI Interview Companion sits alongside human interviewers with skills-based and coding interview support. Vendor claims include up to 5x faster recruiting workflows backed by multi-modal LLMs and a dataset of over one billion career profiles. Customer references cite 67% reductions in screening time and 75% reductions in time-to-fulfill, which buyers should pressure-test against their own baseline before underwriting business cases.
 
 That distinction matters. A recruiter can buy a sourcing database and get value next week. Eightfold needs a bigger operating context: HRIS and ATS data, job architecture, skills taxonomies, implementation support, integrations, governance, and executive sponsorship. When those pieces exist, Eightfold can become a shared intelligence layer for external hiring and internal movement. When they do not, the platform can feel too heavy for a team that only wanted better candidate search.
 
@@ -146,7 +148,7 @@ Eightfold should be evaluated like an enterprise HR platform, not like a point r
 
 ## AiPedia Trust Note
 
-This page was refreshed on May 11, 2026 using Eightfold's current Talent Acquisition and product overview pages. AiPedia does not list a paid affiliate program for Eightfold. Scores reflect buyer usefulness, implementation risk, defensibility, and likely durability rather than vendor hype.
+This page was refreshed on May 13, 2026 using Eightfold's current Talent Acquisition and product overview pages, including the AI Interviewer, 360 Interview, AI Interview Companion, and Oracle Recruiting integration positioning. AiPedia does not list a paid affiliate program for Eightfold. Scores reflect buyer usefulness, implementation risk, defensibility, and likely durability rather than vendor hype.
 
 ## Sources
 
