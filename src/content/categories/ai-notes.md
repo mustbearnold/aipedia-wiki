@@ -7,8 +7,8 @@ tool_count: 11
 seo_title: "Best AI Note-Taking Tools (May 2026), aipedia.wiki"
 meta_description: "Compare the best AI note-taking tools in May 2026: Fathom for meeting notes, Fireflies for team meeting intelligence, Otter for live transcription, Read AI for meeting reports, NotebookLM for source-grounded research, Notion for team knowledge, and Obsidian for local-first notes."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-09
-last_verified: 2026-05-09
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 ---
 
@@ -16,7 +16,7 @@ update_frequency: monthly
 
 AI note-taking now splits into three buyer lanes. The first is **meeting capture**, where [Fathom](/tools/fathom/), [Fireflies](/tools/fireflies/), [Otter.ai](/tools/otter-ai/), and [Read AI](/tools/read-ai/) record calls, produce transcripts, summarize decisions, extract action items, and push meeting context into team workflows. The second is **source-grounded research**, where [NotebookLM](/tools/notebooklm/) turns documents, transcripts, and source packs into grounded Q&A, reports, study materials, and review artifacts. The third is **knowledge management**, where [Notion AI](/tools/notion-ai/) and [Obsidian](/tools/obsidian/) help teams or individuals maintain long-lived notes, wikis, docs, databases, and personal knowledge graphs.
 
-As of May 9, 2026, the best purchase depends less on "which AI summarizes best?" and more on where the note lives after capture: a meeting library, a CRM, a research notebook, a company wiki, or a local personal vault.
+As of May 13, 2026, the best purchase depends less on "which AI summarizes best?" and more on where the note lives after capture: a meeting library, a CRM, a research notebook, a company wiki, or a local personal vault.
 
 ## The Players
 
@@ -68,11 +68,11 @@ As of May 9, 2026, the best purchase depends less on "which AI summarizes best?"
 
 ## Sources
 
-- [Fathom pricing](https://www.fathom.ai/pricing) (verified 2026-05-09)
-- [Fireflies pricing](https://fireflies.ai/pricing) (verified 2026-05-09)
-- [Otter.ai pricing](https://otter.ai/pricing) (verified 2026-05-09)
-- [Read AI pricing](https://www.read.ai/plans-pricing) (verified 2026-05-09)
-- [Read AI product overview](https://www.read.ai/) (verified 2026-05-09)
-- [NotebookLM upgrade information](https://support.google.com/notebooklm/answer/16213268) (verified 2026-05-09)
-- [Notion pricing](https://www.notion.com/pricing) (verified 2026-05-09)
-- [Obsidian pricing](https://obsidian.md/pricing) (verified 2026-05-09)
+- [Fathom pricing](https://www.fathom.ai/pricing) (verified 2026-05-13)
+- [Fireflies pricing](https://fireflies.ai/pricing) (verified 2026-05-13)
+- [Otter.ai pricing](https://otter.ai/pricing) (verified 2026-05-13)
+- [Read AI pricing](https://www.read.ai/plans-pricing) (verified 2026-05-13)
+- [Read AI product overview](https://www.read.ai/) (verified 2026-05-13)
+- [NotebookLM upgrade information](https://support.google.com/notebooklm/answer/16213268) (verified 2026-05-13)
+- [Notion pricing](https://www.notion.com/pricing) (verified 2026-05-13)
+- [Obsidian pricing](https://obsidian.md/pricing) (verified 2026-05-13)

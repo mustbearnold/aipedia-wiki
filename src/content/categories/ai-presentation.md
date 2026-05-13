@@ -5,10 +5,10 @@ title: AI Presentation Tools
 description: AI tools for turning prompts, outlines, docs, and written ideas into decks, visual stories, and presentation assets.
 tool_count: 8
 seo_title: "Best AI Presentation Tools: Gamma, Pitch, Beautiful.ai & Prezi (May 2026)"
-meta_description: "Compare the best AI presentation tools for May 2026. Gamma wins prompt-to-deck, Pitch wins team workflows, Beautiful.ai wins controlled business slides, and Napkin AI wins slide visuals."
+meta_description: "Updated May 13, 2026: Gamma wins prompt-to-deck, Pitch wins team workflows, Beautiful.ai wins controlled business slides, and Napkin AI wins slide visuals. Claude Design now competes for prompt-to-prototype work."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-09
-last_verified: 2026-05-09
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 top_picks:
   best_overall:
@@ -33,7 +33,9 @@ The best AI presentation tool for most buyers is [Gamma](/tools/gamma/) because 
 
 Do not shortlist [Tome](/tools/tome/) for new presentation work. The original Tome presentation product is discontinued, and AiPedia treats old Tome comparisons as historical or merge/noindex candidates, not live buyer recommendations.
 
-Last verified on **May 9, 2026** against official vendor sources and current AiPedia tool records.
+For prompt-to-prototype work that overlaps deck creation, also evaluate [Claude Design](/tools/claude-design/) (launched April 17, 2026). It competes with Gamma when the buyer wants generated UI mockups, landing-page concepts, and visual design artifacts alongside slide-style output. It is not yet a full deck workflow, but it is the strongest design-generation alternative to test before locking in a presentation tool.
+
+Last verified on **May 13, 2026** against official vendor sources and current AiPedia tool records.
 
 ## Best Tools By Buyer Job
 

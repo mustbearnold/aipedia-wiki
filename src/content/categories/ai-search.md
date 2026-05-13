@@ -5,10 +5,10 @@ title: AI Search & Research Tools
 description: AI answer engines, private search, research notebooks, semantic search APIs, and source-backed research assistants.
 tool_count: 8
 seo_title: "Best AI Search and Research Tools (May 2026)"
-meta_description: "Updated May 9, 2026: compare Perplexity, ChatGPT Search, Google AI Mode, NotebookLM, Kagi, Exa, You.com, and Grok by citations, privacy, documents, APIs, and buyer fit."
+meta_description: "Updated May 13, 2026: compare Perplexity, ChatGPT Search, Google AI Mode, NotebookLM, Kagi, Exa, You.com, and Grok by citations, privacy, documents, APIs, and buyer fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-09
-last_verified: 2026-05-09
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -86,16 +86,16 @@ Do not leave this category stale. Google AI Mode, Perplexity Pro/Max/Enterprise,
 
 ## Sources
 
-- [Perplexity Enterprise](https://www.perplexity.ai/enterprise) (verified 2026-05-09)
-- [Perplexity API pricing](https://docs.perplexity.ai/docs/getting-started/pricing) (verified 2026-05-09)
-- [Perplexity Enterprise pricing FAQ](https://www.perplexity.ai/help-center/en/articles/10352986-enterprise-pro-pricing-and-billing-frequently-asked-questions) (verified 2026-05-09)
-- [ChatGPT Search Help](https://help.openai.com/en/articles/9237897-chatgpt-search) (verified 2026-05-09)
-- [Google AI Mode and AI Overviews updates](https://blog.google/products-and-platforms/products/search/explore-web-generative-ai-search/) (verified 2026-05-09)
-- [Google AI Plans](https://one.google.com/about/google-ai-plans/) (verified 2026-05-09)
-- [NotebookLM upgrade docs](https://support.google.com/notebooklm/answer/16213268) (verified 2026-05-09)
-- [Kagi Ultimate plan docs](https://help.kagi.com/kagi/plans/ultimate-plan.html) (verified 2026-05-09)
-- [Kagi Team plan docs](https://help.kagi.com/kagi/plans/team-plan.html) (verified 2026-05-09)
-- [Exa pricing update](https://exa.ai/docs/changelog/pricing-update) (verified 2026-05-09)
-- [Exa pricing](https://exa.ai/pricing) (verified 2026-05-09)
-- [You.com plans](https://home.you.com/plans) (verified 2026-05-09)
-- [X Premium+ pricing](https://help.x.com/en/premium-plus-price-update) (verified 2026-05-09)
+- [Perplexity Enterprise](https://www.perplexity.ai/enterprise) (verified 2026-05-13)
+- [Perplexity API pricing](https://docs.perplexity.ai/docs/getting-started/pricing) (verified 2026-05-13)
+- [Perplexity Enterprise pricing FAQ](https://www.perplexity.ai/help-center/en/articles/10352986-enterprise-pro-pricing-and-billing-frequently-asked-questions) (verified 2026-05-13)
+- [ChatGPT Search Help](https://help.openai.com/en/articles/9237897-chatgpt-search) (verified 2026-05-13)
+- [Google AI Mode and AI Overviews updates](https://blog.google/products-and-platforms/products/search/explore-web-generative-ai-search/) (verified 2026-05-13)
+- [Google AI Plans](https://one.google.com/about/google-ai-plans/) (verified 2026-05-13)
+- [NotebookLM upgrade docs](https://support.google.com/notebooklm/answer/16213268) (verified 2026-05-13)
+- [Kagi Ultimate plan docs](https://help.kagi.com/kagi/plans/ultimate-plan.html) (verified 2026-05-13)
+- [Kagi Team plan docs](https://help.kagi.com/kagi/plans/team-plan.html) (verified 2026-05-13)
+- [Exa pricing update](https://exa.ai/docs/changelog/pricing-update) (verified 2026-05-13)
+- [Exa pricing](https://exa.ai/pricing) (verified 2026-05-13)
+- [You.com plans](https://home.you.com/plans) (verified 2026-05-13)
+- [X Premium+ pricing](https://help.x.com/en/premium-plus-price-update) (verified 2026-05-13)

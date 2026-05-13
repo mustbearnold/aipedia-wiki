@@ -5,10 +5,10 @@ title: AI Research Tools
 description: Source-backed AI tools for literature review, paper discovery, citation context, research notebooks, academic search, and evidence synthesis.
 tool_count: 8
 seo_title: "Best AI Research Tools: Elicit, Scite, Semantic Scholar & Perplexity (May 2026)"
-meta_description: "Compare the best AI research tools in May 2026: Elicit for literature review, Semantic Scholar for free academic search, Scite for citation context, NotebookLM for source-grounded notebooks, and Perplexity for cited web research."
+meta_description: "Updated May 13, 2026: Elicit for literature review, Semantic Scholar for free academic search, Scite for citation context, NotebookLM for source-grounded notebooks, and Perplexity for cited web research."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-09
-last_verified: 2026-05-09
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 ---
 
@@ -16,7 +16,9 @@ update_frequency: monthly
 
 AI research tools split into four buyer lanes now: **literature review**, **academic search**, **citation context**, and **source-grounded analysis**. The right purchase depends on whether the user needs to find papers, evaluate citations, analyze a fixed source set, or research current web material outside academic databases.
 
-As of May 9, 2026, **[Elicit](/tools/elicit/)** is AiPedia's best research-workflow pick because it is built around paper discovery, screening, extraction, and evidence tables. **[Semantic Scholar](/tools/semantic-scholar/)** is the free academic-search baseline. **[Scite](/tools/scite/)** is the specialist pick when citation context matters. **[NotebookLM](/tools/notebooklm/)** is best when answers must stay grounded in a chosen source library. **[Perplexity](/tools/perplexity/)** is the best cited-web add-on for current sources, documentation, policy, market, and company research.
+As of May 13, 2026, **[Elicit](/tools/elicit/)** is AiPedia's best research-workflow pick because it is built around paper discovery, screening, extraction, and evidence tables. **[Semantic Scholar](/tools/semantic-scholar/)** is the free academic-search baseline. **[Scite](/tools/scite/)** is the specialist pick when citation context matters. **[NotebookLM](/tools/notebooklm/)** is best when answers must stay grounded in a chosen source library. **[Perplexity](/tools/perplexity/)** is the best cited-web add-on for current sources, documentation, policy, market, and company research.
+
+For budget-conscious research teams running their own pipelines, [Reka Edge 7B](/tools/reka/) is now publicly priced at $0.10 per million input tokens and $0.10 per million output tokens, making it a low-cost extraction or summarization layer to evaluate alongside Elicit's structured workflow.
 
 The wrong move is treating a general chatbot as a research protocol. ChatGPT and Claude can help read, explain, outline, and critique material, but they do not replace database selection, inclusion criteria, source inspection, citation verification, or domain expertise.
 
@@ -61,10 +63,11 @@ Do not cite generated text. Cite the original source. Do not treat a linked sour
 
 ## Sources
 
-- [Elicit pricing](https://elicit.com/pricing) - verified 2026-05-09.
-- [Semantic Scholar](https://www.semanticscholar.org/) - verified 2026-05-09.
-- [Scite](https://scite.ai/) - verified 2026-05-09.
-- [NotebookLM](https://notebooklm.google/) - verified 2026-05-09.
-- [Perplexity Enterprise](https://www.perplexity.ai/enterprise) - verified 2026-05-09.
-- [Consensus](https://consensus.app/) - verified 2026-05-09.
-- [Connected Papers](https://www.connectedpapers.com/) - verified 2026-05-09.
+- [Elicit pricing](https://elicit.com/pricing) - verified 2026-05-13.
+- [Semantic Scholar](https://www.semanticscholar.org/) - verified 2026-05-13.
+- [Scite](https://scite.ai/) - verified 2026-05-13.
+- [NotebookLM](https://notebooklm.google/) - verified 2026-05-13.
+- [Perplexity Enterprise](https://www.perplexity.ai/enterprise) - verified 2026-05-13.
+- [Consensus](https://consensus.app/) - verified 2026-05-13.
+- [Connected Papers](https://www.connectedpapers.com/) - verified 2026-05-13.
+- [Reka Edge 7B pricing](https://www.reka.ai/pricing) - verified 2026-05-13.

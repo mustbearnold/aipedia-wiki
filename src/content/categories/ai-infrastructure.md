@@ -5,10 +5,10 @@ title: AI Infrastructure & Model APIs
 description: Developer platforms for LLM routing, pay-as-you-go model APIs, hosted inference, serverless GPUs, vector databases, speech APIs, and production retrieval systems.
 tool_count: 12
 seo_title: "Best AI Infrastructure & Model API Tools (May 2026)"
-meta_description: "Updated May 9, 2026: compare OpenRouter, OpenAI API, Claude API, Gemini API, Mistral, Groq, Replicate, fal, Deepgram, Pinecone, Weaviate, and Qdrant by routing, billing, and production fit."
+meta_description: "Updated May 13, 2026: compare OpenRouter, OpenAI API, Claude API, Gemini API, Mistral 3, Groq, Replicate, fal, Deepgram, Pinecone, Weaviate, Qdrant, and the newly open-licensed LM Studio by routing, billing, and production fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-09
-last_verified: 2026-05-09
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -32,7 +32,7 @@ This category is for developer and platform buyers. If the user is choosing a ch
 
 **Use direct vendor APIs when native features matter.** [OpenAI API](/tools/chatgpt/) is the default direct route for broad multimodal app work. [Claude API](/tools/claude/) is the direct route for long reasoning, writing, code, and document workflows. [Gemini API](/tools/gemini/) matters when Google Cloud, long context, multimodal inputs, or Veo video generation are part of the product.
 
-**Use [Mistral AI](/tools/mistral-ai/) or [Groq](/tools/groq/) when price/performance, open-model strategy, European infrastructure, or low-latency inference matters.** Benchmark real prompts before switching because model quality, output length, and retries change the bill.
+**Use [Mistral AI](/tools/mistral-ai/) or [Groq](/tools/groq/) when price/performance, open-model strategy, European infrastructure, or low-latency inference matters.** Mistral 3 shipped on April 28, 2026 and tightened price/performance across the chat, code, and reasoning lineups. Benchmark real prompts before switching because model quality, output length, and retries change the bill.
 
 **Use [Replicate](/tools/replicate/) or [fal.ai](/tools/fal-ai/) when the job is hosted image, video, audio, 3D, or custom-model inference.** Replicate is stronger as a broad model catalog and custom-model deployment layer. fal is stronger when successful-output billing and fast media APIs are the buyer problem.
 
@@ -62,6 +62,7 @@ This category is for developer and platform buyers. If the user is choosing a ch
 - **Fast media APIs:** Pick [fal.ai](/tools/fal-ai/) when successful-output billing, image/video/audio/3D endpoints, and fast experimentation matter.
 - **Speech APIs:** Pick [Deepgram](/tools/deepgram/) when speech-to-text, text-to-speech, voice agents, or audio intelligence are infrastructure, not just creator utilities.
 - **Serverless GPU apps:** Pick [Modal](/tools/modal/) when you want Python jobs, endpoints, queues, and GPU workloads without Kubernetes.
+- **Local model runtime:** Pick [LM Studio](/tools/lm-studio/) when developers need a desktop GUI plus OpenAI-compatible local server for Llama, Qwen, Mistral, and other open weights. LM Studio re-licensed to an open license in May 2026, removing the prior commercial-use friction.
 - **Managed vector search:** Pick [Pinecone](/tools/pinecone/) when retrieval is production-critical and you want managed operations.
 - **Open vector databases:** Pick [Weaviate](/tools/weaviate/) or [Qdrant](/tools/qdrant/) when self-hosting optionality and control matter.
 
@@ -81,18 +82,19 @@ Do not publish infrastructure pages with old flat monthly subscription framing. 
 
 ## Sources
 
-- [OpenRouter pricing](https://openrouter.ai/pricing) (verified 2026-05-09)
-- [OpenAI API pricing](https://openai.com/api/pricing/) (verified 2026-05-09)
-- [Claude API pricing](https://platform.claude.com/docs/en/about-claude/pricing) (verified 2026-05-09)
-- [Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing) (verified 2026-05-09)
-- [Mistral AI pricing](https://mistral.ai/pricing) (verified 2026-05-09)
-- [Groq pricing](https://groq.com/pricing) (verified 2026-05-09)
-- [Replicate pricing](https://replicate.com/pricing) (verified 2026-05-09)
-- [fal Model API pricing docs](https://fal.ai/docs/documentation/model-apis/pricing) (verified 2026-05-09)
-- [Deepgram pricing](https://deepgram.com/pricing) (verified 2026-05-09)
-- [Together AI pricing](https://www.together.ai/pricing) (verified 2026-05-09)
-- [Hugging Face pricing](https://huggingface.co/pricing) (verified 2026-05-09)
-- [Modal pricing](https://modal.com/pricing) (verified 2026-05-09)
-- [Pinecone pricing](https://www.pinecone.io/pricing/) (verified 2026-05-09)
-- [Weaviate pricing](https://weaviate.io/pricing) (verified 2026-05-09)
-- [Qdrant Cloud billing](https://qdrant.tech/documentation/cloud-pricing-payments/) (verified 2026-05-09)
+- [OpenRouter pricing](https://openrouter.ai/pricing) (verified 2026-05-13)
+- [OpenAI API pricing](https://openai.com/api/pricing/) (verified 2026-05-13)
+- [Claude API pricing](https://platform.claude.com/docs/en/about-claude/pricing) (verified 2026-05-13)
+- [Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing) (verified 2026-05-13)
+- [Mistral AI pricing](https://mistral.ai/pricing) (verified 2026-05-13)
+- [Groq pricing](https://groq.com/pricing) (verified 2026-05-13)
+- [Replicate pricing](https://replicate.com/pricing) (verified 2026-05-13)
+- [fal Model API pricing docs](https://fal.ai/docs/documentation/model-apis/pricing) (verified 2026-05-13)
+- [Deepgram pricing](https://deepgram.com/pricing) (verified 2026-05-13)
+- [Together AI pricing](https://www.together.ai/pricing) (verified 2026-05-13)
+- [Hugging Face pricing](https://huggingface.co/pricing) (verified 2026-05-13)
+- [Modal pricing](https://modal.com/pricing) (verified 2026-05-13)
+- [LM Studio](https://lmstudio.ai/) (verified 2026-05-13)
+- [Pinecone pricing](https://www.pinecone.io/pricing/) (verified 2026-05-13)
+- [Weaviate pricing](https://weaviate.io/pricing) (verified 2026-05-13)
+- [Qdrant Cloud billing](https://qdrant.tech/documentation/cloud-pricing-payments/) (verified 2026-05-13)

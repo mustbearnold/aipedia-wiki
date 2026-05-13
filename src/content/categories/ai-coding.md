@@ -5,10 +5,10 @@ title: AI Coding Assistants
 description: Current AI coding assistants, AI-native IDEs, terminal coding agents, PR agents, and app builders for developers, founders, teams, and non-developers.
 tool_count: 22
 seo_title: "Best AI Coding Tools & Copilot Alternatives (May 2026)"
-meta_description: "Updated May 9, 2026: compare Cursor, Claude Code, GitHub Copilot, Windsurf, Codex, Replit Agent, Devin, Aider, Cline, Continue, Lovable, Bolt, and v0 by workflow, pricing, autonomy, and team fit."
+meta_description: "Updated May 13, 2026: compare Cursor, Claude Code, GitHub Copilot, Windsurf, Codex, Replit Agent, Devin, Aider, Cline, Continue, Lovable, Bolt, and v0 by workflow, pricing, autonomy, and team fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-09
-last_verified: 2026-05-09
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -32,7 +32,7 @@ AI coding tools now split into five buyer jobs: inline help inside an existing I
 
 **Use [Claude Code](/tools/claude-code/) when the buyer wants a terminal coding agent.** It is better for repo investigation, multi-file work, command execution, debugging loops, and senior-engineer-style delegation than for inline autocomplete.
 
-**Use [Windsurf](/tools/windsurf/) when the buyer wants to compare AI IDE cost and workflow.** Windsurf's current docs describe Free, Pro, Teams, and Enterprise usage plans with usage-based self-serve plans introduced in March 2026.
+**Use [Windsurf](/tools/windsurf/) when the buyer wants to compare AI IDE cost and workflow.** Windsurf's current docs describe Free, Pro, Teams, and Enterprise usage plans with usage-based self-serve plans introduced in March 2026. Codeium has now fully sunset (codeium.com 301-redirects to windsurf.com), so existing Codeium users should treat Windsurf as the inheritor product, not a separate option.
 
 **Use [Codex](/tools/codex/) when the team wants OpenAI-native agent coding.** It fits local repo work, PR preparation, checks, and tasks where an agent can edit and verify code rather than only suggest completions.
 
@@ -98,10 +98,10 @@ Do not publish stale model-version claims. Coding tools route models and change 
 
 ## Sources
 
-- [GitHub Copilot plans](https://github.com/features/copilot/plans) (verified 2026-05-09)
-- [GitHub Copilot billing docs](https://docs.github.com/en/copilot/concepts/billing) (verified 2026-05-09)
-- [Cursor pricing](https://cursor.com/pricing) (verified 2026-05-09)
-- [Claude Code docs](https://code.claude.com/docs) (verified 2026-05-09)
-- [Claude Max plan](https://www.claude.com/pricing/max) (verified 2026-05-09)
-- [Windsurf plans and usage](https://docs.windsurf.com/windsurf/accounts/usage) (verified 2026-05-09)
-- [Gemini Code Assist](https://cloud.google.com/products/gemini/code-assist) (verified 2026-05-09)
+- [GitHub Copilot plans](https://github.com/features/copilot/plans) (verified 2026-05-13)
+- [GitHub Copilot billing docs](https://docs.github.com/en/copilot/concepts/billing) (verified 2026-05-13)
+- [Cursor pricing](https://cursor.com/pricing) (verified 2026-05-13)
+- [Claude Code docs](https://code.claude.com/docs) (verified 2026-05-13)
+- [Claude Max plan](https://www.claude.com/pricing/max) (verified 2026-05-13)
+- [Windsurf plans and usage](https://docs.windsurf.com/windsurf/accounts/usage) (verified 2026-05-13)
+- [Gemini Code Assist](https://cloud.google.com/products/gemini/code-assist) (verified 2026-05-13)

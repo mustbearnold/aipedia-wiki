@@ -5,10 +5,10 @@ title: AI Design & App Building
 description: Current AI design tools and app builders for social creative, product design, design systems, web prototypes, full-stack apps, and Vercel-native UI workflows.
 tool_count: 9
 seo_title: "Best AI Design & App Builder Tools (May 2026)"
-meta_description: "Updated May 9, 2026: compare Canva AI, Figma, Midjourney, Adobe Firefly, Google Stitch, Lovable, Bolt.new, and v0 by buyer fit, pricing, workflow, and production risk."
+meta_description: "Updated May 13, 2026: compare Canva AI, Figma, Midjourney, Adobe Firefly, Google Stitch, Lovable, Bolt.new, and v0 by buyer fit, pricing, workflow, and production risk."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-09
-last_verified: 2026-05-09
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -26,7 +26,7 @@ top_picks:
 
 AI design is now two overlapping markets. The first is **visual creation and product design**: brand assets, social posts, presentations, UX mockups, design systems, and stakeholder review. The second is **AI app building**: prompts, screenshots, Figma context, and code turning into web apps, prototypes, deploys, or pull requests.
 
-As of May 9, 2026, start with the job:
+As of May 13, 2026, start with the job:
 
 **Use [Canva](/tools/canva/) when non-designers need finished creative fast.** Canva AI 2.0 is built across Canva's Visual Suite and supports conversational creation, editable layouts, on-brand generation, AI images, AI video, Magic Write, resizing, background tools, and business controls. It is the safest first stop for marketers, creators, teachers, small businesses, and teams that need to publish polished content without a design department.
 
@@ -112,7 +112,7 @@ Do not make a wide table the only mobile experience. Mobile buyers need top pick
 ## Money Pages To Build Next
 
 - [Lovable vs Bolt.new vs v0](/compare/lovable-vs-bolt-vs-v0/) should be rebuilt first because it is the highest-intent app-builder comparison in this category and still has stale pricing and scope language.
-- [Best Canva AI Alternatives](/guides/canva-ai-alternatives/) is now refreshed and should stay in the design money-page rotation because it separates Canva replacement intent by buyer job: Figma for product design, Firefly for Adobe production, Midjourney for ideation, Freepik for creator assets, and Recraft/Ideogram for text and vector-heavy brand work.
+- [Best Canva AI Alternatives](/guides/canva-ai-alternatives/) is now refreshed and should stay in the design money-page rotation because it separates Canva replacement intent by buyer job: Figma for product design, Firefly for Adobe production, Midjourney for ideation, Magnific (the Freepik successor brand as of May 5) for creator assets, and Recraft/Ideogram for text and vector-heavy brand work.
 - [Figma AI vs v0](/compare/figma-vs-v0/) should be rebuilt around design-system workflow versus Vercel-native implementation.
 - [Canva AI vs v0](/compare/canva-vs-v0/) should be rebuilt around non-designer creative production versus web-app output.
 - [Google Stitch vs v0](/compare/google-stitch-vs-v0/) should be rebuilt around vibe-design exploration versus Vercel app-building workflow.
@@ -127,15 +127,15 @@ Do not make a wide table the only mobile experience. Mobile buyers need top pick
 
 ## Sources
 
-- [Canva AI](https://www.canva.com/canva-ai/) (verified 2026-05-09)
-- [Figma pricing](https://www.figma.com/pricing/) (verified 2026-05-09)
-- [Midjourney plans](https://docs.midjourney.com/docs/plans) (verified 2026-05-09)
-- [Adobe Firefly plans](https://www.adobe.com/products/firefly/plans) (verified 2026-05-09)
-- [Google Stitch announcement](https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-ai-ui-design/) (verified 2026-05-09)
-- [Lovable pricing](https://lovable.dev/pricing) (verified 2026-05-09)
-- [Bolt.new pricing](https://bolt.new/pricing) (verified 2026-05-09)
-- [v0 pricing](https://v0.app/pricing) (verified 2026-05-09)
-- [v0 documentation](https://v0.app/docs) (verified 2026-05-09)
-- [Freepik pricing](https://www.freepik.com/pricing/139506675) (verified 2026-05-09)
-- [Recraft V4 docs](https://www.recraft.ai/docs/recraft-models/recraft-V4) (verified 2026-05-09)
-- [Ideogram plans](https://docs.ideogram.ai/plans-and-pricing/available-plans) (verified 2026-05-09)
+- [Canva AI](https://www.canva.com/canva-ai/) (verified 2026-05-13)
+- [Figma pricing](https://www.figma.com/pricing/) (verified 2026-05-13)
+- [Midjourney plans](https://docs.midjourney.com/docs/plans) (verified 2026-05-13)
+- [Adobe Firefly plans](https://www.adobe.com/products/firefly/plans) (verified 2026-05-13)
+- [Google Stitch announcement](https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-ai-ui-design/) (verified 2026-05-13)
+- [Lovable pricing](https://lovable.dev/pricing) (verified 2026-05-13)
+- [Bolt.new pricing](https://bolt.new/pricing) (verified 2026-05-13)
+- [v0 pricing](https://v0.app/pricing) (verified 2026-05-13)
+- [v0 documentation](https://v0.app/docs) (verified 2026-05-13)
+- [Magnific pricing](https://magnific.ai/pricing) (verified 2026-05-13; rebranded from Freepik on May 5, 2026)
+- [Recraft V4 docs](https://www.recraft.ai/docs/recraft-models/recraft-V4) (verified 2026-05-13)
+- [Ideogram plans](https://docs.ideogram.ai/plans-and-pricing/available-plans) (verified 2026-05-13)
