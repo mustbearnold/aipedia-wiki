@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "Usage-based serverless, deployment, fine-tuning, and batch pricing"
 status: active
 launched: 2022-09
-last_updated: 2026-05-05
-last_verified: 2026-05-05
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -27,53 +27,81 @@ scores:
 facts:
   best_for:
     value: Best for developers needing fast hosted inference over open and commercial generative models with API deployment
-      controls.
-    source: https://fireworks.ai/
-    source_label: Fireworks AI official site
+      controls, with B200 and B300 GPU tiers added to the on-demand catalog as of May 2026.
+    source: https://fireworks.ai/pricing
+    source_label: Fireworks AI pricing
     source_id: fireworks-ai-official
-    verified_at: '2026-05-05'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
   pricing_anchor:
-    value: Fireworks pricing is usage/model/deployment dependent; verify serverless, dedicated, fine-tune, and model-specific
-      rates on the current pricing page.
+    value: "As of May 13, 2026 Fireworks lists serverless inference (per-token, with a 50% cached-input discount and a 50% batch discount), on-demand GPUs at $7/hr (H100 80GB and H200 141GB), $10/hr (B200 180GB), and $12/hr (B300 288GB), embeddings from $0.008 per 1M input tokens, structured fine-tuning rates by model size, and reinforcement fine-tuning billed per GPU hour."
     source: https://fireworks.ai/pricing
     source_label: Fireworks AI pricing
     source_id: fireworks-ai-pricing
-    verified_at: '2026-05-05'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-04'
+    next_review_at: '2026-08-13'
   api_available:
     value: Fireworks is API-first; docs define model invocation, deployment, fine-tuning, tool-use, and production integration
       assumptions.
     source: https://docs.fireworks.ai/
     source_label: Fireworks AI docs
     source_id: fireworks-ai-docs
-    verified_at: '2026-05-05'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
   model_control:
-    value: The model catalog matters because open-source LLM and image-model availability, throughput, and pricing vary by model.
+    value: The model catalog matters because open-source LLM and image-model availability, throughput, and pricing vary by model. DeepSeek V4 Pro is among the recent catalog additions as of May 2026.
     source: https://fireworks.ai/models
     source_label: Fireworks AI models
     source_id: fireworks-ai-models
-    verified_at: '2026-05-05'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-04'
+    next_review_at: '2026-08-13'
   watch_out_for:
     value: Compare Fireworks against Together, Groq, Replicate, and direct cloud by latency, throughput, model coverage, fine-tuning,
       observability, and spend controls.
     source: https://fireworks.ai/pricing
     source_label: Fireworks AI pricing
     source_id: fireworks-ai-pricing
-    verified_at: '2026-05-05'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-04'
+    next_review_at: '2026-08-13'
+price_history:
+  - date: 2026-05-13
+    plan: "On-demand GPU deployments"
+    price: "$7/hr (H100 80GB, H200 141GB), $10/hr (B200 180GB), $12/hr (B300 288GB)"
+    source: "https://fireworks.ai/pricing"
+    source_label: "Source"
+    source_id: fireworks-ai-pricing
+    note: "Fireworks pricing surface confirms B200 and B300 as part of the standard on-demand catalog, alongside the long-running H100 and H200 tiers, with per-second billing."
+  - date: 2026-05-13
+    plan: "Serverless inference"
+    price: "Per-token (model-dependent), 50% off cached input, 50% off batch"
+    source: "https://fireworks.ai/pricing"
+    source_label: "Source"
+    source_id: fireworks-ai-pricing
+    note: "Cached-input and batch discounts both held at 50% on the published pricing page as of May 13, 2026."
+  - date: 2026-05-13
+    plan: "Embeddings"
+    price: "$0.008 (up to 150M params), $0.016 (150M to 350M), $0.10 (Qwen3 8B) per 1M input tokens"
+    source: "https://fireworks.ai/pricing"
+    source_label: "Source"
+    source_id: fireworks-ai-pricing
+    note: "Tiered embeddings pricing remains broken out by model size class."
+  - date: 2026-05-13
+    plan: "Fine-tuning (per 1M training tokens)"
+    price: "LoRA SFT/DPO from $0.50/$1.00 (up to 16B); full SFT/DPO from $1.00/$2.00 (up to 16B); RFT billed per GPU hour"
+    source: "https://fireworks.ai/pricing"
+    source_label: "Source"
+    source_id: fireworks-ai-pricing
+    note: "Structured fine-tune pricing scales by model band up to 300B+; reinforcement fine-tuning bills against the same on-demand GPU rates."
 tags: [inference, serverless, open-source-models, fine-tuning, enterprise]
 seo_title: "Fireworks AI: Features, Pricing & Review (2026)"
 meta_description: "Fireworks AI is an API-first inference platform for open and commercial models, with serverless inference, dedicated deployments, fine-tuning, batch jobs, and usage-based pricing."
@@ -99,6 +127,7 @@ The buyer question is not "does this replace ChatGPT?" It is whether Fireworks g
 
 ## Recent developments
 
+- **May 13, 2026:** Pricing surface re-verified. The on-demand GPU catalog now publishes B200 (180GB) at $10/hr and B300 (288GB) at $12/hr alongside the long-standing H100 80GB and H200 141GB at $7/hr. Cached-input and batch discounts both held at 50%. DeepSeek V4 Pro is highlighted among the latest serverless catalog additions.
 - **April 28, 2026:** [Mistral 3 shipped with Large 3 and new Ministral models](/news/2026-04-28-mistral-3-open-model-release/). Mistral listed Fireworks among the platforms where the new family is available, which matters for teams benchmarking open models on managed inference.
 
 ## System Verdict
@@ -139,15 +168,23 @@ The buyer question is not "does this replace ChatGPT?" It is whether Fireworks g
 
 ## Pricing
 
-Fireworks uses usage-based pricing rather than a simple monthly SaaS plan. As of verification on 2026-05-05, the official pricing page lists:
+Fireworks uses usage-based pricing rather than a simple monthly SaaS plan. As of verification on 2026-05-13, the official pricing page lists:
 
-- Serverless inference billed per token, with pricing that varies by model size and selected model.
-- Dedicated on-demand deployments billed by GPU usage time.
-- Fine-tuning billed by training-token usage, with serving billed separately.
-- Batch inference discounts for asynchronous jobs.
-- Enterprise options for teams that need higher limits, security commitments, or reserved capacity.
+- **Serverless inference** billed per token, with pricing that varies by model size and selected model. Cached input tokens receive a **50%** discount, and the Batch API discounts both input and output by **50%** for asynchronous jobs. Postpaid billing with $1 in free starter credits.
+- **On-demand GPU deployments** billed per second:
 
-Always price your own workload against the live Fireworks pricing page because the model catalog, named model rates, GPU inventory, cached-token rules, and enterprise terms can change.
+  | GPU | Hourly rate |
+  |---|---|
+  | H100 80GB | $7.00 |
+  | H200 141GB | $7.00 |
+  | B200 180GB | $10.00 |
+  | B300 288GB | $12.00 |
+
+- **Embeddings** billed per 1M input tokens: $0.008 for models up to 150M parameters, $0.016 for 150M to 350M, and $0.10 for Qwen3 8B.
+- **Fine-tuning** priced per 1M training tokens with a band structure (LoRA SFT, LoRA DPO, full SFT, full DPO) that climbs from $0.50/$1.00/$1.00/$2.00 at the up-to-16B band to $10/$20/$20/$40 at the 300B+ band. Reinforcement fine-tuning is billed per GPU hour at on-demand deployment rates.
+- **Enterprise** options for teams that need higher limits, security commitments, or reserved capacity, advertised as "faster speeds, lower costs, and higher rate limits."
+
+Always price your own workload against the live Fireworks pricing page. Named model rates, GPU inventory, cached-token rules, and enterprise terms can change.
 
 ## Failure modes
 
@@ -168,7 +205,7 @@ Always price your own workload against the live Fireworks pricing page because t
 
 ## Methodology
 
-Produced by the aipedia.wiki editorial pipeline. Last verified 2026-05-05 against the official [Fireworks pricing page](https://fireworks.ai/pricing), [Fireworks billing FAQ](https://docs.fireworks.ai/faq-new/billing-pricing/how-much-does-fireworks-cost), and [Fireworks inference documentation](https://docs.fireworks.ai/guides/inference-introduction).
+Produced by the aipedia.wiki editorial pipeline. Last verified 2026-05-13 against the official [Fireworks pricing page](https://fireworks.ai/pricing), [Fireworks billing FAQ](https://docs.fireworks.ai/faq-new/billing-pricing/how-much-does-fireworks-cost), and [Fireworks inference documentation](https://docs.fireworks.ai/guides/inference-introduction).
 
 ## FAQ
 

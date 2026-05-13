@@ -12,10 +12,10 @@ pricing_model: open-source
 price_range: "$0-$0.85/1M tokens"
 status: active
 launched: 2023-02
-last_updated: 2026-05-07
-last_verified: 2026-05-07
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
-seo_title: "Llama: Features, Pricing & Review (April 2026)"
+seo_title: "Llama: Features, Pricing & Review (May 2026)"
 meta_description: "Meta's Llama 4 Maverick (400B total, 17B active, 1M context) is the flagship open-weight LLM. Scout offers 10M tokens. Free weights under the Llama 4 Community License. Hosted pricing from $0.15 per 1M input tokens on Groq."
 author: "aipedia.wiki Editorial"
 affiliate:
@@ -35,7 +35,7 @@ facts:
     source: https://ai.meta.com/llama/
     source_label: Meta Llama official site
     source_id: llama-meta-official
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-04'
@@ -44,7 +44,7 @@ facts:
     source: https://www.llama.com/llama-downloads/
     source_label: Llama downloads
     source_id: llama-downloads
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-04'
@@ -53,7 +53,7 @@ facts:
     source: https://www.llama.com/docs/model-cards-and-prompt-formats/
     source_label: Llama model documentation
     source_id: llama-docs
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-04'
@@ -62,7 +62,7 @@ facts:
     source: https://github.com/meta-llama/llama-models
     source_label: Meta Llama GitHub repository
     source_id: llama-repository
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-04'
@@ -71,7 +71,7 @@ facts:
     source: https://www.llama.com/docs/model-cards-and-prompt-formats/
     source_label: Llama model documentation
     source_id: llama-docs
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-04'
@@ -139,7 +139,7 @@ Weights ship free under the Llama 4 Community License. Hosted inference starts a
 | **Consumer UI** | Meta AI at meta.ai (free, ad-adjacent) |
 | **Fine-tuning** | Full weights, LoRA, and QLoRA supported across providers |
 
-Every data point above was verified against vendor sources on 2026-04-17. See Sources.
+Every data point above was verified against vendor sources on 2026-05-13. See Sources.
 
 ## What it actually is
 
@@ -169,7 +169,7 @@ The weaknesses: no native image generation, no video, no consumer app with the r
 
 ## Pricing
 
-Llama weights are free. Costs come from hosted inference or your own compute. Representative hosted pricing via [Together AI](https://www.together.ai/pricing), [Groq](https://groq.com/pricing), and public rate cards, verified 2026-04-17.
+Llama weights are free. Costs come from hosted inference or your own compute. Representative hosted pricing via [Together AI](https://www.together.ai/pricing), [Groq](https://groq.com/pricing), and public rate cards, verified 2026-05-13.
 
 | Access path | Input ($/1M tok) | Output ($/1M tok) | Context | Who's it for |
 |---|---|---|---|---|
@@ -182,7 +182,7 @@ Llama weights are free. Costs come from hosted inference or your own compute. Re
 | Together AI (Scout) | $0.08 | $0.30 | 10M | Long-context retrieval |
 | AWS Bedrock / Azure | Custom | Custom | 1M | Enterprise compliance, BAAs |
 
-Prices verified 2026-04-17 via [Together AI pricing](https://www.together.ai/pricing), [Artificial Analysis Maverick providers](https://artificialanalysis.ai/models/llama-4-maverick/providers), and [Llama 4 API Pricing guide](https://llmwise.ai/llama-api-pricing/).
+Prices verified 2026-05-13 via [Together AI pricing](https://www.together.ai/pricing), [Artificial Analysis Maverick providers](https://artificialanalysis.ai/models/llama-4-maverick/providers), and [Llama 4 API Pricing guide](https://llmwise.ai/llama-api-pricing/).
 
 ## Against the alternatives
 
@@ -209,7 +209,7 @@ Prices verified 2026-04-17 via [Together AI pricing](https://www.together.ai/pri
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-07 against the [Llama 4 announcement](https://ai.meta.com/blog/llama-4-multimodal-intelligence/), [Llama 4 Community License](https://www.llama.com/llama4/license/), [Together AI pricing](https://www.together.ai/pricing), and [Artificial Analysis provider benchmarks](https://artificialanalysis.ai/models/llama-4-maverick/providers).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against the [Llama 4 announcement](https://ai.meta.com/blog/llama-4-multimodal-intelligence/), [Llama 4 Community License](https://www.llama.com/llama4/license/), [Together AI pricing](https://www.together.ai/pricing), and [Artificial Analysis provider benchmarks](https://artificialanalysis.ai/models/llama-4-maverick/providers).
 
 ## FAQ
 
@@ -220,7 +220,7 @@ Yes. Weights are free under the Llama 4 Community License. Self-hosting costs on
 Yes for almost all companies. The Community License grants commercial use to any organization under 700M monthly active users. Companies above that threshold (Google, Microsoft, Apple scale) need a separate Meta license. EU-based entities are explicitly carved out of some license provisions. Read the [Llama 4 Community License](https://www.llama.com/llama4/license/).
 
 **What is the current Llama flagship?**
-Llama 4 Maverick: 400B total parameters, 17B active, 128 experts, 1M token context. It is the strongest production-ready Llama model as of April 2026. Scout (109B / 10M context) wins for long-document jobs. Behemoth (2T) is still an internal teacher model and has not shipped.
+Llama 4 Maverick: 400B total parameters, 17B active, 128 experts, 1M token context. It is the strongest production-ready Llama model as of May 2026. Scout (109B / 10M context) wins for long-document jobs. Behemoth (2T) is still an internal teacher model and has not shipped.
 
 **How does Llama compare to Claude Opus 4.7?**
 Claude Opus 4.7 leads on agentic coding, long-form reasoning, and tool use on published benchmarks. Llama 4 Maverick wins on price ($0.15-$0.85 vs $5-$25 per 1M tokens), data sovereignty (self-host capable), and context window options (10M on Scout vs 1M on Opus). Use Claude for peak reasoning, Llama for scale and cost.

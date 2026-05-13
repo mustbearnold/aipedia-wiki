@@ -2,7 +2,7 @@
 type: tool
 slug: servicenow
 title: ServiceNow (Otto / AI Control Tower)
-tagline: 'Enterprise agent/workflow control plane — ServiceNow Otto + AI Control Tower packaging for governed autonomous work across ITSM, employee workflows, and business operations.'
+tagline: 'Enterprise agent/workflow control plane: ServiceNow Otto + AI Control Tower packaging for governed autonomous work across ITSM, employee workflows, and business operations.'
 category: ai-automation
 secondary_categories: [ai-enterprise, ai-agents]
 company: servicenow
@@ -11,8 +11,8 @@ pricing_model: enterprise
 price_range: Custom enterprise pricing
 status: active
 launched: 2004
-last_updated: 2026-05-07
-last_verified: 2026-05-07
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: "https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-turns-enterprise-AI-chaos-into-control-with-the-platform-for-governed-autonomous-work/default.aspx"
     source_label: "ServiceNow press release (Knowledge 2026)"
     source_id: servicenow-governed-autonomous-work-2026
-    verified_at: 2026-05-06
+    verified_at: 2026-05-13
     volatility: medium
     confidence: medium
     next_review_at: 2026-08-06
@@ -40,16 +40,16 @@ facts:
     source: "https://www.servicenow.com/products.html"
     source_label: "ServiceNow products"
     source_id: servicenow-products
-    verified_at: 2026-05-06
+    verified_at: 2026-05-13
     volatility: high
     confidence: medium
     next_review_at: 2026-08-06
   enterprise_controls:
-    value: "Yes — pitched as governed autonomous work with policy, data catalog/lineage, and auditability layered over AI-driven workflows."
+    value: "Yes. Pitched as governed autonomous work with policy, data catalog/lineage, and auditability layered over AI-driven workflows."
     source: "https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-turns-enterprise-AI-chaos-into-control-with-the-platform-for-governed-autonomous-work/default.aspx"
     source_label: "ServiceNow press release (Knowledge 2026)"
     source_id: servicenow-governed-autonomous-work-2026
-    verified_at: 2026-05-06
+    verified_at: 2026-05-13
     volatility: high
     confidence: medium
     next_review_at: 2026-06-06
@@ -58,11 +58,47 @@ facts:
     source: "https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-Otto-creates-the-unified-AI-experience-for-the-enterprise/default.aspx"
     source_label: "ServiceNow Otto press release"
     source_id: servicenow-otto-2026
-    verified_at: 2026-05-06
+    verified_at: 2026-05-13
     volatility: high
     confidence: medium
     next_review_at: 2026-06-06
-tags: [enterprise, workflow, automation, governance, agents, itsm, servicenow, control-plane, otto, ai-control-tower]
+  action_fabric:
+    value: "Action Fabric exposes governed enterprise actions to AI agents via a generally available MCP Server for Claude, Copilot, and customer-built agents."
+    source: "/news/2026-05-05-servicenow-action-fabric-ai-agent-system/"
+    source_label: "ServiceNow Action Fabric coverage"
+    source_id: servicenow-action-fabric-2026
+    verified_at: 2026-05-13
+    volatility: high
+    confidence: high
+    next_review_at: 2026-08-13
+  build_agent_reach:
+    value: "ServiceNow Build Agent now reaches Cursor, Windsurf, Claude Code, and GitHub Copilot, keeping ServiceNow platform context and governance in scope."
+    source: "/news/2026-05-06-servicenow-build-agent-coding-tools/"
+    source_label: "ServiceNow Build Agent coverage"
+    source_id: servicenow-build-agent-2026
+    verified_at: 2026-05-13
+    volatility: high
+    confidence: high
+    next_review_at: 2026-08-13
+  aws_kiro_integration:
+    value: "AI Control Tower now connects with AWS Bedrock AgentCore and Kiro, giving mutual customers a governed app-development path with shared identity, policy, and audit."
+    source: "/news/2026-05-06-servicenow-aws-agentcore-kiro-integration/"
+    source_label: "ServiceNow + AWS AgentCore + Kiro coverage"
+    source_id: servicenow-aws-kiro-2026
+    verified_at: 2026-05-13
+    volatility: high
+    confidence: high
+    next_review_at: 2026-08-13
+  data_foundation:
+    value: "May 6 launch added Context Engine, Autonomous Data Analytics, and Workflow Data Fabric for live governed enterprise context underneath agent execution."
+    source: "/news/2026-05-06-servicenow-real-time-data-foundation/"
+    source_label: "ServiceNow real-time data foundation coverage"
+    source_id: servicenow-data-foundation-2026
+    verified_at: 2026-05-13
+    volatility: high
+    confidence: high
+    next_review_at: 2026-08-13
+tags: [enterprise, workflow, automation, governance, agents, itsm, servicenow, control-plane, otto, ai-control-tower, action-fabric, build-agent, workflow-data-fabric]
 seo_title: "ServiceNow Otto + AI Control Tower: Enterprise Agent Governance (2026)"
 meta_description: "ServiceNow (Otto + AI Control Tower) is an enterprise agent/workflow control plane for governed autonomous work across ITSM and business operations. Enterprise pricing and SKU packaging vary by contract."
 author: "aipedia.wiki Editorial"
@@ -74,12 +110,34 @@ not_best_for:
   - small teams without enterprise workflow platforms
   - buyers needing transparent self-serve pricing
 quick_answer: >-
-  ServiceNow’s Otto and AI Control Tower are an enterprise agent/workflow control plane for governed autonomous work. Pick it if you already run ServiceNow and need policy + audit around agents. Skip it if you want self-serve pricing or lightweight automation.
+  ServiceNow's Otto and AI Control Tower are an enterprise agent/workflow control plane for governed autonomous work. Knowledge 2026 added Action Fabric (MCP server for Claude, Copilot, and custom agents), Build Agent reaching Cursor/Windsurf/Claude Code/Copilot, AWS Bedrock AgentCore + Kiro integration, and a real-time data foundation. Pick it if you already run ServiceNow and need policy plus audit around agents. Skip it if you want self-serve pricing or lightweight automation.
+price_history:
+  - date: 2026-05-13
+    plan: "Enterprise"
+    price: "Custom"
+    source: "https://www.servicenow.com/products.html"
+    source_label: "Source"
+    source_id: servicenow-products
+    note: "Reverified 2026-05-13. Knowledge 2026 added Otto, AI Control Tower expansion, Action Fabric, Build Agent, and Workflow Data Fabric; SKU packaging still varies by contract."
 ---
 
 # ServiceNow (Otto / AI Control Tower)
 
-ServiceNow is an enterprise workflow platform (ITSM + employee + customer + operations workflows) that is repositioning itself as a **governed agent control plane**. At Knowledge 2026, ServiceNow described a unified AI experience called **Otto** plus expanded **AI Control Tower** and **Autonomous Workforce** capabilities aimed at agent deployments with enterprise governance requirements.
+ServiceNow is an enterprise workflow platform (ITSM + employee + customer + operations workflows) that is repositioning itself as a **governed agent control plane**. At Knowledge 2026 (May 5-6, 2026), ServiceNow described a unified AI experience called **Otto** plus expanded **AI Control Tower**, **Action Fabric**, **Build Agent**, **Workflow Data Fabric**, and **Autonomous Workforce** capabilities aimed at agent deployments with enterprise governance requirements.
+
+## Key Facts
+
+| | |
+|---|---|
+| **Core product** | Enterprise workflow platform (ITSM, HR, customer, operations) repositioning as governed agent control plane |
+| **Unified AI experience** | Otto (announced Knowledge 2026, May 5) |
+| **Governance layer** | AI Control Tower (expanded Knowledge 2026) |
+| **Agent action layer** | Action Fabric with generally available MCP Server (Claude, Copilot, custom agents) |
+| **App-build layer** | Build Agent reaches Cursor, Windsurf, Claude Code, GitHub Copilot with ServiceNow context |
+| **Data foundation** | Context Engine, Autonomous Data Analytics, Workflow Data Fabric (May 6, 2026) |
+| **AWS integration** | AI Control Tower + Bedrock AgentCore + Kiro shared governance path (May 6, 2026) |
+| **Pricing** | Enterprise contract pricing; SKU packaging varies by region and agreement |
+| **Best buying motion** | Controlled pilot around one workflow family (ITSM, security response, employee service, app-change governance) |
 
 ## Recent developments (May 2026)
 
@@ -98,6 +156,13 @@ The value is not just "AI features." It is the ability to connect agent actions 
 ## What Otto and AI Control Tower change
 
 Otto is positioned as a unified AI experience across the ServiceNow platform. AI Control Tower is the governance layer around agents, data, and actions. Together, they aim to make agent work visible and controllable instead of letting every department wire a separate assistant into business systems.
+
+The May 5-6 Knowledge 2026 wave added four pieces that change the buying conversation:
+
+- **Action Fabric** exposes governed ServiceNow actions to AI agents through a generally available MCP Server. Claude, Microsoft Copilot, and customer-built agents can now call ServiceNow workflows under platform identity and policy.
+- **Build Agent** extends ServiceNow platform context into Cursor, Windsurf, Claude Code, and GitHub Copilot, so developers can build ServiceNow apps inside their preferred IDE without losing governance.
+- **AWS Bedrock AgentCore + Kiro integration** links AI Control Tower with AWS agent infrastructure and the Kiro spec-driven IDE, giving mutual customers a shared governance architecture for ServiceNow app development.
+- **Real-time data foundation** (Context Engine, Autonomous Data Analytics, Workflow Data Fabric) supplies live governed enterprise context underneath every agent execution.
 
 That matters because agent adoption creates a new operational risk: tools can recommend, trigger, or automate work across systems faster than governance teams can review it manually. The ServiceNow pitch is that agent actions should be routed through known workflows, data context, and policy controls instead of becoming disconnected pilots.
 
@@ -134,3 +199,6 @@ The best early candidates are workflows where ServiceNow already owns the proces
 >
 > **Skip it for greenfield automation.** If you do not already run ServiceNow, start with lighter automation stacks (Zapier, n8n, Workato) or agent platforms that fit your team size and procurement model.
 
+## Methodology
+
+This page was produced by the aipedia.wiki editorial pipeline. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-05-13 against the [Knowledge 2026 Otto coverage](/news/2026-05-05-servicenow-otto-knowledge-2026/), [Action Fabric coverage](/news/2026-05-05-servicenow-action-fabric-ai-agent-system/), [Build Agent in coding tools coverage](/news/2026-05-06-servicenow-build-agent-coding-tools/), [AWS AgentCore + Kiro integration coverage](/news/2026-05-06-servicenow-aws-agentcore-kiro-integration/), and [real-time data foundation coverage](/news/2026-05-06-servicenow-real-time-data-foundation/).

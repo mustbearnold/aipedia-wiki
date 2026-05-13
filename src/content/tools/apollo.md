@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$149/user/month"
 status: active
 launched: 2015-01
-last_updated: 2026-05-08
-last_verified: 2026-05-08
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -33,7 +33,7 @@ facts:
     source: "https://www.apollo.io/product/sales-engagement"
     source_label: "Apollo sales engagement"
     source_id: apollo-sales-engagement
-    verified_at: 2026-05-08
+    verified_at: 2026-05-13
     volatility: low
     confidence: high
   pricing_anchor:
@@ -41,8 +41,8 @@ facts:
     source: "https://www.apollo.io/pricing"
     source_label: "Apollo.io Pricing"
     source_id: apollo-official
-    verified_at: 2026-05-08
-    next_review_at: 2026-08-08
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: high
     confidence: high
   data_enrichment:
@@ -50,7 +50,7 @@ facts:
     source: "https://www.apollo.io/product/data-enrichment"
     source_label: "Apollo data enrichment"
     source_id: apollo-data-enrichment
-    verified_at: 2026-05-08
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
   engagement_surface:
@@ -58,7 +58,7 @@ facts:
     source: "https://www.apollo.io/product/sales-engagement"
     source_label: "Apollo sales engagement"
     source_id: apollo-sales-engagement
-    verified_at: 2026-05-08
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
   watch_out_for:
@@ -66,7 +66,7 @@ facts:
     source: "https://www.apollo.io/pricing"
     source_label: "Apollo.io Pricing"
     source_id: apollo-official
-    verified_at: 2026-05-08
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
 tags: [sales-intelligence, lead-generation, sales-automation, cold-email, prospecting]
@@ -90,7 +90,7 @@ quick_answer: >-
 
 Apollo.io is a B2B sales intelligence and engagement platform. It combines prospect search, enrichment, outbound sequences, a dialer, CRM sync, and AI-assisted GTM workflows. For sales teams, the key buyer question is simple: do you want one platform for database plus engagement, or do you want to build a specialist stack with separate enrichment and sending tools?
 
-As of May 8, 2026, Apollo is AiPedia's best all-in-one sales-platform pick for teams that need to find prospects, enrich account/contact data, run sequences, call prospects, and sync activity back to a CRM from one workspace.
+As of May 13, 2026, Apollo is AiPedia's best all-in-one sales-platform pick for teams that need to find prospects, enrich account/contact data, run sequences, call prospects, and sync activity back to a CRM from one workspace.
 
 ## System Verdict
 

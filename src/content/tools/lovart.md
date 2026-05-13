@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "Free + credit-based paid plans"
 status: active
 launched: 2025
-last_updated: 2026-05-05
-last_verified: 2026-05-05
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 seo_title: "Lovart: Features, Pricing & Review (2026)"
 meta_description: "Lovart is an AI design agent for brand visuals, marketing creative, mockups, and design direction. Best for founders and marketers who need fast creative iteration."
@@ -34,20 +34,20 @@ facts:
     source: "https://www.lovart.ai"
     source_label: "Lovart website"
     source_id: lovart-best-for
-    verified_at: 2026-05-05
+    verified_at: 2026-05-13
     confidence: high
   best_for:
     value: "Marketing creative, brand exploration, mockups, and design ideation"
     source: "https://www.lovart.ai"
     source_id: lovart-best-for
-    verified_at: 2026-05-05
+    verified_at: 2026-05-13
     confidence: high
   best_paid_tier:
     value: "Paid plan when fast credits, relax generations, or team usage matter"
     source: "https://www.lovart.ai"
     source_id: lovart-best-for
-    verified_at: 2026-05-05
-    next_review_at: 2026-06-03
+    verified_at: 2026-05-13
+    next_review_at: 2026-06-13
     confidence: high
 tags: [ai-design, design-agent, brand, marketing, mockups, creative-direction, image-generation]
 best_for:
@@ -65,7 +65,7 @@ quick_answer: >-
 
 # Lovart
 
-Lovart is an AI design agent aimed at creative ideation: brand visuals, marketing concepts, mockups, moodboards, and presentation-ready assets. As of 2026-05-05, the public site describes Lovart as a design partner that searches for visual references, reasons across color, layout, and voice, supports Touch Edit for targeted changes, Style Consistency across iterations, Text Edit for editable typography, and Visual Insights from real-time web references.
+Lovart is an AI design agent aimed at creative ideation: brand visuals, marketing concepts, mockups, moodboards, and presentation-ready assets. As of 2026-05-13, the public site describes Lovart as a design partner that searches for visual references, reasons across color, layout, and voice, supports Touch Edit for targeted changes, Style Consistency across iterations, Text Edit for editable typography, and Visual Insights from real-time web references.
 
 The value is not just image generation. It is the agentic design workflow around turning a brief into a coherent visual direction, then iterating without starting from a blank canvas each time.
 
@@ -108,7 +108,7 @@ The handoff matters. Lovart should reduce blank-page work, not replace design go
 
 Compare it with [Midjourney](/tools/midjourney/) for image aesthetics, Adobe Firefly for enterprise creative workflows, Canva for template-driven production, and Figma AI for teams already living inside component libraries. Lovart's edge is the agentic design flow around references, style consistency, and targeted edits rather than raw image generation alone.
 
-## Pricing notes verified 2026-05-05
+## Pricing notes verified 2026-05-13
 
 Lovart pricing is credit-based. The pricing FAQ says credits are consumed based on request complexity, model/tool choice, image size, quality, style, detail, and advanced parameters. Monthly subscription credits reset each billing cycle and do not roll over. Top-up credits do not expire. Unlimited Relax Generation is available on specific paid plans, queues jobs instead of consuming fast credits, and is personal-use only.
 

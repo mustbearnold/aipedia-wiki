@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: Free Starter, $20/mo Builder, $50/mo Standard minimum, $500/mo Enterprise minimum plus usage
 status: active
 launched: 2019
-last_updated: 2026-05-05
-last_verified: 2026-05-05
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,29 +31,29 @@ facts:
     source: "https://www.pinecone.io/pricing/"
     source_label: "Pinecone pricing"
     source_id: pinecone-official
-    verified_at: 2026-05-05
+    verified_at: 2026-05-13
     volatility: medium
-    confidence: medium
+    confidence: high
   pricing_anchor:
-    value: "Pricing should be checked on the current Pinecone source before purchase; AIpedia has not promoted this page to a full Tier 1 pricing profile yet"
+    value: "Starter free (up to 5 indexes, 2GB storage, 2M write/1M read units), Builder $20/mo flat (10 indexes per project, 1M Assistant tokens through June 30 2026 promo), Standard $50/mo minimum plus usage with $300 credits on a 3-week trial, Enterprise $500/mo minimum with 99.95% uptime SLA. HIPAA add-on is $190/mo on Standard."
     source: "https://www.pinecone.io/pricing/"
     source_label: "Pinecone pricing"
     source_id: pinecone-official
-    verified_at: 2026-05-05
-    next_review_at: 2026-08-03
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-11
     volatility: high
-    confidence: medium
+    confidence: high
   watch_out_for:
-    value: "Non-Tier-1 canonical profile: verify current pricing, usage limits, data policy, and integration details before procurement"
+    value: "Standard $50/mo minimum dominates small workloads, HIPAA is a $190/mo add-on on Standard, and Enterprise carries a $500/mo floor before usage. Re-indexing on model changes and inference/Assistant token usage are easy to under-budget."
     source: "https://www.pinecone.io/pricing/"
     source_label: "Pinecone pricing"
     source_id: pinecone-official
-    verified_at: 2026-05-05
-    next_review_at: 2026-08-03
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-11
     volatility: high
-    confidence: medium
+    confidence: high
 tags: [vector-database, rag, semantic-search, hybrid-search, retrieval, embeddings, enterprise-search]
-seo_title: "Pinecone Review: Vector Database, RAG & Pricing (2026)"
+seo_title: "Pinecone Review: Vector Database, RAG & Pricing (May 2026)"
 meta_description: "Pinecone is a managed vector database for semantic search, hybrid search, retrieval augmented generation, recommendations, and production AI retrieval."
 author: aipedia.wiki Editorial
 best_for:
@@ -90,11 +90,10 @@ The product is strongest when retrieval is a core feature, not a side table.
 | **Core product** | Managed vector database |
 | **Use cases** | RAG, semantic search, hybrid search, recommendations |
 | **Architecture** | Serverless on-demand plus dedicated read nodes |
-| **Free plan** | Starter tier for trying out and small applications |
-| **Builder plan** | Flat monthly plan for solo developers and small teams |
-| **Standard plan** | Monthly minimum usage plus pay-as-you-go for production applications |
-| **Enterprise plan** | Higher minimum usage, SLA, private networking, audit logs, and enterprise controls |
-| **Enterprise features** | SSO, RBAC, backups, support, compliance add-ons |
+| **Starter (Free)** | Up to 5 indexes, 2GB storage, 2M write / 1M read units per month, dense + sparse + full-text, Discord support |
+| **Builder ($20/mo flat)** | Up to 10 indexes per project, multiple projects/users, Prometheus and Datadog monitoring, 1M Assistant tokens per month (promo through June 30, 2026) |
+| **Standard ($50/mo minimum)** | Pay-as-you-go beyond floor, up to 20 indexes, Dedicated Read Nodes, backups, restore, RBAC, SAML SSO, HIPAA add-on $190/mo, $300 credits on 3-week trial |
+| **Enterprise ($500/mo minimum)** | 99.95% uptime SLA, private networking, customer-managed encryption, audit logs, admin APIs, service accounts, Pro support included |
 | **Best fit** | Production retrieval workloads |
 
 ## When to pick Pinecone
@@ -115,12 +114,12 @@ The product is strongest when retrieval is a core feature, not a side table.
 
 ## Pricing
 
-As verified on 2026-05-05, Pinecone lists four plans:
+As verified on 2026-05-13, Pinecone lists four plans:
 
-- **Starter:** free, for trying out and small applications.
-- **Builder:** $20/month flat plan for solo developers and small teams.
-- **Standard:** $50/month minimum usage, then pay-as-you-go for production applications.
-- **Enterprise:** $500/month minimum usage, with SLA, private networking, audit logs, service accounts, admin APIs, and enterprise controls.
+- **Starter:** free. Up to 5 indexes, 2GB storage, 2M write units and 1M read units per month, dense plus sparse plus full-text indexes, community Discord support.
+- **Builder:** $20/month flat. Everything in Starter, up to 10 indexes per project, multiple projects and users, Prometheus and Datadog monitoring, and a 1M Assistant tokens per month promo running through June 30, 2026.
+- **Standard:** $50/month minimum, then pay-as-you-go. Up to 20 indexes per project, Dedicated Read Nodes, backup and restore, RBAC, SAML SSO, plus a HIPAA add-on at $190/month. New accounts get a 3-week trial with $300 in credits.
+- **Enterprise:** $500/month minimum. Adds a 99.95% uptime SLA, private networking, customer-managed encryption, audit logs, service accounts, admin APIs, and Pro support included.
 
 Usage can include database storage, write units, read units, import, backups, restore, Assistant storage and tokens, inference embeddings, reranking, and Dedicated Read Nodes. The economics are best when vector retrieval is valuable enough to justify a specialized service. For small or low-volume projects, the monthly minimum can dominate.
 
@@ -152,7 +151,7 @@ Before choosing Pinecone, test retrieval quality and cost together:
 
 ## Methodology
 
-Last verified 2026-05-05 against Pinecone pricing and cost documentation. Scoring emphasizes production utility, maturity, cost tradeoffs, and alternatives like pgvector.
+Last verified 2026-05-13 against Pinecone pricing and cost documentation. Scoring emphasizes production utility, maturity, cost tradeoffs, and alternatives like pgvector.
 
 ## FAQ
 

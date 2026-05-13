@@ -10,10 +10,10 @@ pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2025
-last_updated: 2026-05-07
-last_verified: 2026-05-07
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
-seo_title: "Kiro: Features, Pricing & Review (April 2026)"
+seo_title: "Kiro: Features, Pricing & Review (May 2026)"
 meta_description: "Kiro is a spec-driven agentic IDE and CLI. Free includes 50 credits; Pro is $20/mo with 1,000 credits; Pro+ is $40/mo with 2,000 credits; Power is $200/mo with 10,000 credits."
 author: aipedia.wiki Editorial
 affiliate:
@@ -33,22 +33,22 @@ facts:
     source: "https://kiro.dev/"
     source_label: "Kiro homepage"
     source_id: kiro-coding-agent
-    verified_at: 2026-04-28
+    verified_at: 2026-05-13
     confidence: high
   best_paid_tier:
     value: "Pro ($20/month) for regular use; Pro+ ($40/month) if specs/hooks consume credits quickly"
     source: "https://kiro.dev/pricing/"
     source_label: "Kiro pricing"
     source_id: kiro-best-paid-tier
-    verified_at: 2026-04-28
-    next_review_at: 2026-06-03
+    verified_at: 2026-05-13
+    next_review_at: 2026-07-15
     confidence: high
   best_for:
     value: "Complex feature and bugfix work where requirements, design, tasks, and tests need to stay traceable"
     source: "https://kiro.dev/docs/specs/"
     source_label: "Kiro specs docs"
     source_id: kiro-best-for
-    verified_at: 2026-04-28
+    verified_at: 2026-05-13
     confidence: high
 tags: [ai-coding, ai-ide, coding-agent, spec-driven-development, cli, mcp, vscode-compatible]
 best_for:
@@ -91,6 +91,13 @@ price_history:
     source_label: "Source"
     source_id: kiro-best-paid-tier
     note: "Verified on kiro.dev/pricing"
+  - date: 2026-05-13
+    plan: "All tiers"
+    price: "Unchanged"
+    source: "https://kiro.dev/pricing/"
+    source_label: "Source"
+    source_id: kiro-best-paid-tier
+    note: "Reverified 2026-05-13. Free/Pro/Pro+/Power and overage at $0.04/credit unchanged."
 ---
 
 # Kiro
@@ -101,7 +108,7 @@ Kiro is compatible with Open VSX plugins, themes, and VS Code settings. It suppo
 
 The product is built around a sharp editorial stance: vibe coding is useful for exploration, but production work needs a spec. Kiro's specs create `requirements.md` or `bugfix.md`, `design.md`, and `tasks.md`; steering files carry project conventions; hooks automate routine agent actions around file saves, prompts, tool calls, and task execution.
 
-> **May 6, 2026:** [ServiceNow and AWS linked AI Control Tower, Bedrock AgentCore, and Kiro](/news/2026-05-06-servicenow-aws-agentcore-kiro-integration/). The integration gives Kiro a governed ServiceNow app-development path for mutual AWS and ServiceNow customers.
+> **May 6, 2026:** [ServiceNow and AWS linked AI Control Tower, Bedrock AgentCore, and Kiro](/news/2026-05-06-servicenow-aws-agentcore-kiro-integration/). The integration gives Kiro a governed ServiceNow app-development path for mutual AWS and ServiceNow customers, with shared identity, policy, and audit controls flowing through AgentCore.
 
 ## System Verdict
 
@@ -188,7 +195,7 @@ Credits are consumed by prompts in vibe mode or spec mode, spec refinement, task
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-05-07 against primary Kiro sources.
+This page was produced by the aipedia.wiki editorial pipeline. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-05-13 against primary Kiro sources and the [May 6 ServiceNow + AWS AgentCore + Kiro integration coverage](/news/2026-05-06-servicenow-aws-agentcore-kiro-integration/).
 
 ## FAQ
 

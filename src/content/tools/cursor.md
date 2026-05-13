@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2023-03
-last_updated: 2026-05-07
-last_verified: 2026-05-07
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://cursor.com/docs/models"
     source_label: "Cursor model docs"
     source_id: cursor-model-docs
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
     next_review_at: 2026-06-03
@@ -39,7 +39,7 @@ facts:
     source: "https://cursor.com/docs/models"
     source_label: "Cursor model docs"
     source_id: cursor-model-docs
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
     next_review_at: 2026-06-03
@@ -48,16 +48,16 @@ facts:
     source: "https://cursor.com/pricing"
     source_label: "Cursor pricing"
     source_id: cursor-pricing
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
     next_review_at: 2026-06-03
   free_plan:
-    value: "Yes — Hobby tier with limited completions and requests"
+    value: "Yes. Hobby tier with limited completions and requests"
     source: "https://cursor.com/pricing"
     source_label: "Cursor pricing"
     source_id: cursor-pricing
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
     next_review_at: 2026-06-03
@@ -66,7 +66,7 @@ facts:
     source: "https://cursor.com/pricing"
     source_label: "Cursor pricing"
     source_id: cursor-pricing
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
     next_review_at: 2026-06-03
@@ -75,7 +75,7 @@ facts:
     source: "https://cursor.com/docs/models"
     source_label: "Cursor model docs"
     source_id: cursor-model-docs
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
   image_generation:
@@ -83,7 +83,7 @@ facts:
     source: "https://cursor.com"
     source_label: "Cursor product page"
     source_id: cursor-docs
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: low
     confidence: high
   video_generation:
@@ -91,7 +91,7 @@ facts:
     source: "https://cursor.com"
     source_label: "Cursor product page"
     source_id: cursor-docs
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: low
     confidence: high
   real_time_voice:
@@ -99,15 +99,15 @@ facts:
     source: "https://cursor.com"
     source_label: "Cursor product page"
     source_id: cursor-docs
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: low
     confidence: high
   web_browsing:
-    value: "Limited — Cursor is codebase/editor-centered rather than a general web-browsing assistant"
+    value: "Limited. Cursor is codebase/editor-centered rather than a general web-browsing assistant"
     source: "https://cursor.com/docs"
     source_label: "Cursor documentation"
     source_id: cursor-docs
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
   coding_agent:
@@ -115,7 +115,7 @@ facts:
     source: "https://cursor.com/changelog/2-0"
     source_label: "Cursor 3 release coverage"
     source_id: company-newsrooms
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
     next_review_at: 2026-06-03
@@ -124,7 +124,7 @@ facts:
     source: "https://cursor.com/pricing"
     source_label: "Cursor pricing"
     source_id: cursor-pricing
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
     next_review_at: 2026-06-03
@@ -133,15 +133,15 @@ facts:
     source: "https://cursor.com/docs"
     source_label: "Cursor documentation"
     source_id: cursor-docs
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
   open_source_or_local:
-    value: "No — Cursor is a proprietary VS Code fork"
+    value: "No. Cursor is a proprietary VS Code fork"
     source: "https://cursor.com"
     source_label: "Cursor product page"
     source_id: cursor-docs
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: low
     confidence: high
   best_for:
@@ -149,7 +149,7 @@ facts:
     source: "https://cursor.com"
     source_label: "Cursor product page"
     source_id: cursor-docs
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
   watch_out_for:
@@ -157,12 +157,12 @@ facts:
     source: "https://cursor.com/pricing"
     source_label: "Cursor pricing"
     source_id: cursor-pricing
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
     next_review_at: 2026-06-03
 tags: [code-editor, ide, autocomplete, ai-coding, vscode-fork, agentic-coding, cloud-agents, mcp, composer, claude-opus-4-7]
-seo_title: "Cursor: Features, Pricing & Review (April 2026)"
+seo_title: "Cursor: Features, Pricing & Review (May 2026)"
 meta_description: "Cursor is an AI-native VS Code fork. Claude Opus 4.7 added at launch (April 16, 2026). Cursor 3.0 (April 2, 2026) ships the Agents Window with Cloud Agents, Design Mode, and parallel agent orchestration. Hobby free; Pro $20; Pro+ $60; Ultra $200; Teams $40/user."
 author: "aipedia.wiki Editorial"
 best_for:
@@ -175,8 +175,15 @@ not_best_for:
   - JetBrains, Vim/Neovim, or Zed loyalists
   - extremely budget-conscious users (GitHub Copilot is cheaper)
 quick_answer: >-
-  Cursor is the strongest GUI-first AI IDE in April 2026, built as a VS Code fork with a multi-agent Agents Window. Pick it for parallel agents, Design Mode, and one bill covering Opus 4.7, GPT-5.5, and Gemini 3.1 Pro at API rates. Skip it for CLI agent loops (Claude Code) or budget-tier completions (GitHub Copilot at $10).
+  Cursor is the strongest GUI-first AI IDE in May 2026, built as a VS Code fork with a multi-agent Agents Window. Pick it for parallel agents, Design Mode, and one bill covering Opus 4.7, GPT-5.5, and Gemini 3.1 Pro at API rates. Skip it for CLI agent loops (Claude Code) or budget-tier completions (GitHub Copilot at $10).
 price_history:
+  - date: 2026-05-13
+    plan: "Hobby / Pro / Pro+ / Ultra / Teams / Enterprise"
+    price: "$0 / $20 / $60 / $200 / $40-user / custom"
+    source: "https://cursor.com/pricing"
+    source_label: "Source"
+    source_id: cursor-pricing
+    note: "Verified unchanged; Bugbot now on usage-based billing for Individual plans; Teams adds shared-team-context cloud agents, team rules/skills/automations, security review agent"
   - date: 2026-04-16
     plan: "Pro"
     price: "$20/mo"
@@ -206,6 +213,7 @@ Anysphere's AI-native code editor. A VS Code fork with LLMs wired into autocompl
 
 ## Recent developments
 
+- **May 13, 2026:** Pricing reverified at [cursor.com/pricing](https://cursor.com/pricing). Hobby free, Pro $20, Pro+ $60, Ultra $200, Teams $40/user, Enterprise custom, with Bugbot as a usage-based add-on on Individual plans. Structure unchanged since Cursor 3.0 in April.
 - **May 6, 2026:** [ServiceNow Build Agent reached Cursor and other major AI coding tools](/news/2026-05-06-servicenow-build-agent-coding-tools/). Cursor users building ServiceNow apps can pull platform context into their IDE workflow, but teams should review permissions and deployment approvals before broad rollout.
 - **May 1, 2026:** [The MCP STDIO command-execution flaw made Cursor's MCP layer part of the shell-access threat model](/news/2026-05-03-mcp-stdio-command-execution-flaw/). Cursor users should audit `mcp.json`, disable automatic registration where possible, and sandbox third-party servers.
 - **May 1, 2026:** [Replit argued for independence as Cursor deal talk reshaped AI coding](/news/2026-05-01-replit-cursor-deal-independence/). Cursor's reported SpaceX/xAI acquisition option keeps strategic-owner risk and infrastructure upside central to how enterprises evaluate the IDE.
@@ -223,7 +231,7 @@ Claude Opus 4.7, GPT-5.5, Gemini 3.1 Pro, Grok 4.20, Kimi K2.5, and Cursor's in-
 
 ## System Verdict
 
-> **Pick Cursor if you want the strongest GUI-first AI IDE in April 2026.** Cursor 3.0's Agents Window orchestrates parallel agents across local worktrees, cloud sandboxes, and remote SSH, with Design Mode for clicking on UI elements in a live browser preview and Best-of-N runs for model shoot-outs. Claude Opus 4.7 support hit within minutes of Anthropic's release, and the $20 Pro tier buys API-rate access to every frontier model behind a single bill.
+> **Pick Cursor if you want the strongest GUI-first AI IDE in May 2026.** Cursor 3.0's Agents Window orchestrates parallel agents across local worktrees, cloud sandboxes, and remote SSH, with Design Mode for clicking on UI elements in a live browser preview and Best-of-N runs for model shoot-outs. Claude Opus 4.7 support hit within minutes of Anthropic's release, and the $20 Pro tier buys API-rate access to every frontier model behind a single bill.
 >
 > **Skip it if a CLI agent loop is what you actually want.** Claude Code outmatches Cursor on autonomous terminal workflows, and GitHub Copilot is cheaper ($10/mo) if you're happy with single-file completions on stock VS Code. JetBrains, Vim/Neovim, and Zed users have no path into Cursor. It's a full editor fork, not an extension.
 >
@@ -291,7 +299,7 @@ Model usage inside Cursor is billed at base API rates. Opus 4.7 runs $5 input / 
 
 The 1M-token context is flat-rate with no long-context surcharge. "Auto" mode picks a cheaper model when intelligence isn't the binding constraint.
 
-Prices verified 2026-04-17 via [cursor.com/pricing](https://cursor.com/pricing) and [cursor.com/docs/models](https://cursor.com/docs/models).
+Prices verified 2026-05-13 via [cursor.com/pricing](https://cursor.com/pricing) and [cursor.com/docs/models](https://cursor.com/docs/models). The April 2026 structure is intact: Hobby free, Pro $20, Pro+ $60, Ultra $200, Teams $40/user, Enterprise custom. Bugbot is now on usage-based billing for Individual plans and included on the Enterprise custom plan.
 
 ## Against the alternatives
 
@@ -318,7 +326,7 @@ Prices verified 2026-04-17 via [cursor.com/pricing](https://cursor.com/pricing) 
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, normalizes factual claims, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-07 against [cursor.com/pricing](https://cursor.com/pricing), [cursor.com/docs/models](https://cursor.com/docs/models), the [Cursor changelog](https://cursor.com/changelog), the [Cursor 2.0 release notes](https://cursor.com/changelog/2-0), and the [Claude Opus 4.7 Cursor docs page](https://cursor.com/docs/models/claude-opus-4-7).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, normalizes factual claims, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against [cursor.com/pricing](https://cursor.com/pricing), [cursor.com/docs/models](https://cursor.com/docs/models), the [Cursor changelog](https://cursor.com/changelog), the [Cursor 2.0 release notes](https://cursor.com/changelog/2-0), and the [Claude Opus 4.7 Cursor docs page](https://cursor.com/docs/models/claude-opus-4-7).
 
 ## FAQ
 

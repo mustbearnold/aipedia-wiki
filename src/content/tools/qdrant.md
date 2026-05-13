@@ -12,8 +12,8 @@ pricing_model: open-source
 price_range: Free self-host; Qdrant Cloud priced by CPU, memory, and disk usage
 status: active
 launched: 2021
-last_updated: 2026-05-05
-last_verified: 2026-05-05
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -32,7 +32,7 @@ facts:
     source: "https://qdrant.tech/documentation/"
     source_label: "Qdrant documentation"
     source_id: qdrant-best-for
-    verified_at: 2026-05-05
+    verified_at: 2026-05-13
     next_review_at: 2026-06-03
     confidence: high
   best_paid_tier:
@@ -40,17 +40,17 @@ facts:
     source: "https://qdrant.tech/documentation/cloud-pricing-payments/"
     source_label: "Qdrant Cloud billing"
     source_id: qdrant-best-paid-tier
-    verified_at: 2026-05-05
+    verified_at: 2026-05-13
     next_review_at: 2026-06-03
     confidence: high
   best_for:
     value: "Open-source vector search, metadata filtering, RAG retrieval, and self-hostable AI infrastructure"
     source: "https://qdrant.tech/documentation/"
     source_id: qdrant-best-for
-    verified_at: 2026-05-05
+    verified_at: 2026-05-13
     confidence: high
 tags: [vector-database, open-source, rust, rag, semantic-search, retrieval, embeddings]
-seo_title: "Qdrant Review: Open-Source Vector Database & Cloud Pricing (2026)"
+seo_title: "Qdrant Review: Open-Source Vector Database & Cloud Pricing (May 2026)"
 meta_description: "Qdrant is an open-source Rust vector database with managed cloud options for RAG, semantic search, payload filtering, and AI retrieval workloads."
 author: aipedia.wiki Editorial
 best_for:
@@ -123,7 +123,7 @@ Self-hosting Qdrant is free apart from infrastructure costs. Qdrant Cloud prices
 
 For small projects, self-hosting or pgvector may be cheaper. For production teams that value managed operations, Qdrant Cloud removes database maintenance work.
 
-As verified on 2026-05-05, Qdrant's cloud billing docs emphasize resource-shaped pricing rather than a simple per-query SaaS plan. That means teams should model cluster size, replicas, disk storage, snapshots, traffic patterns, and marketplace billing before procurement.
+As verified on 2026-05-13, Qdrant's cloud billing docs emphasize resource-shaped pricing rather than a simple per-query SaaS plan, with credit card billing through Stripe or AWS, GCP, and Azure marketplace subscriptions billed at $0.01 per Resource Usage Unit. That means teams should model cluster size, replicas, disk storage, snapshots, traffic patterns, and marketplace billing before procurement.
 
 ## Evaluation checklist
 
@@ -154,7 +154,7 @@ It is weaker when the buyer expects a finished knowledge product. Qdrant will no
 
 ## Methodology
 
-Last verified 2026-05-05 against Qdrant documentation, cloud billing docs, and GitHub. Scoring weighs open-source value, retrieval utility, cloud path, and platform breadth.
+Last verified 2026-05-13 against Qdrant documentation, cloud billing docs, and GitHub. Scoring weighs open-source value, retrieval utility, cloud path, and platform breadth.
 
 ## FAQ
 

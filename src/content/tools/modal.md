@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: Starter $0 with $30/mo credits; Team $250/mo plus compute; GPU billed per second
 status: active
 launched: 2021
-last_updated: 2026-05-05
-last_verified: 2026-05-05
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,27 +31,27 @@ facts:
     source: "https://modal.com/pricing"
     source_label: "Modal pricing"
     source_id: modal-official
-    verified_at: 2026-05-05
+    verified_at: 2026-05-13
     volatility: medium
-    confidence: medium
+    confidence: high
   pricing_anchor:
-    value: "Pricing should be checked on the current Modal source before purchase; AIpedia has not promoted this page to a full Tier 1 pricing profile yet"
+    value: "Starter $0/mo with $30/mo credits and 100 containers / 10 GPU concurrency; Team $250/mo with $100/mo credits and 1,000 containers / 50 GPU concurrency; Enterprise custom. GPU billed per second by class (B200 $0.001736/sec, H200 $0.001261/sec, H100 $0.001097/sec, A100 80GB $0.000694/sec, L4 $0.000222/sec, T4 $0.000164/sec). Region selection adds 1.5x to 1.75x and non-preemptible execution adds 3x."
     source: "https://modal.com/pricing"
     source_label: "Modal pricing"
     source_id: modal-official
-    verified_at: 2026-05-05
-    next_review_at: 2026-08-03
-    volatility: high
-    confidence: medium
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
+    volatility: medium
+    confidence: high
   watch_out_for:
-    value: "Non-Tier-1 canonical profile: verify current pricing, usage limits, data policy, and integration details before procurement"
+    value: "Region selection multipliers (1.5x to 1.75x) and non-preemptible execution (3x base) can materially change production cost; benchmark steady GPU workloads against reserved cloud capacity before migrating from RunPod, Lambda Labs, or AWS."
     source: "https://modal.com/pricing"
     source_label: "Modal pricing"
     source_id: modal-official
-    verified_at: 2026-05-05
-    next_review_at: 2026-08-03
-    volatility: high
-    confidence: medium
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
+    volatility: medium
+    confidence: high
 tags: [serverless, gpu-cloud, python, inference, jobs, web-endpoints, ai-infrastructure]
 seo_title: "Modal Review: Serverless GPU Cloud & Pricing (2026)"
 meta_description: "Modal is a serverless Python and GPU cloud for AI apps, batch jobs, inference endpoints, queues, and sandboxes, with per-second compute pricing."
@@ -93,10 +93,12 @@ The useful mental model: write Python, decorate functions, attach CPU/GPU/memory
 |---|---|
 | **Core product** | Serverless Python and GPU cloud |
 | **Workloads** | Functions, batch jobs, queues, web endpoints, sandboxes |
-| **GPU pricing** | Per-second billing by GPU class |
-| **Starter** | Free plan with $30/month compute credits |
-| **Team** | $250/month workspace plan with $100/month compute credits |
+| **GPU pricing** | Per-second billing by class (B200 $0.001736/sec, H200 $0.001261/sec, H100 $0.001097/sec, RTX PRO 6000 $0.000842/sec, A100 80GB $0.000694/sec, A100 40GB $0.000583/sec, L40S $0.000542/sec, A10 $0.000306/sec, L4 $0.000222/sec, T4 $0.000164/sec) |
+| **CPU / memory** | $0.0000131 per core/sec, $0.00000222 per GiB/sec |
+| **Starter** | $0/mo with $30/mo compute credits, 100 containers, 10 GPU concurrency |
+| **Team** | $250/mo workspace plan with $100/mo compute credits, 1,000 containers, 50 GPU concurrency |
 | **Enterprise** | Custom plan with higher concurrency, support, audit logs, SSO, and HIPAA compatibility |
+| **Surcharges** | Region selection 1.5x to 1.75x base; non-preemptible 3x base |
 | **Best fit** | AI apps, pipelines, inference, internal tools |
 | **Alternatives** | RunPod, Lambda Labs, AWS Batch, Kubernetes, [Together AI](/tools/together-ai/) |
 
@@ -117,11 +119,13 @@ The useful mental model: write Python, decorate functions, attach CPU/GPU/memory
 
 ## Pricing
 
-Modal bills compute by actual resource usage. GPU prices are listed per second by GPU type, including options such as T4, L4, A10, L40S, A100, H100, H200, B200, and RTX PRO 6000. CPU, memory, volumes, sandboxes, and notebooks have separate meters. The Starter plan includes $30/month in compute credits, while Team is $250/month plus compute and includes $100/month in compute credits.
+Modal bills compute by actual resource usage. GPU prices are listed per second by class, with B200 at $0.001736/sec, H200 at $0.001261/sec, H100 at $0.001097/sec, RTX PRO 6000 at $0.000842/sec, A100 80GB at $0.000694/sec, A100 40GB at $0.000583/sec, L40S at $0.000542/sec, A10 at $0.000306/sec, L4 at $0.000222/sec, and T4 at $0.000164/sec. CPU is $0.0000131 per core per second and memory $0.00000222 per GiB per second. Volumes, sandboxes, and notebooks have separate meters.
+
+The Starter plan is $0/mo with $30/mo in compute credits, 100 containers, and 10 GPU concurrency. Team is $250/mo plus compute, includes $100/mo in compute credits, and lifts caps to 1,000 containers and 50 GPU concurrency.
 
 This is attractive for bursty jobs. For constant GPU load, compare against reserved instances before committing.
 
-As verified on 2026-05-05, Modal's pricing page also notes regional execution can cost 1.5x to 1.75x base prices and non-preemptible execution can cost 3x base prices. Those multipliers matter for production inference, customer-facing latency, and workloads that cannot tolerate interruption.
+As verified on 2026-05-13, Modal's pricing page also notes regional execution can cost 1.5x to 1.75x base prices and non-preemptible execution can cost 3x base prices. Those multipliers matter for production inference, customer-facing latency, and workloads that cannot tolerate interruption.
 
 ## Evaluation checklist
 
@@ -152,7 +156,7 @@ It is weaker for organizations that already have a mature Kubernetes platform, n
 
 ## Methodology
 
-Last verified 2026-05-05 against Modal's pricing and product documentation. Scoring emphasizes developer experience, fit for AI workloads, GPU flexibility, and cost risk.
+Last verified 2026-05-13 against [Modal's pricing page](https://modal.com/pricing) and product documentation, with GPU per-second rates, container caps, and surcharge multipliers confirmed for Starter and Team tiers. Scoring emphasizes developer experience, fit for AI workloads, GPU flexibility, and cost risk.
 
 ## FAQ
 

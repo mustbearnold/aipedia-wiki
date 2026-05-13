@@ -12,8 +12,8 @@ pricing_model: open-source
 price_range: Free self-host; 14-day cloud trial; Flex from $45/mo; Premium from $400/mo; add-ons usage-based
 status: active
 launched: 2019
-last_updated: 2026-05-05
-last_verified: 2026-05-05
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -32,22 +32,30 @@ facts:
     source: "https://weaviate.io/developers/weaviate"
     source_label: "Weaviate documentation"
     source_id: weaviate-best-for
-    verified_at: 2026-05-05
-    next_review_at: 2026-06-03
+    verified_at: 2026-05-13
+    next_review_at: 2026-06-13
     confidence: high
   best_paid_tier:
-    value: "Weaviate Cloud when managed service, scaling, and support matter"
+    value: "Weaviate Cloud Premium ($400/mo starting) when managed service, dedicated deployment, 99.95% uptime, and 1-hour Sev 1 response matter; Flex ($45/mo) for low-commit shared-cloud entry"
     source: "https://weaviate.io/pricing"
     source_label: "Weaviate pricing"
     source_id: weaviate-best-paid-tier
-    verified_at: 2026-05-05
-    next_review_at: 2026-06-03
+    verified_at: 2026-05-13
+    next_review_at: 2026-06-13
     confidence: high
   best_for:
     value: "Hybrid search, RAG, metadata filtering, multi-tenancy, and open-source vector infrastructure"
     source: "https://weaviate.io/developers/weaviate"
     source_id: weaviate-best-for
-    verified_at: 2026-05-05
+    verified_at: 2026-05-13
+    confidence: high
+  add_ons:
+    value: "Weaviate Embeddings $0.025 to $0.065 per MTok by model; Query Agent $30/org/mo with 4,000 included requests plus usage-based overage"
+    source: "https://weaviate.io/pricing"
+    source_label: "Weaviate pricing"
+    source_id: weaviate-add-ons
+    verified_at: 2026-05-13
+    next_review_at: 2026-06-13
     confidence: high
 tags: [vector-database, open-source, rag, semantic-search, hybrid-search, embeddings, retrieval]
 seo_title: "Weaviate Review: Open-Source Vector Database & Cloud Pricing (2026)"
@@ -72,6 +80,10 @@ Weaviate is an open-source vector database with a managed cloud service. It is b
 
 It competes with [Pinecone](/tools/pinecone/), [Qdrant](/tools/qdrant/), Milvus, Chroma, and Postgres plus pgvector.
 
+## Recent developments
+
+- **May 13, 2026:** Pricing reverified at [weaviate.io/pricing](https://weaviate.io/pricing). Flex starts at $45/mo, Premium at $400/mo, 14-day trial unchanged. Add-ons confirmed: Weaviate Embeddings priced $0.025 to $0.065 per MTok depending on model; Query Agent at $30/org/mo with 4,000 included requests and usage-based pricing for additional requests.
+
 ## System Verdict
 
 > **Pick Weaviate if you want an open vector database with a mature cloud path.** It is one of the strongest choices when self-hosting optionality and managed operations both matter.
@@ -90,6 +102,8 @@ It competes with [Pinecone](/tools/pinecone/), [Qdrant](/tools/qdrant/), Milvus,
 | **Search modes** | Vector, keyword, hybrid, filters |
 | **AI services** | Embeddings and query agent features in cloud plans |
 | **Cloud plans** | 14-day trial, Flex from $45/month, Premium from $400/month |
+| **Cloud uptime SLAs** | Flex 99.5% · Premium up to 99.95%, 1-hour Severity 1 response |
+| **Add-ons** | Weaviate Embeddings $0.025 to $0.065/MTok · Query Agent $30/org/mo with 4,000 requests included |
 | **Pricing** | Free self-host plus paid cloud plans |
 | **Best fit** | Teams wanting control plus managed upgrade path |
 
@@ -119,11 +133,11 @@ Compare it directly with [Qdrant](/tools/qdrant/) and [Pinecone](/tools/pinecone
 
 ## Pricing
 
-Weaviate can be self-hosted for free. As verified on 2026-05-05, Weaviate Cloud offers a 14-day free trial, Flex from $45/month, and Premium from $400/month. Pricing dimensions include vector dimensions, storage, backup, index type, compression, region, and cloud plan. Flex is a shared-cloud pay-as-you-go plan; Premium adds predictable spend, enhanced reliability, support, and dedicated-deployment options.
+Weaviate can be self-hosted for free. As verified on 2026-05-13, Weaviate Cloud offers a 14-day free trial, Flex from $45/month (shared cloud, 99.5% uptime, email support with next-business-day response), and Premium from $400/month (shared or dedicated, up to 99.95% uptime, 1-hour Sev 1 response, enterprise support with a Technical Account Team). Pricing dimensions include vector dimensions, storage, backup, index type, compression, region, and cloud plan. Flex is a shared-cloud pay-as-you-go plan; Premium adds predictable spend, enhanced reliability, support, and dedicated-deployment options.
 
 The practical advice: use the calculator before migration, and compare against pgvector if your index is small.
 
-Weaviate also lists add-ons such as hosted embeddings and Query Agent. Query Agent has a monthly organization plan with included requests plus usage-based additional requests. These are useful, but they mean the full bill can include database, backup, AI service, support, and agent usage rather than only vector storage.
+Weaviate lists two paid add-ons. **Weaviate Embeddings** is hosted embedding generation priced $0.025 to $0.065 per 1M tokens depending on model. **Query Agent** is a monthly $30/organization plan with 4,000 included requests plus usage-based pricing for additional requests. These are useful, but they mean the full bill can include database, backup, AI service, support, and agent usage rather than only vector storage.
 
 ## Evaluation checklist
 
@@ -145,7 +159,7 @@ Weaviate also lists add-ons such as hosted embeddings and Query Agent. Query Age
 
 ## Methodology
 
-Last verified 2026-05-05 against Weaviate pricing, cloud, and GitHub documentation. Scoring reflects open-source leverage, feature depth, cloud maturity, and operational complexity.
+Last verified 2026-05-13 against [weaviate.io/pricing](https://weaviate.io/pricing), [Weaviate documentation](https://weaviate.io/developers/weaviate), and the [Weaviate GitHub](https://github.com/weaviate/weaviate). Scoring reflects open-source leverage, feature depth, cloud maturity, and operational complexity.
 
 ## FAQ
 

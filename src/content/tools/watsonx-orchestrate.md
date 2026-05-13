@@ -11,8 +11,8 @@ pricing_model: enterprise
 price_range: Custom enterprise pricing
 status: active
 launched: 2023
-last_updated: 2026-05-06
-last_verified: 2026-05-06
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,34 +31,34 @@ facts:
     source: "https://www.ibm.com/new/announcements/manage-all-your-ai-agents-in-one-place-with-watsonx-orchestrate"
     source_label: "IBM announcement"
     source_id: ibm-watsonx-orchestrate-announcement
-    verified_at: 2026-05-06
+    verified_at: 2026-05-13
     volatility: medium
     confidence: medium
     next_review_at: 2026-08-06
   pricing_anchor:
-    value: "Enterprise packaging; contract terms depend on IBM stack adoption, agent enrollment scope, and governance needs."
+    value: "Enterprise packaging; contract terms depend on IBM stack adoption, agent enrollment scope, and governance needs. No public self-serve price."
     source: "https://www.ibm.com/watsonx"
     source_label: "IBM watsonx portfolio"
     source_id: ibm-watsonx-portfolio
-    verified_at: 2026-05-06
+    verified_at: 2026-05-13
     volatility: high
     confidence: medium
     next_review_at: 2026-08-06
   enterprise_controls:
-    value: "Yes — positioned explicitly around shared policy, visibility, and accountability for multi-agent deployments."
+    value: "Yes. The May 5, 2026 Think announcement positions Orchestrate next-generation as an agentic control plane in private preview, deploying agents from heterogeneous sources under shared policy, visibility, and accountability."
     source: "https://www.ibm.com/new/announcements/manage-all-your-ai-agents-in-one-place-with-watsonx-orchestrate"
     source_label: "IBM announcement"
     source_id: ibm-watsonx-orchestrate-announcement
-    verified_at: 2026-05-06
+    verified_at: 2026-05-13
     volatility: high
     confidence: medium
     next_review_at: 2026-06-06
   watch_out_for:
-    value: "Think 2026 materials bundle preview and GA items. Validate which Orchestrate features are available (preview vs GA), which runtimes can enroll first, and what audit artifacts look like in failures."
+    value: "Think 2026 bundled Orchestrate with Concert (public preview), Sovereign Core (GA), IBM Bob (GA), and Confluent-linked watsonx.data features (private preview). Validate which Orchestrate features are GA versus private preview, which runtimes can enroll first, and what audit artifacts look like in failures before contracting."
     source: "https://www.prnewswire.com/news-releases/think-2026-ibm-delivers-the-blueprint-for-the-ai-operating-model-as-the-ai-divide-widens-302762136.html"
     source_label: "IBM Think 2026 press release"
     source_id: ibm-think-2026-prnewswire
-    verified_at: 2026-05-06
+    verified_at: 2026-05-13
     volatility: high
     confidence: medium
     next_review_at: 2026-06-06
@@ -83,7 +83,8 @@ watsonx Orchestrate is IBM's orchestration and governance layer for enterprise a
 
 ## Recent developments (May 2026)
 
-- **May 5:** [IBM Think 2026 pushes watsonx Orchestrate as a multi-agent control plane](/news/2026-05-05-ibm-think-2026-watsonx-agent-orchestration/).
+- **May 13, 2026:** Page reverified. Think 2026 announcements remain the load-bearing signal; no further GA notices in the week since launch, and IBM still has not published self-serve pricing.
+- **May 5, 2026:** [IBM Think 2026 in Boston unveiled the next-generation watsonx Orchestrate as an agentic control plane](/news/2026-05-05-ibm-think-2026-watsonx-agent-orchestration/). The release bundles Orchestrate (private preview), Concert AI-assisted operations (public preview), IBM Sovereign Core (GA), IBM Bob coding/delivery assistant (GA), and expanded real-time data context via Confluent-linked streaming and watsonx.data features (private preview). The framing pitches enterprise AI as an operating-model problem rather than a model-leaderboard one, targeting organizations that have moved from one pilot agent to many agents built by different teams on different stacks.
 
 ## Who should shortlist it
 
@@ -129,5 +130,9 @@ There is no simple public self-serve price to optimize around. Treat the price a
 
 > **Pick Orchestrate if multi-agent governance is your bottleneck.** The value is policy, enrollment, and audit across agents that otherwise ship as disconnected pilots.
 >
-> **Treat “private preview” claims as roadmap signals.** Contract for what is GA and define evaluation criteria for preview features before relying on them for rollout dates.
+> **Treat "private preview" claims as roadmap signals.** Contract for what is GA and define evaluation criteria for preview features before relying on them for rollout dates.
+
+## Methodology
+
+Last verified 2026-05-13 against the [IBM Think 2026 press release](https://www.prnewswire.com/news-releases/think-2026-ibm-delivers-the-blueprint-for-the-ai-operating-model-as-the-ai-divide-widens-302762136.html), the [IBM Orchestrate announcement page](https://www.ibm.com/new/announcements/manage-all-your-ai-agents-in-one-place-with-watsonx-orchestrate), and the [IBM watsonx portfolio](https://www.ibm.com/watsonx). Scoring weighs governance value, IBM enterprise reach, opacity of preview-vs-GA scope, and pricing uncertainty without self-serve disclosure.
 

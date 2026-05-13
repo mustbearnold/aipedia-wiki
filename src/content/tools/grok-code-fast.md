@@ -2,20 +2,21 @@
 type: tool
 slug: grok-code-fast
 title: Grok Code Fast 1
-tagline: xAI's speedy, economical reasoning model for agentic coding and developer workflows.
+tagline: xAI's speedy, economical reasoning model for agentic coding. Scheduled for retirement on May 15, 2026; xAI directs users to Grok 4.3 and GitHub Copilot is removing it on the same date.
 category: ai-coding
 secondary_categories: [ai-chatbots]
 company: xai
 url: https://x.ai
 pricing_model: paid
-price_range: "$0.20/M input tokens, $1.50/M output tokens, $0.02/M cached input tokens via xAI API"
-status: active
+price_range: "Deprecated May 15, 2026 (xAI API). Final published rates: $0.20/M input, $1.50/M output, $0.02/M cached input. xAI directs users to Grok 4.3 for coding."
+status: deprecated
 launched: 2025-08
-last_updated: 2026-05-05
-last_verified: 2026-05-05
+deprecated_on: 2026-05-15
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
-seo_title: "Grok Code Fast 1: Features, Pricing & Review (2026)"
-meta_description: "Grok Code Fast 1 is xAI's low-latency coding model for code agents, IDE integrations, and test-fix loops where fast iteration matters."
+seo_title: "Grok Code Fast 1: Retirement, Pricing & Migration (May 2026)"
+meta_description: "Grok Code Fast 1 is xAI's coding model, retiring on the xAI API and across GitHub Copilot on May 15, 2026. xAI directs coding users to Grok 4.3; Copilot suggests GPT-5 mini or Claude Haiku 4.5."
 author: "aipedia.wiki Editorial"
 affiliate:
   has_program: false
@@ -24,118 +25,139 @@ affiliate:
   network: null
   link: null
 scores:
-  utility: 8
-  value: 7
-  moat: 7
-  longevity: 8
+  utility: 6
+  value: 6
+  moat: 5
+  longevity: 3
 facts:
   coding_agent:
-    value: "Coding-specialized model for agentic developer workflows"
-    source: "https://x.ai"
-    source_label: "xAI website"
+    value: "Coding-specialized model for agentic developer workflows. Scheduled for retirement on the xAI API on May 15, 2026; xAI recommends Grok 4.3 for new coding work."
+    source: "https://docs.x.ai/docs/models"
+    source_label: "xAI model docs"
     source_id: grok-code-fast-best-for
-    verified_at: 2026-05-05
+    verified_at: 2026-05-13
+    next_review_at: 2026-06-13
+    volatility: high
     confidence: high
   best_for:
-    value: "Low-latency code generation, agent loops, and developer-tool integrations"
-    source: "https://x.ai"
+    value: "Migration planning only. Existing coding loops using Grok Code Fast 1 should be moved to Grok 4.3 (via xAI), GPT-5 mini, Claude Haiku 4.5, or another supported model before May 15, 2026."
+    source: "https://docs.x.ai/docs/models"
+    source_label: "xAI model docs"
     source_id: grok-code-fast-best-for
-    verified_at: 2026-05-05
+    verified_at: 2026-05-13
+    next_review_at: 2026-06-13
+    volatility: high
     confidence: high
   flagship_model:
-    value: "Grok Code Fast"
-    source: "https://x.ai"
+    value: "Grok Code Fast 1 (retiring May 15, 2026). For ongoing coding work xAI directs users to Grok 4.3; GitHub Copilot lists GPT-5 mini and Claude Haiku 4.5 as in-product alternatives."
+    source: "https://github.blog/changelog/2026-05-08-upcoming-deprecation-of-grok-code-fast-1/"
+    source_label: "GitHub Copilot deprecation notice"
     source_id: grok-code-fast-best-for
-    verified_at: 2026-05-05
-    next_review_at: 2026-06-03
+    verified_at: 2026-05-13
+    next_review_at: 2026-06-13
+    volatility: high
     confidence: high
-tags: [coding, code-model, xai, grok, developer-tools, agentic-coding, low-latency]
+  pricing_anchor:
+    value: "Final published xAI API pricing before retirement: $0.20/M input tokens, $1.50/M output tokens, $0.02/M cached input tokens. The model leaves the xAI API on May 15, 2026 with no continued listing on the live pricing surface; Grok 4.3 is the recommended replacement."
+    source: "https://docs.x.ai/docs/models"
+    source_label: "xAI model docs"
+    source_id: grok-code-fast-pricing
+    verified_at: 2026-05-13
+    next_review_at: 2026-06-13
+    volatility: high
+    confidence: high
+price_history:
+  - date: 2025-08
+    plan: "xAI API launch"
+    price: "$0.20/M input, $1.50/M output, $0.02/M cached input"
+    source: "https://x.ai/news/grok-code-fast-1"
+    source_label: "Source"
+    source_id: grok-code-fast-pricing
+    note: "Launch pricing for Grok Code Fast 1 on the xAI API, positioned for agentic coding loops with cached-token discount."
+  - date: 2026-05-13
+    plan: "Pre-retirement (final)"
+    price: "$0.20/M input, $1.50/M output, $0.02/M cached input"
+    source: "https://docs.x.ai/docs/models"
+    source_label: "Source"
+    source_id: grok-code-fast-pricing
+    note: "Pricing unchanged at retirement notice. xAI confirms Grok Code Fast 1 will retire on May 15, 2026 alongside grok-4-1-fast, grok-4-fast, grok-4, and grok-imagine-image-pro. xAI recommends Grok 4.3 for coding workflows."
+tags: [coding, code-model, xai, grok, developer-tools, agentic-coding, low-latency, deprecated]
 best_for:
-  - coding agents that need fast iteration
-  - autocomplete and small edit loops
-  - developers testing xAI's coding stack
-  - latency-sensitive IDE integrations
+  - teams running migrations off Grok Code Fast 1 before May 15, 2026
+  - benchmarking Grok 4.3 as the xAI-recommended replacement for coding loops
 not_best_for:
-  - teams prioritizing ecosystem maturity over speed
-  - users who need the strongest reasoning model regardless of latency
-  - non-coding general assistant workflows
+  - new production deployments after May 15, 2026 (the xAI model is retired)
+  - GitHub Copilot users (the model is removed across Copilot on May 15, 2026)
+  - teams that need a long-term coding-model contract without a forced migration
 quick_answer: >-
-  Grok Code Fast 1 is xAI's speed-oriented coding model for agentic coding loops. Pick it for IDE integrations, small edits, terminal-driven repair loops, and workflows where low latency and cached-token cost matter. Skip it if your main need is the most mature coding product, the deepest codebase reasoning, or a finished workspace rather than a model API.
+  Grok Code Fast 1 is xAI's speed-oriented coding model and is being retired on May 15, 2026. xAI directs coding users to Grok 4.3; GitHub Copilot will remove it from chat, completions, edits, ask, and agent modes on the same date, with GPT-5 mini and Claude Haiku 4.5 as in-product alternatives. Treat this page as a migration reference rather than a buy recommendation.
 ---
 
 # Grok Code Fast 1
 
-Grok Code Fast 1 is xAI's coding-focused model for developer workflows. Public xAI snippets describe it as a “speedy and economical reasoning model that excels at agentic coding.” Third-party provider documentation and launch coverage place the release in late August 2025. Its positioning is speed: fast code generation, fast edit loops, and low-latency agentic coding where waiting on a frontier reasoning model would slow the developer down.
+Grok Code Fast 1 is xAI's coding-focused model for developer workflows, originally launched in late August 2025 and positioned as a "speedy and economical reasoning model that excels at agentic coding." As of May 2026 the model is on a published retirement path.
 
-## Buyer fit
+## Deprecation status (May 15, 2026)
 
-Grok Code Fast is best treated as a model ingredient for developer tools, not as a complete coding workspace. The strongest use case is a loop that calls the model many times: propose a patch, run tests, inspect the error, and ask for the next small change. In that pattern, latency and unit cost compound. A slightly weaker model that responds quickly can beat a stronger model if the surrounding agent is well-instrumented.
+- **xAI API retirement.** xAI's [model documentation](https://docs.x.ai/docs/models) lists `grok-code-fast-1` among the models retiring on May 15, 2026 at 12:00pm PT, alongside `grok-4-1-fast`, `grok-4-fast`, `grok-4`, and `grok-imagine-image-pro`. xAI recommends **Grok 4.3** as the coding replacement.
+- **GitHub Copilot retirement.** On May 8, 2026 GitHub announced that [Grok Code Fast 1 will be deprecated across all Copilot experiences on May 15, 2026](/news/2026-05-08-github-copilot-grok-code-fast-1-deprecation/). The retirement covers Copilot Chat, inline edits, ask and agent modes, and code completions. GitHub lists GPT-5 mini and Claude Haiku 4.5 as suggested alternatives and ties the accelerated timing to the upstream xAI provider deprecation.
+- **No grandfathering signaled.** Neither xAI nor GitHub has published a continued-availability window beyond May 15, 2026.
 
-Use it when you already have the guardrails: deterministic tests, linters, review gates, scoped repository access, and a product surface that can recover from bad edits. Do not use it as the only reasoning layer for high-risk migrations, multi-service refactors, or security-sensitive changes without a stronger reviewer model in the loop.
+## Recent developments
 
-Compared with [Claude Code](/tools/claude-code/), [Codex](/tools/codex/), [Cursor](/tools/cursor/), and Gemini developer workflows around [Gemini](/tools/gemini/), the buyer question is not "which model is smartest?" It is "which model makes my agent loop cheaper and faster without lowering merge quality?" Benchmark it on your own repositories before standardizing.
-
-The model is especially worth testing when your agent sends many repeated context prefixes. xAI highlights prompt-caching optimization for partner integrations, so the practical win may come from a combination of response speed, cached input pricing, and keeping each edit request narrow.
+- **May 8, 2026:** GitHub [announced the Copilot-wide retirement](/news/2026-05-08-github-copilot-grok-code-fast-1-deprecation/), referencing the upstream xAI provider deprecation.
+- **May 13, 2026:** xAI's model docs continue to list Grok Code Fast 1 as one of the May 15 retirement set, with Grok 4.3 documented as the recommended coding model.
 
 ## System Verdict
 
-> **Pick Grok Code Fast when latency matters more than maximum reasoning depth.** It is a good fit for autocomplete, small edits, test-fix loops, and agents that call the model repeatedly.
+> **Pick Grok 4.3 instead for new xAI coding work.** xAI's own docs route coding users to Grok 4.3 after May 15, 2026. Grok Code Fast 1 is no longer a forward-looking choice for new deployments.
 >
-> **Skip it when you need the deepest codebase reasoning.** Claude Code, Codex, Cursor, and Gemini Code Assist have stronger distribution and clearer workflow maturity.
+> **If you currently use Grok Code Fast 1, plan the migration now.** Move xAI API integrations to Grok 4.3. Move Copilot-managed workflows to GPT-5 mini, Claude Haiku 4.5, Sonnet 4.6, or GPT-5.5 before May 15, 2026.
+>
+> **Skip new agentic-coding contracts pinned to Grok Code Fast 1.** Any spec, RFP, or evaluation that still names the model should be updated; the May 15 retirement is a hard cutoff per xAI's published docs.
 
 ## Key facts
 
 | | |
 |---|---|
-| Category | Coding model |
+| Category | Coding model (retiring) |
 | Company | xAI |
-| Best for | Low-latency coding loops |
-| API pricing | $0.20/M input tokens, $1.50/M output tokens, $0.02/M cached input tokens via xAI API as verified 2026-05-05 |
-| Launch positioning | Agentic coding, common developer tools, and editor integrations |
-| Main competitors | [Claude Code](/tools/claude-code/), [Codex](/tools/codex/), [Cursor](/tools/cursor/), [GitHub Copilot](/tools/github-copilot/) |
+| Status | Deprecated; retiring May 15, 2026 on the xAI API and across GitHub Copilot |
+| Recommended replacement (xAI) | Grok 4.3 |
+| Recommended replacement (GitHub Copilot) | GPT-5 mini or Claude Haiku 4.5 |
+| Final published API pricing | $0.20/M input, $1.50/M output, $0.02/M cached input tokens |
+| Launch positioning | Low-latency agentic coding, common developer tools, and editor integrations |
+| Main competitors at retirement | [Claude Code](/tools/claude-code/), [Codex](/tools/codex/), [Cursor](/tools/cursor/), [GitHub Copilot](/tools/github-copilot/) |
 
-## Where it fits
+## Migration plan
 
-The model is most interesting as an engine for tools rather than a standalone product. If you are building an editor extension, autonomous coding workflow, or fast code-review loop, latency can matter as much as benchmark rank.
+For teams running production workloads on Grok Code Fast 1 today, the steps before May 15, 2026 are:
 
-Use Grok Code Fast for:
-
-- **Tight edit loops.** Small bug fixes, refactors inside one module, formatting repairs, test-fix cycles, and repeated patch attempts.
-- **Tool-heavy agents.** xAI positions the model around grep, terminal, and file-editing workflows, which makes it a natural candidate for coding agents that need to call tools often.
-- **Cost-sensitive iteration.** Cached input pricing can matter when an agent repeatedly sends the same repository context or instruction block.
-- **Editor experiments.** It is useful for teams building or tuning coding products where responsiveness changes how developers interact with suggestions.
-
-Be more careful with:
-
-- **Architecture changes.** Use a stronger reviewer model or human review for migrations that cut across services, storage layers, auth, billing, or security-sensitive code.
-- **Ambiguous product work.** A speed model is not a substitute for requirements discovery, design judgment, and regression analysis.
-- **One-shot code generation.** If there will only be one expensive call, the latency advantage matters less than final answer quality.
-
-## Evaluation checklist
-
-Test Grok Code Fast on the workflows that create real developer drag:
-
-- How often does it produce a patch that applies cleanly?
-- How many tool calls does it need before it finds the relevant code?
-- Does it preserve nearby style and project conventions?
-- Does speed encourage smaller, safer prompts?
-- Does cached input materially reduce cost in your agent loop?
-- Does the merge rate stay steady once human reviewers inspect the output?
-
-## Best plan recommendation
-
-Treat Grok Code Fast as an API/model choice rather than a subscription decision. The best first use is a narrow agent loop with measurable throughput: failing-test repair, small refactors, lint fixes, codebase Q&A, or autocomplete experiments. Keep prompts small enough that latency and cached-input pricing matter, then compare total cost per accepted patch against Claude, Codex, Gemini, and the current model in your editor.
-
-Do not standardize on it because the token price looks attractive in isolation. Measure accepted changes, reviewer rework, failed tool calls, and rollback rate. If the model is fast but creates extra review burden, the savings disappear. If it keeps quality steady while cutting wait time, it can be a strong specialist model inside a larger coding stack.
+- **Inventory direct xAI API usage.** Identify every service, agent loop, or batch job that calls `grok-code-fast-1`. Move them to Grok 4.3 per xAI's documented guidance, or to another model that fits your latency and cost target.
+- **Inventory GitHub Copilot usage.** Confirm whether developers use Grok Code Fast 1 in Copilot Chat, inline edits, ask, agent, or completion modes. Communicate the May 15, 2026 cutoff and the GitHub-recommended alternatives (GPT-5 mini, Claude Haiku 4.5).
+- **Re-benchmark before standardizing on Grok 4.3.** xAI directs coding users to Grok 4.3 but does not guarantee that price-per-accepted-patch or merge quality will match Grok Code Fast 1. Run your existing test-fix loop and accepted-edit benchmarks against the new model before committing.
+- **Audit Copilot Enterprise model policies.** If a Copilot administrator has disabled the recommended alternatives, developers will hit broken workflows on May 15. Update model allowlists before the cutoff.
+- **Update reviewer and procurement docs.** RFPs, evaluation spreadsheets, and internal guides should drop Grok Code Fast 1 as a forward-looking choice.
 
 ## Failure modes
 
-- Ecosystem maturity trails GitHub Copilot, Cursor, and Claude Code.
-- Smaller or faster coding models can struggle with deep architecture changes.
-- Teams need to benchmark it on their own repositories before switching.
-- Launch-partner availability and promotional access can change; confirm the model path and pricing in the xAI console or your chosen coding tool.
+- **Hard retirement cutoff.** xAI's docs name May 15, 2026 with no public extension. Workloads still pinned to the model on that date will need an emergency switch.
+- **Ecosystem churn risk.** Copilot's model picker is convenient, but the Grok Code Fast 1 removal shows that third-party model access there depends on upstream provider roadmaps.
+- **Grok 4.3 is a different model.** Treat the xAI-recommended replacement as a new evaluation rather than a drop-in upgrade. Benchmark merge rate, reviewer rework, failed tool calls, and rollback rate before standardizing.
+- **No long-term coding contract here.** A model on a public 2026 retirement path is not a stable foundation for multi-year coding-stack decisions.
 
 ## Sources
 
-- [xAI](https://x.ai)
-- [xAI Grok Code Fast 1 announcement](https://x.ai/news/grok-code-fast-1)
+- [xAI model documentation](https://docs.x.ai/docs/models)
+- [xAI Grok Code Fast 1 launch announcement](https://x.ai/news/grok-code-fast-1)
+- [GitHub: Upcoming deprecation of Grok Code Fast 1](https://github.blog/changelog/2026-05-08-upcoming-deprecation-of-grok-code-fast-1/)
+- [aipedia.wiki news: GitHub accelerates Grok Code Fast 1 retirement](/news/2026-05-08-github-copilot-grok-code-fast-1-deprecation/)
+
+## Methodology
+
+Produced by the aipedia.wiki editorial pipeline. Last verified 2026-05-13 against the xAI model documentation, the GitHub Copilot deprecation changelog, and the aipedia.wiki coverage of the May 8 deprecation notice. Scoring reflects the public retirement on May 15, 2026 and the resulting drop in longevity and moat.
+
+## Related
+
+- **Category:** [AI Coding](/categories/ai-coding/) · [AI Chatbots](/categories/ai-chatbots/)
+- **See also:** [Claude Code](/tools/claude-code/) · [Codex](/tools/codex/) · [Cursor](/tools/cursor/) · [GitHub Copilot](/tools/github-copilot/) · [Grok](/tools/grok/)

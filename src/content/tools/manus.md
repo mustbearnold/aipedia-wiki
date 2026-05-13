@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2025-03
-last_updated: 2026-05-05
-last_verified: 2026-05-05
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 seo_title: "Manus: Features, Pricing & Review (2026)"
 meta_description: "Manus is Butterfly Effect's general-purpose autonomous agent. Meta announced an acquisition in December 2025, but China blocked the deal on April 27, 2026. Free tier includes 1,000 starter credits plus 300 daily. Pro from $20/mo."
@@ -34,7 +34,7 @@ facts:
     source: "https://manus.im/pricing"
     source_label: "Source"
     source_id: manus-pricing
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: medium
     confidence: medium
   pricing_anchor:
@@ -42,8 +42,8 @@ facts:
     source: "https://manus.im/pricing"
     source_label: "Source"
     source_id: manus-pricing
-    verified_at: 2026-05-03
-    next_review_at: 2026-08-03
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: high
     confidence: medium
   watch_out_for:
@@ -51,8 +51,8 @@ facts:
     source: "https://manus.im/pricing"
     source_label: "Source"
     source_id: manus-pricing
-    verified_at: 2026-05-03
-    next_review_at: 2026-08-03
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: high
     confidence: medium
 tags: [autonomous-agent, ai-automation, general-purpose-agent, web-agent, manus]
@@ -90,6 +90,13 @@ price_history:
     source_label: "Source"
     source_id: manus-pricing
     note: "Verified, unchanged"
+  - date: 2026-05-13
+    plan: "Pro (Standard)"
+    price: "$20/mo"
+    source: "https://manus.im/pricing"
+    source_label: "Source"
+    source_id: manus-pricing
+    note: "Re-verified, unchanged; ownership still unresolved after China blocked the Meta acquisition"
 ---
 
 # Manus
@@ -159,7 +166,7 @@ Current plans via [manus.im/pricing](https://manus.im/pricing):
 
 Credits scale with task complexity. A chat-style question can cost under 50 credits. A deep research run covering dozens of sources typically burns 500 to 900 credits.
 
-Prices verified 2026-04-18 via [Manus Plans documentation](https://manus.im/docs/introduction/plans) and the [Lindy breakdown of Manus pricing](https://www.lindy.ai/blog/manus-ai-pricing).
+Prices re-verified 2026-05-13 against [Manus Plans documentation](https://manus.im/docs/introduction/plans) and the [Lindy breakdown of Manus pricing](https://www.lindy.ai/blog/manus-ai-pricing). No tier or credit-pool changes since the April 18 verification; ownership status remains unresolved after China blocked the Meta acquisition on April 27, 2026.
 
 ## Against the alternatives
 
@@ -182,7 +189,7 @@ Prices verified 2026-04-18 via [Manus Plans documentation](https://manus.im/docs
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-04-18 against [Manus Plans docs](https://manus.im/docs/introduction/plans), [Lindy's Manus pricing breakdown](https://www.lindy.ai/blog/manus-ai-pricing), the [Cybernews 2026 review](https://cybernews.com/ai-tools/manus-ai-review/), and [CNBC coverage of the Meta acquisition](https://www.cnbc.com/2025/12/30/meta-acquires-singapore-ai-agent-firm-manus-china-butterfly-effect-monicai.html).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-05-13 against [Manus Plans docs](https://manus.im/docs/introduction/plans), [Lindy's Manus pricing breakdown](https://www.lindy.ai/blog/manus-ai-pricing), the [Cybernews 2026 review](https://cybernews.com/ai-tools/manus-ai-review/), [CNBC coverage of the Meta acquisition](https://www.cnbc.com/2025/12/30/meta-acquires-singapore-ai-agent-firm-manus-china-butterfly-effect-monicai.html), and the [April 27 China block coverage](/news/2026-04-27-china-blocks-meta-manus-acquisition/).
 
 ## FAQ
 

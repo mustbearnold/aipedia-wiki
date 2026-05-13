@@ -11,8 +11,8 @@ pricing_model: enterprise
 price_range: Custom enterprise pricing
 status: active
 launched: 2019
-last_updated: 2026-05-05
-last_verified: 2026-05-05
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -32,48 +32,48 @@ facts:
     source: https://www.glean.com/
     source_label: Glean official site
     source_id: glean-official
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
   pricing_anchor:
-    value: Glean pricing is enterprise-sales led; verify seat count, connectors, agent platform access, security requirements,
-      and support terms with the pricing surface/sales team.
+    value: Glean pricing is enterprise-sales led with no published self-serve tiers; verify seat count, connectors, agent platform access, security requirements,
+      and support terms with the pricing surface and sales team.
     source: https://www.glean.com/pricing
     source_label: Glean pricing surface
     source_id: glean-pricing
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-04'
+    next_review_at: '2026-08-13'
   ai_search:
-    value: Glean’s core differentiation is permission-aware enterprise search plus assistant/agent workflows over company knowledge.
+    value: Glean's core differentiation is permission-aware enterprise search plus assistant and agent workflows over company knowledge.
     source: https://www.glean.com/
     source_label: Glean official site
     source_id: glean-official
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
   developer_platform:
     value: The developer platform matters for custom apps, agents, APIs, and integration work beyond out-of-box search.
     source: https://developers.glean.com/
     source_label: Glean developer platform
     source_id: glean-developers
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
   watch_out_for:
-    value: Glean success depends on connector coverage, identity/permission hygiene, search relevance, governance, and deployment
-      change management—not just model quality.
+    value: Glean success depends on connector coverage, identity and permission hygiene, search relevance, governance, and deployment
+      change management, not just model quality.
     source: https://www.glean.com/
     source_label: Glean official site
     source_id: glean-official
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
 tags: [enterprise-search, work-ai, agents, connectors, mcp, knowledge-management, rag]
 seo_title: "Glean Review: Enterprise Search, Work AI Agents & Pricing (2026)"
 meta_description: "Glean is an enterprise Work AI platform for permission-aware search, assistant workflows, AI agents, connectors, APIs, and MCP access to company knowledge."
@@ -167,7 +167,7 @@ The platform is less compelling when the corpus is small, permissions are simple
 
 ## Methodology
 
-Last verified 2026-05-05 against Glean product, connector, and developer documentation. Scoring emphasizes enterprise utility, defensibility of the data/connectors layer, and cost/implementation risk.
+Last verified 2026-05-13 against Glean product, connector, and developer documentation. The public pricing surface still routes all buyers to a sales contact rather than published tiers. Scoring emphasizes enterprise utility, defensibility of the data and connectors layer, and cost and implementation risk.
 
 ## FAQ
 
