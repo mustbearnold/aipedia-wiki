@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$3/month"
 status: active
 launched: 2020-06
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://www.connectedpapers.com/about"
     source_label: "Connected Papers about"
     source_id: connected-papers-about
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: low
     confidence: high
   pricing_anchor:
@@ -38,8 +38,8 @@ facts:
     source: "https://www.connectedpapers.com/pricing"
     source_label: "Connected Papers pricing"
     source_id: connected-papers-pricing
-    verified_at: 2026-05-03
-    next_review_at: 2026-08-03
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: high
     confidence: high
   graph_workflow:
@@ -47,7 +47,7 @@ facts:
     source: "https://www.connectedpapers.com/main"
     source_label: "Connected Papers graph search"
     source_id: connected-papers-main
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
   research_positioning:
@@ -55,7 +55,7 @@ facts:
     source: "https://www.connectedpapers.com/about"
     source_label: "Connected Papers about"
     source_id: connected-papers-about
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: low
     confidence: high
   watch_out_for:
@@ -63,11 +63,11 @@ facts:
     source: "https://www.connectedpapers.com/pricing"
     source_label: "Connected Papers pricing"
     source_id: connected-papers-pricing
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
 tags: [academic-search, research, visualization, citations, paper-graph, literature-review]
-seo_title: "Connected Papers: Visual Research Graph Review (April 2026)"
+seo_title: "Connected Papers: Visual Research Graph Review (May 2026)"
 meta_description: >-
   Connected Papers builds a visual similarity graph of related academic papers from a single seed paper. Free tier gives 5 graphs/month; Academic plan is $3/month for unlimited. Verified April 2026.
 author: "aipedia.wiki Editorial"
@@ -90,6 +90,13 @@ price_history:
     source_label: "Source"
     source_id: connected-papers-pricing
     note: "Verified. Billed annually for unlimited graphs."
+  - date: 2026-05-13
+    plan: "Free / Academic"
+    price: "$0 (5 graphs/mo) / $3/mo annual"
+    source: "https://www.connectedpapers.com/pricing"
+    source_label: "Source"
+    source_id: connected-papers-pricing
+    note: "Re-verified unchanged. Free tier still capped at 5 graphs/month; Academic still cheapest paid productivity upgrade in research tooling."
 ---
 
 # Connected Papers
@@ -154,7 +161,7 @@ The moat is thin. The similarity algorithm is proprietary but the underlying dat
 | Academic | $3/mo (billed annually) | Unlimited | Batch operations, graph export, metadata export |
 | Business | Custom | Unlimited | Team features, institutional licensing |
 
-*Prices verified 2026-04-17 via [Connected Papers pricing](https://www.connectedpapers.com/pricing). Free tier requires no signup. Academic billed annually.*
+*Prices verified 2026-05-13 via [Connected Papers pricing](https://www.connectedpapers.com/pricing). Free tier requires no signup. Academic billed annually.*
 
 ## Against the alternatives
 
@@ -180,7 +187,7 @@ The moat is thin. The similarity algorithm is proprietary but the underlying dat
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the analysis above. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [Connected Papers pricing](https://www.connectedpapers.com/pricing) and [Semantic Scholar about](https://www.semanticscholar.org/about).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the analysis above. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against [Connected Papers pricing](https://www.connectedpapers.com/pricing) and [Semantic Scholar about](https://www.semanticscholar.org/about).
 
 ## FAQ
 

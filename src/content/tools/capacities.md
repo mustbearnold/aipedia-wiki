@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$14.99/month"
 status: active
 launched: 2021-06
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://capacities.io/product"
     source_label: "Capacities product"
     source_id: capacities-product
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: low
     confidence: high
   pricing_anchor:
@@ -38,8 +38,8 @@ facts:
     source: "https://capacities.io/pricing"
     source_label: "Capacities pricing"
     source_id: capacities-pricing
-    verified_at: 2026-05-03
-    next_review_at: 2026-08-03
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: high
     confidence: high
   data_model:
@@ -47,7 +47,7 @@ facts:
     source: "https://docs.capacities.io/"
     source_label: "Capacities docs"
     source_id: capacities-docs
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: low
     confidence: high
   ai_surface:
@@ -55,7 +55,7 @@ facts:
     source: "https://capacities.io/product"
     source_label: "Capacities product"
     source_id: capacities-product
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
   watch_out_for:
@@ -63,11 +63,11 @@ facts:
     source: "https://docs.capacities.io/"
     source_label: "Capacities docs"
     source_id: capacities-docs
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
 tags: [ai-notes, note-taking, pkm, object-based, knowledge-management]
-seo_title: "Capacities Review: Object-Based PKM with AI (April 2026)"
+seo_title: "Capacities Review: Object-Based PKM with AI (May 2026)"
 meta_description: "Capacities is an object-based PKM app where every note is a typed object. Free tier is unlimited; Pro at $9.99/mo annual adds AI assistant; Believer at $12.49/mo supports the project."
 author: aipedia.wiki Editorial
 best_for:
@@ -96,6 +96,13 @@ price_history:
     source_label: "Source"
     source_id: capacities-pricing
     note: "Verified unchanged"
+  - date: 2026-05-13
+    plan: "Pro / Believer"
+    price: "$9.99 / $12.49 per month annual"
+    source: "https://capacities.io/pricing"
+    source_label: "Source"
+    source_id: capacities-pricing
+    note: "Re-verified. Release 64 added AI provider choice (ChatGPT/Claude/Cursor); Release 62 shipped AI Chat Connectors. No price change."
 ---
 
 # Capacities
@@ -103,6 +110,14 @@ price_history:
 An object-based personal knowledge management app built by Capacities GmbH. Every note is a typed object (Book, Person, Project, Daily Note, or custom type) with defined properties that form a connected knowledge graph. The Pro tier adds an AI assistant for writing, chat over notes, and auto-tagging.
 
 Free tier is genuinely unlimited on notes and objects. Pro is $9.99/mo annual, Believer $12.49/mo annual.
+
+## Recent changes
+
+- **Release 64 (2026):** Choose your own AI model provider, pick from ChatGPT, Claude, or Cursor as the AI backend for Capacities AI. Recurring tasks and flexible scheduling shipped in the same release.
+- **Release 63:** Related Content surfaces connected information automatically across the vault.
+- **Release 62:** AI Chat Connectors arrived, integrating Capacities with ChatGPT, Claude, and Cursor as external surfaces.
+- **Release 61:** Image and media analysis with new object categories (Photo (animal), Cover), OCR, and color preview.
+- **Release 58:** Search 2.0 rebuilt fully on-device for speed and privacy.
 
 ## System Verdict
 
@@ -128,7 +143,7 @@ Free tier is genuinely unlimited on notes and objects. Pro is $9.99/mo annual, B
 | **Free tier** | Unlimited notes/objects, 5GB media, core object types |
 | **API** | None public |
 
-Every data point was verified against vendor docs on 2026-04-17. See Sources.
+Every data point was verified against vendor docs on 2026-05-13. See Sources.
 
 ## What it actually is
 
@@ -162,7 +177,7 @@ The moat: no other mainstream PKM tool enforces object typing at the capture ste
 | Pro | $9.99/mo annual ($11.99/mo monthly) | AI assistant, custom object types, unlimited media, advanced views |
 | Believer | $12.49/mo annual ($14.99/mo monthly) | Everything in Pro plus project support, early features |
 
-*Prices verified 2026-04-17 via [capacities.io/pricing](https://capacities.io/pricing). Annual billing applied in EUR and USD.*
+*Prices verified 2026-05-13 via [capacities.io/pricing](https://capacities.io/pricing). Annual billing applied in EUR and USD.*
 
 ## Against the alternatives
 
@@ -189,7 +204,7 @@ The moat: no other mainstream PKM tool enforces object typing at the capture ste
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [capacities.io/pricing](https://capacities.io/pricing), [capacities.io/product/ai](https://capacities.io/product/ai), and the [Capacities changelog](https://capacities.io/whats-new/release-26/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against [capacities.io/pricing](https://capacities.io/pricing), [capacities.io/product/ai](https://capacities.io/product/ai), and the [Capacities changelog](https://capacities.io/whats-new/).
 
 ## FAQ
 

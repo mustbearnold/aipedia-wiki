@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$39/seat/month"
 status: active
 launched: 2016-01
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -31,16 +31,16 @@ facts:
     source: "https://fireflies.ai/features"
     source_label: "Fireflies features"
     source_id: fireflies-features
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: low
     confidence: high
   pricing_anchor:
-    value: "Fireflies pricing should be evaluated against transcript volume, storage, meeting integrations, team admin needs, and AI-search usage rather than only per-seat cost."
+    value: "Free tier (800 min/seat storage), Pro $10/seat/mo annual ($18 monthly), Business $19/seat/mo annual ($29 monthly), Enterprise $39/seat/mo. Per-tier AI credit caps: Pro 20, Business 30, Enterprise 50."
     source: "https://fireflies.ai/pricing"
     source_label: "Fireflies.ai Pricing"
     source_id: fireflies-official
-    verified_at: 2026-05-03
-    next_review_at: 2026-08-03
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: high
     confidence: high
   integration_surface:
@@ -48,7 +48,7 @@ facts:
     source: "https://fireflies.ai/integrations"
     source_label: "Fireflies integrations"
     source_id: fireflies-integrations
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
   ai_search:
@@ -56,7 +56,7 @@ facts:
     source: "https://fireflies.ai/askfred"
     source_label: "Fireflies AskFred"
     source_id: fireflies-askfred
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
   watch_out_for:
@@ -64,7 +64,7 @@ facts:
     source: "https://fireflies.ai/pricing"
     source_label: "Fireflies.ai Pricing"
     source_id: fireflies-official
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
 tags: [meeting-transcription, ai-notes, meeting-summary, productivity, zoom-integration]
@@ -112,7 +112,7 @@ Pricing runs Free, Pro $10/seat/mo, Business $19/seat/mo, and Enterprise from $3
 | **AI credits** | Unlimited transcription on paid tiers · AskFred and advanced summaries are metered |
 | **Compliance** | SSO, HIPAA, private storage on Enterprise |
 
-Every data point above was verified against vendor pages on 2026-05-02. See Sources.
+Every data point above was verified against vendor pages on 2026-05-13. See Sources.
 
 ## What it actually is
 
@@ -149,7 +149,7 @@ Subscription pricing via [fireflies.ai/pricing](https://fireflies.ai/pricing):
 | Business | $19 | $29 | Unlimited | Yes | Salesforce, HubSpot, Pipedrive | **Sales teams with CRM workflows** |
 | Enterprise | $39+ | Custom | Unlimited | Yes | All + custom | SSO, HIPAA, compliance |
 
-*Prices verified 2026-05-02 via [fireflies.ai/pricing](https://fireflies.ai/pricing). Annual billing is the posted rate. AskFred, advanced summaries, action item detection, and meeting highlights all consume AI credits that cap monthly even on paid plans; heavy users may hit throttles.*
+*Prices verified 2026-05-13 via [fireflies.ai/pricing](https://fireflies.ai/pricing). Annual billing is the posted rate. AI credit caps run 20 (Pro), 30 (Business), 50 (Enterprise) per seat per month and gate AskFred queries, advanced summaries, action-item detection, and highlights; heavy users may hit throttles.*
 
 ## Against the alternatives
 
@@ -175,7 +175,7 @@ Subscription pricing via [fireflies.ai/pricing](https://fireflies.ai/pricing):
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-02 against [Fireflies pricing](https://fireflies.ai/pricing), the [Fireflies pricing guide](https://guide.fireflies.ai/articles/3734844560-learn-about-the-fireflies-pricing-plans), and [G2 Fireflies reviews](https://www.g2.com/products/fireflies-ai/reviews).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against [Fireflies pricing](https://fireflies.ai/pricing), the [Fireflies pricing guide](https://guide.fireflies.ai/articles/3734844560-learn-about-the-fireflies-pricing-plans), and [G2 Fireflies reviews](https://www.g2.com/products/fireflies-ai/reviews).
 
 ## FAQ
 

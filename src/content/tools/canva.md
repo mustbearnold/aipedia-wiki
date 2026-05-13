@@ -10,10 +10,10 @@ pricing_model: freemium
 price_range: "$0-$20/user/month"
 status: active
 launched: 2013-01
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
-seo_title: "Canva: Features, Pricing & Review (April 2026)"
+seo_title: "Canva: Features, Pricing & Review (May 2026)"
 meta_description: "Canva is the 200M+ user design platform for non-designers. Magic Studio covers 25+ AI tools including Magic Design, Write, Media, and Grab. Free tier generous; Pro $15/mo unlocks unlimited AI."
 author: "aipedia.wiki Editorial"
 affiliate:
@@ -35,79 +35,79 @@ facts:
     source: "https://www.canva.com/canva-ai/"
     source_label: "Canva AI / Magic Studio"
     source_id: canva-ai
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-13
   context_window:
     value: "Not applicable: Canva is a design platform, not a text chat model with a published token window"
     source: "https://www.canva.com/canva-ai/"
     source_label: "Canva AI / Magic Studio"
     source_id: canva-ai
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: low
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-13
   pricing_anchor:
     value: "Free; Pro $15/mo or $120/yr; Teams from $10/seat/mo annually with a 3-seat minimum; Enterprise custom"
     source: "https://www.canva.com/pricing/"
     source_label: "Canva pricing"
     source_id: canva-pricing
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-13
   free_plan:
     value: "Yes: free tier includes templates and limited Magic Studio usage"
     source: "https://www.canva.com/pricing/"
     source_label: "Canva pricing"
     source_id: canva-pricing
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-13
   best_paid_tier:
     value: "Pro for individuals; Teams for brand controls, collaboration, and approval workflows"
     source: "https://www.canva.com/pricing/"
     source_label: "Canva pricing"
     source_id: canva-pricing
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-13
   api_available:
     value: "Enterprise surfaces include Connect API and higher-level admin controls; Canva is not primarily an open model API"
     source: "https://www.canva.com/pricing/"
     source_label: "Canva pricing"
     source_id: canva-pricing
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-13
   image_generation:
     value: "Yes: Magic Media and Magic Studio include AI image generation and editing tools"
     source: "https://www.canva.com/canva-ai/"
     source_label: "Canva AI / Magic Studio"
     source_id: canva-ai
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-13
   video_generation:
     value: "Yes: Magic Studio includes AI-assisted video generation and editing workflows"
     source: "https://www.canva.com/canva-ai/"
     source_label: "Canva AI / Magic Studio"
     source_id: canva-ai
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-13
   real_time_voice:
     value: "No primary real-time voice-agent product; Canva is focused on design and content creation"
     source: "https://www.canva.com/canva-ai/"
     source_label: "Canva AI / Magic Studio"
     source_id: canva-ai
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: low
     confidence: high
   web_browsing:
@@ -115,7 +115,7 @@ facts:
     source: "https://www.canva.com/canva-ai/"
     source_label: "Canva AI / Magic Studio"
     source_id: canva-ai
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: low
     confidence: high
   coding_agent:
@@ -123,7 +123,7 @@ facts:
     source: "https://www.canva.com/canva-ai/"
     source_label: "Canva AI / Magic Studio"
     source_id: canva-ai
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: low
     confidence: high
   enterprise_controls:
@@ -131,16 +131,16 @@ facts:
     source: "https://www.canva.com/pricing/"
     source_label: "Canva pricing"
     source_id: canva-pricing
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-13
   data_retention_or_privacy:
     value: "Enterprise is the safer tier for brand governance, data-retention controls, SSO, and regulated team workflows"
     source: "https://www.canva.com/pricing/"
     source_label: "Canva pricing"
     source_id: canva-pricing
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
   open_source_or_local:
@@ -148,7 +148,7 @@ facts:
     source: "https://www.canva.com/"
     source_label: "Canva product page"
     source_id: canva-ai
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: low
     confidence: high
   best_for:
@@ -156,7 +156,7 @@ facts:
     source: "https://www.canva.com/canva-ai/"
     source_label: "Canva AI / Magic Studio"
     source_id: canva-ai
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
   watch_out_for:
@@ -164,10 +164,10 @@ facts:
     source: "https://www.canva.com/pricing/"
     source_label: "Canva pricing"
     source_id: canva-pricing
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-13
 tags: [design-tool, social-media, templates, presentations, thumbnails, marketing, magic-studio, magic-design, non-designer]
 best_for:
   - social media managers
@@ -229,7 +229,7 @@ Magic Studio wraps 25+ AI tools across text, image, video, and audio into the ed
 | **Affiliate program** | Yes (Impact network) |
 | **Launched** | 2013 |
 
-Every data point above was verified against vendor sources on 2026-04-17. See Sources.
+Every data point above was verified against vendor sources on 2026-05-13. See Sources.
 
 ## What it actually is
 
@@ -267,7 +267,7 @@ Subscription pricing via [canva.com/pricing](https://www.canva.com/pricing/). An
 | Teams | $10/seat/mo annual ($20 monthly) | Unlimited + brand controls | 1TB | Small teams, 3-seat minimum |
 | Enterprise | Custom | Full suite + admin | Unlimited | SSO, SCIM, compliance at scale |
 
-*Prices verified 2026-04-17 via [Canva pricing](https://www.canva.com/pricing/) and [Magic Studio feature matrix](https://www.canva.com/canva-ai/). Teams minimum is 3 seats, floor of $300/year. Enterprise quotes typically run $8-$20/user/month depending on seat count.*
+*Prices verified 2026-05-13 via [Canva pricing](https://www.canva.com/pricing/) and [Magic Studio feature matrix](https://www.canva.com/canva-ai/). Teams minimum is 3 seats, floor of $300/year. Enterprise quotes typically run $8-$20/user/month depending on seat count.*
 
 ## Against the alternatives
 
@@ -294,7 +294,7 @@ Subscription pricing via [canva.com/pricing](https://www.canva.com/pricing/). An
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [Canva pricing](https://www.canva.com/pricing/) and [Canva AI / Magic Studio](https://www.canva.com/canva-ai/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against [Canva pricing](https://www.canva.com/pricing/) and [Canva AI / Magic Studio](https://www.canva.com/canva-ai/).
 
 ## FAQ
 

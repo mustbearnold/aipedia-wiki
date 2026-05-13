@@ -10,10 +10,10 @@ pricing_model: free
 price_range: "Free while in Google Labs (350 Standard + 200 Pro generations/mo)"
 status: active
 launched: 2025-05
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
-seo_title: "Google Stitch: Features, Pricing & Review (April 2026)"
+seo_title: "Google Stitch: Features, Pricing & Review (May 2026)"
 meta_description: "Google Stitch is Google Labs' AI-native UI design tool. Generates Material Design 3 UIs from text prompts. Currently free: 350 Standard + 200 Pro (Gemini 2.5 Pro) generations per month. Paid tiers expected Q4 2026."
 author: "aipedia.wiki Editorial"
 affiliate:
@@ -33,8 +33,8 @@ facts:
     source: "https://stitch.withgoogle.com/"
     source_label: "Google Stitch official site"
     source_id: google-stitch-official
-    verified_at: 2026-05-04
-    next_review_at: 2026-08-04
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: high
     confidence: high
   workflow_surface:
@@ -42,17 +42,17 @@ facts:
     source: "https://labs.google/stitch/"
     source_label: "Google Labs Stitch"
     source_id: google-stitch-labs
-    verified_at: 2026-05-04
-    next_review_at: 2026-08-04
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: high
     confidence: high
   pricing_anchor:
-    value: "Google Labs availability and usage limits should be checked live because experimental Labs products can change packaging or access without much notice."
+    value: "Free inside Google Labs as of 2026-05-13: 350 Standard generations on Gemini 2.5 Flash and 200 Pro generations on Gemini 2.5 Pro per month. Paid tiers expected Q4 2026 when Stitch exits Labs."
     source: "https://stitch.withgoogle.com/"
     source_label: "Google Stitch official site"
     source_id: google-stitch-official
-    verified_at: 2026-05-04
-    next_review_at: 2026-08-04
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: high
     confidence: medium
   integration_surface:
@@ -60,8 +60,8 @@ facts:
     source: "https://labs.google/stitch/"
     source_label: "Google Labs Stitch"
     source_id: google-stitch-labs
-    verified_at: 2026-05-04
-    next_review_at: 2026-08-04
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: high
     confidence: medium
   watch_out_for:
@@ -69,8 +69,8 @@ facts:
     source: "https://labs.google/stitch/"
     source_label: "Google Labs Stitch"
     source_id: google-stitch-labs
-    verified_at: 2026-05-04
-    next_review_at: 2026-08-04
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: high
     confidence: high
 tags: [design-tool, ui-design, prompt-to-ui, prototyping, figma-alternative, google, google-labs, ai-design, material-design-3, gemini]
@@ -101,6 +101,13 @@ price_history:
     source_label: "Source"
     source_id: google-stitch-pricing
     note: "Verified free. 350 Standard + 200 Pro generations per month. Paid tiers expected Q4 2026."
+  - date: 2026-05-13
+    plan: "Labs"
+    price: "Free"
+    source: "https://stitch.withgoogle.com/"
+    source_label: "Source"
+    source_id: google-stitch-pricing
+    note: "Reconfirmed free at carry-over limits. Standard mode runs on Gemini 2.5 Flash, Pro mode on Gemini 2.5 Pro. Multi-screen flows still count as one generation. No paid-tier announcement yet."
 ---
 
 # Google Stitch
@@ -126,14 +133,15 @@ Currently free while inside Labs. Standard mode gives 350 generations per month;
 | **Status** | Google Labs experiment (free) |
 | **URL** | [stitch.withgoogle.com](https://stitch.withgoogle.com/) |
 | **Launched** | May 2025 (Google I/O) |
-| **Standard mode** | 350 generations/mo |
-| **Pro mode** | 200 generations/mo, powered by Gemini 2.5 Pro |
+| **Standard mode** | 350 generations/mo, Gemini 2.5 Flash |
+| **Pro mode** | 200 generations/mo, Gemini 2.5 Pro |
+| **Multi-screen flow** | A 5-screen flow counts as 1 generation |
 | **Design system** | Material Design 3 |
 | **Export formats** | Figma, HTML/CSS, Flutter code, design specs |
 | **Responsive** | Mobile, tablet, desktop breakpoints auto-generated |
 | **Paid tier ETA** | Q4 2026 (per Google Labs signals) |
 
-Every data point above was verified against vendor documentation on 2026-04-17. See Sources.
+Every data point above was verified against vendor sources on 2026-05-13. See Sources.
 
 ## What it actually is
 
@@ -163,22 +171,22 @@ Export paths are functional, not decorative. Flutter code compiles without manua
 
 | Plan | Price | Limits |
 |---|---|---|
-| Google Labs (current) | Free | 350 Standard generations/mo, 200 Pro generations/mo, Figma and code exports |
+| Google Labs (current) | Free | 350 Standard generations/mo (Gemini 2.5 Flash), 200 Pro generations/mo (Gemini 2.5 Pro), Figma and code exports |
 | Paid tiers | Expected Q4 2026 | Not announced. Analysts expect a free floor plus paid plans priced below Figma. |
 
-*Verified 2026-04-17 via [Google Stitch](https://stitch.withgoogle.com/) and the [Google Labs announcement](https://blog.google/technology/ai/google-stitch-ai-ui-design/). All pricing caveated to the Labs window.*
+*Verified 2026-05-13 via [Google Stitch](https://stitch.withgoogle.com/) and the [Google Labs announcement](https://blog.google/technology/ai/google-stitch-ai-ui-design/). All pricing caveated to the Labs window. Pricing competition tightened in April 2026 when [Anthropic launched Claude Design](/news/2026-04-17-anthropic-launches-claude-design/), a prompt-to-prototype tool bundled with Claude Pro+ that pushed Figma stock down ~7% on the day.*
 
 ## Against the alternatives
 
-| | Google Stitch | Figma | Lovable | v0 by Vercel |
-|---|---|---|---|---|
-| **Input mode** | Text prompt | Click to draw | Text prompt to app | Text prompt to React |
-| **Design system** | Material 3 | Any (user-built) | Any | React + Tailwind defaults |
-| **Output** | UI mockup, Figma, Flutter, HTML | Editable design file | Full web app | React components |
-| **Pixel control** | Limited | **Full** | Limited | Limited |
-| **Code export** | Flutter, HTML/CSS | Dev Mode only | Full app | React/Next.js |
-| **Collaboration** | Basic | **Industry standard** | Basic | GitHub-native |
-| **Best viewed as** | Prompt-to-prototype | Design-system home | Prompt-to-app | Prompt-to-React |
+| | Google Stitch | Figma | Claude Design | Lovable | v0 by Vercel |
+|---|---|---|---|---|---|
+| **Input mode** | Text prompt | Click to draw | Text prompt + codebase context | Text prompt to app | Text prompt to React |
+| **Design system** | Material 3 | Any (user-built) | Auto-extracts from your codebase | Any | React + Tailwind defaults |
+| **Output** | UI mockup, Figma, Flutter, HTML | Editable design file | Slide decks, mockups, one-pagers, pitch decks | Full web app | React components |
+| **Pixel control** | Limited | **Full** | Limited | Limited | Limited |
+| **Code export** | Flutter, HTML/CSS | Dev Mode only | Hands off to Claude Code for build | Full app | React/Next.js |
+| **Collaboration** | Basic | **Industry standard** | Pro+ accounts | Basic | GitHub-native |
+| **Best viewed as** | Prompt-to-prototype | Design-system home | Prompt-to-pitch on your brand | Prompt-to-app | Prompt-to-React |
 
 ## Failure modes
 
@@ -191,9 +199,14 @@ Export paths are functional, not decorative. Flutter code compiles without manua
 - **Team collaboration is basic.** Real-time editing, review, and handoff workflows lag Figma considerably.
 - **Custom libraries are basic.** Importing non-Material design systems is limited in the current release.
 
+## Recent changes
+
+- **2026-05-13:** Carry-over confirmed inside Google Labs. Standard mode (350 generations/mo) remains on Gemini 2.5 Flash and Pro mode (200 generations/mo) on Gemini 2.5 Pro. Paid-tier timing still tracking toward Q4 2026.
+- **2026-04-17:** Competition tightened when [Anthropic launched Claude Design](/news/2026-04-17-anthropic-launches-claude-design/), a Pro+ prompt-to-prototype product that hands off to Claude Code for build. Stitch keeps an edge on pure Material 3 UI exploration; Claude Design pulls ahead when the brief is a slide deck, one-pager, or codebase-aware mockup.
+
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis shown. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [stitch.withgoogle.com](https://stitch.withgoogle.com/) and the [Google Labs announcement](https://blog.google/technology/ai/google-stitch-ai-ui-design/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis shown. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against [stitch.withgoogle.com](https://stitch.withgoogle.com/) and the [Google Labs announcement](https://blog.google/technology/ai/google-stitch-ai-ui-design/).
 
 ## FAQ
 

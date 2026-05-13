@@ -11,8 +11,8 @@ pricing_model: paid
 price_range: $14.99-$34.99/user/month
 status: active
 launched: 2018-01
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -32,7 +32,7 @@ facts:
     source: "https://www.decktopus.com"
     source_label: "Decktopus official site"
     source_id: decktopus-official
-    verified_at: 2026-05-04
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
   workflow_surface:
@@ -40,16 +40,16 @@ facts:
     source: "https://www.decktopus.com"
     source_label: "Decktopus official site"
     source_id: decktopus-official
-    verified_at: 2026-05-04
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
   pricing_anchor:
-    value: "Paid presentation product with individual and business plans listed on the vendor pricing page."
+    value: "Pro is $14.99/mo billed annually with 9,000 AI credits/year; Business is $34.99/user/mo billed annually with 12,000 AI credits/year. Annual billing saves 40% vs monthly. Enterprise is custom."
     source: "https://www.decktopus.com/pricing"
     source_label: "Decktopus pricing"
     source_id: decktopus-pricing
-    verified_at: 2026-05-04
-    next_review_at: 2026-08-04
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: high
     confidence: high
   export_surface:
@@ -57,7 +57,7 @@ facts:
     source: "https://www.decktopus.com"
     source_label: "Decktopus official site"
     source_id: decktopus-official
-    verified_at: 2026-05-04
+    verified_at: 2026-05-13
     volatility: medium
     confidence: medium
   watch_out_for:
@@ -65,7 +65,7 @@ facts:
     source: "https://www.decktopus.com"
     source_label: "Decktopus official site"
     source_id: decktopus-official
-    verified_at: 2026-05-04
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
 tags: [presentations, slides, ai-generation, forms, speaker-notes, automation, prompt-to-deck]
@@ -99,6 +99,20 @@ price_history:
     source_label: "Source"
     source_id: decktopus-pricing
     note: "12,000 AI credits/year, about 400 AI presentations/year for the organization, custom domain, slide analytics, webhook, team and organization features."
+  - date: 2026-05-13
+    plan: "Pro"
+    price: "$14.99/mo billed annually"
+    source: "https://www.decktopus.com/pricing"
+    source_label: "Source"
+    source_id: decktopus-pricing
+    note: "Pricing unchanged. Annual billing saves 40% vs monthly ($179.99/year). Verified against vendor pricing page on 2026-05-13."
+  - date: 2026-05-13
+    plan: "Business"
+    price: "$34.99/user/mo billed annually"
+    source: "https://www.decktopus.com/pricing"
+    source_label: "Source"
+    source_id: decktopus-pricing
+    note: "Pricing unchanged. Annual billing $419.99/user/year. Verified against vendor pricing page on 2026-05-13."
 ---
 
 # Decktopus AI
@@ -128,7 +142,7 @@ That makes it less of a pure Gamma competitor and more of a "presentation plus l
 | **Enterprise** | Custom, including corporate-branded slides and branded AI setup |
 | **Cloud product** | Yes, Decktopus says it works on the cloud |
 
-Every data point above was verified against Decktopus's official pricing page on 2026-05-02. See Sources.
+Every data point above was verified against Decktopus's official pricing page on 2026-05-13. See Sources.
 
 ## What it actually is
 
@@ -163,7 +177,7 @@ Subscription pricing via [decktopus.com/pricing](https://www.decktopus.com/prici
 | Business | $34.99/user/mo | 12,000/year | Teams needing analytics, custom domain, webhook, and organization controls |
 | Enterprise | Custom | Custom | Corporate-branded decks, custom layouts, branded AI setup |
 
-Prices verified 2026-05-02. Monthly billing, promotions, taxes, and currency localization can change checkout totals.
+Prices verified 2026-05-13. Annual billing saves 40% vs monthly (Pro $179.99/year, Business $419.99/user/year). Monthly billing, promotions, taxes, and currency localization can change checkout totals.
 
 ## Failure Modes
 
@@ -177,7 +191,7 @@ Prices verified 2026-05-02. Monthly billing, promotions, taxes, and currency loc
 
 This page was produced by the aipedia.wiki editorial pipeline, an automated system that verifies tool details against primary sources and then applies the site scoring rubric. Scoring follows Utility, Value, Moat, and Longevity as explained at [/about/scoring/](https://aipedia.wiki/about/scoring/).
 
-Last verified 2026-05-02 against Decktopus's official pricing page and public product materials.
+Last verified 2026-05-13 against Decktopus's official pricing page and public product materials.
 
 ## FAQ
 

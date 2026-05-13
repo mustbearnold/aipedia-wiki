@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: $0-$199.99/month
 status: active
 launched: 2023-03
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -32,79 +32,79 @@ facts:
     source: "https://firefly.adobe.com/"
     source_label: "Adobe Firefly official site"
     source_id: adobe-firefly-product
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-13
   context_window:
     value: "Not applicable: Adobe Firefly is a creative media suite, not a text chat model with a published token context window"
     source: "https://firefly.adobe.com/"
     source_label: "Adobe Firefly official site"
     source_id: adobe-firefly-product
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: low
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-13
   pricing_anchor:
     value: "Free credits plus paid Firefly Standard, Pro, Premium, and high-credit creative plans; pricing starts at $9.99/mo"
     source: "https://firefly.adobe.com/pricing"
     source_label: "Adobe Firefly pricing"
     source_id: adobe-firefly-pricing
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-13
   free_plan:
     value: "Yes: free web tier with limited monthly credits"
     source: "https://firefly.adobe.com/pricing"
     source_label: "Adobe Firefly pricing"
     source_id: adobe-firefly-pricing
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-13
   best_paid_tier:
     value: "Pro or Premium for frequent creators; Creative Cloud/Enterprise for teams needing app integrations and indemnification posture"
     source: "https://firefly.adobe.com/pricing"
     source_label: "Adobe Firefly pricing"
     source_id: adobe-firefly-pricing
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-13
   api_available:
     value: "Enterprise/API access is agreement-driven rather than a simple self-serve public model API for most buyers"
     source: "https://firefly.adobe.com/pricing"
     source_label: "Adobe Firefly pricing"
     source_id: adobe-firefly-pricing
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-13
   image_generation:
     value: "Yes: Firefly image models power text-to-image, generative fill, and Adobe app workflows"
     source: "https://firefly.adobe.com/"
     source_label: "Adobe Firefly official site"
     source_id: adobe-firefly-product
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-13
   video_generation:
     value: "Yes: Firefly includes AI video generation and creative video workflows"
     source: "https://blog.adobe.com/en/publish/2026/03/19/adobe-firefly-expands-video-image-creation-with-new-ai-capabilities-custom-models"
     source_label: "Adobe Firefly 2026 expansion"
     source_id: adobe-firefly-blog-2026
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-13
   real_time_voice:
     value: "No primary real-time voice-agent product; Firefly focuses on image, video, and design generation"
     source: "https://firefly.adobe.com/"
     source_label: "Adobe Firefly official site"
     source_id: adobe-firefly-product
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: low
     confidence: high
   web_browsing:
@@ -112,7 +112,7 @@ facts:
     source: "https://firefly.adobe.com/"
     source_label: "Adobe Firefly official site"
     source_id: adobe-firefly-product
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: low
     confidence: high
   coding_agent:
@@ -120,7 +120,7 @@ facts:
     source: "https://firefly.adobe.com/"
     source_label: "Adobe Firefly official site"
     source_id: adobe-firefly-product
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: low
     confidence: high
   enterprise_controls:
@@ -128,7 +128,7 @@ facts:
     source: "https://www.adobe.com/legal/licenses-terms/adobe-gen-ai-user-guidelines.html"
     source_label: "Adobe Generative AI user guidelines"
     source_id: adobe-genai-guidelines
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
   data_retention_or_privacy:
@@ -136,7 +136,7 @@ facts:
     source: "https://www.adobe.com/legal/licenses-terms/adobe-gen-ai-user-guidelines.html"
     source_label: "Adobe Generative AI user guidelines"
     source_id: adobe-genai-guidelines
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
   open_source_or_local:
@@ -144,7 +144,7 @@ facts:
     source: "https://firefly.adobe.com/"
     source_label: "Adobe Firefly official site"
     source_id: adobe-firefly-product
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: low
     confidence: high
   best_for:
@@ -152,7 +152,7 @@ facts:
     source: "https://firefly.adobe.com/"
     source_label: "Adobe Firefly official site"
     source_id: adobe-firefly-product
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
   watch_out_for:
@@ -160,12 +160,12 @@ facts:
     source: "https://firefly.adobe.com/pricing"
     source_label: "Adobe Firefly pricing"
     source_id: adobe-firefly-pricing
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-13
 tags: [ai-image, adobe, commercially-safe, creative-cloud, generative-ai, indemnification]
-seo_title: 'Adobe Firefly Review (April 2026): Firefly Image Model 5 + IP Indemnification'
+seo_title: 'Adobe Firefly Review (May 2026): Firefly Image Model 5 + IP Indemnification'
 meta_description: >-
   Adobe Firefly Image Model 5 generates 4MP native-resolution images with IP indemnification for paid users. Trained on licensed Adobe Stock. Plans $9.99-$199.99/month. The safe pick for commercial client work.
 author: aipedia.wiki Editorial
@@ -198,6 +198,13 @@ price_history:
     source_label: "Source"
     source_id: adobe-firefly-pricing
     note: "Verified unchanged."
+  - date: 2026-05-13
+    plan: "Pro"
+    price: "$29.99/mo"
+    source: "https://firefly.adobe.com/pricing"
+    source_label: "Source"
+    source_id: adobe-firefly-pricing
+    note: "Verified unchanged; Image Model 5 still flagship."
 ---
 
 # Adobe Firefly
@@ -205,6 +212,10 @@ price_history:
 Adobe's native AI image and video generator. **Firefly Image Model 5** is the production flagship, generating 4MP native-resolution images with prompt-based editing and layer support.
 
 Trained only on licensed Adobe Stock and public domain content. Paid plans include IP indemnification against copyright claims. No other major image generator offers this guarantee.
+
+## Recent changes
+
+- **May 13, 2026:** Verified. Firefly Image Model 5 remains the production flagship; pricing tiers (Free, Standard $9.99, Pro $29.99, Creative Cloud All Apps $59.99, Premium $199.99) unchanged. No new model release since the Image 5 GA push.
 
 ## Recent developments
 
@@ -236,7 +247,7 @@ Trained only on licensed Adobe Stock and public domain content. Paid plans inclu
 | **Public API** | Enterprise agreements only |
 | **Pricing** | Free · $9.99 · $29.99 · $59.99 · $199.99/month |
 
-Every data point above was verified on 2026-04-17. See Sources.
+Every data point above was verified on 2026-05-13. See Sources.
 
 ## What it actually is
 
@@ -274,7 +285,7 @@ Subscription pricing via [firefly.adobe.com/pricing](https://firefly.adobe.com/p
 | Creative Cloud All Apps | $59.99 | 1,000+ | + Photoshop, Illustrator, Premiere Pro, Express | Full Adobe stack |
 | Premium | $199.99 | 50,000 | Studio and agency workloads | Large creative teams |
 
-*Prices verified 2026-04-17 via [Adobe Firefly pricing](https://firefly.adobe.com/pricing) and [Adobe Firefly Review 2026](https://computertech.co/adobe-firefly-review/). Credit costs vary by operation (2-100 credits per generation).*
+*Prices verified 2026-05-13 via [Adobe Firefly pricing](https://firefly.adobe.com/pricing) and [Adobe Firefly Review 2026](https://computertech.co/adobe-firefly-review/). Credit costs vary by operation (2-100 credits per generation).*
 
 ## Against the alternatives
 
@@ -301,7 +312,7 @@ Subscription pricing via [firefly.adobe.com/pricing](https://firefly.adobe.com/p
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [Adobe Firefly pricing](https://firefly.adobe.com/pricing), the [Firefly Image 5 launch coverage](https://techcrunch.com/2025/10/28/adobe-firefly-image-5-brings-support-for-layers-will-let-creators-make-custom-models/), and [Adobe GenAI user guidelines](https://www.adobe.com/legal/licenses-terms/adobe-gen-ai-user-guidelines.html).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against [Adobe Firefly pricing](https://firefly.adobe.com/pricing), the [Firefly Image 5 launch coverage](https://techcrunch.com/2025/10/28/adobe-firefly-image-5-brings-support-for-layers-will-let-creators-make-custom-models/), and [Adobe GenAI user guidelines](https://www.adobe.com/legal/licenses-terms/adobe-gen-ai-user-guidelines.html).
 
 ## FAQ
 
@@ -318,7 +329,7 @@ Firefly's current flagship, unveiled at Adobe MAX 2025 and generally available a
 Midjourney V7 leads on aesthetic quality, cinematic lighting, and stylized output. Firefly leads on commercial safety, Creative Cloud integration, and video generation. Many agencies use Midjourney for ideation and Firefly for final licensed delivery.
 
 **Does Firefly have a public API?**
-No general-access API as of April 2026. Programmatic integration requires an Adobe Enterprise agreement. Developers seeking pay-per-use image APIs should look at OpenAI, Replicate, or Fal.
+No general-access API as of May 2026. Programmatic integration requires an Adobe Enterprise agreement. Developers seeking pay-per-use image APIs should look at OpenAI, Replicate, or Fal.
 
 **How is Firefly bundled with Creative Cloud?**
 Creative Cloud All Apps at $59.99/month includes 1,000+ Firefly credits and the integrated tooling inside Photoshop, Illustrator, and Premiere Pro. This is the cost-effective entry point for existing Adobe users.

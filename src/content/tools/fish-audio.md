@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$75/month"
 status: active
 launched: 2024-03
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: "https://fish.audio"
     source_label: "Fish Audio official site"
     source_id: fish-audio-official
-    verified_at: 2026-05-04
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
   model_surface:
@@ -39,25 +39,25 @@ facts:
     source: "https://fish.audio"
     source_label: "Fish Audio official site"
     source_id: fish-audio-official
-    verified_at: 2026-05-04
-    next_review_at: 2026-08-04
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: high
     confidence: medium
   pricing_anchor:
-    value: "Public pricing and credit details should be verified from the live Fish Audio product surface before volume usage."
-    source: "https://fish.audio"
-    source_label: "Fish Audio official site"
+    value: "Plus $11/mo for ~200 minutes, Pro $75/mo for ~27 hours, and Max $749/mo for ~104 hours. The Pro tier now bundles 1,620 minutes per month and the Max tier is the sustained-volume option."
+    source: "https://fish.audio/plan/"
+    source_label: "Fish Audio plan page"
     source_id: fish-audio-pricing
-    verified_at: 2026-05-04
-    next_review_at: 2026-08-04
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: high
-    confidence: medium
+    confidence: high
   workflow_surface:
     value: "Best evaluated with your own scripts, languages, and target delivery channel because voice quality varies by speaker, emotion, and post-processing needs."
     source: "https://fish.audio"
     source_label: "Fish Audio official site"
     source_id: fish-audio-official
-    verified_at: 2026-05-04
+    verified_at: 2026-05-13
     volatility: medium
     confidence: medium
   watch_out_for:
@@ -65,12 +65,12 @@ facts:
     source: "https://fish.audio"
     source_label: "Fish Audio official site"
     source_id: fish-audio-official
-    verified_at: 2026-05-04
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
 tags: [tts, text-to-speech, voice-ai, open-source, self-hosted, voice-cloning, openaudio, fish-speech, low-latency, multilingual]
-seo_title: "Fish Audio (OpenAudio S1 + S2): Features, Pricing & Review (April 2026)"
-meta_description: "Fish Audio ships OpenAudio S1 and the S2 Pro flagship, the top-ranked TTS in 2026 blind tests. Free self-hosting, cloud from $11/mo, API at $15 per 1M chars."
+seo_title: "Fish Audio (OpenAudio S1 + S2): Features, Pricing & Review (May 2026)"
+meta_description: "Fish Audio ships OpenAudio S1 and the S2 Pro flagship, the top-ranked TTS in 2026 blind tests. Free self-hosting, Plus $11/mo, Pro $75/mo, Max $749/mo, API at $15 per 1M chars."
 author: "aipedia.wiki Editorial"
 best_for:
   - open-source TTS with self-hosting
@@ -98,6 +98,13 @@ price_history:
     source_label: "Source"
     source_id: fish-audio-pricing
     note: "Verified unchanged"
+  - date: 2026-05-13
+    plan: "Pro"
+    price: "$75/mo"
+    source: "https://fish.audio/plan/"
+    source_label: "Source"
+    source_id: fish-audio-pricing
+    note: "Verified Pro at $75/mo, 1,620 minutes (~27 hours). Max tier $749/mo confirmed at 6,250 minutes for sustained agency workloads."
 ---
 
 # Fish Audio
@@ -112,7 +119,7 @@ S2 Pro ranked first in Fish Audio's own 2026 blind-provider comparison. Artifici
 >
 > **Skip it if the workflow is enterprise dubbing with lip-sync (use [Resemble AI](/tools/resemble-ai/)), if sub-100ms streaming latency is the hard constraint (use [Cartesia](/tools/cartesia/)), or if a no-code consumer UI matters more than raw quality ([Speechify](/tools/speechify/) for reading, [ElevenLabs](/tools/elevenlabs/) for creator workflows).**
 >
-> **Who pays which tier:** Free for testing (7 minutes S2). Plus $11/mo for creators running ~200 minutes. Pro $75/mo for sustained 27-hour workloads. API at $15 per 1M characters for developers. Self-hosters pay only GPU cost.
+> **Who pays which tier:** Free for testing (7 minutes S2). Plus $11/mo for creators running ~200 minutes. Pro $75/mo for sustained 27-hour workloads. Max $749/mo for agency-scale 104-hour workloads. API at $15 per 1M characters for developers. Self-hosters pay only GPU cost.
 
 ## Key Facts
 
@@ -123,13 +130,14 @@ S2 Pro ranked first in Fish Audio's own 2026 blind-provider comparison. Artifici
 | **Language coverage** | 80+ languages including English, Chinese, Japanese, Korean, Spanish, French, German, Arabic, Hindi |
 | **License** | MIT for open weights; weights on GitHub and Hugging Face |
 | **Self-hosting** | Consumer GPUs with 8GB+ VRAM |
-| **Cloud free tier** | 7 minutes S2 generation |
-| **Cloud Plus** | $11/mo, ~200 minutes S2 |
-| **Cloud Pro** | $75/mo, ~27 hours S2 |
-| **API pricing** | ~$15 per 1M characters |
+| **Cloud free tier** | 7 minutes S2 generation, 8K credits/mo |
+| **Cloud Plus** | $11/mo, ~200 minutes S2, 250K credits |
+| **Cloud Pro** | $75/mo, ~1,620 minutes (27 hours) S2, 2M credits, 3 team seats |
+| **Cloud Max** | $749/mo, ~6,250 minutes (104 hours) S2, 25M credits, 10 team seats |
+| **API pricing** | ~$15 per 1M characters · ~600-625 credits per minute |
 | **Blind-test rank (2026)** | S2 Pro #1, S1 above every third-party provider |
 
-Every data point above was verified against vendor sources on 2026-04-17. See Sources.
+Every data point above was verified against vendor sources on 2026-05-13. See Sources.
 
 ## What it actually is
 
@@ -160,12 +168,13 @@ The moat is model quality plus license freedom. S2 Pro beats every commercial th
 | Plan | Price | Included | Notes |
 |------|-------|----------|-------|
 | Self-hosted | $0 | Unlimited | GPU with 8GB+ VRAM required |
-| Free (cloud) | $0 | 7 min S2 | Testing only, watermarked |
-| Plus | $11/mo | ~200 min S2 / 250K credits | Best fit for most creators |
-| Pro | $75/mo | ~27 hours S2 | Sustained production workloads |
-| API | $15 / 1M chars | Pay-as-you-go | No subscription required |
+| Free (cloud) | $0 | 7 min S2 / 8K credits | Testing only, non-commercial |
+| Plus | $11/mo | ~200 min S2 / 250K credits | Best fit for most creators, 1 seat |
+| Pro | $75/mo | ~27 hours S2 / 2M credits | Sustained production, 3 team seats |
+| Max | $749/mo | ~104 hours S2 / 25M credits | Agency-scale, 10 team seats |
+| API | $15 / 1M chars | Pay-as-you-go | ~600-625 credits per minute |
 
-*Prices verified 2026-04-17 via [Fish Audio blog](https://fish.audio/blog/best-text-to-speech-tool-2026-ranking/) and [emelia.io hub](https://emelia.io/hub/fish-speech-s2-tts).*
+*Prices verified 2026-05-13 via [Fish Audio plan page](https://fish.audio/plan/) and the [Fish Audio 2026 blind-provider comparison](https://fish.audio/blog/blind-tts-provider-comparison-2026/).*
 
 ## Against the alternatives
 
@@ -187,9 +196,14 @@ The moat is model quality plus license freedom. S2 Pro beats every commercial th
 - **Community tooling still catching up.** Third-party plugins and wrappers exist but are thinner than ElevenLabs' ecosystem.
 - **Credit math on the cloud plans.** S1 and S2 consume credits at different rates. Heavy S2 users should price against the API or self-hosting before choosing Pro.
 
+## Recent changes
+
+- **2026-05-13:** Pricing reconfirmed live. Plus $11, Pro $75, Max $749. The Pro tier covers ~1,620 generation minutes (27 hours) per month with three team seats; the Max tier unlocks ~6,250 minutes (104 hours) and ten team seats for sustained agency or platform workloads. Credit math holds at roughly 600-625 credits per minute. Free tier remains 7 minutes plus 8K credits/mo, non-commercial.
+- **2026-04-17:** S2 Pro confirmed as flagship in Artificial Analysis' aggregate TTS ELO leaderboard. API pricing unchanged at $15 per 1M characters.
+
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity). Last verified 2026-04-17 against [fish.audio](https://fish.audio), [OpenAudio S2 page](https://fish.audio/s2/), [Fish Audio 2026 provider comparison](https://fish.audio/blog/blind-tts-provider-comparison-2026/), and [Artificial Analysis TTS leaderboard](https://artificialanalysis.ai/text-to-speech/model-families/fishaudio).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity). Last verified 2026-05-13 against [Fish Audio plan page](https://fish.audio/plan/), [OpenAudio S2 page](https://fish.audio/s2/), [Fish Audio 2026 provider comparison](https://fish.audio/blog/blind-tts-provider-comparison-2026/), and [Artificial Analysis TTS leaderboard](https://artificialanalysis.ai/text-to-speech/model-families/fishaudio).
 
 ## FAQ
 
@@ -210,12 +224,12 @@ Yes. Both S1 and S2 support cloning from short reference samples. Quality improv
 
 ## Sources
 
-- [Fish Audio homepage](https://fish.audio): plans, pricing, current models
+- [Fish Audio homepage](https://fish.audio): product positioning, current models
+- [Fish Audio plan page](https://fish.audio/plan/): Free, Plus, Pro, Max tiers; credits and minutes per tier
 - [OpenAudio S2 page](https://fish.audio/s2/): S2 Pro architecture and training data
 - [Fish Audio 2026 blind-provider comparison](https://fish.audio/blog/blind-tts-provider-comparison-2026/): S2 Pro #1 ranking
 - [Artificial Analysis: Fish Audio family](https://artificialanalysis.ai/text-to-speech/model-families/fishaudio): aggregate TTS ELO
 - [Fish Speech GitHub](https://github.com/fishaudio/fish-speech): MIT weights, self-hosting instructions
-- [emelia.io hub](https://emelia.io/hub/fish-speech-s2-tts): 2026 plan breakdown
 
 ## Related
 
