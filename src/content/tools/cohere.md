@@ -121,6 +121,7 @@ price_history:
     source_label: "Cohere Transcribe"
     source_id: cohere-transcribe
     note: "Cohere added a new enterprise speech-to-text model (14 languages, open-weights). Verified pricing page is otherwise unchanged: Command R+ at $2.50/$10 per 1M tok; Model Vault dedicated tiers from $2,500/mo. Rerank 4 Pro Large is now listed at $10/hr or $6,500/mo."
+---
 
 # Cohere
 

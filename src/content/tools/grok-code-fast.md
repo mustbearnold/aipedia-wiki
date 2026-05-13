@@ -9,7 +9,7 @@ company: xai
 url: https://x.ai
 pricing_model: paid
 price_range: "Deprecated May 15, 2026 (xAI API). Final published rates: $0.20/M input, $1.50/M output, $0.02/M cached input. xAI directs users to Grok 4.3 for coding."
-status: deprecated
+status: dead
 launched: 2025-08
 deprecated_on: 2026-05-15
 last_updated: 2026-05-13

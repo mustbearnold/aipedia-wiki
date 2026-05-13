@@ -2,7 +2,8 @@
 type: tool
 slug: hunyuan
 title: Hunyuan
-tagline: Tencent's AI model family covering LLMs, 3D world generation, video, image, and embodied AI. April-May 2026 saw three flagship open-source releases: HY-World 2.0 (3D worlds), Hy3-preview (295B MoE LLM), and HY-OmniWeaving (unified video generation).
+tagline: >-
+  Tencent's AI model family covering LLMs, 3D world generation, video, image, and embodied AI. April-May 2026 saw three flagship open-source releases. HY-World 2.0 (3D worlds), Hy3-preview (295B MoE LLM), and HY-OmniWeaving (unified video generation).
 category: ai-chatbots
 secondary_categories: [ai-video, ai-image]
 company: Tencent

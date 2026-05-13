@@ -15,8 +15,10 @@ last_updated: 2026-05-13
 last_verified: 2026-05-13
 price_history:
   - date: 2026-05-13
+    price: "see note"
     change: "All Hands AI restructured OpenHands Cloud: the $20/mo Pro tier was retired in favor of a free Individual SaaS plan (10 daily conversations, BYOK or at-cost OpenHands provider) plus custom Enterprise. Self-hosted MIT remains free."
   - date: 2026-04-17
+    price: "see note"
     change: "Pricing verified: Self-hosted free, Cloud Free on MiniMax, Pro $20/mo BYOK, Enterprise custom."
 update_frequency: monthly
 affiliate:

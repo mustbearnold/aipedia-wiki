@@ -6,7 +6,7 @@ tagline: No-code AI workforce platform for building agents that reason and act, 
 category: ai-automation
 company: relevance-ai
 url: https://relevanceai.com
-pricing_model: contact-sales
+pricing_model: enterprise
 price_range: "Pro, Team, Enterprise · all contact-sales as of May 2026 · prior Pro $19/mo and Team $234/mo annual rates no longer publicly listed"
 status: active
 launched: 2023-06

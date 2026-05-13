@@ -73,8 +73,10 @@ facts:
     confidence: high
 price_history:
   - date: 2026-05-13
+    price: "see note"
     note: "qwen-max International tier: $1.20/M input (0-32K) and $6.00/M output; new Qwen-Flash tier at $0.10/M input and $0.40/M output; qwen-plus at $0.40/M input and $1.20/M output (0-256K)."
   - date: 2026-05-11
+    price: "see note"
     note: "qwen-max International listed at $1.60/M input and $6.40/M output on Model Studio."
 tags: [open-weights, alibaba, multilingual, coding, vision, reasoning, qwen3, api, chinese-llm]
 seo_title: "Qwen: Features, Pricing & Review (May 2026)"

@@ -9,7 +9,7 @@ tagline: >-
 category: ai-search
 company: you-com
 url: 'https://you.com'
-pricing_model: usage-based
+pricing_model: paid
 price_range: "$1-$12 per 1K calls; $100 free credit; Enterprise custom"
 status: active
 launched: 2020-11

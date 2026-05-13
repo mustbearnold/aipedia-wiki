@@ -6,7 +6,7 @@ tagline: Enterprise voice platform covering Chatterbox cloning, Chatterbox Multi
 category: ai-voice
 company: Resemble AI
 url: https://www.resemble.ai
-pricing_model: usage-based
+pricing_model: paid
 price_range: "$0 to start, pay-per-use + Enterprise"
 status: active
 launched: 2019-06

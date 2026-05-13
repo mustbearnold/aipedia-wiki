@@ -51,7 +51,7 @@ facts:
     confidence: high
 tags: [browser, ai-browser, perplexity, search, research, answer-engine, citations]
 price_history:
-  - date: 2025
+  - date: "2025"
     plan: "Comet launch"
     price: "Free browser"
     source: "https://www.perplexity.ai/comet"

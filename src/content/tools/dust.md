@@ -15,6 +15,7 @@ last_updated: 2026-05-13
 last_verified: 2026-05-13
 price_history:
   - date: 2026-05-13
+    price: "see note"
     note: "Pro plan remains 29 EUR/user/month (excl. tax) from 1 user with 14-day trial. Enterprise stays custom from 100 members. No price change since 2026-05-05; advanced-model lineup now explicitly lists GPT-5, Claude, Gemini, and Mistral on the pricing page."
 update_frequency: monthly
 affiliate:
