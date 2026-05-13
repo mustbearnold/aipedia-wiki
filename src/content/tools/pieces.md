@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: $0-$18.99/month
 status: active
 launched: 2022-04
-last_updated: 2026-05-04
-last_verified: 2026-05-04
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -32,8 +32,8 @@ facts:
     source: "https://pieces.app/"
     source_label: "Pieces homepage"
     source_id: pieces-official
-    verified_at: 2026-05-04
-    next_review_at: 2026-08-04
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: medium
     confidence: high
   core_dependencies:
@@ -41,17 +41,17 @@ facts:
     source: "https://docs.pieces.app/products/core-dependencies"
     source_label: "Pieces core dependencies docs"
     source_id: pieces-core-dependencies
-    verified_at: 2026-05-04
-    next_review_at: 2026-08-04
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: medium
     confidence: high
   pricing_anchor:
-    value: "Free and paid plans are documented in Pieces paid-plan docs; verify device, model, and team limits before standardizing."
+    value: "Free with on-device LLMs and unlimited usage; Pro $18.99/mo monthly or $169.99/yr ($14.17/mo, 20% off) annually; Enterprise on request. Pro unlocks Claude Opus 4.7, GPT-5.2 Pro, Gemini 3.1 Pro and other premium cloud models."
     source: "https://docs.pieces.app/products/paid-plans"
     source_label: "Pieces paid plans docs"
     source_id: pieces-official
-    verified_at: 2026-05-04
-    next_review_at: 2026-08-04
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: high
     confidence: high
   best_for:
@@ -59,8 +59,8 @@ facts:
     source: "https://pieces.app/"
     source_label: "Pieces homepage"
     source_id: pieces-official
-    verified_at: 2026-05-04
-    next_review_at: 2026-08-04
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: medium
     confidence: high
   watch_out_for:
@@ -68,16 +68,16 @@ facts:
     source: "https://docs.pieces.app/products/core-dependencies"
     source_label: "Pieces core dependencies docs"
     source_id: pieces-core-dependencies
-    verified_at: 2026-05-04
-    next_review_at: 2026-08-04
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: medium
     confidence: medium
 tags: [snippet-manager, workflow, ai-coding, context, developer-tools, vscode, jetbrains, chrome, local-llm, offline]
-seo_title: 'Pieces for Developers: Local AI Memory Review (April 2026)'
+seo_title: 'Pieces for Developers: Local AI Memory Review (May 2026)'
 meta_description: >-
   Pieces for Developers is a local-first AI memory layer. Free tier includes
-  on-device LLMs (Llama, Gemma, Phi) with no usage caps. Pro at $18.99/mo unlocks
-  Claude Opus 4.7, GPT-5, Gemini.
+  on-device LLMs (Llama, Gemma, Phi) with no usage caps. Pro at $18.99/mo or
+  $169.99/yr unlocks Claude Opus 4.7, GPT-5.2 Pro, Gemini 3.1 Pro.
 author: "aipedia.wiki Editorial"
 best_for:
   - developers who lose snippets across tools
@@ -91,14 +91,30 @@ not_best_for:
 quick_answer: >-
   Pieces is a local-first AI memory layer for developers. LTM-2 captures code,
   tabs, and context across IDEs and browser. Free tier runs on-device LLMs with
-  no caps. Pro $18.99/mo adds Claude Opus 4.7, GPT-5, Gemini.
+  no caps. Pro $18.99/mo (or $169.99/yr, 20% off) adds Claude Opus 4.7,
+  GPT-5.2 Pro, Gemini 3.1 Pro.
+price_history:
+  - date: 2026-04-15
+    plan: "Pro Monthly"
+    price: "$18.99/mo"
+    source: "https://docs.pieces.app/products/paid-plans"
+    source_label: "Source"
+    source_id: pieces-official
+    note: "Verified unchanged on Pieces paid-plans docs"
+  - date: 2026-05-13
+    plan: "Pro Annual"
+    price: "$169.99/yr ($14.17/mo)"
+    source: "https://docs.pieces.app/products/paid-plans"
+    source_label: "Source"
+    source_id: pieces-official
+    note: "Annual billing surfaced at 20% discount vs monthly"
 ---
 
 # Pieces for Developers
 
 Pieces for Developers is a local-first AI memory layer for engineers. The desktop app (Pieces OS) sits between IDEs, browser, and terminal, capturing code snippets, tabs, conversations, and context continuously, then making it queryable in natural language.
 
-Two tiers: Free and Pro. Pro costs $18.99 per month. Enterprise available on request.
+Two tiers: Free and Pro. Pro costs $18.99/mo or $169.99/yr ($14.17/mo equivalent, 20% off). Enterprise available on request.
 
 ## System Verdict
 
@@ -113,9 +129,9 @@ Two tiers: Free and Pro. Pro costs $18.99 per month. Enterprise available on req
 | | |
 |---|---|
 | **Core function** | Local-first AI memory layer for code, context, and snippets |
-| **Tiers** | Free · Pro $18.99/mo · Enterprise (custom) |
+| **Tiers** | Free · Pro $18.99/mo or $169.99/yr · Enterprise (custom) |
 | **Free plan** | On-device LLMs (Ollama-backed) with no usage caps, limited cloud access |
-| **Pro plan** | Unlimited Claude Opus 4.7, GPT-5, Gemini, thinking models |
+| **Pro plan** | Unlimited Claude Opus 4.7, GPT-5.2 Pro, Gemini 3.1 Pro, Perplexity Sonar Deep Research, reasoning models |
 | **Memory retention** | Free rolling window · Pro up to 9 months |
 | **On-device models** | Llama, Gemma, Phi (via Ollama) |
 | **IDE integrations** | VS Code, JetBrains, Azure Data Studio, Obsidian, Xcode, terminal, Slack |
@@ -123,13 +139,13 @@ Two tiers: Free and Pro. Pro costs $18.99 per month. Enterprise available on req
 | **Data location** | Local by default. Cloud sync opt-in |
 | **LTM engine** | LTM-2 captures continuously in the background |
 
-Every data point above was verified against vendor sources on 2026-04-17. See Sources.
+Every data point above was verified against vendor sources on 2026-05-13. See Sources.
 
 ## What it actually is
 
 A background memory service plus a query surface. The Pieces OS daemon runs on the machine and captures context across connected tools without prompting. The Chrome extension logs code snippets from web pages with source metadata. IDE plugins save, search, and insert snippets inline.
 
-The Pieces Copilot sits on top. On Free, it runs on-device LLMs (Llama, Gemma, Phi via Ollama) against the captured memory. On Pro, it unlocks unlimited cloud model access to Claude Opus 4.7, GPT-5, Gemini, and reasoning models.
+The Pieces Copilot sits on top. On Free, it runs on-device LLMs (Llama, Gemma, Phi via Ollama) against the captured memory. On Pro, it unlocks unlimited cloud model access to Claude Opus 4.7, GPT-5.2 Pro, Gemini 3.1 Pro, Perplexity Sonar Deep Research, and reasoning models.
 
 LTM-2 is the differentiator. It builds a searchable timeline of sessions. Query "what was I debugging last Thursday" in natural language and the engine reconstructs tool state, open files, and referenced content from that window.
 
@@ -153,16 +169,17 @@ LTM-2 is the differentiator. It builds a searchable timeline of sessions. Query 
 | Plan | Price | Models | Memory retention | Who's it for |
 |------|-------|--------|------------------|--------------|
 | Free | $0 | On-device Llama, Gemma, Phi (Ollama) + limited cloud | Rolling window | Solo developers on local AI |
-| Pro | $18.99/mo | + Unlimited Claude Opus 4.7, GPT-5, Gemini, thinking models | Up to 9 months | **Most paid users land here** |
+| Pro Monthly | $18.99/mo | + Unlimited Claude Opus 4.7, GPT-5.2 Pro, Gemini 3.1 Pro, Sonar Deep Research, reasoning models | Up to 9 months | Month-to-month evaluators |
+| Pro Annual | $169.99/yr ($14.17/mo) | Same as Pro Monthly, 20% off | Up to 9 months | **Most paid users land here** |
 | Enterprise | Custom | Full suite + controls | Custom | SSO, audit, admin, on-prem |
 
-*Prices verified 2026-04-17 via [Pieces Pro pricing docs](https://docs.pieces.app/products/paid-plans). Free tier includes unlimited on-device model usage with no caps. Enterprise pricing available on request.*
+*Prices verified 2026-05-13 via [Pieces Pro pricing docs](https://docs.pieces.app/products/paid-plans). Free tier includes unlimited on-device model usage with no caps. Enterprise pricing available on request.*
 
 ## Against the alternatives
 
 | | Pieces Pro | GitHub Copilot | Cursor Pro |
 |---|---|---|---|
-| **Monthly** | $18.99 | $10 | $20 |
+| **Monthly** | $18.99 (annual $14.17) | $10 | $20 |
 | **Primary job** | Memory + snippet retrieval | Code generation | AI IDE with codebase context |
 | **On-device LLM** | **Yes**, unlimited | No | No |
 | **Cross-session memory** | **LTM-2, up to 9 months** | Session-scoped | Session + workspace |
@@ -178,16 +195,22 @@ LTM-2 is the differentiator. It builds a searchable timeline of sessions. Query 
 - **Team features overlap existing tools.** GitHub, Confluence, and Notion already handle shared snippets. Pieces adds AI search but the marginal value is thinner for team-only use cases.
 - **Cross-platform gaps.** Linux integration lags macOS and Windows for some IDE plugins.
 - **Memory surface can surprise users.** LTM-2 captures continuously. Review what was captured before enabling cloud sync.
-- **Pricing repositioned in 2025-2026.** Earlier plans listed a $12/user Teams tier; current consumer pricing is Free and Pro $18.99. Verify against the live pricing page.
+- **Pricing repositioned in 2025-2026.** Earlier plans listed a $12/user Teams tier; current consumer pricing is Free and Pro at $18.99/mo or $169.99/yr (20% off). Verify against the live pricing page.
+
+## Recent changes
+
+- **May 2026:** Annual Pro plan surfaced at $169.99/yr ($14.17/mo equivalent, 20% off monthly). Free tier unchanged with unlimited on-device Llama, Gemma, and Phi.
+- **April 2026:** Pieces docs added Claude Opus 4.7 (released April 16, 2026), GPT-5.2 Pro, Gemini 3.1 Pro Preview, and Perplexity Sonar Deep Research to the Pro cloud-model roster.
+- **2025-2026:** Teams tier ($12/user) retired in favor of the consumer Pro plan plus an enterprise-only track.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [Pieces Pro pricing docs](https://docs.pieces.app/products/paid-plans), [Pieces features](https://pieces.app/features), and the [Copilot feature page](https://pieces.app/features/copilot).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-05-13 against [Pieces Pro pricing docs](https://docs.pieces.app/products/paid-plans), [Pieces features](https://pieces.app/features), and the [Copilot feature page](https://pieces.app/features/copilot).
 
 ## FAQ
 
 **Is Pieces free?**
-Yes. The Free plan includes unlimited on-device model usage (Llama, Gemma, Phi via Ollama) plus limited cloud access. Pro at $18.99/mo unlocks unlimited Claude Opus 4.7, GPT-5, Gemini ([Pieces Pro](https://docs.pieces.app/products/paid-plans)).
+Yes. The Free plan includes unlimited on-device model usage (Llama, Gemma, Phi via Ollama) plus limited cloud access. Pro at $18.99/mo (or $169.99/yr, 20% off) unlocks unlimited Claude Opus 4.7, GPT-5.2 Pro, Gemini 3.1 Pro, and Perplexity Sonar Deep Research ([Pieces Pro](https://docs.pieces.app/products/paid-plans)).
 
 **Does Pieces store my code on its servers?**
 No by default. Local-first storage keeps snippets and context on the machine. Cloud sync is opt-in per-feature.

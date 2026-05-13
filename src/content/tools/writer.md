@@ -11,8 +11,8 @@ pricing_model: enterprise
 price_range: "14-day trial · Starter ~$29/user (third-party) · Enterprise custom"
 status: active
 launched: 2020-03
-last_updated: 2026-05-04
-last_verified: 2026-05-04
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: quarterly
 seo_title: "Writer (Palmyra X5): Features, Pricing & Review (2026)"
 meta_description: "Writer is the enterprise AI platform running the Palmyra X5 model with 1M token context. Palmyra X5 API is $0.60 in / $6 out per MTok, about 75% cheaper than GPT-4.1. Starter offers a 14-day free trial; Enterprise is contact-sales. Used by Vanguard, Salesforce, Qualcomm, Uber, and Hilton."
@@ -34,17 +34,17 @@ facts:
     source: "https://writer.com/platform/"
     source_label: "Writer platform"
     source_id: writer-platform
-    verified_at: 2026-05-04
-    next_review_at: 2026-08-04
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: medium
     confidence: high
   model_family:
-    value: "Writer operates its own Palmyra LLM family, which is the strategic moat versus generic writing wrappers."
+    value: "Writer operates its own Palmyra LLM family (X5, X4, Creative, Med, Fin), which is the strategic moat versus generic writing wrappers."
     source: "https://writer.com/llms/"
     source_label: "Writer Palmyra LLMs"
     source_id: writer-palmyra
-    verified_at: 2026-05-04
-    next_review_at: 2026-08-04
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: high
     confidence: high
   pricing_anchor:
@@ -52,8 +52,8 @@ facts:
     source: "https://writer.com/plans/"
     source_label: "Writer plans"
     source_id: writer-pricing
-    verified_at: 2026-05-04
-    next_review_at: 2026-08-04
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: high
     confidence: medium
   best_for:
@@ -61,8 +61,8 @@ facts:
     source: "https://writer.com/platform/"
     source_label: "Writer platform"
     source_id: writer-platform
-    verified_at: 2026-05-04
-    next_review_at: 2026-08-04
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: medium
     confidence: high
   watch_out_for:
@@ -70,8 +70,8 @@ facts:
     source: "https://writer.com/plans/"
     source_label: "Writer plans"
     source_id: writer-pricing
-    verified_at: 2026-05-04
-    next_review_at: 2026-08-04
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: high
     confidence: medium
 tags: [enterprise-ai, ai-writing, palmyra, content-generation, compliance, writer]
@@ -89,6 +89,20 @@ not_best_for:
 quick_answer: >-
   Writer is the enterprise generative AI platform built on its own Palmyra models, not a GPT wrapper. Pick it for enterprise content work, governed AI agents, and cost-sensitive API workloads that need a 1M context window. Skip it if the primary need is a consumer chatbot or agentic coding.
 price_history:
+  - date: 2026-05-13
+    plan: "Palmyra X5 API"
+    price: "$0.60 in / $6 out per MTok"
+    source: "https://writer.com/llms/"
+    source_label: "Source"
+    source_id: writer-palmyra
+    note: "Re-verified on writer.com/llms; 1M context retained; Writer still positions X5 as roughly 75% cheaper than GPT-4.1 on comparable tasks"
+  - date: 2026-05-13
+    plan: "Palmyra (other models)"
+    price: "$5 in / $12 out per MTok"
+    source: "https://writer.com/llms/"
+    source_label: "Source"
+    source_id: writer-palmyra
+    note: "Standardised pricing across Palmyra X4, Creative, Med, and Fin per writer.com/llms"
   - date: 2026-04-18
     plan: "Palmyra X5 API"
     price: "$0.60 in / $6 out per MTok"
@@ -120,6 +134,10 @@ The platform covers **Writer Agents** for long-running automated workflows, **Kn
 
 Writer is a San Francisco based company founded in 2020. The 2024 Series C led by ICONIQ brought unicorn status and funded the expansion into agents and self-hosted Palmyra deployments for regulated industries.
 
+## Recent changes
+
+- **2026-05-13:** Re-verified the Palmyra lineup against [writer.com/llms](https://writer.com/llms/). Five models confirmed: Palmyra X5 (1M context, $0.60 in / $6 out per MTok), Palmyra X4 (128K context, tool calling), Palmyra Creative, Palmyra Fin (first model to pass the CFA III exam), and Palmyra Med (ranked #1 medical model at 85.9% average score). Other Palmyra models standardise at $5 in / $12 out per MTok. Plans page unchanged: 14-day Starter trial plus contact-sales Enterprise, with no published post-trial Starter price.
+
 ## System Verdict
 
 > **Pick Writer if the organization wants enterprise AI on models it does not rent from OpenAI or Anthropic.** Palmyra X5 lands near frontier quality on writing and reasoning at materially lower API cost, with a 1M context window. Palmyra-Med and Palmyra-Fin are real domain specialists, not prompt wrappers. AI Studio plus Knowledge Graph plus Agents covers most content and governance workflows end to end. Enterprise connectors and SAML SSO meet procurement bars at regulated firms.
@@ -133,9 +151,10 @@ Writer is a San Francisco based company founded in 2020. The 2024 Series C led b
 | | |
 |---|---|
 | **Flagship model** | Palmyra X5 (April 2025) · 1M token context · adaptive reasoning |
-| **Domain specialists** | Palmyra-Med (healthcare) · Palmyra-Fin (finance) · Palmyra Creative |
+| **Other Palmyra models** | Palmyra X4 (128K, tool calling) · Palmyra Creative · Palmyra Med (#1 medical model, 85.9% avg) · Palmyra Fin (first to pass CFA III) |
 | **Product surface** | Writer Agent · AI Studio · Knowledge Graph · Canvas editing · Playbooks |
 | **Palmyra X5 API** | $0.60 input / $6 output per MTok · roughly 75% cheaper than GPT-4.1 |
+| **Other Palmyra API** | $5 input / $12 output per MTok across X4, Creative, Med, Fin |
 | **Plans** | Starter (14-day trial, up to 5 users) · Enterprise (custom) |
 | **Starter price** | Not published on writer.com; third-party reporting cites ~$29/user/mo annual |
 | **Enterprise features** | Unlimited users, full AI Studio, 50GB Knowledge Graph, SAML SSO, MFA, code execution, browser automation, quarterly onsite reviews |
@@ -190,7 +209,7 @@ Published tiers via [writer.com/plans](https://writer.com/plans/):
 
 API pricing for Palmyra X5: **$0.60 per MTok input, $6 per MTok output**, with a 1M token context window. Writer positions this as roughly 75% cheaper than GPT-4.1.
 
-Prices verified 2026-04-18 via [writer.com/plans](https://writer.com/plans/) and [VentureBeat coverage of the Palmyra X5 launch](https://venturebeat.com/ai/writer-releases-palmyra-x5-delivers-near-gpt-4-performance-at-75-lower-cost).
+Prices verified 2026-05-13 via [writer.com/plans](https://writer.com/plans/), [writer.com/llms](https://writer.com/llms/), and [VentureBeat coverage of the Palmyra X5 launch](https://venturebeat.com/ai/writer-releases-palmyra-x5-delivers-near-gpt-4-performance-at-75-lower-cost).
 
 **Note on Starter paid pricing:** Writer no longer publishes the post-trial Starter price on [writer.com/plans](https://writer.com/plans/). Third-party marketplaces and review sites cite roughly $29/user/month annual or $39/user/month monthly for 2026. Treat those as estimates until confirmed by sales.
 
@@ -219,7 +238,7 @@ Prices verified 2026-04-18 via [writer.com/plans](https://writer.com/plans/) and
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-18 against [writer.com/plans](https://writer.com/plans/), [Writer developer pricing docs](https://dev.writer.com/home/pricing), the [VentureBeat Palmyra X5 coverage](https://venturebeat.com/ai/writer-releases-palmyra-x5-delivers-near-gpt-4-performance-at-75-lower-cost), and the [BusinessWire Palmyra X5 launch release](https://www.businesswire.com/news/home/20250428814263/en/Writer-Releases-New-Adaptive-Reasoning-LLM-Palmyra-X5-With-1M-Context-Window-to-Scale-Next-Era-of-Enterprise-AI-Agents).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against [writer.com/plans](https://writer.com/plans/), [writer.com/llms](https://writer.com/llms/), [Writer developer pricing docs](https://dev.writer.com/home/pricing), the [VentureBeat Palmyra X5 coverage](https://venturebeat.com/ai/writer-releases-palmyra-x5-delivers-near-gpt-4-performance-at-75-lower-cost), and the [BusinessWire Palmyra X5 launch release](https://www.businesswire.com/news/home/20250428814263/en/Writer-Releases-New-Adaptive-Reasoning-LLM-Palmyra-X5-With-1M-Context-Window-to-Scale-Next-Era-of-Enterprise-AI-Agents).
 
 ## FAQ
 

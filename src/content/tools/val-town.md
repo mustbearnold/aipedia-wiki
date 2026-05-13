@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$200+/month"
 status: active
 launched: 2023-01
-last_updated: 2026-05-04
-last_verified: 2026-05-04
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,8 +30,8 @@ facts:
     source: "https://www.val.town/"
     source_label: "Val Town homepage"
     source_id: val-town-official
-    verified_at: 2026-05-04
-    next_review_at: 2026-08-04
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: medium
     confidence: high
   docs_surface:
@@ -39,8 +39,8 @@ facts:
     source: "https://docs.val.town/"
     source_label: "Val Town docs"
     source_id: val-town-docs
-    verified_at: 2026-05-04
-    next_review_at: 2026-08-04
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -48,8 +48,8 @@ facts:
     source: "https://www.val.town/pricing"
     source_label: "Val Town pricing"
     source_id: val-town-pricing
-    verified_at: 2026-05-04
-    next_review_at: 2026-08-04
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: high
     confidence: high
   best_for:
@@ -57,8 +57,8 @@ facts:
     source: "https://docs.val.town/"
     source_label: "Val Town docs"
     source_id: val-town-docs
-    verified_at: 2026-05-04
-    next_review_at: 2026-08-04
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: medium
     confidence: high
   watch_out_for:
@@ -66,12 +66,12 @@ facts:
     source: "https://www.val.town/pricing"
     source_label: "Val Town pricing"
     source_id: val-town-pricing
-    verified_at: 2026-05-04
-    next_review_at: 2026-08-04
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: high
     confidence: medium
 tags: [serverless, typescript, browser-ide, ai-coding, automation, deployment, deno, townie]
-seo_title: "Val Town: Features, Pricing & Review (April 2026)"
+seo_title: "Val Town: Features, Pricing & Review (May 2026)"
 meta_description: "Val Town runs TypeScript vals as serverless HTTP endpoints and cron jobs from the browser. Free tier, Pro with $5 Townie AI credits, Teams with $100/month in credits. Zero setup, Deno-based."
 author: "aipedia.wiki Editorial"
 best_for:
@@ -101,6 +101,34 @@ price_history:
     source_label: "Source"
     source_id: val-town-pricing
     note: "Verified unchanged. Includes $5/month in Townie credits."
+  - date: 2026-05-13
+    plan: "Pro"
+    price: "$8.33/mo billed yearly ($20/mo monthly)"
+    source: "https://www.val.town/pricing"
+    source_label: "Source"
+    source_id: val-town-pricing
+    note: "Val Town now headlines a yearly-billed rate that drops Pro to $8.33/mo (two free months on annual commit) while keeping $20/mo on month-to-month. Pro adds 10 custom domains, 1-minute cron intervals, 10-minute execution, 1M runs/day, and 10-day log retention."
+  - date: 2026-05-13
+    plan: "Teams"
+    price: "$166.67/mo billed yearly ($200/mo monthly)"
+    source: "https://www.val.town/pricing"
+    source_label: "Source"
+    source_id: val-town-pricing
+    note: "Teams headline drops to $166.67/mo on annual billing; 5M runs/day, unlimited custom domains, Slack Connect, $100/mo Townie credits, all Pro features."
+  - date: 2026-05-13
+    plan: "Free"
+    price: "$0"
+    source: "https://www.val.town/pricing"
+    source_label: "Source"
+    source_id: val-town-pricing
+    note: "Free tier now publishes explicit caps: 15-minute cron intervals, 1-minute execution, 100,000 runs/day, 3-day log retention, unlimited public vals, email-to-self only."
+  - date: 2026-05-13
+    plan: "Enterprise"
+    price: "Custom"
+    source: "https://www.val.town/pricing"
+    source_label: "Source"
+    source_id: val-town-pricing
+    note: "Enterprise added as a published tier with SOC 2, log export, flexible Townie credit allocation, and no published runtime limits."
 ---
 
 # Val Town
@@ -115,7 +143,7 @@ Townie, the AI agent that writes vals from natural-language prompts, bills on cr
 >
 > **Skip it for anything that is not a short TypeScript script.** Complex full-stack apps belong on Vercel or Cloudflare. Python automations need a different runtime. Frontend work needs a bundler. Long-running compute hits the execution cap.
 >
-> **Who pays which tier:** Free for public vals and experiments, Pro $20/mo for private vals plus $5 in Townie credits, Teams $200/mo for shared workspaces with $100 in Townie credits.
+> **Who pays which tier:** Free for public vals and experiments (now capped at 15-minute cron intervals and 100k runs/day), Pro $20/mo monthly or $8.33/mo on annual billing for private vals plus $5/mo in Townie credits, Teams from $200/mo monthly or $166.67/mo on annual billing for shared workspaces with $100/mo in Townie credits. Enterprise adds SOC 2 and log export on custom terms.
 
 ## Key Facts
 
@@ -125,13 +153,22 @@ Townie, the AI agent that writes vals from natural-language prompts, bills on cr
 | **Languages** | TypeScript and JavaScript only |
 | **Deploy surface** | HTTP endpoints, cron jobs, manual run |
 | **AI agent** | Townie, credit-metered, writes deployable vals from prompts |
-| **Free tier** | Unlimited public vals, limited private vals, caps on execution |
-| **Pro** | $20/mo, private vals, $5/month in Townie credits |
-| **Teams** | $200/mo, shared workspace, $100/month in Townie credits, unlimited custom domains |
+| **Free tier** | Unlimited public vals, 15-minute cron intervals, 1-minute execution, 100k runs/day, 3-day logs |
+| **Pro** | $20/mo monthly, $8.33/mo on yearly billing; 1-minute crons, 10-minute execution, 1M runs/day, 10-day logs, 10 custom domains, $5/mo Townie credits |
+| **Teams** | From $200/mo monthly, $166.67/mo on yearly billing; 5M runs/day, unlimited custom domains, Slack Connect, $100/mo Townie credits |
+| **Enterprise** | Custom; SOC 2, log export, no published runtime limits, flexible Townie credits |
 | **Standard library** | Email, blob storage, SQLite, HTTP utilities |
 | **Community registry** | Public vals, fork and remix, 100k+ scripts |
 
-Every data point above was verified against vendor sources on 2026-04-17. See Sources.
+Every data point above was verified against vendor sources on 2026-05-13. See Sources.
+
+## Recent changes
+
+- **2026-05-13:** Val Town now headlines yearly-billed prices on the public pricing page. Pro drops to $8.33/mo on annual commit (versus $20/mo month-to-month); Teams drops to $166.67/mo on annual (versus $200/mo). Two months free on each yearly plan.
+- **2026-05-13:** Free tier limits are now explicit on the page: 15-minute cron intervals, 1-minute execution, 100,000 runs/day, 3-day log retention, email-yourself-only outbound, unlimited public vals.
+- **2026-05-13:** Pro tier limits firmed up at 1-minute cron intervals, 10-minute execution, 1,000,000 runs/day, 10-day log retention, 10 custom domains, email anyone.
+- **2026-05-13:** Teams tier scaled to 5,000,000 runs/day with unlimited custom domains and Slack Connect.
+- **2026-05-13:** Enterprise tier published as a discrete option with SOC 2, log export, flexible Townie credit allocation, and "no limits" runtime caps on custom terms.
 
 ## What it actually is
 
@@ -161,11 +198,12 @@ The moats are narrow but real. The community val registry, the browser-first wor
 
 | Plan | Price | Townie credits | Private vals | Compute | Who's it for |
 |---|---|---|---|---|---|
-| Free | $0 | pay-per-use | 3 | 10s execution, 100 req/day | Public vals, experiments |
-| Pro | $20/mo | $5/mo included | unlimited | 30s execution, 10k req/day | **Most individuals land here** |
-| Teams | $200/mo | $100/mo included | unlimited | higher limits, custom compute | Small teams, shared workspaces |
+| Free | $0 | pay-per-use | unlimited public | 1-minute execution, 15-min cron, 100k runs/day, 3-day logs | Public vals, experiments |
+| Pro | $20/mo monthly · $8.33/mo yearly | $5/mo included | unlimited | 10-minute execution, 1-min cron, 1M runs/day, 10-day logs, 10 custom domains | **Most individuals land here** |
+| Teams | $200/mo monthly · $166.67/mo yearly | $100/mo included | unlimited | 5M runs/day, unlimited custom domains, Slack Connect | Small teams, shared workspaces |
+| Enterprise | Custom | Flexible allocation | unlimited | No published runtime caps, log export, SOC 2 | Compliance-heavy orgs |
 
-*Prices verified 2026-04-17 via [val.town/pricing](https://www.val.town/pricing) and the [February 2026 investor update](https://blog.val.town/2026-feb). Townie runs on a pay-per-use credit model; top-ups are available on every tier.*
+*Prices verified 2026-05-13 via [val.town/pricing](https://www.val.town/pricing). Yearly billing nets two free months on Pro and Teams. Townie runs on a pay-per-use credit model; top-ups are available on every tier.*
 
 ## Against the alternatives
 
@@ -183,7 +221,7 @@ The moats are narrow but real. The community val registry, the browser-first wor
 
 - **TypeScript only.** Python, Go, Rust, Ruby are out of scope. Mixed-language workflows need a second platform.
 - **Public-by-default leaks secrets.** New users paste API keys into public vals and publish them. The UI warns; the warning gets ignored.
-- **Execution caps on every tier.** Pro tops at 30 seconds. Long-running tasks need external compute or splitting into jobs.
+- **Execution caps on every tier.** Free tops at 1 minute and Pro at 10 minutes. Long-running tasks need external compute or splitting into jobs. Teams and Enterprise raise the ceiling but do not eliminate it.
 - **Debugger is thin.** Console logs and request logs cover most cases. No breakpoints, no step-through.
 - **Credit-metered AI usage.** Townie burns credits on every generation. Heavy users move to Teams or top-ups fast.
 - **Not an IDE replacement.** Complex apps with many files, tests, and dependencies feel cramped in the browser editor.
@@ -191,7 +229,7 @@ The moats are narrow but real. The community val registry, the browser-first wor
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-04-17 against [val.town/pricing](https://www.val.town/pricing), [the April 2026 release notes](https://releasebot.io/updates/val-town), and the [February 2026 investor update](https://blog.val.town/2026-feb).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-05-13 against [val.town/pricing](https://www.val.town/pricing), [the April 2026 release notes](https://releasebot.io/updates/val-town), and the [February 2026 investor update](https://blog.val.town/2026-feb).
 
 ## FAQ
 

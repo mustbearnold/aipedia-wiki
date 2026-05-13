@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$29/month"
 status: active
 launched: 2021-04
-last_updated: 2026-05-04
-last_verified: 2026-05-04
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -32,50 +32,50 @@ facts:
     source: https://rytr.me/
     source_label: Rytr official site
     source_id: rytr-official
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
   pricing_anchor:
     value: Rytr keeps a low-cost pricing ladder with a free entry point and paid plans; buyers should confirm character, plagiarism,
       and workflow limits on the live pricing page.
     source: https://rytr.me/pricing
     source_label: Rytr pricing
     source_id: rytr-pricing
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-04'
+    next_review_at: '2026-08-13'
   api_available:
     value: AIpedia treats Rytr primarily as an end-user writing app; teams needing a developer API or deeply integrated content
       workflow should verify fit directly.
     source: https://rytr.me/pricing
     source_label: Rytr pricing
     source_id: rytr-pricing
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
   enterprise_controls:
     value: Rytr is not positioned here as an enterprise content governance system; larger teams should compare approval, brand,
       and collaboration controls with Jasper or Writer.
     source: https://rytr.me/pricing
     source_label: Rytr pricing
     source_id: rytr-pricing
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
   watch_out_for:
     value: Rytr is strongest for quick, inexpensive copy generation; it is weaker for brand-heavy editorial programs that need
       deep style governance and source-backed long-form workflows.
     source: https://rytr.me/
     source_label: Rytr official site
     source_id: rytr-official
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
 tags: [ai-writing, copywriting, budget-tools, short-form, templates]
 seo_title: "Rytr: Features, Pricing & Review (May 2026)"
 meta_description: "Rytr is a budget AI writing tool with 40+ templates and 20+ tones. Free includes 10K chars/mo; paid plans include Unlimited and Premium, with annual pricing from $7.50/mo."
@@ -91,6 +91,21 @@ not_best_for:
   - users needing frontier-model reasoning
 quick_answer: >-
   Rytr is a budget template-driven AI writing tool for short-form copy. Pick it for product descriptions, ad variants, and social captions when speed and price matter more than writing quality. Skip it for long-form SEO articles, strategic content, or any task where ChatGPT or Claude's reasoning beats template speed.
+price_history:
+  - date: 2026-05-13
+    plan: "Unlimited"
+    price: "$7.50/mo (annual)"
+    source: "https://rytr.me/pricing"
+    source_label: "Source"
+    source_id: rytr-pricing
+    note: "Verified unchanged. Annual billing; 50 plagiarism checks/mo, 1 tone match."
+  - date: 2026-05-13
+    plan: "Premium"
+    price: "$24.16/mo (annual)"
+    source: "https://rytr.me/pricing"
+    source_label: "Source"
+    source_id: rytr-pricing
+    note: "Verified unchanged. Annual billing; 100 plagiarism checks/mo, 35+ languages, multiple tone matches."
 ---
 
 # Rytr
@@ -122,7 +137,7 @@ Pricing runs from Free to paid Unlimited and Premium plans. Free caps at 10,000 
 | **Premium** | Unlimited generations · multiple tone matches · 35+ languages · 100 plagiarism checks/month |
 | **Long-form article tooling** | None meaningful |
 
-Every data point above was verified against vendor documentation on 2026-05-02. See Sources.
+Every data point above was verified against vendor documentation on 2026-05-13. See Sources.
 
 ## What it actually is
 
@@ -158,7 +173,7 @@ Subscription pricing via [rytr.me/pricing](https://rytr.me/pricing).
 | Unlimited | $7.50/mo | Unlimited | 1 tone match, 50 plagiarism checks/mo | Individuals getting started |
 | Premium | $24.16/mo | Unlimited | Multiple tone matches, 35+ languages, 100 plagiarism checks/mo | **Freelancers and multi-brand users** |
 
-*Prices verified 2026-05-02 via [Rytr pricing](https://rytr.me/pricing). Annual billing is shown above; monthly billing may be higher. Plagiarism checks are included on paid plans only.*
+*Prices verified 2026-05-13 via [Rytr pricing](https://rytr.me/pricing). Annual billing is shown above; monthly billing may be higher. Plagiarism checks are included on paid plans only.*
 
 ## Against the alternatives
 
@@ -182,7 +197,7 @@ Subscription pricing via [rytr.me/pricing](https://rytr.me/pricing).
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-02 against [Rytr pricing](https://rytr.me/pricing) and the [Rytr feature overview](https://rytr.me/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against [Rytr pricing](https://rytr.me/pricing) and the [Rytr feature overview](https://rytr.me/).
 
 ## FAQ
 

@@ -3,17 +3,18 @@ type: tool
 slug: you-com
 title: You.com
 tagline: >-
-  AI search pivoting to enterprise research agents. ARI delivers multi-step
-  research reports with 200K context on Max and Enterprise tiers.
+  AI search company that completed its pivot to a developer-API platform.
+  Sells Search, Contents, and Research APIs (with ARI inside Research)
+  for grounding agents and LLMs. Consumer plans are no longer published.
 category: ai-search
 company: you-com
 url: 'https://you.com'
-pricing_model: freemium
-price_range: "$0-$200/month"
+pricing_model: usage-based
+price_range: "$1-$12 per 1K calls; $100 free credit; Enterprise custom"
 status: active
 launched: 2020-11
-last_updated: 2026-05-04
-last_verified: 2026-05-04
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -28,185 +29,219 @@ scores:
   longevity: 7
 facts:
   product_scope:
-    value: "You.com combines AI search, chat, research, and productivity modes around web-grounded answers rather than a pure blue-link search engine."
-    source: "https://you.com/"
-    source_label: "You.com homepage"
+    value: "You.com is now a developer-API platform selling Search, Contents, and Research APIs for grounding AI agents and LLMs. ARI lives inside the Research API tier ladder. Consumer Pro and Max subscription plans are no longer published on the pricing page."
+    source: "https://you.com/pricing"
+    source_label: "You.com pricing"
     source_id: you-com-official
-    verified_at: 2026-05-04
-    next_review_at: 2026-08-04
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: high
     confidence: high
   pricing_anchor:
-    value: "Free access plus paid Pro/Team-style plans on the public pricing page; verify model, query, and team limits before standardizing."
+    value: "Pay-as-you-go API pricing: Search $5/1K calls, Contents $1/1K pages, Research $12/1K calls. $100 free credit. Volume and annual discounts available. Enterprise pricing is custom."
     source: "https://you.com/pricing"
     source_label: "You.com pricing"
     source_id: you-com-official
-    verified_at: 2026-05-04
-    next_review_at: 2026-08-04
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: high
     confidence: high
   api_available:
-    value: "Yes — You.com docs expose API/developer documentation for integrating web-grounded answer capabilities."
+    value: "Yes. The API surface is now the product. Search, Contents, and Research APIs are documented with SOC 2, zero-retention options, DPA-ready infrastructure, and custom QPS tiers for enterprise."
     source: "https://you.com/docs/welcome"
     source_label: "You.com API docs"
     source_id: you-com-docs
-    verified_at: 2026-05-04
-    next_review_at: 2026-08-04
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: medium
     confidence: high
   best_for:
-    value: "Users who want an AI-search interface with answer synthesis, source grounding, and work modes without moving fully into ChatGPT or Perplexity."
+    value: "Engineering teams grounding agents or LLMs in fresh web data and citations, plus teams needing ARI-style multi-step research as an API rather than a chat UI."
     source: "https://you.com/"
     source_label: "You.com homepage"
     source_id: you-com-official
-    verified_at: 2026-05-04
-    next_review_at: 2026-08-04
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: high
     confidence: high
   watch_out_for:
-    value: "Compare current answer quality, citations, and model access directly against Perplexity, ChatGPT Search, and Kagi before buying a team plan."
+    value: "Consumer subscriptions are no longer on the pricing page; treat You.com as a developer API and benchmark Search/Contents/Research API cost and quality against Exa, Tavily, Brave Search API, and Perplexity Sonar before standardizing."
     source: "https://you.com/pricing"
     source_label: "You.com pricing"
     source_id: you-com-official
-    verified_at: 2026-05-04
-    next_review_at: 2026-08-04
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: high
-    confidence: medium
-tags: [search-engine, ai-search, research, ari, research-agent, enterprise-ai, answer-engine]
-seo_title: 'You.com: ARI Research Agent Review & Pricing (April 2026)'
+    confidence: high
+tags: [search-engine, ai-search, research, ari, research-agent, enterprise-ai, answer-engine, search-api]
+seo_title: 'You.com: Search/Contents/Research APIs Review & Pricing (May 2026)'
 meta_description: >-
-  You.com pivoted to enterprise AI agents. ARI research agent delivers cited multi-step reports. Free tier available; Pro $20/mo; Max $200/mo adds unlimited ARI and 200K context. Enterprise is custom.
+  You.com finished its pivot. The product is now three developer APIs: Search ($5/1K calls), Contents ($1/1K pages), and Research ($12/1K calls, ARI inside). $100 free credit. Consumer Pro and Max plans are no longer published.
 author: aipedia.wiki Editorial
 best_for:
-  - enterprise teams needing custom multi-step AI agents
-  - researchers wanting cited deep-research reports via ARI
-  - orgs combining internal data with live web intelligence
-  - developers needing usage-based API access
+  - engineering teams grounding agents in fresh web data
+  - LLM apps needing cited multi-step research reports via API
+  - bulk URL-to-Markdown extraction for RAG pipelines
+  - enterprise buyers needing SOC 2, zero retention, custom QPS
 not_best_for:
-  - casual general-purpose AI search (Perplexity is sharper)
-  - users who dislike mode switching
-  - shops that cannot justify $200/mo for research depth
+  - consumers wanting a chat UI (Perplexity, ChatGPT, or Kagi instead)
+  - teams unwilling to wire an API into their stack
+  - non-engineering buyers who need a dashboard product
+price_history:
+  - date: 2026-05-13
+    plan: Search API
+    price: $5 per 1K calls
+    source: https://you.com/pricing
+    source_label: Source
+    source_id: you-com-official
+    note: 1-100 results per call; news search included; $100 free credit at signup
+  - date: 2026-05-13
+    plan: Contents API
+    price: $1 per 1K pages
+    source: https://you.com/pricing
+    source_label: Source
+    source_id: you-com-official
+    note: Batch URL-to-Markdown or raw HTML; $100 free credit shared with Search
+  - date: 2026-05-13
+    plan: Research API
+    price: $12 per 1K calls
+    source: https://you.com/pricing
+    source_label: Source
+    source_id: you-com-official
+    note: Five depth tiers (Lite, Standard, Deep, Exhaustive, Frontier); ARI runs inside this product
+  - date: 2026-05-13
+    plan: Enterprise
+    price: Custom
+    source: https://you.com/pricing
+    source_label: Source
+    source_id: you-com-official
+    note: Custom QPS, annual commitment discounts, SOC 2, zero data retention options, DPA-ready
+  - date: 2026-04-17
+    plan: Legacy consumer plans (retired)
+    price: Free $0 / Pro $20/mo / Max $200/mo / Enterprise custom
+    source: https://you.com/pricing
+    source_label: Source
+    source_id: you-com-official
+    note: Pro and Max consumer subscriptions removed from the pricing page when You.com finished its API pivot
 quick_answer: >-
-  You.com is an AI search engine now positioned as enterprise research platform. ARI runs multi-step cited research reports. Free tier with caps, Pro $20/mo, Max $200/mo unlimited ARI, Enterprise custom. Pick it for ARI-backed deep research; skip for casual cited search (Perplexity wins on adoption and polish).
+  You.com finished its pivot. The product is now three APIs: Search ($5/1K calls), Contents ($1/1K pages), and Research ($12/1K calls, with ARI inside as five depth tiers). $100 free credit. Consumer Pro and Max plans are no longer published. Pick it to ground agents or LLMs in fresh, cited web data. Skip it if you wanted a chat UI (Perplexity wins there).
 ---
 
 # You.com
 
-You.com is an AI search platform that pivoted toward enterprise research agents in 2025-2026. The consumer search surface remains, but the strategic product is now ARI (Advanced Research and Insights), a research agent that produces multi-step cited reports.
+You.com finished its pivot from consumer AI search to a developer-API platform. The product is now three APIs that ground agents and LLMs in fresh web data: **Search** (web results with citations), **Contents** (URL-to-Markdown extraction), and **Research** (multi-step cited reports, with ARI running inside as five depth tiers). Pay-as-you-go with a $100 free credit. Consumer Pro and Max subscription plans are no longer published on the pricing page.
 
-Enterprise AI Solutions combines internal data with live web intelligence. Custom agents, private RAG, and permission controls ship to orgs that contract for it.
+## Recent changes
 
-## Recent developments
-
-- **April 24, 2026:** [A retrieval-poisoning demo showed how fake web evidence can make AI search systems repeat false claims](/news/2026-04-24-retrieval-poisoning-world-championship-demo/). You.com's ARI and cited-search positioning depends on provenance quality, especially when enterprise users research low-coverage topics.
+- **2026-05-13:** Verified the API-only pricing page. Three products are now front-and-centre: Search at $5/1K calls, Contents at $1/1K pages, Research at $12/1K calls. The old consumer Pro ($20/mo) and Max ($200/mo) tiers no longer appear on [you.com/pricing](https://you.com/pricing). ARI is positioned inside the Research API as a tier ladder (Lite, Standard, Deep, Exhaustive, Frontier).
+- **2026-04-24:** [A retrieval-poisoning demo showed how fake web evidence can make AI search systems repeat false claims](/news/2026-04-24-retrieval-poisoning-world-championship-demo/). You.com's grounding APIs depend on provenance quality, especially when downstream agents research low-coverage topics.
 
 ## System Verdict
 
-> **Pick You.com if the use case is enterprise research or custom agents, not casual search.** ARI is the differentiator: unlimited deep-research reports on Max, 200K context, and auto-routed model selection. The Enterprise tier adds private RAG and internal-data integrations that [Perplexity](/tools/perplexity/) does not match.
+> **Pick You.com if you are building AI agents or LLM apps that need fresh, cited web data.** Search and Contents give clean grounding for RAG; Research replaces a deep-research chat UI with an API call. SOC 2, zero-retention options, and custom QPS make it credible for enterprise procurement.
 >
-> **Skip it for general cited AI search.** Perplexity has wider adoption, sharper citations, and cheaper access ($20/mo vs Max at $200/mo). Mode switching in the consumer UI adds friction that auto-routed competitors avoid.
+> **Skip it if you wanted a chat product.** The consumer chat and the consumer Pro and Max plans are no longer the published offer. For a chat UI, use [Perplexity](/tools/perplexity/), [ChatGPT](/tools/chatgpt/), or [Kagi](/tools/kagi/). For semantic retrieval at the embedding layer, [Exa](/tools/exa/) competes head-to-head; [Tavily](https://tavily.com/) and Brave Search API compete on price.
 >
-> **Who pays which tier:** Free for light testing, Pro $20/mo for individuals who want model selection, Max $200/mo for teams running heavy ARI research, Enterprise for orgs that need private RAG and internal-data agents.
+> **Who pays which tier:** $100 free credit covers most prototypes. Search at $5/1K calls is the workhorse for everyday grounding. Contents at $1/1K pages handles bulk URL ingest. Research at $12/1K calls is reserved for multi-step report generation. Enterprise opens custom QPS, annual discounts, and DPA-ready terms.
 
 ## Key Facts
 
 | | |
 |---|---|
-| **Strategic product** | ARI research agent (Advanced Research and Insights) |
-| **Free tier** | Daily mode caps, standard models |
-| **Pro** | $20/mo, model selection (GPT, Claude, Gemini), higher limits |
-| **Max** | $200/mo, unlimited ARI, 200K context, 50MB file uploads, up to 25 users |
-| **Enterprise** | Custom: private RAG, internal data, permission controls, analytics |
-| **Model access** | GPT frontier, Claude frontier, Gemini frontier, Auto mode |
-| **Pivot** | Consumer search to enterprise research platform |
-| **Search modes** | Research, Code, Write, Agents |
+| **Product surface** | Three APIs: Search, Contents, Research (ARI inside Research) |
+| **Search API** | $5 per 1K calls; 1-100 results per call; news search included |
+| **Contents API** | $1 per 1K pages; clean Markdown or raw HTML extraction |
+| **Research API** | $12 per 1K calls; five depth tiers (Lite, Standard, Deep, Exhaustive, Frontier) |
+| **Free credit** | $100 at signup, shared across products |
+| **Enterprise** | Custom QPS, volume and annual discounts, SOC 2, zero retention, DPA-ready |
+| **Compliance** | SOC 2 certification; zero data retention options; DPA-ready infrastructure |
+| **Pivot status** | Consumer Pro and Max subscriptions removed from the pricing page in 2026 |
+| **Where ARI lives now** | Inside the Research API as the depth-tier ladder |
 
-Every data point above was verified against vendor documentation on 2026-04-17. See Sources.
+Every data point above was verified against vendor documentation on 2026-05-13. See Sources.
 
 ## What it actually is
 
-Two products under one brand. The consumer chat and search surface remains at you.com with Research, Code, Write, and Agents modes. The enterprise surface is ARI plus Enterprise AI Solutions: custom agents, private RAG, and internal-data integration.
+A web-grounding API stack for AI builders. The pivot is complete: instead of competing with Perplexity for chat-UI users, You.com sells the underlying primitives that make grounded AI possible, then prices each primitive separately so customers only pay for what they use.
 
-Pro users choose between frontier models (GPT, Claude, Gemini) or Auto mode that routes based on query. File uploads up to 50MB per query support PDF, image, and code analysis. Max adds unlimited ARI reports and 200K context for large documents and datasets.
+The Search API returns ranked web results with citations and supports 1 to 100 results per call. The Contents API turns a list of URLs into clean Markdown or raw HTML for RAG pipelines. The Research API runs multi-step research and returns structured cited reports, with higher tiers (Deep, Exhaustive, Frontier) producing more sources, deeper reasoning, and higher accuracy at correspondingly higher latency and cost.
 
-The moat is enterprise product depth. Perplexity owns consumer cited search. You.com is betting that custom agents and private-data integration pay better than consumer subscriptions.
+The moat is the data plus the operator. You.com has been training its own web-grounded answer stack since 2020, has SOC 2 plus zero-retention controls already in place, and offers DPA-ready enterprise contracts. The risk is that Exa, Tavily, Brave Search API, and Perplexity Sonar are all chasing the same surface.
 
 ## When to pick You.com
 
-- **Enterprise research team with budget.** Max at $200/mo delivers unlimited ARI reports and 25 seats. Price is real, but depth beats consumer tools.
-- **Custom agent workflows on internal data.** Enterprise tier supports private RAG, permission controls, and internal-data connectors. Few cited-search competitors ship this.
-- **Cited multi-step research reports.** ARI runs multi-step research and returns structured reports with citations. Stronger than a single-pass answer.
-- **Mixed model needs in one seat.** Pro lets users switch between GPT, Claude, Gemini, and Auto routing without paying each vendor separately.
-- **Long-document analysis.** 200K context on Max handles book-length inputs, source-code dumps, and large datasets.
+- **Grounding an agent in fresh web data.** Search at $5/1K calls and Contents at $1/1K pages is a straightforward stack for RAG.
+- **Deep-research-as-an-API.** Research with the Deep, Exhaustive, or Frontier tier replaces a chat-UI deep-research workflow with a programmatic call.
+- **Enterprise procurement.** SOC 2, zero retention, custom QPS, and DPA-ready terms remove most blockers regulated buyers raise.
+- **Mixed grounding plus extraction in one vendor.** Buying Search and Contents from the same provider simplifies invoicing and rate-limit accounting.
 
 ## When to pick something else
 
-- **Cited consumer AI search:** [Perplexity](/tools/perplexity/). Larger user base, sharper citations, $20/mo Pro.
-- **Developer API for semantic retrieval:** [Exa](/tools/exa/). You.com does not compete at the pure-API layer.
-- **Paid ad-free daily search with AI:** [Kagi](/tools/kagi/) Ultimate at $25/mo.
+- **Consumer chat with citations:** [Perplexity](/tools/perplexity/). The chat UI You.com retired is what Perplexity sells.
+- **Semantic retrieval at the embedding layer:** [Exa](/tools/exa/). Different primitive, different pricing model.
+- **Cheapest grounding for prototypes:** Brave Search API or [Tavily](https://tavily.com/) often undercut on early-stage volume.
+- **Ad-free daily search with AI:** [Kagi](/tools/kagi/) Ultimate at $25/mo for end users.
 - **Academic paper evidence synthesis:** [Consensus](/tools/consensus/).
-- **General-purpose chatbot with image gen:** [ChatGPT](/tools/chatgpt/). Broader feature surface at $20/mo.
+- **General-purpose chatbot:** [ChatGPT](/tools/chatgpt/). Broader feature surface at $20/mo.
 
 ## Pricing
 
 Pricing via [you.com/pricing](https://you.com/pricing):
 
-| Plan | Price | What you get |
+| Product | Price | What you get |
 |---|---|---|
-| Free | $0 | Daily mode caps, standard models |
-| Pro | $20/mo | Frontier models (GPT, Claude, Gemini), priority access, higher limits |
-| Max | $200/mo | Unlimited ARI, 200K context, 50MB uploads, up to 25 users |
-| Enterprise | Custom | Private RAG, internal data, permission controls, analytics |
+| Search API | $5 per 1K calls | Web search with citations, 1-100 results per call, news search included, $100 free credit |
+| Contents API | $1 per 1K pages | Batch URL-to-Markdown or raw HTML extraction; $100 free credit (shared) |
+| Research API | $12 per 1K calls | Multi-step cited reports across five depth tiers (Lite, Standard, Deep, Exhaustive, Frontier) |
+| Enterprise | Custom | Custom QPS, volume and annual discounts, SOC 2, zero retention, DPA-ready |
 
-Prices verified 2026-04-17 via [You.com pricing](https://you.com/pricing) and [You.com ARI page](https://you.com/ari). Enterprise quotes come through sales.
+Prices verified 2026-05-13 via [You.com pricing](https://you.com/pricing). Enterprise quotes come through sales. Annual commitment and high-volume discounts apply on top of pay-as-you-go rates.
 
 ## Against the alternatives
 
-| | You.com Max | Perplexity Pro | ChatGPT Pro |
-|---|---|---|---|
-| **Price** | $200/mo (up to 25 users) | $20/mo per seat | $100-$200/mo per seat |
-| **Research agent** | ARI, unlimited | Deep Research (capped) | Codex + Operator |
-| **Context** | 200K | Mid | Undisclosed |
-| **Citations** | Strong | Strongest | Mid |
-| **Enterprise features** | Private RAG, internal data on Enterprise tier | Enterprise tier separate | Enterprise tier separate |
-| **Best viewed as** | Enterprise research platform | Cited research default | Generalist with coding agent |
+| | You.com APIs | Exa | Tavily | Perplexity Sonar |
+|---|---|---|---|---|
+| **Search call price** | $5 per 1K | Per-call usage-based | Tiered free + paid | Sonar-tier dependent |
+| **Content extraction** | Contents API $1 per 1K pages | Semantic retrieval primary | Web extraction included | Sonar Reasoning included |
+| **Deep research as API** | Research API $12 per 1K calls (5 depth tiers) | Not a primary product | Limited | Sonar Reasoning Pro |
+| **Compliance posture** | SOC 2, zero retention, DPA-ready | SOC 2 | SOC 2 | SOC 2 |
+| **Best viewed as** | Grounding plus research APIs in one stack | Semantic retrieval specialist | Cheap web grounding | Citation-first chat plus API |
 
 ## Failure modes
 
-- **Consumer UI trails Perplexity.** Mode switching (Research, Code, Write, Agents) is more friction than auto-routing. New users often prefer Perplexity for quick cited answers.
-- **Price gap between Pro and Max is large.** $20/mo to $200/mo with no middle tier. Solo researchers needing heavy ARI use have no mid-priced option.
-- **Citation precision varies.** Research mode sometimes surfaces thin blogs alongside primaries. Pro users should verify citations before quoting.
+- **Brand clarity still muddled.** The site no longer publishes consumer Pro and Max plans, but third-party reviews and old marketplace listings still cite them. Buyers expecting a chat product hit a surprise.
+- **Citation precision varies.** Lower Research tiers can surface thin blogs alongside primaries. Use Deep or higher when accuracy matters.
 - **Enterprise pricing opaque.** Custom quotes only. Budget-sensitive procurement needs multiple cycles.
-- **Brand clarity is muddled.** The consumer-to-enterprise pivot means the public-facing product is harder to describe than Perplexity's single-axis positioning.
-- **Smaller third-party ecosystem than Perplexity.** Fewer tutorials, fewer integrations, fewer external reviews.
+- **Crowded API category.** Exa, Tavily, Brave Search API, and Perplexity Sonar all compete on the same primitives. Benchmark cost and answer quality on your own queries before committing.
+- **No consumer chat fallback.** Teams that wanted a single tool covering chat plus API need to pair You.com APIs with a separate chat UI.
+- **Research API costs scale fast.** Frontier-tier calls are the most expensive on the menu. Cap your top tier in production code paths.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-04-17 against [You.com pricing](https://you.com/pricing), [You.com ARI page](https://you.com/ari), and [You.com Enterprise AI Solutions](https://you.com/enterprise-ai-solutions).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-05-13 against [You.com pricing](https://you.com/pricing), [You.com API docs](https://you.com/docs/welcome), and the [You.com homepage](https://you.com/).
 
 ## FAQ
 
-**What is ARI?**
-ARI (Advanced Research and Insights) is You.com's professional research agent. It runs multi-step research and returns cited reports. Max gives unlimited ARI; Pro gives capped access.
+**Where did You.com Pro and Max go?**
+The consumer Pro ($20/mo) and Max ($200/mo) subscription tiers are no longer published on the pricing page. You.com has positioned itself as a developer-API platform; the same research depth that powered Max now ships as the Research API.
 
-**You.com vs Perplexity in April 2026?**
-Perplexity owns consumer cited search with wider adoption and tighter citations. You.com has pivoted upmarket to enterprise agents, ARI, and internal-data RAG. Pick the one that matches the job.
+**What is ARI now?**
+ARI (Advanced Research and Insights) is the multi-step research engine that lives inside the Research API. The five depth tiers (Lite, Standard, Deep, Exhaustive, Frontier) replace the consumer "unlimited ARI" allowance with usage-based billing.
 
-**What models does Pro include?**
-Frontier GPT, Claude, and Gemini models with user selection or Auto routing. Free tier uses smaller variants.
+**Is there a free option?**
+Yes. New accounts receive a $100 free credit that can be spent across Search, Contents, and Research APIs.
 
-**Does Max support teams?**
-Yes. Up to 25 users, unlimited ARI, 50MB uploads per query, 200K context. For larger orgs, Enterprise adds private RAG and permission controls.
+**You.com APIs vs Perplexity Sonar in May 2026?**
+You.com sells three discrete primitives (Search, Contents, Research) with per-call pricing. Perplexity Sonar ships a tiered chat-flavoured answer API. Use You.com when you want to mix and match primitives; use Sonar when you want a single citation-first answer endpoint.
 
-**Is there an API?**
-Yes. You.com offers usage-based API access with volume discounts. Enterprise pricing negotiated directly.
+**Is data retention configurable?**
+Yes. Enterprise customers can configure zero-retention deployments, and the platform is DPA-ready for regulated workloads. SOC 2 certification covers the API stack.
 
 ## Sources
 
-- [You.com pricing](https://you.com/pricing): current tier structure
-- [You.com ARI page](https://you.com/ari): research agent capabilities
-- [You.com Enterprise AI Solutions](https://you.com/enterprise-ai-solutions): private RAG, internal data, custom agents
-- [You.com Agents page](https://you.com/agents): agent workflows and integrations
+- [You.com pricing](https://you.com/pricing): three-API structure, $100 free credit, Enterprise terms
+- [You.com API docs](https://you.com/docs/welcome): Search, Contents, Research surface
+- [You.com homepage](https://you.com/): API-first positioning and use cases
 
 ## Related
 

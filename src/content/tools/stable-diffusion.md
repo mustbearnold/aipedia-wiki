@@ -2,7 +2,7 @@
 type: tool
 slug: stable-diffusion
 title: Stable Diffusion
-tagline: Stability AI's open-weight image model family. SD 3.5 Large is the flagship as of April 2026. Free to self-host with a compatible GPU, or access via Stability API at 3-8 credits per image.
+tagline: Stability AI's open-weight image model family. SD 3.5 Large is the flagship as of May 2026. Free to self-host with a compatible GPU, or access via Stability API at 3-8 credits per image.
 category: ai-image
 secondary_categories: [ai-design]
 company: 'Stability AI (model); ecosystem includes Automatic1111, ComfyUI, InvokeAI'
@@ -12,8 +12,8 @@ pricing_model: free
 price_range: Free (self-host) or ~$0.03-$0.08 per API image
 status: active
 launched: 2022-08
-last_updated: 2026-05-04
-last_verified: 2026-05-04
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -32,17 +32,17 @@ facts:
     source: "https://stability.ai/stable-image"
     source_label: "Stability AI Stable Image"
     source_id: stability-stable-image
-    verified_at: 2026-05-04
-    next_review_at: 2026-08-04
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: high
     confidence: high
   api_available:
-    value: "Yes — Stability platform docs expose hosted image generation APIs for teams that do not want to run local inference."
+    value: "Yes. Stability platform docs expose hosted image generation APIs for teams that do not want to run local inference."
     source: "https://platform.stability.ai/docs"
     source_label: "Stability AI platform docs"
     source_id: stability-docs
-    verified_at: 2026-05-04
-    next_review_at: 2026-08-04
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -50,8 +50,8 @@ facts:
     source: "https://platform.stability.ai/pricing"
     source_label: "Stability AI pricing"
     source_id: stable-diffusion-pricing
-    verified_at: 2026-05-04
-    next_review_at: 2026-08-04
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: high
     confidence: high
   best_for:
@@ -59,8 +59,8 @@ facts:
     source: "https://stability.ai/stable-image"
     source_label: "Stability AI Stable Image"
     source_id: stability-stable-image
-    verified_at: 2026-05-04
-    next_review_at: 2026-08-04
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: high
     confidence: high
   watch_out_for:
@@ -68,8 +68,8 @@ facts:
     source: "https://stability.ai/news-updates"
     source_label: "Stability AI news"
     source_id: stable-diffusion-official
-    verified_at: 2026-05-04
-    next_review_at: 2026-08-04
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: high
     confidence: high
 tags: [ai-image, open-source, stable-diffusion, local-ai, fine-tuning, comfyui, civitai, lora, controlnet]
@@ -115,11 +115,18 @@ price_history:
     source_label: "Source"
     source_id: stable-diffusion-pricing
     note: "Verified: Core 3, SD 3.5 Large 6.5, Turbo 4, Ultra 8; 1 credit = $0.01"
+  - date: 2026-05-13
+    plan: "Stability API"
+    price: "3-8 credits per image"
+    source: "https://platform.stability.ai/pricing"
+    source_label: "Source"
+    source_id: stable-diffusion-pricing
+    note: "Re-verified unchanged. SD 3.5 Large remains flagship; no SD 4 release date announced."
 ---
 
 # Stable Diffusion
 
-Stability AI's open-weight image model family. The flagship as of April 2026 is **SD 3.5 Large** (8.1B parameters, MMDiT architecture), alongside SD 3.5 Large Turbo (4-step distilled) and SD 3.5 Medium (2.5B, consumer-hardware optimized).
+Stability AI's open-weight image model family. The flagship as of May 2026 is **SD 3.5 Large** (8.1B parameters, MMDiT architecture), alongside SD 3.5 Large Turbo (4-step distilled) and SD 3.5 Medium (2.5B, consumer-hardware optimized).
 
 Model weights are publicly downloadable under the Stability AI Community License: free for anyone earning under $1M/year, including commercial use. Paid access runs through the Stability API (3-8 credits per image) or third-party hosts like Replicate and Fal. SD 4 has not launched.
 
@@ -138,7 +145,7 @@ Model weights are publicly downloadable under the Stability AI Community License
 | **Flagship model** | Stable Diffusion 3.5 Large (8.1B parameters, MMDiT, 1MP) |
 | **Family members** | SD 3.5 Large · SD 3.5 Large Turbo (4-step) · SD 3.5 Medium (2.5B, 0.25-2MP) |
 | **Prior generations** | SDXL (still widely used in community) · SD 1.5 (legacy, low-VRAM workflows) |
-| **SD 4 status** | Not launched as of April 2026 |
+| **SD 4 status** | Not launched as of May 2026 |
 | **License** | Stability AI Community License · free under $1M annual revenue (commercial OK) |
 | **Enterprise license** | Required above $1M annual revenue · contact Stability AI |
 | **Weights host** | Hugging Face (stabilityai/stable-diffusion-3.5-large) · Civitai |
@@ -149,7 +156,7 @@ Model weights are publicly downloadable under the Stability AI Community License
 | **ControlNet (SD 3.5)** | Blur, Canny, Depth (released Jan 29, 2026) |
 | **Companion models** | Stable Video 4D 2.0 (video) · Stable Audio · Stable 3D |
 
-Every data point above was verified against vendor sources on 2026-04-15. See Sources.
+Every data point above was verified against vendor sources on 2026-05-13. See Sources.
 
 ## What it actually is
 
@@ -211,7 +218,7 @@ Three moats compound over time:
 | Replicate | ~$0.003-$0.01 per image | Pay-as-you-go per-second GPU billing; SD 3.5 Large Turbo available |
 | Fal.ai | Similar range | Low-latency inference endpoints |
 
-Prices verified 2026-04-15 via [Stability platform pricing](https://platform.stability.ai/pricing), [Stability news](https://stability.ai/news), and the [Stability Community License](https://stability.ai/license). 1 credit = $0.01. Self-hosting remains free indefinitely under the Community License for qualifying users.
+Prices verified 2026-05-13 via [Stability platform pricing](https://platform.stability.ai/pricing), [Stability news](https://stability.ai/news), and the [Stability Community License](https://stability.ai/license). 1 credit = $0.01. Self-hosting remains free indefinitely under the Community License for qualifying users.
 
 **Who's it for:** Self-host for high-volume, customization, privacy, or sub-$1M commercial use. Stability API for occasional cloud calls without managing GPUs. Third-party hosts (Replicate, Fal) for managed infrastructure billed by GPU-second.
 
@@ -234,13 +241,13 @@ Prices verified 2026-04-15 via [Stability platform pricing](https://platform.sta
 - **Self-host requires real technical setup.** Python environment management, CUDA drivers, model downloads, interface choice (A1111 / ComfyUI / InvokeAI), checkpoint selection. Not a 5-minute onboarding. Docker images help but do not eliminate the learning curve.
 - **GPU requirements gate access.** 8GB+ VRAM NVIDIA is the practical minimum for SD 3.5 Large; AMD and Apple Silicon work via ONNX/CoreML but with reduced tooling maturity. Users without a GPU must rent cloud instances (Vast.ai, RunPod) or use the API.
 - **Built-in safety checker is trivial to disable.** Self-hosters can turn off the content filter by editing a single line. Responsibility for outputs shifts entirely to the user under the Acceptable Use Policy. Commercial deployments need their own moderation.
-- **Stability AI corporate instability.** Leadership changes and layoffs in 2024 slowed Stability's model release cadence. The community ecosystem kept shipping regardless (SD 3.5 ControlNets released Jan 29, 2026), but the company's solvency is not guaranteed, and no SD 4 release date has been announced.
+- **Stability AI corporate instability.** Leadership changes and layoffs in 2024 slowed Stability's model release cadence. The community ecosystem kept shipping regardless (SD 3.5 ControlNets released Jan 29, 2026), but the company's solvency is not guaranteed, and no SD 4 release date has been announced as of May 2026.
 - **License tier jump at $1M revenue.** The Community License's free commercial tier ends at $1M annual revenue. Growing teams must budget for the Enterprise license conversion or migrate to fully permissive alternatives.
 - **Copyright ambiguity.** Like all web-scraped-trained models, outputs carry unresolved IP exposure. Adobe Firefly's indemnification offer is a meaningful differentiator for enterprise legal teams; Stability does not match it.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-15 against [Stability AI news](https://stability.ai/news), [Stability AI license](https://stability.ai/license), [Stability platform pricing](https://platform.stability.ai/pricing), and the [SD 3.5 Large Hugging Face model card](https://huggingface.co/stabilityai/stable-diffusion-3.5-large).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against [Stability AI news](https://stability.ai/news), [Stability AI license](https://stability.ai/license), [Stability platform pricing](https://platform.stability.ai/pricing), and the [SD 3.5 Large Hugging Face model card](https://huggingface.co/stabilityai/stable-diffusion-3.5-large).
 
 ## FAQ
 
@@ -248,7 +255,7 @@ This page was produced by the aipedia.wiki editorial pipeline, an automated syst
 Yes, under the Stability AI Community License. SD 1.5, SDXL, SD 3.5 Large, Turbo, and Medium weights are all downloadable at no cost, and commercial use is free for individuals and organizations earning under $1M annual revenue. The only costs for self-hosting are hardware (8GB+ VRAM GPU recommended for SD 3.5 Large) and electricity. Above $1M annual revenue, an Enterprise license is required: contact Stability AI.
 
 **Has SD 4 launched?**
-No. As of April 2026, SD 3.5 Large remains Stability AI's flagship. The SD 3.5 family (Large, Large Turbo, Medium) was released October 29, 2024, and received three new ControlNets (Blur, Canny, Depth) on January 29, 2026, plus NVIDIA NIM microservice integration and TensorRT optimizations through early 2026. No SD 4 release date has been announced.
+No. As of May 2026, SD 3.5 Large remains Stability AI's flagship. The SD 3.5 family (Large, Large Turbo, Medium) was released October 29, 2024, and received three new ControlNets (Blur, Canny, Depth) on January 29, 2026, plus NVIDIA NIM microservice integration and TensorRT optimizations through early 2026. No SD 4 release date has been announced.
 
 **What GPU do I need to run SD 3.5 Large locally?**
 NVIDIA GPU with 8GB+ VRAM is the practical minimum (RTX 3070 / 4070 and above). TensorRT optimizations reduce VRAM usage by roughly 40% on RTX GPUs. AMD Radeon and Ryzen AI are supported via ONNX runtime. Apple Silicon Macs run via CoreML backends. SD 3.5 Medium (2.5B parameters) targets consumer hardware and runs on lower-VRAM setups. SDXL and SD 1.5 remain viable for 4-6GB VRAM GPUs with optimizations.
@@ -277,11 +284,11 @@ Yes. SDXL remains widely used in the community. Stability AI no longer positions
 
 ## Sources
 
-- [Stability AI news and updates](https://stability.ai/news) (verified 2026-04-15)
-- [Stability AI Community License](https://stability.ai/license) (verified 2026-04-15)
-- [Stability AI developer platform pricing](https://platform.stability.ai/pricing) (verified 2026-04-15)
-- [Introducing Stable Diffusion 3.5](https://stability.ai/news/introducing-stable-diffusion-3-5) (verified 2026-04-15)
-- [Stability AI Stable Image product page](https://stability.ai/stable-image) (verified 2026-04-15)
-- [SD 3.5 Large Hugging Face model card](https://huggingface.co/stabilityai/stable-diffusion-3.5-large) (verified 2026-04-15)
-- [SD 3.5 Large ControlNets release, Jan 29, 2026](https://comfyui-wiki.com/en/news/2024-11-26-sd3-5-large-controlnets) (verified 2026-04-15)
-- [Civitai community checkpoint repository](https://civitai.com) (verified 2026-04-15)
+- [Stability AI news and updates](https://stability.ai/news) (verified 2026-05-13)
+- [Stability AI Community License](https://stability.ai/license) (verified 2026-05-13)
+- [Stability AI developer platform pricing](https://platform.stability.ai/pricing) (verified 2026-05-13)
+- [Introducing Stable Diffusion 3.5](https://stability.ai/news/introducing-stable-diffusion-3-5) (verified 2026-05-13)
+- [Stability AI Stable Image product page](https://stability.ai/stable-image) (verified 2026-05-13)
+- [SD 3.5 Large Hugging Face model card](https://huggingface.co/stabilityai/stable-diffusion-3.5-large) (verified 2026-05-13)
+- [SD 3.5 Large ControlNets release, Jan 29, 2026](https://comfyui-wiki.com/en/news/2024-11-26-sd3-5-large-controlnets) (verified 2026-05-13)
+- [Civitai community checkpoint repository](https://civitai.com) (verified 2026-05-13)

@@ -11,8 +11,8 @@ pricing_model: paid
 price_range: "$0, $20/mo, $99/mo, or custom scale plans plus usage"
 status: active
 launched: 2023
-last_updated: 2026-05-05
-last_verified: 2026-05-05
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 seo_title: "Browserbase: Features, Pricing & Review (2026)"
 meta_description: "Browserbase provides cloud browser infrastructure for AI agents, scraping, QA, and browser automation. Best for teams building reliable web agents instead of running Playwright infrastructure themselves."
@@ -34,21 +34,43 @@ facts:
     source: "https://www.browserbase.com"
     source_label: "Browserbase website"
     source_id: browserbase-best-for
-    verified_at: 2026-05-05
+    verified_at: 2026-05-13
     confidence: high
   coding_agent:
     value: "Infrastructure for browser-using agents; integrates with developer automation stacks"
     source: "https://www.browserbase.com"
     source_id: browserbase-best-for
-    verified_at: 2026-05-05
+    verified_at: 2026-05-13
     confidence: high
   best_for:
     value: "Hosted browsers, Search API, Fetch API, Runtime, Identity, Models, and Observability for web agents"
     source: "https://www.browserbase.com"
     source_id: browserbase-best-for
-    verified_at: 2026-05-05
+    verified_at: 2026-05-13
     confidence: high
 tags: [browser-automation, web-agents, ai-infrastructure, playwright, scraping, qa, cloud-browser]
+price_history:
+  - date: 2026-03-16
+    plan: "Free"
+    price: "3 concurrent browsers (up from 1)"
+    source: "https://www.browserbase.com/changelog"
+    source_label: "Browserbase changelog"
+    source_id: browserbase-changelog
+    note: "Free-tier concurrency tripled to make agent prototypes practical without paying."
+  - date: 2026-03-11
+    plan: "Fetch API"
+    price: "~$1 / 1k pages"
+    source: "https://www.browserbase.com/changelog"
+    source_label: "Browserbase changelog"
+    source_id: browserbase-changelog
+    note: "Launched as a lightweight alternative to browser sessions for read-only extraction."
+  - date: 2026-05-13
+    plan: "Platform additions"
+    price: "Same plans, new capabilities"
+    source: "https://www.browserbase.com/pricing"
+    source_label: "Browserbase pricing"
+    source_id: browserbase-pricing
+    note: "Browserbase Functions (Feb), Fetch API (Mar), Search API (Mar), Model Gateway (Apr), Stagehand 3.3.0 (May), improved Downloads API (May) all ship inside existing pricing. Headline plan prices unchanged: Free, Developer $20, Startup $99, Scale custom."
 best_for:
   - developers building browser-using agents
   - scraping and data extraction workflows
@@ -80,9 +102,10 @@ Browserbase provides hosted browser infrastructure for web automation. Instead o
 |---|---|
 | Category | Cloud browser infrastructure |
 | Best for | Web agents, scraping, QA automation |
-| Platform pieces | Browsers, Search API, Fetch API, Runtime, Identity, Model Gateway, Observability |
-| Open-source layer | Browser CLI, Stagehand SDK, Director |
+| Platform pieces | Browsers, Search API, Fetch API, Runtime, Identity, Model Gateway, Observability, Functions |
+| Open-source layer | Browser CLI, Stagehand SDK (3.3.0 as of May 5, 2026), Director |
 | Pricing | Free, Developer $20/mo, Startup $99/mo, Scale custom |
+| Scale signal | 36.9M+ unique browser sessions processed in March 2026 alone |
 | Main competitors | Browserless, Steel, self-hosted Playwright, Selenium Grid |
 
 ## Where it fits
@@ -98,9 +121,22 @@ The buy-versus-build question is practical. If your automation is small, predict
 
 Compare Browserbase with bare browser-hosting providers, Stagehand-style agent abstractions, and in-house Playwright clusters. Do not compare it with [Comet](/tools/comet/) or [Dia](/tools/dia/) as if all AI browsers solve the same job. Browserbase is for software systems that use the web. Comet and Dia are for humans using the web.
 
-## Pricing notes verified 2026-05-05
+## Recent changes (2026)
 
-Browserbase lists four plans. Free includes 3 concurrent browsers, 1 browser hour, 1,000 Search calls, 1,000 Fetch calls, 15-minute sessions, 7-day retention, and $5 in model tokens. Developer is $20/mo with 25 concurrent browsers and 100 browser hours, then $0.12/browser-hour. Startup is $99/mo with 100 concurrent browsers and 500 browser hours, then $0.10/browser-hour. Scale is custom with 250+ concurrent browsers and enterprise features such as SSO, DPA/BAA options, and verified agents.
+The platform has expanded materially in 2026 without changing headline plan prices:
+
+- **May 6:** Improved Downloads API treats files as individual objects with unique IDs; sessions support filtering by filename, MIME type, size, or timestamp.
+- **May 5:** Stagehand 3.3.0 adds verified-agent identity mode (to reduce bot blocks), adaptive thinking that scales reasoning token use on Anthropic models by task complexity, and explicit file-input handling for upload flows.
+- **April 5:** Model Gateway opens multi-provider model access (OpenAI, Anthropic, Gemini) through a single Browserbase API key.
+- **March 17:** Search API (Exa-powered) launched with 1,000 free monthly calls on every plan.
+- **March 16:** Free plan concurrency raised from 1 to 3 browsers.
+- **March 11:** Fetch API launched at roughly $1 per 1,000 pages as a lightweight, no-session alternative for read-only extraction.
+- **February 10:** Browserbase Functions allow direct agent deployment on Browserbase infrastructure with up to 70% lower latency.
+- **January 15:** Session Recordings rebuilt on CDP for pixel-accurate, event-driven playback across multiple tabs.
+
+## Pricing notes verified 2026-05-13
+
+Browserbase lists four plans. Free includes 3 concurrent browsers, 1 browser hour, 1,000 Search calls, 1,000 Fetch calls, 15-minute sessions, 7-day retention, and $5 in model tokens. Developer is $20/mo with 25 concurrent browsers and 100 browser hours, then $0.12/browser-hour, plus 1,000 included Search calls and 1,000 included Fetch calls. Startup is $99/mo with 100 concurrent browsers and 500 browser hours, then $0.10/browser-hour, plus 1,000 Search calls and 10,000 Fetch calls. Scale is custom with 250+ concurrent browsers and enterprise features such as SSO, DPA/BAA options, verified agents, and advanced CAPTCHA solving.
 
 The unit economics depend on workload shape. A short fetch-heavy enrichment task can be cheap. A long-running browser session with login, proxy traffic, screenshots, model calls, and retries can cost more than the headline plan price suggests. Track browser hours, Search calls, Fetch calls, proxy usage, model gateway spend, and retention requirements separately.
 

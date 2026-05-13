@@ -10,8 +10,8 @@ pricing_model: free
 price_range: "Free"
 status: active
 launched: 2015-11
-last_updated: 2026-05-04
-last_verified: 2026-05-04
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,17 +30,17 @@ facts:
     source: "https://www.semanticscholar.org/"
     source_label: "Semantic Scholar homepage"
     source_id: semantic-scholar-official
-    verified_at: 2026-05-04
-    next_review_at: 2026-08-04
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: medium
     confidence: high
   api_available:
-    value: "Yes — Semantic Scholar exposes public API endpoints for paper search, recommendations, author data, citations, and datasets."
+    value: "Yes. Semantic Scholar exposes public API endpoints for paper search, recommendations, author data, citations, and datasets."
     source: "https://www.semanticscholar.org/product/api"
     source_label: "Semantic Scholar API"
     source_id: semantic-scholar-api
-    verified_at: 2026-05-04
-    next_review_at: 2026-08-04
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -48,8 +48,8 @@ facts:
     source: "https://www.semanticscholar.org/product/api"
     source_label: "Semantic Scholar API"
     source_id: semantic-scholar-api
-    verified_at: 2026-05-04
-    next_review_at: 2026-08-04
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: medium
     confidence: high
   best_for:
@@ -57,8 +57,8 @@ facts:
     source: "https://www.semanticscholar.org/"
     source_label: "Semantic Scholar homepage"
     source_id: semantic-scholar-official
-    verified_at: 2026-05-04
-    next_review_at: 2026-08-04
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: medium
     confidence: high
   watch_out_for:
@@ -66,14 +66,14 @@ facts:
     source: "https://www.semanticscholar.org/product/api"
     source_label: "Semantic Scholar API"
     source_id: semantic-scholar-api
-    verified_at: 2026-05-04
-    next_review_at: 2026-08-04
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: medium
     confidence: medium
 tags: [academic-search, research, free, open-access, ai-research, citations]
-seo_title: "Semantic Scholar: Free AI Academic Search Engine (April 2026)"
+seo_title: "Semantic Scholar: Free AI Academic Search Engine (May 2026)"
 meta_description: >-
-  Semantic Scholar is a free AI-powered academic search engine from Allen Institute for AI, indexing 200M+ papers with TLDR summaries, influential-citation signals, and a free public API. No paid tier. Verified April 2026.
+  Semantic Scholar is a free AI-powered academic search engine from Allen Institute for AI, indexing 200M+ papers with TLDR summaries, influential-citation signals, and a free public API. No paid tier. Verified May 2026.
 author: "aipedia.wiki Editorial"
 best_for:
   - academic research
@@ -95,6 +95,13 @@ price_history:
     source_label: "Source"
     source_id: semantic-scholar-pricing
     note: "Verified fully free. No paid tier exists."
+  - date: 2026-05-13
+    plan: "Free"
+    price: "$0"
+    source: "https://www.semanticscholar.org/about"
+    source_label: "Source"
+    source_id: semantic-scholar-pricing
+    note: "Re-verified. Still fully free; no paid tier introduced. AI2 non-profit funding model unchanged."
 ---
 
 # Semantic Scholar
@@ -158,7 +165,7 @@ The moat is institutional. AI2 is a non-profit with permanent funding, which rem
 |------|-------|--------|
 | Free | $0 | Full search, TLDR, Semantic Reader, Research Feed, API (with registration) |
 
-*Verified 2026-04-17. Semantic Scholar is fully free with no paid tier. Maintained by Allen Institute for AI, a non-profit research organization. Bulk dataset access available to institutions at no cost on request.*
+*Verified 2026-05-13. Semantic Scholar is fully free with no paid tier. Maintained by Allen Institute for AI, a non-profit research organization. Bulk dataset access available to institutions at no cost on request.*
 
 ## Against the alternatives
 
@@ -184,7 +191,7 @@ The moat is institutional. AI2 is a non-profit with permanent funding, which rem
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies corpus and feature details against primary sources, and generates the analysis above. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [Semantic Scholar](https://www.semanticscholar.org), [Allen Institute for AI](https://allenai.org), the [Semantic Scholar Academic Graph paper](https://dl.acm.org/doi/fullHtml/10.1145/3487553.3527147), and the [S2ORC GitHub repo](https://github.com/allenai/s2orc).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies corpus and feature details against primary sources, and generates the analysis above. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against [Semantic Scholar](https://www.semanticscholar.org), [Allen Institute for AI](https://allenai.org), the [Semantic Scholar Academic Graph paper](https://dl.acm.org/doi/fullHtml/10.1145/3487553.3527147), and the [S2ORC GitHub repo](https://github.com/allenai/s2orc).
 
 ## FAQ
 

@@ -8,11 +8,11 @@ secondary_categories: [ai-automation]
 company: AssemblyAI
 url: https://www.assemblyai.com
 pricing_model: freemium
-price_range: $50 free credits; STT from $0.15-$0.21/hr; Voice Agent API $4.50/hr
+price_range: Up to 185 hrs free pre-recorded + 333 hrs streaming; STT from $0.15-$0.21/hr; Voice Agent API $4.50/hr
 status: active
 launched: 2017
-last_updated: 2026-05-05
-last_verified: 2026-05-05
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -32,7 +32,7 @@ facts:
     source: https://www.assemblyai.com/
     source_label: AssemblyAI official site
     source_id: assemblyai-official
-    verified_at: '2026-05-05'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-04'
@@ -42,7 +42,7 @@ facts:
     source: https://www.assemblyai.com/pricing/
     source_label: AssemblyAI pricing
     source_id: assemblyai-pricing
-    verified_at: '2026-05-05'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
     next_review_at: '2026-08-04'
@@ -51,7 +51,7 @@ facts:
     source: https://www.assemblyai.com/docs/
     source_label: AssemblyAI docs
     source_id: assemblyai-docs
-    verified_at: '2026-05-05'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-04'
@@ -60,7 +60,7 @@ facts:
     source: https://www.assemblyai.com/products/streaming-speech-to-text
     source_label: AssemblyAI streaming speech-to-text
     source_id: assemblyai-streaming
-    verified_at: '2026-05-05'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-04'
@@ -70,11 +70,26 @@ facts:
     source: https://www.assemblyai.com/pricing/
     source_label: AssemblyAI pricing
     source_id: assemblyai-pricing
-    verified_at: '2026-05-05'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
     next_review_at: '2026-08-04'
 tags: [speech-to-text, streaming-transcription, voice-ai, audio-intelligence, api, diarization, transcription]
+price_history:
+  - date: 2026-05-05
+    plan: "Free credits"
+    price: "$50 free credits"
+    source: "https://www.assemblyai.com/pricing/"
+    source_label: "AssemblyAI pricing"
+    source_id: assemblyai-pricing
+    note: "Previous free-trial offer for new accounts"
+  - date: 2026-05-13
+    plan: "Free tier"
+    price: "Up to 185 hrs pre-recorded + 333 hrs streaming"
+    source: "https://www.assemblyai.com/pricing/"
+    source_label: "AssemblyAI pricing"
+    source_id: assemblyai-pricing
+    note: "Materially expanded free tier replaces the $50 credit grant; no card required. Medical Mode add-on ($0.15/hr) and Whisper-Streaming ($0.30/hr) added to lineup."
 seo_title: "AssemblyAI Review: Speech-to-Text API & Pricing (2026)"
 meta_description: "AssemblyAI is a voice AI API platform for speech-to-text, streaming transcription, speech understanding, LLM Gateway, guardrails, and speech-to-speech."
 author: aipedia.wiki Editorial
@@ -114,7 +129,7 @@ The main decision is not AssemblyAI versus a meeting note app. It is AssemblyAI 
 | **Streaming** | Real-time WebSocket transcription |
 | **Speech understanding** | Summaries, chapters, sentiment, PII and more |
 | **Models** | Universal speech-to-text model family |
-| **Free offer** | $50 in free credits for new accounts |
+| **Free tier** | Up to 185 hours pre-recorded and 333 hours streaming, no card required |
 | **Voice Agent API** | Pay-as-you-go voice-agent stack priced separately from STT |
 | **Best fit** | Products that need transcription and audio intelligence |
 
@@ -136,11 +151,11 @@ The main decision is not AssemblyAI versus a meeting note app. It is AssemblyAI 
 
 ## Pricing
 
-AssemblyAI lists $50 in free credits for new users. Paid speech-to-text pricing varies by model, with Universal-2 and Universal-3 Pro listed at different hourly rates. Streaming transcription, Voice Agent API usage, guardrails, LLM Gateway, and speech understanding features have separate pricing.
+AssemblyAI now ships a generous free tier (up to 185 hours of pre-recorded transcription and 333 hours of streaming with no credit card) in place of the older $50 credit grant. Paid speech-to-text pricing varies by model, with Universal-2 and Universal-3 Pro listed at different hourly rates. Streaming transcription, Voice Agent API usage, guardrails, LLM Gateway, and speech understanding features have separate pricing.
 
 The practical unit is audio hours plus add-ons. Teams should test cost using real audio length, concurrency, required features, and volume discounts.
 
-As verified on 2026-05-05, the pricing page lists prerecorded Universal-3 Pro at $0.21/hour and Universal-2 at $0.15/hour, streaming models from $0.15/hour to $0.45/hour, and Voice Agent API at $4.50/hour. Add-ons such as diarization, keyterms prompting, medical mode, translation, entity detection, sentiment, chapters, and summaries can add separate hourly charges.
+As verified on 2026-05-13, the pricing page lists prerecorded Universal-3 Pro at $0.21/hour and Universal-2 at $0.15/hour. Streaming pricing now ranges from $0.15/hour for Universal-Streaming (English) and Universal-Streaming Multilingual (six languages), $0.30/hour for Whisper-Streaming (99+ languages, open-source model), up to $0.45/hour for Universal-3 Pro Streaming. Voice Agent API stays at $4.50/hour ($0.075/minute). Add-ons such as diarization ($0.02-$0.12/hr), keyterms prompting ($0.05/hr), the new Medical Mode ($0.15/hr), PII text redaction ($0.08/hr), translation, entity detection, sentiment, chapters, and summaries can add separate hourly charges.
 
 ## Evaluation checklist
 
@@ -170,7 +185,7 @@ It is less attractive when the job is simply recording meetings or editing podca
 
 ## Methodology
 
-Last verified 2026-05-05 against AssemblyAI pricing and product pages. Scoring emphasizes speech quality potential, developer utility, feature breadth, and cost transparency.
+Last verified 2026-05-13 against AssemblyAI pricing and product pages. Scoring emphasizes speech quality potential, developer utility, feature breadth, and cost transparency.
 
 ## FAQ
 

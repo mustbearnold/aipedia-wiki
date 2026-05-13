@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "Free browser; paid Perplexity tiers can increase AI capacity"
 status: active
 launched: 2025
-last_updated: 2026-05-05
-last_verified: 2026-05-05
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 seo_title: "Perplexity Comet: Features, Pricing & Review (2026)"
 meta_description: "Perplexity Comet is an AI browser that brings Perplexity search, page-aware assistance, and agentic browsing into one product. Best for research-first browsing."
@@ -34,22 +34,44 @@ facts:
     source: "https://www.perplexity.ai/comet"
     source_label: "Perplexity Comet page"
     source_id: comet-best-for
-    verified_at: 2026-05-05
+    verified_at: 2026-05-13
     confidence: high
   best_for:
     value: "Research-first browsing, source-backed search, and AI-assisted navigation"
     source: "https://www.perplexity.ai/comet"
     source_id: comet-best-for
-    verified_at: 2026-05-05
+    verified_at: 2026-05-13
     confidence: high
   best_paid_tier:
     value: "Perplexity paid tiers when higher AI capacity or advanced model access matters"
     source: "https://www.perplexity.ai/pro"
     source_id: perplexity-pro-pricing
-    verified_at: 2026-05-05
+    verified_at: 2026-05-13
     next_review_at: 2026-06-03
     confidence: high
 tags: [browser, ai-browser, perplexity, search, research, answer-engine, citations]
+price_history:
+  - date: 2025
+    plan: "Comet launch"
+    price: "Free browser"
+    source: "https://www.perplexity.ai/comet"
+    source_label: "Perplexity Comet"
+    source_id: comet-best-for
+    note: "Initial Mac desktop release, then expanded to Windows, iOS, and Android."
+  - date: 2026-04-16
+    plan: "Perplexity Max ($200/mo)"
+    price: "Personal Computer for Mac launched"
+    source: "/news/2026-04-16-perplexity-personal-computer-mac/"
+    source_label: "Personal Computer for Mac coverage"
+    source_id: perplexity-pro-pricing
+    note: "Max-tier subscribers get a persistent Mac agent that reads/writes local files and works across iMessage, Mail, Calendar, and Comet. Tightens Comet's daily-driver case for Mac users in the Perplexity stack."
+  - date: 2026-05-13
+    plan: "Comet"
+    price: "Free browser; paid Perplexity tiers can lift AI capacity"
+    source: "https://www.perplexity.ai/comet"
+    source_label: "Perplexity Comet"
+    source_id: comet-best-for
+    note: "Verified Mac, Windows, iOS, Android availability. Comet is the browser tier of a wider Perplexity surface that now includes Personal Computer on Mac for Max users."
 best_for:
   - researchers who want search and browsing in one surface
   - users who already trust Perplexity's cited answers
@@ -67,7 +89,9 @@ quick_answer: >-
 
 Perplexity Comet is Perplexity's AI browser. It extends the company's answer-engine workflow into a browsing surface: search, citations, page context, and AI help live inside the browser instead of requiring a separate Perplexity tab. Perplexity positions Comet as a personal assistant browser for understanding pages, researching the web, drafting email, shopping, creating plans, and delegating routine web tasks.
 
-As verified on 2026-05-05, Comet is promoted for Mac, Windows, iOS, and Android. That matters because it is no longer just an experimental desktop browser for Perplexity power users; it is trying to become a daily browser surface.
+As verified on 2026-05-13, Comet is promoted for Mac, Windows, iOS, and Android. That matters because it is no longer just an experimental desktop browser for Perplexity power users; it is trying to become a daily browser surface.
+
+On April 16, 2026, Perplexity launched [Personal Computer for Mac](/news/2026-04-16-perplexity-personal-computer-mac/) for $200/month Max subscribers. Personal Computer is a persistent local agent that reads and writes files and operates across iMessage, Mail, Calendar, and Comet itself. Mac-based Max users can now treat Comet as the browser front-end of a full Perplexity desktop stack rather than a standalone AI browser. That changes the buyer story: Comet is more compelling when the same subscription also unlocks a 24/7 Mac agent.
 
 ## System Verdict
 
@@ -86,6 +110,7 @@ As verified on 2026-05-05, Comet is promoted for Mac, Windows, iOS, and Android.
 | Best for | Research browsing with citations |
 | Platforms | Mac, Windows, iOS, and Android |
 | Pricing | Free browser; paid Perplexity tiers can increase AI capacity and model access |
+| Companion product | Personal Computer for Mac (Perplexity Max, $200/mo) for Mac users who want a persistent local agent alongside Comet |
 | Main competitors | [Dia](/tools/dia/), ChatGPT browsing, Google AI Mode |
 
 ## Against alternatives

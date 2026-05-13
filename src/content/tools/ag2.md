@@ -11,8 +11,10 @@ pricing_model: open-source
 price_range: "Free (open source)"
 status: active
 launched: 2024-10
-last_updated: 2026-05-05
-last_verified: 2026-05-05
+current_version: "0.13.0"
+current_version_date: 2026-05-13
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -27,66 +29,62 @@ scores:
   longevity: 7
 facts:
   best_for:
-    value: Best for developers building multi-agent systems who want an open-source AgentOS-style framework descended from the
-      AutoGen ecosystem.
+    value: Best for developers building multi-agent systems who want an open-source AgentOS-style framework descended from the AutoGen ecosystem.
     source: https://www.ag2.ai/
     source_label: AG2 official site
     source_id: ag2-official
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-08-13'
   pricing_anchor:
-    value: AG2 is open-source software; costs come from hosting, model/API usage, observability, and engineering time rather
-      than a vendor SaaS tier.
+    value: AG2 is open-source software (Apache 2.0 for new code; original AutoGen components retain MIT); costs come from hosting, model/API usage, observability, and engineering time rather than a vendor SaaS tier.
     source: https://github.com/ag2ai/ag2
     source_label: AG2 GitHub repository
     source_id: ag2-repository
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-08-13'
   open_source_or_local:
-    value: AG2 is available as an open-source repository and can be installed for local or self-managed agent development.
-    source: https://docs.ag2.ai/latest/docs/user-guide/basic-concepts/installing-ag2/
-    source_label: AG2 install docs
-    source_id: ag2-install-docs
-    verified_at: '2026-05-04'
+    value: AG2 is available as an open-source repository and can be installed for local or self-managed agent development. Latest release is v0.13.0 (2026-05-13).
+    source: https://github.com/ag2ai/ag2/releases
+    source_label: AG2 releases
+    source_id: ag2-releases
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-08-13'
   api_available:
-    value: AG2 is a developer framework, so its “API” is the programming surface and docs rather than a hosted inference API.
+    value: AG2 is a developer framework, so its API is the programming surface and docs rather than a hosted inference API.
     source: https://docs.ag2.ai/
     source_label: AG2 docs
     source_id: ag2-docs
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-08-13'
   enterprise_controls:
-    value: Enterprise readiness depends on the team’s own deployment, secrets management, evaluation, logging, and guardrail
-      stack around AG2.
+    value: Enterprise readiness depends on the team's own deployment, secrets management, evaluation, logging, and guardrail stack around AG2. The framework remains pre-1.0 (current v0.13.0), so API surface is still being tidied through deprecations.
     source: https://docs.ag2.ai/
     source_label: AG2 docs
     source_id: ag2-docs
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-08-13'
   watch_out_for:
-    value: Do not compare AG2 as if it were a turnkey automation SaaS; it is a framework that requires engineering ownership
-      and production hardening.
+    value: Do not compare AG2 as if it were a turnkey automation SaaS; it is a framework that requires engineering ownership and production hardening, and it is still pre-1.0 with active deprecation cycles.
     source: https://github.com/ag2ai/ag2
     source_label: AG2 GitHub repository
     source_id: ag2-repository
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-08-13'
 tags: [agent-framework, autogen-successor, python, multi-agent, open-source, community]
-seo_title: "AG2: Features & Review (April 2026)"
-meta_description: "AG2 is the community-forked continuation of Microsoft AutoGen. Open-source Python framework for multi-agent AI systems. Free. Best for AutoGen users staying off Azure."
+seo_title: "AG2: Features & Review (May 2026)"
+meta_description: "AG2 is the community-forked continuation of Microsoft AutoGen. Apache 2.0 Python framework for multi-agent AI systems. Free. Current release v0.13.0 (May 13, 2026). Best for AutoGen users staying off Azure."
 author: "aipedia.wiki Editorial"
 best_for:
   - existing AutoGen users who don't want to migrate to Microsoft Agent Framework
@@ -103,7 +101,11 @@ quick_answer: >-
 
 # AG2
 
-Formerly Microsoft AutoGen, AG2 spun out as an independent open-source project in late 2024 when Microsoft pivoted AutoGen to maintenance mode. Calls itself "The Open-Source AgentOS." Python-based, community-led, no vendor strings attached.
+Formerly Microsoft AutoGen, AG2 spun out as an independent open-source project in late 2024 when Microsoft pivoted AutoGen to maintenance mode. Calls itself "The Open-Source AgentOS." Python-based, Apache 2.0 licensed for new code (original AutoGen components retain MIT), community-led, no vendor strings attached.
+
+## Recent changes
+
+- **2026-05-13:** AG2 v0.13.0 shipped. The project is still tracking towards a 1.0 cut, with the docs noting that "the current framework will be tidied up through deprecations over the next few minor versions." 70 releases since the fork, 113 open issues, 45 open PRs at verification time.
 
 ## System Verdict
 
@@ -118,11 +120,13 @@ Formerly Microsoft AutoGen, AG2 spun out as an independent open-source project i
 | | |
 |---|---|
 | **Origin** | Fork of Microsoft AutoGen, November 2024 |
-| **License** | Open source (permissive; check repo) |
+| **License** | Apache 2.0 for new code; original AutoGen components retain MIT |
+| **Latest release** | v0.13.0 (2026-05-13); 70 releases since the fork |
+| **Path to 1.0** | Still pre-1.0; docs say "the current framework will be tidied up through deprecations over the next few minor versions" |
 | **Primary language** | Python |
 | **Cost** | Free |
-| **Maintenance** | Community-led via ag2ai organization |
-| **Core patterns** | ConversableAgent, GroupChat, multi-agent conversations, tool use, code execution |
+| **Maintenance** | Community-led via the ag2ai organization |
+| **Core patterns** | ConversableAgent, GroupChat, swarms, sequential orchestration, tool use, code execution, RAG, structured outputs, human-in-the-loop |
 | **LLM support** | OpenAI, Anthropic, Google, any OpenAI-compatible endpoint, local via Ollama |
 | **Production-readiness** | Not yet production-grade for most enterprise use; active development |
 
@@ -150,7 +154,7 @@ AG2 is free and open source. No commercial tier. You pay only for:
 - **Security hardening** (sandboxing, secrets handling, permissions, and review)
 - **Engineering time** (agent design, testing, deployment, and maintenance)
 
-Verified 2026-04-18 via [ag2.ai](https://www.ag2.ai/) and [AG2 GitHub](https://github.com/ag2ai/ag2).
+Verified 2026-05-13 via [ag2.ai](https://www.ag2.ai/), [AG2 GitHub](https://github.com/ag2ai/ag2), and the [AG2 releases page](https://github.com/ag2ai/ag2/releases).
 
 ## Buyer fit
 
@@ -189,7 +193,7 @@ AG2's openness is the advantage, but it also means production discipline is the 
 - **Not production-ready for enterprise.** Known shortcomings: no first-party observability, no built-in enterprise security, code execution needs careful sandboxing. Acceptable for research or startups; risky for regulated industries.
 - **Community bus factor.** AG2 depends on volunteer maintainers. Direction and pace can shift.
 - **Smaller community than LangChain.** Fewer Stack Overflow answers, fewer YouTube tutorials. Discord + GitHub for support.
-- **Future unclear.** If Microsoft Agent Framework dominates, AG2 may stagnate. If AG2 carves out independent traction, it becomes the AutoGen lineage default. Both scenarios are live as of April 2026.
+- **Future unclear.** If Microsoft Agent Framework dominates, AG2 may stagnate. If AG2 carves out independent traction, it becomes the AutoGen lineage default. Both scenarios are live as of May 2026, and the still-pre-1.0 status means breaking changes can land between releases.
 - **Framework enthusiasm can outrun product need.** Multi-agent systems add coordination overhead. Use AG2 when separate agents solve a real problem, not because a single prompt chain feels less exciting.
 
 ## Against the alternatives
@@ -204,9 +208,12 @@ AG2's openness is the advantage, but it also means production discipline is the 
 
 ## Methodology
 
-Produced by the aipedia.wiki editorial pipeline. Last verified 2026-04-18 against [ag2.ai](https://www.ag2.ai/), [AG2 GitHub](https://github.com/ag2ai/ag2), and the [2026 agentic frameworks guide](https://blog.softmaxdata.com/definitive-guide-to-agentic-frameworks-in-2026-langgraph-crewai-ag2-openai-and-more/).
+Produced by the aipedia.wiki editorial pipeline. Last verified 2026-05-13 against [ag2.ai](https://www.ag2.ai/), [AG2 GitHub](https://github.com/ag2ai/ag2), the [AG2 releases page](https://github.com/ag2ai/ag2/releases) (v0.13.0 on 2026-05-13), and the [2026 agentic frameworks guide](https://blog.softmaxdata.com/definitive-guide-to-agentic-frameworks-in-2026-langgraph-crewai-ag2-openai-and-more/).
 
 ## FAQ
+
+**What is the current AG2 version?**
+v0.13.0, released on 2026-05-13. The project still sits below a 1.0 milestone; the docs note ongoing deprecation cycles as the framework hardens for that cut.
 
 **Why did AutoGen split into AG2 and Microsoft Agent Framework?**
 Microsoft decided to merge AutoGen and Semantic Kernel into a unified Microsoft Agent Framework (1.0 released April 2026). The community-led fork called AG2 emerged to continue the AutoGen direction independently.

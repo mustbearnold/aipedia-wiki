@@ -11,10 +11,10 @@ pricing_model: freemium
 price_range: "$0-$10/1M tokens"
 status: active
 launched: 2019-06
-last_updated: 2026-05-05
-last_verified: 2026-05-05
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
-seo_title: "Cohere: Features, Pricing & Review (April 2026)"
+seo_title: "Cohere: Features, Pricing & Review (May 2026)"
 meta_description: "Cohere's Command A (256K context) is the agentic flagship; Command R+ runs at $2.50/$10 per 1M tokens. North workspace and Model Vault ship private deployment. Enterprise-first LLM platform built around RAG, Rerank, and Aya multilingual."
 author: "aipedia.wiki Editorial"
 affiliate:
@@ -35,7 +35,7 @@ facts:
     source: https://cohere.com/
     source_label: Cohere official site
     source_id: cohere-official
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-04'
@@ -45,7 +45,7 @@ facts:
     source: https://cohere.com/pricing
     source_label: Cohere pricing
     source_id: cohere-pricing
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
     next_review_at: '2026-08-04'
@@ -55,7 +55,7 @@ facts:
     source: https://cohere.com/command
     source_label: Cohere Command models
     source_id: cohere-command
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
     next_review_at: '2026-08-04'
@@ -64,7 +64,7 @@ facts:
     source: https://docs.cohere.com/
     source_label: Cohere documentation
     source_id: cohere-docs
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-04'
@@ -74,7 +74,7 @@ facts:
     source: https://cohere.com/
     source_label: Cohere official site
     source_id: cohere-official
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-04'
@@ -114,7 +114,13 @@ price_history:
     source_label: "Source"
     source_id: cohere-pricing
     note: "TechCrunch reports Cohere is moving to combine with German AI startup Aleph Alpha, strengthening European enterprise and sovereign-AI positioning."
----
+  - date: 2026-05-13
+    plan: "Transcribe (03-2026)"
+    price: "Open-weights download + paid API"
+    source: "https://cohere.com/transcribe"
+    source_label: "Cohere Transcribe"
+    source_id: cohere-transcribe
+    note: "Cohere added a new enterprise speech-to-text model (14 languages, open-weights). Verified pricing page is otherwise unchanged: Command R+ at $2.50/$10 per 1M tok; Model Vault dedicated tiers from $2,500/mo. Rerank 4 Pro Large is now listed at $10/hr or $6,500/mo."
 
 # Cohere
 
@@ -144,6 +150,7 @@ Related coverage: [AI Industry Roundup, April 24](/news/2026-04-24-ai-industry-r
 | **Embedding model** | Embed v4 · multimodal · 256/512/1024/1536 dims · 100+ languages |
 | **Reranker** | Rerank 4 (Fast + Pro variants) · 32K context · 100+ languages |
 | **Open-weight multilingual** | Tiny Aya (3.35B params) · 70+ languages · February 2026 |
+| **Speech-to-text** | Cohere Transcribe (transcribe-03-2026) · 14 languages · open-weights, edge-deployable |
 | **Enterprise agent platform** | North (GA since early 2025) · private deployment via Model Vault |
 | **Private deployment** | Model Vault (September 2025) · VPC + on-prem · isolated inference |
 | **API pricing (R+)** | $2.50 input / $10 output per 1M tokens · Enterprise from $1 / $3 |
@@ -151,7 +158,13 @@ Related coverage: [AI Industry Roundup, April 24](/news/2026-04-24-ai-industry-r
 | **Image / video gen** | None |
 | **Recent business move** | Reported Aleph Alpha acquisition / merger on April 24, 2026 |
 
-Every data point above was verified against vendor sources and the April 26 news scan. See Sources.
+Every data point above was verified against vendor sources and the May 13, 2026 news scan. See Sources.
+
+## Recent changes
+
+- **May 2026:** Cohere Transcribe (transcribe-03-2026) listed as a new enterprise speech-to-text model, 14 languages, open-weights and edge-deployable, available via Hugging Face and the Cohere API. Adds an audio-input rail to the existing Command + Embed + Rerank stack.
+- **April 24, 2026:** TechCrunch reported the planned Cohere-Aleph Alpha combination. Still a sovereignty and enterprise-positioning story rather than a price or feature change.
+- **April-May 2026:** Pricing page unchanged for Command R+ ($2.50/$10 per 1M tok) and Command R ($0.50/$1.50). Model Vault tiers verified at $2,500-$3,250/mo for Embed v4 and Rerank 3.5 / 4 medium instances; Rerank 4 Pro now also lists a Large dedicated tier at $10/hr or $6,500/mo.
 
 ## What it actually is
 
@@ -184,7 +197,7 @@ Tiny Aya, released by Cohere Labs in February 2026, ships 3.35B-parameter open-w
 
 ## Pricing
 
-API pricing via [cohere.com/pricing](https://cohere.com/pricing), verified 2026-04-17:
+API pricing via [cohere.com/pricing](https://cohere.com/pricing), verified 2026-05-13:
 
 | Plan / Model | Input ($/1M tok) | Output ($/1M tok) | Context | Who's it for |
 |---|---|---|---|---|
@@ -206,8 +219,9 @@ Model Vault dedicated instances (for isolated VPC or on-prem inference):
 | Rerank 3.5 | Medium | $5.00 | $3,250 |
 | Rerank 4 Fast | Medium | $5.00 | $3,250 |
 | Rerank 4 Pro | Medium | $5.00 | $3,250 |
+| Rerank 4 Pro | Large | $10.00 | $6,500 |
 
-Command A pricing is not listed on the public page; contact sales for rates. Enterprise pricing on Command R+ drops input to $1 and output to $3 per 1M tokens, a roughly 60-70% discount from list. Prices verified 2026-04-17 via [Cohere pricing](https://cohere.com/pricing) and [Cohere pricing docs](https://docs.cohere.com/docs/how-does-cohere-pricing-work).
+Command A pricing is not listed on the public page; contact sales for rates. Enterprise pricing on Command R+ drops input to $1 and output to $3 per 1M tokens, a roughly 60-70% discount from list. Prices verified 2026-05-13 via [Cohere pricing](https://cohere.com/pricing) and [Cohere pricing docs](https://docs.cohere.com/docs/how-does-cohere-pricing-work).
 
 ## Against the alternatives
 
@@ -235,7 +249,7 @@ Command A pricing is not listed on the public page; contact sales for rates. Ent
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-26 against [Cohere pricing](https://cohere.com/pricing), [Cohere models docs](https://docs.cohere.com/docs/models), [Cohere release notes](https://docs.cohere.com/changelog), the [Embed v4 announcement](https://cohere.com/embed), and [reported Aleph Alpha deal coverage](/news/2026-04-24-cohere-aleph-alpha/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against [Cohere pricing](https://cohere.com/pricing), [Cohere models docs](https://docs.cohere.com/docs/models), [Cohere release notes](https://docs.cohere.com/changelog), the [Embed v4 announcement](https://cohere.com/embed), the [Cohere Transcribe page](https://cohere.com/transcribe), and [reported Aleph Alpha deal coverage](/news/2026-04-24-cohere-aleph-alpha/).
 
 ## FAQ
 
@@ -261,6 +275,7 @@ Cohere's dedicated retrieval stack (Embed v4 + Rerank 4) outperforms OpenAI embe
 - [Cohere release notes](https://docs.cohere.com/changelog): Embed v4, Rerank 4, North, Model Vault launch dates
 - [Cohere Embed v4 page](https://cohere.com/embed): Multimodal embedding model specifications
 - [Cohere Command page](https://cohere.com/command): Command A agentic features and benchmarks
+- [Cohere Transcribe page](https://cohere.com/transcribe): New 03-2026 enterprise speech-to-text model
 - [Cohere pricing docs](https://docs.cohere.com/docs/how-does-cohere-pricing-work): Token counting and billing mechanics
 - [Cohere-Aleph Alpha deal coverage](/news/2026-04-24-cohere-aleph-alpha/): Reported enterprise-AI consolidation
 

@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "Free download; account required for AI usage"
 status: active
 launched: 2025
-last_updated: 2026-05-05
-last_verified: 2026-05-05
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 seo_title: "Dia Browser: Features, Pricing & Review (2026)"
 meta_description: "Dia is The Browser Company's AI-native browser for contextual search, page-aware chat, and agentic browsing. Best for researchers and operators who want AI inside the browser, not a separate tab."
@@ -30,32 +30,41 @@ scores:
   longevity: 8
 facts:
   web_browsing:
-    value: "Chromium-based AI browser; macOS 14+ with Apple Silicon required"
+    value: "Chromium-based AI browser; macOS 14+ with Apple Silicon required; no Windows or Linux availability"
     source: "https://www.diabrowser.com"
     source_label: "Dia website"
     source_id: dia-best-for
-    verified_at: 2026-05-05
+    verified_at: 2026-05-13
     confidence: high
   best_for:
     value: "Contextual research, tab-aware browsing, and AI-assisted web workflows"
     source: "https://www.diabrowser.com"
     source_label: "Dia website"
     source_id: dia-best-for
-    verified_at: 2026-05-05
+    verified_at: 2026-05-13
     confidence: high
   best_paid_tier:
-    value: "Free download; pricing for higher-volume AI usage may vary by rollout"
+    value: "Free download; pricing for higher-volume AI usage is not published on the public site as of 2026-05-13"
     source: "https://www.diabrowser.com"
     source_id: dia-best-for
-    verified_at: 2026-05-05
-    next_review_at: 2026-06-03
+    verified_at: 2026-05-13
+    next_review_at: 2026-06-13
     confidence: high
   coding_agent:
     value: "No dedicated coding agent"
     source: "https://aipedia.wiki/tools/dia/"
     source_id: dia-coding-agent
-    verified_at: 2026-04-28
+    verified_at: 2026-05-13
     confidence: high
+  enterprise_controls:
+    value: "SOC 2 Type II audit covering security, confidentiality, and privacy for 2025 calendar year, final report issued in 2026; report details available at trust.diabrowser.com. Partner AI providers (Anthropic, OpenAI, Gemini, Azure, AWS) contractually restricted from training on Dia user data."
+    source: "https://www.diabrowser.com/security"
+    source_label: "Dia security"
+    source_id: dia-security
+    verified_at: 2026-05-13
+    volatility: medium
+    confidence: high
+    next_review_at: 2026-08-13
 tags: [browser, ai-browser, search, research, web-agent, the-browser-company, arc]
 best_for:
   - researchers who live in browser tabs
@@ -72,9 +81,9 @@ quick_answer: >-
 
 # Dia
 
-Dia is an AI-native browser from The Browser Company, the team behind Arc. As of 2026-05-05, the public site positions Dia as a browser that "works with you": it reads across tabs, can create Morning Briefs from calendar, inbox, and links, surfaces proactive suggestions, and can answer using context from GSuite, Slack, tabs, and connected work apps.
+Dia is an AI-native browser from The Browser Company, the team behind Arc. As of 2026-05-13, the public site positions Dia as a browser that "works with you": it reads across tabs, can create Morning Briefs from calendar, inbox, and links, surfaces proactive suggestions, and can answer using context from GSuite, Slack, tabs, and connected work apps.
 
-It is currently available for Apple macOS 14+ on M1 chips or later. The security page says Dia is Chromium-based, disables several Google/Chromium telemetry and sync integrations, includes native ad blocking, completed a SOC 2 Type II examination for calendar year 2025, and uses layered controls for prompt-injection risk.
+It is currently available for Apple macOS 14 or later on M1 chips or later. No Windows or Linux build is advertised on the public site. The security page says Dia is Chromium-based, disables several Google and Chromium telemetry and sync integrations, includes native ad blocking, completed a SOC 2 Type II examination covering security, confidentiality, and privacy for calendar year 2025 (final report issued in 2026), and uses layered controls for prompt-injection risk. Partner AI providers (Anthropic, OpenAI, Gemini, Azure, AWS) are contractually restricted from retaining or using Dia user data to train their own models.
 
 ## System Verdict
 
@@ -118,13 +127,21 @@ Before switching, test platform fit, extension compatibility, account boundaries
 
 ## Security and privacy notes
 
-Dia is unusually explicit about browser-agent risk. Its security page says conversations, history, bookmarks, and files are encrypted and stored locally by default; Sync is end-to-end encrypted; AI providers are contractually restricted from training on Dia user data; and content sharing can be disabled in Settings. For prompt injection, Dia says the assistant starts without access to other tabs or write actions, requires approval before form filling or real-world effects, hides sensitive form fields from the agent, and avoids irreversible actions without user confirmation.
+Dia is unusually explicit about browser-agent risk. Its security page (verified 2026-05-13) says conversations, history, bookmarks, and files are encrypted and stored locally by default; Sync uses end-to-end encryption so servers cannot read it; AI providers are contractually restricted from retaining or training on Dia user data; content shared for improvement is unlinked from accounts and deleted after 30 days; and user data is never sold. SOC 2 Type II coverage extends to security, confidentiality, and privacy for calendar year 2025, with the report issued in 2026 and obtainable through trust.diabrowser.com.
+
+For prompt injection, Dia says the assistant will not automatically open or follow LLM-generated URLs, requires user approval before granting tab access or write actions, blocks insertion of data into third-party sites without consent, holds calendar events and sensitive actions in draft until the user confirms, restricts agentic-mode navigation to prevent cross-site attacks, and masks sensitive form fields from the agent. Dia acknowledges that prompt injections can still cause style shifts, introduce misinformation, or trigger unintended searches.
 
 ## Best plan recommendation
 
 Use the free download as the evaluation path and avoid treating Dia as a company-wide browser replacement until platform and admin controls match the organization. For individual users on supported Macs, the best first test is a real week of work: meeting prep, tab-heavy research, product comparisons, documentation reading, and source-backed writing. If Dia saves context recovery time, it earns a place as a personal browser.
 
 For teams, the decision is slower. Test extension behavior, profile separation, app permissions, sync expectations, and the security posture around connected work apps. Dia is more compelling as an opt-in workflow browser than as a mandated managed browser today.
+
+## Recent changes
+
+- **SOC 2 Type II finalized (verified 2026-05-13).** The 2025 audit covers security, confidentiality, and privacy; the final report was issued in 2026 and is available via trust.diabrowser.com. That gives enterprise reviewers a primary-source posture document for the first time.
+- **AI provider training restrictions surfaced.** Dia's security page now explicitly names Anthropic, OpenAI, Gemini, Azure, and AWS as partner providers contractually restricted from training on user data.
+- **Prompt-injection controls itemized.** The page enumerates specific behaviors: no auto-opening LLM-generated URLs, draft-only sensitive actions, restricted agentic navigation, and masked sensitive form fields. Useful posture detail for buyers comparing AI-native browsers.
 
 ## Failure modes
 
@@ -133,6 +150,11 @@ For teams, the decision is slower. Test extension behavior, profile separation, 
 - Enterprise IT teams may prefer managed browsers with established policy controls.
 - For automated web agents, use an API-first browser platform instead.
 - Connected-app context is only useful if users are comfortable granting access to email, calendar, Slack, docs, and similar systems.
+- Dia acknowledges that even with prompt-injection controls in place, injected content can still cause style shifts, introduce misinformation, or trigger unintended searches.
+
+## Methodology
+
+Last verified 2026-05-13 against the Dia website and security page. Scoring emphasizes browser utility, AI workflow value, moat (work-context surface), and longevity.
 
 ## Sources
 
