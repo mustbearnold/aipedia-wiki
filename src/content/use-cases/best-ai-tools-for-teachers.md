@@ -34,8 +34,8 @@ guide_picks:
       - label: "Gemini for Education"
         url: "https://edu.google.com/intl/ALL_us/ai/gemini-for-education/"
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-09
-last_verified: 2026-05-09
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 ---
 
@@ -43,7 +43,7 @@ update_frequency: monthly
 
 The best AI tools for teachers should save planning time without weakening trust, privacy, academic integrity, or teacher judgment. A classroom AI workflow is not the same as a generic productivity workflow.
 
-Verified May 9, 2026 against current official OpenAI, Google, Anthropic, and NotebookLM sources. AiPedia may earn from some tool links, but rankings stay editorial and are based on buyer fit, not commission.
+Verified May 13, 2026 against current official OpenAI, Google, Anthropic, and NotebookLM sources. AiPedia may earn from some tool links, but rankings stay editorial and are based on buyer fit, not commission.
 
 ## Quick Verdict
 
@@ -129,9 +129,9 @@ Use it for study guides, source summaries, concept review, reading questions, an
 
 ## Sources
 
-- [ChatGPT for teachers](https://openai.com/chatgpt/teachers/) (verified 2026-05-09)
-- [ChatGPT Edu](https://openai.com/chatgpt/education/) (verified 2026-05-09)
-- [Gemini for Education](https://edu.google.com/intl/ALL_us/ai/gemini-for-education/) (verified 2026-05-09)
-- [NotebookLM](https://notebooklm.google/) (verified 2026-05-09)
-- [Claude pricing](https://claude.com/pricing) (verified 2026-05-09)
-- [Claude model overview](https://platform.claude.com/docs/en/about-claude/models/overview) (verified 2026-05-09)
+- [ChatGPT for teachers](https://openai.com/chatgpt/teachers/) (verified 2026-05-13)
+- [ChatGPT Edu](https://openai.com/chatgpt/education/) (verified 2026-05-13)
+- [Gemini for Education](https://edu.google.com/intl/ALL_us/ai/gemini-for-education/) (verified 2026-05-13)
+- [NotebookLM](https://notebooklm.google/) (verified 2026-05-13)
+- [Claude pricing](https://claude.com/pricing) (verified 2026-05-13)
+- [Claude model overview](https://platform.claude.com/docs/en/about-claude/models/overview) (verified 2026-05-13)

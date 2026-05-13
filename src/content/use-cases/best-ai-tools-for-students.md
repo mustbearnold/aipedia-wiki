@@ -3,7 +3,7 @@ type: use-case
 slug: best-ai-tools-for-students
 title: "Best AI Tools for Students (May 2026)"
 seo_title: "Best AI Tools for Students: Study, Research, Writing & Coding (May 2026)"
-meta_description: "Updated May 9, 2026: ChatGPT is the best all-purpose study assistant, NotebookLM is best for course sources, Perplexity for cited research, Claude for writing review, and Cursor for coding students."
+meta_description: "Updated May 13, 2026: ChatGPT is the best all-purpose study assistant, NotebookLM is best for course sources, Perplexity for cited research, Claude for writing review, and Cursor for coding students."
 description: "A current buyer guide to AI tools for students, covering study help, source-grounded notes, cited research, essay feedback, coding assignments, and academic integrity risks."
 tools_mentioned: ["chatgpt", "notebooklm", "perplexity", "claude", "cursor", "gemini", "semantic-scholar"]
 guide_picks:
@@ -32,14 +32,14 @@ guide_picks:
       - label: "Perplexity Enterprise"
         url: "https://www.perplexity.ai/enterprise"
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-09
-last_verified: 2026-05-09
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 ---
 
 # Best AI Tools for Students (May 2026)
 
-AiPedia verified this guide on 2026-05-09 against current official OpenAI, Google NotebookLM, Perplexity, Anthropic, Cursor, Google AI, and Semantic Scholar sources. Rankings are editorial. AiPedia may earn affiliate revenue from some outbound links, but student safety and academic integrity come first.
+AiPedia verified this guide on 2026-05-13 against current official OpenAI, Google NotebookLM, Perplexity, Anthropic, Cursor, Google AI, and Semantic Scholar sources. Rankings are editorial. AiPedia may earn affiliate revenue from some outbound links, but student safety and academic integrity come first.
 
 ## Quick Verdict
 
@@ -140,10 +140,10 @@ Cursor is the best editor-based AI tool for coding students, but only if they us
 
 ## Sources
 
-- [ChatGPT Plus help](https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus) - plan reference, verified 2026-05-09.
-- [NotebookLM](https://notebooklm.google/) - source-grounded notebook reference, verified 2026-05-09.
-- [Perplexity Enterprise](https://www.perplexity.ai/enterprise) - research/search positioning and team plan reference, verified 2026-05-09.
-- [Anthropic pricing](https://www.anthropic.com/pricing) - Claude plan/API pricing reference, verified 2026-05-09.
-- [Cursor pricing](https://cursor.com/pricing) - Cursor plan reference, verified 2026-05-09.
-- [Google AI subscriptions](https://one.google.com/about/google-ai-plans/) - Google AI plan reference, verified 2026-05-09.
-- [Semantic Scholar](https://www.semanticscholar.org/) - free academic search reference, verified 2026-05-09.
+- [ChatGPT Plus help](https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus) - plan reference, verified 2026-05-13.
+- [NotebookLM](https://notebooklm.google/) - source-grounded notebook reference, verified 2026-05-13.
+- [Perplexity Enterprise](https://www.perplexity.ai/enterprise) - research/search positioning and team plan reference, verified 2026-05-13.
+- [Anthropic pricing](https://www.anthropic.com/pricing) - Claude plan/API pricing reference, verified 2026-05-13.
+- [Cursor pricing](https://cursor.com/pricing) - Cursor plan reference, verified 2026-05-13.
+- [Google AI subscriptions](https://one.google.com/about/google-ai-plans/) - Google AI plan reference, verified 2026-05-13.
+- [Semantic Scholar](https://www.semanticscholar.org/) - free academic search reference, verified 2026-05-13.

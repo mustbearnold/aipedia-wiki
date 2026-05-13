@@ -3,7 +3,7 @@ type: use-case
 slug: elevenlabs-alternatives
 title: "Best ElevenLabs Alternatives (May 2026)"
 seo_title: "Best ElevenLabs Alternatives in May 2026: Cartesia, Fish Audio, WellSaid"
-meta_description: "As of May 9, 2026, Cartesia, Fish Audio, WellSaid, and Voxtral are the ElevenLabs alternatives worth comparing for real-time agents, multilingual cloning, narration, and open-weight TTS."
+meta_description: "As of May 13, 2026, Cartesia, Fish Audio, WellSaid, and Voxtral are the ElevenLabs alternatives worth comparing for real-time agents, multilingual cloning, narration, and open-weight TTS."
 description: "Current buyer guide to the best ElevenLabs alternatives for real-time voice agents, multilingual cloning, broadcast narration, and open-weight text-to-speech."
 tools_mentioned: [cartesia, fish-audio, wellsaid, voxtral, elevenlabs]
 guide_picks:
@@ -34,14 +34,14 @@ guide_picks:
       - label: "WellSaid pricing"
         url: "https://www.wellsaid.io/ai-voice-pricing"
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-09
-last_verified: 2026-05-09
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 ---
 
 # Best ElevenLabs Alternatives (May 2026)
 
-ElevenLabs is still one of the best default AI voice platforms, but it is no longer the only serious buyer path. As of 2026-05-09, the strongest alternatives are [Cartesia](/tools/cartesia/) for real-time voice agents, [Fish Audio](/tools/fish-audio/) for usage-based API value and multilingual TTS, [WellSaid](/tools/wellsaid/) for polished narration teams, and [Voxtral](/tools/voxtral/) for open-weight TTS experimentation.
+ElevenLabs is still one of the best default AI voice platforms, but it is no longer the only serious buyer path. As of 2026-05-13, the strongest alternatives are [Cartesia](/tools/cartesia/) for real-time voice agents, [Fish Audio](/tools/fish-audio/) for usage-based API value and multilingual TTS, [WellSaid](/tools/wellsaid/) for polished narration teams, and [Voxtral](/tools/voxtral/) for open-weight TTS experimentation.
 
 AiPedia may earn a commission from some links on this page. Affiliate availability does not change rankings, and commercial links are disclosed near CTAs.
 
@@ -67,7 +67,7 @@ AiPedia may earn a commission from some links on this page. Affiliate availabili
 
 ## At A Glance
 
-| Rank | Tool | Best for | Current price signal verified May 9, 2026 | Watch-out |
+| Rank | Tool | Best for | Current price signal verified May 13, 2026 | Watch-out |
 |---|---|---|---:|---|
 | 1 | [Cartesia](/tools/cartesia/) | Real-time voice agents | Public pricing page, free testing path, paid plans | Built for voice infrastructure, not just creator narration |
 | 2 | [Fish Audio](/tools/fish-audio/) | Usage-based API value | `s2-pro` and `s1` TTS at $15/M UTF-8 bytes | Less polished as a non-technical creator suite |
@@ -148,7 +148,7 @@ Avoid Voxtral if:
 
 ## How We Chose
 
-This guide was re-verified on 2026-05-09 against official vendor docs and pricing pages for ElevenLabs, Cartesia, Fish Audio, WellSaid, and Mistral Voxtral. AiPedia ranks alternatives by buyer job: real-time agents, API economics, narration workflow, and open-weight control. Unsupported old claims about minute-based Voxtral pricing, fixed ElevenLabs character quotas, and static April plan prices were removed or reframed around current public pricing language.
+This guide was re-verified on 2026-05-13 against official vendor docs and pricing pages for ElevenLabs, Cartesia, Fish Audio, WellSaid, and Mistral Voxtral. AiPedia ranks alternatives by buyer job: real-time agents, API economics, narration workflow, and open-weight control. Unsupported old claims about minute-based Voxtral pricing, fixed ElevenLabs character quotas, and static April plan prices were removed or reframed around current public pricing language.
 
 ## FAQ
 

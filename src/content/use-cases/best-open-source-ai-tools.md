@@ -38,8 +38,8 @@ guide_picks:
       - label: "Open WebUI GitHub"
         url: "https://github.com/open-webui/open-webui"
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-09
-last_verified: 2026-05-09
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 ---
 
@@ -47,7 +47,7 @@ update_frequency: monthly
 
 Open source AI is not one product category. In practice, buyers are choosing between an open-model runtime, a desktop local-AI app, a self-hosted team interface, an open-weight language model, an image model, a speech model, or a hosted developer platform.
 
-Verified May 9, 2026 against current official Ollama, LM Studio, Open WebUI, Meta Llama, Mistral, DeepSeek, Black Forest Labs/Hugging Face, and OpenAI Whisper sources. AiPedia may earn from some tool links, but rankings stay editorial and are based on buyer fit, not commission.
+Verified May 13, 2026 against current official Ollama, LM Studio, Open WebUI, Meta Llama, Mistral, DeepSeek, Black Forest Labs/Hugging Face, and OpenAI Whisper sources. AiPedia may earn from some tool links, but rankings stay editorial and are based on buyer fit, not commission.
 
 ## Quick Verdict
 
@@ -124,7 +124,7 @@ Use Open WebUI when you want a controllable internal AI interface, but only if y
 
 ### 5. DeepSeek
 
-[DeepSeek](/tools/deepseek/) belongs on the shortlist for open-model and cost-sensitive developer workflows, but it should not be presented with unsupported benchmark victory claims. DeepSeek's transparency page lists released models and model cards; as of May 9, 2026, it shows DeepSeek-V4 as a newer release than V3.2.
+[DeepSeek](/tools/deepseek/) belongs on the shortlist for open-model and cost-sensitive developer workflows, but it should not be presented with unsupported benchmark victory claims. DeepSeek's transparency page lists released models and model cards; as of May 13, 2026, it shows DeepSeek-V4 as a newer release than V3.2.
 
 **Best for:** developers evaluating low-cost/open model options, coding tasks, and self-hosted or API-based experiments.
 
@@ -153,14 +153,14 @@ Use Open WebUI when you want a controllable internal AI interface, but only if y
 
 ## Sources
 
-- [Ollama](https://ollama.com/) (verified 2026-05-09)
-- [Ollama GitHub](https://github.com/ollama/ollama) (verified 2026-05-09)
-- [LM Studio](https://lmstudio.ai/) (verified 2026-05-09)
-- [LM Studio docs](https://lmstudio.ai/docs) (verified 2026-05-09)
-- [Open WebUI](https://openwebui.com/) (verified 2026-05-09)
-- [Open WebUI GitHub](https://github.com/open-webui/open-webui) (verified 2026-05-09)
-- [Meta Llama on Hugging Face](https://huggingface.co/meta-llama) (verified 2026-05-09)
-- [Mistral 3 announcement](https://mistral.ai/news/mistral-3) (verified 2026-05-09)
-- [DeepSeek Transparency Center](https://www.deepseek.com/en/transparency/) (verified 2026-05-09)
-- [FLUX.1 dev on Hugging Face](https://huggingface.co/black-forest-labs/FLUX.1-dev) (verified 2026-05-09)
-- [OpenAI Whisper GitHub](https://github.com/openai/whisper) (verified 2026-05-09)
+- [Ollama](https://ollama.com/) (verified 2026-05-13)
+- [Ollama GitHub](https://github.com/ollama/ollama) (verified 2026-05-13)
+- [LM Studio](https://lmstudio.ai/) (verified 2026-05-13)
+- [LM Studio docs](https://lmstudio.ai/docs) (verified 2026-05-13)
+- [Open WebUI](https://openwebui.com/) (verified 2026-05-13)
+- [Open WebUI GitHub](https://github.com/open-webui/open-webui) (verified 2026-05-13)
+- [Meta Llama on Hugging Face](https://huggingface.co/meta-llama) (verified 2026-05-13)
+- [Mistral 3 announcement](https://mistral.ai/news/mistral-3) (verified 2026-05-13)
+- [DeepSeek Transparency Center](https://www.deepseek.com/en/transparency/) (verified 2026-05-13)
+- [FLUX.1 dev on Hugging Face](https://huggingface.co/black-forest-labs/FLUX.1-dev) (verified 2026-05-13)
+- [OpenAI Whisper GitHub](https://github.com/openai/whisper) (verified 2026-05-13)

@@ -3,7 +3,7 @@ type: use-case
 slug: perplexity-alternatives
 title: "Best Perplexity Alternatives (May 2026)"
 seo_title: "Best Perplexity Alternatives: ChatGPT Search, Google AI Mode, NotebookLM, Claude, Kagi and Exa"
-meta_description: "Updated May 9, 2026: compare the best Perplexity alternatives for cited web answers, Google-native research, private search, owned documents, deep synthesis, and search APIs."
+meta_description: "Updated May 13, 2026: compare the best Perplexity alternatives for cited web answers, Google-native research, private search, owned documents, deep synthesis, and search APIs."
 description: "A current buyer guide to Perplexity alternatives, separating cited answer engines, Google AI Search, ChatGPT Search, NotebookLM, Claude, Kagi, Exa, and developer search APIs by real research workflow."
 tools_mentioned: ["perplexity", "chatgpt", "gemini", "notebooklm", "claude", "kagi", "exa", "you-com", "grok"]
 guide_picks:
@@ -33,8 +33,8 @@ guide_picks:
       - label: "NotebookLM upgrade docs"
         url: "https://support.google.com/notebooklm/answer/16213268"
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-09
-last_verified: 2026-05-09
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 ---
 
@@ -42,7 +42,7 @@ update_frequency: monthly
 
 Perplexity is still one of the cleanest AI answer engines when the job is **ask a web question, get citations, refine the search, and keep moving**. But it is no longer the only serious option. The best alternative depends on whether you want a general AI workspace, Google Search integration, private search, owned-document analysis, enterprise research, or a developer search API.
 
-This guide was refreshed on **May 9, 2026** against current official sources from Perplexity, OpenAI, Google, Anthropic, Kagi, Exa, You.com, and X/xAI surfaces where relevant.
+This guide was refreshed on **May 13, 2026** against current official sources from Perplexity, OpenAI, Google, Anthropic, Kagi, Exa, You.com, and X/xAI surfaces where relevant. Recent context worth pricing in: ChatGPT Search continues to expand inside GPT-5.5, Google AI Mode and AI Overviews have shipped further updates, and NotebookLM Ultra has rolled out higher source and audio/video overview limits.
 
 ## Quick Verdict
 
@@ -91,7 +91,7 @@ Avoid it when:
 
 ### Gemini and Google AI Mode - Best Google-Native Alternative
 
-Use [Gemini](/tools/gemini/) and Google AI Search when the buyer already trusts Google Search and Workspace as the research base. Google's May 6, 2026 Search update says AI Mode and AI Overviews are getting new ways to find relevant websites, deep insights, and original content from across the web. Google AI Plans also bundle higher access to Gemini, Deep Research, AI Mode features, Workspace help, NotebookLM upgrades, and Google storage depending on tier.
+Use [Gemini](/tools/gemini/) and Google AI Search when the buyer already trusts Google Search and Workspace as the research base. Google's recent Search updates say AI Mode and AI Overviews are getting new ways to find relevant websites, deep insights, and original content from across the web. Google AI Plans also bundle higher access to Gemini, Deep Research, AI Mode features, Workspace help, NotebookLM upgrades, and Google storage depending on tier.
 
 Choose it when:
 
@@ -181,6 +181,13 @@ Do not move sensitive internal research into a consumer tool without checking pr
 
 Do not compare only monthly sticker prices. Research tools hide value and cost in source limits, file limits, model access, browser agents, search depth, API request fees, and enterprise governance.
 
+## What's New Since the Last Refresh
+
+- **NotebookLM Ultra** raised limits on sources, audio overviews, video overviews, reports, flashcards, quizzes, mind maps, and Deep Research for owned-source research workflows.
+- **Google AI Mode and AI Overviews** continued shipping incremental updates around web exploration, multimodal answers, and Workspace integration.
+- **Exa** kept its simpler 2026 pricing structure with consolidated AI search, SERP API, crawler, and deep research API surfaces.
+- **Perplexity** still leads on the cleanest cited-answer interface for open-web questions; the alternative case is strongest when the buyer wants more than that one job.
+
 ## FAQ
 
 **What is the best free Perplexity alternative?**
@@ -200,19 +207,19 @@ Exa is the better search/retrieval API when you want to build your own answer la
 
 ## Sources
 
-- [Perplexity Enterprise](https://www.perplexity.ai/enterprise) (verified 2026-05-09)
-- [Perplexity Enterprise pricing FAQ](https://www.perplexity.ai/help-center/en/articles/10352986-enterprise-pro-pricing-and-billing-frequently-asked-questions) (verified 2026-05-09)
-- [Perplexity API pricing](https://docs.perplexity.ai/docs/getting-started/pricing) (verified 2026-05-09)
-- [Perplexity Pro and Max help collection](https://www.perplexity.ai/help-center/en/collections/8935108-perplexity-pro-and-max) (verified 2026-05-09)
-- [ChatGPT Search Help](https://help.openai.com/en/articles/9237897-chatgpt-search) (verified 2026-05-09)
-- [ChatGPT pricing](https://chatgpt.com/pricing) (verified 2026-05-09)
-- [Google AI Mode and AI Overviews updates](https://blog.google/products-and-platforms/products/search/explore-web-generative-ai-search/) (verified 2026-05-09)
-- [Google AI Plans](https://one.google.com/about/google-ai-plans/) (verified 2026-05-09)
-- [NotebookLM upgrade docs](https://support.google.com/notebooklm/answer/16213268) (verified 2026-05-09)
-- [Claude Max plan help](https://support.claude.com/en/articles/11049741-what-is-the-max-plan) (verified 2026-05-09)
-- [Kagi Ultimate plan docs](https://help.kagi.com/kagi/plans/ultimate-plan.html) (verified 2026-05-09)
-- [Kagi Team plan docs](https://help.kagi.com/kagi/plans/team-plan.html) (verified 2026-05-09)
-- [Exa pricing update](https://exa.ai/docs/changelog/pricing-update) (verified 2026-05-09)
-- [Exa pricing](https://exa.ai/pricing) (verified 2026-05-09)
-- [You.com plans](https://home.you.com/plans) (verified 2026-05-09)
-- [X Premium+ pricing](https://help.x.com/en/premium-plus-price-update) (verified 2026-05-09)
+- [Perplexity Enterprise](https://www.perplexity.ai/enterprise) (verified 2026-05-13)
+- [Perplexity Enterprise pricing FAQ](https://www.perplexity.ai/help-center/en/articles/10352986-enterprise-pro-pricing-and-billing-frequently-asked-questions) (verified 2026-05-13)
+- [Perplexity API pricing](https://docs.perplexity.ai/docs/getting-started/pricing) (verified 2026-05-13)
+- [Perplexity Pro and Max help collection](https://www.perplexity.ai/help-center/en/collections/8935108-perplexity-pro-and-max) (verified 2026-05-13)
+- [ChatGPT Search Help](https://help.openai.com/en/articles/9237897-chatgpt-search) (verified 2026-05-13)
+- [ChatGPT pricing](https://chatgpt.com/pricing) (verified 2026-05-13)
+- [Google AI Mode and AI Overviews updates](https://blog.google/products-and-platforms/products/search/explore-web-generative-ai-search/) (verified 2026-05-13)
+- [Google AI Plans](https://one.google.com/about/google-ai-plans/) (verified 2026-05-13)
+- [NotebookLM upgrade docs](https://support.google.com/notebooklm/answer/16213268) (verified 2026-05-13)
+- [Claude Max plan help](https://support.claude.com/en/articles/11049741-what-is-the-max-plan) (verified 2026-05-13)
+- [Kagi Ultimate plan docs](https://help.kagi.com/kagi/plans/ultimate-plan.html) (verified 2026-05-13)
+- [Kagi Team plan docs](https://help.kagi.com/kagi/plans/team-plan.html) (verified 2026-05-13)
+- [Exa pricing update](https://exa.ai/docs/changelog/pricing-update) (verified 2026-05-13)
+- [Exa pricing](https://exa.ai/pricing) (verified 2026-05-13)
+- [You.com plans](https://home.you.com/plans) (verified 2026-05-13)
+- [X Premium+ pricing](https://help.x.com/en/premium-plus-price-update) (verified 2026-05-13)

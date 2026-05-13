@@ -3,7 +3,7 @@ type: use-case
 slug: best-pay-as-you-go-ai-tools
 title: "Best Pay-As-You-Go AI Tools and APIs (May 2026)"
 seo_title: "Best Pay-As-You-Go AI Tools and APIs: OpenAI, Claude, Gemini, OpenRouter, Replicate, fal and Deepgram"
-meta_description: "Updated May 9, 2026: compare true pay-as-you-go AI APIs and usage-based tools across LLMs, model routing, media generation, speech, voice, and budget controls."
+meta_description: "Updated May 13, 2026: compare true pay-as-you-go AI APIs and usage-based tools across LLMs, model routing, media generation, speech, voice, and budget controls."
 description: "A current buyer guide to true pay-as-you-go AI tools, separating metered APIs from flat subscriptions and showing which platform to use for text, coding, media, voice, and production workloads."
 tools_mentioned: ["openrouter", "chatgpt", "claude", "gemini", "mistral-ai", "groq", "replicate", "fal-ai", "deepgram", "elevenlabs", "fish-audio"]
 guide_picks:
@@ -36,8 +36,8 @@ guide_picks:
       - label: "fal Model API pricing"
         url: "https://fal.ai/docs/documentation/model-apis/pricing"
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-09
-last_verified: 2026-05-09
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 ---
 
@@ -45,7 +45,7 @@ update_frequency: monthly
 
 Pay-as-you-go AI is not the same thing as a $20/month chatbot subscription. A subscription is usually best when one person wants predictable daily access. True pay-as-you-go is better when usage is spiky, programmatic, embedded in a product, or different every month.
 
-This guide was refreshed on **May 9, 2026** against current official pricing and documentation from OpenAI, Anthropic, Google, OpenRouter, Mistral, Replicate, fal, Deepgram, Groq, ElevenLabs, and Fish Audio.
+This guide was refreshed on **May 13, 2026** against current official pricing and documentation from OpenAI, Anthropic, Google, OpenRouter, Mistral, Replicate, fal, Deepgram, Groq, ElevenLabs, and Fish Audio.
 
 ## Quick Verdict
 
@@ -246,15 +246,15 @@ Track requests, input tokens, output tokens, media seconds, retries, cache hits,
 
 ## Sources
 
-- [OpenAI API pricing](https://openai.com/api/pricing/) (verified 2026-05-09)
-- [Claude API pricing](https://platform.claude.com/docs/en/about-claude/pricing) (verified 2026-05-09)
-- [Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing) (verified 2026-05-09)
-- [OpenRouter pricing](https://openrouter.ai/pricing) (verified 2026-05-09)
-- [Mistral AI pricing](https://mistral.ai/pricing) (verified 2026-05-09)
-- [Mistral AI Studio pricing docs](https://docs.mistral.ai/deployment/ai-studio/pricing/) (verified 2026-05-09)
-- [Groq pricing](https://groq.com/pricing) (verified 2026-05-09)
-- [Replicate pricing](https://replicate.com/pricing) (verified 2026-05-09)
-- [fal Model API pricing docs](https://fal.ai/docs/documentation/model-apis/pricing) (verified 2026-05-09)
-- [Deepgram pricing](https://deepgram.com/pricing) (verified 2026-05-09)
-- [ElevenLabs API pricing](https://elevenlabs.io/pricing/api) (verified 2026-05-09)
-- [Fish Audio pricing and rate limits](https://docs.fish.audio/developer-platform/models-pricing/pricing-and-rate-limits) (verified 2026-05-09)
+- [OpenAI API pricing](https://openai.com/api/pricing/) (verified 2026-05-13)
+- [Claude API pricing](https://platform.claude.com/docs/en/about-claude/pricing) (verified 2026-05-13)
+- [Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing) (verified 2026-05-13)
+- [OpenRouter pricing](https://openrouter.ai/pricing) (verified 2026-05-13)
+- [Mistral AI pricing](https://mistral.ai/pricing) (verified 2026-05-13)
+- [Mistral AI Studio pricing docs](https://docs.mistral.ai/deployment/ai-studio/pricing/) (verified 2026-05-13)
+- [Groq pricing](https://groq.com/pricing) (verified 2026-05-13)
+- [Replicate pricing](https://replicate.com/pricing) (verified 2026-05-13)
+- [fal Model API pricing docs](https://fal.ai/docs/documentation/model-apis/pricing) (verified 2026-05-13)
+- [Deepgram pricing](https://deepgram.com/pricing) (verified 2026-05-13)
+- [ElevenLabs API pricing](https://elevenlabs.io/pricing/api) (verified 2026-05-13)
+- [Fish Audio pricing and rate limits](https://docs.fish.audio/developer-platform/models-pricing/pricing-and-rate-limits) (verified 2026-05-13)

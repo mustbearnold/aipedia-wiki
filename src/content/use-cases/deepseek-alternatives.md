@@ -32,8 +32,8 @@ guide_picks:
       - label: "Cursor pricing"
         url: "https://cursor.com/pricing"
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-09
-last_verified: 2026-05-09
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 ---
 
@@ -41,7 +41,7 @@ update_frequency: monthly
 
 DeepSeek is still important for cost-sensitive and open-model-aware buyers, but the right alternative depends on why you are switching. Some users want a better consumer app. Some want stronger writing and document reasoning. Some want an IDE. Some want Google integration. Some want open-model control without relying on one lab.
 
-Verified May 9, 2026 against DeepSeek's current transparency page and current official ChatGPT, Claude, Gemini, Cursor, Mistral, Grok, and Perplexity sources. DeepSeek's own transparency page lists DeepSeek-V4 with an April 24, 2026 release date and DeepSeek-V3.2 with a December 1, 2025 release date, so this guide avoids stale V3.2-only framing. AiPedia may earn from some tool links, but rankings stay editorial and are based on buyer fit, not commission.
+Verified May 13, 2026 against DeepSeek's current transparency page and current official ChatGPT, Claude, Gemini, Cursor, Mistral, Grok, and Perplexity sources. DeepSeek's transparency page lists DeepSeek-V4 as the April 24, 2026 release, with V4-Flash and V4-Pro now in production routing alongside the V3.2 lineage from December 1, 2025. This guide avoids stale V3.2-only framing. AiPedia may earn from some tool links, but rankings stay editorial and are based on buyer fit, not commission.
 
 ## Quick Verdict
 
@@ -130,11 +130,11 @@ For local and open-weight buyers, the better next page is [Best Open Source AI T
 
 ## Sources
 
-- [DeepSeek Transparency Center](https://www.deepseek.com/en/transparency/) (verified 2026-05-09)
-- [ChatGPT pricing](https://chatgpt.com/pricing/) (verified 2026-05-09)
-- [Claude pricing](https://claude.com/pricing) (verified 2026-05-09)
-- [Gemini subscriptions](https://gemini.google/subscriptions/) (verified 2026-05-09)
-- [Cursor pricing](https://cursor.com/pricing) (verified 2026-05-09)
-- [Mistral Le Chat](https://mistral.ai/products/le-chat) (verified 2026-05-09)
-- [Grok by xAI](https://x.ai/grok) (verified 2026-05-09)
-- [Perplexity Pro](https://www.perplexity.ai/pro) (verified 2026-05-09)
+- [DeepSeek Transparency Center](https://www.deepseek.com/en/transparency/) (verified 2026-05-13)
+- [ChatGPT pricing](https://chatgpt.com/pricing/) (verified 2026-05-13)
+- [Claude pricing](https://claude.com/pricing) (verified 2026-05-13)
+- [Gemini subscriptions](https://gemini.google/subscriptions/) (verified 2026-05-13)
+- [Cursor pricing](https://cursor.com/pricing) (verified 2026-05-13)
+- [Mistral Le Chat](https://mistral.ai/products/le-chat) (verified 2026-05-13)
+- [Grok by xAI](https://x.ai/grok) (verified 2026-05-13)
+- [Perplexity Pro](https://www.perplexity.ai/pro) (verified 2026-05-13)

@@ -34,14 +34,14 @@ guide_picks:
       - label: "Claude Max plan"
         url: "https://www.claude.com/pricing/max"
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-09
-last_verified: 2026-05-09
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 ---
 
 # Best GitHub Copilot Alternatives (May 2026)
 
-AiPedia verified this guide on 2026-05-09 against current official vendor pages and GitHub billing docs. Rankings are editorial. AiPedia may earn affiliate revenue from some tool links, but paid relationships do not determine the winner.
+AiPedia verified this guide on 2026-05-13 against current official vendor pages and GitHub billing docs. Rankings are editorial. AiPedia may earn affiliate revenue from some tool links, but paid relationships do not determine the winner.
 
 ## Quick Verdict
 
@@ -73,6 +73,8 @@ GitHub Copilot is still one of the safest default AI coding assistants for devel
 GitHub's official Copilot billing docs say Copilot moves to usage-based billing with GitHub AI Credits on June 1, 2026. That does not make Copilot bad. It changes the buying question.
 
 If your team mostly uses inline completions and lightweight chat, Copilot can still be excellent value. If your team is starting long agentic coding sessions, code review, large context work, or expensive model usage, you should compare alternatives by billing unit, governance, and real workload cost rather than only plan sticker price.
+
+Two recent shifts also reshape the shortlist. The legacy [Codeium](/tools/codeium/) brand was retired in early 2026; codeium.com now redirects users to [Windsurf](/tools/windsurf/), so Windsurf is the continuity path for former Codeium installs. Separately, xAI's Grok Code Fast 1 has been deprecated, so buyers evaluating Grok for repo work should default to the current Grok coding model and confirm availability inside Cursor, Windsurf, or direct xAI access before standardizing on it.
 
 ## Top Alternatives
 
@@ -156,10 +158,10 @@ Cursor, Windsurf, and GitHub Copilot are the most direct team IDE choices. Claud
 
 ## Sources
 
-- [GitHub Copilot plans](https://github.com/features/copilot/plans) (verified 2026-05-09)
-- [GitHub Copilot billing docs](https://docs.github.com/en/copilot/concepts/billing) (verified 2026-05-09)
-- [Cursor pricing](https://cursor.com/pricing) (verified 2026-05-09)
-- [Claude Code docs](https://code.claude.com/docs) (verified 2026-05-09)
-- [Claude Max plan](https://www.claude.com/pricing/max) (verified 2026-05-09)
-- [Windsurf plans and usage](https://docs.windsurf.com/windsurf/accounts/usage) (verified 2026-05-09)
-- [Gemini Code Assist](https://cloud.google.com/products/gemini/code-assist) (verified 2026-05-09)
+- [GitHub Copilot plans](https://github.com/features/copilot/plans) (verified 2026-05-13)
+- [GitHub Copilot billing docs](https://docs.github.com/en/copilot/concepts/billing) (verified 2026-05-13)
+- [Cursor pricing](https://cursor.com/pricing) (verified 2026-05-13)
+- [Claude Code docs](https://code.claude.com/docs) (verified 2026-05-13)
+- [Claude Max plan](https://www.claude.com/pricing/max) (verified 2026-05-13)
+- [Windsurf plans and usage](https://docs.windsurf.com/windsurf/accounts/usage) (verified 2026-05-13)
+- [Gemini Code Assist](https://cloud.google.com/products/gemini/code-assist) (verified 2026-05-13)

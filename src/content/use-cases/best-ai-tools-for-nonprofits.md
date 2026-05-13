@@ -7,15 +7,15 @@ meta_description: "This old nonprofit AI tools guide is archived while AiPedia r
 description: "Archived merge page for an old nonprofit AI tools guide that did not meet AiPedia's current source-backed buyer-guide standard."
 tools_mentioned: [chatgpt, gemini, claude]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-09
-last_verified: 2026-05-09
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 noindex: true
 ---
 
 # Best AI Tools for Nonprofits (Archived)
 
-This guide is archived and noindexed as of 2026-05-09.
+This guide is archived and noindexed as of 2026-05-13.
 
 AiPedia removed the previous version from the active index because it was a thin generic chatbot list with stale April 2026 claims, weak sources, and broken markdown-style tool links. Nonprofit buyers need more than a recycled ChatGPT-versus-Claude page. A trustworthy nonprofit guide needs current source-backed coverage of grant writing, donor communications, volunteer coordination, board reporting, privacy, accessibility, discounts, and budget constraints.
 

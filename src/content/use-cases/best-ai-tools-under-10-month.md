@@ -7,15 +7,15 @@ meta_description: "Archived budget AI tools page. AiPedia is folding this thin u
 description: "Archived budget AI tools page that now points readers to the stronger free and under-$20 AI tools guides."
 tools_mentioned: [chatgpt, claude, gemini, perplexity, deepseek]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-09
-last_verified: 2026-05-09
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 noindex: true
 ---
 
 # Best AI Tools Under $10/Month (Archived)
 
-This page is intentionally noindexed as of 2026-05-09. The old version overlapped with AiPedia's stronger budget guides and carried stale April 2026 model and pricing claims that were not good enough for a buyer decision page.
+This page is intentionally noindexed as of 2026-05-13. The old version overlapped with AiPedia's stronger budget guides and carried stale April 2026 model and pricing claims that were not good enough for a buyer decision page.
 
 Use these pages instead:
 

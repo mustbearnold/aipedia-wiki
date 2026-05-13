@@ -7,8 +7,8 @@ meta_description: "Best Runway alternatives in May 2026: Seedance 2.0 for raw mo
 description: "A source-backed buyer guide to choosing Runway alternatives for frontier video models, image-to-video, Google/API workflows, creator pipelines, social clips, and avatar-video edge cases."
 tools_mentioned: ["seedance", "kling", "veo", "luma", "pika", "hailuo", "heygen", "synthesia"]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-09
-last_verified: 2026-05-09
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 guide_picks:
   best_overall:
@@ -47,7 +47,7 @@ guide_picks:
 
 Runway is still a serious AI video workspace. The mistake is treating "Runway alternative" as one job. In May 2026, you might be replacing a **model**, an **editor**, an **API route**, a **creator workflow**, or an **avatar-video system**. Those are different buying decisions.
 
-Verified May 9, 2026 against official Runway, Google, ByteDance Seed, Kuaishou, and Luma sources. AiPedia may earn from some tool links, but ranking order is editorial.
+Verified May 13, 2026 against official Runway, Google, ByteDance Seed, Kuaishou, MiniMax (Hailuo), and Luma sources. AiPedia may earn from some tool links, but ranking order is editorial. **Current model versions as of May 13:** Seedance 2.0, Kling 3.0 (with Video 3.0 Omni), Veo 3.1, and Hailuo 2.3 (plus Hailuo 2.3 Fast).
 
 ## Quick Verdict
 
@@ -88,11 +88,11 @@ Use it for Google-centered production experiments, native-audio video tests, ver
 
 Use Luma when you want a broader creative operating layer around campaigns, product visuals, social ads, storyboards, and localization. Still benchmark the underlying model output against Runway, Seedance, Kling, and Veo before moving a client workflow.
 
-### 5. Pika and Hailuo
+### 5. Pika and Hailuo 2.3
 
-[Pika](/tools/pika/) and [Hailuo](/tools/hailuo/) are useful for fast clips, playful effects, vertical social formats, and prompt exploration. They fit creators who need lots of quick attempts more than studio-grade control.
+[Pika](/tools/pika/) and [Hailuo 2.3](/tools/hailuo/) are useful for fast clips, playful effects, vertical social formats, and prompt exploration. They fit creators who need lots of quick attempts more than studio-grade control. MiniMax's Hailuo 2.3 line includes a standard model and a Hailuo 2.3 Fast variant, with MiniMax video API packages available for developers running higher volume.
 
-Use them for idea generation, thumbnails-in-motion, short social hooks, and mood tests. Move to Runway, Veo, Kling, or a production editor when the video needs brand-safe consistency, approvals, or repeatable output.
+Use them for idea generation, thumbnails-in-motion, short social hooks, and mood tests. Move to Runway, Veo 3.1, Kling 3.0, or Seedance 2.0 when the video needs brand-safe consistency, approvals, or repeatable output.
 
 ## How To Choose
 
@@ -148,15 +148,18 @@ Free tiers and credits change often, so check current vendor pages before planni
 For longer finished videos, generate short clips and assemble them in a real editor. Single-prompt long video is still hard to control.
 
 **How often is this list updated?**
-Verified monthly, with extra checks when frontier video models change. This page was last verified on 2026-05-09.
+Verified monthly, with extra checks when frontier video models change. This page was last verified on 2026-05-13.
+
+**Which versions are current?**
+Seedance 2.0 (ByteDance Seed), Kling 3.0 with Video 3.0 Omni (Kuaishou), Veo 3.1 (Google), and Hailuo 2.3 with a 2.3 Fast variant (MiniMax).
 
 ## Sources
 
-- [Runway Gen-4.5 help center](https://help.runwayml.com/hc/en-us/articles/46974685288467-Creating-with-Gen-4-5) (verified 2026-05-09)
-- [Google: Introducing Veo 3.1 and advanced capabilities in Flow](https://blog.google/innovation-and-ai/products/veo-updates-flow/) (verified 2026-05-09)
-- [ByteDance Seed: Seedance 2.0 official launch](https://seed.bytedance.com/blog/seedance-2-0-official-launch) (verified 2026-05-09)
-- [Kuaishou: Kling AI 3.0 launch](https://ir.kuaishou.com/news-releases/news-release-details/kling-ai-launches-30-model-ushering-era-where-everyone-can-be/) (verified 2026-05-09)
-- [Luma product and pricing surface](https://lumalabs.ai/dream-machine) (verified 2026-05-09)
+- [Runway Gen-4.5 help center](https://help.runwayml.com/hc/en-us/articles/46974685288467-Creating-with-Gen-4-5) (verified 2026-05-13)
+- [Google: Introducing Veo 3.1 and advanced capabilities in Flow](https://blog.google/innovation-and-ai/products/veo-updates-flow/) (verified 2026-05-13)
+- [ByteDance Seed: Seedance 2.0 official launch](https://seed.bytedance.com/blog/seedance-2-0-official-launch) (verified 2026-05-13)
+- [Kuaishou: Kling AI 3.0 launch](https://ir.kuaishou.com/news-releases/news-release-details/kling-ai-launches-30-model-ushering-era-where-everyone-can-be/) (verified 2026-05-13)
+- [Luma product and pricing surface](https://lumalabs.ai/dream-machine) (verified 2026-05-13)
 - [Runway](/tools/runway/)
 - [Seedance 2.0](/tools/seedance/)
 - [Kling 3.0](/tools/kling/)

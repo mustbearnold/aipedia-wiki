@@ -3,7 +3,7 @@ type: use-case
 slug: best-ai-tools-for-designers
 title: "Best AI Tools for Designers (May 2026)"
 seo_title: "Best AI Tools for Designers: Figma, Canva, Midjourney, Firefly & Stitch (May 2026)"
-meta_description: "Best AI tools for designers in May 2026: Figma for product design, Canva for fast brand assets, Midjourney for visual ideation, Adobe Firefly for Adobe edits, and Google Stitch or v0 for UI prototypes."
+meta_description: "Best AI tools for designers updated May 13, 2026: Figma for product design, Canva for fast brand assets, Midjourney for visual ideation, Adobe Firefly for Adobe edits, and Google Stitch or v0 for UI prototypes."
 description: "A current buyer guide to AI tools for designers, covering product design, brand assets, social creative, image ideation, Adobe workflows, UI prototyping, app-builder workflows, pricing tradeoffs, and what to avoid."
 tools_mentioned: ["figma", "canva", "midjourney", "adobe-firefly", "google-stitch", "v0"]
 guide_picks:
@@ -32,14 +32,14 @@ guide_picks:
       - label: "Adobe Firefly plans"
         url: "https://www.adobe.com/products/firefly/plans"
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-09
-last_verified: 2026-05-09
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 ---
 
 # Best AI Tools for Designers (May 2026)
 
-AiPedia verified this guide on 2026-05-09 against current official product, pricing, and documentation pages. Rankings are editorial. AiPedia may earn affiliate revenue when a reader chooses a tool through a commercial link, but paid placement does not determine the winner.
+AiPedia verified this guide on 2026-05-13 against current official product, pricing, and documentation pages. Rankings are editorial. AiPedia may earn affiliate revenue when a reader chooses a tool through a commercial link, but paid placement does not determine the winner.
 
 ## Quick Verdict
 
@@ -168,10 +168,10 @@ Use Stitch when you want to explore UI ideas in an AI-native design canvas. Use 
 
 ## Sources
 
-- [Figma pricing](https://www.figma.com/pricing/) (verified 2026-05-09)
-- [Canva AI](https://www.canva.com/canva-ai/) (verified 2026-05-09)
-- [Midjourney plans](https://docs.midjourney.com/docs/plans) (verified 2026-05-09)
-- [Adobe Firefly plans](https://www.adobe.com/products/firefly/plans) (verified 2026-05-09)
-- [Google Stitch announcement](https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-ai-ui-design/) (verified 2026-05-09)
-- [v0 pricing](https://v0.app/pricing) (verified 2026-05-09)
-- [v0 docs](https://v0.app/docs) (verified 2026-05-09)
+- [Figma pricing](https://www.figma.com/pricing/) (verified 2026-05-13)
+- [Canva AI](https://www.canva.com/canva-ai/) (verified 2026-05-13)
+- [Midjourney plans](https://docs.midjourney.com/docs/plans) (verified 2026-05-13)
+- [Adobe Firefly plans](https://www.adobe.com/products/firefly/plans) (verified 2026-05-13)
+- [Google Stitch announcement](https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-ai-ui-design/) (verified 2026-05-13)
+- [v0 pricing](https://v0.app/pricing) (verified 2026-05-13)
+- [v0 docs](https://v0.app/docs) (verified 2026-05-13)

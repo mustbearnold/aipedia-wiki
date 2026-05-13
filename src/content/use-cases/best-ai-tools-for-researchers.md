@@ -3,7 +3,7 @@ type: use-case
 slug: best-ai-tools-for-researchers
 title: "Best AI Tools for Researchers (May 2026)"
 seo_title: "Best AI Tools for Researchers: Literature Review, Citations & Analysis (May 2026)"
-meta_description: "Updated May 9, 2026: Elicit is best for literature review workflows, Semantic Scholar for free academic search, Perplexity for cited web research, Claude for paper analysis, and Scite for citation context."
+meta_description: "Updated May 13, 2026: Elicit is best for literature review workflows, Semantic Scholar for free academic search, Perplexity for cited web research, Claude for paper analysis, and Scite for citation context."
 description: "A source-backed buyer guide to AI research tools for literature review, paper discovery, citation context, source-grounded notebooks, and research analysis."
 tools_mentioned: ["elicit", "semantic-scholar", "perplexity", "claude", "notebooklm", "scite", "consensus"]
 guide_picks:
@@ -32,14 +32,14 @@ guide_picks:
       - label: "Perplexity Enterprise Pro"
         url: "https://www.perplexity.ai/enterprise"
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-09
-last_verified: 2026-05-09
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 ---
 
 # Best AI Tools for Researchers (May 2026)
 
-AiPedia verified this guide on 2026-05-09 against current official Elicit, Semantic Scholar, Perplexity, Anthropic, Google NotebookLM, Scite, and Consensus sources. Rankings are editorial. AiPedia may earn affiliate revenue from some outbound links, but paid placement does not determine the winner.
+AiPedia verified this guide on 2026-05-13 against current official Elicit, Semantic Scholar, Perplexity, Anthropic, Google NotebookLM, Scite, and Consensus sources. Rankings are editorial. AiPedia may earn affiliate revenue from some outbound links, but paid placement does not determine the winner.
 
 ## Quick Verdict
 
@@ -144,10 +144,10 @@ NotebookLM is strongest when you want answers constrained to uploaded sources. E
 
 ## Sources
 
-- [Elicit pricing](https://elicit.com/pricing) - literature-review workflow and plan reference, verified 2026-05-09.
-- [Semantic Scholar](https://www.semanticscholar.org/) - academic search and citation graph reference, verified 2026-05-09.
-- [Perplexity Enterprise](https://www.perplexity.ai/enterprise) - research/search positioning and team plan reference, verified 2026-05-09.
-- [Anthropic pricing](https://www.anthropic.com/pricing) - Claude plan/API pricing reference, verified 2026-05-09.
-- [NotebookLM](https://notebooklm.google/) - source-grounded notebook reference, verified 2026-05-09.
-- [Scite](https://scite.ai/) - citation-context product reference, verified 2026-05-09.
-- [Consensus](https://consensus.app/) - academic Q&A product reference, verified 2026-05-09.
+- [Elicit pricing](https://elicit.com/pricing) - literature-review workflow and plan reference, verified 2026-05-13.
+- [Semantic Scholar](https://www.semanticscholar.org/) - academic search and citation graph reference, verified 2026-05-13.
+- [Perplexity Enterprise](https://www.perplexity.ai/enterprise) - research/search positioning and team plan reference, verified 2026-05-13.
+- [Anthropic pricing](https://www.anthropic.com/pricing) - Claude plan/API pricing reference, verified 2026-05-13.
+- [NotebookLM](https://notebooklm.google/) - source-grounded notebook reference, verified 2026-05-13.
+- [Scite](https://scite.ai/) - citation-context product reference, verified 2026-05-13.
+- [Consensus](https://consensus.app/) - academic Q&A product reference, verified 2026-05-13.

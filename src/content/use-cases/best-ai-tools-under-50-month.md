@@ -7,15 +7,15 @@ meta_description: "Archived budget AI tools page. AiPedia is folding this overla
 description: "Archived budget AI tools page that now points readers to stronger buyer guides by category, free plan, and first paid plan."
 tools_mentioned: [chatgpt, gemini, claude, cursor, midjourney]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-09
-last_verified: 2026-05-09
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 noindex: true
 ---
 
 # Best AI Tools Under $50/Month (Archived)
 
-This page is intentionally noindexed as of 2026-05-09. The old version was too broad, overlapped with stronger category and budget pages, and relied on stale April 2026 claims that did not meet AiPedia's current source-backed buyer standard.
+This page is intentionally noindexed as of 2026-05-13. The old version was too broad, overlapped with stronger category and budget pages, and relied on stale April 2026 claims that did not meet AiPedia's current source-backed buyer standard.
 
 Use these pages instead:
 

@@ -32,8 +32,8 @@ guide_picks:
       - label: "Figma pricing"
         url: "https://www.figma.com/pricing/"
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-09
-last_verified: 2026-05-09
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 ---
 
@@ -41,7 +41,7 @@ update_frequency: monthly
 
 Product managers do not need a random pile of chatbots. They need a small stack that helps with real PM jobs: customer and market research, PRDs, stakeholder communication, design review, roadmap tradeoffs, meeting synthesis, and launch follow-through.
 
-Verified May 9, 2026 against official ChatGPT, Claude, Perplexity, Figma, Notion, Fathom, and Google sources. AiPedia may earn from some tool links, but rankings stay editorial and are based on buyer fit, not commission.
+Verified May 13, 2026 against official ChatGPT, Claude, Perplexity, Figma, Notion, Fathom, and Google sources. AiPedia may earn from some tool links, but rankings stay editorial and are based on buyer fit, not commission.
 
 ## Quick Verdict
 
@@ -149,11 +149,11 @@ For PMs, the value is not "AI notes" in the abstract. It is preserving customer 
 
 ## Sources
 
-- [ChatGPT pricing](https://chatgpt.com/pricing/) (verified 2026-05-09)
-- [Claude pricing](https://claude.com/pricing) (verified 2026-05-09)
-- [Perplexity Pro](https://www.perplexity.ai/pro) (verified 2026-05-09)
-- [Figma pricing](https://www.figma.com/pricing/) (verified 2026-05-09)
-- [Notion pricing](https://www.notion.com/pricing) (verified 2026-05-09)
-- [Notion AI](https://www.notion.com/product/ai) (verified 2026-05-09)
-- [Fathom pricing](https://www.fathom.ai/pricing) (verified 2026-05-09)
-- [Google AI subscriptions](https://gemini.google/subscriptions/) (verified 2026-05-09)
+- [ChatGPT pricing](https://chatgpt.com/pricing/) (verified 2026-05-13)
+- [Claude pricing](https://claude.com/pricing) (verified 2026-05-13)
+- [Perplexity Pro](https://www.perplexity.ai/pro) (verified 2026-05-13)
+- [Figma pricing](https://www.figma.com/pricing/) (verified 2026-05-13)
+- [Notion pricing](https://www.notion.com/pricing) (verified 2026-05-13)
+- [Notion AI](https://www.notion.com/product/ai) (verified 2026-05-13)
+- [Fathom pricing](https://www.fathom.ai/pricing) (verified 2026-05-13)
+- [Google AI subscriptions](https://gemini.google/subscriptions/) (verified 2026-05-13)
